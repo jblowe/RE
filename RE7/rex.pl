@@ -13,7 +13,7 @@ $version = "v6.0 10 Nov 1997" ;
 # v6.0   jbl  3 Nov 97  First PERL versions
 # v7.0   jbl 06 Jun 14  First revisions
 #
-# perl rex.pl -o run2 -x DATA/DEMO93  -p params -d DEMO93 -f xxx -t 3
+# perl rex.pl -o run2 -x DATA/DEMO93  -p default -d DEMO93 -f xxx -t 3
 #
 #######################################################################
 require "Upstream.pl" ;               # RE-specific subs
