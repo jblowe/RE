@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+   <param name="trace" value="N"/>
+   <param name="spec" value="N"/>
+
+   <param name="title" value="TGTM, 1994 version"/>
+   <param name="spec" value="Y"/>
+   <param name="correspondences" value="TGTM.C794DEM.corrs.xml"/>
+   <param name="fuzzy" value="TGTM.fuz.xml"/>
+
+   <!--	 -->
+   <action name="upstream" from="gha" to="proto"/>
+   <action name="upstream" from="ris" to="proto"/>
+   <action name="upstream" from="sahu" to="proto"/>
+   <action name="upstream" from="man" to="proto"/>
+   <action name="upstream" from="mar" to="proto"/>
+   <action name="upstream" from="syang" to="proto"/>
+   <action name="upstream" from="tag" to="proto"/>
+   <action name="upstream" from="tuk" to="proto"/>
+   
+</params>

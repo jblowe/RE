@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../styleshtml.xsl" type="text/xsl"?>
+<lexicon dialecte="man">
+	
+   <entry id="man1">
+	
+      <gl>deer</gl>
+	
+      <RCF>Apʰo</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹pʰwo</hw>
+	
+   </entry>
+
+	
+   <entry id="man2">
+	
+      <gl>heart</gl>
+	
+      <RCF>Atiŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹tĩ</hw>
+	
+   </entry>
+
+	
+   <entry id="man3">
+	
+      <gl>fodder</gl>
+	
+      <RCF>Atʃʰi</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹tsʰi</hw>
+	
+   </entry>
+
+	
+   <entry id="man4">
+	
+      <gl>daughter in law</gl>
+	
+      <RCF>Atsaŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹tsaŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man5">
+	
+      <gl>food (cooked rice)</gl>
+	
+      <RCF>Akan</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹kjɛ̃</hw>
+	
+   </entry>
+
+	
+   <entry id="man6">
+	
+      <gl>chest</gl>
+	
+      <RCF>Aku</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹ku</hw>
+	
+   </entry>
+
+	
+   <entry id="man7">
+	
+      <gl>hair / head</gl>
+	
+      <RCF>A,Bkra</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²krɤ</hw>
+	
+   </entry>
+
+	
+   <entry id="man8">
+	
+      <gl>cubit</gl>
+	
+      <RCF>Akru</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹kru</hw>
+	
+   </entry>
+
+	
+   <entry id="man9">
+	
+      <gl>waist</gl>
+	
+      <RCF>Akre(t)</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹kre</hw>
+	
+   </entry>
+
+	
+   <entry id="man10">
+	
+      <gl>ropeway</gl>
+	
+      <RCF>Apraŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹praŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man11">
+	
+      <gl>nose</gl>
+	
+      <RCF>Aʰna</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹nɤ</hw>
+	
+   </entry>
+
+	
+   <entry id="man12">
+	
+      <gl>hand</gl>
+	
+      <RCF>Aʰjaː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹ja</hw>
+	
+   </entry>
+
+	
+   <entry id="man13">
+	
+      <gl>fire</gl>
+	
+      <RCF>Aʰmje</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹mie</hw>
+	
+   </entry>
+
+	
+   <entry id="man14">
+	
+      <gl>tail</gl>
+	
+      <RCF>Aʰmeː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹me</hw>
+	
+   </entry>
+
+	
+   <entry id="man15">
+	
+      <gl>goat</gl>
+	
+      <RCF>Aʰra</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹rɤ</hw>
+	
+   </entry>
+
+	
+   <entry id="man16">
+	
+      <gl>belly</gl>
+	
+      <RCF>Bpʰo</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²pʰwo</hw>
+	
+   </entry>
+
+	
+   <entry id="man17">
+	
+      <gl>horse</gl>
+	
+      <RCF>Bta</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²tɤ</hw>
+	
+   </entry>
+
+	
+   <entry id="man18">
+	
+      <gl>dishes</gl>
+	
+      <RCF>Btaŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²taŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man19">
+	
+      <gl>hoe</gl>
+	
+      <RCF>Btoː / ²two</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²to</hw>
+	
+   </entry>
+
+	
+   <entry id="man20">
+	
+      <gl>thread (sewing)</gl>
+	
+      <RCF>Btrup</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²ʈu</hw>
+	
+   </entry>
+
+	
+   <entry id="man21">
+	
+      <gl>ten</gl>
+	
+      <RCF>Btsjui</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²tsjy</hw>
+	
+   </entry>
+
+	
+   <entry id="man22">
+	
+      <gl>chin</gl>
+	
+      <RCF>Bkam</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²kənta</hw>
+	
+   </entry>
+
+	
+   <entry id="man23">
+	
+      <gl>hole</gl>
+	
+      <RCF>Bkʰuŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²hum</hw>
+	
+   </entry>
+
+	
+   <entry id="man23bis">
+	
+      <gl>hole</gl>
+	
+      <RCF>Bkʰuŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²huŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man24">
+	
+      <gl>water</gl>
+	
+      <RCF>Bkjui</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²kjy</hw>
+	
+   </entry>
+
+	
+   <entry id="man25">
+	
+      <gl>nine</gl>
+	
+      <RCF>Bku(ː)</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²ku</hw>
+	
+   </entry>
+
+	
+   <entry id="man26">
+	
+      <gl>siblings</gl>
+	
+      <RCF>Bt(h)et</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²tʰe</hw>
+	
+   </entry>
+
+	
+   <entry id="man27">
+	
+      <gl>saliva</gl>
+	
+      <RCF>Bt(h)au</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²tʰa</hw>
+	
+   </entry>
+
+	
+   <entry id="man28">
+	
+      <gl>eye</gl>
+	
+      <RCF>Bʰmiː(ŋ)</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²mi</hw>
+	
+   </entry>
+
+	
+   <entry id="man29">
+	
+      <gl>fontanel</gl>
+	
+      <RCF>Bʰŋwa</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²ŋo</hw>
+	
+   </entry>
+
+	
+   <entry id="man30">
+	
+      <gl>bird-trap</gl>
+	
+      <RCF>Bʰŋwa / ²ʰŋwã</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²ŋo</hw>
+	
+   </entry>
+
+	
+   <entry id="man31">
+	
+      <gl>face</gl>
+	
+      <RCF>Bʰliː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²li</hw>
+	
+   </entry>
+
+	
+   <entry id="man32">
+	
+      <gl>louse</gl>
+	
+      <RCF>Bʃjat</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>²ʃje</hw>
+	
+   </entry>
+
+	
+   <entry id="man33">
+	
+      <gl>wife</gl>
+	
+      <RCF>Abe</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³piɛ</hw>
+	
+   </entry>
+
+	
+   <entry id="man34">
+	
+      <gl>leaf</gl>
+	
+      <RCF>Abaː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³pa</hw>
+	
+   </entry>
+
+	
+   <entry id="man35">
+	
+      <gl>beer-mash</gl>
+	
+      <RCF>Abap</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³pe</hw>
+	
+   </entry>
+
+	
+   <entry id="man36">
+	
+      <gl>cowshed</gl>
+	
+      <RCF>Abraŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³praŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man37">
+	
+      <gl>skin</gl>
+	
+      <RCF>Aɖi / (ɖwi)</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³ʈi</hw>
+	
+   </entry>
+
+	
+   <entry id="man38">
+	
+      <gl>nest</gl>
+	
+      <RCF>Adzaŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³tsaŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man39">
+	
+      <gl>point</gl>
+	
+      <RCF>Adzo</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³tsə</hw>
+	
+   </entry>
+
+	
+   <entry id="man40">
+	
+      <gl>lid</gl>
+	
+      <RCF>Agap</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³kje</hw>
+	
+   </entry>
+
+	
+   <entry id="man41">
+	
+      <gl>back</gl>
+	
+      <RCF>Ago</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³ko-³te</hw>
+	
+   </entry>
+
+	
+   <entry id="man42">
+	
+      <gl>hill</gl>
+	
+      <RCF>Agaŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³kãŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man43">
+	
+      <gl>man</gl>
+	
+      <RCF>Ami</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³mi</hw>
+	
+   </entry>
+
+	
+   <entry id="man44">
+	
+      <gl>one</gl>
+	
+      <RCF>Bgrik</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴hri</hw>
+	
+   </entry>
+
+	
+   <entry id="man45">
+	
+      <gl>wheat</gl>
+	
+      <RCF>A,Bgrwa</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴ʃɔ</hw>
+	
+   </entry>
+
+	
+   <entry id="man46">
+	
+      <gl>eagle (nep cil 'hawk')</gl>
+	
+      <RCF>Bgrwat</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>¹hrə</hw>
+	
+   </entry>
+
+	
+   <entry id="man47">
+	
+      <gl>lungs</gl>
+	
+      <RCF>A,Bglwap</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>³kjoːpa</hw>
+	
+   </entry>
+
+	
+   <entry id="man48">
+	
+      <gl>place</gl>
+	
+      <RCF>Bklaː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴kʰja</hw>
+	
+   </entry>
+
+	
+   <entry id="man49">
+	
+      <gl>snow</gl>
+	
+      <RCF>Bgliŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴kʰĩ</hw>
+	
+   </entry>
+
+	
+   <entry id="man50">
+	
+      <gl>work</gl>
+	
+      <RCF>Bgjat</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴kʰje</hw>
+	
+   </entry>
+
+	
+   <entry id="man51">
+	
+      <gl>road</gl>
+	
+      <RCF>Bgjam</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴kʰjɛ̃</hw>
+	
+   </entry>
+
+	
+   <entry id="man52">
+	
+      <gl>enemy</gl>
+	
+      <RCF>Bgra</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴hrə</hw>
+	
+   </entry>
+
+	
+   <entry id="man53">
+	
+      <gl>tumpline/carrying headband</gl>
+	
+      <RCF>Bɖaː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴ʈʰa</hw>
+	
+   </entry>
+
+	
+   <entry id="man54">
+	
+      <gl>house</gl>
+	
+      <RCF>Bdim</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴tʰĩ</hw>
+	
+   </entry>
+
+	
+   <entry id="man55">
+	
+      <gl>strength</gl>
+	
+      <RCF>Bbaŋ</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴pʰaŋ</hw>
+	
+   </entry>
+
+	
+   <entry id="man56">
+	
+      <gl>cow</gl>
+	
+      <RCF>Bme</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴mie</hw>
+	
+   </entry>
+
+	
+   <entry id="man57">
+	
+      <gl>garlic</gl>
+	
+      <RCF>Bnoː</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴no</hw>
+	
+   </entry>
+
+	
+   <entry id="man58">
+	
+      <gl>thief</gl>
+	
+      <RCF>Bjo</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴jo</hw>
+	
+   </entry>
+
+	
+   <entry id="man59">
+	
+      <gl>gold</gl>
+	
+      <RCF>Bmar</RCF>
+	
+      <SO>MM-K78</SO>
+	
+      <hw>⁴mɤr</hw>
+	
+   </entry>
+
+</lexicon>

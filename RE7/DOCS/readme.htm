@@ -1,0 +1,314 @@
+<html>
+
+<HEAD>
+
+<TITLE>The Reconstruction Engine - Data sets supplied</TITLE>
+
+</HEAD>
+
+<BODY text="black" vlink="blue" link="red" bgcolor="white">
+
+<A NAME = "debutdoc"> </A>
+
+<center>
+
+<table cellpadding=4 border=10>
+
+<tr><td>
+
+<img alt="CNRS" align=left src="img/cnrs2.gif"><td><b>
+
+The Reconstruction Engine :</b>
+
+<font size= -1><br>
+
+</font>
+
+<font size= -2>
+
+<b>LACITO -- Laboratoire de langues et civilisations &agrave; tradition orale / UPR 3121</b><br>
+
+44 rue de l'Amiral Mouchez,  75014 PARIS<br>
+
+fax 01.45.59.83 -  sec. 01.45.80.96.73 / email <a href="mailto:jblowe@socrates.berkeley.edu">jblowe@socrates.berkeley.edu</a> 
+
+</font>
+
+</td></tr></table>
+
+</center>
+
+<a name="Projects">
+
+<hr>
+
+<H3>A. DESCRIPTION OF DATA SETS</H3>
+
+The sets of example files provided with the RE program are organized in subdirectories beneath the PRJ directory.  The set of example files are supplied with the program illustrates a number of linguistics and computational features of the program.  
+
+<P>
+
+Six data sets are supplied with the program.  These are listed below in approximate order of size and complexity:
+
+<UL>
+
+<LI><B>EXER   </B>&nbsp; A <A HREF="../PRJ/EXER/EXAMPLE.TXT">tiny table of made-up correspondences</A> designed to exercise basic features of the program: interactive upstream and downstream computations, cognate set creation, and syllable structure.
+
+<LI><B>POLY   </B>&nbsp; A <A HREF="../PRJ/POLY/POLY.DAT">tabular set of 36 words in four polynesian languages (Tongan, Samoan, Rarotoan, and Hawaiian) </A> (from xxx 19xx:999), with table of correspondences.  This data set illustrates "batch" upstream processing (i.e. reconstructing ancestors and creating cognate sets on the basis of modern forms) and "recursive" syllable processing.
+
+<LI><B>DIS    </B>&nbsp;A small subset (7 selected words in 8 languages) of the <A HREF="TGTM.HTM">TGTM</A> database which illustrates upstream processing of heterogenous lexicons (dictionaries) of different languages (i.e. multi-file processing), handling of isolates, consolidation of cognate subsets based on membership.
+
+<LI><B>DEMO   </B>&nbsp;A larger <A HREF="TGTM.HTM">TGTM</A> dataset, containing words from  8 modern dialects, forming 69 cognate sets, based on the data and reconstructions presented in Mazaudon 1978. Illustrates the phonological feature processing abilities of RE, the use of semantic constraints (MELs) and includes a substantially complete table of correspondences.
+
+<LI><B>LOLOISH</B>&nbsp;Contains substantial datasets and partial analysis for <A HREF="LOLO.HTM">two subgroups of Tibeto-Burman</A>  (<A HREF="../PRJ/LOLOISH/DATA/NYI.TAB">Northern Loloish</A>  and <A HREF="../PRJ/LOLOISH/DATA/SYI.TAB">Southern Loloish</A>) based on work presented in Hansson 1985 and Chen 1986.  The languages represented are closely related and show how RE can be used in microlinguistics studies.
+
+<LI><B>IERE   </B>&nbsp;A small sets of Germanic verbs prepared using data given in Hoch 198x.  The electronic version of this dataset was created by Collin Baker, UC Berkeley.
+
+</UL>
+
+
+
+<H3>B. Features of RE used or illustrated by the sample files</H3>
+
+<TABLE BORDER=1>
+
+<TH>Directory in PRJ
+
+<TH>Corres- pondences
+
+<TH>Context- sensitive rules
+
+<TH>Constituent classes
+
+<TH>Semantic constraints
+
+<TH>Phonological feature-based processing
+
+<TH>"Batch" processing upstream
+
+<TH>Other advanced features
+
+<TR ALIGN=center ><TD>EXER       <TD>x<TD>&nbsp; <TD>&nbsp; <TD>&nbsp; <TD>&nbsp; <TD>&nbsp; <TD>
+
+<TR ALIGN=center ><TD>POLY       <TD>x<TD>&nbsp; <TD>&nbsp; <TD>&nbsp; <TD>&nbsp; <TD>x<TD><A HREF="RE.HTM#SYLL">[1]</A>
+
+<TR ALIGN=center ><TD>DIS           <TD>x<TD>x<TD>x<TD>&nbsp; <TD>&nbsp; <TD>x<TD>
+
+<TR ALIGN=center ><TD>DEMO      <TD>x<TD>x<TD>x<TD>x<TD>x<TD>x<TD><A HREF="DEMO.HTM">[2]</A>
+
+<TR ALIGN=center ><TD>LOLOISH <TD>x<TD>x<TD>x<TD>x<TD>x<TD>x<TD><A HREF="LOLO.HTM">[3]</A>
+
+<TR ALIGN=center ><TD>IERE        <TD>x<TD>x<TD>x<TD>&nbsp; <TD>&nbsp; <TD>x<TD>
+
+</TABLE>
+
+
+
+<H3>C. INVENTORY OF DATA FILES PROVIDED</H3>
+
+Below are listed the contents of the PRJ subdirectory provided with the RE program.  The names of the files are annotated to indicate their function.
+
+
+
+<H4>\PRJ\POLY
+
+</H4>
+
+<PRE>
+
+POLYLEX  DAT         1 700  23/04/95   9:12 
+
+POLY     DAT         1 022  18/05/96  16:55 
+
+POLYCOR2 PRM           369  23/04/95   9:13 
+
+POLYCOR3 PRM           378  28/04/95  12:10 
+
+RESULTS        <REP>        03/10/97  14:53 
+
+</PRE>
+
+
+
+
+
+<H4>\PRJ\DEMO
+
+</H4>
+
+<PRE>
+
+DEMO     CLS                  214  28/01/91  12:41 
+
+DEMO     FUZ                  279  22/11/91  21:50 
+
+FEATURES PRM                9 713  28/01/91  18:21 
+
+DEMO     MEL                  917  15/12/92  10:15 
+
+DEMO     TOC                1 531  06/05/91  23:38 
+
+DATA           <REP>               03/10/97  14:53 
+
+       GHA      DEM         3 264  01/02/90   9:30 
+
+       K78      DEM        12 811  31/01/90  23:07 
+
+       MAN      DEM         3 199  07/12/93  11:39 
+
+       MAR      DEM         3 586  02/02/90  12:43 
+
+       RIS      DEM         3 382  01/02/90   9:10 
+
+       SAHU     DEM         3 108  02/02/90  12:35 
+
+       SYANG    DEM         3 901  02/02/90  12:44 
+
+       TAG      DEM         2 448  02/02/90  12:40 
+
+       TUK      DEM         3 576  02/02/90  12:38
+
+RESULTS        <REP>               03/10/97  14:53 
+
+</PRE>
+
+<H4>\PRJ\DIS
+
+</H4>
+
+<PRE>
+
+DIS      TOC                1 531  06/05/91  23:38 
+
+DIS      CLS                  216  12/10/93  14:00 
+
+DATA           <REP>               03/10/97  14:53 
+
+       GHA      DIS           350  06/05/91  21:12 
+
+       MAN      DIS           248  06/05/91  21:52 
+
+       MAR      DIS           352  06/05/91  22:12 
+
+       RIS      DIS           433  06/05/91  20:24 
+
+       SAHU     DIS           329  06/05/91  21:21 
+
+       SYANG    DIS           398  06/05/91  22:16 
+
+       TAG      DIS           373  06/05/91  22:05 
+
+       TUK      DIS           289  06/05/91  21:34 
+
+RESULTS        <REP>               03/10/97  14:53 
+
+</PRE>
+
+<H4>\PRJ\EXER
+
+</H4>
+
+<PRE>
+
+LGE1A    DAT           130  01/02/96   7:57
+
+LGE1B    DAT           130  01/02/96   7:58
+
+CEX1     TOC           255  01/02/96   8:28
+
+SAMPLE   TOC           201  16/12/92  13:41
+
+</PRE>
+
+<H4>\PRJ\IERE
+
+</H4>
+
+<PRE>
+
+CLASS    PRM                   10  07/05/91  23:34 
+
+GRMV     TOC                1 020  09/05/91  23:13 
+
+GRM3     TOC                1 237  09/05/91  21:18 
+
+TEST     TOC                  242  09/05/91  18:41 
+
+GRM2     TOC                1 240  07/05/91  23:42 
+
+GRM1     TOC                  840  30/04/91  22:15 
+
+PGMPARMS                      199  10/05/91   9:00 
+
+CLASS    GRM                  323  09/05/91  21:09 
+
+FEATURES GRM                1 657  30/04/91  14:59 
+
+DATA           <REP>               03/10/97  14:53 
+
+       VON      DAT         1 136  09/05/91  23:11 
+
+       VGOTH    DAT         1 071  09/05/91  23:10 
+
+       VOHG     DAT         1 196  09/05/91  23:10 
+
+       VOE      DAT         1 180  09/05/91  23:09 
+
+       VHOCK    DAT         2 004  09/05/91  23:07 
+
+       ONP2     DAT         1 144  09/05/91  22:51 
+
+       GOTHP2   DAT         1 087  09/05/91  22:51 
+
+       OHGP2    DAT         1 206  09/05/91  22:49 
+
+       OEP2     DAT         1 195  09/05/91  22:49 
+
+       HOCK2    DAT         2 299  09/05/91  22:44 
+
+       HOCK1    DAT         2 143  07/05/91  22:01 
+
+       OHGH1    DAT         1 580  30/04/91  22:31 
+
+       OEH1     DAT         1 496  30/04/91  22:31 
+
+RESULTS        <REP>               03/10/97  14:53 
+
+</PRE>
+
+<H4>\PRJ\LOLOISH
+
+</H4>
+
+<PRE>
+
+DATA           <REP>               03/10/97  14:53 
+
+       NYI      TAB        11 190  13/06/94  15:32 
+
+       SYI      TAB        17 910  13/06/94  16:03 
+
+PARMS          <REP>               03/10/97  14:53 
+
+       SYI      MEL         4 062  24/05/94  14:22
+
+       SYI      CLS           231  10/04/94   4:55 
+
+       SYI      TOC         4 153  13/06/94  16:13 
+
+       NYI      MEL         2 712  13/06/94  21:01 
+
+       NYI      CLS           205  11/12/93   0:19 
+
+       NYI      TOC         4 006  07/03/95  16:48 
+
+LOLOISH  CMD                  700  03/10/97  15:10 
+
+RESULTS        <REP>               03/10/97  14:53 
+
+</PRE>
+
+
+
+
+

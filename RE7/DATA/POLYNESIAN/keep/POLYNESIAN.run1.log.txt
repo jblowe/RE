@@ -1,0 +1,14 @@
+STAT : [Jun 14 14:59:43 2014] START    parameters: /Users/jblowe/Sites/RE7/DATA/POLYNESIAN/POLYNESIAN.params.parameters.xml
+PRE  : [Jun 14 14:59:43 2014] START    number of words to process from each lexicon: 3
+PRE  : [Jun 14 14:59:43 2014] 
+RLS  : [Jun 14 14:59:43 2014] CSV correspondence file:
+RLS  : [Jun 14 14:59:43 2014] /Users/jblowe/Sites/RE7/DATA/POLYNESIAN/POLYCOR3.CORRESPONDENCES.CSV
+RLS  : [Jun 14 14:59:43 2014] 72 diachronic rules from 18 correspondence rows.
+STAT : [Jun 14 14:59:43 2014] INPUT     : 35 words
+STAT : [Jun 14 14:59:43 2014] LEXICON   : 3 words, 4 recons ,0 failed
+STAT : [Jun 14 14:59:43 2014] LEXICON   : 3 words, 3 recons ,1 failed
+STAT : [Jun 14 14:59:43 2014] LEXICON   : 3 words, 5 recons ,0 failed
+STAT : [Jun 14 14:59:43 2014] LEXICON   : 3 words, 5 recons ,0 failed
+STAT : [Jun 14 14:59:43 2014] DATA     12 forms, 17 recons, 1 no rc
+STAT : [Jun 14 14:59:43 2014] SET      3 raw sets, 2 merged sets, 6 isolates
+STAT : [Jun 14 14:59:43 2014] END      *****

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../styleshtml.xsl" type="text/xsl"?>
+<!-- edited with XML Spy v4.0 U (http://www.xmlspy.com) by Boyd MICHAILOVSKY (C.N.R.S.) -->
+<lexicon dialecte="tag">
+	<entry id="tag1">
+		<gl>fodder</gl>
+		<RCF>Atʃʰi</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹tʃʰje</hw>
+	</entry>
+	<entry id="tag2">
+		<gl>daughter in law</gl>
+		<RCF>Atsaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹tsaŋ</hw>
+	</entry>
+	<entry id="tag3">
+		<gl>chest</gl>
+		<RCF>Aku</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹ku</hw>
+	</entry>
+	<entry id="tag4">
+		<gl>feces</gl>
+		<RCF>Akli</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹kʰli</hw>
+	</entry>
+	<entry id="tag5">
+		<gl>hair / head</gl>
+		<RCF>A,Bkra</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹hwa</hw>
+	</entry>
+	<entry id="tag6">
+		<gl>cubit</gl>
+		<RCF>Akru</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹hu</hw>
+	</entry>
+	<entry id="tag7">
+		<gl>waist</gl>
+		<RCF>Akre(t)</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹keː</hw>
+	</entry>
+	<entry id="tag8">
+		<gl>ropeway</gl>
+		<RCF>Apraŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹praŋ</hw>
+	</entry>
+	<entry id="tag9">
+		<gl>nose</gl>
+		<RCF>Aʰna</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹na</hw>
+	</entry>
+	<entry id="tag10">
+		<gl>hand</gl>
+		<RCF>Aʰjaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹jaː</hw>
+	</entry>
+	<entry id="tag11">
+		<gl>fire</gl>
+		<RCF>Aʰmje</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹me</hw>
+	</entry>
+	<entry id="tag12">
+		<gl>tail</gl>
+		<RCF>Aʰmeː</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹meː</hw>
+	</entry>
+	<entry id="tag13">
+		<gl>goat</gl>
+		<RCF>Aʰra</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹ra</hw>
+	</entry>
+	<entry id="tag14">
+		<gl>steam</gl>
+		<RCF>A(h)ʰlaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹laŋ</hw>
+	</entry>
+	<entry id="tag15">
+		<gl>snake-god</gl>
+		<RCF>Aʰlu</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹lu</hw>
+	</entry>
+	<entry id="tag16">
+		<gl>belly</gl>
+		<RCF>Bpʰo</RCF>
+		<SO>MM-K78</SO>
+		<hw>²pʰo</hw>
+	</entry>
+	<entry id="tag17">
+		<gl>horse</gl>
+		<RCF>Bta</RCF>
+		<SO>MM-K78</SO>
+		<hw>²ta</hw>
+	</entry>
+	<entry id="tag18">
+		<gl>dishes</gl>
+		<RCF>Btaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>²taŋ</hw>
+	</entry>
+	<entry id="tag19">
+		<gl>hoe</gl>
+		<RCF>Btoː / ²two</RCF>
+		<SO>MM-K78</SO>
+		<hw>²toː</hw>
+	</entry>
+	<entry id="tag20">
+		<gl>ten</gl>
+		<RCF>Btsjui</RCF>
+		<SO>MM-K78</SO>
+		<hw>²tsju</hw>
+	</entry>
+	<entry id="tag21">
+		<gl>water</gl>
+		<RCF>Bkjui</RCF>
+		<SO>MM-K78</SO>
+		<hw>²kju</hw>
+	</entry>
+	<entry id="tag22">
+		<gl>nine</gl>
+		<RCF>Bku(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²ku</hw>
+	</entry>
+	<entry id="tag22b">
+		<gl>nine</gl>
+		<RCF>Bku(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²kuː</hw>
+	</entry>
+	<entry id="tag23">
+		<gl>eye</gl>
+		<RCF>Bʰmiː(ŋ)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²miː</hw>
+	</entry>
+	<entry id="tag24">
+		<gl>tongue</gl>
+		<RCF>Bʰle(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²le</hw>
+	</entry>
+	<entry id="tag25">
+		<gl>face</gl>
+		<RCF>Bʰliː</RCF>
+		<SO>MM-K78</SO>
+		<hw>²liː</hw>
+	</entry>
+	<entry id="tag26">
+		<gl>louse</gl>
+		<RCF>Bʃjat</RCF>
+		<SO>MM-K78</SO>
+		<hw>²ʃjeː</hw>
+	</entry>
+	<entry id="tag27">
+		<gl>leaf</gl>
+		<RCF>Abaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>³paː</hw>
+	</entry>
+	<entry id="tag28">
+		<gl>cowshed</gl>
+		<RCF>Abraŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>³praŋ</hw>
+	</entry>
+	<entry id="tag29">
+		<gl>skin</gl>
+		<RCF>Aɖi / (ɖwi)</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ʈi</hw>
+	</entry>
+	<entry id="tag30">
+		<gl>nest</gl>
+		<RCF>Adzaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>³tsaŋ</hw>
+	</entry>
+	<entry id="tag31">
+		<gl>back</gl>
+		<RCF>Ago</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ko</hw>
+	</entry>
+	<entry id="tag32">
+		<gl>hill</gl>
+		<RCF>Agaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>³gaŋ</hw>
+	</entry>
+	<entry id="tag33">
+		<gl>man</gl>
+		<RCF>Ami</RCF>
+		<SO>MM-K78</SO>
+		<hw>³mi</hw>
+	</entry>
+	<entry id="tag34">
+		<gl>forehead</gl>
+		<RCF>Aŋo</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ŋo</hw>
+	</entry>
+	<entry id="tag35">
+		<gl>friend</gl>
+		<RCF>Aro(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>³roː</hw>
+	</entry>
+	<entry id="tag36">
+		<gl>one</gl>
+		<RCF>Bgrik</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴ki</hw>
+	</entry>
+	<entry id="tag37">
+		<gl>wheat</gl>
+		<RCF>A,Bgrwa</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴hwa</hw>
+	</entry>
+	<entry id="tag38">
+		<gl>place</gl>
+		<RCF>Bklaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴kʰlaː</hw>
+	</entry>
+	<entry id="tag39">
+		<gl>snow</gl>
+		<RCF>Bgliŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>kʰliŋ</hw>
+	</entry>
+	<entry id="tag40">
+		<gl>work</gl>
+		<RCF>Bgjat</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴keː</hw>
+	</entry>
+	<entry id="tag41">
+		<gl>road</gl>
+		<RCF>Bgjam</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴kjam</hw>
+	</entry>
+	<entry id="tag42">
+		<gl>tumpline/carrying headband</gl>
+		<RCF>Bɖaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴ʈaː</hw>
+	</entry>
+	<entry id="tag43">
+		<gl>load</gl>
+		<RCF>Bdot</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴toi</hw>
+	</entry>
+	<entry id="tag44">
+		<gl>cow</gl>
+		<RCF>Bme</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴me</hw>
+	</entry>
+	<entry id="tag45">
+		<gl>garlic</gl>
+		<RCF>Bnoː</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴noː</hw>
+	</entry>
+	<entry id="tag46">
+		<gl>thief</gl>
+		<RCF>Bjo</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴jo</hw>
+	</entry>
+	<entry id="tag47">
+		<gl>gold</gl>
+		<RCF>Bmar</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴mar</hw>
+	</entry>
+</lexicon>

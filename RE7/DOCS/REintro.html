@@ -1,0 +1,190 @@
+<html><title>The Reconstruction Engine (Lowe and Mazaudon)</title><body>
+<center><table border = 1><tr><td align=center colspan=3>
+<b><font size=+3>The Reconstruction Engine:</font><br>
+a computer implementation of the comparative method
+</b>
+<tr valign=top align=center><td align=center>
+<img src="atwork.GIF">
+<br>Under construction!!!<br>
+Caveat lector!
+<td width=300>
+<font size=tiny>
+<b>John Lowe</b><br>
+<a href="http://www.linguistics.berkeley.edu/">Dept. of Linguistics</a><br>
+1203 Dwinelle Hall #2650<br>
+Berkeley, CA 94720-2650
+<A HREF="http://www.berkeley.edu">University of California at Berkeley</A><br>
+Berkeley, CA 94720-2650, USA<br>
+email: <a href="mailto:jblowe@berkeley.edu">jblowe@berkeley.edu</a><br>
+</font>
+<td width=300>
+<font size=tiny>
+<b>Martine Mazaudon</b><br>
+<a href="http://lacito.vjf.cnrs.fr">LACITO/CNRS</a><br>
+7 rue Guy Moquet<br>
+74801 Villejuif, France<br>
+email: <a href="mailto:martine.mazaudon@cnrs.fr">martine.mazaudon@cnrs.fr</a><br>
+</font>
+</table>
+</center>
+<hr>
+<ul>
+<li><a href="#overview">What is the Reconstruction Engine?</a>
+<li>Some details: 
+<p>
+<ul>
+<li>Paper describing the effort: <i><a href="http://www.aclweb.org/anthology/J94-3004">"The reconstruction engine: a computer implementation of the comparative method," Association for
+	Computational Linguistics Special Issue in Computational Phonology 20.3 (September 1994) pp. 381-417.</a></i>
+<li>About the lexicons supplied with the RE program:
+<ul>
+<a href="TGTM.htm">about the Tamang etymological database</a>
+<br>
+<a href="LOLO.htm">about the Loloish data sets</a>
+<p>
+</ul>
+</ul>
+<li><a href="https://github.com/jblowe/RE">The code and data on GitHub</a>
+<li><a href="OtherProgs.html">References to other programs and computational approaches to historical linguistics which we know about</a>
+</ul>
+<hr>
+We would like to communicate with others interested in computational historical linguistics.  Please contact either one of us at the addresses above.
+<a name="overview">
+<hr>
+<b>
+THE RECONSTRUCTION ENGINE: OVERVIEW
+</b><p>
+<p>
+The Reconstruction
+Engine (RE) models the comparative method for establishing genetic
+affiliation among a group of languages.  The program is a research tool
+designed to aid the linguist in evaluating specific hypotheses, by calculating
+the consequences of a set of postulated sound changes (proposed by the
+linguist) on complete (machine-readable) lexicons of several languages.  It divides the lexicons
+into a phonologically regular part, and a part which deviates from the sound
+laws.  RE is bi-directional: given words in modern languages, it can propose
+cognate sets (with reconstructions); given reconstructions, it can project the
+modern forms which would result from regular changes.  RE operates either
+interactively, allowing word-by-word evaluation of hypothesized sound changes
+and semantic shifts, or in a "batch" mode, processing entire multilingual
+lexicons <i>en masse</i>.<p>
+In our papers about the program, we describe the parsing and
+combinatorial techniques used to make projections <i>upstream</i> or <i>downstream</i> (in the
+sense of time), the procedures for creating and consolidating cognate sets based
+on these projections, and the ad hoc techniques developed for handling the
+semantic component of the comparative method.<p>
+<p>Some results from a study of the Tamang languages of Nepal (a subgroup of the
+Tibeto-Burman family) are presented, and data from these languages are used
+throughout for exemplification of the operation of the program.<p>
+<p>Finally, we discuss features of RE which make it possible to handle the
+complex and sometimes imprecise representations of lexical items, and speculate
+on possible directions for future research.<p>
+<hr>
+
+The following are edited excerpts from :
+<h4>
+"The reconstruction engine: a computer implementation of the comparative method," Association for
+Computational Linguistics Special Issue in Computational Phonology 20.3 (September 1994) pp. 381-417.</h4>
+<p>
+
+<b>
+<a name="RTFToC1">
+MODELLING THE PROCESS OF SOUND CHANGE
+</a></b><p>
+	The essential step in historical reconstruction is the arrangement of
+related words in different languages into sets of cognates and the
+specification of the regular phonological correspondences which support that
+arrangement; the well-known means for carrying out this arrangement and
+specification is the comparative method (see for example Meillet 1966;
+Hoenigswald 1950, 1960; Watkins 1989; Baldi 1990).  Words which are not
+demonstrably related (via regular sound change) are explained by reference to
+other diachronic processes which are beyond the scope of the comparative method
+and of this paper.  Sound change is first to be explained as a rule-governed
+process and other explanations (which invoke more sporadic and less predictable
+processes) offered when it is clear that non-phonological forces are at work,
+as illustrated in Figure 1.  There will always be a number of lexical items for
+which no scientific explanation can be advanced: not all words are entitled to
+an etymology (Meillet 1966:58).<p>
+<IMG SRC="RE1.GIF" width=450><p>
+<b>Key:</b><p>
+<ul>
+<li>A.	The complete lexicon.
+<li>B.	Regular sound change (modeled by RE proper).
+<li>C.	Regular, "expected" reflexes of the ancestor forms.
+<li>D.	Domain of "protovariation", perhaps due to morphological/derivational
+processes; handled by RE with "fuzzy" constituents.
+<li>E.	Sub-regularities elicited through relaxed constraints (word families,
+etc.)<a href="RE_fn.html#fn0">[1]</a>
+<li>F.	Sociolinguistic explanation.  Domain of lexical diffusion and other
+sporadic processes.
+<li>G.	Borrowings, analogized forms, hypercorrections, prestige
+pronunciations, etc.
+<li>H.	The "mystery pile": counterexamples and other troublesome
+words.
+</ul>
+<i>Figure 1: The "Sieve" of Explanation in historical
+linguistics</i><p>
+
+<b><a name="RTFToC4">
+SYNOPSIS OF THE RECONSTRUCTION ENGINE
+</a></b><p>
+	RE implements 1) a set of algorithms which generate possible
+reconstructions given word forms in modern languages (and vice-versa as well)
+and 2) a set of algorithms which arrange input modern forms into possible
+cognate sets based on those reconstructions.  The first set implements a simple
+bottom-up parser; the second automates database management chores, such as
+reading multiple input files and sorting, merging, and indexing the parser's
+output.<p>
+	The core functions of RE compute all possible ancestor forms (using a TABLE OF
+CORRESPONDENCES and a phonotactic description, a SYLLABLE CANON, both described
+in section 3.1) and makes sets of those modern forms which share the same
+reconstructions.  Tools for further dividing of the computer-proposed cognate
+sets based on semantic distinctions are also provided.  The linguist (that is,
+the user) collects and inputs the source data, prepares the table of
+correspondences and phonotactic description (syllable canon), and verifies the
+semantics of the output of the phonologically-based reconstruction process.
+RE, <i>qua</i> "linguistic bookkeeper," makes the projections and keeps track
+of several competing hypotheses as the research progresses.  Specifically, the
+linguist provides as input to the program:
+<ul>
+<li>	Word forms from several modern languages, with glosses.
+<li>	Parameters which control the operation of the program and interpretation
+of input data (mostly not described here).
+<li>	A file containing the Table of Correspondences, detailed below.
+<li>	The Syllable canon, described below.
+<li>	Semantic information for disambiguating modern and reconstructed
+homophones, described below.</ul>	The parsing algorithm implemented in RE is
+bi-directional (in the sense of time): the "upstream"<a
+href="RE_fn.html#fn2">[3]</a> process involves projecting each modern form
+<i>backward</i> in time and merging the sets of possible ancestors generated
+thereby to see which, if any, are identical.  Conversely, given a protoform,
+the program computes the expected regular reflexes in the daughter languages.
+<p>
+<IMG SRC="RE2.GIF" width=450><p>
+<i>Figure 2: Input-Output diagram of RE's basic projection functions</i><p>
+The process can be done interactively (as illustrated in Figure 3 below) or in
+batch using machine-readable lexicons prepared for the purpose.  <p>
+<IMG SRC="RE3.GIF"><p>
+<i>Figure 3: A simple example of interactive "upstream" computation
+(transcription and languages exemplified are described in section 1.1)</i><p>
+Figure 3 is a representation of the contents of the computer screen
+after the user has entered three modern words (1). The program has generated
+the reconstructions from which these forms might derive (2)  The list of
+numbers (called the <i>analysis</i>) following the reconstruction refers to the
+row numbers in the table of correspondences which were used by the program in
+generating the reconstructions.  In two cases reflexes have more than one
+possible ancestor. The program has then proposed the two cognate sets which
+result from computing the set intersection of the possible ancestors (3).  The
+proposed sets are listed in descending order by population of supporting
+forms.<a href="RE_fn.html#fn3">[4]</a><p>
+	Conversely, given a protoform, RE will predict (actually "postdict") the
+regular reflexes in each of the daughter languages.  Figure 4 reproduces the
+results on the computer screen of performing such a "downstream" calculation.<p>
+<IMG SRC="RE4.GIF"><p>
+<i>Figure 4: The expected outcomes of *Abap (a "downstream"
+computation)</i><p>
+Here the etymon entered by the user (1) produced reflexes (2) through
+two different syllabic analyses (numbered 1. and 2. in the "Reflexes of ..."
+window): Abap as initial /b-/ plus vowel /-a-/ plus final /-p/, and as
+initial /b-/ followed by rhyme /-ap/.  The  algorithms used in this process are
+described in detail in the paper.<p>
+

@@ -1,0 +1,2 @@
+STAT : [Jun 14 15:19:47 2014] START    parameters: /Users/jblowe/Sites/RE7/DATA/DEMO93/.params.parameters.xml
+PRE  : [Jun 14 15:19:47 2014] START    number of words to process from each lexicon: 3

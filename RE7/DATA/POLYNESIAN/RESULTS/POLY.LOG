@@ -1,0 +1,49 @@
+* ************************************************************************
+* T H E   R E C O N S T R U C T I O N     E N G I N E
+* 
+* Run Statistics                          version 5.0
+* ************************************************************************
+* Run date:            02/16/00 13:51:59
+* ************************************************************************
+* Switch set POLY used, set as follows:
+* ************************************************************************
+* Context:             ON 
+* Mask:                ON: No Fuzzy file found!
+* Test:                OFF
+* Include Analysis:    ON 
+* Use Zero:            ON 
+* ImpMatch:            OFF
+* Hyp On:              OFF
+* Ordered:             OFF
+* Run all Morphemes:   OFF
+* SetSpec:             OFF
+* Permit polysylls:    ON 
+* ************************************************************************
+* Argument files set POLY.V1 used, as follows:
+* ************************************************************************
+* Working Directory:   C:\RE52DEMO\PRJ\POLY
+* Syllable:            (I)V(I)V
+* Correspondences in:  POLYCOR3.PRM n x lg = 19 x 4
+* Fuzzy file:          No Fuzzy file found!
+* Class file:          No Class file found!
+* MEL file:            No MEL file found!
+* Feature file:        No Feature file found!
+* ************************************************************************
+* Data files set POLY used, Contents and settings:
+* ************************************************************************
+* 
+* Data Directory:      PRJ\POLY
+* 
+* 1 Input file name           6 Reconstructions generated
+* 2 File Format (L, M, or C)  7 Articles (= forms) input
+* 3 T of C Column #           8 Reflexes failed to back-compute
+* 4 T of C Language           9 Reflexes produced protoforms 
+* 5 Bands/Columns processed  10 Elapsed time (seconds)
+* 
+*    1          End Time 2 3   4       5           6    7   8    9   10
+* ------------------------------------------------------------------------
+* POLY.DAT      13:52:00 M 1 (to)   M2 / M1       50   37   4   33    0
+* POLY.DAT      13:52:00 M 2 (sa)   M3 / M1       62   37   6   31    0
+* POLY.DAT      13:52:01 M 3 (ra)   M4 / M1       81   37   4   33    0
+* POLY.DAT      13:52:02 M 4 (ha)   M5 / M1       95   37   2   35    0
+**************** Set Conflation/Creation Statistics ************

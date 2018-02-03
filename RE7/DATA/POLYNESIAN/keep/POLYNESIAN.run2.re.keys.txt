@@ -1,0 +1,812 @@
+1.14.13.14.	tasa	4.1	tongien	kaha	ct
+1.14.13.14.	tasa	4.2	samoan	kaha	ct
+1.14.13.14.	tasa	4.3	raroton	kaha	ct
+1.14.13.14.	tasa	4.4	hawai	kaha	ct
+1.14.16.	tai	7.1	tongien	kai	mer
+1.14.16.	tai	7.2	samoan	kai	mer
+1.14.16.	tai	7.3	raroton	kai	mer
+1.14.16.	tai	7.4	hawai	kai	mer
+1.14.18.	tae	5.1	tongien	kae	crotte
+1.14.18.	tae	5.2	samoan	kae	crotte
+1.14.18.	tae	5.3	raroton	kae	crotte
+1.14.18.	tae	5.4	hawai	kae	crotte
+1.14.2.15.	tapu	1.1	tongien	kapu	interdit
+1.14.2.15.	tapu	1.2	samoan	kapu	interdit
+1.14.2.15.	tapu	1.3	raroton	kapu	interdit
+1.14.2.15.	tapu	1.4	hawai	kapu	interdit
+1.14.3.14.	tafa	4.1	tongien	kaha	ct
+1.14.3.14.	tafa	4.2	samoan	kaha	ct
+1.14.3.14.	tafa	4.3	raroton	kaha	ct
+1.14.3.14.	tafa	4.4	hawai	kaha	ct
+1.14.7.14.1.14.	taNata	6.1	tongien	kanaka	homme
+1.14.7.14.1.14.	taNata	6.2	samoan	kanaka	homme
+1.14.7.14.1.14.	taNata	6.3	raroton	kanaka	homme
+1.14.7.14.1.14.	taNata	6.4	hawai	kanaka	homme
+1.14.9.14.1.14.	tanata	6.1	tongien	kanaka	homme
+1.14.9.14.1.14.	tanata	6.2	samoan	kanaka	homme
+1.14.9.14.1.14.	tanata	6.3	raroton	kanaka	homme
+1.14.9.14.1.14.	tanata	6.4	hawai	kanaka	homme
+1.17.8.17.	tomo	23.1	tongien	komo	pntrer
+1.17.8.17.	tomo	23.2	samoan	komo	pntrer
+1.17.8.17.	tomo	23.3	raroton	komo	pntrer
+1.17.8.17.	tomo	23.4	hawai	komo	pntrer
+10.14.12.17.	raho	33.1	tongien	laho	testicules
+10.14.12.17.	raho	33.2	samoan	laho	testicules
+10.14.12.17.	raho	33.3	raroton	laho	testicules
+10.14.12.17.	raho	33.4	hawai	laho	testicules
+10.14.13.17.	raso	33.1	tongien	laho	testicules
+10.14.13.17.	raso	33.2	samoan	laho	testicules
+10.14.13.17.	raso	33.3	raroton	laho	testicules
+10.14.13.17.	raso	33.4	hawai	laho	testicules
+10.14.13.17.	raso	33.1	tongien	laho	testicules
+10.14.13.17.	raso	33.2	samoan	laho	testicules
+10.14.13.17.	raso	33.3	raroton	laho	testicules
+10.14.13.17.	raso	33.4	hawai	laho	testicules
+10.14.3.17.	rafo	33.1	tongien	laho	testicules
+10.14.3.17.	rafo	33.2	samoan	laho	testicules
+10.14.3.17.	rafo	33.3	raroton	laho	testicules
+10.14.3.17.	rafo	33.4	hawai	laho	testicules
+10.15.14.	rua	36.1	tongien	lua	deux
+10.15.14.	rua	36.2	samoan	lua	deux
+10.15.14.	rua	36.3	raroton	lua	deux
+10.15.14.	rua	36.4	hawai	lua	deux
+10.15.14.	rua	36.1	tongien	lua	deux
+10.15.14.	rua	36.2	samoan	lua	deux
+10.15.14.	rua	36.3	raroton	lua	deux
+10.15.14.	rua	36.4	hawai	lua	deux
+10.15.14.	rua	36.1	tongien	lua	deux
+10.15.14.	rua	36.2	samoan	lua	deux
+10.15.14.	rua	36.3	raroton	lua	deux
+10.15.14.	rua	36.4	hawai	lua	deux
+10.17.15.	rou	34.1	tongien	lou	gaule  fruit
+10.17.15.	rou	34.2	samoan	lou	gaule  fruit
+10.17.15.	rou	34.3	raroton	lou	gaule  fruit
+10.17.15.	rou	34.4	hawai	lou	gaule  fruit
+10.17.15.	rou	34.1	tongien	lou	gaule  fruit
+10.17.15.	rou	34.2	samoan	lou	gaule  fruit
+10.17.15.	rou	34.3	raroton	lou	gaule  fruit
+10.17.15.	rou	34.4	hawai	lou	gaule  fruit
+10.17.15.	rou	34.1	tongien	lou	gaule  fruit
+10.17.15.	rou	34.2	samoan	lou	gaule  fruit
+10.17.15.	rou	34.3	raroton	lou	gaule  fruit
+10.17.15.	rou	34.4	hawai	lou	gaule  fruit
+10.17.7.17.	roNo	35.1	tongien	lono	entendre
+10.17.7.17.	roNo	35.2	samoan	lono	entendre
+10.17.7.17.	roNo	35.3	raroton	lono	entendre
+10.17.7.17.	roNo	35.4	hawai	lono	entendre
+10.17.9.17.	rono	35.1	tongien	lono	entendre
+10.17.9.17.	rono	35.2	samoan	lono	entendre
+10.17.9.17.	rono	35.3	raroton	lono	entendre
+10.17.9.17.	rono	35.4	hawai	lono	entendre
+10.17.9.17.	rono	35.1	tongien	lono	entendre
+10.17.9.17.	rono	35.2	samoan	lono	entendre
+10.17.9.17.	rono	35.3	raroton	lono	entendre
+10.17.9.17.	rono	35.4	hawai	lono	entendre
+10.17.9.17.	rono	35.1	tongien	lono	entendre
+10.17.9.17.	rono	35.2	samoan	lono	entendre
+10.17.9.17.	rono	35.3	raroton	lono	entendre
+10.17.9.17.	rono	35.4	hawai	lono	entendre
+11.14.13.17.	laso	33.1	tongien	laho	testicules
+11.14.13.17.	laso	33.2	samoan	laho	testicules
+11.14.13.17.	laso	33.3	raroton	laho	testicules
+11.14.13.17.	laso	33.4	hawai	laho	testicules
+11.14.3.17.	lafo	33.1	tongien	laho	testicules
+11.14.3.17.	lafo	33.2	samoan	laho	testicules
+11.14.3.17.	lafo	33.3	raroton	laho	testicules
+11.14.3.17.	lafo	33.4	hawai	laho	testicules
+11.15.14.	lua	36.1	tongien	lua	deux
+11.15.14.	lua	36.2	samoan	lua	deux
+11.15.14.	lua	36.3	raroton	lua	deux
+11.15.14.	lua	36.4	hawai	lua	deux
+11.15.14.	lua	36.1	tongien	lua	deux
+11.15.14.	lua	36.2	samoan	lua	deux
+11.15.14.	lua	36.3	raroton	lua	deux
+11.15.14.	lua	36.4	hawai	lua	deux
+11.17.15.	lou	34.1	tongien	lou	gaule  fruit
+11.17.15.	lou	34.2	samoan	lou	gaule  fruit
+11.17.15.	lou	34.3	raroton	lou	gaule  fruit
+11.17.15.	lou	34.4	hawai	lou	gaule  fruit
+11.17.15.	lou	34.1	tongien	lou	gaule  fruit
+11.17.15.	lou	34.2	samoan	lou	gaule  fruit
+11.17.15.	lou	34.3	raroton	lou	gaule  fruit
+11.17.15.	lou	34.4	hawai	lou	gaule  fruit
+11.17.7.17.	loNo	35.1	tongien	lono	entendre
+11.17.7.17.	loNo	35.2	samoan	lono	entendre
+11.17.7.17.	loNo	35.3	raroton	lono	entendre
+11.17.7.17.	loNo	35.4	hawai	lono	entendre
+11.17.9.17.	lono	35.1	tongien	lono	entendre
+11.17.9.17.	lono	35.2	samoan	lono	entendre
+11.17.9.17.	lono	35.3	raroton	lono	entendre
+11.17.9.17.	lono	35.4	hawai	lono	entendre
+11.17.9.17.	lono	35.1	tongien	lono	entendre
+11.17.9.17.	lono	35.2	samoan	lono	entendre
+11.17.9.17.	lono	35.3	raroton	lono	entendre
+11.17.9.17.	lono	35.4	hawai	lono	entendre
+12.14.14.	haa	15.1	tongien	haa	quatre
+12.14.14.	haa	15.2	samoan	haa	quatre
+12.14.14.	haa	15.3	raroton	haa	quatre
+12.14.14.	haa	15.4	hawai	haa	quatre
+12.14.15.	hau	19.1	tongien	hau	rose
+12.14.15.	hau	19.2	samoan	hau	rose
+12.14.15.	hau	19.3	raroton	hau	rose
+12.14.15.	hau	19.4	hawai	hau	rose
+12.16.6.14.	hiQa	20.1	tongien	hiQa	faire du feu 
+12.16.6.14.	hiQa	20.2	samoan	hiQa	faire du feu 
+12.16.6.14.	hiQa	20.3	raroton	hiQa	faire du feu 
+12.16.6.14.	hiQa	20.4	hawai	hiQa	faire du feu 
+12.16.6.15.	hiQu	21.1	tongien	hiQu	queue
+12.16.6.15.	hiQu	21.2	samoan	hiQu	queue
+12.16.6.15.	hiQu	21.3	raroton	hiQu	queue
+12.16.6.15.	hiQu	21.4	hawai	hiQu	queue
+12.18.6.18.	heQe	16.1	tongien	heQe	poulpe
+12.18.6.18.	heQe	16.2	samoan	heQe	poulpe
+12.18.6.18.	heQe	16.3	raroton	heQe	poulpe
+12.18.6.18.	heQe	16.4	hawai	heQe	poulpe
+13.14.14.	saa	15.1	tongien	haa	quatre
+13.14.14.	saa	15.2	samoan	haa	quatre
+13.14.14.	saa	15.3	raroton	haa	quatre
+13.14.14.	saa	15.4	hawai	haa	quatre
+13.14.14.	saa	15.1	tongien	haa	quatre
+13.14.14.	saa	15.2	samoan	haa	quatre
+13.14.14.	saa	15.3	raroton	haa	quatre
+13.14.14.	saa	15.4	hawai	haa	quatre
+13.14.15.	sau	19.1	tongien	hau	rose
+13.14.15.	sau	19.2	samoan	hau	rose
+13.14.15.	sau	19.3	raroton	hau	rose
+13.14.15.	sau	19.4	hawai	hau	rose
+13.14.15.	sau	19.1	tongien	hau	rose
+13.14.15.	sau	19.2	samoan	hau	rose
+13.14.15.	sau	19.3	raroton	hau	rose
+13.14.15.	sau	19.4	hawai	hau	rose
+13.14.4.14.16.	savai	0.1	tongien	hawai	gloss
+13.14.4.14.16.	savai	0.2	samoan	hawai	gloss
+13.14.4.14.16.	savai	0.3	raroton	hawai	gloss
+13.14.4.14.16.	savai	0.4	hawai	hawai	gloss
+13.16.5.14.	sika	20.1	tongien	hiQa	faire du feu 
+13.16.5.14.	sika	20.2	samoan	hiQa	faire du feu 
+13.16.5.14.	sika	20.3	raroton	hiQa	faire du feu 
+13.16.5.14.	sika	20.4	hawai	hiQa	faire du feu 
+13.16.5.15.	siku	21.1	tongien	hiQu	queue
+13.16.5.15.	siku	21.2	samoan	hiQu	queue
+13.16.5.15.	siku	21.3	raroton	hiQu	queue
+13.16.5.15.	siku	21.4	hawai	hiQu	queue
+13.16.6.14.	siQa	20.1	tongien	hiQa	faire du feu 
+13.16.6.14.	siQa	20.2	samoan	hiQa	faire du feu 
+13.16.6.14.	siQa	20.3	raroton	hiQa	faire du feu 
+13.16.6.14.	siQa	20.4	hawai	hiQa	faire du feu 
+13.16.6.15.	siQu	21.1	tongien	hiQu	queue
+13.16.6.15.	siQu	21.2	samoan	hiQu	queue
+13.16.6.15.	siQu	21.3	raroton	hiQu	queue
+13.16.6.15.	siQu	21.4	hawai	hiQu	queue
+13.18.5.18.	seke	16.1	tongien	heQe	poulpe
+13.18.5.18.	seke	16.2	samoan	heQe	poulpe
+13.18.5.18.	seke	16.3	raroton	heQe	poulpe
+13.18.5.18.	seke	16.4	hawai	heQe	poulpe
+13.18.6.18.	seQe	16.1	tongien	heQe	poulpe
+13.18.6.18.	seQe	16.2	samoan	heQe	poulpe
+13.18.6.18.	seQe	16.3	raroton	heQe	poulpe
+13.18.6.18.	seQe	16.4	hawai	heQe	poulpe
+14.12.16.	ahi	14.1	tongien	ahi	feu
+14.12.16.	ahi	14.2	samoan	ahi	feu
+14.12.16.	ahi	14.3	raroton	ahi	feu
+14.12.16.	ahi	14.4	hawai	ahi	feu
+14.13.14.	asa	10.1	tongien	aQa	racine
+14.13.14.	asa	10.2	samoan	aQa	racine
+14.13.14.	asa	10.3	raroton	aQa	racine
+14.13.14.	asa	10.4	hawai	aQa	racine
+14.13.16.	asi	14.1	tongien	ahi	feu
+14.13.16.	asi	14.2	samoan	ahi	feu
+14.13.16.	asi	14.3	raroton	ahi	feu
+14.13.16.	asi	14.4	hawai	ahi	feu
+14.13.16.	asi	14.1	tongien	ahi	feu
+14.13.16.	asi	14.2	samoan	ahi	feu
+14.13.16.	asi	14.3	raroton	ahi	feu
+14.13.16.	asi	14.4	hawai	ahi	feu
+14.13.18.	ase	22.1	tongien	aQe	en haut
+14.13.18.	ase	22.2	samoan	aQe	en haut
+14.13.18.	ase	22.3	raroton	aQe	en haut
+14.13.18.	ase	22.4	hawai	aQe	en haut
+14.15.	au	11.1	tongien	au	fiel
+14.15.	au	11.2	samoan	au	fiel
+14.15.	au	11.3	raroton	au	fiel
+14.15.	au	11.4	hawai	au	fiel
+14.15.	au	11.1	tongien	au	fiel
+14.15.	au	11.2	samoan	au	fiel
+14.15.	au	11.3	raroton	au	fiel
+14.15.	au	11.4	hawai	au	fiel
+14.15.	au	11.1	tongien	au	fiel
+14.15.	au	11.2	samoan	au	fiel
+14.15.	au	11.3	raroton	au	fiel
+14.15.	au	11.4	hawai	au	fiel
+14.15.	au	11.1	tongien	au	fiel
+14.15.	au	11.2	samoan	au	fiel
+14.15.	au	11.3	raroton	au	fiel
+14.15.	au	11.4	hawai	au	fiel
+14.3.14.	afa	10.1	tongien	aQa	racine
+14.3.14.	afa	10.2	samoan	aQa	racine
+14.3.14.	afa	10.3	raroton	aQa	racine
+14.3.14.	afa	10.4	hawai	aQa	racine
+14.3.16.	afi	14.1	tongien	ahi	feu
+14.3.16.	afi	14.2	samoan	ahi	feu
+14.3.16.	afi	14.3	raroton	ahi	feu
+14.3.16.	afi	14.4	hawai	ahi	feu
+14.3.18.	afe	22.1	tongien	aQe	en haut
+14.3.18.	afe	22.2	samoan	aQe	en haut
+14.3.18.	afe	22.3	raroton	aQe	en haut
+14.3.18.	afe	22.4	hawai	aQe	en haut
+14.5.14.	aka	10.1	tongien	aQa	racine
+14.5.14.	aka	10.2	samoan	aQa	racine
+14.5.14.	aka	10.3	raroton	aQa	racine
+14.5.14.	aka	10.4	hawai	aQa	racine
+14.5.14.	aka	10.1	tongien	aQa	racine
+14.5.14.	aka	10.2	samoan	aQa	racine
+14.5.14.	aka	10.3	raroton	aQa	racine
+14.5.14.	aka	10.4	hawai	aQa	racine
+14.5.18.	ake	22.1	tongien	aQe	en haut
+14.5.18.	ake	22.2	samoan	aQe	en haut
+14.5.18.	ake	22.3	raroton	aQe	en haut
+14.5.18.	ake	22.4	hawai	aQe	en haut
+14.5.18.	ake	22.1	tongien	aQe	en haut
+14.5.18.	ake	22.2	samoan	aQe	en haut
+14.5.18.	ake	22.3	raroton	aQe	en haut
+14.5.18.	ake	22.4	hawai	aQe	en haut
+14.6.14.	aQa	10.1	tongien	aQa	racine
+14.6.14.	aQa	10.2	samoan	aQa	racine
+14.6.14.	aQa	10.3	raroton	aQa	racine
+14.6.14.	aQa	10.4	hawai	aQa	racine
+14.6.18.	aQe	22.1	tongien	aQe	en haut
+14.6.18.	aQe	22.2	samoan	aQe	en haut
+14.6.18.	aQe	22.3	raroton	aQe	en haut
+14.6.18.	aQe	22.4	hawai	aQe	en haut
+15.12.16.	uhi	13.1	tongien	uhi	igname
+15.12.16.	uhi	13.2	samoan	uhi	igname
+15.12.16.	uhi	13.3	raroton	uhi	igname
+15.12.16.	uhi	13.4	hawai	uhi	igname
+15.13.16.	usi	13.1	tongien	uhi	igname
+15.13.16.	usi	13.2	samoan	uhi	igname
+15.13.16.	usi	13.3	raroton	uhi	igname
+15.13.16.	usi	13.4	hawai	uhi	igname
+15.13.16.	usi	13.1	tongien	uhi	igname
+15.13.16.	usi	13.2	samoan	uhi	igname
+15.13.16.	usi	13.3	raroton	uhi	igname
+15.13.16.	usi	13.4	hawai	uhi	igname
+15.3.16.	ufi	13.1	tongien	uhi	igname
+15.3.16.	ufi	13.2	samoan	uhi	igname
+15.3.16.	ufi	13.3	raroton	uhi	igname
+15.3.16.	ufi	13.4	hawai	uhi	igname
+16.12.15.	ihu	18.1	tongien	ihu	nez
+16.12.15.	ihu	18.2	samoan	ihu	nez
+16.12.15.	ihu	18.3	raroton	ihu	nez
+16.12.15.	ihu	18.4	hawai	ihu	nez
+16.13.14.	isa	17.1	tongien	iQa	poisson
+16.13.14.	isa	17.2	samoan	iQa	poisson
+16.13.14.	isa	17.3	raroton	iQa	poisson
+16.13.14.	isa	17.4	hawai	iQa	poisson
+16.13.15.	isu	18.1	tongien	ihu	nez
+16.13.15.	isu	18.2	samoan	ihu	nez
+16.13.15.	isu	18.3	raroton	ihu	nez
+16.13.15.	isu	18.4	hawai	ihu	nez
+16.13.15.	isu	18.1	tongien	ihu	nez
+16.13.15.	isu	18.2	samoan	ihu	nez
+16.13.15.	isu	18.3	raroton	ihu	nez
+16.13.15.	isu	18.4	hawai	ihu	nez
+16.3.14.	ifa	17.1	tongien	iQa	poisson
+16.3.14.	ifa	17.2	samoan	iQa	poisson
+16.3.14.	ifa	17.3	raroton	iQa	poisson
+16.3.14.	ifa	17.4	hawai	iQa	poisson
+16.3.15.	ifu	18.1	tongien	ihu	nez
+16.3.15.	ifu	18.2	samoan	ihu	nez
+16.3.15.	ifu	18.3	raroton	ihu	nez
+16.3.15.	ifu	18.4	hawai	ihu	nez
+16.5.14.	ika	17.1	tongien	iQa	poisson
+16.5.14.	ika	17.2	samoan	iQa	poisson
+16.5.14.	ika	17.3	raroton	iQa	poisson
+16.5.14.	ika	17.4	hawai	iQa	poisson
+16.5.14.	ika	17.1	tongien	iQa	poisson
+16.5.14.	ika	17.2	samoan	iQa	poisson
+16.5.14.	ika	17.3	raroton	iQa	poisson
+16.5.14.	ika	17.4	hawai	iQa	poisson
+16.6.14.	iQa	17.1	tongien	iQa	poisson
+16.6.14.	iQa	17.2	samoan	iQa	poisson
+16.6.14.	iQa	17.3	raroton	iQa	poisson
+16.6.14.	iQa	17.4	hawai	iQa	poisson
+2.15.12.16.	puhi	3.1	tongien	puhi	souffler
+2.15.12.16.	puhi	3.2	samoan	puhi	souffler
+2.15.12.16.	puhi	3.3	raroton	puhi	souffler
+2.15.12.16.	puhi	3.4	hawai	puhi	souffler
+2.15.13.16.	pusi	3.1	tongien	puhi	souffler
+2.15.13.16.	pusi	3.2	samoan	puhi	souffler
+2.15.13.16.	pusi	3.3	raroton	puhi	souffler
+2.15.13.16.	pusi	3.4	hawai	puhi	souffler
+2.15.13.16.	pusi	3.1	tongien	puhi	souffler
+2.15.13.16.	pusi	3.2	samoan	puhi	souffler
+2.15.13.16.	pusi	3.3	raroton	puhi	souffler
+2.15.13.16.	pusi	3.4	hawai	puhi	souffler
+2.15.3.16.	pufi	3.1	tongien	puhi	souffler
+2.15.3.16.	pufi	3.2	samoan	puhi	souffler
+2.15.3.16.	pufi	3.3	raroton	puhi	souffler
+2.15.3.16.	pufi	3.4	hawai	puhi	souffler
+2.16.1.17.	pito	2.1	tongien	piko	nombril
+2.16.1.17.	pito	2.2	samoan	piko	nombril
+2.16.1.17.	pito	2.3	raroton	piko	nombril
+2.16.1.17.	pito	2.4	hawai	piko	nombril
+2.16.5.17.	piko	2.1	tongien	piko	nombril
+2.16.5.17.	piko	2.2	samoan	piko	nombril
+2.16.5.17.	piko	2.3	raroton	piko	nombril
+2.16.5.17.	piko	2.4	hawai	piko	nombril
+2.16.5.17.	piko	2.1	tongien	piko	nombril
+2.16.5.17.	piko	2.2	samoan	piko	nombril
+2.16.5.17.	piko	2.3	raroton	piko	nombril
+2.16.5.17.	piko	2.4	hawai	piko	nombril
+2.17.13.17.	poso	12.1	tongien	poQo	tte
+2.17.13.17.	poso	12.2	samoan	poQo	tte
+2.17.13.17.	poso	12.3	raroton	poQo	tte
+2.17.13.17.	poso	12.4	hawai	poQo	tte
+2.17.3.17.	pofo	12.1	tongien	poQo	tte
+2.17.3.17.	pofo	12.2	samoan	poQo	tte
+2.17.3.17.	pofo	12.3	raroton	poQo	tte
+2.17.3.17.	pofo	12.4	hawai	poQo	tte
+2.17.5.17.	poko	12.1	tongien	poQo	tte
+2.17.5.17.	poko	12.2	samoan	poQo	tte
+2.17.5.17.	poko	12.3	raroton	poQo	tte
+2.17.5.17.	poko	12.4	hawai	poQo	tte
+2.17.5.17.	poko	12.1	tongien	poQo	tte
+2.17.5.17.	poko	12.2	samoan	poQo	tte
+2.17.5.17.	poko	12.3	raroton	poQo	tte
+2.17.5.17.	poko	12.4	hawai	poQo	tte
+2.17.6.17.	poQo	12.1	tongien	poQo	tte
+2.17.6.17.	poQo	12.2	samoan	poQo	tte
+2.17.6.17.	poQo	12.3	raroton	poQo	tte
+2.17.6.17.	poQo	12.4	hawai	poQo	tte
+3.14.14.	faa	15.1	tongien	haa	quatre
+3.14.14.	faa	15.2	samoan	haa	quatre
+3.14.14.	faa	15.3	raroton	haa	quatre
+3.14.14.	faa	15.4	hawai	haa	quatre
+3.14.15.	fau	19.1	tongien	hau	rose
+3.14.15.	fau	19.2	samoan	hau	rose
+3.14.15.	fau	19.3	raroton	hau	rose
+3.14.15.	fau	19.4	hawai	hau	rose
+3.14.4.14.16.	favai	0.1	tongien	hawai	gloss
+3.14.4.14.16.	favai	0.2	samoan	hawai	gloss
+3.14.4.14.16.	favai	0.3	raroton	hawai	gloss
+3.14.4.14.16.	favai	0.4	hawai	hawai	gloss
+3.16.5.14.	fika	20.1	tongien	hiQa	faire du feu 
+3.16.5.14.	fika	20.2	samoan	hiQa	faire du feu 
+3.16.5.14.	fika	20.3	raroton	hiQa	faire du feu 
+3.16.5.14.	fika	20.4	hawai	hiQa	faire du feu 
+3.16.5.15.	fiku	21.1	tongien	hiQu	queue
+3.16.5.15.	fiku	21.2	samoan	hiQu	queue
+3.16.5.15.	fiku	21.3	raroton	hiQu	queue
+3.16.5.15.	fiku	21.4	hawai	hiQu	queue
+3.18.5.18.	feke	16.1	tongien	heQe	poulpe
+3.18.5.18.	feke	16.2	samoan	heQe	poulpe
+3.18.5.18.	feke	16.3	raroton	heQe	poulpe
+3.18.5.18.	feke	16.4	hawai	heQe	poulpe
+4.14.18.	vae	32.1	tongien	wae	jambe
+4.14.18.	vae	32.2	samoan	wae	jambe
+4.14.18.	vae	32.3	raroton	wae	jambe
+4.14.18.	vae	32.4	hawai	wae	jambe
+4.14.5.14.	vaka	31.1	tongien	waQa	bateau
+4.14.5.14.	vaka	31.2	samoan	waQa	bateau
+4.14.5.14.	vaka	31.3	raroton	waQa	bateau
+4.14.5.14.	vaka	31.4	hawai	waQa	bateau
+5.14.10.17.	karo	9.1	tongien	Qalo	viter
+5.14.10.17.	karo	9.2	samoan	Qalo	viter
+5.14.10.17.	karo	9.3	raroton	Qalo	viter
+5.14.10.17.	karo	9.4	hawai	Qalo	viter
+5.14.10.17.	karo	9.1	tongien	Qalo	viter
+5.14.10.17.	karo	9.2	samoan	Qalo	viter
+5.14.10.17.	karo	9.3	raroton	Qalo	viter
+5.14.10.17.	karo	9.4	hawai	Qalo	viter
+5.14.11.17.	kalo	9.1	tongien	Qalo	viter
+5.14.11.17.	kalo	9.2	samoan	Qalo	viter
+5.14.11.17.	kalo	9.3	raroton	Qalo	viter
+5.14.11.17.	kalo	9.4	hawai	Qalo	viter
+5.14.11.17.	kalo	9.1	tongien	Qalo	viter
+5.14.11.17.	kalo	9.2	samoan	Qalo	viter
+5.14.11.17.	kalo	9.3	raroton	Qalo	viter
+5.14.11.17.	kalo	9.4	hawai	Qalo	viter
+5.14.12.14.	kaha	4.1	tongien	kaha	ct
+5.14.12.14.	kaha	4.2	samoan	kaha	ct
+5.14.12.14.	kaha	4.3	raroton	kaha	ct
+5.14.12.14.	kaha	4.4	hawai	kaha	ct
+5.14.13.14.	kasa	4.1	tongien	kaha	ct
+5.14.13.14.	kasa	4.2	samoan	kaha	ct
+5.14.13.14.	kasa	4.3	raroton	kaha	ct
+5.14.13.14.	kasa	4.4	hawai	kaha	ct
+5.14.13.14.	kasa	8.1	tongien	Qaha	fort
+5.14.13.14.	kasa	8.2	samoan	Qaha	fort
+5.14.13.14.	kasa	8.3	raroton	Qaha	fort
+5.14.13.14.	kasa	8.4	hawai	Qaha	fort
+5.14.16.	kai	7.1	tongien	kai	mer
+5.14.16.	kai	7.2	samoan	kai	mer
+5.14.16.	kai	7.3	raroton	kai	mer
+5.14.16.	kai	7.4	hawai	kai	mer
+5.14.16.	kai	7.1	tongien	kai	mer
+5.14.16.	kai	7.2	samoan	kai	mer
+5.14.16.	kai	7.3	raroton	kai	mer
+5.14.16.	kai	7.4	hawai	kai	mer
+5.14.18.	kae	5.1	tongien	kae	crotte
+5.14.18.	kae	5.2	samoan	kae	crotte
+5.14.18.	kae	5.3	raroton	kae	crotte
+5.14.18.	kae	5.4	hawai	kae	crotte
+5.14.18.	kae	5.1	tongien	kae	crotte
+5.14.18.	kae	5.2	samoan	kae	crotte
+5.14.18.	kae	5.3	raroton	kae	crotte
+5.14.18.	kae	5.4	hawai	kae	crotte
+5.14.2.15.	kapu	1.1	tongien	kapu	interdit
+5.14.2.15.	kapu	1.2	samoan	kapu	interdit
+5.14.2.15.	kapu	1.3	raroton	kapu	interdit
+5.14.2.15.	kapu	1.4	hawai	kapu	interdit
+5.14.2.15.	kapu	1.1	tongien	kapu	interdit
+5.14.2.15.	kapu	1.2	samoan	kapu	interdit
+5.14.2.15.	kapu	1.3	raroton	kapu	interdit
+5.14.2.15.	kapu	1.4	hawai	kapu	interdit
+5.14.3.14.	kafa	8.1	tongien	Qaha	fort
+5.14.3.14.	kafa	8.2	samoan	Qaha	fort
+5.14.3.14.	kafa	8.3	raroton	Qaha	fort
+5.14.3.14.	kafa	8.4	hawai	Qaha	fort
+5.14.9.14.5.14.	kanaka	6.1	tongien	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.2	samoan	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.3	raroton	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.4	hawai	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.1	tongien	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.2	samoan	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.3	raroton	kanaka	homme
+5.14.9.14.5.14.	kanaka	6.4	hawai	kanaka	homme
+5.17.8.17.	komo	23.1	tongien	komo	pntrer
+5.17.8.17.	komo	23.2	samoan	komo	pntrer
+5.17.8.17.	komo	23.3	raroton	komo	pntrer
+5.17.8.17.	komo	23.4	hawai	komo	pntrer
+5.17.8.17.	komo	23.1	tongien	komo	pntrer
+5.17.8.17.	komo	23.2	samoan	komo	pntrer
+5.17.8.17.	komo	23.3	raroton	komo	pntrer
+5.17.8.17.	komo	23.4	hawai	komo	pntrer
+6.14.10.17.	Qaro	9.1	tongien	Qalo	viter
+6.14.10.17.	Qaro	9.2	samoan	Qalo	viter
+6.14.10.17.	Qaro	9.3	raroton	Qalo	viter
+6.14.10.17.	Qaro	9.4	hawai	Qalo	viter
+6.14.12.14.	Qaha	8.1	tongien	Qaha	fort
+6.14.12.14.	Qaha	8.2	samoan	Qaha	fort
+6.14.12.14.	Qaha	8.3	raroton	Qaha	fort
+6.14.12.14.	Qaha	8.4	hawai	Qaha	fort
+6.14.13.14.	Qasa	8.1	tongien	Qaha	fort
+6.14.13.14.	Qasa	8.2	samoan	Qaha	fort
+6.14.13.14.	Qasa	8.3	raroton	Qaha	fort
+6.14.13.14.	Qasa	8.4	hawai	Qaha	fort
+7.14.10.15.	Naru	29.1	tongien	nalu	vague
+7.14.10.15.	Naru	29.2	samoan	nalu	vague
+7.14.10.15.	Naru	29.3	raroton	nalu	vague
+7.14.10.15.	Naru	29.4	hawai	nalu	vague
+7.14.11.15.	Nalu	29.1	tongien	nalu	vague
+7.14.11.15.	Nalu	29.2	samoan	nalu	vague
+7.14.11.15.	Nalu	29.3	raroton	nalu	vague
+7.14.11.15.	Nalu	29.4	hawai	nalu	vague
+7.14.14.	Naa	27.1	tongien	naa	se calmer
+7.14.14.	Naa	27.2	samoan	naa	se calmer
+7.14.14.	Naa	27.3	raroton	naa	se calmer
+7.14.14.	Naa	27.4	hawai	naa	se calmer
+7.15.1.15.	Nutu	30.1	tongien	nuku	bouche
+7.15.1.15.	Nutu	30.2	samoan	nuku	bouche
+7.15.1.15.	Nutu	30.3	raroton	nuku	bouche
+7.15.1.15.	Nutu	30.4	hawai	nuku	bouche
+7.17.13.17.	Noso	28.1	tongien	noho	demeurer
+7.17.13.17.	Noso	28.2	samoan	noho	demeurer
+7.17.13.17.	Noso	28.3	raroton	noho	demeurer
+7.17.13.17.	Noso	28.4	hawai	noho	demeurer
+7.17.3.17.	Nofo	28.1	tongien	noho	demeurer
+7.17.3.17.	Nofo	28.2	samoan	noho	demeurer
+7.17.3.17.	Nofo	28.3	raroton	noho	demeurer
+7.17.3.17.	Nofo	28.4	hawai	noho	demeurer
+8.14.10.14.	mara	26.1	tongien	mala	ferment
+8.14.10.14.	mara	26.2	samoan	mala	ferment
+8.14.10.14.	mara	26.3	raroton	mala	ferment
+8.14.10.14.	mara	26.4	hawai	mala	ferment
+8.14.10.14.	mara	26.1	tongien	mala	ferment
+8.14.10.14.	mara	26.2	samoan	mala	ferment
+8.14.10.14.	mara	26.3	raroton	mala	ferment
+8.14.10.14.	mara	26.4	hawai	mala	ferment
+8.14.10.14.	mara	26.1	tongien	mala	ferment
+8.14.10.14.	mara	26.2	samoan	mala	ferment
+8.14.10.14.	mara	26.3	raroton	mala	ferment
+8.14.10.14.	mara	26.4	hawai	mala	ferment
+8.14.11.14.	mala	26.1	tongien	mala	ferment
+8.14.11.14.	mala	26.2	samoan	mala	ferment
+8.14.11.14.	mala	26.3	raroton	mala	ferment
+8.14.11.14.	mala	26.4	hawai	mala	ferment
+8.14.11.14.	mala	26.1	tongien	mala	ferment
+8.14.11.14.	mala	26.2	samoan	mala	ferment
+8.14.11.14.	mala	26.3	raroton	mala	ferment
+8.14.11.14.	mala	26.4	hawai	mala	ferment
+8.14.15.	mau	25.1	tongien	mau	rsistant
+8.14.15.	mau	25.2	samoan	mau	rsistant
+8.14.15.	mau	25.3	raroton	mau	rsistant
+8.14.15.	mau	25.4	hawai	mau	rsistant
+8.14.15.	mau	25.1	tongien	mau	rsistant
+8.14.15.	mau	25.2	samoan	mau	rsistant
+8.14.15.	mau	25.3	raroton	mau	rsistant
+8.14.15.	mau	25.4	hawai	mau	rsistant
+8.14.15.	mau	25.1	tongien	mau	rsistant
+8.14.15.	mau	25.2	samoan	mau	rsistant
+8.14.15.	mau	25.3	raroton	mau	rsistant
+8.14.15.	mau	25.4	hawai	mau	rsistant
+8.14.15.	mau	25.1	tongien	mau	rsistant
+8.14.15.	mau	25.2	samoan	mau	rsistant
+8.14.15.	mau	25.3	raroton	mau	rsistant
+8.14.15.	mau	25.4	hawai	mau	rsistant
+8.14.7.14.	maNa	24.1	tongien	mana	branche
+8.14.7.14.	maNa	24.2	samoan	mana	branche
+8.14.7.14.	maNa	24.3	raroton	mana	branche
+8.14.7.14.	maNa	24.4	hawai	mana	branche
+8.14.9.14.	mana	24.1	tongien	mana	branche
+8.14.9.14.	mana	24.2	samoan	mana	branche
+8.14.9.14.	mana	24.3	raroton	mana	branche
+8.14.9.14.	mana	24.4	hawai	mana	branche
+8.14.9.14.	mana	24.1	tongien	mana	branche
+8.14.9.14.	mana	24.2	samoan	mana	branche
+8.14.9.14.	mana	24.3	raroton	mana	branche
+8.14.9.14.	mana	24.4	hawai	mana	branche
+8.14.9.14.	mana	24.1	tongien	mana	branche
+8.14.9.14.	mana	24.2	samoan	mana	branche
+8.14.9.14.	mana	24.3	raroton	mana	branche
+8.14.9.14.	mana	24.4	hawai	mana	branche
+8.14.9.14.	mana	24.1	tongien	mana	branche
+8.14.9.14.	mana	24.2	samoan	mana	branche
+8.14.9.14.	mana	24.3	raroton	mana	branche
+8.14.9.14.	mana	24.4	hawai	mana	branche
+9.14.10.15.	naru	29.1	tongien	nalu	vague
+9.14.10.15.	naru	29.2	samoan	nalu	vague
+9.14.10.15.	naru	29.3	raroton	nalu	vague
+9.14.10.15.	naru	29.4	hawai	nalu	vague
+9.14.10.15.	naru	29.1	tongien	nalu	vague
+9.14.10.15.	naru	29.2	samoan	nalu	vague
+9.14.10.15.	naru	29.3	raroton	nalu	vague
+9.14.10.15.	naru	29.4	hawai	nalu	vague
+9.14.10.15.	naru	29.1	tongien	nalu	vague
+9.14.10.15.	naru	29.2	samoan	nalu	vague
+9.14.10.15.	naru	29.3	raroton	nalu	vague
+9.14.10.15.	naru	29.4	hawai	nalu	vague
+9.14.11.15.	nalu	29.1	tongien	nalu	vague
+9.14.11.15.	nalu	29.2	samoan	nalu	vague
+9.14.11.15.	nalu	29.3	raroton	nalu	vague
+9.14.11.15.	nalu	29.4	hawai	nalu	vague
+9.14.11.15.	nalu	29.1	tongien	nalu	vague
+9.14.11.15.	nalu	29.2	samoan	nalu	vague
+9.14.11.15.	nalu	29.3	raroton	nalu	vague
+9.14.11.15.	nalu	29.4	hawai	nalu	vague
+9.14.14.	naa	27.1	tongien	naa	se calmer
+9.14.14.	naa	27.2	samoan	naa	se calmer
+9.14.14.	naa	27.3	raroton	naa	se calmer
+9.14.14.	naa	27.4	hawai	naa	se calmer
+9.14.14.	naa	27.1	tongien	naa	se calmer
+9.14.14.	naa	27.2	samoan	naa	se calmer
+9.14.14.	naa	27.3	raroton	naa	se calmer
+9.14.14.	naa	27.4	hawai	naa	se calmer
+9.14.14.	naa	27.1	tongien	naa	se calmer
+9.14.14.	naa	27.2	samoan	naa	se calmer
+9.14.14.	naa	27.3	raroton	naa	se calmer
+9.14.14.	naa	27.4	hawai	naa	se calmer
+9.14.14.	naa	27.1	tongien	naa	se calmer
+9.14.14.	naa	27.2	samoan	naa	se calmer
+9.14.14.	naa	27.3	raroton	naa	se calmer
+9.14.14.	naa	27.4	hawai	naa	se calmer
+9.15.1.15.	nutu	30.1	tongien	nuku	bouche
+9.15.1.15.	nutu	30.2	samoan	nuku	bouche
+9.15.1.15.	nutu	30.3	raroton	nuku	bouche
+9.15.1.15.	nutu	30.4	hawai	nuku	bouche
+9.15.5.15.	nuku	30.1	tongien	nuku	bouche
+9.15.5.15.	nuku	30.2	samoan	nuku	bouche
+9.15.5.15.	nuku	30.3	raroton	nuku	bouche
+9.15.5.15.	nuku	30.4	hawai	nuku	bouche
+9.15.5.15.	nuku	30.1	tongien	nuku	bouche
+9.15.5.15.	nuku	30.2	samoan	nuku	bouche
+9.15.5.15.	nuku	30.3	raroton	nuku	bouche
+9.15.5.15.	nuku	30.4	hawai	nuku	bouche
+9.17.12.17.	noho	28.1	tongien	noho	demeurer
+9.17.12.17.	noho	28.2	samoan	noho	demeurer
+9.17.12.17.	noho	28.3	raroton	noho	demeurer
+9.17.12.17.	noho	28.4	hawai	noho	demeurer
+9.17.13.17.	noso	28.1	tongien	noho	demeurer
+9.17.13.17.	noso	28.2	samoan	noho	demeurer
+9.17.13.17.	noso	28.3	raroton	noho	demeurer
+9.17.13.17.	noso	28.4	hawai	noho	demeurer
+9.17.13.17.	noso	28.1	tongien	noho	demeurer
+9.17.13.17.	noso	28.2	samoan	noho	demeurer
+9.17.13.17.	noso	28.3	raroton	noho	demeurer
+9.17.13.17.	noso	28.4	hawai	noho	demeurer
+9.17.3.17.	nofo	28.1	tongien	noho	demeurer
+9.17.3.17.	nofo	28.2	samoan	noho	demeurer
+9.17.3.17.	nofo	28.3	raroton	noho	demeurer
+9.17.3.17.	nofo	28.4	hawai	noho	demeurer
+FAILED.raroton		15.1	tongien	haa	quatre
+FAILED.raroton		15.2	samoan	haa	quatre
+FAILED.raroton		15.3	raroton	haa	quatre
+FAILED.raroton		15.4	hawai	haa	quatre
+FAILED.raroton		0.1	tongien	hawai	gloss
+FAILED.raroton		0.2	samoan	hawai	gloss
+FAILED.raroton		0.3	raroton	hawai	gloss
+FAILED.raroton		0.4	hawai	hawai	gloss
+FAILED.raroton		16.1	tongien	heQe	poulpe
+FAILED.raroton		16.2	samoan	heQe	poulpe
+FAILED.raroton		16.3	raroton	heQe	poulpe
+FAILED.raroton		16.4	hawai	heQe	poulpe
+FAILED.raroton		26.1	tongien	mala	ferment
+FAILED.raroton		26.2	samoan	mala	ferment
+FAILED.raroton		26.3	raroton	mala	ferment
+FAILED.raroton		26.4	hawai	mala	ferment
+FAILED.raroton		28.1	tongien	noho	demeurer
+FAILED.raroton		28.2	samoan	noho	demeurer
+FAILED.raroton		28.3	raroton	noho	demeurer
+FAILED.raroton		28.4	hawai	noho	demeurer
+FAILED.raroton		18.1	tongien	ihu	nez
+FAILED.raroton		18.2	samoan	ihu	nez
+FAILED.raroton		18.3	raroton	ihu	nez
+FAILED.raroton		18.4	hawai	ihu	nez
+FAILED.raroton		3.1	tongien	puhi	souffler
+FAILED.raroton		3.2	samoan	puhi	souffler
+FAILED.raroton		3.3	raroton	puhi	souffler
+FAILED.raroton		3.4	hawai	puhi	souffler
+FAILED.raroton		14.1	tongien	ahi	feu
+FAILED.raroton		14.2	samoan	ahi	feu
+FAILED.raroton		14.3	raroton	ahi	feu
+FAILED.raroton		14.4	hawai	ahi	feu
+FAILED.raroton		19.1	tongien	hau	rose
+FAILED.raroton		19.2	samoan	hau	rose
+FAILED.raroton		19.3	raroton	hau	rose
+FAILED.raroton		19.4	hawai	hau	rose
+FAILED.raroton		4.1	tongien	kaha	ct
+FAILED.raroton		4.2	samoan	kaha	ct
+FAILED.raroton		4.3	raroton	kaha	ct
+FAILED.raroton		4.4	hawai	kaha	ct
+FAILED.raroton		9.1	tongien	Qalo	viter
+FAILED.raroton		9.2	samoan	Qalo	viter
+FAILED.raroton		9.3	raroton	Qalo	viter
+FAILED.raroton		9.4	hawai	Qalo	viter
+FAILED.raroton		31.1	tongien	waQa	bateau
+FAILED.raroton		31.2	samoan	waQa	bateau
+FAILED.raroton		31.3	raroton	waQa	bateau
+FAILED.raroton		31.4	hawai	waQa	bateau
+FAILED.raroton		21.1	tongien	hiQu	queue
+FAILED.raroton		21.2	samoan	hiQu	queue
+FAILED.raroton		21.3	raroton	hiQu	queue
+FAILED.raroton		21.4	hawai	hiQu	queue
+FAILED.raroton		29.1	tongien	nalu	vague
+FAILED.raroton		29.2	samoan	nalu	vague
+FAILED.raroton		29.3	raroton	nalu	vague
+FAILED.raroton		29.4	hawai	nalu	vague
+FAILED.raroton		34.1	tongien	lou	gaule  fruit
+FAILED.raroton		34.2	samoan	lou	gaule  fruit
+FAILED.raroton		34.3	raroton	lou	gaule  fruit
+FAILED.raroton		34.4	hawai	lou	gaule  fruit
+FAILED.raroton		33.1	tongien	laho	testicules
+FAILED.raroton		33.2	samoan	laho	testicules
+FAILED.raroton		33.3	raroton	laho	testicules
+FAILED.raroton		33.4	hawai	laho	testicules
+FAILED.raroton		8.1	tongien	Qaha	fort
+FAILED.raroton		8.2	samoan	Qaha	fort
+FAILED.raroton		8.3	raroton	Qaha	fort
+FAILED.raroton		8.4	hawai	Qaha	fort
+FAILED.raroton		20.1	tongien	hiQa	faire du feu 
+FAILED.raroton		20.2	samoan	hiQa	faire du feu 
+FAILED.raroton		20.3	raroton	hiQa	faire du feu 
+FAILED.raroton		20.4	hawai	hiQa	faire du feu 
+FAILED.raroton		35.1	tongien	lono	entendre
+FAILED.raroton		35.2	samoan	lono	entendre
+FAILED.raroton		35.3	raroton	lono	entendre
+FAILED.raroton		35.4	hawai	lono	entendre
+FAILED.raroton		32.1	tongien	wae	jambe
+FAILED.raroton		32.2	samoan	wae	jambe
+FAILED.raroton		32.3	raroton	wae	jambe
+FAILED.raroton		32.4	hawai	wae	jambe
+FAILED.raroton		13.1	tongien	uhi	igname
+FAILED.raroton		13.2	samoan	uhi	igname
+FAILED.raroton		13.3	raroton	uhi	igname
+FAILED.raroton		13.4	hawai	uhi	igname
+FAILED.raroton		36.1	tongien	lua	deux
+FAILED.raroton		36.2	samoan	lua	deux
+FAILED.raroton		36.3	raroton	lua	deux
+FAILED.raroton		36.4	hawai	lua	deux
+FAILED.samoan		15.1	tongien	haa	quatre
+FAILED.samoan		15.2	samoan	haa	quatre
+FAILED.samoan		15.3	raroton	haa	quatre
+FAILED.samoan		15.4	hawai	haa	quatre
+FAILED.samoan		0.1	tongien	hawai	gloss
+FAILED.samoan		0.2	samoan	hawai	gloss
+FAILED.samoan		0.3	raroton	hawai	gloss
+FAILED.samoan		0.4	hawai	hawai	gloss
+FAILED.samoan		16.1	tongien	heQe	poulpe
+FAILED.samoan		16.2	samoan	heQe	poulpe
+FAILED.samoan		16.3	raroton	heQe	poulpe
+FAILED.samoan		16.4	hawai	heQe	poulpe
+FAILED.samoan		7.1	tongien	kai	mer
+FAILED.samoan		7.2	samoan	kai	mer
+FAILED.samoan		7.3	raroton	kai	mer
+FAILED.samoan		7.4	hawai	kai	mer
+FAILED.samoan		30.1	tongien	nuku	bouche
+FAILED.samoan		30.2	samoan	nuku	bouche
+FAILED.samoan		30.3	raroton	nuku	bouche
+FAILED.samoan		30.4	hawai	nuku	bouche
+FAILED.samoan		28.1	tongien	noho	demeurer
+FAILED.samoan		28.2	samoan	noho	demeurer
+FAILED.samoan		28.3	raroton	noho	demeurer
+FAILED.samoan		28.4	hawai	noho	demeurer
+FAILED.samoan		18.1	tongien	ihu	nez
+FAILED.samoan		18.2	samoan	ihu	nez
+FAILED.samoan		18.3	raroton	ihu	nez
+FAILED.samoan		18.4	hawai	ihu	nez
+FAILED.samoan		1.1	tongien	kapu	interdit
+FAILED.samoan		1.2	samoan	kapu	interdit
+FAILED.samoan		1.3	raroton	kapu	interdit
+FAILED.samoan		1.4	hawai	kapu	interdit
+FAILED.samoan		3.1	tongien	puhi	souffler
+FAILED.samoan		3.2	samoan	puhi	souffler
+FAILED.samoan		3.3	raroton	puhi	souffler
+FAILED.samoan		3.4	hawai	puhi	souffler
+FAILED.samoan		14.1	tongien	ahi	feu
+FAILED.samoan		14.2	samoan	ahi	feu
+FAILED.samoan		14.3	raroton	ahi	feu
+FAILED.samoan		14.4	hawai	ahi	feu
+FAILED.samoan		19.1	tongien	hau	rose
+FAILED.samoan		19.2	samoan	hau	rose
+FAILED.samoan		19.3	raroton	hau	rose
+FAILED.samoan		19.4	hawai	hau	rose
+FAILED.samoan		4.1	tongien	kaha	ct
+FAILED.samoan		4.2	samoan	kaha	ct
+FAILED.samoan		4.3	raroton	kaha	ct
+FAILED.samoan		4.4	hawai	kaha	ct
+FAILED.samoan		6.1	tongien	kanaka	homme
+FAILED.samoan		6.2	samoan	kanaka	homme
+FAILED.samoan		6.3	raroton	kanaka	homme
+FAILED.samoan		6.4	hawai	kanaka	homme
+FAILED.samoan		31.1	tongien	waQa	bateau
+FAILED.samoan		31.2	samoan	waQa	bateau
+FAILED.samoan		31.3	raroton	waQa	bateau
+FAILED.samoan		31.4	hawai	waQa	bateau
+FAILED.samoan		5.1	tongien	kae	crotte
+FAILED.samoan		5.2	samoan	kae	crotte
+FAILED.samoan		5.3	raroton	kae	crotte
+FAILED.samoan		5.4	hawai	kae	crotte
+FAILED.samoan		2.1	tongien	piko	nombril
+FAILED.samoan		2.2	samoan	piko	nombril
+FAILED.samoan		2.3	raroton	piko	nombril
+FAILED.samoan		2.4	hawai	piko	nombril
+FAILED.samoan		21.1	tongien	hiQu	queue
+FAILED.samoan		21.2	samoan	hiQu	queue
+FAILED.samoan		21.3	raroton	hiQu	queue
+FAILED.samoan		21.4	hawai	hiQu	queue
+FAILED.samoan		23.1	tongien	komo	pntrer
+FAILED.samoan		23.2	samoan	komo	pntrer
+FAILED.samoan		23.3	raroton	komo	pntrer
+FAILED.samoan		23.4	hawai	komo	pntrer
+FAILED.samoan		33.1	tongien	laho	testicules
+FAILED.samoan		33.2	samoan	laho	testicules
+FAILED.samoan		33.3	raroton	laho	testicules
+FAILED.samoan		33.4	hawai	laho	testicules
+FAILED.samoan		8.1	tongien	Qaha	fort
+FAILED.samoan		8.2	samoan	Qaha	fort
+FAILED.samoan		8.3	raroton	Qaha	fort
+FAILED.samoan		8.4	hawai	Qaha	fort
+FAILED.samoan		20.1	tongien	hiQa	faire du feu 
+FAILED.samoan		20.2	samoan	hiQa	faire du feu 
+FAILED.samoan		20.3	raroton	hiQa	faire du feu 
+FAILED.samoan		20.4	hawai	hiQa	faire du feu 
+FAILED.samoan		32.1	tongien	wae	jambe
+FAILED.samoan		32.2	samoan	wae	jambe
+FAILED.samoan		32.3	raroton	wae	jambe
+FAILED.samoan		32.4	hawai	wae	jambe
+FAILED.samoan		13.1	tongien	uhi	igname
+FAILED.samoan		13.2	samoan	uhi	igname
+FAILED.samoan		13.3	raroton	uhi	igname
+FAILED.samoan		13.4	hawai	uhi	igname
+FAILED.tongien		0.1	tongien	hawai	gloss
+FAILED.tongien		0.2	samoan	hawai	gloss
+FAILED.tongien		0.3	raroton	hawai	gloss
+FAILED.tongien		0.4	hawai	hawai	gloss
+FAILED.tongien		31.1	tongien	waQa	bateau
+FAILED.tongien		31.2	samoan	waQa	bateau
+FAILED.tongien		31.3	raroton	waQa	bateau
+FAILED.tongien		31.4	hawai	waQa	bateau
+FAILED.tongien		32.1	tongien	wae	jambe
+FAILED.tongien		32.2	samoan	wae	jambe
+FAILED.tongien		32.3	raroton	wae	jambe
+FAILED.tongien		32.4	hawai	wae	jambe

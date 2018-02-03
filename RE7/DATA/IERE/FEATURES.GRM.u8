@@ -1,0 +1,62 @@
+*
+*  Feature Analysis Subsytem of RE
+*
+*  Statement of segments by class.
+*  Each line is of the form:
+*
+* 	<lg> <class> = segment,segment,...
+*
+*  Note:
+*    1.	 CLASS may be any number of alpha characters, CASE IS SIGNIFICANT!
+*    2.	 Segments must be separated by commas.
+*    3.	 Sorry, "-" is not allowed (i.e. you can't say Voiced = -UnVoiced)
+*    4.	 Lines begining with * are treated as comments. Blank lines ignored.
+*    5.  Tabs are permitted between fields.
+*
+
+* Germanic Feature Set. last updated 91.4.30 CFB
+gmc	Cluster	= hl,hr,kj,kr,kl,kw,pj,pr,pl,⁶j,mj,ml,mr
+gmc	Stop	= k,ts,p
+gmc	Aspirated = ʈʰ,pʰ
+gmc	Aspirated = pʰj
+gmc	Unaspirated = k,ts,t,p
+gmc	Unaspirated = kj,kr,kl,kw,pj,pl
+gmc	Nasal	= ⁶,n,m
+gmc	Nasal	= ⁶j,mj,ml,mr
+gmc	Liquid	= l,r
+gmc	Semi-vowel = j,w
+gmc	Fricative = s,h
+gmc	Glottal	= h,hl,hr
+gmc	Velar	= k,⁶
+gmc	Velar	= kj,kr,kl,kw
+gmc	Sibilant = ts,s
+gmc	Flapped = r,hr
+gmc	Flapped	= kr,mr
+gmc	Dental	= t,n
+gmc	Labial	= p,m
+gmc	Labial	= pj,mj,pl,ml,pr,mr
+gmc	Lateral	= l,hl
+gmc	Lateral = kl,pl,ml
+gmc	Long = i:,e:,a:,o:,u:
+gmc	Short = i,e,a,o,u
+gmc	Super-close = j,w
+gmc	Close = i,i:,u,u:
+gmc	Half-close = e,e:,o,o:
+gmc	Open	= a,a:
+gmc	Front	= i,i:,e,e:,j
+gmc	Back	= u,u:,o,o:,w
+gmc	Nasal	= ĩ,ẽ,ã,õ,ũ
+gmc	Oral 	= i,e,a,o,u,i:,e:,a:,o:,u:
+gmc	Zero	= Ø
+
+	P̪LACE  = Labial,Dental,Flapped,Lateral,Retroflex,Palatal,Velar
+	P̪LACE	= Sibilant,Glottal
+	M̪ANNER = Stop,Fricative,Cluster,Liquid,Semi-vowel,Glide
+	M̪ODE	= Voiced,Unvoiced,Aspirated,Unaspirated,Nasal
+	V̪OWEL	= Close,Half-close,Open,Front,Back,Short,Long,Oral,Nasal
+	V̪OWEL	= Super-close
+
+*Notes:
+* 
+* 
+

@@ -1,0 +1,18 @@
+STAT : [Dec 16 15:11:43 2014] START    parameters: /Users/jblowe/Sites/RE7.2/DATA/DEMO93/DEMO93.default.parameters.xml
+PRE  : [Dec 16 15:11:43 2014] START    number of words to process from each lexicon: unlimited
+PRE  : [Dec 16 15:11:43 2014] 
+RLS  : [Dec 16 15:11:43 2014] XML correspondence file:
+RLS  : [Dec 16 15:11:43 2014] /Users/jblowe/Sites/RE7.2/DATA/DEMO93/DEMO93.C794DEM.corrs.xml
+RLS  : [Dec 16 15:11:43 2014] 2052 basic rules from 209 ROWS.<P>LEX  : [Dec 16 15:11:43 2014] Run stats         Lg    Forms Recns  Fail
+LEX  : [Dec 16 15:11:43 2014] =========  ==========   ===== ===== =====
+STAT : [Dec 16 15:11:43 2014] LEXICON  gha : 59 words, 3533 recons, 0 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  ris : 62 words, 850 recons, 0 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  sahu : 58 words, 1250 recons, 0 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  man : 59 words, 2511 recons, 7 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  mar : 65 words, 3301 recons, 5 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  syang : 65 words, 1975 recons, 2 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  tag : 48 words, 708 recons, 1 failed
+STAT : [Dec 16 15:11:44 2014] LEXICON  tuk : 65 words, 4185 recons, 0 failed
+STAT : [Dec 16 15:11:44 2014] DATA     481 forms, 18313 recons, 15 no rc
+STAT : [Dec 16 15:11:46 2014] SET      2620 raw sets, 204 merged sets, 28 isolates
+STAT : [Dec 16 15:11:46 2014] END      *****

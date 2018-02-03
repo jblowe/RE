@@ -1,0 +1,1610 @@
+<html><head></head><body>
+<title>The Reconstruction Engine (Computational Linguisics 20.3)
+</title><p>
+<p>
+<table ><td>
+<img src="http://www.linguistics.berkeley.edu.GIFs/atwork.GIF"><br>
+<FONT SIZE=2>Caveat lector!</font><p>
+<td>
+</table>
+This document is an HTML rendering of:<p>
+<h4>
+"The reconstruction engine: a computer implementation of the comparative method," Association for
+Computational Linguistics Special Issue in Computational Phonology 20.3 (September 1994) pp. 381-417.</h4>
+
+<ADDRESS>
+<b>John Lowe</b><br>
+<a href="http://trill.berkeley.edu/lingdept">Linguistics department</a><br>
+2337 Dwinelle Hall<br>
+<A HREF="http://www.berkeley.edu">University of California at Berkeley</A><br>
+Berkeley, CA 94720-2650<br>
+voice: (510) 643-5623  /  fax:  (510) 643-9911<br>
+email: <a href="mailto:jblowe@garnet.berkeley.edu">jblowe@garnet.berkeley.edu</a><br>
+</ADDRESS>
+<p>
+<ADDRESS>
+<b>Martine Mazaudon</b><br>
+<a href="http://www.msh-paris.fr/lacito/index.html">LACITO/CNRS</a><br>
+44 rue de l'Amiral Mouchez<br>
+75014 Paris, France<br>
+email: <a href="mailto:mazaudon@LACITO.msh-paris.fr">mazaudon@LACITO.msh-paris.fr</a><br>
+</ADDRESS>
+<p>
+
+<center><b>Table of Contents</b></center>
+<p>
+<a href="RE_fn.html#fn0">[acknowledgements]</a><p>
+<ul>
+<li><a href="#abstract">ABSTRACT</a>
+<li><a href="#RTFToC1">1.0&nbsp;INTRODUCTION</a>
+<li><a href="#RTFToC2">2.0&nbsp;OVERVIEW OF ALGORITHMS AND DATA STRUCTURES</a>
+<ul>
+<li><a href="#RTFToC3">2.1&nbsp;A FEW PRELIMINARY REMARKS ABOUT THE DATA AND TERMINOLOGY</a>
+<li><a href="#RTFToC4">2.2&nbsp;SYNOPSIS OF THE RECONSTRUCTION ENGINE</a>
+</ul>
+<li><a href="#RTFToC5">3.0&nbsp;PREVIOUS RESEARCH IN COMPUTATIONAL HISTORICAL LINGUISTICS</a>
+<ul>
+<li><a href="#RTFToC6">3.1&nbsp;HEWSON'S PROTO ALGONKIAN EXPERIMENT</a>
+<li><a href="#RTFToC7">3.2&nbsp;WORDSURV</a>
+<li><a href="#RTFToC8">3.3&nbsp;DOC: CHINESE DIALECT DICTIONARY ON COMPUTER</a>
+<li><a href="#RTFToC9">3.4&nbsp;PHONO: A PROGRAM FOR TESTING MODELS OF SOUND CHANGE</a>
+</ul>
+<li><a href="#RTFToC10">4.0&nbsp;DESCRIPTION OF DATA STRUCTURES AND ALGORITHMS</a>
+<ul>
+<li><a href="#RTFToC11">4.2&nbsp;ALGORITHMS</a>
+<li><a href="#RTFToC12">4.2.1&nbsp;Generating proto-projections</a>
+<li><a href="#RTFToC13">4.2.2&nbsp;Combinatorial explosion and syllable structure</a>
+<li><a href="#RTFToC14">4.2.3&nbsp;Computing upstream and creating a set of cognates</a>
+<li><a href="#RTFToC15">4.3&nbsp;THE DATABASE MANAGEMENT SIDE OF HISTORICAL RECONSTRUCTION</a>
+</ul>
+<li><a href="#RTFToC16">5.0&nbsp;THE CONSTITUENCY OF COGNATE SETS</a>
+<ul>
+<li><a href="#RTFToC17">5.1&nbsp; Many reconstructions may be possible for a given set of cognates</a>
+<li><a href="#RTFToC18">5.2&nbsp;Other kinds of competition for reflexes</a>
+</ul>
+<li><a href="#RTFToC19">6.0&nbsp;EXTENSIONS TO RE </a>
+<ul>
+<li><a href="#RTFToC20">6.1&nbsp; CONSTRAINING COGNATE SETS: INCORPORATING SEMANTICS</a>
+<li><a href="#RTFToC21">6.2&nbsp;EXTENSION TO ALLOFAMIC16 FAMILIES AND SYSTEMATIC IMPRECISION IN THE TABLE OF CORRESPONDENCES</a>
+<li><a href="#RTFToC22">6.3 &nbsp;"FUZZY" MATCHING IN THE TABLE OF CORRESPONDENCES</a>
+<li><a href="#RTFToC23">6.4 &nbsp;DIRECTIONS FOR FURTHER DEVELOPMENT: PHONOLOGICAL RESEARCH USING RE</a>
+<li><a href="#RTFToC24">6.4.1&nbsp;  Subgrouping and Typology</a></a>
+<li><a href="#RTFToC25">6.4.2 On the notions "rule" and "correspondence"</a>
+</ul>
+<li><a href="#RTFToC26">7.0&nbsp;CONCLUSION</a>
+<li><a href="RE_bib.html">REFERENCES</a>
+</ul>
+<hr>
+
+<a href="RE_fn.html#fn0">[acknowledgements]</a><p>
+<a name="abstract">
+<center><b>ABSTRACT</b></center><p>
+<p>
+We describe the implementation of a computer program, the Reconstruction
+Engine (RE), which models the comparative method for establishing genetic
+affiliation among a group of languages.  The program is a research tool
+designed to aid the linguist in evaluating specific hypotheses, by calculating
+the consequences of a set of postulated sound changes (proposed by the
+linguist) on complete lexicons of several languages.  It divides the lexicons
+into a phonologically regular part, and a part which deviates from the sound
+laws.  RE is bi-directional: given words in modern languages, it can propose
+cognate sets (with reconstructions); given reconstructions, it can project the
+modern forms which would result from regular changes.  RE operates either
+interactively, allowing word-by-word evaluation of hypothesized sound changes
+and semantic shifts, or in a "batch" mode, processing entire multilingual
+lexicons <i>en masse</i>.<p>
+We describe the algorithms implemented in RE, specifically the parsing and
+combinatorial techniques used to make projections upstream or downstream in the
+sense of time, the procedures for creating and consolidating cognate sets based
+on these projections, and the ad hoc techniques developed for handling the
+semantic component of the comparative method.<p>
+Other programs and computational approaches to historical linguistics are
+briefly reviewed.<p>
+Some results from a study of the Tamang languages of Nepal (a subgroup of the
+Tibeto-Burman family) are presented, and data from these languages are used
+throughout for exemplification of the operation of the program.<p>
+Finally, we discuss features of RE which make it possible to handle the
+complex and sometimes imprecise representations of lexical items, and speculate
+on possible directions for future research.<p>
+<p>
+<b>
+<a name="RTFToC1">1.0
+INTRODUCTION
+</a></b><p>
+The essential step in historical reconstruction is the arrangement of
+related words in different languages into sets of cognates and the
+specification of the regular phonological correspondences which support that
+arrangement; the well-known means for carrying out this arrangement and
+specification is the comparative method (see for example Meillet 1966;
+Hoenigswald 1950, 1960; Watkins 1989; Baldi 1990).  Words which are not
+demonstrably related (via regular sound change) are explained by reference to
+other diachronic processes which are beyond the scope of the comparative method
+and of this paper.  Sound change is first to be explained as a rule-governed
+process and other explanations (which invoke more sporadic and less predictable
+processes) offered when it is clear that non-phonological forces are at work,
+as illustrated in Figure 1.  There will always be a number of lexical items for
+which no scientific explanation can be advanced: not all words are entitled to
+an etymology (Meillet 1966:58).<p>
+<IMG SRC="RE1.GIF" width=500><p>
+<b>Key:</b><p>
+A.The complete lexicon.<p>
+B.Regular sound change (modeled by RE proper).<p>
+C.Regular, "expected" reflexes of the ancestor forms.<p>
+D.Domain of "protovariation", perhaps due to morphological/derivational
+processes; handled by RE with "fuzzy" constituents.<p>
+E.Sub-regularities elicited through relaxed constraints (word families,
+etc.)<a href="RE_fn.html#fn0">[1]</a><p>
+F.Sociolinguistic explanation.  Domain of lexical diffusion and other
+sporadic processes.<p>
+G.Borrowings, analogized forms, hypercorrections, prestige
+pronunciations, etc.<p>
+H.The "mystery pile": counterexamples and other troublesome
+words.<p>
+<i>Figure 1: The "Sieve" of Explanation in historical
+linguistics</i><p>
+This paper discusses problems and solutions associated with automating
+research into diachronic processes acting in (B) in Figure 1 above.  Our
+solutions are implemented in a program we call the <i>Reconstruction
+Engine</i>, hereinafter RE (earlier versions are described in Lowe and Mazaudon
+1989 and Mazaudon and Lowe 1991)<a href="RE_fn.html#fn1">[2]</a>.  RE is a
+prototype computational tool which automates a crucial portion of the
+comparative method: the process of creating cognate sets and proposing
+reconstructions on the basis of observed correspondences between modern
+languages.  It treats those words of the lexicon which fall into pile C in
+Figure 1 above (and to a lesser extent those which fall into pile E).  It must
+be emphasized that the relative sizes of the piles in Figure 1 are completely
+arbitrary.  It would not be unusual for the list of problems (H) to be the
+largest.  Especially in cases where languages are in close contact or are only
+distantly related, the regular component of the lexicon may be expected to be
+quite small.<p>
+RE functions as a "checker" of hypotheses proposed by the linguist.  It has no
+inferential component in the sense usually used in describing expert systems
+(Charniak &amp; MacDonald 1985).  Our aim is to verify the internal consistency
+of a set of phonological correspondences, created beforehand by the linguist,
+against the lexicons of an ensemble of putatively related languages, and to
+gauge the extent to which those data are consistent with the given phonological
+and phonotactic descriptions (i.e. correspondences and syllable canon).<p>
+RE has several features which represent a significant advance in the automated
+handling of diachronic data.  First, it provides exhaustive treatment of the
+data in several dimensions:
+<ul>
+<li>It processes complete lexicons of modern languages.  Every modern form is
+evaluated by the program in a consistent and complete way.</ul>*Each form is
+completely analyzed.  Modern forms which are only partially regular are not
+included in cognate sets.<p>
+*The correspondences and syllable canon form a complete and unified statement
+of the diachronic phonology of the languages treated.<p>
+Second, RE contains a number of features which make it flexible in handling the
+kinds of data realistically encountered in historical research.
+<ul>
+<li>Provisions exist for allowing several different transcriptions to be used
+in representing the data.
+<li>There are no requirements that the data be organized beforehand by gloss,
+semantic field, phonological shape, or other criteria.
+<li>The size and type of constituents used in the analysis are not limited by
+the program.  There is no requirement, for example, that a segmental analysis
+be used (as opposed to the initial-plus-rhyme-plus-tone analysis commonly used
+for many Asian languages, for example).  However, the program does not provide
+for non-linear representations or discontinuous constituents:  the "absolute
+slicing hypothesis" is assumed.  Also, the linearization of constituents must
+be the same for all the language data used by the program.  For example, the
+tone numbers used in the languages cited in this paper, which might equally
+well be ordered before as after the segmental strings to which they apply, are
+uniformly written at the beginning).
+<li>Several competing analyses of the same data can be managed and compared
+simultaneously.</ul>The rest of the paper is structured as follows:
+<ul>
+<li>Section 2 introduces some terminology, explains some particulars of the
+group of Tibeto-Burman languages used in examples, and describes RE in broad
+strokes to motivate and provide context for subsequent discussion.
+<li>Section 3 reviews some of the past work in the area of computational
+historical linguistics, especially as it relates to the current effort.
+<li>Section 4 details the algorithms and data structures used in RE.
+<li>Section 5 discusses the results obtained using RE, and comments on
+practical and methodological limitations to this approach.
+<li>Section 6 discusses extensions to the "core" functions of RE: the handling
+of imprecise data, the treatment of variation due to diachronic and synchronic
+processes, the <i>ad hoc </i>semantic system for disambiguating homophones at
+both the modern and proto levels, and semi-automatic methods for generalizing
+over sets of phonological rules.
+<li>Section 7, the conclusion, offers some caveats about computer applications
+in the area of historical linguistics and invites collaboration on more
+comprehensive software of this type.</ul><b>
+<a name="RTFToC2">2.0
+OVERVIEW OF ALGORITHMS AND DATA STRUCTURES
+</a></b><p>
+<b>
+<a name="RTFToC3">2.1
+A FEW PRELIMINARY REMARKS ABOUT THE DATA AND TERMINOLOGY
+</a></b><p>
+We shall attempt to be precise in our use of the linguistic terminology
+related to historical reconstruction:  when <i>lexical items, </i>or<i> modern
+forms </i> from the various lexicons of individual languages are grouped into
+<i>cognate sets</i> on the basis of recurring phonological regularities
+(<i>correspondences</i>) they will be referred to as <i>reflexes</i>.   The
+ancestor word-form from which these regular reflexes derive is called a
+<i>reconstruction, protoform,</i> or <i>etymon</i>.  Thus, English
+<i>father</i>, German <i>Vater</i>, Greek <i>pater</i>, and Sanskrit
+<i>pitr-</i> are all reflexes of a Proto-Indo-European (PIE) etymon
+reconstructed as something like *p[[dotaccent]]ter (the <i>asterisk</i>
+indicates that this word is a reconstruction and not an attested form).  The
+relations between the constituent phonological elements of etyma and their
+modern reflexes are called a <i>sound laws</i> and are usually written in the
+form of diachronic phonological rules, for example, PIE *p &gt; English /f/.
+/f/ is said to be the <i>outcome</i> of PIE *p in English.  Languages which
+share a common ancestor are said to be the <i>daughters</i> of that ancestor.<p>
+The data on which our study and these examples are based and which are used in
+exemplifying the operation of the program are taken from the Tamang group of
+the Bodic division of the Tibeto-Burman branch of the Sino-Tibetan family in
+Shafer's classification (Shafer 1955), spoken in Nepal (Mazaudon 1978, 1988).
+The reconstructed ancestor, Proto Tamang-Gurung-Thakali-Manang, is abbreviated
+*TGTM.  Four modern tones (numbered [[exclamdown]] to cents) are recognized in
+the modern languages and two proto-tone categories (labelled <sup>B</sup> and
+<sup>A</sup>) are reconstructed.  The tones of both reconstructed and daughter
+forms are transcribed before the syllable, e.g. <sup>B</sup>bap.  The eight
+dialects used are discussed in detail in Mazaudon 1978.  The dialects and their
+abbreviations are (as cited in columns 5 to 12 of the table of correspondences
+in Figure 9a): Risiangku (ris), Sahu (sahu), Taglung (tag), Tukche (tuk),
+Marpha (mar), Syang (syang), Ghachok (gha), and Prakaa (pra).<p>
+<b>
+<a name="RTFToC4">2.2
+SYNOPSIS OF THE RECONSTRUCTION ENGINE
+</a></b><p>
+RE implements 1) a set of algorithms which generate possible
+reconstructions given word forms in modern languages (and vice-versa as well)
+and 2) a set of algorithms which arrange input modern forms into possible
+cognate sets based on those reconstructions.  The first set implements a simple
+bottom-up parser; the second automates database management chores, such as
+reading multiple input files and sorting, merging, and indexing the parser's
+output.<p>
+The core functions of RE compute all possible ancestor forms (using a TABLE OF
+CORRESPONDENCES and a phonotactic description, a SYLLABLE CANON, both described
+in section 3.1) and makes sets of those modern forms which share the same
+reconstructions.  Tools for further dividing of the computer-proposed cognate
+sets based on semantic distinctions are also provided.  The linguist (that is,
+the user) collects and inputs the source data, prepares the table of
+correspondences and phonotactic description (syllable canon), and verifies the
+semantics of the output of the phonologically-based reconstruction process.
+RE, <i>qua</i> "linguistic bookkeeper," makes the projections and keeps track
+of several competing hypotheses as the research progresses.  Specifically, the
+linguist provides as input to the program:
+<ul>
+<li>Word forms from several modern languages, with glosses.
+<li>Parameters which control the operation of the program and interpretation
+of input data (mostly not described here).
+<li>A file containing the Table of Correspondences, detailed below.
+<li>The Syllable canon, described below.
+<li>Semantic information for disambiguating modern and reconstructed
+homophones, described below.</ul>The parsing algorithm implemented in RE is
+bi-directional (in the sense of time): the "upstream"<a
+href="RE_fn.html#fn2">[3]</a> process involves projecting each modern form
+<i>backward</i> in time and merging the sets of possible ancestors generated
+thereby to see which, if any, are identical.  Conversely, given a protoform,
+the program computes the expected regular reflexes in the daughter languages.
+<p>
+<IMG SRC="RE2.GIF"><p>
+<i>Figure 2: Input-Output diagram of RE's basic projection functions</i><p>
+The process can be done interactively (as illustrated in Figure 3 below) or in
+batch using machine-readable lexicons prepared for the purpose.  <p>
+<IMG SRC="RE3.GIF"><p>
+<i>Figure 3: A simple example of interactive "upstream" computation
+(transcription and languages exemplified are described in section 1.1)</i><p>
+Figure 3 is a representation of the contents of the computer screen
+after the user has entered three modern words (1). The program has generated
+the reconstructions from which these forms might derive (2)  The list of
+numbers (called the <i>analysis</i>) following the reconstruction refers to the
+row numbers in the table of correspondences which were used by the program in
+generating the reconstructions.  In two cases reflexes have more than one
+possible ancestor. The program has then proposed the two cognate sets which
+result from computing the set intersection of the possible ancestors (3).  The
+proposed sets are listed in descending order by population of supporting
+forms.<a href="RE_fn.html#fn3">[4]</a><p>
+Conversely, given a protoform, RE will predict (actually "postdict") the
+regular reflexes in each of the daughter languages.  Figure 4 reproduces the
+results on the computer screen of performing such a "downstream" calculation.<p>
+<IMG SRC="RE4.GIF"><p>
+<i>Figure 4: The expected outcomes of *<sup>B</sup>bap (a "downstream"
+computation)</i><p>
+Here the etymon entered by the user (1) produced reflexes (2) through
+two different syllabic analyses (numbered 1. and 2. in the "Reflexes of ..."
+window): <sup>B</sup>bap as initial /b-/ plus vowel /-a-/ plus final /-p/, and as
+initial /b-/ followed by rhyme /-ap/.  The  algorithms used in this process are
+described in section 3.2.<p>
+<b>
+<a name="RTFToC5">3.0
+ PREVIOUS RESEARCH IN COMPUTATIONAL HISTORICAL LINGUISTICS
+</a></b><p>
+In order to provide some context for a discussion of our efforts, we
+first present a brief discussion of the computational approaches to the study
+of sound change, and review some of the software developed.<p>
+Applications of computers to problems in historical linguistics fall into two
+distinct categories: those based on numerical techniques, usually relying on
+methods of statistical inference; and those based on combinatorial techniques,
+usually implementing some type of rule-driven apparatus specifying the possible
+diachronic development of language forms.  The major features of a few of these
+programs are reviewed briefly below.  The programs discussed by no means
+exhaust the field;  the criteria for selecting them is that they have been
+described in the literature sufficiently for an evaluation, and that for this
+reason they have come to the attention of the authors.  Indeed, the literature
+in this field is fragmented:  starting in the 1960's and 70's a sizable
+literature on the lexicostatistic properties of language change developed
+following Swadesh's earlier glottochronological studies (for example Swadesh
+1950).  On the other hand, only a handful of attempts to produce and evaluate
+software of the rule-application type (for use in historical linguistics) are
+documented in the literature (Becker 1982; Brandon 1984; Durham &amp; Rogers
+1971; Frantz 1970).  In general these programs seem to have been abandoned
+after a certain amount of experimentation.  Certainly the problem of
+articulating a set of algorithms and associated data sets which completely
+describe the regular sound changes evidenced by a group of languages is a
+daunting task.  .<p>
+To the first class belong lexicostatistic models of language change.  The
+COMPASS module of the WORDSURV program described below belongs to this class
+(cf. Wimbish 1989).  It measures degree of affiliation using a distance metric
+based on the degree of similarity between corresponding phonemes in different
+languages.  Also to this class belong applications which measure genetic
+affiliation as a function of the number of shared words in a selected
+vocabulary set.  Any method which depends on counting "shared words," we note,
+assumes the existence and prior application of a means of determining which
+forms are cognate; and any such estimates of the relatedness of languages are
+only as good as the metric which determines which ones are cognate.<p>
+To the second class belong programs which model sound change as sets of rules
+applied to derive later forms from earlier forms, and RE is a member of this
+class.  Examples of programs of this sort are PHONO, being applied to
+Latin-to-Spanish data (and described below); VARBRUL (by Susan Pintzuk) used to
+analyze Old English, and two programs used to analyze Romance languages:
+Iberochange, based on a rule-processing subsystem called BETA, used for
+Ibero-Romance languages (Eastlack 1977) and one unnamed (Burton-Hunter 1976).<p>
+<b>
+<a name="RTFToC6">3.1
+HEWSON'S PROTO ALGONKIAN EXPERIMENT
+</a></b><p>
+The "proto-projection" techniques used by RE were implemented earlier
+by John Hewson and others at the Memorial University of Newfoundland (Hewson
+1973, 1974).<a href="RE_fn.html#fn4">[5]</a>  The strategy is transparent; as
+Hewson notes, he and his team decided to "follow the basic logic used by the
+linguist in the comparative method" (Hewson 1974:193).  The results of this
+research have recently been published in the form of an etymological dictionary
+of Proto-Algonkian (Hewson 1993).<p>
+The program as first envisioned was to operate on "consonant only"
+transcriptions of polysyllabic morphemes from four Amerindian languages.  The
+program would take a modern form, "project it backwards" into one or more
+proto-projections, then project these proto-projections into the next daughter
+language, deriving the expected regular reflexes.  The lexicon for this
+language would be checked for these predicted reflexes; if found, the program
+would repeat the project process, zig-zagging back and forth in time until all
+reflexes were found.  For example, given Fox /poohke&lt;&lt;samwa/ <i>he cuts
+it open</i>, the program would match the correct Cree form, as indicated in
+Figure 5.<p>
+<u>LanguageC1C2C3C4ReflexGloss</u><p>
+<u></u>Foxphk&lt;&lt;smpoohke&lt;&lt;samwa`he cuts it open'<p>
+Creepsksmpooskosam`he cuts it open'<p>
+Menomini----<p>
+Ojibwap&lt;&lt;sk&lt;&lt;snpa&lt;&lt;sko&lt;&lt;saan`he cuts it down'<p>
+Ojibwapkk&lt;&lt;snpakkwee&lt;&lt;saan`he slices off a part'<p>
+<p>
+<i>Figure 5: Potential Proto-Algonkian cognates (after Hewson 1974:193-4)</i><p>
+There were problems with this approach.  In cases where no reflex could
+be found, (as in Figure 5 where no Menomini cognates for this form existed in
+the database) the process would grind to a halt.  Recognizing that "the end
+result of such a programme would be almost nil"  (Hewson 1973:266), the team
+developed another approach in which the program generated <i>all possible</i>
+proto-projections for the 3,403 modern forms.  These 74,049 reconstructions
+were sorted together, and `only those that showed identical proto-projections
+in another language' (some 1,305 items) were retained for further examination.
+At this point Hewson claimed that he and his colleagues were then able to
+quickly identify some 250 new cognate sets. (Hewson 1974:195).  The vowels were
+added back into the forms, and from this a final list of cognate sets was
+created.  A cognate set from this file, consisting of a reconstruction and two
+supporting forms is reproduced below (Figure 6).<p>
+<pre>
+<u>LanguageFormGlossProtomorpheme</u><p>
+<u></u>*<tt>  </tt>(<tt>ProtoAlg.</tt>)<tt>PEQTAAXKWIHCINWABUMP
+</tt>(*<tt>-AAXKW</tt>)<tt></tt><p>
+<tt>M  </tt>(<tt>Menomini</tt>)<tt>P3QTAAHKIHSENHE BUMPS INTO A TREE OR
+SOLID...</tt><p>
+<tt>O  </tt>(<tt>Ojibwa</tt>)<tt>PATTAKKOCCINBUMP</tt>/<tt>KNOCK
+AGAINST...[STHG]</tt><p>
+<tt></tt><p>
+</pre>
+<i>Figure 6: Proto Algonkian cognate set  (after Hewson 1973 :273)</i><p>
+<b>
+<a name="RTFToC7">3.2
+WORDSURV
+</a></b><p>
+The Summer Institute of Linguistics (SIL), a prodigous developer of
+software for the translating and field linguist located in Dallas, Texas,
+provides a variety of integrated tools for linguistic analysis. One of these
+tools, the COMPASS module of WORDSURV, allows linguists to compare and analyze
+word lists from different languages and to perform phonostatistic analysis.  To
+do so, the linguist first enters "survey data" into the program;  reflexes are
+arranged together by gloss, as illustrated in the reproduction in Figure 7. <p>
+<pre>
+    (1)     (2)(3)                     (4)<p>
+GroupReflex Language Abbreviation<p>
+0-- no entry --R<p>
+<p>
+AfaDerE<p>
+AfaterG<p>
+Apadre&gt;4S<p>
+<p>
+BamaiT<p>
+<p>
+Cbapa --MPB<p>
+Cbapak--I<p>
+Cbapa dah<p>
+<p>
+DtataNwm<p>
+Dtatayab<p>
+</pre>
+<i>Figure 7: "Properly aligned word forms" for FATHER in WORDSURV</i><p>
+<i>(Wimbish 1989:43)</i><p>
+<i></i>In addition to the <i>a priori</i> semantic grouping of reflexes
+by gloss, the linguist must also re-transcribe the data in such a way each
+constituent of a reflex is a single character, that is, "no digraphs are
+allowed. Single unique characters must be used to represent what might normally
+be represented by digraphs ... e.g. N for ng." (Wimbish 1989:43).   The program
+also requires that part of the diachronic analysis be carried out before
+entering the data into the computer in order to incorporate that analysis into
+the data.  For example, when the linguist hypothesizes that "a process of sound
+change has caused a phone to be lost (or inserted), a space must be inserted to
+hold its place in the forms in which it has been deleted (or not been
+inserted)"  (Wimbish 1989:43).  That is, the zero constituent must be
+represented<i> in the data itself</i>.  The program also contains a "provision
+for metathesis.  ...Enter the symbols &gt;n (where n is a one or two digit
+number) after a word to inform WORDSURV that metathesis has occurred with the
+nth character and the one to its right" (Wimbish 1989:43).  An example of this
+may be seen in column 3 of Figure 7.  To represent tone, the author notes that
+"there are at least two solutions.  The first is to use a number for each tone
+(for example 1ma3na). The second solution is to use one of the vowel characters
+with an accent.  ... The two methods will produce different results" when the
+analysis is performed  (Wimbish 1989:44).  While the last statement may
+surprise some strict empiricists (after all, the same data should give the same
+results under an identical analysis), it should come as no surprise to
+linguists who recognize that the selection of unit size, the type of
+constituency, and other problems of representation may have a dramatic effect
+on conclusions.  RE is distinguished from this program in that 1) no <i>a
+priori </i>grouping of forms by gloss is required (a step which is fraught with
+methodological problems inasmuch as it requires the linguist to decide a priori
+which forms might be related), 2) no alignment of segments is required (also a
+problematic step for a number of reasons), and 3) the constituent inventory is
+not limited to segments.  In passing, the lexicostatistics which are computed
+are based on the "Manhattan distance" (in a universal feature matrix) between
+corresponding phonemes from different languages as a measure of their
+affiliation.  The validity of this measure for establishing genetic affiliation
+is suspect: corresponding phonemes may be quite different in terms of their
+phonological features without altering the strength of the correspondence or
+the closeness of the genetic affiliation.  Also, the metrics of features spaces
+are notoriously hard to quantify, so any distance measures are themselves
+likely to be unreliable.  RE computes no such statistics, though some tools
+exist (and are described below) which might be used in subgrouping.<p>
+<b>
+<a name="RTFToC8">3.3
+DOC: CHINESE DIALECT DICTIONARY ON COMPUTER
+</a></b><p>
+DOC is one of the earliest projects to attempt a comprehensive
+treatment of the lexicons of a group of related languages.  DOC was developed
+"for certain problems [in which] the linguist finds it necessary to organize
+large amounts of data, or to perform rather involved logical tasks -- such as
+checking out a body of rules with intricate ordering relations." (Wang
+1970:57).  A sample dialect record (in one of the original formats) is
+illustrated in Figure 8.  Note that as in the case WORDSURV, the data must be
+pre-segmented according to a universal phonotactic description (in this case
+the Chinese syllable canon) which the program is built to handle.  The
+one-byte-one-constituent restriction does not exist, though the (maximum) size
+of constituents is fixed with the data structure.  <p>
+At least four versions of this database and associated software were produced
+(Cheng 1993:13).  Originally processed as a punched-card file on a LINC-8, the
+program underwent several metamorphoses.  An intelligent front-end was
+developed in Clipper (a microcomputer-based database management system) which
+allows the user to perform faceted queries (i.e. multiple keyterm searches)
+against the database.  The database is available as a text file (slightly over
+a megabyte) containing forms in 17 dialects for some 2,961 Chinese characters
+(Cheng 1993:12).  DOC has no "active" component: it is a database of
+phonologically analyzed lexemes organized for effective retrieval.<p>
+<p>
+<pre>
+<tt><cite>DialectToneInitialMedialNucleusEnding</cite></tt><p>
+<tt></tt>0052192-3LH1WN7<p>
+PEKING3LUAN<p>
+XI-AN3LUAZ<p>
+TAI-YUAN3LUAZ<p>
+HAN-KOU3LUAEZ<p>
+CHENG-DU3LAN<p>
+YANG-SHOU3LUOZ<p>
+WEN-ZHO3BLU03<p>
+CHANG-SHA3BN0Z<p>
+<p>
+</pre>
+<i>Figure 8: A Dialect record in DOC (cited from Fig. 7 in Wang 1970)</i><p>
+<b>
+<a name="RTFToC9">3.4
+PHONO: A PROGRAM FOR TESTING MODELS OF SOUND CHANGE
+</a></b><p>
+PHONO (Hartman 1981, 1993) is a DOS program which applies ordered sets
+of phonological rules to input forms.  The rules are expressed by the user in a
+notation composed of if- and then-clauses that refer to feature values and
+locations in the word.  PHONO converts input strings (words in the ancestor
+language) into their equivalent feature matrices using a table of alphabetic
+characters and feature values supplied by the user.  The program then
+manipulates the feature matrices according to the rules, converting the
+matrices back into strings for output.  Hartman has developed a detailed set of
+rules which derive Spanish from Proto-Romance.  Besides allowing the expression
+of diachronic rules in terms of features, facilities are included to handle
+metathesis.  Unlike RE, which handles only one step (at a time) in the
+development of multiple languages, PHONO traces the history of the words of a
+single language through multiple stages.<p>
+<b>
+<a name="RTFToC10">4.0
+DESCRIPTION OF DATA STRUCTURES AND ALGORITHMS
+</a></b><p>
+We turn now to RE, which represents another step in the application of
+computational techniques to the problems faced by historical linguists.  As
+will become clear, any computational tools designed to be used by historical
+linguists must be able to operate in the face of considerable uncertainty.  In
+the course of carrying out a diachronic analysis the linguist is likely to have
+several competing hypotheses which might explain the observed variation.  Data
+from many sources, varying in quality and transcription, will be compared.  The
+research will proceed incrementally, both in terms of the portions of the
+lexicons and phonologies treated and in the number of languages or dialects
+included.  RE as a tool helps with only a portion of this task, the problem of
+creating and maintaining regular cognate sets and the reconstructions which
+accompany them.<p>
+<b>4.1PRINCIPAL DATA STRUCTURES: THE TABLE AND THE CANON</b><p>
+Two data structures (internal to the program) are relevant to the
+phonological reconstruction, and these are passed as arguments to RE.  The
+table of correspondences represents the linguist's hypothesis about the
+development of the languages being treated.  The columns of the table are (1) a
+correspondence set number, uniquely identifying the correspondence; (2) the
+distribution of the correspondence within the syllable structure (i.e. the type
+of syllable constituent: in this case, Tone, Initial, Liquid, Glide, Onset,
+Rhyme, Vowel, or Final); (3) the PROTOCONSTITUENT itself; (4) the phonological
+context (if any) in which the correspondence is found; (5-12) the OUTCOME or
+reflex of the protoconstituent in the daughter languages.<a
+href="RE_fn.html#fn4">[6]</a>   The CONSTITUENT TYPES (T, I, F, L, etc. in
+column 2) are specifiable by the user. So, for example, C and V could be chosen
+if no other types of constituents need to be recognized for the research.  Note
+that the table allows for several different outcomes depending on context; the
+absence of context indicates either an unconditioned sound change or the
+Elsewhere case of a set of related rules (as discussed below).  <p>
+<p>
+<pre>
+(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)<p>
+<u>NConT*contextrissahutagtukmarsyangghapra</u><p>
+<u></u>1T<sup>B</sup>/_C[[radical]][[exclamdown]],X,&Oacute;[[exclamdown]]
+[[exclamdown]],&Oacute;[[exclamdown]],&Oacute;[[exclamdown]]
+[[exclamdown]],&Oacute;[[exclamdown]][[exclamdown]]<p>
+3T<sup>B</sup>/_C[[lozenge]]  <sup>3</sup>,X,&Ograve;  <sup>3</sup>  <sup>3</sup>
+  <sup>3</sup>  <sup>3</sup>  <sup>3</sup>,&Ograve;  <sup>3</sup>  <sup>3</sup><p>
+...<p>
+93Ikkkkkkkkk<p>
+94Ik/_wk&otilde;hkkkkk<p>
+181Fkk&Uacute;&otilde;,k&otilde;,k&otilde;&otilde;&otilde;
+&otilde;<p>
+...<p>
+142Lr/p,p&aelig;,b_rrrrrrrr=&lt;&lt;r<p>
+169Orrrrrrrrr<p>
+...<p>
+102Okr/_e&Uacute;kkk&Ecirc;kkkrkr<p>
+103Okr/_ukrkrh&Ecirc;kkkrkr<p>
+104Okr/_akrkrhw&Ecirc;kjkjkrkr<p>
+105Okr/_atkrkrh&Ecirc;kjkjkrkr<p>
+106Okrkrkrh&Ecirc;kkkrkr<p>
+...<p>
+31R,Vaaaa[[dotaccent]][[dotaccent]][[dotaccent]]a<sup>A</sup><p>
+186Va/_paaa[[dotaccent]]ooae<p>
+</pre>
+
+<i>Figure 9a: Excerpt from the Table of Correspondences</i><p>
+The syllable canon provides a template for building monosyllables.  It
+specifies how the constituents of the table of correspondences may be combined
+based on the (syllable) constituent types (column (2) of the table).  Thus, the
+outcomes for a final /k/ (correspondence 181) and an initial /k/
+(correspondence 93) are never confused by the program.  The program takes the
+syllable canon as an argument expressing the adjacency constraints on the
+constituents found in the Table.  For example, the canon for *TGTM, illustrated
+in Figure 9b, has three SLOTS, each of which has its own substructure: first, a
+tone (optional, as indicated by the possibility of a zero element); followed by
+an (also optional) initial element consisting of various combinations of Onset,
+Glide, Initial, and Liquid; and terminating with either a Rhyme element or a
+Vowel plus Final consonant.  A syllable is composed of zero or more elements
+from each of these SLOTS.  Picking the longest possible combination from each
+slot produces the maximal syllable permitted by the canon containing six
+constituents (TILGVF), one from each constituent type except O and R.
+Similarly, the minimal one has only one constituent (R).  Parentheses indicate
+optional elements, brackets separate sequential slots in the syllable
+structure.<p>
+<p>
+<b>[T,&Oslash;][O(G),I(L)(G),&Oslash;][R,VF]</b><p>
+<p>
+T =ToneL= Liquid<p>
+O= OnsetR= Rhyme<p>
+G= GlideV= Vowel<p>
+I= Initial ConsonantF= Final consonant<p>
+&Oslash;= Zero<p>
+<i>Figure 9b:  Syllable Canon in Proto-Tamang</i><p>
+This description, a type of regular expression, provides a shorthand
+device for expressing several possible syllable structure trees.  Indeed, the
+Proto-Tamang syllable canon is quite complex in this respect, because several
+hypotheses about syllable structure are encoded in it.  For other languages, in
+which only consonant and vowel need be distinguished in describing syllable
+structure, a simpler canon (e.g. CV(C)) might suffice.  Polysyllabic syllable
+canons can be expressed and used by the canon in two ways:
+<ul>
+<li>Explicitly, for example</ul>[CV(C)][CV,&Oslash;]
+<ul>
+<li>a bisyllabic canon in which the minimal form is CV and the maximal is
+CVCCV.
+<li>As a recursive application of a single syllable.  This is done via a
+software toggle which allows the canon structure to be repeatedly mapped over
+an input form.  For example, if the polysyllable toggle is turned on, the
+canon</ul>[(C)V(C)]
+<ul>
+<li>would match forms of the form V, CVC, CVCCV,CVCVCVV, etc.</ul><b>
+<a name="RTFToC11">4.2
+ALGORITHMS
+</a></b><p>
+<b>
+<a name="RTFToC12">4.2.1
+Generating proto-projections
+</a></b><p>
+Given a form, three steps are required to project or transform a modern
+form into a set of possible reconstructions or vice versa:
+<ul>
+<li>tokenizing the given form into a list of row numbers in the table of
+correspondences (column 1 of Figure 9a), 
+<li>filtering the tokenized forms according to syllabic and phonological
+constraints, and
+<li>substituting the actual outcomes in the table of correspondences for the
+tokens.</ul><b>Tokenization</b><p>
+On a first recursive pass RE generates (recursively from the left of
+the input form) all possible segmentations of the form.  That is, starting from
+the left, the program divides the form into two, and then repeats the process
+on the right hand part until the end of the form is reached.  Essentially, this
+algorithm implements a standard solution to a standard problem, that of finding
+all parses of an input form given a regular expression (encoded in this case in
+the syllable canon and table).  As the segmentation tree is created the program
+checks to see that the node being built is actually specified as an element of
+the table of correspondences and thus avoids building branches of the tree
+which cannot produce outcomes (according to the table of correspondences).  The
+pseudocode below (Figure 10) outlines the algorithm.<p>
+/*  GENERATE:   STEP ONE: Tokenize input form   */<p>
+<p>
+<pre>
+Tokenize(InputString,TokenList)<p>
+/* base case */<p>
+if InputString is null then return(TokenList)<p>
+/* recursive step */<p>
+     for i = 1 to the length of InputString<p>
+          leftside = leftmost i characters of InputString<p>
+          rest     = the rest of InputString<p>
+         lookup leftside in list of constituents for this table column<p>
+          if found then<p>
+                  add tokens (i.e. TofC row numbers) for this constituent to TokenList<p>
+          otherwise<p>
+                   /* abandon this parse */<p>
+          end if<p>
+          Tokenize(rest,TokenList)<p>
+     end for<p>
+end Tokenize<p>
+</pre>
+<i>Figure 10: Pseudocode for tokenizing forms into table
+constituents</i><p>
+Consider for example the segmentations of:<p>
+(1)*<sup>B</sup>kra  <i>head hair</i><p>
+There are eight ways to segment this protoform:<p>
+(2)<sup>B</sup>kra<sup>B</sup>-kra<sup>B</sup>k-ra<sup>B</sup>kr-a<p>
+<sup>B</sup>-k-ra<sup>B</sup>k-r-a<sup>B</sup>-kr-a<p>
+<sup>B</sup>-k-r-a<p>
+Of these eight segmentations, only two are composed completely of elements
+which occur in the protoconstituent column (3) of the table.  For each of the
+valid segmentations, RE constructs a tokenized version of the form, in which
+each element of the segmented form is replaced with the correspondence or list
+of correspondences for that constituent in the table.  *k, for example, has
+three possible outcomes (given by rows 93, 94, and 181 of the table of
+correspondences) depending on its syllabic position and environment.<p>
+(3)Segmentations whose elements are ALL constituents of the table:<p>
+(a)Segmentation:<sup>B</sup>kra<p>
+Tokenized form:(1,3)(93,94,181)(142,169)(31,186)<p>
+(b)Segmentation:<sup>B</sup>kra<p>
+Tokenized form:(1,3)(102,103,104,105,106)(31,186)<p>
+(4)Segmentations which contain elements NOT found in the table:<p>
+<u>Segmentation</u><u>Tokenized form</u><p>
+(c)<sup>B</sup>kr-a(?)(31,186)<p>
+(d)<sup>B</sup>kra(?)<p>
+(e)<sup>B</sup>-k-ra(1,3)(93,94,181)(?)<p>
+(f)<sup>B</sup>k-ra(?)(?)<p>
+(g)<sup>B</sup>k-r-a(?)(142,169)(31,186)<p>
+(h)<sup>B</sup>-kra(1,3)(?)<p>
+<b>Filtering</b><p>
+Having created and tokenized a list of all valid segmentations, the
+algorithm traverses each tokenized form, looking up each correspondence row
+number of each segment in the table and substituting the outcome of that row
+from the appropriate column of the table.  As the output form is being created,
+the phonological and phonotactic contexts are checked to eliminate disallowed
+structures, as illustrated in the pseudocode given in Figure 11.<p>
+<pre>
+/*  GENERATE:  STEP TWO: Convert Tokenized form into possible outcomes*/<p>
+FilterAndSubstitute(TokenList,ListofPossibleForms)<p>
+/* base case */<p>
+if TokenList is NULL then return(ListofPossibleForms)<p>
+/* recursive step */<p>
+for each RowNumber of first segmented element in TokenList <p>
+if phonological and syllabic context constraints are met then<p>
+for each language in the table<p>
+add outcomes for this RowNumber to each output form in <p>
+ListofPossibleForms for this language<p>
+end if<p>
+otherwise<p>
+/* do not use this token in building output forms */<p>
+end if<p>
+end for<p>
+remove first segmented element from TokenList<p>
+FilterAndSubstitute(TokenList,ListofPossibleForms)<p>
+end FilterAndSubstitute<p>
+</pre>
+<i>Figure 11: Pseudocode for filtering possible projections </i><p>
+<i>and substituting regular outcomes</i><p>
+The segmentation in (3b) above<p>
+(5)<sup>B</sup>-kr-a(1,3)(102,103,104,105,106)(31,186)<p>
+would produce 20 (= 2 * 5 * 2) different outcomes based on the different
+ordered combinations of its tokens were it not for syllabic structure
+constraints and phonological context constraints:<p>
+(6)
+<pre>
+1.102.311.104.1863.106.31<p>
+1.103.311.105.1863.102.186<p>
+1.104.311.106.1863.103.186<p>
+1.105.313.102.313.104.186<p>
+1.106.313.103.313.105.186<p>
+1.102.1863.104.313.106.186<p>
+1.103.1863.105.31<p>
+</pre>
+<i>With</i> these constraints, however, only one combination is licensed:
+1.104.31, because:
+<ul>
+<li>* only the tone correspondence for row 1 applies since it specifies the
+outcome of prototone A for voiceless initials;
+<li>* only outcomes of row 104 for *kr- are generated since this is the most
+specific rule that applies; and because
+<li>* row 186 is eliminated as a possibility for *-a in this case since these
+outcomes only occur when *-a is followed by *-p.</ul>Some complications in the
+application of the rules should be noted here.  The program <i>does</i> apply
+Panini's principle, also known as the Elsewhere Condition (Kiparsky 1973,
+1982).  Thus, of all the possible *kr- correspondences, only the most specific
+is selected.  For example, though the context in line 104 *-a is a substring
+(or subcontext) of line 105 *-at, only one or the other is selected for any
+particular segmentation of a protoform ending in *-at (i.e. 104 for *-a- + *-t
+vs. 105 for *-at).  If the "specificity" of several applicable contexts is the
+same, all are used by the program in generating the forms.<a
+href="RE_fn.html#fn4">[7]</a>  Also, note that since the context is stated in
+terms of proto-elements, when computing backwards (<i>upstream</i>) the program
+must tokenize <i>and</i> substitute ahead to determine if the context of a
+correspondence applies.<p>
+<b>Substitution</b><p>
+In the final step, the program substitutes the outcomes for each
+correspondence row in each of the language columns of the table and outputs the
+expected reflexes.  The expected outcome <i>of just the segmentation
+</i><sup>B</sup>-kr-a in Tukche, for example, (Figure 9a, column 8 tuk) is either
+<i>[[exclamdown]]&Ecirc;[[dotaccent]] </i>or <i>&Oacute;&Ecirc;[[dotaccent]].
+</i><sup>8</sup><i> </i>The segmentation <sup>B</sup>-k-r-a, though a valid
+segmentation of the input form into table constituents, would fail to produce
+any reflexes because the phonological context criterion is not met.<p>
+This process is performed for each language column in the table, resulting in
+a list of the modern reflexes of the input protoform.  This assumes, of course,
+that the reconstructed forms are correct, the rules are correct, and no
+external influences have come into play.  By comparing these computer-generated
+modern forms with the forms actually attested in the living languages we can
+check the adequacy of the proposed analysis, and make improvements and
+extensions as required. <p>
+<b>
+<a name="RTFToC13">4.2.2
+Combinatorial explosion and syllable structure
+</a></b><p>
+The example given above has only a few possible segmentations.
+Consider, however, the possible <i>valid</i> segmentations of the *TGTM form
+*<sup>A</sup>grwat <i>hawk, eagle,  </i>schematized in Figure 12.  There are, of
+course, a substantially larger number of invalid segmentations.  Each token of
+a segmentation may have a sizable list of possible outcomes.  One can see that
+even relatively uncomplicated monosyllables are capable of causing massive
+ambiguity in structural interpretation.  Indeed, some of the monosyllabic forms
+in the Tamang database generate nearly a hundred reconstructions, even given
+the limitations of syllabic and phonological context.<p>
+Type of syllable constituent<p>
+<u></u><p>
+<u></u>TILOGRVFStructure<p>
+(1)<sup>A</sup>grwatT O G V F<p>
+(2)<sup>A</sup>grwatT O G R<p>
+(3)<sup>A</sup>grwatT O V F<p>
+(4)<sup>A</sup>grwatT O R<p>
+(5)<sup>A</sup>grwatT I L G V F<p>
+(6)<sup>A</sup>grwatT I L G R<p>
+(7)<sup>A</sup>grwatT I L V F<p>
+(8)<sup>A</sup>grwatT I L R<p>
+<i>Figure 12: Segmentation of *<sup>A</sup>grwat  'hawk, eagle'</i><p>
+<b>
+<a name="RTFToC14">4.2.3
+Computing upstream and creating a set of cognates
+</a></b><p>
+The preceeding discussion (i.e. in section 4.2.1) shows how the table
+of correspondences can be read from ancestor to daughter (left to right),
+<i>downstream</i> in the sense of history.  It can also be read from daughter
+to ancestor (right to left), <i>upstream</i>, revealing all the possible
+ancestors of a given modern segment of a particular language.  For example we
+can see from the excerpt in Figure 9a that Syang /k/ (in column 10 of the
+table) could derive from either *k- or *kr- (to be read from the column of
+protoconstituents (column 3) of the table).<p>
+By combining, according to the syllable canon, all the possible permutations
+of *initial, *tone and *rhyme for the initial, tone and rhyme of a modern word,
+the computer can, using exactly the same procedures as described in section
+4.2.1, create a list of its possible reconstructions.  If the possible
+reconstructions of a set of words which are cognate are compared, it must be
+true that one or more of the reconstructions is the same for all words in the
+set (assuming, of course, that the words are related via regular sound
+changes).<p>
+In the example in Figure 13, this computation has been done on the modern
+forms for the word <i>snow</i> in four languages of the TGTM group.  Each
+column contains the possible reconstructions for the modern reflex listed on
+top of the column.  A comparison of the columns (or examination of the Venn
+diagram below) shows that one reconstructed form, *<sup>A</sup>gli&gt;= (in row 1),
+is indeed supported by all the members of the cognate set, and that these four
+languages provide sufficient data to rule out some of the other reconstructions
+proposed on the basis of one language alone.<a href="RE_fn.html#fn4">[9]</a><p>
+TukcheManang<b></b>SyangTaglung<p>
+<b>centskin</b><b>centsk&aelig;~icentslimcentsk&aelig;li&gt;=</b><p>
+<i>1.<sup>A</sup>gli&gt;=<sup>A</sup>gli&gt;=<sup>A</sup>gli&gt;=
+<sup>A</sup>gli&gt;=</i><p>
+2.<sup>A</sup>glin<sup>A</sup>glin<p>
+3.<sup>A</sup>glim<sup>A</sup>glim<p>
+4.<sup>A</sup>gi&gt;=<sup>A</sup>gi&gt;=<p>
+5.<sup>A</sup>gin<sup>A</sup>gin<p>
+6.<sup>A</sup>gim<p>
+7.<sup>A</sup>li&gt;=<p>
+8.<sup>A</sup>lim<p>
+<b>
+<IMG SRC="RE5.GIF"></b><p>
+<p>
+<sup>A</sup>gli&gt;= <i>snow</i> in Proto-Tamang <p>
+(8 different protoforms produced from 4 reflexes)<p>
+<i>Figure 13:  Selecting the `best' reconstruction from the list of possible
+reconstructions</i><p>
+<b>
+<a name="RTFToC15">4.3
+THE DATABASE MANAGEMENT SIDE OF HISTORICAL RECONSTRUCTION
+</a></b><p>
+Using the interactive mode of RE described above is a good way to
+"debug" the table of correspondences and canon.  However, RE is most useful as
+a means of analyzing complete lexicons.  The four processes involved in
+creating reasonable cognate sets from a set of lexicons of modern forms are
+schematized in Figure 14 below.   They are:
+<ul>
+<li>segmentation of lexemes and generation of proto-projections,
+<li>comparison of proto-projections and creation of tentative cognate sets,
+<li>merging (conflation) of subsets in the list of tentative cognate sets, and
+<li>conflict resolution within and between cognate sets of homophonous
+reflexes and homophonous reconstructions (i.e. the application of semantic
+information).</ul>
+<IMG SRC="RE6.GIF"><p>
+<i>Figure 14: Input-Output diagram of RE's basic batch functions</i><p>
+The algorithms for each of these processes are outlined in the
+pseudocode in Figures 15a-c.  First, the Tokenize and FilterAndSubstitute
+procedures are performed for each form in each source dictionary.<p>
+/* STEP ONE: Backward projection of modern forms<p>
+setup tables for the language data file to be processed<p>
+get appropriate columns from TofC<p>
+set language codes, etc. for output<p>
+Initialize list of reconstructions<p>
+end setup<p>
+for each language_dictionary<p>
+for each modern_form from language_dictionary /* i.e. for each word in
+dictionary */<p>
+Initialize TokenList<p>
+Tokenize(modern_form)    /* see pseudocode for this function above */<p>
+Initialize ListofPossibleForms<p>
+FilterAndSubstitute(TokenList,ListofPossibleForms) /* upstream! */<p>
+Apply Panini's Principle (Elsewhere condition) to select "allowed"
+reconstructions<p>
+check each reconstruction generated against list of reconstructions:<p>
+if the reconstruction already exists in the list,<p>
+link modern_form to existing reconstruction<p>
+otherwise<p>
+add reconstruction and link to modern_form into list<p>
+end if<p>
+end for<p>
+end for<p>
+<i>Figure 15a: Pseudocode for RE's basic batch functions - first create
+reconstructions</i><p>
+Next, the list of reconstructions generated is examined and those
+reconstructions which fail to have sufficient support are eliminated.  The
+remaining reconstructions are retained.<p>
+<p>
+/*  STEP TWO: create "pseudo" cognate sets  */<p>
+for each reconstruction in list of reconstructions<p>
+if reconstruction is supported by data from two or more languages then<p>
+output reconstruction<p>
+output supporting forms<p>
+end if<p>
+end for<p>
+<i>Figure 15b: Pseudocode for RE's basic batch functions - next, create first
+group of cognate sets</i><p>
+Third, each set is compared with each other set to get rid of those
+which are subsets of other sets (a type of "set covering problem", discussed in
+section 5.1 below).  This is primarily a data reduction process, and not
+interesting algorithmically.  We have therefore not provided pseudocode
+describing it.  It is, however, NP-hard, and therefore takes a lot of time for
+a dataset of any size.<a href="RE_fn.html#fn4">[10]</a><p>
+Finally, if the linguist is able to provide (on the basis of analysis of
+previous runs) semantic criteria for distinguishing homophones, the program can
+separate the sets into sets which contain only semantically compatible
+reflexes.  The method for accomplishing this is described in section 6.1
+below.<p>
+/* STEP FOUR: semantic processing: splitting and remerging of sets based on
+semantics */<p>
+divide a set into two based on list of glosses selected<p>
+for each of the newly created divided sets<p>
+if (it is supported by data from at least two different languages) and<p>
+(it is not now a subset of some other existing cognate set) then<p>
+retain the divided set<p>
+otherwise<p>
+delete the divided set<p>
+end if<p>
+end for<p>
+<p>
+/* check the division in the rest of the sets */<p>
+for all other sets containing any subset of these glosses<p>
+if (there are words in this set with semantically incompatible glosses) then<p>
+divide the set (as was done above)<p>
+end if<p>
+end for<p>
+output cognate sets<p>
+<i>Figure 15c: Pseudocode for RE's basic batch functions - semantic
+component</i><p>
+The first step, creating the list of proto-projections, is merely a
+matter of iteratively applying the reconstruction-generating procedures
+described in section 4.2.1 to all the forms in the files.  The list of
+protoforms obtained by running all the entries of a modern dictionary backward
+through the program is saved for later combination with reconstructions
+generated by words from other languages.  The process is illustrated in Figure
+16.  Note that forms which fail to produce any reconstructions are saved in a
+residue file for further analysis.  In the example below (Figure 16), we see
+that a Nepali loan word, Tukche /(TM)gar/ <i>house,</i> failed to produce any
+reconstructions in the proto-language, because there exists a phonological
+subsystem for Nepali loans in Tukche which does not conform to the phonology of
+native words (i.e. the phonology described by the table of correspondences).
+In particular, no voiced initials have survived in Tukche even as allophonic
+variants.  In other cases, forms collected in the check files may indicate a
+mistake in the table of correspondences, which needs to be corrected to allow
+the word to reconstruct successfully. Note that the Tukche words in this
+example are glossed in French (<i>neige</i> "snow", <i>oeil</i> "eye"
+<i>maison</i> "house"), as they are taken from a French-Tukche dictionary.
+This is a significant fact, as will be explained below in section 6.1.<p>
+<p>
+<IMG SRC="RE7.GIF"><p>
+<i>Figure 16: Proposition of protoforms and the residue ("check")
+file</i><p>
+Combining the lists of reconstructions for several languages into a
+single sequence and sorting by the proposed reconstructions brings together all
+reflexes which could descend from a particular reconstruction (Figure 17).<p>
+       
+<IMG SRC="RE8.GIF"><p>
+<i>Figure 17:  Upstream computation in batch</i><p>
+From this sorted list, RE extracts matching reconstructions, with their
+supporting forms, and proposes them as potential cognate sets (Figure 18).
+Ideally,  rules would be sufficiently precise for the program to propose only
+valid sets, and sufficiently broad not to exclude legitimate possibilities.
+However, there is a certain amount of redundancy and uncertainty in the rules
+which tend to result in several possible reconstructions for the same cognate
+set.  On the other hand, some forms which do produce possible reconstructions
+cannot be included in a cognate set because their reconstruction does not match
+that of any word in the other languages.  These isolates (not illustrated) are
+collected by the program during the set creation process and maintained as a
+separate list.  <p>
+The first evaluation measure hypothesized for establishing the validity of a
+cognate set was the number of supporting forms.  The program retained cognate
+sets when the number of supporting forms from different languages reached a
+certain threshold value.  However, many reasonable cognate sets had forms from
+only a few languages.  The handling of this problem and other problems having
+to do with the composition of the proposed cognate sets is dealt with in more
+detail in section 5 below.<p>
+*TGTM <sup>B</sup>ba&Uacute;/3.136.32.<p>
+<p>
+gha  <sup>3</sup>poleaf<p>
+man  <sup>3</sup>pa&Uacute;leaf<p>
+ris  <sup>3</sup>pa&Uacute;feuille d'arbre<p>
+sahu  <sup>3</sup>pa&Uacute;leaf<p>
+tuk  <sup>3</sup>paleaf<p>
+<p>
+<i>Figure 18: A "Cognate Set" generated by RE </i><p>
+<b>
+<a name="RTFToC16">5.0
+THE CONSTITUENCY OF COGNATE SETS
+</a></b><p>
+If sound change proceeded in such a way as to perfectly maintain semantic and
+phonological contrasts through time, the diachronic situation would be quite
+simple.  Phonemes would change into other phonemes but not merge or split.<a
+href="RE_fn.html#fn4">[11]</a>  Words would mutate in phonological shape, but
+would remain distinct from other words in both form and meaning.  Making
+cognate sets in such a situation would be quite straightforward.  In reality,
+neither semantic nor phonological distinctions are not maintained over time.
+We will examine some of the implications of this situation.<p>
+<b>
+<a name="RTFToC17">5.1
+Many reconstructions may be possible for a given set of cognates
+</a></b><a name="RTFToC18">.<p>
+The process of "triangulation" (discussed above in section 4.2.3 and in some
+detail in Lowe and Mazaudon 1989, 1990, Mazaudon and Lowe 1991) provides a
+means for selecting the best reconstruction out of several candidates.  If it
+were possible <i>a priori</i> to determine which reflexes might fall together
+based on the correspondences, it would be possible to preserve just those
+reconstructions from which all the reflexes might descend (and discarding the
+other reconstructions).  This situation is the one illustrated with the words
+for snow illustrated in Figure 13 above.  However, when entire lexicons are
+processed, it is not necessarily possible nor even desirable to attempt to
+partition the lexemes into comparable sets to begin with.  It is necessary to
+generate all possibilities and later to eliminate the undesirable ones through
+a sort of competition.  Using the number of supporting forms in a cognate set
+as the sole or primary criterion for keeping the set was found to be an
+inadequate heuristic: some perfectly good sets have only three members, while
+others with more members are shaky and in some cases simply wrong.<p>
+An example of this competition is illustrated in Figure 19 (another
+representation of the data presented in figure 3).  Here, as in the
+<sup>A</sup>gli&gt;= <i>snow</i> example (Figure 13), several different cognate
+sets composed of the same reflexes but having different reconstructions have
+been generated.  The reflexes clearly fall together into the same overall
+cognate set, but the reconstruction of several of the forms is non-unique:  the
+reconstruction *<sup>B</sup>bo&Uacute; is supported by forms from Marpha and Syang,
+while *<sup>B</sup>bap is supported by all four languages.  This cognate set, then,
+reflects a merger of several smaller sets, as indicated in the Venn diagram.
+The Risiangku form disambiguates the reconstructions, showing that *<sup>B</sup>bap
+should be recognized as the winning reconstruction (it is marked with the *,
+other reconstructions which are supported by various subsets of the reflexes
+are marked with !*).  As an aside, this process of set conflation can only be
+accomplished once all the words in all the lexicons are processed.  The problem
+then presented is a set covering problem (one of the various kinds of
+NP-complete problems for which no fast or easy solution exists). In the case of
+our Tamang database, in which about 7,000 modern forms yield about 8,000
+different reconstructions which have supporting forms from at least two
+languages, set conflation takes several hours on our 386-based machine.<p>
+<IMG SRC="RE9.GIF"><p>
+<b>*<sup>B</sup>bap/3.138.47.</b><p>
+<b>!*<sup>B</sup>bep/3.138.26.</b><p>
+<b>!*<sup>B</sup>bo&Uacute;/3.138.61.</b><p>
+mar  <sup>3</sup>po<i>beer-mash</i><p>
+pra  <sup>3</sup>pe<i>beer-mash</i><p>
+ris  <sup>3</sup>pap<i>beer-mash</i><p>
+syang  <sup>3</sup>po<i>beer-mash</i><p>
+
+<i>Figure 19:  Nested cognate sets</i><p>
+<b>5.2 Other kinds of competition for reflexes
+</a></b><p>
+<b></b>A number of other types of overlapping can occur.  And in general, the
+cognate sets of competing reconstructions do not nest as neatly as they do in
+the previous example.  It is often the case that the cognate sets may merely
+overlap to some extent.  These cases fall into several distinct classes:<p>
+First, there exist some overlapping sets in which neither set is a proper
+subset of the other; the reflexes fit semantically, so the problem is one of
+reconciling the reconstructions.  Figure 20 illustrates the problems which
+arise when semantically compatible reflexes support different
+reconstructions.<p>
+<p>
+<IMG SRC="RE10.GIF"><p>
+<p>
+<p>
+<b>*<sup>B</sup>ro/3.173.60.</b><p>
+mar  <sup>3</sup>ro<i>friend</i><p>
+ris  <sup>3</sup>ro<i>friend</i><p>
+syang  <sup>3</sup>ro<i>friend</i><p>
+tuk  <sup>3</sup>ro<i>friend</i><p>
+<b>*<sup>B</sup>ro&Uacute;/3.173.61.</b><p>
+mar  <sup>3</sup>ro<i>friend</i><p>
+sahu  <sup>3</sup>ro&Uacute;<i>friend</i><p>
+syang  <sup>3</sup>ro<i>friend</i><p>
+tag  <sup>3</sup>ro&Uacute;<i>friend</i><p>
+tuk  <sup>3</sup>ro<i>friend</i><p>
+<p>
+<p>
+<i>Figure 20:  </i>*<sup>B</sup>ro(&Uacute;) <i>`friend'</i><p>
+This particular situation results from an uncompensated merger (of
+length) which is now in progress: the length distinction appears to be on its
+way out in the Risiangku dialect (abbreviated "ris" in Figure 20).   This
+explanation is based on knowledge of the language and an internal analysis of
+its phonology.  At this time it is not clear what algorithm (if any) could be
+used to sort out cases like these.<p>
+A similar but more complicated situation can be seen in Figure 21 below.  Here
+not only does the free variation in vowel length generate additional possible
+reconstructions, but those dialects where final consonants have been lost
+permit the reconstruction of variants with a final stop as well.  However, the
+form from the Risiangku dialect, which normally preserves finals, cannot
+reconstruct (according to the table) to either the short vowel or stopped
+rhyme, and so another cognate set supporting a long vowel reconstruction is
+created.<p>
+<p>
+<IMG SRC="RE11.GIF"><p>
+<b>*<sup>A</sup>ku/2.95.77.</b><p>
+sahu(TM)ku<i>nine</i><p>
+tuk(TM)ku<i>nine</i><p>
+<b>!*<sup>A</sup>kup/2.95.86.</b><p>
+gha(TM)ku<i>nine</i><p>
+mar(TM)ku<i>nine</i><p>
+pra(TM)ku<i>nine</i><p>
+<p>
+<b>*<sup>A</sup>ku&Uacute;/2.95.78.</b><p>
+gha(TM)ku<i>nine</i><p>
+pra(TM)ku<i>nine</i><p>
+ris(TM)ku&Uacute;<i>nine</i><p>
+tuk(TM)ku<i>nine</i><p>
+<i></i><p>
+<i>Figure 21:  </i><sup>A</sup>ku(&Uacute;) <i>`nine'</i><p>
+<b>
+<a name="RTFToC19">6.0
+EXTENSIONS TO RE 
+</a></b><p>
+The processing described above produces cognate sets which when
+examined are often found wanting.  For example, homophones may be conflated in
+the same set though they can be derived from different etyma.  Also, small
+irregularities in the data, which may be partially understood by the linguist,
+may cause forms to fail to reconstruct into the set in which they plausibly
+belong.  We discuss below extensions to RE which deal with some of these
+problems.<p>
+<b>
+<a name="RTFToC20">6.1
+CONSTRAINING COGNATE SETS: INCORPORATING SEMANTICS
+</a></b><p>
+Note that we have nowhere mentioned semantics in the backward
+computation process: in its search for new cognate sets, the algorithm works
+strictly on form, not on meaning.  Indeed, one of the strengths of RE is that
+it initially ignores the glosses altogether, operating strictly on the forms
+themselves.  This approach has the advantage of letting a set like
+*<sup>B</sup>ba&Uacute; (shown in Figure 18 above) be created in spite of the fact
+that two different metalanguages (French and English, as illustrated in some of
+the earlier examples) are used in the data files for the glosses; meaning is
+not being taken into consideration in creating the set.  However, in cases of
+homophony in the protolexicon (like  *<sup>B</sup>bam, shown in Figure 22) it is
+undesirable to conflate all reflexes which support the same reconstruction.
+Here we can see that words belonging to at least two different etyma
+(<i>shoulder/thigh</i> vs. <i>soak/wet</i>) are mixed into a single proposed
+etymon.<p>
+TGTM *<sup>B</sup>bam/3.136.53.<p>
+<p>
+gha  <sup>3</sup>p~a&Uacute;thigh<p>
+tagXbam-bato soak<p>
+ris  <sup>3</sup>pam&eacute;paule<p>
+ris  <sup>3</sup>pam mouiller, tremper<p>
+sahu  <sup>3</sup>pamshoulder<p>
+tuk  <sup>3</sup>pomwet (v.i.)<p>
+<p>
+<i>Figure 22:  Sample of comparative set proposed by RE  </i><p>
+<i>(without semantic component)</i><a href="RE_fn.html#fn4">[12]</a><p>
+Besides allowing incompatible forms within a cognate set, a lack of
+semantic differentiation permits the creation of some spurious cognate sets, as
+is illustrated in the Venn diagrams in Figure 23.  The set supporting the three
+reconstructions <sup>B</sup>be&Uacute;, <sup>B</sup>bet, and <sup>B</sup>bat should be
+eliminated and the reflexes permitted to migrate to the cognate set to which
+they are semantically related.  Were some means available to specify in this
+case that no set could contain reflexes meaning both <i>wife</i> and
+<i>beer-mash</i>, the superfluous middle set and the overlap it causes would be
+eliminated (and the reconstructions would be listed under the <i>wife</i> set
+of which their supporting reflexes form a proper subset in the same way as
+depicted in Figure 19).<p>
+<IMG SRC="RE12.GIF"><p>
+<b>*<sup>B</sup>be/3.138.19.</b><p>
+mar  <sup>3</sup>pe<i>wife</i><p>
+pra  <sup>3</sup>pi[[perthousand]]<i>wife</i><p>
+syang  <sup>3</sup>pe<i>wife</i><p>
+tuk  <sup>3</sup>pe<i>wife</i><p>
+<p>
+<b>*<sup>B</sup>be&Uacute;/3.138.20.</b><p>
+<b>*<sup>B</sup>bet/3.138.25.</b><p>
+<b>*<sup>B</sup>bat/3.138.44.</b><p>
+mar  <sup>3</sup>pe<i>wife</i><p>
+pra  <sup>3</sup>pe<i>beer-mash</i><p>
+syang  <sup>3</sup>pe<i>wife</i><p>
+tuk  <sup>3</sup>pe<i>wife</i><p>
+<p>
+<i></i><p>
+<i></i><b>*<sup>B</sup>bap </b>(only the largest subset from<p>
+   Figure 19 above is used here)<p>
+<p>
+<p>
+<i>Figure 23: *</i><sup>B</sup><i>be and *</i><sup>B</sup><i>bap
+`compete' for reflexes</i><p>
+General theories of semantics and semantic shifts are not yet
+sufficiently developed to be used as an <i>a priori </i>reference framework to
+constrain the search for cognates.<a href="RE_fn.html#fn4">[13]</a>  Moreover,
+using such a framework would preclude the possibility of discovering any new
+semantic relationships which might be specific to the linguistic group or the
+linguistic area under study.  So we do not wish to constrain the program at all
+in its first pass through the data in search of cognate sets.  On subsequent
+passes though it would be convenient not to repeatedly encounter putative
+cognate sets which contain semantic discrepancies.  It should be noted in
+passing that semantic discrepancies should not be confused with semantic
+distance.<p>
+In order to separate incompatible etymological sets, we devised an <i>ad hoc
+</i> system of "semantic tagging" using a structure we call an "semantic
+formula."  These are bracketed lists of glosses specifying which glosses are
+semantically compatible and so might be found glossing reflexes in the same
+cognate set.  The formalism used is as follows:<p>
+(7)[G1,G2, ... Gn]<p>
+"Extract sets which contain any gloss G1 to Gn and eliminate from those sets
+reflexes with any other gloss.  Eliminate any sets which as a result have too
+few members or become subsets of other sets."<a
+href="RE_fn.html#fn5">[14]</a><p>
+(8)[G1,G2, ... Gm] [Gm+1,Gm+2, ... Gn] ...  [Gp+1,Gp+2, ... Gq]<p>
+"Divide any set which contains any of the glosses G1 to Gq into sets each of
+which contains reflexes which<p>
+      * contain glosses only from one of the subsets [G1,G2 ... Gm], [Gm+1,Gm+2
+... Gn], etc.; but<p>
+      * retain any reflexes which are NOT specified in any of the subsets.<p>
+Eliminate any sets which as a result of the division have too few members or
+become subsets of other sets."<p>
+Some examples of such semantic formulas are:<p>
+(9)[SHOULDER, THIGH, &Eacute;PAULE] [MOUILLER, SOAK, TO SOAK, TREMPER, WET
+(V.I.)]<p>
+(10)[BEER-MASH]  [WIFE]<p>
+(11)[ANSWER, DIRE, REPLY, SAY, TELL, TO SAY]<p>
+(12)[FEUILLE D `ARBRE, LEAF, SMALL LEAF]<p>
+<p>
+etc...<p>
+Specifically, these lists identify words <i>in the specific language data sets
+being processed</i> which are homophonous or might have homophonous
+reconstructions.  They also bring together glosses from different languages
+which should be equated for purposes of diachronic comparison.<p>
+The semantic formulas are created based on examination of the initial sets
+proposed by the program.  On subsequent passes through the data, RE can be
+instructed to take semantics into account and (by processing a file containing
+these lists) divide sets of potential cognates according to the semantic
+formulas.<a href="RE_fn.html#fn5">[15]</a> The result is that reflexes which
+would otherwise fall together into one semantically incompatible cognate set
+can now be differentiated on the basis of meaning and separate sets can be
+created (see Figures 24 &amp; 25 below).  The set conflation process described
+in sections 4.3 and 5.1 can be applied after this differentiation, giving a
+more reasonable list of cognates.<p>
+*<sup>B</sup>ba&Uacute;/3.136.32.<p>
+gha  <sup>3</sup>poleaf<p>
+man  <sup>3</sup>pa&Uacute;leaf<p>
+ris  <sup>3</sup>pa&Uacute;feuille d'arbre<p>
+sahu  <sup>3</sup>pa&Uacute;leaf<p>
+tuk  <sup>3</sup>paleaf<p>
+<i>Figure 24: Sample of comparative cards proposed by RE (with semantic
+component) No separation (all glosses found in the same semantic formula, (12)
+above)</i><p>
+<p>
+*<sup>B</sup>bam/3.136.53.<p>
+gha  <sup>3</sup>p~a&Uacute;thigh<p>
+ris  <sup>3</sup>pam&eacute;paule<p>
+sahu  <sup>3</sup>pamshoulder<p>
+*<sup>B</sup>bam/3.136.53.<p>
+ris  <sup>3</sup>pammouiller, tremper<p>
+tagXbam-bato soak<p>
+tuk  <sup>3</sup>pomsoak<p>
+tuk  <sup>3</sup>pomwet (v.i.)<p>
+<i>Figure 25: Sample of comparative cards proposed by RE (with semantic
+component) A set (exemplified in Figure 22) divided using semantic formula (9)
+above</i><p>
+This device is presently conceived of as a simple tool to reduce noise
+in the output, but the semantic formulas might be studied later for an analysis
+of semantic shift in the particular group of languages.  Note that the gloss
+lists are created from and therefore specific to the particular language data
+sets and glossing metalanguages used.<p>
+<b>
+<a name="RTFToC21">6.2
+EXTENSION TO ALLOFAMIC</b><a href="RE_fn.html#fn5">[16]</a><b> FAMILIES AND
+SYSTEMATIC IMPRECISION IN THE TABLE OF CORRESPONDENCES
+</a></b><p>
+As has often been noted and deplored, irregular sets of quasi-cognates,
+or simple groups of look-alikes are a necessary evil of comparative
+linguistics.<a href="RE_fn.html#fn6">[17]</a>  If we discarded immediately all
+sets that are not absolutely regular according to the rules of phonological
+change already uncovered for the language group, we would stand no chance of
+ever improving our understanding of the facts.  Using a computer to
+mechanically apply a set of rules to the data implies that we believe to a
+large extent in the regularity of sound change.  But the comparative method
+itself implies such an assumption.  This does not mean that we cannot also
+admit that "each word has its own history", when we take into account competing
+trends or influences on the languages.  This flexibility towards irregularity
+has been incorporated everywhere in the computing mechanism.  <p>
+One example of this flexible approach is evident in examining the table of
+correspondences.  Turning back to the table excerpt (Figure 9a) notice the
+presence of multiple outcomes separated by commas in the columns of modern
+outcomes (columns 5-12).  These mean that we do not know yet what the regular
+outcome of a given change is.  Question marks are also allowed, in which case
+the program can (with the proper switch settings) borrow the outcomes from
+adjacent languages.  Neither of these conventions should remain in the table of
+correspondences when the analysis of the group of languages is completed.  But,
+as a working tool, the table of correspondences tolerates them, and they do not
+hamper the functioning of RE.<p>
+<b>
+<a name="RTFToC22">6.3
+"FUZZY" MATCHING IN THE TABLE OF CORRESPONDENCES
+</a></b><p>
+We can also reduce some of the specificity of the rules in the table of
+correspondences in a controlled way in order to produce "allofam" sets or
+"irregular cognate" sets.  These cognate sets are composed of reflexes which
+are irregular only by one or two features specified as parameters by the
+linguist.  This is accomplished using a "fuzzy file" in which elements of the
+table of correspondences are conflated, allowing the linguist to systematically
+relax distinctions between segments.  In Figure 26, distinctions in tone and
+the mode of articulation at the proto-language level (symbolized by TGTM) are
+being ignored in order to concentrate on patterns of correspondences between
+rhymes and between initial points of articulation.<p>
+TGTM X=A,B<p>
+TGTM G=k,k&aelig;,g<p>
+TGTM GR=kr,k&aelig;r,gr<p>
+TGTM GL=kl,k&aelig;l,gl<p>
+TGTM GW=kw,k&aelig;w,gw<p>
+TGTM GJ=kj,k&aelig;j,gj<p>
+...<p>
+TGTM P=p,p&aelig;,b<p>
+TGTM PR=pr,p&aelig;r,br<p>
+TGTM PL=pl,p&aelig;l,bl<p>
+TGTM PW=pw,p&aelig;w,bw<p>
+<i>Figure 26:  A "Fuzzy file"</i><p>
+The "fuzzy file", which states that TGTM proto tones <sup>B</sup> and
+<sup>A</sup> should be equated to the "cover symbol" X , and that TGTM *k,
+*k&aelig;, and *g should be conflated into *G, a velar stop, unspecified for
+aspiration and voicing.  Similar conflations are stated for *p, *p&aelig;, *b,
+and so on.<p>
+The result of conflating certain segments is to bring together certain
+reflexes which would otherwise fail to be included in cognate sets.  Figures
+27a and 27b illustrate how this procedure brings reflexes which are tonally
+irregular into the appropriate cognate sets for further study.  In Figure 27a,
+an "irregular correspondence" (that is, a lack of a correspondence where one
+might be expected to exist) results in forms from Tukche and Ghachok being left
+out of the cognate set.  With a "fuzzy" value for the tone (illustrated in part
+B of Figure 27a), the two aberrant forms fall into place.<p>
+<b>A. Without "Fuzzy" ConstituentsB. With "Fuzzy" Constituents</b><p>
+recon<sup>A</sup>gla&Uacute;reconXGLa&Uacute;<p>
+analysis4.117.32.analysis4.117.32.<p>
+<b>analysis3.116.32.</b><p>
+marcentsljaplacemarcentsljaplace<p>
+pracentsk&aelig;japlacepracentsk&aelig;japlace<p>
+sahucentskla&Uacute;placesahucentskla&Uacute;place<p>
+syangcentsljaplacesyangcentsljaplace<p>
+tagcentsk&aelig;la&Uacute;placetagcentsk&aelig;la&Uacute;place<p>
+<b>gha  <sup>3</sup>~o place</b><p>
+<b>tuk  <sup>3</sup>kjaplace</b><p>
+<i>Figure 27a: *<sup>B</sup>gla&Uacute; ~ *<sup>A</sup>gla&Uacute;</i><p>
+In Figure 27b, the features conflated are tone and voicing.  <p>
+<b>A. Without "Fuzzy" ConstituentsB. With "Fuzzy" Constituents</b><p>
+recon<sup>B</sup>bapreconXPap<p>
+analysis3.136.46.analysis3.136.46.<p>
+<b>analysis2.135.46.</b><p>
+mar  <sup>3</sup>pobeer-mashmar  <sup>3</sup>pobeer-mash<p>
+pra  <sup>3</sup>pebeer-mashpra  <sup>3</sup>pebeer-mash<p>
+ris  <sup>3</sup>papbeer-mashris  <sup>3</sup>papbeer-mash<p>
+syang  <sup>3</sup>pobeer-mashsyang  <sup>3</sup>pobeer-mash<p>
+<b>gha(TM)pa&Uacute; beer-mash</b><p>
+<i>Figure 27b: *<sup>A</sup>pap ~*<sup>B</sup>bap</i><p>
+<b>
+<a name="RTFToC23">6.4
+DIRECTIONS FOR FURTHER DEVELOPMENT: PHONOLOGICAL RESEARCH USING RE
+</a></b><p>
+When the table and canon are "complete," that is, when the linguist is
+satisfied with the contents of the cognate sets and "residue" files created by
+RE, the table and  canon can themselves be subjected to further study.  The
+table, for example, is a compact statement of the sound changes exemplified in
+the set of data begin studied.  Indeed, these sound changes encode linguistic
+generalizations waiting to be teased out by the linguist.<p>
+<b>
+<a name="RTFToC24">6.4.1
+ Subgrouping and Typology
+</a></b><p>
+The table of correspondences and syllable canon contain a considerable
+amount of information about the relationships among the languages.  Analysis of
+the table shows which languages share features and innovations and where they
+differ.  Such analysis could be useful to produce a more refined
+characterization of the genetic relationship among the languages.<p>
+On one hand, the table could be analyzed to determine what traits the
+languages have in common. An example of this is shown in Figure 28.  Here the
+correspondences have been re-analyzed to show cases in which languages share a
+common outcome and cases in which they differ.  Where the outcome is the same,
+a `1' appears in that language's slot in column (2).  If all or most of the
+columns have a `1', we conclude that this type of change is universal (within
+this language group).  Looking at the types of change which are universally
+shared, we further note that a generalization over a feature (in this case a
+devoicing rule) is possible.  Such a generalization is the result of two levels
+of abstraction: bringing together all languages which have an outcome in
+common, and then comparing those outcomes at the level of phonological
+features.  We hope to have the computer hunt through the table of
+correspondences attempting to make such generalizations.  This would require
+that the algorithm be able to analyze table constituents at the feature level
+and to characterize the changes in proto and modern feature sets in some
+reasonable way.<p>
+(1)(2)(3)(4)(5)<p>
+CorrLanguages:Proto<p>
+<u>N[[ordmasculine]]<tt>RSTTMSGP</tt>SegmentOutcomeEnvironment</u><p>
+<u></u>(138)<tt>11111110</tt>*b&gt;p/<sup>A</sup>_j,r<p>
+(136)<tt>11111111</tt>*b&gt;p/<sup>B</sup>_<p>
+(144)<tt>11111110</tt>*bl&gt;pl/<sup>A</sup>_<p>
+(143)<tt>11111111</tt>*bl&gt;pl/<sup>B</sup>_<p>
+(132)<tt>11111110</tt>*d&gt;t/<sup>A</sup>_<p>
+(121)<tt>11111111</tt>*dz&gt;ts/<sup>B</sup>_<p>
+(97)<tt>11111111</tt>*g&gt;k,g/<sup>B</sup>_<p>
+<p>
+etc....<p>
+<p>
+Generalization:C[[lozenge]]&gt;C[[radical]]<p>
+<p>
+<i>Figure 28: Devoicing: an innovation common to all languages in the
+group</i><p>
+A similar process could be used to distinguish strata of linguistic
+development and structural similarities <i>within</i> the group.  A pattern of
+innovation shared consistently by a subset of the languages but not by the rest
+may be evidence of continued contact or typological similarity arising from
+some other source.  As Figure 29 illustrates, the languages on the left side of
+the table (Risiangku, Sahu, and perhaps Taglung) seem to preserve final
+consonants better than the rest of the languages in the group.  It would be
+useful to be able to catalog sets of shared innovations, and to provide an
+interpretation of them along genetic or other typological grounds.<p>
+<p>
+CorrLanguages:Proto<p>
+<u>No.<tt>RSTTMSGPSegmentOutcomeEnvironment</tt></u><p>
+<u><tt></tt></u><p>
+<u><tt></tt></u><b>Finals Lost:</b><p>
+<u></u><p>
+<u></u>(85)<tt>00?0111?</tt>*jup&gt;ju<p>
+(44)<tt>00011111</tt>*at&gt;e,je,e&Uacute;<p>
+(46)<tt>00001111</tt>*ap&gt;o<p>
+<p>
+<b>Finals Preserved:</b><p>
+<p>
+(85)<tt>11?0000?</tt>*jup&gt;jup<p>
+(44)<tt>11000000</tt>*at&gt;Vt<p>
+(46)<tt>11100000</tt>*ap&gt;ap<p>
+<p>
+<i>Figure 29: Innovations shared by subgroups</i><p>
+<p>
+A close look at the examples shows some of the obstacles which any analysis
+(and especially an automated one) must confront.  Some method for handling
+cases where data is missing or inconsistent in some "minor" way must be
+developed.  Should the assumption be that missing data supports a
+generalization, refutes it, or should it not affect the interpretation at all?
+It is unclear how to have the computer generalize intelligently.
+</a><p>
+<b>
+<a name="RTFToC25">6.4.2
+On the notions "rule" and "correspondence"
+</a></b><p>
+Elaboration of the relationship between the protolanguage and each of
+the daughter languages implies an item-by-item comparison of modern reflexes
+with their ancestors.  A correspondence, in the strictest sense, reflects only
+an observed or even hypothesized relationship between modern constituents.  It
+need not embody a claim about the exact features of the ancestor.<p>
+When correspondence sets are matched with a protosegment, as is the case in
+the table used by RE, each correspondence set can be viewed as a set of
+simultaneous rules.  The three correspondence sets given in Figure 30a, for
+example, can be rewritten as a number of "input-output" type rules as expressed
+in Figure 30b.  Note that these are not "rules" in the sense the word is used
+by generative linguists, where there is the implication of some kind of process
+or "rewriting" of material.  One indication of this is that some of the rules
+in Figure 30b are of the form "X remains X" (see rules 181, 366, and 505).  The
+status of such rules in a generative sense is suspect.  However, in RE, as
+shown below, such rules have quite concrete implications.<p>
+<b><u>NSyll*Contextrissahutagtukmarsyangghapra</u></b><p>
+<b><u></u></b>46Rapapapap[[dotaccent]]p,[[dotaccent]]uooa&Uacute;e<p>
+94Ik*/-wk&otilde;hkkkkk<p>
+137Ib*/B-ppp,bppbbp&aelig;<p>
+<p>
+<i>Figure 30a: Three Correspondence Sets from the Table of
+Correspondences</i><p>
+<b><u> RN  (CN)Syll*TGTM  &gt;Outcome  Contextin
+Language(s)</u></b><p>
+181(0046)Rap&gt;apris,sahu,tag<p>
+182(0046)Rap&gt;a&Uacute;gha<p>
+183(0046)Rap &gt;epra<p>
+184(0046)Rap &gt;omar,syang<p>
+185(0046)Rap &gt;[[dotaccent]]p,[[dotaccent]]utuk<p>
+<p>
+365(0094)Ik &gt;h/_  w tag<p>
+366(0094)Ik &gt;k/_  wris,tuk,mar,syang,gha,pra<p>
+367(0094)Ik &gt;&otilde;/_  wsahu<p>
+<p>
+505(0137)Ib &gt;b/B_syang,gha<p>
+506(0137)Ib &gt;p/B_ris,sahu,tuk,mar<p>
+507(0137)Ib &gt;p,b/B_tag<p>
+508(0137)Ib &gt;p&aelig;/B_pra<p>
+<p>
+<i>Figure 30b: Correspondences 46,94, and 137 expressed as Rules</i><p>
+Figure 31b illustrates what a "feature bundle" in RE looks like.  To
+create this representation, the linguist provides a list of features, and
+specifies the set of constituents to which the feature applies (as exemplified
+in Figure 31a).<p>
+<p>
+TGTMUnvoiced =
+k,<b>k&aelig;</b>,&Ecirc;,&Ecirc;&aelig;,ts,ts&aelig;,t,t&aelig;,p,p&aelig;,&aelg;&gt;=,&aelig;[[macron]],&aelig;n,&aelig;m,&aelig;j,&aelig;r,&aelig;l,&aelig;w...<p>
+TGTMAspirated=
+<b>k&aelig;</b>,&Ecirc;&aelig;,ts&aelig;,t&aelig;,p&aelig;,k&aelig;r<p>
+TGTMVelar=
+k,k&aelig;,g,&gt;=,&aelig;&gt;=,kr,<b>k&aelig;</b>,gr,kl,k&aelig;l,gl,kj,k&aeligj,gj,kw,k&aelig;w,gw<p>
+TGTMStop=
+k,<b>k&aelig;</b>,g,ts,ts&aelig;,dz,&Ecirc;,&Ecirc;&aelig;,&Icirc;,t,t&aelig;,d,,p&aelig;,b<p>
+TGTMCluster  = gr,gl,gj,gw,bl,bj,ml,mj,Hl,Hrkr,kl,kj,pl,pj,p&aelig;j...<p>
+...etc<p>
+<i>Figure 31a: Excerpt from the *TGTM  Feature Set </i><p>
+<b>TGTM</b>/k&aelig;/=MODE(Aspirated)<p>
+MODE(Unvoiced)<p>
+MANNER(Stop)<p>
+PLACE(Velar)<p>
+<i>Figure 31b: Feature Analysis of a *TGTM  segment as a "feature bundle"</i><p>
+The feature sets represent a statement of the significant distinctions
+<i>in each language</i>; we note in passing that RE thus implements the notion
+that the phonemes of each language pattern in their own way, and that even
+though the same symbol may be used to transcribe words in different languages,
+this does not necessarily indicate that they share features in common.
+Consider the feature set for Risiangku exemplified in Figure 32a.  /k&aelig;/
+is also a constituent in this language, but it has a different analysis
+inasmuch as the voicing distinction (conjectured for the protolanguage) is not
+distinctive.<p>
+<p>
+risCluster= hl,hr,kj,kr,k&aelig;r,kl,kw,pj,p&aelig;j,pr,pl,&gt;=j,mj,ml,mr<p>
+risStop=
+k,<b>k&aelig;</b>,ts,ts&aelig;,&Ecirc;,&Ecirc;&aelig;,t,t&aelig;,p,p&aelig;<p>
+risAspirated=
+<b>k&aelig;</b>,&Ecirc;&aelig;,ts&aelig;,t&aelig;,p&aelig;,k&aelig;r,p&aelig;j<p
+risUnaspirated= k,&Ecirc;,ts,t,p,kj,kr,kl,kw,pj,pl<p>
+risVelar= k,<b>k&aelig;</b>,&gt;=,kj,kr,k&aelig;r,kl,kw<p>
+<p>
+<i>Figure 32a: "Feature set" for Risiangku (excerpt)</i><p>
+<p>
+<p>
+<b>Risiangku</b>/k&aelig;/=MODE(Aspirated)<p>
+MANNER(Stop)<p>
+PLACE(Velar)<p>
+<p>
+<i>Figure 32b: "Feature bundle" for a modern segment (note: voicing is
+</i>not<i> distinctive)</i><p>
+<p>
+Now consider a rule (rewritten from the table of correspondences as in Figure
+30b) like: <p>
+(13)Rule 459.*kl &gt; kj /_ a  (in Tukche and Prakaa)<p>
+Rewriting each side of the rule in terms of features, we get:<p>
+<p>
+(14)<p>
+ *kl=MANNER(Cluster)&gt;kj      =MANNER(Cluster)<p>
+MODE(Unvoiced)MODE(Unvoiced)<p>
+PLACE(Velar)PLACE(Velar)<p>
+PLACE(<b><i>Lateral</i></b>)PLACE(<b><i>Palatal</i></b>)<p>
+<p>
+Deleting `like' features, leaves a diachronic feature rule:<p>
+<p>
+(15)PLACE(<b><i>Lateral</i></b>)&gt;PLACE(<b><i>Palatal</i></b>)<p>
+This procedure demonstrates how rules expressed in terms of segments can be
+automatically or perhaps semi-automatically converted into rules expressed in
+terms of features.  This aspect of the program is the subject of ongoing
+research.<p>
+<b>
+<a name="RTFToC26">7.0
+CONCLUSION
+</a></b><p>
+While both the program and the results of its first application are
+incomplete, some conclusions are warranted.  First, we have shown the validity
+of this approach by producing reasonable, defensible, and well-defined cognate
+sets using the program.  Second, a concrete understanding of semantics and of
+morphological and phonological variation at the proto level, both quite
+external to the core phonological functions of the program and perhaps only
+available via the intuitions and experience of the linguist, are required to
+interpret the initial results of upstream computations.  Finally, the
+combinatorial complexity of the reconstruction process and the potentially
+large linguistic data sets which might be treated make the problems of
+performance and data reduction computationally challenging.  There is much room
+for work here applying techniques already developed in other areas of
+computational linguistics.<p>
+We have occasionally been asked why we have not developed software which would
+create tables of correspondences based on universal or at least subgroup-wide
+phonological principles of analysis and comparison.  Such an algorithm has
+already been proposed by Martin Kay (Kay 1964).  Our research has focused on
+evaluating existing hypotheses rather than the process of creating new ones.
+There is indeed much work that could be done here and we hope that the
+burgeoning interest in computational historical linguistics will lead to the
+investigation of this question.<p>
+Finally, we recognize that for these algorithms to be useful to other
+researchers in historical linguistics they must ultimately be implemented as
+part of a larger software suite providing conventional (and standardized)
+database management functions and other computational linguistic tools; we have
+begun design of this software and invite collaboration from interested
+specialists.<p>
+<p>
+<p>
+<a href="RE_fn.html">NOTES</a><p>
+<p>
+<a href="RE_bib.html">REFERENCES</a><p>
+</body></html>

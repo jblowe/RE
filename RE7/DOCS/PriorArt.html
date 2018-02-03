@@ -1,0 +1,969 @@
+<html><head></head><body>
+<table ><td>
+<img src="http://www.linguistics.berkeley.edu.GIFs/atwork.GIF"><br>
+<FONT SIZE=2>Caveat lector!</font><p>
+<td>
+<h2>
+<a name="RTFToC1">
+A review of<br>
+Computer software for research in historical linguistics</a></h2>
+
+</table>
+
+<h2>Overview</h2>
+Linguists and programmers have taken a variety of approaches to make computers
+do useful work in historical linguistics.  Prior attempts have met with varying
+degrees of success and have been carried out with varying degrees of
+commitment; some have a long history, while others were essentially
+experiments, brief forays into the area of computer applications in
+linguistics.  <p>
+Computer applications in historical linguistics fall into two distinct
+categories: those based on numerical techniques, usually relying on methods of
+statistical inference; and those based on combinatorial techniques, usually
+implementing some type of rule-driven apparatus specifying the possible
+diachronic development of language forms.  The major features of a few of these
+programs, and mainly those of the rule-driven variety, are reviewed briefly
+below.  The projects reviewed below do not exhaust the field of computational
+historical linguistics, especially if lexicostatistical approaches are
+included.  Indeed, lexicostatistical approaches dominate the computational
+historical linguistic literature.  Here, however, I will eschew most discussion
+of this work in favor of one particular such approach since it is this approach
+that is the focus of this dissertation.  The criteria for selecting the
+particular set of projects is that they have been described in the literature
+and elsewhere sufficiently for an evaluation.  The literature in this subfield
+of computational historical linguistics is fragmented; starting in the 1960s
+and 70s a sizable literature on the lexicostatistic properties of language
+change developed in the wake of Swadesh's earlier glottochronological studies
+(for example Swadesh 1950) and later (Dyen 1969; Dyen 1970; Dyen 1973; Dyen
+1975; Dyen 1992).  On the other hand, only a handful of attempts to produce and
+evaluate software of the rule-application type (for use in historical
+linguistics) can be found in the literature (Becker 1982; Brandon 1984; Durham
+and Rogers 1971; Frantz 1970).  In general, such computer programs seem to have
+been abandoned after a certain amount of experimentation.  Certainly the
+problem of articulating a set of algorithms and associated data sets which
+completely describe the regular sound changes evinced by a group of languages
+is a daunting task.
+<h2>
+<a name="RTFToC2">1.
+Lexicostatistical approaches
+</a></h2>
+	To the first class belong lexicostatistic models of language change.  While
+the approach and its results have been well documented, not much off-the-shelf
+software is available to do the work of producing the statistics.  The COMPASS
+module of the WORDSURV program described below belongs to this class (cf.
+Wimbish 1989).  It measures degree of affiliation using a distance metric based
+on the degree of similarity between corresponding phonemes in different
+languages.  Also to this class belong applications which measure genetic
+affiliation as a function of the number of shared words in a selected
+vocabulary set, such as Guy's COGNATE, which implements a somewhat more
+sophisticated algorithm which compares the frequencies of segments in words
+from pairs of languages.  Any method which depends on counting 'shared words,'
+we note, assumes the existence and prior application of a means of determining
+which forms are cognate; such estimates of the relatedness of languages clearly
+are only as good as means used for determining cognacy.  Only a very general
+criticism of these approaches is offered here: to the extent that the methods
+rely on the previous application of the traditional comparative method, they
+answer a question which is already answered.  Also, to given a single numeric
+value as a measure of 'distance' between languages is to take a drastically
+oversimplified view of the nature of linguistic relationships, genetic or
+otherwise.  Even if such distance measures correlate with the geographical
+distances between languages (as shown below in (22) for example), we are left
+with the problem of explaining how such a precise relationship can exist
+without explicitly including the variables of geography and culture.<p>
+<i>(22)	Slavic pseudomap superimposed on a geographical map (Dyen
+1992:75)</i><p>
+<i></i>
+<IMG SRC="p21.GIF"><p>
+	The 'pseudomap' (also known as a configuration) is an arrangement of points
+(each designating a language) such that the physical distances between the
+points is proportional to the computed lexicostatistic distances.  Dyen claims
+that this graphical technique, based on the method of 'multidimensional
+scaling' of (Black 1976), works in some cases where lexicostatistical
+dendrograms do not.  It provides a 'nonhierarchical approach,' suitable for
+cases where 'wave or diffusion effects ... suggest ... some sort of spatially
+oriented classification to supplement the hierarchical classification' (Dyen
+1992:71).  Of course, the points can be arranged in a space with any number of
+dimensions, and Dyen notes that the choice of number of dimensions is strongly
+influenced by the data; miraculously or implausibly depending on one's point of
+view, it turns out that for linguistic pseudomaps, 'two dimensions (n = 2)
+turns out to be appropriate in every case'.  <p>
+	One last criticism of these methods: the lexicon provides only one incomplete
+perspective on the degree of relatedness; even if a comparison of lexical items
+from a set of languages produced a map which exactly overlaid a geographic one,
+this would not be completely persuasive.  A complete picture should take into
+account a broader spectrum of linguistic structure, including morphology,
+syntax, and semantics (cf. for example (Nichols 1992, Nichols 1994) which treat
+the issue of relatedness without reference to specific lexical items).
+<h2>
+<a name="RTFToC3">2.
+Combinatorial approaches
+</a></h2>
+	To the second class belong programs which model sound change as sets of rules
+applied to derive later forms from earlier forms.  Examples of programs of this
+sort are VARBRUL (by Susan Pintzuk), based on a rule-processing subsystem
+called BETA (not critiqued here), used to analyze Old English; several programs
+used to analyze Romance languages: PHONO Hartman 1993, Iberochange (Eastlack
+1977, both applied to Latin-to-Spanish data; three programs only slightly
+described, one for Indo-European to Early Latin (Maniet 1980; Maniet 1983) one
+for Classical Latin to Old French (Burton-Hunter 1976); and one for
+Balto-Finnic (Remmel 1979).
+<h2>
+<a name="RTFToC4">3.
+Program, projects, and databases
+</a></h2>
+	The projects are described in chronological order of first publication;  there
+are certainly other taxonomies for arranging them, but the historical view
+affords an automatic orientation and some perspective.
+<h3>
+<a name="RTFToC5">3.1.
+	Kay's algorithm
+</a></h3>
+	Martin Kay (Kay 1964) outlines an approach that, given matched pairs of
+cognate words, works out the correspondences according to an evaluation metric
+based on the parsimony of the set of correspondences.  Noting that 'the
+'comparative method' ...is not the well-defined technique that the name
+suggests', Kay presents a 'formalization in terms of elementary propositional
+logic of one of the most crucial steps in the comparative method, that is, [the
+step in] which modern derivatives of prehistoric phonemes are recognized.' (Kay
+1964:v)  Kay summarizes the result of applying the comparative method as
+follows:<p>
+For each associated set of forms which are judged to be related, an artificial
+form is constructed which fills the role of their common ancestor within the
+model.  The letters in these reconstructed forms stand for the phonemes of the
+extinct language.  The aim is to make the reconstructions in such a way that
+the history of each form does not have to be written separately.  Instead, a
+history is written for each phoneme in the original language, and from these
+the history of the forms can be inferred. (Kay 1964)<p>
+Kay confines himself to the problem of finding correspondences between forms
+from pairs of modern languages, noting that his method can be extended to any
+number of languages with 'only trivial modifications'  (Kay 1964:5).<p>
+	Applying the terminology of reconstruction in a particular formal sense useful
+for his exegesis,  Kay calls a <i>correspondence</i>  'an ordered pair of
+strings where the first member is taken from one extant languages and the
+second from another [and written] ... separated by a stroke, e.g., 'abcd/xyz''
+(Kay 1964:6).  He considers all possible <i>decompositions</i> of each string
+into substrings, which are then associated with the corresponding substrings
+from the other member of the pair:<p>
+<i>(23)</i><p>
+<i></i>	(i)	a/x	bcd/yz<p>
+(ii)	a/xy	bcd/z<p>
+(iii)	ab/x	cd/yz<p>
+(iv)	ab/xy	cd/z<p>
+(v)	abc/x	d/yz<p>
+(vi)	abc/xy	d/z<p>
+(vii)	a/x	b/y	cd/z<p>
+(viii)	a/x	bc/y	d/z<p>
+(ix)	ab/x	c/y	d/z<p>
+These decompositions, together with the initial correspondence, represent all
+the possible decompositions of 'abcd/xyz' into matching sets of substrings.
+Noting that in general most of these theoretically possible decompositions have
+'no significance for reconstruction', Kay turns to the problem of discovering
+which of the decompositions do represent valid correspondences.  He gives an
+illustrative pair of items from English and German:<p>
+<i>(24)</i><p>
+<i></i>	that/dass<p>
+and notes that of the twenty possible decompositions,  '...[o]nly one of these
+has a correspondence for each Indo-European phoneme'  (Kay 1964:8).<p>
+<i>(25)</i><p>
+<i></i>	th/d	a/a	t/ss<p>
+	Using an algorithm for creating a gigantic logical disjunction of the possible
+correspondences over a set of data, Kay proceeds to show how the unfruitful
+decompositions can be eliminated, retaining only the smallest (i.e. most
+parsimonious) set of decompositions for which 'every correspondence represents
+a phoneme of the language being reconstructed' (Kay 1964:12).  In a sense, the
+algorithm is presented as an exercise in predicate calculus.<p>
+	Certain modifications of these algorithms, Kay notes, would make it possible
+to handle certain troublesome cases.  Metathesis could be handled by starting
+with 'a list in which the forms in one language were paired with all
+permutations of their equivalents in the other'.  And for cases of loss (where
+'an ancient phoneme is without issue in some of the daughter languages') he
+proposes to insert a 'zero' at the beginning and end of each word and between
+each pair of phonemes.<a href="p2_fn.html#fn0">[1]</a>  Kay notes that this
+solution, while straightforward, 'results in a possibly unacceptable increase
+in the amount of computation to implement the theory.'<p>
+	Kay concludes with a section on implementing the theory, noting that <p>
+the possibility of applying the method mechanically is open, but barely so.<a
+href="p2_fn.html#fn1">[2]</a>  The author estimates that it would take some
+four or five hours of computer time to analyse a list of a hundred pairs of
+forms.  Where the connection between a pair of languages is remote, this may
+well be worthwhile, for the amount of human labor that is put into such
+problems is often prodigious, and it is inefficiently spread out over a long
+period of time. (Kay 1964:18})<p>
+	In the course of implementing his algorithm, Kay actually tried it on the
+following set of words, which, he says, is 'as small a set of data as the
+method can be applied to and produce a non-trivial result':<p>
+<i>(26)	A small set of cognates for mechanical comparison</i><a
+href="p2_fn.html#fn1">[3]</a><i></i><p>
+<i></i>		<u>English</u>	<u>German</u><p>
+	on	an<p>
+	nut	nu&szlig;<p>
+	that	da&szlig;<p>
+	bath	bad<p>
+It would be altogether out of the question, Kay notes, to apply the method even
+to such a corpus as this without machine aid.  While 'conceptually trivial,'
+the computation required 'rapidly becomes prohibitive as the number of
+variables increases.  The belligerently incredulous are urged to try the
+example for themselves' (Kay 1964:18).<p>
+Computers have come a long way since 1964;  however, the complexity of many of
+the computations associated with computer implementations of the comparative
+method has not changed.  As noted below in the section on the Reconstruction
+Engine (section 6), some of these problems (which are NP-hard<a
+href="p2_fn.html#fn2">[4]</a>) could challenge even the limits of modern
+supercomputers.
+<h3>
+<a name="RTFToC6">3.2.
+Hewson's Proto-Algonkian experiment (the 'Electronic Neogrammarian'
+</a></h3>
+	The first description I have found of a computer program which uses
+correspondences and modern forms to create cognate sets is John Hewson's
+long-term experiment in reconstructing Algonkian (eventually dubbed <i>the
+electronic neogrammarian </i>(Hewson 1973)).  John Hewson and others at the
+Memorial University of Newfoundland pioneered these 'proto-projection'
+techniques, which were later (and independently) used by the Reconstruction
+Engine (Hewson 1973; Hewson 1974; Hewson 1993).  The strategy is in some ways
+quite transparent; as Hewson notes, he and his team also decided to 'follow the
+basic logic used by the linguist in the comparative method' (Hewson 1974:193).
+The results of this research have recently been published in the form of an
+etymological dictionary of Proto-Algonkian (Hewson 1993).<p>
+	The program as first envisioned was to operate on 'consonant-only'
+transcriptions of polysyllabic morphemes from four Amerindian languages (as
+shown in (27) below).  The program would take a modern form, 'project it
+backwards' into one or more proto-projections, then project these
+proto-projections forward into the next daughter language, deriving the
+expected regular reflexes.  The lexicon for this language would be checked for
+these predicted reflexes; if found, the program would repeat the projection
+process, zig-zagging back and forth in time until all reflexes were found.  For
+example, given Fox /poohke&lt;&lt;samwa/ <i>he cuts it open</i>, the program
+would match the correct Cree form, as indicated in (27).<p>
+<i>(27)	Potential Proto-Algonkian cognates (after Hewson 1974:193-94)</i><p>
+<i></i><u>Language	C1	C2	C3	C4	Reflex	Gloss		</u><p>
+<u></u>Fox	p	hk	&lt;&lt;s	m	poohke&lt;&lt;samwa	'he cuts it open'<p>
+Cree	p	sk	s	m	pooskosam	'he cuts it open'<p>
+Menomini	-	-	-	-	<p>
+Ojibwa	p	&lt;&lt;sk	&lt;&lt;s	n	pa&lt;&lt;sko&lt;&lt;saan	'he cuts it down<p>
+Ojibwa	p	kk	&lt;&lt;s	n	pakkwee&lt;&lt;saan	'he slices off a part'<p>
+There were problems with this approach.  In cases where no reflex could be
+found, (as shown in (27) above where no Menomini cognates for this form existed
+in the database) the process would grind to a halt though other cognate forms
+in other languages remained to be identified.  Recognizing that 'the end result
+of such a programme would be almost nil' (Hewson 1973:266), the team developed
+another approach in which the program generated <i>all possible</i>
+proto-projections for the 3,403 modern forms.  These 74,049 reconstructions
+were sorted together, and 'only those that showed identical proto-projections
+in another language' (some 1,305 items) were retained for further examination.
+At this point Hewson claimed that he and his colleagues were then able to
+quickly identify some 250 new cognate sets. (Hewson 1974:195).  The vowels were
+added back into the forms, and from this a final dictionary file suitable 'as
+input to an automated typesetting machine' was created.  A cognate set from
+this file, consisting of a reconstruction and two supporting forms, is
+reproduced in (28) below.<p>
+<i>(28)	Proto-Algonkian cognate set  (after Hewson 1973:273)</i><p>
+<i></i><u>Language	Form	Gloss	Protomorpheme</u><p>
+<u></u><tt>*  (ProtoAlq.)	PEQTAAXKWIHCINWA	BUMP	(*-AAXKW)</tt><p>
+<tt>M  (Menomini)	P3QTAAHKIHSEN	HE BUMPS INTO A TREE OR SOLID...</tt><p>
+<tt>O  (Ojibwa)	PATTAKKOCCIN	BUMP/KNOCK AGAINST...[STHG]</tt>
+<h3>
+<a name="RTFToC7">3.3.
+Iberochange
+</a></h3>
+	One of the first rule-based applications for historical linguistics,
+Iberochange modeled the<p>
+'derivational etymological' technique, which works primarily for a given
+'mother' language to a specific 'daughter' dialect ... It assumes that both the
+etyma and the corresponding 'modern' forms are known, e.g., Classical Latin
+LUPUM, V&Icirc;TAM, SACR&Acirc;TUM, modern Spanish lobo, vida, sagrado.
+(Eastlack 1977:82).<p>
+	The creators of Iberochange made the following linguistic assumptions:<p>
+1)	linguistic change has two components -- systematic sound change and various
+types of non-systematic change such as analogical change, sporadic sound
+change, dialect leveling, etc.<p>
+2)	systematic sound change can be described in terms of a fully explicit
+ordered set of rules ...;<p>
+3)	at some point in time words differ from ... related forms at some earlier
+time only in having undergone the ... systematic set of sound changes specified
+by the set of rules mentioned in ... 2).  (Eastlack 1977:81).<p>
+	Since many symbols needed were not available in the 'computer alphabet,' the
+developers devised a system of symbolization by which it would be possible to
+transcribe input items without ambiguity.  Specifically, syllable and morpheme
+boundaries were encoded so that the program could avail itself of them and
+complex segments such as /ts/ and /dz/ were retranscribed with single letters
+(/C/ and /Z/.  Examples are shown below:<p>
+(29)<p>
+<u>Orthography</u>	<u>'Symbolization'</u><p>
+fortiam	#FOR  TI  AM#<p>
+caecum	#KAE  KUM#<p>
+bracchium	#BRA:K  KI  UM#<p>
+Forty two ordered rules (with subrules) describe the development of Latin to
+Spanish.  Rule 3, which is used in the example in (30) below, says 'word-final
+M becomes N following a stressed vowel; elsewhere it is deleted.'  Several
+step-by-step derivations are given, such as:<p>
+(30)<i>	Derivation of Spanish </i>cabe&ccedil;a<i> from Latin </i>capitiam,
+<i>cf. CL </i>capitem<a href="p2_fn.html#fn3">[5]</a><i></i><p>
+<i></i>	Starting form	#KA  PI  TI  AM#<p>
+	Rule 3	#KA  PI  TI  A#<p>
+	Rule 7(a)	#KA  P'I  TI  A#<p>
+	Rule 7(d)	#KA  P'I  TIA#<p>
+	Rule 7(g)	#KA  P'E  TIA#<p>
+	Rule 15	#KA  P'ET  TIA#<p>
+	Rule 16(a)	#KA  P'EC  CA#<p>
+	Rule 22	#KA  B'EC  CA#<p>
+	Rule 23	#KA  B'E  CA#<p>
+	Rule 27(a)	#KA  B'E  C;A#<p>
+	According to the author, the program provides 'rather conclusive evidence in
+support of the theory of language change propounded in King's (1969) discussion
+of <i>Historical Linguistics and Generative Grammar</i>.' (Eastlack 1977:84);
+this says more about the generality and durability of the program and its
+algorithms than I could.  Like the Reconstruction Engine, Iberochange is
+written in SNOBOL4, a powerful text-oriented programming language.
+<h3>
+<a name="RTFToC8">3.4.
+COMPASS
+</a></h3>
+	COMPASS Frantz 1970 applies both combinatoric and statistical techniques to
+the problem of comparative reconstruction.  It is based on a relatively
+traditional model of reconstruction involving correspondences and cognate sets.
+Frantz is clearly aware of the problem surface similarities pose for
+reconstruction:<p>
+The linguist who suspects a genetic relationship between two languages first
+compares lexical items of similar meaning in the two languages.  Should he, in
+so doing, find a number of word pairs that are phonetically similar, he would
+be aware that this shows him little or nothing about the possibility of genetic
+relationship  (Frantz 1970:353).  <p>
+Noting that such similarities may be coincidental, Frantz goes on to elaborate
+how the COMPASS program attempts to 'weed out' the bulk of such accidental
+correspondences by statistical techniques.  Correspondences which are
+frequently observed are more likely to be the result of genuine inheritance
+than those which are unique or of low frequency.  Frantz uses 'hypothetical
+data' (reproduced in (31), his <i>Table I</i>, below) in supporting the
+explication of the operation of COMPASS.<p>
+<i>(31)	Hypothetical data from 'Table I' (after Frantz 1970:354)</i><p>
+<i></i>	                                 Language<p>
+<cite>	  A	     B	gloss(es)</cite><p>
+<cite></cite>(1)	pakol	phogor	hand<p>
+(2)	feku	f&ouml;gu	water/liquid<p>
+(3)	likel	riger	woman<p>
+(4)	pano	phono	tree/wood<p>
+(5)	kene	khene	mother<p>
+(6)	xipo	x&ouml;bo	uncle/elder<p>
+(7)	pepo	ph&ouml;bo	stone<p>
+(8)	xana	xana	gourd<p>
+(9)	fapa	faba	good<p>
+(10)	kitu	kh&ouml;du	tomorrow<p>
+(11)	kito	khotu	red<p>
+Note that COMPASS requires the investigator to 'arrange the data for input so
+that the program compares the characters that he assumes would have to
+correspond if the members of each pair are cognate' (Frantz 1970:354):<p>
+<i>(32)</i><p>
+<i></i><tt>	p  a k o l</tt><p>
+<tt>	ph o g o r</tt><p>
+<tt>	p  a n o</tt><p>
+<tt>	ph o n o</tt><p>
+The investigator must leave blank spaces in the appropriate places to account
+for lack of one-to-one correspondence in number of characters (the constituent
+size problem raising its ugly head again) (Frantz 1970:354).<p>
+The program can then compute the frequency of occurrence of each correspondence
+(only the correspondence p:p is illustrated below).  The program lists the
+segmental correspondences, their frequencies, and an indication of the word
+pair which contains each correspondence. <p>
+<i>(33)	Correspondence with count and list of supporting forms</i><p>
+<i></i>	p:p	tokens: 3<p>
+	(1)	p  akol	phogor	hand<p>
+	(4)	p  ano	phono	tree/wood<p>
+	(7)	p  epo	ph&ouml;bo	stone<p>
+	The program computes a <i>correspondence value</i>, essentially an estimate of
+how well attested it is, using the following formula:<p>
+correspondence value = 	F(ISU(i=0,n,(vi)),n)<p>
+	where:	 n = number of comparable segments<p>
+	and:		vi is the frequency of the correspondence at position i<p>
+This value is used to rank the correspondences with respect to each other.
+Frantz notes that his program is 'merely a tool; it is no substitute for the
+ingenuity and experience of the investigator.  Rather it is a partial remedy
+for the limitations placed upon the investigator by the time-consuming nature
+of data-manipulation' (Frantz 1970:353)<p>
+COMPASS, according to Frantz, has been used for Proto-Algonkian, Cheyenne and
+Arapaho, 'with each other and with Bloomfield's PA'.  He notes a difference in
+the comparison of two languages at a time as opposed to three, and that this
+poses a problem for his algorithms:<p>
+The output that resulted from the simultaneous comparison of PA, Cheyenne, and
+Arapaho, while useful, is not nearly so useful as the output of pairs [i.e.
+pairwise comparisons].  In many sets only two of the words, but not the third,
+are cognate;  the result is that there is a disproportionately large number of
+correspondences listed which are not regular.  The three-language program would
+be more useful after work with the three pairwise combinations of the languages
+enables the investigator to remove sets which contain a member which is
+probably not cognate. (Frantz 1970:356)<p>
+The probative value of additional data and the problems associated with it have
+been discussed in section 1.6.9.
+<h3>
+<a name="RTFToC9">3.5.
+Guy's COGNATE
+</a></h3>
+	Jacques B.M. Guy's own appellation for his program says a lot: he calls it 'an
+apparently wonderfully useless program  implementing an algorithm'.  COGNATE,
+according to Guy, implements a prototype algorithm for identifying related
+words across languages.  Guy's purpose was to 'take a first step towards
+solving a far more interesting, and difficult, problem of automatic machine
+translation: given a bilingual text, find the rules for translating from either
+language into the other' (Guy 1992).<p>
+	According to Guy, COGNATE operates as follows:  <p>
+given the same [sic] list of words in two different languages, COGNATE will
+determine which words are likely to be regularly derivable from each other, and
+which are not. The longer the list, or the more closely related the two
+languages are, the better the performance of COGNATE. For instance, suppose
+that you have typed into a file 200 words in English (one per line), and in
+another file the same 200 words, in the same order, in German (again one per
+line). English and German are fairly close languages. Given these two files,
+and no other information whatsoever, COGNATE will be able to tell for instance
+that English 'TWENTY' and German 'ZWANZIG' are almost certainly derivable from
+each other, and so are English 'HONEY' and German 'HONIG'; but it will also
+tell you that English 'HORSE' and German 'PFERD' are not so related. COGNATE
+will also tell you, when comparing 'TWENTY' with 'ZWANZIG', that English 'T'
+corresponds to German 'Z'. ' (Guy 1992)<p>
+Guy notes that because of the 'very nature' of the algorithm, the program is
+not sensitive to the actual scheme used for encoding the data: the program
+would work just as well if the letters were shifted using a simple-substitution
+code.<p>
+For instance, if you have encoded the English data by shifting one letter
+forward (so that 'TWENTY' becomes 'UXFOUZ') and the German data by shifting one
+letter backward (so that 'ZWANZIG' becomes 'YVZMYHF'), COGNATE will still able
+to tell that 'UXFOUZ' and 'YVZMYHF' are related, and that 'IPSTF' ('HORSE') and
+'OEDQC' ('PFERD') are not. (Guy 1992)<a href="p2_fn.html#fn4">[6]</a><p>
+COGNATE is supplied with three sample files of 200 words each, English, German,
+and Dutch.  Like many of the historical linguistic applications described here,
+COGNATE has a checkered development history. It was first implemented around
+1978 in Simula 67 on a DEC KL10. Then, as a 'self-inflicted challenge which I
+did not expect to win', Guy translated it into Turbo Pascal, to run on his
+Kaypro II.  It is now available over the Internet at a number of FTP sites.
+<h3>
+<a name="RTFToC10">3.6.
+DOC: Chinese Dialect Dictionary on Computer
+</a></h3>
+	DOC is one of the earliest projects to attempt a comprehensive treatment of
+the lexicons of a group of related languages.  DOC was developed 'for certain
+problems [in which] the linguist finds it necessary to organize large amounts
+of data, or to perform rather involved logical tasks -- such as checking out a
+body of rules with intricate ordering relations' (Wang 1970:57).  The original
+data design, implemented in punch cards, organized each dialect entry into a
+'22-byte word'.  A sample of a few of the approximately 70,000 Middle Chinese
+and dialect records (in one of the original formats) is illustrated in (34)
+below.  Note that as in WORDSURV, the data is pre-segmented according to a
+universal phonotactic description (in this case the Chinese syllable canon)
+which the program and data structures are built to handle.  The
+one-segment-one-constituent restriction does not exist, though the (maximum)
+size of constituents is fixed within the data structure.  <p>
+<i>(34)	A Dialect record in DOC (cited from Fig. 7 in Wang 1970)</i><p>
+<i></i><tt><cite>	Dialect	Tone	Initial	Medial	Nucleus	Ending</cite></tt><p>
+<tt><cite></cite></tt><p>
+<tt>0052	192-	3	L	H1	WN	7</tt><p>
+<tt>	PEKING	3	L	U	A	N</tt><p>
+<tt>	XI-AN	3	L	U	A	Z</tt><p>
+<tt>	TAI-YUAN	3	L	U	A	Z</tt><p>
+<tt>	HAN-KOU	3	L	U	AE	Z</tt><p>
+<tt>	CHENG-DU	3	L		A	N</tt><p>
+<tt>	YANG-SHOU	3	L	U	O	Z</tt><p>
+<tt>	WEN-ZHO	3B	L	U	03	</tt><p>
+<tt>	CHANG-SHA	3B	N		0	Z</tt><p>
+<tt></tt>	The data in (34) above is to be interpreted as follows: the line
+beginning '0052' (the so-called telegraphic code<a
+href="p2_fn.html#fn4">[7]</a>) records the Middle Chinese form (with cross
+reference 192- to another source, the <i>Qi&egrave;-Y&ugrave;n</i>); 'H1',
+'WN', and '7' are coded representations of phonetic characters.  Following this
+are eight dialect records, giving reflexes of this word in modern Chinese
+dialects, also in a coded phonetic form.<p>
+	At least four versions of this database and associated software were produced
+(described in Lyovin 1968; Streeter 1972; Cheng 1993:13).  Originally processed
+as a punched-card file on a LINC-8, the program underwent several
+metamorphoses.  An intelligent front-end was developed in Clipper (a
+microcomputer-based database management system) which allows the user to
+perform faceted queries (i.e. multiple keyterm searches) against the database
+and also contains the actual Chinese characters. (Yaruss 1990)  So, as shown in
+the upper screen in (35), for example, the user could select a particular
+dialect (in this case Beijing), and search for words containing particular
+phonological constituents (Initial, Medial, etc.).  The lower screen shows to
+retrieve the reflexes of a particular MC form (from page 16 of the
+<i>H\any&lt;&lt;u F--any[[caron]]an Z\&icirc;hu\&icirc;</i> Anonymous 1962 in
+this case).<p>
+<i>(35)	User interface to the Clipper version of DOC  (Yaruss 1990:215)</i><p>
+<i></i>
+<IMG SRC="p22.GIF"><p>
+The database is also available as a text file (slightly over a megabyte)
+containing forms in 17 dialects for some 2,961 Chinese characters (Cheng
+1993:12).  DOC has no 'active' or rule-application component: it is a database
+of phonologically analyzed lexemes organized for effective retrieval.
+<h3>
+<a name="RTFToC11">3.7.
+	Programs for CARP: Computer Aided (Historical Linguistic) Reconstruction in
+Phonology
+</a></h3>
+	Veatch (Veatch 1993) has drafted a Unix-based software suite which can extract
+correspondences from appropriately formatted data.  Veatch's made-up examples
+clearly illustrate the bare-bones logic of the comparative process usually
+followed implicitly by linguists in creating correspondence sets.  The starting
+point of Veatch's program is a list of potential cognates in the language group
+under study, aligned in columns.  Veatch's discussion starts with the creation
+of a set of source data:<a href="p2_fn.html#fn5">[8]</a><p>
+Use your favorite editor to create a list of cognates, in the following format.
+Put each language's cognates in a column; and each of the cognates of a single
+proto-form in a line.  Separate the columns by a tab or spaces.<p>
+Veatch gives some contrived forms, illustrated below in (36).<p>
+<i>(36)	Contrived cognates for use with CARP</i><p>
+<i></i><tt>cognate1	COGNATE1	KAGNET_1</tt><p>
+<tt>cognate2	COGNATE2	KAGNET_2</tt><p>
+<tt>cognate3	COGNATE3	KAGNET_3</tt><p>
+<tt>cognate4	COGNATE4	KAGNET_4</tt><p>
+<tt>cognate5	COGNATE5	KAGNET_5</tt><p>
+<tt>cognate6	COGNATE6	KAGNET_6"</tt><p>
+<tt></tt>The coding of the source data is rather strict, notes Veatch:<p>
+Notice that where segments are deleted, i.e., in one language there is a
+segment present but in another it is missing, [...] an underscore is inserted
+in the location in the cognate which lost the segment.  This is so that
+corresponding characters in the cognates actually correspond, and where a
+character corresponds to a deleted segment, the underscore gives it something
+explicit to correspond to.  [...][W]hen you have edited the cognate file, all
+the cognates on one line have the same number of characters, so that
+corresponding characters actually correspond in the cognate.  Thus, extra
+morphemes in one language must be deleted, to make the correspondences right.<p>
+Of course, in reality, considerable insight into the phonologies of the
+language studied, whether human or machine, is required to provide a correct
+alignment (this fact was noted above in section 1.4, and will be discussed
+in more detail in section 5.3).<p>
+	Having created a set of putative cognates, Veatch's program next proceeds to
+match the 'corresponding' segments of each form, producing a list of 'merged
+proto-forms' [my term] as shown in (37) below.  The resulting proto-forms have
+a rather 'strange-looking form'.  For example, the above cognates would result
+in the following list:<p>
+<i>(37)</i><p>
+<i></i><tt>cCK oOA gGG nNN aAE tTT eE_ 111</tt><p>
+<tt>cCK oOA gGG nNN aAE tTT eE_ 222</tt><p>
+<tt>cCK oOA gGG nNN aAE tTT eE_ 333</tt><p>
+<tt>cCK oOA gGG nNN aAE tTT eE_ 444</tt><p>
+<tt>cCK oOA gGG nNN aAE tTT eE_ 555</tt><p>
+<tt>cCK oOA gGG nNN aAE tTT eE_ 666</tt><p>
+<tt></tt>Veatch explains:<p>
+[...] Each phoneme [...][of each] proto-word is represented by a
+correspondence-set, so that an 8-segment proto-form will look like 8 queer
+words, each formed from the concatenation of corresponding segments in the
+cognates.  So each line is really the proto-word which the cognates are related
+to.  It's just that instead of writing it in letters, it is written in
+correspondence-sets. <p>
+Next another program picks out all the unique correspondence sets and makes a
+list of them (shown in column (1) of (38) below).  The linguist adds a column
+(as shown in column (2) in (38) below) for the reconstructed ancestor to allow
+the computer to recode the 'queer words' of (37) into protoforms as shown in
+(39) below.<p>
+we need to make a list of all the correspondence sets, and specify what
+characters to use to represent each correspondence set in the proto-allophone
+forms.  So for example, we want a list like this: <p>
+<i>(38)	The user supplies an ancestor  for each 'proto-allophone'</i><p>
+<i></i>        (1)	                                (2)<u></u><p>
+<u>Proto-allophone</u>	<u>Reconstructed ancestor (added by user)</u><tt></tt><p>
+<tt>cCK 	k</tt><p>
+<tt>oOA 	o</tt><p>
+<tt>gGG 	g</tt><p>
+<tt>nNN 	n</tt><p>
+<tt>aAE 	a</tt><p>
+<tt>tTT 	t</tt><p>
+<tt>eE_ 	e</tt><p>
+<tt>111 	1</tt><p>
+<tt>222 	2</tt><p>
+<tt>...	...</tt><p>
+<tt></tt>etc.<p>
+A final program does the actual retranscription:<p>
+<i>(39)	Retranscription of the 'queer words' according to the
+'proto-allophones'</i><p>
+<i></i>*kognate1<p>
+*kognate2<p>
+*kognate3<p>
+*kognate4<p>
+*kognate5<p>
+*kognate6<p>
+Veatch goes on to point out that the allophones file (exemplified in (38)
+above) can be further refined to identify 'proto-allophones'.<p>
+<i>(40)</i><p>
+<i></i>Look at the distribution of the proto-allophones, and determine which
+ones may be collapsed into one category, using complementary distribution and
+phonetic similarity as criteria.  When you find proto-allophones that may be
+collapsed, then go back and edit the allophones file, which specifies the
+proto-sounds for each correspondence set, and specify the same symbol for each
+collapsed pair of allophones.  Then you can redo codecorr and ccon,<a
+href="p2_fn.html#fn6">[9]</a> if necessary, to see if any further
+reconstruction is possible, and re-edit the allophone list, and so on, until
+nothing else can be collapsed.<p>
+Veatch does not say whether this program has ever been used on real data, and
+he provides no such examples.  A similar procedure of aligning input data
+according to semantic and phonological criteria is required by the WORDSURV and
+COMPASS program described elsewhere in this chapter.
+<h3>
+<a name="RTFToC12">3.8.
+PHONO: a program for testing models of sound change
+</a></h3>
+	PHONO (Hartman 1981, Hartman 1993) is an MS-DOS program which applies ordered
+sets of phonological rules to input forms for the purpose of 'developing and
+testing models of regular historical sound change.' (Hartman 1994)  The rules
+are expressed by the user in a notation composed of if- and then- clauses that
+refer to feature values and locations in the word.  The feature specification
+is communicated to the program via an <i>Alphabet</i>.  The Alphabet is a list
+of symbols and associated feature set expressed as a matrix of characters.
+PHONO converts input strings (words in the ancestor language) into their
+equivalent feature matrices using this table of alphabetic characters and
+feature values.  The program then manipulates the feature matrices according to
+the rules, converting the matrices back into strings for output.  Hartman has
+developed a detailed set of rules which derive Spanish from Proto-Romance.
+Besides allowing the expression of diachronic rules in terms of features,
+facilities are included to handle metathesis.  PHONO has both an interactive
+mode for trying out individual forms from the keyboard as well as a batch mode,
+in which lists of forms are read from an external file. PHONO is available over
+the Internet via FTP.
+<h3>
+<a name="RTFToC13">3.9.
+WORDSURV
+</a></h3>
+	The Summer Institute of Linguistics (SIL), a prodigious developer of software
+for the translating and field linguist which is headquartered in Dallas, Texas,
+provides a variety of integrated tools for linguistic analysis. One of these
+tools, the COMPASS module of WORDSURV, allows linguists to compare and analyze
+word lists from different languages and to perform phonostatistic analysis.  To
+do so, the linguist first enters 'survey data' into the program;  reflexes are
+arranged together by gloss, as illustrated in the reproduction in (41). <p>
+<i>(41)	'Properly aligned word forms'  in WORDSURV (Wimbish 1989:43)</i><p>
+<i></i>   (1)	     (2)	(3)	            (4)<p>
+Group	Reflex	[metathesis]	Language Abbreviation<p>
+	0	-- no entry --	R<p>
+	<p>
+	A	faDer		E<p>
+	A	fater		G<p>
+	A	padre	&gt;4	S<p>
+	<p>
+	B	ama		iT<p>
+	<p>
+	C	bapa --		MPB<p>
+	C	bapak--		I<p>
+	C	bapa da		h<p>
+	<p>
+	D	tataN		wm<p>
+	D	tatay		ab<p>
+In addition to the <i>a priori</i> semantic grouping of reflexes by gloss, the
+linguist must also re-transcribe the data in such a way that each constituent
+of a reflex is a single character, that is, 'no digraphs are allowed. Single
+unique characters must be used to represent what might normally be represented
+by digraphs ... e.g. N for ng' (Wimbish 1989:43).  The program also requires
+that part of the diachronic analysis be carried out before entering the data
+into the computer in order to incorporate that analysis into the data.  For
+example, when the linguist hypothesizes that 'a process of sound change has
+caused a phone to be lost (or inserted), a space must be inserted to hold its
+place in the forms in which it has been deleted (or not been inserted)'
+(Wimbish 1989:43).  That is, the zero constituent must be represented<i> in the
+data itself</i>.  The program also contains a 'provision for metathesis.
+...Enter the symbols &gt;n (where n is a one or two digit number) after a word
+to inform WORDSURV that metathesis has occurred with the nth character and the
+one to its right' (Wimbish 1989:43).  An example of this may be seen in column
+3 of (41).  This provision is clearly intended to allow linguists to 'correct'
+(my term) for sporadic changes such as metathesis, bringing the proper elements
+into juxtaposition for comparison.<p>
+	To represent tone, the author notes that 'there are at least two solutions.
+The first is to use a number for each tone (for example 1ma3na). The second
+solution is to use one of the vowel characters with an accent.  ... The two
+methods will produce different results' when the analysis is performed
+(Wimbish 1989:44).  While the last statement may surprise some strict
+empiricists (after all, the same data should give the same results under an
+identical analysis), it should come as no surprise to linguists who recognize
+that the selection of unit size, the type of constituency, and other problems
+of representation may have a dramatic effect on conclusions.<a
+href="p2_fn.html#fn7">[10]</a>  Two requirements of this program 1) that forms
+be grouped <i>a priori </i>by gloss and 2) that segments be aligned according
+to their supposed correspondences are fraught with methodological difficulty:
+these  requirements force the linguist to decide <i>a priori</i> which forms
+might be related semantically and also to supply a singular phonological
+analysis (both synchronic and diachronic.  The phonological inventory is thus
+limited to segments.  In passing, the lexicostatistics which are computed are
+based on the 'Manhattan distance' (in a universal feature matrix) between
+corresponding phonemes from different languages as a measure of their
+affiliation.  The validity of this measure for establishing genetic affiliation
+is suspect: corresponding phonemes may be quite different in terms of their
+phonological features without altering the strength of the correspondence or
+the closeness of the genetic affiliation.  Also, the metrics of features spaces
+are notoriously hard to quantify, so any distance measures are themselves
+likely to be unreliable.  
+<h3>
+<a name="RTFToC14">3.10.
+MARIAMA
+</a></h3>
+	MARIAMA (Nicolai 1993), is a <i>manager of [linguistic] hypotheses</i>.  It
+was conceived as computational aid in comparative research and lexicography.
+It applies the 'classical' database functions (searching, sorting, and
+import/export) to linguistic data; but it also incorporates a number of
+functions particular to 'sa finalit&eacute; propre.'  This are described
+briefly below.  MARIAMA was developed using Nilo-Saharan languages.  It is
+being distributed now and applied to other language groups.  The description
+below is based on draft documentation Nicolai 1991 and conference presentations
+Nicolai 1993 on the program, and the reader is advised that the program is
+still being developed; its description and evaluation here is tentative.<p>
+	From the point of view of MARIAMA, a <i>hypothesis</i> is a <i>relationship
+established between several records</i> of the same data type.  This
+relationship is defined via a system for marking pertinent data (<i>un
+syst&egrave;me de pertinence particulier</i>).  In the most basic sense, the
+linguist working on a comparative project -- ultimately to establish genetic
+affiliations, to perform phonological, dialectological, morphological, and
+semantic  analyses -- proposes one or more hypotheses concerning the data under
+comparison.  So, for example, given the three forms in (42) below:<p>
+<i>(42)	Connections established between forms by MARIAMA</i><p>
+<i></i><u>Exemple</u> : le rapprochement particulier effectu&eacute; entre les
+trois formes suivantes :<p>
+<b>'Dialect'</b><a href="p2_fn.html#fn8">[11]</a><b>	Entry	Meaning</b><p>
+<b></b>kaado	<u>debe</u>	damer, tasser en  frappant<p>
+touareg	<u>atAbbi</u>	taper avec la paume de la main<p>
+bozo	<u>tEbE</u>	pi&eacute;tiner<p>
+The program permits the user to:<p>
+1. establish a hypothesis about the relationship exhibited by  the forms (by
+linking them together according to a key)<p>
+and<p>
+2. define the nature of the relationship by giving the set of linked forms a
+name.  The name used can define a semantic relation (i.e. some sort of cover
+gloss for the forms) or a phonological relation (i.e. a tentative
+reconstruction).<p>
+The hierarchical structure of MARIAMA provides for three 'levels' of
+representation of the data; the second level provides five 'sublevels' to
+record relational hypotheses about the relationship between words.  These
+levels provide a means for unifying data from different sources into a
+consistent description and can become more abstract as the levels go up.<p>
+Level 0  is the 'reference level' <i> ('niveau de r&eacute;f&eacute;rence');
+</i> contains the raw data.  This level is provided to allow the research to
+record the source data just as it is found in the source.<p>
+Level 1 is the 'work level': this is the level at which the user can
+'homogenize' the data for his or her own purposes, retranscribing the data and
+normalizing glosses.  In (43)(a) and (b) below Nicolai supplies examples of
+various transcribed forms which can be homogenized into a single transcription
+(not shown) using the program (the homogenization, as noted above, is implement
+by the user, not by the program).  (43)(a) illustrates the equation of forms
+from two source (abbreviated RN and OY) which differ in their transcription.
+(43)(b) illustrates a similar equation with forms from three sources.  In
+(43)(c) he gives four glosses from different sources which can be unified into
+a single set.  The process of homogenization is carried out 'by hand:' that is,
+the linguist marks each term in the equations himself.<p>
+<i>(43)	Examples of 'Homogenization':</i><p>
+<i></i>- of phonetic transcriptions:<p>
+	(a)	RN : saayi = OY : sa:ji<p>
+	(b)	FD : touri = RN : tuuri = OY : tu:ri ; etc.<p>
+- of semantic distinctions:<p>
+(c)	RN : 'palmier-doum' = XX : 'esp&egrave;ce d'arbre' = YY : 'arbre dont le
+fruit est utilis&eacute; pour [...] et les feuilles[...]' = A.P. : 'Balanites
+thebaica' ; etc.<p>
+Level 2 is the 'research level'  ('niveau des hypoth&egrave;ses')<i>.  </i>It
+pertains to the various types of linguistic hypotheses (discussed above) which
+may be applied to the data.  Level 2 is the point at which data is grouped into
+sets for further research; to this end, five 'sub-levels' are provided,
+amounting to five <i>plans of analysis</i> (described below). <p>
+Level 3 is an additional hierarchical level.  Basically it provides another
+level of data grouping above level 2 for consolidation of hypotheses stated at
+lower levels used, for example, for bringing together 'etyma' which are
+supported by several 'roots' (<i>radicaux</i>, illustrated in (44) below)
+already reconstructed.  It provides two optional analysis plans.<p>
+	As noted above (in discussing Level 2, the research level), MARIAMA provides
+five <i>plans of analysis</i> over the data set.  These five plans correspond
+to five different sets of hypotheses, each with its own particular
+attributes:<p>
+- Le niveau 2 des 'r&eacute;f&eacute;rences'<p>
+- Le niveau 2 des 'reconstructions'<p>
+- Le niveau 2 des 'clefs'<p>
+- Le niveau 2 des 'classificateurs'<p>
+- Le niveau 2 de 'travail'<p>
+<i>- Le niveau 2 des 'r&eacute;f&eacute;rences' : </i>the level of intuitions
+and hypothesis advanced without necessarily having a solid justification.
+Preliminary research level.<p>
+<i>- Le niveau 2 des 'reconstructions'</i> : Represented here are sets of data
+supported by linguistic reconstruction in the 'strict sense'.  Alternative
+forms may be specified along with justifications concerning phonetic
+regularities in the form of features, rules, and rule changes.<p>
+<i>- Le niveau 2 des 'clefs' : </i>this plan provides a means to 'index' the
+data according to a classificatory grid.  The units of the grid may be
+semantic, ethnographic, linguistic, or otherwise.  A multivalued classification
+is permitted so that the same form may receive several classifications;
+consequently, this plan permits working with forms in terms of 'features'
+(<i>traits</i>), or in terms of 'matrices.'  The use of the word <i>clef</i>
+(key) is probably intended to evoke the notion of a limited set of possible
+values used in classifying the data.<p>
+-<i> Le niveau 2 des 'classificateurs' </i>: this plan also permits an
+'indexation' of the forms, but at organized according to 'classification
+types.'  I am not sure how to interpret the function of this plan.<p>
+<i>- Le niveau 2 de 'travail' </i>: this plan allows the specification of
+tentative hypotheses based on alternative organization of data created at other
+levels.  It is for experimentation and intermediate groupings.<p>
+	MARIAMA is a complicated program with a large number of features, many as yet
+only partially documented.  The flavor of the program, which is written in 4D
+for the Macintosh, can be glimpsed in (44) below, which shows a list of forms
+from different languages which have the same root (<i>babba</i>), meaning
+something like 'carry on the back.'  <p>
+(44)<i>	Display of words for *babba 'carry on the back' in MARIAMA</i><p>
+<i></i>
+<IMG SRC="p23.GIF">
+<h3>
+<a name="RTFToC15">3.11.
+CUSHLEX
+</a></h3>
+	CUSHLEX, for 'Cushitic Lexicon', is being developed by Gene Gragg at the
+Oriental Institute of the University of Chicago.  As of then end of 1994,
+CUSHLEX contains some Cushitic lexical items (20,000 words in some 70 Cushitic
+languages, plus 5,000 or so from some 230 other Afroasiatic), an index of the
+cognate sets that have been proposed for them (including extra-Cushitic
+Afroasiatic where they exist), and a set of tools for registering, maintaining,
+and cross-referencing correspondence sets and rules.  It is an attempt to
+provide a 'useful tool for historical linguistic research  developed with
+off-the-shelf DBMS software, and on platforms readily available to the working
+historical linguist.' (Gragg 1994)  Development went through several phases: a
+first attempt in dBASE IV was unacceptably slow, and suffered from an archaic
+interface.  The current implementation is in FoxPro for Windows, a powerful
+multi-platform DBMS.  CUSHLEX is a sophisticated tool providing a means of
+creating cognate sets (by hand) and making correspondences sets linked to sets
+and reconstructions (again by hand).  Its interface and functionality will
+likely make it a model for future development of cross-linguistic etymological
+databases; combined with a phonological component like the Reconstruction
+Engine (described below) it could have a broad appeal to working comparativists.
+<h3>
+<a name="RTFToC16">3.12.
+The Reconstruction Engine (RE)
+</a></h3>
+	This program is treated in some detail in section 6 and so only mentioned
+here.  The programs models the classical view of the comparative method for
+establishing genetic affiliation among a group of languages via sound
+correspondences and  cognate sets (as described in section 1).  The program
+is a research tool designed to aid the linguist in evaluating specific
+hypotheses, by calculating the consequences of a set of postulated sound
+changes (proposed by the linguist) on complete lexicons of several languages.
+It divides the lexicons into a phonologically regular part, and a part which
+deviates from the sound laws.  The Reconstruction Engine is bi-directional:
+given words in modern languages, it can propose cognate sets (with
+reconstructions); given reconstructions, it can project the modern forms which
+would result from regular changes.  The Reconstruction Engine operates either
+interactively, allowing word-by-word evaluation of hypothesized sound changes
+and semantic shifts, or in a 'batch' mode, processing entire multilingual
+lexicons <i>en masse</i>.  (Lowe and Mazaudon 1994)
+<h3>
+<a name="RTFToC17">3.13.
+Sino-Tibetan Etymological Dictionary and Thesaurus (STEDT)
+</a></h3>
+	The STEDT project, begun in 1987, is creating an etymological
+dictionary-thesaurus of Proto-Sino-Tibetan, the reconstructed ancestor of many
+of the languages spoken in China, NE India, and peninsular SE Asia.  The goal
+of the project is to publish a multi-volume work, each on a different semantic
+area.<p>
+	To support the creation of the dictionary thesaurus, a sizable lexicographic
+database has been created from a variety of disparate sources including
+monolingual and bilingual dictionaries, word lists, published and unpublished
+articles and manuscripts, and other linguistic databases and files.  As of
+April 1995, the database contains approximately 232,000 language forms from 250
+Sino-Tibetan languages and dialects.  A portion of these have been grouped into
+some 2,000 cognate sets for eventual publication in the dictionary-thesaurus.
+Problems concerning transcription and representation, semantic relationships,
+etymologization, and indexing are discussed elsewhere in this dissertation.<p>
+	The production of the printed thesaurus requires the integration of a wide
+variety of documents, including graphics, a large variety of marginalia and
+notes, and lexicographic and etymological information.  The essence of the
+process is illustrated in (45) below.<p>
+(45)<i>	Components of the STEDT document production system</i><p>
+<i></i><b>
+<IMG SRC="p24.GIF"></b><p>
+	The database is an essential sideline to the production of the published work,
+though it may turn out to be one of the most useful results when it is made
+available to the research community.  (Lowe 1993, Matisoff 1991)
+<h3>
+<a name="RTFToC18">3.14.
+The Comparative Bantu Online Dictionary (CBOLD)
+</a></h3>
+	The CBOLD project is an international effort to establish a computerized
+database consisting of approximately 4,000+ Proto-Bantu roots as well as
+reflexes of these and additional regional roots for an initial 50 or so of the
+500+ daughter languages.  The major concrete goals of the project are 1) to set
+up a unified database for lexical research in Bantu languages, and to input
+data from as many languages as possible into the database; and 2) to establish
+a means for sharing the data as widely as possible among scholars around the
+world.  As April 1995, CBOLD had received or converted data from over 30
+sources (institutions and contributing scholars), representing approximately
+230,000 words in 118 Bantu languages (including data for reconstructed
+languages).  <p>
+	The CBOLD database consists of a number of parallel bilingual dictionaries
+with an overlaid semantic and phonological analysis. Functioning as the
+'backbone' of the database are existing reconstructions of Bantu, notably those
+of Guthrie and Meussen (Guthrie 1967; Meussen 1967). The lemmata in these
+dictionaries are 'aligned' etymologically as illustrated in (46). <p>
+<i>(46)	File design for CBOLD (N.B. only six of the set of 'core' dictionaries
+are depicted)</i><p>
+<i></i>
+<IMG SRC="p25.GIF"><p>
+To the extent possible, dictionaries and other lexicographic data is acquired
+through scanning and OCR (optical character recognition).  Software to parse
+these texts into 'fields' which can be loaded into the database is being
+developed.  The data acquisition and preparation process is discussed in
+section 3.  Tools for searching the database on the basis of morphological
+and phonological structure are planned. The database and the tools for using it
+are being developed in an environment which will allow researchers access on
+most of the popular computing platforms, at least Apple Macintosh and IBM
+compatibles. Several types of tools will be developed:<p>
+Besides producing an up-to-date, revised, and expanded etymological dictionary
+of Proto-Bantu, other types of documents which might be useful are synonym
+lists, phonological inventories with supporting forms, thesauruses, and
+multi-lingual dictionaries. In general, these tools will operate on the
+database as a whole and produce sizable documents. Thus, the users of CBOLD
+will be able to support a certain amount of 'demand publishing', providing
+interim and final versions of their analyses in a timely fashion.<p>
+	Queries of high complexity need to be answered by the database. The queries
+may refer to specific segments or broad classes of segments. They may refer to
+adjacency or boundary conditions defined by morphological or phonological
+criteria.  Some approaches to providing these types of facilities are discussed
+in section 5.
+<h2>
+<a name="RTFToC19">4.
+A critical evaluation
+</a></h2>
+	There seems to be in general an inverse relationship in the programs and
+projects above between the amount of effort devoted to gathering the data and
+the amount of effort devoted to analyzing it.  Indeed, the goal of some of the
+projects is primarily to gather the data (with some idea of how it will
+eventually be used) while other projects are applied to small data sets with
+the idea that someday they will be applied to larger sets.  <p>
+	Several of the programs are explicitly 'corpus-based:' (CBOLD, CUSHLEX, DOC,
+the Electronic Neogrammarian, MARIAMA, the Reconstruction Engine, STEDT, and
+WORDSURV) and provide some sort of functions for diachronic analysis.  Others
+provide only apparatus for analyzing the data, and sometimes include some
+sample data, either real (as in COGNATE, Iberochange, PHONO, and Kay's test
+program) or made-up (COMPASS, CARP).  They differ substantially in the portion
+and proportion of the lexicon treated.  Veatch has not said if his programs
+have actually been used on real data;  Kay's experiment used only eight forms
+in two languages, and he said that that was a lot given his approach.<a
+href="p2_fn.html#fn8">[12]</a>  Others are large database projects
+incorporating tens and sometimes hundreds of thousands of forms in a myriad
+languages.  <p>
+	Some programs require that the data be initially arranged in some fashion,
+either by semantic relationship (WORDSURV) or cognacy (DOC).  <p>
+	Some programs require prior segmentation according to some abstract
+constituent structure prior to computer analysis (COMPASS, DOC, the Electronic
+Neogrammarian, Iberochange, and WORDSURV).  Some provide no means to do this at
+all, representing such segmentation implicitly (MARIAMA, CUSHLEX).  Others,
+like PHONO and the Reconstruction Engine, can perform phonological analysis on
+constituents of a variety of sizes, including features, segments, or larger
+constituents.  I should point out that to be general, the phonology and
+phonotactics should be parameters to the extent possible,  so one can test
+different structural and phonological hypotheses without having to recode the
+data.<p>
+	WORDSURV counts correspondences in order to arrive at a statistical measure of
+their 'strength.' Hewson's program finesse their actual representation as a
+distinct computer object; indeed he notes that 'the method does not use the
+correspondences in order to predict possible cognates, but the reflexes.'
+Clearly however, the 'proto projections' used to bring cognates together rely
+on the notion of correspondence.  Although the columns of a dialect record in
+DOC might reflect some kind of genuine correspondence, it is not clear what
+status the authors of the program believe them to have, inasmuch as DOC is
+meant to test the hypothesis of lexical diffusion.  Recently however, the data
+in DOC has been used to test the notion of regular correspondence among Chinese
+dialects.<p>
+	Of these programs only the Reconstruction Engine actually generates cognate
+sets with complete reconstructions on the basis of correspondences and semantic
+information.  The Hewson program produced pieces of cognates: consonants in the
+languages treated show 'greater regularity and simplicity' (Hewson 1974:192)
+than vowels; vowels were consequently ignored.  Software being developed on the
+CBOLD and STEDT projects will take the some of the ideas incorporated in these
+programs a step further, implementing the cognate sets and reconstruction
+generating algorithms developed for the Reconstruction Engine, the database
+approaches of MARIAMA and CUSHLEX, as well other features borrowed from these
+programs.  <p>
+<p>
+</body></html>

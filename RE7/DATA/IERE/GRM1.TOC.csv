@@ -1,0 +1,42 @@
+0	1	Type	*	context	OE	OHG	Got	ON  
+1	1	V	a		a	a	a	a
+2	1	V	e		e	e	e	e
+3	1	V	i		i	i	i	i
+4	1	V	o		o	o	o	o
+5	1	V	u		u	u	u	u
+6	1	V	 ̇		 ̇	 ̇	 ̇	
+̇
+7	1	V	ˇ		ˇ	ˇ	ˇ	ˇ
+8	1	V	ɑ		ɑ	ɑ	ɑ	ɑ
+9	1	V	ᴮ		ᴮ	ᴮ	ᴮ	ᴮ
+10	1	V	t̑		t̑	t̑	t̑	t̑
+12	1	C	f		f	f	f	f
+14	1	C	m		m	m	m	m
+18	1	C	ɪ		ɪ	d	ɪ	ɪ
+15	1	C	n		n	n	n	n
+16	1	C	r		r	r	r	r
+11	1	C	l		l	l	l	l
+17	1	C	s		s	s	s	s
+13	1	C	x		h	h	h	h
+19	1	I	f		f	f	f	f
+20	1	I	h		h	h	h	h
+21	1	I	l		l	l	l	l
+22	1	I	m		m	m	m	m
+23	1	I	n		n	n	n	n
+24	1	I	r		r	r	r	r
+25	1	I	s		s	s	s	s
+26	1	I	ɪ		ɪ	d	ɪ	ɪ
+27	1	I	p		p	pf	p	p
+28	1	I	w		w	w	w	ɤ
+29	1	C	p	*/S-	p	p	p	p
+30	1	C	t	*/F-	t	t	t	t
+31	1	C	k	*/S-	k	k	k	k
+32	1	C	b	*/#-	b	b	b	b
+33	1	C	b	*/N-	b	b	b	b
+34	1	C	g	*/N-	g	g	g	g
+35	1	C	p	*/T-	p	pf	p	p
+36	1	C	t	*/E-	t	ts	t	t
+37	1	C	k	*/T-	k	kx	k	k
+38	1	C	g	*/O-	ȴ	g	g	g
+39	1	C	d	*/N-	d	t	d	d
+40	1	C	w	*/W-	w	w	w	j

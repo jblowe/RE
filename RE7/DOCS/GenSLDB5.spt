@@ -1,0 +1,170 @@
+*
+* Generate "Sound Laws" from Cognate Sets
+*
+-include	"db.inc"
+*
+*	Define some functions
+*
+* LOLOISH
+*	LgList = "Ahi,Ak,Bi,Ha,Li,Mo,Na,Sa,Wo,Mpi,Mpi-mi,Lh,LC,Naxi"
+* LO-N
+*	LgList = "Ahi,Ha,Na,Sa,Wo,LC,Naxi"
+* LO-C
+*	LgList = "Li,Lh"
+* LO-S
+*	LgList = "Ak,Bi,Ha,Sa,Wo,Mpi,Mpi-mi"
+* Bm
+	LgList = "At,Bola,Bunan,Lu,Mr,Pn,Zaiwa,WB,Lashi,Hpun,Tr,Mk"
+*	LgList = "AM,Ao,Ch,Chinese,Dhimal,FMC,Ga,Jg,Limbu,Lotha,Magari,"
+*.		"Mzieme,PTam,PTB,RL,TN,Wancho,WM,WN,WP,WT"
+
+
+	vowels = 	'éä‡Øš—•“úÜ‘ŠŸ™˜·í¯è¿”'
+.			'ÇaÙa‰’œ@aÛa_aÑa€a†aÒaÓaÔaÕaò'
+.			'aeiou½ó´çİè~Œay'
+	cons =		'NC-kgqnpdtbjlszxrvmnÖ³fhc'
+.			'©®Ï æëğåï¨ûøÅ®'
+	conpat = (span(cons) any('Ç|') span(cons)) | span(cons) |  (any('Ç|Ù') span(cons)) | NULL 
+	tones =		'¡ñîÁª£¢°¤¦¥»¼LHSM\|ñî1234567890È\| '
+	medials =	'yw'
+	define('syll(s)init,med,nuc,final,tone,tonex')	:(eosyll)
+syll	syll = table()
+* remove prefix, if any
+	s len(1) any(tones) '-' =
+	s len(1) '-' =
+	s break(',') . s
+	s break('±') . s
+	s 'C-' | 'N-'					:s(syll1)
+	s break('-') . s
+syll1	s any(' ()') =					:s(syll1)
+	s span(tones) . tonex =
+	s conpat . init (span(medials) | NULL) . med span(vowels) . nuc 
+.	(span(cons) | NULL) . final
+.	(span(tones) | NULL) . tone rem $ rest
+	tone = ident(tone) tonex
+	syll<1> = init
+	syll<2> = nuc final
+	syll<3> = tone
+	syll<4> = med
+	syll<5> = init med
+	syll<6> = med nuc final
+	syll<7> = nuc
+*	terminal = s ": I = " init " m= " Med " n= " Nuc " f= " final " t= " tone
+	cn1 = init ; cn2 = nuc final ; cn3 = tone
+	cn1 = differ(med) cn1 '-' med
+							:(return)
+eosyll
+	define('stash(row1,row2,col,val)')			:(eoStash)
+Stash
+	differ(row2) differ(val)			:f(Stash2)
+	item = row1 char(9) row2 char(9)
+	ancestors<row2> = 1
+	differ(corrs<item>)				:s(Stash3)
+	corrs<item> = table()
+Stash3
+*	terminal = item char(9) col ' ' lgc<col> char(9) val
+	("," corrs<item><col>) ( "," val ",")		:s(Stash2)
+	corrs<item><col> = corrs<item><col> val ","
+Stash2
+							:(return)
+eoStash
+	define('match(s1,s2,lg)a,b,c,d,pre')	:(eomatch)
+match
+	pre = lg
+	stash("I",s2<1>,lg,s1<1>)
+	s1<2> "•" = "i"
+	stash("R",s2<2>,lg,s1<2>)
+	stash("T",s2<3>,lg,s1<3>)
+	stash("M",s2<4>,lg,s1<4>)
+							:(return)
+eomatch
+	LgList = "," replace(LgList,&ucase,&lcase) ","
+packlg	LgList " " =					:s(packlg)
+*	terminal = lglist
+	lgs = table()
+	lgn = table()
+	lgc = table()
+	ancestors = table()
+	corrs = table()
+	define('bustrcn(rcn,tag)')			:(eobust)
+bustrcn
+	rcnlist<tag> = syll(rcn)			:(return)
+eobust
+	&stlimit = -1
+	&dump = 0
+	tbl = table()
+*	data('rulen(level,sylltype,proto,outcome,context,lglist)')
+	tb = char(9)
+	input(.in,1,host(18,'Input file name'))		:f(badin)
+	output(.out,2,host(20,'Output file name'))	:f(badout)
+*	terminal = 'Maximum number of items to process:'
+*	maxrecs = +terminal ; sc = 1
+*	maxrecs = lt(maxrecs,1) 999999999
+*	terminal = 'Number of items to skip:'
+*	skprecs = +terminal
+	maxrecs = 999 ; skprecs = 0 ; sc = 1
+rety	line = brk(in,char(9))				:f(eof)
+	leq(line<2>,currset)				:f(dumpset)
+ckrcn	leq(line<3>,"PLB")				:f(begin)
+	rcnb = syll(line<4>)				:(rety)
+begin
+	m = m + 1
+*	gt(m,200)					:s(eof)
+	lg = line<3>
+	lg break(' ') . lg
+	lg pos(0) "-" =
+	lg = replace(lg,&ucase,&lcase)
+	LgList ("," lg ",")				:f(rety)
+	tbl<lg> = line
+	differ(lgs<lg>)					:s(lgexist)
+	lgno = lgno + 1
+	lgn<lg> = lgno
+	lgc<lgno> = lg
+	maxlg = lt(maxlg,lgno) lgno
+lgexist
+	lgs<lg> = lgs<lg> + 1
+							:(rety)
+dumpset
+	tbl = sort(tbl)					:f(eodmp)
+	differ(rcnb)					:f(eodmp)
+	n = 0
+dmp	n  = n + 1
+	differ(tbl<n,1>)				:f(eodmp)
+	reflex = tbl<n,2>
+	reflex = reflex<4>
+	rfxb = syll(reflex)
+*	terminal = rfxb<1> '=' rcnb<1> '=' tbl<n,1> '=' currset
+	match(rfxb,rcnb,lgn<tbl<n,1>>)
+*	match(rfxb,rcnb,lgn<tbl<n,1>> ' ' tbl<n,1>)
+							:(dmp)
+eodmp
+	currset = line<2>
+	rcnb =
+	tbl = table()
+							:(rety)
+eof	terminal = m ' lines read.'
+	endfile(1)
+	&dump = 0
+	l2 = ; x = 0
+l5	x = lt(x,maxlg)	x + 1				:f(l6)
+	l2 = l2 tb lgc<x> 				:s(l5)
+l6	out = tb tb tb l2
+	tbl<""> =
+	tbl = rsort(convert(corrs,'ARRAY'),2)		:f(badsrt)
+	n = 1
+l2	line = tbl<n,2>
+	l2 = ; x = 0
+l3	x = lt(x,maxlg)	x + 1				:f(l4)
+	line<x> ',' rpos(0) =
+	element = 
+	element = line<x>
+	l2 = l2 tb element				:(l3)
+l4
+	out = tbl<n,1> tb l2				:f(end2)
+fx7	n = n + 1					:(l2)
+badin	terminal = "couldn't open input file."		:(end)
+badout	terminal = "couldn't open output file."		:(end)
+badsrt	terminal = 'Sort/Convert failed'
+end2	terminal = n ' lines output.'
+	endfile(2)
+end

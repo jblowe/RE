@@ -1,0 +1,17 @@
+STAT : [Dec 15 06:45:45 2012] START    parameters: DATA/DEMO93.params.parameters.xml
+STAT : [Dec 15 06:45:45 2012] START    rules:      DATA/DEMO93.C794DEM.corrs.xml
+PRE  : [Dec 15 06:45:45 2012] Test Run, Demo 1993
+RLS  : [Dec 15 06:45:46 2012] 2052 basic rules from 209 ROWS.
+LEX  : [Dec 15 06:45:46 2012] Run stats         Lg    Forms Recns  Fail
+LEX  : [Dec 15 06:45:46 2012] =========  ==========   ===== ===== =====
+STAT : [Dec 15 06:45:46 2012] LEXICON  gha : 59 words, 3533 recons ,0 failed         gha      59  3533     0
+STAT : [Dec 15 06:45:46 2012] LEXICON  ris : 62 words, 850 recons ,0 failed         ris      62   850     0
+STAT : [Dec 15 06:45:46 2012] LEXICON  sahu : 58 words, 1250 recons ,0 failed        sahu      58  1250     0
+STAT : [Dec 15 06:45:47 2012] LEXICON  man : 59 words, 2511 recons ,7 failed         man      59  2511     7
+STAT : [Dec 15 06:45:47 2012] LEXICON  mar : 65 words, 3301 recons ,5 failed         mar      65  3301     5
+STAT : [Dec 15 06:45:47 2012] LEXICON  syang : 65 words, 1975 recons ,2 failed       syang      65  1975     2
+STAT : [Dec 15 06:45:47 2012] LEXICON  tag : 48 words, 708 recons ,1 failed         tag      48   708     1
+STAT : [Dec 15 06:45:47 2012] LEXICON  tuk : 65 words, 4185 recons ,0 failed         tuk      65  4185     0
+STAT : [Dec 15 06:45:47 2012] DATA     481 forms, 18313 recons, 15 no rc
+STAT : [Dec 15 06:45:51 2012] SET      2620 raw sets, 204 merged sets, 28 isolates
+STAT : [Dec 15 06:45:51 2012] END      *****

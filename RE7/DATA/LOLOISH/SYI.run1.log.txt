@@ -1,0 +1,19 @@
+STAT : [Jun 15 18:09:39 2014] START    parameters: /Users/jblowe/Sites/RE7/DATA/LOLOISH/SYI.params.parameters.xml
+PRE  : [Jun 15 18:09:39 2014] START    number of words to process from each lexicon: 10
+PRE  : [Jun 15 18:09:39 2014] 
+RLS  : [Jun 15 18:09:39 2014] CSV correspondence file:
+RLS  : [Jun 15 18:09:39 2014] /Users/jblowe/Sites/RE7/DATA/LOLOISH/SYI.TOC.u8.csv
+RLS  : [Jun 15 18:09:39 2014] 1206 diachronic rules from 91 correspondence rows.
+STAT : [Jun 15 18:09:39 2014] INPUT     : 304 words
+STAT : [Jun 15 18:09:39 2014] LEXICON  PSL : 0 words, 0 recons ,0 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  WB : 10 words, 73 recons ,1 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  Akha : 10 words, 247 recons ,0 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  HaniW : 10 words, 1071 recons ,6 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  HaniL : 10 words, 162 recons ,3 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  Khatu : 10 words, 876 recons ,0 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  Pijo : 10 words, 1645 recons ,1 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  Haoni : 10 words, 181 recons ,1 failed
+STAT : [Jun 15 18:09:39 2014] LEXICON  Mpi : 10 words, 379 recons ,3 failed
+STAT : [Jun 15 18:09:39 2014] DATA     80 forms, 4634 recons, 15 no rc
+STAT : [Jun 15 18:09:40 2014] SET      518 raw sets, 40 merged sets, 14 isolates
+STAT : [Jun 15 18:09:40 2014] END      *****

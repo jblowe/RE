@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../styleshtml.xsl" type="text/xsl"?>
+<!-- edited with XML Spy v4.0 U (http://www.xmlspy.com) by Boyd MICHAILOVSKY (C.N.R.S.) -->
+<lexicon dialecte="syang">
+	<entry id="syang1">
+		<gl>deer</gl>
+		<RCF>Apʰo</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥pʰo</hw>
+	</entry>
+	<entry id="syang2">
+		<gl>heart</gl>
+		<RCF>Atiŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥tin</hw>
+	</entry>
+	<entry id="syang3">
+		<gl>fodder</gl>
+		<RCF>Atʃʰi</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹tʃʰi</hw>
+	</entry>
+	<entry id="syang4">
+		<gl>daughter in law</gl>
+		<RCF>Atsaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥tsaŋ</hw>
+	</entry>
+	<entry id="syang5">
+		<gl>food (cooked rice)</gl>
+		<RCF>Akan</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥kʌn</hw>
+	</entry>
+	<entry id="syang6">
+		<gl>chest</gl>
+		<RCF>Aku</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹ku</hw>
+	</entry>
+	<entry id="syang7">
+		<gl>feces</gl>
+		<RCF>Akli</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹li</hw>
+	</entry>
+	<entry id="syang8">
+		<gl>hair / head</gl>
+		<RCF>A,Bkra</RCF>
+		<SO>MM-K78</SO>
+		<hw>²kja</hw>
+	</entry>
+	<entry id="syang9">
+		<gl>cubit</gl>
+		<RCF>Akru</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹ku</hw>
+	</entry>
+	<entry id="syang10">
+		<gl>waist</gl>
+		<RCF>Akre(t)</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹kʌe</hw>
+	</entry>
+	<entry id="syang11">
+		<gl>ropeway</gl>
+		<RCF>Apraŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩praŋ</hw>
+	</entry>
+	<entry id="syang12">
+		<gl>nose</gl>
+		<RCF>Aʰna</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹nʌ</hw>
+	</entry>
+	<entry id="syang13">
+		<gl>hand</gl>
+		<RCF>Aʰjaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹ja</hw>
+	</entry>
+	<entry id="syang14">
+		<gl>fire</gl>
+		<RCF>Aʰmje</RCF>
+		<SO>MM-K78</SO>
+		<hw>²mi</hw>
+	</entry>
+	<entry id="syang15">
+		<gl>tail</gl>
+		<RCF>Aʰmeː</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹me</hw>
+	</entry>
+	<entry id="syang16">
+		<gl>goat</gl>
+		<RCF>Aʰra</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥rʌ</hw>
+	</entry>
+	<entry id="syang17">
+		<gl>steam</gl>
+		<RCF>A(h)ʰlaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥hlaŋma</hw>
+	</entry>
+	<entry id="syang18">
+		<gl>snake-god</gl>
+		<RCF>Aʰlu</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥hlu</hw>
+	</entry>
+	<entry id="syang19">
+		<gl>belly</gl>
+		<RCF>Bpʰo</RCF>
+		<SO>MM-K78</SO>
+		<hw>²pʰo</hw>
+	</entry>
+	<entry id="syang20">
+		<gl>horse</gl>
+		<RCF>Bta</RCF>
+		<SO>MM-K78</SO>
+		<hw>²tʌ</hw>
+	</entry>
+	<entry id="syang21">
+		<gl>dishes</gl>
+		<RCF>Btaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥taŋ</hw>
+	</entry>
+	<entry id="syang22">
+		<gl>hoe</gl>
+		<RCF>Btoː / ²two</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥to</hw>
+	</entry>
+	<entry id="syang23">
+		<gl>thread (sewing)</gl>
+		<RCF>Btrup</RCF>
+		<SO>MM-K78</SO>
+		<hw>²hru</hw>
+	</entry>
+	<entry id="syang24">
+		<gl>ten</gl>
+		<RCF>Btsjui</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥tʃju</hw>
+	</entry>
+	<entry id="syang25">
+		<gl>chin</gl>
+		<RCF>Bkam</RCF>
+		<SO>MM-K78</SO>
+		<hw>²kʌm</hw>
+	</entry>
+	<entry id="syang26">
+		<gl>hole</gl>
+		<RCF>Bkʰuŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥kʰũŋ</hw>
+	</entry>
+	<entry id="syang27">
+		<gl>water</gl>
+		<RCF>Bkjui</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥kju</hw>
+	</entry>
+	<entry id="syang28">
+		<gl>nine</gl>
+		<RCF>Bku(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²ku</hw>
+	</entry>
+	<entry id="syang28b">
+		<gl>nine</gl>
+		<RCF>Bku(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²kuː</hw>
+	</entry>
+	<entry id="syang29">
+		<gl>voice</gl>
+		<RCF>Bkat</RCF>
+		<SO>MM-K78</SO>
+		<hw>²kʌe</hw>
+	</entry>
+	<entry id="syang30">
+		<gl>siblings</gl>
+		<RCF>Bt(h)et</RCF>
+		<SO>MM-K78</SO>
+		<hw>²te</hw>
+	</entry>
+	<entry id="syang31">
+		<gl>saliva</gl>
+		<RCF>Bt(h)au</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥to</hw>
+	</entry>
+	<entry id="syang32">
+		<gl>eye</gl>
+		<RCF>Bʰmiː(ŋ)</RCF>
+		<SO>MM-K78</SO>
+		<hw>²mi</hw>
+	</entry>
+	<entry id="syang33">
+		<gl>fontanel</gl>
+		<RCF>Bʰŋwa</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥ŋo</hw>
+	</entry>
+	<entry id="syang34">
+		<gl>bird-trap</gl>
+		<RCF>Bʰŋwa / ²ʰŋwã</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥ŋo</hw>
+	</entry>
+	<entry id="syang35">
+		<gl>tongue</gl>
+		<RCF>Bʰle(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥hle</hw>
+	</entry>
+	<entry id="syang35b">
+		<gl>tongue</gl>
+		<RCF>Bʰle(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>˥hlje</hw>
+	</entry>
+	<entry id="syang36">
+		<gl>face</gl>
+		<RCF>Bʰliː</RCF>
+		<SO>MM-K78</SO>
+		<hw>²hli</hw>
+	</entry>
+	<entry id="syang37">
+		<gl>louse</gl>
+		<RCF>Bʃjat</RCF>
+		<SO>MM-K78</SO>
+		<hw>²ʃje</hw>
+	</entry>
+	<entry id="syang38">
+		<gl>wife</gl>
+		<RCF>Abe</RCF>
+		<SO>MM-K78</SO>
+		<hw>³pe</hw>
+	</entry>
+	<entry id="syang39">
+		<gl>leaf</gl>
+		<RCF>Abaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ba</hw>
+	</entry>
+	<entry id="syang40">
+		<gl>beer-mash</gl>
+		<RCF>Abap</RCF>
+		<SO>MM-K78</SO>
+		<hw>³po</hw>
+	</entry>
+	<entry id="syang41">
+		<gl>cowshed</gl>
+		<RCF>Abraŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩praŋ</hw>
+	</entry>
+	<entry id="syang42">
+		<gl>skin</gl>
+		<RCF>Aɖi / (ɖwi)</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ʈi</hw>
+	</entry>
+	<entry id="syang43">
+		<gl>nest</gl>
+		<RCF>Adzaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>³tsaŋ</hw>
+	</entry>
+	<entry id="syang44">
+		<gl>point</gl>
+		<RCF>Adzo</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩tso</hw>
+	</entry>
+	<entry id="syang45">
+		<gl>lid</gl>
+		<RCF>Agap</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ko</hw>
+	</entry>
+	<entry id="syang46">
+		<gl>back</gl>
+		<RCF>Ago</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ko</hw>
+	</entry>
+	<entry id="syang47">
+		<gl>hill</gl>
+		<RCF>Agaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>¹kaŋ</hw>
+	</entry>
+	<entry id="syang48">
+		<gl>intestines</gl>
+		<RCF>Agruŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>³kum</hw>
+	</entry>
+	<entry id="syang49">
+		<gl>man</gl>
+		<RCF>Ami</RCF>
+		<SO>MM-K78</SO>
+		<hw>³mi</hw>
+	</entry>
+	<entry id="syang50">
+		<gl>forehead</gl>
+		<RCF>Aŋo</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ŋo</hw>
+	</entry>
+	<entry id="syang51">
+		<gl>friend</gl>
+		<RCF>Aro(ː)</RCF>
+		<SO>MM-K78</SO>
+		<hw>³ro</hw>
+	</entry>
+	<entry id="syang52">
+		<gl>one</gl>
+		<RCF>Bgrik</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴gɨ</hw>
+	</entry>
+	<entry id="syang53">
+		<gl>wheat</gl>
+		<RCF>A,Bgrwa</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴ko</hw>
+	</entry>
+	<entry id="syang54">
+		<gl>eagle (nep cil 'hawk')</gl>
+		<RCF>Bgrwat</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩tʃjʌ</hw>
+	</entry>
+	<entry id="syang55">
+		<gl>falcon</gl>
+		<SO>MM-K78</SO>
+		<hw>²kʰjʌ</hw>
+	</entry>
+	<entry id="syang56">
+		<gl>lungs</gl>
+		<RCF>A,Bglwap</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩ʃjopʃja</hw>
+	</entry>
+	<entry id="syang57">
+		<gl>place</gl>
+		<RCF>Bklaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴lja</hw>
+	</entry>
+	<entry id="syang58">
+		<gl>snow</gl>
+		<RCF>Bgliŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>lim</hw>
+	</entry>
+	<entry id="syang59">
+		<gl>work</gl>
+		<RCF>Bgjat</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴ke</hw>
+	</entry>
+	<entry id="syang60">
+		<gl>road</gl>
+		<RCF>Bgjam</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴kjʌm</hw>
+	</entry>
+	<entry id="syang61">
+		<gl>enemy</gl>
+		<RCF>Bgra</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩ʈa</hw>
+	</entry>
+	<entry id="syang62">
+		<gl>tumpline/carrying headband</gl>
+		<RCF>Bɖaː</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴ɖa</hw>
+	</entry>
+	<entry id="syang63">
+		<gl>house</gl>
+		<RCF>Bdim</RCF>
+		<SO>MM-K78</SO>
+		<hw>˩dim</hw>
+	</entry>
+	<entry id="syang64">
+		<gl>strength</gl>
+		<RCF>Bbaŋ</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴paŋ</hw>
+	</entry>
+	<entry id="syang65">
+		<gl>load</gl>
+		<RCF>Bdot</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴tʌe</hw>
+	</entry>
+	<entry id="syang66">
+		<gl>cow</gl>
+		<RCF>Bme</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴me</hw>
+	</entry>
+	<entry id="syang67">
+		<gl>garlic</gl>
+		<RCF>Bnoː</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴no</hw>
+	</entry>
+	<entry id="syang68">
+		<gl>thief</gl>
+		<RCF>Bjo</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴jo</hw>
+	</entry>
+	<entry id="syang69">
+		<gl>gold</gl>
+		<RCF>Bmar</RCF>
+		<SO>MM-K78</SO>
+		<hw>⁴mʌr</hw>
+	</entry>
+</lexicon>
