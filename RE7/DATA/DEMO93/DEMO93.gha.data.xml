@@ -1,797 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="../styleshtml.xsl" type="text/xsl"?>
 <lexicon dialecte="gha">
-	
-   <entry id="gha1">
-	
-      <gl>deer</gl>
-	
-      <RCF>Apʰo</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹pʰo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha2">
-	
-      <gl>heart</gl>
-	
-      <RCF>Atiŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹tĩ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha3">
-	
-      <gl>fodder</gl>
-	
-      <RCF>Atʃʰi</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹tsʰi</hw>
-	
-   </entry>
-
-	
-   <entry id="gha4">
-	
-      <gl>daughter in law</gl>
-	
-      <RCF>Atsaŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹tsõ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha5">
-	
-      <gl>food (cooked rice)</gl>
-	
-      <RCF>Akan</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹kaẽ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha6">
-	
-      <gl>chest</gl>
-	
-      <RCF>Aku</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹ku</hw>
-	
-   </entry>
-
-	
-   <entry id="gha7">
-	
-      <gl>feces</gl>
-	
-      <RCF>Akli</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹ɬi</hw>
-	
-   </entry>
-
-	
-   <entry id="gha8">
-	
-      <gl>hair / head</gl>
-	
-      <RCF>A,Bkra</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹kra</hw>
-	
-   </entry>
-
-	
-   <entry id="gha9">
-	
-      <gl>cubit</gl>
-	
-      <RCF>Akru</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹kru</hw>
-	
-   </entry>
-
-	
-   <entry id="gha10">
-	
-      <gl>waist</gl>
-	
-      <RCF>Akre(t)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹kre</hw>
-	
-   </entry>
-
-	
-   <entry id="gha11">
-	
-      <gl>ropeway</gl>
-	
-      <RCF>Apraŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³prẽ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha12">
-	
-      <gl>nose</gl>
-	
-      <RCF>Aʰna</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹na</hw>
-	
-   </entry>
-
-	
-   <entry id="gha13">
-	
-      <gl>hand</gl>
-	
-      <RCF>Aʰjaː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹jo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha14">
-	
-      <gl>fire</gl>
-	
-      <RCF>Aʰmje</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹mi</hw>
-	
-   </entry>
-
-	
-   <entry id="gha15">
-	
-      <gl>tail</gl>
-	
-      <RCF>Aʰmeː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹mi</hw>
-	
-   </entry>
-
-	
-   <entry id="gha16">
-	
-      <gl>goat</gl>
-	
-      <RCF>Aʰra</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹ra</hw>
-	
-   </entry>
-
-	
-   <entry id="gha17">
-	
-      <gl>steam</gl>
-	
-      <RCF>A(h)ʰlaŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>˥lõmãː</hw>
-	
-   </entry>
-
-	
-   <entry id="gha18">
-	
-      <gl>belly</gl>
-	
-      <RCF>Bpʰo</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²pʰo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha19">
-	
-      <gl>dishes</gl>
-	
-      <RCF>Btaŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²tõ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha20">
-	
-      <gl>hoe</gl>
-	
-      <RCF>Btoː / ²two</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²tu</hw>
-	
-   </entry>
-
-	
-   <entry id="gha21">
-	
-      <gl>thread (sewing)</gl>
-	
-      <RCF>Btrup</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²ru</hw>
-	
-   </entry>
-
-	
-   <entry id="gha22">
-	
-      <gl>ten</gl>
-	
-      <RCF>Btsjui</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²tsju</hw>
-	
-   </entry>
-
-	
-   <entry id="gha23">
-	
-      <gl>chin</gl>
-	
-      <RCF>Bkam</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²kãː</hw>
-	
-   </entry>
-
-	
-   <entry id="gha24">
-	
-      <gl>hole</gl>
-	
-      <RCF>Bkʰuŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²kʰũ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha25">
-	
-      <gl>water</gl>
-	
-      <RCF>Bkjui</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²kju</hw>
-	
-   </entry>
-
-	
-   <entry id="gha26">
-	
-      <gl>nine</gl>
-	
-      <RCF>Bku(ː)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²ku</hw>
-	
-   </entry>
-
-	
-   <entry id="gha27">
-	
-      <gl>voice</gl>
-	
-      <RCF>Bkat</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>¹kae</hw>
-	
-   </entry>
-
-	
-   <entry id="gha28">
-	
-      <gl>siblings</gl>
-	
-      <RCF>Bt(h)et     [ (?)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²ti</hw>
-	
-   </entry>
-
-	
-   <entry id="gha29">
-	
-      <gl>saliva</gl>
-	
-      <RCF>Bt(h)au     [ (?)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²tu</hw>
-	
-   </entry>
-
-	
-   <entry id="gha30">
-	
-      <gl>eye</gl>
-	
-      <RCF>Bʰmiː(ŋ)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²mĩ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha31">
-	
-      <gl>bird-trap</gl>
-	
-      <RCF>Bʰŋwa / ²ʰŋwã</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²ŋõ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha32">
-	
-      <gl>tongue</gl>
-	
-      <RCF>Bʰle(ː)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²le</hw>
-	
-   </entry>
-
-	
-   <entry id="gha33">
-	
-      <gl>face</gl>
-	
-      <RCF>Bʰliː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²li</hw>
-	
-   </entry>
-
-	
-   <entry id="gha34">
-	
-      <gl>louse</gl>
-	
-      <RCF>Bʃjat</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²se</hw>
-	
-   </entry>
-
-	
-   <entry id="gha35">
-	
-      <gl>leaf</gl>
-	
-      <RCF>Abaː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³po</hw>
-	
-   </entry>
-
-	
-   <entry id="gha36">
-	
-      <gl>beer-mash</gl>
-	
-      <RCF>Abap</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²paː</hw>
-	
-   </entry>
-
-	
-   <entry id="gha37">
-	
-      <gl>cowshed</gl>
-	
-      <RCF>Abraŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³prõ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha38">
-	
-      <gl>skin</gl>
-	
-      <RCF>Aɖi / (ɖwi)</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³ʈubi</hw>
-	
-   </entry>
-
-	
-   <entry id="gha39">
-	
-      <gl>nest</gl>
-	
-      <RCF>Adzaŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³tsõ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha40">
-	
-      <gl>point</gl>
-	
-      <RCF>Adzo</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³tso</hw>
-	
-   </entry>
-	
-	
-   <entry id="gha41">
-	
-      <gl>lid</gl>
-	
-      <RCF>Agap</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²kaː</hw>
-	
-   </entry>
-
-	
-   <entry id="gha42">
-	
-      <gl>back</gl>
-	
-      <RCF>Ago</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³ko</hw>
-	
-   </entry>
-
-	
-   <entry id="gha43">
-	
-      <gl>man</gl>
-	
-      <RCF>Ami</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³mi</hw>
-	
-   </entry>
-
-	
-   <entry id="gha44">
-	
-      <gl>forehead</gl>
-	
-      <RCF>Aŋo</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³ŋo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha45">
-	
-      <gl>one</gl>
-	
-      <RCF>Bgrik</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴gri</hw>
-	
-   </entry>
-
-	
-   <entry id="gha46">
-	
-      <gl>eagle (nep cil 'hawk')</gl>
-	
-      <RCF>Bgrwat</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴krwe</hw>
-	
-   </entry>
-
-	
-   <entry id="gha47">
-	
-      <gl>lungs</gl>
-	
-      <RCF>A,Bglwap</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³ɬoba</hw>
-	
-   </entry>
-
-	
-   <entry id="gha48">
-	
-      <gl>place</gl>
-	
-      <RCF>Bklaː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³ɬo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha49">
-	
-      <gl>snow</gl>
-	
-      <RCF>Bgliŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>²ɬĩ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha50">
-	
-      <gl>work</gl>
-	
-      <RCF>Bgjat</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴ke</hw>
-	
-   </entry>
-
-	
-   <entry id="gha51">
-	
-      <gl>road</gl>
-	
-      <RCF>Bgjam</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴gãː</hw>
-	
-   </entry>
-
-	
-   <entry id="gha51b">
-	
-      <gl>road</gl>
-	
-      <RCF>Bgjam</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴gjãː</hw>
-	
-   </entry>
-
-	
-   <entry id="gha52">
-	
-      <gl>tumpline/carrying headband</gl>
-	
-      <RCF>Bɖaː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>˩ʈo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha53">
-	
-      <gl>house</gl>
-	
-      <RCF>Bdim</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴dĩ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha54">
-	
-      <gl>strength</gl>
-	
-      <RCF>Bbaŋ</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴bõ</hw>
-	
-   </entry>
-
-	
-   <entry id="gha55">
-	
-      <gl>load</gl>
-	
-      <RCF>Bdot</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴ti</hw>
-	
-   </entry>
-
-	
-   <entry id="gha56">
-	
-      <gl>cow</gl>
-	
-      <RCF>Bme</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴me</hw>
-	
-   </entry>
-
-	
-   <entry id="gha57">
-	
-      <gl>garlic</gl>
-	
-      <RCF>Bnoː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴nu</hw>
-	
-   </entry>
-
-	
-   <entry id="gha57b">
-	
-      <gl>garlic</gl>
-	
-      <RCF>Bnoː</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>³nu</hw>
-	
-   </entry>
-
-	
-   <entry id="gha58">
-	
-      <gl>thief</gl>
-	
-      <RCF>Bjo</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴jo</hw>
-	
-   </entry>
-
-	
-   <entry id="gha59">
-	
-      <gl>gold</gl>
-	
-      <RCF>Bmar</RCF>
-	
-      <SO>MM-K78</SO>
-	
-      <hw>⁴maːra</hw>
-	
-   </entry>
-
+  <entry id="gha1">
+    <gl>deer</gl>
+    <RCF>Apʰo</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹pʰo</hw>
+  </entry>
+  <entry id="gha2">
+    <gl>heart</gl>
+    <RCF>Atiŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹tĩ</hw>
+  </entry>
+  <entry id="gha3">
+    <gl>fodder</gl>
+    <RCF>Atʃʰi</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹tsʰi</hw>
+  </entry>
+  <entry id="gha4">
+    <gl>daughter in law</gl>
+    <RCF>Atsaŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹tsõ</hw>
+  </entry>
+  <entry id="gha5">
+    <gl>food (cooked rice)</gl>
+    <RCF>Akan</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹kaẽ</hw>
+  </entry>
+  <entry id="gha6">
+    <gl>chest</gl>
+    <RCF>Aku</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹ku</hw>
+  </entry>
+  <entry id="gha7">
+    <gl>feces</gl>
+    <RCF>Akli</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹ɬi</hw>
+  </entry>
+  <entry id="gha8">
+    <gl>hair / head</gl>
+    <RCF>A,Bkra</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹kra</hw>
+  </entry>
+  <entry id="gha9">
+    <gl>cubit</gl>
+    <RCF>Akru</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹kru</hw>
+  </entry>
+  <entry id="gha10">
+    <gl>waist</gl>
+    <RCF>Akre(t)</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹kre</hw>
+  </entry>
+  <entry id="gha11">
+    <gl>ropeway</gl>
+    <RCF>Apraŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>³prẽ</hw>
+  </entry>
+  <entry id="gha12">
+    <gl>nose</gl>
+    <RCF>Aʰna</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹na</hw>
+  </entry>
+  <entry id="gha13">
+    <gl>hand</gl>
+    <RCF>Aʰjaː</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹jo</hw>
+  </entry>
+  <entry id="gha14">
+    <gl>fire</gl>
+    <RCF>Aʰmje</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹mi</hw>
+  </entry>
+  <entry id="gha15">
+    <gl>tail</gl>
+    <RCF>Aʰmeː</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹mi</hw>
+  </entry>
+  <entry id="gha16">
+    <gl>goat</gl>
+    <RCF>Aʰra</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹ra</hw>
+  </entry>
+  <entry id="gha17">
+    <gl>steam</gl>
+    <RCF>A(h)ʰlaŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>˥lõmãː</hw>
+  </entry>
+  <entry id="gha18">
+    <gl>belly</gl>
+    <RCF>Bpʰo</RCF>
+    <SO>MM-K78</SO>
+    <hw>²pʰo</hw>
+  </entry>
+  <entry id="gha19">
+    <gl>dishes</gl>
+    <RCF>Btaŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>²tõ</hw>
+  </entry>
+  <entry id="gha20">
+    <gl>hoe</gl>
+    <RCF>Btoː / ²two</RCF>
+    <SO>MM-K78</SO>
+    <hw>²tu</hw>
+  </entry>
+  <entry id="gha21">
+    <gl>thread (sewing)</gl>
+    <RCF>Btrup</RCF>
+    <SO>MM-K78</SO>
+    <hw>²ru</hw>
+  </entry>
+  <entry id="gha22">
+    <gl>ten</gl>
+    <RCF>Btsjui</RCF>
+    <SO>MM-K78</SO>
+    <hw>²tsju</hw>
+  </entry>
+  <entry id="gha23">
+    <gl>chin</gl>
+    <RCF>Bkam</RCF>
+    <SO>MM-K78</SO>
+    <hw>²kãː</hw>
+  </entry>
+  <entry id="gha24">
+    <gl>hole</gl>
+    <RCF>Bkʰuŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>²kʰũ</hw>
+  </entry>
+  <entry id="gha25">
+    <gl>water</gl>
+    <RCF>Bkjui</RCF>
+    <SO>MM-K78</SO>
+    <hw>²kju</hw>
+  </entry>
+  <entry id="gha26">
+    <gl>nine</gl>
+    <RCF>Bku(ː)</RCF>
+    <SO>MM-K78</SO>
+    <hw>²ku</hw>
+  </entry>
+  <entry id="gha27">
+    <gl>voice</gl>
+    <RCF>Bkat</RCF>
+    <SO>MM-K78</SO>
+    <hw>¹kae</hw>
+  </entry>
+  <entry id="gha28">
+    <gl>siblings</gl>
+    <RCF>Bt(h)et     [ (?)</RCF>
+    <SO>MM-K78</SO>
+    <hw>²ti</hw>
+  </entry>
+  <entry id="gha29">
+    <gl>saliva</gl>
+    <RCF>Bt(h)au     [ (?)</RCF>
+    <SO>MM-K78</SO>
+    <hw>²tu</hw>
+  </entry>
+  <entry id="gha30">
+    <gl>eye</gl>
+    <RCF>Bʰmiː(ŋ)</RCF>
+    <SO>MM-K78</SO>
+    <hw>²mĩ</hw>
+  </entry>
+  <entry id="gha31">
+    <gl>bird-trap</gl>
+    <RCF>Bʰŋwa / ²ʰŋwã</RCF>
+    <SO>MM-K78</SO>
+    <hw>²ŋõ</hw>
+  </entry>
+  <entry id="gha32">
+    <gl>tongue</gl>
+    <RCF>Bʰle(ː)</RCF>
+    <SO>MM-K78</SO>
+    <hw>²le</hw>
+  </entry>
+  <entry id="gha33">
+    <gl>face</gl>
+    <RCF>Bʰliː</RCF>
+    <SO>MM-K78</SO>
+    <hw>²li</hw>
+  </entry>
+  <entry id="gha34">
+    <gl>louse</gl>
+    <RCF>Bʃjat</RCF>
+    <SO>MM-K78</SO>
+    <hw>²se</hw>
+  </entry>
+  <entry id="gha35">
+    <gl>leaf</gl>
+    <RCF>Abaː</RCF>
+    <SO>MM-K78</SO>
+    <hw>³po</hw>
+  </entry>
+  <entry id="gha36">
+    <gl>beer-mash</gl>
+    <RCF>Abap</RCF>
+    <SO>MM-K78</SO>
+    <hw>²paː</hw>
+  </entry>
+  <entry id="gha37">
+    <gl>cowshed</gl>
+    <RCF>Abraŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>³prõ</hw>
+  </entry>
+  <entry id="gha38">
+    <gl>skin</gl>
+    <RCF>Aɖi / (ɖwi)</RCF>
+    <SO>MM-K78</SO>
+    <hw>³ʈubi</hw>
+  </entry>
+  <entry id="gha39">
+    <gl>nest</gl>
+    <RCF>Adzaŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>³tsõ</hw>
+  </entry>
+  <entry id="gha40">
+    <gl>point</gl>
+    <RCF>Adzo</RCF>
+    <SO>MM-K78</SO>
+    <hw>³tso</hw>
+  </entry>
+  <entry id="gha41">
+    <gl>lid</gl>
+    <RCF>Agap</RCF>
+    <SO>MM-K78</SO>
+    <hw>²kaː</hw>
+  </entry>
+  <entry id="gha42">
+    <gl>back</gl>
+    <RCF>Ago</RCF>
+    <SO>MM-K78</SO>
+    <hw>³ko</hw>
+  </entry>
+  <entry id="gha43">
+    <gl>man</gl>
+    <RCF>Ami</RCF>
+    <SO>MM-K78</SO>
+    <hw>³mi</hw>
+  </entry>
+  <entry id="gha44">
+    <gl>forehead</gl>
+    <RCF>Aŋo</RCF>
+    <SO>MM-K78</SO>
+    <hw>³ŋo</hw>
+  </entry>
+  <entry id="gha45">
+    <gl>one</gl>
+    <RCF>Bgrik</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴gri</hw>
+  </entry>
+  <entry id="gha46">
+    <gl>eagle (nep cil 'hawk')</gl>
+    <RCF>Bgrwat</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴krwe</hw>
+  </entry>
+  <entry id="gha47">
+    <gl>lungs</gl>
+    <RCF>A,Bglwap</RCF>
+    <SO>MM-K78</SO>
+    <hw>³ɬoba</hw>
+  </entry>
+  <entry id="gha48">
+    <gl>place</gl>
+    <RCF>Bklaː</RCF>
+    <SO>MM-K78</SO>
+    <hw>³ɬo</hw>
+  </entry>
+  <entry id="gha49">
+    <gl>snow</gl>
+    <RCF>Bgliŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>²ɬĩ</hw>
+  </entry>
+  <entry id="gha50">
+    <gl>work</gl>
+    <RCF>Bgjat</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴ke</hw>
+  </entry>
+  <entry id="gha51">
+    <gl>road</gl>
+    <RCF>Bgjam</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴gãː</hw>
+  </entry>
+  <entry id="gha51b">
+    <gl>road</gl>
+    <RCF>Bgjam</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴gjãː</hw>
+  </entry>
+  <entry id="gha52">
+    <gl>tumpline/carrying headband</gl>
+    <RCF>Bɖaː</RCF>
+    <SO>MM-K78</SO>
+    <hw>˩ʈo</hw>
+  </entry>
+  <entry id="gha53">
+    <gl>house</gl>
+    <RCF>Bdim</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴dĩ</hw>
+  </entry>
+  <entry id="gha54">
+    <gl>strength</gl>
+    <RCF>Bbaŋ</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴bõ</hw>
+  </entry>
+  <entry id="gha55">
+    <gl>load</gl>
+    <RCF>Bdot</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴ti</hw>
+  </entry>
+  <entry id="gha56">
+    <gl>cow</gl>
+    <RCF>Bme</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴me</hw>
+  </entry>
+  <entry id="gha57">
+    <gl>garlic</gl>
+    <RCF>Bnoː</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴nu</hw>
+  </entry>
+  <entry id="gha57b">
+    <gl>garlic</gl>
+    <RCF>Bnoː</RCF>
+    <SO>MM-K78</SO>
+    <hw>³nu</hw>
+  </entry>
+  <entry id="gha58">
+    <gl>thief</gl>
+    <RCF>Bjo</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴jo</hw>
+  </entry>
+  <entry id="gha59">
+    <gl>gold</gl>
+    <RCF>Bmar</RCF>
+    <SO>MM-K78</SO>
+    <hw>⁴maːra</hw>
+  </entry>
 </lexicon>

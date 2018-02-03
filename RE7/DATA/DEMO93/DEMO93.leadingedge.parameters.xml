@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
 <params>
-   <param name="trace" value="N"/>
-   <param name="spec" value="Y"/>
-   <action name="downstream" from="proto" to="gha"/>
-
-   <param name="trace" value="N"/>
-   <param name="title" value="Test Run, Demo 1993"/>
-   <param name="spec" value="Y"/>
-   <param name="correspondences" value="DEMO93.C794DEM.corrs.xml"/>
-   <param name="fuzzy" value="DEMO93.fuz.xml"/>
-   <action name="upstream" from="gha" to="proto"/>
-   <action name="upstream" from="ris" to="proto"/>
-   <action name="upstream" from="sahu" to="proto"/>
-   <action name="upstream" from="man" to="proto"/>
-   <action name="upstream" from="mar" to="proto"/>
-   <action name="upstream" from="syang" to="proto"/>
-   <action name="upstream" from="tag" to="proto"/>
-   <action name="upstream" from="tuk" to="proto"/>
-
-   <action name="unknown" from="proto" to="gha"/>
-   <action name="unknown" from="gha" to="proto"/>
+  <param name="trace" value="N"/>
+  <param name="spec" value="Y"/>
+  <action name="downstream" from="proto" to="gha"/>
+  <param name="trace" value="N"/>
+  <param name="title" value="Test Run, Demo 1993"/>
+  <param name="spec" value="Y"/>
+  <param name="correspondences" value="DEMO93.C794DEM.corrs.xml"/>
+  <param name="fuzzy" value="DEMO93.fuz.xml"/>
+  <action name="upstream" from="gha" to="proto"/>
+  <action name="upstream" from="ris" to="proto"/>
+  <action name="upstream" from="sahu" to="proto"/>
+  <action name="upstream" from="man" to="proto"/>
+  <action name="upstream" from="mar" to="proto"/>
+  <action name="upstream" from="syang" to="proto"/>
+  <action name="upstream" from="tag" to="proto"/>
+  <action name="upstream" from="tuk" to="proto"/>
+  <action name="unknown" from="proto" to="gha"/>
+  <action name="unknown" from="gha" to="proto"/>
 </params>

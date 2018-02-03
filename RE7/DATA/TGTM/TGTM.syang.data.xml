@@ -1,4980 +1,5261 @@
 <?xml version="1.0" encoding="utf-8"?>
 <lexicon dialecte="syang">
-<entry id="syang1">
-<gl>moi, je</gl>
-<hw>⁵⁵ŋa</hw>
-</entry>
-<entry id="syang2">
-<gl>toi, tu</gl>
-<hw>˩giXgiʱ
-</hw>
-</entry>
-<entry id="syang3">
-<gl>toi, tu</gl>
-<hw>¹¹gɯ</hw>
-</entry>
-<entry id="syang4">
-<gl>nous incl.</gl>
-<hw>⁵⁵ɲaŋ</hw>
-</entry>
-<entry id="syang5">
-<gl>nous excl.</gl>
-<hw>⁵⁵ni</hw>
-</entry>
-<entry id="syang6">
-<gl>ceci</gl>
-<hw>Xtsʌ</hw>
-</entry>
-<entry id="syang7">
-<gl>ceci</gl>
-<hw>⁵⁴tsuː</hw>
-</entry>
-<entry id="syang8">
-<gl>ceci</gl>
-<hw>⁵⁴tsʌ</hw>
-</entry>
-<entry id="syang9">
-<gl>cela</gl>
-<hw>⁵⁵tja·</hw>
-</entry>
-<entry id="syang10">
-<gl>cela</gl>
-<hw>⁵⁵'⁴⁴tjama</hw>
-</entry>
-<entry id="syang11">
-<gl>qui ?</gl>
-<hw>Xsu</hw>
-</entry>
-<entry id="syang12">
-<gl>quoi ?</gl>
-<hw>⁵⁵taː</hw>
-</entry>
-<entry id="syang13">
-<gl>quoi ?</gl>
-<hw>⁵⁵ta</hw>
-</entry>
-<entry id="syang14">
-<gl>un</gl>
-<hw>˩gʌigʌʱi
-</hw>
-</entry>
-<entry id="syang15">
-<gl>un</gl>
-<hw>³¹ʈi³¹ʈiʱ
-</hw>
-</entry>
-<entry id="syang16">
-<gl>un</gl>
-<hw>¹¹gɨ¹¹gɨʱ
-</hw>
-</entry>
-<entry id="syang17">
-<gl>deux</gl>
-<hw>`³¹ɲi</hw>
-</entry>
-<entry id="syang18">
-<gl>grand</gl>
-<hw>⁵⁵'⁵⁴tʰjo-ba</hw>
-</entry>
-<entry id="syang19">
-<gl>grand</gl>
-<hw>⁵⁵'⁵⁵tʰʌ-ba</hw>
-</entry>
-<entry id="syang20">
-<gl>petit</gl>
-<hw>⁵⁵'⁴⁴tsjaŋ-ba</hw>
-</entry>
-<entry id="syang21">
-<gl>personne</gl>
-<hw>²¹mi²¹miʱ
-</hw>
-</entry>
-<entry id="syang22">
-<gl>poisson</gl>
-<hw>⁵⁵'⁵⁵tarŋa</hw>
-</entry>
-<entry id="syang23">
-<gl>poisson</gl>
-<hw>⁵⁵'⁴⁴tarŋa</hw>
-</entry>
-<entry id="syang24">
-<gl>oiseau</gl>
-<hw>Xɲimj̃æ</hw>
-</entry>
-<entry id="syang25">
-<gl>oiseau</gl>
-<hw>³³'³³ɲimjaŋ</hw>
-</entry>
-<entry id="syang26">
-<gl>chien</gl>
-<hw>⁵⁵'⁵⁴nakju</hw>
-</entry>
-<entry id="syang27">
-<gl>pou</gl>
-<hw>⁵¹ʃje</hw>
-</entry>
-<entry id="syang28">
-<gl>arbre</gl>
-<hw>³¹tuŋ³¹tuʱŋ
-</hw>
-</entry>
-<entry id="syang29">
-<gl>arbre</gl>
-<hw>˩tuŋXtuʱŋ
-</hw>
-</entry>
-<entry id="syang30">
-<gl>graine</gl>
-<hw>²¹plu²¹pluʱ
-</hw>
-</entry>
-<entry id="syang31">
-<gl>petite feuille</gl>
-<hw>⁵⁵pa</hw>
-</entry>
-<entry id="syang32">
-<gl>feuille</gl>
-<hw>Xɬapa</hw>
-</entry>
-<entry id="syang33">
-<gl>feuille</gl>
-<hw>²¹baː²¹bʱaʱː
-</hw>
-</entry>
-<entry id="syang34">
-<gl>racine</gl>
-<hw>˩priXpriʱ
-</hw>
-</entry>
-<entry id="syang35">
-<gl>racine</gl>
-<hw>²²'²¹tuŋʈa²²'²¹tuʱŋʈaʱ
-</hw>
-</entry>
-<entry id="syang36">
-<gl>écorce</gl>
-<hw>⁵⁵'⁴³ʃin-pʰi</hw>
-</entry>
-<entry id="syang37">
-<gl>peau</gl>
-<hw>˩ʈiXʈiʱ
-</hw>
-</entry>
-<entry id="syang38">
-<gl>peau</gl>
-<hw>²¹ɖi²¹ɖiʱ
-</hw>
-</entry>
-<entry id="syang39">
-<gl>chair</gl>
-<hw>³³ʃjʌ</hw>
-</entry>
-<entry id="syang40">
-<gl>sang</gl>
-<hw>⁵⁴ka</hw>
-</entry>
-<entry id="syang41">
-<gl>sang</gl>
-<hw>⁵³kaː</hw>
-</entry>
-<entry id="syang42">
-<gl>os</gl>
-<hw>²²'²¹nʌʈi</hw>
-</entry>
-<entry id="syang43">
-<gl>os long</gl>
-<hw>Xkaŋ</hw>
-</entry>
-<entry id="syang44">
-<gl>os long</gl>
-<hw>⁵⁵kaŋ</hw>
-</entry>
-<entry id="syang45">
-<gl>os</gl>
-<hw>⁵⁵'⁵⁵nakji</hw>
-</entry>
-<entry id="syang46">
-<gl>gras</gl>
-<hw>⁵¹tʃʰi</hw>
-</entry>
-<entry id="syang47">
-<gl>oeuf</gl>
-<hw>⁵⁴pʰum</hw>
-</entry>
-<entry id="syang48">
-<gl>corne</gl>
-<hw>⁵⁵ru</hw>
-</entry>
-<entry id="syang49">
-<gl>queue</gl>
-<hw>⁵⁴me</hw>
-</entry>
-<entry id="syang50">
-<gl>queue</gl>
-<hw>⁵²meː</hw>
-</entry>
-<entry id="syang51">
-<gl>plume/poil</gl>
-<hw>⁵⁴tsʰʌm</hw>
-</entry>
-<entry id="syang52">
-<gl>cheveux</gl>
-<hw>⁴⁴ke</hw>
-</entry>
-<entry id="syang53">
-<gl>cheveux</gl>
-<hw>⁵⁵'⁵⁵kjɛtsʰʌm</hw>
-</entry>
-<entry id="syang54">
-<gl>tête</gl>
-<hw>⁵⁵kja</hw>
-</entry>
-<entry id="syang55">
-<gl>tête</gl>
-<hw>⁵³kja</hw>
-</entry>
-<entry id="syang56">
-<gl>oreille</gl>
-<hw>˩nʌXnʌʱ
-</hw>
-</entry>
-<entry id="syang57">
-<gl>oreille</gl>
-<hw>˩nabjaŋXnaʱbjaʱŋ
-</hw>
-</entry>
-<entry id="syang58">
-<gl>trou de l'oreille</gl>
-<hw>¹¹'⁵³nʌkʰuŋ¹¹'⁵³nʌʱkʰuŋ
-</hw>
-</entry>
-<entry id="syang59">
-<gl>oreille</gl>
-<hw>²¹naː</hw>
-</entry>
-<entry id="syang60">
-<gl>oeil</gl>
-<hw>⁵⁵mi</hw>
-</entry>
-<entry id="syang61">
-<gl>nez</gl>
-<hw>⁵⁴na</hw>
-</entry>
-<entry id="syang62">
-<gl>nez</gl>
-<hw>⁵⁴na</hw>
-</entry>
-<entry id="syang63">
-<gl>bouche</gl>
-<hw>⁵⁴suŋ</hw>
-</entry>
-<entry id="syang64">
-<gl>bouche</gl>
-<hw>⁵⁵suŋ</hw>
-</entry>
-<entry id="syang65">
-<gl>dent</gl>
-<hw>Xsʌ</hw>
-</entry>
-<entry id="syang66">
-<gl>dent</gl>
-<hw>⁵⁴soː</hw>
-</entry>
-<entry id="syang67">
-<gl>ongle</gl>
-<hw>⁵⁴tʃʰin</hw>
-</entry>
-<entry id="syang68">
-<gl>pied</gl>
-<hw>¹¹'⁵⁴pale¹¹'⁵⁴paʱle
-</hw>
-</entry>
-<entry id="syang69">
-<gl>genou</gl>
-<hw>⁵⁵'⁵⁵pukja</hw>
-</entry>
-<entry id="syang70">
-<gl>ventre</gl>
-<hw>⁵⁵pʰo</hw>
-</entry>
-<entry id="syang71">
-<gl>cou</gl>
-<hw>⁵⁴kʰa</hw>
-</entry>
-<entry id="syang72">
-<gl>cou</gl>
-<hw>⁵⁵'⁴⁴kʰari</hw>
-</entry>
-<entry id="syang73">
-<gl>seins</gl>
-<hw>˩ɲeXɲeʱ
-</hw>
-</entry>
-<entry id="syang74">
-<gl>seins</gl>
-<hw>²¹ɲe²¹ɲeʱ
-</hw>
-</entry>
-<entry id="syang75">
-<gl>coeur</gl>
-<hw>⁵⁴tin</hw>
-</entry>
-<entry id="syang76">
-<gl>foie</gl>
-<hw>⁴⁵ɲe</hw>
-</entry>
-<entry id="syang77">
-<gl>foie</gl>
-<hw>²³ɲe²³ɲeʱ
-</hw>
-</entry>
-<entry id="syang78">
-<gl>boire</gl>
-<hw>⁵⁵'⁵⁵tʰuŋ-o</hw>
-</entry>
-<entry id="syang79">
-<gl>manger</gl>
-<hw>⁵⁴'⁴⁴tsa-ba</hw>
-</entry>
-<entry id="syang80">
-<gl>mordre</gl>
-<hw>²¹'³³dzi-dzi²¹'³³dziʱ-dzi
-</hw>
-</entry>
-<entry id="syang81">
-<gl>voir</gl>
-<hw>⁵⁵'³³mraŋ-ba</hw>
-</entry>
-<entry id="syang82">
-<gl>regarder</gl>
-<hw>⁴⁴'⁵³ɲo-ba</hw>
-</entry>
-<entry id="syang83">
-<gl>chercher</gl>
-<hw>⁵⁵'⁴⁴tsja·-go</hw>
-</entry>
-<entry id="syang84">
-<gl>entendre</gl>
-<hw>⁵⁵'⁴⁴tʰe-ba</hw>
-</entry>
-<entry id="syang85">
-<gl>entendre</gl>
-<hw>Xtʰɛ·-ba</hw>
-</entry>
-<entry id="syang86">
-<gl>écouter</gl>
-<hw>⁵⁵'⁴⁴ɲɛn-mu</hw>
-</entry>
-<entry id="syang87">
-<gl>savoir (faire)</gl>
-<hw>⁵⁵'⁵⁵ʃje-ba</hw>
-</entry>
-<entry id="syang88">
-<gl>savoir (faire)</gl>
-<hw>⁵⁵'⁵⁵ʃje-ba</hw>
-</entry>
-<entry id="syang89">
-<gl>tuer</gl>
-<hw>⁵⁵'⁴⁴sɛː-ba</hw>
-</entry>
-<entry id="syang90">
-<gl>marcher</gl>
-<hw>¹¹'¹¹pra-wa</hw>
-</entry>
-<entry id="syang91">
-<gl>marcher</gl>
-<hw>¹¹'¹¹bra-βa¹¹'¹¹bʱraʱ-βa
-</hw>
-</entry>
-<entry id="syang92">
-<gl>sit</gl>
-<hw>⁵⁵'⁵⁵ʈu-ba</hw>
-</entry>
-<entry id="syang93">
-<gl>soleil</gl>
-<hw>¹¹'²¹dini¹¹'²¹diʱni
-</hw>
-</entry>
-<entry id="syang94">
-<gl>lune</gl>
-<hw>⁵⁵ɬa ¹¹'²¹dini⁵⁵ɬa ¹¹'²¹diʱni
-</hw>
-</entry>
-<entry id="syang95">
-<gl>étoile</gl>
-<hw>⁵⁴sar</hw>
-</entry>
-<entry id="syang96">
-<gl>étoile</gl>
-<hw>⁵⁵sʌr</hw>
-</entry>
-<entry id="syang97">
-<gl>eau</gl>
-<hw>⁵⁵kju</hw>
-</entry>
-<entry id="syang98">
-<gl>pluie</gl>
-<hw>⁵⁵nam ⁵⁵'⁵⁵jud-zi</hw>
-</entry>
-<entry id="syang99">
-<gl>pierre</gl>
-<hw>⁵⁴jum</hw>
-</entry>
-<entry id="syang100">
-<gl>terre</gl>
-<hw>⁵⁴sʌ</hw>
-</entry>
-<entry id="syang101">
-<gl>terre</gl>
-<hw>⁵⁴sʌ</hw>
-</entry>
-<entry id="syang102">
-<gl>nuage</gl>
-<hw>˩moXmoʱ
-</hw>
-</entry>
-<entry id="syang103">
-<gl>feu</gl>
-<hw>⁵⁴mi</hw>
-</entry>
-<entry id="syang104">
-<gl>fumée</gl>
-<hw>Xmuiki</hw>
-</entry>
-<entry id="syang105">
-<gl>feu</gl>
-<hw>⁵⁴mi</hw>
-</entry>
-<entry id="syang106">
-<gl>cendres</gl>
-<hw>⁵⁵'⁵⁵nepra</hw>
-</entry>
-<entry id="syang107">
-<gl>cendres</gl>
-<hw>⁵⁵'⁴⁴njʌpra</hw>
-</entry>
-<entry id="syang108">
-<gl>sommet</gl>
-<hw>⁵¹kaŋ</hw>
-</entry>
-<entry id="syang109">
-<gl>étendue sans végétation</gl>
-<hw>⁵⁴paŋ</hw>
-</entry>
-<entry id="syang110">
-<gl>montée</gl>
-<hw>²¹lʌ²¹lʌʱ
-</hw>
-</entry>
-<entry id="syang111">
-<gl>montée</gl>
-<hw>³¹la³¹laʱ
-</hw>
-</entry>
-<entry id="syang112">
-<gl>pente</gl>
-<hw>¹¹pra¹¹praʱ
-</hw>
-</entry>
-<entry id="syang113">
-<gl>pente, falaise</gl>
-<hw>¹²pra</hw>
-</entry>
-<entry id="syang114">
-<gl>rouge</gl>
-<hw>Xola</hw>
-</entry>
-<entry id="syang115">
-<gl>vert</gl>
-<hw>²¹'⁴⁴tʃjoŋku</hw>
-</entry>
-<entry id="syang116">
-<gl>bleu</gl>
-<hw>Xpin</hw>
-</entry>
-<entry id="syang117">
-<gl>jaune</gl>
-<hw>⁵⁵ur</hw>
-</entry>
-<entry id="syang118">
-<gl>blanc</gl>
-<hw>⁵⁴tar</hw>
-</entry>
-<entry id="syang119">
-<gl>blanc</gl>
-<hw>⁵⁴tʌr</hw>
-</entry>
-<entry id="syang120">
-<gl>marron</gl>
-<hw>²¹'²²tʃjatse</hw>
-</entry>
-<entry id="syang121">
-<gl>noir</gl>
-<hw>Xmlaŋ</hw>
-</entry>
-<entry id="syang122">
-<gl>chaud (vêtement)</gl>
-<hw>²²'¹¹ɖo-mu²²'¹¹ɖoʱ-mu
-</hw>
-</entry>
-<entry id="syang123">
-<gl>faire chauffer</gl>
-<hw>⁵⁵'⁴⁴ɬogo</hw>
-</entry>
-<entry id="syang124">
-<gl>avoir chaud</gl>
-<hw>¹¹'²¹ʈo-mu¹¹'²¹ʈoʱ-mu
-</hw>
-</entry>
-<entry id="syang125">
-<gl>avoir trop chaud</gl>
-<hw>Xtsʰewʌ tsʰa-mu</hw>
-</entry>
-<entry id="syang126">
-<gl>chaud</gl>
-<hw>²¹'²²pʌi ⁵⁵'⁵⁵tsʰa-mu</hw>
-</entry>
-<entry id="syang127">
-<gl>froid</gl>
-<hw>⁵⁵'⁴⁴'³³ʃim-bu-mu</hw>
-</entry>
-<entry id="syang128">
-<gl>froid</gl>
-<hw>⁵⁵'⁴⁴kʰaŋ-mu</hw>
-</entry>
-<entry id="syang129">
-<gl>plein</gl>
-<hw>⁵⁵'¹¹'¹¹kaŋtsjemu</hw>
-</entry>
-<entry id="syang130">
-<gl>plein</gl>
-<hw>⁵⁴naŋ</hw>
-</entry>
-<entry id="syang131">
-<gl>neuf</gl>
-<hw>⁴⁴'⁴³sam-ba</hw>
-</entry>
-<entry id="syang132">
-<gl>sec</gl>
-<hw>⁵⁵'⁵⁴kʰʌr-ba</hw>
-</entry>
-<entry id="syang133">
-<gl>nom</gl>
-<hw>³²min</hw>
-</entry>
-<entry id="syang134">
-<gl>nom</gl>
-<hw>⁵¹min</hw>
-</entry>
-<entry id="syang135">
-<gl>image du corps</gl>
-<hw>⁵⁴li</hw>
-</entry>
-<entry id="syang136">
-<gl>visage</gl>
-<hw>Xhli</hw>
-</entry>
-<entry id="syang137">
-<gl>visage</gl>
-<hw>⁵³hli</hw>
-</entry>
-<entry id="syang138">
-<gl>moelle</gl>
-<hw>⁵⁵'⁵⁵prelaŋ</hw>
-</entry>
-<entry id="syang139">
-<gl>articulation</gl>
-<hw>⁵⁵'³³tʰiba</hw>
-</entry>
-<entry id="syang140">
-<gl>veine</gl>
-<hw>⁵⁴tsʌ</hw>
-</entry>
-<entry id="syang141">
-<gl>ligament</gl>
-<hw>⁵⁵ʃja ¹¹'²²pobo⁵⁵ʃja ¹¹'²²poʱbo
-</hw>
-</entry>
-<entry id="syang142">
-<gl>ride</gl>
-<hw>⁵⁵'⁵⁵ɲɛrmo ¹¹'¹¹'¹¹tidzimo</hw>
-</entry>
-<entry id="syang143">
-<gl>poil du corps</gl>
-<hw>¹¹'³²potsʰʌm</hw>
-</entry>
-<entry id="syang144">
-<gl>poil du pubis (fem.)</gl>
-<hw>Xtutsʰʌm</hw>
-</entry>
-<entry id="syang145">
-<gl>poil du pubis (hom.)</gl>
-<hw>³³'³³mletsʰʌm</hw>
-</entry>
-<entry id="syang146">
-<gl>arcade sourcilière</gl>
-<hw>⁵⁵'⁵⁵miru</hw>
-</entry>
-<entry id="syang147">
-<gl>cils</gl>
-<hw>⁵⁵'⁵⁴mitsʰʌm</hw>
-</entry>
-<entry id="syang148">
-<gl>barbe et moustache</gl>
-<hw>¹¹'¹¹mʌŋri</hw>
-</entry>
-<entry id="syang149">
-<gl>barbe et moustache</gl>
-<hw>⁵⁵'⁵⁵maŋʈi</hw>
-</entry>
-<entry id="syang150">
-<gl>cerveau</gl>
-<hw>⁵⁵'⁵⁴ʃjegri</hw>
-</entry>
-<entry id="syang151">
-<gl>front</gl>
-<hw>˩ŋoXŋoʱ
-</hw>
-</entry>
-<entry id="syang152">
-<gl>joue</gl>
-<hw>¹¹'⁴³ʈampa</hw>
-</entry>
-<entry id="syang153">
-<gl>menton</gl>
-<hw>⁵⁴kʌm</hw>
-</entry>
-<entry id="syang154">
-<gl>menton</gl>
-<hw>⁵⁵kʌm</hw>
-</entry>
-<entry id="syang155">
-<gl>pupille</gl>
-<hw>⁵⁵mi ¹¹'¹¹gjalpo⁵⁵mi ¹¹'¹¹gjaʱlpo
-</hw>
-</entry>
-<entry id="syang156">
-<gl>narines</gl>
-<hw>Xnakʰũŋ</hw>
-</entry>
-<entry id="syang157">
-<gl>trou d'oreille</gl>
-<hw>¹¹'⁵⁴nʌkʰuŋ¹¹'⁵⁴nʌʱkʰuŋ
-</hw>
-</entry>
-<entry id="syang158">
-<gl>lobe d'oreille</gl>
-<hw>¹¹nʌ ⁴⁴'⁴⁴kotʰoŋ¹¹nʌʱ ⁴⁴'⁴⁴kotʰoŋ
-</hw>
-</entry>
-<entry id="syang159">
-<gl>lèvre supérieure</gl>
-<hw>¹¹'³¹jamdzju</hw>
-</entry>
-<entry id="syang160">
-<gl>lèvre supérieure</gl>
-<hw>⁵⁵'⁵⁵mane</hw>
-</entry>
-<entry id="syang161">
-<gl>lèvre inférieure</gl>
-<hw>²²'²¹mʌmdzju</hw>
-</entry>
-<entry id="syang162">
-<gl>molaire</gl>
-<hw>⁵⁵'⁴⁴kʰari</hw>
-</entry>
-<entry id="syang163">
-<gl>trachée</gl>
-<hw>⁵⁵'⁵⁵'²²oltoŋgja</hw>
-</entry>
-<entry id="syang164">
-<gl>oesophage</gl>
-<hw>⁴⁴'⁴⁴pʰomjuŋ</hw>
-</entry>
-<entry id="syang165">
-<gl>épaule</gl>
-<hw>²¹pʌm²¹pʌʱm
-</hw>
-</entry>
-<entry id="syang166">
-<gl>nuque</gl>
-<hw>⁵⁵'³³tagjuŋ</hw>
-</entry>
-<entry id="syang167">
-<gl>dos</gl>
-<hw>˩koXkoʱ
-</hw>
-</entry>
-<entry id="syang168">
-<gl>dos</gl>
-<hw>²¹²go²¹²goʱ
-</hw>
-</entry>
-<entry id="syang169">
-<gl>bas du dos (reins)</gl>
-<hw>⁵⁵kʌe</hw>
-</entry>
-<entry id="syang170">
-<gl>colonne vertébrale</gl>
-<hw>¹¹'¹¹guʃjuŋ ⁵⁵'⁵⁵nakji</hw>
-</entry>
-<entry id="syang171">
-<gl>poitrine</gl>
-<hw>⁵⁴ku</hw>
-</entry>
-<entry id="syang172">
-<gl>côte</gl>
-<hw>⁵⁴⁵re</hw>
-</entry>
-<entry id="syang173">
-<gl>côte</gl>
-<hw>⁴⁵re</hw>
-</entry>
-<entry id="syang174">
-<gl>poumon</gl>
-<hw>¹¹'⁵⁵ʃjo-ʃja¹¹'⁵⁵ʃjoʱ-ʃja
-</hw>
-</entry>
-<entry id="syang175">
-<gl>waist</gl>
-<hw>⁵⁴ʈe</hw>
-</entry>
-<entry id="syang176">
-<gl>waist</gl>
-<hw>⁵⁵kʌe</hw>
-</entry>
-<entry id="syang177">
-<gl>nombril</gl>
-<hw>¹¹'⁵⁵pwikoŋ</hw>
-</entry>
-<entry id="syang178">
-<gl>estomac</gl>
-<hw>⁵⁵'⁵⁵kʰokpa</hw>
-</entry>
-<entry id="syang179">
-<gl>estomac</gl>
-<hw>⁵⁵'⁵⁵kʰokpa</hw>
-</entry>
-<entry id="syang180">
-<gl>reins</gl>
-<hw>⁵⁵'⁴⁴kʰalto</hw>
-</entry>
-<entry id="syang181">
-<gl>intestins</gl>
-<hw>⁴¹gum</hw>
-</entry>
-<entry id="syang182">
-<gl>intestins</gl>
-<hw>Xʈim</hw>
-</entry>
-<entry id="syang183">
-<gl>intestins</gl>
-<hw>²¹gum²¹guʱm
-</hw>
-</entry>
-<entry id="syang184">
-<gl>bras</gl>
-<hw>⁵⁴ja</hw>
-</entry>
-<entry id="syang185">
-<gl>bras droit</gl>
-<hw>⁴⁴'⁴⁴keja</hw>
-</entry>
-<entry id="syang186">
-<gl>bras droit</gl>
-<hw>⁵⁵'⁵⁵keja</hw>
-</entry>
-<entry id="syang187">
-<gl>bras gauche</gl>
-<hw>⁴⁴'⁴⁴pʌja</hw>
-</entry>
-<entry id="syang188">
-<gl>bras gauche</gl>
-<hw>⁵⁵'⁵⁵paja</hw>
-</entry>
-<entry id="syang189">
-<gl>aisselle</gl>
-<hw>⁵⁵'⁵⁵'⁵⁴njagana</hw>
-</entry>
-<entry id="syang190">
-<gl>coude</gl>
-<hw>⁵⁵ja ⁴⁴kum</hw>
-</entry>
-<entry id="syang191">
-<gl>coude</gl>
-<hw>⁵⁵ja ⁴⁴kum</hw>
-</entry>
-<entry id="syang192">
-<gl>poignet</gl>
-<hw>⁵⁵ja ⁵³tsʰi</hw>
-</entry>
-<entry id="syang193">
-<gl>paume</gl>
-<hw>⁵⁵ja ⁵⁴tʰin</hw>
-</entry>
-<entry id="syang194">
-<gl>doigt</gl>
-<hw>[jařʃi]</hw>
-</entry>
-<entry id="syang195">
-<gl>doigt</gl>
-<hw>⁵³ja ⁴⁴hři</hw>
-</entry>
-<entry id="syang196">
-<gl>annulaire</gl>
-<hw>Xbale-hri</hw>
-</entry>
-<entry id="syang197">
-<gl>pouce</gl>
-<hw>⁵⁵ja ¹¹'¹¹poba⁵⁵ja ¹¹'¹¹poʱba
-</hw>
-</entry>
-<entry id="syang198">
-<gl>majeur</gl>
-<hw>˩pale ¹¹'¹¹pobaXpaʱle ¹¹'¹¹poʱba
-</hw>
-</entry>
-<entry id="syang199">
-<gl>cuisse</gl>
-<hw>¹¹'⁵³pleʃin</hw>
-</entry>
-<entry id="syang200">
-<gl>cuisse</gl>
-<hw>²¹'³³pljaʃin</hw>
-</entry>
-<entry id="syang201">
-<gl>mollet</gl>
-<hw>Xtimiʃja</hw>
-</entry>
-<entry id="syang202">
-<gl>mollet</gl>
-<hw>⁵⁵'⁵⁵'⁴⁴temeʃja</hw>
-</entry>
-<entry id="syang203">
-<gl>talon</gl>
-<hw>¹¹'¹¹pale ⁵⁵tim¹¹'¹¹paʱle ⁵⁵tim
-</hw>
-</entry>
-<entry id="syang204">
-<gl>cheville</gl>
-<hw>⁵⁵'⁵⁵poŋa</hw>
-</entry>
-<entry id="syang205">
-<gl>plante du pied</gl>
-<hw>¹¹'¹¹pale ⁵⁵tʰin¹¹'¹¹paʱle ⁵⁵tʰin
-</hw>
-</entry>
-<entry id="syang206">
-<gl>pus</gl>
-<hw>²¹na²¹naʱ
-</hw>
-</entry>
-<entry id="syang207">
-<gl>pus</gl>
-<hw>¹¹naː¹¹naʱː
-</hw>
-</entry>
-<entry id="syang208">
-<gl>pus</gl>
-<hw>˩naXnaʱ
-</hw>
-</entry>
-<entry id="syang209">
-<gl>cire d'oreille, cérumen</gl>
-<hw>¹¹'⁵³napi</hw>
-</entry>
-<entry id="syang210">
-<gl>larmes</gl>
-<hw>⁵⁴miː ⁴⁴'⁴⁴muki (juba)</hw>
-</entry>
-<entry id="syang211">
-<gl>larmes</gl>
-<hw>⁵⁵mi ⁴⁴'⁴⁴muki</hw>
-</entry>
-<entry id="syang212">
-<gl>morve</gl>
-<hw>⁵⁵no (⁵⁴'⁴⁴juba)</hw>
-</entry>
-<entry id="syang213">
-<gl>morve</gl>
-<hw>⁵⁵no</hw>
-</entry>
-<entry id="syang214">
-<gl>salive</gl>
-<hw>⁵⁵to</hw>
-</entry>
-<entry id="syang215">
-<gl>bave</gl>
-<hw>⁵⁵'⁵⁴kʰati</hw>
-</entry>
-<entry id="syang216">
-<gl>bave</gl>
-<hw>⁵⁵'⁴⁴kʰati</hw>
-</entry>
-<entry id="syang217">
-<gl>crachat</gl>
-<hw>⁵⁴to</hw>
-</entry>
-<entry id="syang218">
-<gl>crachat</gl>
-<hw>⁴⁴'³³kʰaːni</hw>
-</entry>
-<entry id="syang219">
-<gl>eau amère dans bouche</gl>
-<hw>⁵⁵'⁵⁵kʌmkju</hw>
-</entry>
-<entry id="syang220">
-<gl>respiration</gl>
-<hw>⁵⁵sa</hw>
-</entry>
-<entry id="syang221">
-<gl>vomissement</gl>
-<hw>⁴⁴ʃjaŋ ⁵⁵'⁴⁴kʰaba</hw>
-</entry>
-<entry id="syang222">
-<gl>vomissement</gl>
-<hw>²¹ʃjaŋ ⁴⁴'⁴⁴kʰaba²¹ʃjaʱŋ ⁴⁴'⁴⁴kʰaba
-</hw>
-</entry>
-<entry id="syang223">
-<gl>bile</gl>
-<hw>⁵⁴kʌm</hw>
-</entry>
-<entry id="syang224">
-<gl>bile</gl>
-<hw>⁵⁴kʌm</hw>
-</entry>
-<entry id="syang225">
-<gl>faeces</gl>
-<hw>⁵⁵ki</hw>
-</entry>
-<entry id="syang226">
-<gl>faeces</gl>
-<hw>⁵⁵li</hw>
-</entry>
-<entry id="syang227">
-<gl>urine</gl>
-<hw>⁵⁴kum</hw>
-</entry>
-<entry id="syang228">
-<gl>urine</gl>
-<hw>⁴⁴kʷoŋ</hw>
-</entry>
-<entry id="syang229">
-<gl>sueur</gl>
-<hw>⁵⁵hru</hw>
-</entry>
-<entry id="syang230">
-<gl>sueur</gl>
-<hw>⁵⁴řʰu (⁴⁴'⁴⁴jiba)</hw>
-</entry>
-<entry id="syang231">
-<gl>crasse</gl>
-<hw>⁵¹ɖi</hw>
-</entry>
-<entry id="syang232">
-<gl>crasse</gl>
-<hw>²¹gɨ²¹gʱɨʱ
-</hw>
-</entry>
-<entry id="syang233">
-<gl>pénis</gl>
-<hw>⁵¹mle⁵¹mleʱ
-</hw>
-</entry>
-<entry id="syang234">
-<gl>testicules</gl>
-<hw>¹¹'⁴³gupʰum</hw>
-</entry>
-<entry id="syang235">
-<gl>vagin</gl>
-<hw>⁵⁵tu</hw>
-</entry>
-<entry id="syang236">
-<gl>av. règles</gl>
-<hw>Xkʰam asaŋba tamu</hw>
-</entry>
-<entry id="syang237">
-<gl>sperme</gl>
-<hw>⁵⁵ɲa</hw>
-</entry>
-<entry id="syang238">
-<gl>os long</gl>
-<hw>Xkaŋ</hw>
-</entry>
-<entry id="syang239">
-<gl>pet</gl>
-<hw>⁵⁵pʰe</hw>
-</entry>
-<entry id="syang240">
-<gl>rot</gl>
-<hw>⁵⁴ap</hw>
-</entry>
-<entry id="syang241">
-<gl>qui a six doigts</gl>
-<hw>²¹'³³laːru</hw>
-</entry>
-<entry id="syang242">
-<gl>qui a six doigts</gl>
-<hw>²¹'²²laʈu</hw>
-</entry>
-<entry id="syang243">
-<gl>qui a un bec de lièvre</gl>
-<hw>⁵⁵suŋ ⁵⁵pre</hw>
-</entry>
-<entry id="syang244">
-<gl>qui a un bec de lièvre (homme)</gl>
-<hw>⁵⁴pre</hw>
-</entry>
-<entry id="syang245">
-<gl>qui a un bec de lièvre (femme)</gl>
-<hw>⁵⁵'⁵⁵preʃja</hw>
-</entry>
-<entry id="syang246">
-<gl>ganglions</gl>
-<hw>⁵⁵'⁵⁵'⁵⁴kanaso</hw>
-</entry>
-<entry id="syang247">
-<gl>raie des cheveux</gl>
-<hw>⁵⁵ŋo</hw>
-</entry>
-<entry id="syang248">
-<gl>fontanelle (ouverte)</gl>
-<hw>¹¹ŋo ⁵⁴'⁴⁴'⁴⁴atʃʰuba¹¹ŋoʱ ⁵⁴'⁴⁴'⁴⁴atʃʰuba
-</hw>
-</entry>
-<entry id="syang249">
-<gl>gencives</gl>
-<hw>⁴⁴'¹¹sonje⁴⁴'¹¹sonjeʱ
-</hw>
-</entry>
-<entry id="syang250">
-<gl>gencives</gl>
-<hw>⁵⁵'¹¹soɲe⁵⁵'¹¹soɲeʱ
-</hw>
-</entry>
-<entry id="syang251">
-<gl>coq</gl>
-<hw>⁵⁵'⁵⁵naka</hw>
-</entry>
-<entry id="syang252">
-<gl>coq</gl>
-<hw>³³'³³naga</hw>
-</entry>
-<entry id="syang253">
-<gl>poule</gl>
-<hw>⁵⁵'⁵⁵naga ³³'³³momo</hw>
-</entry>
-<entry id="syang254">
-<gl>poussin</gl>
-<hw>Xnaga Xtsadza</hw>
-</entry>
-<entry id="syang255">
-<gl>crête (de coq)</gl>
-<hw>²¹ʈa²¹ʈaʱ
-</hw>
-</entry>
-<entry id="syang256">
-<gl>nid</gl>
-<hw>³¹tsaŋ³¹tsaʱŋ
-</hw>
-</entry>
-<entry id="syang257">
-<gl>aile</gl>
-<hw>⁴⁴'⁵⁴taŋra</hw>
-</entry>
-<entry id="syang258">
-<gl>bovin</gl>
-<hw>¹¹meː¹¹meʱː
-</hw>
-</entry>
-<entry id="syang259">
-<gl>chèvre</gl>
-<hw>⁵⁵rʌ</hw>
-</entry>
-<entry id="syang260">
-<gl>mouton</gl>
-<hw>²¹kju²¹kjuʱ
-</hw>
-</entry>
-<entry id="syang261">
-<gl>cheval</gl>
-<hw>⁵⁴tʌ</hw>
-</entry>
-<entry id="syang262">
-<gl>cheval</gl>
-<hw>Xtʌ</hw>
-</entry>
-<entry id="syang263">
-<gl>âne</gl>
-<hw>¹¹'³³pumbu</hw>
-</entry>
-<entry id="syang264">
-<gl>yack</gl>
-<hw>⁵⁴⁵ja</hw>
-</entry>
-<entry id="syang265">
-<gl>yack femelle</gl>
-<hw>⁵⁴pri</hw>
-</entry>
-<entry id="syang266">
-<gl>yack hybride</gl>
-<hw>˩dzodzoʱ
-</hw>
-</entry>
-<entry id="syang267">
-<gl>chat</gl>
-<hw>⁵¹noː</hw>
-</entry>
-<entry id="syang268">
-<gl>chat</gl>
-<hw>⁵¹no</hw>
-</entry>
-<entry id="syang269">
-<gl>griffe</gl>
-<hw>¹¹'⁵⁴ʈʌʃin¹¹'⁵⁴ʈʌʱʃin
-</hw>
-</entry>
-<entry id="syang270">
-<gl>rat</gl>
-<hw>Xnimju</hw>
-</entry>
-<entry id="syang271">
-<gl>mangouste</gl>
-<hw>¹¹'⁵³tɔŋɖi</hw>
-</entry>
-<entry id="syang272">
-<gl>tigre</gl>
-<hw>⁵¹maŋ</hw>
-</entry>
-<entry id="syang273">
-<gl>tigre</gl>
-<hw>Xtsjɛn</hw>
-</entry>
-<entry id="syang274">
-<gl>tigre</gl>
-<hw>¹¹maŋ¹¹maʱŋ
-</hw>
-</entry>
-<entry id="syang275">
-<gl>frog</gl>
-<hw>⁵⁵pjen</hw>
-</entry>
-<entry id="syang276">
-<gl>toad</gl>
-<hw>¹¹'¹¹bogo¹¹'¹¹boʱgo
-</hw>
-</entry>
-<entry id="syang277">
-<gl>coquille d'oeuf</gl>
-<hw>⁵³kʰo</hw>
-</entry>
-<entry id="syang278">
-<gl>sangsue</gl>
-<hw>⁵⁵'⁵⁴tebe</hw>
-</entry>
-<entry id="syang279">
-<gl>sangsue</gl>
-<hw>⁴⁴'³³tebe</hw>
-</entry>
-<entry id="syang280">
-<gl>sangsue d'eau</gl>
-<hw>⁵⁵'⁵⁵'⁵⁵timili</hw>
-</entry>
-<entry id="syang281">
-<gl>ver blanc</gl>
-<hw>²²'²¹buluŋ²²'²¹buʱluŋ
-</hw>
-</entry>
-<entry id="syang282">
-<gl>puce</gl>
-<hw>⁵⁵'⁵⁵taŋli</hw>
-</entry>
-<entry id="syang283">
-<gl>punaise</gl>
-<hw>⁵⁵'⁵⁵kopjaŋ</hw>
-</entry>
-<entry id="syang284">
-<gl>mite</gl>
-<hw>²¹di²¹dʱiʱ
-</hw>
-</entry>
-<entry id="syang285">
-<gl>abeille</gl>
-<hw>¹¹goi¹¹goʱi
-</hw>
-</entry>
-<entry id="syang286">
-<gl>excréments d'animaux</gl>
-<hw>⁵⁴'⁴⁴muti</hw>
-</entry>
-<entry id="syang287">
-<gl>excréments d'animaux</gl>
-<hw>²²'²¹mudi²²'²¹mudiʱ
-</hw>
-</entry>
-<entry id="syang288">
-<gl>crotte de poulet</gl>
-<hw>⁵⁵'⁵⁵naga ⁵⁴⁵tɯi</hw>
-</entry>
-<entry id="syang289">
-<gl>nourriture des poules</gl>
-<hw>˩seXseʱ
-</hw>
-</entry>
-<entry id="syang290">
-<gl>petit</gl>
-<hw>˩dzadzaXdzaʱdzaʱ
-</hw>
-</entry>
-<entry id="syang291">
-<gl>petit</gl>
-<hw>¹¹'¹¹dzadza¹¹'¹¹dzaʱdzaʱ
-</hw>
-</entry>
-<entry id="syang292">
-<gl>épine</gl>
-<hw>⁵⁵'⁵⁵pudzu</hw>
-</entry>
-<entry id="syang293">
-<gl>bois</gl>
-<hw>Xʃin</hw>
-</entry>
-<entry id="syang294">
-<gl>planche</gl>
-<hw>Xtʰa</hw>
-</entry>
-<entry id="syang295">
-<gl>branche</gl>
-<hw>²¹'⁴⁴jaka</hw>
-</entry>
-<entry id="syang296">
-<gl>souche</gl>
-<hw>⁵⁵ʃin ³³'⁴²prapra</hw>
-</entry>
-<entry id="syang297">
-<gl>fleur</gl>
-<hw>¹¹'²¹mɛndo</hw>
-</entry>
-<entry id="syang298">
-<gl>parfum</gl>
-<hw>⁵⁵tʰaŋ</hw>
-</entry>
-<entry id="syang299">
-<gl>parfum</gl>
-<hw>⁵⁵tʰaŋ</hw>
-</entry>
-<entry id="syang300">
-<gl>citron</gl>
-<hw>⁵¹kjuŋ</hw>
-</entry>
-<entry id="syang301">
-<gl>pousses de bambou</gl>
-<hw>⁵⁵'⁴⁴matʌr</hw>
-</entry>
-<entry id="syang302">
-<gl>niŋalo</gl>
-<hw>⁵¹mʌʰ</hw>
-</entry>
-<entry id="syang303">
-<gl>niŋalo</gl>
-<hw>⁵⁴ma</hw>
-</entry>
-<entry id="syang304">
-<gl>mauvaise herbe</gl>
-<hw>⁵⁵mra</hw>
-</entry>
-<entry id="syang305">
-<gl>fourrage sec</gl>
-<hw>⁵⁴tʃʰi</hw>
-</entry>
-<entry id="syang306">
-<gl>fourrage sec</gl>
-<hw>⁵¹tʃʰi</hw>
-</entry>
-<entry id="syang307">
-<gl>paille de blé</gl>
-<hw>⁵⁴tʃʰi</hw>
-</entry>
-<entry id="syang308">
-<gl>son (de grain)</gl>
-<hw>⁴⁵pwi</hw>
-</entry>
-<entry id="syang309">
-<gl>écorce du maïs</gl>
-<hw>Xpʰi</hw>
-</entry>
-<entry id="syang310">
-<gl>barbe du maïs</gl>
-<hw>⁴⁴kje ⁵⁵ur</hw>
-</entry>
-<entry id="syang311">
-<gl>riz non décortiqué</gl>
-<hw/>
-</entry>
-<entry id="syang312">
-<gl>riz non décortiqué</gl>
-<hw>¹¹'⁵⁴mlasun</hw>
-</entry>
-<entry id="syang313">
-<gl>épi de riz</gl>
-<hw>⁵⁴pʰum</hw>
-</entry>
-<entry id="syang314">
-<gl>millet</gl>
-<hw>⁵⁵'⁵⁴raŋʈɛ</hw>
-</entry>
-<entry id="syang315">
-<gl>légume</gl>
-<hw>⁵¹ʈo⁵¹ʈoʱ
-</hw>
-</entry>
-<entry id="syang316">
-<gl>aïl</gl>
-<hw>˩noXnoʱ
-</hw>
-</entry>
-<entry id="syang317">
-<gl>aïl</gl>
-<hw>¹¹noː¹¹noʱː
-</hw>
-</entry>
-<entry id="syang318">
-<gl>pomme de terre</gl>
-<hw>⁵⁵'⁵⁴tʌja</hw>
-</entry>
-<entry id="syang319">
-<gl>potiron</gl>
-<hw>⁵⁵'⁴⁴'³³kʰʌlpusa</hw>
-</entry>
-<entry id="syang320">
-<gl>haricot de soja</gl>
-<hw>³³'⁴²pjelʈaŋ</hw>
-</entry>
-<entry id="syang321">
-<gl>pois</gl>
-<hw>Xtɔŋʌi</hw>
-</entry>
-<entry id="syang322">
-<gl>piment</gl>
-<hw>⁵⁵'⁴⁴kʰoraŋ</hw>
-</entry>
-<entry id="syang323">
-<gl>champignon</gl>
-<hw>⁵⁵'⁵⁵tjomo</hw>
-</entry>
-<entry id="syang324">
-<gl>mousse</gl>
-<hw>⁵⁵'⁵⁴ʃjembʌl</hw>
-</entry>
-<entry id="syang325">
-<gl>séparation de champ</gl>
-<hw>˩naŋXnaʱŋ
-</hw>
-</entry>
-<entry id="syang326">
-<gl>pierres blanches marquant le milieu du champ</gl>
-<hw>⁵⁵'⁵⁵kotsjaŋ</hw>
-</entry>
-<entry id="syang327">
-<gl>rizière</gl>
-<hw>⁴⁴le</hw>
-</entry>
-<entry id="syang328">
-<gl>rizière</gl>
-<hw>⁵⁵lie</hw>
-</entry>
-<entry id="syang329">
-<gl>orge (une sorte d')</gl>
-<hw>kʌru</hw>
-</entry>
-<entry id="syang330">
-<gl>orge (une sorte d')</gl>
-<hw>⁵⁵'⁵⁵tsjaga</hw>
-</entry>
-<entry id="syang331">
-<gl>wheat</gl>
-<hw>˩koXkoʱ
-</hw>
-</entry>
-<entry id="syang332">
-<gl>wheat</gl>
-<hw>˩koXkoʱ
-</hw>
-</entry>
-<entry id="syang333">
-<gl>moutarde</gl>
-<hw>⁴⁴'³³nanam</hw>
-</entry>
-<entry id="syang334">
-<gl>ortie</gl>
-<hw>⁵⁵'⁴⁴polo</hw>
-</entry>
-<entry id="syang335">
-<gl>pêche (petite)</gl>
-<hw>Xkʰala</hw>
-</entry>
-<entry id="syang336">
-<gl>pêche (grosse)</gl>
-<hw>Xkjakʰom</hw>
-</entry>
-<entry id="syang337">
-<gl>radis</gl>
-<hw>⁵⁵'⁵⁵ɬapu</hw>
-</entry>
-<entry id="syang338">
-<gl>sarrasin</gl>
-<hw>⁴⁴'⁵⁵kepe</hw>
-</entry>
-<entry id="syang339">
-<gl>sarrasin</gl>
-<hw>¹¹'¹¹gebe¹¹'¹¹geʱbe
-</hw>
-</entry>
-<entry id="syang340">
-<gl>Fagopyrum tataricum</gl>
-<hw>³¹bre³¹breʱ
-</hw>
-</entry>
-<entry id="syang341">
-<gl>Fagopyrum tataricum</gl>
-<hw>²¹pre²¹preʱ
-</hw>
-</entry>
-<entry id="syang342">
-<gl/>
-<hw>⁵⁵'⁴⁴male</hw>
-</entry>
-<entry id="syang343">
-<gl/>
-<hw>³³'³³mʌle</hw>
-</entry>
-<entry id="syang344">
-<gl>farine de Fagopyrum tataricum</gl>
-<hw>²¹'²²prepra²¹'²²preʱpra
-</hw>
-</entry>
-<entry id="syang345">
-<gl>farine de Fagopyrum tataricum</gl>
-<hw>²¹'²²prepra²¹'²²preʱpraʱ
-</hw>
-</entry>
-<entry id="syang346">
-<gl>farine de sarrasin</gl>
-<hw>¹¹'¹¹gjapra¹¹'¹¹gjaʱpra
-</hw>
-</entry>
-<entry id="syang347">
-<gl>fumier</gl>
-<hw>¹¹du¹¹duʱ
-</hw>
-</entry>
-<entry id="syang348">
-<gl>fumier</gl>
-<hw>¹¹tuː¹¹tuʱː
-</hw>
-</entry>
-<entry id="syang349">
-<gl>Ficus religiosa</gl>
-<hw>³³'⁵⁵ʃjɔlpa ¹¹pa</hw>
-</entry>
-<entry id="syang350">
-<gl>genévrier</gl>
-<hw>⁵⁵'⁵⁵ʃiʈi</hw>
-</entry>
-<entry id="syang351">
-<gl>salla rukh</gl>
-<hw>Xsʌn</hw>
-</entry>
-<entry id="syang352">
-<gl>personne</gl>
-<hw>˩miXmiʱ
-</hw>
-</entry>
-<entry id="syang353">
-<gl>enfant</gl>
-<hw>⁵⁵'⁵⁵kala</hw>
-</entry>
-<entry id="syang354">
-<gl>jeune homme</gl>
-<hw>²¹bjan²¹bjaʱn
-</hw>
-</entry>
-<entry id="syang355">
-<gl>petit garçon</gl>
-<hw>²¹'²²'²²pʰjaŋgala</hw>
-</entry>
-<entry id="syang356">
-<gl>jeune fille</gl>
-<hw>⁵⁵'⁵⁵tsʰɛmɛ</hw>
-</entry>
-<entry id="syang357">
-<gl>petite fille</gl>
-<hw>⁴³'³³tsʰame ³³'³³kala</hw>
-</entry>
-<entry id="syang358">
-<gl>vieil homme</gl>
-<hw>⁵⁵'⁴⁴kʰeba</hw>
-</entry>
-<entry id="syang359">
-<gl>vieil homme</gl>
-<hw>⁵⁵'⁴⁴kʰepa</hw>
-</entry>
-<entry id="syang360">
-<gl>vieille femme</gl>
-<hw>⁵⁵'⁵⁵kʰuju</hw>
-</entry>
-<entry id="syang361">
-<gl>vieille femme</gl>
-<hw>⁵⁵'⁵⁴kʰuju</hw>
-</entry>
-<entry id="syang362">
-<gl>mari</gl>
-<hw>⁵¹pʰa</hw>
-</entry>
-<entry id="syang363">
-<gl>épouse</gl>
-<hw>²¹pe²¹peʱ
-</hw>
-</entry>
-<entry id="syang364">
-<gl>première femme</gl>
-<hw>²²pe ²¹gʰʌn²²peʱ ²¹gʰʌʱn
-</hw>
-</entry>
-<entry id="syang365">
-<gl>seconde femme</gl>
-<hw>²²pe ⁴⁴tʃin²²peʱ ⁴⁴tʃin
-</hw>
-</entry>
-<entry id="syang366">
-<gl>père</gl>
-<hw>⁵⁵'⁴⁴aba</hw>
-</entry>
-<entry id="syang367">
-<gl>père</gl>
-<hw>⁵⁵'⁵⁵aβa</hw>
-</entry>
-<entry id="syang368">
-<gl>mère</gl>
-<hw>⁵⁵'⁴⁴ama</hw>
-</entry>
-<entry id="syang369">
-<gl>mère</gl>
-<hw>⁵⁵'⁵⁴ama</hw>
-</entry>
-<entry id="syang370">
-<gl>grand-père</gl>
-<hw>⁵⁴kʰe</hw>
-</entry>
-<entry id="syang371">
-<gl>grand-père</gl>
-<hw>⁵⁵'⁴⁴kʰjopʌn</hw>
-</entry>
-<entry id="syang372">
-<gl>grand-mère</gl>
-<hw>⁵⁴mʌm</hw>
-</entry>
-<entry id="syang373">
-<gl>grand-mère</gl>
-<hw>⁵⁵'⁵⁴momʌi</hw>
-</entry>
-<entry id="syang374">
-<gl>beau-père</gl>
-<hw>⁵⁴kʰe</hw>
-</entry>
-<entry id="syang375">
-<gl>beau-père</gl>
-<hw>⁵⁴kjɛn</hw>
-</entry>
-<entry id="syang376">
-<gl>belle-mère</gl>
-<hw>⁴⁴'³³ʃjuŋme</hw>
-</entry>
-<entry id="syang377">
-<gl>belle-mère</gl>
-<hw>²¹'⁴⁴ʃjuŋme</hw>
-</entry>
-<entry id="syang378">
-<gl>frère aîné</gl>
-<hw>⁵⁵'⁵⁴adzjo</hw>
-</entry>
-<entry id="syang379">
-<gl>frère aîné</gl>
-<hw>⁴⁴'⁵⁴adzjo</hw>
-</entry>
-<entry id="syang380">
-<gl>frère aîné premier né</gl>
-<hw>⁵⁴pon</hw>
-</entry>
-<entry id="syang381">
-<gl>frère cadet</gl>
-<hw>⁵⁵'⁵⁴ale</hw>
-</entry>
-<entry id="syang382">
-<gl>frère cadet</gl>
-<hw>⁵³tsjon</hw>
-</entry>
-<entry id="syang383">
-<gl>soeur aînée</gl>
-<hw>Xana</hw>
-</entry>
-<entry id="syang384">
-<gl>soeur aînée</gl>
-<hw>⁵⁵'⁵⁴ana</hw>
-</entry>
-<entry id="syang385">
-<gl>soeur cadette</gl>
-<hw>⁵⁵'⁵⁵pitsjaŋ</hw>
-</entry>
-<entry id="syang386">
-<gl>soeur cadette</gl>
-<hw>⁵⁴hřiŋ</hw>
-</entry>
-<entry id="syang387">
-<gl>first born uncle</gl>
-<hw>⁵⁵ap ⁴⁴'⁴⁴tʰeba</hw>
-</entry>
-<entry id="syang388">
-<gl>2nd and 3rd born uncle</gl>
-<hw>⁵²a ⁴⁴'⁴⁴pʰoba</hw>
-</entry>
-<entry id="syang389">
-<gl>wife of first</gl>
-<hw>⁵⁵am ⁴⁴'⁴⁴tʰeba</hw>
-</entry>
-<entry id="syang390">
-<gl>wife of 2nd and 3rd</gl>
-<hw>⁵²am ⁴⁴'³³pʰoba</hw>
-</entry>
-<entry id="syang391">
-<gl>fère cadet du père</gl>
-<hw>⁵²a ⁵⁵'³³tsjaŋba</hw>
-</entry>
-<entry id="syang392">
-<gl>1st born</gl>
-<hw>⁵⁵'⁵⁴ɲakʌn</hw>
-</entry>
-<entry id="syang393">
-<gl>femme du frère cadet du père</gl>
-<hw>⁵³a ³³'³³njaŋma</hw>
-</entry>
-<entry id="syang394">
-<gl>2nd born</gl>
-<hw>⁵⁵'⁵⁴ɲaptɛn</hw>
-</entry>
-<entry id="syang395">
-<gl>mari de soeur aînée du père</gl>
-<hw>⁵³a ³³'³³kʰoma</hw>
-</entry>
-<entry id="syang396">
-<gl>soeur cadette du père</gl>
-<hw>⁵⁵'⁴⁴niːtsjaŋ</hw>
-</entry>
-<entry id="syang397">
-<gl>mari de soeur cadette du père</gl>
-<hw>⁵³a ³³'³³kʰoma</hw>
-</entry>
-<entry id="syang398">
-<gl>frère de la mère</gl>
-<hw>⁵⁵a ⁵⁴ʃjaŋ</hw>
-</entry>
-<entry id="syang399">
-<gl>femme du frère de la mère</gl>
-<hw>⁵⁵'⁵⁴ani</hw>
-</entry>
-<entry id="syang400">
-<gl>soeur aînée de la mère</gl>
-<hw>Xatsjam</hw>
-</entry>
-<entry id="syang401">
-<gl>soeur aînée de la mère</gl>
-<hw>⁵⁵'⁵⁴ atsjʌm</hw>
-</entry>
-<entry id="syang402">
-<gl>mari de la soeur aînée de la mère</gl>
-<hw>⁵¹'⁴⁴akʰu</hw>
-</entry>
-<entry id="syang403">
-<gl>fils de la tante maternelle</gl>
-<hw>⁵⁵'³³tʃʰiba</hw>
-</entry>
-<entry id="syang404">
-<gl>fille de la tante maternelle</gl>
-<hw>⁵⁵'⁵⁴tʃʰima</hw>
-</entry>
-<entry id="syang405">
-<gl>fils de l'oncle maternel</gl>
-<hw>⁵⁵'⁵⁵utuŋ</hw>
-</entry>
-<entry id="syang406">
-<gl>fille de l'oncle maternel</gl>
-<hw>⁵⁵'⁵⁴woljaŋ</hw>
-</entry>
-<entry id="syang407">
-<gl>mari de la soeur aînée</gl>
-<hw>⁵⁵'⁵⁴utuŋ</hw>
-</entry>
-<entry id="syang408">
-<gl>mari de la soeur cadette</gl>
-<hw>⁵⁵'³³tsʰaːbo</hw>
-</entry>
-<entry id="syang409">
-<gl>femme du frère</gl>
-<hw>⁵³tsaŋ</hw>
-</entry>
-<entry id="syang410">
-<gl>1st</gl>
-<hw>⁵⁵'⁴⁴aptaŋ</hw>
-</entry>
-<entry id="syang411">
-<gl>1st</gl>
-<hw>⁵⁵'⁵⁴agʌn</hw>
-</entry>
-<entry id="syang412">
-<gl>2nd</gl>
-<hw>⁵⁵'⁵⁴aptʌn</hw>
-</entry>
-<entry id="syang413">
-<gl>frère cadet du mari</gl>
-<hw>⁵⁵'⁴⁴aːtsjaŋ</hw>
-</entry>
-<entry id="syang414">
-<gl>soeur aînée du mari</gl>
-<hw>⁵⁵'⁵⁵ɲakʌn</hw>
-</entry>
-<entry id="syang415">
-<gl>soeur cadette du mari</gl>
-<hw>⁵⁵'⁴⁴niːtsjaŋ</hw>
-</entry>
-<entry id="syang416">
-<gl>frère de l'épouse</gl>
-<hw>²¹'³³ʃjaŋbo</hw>
-</entry>
-<entry id="syang417">
-<gl>femme du frère de l'épouse</gl>
-<hw>⁵³niː</hw>
-</entry>
-<entry id="syang418">
-<gl>soeur de l'épouse</gl>
-<hw>⁵⁵'⁵⁴ atsjʌm</hw>
-</entry>
-<entry id="syang419">
-<gl>mari de la soeur de l'épouse</gl>
-<hw>⁵⁵'⁵⁵tsʰapo</hw>
-</entry>
-<entry id="syang420">
-<gl>fils</gl>
-<hw>²¹tsa²¹tsaʱ
-</hw>
-</entry>
-<entry id="syang421">
-<gl>fils</gl>
-<hw>²¹dzʌː²¹dzʱʌʱː
-</hw>
-</entry>
-<entry id="syang422">
-<gl>fille</gl>
-<hw>¹¹'⁴⁴tsʌme¹¹'⁴⁴tsʌʱme
-</hw>
-</entry>
-<entry id="syang423">
-<gl>fille</gl>
-<hw>³¹'²²tsʌme</hw>
-</entry>
-<entry id="syang424">
-<gl>neveu croisé - petit-fils</gl>
-<hw>⁵⁵'⁵⁴kontsa</hw>
-</entry>
-<entry id="syang425">
-<gl>neveu croisé - petit-fils</gl>
-<hw>⁵⁵'⁵⁴kontsa</hw>
-</entry>
-<entry id="syang426">
-<gl>nièce croisée - petite-fille</gl>
-<hw>Xkoime</hw>
-</entry>
-<entry id="syang427">
-<gl>nièce croisée - petite-fille</gl>
-<hw>⁵⁵'⁴⁴koime</hw>
-</entry>
-<entry id="syang428">
-<gl>gendre</gl>
-<hw>˩maXmaʱ
-</hw>
-</entry>
-<entry id="syang429">
-<gl>gendre</gl>
-<hw>¹¹maː¹¹maʱː
-</hw>
-</entry>
-<entry id="syang430">
-<gl>bru</gl>
-<hw>⁵¹tsaŋ</hw>
-</entry>
-<entry id="syang431">
-<gl>bru</gl>
-<hw>⁵¹tsaŋ</hw>
-</entry>
-<entry id="syang432">
-<gl>arrière grand-père</gl>
-<hw>Xkʰjopʌn</hw>
-</entry>
-<entry id="syang433">
-<gl>dance(r)</gl>
-<hw>⁴⁴'³³ʃjo-ba</hw>
-</entry>
-<entry id="syang434">
-<gl>chant</gl>
-<hw>¹¹goi¹¹goʱi
-</hw>
-</entry>
-<entry id="syang435">
-<gl>chanter</gl>
-<hw>¹¹koi ⁵⁵'⁵⁵pum-ba¹¹koʱi ⁵⁵'⁵⁵pum-ba
-</hw>
-</entry>
-<entry id="syang436">
-<gl>chanter</gl>
-<hw>¹²goe ⁵⁵'⁵⁵pum-ba</hw>
-</entry>
-<entry id="syang437">
-<gl>jouer de la musique</gl>
-<hw>¹¹'¹¹ro-ba¹¹'¹¹roʱ-ba
-</hw>
-</entry>
-<entry id="syang438">
-<gl>jouer de la musique</gl>
-<hw>²¹'¹¹ro-ba²¹'¹¹roʱ-ba
-</hw>
-</entry>
-<entry id="syang439">
-<gl>peindre</gl>
-<hw>⁵⁵'⁴⁴pʰo-ba</hw>
-</entry>
-<entry id="syang440">
-<gl>peinture tibétaine</gl>
-<hw>⁵⁵'⁵⁵tʰaŋgu</hw>
-</entry>
-<entry id="syang441">
-<gl>jouer</gl>
-<hw>⁵⁵'⁵⁴kjaŋ-ba</hw>
-</entry>
-<entry id="syang442">
-<gl>jouer</gl>
-<hw>⁵⁵'⁴⁴ljaŋ-ba</hw>
-</entry>
-<entry id="syang443">
-<gl>plaisanterie</gl>
-<hw>˩ʃjemeXʃjeʱme
-</hw>
-</entry>
-<entry id="syang444">
-<gl>histoire, proverbe</gl>
-<hw>⁴⁴pe ⁵⁵'⁴⁴ʃje-ba</hw>
-</entry>
-<entry id="syang445">
-<gl>assassiner</gl>
-<hw>²¹mi ⁵⁵'⁴⁴se-ba</hw>
-</entry>
-<entry id="syang446">
-<gl>mentir</gl>
-<hw>²¹la ⁴⁴'⁴⁴ʃje-ba</hw>
-</entry>
-<entry id="syang447">
-<gl>voler</gl>
-<hw>⁵⁵'⁴⁴kʰu-ba</hw>
-</entry>
-<entry id="syang448">
-<gl>voleur</gl>
-<hw>²¹jo²¹joʱ
-</hw>
-</entry>
-<entry id="syang449">
-<gl>voleuse</gl>
-<hw>¹¹'⁵⁴joʃja¹¹'⁵⁴joʱʃja
-</hw>
-</entry>
-<entry id="syang450">
-<gl>langage</gl>
-<hw>Xkʌi</hw>
-</entry>
-<entry id="syang451">
-<gl>langage</gl>
-<hw>⁵⁵kʌe</hw>
-</entry>
-<entry id="syang452">
-<gl>népali</gl>
-<hw>¹¹mʌn ¹¹kʌi</hw>
-</entry>
-<entry id="syang453">
-<gl>mot</gl>
-<hw>⁵⁵'⁴⁴ljaŋba</hw>
-</entry>
-<entry id="syang454">
-<gl>clan</gl>
-<hw>Xpʰobai</hw>
-</entry>
-<entry id="syang455">
-<gl>riche</gl>
-<hw>²¹'⁴⁴plo-βa</hw>
-</entry>
-<entry id="syang456">
-<gl>pauvre</gl>
-<hw>⁵⁵'⁵⁵ljɛm-ba</hw>
-</entry>
-<entry id="syang457">
-<gl>esclave</gl>
-<hw>⁵⁵'⁴⁴tʃhim-ba</hw>
-</entry>
-<entry id="syang458">
-<gl>villageois</gl>
-<hw>¹¹ɦil ¹¹mi¹¹ɦiʱl ¹¹miʱ
-</hw>
-</entry>
-<entry id="syang459">
-<gl>voisin</gl>
-<hw>⁵⁵'⁴⁴kʰimtse</hw>
-</entry>
-<entry id="syang460">
-<gl>roi</gl>
-<hw>⁵⁴'⁴⁴pompa</hw>
-</entry>
-<entry id="syang461">
-<gl>roi</gl>
-<hw>⁵⁵'⁴⁴pomba</hw>
-</entry>
-<entry id="syang462">
-<gl>chef</gl>
-<hw>¹¹'¹¹pala ⁵⁵'⁵⁵tʰimi</hw>
-</entry>
-<entry id="syang463">
-<gl>chef</gl>
-<hw>⁵³'²²tʰiːmi</hw>
-</entry>
-<entry id="syang464">
-<gl>patriarche</gl>
-<hw>²¹jom ¹¹'¹¹bitaŋ ⁵⁵'³³thjoba²¹jom ¹¹'¹¹biʱtaŋ ⁵⁵'³³thjoba
-</hw>
-</entry>
-<entry id="syang465">
-<gl>assemblée</gl>
-<hw>³³ɦil ⁴¹'²²tsompa</hw>
-</entry>
-<entry id="syang466">
-<gl>être d'accord</gl>
-<hw>²¹'³³gʌhi ⁴⁴'⁴⁴taba</hw>
-</entry>
-<entry id="syang467">
-<gl>différer</gl>
-<hw>²²'²¹'³³'³¹agʌimu</hw>
-</entry>
-<entry id="syang468">
-<gl>biens</gl>
-<hw>²¹nor²¹noʱr
-</hw>
-</entry>
-<entry id="syang469">
-<gl>acheter</gl>
-<hw>¹¹'³²li-dze¹¹'³²liʱ-dze
-</hw>
-</entry>
-<entry id="syang470">
-<gl>vendre</gl>
-<hw>⁵⁵'⁴⁴tsuŋ-pa</hw>
-</entry>
-<entry id="syang471">
-<gl>roupie</gl>
-<hw>Xale</hw>
-</entry>
-<entry id="syang472">
-<gl>1 roupie</gl>
-<hw>⁵⁵'⁵⁵ale ⁵⁴ʈʰol</hw>
-</entry>
-<entry id="syang473">
-<gl>1 roupie</gl>
-<hw>Xale ʈʰol</hw>
-</entry>
-<entry id="syang474">
-<gl>demi-roupie</gl>
-<hw>⁵⁵'⁵⁵'⁵⁵atili</hw>
-</entry>
-<entry id="syang475">
-<gl>demi-roupie</gl>
-<hw>⁵⁵'⁵⁵'⁵⁵atili</hw>
-</entry>
-<entry id="syang476">
-<gl>quart de roupie</gl>
-<hw>⁵⁴'⁴⁴'⁴⁴roʃiʃja</hw>
-</entry>
-<entry id="syang477">
-<gl>quart de roupie</gl>
-<hw>Xroʃiʃja</hw>
-</entry>
-<entry id="syang478">
-<gl>1 paisa</gl>
-<hw>¹¹'¹¹paisa ⁴⁴'⁴⁴tipum</hw>
-</entry>
-<entry id="syang479">
-<gl>2 paisa</gl>
-<hw>¹¹'¹¹paisa ¹¹'¹¹ɲipum</hw>
-</entry>
-<entry id="syang480">
-<gl>commerce</gl>
-<hw>⁵⁵tsʰoŋ (⁴⁴'⁴⁴laba)</hw>
-</entry>
-<entry id="syang481">
-<gl>marchand</gl>
-<hw>⁴⁴tsʰoŋ ⁵⁵'⁵⁵pumba ¹¹mi⁴⁴tsʰoŋ ⁵⁵'⁵⁵pumba ¹¹miʱ
-</hw>
-</entry>
-<entry id="syang482">
-<gl>maître</gl>
-<hw>²¹dim ¹¹'¹¹daba²¹diʱm ¹¹'¹¹daʱba
-</hw>
-</entry>
-<entry id="syang483">
-<gl>maître</gl>
-<hw>²¹'⁴⁴daːba²¹'⁴⁴daʱːba
-</hw>
-</entry>
-<entry id="syang484">
-<gl>serviteur</gl>
-<hw>²¹'²²gjaba²¹'²²gjaʱba
-</hw>
-</entry>
-<entry id="syang485">
-<gl>serviteur</gl>
-<hw>˩ke laʃi ʈubai ˩miXkeʱ laʃi ʈubai miʱ
-</hw>
-</entry>
-<entry id="syang486">
-<gl>tailleur</gl>
-<hw>¹¹'⁴⁴tuli</hw>
-</entry>
-<entry id="syang487">
-<gl>berger</gl>
-<hw>⁴⁴ra ⁵³tsʰʌn</hw>
-</entry>
-<entry id="syang488">
-<gl>berger</gl>
-<hw>⁴⁴'⁴⁴ratsʰʌn</hw>
-</entry>
-<entry id="syang489">
-<gl>bouvier</gl>
-<hw>⁵¹'³³metsʰʌn</hw>
-</entry>
-<entry id="syang490">
-<gl>travail</gl>
-<hw>²¹gje ⁵⁵'⁵⁵laba²¹gjeʱ ⁵⁵'⁵⁵laba
-</hw>
-</entry>
-<entry id="syang491">
-<gl>travail</gl>
-<hw>¹¹ge¹¹geʱ
-</hw>
-</entry>
-<entry id="syang492">
-<gl>compagnon</gl>
-<hw>¹¹ro¹¹roʱ
-</hw>
-</entry>
-<entry id="syang493">
-<gl>ami rituel</gl>
-<hw>²²'²¹rowa²²'²¹roʱwa
-</hw>
-</entry>
-<entry id="syang494">
-<gl>amie rituelle</gl>
-<hw>¹¹'⁵⁵njʌla¹¹'⁵⁵njʌʱla
-</hw>
-</entry>
-<entry id="syang495">
-<gl>amie rituelle</gl>
-<hw>⁵⁴'⁴⁴njala</hw>
-</entry>
-<entry id="syang496">
-<gl>expensive</gl>
-<hw>⁵⁵'⁵⁵kommo</hw>
-</entry>
-<entry id="syang497">
-<gl>bon marché</gl>
-<hw>Xkʰjamu</hw>
-</entry>
-<entry id="syang498">
-<gl>docteur</gl>
-<hw>⁵⁵'⁵⁴ʈaŋdar</hw>
-</entry>
-<entry id="syang499">
-<gl>qui a toujours faim</gl>
-<hw>⁵⁵'⁵⁴pʰote</hw>
-</entry>
-<entry id="syang500">
-<gl>qui dort tout le temps</gl>
-<hw>⁵⁵'⁵⁴nukʰo</hw>
-</entry>
-<entry id="syang501">
-<gl>chemin</gl>
-<hw>²¹gjʌm²¹gjʌʱm
-</hw>
-</entry>
-<entry id="syang502">
-<gl>village</gl>
-<hw>¹¹ɦil¹¹ɦiʱl
-</hw>
-</entry>
-<entry id="syang503">
-<gl>place</gl>
-<hw>¹¹lja</hw>
-</entry>
-<entry id="syang504">
-<gl>coin</gl>
-<hw>˩suXsuʱ
-</hw>
-</entry>
-<entry id="syang505">
-<gl>coin externe de la table</gl>
-<hw>˩surXsuʱr
-</hw>
-</entry>
-<entry id="syang506">
-<gl>maison</gl>
-<hw>˩dimXdiʱm
-</hw>
-</entry>
-<entry id="syang507">
-<gl>maison</gl>
-<hw>²¹dim²¹dʱiʱm
-</hw>
-</entry>
-<entry id="syang508">
-<gl>moulin</gl>
-<hw>tsʰjɛta</hw>
-</entry>
-<entry id="syang509">
-<gl>cow shed</gl>
-<hw>˩praŋpraʱŋ
-</hw>
-</entry>
-<entry id="syang510">
-<gl>abreuvoir</gl>
-<hw>⁴⁵ko</hw>
-</entry>
-<entry id="syang511">
-<gl>abreuvoir</gl>
-<hw>⁵⁴ko</hw>
-</entry>
-<entry id="syang512">
-<gl>mur</gl>
-<hw>¹¹'²²gjaŋga</hw>
-</entry>
-<entry id="syang513">
-<gl>mur</gl>
-<hw>⁵⁵'⁵⁵kjãŋa</hw>
-</entry>
-<entry id="syang514">
-<gl>cloison de planche</gl>
-<hw>⁵³'⁵³tʰato</hw>
-</entry>
-<entry id="syang515">
-<gl>boue</gl>
-<hw>⁴⁴'⁵⁴tʌle</hw>
-</entry>
-<entry id="syang516">
-<gl>boue</gl>
-<hw>⁵⁵'⁵⁴tjelja</hw>
-</entry>
-<entry id="syang517">
-<gl>terre à badigeon claire</gl>
-<hw>⁵⁵'³³sakar</hw>
-</entry>
-<entry id="syang518">
-<gl>chaux à badigeon</gl>
-<hw>⁵⁴kʌ</hw>
-</entry>
-<entry id="syang519">
-<gl>chaux à badigeon</gl>
-<hw>⁵⁴ka</hw>
-</entry>
-<entry id="syang520">
-<gl>badigeonner à la chaux</gl>
-<hw>⁵⁴kʌ ⁵⁵'⁴⁴pum-ba</hw>
-</entry>
-<entry id="syang521">
-<gl>badigeonner (avec terre)</gl>
-<hw>¹¹ʃjʌl ³³'³³la-ba</hw>
-</entry>
-<entry id="syang522">
-<gl>toit (terrasse)</gl>
-<hw>˩bjoXbjoʱ
-</hw>
-</entry>
-<entry id="syang523">
-<gl>sol</gl>
-<hw>Xtʰaŋ</hw>
-</entry>
-<entry id="syang524">
-<gl>poutre</gl>
-<hw>⁵⁴lio</hw>
-</entry>
-<entry id="syang525">
-<gl>poteau</gl>
-<hw>¹¹taː</hw>
-</entry>
-<entry id="syang526">
-<gl>poteau</gl>
-<hw>¹¹ta¹¹taʱ
-</hw>
-</entry>
-<entry id="syang527">
-<gl>planche</gl>
-<hw>⁵⁵tʰa</hw>
-</entry>
-<entry id="syang528">
-<gl>planche</gl>
-<hw>Xtʰa</hw>
-</entry>
-<entry id="syang529">
-<gl>escalier de pierre</gl>
-<hw>Xʈʌpʈʌp</hw>
-</entry>
-<entry id="syang530">
-<gl>escalier de pierre</gl>
-<hw>¹¹to ³³tʰɛm</hw>
-</entry>
-<entry id="syang531">
-<gl>échelle</gl>
-<hw>⁵⁵li</hw>
-</entry>
-<entry id="syang532">
-<gl>échelle</gl>
-<hw>⁵⁵hɬi</hw>
-</entry>
-<entry id="syang533">
-<gl>marche du seuil</gl>
-<hw>⁵⁵mro ⁵⁴tʰjam</hw>
-</entry>
-<entry id="syang534">
-<gl>marche, escalier (de bois)</gl>
-<hw>⁵⁵tʰɛm</hw>
-</entry>
-<entry id="syang535">
-<gl>cour</gl>
-<hw>⁵⁴kʰo</hw>
-</entry>
-<entry id="syang536">
-<gl>cour</gl>
-<hw>⁵⁴kʰo</hw>
-</entry>
-<entry id="syang537">
-<gl>doorway</gl>
-<hw>⁵⁵'⁵⁵mrokʰa</hw>
-</entry>
-<entry id="syang538">
-<gl>porte</gl>
-<hw>⁵⁴mro</hw>
-</entry>
-<entry id="syang539">
-<gl>entablement</gl>
-<hw>⁵⁵mro ²²'²²roʃin⁵⁵mro ²²'²²roʱʃin
-</hw>
-</entry>
-<entry id="syang540">
-<gl>cadenas</gl>
-<hw>²²ton (⁵⁵'⁴⁴pum-ba)</hw>
-</entry>
-<entry id="syang541">
-<gl>floor</gl>
-<hw>¹¹dim ⁵⁴tʰaŋ¹¹dʱiʱm ⁵⁴tʰaŋ
-</hw>
-</entry>
-<entry id="syang542">
-<gl>tapis de poil de chèvre</gl>
-<hw>⁵⁵'⁴⁴pʰjɛrbu</hw>
-</entry>
-<entry id="syang543">
-<gl>tapis thakali</gl>
-<hw>³³'¹¹ʈumtsʌn</hw>
-</entry>
-<entry id="syang544">
-<gl>matelas</gl>
-<hw>Xsubida</hw>
-</entry>
-<entry id="syang545">
-<gl>oreiller</gl>
-<hw>⁵⁵'⁴⁴takja</hw>
-</entry>
-<entry id="syang546">
-<gl>coffre à grain</gl>
-<hw>⁵⁴mrʌm</hw>
-</entry>
-<entry id="syang547">
-<gl>coffre à grain</gl>
-<hw>⁵⁴mram</hw>
-</entry>
-<entry id="syang548">
-<gl>foyer central</gl>
-<hw>⁵³'³³pʰaːto</hw>
-</entry>
-<entry id="syang549">
-<gl>déversoir des cendres (devant le foyer)</gl>
-<hw>⁵⁵'⁴⁴kotoŋ</hw>
-</entry>
-<entry id="syang550">
-<gl>déversoir des cendres (devant le foyer)</gl>
-<hw>⁵⁵'⁵⁵kotoŋ</hw>
-</entry>
-<entry id="syang551">
-<gl>foyer ouvert (pour la distillation)</gl>
-<hw>⁵⁵'⁵⁴pʰato</hw>
-</entry>
-<entry id="syang552">
-<gl>foyer à deux trous</gl>
-<hw>¹¹'⁴⁴tsjatoŋ</hw>
-</entry>
-<entry id="syang553">
-<gl>charbon de bois</gl>
-<hw>⁵⁵'⁵⁴mjoko</hw>
-</entry>
-<entry id="syang554">
-<gl>charbons ardents</gl>
-<hw>⁵⁵'³³mimla</hw>
-</entry>
-<entry id="syang555">
-<gl>charbons ardents</gl>
-<hw>⁵⁵mi ²²mla</hw>
-</entry>
-<entry id="syang556">
-<gl>poêle à charbon</gl>
-<hw>⁵⁵'⁵⁵mʌkʌl</hw>
-</entry>
-<entry id="syang557">
-<gl>meule</gl>
-<hw>Xrʌnʈa</hw>
-</entry>
-<entry id="syang558">
-<gl>gril</gl>
-<hw>¹¹'⁴³dzaŋa¹¹'⁴³dzaʱŋa
-</hw>
-</entry>
-<entry id="syang559">
-<gl>mortier</gl>
-<hw>⁵⁴laŋ</hw>
-</entry>
-<entry id="syang560">
-<gl>mortier</gl>
-<hw>²¹laŋ</hw>
-</entry>
-<entry id="syang561">
-<gl>pilon</gl>
-<hw>Xmusur</hw>
-</entry>
-<entry id="syang562">
-<gl>étincelles</gl>
-<hw>Xmi Xmɛndo</hw>
-</entry>
-<entry id="syang563">
-<gl>vapeur</gl>
-<hw>⁵⁵'⁴⁴ɬaŋba</hw>
-</entry>
-<entry id="syang564">
-<gl>vapeur</gl>
-<hw>⁵⁵kju ⁵⁵'⁵⁵hlaŋma</hw>
-</entry>
-<entry id="syang565">
-<gl>balayures</gl>
-<hw>⁴⁴'⁴³sʌpra</hw>
-</entry>
-<entry id="syang566">
-<gl>bois à brûler</gl>
-<hw>⁵⁵ʃin</hw>
-</entry>
-<entry id="syang567">
-<gl>bois à brûler</gl>
-<hw>⁵²ʃin</hw>
-</entry>
-<entry id="syang568">
-<gl>bûche</gl>
-<hw>⁵⁵ʃin ¹¹'⁴⁴toŋba</hw>
-</entry>
-<entry id="syang569">
-<gl>pot, plat</gl>
-<hw>⁵⁵taŋ</hw>
-</entry>
-<entry id="syang570">
-<gl>pot, plat</gl>
-<hw>⁵⁵taŋ</hw>
-</entry>
-<entry id="syang571">
-<gl>couvercle</gl>
-<hw>⁵⁵'⁵⁴kʰalɛp</hw>
-</entry>
-<entry id="syang572">
-<gl>spatule</gl>
-<hw>⁵⁵'⁵⁵kjaba</hw>
-</entry>
-<entry id="syang573">
-<gl>louche (en bois)</gl>
-<hw>¹¹'²¹kukja</hw>
-</entry>
-<entry id="syang574">
-<gl>louche à thé</gl>
-<hw>⁴⁴'⁴⁴tsjakjo</hw>
-</entry>
-<entry id="syang575">
-<gl>passe-thé</gl>
-<hw>¹¹tsja ³²tsʰʌr</hw>
-</entry>
-<entry id="syang576">
-<gl>jarre à eau en cuivre</gl>
-<hw>⁵⁵ʃin ⁴⁴'⁴⁴tsaŋbai ³³'²¹kaga</hw>
-</entry>
-<entry id="syang577">
-<gl>grande bassine à eau</gl>
-<hw>⁵⁵'⁵⁴rasaŋ</hw>
-</entry>
-<entry id="syang578">
-<gl>petite bassine à eau</gl>
-<hw>²¹'³³poŋna²¹'³³poʱŋna
-</hw>
-</entry>
-<entry id="syang579">
-<gl>jarre à eau en argile</gl>
-<hw>Xraŋgjɛl</hw>
-</entry>
-<entry id="syang580">
-<gl>couvercle de tasse (argent)</gl>
-<hw>⁴⁴'⁴⁴pʰurko</hw>
-</entry>
-<entry id="syang581">
-<gl>tasse</gl>
-<hw>⁴⁴'⁵⁴kʌirʌ</hw>
-</entry>
-<entry id="syang582">
-<gl>tasse en bois</gl>
-<hw>⁵⁴ʃjo</hw>
-</entry>
-<entry id="syang583">
-<gl>bol en porcelaine (sans queue)</gl>
-<hw>¹¹'⁵⁵'⁴⁴tapunke</hw>
-</entry>
-<entry id="syang584">
-<gl>pot à tsampa</gl>
-<hw>⁴⁴'³³pakpur</hw>
-</entry>
-<entry id="syang585">
-<gl>pot à farine d'orge grillée</gl>
-<hw>Xpakpur</hw>
-</entry>
-<entry id="syang586">
-<gl>théière</gl>
-<hw>¹¹tʃjʌ ³³pin</hw>
-</entry>
-<entry id="syang587">
-<gl>baratte à thé</gl>
-<hw>¹¹tsjʌ ⁴³toŋ¹¹tsjʌʱ ⁴³toŋ
-</hw>
-</entry>
-<entry id="syang588">
-<gl>petite assiette</gl>
-<hw>¹²dɛr¹²dɛʱr
-</hw>
-</entry>
-<entry id="syang589">
-<gl>assiette</gl>
-<hw>˩djʌrXdjʌʱr
-</hw>
-</entry>
-<entry id="syang590">
-<gl>petite</gl>
-<hw>¹¹'⁴⁴ɖoko¹¹'⁴⁴ɖoʱko
-</hw>
-</entry>
-<entry id="syang591">
-<gl>bol à légumes</gl>
-<hw>⁴⁴'⁴⁴koʃjo</hw>
-</entry>
-<entry id="syang592">
-<gl>grande marmite en cuivre pr cuire le thé</gl>
-<hw>³¹tik³¹tiʱk
-</hw>
-</entry>
-<entry id="syang593">
-<gl>pot à cuire le légume</gl>
-<hw>⁵⁵'⁵⁵kʰuba</hw>
-</entry>
-<entry id="syang594">
-<gl>casserole à queue</gl>
-<hw>⁵⁵'⁵⁵tʃjasaŋ</hw>
-</entry>
-<entry id="syang595">
-<gl>casserole à 'ɖʰero'</gl>
-<hw>²¹'³³naltsa</hw>
-</entry>
-<entry id="syang596">
-<gl>pot à cuire le riz</gl>
-<hw>⁵⁵'⁵⁵ari</hw>
-</entry>
-<entry id="syang597">
-<gl>tuyau</gl>
-<hw>˩duduʱ
-</hw>
-</entry>
-<entry id="syang598">
-<gl>grande jarre ronde en terre, à chang</gl>
-<hw>⁵⁵'⁴³raŋgjɛl</hw>
-</entry>
-<entry id="syang599">
-<gl>grande jarre ronde en terre, à chang</gl>
-<hw>⁵⁵'⁵⁵'⁵⁴kalaŋsɛ</hw>
-</entry>
-<entry id="syang600">
-<gl>grande jarre haute en terre</gl>
-<hw>⁵⁵pu</hw>
-</entry>
-<entry id="syang601">
-<gl>table basse</gl>
-<hw>⁵⁵'⁵⁴tʃjoksa</hw>
-</entry>
-<entry id="syang602">
-<gl>chiffon</gl>
-<hw>⁵⁵'⁵⁴tʰaŋna</hw>
-</entry>
-<entry id="syang603">
-<gl>séchoir au-dessus du feu</gl>
-<hw>⁵⁵ʈaŋ</hw>
-</entry>
-<entry id="syang604">
-<gl>panier à piments au-dessus du feu</gl>
-<hw>⁵⁴'⁴⁴'⁴³poŋolo</hw>
-</entry>
-<entry id="syang605">
-<gl>pot de 4 manas</gl>
-<hw>⁵⁵pjaŋ</hw>
-</entry>
-<entry id="syang606">
-<gl>pot de 2 manas</gl>
-<hw>kurua</hw>
-</entry>
-<entry id="syang607">
-<gl>pot de 1 mana</gl>
-<hw>²¹'³³ʈukja</hw>
-</entry>
-<entry id="syang608">
-<gl>pot à raksi droit en bois tourné</gl>
-<hw>²¹'²²'⁴⁴'⁴⁴gurumpudzu</hw>
-</entry>
-<entry id="syang609">
-<gl>pot à raksi droit en bois tourné</gl>
-<hw>⁵⁵'⁵⁵'⁴⁴'⁴⁴gurumpudzu</hw>
-</entry>
-<entry id="syang610">
-<gl>pot de bois tourné, à col</gl>
-<hw>⁵⁵'⁵⁵pʌru</hw>
-</entry>
-<entry id="syang611">
-<gl>pot de bois tourné, à col</gl>
-<hw>⁵⁵'⁵⁴pɔru</hw>
-</entry>
-<entry id="syang612">
-<gl>dieu sur le toit (à cornes ou à fleurs)</gl>
-<hw>⁵⁵'⁵⁵tsaŋa</hw>
-</entry>
-<entry id="syang613">
-<gl>pot du dessus</gl>
-<hw>⁵⁵'⁵⁵pulu</hw>
-</entry>
-<entry id="syang614">
-<gl>pot du milieu</gl>
-<hw>⁵⁵'⁵⁴pʌiŋki</hw>
-</entry>
-<entry id="syang615">
-<gl>pot du dessous</gl>
-<hw>¹¹'¹¹gʌjo</hw>
-</entry>
-<entry id="syang616">
-<gl>petit pot dedans</gl>
-<hw>⁵⁵'⁵⁵kʰuba</hw>
-</entry>
-<entry id="syang617">
-<gl>suspendeur en bois fourchu</gl>
-<hw>⁵⁵'⁵⁵pʰuʃin</hw>
-</entry>
-<entry id="syang618">
-<gl>gde bassine à cuire en cuivre rouge</gl>
-<hw>¹¹'³³kʌja ⁵⁵'⁵⁵tʰeba¹¹'³³kʌʱja ⁵⁵'⁵⁵tʰeba
-</hw>
-</entry>
-<entry id="syang619">
-<gl>buffet à vaisselle</gl>
-<hw>³³'³³'⁵⁵tajaŋtaŋ</hw>
-</entry>
-<entry id="syang620">
-<gl>buffet à puja</gl>
-<hw>⁵⁵'⁵⁵torkaŋ</hw>
-</entry>
-<entry id="syang621">
-<gl>louche à eau</gl>
-<hw>⁵⁴'⁴⁴'⁴⁴tsaŋkuli</hw>
-</entry>
-<entry id="syang622">
-<gl>paillasse de pierre et boue dans la cour</gl>
-<hw>⁵⁵'³³taktakʰ</hw>
-</entry>
-<entry id="syang623">
-<gl>billot</gl>
-<hw>⁴⁴'⁵⁴tʌiʃin</hw>
-</entry>
-<entry id="syang624">
-<gl>intérieur de maïs fixé à baguette pr remuer grains qu'on  grille</gl>
-<hw>²¹'⁵⁵joto</hw>
-</entry>
-<entry id="syang625">
-<gl>vessie (récipient à yaourt lait)</gl>
-<hw>⁵⁵'⁵⁵ʃjapʰo</hw>
-</entry>
-<entry id="syang626">
-<gl>canne</gl>
-<hw>¹¹da ⁵⁴ʃin¹¹dʱaʱ ⁵⁴ʃin
-</hw>
-</entry>
-<entry id="syang627">
-<gl>porter</gl>
-<hw>⁵³tʌi ⁵⁵'⁵⁵na-ba</hw>
-</entry>
-<entry id="syang628">
-<gl>porter</gl>
-<hw>¹¹de ⁵⁵'⁵⁵na-ba¹¹deʱ ⁵⁵'⁵⁵na-ba
-</hw>
-</entry>
-<entry id="syang629">
-<gl>poser</gl>
-<hw>⁵³tʌi ²²'²²na-ba</hw>
-</entry>
-<entry id="syang630">
-<gl>grand panier (de portage)</gl>
-<hw>⁵⁵'⁵⁴sʌni</hw>
-</entry>
-<entry id="syang631">
-<gl>grand panier (de portage)</gl>
-<hw>²¹'⁴⁴bema²¹'⁴⁴beʱma
-</hw>
-</entry>
-<entry id="syang632">
-<gl>bandeau frontal</gl>
-<hw>˩ʈaXʈaʱ
-</hw>
-</entry>
-<entry id="syang633">
-<gl>bandeau frontal</gl>
-<hw>¹¹ɖaː¹¹ɖaʱː
-</hw>
-</entry>
-<entry id="syang634">
-<gl>grand sac en poil de chèvre</gl>
-<hw>¹¹'²¹kjaŋta</hw>
-</entry>
-<entry id="syang635">
-<gl>petit sac en poil de chèvre</gl>
-<hw>²²'¹¹jato</hw>
-</entry>
-<entry id="syang636">
-<gl>sac de cuir</gl>
-<hw>Xkjɛlpo</hw>
-</entry>
-<entry id="syang637">
-<gl>sac de cuir</gl>
-<hw>˩wiXwiʱ
-</hw>
-</entry>
-<entry id="syang638">
-<gl>selle, bât</gl>
-<hw>˩gʌXgʌʱ
-</hw>
-</entry>
-<entry id="syang639">
-<gl>selle, bât</gl>
-<hw>²¹ga²¹gaʱ
-</hw>
-</entry>
-<entry id="syang640">
-<gl>flèche</gl>
-<hw>⁵³me</hw>
-</entry>
-<entry id="syang641">
-<gl>hache</gl>
-<hw>⁵⁴tʌ</hw>
-</entry>
-<entry id="syang642">
-<gl>grand couteau népalais</gl>
-<hw>²²'³²ko·tsa</hw>
-</entry>
-<entry id="syang643">
-<gl>grand couteau népalais</gl>
-<hw>²²'²¹godza²²'²¹goʱdza
-</hw>
-</entry>
-<entry id="syang644">
-<gl>couteau</gl>
-<hw>Xkartsa</hw>
-</entry>
-<entry id="syang645">
-<gl>étui / gaine</gl>
-<hw>⁵⁵ɕju</hw>
-</entry>
-<entry id="syang646">
-<gl>bouclier</gl>
-<hw>²¹'³³kʌmpa²¹'³³kʱʌmpa
-</hw>
-</entry>
-<entry id="syang647">
-<gl>fusil</gl>
-<hw>²¹ne ⁵⁵pjaŋ</hw>
-</entry>
-<entry id="syang648">
-<gl>corde</gl>
-<hw>⁵⁵tsʰo</hw>
-</entry>
-<entry id="syang649">
-<gl>manche d'outil</gl>
-<hw>⁵⁴ju</hw>
-</entry>
-<entry id="syang650">
-<gl>manche d'outil</gl>
-<hw>⁵⁵ju</hw>
-</entry>
-<entry id="syang651">
-<gl>tuyau</gl>
-<hw>˩duXduʱ
-</hw>
-</entry>
-<entry id="syang652">
-<gl>guimbarde</gl>
-<hw>⁵⁵'⁵⁵kʰapraŋ</hw>
-</entry>
-<entry id="syang653">
-<gl>cymbales</gl>
-<hw>¹¹'³²rolmo¹¹'³²roʱlmo
-</hw>
-</entry>
-<entry id="syang654">
-<gl>tambour (lama)</gl>
-<hw>¹¹ŋa¹¹ŋaʱ
-</hw>
-</entry>
-<entry id="syang655">
-<gl>offrande, nourriture bénie</gl>
-<hw>⁵³tsʰoː</hw>
-</entry>
-<entry id="syang656">
-<gl>dague de fer (relig.)</gl>
-<hw>⁵⁵'⁵⁴pʰurba</hw>
-</entry>
-<entry id="syang657">
-<gl>gros dammaru</gl>
-<hw>¹¹'³³tʌrul</hw>
-</entry>
-<entry id="syang658">
-<gl>clochette</gl>
-<hw>²¹'⁴⁴ʈilpu²¹'⁴⁴ʈiʱlpu
-</hw>
-</entry>
-<entry id="syang659">
-<gl>foudre</gl>
-<hw>¹¹'³³tordze</hw>
-</entry>
-<entry id="syang660">
-<gl>conque</gl>
-<hw>²¹tuŋ²¹tuʱŋ
-</hw>
-</entry>
-<entry id="syang661">
-<gl>trompette d'os</gl>
-<hw>⁵⁵'³³kaŋli</hw>
-</entry>
-<entry id="syang662">
-<gl>plaque à graver ds la pâte de farine</gl>
-<hw>⁵⁵'⁵⁵parʃiŋ</hw>
-</entry>
-<entry id="syang663">
-<gl>moulin à prières</gl>
-<hw>²¹'³³mane</hw>
-</entry>
-<entry id="syang664">
-<gl>reliquaire</gl>
-<hw>²¹'³³dʌikʌp</hw>
-</entry>
-<entry id="syang665">
-<gl>aiguière à plume</gl>
-<hw>⁵⁵'⁵⁵'tʰiʃi ¹¹'³³pumu</hw>
-</entry>
-<entry id="syang666">
-<gl>pot à offrir l'eau</gl>
-<hw>¹¹'⁴⁴jønde ³³'³³koʃjo</hw>
-</entry>
-<entry id="syang667">
-<gl>statue</gl>
-<hw>⁵⁵ku</hw>
-</entry>
-<entry id="syang668">
-<gl>statue</gl>
-<hw>⁵⁴ku</hw>
-</entry>
-<entry id="syang669">
-<gl>livre</gl>
-<hw>⁵⁵tʃjʰe</hw>
-</entry>
-<entry id="syang670">
-<gl>lumière</gl>
-<hw>⁵⁵'⁵⁵tʃʰjeme</hw>
-</entry>
-<entry id="syang671">
-<gl>lampe à beurre</gl>
-<hw>⁵⁵'⁵⁵tʃʰeme ⁵⁵'⁵⁵'⁵⁵pʰulbai ⁵⁵woŋ</hw>
-</entry>
-<entry id="syang672">
-<gl>charrue</gl>
-<hw>²¹kor²¹koʱr
-</hw>
-</entry>
-<entry id="syang673">
-<gl>faucille</gl>
-<hw>⁵⁵'⁵⁴patsja</hw>
-</entry>
-<entry id="syang674">
-<gl>gloss674</gl>
-<hw>³³pla ⁵²to</hw>
-</entry>
-<entry id="syang675">
-<gl>houe</gl>
-<hw>hw675</hw>
-</entry>
-<entry id="syang676">
-<gl>pioche</gl>
-<hw>⁵⁴to</hw>
-</entry>
-<entry id="syang677">
-<gl>pioche</gl>
-<hw>⁵⁴⁵to</hw>
-</entry>
-<entry id="syang678">
-<gl>binette</gl>
-<hw>⁵⁵'⁵⁵koma</hw>
-</entry>
-<entry id="syang679">
-<gl>planche à égaliser après semis</gl>
-<hw>⁵⁵'⁵⁵tʰeda</hw>
-</entry>
-<entry id="syang680">
-<gl>planche à égaliser après semis</gl>
-<hw>⁵⁵'⁵⁴tʰɛdia</hw>
-</entry>
-<entry id="syang681">
-<gl>instrument à rassembler la terre en tas</gl>
-<hw>Xtsjaki</hw>
-</entry>
-<entry id="syang682">
-<gl>fléau</gl>
-<hw>¹¹'³¹keʃju¹¹'³¹keʱʃju
-</hw>
-</entry>
-<entry id="syang683">
-<gl>van</gl>
-<hw>⁵⁵'⁵⁴nali</hw>
-</entry>
-<entry id="syang684">
-<gl>van</gl>
-<hw>⁵⁵'⁵⁵nʌli</hw>
-</entry>
-<entry id="syang685">
-<gl>van à clairevoie (tamis)</gl>
-<hw>⁵³praŋ ⁴⁴'⁴⁴nʌli</hw>
-</entry>
-<entry id="syang686">
-<gl>panier à pieds</gl>
-<hw>⁵⁴min</hw>
-</entry>
-<entry id="syang687">
-<gl>panier à pieds</gl>
-<hw>⁵⁵min</hw>
-</entry>
-<entry id="syang688">
-<gl>panier presque plat sans pieds</gl>
-<hw>¹¹tʌ¹¹tʌʱ
-</hw>
-</entry>
-<entry id="syang689">
-<gl>panier presque plat sans pieds</gl>
-<hw>²¹ta²¹taʱ
-</hw>
-</entry>
-<entry id="syang690">
-<gl>or</gl>
-<hw>⁵³mʌr</hw>
-</entry>
-<entry id="syang691">
-<gl>or</gl>
-<hw>¹¹mʌr¹¹mʌʱr
-</hw>
-</entry>
-<entry id="syang692">
-<gl>argent</gl>
-<hw>⁵¹mwi⁵¹mwiʱ
-</hw>
-</entry>
-<entry id="syang693">
-<gl>cuivre</gl>
-<hw>˩gjorXgjoʱr
-</hw>
-</entry>
-<entry id="syang694">
-<gl>fer</gl>
-<hw>⁵⁴pʰʌe</hw>
-</entry>
-<entry id="syang695">
-<gl>fer</gl>
-<hw>⁵⁴pʰae</hw>
-</entry>
-<entry id="syang696">
-<gl>laiton</gl>
-<hw>¹¹'¹¹mara</hw>
-</entry>
-<entry id="syang697">
-<gl>nourriture</gl>
-<hw>⁵⁵kʌn</hw>
-</entry>
-<entry id="syang698">
-<gl>riz cuit</gl>
-<hw>˩mlakʌŋXmlaʱkʌŋ
-</hw>
-</entry>
-<entry id="syang699">
-<gl>écume de riz</gl>
-<hw>⁴⁴kan ⁵⁵'⁴⁴momo</hw>
-</entry>
-<entry id="syang700">
-<gl>riz cru décortiqué</gl>
-<hw>¹¹mla¹¹mlaʱ
-</hw>
-</entry>
-<entry id="syang701">
-<gl>piment écrasé</gl>
-<hw>⁵⁴tun</hw>
-</entry>
-<entry id="syang702">
-<gl>lentilles</gl>
-<hw>⁵⁵'⁵⁵pʌitu ⁴⁴kʰu</hw>
-</entry>
-<entry id="syang703">
-<gl>légume</gl>
-<hw>Xkʌn ⁵³kʰu</hw>
-</entry>
-<entry id="syang704">
-<gl>légume</gl>
-<hw>⁵³kʰu</hw>
-</entry>
-<entry id="syang705">
-<gl>légume ou viande (sans jus)</gl>
-<hw>⁵⁵pla</hw>
-</entry>
-<entry id="syang706">
-<gl>sel</gl>
-<hw>⁵⁵'⁴⁴tsadza</hw>
-</entry>
-<entry id="syang707">
-<gl>huile</gl>
-<hw>⁵⁵'⁵⁴tʃjʰugu</hw>
-</entry>
-<entry id="syang708">
-<gl>beurre</gl>
-<hw>²¹mʌr²¹mʌʱr
-</hw>
-</entry>
-<entry id="syang709">
-<gl>beurre</gl>
-<hw>²¹mʌr²¹mʌʱr
-</hw>
-</entry>
-<entry id="syang710">
-<gl>oeuf</gl>
-<hw>⁵⁵pʰum</hw>
-</entry>
-<entry id="syang711">
-<gl>coquille</gl>
-<hw>⁵³kʰo</hw>
-</entry>
-<entry id="syang712">
-<gl>viande</gl>
-<hw>⁵⁵ʃjʌ ⁵⁵kʰu</hw>
-</entry>
-<entry id="syang713">
-<gl>lait</gl>
-<hw>˩njeXnjeʱ
-</hw>
-</entry>
-<entry id="syang714">
-<gl>feuille de thé</gl>
-<hw>¹¹tʃjʌ ⁵⁵ril</hw>
-</entry>
-<entry id="syang715">
-<gl>thé</gl>
-<hw>¹¹tʃjʌ</hw>
-</entry>
-<entry id="syang716">
-<gl>thé salé</gl>
-<hw>¹²mʌr ²¹tʃja</hw>
-</entry>
-<entry id="syang717">
-<gl>reste de la pâte après filtrage (de la bière)</gl>
-<hw>⁵⁵'⁵⁵ʃjoti</hw>
-</entry>
-<entry id="syang718">
-<gl>pâte à bière</gl>
-<hw>˩poXpoʱ
-</hw>
-</entry>
-<entry id="syang719">
-<gl>pâte à bière</gl>
-<hw>²¹pʰo²¹pʰoʱ
-</hw>
-</entry>
-<entry id="syang720">
-<gl>bière</gl>
-<hw>⁵⁵pa</hw>
-</entry>
-<entry id="syang721">
-<gl>bière</gl>
-<hw>Xpʰi</hw>
-</entry>
-<entry id="syang722">
-<gl>bière</gl>
-<hw>⁵⁴paː</hw>
-</entry>
-<entry id="syang723">
-<gl>bière (honor.)</gl>
-<hw>⁵⁵kjem</hw>
-</entry>
-<entry id="syang724">
-<gl>alcool</gl>
-<hw>³³'³³raʃi</hw>
-</entry>
-<entry id="syang725">
-<gl>farine</gl>
-<hw>¹¹pra¹¹praʱ
-</hw>
-</entry>
-<entry id="syang726">
-<gl>farine</gl>
-<hw>¹¹bra¹¹bʱraʱ
-</hw>
-</entry>
-<entry id="syang727">
-<gl>farine de blé</gl>
-<hw>⁴⁴tsʰim ²²pra</hw>
-</entry>
-<entry id="syang728">
-<gl>farine d'orge</gl>
-<hw>⁴⁴'⁴⁴tsjaka ¹¹pra</hw>
-</entry>
-<entry id="syang729">
-<gl>farine de riz</gl>
-<hw>²¹mla ²²pra²¹mlaʱ ²²praʱ
-</hw>
-</entry>
-<entry id="syang730">
-<gl>farine de Fagopyrum tataricum</gl>
-<hw>⁵⁵pje ²²pra</hw>
-</entry>
-<entry id="syang731">
-<gl>farine de Fagopyrum tataricum</gl>
-<hw>²¹pre ²¹pra²¹preʱ ²¹pra
-</hw>
-</entry>
-<entry id="syang732">
-<gl>farine de sarrasin</gl>
-<hw>¹¹gja ¹¹pra¹¹gjaʱ ¹¹pra
-</hw>
-</entry>
-<entry id="syang733">
-<gl>farine d'orge grillé</gl>
-<hw>Xkʌpra</hw>
-</entry>
-<entry id="syang734">
-<gl>farine d'orge grillé</gl>
-<hw>⁵⁵'⁴⁴kʷoprʌ</hw>
-</entry>
-<entry id="syang735">
-<gl>farine d'orge grillé au sable</gl>
-<hw>²²'²¹ʃiprʌ²²'²¹ʃiʱprʌ
-</hw>
-</entry>
-<entry id="syang736">
-<gl>farine de blé grillé</gl>
-<hw>¹¹'¹¹gopra¹¹'¹¹goʱpra
-</hw>
-</entry>
-<entry id="syang737">
-<gl>farine de blé grillé dans le thé</gl>
-<hw>²¹'³³dzjamdʌl²¹'³³dzjaʱmdʌl
-</hw>
-</entry>
-<entry id="syang738">
-<gl>farine de blé grillé dans le thé</gl>
-<hw>²²'³³kʰole</hw>
-</entry>
-<entry id="syang739">
-<gl>grains grillés</gl>
-<hw>⁵⁵po</hw>
-</entry>
-<entry id="syang740">
-<gl>pâte à pain</gl>
-<hw>¹¹'¹¹pranda</hw>
-</entry>
-<entry id="syang741">
-<gl>malaxer la pâte à pain</gl>
-<hw>¹¹'¹¹pranda ⁴⁴'⁴⁴tʃjom-ba</hw>
-</entry>
-<entry id="syang742">
-<gl>pain</gl>
-<hw>¹¹kjaŋ¹¹kjaʱŋ
-</hw>
-</entry>
-<entry id="syang743">
-<gl>pain fait avec pâte liquide</gl>
-<hw>¹¹koi ¹¹kjaŋ¹¹koʱi ¹¹kjaʱŋ
-</hw>
-</entry>
-<entry id="syang744">
-<gl>purée de farine</gl>
-<hw>³³'³³saŋʈen</hw>
-</entry>
-<entry id="syang745">
-<gl>purée de farine</gl>
-<hw>³³'³³saŋʈɛn</hw>
-</entry>
-<entry id="syang746">
-<gl>jus de fruit</gl>
-<hw>⁵⁵'⁵⁵kʰugu</hw>
-</entry>
-<entry id="syang747">
-<gl>yaourt</gl>
-<hw>˩ʃjoXʃjoʱ
-</hw>
-</entry>
-<entry id="syang748">
-<gl>yaourt</gl>
-<hw>˩ʃjoXʃjoʱ
-</hw>
-</entry>
-<entry id="syang749">
-<gl>petit lait séché</gl>
-<hw>⁵⁵'⁴⁴tʃʰiːba</hw>
-</entry>
-<entry id="syang750">
-<gl>brèdes</gl>
-<hw>²¹ʈo</hw>
-</entry>
-<entry id="syang751">
-<gl>ferment</gl>
-<hw>¹¹'⁴³prama</hw>
-</entry>
-<entry id="syang752">
-<gl>petit déjeuner</gl>
-<hw>²¹'⁴⁴loŋgʌl²¹'⁴⁴loʱŋgʌl
-</hw>
-</entry>
-<entry id="syang753">
-<gl>goûter</gl>
-<hw>⁵²'²²ɲose</hw>
-</entry>
-<entry id="syang754">
-<gl>saucisse de viande</gl>
-<hw>Xʃja ˩gumXʃja guʱm
-</hw>
-</entry>
-<entry id="syang755">
-<gl>saucisse de farine</gl>
-<hw>Xkjapra ˩gumXkjapra guʱm
-</hw>
-</entry>
-<entry id="syang756">
-<gl>saucisse de viande et sang</gl>
-<hw>¹¹naŋ ¹¹'²²'¹¹gum¹¹naŋ ¹¹'²²'¹¹guʱm
-</hw>
-</entry>
-<entry id="syang757">
-<gl>boudin</gl>
-<hw>Xka ˩gumXka guʱm
-</hw>
-</entry>
-<entry id="syang758">
-<gl>couverture</gl>
-<hw>⁵⁵ʃirʌn (¹¹'³²nʌmba)</hw>
-</entry>
-<entry id="syang759">
-<gl>vêtement</gl>
-<hw>⁵⁵kon</hw>
-</entry>
-<entry id="syang760">
-<gl>vêtement</gl>
-<hw>⁵⁵kʷon</hw>
-</entry>
-<entry id="syang761">
-<gl>laine</gl>
-<hw>⁵⁴pʌi</hw>
-</entry>
-<entry id="syang762">
-<gl>laine</gl>
-<hw>⁵³pʌi</hw>
-</entry>
-<entry id="syang763">
-<gl>poil</gl>
-<hw>⁵⁵'⁵⁵ratsʰʌm</hw>
-</entry>
-<entry id="syang764">
-<gl>fil</gl>
-<hw>⁵⁴hřu</hw>
-</entry>
-<entry id="syang765">
-<gl>aiguille</gl>
-<hw>Xgjɛtʌu</hw>
-</entry>
-<entry id="syang766">
-<gl>aiguille</gl>
-<hw>²¹'³³kjogo</hw>
-</entry>
-<entry id="syang767">
-<gl>laine</gl>
-<hw>³³pʌi ⁴⁴'³³kʰɛba</hw>
-</entry>
-<entry id="syang768">
-<gl>instrument à filer</gl>
-<hw>(⁴⁴'⁴⁴'⁴⁴po kʰeba) ³¹toŋ</hw>
-</entry>
-<entry id="syang769">
-<gl>instrument à doubler le fil</gl>
-<hw>˩danʌm (tumba)Xdaʱnʌm (tumba)
-</hw>
-</entry>
-<entry id="syang770">
-<gl>instrument à filer</gl>
-<hw>⁵⁵'⁴⁴mrami</hw>
-</entry>
-<entry id="syang771">
-<gl>lancer le mrani en tournant</gl>
-<hw>⁴⁴'³³pʰjarba</hw>
-</entry>
-<entry id="syang772">
-<gl>lancer le mrani en tournant</gl>
-<hw>²²'²²tunu ²¹'³³tumba²²'²²tuʱnu ²¹'³³tumba
-</hw>
-</entry>
-<entry id="syang773">
-<gl>métier à tisser</gl>
-<hw>⁵⁵'³³konʈa</hw>
-</entry>
-<entry id="syang774">
-<gl>couteau (du métier)</gl>
-<hw>¹¹'¹¹gjaŋba¹¹'¹¹gjaʱŋba
-</hw>
-</entry>
-<entry id="syang775">
-<gl>bâton de lisses</gl>
-<hw>¹¹nʌ ⁵⁵ʃin</hw>
-</entry>
-<entry id="syang776">
-<gl>lisses</gl>
-<hw>⁵⁴nʌ</hw>
-</entry>
-<entry id="syang777">
-<gl>lisses</gl>
-<hw>⁵⁴na</hw>
-</entry>
-<entry id="syang778">
-<gl>poitrinière</gl>
-<hw>¹¹til ⁵⁴ʃin¹¹tiʱl ⁵⁴ʃin
-</hw>
-</entry>
-<entry id="syang779">
-<gl>ensouple</gl>
-<hw>⁵⁵'⁵⁵peʈa</hw>
-</entry>
-<entry id="syang780">
-<gl>peigne</gl>
-<hw>⁴⁴'³³kaŋgju</hw>
-</entry>
-<entry id="syang781">
-<gl>monter le métier</gl>
-<hw>⁴⁴'²²konʈa ⁴⁴'⁴⁴ram-ba</hw>
-</entry>
-<entry id="syang782">
-<gl>tisser</gl>
-<hw>⁵⁵'⁵⁴ra-ba</hw>
-</entry>
-<entry id="syang783">
-<gl>teindre</gl>
-<hw>⁵⁵tsʰe ⁵⁴'⁴³tsʰo-ba</hw>
-</entry>
-<entry id="syang784">
-<gl>pelote de laine</gl>
-<hw>Xtʰi pʰoltoŋ</hw>
-</entry>
-<entry id="syang785">
-<gl>écheveau</gl>
-<hw>⁴⁴'⁵⁵tokpa</hw>
-</entry>
-<entry id="syang786">
-<gl>imprimer</gl>
-<hw>⁴⁴par ⁵⁵'⁴⁴pum-ba</hw>
-</entry>
-<entry id="syang787">
-<gl>chemise</gl>
-<hw>Xkʌmɛs</hw>
-</entry>
-<entry id="syang788">
-<gl>blouse</gl>
-<hw>Xtsola</hw>
-</entry>
-<entry id="syang789">
-<gl>ceinture</gl>
-<hw>³³'³³pʰiki ⁵⁵'³³kʰi-ba</hw>
-</entry>
-<entry id="syang790">
-<gl>ceinture</gl>
-<hw>⁴⁴'⁴³pʰigi</hw>
-</entry>
-<entry id="syang791">
-<gl>ceinture de laine</gl>
-<hw>³¹pʌi ³³'³³pʰiki</hw>
-</entry>
-<entry id="syang792">
-<gl>pantalon de femme</gl>
-<hw>²²'²¹noŋʌi</hw>
-</entry>
-<entry id="syang793">
-<gl>sari</gl>
-<hw>Xsari</hw>
-</entry>
-<entry id="syang794">
-<gl>tablier de reins</gl>
-<hw>⁴⁴'⁴⁴kjeri</hw>
-</entry>
-<entry id="syang795">
-<gl>châle</gl>
-<hw>⁵³'³³kjɛtʌm</hw>
-</entry>
-<entry id="syang796">
-<gl>châle</gl>
-<hw>Xʈutum</hw>
-</entry>
-<entry id="syang797">
-<gl>mettre un châle</gl>
-<hw>⁵⁵'⁴⁴ɲur-ba</hw>
-</entry>
-<entry id="syang798">
-<gl>sandales</gl>
-<hw>⁴⁴'⁴³tsʌʈi</hw>
-</entry>
-<entry id="syang799">
-<gl>chaussures</gl>
-<hw>⁴⁴'⁴³pola</hw>
-</entry>
-<entry id="syang800">
-<gl>chaussures tibétaines</gl>
-<hw>˩gjoXgjoʱ
-</hw>
-</entry>
-<entry id="syang801">
-<gl>lacet de chaussure tibétaines</gl>
-<hw>²²gjo ²¹gi²²gjoʱ ²¹giʱ
-</hw>
-</entry>
-<entry id="syang802">
-<gl>chaussettes</gl>
-<hw>Xtsurʌp</hw>
-</entry>
-<entry id="syang803">
-<gl>bracelet de verre</gl>
-<hw>³³'⁴³pʌŋki</hw>
-</entry>
-<entry id="syang804">
-<gl>bracelet de verre</gl>
-<hw>⁴⁴'⁴³soʈu</hw>
-</entry>
-<entry id="syang805">
-<gl>collier</gl>
-<hw>⁴⁴'⁴³pʰraŋmo</hw>
-</entry>
-<entry id="syang806">
-<gl>collier (général)</gl>
-<hw>⁴⁴'⁴⁴pʰjaŋpyr</hw>
-</entry>
-<entry id="syang807">
-<gl>collier de corail et turquoise</gl>
-<hw>⁴⁴'⁴³kʌnʈe</hw>
-</entry>
-<entry id="syang808">
-<gl>bague</gl>
-<hw>⁵⁵tsjo</hw>
-</entry>
-<entry id="syang809">
-<gl>bague</gl>
-<hw>⁵⁵tsjo·</hw>
-</entry>
-<entry id="syang810">
-<gl>percer les oreilles</gl>
-<hw>¹¹'³³nakʰuŋ ³³'³³tʰuŋ-ba</hw>
-</entry>
-<entry id="syang811">
-<gl>mettre tika</gl>
-<hw>Xʈika ku-ba</hw>
-</entry>
-<entry id="syang812">
-<gl>natte de fil</gl>
-<hw>⁵⁵'⁵⁴rame</hw>
-</entry>
-<entry id="syang813">
-<gl>faire une tresse</gl>
-<hw>⁴⁴ke ⁵⁵'⁴⁴pje-ba</hw>
-</entry>
-<entry id="syang814">
-<gl>faire une tresse</gl>
-<hw>³³tjagal ³³pe-ba</hw>
-</entry>
-<entry id="syang815">
-<gl>faire deux tresses</gl>
-<hw>Xkeɲigʌl pe-ba</hw>
-</entry>
-<entry id="syang816">
-<gl>chapeau</gl>
-<hw>⁴⁴'⁴⁴pulu</hw>
-</entry>
-<entry id="syang817">
-<gl>surtout de lama</gl>
-<hw>Xkʰʌmʃjʌr</hw>
-</entry>
-<entry id="syang818">
-<gl>manche de vêtement</gl>
-<hw>²²'²¹buʃja²²'²¹buʱʃja
-</hw>
-</entry>
-<entry id="syang819">
-<gl>bourse</gl>
-<hw>⁵⁵'⁵³kʰomaŋ</hw>
-</entry>
-<entry id="syang820">
-<gl>carder la laine</gl>
-<hw>⁴⁴pʌi ⁵⁵'⁴⁴ʈam-ba</hw>
-</entry>
-<entry id="syang821">
-<gl>carder la laine</gl>
-<hw>Xpʌlʃi pum-ba</hw>
-</entry>
-<entry id="syang822">
-<gl>coquillage</gl>
-<hw>⁵⁵'⁴⁴pana</hw>
-</entry>
-<entry id="syang823">
-<gl>corail pur</gl>
-<hw>²²bjur ²¹'²²saba²²bjuʱr ²¹'²²saʱba
-</hw>
-</entry>
-<entry id="syang824">
-<gl>corail de mauvaise qualité</gl>
-<hw>¹¹bjur ²²'¹¹sokpo¹¹bjuʱr ²²'¹¹sokpo
-</hw>
-</entry>
-<entry id="syang825">
-<gl>turquoise</gl>
-<hw>⁵³ju</hw>
-</entry>
-<entry id="syang826">
-<gl>brosse à cheveux</gl>
-<hw>⁵⁵'⁴⁴mrosʌi</hw>
-</entry>
-<entry id="syang827">
-<gl>brosse à cheveux</gl>
-<hw>⁵⁵'⁵⁴mresa</hw>
-</entry>
-<entry id="syang828">
-<gl>faire la raie</gl>
-<hw>⁴⁴ŋo ²²'²²pra-ba</hw>
-</entry>
-<entry id="syang829">
-<gl>vivre</gl>
-<hw>⁵⁴'⁴⁴so-ba</hw>
-</entry>
-<entry id="syang830">
-<gl>vivre</gl>
-<hw>⁵⁵'⁴⁴so-ba</hw>
-</entry>
-<entry id="syang831">
-<gl>grand</gl>
-<hw>⁴⁵'⁵⁵no-ba</hw>
-</entry>
-<entry id="syang832">
-<gl>nain</gl>
-<hw>⁵⁵'⁴⁴'³³putulu</hw>
-</entry>
-<entry id="syang833">
-<gl>petit</gl>
-<hw>Xma-βa</hw>
-</entry>
-<entry id="syang834">
-<gl>être en bonne santé</gl>
-<hw>⁵¹paŋ ³³'³³kʰa-ba</hw>
-</entry>
-<entry id="syang835">
-<gl>être en bonne santé</gl>
-<hw>¹¹baŋ¹¹bʱaʱŋ
-</hw>
-</entry>
-<entry id="syang836">
-<gl>ne pas être bien</gl>
-<hw>⁵⁵'⁵⁵(kʰok-pa) ²²a ²²'²¹ki-mo</hw>
-</entry>
-<entry id="syang837">
-<gl>être malade</gl>
-<hw>⁵⁵'⁵⁵na-ba</hw>
-</entry>
-<entry id="syang838">
-<gl>douleur</gl>
-<hw>⁵⁵'⁵⁵na-ba</hw>
-</entry>
-<entry id="syang839">
-<gl>migraine</gl>
-<hw>⁵⁵kja ²²'²²namu</hw>
-</entry>
-<entry id="syang840">
-<gl>pleurer</gl>
-<hw>⁵⁵'⁵⁴kjaː-ba</hw>
-</entry>
-<entry id="syang841">
-<gl>pleurer</gl>
-<hw>⁵⁵'⁵⁴kja-mu</hw>
-</entry>
-<entry id="syang842">
-<gl>tousser</gl>
-<hw>²¹'³³pjuŋ-mu²¹'³³pjuʱŋ-mu
-</hw>
-</entry>
-<entry id="syang843">
-<gl>toux</gl>
-<hw>²²'²¹pjuŋ-ba</hw>
-</entry>
-<entry id="syang844">
-<gl>éternuer</gl>
-<hw>⁵⁵'⁵⁵kʰi-mu</hw>
-</entry>
-<entry id="syang845">
-<gl>éternuer</gl>
-<hw>⁵⁵'⁴⁴kʰiː-ba</hw>
-</entry>
-<entry id="syang846">
-<gl>maladie</gl>
-<hw>⁵⁵'⁵⁵nasa (kʰadzimu)</hw>
-</entry>
-<entry id="syang847">
-<gl>rhume</gl>
-<hw>⁵³sam ³³'³³ʃjowa</hw>
-</entry>
-<entry id="syang848">
-<gl>diarrhée</gl>
-<hw>⁵⁵'⁴⁴ʃjʉrba</hw>
-</entry>
-<entry id="syang849">
-<gl>sang et glaires</gl>
-<hw>Xragat maʃi taba</hw>
-</entry>
-<entry id="syang850">
-<gl>vers intestinaux</gl>
-<hw>¹¹'¹¹buluŋ¹¹'¹¹buʱluŋ
-</hw>
-</entry>
-<entry id="syang851">
-<gl>remède</gl>
-<hw>⁵⁵mʌn</hw>
-</entry>
-<entry id="syang852">
-<gl>guérir (maladie)</gl>
-<hw>¹¹'⁴³sa-ba¹¹'⁴³saʱ-ba
-</hw>
-</entry>
-<entry id="syang853">
-<gl>guérir (maladie)</gl>
-<hw>⁵⁵'⁵⁴kiː-mu</hw>
-</entry>
-<entry id="syang854">
-<gl>docteur</gl>
-<hw>⁵⁵'⁵⁴ʈaŋdar</hw>
-</entry>
-<entry id="syang855">
-<gl>vacciner</gl>
-<hw>Xkʰopa la-ba</hw>
-</entry>
-<entry id="syang856">
-<gl>vacciner</gl>
-<hw>⁵⁵'⁵⁴kʰowa ⁴⁴'⁴⁴la-ba</hw>
-</entry>
-<entry id="syang857">
-<gl>goître</gl>
-<hw>⁵⁵'⁴⁴pãŋa</hw>
-</entry>
-<entry id="syang858">
-<gl>goître</gl>
-<hw>³¹'²²baŋa³¹'²²baʱŋa
-</hw>
-</entry>
-<entry id="syang859">
-<gl>taches de rousseur</gl>
-<hw>⁵⁵mlaŋ ¹¹'¹¹ʈuba</hw>
-</entry>
-<entry id="syang860">
-<gl>gale</gl>
-<hw>⁵⁵por</hw>
-</entry>
-<entry id="syang861">
-<gl>fou</gl>
-<hw>⁵³'³³sa-ba</hw>
-</entry>
-<entry id="syang862">
-<gl>sain</gl>
-<hw>¹¹'¹¹sa-ba¹¹'¹¹saʱ-ba
-</hw>
-</entry>
-<entry id="syang863">
-<gl>roter</gl>
-<hw>⁵³ap ³³'³³kʰa-ba</hw>
-</entry>
-<entry id="syang864">
-<gl>cligner de l'oeil</gl>
-<hw>⁵⁵mi ³³'³³ljaŋ-ba</hw>
-</entry>
-<entry id="syang865">
-<gl>souffler</gl>
-<hw>Xpʰwi-ba</hw>
-</entry>
-<entry id="syang866">
-<gl>souffler</gl>
-<hw>⁴⁴'⁴³pʰwi-ba</hw>
-</entry>
-<entry id="syang867">
-<gl>se moucher</gl>
-<hw>Xno ɬjaː-ba</hw>
-</entry>
-<entry id="syang868">
-<gl>péter</gl>
-<hw>⁴⁴lem ⁵⁵'⁴⁴ʃje-ba</hw>
-</entry>
-<entry id="syang869">
-<gl>déféquer</gl>
-<hw>⁴⁴li ⁴⁴'⁴³pum-ba</hw>
-</entry>
-<entry id="syang870">
-<gl>déféquer</gl>
-<hw>⁵⁴a ³³'³³pun-dzi</hw>
-</entry>
-<entry id="syang871">
-<gl>uriner</gl>
-<hw>Xkoŋ pum-ba</hw>
-</entry>
-<entry id="syang872">
-<gl>bailler</gl>
-<hw>Xha kʰamu</hw>
-</entry>
-<entry id="syang873">
-<gl>sentir une odeur</gl>
-<hw>⁴⁴tʰaŋ ⁵⁵'⁴⁴wom-ba</hw>
-</entry>
-<entry id="syang874">
-<gl>accoucher</gl>
-<hw>⁴⁴'⁴⁴kʌla ²²'²²'²²na-dzi-mu⁴⁴'⁴⁴kʌla ²²'²²'²²naʱ-dzi-mu
-</hw>
-</entry>
-<entry id="syang875">
-<gl>être enceinte</gl>
-<hw>⁵⁵'⁵⁵pʰo-ri ⁵⁵'⁴⁴'³³tʃhja-dzi-mu</hw>
-</entry>
-<entry id="syang876">
-<gl>être enceinte</gl>
-<hw>⁴⁴pʰo ¹¹'¹¹na-ba</hw>
-</entry>
-<entry id="syang877">
-<gl>avoir des rapports sexuels (h.)</gl>
-<hw>¹¹'⁴³pjʌ-ba</hw>
-</entry>
-<entry id="syang878">
-<gl>avoir une érection</gl>
-<hw>⁵⁵'⁴⁴kʰjaŋ-ba</hw>
-</entry>
-<entry id="syang879">
-<gl>mourir</gl>
-<hw>⁵⁴'⁴⁴ʃi-ba</hw>
-</entry>
-<entry id="syang880">
-<gl>se reposer</gl>
-<hw>²¹'²²na-ba²¹'²²naʱ-ba
-</hw>
-</entry>
-<entry id="syang881">
-<gl>be tired</gl>
-<hw>¹¹'²¹tu-mu¹¹'²¹tuʱ-mu
-</hw>
-</entry>
-<entry id="syang882">
-<gl>être paresseux</gl>
-<hw>˩ʈʌttu lawaXʈʌʱttu lawa
-</hw>
-</entry>
-<entry id="syang883">
-<gl>dormir</gl>
-<hw>²¹'¹¹du-ba²¹'¹¹duʱ-ba
-</hw>
-</entry>
-<entry id="syang884">
-<gl>dormir</gl>
-<hw>⁵⁵nu-ba</hw>
-</entry>
-<entry id="syang885">
-<gl>avoir sommeil</gl>
-<hw>⁵⁵nu ²²'³³ra-ba</hw>
-</entry>
-<entry id="syang886">
-<gl>dormir (honor.)</gl>
-<hw>²²'²²sum-laŋ ²¹'²²tsʌi-to²²'²²suʱm-laŋ ²¹'²²tsʌʱi-to
-</hw>
-</entry>
-<entry id="syang887">
-<gl>coucher (enfant)</gl>
-<hw>⁴³'³³nɛi-ba</hw>
-</entry>
-<entry id="syang888">
-<gl>coucher (enfant)</gl>
-<hw>⁴⁴'³³nai-ba</hw>
-</entry>
-<entry id="syang889">
-<gl>ronfler</gl>
-<hw>⁵⁵sa ¹¹'¹¹ʈi-ba</hw>
-</entry>
-<entry id="syang890">
-<gl>rêver</gl>
-<hw>⁵⁵maŋ ⁴⁴'⁴³maŋ-ba</hw>
-</entry>
-<entry id="syang891">
-<gl>rêver</gl>
-<hw>²¹maŋ²¹maʱŋ
-</hw>
-</entry>
-<entry id="syang892">
-<gl>se réveiller</gl>
-<hw>³³mi ⁵⁵haŋ ³³'³³kʰa-ba</hw>
-</entry>
-<entry id="syang893">
-<gl>se réveiller</gl>
-<hw>⁴⁴nam ¹¹'¹¹naŋ-ba⁴⁴nam ¹¹'¹¹naʱŋ-ba
-</hw>
-</entry>
-<entry id="syang894">
-<gl>réveiller qq'un</gl>
-<hw>⁵⁵'⁵⁴tʃʰin-o</hw>
-</entry>
-<entry id="syang895">
-<gl>respirer</gl>
-<hw>⁵⁵sa ¹¹'¹¹ʈi-ba</hw>
-</entry>
-<entry id="syang896">
-<gl>respirer</gl>
-<hw>⁴⁴sa ¹¹'¹¹ʈi-ba⁴⁴sa ¹¹'¹¹ʈiʱ-ba
-</hw>
-</entry>
-<entry id="syang897">
-<gl>haleter</gl>
-<hw>⁴⁴sa ¹¹'¹¹lo-ba⁴⁴sa ¹¹'¹¹loʱ-ba
-</hw>
-</entry>
-<entry id="syang898">
-<gl>saigner</gl>
-<hw>⁵⁵ka ⁴⁴'³³ju-ba</hw>
-</entry>
-<entry id="syang899">
-<gl>avoir ses règles</gl>
-<hw>Xkʰam a-saŋ-ba ta-mu</hw>
-</entry>
-<entry id="syang900">
-<gl>démanger</gl>
-<hw>⁵⁵'⁵⁵kja-ba</hw>
-</entry>
-<entry id="syang901">
-<gl>p f</gl>
-<hw>⁵⁵'³³kja-mu</hw>
-</entry>
-<entry id="syang902">
-<gl>sale</gl>
-<hw>³³kʰam ³³'⁵⁵'⁴⁴asaŋ-ba</hw>
-</entry>
-<entry id="syang903">
-<gl>sale</gl>
-<hw>⁵¹ɖi ²²'²²'¹¹tsʰja-dzi-mu</hw>
-</entry>
-<entry id="syang904">
-<gl>se laver</gl>
-<hw>⁴⁴'³³kʰu-ba</hw>
-</entry>
-<entry id="syang905">
-<gl>se laver</gl>
-<hw>⁵⁵'⁵⁵kʰu-ba</hw>
-</entry>
-<entry id="syang906">
-<gl>être propre</gl>
-<hw>⁵⁵kʰʌm ⁴⁴'³³saŋ-mu</hw>
-</entry>
-<entry id="syang907">
-<gl>raser (barbe, laine)</gl>
-<hw>¹¹'¹¹pra-ba</hw>
-</entry>
-<entry id="syang908">
-<gl>raser (barbe, laine)</gl>
-<hw>¹¹'¹¹pra-ba¹¹'¹¹praʱ-ba
-</hw>
-</entry>
-<entry id="syang909">
-<gl>raser (barbe seulement)</gl>
-<hw>⁴⁴'³³ʃjɛr-ba</hw>
-</entry>
-<entry id="syang910">
-<gl>masser</gl>
-<hw>²¹'³³nɛː-ba²¹'³³nɛʱː-ba
-</hw>
-</entry>
-<entry id="syang911">
-<gl>masser</gl>
-<hw>¹¹'²²ne-ba¹¹'²²neʱ-ba
-</hw>
-</entry>
-<entry id="syang912">
-<gl>masser</gl>
-<hw>²¹'²²nai-ba</hw>
-</entry>
-<entry id="syang913">
-<gl>brosser cheveux</gl>
-<hw>⁴⁴kja ⁵⁵'⁴⁴se-ba</hw>
-</entry>
-<entry id="syang914">
-<gl>coiffer</gl>
-<hw>⁴⁴ke ⁵⁵'⁴⁴ʃi-ba</hw>
-</entry>
-<entry id="syang915">
-<gl>coiffer</gl>
-<hw>⁴⁴kja ⁵⁵'⁴⁴ʃiː-ba</hw>
-</entry>
-<entry id="syang916">
-<gl>raser les cheveux</gl>
-<hw>Xmunɖili la-ba</hw>
-</entry>
-<entry id="syang917">
-<gl>épiler</gl>
-<hw>⁵⁵'³³tsi-ba</hw>
-</entry>
-<entry id="syang918">
-<gl>gratter</gl>
-<hw>⁵⁵'⁴⁴ri-βa</hw>
-</entry>
-<entry id="syang919">
-<gl>se chauffer au feu</gl>
-<hw>⁵⁵mi ¹¹'¹¹djaː-ba⁵⁵mi ¹¹'¹¹dʱjaʱː-ba
-</hw>
-</entry>
-<entry id="syang920">
-<gl>enfler</gl>
-<hw>⁵⁵'⁵⁵hřaŋ-ba</hw>
-</entry>
-<entry id="syang921">
-<gl>enfler</gl>
-<hw>Xɕʰjaŋ-ba</hw>
-</entry>
-<entry id="syang922">
-<gl>supporter</gl>
-<hw>Xtsʰan-ba</hw>
-</entry>
-<entry id="syang923">
-<gl>pouvoir (physiquement)</gl>
-<hw>Xkʰam-mo</hw>
-</entry>
-<entry id="syang924">
-<gl>pouvoir (physiquement)</gl>
-<hw>⁵⁵'³³kʰam-ba</hw>
-</entry>
-<entry id="syang925">
-<gl>tordre (membre)</gl>
-<hw>¹¹rul ¹¹'¹¹jo-ba¹¹ruʱl ¹¹'¹¹joʱ-ba
-</hw>
-</entry>
-<entry id="syang926">
-<gl>gémir</gl>
-<hw>¹¹'³³mu-mo¹¹'³³muʱ-mo
-</hw>
-</entry>
-<entry id="syang927">
-<gl>gémir</gl>
-<hw>¹¹su ⁴⁴'¹¹te-mu¹¹suʱ ⁴⁴'¹¹te-mu
-</hw>
-</entry>
-<entry id="syang928">
-<gl>grogner</gl>
-<hw>³³kʌi ⁴⁴'³³te-ba</hw>
-</entry>
-<entry id="syang929">
-<gl>piquer</gl>
-<hw>⁵⁵'⁴⁴mloː-ba</hw>
-</entry>
-<entry id="syang930">
-<gl>couper</gl>
-<hw>⁵⁵'⁵⁵tʰa-ba</hw>
-</entry>
-<entry id="syang931">
-<gl>brûler</gl>
-<hw>Xkʰjaŋ-ba</hw>
-</entry>
-<entry id="syang932">
-<gl>brûler</gl>
-<hw>⁴⁴midʌ ⁴⁴'⁵⁵'⁴⁴ku-dze</hw>
-</entry>
-<entry id="syang933">
-<gl>avoir une cloque</gl>
-<hw>⁴⁴'⁴⁴tʃʰjokoŋ ³³'³³kʰa-ba</hw>
-</entry>
-<entry id="syang934">
-<gl>cogner</gl>
-<hw>⁴⁴kʰa ⁴⁴'⁴³tʰe-ba</hw>
-</entry>
-<entry id="syang935">
-<gl>encorner</gl>
-<hw>⁵⁵'⁴⁴tʰo-ba</hw>
-</entry>
-<entry id="syang936">
-<gl>encorner</gl>
-<hw>⁵⁵'⁴⁴tʰo-ba</hw>
-</entry>
-<entry id="syang937">
-<gl>pincer</gl>
-<hw>²¹'³³dzi-ba²¹'³³dzʱi-ba
-</hw>
-</entry>
-<entry id="syang938">
-<gl>griffer</gl>
-<hw>²¹'²²'²²ʃjar-dzi-mu²¹'²²'²²ʃjaʱr-dzi-mu
-</hw>
-</entry>
-<entry id="syang939">
-<gl>tomber de haut</gl>
-<hw>⁴⁴'⁴⁴te-bam
-</hw>
-</entry>
-<entry id="syang940">
-<gl>débouler de montagne</gl>
-<hw>⁴⁴'⁴⁴so-ba</hw>
-</entry>
-<entry id="syang941">
-<gl>débouler de montagne</gl>
-<hw>⁵⁵'⁵⁵so-dze</hw>
-</entry>
-<entry id="syang942">
-<gl>tomber de sa hauteur</gl>
-<hw>⁵⁵'³³tsʰe-ba</hw>
-</entry>
-<entry id="syang943">
-<gl>mourir</gl>
-<hw>¹¹'²²marsa ⁵⁵'⁵⁵pi-dze</hw>
-</entry>
-<entry id="syang944">
-<gl>enterrer</gl>
-<hw>⁴⁴sa ⁴⁴jã ⁵⁵'⁴⁴tʰan-o</hw>
-</entry>
-<entry id="syang945">
-<gl>lieu de crémation</gl>
-<hw>⁵⁵tsʰa</hw>
-</entry>
-<entry id="syang946">
-<gl>exorciser (en jetant une statue de farine)</gl>
-<hw>⁵³li ³³'³³ɬja-ba</hw>
-</entry>
-<entry id="syang947">
-<gl>dieu</gl>
-<hw>⁵⁴ɬa</hw>
-</entry>
-<entry id="syang948">
-<gl>sorcière</gl>
-<hw>⁴⁴'⁴⁴nʌiba</hw>
-</entry>
-<entry id="syang949">
-<gl>masque</gl>
-<hw>²¹pʰa²¹pʰaʱ
-</hw>
-</entry>
-<entry id="syang950">
-<gl>encens (de dhubi)</gl>
-<hw>⁵⁵saŋ</hw>
-</entry>
-<entry id="syang951">
-<gl>mélange de tsampa et beurre (brûlé comme encens)</gl>
-<hw>⁵⁵sur</hw>
-</entry>
-<entry id="syang952">
-<gl>temple</gl>
-<hw>²¹'²²gompa²¹'²²goʱmpa
-</hw>
-</entry>
-<entry id="syang953">
-<gl>offrir aux dieux</gl>
-<hw>⁴⁴'⁴⁴pʰul-ba</hw>
-</entry>
-<entry id="syang954">
-<gl>rêver</gl>
-<hw>⁴⁴maŋ ³³'³¹maŋ-ba</hw>
-</entry>
-<entry id="syang955">
-<gl>rêve</gl>
-<hw>²¹maŋ²¹maʱŋ
-</hw>
-</entry>
-<entry id="syang956">
-<gl>rêver</gl>
-<hw>¹¹maŋ ¹¹jaŋ ²¹'¹¹to-dze¹¹maʱŋ ¹¹jaŋ ²¹'¹¹to-dze
-</hw>
-</entry>
-<entry id="syang957">
-<gl>être possédé</gl>
-<hw>⁵⁵'³³ʃibai ¹¹mi ³³'³³waŋ-ba⁵⁵'³³ʃibai ¹¹miʱ ³³'³³waŋ-ba
-</hw>
-</entry>
-<entry id="syang958">
-<gl>univers</gl>
-<hw>⁵² pe</hw>
-</entry>
-<entry id="syang959">
-<gl>ciel</gl>
-<hw>⁵⁴mo</hw>
-</entry>
-<entry id="syang960">
-<gl>coucher du soleil</gl>
-<hw>¹¹'¹¹dini ⁵⁵'³³ʃja-dze¹¹'¹¹dʱiniʱ ⁵⁵'³³ʃja-dze
-</hw>
-</entry>
-<entry id="syang961">
-<gl>mois</gl>
-<hw>⁵⁴ɬa</hw>
-</entry>
-<entry id="syang962">
-<gl>1 mois</gl>
-<hw>⁵³ɬa ⁴⁴'⁴⁴tila</hw>
-</entry>
-<entry id="syang963">
-<gl>pleine lune</gl>
-<hw>⁵⁴mer</hw>
-</entry>
-<entry id="syang964">
-<gl>hiver</gl>
-<hw>¹¹'³³kuntse</hw>
-</entry>
-<entry id="syang965">
-<gl>été</gl>
-<hw>¹¹'³²pjɛrdze</hw>
-</entry>
-<entry id="syang966">
-<gl>aujourd'hui</gl>
-<hw>⁵⁵'⁵⁴tini</hw>
-</entry>
-<entry id="syang967">
-<gl>aujourd'hui</gl>
-<hw>⁵⁵'⁵⁵tini</hw>
-</entry>
-<entry id="syang968">
-<gl>hier</gl>
-<hw>⁵⁵'⁴⁴tili</hw>
-</entry>
-<entry id="syang969">
-<gl>avant-hier</gl>
-<hw>⁴⁴'⁴⁴uni</hw>
-</entry>
-<entry id="syang970">
-<gl>demain</gl>
-<hw>⁵⁵'⁵⁵nama</hw>
-</entry>
-<entry id="syang971">
-<gl>après-demain</gl>
-<hw>³³'⁴⁴nani</hw>
-</entry>
-<entry id="syang972">
-<gl>dans deux jours</gl>
-<hw>⁴⁴'⁴⁴nasom</hw>
-</entry>
-<entry id="syang973">
-<gl>cette année</gl>
-<hw>⁴⁴tsu ²¹lo⁴⁴tsu ²¹loʱ
-</hw>
-</entry>
-<entry id="syang974">
-<gl>l'an dern ier</gl>
-<hw>⁴⁴'⁴⁴tikjuŋ</hw>
-</entry>
-<entry id="syang975">
-<gl>il y a deux ans</gl>
-<hw>⁵⁵'⁴⁴nʌitin</hw>
-</entry>
-<entry id="syang976">
-<gl>l'an prochain</gl>
-<hw>¹¹'³³gurin</hw>
-</entry>
-<entry id="syang977">
-<gl>dans deux ans</gl>
-<hw>⁵⁵'⁴⁴natin</hw>
-</entry>
-<entry id="syang978">
-<gl>nuage</gl>
-<hw>˩moXmoʱ
-</hw>
-</entry>
-<entry id="syang979">
-<gl>tempête</gl>
-<hw>³³ur ⁵⁵'³³pjoba</hw>
-</entry>
-<entry id="syang980">
-<gl>grêle</gl>
-<hw>⁵⁵'⁴⁴tiʃjɔr</hw>
-</entry>
-<entry id="syang981">
-<gl>neige</gl>
-<hw>¹¹lim¹¹liʱm
-</hw>
-</entry>
-<entry id="syang982">
-<gl>gel</gl>
-<hw>²¹pʌm²¹pʌʱm
-</hw>
-</entry>
-<entry id="syang983">
-<gl>brouillard</gl>
-<hw>⁵⁵'⁴⁴sarma</hw>
-</entry>
-<entry id="syang984">
-<gl>éclair</gl>
-<hw>⁴⁴'⁴⁴'⁴⁴kɔmuli</hw>
-</entry>
-<entry id="syang985">
-<gl>vent</gl>
-<hw>⁵⁵'⁵⁵nambʌr (³³'³³kʰamu)</hw>
-</entry>
-<entry id="syang986">
-<gl>tremblement de terre</gl>
-<hw>⁵⁵'⁵⁵'⁵⁵samuli</hw>
-</entry>
-<entry id="syang987">
-<gl>avalanche</gl>
-<hw>˩ɖiɖiʱ
-</hw>
-</entry>
-<entry id="syang988">
-<gl>glissement de terrain</gl>
-<hw>⁴⁴'⁴⁴kʰʌri ³³'³³judze</hw>
-</entry>
-<entry id="syang989">
-<gl>sommet</gl>
-<hw>⁴¹kaŋ</hw>
-</entry>
-<entry id="syang990">
-<gl>grotte</gl>
-<hw>⁵⁵u</hw>
-</entry>
-<entry id="syang991">
-<gl>montée</gl>
-<hw>²¹lʌ²¹lʌʱ
-</hw>
-</entry>
-<entry id="syang992">
-<gl>montée</gl>
-<hw>³¹la³¹laʱ
-</hw>
-</entry>
-<entry id="syang993">
-<gl>falaise</gl>
-<hw>¹¹praʰ</hw>
-</entry>
-<entry id="syang994">
-<gl>falaise</gl>
-<hw>¹¹bra¹¹bʱraʱ
-</hw>
-</entry>
-<entry id="syang995">
-<gl>écho</gl>
-<hw>⁵⁵'⁴⁴urpa</hw>
-</entry>
-<entry id="syang996">
-<gl>plaine</gl>
-<hw>⁵⁴tʰaŋ</hw>
-</entry>
-<entry id="syang997">
-<gl>vallée</gl>
-<hw>³¹gjũː</hw>
-</entry>
-<entry id="syang998">
-<gl>col (de montagne)</gl>
-<hw>¹¹blaː¹¹blaʱː
-</hw>
-</entry>
-<entry id="syang999">
-<gl>forêt</gl>
-<hw>¹¹naː¹¹naʱː
-</hw>
-</entry>
-<entry id="syang1000">
-<gl>forêt dense</gl>
-<hw>¹¹naː (⁴⁴'⁴⁴suba)¹¹naʱː (⁴⁴'⁴⁴suba)
-</hw>
-</entry>
-<entry id="syang1001">
-<gl>forêt</gl>
-<hw>²¹na²¹naʱ
-</hw>
-</entry>
-<entry id="syang1002">
-<gl>forêt</gl>
-<hw>¹¹naː¹¹naʱː
-</hw>
-</entry>
-<entry id="syang1003">
-<gl>étendue nue</gl>
-<hw>⁵³paŋ</hw>
-</entry>
-<entry id="syang1004">
-<gl>trou</gl>
-<hw>Xkʰuŋ</hw>
-</entry>
-<entry id="syang1005">
-<gl>source (l'eau jaillit)</gl>
-<hw>³³kju ⁵⁵'⁵⁵pʰjo-ʃi ³³'³³mu-mu</hw>
-</entry>
-<entry id="syang1006">
-<gl>mare (l'eau stagne)</gl>
-<hw>³³kju ⁵⁵'³³kʰil-ba</hw>
-</entry>
-<entry id="syang1007">
-<gl>cascade</gl>
-<hw>⁴⁴kju ³³pʰjã</hw>
-</entry>
-<entry id="syang1008">
-<gl>lac</gl>
-<hw>⁵³tsʰo</hw>
-</entry>
-<entry id="syang1009">
-<gl>lac permanent</gl>
-<hw>⁵⁴tsʰo</hw>
-</entry>
-<entry id="syang1010">
-<gl>lac asséchable</gl>
-<hw>⁴⁴tʃin</hw>
-</entry>
-<entry id="syang1011">
-<gl>nom du fleuve Kali Gandaki</gl>
-<hw>⁵⁵'⁵⁵kjuje</hw>
-</entry>
-<entry id="syang1012">
-<gl>pont</gl>
-<hw>⁵²tsʌm</hw>
-</entry>
-<entry id="syang1013">
-<gl>be late</gl>
-<hw>²²'²¹gʌi-ba²²'²¹gʌʱi-ba
-</hw>
-</entry>
-<entry id="syang1014">
-<gl>briller (soleil)</gl>
-<hw>¹¹'¹¹dini ⁴⁴'³³pʰjaː-mo</hw>
-</entry>
-<entry id="syang1015">
-<gl>pleuvoir</gl>
-<hw>³⁴nam ⁴⁵'⁵⁵ju-dze</hw>
-</entry>
-<entry id="syang1016">
-<gl>neiger</gl>
-<hw>¹¹lim ⁴⁴'⁴⁴ju-dze¹¹liʱm ⁴⁴'⁴⁴ju-dze
-</hw>
-</entry>
-<entry id="syang1017">
-<gl>grêler</gl>
-<hw>⁵⁵'⁵⁵tiʃjʌr ⁵⁵'⁵⁴ju-dzi</hw>
-</entry>
-<entry id="syang1018">
-<gl>couler goutte à goutte</gl>
-<hw>Xtsar tsar ta-mu</hw>
-</entry>
-<entry id="syang1019">
-<gl>couler goutte à goutte</gl>
-<hw>Xtʰjar tʰjar ta-mu</hw>
-</entry>
-<entry id="syang1020">
-<gl>inonder</gl>
-<hw>¹¹ʃiː ⁴⁴'⁴⁴ju-ba</hw>
-</entry>
-<entry id="syang1021">
-<gl>flotter</gl>
-<hw>⁴⁴pʰe ⁴⁴pʰe ⁵⁵'⁵⁵ja-dzi</hw>
-</entry>
-<entry id="syang1022">
-<gl>sombrer</gl>
-<hw>⁴⁴'²²tʰim-dze</hw>
-</entry>
-<entry id="syang1023">
-<gl>s'enfoncer dans la boue</gl>
-<hw>(³³'³³tel jaŋ) ⁵⁵'³³ŋa-ba</hw>
-</entry>
-<entry id="syang1024">
-<gl>barrer un fleuve</gl>
-<hw>⁵⁵kju ¹¹'¹¹reː-ba</hw>
-</entry>
-<entry id="syang1025">
-<gl>traverser un fleuve</gl>
-<hw>⁴⁴kju ¹¹'³³tso-ʃi ⁴⁴'⁴⁴jo-ba⁴⁴kju ¹¹'³³tsoʱ-ʃi ⁴⁴'⁴⁴jo-ba
-</hw>
-</entry>
-<entry id="syang1026">
-<gl>un</gl>
-<hw>˩ʈiʈiʱ
-</hw>
-</entry>
-<entry id="syang1027">
-<gl>un</gl>
-<hw>¹¹gʌi¹¹gʌʱi
-</hw>
-</entry>
-<entry id="syang1028">
-<gl>deux</gl>
-<hw>²¹ɲi</hw>
-</entry>
-<entry id="syang1029">
-<gl>2</gl>
-<hw>˩ɲiɲiʱ
-</hw>
-</entry>
-<entry id="syang1030">
-<gl>trois</gl>
-<hw>⁵⁴som</hw>
-</entry>
-<entry id="syang1031">
-<gl>trois</gl>
-<hw>⁴⁴som</hw>
-</entry>
-<entry id="syang1032">
-<gl>quatre</gl>
-<hw>˩pliXpliʱ
-</hw>
-</entry>
-<entry id="syang1033">
-<gl>quatre</gl>
-<hw>˩bliXbʱliʱ
-</hw>
-</entry>
-<entry id="syang1034">
-<gl>cinq</gl>
-<hw>⁵¹ŋʌ⁵¹ŋʌʱ
-</hw>
-</entry>
-<entry id="syang1035">
-<gl>cinq</gl>
-<hw>˩ŋaŋaʱ
-</hw>
-</entry>
-<entry id="syang1036">
-<gl>six</gl>
-<hw>⁵¹ʈu⁵¹ʈuʱ
-</hw>
-</entry>
-<entry id="syang1037">
-<gl>six</gl>
-<hw>˩ɖuɖʱuʱ
-</hw>
-</entry>
-<entry id="syang1038">
-<gl>7</gl>
-<hw>⁵⁵nis</hw>
-</entry>
-<entry id="syang1039">
-<gl>sept</gl>
-<hw>⁵⁵ɲis</hw>
-</entry>
-<entry id="syang1040">
-<gl>huit</gl>
-<hw>²¹pre²¹preʱ
-</hw>
-</entry>
-<entry id="syang1041">
-<gl>huit</gl>
-<hw>¹¹bre¹¹bʱreʱ
-</hw>
-</entry>
-<entry id="syang1042">
-<gl>neuf (nombre)</gl>
-<hw>⁵⁵ku</hw>
-</entry>
-<entry id="syang1043">
-<gl>neuf (nombre)</gl>
-<hw>⁵³kuː</hw>
-</entry>
-<entry id="syang1044">
-<gl>dix</gl>
-<hw>Xtʃju</hw>
-</entry>
-<entry id="syang1045">
-<gl>dix</gl>
-<hw>⁵³tɕju</hw>
-</entry>
-<entry id="syang1046">
-<gl>onze</gl>
-<hw>⁴⁴'⁴⁴tsʌʈi</hw>
-</entry>
-<entry id="syang1047">
-<gl>onze</gl>
-<hw>⁵³'³³tsugi</hw>
-</entry>
-<entry id="syang1048">
-<gl>douze</gl>
-<hw>Xtsunni</hw>
-</entry>
-<entry id="syang1049">
-<gl>douze</gl>
-<hw>⁴⁴'³³tsuŋni</hw>
-</entry>
-<entry id="syang1050">
-<gl>treize</gl>
-<hw>⁴⁴'⁴⁴tsusom</hw>
-</entry>
-<entry id="syang1051">
-<gl>treize</gl>
-<hw>⁵⁴'⁴⁴tsusom</hw>
-</entry>
-<entry id="syang1052">
-<gl>quatorze</gl>
-<hw>³³'³²tsupli</hw>
-</entry>
-<entry id="syang1053">
-<gl>quatorze</gl>
-<hw>³³'¹¹tsubli³³'¹¹tsubliʱ
-</hw>
-</entry>
-<entry id="syang1054">
-<gl>quinze</gl>
-<hw>Xtsaŋa</hw>
-</entry>
-<entry id="syang1055">
-<gl>quinze</gl>
-<hw>⁵³'³³tsaŋa</hw>
-</entry>
-<entry id="syang1056">
-<gl>seize</gl>
-<hw>Xtsuʈʈu</hw>
-</entry>
-<entry id="syang1057">
-<gl>seize</gl>
-<hw>⁵⁵'³³tsuʈu</hw>
-</entry>
-<entry id="syang1058">
-<gl>dix-sept</gl>
-<hw>Xtsʌiɲis</hw>
-</entry>
-<entry id="syang1059">
-<gl>dix-sept</gl>
-<hw>⁵⁵'⁵⁵tseɲis</hw>
-</entry>
-<entry id="syang1060">
-<gl>dix-huit</gl>
-<hw>Xtsopre</hw>
-</entry>
-<entry id="syang1061">
-<gl>dix-huit</gl>
-<hw>⁴⁴'²²tsobre⁴⁴'²²tsobʱreʱ
-</hw>
-</entry>
-<entry id="syang1062">
-<gl>dix-neuf</gl>
-<hw>Xtsurku</hw>
-</entry>
-<entry id="syang1063">
-<gl>dix-neuf</gl>
-<hw>⁵⁵'⁴⁴tsurku</hw>
-</entry>
-<entry id="syang1064">
-<gl>vingt</gl>
-<hw>⁴⁴'⁵³niʃju</hw>
-</entry>
-<entry id="syang1065">
-<gl>vingt</gl>
-<hw>¹¹'²¹ŋiʃju¹¹'²¹ŋiʱʃju
-</hw>
-</entry>
-<entry id="syang1066">
-<gl>trente</gl>
-<hw>⁵⁵'⁵⁵somtʃju</hw>
-</entry>
-<entry id="syang1067">
-<gl>quarante</gl>
-<hw>¹¹'³²plitʃju¹¹'³²pliʱtʃju
-</hw>
-</entry>
-<entry id="syang1068">
-<gl>cent</gl>
-<hw>⁵³pra</hw>
-</entry>
-<entry id="syang1069">
-<gl>cent</gl>
-<hw>²¹pra²¹pʱraʱ
-</hw>
-</entry>
-<entry id="syang1070">
-<gl>mille</gl>
-<hw>Xhazər</hw>
-</entry>
-<entry id="syang1071">
-<gl>demi</gl>
-<hw>⁵¹ʈe</hw>
-</entry>
-<entry id="syang1072">
-<gl>demi</gl>
-<hw>³¹ʈe³¹ʈeʱ
-</hw>
-</entry>
-<entry id="syang1073">
-<gl>ne pas être d'accord</gl>
-<hw>³³'²¹'²³'¹¹agʌi-mu</hw>
-</entry>
-<entry id="syang1074">
-<gl>1 seul est (= être le même, être d'accord)</gl>
-<hw>²¹'³³gʌhi ³³'³³ta-ba</hw>
-</entry>
-<entry id="syang1075">
-<gl>la moitié seulement</gl>
-<hw>²¹ʈe ³³kʰi²¹ʈeʱ ³³kʰi
-</hw>
-</entry>
-<entry id="syang1076">
-<gl>seulement</gl>
-<hw>³³kʰi</hw>
-</entry>
-<entry id="syang1077">
-<gl>nous 2 seulement</gl>
-<hw>²²ɲa ¹¹ɲi ²²hi²²ɲa ¹¹ɲiʱ ²²hi
-</hw>
-</entry>
-<entry id="syang1078">
-<gl>tout</gl>
-<hw>⁵⁴jom</hw>
-</entry>
-<entry id="syang1079">
-<gl>ensemble, tous</gl>
-<hw>⁵⁴pre</hw>
-</entry>
-<entry id="syang1080">
-<gl>ensemble</gl>
-<hw>⁵⁴ʃil</hw>
-</entry>
-<entry id="syang1081">
-<gl>autre</gl>
-<hw>Xʃjan</hw>
-</entry>
-<entry id="syang1082">
-<gl>beaucoup</gl>
-<hw>¹¹'¹¹dana¹¹'¹¹daʱna
-</hw>
-</entry>
-<entry id="syang1083">
-<gl>un peu</gl>
-<hw>Xtsaŋna</hw>
-</entry>
-<entry id="syang1084">
-<gl>une coudée</gl>
-<hw>⁵⁵'⁴⁴ku-na</hw>
-</entry>
-<entry id="syang1085">
-<gl>deux coudées</gl>
-<hw>⁵⁵'¹¹ku-ɲi⁵⁵'¹¹ku-ɲiʱ
-</hw>
-</entry>
-<entry id="syang1086">
-<gl>deux coudées</gl>
-<hw>¹¹kʌs ¹¹ki¹¹kʱʌs ¹¹kiʱ
-</hw>
-</entry>
-<entry id="syang1087">
-<gl>un empan</gl>
-<hw>²¹'³³do-na²¹'³³doʱ-na
-</hw>
-</entry>
-<entry id="syang1088">
-<gl>mesurer une longueur ou un volume</gl>
-<hw>²¹'²²gom-ba²¹'²²goʱm-ba
-</hw>
-</entry>
-<entry id="syang1089">
-<gl>mesurer une longueur ou un volume</gl>
-<hw>²²'²¹gon-o²²'²¹goʱn-o
-</hw>
-</entry>
-<entry id="syang1090">
-<gl>1 pathi</gl>
-<hw>⁵⁵pjaŋ ⁴⁴na</hw>
-</entry>
-<entry id="syang1091">
-<gl>1 pathi</gl>
-<hw>²¹ɖoŋ ²²pjaŋ ²²'²¹pjaŋ na²¹ɖoʱŋ ²²pjaŋ ²²'²¹pjaŋ na
-</hw>
-</entry>
-<entry id="syang1092">
-<gl>un demi pathi</gl>
-<hw>⁵⁵ʃim ⁵⁴pjaŋ ⁴⁴pjaŋ ⁴³na</hw>
-</entry>
-<entry id="syang1093">
-<gl>2 pathis</gl>
-<hw>²¹ɖoŋ ²²pjaŋ ⁵⁵ha ³³naŋ²¹ɖoʱŋ ²²pjaŋ ⁵⁵ha ³³naŋ
-</hw>
-</entry>
-<entry id="syang1094">
-<gl>1 pathi ras</gl>
-<hw>²¹ɖoŋ ²²pjaŋ ⁵⁵nʌi²¹ɖoʱŋ ²²pjaŋ ⁵⁵nʌi
-</hw>
-</entry>
-<entry id="syang1095">
-<gl>une mesure rase</gl>
-<hw>⁵⁵nʌi ⁴⁴'⁴⁴laba</hw>
-</entry>
-<entry id="syang1096">
-<gl>une mesure bombée</gl>
-<hw>⁵⁵mjur ³³'³³laba</hw>
-</entry>
-<entry id="syang1097">
-<gl>1 mana</gl>
-<hw>³³'³³manʌ ¹¹gi³³'³³manʌ ¹¹giʱ
-</hw>
-</entry>
-<entry id="syang1098">
-<gl>2 manas</gl>
-<hw>³³'³³manʌ ¹¹ɲi³³'³³manʌ ¹¹ɲiʱ
-</hw>
-</entry>
-<entry id="syang1099">
-<gl>peser</gl>
-<hw>⁴⁴'³³koi-ba</hw>
-</entry>
-<entry id="syang1100">
-<gl>peser</gl>
-<hw>⁴⁵'⁴⁴koi-dzjo</hw>
-</entry>
-<entry id="syang1101">
-<gl>compter</gl>
-<hw>²¹'³³dzja-ba²¹'³³dʱzjaʱ-ba
-</hw>
-</entry>
-<entry id="syang1102">
-<gl>1 suki</gl>
-<hw>Xroʃiʃja</hw>
-</entry>
-<entry id="syang1103">
-<gl>1 mohor</gl>
-<hw>⁴⁴'⁴⁴'⁴⁴atili</hw>
-</entry>
-<entry id="syang1104">
-<gl>1 roupie</gl>
-<hw>Xale ʈʰol</hw>
-</entry>
-<entry id="syang1105">
-<gl>1 roupie et demie</gl>
-<hw>Xpʰɔlnaŋ</hw>
-</entry>
-<entry id="syang1106">
-<gl>2 roupies</gl>
-<hw>Xale ˩niXale niʱ
-</hw>
-</entry>
-<entry id="syang1107">
-<gl>2 roupies et demie</gl>
-<hw>Xpʰetaŋ som</hw>
-</entry>
-<entry id="syang1108">
-<gl>7 roupies et demie</gl>
-<hw>⁴⁴'⁴⁴pʰetaŋ ²¹pre⁴⁴'⁴⁴pʰetaŋ ²¹preʱ
-</hw>
-</entry>
-<entry id="syang1109">
-<gl>1 paisa</gl>
-<hw>¹¹'³³paisa ³³ti pum</hw>
-</entry>
-<entry id="syang1110">
-<gl>2 paisa</gl>
-<hw>¹¹ɲi ¹¹pum</hw>
-</entry>
-<entry id="syang1111">
-<gl>1 mois</gl>
-<hw>⁵³ɬa ⁴⁴'³³tila</hw>
-</entry>
-<entry id="syang1112">
-<gl>(il y a) un an</gl>
-<hw>²¹'²²lo gi (¹¹'¹¹jodze)²¹'²²loʱ gi (¹¹'¹¹jodze)
-</hw>
-</entry>
-<entry id="syang1113">
-<gl>(il y a) un an et demi</gl>
-<hw>¹¹lo ⁵⁵'⁵⁵pʰetaŋ ¹¹ɲi (¹¹'¹¹jodze)</hw>
-</entry>
-<entry id="syang1114">
-<gl>6 mois, une demi-année</gl>
-<hw>²¹lo ⁴¹ʈe²¹loʱ ⁴¹ʈe
-</hw>
-</entry>
-<entry id="syang1115">
-<gl>un instant</gl>
-<hw>⁴⁴ten</hw>
-</entry>
-<entry id="syang1116">
-<gl>premier mois</gl>
-<hw>Xaga ɬa</hw>
-</entry>
-<entry id="syang1117">
-<gl>deuxième mois</gl>
-<hw>²¹tiũŋ ³³ɬja</hw>
-</entry>
-<entry id="syang1118">
-<gl>3ème mois</gl>
-<hw>⁴⁴'⁴⁴kubi ⁵³ɬa</hw>
-</entry>
-<entry id="syang1119">
-<gl>4ème mois</gl>
-<hw>¹¹ɬu ³²ɬa</hw>
-</entry>
-<entry id="syang1120">
-<gl>5ème mois</gl>
-<hw>⁴⁴pre ⁴³ɬja</hw>
-</entry>
-<entry id="syang1121">
-<gl>6ème mois</gl>
-<hw>¹¹dze ⁴³ɬa¹¹dzeʱ ⁴³ɬa
-</hw>
-</entry>
-<entry id="syang1122">
-<gl>7ème mois</gl>
-<hw>⁵⁵kʰi ⁵⁴ɬa</hw>
-</entry>
-<entry id="syang1123">
-<gl>8ème mois</gl>
-<hw>⁵⁵pʰa ⁵⁴ɬa</hw>
-</entry>
-<entry id="syang1124">
-<gl>9ème mois</gl>
-<hw>¹¹'¹¹bibi ⁵⁴ɬa</hw>
-</entry>
-<entry id="syang1125">
-<gl>10ème mois</gl>
-<hw>¹¹laŋ ⁴³ɬa</hw>
-</entry>
-<entry id="syang1126">
-<gl>11ème mois</gl>
-<hw>⁴⁴tap ⁴³ɬa</hw>
-</entry>
-<entry id="syang1127">
-<gl>12ème mois</gl>
-<hw>¹¹bum ³²ɬa¹¹buʱm ³²ɬa
-</hw>
-</entry>
-<entry id="syang1128">
-<gl>identique</gl>
-<hw>²¹gʊ ³³hi</hw>
-</entry>
-<entry id="syang1129">
-<gl>mélanger</gl>
-<hw>⁵⁴'⁴⁴tʃʰjol-ba</hw>
-</entry>
-<entry id="syang1130">
-<gl>mélanger</gl>
-<hw>⁵⁵'⁴⁴tʃhjelaŋ ³³'³³malaŋ ¹¹'²²'²²joː-dzi-mu</hw>
-</entry>
-<entry id="syang1131">
-<gl>mélanger</gl>
-<hw>⁵⁴jom ⁴⁴'⁴⁴tʃʰjol-o</hw>
-</entry>
-<entry id="syang1132">
-<gl>autrefois</gl>
-<hw>²¹'²²ʃjomo</hw>
-</entry>
-<entry id="syang1133">
-<gl>après</gl>
-<hw>²²'²²tsjuri</hw>
-</entry>
-<entry id="syang1134">
-<gl>depuis</gl>
-<hw>¹¹gi ³³tʰaŋ</hw>
-</entry>
-<entry id="syang1135">
-<gl>immediately</gl>
-<hw>¹¹soː</hw>
-</entry>
-<entry id="syang1136">
-<gl>loin</gl>
-<hw>⁴⁴tʰa ⁵⁵'⁴⁴run-na</hw>
-</entry>
-<entry id="syang1137">
-<gl>loin</gl>
-<hw>³³tʰa ²²'²²rum-ba</hw>
-</entry>
-<entry id="syang1138">
-<gl>près</gl>
-<hw>nadzi</hw>
-</entry>
-<entry id="syang1139">
-<gl>long</gl>
-<hw>¹¹'³³rum-ba¹¹'³³ruʱm-ba
-</hw>
-</entry>
-<entry id="syang1140">
-<gl>court</gl>
-<hw>⁵⁵'⁴⁴rum-ba</hw>
-</entry>
-<entry id="syang1141">
-<gl>épais</gl>
-<hw>³³'³³hrum-ba</hw>
-</entry>
-<entry id="syang1142">
-<gl>mince</gl>
-<hw>⁵⁵'⁴⁴pʌ-mu</hw>
-</entry>
-<entry id="syang1143">
-<gl>haut</gl>
-<hw>⁵⁵'⁵⁴no-ba</hw>
-</entry>
-<entry id="syang1144">
-<gl>haut</gl>
-<hw>⁵⁵'³³no-ba</hw>
-</entry>
-<entry id="syang1145">
-<gl>bas</gl>
-<hw>Xma-βa</hw>
-</entry>
-<entry id="syang1146">
-<gl>vers le haut</gl>
-<hw>Xkʰʌnʈo (jɛro)</hw>
-</entry>
-<entry id="syang1147">
-<gl>vers le bas</gl>
-<hw>⁴⁴'⁴⁴kjʌrʌ (⁴²ju)</hw>
-</entry>
-<entry id="syang1148">
-<gl>couvrir</gl>
-<hw>²¹'³³kʌp-pa²¹'³³kʌʱp-pa
-</hw>
-</entry>
-<entry id="syang1149">
-<gl>couvrir (avec couverture)</gl>
-<hw>¹¹'³²nʌm-ba</hw>
-</entry>
-<entry id="syang1150">
-<gl>coupant</gl>
-<hw>⁵³'³³tsʰjer-mu</hw>
-</entry>
-<entry id="syang1151">
-<gl>affûter</gl>
-<hw>⁵⁵'⁵⁵mer-pa</hw>
-</entry>
-<entry id="syang1152">
-<gl>appointer</gl>
-<hw>⁵⁵'⁴⁴sir-pa</hw>
-</entry>
-<entry id="syang1153">
-<gl>dur</gl>
-<hw>¹¹'¹¹du-mu¹¹'¹¹duʱ-mu
-</hw>
-</entry>
-<entry id="syang1154">
-<gl>solide</gl>
-<hw>⁵⁵'⁴⁴tʰuː-ba</hw>
-</entry>
-<entry id="syang1155">
-<gl>ouvert</gl>
-<hw>⁴⁴'⁴⁴mrokʰa ⁵⁵'⁴⁴tʰuŋ-o</hw>
-</entry>
-<entry id="syang1156">
-<gl>ouvre la porte!</gl>
-<hw>⁵⁵mro ⁴⁴'⁴⁴tʰuŋo</hw>
-</entry>
-<entry id="syang1157">
-<gl>fermé</gl>
-<hw>³³'³³mrokʰa ¹¹'¹¹tʌrʌ</hw>
-</entry>
-<entry id="syang1158">
-<gl>ferme la porte!</gl>
-<hw>⁴⁴'¹¹'³³mro tsol-lo</hw>
-</entry>
-<entry id="syang1159">
-<gl>fermé</gl>
-<hw>⁴⁴'⁴⁴mrokʰa ¹¹'¹¹tuŋg-o</hw>
-</entry>
-<entry id="syang1160">
-<gl>vite</gl>
-<hw>¹¹gjon</hw>
-</entry>
-<entry id="syang1161">
-<gl>vite</gl>
-<hw>⁵³'³³namsaŋ</hw>
-</entry>
-<entry id="syang1162">
-<gl>lentement</gl>
-<hw>¹¹'¹¹naŋgja</hw>
-</entry>
-<entry id="syang1163">
-<gl>lentement</gl>
-<hw>¹¹jal ³³'³³laʃi¹¹jaʱl ³³'³³laʃi
-</hw>
-</entry>
-<entry id="syang1164">
-<gl>dans</gl>
-<hw>²¹na ³³j̃æ²¹naʱ ³³j̃æ
-</hw>
-</entry>
-<entry id="syang1165">
-<gl>dehors</gl>
-<hw>⁵³'³³pʰi-dze</hw>
-</entry>
-<entry id="syang1166">
-<gl>en haut</gl>
-<hw>⁴⁴'⁴³kʌ-no</hw>
-</entry>
-<entry id="syang1167">
-<gl>en bas</gl>
-<hw>⁵⁵mʌ̃</hw>
-</entry>
-<entry id="syang1168">
-<gl>en bas</gl>
-<hw>¹¹'⁴⁴pri-dze¹¹'⁴⁴priʱ-dze
-</hw>
-</entry>
-<entry id="syang1169">
-<gl>sur</gl>
-<hw>⁴⁴pʰe ⁴³j̃æ</hw>
-</entry>
-<entry id="syang1170">
-<gl>sous</gl>
-<hw>²¹mʌ ⁴⁴j̃æ²¹mʌʱ ⁴⁴j̃æ
-</hw>
-</entry>
-<entry id="syang1171">
-<gl>ici</gl>
-<hw>⁴⁴tsi</hw>
-</entry>
-<entry id="syang1172">
-<gl>pourquoi?</gl>
-<hw>⁴⁴'⁴⁴tala</hw>
-</entry>
-<entry id="syang1173">
-<gl>comment?</gl>
-<hw>⁵⁵'⁵⁵'⁵⁵kʰadzjuku ⁵⁵'⁴⁴laʃi</hw>
-</entry>
-<entry id="syang1174">
-<gl>ainsi</gl>
-<hw>¹¹'¹¹wote¹¹'¹¹woʱte
-</hw>
-</entry>
+  <entry id="syang1">
+    <gl>moi, je</gl>
+    <hw>⁵⁵ŋa</hw>
+  </entry>
+  <entry id="syang2">
+    <gl>toi, tu</gl>
+    <hw>˩giXgiʱ
+
+</hw>
+  </entry>
+  <entry id="syang3">
+    <gl>toi, tu</gl>
+    <hw>¹¹gɯ</hw>
+  </entry>
+  <entry id="syang4">
+    <gl>nous incl.</gl>
+    <hw>⁵⁵ɲaŋ</hw>
+  </entry>
+  <entry id="syang5">
+    <gl>nous excl.</gl>
+    <hw>⁵⁵ni</hw>
+  </entry>
+  <entry id="syang6">
+    <gl>ceci</gl>
+    <hw>Xtsʌ</hw>
+  </entry>
+  <entry id="syang7">
+    <gl>ceci</gl>
+    <hw>⁵⁴tsuː</hw>
+  </entry>
+  <entry id="syang8">
+    <gl>ceci</gl>
+    <hw>⁵⁴tsʌ</hw>
+  </entry>
+  <entry id="syang9">
+    <gl>cela</gl>
+    <hw>⁵⁵tja·</hw>
+  </entry>
+  <entry id="syang10">
+    <gl>cela</gl>
+    <hw>⁵⁵'⁴⁴tjama</hw>
+  </entry>
+  <entry id="syang11">
+    <gl>qui ?</gl>
+    <hw>Xsu</hw>
+  </entry>
+  <entry id="syang12">
+    <gl>quoi ?</gl>
+    <hw>⁵⁵taː</hw>
+  </entry>
+  <entry id="syang13">
+    <gl>quoi ?</gl>
+    <hw>⁵⁵ta</hw>
+  </entry>
+  <entry id="syang14">
+    <gl>un</gl>
+    <hw>˩gʌigʌʱi
+
+</hw>
+  </entry>
+  <entry id="syang15">
+    <gl>un</gl>
+    <hw>³¹ʈi³¹ʈiʱ
+
+</hw>
+  </entry>
+  <entry id="syang16">
+    <gl>un</gl>
+    <hw>¹¹gɨ¹¹gɨʱ
+
+</hw>
+  </entry>
+  <entry id="syang17">
+    <gl>deux</gl>
+    <hw>`³¹ɲi</hw>
+  </entry>
+  <entry id="syang18">
+    <gl>grand</gl>
+    <hw>⁵⁵'⁵⁴tʰjo-ba</hw>
+  </entry>
+  <entry id="syang19">
+    <gl>grand</gl>
+    <hw>⁵⁵'⁵⁵tʰʌ-ba</hw>
+  </entry>
+  <entry id="syang20">
+    <gl>petit</gl>
+    <hw>⁵⁵'⁴⁴tsjaŋ-ba</hw>
+  </entry>
+  <entry id="syang21">
+    <gl>personne</gl>
+    <hw>²¹mi²¹miʱ
+
+</hw>
+  </entry>
+  <entry id="syang22">
+    <gl>poisson</gl>
+    <hw>⁵⁵'⁵⁵tarŋa</hw>
+  </entry>
+  <entry id="syang23">
+    <gl>poisson</gl>
+    <hw>⁵⁵'⁴⁴tarŋa</hw>
+  </entry>
+  <entry id="syang24">
+    <gl>oiseau</gl>
+    <hw>Xɲimj̃æ</hw>
+  </entry>
+  <entry id="syang25">
+    <gl>oiseau</gl>
+    <hw>³³'³³ɲimjaŋ</hw>
+  </entry>
+  <entry id="syang26">
+    <gl>chien</gl>
+    <hw>⁵⁵'⁵⁴nakju</hw>
+  </entry>
+  <entry id="syang27">
+    <gl>pou</gl>
+    <hw>⁵¹ʃje</hw>
+  </entry>
+  <entry id="syang28">
+    <gl>arbre</gl>
+    <hw>³¹tuŋ³¹tuʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang29">
+    <gl>arbre</gl>
+    <hw>˩tuŋXtuʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang30">
+    <gl>graine</gl>
+    <hw>²¹plu²¹pluʱ
+
+</hw>
+  </entry>
+  <entry id="syang31">
+    <gl>petite feuille</gl>
+    <hw>⁵⁵pa</hw>
+  </entry>
+  <entry id="syang32">
+    <gl>feuille</gl>
+    <hw>Xɬapa</hw>
+  </entry>
+  <entry id="syang33">
+    <gl>feuille</gl>
+    <hw>²¹baː²¹bʱaʱː
+
+</hw>
+  </entry>
+  <entry id="syang34">
+    <gl>racine</gl>
+    <hw>˩priXpriʱ
+
+</hw>
+  </entry>
+  <entry id="syang35">
+    <gl>racine</gl>
+    <hw>²²'²¹tuŋʈa²²'²¹tuʱŋʈaʱ
+
+</hw>
+  </entry>
+  <entry id="syang36">
+    <gl>écorce</gl>
+    <hw>⁵⁵'⁴³ʃin-pʰi</hw>
+  </entry>
+  <entry id="syang37">
+    <gl>peau</gl>
+    <hw>˩ʈiXʈiʱ
+
+</hw>
+  </entry>
+  <entry id="syang38">
+    <gl>peau</gl>
+    <hw>²¹ɖi²¹ɖiʱ
+
+</hw>
+  </entry>
+  <entry id="syang39">
+    <gl>chair</gl>
+    <hw>³³ʃjʌ</hw>
+  </entry>
+  <entry id="syang40">
+    <gl>sang</gl>
+    <hw>⁵⁴ka</hw>
+  </entry>
+  <entry id="syang41">
+    <gl>sang</gl>
+    <hw>⁵³kaː</hw>
+  </entry>
+  <entry id="syang42">
+    <gl>os</gl>
+    <hw>²²'²¹nʌʈi</hw>
+  </entry>
+  <entry id="syang43">
+    <gl>os long</gl>
+    <hw>Xkaŋ</hw>
+  </entry>
+  <entry id="syang44">
+    <gl>os long</gl>
+    <hw>⁵⁵kaŋ</hw>
+  </entry>
+  <entry id="syang45">
+    <gl>os</gl>
+    <hw>⁵⁵'⁵⁵nakji</hw>
+  </entry>
+  <entry id="syang46">
+    <gl>gras</gl>
+    <hw>⁵¹tʃʰi</hw>
+  </entry>
+  <entry id="syang47">
+    <gl>oeuf</gl>
+    <hw>⁵⁴pʰum</hw>
+  </entry>
+  <entry id="syang48">
+    <gl>corne</gl>
+    <hw>⁵⁵ru</hw>
+  </entry>
+  <entry id="syang49">
+    <gl>queue</gl>
+    <hw>⁵⁴me</hw>
+  </entry>
+  <entry id="syang50">
+    <gl>queue</gl>
+    <hw>⁵²meː</hw>
+  </entry>
+  <entry id="syang51">
+    <gl>plume/poil</gl>
+    <hw>⁵⁴tsʰʌm</hw>
+  </entry>
+  <entry id="syang52">
+    <gl>cheveux</gl>
+    <hw>⁴⁴ke</hw>
+  </entry>
+  <entry id="syang53">
+    <gl>cheveux</gl>
+    <hw>⁵⁵'⁵⁵kjɛtsʰʌm</hw>
+  </entry>
+  <entry id="syang54">
+    <gl>tête</gl>
+    <hw>⁵⁵kja</hw>
+  </entry>
+  <entry id="syang55">
+    <gl>tête</gl>
+    <hw>⁵³kja</hw>
+  </entry>
+  <entry id="syang56">
+    <gl>oreille</gl>
+    <hw>˩nʌXnʌʱ
+
+</hw>
+  </entry>
+  <entry id="syang57">
+    <gl>oreille</gl>
+    <hw>˩nabjaŋXnaʱbjaʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang58">
+    <gl>trou de l'oreille</gl>
+    <hw>¹¹'⁵³nʌkʰuŋ¹¹'⁵³nʌʱkʰuŋ
+
+</hw>
+  </entry>
+  <entry id="syang59">
+    <gl>oreille</gl>
+    <hw>²¹naː</hw>
+  </entry>
+  <entry id="syang60">
+    <gl>oeil</gl>
+    <hw>⁵⁵mi</hw>
+  </entry>
+  <entry id="syang61">
+    <gl>nez</gl>
+    <hw>⁵⁴na</hw>
+  </entry>
+  <entry id="syang62">
+    <gl>nez</gl>
+    <hw>⁵⁴na</hw>
+  </entry>
+  <entry id="syang63">
+    <gl>bouche</gl>
+    <hw>⁵⁴suŋ</hw>
+  </entry>
+  <entry id="syang64">
+    <gl>bouche</gl>
+    <hw>⁵⁵suŋ</hw>
+  </entry>
+  <entry id="syang65">
+    <gl>dent</gl>
+    <hw>Xsʌ</hw>
+  </entry>
+  <entry id="syang66">
+    <gl>dent</gl>
+    <hw>⁵⁴soː</hw>
+  </entry>
+  <entry id="syang67">
+    <gl>ongle</gl>
+    <hw>⁵⁴tʃʰin</hw>
+  </entry>
+  <entry id="syang68">
+    <gl>pied</gl>
+    <hw>¹¹'⁵⁴pale¹¹'⁵⁴paʱle
+
+</hw>
+  </entry>
+  <entry id="syang69">
+    <gl>genou</gl>
+    <hw>⁵⁵'⁵⁵pukja</hw>
+  </entry>
+  <entry id="syang70">
+    <gl>ventre</gl>
+    <hw>⁵⁵pʰo</hw>
+  </entry>
+  <entry id="syang71">
+    <gl>cou</gl>
+    <hw>⁵⁴kʰa</hw>
+  </entry>
+  <entry id="syang72">
+    <gl>cou</gl>
+    <hw>⁵⁵'⁴⁴kʰari</hw>
+  </entry>
+  <entry id="syang73">
+    <gl>seins</gl>
+    <hw>˩ɲeXɲeʱ
+
+</hw>
+  </entry>
+  <entry id="syang74">
+    <gl>seins</gl>
+    <hw>²¹ɲe²¹ɲeʱ
+
+</hw>
+  </entry>
+  <entry id="syang75">
+    <gl>coeur</gl>
+    <hw>⁵⁴tin</hw>
+  </entry>
+  <entry id="syang76">
+    <gl>foie</gl>
+    <hw>⁴⁵ɲe</hw>
+  </entry>
+  <entry id="syang77">
+    <gl>foie</gl>
+    <hw>²³ɲe²³ɲeʱ
+
+</hw>
+  </entry>
+  <entry id="syang78">
+    <gl>boire</gl>
+    <hw>⁵⁵'⁵⁵tʰuŋ-o</hw>
+  </entry>
+  <entry id="syang79">
+    <gl>manger</gl>
+    <hw>⁵⁴'⁴⁴tsa-ba</hw>
+  </entry>
+  <entry id="syang80">
+    <gl>mordre</gl>
+    <hw>²¹'³³dzi-dzi²¹'³³dziʱ-dzi
+
+</hw>
+  </entry>
+  <entry id="syang81">
+    <gl>voir</gl>
+    <hw>⁵⁵'³³mraŋ-ba</hw>
+  </entry>
+  <entry id="syang82">
+    <gl>regarder</gl>
+    <hw>⁴⁴'⁵³ɲo-ba</hw>
+  </entry>
+  <entry id="syang83">
+    <gl>chercher</gl>
+    <hw>⁵⁵'⁴⁴tsja·-go</hw>
+  </entry>
+  <entry id="syang84">
+    <gl>entendre</gl>
+    <hw>⁵⁵'⁴⁴tʰe-ba</hw>
+  </entry>
+  <entry id="syang85">
+    <gl>entendre</gl>
+    <hw>Xtʰɛ·-ba</hw>
+  </entry>
+  <entry id="syang86">
+    <gl>écouter</gl>
+    <hw>⁵⁵'⁴⁴ɲɛn-mu</hw>
+  </entry>
+  <entry id="syang87">
+    <gl>savoir (faire)</gl>
+    <hw>⁵⁵'⁵⁵ʃje-ba</hw>
+  </entry>
+  <entry id="syang88">
+    <gl>savoir (faire)</gl>
+    <hw>⁵⁵'⁵⁵ʃje-ba</hw>
+  </entry>
+  <entry id="syang89">
+    <gl>tuer</gl>
+    <hw>⁵⁵'⁴⁴sɛː-ba</hw>
+  </entry>
+  <entry id="syang90">
+    <gl>marcher</gl>
+    <hw>¹¹'¹¹pra-wa</hw>
+  </entry>
+  <entry id="syang91">
+    <gl>marcher</gl>
+    <hw>¹¹'¹¹bra-βa¹¹'¹¹bʱraʱ-βa
+
+</hw>
+  </entry>
+  <entry id="syang92">
+    <gl>sit</gl>
+    <hw>⁵⁵'⁵⁵ʈu-ba</hw>
+  </entry>
+  <entry id="syang93">
+    <gl>soleil</gl>
+    <hw>¹¹'²¹dini¹¹'²¹diʱni
+
+</hw>
+  </entry>
+  <entry id="syang94">
+    <gl>lune</gl>
+    <hw>⁵⁵ɬa ¹¹'²¹dini⁵⁵ɬa ¹¹'²¹diʱni
+
+</hw>
+  </entry>
+  <entry id="syang95">
+    <gl>étoile</gl>
+    <hw>⁵⁴sar</hw>
+  </entry>
+  <entry id="syang96">
+    <gl>étoile</gl>
+    <hw>⁵⁵sʌr</hw>
+  </entry>
+  <entry id="syang97">
+    <gl>eau</gl>
+    <hw>⁵⁵kju</hw>
+  </entry>
+  <entry id="syang98">
+    <gl>pluie</gl>
+    <hw>⁵⁵nam ⁵⁵'⁵⁵jud-zi</hw>
+  </entry>
+  <entry id="syang99">
+    <gl>pierre</gl>
+    <hw>⁵⁴jum</hw>
+  </entry>
+  <entry id="syang100">
+    <gl>terre</gl>
+    <hw>⁵⁴sʌ</hw>
+  </entry>
+  <entry id="syang101">
+    <gl>terre</gl>
+    <hw>⁵⁴sʌ</hw>
+  </entry>
+  <entry id="syang102">
+    <gl>nuage</gl>
+    <hw>˩moXmoʱ
+
+</hw>
+  </entry>
+  <entry id="syang103">
+    <gl>feu</gl>
+    <hw>⁵⁴mi</hw>
+  </entry>
+  <entry id="syang104">
+    <gl>fumée</gl>
+    <hw>Xmuiki</hw>
+  </entry>
+  <entry id="syang105">
+    <gl>feu</gl>
+    <hw>⁵⁴mi</hw>
+  </entry>
+  <entry id="syang106">
+    <gl>cendres</gl>
+    <hw>⁵⁵'⁵⁵nepra</hw>
+  </entry>
+  <entry id="syang107">
+    <gl>cendres</gl>
+    <hw>⁵⁵'⁴⁴njʌpra</hw>
+  </entry>
+  <entry id="syang108">
+    <gl>sommet</gl>
+    <hw>⁵¹kaŋ</hw>
+  </entry>
+  <entry id="syang109">
+    <gl>étendue sans végétation</gl>
+    <hw>⁵⁴paŋ</hw>
+  </entry>
+  <entry id="syang110">
+    <gl>montée</gl>
+    <hw>²¹lʌ²¹lʌʱ
+
+</hw>
+  </entry>
+  <entry id="syang111">
+    <gl>montée</gl>
+    <hw>³¹la³¹laʱ
+
+</hw>
+  </entry>
+  <entry id="syang112">
+    <gl>pente</gl>
+    <hw>¹¹pra¹¹praʱ
+
+</hw>
+  </entry>
+  <entry id="syang113">
+    <gl>pente, falaise</gl>
+    <hw>¹²pra</hw>
+  </entry>
+  <entry id="syang114">
+    <gl>rouge</gl>
+    <hw>Xola</hw>
+  </entry>
+  <entry id="syang115">
+    <gl>vert</gl>
+    <hw>²¹'⁴⁴tʃjoŋku</hw>
+  </entry>
+  <entry id="syang116">
+    <gl>bleu</gl>
+    <hw>Xpin</hw>
+  </entry>
+  <entry id="syang117">
+    <gl>jaune</gl>
+    <hw>⁵⁵ur</hw>
+  </entry>
+  <entry id="syang118">
+    <gl>blanc</gl>
+    <hw>⁵⁴tar</hw>
+  </entry>
+  <entry id="syang119">
+    <gl>blanc</gl>
+    <hw>⁵⁴tʌr</hw>
+  </entry>
+  <entry id="syang120">
+    <gl>marron</gl>
+    <hw>²¹'²²tʃjatse</hw>
+  </entry>
+  <entry id="syang121">
+    <gl>noir</gl>
+    <hw>Xmlaŋ</hw>
+  </entry>
+  <entry id="syang122">
+    <gl>chaud (vêtement)</gl>
+    <hw>²²'¹¹ɖo-mu²²'¹¹ɖoʱ-mu
+
+</hw>
+  </entry>
+  <entry id="syang123">
+    <gl>faire chauffer</gl>
+    <hw>⁵⁵'⁴⁴ɬogo</hw>
+  </entry>
+  <entry id="syang124">
+    <gl>avoir chaud</gl>
+    <hw>¹¹'²¹ʈo-mu¹¹'²¹ʈoʱ-mu
+
+</hw>
+  </entry>
+  <entry id="syang125">
+    <gl>avoir trop chaud</gl>
+    <hw>Xtsʰewʌ tsʰa-mu</hw>
+  </entry>
+  <entry id="syang126">
+    <gl>chaud</gl>
+    <hw>²¹'²²pʌi ⁵⁵'⁵⁵tsʰa-mu</hw>
+  </entry>
+  <entry id="syang127">
+    <gl>froid</gl>
+    <hw>⁵⁵'⁴⁴'³³ʃim-bu-mu</hw>
+  </entry>
+  <entry id="syang128">
+    <gl>froid</gl>
+    <hw>⁵⁵'⁴⁴kʰaŋ-mu</hw>
+  </entry>
+  <entry id="syang129">
+    <gl>plein</gl>
+    <hw>⁵⁵'¹¹'¹¹kaŋtsjemu</hw>
+  </entry>
+  <entry id="syang130">
+    <gl>plein</gl>
+    <hw>⁵⁴naŋ</hw>
+  </entry>
+  <entry id="syang131">
+    <gl>neuf</gl>
+    <hw>⁴⁴'⁴³sam-ba</hw>
+  </entry>
+  <entry id="syang132">
+    <gl>sec</gl>
+    <hw>⁵⁵'⁵⁴kʰʌr-ba</hw>
+  </entry>
+  <entry id="syang133">
+    <gl>nom</gl>
+    <hw>³²min</hw>
+  </entry>
+  <entry id="syang134">
+    <gl>nom</gl>
+    <hw>⁵¹min</hw>
+  </entry>
+  <entry id="syang135">
+    <gl>image du corps</gl>
+    <hw>⁵⁴li</hw>
+  </entry>
+  <entry id="syang136">
+    <gl>visage</gl>
+    <hw>Xhli</hw>
+  </entry>
+  <entry id="syang137">
+    <gl>visage</gl>
+    <hw>⁵³hli</hw>
+  </entry>
+  <entry id="syang138">
+    <gl>moelle</gl>
+    <hw>⁵⁵'⁵⁵prelaŋ</hw>
+  </entry>
+  <entry id="syang139">
+    <gl>articulation</gl>
+    <hw>⁵⁵'³³tʰiba</hw>
+  </entry>
+  <entry id="syang140">
+    <gl>veine</gl>
+    <hw>⁵⁴tsʌ</hw>
+  </entry>
+  <entry id="syang141">
+    <gl>ligament</gl>
+    <hw>⁵⁵ʃja ¹¹'²²pobo⁵⁵ʃja ¹¹'²²poʱbo
+
+</hw>
+  </entry>
+  <entry id="syang142">
+    <gl>ride</gl>
+    <hw>⁵⁵'⁵⁵ɲɛrmo ¹¹'¹¹'¹¹tidzimo</hw>
+  </entry>
+  <entry id="syang143">
+    <gl>poil du corps</gl>
+    <hw>¹¹'³²potsʰʌm</hw>
+  </entry>
+  <entry id="syang144">
+    <gl>poil du pubis (fem.)</gl>
+    <hw>Xtutsʰʌm</hw>
+  </entry>
+  <entry id="syang145">
+    <gl>poil du pubis (hom.)</gl>
+    <hw>³³'³³mletsʰʌm</hw>
+  </entry>
+  <entry id="syang146">
+    <gl>arcade sourcilière</gl>
+    <hw>⁵⁵'⁵⁵miru</hw>
+  </entry>
+  <entry id="syang147">
+    <gl>cils</gl>
+    <hw>⁵⁵'⁵⁴mitsʰʌm</hw>
+  </entry>
+  <entry id="syang148">
+    <gl>barbe et moustache</gl>
+    <hw>¹¹'¹¹mʌŋri</hw>
+  </entry>
+  <entry id="syang149">
+    <gl>barbe et moustache</gl>
+    <hw>⁵⁵'⁵⁵maŋʈi</hw>
+  </entry>
+  <entry id="syang150">
+    <gl>cerveau</gl>
+    <hw>⁵⁵'⁵⁴ʃjegri</hw>
+  </entry>
+  <entry id="syang151">
+    <gl>front</gl>
+    <hw>˩ŋoXŋoʱ
+
+</hw>
+  </entry>
+  <entry id="syang152">
+    <gl>joue</gl>
+    <hw>¹¹'⁴³ʈampa</hw>
+  </entry>
+  <entry id="syang153">
+    <gl>menton</gl>
+    <hw>⁵⁴kʌm</hw>
+  </entry>
+  <entry id="syang154">
+    <gl>menton</gl>
+    <hw>⁵⁵kʌm</hw>
+  </entry>
+  <entry id="syang155">
+    <gl>pupille</gl>
+    <hw>⁵⁵mi ¹¹'¹¹gjalpo⁵⁵mi ¹¹'¹¹gjaʱlpo
+
+</hw>
+  </entry>
+  <entry id="syang156">
+    <gl>narines</gl>
+    <hw>Xnakʰũŋ</hw>
+  </entry>
+  <entry id="syang157">
+    <gl>trou d'oreille</gl>
+    <hw>¹¹'⁵⁴nʌkʰuŋ¹¹'⁵⁴nʌʱkʰuŋ
+
+</hw>
+  </entry>
+  <entry id="syang158">
+    <gl>lobe d'oreille</gl>
+    <hw>¹¹nʌ ⁴⁴'⁴⁴kotʰoŋ¹¹nʌʱ ⁴⁴'⁴⁴kotʰoŋ
+
+</hw>
+  </entry>
+  <entry id="syang159">
+    <gl>lèvre supérieure</gl>
+    <hw>¹¹'³¹jamdzju</hw>
+  </entry>
+  <entry id="syang160">
+    <gl>lèvre supérieure</gl>
+    <hw>⁵⁵'⁵⁵mane</hw>
+  </entry>
+  <entry id="syang161">
+    <gl>lèvre inférieure</gl>
+    <hw>²²'²¹mʌmdzju</hw>
+  </entry>
+  <entry id="syang162">
+    <gl>molaire</gl>
+    <hw>⁵⁵'⁴⁴kʰari</hw>
+  </entry>
+  <entry id="syang163">
+    <gl>trachée</gl>
+    <hw>⁵⁵'⁵⁵'²²oltoŋgja</hw>
+  </entry>
+  <entry id="syang164">
+    <gl>oesophage</gl>
+    <hw>⁴⁴'⁴⁴pʰomjuŋ</hw>
+  </entry>
+  <entry id="syang165">
+    <gl>épaule</gl>
+    <hw>²¹pʌm²¹pʌʱm
+
+</hw>
+  </entry>
+  <entry id="syang166">
+    <gl>nuque</gl>
+    <hw>⁵⁵'³³tagjuŋ</hw>
+  </entry>
+  <entry id="syang167">
+    <gl>dos</gl>
+    <hw>˩koXkoʱ
+
+</hw>
+  </entry>
+  <entry id="syang168">
+    <gl>dos</gl>
+    <hw>²¹²go²¹²goʱ
+
+</hw>
+  </entry>
+  <entry id="syang169">
+    <gl>bas du dos (reins)</gl>
+    <hw>⁵⁵kʌe</hw>
+  </entry>
+  <entry id="syang170">
+    <gl>colonne vertébrale</gl>
+    <hw>¹¹'¹¹guʃjuŋ ⁵⁵'⁵⁵nakji</hw>
+  </entry>
+  <entry id="syang171">
+    <gl>poitrine</gl>
+    <hw>⁵⁴ku</hw>
+  </entry>
+  <entry id="syang172">
+    <gl>côte</gl>
+    <hw>⁵⁴⁵re</hw>
+  </entry>
+  <entry id="syang173">
+    <gl>côte</gl>
+    <hw>⁴⁵re</hw>
+  </entry>
+  <entry id="syang174">
+    <gl>poumon</gl>
+    <hw>¹¹'⁵⁵ʃjo-ʃja¹¹'⁵⁵ʃjoʱ-ʃja
+
+</hw>
+  </entry>
+  <entry id="syang175">
+    <gl>waist</gl>
+    <hw>⁵⁴ʈe</hw>
+  </entry>
+  <entry id="syang176">
+    <gl>waist</gl>
+    <hw>⁵⁵kʌe</hw>
+  </entry>
+  <entry id="syang177">
+    <gl>nombril</gl>
+    <hw>¹¹'⁵⁵pwikoŋ</hw>
+  </entry>
+  <entry id="syang178">
+    <gl>estomac</gl>
+    <hw>⁵⁵'⁵⁵kʰokpa</hw>
+  </entry>
+  <entry id="syang179">
+    <gl>estomac</gl>
+    <hw>⁵⁵'⁵⁵kʰokpa</hw>
+  </entry>
+  <entry id="syang180">
+    <gl>reins</gl>
+    <hw>⁵⁵'⁴⁴kʰalto</hw>
+  </entry>
+  <entry id="syang181">
+    <gl>intestins</gl>
+    <hw>⁴¹gum</hw>
+  </entry>
+  <entry id="syang182">
+    <gl>intestins</gl>
+    <hw>Xʈim</hw>
+  </entry>
+  <entry id="syang183">
+    <gl>intestins</gl>
+    <hw>²¹gum²¹guʱm
+
+</hw>
+  </entry>
+  <entry id="syang184">
+    <gl>bras</gl>
+    <hw>⁵⁴ja</hw>
+  </entry>
+  <entry id="syang185">
+    <gl>bras droit</gl>
+    <hw>⁴⁴'⁴⁴keja</hw>
+  </entry>
+  <entry id="syang186">
+    <gl>bras droit</gl>
+    <hw>⁵⁵'⁵⁵keja</hw>
+  </entry>
+  <entry id="syang187">
+    <gl>bras gauche</gl>
+    <hw>⁴⁴'⁴⁴pʌja</hw>
+  </entry>
+  <entry id="syang188">
+    <gl>bras gauche</gl>
+    <hw>⁵⁵'⁵⁵paja</hw>
+  </entry>
+  <entry id="syang189">
+    <gl>aisselle</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁴njagana</hw>
+  </entry>
+  <entry id="syang190">
+    <gl>coude</gl>
+    <hw>⁵⁵ja ⁴⁴kum</hw>
+  </entry>
+  <entry id="syang191">
+    <gl>coude</gl>
+    <hw>⁵⁵ja ⁴⁴kum</hw>
+  </entry>
+  <entry id="syang192">
+    <gl>poignet</gl>
+    <hw>⁵⁵ja ⁵³tsʰi</hw>
+  </entry>
+  <entry id="syang193">
+    <gl>paume</gl>
+    <hw>⁵⁵ja ⁵⁴tʰin</hw>
+  </entry>
+  <entry id="syang194">
+    <gl>doigt</gl>
+    <hw>[jařʃi]</hw>
+  </entry>
+  <entry id="syang195">
+    <gl>doigt</gl>
+    <hw>⁵³ja ⁴⁴hři</hw>
+  </entry>
+  <entry id="syang196">
+    <gl>annulaire</gl>
+    <hw>Xbale-hri</hw>
+  </entry>
+  <entry id="syang197">
+    <gl>pouce</gl>
+    <hw>⁵⁵ja ¹¹'¹¹poba⁵⁵ja ¹¹'¹¹poʱba
+
+</hw>
+  </entry>
+  <entry id="syang198">
+    <gl>majeur</gl>
+    <hw>˩pale ¹¹'¹¹pobaXpaʱle ¹¹'¹¹poʱba
+
+</hw>
+  </entry>
+  <entry id="syang199">
+    <gl>cuisse</gl>
+    <hw>¹¹'⁵³pleʃin</hw>
+  </entry>
+  <entry id="syang200">
+    <gl>cuisse</gl>
+    <hw>²¹'³³pljaʃin</hw>
+  </entry>
+  <entry id="syang201">
+    <gl>mollet</gl>
+    <hw>Xtimiʃja</hw>
+  </entry>
+  <entry id="syang202">
+    <gl>mollet</gl>
+    <hw>⁵⁵'⁵⁵'⁴⁴temeʃja</hw>
+  </entry>
+  <entry id="syang203">
+    <gl>talon</gl>
+    <hw>¹¹'¹¹pale ⁵⁵tim¹¹'¹¹paʱle ⁵⁵tim
+
+</hw>
+  </entry>
+  <entry id="syang204">
+    <gl>cheville</gl>
+    <hw>⁵⁵'⁵⁵poŋa</hw>
+  </entry>
+  <entry id="syang205">
+    <gl>plante du pied</gl>
+    <hw>¹¹'¹¹pale ⁵⁵tʰin¹¹'¹¹paʱle ⁵⁵tʰin
+
+</hw>
+  </entry>
+  <entry id="syang206">
+    <gl>pus</gl>
+    <hw>²¹na²¹naʱ
+
+</hw>
+  </entry>
+  <entry id="syang207">
+    <gl>pus</gl>
+    <hw>¹¹naː¹¹naʱː
+
+</hw>
+  </entry>
+  <entry id="syang208">
+    <gl>pus</gl>
+    <hw>˩naXnaʱ
+
+</hw>
+  </entry>
+  <entry id="syang209">
+    <gl>cire d'oreille, cérumen</gl>
+    <hw>¹¹'⁵³napi</hw>
+  </entry>
+  <entry id="syang210">
+    <gl>larmes</gl>
+    <hw>⁵⁴miː ⁴⁴'⁴⁴muki (juba)</hw>
+  </entry>
+  <entry id="syang211">
+    <gl>larmes</gl>
+    <hw>⁵⁵mi ⁴⁴'⁴⁴muki</hw>
+  </entry>
+  <entry id="syang212">
+    <gl>morve</gl>
+    <hw>⁵⁵no (⁵⁴'⁴⁴juba)</hw>
+  </entry>
+  <entry id="syang213">
+    <gl>morve</gl>
+    <hw>⁵⁵no</hw>
+  </entry>
+  <entry id="syang214">
+    <gl>salive</gl>
+    <hw>⁵⁵to</hw>
+  </entry>
+  <entry id="syang215">
+    <gl>bave</gl>
+    <hw>⁵⁵'⁵⁴kʰati</hw>
+  </entry>
+  <entry id="syang216">
+    <gl>bave</gl>
+    <hw>⁵⁵'⁴⁴kʰati</hw>
+  </entry>
+  <entry id="syang217">
+    <gl>crachat</gl>
+    <hw>⁵⁴to</hw>
+  </entry>
+  <entry id="syang218">
+    <gl>crachat</gl>
+    <hw>⁴⁴'³³kʰaːni</hw>
+  </entry>
+  <entry id="syang219">
+    <gl>eau amère dans bouche</gl>
+    <hw>⁵⁵'⁵⁵kʌmkju</hw>
+  </entry>
+  <entry id="syang220">
+    <gl>respiration</gl>
+    <hw>⁵⁵sa</hw>
+  </entry>
+  <entry id="syang221">
+    <gl>vomissement</gl>
+    <hw>⁴⁴ʃjaŋ ⁵⁵'⁴⁴kʰaba</hw>
+  </entry>
+  <entry id="syang222">
+    <gl>vomissement</gl>
+    <hw>²¹ʃjaŋ ⁴⁴'⁴⁴kʰaba²¹ʃjaʱŋ ⁴⁴'⁴⁴kʰaba
+
+</hw>
+  </entry>
+  <entry id="syang223">
+    <gl>bile</gl>
+    <hw>⁵⁴kʌm</hw>
+  </entry>
+  <entry id="syang224">
+    <gl>bile</gl>
+    <hw>⁵⁴kʌm</hw>
+  </entry>
+  <entry id="syang225">
+    <gl>faeces</gl>
+    <hw>⁵⁵ki</hw>
+  </entry>
+  <entry id="syang226">
+    <gl>faeces</gl>
+    <hw>⁵⁵li</hw>
+  </entry>
+  <entry id="syang227">
+    <gl>urine</gl>
+    <hw>⁵⁴kum</hw>
+  </entry>
+  <entry id="syang228">
+    <gl>urine</gl>
+    <hw>⁴⁴kʷoŋ</hw>
+  </entry>
+  <entry id="syang229">
+    <gl>sueur</gl>
+    <hw>⁵⁵hru</hw>
+  </entry>
+  <entry id="syang230">
+    <gl>sueur</gl>
+    <hw>⁵⁴řʰu (⁴⁴'⁴⁴jiba)</hw>
+  </entry>
+  <entry id="syang231">
+    <gl>crasse</gl>
+    <hw>⁵¹ɖi</hw>
+  </entry>
+  <entry id="syang232">
+    <gl>crasse</gl>
+    <hw>²¹gɨ²¹gʱɨʱ
+
+</hw>
+  </entry>
+  <entry id="syang233">
+    <gl>pénis</gl>
+    <hw>⁵¹mle⁵¹mleʱ
+
+</hw>
+  </entry>
+  <entry id="syang234">
+    <gl>testicules</gl>
+    <hw>¹¹'⁴³gupʰum</hw>
+  </entry>
+  <entry id="syang235">
+    <gl>vagin</gl>
+    <hw>⁵⁵tu</hw>
+  </entry>
+  <entry id="syang236">
+    <gl>av. règles</gl>
+    <hw>Xkʰam asaŋba tamu</hw>
+  </entry>
+  <entry id="syang237">
+    <gl>sperme</gl>
+    <hw>⁵⁵ɲa</hw>
+  </entry>
+  <entry id="syang238">
+    <gl>os long</gl>
+    <hw>Xkaŋ</hw>
+  </entry>
+  <entry id="syang239">
+    <gl>pet</gl>
+    <hw>⁵⁵pʰe</hw>
+  </entry>
+  <entry id="syang240">
+    <gl>rot</gl>
+    <hw>⁵⁴ap</hw>
+  </entry>
+  <entry id="syang241">
+    <gl>qui a six doigts</gl>
+    <hw>²¹'³³laːru</hw>
+  </entry>
+  <entry id="syang242">
+    <gl>qui a six doigts</gl>
+    <hw>²¹'²²laʈu</hw>
+  </entry>
+  <entry id="syang243">
+    <gl>qui a un bec de lièvre</gl>
+    <hw>⁵⁵suŋ ⁵⁵pre</hw>
+  </entry>
+  <entry id="syang244">
+    <gl>qui a un bec de lièvre (homme)</gl>
+    <hw>⁵⁴pre</hw>
+  </entry>
+  <entry id="syang245">
+    <gl>qui a un bec de lièvre (femme)</gl>
+    <hw>⁵⁵'⁵⁵preʃja</hw>
+  </entry>
+  <entry id="syang246">
+    <gl>ganglions</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁴kanaso</hw>
+  </entry>
+  <entry id="syang247">
+    <gl>raie des cheveux</gl>
+    <hw>⁵⁵ŋo</hw>
+  </entry>
+  <entry id="syang248">
+    <gl>fontanelle (ouverte)</gl>
+    <hw>¹¹ŋo ⁵⁴'⁴⁴'⁴⁴atʃʰuba¹¹ŋoʱ ⁵⁴'⁴⁴'⁴⁴atʃʰuba
+
+</hw>
+  </entry>
+  <entry id="syang249">
+    <gl>gencives</gl>
+    <hw>⁴⁴'¹¹sonje⁴⁴'¹¹sonjeʱ
+
+</hw>
+  </entry>
+  <entry id="syang250">
+    <gl>gencives</gl>
+    <hw>⁵⁵'¹¹soɲe⁵⁵'¹¹soɲeʱ
+
+</hw>
+  </entry>
+  <entry id="syang251">
+    <gl>coq</gl>
+    <hw>⁵⁵'⁵⁵naka</hw>
+  </entry>
+  <entry id="syang252">
+    <gl>coq</gl>
+    <hw>³³'³³naga</hw>
+  </entry>
+  <entry id="syang253">
+    <gl>poule</gl>
+    <hw>⁵⁵'⁵⁵naga ³³'³³momo</hw>
+  </entry>
+  <entry id="syang254">
+    <gl>poussin</gl>
+    <hw>Xnaga Xtsadza</hw>
+  </entry>
+  <entry id="syang255">
+    <gl>crête (de coq)</gl>
+    <hw>²¹ʈa²¹ʈaʱ
+
+</hw>
+  </entry>
+  <entry id="syang256">
+    <gl>nid</gl>
+    <hw>³¹tsaŋ³¹tsaʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang257">
+    <gl>aile</gl>
+    <hw>⁴⁴'⁵⁴taŋra</hw>
+  </entry>
+  <entry id="syang258">
+    <gl>bovin</gl>
+    <hw>¹¹meː¹¹meʱː
+
+</hw>
+  </entry>
+  <entry id="syang259">
+    <gl>chèvre</gl>
+    <hw>⁵⁵rʌ</hw>
+  </entry>
+  <entry id="syang260">
+    <gl>mouton</gl>
+    <hw>²¹kju²¹kjuʱ
+
+</hw>
+  </entry>
+  <entry id="syang261">
+    <gl>cheval</gl>
+    <hw>⁵⁴tʌ</hw>
+  </entry>
+  <entry id="syang262">
+    <gl>cheval</gl>
+    <hw>Xtʌ</hw>
+  </entry>
+  <entry id="syang263">
+    <gl>âne</gl>
+    <hw>¹¹'³³pumbu</hw>
+  </entry>
+  <entry id="syang264">
+    <gl>yack</gl>
+    <hw>⁵⁴⁵ja</hw>
+  </entry>
+  <entry id="syang265">
+    <gl>yack femelle</gl>
+    <hw>⁵⁴pri</hw>
+  </entry>
+  <entry id="syang266">
+    <gl>yack hybride</gl>
+    <hw>˩dzodzoʱ
+
+</hw>
+  </entry>
+  <entry id="syang267">
+    <gl>chat</gl>
+    <hw>⁵¹noː</hw>
+  </entry>
+  <entry id="syang268">
+    <gl>chat</gl>
+    <hw>⁵¹no</hw>
+  </entry>
+  <entry id="syang269">
+    <gl>griffe</gl>
+    <hw>¹¹'⁵⁴ʈʌʃin¹¹'⁵⁴ʈʌʱʃin
+
+</hw>
+  </entry>
+  <entry id="syang270">
+    <gl>rat</gl>
+    <hw>Xnimju</hw>
+  </entry>
+  <entry id="syang271">
+    <gl>mangouste</gl>
+    <hw>¹¹'⁵³tɔŋɖi</hw>
+  </entry>
+  <entry id="syang272">
+    <gl>tigre</gl>
+    <hw>⁵¹maŋ</hw>
+  </entry>
+  <entry id="syang273">
+    <gl>tigre</gl>
+    <hw>Xtsjɛn</hw>
+  </entry>
+  <entry id="syang274">
+    <gl>tigre</gl>
+    <hw>¹¹maŋ¹¹maʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang275">
+    <gl>frog</gl>
+    <hw>⁵⁵pjen</hw>
+  </entry>
+  <entry id="syang276">
+    <gl>toad</gl>
+    <hw>¹¹'¹¹bogo¹¹'¹¹boʱgo
+
+</hw>
+  </entry>
+  <entry id="syang277">
+    <gl>coquille d'oeuf</gl>
+    <hw>⁵³kʰo</hw>
+  </entry>
+  <entry id="syang278">
+    <gl>sangsue</gl>
+    <hw>⁵⁵'⁵⁴tebe</hw>
+  </entry>
+  <entry id="syang279">
+    <gl>sangsue</gl>
+    <hw>⁴⁴'³³tebe</hw>
+  </entry>
+  <entry id="syang280">
+    <gl>sangsue d'eau</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁵timili</hw>
+  </entry>
+  <entry id="syang281">
+    <gl>ver blanc</gl>
+    <hw>²²'²¹buluŋ²²'²¹buʱluŋ
+
+</hw>
+  </entry>
+  <entry id="syang282">
+    <gl>puce</gl>
+    <hw>⁵⁵'⁵⁵taŋli</hw>
+  </entry>
+  <entry id="syang283">
+    <gl>punaise</gl>
+    <hw>⁵⁵'⁵⁵kopjaŋ</hw>
+  </entry>
+  <entry id="syang284">
+    <gl>mite</gl>
+    <hw>²¹di²¹dʱiʱ
+
+</hw>
+  </entry>
+  <entry id="syang285">
+    <gl>abeille</gl>
+    <hw>¹¹goi¹¹goʱi
+
+</hw>
+  </entry>
+  <entry id="syang286">
+    <gl>excréments d'animaux</gl>
+    <hw>⁵⁴'⁴⁴muti</hw>
+  </entry>
+  <entry id="syang287">
+    <gl>excréments d'animaux</gl>
+    <hw>²²'²¹mudi²²'²¹mudiʱ
+
+</hw>
+  </entry>
+  <entry id="syang288">
+    <gl>crotte de poulet</gl>
+    <hw>⁵⁵'⁵⁵naga ⁵⁴⁵tɯi</hw>
+  </entry>
+  <entry id="syang289">
+    <gl>nourriture des poules</gl>
+    <hw>˩seXseʱ
+
+</hw>
+  </entry>
+  <entry id="syang290">
+    <gl>petit</gl>
+    <hw>˩dzadzaXdzaʱdzaʱ
+
+</hw>
+  </entry>
+  <entry id="syang291">
+    <gl>petit</gl>
+    <hw>¹¹'¹¹dzadza¹¹'¹¹dzaʱdzaʱ
+
+</hw>
+  </entry>
+  <entry id="syang292">
+    <gl>épine</gl>
+    <hw>⁵⁵'⁵⁵pudzu</hw>
+  </entry>
+  <entry id="syang293">
+    <gl>bois</gl>
+    <hw>Xʃin</hw>
+  </entry>
+  <entry id="syang294">
+    <gl>planche</gl>
+    <hw>Xtʰa</hw>
+  </entry>
+  <entry id="syang295">
+    <gl>branche</gl>
+    <hw>²¹'⁴⁴jaka</hw>
+  </entry>
+  <entry id="syang296">
+    <gl>souche</gl>
+    <hw>⁵⁵ʃin ³³'⁴²prapra</hw>
+  </entry>
+  <entry id="syang297">
+    <gl>fleur</gl>
+    <hw>¹¹'²¹mɛndo</hw>
+  </entry>
+  <entry id="syang298">
+    <gl>parfum</gl>
+    <hw>⁵⁵tʰaŋ</hw>
+  </entry>
+  <entry id="syang299">
+    <gl>parfum</gl>
+    <hw>⁵⁵tʰaŋ</hw>
+  </entry>
+  <entry id="syang300">
+    <gl>citron</gl>
+    <hw>⁵¹kjuŋ</hw>
+  </entry>
+  <entry id="syang301">
+    <gl>pousses de bambou</gl>
+    <hw>⁵⁵'⁴⁴matʌr</hw>
+  </entry>
+  <entry id="syang302">
+    <gl>niŋalo</gl>
+    <hw>⁵¹mʌʰ</hw>
+  </entry>
+  <entry id="syang303">
+    <gl>niŋalo</gl>
+    <hw>⁵⁴ma</hw>
+  </entry>
+  <entry id="syang304">
+    <gl>mauvaise herbe</gl>
+    <hw>⁵⁵mra</hw>
+  </entry>
+  <entry id="syang305">
+    <gl>fourrage sec</gl>
+    <hw>⁵⁴tʃʰi</hw>
+  </entry>
+  <entry id="syang306">
+    <gl>fourrage sec</gl>
+    <hw>⁵¹tʃʰi</hw>
+  </entry>
+  <entry id="syang307">
+    <gl>paille de blé</gl>
+    <hw>⁵⁴tʃʰi</hw>
+  </entry>
+  <entry id="syang308">
+    <gl>son (de grain)</gl>
+    <hw>⁴⁵pwi</hw>
+  </entry>
+  <entry id="syang309">
+    <gl>écorce du maïs</gl>
+    <hw>Xpʰi</hw>
+  </entry>
+  <entry id="syang310">
+    <gl>barbe du maïs</gl>
+    <hw>⁴⁴kje ⁵⁵ur</hw>
+  </entry>
+  <entry id="syang311">
+    <gl>riz non décortiqué</gl>
+    <hw/>
+  </entry>
+  <entry id="syang312">
+    <gl>riz non décortiqué</gl>
+    <hw>¹¹'⁵⁴mlasun</hw>
+  </entry>
+  <entry id="syang313">
+    <gl>épi de riz</gl>
+    <hw>⁵⁴pʰum</hw>
+  </entry>
+  <entry id="syang314">
+    <gl>millet</gl>
+    <hw>⁵⁵'⁵⁴raŋʈɛ</hw>
+  </entry>
+  <entry id="syang315">
+    <gl>légume</gl>
+    <hw>⁵¹ʈo⁵¹ʈoʱ
+
+</hw>
+  </entry>
+  <entry id="syang316">
+    <gl>aïl</gl>
+    <hw>˩noXnoʱ
+
+</hw>
+  </entry>
+  <entry id="syang317">
+    <gl>aïl</gl>
+    <hw>¹¹noː¹¹noʱː
+
+</hw>
+  </entry>
+  <entry id="syang318">
+    <gl>pomme de terre</gl>
+    <hw>⁵⁵'⁵⁴tʌja</hw>
+  </entry>
+  <entry id="syang319">
+    <gl>potiron</gl>
+    <hw>⁵⁵'⁴⁴'³³kʰʌlpusa</hw>
+  </entry>
+  <entry id="syang320">
+    <gl>haricot de soja</gl>
+    <hw>³³'⁴²pjelʈaŋ</hw>
+  </entry>
+  <entry id="syang321">
+    <gl>pois</gl>
+    <hw>Xtɔŋʌi</hw>
+  </entry>
+  <entry id="syang322">
+    <gl>piment</gl>
+    <hw>⁵⁵'⁴⁴kʰoraŋ</hw>
+  </entry>
+  <entry id="syang323">
+    <gl>champignon</gl>
+    <hw>⁵⁵'⁵⁵tjomo</hw>
+  </entry>
+  <entry id="syang324">
+    <gl>mousse</gl>
+    <hw>⁵⁵'⁵⁴ʃjembʌl</hw>
+  </entry>
+  <entry id="syang325">
+    <gl>séparation de champ</gl>
+    <hw>˩naŋXnaʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang326">
+    <gl>pierres blanches marquant le milieu du champ</gl>
+    <hw>⁵⁵'⁵⁵kotsjaŋ</hw>
+  </entry>
+  <entry id="syang327">
+    <gl>rizière</gl>
+    <hw>⁴⁴le</hw>
+  </entry>
+  <entry id="syang328">
+    <gl>rizière</gl>
+    <hw>⁵⁵lie</hw>
+  </entry>
+  <entry id="syang329">
+    <gl>orge (une sorte d')</gl>
+    <hw>kʌru</hw>
+  </entry>
+  <entry id="syang330">
+    <gl>orge (une sorte d')</gl>
+    <hw>⁵⁵'⁵⁵tsjaga</hw>
+  </entry>
+  <entry id="syang331">
+    <gl>wheat</gl>
+    <hw>˩koXkoʱ
+
+</hw>
+  </entry>
+  <entry id="syang332">
+    <gl>wheat</gl>
+    <hw>˩koXkoʱ
+
+</hw>
+  </entry>
+  <entry id="syang333">
+    <gl>moutarde</gl>
+    <hw>⁴⁴'³³nanam</hw>
+  </entry>
+  <entry id="syang334">
+    <gl>ortie</gl>
+    <hw>⁵⁵'⁴⁴polo</hw>
+  </entry>
+  <entry id="syang335">
+    <gl>pêche (petite)</gl>
+    <hw>Xkʰala</hw>
+  </entry>
+  <entry id="syang336">
+    <gl>pêche (grosse)</gl>
+    <hw>Xkjakʰom</hw>
+  </entry>
+  <entry id="syang337">
+    <gl>radis</gl>
+    <hw>⁵⁵'⁵⁵ɬapu</hw>
+  </entry>
+  <entry id="syang338">
+    <gl>sarrasin</gl>
+    <hw>⁴⁴'⁵⁵kepe</hw>
+  </entry>
+  <entry id="syang339">
+    <gl>sarrasin</gl>
+    <hw>¹¹'¹¹gebe¹¹'¹¹geʱbe
+
+</hw>
+  </entry>
+  <entry id="syang340">
+    <gl>Fagopyrum tataricum</gl>
+    <hw>³¹bre³¹breʱ
+
+</hw>
+  </entry>
+  <entry id="syang341">
+    <gl>Fagopyrum tataricum</gl>
+    <hw>²¹pre²¹preʱ
+
+</hw>
+  </entry>
+  <entry id="syang342">
+    <gl/>
+    <hw>⁵⁵'⁴⁴male</hw>
+  </entry>
+  <entry id="syang343">
+    <gl/>
+    <hw>³³'³³mʌle</hw>
+  </entry>
+  <entry id="syang344">
+    <gl>farine de Fagopyrum tataricum</gl>
+    <hw>²¹'²²prepra²¹'²²preʱpra
+
+</hw>
+  </entry>
+  <entry id="syang345">
+    <gl>farine de Fagopyrum tataricum</gl>
+    <hw>²¹'²²prepra²¹'²²preʱpraʱ
+
+</hw>
+  </entry>
+  <entry id="syang346">
+    <gl>farine de sarrasin</gl>
+    <hw>¹¹'¹¹gjapra¹¹'¹¹gjaʱpra
+
+</hw>
+  </entry>
+  <entry id="syang347">
+    <gl>fumier</gl>
+    <hw>¹¹du¹¹duʱ
+
+</hw>
+  </entry>
+  <entry id="syang348">
+    <gl>fumier</gl>
+    <hw>¹¹tuː¹¹tuʱː
+
+</hw>
+  </entry>
+  <entry id="syang349">
+    <gl>Ficus religiosa</gl>
+    <hw>³³'⁵⁵ʃjɔlpa ¹¹pa</hw>
+  </entry>
+  <entry id="syang350">
+    <gl>genévrier</gl>
+    <hw>⁵⁵'⁵⁵ʃiʈi</hw>
+  </entry>
+  <entry id="syang351">
+    <gl>salla rukh</gl>
+    <hw>Xsʌn</hw>
+  </entry>
+  <entry id="syang352">
+    <gl>personne</gl>
+    <hw>˩miXmiʱ
+
+</hw>
+  </entry>
+  <entry id="syang353">
+    <gl>enfant</gl>
+    <hw>⁵⁵'⁵⁵kala</hw>
+  </entry>
+  <entry id="syang354">
+    <gl>jeune homme</gl>
+    <hw>²¹bjan²¹bjaʱn
+
+</hw>
+  </entry>
+  <entry id="syang355">
+    <gl>petit garçon</gl>
+    <hw>²¹'²²'²²pʰjaŋgala</hw>
+  </entry>
+  <entry id="syang356">
+    <gl>jeune fille</gl>
+    <hw>⁵⁵'⁵⁵tsʰɛmɛ</hw>
+  </entry>
+  <entry id="syang357">
+    <gl>petite fille</gl>
+    <hw>⁴³'³³tsʰame ³³'³³kala</hw>
+  </entry>
+  <entry id="syang358">
+    <gl>vieil homme</gl>
+    <hw>⁵⁵'⁴⁴kʰeba</hw>
+  </entry>
+  <entry id="syang359">
+    <gl>vieil homme</gl>
+    <hw>⁵⁵'⁴⁴kʰepa</hw>
+  </entry>
+  <entry id="syang360">
+    <gl>vieille femme</gl>
+    <hw>⁵⁵'⁵⁵kʰuju</hw>
+  </entry>
+  <entry id="syang361">
+    <gl>vieille femme</gl>
+    <hw>⁵⁵'⁵⁴kʰuju</hw>
+  </entry>
+  <entry id="syang362">
+    <gl>mari</gl>
+    <hw>⁵¹pʰa</hw>
+  </entry>
+  <entry id="syang363">
+    <gl>épouse</gl>
+    <hw>²¹pe²¹peʱ
+
+</hw>
+  </entry>
+  <entry id="syang364">
+    <gl>première femme</gl>
+    <hw>²²pe ²¹gʰʌn²²peʱ ²¹gʰʌʱn
+
+</hw>
+  </entry>
+  <entry id="syang365">
+    <gl>seconde femme</gl>
+    <hw>²²pe ⁴⁴tʃin²²peʱ ⁴⁴tʃin
+
+</hw>
+  </entry>
+  <entry id="syang366">
+    <gl>père</gl>
+    <hw>⁵⁵'⁴⁴aba</hw>
+  </entry>
+  <entry id="syang367">
+    <gl>père</gl>
+    <hw>⁵⁵'⁵⁵aβa</hw>
+  </entry>
+  <entry id="syang368">
+    <gl>mère</gl>
+    <hw>⁵⁵'⁴⁴ama</hw>
+  </entry>
+  <entry id="syang369">
+    <gl>mère</gl>
+    <hw>⁵⁵'⁵⁴ama</hw>
+  </entry>
+  <entry id="syang370">
+    <gl>grand-père</gl>
+    <hw>⁵⁴kʰe</hw>
+  </entry>
+  <entry id="syang371">
+    <gl>grand-père</gl>
+    <hw>⁵⁵'⁴⁴kʰjopʌn</hw>
+  </entry>
+  <entry id="syang372">
+    <gl>grand-mère</gl>
+    <hw>⁵⁴mʌm</hw>
+  </entry>
+  <entry id="syang373">
+    <gl>grand-mère</gl>
+    <hw>⁵⁵'⁵⁴momʌi</hw>
+  </entry>
+  <entry id="syang374">
+    <gl>beau-père</gl>
+    <hw>⁵⁴kʰe</hw>
+  </entry>
+  <entry id="syang375">
+    <gl>beau-père</gl>
+    <hw>⁵⁴kjɛn</hw>
+  </entry>
+  <entry id="syang376">
+    <gl>belle-mère</gl>
+    <hw>⁴⁴'³³ʃjuŋme</hw>
+  </entry>
+  <entry id="syang377">
+    <gl>belle-mère</gl>
+    <hw>²¹'⁴⁴ʃjuŋme</hw>
+  </entry>
+  <entry id="syang378">
+    <gl>frère aîné</gl>
+    <hw>⁵⁵'⁵⁴adzjo</hw>
+  </entry>
+  <entry id="syang379">
+    <gl>frère aîné</gl>
+    <hw>⁴⁴'⁵⁴adzjo</hw>
+  </entry>
+  <entry id="syang380">
+    <gl>frère aîné premier né</gl>
+    <hw>⁵⁴pon</hw>
+  </entry>
+  <entry id="syang381">
+    <gl>frère cadet</gl>
+    <hw>⁵⁵'⁵⁴ale</hw>
+  </entry>
+  <entry id="syang382">
+    <gl>frère cadet</gl>
+    <hw>⁵³tsjon</hw>
+  </entry>
+  <entry id="syang383">
+    <gl>soeur aînée</gl>
+    <hw>Xana</hw>
+  </entry>
+  <entry id="syang384">
+    <gl>soeur aînée</gl>
+    <hw>⁵⁵'⁵⁴ana</hw>
+  </entry>
+  <entry id="syang385">
+    <gl>soeur cadette</gl>
+    <hw>⁵⁵'⁵⁵pitsjaŋ</hw>
+  </entry>
+  <entry id="syang386">
+    <gl>soeur cadette</gl>
+    <hw>⁵⁴hřiŋ</hw>
+  </entry>
+  <entry id="syang387">
+    <gl>first born uncle</gl>
+    <hw>⁵⁵ap ⁴⁴'⁴⁴tʰeba</hw>
+  </entry>
+  <entry id="syang388">
+    <gl>2nd and 3rd born uncle</gl>
+    <hw>⁵²a ⁴⁴'⁴⁴pʰoba</hw>
+  </entry>
+  <entry id="syang389">
+    <gl>wife of first</gl>
+    <hw>⁵⁵am ⁴⁴'⁴⁴tʰeba</hw>
+  </entry>
+  <entry id="syang390">
+    <gl>wife of 2nd and 3rd</gl>
+    <hw>⁵²am ⁴⁴'³³pʰoba</hw>
+  </entry>
+  <entry id="syang391">
+    <gl>fère cadet du père</gl>
+    <hw>⁵²a ⁵⁵'³³tsjaŋba</hw>
+  </entry>
+  <entry id="syang392">
+    <gl>1st born</gl>
+    <hw>⁵⁵'⁵⁴ɲakʌn</hw>
+  </entry>
+  <entry id="syang393">
+    <gl>femme du frère cadet du père</gl>
+    <hw>⁵³a ³³'³³njaŋma</hw>
+  </entry>
+  <entry id="syang394">
+    <gl>2nd born</gl>
+    <hw>⁵⁵'⁵⁴ɲaptɛn</hw>
+  </entry>
+  <entry id="syang395">
+    <gl>mari de soeur aînée du père</gl>
+    <hw>⁵³a ³³'³³kʰoma</hw>
+  </entry>
+  <entry id="syang396">
+    <gl>soeur cadette du père</gl>
+    <hw>⁵⁵'⁴⁴niːtsjaŋ</hw>
+  </entry>
+  <entry id="syang397">
+    <gl>mari de soeur cadette du père</gl>
+    <hw>⁵³a ³³'³³kʰoma</hw>
+  </entry>
+  <entry id="syang398">
+    <gl>frère de la mère</gl>
+    <hw>⁵⁵a ⁵⁴ʃjaŋ</hw>
+  </entry>
+  <entry id="syang399">
+    <gl>femme du frère de la mère</gl>
+    <hw>⁵⁵'⁵⁴ani</hw>
+  </entry>
+  <entry id="syang400">
+    <gl>soeur aînée de la mère</gl>
+    <hw>Xatsjam</hw>
+  </entry>
+  <entry id="syang401">
+    <gl>soeur aînée de la mère</gl>
+    <hw>⁵⁵'⁵⁴ atsjʌm</hw>
+  </entry>
+  <entry id="syang402">
+    <gl>mari de la soeur aînée de la mère</gl>
+    <hw>⁵¹'⁴⁴akʰu</hw>
+  </entry>
+  <entry id="syang403">
+    <gl>fils de la tante maternelle</gl>
+    <hw>⁵⁵'³³tʃʰiba</hw>
+  </entry>
+  <entry id="syang404">
+    <gl>fille de la tante maternelle</gl>
+    <hw>⁵⁵'⁵⁴tʃʰima</hw>
+  </entry>
+  <entry id="syang405">
+    <gl>fils de l'oncle maternel</gl>
+    <hw>⁵⁵'⁵⁵utuŋ</hw>
+  </entry>
+  <entry id="syang406">
+    <gl>fille de l'oncle maternel</gl>
+    <hw>⁵⁵'⁵⁴woljaŋ</hw>
+  </entry>
+  <entry id="syang407">
+    <gl>mari de la soeur aînée</gl>
+    <hw>⁵⁵'⁵⁴utuŋ</hw>
+  </entry>
+  <entry id="syang408">
+    <gl>mari de la soeur cadette</gl>
+    <hw>⁵⁵'³³tsʰaːbo</hw>
+  </entry>
+  <entry id="syang409">
+    <gl>femme du frère</gl>
+    <hw>⁵³tsaŋ</hw>
+  </entry>
+  <entry id="syang410">
+    <gl>1st</gl>
+    <hw>⁵⁵'⁴⁴aptaŋ</hw>
+  </entry>
+  <entry id="syang411">
+    <gl>1st</gl>
+    <hw>⁵⁵'⁵⁴agʌn</hw>
+  </entry>
+  <entry id="syang412">
+    <gl>2nd</gl>
+    <hw>⁵⁵'⁵⁴aptʌn</hw>
+  </entry>
+  <entry id="syang413">
+    <gl>frère cadet du mari</gl>
+    <hw>⁵⁵'⁴⁴aːtsjaŋ</hw>
+  </entry>
+  <entry id="syang414">
+    <gl>soeur aînée du mari</gl>
+    <hw>⁵⁵'⁵⁵ɲakʌn</hw>
+  </entry>
+  <entry id="syang415">
+    <gl>soeur cadette du mari</gl>
+    <hw>⁵⁵'⁴⁴niːtsjaŋ</hw>
+  </entry>
+  <entry id="syang416">
+    <gl>frère de l'épouse</gl>
+    <hw>²¹'³³ʃjaŋbo</hw>
+  </entry>
+  <entry id="syang417">
+    <gl>femme du frère de l'épouse</gl>
+    <hw>⁵³niː</hw>
+  </entry>
+  <entry id="syang418">
+    <gl>soeur de l'épouse</gl>
+    <hw>⁵⁵'⁵⁴ atsjʌm</hw>
+  </entry>
+  <entry id="syang419">
+    <gl>mari de la soeur de l'épouse</gl>
+    <hw>⁵⁵'⁵⁵tsʰapo</hw>
+  </entry>
+  <entry id="syang420">
+    <gl>fils</gl>
+    <hw>²¹tsa²¹tsaʱ
+
+</hw>
+  </entry>
+  <entry id="syang421">
+    <gl>fils</gl>
+    <hw>²¹dzʌː²¹dzʱʌʱː
+
+</hw>
+  </entry>
+  <entry id="syang422">
+    <gl>fille</gl>
+    <hw>¹¹'⁴⁴tsʌme¹¹'⁴⁴tsʌʱme
+
+</hw>
+  </entry>
+  <entry id="syang423">
+    <gl>fille</gl>
+    <hw>³¹'²²tsʌme</hw>
+  </entry>
+  <entry id="syang424">
+    <gl>neveu croisé - petit-fils</gl>
+    <hw>⁵⁵'⁵⁴kontsa</hw>
+  </entry>
+  <entry id="syang425">
+    <gl>neveu croisé - petit-fils</gl>
+    <hw>⁵⁵'⁵⁴kontsa</hw>
+  </entry>
+  <entry id="syang426">
+    <gl>nièce croisée - petite-fille</gl>
+    <hw>Xkoime</hw>
+  </entry>
+  <entry id="syang427">
+    <gl>nièce croisée - petite-fille</gl>
+    <hw>⁵⁵'⁴⁴koime</hw>
+  </entry>
+  <entry id="syang428">
+    <gl>gendre</gl>
+    <hw>˩maXmaʱ
+
+</hw>
+  </entry>
+  <entry id="syang429">
+    <gl>gendre</gl>
+    <hw>¹¹maː¹¹maʱː
+
+</hw>
+  </entry>
+  <entry id="syang430">
+    <gl>bru</gl>
+    <hw>⁵¹tsaŋ</hw>
+  </entry>
+  <entry id="syang431">
+    <gl>bru</gl>
+    <hw>⁵¹tsaŋ</hw>
+  </entry>
+  <entry id="syang432">
+    <gl>arrière grand-père</gl>
+    <hw>Xkʰjopʌn</hw>
+  </entry>
+  <entry id="syang433">
+    <gl>dance(r)</gl>
+    <hw>⁴⁴'³³ʃjo-ba</hw>
+  </entry>
+  <entry id="syang434">
+    <gl>chant</gl>
+    <hw>¹¹goi¹¹goʱi
+
+</hw>
+  </entry>
+  <entry id="syang435">
+    <gl>chanter</gl>
+    <hw>¹¹koi ⁵⁵'⁵⁵pum-ba¹¹koʱi ⁵⁵'⁵⁵pum-ba
+
+</hw>
+  </entry>
+  <entry id="syang436">
+    <gl>chanter</gl>
+    <hw>¹²goe ⁵⁵'⁵⁵pum-ba</hw>
+  </entry>
+  <entry id="syang437">
+    <gl>jouer de la musique</gl>
+    <hw>¹¹'¹¹ro-ba¹¹'¹¹roʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang438">
+    <gl>jouer de la musique</gl>
+    <hw>²¹'¹¹ro-ba²¹'¹¹roʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang439">
+    <gl>peindre</gl>
+    <hw>⁵⁵'⁴⁴pʰo-ba</hw>
+  </entry>
+  <entry id="syang440">
+    <gl>peinture tibétaine</gl>
+    <hw>⁵⁵'⁵⁵tʰaŋgu</hw>
+  </entry>
+  <entry id="syang441">
+    <gl>jouer</gl>
+    <hw>⁵⁵'⁵⁴kjaŋ-ba</hw>
+  </entry>
+  <entry id="syang442">
+    <gl>jouer</gl>
+    <hw>⁵⁵'⁴⁴ljaŋ-ba</hw>
+  </entry>
+  <entry id="syang443">
+    <gl>plaisanterie</gl>
+    <hw>˩ʃjemeXʃjeʱme
+
+</hw>
+  </entry>
+  <entry id="syang444">
+    <gl>histoire, proverbe</gl>
+    <hw>⁴⁴pe ⁵⁵'⁴⁴ʃje-ba</hw>
+  </entry>
+  <entry id="syang445">
+    <gl>assassiner</gl>
+    <hw>²¹mi ⁵⁵'⁴⁴se-ba</hw>
+  </entry>
+  <entry id="syang446">
+    <gl>mentir</gl>
+    <hw>²¹la ⁴⁴'⁴⁴ʃje-ba</hw>
+  </entry>
+  <entry id="syang447">
+    <gl>voler</gl>
+    <hw>⁵⁵'⁴⁴kʰu-ba</hw>
+  </entry>
+  <entry id="syang448">
+    <gl>voleur</gl>
+    <hw>²¹jo²¹joʱ
+
+</hw>
+  </entry>
+  <entry id="syang449">
+    <gl>voleuse</gl>
+    <hw>¹¹'⁵⁴joʃja¹¹'⁵⁴joʱʃja
+
+</hw>
+  </entry>
+  <entry id="syang450">
+    <gl>langage</gl>
+    <hw>Xkʌi</hw>
+  </entry>
+  <entry id="syang451">
+    <gl>langage</gl>
+    <hw>⁵⁵kʌe</hw>
+  </entry>
+  <entry id="syang452">
+    <gl>népali</gl>
+    <hw>¹¹mʌn ¹¹kʌi</hw>
+  </entry>
+  <entry id="syang453">
+    <gl>mot</gl>
+    <hw>⁵⁵'⁴⁴ljaŋba</hw>
+  </entry>
+  <entry id="syang454">
+    <gl>clan</gl>
+    <hw>Xpʰobai</hw>
+  </entry>
+  <entry id="syang455">
+    <gl>riche</gl>
+    <hw>²¹'⁴⁴plo-βa</hw>
+  </entry>
+  <entry id="syang456">
+    <gl>pauvre</gl>
+    <hw>⁵⁵'⁵⁵ljɛm-ba</hw>
+  </entry>
+  <entry id="syang457">
+    <gl>esclave</gl>
+    <hw>⁵⁵'⁴⁴tʃhim-ba</hw>
+  </entry>
+  <entry id="syang458">
+    <gl>villageois</gl>
+    <hw>¹¹ɦil ¹¹mi¹¹ɦiʱl ¹¹miʱ
+
+</hw>
+  </entry>
+  <entry id="syang459">
+    <gl>voisin</gl>
+    <hw>⁵⁵'⁴⁴kʰimtse</hw>
+  </entry>
+  <entry id="syang460">
+    <gl>roi</gl>
+    <hw>⁵⁴'⁴⁴pompa</hw>
+  </entry>
+  <entry id="syang461">
+    <gl>roi</gl>
+    <hw>⁵⁵'⁴⁴pomba</hw>
+  </entry>
+  <entry id="syang462">
+    <gl>chef</gl>
+    <hw>¹¹'¹¹pala ⁵⁵'⁵⁵tʰimi</hw>
+  </entry>
+  <entry id="syang463">
+    <gl>chef</gl>
+    <hw>⁵³'²²tʰiːmi</hw>
+  </entry>
+  <entry id="syang464">
+    <gl>patriarche</gl>
+    <hw>²¹jom ¹¹'¹¹bitaŋ ⁵⁵'³³thjoba²¹jom ¹¹'¹¹biʱtaŋ ⁵⁵'³³thjoba
+
+</hw>
+  </entry>
+  <entry id="syang465">
+    <gl>assemblée</gl>
+    <hw>³³ɦil ⁴¹'²²tsompa</hw>
+  </entry>
+  <entry id="syang466">
+    <gl>être d'accord</gl>
+    <hw>²¹'³³gʌhi ⁴⁴'⁴⁴taba</hw>
+  </entry>
+  <entry id="syang467">
+    <gl>différer</gl>
+    <hw>²²'²¹'³³'³¹agʌimu</hw>
+  </entry>
+  <entry id="syang468">
+    <gl>biens</gl>
+    <hw>²¹nor²¹noʱr
+
+</hw>
+  </entry>
+  <entry id="syang469">
+    <gl>acheter</gl>
+    <hw>¹¹'³²li-dze¹¹'³²liʱ-dze
+
+</hw>
+  </entry>
+  <entry id="syang470">
+    <gl>vendre</gl>
+    <hw>⁵⁵'⁴⁴tsuŋ-pa</hw>
+  </entry>
+  <entry id="syang471">
+    <gl>roupie</gl>
+    <hw>Xale</hw>
+  </entry>
+  <entry id="syang472">
+    <gl>1 roupie</gl>
+    <hw>⁵⁵'⁵⁵ale ⁵⁴ʈʰol</hw>
+  </entry>
+  <entry id="syang473">
+    <gl>1 roupie</gl>
+    <hw>Xale ʈʰol</hw>
+  </entry>
+  <entry id="syang474">
+    <gl>demi-roupie</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁵atili</hw>
+  </entry>
+  <entry id="syang475">
+    <gl>demi-roupie</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁵atili</hw>
+  </entry>
+  <entry id="syang476">
+    <gl>quart de roupie</gl>
+    <hw>⁵⁴'⁴⁴'⁴⁴roʃiʃja</hw>
+  </entry>
+  <entry id="syang477">
+    <gl>quart de roupie</gl>
+    <hw>Xroʃiʃja</hw>
+  </entry>
+  <entry id="syang478">
+    <gl>1 paisa</gl>
+    <hw>¹¹'¹¹paisa ⁴⁴'⁴⁴tipum</hw>
+  </entry>
+  <entry id="syang479">
+    <gl>2 paisa</gl>
+    <hw>¹¹'¹¹paisa ¹¹'¹¹ɲipum</hw>
+  </entry>
+  <entry id="syang480">
+    <gl>commerce</gl>
+    <hw>⁵⁵tsʰoŋ (⁴⁴'⁴⁴laba)</hw>
+  </entry>
+  <entry id="syang481">
+    <gl>marchand</gl>
+    <hw>⁴⁴tsʰoŋ ⁵⁵'⁵⁵pumba ¹¹mi⁴⁴tsʰoŋ ⁵⁵'⁵⁵pumba ¹¹miʱ
+
+</hw>
+  </entry>
+  <entry id="syang482">
+    <gl>maître</gl>
+    <hw>²¹dim ¹¹'¹¹daba²¹diʱm ¹¹'¹¹daʱba
+
+</hw>
+  </entry>
+  <entry id="syang483">
+    <gl>maître</gl>
+    <hw>²¹'⁴⁴daːba²¹'⁴⁴daʱːba
+
+</hw>
+  </entry>
+  <entry id="syang484">
+    <gl>serviteur</gl>
+    <hw>²¹'²²gjaba²¹'²²gjaʱba
+
+</hw>
+  </entry>
+  <entry id="syang485">
+    <gl>serviteur</gl>
+    <hw>˩ke laʃi ʈubai ˩miXkeʱ laʃi ʈubai miʱ
+
+</hw>
+  </entry>
+  <entry id="syang486">
+    <gl>tailleur</gl>
+    <hw>¹¹'⁴⁴tuli</hw>
+  </entry>
+  <entry id="syang487">
+    <gl>berger</gl>
+    <hw>⁴⁴ra ⁵³tsʰʌn</hw>
+  </entry>
+  <entry id="syang488">
+    <gl>berger</gl>
+    <hw>⁴⁴'⁴⁴ratsʰʌn</hw>
+  </entry>
+  <entry id="syang489">
+    <gl>bouvier</gl>
+    <hw>⁵¹'³³metsʰʌn</hw>
+  </entry>
+  <entry id="syang490">
+    <gl>travail</gl>
+    <hw>²¹gje ⁵⁵'⁵⁵laba²¹gjeʱ ⁵⁵'⁵⁵laba
+
+</hw>
+  </entry>
+  <entry id="syang491">
+    <gl>travail</gl>
+    <hw>¹¹ge¹¹geʱ
+
+</hw>
+  </entry>
+  <entry id="syang492">
+    <gl>compagnon</gl>
+    <hw>¹¹ro¹¹roʱ
+
+</hw>
+  </entry>
+  <entry id="syang493">
+    <gl>ami rituel</gl>
+    <hw>²²'²¹rowa²²'²¹roʱwa
+
+</hw>
+  </entry>
+  <entry id="syang494">
+    <gl>amie rituelle</gl>
+    <hw>¹¹'⁵⁵njʌla¹¹'⁵⁵njʌʱla
+
+</hw>
+  </entry>
+  <entry id="syang495">
+    <gl>amie rituelle</gl>
+    <hw>⁵⁴'⁴⁴njala</hw>
+  </entry>
+  <entry id="syang496">
+    <gl>expensive</gl>
+    <hw>⁵⁵'⁵⁵kommo</hw>
+  </entry>
+  <entry id="syang497">
+    <gl>bon marché</gl>
+    <hw>Xkʰjamu</hw>
+  </entry>
+  <entry id="syang498">
+    <gl>docteur</gl>
+    <hw>⁵⁵'⁵⁴ʈaŋdar</hw>
+  </entry>
+  <entry id="syang499">
+    <gl>qui a toujours faim</gl>
+    <hw>⁵⁵'⁵⁴pʰote</hw>
+  </entry>
+  <entry id="syang500">
+    <gl>qui dort tout le temps</gl>
+    <hw>⁵⁵'⁵⁴nukʰo</hw>
+  </entry>
+  <entry id="syang501">
+    <gl>chemin</gl>
+    <hw>²¹gjʌm²¹gjʌʱm
+
+</hw>
+  </entry>
+  <entry id="syang502">
+    <gl>village</gl>
+    <hw>¹¹ɦil¹¹ɦiʱl
+
+</hw>
+  </entry>
+  <entry id="syang503">
+    <gl>place</gl>
+    <hw>¹¹lja</hw>
+  </entry>
+  <entry id="syang504">
+    <gl>coin</gl>
+    <hw>˩suXsuʱ
+
+</hw>
+  </entry>
+  <entry id="syang505">
+    <gl>coin externe de la table</gl>
+    <hw>˩surXsuʱr
+
+</hw>
+  </entry>
+  <entry id="syang506">
+    <gl>maison</gl>
+    <hw>˩dimXdiʱm
+
+</hw>
+  </entry>
+  <entry id="syang507">
+    <gl>maison</gl>
+    <hw>²¹dim²¹dʱiʱm
+
+</hw>
+  </entry>
+  <entry id="syang508">
+    <gl>moulin</gl>
+    <hw>tsʰjɛta</hw>
+  </entry>
+  <entry id="syang509">
+    <gl>cow shed</gl>
+    <hw>˩praŋpraʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang510">
+    <gl>abreuvoir</gl>
+    <hw>⁴⁵ko</hw>
+  </entry>
+  <entry id="syang511">
+    <gl>abreuvoir</gl>
+    <hw>⁵⁴ko</hw>
+  </entry>
+  <entry id="syang512">
+    <gl>mur</gl>
+    <hw>¹¹'²²gjaŋga</hw>
+  </entry>
+  <entry id="syang513">
+    <gl>mur</gl>
+    <hw>⁵⁵'⁵⁵kjãŋa</hw>
+  </entry>
+  <entry id="syang514">
+    <gl>cloison de planche</gl>
+    <hw>⁵³'⁵³tʰato</hw>
+  </entry>
+  <entry id="syang515">
+    <gl>boue</gl>
+    <hw>⁴⁴'⁵⁴tʌle</hw>
+  </entry>
+  <entry id="syang516">
+    <gl>boue</gl>
+    <hw>⁵⁵'⁵⁴tjelja</hw>
+  </entry>
+  <entry id="syang517">
+    <gl>terre à badigeon claire</gl>
+    <hw>⁵⁵'³³sakar</hw>
+  </entry>
+  <entry id="syang518">
+    <gl>chaux à badigeon</gl>
+    <hw>⁵⁴kʌ</hw>
+  </entry>
+  <entry id="syang519">
+    <gl>chaux à badigeon</gl>
+    <hw>⁵⁴ka</hw>
+  </entry>
+  <entry id="syang520">
+    <gl>badigeonner à la chaux</gl>
+    <hw>⁵⁴kʌ ⁵⁵'⁴⁴pum-ba</hw>
+  </entry>
+  <entry id="syang521">
+    <gl>badigeonner (avec terre)</gl>
+    <hw>¹¹ʃjʌl ³³'³³la-ba</hw>
+  </entry>
+  <entry id="syang522">
+    <gl>toit (terrasse)</gl>
+    <hw>˩bjoXbjoʱ
+
+</hw>
+  </entry>
+  <entry id="syang523">
+    <gl>sol</gl>
+    <hw>Xtʰaŋ</hw>
+  </entry>
+  <entry id="syang524">
+    <gl>poutre</gl>
+    <hw>⁵⁴lio</hw>
+  </entry>
+  <entry id="syang525">
+    <gl>poteau</gl>
+    <hw>¹¹taː</hw>
+  </entry>
+  <entry id="syang526">
+    <gl>poteau</gl>
+    <hw>¹¹ta¹¹taʱ
+
+</hw>
+  </entry>
+  <entry id="syang527">
+    <gl>planche</gl>
+    <hw>⁵⁵tʰa</hw>
+  </entry>
+  <entry id="syang528">
+    <gl>planche</gl>
+    <hw>Xtʰa</hw>
+  </entry>
+  <entry id="syang529">
+    <gl>escalier de pierre</gl>
+    <hw>Xʈʌpʈʌp</hw>
+  </entry>
+  <entry id="syang530">
+    <gl>escalier de pierre</gl>
+    <hw>¹¹to ³³tʰɛm</hw>
+  </entry>
+  <entry id="syang531">
+    <gl>échelle</gl>
+    <hw>⁵⁵li</hw>
+  </entry>
+  <entry id="syang532">
+    <gl>échelle</gl>
+    <hw>⁵⁵hɬi</hw>
+  </entry>
+  <entry id="syang533">
+    <gl>marche du seuil</gl>
+    <hw>⁵⁵mro ⁵⁴tʰjam</hw>
+  </entry>
+  <entry id="syang534">
+    <gl>marche, escalier (de bois)</gl>
+    <hw>⁵⁵tʰɛm</hw>
+  </entry>
+  <entry id="syang535">
+    <gl>cour</gl>
+    <hw>⁵⁴kʰo</hw>
+  </entry>
+  <entry id="syang536">
+    <gl>cour</gl>
+    <hw>⁵⁴kʰo</hw>
+  </entry>
+  <entry id="syang537">
+    <gl>doorway</gl>
+    <hw>⁵⁵'⁵⁵mrokʰa</hw>
+  </entry>
+  <entry id="syang538">
+    <gl>porte</gl>
+    <hw>⁵⁴mro</hw>
+  </entry>
+  <entry id="syang539">
+    <gl>entablement</gl>
+    <hw>⁵⁵mro ²²'²²roʃin⁵⁵mro ²²'²²roʱʃin
+
+</hw>
+  </entry>
+  <entry id="syang540">
+    <gl>cadenas</gl>
+    <hw>²²ton (⁵⁵'⁴⁴pum-ba)</hw>
+  </entry>
+  <entry id="syang541">
+    <gl>floor</gl>
+    <hw>¹¹dim ⁵⁴tʰaŋ¹¹dʱiʱm ⁵⁴tʰaŋ
+
+</hw>
+  </entry>
+  <entry id="syang542">
+    <gl>tapis de poil de chèvre</gl>
+    <hw>⁵⁵'⁴⁴pʰjɛrbu</hw>
+  </entry>
+  <entry id="syang543">
+    <gl>tapis thakali</gl>
+    <hw>³³'¹¹ʈumtsʌn</hw>
+  </entry>
+  <entry id="syang544">
+    <gl>matelas</gl>
+    <hw>Xsubida</hw>
+  </entry>
+  <entry id="syang545">
+    <gl>oreiller</gl>
+    <hw>⁵⁵'⁴⁴takja</hw>
+  </entry>
+  <entry id="syang546">
+    <gl>coffre à grain</gl>
+    <hw>⁵⁴mrʌm</hw>
+  </entry>
+  <entry id="syang547">
+    <gl>coffre à grain</gl>
+    <hw>⁵⁴mram</hw>
+  </entry>
+  <entry id="syang548">
+    <gl>foyer central</gl>
+    <hw>⁵³'³³pʰaːto</hw>
+  </entry>
+  <entry id="syang549">
+    <gl>déversoir des cendres (devant le foyer)</gl>
+    <hw>⁵⁵'⁴⁴kotoŋ</hw>
+  </entry>
+  <entry id="syang550">
+    <gl>déversoir des cendres (devant le foyer)</gl>
+    <hw>⁵⁵'⁵⁵kotoŋ</hw>
+  </entry>
+  <entry id="syang551">
+    <gl>foyer ouvert (pour la distillation)</gl>
+    <hw>⁵⁵'⁵⁴pʰato</hw>
+  </entry>
+  <entry id="syang552">
+    <gl>foyer à deux trous</gl>
+    <hw>¹¹'⁴⁴tsjatoŋ</hw>
+  </entry>
+  <entry id="syang553">
+    <gl>charbon de bois</gl>
+    <hw>⁵⁵'⁵⁴mjoko</hw>
+  </entry>
+  <entry id="syang554">
+    <gl>charbons ardents</gl>
+    <hw>⁵⁵'³³mimla</hw>
+  </entry>
+  <entry id="syang555">
+    <gl>charbons ardents</gl>
+    <hw>⁵⁵mi ²²mla</hw>
+  </entry>
+  <entry id="syang556">
+    <gl>poêle à charbon</gl>
+    <hw>⁵⁵'⁵⁵mʌkʌl</hw>
+  </entry>
+  <entry id="syang557">
+    <gl>meule</gl>
+    <hw>Xrʌnʈa</hw>
+  </entry>
+  <entry id="syang558">
+    <gl>gril</gl>
+    <hw>¹¹'⁴³dzaŋa¹¹'⁴³dzaʱŋa
+
+</hw>
+  </entry>
+  <entry id="syang559">
+    <gl>mortier</gl>
+    <hw>⁵⁴laŋ</hw>
+  </entry>
+  <entry id="syang560">
+    <gl>mortier</gl>
+    <hw>²¹laŋ</hw>
+  </entry>
+  <entry id="syang561">
+    <gl>pilon</gl>
+    <hw>Xmusur</hw>
+  </entry>
+  <entry id="syang562">
+    <gl>étincelles</gl>
+    <hw>Xmi Xmɛndo</hw>
+  </entry>
+  <entry id="syang563">
+    <gl>vapeur</gl>
+    <hw>⁵⁵'⁴⁴ɬaŋba</hw>
+  </entry>
+  <entry id="syang564">
+    <gl>vapeur</gl>
+    <hw>⁵⁵kju ⁵⁵'⁵⁵hlaŋma</hw>
+  </entry>
+  <entry id="syang565">
+    <gl>balayures</gl>
+    <hw>⁴⁴'⁴³sʌpra</hw>
+  </entry>
+  <entry id="syang566">
+    <gl>bois à brûler</gl>
+    <hw>⁵⁵ʃin</hw>
+  </entry>
+  <entry id="syang567">
+    <gl>bois à brûler</gl>
+    <hw>⁵²ʃin</hw>
+  </entry>
+  <entry id="syang568">
+    <gl>bûche</gl>
+    <hw>⁵⁵ʃin ¹¹'⁴⁴toŋba</hw>
+  </entry>
+  <entry id="syang569">
+    <gl>pot, plat</gl>
+    <hw>⁵⁵taŋ</hw>
+  </entry>
+  <entry id="syang570">
+    <gl>pot, plat</gl>
+    <hw>⁵⁵taŋ</hw>
+  </entry>
+  <entry id="syang571">
+    <gl>couvercle</gl>
+    <hw>⁵⁵'⁵⁴kʰalɛp</hw>
+  </entry>
+  <entry id="syang572">
+    <gl>spatule</gl>
+    <hw>⁵⁵'⁵⁵kjaba</hw>
+  </entry>
+  <entry id="syang573">
+    <gl>louche (en bois)</gl>
+    <hw>¹¹'²¹kukja</hw>
+  </entry>
+  <entry id="syang574">
+    <gl>louche à thé</gl>
+    <hw>⁴⁴'⁴⁴tsjakjo</hw>
+  </entry>
+  <entry id="syang575">
+    <gl>passe-thé</gl>
+    <hw>¹¹tsja ³²tsʰʌr</hw>
+  </entry>
+  <entry id="syang576">
+    <gl>jarre à eau en cuivre</gl>
+    <hw>⁵⁵ʃin ⁴⁴'⁴⁴tsaŋbai ³³'²¹kaga</hw>
+  </entry>
+  <entry id="syang577">
+    <gl>grande bassine à eau</gl>
+    <hw>⁵⁵'⁵⁴rasaŋ</hw>
+  </entry>
+  <entry id="syang578">
+    <gl>petite bassine à eau</gl>
+    <hw>²¹'³³poŋna²¹'³³poʱŋna
+
+</hw>
+  </entry>
+  <entry id="syang579">
+    <gl>jarre à eau en argile</gl>
+    <hw>Xraŋgjɛl</hw>
+  </entry>
+  <entry id="syang580">
+    <gl>couvercle de tasse (argent)</gl>
+    <hw>⁴⁴'⁴⁴pʰurko</hw>
+  </entry>
+  <entry id="syang581">
+    <gl>tasse</gl>
+    <hw>⁴⁴'⁵⁴kʌirʌ</hw>
+  </entry>
+  <entry id="syang582">
+    <gl>tasse en bois</gl>
+    <hw>⁵⁴ʃjo</hw>
+  </entry>
+  <entry id="syang583">
+    <gl>bol en porcelaine (sans queue)</gl>
+    <hw>¹¹'⁵⁵'⁴⁴tapunke</hw>
+  </entry>
+  <entry id="syang584">
+    <gl>pot à tsampa</gl>
+    <hw>⁴⁴'³³pakpur</hw>
+  </entry>
+  <entry id="syang585">
+    <gl>pot à farine d'orge grillée</gl>
+    <hw>Xpakpur</hw>
+  </entry>
+  <entry id="syang586">
+    <gl>théière</gl>
+    <hw>¹¹tʃjʌ ³³pin</hw>
+  </entry>
+  <entry id="syang587">
+    <gl>baratte à thé</gl>
+    <hw>¹¹tsjʌ ⁴³toŋ¹¹tsjʌʱ ⁴³toŋ
+
+</hw>
+  </entry>
+  <entry id="syang588">
+    <gl>petite assiette</gl>
+    <hw>¹²dɛr¹²dɛʱr
+
+</hw>
+  </entry>
+  <entry id="syang589">
+    <gl>assiette</gl>
+    <hw>˩djʌrXdjʌʱr
+
+</hw>
+  </entry>
+  <entry id="syang590">
+    <gl>petite</gl>
+    <hw>¹¹'⁴⁴ɖoko¹¹'⁴⁴ɖoʱko
+
+</hw>
+  </entry>
+  <entry id="syang591">
+    <gl>bol à légumes</gl>
+    <hw>⁴⁴'⁴⁴koʃjo</hw>
+  </entry>
+  <entry id="syang592">
+    <gl>grande marmite en cuivre pr cuire le thé</gl>
+    <hw>³¹tik³¹tiʱk
+
+</hw>
+  </entry>
+  <entry id="syang593">
+    <gl>pot à cuire le légume</gl>
+    <hw>⁵⁵'⁵⁵kʰuba</hw>
+  </entry>
+  <entry id="syang594">
+    <gl>casserole à queue</gl>
+    <hw>⁵⁵'⁵⁵tʃjasaŋ</hw>
+  </entry>
+  <entry id="syang595">
+    <gl>casserole à 'ɖʰero'</gl>
+    <hw>²¹'³³naltsa</hw>
+  </entry>
+  <entry id="syang596">
+    <gl>pot à cuire le riz</gl>
+    <hw>⁵⁵'⁵⁵ari</hw>
+  </entry>
+  <entry id="syang597">
+    <gl>tuyau</gl>
+    <hw>˩duduʱ
+
+</hw>
+  </entry>
+  <entry id="syang598">
+    <gl>grande jarre ronde en terre, à chang</gl>
+    <hw>⁵⁵'⁴³raŋgjɛl</hw>
+  </entry>
+  <entry id="syang599">
+    <gl>grande jarre ronde en terre, à chang</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁴kalaŋsɛ</hw>
+  </entry>
+  <entry id="syang600">
+    <gl>grande jarre haute en terre</gl>
+    <hw>⁵⁵pu</hw>
+  </entry>
+  <entry id="syang601">
+    <gl>table basse</gl>
+    <hw>⁵⁵'⁵⁴tʃjoksa</hw>
+  </entry>
+  <entry id="syang602">
+    <gl>chiffon</gl>
+    <hw>⁵⁵'⁵⁴tʰaŋna</hw>
+  </entry>
+  <entry id="syang603">
+    <gl>séchoir au-dessus du feu</gl>
+    <hw>⁵⁵ʈaŋ</hw>
+  </entry>
+  <entry id="syang604">
+    <gl>panier à piments au-dessus du feu</gl>
+    <hw>⁵⁴'⁴⁴'⁴³poŋolo</hw>
+  </entry>
+  <entry id="syang605">
+    <gl>pot de 4 manas</gl>
+    <hw>⁵⁵pjaŋ</hw>
+  </entry>
+  <entry id="syang606">
+    <gl>pot de 2 manas</gl>
+    <hw>kurua</hw>
+  </entry>
+  <entry id="syang607">
+    <gl>pot de 1 mana</gl>
+    <hw>²¹'³³ʈukja</hw>
+  </entry>
+  <entry id="syang608">
+    <gl>pot à raksi droit en bois tourné</gl>
+    <hw>²¹'²²'⁴⁴'⁴⁴gurumpudzu</hw>
+  </entry>
+  <entry id="syang609">
+    <gl>pot à raksi droit en bois tourné</gl>
+    <hw>⁵⁵'⁵⁵'⁴⁴'⁴⁴gurumpudzu</hw>
+  </entry>
+  <entry id="syang610">
+    <gl>pot de bois tourné, à col</gl>
+    <hw>⁵⁵'⁵⁵pʌru</hw>
+  </entry>
+  <entry id="syang611">
+    <gl>pot de bois tourné, à col</gl>
+    <hw>⁵⁵'⁵⁴pɔru</hw>
+  </entry>
+  <entry id="syang612">
+    <gl>dieu sur le toit (à cornes ou à fleurs)</gl>
+    <hw>⁵⁵'⁵⁵tsaŋa</hw>
+  </entry>
+  <entry id="syang613">
+    <gl>pot du dessus</gl>
+    <hw>⁵⁵'⁵⁵pulu</hw>
+  </entry>
+  <entry id="syang614">
+    <gl>pot du milieu</gl>
+    <hw>⁵⁵'⁵⁴pʌiŋki</hw>
+  </entry>
+  <entry id="syang615">
+    <gl>pot du dessous</gl>
+    <hw>¹¹'¹¹gʌjo</hw>
+  </entry>
+  <entry id="syang616">
+    <gl>petit pot dedans</gl>
+    <hw>⁵⁵'⁵⁵kʰuba</hw>
+  </entry>
+  <entry id="syang617">
+    <gl>suspendeur en bois fourchu</gl>
+    <hw>⁵⁵'⁵⁵pʰuʃin</hw>
+  </entry>
+  <entry id="syang618">
+    <gl>gde bassine à cuire en cuivre rouge</gl>
+    <hw>¹¹'³³kʌja ⁵⁵'⁵⁵tʰeba¹¹'³³kʌʱja ⁵⁵'⁵⁵tʰeba
+
+</hw>
+  </entry>
+  <entry id="syang619">
+    <gl>buffet à vaisselle</gl>
+    <hw>³³'³³'⁵⁵tajaŋtaŋ</hw>
+  </entry>
+  <entry id="syang620">
+    <gl>buffet à puja</gl>
+    <hw>⁵⁵'⁵⁵torkaŋ</hw>
+  </entry>
+  <entry id="syang621">
+    <gl>louche à eau</gl>
+    <hw>⁵⁴'⁴⁴'⁴⁴tsaŋkuli</hw>
+  </entry>
+  <entry id="syang622">
+    <gl>paillasse de pierre et boue dans la cour</gl>
+    <hw>⁵⁵'³³taktakʰ</hw>
+  </entry>
+  <entry id="syang623">
+    <gl>billot</gl>
+    <hw>⁴⁴'⁵⁴tʌiʃin</hw>
+  </entry>
+  <entry id="syang624">
+    <gl>intérieur de maïs fixé à baguette pr remuer grains qu'on  grille</gl>
+    <hw>²¹'⁵⁵joto</hw>
+  </entry>
+  <entry id="syang625">
+    <gl>vessie (récipient à yaourt lait)</gl>
+    <hw>⁵⁵'⁵⁵ʃjapʰo</hw>
+  </entry>
+  <entry id="syang626">
+    <gl>canne</gl>
+    <hw>¹¹da ⁵⁴ʃin¹¹dʱaʱ ⁵⁴ʃin
+
+</hw>
+  </entry>
+  <entry id="syang627">
+    <gl>porter</gl>
+    <hw>⁵³tʌi ⁵⁵'⁵⁵na-ba</hw>
+  </entry>
+  <entry id="syang628">
+    <gl>porter</gl>
+    <hw>¹¹de ⁵⁵'⁵⁵na-ba¹¹deʱ ⁵⁵'⁵⁵na-ba
+
+</hw>
+  </entry>
+  <entry id="syang629">
+    <gl>poser</gl>
+    <hw>⁵³tʌi ²²'²²na-ba</hw>
+  </entry>
+  <entry id="syang630">
+    <gl>grand panier (de portage)</gl>
+    <hw>⁵⁵'⁵⁴sʌni</hw>
+  </entry>
+  <entry id="syang631">
+    <gl>grand panier (de portage)</gl>
+    <hw>²¹'⁴⁴bema²¹'⁴⁴beʱma
+
+</hw>
+  </entry>
+  <entry id="syang632">
+    <gl>bandeau frontal</gl>
+    <hw>˩ʈaXʈaʱ
+
+</hw>
+  </entry>
+  <entry id="syang633">
+    <gl>bandeau frontal</gl>
+    <hw>¹¹ɖaː¹¹ɖaʱː
+
+</hw>
+  </entry>
+  <entry id="syang634">
+    <gl>grand sac en poil de chèvre</gl>
+    <hw>¹¹'²¹kjaŋta</hw>
+  </entry>
+  <entry id="syang635">
+    <gl>petit sac en poil de chèvre</gl>
+    <hw>²²'¹¹jato</hw>
+  </entry>
+  <entry id="syang636">
+    <gl>sac de cuir</gl>
+    <hw>Xkjɛlpo</hw>
+  </entry>
+  <entry id="syang637">
+    <gl>sac de cuir</gl>
+    <hw>˩wiXwiʱ
+
+</hw>
+  </entry>
+  <entry id="syang638">
+    <gl>selle, bât</gl>
+    <hw>˩gʌXgʌʱ
+
+</hw>
+  </entry>
+  <entry id="syang639">
+    <gl>selle, bât</gl>
+    <hw>²¹ga²¹gaʱ
+
+</hw>
+  </entry>
+  <entry id="syang640">
+    <gl>flèche</gl>
+    <hw>⁵³me</hw>
+  </entry>
+  <entry id="syang641">
+    <gl>hache</gl>
+    <hw>⁵⁴tʌ</hw>
+  </entry>
+  <entry id="syang642">
+    <gl>grand couteau népalais</gl>
+    <hw>²²'³²ko·tsa</hw>
+  </entry>
+  <entry id="syang643">
+    <gl>grand couteau népalais</gl>
+    <hw>²²'²¹godza²²'²¹goʱdza
+
+</hw>
+  </entry>
+  <entry id="syang644">
+    <gl>couteau</gl>
+    <hw>Xkartsa</hw>
+  </entry>
+  <entry id="syang645">
+    <gl>étui / gaine</gl>
+    <hw>⁵⁵ɕju</hw>
+  </entry>
+  <entry id="syang646">
+    <gl>bouclier</gl>
+    <hw>²¹'³³kʌmpa²¹'³³kʱʌmpa
+
+</hw>
+  </entry>
+  <entry id="syang647">
+    <gl>fusil</gl>
+    <hw>²¹ne ⁵⁵pjaŋ</hw>
+  </entry>
+  <entry id="syang648">
+    <gl>corde</gl>
+    <hw>⁵⁵tsʰo</hw>
+  </entry>
+  <entry id="syang649">
+    <gl>manche d'outil</gl>
+    <hw>⁵⁴ju</hw>
+  </entry>
+  <entry id="syang650">
+    <gl>manche d'outil</gl>
+    <hw>⁵⁵ju</hw>
+  </entry>
+  <entry id="syang651">
+    <gl>tuyau</gl>
+    <hw>˩duXduʱ
+
+</hw>
+  </entry>
+  <entry id="syang652">
+    <gl>guimbarde</gl>
+    <hw>⁵⁵'⁵⁵kʰapraŋ</hw>
+  </entry>
+  <entry id="syang653">
+    <gl>cymbales</gl>
+    <hw>¹¹'³²rolmo¹¹'³²roʱlmo
+
+</hw>
+  </entry>
+  <entry id="syang654">
+    <gl>tambour (lama)</gl>
+    <hw>¹¹ŋa¹¹ŋaʱ
+
+</hw>
+  </entry>
+  <entry id="syang655">
+    <gl>offrande, nourriture bénie</gl>
+    <hw>⁵³tsʰoː</hw>
+  </entry>
+  <entry id="syang656">
+    <gl>dague de fer (relig.)</gl>
+    <hw>⁵⁵'⁵⁴pʰurba</hw>
+  </entry>
+  <entry id="syang657">
+    <gl>gros dammaru</gl>
+    <hw>¹¹'³³tʌrul</hw>
+  </entry>
+  <entry id="syang658">
+    <gl>clochette</gl>
+    <hw>²¹'⁴⁴ʈilpu²¹'⁴⁴ʈiʱlpu
+
+</hw>
+  </entry>
+  <entry id="syang659">
+    <gl>foudre</gl>
+    <hw>¹¹'³³tordze</hw>
+  </entry>
+  <entry id="syang660">
+    <gl>conque</gl>
+    <hw>²¹tuŋ²¹tuʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang661">
+    <gl>trompette d'os</gl>
+    <hw>⁵⁵'³³kaŋli</hw>
+  </entry>
+  <entry id="syang662">
+    <gl>plaque à graver ds la pâte de farine</gl>
+    <hw>⁵⁵'⁵⁵parʃiŋ</hw>
+  </entry>
+  <entry id="syang663">
+    <gl>moulin à prières</gl>
+    <hw>²¹'³³mane</hw>
+  </entry>
+  <entry id="syang664">
+    <gl>reliquaire</gl>
+    <hw>²¹'³³dʌikʌp</hw>
+  </entry>
+  <entry id="syang665">
+    <gl>aiguière à plume</gl>
+    <hw>⁵⁵'⁵⁵'tʰiʃi ¹¹'³³pumu</hw>
+  </entry>
+  <entry id="syang666">
+    <gl>pot à offrir l'eau</gl>
+    <hw>¹¹'⁴⁴jønde ³³'³³koʃjo</hw>
+  </entry>
+  <entry id="syang667">
+    <gl>statue</gl>
+    <hw>⁵⁵ku</hw>
+  </entry>
+  <entry id="syang668">
+    <gl>statue</gl>
+    <hw>⁵⁴ku</hw>
+  </entry>
+  <entry id="syang669">
+    <gl>livre</gl>
+    <hw>⁵⁵tʃjʰe</hw>
+  </entry>
+  <entry id="syang670">
+    <gl>lumière</gl>
+    <hw>⁵⁵'⁵⁵tʃʰjeme</hw>
+  </entry>
+  <entry id="syang671">
+    <gl>lampe à beurre</gl>
+    <hw>⁵⁵'⁵⁵tʃʰeme ⁵⁵'⁵⁵'⁵⁵pʰulbai ⁵⁵woŋ</hw>
+  </entry>
+  <entry id="syang672">
+    <gl>charrue</gl>
+    <hw>²¹kor²¹koʱr
+
+</hw>
+  </entry>
+  <entry id="syang673">
+    <gl>faucille</gl>
+    <hw>⁵⁵'⁵⁴patsja</hw>
+  </entry>
+  <entry id="syang674">
+    <gl>gloss674</gl>
+    <hw>³³pla ⁵²to</hw>
+  </entry>
+  <entry id="syang675">
+    <gl>houe</gl>
+    <hw>hw675</hw>
+  </entry>
+  <entry id="syang676">
+    <gl>pioche</gl>
+    <hw>⁵⁴to</hw>
+  </entry>
+  <entry id="syang677">
+    <gl>pioche</gl>
+    <hw>⁵⁴⁵to</hw>
+  </entry>
+  <entry id="syang678">
+    <gl>binette</gl>
+    <hw>⁵⁵'⁵⁵koma</hw>
+  </entry>
+  <entry id="syang679">
+    <gl>planche à égaliser après semis</gl>
+    <hw>⁵⁵'⁵⁵tʰeda</hw>
+  </entry>
+  <entry id="syang680">
+    <gl>planche à égaliser après semis</gl>
+    <hw>⁵⁵'⁵⁴tʰɛdia</hw>
+  </entry>
+  <entry id="syang681">
+    <gl>instrument à rassembler la terre en tas</gl>
+    <hw>Xtsjaki</hw>
+  </entry>
+  <entry id="syang682">
+    <gl>fléau</gl>
+    <hw>¹¹'³¹keʃju¹¹'³¹keʱʃju
+
+</hw>
+  </entry>
+  <entry id="syang683">
+    <gl>van</gl>
+    <hw>⁵⁵'⁵⁴nali</hw>
+  </entry>
+  <entry id="syang684">
+    <gl>van</gl>
+    <hw>⁵⁵'⁵⁵nʌli</hw>
+  </entry>
+  <entry id="syang685">
+    <gl>van à clairevoie (tamis)</gl>
+    <hw>⁵³praŋ ⁴⁴'⁴⁴nʌli</hw>
+  </entry>
+  <entry id="syang686">
+    <gl>panier à pieds</gl>
+    <hw>⁵⁴min</hw>
+  </entry>
+  <entry id="syang687">
+    <gl>panier à pieds</gl>
+    <hw>⁵⁵min</hw>
+  </entry>
+  <entry id="syang688">
+    <gl>panier presque plat sans pieds</gl>
+    <hw>¹¹tʌ¹¹tʌʱ
+
+</hw>
+  </entry>
+  <entry id="syang689">
+    <gl>panier presque plat sans pieds</gl>
+    <hw>²¹ta²¹taʱ
+
+</hw>
+  </entry>
+  <entry id="syang690">
+    <gl>or</gl>
+    <hw>⁵³mʌr</hw>
+  </entry>
+  <entry id="syang691">
+    <gl>or</gl>
+    <hw>¹¹mʌr¹¹mʌʱr
+
+</hw>
+  </entry>
+  <entry id="syang692">
+    <gl>argent</gl>
+    <hw>⁵¹mwi⁵¹mwiʱ
+
+</hw>
+  </entry>
+  <entry id="syang693">
+    <gl>cuivre</gl>
+    <hw>˩gjorXgjoʱr
+
+</hw>
+  </entry>
+  <entry id="syang694">
+    <gl>fer</gl>
+    <hw>⁵⁴pʰʌe</hw>
+  </entry>
+  <entry id="syang695">
+    <gl>fer</gl>
+    <hw>⁵⁴pʰae</hw>
+  </entry>
+  <entry id="syang696">
+    <gl>laiton</gl>
+    <hw>¹¹'¹¹mara</hw>
+  </entry>
+  <entry id="syang697">
+    <gl>nourriture</gl>
+    <hw>⁵⁵kʌn</hw>
+  </entry>
+  <entry id="syang698">
+    <gl>riz cuit</gl>
+    <hw>˩mlakʌŋXmlaʱkʌŋ
+
+</hw>
+  </entry>
+  <entry id="syang699">
+    <gl>écume de riz</gl>
+    <hw>⁴⁴kan ⁵⁵'⁴⁴momo</hw>
+  </entry>
+  <entry id="syang700">
+    <gl>riz cru décortiqué</gl>
+    <hw>¹¹mla¹¹mlaʱ
+
+</hw>
+  </entry>
+  <entry id="syang701">
+    <gl>piment écrasé</gl>
+    <hw>⁵⁴tun</hw>
+  </entry>
+  <entry id="syang702">
+    <gl>lentilles</gl>
+    <hw>⁵⁵'⁵⁵pʌitu ⁴⁴kʰu</hw>
+  </entry>
+  <entry id="syang703">
+    <gl>légume</gl>
+    <hw>Xkʌn ⁵³kʰu</hw>
+  </entry>
+  <entry id="syang704">
+    <gl>légume</gl>
+    <hw>⁵³kʰu</hw>
+  </entry>
+  <entry id="syang705">
+    <gl>légume ou viande (sans jus)</gl>
+    <hw>⁵⁵pla</hw>
+  </entry>
+  <entry id="syang706">
+    <gl>sel</gl>
+    <hw>⁵⁵'⁴⁴tsadza</hw>
+  </entry>
+  <entry id="syang707">
+    <gl>huile</gl>
+    <hw>⁵⁵'⁵⁴tʃjʰugu</hw>
+  </entry>
+  <entry id="syang708">
+    <gl>beurre</gl>
+    <hw>²¹mʌr²¹mʌʱr
+
+</hw>
+  </entry>
+  <entry id="syang709">
+    <gl>beurre</gl>
+    <hw>²¹mʌr²¹mʌʱr
+
+</hw>
+  </entry>
+  <entry id="syang710">
+    <gl>oeuf</gl>
+    <hw>⁵⁵pʰum</hw>
+  </entry>
+  <entry id="syang711">
+    <gl>coquille</gl>
+    <hw>⁵³kʰo</hw>
+  </entry>
+  <entry id="syang712">
+    <gl>viande</gl>
+    <hw>⁵⁵ʃjʌ ⁵⁵kʰu</hw>
+  </entry>
+  <entry id="syang713">
+    <gl>lait</gl>
+    <hw>˩njeXnjeʱ
+
+</hw>
+  </entry>
+  <entry id="syang714">
+    <gl>feuille de thé</gl>
+    <hw>¹¹tʃjʌ ⁵⁵ril</hw>
+  </entry>
+  <entry id="syang715">
+    <gl>thé</gl>
+    <hw>¹¹tʃjʌ</hw>
+  </entry>
+  <entry id="syang716">
+    <gl>thé salé</gl>
+    <hw>¹²mʌr ²¹tʃja</hw>
+  </entry>
+  <entry id="syang717">
+    <gl>reste de la pâte après filtrage (de la bière)</gl>
+    <hw>⁵⁵'⁵⁵ʃjoti</hw>
+  </entry>
+  <entry id="syang718">
+    <gl>pâte à bière</gl>
+    <hw>˩poXpoʱ
+
+</hw>
+  </entry>
+  <entry id="syang719">
+    <gl>pâte à bière</gl>
+    <hw>²¹pʰo²¹pʰoʱ
+
+</hw>
+  </entry>
+  <entry id="syang720">
+    <gl>bière</gl>
+    <hw>⁵⁵pa</hw>
+  </entry>
+  <entry id="syang721">
+    <gl>bière</gl>
+    <hw>Xpʰi</hw>
+  </entry>
+  <entry id="syang722">
+    <gl>bière</gl>
+    <hw>⁵⁴paː</hw>
+  </entry>
+  <entry id="syang723">
+    <gl>bière (honor.)</gl>
+    <hw>⁵⁵kjem</hw>
+  </entry>
+  <entry id="syang724">
+    <gl>alcool</gl>
+    <hw>³³'³³raʃi</hw>
+  </entry>
+  <entry id="syang725">
+    <gl>farine</gl>
+    <hw>¹¹pra¹¹praʱ
+
+</hw>
+  </entry>
+  <entry id="syang726">
+    <gl>farine</gl>
+    <hw>¹¹bra¹¹bʱraʱ
+
+</hw>
+  </entry>
+  <entry id="syang727">
+    <gl>farine de blé</gl>
+    <hw>⁴⁴tsʰim ²²pra</hw>
+  </entry>
+  <entry id="syang728">
+    <gl>farine d'orge</gl>
+    <hw>⁴⁴'⁴⁴tsjaka ¹¹pra</hw>
+  </entry>
+  <entry id="syang729">
+    <gl>farine de riz</gl>
+    <hw>²¹mla ²²pra²¹mlaʱ ²²praʱ
+
+</hw>
+  </entry>
+  <entry id="syang730">
+    <gl>farine de Fagopyrum tataricum</gl>
+    <hw>⁵⁵pje ²²pra</hw>
+  </entry>
+  <entry id="syang731">
+    <gl>farine de Fagopyrum tataricum</gl>
+    <hw>²¹pre ²¹pra²¹preʱ ²¹pra
+
+</hw>
+  </entry>
+  <entry id="syang732">
+    <gl>farine de sarrasin</gl>
+    <hw>¹¹gja ¹¹pra¹¹gjaʱ ¹¹pra
+
+</hw>
+  </entry>
+  <entry id="syang733">
+    <gl>farine d'orge grillé</gl>
+    <hw>Xkʌpra</hw>
+  </entry>
+  <entry id="syang734">
+    <gl>farine d'orge grillé</gl>
+    <hw>⁵⁵'⁴⁴kʷoprʌ</hw>
+  </entry>
+  <entry id="syang735">
+    <gl>farine d'orge grillé au sable</gl>
+    <hw>²²'²¹ʃiprʌ²²'²¹ʃiʱprʌ
+
+</hw>
+  </entry>
+  <entry id="syang736">
+    <gl>farine de blé grillé</gl>
+    <hw>¹¹'¹¹gopra¹¹'¹¹goʱpra
+
+</hw>
+  </entry>
+  <entry id="syang737">
+    <gl>farine de blé grillé dans le thé</gl>
+    <hw>²¹'³³dzjamdʌl²¹'³³dzjaʱmdʌl
+
+</hw>
+  </entry>
+  <entry id="syang738">
+    <gl>farine de blé grillé dans le thé</gl>
+    <hw>²²'³³kʰole</hw>
+  </entry>
+  <entry id="syang739">
+    <gl>grains grillés</gl>
+    <hw>⁵⁵po</hw>
+  </entry>
+  <entry id="syang740">
+    <gl>pâte à pain</gl>
+    <hw>¹¹'¹¹pranda</hw>
+  </entry>
+  <entry id="syang741">
+    <gl>malaxer la pâte à pain</gl>
+    <hw>¹¹'¹¹pranda ⁴⁴'⁴⁴tʃjom-ba</hw>
+  </entry>
+  <entry id="syang742">
+    <gl>pain</gl>
+    <hw>¹¹kjaŋ¹¹kjaʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang743">
+    <gl>pain fait avec pâte liquide</gl>
+    <hw>¹¹koi ¹¹kjaŋ¹¹koʱi ¹¹kjaʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang744">
+    <gl>purée de farine</gl>
+    <hw>³³'³³saŋʈen</hw>
+  </entry>
+  <entry id="syang745">
+    <gl>purée de farine</gl>
+    <hw>³³'³³saŋʈɛn</hw>
+  </entry>
+  <entry id="syang746">
+    <gl>jus de fruit</gl>
+    <hw>⁵⁵'⁵⁵kʰugu</hw>
+  </entry>
+  <entry id="syang747">
+    <gl>yaourt</gl>
+    <hw>˩ʃjoXʃjoʱ
+
+</hw>
+  </entry>
+  <entry id="syang748">
+    <gl>yaourt</gl>
+    <hw>˩ʃjoXʃjoʱ
+
+</hw>
+  </entry>
+  <entry id="syang749">
+    <gl>petit lait séché</gl>
+    <hw>⁵⁵'⁴⁴tʃʰiːba</hw>
+  </entry>
+  <entry id="syang750">
+    <gl>brèdes</gl>
+    <hw>²¹ʈo</hw>
+  </entry>
+  <entry id="syang751">
+    <gl>ferment</gl>
+    <hw>¹¹'⁴³prama</hw>
+  </entry>
+  <entry id="syang752">
+    <gl>petit déjeuner</gl>
+    <hw>²¹'⁴⁴loŋgʌl²¹'⁴⁴loʱŋgʌl
+
+</hw>
+  </entry>
+  <entry id="syang753">
+    <gl>goûter</gl>
+    <hw>⁵²'²²ɲose</hw>
+  </entry>
+  <entry id="syang754">
+    <gl>saucisse de viande</gl>
+    <hw>Xʃja ˩gumXʃja guʱm
+
+</hw>
+  </entry>
+  <entry id="syang755">
+    <gl>saucisse de farine</gl>
+    <hw>Xkjapra ˩gumXkjapra guʱm
+
+</hw>
+  </entry>
+  <entry id="syang756">
+    <gl>saucisse de viande et sang</gl>
+    <hw>¹¹naŋ ¹¹'²²'¹¹gum¹¹naŋ ¹¹'²²'¹¹guʱm
+
+</hw>
+  </entry>
+  <entry id="syang757">
+    <gl>boudin</gl>
+    <hw>Xka ˩gumXka guʱm
+
+</hw>
+  </entry>
+  <entry id="syang758">
+    <gl>couverture</gl>
+    <hw>⁵⁵ʃirʌn (¹¹'³²nʌmba)</hw>
+  </entry>
+  <entry id="syang759">
+    <gl>vêtement</gl>
+    <hw>⁵⁵kon</hw>
+  </entry>
+  <entry id="syang760">
+    <gl>vêtement</gl>
+    <hw>⁵⁵kʷon</hw>
+  </entry>
+  <entry id="syang761">
+    <gl>laine</gl>
+    <hw>⁵⁴pʌi</hw>
+  </entry>
+  <entry id="syang762">
+    <gl>laine</gl>
+    <hw>⁵³pʌi</hw>
+  </entry>
+  <entry id="syang763">
+    <gl>poil</gl>
+    <hw>⁵⁵'⁵⁵ratsʰʌm</hw>
+  </entry>
+  <entry id="syang764">
+    <gl>fil</gl>
+    <hw>⁵⁴hřu</hw>
+  </entry>
+  <entry id="syang765">
+    <gl>aiguille</gl>
+    <hw>Xgjɛtʌu</hw>
+  </entry>
+  <entry id="syang766">
+    <gl>aiguille</gl>
+    <hw>²¹'³³kjogo</hw>
+  </entry>
+  <entry id="syang767">
+    <gl>laine</gl>
+    <hw>³³pʌi ⁴⁴'³³kʰɛba</hw>
+  </entry>
+  <entry id="syang768">
+    <gl>instrument à filer</gl>
+    <hw>(⁴⁴'⁴⁴'⁴⁴po kʰeba) ³¹toŋ</hw>
+  </entry>
+  <entry id="syang769">
+    <gl>instrument à doubler le fil</gl>
+    <hw>˩danʌm (tumba)Xdaʱnʌm (tumba)
+
+</hw>
+  </entry>
+  <entry id="syang770">
+    <gl>instrument à filer</gl>
+    <hw>⁵⁵'⁴⁴mrami</hw>
+  </entry>
+  <entry id="syang771">
+    <gl>lancer le mrani en tournant</gl>
+    <hw>⁴⁴'³³pʰjarba</hw>
+  </entry>
+  <entry id="syang772">
+    <gl>lancer le mrani en tournant</gl>
+    <hw>²²'²²tunu ²¹'³³tumba²²'²²tuʱnu ²¹'³³tumba
+
+</hw>
+  </entry>
+  <entry id="syang773">
+    <gl>métier à tisser</gl>
+    <hw>⁵⁵'³³konʈa</hw>
+  </entry>
+  <entry id="syang774">
+    <gl>couteau (du métier)</gl>
+    <hw>¹¹'¹¹gjaŋba¹¹'¹¹gjaʱŋba
+
+</hw>
+  </entry>
+  <entry id="syang775">
+    <gl>bâton de lisses</gl>
+    <hw>¹¹nʌ ⁵⁵ʃin</hw>
+  </entry>
+  <entry id="syang776">
+    <gl>lisses</gl>
+    <hw>⁵⁴nʌ</hw>
+  </entry>
+  <entry id="syang777">
+    <gl>lisses</gl>
+    <hw>⁵⁴na</hw>
+  </entry>
+  <entry id="syang778">
+    <gl>poitrinière</gl>
+    <hw>¹¹til ⁵⁴ʃin¹¹tiʱl ⁵⁴ʃin
+
+</hw>
+  </entry>
+  <entry id="syang779">
+    <gl>ensouple</gl>
+    <hw>⁵⁵'⁵⁵peʈa</hw>
+  </entry>
+  <entry id="syang780">
+    <gl>peigne</gl>
+    <hw>⁴⁴'³³kaŋgju</hw>
+  </entry>
+  <entry id="syang781">
+    <gl>monter le métier</gl>
+    <hw>⁴⁴'²²konʈa ⁴⁴'⁴⁴ram-ba</hw>
+  </entry>
+  <entry id="syang782">
+    <gl>tisser</gl>
+    <hw>⁵⁵'⁵⁴ra-ba</hw>
+  </entry>
+  <entry id="syang783">
+    <gl>teindre</gl>
+    <hw>⁵⁵tsʰe ⁵⁴'⁴³tsʰo-ba</hw>
+  </entry>
+  <entry id="syang784">
+    <gl>pelote de laine</gl>
+    <hw>Xtʰi pʰoltoŋ</hw>
+  </entry>
+  <entry id="syang785">
+    <gl>écheveau</gl>
+    <hw>⁴⁴'⁵⁵tokpa</hw>
+  </entry>
+  <entry id="syang786">
+    <gl>imprimer</gl>
+    <hw>⁴⁴par ⁵⁵'⁴⁴pum-ba</hw>
+  </entry>
+  <entry id="syang787">
+    <gl>chemise</gl>
+    <hw>Xkʌmɛs</hw>
+  </entry>
+  <entry id="syang788">
+    <gl>blouse</gl>
+    <hw>Xtsola</hw>
+  </entry>
+  <entry id="syang789">
+    <gl>ceinture</gl>
+    <hw>³³'³³pʰiki ⁵⁵'³³kʰi-ba</hw>
+  </entry>
+  <entry id="syang790">
+    <gl>ceinture</gl>
+    <hw>⁴⁴'⁴³pʰigi</hw>
+  </entry>
+  <entry id="syang791">
+    <gl>ceinture de laine</gl>
+    <hw>³¹pʌi ³³'³³pʰiki</hw>
+  </entry>
+  <entry id="syang792">
+    <gl>pantalon de femme</gl>
+    <hw>²²'²¹noŋʌi</hw>
+  </entry>
+  <entry id="syang793">
+    <gl>sari</gl>
+    <hw>Xsari</hw>
+  </entry>
+  <entry id="syang794">
+    <gl>tablier de reins</gl>
+    <hw>⁴⁴'⁴⁴kjeri</hw>
+  </entry>
+  <entry id="syang795">
+    <gl>châle</gl>
+    <hw>⁵³'³³kjɛtʌm</hw>
+  </entry>
+  <entry id="syang796">
+    <gl>châle</gl>
+    <hw>Xʈutum</hw>
+  </entry>
+  <entry id="syang797">
+    <gl>mettre un châle</gl>
+    <hw>⁵⁵'⁴⁴ɲur-ba</hw>
+  </entry>
+  <entry id="syang798">
+    <gl>sandales</gl>
+    <hw>⁴⁴'⁴³tsʌʈi</hw>
+  </entry>
+  <entry id="syang799">
+    <gl>chaussures</gl>
+    <hw>⁴⁴'⁴³pola</hw>
+  </entry>
+  <entry id="syang800">
+    <gl>chaussures tibétaines</gl>
+    <hw>˩gjoXgjoʱ
+
+</hw>
+  </entry>
+  <entry id="syang801">
+    <gl>lacet de chaussure tibétaines</gl>
+    <hw>²²gjo ²¹gi²²gjoʱ ²¹giʱ
+
+</hw>
+  </entry>
+  <entry id="syang802">
+    <gl>chaussettes</gl>
+    <hw>Xtsurʌp</hw>
+  </entry>
+  <entry id="syang803">
+    <gl>bracelet de verre</gl>
+    <hw>³³'⁴³pʌŋki</hw>
+  </entry>
+  <entry id="syang804">
+    <gl>bracelet de verre</gl>
+    <hw>⁴⁴'⁴³soʈu</hw>
+  </entry>
+  <entry id="syang805">
+    <gl>collier</gl>
+    <hw>⁴⁴'⁴³pʰraŋmo</hw>
+  </entry>
+  <entry id="syang806">
+    <gl>collier (général)</gl>
+    <hw>⁴⁴'⁴⁴pʰjaŋpyr</hw>
+  </entry>
+  <entry id="syang807">
+    <gl>collier de corail et turquoise</gl>
+    <hw>⁴⁴'⁴³kʌnʈe</hw>
+  </entry>
+  <entry id="syang808">
+    <gl>bague</gl>
+    <hw>⁵⁵tsjo</hw>
+  </entry>
+  <entry id="syang809">
+    <gl>bague</gl>
+    <hw>⁵⁵tsjo·</hw>
+  </entry>
+  <entry id="syang810">
+    <gl>percer les oreilles</gl>
+    <hw>¹¹'³³nakʰuŋ ³³'³³tʰuŋ-ba</hw>
+  </entry>
+  <entry id="syang811">
+    <gl>mettre tika</gl>
+    <hw>Xʈika ku-ba</hw>
+  </entry>
+  <entry id="syang812">
+    <gl>natte de fil</gl>
+    <hw>⁵⁵'⁵⁴rame</hw>
+  </entry>
+  <entry id="syang813">
+    <gl>faire une tresse</gl>
+    <hw>⁴⁴ke ⁵⁵'⁴⁴pje-ba</hw>
+  </entry>
+  <entry id="syang814">
+    <gl>faire une tresse</gl>
+    <hw>³³tjagal ³³pe-ba</hw>
+  </entry>
+  <entry id="syang815">
+    <gl>faire deux tresses</gl>
+    <hw>Xkeɲigʌl pe-ba</hw>
+  </entry>
+  <entry id="syang816">
+    <gl>chapeau</gl>
+    <hw>⁴⁴'⁴⁴pulu</hw>
+  </entry>
+  <entry id="syang817">
+    <gl>surtout de lama</gl>
+    <hw>Xkʰʌmʃjʌr</hw>
+  </entry>
+  <entry id="syang818">
+    <gl>manche de vêtement</gl>
+    <hw>²²'²¹buʃja²²'²¹buʱʃja
+
+</hw>
+  </entry>
+  <entry id="syang819">
+    <gl>bourse</gl>
+    <hw>⁵⁵'⁵³kʰomaŋ</hw>
+  </entry>
+  <entry id="syang820">
+    <gl>carder la laine</gl>
+    <hw>⁴⁴pʌi ⁵⁵'⁴⁴ʈam-ba</hw>
+  </entry>
+  <entry id="syang821">
+    <gl>carder la laine</gl>
+    <hw>Xpʌlʃi pum-ba</hw>
+  </entry>
+  <entry id="syang822">
+    <gl>coquillage</gl>
+    <hw>⁵⁵'⁴⁴pana</hw>
+  </entry>
+  <entry id="syang823">
+    <gl>corail pur</gl>
+    <hw>²²bjur ²¹'²²saba²²bjuʱr ²¹'²²saʱba
+
+</hw>
+  </entry>
+  <entry id="syang824">
+    <gl>corail de mauvaise qualité</gl>
+    <hw>¹¹bjur ²²'¹¹sokpo¹¹bjuʱr ²²'¹¹sokpo
+
+</hw>
+  </entry>
+  <entry id="syang825">
+    <gl>turquoise</gl>
+    <hw>⁵³ju</hw>
+  </entry>
+  <entry id="syang826">
+    <gl>brosse à cheveux</gl>
+    <hw>⁵⁵'⁴⁴mrosʌi</hw>
+  </entry>
+  <entry id="syang827">
+    <gl>brosse à cheveux</gl>
+    <hw>⁵⁵'⁵⁴mresa</hw>
+  </entry>
+  <entry id="syang828">
+    <gl>faire la raie</gl>
+    <hw>⁴⁴ŋo ²²'²²pra-ba</hw>
+  </entry>
+  <entry id="syang829">
+    <gl>vivre</gl>
+    <hw>⁵⁴'⁴⁴so-ba</hw>
+  </entry>
+  <entry id="syang830">
+    <gl>vivre</gl>
+    <hw>⁵⁵'⁴⁴so-ba</hw>
+  </entry>
+  <entry id="syang831">
+    <gl>grand</gl>
+    <hw>⁴⁵'⁵⁵no-ba</hw>
+  </entry>
+  <entry id="syang832">
+    <gl>nain</gl>
+    <hw>⁵⁵'⁴⁴'³³putulu</hw>
+  </entry>
+  <entry id="syang833">
+    <gl>petit</gl>
+    <hw>Xma-βa</hw>
+  </entry>
+  <entry id="syang834">
+    <gl>être en bonne santé</gl>
+    <hw>⁵¹paŋ ³³'³³kʰa-ba</hw>
+  </entry>
+  <entry id="syang835">
+    <gl>être en bonne santé</gl>
+    <hw>¹¹baŋ¹¹bʱaʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang836">
+    <gl>ne pas être bien</gl>
+    <hw>⁵⁵'⁵⁵(kʰok-pa) ²²a ²²'²¹ki-mo</hw>
+  </entry>
+  <entry id="syang837">
+    <gl>être malade</gl>
+    <hw>⁵⁵'⁵⁵na-ba</hw>
+  </entry>
+  <entry id="syang838">
+    <gl>douleur</gl>
+    <hw>⁵⁵'⁵⁵na-ba</hw>
+  </entry>
+  <entry id="syang839">
+    <gl>migraine</gl>
+    <hw>⁵⁵kja ²²'²²namu</hw>
+  </entry>
+  <entry id="syang840">
+    <gl>pleurer</gl>
+    <hw>⁵⁵'⁵⁴kjaː-ba</hw>
+  </entry>
+  <entry id="syang841">
+    <gl>pleurer</gl>
+    <hw>⁵⁵'⁵⁴kja-mu</hw>
+  </entry>
+  <entry id="syang842">
+    <gl>tousser</gl>
+    <hw>²¹'³³pjuŋ-mu²¹'³³pjuʱŋ-mu
+
+</hw>
+  </entry>
+  <entry id="syang843">
+    <gl>toux</gl>
+    <hw>²²'²¹pjuŋ-ba</hw>
+  </entry>
+  <entry id="syang844">
+    <gl>éternuer</gl>
+    <hw>⁵⁵'⁵⁵kʰi-mu</hw>
+  </entry>
+  <entry id="syang845">
+    <gl>éternuer</gl>
+    <hw>⁵⁵'⁴⁴kʰiː-ba</hw>
+  </entry>
+  <entry id="syang846">
+    <gl>maladie</gl>
+    <hw>⁵⁵'⁵⁵nasa (kʰadzimu)</hw>
+  </entry>
+  <entry id="syang847">
+    <gl>rhume</gl>
+    <hw>⁵³sam ³³'³³ʃjowa</hw>
+  </entry>
+  <entry id="syang848">
+    <gl>diarrhée</gl>
+    <hw>⁵⁵'⁴⁴ʃjʉrba</hw>
+  </entry>
+  <entry id="syang849">
+    <gl>sang et glaires</gl>
+    <hw>Xragat maʃi taba</hw>
+  </entry>
+  <entry id="syang850">
+    <gl>vers intestinaux</gl>
+    <hw>¹¹'¹¹buluŋ¹¹'¹¹buʱluŋ
+
+</hw>
+  </entry>
+  <entry id="syang851">
+    <gl>remède</gl>
+    <hw>⁵⁵mʌn</hw>
+  </entry>
+  <entry id="syang852">
+    <gl>guérir (maladie)</gl>
+    <hw>¹¹'⁴³sa-ba¹¹'⁴³saʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang853">
+    <gl>guérir (maladie)</gl>
+    <hw>⁵⁵'⁵⁴kiː-mu</hw>
+  </entry>
+  <entry id="syang854">
+    <gl>docteur</gl>
+    <hw>⁵⁵'⁵⁴ʈaŋdar</hw>
+  </entry>
+  <entry id="syang855">
+    <gl>vacciner</gl>
+    <hw>Xkʰopa la-ba</hw>
+  </entry>
+  <entry id="syang856">
+    <gl>vacciner</gl>
+    <hw>⁵⁵'⁵⁴kʰowa ⁴⁴'⁴⁴la-ba</hw>
+  </entry>
+  <entry id="syang857">
+    <gl>goître</gl>
+    <hw>⁵⁵'⁴⁴pãŋa</hw>
+  </entry>
+  <entry id="syang858">
+    <gl>goître</gl>
+    <hw>³¹'²²baŋa³¹'²²baʱŋa
+
+</hw>
+  </entry>
+  <entry id="syang859">
+    <gl>taches de rousseur</gl>
+    <hw>⁵⁵mlaŋ ¹¹'¹¹ʈuba</hw>
+  </entry>
+  <entry id="syang860">
+    <gl>gale</gl>
+    <hw>⁵⁵por</hw>
+  </entry>
+  <entry id="syang861">
+    <gl>fou</gl>
+    <hw>⁵³'³³sa-ba</hw>
+  </entry>
+  <entry id="syang862">
+    <gl>sain</gl>
+    <hw>¹¹'¹¹sa-ba¹¹'¹¹saʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang863">
+    <gl>roter</gl>
+    <hw>⁵³ap ³³'³³kʰa-ba</hw>
+  </entry>
+  <entry id="syang864">
+    <gl>cligner de l'oeil</gl>
+    <hw>⁵⁵mi ³³'³³ljaŋ-ba</hw>
+  </entry>
+  <entry id="syang865">
+    <gl>souffler</gl>
+    <hw>Xpʰwi-ba</hw>
+  </entry>
+  <entry id="syang866">
+    <gl>souffler</gl>
+    <hw>⁴⁴'⁴³pʰwi-ba</hw>
+  </entry>
+  <entry id="syang867">
+    <gl>se moucher</gl>
+    <hw>Xno ɬjaː-ba</hw>
+  </entry>
+  <entry id="syang868">
+    <gl>péter</gl>
+    <hw>⁴⁴lem ⁵⁵'⁴⁴ʃje-ba</hw>
+  </entry>
+  <entry id="syang869">
+    <gl>déféquer</gl>
+    <hw>⁴⁴li ⁴⁴'⁴³pum-ba</hw>
+  </entry>
+  <entry id="syang870">
+    <gl>déféquer</gl>
+    <hw>⁵⁴a ³³'³³pun-dzi</hw>
+  </entry>
+  <entry id="syang871">
+    <gl>uriner</gl>
+    <hw>Xkoŋ pum-ba</hw>
+  </entry>
+  <entry id="syang872">
+    <gl>bailler</gl>
+    <hw>Xha kʰamu</hw>
+  </entry>
+  <entry id="syang873">
+    <gl>sentir une odeur</gl>
+    <hw>⁴⁴tʰaŋ ⁵⁵'⁴⁴wom-ba</hw>
+  </entry>
+  <entry id="syang874">
+    <gl>accoucher</gl>
+    <hw>⁴⁴'⁴⁴kʌla ²²'²²'²²na-dzi-mu⁴⁴'⁴⁴kʌla ²²'²²'²²naʱ-dzi-mu
+
+</hw>
+  </entry>
+  <entry id="syang875">
+    <gl>être enceinte</gl>
+    <hw>⁵⁵'⁵⁵pʰo-ri ⁵⁵'⁴⁴'³³tʃhja-dzi-mu</hw>
+  </entry>
+  <entry id="syang876">
+    <gl>être enceinte</gl>
+    <hw>⁴⁴pʰo ¹¹'¹¹na-ba</hw>
+  </entry>
+  <entry id="syang877">
+    <gl>avoir des rapports sexuels (h.)</gl>
+    <hw>¹¹'⁴³pjʌ-ba</hw>
+  </entry>
+  <entry id="syang878">
+    <gl>avoir une érection</gl>
+    <hw>⁵⁵'⁴⁴kʰjaŋ-ba</hw>
+  </entry>
+  <entry id="syang879">
+    <gl>mourir</gl>
+    <hw>⁵⁴'⁴⁴ʃi-ba</hw>
+  </entry>
+  <entry id="syang880">
+    <gl>se reposer</gl>
+    <hw>²¹'²²na-ba²¹'²²naʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang881">
+    <gl>be tired</gl>
+    <hw>¹¹'²¹tu-mu¹¹'²¹tuʱ-mu
+
+</hw>
+  </entry>
+  <entry id="syang882">
+    <gl>être paresseux</gl>
+    <hw>˩ʈʌttu lawaXʈʌʱttu lawa
+
+</hw>
+  </entry>
+  <entry id="syang883">
+    <gl>dormir</gl>
+    <hw>²¹'¹¹du-ba²¹'¹¹duʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang884">
+    <gl>dormir</gl>
+    <hw>⁵⁵nu-ba</hw>
+  </entry>
+  <entry id="syang885">
+    <gl>avoir sommeil</gl>
+    <hw>⁵⁵nu ²²'³³ra-ba</hw>
+  </entry>
+  <entry id="syang886">
+    <gl>dormir (honor.)</gl>
+    <hw>²²'²²sum-laŋ ²¹'²²tsʌi-to²²'²²suʱm-laŋ ²¹'²²tsʌʱi-to
+
+</hw>
+  </entry>
+  <entry id="syang887">
+    <gl>coucher (enfant)</gl>
+    <hw>⁴³'³³nɛi-ba</hw>
+  </entry>
+  <entry id="syang888">
+    <gl>coucher (enfant)</gl>
+    <hw>⁴⁴'³³nai-ba</hw>
+  </entry>
+  <entry id="syang889">
+    <gl>ronfler</gl>
+    <hw>⁵⁵sa ¹¹'¹¹ʈi-ba</hw>
+  </entry>
+  <entry id="syang890">
+    <gl>rêver</gl>
+    <hw>⁵⁵maŋ ⁴⁴'⁴³maŋ-ba</hw>
+  </entry>
+  <entry id="syang891">
+    <gl>rêver</gl>
+    <hw>²¹maŋ²¹maʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang892">
+    <gl>se réveiller</gl>
+    <hw>³³mi ⁵⁵haŋ ³³'³³kʰa-ba</hw>
+  </entry>
+  <entry id="syang893">
+    <gl>se réveiller</gl>
+    <hw>⁴⁴nam ¹¹'¹¹naŋ-ba⁴⁴nam ¹¹'¹¹naʱŋ-ba
+
+</hw>
+  </entry>
+  <entry id="syang894">
+    <gl>réveiller qq'un</gl>
+    <hw>⁵⁵'⁵⁴tʃʰin-o</hw>
+  </entry>
+  <entry id="syang895">
+    <gl>respirer</gl>
+    <hw>⁵⁵sa ¹¹'¹¹ʈi-ba</hw>
+  </entry>
+  <entry id="syang896">
+    <gl>respirer</gl>
+    <hw>⁴⁴sa ¹¹'¹¹ʈi-ba⁴⁴sa ¹¹'¹¹ʈiʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang897">
+    <gl>haleter</gl>
+    <hw>⁴⁴sa ¹¹'¹¹lo-ba⁴⁴sa ¹¹'¹¹loʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang898">
+    <gl>saigner</gl>
+    <hw>⁵⁵ka ⁴⁴'³³ju-ba</hw>
+  </entry>
+  <entry id="syang899">
+    <gl>avoir ses règles</gl>
+    <hw>Xkʰam a-saŋ-ba ta-mu</hw>
+  </entry>
+  <entry id="syang900">
+    <gl>démanger</gl>
+    <hw>⁵⁵'⁵⁵kja-ba</hw>
+  </entry>
+  <entry id="syang901">
+    <gl>p f</gl>
+    <hw>⁵⁵'³³kja-mu</hw>
+  </entry>
+  <entry id="syang902">
+    <gl>sale</gl>
+    <hw>³³kʰam ³³'⁵⁵'⁴⁴asaŋ-ba</hw>
+  </entry>
+  <entry id="syang903">
+    <gl>sale</gl>
+    <hw>⁵¹ɖi ²²'²²'¹¹tsʰja-dzi-mu</hw>
+  </entry>
+  <entry id="syang904">
+    <gl>se laver</gl>
+    <hw>⁴⁴'³³kʰu-ba</hw>
+  </entry>
+  <entry id="syang905">
+    <gl>se laver</gl>
+    <hw>⁵⁵'⁵⁵kʰu-ba</hw>
+  </entry>
+  <entry id="syang906">
+    <gl>être propre</gl>
+    <hw>⁵⁵kʰʌm ⁴⁴'³³saŋ-mu</hw>
+  </entry>
+  <entry id="syang907">
+    <gl>raser (barbe, laine)</gl>
+    <hw>¹¹'¹¹pra-ba</hw>
+  </entry>
+  <entry id="syang908">
+    <gl>raser (barbe, laine)</gl>
+    <hw>¹¹'¹¹pra-ba¹¹'¹¹praʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang909">
+    <gl>raser (barbe seulement)</gl>
+    <hw>⁴⁴'³³ʃjɛr-ba</hw>
+  </entry>
+  <entry id="syang910">
+    <gl>masser</gl>
+    <hw>²¹'³³nɛː-ba²¹'³³nɛʱː-ba
+
+</hw>
+  </entry>
+  <entry id="syang911">
+    <gl>masser</gl>
+    <hw>¹¹'²²ne-ba¹¹'²²neʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang912">
+    <gl>masser</gl>
+    <hw>²¹'²²nai-ba</hw>
+  </entry>
+  <entry id="syang913">
+    <gl>brosser cheveux</gl>
+    <hw>⁴⁴kja ⁵⁵'⁴⁴se-ba</hw>
+  </entry>
+  <entry id="syang914">
+    <gl>coiffer</gl>
+    <hw>⁴⁴ke ⁵⁵'⁴⁴ʃi-ba</hw>
+  </entry>
+  <entry id="syang915">
+    <gl>coiffer</gl>
+    <hw>⁴⁴kja ⁵⁵'⁴⁴ʃiː-ba</hw>
+  </entry>
+  <entry id="syang916">
+    <gl>raser les cheveux</gl>
+    <hw>Xmunɖili la-ba</hw>
+  </entry>
+  <entry id="syang917">
+    <gl>épiler</gl>
+    <hw>⁵⁵'³³tsi-ba</hw>
+  </entry>
+  <entry id="syang918">
+    <gl>gratter</gl>
+    <hw>⁵⁵'⁴⁴ri-βa</hw>
+  </entry>
+  <entry id="syang919">
+    <gl>se chauffer au feu</gl>
+    <hw>⁵⁵mi ¹¹'¹¹djaː-ba⁵⁵mi ¹¹'¹¹dʱjaʱː-ba
+
+</hw>
+  </entry>
+  <entry id="syang920">
+    <gl>enfler</gl>
+    <hw>⁵⁵'⁵⁵hřaŋ-ba</hw>
+  </entry>
+  <entry id="syang921">
+    <gl>enfler</gl>
+    <hw>Xɕʰjaŋ-ba</hw>
+  </entry>
+  <entry id="syang922">
+    <gl>supporter</gl>
+    <hw>Xtsʰan-ba</hw>
+  </entry>
+  <entry id="syang923">
+    <gl>pouvoir (physiquement)</gl>
+    <hw>Xkʰam-mo</hw>
+  </entry>
+  <entry id="syang924">
+    <gl>pouvoir (physiquement)</gl>
+    <hw>⁵⁵'³³kʰam-ba</hw>
+  </entry>
+  <entry id="syang925">
+    <gl>tordre (membre)</gl>
+    <hw>¹¹rul ¹¹'¹¹jo-ba¹¹ruʱl ¹¹'¹¹joʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang926">
+    <gl>gémir</gl>
+    <hw>¹¹'³³mu-mo¹¹'³³muʱ-mo
+
+</hw>
+  </entry>
+  <entry id="syang927">
+    <gl>gémir</gl>
+    <hw>¹¹su ⁴⁴'¹¹te-mu¹¹suʱ ⁴⁴'¹¹te-mu
+
+</hw>
+  </entry>
+  <entry id="syang928">
+    <gl>grogner</gl>
+    <hw>³³kʌi ⁴⁴'³³te-ba</hw>
+  </entry>
+  <entry id="syang929">
+    <gl>piquer</gl>
+    <hw>⁵⁵'⁴⁴mloː-ba</hw>
+  </entry>
+  <entry id="syang930">
+    <gl>couper</gl>
+    <hw>⁵⁵'⁵⁵tʰa-ba</hw>
+  </entry>
+  <entry id="syang931">
+    <gl>brûler</gl>
+    <hw>Xkʰjaŋ-ba</hw>
+  </entry>
+  <entry id="syang932">
+    <gl>brûler</gl>
+    <hw>⁴⁴midʌ ⁴⁴'⁵⁵'⁴⁴ku-dze</hw>
+  </entry>
+  <entry id="syang933">
+    <gl>avoir une cloque</gl>
+    <hw>⁴⁴'⁴⁴tʃʰjokoŋ ³³'³³kʰa-ba</hw>
+  </entry>
+  <entry id="syang934">
+    <gl>cogner</gl>
+    <hw>⁴⁴kʰa ⁴⁴'⁴³tʰe-ba</hw>
+  </entry>
+  <entry id="syang935">
+    <gl>encorner</gl>
+    <hw>⁵⁵'⁴⁴tʰo-ba</hw>
+  </entry>
+  <entry id="syang936">
+    <gl>encorner</gl>
+    <hw>⁵⁵'⁴⁴tʰo-ba</hw>
+  </entry>
+  <entry id="syang937">
+    <gl>pincer</gl>
+    <hw>²¹'³³dzi-ba²¹'³³dzʱi-ba
+
+</hw>
+  </entry>
+  <entry id="syang938">
+    <gl>griffer</gl>
+    <hw>²¹'²²'²²ʃjar-dzi-mu²¹'²²'²²ʃjaʱr-dzi-mu
+
+</hw>
+  </entry>
+  <entry id="syang939">
+    <gl>tomber de haut</gl>
+    <hw>⁴⁴'⁴⁴te-bam
+
+</hw>
+  </entry>
+  <entry id="syang940">
+    <gl>débouler de montagne</gl>
+    <hw>⁴⁴'⁴⁴so-ba</hw>
+  </entry>
+  <entry id="syang941">
+    <gl>débouler de montagne</gl>
+    <hw>⁵⁵'⁵⁵so-dze</hw>
+  </entry>
+  <entry id="syang942">
+    <gl>tomber de sa hauteur</gl>
+    <hw>⁵⁵'³³tsʰe-ba</hw>
+  </entry>
+  <entry id="syang943">
+    <gl>mourir</gl>
+    <hw>¹¹'²²marsa ⁵⁵'⁵⁵pi-dze</hw>
+  </entry>
+  <entry id="syang944">
+    <gl>enterrer</gl>
+    <hw>⁴⁴sa ⁴⁴jã ⁵⁵'⁴⁴tʰan-o</hw>
+  </entry>
+  <entry id="syang945">
+    <gl>lieu de crémation</gl>
+    <hw>⁵⁵tsʰa</hw>
+  </entry>
+  <entry id="syang946">
+    <gl>exorciser (en jetant une statue de farine)</gl>
+    <hw>⁵³li ³³'³³ɬja-ba</hw>
+  </entry>
+  <entry id="syang947">
+    <gl>dieu</gl>
+    <hw>⁵⁴ɬa</hw>
+  </entry>
+  <entry id="syang948">
+    <gl>sorcière</gl>
+    <hw>⁴⁴'⁴⁴nʌiba</hw>
+  </entry>
+  <entry id="syang949">
+    <gl>masque</gl>
+    <hw>²¹pʰa²¹pʰaʱ
+
+</hw>
+  </entry>
+  <entry id="syang950">
+    <gl>encens (de dhubi)</gl>
+    <hw>⁵⁵saŋ</hw>
+  </entry>
+  <entry id="syang951">
+    <gl>mélange de tsampa et beurre (brûlé comme encens)</gl>
+    <hw>⁵⁵sur</hw>
+  </entry>
+  <entry id="syang952">
+    <gl>temple</gl>
+    <hw>²¹'²²gompa²¹'²²goʱmpa
+
+</hw>
+  </entry>
+  <entry id="syang953">
+    <gl>offrir aux dieux</gl>
+    <hw>⁴⁴'⁴⁴pʰul-ba</hw>
+  </entry>
+  <entry id="syang954">
+    <gl>rêver</gl>
+    <hw>⁴⁴maŋ ³³'³¹maŋ-ba</hw>
+  </entry>
+  <entry id="syang955">
+    <gl>rêve</gl>
+    <hw>²¹maŋ²¹maʱŋ
+
+</hw>
+  </entry>
+  <entry id="syang956">
+    <gl>rêver</gl>
+    <hw>¹¹maŋ ¹¹jaŋ ²¹'¹¹to-dze¹¹maʱŋ ¹¹jaŋ ²¹'¹¹to-dze
+
+</hw>
+  </entry>
+  <entry id="syang957">
+    <gl>être possédé</gl>
+    <hw>⁵⁵'³³ʃibai ¹¹mi ³³'³³waŋ-ba⁵⁵'³³ʃibai ¹¹miʱ ³³'³³waŋ-ba
+
+</hw>
+  </entry>
+  <entry id="syang958">
+    <gl>univers</gl>
+    <hw>⁵² pe</hw>
+  </entry>
+  <entry id="syang959">
+    <gl>ciel</gl>
+    <hw>⁵⁴mo</hw>
+  </entry>
+  <entry id="syang960">
+    <gl>coucher du soleil</gl>
+    <hw>¹¹'¹¹dini ⁵⁵'³³ʃja-dze¹¹'¹¹dʱiniʱ ⁵⁵'³³ʃja-dze
+
+</hw>
+  </entry>
+  <entry id="syang961">
+    <gl>mois</gl>
+    <hw>⁵⁴ɬa</hw>
+  </entry>
+  <entry id="syang962">
+    <gl>1 mois</gl>
+    <hw>⁵³ɬa ⁴⁴'⁴⁴tila</hw>
+  </entry>
+  <entry id="syang963">
+    <gl>pleine lune</gl>
+    <hw>⁵⁴mer</hw>
+  </entry>
+  <entry id="syang964">
+    <gl>hiver</gl>
+    <hw>¹¹'³³kuntse</hw>
+  </entry>
+  <entry id="syang965">
+    <gl>été</gl>
+    <hw>¹¹'³²pjɛrdze</hw>
+  </entry>
+  <entry id="syang966">
+    <gl>aujourd'hui</gl>
+    <hw>⁵⁵'⁵⁴tini</hw>
+  </entry>
+  <entry id="syang967">
+    <gl>aujourd'hui</gl>
+    <hw>⁵⁵'⁵⁵tini</hw>
+  </entry>
+  <entry id="syang968">
+    <gl>hier</gl>
+    <hw>⁵⁵'⁴⁴tili</hw>
+  </entry>
+  <entry id="syang969">
+    <gl>avant-hier</gl>
+    <hw>⁴⁴'⁴⁴uni</hw>
+  </entry>
+  <entry id="syang970">
+    <gl>demain</gl>
+    <hw>⁵⁵'⁵⁵nama</hw>
+  </entry>
+  <entry id="syang971">
+    <gl>après-demain</gl>
+    <hw>³³'⁴⁴nani</hw>
+  </entry>
+  <entry id="syang972">
+    <gl>dans deux jours</gl>
+    <hw>⁴⁴'⁴⁴nasom</hw>
+  </entry>
+  <entry id="syang973">
+    <gl>cette année</gl>
+    <hw>⁴⁴tsu ²¹lo⁴⁴tsu ²¹loʱ
+
+</hw>
+  </entry>
+  <entry id="syang974">
+    <gl>l'an dern ier</gl>
+    <hw>⁴⁴'⁴⁴tikjuŋ</hw>
+  </entry>
+  <entry id="syang975">
+    <gl>il y a deux ans</gl>
+    <hw>⁵⁵'⁴⁴nʌitin</hw>
+  </entry>
+  <entry id="syang976">
+    <gl>l'an prochain</gl>
+    <hw>¹¹'³³gurin</hw>
+  </entry>
+  <entry id="syang977">
+    <gl>dans deux ans</gl>
+    <hw>⁵⁵'⁴⁴natin</hw>
+  </entry>
+  <entry id="syang978">
+    <gl>nuage</gl>
+    <hw>˩moXmoʱ
+
+</hw>
+  </entry>
+  <entry id="syang979">
+    <gl>tempête</gl>
+    <hw>³³ur ⁵⁵'³³pjoba</hw>
+  </entry>
+  <entry id="syang980">
+    <gl>grêle</gl>
+    <hw>⁵⁵'⁴⁴tiʃjɔr</hw>
+  </entry>
+  <entry id="syang981">
+    <gl>neige</gl>
+    <hw>¹¹lim¹¹liʱm
+
+</hw>
+  </entry>
+  <entry id="syang982">
+    <gl>gel</gl>
+    <hw>²¹pʌm²¹pʌʱm
+
+</hw>
+  </entry>
+  <entry id="syang983">
+    <gl>brouillard</gl>
+    <hw>⁵⁵'⁴⁴sarma</hw>
+  </entry>
+  <entry id="syang984">
+    <gl>éclair</gl>
+    <hw>⁴⁴'⁴⁴'⁴⁴kɔmuli</hw>
+  </entry>
+  <entry id="syang985">
+    <gl>vent</gl>
+    <hw>⁵⁵'⁵⁵nambʌr (³³'³³kʰamu)</hw>
+  </entry>
+  <entry id="syang986">
+    <gl>tremblement de terre</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁵samuli</hw>
+  </entry>
+  <entry id="syang987">
+    <gl>avalanche</gl>
+    <hw>˩ɖiɖiʱ
+
+</hw>
+  </entry>
+  <entry id="syang988">
+    <gl>glissement de terrain</gl>
+    <hw>⁴⁴'⁴⁴kʰʌri ³³'³³judze</hw>
+  </entry>
+  <entry id="syang989">
+    <gl>sommet</gl>
+    <hw>⁴¹kaŋ</hw>
+  </entry>
+  <entry id="syang990">
+    <gl>grotte</gl>
+    <hw>⁵⁵u</hw>
+  </entry>
+  <entry id="syang991">
+    <gl>montée</gl>
+    <hw>²¹lʌ²¹lʌʱ
+
+</hw>
+  </entry>
+  <entry id="syang992">
+    <gl>montée</gl>
+    <hw>³¹la³¹laʱ
+
+</hw>
+  </entry>
+  <entry id="syang993">
+    <gl>falaise</gl>
+    <hw>¹¹praʰ</hw>
+  </entry>
+  <entry id="syang994">
+    <gl>falaise</gl>
+    <hw>¹¹bra¹¹bʱraʱ
+
+</hw>
+  </entry>
+  <entry id="syang995">
+    <gl>écho</gl>
+    <hw>⁵⁵'⁴⁴urpa</hw>
+  </entry>
+  <entry id="syang996">
+    <gl>plaine</gl>
+    <hw>⁵⁴tʰaŋ</hw>
+  </entry>
+  <entry id="syang997">
+    <gl>vallée</gl>
+    <hw>³¹gjũː</hw>
+  </entry>
+  <entry id="syang998">
+    <gl>col (de montagne)</gl>
+    <hw>¹¹blaː¹¹blaʱː
+
+</hw>
+  </entry>
+  <entry id="syang999">
+    <gl>forêt</gl>
+    <hw>¹¹naː¹¹naʱː
+
+</hw>
+  </entry>
+  <entry id="syang1000">
+    <gl>forêt dense</gl>
+    <hw>¹¹naː (⁴⁴'⁴⁴suba)¹¹naʱː (⁴⁴'⁴⁴suba)
+
+</hw>
+  </entry>
+  <entry id="syang1001">
+    <gl>forêt</gl>
+    <hw>²¹na²¹naʱ
+
+</hw>
+  </entry>
+  <entry id="syang1002">
+    <gl>forêt</gl>
+    <hw>¹¹naː¹¹naʱː
+
+</hw>
+  </entry>
+  <entry id="syang1003">
+    <gl>étendue nue</gl>
+    <hw>⁵³paŋ</hw>
+  </entry>
+  <entry id="syang1004">
+    <gl>trou</gl>
+    <hw>Xkʰuŋ</hw>
+  </entry>
+  <entry id="syang1005">
+    <gl>source (l'eau jaillit)</gl>
+    <hw>³³kju ⁵⁵'⁵⁵pʰjo-ʃi ³³'³³mu-mu</hw>
+  </entry>
+  <entry id="syang1006">
+    <gl>mare (l'eau stagne)</gl>
+    <hw>³³kju ⁵⁵'³³kʰil-ba</hw>
+  </entry>
+  <entry id="syang1007">
+    <gl>cascade</gl>
+    <hw>⁴⁴kju ³³pʰjã</hw>
+  </entry>
+  <entry id="syang1008">
+    <gl>lac</gl>
+    <hw>⁵³tsʰo</hw>
+  </entry>
+  <entry id="syang1009">
+    <gl>lac permanent</gl>
+    <hw>⁵⁴tsʰo</hw>
+  </entry>
+  <entry id="syang1010">
+    <gl>lac asséchable</gl>
+    <hw>⁴⁴tʃin</hw>
+  </entry>
+  <entry id="syang1011">
+    <gl>nom du fleuve Kali Gandaki</gl>
+    <hw>⁵⁵'⁵⁵kjuje</hw>
+  </entry>
+  <entry id="syang1012">
+    <gl>pont</gl>
+    <hw>⁵²tsʌm</hw>
+  </entry>
+  <entry id="syang1013">
+    <gl>be late</gl>
+    <hw>²²'²¹gʌi-ba²²'²¹gʌʱi-ba
+
+</hw>
+  </entry>
+  <entry id="syang1014">
+    <gl>briller (soleil)</gl>
+    <hw>¹¹'¹¹dini ⁴⁴'³³pʰjaː-mo</hw>
+  </entry>
+  <entry id="syang1015">
+    <gl>pleuvoir</gl>
+    <hw>³⁴nam ⁴⁵'⁵⁵ju-dze</hw>
+  </entry>
+  <entry id="syang1016">
+    <gl>neiger</gl>
+    <hw>¹¹lim ⁴⁴'⁴⁴ju-dze¹¹liʱm ⁴⁴'⁴⁴ju-dze
+
+</hw>
+  </entry>
+  <entry id="syang1017">
+    <gl>grêler</gl>
+    <hw>⁵⁵'⁵⁵tiʃjʌr ⁵⁵'⁵⁴ju-dzi</hw>
+  </entry>
+  <entry id="syang1018">
+    <gl>couler goutte à goutte</gl>
+    <hw>Xtsar tsar ta-mu</hw>
+  </entry>
+  <entry id="syang1019">
+    <gl>couler goutte à goutte</gl>
+    <hw>Xtʰjar tʰjar ta-mu</hw>
+  </entry>
+  <entry id="syang1020">
+    <gl>inonder</gl>
+    <hw>¹¹ʃiː ⁴⁴'⁴⁴ju-ba</hw>
+  </entry>
+  <entry id="syang1021">
+    <gl>flotter</gl>
+    <hw>⁴⁴pʰe ⁴⁴pʰe ⁵⁵'⁵⁵ja-dzi</hw>
+  </entry>
+  <entry id="syang1022">
+    <gl>sombrer</gl>
+    <hw>⁴⁴'²²tʰim-dze</hw>
+  </entry>
+  <entry id="syang1023">
+    <gl>s'enfoncer dans la boue</gl>
+    <hw>(³³'³³tel jaŋ) ⁵⁵'³³ŋa-ba</hw>
+  </entry>
+  <entry id="syang1024">
+    <gl>barrer un fleuve</gl>
+    <hw>⁵⁵kju ¹¹'¹¹reː-ba</hw>
+  </entry>
+  <entry id="syang1025">
+    <gl>traverser un fleuve</gl>
+    <hw>⁴⁴kju ¹¹'³³tso-ʃi ⁴⁴'⁴⁴jo-ba⁴⁴kju ¹¹'³³tsoʱ-ʃi ⁴⁴'⁴⁴jo-ba
+
+</hw>
+  </entry>
+  <entry id="syang1026">
+    <gl>un</gl>
+    <hw>˩ʈiʈiʱ
+
+</hw>
+  </entry>
+  <entry id="syang1027">
+    <gl>un</gl>
+    <hw>¹¹gʌi¹¹gʌʱi
+
+</hw>
+  </entry>
+  <entry id="syang1028">
+    <gl>deux</gl>
+    <hw>²¹ɲi</hw>
+  </entry>
+  <entry id="syang1029">
+    <gl>2</gl>
+    <hw>˩ɲiɲiʱ
+
+</hw>
+  </entry>
+  <entry id="syang1030">
+    <gl>trois</gl>
+    <hw>⁵⁴som</hw>
+  </entry>
+  <entry id="syang1031">
+    <gl>trois</gl>
+    <hw>⁴⁴som</hw>
+  </entry>
+  <entry id="syang1032">
+    <gl>quatre</gl>
+    <hw>˩pliXpliʱ
+
+</hw>
+  </entry>
+  <entry id="syang1033">
+    <gl>quatre</gl>
+    <hw>˩bliXbʱliʱ
+
+</hw>
+  </entry>
+  <entry id="syang1034">
+    <gl>cinq</gl>
+    <hw>⁵¹ŋʌ⁵¹ŋʌʱ
+
+</hw>
+  </entry>
+  <entry id="syang1035">
+    <gl>cinq</gl>
+    <hw>˩ŋaŋaʱ
+
+</hw>
+  </entry>
+  <entry id="syang1036">
+    <gl>six</gl>
+    <hw>⁵¹ʈu⁵¹ʈuʱ
+
+</hw>
+  </entry>
+  <entry id="syang1037">
+    <gl>six</gl>
+    <hw>˩ɖuɖʱuʱ
+
+</hw>
+  </entry>
+  <entry id="syang1038">
+    <gl>7</gl>
+    <hw>⁵⁵nis</hw>
+  </entry>
+  <entry id="syang1039">
+    <gl>sept</gl>
+    <hw>⁵⁵ɲis</hw>
+  </entry>
+  <entry id="syang1040">
+    <gl>huit</gl>
+    <hw>²¹pre²¹preʱ
+
+</hw>
+  </entry>
+  <entry id="syang1041">
+    <gl>huit</gl>
+    <hw>¹¹bre¹¹bʱreʱ
+
+</hw>
+  </entry>
+  <entry id="syang1042">
+    <gl>neuf (nombre)</gl>
+    <hw>⁵⁵ku</hw>
+  </entry>
+  <entry id="syang1043">
+    <gl>neuf (nombre)</gl>
+    <hw>⁵³kuː</hw>
+  </entry>
+  <entry id="syang1044">
+    <gl>dix</gl>
+    <hw>Xtʃju</hw>
+  </entry>
+  <entry id="syang1045">
+    <gl>dix</gl>
+    <hw>⁵³tɕju</hw>
+  </entry>
+  <entry id="syang1046">
+    <gl>onze</gl>
+    <hw>⁴⁴'⁴⁴tsʌʈi</hw>
+  </entry>
+  <entry id="syang1047">
+    <gl>onze</gl>
+    <hw>⁵³'³³tsugi</hw>
+  </entry>
+  <entry id="syang1048">
+    <gl>douze</gl>
+    <hw>Xtsunni</hw>
+  </entry>
+  <entry id="syang1049">
+    <gl>douze</gl>
+    <hw>⁴⁴'³³tsuŋni</hw>
+  </entry>
+  <entry id="syang1050">
+    <gl>treize</gl>
+    <hw>⁴⁴'⁴⁴tsusom</hw>
+  </entry>
+  <entry id="syang1051">
+    <gl>treize</gl>
+    <hw>⁵⁴'⁴⁴tsusom</hw>
+  </entry>
+  <entry id="syang1052">
+    <gl>quatorze</gl>
+    <hw>³³'³²tsupli</hw>
+  </entry>
+  <entry id="syang1053">
+    <gl>quatorze</gl>
+    <hw>³³'¹¹tsubli³³'¹¹tsubliʱ
+
+</hw>
+  </entry>
+  <entry id="syang1054">
+    <gl>quinze</gl>
+    <hw>Xtsaŋa</hw>
+  </entry>
+  <entry id="syang1055">
+    <gl>quinze</gl>
+    <hw>⁵³'³³tsaŋa</hw>
+  </entry>
+  <entry id="syang1056">
+    <gl>seize</gl>
+    <hw>Xtsuʈʈu</hw>
+  </entry>
+  <entry id="syang1057">
+    <gl>seize</gl>
+    <hw>⁵⁵'³³tsuʈu</hw>
+  </entry>
+  <entry id="syang1058">
+    <gl>dix-sept</gl>
+    <hw>Xtsʌiɲis</hw>
+  </entry>
+  <entry id="syang1059">
+    <gl>dix-sept</gl>
+    <hw>⁵⁵'⁵⁵tseɲis</hw>
+  </entry>
+  <entry id="syang1060">
+    <gl>dix-huit</gl>
+    <hw>Xtsopre</hw>
+  </entry>
+  <entry id="syang1061">
+    <gl>dix-huit</gl>
+    <hw>⁴⁴'²²tsobre⁴⁴'²²tsobʱreʱ
+
+</hw>
+  </entry>
+  <entry id="syang1062">
+    <gl>dix-neuf</gl>
+    <hw>Xtsurku</hw>
+  </entry>
+  <entry id="syang1063">
+    <gl>dix-neuf</gl>
+    <hw>⁵⁵'⁴⁴tsurku</hw>
+  </entry>
+  <entry id="syang1064">
+    <gl>vingt</gl>
+    <hw>⁴⁴'⁵³niʃju</hw>
+  </entry>
+  <entry id="syang1065">
+    <gl>vingt</gl>
+    <hw>¹¹'²¹ŋiʃju¹¹'²¹ŋiʱʃju
+
+</hw>
+  </entry>
+  <entry id="syang1066">
+    <gl>trente</gl>
+    <hw>⁵⁵'⁵⁵somtʃju</hw>
+  </entry>
+  <entry id="syang1067">
+    <gl>quarante</gl>
+    <hw>¹¹'³²plitʃju¹¹'³²pliʱtʃju
+
+</hw>
+  </entry>
+  <entry id="syang1068">
+    <gl>cent</gl>
+    <hw>⁵³pra</hw>
+  </entry>
+  <entry id="syang1069">
+    <gl>cent</gl>
+    <hw>²¹pra²¹pʱraʱ
+
+</hw>
+  </entry>
+  <entry id="syang1070">
+    <gl>mille</gl>
+    <hw>Xhazər</hw>
+  </entry>
+  <entry id="syang1071">
+    <gl>demi</gl>
+    <hw>⁵¹ʈe</hw>
+  </entry>
+  <entry id="syang1072">
+    <gl>demi</gl>
+    <hw>³¹ʈe³¹ʈeʱ
+
+</hw>
+  </entry>
+  <entry id="syang1073">
+    <gl>ne pas être d'accord</gl>
+    <hw>³³'²¹'²³'¹¹agʌi-mu</hw>
+  </entry>
+  <entry id="syang1074">
+    <gl>1 seul est (= être le même, être d'accord)</gl>
+    <hw>²¹'³³gʌhi ³³'³³ta-ba</hw>
+  </entry>
+  <entry id="syang1075">
+    <gl>la moitié seulement</gl>
+    <hw>²¹ʈe ³³kʰi²¹ʈeʱ ³³kʰi
+
+</hw>
+  </entry>
+  <entry id="syang1076">
+    <gl>seulement</gl>
+    <hw>³³kʰi</hw>
+  </entry>
+  <entry id="syang1077">
+    <gl>nous 2 seulement</gl>
+    <hw>²²ɲa ¹¹ɲi ²²hi²²ɲa ¹¹ɲiʱ ²²hi
+
+</hw>
+  </entry>
+  <entry id="syang1078">
+    <gl>tout</gl>
+    <hw>⁵⁴jom</hw>
+  </entry>
+  <entry id="syang1079">
+    <gl>ensemble, tous</gl>
+    <hw>⁵⁴pre</hw>
+  </entry>
+  <entry id="syang1080">
+    <gl>ensemble</gl>
+    <hw>⁵⁴ʃil</hw>
+  </entry>
+  <entry id="syang1081">
+    <gl>autre</gl>
+    <hw>Xʃjan</hw>
+  </entry>
+  <entry id="syang1082">
+    <gl>beaucoup</gl>
+    <hw>¹¹'¹¹dana¹¹'¹¹daʱna
+
+</hw>
+  </entry>
+  <entry id="syang1083">
+    <gl>un peu</gl>
+    <hw>Xtsaŋna</hw>
+  </entry>
+  <entry id="syang1084">
+    <gl>une coudée</gl>
+    <hw>⁵⁵'⁴⁴ku-na</hw>
+  </entry>
+  <entry id="syang1085">
+    <gl>deux coudées</gl>
+    <hw>⁵⁵'¹¹ku-ɲi⁵⁵'¹¹ku-ɲiʱ
+
+</hw>
+  </entry>
+  <entry id="syang1086">
+    <gl>deux coudées</gl>
+    <hw>¹¹kʌs ¹¹ki¹¹kʱʌs ¹¹kiʱ
+
+</hw>
+  </entry>
+  <entry id="syang1087">
+    <gl>un empan</gl>
+    <hw>²¹'³³do-na²¹'³³doʱ-na
+
+</hw>
+  </entry>
+  <entry id="syang1088">
+    <gl>mesurer une longueur ou un volume</gl>
+    <hw>²¹'²²gom-ba²¹'²²goʱm-ba
+
+</hw>
+  </entry>
+  <entry id="syang1089">
+    <gl>mesurer une longueur ou un volume</gl>
+    <hw>²²'²¹gon-o²²'²¹goʱn-o
+
+</hw>
+  </entry>
+  <entry id="syang1090">
+    <gl>1 pathi</gl>
+    <hw>⁵⁵pjaŋ ⁴⁴na</hw>
+  </entry>
+  <entry id="syang1091">
+    <gl>1 pathi</gl>
+    <hw>²¹ɖoŋ ²²pjaŋ ²²'²¹pjaŋ na²¹ɖoʱŋ ²²pjaŋ ²²'²¹pjaŋ na
+
+</hw>
+  </entry>
+  <entry id="syang1092">
+    <gl>un demi pathi</gl>
+    <hw>⁵⁵ʃim ⁵⁴pjaŋ ⁴⁴pjaŋ ⁴³na</hw>
+  </entry>
+  <entry id="syang1093">
+    <gl>2 pathis</gl>
+    <hw>²¹ɖoŋ ²²pjaŋ ⁵⁵ha ³³naŋ²¹ɖoʱŋ ²²pjaŋ ⁵⁵ha ³³naŋ
+
+</hw>
+  </entry>
+  <entry id="syang1094">
+    <gl>1 pathi ras</gl>
+    <hw>²¹ɖoŋ ²²pjaŋ ⁵⁵nʌi²¹ɖoʱŋ ²²pjaŋ ⁵⁵nʌi
+
+</hw>
+  </entry>
+  <entry id="syang1095">
+    <gl>une mesure rase</gl>
+    <hw>⁵⁵nʌi ⁴⁴'⁴⁴laba</hw>
+  </entry>
+  <entry id="syang1096">
+    <gl>une mesure bombée</gl>
+    <hw>⁵⁵mjur ³³'³³laba</hw>
+  </entry>
+  <entry id="syang1097">
+    <gl>1 mana</gl>
+    <hw>³³'³³manʌ ¹¹gi³³'³³manʌ ¹¹giʱ
+
+</hw>
+  </entry>
+  <entry id="syang1098">
+    <gl>2 manas</gl>
+    <hw>³³'³³manʌ ¹¹ɲi³³'³³manʌ ¹¹ɲiʱ
+
+</hw>
+  </entry>
+  <entry id="syang1099">
+    <gl>peser</gl>
+    <hw>⁴⁴'³³koi-ba</hw>
+  </entry>
+  <entry id="syang1100">
+    <gl>peser</gl>
+    <hw>⁴⁵'⁴⁴koi-dzjo</hw>
+  </entry>
+  <entry id="syang1101">
+    <gl>compter</gl>
+    <hw>²¹'³³dzja-ba²¹'³³dʱzjaʱ-ba
+
+</hw>
+  </entry>
+  <entry id="syang1102">
+    <gl>1 suki</gl>
+    <hw>Xroʃiʃja</hw>
+  </entry>
+  <entry id="syang1103">
+    <gl>1 mohor</gl>
+    <hw>⁴⁴'⁴⁴'⁴⁴atili</hw>
+  </entry>
+  <entry id="syang1104">
+    <gl>1 roupie</gl>
+    <hw>Xale ʈʰol</hw>
+  </entry>
+  <entry id="syang1105">
+    <gl>1 roupie et demie</gl>
+    <hw>Xpʰɔlnaŋ</hw>
+  </entry>
+  <entry id="syang1106">
+    <gl>2 roupies</gl>
+    <hw>Xale ˩niXale niʱ
+
+</hw>
+  </entry>
+  <entry id="syang1107">
+    <gl>2 roupies et demie</gl>
+    <hw>Xpʰetaŋ som</hw>
+  </entry>
+  <entry id="syang1108">
+    <gl>7 roupies et demie</gl>
+    <hw>⁴⁴'⁴⁴pʰetaŋ ²¹pre⁴⁴'⁴⁴pʰetaŋ ²¹preʱ
+
+</hw>
+  </entry>
+  <entry id="syang1109">
+    <gl>1 paisa</gl>
+    <hw>¹¹'³³paisa ³³ti pum</hw>
+  </entry>
+  <entry id="syang1110">
+    <gl>2 paisa</gl>
+    <hw>¹¹ɲi ¹¹pum</hw>
+  </entry>
+  <entry id="syang1111">
+    <gl>1 mois</gl>
+    <hw>⁵³ɬa ⁴⁴'³³tila</hw>
+  </entry>
+  <entry id="syang1112">
+    <gl>(il y a) un an</gl>
+    <hw>²¹'²²lo gi (¹¹'¹¹jodze)²¹'²²loʱ gi (¹¹'¹¹jodze)
+
+</hw>
+  </entry>
+  <entry id="syang1113">
+    <gl>(il y a) un an et demi</gl>
+    <hw>¹¹lo ⁵⁵'⁵⁵pʰetaŋ ¹¹ɲi (¹¹'¹¹jodze)</hw>
+  </entry>
+  <entry id="syang1114">
+    <gl>6 mois, une demi-année</gl>
+    <hw>²¹lo ⁴¹ʈe²¹loʱ ⁴¹ʈe
+
+</hw>
+  </entry>
+  <entry id="syang1115">
+    <gl>un instant</gl>
+    <hw>⁴⁴ten</hw>
+  </entry>
+  <entry id="syang1116">
+    <gl>premier mois</gl>
+    <hw>Xaga ɬa</hw>
+  </entry>
+  <entry id="syang1117">
+    <gl>deuxième mois</gl>
+    <hw>²¹tiũŋ ³³ɬja</hw>
+  </entry>
+  <entry id="syang1118">
+    <gl>3ème mois</gl>
+    <hw>⁴⁴'⁴⁴kubi ⁵³ɬa</hw>
+  </entry>
+  <entry id="syang1119">
+    <gl>4ème mois</gl>
+    <hw>¹¹ɬu ³²ɬa</hw>
+  </entry>
+  <entry id="syang1120">
+    <gl>5ème mois</gl>
+    <hw>⁴⁴pre ⁴³ɬja</hw>
+  </entry>
+  <entry id="syang1121">
+    <gl>6ème mois</gl>
+    <hw>¹¹dze ⁴³ɬa¹¹dzeʱ ⁴³ɬa
+
+</hw>
+  </entry>
+  <entry id="syang1122">
+    <gl>7ème mois</gl>
+    <hw>⁵⁵kʰi ⁵⁴ɬa</hw>
+  </entry>
+  <entry id="syang1123">
+    <gl>8ème mois</gl>
+    <hw>⁵⁵pʰa ⁵⁴ɬa</hw>
+  </entry>
+  <entry id="syang1124">
+    <gl>9ème mois</gl>
+    <hw>¹¹'¹¹bibi ⁵⁴ɬa</hw>
+  </entry>
+  <entry id="syang1125">
+    <gl>10ème mois</gl>
+    <hw>¹¹laŋ ⁴³ɬa</hw>
+  </entry>
+  <entry id="syang1126">
+    <gl>11ème mois</gl>
+    <hw>⁴⁴tap ⁴³ɬa</hw>
+  </entry>
+  <entry id="syang1127">
+    <gl>12ème mois</gl>
+    <hw>¹¹bum ³²ɬa¹¹buʱm ³²ɬa
+
+</hw>
+  </entry>
+  <entry id="syang1128">
+    <gl>identique</gl>
+    <hw>²¹gʊ ³³hi</hw>
+  </entry>
+  <entry id="syang1129">
+    <gl>mélanger</gl>
+    <hw>⁵⁴'⁴⁴tʃʰjol-ba</hw>
+  </entry>
+  <entry id="syang1130">
+    <gl>mélanger</gl>
+    <hw>⁵⁵'⁴⁴tʃhjelaŋ ³³'³³malaŋ ¹¹'²²'²²joː-dzi-mu</hw>
+  </entry>
+  <entry id="syang1131">
+    <gl>mélanger</gl>
+    <hw>⁵⁴jom ⁴⁴'⁴⁴tʃʰjol-o</hw>
+  </entry>
+  <entry id="syang1132">
+    <gl>autrefois</gl>
+    <hw>²¹'²²ʃjomo</hw>
+  </entry>
+  <entry id="syang1133">
+    <gl>après</gl>
+    <hw>²²'²²tsjuri</hw>
+  </entry>
+  <entry id="syang1134">
+    <gl>depuis</gl>
+    <hw>¹¹gi ³³tʰaŋ</hw>
+  </entry>
+  <entry id="syang1135">
+    <gl>immediately</gl>
+    <hw>¹¹soː</hw>
+  </entry>
+  <entry id="syang1136">
+    <gl>loin</gl>
+    <hw>⁴⁴tʰa ⁵⁵'⁴⁴run-na</hw>
+  </entry>
+  <entry id="syang1137">
+    <gl>loin</gl>
+    <hw>³³tʰa ²²'²²rum-ba</hw>
+  </entry>
+  <entry id="syang1138">
+    <gl>près</gl>
+    <hw>nadzi</hw>
+  </entry>
+  <entry id="syang1139">
+    <gl>long</gl>
+    <hw>¹¹'³³rum-ba¹¹'³³ruʱm-ba
+
+</hw>
+  </entry>
+  <entry id="syang1140">
+    <gl>court</gl>
+    <hw>⁵⁵'⁴⁴rum-ba</hw>
+  </entry>
+  <entry id="syang1141">
+    <gl>épais</gl>
+    <hw>³³'³³hrum-ba</hw>
+  </entry>
+  <entry id="syang1142">
+    <gl>mince</gl>
+    <hw>⁵⁵'⁴⁴pʌ-mu</hw>
+  </entry>
+  <entry id="syang1143">
+    <gl>haut</gl>
+    <hw>⁵⁵'⁵⁴no-ba</hw>
+  </entry>
+  <entry id="syang1144">
+    <gl>haut</gl>
+    <hw>⁵⁵'³³no-ba</hw>
+  </entry>
+  <entry id="syang1145">
+    <gl>bas</gl>
+    <hw>Xma-βa</hw>
+  </entry>
+  <entry id="syang1146">
+    <gl>vers le haut</gl>
+    <hw>Xkʰʌnʈo (jɛro)</hw>
+  </entry>
+  <entry id="syang1147">
+    <gl>vers le bas</gl>
+    <hw>⁴⁴'⁴⁴kjʌrʌ (⁴²ju)</hw>
+  </entry>
+  <entry id="syang1148">
+    <gl>couvrir</gl>
+    <hw>²¹'³³kʌp-pa²¹'³³kʌʱp-pa
+
+</hw>
+  </entry>
+  <entry id="syang1149">
+    <gl>couvrir (avec couverture)</gl>
+    <hw>¹¹'³²nʌm-ba</hw>
+  </entry>
+  <entry id="syang1150">
+    <gl>coupant</gl>
+    <hw>⁵³'³³tsʰjer-mu</hw>
+  </entry>
+  <entry id="syang1151">
+    <gl>affûter</gl>
+    <hw>⁵⁵'⁵⁵mer-pa</hw>
+  </entry>
+  <entry id="syang1152">
+    <gl>appointer</gl>
+    <hw>⁵⁵'⁴⁴sir-pa</hw>
+  </entry>
+  <entry id="syang1153">
+    <gl>dur</gl>
+    <hw>¹¹'¹¹du-mu¹¹'¹¹duʱ-mu
+
+</hw>
+  </entry>
+  <entry id="syang1154">
+    <gl>solide</gl>
+    <hw>⁵⁵'⁴⁴tʰuː-ba</hw>
+  </entry>
+  <entry id="syang1155">
+    <gl>ouvert</gl>
+    <hw>⁴⁴'⁴⁴mrokʰa ⁵⁵'⁴⁴tʰuŋ-o</hw>
+  </entry>
+  <entry id="syang1156">
+    <gl>ouvre la porte!</gl>
+    <hw>⁵⁵mro ⁴⁴'⁴⁴tʰuŋo</hw>
+  </entry>
+  <entry id="syang1157">
+    <gl>fermé</gl>
+    <hw>³³'³³mrokʰa ¹¹'¹¹tʌrʌ</hw>
+  </entry>
+  <entry id="syang1158">
+    <gl>ferme la porte!</gl>
+    <hw>⁴⁴'¹¹'³³mro tsol-lo</hw>
+  </entry>
+  <entry id="syang1159">
+    <gl>fermé</gl>
+    <hw>⁴⁴'⁴⁴mrokʰa ¹¹'¹¹tuŋg-o</hw>
+  </entry>
+  <entry id="syang1160">
+    <gl>vite</gl>
+    <hw>¹¹gjon</hw>
+  </entry>
+  <entry id="syang1161">
+    <gl>vite</gl>
+    <hw>⁵³'³³namsaŋ</hw>
+  </entry>
+  <entry id="syang1162">
+    <gl>lentement</gl>
+    <hw>¹¹'¹¹naŋgja</hw>
+  </entry>
+  <entry id="syang1163">
+    <gl>lentement</gl>
+    <hw>¹¹jal ³³'³³laʃi¹¹jaʱl ³³'³³laʃi
+
+</hw>
+  </entry>
+  <entry id="syang1164">
+    <gl>dans</gl>
+    <hw>²¹na ³³j̃æ²¹naʱ ³³j̃æ
+
+</hw>
+  </entry>
+  <entry id="syang1165">
+    <gl>dehors</gl>
+    <hw>⁵³'³³pʰi-dze</hw>
+  </entry>
+  <entry id="syang1166">
+    <gl>en haut</gl>
+    <hw>⁴⁴'⁴³kʌ-no</hw>
+  </entry>
+  <entry id="syang1167">
+    <gl>en bas</gl>
+    <hw>⁵⁵mʌ̃</hw>
+  </entry>
+  <entry id="syang1168">
+    <gl>en bas</gl>
+    <hw>¹¹'⁴⁴pri-dze¹¹'⁴⁴priʱ-dze
+
+</hw>
+  </entry>
+  <entry id="syang1169">
+    <gl>sur</gl>
+    <hw>⁴⁴pʰe ⁴³j̃æ</hw>
+  </entry>
+  <entry id="syang1170">
+    <gl>sous</gl>
+    <hw>²¹mʌ ⁴⁴j̃æ²¹mʌʱ ⁴⁴j̃æ
+
+</hw>
+  </entry>
+  <entry id="syang1171">
+    <gl>ici</gl>
+    <hw>⁴⁴tsi</hw>
+  </entry>
+  <entry id="syang1172">
+    <gl>pourquoi?</gl>
+    <hw>⁴⁴'⁴⁴tala</hw>
+  </entry>
+  <entry id="syang1173">
+    <gl>comment?</gl>
+    <hw>⁵⁵'⁵⁵'⁵⁵kʰadzjuku ⁵⁵'⁴⁴laʃi</hw>
+  </entry>
+  <entry id="syang1174">
+    <gl>ainsi</gl>
+    <hw>¹¹'¹¹wote¹¹'¹¹woʱte
+
+</hw>
+  </entry>
 </lexicon>
