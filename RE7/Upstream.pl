@@ -31,10 +31,11 @@ binmode(STDOUT, 'utf8');
 sub Upstream {
   
   ($dir,$prj,$prms,$out,$fmt,$limit) = @_;
+  #print "Upstream $dir,$prj,$prms,$out,$fmt,$limit,'$logopen'\n";
   
   Statistics("RE $version");      #gather start of run statistics     
   
-  initializePrj($dir,$prj,$prms,$out,$fmt,'log!',$limit) || return;
+  initializePrj($dir,$prj,$prms,$out,$fmt,'log',$limit) || return;
 
   open(OUTFILE,">$REoutfile") || die "can't open RE output file '$REoutfile'!";
   binmode(OUTFILE, 'utf8');

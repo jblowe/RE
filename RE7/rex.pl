@@ -24,17 +24,20 @@ use Time::Local ;                     # timestamps, etc.
 #######################################################################
 # Get ready to run
 #######################################################################
-getopt("pdtnox", \%opts) ;
+getopt("pdtnoxf", \%opts) ;
 my $prms      = $opts{'p'};
 my $prj       = $opts{'d'};
 my $limit     = int($opts{'n'}); #number of forms to process in each lex
-my $out       = $opts{'o'};
+my $run       = $opts{'o'};
 my $dir       = $opts{'x'};
+my $f         = $opts{'f'};
 
 $test         = int($opts{'t'}) ;
+
+print "test =  $opts{'t'} $test \n";
 
 #foreach $o (keys %opts) {
 #  print "$o " . $opts{$o} . "\n";
 #}
 
-Upstream($dir,$prj,$prms,$out,'text',$limit);
+Upstream($dir,$prj,$prms,$run,'',$limit);

@@ -45,12 +45,12 @@ sub GetCmdLine {
 }
 sub OpenLog {           #do our own logging (sys independent that way)
     ($RElogfile) = @_ ; #NB: don't need a CloseLog for multiple logs...
-    if ($RElogfile) {   #     (thanks, perl!)
+    if ($RElogfile) {
 	open(LOGFILE,">$RElogfile") 
 	    || die "can't open RE log file '$RElogfile'!";
 	binmode LOGFILE, ":utf8";
-    $logopen = 1 ;
-    $settings{"Log file"} = $RElogfile ;
+        $logopen = 1 ;
+        $settings{"Log file"} = $RElogfile ;
     }
 }
 
@@ -501,22 +501,23 @@ sub test {
 
     my ($fmt,$tv,$tp) = @_ ;
     #$tp =~ s/\n//g;
-    #print "$test ($tv,$tp,$fmt)\n";
+    #print "<br>TEST: *** fmt,test,tv,'logopen',tp\n";
+    #print "<br>    : *** $fmt,$test,$tv,'$logopen',$tp";
     $tcnt++ ;
     ($test >= $tv) && do {
-	my $t = localtime time;
-	$t =~ s/.{4}(.*)$/$1/ ;
-	$tp =~ s/\[\]/\[$t\]/;
-	#$tp =~ s/\n/<br>/g ;
-	#print $fmt .'<br/>';
-	#print $tp;
-	#$tp .= "\n" unless ($tp =~ /\n/);
-	$logopen && print LOGFILE $tp ;
-	if ($fmt eq "h") {
-		$tp =~ s/\n/<br>/g ;
-		#print $fmt . " " . $tp;
-		print $tp;
-	}
+        my $t = localtime time;
+        $t =~ s/.{4}(.*)$/$1/ ;
+        $tp =~ s/\[\]/\[$t\]/;
+        #$tp =~ s/\n/<br>/g ;
+        #print $fmt .'<br/>';
+        #print $tp;
+        #$tp .= "\n" unless ($tp =~ /\n/);
+        $logopen && print LOGFILE $tp unless $fmt eq 'quiet';
+        if ($fmt eq "h") {
+            $tp =~ s/\n/<br>/g ;
+            #print $fmt . " " . $tp;
+            print $tp;
+        }
     }
 }
 sub SetFmt {
