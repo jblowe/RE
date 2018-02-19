@@ -8,12 +8,12 @@ To run "in batch" from the command line, try one of the following:
 ```bash
 cd [...]/RE7
 # to re-run the DEMO93 data as "run3"
-perl rex.pl -o run3 -x DATA/DEMO93  -p default -d DEMO93 -f xxx -t 3 &
+perl -I . rex.pl -o run3 -x DATA/DEMO93  -p default -d DEMO93 -f xxx -t 3 &
 # to re-run the Southern and Northern Yi data as "run3"
-perl rex.pl -o run3 -x DATA/LOLOISH  -p default -d NYI -f xxx -t 3 &
-perl rex.pl -o run3 -x DATA/LOLOISH  -p default -d SYI -f xxx -t 3 &
+perl -I . rex.pl -o run3 -x DATA/LOLOISH  -p default -d NYI -f xxx -t 3 &
+perl -I . rex.pl -o run3 -x DATA/LOLOISH  -p default -d SYI -f xxx -t 3 &
 # to re-run the Polynesian data as "run3"
-perl rex.pl -o run3 -x DATA/POLYNESIAN  -p default -d POLYNESIAN -f xxx -t 3
+perl -I . rex.pl -o run3 -x DATA/POLYNESIAN  -p default -d POLYNESIAN -f xxx -t 3
 ```
 
 From the web:
