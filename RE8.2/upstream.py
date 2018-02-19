@@ -3,6 +3,7 @@ import sys
 import re
 
 class SyllableCanon:
+
     def __init__(self, sound_classes, syllable_regex):
         self.sound_classes = sound_classes
         self.regex = re.compile('^' + syllable_regex + '$')
@@ -27,8 +28,8 @@ def correspondences_as_proto_form_string(cs):
 # imperative interface
 class TableOfCorrespondences:
     correspondences = []
-    def __init__(self, family_name, daughter_languages):
-        self.family_name = family_name
+    def __init__(self, project_name, daughter_languages):
+        self.project_name = project_name
         self.daughter_languages = daughter_languages
 
     def add_correspondence(self, correspondence):
@@ -49,11 +50,11 @@ class ModernForm:
         return f'{self.language} {self.form}: {self.gloss}'
 
 # xml reading
-def read_correspondence_file(filename, family_name, daughter_languages):
+def read_correspondence_file(filename, project_name, daughter_languages):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
     return Parameters(read_correspondences(tree.iterfind('corr'),
-                                           family_name,
+                                           project_name,
                                            daughter_languages),
                       read_syllable_canon(tree.find('parameters')))
 
@@ -67,8 +68,8 @@ def read_syllable_canon(parameters):
             regex = parameter.attrib.get('value')
     return SyllableCanon(sound_classes, regex)
 
-def read_correspondences(correspondences, family_name, daughter_languages):
-    table = TableOfCorrespondences(family_name, daughter_languages)
+def read_correspondences(correspondences, project_name, daughter_languages):
+    table = TableOfCorrespondences(project_name, daughter_languages)
     for correspondence in correspondences:
         daughter_forms = {}
         for dialect in correspondence.iterfind('modern'):
@@ -108,10 +109,11 @@ def read_lexicon(xmlfile):
         yield ModernForm(language, entry.find('hw').text,
                          entry.find('gl').text)
 
-def read_lexicons(languages, family):
+def read_lexicons(languages, base_dir, project):
     for language in languages:
+        print('Reading lexicon: ', f'{base_dir}/{project}/{project}.{language}.data.xml')
         yield (language,
-               list(read_lexicon(f'RE7/DATA/{family}/{family}.{language}.data.xml')))
+               list(read_lexicon(f'{base_dir}/{project}/{project}.{language}.data.xml')))
 
 # Returns a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters):
@@ -173,7 +175,26 @@ def dump_sets(sets, filename):
         print_sets(sets)
     sys.stdout = out
 
-# example lexicon and parameters
-demo93_names = ['gha', 'ris', 'sahu', 'man', 'mar', 'syang', 'tag', 'tuk']
-demo93 = list(read_lexicons(demo93_names, 'DEMO93'))
-params = read_correspondence_file('RE7/DATA/DEMO93/DEMO93.C794DEM.corrs.xml', 'DEMO93', demo93_names)
+
+if __name__ == "__main__":
+
+    base_dir = "/Users/jblowe/Sites/RE/RE7/DATA"
+    # lexicons and parameters
+    try:
+        project = sys.argv[1]
+        try:
+            run = sys.argv[2]
+        except:
+            run = 'default'
+    except:
+        print('no project specified. Try "DEMO93" if you like')
+        sys.exit(1)
+
+    language_names = ['gha', 'ris', 'sahu', 'man', 'mar', 'syang', 'tag', 'tuk']
+    language_names = ['gha', 'ris', 'sahu', 'mar', 'syang', 'tag', 'tuk']
+    lexicons = list(read_lexicons(language_names, base_dir, project))
+    params = read_correspondence_file(f'{base_dir}/{project}/{project}.C794DEM.corrs.xml', project, language_names)
+
+    B = batch_upstream(lexicons, params)
+    #print_sets(B)
+    dump_sets(B, f'{base_dir}/{project}/{project}.{run}.sets.txt')
