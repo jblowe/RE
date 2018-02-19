@@ -8,14 +8,13 @@ class SyllableCanon:
         self.regex = re.compile('^' + syllable_regex + '$')
 
 class Correspondence:
-    # daughter forms indexed by language
-    daughter_forms = {}
     def __init__(self, id, context, syllable_type, proto_form, daughter_forms):
         self.id = id
         # context is a tuple of left and right contexts
         self.context = context
         self.syllable_type = syllable_type
         self.proto_form = proto_form
+         # daughter forms indexed by language
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
@@ -26,8 +25,8 @@ def correspondences_as_proto_form_string(cs):
 
 # imperative interface
 class TableOfCorrespondences:
-    correspondences = []
     def __init__(self, family_name, daughter_languages):
+        self.correspondences = []
         self.family_name = family_name
         self.daughter_languages = daughter_languages
 
