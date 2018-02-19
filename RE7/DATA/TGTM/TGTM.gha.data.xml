@@ -353,7 +353,8 @@
   </entry>
   <entry id="gha72">
     <gl>thief</gl>
-    <hw>⁴jo</hw><r1>johq</r1>
+    <hw>⁴jo</hw>
+    <r1>johq</r1>
   </entry>
   <entry id="gha73">
     <gl>steal</gl>
@@ -422,11 +423,13 @@
   </entry>
   <entry id="gha86">
     <gl>chin</gl>
-    <hw>²kãː</hw><r1>kãːq</r1>
+    <hw>²kãː</hw>
+    <r1>kãːq</r1>
   </entry>
   <entry id="gha87">
     <gl>cover/lid</gl>
-    <hw>²kaː</hw><r1>kaːq</r1>
+    <hw>²kaː</hw>
+    <r1>kaːq</r1>
   </entry>
   <entry id="gha88">
     <gl>cover</gl>
@@ -590,7 +593,8 @@
   </entry>
   <entry id="gha120">
     <gl>bellow (bull)</gl>
-    <hw>³krãː</hw><r1>huqk krãːh ŋehba</r1>
+    <hw>³krãː</hw>
+    <r1>huqk krãːh ŋehba</r1>
   </entry>
   <entry id="gha121">
     <gl>back (lower)</gl>
@@ -648,7 +652,8 @@
   </entry>
   <entry id="gha132">
     <gl>vulture</gl>
-    <hw>⁴krwe</hw><r1>krwehq</r1>
+    <hw>⁴krwe</hw>
+    <r1>krwehq</r1>
   </entry>
   <entry id="gha133">
     <gl>chest</gl>
@@ -667,7 +672,8 @@
   </entry>
   <entry id="gha136">
     <gl>nine</gl>
-    <hw>²ku</hw><r1>kuq</r1>
+    <hw>²ku</hw>
+    <r1>kuq</r1>
   </entry>
   <entry id="gha137">
     <gl>rainshield</gl>
@@ -1226,7 +1232,7 @@
   </entry>
   <entry id="gha250">
     <gl>eye</gl>
-    <hw>²mĩ/hw>
+    <hw>²mĩ</hw>
     <r1>mĩq</r1>
   </entry>
   <entry id="gha251">
