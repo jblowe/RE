@@ -182,7 +182,7 @@ def dump_sets(sets, filename):
 
 if __name__ == "__main__":
 
-    base_dir = "/Users/jblowe/Sites/RE/RE7/DATA"
+    base_dir = "../RE7/DATA"
     # lexicons and parameters
     try:
         project = sys.argv[1]
