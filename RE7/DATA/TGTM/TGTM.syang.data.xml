@@ -1376,10 +1376,10 @@
     <gl>barbe du maïs</gl>
     <hw>⁴⁴kje ⁵⁵ur</hw>
   </entry>
-  <entry id="syang311">
-    <gl>riz non décortiqué</gl>
-    <hw/>
-  </entry>
+  <!-- <entry id="syang311"> -->
+  <!--   <gl>riz non décortiqué</gl> -->
+  <!--   <hw><hw/> -->
+  <!-- </entry> -->
   <entry id="syang312">
     <gl>riz non décortiqué</gl>
     <hw>¹¹'⁵⁴mlasun</hw>
