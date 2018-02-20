@@ -15,7 +15,7 @@ class Correspondence:
         self.context = context
         self.syllable_type = syllable_type
         self.proto_form = proto_form
-         # daughter forms indexed by language
+        # daughter forms indexed by language
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
@@ -48,7 +48,29 @@ class ModernForm:
     def __str__(self):
         return f'{self.language} {self.form}: {self.gloss}'
 
+class ProjectSettings:
+    def __init__(self, correspondence_file, upstream, downstream):
+        self.correspondence_file = correspondence_file
+        self.upstream = upstream
+        self.downstream = downstream
+
 # xml reading
+def read_settings_file(filename):
+    # for now we assume we don't want more than one proto-language
+    upstream = []
+    downstream = []
+    correspondence_file = None
+    for setting in ET.parse(filename).getroot():
+        if setting.tag == 'action':
+            if setting.attrib['name'] == 'upstream':
+                upstream.append(setting.attrib['from'])
+            elif setting.attrib['name'] == 'downstram':
+                downstream.append(setting.attrib['to'])
+        elif setting.tag == 'param':
+            if setting.attrib['name'] == 'correspondences':
+                correspondence_file = setting.attrib['value']
+    return ProjectSettings(correspondence_file, upstream, downstream)
+
 def read_correspondence_file(filename, project_name, daughter_languages):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
@@ -98,7 +120,7 @@ def tokenize(form, parameters, accessor):
         # to satisfy the syllable canon. for DEMO93 this cuts the
         # number of branches from 182146 to 61631
         if regex.match(syllable_parse, partial=True) is None:
-           return
+            return
         for i in range(1, len(form) + 1):
             for c in parameters.table.correspondences:
                 if form[:i] in accessor(c):
@@ -127,9 +149,9 @@ def project_back(lexicons, parameters):
         daughter_form = lambda c: c.daughter_forms[language]
         count = 0
         for modern_form in lexicon:
-            for cs in iter(tokenize(modern_form.form, parameters, daughter_form)):
-                count += 1
-                reconstructions.setdefault(cs, []).append(modern_form)
+                for cs in iter(tokenize(modern_form.form, parameters, daughter_form)):
+                    count += 1
+                    reconstructions.setdefault(cs, []).append(modern_form)     
         print(f'{language}: {len(lexicon)} forms, {count} reconstructions')
     return reconstructions
 
@@ -187,17 +209,20 @@ if __name__ == "__main__":
     try:
         project = sys.argv[1]
         try:
-            run = sys.argv[2]
+            settings_type = sys.argv[2]
         except:
-            run = 'default'
+            settings_type = 'default'
+            try:
+                run = sys.argv[3]
+            except:
+                run = 'default'
     except:
         print('no project specified. Try "DEMO93" if you like')
         sys.exit(1)
 
-    language_names = ['gha', 'ris', 'sahu', 'man', 'mar', 'syang', 'tag', 'tuk']
-    language_names = ['gha', 'ris', 'sahu', 'mar', 'syang', 'tag', 'tuk']
-    lexicons = list(read_lexicons(language_names, base_dir, project))
-    params = read_correspondence_file(f'{base_dir}/{project}/{project}.C794DEM.corrs.xml', project, language_names)
+    settings = read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
+    lexicons = list(read_lexicons(settings.upstream, base_dir, project))
+    params = read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
 
     B = batch_upstream(lexicons, params)
     #print_sets(B)
