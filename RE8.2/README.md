@@ -24,5 +24,11 @@ python upstream.py DEMO93
 less ../RE7/DATA/DEMO93/DEMO93.default.sets.txt
 ```
 
+**Dependencies**
 
+requires Python 3
 
+Modules:
+
+```xml.etree.ElementTree``` (should be standard)
+```regex``` installabled via something like ```pip3 install regex``` 
