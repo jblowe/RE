@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 import sys
-import re
+import regex as re
 
 class SyllableCanon:
 
@@ -9,27 +9,26 @@ class SyllableCanon:
         self.regex = re.compile('^' + syllable_regex + '$')
 
 class Correspondence:
-    # daughter forms indexed by language
-    daughter_forms = {}
     def __init__(self, id, context, syllable_type, proto_form, daughter_forms):
         self.id = id
         # context is a tuple of left and right contexts
         self.context = context
         self.syllable_type = syllable_type
         self.proto_form = proto_form
+         # daughter forms indexed by language
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
-        return f'Correspondence({self.id}, {self.syllable_type}, {self.proto_form[0]})'
+        return f'<Correspondence({self.id}, {self.syllable_type}, {self.proto_form[0]}>)'
 
 def correspondences_as_proto_form_string(cs):
     return ''.join(str(c.proto_form) for c in cs)
 
 # imperative interface
 class TableOfCorrespondences:
-    correspondences = []
-    def __init__(self, project_name, daughter_languages):
-        self.project_name = project_name
+    def __init__(self, family_name, daughter_languages):
+        self.correspondences = []
+        self.family_name = family_name
         self.daughter_languages = daughter_languages
 
     def add_correspondence(self, correspondence):
@@ -46,7 +45,7 @@ class ModernForm:
         self.form = form
         self.gloss = gloss
 
-    def __repr__(self):
+    def __str__(self):
         return f'{self.language} {self.form}: {self.gloss}'
 
 # xml reading
@@ -91,9 +90,15 @@ def read_correspondences(correspondences, project_name, daughter_languages):
 # which also conform to the syllable canon
 def tokenize(form, parameters, accessor):
     parses = set()
+    regex = parameters.syllable_canon.regex
     def gen(form, parse, syllable_parse):
-        if form == '' and parameters.syllable_canon.regex.match(syllable_parse):
+        if form == '' and regex.match(syllable_parse):
             parses.add(tuple(parse))
+        # we can abandon parses that we know can't be completed
+        # to satisfy the syllable canon. for DEMO93 this cuts the
+        # number of branches from 182146 to 61631
+        if regex.match(syllable_parse, partial=True) is None:
+           return
         for i in range(1, len(form) + 1):
             for c in parameters.table.correspondences:
                 if form[:i] in accessor(c):
@@ -125,8 +130,7 @@ def project_back(lexicons, parameters):
             for cs in iter(tokenize(modern_form.form, parameters, daughter_form)):
                 count += 1
                 reconstructions.setdefault(cs, []).append(modern_form)
-        print('{}: {} forms, {} reconstructions'
-              .format(language, len(lexicon), count))
+        print(f'{language}: {len(lexicon)} forms, {count} reconstructions')
     return reconstructions
 
 def filter_sets(projections):
@@ -145,7 +149,7 @@ def filter_subsets(cognate_sets):
         for (c2, supporting_forms2) in cognate_sets:
             if supporting_forms1 < supporting_forms2:
                 losers.add(cognate_set)
-                continue
+                break
     print('threw away {} subsets'.format(len(losers)))
     return cognate_sets - losers
 
@@ -158,15 +162,15 @@ def unique_surface_forms(cognate_sets):
             uniques.add(cognate_set)
     print('{} unique surface forms'.format(len(uniques)))
     return uniques
-            
+
 def batch_upstream(lexicons, params):
     return unique_surface_forms(filter_subsets((filter_sets(project_back(lexicons, params)))))
 
 def print_sets(sets):
     for (cs, supporting_forms) in sets:
         print(correspondences_as_proto_form_string(cs) + ' ' +
-              ' '.join([c.id for c in cs]))
-        print('\n'.join([repr(modern_form) for modern_form in supporting_forms]))
+              ' '.join(c.id for c in cs))
+        print('\n'.join(map(str, supporting_forms)))
         print('\n')
 
 def dump_sets(sets, filename):
