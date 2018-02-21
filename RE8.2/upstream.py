@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
 import sys
+import itertools
 import regex as re
 
 class SyllableCanon:
-
     def __init__(self, sound_classes, syllable_regex):
         self.sound_classes = sound_classes
         self.regex = re.compile('^' + syllable_regex + '$')
@@ -142,16 +142,33 @@ def read_lexicons(languages, base_dir, project):
         yield (language,
                list(read_lexicon(f'{base_dir}/{project}/{project}.{language}.data.xml')))
 
-# Returns a mapping from reconstructions to its supporting forms
+# set of all possible forms for a daughter language given correspondences
+def postdict_forms_for_daughter(correspondences, daughter):
+    return frozenset(''.join(token) for token in
+                     itertools.product(*[c.daughter_forms[daughter]
+                                         for c in correspondences]))
+
+# return a mapping from daughter language to all possible forms given a proto-form
+def postdict_daughter_forms(proto_form, parameters):
+    postdict = {}  # pun?
+    # big speed difference between [c.proto_form] vs c.proto_form
+    # c.proto_form does lots of slow substring comparisons. [c.proto_form]
+    # parallels the usage of the other daughter form accessors
+    for cs in iter(tokenize(proto_form, parameters, lambda c: [c.proto_form])):
+        for language in parameters.table.daughter_languages:
+            postdict[language] = postdict_forms_for_daughter(cs, language)
+    return postdict
+
+# return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters):
     reconstructions = {}
     for (language, lexicon) in lexicons:
         daughter_form = lambda c: c.daughter_forms[language]
         count = 0
         for modern_form in lexicon:
-                for cs in iter(tokenize(modern_form.form, parameters, daughter_form)):
-                    count += 1
-                    reconstructions.setdefault(cs, []).append(modern_form)     
+            for cs in iter(tokenize(modern_form.form, parameters, daughter_form)):
+                count += 1
+                reconstructions.setdefault(cs, []).append(modern_form)
         print(f'{language}: {len(lexicon)} forms, {count} reconstructions')
     return reconstructions
 
