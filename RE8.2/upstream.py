@@ -1,12 +1,13 @@
-import xml.etree.ElementTree as ET
-import sys
 import itertools
+import read
 import regex as re
+import sys
+import serialize
 
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex):
         self.sound_classes = sound_classes
-        self.regex = re.compile('^' + syllable_regex + '$')
+        self.regex = re.compile(syllable_regex)
 
 class Correspondence:
     def __init__(self, id, context, syllable_type, proto_form, daughter_forms):
@@ -39,6 +40,9 @@ class Parameters:
         self.table = table
         self.syllable_canon = syllable_canon
 
+    def serialize(self, filename):
+        serialize.serialize_correspondence_file(filename, self)
+
 class ModernForm:
     def __init__(self, language, form, gloss):
         self.language = language
@@ -54,72 +58,18 @@ class ProjectSettings:
         self.upstream = upstream
         self.downstream = downstream
 
-# xml reading
-def read_settings_file(filename):
-    # for now we assume we don't want more than one proto-language
-    upstream = []
-    downstream = []
-    correspondence_file = None
-    for setting in ET.parse(filename).getroot():
-        if setting.tag == 'action':
-            if setting.attrib['name'] == 'upstream':
-                upstream.append(setting.attrib['from'])
-            elif setting.attrib['name'] == 'downstram':
-                downstream.append(setting.attrib['to'])
-        elif setting.tag == 'param':
-            if setting.attrib['name'] == 'correspondences':
-                correspondence_file = setting.attrib['value']
-    return ProjectSettings(correspondence_file, upstream, downstream)
-
-def read_correspondence_file(filename, project_name, daughter_languages):
-    "Return syllable canon and table of correspondences"
-    tree = ET.parse(filename)
-    return Parameters(read_correspondences(tree.iterfind('corr'),
-                                           project_name,
-                                           daughter_languages),
-                      read_syllable_canon(tree.find('parameters')))
-
-def read_syllable_canon(parameters):
-    sound_classes = {}
-    for parameter in parameters:
-        if parameter.tag == 'class':
-            sound_classes[parameter.attrib.get('name')] = \
-                parameter.attrib.get('value')
-        if parameter.tag == 'canon':
-            regex = parameter.attrib.get('value')
-    return SyllableCanon(sound_classes, regex)
-
-def read_correspondences(correspondences, project_name, daughter_languages):
-    table = TableOfCorrespondences(project_name, daughter_languages)
-    for correspondence in correspondences:
-        daughter_forms = {}
-        for dialect in correspondence.iterfind('modern'):
-            daughter_forms[dialect.attrib.get('dialecte')] = \
-                list(map(lambda seg: seg.text, dialect.iterfind('seg')))
-        proto_form_info = correspondence.find('proto')
-        context = (proto_form_info.attrib.get('contextL'),
-                   proto_form_info.attrib.get('contextR'))
-        for syllable_type in proto_form_info.attrib.get('syll').split(','):
-            table.add_correspondence(
-                Correspondence(correspondence.attrib.get('num'),
-                               context,
-                               syllable_type,
-                               proto_form_info.text,
-                               daughter_forms))
-    return table
-
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
 def tokenize(form, parameters, accessor):
     parses = set()
     regex = parameters.syllable_canon.regex
     def gen(form, parse, syllable_parse):
-        if form == '' and regex.match(syllable_parse):
+        if form == '' and regex.fullmatch(syllable_parse):
             parses.add(tuple(parse))
         # we can abandon parses that we know can't be completed
         # to satisfy the syllable canon. for DEMO93 this cuts the
         # number of branches from 182146 to 61631
-        if regex.match(syllable_parse, partial=True) is None:
+        if regex.fullmatch(syllable_parse, partial=True) is None:
             return
         for i in range(1, len(form) + 1):
             for c in parameters.table.correspondences:
@@ -127,20 +77,6 @@ def tokenize(form, parameters, accessor):
                     gen(form[i:], parse + [c], syllable_parse + c.syllable_type)
     gen(form, [], '')
     return parses
-
-# returns a generator returning the modern form and its gloss
-def read_lexicon(xmlfile):
-    tree = ET.parse(xmlfile)
-    language = tree.getroot().attrib.get('dialecte')
-    for entry in tree.iterfind('entry'):
-        yield ModernForm(language, entry.find('hw').text,
-                         entry.find('gl').text)
-
-def read_lexicons(languages, base_dir, project):
-    for language in languages:
-        print('Reading lexicon: ', f'{base_dir}/{project}/{project}.{language}.data.xml')
-        yield (language,
-               list(read_lexicon(f'{base_dir}/{project}/{project}.{language}.data.xml')))
 
 # set of all possible forms for a daughter language given correspondences
 def postdict_forms_for_daughter(correspondences, daughter):
@@ -237,9 +173,9 @@ if __name__ == "__main__":
         print('no project specified. Try "DEMO93" if you like')
         sys.exit(1)
 
-    settings = read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
-    lexicons = list(read_lexicons(settings.upstream, base_dir, project))
-    params = read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
+    settings = read.read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
+    lexicons = list(read.read_lexicons(settings.upstream, base_dir, project))
+    params = read.read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
 
     B = batch_upstream(lexicons, params)
     #print_sets(B)
