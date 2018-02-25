@@ -103,8 +103,3 @@ def read_tabular_lexicons(tablefile, delimiter='\t'):
                 if form:
                     forms_dict[language].append(ModernForm(language, form, gloss))
         return forms_dict.items()
-
-# def read_tabular_column(filename):
-#     with open(filename, 'r') as csvfile:
-#         reader = csv.reader(csvfile, delimeter='\t')
-#         n
