@@ -143,11 +143,11 @@ class REWindow(Gtk.Window):
         upstream_button = Gtk.Button(label='Batch Upstream')
         upstream_button.connect('clicked', self.batch_upstream_press)
 
-        add_table_row_button = Gtk.Button(label='Add row')
+        add_table_row_button = Gtk.Button(label='Add correspondence')
         add_table_row_button.connect('clicked',
                                      self.on_add_row_button_clicked)
 
-        delete_table_row_button = Gtk.Button(label='Delete row')
+        delete_table_row_button = Gtk.Button(label='Delete correspondence')
         delete_table_row_button.connect('clicked',
                                         self.on_delete_row_button_clicked)
 
