@@ -1,19 +1,14 @@
 import xml.etree.ElementTree as ET
 import csv
-from upstream import Correspondence
-from upstream import SyllableCanon
-from upstream import ProjectSettings
-from upstream import Parameters
-from upstream import TableOfCorrespondences
-from upstream import ModernForm
+import RE
 
 def read_correspondence_file(filename, project_name, daughter_languages):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
-    return Parameters(read_correspondences(tree.iterfind('corr'),
-                                           project_name,
-                                           daughter_languages),
-                      read_syllable_canon(tree.find('parameters')))
+    return RE.Parameters(read_correspondences(tree.iterfind('corr'),
+                                              project_name,
+                                              daughter_languages),
+                         read_syllable_canon(tree.find('parameters')))
 
 def read_syllable_canon(parameters):
     sound_classes = {}
@@ -23,10 +18,10 @@ def read_syllable_canon(parameters):
                 parameter.attrib.get('value')
         if parameter.tag == 'canon':
             regex = parameter.attrib.get('value')
-    return SyllableCanon(sound_classes, regex)
+    return RE.SyllableCanon(sound_classes, regex)
 
 def read_correspondences(correspondences, project_name, daughter_languages):
-    table = TableOfCorrespondences(project_name, daughter_languages)
+    table = RE.TableOfCorrespondences(project_name, daughter_languages)
     for correspondence in correspondences:
         daughter_forms = {}
         for dialect in correspondence.iterfind('modern'):
@@ -37,11 +32,11 @@ def read_correspondences(correspondences, project_name, daughter_languages):
                    proto_form_info.attrib.get('contextR'))
         for syllable_type in proto_form_info.attrib.get('syll').split(','):
             table.add_correspondence(
-                Correspondence(correspondence.attrib.get('num'),
-                               context,
-                               syllable_type,
-                               proto_form_info.text,
-                               daughter_forms))
+                RE.Correspondence(correspondence.attrib.get('num'),
+                                  context,
+                                  syllable_type,
+                                  proto_form_info.text,
+                                  daughter_forms))
     return table
 
 def next_skipping_comment(reader):
@@ -52,7 +47,7 @@ def next_skipping_comment(reader):
             return row
 
 def read_csv_correspondences(filename, project_name, daughter_languages):
-    table = TableOfCorrespondences(project_name, daughter_languages)
+    table = RE.TableOfCorrespondences(project_name, daughter_languages)
     with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order
@@ -79,14 +74,14 @@ def read_settings_file(filename):
         elif setting.tag == 'param':
             if setting.attrib['name'] == 'correspondences':
                 correspondence_file = setting.attrib['value']
-    return ProjectSettings(correspondence_file, upstream, downstream)
+    return RE.ProjectSettings(correspondence_file, upstream, downstream)
 
 # returns a generator returning the modern form and its gloss
 def read_lexicon(xmlfile):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
     for entry in tree.iterfind('entry'):
-        yield ModernForm(language, entry.find('hw').text,
+        yield RE.ModernForm(language, entry.find('hw').text,
                          entry.find('gl').text)
 
 def read_lexicons(languages, base_dir, project):
@@ -95,15 +90,21 @@ def read_lexicons(languages, base_dir, project):
         yield (language,
                list(read_lexicon(f'{base_dir}/{project}/{project}.{language}.data.xml')))
 
-def read_tabular_lexicons(tablefile):
+def read_tabular_lexicons(tablefile, delimiter='\t'):
     with open(tablefile, 'r') as csvfile:
-        reader = csv.reader(csvfile, delimiter='\t')
+        reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order
-        names = next_skipping_comment(reader)[1:]
+        names = [x.strip() for x in next_skipping_comment(reader)[1:]]
         forms_dict = {name: [] for name in names}
         for row in reader:
             gloss = row[0]
             for language, form in zip(names, row[1:]):
+                form = form.strip()
                 if form:
                     forms_dict[language].append(ModernForm(language, form, gloss))
         return forms_dict.items()
+
+# def read_tabular_column(filename):
+#     with open(filename, 'r') as csvfile:
+#         reader = csv.reader(csvfile, delimeter='\t')
+#         n

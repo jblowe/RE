@@ -23,7 +23,10 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_type}, {self.proto_form[0]}>)'
 
 def correspondences_as_proto_form_string(cs):
-    return ''.join(str(c.proto_form) for c in cs)
+    return ''.join(c.proto_form for c in cs)
+
+def correspondences_as_ids(cs):
+    return ' '.join(c.id for c in cs)
 
 # imperative interface
 class TableOfCorrespondences:
@@ -144,7 +147,7 @@ def batch_upstream(lexicons, params):
 def print_sets(sets):
     for (cs, supporting_forms) in sets:
         print(correspondences_as_proto_form_string(cs) + ' ' +
-              ' '.join(c.id for c in cs))
+              correspondences_as_ids(cs))
         print('\n'.join(map(str, supporting_forms)))
         print('\n')
 
