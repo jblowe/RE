@@ -195,7 +195,7 @@ class REWindow(Gtk.Window):
             self.correspondence_view),
                                read_syllable_canon_from_widget(
                                    self.syllable_canon_widget))
-        sets = RE.batch_upstream(lexicons, params)
+        sets, statistics = RE.batch_upstream(lexicons, params)
         Gdk.threads_enter()
         self.upstream_store.clear()
         for (cs, supporting_forms) in sets:
