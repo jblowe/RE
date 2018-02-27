@@ -61,6 +61,17 @@ class ProjectSettings:
         self.upstream = upstream
         self.downstream = downstream
 
+class Statistics:
+    def __init__(self):
+        self.failed_parses = set()
+        self.singleton_support = set()
+        self.subsets = set()
+        self.notes = []
+
+    def add_note(self, note):
+        print(note)
+        self.notes.append(note)
+
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
 def tokenize(form, parameters, accessor):
@@ -99,28 +110,34 @@ def postdict_daughter_forms(proto_form, parameters):
     return postdict
 
 # return a mapping from reconstructions to its supporting forms
-def project_back(lexicons, parameters):
+def project_back(lexicons, parameters, statistics):
     reconstructions = {}
     for (language, lexicon) in lexicons:
         daughter_form = lambda c: c.daughter_forms[language]
         count = 0
         for modern_form in lexicon:
-            for cs in iter(tokenize(modern_form.form, parameters, daughter_form)):
-                count += 1
-                reconstructions.setdefault(cs, []).append(modern_form)
-        print(f'{language}: {len(lexicon)} forms, {count} reconstructions')
-    return reconstructions
+            parses = tokenize(modern_form.form, parameters, daughter_form)
+            if parses:
+                for cs in iter(parses):
+                    count += 1
+                    reconstructions.setdefault(cs, []).append(modern_form)
+            else:
+                statistics.failed_parses.add(modern_form)
+        statistics.add_note(f'{language}: {len(lexicon)} forms, {count} reconstructions')
+    return reconstructions, statistics
 
-def filter_sets(projections):
+def filter_sets(projections, statistics):
     cognate_sets = set()
     for reconstruction, support in projections.items():
         if len(support) > 1:
             cognate_sets.add((reconstruction, frozenset(support)))
-    print('only {} sets with more than 1 supporting form'.format(len(cognate_sets)))
-    return cognate_sets
+        else:
+            statistics.singleton_support.add(reconstruction)
+    statistics.add_note(f'only {len(cognate_sets)} sets with more than 1 supporting form')
+    return cognate_sets, statistics
 
 # throw away sets whose supporting forms are a subset of another's
-def filter_subsets(cognate_sets):
+def filter_subsets(cognate_sets, statistics):
     losers = set()
     for cognate_set in cognate_sets:
         (c1, supporting_forms1) = cognate_set
@@ -128,21 +145,25 @@ def filter_subsets(cognate_sets):
             if supporting_forms1 < supporting_forms2:
                 losers.add(cognate_set)
                 break
-    print('threw away {} subsets'.format(len(losers)))
-    return cognate_sets - losers
+    statistics.subsets = losers
+    statistics.add_note(f'threw away {len(losers)} subsets')
+    return cognate_sets - losers, statistics
 
 # pick a representative from sets with the same surface protoform string
-def unique_surface_forms(cognate_sets):
+def unique_surface_forms(cognate_sets, statistics):
     uniques = set()
     for cognate_set in cognate_sets:
         proto_form = correspondences_as_proto_form_string(cognate_set[0])
         if not any(proto_form == correspondences_as_proto_form_string(c2) for (c2, _) in uniques):
             uniques.add(cognate_set)
-    print('{} unique surface forms'.format(len(uniques)))
-    return uniques
+    statistics.add_note(f'{len(uniques)} unique surface forms')
+    return uniques, statistics
 
 def batch_upstream(lexicons, params):
-    return unique_surface_forms(filter_subsets((filter_sets(project_back(lexicons, params)))))
+    return unique_surface_forms(
+        *filter_subsets(
+            *filter_sets(
+                *project_back(lexicons, params, Statistics()))))
 
 def print_sets(sets):
     for (cs, supporting_forms) in sets:
@@ -180,6 +201,6 @@ if __name__ == "__main__":
     lexicons = list(read.read_lexicons(settings.upstream, base_dir, project))
     params = read.read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
 
-    B = batch_upstream(lexicons, params)
+    B, S = batch_upstream(lexicons, params)
     #print_sets(B)
     dump_sets(B, f'{base_dir}/{project}/{project}.{run}.sets.txt')
