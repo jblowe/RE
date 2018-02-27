@@ -77,8 +77,26 @@ class Statistics:
 def tokenize(form, parameters, accessor):
     parses = set()
     regex = parameters.syllable_canon.regex
+    sound_classes = parameters.syllable_canon.sound_classes
+
+    def doesnt_match_this_left_context(parse, c):
+        if parse and c.context[0]:
+            return all(parse[-1].proto_form != left and
+                       parse[-1].proto_form not in sound_classes.get(left, [])
+                       for left in c.context[0].split(','))
+
+    def doesnt_match_last_right_context(parse, c):
+        if parse and parse[-1].context[1]:
+            return all(c.proto_form != right and
+                       c.proto_form not in sound_classes.get(right, [])
+                       for right in parse[-1].context[1].split(','))
+
     def gen(form, parse, syllable_parse):
-        if form == '' and regex.fullmatch(syllable_parse):
+        # ensure that the last parsed token has no right context.
+        # if we decide to have word-final markers in context, this
+        # is where to check for that
+        if form == '' and regex.fullmatch(syllable_parse) and \
+           parse[-1].context[1] is None:
             parses.add(tuple(parse))
         # we can abandon parses that we know can't be completed
         # to satisfy the syllable canon. for DEMO93 this cuts the
@@ -87,6 +105,9 @@ def tokenize(form, parameters, accessor):
             return
         for i in range(1, len(form) + 1):
             for c in parameters.table.correspondences:
+                if (doesnt_match_this_left_context(parse, c) or
+                    doesnt_match_last_right_context(parse, c)):
+                    continue
                 if form[:i] in accessor(c):
                     gen(form[i:], parse + [c], syllable_parse + c.syllable_type)
     gen(form, [], '')
