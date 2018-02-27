@@ -221,7 +221,7 @@ class REWindow(Gtk.Window):
 def run(lexicons, params):
     out = sys.stdout
     win = REWindow(lexicons, params)
-    #sys.stdout = win.statistics_buffer
+    sys.stdout = win.statistics_buffer
     win.connect('delete_event', Gtk.main_quit)
     win.show_all()
     GObject.threads_init()
