@@ -15,7 +15,6 @@ class WrappedTextBuffer():
                            string, len(string))
         Gdk.threads_leave()
 
-
 def make_correspondence_row(correspondence, names):
     return [correspondence.id, str(correspondence.context),
             correspondence.syllable_type, correspondence.proto_form] + \
