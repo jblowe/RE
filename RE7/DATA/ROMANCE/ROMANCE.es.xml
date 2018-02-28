@@ -2,1036 +2,1126 @@
   <entry id="es1">
     <gl>I</gl>
     <spell>yo</spell>
-    <hw>/ʝo/</hw>
+    <hw>ʝo</hw>
   </entry>
   <entry id="es2">
     <gl>you (singular)</gl>
+    <spell>tú</spell>
+    <hw>tu</hw>
+  </entry>
+  <entry id="es2.1">
+    <gl>you (singular)</gl>
     <spell>tú, vos, usted (formal)</spell>
-    <hw>/tu/, /bos/, /usˈteð/</hw>
+    <hw>bos</hw>
+  </entry>
+    <entry id="es2.2">
+    <gl>you (singular)</gl>
+    <spell>usted (formal)</spell>
+    <hw>usˈteð</hw>
   </entry>
   <entry id="es3">
     <gl>he</gl>
     <spell>él</spell>
-    <hw>/el/</hw>
+    <hw>el</hw>
   </entry>
   <entry id="es4">
     <gl>we</gl>
-    <spell>nosotros, nosotras</spell>
-    <hw>/noˈsotɾos/, /noˈsotɾas/</hw>
+    <spell>nosotros</spell>
+    <hw>noˈsotɾos</hw>
+  </entry>
+  <entry id="es4.5">
+    <gl>we</gl>
+    <spell>nosotras</spell>
+    <hw>noˈsotɾas</hw>
   </entry>
   <entry id="es5">
     <gl>you (plural)</gl>
-    <spell>vosotros, vosotras, ustedes (formal)</spell>
-    <hw>/boˈsotɾos/, /boˈsotɾas/, /usˈteðes/</hw>
+    <spell>vosotros</spell>
+    <hw>boˈsotɾos</hw>
+  </entry>
+  <entry id="es5.1">
+    <gl>you (plural)</gl>
+    <spell>vosotras</spell>
+    <hw>boˈsotɾas</hw>
+  </entry>
+  <entry id="es5.2">
+    <gl>you (plural)</gl>
+    <spell>ustedes (formal)</spell>
+    <hw>usˈteðes</hw>
   </entry>
   <entry id="es6">
     <gl>they</gl>
     <spell>ellos, ellas</spell>
-    <hw>/ˈeʎos/, /ˈeʎas/</hw>
+    <hw>ˈeʎos</hw>
+  </entry>
+  <entry id="es6.5">
+    <gl>they</gl>
+    <spell>ellas</spell>
+    <hw>ˈeʎas</hw>
   </entry>
   <entry id="es7">
     <gl>this</gl>
     <spell>este</spell>
-    <hw>/ˈeste/</hw>
+    <hw>ˈeste</hw>
   </entry>
   <entry id="es8">
     <gl>that</gl>
-    <spell>ese, aquel</spell>
-    <hw>/ˈese/, /aˈkel/</hw>
+    <spell>ese</spell>
+    <hw>ˈese</hw>
+  </entry>
+  <entry id="es8.5">
+    <gl>that</gl>
+    <spell>aquel</spell>
+    <hw>aˈkel</hw>
   </entry>
   <entry id="es9">
     <gl>here</gl>
-    <spell>aquí, acá</spell>
-    <hw>/aˈki/, /aˈka/</hw>
+    <spell>aquí</spell>
+    <hw>aˈki</hw>
+  </entry>
+  <entry id="es9.5">
+    <gl>here</gl>
+    <spell>acá</spell>
+    <hw>aˈka</hw>
   </entry>
   <entry id="es10">
     <gl>there</gl>
     <spell>ahí</spell>
-    <hw>/aˈi/</hw>
+    <hw>aˈi</hw>
   </entry>
   <entry id="es11">
     <gl>who</gl>
     <spell>quien</spell>
-    <hw>/kjen/</hw>
+    <hw>kjen</hw>
   </entry>
   <entry id="es12">
     <gl>what</gl>
     <spell>que</spell>
-    <hw>/ke/</hw>
+    <hw>ke</hw>
   </entry>
   <entry id="es13">
     <gl>where</gl>
     <spell>donde</spell>
-    <hw>/ˈdonde/</hw>
+    <hw>ˈdonde</hw>
   </entry>
   <entry id="es14">
     <gl>when</gl>
     <spell>cuando</spell>
-    <hw>/ˈkwando/</hw>
+    <hw>ˈkwando</hw>
   </entry>
   <entry id="es15">
     <gl>how</gl>
     <spell>como</spell>
-    <hw>/ˈkomo/</hw>
+    <hw>ˈkomo</hw>
   </entry>
   <entry id="es16">
     <gl>not</gl>
     <spell>no</spell>
-    <hw>/no/</hw>
+    <hw>no</hw>
   </entry>
   <entry id="es17">
     <gl>all</gl>
     <spell>todo</spell>
-    <hw>/ˈtoðo/</hw>
+    <hw>ˈtoðo</hw>
   </entry>
   <entry id="es18">
     <gl>many</gl>
     <spell>muchos</spell>
-    <hw>/ˈmut͡ʃos/</hw>
+    <hw>ˈmut͡ʃos</hw>
   </entry>
   <entry id="es19">
     <gl>some</gl>
     <spell>algunos</spell>
-    <hw>/alˈɣunos/</hw>
+    <hw>alˈɣunos</hw>
   </entry>
   <entry id="es20">
     <gl>few</gl>
     <spell>poco</spell>
-    <hw>/ˈpoko/</hw>
+    <hw>ˈpoko</hw>
   </entry>
   <entry id="es21">
     <gl>other</gl>
     <spell>otro</spell>
-    <hw>/ˈotɾo/</hw>
+    <hw>ˈotɾo</hw>
   </entry>
   <entry id="es22">
     <gl>one</gl>
     <spell>uno</spell>
-    <hw>/ˈuno/</hw>
+    <hw>ˈuno</hw>
   </entry>
   <entry id="es23">
     <gl>two</gl>
     <spell>dos</spell>
-    <hw>/dos/</hw>
+    <hw>dos</hw>
   </entry>
   <entry id="es24">
     <gl>three</gl>
     <spell>tres</spell>
-    <hw>/tɾes/</hw>
+    <hw>tɾes</hw>
   </entry>
   <entry id="es25">
     <gl>four</gl>
     <spell>cuatro</spell>
-    <hw>/ˈkwatɾo/</hw>
+    <hw>ˈkwatɾo</hw>
   </entry>
   <entry id="es26">
     <gl>five</gl>
     <spell>cinco</spell>
-    <hw>/ˈθiŋko/</hw>
+    <hw>ˈθiŋko</hw>
   </entry>
   <entry id="es27">
     <gl>big</gl>
     <spell>grande</spell>
-    <hw>/ˈɡɾande/</hw>
+    <hw>ˈɡɾande</hw>
   </entry>
   <entry id="es28">
     <gl>long</gl>
     <spell>largo</spell>
-    <hw>/ˈlaɾɣo/</hw>
+    <hw>ˈlaɾɣo</hw>
   </entry>
   <entry id="es29">
     <gl>wide</gl>
     <spell>ancho</spell>
-    <hw>/ˈant͡ʃo/</hw>
+    <hw>ˈant͡ʃo</hw>
   </entry>
   <entry id="es30">
     <gl>thick</gl>
     <spell>grueso</spell>
-    <hw>/ˈɡɾweso/</hw>
+    <hw>ˈɡɾweso</hw>
   </entry>
   <entry id="es31">
     <gl>heavy</gl>
     <spell>pesado</spell>
-    <hw>/peˈsaðo/</hw>
+    <hw>peˈsaðo</hw>
   </entry>
   <entry id="es32">
     <gl>small</gl>
     <spell>pequeño</spell>
-    <hw>/peˈkeɲo/</hw>
+    <hw>peˈkeɲo</hw>
   </entry>
   <entry id="es33">
     <gl>short</gl>
     <spell>corto</spell>
-    <hw>/ˈkoɾto/</hw>
+    <hw>ˈkoɾto</hw>
   </entry>
   <entry id="es34">
     <gl>narrow</gl>
     <spell>estrecho</spell>
-    <hw>/esˈtɾet͡ʃo/</hw>
+    <hw>esˈtɾet͡ʃo</hw>
   </entry>
   <entry id="es35">
     <gl>thin</gl>
-    <spell>delgado, flaco</spell>
-    <hw>/delˈɣaðo/, /ˈflako/</hw>
+    <spell>delgado</spell>
+    <hw>delˈɣaðo</hw>
+  </entry>
+  <entry id="es35.5">
+    <gl>thin</gl>
+    <spell>flaco</spell>
+    <hw>ˈflako</hw>
   </entry>
   <entry id="es36">
     <gl>woman</gl>
     <spell>mujer</spell>
-    <hw>/muˈxeɾ/</hw>
+    <hw>muˈxeɾ</hw>
   </entry>
   <entry id="es37">
     <gl>man (male)</gl>
     <spell>hombre</spell>
-    <hw>/ˈombɾe/</hw>
+    <hw>ˈombɾe</hw>
   </entry>
   <entry id="es38">
     <gl>man (human)</gl>
     <spell>hombre</spell>
-    <hw>/ˈombɾe/</hw>
+    <hw>ˈombɾe</hw>
   </entry>
   <entry id="es39">
     <gl>child</gl>
     <spell>niño</spell>
-    <hw>/ˈniɲo/</hw>
+    <hw>ˈniɲo</hw>
   </entry>
   <entry id="es40">
     <gl>wife</gl>
-    <spell>esposa, mujer</spell>
-    <hw>/esˈposa/, /muˈxeɾ/</hw>
+    <spell>esposa</spell>
+    <hw>esˈposaɾ</hw>
+  </entry>
+  <entry id="es40.5">
+    <gl>wife</gl>
+    <spell>mujer</spell>
+    <hw>muˈxeɾ</hw>
   </entry>
   <entry id="es41">
     <gl>husband</gl>
-    <spell>esposo, marido</spell>
-    <hw>/esˈposo/, /maˈɾiðo/</hw>
+    <spell>esposo</spell>
+    <hw>esˈposo</hw>
+  </entry>
+  <entry id="es41.5">
+    <gl>husband</gl>
+    <spell> marido</spell>
+    <hw>maˈɾiðo</hw>
   </entry>
   <entry id="es42">
     <gl>mother</gl>
     <spell>madre</spell>
-    <hw>/ˈmaðɾe/</hw>
+    <hw>ˈmaðɾe</hw>
   </entry>
   <entry id="es43">
     <gl>father</gl>
     <spell>padre</spell>
-    <hw>/ˈpaðɾe/</hw>
+    <hw>ˈpaðɾe</hw>
   </entry>
   <entry id="es44">
     <gl>animal</gl>
     <spell>animal</spell>
-    <hw>/aniˈmal/</hw>
+    <hw>aniˈmal</hw>
   </entry>
   <entry id="es45">
     <gl>fish</gl>
-    <spell>pez, pescado</spell>
-    <hw>/peθ/, /pesˈkaðo/</hw>
+    <spell>pez</spell>
+    <hw>peθ</hw>
+  </entry>
+  <entry id="es45.5">
+    <gl>fish</gl>
+    <spell>pescado</spell>
+    <hw>pesˈkaðo</hw>
   </entry>
   <entry id="es46">
     <gl>bird</gl>
     <spell>pájaro</spell>
-    <hw>/ˈpaxaɾo/</hw>
+    <hw>ˈpaxaɾo</hw>
   </entry>
   <entry id="es47">
     <gl>dog</gl>
     <spell>perro</spell>
-    <hw>/ˈpero/</hw>
+    <hw>ˈpero</hw>
   </entry>
   <entry id="es48">
     <gl>louse</gl>
     <spell>piojo</spell>
-    <hw>/ˈpjoxo/</hw>
+    <hw>ˈpjoxo</hw>
   </entry>
   <entry id="es49">
     <gl>snake</gl>
     <spell>serpiente</spell>
-    <hw>/seɾˈpjente/</hw>
+    <hw>seɾˈpjente</hw>
   </entry>
   <entry id="es50">
     <gl>worm</gl>
     <spell>gusano</spell>
-    <hw>/ɡuˈsano/</hw>
+    <hw>ɡuˈsano</hw>
   </entry>
   <entry id="es51">
     <gl>tree</gl>
     <spell>árbol</spell>
-    <hw>/ˈaɾβol/</hw>
+    <hw>ˈaɾβol</hw>
   </entry>
   <entry id="es52">
     <gl>forest</gl>
     <spell>bosque</spell>
-    <hw>/ˈboske/</hw>
+    <hw>ˈboske</hw>
   </entry>
   <entry id="es53">
     <gl>stick</gl>
     <spell>palo</spell>
-    <hw>/ˈpalo/</hw>
+    <hw>ˈpalo</hw>
   </entry>
   <entry id="es54">
     <gl>fruit</gl>
     <spell>fruta</spell>
-    <hw>/fɾuta/</hw>
+    <hw>fɾuta</hw>
   </entry>
   <entry id="es55">
     <gl>seed</gl>
     <spell>semilla</spell>
-    <hw>/seˈmiʎa/</hw>
+    <hw>seˈmiʎa</hw>
   </entry>
   <entry id="es56">
     <gl>leaf</gl>
     <spell>hoja</spell>
-    <hw>/ˈoxa/</hw>
+    <hw>ˈoxa</hw>
   </entry>
   <entry id="es57">
     <gl>root</gl>
     <spell>raíz</spell>
-    <hw>/raˈiθ/</hw>
+    <hw>raˈiθ</hw>
   </entry>
   <entry id="es58">
     <gl>bark (of a tree)</gl>
     <spell>corteza</spell>
-    <hw>/koɾˈteθa/</hw>
+    <hw>koɾˈteθa</hw>
   </entry>
   <entry id="es59">
     <gl>flower</gl>
     <spell>flor</spell>
-    <hw>/floɾ/</hw>
+    <hw>floɾ</hw>
   </entry>
   <entry id="es60">
     <gl>grass</gl>
     <spell>hierba</spell>
-    <hw>/ˈʝeɾβa/</hw>
+    <hw>ˈʝeɾβa</hw>
   </entry>
   <entry id="es61">
     <gl>rope</gl>
     <spell>cuerda</spell>
-    <hw>/ˈkweɾða/</hw>
+    <hw>ˈkweɾða</hw>
   </entry>
   <entry id="es62">
     <gl>skin</gl>
     <spell>piel</spell>
-    <hw>/pjel/</hw>
+    <hw>pjel</hw>
   </entry>
   <entry id="es63">
     <gl>meat</gl>
     <spell>carne</spell>
-    <hw>/ˈkaɾne/</hw>
+    <hw>ˈkaɾne</hw>
   </entry>
   <entry id="es64">
     <gl>blood</gl>
     <spell>sangre</spell>
-    <hw>/ˈsaŋɡɾe/</hw>
+    <hw>ˈsaŋɡɾe</hw>
   </entry>
   <entry id="es65">
     <gl>bone</gl>
     <spell>hueso</spell>
-    <hw>/ˈweso/</hw>
+    <hw>ˈweso</hw>
   </entry>
   <entry id="es66">
     <gl>fat (noun)</gl>
     <spell>grasa</spell>
-    <hw>/ˈɡɾasa/</hw>
+    <hw>ˈɡɾasa</hw>
   </entry>
   <entry id="es67">
     <gl>egg</gl>
     <spell>huevo</spell>
-    <hw>/ˈweβo/</hw>
+    <hw>ˈweβo</hw>
   </entry>
   <entry id="es68">
     <gl>horn</gl>
     <spell>cuerno</spell>
-    <hw>/ˈkweɾno/</hw>
+    <hw>ˈkweɾno</hw>
   </entry>
   <entry id="es69">
     <gl>tail</gl>
     <spell>cola</spell>
-    <hw>/ˈkola/</hw>
+    <hw>ˈkola</hw>
   </entry>
   <entry id="es70">
     <gl>feather</gl>
     <spell>pluma</spell>
-    <hw>/ˈpluma/</hw>
+    <hw>ˈpluma</hw>
   </entry>
   <entry id="es71">
     <gl>hair</gl>
     <spell>cabello</spell>
-    <hw>/kaˈβeʎo/</hw>
+    <hw>kaˈβeʎo</hw>
   </entry>
   <entry id="es72">
     <gl>head</gl>
     <spell>cabeza</spell>
-    <hw>/kaˈβeθa/</hw>
+    <hw>kaˈβeθa</hw>
   </entry>
   <entry id="es73">
     <gl>ear</gl>
     <spell>oreja</spell>
-    <hw>/oˈɾexa/</hw>
+    <hw>oˈɾexa</hw>
   </entry>
   <entry id="es74">
     <gl>eye</gl>
     <spell>ojo</spell>
-    <hw>/ˈoxo/</hw>
+    <hw>ˈoxo</hw>
   </entry>
   <entry id="es75">
     <gl>nose</gl>
     <spell>nariz</spell>
-    <hw>/naˈɾiθ/</hw>
+    <hw>naˈɾiθ</hw>
   </entry>
   <entry id="es76">
     <gl>mouth</gl>
     <spell>boca</spell>
-    <hw>/ˈboka/</hw>
+    <hw>ˈboka</hw>
   </entry>
   <entry id="es77">
     <gl>tooth</gl>
     <spell>diente</spell>
-    <hw>/ˈdjente/</hw>
+    <hw>ˈdjente</hw>
   </entry>
   <entry id="es78">
     <gl>tongue</gl>
     <spell>lengua</spell>
-    <hw>/ˈleŋɡwa/</hw>
+    <hw>ˈleŋɡwa</hw>
   </entry>
   <entry id="es79">
     <gl>fingernail</gl>
     <spell>uña</spell>
-    <hw>/ˈuɲa/</hw>
+    <hw>ˈuɲa</hw>
   </entry>
   <entry id="es80">
     <gl>foot</gl>
     <spell>pie</spell>
-    <hw>/pje/</hw>
+    <hw>pje</hw>
   </entry>
   <entry id="es81">
     <gl>leg</gl>
     <spell>pierna</spell>
-    <hw>/ˈpjeɾna/</hw>
+    <hw>ˈpjeɾna</hw>
   </entry>
   <entry id="es82">
     <gl>knee</gl>
     <spell>rodilla</spell>
-    <hw>/roˈðiʎa/</hw>
+    <hw>roˈðiʎa</hw>
   </entry>
   <entry id="es83">
     <gl>hand</gl>
     <spell>mano</spell>
-    <hw>/ˈmano/</hw>
+    <hw>ˈmano</hw>
   </entry>
   <entry id="es84">
     <gl>wing</gl>
     <spell>ala</spell>
-    <hw>/ˈala/</hw>
+    <hw>ˈala</hw>
   </entry>
   <entry id="es85">
     <gl>belly</gl>
     <spell>barriga</spell>
-    <hw>/baˈriɣa/</hw>
+    <hw>baˈriɣa</hw>
   </entry>
   <entry id="es86">
     <gl>guts</gl>
     <spell>tripas</spell>
-    <hw>/ˈtɾipas/</hw>
+    <hw>ˈtɾipas</hw>
   </entry>
   <entry id="es87">
     <gl>neck</gl>
     <spell>cuello</spell>
-    <hw>/ˈkweʎo/</hw>
+    <hw>ˈkweʎo</hw>
   </entry>
   <entry id="es88">
     <gl>back</gl>
     <spell>espalda</spell>
-    <hw>/esˈpalda/</hw>
+    <hw>esˈpalda</hw>
   </entry>
   <entry id="es89">
     <gl>breast</gl>
     <spell>pecho</spell>
-    <hw>/ˈpet͡ʃo/</hw>
+    <hw>ˈpet͡ʃo</hw>
   </entry>
   <entry id="es90">
     <gl>heart</gl>
     <spell>corazón</spell>
-    <hw>/koɾaˈθon/</hw>
+    <hw>koɾaˈθon</hw>
   </entry>
   <entry id="es91">
     <gl>liver</gl>
     <spell>hígado</spell>
-    <hw>/ˈiɣaðo/</hw>
+    <hw>ˈiɣaðo</hw>
   </entry>
   <entry id="es92">
     <gl>to drink</gl>
     <spell>beber</spell>
-    <hw>/beˈβeɾ/</hw>
+    <hw>beˈβeɾ</hw>
   </entry>
   <entry id="es93">
     <gl>to eat</gl>
     <spell>comer</spell>
-    <hw>/koˈmeɾ/</hw>
+    <hw>koˈmeɾ</hw>
   </entry>
   <entry id="es94">
     <gl>to bite</gl>
     <spell>morder</spell>
-    <hw>/moɾˈðeɾ/</hw>
+    <hw>moɾˈðeɾ</hw>
   </entry>
   <entry id="es95">
     <gl>to suck</gl>
     <spell>chupar</spell>
-    <hw>/t͡ʃuˈpaɾ/</hw>
+    <hw>t͡ʃuˈpaɾ</hw>
   </entry>
   <entry id="es96">
     <gl>to spit</gl>
     <spell>escupir</spell>
-    <hw>/eskuˈpiɾ/</hw>
+    <hw>eskuˈpiɾ</hw>
   </entry>
   <entry id="es97">
     <gl>to vomit</gl>
     <spell>vomitar</spell>
-    <hw>/bomiˈtaɾ/</hw>
+    <hw>bomiˈtaɾ</hw>
   </entry>
   <entry id="es98">
     <gl>to blow</gl>
     <spell>soplar</spell>
-    <hw>/soˈplaɾ/</hw>
+    <hw>soˈplaɾ</hw>
   </entry>
   <entry id="es99">
     <gl>to breathe</gl>
     <spell>respirar</spell>
-    <hw>/respiˈɾaɾ/</hw>
+    <hw>respiˈɾaɾ</hw>
   </entry>
   <entry id="es100">
     <gl>to laugh</gl>
     <spell>reír</spell>
-    <hw>/reˈiɾ/</hw>
+    <hw>reˈiɾ</hw>
   </entry>
   <entry id="es101">
     <gl>to see</gl>
     <spell>ver</spell>
-    <hw>/beɾ/</hw>
+    <hw>beɾ</hw>
   </entry>
   <entry id="es102">
     <gl>to hear</gl>
     <spell>oír</spell>
-    <hw>/oˈiɾ/</hw>
+    <hw>oˈiɾ</hw>
   </entry>
   <entry id="es103">
     <gl>to know</gl>
     <spell>saber</spell>
-    <hw>/saˈβeɾ/</hw>
+    <hw>saˈβeɾ</hw>
   </entry>
   <entry id="es104">
     <gl>to think</gl>
     <spell>pensar</spell>
-    <hw>/penˈsaɾ/</hw>
+    <hw>penˈsaɾ</hw>
   </entry>
   <entry id="es105">
     <gl>to smell</gl>
     <spell>oler</spell>
-    <hw>/oˈleɾ/</hw>
+    <hw>oˈleɾ</hw>
   </entry>
   <entry id="es106">
     <gl>to fear</gl>
     <spell>temer</spell>
-    <hw>/teˈmeɾ/</hw>
+    <hw>teˈmeɾ</hw>
   </entry>
   <entry id="es107">
     <gl>to sleep</gl>
     <spell>dormir</spell>
-    <hw>/doɾˈmiɾ/</hw>
+    <hw>doɾˈmiɾ</hw>
   </entry>
   <entry id="es108">
     <gl>to live</gl>
     <spell>vivir</spell>
-    <hw>/biˈβiɾ/</hw>
+    <hw>biˈβiɾ</hw>
   </entry>
   <entry id="es109">
     <gl>to die</gl>
     <spell>morir</spell>
-    <hw>/moˈɾiɾ/</hw>
+    <hw>moˈɾiɾ</hw>
   </entry>
   <entry id="es110">
     <gl>to kill</gl>
     <spell>matar</spell>
-    <hw>/maˈtaɾ/</hw>
+    <hw>maˈtaɾ</hw>
   </entry>
   <entry id="es111">
     <gl>to fight</gl>
     <spell>pelear</spell>
-    <hw>/peleˈaɾ/</hw>
+    <hw>peleˈaɾ</hw>
   </entry>
   <entry id="es112">
     <gl>to hunt</gl>
     <spell>cazar</spell>
-    <hw>/kaˈθaɾ/</hw>
+    <hw>kaˈθaɾ</hw>
   </entry>
   <entry id="es113">
     <gl>to hit</gl>
     <spell>golpear</spell>
-    <hw>/ɡolpeˈaɾ/</hw>
+    <hw>ɡolpeˈaɾ</hw>
   </entry>
   <entry id="es114">
     <gl>to cut</gl>
     <spell>cortar</spell>
-    <hw>/koɾˈtaɾ/</hw>
+    <hw>koɾˈtaɾ</hw>
   </entry>
   <entry id="es115">
     <gl>to split</gl>
     <spell>partir</spell>
-    <hw>/paɾˈtiɾ/</hw>
+    <hw>paɾˈtiɾ</hw>
   </entry>
   <entry id="es116">
     <gl>to stab</gl>
     <spell>apuñalar</spell>
-    <hw>/apuɲaˈlaɾ/</hw>
+    <hw>apuɲaˈlaɾ</hw>
   </entry>
   <entry id="es117">
     <gl>to scratch</gl>
     <spell>arañar, rascar</spell>
-    <hw>/aɾaˈɲaɾ/, /rasˈkaɾ/</hw>
+    <hw>aɾaˈɲaɾ/, /rasˈkaɾ</hw>
   </entry>
   <entry id="es118">
     <gl>to dig</gl>
     <spell>cavar</spell>
-    <hw>/kaˈβaɾ/</hw>
+    <hw>kaˈβaɾ</hw>
   </entry>
   <entry id="es119">
     <gl>to swim</gl>
     <spell>nadar</spell>
-    <hw>/naˈðaɾ/</hw>
+    <hw>naˈðaɾ</hw>
   </entry>
   <entry id="es120">
     <gl>to fly</gl>
     <spell>volar</spell>
-    <hw>/boˈlaɾ/</hw>
+    <hw>boˈlaɾ</hw>
   </entry>
   <entry id="es121">
     <gl>to walk</gl>
     <spell>caminar</spell>
-    <hw>/kamiˈnaɾ/</hw>
+    <hw>kamiˈnaɾ</hw>
   </entry>
   <entry id="es122">
     <gl>to come</gl>
     <spell>venir</spell>
-    <hw>/beˈniɾ/</hw>
+    <hw>beˈniɾ</hw>
   </entry>
   <entry id="es123">
     <gl>to lie (as in a bed)</gl>
     <spell>echarse (action)</spell>
-    <hw>/eˈt͡ʃaɾse/</hw>
+    <hw>eˈt͡ʃaɾse</hw>
   </entry>
   <entry id="es124">
     <gl>to sit</gl>
     <spell>sentarse (action)</spell>
-    <hw>/senˈtaɾse/</hw>
+    <hw>senˈtaɾse</hw>
   </entry>
   <entry id="es125">
     <gl>to stand</gl>
-    <spell>levantarse (action), estar de pie (state)</spell>
-    <hw>/leβanˈtaɾse/, /esˈtaɾ/ /de/ /pje/</hw>
+    <spell>levantarse (action))</spell>
+    <hw>leβanˈtaɾse</hw>
+  </entry>
+  <entry id="es125.5">
+    <gl>to stand</gl>
+    <spell>estar de pie (state)</spell>
+    <hw>esˈtaɾ de pje</hw>
   </entry>
   <entry id="es126">
     <gl>to turn (intransitive)</gl>
     <spell>girar</spell>
-    <hw>/xiˈɾaɾ/</hw>
+    <hw>xiˈɾaɾ</hw>
   </entry>
   <entry id="es127">
     <gl>to fall</gl>
     <spell>caer</spell>
-    <hw>/kaˈeɾ/</hw>
+    <hw>kaˈeɾ</hw>
   </entry>
   <entry id="es128">
     <gl>to give</gl>
     <spell>dar</spell>
-    <hw>/daɾ/</hw>
+    <hw>daɾ</hw>
   </entry>
   <entry id="es129">
     <gl>to hold</gl>
     <spell>tener</spell>
-    <hw>/teˈneɾ/</hw>
+    <hw>teˈneɾ</hw>
   </entry>
   <entry id="es130">
     <gl>to squeeze</gl>
     <spell>apretar</spell>
-    <hw>/apɾeˈtaɾ/</hw>
+    <hw>apɾeˈtaɾ</hw>
   </entry>
   <entry id="es131">
     <gl>to rub</gl>
     <spell>frotar</spell>
-    <hw>/fɾoˈtaɾ/</hw>
+    <hw>fɾoˈtaɾ</hw>
   </entry>
   <entry id="es132">
     <gl>to wash</gl>
     <spell>lavar</spell>
-    <hw>/laˈβaɾ/</hw>
+    <hw>laˈβaɾ</hw>
   </entry>
   <entry id="es133">
     <gl>to wipe</gl>
     <spell>limpiar</spell>
-    <hw>/limˈpjaɾ/</hw>
+    <hw>limˈpjaɾ</hw>
   </entry>
   <entry id="es134">
     <gl>to pull</gl>
-    <spell>tirar de, jalar</spell>
-    <hw>/tiˈɾaɾ/ /de/, /xaˈlaɾ/</hw>
+    <spell>tirar de</spell>
+    <hw>tiˈɾaɾ deɾ</hw>
+  </entry>
+  <entry id="es134.5">
+    <gl>to pull</gl>
+    <spell>jalar</spell>
+    <hw>xaˈlaɾ</hw>
   </entry>
   <entry id="es135">
     <gl>to push</gl>
     <spell>empujar</spell>
-    <hw>/empuˈxaɾ/</hw>
+    <hw>empuˈxaɾ</hw>
   </entry>
   <entry id="es136">
     <gl>to throw</gl>
     <spell>tirar</spell>
-    <hw>/tiˈɾaɾ/</hw>
+    <hw>tiˈɾaɾ</hw>
   </entry>
   <entry id="es137">
     <gl>to tie</gl>
     <spell>atar</spell>
-    <hw>/aˈtaɾ/</hw>
+    <hw>aˈtaɾ</hw>
   </entry>
   <entry id="es138">
     <gl>to sew</gl>
     <spell>coser</spell>
-    <hw>/koˈseɾ/</hw>
+    <hw>koˈseɾ</hw>
   </entry>
   <entry id="es139">
     <gl>to count</gl>
     <spell>contar</spell>
-    <hw>/konˈtaɾ/</hw>
+    <hw>konˈtaɾ</hw>
   </entry>
   <entry id="es140">
     <gl>to say</gl>
     <spell>decir</spell>
-    <hw>/deˈθiɾ/</hw>
+    <hw>deˈθiɾ</hw>
   </entry>
   <entry id="es141">
     <gl>to sing</gl>
     <spell>cantar</spell>
-    <hw>/kanˈtaɾ/</hw>
+    <hw>kanˈtaɾ</hw>
   </entry>
   <entry id="es142">
     <gl>to play</gl>
     <spell>jugar</spell>
-    <hw>/xuˈɣaɾ/</hw>
+    <hw>xuˈɣaɾ</hw>
   </entry>
   <entry id="es143">
     <gl>to float</gl>
     <spell>flotar</spell>
-    <hw>/floˈtaɾ/</hw>
+    <hw>floˈtaɾ</hw>
   </entry>
   <entry id="es144">
     <gl>to flow</gl>
     <spell>fluir</spell>
-    <hw>/fluˈiɾ/</hw>
+    <hw>fluˈiɾ</hw>
   </entry>
   <entry id="es145">
     <gl>to freeze</gl>
     <spell>helar</spell>
-    <hw>/eˈlaɾ/</hw>
+    <hw>eˈlaɾ</hw>
   </entry>
   <entry id="es146">
     <gl>to swell</gl>
     <spell>hincharse</spell>
-    <hw>/inˈt͡ʃaɾse/</hw>
+    <hw>inˈt͡ʃaɾse</hw>
   </entry>
   <entry id="es147">
     <gl>sun</gl>
     <spell>sol</spell>
-    <hw>/sol/</hw>
+    <hw>sol</hw>
   </entry>
   <entry id="es148">
     <gl>moon</gl>
     <spell>luna</spell>
-    <hw>/ˈluna/</hw>
+    <hw>ˈluna</hw>
   </entry>
   <entry id="es149">
     <gl>star</gl>
     <spell>estrella</spell>
-    <hw>/esˈtɾeʎa/</hw>
+    <hw>esˈtɾeʎa</hw>
   </entry>
   <entry id="es150">
     <gl>water</gl>
     <spell>agua</spell>
-    <hw>/ˈaɣwa/</hw>
+    <hw>ˈaɣwa</hw>
   </entry>
   <entry id="es151">
     <gl>rain</gl>
     <spell>lluvia</spell>
-    <hw>/ˈʎuβja/</hw>
+    <hw>ˈʎuβja</hw>
   </entry>
   <entry id="es152">
     <gl>river</gl>
     <spell>río</spell>
-    <hw>/ˈrio/</hw>
+    <hw>ˈrio</hw>
   </entry>
   <entry id="es153">
     <gl>lake</gl>
     <spell>lago</spell>
-    <hw>/ˈlaɣo/</hw>
+    <hw>ˈlaɣo</hw>
   </entry>
   <entry id="es154">
     <gl>sea</gl>
     <spell>mar</spell>
-    <hw>/maɾ/</hw>
+    <hw>maɾ</hw>
   </entry>
   <entry id="es155">
     <gl>salt</gl>
     <spell>sal</spell>
-    <hw>/sal/</hw>
+    <hw>sal</hw>
   </entry>
   <entry id="es156">
     <gl>stone</gl>
     <spell>piedra</spell>
-    <hw>/ˈpjeðɾa/</hw>
+    <hw>ˈpjeðɾa</hw>
   </entry>
   <entry id="es157">
     <gl>sand</gl>
     <spell>arena</spell>
-    <hw>/aˈɾena/</hw>
+    <hw>aˈɾena</hw>
   </entry>
   <entry id="es158">
     <gl>dust</gl>
     <spell>polvo</spell>
-    <hw>/ˈpolβo/</hw>
+    <hw>ˈpolβo</hw>
   </entry>
   <entry id="es159">
     <gl>earth</gl>
     <spell>tierra</spell>
-    <hw>/ˈtjera/</hw>
+    <hw>ˈtjera</hw>
   </entry>
   <entry id="es160">
     <gl>cloud</gl>
     <spell>nube</spell>
-    <hw>/ˈnuβe/</hw>
+    <hw>ˈnuβe</hw>
   </entry>
   <entry id="es161">
     <gl>fog</gl>
     <spell>niebla</spell>
-    <hw>/ˈnjeβla/</hw>
+    <hw>ˈnjeβla</hw>
   </entry>
   <entry id="es162">
     <gl>sky</gl>
     <spell>cielo</spell>
-    <hw>/ˈθjelo/</hw>
+    <hw>ˈθjelo</hw>
   </entry>
   <entry id="es163">
     <gl>wind</gl>
     <spell>viento</spell>
-    <hw>/ˈbjento/</hw>
+    <hw>ˈbjento</hw>
   </entry>
   <entry id="es164">
     <gl>snow</gl>
     <spell>nieve</spell>
-    <hw>/ˈnjeβe/</hw>
+    <hw>ˈnjeβe</hw>
   </entry>
   <entry id="es165">
     <gl>ice</gl>
     <spell>hielo</spell>
-    <hw>/ˈjelo/</hw>
+    <hw>ˈjelo</hw>
   </entry>
   <entry id="es166">
     <gl>smoke</gl>
     <spell>humo</spell>
-    <hw>/ˈumo/</hw>
+    <hw>ˈumo</hw>
   </entry>
   <entry id="es167">
     <gl>fire</gl>
     <spell>fuego</spell>
-    <hw>/ˈfweɣo/</hw>
+    <hw>ˈfweɣo</hw>
   </entry>
   <entry id="es168">
     <gl>ash</gl>
     <spell>cenizas</spell>
-    <hw>/θeˈniθas/</hw>
+    <hw>θeˈniθas</hw>
   </entry>
   <entry id="es169">
     <gl>to burn</gl>
     <spell>quemar</spell>
-    <hw>/keˈmaɾ/</hw>
+    <hw>keˈmaɾ</hw>
   </entry>
   <entry id="es170">
     <gl>road</gl>
     <spell>camino</spell>
-    <hw>/kaˈmino/</hw>
+    <hw>kaˈmino</hw>
   </entry>
   <entry id="es171">
     <gl>mountain</gl>
     <spell>montaña</spell>
-    <hw>/monˈtaɲa/</hw>
+    <hw>monˈtaɲa</hw>
   </entry>
   <entry id="es172">
     <gl>red</gl>
     <spell>rojo</spell>
-    <hw>/ˈroxo/</hw>
+    <hw>ˈroxo</hw>
   </entry>
   <entry id="es173">
     <gl>green</gl>
     <spell>verde</spell>
-    <hw>/ˈbeɾðe/</hw>
+    <hw>ˈbeɾðe</hw>
   </entry>
   <entry id="es174">
     <gl>yellow</gl>
     <spell>amarillo</spell>
-    <hw>/amaˈɾiʎo/</hw>
+    <hw>amaˈɾiʎo</hw>
   </entry>
   <entry id="es175">
     <gl>white</gl>
     <spell>blanco</spell>
-    <hw>/ˈblaŋko/</hw>
+    <hw>ˈblaŋko</hw>
   </entry>
   <entry id="es176">
     <gl>black</gl>
     <spell>negro</spell>
-    <hw>/ˈneɣɾo/</hw>
+    <hw>ˈneɣɾo</hw>
   </entry>
   <entry id="es177">
     <gl>night</gl>
     <spell>noche</spell>
-    <hw>/ˈnot͡ʃe/</hw>
+    <hw>ˈnot͡ʃe</hw>
   </entry>
   <entry id="es178">
     <gl>day</gl>
     <spell>día</spell>
-    <hw>/ˈdia/</hw>
+    <hw>ˈdia</hw>
   </entry>
   <entry id="es179">
     <gl>year</gl>
     <spell>año</spell>
-    <hw>/ˈaɲo/</hw>
+    <hw>ˈaɲo</hw>
   </entry>
   <entry id="es180">
     <gl>warm</gl>
     <spell>cálido</spell>
-    <hw>/ˈkaliðo/</hw>
+    <hw>ˈkaliðo</hw>
   </entry>
   <entry id="es181">
     <gl>cold</gl>
     <spell>frío</spell>
-    <hw>/ˈfɾio/</hw>
+    <hw>ˈfɾio</hw>
   </entry>
   <entry id="es182">
     <gl>full</gl>
     <spell>lleno</spell>
-    <hw>/ˈʎeno/</hw>
+    <hw>ˈʎeno</hw>
   </entry>
   <entry id="es183">
     <gl>new</gl>
     <spell>nuevo</spell>
-    <hw>/ˈnweβo/</hw>
+    <hw>ˈnweβo</hw>
   </entry>
   <entry id="es184">
     <gl>old</gl>
     <spell>viejo</spell>
-    <hw>/ˈbjexo/</hw>
+    <hw>ˈbjexo</hw>
   </entry>
   <entry id="es185">
     <gl>good</gl>
     <spell>bueno</spell>
-    <hw>/ˈbweno/</hw>
+    <hw>ˈbweno</hw>
   </entry>
   <entry id="es186">
     <gl>bad</gl>
     <spell>malo</spell>
-    <hw>/ˈmalo/</hw>
+    <hw>ˈmalo</hw>
   </entry>
   <entry id="es187">
     <gl>rotten</gl>
     <spell>podrido</spell>
-    <hw>/poðˈɾiðo/</hw>
+    <hw>poðˈɾiðo</hw>
   </entry>
   <entry id="es188">
     <gl>dirty</gl>
     <spell>sucio</spell>
-    <hw>/ˈsuθjo/</hw>
+    <hw>ˈsuθjo</hw>
   </entry>
   <entry id="es189">
     <gl>straight</gl>
     <spell>recto</spell>
-    <hw>/ˈrekto/</hw>
+    <hw>ˈrekto</hw>
   </entry>
   <entry id="es190">
     <gl>round</gl>
     <spell>redondo</spell>
-    <hw>/reˈðondo/</hw>
+    <hw>reˈðondo</hw>
   </entry>
   <entry id="es191">
     <gl>sharp (as a knife)</gl>
-    <spell>agudo, afilado</spell>
-    <hw>/aˈɣuðo/, /afiˈlaðo/</hw>
+    <spell>agudo</spell>
+    <hw>aˈɣuðo</hw>
+  </entry>
+  <entry id="es191.5">
+    <gl>sharp (as a knife)</gl>
+    <spell> afilado</spell>
+    <hw>afiˈlaðo</hw>
   </entry>
   <entry id="es192">
     <gl>dull (as a knife)</gl>
-    <spell>sin filo, embotado, romo</spell>
-    <hw>/sinˈfilo/, /emboˈtaðo/, /ˈromo/</hw>
+    <spell>sin filo</spell>
+    <hw>sinˈfilo</hw>
+  </entry>
+  <entry id="es192.1">
+    <gl>dull (as a knife)</gl>
+    <spell>embotado</spell>
+    <hw>emboˈtaðo</hw>
+  </entry>
+  <entry id="es192.2">
+    <gl>dull (as a knife)</gl>
+    <spell>romo</spell>
+    <hw>ˈromo</hw>
   </entry>
   <entry id="es193">
     <gl>smooth</gl>
     <spell>liso</spell>
-    <hw>/lˈiso/</hw>
+    <hw>'liso</hw>
   </entry>
   <entry id="es194">
     <gl>wet</gl>
     <spell>mojado</spell>
-    <hw>/moˈxaðo/</hw>
+    <hw>moˈxaðo</hw>
   </entry>
   <entry id="es195">
     <gl>dry</gl>
     <spell>seco</spell>
-    <hw>/ˈseko/</hw>
+    <hw>ˈseko</hw>
   </entry>
   <entry id="es196">
     <gl>correct</gl>
     <spell>correcto</spell>
-    <hw>/koˈrekto/</hw>
+    <hw>koˈrekto</hw>
   </entry>
   <entry id="es197">
     <gl>near</gl>
     <spell>cerca</spell>
-    <hw>/ˈθeɾka/</hw>
+    <hw>ˈθeɾka</hw>
   </entry>
   <entry id="es198">
     <gl>far</gl>
     <spell>lejos</spell>
-    <hw>/ˈlexos/</hw>
+    <hw>ˈlexos</hw>
   </entry>
   <entry id="es199">
     <gl>right</gl>
     <spell>derecha</spell>
-    <hw>/deˈɾet͡ʃa/</hw>
+    <hw>deˈɾet͡ʃa</hw>
   </entry>
   <entry id="es200">
     <gl>left</gl>
     <spell>izquierda</spell>
-    <hw>/iθˈkjeɾða/</hw>
+    <hw>iθˈkjeɾða</hw>
   </entry>
   <entry id="es201">
     <gl>at</gl>
-    <spell>a, en</spell>
-    <hw>/a/, /en/</hw>
+    <spell>a</spell>
+    <hw>a</hw>
+  </entry>
+  <entry id="es201.5">
+    <gl>at</gl>
+    <spell>en</spell>
+    <hw>en</hw>
   </entry>
   <entry id="es202">
     <gl>in</gl>
     <spell>en</spell>
-    <hw>/en/</hw>
+    <hw>en</hw>
   </entry>
   <entry id="es203">
     <gl>with</gl>
     <spell>con</spell>
-    <hw>/kon/</hw>
+    <hw>kon</hw>
   </entry>
   <entry id="es204">
     <gl>and</gl>
     <spell>y, e</spell>
-    <hw>/i/, /e/</hw>
+    <hw>i</hw>
   </entry>
   <entry id="es205">
     <gl>if</gl>
     <spell>si</spell>
-    <hw>/si/</hw>
+    <hw>si</hw>
   </entry>
   <entry id="es206">
     <gl>because</gl>
     <spell>porque</spell>
-    <hw>/ˈpoɾke/</hw>
+    <hw>ˈpoɾke</hw>
   </entry>
   <entry id="es207">
     <gl>name</gl>
     <spell>nombre</spell>
-    <hw>/ˈnombɾe/</hw>
+    <hw>ˈnombɾe</hw>
   </entry>
 </lexicon>
