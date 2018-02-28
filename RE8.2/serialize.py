@@ -10,10 +10,12 @@ def serialize_correspondence_file(filename, parameters):
                   value=syllable_canon.regex.pattern)
     for correspondence in parameters.table.correspondences:
         corr = ET.SubElement(root, 'corr', num=correspondence.id)
-        ET.SubElement(corr, 'proto',
-                      contextL=correspondence.context[0] or '',
-                      contextR=correspondence.context[1] or '',
-                      syll=correspondence.syllable_type).text = \
+        attributes = {'syll': correspondence.syllable_type}
+        if correspondence.context[0]:
+            attributes['contextL'] = correspondence.context[0]
+        if correspondence.context[1]:
+            attributes['contextR'] = correspondence.context[1]
+        ET.SubElement(corr, 'proto', **attributes).text = \
             correspondence.proto_form
         for language, forms in correspondence.daughter_forms.items():
             modern = ET.SubElement(corr, 'modern', dialecte=language)
