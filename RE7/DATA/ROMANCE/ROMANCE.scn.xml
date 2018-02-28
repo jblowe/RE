@@ -1,0 +1,1037 @@
+<lexicon dialecte="scn">
+  <entry id="scn1">
+    <gl>I</gl>
+    <spell>iu, jo, ju, joni</spell>
+    <hw>ˈiu, ˈjɔ, ˈju, ˈjɔnɪ</hw>
+  </entry>
+  <entry id="scn2">
+    <gl>you (singular)</gl>
+    <spell>tu, tuni, Vossìa (formal)</spell>
+    <hw>t̪u, ˈt̪unɪ, vɔsˈsia</hw>
+  </entry>
+  <entry id="scn3">
+    <gl>he</gl>
+    <spell>iddu</spell>
+    <hw>ˈiɖɖʊ</hw>
+  </entry>
+  <entry id="scn4">
+    <gl>we</gl>
+    <spell>nuàutri</spell>
+    <hw>nuˈawʈɹɪ</hw>
+  </entry>
+  <entry id="scn5">
+    <gl>you (plural)</gl>
+    <spell>vuàutri</spell>
+    <hw>ˈvuˈawʈɹɪ</hw>
+  </entry>
+  <entry id="scn6">
+    <gl>they</gl>
+    <spell>iddi</spell>
+    <hw>ˈiɖɖɪ</hw>
+  </entry>
+  <entry id="scn7">
+    <gl>this</gl>
+    <spell>chistu</spell>
+    <hw>ˈkiʃt̪ʊ, ˈkist̪ʊ</hw>
+  </entry>
+  <entry id="scn8">
+    <gl>that</gl>
+    <spell>chiddu</spell>
+    <hw>ˈkiɖɖʊ</hw>
+  </entry>
+  <entry id="scn9">
+    <gl>here</gl>
+    <spell>ccà, ccani</spell>
+    <hw>ˈkka, ˈkkanɪ</hw>
+  </entry>
+  <entry id="scn10">
+    <gl>there</gl>
+    <spell>ddà, ddani, ddocu</spell>
+    <hw>ˈɖɖa, ˈɖɖanɪ, ˈɖɖɔkʊ</hw>
+  </entry>
+  <entry id="scn11">
+    <gl>who</gl>
+    <spell>cui</spell>
+    <hw>ˈkuɪ</hw>
+  </entry>
+  <entry id="scn12">
+    <gl>what</gl>
+    <spell>chi</spell>
+    <hw>ˈki</hw>
+  </entry>
+  <entry id="scn13">
+    <gl>where</gl>
+    <spell>unni</spell>
+    <hw>ˈunnɪ</hw>
+  </entry>
+  <entry id="scn14">
+    <gl>when</gl>
+    <spell>quannu</spell>
+    <hw>ˈkwannʊ</hw>
+  </entry>
+  <entry id="scn15">
+    <gl>how</gl>
+    <spell>comu</spell>
+    <hw>ˈkomʊ</hw>
+  </entry>
+  <entry id="scn16">
+    <gl>not</gl>
+    <spell>nun</spell>
+    <hw>ˈnũn</hw>
+  </entry>
+  <entry id="scn17">
+    <gl>all</gl>
+    <spell>tuttu</spell>
+    <hw>ˈt̪ut̪t̪ʊ</hw>
+  </entry>
+  <entry id="scn18">
+    <gl>many</gl>
+    <spell>tantu, troppu, assai</spell>
+    <hw>ˈt̪ãnt̪ʊ, ˈʈɹɔppʊ, asˈsaɪ</hw>
+  </entry>
+  <entry id="scn19">
+    <gl>some</gl>
+    <spell>quarchi</spell>
+    <hw>ˈkwaɾkɪ</hw>
+  </entry>
+  <entry id="scn20">
+    <gl>few</gl>
+    <spell>pocu, picca</spell>
+    <hw>ˈpɔkʊ, ˈpikka</hw>
+  </entry>
+  <entry id="scn21">
+    <gl>other</gl>
+    <spell>àutru</spell>
+    <hw>ˈawʈɹʊ</hw>
+  </entry>
+  <entry id="scn22">
+    <gl>one</gl>
+    <spell>unu</spell>
+    <hw>ˈunʊ</hw>
+  </entry>
+  <entry id="scn23">
+    <gl>two</gl>
+    <spell>dui, dù</spell>
+    <hw>ˈd̪uɪ, ˈd̪u</hw>
+  </entry>
+  <entry id="scn24">
+    <gl>three</gl>
+    <spell>tri</spell>
+    <hw>ˈʈɹi</hw>
+  </entry>
+  <entry id="scn25">
+    <gl>four</gl>
+    <spell>quattru</spell>
+    <hw>ˈkwaʈʈɹʊ</hw>
+  </entry>
+  <entry id="scn26">
+    <gl>five</gl>
+    <spell>cincu</spell>
+    <hw>ˈɕĩŋkʊ</hw>
+  </entry>
+  <entry id="scn27">
+    <gl>big</gl>
+    <spell>granni</spell>
+    <hw>ˈɡɾannɪ</hw>
+  </entry>
+  <entry id="scn28">
+    <gl>long</gl>
+    <spell>longu</spell>
+    <hw>ˈlɔ̃ŋɡʊ</hw>
+  </entry>
+  <entry id="scn29">
+    <gl>wide</gl>
+    <spell>largu, làricu, anchiu</spell>
+    <hw>ˈlaɾɡʊ, ˈlaɾɪkʊ, ˈãŋkju</hw>
+  </entry>
+  <entry id="scn30">
+    <gl>thick</gl>
+    <spell>largu, nfutu</spell>
+    <hw>ˈlaɾɡʊ, ˈnfut̪ʊ</hw>
+  </entry>
+  <entry id="scn31">
+    <gl>heavy</gl>
+    <spell>pisanti</spell>
+    <hw>pɪˈsãnt̪ɪ</hw>
+  </entry>
+  <entry id="scn32">
+    <gl>small</gl>
+    <spell>nicu, picciriddu</spell>
+    <hw>ˈnikʊ, pɪt͡ʃt͡ʃɪˈɾiɖɖʊ</hw>
+  </entry>
+  <entry id="scn33">
+    <gl>short</gl>
+    <spell>curtu</spell>
+    <hw>ˈkuɾt̪ʊ</hw>
+  </entry>
+  <entry id="scn34">
+    <gl>narrow</gl>
+    <spell>strittu</spell>
+    <hw>ˈʃɹit̪t̪ʊ</hw>
+  </entry>
+  <entry id="scn35">
+    <gl>thin</gl>
+    <spell>suttili, finu</spell>
+    <hw>sʊˈt̪t̪ilɪ, ˈfinʊ</hw>
+  </entry>
+  <entry id="scn36">
+    <gl>woman</gl>
+    <spell>fìmmina</spell>
+    <hw>ˈfimmɪna</hw>
+  </entry>
+  <entry id="scn37">
+    <gl>man (male)</gl>
+    <spell>omu, màsculu</spell>
+    <hw>ˈɔmʊ, ˈmaʃkʊlʊ</hw>
+  </entry>
+  <entry id="scn38">
+    <gl>man (human)</gl>
+    <spell>omu, cristianu</spell>
+    <hw>ˈɔmʊ, kɾɪˈʃt̪janʊ</hw>
+  </entry>
+  <entry id="scn39">
+    <gl>child</gl>
+    <spell>picciriddu</spell>
+    <hw>pɪt͡ʃt͡ʃɪˈɾiɖɖʊ</hw>
+  </entry>
+  <entry id="scn40">
+    <gl>wife</gl>
+    <spell>mugghieri</spell>
+    <hw>mʊˈggjɛɾɪ</hw>
+  </entry>
+  <entry id="scn41">
+    <gl>husband</gl>
+    <spell>maritu</spell>
+    <hw>maˈrit̪ʊ</hw>
+  </entry>
+  <entry id="scn42">
+    <gl>mother</gl>
+    <spell>matri</spell>
+    <hw>ˈmaʈɹɪ</hw>
+  </entry>
+  <entry id="scn43">
+    <gl>father</gl>
+    <spell>patri</spell>
+    <hw>ˈpaʈɹɪ</hw>
+  </entry>
+  <entry id="scn44">
+    <gl>animal</gl>
+    <spell>armali, armalu</spell>
+    <hw>aɾˈmalɪ, aɾˈmalʊ</hw>
+  </entry>
+  <entry id="scn45">
+    <gl>fish</gl>
+    <spell>pisci</spell>
+    <hw>ˈpiʃʃɪ</hw>
+  </entry>
+  <entry id="scn46">
+    <gl>bird</gl>
+    <spell>aceddu</spell>
+    <hw>aˈɕɛɖɖʊ</hw>
+  </entry>
+  <entry id="scn47">
+    <gl>dog</gl>
+    <spell>cani</spell>
+    <hw>ˈkanɪ</hw>
+  </entry>
+  <entry id="scn48">
+    <gl>louse</gl>
+    <spell>pidocchiu</spell>
+    <hw>pɪˈd̪ɔkkjʊ</hw>
+  </entry>
+  <entry id="scn49">
+    <gl>snake</gl>
+    <spell>serpi</spell>
+    <hw>ˈsɛɾpɪ</hw>
+  </entry>
+  <entry id="scn50">
+    <gl>worm</gl>
+    <spell>vermi, vermu</spell>
+    <hw>ˈvɛɾmɪ, vɛɾmʊ</hw>
+  </entry>
+  <entry id="scn51">
+    <gl>tree</gl>
+    <spell>àrbiru, àrburu, àrvuru, àrbulu, àrvulu</spell>
+    <hw>ˈaɾbɪɾʊ, ˈaɾbʊɾʊ, ˈaɾvʊlʊ, ˈaɾbʊlʊ, ˈaɾvʊlʊ</hw>
+  </entry>
+  <entry id="scn52">
+    <gl>forest</gl>
+    <spell>furesta</spell>
+    <hw>fʊˈɾɛst̪a, ˈfʊˈɾɛʃt̪a</hw>
+  </entry>
+  <entry id="scn53">
+    <gl>stick</gl>
+    <spell>bastuni, vastuni</spell>
+    <hw>baˈst̪unɪ, baˈʃt̪unɪ, vaˈst̪unɪ, vaˈʃt̪unɪ</hw>
+  </entry>
+  <entry id="scn54">
+    <gl>fruit</gl>
+    <spell>frutta</spell>
+    <hw>ˈfɾut̪t̪a</hw>
+  </entry>
+  <entry id="scn55">
+    <gl>seed</gl>
+    <spell>simenza</spell>
+    <hw>sɪˈmɛ̃nt͡sa</hw>
+  </entry>
+  <entry id="scn56">
+    <gl>leaf</gl>
+    <spell>fogghia</spell>
+    <hw>ˈfɔɡɡja</hw>
+  </entry>
+  <entry id="scn57">
+    <gl>root</gl>
+    <spell>ràdica</spell>
+    <hw>raˈd̪ɪka</hw>
+  </entry>
+  <entry id="scn58">
+    <gl>bark (of a tree)</gl>
+    <spell>scorcia</spell>
+    <hw>ˈʃkɔɾt͡ʃa</hw>
+  </entry>
+  <entry id="scn59">
+    <gl>flower</gl>
+    <spell>ciuri</spell>
+    <hw>ˈçuɾɪ</hw>
+  </entry>
+  <entry id="scn60">
+    <gl>grass</gl>
+    <spell>erva</spell>
+    <hw>ˈɛɾva</hw>
+  </entry>
+  <entry id="scn61">
+    <gl>rope</gl>
+    <spell>corda</spell>
+    <hw>ˈkɔɾd̪a</hw>
+  </entry>
+  <entry id="scn62">
+    <gl>skin</gl>
+    <spell>peddi</spell>
+    <hw>ˈpɛɖɖɪ</hw>
+  </entry>
+  <entry id="scn63">
+    <gl>meat</gl>
+    <spell>carni</spell>
+    <hw>ˈkaɾnɪ</hw>
+  </entry>
+  <entry id="scn64">
+    <gl>blood</gl>
+    <spell>sangu</spell>
+    <hw>ˈsãŋgʊ</hw>
+  </entry>
+  <entry id="scn65">
+    <gl>bone</gl>
+    <spell>ossu</spell>
+    <hw>ˈɔssʊ</hw>
+  </entry>
+  <entry id="scn66">
+    <gl>fat (noun)</gl>
+    <spell>grassu, sivu</spell>
+    <hw>ˈɡɾassʊ, siˈvʊ</hw>
+  </entry>
+  <entry id="scn67">
+    <gl>egg</gl>
+    <spell>ovu</spell>
+    <hw>ˈɔvʊ</hw>
+  </entry>
+  <entry id="scn68">
+    <gl>horn</gl>
+    <spell>cornu</spell>
+    <hw>ˈkɔɾnʊ</hw>
+  </entry>
+  <entry id="scn69">
+    <gl>tail</gl>
+    <spell>cuda</spell>
+    <hw>ˈkud̪a</hw>
+  </entry>
+  <entry id="scn70">
+    <gl>feather</gl>
+    <spell>pinna</spell>
+    <hw>ˈpinna</hw>
+  </entry>
+  <entry id="scn71">
+    <gl>hair</gl>
+    <spell>capiddi</spell>
+    <hw>kaˈpiɖɖɪ</hw>
+  </entry>
+  <entry id="scn72">
+    <gl>head</gl>
+    <spell>testa, capu</spell>
+    <hw>ˈt̪ɛst̪a, ˈt̪ɛʃt̪a, ˈkapʊ</hw>
+  </entry>
+  <entry id="scn73">
+    <gl>ear</gl>
+    <spell>auricchia, aricchia</spell>
+    <hw>awˈɾikkja, aˈɾikkja</hw>
+  </entry>
+  <entry id="scn74">
+    <gl>eye</gl>
+    <spell>occhiu</spell>
+    <hw>ˈɔkkjʊ</hw>
+  </entry>
+  <entry id="scn75">
+    <gl>nose</gl>
+    <spell>nasu</spell>
+    <hw>ˈnasʊ</hw>
+  </entry>
+  <entry id="scn76">
+    <gl>mouth</gl>
+    <spell>bucca, vucca</spell>
+    <hw>ˈbukka, ˈvukka</hw>
+  </entry>
+  <entry id="scn77">
+    <gl>tooth</gl>
+    <spell>denti</spell>
+    <hw>ˈd̪ɛ̃nt̪ɪ</hw>
+  </entry>
+  <entry id="scn78">
+    <gl>tongue</gl>
+    <spell>lingua</spell>
+    <hw>ˈlĩŋɡwa</hw>
+  </entry>
+  <entry id="scn79">
+    <gl>fingernail</gl>
+    <spell>ugnu, ugna</spell>
+    <hw>ˈuɲɲʊ, ˈuɲɲa</hw>
+  </entry>
+  <entry id="scn80">
+    <gl>foot</gl>
+    <spell>pedi</spell>
+    <hw>ˈpɛd̪ɪ</hw>
+  </entry>
+  <entry id="scn81">
+    <gl>leg</gl>
+    <spell>gamma, jamma</spell>
+    <hw>ˈɡamma, ˈjamma</hw>
+  </entry>
+  <entry id="scn82">
+    <gl>knee</gl>
+    <spell>dinocchiu, jinocchiu</spell>
+    <hw>d̪ɪnɔkkjʊ, ˈjɪnɔkkjʊ</hw>
+  </entry>
+  <entry id="scn83">
+    <gl>hand</gl>
+    <spell>manu</spell>
+    <hw>ˈmanʊ</hw>
+  </entry>
+  <entry id="scn84">
+    <gl>wing</gl>
+    <spell>ala</spell>
+    <hw>ˈala</hw>
+  </entry>
+  <entry id="scn85">
+    <gl>belly</gl>
+    <spell>panza</spell>
+    <hw>ˈpãnt͡sa</hw>
+  </entry>
+  <entry id="scn86">
+    <gl>guts</gl>
+    <spell>budeddu, vudeddu</spell>
+    <hw>buˈd̪ɛɖɖʊ, vuˈd̪ɛɖɖʊ</hw>
+  </entry>
+  <entry id="scn87">
+    <gl>neck</gl>
+    <spell>coddu</spell>
+    <hw>ˈkɔɖɖʊ</hw>
+  </entry>
+  <entry id="scn88">
+    <gl>back</gl>
+    <spell>schina</spell>
+    <hw>ˈʃkina</hw>
+  </entry>
+  <entry id="scn89">
+    <gl>breast</gl>
+    <spell>pettu</spell>
+    <hw>ˈpɛttʊ</hw>
+  </entry>
+  <entry id="scn90">
+    <gl>heart</gl>
+    <spell>cori</spell>
+    <hw>ˈkɔɾɪ</hw>
+  </entry>
+  <entry id="scn91">
+    <gl>liver</gl>
+    <spell>fìcatu</spell>
+    <hw>ˈficat̪ʊ</hw>
+  </entry>
+  <entry id="scn92">
+    <gl>to drink</gl>
+    <spell>bìviri, vìviri</spell>
+    <hw>ˈbivɪɾɪ, ˈvivɪɾɪ</hw>
+  </entry>
+  <entry id="scn93">
+    <gl>to eat</gl>
+    <spell>manciari, pistiari</spell>
+    <hw>mãnˈt͡ʃaɾɪ, pɪˈst̪jaɾɪ, pɪʃt̪jaɾɪ</hw>
+  </entry>
+  <entry id="scn94">
+    <gl>to bite</gl>
+    <spell>muzzicari</spell>
+    <hw>mʊt͡st͡sɪˈkaɾɪ</hw>
+  </entry>
+  <entry id="scn95">
+    <gl>to suck</gl>
+    <spell>sucari</spell>
+    <hw>sʊˈkaɾɪ</hw>
+  </entry>
+  <entry id="scn96">
+    <gl>to spit</gl>
+    <spell>sputari, sputazzari</spell>
+    <hw>ʃpʊˈt̪aɾɪ, ʃpʊt̪aˈt͡st͡saɾɪ</hw>
+  </entry>
+  <entry id="scn97">
+    <gl>to vomit</gl>
+    <spell>vumitari, ruvisciari</spell>
+    <hw>vʊmɪˈt̪aɾɪ, rʊvɪˈʃʃaɾɪ</hw>
+  </entry>
+  <entry id="scn98">
+    <gl>to blow</gl>
+    <spell>ciuciari, sciusciari</spell>
+    <hw>çʊˈçaɾɪ</hw>
+  </entry>
+  <entry id="scn99">
+    <gl>to breathe</gl>
+    <spell>rispirari, ciatari</spell>
+    <hw>rɪʃpɪˈɾaɾɪ, çaˈt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn100">
+    <gl>to laugh</gl>
+    <spell>rìdiri, arrìdiri</spell>
+    <hw>ˈrid̪ɪɾɪ, aˈrrid̪ɪɾɪ</hw>
+  </entry>
+  <entry id="scn101">
+    <gl>to see</gl>
+    <spell>vìdiri</spell>
+    <hw>ˈvid̪ɪɾɪ</hw>
+  </entry>
+  <entry id="scn102">
+    <gl>to hear</gl>
+    <spell>sèntiri</spell>
+    <hw>ˈsɛ̃nt̪ɪɾɪ</hw>
+  </entry>
+  <entry id="scn103">
+    <gl>to know</gl>
+    <spell>sapiri</spell>
+    <hw>saˈpiɾɪ</hw>
+  </entry>
+  <entry id="scn104">
+    <gl>to think</gl>
+    <spell>pinzari</spell>
+    <hw>pɪ̃nt͡saɾɪ</hw>
+  </entry>
+  <entry id="scn105">
+    <gl>to smell</gl>
+    <spell>ciaurari</spell>
+    <hw>çawˈɾaɾɪ</hw>
+  </entry>
+  <entry id="scn106">
+    <gl>to fear</gl>
+    <spell>scantari</spell>
+    <hw>ʃkãnˈt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn107">
+    <gl>to sleep</gl>
+    <spell>dòrmiri</spell>
+    <hw>ˈdɔɾmɪɾɪ</hw>
+  </entry>
+  <entry id="scn108">
+    <gl>to live</gl>
+    <spell>vìviri</spell>
+    <hw>ˈvivɪɾɪ</hw>
+  </entry>
+  <entry id="scn109">
+    <gl>to die</gl>
+    <spell>mòriri</spell>
+    <hw>ˈmɔɾɪɾɪ</hw>
+  </entry>
+  <entry id="scn110">
+    <gl>to kill</gl>
+    <spell>ammazzari</spell>
+    <hw>ammaˈt͡st͡saɾɪ</hw>
+  </entry>
+  <entry id="scn111">
+    <gl>to fight</gl>
+    <spell>cummàttiri</spell>
+    <hw>kʊˈmmat̪t̪ɪɾɪ</hw>
+  </entry>
+  <entry id="scn112">
+    <gl>to hunt</gl>
+    <spell>cacciari</spell>
+    <hw>kaˈt͡ʃt͡ʃaɾɪ</hw>
+  </entry>
+  <entry id="scn113">
+    <gl>to hit</gl>
+    <spell>cafuddari, affirari</spell>
+    <hw>kafʊˈɖɖaɾɪ, affɪˈɾaɾɪ</hw>
+  </entry>
+  <entry id="scn114">
+    <gl>to cut</gl>
+    <spell>tagghiari</spell>
+    <hw>t̪aˈɡɡjaɾɪ</hw>
+  </entry>
+  <entry id="scn115">
+    <gl>to split</gl>
+    <spell>spàrtiri</spell>
+    <hw>ˈʃpaɾt̪ɪɾɪ</hw>
+  </entry>
+  <entry id="scn116">
+    <gl>to stab</gl>
+    <spell>pugnalari, tagghiari</spell>
+    <hw>pʊɲɲaˈlaɾɪ, t̪aˈɡɡjaɾɪ</hw>
+  </entry>
+  <entry id="scn117">
+    <gl>to scratch</gl>
+    <spell>graffiari, sgaggiari</spell>
+    <hw>ɣɾafˈfjaɾɪ, ʒɡaˈd͡ʒd͡ʒaɾɪ</hw>
+  </entry>
+  <entry id="scn118">
+    <gl>to dig</gl>
+    <spell>scavari</spell>
+    <hw>ʃkaˈvaɾɪ</hw>
+  </entry>
+  <entry id="scn119">
+    <gl>to swim</gl>
+    <spell>natari</spell>
+    <hw>nnaˈt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn120">
+    <gl>to fly</gl>
+    <spell>vulari</spell>
+    <hw>vʊˈlaɾɪ</hw>
+  </entry>
+  <entry id="scn121">
+    <gl>to walk</gl>
+    <spell>caminari</spell>
+    <hw>kamɪˈnaɾɪ</hw>
+  </entry>
+  <entry id="scn122">
+    <gl>to come</gl>
+    <spell>vèniri</spell>
+    <hw>ˈvɛnɪɾɪ</hw>
+  </entry>
+  <entry id="scn123">
+    <gl>to lie (as in a bed)</gl>
+    <spell>curcari</spell>
+    <hw>ˈkʊɾˈkaɾɪ</hw>
+  </entry>
+  <entry id="scn124">
+    <gl>to sit</gl>
+    <spell>assittari</spell>
+    <hw>assɪˈt̪t̪aɾɪ</hw>
+  </entry>
+  <entry id="scn125">
+    <gl>to stand</gl>
+    <spell>stari</spell>
+    <hw>ˈstaɾɪ, ˈʃt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn126">
+    <gl>to turn (intransitive)</gl>
+    <spell>girari, vutari</spell>
+    <hw>dʒɪˈɾaɾɪ, vʊˈt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn127">
+    <gl>to fall</gl>
+    <spell>càdiri, sdirupari</spell>
+    <hw>kaˈd̪ɪɾɪ, ʒd̪ɪɾʊˈpaɾɪ</hw>
+  </entry>
+  <entry id="scn128">
+    <gl>to give</gl>
+    <spell>dari</spell>
+    <hw>ˈd̪aɾɪ</hw>
+  </entry>
+  <entry id="scn129">
+    <gl>to hold</gl>
+    <spell>tèniri</spell>
+    <hw>ˈt̪ɛnɪɾɪ</hw>
+  </entry>
+  <entry id="scn130">
+    <gl>to squeeze</gl>
+    <spell>sprèmiri</spell>
+    <hw>ˈʃpɾɛmɪɾɪ</hw>
+  </entry>
+  <entry id="scn131">
+    <gl>to rub</gl>
+    <spell>stricari</spell>
+    <hw>ʃɹɪˈkaɾɪ</hw>
+  </entry>
+  <entry id="scn132">
+    <gl>to wash</gl>
+    <spell>lavari</spell>
+    <hw>laˈvaɾɪ</hw>
+  </entry>
+  <entry id="scn133">
+    <gl>to wipe</gl>
+    <spell>asciucari</spell>
+    <hw>aʃʃʊˈkaɾɪ</hw>
+  </entry>
+  <entry id="scn134">
+    <gl>to pull</gl>
+    <spell>tirari</spell>
+    <hw>t̪ɪˈɾaɾɪ</hw>
+  </entry>
+  <entry id="scn135">
+    <gl>to push</gl>
+    <spell>spìnciri, ammuttari</spell>
+    <hw>ˈʃpĩnt͡ʃɪɾɪ, ammʊˈt̪t̪aɾɪ</hw>
+  </entry>
+  <entry id="scn136">
+    <gl>to throw</gl>
+    <spell>jittari, ghiavari</spell>
+    <hw>ʝiˈt̪t̪aɾɪ, ɡɡjaˈvaɾɪ</hw>
+  </entry>
+  <entry id="scn137">
+    <gl>to tie</gl>
+    <spell>lijari, attaccari</spell>
+    <hw>lɪˈjaɾɪ, at̪t̪aˈkkaɾɪ</hw>
+  </entry>
+  <entry id="scn138">
+    <gl>to sew</gl>
+    <spell>cùsiri</spell>
+    <hw>ˈkusɪɾɪ</hw>
+  </entry>
+  <entry id="scn139">
+    <gl>to count</gl>
+    <spell>cuntari</spell>
+    <hw>kʊ̃nt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn140">
+    <gl>to say</gl>
+    <spell>diri, dìciri</spell>
+    <hw>ˈd̪iɾɪ, ˈd̪iɕɪɾɪ</hw>
+  </entry>
+  <entry id="scn141">
+    <gl>to sing</gl>
+    <spell>cantari</spell>
+    <hw>kãnt̪aɾɪ</hw>
+  </entry>
+  <entry id="scn142">
+    <gl>to play</gl>
+    <spell>giucari, jucari</spell>
+    <hw>d͡ʒd͡ʒʊˈkaɾɪ, jʊˈkaɾɪ</hw>
+  </entry>
+  <entry id="scn143">
+    <gl>to float</gl>
+    <spell>galleggiari, galliggiari</spell>
+    <hw>gallɛˈd͡ʒd͡ʒaɾɪ , ɡallɪˈd͡ʒd͡ʒaɾɪ</hw>
+  </entry>
+  <entry id="scn144">
+    <gl>to flow</gl>
+    <spell>scùrriri</spell>
+    <hw>ˈʃkurrɪɾɪ</hw>
+  </entry>
+  <entry id="scn145">
+    <gl>to freeze</gl>
+    <spell>jilari, agghilari</spell>
+    <hw>jɪˈlaɾɪ, aɡɡɪˈlaɾɪ</hw>
+  </entry>
+  <entry id="scn146">
+    <gl>to swell</gl>
+    <spell>vunchiari, usciari</spell>
+    <hw>vʊ̃ŋˈkjaɾɪ, ʊˈʃʃaɾɪ</hw>
+  </entry>
+  <entry id="scn147">
+    <gl>sun</gl>
+    <spell>suli</spell>
+    <hw>ˈsulɪ</hw>
+  </entry>
+  <entry id="scn148">
+    <gl>moon</gl>
+    <spell>luna</spell>
+    <hw>ˈluna</hw>
+  </entry>
+  <entry id="scn149">
+    <gl>star</gl>
+    <spell>stidda</spell>
+    <hw>ˈst̪iɖɖa, ʃt̪iɖɖa</hw>
+  </entry>
+  <entry id="scn150">
+    <gl>water</gl>
+    <spell>acqua</spell>
+    <hw>ˈakkwa</hw>
+  </entry>
+  <entry id="scn151">
+    <gl>rain</gl>
+    <spell>acqua</spell>
+    <hw>ˈakkwa</hw>
+  </entry>
+  <entry id="scn152">
+    <gl>river</gl>
+    <spell>ciumi</spell>
+    <hw>ˈçumɪ</hw>
+  </entry>
+  <entry id="scn153">
+    <gl>lake</gl>
+    <spell>lacu</spell>
+    <hw>ˈlakʊ</hw>
+  </entry>
+  <entry id="scn154">
+    <gl>sea</gl>
+    <spell>mari</spell>
+    <hw>ˈmaɾɪ</hw>
+  </entry>
+  <entry id="scn155">
+    <gl>salt</gl>
+    <spell>sali</spell>
+    <hw>ˈsalɪ</hw>
+  </entry>
+  <entry id="scn156">
+    <gl>stone</gl>
+    <spell>petra</spell>
+    <hw>ˈpɛʈɹa</hw>
+  </entry>
+  <entry id="scn157">
+    <gl>sand</gl>
+    <spell>rina</spell>
+    <hw>ˈrina</hw>
+  </entry>
+  <entry id="scn158">
+    <gl>dust</gl>
+    <spell>pùrviri, purvirazzu</spell>
+    <hw>ˈpuɾvɪɾɪ, pʊɾvɪˈɾat͡st͡sʊ</hw>
+  </entry>
+  <entry id="scn159">
+    <gl>earth</gl>
+    <spell>terra</spell>
+    <hw>ˈtɛrra</hw>
+  </entry>
+  <entry id="scn160">
+    <gl>cloud</gl>
+    <spell>nèula</spell>
+    <hw>ˈnɛwla</hw>
+  </entry>
+  <entry id="scn161">
+    <gl>fog</gl>
+    <spell>negghia</spell>
+    <hw>ˈnɛɡɡja</hw>
+  </entry>
+  <entry id="scn162">
+    <gl>sky</gl>
+    <spell>celu</spell>
+    <hw>ˈɕɛlʊ</hw>
+  </entry>
+  <entry id="scn163">
+    <gl>wind</gl>
+    <spell>ventu</spell>
+    <hw>ˈvɛ̃nt̪ʊ</hw>
+  </entry>
+  <entry id="scn164">
+    <gl>snow</gl>
+    <spell>nivi</spell>
+    <hw>ˈnivɪ</hw>
+  </entry>
+  <entry id="scn165">
+    <gl>ice</gl>
+    <spell>ghiacciu</spell>
+    <hw>ˈɡjat͡ʃt͡ʃʊ</hw>
+  </entry>
+  <entry id="scn166">
+    <gl>smoke</gl>
+    <spell>fumu</spell>
+    <hw>ˈfumʊ</hw>
+  </entry>
+  <entry id="scn167">
+    <gl>fire</gl>
+    <spell>focu</spell>
+    <hw>ˈfɔkʊ</hw>
+  </entry>
+  <entry id="scn168">
+    <gl>ash</gl>
+    <spell>cìnniri</spell>
+    <hw>ˈɕinnɪɾɪ</hw>
+  </entry>
+  <entry id="scn169">
+    <gl>to burn</gl>
+    <spell>abbruciari</spell>
+    <hw>abbɾuˈɕaɾɪ</hw>
+  </entry>
+  <entry id="scn170">
+    <gl>road</gl>
+    <spell>strata, vinedda, vìa, dromu, rua</spell>
+    <hw>ˈʃɹat̪a, vɪnɛɖɖa, ˈvia, ˈɖɹɔmʊ, ˈrua</hw>
+  </entry>
+  <entry id="scn171">
+    <gl>mountain</gl>
+    <spell>muntagna</spell>
+    <hw>mũnt̪aɳɳa</hw>
+  </entry>
+  <entry id="scn172">
+    <gl>red</gl>
+    <spell>russu</spell>
+    <hw>ˈrussʊ</hw>
+  </entry>
+  <entry id="scn173">
+    <gl>green</gl>
+    <spell>virdi</spell>
+    <hw>ˈviɾd̪ɪ</hw>
+  </entry>
+  <entry id="scn174">
+    <gl>yellow</gl>
+    <spell>giallu, giarnu</spell>
+    <hw>ˈd͡ʒallʊ, ˈd͡ʒaɾnʊ</hw>
+  </entry>
+  <entry id="scn175">
+    <gl>white</gl>
+    <spell>jancu</spell>
+    <hw>ˈjãŋkʊ</hw>
+  </entry>
+  <entry id="scn176">
+    <gl>black</gl>
+    <spell>nìuru</spell>
+    <hw>ˈniwɾʊ</hw>
+  </entry>
+  <entry id="scn177">
+    <gl>night</gl>
+    <spell>notti</spell>
+    <hw>ˈnɔt̪t̪ɪ</hw>
+  </entry>
+  <entry id="scn178">
+    <gl>day</gl>
+    <spell>jornu</spell>
+    <hw>ˈjɔɾnʊ</hw>
+  </entry>
+  <entry id="scn179">
+    <gl>year</gl>
+    <spell>annu</spell>
+    <hw>ˈannʊ</hw>
+  </entry>
+  <entry id="scn180">
+    <gl>warm</gl>
+    <spell>càudu</spell>
+    <hw>ˈkawd̪ʊ</hw>
+  </entry>
+  <entry id="scn181">
+    <gl>cold</gl>
+    <spell>friddu</spell>
+    <hw>ˈfɾid̪d̪ʊ</hw>
+  </entry>
+  <entry id="scn182">
+    <gl>full</gl>
+    <spell>chinu</spell>
+    <hw>ˈkinʊ</hw>
+  </entry>
+  <entry id="scn183">
+    <gl>new</gl>
+    <spell>novu</spell>
+    <hw>ˈnɔvʊ</hw>
+  </entry>
+  <entry id="scn184">
+    <gl>old</gl>
+    <spell>vecchiu</spell>
+    <hw>ˈvɛkkjʊ</hw>
+  </entry>
+  <entry id="scn185">
+    <gl>good</gl>
+    <spell>bonu</spell>
+    <hw>ˈbɔnʊ</hw>
+  </entry>
+  <entry id="scn186">
+    <gl>bad</gl>
+    <spell>malu, tintu</spell>
+    <hw>malʊ, ˈt̪ĩnt̪ʊ</hw>
+  </entry>
+  <entry id="scn187">
+    <gl>rotten</gl>
+    <spell>purritu, fràcidu</spell>
+    <hw>ˈpʊrrit̪ʊ, ˈfɾaɕɪd̪ʊ</hw>
+  </entry>
+  <entry id="scn188">
+    <gl>dirty</gl>
+    <spell>lordu</spell>
+    <hw>ˈlɔɾd̪ʊ</hw>
+  </entry>
+  <entry id="scn189">
+    <gl>straight</gl>
+    <spell>drittu, dirittu</spell>
+    <hw>ˈɖɹit̪t̪ʊ, d̪ɪˈɾit̪t̪ʊ</hw>
+  </entry>
+  <entry id="scn190">
+    <gl>round</gl>
+    <spell>tunnu</spell>
+    <hw>ˈt̪unnʊ</hw>
+  </entry>
+  <entry id="scn191">
+    <gl>sharp (as a knife)</gl>
+    <spell>ammulatu</spell>
+    <hw>ammʊˈlat̪ʊ</hw>
+  </entry>
+  <entry id="scn192">
+    <gl>dull (as a knife)</gl>
+    <spell>slimatu</spell>
+    <hw>slɪˈmat̪ʊ</hw>
+  </entry>
+  <entry id="scn193">
+    <gl>smooth</gl>
+    <spell>lisciu</spell>
+    <hw>ˈliʃʃʊ</hw>
+  </entry>
+  <entry id="scn194">
+    <gl>wet</gl>
+    <spell>bagnatu, vagnatu</spell>
+    <hw>baˈɲɲat̪ʊ, vaˈɲɲat̪ʊ</hw>
+  </entry>
+  <entry id="scn195">
+    <gl>dry</gl>
+    <spell>asciuttu, siccu</spell>
+    <hw>aˈʃʃut̪t̪ʊ, ˈsikkʊ</hw>
+  </entry>
+  <entry id="scn196">
+    <gl>correct</gl>
+    <spell>giustu</spell>
+    <hw>ˈd͡ʒd͡ʒust̪ʊ, ˈd͡ʒd͡ʒuʃt̪ʊ</hw>
+  </entry>
+  <entry id="scn197">
+    <gl>near</gl>
+    <spell>vicinu</spell>
+    <hw>vɪˈɕinʊ</hw>
+  </entry>
+  <entry id="scn198">
+    <gl>far</gl>
+    <spell>luntanu</spell>
+    <hw>lʊ̃nt̪anʊ</hw>
+  </entry>
+  <entry id="scn199">
+    <gl>right</gl>
+    <spell>dritta</spell>
+    <hw>ˈɖɺit̪t̪a</hw>
+  </entry>
+  <entry id="scn200">
+    <gl>left</gl>
+    <spell>manca</spell>
+    <hw>mãŋka</hw>
+  </entry>
+  <entry id="scn201">
+    <gl>at</gl>
+    <spell>a</spell>
+    <hw>a</hw>
+  </entry>
+  <entry id="scn202">
+    <gl>in</gl>
+    <spell>n, nta</spell>
+    <hw>n, n̪t̪a</hw>
+  </entry>
+  <entry id="scn203">
+    <gl>with</gl>
+    <spell>cu</spell>
+    <hw>ku</hw>
+  </entry>
+  <entry id="scn204">
+    <gl>and</gl>
+    <spell>e</spell>
+    <hw>ɛ</hw>
+  </entry>
+  <entry id="scn205">
+    <gl>if</gl>
+    <spell>si</spell>
+    <hw>sɪ</hw>
+  </entry>
+  <entry id="scn206">
+    <gl>because</gl>
+    <spell>picchì</spell>
+    <hw>pɪˈkki</hw>
+  </entry>
+  <entry id="scn207">
+    <gl>name</gl>
+    <spell>nomu</spell>
+    <hw>ˈnɔmʊ</hw>
+  </entry>
+</lexicon>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <param name="trace" value="N"/>
+  <param name="spec" value="Y"/>
+  <action name="downstream" from="proto" to="gha"/>
+  <param name="trace" value="N"/>
+  <param name="title" value="Test Run, Demo 1993"/>
+  <param name="spec" value="Y"/>
+  <param name="correspondences" value="TEST.correspondences.xml"/>
+  <param name="fuzzy" value="DEMO93.fuz.xml"/>
+  <action name="upstream" from="es" to="proto"/>
+  <action name="upstream" from="pt" to="proto"/>
+  <action name="upstream" from="it" to="proto"/>
+  <action name="upstream" from="fr" to="proto"/>
+  <action name="upstream" from="scn" to="proto"/>
+</params>
