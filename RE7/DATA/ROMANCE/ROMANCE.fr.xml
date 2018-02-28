@@ -6,8 +6,13 @@
   </entry>
   <entry id="fr2">
     <gl>you (singular)</gl>
-    <spell>tu, vous (formal)</spell>
-    <hw>ty, vu</hw>
+    <spell>tu</spell>
+    <hw>ty</hw>
+  </entry>
+  <entry id="fr2.5">
+    <gl>you (singular)</gl>
+    <spell>vous (formal)</spell>
+    <hw>vu</hw>
   </entry>
   <entry id="fr3">
     <gl>he</gl>
@@ -196,13 +201,23 @@
   </entry>
   <entry id="fr40">
     <gl>wife</gl>
-    <spell>femme, épouse</spell>
-    <hw>fam, epuz</hw>
+    <spell>femme</spell>
+    <hw>fam</hw>
+  </entry>
+  <entry id="fr40.5">
+    <gl>wife</gl>
+    <spell>épouse</spell>
+    <hw>epuz</hw>
   </entry>
   <entry id="fr41">
     <gl>husband</gl>
-    <spell>mari, époux</spell>
-    <hw>maʁi, epu</hw>
+    <spell>mari</spell>
+    <hw>maʁi</hw>
+  </entry>
+  <entry id="fr41.5">
+    <gl>husband</gl>
+    <spell>époux</spell>
+    <hw>epu</hw>
   </entry>
   <entry id="fr42">
     <gl>mother</gl>
@@ -426,8 +441,13 @@
   </entry>
   <entry id="fr86">
     <gl>guts</gl>
-    <spell>entrailles, intestins</spell>
-    <hw>ɑ̃tʁɑj, ɛ̃tɛstɛ̃</hw>
+    <spell>entrailles</spell>
+    <hw>ɑ̃tʁɑj̃</hw>
+  </entry>
+  <entry id="fr86">
+    <gl>guts</gl>
+    <spell>intestins</spell>
+    <hw>ɛ̃tɛstɛ̃</hw>
   </entry>
   <entry id="fr87">
     <gl>neck</gl>
@@ -611,18 +631,33 @@
   </entry>
   <entry id="fr123">
     <gl>to lie (as in a bed)</gl>
-    <spell>s'étendre (action), être étendu(state)</spell>
-    <hw>setɑ̃dʁ, ɛtʁetɑ̃dy</hw>
+    <spell>s'étendre (action)</spell>
+    <hw>setɑ̃dʁ</hw>
+  </entry>
+  <entry id="fr123.5">
+    <gl>to lie (as in a bed)</gl>
+    <spell>être étendu(state)</spell>
+    <hw>ɛtʁetɑ̃dy</hw>
   </entry>
   <entry id="fr124">
     <gl>to sit</gl>
-    <spell>s'asseoir (action), être assis (state)</spell>
-    <hw>saswaʁ, ɛtʁasi</hw>
+    <spell>s'asseoir (action)</spell>
+    <hw>saswaʁ</hw>
+  </entry>
+  <entry id="fr124.5">
+    <gl>to sit</gl>
+    <spell>être assis (state)</spell>
+    <hw>ɛtʁasi</hw>
   </entry>
   <entry id="fr125">
     <gl>to stand</gl>
-    <spell>se lever (action), se tenir debout (state)</spell>
-    <hw>sələve, sətəniʁdəbu</hw>
+    <spell>se lever (action)</spell>
+    <hw>sələve</hw>
+  </entry>
+  <entry id="fr125.5">
+    <gl>to stand</gl>
+    <spell>se tenir debout (state)</spell>
+    <hw>sətəniʁdəbu</hw>
   </entry>
   <entry id="fr126">
     <gl>to turn (intransitive)</gl>
@@ -676,8 +711,13 @@
   </entry>
   <entry id="fr136">
     <gl>to throw</gl>
-    <spell>jeter, lancer</spell>
-    <hw>ʒəte, lɑ̃se</hw>
+    <spell>jeter</spell>
+    <hw>ʒəte</hw>
+  </entry>
+  <entry id="fr136.5">
+    <gl>to throw</gl>
+    <spell>lancer</spell>
+    <hw>lɑ̃se</hw>
   </entry>
   <entry id="fr137">
     <gl>to tie</gl>
@@ -891,8 +931,13 @@
   </entry>
   <entry id="fr179">
     <gl>year</gl>
-    <spell>an, année</spell>
-    <hw>ɑ̃, ane</hw>
+    <spell>an</spell>
+    <hw>ɑ̃</hw>
+  </entry>
+  <entry id="fr179.5">
+    <gl>year</gl>
+    <spell>année</spell>
+    <hw>ane</hw>
   </entry>
   <entry id="fr180">
     <gl>warm</gl>
