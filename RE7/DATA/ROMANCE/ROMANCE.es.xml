@@ -17,7 +17,7 @@
     <entry id="es2.2">
     <gl>you (singular)</gl>
     <spell>usted (formal)</spell>
-    <hw>usˈteð</hw>
+    <hw>usˈted</hw>
   </entry>
   <entry id="es3">
     <gl>he</gl>
@@ -47,7 +47,7 @@
   <entry id="es5.2">
     <gl>you (plural)</gl>
     <spell>ustedes (formal)</spell>
-    <hw>usˈteðes</hw>
+    <hw>usˈtedes</hw>
   </entry>
   <entry id="es6">
     <gl>they</gl>
@@ -122,7 +122,7 @@
   <entry id="es17">
     <gl>all</gl>
     <spell>todo</spell>
-    <hw>ˈtoðo</hw>
+    <hw>ˈtodo</hw>
   </entry>
   <entry id="es18">
     <gl>many</gl>
@@ -132,7 +132,7 @@
   <entry id="es19">
     <gl>some</gl>
     <spell>algunos</spell>
-    <hw>alˈɣunos</hw>
+    <hw>alˈgunos</hw>
   </entry>
   <entry id="es20">
     <gl>few</gl>
@@ -177,7 +177,7 @@
   <entry id="es28">
     <gl>long</gl>
     <spell>largo</spell>
-    <hw>ˈlaɾɣo</hw>
+    <hw>ˈlaɾgo</hw>
   </entry>
   <entry id="es29">
     <gl>wide</gl>
@@ -192,7 +192,7 @@
   <entry id="es31">
     <gl>heavy</gl>
     <spell>pesado</spell>
-    <hw>peˈsaðo</hw>
+    <hw>peˈsado</hw>
   </entry>
   <entry id="es32">
     <gl>small</gl>
@@ -212,7 +212,7 @@
   <entry id="es35">
     <gl>thin</gl>
     <spell>delgado</spell>
-    <hw>delˈɣaðo</hw>
+    <hw>delˈgado</hw>
   </entry>
   <entry id="es35.5">
     <gl>thin</gl>
@@ -257,17 +257,17 @@
   <entry id="es41.5">
     <gl>husband</gl>
     <spell> marido</spell>
-    <hw>maˈɾiðo</hw>
+    <hw>maˈɾido</hw>
   </entry>
   <entry id="es42">
     <gl>mother</gl>
     <spell>madre</spell>
-    <hw>ˈmaðɾe</hw>
+    <hw>ˈmadɾe</hw>
   </entry>
   <entry id="es43">
     <gl>father</gl>
     <spell>padre</spell>
-    <hw>ˈpaðɾe</hw>
+    <hw>ˈpadɾe</hw>
   </entry>
   <entry id="es44">
     <gl>animal</gl>
@@ -282,7 +282,7 @@
   <entry id="es45.5">
     <gl>fish</gl>
     <spell>pescado</spell>
-    <hw>pesˈkaðo</hw>
+    <hw>pesˈkado</hw>
   </entry>
   <entry id="es46">
     <gl>bird</gl>
@@ -312,7 +312,7 @@
   <entry id="es51">
     <gl>tree</gl>
     <spell>árbol</spell>
-    <hw>ˈaɾβol</hw>
+    <hw>ˈaɾbol</hw>
   </entry>
   <entry id="es52">
     <gl>forest</gl>
@@ -357,12 +357,12 @@
   <entry id="es60">
     <gl>grass</gl>
     <spell>hierba</spell>
-    <hw>ˈʝeɾβa</hw>
+    <hw>ˈʝeɾba</hw>
   </entry>
   <entry id="es61">
     <gl>rope</gl>
     <spell>cuerda</spell>
-    <hw>ˈkweɾða</hw>
+    <hw>ˈkweɾda</hw>
   </entry>
   <entry id="es62">
     <gl>skin</gl>
@@ -392,7 +392,7 @@
   <entry id="es67">
     <gl>egg</gl>
     <spell>huevo</spell>
-    <hw>ˈweβo</hw>
+    <hw>ˈwebo</hw>
   </entry>
   <entry id="es68">
     <gl>horn</gl>
@@ -412,12 +412,12 @@
   <entry id="es71">
     <gl>hair</gl>
     <spell>cabello</spell>
-    <hw>kaˈβeʎo</hw>
+    <hw>kaˈbeʎo</hw>
   </entry>
   <entry id="es72">
     <gl>head</gl>
     <spell>cabeza</spell>
-    <hw>kaˈβeθa</hw>
+    <hw>kaˈbeθa</hw>
   </entry>
   <entry id="es73">
     <gl>ear</gl>
@@ -467,7 +467,7 @@
   <entry id="es82">
     <gl>knee</gl>
     <spell>rodilla</spell>
-    <hw>roˈðiʎa</hw>
+    <hw>roˈdiʎa</hw>
   </entry>
   <entry id="es83">
     <gl>hand</gl>
@@ -482,7 +482,7 @@
   <entry id="es85">
     <gl>belly</gl>
     <spell>barriga</spell>
-    <hw>baˈriɣa</hw>
+    <hw>baˈriga</hw>
   </entry>
   <entry id="es86">
     <gl>guts</gl>
@@ -512,12 +512,12 @@
   <entry id="es91">
     <gl>liver</gl>
     <spell>hígado</spell>
-    <hw>ˈiɣaðo</hw>
+    <hw>ˈigado</hw>
   </entry>
   <entry id="es92">
     <gl>to drink</gl>
     <spell>beber</spell>
-    <hw>beˈβeɾ</hw>
+    <hw>beˈbeɾ</hw>
   </entry>
   <entry id="es93">
     <gl>to eat</gl>
@@ -527,7 +527,7 @@
   <entry id="es94">
     <gl>to bite</gl>
     <spell>morder</spell>
-    <hw>moɾˈðeɾ</hw>
+    <hw>moɾˈdeɾ</hw>
   </entry>
   <entry id="es95">
     <gl>to suck</gl>
@@ -572,7 +572,7 @@
   <entry id="es103">
     <gl>to know</gl>
     <spell>saber</spell>
-    <hw>saˈβeɾ</hw>
+    <hw>saˈbeɾ</hw>
   </entry>
   <entry id="es104">
     <gl>to think</gl>
@@ -597,7 +597,7 @@
   <entry id="es108">
     <gl>to live</gl>
     <spell>vivir</spell>
-    <hw>biˈβiɾ</hw>
+    <hw>biˈbiɾ</hw>
   </entry>
   <entry id="es109">
     <gl>to die</gl>
@@ -647,12 +647,12 @@
   <entry id="es118">
     <gl>to dig</gl>
     <spell>cavar</spell>
-    <hw>kaˈβaɾ</hw>
+    <hw>kaˈbaɾ</hw>
   </entry>
   <entry id="es119">
     <gl>to swim</gl>
     <spell>nadar</spell>
-    <hw>naˈðaɾ</hw>
+    <hw>naˈdaɾ</hw>
   </entry>
   <entry id="es120">
     <gl>to fly</gl>
@@ -681,8 +681,8 @@
   </entry>
   <entry id="es125">
     <gl>to stand</gl>
-    <spell>levantarse (action))</spell>
-    <hw>leβanˈtaɾse</hw>
+    <spell>levantarse (action)</spell>
+    <hw>lebanˈtaɾse</hw>
   </entry>
   <entry id="es125.5">
     <gl>to stand</gl>
@@ -722,7 +722,7 @@
   <entry id="es132">
     <gl>to wash</gl>
     <spell>lavar</spell>
-    <hw>laˈβaɾ</hw>
+    <hw>laˈbaɾ</hw>
   </entry>
   <entry id="es133">
     <gl>to wipe</gl>
@@ -777,7 +777,7 @@
   <entry id="es142">
     <gl>to play</gl>
     <spell>jugar</spell>
-    <hw>xuˈɣaɾ</hw>
+    <hw>xuˈgaɾ</hw>
   </entry>
   <entry id="es143">
     <gl>to float</gl>
@@ -817,12 +817,12 @@
   <entry id="es150">
     <gl>water</gl>
     <spell>agua</spell>
-    <hw>ˈaɣwa</hw>
+    <hw>ˈagwa</hw>
   </entry>
   <entry id="es151">
     <gl>rain</gl>
     <spell>lluvia</spell>
-    <hw>ˈʎuβja</hw>
+    <hw>ˈʎubja</hw>
   </entry>
   <entry id="es152">
     <gl>river</gl>
@@ -832,7 +832,7 @@
   <entry id="es153">
     <gl>lake</gl>
     <spell>lago</spell>
-    <hw>ˈlaɣo</hw>
+    <hw>ˈlago</hw>
   </entry>
   <entry id="es154">
     <gl>sea</gl>
@@ -847,7 +847,7 @@
   <entry id="es156">
     <gl>stone</gl>
     <spell>piedra</spell>
-    <hw>ˈpjeðɾa</hw>
+    <hw>ˈpjedɾa</hw>
   </entry>
   <entry id="es157">
     <gl>sand</gl>
@@ -857,7 +857,7 @@
   <entry id="es158">
     <gl>dust</gl>
     <spell>polvo</spell>
-    <hw>ˈpolβo</hw>
+    <hw>ˈpolbo</hw>
   </entry>
   <entry id="es159">
     <gl>earth</gl>
@@ -867,12 +867,12 @@
   <entry id="es160">
     <gl>cloud</gl>
     <spell>nube</spell>
-    <hw>ˈnuβe</hw>
+    <hw>ˈnube</hw>
   </entry>
   <entry id="es161">
     <gl>fog</gl>
     <spell>niebla</spell>
-    <hw>ˈnjeβla</hw>
+    <hw>ˈnjebla</hw>
   </entry>
   <entry id="es162">
     <gl>sky</gl>
@@ -887,7 +887,7 @@
   <entry id="es164">
     <gl>snow</gl>
     <spell>nieve</spell>
-    <hw>ˈnjeβe</hw>
+    <hw>ˈnjebe</hw>
   </entry>
   <entry id="es165">
     <gl>ice</gl>
@@ -902,7 +902,7 @@
   <entry id="es167">
     <gl>fire</gl>
     <spell>fuego</spell>
-    <hw>ˈfweɣo</hw>
+    <hw>ˈfwego</hw>
   </entry>
   <entry id="es168">
     <gl>ash</gl>
@@ -932,7 +932,7 @@
   <entry id="es173">
     <gl>green</gl>
     <spell>verde</spell>
-    <hw>ˈbeɾðe</hw>
+    <hw>ˈbeɾde</hw>
   </entry>
   <entry id="es174">
     <gl>yellow</gl>
@@ -947,7 +947,7 @@
   <entry id="es176">
     <gl>black</gl>
     <spell>negro</spell>
-    <hw>ˈneɣɾo</hw>
+    <hw>ˈnegɾo</hw>
   </entry>
   <entry id="es177">
     <gl>night</gl>
@@ -967,7 +967,7 @@
   <entry id="es180">
     <gl>warm</gl>
     <spell>cálido</spell>
-    <hw>ˈkaliðo</hw>
+    <hw>ˈkalido</hw>
   </entry>
   <entry id="es181">
     <gl>cold</gl>
@@ -982,7 +982,7 @@
   <entry id="es183">
     <gl>new</gl>
     <spell>nuevo</spell>
-    <hw>ˈnweβo</hw>
+    <hw>ˈnwebo</hw>
   </entry>
   <entry id="es184">
     <gl>old</gl>
@@ -1002,7 +1002,7 @@
   <entry id="es187">
     <gl>rotten</gl>
     <spell>podrido</spell>
-    <hw>poðˈɾiðo</hw>
+    <hw>podˈɾido</hw>
   </entry>
   <entry id="es188">
     <gl>dirty</gl>
@@ -1017,17 +1017,17 @@
   <entry id="es190">
     <gl>round</gl>
     <spell>redondo</spell>
-    <hw>reˈðondo</hw>
+    <hw>reˈdondo</hw>
   </entry>
   <entry id="es191">
     <gl>sharp (as a knife)</gl>
     <spell>agudo</spell>
-    <hw>aˈɣuðo</hw>
+    <hw>aˈgudo</hw>
   </entry>
   <entry id="es191.5">
     <gl>sharp (as a knife)</gl>
     <spell> afilado</spell>
-    <hw>afiˈlaðo</hw>
+    <hw>afiˈlado</hw>
   </entry>
   <entry id="es192">
     <gl>dull (as a knife)</gl>
@@ -1037,7 +1037,7 @@
   <entry id="es192.1">
     <gl>dull (as a knife)</gl>
     <spell>embotado</spell>
-    <hw>emboˈtaðo</hw>
+    <hw>emboˈtado</hw>
   </entry>
   <entry id="es192.2">
     <gl>dull (as a knife)</gl>
@@ -1052,7 +1052,7 @@
   <entry id="es194">
     <gl>wet</gl>
     <spell>mojado</spell>
-    <hw>moˈxaðo</hw>
+    <hw>moˈxado</hw>
   </entry>
   <entry id="es195">
     <gl>dry</gl>
@@ -1082,7 +1082,7 @@
   <entry id="es200">
     <gl>left</gl>
     <spell>izquierda</spell>
-    <hw>iθˈkjeɾða</hw>
+    <hw>iθˈkjeɾda</hw>
   </entry>
   <entry id="es201">
     <gl>at</gl>
