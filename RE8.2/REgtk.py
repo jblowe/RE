@@ -5,6 +5,7 @@ import RE
 import read
 import threading
 import sys
+import serialize
 
 class WrappedTextBuffer():
     def __init__(self, buffer):
@@ -150,6 +151,9 @@ class REWindow(Gtk.Window):
         delete_table_row_button.connect('clicked',
                                         self.on_delete_row_button_clicked)
 
+        save_button = Gtk.Button(label='Save')
+        save_button.connect('clicked', self.on_save_button_clicked)
+
         statistics_pane = Gtk.ScrolledWindow()
         statistics_pane.set_hexpand(True)
         statistics_pane.set_vexpand(True)
@@ -182,6 +186,7 @@ class REWindow(Gtk.Window):
         buttons_box.add(add_table_row_button)
         buttons_box.add(delete_table_row_button)
         buttons_box.add(upstream_button)
+        buttons_box.add(save_button)
         box.add(buttons_box)
         self.add(box)
         left_pane.add2(box)
@@ -216,6 +221,13 @@ class REWindow(Gtk.Window):
     def on_delete_row_button_clicked(self, widget):
         self.table_store.remove(self.table_store.get_iter(
             self.correspondence_view.get_cursor()[0]))
+
+    def on_save_button_clicked(self, widget):
+        serialize.serialize_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}',
+            RE.Parameters(read_view_into_table(
+                self.correspondence_view),
+                          read_syllable_canon_from_widget(
+                              self.syllable_canon_widget)))
 
 def run(lexicons, params):
     out = sys.stdout
