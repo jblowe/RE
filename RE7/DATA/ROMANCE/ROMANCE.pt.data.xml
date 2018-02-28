@@ -6,63 +6,78 @@
   </entry>
   <entry id="pt2">
     <gl>you (singular)</gl>
-    <spell>tu, você informal in BP, formal in EP</spell>
-    <hw>tu, vɔˈse, voˈse (BP)</hw>
+    <spell>tu</spell>
+    <hw>tu</hw>
+  </entry>
+  <entry id="pt2.5">
+    <gl>you (singular)</gl>
+    <spell>você informal in BP, formal in EP</spell>
+    <hw>voˈse</hw>
   </entry>
   <entry id="pt3">
     <gl>he</gl>
     <spell>ele</spell>
-    <hw>ˈelɨ (EP), ˈeli (BP)</hw>
+    <hw>ˈeli</hw>
   </entry>
   <entry id="pt4">
     <gl>we</gl>
     <spell>nós</spell>
-    <hw>ˈnɔʃ (EP), ˈnɔ(j)s (BP)</hw>
+    <hw>ˈnɔs</hw>
   </entry>
   <entry id="pt5">
     <gl>you (plural)</gl>
-    <spell>vós, vocês informal in both BP and EP</spell>
-    <hw>ˈvɔʃ (EP), vɔˈseʃ (EP), ˈvɔ(j)s (BP), vɔˈse(j)s (BP)</hw>
+    <spell>vós</spell>
+    <hw>ˈvɔs</hw>
+  </entry>
+  <entry id="pt5.5">
+    <gl>you (plural)</gl>
+    <spell>vocês informal in both BP and EP</spell>
+    <hw>vɔˈses</hw>
   </entry>
   <entry id="pt6">
     <gl>they</gl>
     <spell>eles</spell>
-    <hw>ˈelɨʃ (EP), ˈelis (BP)</hw>
+    <hw>ˈelis</hw>
   </entry>
   <entry id="pt7">
     <gl>this</gl>
     <spell>isto near me, isso near you</spell>
-    <hw>ˈiʃtu (EP), ˈistu (BP)</hw>
+    <hw>ˈistu</hw>
   </entry>
   <entry id="pt8">
     <gl>that</gl>
     <spell>aquilo</spell>
-    <hw>ɐˈkilu (EP), aˈkilu (BP)</hw>
+    <hw>aˈkilu</hw>
   </entry>
   <entry id="pt9">
     <gl>here</gl>
     <spell>aqui</spell>
-    <hw>ɐˈki (EP), aˈki (BP)</hw>
+    <hw>aˈki</hw>
   </entry>
   <entry id="pt10">
     <gl>there</gl>
     <spell>aí</spell>
-    <hw>ɐˈi (EP), aˈi (BP)</hw>
+    <hw>aˈi</hw>
   </entry>
   <entry id="pt11">
     <gl>who</gl>
     <spell>quem</spell>
-    <hw>kɐ̃j̃ (EP), kẽ̃j̃ (BP)</hw>
+    <hw>kẽ̃j̃</hw>
   </entry>
   <entry id="pt12">
     <gl>what</gl>
-    <spell>que, o que</spell>
-    <hw>kɨ (EP), u kɨ (EP), ki (BP), u ki (BP)</hw>
+    <spell>que</spell>
+    <hw>ki</hw>
+  </entry>
+  <entry id="pt12">
+    <gl>what</gl>
+    <spell>o que</spell>
+    <hw>u ki)</hw>
   </entry>
   <entry id="pt13">
     <gl>where</gl>
     <spell>onde</spell>
-    <hw>ˈõdɨ (EP), ˈõd͡ʒi (BP)</hw>
+    <hw>ˈõd͡ʒi</hw>
   </entry>
   <entry id="pt14">
     <gl>when</gl>
@@ -82,7 +97,7 @@
   <entry id="pt17">
     <gl>all</gl>
     <spell>todo</spell>
-    <hw>ˈtoðu (EP), ˈtodu (BP)</hw>
+    <hw>ˈtodu (BP)</hw>
   </entry>
   <entry id="pt18">
     <gl>many</gl>
@@ -92,17 +107,17 @@
   <entry id="pt19">
     <gl>some</gl>
     <spell>alguns</spell>
-    <hw>aɫˈɣũʃ (EP), auˈgũs (BP)</hw>
+    <hw>auˈgũs (BP)</hw>
   </entry>
   <entry id="pt20">
     <gl>few</gl>
     <spell>pouco</spell>
-    <hw>ˈpo(w)ku</hw>
+    <hw>ˈpowku</hw>
   </entry>
   <entry id="pt21">
     <gl>other</gl>
     <spell>outro</spell>
-    <hw>ˈo(w)tɾu</hw>
+    <hw>ˈowtɾu</hw>
   </entry>
   <entry id="pt22">
     <gl>one</gl>
@@ -112,12 +127,12 @@
   <entry id="pt23">
     <gl>two</gl>
     <spell>dois</spell>
-    <hw>doiʃ (EP), dois (BP)</hw>
+    <hw>dois</hw>
   </entry>
   <entry id="pt24">
     <gl>three</gl>
     <spell>três</spell>
-    <hw>tɾeʃ (EP), tɾes (BP)</hw>
+    <hw>tɾes</hw>
   </entry>
   <entry id="pt25">
     <gl>four</gl>
@@ -132,7 +147,7 @@
   <entry id="pt27">
     <gl>big</gl>
     <spell>grande</spell>
-    <hw>ˈɡɾɐ̃dɨ (EP), ˈɡɾɐ̃d͡ʒi (BP)</hw>
+    <hw>ˈɡɾɐ̃d͡ʒi</hw>
   </entry>
   <entry id="pt28">
     <gl>long</gl>
@@ -142,32 +157,37 @@
   <entry id="pt29">
     <gl>wide</gl>
     <spell>largo</spell>
-    <hw>ˈlaɾɣu (EP), ˈlaʁgu (BP)</hw>
+    <hw>ˈlaʁgu</hw>
   </entry>
   <entry id="pt30">
     <gl>thick</gl>
-    <spell>espesso, grosso</spell>
-    <hw>ɨʃˈpesu (EP), isˈpesu (BP)</hw>
+    <spell>espesso</spell>
+    <hw>isˈpesu</hw>
+  </entry>
+  <entry id="pt30.5">
+    <gl>thick</gl>
+    <spell>grosso</spell>
+    <hw>'grosu</hw>
   </entry>
   <entry id="pt31">
     <gl>heavy</gl>
     <spell>pesado</spell>
-    <hw>pɨˈzaðu (EP), peˈzadu (BP)</hw>
+    <hw>peˈzadu</hw>
   </entry>
   <entry id="pt32">
     <gl>small</gl>
     <spell>pequeno</spell>
-    <hw>pɨˈkenu (EP), piˈkenu (BP)</hw>
+    <hw>piˈkenu</hw>
   </entry>
   <entry id="pt33">
     <gl>short</gl>
     <spell>curto</spell>
-    <hw>ˈkuɾtu (EP), ˈkuʁtu (BP)</hw>
+    <hw>ˈkuʁtu</hw>
   </entry>
   <entry id="pt34">
     <gl>narrow</gl>
     <spell>estreito</spell>
-    <hw>ɨʃˈtɾɐjtu (EP), isˈtɾejtu (BP)</hw>
+    <hw>isˈtɾejtu</hw>
   </entry>
   <entry id="pt35">
     <gl>thin</gl>
@@ -182,12 +202,7 @@
   <entry id="pt37">
     <gl>man (male)</gl>
     <spell>homem</spell>
-    <hw>ˈɔmɐ̃j̃ (EP), ˈomẽj̃ (BP)</hw>
-  </entry>
-  <entry id="pt38">
-    <gl>man (human)</gl>
-    <spell>homem</spell>
-    <hw>ˈɔmɐ̃j̃ (EP), ˈomẽj̃ (BP)</hw>
+    <hw>ˈomẽj̃</hw>
   </entry>
   <entry id="pt39">
     <gl>child</gl>
@@ -196,13 +211,23 @@
   </entry>
   <entry id="pt40">
     <gl>wife</gl>
-    <spell>mulher, esposa</spell>
-    <hw>muˈʎɛɾ, ɨʃˈpozɐ (EP), isˈpoza (BP)</hw>
+    <spell>mulher</spell>
+    <hw>muˈʎɛɾ</hw>
+  </entry>
+  <entry id="pt41">
+    <gl>wife</gl>
+    <spell>esposa</spell>
+    <hw>isˈpoza</hw>
   </entry>
   <entry id="pt41">
     <gl>husband</gl>
-    <spell>marido, esposo</spell>
-    <hw>mɐˈɾiðu (EP), ɨʃˈpozu (EP), maˈɾidu (BP), isˈpozu (BP)</hw>
+    <spell>marido</spell>
+    <hw>maˈɾidu</hw>
+  </entry>
+  <entry id="pt41">
+    <gl>husband</gl>
+    <spell>esposo</spell>
+    <hw>isˈpozu</hw>
   </entry>
   <entry id="pt42">
     <gl>mother</gl>
@@ -217,22 +242,32 @@
   <entry id="pt44">
     <gl>animal</gl>
     <spell>animal</spell>
-    <hw>ɐniˈmaɫ (EP), aniˈmaw (BP)</hw>
+    <hw>aniˈmaw</hw>
   </entry>
   <entry id="pt45">
     <gl>fish</gl>
     <spell>peixe</spell>
-    <hw>ˈpɐjʃɨ (EP), ˈpe(j)ʃi (BP)</hw>
+    <hw>ˈpejʃi</hw>
   </entry>
   <entry id="pt46">
     <gl>bird</gl>
-    <spell>ave, pássaro</spell>
-    <hw>ˈavɨ (EP), ˈavi (EP), ˈpasɐɾu (EP), ˈpasaɾu (BP)</hw>
+    <spell>ave</spell>
+    <hw>ˈavi</hw>
+  </entry>
+  <entry id="pt46.5">
+    <gl>bird</gl>
+    <spell>pássaro</spell>
+    <hw>pasaɾu (BP)</hw>
   </entry>
   <entry id="pt47">
     <gl>dog</gl>
-    <spell>cão, cachorro</spell>
-    <hw>kɐ̃w̃, kɐʃoʁu</hw>
+    <spell>cão</spell>
+    <hw>kɐ̃w̃</hw>
+  </entry>
+  <entry id="pt47.5">
+    <gl>dog</gl>
+    <spell>cachorro</spell>
+    <hw>kɐʃoʁu</hw>
   </entry>
   <entry id="pt48">
     <gl>louse</gl>
@@ -241,38 +276,43 @@
   </entry>
   <entry id="pt49">
     <gl>snake</gl>
-    <spell>serpente, cobra</spell>
-    <hw>sɨɾˈpẽtɨ (EP), seʁˈpẽt͡ʃi (BP), ˈkɔβɾɐ(EP), ˈkɔbɾɐ (BP)</hw>
+    <spell>cobra</spell>
+    <hw>seʁˈpẽt͡ʃi</hw>
+  </entry>
+  <entry id="pt49">
+    <gl>snake</gl>
+    <spell>cobra</spell>
+    <hw>ˈkɔbɾɐ</hw>
   </entry>
   <entry id="pt50">
     <gl>worm</gl>
     <spell>verme</spell>
-    <hw>ˈvɛɾmɨ (EP), ˈvɛʁmi (BP)</hw>
+    <hw>ˈvɛʁmi (BP)</hw>
   </entry>
   <entry id="pt51">
     <gl>tree</gl>
     <spell>árvore</spell>
-    <hw>ˈaɾvuɾɨ (EP), ˈaʁvoɾi (BP)</hw>
+    <hw>ˈaʁvoɾi (BP)</hw>
   </entry>
   <entry id="pt52">
     <gl>forest</gl>
     <spell>floresta</spell>
-    <hw>fluˈɾɛʃtɐ (EP), floˈɾɛstɐ (BP)</hw>
+    <hw>floˈɾɛstɐ (BP)</hw>
   </entry>
   <entry id="pt53">
     <gl>stick</gl>
     <spell>bastão</spell>
-    <hw>bɐʃˈtɐ̃w̃ (EP), basˈtɐ̃w̃ (BP)</hw>
+    <hw>basˈtɐ̃w̃ (BP)</hw>
   </entry>
   <entry id="pt54">
     <gl>fruit</gl>
     <spell>fruta, fruto</spell>
-    <hw>ˈfɾutɐ, ˈfɾutu</hw>
+    <hw>ˈfɾutu</hw>
   </entry>
   <entry id="pt55">
     <gl>seed</gl>
     <spell>semente</spell>
-    <hw>sɨˈmẽtɨ (EP), seˈmẽtʃi (BP)</hw>
+    <hw>seˈmẽtʃi (BP)</hw>
   </entry>
   <entry id="pt56">
     <gl>leaf</gl>
@@ -282,42 +322,42 @@
   <entry id="pt57">
     <gl>root</gl>
     <spell>raiz</spell>
-    <hw>ʁɐˈiʃ (EP), xa'is (BP)</hw>
+    <hw>xa'is (BP)</hw>
   </entry>
   <entry id="pt58">
     <gl>bark (of a tree)</gl>
     <spell>casca</spell>
-    <hw>ˈkaʃkɐ (EP), ˈkaskɐ (BP)</hw>
+    <hw>ˈkaskɐ</hw>
   </entry>
   <entry id="pt59">
     <gl>flower</gl>
     <spell>flor</spell>
-    <hw>floɾ (EP), flox (BP)</hw>
+    <hw>flox</hw>
   </entry>
   <entry id="pt60">
     <gl>grass</gl>
     <spell>erva</spell>
-    <hw>ˈɛɾvɐ (EP), ˈɛʁvɐ (BP)</hw>
+    <hw>ˈɛʁvɐ</hw>
   </entry>
   <entry id="pt61">
     <gl>rope</gl>
     <spell>corda</spell>
-    <hw>ˈkɔɾðɐ (EP), ˈkɔʁdɐ (BP)</hw>
+    <hw>ˈkɔʁdɐ</hw>
   </entry>
   <entry id="pt62">
     <gl>skin</gl>
     <spell>pele</spell>
-    <hw>ˈpɛlɨ (EP), ˈpɛli (BP)</hw>
+    <hw>ˈpɛli</hw>
   </entry>
   <entry id="pt63">
     <gl>meat</gl>
     <spell>carne</spell>
-    <hw>ˈkaɾnɨ (EP), ˈkaʁni (BP)</hw>
+    <hw>ˈkaʁni (BP)</hw>
   </entry>
   <entry id="pt64">
     <gl>blood</gl>
     <spell>sangue</spell>
-    <hw>ˈsɐ̃gɨ (EP), ˈsɐ̃gi (BP)</hw>
+    <hw>ˈsɐ̃gi (BP)</hw>
   </entry>
   <entry id="pt65">
     <gl>bone</gl>
@@ -327,7 +367,7 @@
   <entry id="pt66">
     <gl>fat (noun)</gl>
     <spell>gordura</spell>
-    <hw>ɡuɾˈðuɾɐ (EP), ɡoʁˈduɾɐ (BP)</hw>
+    <hw>ɡoʁˈduɾɐ (BP)</hw>
   </entry>
   <entry id="pt67">
     <gl>egg</gl>
@@ -336,13 +376,23 @@
   </entry>
   <entry id="pt68">
     <gl>horn</gl>
-    <spell>chifre, corno</spell>
-    <hw>ˈʃifɾɨ (EP), ˈkoɾnu (EP), ˈʃifɾi (BP), ˈkoʁnu (BP)</hw>
+    <spell>chifre</spell>
+    <hw>ˈʃifɾi (BP)</hw>
+  </entry>
+  <entry id="pt68.5">
+    <gl>horn</gl>
+    <spell>corno</spell>
+    <hw>ˈkoʁnu (BP)</hw>
   </entry>
   <entry id="pt69">
     <gl>tail</gl>
     <spell>cauda, rabo</spell>
-    <hw>ˈkawðɐ (EP), ˈʁaβu (EP), ˈkawdɐ (BP), ˈxabu (BP)</hw>
+    <hw>ˈkawdɐ (BP)</hw>
+  </entry>
+  <entry id="pt69.5">
+    <gl>tail</gl>
+    <spell>rabo</spell>
+    <hw>ˈxabu (BP)</hw>
   </entry>
   <entry id="pt70">
     <gl>feather</gl>
@@ -352,17 +402,17 @@
   <entry id="pt71">
     <gl>hair</gl>
     <spell>cabelo</spell>
-    <hw>kɐˈβelu (EP), kaˈbelu (BP)</hw>
+    <hw>kaˈbelu (BP)</hw>
   </entry>
   <entry id="pt72">
     <gl>head</gl>
     <spell>cabeça</spell>
-    <hw>kɐˈβesɐ (EP), kaˈbesɐ (BP)</hw>
+    <hw>kaˈbesɐ (BP)</hw>
   </entry>
   <entry id="pt73">
     <gl>ear</gl>
     <spell>orelha</spell>
-    <hw>oˈɾɐjʎɐ (EP), oˈɾeʎɐ (BP and EP alternative)</hw>
+    <hw>oˈɾeʎɐ</hw>
   </entry>
   <entry id="pt74">
     <gl>eye</gl>
@@ -372,7 +422,7 @@
   <entry id="pt75">
     <gl>nose</gl>
     <spell>nariz</spell>
-    <hw>nɐˈɾiʃ (EP), naˈɾis (BP)</hw>
+    <hw>naˈɾis</hw>
   </entry>
   <entry id="pt76">
     <gl>mouth</gl>
@@ -382,7 +432,7 @@
   <entry id="pt77">
     <gl>tooth</gl>
     <spell>dente</spell>
-    <hw>ˈdẽtɨ (EP), ˈdẽtʃi (BP)</hw>
+    <hw>ˈdẽtʃi</hw>
   </entry>
   <entry id="pt78">
     <gl>tongue</gl>
@@ -402,12 +452,12 @@
   <entry id="pt81">
     <gl>leg</gl>
     <spell>perna</spell>
-    <hw>ˈpɛɾnɐ (EP), ˈpɛʁnɐ (BP)</hw>
+    <hw>ˈpɛʁnɐ (BP)</hw>
   </entry>
   <entry id="pt82">
     <gl>knee</gl>
     <spell>joelho</spell>
-    <hw>ʒuˈɐʎu (EP), ʒuˈeʎu (BP and EP alternative)</hw>
+    <hw>ʒuˈeʎu</hw>
   </entry>
   <entry id="pt83">
     <gl>hand</gl>
@@ -421,63 +471,78 @@
   </entry>
   <entry id="pt85">
     <gl>belly</gl>
-    <spell>ventre, barriga</spell>
-    <hw>ˈvẽtɾɨ (EP), bɐˈʁiɣɐ (EP), ˈvẽtɾi (BP), baˈxigɐ (BP)</hw>
+    <spell>ventre</spell>
+    <hw>ˈvẽtɾi</hw>
+  </entry>
+  <entry id="pt85.5">
+    <gl>belly</gl>
+    <spell>barriga</spell>
+    <hw>baˈxigɐ (BP)</hw>
   </entry>
   <entry id="pt86">
     <gl>guts</gl>
-    <spell>entranhas, intestino</spell>
-    <hw>ẽˈtɾɐɲɐʃ (EP), ĩtɨʃˈtinu (EP), ẽˈtɾɐɲɐs (BP), ĩtesˈt͡ʃinu (BP)</hw>
+    <spell>entranhas</spell>
+    <hw>ẽˈtɾɐɲɐs (BP)</hw>
+  </entry>
+  <entry id="pt86.5">
+    <gl>guts</gl>
+    <spell>intestino</spell>
+    <hw>ĩtesˈt͡ʃinu (BP)</hw>
   </entry>
   <entry id="pt87">
     <gl>neck</gl>
     <spell>pescoço</spell>
-    <hw>pɨʃˈkosu (EP), pesˈkosu (BP)</hw>
+    <hw>pesˈkosu (BP)</hw>
   </entry>
   <entry id="pt88">
     <gl>back</gl>
     <spell>costas</spell>
-    <hw>ˈkɔʃtɐʃ (EP), ˈkɔstɐs (BP)</hw>
+    <hw>ˈkɔstɐs (BP)</hw>
   </entry>
   <entry id="pt89">
     <gl>breast</gl>
-    <spell>peito, seios</spell>
-    <hw>ˈpɐjtu (EP), ˈsɐjuʃ (EP), ˈpejtu (EP), ˈsejus (EP)</hw>
+    <spell>peito</spell>
+    <hw>ˈpejtu (BP)</hw>
+  </entry>
+  <entry id="pt89.5">
+    <gl>breast</gl>
+    <spell>seios</spell>
+    <hw>'sejus</hw>
   </entry>
   <entry id="pt90">
     <gl>heart</gl>
     <spell>coração</spell>
-    <hw>kuɾɐˈsɐ̃w̃ (EP), koɾaˈsɐ̃w̃ (BP)</hw>
+    <hw>koɾaˈsɐ̃w̃ (BP)</hw>
   </entry>
   <entry id="pt91">
     <gl>liver</gl>
     <spell>fígado</spell>
-    <hw>ˈfiɣɐðu (EP), ˈfiɡɐdu (BP)</hw>
+    <hw>ˈfiɡɐdu (BP)</hw>
   </entry>
   <entry id="pt92">
     <gl>to drink</gl>
     <spell>beber</spell>
-    <hw>bɨˈβeɾ (EP)</hw>
+    <hw>beˈβeɾ</hw>
   </entry>
   <entry id="pt93">
     <gl>to eat</gl>
     <spell>comer</spell>
-    <hw>kuˈmeɾ (EP)</hw>
+    <hw>kuˈmeɾ</hw>
   </entry>
   <entry id="pt94">
     <gl>to bite</gl>
     <spell>morder</spell>
-    <hw>muɾˈdeɾ (EP)</hw>
+    <hw>muɾˈdeɾ</hw>
   </entry>
   <entry id="pt95">
     <gl>to suck</gl>
     <spell>sugar, chupar</spell>
-    <hw>suˈɡaɾ, ʃuˈpaɾ (EP)</hw>
+    <hw>suˈɡaɾ, ʃuˈpaɾ</hw>
   </entry>
   <entry id="pt96">
     <gl>to spit</gl>
     <spell>cuspir</spell>
-    <hw>kuʃˈpiɾ (EP)</hw>
+    <hw>kuʃˈpiɾ</hw>
   </entry>
   <entry id="pt97">
     <gl>to vomit</gl>
