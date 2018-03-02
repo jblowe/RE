@@ -109,6 +109,7 @@ def make_lexicon_widget(words):
     view = Gtk.TreeView.new_with_model(store)
     for i, column_title in enumerate(['Form', 'Gloss']):
         cell = Gtk.CellRendererText()
+        cell.set_property('editable', True)
         column = Gtk.TreeViewColumn(column_title, cell, text=i)
         view.append_column(column)
     pane = Gtk.ScrolledWindow()
