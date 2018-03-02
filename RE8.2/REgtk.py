@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, GObject
+from gi.repository import Gtk, Gdk, GObject, GLib
 import RE
 import read
 import threading
@@ -40,8 +40,9 @@ def make_correspondence_view(table):
             next_column = columns[index + 1
                                   if index + 1 < len(columns)
                                   else 0]
-            view.set_cursor(path, next_column, True)
-            return True
+            # timeout needed to save cell contents
+            GLib.timeout_add(50, view.set_cursor,
+                             path, next_column, True)
     treeview = Gtk.TreeView.new_with_model(store)
     treeview.connect('key-press-event', key_press_handler)
     def store_edit_text(i):
