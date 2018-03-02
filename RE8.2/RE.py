@@ -20,7 +20,7 @@ class Correspondence:
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
-        return f'<Correspondence({self.id}, {self.syllable_type}, {self.proto_form[0]}>)'
+        return f'<Correspondence({self.id}, {self.syllable_type}, {self.proto_form})>'
 
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
@@ -78,15 +78,15 @@ def tokenize(form, parameters, accessor):
     parses = set()
     regex = parameters.syllable_canon.regex
     sound_classes = parameters.syllable_canon.sound_classes
+    word_initial_marker = Correspondence('', (None, None), '', '$', [])
 
     def doesnt_match_this_left_context(parse, c):
-        # if there is a left context and this is the initial correspondence
-        if parse == [] and (c.context[0] is not None):
-            return True
-        if parse and c.context[0]:
-            return all(parse[-1].proto_form != left and
-                       parse[-1].proto_form not in sound_classes.get(left, [])
-                       for left in c.context[0].split(','))
+        if c.context[0] is None:
+            return False
+        last = word_initial_marker if parse == [] else parse[-1]
+        return all(last.proto_form != left and
+                   last.proto_form not in sound_classes.get(left, [])
+                   for left in c.context[0].split(','))
 
     def doesnt_match_last_right_context(parse, c):
         if parse and parse[-1].context[1]:
@@ -95,12 +95,14 @@ def tokenize(form, parameters, accessor):
                        for right in parse[-1].context[1].split(','))
 
     def gen(form, parse, syllable_parse):
-        # ensure that the last parsed token has no right context.
-        # if we decide to have word-final markers in context, this
-        # is where to check for that
-        if form == '' and regex.fullmatch(syllable_parse) and \
-           parse[-1].context[1] is None:
-            parses.add(tuple(parse))
+        if form == '' and regex.fullmatch(syllable_parse):
+            # check whether the last token's right context had
+            # a word final marker
+            if not (parse[-1].context[1] and \
+                    all('#' != right and
+                        '#' not in sound_classes.get(right, [])
+                        for right in parse[-1].context[1].split(','))):
+                    parses.add(tuple(parse))
         # we can abandon parses that we know can't be completed
         # to satisfy the syllable canon. for DEMO93 this cuts the
         # number of branches from 182146 to 61631

@@ -32,3 +32,7 @@ Modules:
 
 * ```xml.etree.ElementTree``` (should be standard)
 * ```regex``` installabled via something like ```pip3 install regex``` 
+
+**Usage**
+* Notation for contexts
+When specifying contexts, the # sign defines the end of a word, while $ specifies the beginning of a word. None means everything matches.
