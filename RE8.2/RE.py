@@ -80,6 +80,9 @@ def tokenize(form, parameters, accessor):
     sound_classes = parameters.syllable_canon.sound_classes
 
     def doesnt_match_this_left_context(parse, c):
+        # if there is a left context and this is the initial correspondence
+        if parse == [] and (c.context[0] is not None):
+            return True
         if parse and c.context[0]:
             return all(parse[-1].proto_form != left and
                        parse[-1].proto_form not in sound_classes.get(left, [])
