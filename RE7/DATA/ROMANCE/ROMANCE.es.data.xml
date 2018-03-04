@@ -2,7 +2,7 @@
   <entry id="es1">
     <gl>I</gl>
     <spell>yo</spell>
-    <hw>ʝo</hw>
+    <hw>jo</hw>
   </entry>
   <entry id="es2">
     <gl>you (singular)</gl>
@@ -167,12 +167,12 @@
   <entry id="es26">
     <gl>five</gl>
     <spell>cinco</spell>
-    <hw>ˈθiŋko</hw>
+    <hw>ˈθinko</hw>
   </entry>
   <entry id="es27">
     <gl>big</gl>
     <spell>grande</spell>
-    <hw>ˈɡɾande</hw>
+    <hw>ˈgɾande</hw>
   </entry>
   <entry id="es28">
     <gl>long</gl>
@@ -187,7 +187,7 @@
   <entry id="es30">
     <gl>thick</gl>
     <spell>grueso</spell>
-    <hw>ˈɡɾweso</hw>
+    <hw>ˈgɾweso</hw>
   </entry>
   <entry id="es31">
     <gl>heavy</gl>
@@ -220,17 +220,12 @@
     <hw>ˈflako</hw>
   </entry>
   <entry id="es36">
-    <gl>woman</gl>
+    <gl>woman, wife</gl>
     <spell>mujer</spell>
     <hw>muˈxeɾ</hw>
   </entry>
   <entry id="es37">
-    <gl>man (male)</gl>
-    <spell>hombre</spell>
-    <hw>ˈombɾe</hw>
-  </entry>
-  <entry id="es38">
-    <gl>man (human)</gl>
+    <gl>man (male), man (human)</gl>
     <spell>hombre</spell>
     <hw>ˈombɾe</hw>
   </entry>
@@ -243,11 +238,6 @@
     <gl>wife</gl>
     <spell>esposa</spell>
     <hw>esˈposaɾ</hw>
-  </entry>
-  <entry id="es40.5">
-    <gl>wife</gl>
-    <spell>mujer</spell>
-    <hw>muˈxeɾ</hw>
   </entry>
   <entry id="es41">
     <gl>husband</gl>
@@ -307,7 +297,7 @@
   <entry id="es50">
     <gl>worm</gl>
     <spell>gusano</spell>
-    <hw>ɡuˈsano</hw>
+    <hw>guˈsano</hw>
   </entry>
   <entry id="es51">
     <gl>tree</gl>
@@ -357,7 +347,7 @@
   <entry id="es60">
     <gl>grass</gl>
     <spell>hierba</spell>
-    <hw>ˈʝeɾba</hw>
+    <hw>ˈjeɾba</hw>
   </entry>
   <entry id="es61">
     <gl>rope</gl>
@@ -377,7 +367,7 @@
   <entry id="es64">
     <gl>blood</gl>
     <spell>sangre</spell>
-    <hw>ˈsaŋɡɾe</hw>
+    <hw>ˈsangɾe</hw>
   </entry>
   <entry id="es65">
     <gl>bone</gl>
@@ -387,7 +377,7 @@
   <entry id="es66">
     <gl>fat (noun)</gl>
     <spell>grasa</spell>
-    <hw>ˈɡɾasa</hw>
+    <hw>ˈgɾasa</hw>
   </entry>
   <entry id="es67">
     <gl>egg</gl>
@@ -447,7 +437,7 @@
   <entry id="es78">
     <gl>tongue</gl>
     <spell>lengua</spell>
-    <hw>ˈleŋɡwa</hw>
+    <hw>ˈlengwa</hw>
   </entry>
   <entry id="es79">
     <gl>fingernail</gl>
@@ -622,7 +612,7 @@
   <entry id="es113">
     <gl>to hit</gl>
     <spell>golpear</spell>
-    <hw>ɡolpeˈaɾ</hw>
+    <hw>golpeˈaɾ</hw>
   </entry>
   <entry id="es114">
     <gl>to cut</gl>
@@ -641,8 +631,13 @@
   </entry>
   <entry id="es117">
     <gl>to scratch</gl>
-    <spell>arañar, rascar</spell>
-    <hw>aɾaˈɲaɾ/, /rasˈkaɾ</hw>
+    <spell>arañar</spell>
+    <hw>aɾaˈɲaɾ</hw>
+  </entry>
+  <entry id="es117.5">
+    <gl>to scratch</gl>
+    <spell>rascar</spell>
+    <hw>rasˈkaɾ</hw>
   </entry>
   <entry id="es118">
     <gl>to dig</gl>
@@ -942,7 +937,7 @@
   <entry id="es175">
     <gl>white</gl>
     <spell>blanco</spell>
-    <hw>ˈblaŋko</hw>
+    <hw>ˈblanko</hw>
   </entry>
   <entry id="es176">
     <gl>black</gl>
@@ -1123,5 +1118,10 @@
     <gl>name</gl>
     <spell>nombre</spell>
     <hw>ˈnombɾe</hw>
+  </entry>
+  <entry id="es208">
+    <gl>flat</gl>
+    <spell>llano</spell>
+    <hw>'ʎano</hw>
   </entry>
 </lexicon>

@@ -7,9 +7,10 @@
   <param name="trace" value="N"/>
   <param name="title" value="Test Run, Demo 1993"/>
   <param name="spec" value="Y"/>
-  <param name="correspondences" value="TEST.correspondences.xml"/>
+  <param name="correspondences" value="ROMANCE.correspondences.xml"/>
   <param name="fuzzy" value="DEMO93.fuz.xml"/>
   <action name="upstream" from="es" to="proto"/>
+  <action name="upstream" from="oldpt" to="proto"/>
   <action name="upstream" from="pt" to="proto"/>
   <action name="upstream" from="it" to="proto"/>
   <action name="upstream" from="fr" to="proto"/>

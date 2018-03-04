@@ -10,29 +10,19 @@
     <hw>ty</hw>
   </entry>
   <entry id="fr2.5">
-    <gl>you (singular)</gl>
-    <spell>vous (formal)</spell>
+    <gl>you (singular), you (plural)</gl>
+    <spell>vous (formal), vous</spell>
     <hw>vu</hw>
   </entry>
   <entry id="fr3">
-    <gl>he</gl>
-    <spell>il</spell>
+    <gl>he, they</gl>
+    <spell>il, ils/elles</spell>
     <hw>il</hw>
   </entry>
   <entry id="fr4">
     <gl>we</gl>
     <spell>nous</spell>
     <hw>nu</hw>
-  </entry>
-  <entry id="fr5">
-    <gl>you (plural)</gl>
-    <spell>vous</spell>
-    <hw>vu</hw>
-  </entry>
-  <entry id="fr6">
-    <gl>they</gl>
-    <spell>ils / elles</spell>
-    <hw>il</hw>
   </entry>
   <entry id="fr7">
     <gl>this</gl>
@@ -72,12 +62,12 @@
   <entry id="fr14">
     <gl>when</gl>
     <spell>quand</spell>
-    <hw>kã</hw>
+    <hw>kɑ̃</hw>
   </entry>
   <entry id="fr15">
     <gl>how</gl>
     <spell>comment</spell>
-    <hw>kɔmã</hw>
+    <hw>kɔmɑ̃</hw>
   </entry>
   <entry id="fr16">
     <gl>not</gl>
@@ -137,7 +127,7 @@
   <entry id="fr27">
     <gl>big</gl>
     <spell>grand</spell>
-    <hw>ɡʁã</hw>
+    <hw>gʁɑ̃</hw>
   </entry>
   <entry id="fr28">
     <gl>long</gl>
@@ -180,17 +170,12 @@
     <hw>mɛ̃s</hw>
   </entry>
   <entry id="fr36">
-    <gl>woman</gl>
+    <gl>woman, wife</gl>
     <spell>femme</spell>
     <hw>fam</hw>
   </entry>
   <entry id="fr37">
-    <gl>man (male)</gl>
-    <spell>homme</spell>
-    <hw>ɔm</hw>
-  </entry>
-  <entry id="fr38">
-    <gl>man (human)</gl>
+    <gl>man (male), man (human)</gl>
     <spell>homme</spell>
     <hw>ɔm</hw>
   </entry>
@@ -198,11 +183,6 @@
     <gl>child</gl>
     <spell>enfant</spell>
     <hw>ɑ̃fɑ̃</hw>
-  </entry>
-  <entry id="fr40">
-    <gl>wife</gl>
-    <spell>femme</spell>
-    <hw>fam</hw>
   </entry>
   <entry id="fr40.5">
     <gl>wife</gl>
@@ -287,7 +267,7 @@
   <entry id="fr55">
     <gl>seed</gl>
     <spell>graine</spell>
-    <hw>ɡʁɛn</hw>
+    <hw>gʁɛn</hw>
   </entry>
   <entry id="fr56">
     <gl>leaf</gl>
@@ -342,7 +322,7 @@
   <entry id="fr66">
     <gl>fat (noun)</gl>
     <spell>graisse</spell>
-    <hw>ɡʁɛs</hw>
+    <hw>gʁɛs</hw>
   </entry>
   <entry id="fr67">
     <gl>egg</gl>
@@ -395,19 +375,19 @@
     <hw>buʃ</hw>
   </entry>
   <entry id="fr77">
-    <gl>tooth</gl>
-    <spell>dent</spell>
+    <gl>tooth, in</gl>
+    <spell>dent, dans</spell>
     <hw>dɑ̃</hw>
   </entry>
   <entry id="fr78">
     <gl>tongue</gl>
     <spell>langue</spell>
-    <hw>lɑ̃ɡ</hw>
+    <hw>lɑ̃g</hw>
   </entry>
   <entry id="fr79">
     <gl>fingernail</gl>
     <spell>ongle</spell>
-    <hw>ɔ̃ɡl</hw>
+    <hw>ɔ̃gl</hw>
   </entry>
   <entry id="fr80">
     <gl>foot</gl>
@@ -602,7 +582,7 @@
   <entry id="fr117">
     <gl>to scratch</gl>
     <spell>gratter</spell>
-    <hw>ɡʁate</hw>
+    <hw>gʁate</hw>
   </entry>
   <entry id="fr118">
     <gl>to dig</gl>
@@ -767,7 +747,7 @@
   <entry id="fr146">
     <gl>to swell</gl>
     <spell>gonfler</spell>
-    <hw>ɡɔ̃fle</hw>
+    <hw>gɔ̃fle</hw>
   </entry>
   <entry id="fr147">
     <gl>sun</gl>
@@ -862,7 +842,7 @@
   <entry id="fr165">
     <gl>ice</gl>
     <spell>glace</spell>
-    <hw>ɡlas</hw>
+    <hw>glas</hw>
   </entry>
   <entry id="fr166">
     <gl>smoke</gl>
@@ -1042,17 +1022,12 @@
   <entry id="fr200">
     <gl>left</gl>
     <spell>gauche</spell>
-    <hw>ɡoʃ</hw>
+    <hw>goʃ</hw>
   </entry>
   <entry id="fr201">
     <gl>at</gl>
     <spell>à</spell>
     <hw>a</hw>
-  </entry>
-  <entry id="fr202">
-    <gl>in</gl>
-    <spell>dans</spell>
-    <hw>dɑ̃</hw>
   </entry>
   <entry id="fr203">
     <gl>with</gl>

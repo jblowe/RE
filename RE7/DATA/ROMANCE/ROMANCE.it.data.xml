@@ -147,22 +147,22 @@
   <entry id="it26">
     <gl>five</gl>
     <spell>cinque</spell>
-    <hw>ˈt͡ʃiŋkwe</hw>
+    <hw>ˈt͡ʃinkwe</hw>
   </entry>
   <entry id="it27">
     <gl>big</gl>
     <spell>grande</spell>
-    <hw>ˈɡrande</hw>
+    <hw>ˈgrande</hw>
   </entry>
   <entry id="it28">
     <gl>long</gl>
     <spell>lungo</spell>
-    <hw>ˈluŋɡo</hw>
+    <hw>ˈlungo</hw>
   </entry>
   <entry id="it29">
     <gl>wide</gl>
     <spell>largo</spell>
-    <hw>ˈlarɡo</hw>
+    <hw>ˈlargo</hw>
   </entry>
   <entry id="it30">
     <gl>thick</gl>
@@ -200,12 +200,7 @@
     <hw>ˈdɔnna</hw>
   </entry>
   <entry id="it37">
-    <gl>man (male)</gl>
-    <spell>uomo</spell>
-    <hw>ˈwɔːmo</hw>
-  </entry>
-  <entry id="it38">
-    <gl>man (human)</gl>
+    <gl>man (male), man (human)</gl>
     <spell>uomo, persona, essere umano</spell>
     <hw>ˈwɔːmo</hw>
   </entry>
@@ -337,7 +332,7 @@
   <entry id="it64">
     <gl>blood</gl>
     <spell>sangue</spell>
-    <hw>ˈsaŋɡwe</hw>
+    <hw>ˈsangwe</hw>
   </entry>
   <entry id="it65">
     <gl>bone</gl>
@@ -347,7 +342,7 @@
   <entry id="it66">
     <gl>fat (noun)</gl>
     <spell>grasso</spell>
-    <hw>ˈɡrasso</hw>
+    <hw>ˈgrasso</hw>
   </entry>
   <entry id="it67">
     <gl>egg</gl>
@@ -407,12 +402,12 @@
   <entry id="it78">
     <gl>tongue</gl>
     <spell>lingua</spell>
-    <hw>ˈliŋɡwa</hw>
+    <hw>ˈlingwa</hw>
   </entry>
   <entry id="it79">
     <gl>fingernail</gl>
     <spell>unghia</spell>
-    <hw>ˈuŋɡja</hw>
+    <hw>ˈungja</hw>
   </entry>
   <entry id="it80">
     <gl>foot</gl>
@@ -422,7 +417,7 @@
   <entry id="it81">
     <gl>leg</gl>
     <spell>gamba</spell>
-    <hw>ˈɡamba</hw>
+    <hw>ˈgamba</hw>
   </entry>
   <entry id="it82">
     <gl>knee</gl>
@@ -477,7 +472,7 @@
   <entry id="it91">
     <gl>liver</gl>
     <spell>fegato</spell>
-    <hw>ˈfeːɡato</hw>
+    <hw>ˈfeːgato</hw>
   </entry>
   <entry id="it92">
     <gl>to drink</gl>
@@ -607,7 +602,7 @@
   <entry id="it117">
     <gl>to scratch</gl>
     <spell>graffiare</spell>
-    <hw>ɡrafˈfjaːre</hw>
+    <hw>grafˈfjaːre</hw>
   </entry>
   <entry id="it118">
     <gl>to dig</gl>
@@ -697,7 +692,7 @@
   <entry id="it133">
     <gl>to wipe</gl>
     <spell>asciugare</spell>
-    <hw>aʃʃuˈɡaːre</hw>
+    <hw>aʃʃuˈgaːre</hw>
   </entry>
   <entry id="it134">
     <gl>to pull</gl>
@@ -717,7 +712,7 @@
   <entry id="it137">
     <gl>to tie</gl>
     <spell>legare</spell>
-    <hw>leˈɡaːre</hw>
+    <hw>leˈgaːre</hw>
   </entry>
   <entry id="it138">
     <gl>to sew</gl>
@@ -747,7 +742,7 @@
   <entry id="it143">
     <gl>to float</gl>
     <spell>galleggiare</spell>
-    <hw>ɡalledˈd͡ʒaːre</hw>
+    <hw>galledˈd͡ʒaːre</hw>
   </entry>
   <entry id="it144">
     <gl>to flow</gl>
@@ -762,7 +757,7 @@
   <entry id="it146">
     <gl>to swell</gl>
     <spell>gonfiarsi</spell>
-    <hw>ɡonˈfjarsi</hw>
+    <hw>gonˈfjarsi</hw>
   </entry>
   <entry id="it147">
     <gl>sun</gl>
@@ -797,7 +792,7 @@
   <entry id="it153">
     <gl>lake</gl>
     <spell>lago</spell>
-    <hw>ˈlaːɡo</hw>
+    <hw>ˈlaːgo</hw>
   </entry>
   <entry id="it154">
     <gl>sea</gl>
@@ -862,7 +857,7 @@
   <entry id="it165">
     <gl>ice</gl>
     <spell>ghiaccio</spell>
-    <hw>ˈɡjatt͡ʃo</hw>
+    <hw>ˈgjatt͡ʃo</hw>
   </entry>
   <entry id="it166">
     <gl>smoke</gl>
@@ -912,7 +907,7 @@
   <entry id="it175">
     <gl>white</gl>
     <spell>bianco</spell>
-    <hw>ˈbjaŋko</hw>
+    <hw>ˈbjanko</hw>
   </entry>
   <entry id="it176">
     <gl>black</gl>
@@ -992,7 +987,7 @@
   <entry id="it191">
     <gl>sharp (as a knife)</gl>
     <spell>aguzzo</spell>
-    <hw>aˈɡutt͡so</hw>
+    <hw>aˈgutt͡so</hw>
   </entry>
   <entry id="it191">
     <gl>sharp (as a knife)</gl>
@@ -1083,5 +1078,10 @@
     <gl>name</gl>
     <spell>nome</spell>
     <hw>ˈnoːme</hw>
+  </entry>
+  <entry id="it208">
+    <gl>flat</gl>
+    <spell>piano</spell>
+    <hw>ˈpjano</hw>
   </entry>
 </lexicon>

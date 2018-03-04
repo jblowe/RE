@@ -77,7 +77,7 @@
   <entry id="pt13">
     <gl>where</gl>
     <spell>onde</spell>
-    <hw>ˈõd͡ʒi</hw>
+    <hw>ˈõdi</hw>
   </entry>
   <entry id="pt14">
     <gl>when</gl>
@@ -147,7 +147,7 @@
   <entry id="pt27">
     <gl>big</gl>
     <spell>grande</spell>
-    <hw>ˈɡɾɐ̃d͡ʒi</hw>
+    <hw>ˈgɾɐ̃di</hw>
   </entry>
   <entry id="pt28">
     <gl>long</gl>
@@ -195,7 +195,7 @@
     <hw>ˈfinu</hw>
   </entry>
   <entry id="pt36">
-    <gl>woman</gl>
+    <gl>woman, wife</gl>
     <spell>mulher</spell>
     <hw>muˈʎɛɾ</hw>
   </entry>
@@ -208,11 +208,6 @@
     <gl>child</gl>
     <spell>criança</spell>
     <hw>kɾiˈɐ̃sɐ</hw>
-  </entry>
-  <entry id="pt40">
-    <gl>wife</gl>
-    <spell>mulher</spell>
-    <hw>muˈʎɛɾ</hw>
   </entry>
   <entry id="pt41">
     <gl>wife</gl>
@@ -277,7 +272,7 @@
   <entry id="pt49">
     <gl>snake</gl>
     <spell>cobra</spell>
-    <hw>seʁˈpẽt͡ʃi</hw>
+    <hw>seʁˈpẽti</hw>
   </entry>
   <entry id="pt49">
     <gl>snake</gl>
@@ -312,7 +307,7 @@
   <entry id="pt55">
     <gl>seed</gl>
     <spell>semente</spell>
-    <hw>seˈmẽtʃi (BP)</hw>
+    <hw>seˈmẽti (BP)</hw>
   </entry>
   <entry id="pt56">
     <gl>leaf</gl>
@@ -367,7 +362,7 @@
   <entry id="pt66">
     <gl>fat (noun)</gl>
     <spell>gordura</spell>
-    <hw>ɡoʁˈduɾɐ (BP)</hw>
+    <hw>goʁˈduɾɐ (BP)</hw>
   </entry>
   <entry id="pt67">
     <gl>egg</gl>
@@ -432,7 +427,7 @@
   <entry id="pt77">
     <gl>tooth</gl>
     <spell>dente</spell>
-    <hw>ˈdẽtʃi</hw>
+    <hw>ˈdẽti</hw>
   </entry>
   <entry id="pt78">
     <gl>tongue</gl>
@@ -487,7 +482,7 @@
   <entry id="pt86.5">
     <gl>guts</gl>
     <spell>intestino</spell>
-    <hw>ĩtesˈt͡ʃinu (BP)</hw>
+    <hw>ĩtesˈtinu (BP)</hw>
   </entry>
   <entry id="pt87">
     <gl>neck</gl>
@@ -517,7 +512,7 @@
   <entry id="pt91">
     <gl>liver</gl>
     <spell>fígado</spell>
-    <hw>ˈfiɡɐdu (BP)</hw>
+    <hw>ˈfigɐdu (BP)</hw>
   </entry>
   <entry id="pt92">
     <gl>to drink</gl>
@@ -537,12 +532,12 @@
   <entry id="pt95">
     <gl>to suck</gl>
     <spell>sugar, chupar</spell>
-    <hw>suˈɡaɾ, ʃuˈpaɾ</hw>
+    <hw>suˈgaɾ, ʃuˈpaɾ</hw>
   </entry>
   <entry id="pt96">
     <gl>to spit</gl>
     <spell>cuspir</spell>
-    <hw>kuʃˈpiɾ</hw>
+    <hw>kuʃˈpiɾ (EP)</hw>
   </entry>
   <entry id="pt97">
     <gl>to vomit</gl>
@@ -707,7 +702,7 @@
   <entry id="pt129">
     <gl>to hold</gl>
     <spell>segurar</spell>
-    <hw>sɨɡuˈɾaɾ</hw>
+    <hw>sɨguˈɾaɾ</hw>
   </entry>
   <entry id="pt130">
     <gl>to squeeze</gl>
@@ -717,7 +712,7 @@
   <entry id="pt131">
     <gl>to rub</gl>
     <spell>esfregar</spell>
-    <hw>ɨʃfɾɨˈɡaɾ</hw>
+    <hw>ɨʃfɾɨˈgaɾ</hw>
   </entry>
   <entry id="pt132">
     <gl>to wash</gl>
@@ -727,7 +722,7 @@
   <entry id="pt133">
     <gl>to wipe</gl>
     <spell>enxugar</spell>
-    <hw>ẽʃuˈɡaɾ</hw>
+    <hw>ẽʃuˈgaɾ</hw>
   </entry>
   <entry id="pt134">
     <gl>to pull</gl>
@@ -772,7 +767,7 @@
   <entry id="pt142">
     <gl>to play</gl>
     <spell>brincar, jogar</spell>
-    <hw>bɾĩˈkaɾ, ʒuˈɡaɾ</hw>
+    <hw>bɾĩˈkaɾ, ʒuˈgaɾ</hw>
   </entry>
   <entry id="pt143">
     <gl>to float</gl>
@@ -812,7 +807,7 @@
   <entry id="pt150">
     <gl>water</gl>
     <spell>água</spell>
-    <hw>ˈaɡwɐ</hw>
+    <hw>ˈagwɐ</hw>
   </entry>
   <entry id="pt151">
     <gl>rain</gl>
@@ -827,7 +822,7 @@
   <entry id="pt153">
     <gl>lake</gl>
     <spell>lago</spell>
-    <hw>ˈlaɡu</hw>
+    <hw>ˈlagu</hw>
   </entry>
   <entry id="pt154">
     <gl>sea</gl>
@@ -897,7 +892,7 @@
   <entry id="pt167">
     <gl>fire</gl>
     <spell>fogo</spell>
-    <hw>ˈfoɡu</hw>
+    <hw>ˈfogu</hw>
   </entry>
   <entry id="pt168">
     <gl>ash</gl>
@@ -942,7 +937,7 @@
   <entry id="pt176">
     <gl>black</gl>
     <spell>preto, negro</spell>
-    <hw>ˈpɾetu, ˈneɡɾu</hw>
+    <hw>ˈpɾetu, ˈnegɾu</hw>
   </entry>
   <entry id="pt177">
     <gl>night</gl>
@@ -1017,12 +1012,12 @@
   <entry id="pt191">
     <gl>sharp (as a knife)</gl>
     <spell>afiado, aguçado</spell>
-    <hw>ɐfiˈadu, ɐɡuˈsadu</hw>
+    <hw>ɐfiˈadu, ɐguˈsadu</hw>
   </entry>
   <entry id="pt192">
     <gl>dull (as a knife)</gl>
     <spell>cego</spell>
-    <hw>ˈsɛɣu (EP), ˈsɛɡu (BP)</hw>
+    <hw>ˈsɛɣu (EP), ˈsɛgu (BP)</hw>
   </entry>
   <entry id="pt193">
     <gl>smooth</gl>
