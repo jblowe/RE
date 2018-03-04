@@ -5,9 +5,10 @@ import sys
 import serialize
 
 class SyllableCanon:
-    def __init__(self, sound_classes, syllable_regex):
+    def __init__(self, sound_classes, syllable_regex, supra_segmentals):
         self.sound_classes = sound_classes
         self.regex = re.compile(syllable_regex)
+        self.supra_segmentals = supra_segmentals
 
 class Correspondence:
     def __init__(self, id, context, syllable_type, proto_form, daughter_forms):
@@ -30,6 +31,7 @@ def correspondences_as_ids(cs):
 
 # imperative interface
 class TableOfCorrespondences:
+    initial_marker = Correspondence('', (None, None), '', '$', [])
     def __init__(self, family_name, daughter_languages):
         self.correspondences = []
         self.family_name = family_name
@@ -78,38 +80,62 @@ def tokenize(form, parameters, accessor):
     parses = set()
     regex = parameters.syllable_canon.regex
     sound_classes = parameters.syllable_canon.sound_classes
-    word_initial_marker = Correspondence('', (None, None), '', '$', [])
+    supra_segmentals = parameters.syllable_canon.supra_segmentals
+    correspondences = parameters.table.correspondences
+    # insertion/deletion rules that apply for this language
+    nil_correspondences = [c for c in parameters.table.correspondences
+                           if 'Ø' in accessor(c)]
+
+    # ignore supra-segmentals
+    def most_recent_parsed_segment(parse):
+        for token in reversed(parse):
+            if token.proto_form not in supra_segmentals:
+                return token
+        return parameters.table.initial_marker
 
     def doesnt_match_this_left_context(parse, c):
         if c.context[0] is None:
             return False
-        last = word_initial_marker if parse == [] else parse[-1]
+        # ignore supra-segmentals
+        last = most_recent_parsed_segment(parse)
         return all(last.proto_form != left and
                    last.proto_form not in sound_classes.get(left, [])
                    for left in c.context[0].split(','))
 
     def doesnt_match_last_right_context(parse, c):
-        if parse and parse[-1].context[1]:
+        last = most_recent_parsed_segment(parse)
+        if last.context[1]:
             return all(c.proto_form != right and
                        c.proto_form not in sound_classes.get(right, [])
-                       for right in parse[-1].context[1].split(','))
+                       for right in last.context[1].split(','))
 
     def gen(form, parse, syllable_parse):
-        if form == '' and regex.fullmatch(syllable_parse):
-            # check whether the last token's right context had
-            # a word final marker
-            if not (parse[-1].context[1] and \
-                    all('#' != right and
-                        '#' not in sound_classes.get(right, [])
-                        for right in parse[-1].context[1].split(','))):
-                    parses.add(tuple(parse))
         # we can abandon parses that we know can't be completed
         # to satisfy the syllable canon. for DEMO93 this cuts the
         # number of branches from 182146 to 61631
         if regex.fullmatch(syllable_parse, partial=True) is None:
             return
+        last = most_recent_parsed_segment(parse)            
+        if form == '' and regex.fullmatch(syllable_parse):
+            # check whether the last token's right context had a word final
+            # marker or a catch all environment
+            if (last.context[1] is None or
+                any('#' == right or
+                    '#' in sound_classes.get(right, [])
+                    for right in last.context[1].split(','))):
+                parses.add(tuple(parse))
+        # if the last token was marked as only word final then stop
+        if (last.context[1] and
+            all('#' == right
+                for right in last.context[1].split(','))):
+            return
+        # otherwise keep building parses from epenthesis rules
+        for c in nil_correspondences:
+            if not (doesnt_match_this_left_context(parse, c) or
+                    doesnt_match_last_right_context(parse, c)):
+                gen(form, parse + [c], syllable_parse + c.syllable_type)
         for i in range(1, len(form) + 1):
-            for c in parameters.table.correspondences:
+            for c in correspondences:
                 if (doesnt_match_this_left_context(parse, c) or
                     doesnt_match_last_right_context(parse, c)):
                     continue
