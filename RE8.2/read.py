@@ -12,18 +12,21 @@ def read_correspondence_file(filename, project_name, daughter_languages):
 
 def read_syllable_canon(parameters):
     sound_classes = {}
+    supra_segmentals = []
     for parameter in parameters:
         if parameter.tag == 'class':
             sound_classes[parameter.attrib.get('name')] = \
                 parameter.attrib.get('value')
         if parameter.tag == 'canon':
             regex = parameter.attrib.get('value')
-    return RE.SyllableCanon(sound_classes, regex)
+        if parameter.tag == 'spec':
+            supra_segmentals = parameter.attrib.get('value').split(',')
+    return RE.SyllableCanon(sound_classes, regex, supra_segmentals)
 
 def read_correspondences(correspondences, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)
     for correspondence in correspondences:
-        daughter_forms = {}
+        daughter_forms = {name: '' for name in daughter_languages}
         for dialect in correspondence.iterfind('modern'):
             daughter_forms[dialect.attrib.get('dialecte')] = \
                 list(map(lambda seg: seg.text, dialect.iterfind('seg')))

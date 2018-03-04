@@ -8,6 +8,8 @@ def serialize_correspondence_file(filename, parameters):
         ET.SubElement(params, 'class', name=cover, value=values)
     ET.SubElement(params, 'canon', name='syllabe',
                   value=syllable_canon.regex.pattern)
+    ET.SubElement(params, 'spec', name='supra_segmentals',
+                  value=','.join(syllable_canon.supra_segmentals))
     for correspondence in parameters.table.correspondences:
         corr = ET.SubElement(root, 'corr', num=correspondence.id)
         attributes = {'syll': correspondence.syllable_type}
@@ -18,7 +20,8 @@ def serialize_correspondence_file(filename, parameters):
         ET.SubElement(corr, 'proto', **attributes).text = \
             correspondence.proto_form
         for language, forms in correspondence.daughter_forms.items():
-            modern = ET.SubElement(corr, 'modern', dialecte=language)
-            for form in forms:
-                ET.SubElement(modern, 'seg').text = form
+            if forms != ['']:
+                modern = ET.SubElement(corr, 'modern', dialecte=language)
+                for form in forms:
+                    ET.SubElement(modern, 'seg').text = form
     ET.ElementTree(root).write(filename, encoding='UTF-8')

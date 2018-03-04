@@ -85,22 +85,28 @@ def make_sets_view(model):
                                                text=1))
     return sets_view
 
+def make_entry(text):
+    entry = Gtk.Entry()
+    entry.set_text(text)
+    return entry
+
 def make_syllable_canon_widget(syllable_canon):
     grid = Gtk.Grid()
-    regex_entry = Gtk.Entry()
-    regex_entry.set_text(syllable_canon.regex.pattern)
     grid.attach(Gtk.Label('Syllable regex:'), 0, 0, 1, 1)
-    grid.attach(regex_entry, 1, 0, 1, 1)
-    sound_classes_entry = Gtk.Entry()
-    sound_classes_entry.set_text(str(syllable_canon.sound_classes))
+    grid.attach(make_entry(syllable_canon.regex.pattern), 1, 0, 1, 1)
     grid.attach(Gtk.Label('Sound classes:'), 0, 1, 1, 1)
-    grid.attach(sound_classes_entry, 1, 1, 1, 1)
+    grid.attach(make_entry(str(syllable_canon.sound_classes)), 1, 1, 1, 1)
+    grid.attach(Gtk.Label('Supra-segmentals'), 0, 2, 1, 1)
+    grid.attach(make_entry(','.join(syllable_canon.supra_segmentals)),
+                1, 2, 1, 1)
     return grid
 
 def read_syllable_canon_from_widget(widget):
     children = widget.get_children()
-    return RE.SyllableCanon(eval(children[0].get_text()),
-                            children[2].get_text())
+    return RE.SyllableCanon(
+        eval(children[2].get_text()),
+        children[4].get_text(),
+        [x.strip() for x in children[0].get_text().split(',')])
 
 def make_lexicon_widget(words):
     store = Gtk.ListStore(str, str)
