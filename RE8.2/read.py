@@ -16,7 +16,7 @@ def read_syllable_canon(parameters):
     for parameter in parameters:
         if parameter.tag == 'class':
             sound_classes[parameter.attrib.get('name')] = \
-                parameter.attrib.get('value')
+                [x.strip() for x in parameter.attrib.get('value').split(',')]
         if parameter.tag == 'canon':
             regex = parameter.attrib.get('value')
         if parameter.tag == 'spec':

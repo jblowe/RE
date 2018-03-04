@@ -5,7 +5,8 @@ def serialize_correspondence_file(filename, parameters):
     params = ET.SubElement(root, 'parameters')
     syllable_canon = parameters.syllable_canon
     for cover, values in syllable_canon.sound_classes.items():
-        ET.SubElement(params, 'class', name=cover, value=values)
+        ET.SubElement(params, 'class', name=cover,
+                      value=','.join(values))
     ET.SubElement(params, 'canon', name='syllabe',
                   value=syllable_canon.regex.pattern)
     ET.SubElement(params, 'spec', name='supra_segmentals',
