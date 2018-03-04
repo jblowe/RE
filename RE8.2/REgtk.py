@@ -55,6 +55,7 @@ def make_correspondence_view(table):
         cell.set_property('editable', True)
         cell.connect('edited', store_edit_text(i))
         column = Gtk.TreeViewColumn(column_title, cell, text=i)
+        column.set_sort_column_id(i)
         treeview.append_column(column)
     return treeview, store
 
@@ -78,6 +79,7 @@ def make_sets_view(model):
     recon_column = Gtk.TreeViewColumn('Reconstructions',
                                       Gtk.CellRendererText(),
                                       text=0)
+    recon_column.set_sort_column_id(0)
     recon_column.set_resizable(True)
     sets_view.append_column(recon_column)
     sets_view.append_column(Gtk.TreeViewColumn('Ids',
@@ -117,6 +119,7 @@ def make_lexicon_widget(words):
         cell = Gtk.CellRendererText()
         cell.set_property('editable', True)
         column = Gtk.TreeViewColumn(column_title, cell, text=i)
+        column.set_sort_column_id(i)
         view.append_column(column)
     pane = Gtk.ScrolledWindow()
     pane.set_vexpand(True)
