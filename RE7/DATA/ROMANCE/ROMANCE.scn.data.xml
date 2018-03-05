@@ -17,12 +17,12 @@
   <entry id="scn4">
     <gl>we</gl>
     <spell>nuàutri</spell>
-    <hw>nuˈawtɹi</hw>
+    <hw>nuˈawtɾi</hw>
   </entry>
   <entry id="scn5">
     <gl>you (plural)</gl>
     <spell>vuàutri</spell>
-    <hw>ˈvuˈawtɹi</hw>
+    <hw>ˈvuˈawtɾi</hw>
   </entry>
   <entry id="scn6">
     <gl>they</gl>
@@ -97,7 +97,7 @@
   <entry id="scn18.1">
     <gl>many</gl>
     <spell>troppu</spell>
-    <hw>ˈtɹɔppu</hw>
+    <hw>ˈtɾɔppu</hw>
   </entry>
   <entry id="scn18.2">
     <gl>many</gl>
@@ -117,7 +117,7 @@
   <entry id="scn21">
     <gl>other</gl>
     <spell>àutru</spell>
-    <hw>ˈawtɹu</hw>
+    <hw>ˈawtɾu</hw>
   </entry>
   <entry id="scn22">
     <gl>one</gl>
@@ -132,12 +132,12 @@
   <entry id="scn24">
     <gl>three</gl>
     <spell>tri</spell>
-    <hw>ˈtɹi</hw>
+    <hw>ˈtɾi</hw>
   </entry>
   <entry id="scn25">
     <gl>four</gl>
     <spell>quattru</spell>
-    <hw>ˈkwattɹu</hw>
+    <hw>ˈkwattɾu</hw>
   </entry>
   <entry id="scn26">
     <gl>five</gl>
@@ -179,11 +179,6 @@
     <spell>nicu</spell>
     <hw>ˈniku</hw>
   </entry>
-  <entry id="scn32.5">
-    <gl>small</gl>
-    <spell>picciriddu</spell>
-    <hw>pit͡ʃt͡ʃiˈɾiɖɖu</hw>
-  </entry>
   <entry id="scn33">
     <gl>short</gl>
     <spell>curtu</spell>
@@ -192,7 +187,7 @@
   <entry id="scn34">
     <gl>narrow</gl>
     <spell>strittu</spell>
-    <hw>ˈʃɹittu</hw>
+    <hw>ˈʃɾittu</hw>
   </entry>
   <entry id="scn35">
     <gl>thin</gl>
@@ -220,7 +215,7 @@
     <hw>kɾiˈʃtjanu</hw>
   </entry>
   <entry id="scn39">
-    <gl>child</gl>
+    <gl>child, small</gl>
     <spell>picciriddu</spell>
     <hw>pit͡ʃt͡ʃiˈɾiɖɖu</hw>
   </entry>
@@ -237,12 +232,12 @@
   <entry id="scn42">
     <gl>mother</gl>
     <spell>matri</spell>
-    <hw>ˈmatɹi</hw>
+    <hw>ˈmatɾi</hw>
   </entry>
   <entry id="scn43">
     <gl>father</gl>
     <spell>patri</spell>
-    <hw>ˈpatɹi</hw>
+    <hw>ˈpatɾi</hw>
   </entry>
   <entry id="scn44">
     <gl>animal</gl>
@@ -677,12 +672,17 @@
   <entry id="scn125">
     <gl>to stand</gl>
     <spell>stari</spell>
-    <hw>ˈstaɾi, ˈʃtaɾi</hw>
+    <hw>ˈstaɾi</hw>
   </entry>
   <entry id="scn126">
     <gl>to turn (intransitive)</gl>
-    <spell>girari, vutari</spell>
-    <hw>dʒiˈɾaɾi, vuˈtaɾi</hw>
+    <spell>girari</spell>
+    <hw>dʒiˈɾaɾi</hw>
+  </entry>
+  <entry id="scn126.5">
+    <gl>to turn (intransitive)</gl>
+    <spell>vutari</spell>
+    <hw>vuˈtaɾi</hw>
   </entry>
   <entry id="scn127">
     <gl>to fall</gl>
@@ -712,7 +712,7 @@
   <entry id="scn131">
     <gl>to rub</gl>
     <spell>stricari</spell>
-    <hw>ʃɹiˈkaɾi</hw>
+    <hw>ʃɾiˈkaɾi</hw>
   </entry>
   <entry id="scn132">
     <gl>to wash</gl>
@@ -752,7 +752,7 @@
   <entry id="scn139">
     <gl>to count</gl>
     <spell>cuntari</spell>
-    <hw>kuntaɾi</hw>
+    <hw>kunˈtaɾi</hw>
   </entry>
   <entry id="scn140">
     <gl>to say</gl>
@@ -767,7 +767,7 @@
   <entry id="scn141">
     <gl>to sing</gl>
     <spell>cantari</spell>
-    <hw>kantaɾi</hw>
+    <hw>kanˈtaɾi</hw>
   </entry>
   <entry id="scn142">
     <gl>to play</gl>
@@ -842,7 +842,7 @@
   <entry id="scn156">
     <gl>stone</gl>
     <spell>petra</spell>
-    <hw>ˈpɛtɹa</hw>
+    <hw>ˈpɛtɾa</hw>
   </entry>
   <entry id="scn157">
     <gl>sand</gl>
@@ -912,7 +912,7 @@
   <entry id="scn170">
     <gl>road</gl>
     <spell>strata</spell>
-    <hw>ˈʃɹata</hw>
+    <hw>ˈʃɾata</hw>
   </entry>
   <entry id="scn170.1">
     <gl>road</gl>
@@ -927,7 +927,7 @@
   <entry id="scn170.3">
     <gl>road</gl>
     <spell>dromu</spell>
-    <hw>ˈɖɹɔmu</hw>
+    <hw>ˈɖɾɔmu</hw>
   </entry>
   <entry id="scn170.4">
     <gl>road</gl>
@@ -1032,7 +1032,7 @@
   <entry id="scn189">
     <gl>straight</gl>
     <spell>drittu</spell>
-    <hw>ˈɖɹittu</hw>
+    <hw>ˈɖɾittu</hw>
   </entry>
   <entry id="scn189.5">
     <gl>straight</gl>
