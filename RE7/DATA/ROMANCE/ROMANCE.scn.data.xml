@@ -6,8 +6,13 @@
   </entry>
   <entry id="scn2">
     <gl>you (singular)</gl>
-    <spell>tu, tuni, Vossìa (formal)</spell>
-    <hw>tu, ˈtuni, vɔsˈsia</hw>
+    <spell>tu</spell>
+    <hw>tu</hw>
+  </entry>
+  <entry id="scn2">
+    <gl>you (singular)</gl>
+    <spell>Vossìa (formal)</spell>
+    <hw>vɔsˈsia</hw>
   </entry>
   <entry id="scn3">
     <gl>he</gl>
@@ -810,12 +815,7 @@
     <hw>ˈstiɖɖa</hw>
   </entry>
   <entry id="scn150">
-    <gl>water</gl>
-    <spell>acqua</spell>
-    <hw>ˈakkwa</hw>
-  </entry>
-  <entry id="scn151">
-    <gl>rain</gl>
+    <gl>water, rain</gl>
     <spell>acqua</spell>
     <hw>ˈakkwa</hw>
   </entry>

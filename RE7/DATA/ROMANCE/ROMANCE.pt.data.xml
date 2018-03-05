@@ -22,12 +22,12 @@
   <entry id="pt4">
     <gl>we</gl>
     <spell>nós</spell>
-    <hw>ˈnɔs</hw>
+    <hw>nɔs</hw>
   </entry>
   <entry id="pt5">
     <gl>you (plural)</gl>
     <spell>vós</spell>
-    <hw>ˈvɔs</hw>
+    <hw>vɔs</hw>
   </entry>
   <entry id="pt5.5">
     <gl>you (plural)</gl>
@@ -72,7 +72,7 @@
   <entry id="pt12">
     <gl>what</gl>
     <spell>o que</spell>
-    <hw>u ki)</hw>
+    <hw>u ki</hw>
   </entry>
   <entry id="pt13">
     <gl>where</gl>
@@ -102,12 +102,12 @@
   <entry id="pt18">
     <gl>many</gl>
     <spell>muito</spell>
-    <hw>ˈmũj̃tu</hw>
+    <hw>ˈmũjtu</hw>
   </entry>
   <entry id="pt19">
     <gl>some</gl>
     <spell>alguns</spell>
-    <hw>auˈgũs (BP)</hw>
+    <hw>awˈgũs</hw>
   </entry>
   <entry id="pt20">
     <gl>few</gl>
@@ -1036,8 +1036,8 @@
   </entry>
   <entry id="pt196">
     <gl>correct</gl>
-    <spell>correcto (EP), correto (BP)</spell>
-    <hw>kuˈʁɛtu (EP), koˈʁɛtu (BP)</hw>
+    <spell>correto (BP)</spell>
+    <hw>koˈʁɛtu (BP)</hw>
   </entry>
   <entry id="pt197">
     <gl>near</gl>
