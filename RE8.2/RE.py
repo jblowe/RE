@@ -86,36 +86,33 @@ def tokenize(form, parameters, accessor):
     nil_correspondences = [c for c in parameters.table.correspondences
                            if 'Ø' in accessor(c)]
 
-    # ignore supra-segmentals
-    def most_recent_parsed_segment(parse):
-        for token in reversed(parse):
-            if token.proto_form not in supra_segmentals:
-                return token
-        return parameters.table.initial_marker
-
-    def doesnt_match_this_left_context(parse, c):
+    def doesnt_match_this_left_context(parse, c, last):
         if c.context[0] is None:
             return False
-        # ignore supra-segmentals
-        last = most_recent_parsed_segment(parse)
         return all(last.proto_form != left and
                    last.proto_form not in sound_classes.get(left, [])
                    for left in c.context[0].split(','))
 
-    def doesnt_match_last_right_context(parse, c):
-        last = most_recent_parsed_segment(parse)
+    def doesnt_match_last_right_context(parse, c, last):
         if last.context[1]:
             return all(c.proto_form != right and
                        c.proto_form not in sound_classes.get(right, [])
                        for right in last.context[1].split(','))
 
-    def gen(form, parse, syllable_parse):
+    def matches_context(parse, c, last):
+        return not (doesnt_match_this_left_context(parse, c, last) or
+                    doesnt_match_last_right_context(parse, c, last))
+
+    def gen(form, parse, last, syllable_parse):
+        '''We generate context and "phonotactic" sensitive parses recursively,
+        making sure to skip over suprasegmental features when matching
+        contexts.
+        '''
         # we can abandon parses that we know can't be completed
         # to satisfy the syllable canon. for DEMO93 this cuts the
         # number of branches from 182146 to 61631
         if regex.fullmatch(syllable_parse, partial=True) is None:
             return
-        last = most_recent_parsed_segment(parse)            
         if form == '' and regex.fullmatch(syllable_parse):
             # check whether the last token's right context had a word final
             # marker or a catch all environment
@@ -131,17 +128,20 @@ def tokenize(form, parameters, accessor):
             return
         # otherwise keep building parses from epenthesis rules
         for c in nil_correspondences:
-            if not (doesnt_match_this_left_context(parse, c) or
-                    doesnt_match_last_right_context(parse, c)):
-                gen(form, parse + [c], syllable_parse + c.syllable_type)
+            if matches_context(parse, c, last):
+                gen(form,
+                    parse + [c],
+                    last if c.proto_form in supra_segmentals else c,
+                    syllable_parse + c.syllable_type)
         for i in range(1, len(form) + 1):
             for c in correspondences:
-                if (doesnt_match_this_left_context(parse, c) or
-                    doesnt_match_last_right_context(parse, c)):
-                    continue
-                if form[:i] in accessor(c):
-                    gen(form[i:], parse + [c], syllable_parse + c.syllable_type)
-    gen(form, [], '')
+                if form[:i] in accessor(c) and \
+                   matches_context(parse, c, last):
+                    gen(form[i:],
+                        parse + [c],
+                        last if c.proto_form in supra_segmentals else c,
+                        syllable_parse + c.syllable_type)
+    gen(form, [], parameters.table.initial_marker, '')
     return parses
 
 # set of all possible forms for a daughter language given correspondences
