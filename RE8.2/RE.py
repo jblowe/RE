@@ -86,18 +86,18 @@ def tokenize(form, parameters, accessor):
     nil_correspondences = [c for c in parameters.table.correspondences
                            if 'Ø' in accessor(c)]
 
-    def doesnt_match_this_left_context(parse, c, last):
+    def doesnt_match_this_left_context(c, last):
         if c.context[0] is None:
             return False
         return all(last.proto_form != left and
                    last.proto_form not in sound_classes.get(left, [])
-                   for left in c.context[0].split(','))
+                   for left in c.context[0])
 
-    def doesnt_match_last_right_context(parse, c, last):
+    def doesnt_match_last_right_context(c, last):
         if last.context[1]:
             return all(c.proto_form != right and
                        c.proto_form not in sound_classes.get(right, [])
-                       for right in last.context[1].split(','))
+                       for right in last.context[1])
 
     def matches_context(parse, c, last):
         return not (doesnt_match_this_left_context(parse, c, last) or
@@ -119,16 +119,16 @@ def tokenize(form, parameters, accessor):
             if (last.context[1] is None or
                 any('#' == right or
                     '#' in sound_classes.get(right, [])
-                    for right in last.context[1].split(','))):
+                    for right in last.context[1])):
                 parses.add(tuple(parse))
         # if the last token was marked as only word final then stop
         if (last.context[1] and
             all('#' == right
-                for right in last.context[1].split(','))):
+                for right in last.context[1])):
             return
         # otherwise keep building parses from epenthesis rules
         for c in nil_correspondences:
-            if matches_context(parse, c, last):
+            if matches_context(c, last):
                 for syllable_type in c.syllable_types:
                     gen(form,
                         parse + [c],

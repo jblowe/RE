@@ -17,7 +17,10 @@ class WrappedTextBuffer():
         Gdk.threads_leave()
 
 def make_correspondence_row(correspondence, names):
-    return [correspondence.id, str(correspondence.context),
+    return [correspondence.id,
+            ((','.join(correspondence.context[0] or '') + '_' +
+             ','.join(correspondence.context[1] or ''))
+             if correspondence.context != (None, None) else ''),
             ','.join(correspondence.syllable_types),
             correspondence.proto_form] + \
             [', '.join(v)
@@ -67,7 +70,11 @@ def read_view_into_table(view):
     for row in model:
         table.add_correspondence(
             RE.Correspondence(
-                row[0], eval(row[1]),
+                row[0],
+                ((None, None) if row[1] == '' else
+                 tuple(None if x == '' else
+                       [y.strip() for y in x.split(',')]
+                       for x in row[1].split('_'))),
                 [x.strip() for x in row[2].split(',')], row[3],
                 dict(zip(names, ([x.strip() for x in token.split(',')]
                                  for token in row[4:])))))

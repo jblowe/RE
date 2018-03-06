@@ -15,9 +15,9 @@ def serialize_correspondence_file(filename, parameters):
         corr = ET.SubElement(root, 'corr', num=correspondence.id)
         attributes = {'syll': ','.join(correspondence.syllable_types)}
         if correspondence.context[0]:
-            attributes['contextL'] = correspondence.context[0]
+            attributes['contextL'] = ','.join(correspondence.context[0])
         if correspondence.context[1]:
-            attributes['contextR'] = correspondence.context[1]
+            attributes['contextR'] = ','.join(correspondence.context[1])
         ET.SubElement(corr, 'proto', **attributes).text = \
             correspondence.proto_form
         for language, forms in correspondence.daughter_forms.items():

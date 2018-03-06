@@ -31,8 +31,12 @@ def read_correspondences(correspondences, project_name, daughter_languages):
             daughter_forms[dialect.attrib.get('dialecte')] = \
                 list(map(lambda seg: seg.text, dialect.iterfind('seg')))
         proto_form_info = correspondence.find('proto')
-        context = (proto_form_info.attrib.get('contextL'),
-                   proto_form_info.attrib.get('contextR'))
+        contextL = proto_form_info.attrib.get('contextL')
+        contextR = proto_form_info.attrib.get('contextR')
+        context = ([x.strip() for x in contextL.split(',')]
+                   if contextL else None,
+                   [x.strip() for x in contextR.split(',')]
+                   if contextR else None)
         table.add_correspondence(
             RE.Correspondence(
                 correspondence.attrib.get('num'),
