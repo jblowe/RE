@@ -13,7 +13,7 @@ def serialize_correspondence_file(filename, parameters):
                   value=','.join(syllable_canon.supra_segmentals))
     for correspondence in parameters.table.correspondences:
         corr = ET.SubElement(root, 'corr', num=correspondence.id)
-        attributes = {'syll': correspondence.syllable_type}
+        attributes = {'syll': ','.join(correspondence.syllable_types)}
         if correspondence.context[0]:
             attributes['contextL'] = correspondence.context[0]
         if correspondence.context[1]:

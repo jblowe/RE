@@ -33,13 +33,14 @@ def read_correspondences(correspondences, project_name, daughter_languages):
         proto_form_info = correspondence.find('proto')
         context = (proto_form_info.attrib.get('contextL'),
                    proto_form_info.attrib.get('contextR'))
-        for syllable_type in proto_form_info.attrib.get('syll').split(','):
-            table.add_correspondence(
-                RE.Correspondence(correspondence.attrib.get('num'),
-                                  context,
-                                  syllable_type,
-                                  proto_form_info.text,
-                                  daughter_forms))
+        table.add_correspondence(
+            RE.Correspondence(
+                correspondence.attrib.get('num'),
+                context,
+                [x.strip() for x
+                 in proto_form_info.attrib.get('syll').split(',')],
+                proto_form_info.text,
+                daughter_forms))
     return table
 
 def next_skipping_comment(reader):
@@ -55,11 +56,10 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order
         names = next_skipping_comment(reader)[5:]
-        for row in reader:
-            for syllable_type in row[2].split(','): 
-                table.add_correspondence(Correspondence(
-                    row[0], row[4], syllable_type, row[3],
-                    dict(zip(names, (x.split(',') for x in row[5:])))))
+        for row in reader: 
+            table.add_correspondence(Correspondence(
+                row[0], row[4], row[2].split(','), row[3],
+                dict(zip(names, (x.split(',') for x in row[5:])))))
     return table
 
 # xml reading

@@ -18,7 +18,8 @@ class WrappedTextBuffer():
 
 def make_correspondence_row(correspondence, names):
     return [correspondence.id, str(correspondence.context),
-            correspondence.syllable_type, correspondence.proto_form] + \
+            ','.join(correspondence.syllable_types),
+            correspondence.proto_form] + \
             [', '.join(v)
              for v in (correspondence.daughter_forms.get(name)
                        for name in names)]
@@ -66,7 +67,8 @@ def read_view_into_table(view):
     for row in model:
         table.add_correspondence(
             RE.Correspondence(
-                row[0], eval(row[1]), row[2], row[3],
+                row[0], eval(row[1]),
+                [x.strip() for x in row[2].split(',')], row[3],
                 dict(zip(names, ([x.strip() for x in token.split(',')]
                                  for token in row[4:])))))
     return table

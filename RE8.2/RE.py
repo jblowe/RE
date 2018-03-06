@@ -11,17 +11,17 @@ class SyllableCanon:
         self.supra_segmentals = supra_segmentals
 
 class Correspondence:
-    def __init__(self, id, context, syllable_type, proto_form, daughter_forms):
+    def __init__(self, id, context, syllable_types, proto_form, daughter_forms):
         self.id = id
         # context is a tuple of left and right contexts
         self.context = context
-        self.syllable_type = syllable_type
+        self.syllable_types = syllable_types
         self.proto_form = proto_form
         # daughter forms indexed by language
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
-        return f'<Correspondence({self.id}, {self.syllable_type}, {self.proto_form})>'
+        return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
 
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
@@ -129,18 +129,22 @@ def tokenize(form, parameters, accessor):
         # otherwise keep building parses from epenthesis rules
         for c in nil_correspondences:
             if matches_context(parse, c, last):
-                gen(form,
-                    parse + [c],
-                    last if c.proto_form in supra_segmentals else c,
-                    syllable_parse + c.syllable_type)
-        for i in range(1, len(form) + 1):
-            for c in correspondences:
-                if form[:i] in accessor(c) and \
-                   matches_context(parse, c, last):
-                    gen(form[i:],
+                for syllable_type in c.syllable_types:
+                    gen(form,
                         parse + [c],
                         last if c.proto_form in supra_segmentals else c,
-                        syllable_parse + c.syllable_type)
+                        syllable_parse + syllable_type)
+        if form:
+            for c in correspondences:
+                for ctext in accessor(c):
+                    if form.startswith(ctext) and \
+                       matches_context(parse, c, last):
+                        for syllable_type in c.syllable_types:
+                            gen(form[len(ctext):],
+                                parse + [c],
+                                last if c.proto_form in supra_segmentals else c,
+                                syllable_parse + syllable_type)
+
     gen(form, [], parameters.table.initial_marker, '')
     return parses
 
