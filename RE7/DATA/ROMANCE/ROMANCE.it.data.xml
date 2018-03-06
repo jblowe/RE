@@ -369,6 +369,11 @@
     <spell>capelli</spell>
     <hw>kaˈpelli</hw>
   </entry>
+  <entry id="it71.5">
+    <gl>hair (singular)</gl>
+    <spell>capello</spell>
+    <hw>kaˈpello</hw>
+  </entry>
   <entry id="it72">
     <gl>head</gl>
     <spell>testa</spell>
@@ -613,6 +618,11 @@
     <gl>to dig</gl>
     <spell>scavare</spell>
     <hw>skaˈvare</hw>
+  </entry>
+  <entry id="it118">
+    <gl>to take out</gl>
+    <spell>scavare</spell>
+    <hw>kaˈvare</hw>
   </entry>
   <entry id="it119">
     <gl>to swim</gl>

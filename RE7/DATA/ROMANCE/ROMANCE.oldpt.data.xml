@@ -599,6 +599,11 @@
     <spell>cavar</spell>
     <hw>kaˈβaɾ</hw>
   </entry>
+  <entry id="oldpt118">
+    <gl>to dig</gl>
+    <spell>escavar</spell>
+    <hw>eskaˈβaɾ</hw>
+  </entry>
   <entry id="oldpt119">
     <gl>to swim</gl>
     <spell>nadar</spell>
@@ -731,8 +736,8 @@
   </entry>
   <entry id="oldpt145">
     <gl>to freeze</gl>
-    <spell>gelar, *gear</spell>
-    <hw>d͡ʒeˈlaɾ, *d͡ʒeˈaɾ</hw>
+    <spell>gelar</spell>
+    <hw>d͡ʒeˈlaɾ</hw>
   </entry>
   <entry id="oldpt146">
     <gl>to swell</gl>
