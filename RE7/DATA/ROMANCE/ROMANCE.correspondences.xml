@@ -1017,15 +1017,18 @@
       </modern>
       <modern dialecte="oldpt">
          <seg>t͡s</seg>
+         <seg>d͡z</seg>
       </modern>
       <modern dialecte="pt">
          <seg>s</seg>
+         <seg>z</seg>
       </modern>
       <modern dialecte="it">
          <seg>t͡ʃ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>s</seg>
+         <seg>z</seg>
       </modern>
       <modern dialecte="scn">
          <seg>ɕ</seg>
