@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 def serialize_correspondence_file(filename, parameters):
     root = ET.Element('tableOfCorr')
@@ -25,4 +26,6 @@ def serialize_correspondence_file(filename, parameters):
                 modern = ET.SubElement(corr, 'modern', dialecte=language)
                 for form in forms:
                     ET.SubElement(modern, 'seg').text = form
-    ET.ElementTree(root).write(filename, encoding='UTF-8')
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(minidom.parseString(ET.tostring(root))
+                .toprettyxml(indent='   '))
