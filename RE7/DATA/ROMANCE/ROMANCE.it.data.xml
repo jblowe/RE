@@ -192,7 +192,7 @@
   <entry id="it35">
     <gl>thin</gl>
     <spell>sottile</spell>
-    <hw>sotˈtile</hw>
+    <hw>soˈttile</hw>
   </entry>
   <entry id="it36">
     <gl>woman</gl>
@@ -242,7 +242,7 @@
   <entry id="it46">
     <gl>bird</gl>
     <spell>uccello</spell>
-    <hw>utˈt͡ʃɛllo</hw>
+    <hw>uˈtt͡ʃɛllo</hw>
   </entry>
   <entry id="it47">
     <gl>dog</gl>
@@ -502,7 +502,7 @@
   <entry id="it95">
     <gl>to suck</gl>
     <spell>succhiare</spell>
-    <hw>sukˈkjare</hw>
+    <hw>suˈkkjare</hw>
   </entry>
   <entry id="it96">
     <gl>to spit</gl>
@@ -577,7 +577,7 @@
   <entry id="it110">
     <gl>to kill</gl>
     <spell>uccidere</spell>
-    <hw>utˈt͡ʃidere</hw>
+    <hw>uˈtt͡ʃidere</hw>
   </entry>
   <entry id="it111">
     <gl>to fight</gl>
@@ -587,7 +587,7 @@
   <entry id="it112">
     <gl>to hunt</gl>
     <spell>cacciare</spell>
-    <hw>katˈt͡ʃare</hw>
+    <hw>kaˈtt͡ʃare</hw>
   </entry>
   <entry id="it113">
     <gl>to hit</gl>
@@ -757,7 +757,7 @@
   <entry id="it143">
     <gl>to float</gl>
     <spell>galleggiare</spell>
-    <hw>galledˈd͡ʒare</hw>
+    <hw>galleˈdd͡ʒare</hw>
   </entry>
   <entry id="it144">
     <gl>to flow</gl>
@@ -977,7 +977,7 @@
   <entry id="it186">
     <gl>bad</gl>
     <spell>cattivo</spell>
-    <hw>katˈtivo</hw>
+    <hw>kaˈttivo</hw>
   </entry>
   <entry id="it187">
     <gl>rotten</gl>
@@ -1098,5 +1098,10 @@
     <gl>flat</gl>
     <spell>piano</spell>
     <hw>ˈpjano</hw>
+  </entry>
+  <entry id="it209">
+    <gl>to beat, throb</gl>
+    <spell>pulsare</spell>
+    <hw>pulˈsare</hw>
   </entry>
 </lexicon>

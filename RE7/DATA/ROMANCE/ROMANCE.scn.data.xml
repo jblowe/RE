@@ -37,7 +37,7 @@
   <entry id="scn7">
     <gl>this</gl>
     <spell>chistu</spell>
-    <hw>ˈkiʃtu, ˈkistu</hw>
+    <hw>ˈkistu</hw>
   </entry>
   <entry id="scn8">
     <gl>that</gl>
@@ -54,10 +54,20 @@
     <spell>ccani</spell>
     <hw>ˈkkani</hw>
   </entry>
-  <entry id="scn10">
+  <entry id="scn10.1">
     <gl>there</gl>
-    <spell>ddà, ddani, ddocu</spell>
-    <hw>ˈɖɖa, ˈɖɖani, ˈɖɖɔku</hw>
+    <spell>ddà</spell>
+    <hw>ˈɖɖa</hw>
+  </entry>
+  <entry id="scn10.2">
+    <gl>there</gl>
+    <spell>ddani</spell>
+    <hw>ˈɖɖani</hw>
+  </entry>
+  <entry id="scn10.3">
+    <gl>there</gl>
+    <spell>ddocu</spell>
+    <hw>ˈɖɖɔku</hw>
   </entry>
   <entry id="scn11">
     <gl>who</gl>
@@ -116,8 +126,13 @@
   </entry>
   <entry id="scn20">
     <gl>few</gl>
-    <spell>pocu, picca</spell>
-    <hw>ˈpɔku, ˈpikka</hw>
+    <spell>pocu</spell>
+    <hw>ˈpɔku</hw>
+  </entry>
+  <entry id="scn20">
+    <gl>few</gl>
+    <spell>picca</spell>
+    <hw>ˈpikka</hw>
   </entry>
   <entry id="scn21">
     <gl>other</gl>
@@ -296,8 +311,8 @@
   </entry>
   <entry id="scn53">
     <gl>stick</gl>
-    <spell>bastuni, vastuni</spell>
-    <hw>baˈstuni, baˈʃtuni, vaˈstuni, vaˈʃtuni</hw>
+    <spell>bastuni</spell>
+    <hw>baˈstuni</hw>
   </entry>
   <entry id="scn54">
     <gl>fruit</gl>
@@ -451,13 +466,23 @@
   </entry>
   <entry id="scn81">
     <gl>leg</gl>
-    <spell>gamma, jamma</spell>
-    <hw>ˈgamma, ˈjamma</hw>
+    <spell>gamma</spell>
+    <hw>ˈgamma</hw>
+  </entry>
+  <entry id="scn81.5">
+    <gl>leg</gl>
+    <spell>jamma</spell>
+    <hw>ˈjamma</hw>
   </entry>
   <entry id="scn82">
     <gl>knee</gl>
-    <spell>dinocchiu, jinocchiu</spell>
-    <hw>dinɔkkju, ˈjinɔkkju</hw>
+    <spell>dinocchiu</spell>
+    <hw>dinɔkkju</hw>
+  </entry>
+  <entry id="scn82.5">
+    <gl>knee</gl>
+    <spell>jinocchiu</spell>
+    <hw>ˈjinɔkkju</hw>
   </entry>
   <entry id="scn83">
     <gl>hand</gl>
@@ -506,8 +531,8 @@
   </entry>
   <entry id="scn92">
     <gl>to drink</gl>
-    <spell>bìviri, vìviri</spell>
-    <hw>ˈbiviɾi, ˈviviɾi</hw>
+    <spell>bìviri</spell>
+    <hw>ˈbiviɾi</hw>
   </entry>
   <entry id="scn93">
     <gl>to eat</gl>
@@ -546,8 +571,13 @@
   </entry>
   <entry id="scn99">
     <gl>to breathe</gl>
-    <spell>rispirari, ciatari</spell>
-    <hw>riʃpiˈɾaɾi, çaˈtaɾi</hw>
+    <spell>rispirari</spell>
+    <hw>riʃpiˈɾaɾi</hw>
+  </entry>
+  <entry id="scn99.5">
+    <gl>to breathe</gl>
+    <spell>ciatari</spell>
+    <hw>çaˈtaɾi</hw>
   </entry>
   <entry id="scn100">
     <gl>to laugh</gl>
@@ -746,8 +776,13 @@
   </entry>
   <entry id="scn136">
     <gl>to throw</gl>
-    <spell>jittari, ghiavari</spell>
-    <hw>ʝiˈttaɾi, ggjaˈvaɾi</hw>
+    <spell>ghiavari</spell>
+    <hw>ggjaˈvaɾi</hw>
+  </entry>
+  <entry id="scn136.5">
+    <gl>to throw</gl>
+    <spell>jittari</spell>
+    <hw>ʝiˈttaɾi</hw>
   </entry>
   <entry id="scn137">
     <gl>to tie</gl>
@@ -796,8 +831,13 @@
   </entry>
   <entry id="scn145">
     <gl>to freeze</gl>
-    <spell>jilari, agghilari</spell>
-    <hw>jiˈlaɾi, aggiˈlaɾi</hw>
+    <spell>agghilari</spell>
+    <hw>aggiˈlaɾi</hw>
+  </entry>
+  <entry id="scn145">
+    <gl>to freeze</gl>
+    <spell>jilari</spell>
+    <hw>jiˈlaɾi</hw>
   </entry>
   <entry id="scn146">
     <gl>to swell</gl>
@@ -1026,8 +1066,13 @@
   </entry>
   <entry id="scn187">
     <gl>rotten</gl>
-    <spell>purritu, fràcidu</spell>
-    <hw>ˈpurritu, ˈfɾaɕidu</hw>
+    <spell>purritu</spell>
+    <hw>ˈpurritu</hw>
+  </entry>
+  <entry id="scn187.5">
+    <gl>rotten</gl>
+    <spell>fràcidu</spell>
+    <hw>ˈfɾaɕidu</hw>
   </entry>
   <entry id="scn188">
     <gl>dirty</gl>
