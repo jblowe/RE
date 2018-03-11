@@ -94,6 +94,9 @@ def tokenize(form, parameters, accessor):
                    for left in c.context[0])
 
     def doesnt_match_last_right_context(c, last):
+        # implements bypassing of suprasegmentals the other way
+        if c.proto_form in supra_segmentals:
+            return False
         if last.context[1]:
             return all(c.proto_form != right and
                        c.proto_form not in sound_classes.get(right, [])
