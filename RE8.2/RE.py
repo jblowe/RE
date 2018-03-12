@@ -92,7 +92,7 @@ def make_tokenizer(parameters, accessor):
     sound_classes = parameters.syllable_canon.sound_classes
     supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
-    # expand out the cover class abbreviatoins into sets
+    # expand out the cover class abbreviations
     for correspondence in correspondences:
         correspondence.expanded_context = (
             expanded_contexts(correspondence, 0, sound_classes),
