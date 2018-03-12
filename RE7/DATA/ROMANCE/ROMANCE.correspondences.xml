@@ -3,7 +3,7 @@
    <parameters>
       <class name="V" value="a,e,i,o,u,ɔ,ɛ"/>
       <class name="C" value="t,kj,ls,k,g,d,n,l,p,ss,kk,k,f,v,r,d,s,tt,m,b,ll,pl,nn,z,s,tt,kt,d͡z,s,d,kw,rr,t͡s,d͡ʒ,pp,fl,nj,lj"/>
-      <canon name="syllabe" value="((S?C?C)?j?(v(?= SC|CC|C$)C|v(?!= SC|CC)))*(A(S?C?C)?J?(G(?= SC|CC|C$)C|O(?!= SC|CC)))?((S?C?C)?j?(v(?= SC|CC|C$)C|v(?!= SC|CC)))*"/>
+      <canon name="syllabe" value="((S?C?C)?j?(vC?))*(A(S?C?C)?J?(G(?= SC|CC|C$)C|O(?!= SC|CC)))?((S?C?C)?j?(v?))*"/>
       <spec name="supra_segmentals" value="ˈ"/>
    </parameters>
    <corr num="c1">
@@ -1207,7 +1207,7 @@
       </modern>
    </corr>
    <corr num="c18">
-      <proto contextR="i,e,ɛ" syll="C">kj</proto>
+      <proto syll="C">kj</proto>
       <modern dialecte="es">
          <seg>θ</seg>
       </modern>
@@ -1229,6 +1229,7 @@
       </modern>
       <modern dialecte="scn">
          <seg>ɕ</seg>
+         <seg>t͡ʃt͡ʃ</seg>
       </modern>
    </corr>
    <corr num="c17">
@@ -1928,7 +1929,7 @@
          <seg>pl</seg>
       </modern>
       <modern dialecte="scn">
-         <seg>pl</seg>
+         <seg>kj</seg>
       </modern>
    </corr>
    <corr num="pl-initial">
@@ -2237,9 +2238,9 @@
       </modern>
    </corr>
    <corr num="c48">
-      <proto syll="C">t͡s</proto>
+      <proto syll="C">tj</proto>
       <modern dialecte="es">
-         <seg>s</seg>
+         <seg>θ</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>t͡s</seg>
@@ -2249,14 +2250,12 @@
       </modern>
       <modern dialecte="it">
          <seg>t͡s</seg>
-         <seg>tt͡ʃ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>s</seg>
       </modern>
       <modern dialecte="scn">
          <seg>t͡s</seg>
-         <seg>t͡ʃt͡ʃ</seg>
       </modern>
    </corr>
    <corr num="c25">

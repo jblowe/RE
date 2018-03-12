@@ -799,6 +799,11 @@
     <spell>hincharse</spell>
     <hw>inˈt͡ʃaɾse</hw>
   </entry>
+  <entry id="es146.5">
+    <gl>to inflate</gl>
+    <spell>hinchar</spell>
+    <hw>inˈt͡ʃaɾ</hw>
+  </entry>
   <entry id="es147">
     <gl>sun</gl>
     <spell>sol</spell>
@@ -1133,5 +1138,15 @@
     <gl>to struggle, to push</gl>
     <spell>pujar</spell>
     <hw>puˈxaɾ</hw>
+  </entry>
+  <entry id="es210">
+    <gl>to throw</gl>
+    <spell>lanzar</spell>
+    <hw>lanˈθaɾ</hw>
+  </entry>
+  <entry id="es211">
+    <gl>bird</gl>
+    <spell>ave</spell>
+    <hw>ˈabe</hw>
   </entry>
 </lexicon>
