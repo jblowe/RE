@@ -74,82 +74,103 @@ class Statistics:
         print(note)
         self.notes.append(note)
 
+def expanded_contexts(rule, i, sound_classes):
+    contexts = set()
+    if rule.context[i] is None:
+        return None
+    for context in rule.context[i]:
+        if context in sound_classes:
+            contexts.update(sound_classes[context])
+        else:
+            contexts.add(context)
+    return contexts
+
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
-def tokenize(form, parameters, accessor):
-    parses = set()
+def make_tokenizer(parameters, accessor):
     regex = parameters.syllable_canon.regex
     sound_classes = parameters.syllable_canon.sound_classes
     supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
+    # expand out the cover class abbreviatoins into sets
+    for correspondence in correspondences:
+        correspondence.expanded_context = (
+            expanded_contexts(correspondence, 0, sound_classes),
+            expanded_contexts(correspondence, 1, sound_classes))
     # insertion/deletion rules that apply for this language
-    nil_correspondences = [c for c in parameters.table.correspondences
-                           if 'Ø' in accessor(c)]
+    nil_correspondences = [c for c in correspondences if 'Ø' in accessor(c)]
 
-    def doesnt_match_this_left_context(c, last):
-        if c.context[0] is None:
-            return False
-        return all(last.proto_form != left and
-                   last.proto_form not in sound_classes.get(left, [])
-                   for left in c.context[0])
+    def matches_this_left_context(c, last):
+        return (c.context[0] is None or
+                last.proto_form in c.expanded_context[0])
 
-    def doesnt_match_last_right_context(c, last):
+    def matches_last_right_context(c, last):
         # implements bypassing of suprasegmentals the other way
         if c.proto_form in supra_segmentals:
-            return False
-        if last.context[1]:
-            return all(c.proto_form != right and
-                       c.proto_form not in sound_classes.get(right, [])
-                       for right in last.context[1])
+            return True
+        return (last.context[1] is None or
+                c.proto_form in last.expanded_context[1])
 
-    def matches_context(parse, c, last):
-        return not (doesnt_match_this_left_context(parse, c, last) or
-                    doesnt_match_last_right_context(parse, c, last))
+    def matches_context(c, last):
+        return (matches_this_left_context(c, last) and
+                matches_last_right_context(c, last))
 
-    def gen(form, parse, last, syllable_parse):
-        '''We generate context and "phonotactic" sensitive parses recursively,
-        making sure to skip over suprasegmental features when matching
-        contexts.
-        '''
-        # we can abandon parses that we know can't be completed
-        # to satisfy the syllable canon. for DEMO93 this cuts the
-        # number of branches from 182146 to 61631
-        if regex.fullmatch(syllable_parse, partial=True) is None:
-            return
-        if form == '' and regex.fullmatch(syllable_parse):
+    def correspondences_continuing_parse(form):
+        matching_cs = []
+        for c in correspondences:
+            ctexts = []
+            for ctext in accessor(c):
+                if form.startswith(ctext):
+                    ctexts.append(ctext)
+            if ctexts:
+                matching_cs.append((c, ctexts))
+        return matching_cs
+
+    def tokenize(form):
+        parses = set()
+
+        def gen(form, parse, last, syllable_parse):
+            '''We generate context and "phonotactic" sensitive parses recursively,
+            making sure to skip over suprasegmental features when matching
+            contexts.
+            '''
+            # we can abandon parses that we know can't be completed
+            # to satisfy the syllable canon. for DEMO93 this cuts the
+            # number of branches from 182146 to 61631
+            if regex.fullmatch(syllable_parse, partial=True) is None:
+                return
+            if form == '' and regex.fullmatch(syllable_parse):
             # check whether the last token's right context had a word final
             # marker or a catch all environment
-            if (last.context[1] is None or
-                any('#' == right or
-                    '#' in sound_classes.get(right, [])
-                    for right in last.context[1])):
-                parses.add(tuple(parse))
-        # if the last token was marked as only word final then stop
-        if (last.context[1] and
-            all('#' == right
-                for right in last.context[1])):
-            return
-        # otherwise keep building parses from epenthesis rules
-        for c in nil_correspondences:
-            if matches_context(c, last):
-                for syllable_type in c.syllable_types:
-                    gen(form,
-                        parse + [c],
-                        last if c.proto_form in supra_segmentals else c,
-                        syllable_parse + syllable_type)
-        if form:
-            for c in correspondences:
-                for ctext in accessor(c):
-                    if form.startswith(ctext) and \
-                       matches_context(parse, c, last):
-                        for syllable_type in c.syllable_types:
+                if (last.context[1] is None or
+                    '#' in last.expanded_context[1]):
+                    parses.add(tuple(parse))
+            # if the last token was marked as only word final then stop
+            if last.context[1] and last.expanded_context[1] == {'#'}:
+                return
+            # otherwise keep building parses from epenthesis rules
+            for c in nil_correspondences:
+                if matches_context(c, last):
+                    for syllable_type in c.syllable_types:
+                        gen(form,
+                            parse + [c],
+                            last if c.proto_form in supra_segmentals else c,
+                            syllable_parse + syllable_type)
+            if form == '':
+                return
+            for c, ctexts in correspondences_continuing_parse(form):
+                if matches_context(c, last):
+                    for syllable_type in c.syllable_types:
+                        for ctext in ctexts:
                             gen(form[len(ctext):],
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
                                 syllable_parse + syllable_type)
 
-    gen(form, [], parameters.table.initial_marker, '')
-    return parses
+        gen(form, [], parameters.table.initial_marker, '')
+        return parses
+    return tokenize
+
 
 # set of all possible forms for a daughter language given correspondences
 def postdict_forms_for_daughter(correspondences, daughter):
@@ -163,7 +184,8 @@ def postdict_daughter_forms(proto_form, parameters):
     # big speed difference between [c.proto_form] vs c.proto_form
     # c.proto_form does lots of slow substring comparisons. [c.proto_form]
     # parallels the usage of the other daughter form accessors
-    for cs in iter(tokenize(proto_form, parameters, lambda c: [c.proto_form])):
+    tokenize = make_tokenizer(parameters, lambda c: [c.proto_form])
+    for cs in iter(tokenize(proto_form)):
         for language in parameters.table.daughter_languages:
             postdict[language] = postdict_forms_for_daughter(cs, language)
     return postdict
@@ -174,8 +196,9 @@ def project_back(lexicons, parameters, statistics):
     for (language, lexicon) in lexicons:
         daughter_form = lambda c: c.daughter_forms[language]
         count = 0
+        tokenize = make_tokenizer(parameters, daughter_form)
         for modern_form in lexicon:
-            parses = tokenize(modern_form.form, parameters, daughter_form)
+            parses = tokenize(modern_form.form)
             if parses:
                 for cs in iter(parses):
                     count += 1
