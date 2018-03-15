@@ -18,9 +18,7 @@ class WrappedTextBuffer():
 
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
-            ((','.join(correspondence.context[0] or '') + '_' +
-             ','.join(correspondence.context[1] or ''))
-             if correspondence.context != (None, None) else ''),
+            RE.context_as_string(correspondence.context),
             ','.join(correspondence.syllable_types),
             correspondence.proto_form] + \
             [', '.join(v)

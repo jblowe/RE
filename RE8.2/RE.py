@@ -29,6 +29,11 @@ def correspondences_as_proto_form_string(cs):
 def correspondences_as_ids(cs):
     return ' '.join(c.id for c in cs)
 
+def context_as_string(context):
+    return ('' if context == (None, None) else
+            ','.join(context[0] or '') + '_'
+            + ','.join(context[1] or ''))
+
 # imperative interface
 class TableOfCorrespondences:
     initial_marker = Correspondence('', (None, None), '', '$', [])
