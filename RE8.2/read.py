@@ -1,14 +1,16 @@
 import xml.etree.ElementTree as ET
 import csv
+import os
 import RE
 
-def read_correspondence_file(filename, project_name, daughter_languages):
+def read_correspondence_file(filename, project_name, daughter_languages, name):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
     return RE.Parameters(read_correspondences(tree.iterfind('corr'),
                                               project_name,
                                               daughter_languages),
-                         read_syllable_canon(tree.find('parameters')))
+                         read_syllable_canon(tree.find('parameters')),
+                         name)
 
 def read_syllable_canon(parameters):
     sound_classes = {}
@@ -69,27 +71,42 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
 # xml reading
 def read_settings_file(filename):
     # for now we assume we don't want more than one proto-language
-    upstream = []
+    upstream = {}
     downstream = []
-    correspondence_file = None
+    attested = {}
+    proto_languages = {}
     for setting in ET.parse(filename).getroot():
         if setting.tag == 'action':
             if setting.attrib['name'] == 'upstream':
-                upstream.append(setting.attrib['from'])
+                if setting.attrib.get('target'):
+                    target = setting.attrib.get('target')
+                if setting.attrib.get('to'):
+                    upstream[setting.attrib.get('to')] = \
+                        setting.attrib.get('from').split(',')
             elif setting.attrib['name'] == 'downstram':
                 downstream.append(setting.attrib['to'])
+        elif setting.tag == 'proto_language':
+            proto_languages[setting.attrib['name']] = \
+                setting.attrib['correspondences']
+        elif setting.tag == 'attested':
+            attested[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'param':
-            if setting.attrib['name'] == 'correspondences':
-                correspondence_file = setting.attrib['value']
-    return RE.ProjectSettings(correspondence_file, upstream, downstream)
+            pass
+    return RE.ProjectSettings(os.path.dirname(filename),
+                              attested,
+                              proto_languages,
+                              target,
+                              upstream,
+                              downstream)
 
 # returns a generator returning the modern form and its gloss
 def read_lexicon(xmlfile):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
-    for entry in tree.iterfind('entry'):
-        yield RE.ModernForm(language, entry.find('hw').text,
-                         entry.find('gl').text)
+    forms = [RE.ModernForm(language, entry.find('hw').text,
+                           entry.find('gl').text)
+             for entry in tree.iterfind('entry')]
+    return RE.Lexicon(language, forms)
 
 def read_lexicons(languages, base_dir, project):
     for language in languages:

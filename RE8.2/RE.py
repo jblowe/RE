@@ -2,6 +2,7 @@ import itertools
 import read
 import regex as re
 import sys
+import os
 import serialize
 
 class SyllableCanon:
@@ -22,6 +23,11 @@ class Correspondence:
 
     def __repr__(self):
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
+
+class Lexicon:
+    def __init__(self, language, forms):
+        self.language = language
+        self.forms = forms
 
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
@@ -46,25 +52,53 @@ class TableOfCorrespondences:
         self.correspondences.append(correspondence)
 
 class Parameters:
-    def __init__(self, table, syllable_canon):
+    def __init__(self, table, syllable_canon, proto_language_name):
         self.table = table
         self.syllable_canon = syllable_canon
+        self.proto_language_name = proto_language_name
 
     def serialize(self, filename):
         serialize.serialize_correspondence_file(filename, self)
 
-class ModernForm:
-    def __init__(self, language, form, gloss):
+class Form:
+    def __init__(self, language, glyphs):
         self.language = language
-        self.form = form
+        self.glyphs = glyphs
+
+    def __str__(self):
+        return f'{self.language} {self.glyphs}'
+
+class ModernForm(Form):
+    def __init__(self, language, glyphs, gloss):
+        super().__init__(language, glyphs)
         self.gloss = gloss
 
     def __str__(self):
-        return f'{self.language} {self.form}: {self.gloss}'
+        return f'{super().__str__()}: {self.gloss}'
+
+class ProtoForm(Form):
+    def __init__(self, language, correspondences, supporting_forms):
+        super().__init__(language,
+                         correspondences_as_proto_form_string(
+                             correspondences))
+        self.correspondences = correspondences
+        self.supporting_forms = supporting_forms
+
+    def __str__(self):
+        return f'{self.language} *{self.glyphs}'
+
+class Lexicon:
+    def __init__(self, language, forms):
+        self.language = language
+        self.forms = forms
 
 class ProjectSettings:
-    def __init__(self, correspondence_file, upstream, downstream):
-        self.correspondence_file = correspondence_file
+    def __init__(self, directory_path, attested, proto_languages,
+                 target, upstream, downstream):
+        self.directory_path = directory_path
+        self.attested = attested
+        self.proto_languages = proto_languages
+        self.upstream_target = target
         self.upstream = upstream
         self.downstream = downstream
 
@@ -198,25 +232,25 @@ def postdict_daughter_forms(proto_form, parameters):
 # return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters, statistics):
     reconstructions = {}
-    for (language, lexicon) in lexicons:
-        daughter_form = lambda c: c.daughter_forms[language]
+    for lexicon in lexicons:
+        daughter_form = lambda c: c.daughter_forms[lexicon.language]
         count = 0
         tokenize = make_tokenizer(parameters, daughter_form)
-        for modern_form in lexicon:
-            parses = tokenize(modern_form.form)
+        for form in lexicon.forms:
+            parses = tokenize(form.glyphs)
             if parses:
                 for cs in iter(parses):
                     count += 1
-                    reconstructions.setdefault(cs, []).append(modern_form)
+                    reconstructions.setdefault(cs, []).append(form)
             else:
-                statistics.failed_parses.add(modern_form)
-        statistics.add_note(f'{language}: {len(lexicon)} forms, {count} reconstructions')
+                statistics.failed_parses.add(form)
+        statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count} reconstructions')
     return reconstructions, statistics
 
-def filter_sets(projections, statistics):
+def create_sets(projections, statistics, filter_sets=True):
     cognate_sets = set()
     for reconstruction, support in projections.items():
-        if len(support) > 1:
+        if not filter_sets or len(support) > 1:
             cognate_sets.add((reconstruction, frozenset(support)))
         else:
             statistics.singleton_support.add(reconstruction)
@@ -246,11 +280,38 @@ def unique_surface_forms(cognate_sets, statistics):
     statistics.add_note(f'{len(uniques)} unique surface forms')
     return uniques, statistics
 
-def batch_upstream(lexicons, params):
+def batch_upstream(lexicons, params, filter_sets):
     return unique_surface_forms(
         *filter_subsets(
-            *filter_sets(
-                *project_back(lexicons, params, Statistics()))))
+            *create_sets(
+                *project_back(lexicons, params, Statistics()),
+                filter_sets)))
+
+def batch_all_upstream(settings):
+    # batch upstream repeatedly up the action graph tree from leaves,
+    # which are necessarily attested. we filter forms with singleton
+    # supporting sets for the root language
+    def rec(target, filter_sets):
+        if target in settings.attested:
+            return read.read_lexicon(
+                os.path.join(settings.directory_path,
+                             settings.attested[target]))
+        daughter_lexicons = [rec(daughter, False) for daughter
+                             in settings.upstream[target]]
+        return Lexicon(
+            target,
+            [ProtoForm(target, correspondences, supporting_forms)
+             for (correspondences, supporting_forms)
+             in batch_upstream(
+                 daughter_lexicons,
+                 read.read_correspondence_file(
+                     os.path.join(settings.directory_path,
+                                  settings.proto_languages[target]),
+                     'ROMANCE',
+                     list(settings.upstream[target]),
+                     target),
+                 filter_sets)[0]])
+    return rec(settings.upstream_target, True)
 
 def print_sets(sets):
     for (cs, supporting_forms) in sets:

@@ -6,6 +6,7 @@ import read
 import threading
 import sys
 import serialize
+import os
 
 class WrappedTextBuffer():
     def __init__(self, buffer):
@@ -61,39 +62,6 @@ def make_correspondence_view(table):
         treeview.append_column(column)
     return treeview, store
 
-def read_view_into_table(view):
-    model = view.get_model()
-    names = [col.get_title() for col in view.get_columns()][4:]
-    table = RE.TableOfCorrespondences('', names)
-    for row in model:
-        table.add_correspondence(
-            RE.Correspondence(
-                row[0],
-                ((None, None) if row[1] == '' else
-                 tuple(None if x == '' else
-                       [y.strip() for y in x.split(',')]
-                       for x in row[1].split('_'))),
-                [x.strip() for x in row[2].split(',')], row[3],
-                dict(zip(names, ([x.strip() for x in token.split(',')]
-                                 for token in row[4:])))))
-    return table
-
-def make_sets_store(sets=None):
-    return Gtk.TreeStore(str, str)
-
-def make_sets_view(model):
-    sets_view = Gtk.TreeView.new_with_model(model)
-    recon_column = Gtk.TreeViewColumn('Reconstructions',
-                                      Gtk.CellRendererText(),
-                                      text=0)
-    recon_column.set_sort_column_id(0)
-    recon_column.set_resizable(True)
-    sets_view.append_column(recon_column)
-    sets_view.append_column(Gtk.TreeViewColumn('Ids',
-                                               Gtk.CellRendererText(),
-                                               text=1))
-    return sets_view
-
 def make_entry(text):
     entry = Gtk.Entry()
     entry.set_text(text)
@@ -120,7 +88,7 @@ def read_syllable_canon_from_widget(widget):
 def make_lexicon_widget(words):
     store = Gtk.ListStore(str, str)
     for form in words:
-        store.append([form.form, form.gloss])
+        store.append([form.glyphs, form.gloss])
     view = Gtk.TreeView.new_with_model(store)
     for i, column_title in enumerate(['Form', 'Gloss']):
         cell = Gtk.CellRendererText()
@@ -135,24 +103,153 @@ def make_lexicon_widget(words):
 
 def make_lexicons_widget(lexicons):
     notebook = Gtk.Notebook()
-    for language, words in lexicons:
-        notebook.append_page(make_lexicon_widget(words),
-                             Gtk.Label(language))
+    for lexicon in lexicons:
+        notebook.append_page(make_lexicon_widget(lexicon.forms),
+                             Gtk.Label(lexicon.language))
     return notebook
 
-# make 1 box containing 5 input entries
+def read_table_from_widget(widget):
+    view = widget.get_children()[0].get_children()[0]
+    model = view.get_model()
+    names = [col.get_title() for col in view.get_columns()][4:]
+    table = RE.TableOfCorrespondences('', names)
+    for row in model:
+        table.add_correspondence(
+            RE.Correspondence(
+                row[0],
+                ((None, None) if row[1] == '' else
+                 tuple(None if x == '' else
+                       [y.strip() for y in x.split(',')]
+                       for x in row[1].split('_'))),
+                [x.strip() for x in row[2].split(',')], row[3],
+                dict(zip(names, ([x.strip() for x in token.split(',')]
+                                 for token in row[4:])))))
+    return table
+
+def make_correspondence_widget(table):
+    pane = Gtk.ScrolledWindow()
+    pane.set_vexpand(True)
+    view, store = make_correspondence_view(table)
+    pane.add(view)
+
+    def add_button_clicked(widget):
+        columns = view.get_columns()
+        row = store.append(len(columns) * [''])
+        path = store.get_path(row)
+        view.set_cursor(path, columns[0], True)
+
+    def delete_button_clicked(widget):
+        store.remove(store.get_iter(view.get_cursor()[0]))
+
+    add_button = Gtk.Button(label='Add correspondence')
+    add_button.connect('clicked', add_button_clicked)
+    delete_button = Gtk.Button(label='Delete correspondence')
+    delete_button.connect('clicked', delete_button_clicked)
+    buttons_box = Gtk.Box(spacing=0)
+    buttons_box.add(add_button)
+    buttons_box.add(delete_button)
+    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+    box.add(pane)
+    box.add(buttons_box)
+    return box
+
+def make_parameter_widget(settings, parameters):
+    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+    table_widget = make_correspondence_widget(parameters.table)
+    canon_widget = make_syllable_canon_widget(parameters.syllable_canon)
+    box.add(canon_widget)
+    box.add(table_widget)
+    
+    def save_button_clicked(widget):
+        table = read_table_from_widget(table_widget)
+        serialize.serialize_correspondence_file(
+            os.path.join(
+                settings.directory_path,
+                settings.proto_languages[parameters.proto_language_name]),
+            RE.Parameters(
+                table,
+                read_syllable_canon_from_widget(canon_widget),
+                parameters.proto_language_name))
+
+    save_button = Gtk.Button(label='Save')
+    save_button.connect('clicked', save_button_clicked)
+    box.add(save_button)
+    
+    return box
+
+def make_parameters_widget(settings):
+    notebook = Gtk.Notebook()
+    for (language, correspondence_filename) in settings.proto_languages.items():
+        notebook.append_page(
+            make_parameter_widget(
+                settings,
+                read.read_correspondence_file(
+                    os.path.join(settings.directory_path,
+                                 correspondence_filename),
+                    language,
+                    settings.upstream[language],
+                    language)),
+            Gtk.Label(language))
+    return notebook
+
+def make_sets_store(sets=None):
+    return Gtk.TreeStore(str, str)
+
+def make_sets_view(model):
+    sets_view = Gtk.TreeView.new_with_model(model)
+    recon_column = Gtk.TreeViewColumn('Reconstructions',
+                                      Gtk.CellRendererText(),
+                                      text=0)
+    recon_column.set_sort_column_id(0)
+    recon_column.set_resizable(True)
+    sets_view.append_column(recon_column)
+    sets_view.append_column(Gtk.TreeViewColumn('Ids',
+                                               Gtk.CellRendererText(),
+                                               text=1))
+    return sets_view
+
+def make_sets_widget(settings):
+    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+    window = Gtk.ScrolledWindow()
+    window.set_vexpand(True)
+    store = make_sets_store()
+    window.add(make_sets_view(store))
+    box.add(window)
+
+    def batch_upstream_clicked(widget):
+        threading.Thread(target=lambda: batch_upstream()).start()
+
+    def batch_upstream():
+        def store_row(parent, form):
+            if isinstance(form, RE.ProtoForm):
+                row = store.append(
+                    parent=parent,
+                    row=['*'+form.glyphs if parent is None
+                         else str(form),
+                         RE.correspondences_as_ids(form.correspondences)])
+                for supporting_form in form.supporting_forms:
+                    store_row(row, supporting_form)
+            elif isinstance(form, RE.ModernForm):
+                row = store.append(parent=parent,
+                                   row=[str(form), ''])
+
+        proto_lexicon = RE.batch_all_upstream(settings)
+        Gdk.threads_enter()
+        store.clear()
+        for form in proto_lexicon.forms:
+            store_row(None, form)
+        Gdk.threads_leave()
+
+    upstream_button = Gtk.Button(label='Batch All Upstream')
+    upstream_button.connect('clicked', batch_upstream_clicked)
+    box.add(upstream_button)
+    return box
+
 class REWindow(Gtk.Window):
 
-    def __init__(self, lexicons, params):
+    def __init__(self, settings):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1024)
-
-        correspondence_pane = Gtk.ScrolledWindow()
-        correspondence_pane.set_vexpand(True)
-        self.correspondence_view, self.table_store = \
-            make_correspondence_view(params.table)
-        correspondence_pane.add(self.correspondence_view)
-
         sets_pane = Gtk.ScrolledWindow()
         sets_pane.set_vexpand(True)
         self.upstream_store = make_sets_store()
@@ -161,17 +258,6 @@ class REWindow(Gtk.Window):
         upstream_button = Gtk.Button(label='Batch Upstream')
         upstream_button.connect('clicked', self.batch_upstream_press)
 
-        add_table_row_button = Gtk.Button(label='Add correspondence')
-        add_table_row_button.connect('clicked',
-                                     self.on_add_row_button_clicked)
-
-        delete_table_row_button = Gtk.Button(label='Delete correspondence')
-        delete_table_row_button.connect('clicked',
-                                        self.on_delete_row_button_clicked)
-
-        save_button = Gtk.Button(label='Save')
-        save_button.connect('clicked', self.on_save_button_clicked)
-
         statistics_pane = Gtk.ScrolledWindow()
         statistics_pane.set_hexpand(True)
         statistics_pane.set_vexpand(True)
@@ -179,33 +265,29 @@ class REWindow(Gtk.Window):
         statistics_pane.add(statistics_view)
         self.statistics_buffer = WrappedTextBuffer(statistics_view.get_buffer())
 
-        # layour
+        # layout
         self.pane_layout = Gtk.Paned()
         self.pane_layout.set_orientation(Gtk.Orientation.HORIZONTAL)
         self.add(self.pane_layout)
         left_pane = Gtk.Paned()
         left_pane.set_orientation(Gtk.Orientation.VERTICAL)
-        self.syllable_canon_widget = \
-            make_syllable_canon_widget(params.syllable_canon)
         top_left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        top_left_box.add(self.syllable_canon_widget)
-        top_left_box.add(make_lexicons_widget(lexicons))
+        top_left_box.add(make_lexicons_widget(
+            [read.read_lexicon(
+                os.path.join(settings.directory_path,
+                             settings.attested[language]))
+             for language in settings.attested.keys()]))
         left_pane.add(top_left_box)
         self.pane_layout.add1(left_pane)
         right_pane = Gtk.Paned()
         right_pane.set_orientation(Gtk.Orientation.VERTICAL)
         self.pane_layout.add2(right_pane)
-        right_pane.add1(sets_pane)
+        # right_pane.add1(sets_pane)
+        right_pane.add1(make_sets_widget(settings))
         right_pane.add2(statistics_pane)
 
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-        buttons_box = Gtk.Box(spacing=0)
-        box.add(correspondence_pane)
-        buttons_box.add(add_table_row_button)
-        buttons_box.add(delete_table_row_button)
-        buttons_box.add(upstream_button)
-        buttons_box.add(save_button)
-        box.add(buttons_box)
+        box.add(make_parameters_widget(settings))
         self.add(box)
         left_pane.add2(box)
 
@@ -230,26 +312,9 @@ class REWindow(Gtk.Window):
                                            row=[str(supporting_form), ''])
         Gdk.threads_leave()
 
-    def on_add_row_button_clicked(self, widget):
-        columns = self.correspondence_view.get_columns()
-        row = self.table_store.append(len(columns) * [''])
-        path = self.table_store.get_path(row)
-        self.correspondence_view.set_cursor(path, columns[0], True)
-
-    def on_delete_row_button_clicked(self, widget):
-        self.table_store.remove(self.table_store.get_iter(
-            self.correspondence_view.get_cursor()[0]))
-
-    def on_save_button_clicked(self, widget):
-        serialize.serialize_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}',
-            RE.Parameters(read_view_into_table(
-                self.correspondence_view),
-                          read_syllable_canon_from_widget(
-                              self.syllable_canon_widget)))
-
-def run(lexicons, params):
+def run(settings):
     out = sys.stdout
-    win = REWindow(lexicons, params)
+    win = REWindow(settings)
     sys.stdout = win.statistics_buffer
     win.connect('delete_event', Gtk.main_quit)
     win.show_all()
@@ -273,6 +338,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     settings = read.read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
-    lexicons = list(read.read_lexicons(settings.upstream, base_dir, project))
-    params = read.read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
-    run(lexicons, params)
+    # lexicons = list(read.read_lexicons(settings.upstream, base_dir, project))
+    # params = read.read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
+    run(settings)
