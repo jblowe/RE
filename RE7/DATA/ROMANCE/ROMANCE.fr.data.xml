@@ -200,8 +200,8 @@
     <hw>epu</hw>
   </entry>
   <entry id="fr42">
-    <gl>mother</gl>
-    <spell>mère</spell>
+    <gl>mother, sea</gl>
+    <spell>mère, mer</spell>
     <hw>mɛʁ</hw>
   </entry>
   <entry id="fr43">
@@ -238,11 +238,6 @@
     <gl>snake</gl>
     <spell>serpent</spell>
     <hw>sɛʁpɑ̃</hw>
-  </entry>
-  <entry id="fr50">
-    <gl>worm</gl>
-    <spell>ver</spell>
-    <hw>vɛʁ</hw>
   </entry>
   <entry id="fr51">
     <gl>tree</gl>
@@ -784,11 +779,6 @@
     <spell>lac</spell>
     <hw>lak</hw>
   </entry>
-  <entry id="fr154">
-    <gl>sea</gl>
-    <spell>mer</spell>
-    <hw>mɛʁ</hw>
-  </entry>
   <entry id="fr155">
     <gl>salt</gl>
     <spell>sel</spell>
@@ -880,8 +870,8 @@
     <hw>ʁuʒ</hw>
   </entry>
   <entry id="fr173">
-    <gl>green</gl>
-    <spell>vert</spell>
+    <gl>green, worm</gl>
+    <spell>vert, ver</spell>
     <hw>vɛʁ</hw>
   </entry>
   <entry id="fr174">

@@ -170,9 +170,14 @@
     <hw>ˈmagɾo</hw>
   </entry>
   <entry id="oldpt36">
+    <gl>woman, wife</gl>
+    <spell>moller</spell>
+    <hw>moˈʎɛɾ</hw>
+  </entry>
+  <entry id="oldpt36.5">
     <gl>woman</gl>
-    <spell>moller, dona</spell>
-    <hw>moˈʎɛɾ, ˈdona</hw>
+    <spell>dona</spell>
+    <hw>ˈdona</hw>
   </entry>
   <entry id="oldpt37">
     <gl>man (male), man (human)</gl>
@@ -198,11 +203,6 @@
     <gl>child</gl>
     <spell>creatura</spell>
     <hw>kɾeaˈtuɾa</hw>
-  </entry>
-  <entry id="oldpt40">
-    <gl>wife</gl>
-    <spell>moller</spell>
-    <hw>moˈʎɛɾ</hw>
   </entry>
   <entry id="oldpt41">
     <gl>husband</gl>
@@ -302,7 +302,7 @@
   <entry id="oldpt59">
     <gl>flower</gl>
     <spell>flor</spell>
-    <hw>ˈfloɾ</hw>
+    <hw>floɾ</hw>
   </entry>
   <entry id="oldpt60">
     <gl>grass</gl>
@@ -402,7 +402,7 @@
   <entry id="oldpt79">
     <gl>fingernail</gl>
     <spell>unna</spell>
-    <hw>ˈuɲaʎa</hw>
+    <hw>ˈuɲa</hw>
   </entry>
   <entry id="oldpt79.5">
     <gl>fingernail</gl>
@@ -991,8 +991,13 @@
   </entry>
   <entry id="oldpt196">
     <gl>correct</gl>
-    <spell>reito, dereito</spell>
-    <hw>ˈrejto, deˈɾejto</hw>
+    <spell>reito</spell>
+    <hw>ˈrejto</hw>
+  </entry>
+  <entry id="oldpt196">
+    <gl>correct</gl>
+    <spell>dereito</spell>
+    <hw>deˈɾejto</hw>
   </entry>
   <entry id="oldpt197">
     <gl>near</gl>
