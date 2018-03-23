@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+   <parameters>
+      <class name="V" value="a,e,i,o,u,ɔ,ɛ"/>
+      <class name="C" value="t,kj,ls,k,g,d,n,l,p,ss,kk,k,f,v,r,d,s,tt,m,b,ll,pl,nn,z,s,tt,kt,d͡z,s,d,kw,rr,t͡s,d͡ʒ,pp,fl,nj,lj"/>
+      <canon name="syllabe" value="((S?C?C)?j?(vC?))*(A(S?C?C)?J?(G(?=SC|CC|C$)C|O(?!SC|CC)))?((S?C?C)?j?(vC?))*"/>
+      <spec name="supra_segmentals" value="ˈ"/>
+   </parameters>
+   <corr num="c1">
+      <proto syll="C">t</proto>
+      <modern dialecte="PWR">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="c2">
+      <proto syll="v,O,G">u</proto>
+      <modern dialecte="PWR">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="c0">
+      <proto syll="A">ˈ</proto>
+      <modern dialecte="PWR">
+         <seg>ˈ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ˈ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ˈ</seg>
+      </modern>
+   </corr>
+</tableOfCorr>
