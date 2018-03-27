@@ -1,8 +1,8 @@
 import itertools
 import read
 import regex as re
-import sys
 import os
+import sys
 import serialize
 
 class SyllableCanon:
@@ -314,42 +314,20 @@ def batch_all_upstream(settings):
                  filter_sets)[0]])
     return rec(settings.upstream_target, True)
 
-def print_sets(sets):
-    for (cs, supporting_forms) in sets:
-        print(correspondences_as_proto_form_string(cs) + ' ' +
-              correspondences_as_ids(cs))
-        print('\n'.join(map(str, supporting_forms)))
-        print('\n')
+def print_sets(lexicon):
+    def print_form(form, level):
+        if isinstance(form, ModernForm):
+            print('  ' * level + str(form))
+        elif isinstance(form, ProtoForm):
+            print('  ' * level + str(form) + ' ' +
+                  correspondences_as_ids(form.correspondences))
+            for supporting_form in form.supporting_forms:
+                print_form(supporting_form, level + 1)
+    for form in lexicon.forms:
+        print_form(form, 0)
 
-def dump_sets(sets, filename):
+def dump_sets(lexicon, filename):
     out = sys.stdout
     with open(filename, 'w') as sys.stdout:
-        print_sets(sets)
+        print_sets(lexicon)
     sys.stdout = out
-
-
-if __name__ == "__main__":
-
-    base_dir = "../RE7/DATA"
-    # lexicons and parameters
-    try:
-        project = sys.argv[1]
-        try:
-            settings_type = sys.argv[2]
-        except:
-            settings_type = 'default'
-            try:
-                run = sys.argv[3]
-            except:
-                run = 'default'
-    except:
-        print('no project specified. Try "DEMO93" if you like')
-        sys.exit(1)
-
-    settings = read.read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
-    lexicons = list(read.read_lexicons(settings.upstream, base_dir, project))
-    params = read.read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
-
-    B, S = batch_upstream(lexicons, params)
-    #print_sets(B)
-    dump_sets(B, f'{base_dir}/{project}/{project}.{run}.sets.txt')
