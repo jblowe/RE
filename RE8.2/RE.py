@@ -273,13 +273,12 @@ def filter_subsets(cognate_sets, statistics):
 
 # pick a representative from sets with the same surface protoform string
 def unique_surface_forms(cognate_sets, statistics):
-    uniques = set()
+    uniques = {}
     for cognate_set in cognate_sets:
-        proto_form = correspondences_as_proto_form_string(cognate_set[0])
-        if not any(proto_form == correspondences_as_proto_form_string(c2) for (c2, _) in uniques):
-            uniques.add(cognate_set)
+        uniques[correspondences_as_proto_form_string(cognate_set[0])] = \
+            cognate_set
     statistics.add_note(f'{len(uniques)} unique surface forms')
-    return uniques, statistics
+    return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, filter_sets):
     return unique_surface_forms(
