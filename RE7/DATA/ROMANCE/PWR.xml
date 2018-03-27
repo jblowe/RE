@@ -6,15 +6,6 @@
       <canon name="syllabe" value="((C?C)?j?v(C?))*(A(C?C)?J?(G(?=CC|C$)C|O(?!CC)))?((C?C)?j?v(C?))*"/>
       <spec name="supra_segmentals" value="ˈ"/>
    </parameters>
-   <corr num="c36">
-      <proto syll="C">ɲ</proto>
-      <modern dialecte="PIR">
-         <seg>ɲ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ɲ</seg>
-      </modern>
-   </corr>
    <corr num="c0">
       <proto syll="A">ˈ</proto>
       <modern dialecte="PIR">
@@ -25,13 +16,13 @@
          <seg>Ø</seg>
       </modern>
    </corr>
-   <corr num="c26">
-      <proto contextL="a" contextR="e" syll="C">ɾ</proto>
+   <corr num="c36">
+      <proto syll="C">ɲ</proto>
       <modern dialecte="PIR">
-         <seg>ɾ</seg>
+         <seg>ɲ</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>ɲ</seg>
       </modern>
    </corr>
    <corr num="a-closed">
@@ -128,7 +119,7 @@
          <seg>d</seg>
       </modern>
    </corr>
-   <corr num="c36">
+   <corr num="c38">
       <proto contextL="V" contextR="V,r" syll="C">d</proto>
       <modern dialecte="PIR">
          <seg>d</seg>
@@ -153,6 +144,7 @@
       </modern>
       <modern dialecte="fr">
          <seg>ɛ</seg>
+         <seg>ə</seg>
       </modern>
    </corr>
    <corr num="e-final">
@@ -220,6 +212,7 @@
       </modern>
       <modern dialecte="fr">
          <seg>jɛ</seg>
+         <seg>je</seg>
       </modern>
    </corr>
    <corr num="ɛ-open">
@@ -229,6 +222,7 @@
       </modern>
       <modern dialecte="fr">
          <seg>jɛ</seg>
+         <seg>je</seg>
       </modern>
    </corr>
    <corr num="c4">
@@ -286,6 +280,15 @@
          <seg>i</seg>
       </modern>
    </corr>
+   <corr num="yod">
+      <proto syll="J,j">j</proto>
+      <modern dialecte="PIR">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ʒ</seg>
+      </modern>
+   </corr>
    <corr num="c29">
       <proto contextL="V" contextR="V" syll="CC">js</proto>
       <modern dialecte="PIR">
@@ -306,7 +309,7 @@
       </modern>
    </corr>
    <corr num="c20">
-      <proto contextR="a" syll="C">k</proto>
+      <proto contextR="a,aw" syll="C">k</proto>
       <modern dialecte="PIR">
          <seg>k</seg>
       </modern>
@@ -324,7 +327,7 @@
       </modern>
    </corr>
    <corr num="c24">
-      <proto contextL="V" contextR="a" syll="CC">kk</proto>
+      <proto contextL="V" contextR="a,aw" syll="CC">kk</proto>
       <modern dialecte="PIR">
          <seg>k</seg>
       </modern>
@@ -351,7 +354,7 @@
       </modern>
    </corr>
    <corr num="c19">
-      <proto contextR="a,aw" syll="CC">kw</proto>
+      <proto contextR="a" syll="CC">kw</proto>
       <modern dialecte="PIR">
          <seg>kw</seg>
       </modern>
@@ -366,6 +369,15 @@
       </modern>
       <modern dialecte="fr">
          <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="c33">
+      <proto syll="CC">lj</proto>
+      <modern dialecte="PIR">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>j</seg>
       </modern>
    </corr>
    <corr num="c34">
@@ -404,6 +416,15 @@
          <seg>Ø</seg>
       </modern>
    </corr>
+   <corr num="c44">
+      <proto contextL="V" contextR="V,r" syll="CC">nn</proto>
+      <modern dialecte="PIR">
+         <seg>nn</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>n</seg>
+      </modern>
+   </corr>
    <corr num="c18">
       <proto contextR="#" syll="v">o</proto>
       <modern dialecte="PIR">
@@ -420,6 +441,7 @@
       </modern>
       <modern dialecte="fr">
          <seg>u</seg>
+         <seg>ɔ</seg>
       </modern>
    </corr>
    <corr num="o-open">
@@ -525,6 +547,15 @@
          <seg>ʁ</seg>
       </modern>
    </corr>
+   <corr num="c26">
+      <proto contextL="a,e,i,ɛ" contextR="#" syll="Cv">re</proto>
+      <modern dialecte="PIR">
+         <seg>ɾ</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
    <corr num="c15">
       <proto contextL="V" contextR="V" syll="CC">rr</proto>
       <modern dialecte="PIR">
@@ -543,7 +574,7 @@
          <seg>s</seg>
       </modern>
    </corr>
-   <corr num="c33">
+   <corr num="c37">
       <proto contextR="t" syll="C">s</proto>
       <modern dialecte="PIR">
          <seg>s</seg>
