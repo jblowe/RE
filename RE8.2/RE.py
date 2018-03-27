@@ -254,7 +254,8 @@ def create_sets(projections, statistics, filter_sets=True):
             cognate_sets.add((reconstruction, frozenset(support)))
         else:
             statistics.singleton_support.add(reconstruction)
-    statistics.add_note(f'only {len(cognate_sets)} sets with more than 1 supporting form')
+    if filter_sets == True:
+        statistics.add_note(f'only {len(cognate_sets)} sets with more than 1 supporting form')
     return cognate_sets, statistics
 
 # throw away sets whose supporting forms are a subset of another's
