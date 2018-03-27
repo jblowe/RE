@@ -307,7 +307,7 @@ def batch_all_upstream(settings):
                  read.read_correspondence_file(
                      os.path.join(settings.directory_path,
                                   settings.proto_languages[target]),
-                     'ROMANCE',
+                     '------',
                      list(settings.upstream[target]),
                      target),
                  filter_sets)[0]])

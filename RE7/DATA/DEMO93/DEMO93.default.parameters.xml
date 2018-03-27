@@ -7,16 +7,18 @@
   <param name="trace" value="N"/>
   <param name="title" value="Test Run, Demo 1993"/>
   <param name="spec" value="Y"/>
-  <param name="correspondences" value="DEMO93.C794DEM.corrs.xml"/>
+  <proto_language name="proto" correspondences="DEMO93.C794DEM.corrs.xml"/>
+  <attested name="gha" file="DEMO93.gha.data.xml"/>
+  <attested name="ris" file="DEMO93.ris.data.xml"/>
+  <attested name="sahu" file="DEMO93.sahu.data.xml"/>
+  <attested name="man" file="DEMO93.man.data.xml"/>
+  <attested name="mar" file="DEMO93.mar.data.xml"/>
+  <attested name="syang" file="DEMO93.syang.data.xml"/>
+  <attested name="tag" file="DEMO93.tag.data.xml"/>
+  <attested name="tuk" file="DEMO93.tuk.data.xml"/>
   <param name="fuzzy" value="DEMO93.fuz.xml"/>
-  <action name="upstream" from="gha" to="proto"/>
-  <action name="upstream" from="ris" to="proto"/>
-  <action name="upstream" from="sahu" to="proto"/>
-  <action name="upstream" from="man" to="proto"/>
-  <action name="upstream" from="mar" to="proto"/>
-  <action name="upstream" from="syang" to="proto"/>
-  <action name="upstream" from="tag" to="proto"/>
-  <action name="upstream" from="tuk" to="proto"/>
+  <action name="upstream" target="proto"/>
+  <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="proto"/>
   <action name="unknown" from="proto" to="gha"/>
   <action name="unknown" from="gha" to="proto"/>
 </params>
