@@ -264,14 +264,38 @@ def create_sets(projections, statistics, filter_sets=True):
     return cognate_sets, statistics
 
 # throw away sets whose supporting forms are a subset of another's
+# this is the slow, naive algorithm
+# def filter_subsets(cognate_sets, statistics):
+#     losers = set()
+#     for cognate_set in cognate_sets:
+#         (c1, supporting_forms1) = cognate_set
+#         for (c2, supporting_forms2) in cognate_sets:
+#             if supporting_forms1 < supporting_forms2:
+#                 losers.add(cognate_set)
+#                 break
+#     statistics.subsets = losers
+#     statistics.add_note(f'threw away {len(losers)} subsets')
+#     return cognate_sets - losers, statistics
+
+# given a collection of sets, we want to find all maximal sets,
+# i.e. ones which are not proper subsets of any other set in the
+# collection. we do this by partitioning the collection of sets by
+# each set's length to reduce unnecessary comparison
 def filter_subsets(cognate_sets, statistics):
-    losers = set()
+    partitions = {}
     for cognate_set in cognate_sets:
-        (c1, supporting_forms1) = cognate_set
-        for (c2, supporting_forms2) in cognate_sets:
-            if supporting_forms1 < supporting_forms2:
-                losers.add(cognate_set)
-                break
+        partitions.setdefault(len(cognate_set[1]), []).append(cognate_set)
+    losers = set()
+    for key1, sets1 in partitions.items():
+        larger_sets = [set for key2, sets2 in partitions.items()
+                       if key2 > key1
+                       for set in sets2]
+        for cognate_set in sets1:
+            (c1, supporting_forms1) = cognate_set
+            for (c2, supporting_forms2) in larger_sets:
+                if supporting_forms1 < supporting_forms2:
+                    losers.add(cognate_set)
+                    break
     statistics.subsets = losers
     statistics.add_note(f'threw away {len(losers)} subsets')
     return cognate_sets - losers, statistics
