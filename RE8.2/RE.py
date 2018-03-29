@@ -179,12 +179,13 @@ def make_tokenizer(parameters, accessor):
             # number of branches from 182146 to 61631
             if regex.fullmatch(syllable_parse, partial=True) is None:
                 return
-            if form == '' and regex.fullmatch(syllable_parse):
-            # check whether the last token's right context had a word final
-            # marker or a catch all environment
+            if form == '':
+                # check whether the last token's right context had a word final
+                # marker or a catch all environment
                 if (last.context[1] is None or
                     '#' in last.expanded_context[1]):
-                    parses.add(tuple(parse))
+                    if regex.fullmatch(syllable_parse):
+                        parses.add(tuple(parse))
             # if the last token was marked as only word final then stop
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
@@ -210,7 +211,6 @@ def make_tokenizer(parameters, accessor):
         gen(form, [], parameters.table.initial_marker, '')
         return parses
     return tokenize
-
 
 # set of all possible forms for a daughter language given correspondences
 def postdict_forms_for_daughter(correspondences, daughter):
