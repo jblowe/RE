@@ -147,8 +147,6 @@ def make_tokenizer(parameters, accessor):
         correspondence.expanded_context = (
             expanded_contexts(correspondence, 0, sound_classes),
             expanded_contexts(correspondence, 1, sound_classes))
-    # insertion/deletion rules that apply for this language
-    nil_correspondences = [c for c in correspondences if 'Ø' in accessor(c)]
     rule_map, token_lengths = partition_correspondences(
         correspondences,
         accessor)
@@ -191,7 +189,7 @@ def make_tokenizer(parameters, accessor):
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
             # otherwise keep building parses from epenthesis rules
-            for c in nil_correspondences:
+            for c in rule_map.get('Ø', []):
                 if matches_context(c, last):
                     for syllable_type in c.syllable_types:
                         gen(form,
@@ -200,10 +198,8 @@ def make_tokenizer(parameters, accessor):
                             syllable_parse + syllable_type)
             if form == '':
                 return
-
             for token_length in token_lengths:
-                continuing_cs = rule_map.get(form[:token_length], [])
-                for c in continuing_cs:
+                for c in rule_map.get(form[:token_length], []):
                     if matches_context(c, last):
                         for syllable_type in  c.syllable_types:
                             gen(form[token_length:],
