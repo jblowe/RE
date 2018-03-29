@@ -124,6 +124,17 @@ def expanded_contexts(rule, i, sound_classes):
             contexts.add(context)
     return contexts
 
+# build a map from tokens to lists of correspondences containing the
+# token key.
+# also return all possible token lengths
+def partition_correspondences(correspondences, accessor):
+    partitions = {}
+    for c in correspondences:
+        for token in accessor(c):
+            partitions.setdefault(token, []).append(c)
+    return partitions, list(set.union(*(set(map(len, accessor(c)))
+                                        for c in correspondences)))
+
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
 def make_tokenizer(parameters, accessor):
@@ -138,6 +149,9 @@ def make_tokenizer(parameters, accessor):
             expanded_contexts(correspondence, 1, sound_classes))
     # insertion/deletion rules that apply for this language
     nil_correspondences = [c for c in correspondences if 'Ø' in accessor(c)]
+    rule_map, token_lengths = partition_correspondences(
+        correspondences,
+        accessor)
 
     def matches_this_left_context(c, last):
         return (c.context[0] is None or
@@ -153,17 +167,6 @@ def make_tokenizer(parameters, accessor):
     def matches_context(c, last):
         return (matches_this_left_context(c, last) and
                 matches_last_right_context(c, last))
-
-    def correspondences_continuing_parse(form):
-        matching_cs = []
-        for c in correspondences:
-            ctexts = []
-            for ctext in accessor(c):
-                if form.startswith(ctext):
-                    ctexts.append(ctext)
-            if ctexts:
-                matching_cs.append((c, ctexts))
-        return matching_cs
 
     def tokenize(form):
         parses = set()
@@ -197,11 +200,13 @@ def make_tokenizer(parameters, accessor):
                             syllable_parse + syllable_type)
             if form == '':
                 return
-            for c, ctexts in correspondences_continuing_parse(form):
-                if matches_context(c, last):
-                    for syllable_type in c.syllable_types:
-                        for ctext in ctexts:
-                            gen(form[len(ctext):],
+
+            for token_length in token_lengths:
+                continuing_cs = rule_map.get(form[:token_length], [])
+                for c in continuing_cs:
+                    if matches_context(c, last):
+                        for syllable_type in  c.syllable_types:
+                            gen(form[token_length:],
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
                                 syllable_parse + syllable_type)
