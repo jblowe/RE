@@ -244,7 +244,7 @@ def project_back(lexicons, parameters, statistics):
         for form in lexicon.forms:
             parses = tokenize(form.glyphs)
             if parses:
-                for cs in iter(parses):
+                for cs in parses:
                     count += 1
                     reconstructions.setdefault(cs, []).append(form)
             else:
