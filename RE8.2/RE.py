@@ -202,7 +202,7 @@ def make_tokenizer(parameters, accessor):
             for token_length in token_lengths:
                 for c in rule_map.get(form[:token_length], []):
                     if matches_context(c, last):
-                        for syllable_type in  c.syllable_types:
+                        for syllable_type in c.syllable_types:
                             gen(form[token_length:],
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
@@ -296,17 +296,20 @@ def filter_subsets(cognate_sets, statistics):
     statistics.add_note(f'threw away {len(losers)} subsets')
     return cognate_sets - losers, statistics
 
-# pick a representative from sets with the same surface protoform string
-def unique_surface_forms(cognate_sets, statistics):
+# pick a representative derivation, i.e. choose a reconstruction from
+# reconstructions with the same supporting forms yielding the same
+# surface string
+def pick_derivation(cognate_sets, statistics):
     uniques = {}
     for cognate_set in cognate_sets:
-        uniques[correspondences_as_proto_form_string(cognate_set[0])] = \
-            cognate_set
-    statistics.add_note(f'{len(uniques)} unique surface forms')
+        uniques[(correspondences_as_proto_form_string(cognate_set[0]),
+                 cognate_set[1])] = cognate_set
+    statistics.add_note(
+        f'{len(uniques)} distinct surface forms with distinct supporting forms')
     return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, filter_sets):
-    return unique_surface_forms(
+    return pick_derivation(
         *filter_subsets(
             *create_sets(
                 *project_back(lexicons, params, Statistics()),
