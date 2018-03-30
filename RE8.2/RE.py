@@ -234,11 +234,14 @@ def postdict_daughter_forms(proto_form, parameters):
 def project_back(lexicons, parameters, statistics):
     reconstructions = {}
     for lexicon in lexicons:
+        # we don't want to tokenize the same glyphs more than once, so
+        # memoize each parse
+        memo = {}
         daughter_form = lambda c: c.daughter_forms[lexicon.language]
         count = 0
         tokenize = make_tokenizer(parameters, daughter_form)
         for form in lexicon.forms:
-            parses = tokenize(form.glyphs)
+            parses = memo.setdefault(form.glyphs, tokenize(form.glyphs))
             if parses:
                 for cs in parses:
                     count += 1
