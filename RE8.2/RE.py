@@ -4,6 +4,7 @@ import regex as re
 import os
 import sys
 import serialize
+import collections
 
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex, supra_segmentals):
@@ -128,10 +129,10 @@ def expanded_contexts(rule, i, sound_classes):
 # token key.
 # also return all possible token lengths
 def partition_correspondences(correspondences, accessor):
-    partitions = {}
+    partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
-            partitions.setdefault(token, []).append(c)
+            partitions[token].append(c)
     return partitions, list(set.union(*(set(map(len, accessor(c)))
                                         for c in correspondences)))
 
@@ -190,7 +191,7 @@ def make_tokenizer(parameters, accessor):
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
             # otherwise keep building parses from epenthesis rules
-            for c in rule_map.get('Ø', []):
+            for c in rule_map['Ø']:
                 if matches_context(c, last):
                     for syllable_type in c.syllable_types:
                         gen(form,
@@ -200,7 +201,7 @@ def make_tokenizer(parameters, accessor):
             if form == '':
                 return
             for token_length in token_lengths:
-                for c in rule_map.get(form[:token_length], []):
+                for c in rule_map[form[:token_length]]:
                     if matches_context(c, last):
                         for syllable_type in c.syllable_types:
                             gen(form[token_length:],
@@ -232,7 +233,7 @@ def postdict_daughter_forms(proto_form, parameters):
 
 # return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters, statistics):
-    reconstructions = {}
+    reconstructions = collections.defaultdict(list)
     for lexicon in lexicons:
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
@@ -245,7 +246,7 @@ def project_back(lexicons, parameters, statistics):
             if parses:
                 for cs in parses:
                     count += 1
-                    reconstructions.setdefault(cs, []).append(form)
+                    reconstructions[cs].append(form)
             else:
                 statistics.failed_parses.add(form)
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count} reconstructions')
@@ -281,9 +282,9 @@ def create_sets(projections, statistics, filter_sets=True):
 # collection. we do this by partitioning the collection of sets by
 # each set's length to reduce unnecessary comparison
 def filter_subsets(cognate_sets, statistics):
-    partitions = {}
+    partitions = collections.defaultdict(list)
     for cognate_set in cognate_sets:
-        partitions.setdefault(len(cognate_set[1]), []).append(cognate_set)
+        partitions[len(cognate_set[1])].append(cognate_set)
     losers = set()
     for key1, sets1 in partitions.items():
         larger_sets = [set for key2, sets2 in partitions.items()
