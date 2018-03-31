@@ -255,12 +255,15 @@ def project_back(lexicons, parameters, statistics):
 def create_sets(projections, statistics, filter_sets=True):
     cognate_sets = set()
     for reconstruction, support in projections.items():
-        if not filter_sets or len(support) > 1:
+        # a cognate set requires support from more than 1 language
+        if not filter_sets or len({form.language for form in support}) > 1:
             cognate_sets.add((reconstruction, frozenset(support)))
         else:
             statistics.singleton_support.add(reconstruction)
-    if filter_sets == True:
-        statistics.add_note(f'only {len(cognate_sets)} sets with more than 1 supporting form')
+    statistics.add_note(
+        f'only {len(cognate_sets)} sets supported by multiple languages'
+        if filter_sets else
+        f'{len(cognate_sets)} cognate sets')
     return cognate_sets, statistics
 
 # throw away sets whose supporting forms are a subset of another's
