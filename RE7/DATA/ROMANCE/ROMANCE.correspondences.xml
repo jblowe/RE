@@ -30,8 +30,8 @@
          <seg>ˈ</seg>
       </modern>
    </corr>
-   <corr num="closeda+s">
-      <proto contextR="s" syll="G,v">a</proto>
+   <corr num="scndrop1">
+      <proto contextL="$" syll="O,G,v">a</proto>
       <modern dialecte="es">
          <seg>a</seg>
       </modern>
@@ -45,29 +45,29 @@
          <seg>a</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>ɑ</seg>
+         <seg>a</seg>
       </modern>
       <modern dialecte="scn">
-         <seg>a</seg>
+         <seg>Ø</seg>
       </modern>
    </corr>
-   <corr num="a+n-closed">
-      <proto contextR="n" syll="G,v">a</proto>
+   <corr num="a-open">
+      <proto syll="O">a</proto>
       <modern dialecte="es">
          <seg>a</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>ã</seg>
+         <seg>a</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>ã</seg>
+         <seg>a</seg>
       </modern>
       <modern dialecte="it">
          <seg>a</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>ɑ̃</seg>
-         <seg>ɛ̃</seg>
+         <seg>ɛ</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="scn">
          <seg>a</seg>
@@ -95,25 +95,26 @@
          <seg>a</seg>
       </modern>
    </corr>
-   <corr num="scndrop1">
-      <proto contextL="$" syll="O,G,v">a</proto>
+   <corr num="a+n-closed">
+      <proto contextR="n" syll="G,v">a</proto>
       <modern dialecte="es">
          <seg>a</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>a</seg>
+         <seg>ã</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>a</seg>
+         <seg>ã</seg>
       </modern>
       <modern dialecte="it">
          <seg>a</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>a</seg>
+         <seg>ɑ̃</seg>
+         <seg>ɛ̃</seg>
       </modern>
       <modern dialecte="scn">
-         <seg>Ø</seg>
+         <seg>a</seg>
       </modern>
    </corr>
    <corr num="a-final">
@@ -158,26 +159,46 @@
          <seg>a</seg>
       </modern>
    </corr>
-   <corr num="a-open">
-      <proto syll="O">a</proto>
+   <corr num="a+2nd-yod">
+      <proto contextR="kt,kl,ks,lt,ls" syll="G">a</proto>
       <modern dialecte="es">
-         <seg>a</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>a</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>a</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="it">
          <seg>a</seg>
       </modern>
       <modern dialecte="fr">
          <seg>ɛ</seg>
-         <seg>e</seg>
       </modern>
       <modern dialecte="scn">
          <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="closeda+s">
+      <proto syll="GC,vC">as</proto>
+      <modern dialecte="es">
+         <seg>as</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>as</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>as</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>as</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɑ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>as</seg>
       </modern>
    </corr>
    <corr num="aw-tonic">
@@ -245,27 +266,6 @@
          <seg>b</seg>
       </modern>
    </corr>
-   <corr num="bl-inter">
-      <proto contextL="V" contextR="V" syll="CC">bl</proto>
-      <modern dialecte="es">
-         <seg>bl</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>bɾ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>bɾ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>bbj</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>bl</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ggj</seg>
-      </modern>
-   </corr>
    <corr num="bl-protect">
       <proto contextL="C" contextR="V" syll="CC">bl</proto>
       <modern dialecte="es">
@@ -285,6 +285,27 @@
       </modern>
       <modern dialecte="scn">
          <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="bl-inter">
+      <proto contextL="V" contextR="V" syll="CC">bl</proto>
+      <modern dialecte="es">
+         <seg>bl</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>bɾ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>bɾ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>bbj</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>bl</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ggj</seg>
       </modern>
    </corr>
    <corr num="bl-initial">
@@ -395,51 +416,6 @@
          <seg>d͡z</seg>
       </modern>
    </corr>
-   <corr num="yod">
-      <proto contextL="V" contextR="V" syll="C">d͡ʒ</proto>
-      <modern dialecte="es">
-         <seg>j</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>d͡ʒ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ʒ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>d͡ʒ</seg>
-         <seg>dd͡ʒ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>j</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>d͡ʒ</seg>
-         <seg>d͡ʒd͡ʒ</seg>
-      </modern>
-   </corr>
-   <corr num="yod-initial3">
-      <proto contextL="$" contextR="ɔ,o,u" syll="J,j">d͡ʒ</proto>
-      <modern dialecte="es">
-         <seg>x</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>d͡ʒ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ʒ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>d͡ʒ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ʒ</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>d͡ʒ</seg>
-         <seg>d͡ʒd͡ʒ</seg>
-      </modern>
-   </corr>
    <corr num="yod+tonic-i">
       <proto contextR="i" syll="J">d͡ʒ</proto>
       <modern dialecte="es">
@@ -465,34 +441,9 @@
          <seg>d͡ʒd͡ʒ</seg>
       </modern>
    </corr>
-   <corr num="yod2">
-      <proto contextL="C" contextR="V" syll="C">d͡ʒ</proto>
+   <corr num="yod-initial3">
+      <proto contextL="$" contextR="ɔ,o,u" syll="J,j">d͡ʒ</proto>
       <modern dialecte="es">
-         <seg>j</seg>
-         <seg>x</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>d͡ʒ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ʒ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>d͡ʒ</seg>
-         <seg>dd͡ʒ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ʒ</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>d͡ʒ</seg>
-         <seg>d͡ʒd͡ʒ</seg>
-      </modern>
-   </corr>
-   <corr num="yod-initial1">
-      <proto contextL="$" contextR="a,i,e,ɛ" syll="J">d͡ʒ</proto>
-      <modern dialecte="es">
-         <seg>j</seg>
          <seg>x</seg>
       </modern>
       <modern dialecte="oldpt">
@@ -534,44 +485,114 @@
          <seg>d͡ʒd͡ʒ</seg>
       </modern>
    </corr>
-   <corr num="c51">
-      <proto contextL="r,l" contextR="#" syll="v">e</proto>
+   <corr num="yod-initial1">
+      <proto contextL="$" contextR="a,i,e,ɛ" syll="J">d͡ʒ</proto>
       <modern dialecte="es">
-         <seg>Ø</seg>
+         <seg>j</seg>
+         <seg>x</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>Ø</seg>
+         <seg>d͡ʒ</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>Ø</seg>
+         <seg>ʒ</seg>
       </modern>
       <modern dialecte="it">
-         <seg>e</seg>
+         <seg>d͡ʒ</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>ʒ</seg>
       </modern>
       <modern dialecte="scn">
-         <seg>i</seg>
+         <seg>d͡ʒ</seg>
+         <seg>d͡ʒd͡ʒ</seg>
       </modern>
    </corr>
-   <corr num="e+n-closed">
-      <proto contextR="n" syll="G,v">e</proto>
+   <corr num="yod2">
+      <proto contextL="C" contextR="V" syll="C">d͡ʒ</proto>
+      <modern dialecte="es">
+         <seg>j</seg>
+         <seg>x</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>d͡ʒ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ʒ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>d͡ʒ</seg>
+         <seg>dd͡ʒ</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ʒ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>d͡ʒ</seg>
+         <seg>d͡ʒd͡ʒ</seg>
+      </modern>
+   </corr>
+   <corr num="yod">
+      <proto contextL="V" contextR="V" syll="C">d͡ʒ</proto>
+      <modern dialecte="es">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>d͡ʒ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ʒ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>d͡ʒ</seg>
+         <seg>dd͡ʒ</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>d͡ʒ</seg>
+         <seg>d͡ʒd͡ʒ</seg>
+      </modern>
+   </corr>
+   <corr num="scndrop2">
+      <proto contextL="$" syll="O,G,v">e</proto>
       <modern dialecte="es">
          <seg>e</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>ẽ</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>ẽ</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="it">
          <seg>e</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>ɑ̃</seg>
-         <seg>ɛ̃</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="e+open">
+      <proto syll="O">e</proto>
+      <modern dialecte="es">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>wa</seg>
+         <seg>ə</seg>
       </modern>
       <modern dialecte="scn">
          <seg>i</seg>
@@ -593,6 +614,28 @@
       </modern>
       <modern dialecte="fr">
          <seg>ɛ</seg>
+         <seg>ɛ̃</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>i</seg>
+      </modern>
+   </corr>
+   <corr num="e+n-closed">
+      <proto contextR="n" syll="G,v">e</proto>
+      <modern dialecte="es">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɑ̃</seg>
          <seg>ɛ̃</seg>
       </modern>
       <modern dialecte="scn">
@@ -621,6 +664,27 @@
          <seg>i</seg>
       </modern>
    </corr>
+   <corr num="e-closed">
+      <proto syll="G,v">e</proto>
+      <modern dialecte="es">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɛ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>i</seg>
+      </modern>
+   </corr>
    <corr num="c75">
       <proto contextL="d,t" contextR="#" syll="v">e</proto>
       <modern dialecte="es">
@@ -640,27 +704,6 @@
       </modern>
       <modern dialecte="scn">
          <seg>e</seg>
-      </modern>
-   </corr>
-   <corr num="scndrop2">
-      <proto contextL="$" syll="O,G,v">e</proto>
-      <modern dialecte="es">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>Ø</seg>
       </modern>
    </corr>
    <corr num="c60">
@@ -684,66 +727,44 @@
          <seg>i</seg>
       </modern>
    </corr>
-   <corr num="e-closed">
-      <proto syll="G,v">e</proto>
+   <corr num="c51">
+      <proto contextL="r,l" contextR="#" syll="v">e</proto>
       <modern dialecte="es">
-         <seg>e</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>e</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>e</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="it">
          <seg>e</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>ɛ</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="scn">
          <seg>i</seg>
       </modern>
    </corr>
-   <corr num="e+open">
-      <proto syll="O">e</proto>
-      <modern dialecte="es">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>wa</seg>
-         <seg>ə</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>i</seg>
-      </modern>
-   </corr>
-   <corr num="ɛ-closed">
-      <proto contextR="n" syll="G">ɛ</proto>
+   <corr num="ɛ-open">
+      <proto syll="O">ɛ</proto>
       <modern dialecte="es">
          <seg>je</seg>
-         <seg>e</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>ẽ</seg>
+         <seg>ɛ</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>ẽ</seg>
+         <seg>ɛ</seg>
       </modern>
       <modern dialecte="it">
+         <seg>jɛ</seg>
          <seg>ɛ</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>ɑ̃</seg>
+         <seg>jɛ</seg>
          <seg>jɛ̃</seg>
       </modern>
       <modern dialecte="scn">
@@ -793,24 +814,45 @@
          <seg>ɛ</seg>
       </modern>
    </corr>
-   <corr num="ɛ-open">
-      <proto syll="O">ɛ</proto>
+   <corr num="ɛ-closed">
+      <proto contextR="n" syll="G">ɛ</proto>
       <modern dialecte="es">
          <seg>je</seg>
+         <seg>e</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>ɛ</seg>
+         <seg>ẽ</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>ɛ</seg>
+         <seg>ẽ</seg>
       </modern>
       <modern dialecte="it">
-         <seg>jɛ</seg>
          <seg>ɛ</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>jɛ</seg>
+         <seg>ɑ̃</seg>
          <seg>jɛ̃</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ɛ</seg>
+      </modern>
+   </corr>
+   <corr num="ɛ+2nd-yod">
+      <proto contextR="kt,kl,ks,lt,ls" syll="G">ɛ</proto>
+      <modern dialecte="es">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ɛ</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>wa</seg>
       </modern>
       <modern dialecte="scn">
          <seg>ɛ</seg>
@@ -858,27 +900,6 @@
          <seg>f</seg>
       </modern>
    </corr>
-   <corr num="fl-inter">
-      <proto contextL="V" contextR="V" syll="CC">fl</proto>
-      <modern dialecte="es">
-         <seg>lb</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>fl</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>fl</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>ffj</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>fl</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ffj</seg>
-      </modern>
-   </corr>
    <corr num="fl-protect">
       <proto contextL="C" contextR="V" syll="CC">fl</proto>
       <modern dialecte="es">
@@ -901,6 +922,27 @@
       </modern>
       <modern dialecte="scn">
          <seg>kj</seg>
+      </modern>
+   </corr>
+   <corr num="fl-inter">
+      <proto contextL="V" contextR="V" syll="CC">fl</proto>
+      <modern dialecte="es">
+         <seg>lb</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>fl</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>fl</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ffj</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>fl</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ffj</seg>
       </modern>
    </corr>
    <corr num="c62">
@@ -928,27 +970,6 @@
          <seg>kj</seg>
       </modern>
    </corr>
-   <corr num="c70">
-      <proto contextL="V" contextR="V,r" syll="C">g</proto>
-      <modern dialecte="es">
-         <seg>g</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>g</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>g</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>g</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>Ø</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>g</seg>
-      </modern>
-   </corr>
    <corr num="frpal1">
       <proto contextR="a" syll="C">g</proto>
       <modern dialecte="es">
@@ -965,6 +986,27 @@
       </modern>
       <modern dialecte="fr">
          <seg>ʒ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>g</seg>
+      </modern>
+   </corr>
+   <corr num="c70">
+      <proto contextL="V" contextR="V,r" syll="C">g</proto>
+      <modern dialecte="es">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="scn">
          <seg>g</seg>
@@ -991,23 +1033,25 @@
          <seg>g</seg>
       </modern>
    </corr>
-   <corr num="gl-inter">
-      <proto contextL="V" contextR="V" syll="CC">gl</proto>
+   <corr num="gl-protected">
+      <proto contextL="C" contextR="V" syll="CC">gl</proto>
       <modern dialecte="es">
          <seg>ʎ</seg>
          <seg>x</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>ʎ</seg>
+         <seg>t͡ʃ</seg>
       </modern>
       <modern dialecte="pt">
          <seg>ʎ</seg>
+         <seg>ʃ</seg>
       </modern>
       <modern dialecte="it">
-         <seg>ggj</seg>
+         <seg>gj</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>j</seg>
+         <seg>gl</seg>
       </modern>
       <modern dialecte="scn">
          <seg>gj</seg>
@@ -1034,25 +1078,23 @@
          <seg>ɲɲ</seg>
       </modern>
    </corr>
-   <corr num="gl-protected">
-      <proto contextL="C" contextR="V" syll="CC">gl</proto>
+   <corr num="gl-inter">
+      <proto contextL="V" contextR="V" syll="CC">gl</proto>
       <modern dialecte="es">
          <seg>ʎ</seg>
          <seg>x</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>ʎ</seg>
-         <seg>t͡ʃ</seg>
       </modern>
       <modern dialecte="pt">
          <seg>ʎ</seg>
-         <seg>ʃ</seg>
       </modern>
       <modern dialecte="it">
-         <seg>gj</seg>
+         <seg>ggj</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>gl</seg>
+         <seg>j</seg>
       </modern>
       <modern dialecte="scn">
          <seg>gj</seg>
@@ -1079,27 +1121,6 @@
          <seg>gj</seg>
       </modern>
    </corr>
-   <corr num="i+n-closed">
-      <proto contextR="n" syll="G,v">i</proto>
-      <modern dialecte="es">
-         <seg>i</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>ĩ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ĩ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>i</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ɛ̃</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>i</seg>
-      </modern>
-   </corr>
    <corr num="i+n-open">
       <proto contextR="n" syll="O">i</proto>
       <modern dialecte="es">
@@ -1116,6 +1137,27 @@
       </modern>
       <modern dialecte="fr">
          <seg>i</seg>
+         <seg>ɛ̃</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>i</seg>
+      </modern>
+   </corr>
+   <corr num="i+n-closed">
+      <proto contextR="n" syll="G,v">i</proto>
+      <modern dialecte="es">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="fr">
          <seg>ɛ̃</seg>
       </modern>
       <modern dialecte="scn">
@@ -1143,29 +1185,29 @@
          <seg>i</seg>
       </modern>
    </corr>
-   <corr num="c38">
-      <proto contextL="V" contextR="V,r" syll="C">k</proto>
+   <corr num="c7">
+      <proto syll="C">k</proto>
       <modern dialecte="es">
-         <seg>g</seg>
+         <seg>k</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>g</seg>
+         <seg>k</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>g</seg>
+         <seg>k</seg>
       </modern>
       <modern dialecte="it">
          <seg>k</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>g</seg>
+         <seg>k</seg>
       </modern>
       <modern dialecte="scn">
          <seg>k</seg>
       </modern>
    </corr>
    <corr num="c67">
-      <proto contextR="a" syll="C">k</proto>
+      <proto contextR="a,aw" syll="C">k</proto>
       <modern dialecte="es">
          <seg>k</seg>
       </modern>
@@ -1185,22 +1227,22 @@
          <seg>k</seg>
       </modern>
    </corr>
-   <corr num="c7">
-      <proto syll="C">k</proto>
+   <corr num="c38">
+      <proto contextL="V" contextR="V,r" syll="C">k</proto>
       <modern dialecte="es">
-         <seg>k</seg>
+         <seg>g</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>k</seg>
+         <seg>g</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>k</seg>
+         <seg>g</seg>
       </modern>
       <modern dialecte="it">
          <seg>k</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>k</seg>
+         <seg>g</seg>
       </modern>
       <modern dialecte="scn">
          <seg>k</seg>
@@ -1254,28 +1296,6 @@
          <seg>kk</seg>
       </modern>
    </corr>
-   <corr num="kl-inter">
-      <proto contextL="V" contextR="V" syll="CC">kl</proto>
-      <modern dialecte="es">
-         <seg>ʎ</seg>
-         <seg>x</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>ʎ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ʎ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>kkj</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>j</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>kkj</seg>
-      </modern>
-   </corr>
    <corr num="kl-protected">
       <proto contextL="C" contextR="V" syll="CC">kl</proto>
       <modern dialecte="es">
@@ -1298,6 +1318,28 @@
       </modern>
       <modern dialecte="scn">
          <seg>kj</seg>
+      </modern>
+   </corr>
+   <corr num="kl-inter">
+      <proto contextL="V" contextR="V" syll="CC">kl</proto>
+      <modern dialecte="es">
+         <seg>ʎ</seg>
+         <seg>x</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ʎ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ʎ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>kkj</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>kkj</seg>
       </modern>
    </corr>
    <corr num="kl-initial">
@@ -1516,6 +1558,27 @@
          <seg>ɖɖ</seg>
       </modern>
    </corr>
+   <corr num="ls-intervocalic">
+      <proto contextL="V" contextR="V" syll="CC">ls</proto>
+      <modern dialecte="es">
+         <seg>x</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ʃ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ʃ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ls</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ls</seg>
+      </modern>
+   </corr>
    <corr num="c26">
       <proto syll="C">m</proto>
       <modern dialecte="es">
@@ -1623,23 +1686,23 @@
          <seg>nn</seg>
       </modern>
    </corr>
-   <corr num="o+n-closed">
-      <proto contextR="n" syll="G,v">o</proto>
+   <corr num="o-open">
+      <proto syll="O">o</proto>
       <modern dialecte="es">
          <seg>o</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>õ</seg>
+         <seg>o</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>õ</seg>
-         <seg>ɐ̃w̃</seg>
+         <seg>o</seg>
       </modern>
       <modern dialecte="it">
          <seg>o</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>ɔ̃</seg>
+         <seg>œ</seg>
+         <seg>ø</seg>
       </modern>
       <modern dialecte="scn">
          <seg>u</seg>
@@ -1666,6 +1729,49 @@
       </modern>
       <modern dialecte="scn">
          <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="o+n-closed">
+      <proto contextR="n" syll="G,v">o</proto>
+      <modern dialecte="es">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>õ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>õ</seg>
+         <seg>ɐ̃w̃</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɔ̃</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="o+ls">
+      <proto contextR="ls" syll="v,G">o</proto>
+      <modern dialecte="es">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>o</seg>
       </modern>
    </corr>
    <corr num="o-final">
@@ -1712,10 +1818,31 @@
          <seg>u</seg>
       </modern>
    </corr>
-   <corr num="o-open">
-      <proto syll="O">o</proto>
+   <corr num="o+2nd-yod">
+      <proto contextR="kt,kl,ks,lt" syll="G">o</proto>
       <modern dialecte="es">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="it">
          <seg>o</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>wa</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="ɔ+raising-nj">
+      <proto contextR="nj" syll="O">ɔ</proto>
+      <modern dialecte="es">
+         <seg>we</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>o</seg>
@@ -1725,32 +1852,32 @@
       </modern>
       <modern dialecte="it">
          <seg>o</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɔ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ɔ</seg>
+      </modern>
+   </corr>
+   <corr num="ɔ-open">
+      <proto syll="O">ɔ</proto>
+      <modern dialecte="es">
+         <seg>we</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ɔ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ɔ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>wɔ</seg>
+         <seg>ɔ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>œ</seg>
          <seg>ø</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>u</seg>
-      </modern>
-   </corr>
-   <corr num="ɔ+n-closed">
-      <proto contextR="n" syll="G">ɔ</proto>
-      <modern dialecte="es">
-         <seg>o</seg>
-         <seg>we</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>õ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>õ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>ɔ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ɔ̃</seg>
       </modern>
       <modern dialecte="scn">
          <seg>ɔ</seg>
@@ -1779,6 +1906,28 @@
          <seg>ɔ</seg>
       </modern>
    </corr>
+   <corr num="ɔ+n-closed">
+      <proto contextR="n" syll="G">ɔ</proto>
+      <modern dialecte="es">
+         <seg>o</seg>
+         <seg>we</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>õ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>õ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ɔ</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɔ̃</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ɔ</seg>
+      </modern>
+   </corr>
    <corr num="ɔ-closed">
       <proto syll="G">ɔ</proto>
       <modern dialecte="es">
@@ -1801,24 +1950,43 @@
          <seg>ɔ</seg>
       </modern>
    </corr>
-   <corr num="ɔ-open">
-      <proto syll="O">ɔ</proto>
+   <corr num="ɔ+blocking-lj">
+      <proto contextR="lj" syll="O">ɔ</proto>
       <modern dialecte="es">
-         <seg>we</seg>
+         <seg>o</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>ɔ</seg>
+         <seg>o</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>ɔ</seg>
+         <seg>o</seg>
       </modern>
       <modern dialecte="it">
-         <seg>wɔ</seg>
          <seg>ɔ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>œ</seg>
-         <seg>ø</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ɔ</seg>
+      </modern>
+   </corr>
+   <corr num="ɔ+2nd-yod">
+      <proto contextR="kt,kl,ks,lt,ls" syll="G">ɔ</proto>
+      <modern dialecte="es">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ɔ</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>ɥ</seg>
       </modern>
       <modern dialecte="scn">
          <seg>ɔ</seg>
@@ -1887,27 +2055,6 @@
          <seg>p</seg>
       </modern>
    </corr>
-   <corr num="pl-inter">
-      <proto contextL="V" contextR="V" syll="C">pl</proto>
-      <modern dialecte="es">
-         <seg>bl</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>bɾ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>bɾ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>pj</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>bl</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>kj</seg>
-      </modern>
-   </corr>
    <corr num="pl-protect">
       <proto contextL="C" contextR="V" syll="CC">pl</proto>
       <modern dialecte="es">
@@ -1927,6 +2074,27 @@
       </modern>
       <modern dialecte="fr">
          <seg>pl</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>kj</seg>
+      </modern>
+   </corr>
+   <corr num="pl-inter">
+      <proto contextL="V" contextR="V" syll="C">pl</proto>
+      <modern dialecte="es">
+         <seg>bl</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>bɾ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>bɾ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>pj</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>bl</seg>
       </modern>
       <modern dialecte="scn">
          <seg>kj</seg>
@@ -2090,27 +2258,6 @@
          <seg>rr</seg>
       </modern>
    </corr>
-   <corr num="c33">
-      <proto contextL="V" contextR="V" syll="C">s</proto>
-      <modern dialecte="es">
-         <seg>s</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>z</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>z</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>s</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>z</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>s</seg>
-      </modern>
-   </corr>
    <corr num="c68">
       <proto contextL="V" contextR="p,t,k" syll="S">s</proto>
       <modern dialecte="es">
@@ -2169,6 +2316,27 @@
       </modern>
       <modern dialecte="fr">
          <seg>s</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="c33">
+      <proto contextL="V" contextR="V" syll="C">s</proto>
+      <modern dialecte="es">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="fr">
+         <seg>z</seg>
       </modern>
       <modern dialecte="scn">
          <seg>s</seg>
@@ -2279,28 +2447,6 @@
          <seg>tt</seg>
       </modern>
    </corr>
-   <corr num="u+n-closed">
-      <proto contextR="n" syll="G,v">u</proto>
-      <modern dialecte="es">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>ũ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ũ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>œ̃</seg>
-         <seg>ɛ̃</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>u</seg>
-      </modern>
-   </corr>
    <corr num="u+n-open">
       <proto contextR="n" syll="O">u</proto>
       <modern dialecte="es">
@@ -2317,6 +2463,28 @@
       </modern>
       <modern dialecte="fr">
          <seg>y</seg>
+         <seg>œ̃</seg>
+         <seg>ɛ̃</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="u+n-closed">
+      <proto contextR="n" syll="G,v">u</proto>
+      <modern dialecte="es">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ũ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ũ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="fr">
          <seg>œ̃</seg>
          <seg>ɛ̃</seg>
       </modern>
@@ -2364,174 +2532,6 @@
       </modern>
       <modern dialecte="scn">
          <seg>v</seg>
-      </modern>
-   </corr>
-   <corr num="ɛ+2nd-yod">
-      <proto contextR="kt,kl,ks,lt,ls" syll="G">ɛ</proto>
-      <modern dialecte="es">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>ɛ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>wa</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ɛ</seg>
-      </modern>
-   </corr>
-   <corr num="a+2nd-yod">
-      <proto contextR="kt,kl,ks,lt,ls" syll="G">a</proto>
-      <modern dialecte="es">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>e</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>a</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ɛ</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>a</seg>
-      </modern>
-   </corr>
-   <corr num="ɔ+2nd-yod">
-      <proto contextR="kt,kl,ks,lt,ls" syll="G">ɔ</proto>
-      <modern dialecte="es">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>ɔ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ɥ</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ɔ</seg>
-      </modern>
-   </corr>
-   <corr num="o+2nd-yod">
-      <proto contextR="kt,kl,ks,lt" syll="G">o</proto>
-      <modern dialecte="es">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>wa</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>o</seg>
-      </modern>
-   </corr>
-   <corr num="ɔ+blocking-lj">
-      <proto contextR="lj" syll="O">ɔ</proto>
-      <modern dialecte="es">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>ɔ</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>œ</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ɔ</seg>
-      </modern>
-   </corr>
-   <corr num="ɔ+raising-nj">
-      <proto contextR="nj" syll="O">ɔ</proto>
-      <modern dialecte="es">
-         <seg>ue</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>ɔ</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ɔ</seg>
-      </modern>
-   </corr>
-   <corr num="ls-intervocalic">
-      <proto contextL="V" contextR="V" syll="CC">ls</proto>
-      <modern dialecte="es">
-         <seg>x</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>ʃ</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ʃ</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>ls</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>s</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>ls</seg>
-      </modern>
-   </corr>
-   <corr num="o+ls">
-      <proto contextR="ls" syll="v,G">o</proto>
-      <modern dialecte="es">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="it">
-         <seg>o</seg>
-      </modern>
-      <modern dialecte="fr">
-         <seg>u</seg>
-      </modern>
-      <modern dialecte="scn">
-         <seg>o</seg>
       </modern>
    </corr>
 </tableOfCorr>

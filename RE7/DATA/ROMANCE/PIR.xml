@@ -116,7 +116,7 @@
       </modern>
    </corr>
    <corr num="c35">
-      <proto contextR="n" syll="C">d͡z</proto>
+      <proto contextL="V" contextR="V" syll="C">d͡z</proto>
       <modern dialecte="es">
          <seg>θ</seg>
       </modern>
@@ -532,10 +532,10 @@
          <seg>we</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>ɔ</seg>
+         <seg>õ</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>ɔ</seg>
+         <seg>õ</seg>
       </modern>
    </corr>
    <corr num="c20">
@@ -611,7 +611,7 @@
          <seg>u</seg>
       </modern>
    </corr>
-   <corr num="c34">
+   <corr num="u+n">
       <proto contextR="n" syll="G,O,v">u</proto>
       <modern dialecte="es">
          <seg>u</seg>
@@ -635,7 +635,7 @@
          <seg>β</seg>
       </modern>
    </corr>
-   <corr num="c36">
+   <corr num="XL-initial">
       <proto contextL="$" syll="CC">XL</proto>
       <modern dialecte="es">
          <seg>ʎ</seg>
@@ -648,7 +648,7 @@
       </modern>
    </corr>
    <corr num="c43">
-      <proto syll="C">z</proto>
+      <proto contextL="V" contextR="V,r" syll="C">z</proto>
       <modern dialecte="es">
          <seg>s</seg>
       </modern>
@@ -669,6 +669,80 @@
       </modern>
       <modern dialecte="oldpt">
          <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="bl-id">
+      <proto syll="CC">bl</proto>
+      <modern dialecte="es">
+         <seg>bl</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>bɾ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>bɾ</seg>
+      </modern>
+   </corr>
+   <corr num="pl-initial">
+      <proto contextL="$" syll="CC">pl</proto>
+      <modern dialecte="es">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>pɾ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>pɾ</seg>
+      </modern>
+   </corr>
+   <corr num="pl-protect">
+      <proto contextR="V" syll="CC">pl</proto>
+      <modern dialecte="es">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>pɾ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>pl</seg>
+      </modern>
+   </corr>
+   <corr num="XL-protected">
+      <proto contextR="V" syll="CC">XL</proto>
+      <modern dialecte="es">
+         <seg>t͡ʃ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ʃ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>t͡ʃ</seg>
+      </modern>
+   </corr>
+   <corr num="fl-inter">
+      <proto contextL="V" contextR="V" syll="CC">fl</proto>
+      <modern dialecte="es">
+         <seg>lb</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>fl</seg>
+         <seg>fɾ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>fl</seg>
+         <seg>fɾ</seg>
+      </modern>
+   </corr>
+   <corr num="ɲ">
+      <proto syll="C">ɲ</proto>
+      <modern dialecte="es">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ɲ</seg>
       </modern>
    </corr>
 </tableOfCorr>
