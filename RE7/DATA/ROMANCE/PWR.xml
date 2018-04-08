@@ -16,7 +16,7 @@
       </modern>
    </corr>
    <corr num="ʎ-inter">
-      <proto contextL="V" contextR="V" syll="CC">ʎ</proto>
+      <proto contextL="V" contextR="V" syll="C">ʎ</proto>
       <modern dialecte="PIR">
          <seg>ʎ</seg>
       </modern>
@@ -529,7 +529,7 @@
    <corr num="o+2nd-yod">
       <proto contextR="jt,js" syll="v,G">o</proto>
       <modern dialecte="PIR">
-         <seg>u</seg>
+         <seg>o</seg>
       </modern>
       <modern dialecte="fr">
          <seg>wa</seg>
@@ -538,7 +538,7 @@
    <corr num="ɔ+2nd-yod">
       <proto contextR="jt,js,ʎ" syll="G">ɔ</proto>
       <modern dialecte="PIR">
-         <seg>o</seg>
+         <seg>ɔ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>ɥ</seg>

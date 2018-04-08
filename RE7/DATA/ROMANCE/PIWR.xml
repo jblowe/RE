@@ -429,6 +429,18 @@
          <seg>l</seg>
       </modern>
    </corr>
+   <corr num="c41">
+      <proto contextL="V" contextR="V" syll="CC">lj</proto>
+      <modern dialecte="PWR">
+         <seg>ʎ</seg>
+      </modern>
+      <modern dialecte="it">
+         <seg>ʎʎ</seg>
+      </modern>
+      <modern dialecte="scn">
+         <seg>ggj</seg>
+      </modern>
+   </corr>
    <corr num="c18">
       <proto syll="CC">ll</proto>
       <modern dialecte="PWR">
@@ -466,7 +478,7 @@
       </modern>
    </corr>
    <corr num="c39">
-      <proto syll="C">nj</proto>
+      <proto contextL="V" contextR="V" syll="C">nj</proto>
       <modern dialecte="PWR">
          <seg>ɲ</seg>
       </modern>

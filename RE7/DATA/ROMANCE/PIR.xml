@@ -31,7 +31,7 @@
       </modern>
    </corr>
    <corr num="c38">
-      <proto syll="CC">ʎ</proto>
+      <proto syll="C">ʎ</proto>
       <modern dialecte="es">
          <seg>x</seg>
          <seg>ʎ</seg>
@@ -406,18 +406,6 @@
          <seg>Ø</seg>
       </modern>
    </corr>
-   <corr num="c45">
-      <proto syll="C">lj</proto>
-      <modern dialecte="es">
-         <seg>x</seg>
-      </modern>
-      <modern dialecte="pt">
-         <seg>ʎ</seg>
-      </modern>
-      <modern dialecte="oldpt">
-         <seg>ʎ</seg>
-      </modern>
-   </corr>
    <corr num="c27">
       <proto contextL="V" contextR="V" syll="CC">ll</proto>
       <modern dialecte="es">
@@ -743,6 +731,42 @@
       </modern>
       <modern dialecte="oldpt">
          <seg>ɲ</seg>
+      </modern>
+   </corr>
+   <corr num="ɔ+2nd-yod">
+      <proto contextR="jt,js,ʎ" syll="O,G,v">ɔ</proto>
+      <modern dialecte="es">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="o+2nd-yod">
+      <proto contextR="jt,js,ʎ" syll="O,G,v">o</proto>
+      <modern dialecte="es">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="ʎ+ɛ">
+      <proto contextL="ʎ" syll="O,G">ɛ</proto>
+      <modern dialecte="es">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pt">
+         <seg>ɛ</seg>
+      </modern>
+      <modern dialecte="oldpt">
+         <seg>ɛ</seg>
       </modern>
    </corr>
 </tableOfCorr>
