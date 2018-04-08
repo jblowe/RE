@@ -1044,4 +1044,29 @@
     <spell>nom</spell>
     <hw>nɔ̃</hw>
   </entry>
+  <entry id="fr208">
+    <gl>six</gl>
+    <spell>six</spell>
+    <hw>sis</hw>
+  </entry>
+  <entry id="fr209">
+    <gl>seven</gl>
+    <spell>sept</spell>
+    <hw>sɛt</hw>
+  </entry>
+  <entry id="fr210">
+    <gl>eight</gl>
+    <spell>huit</spell>
+    <hw>ɥit</hw>
+  </entry>
+  <entry id="fr211">
+    <gl>nine</gl>
+    <spell>neuf</spell>
+    <hw>nœf</hw>
+  </entry>
+  <entry id="fr212">
+    <gl>ten</gl>
+    <spell>dix</spell>
+    <hw>dis</hw>
+  </entry>
 </lexicon>

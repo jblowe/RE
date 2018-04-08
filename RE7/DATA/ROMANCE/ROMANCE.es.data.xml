@@ -1149,4 +1149,29 @@
     <spell>ave</spell>
     <hw>ˈabe</hw>
   </entry>
+  <entry id="es212">
+    <gl>six</gl>
+    <spell>seis</spell>
+    <hw>sejs</hw>
+  </entry>
+  <entry id="es213">
+    <gl>seven</gl>
+    <spell>siete</spell>
+    <hw>ˈsjete</hw>
+  </entry>
+  <entry id="es214">
+    <gl>eight</gl>
+    <spell>ocho</spell>
+    <hw>ˈot͡ʃo</hw>
+  </entry>
+  <entry id="es215">
+    <gl>nine</gl>
+    <spell>nueve</spell>
+    <hw>ˈnwebe</hw>
+  </entry>
+  <entry id="es216">
+    <gl>ten</gl>
+    <spell>diez</spell>
+    <hw>ˈdjeθ</hw>
+  </entry>
 </lexicon>

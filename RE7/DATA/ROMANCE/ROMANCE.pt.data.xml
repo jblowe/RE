@@ -1099,4 +1099,29 @@
     <spell>nome</spell>
     <hw>ˈnomɨ (EP), ˈnɔmi (BP)</hw>
   </entry>
+  <entry id="pt208">
+    <gl>six</gl>
+    <spell>seis</spell>
+    <hw>ˈsejs</hw>
+  </entry>
+  <entry id="pt209">
+    <gl>seven</gl>
+    <spell>seven</spell>
+    <hw>ˈsɛti</hw>
+  </entry>
+  <entry id="pt210">
+    <gl>eight</gl>
+    <spell>oito</spell>
+    <hw>ˈojtu</hw>
+  </entry>
+  <entry id="pt211">
+    <gl>nine</gl>
+    <spell>nove</spell>
+    <hw>ˈnɔvi</hw>
+  </entry>
+  <entry id="pt212">
+    <gl>ten</gl>
+    <spell>dez</spell>
+    <hw>ˈdɛs</hw>
+  </entry>
 </lexicon>

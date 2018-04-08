@@ -1109,4 +1109,29 @@
     <spell>enflare</spell>
     <hw>enˈflare</hw>
   </entry>
+  <entry id="it211">
+    <gl>six</gl>
+    <spell>sei</spell>
+    <hw>ˈsɛi</hw>
+  </entry>
+  <entry id="it212">
+    <gl>seven</gl>
+    <spell>sette</spell>
+    <hw>ˈsɛtte</hw>
+  </entry>
+  <entry id="it213">
+    <gl>eight</gl>
+    <spell>otto</spell>
+    <hw>ˈɔtto</hw>
+  </entry>
+  <entry id="it214">
+    <gl>nine</gl>
+    <spell>nove</spell>
+    <hw>ˈnɔve</hw>
+  </entry>
+  <entry id="it215">
+    <gl>ten</gl>
+    <spell>dieci</spell>
+    <hw>ˈdjɛt͡ʃi</hw>
+  </entry>
 </lexicon>
