@@ -78,12 +78,14 @@ class ModernForm(Form):
         return f'{super().__str__()}: {self.gloss}'
 
 class ProtoForm(Form):
-    def __init__(self, language, correspondences, supporting_forms):
+    def __init__(self, language, correspondences, supporting_forms,
+                 attested_support):
         super().__init__(language,
                          correspondences_as_proto_form_string(
                              correspondences))
         self.correspondences = correspondences
         self.supporting_forms = supporting_forms
+        self.attested_support = attested_support
 
     def __str__(self):
         return f'{self.language} *{self.glyphs}'
@@ -252,51 +254,49 @@ def project_back(lexicons, parameters, statistics):
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count} reconstructions')
     return reconstructions, statistics
 
-def create_sets(projections, statistics, filter_sets=True):
+def create_sets(projections, statistics, root=True):
     cognate_sets = set()
+
+    def attested_forms(support):
+        attested = set()
+        for x in support:
+            if isinstance(x, ModernForm):
+                attested.add(x)
+            else:
+                attested |= x.attested_support
+        return attested
+
     for reconstruction, support in projections.items():
         # a cognate set requires support from more than 1 language
-        if not filter_sets or len({form.language for form in support}) > 1:
-            cognate_sets.add((reconstruction, frozenset(support)))
+        if not root or len({form.language for form in support}) > 1:
+            cognate_sets.add((reconstruction, frozenset(support),
+                              frozenset(attested_forms(support))))
         else:
             statistics.singleton_support.add(reconstruction)
     statistics.add_note(
         f'only {len(cognate_sets)} sets supported by multiple languages'
-        if filter_sets else
+        if root else
         f'{len(cognate_sets)} cognate sets')
     return cognate_sets, statistics
-
-# throw away sets whose supporting forms are a subset of another's
-# this is the slow, naive algorithm
-# def filter_subsets(cognate_sets, statistics):
-#     losers = set()
-#     for cognate_set in cognate_sets:
-#         (c1, supporting_forms1) = cognate_set
-#         for (c2, supporting_forms2) in cognate_sets:
-#             if supporting_forms1 < supporting_forms2:
-#                 losers.add(cognate_set)
-#                 break
-#     statistics.subsets = losers
-#     statistics.add_note(f'threw away {len(losers)} subsets')
-#     return cognate_sets - losers, statistics
 
 # given a collection of sets, we want to find all maximal sets,
 # i.e. ones which are not proper subsets of any other set in the
 # collection. we do this by partitioning the collection of sets by
 # each set's length to reduce unnecessary comparison
-def filter_subsets(cognate_sets, statistics):
+def filter_subsets(cognate_sets, statistics, root=True):
     partitions = collections.defaultdict(list)
+    index = 2 if root else 1
     for cognate_set in cognate_sets:
-        partitions[len(cognate_set[1])].append(cognate_set)
+        partitions[len(cognate_set[index])].append(cognate_set)
     losers = set()
     for key1, sets1 in partitions.items():
         larger_sets = [set for key2, sets2 in partitions.items()
                        if key2 > key1
                        for set in sets2]
         for cognate_set in sets1:
-            (c1, supporting_forms1) = cognate_set
-            for (c2, supporting_forms2) in larger_sets:
-                if supporting_forms1 < supporting_forms2:
+            supporting_forms1 = cognate_set[index]
+            for cognate_set2 in larger_sets:
+                if supporting_forms1 < cognate_set2[index]:
                     losers.add(cognate_set)
                     break
     statistics.subsets = losers
@@ -315,18 +315,19 @@ def pick_derivation(cognate_sets, statistics):
         f'{len(uniques)} distinct surface forms with distinct supporting forms')
     return uniques.values(), statistics
 
-def batch_upstream(lexicons, params, filter_sets):
+def batch_upstream(lexicons, params, root):
     return pick_derivation(
         *filter_subsets(
             *create_sets(
                 *project_back(lexicons, params, Statistics()),
-                filter_sets)))
+                root),
+            root))
 
 def batch_all_upstream(settings):
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
-    def rec(target, filter_sets):
+    def rec(target, root):
         if target in settings.attested:
             return read.read_lexicon(
                 os.path.join(settings.directory_path,
@@ -335,8 +336,9 @@ def batch_all_upstream(settings):
                              in settings.upstream[target]]
         return Lexicon(
             target,
-            [ProtoForm(target, correspondences, supporting_forms)
-             for (correspondences, supporting_forms)
+            [ProtoForm(target, correspondences, supporting_forms,
+                       attested_support)
+             for (correspondences, supporting_forms, attested_support)
              in batch_upstream(
                  daughter_lexicons,
                  read.read_correspondence_file(
@@ -345,7 +347,7 @@ def batch_all_upstream(settings):
                      '------',
                      list(settings.upstream[target]),
                      target),
-                 filter_sets)[0]])
+                 root)[0]])
     return rec(settings.upstream_target, True)
 
 def print_sets(lexicon):
