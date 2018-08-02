@@ -10,6 +10,6 @@
 | HMONGMIEN | Ratliff Hmong-Mien | in prep |
 | IERE | Germanic Lexicon; tabular format; data from Hoch 198?| needs work | |
 | LOLOISH | N, S, and C Loloish data, Lowe 1995 | needs work | |
-| POLYNESIAN | 5 Polynesian languages, Bloomfield 1993| works | |
-| ROMANCE | Romance languages Zhang 2018 | works | |
-| TGTM | main TGTM lexicon | works | |
+| POLYNESIAN | 5 Polynesian languages, Bloomfield 1933| works | |
+| ROMANCE | Romance languages Zhang 2018 | in prep, works | |
+| TGTM | main TGTM lexicon Mazaudon 1994, etc.| works | |
