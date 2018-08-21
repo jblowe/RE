@@ -19,7 +19,7 @@ e.g.
 
 ```bash
 git clone https://github.com/jblowe/RE.git
-cd RE8.2
+cd RE/RE8.2
 python upstream.py DEMO93
 less ../RE7/DATA/DEMO93/DEMO93.default.sets.txt
 ```
