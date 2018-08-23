@@ -117,10 +117,7 @@ def read_table_from_widget(widget):
         table.add_correspondence(
             RE.Correspondence(
                 row[0],
-                ((None, None) if row[1] == '' else
-                 tuple(None if x == '' else
-                       [y.strip() for y in x.split(',')]
-                       for x in row[1].split('_'))),
+                RE.read_context_from_string(row[1]),
                 [x.strip() for x in row[2].split(',')], row[3],
                 dict(zip(names, ([x.strip() for x in token.split(',')]
                                  for token in row[4:])))))
@@ -188,12 +185,14 @@ def make_parameters_widget(settings):
                                  correspondence_filename),
                     language,
                     settings.upstream[language],
-                    language)),
+                    language,
+                    os.path.join(settings.directory_path,
+                                 settings.mel_filename))),
             Gtk.Label(language))
     return notebook
 
 def make_sets_store(sets=None):
-    return Gtk.TreeStore(str, str)
+    return Gtk.TreeStore(str, str, str)
 
 def make_sets_view(model):
     sets_view = Gtk.TreeView.new_with_model(model)
@@ -206,6 +205,9 @@ def make_sets_view(model):
     sets_view.append_column(Gtk.TreeViewColumn('Ids',
                                                Gtk.CellRendererText(),
                                                text=1))
+    sets_view.append_column(Gtk.TreeViewColumn('mel',
+                                               Gtk.CellRendererText(),
+                                               text=2))
     return sets_view
 
 def make_sets_widget(settings):
@@ -226,12 +228,13 @@ def make_sets_widget(settings):
                     parent=parent,
                     row=['*'+form.glyphs if parent is None
                          else str(form),
-                         RE.correspondences_as_ids(form.correspondences)])
+                         RE.correspondences_as_ids(form.correspondences),
+                         str(form.mel)])
                 for supporting_form in form.supporting_forms:
                     store_row(row, supporting_form)
             elif isinstance(form, RE.ModernForm):
                 row = store.append(parent=parent,
-                                   row=[str(form), ''])
+                                   row=[str(form), '', ''])
 
         proto_lexicon = RE.batch_all_upstream(settings)
         Gdk.threads_enter()

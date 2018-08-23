@@ -7,6 +7,7 @@
   <param name="trace" value="N"/>
   <param name="title" value="Test Run, Demo 1993"/>
   <param name="spec" value="Y"/>
+  <param name="mel" value="DEMO93.mel.xml"/>
   <proto_language name="proto" correspondences="DEMO93.C794DEM.corrs.xml"/>
   <attested name="gha" file="DEMO93.gha.data.xml"/>
   <attested name="ris" file="DEMO93.ris.data.xml"/>

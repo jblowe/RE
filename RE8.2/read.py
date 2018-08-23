@@ -2,15 +2,17 @@ import xml.etree.ElementTree as ET
 import csv
 import os
 import RE
+import mel
 
-def read_correspondence_file(filename, project_name, daughter_languages, name):
+def read_correspondence_file(filename, project_name, daughter_languages, name, mel_filename):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
     return RE.Parameters(read_correspondences(tree.iterfind('corr'),
                                               project_name,
                                               daughter_languages),
                          read_syllable_canon(tree.find('parameters')),
-                         name)
+                         name,
+                         read_mel_file(mel_filename))
 
 def read_syllable_canon(parameters):
     sound_classes = {}
@@ -91,8 +93,10 @@ def read_settings_file(filename):
         elif setting.tag == 'attested':
             attested[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'param':
-            pass
+            if setting.attrib['name'] == 'mel':
+                mel_filename = setting.attrib.get('value')
     return RE.ProjectSettings(os.path.dirname(filename),
+                              mel_filename,
                               attested,
                               proto_languages,
                               target,
@@ -127,3 +131,9 @@ def read_tabular_lexicons(tablefile, delimiter='\t'):
                 if form:
                     forms_dict[language].append(ModernForm(language, form, gloss))
         return forms_dict.items()
+
+def read_mel_file(filename):
+    tree = ET.parse(filename)
+    return [mel.Mel([seg.text for seg in child.iterfind('gl')],
+                    child.attrib.get('id'))
+            for child in tree.iterfind('mel')]

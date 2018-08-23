@@ -6,6 +6,7 @@
   <param name="title" value="TGTM, 1994 version"/>
   <param name="spec" value="Y"/>
   <param name="fuzzy" value="TGTM.fuz.xml"/>
+  <param name="mel" value="TGTM.mel.xml"/>
   <proto_language name="proto" correspondences="TGTM.C794DEM.corrs.xml"/>
   <attested name="gha" file="TGTM.gha.data.xml"/>
   <attested name="ris" file="TGTM.ris.data.xml"/>

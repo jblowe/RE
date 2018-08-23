@@ -5,6 +5,7 @@ import os
 import sys
 import serialize
 import collections
+import mel
 
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex, supra_segmentals):
@@ -41,6 +42,23 @@ def context_as_string(context):
             ','.join(context[0] or '') + '_'
             + ','.join(context[1] or ''))
 
+def read_context_from_string(string):
+    return ((None, None) if string == '' else
+            tuple(None if x == '' else
+                  [y.strip() for y in x.split(',')]
+                  for x in string.split('_')))
+
+# build a map from tokens to lists of correspondences containing the
+# token key.
+# also return all possible token lengths
+def partition_correspondences(correspondences, accessor):
+    partitions = collections.defaultdict(list)
+    for c in correspondences:
+        for token in accessor(c):
+            partitions[token].append(c)
+    return partitions, list(set.union(*(set(map(len, accessor(c)))
+                                        for c in correspondences)))
+
 # imperative interface
 class TableOfCorrespondences:
     initial_marker = Correspondence('', (None, None), '', '$', [])
@@ -52,8 +70,28 @@ class TableOfCorrespondences:
     def add_correspondence(self, correspondence):
         self.correspondences.append(correspondence)
 
+    def rule_view(self):
+        # make a rule view of the form
+        # |Rule|Type|*|Outcome|Context|Language(s)
+        partitions, lengths = partition_correspondences(self.correspondences,
+                                                        lambda c: c.proto_form)
+
+        def outcomes(c):
+            outcomes = collections.defaultdict(list)
+            for lang, forms in c.daughter_forms.items():
+                for form in forms:
+                    outcomes[form].append(lang)
+            return outcomes
+
+        return [[c.id, c.syllable_types, c.proto_form,
+                 outcome, c.context, langs]
+                for token, cs in partitions.items()
+                for c in cs
+                for outcome, langs in outcomes(c).items()]
+
 class Parameters:
-    def __init__(self, table, syllable_canon, proto_language_name):
+    def __init__(self, table, syllable_canon, proto_language_name, mels):
+        self.mels = mels
         self.table = table
         self.syllable_canon = syllable_canon
         self.proto_language_name = proto_language_name
@@ -79,13 +117,14 @@ class ModernForm(Form):
 
 class ProtoForm(Form):
     def __init__(self, language, correspondences, supporting_forms,
-                 attested_support):
+                 attested_support, mel):
         super().__init__(language,
                          correspondences_as_proto_form_string(
                              correspondences))
         self.correspondences = correspondences
         self.supporting_forms = supporting_forms
         self.attested_support = attested_support
+        self.mel = mel
 
     def __str__(self):
         return f'{self.language} *{self.glyphs}'
@@ -96,8 +135,9 @@ class Lexicon:
         self.forms = forms
 
 class ProjectSettings:
-    def __init__(self, directory_path, attested, proto_languages,
+    def __init__(self, directory_path, mel_filename, attested, proto_languages,
                  target, upstream, downstream):
+        self.mel_filename = mel_filename
         self.directory_path = directory_path
         self.attested = attested
         self.proto_languages = proto_languages
@@ -126,17 +166,6 @@ def expanded_contexts(rule, i, sound_classes):
         else:
             contexts.add(context)
     return contexts
-
-# build a map from tokens to lists of correspondences containing the
-# token key.
-# also return all possible token lengths
-def partition_correspondences(correspondences, accessor):
-    partitions = collections.defaultdict(list)
-    for c in correspondences:
-        for token in accessor(c):
-            partitions[token].append(c)
-    return partitions, list(set.union(*(set(map(len, accessor(c)))
-                                        for c in correspondences)))
 
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
@@ -254,9 +283,9 @@ def project_back(lexicons, parameters, statistics):
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count} reconstructions')
     return reconstructions, statistics
 
-def create_sets(projections, statistics, root=True):
+# we create cognate sets by comparing meaning.
+def create_sets(projections, statistics, mels, root=True):
     cognate_sets = set()
-
     def attested_forms(support):
         attested = set()
         for x in support:
@@ -266,13 +295,23 @@ def create_sets(projections, statistics, root=True):
                 attested |= x.attested_support
         return attested
 
+    def add_cognate_sets(reconstruction, support):
+        distinct_mels = collections.defaultdict(list)
+        for supporting_form in support:
+            for associated_mel in mel.associated_mels(mels, supporting_form.gloss):
+                distinct_mels[associated_mel].append(supporting_form)
+        for distinct_mel, support in distinct_mels.items():
+            if not root or len({form.language for form in support}) > 1:
+                cognate_sets.add((reconstruction,
+                                  frozenset(support),
+                                  frozenset(attested_forms(support)),
+                                  distinct_mel))
+            else:
+                statistics.singleton_support.add(reconstruction)
+
     for reconstruction, support in projections.items():
+        add_cognate_sets(reconstruction, support)
         # a cognate set requires support from more than 1 language
-        if not root or len({form.language for form in support}) > 1:
-            cognate_sets.add((reconstruction, frozenset(support),
-                              frozenset(attested_forms(support))))
-        else:
-            statistics.singleton_support.add(reconstruction)
     statistics.add_note(
         f'only {len(cognate_sets)} sets supported by multiple languages'
         if root else
@@ -320,6 +359,7 @@ def batch_upstream(lexicons, params, root):
         *filter_subsets(
             *create_sets(
                 *project_back(lexicons, params, Statistics()),
+                params.mels,
                 root),
             root))
 
@@ -337,8 +377,8 @@ def batch_all_upstream(settings):
         return Lexicon(
             target,
             [ProtoForm(target, correspondences, supporting_forms,
-                       attested_support)
-             for (correspondences, supporting_forms, attested_support)
+                       attested_support, mel)
+             for (correspondences, supporting_forms, attested_support, mel)
              in batch_upstream(
                  daughter_lexicons,
                  read.read_correspondence_file(
@@ -346,19 +386,23 @@ def batch_all_upstream(settings):
                                   settings.proto_languages[target]),
                      '------',
                      list(settings.upstream[target]),
-                     target),
+                     target,
+                     os.path.join(settings.directory_path,
+                                  settings.mel_filename)),
                  root)[0]])
     return rec(settings.upstream_target, True)
 
+
+def print_form(form, level):
+    if isinstance(form, ModernForm):
+        print('  ' * level + str(form))
+    elif isinstance(form, ProtoForm):
+        print('  ' * level + str(form) + ' ' +
+              correspondences_as_ids(form.correspondences))
+        for supporting_form in form.supporting_forms:
+            print_form(supporting_form, level + 1)
+
 def print_sets(lexicon):
-    def print_form(form, level):
-        if isinstance(form, ModernForm):
-            print('  ' * level + str(form))
-        elif isinstance(form, ProtoForm):
-            print('  ' * level + str(form) + ' ' +
-                  correspondences_as_ids(form.correspondences))
-            for supporting_form in form.supporting_forms:
-                print_form(supporting_form, level + 1)
     for form in lexicon.forms:
         print_form(form, 0)
 
@@ -366,4 +410,35 @@ def dump_sets(lexicon, filename):
     out = sys.stdout
     with open(filename, 'w') as sys.stdout:
         print_sets(lexicon)
+    sys.stdout = out
+
+def compare_proto_lexicons(lexicon1, lexicon2):
+    table = collections.defaultdict(list)
+    common = set()
+    only_lex2 = set()
+    for form in lexicon1.forms:
+        table[form.glyphs].append(form)
+    for form in lexicon2.forms:
+        if table[form.glyphs] is None:
+            only_lex2.add(only_lex2)
+        else:
+            lex1_forms = table[form.glyphs]
+            for lex1_form in lex1_forms:
+                if lex1_form is form:
+                    common.add(form)
+    print(f'Number of sets in lexicon 1: {len(lexicon1.forms)}')
+    print(f'Number of sets in lexicon 2: {len(lexicon2.forms)}')
+    print(f'Number of sets in common: {len(common)}')
+    print(f'Number of sets only in lexicon 2: {len(only_lex2)}')
+    print(f'Sets in common:')
+    for form in common:
+        print_form(form, 0)
+    print(f'Sets only in lexicon2:')
+    for form in only_lex2:
+        print_form(form, 0)
+
+def analyze_sets(lexicon1, lexicon2, filename):
+    out = sys.stdout
+    with open(filename, 'w') as sys.stdout:
+        compare_proto_lexicons(lexicon1, lexicon2)
     sys.stdout = out
