@@ -1,0 +1,19 @@
+You'll need to install NLTK:
+
+pip3 install nltk
+
+also, you'll need to install the associated WordNet files:
+
+http://www.nltk.org/howto/wordnet.html
+
+python3 wnlookup.py < TGTM.glosses.csv > results.csv
+
+
+output is 3 columns:
+
+* frequency
+* gloss
+* merged list of WN synonyms
+
+http://www.nltk.org/howto/wordnet.html
+
