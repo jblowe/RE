@@ -85,7 +85,7 @@
     <gl>hole</gl>
     <gl>trou</gl>
     <gl>trough</gl>
-    <gl>vallee</gl>
+    <gl>vallée</gl>
     <gl>valley</gl>
   </mel>
   <mel id="m14">
@@ -123,7 +123,7 @@
     <gl>born</gl>
     <gl>carry</gl>
     <gl>deposer</gl>
-    <gl>elever</gl>
+    <gl>élever</gl>
     <gl>give</gl>
     <gl>naitre</gl>
     <gl>put down</gl>
@@ -212,7 +212,7 @@
     <gl>stationary</gl>
   </mel>
   <mel id="m31">
-    <gl>affuter</gl>
+    <gl>affûter</gl>
     <gl>sharp</gl>
     <gl>sharpen</gl>
   </mel>
@@ -240,7 +240,7 @@
     <gl>spindle</gl>
   </mel>
   <mel id="m36">
-    <gl>ail</gl>
+    <gl>aïl</gl>
     <gl>garlic</gl>
   </mel>
   <mel id="m37">
@@ -332,13 +332,13 @@
   <mel id="m48">
     <gl>allumer</gl>
     <gl>blaze</gl>
-    <gl>bruler</gl>
+    <gl>brûler</gl>
     <gl>burn</gl>
     <gl>chauffer</gl>
     <gl>flamber</gl>
     <gl>flare up</gl>
     <gl>griller</gl>
-    <gl>leger</gl>
+    <gl>léger</gl>
     <gl>light</gl>
     <gl>ray</gl>
     <gl>rayon</gl>
@@ -358,7 +358,7 @@
     <gl>aussi</gl>
   </mel>
   <mel id="m51">
-    <gl>ame</gl>
+    <gl>âme</gl>
     <gl>coeur</gl>
     <gl>feeling</gl>
     <gl>heart</gl>
@@ -368,7 +368,7 @@
     <gl>spirit</gl>
   </mel>
   <mel id="m52">
-    <gl>ame</gl>
+    <gl>âme</gl>
     <gl>mind</gl>
     <gl>mite</gl>
     <gl>papillon</gl>
@@ -395,7 +395,7 @@
   </mel>
   <mel id="m56">
     <gl>amont</gl>
-    <gl>interieur</gl>
+    <gl>intérieur</gl>
     <gl>up</gl>
   </mel>
   <mel id="m57">
@@ -407,7 +407,7 @@
     <gl>twenty-two</gl>
   </mel>
   <mel id="m59">
-    <gl>annee</gl>
+    <gl>année</gl>
     <gl>year</gl>
   </mel>
   <mel id="m60">
@@ -469,7 +469,7 @@
     <gl>step on a support</gl>
   </mel>
   <mel id="m68">
-    <gl>apres</gl>
+    <gl>après</gl>
     <gl>back</gl>
     <gl>backside</gl>
     <gl>derriere</gl>
@@ -484,7 +484,7 @@
   <mel id="m70">
     <gl>are</gl>
     <gl>be</gl>
-    <gl>etre</gl>
+    <gl>être</gl>
     <gl>is</gl>
     <gl>remain</gl>
     <gl>rester</gl>
@@ -524,7 +524,7 @@
   </mel>
   <mel id="m75">
     <gl>arrow</gl>
-    <gl>fleche</gl>
+    <gl>flèche</gl>
   </mel>
   <mel id="m76">
     <gl>articulation</gl>
@@ -558,7 +558,7 @@
     <gl>beg</gl>
     <gl>beggar</gl>
     <gl>mendier</gl>
-    <gl>reclamer</gl>
+    <gl>réclamer</gl>
     <gl>request</gl>
   </mel>
   <mel id="m82">
@@ -570,7 +570,7 @@
   <mel id="m83">
     <gl>asperger</gl>
     <gl>jeter</gl>
-    <gl>repandre</gl>
+    <gl>répandre</gl>
     <gl>saupoudrer</gl>
     <gl>spread</gl>
   </mel>
@@ -729,7 +729,7 @@
     <gl>egaliser le sol</gl>
     <gl>plaster</gl>
     <gl>polish</gl>
-    <gl>recurer</gl>
+    <gl>récurer</gl>
     <gl>rincer</gl>
     <gl>rinse</gl>
     <gl>rub</gl>
@@ -786,7 +786,7 @@
   </mel>
   <mel id="m119">
     <gl>bark</gl>
-    <gl>ecorce</gl>
+    <gl>écorce</gl>
     <gl>exterior</gl>
     <gl>husk</gl>
     <gl>out</gl>
@@ -874,7 +874,7 @@
   </mel>
   <mel id="m130">
     <gl>beer</gl>
-    <gl>biere</gl>
+    <gl>bière</gl>
     <gl>liquor</gl>
   </mel>
   <mel id="m131">
@@ -942,7 +942,7 @@
     <gl>chew</gl>
     <gl>chew cud</gl>
     <gl>gnaw</gl>
-    <gl>macher</gl>
+    <gl>mâcher</gl>
     <gl>ruminate</gl>
     <gl>ruminer</gl>
     <gl>sucer</gl>
@@ -989,7 +989,7 @@
     <gl>polissage</gl>
   </mel>
   <mel id="m151">
-    <gl>ble</gl>
+    <gl>blé</gl>
     <gl>flour</gl>
     <gl>rice</gl>
     <gl>wheat</gl>
@@ -997,7 +997,7 @@
   <mel id="m152">
     <gl>blend</gl>
     <gl>knead</gl>
-    <gl>meler</gl>
+    <gl>mêler</gl>
     <gl>mix</gl>
     <gl>petrissant</gl>
   </mel>
@@ -1213,18 +1213,18 @@
   <mel id="m187">
     <gl>broth</gl>
     <gl>cooked vegetable</gl>
-    <gl>legumes</gl>
+    <gl>légumes</gl>
     <gl>side-dish</gl>
     <gl>soup</gl>
     <gl>viande</gl>
-    <gl>legumes</gl>
+    <gl>légumes</gl>
   </mel>
   <mel id="m188">
     <gl>brede</gl>
     <gl>epinards</gl>
     <gl>green vegetable</gl>
-    <gl>legume</gl>
-    <gl>legumes</gl>
+    <gl>légume</gl>
+    <gl>légumes</gl>
     <gl>mustard</gl>
     <gl>spinach</gl>
     <gl>vegetable</gl>
@@ -1236,7 +1236,7 @@
   </mel>
   <mel id="m190">
     <gl>bridge</gl>
-    <gl>echelle</gl>
+    <gl>échelle</gl>
     <gl>ladder</gl>
     <gl>pont</gl>
   </mel>
@@ -1261,7 +1261,7 @@
   </mel>
   <mel id="m195">
     <gl>broad</gl>
-    <gl>epais</gl>
+    <gl>épais</gl>
   </mel>
   <mel id="m196">
     <gl>brood</gl>
@@ -1277,12 +1277,12 @@
     <gl>s. in law</gl>
   </mel>
   <mel id="m198">
-    <gl>epice</gl>
+    <gl>épicé</gl>
     <gl>piquer</gl>
     <gl>spicy</gl>
     <gl>chaud</gl>
     <gl>heat</gl>
-    <gl>bruler</gl>
+    <gl>brûler</gl>
     <gl>burn</gl>
     <gl>hot</gl>
     <gl>scorch</gl>
@@ -1291,7 +1291,7 @@
     <gl>hot</gl>
     <gl>pain</gl>
     <gl>piquer</gl>
-    <gl>epice</gl>
+    <gl>épicé</gl>
     <gl>peck</gl>
   </mel>
   <mel id="m199">
@@ -1367,7 +1367,7 @@
   </mel>
   <mel id="m211">
     <gl>by</gl>
-    <gl>cote</gl>
+    <gl>côte</gl>
     <gl>ergatif</gl>
     <gl>instrumental</gl>
     <gl>locatif</gl>
@@ -1491,7 +1491,7 @@
   <mel id="m230">
     <gl>ce</gl>
     <gl>ceci</gl>
-    <gl>cela</gl>
+    <gl>celà</gl>
     <gl>demonstratif</gl>
     <gl>it</gl>
     <gl>this</gl>
@@ -1535,7 +1535,7 @@
     <gl>in</gl>
     <gl>inside</gl>
     <gl>inside of</gl>
-    <gl>interieur</gl>
+    <gl>intérieur</gl>
     <gl>interior</gl>
     <gl>into</gl>
     <gl>inward</gl>
@@ -1549,7 +1549,7 @@
     <gl>viande</gl>
   </mel>
   <mel id="m239">
-    <gl>chale</gl>
+    <gl>châle</gl>
     <gl>shawl</gl>
   </mel>
   <mel id="m240">
@@ -1564,7 +1564,7 @@
     <gl>change</gl>
     <gl>changer</gl>
     <gl>demenager</gl>
-    <gl>deplacer</gl>
+    <gl>déplacer</gl>
     <gl>remuer</gl>
     <gl>sortir</gl>
   </mel>
@@ -1626,7 +1626,7 @@
     <gl>horse</gl>
   </mel>
   <mel id="m252">
-    <gl>chevre</gl>
+    <gl>chèvre</gl>
     <gl>goat</gl>
   </mel>
   <mel id="m253">
@@ -1701,7 +1701,7 @@
   <mel id="m266">
     <gl>clear jungle</gl>
     <gl>couper</gl>
-    <gl>defricher</gl>
+    <gl>défricher</gl>
   </mel>
   <mel id="m267">
     <gl>cliff</gl>
@@ -1790,7 +1790,7 @@
   </mel>
   <mel id="m279">
     <gl>come</gl>
-    <gl>etre</gl>
+    <gl>être</gl>
     <gl>produire</gl>
     <gl>venir</gl>
   </mel>
@@ -1881,7 +1881,7 @@
   <mel id="m295">
     <gl>copeaux</gl>
     <gl>cut the bark off a tree</gl>
-    <gl>eplucher</gl>
+    <gl>éplucher</gl>
     <gl>peel</gl>
     <gl>peler</gl>
     <gl>piocher</gl>
@@ -1904,7 +1904,7 @@
     <gl>prix</gl>
   </mel>
   <mel id="m300">
-    <gl>cote</gl>
+    <gl>côte</gl>
     <gl>rib</gl>
   </mel>
   <mel id="m301">
@@ -1919,7 +1919,7 @@
     <gl>put to sleep</gl>
   </mel>
   <mel id="m303">
-    <gl>coudee</gl>
+    <gl>coudée</gl>
     <gl>cubit</gl>
     <gl>measure</gl>
   </mel>
@@ -2071,7 +2071,7 @@
   </mel>
   <mel id="m330">
     <gl>daylight</gl>
-    <gl>lumiere</gl>
+    <gl>lumière</gl>
   </mel>
   <mel id="m331">
     <gl>de petites depenses pour une ceremonie</gl>
@@ -2098,11 +2098,11 @@
     <gl>wake up</gl>
   </mel>
   <mel id="m335">
-    <gl>dechirer</gl>
+    <gl>déchirer</gl>
     <gl>eat the belly</gl>
   </mel>
   <mel id="m336">
-    <gl>dechirer</gl>
+    <gl>déchirer</gl>
     <gl>separate</gl>
     <gl>separate kinds</gl>
     <gl>separer</gl>
@@ -2112,7 +2112,7 @@
     <gl>vanner</gl>
   </mel>
   <mel id="m337">
-    <gl>dechirer</gl>
+    <gl>déchirer</gl>
     <gl>tear</gl>
     <gl>torn</gl>
   </mel>
@@ -2129,7 +2129,7 @@
   </mel>
   <mel id="m340">
     <gl>deer</gl>
-    <gl>male</gl>
+    <gl>mâle</gl>
   </mel>
   <mel id="m341">
     <gl>defeated</gl>
@@ -2139,7 +2139,7 @@
   </mel>
   <mel id="m342">
     <gl>defecate</gl>
-    <gl>defequer</gl>
+    <gl>déféquer</gl>
     <gl>echapper</gl>
     <gl>emettre</gl>
     <gl>escape</gl>
@@ -2159,11 +2159,11 @@
     <gl>retard</gl>
   </mel>
   <mel id="m345">
-    <gl>demanger</gl>
+    <gl>démanger</gl>
     <gl>itch</gl>
   </mel>
   <mel id="m346">
-    <gl>demeler</gl>
+    <gl>démêler</gl>
     <gl>untie</gl>
   </mel>
   <mel id="m347">
@@ -2175,11 +2175,11 @@
     <gl>sauter</gl>
   </mel>
   <mel id="m348">
-    <gl>depecer</gl>
+    <gl>dépecer</gl>
     <gl>strip tree branches</gl>
   </mel>
   <mel id="m349">
-    <gl>depenser</gl>
+    <gl>dépenser</gl>
     <gl>spend</gl>
   </mel>
   <mel id="m350">
@@ -2288,7 +2288,7 @@
   </mel>
   <mel id="m371">
     <gl>draw</gl>
-    <gl>ecrire</gl>
+    <gl>écrire</gl>
     <gl>write</gl>
   </mel>
   <mel id="m372">
@@ -2301,8 +2301,8 @@
   <mel id="m373">
     <gl>dream</gl>
     <gl>imagine</gl>
-    <gl>reve</gl>
-    <gl>rever</gl>
+    <gl>rêve</gl>
+    <gl>rêver</gl>
   </mel>
   <mel id="m374">
     <gl>dress</gl>
@@ -2350,7 +2350,7 @@
     <gl>hang up</gl>
     <gl>heat up roti on the fire</gl>
     <gl>make</gl>
-    <gl>secher</gl>
+    <gl>sécher</gl>
     <gl>set to dry</gl>
     <gl>spread</gl>
   </mel>
@@ -2396,7 +2396,7 @@
   </mel>
   <mel id="m390">
     <gl>eat sample</gl>
-    <gl>gouter</gl>
+    <gl>goûter</gl>
     <gl>taste</gl>
   </mel>
   <mel id="m391">
@@ -2410,21 +2410,21 @@
     <gl>pull</gl>
   </mel>
   <mel id="m393">
-    <gl>echanger</gl>
+    <gl>échanger</gl>
     <gl>exchange</gl>
     <gl>remplacer</gl>
     <gl>rendre</gl>
     <gl>replace</gl>
   </mel>
   <mel id="m394">
-    <gl>echo</gl>
+    <gl>écho</gl>
   </mel>
   <mel id="m395">
     <gl>eclore</gl>
     <gl>hatch</gl>
   </mel>
   <mel id="m396">
-    <gl>ecouter</gl>
+    <gl>écouter</gl>
     <gl>hear</gl>
     <gl>listen</gl>
   </mel>
@@ -2489,7 +2489,7 @@
   </mel>
   <mel id="m407">
     <gl>encens</gl>
-    <gl>genevrier</gl>
+    <gl>genévrier</gl>
     <gl>incense</gl>
   </mel>
   <mel id="m408">
@@ -2498,7 +2498,7 @@
   </mel>
   <mel id="m409">
     <gl>enduire</gl>
-    <gl>etaler</gl>
+    <gl>étaler</gl>
     <gl>peindre</gl>
     <gl>rub in</gl>
     <gl>smear</gl>
@@ -2550,17 +2550,17 @@
     <gl>the whole</gl>
   </mel>
   <mel id="m419">
-    <gl>epais</gl>
+    <gl>épais</gl>
     <gl>stiff</gl>
     <gl>thick</gl>
   </mel>
   <mel id="m420">
-    <gl>epaule</gl>
+    <gl>épaule</gl>
     <gl>shoulder</gl>
     <gl>thigh</gl>
   </mel>
   <mel id="m421">
-    <gl>eplucher</gl>
+    <gl>éplucher</gl>
     <gl>moucher</gl>
     <gl>nettoyer</gl>
     <gl>smooth off stick with knife</gl>
@@ -2576,7 +2576,7 @@
   </mel>
   <mel id="m423">
     <gl>esprit</gl>
-    <gl>fantome</gl>
+    <gl>fantôme</gl>
     <gl>ghost</gl>
     <gl>spirit</gl>
   </mel>
@@ -2587,11 +2587,11 @@
     <gl>wipe off</gl>
   </mel>
   <mel id="m425">
-    <gl>eternuer</gl>
+    <gl>éternuer</gl>
     <gl>sneeze</gl>
   </mel>
   <mel id="m426">
-    <gl>etoile</gl>
+    <gl>étoile</gl>
     <gl>star</gl>
   </mel>
   <mel id="m427">
@@ -2615,7 +2615,7 @@
     <gl>winnow</gl>
   </mel>
   <mel id="m431">
-    <gl>excrements</gl>
+    <gl>excréments</gl>
     <gl>feces</gl>
     <gl>latrines</gl>
     <gl>stool</gl>
@@ -2761,7 +2761,7 @@
   </mel>
   <mel id="m458">
     <gl>field</gl>
-    <gl>riziere</gl>
+    <gl>rizière</gl>
   </mel>
   <mel id="m459">
     <gl>fight</gl>
@@ -2869,7 +2869,7 @@
   </mel>
   <mel id="m479">
     <gl>forest</gl>
-    <gl>foret</gl>
+    <gl>forêt</gl>
   </mel>
   <mel id="m480">
     <gl>fou</gl>
@@ -2910,7 +2910,7 @@
   </mel>
   <mel id="m488">
     <gl>frotter</gl>
-    <gl>recurer</gl>
+    <gl>récurer</gl>
     <gl>scrub</gl>
     <gl>whet</gl>
   </mel>
@@ -2953,7 +2953,7 @@
     <gl>wrap</gl>
   </mel>
   <mel id="m495">
-    <gl>gemir</gl>
+    <gl>gémir</gl>
     <gl>groan</gl>
     <gl>growl</gl>
   </mel>
@@ -3059,7 +3059,7 @@
   </mel>
   <mel id="m515">
     <gl>grind</gl>
-    <gl>melanger</gl>
+    <gl>mélanger</gl>
     <gl>moudre</gl>
     <gl>sculpter</gl>
   </mel>
@@ -3077,7 +3077,7 @@
     <gl>guarder</gl>
   </mel>
   <mel id="m519">
-    <gl>guerir</gl>
+    <gl>guérir</gl>
     <gl>live</gl>
     <gl>spared</gl>
     <gl>vivre</gl>
@@ -3094,7 +3094,7 @@
   </mel>
   <mel id="m522">
     <gl>hair</gl>
-    <gl>penis</gl>
+    <gl>pénis</gl>
   </mel>
   <mel id="m523">
     <gl>hand</gl>
@@ -3183,7 +3183,7 @@
   </mel>
   <mel id="m539">
     <gl>host</gl>
-    <gl>maitre</gl>
+    <gl>maître</gl>
     <gl>master</gl>
   </mel>
   <mel id="m540">
@@ -3203,7 +3203,7 @@
   </mel>
   <mel id="m542">
     <gl>husband</gl>
-    <gl>male</gl>
+    <gl>mâle</gl>
     <gl>man</gl>
     <gl>mari</gl>
   </mel>
@@ -3313,7 +3313,7 @@
     <gl>lean</gl>
   </mel>
   <mel id="m562">
-    <gl>lecher</gl>
+    <gl>lécher</gl>
     <gl>lick</gl>
   </mel>
   <mel id="m563">
@@ -3374,7 +3374,7 @@
   </mel>
   <mel id="m575">
     <gl>marrow</gl>
-    <gl>moelle</gl>
+    <gl>moëlle</gl>
   </mel>
   <mel id="m576">
     <gl>matin</gl>
@@ -3386,14 +3386,14 @@
   </mel>
   <mel id="m578">
     <gl>medicine</gl>
-    <gl>remede</gl>
+    <gl>remède</gl>
   </mel>
   <mel id="m579">
     <gl>meet</gl>
     <gl>visit</gl>
   </mel>
   <mel id="m580">
-    <gl>melanger</gl>
+    <gl>mélanger</gl>
     <gl>tread on clothes</gl>
   </mel>
   <mel id="m581">
@@ -3654,11 +3654,11 @@
     <gl>tail</gl>
   </mel>
   <mel id="m634">
-    <gl>qui</gl>
+    <gl>qui?</gl>
     <gl>who</gl>
   </mel>
   <mel id="m635">
-    <gl>quoi</gl>
+    <gl>quoi?</gl>
     <gl>what</gl>
   </mel>
   <mel id="m636">
@@ -3690,7 +3690,7 @@
     <gl>stagger</gl>
   </mel>
   <mel id="m642">
-    <gl>reveiller</gl>
+    <gl>réveiller</gl>
     <gl>wake up</gl>
   </mel>
   <mel id="m643">
@@ -3712,7 +3712,7 @@
     <gl>rotten</gl>
     <gl>spoilt</gl>
     <gl>stale</gl>
-    <gl>surir</gl>
+    <gl>sûrir</gl>
   </mel>
   <mel id="m647">
     <gl>sacrifice</gl>
@@ -3781,7 +3781,7 @@
     <gl>stuck</gl>
   </mel>
   <mel id="m662">
-    <gl>sucre</gl>
+    <gl>sucré</gl>
     <gl>sweet</gl>
   </mel>
   <mel id="m663">
