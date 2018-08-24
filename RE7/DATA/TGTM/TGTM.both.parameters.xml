@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <param name="trace" value="N"/>
+  <param name="spec" value="N"/>
+  <param name="title" value="TGTM, 1994 version"/>
+  <param name="spec" value="Y"/>
+  <param name="fuzzy" value="TGTM.fuz.xml"/>
+  <param name="mel" value="TGTM.both.xml"/>
+  <proto_language name="proto" correspondences="TGTM.C794DEM.corrs.xml"/>
+  <attested name="gha" file="TGTM.gha.data.xml"/>
+  <attested name="ris" file="TGTM.ris.data.xml"/>
+  <attested name="sahu" file="TGTM.sahu.data.xml"/>
+  <attested name="pra" file="TGTM.man.data.xml"/>
+  <attested name="mar" file="TGTM.mar.data.xml"/>
+  <attested name="syang" file="TGTM.syang.data.xml"/>
+  <attested name="tag" file="TGTM.tag.data.xml"/>
+  <attested name="tuk" file="TGTM.tuk.data.xml"/>
+  <param name="fuzzy" value="TGTM.fuz.xml"/>
+  <action name="upstream" target="proto"/>
+  <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="proto"/>
+</params>
