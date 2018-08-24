@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <param name="trace" value="N"/>
+  <param name="spec" value="Y"/>
+  <action name="downstream" from="proto" to="gha"/>
+  <param name="trace" value="N"/>
+  <param name="title" value="Test Run, Demo 1993"/>
+  <param name="spec" value="Y"/>
+  <param name="fuzzy" value="DEMO93.fuz.xml"/>
+  <param name="mel" value="ROMANCE.mel.xml"/>
+  <proto_language name="PIWR" correspondences="ROMANCE.correspondences.xml"/>
+  <attested name="es" file="ROMANCE.es.data.xml"/>
+  <attested name="pt" file="ROMANCE.pt.data.xml"/>
+  <attested name="oldpt" file="ROMANCE.oldpt.data.xml"/>
+  <attested name="it" file="ROMANCE.it.data.xml"/>
+  <attested name="fr" file="ROMANCE.fr.data.xml"/>
+  <attested name="scn" file="ROMANCE.scn.data.xml"/>
+  <action name="upstream" target="PIWR"/>
+  <action name="upstream" from="es,oldpt,pt,it,fr,scn" to="PIWR"/>
+</params>
