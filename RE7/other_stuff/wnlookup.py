@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from nltk.corpus import wordnet as wn
 import sys
 import xml.etree.ElementTree as ET
