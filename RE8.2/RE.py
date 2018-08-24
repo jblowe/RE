@@ -363,15 +363,20 @@ def batch_upstream(lexicons, params, root):
                 root),
             root))
 
-def batch_all_upstream(settings):
+def batch_all_upstream(settings, memo=None):
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
     def rec(target, root):
         if target in settings.attested:
-            return read.read_lexicon(
-                os.path.join(settings.directory_path,
-                             settings.attested[target]))
+            if memo is None:
+                return read.read_lexicon(
+                    os.path.join(settings.directory_path,
+                                 settings.attested[target]))
+            else:
+                return memo.setdefault(target, read.read_lexicon(
+                    os.path.join(settings.directory_path,
+                                 settings.attested[target])))
         daughter_lexicons = [rec(daughter, False) for daughter
                              in settings.upstream[target]]
         return Lexicon(
@@ -392,7 +397,6 @@ def batch_all_upstream(settings):
                      if settings.mel_filename else None),
                  root)[0]])
     return rec(settings.upstream_target, True)
-
 
 def print_form(form, level):
     if isinstance(form, ModernForm):
@@ -420,19 +424,24 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     for form in lexicon1.forms:
         table[form.glyphs].append(form)
     for form in lexicon2.forms:
-        if table[form.glyphs] is None:
-            only_lex2.add(only_lex2)
+        if table[form.glyphs] == []:
+            only_lex2.add(form)
         else:
             lex1_forms = table[form.glyphs]
             for lex1_form in lex1_forms:
-                if lex1_form is form:
-                    common.add(form)
+                if lex1_form.supporting_forms == form.supporting_forms:
+                    common.add(lex1_form)
+    only_lex1 = set(lexicon1.forms).difference(common)
     print(f'Number of sets in lexicon 1: {len(lexicon1.forms)}')
     print(f'Number of sets in lexicon 2: {len(lexicon2.forms)}')
     print(f'Number of sets in common: {len(common)}')
+    print(f'Number of sets only in lexicon 1: {len(only_lex1)}')
     print(f'Number of sets only in lexicon 2: {len(only_lex2)}')
     print(f'Sets in common:')
     for form in common:
+        print_form(form, 0)
+    print(f'Sets only in lexicon1:')
+    for form in only_lex1:
         print_form(form, 0)
     print(f'Sets only in lexicon2:')
     for form in only_lex2:

@@ -1,6 +1,7 @@
 import read
 import RE
 import sys
+import os
 
 base_dir = "../RE7/DATA"
 # lexicons and parameters
@@ -22,7 +23,9 @@ except:
 settings1 = read.read_settings_file(f'{base_dir}/{project}/{parameters1}')
 settings2 = read.read_settings_file(f'{base_dir}/{project}/{parameters2}')
 
-B1 = RE.batch_all_upstream(settings1)
-B2 = RE.batch_all_upstream(settings2)
+# we use a hash table to share the lexicons between the two runs
+memo = dict()
+B1 = RE.batch_all_upstream(settings1, memo=memo)
+B2 = RE.batch_all_upstream(settings2, memo=memo)
 #print_sets(B)
 RE.analyze_sets(B1, B2, f'{base_dir}/{project}/{project}.{run}.analysis.txt')
