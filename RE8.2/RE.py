@@ -388,7 +388,8 @@ def batch_all_upstream(settings):
                      list(settings.upstream[target]),
                      target,
                      os.path.join(settings.directory_path,
-                                  settings.mel_filename)),
+                                  settings.mel_filename)
+                     if settings.mel_filename else None),
                  root)[0]])
     return rec(settings.upstream_target, True)
 

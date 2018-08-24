@@ -187,7 +187,8 @@ def make_parameters_widget(settings):
                     settings.upstream[language],
                     language,
                     os.path.join(settings.directory_path,
-                                 settings.mel_filename))),
+                                 settings.mel_filename)
+                    if settings.mel_filename else None)),
             Gtk.Label(language))
     return notebook
 

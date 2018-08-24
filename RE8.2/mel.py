@@ -20,5 +20,7 @@ default_mel = DefaultMel([], '')
 
 def associated_mels(mels, gloss):
     '''Return all mels which contain gloss.'''
+    if mels is None:
+        return [default_mel]
     associated = [mel for mel in mels if gloss in mel.glosses]
     return associated if associated else [default_mel]

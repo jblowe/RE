@@ -12,7 +12,8 @@ def read_correspondence_file(filename, project_name, daughter_languages, name, m
                                               daughter_languages),
                          read_syllable_canon(tree.find('parameters')),
                          name,
-                         read_mel_file(mel_filename))
+                         read_mel_file(mel_filename)
+                         if mel_filename else None)
 
 def read_syllable_canon(parameters):
     sound_classes = {}
@@ -77,6 +78,7 @@ def read_settings_file(filename):
     downstream = []
     attested = {}
     proto_languages = {}
+    mel_filename = None
     for setting in ET.parse(filename).getroot():
         if setting.tag == 'action':
             if setting.attrib['name'] == 'upstream':
