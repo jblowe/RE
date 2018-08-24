@@ -408,7 +408,7 @@ def print_sets(lexicon):
 
 def dump_sets(lexicon, filename):
     out = sys.stdout
-    with open(filename, 'w') as sys.stdout:
+    with open(filename, 'w', encoding='utf-8') as sys.stdout:
         print_sets(lexicon)
     sys.stdout = out
 
@@ -439,6 +439,6 @@ def compare_proto_lexicons(lexicon1, lexicon2):
 
 def analyze_sets(lexicon1, lexicon2, filename):
     out = sys.stdout
-    with open(filename, 'w') as sys.stdout:
+    with open(filename, 'w', encoding='utf-8') as sys.stdout:
         compare_proto_lexicons(lexicon1, lexicon2)
     sys.stdout = out
