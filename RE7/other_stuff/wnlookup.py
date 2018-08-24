@@ -1,6 +1,10 @@
 from nltk.corpus import wordnet as wn
 import sys
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
+root = ET.Element('semantics')
+counter = 0
 for line in sys.stdin:
     line = line.strip()
     f, gloss = line.split('\t')[:2]
@@ -18,7 +22,15 @@ for line in sys.stdin:
     for lemma in lemmas:
         for l in lemma:
             synonyms[l.name()] = 1
-    print('{0}\t{1}'.format(line, ','.join(synonyms)))
+    for synonym in synonyms:
+        counter += 1
+        mel = ET.SubElement(root, 'mel', id="wn" + str(counter))
+        ET.SubElement(mel, 'gl').text = gloss
+        ET.SubElement(mel, 'gl').text = synonym
+
+sys.stdout.write(minidom.parseString(ET.tostring(root)).toprettyxml(indent='   '))
+        
+    # print('{0}\t{1}'.format(line, ','.join(synonyms)))
     # 10 laugh [Synset('laugh.n.01'), Synset('laugh.n.02'), Synset('joke.n.01'), Synset('laugh.v.01')]
     #>>> [str(lemma.name()) for lemma in wn.synsets(gloss)[2].lemmas()]
     #['joke', 'gag', 'laugh', 'jest', 'jape']
