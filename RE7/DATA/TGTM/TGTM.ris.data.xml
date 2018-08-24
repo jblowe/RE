@@ -105,15 +105,13 @@
     <hw>˥o -</hw>
   </entry>
   <entry id="ris27">
-    <gl>to *steamto *cook
-
-</gl>
+    <gl>to *steam</gl>
+    <gl>to *cook</gl>
     <hw>¹oŋ</hw>
   </entry>
   <entry id="ris28">
-    <gl>to *pull up by roots (vegets)Sprigg
-
-</gl>
+    <gl>to *pull up by roots (vegetables)</gl>
+    <note>Sprigg</note>
     <hw>¹or</hw>
   </entry>
   <entry id="ris29">
@@ -297,9 +295,8 @@
     <hw>³kuː</hw>
   </entry>
   <entry id="ris74">
-    <gl>*rassembler avec la faucille avant de couper, *ramener vers soi avec faucille ou bâtonA86
-
-</gl>
+    <gl>*rassembler avec la faucille avant de couper, *ramener vers soi avec faucille ou bâton</gl>
+    <note>A86</note>
     <hw>³kuː</hw>
   </entry>
   <entry id="ris75">
@@ -327,9 +324,8 @@
     <hw>Xkum</hw>
   </entry>
   <entry id="ris81">
-    <gl>*hochement*pencher
-
-</gl>
+    <gl>*hochement</gl>
+    <gl>*pencher</gl>
     <hw>Xkur</hw>
   </entry>
   <entry id="ris82">
@@ -429,9 +425,8 @@
     <hw>¹koŋ</hw>
   </entry>
   <entry id="ris106">
-    <gl>*lie in wait for, *ambushSprigg
-
-</gl>
+    <gl>*lie in wait for, *ambush</gl>
+    <note>Sprigg</note>
     <hw>⁴koŋ</hw>
   </entry>
   <entry id="ris107">
@@ -471,9 +466,8 @@
     <hw>²kjaŋ</hw>
   </entry>
   <entry id="ris116">
-    <gl>*gifflerVoc vb, fich perf, *battreVoc 74
-
-</gl>
+    <gl>*gifflerVoc vb, fich perf, *battre</gl>
+    <note>Voc 74</note>
     <hw>³kjaŋ</hw>
   </entry>
   <entry id="ris117">
@@ -485,9 +479,8 @@
     <hw>⁴kjat</hw>
   </entry>
   <entry id="ris119">
-    <gl>*decorate (monastery, self) (monks only)Sprigg in fich perf
-
-</gl>
+    <gl>*decorate (monastery, self) (monks only)</gl>
+    <note>Sprigg in fich perf</note>
     <hw>³kjan</hw>
   </entry>
   <entry id="ris120">
@@ -495,9 +488,8 @@
     <hw>³kjap</hw>
   </entry>
   <entry id="ris121">
-    <gl>*smooth and round (*stick)Sprigg in fich perf
-
-</gl>
+    <gl>*smooth and round (*stick)</gl>
+    <note>Sprigg in fich perf</note>
     <hw>³kjam</hw>
   </entry>
   <entry id="ris122">
@@ -505,33 +497,28 @@
     <hw>⁴kjam</hw>
   </entry>
   <entry id="ris123">
-    <gl>*cheminth 169
-
-</gl>
+    <gl>*chemin</gl>
+    <note>th 169</note>
     <hw>⁴kjam</hw>
   </entry>
   <entry id="ris124">
-    <gl>*nagerth 171
-
-</gl>
+    <gl>*nager</gl>
+    <note>th 171</note>
     <hw>¹kjal</hw>
   </entry>
   <entry id="ris125">
-    <gl>*discardfich perf
-
-</gl>
+    <gl>*discard</gl>
+    <note>fich perf</note>
     <hw>⁴kjal</hw>
   </entry>
   <entry id="ris126">
-    <gl>*moutonth 40, 68
-
-</gl>
+    <gl>*mouton</gl>
+    <note>th 40, 68</note>
     <hw>⁴kju</hw>
   </entry>
   <entry id="ris127">
-    <gl>*eauth 40, 115
-
-</gl>
+    <gl>*eau</gl>
+    <note>th 40, 115</note>
     <hw>²kjui</hw>
   </entry>
   <entry id="ris128">
@@ -551,9 +538,8 @@
     <hw>³kjoi</hw>
   </entry>
   <entry id="ris132">
-    <gl>*enroulerVoc 74, (autour du corps, des mains)Voc vb, fich perf
-
-</gl>
+    <gl>*enroulerVoc 74, (autour du corps, des mains)</gl>
+    <note>Voc vb, fich perf</note>
     <hw>⁴kjoi</hw>
   </entry>
   <entry id="ris133">
@@ -561,9 +547,10 @@
     <hw>¹kjoŋ</hw>
   </entry>
   <entry id="ris134">
-    <gl>*entierVoc 74, (? mâle) *entierfich perf
-
-</gl>
+    <gl>*entier</gl>
+    <note>Voc 74, (? mâle)</note>
+    <gl>*entier</gl>
+    <note>fich perf</note>
     <hw>²kjoŋ</hw>
   </entry>
   <entry id="ris135">
@@ -591,9 +578,8 @@
     <hw>˩krai -¹siŋ</hw>
   </entry>
   <entry id="ris141">
-    <gl>*grimperth 167
-
-</gl>
+    <gl>*grimper</gl>
+    <note>th 167</note>
     <hw>¹krat</hw>
   </entry>
   <entry id="ris142">
@@ -5009,9 +4995,8 @@
     <hw>¹hur</hw>
   </entry>
   <entry id="ris1188">
-    <gl>to *hold back tearsto *cry
-
-</gl>
+    <gl>to *hold back tears</gl>
+    <gl>to *cry</gl>
     <hw>¹hem</hw>
   </entry>
   <entry id="ris1189">
@@ -5027,9 +5012,8 @@
     <hw>¹hoŋ</hw>
   </entry>
   <entry id="ris1192">
-    <gl>to *snag clothesto *tear
-
-</gl>
+    <gl>to *snag clothes</gl>
+    <gl>to *tear</gl>
     <hw>¹hot</hw>
   </entry>
   <entry id="ris1193">
