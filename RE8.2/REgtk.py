@@ -17,6 +17,17 @@ class WrappedTextBuffer():
                            string, len(string))
         Gdk.threads_leave()
 
+def make_clickable_button(label, action):
+    button = Gtk.Button(label=label)
+    button.connect('clicked', action)
+    return button
+
+def make_pane(vexpand=False, hexpand=False):
+    pane = Gtk.ScrolledWindow()
+    pane.set_vexpand(vexpand)
+    pane.set_hexpand(hexpand)
+    return pane
+
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
             RE.context_as_string(correspondence.context),
@@ -69,11 +80,11 @@ def make_entry(text):
 
 def make_syllable_canon_widget(syllable_canon):
     grid = Gtk.Grid()
-    grid.attach(Gtk.Label('Syllable regex:'), 0, 0, 1, 1)
+    grid.attach(Gtk.Label(label='Syllable regex:'), 0, 0, 1, 1)
     grid.attach(make_entry(syllable_canon.regex.pattern), 1, 0, 1, 1)
-    grid.attach(Gtk.Label('Sound classes:'), 0, 1, 1, 1)
+    grid.attach(Gtk.Label(label='Sound classes:'), 0, 1, 1, 1)
     grid.attach(make_entry(str(syllable_canon.sound_classes)), 1, 1, 1, 1)
-    grid.attach(Gtk.Label('Supra-segmentals'), 0, 2, 1, 1)
+    grid.attach(Gtk.Label(label='Supra-segmentals'), 0, 2, 1, 1)
     grid.attach(make_entry(','.join(syllable_canon.supra_segmentals)),
                 1, 2, 1, 1)
     return grid
@@ -96,8 +107,7 @@ def make_lexicon_widget(words):
         column = Gtk.TreeViewColumn(column_title, cell, text=i)
         column.set_sort_column_id(i)
         view.append_column(column)
-    pane = Gtk.ScrolledWindow()
-    pane.set_vexpand(True)
+    pane = make_pane(vexpand=True)
     pane.add(view)
     return pane
 
@@ -105,7 +115,7 @@ def make_lexicons_widget(lexicons):
     notebook = Gtk.Notebook()
     for lexicon in lexicons:
         notebook.append_page(make_lexicon_widget(lexicon.forms),
-                             Gtk.Label(lexicon.language))
+                             Gtk.Label(label=lexicon.language))
     return notebook
 
 def read_table_from_widget(widget):
@@ -124,8 +134,7 @@ def read_table_from_widget(widget):
     return table
 
 def make_correspondence_widget(table):
-    pane = Gtk.ScrolledWindow()
-    pane.set_vexpand(True)
+    pane = make_pane(vexpand=True)
     view, store = make_correspondence_view(table)
     pane.add(view)
 
@@ -138,13 +147,9 @@ def make_correspondence_widget(table):
     def delete_button_clicked(widget):
         store.remove(store.get_iter(view.get_cursor()[0]))
 
-    add_button = Gtk.Button(label='Add correspondence')
-    add_button.connect('clicked', add_button_clicked)
-    delete_button = Gtk.Button(label='Delete correspondence')
-    delete_button.connect('clicked', delete_button_clicked)
     buttons_box = Gtk.Box(spacing=0)
-    buttons_box.add(add_button)
-    buttons_box.add(delete_button)
+    buttons_box.add(make_clickable_button('Add correspondence', add_button_clicked))
+    buttons_box.add(make_clickable_button('Delete correspondence', delete_button_clicked))
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
     box.add(pane)
     box.add(buttons_box)
@@ -168,10 +173,7 @@ def make_parameter_widget(settings, parameters):
                 read_syllable_canon_from_widget(canon_widget),
                 parameters.proto_language_name))
 
-    save_button = Gtk.Button(label='Save')
-    save_button.connect('clicked', save_button_clicked)
-    box.add(save_button)
-    
+    box.add(make_clickable_button('Save', save_button_clicked))
     return box
 
 def make_parameters_widget(settings):
@@ -189,7 +191,7 @@ def make_parameters_widget(settings):
                     os.path.join(settings.directory_path,
                                  settings.mel_filename)
                     if settings.mel_filename else None)),
-            Gtk.Label(language))
+            Gtk.Label(label=language))
     return notebook
 
 def make_sets_store(sets=None):
@@ -213,8 +215,7 @@ def make_sets_view(model):
 
 def make_sets_widget(settings):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-    window = Gtk.ScrolledWindow()
-    window.set_vexpand(True)
+    window = make_pane(vexpand=True)
     store = make_sets_store()
     window.add(make_sets_view(store))
     box.add(window)
@@ -244,9 +245,7 @@ def make_sets_widget(settings):
             store_row(None, form)
         Gdk.threads_leave()
 
-    upstream_button = Gtk.Button(label='Batch All Upstream')
-    upstream_button.connect('clicked', batch_upstream_clicked)
-    box.add(upstream_button)
+    box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
     return box
 
 class REWindow(Gtk.Window):
@@ -254,17 +253,11 @@ class REWindow(Gtk.Window):
     def __init__(self, settings):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1024)
-        sets_pane = Gtk.ScrolledWindow()
-        sets_pane.set_vexpand(True)
+        sets_pane = make_pane(vexpand=True)
         self.upstream_store = make_sets_store()
         sets_pane.add(make_sets_view(self.upstream_store))
 
-        upstream_button = Gtk.Button(label='Batch Upstream')
-        upstream_button.connect('clicked', self.batch_upstream_press)
-
-        statistics_pane = Gtk.ScrolledWindow()
-        statistics_pane.set_hexpand(True)
-        statistics_pane.set_vexpand(True)
+        statistics_pane = make_pane(vexpand=True, hexpand=True)
         statistics_view = Gtk.TextView()
         statistics_pane.add(statistics_view)
         self.statistics_buffer = WrappedTextBuffer(statistics_view.get_buffer())
