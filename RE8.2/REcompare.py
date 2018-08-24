@@ -5,8 +5,8 @@ import os
 
 base_dir = "../RE7/DATA"
 # lexicons and parameters
-if len(sys.argv) != 4:
-    print('need project and 2 parameter sets to compare results of')
+if len(sys.argv) < 4:
+    print('need at least a project and 2 parameter sets to compare results of')
     sys.exit(1)
 try:
     project = sys.argv[1]
