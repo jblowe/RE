@@ -1,0 +1,22 @@
+* TODO Add and repair data sets
+** Already XMLized sets
+*** TODO Germanic needs work in repairing the data and lexicon
+** needs XML
+*** TODO LOLOISH set
+*** TODO HMONGMIEN
+
+* TODO Phonological representation issues
+** Think about syllable canons
+** TODO "Long distance" phonology
+*** Handling suprasegmentals
+Something tier-based? Autosegmental?
+
+* TODO Chronology
+Tree representation? Nested table of correspondences? Rules?
+
+I think rules can express more general wave like behavior rather than
+a strict tree based interpretation.
+* TODO Semantic representation and use
+** MELs
+** Wordnet
+** Clics
