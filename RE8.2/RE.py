@@ -431,9 +431,13 @@ def compare_proto_lexicons(lexicon1, lexicon2):
             only_lex2.add(form)
         else:
             lex1_forms = table[form.glyphs]
+            form_matched = False
             for lex1_form in lex1_forms:
                 if lex1_form.supporting_forms == form.supporting_forms:
                     common.add(lex1_form)
+                    form_matched = True
+            if not form_matched:
+                only_lex2.add(form)
     only_lex1 = set(lexicon1.forms).difference(common)
     print(f'Number of sets in lexicon 1: {len(lexicon1.forms)}')
     print(f'Number of sets in lexicon 2: {len(lexicon2.forms)}')
