@@ -201,10 +201,6 @@
     <gl>narrow</gl>
     <gl>straight/narrow</gl>
   </mel>
-  <mel id="rom-wn69">
-    <gl>narrow</gl>
-    <gl>three</gl>
-  </mel>
   <mel id="rom-wn70">
     <gl>near</gl>
   </mel>
@@ -277,11 +273,6 @@
   </mel>
   <mel id="rom-wn94">
     <gl>smoke</gl>
-  </mel>
-  <mel id="rom-wn95">
-    <gl>smooth</gl>
-    <gl>full</gl>
-    <gl>flat</gl>
   </mel>
   <mel id="rom-wn96">
     <gl>snake</gl>
