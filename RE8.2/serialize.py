@@ -29,3 +29,20 @@ def serialize_correspondence_file(filename, parameters):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
+
+def serialize_lexicons(lexicons, dirname):
+    for lexicon in lexicons:
+        serialize_lexicon(
+            lexicon,
+            os.path.join(dirname,
+                         f'{lexicon.language}.DATA.xml'))
+
+def serialize_lexicon(lexicon, filename):
+    root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
+    for (number, form) in enumerate(lexicon.forms):
+        entry = ET.SubElement(root, 'entry', attrib={'id': str(number)})
+        ET.SubElement(entry, 'gl').text = form.gloss
+        ET.SubElement(entry, 'hw').text = form.glyphs
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(minidom.parseString(ET.tostring(root))
+                .toprettyxml(indent='   '))

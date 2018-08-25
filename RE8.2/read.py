@@ -66,8 +66,8 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
         # element of redundancy here, but we can't assume order
         names = next_skipping_comment(reader)[5:]
         for row in reader: 
-            table.add_correspondence(Correspondence(
-                row[0], row[4], row[2].split(','), row[3],
+            table.add_correspondence(RE.Correspondence(
+                row[0], (None, None) if row[4] == '' else row[4], row[2].split(','), row[3],
                 dict(zip(names, (x.split(',') for x in row[5:])))))
     return table
 
@@ -131,8 +131,8 @@ def read_tabular_lexicons(tablefile, delimiter='\t'):
             for language, form in zip(names, row[1:]):
                 form = form.strip()
                 if form:
-                    forms_dict[language].append(ModernForm(language, form, gloss))
-        return forms_dict.items()
+                    forms_dict[language].append(RE.ModernForm(language, form, gloss))
+        return [RE.Lexicon(language, forms) for language, forms in forms_dict.items()]
 
 def read_mel_file(filename):
     tree = ET.parse(filename)
