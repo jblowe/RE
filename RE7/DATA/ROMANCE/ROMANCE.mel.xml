@@ -130,8 +130,6 @@
   <mel id="rom-wn43">
     <gl>hair</gl>
     <gl>hair (singular)</gl>
-    <gl>hair</gl>
-    <gl>hair (singular)</gl>
   </mel>
   <mel id="rom-wn44">
     <gl>hand</gl>
@@ -168,14 +166,6 @@
   </mel>
   <mel id="rom-wn55">
     <gl>leaf</gl>
-  </mel>
-  <mel id="rom-wn56">
-    <gl>leaf</gl>
-    <gl>bone</gl>
-  </mel>
-  <mel id="rom-wn57">
-    <gl>leaf</gl>
-    <gl>eye</gl>
   </mel>
   <mel id="rom-wn58">
     <gl>leg</gl>
@@ -269,11 +259,6 @@
   </mel>
   <mel id="rom-wn87">
     <gl>sand</gl>
-  </mel>
-  <mel id="rom-wn88">
-    <gl>sea</gl>
-    <gl>mother</gl>
-    <gl>mother, sea</gl>
   </mel>
   <mel id="rom-wn89">
     <gl>seven</gl>
@@ -512,21 +497,10 @@
   <mel id="rom-wn162">
     <gl>white</gl>
   </mel>
-  <mel id="rom-wn163">
-    <gl>who</gl>
-    <gl>here</gl>
-  </mel>
-  <mel id="rom-wn164">
-    <gl>who</gl>
-    <gl>when</gl>
-  </mel>
   <mel id="rom-wn165">
     <gl>wide/thick</gl>
     <gl>wide</gl>
     <gl>long</gl>
-  </mel>
-  <mel id="rom-wn166">
-    <gl>wide</gl>
   </mel>
   <mel id="rom-wn167">
     <gl>wife</gl>
@@ -540,10 +514,6 @@
   </mel>
   <mel id="rom-wn170">
     <gl>with</gl>
-  </mel>
-  <mel id="rom-wn171">
-    <gl>woman, wife</gl>
-    <gl>wife</gl>
   </mel>
   <mel id="rom-wn172">
     <gl>worm</gl>
