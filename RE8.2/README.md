@@ -36,3 +36,9 @@ Modules:
 **Usage**
 * Notation for contexts
 When specifying contexts, the # sign defines the end of a word, while $ specifies the beginning of a word. None means everything matches.
+
+**Using the graphical interface**
+You must have PyGObject and GTK installed.
+
+To work on the table of correspondences, save before clicking on batch
+upstream to update the results.
