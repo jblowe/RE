@@ -366,20 +366,15 @@ def batch_upstream(lexicons, params, root):
                 root),
             root))
 
-def batch_all_upstream(settings, memo=None):
+def batch_all_upstream(settings, attested_lexicons=None):
+    if attested_lexicons is None:
+        attested_lexicons = read.read_attested_lexicons(settings)
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
     def rec(target, root):
         if target in settings.attested:
-            if memo is None:
-                return read.read_lexicon(
-                    os.path.join(settings.directory_path,
-                                 settings.attested[target]))
-            else:
-                return memo.setdefault(target, read.read_lexicon(
-                    os.path.join(settings.directory_path,
-                                 settings.attested[target])))
+            return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False) for daughter
                              in settings.upstream[target]]
         return Lexicon(

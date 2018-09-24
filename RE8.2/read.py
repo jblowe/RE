@@ -114,11 +114,10 @@ def read_lexicon(xmlfile):
              for entry in tree.iterfind('entry')]
     return RE.Lexicon(language, forms)
 
-def read_lexicons(languages, base_dir, project):
-    for language in languages:
-        print('Reading lexicon: ', f'{base_dir}/{project}/{project}.{language}.data.xml')
-        yield (language,
-               list(read_lexicon(f'{base_dir}/{project}/{project}.{language}.data.xml')))
+def read_attested_lexicons(settings):
+    return {language: read_lexicon(os.path.join(settings.directory_path,
+                                                settings.attested[language]))
+            for language in settings.attested}
 
 def read_tabular_lexicons(tablefile, delimiter='\t'):
     with open(tablefile, 'r') as csvfile:
