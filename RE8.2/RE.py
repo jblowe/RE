@@ -366,17 +366,15 @@ def batch_upstream(lexicons, params, root):
                 root),
             root))
 
-def batch_all_upstream(settings, attested_lexicons=None):
-    if attested_lexicons is None:
-        attested_lexicons = read.read_attested_lexicons(settings)
+def upstream_tree(target, tree, param_tree, attested_lexicons):
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
     def rec(target, root):
-        if target in settings.attested:
+        if target in attested_lexicons:
             return attested_lexicons[target]
-        daughter_lexicons = [rec(daughter, False) for daughter
-                             in settings.upstream[target]]
+        daughter_lexicons = [rec(daughter, False)
+                             for daughter in tree[target]]
         return Lexicon(
             target,
             [ProtoForm(target, correspondences, supporting_forms,
@@ -384,17 +382,38 @@ def batch_all_upstream(settings, attested_lexicons=None):
              for (correspondences, supporting_forms, attested_support, mel)
              in batch_upstream(
                  daughter_lexicons,
-                 read.read_correspondence_file(
-                     os.path.join(settings.directory_path,
-                                  settings.proto_languages[target]),
-                     '------',
-                     list(settings.upstream[target]),
-                     target,
-                     os.path.join(settings.directory_path,
-                                  settings.mel_filename)
-                     if settings.mel_filename else None),
+                 param_tree[target],
                  root)[0]])
-    return rec(settings.upstream_target, True)
+    return rec(target, True)
+
+def all_parameters(settings):
+    # Return a mapping from protolanguage to its associated parameter object
+    mapping = {}
+    def rec(target):
+        if target in settings.attested:
+            return
+        mapping[target] = \
+            read.read_correspondence_file(
+                os.path.join(settings.directory_path,
+                             settings.proto_languages[target]),
+                '------',
+                list(settings.upstream[target]),
+                target,
+                os.path.join(settings.directory_path,
+                             settings.mel_filename)
+                if settings.mel_filename else None)
+        for daughter in settings.upstream[target]:
+            rec(daughter)
+    rec(settings.upstream_target)
+    return mapping
+
+def batch_all_upstream(settings, attested_lexicons=None):
+    if attested_lexicons is None:
+        attested_lexicons = read.read_attested_lexicons(settings)
+    return upstream_tree(settings.upstream_target,
+                         settings.upstream,
+                         all_parameters(settings),
+                         attested_lexicons)
 
 def print_form(form, level):
     if isinstance(form, ModernForm):
