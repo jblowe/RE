@@ -288,27 +288,6 @@ class REWindow(Gtk.Window):
         self.add(box)
         left_pane.add2(box)
 
-    def batch_upstream_press(self, widget):
-        threading.Thread(target=lambda: self.batch_upstream()).start()
-
-    def batch_upstream(self):
-        params = RE.Parameters(read_view_into_table(
-            self.correspondence_view),
-                               read_syllable_canon_from_widget(
-                                   self.syllable_canon_widget))
-        sets, statistics = RE.batch_upstream(lexicons, params)
-        Gdk.threads_enter()
-        self.upstream_store.clear()
-        for (cs, supporting_forms) in sets:
-            proto = RE.correspondences_as_proto_form_string(cs)
-            ids = RE.correspondences_as_ids(cs)
-            parent = self.upstream_store.append(parent=None,
-                                                row=['*' + proto, ids])
-            for supporting_form in supporting_forms:
-                self.upstream_store.append(parent=parent,
-                                           row=[str(supporting_form), ''])
-        Gdk.threads_leave()
-
 def run(settings):
     out = sys.stdout
     win = REWindow(settings)
