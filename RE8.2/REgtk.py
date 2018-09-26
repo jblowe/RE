@@ -155,6 +155,12 @@ def make_correspondence_widget(table):
     box.add(buttons_box)
     return box
 
+def read_parameters_from_widgets(table_widget, canon_widget, proto_language_name):
+    return RE.Parameters(
+        read_table_from_widget(table_widget).
+        read_syllable_canon_from_widget(canon_widget),
+        name)
+
 def make_parameter_widget(settings, parameters):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     table_widget = make_correspondence_widget(parameters.table)
@@ -163,14 +169,13 @@ def make_parameter_widget(settings, parameters):
     box.add(table_widget)
     
     def save_button_clicked(widget):
-        table = read_table_from_widget(table_widget)
         serialize.serialize_correspondence_file(
             os.path.join(
                 settings.directory_path,
                 settings.proto_languages[parameters.proto_language_name]),
-            RE.Parameters(
-                table,
-                read_syllable_canon_from_widget(canon_widget),
+            read_parameters_from_widgets(
+                table_widget,
+                canon_widget,
                 parameters.proto_language_name))
 
     box.add(make_clickable_button('Save', save_button_clicked))
@@ -248,14 +253,17 @@ def make_sets_widget(settings):
     box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
     return box
 
+def make_pane_container(orientation):
+    container = Gtk.Paned()
+    container.set_orientation(orientation)
+    return container
+
 class REWindow(Gtk.Window):
 
     def __init__(self, settings):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1024)
-        sets_pane = make_pane(vexpand=True)
-        self.upstream_store = make_sets_store()
-        sets_pane.add(make_sets_view(self.upstream_store))
+        attested_lexicons = read.read_attested_lexicons(settings)
 
         statistics_pane = make_pane(vexpand=True, hexpand=True)
         statistics_view = Gtk.TextView()
@@ -263,30 +271,17 @@ class REWindow(Gtk.Window):
         self.statistics_buffer = WrappedTextBuffer(statistics_view.get_buffer())
 
         # layout
-        self.pane_layout = Gtk.Paned()
-        self.pane_layout.set_orientation(Gtk.Orientation.HORIZONTAL)
-        self.add(self.pane_layout)
-        left_pane = Gtk.Paned()
-        left_pane.set_orientation(Gtk.Orientation.VERTICAL)
-        top_left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        top_left_box.add(make_lexicons_widget(
-            [read.read_lexicon(
-                os.path.join(settings.directory_path,
-                             settings.attested[language]))
-             for language in settings.attested.keys()]))
-        left_pane.add(top_left_box)
-        self.pane_layout.add1(left_pane)
-        right_pane = Gtk.Paned()
-        right_pane.set_orientation(Gtk.Orientation.VERTICAL)
-        self.pane_layout.add2(right_pane)
-        # right_pane.add1(sets_pane)
+        pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
+        self.add(pane_layout)
+        left_pane = make_pane_container(Gtk.Orientation.VERTICAL)
+        left_pane.add(make_lexicons_widget(attested_lexicons.values()))
+        pane_layout.add1(left_pane)
+        right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
+        pane_layout.add2(right_pane)
         right_pane.add1(make_sets_widget(settings))
         right_pane.add2(statistics_pane)
 
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-        box.add(make_parameters_widget(settings))
-        self.add(box)
-        left_pane.add2(box)
+        left_pane.add2(make_parameters_widget(settings))
 
 def run(settings):
     out = sys.stdout
