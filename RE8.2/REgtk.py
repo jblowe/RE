@@ -264,11 +264,11 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
                                          settings.upstream,
                                          read_parameter_tree_from_widget(parameter_tree_widget),
                                          attested_lexicons)
-        Gdk.threads_enter()
-        store.clear()
-        for form in proto_lexicon.forms:
-            store_row(None, form)
-        Gdk.threads_leave()
+        def update_model():
+            store.clear()
+            for form in proto_lexicon.forms:
+                store_row(None, form)
+        GLib.idle_add(update_model)
 
     box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
     return box
