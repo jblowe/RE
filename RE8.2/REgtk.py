@@ -80,21 +80,23 @@ def make_entry(text):
 
 def make_syllable_canon_widget(syllable_canon):
     grid = Gtk.Grid()
+    grid.regex_entry = make_entry(syllable_canon.regex.pattern)
+    grid.sound_class_entry = make_entry(str(syllable_canon.sound_classes))
+    grid.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
     grid.attach(Gtk.Label(label='Syllable regex:'), 0, 0, 1, 1)
-    grid.attach(make_entry(syllable_canon.regex.pattern), 1, 0, 1, 1)
+    grid.attach(grid.regex_entry, 1, 0, 1, 1)
     grid.attach(Gtk.Label(label='Sound classes:'), 0, 1, 1, 1)
-    grid.attach(make_entry(str(syllable_canon.sound_classes)), 1, 1, 1, 1)
+    grid.attach(grid.sound_class_entry, 1, 1, 1, 1)
     grid.attach(Gtk.Label(label='Supra-segmentals'), 0, 2, 1, 1)
-    grid.attach(make_entry(','.join(syllable_canon.supra_segmentals)),
+    grid.attach(grid.supra_segmental_entry,
                 1, 2, 1, 1)
     return grid
 
 def read_syllable_canon_from_widget(widget):
-    children = widget.get_children()
     return RE.SyllableCanon(
-        eval(children[2].get_text()),
-        children[4].get_text(),
-        [x.strip() for x in children[0].get_text().split(',')])
+        eval(widget.sound_class_entry.get_text()),
+        widget.regex_entry.get_text(),
+        [x.strip() for x in widget.supra_segmental_entry.get_text().split(',')])
 
 def make_lexicon_widget(words):
     store = Gtk.ListStore(str, str)
@@ -119,7 +121,7 @@ def make_lexicons_widget(lexicons):
     return notebook
 
 def read_table_from_widget(widget):
-    view = widget.get_children()[0].get_children()[0]
+    view = widget.view
     model = view.get_model()
     names = [col.get_title() for col in view.get_columns()][4:]
     table = RE.TableOfCorrespondences('', names)
@@ -151,6 +153,7 @@ def make_correspondence_widget(table):
     buttons_box.add(make_clickable_button('Add correspondence', add_button_clicked))
     buttons_box.add(make_clickable_button('Delete correspondence', delete_button_clicked))
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+    box.view = view
     box.add(pane)
     box.add(buttons_box)
     return box
@@ -164,14 +167,12 @@ def read_parameters_from_widgets(table_widget, canon_widget, name, mels):
 
 def make_parameter_widget(settings, parameters):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-    table_widget = make_correspondence_widget(parameters.table)
-    canon_widget = make_syllable_canon_widget(parameters.syllable_canon)
-    box.table_widget = table_widget
-    box.canon_widget = canon_widget
+    box.table_widget = make_correspondence_widget(parameters.table)
+    box.canon_widget = make_syllable_canon_widget(parameters.syllable_canon)
     box.proto_language_name = parameters.proto_language_name
     box.mels = parameters.mels
-    box.add(canon_widget)
-    box.add(table_widget)
+    box.add(box.canon_widget)
+    box.add(box.table_widget)
     
     def save_button_clicked(widget):
         serialize.serialize_correspondence_file(
@@ -179,8 +180,8 @@ def make_parameter_widget(settings, parameters):
                 settings.directory_path,
                 settings.proto_languages[parameters.proto_language_name]),
             read_parameters_from_widgets(
-                table_widget,
-                canon_widget,
+                box.table_widget,
+                box.canon_widget,
                 parameters.proto_language_name,
                 parameters.mels))
 
