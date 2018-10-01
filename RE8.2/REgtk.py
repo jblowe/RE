@@ -16,6 +16,8 @@ class WrappedTextBuffer():
         self.buffer.insert(self.buffer.get_end_iter(),
                            string, len(string))
         Gdk.threads_leave()
+    def flush(self):
+        pass
 
 def make_clickable_button(label, action):
     button = Gtk.Button(label=label)
