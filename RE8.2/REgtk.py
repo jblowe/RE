@@ -155,16 +155,21 @@ def make_correspondence_widget(table):
     box.add(buttons_box)
     return box
 
-def read_parameters_from_widgets(table_widget, canon_widget, proto_language_name):
+def read_parameters_from_widgets(table_widget, canon_widget, name, mels):
     return RE.Parameters(
-        read_table_from_widget(table_widget).
+        read_table_from_widget(table_widget),
         read_syllable_canon_from_widget(canon_widget),
-        name)
+        name,
+        mels)
 
 def make_parameter_widget(settings, parameters):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     table_widget = make_correspondence_widget(parameters.table)
     canon_widget = make_syllable_canon_widget(parameters.syllable_canon)
+    box.table_widget = table_widget
+    box.canon_widget = canon_widget
+    box.proto_language_name = parameters.proto_language_name
+    box.mels = parameters.mels
     box.add(canon_widget)
     box.add(table_widget)
     
@@ -176,10 +181,19 @@ def make_parameter_widget(settings, parameters):
             read_parameters_from_widgets(
                 table_widget,
                 canon_widget,
-                parameters.proto_language_name))
+                parameters.proto_language_name,
+                parameters.mels))
 
     box.add(make_clickable_button('Save', save_button_clicked))
     return box
+
+def read_parameter_tree_from_widget(notebook_widget):
+    return {page.proto_language_name:
+            read_parameters_from_widgets(page.table_widget,
+                                         page.canon_widget,
+                                         page.proto_language_name,
+                                         page.mels)
+            for page in notebook_widget}
 
 def make_parameters_widget(settings):
     notebook = Gtk.Notebook()
@@ -218,7 +232,7 @@ def make_sets_view(model):
                                                text=2))
     return sets_view
 
-def make_sets_widget(settings):
+def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     window = make_pane(vexpand=True)
     store = make_sets_store()
@@ -245,7 +259,10 @@ def make_sets_widget(settings):
                 row = store.append(parent=parent,
                                    row=[str(form), '', ''])
 
-        proto_lexicon = RE.batch_all_upstream(settings)
+        proto_lexicon = RE.upstream_tree(settings.upstream_target,
+                                         settings.upstream,
+                                         read_parameter_tree_from_widget(parameter_tree_widget),
+                                         attested_lexicons)
         Gdk.threads_enter()
         store.clear()
         for form in proto_lexicon.forms:
@@ -280,10 +297,11 @@ class REWindow(Gtk.Window):
         pane_layout.add1(left_pane)
         right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         pane_layout.add2(right_pane)
-        right_pane.add1(make_sets_widget(settings))
+        parameters_widget = make_parameters_widget(settings)
+        right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget))
         right_pane.add2(statistics_pane)
 
-        left_pane.add2(make_parameters_widget(settings))
+        left_pane.add2(parameters_widget)
 
 def run(settings):
     out = sys.stdout
@@ -291,7 +309,6 @@ def run(settings):
     sys.stdout = win.statistics_buffer
     win.connect('delete_event', Gtk.main_quit)
     win.show_all()
-    GObject.threads_init()
     Gdk.threads_init()
     Gtk.main()
     sys.stdout = out
