@@ -11,12 +11,12 @@
   <attested name="gha" file="TGTM.gha.data.xml"/>
   <attested name="ris" file="TGTM.ris.data.xml"/>
   <attested name="sahu" file="TGTM.sahu.data.xml"/>
-  <attested name="pra" file="TGTM.man.data.xml"/>
+  <attested name="man" file="TGTM.man.data.xml"/>
   <attested name="mar" file="TGTM.mar.data.xml"/>
   <attested name="syang" file="TGTM.syang.data.xml"/>
   <attested name="tag" file="TGTM.tag.data.xml"/>
   <attested name="tuk" file="TGTM.tuk.data.xml"/>
   <param name="fuzzy" value="TGTM.fuz.xml"/>
   <action name="upstream" target="proto"/>
-  <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="proto"/>
+  <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="proto"/>
 </params>
