@@ -226,7 +226,9 @@ def make_sets_widget(settings):
     box.add(window)
 
     def batch_upstream_clicked(widget):
-        threading.Thread(target=lambda: batch_upstream()).start()
+        thread = threading.Thread(target=batch_upstream)
+        thread.daemon = True
+        thread.start()
 
     def batch_upstream():
         def store_row(parent, form):
