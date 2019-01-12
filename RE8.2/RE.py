@@ -277,6 +277,7 @@ def project_back(lexicons, parameters, statistics):
             else:
                 statistics.failed_parses.add(form)
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count} reconstructions')
+    statistics.keys = reconstructions
     return reconstructions, statistics
 
 # we create cognate sets by comparing meaning.
@@ -429,6 +430,15 @@ def dump_sets(lexicon, filename):
     out = sys.stdout
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
         print_sets(lexicon)
+    sys.stdout = out
+
+def dump_keys(lexicon, filename):
+    out = sys.stdout
+    with open(filename, 'w', encoding='utf-8') as sys.stdout:
+        for reconstruction, support in lexicon.statistics.keys.items():
+            print(f'*{correspondences_as_proto_form_string(reconstruction)}')
+            for support1 in support:
+                print(f'  {str(support1)}')
     sys.stdout = out
 
 def compare_proto_lexicons(lexicon1, lexicon2):
