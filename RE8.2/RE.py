@@ -27,9 +27,10 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
 
 class Lexicon:
-    def __init__(self, language, forms):
+    def __init__(self, language, forms, statistics=None):
         self.language = language
         self.forms = forms
+        self.statistics = statistics
 
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
@@ -128,11 +129,6 @@ class ProtoForm(Form):
 
     def __str__(self):
         return f'{self.language} *{self.glyphs}'
-
-class Lexicon:
-    def __init__(self, language, forms):
-        self.language = language
-        self.forms = forms
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
@@ -375,15 +371,16 @@ def upstream_tree(target, tree, param_tree, attested_lexicons):
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
                              for daughter in tree[target]]
+        forms, statistics = batch_upstream(daughter_lexicons,
+                                           param_tree[target],
+                                           root)
         return Lexicon(
             target,
             [ProtoForm(target, correspondences, supporting_forms,
                        attested_support, mel)
              for (correspondences, supporting_forms, attested_support, mel)
-             in batch_upstream(
-                 daughter_lexicons,
-                 param_tree[target],
-                 root)[0]])
+             in forms],
+            statistics)
     return rec(target, True)
 
 def all_parameters(settings):
