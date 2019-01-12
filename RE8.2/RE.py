@@ -471,10 +471,11 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     print(f'Number of sets in common: {ncommon}')
     print(f'Number of sets only in lexicon 1: {len(only_lex1)}')
     print(f'Number of sets only in lexicon 2: {len(only_lex2)}')
-    print(f'Assuming set 1 is gold:')
+    print('Assuming set 1 is gold:')
     print(f'  Precision: {precision}')
     print(f'  Recall: {recall}')
     print(f'  F-score: {fscore}')
+    print('Sets in common:')
     for form in common:
         print_form(form, 0)
     print(f'Sets only in lexicon1:')
