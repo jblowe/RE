@@ -22,4 +22,5 @@ settings = read.read_settings_file(f'{base_dir}/{project}/{project}.{settings_ty
 
 B = RE.batch_all_upstream(settings)
 #print_sets(B)
+RE.dump_keys(B, f'{base_dir}/{project}/{project}.{run}.keys.txt')
 RE.dump_sets(B, f'{base_dir}/{project}/{project}.{run}.sets.txt')

@@ -110,7 +110,11 @@ def read_lexicon(xmlfile):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
     forms = [RE.ModernForm(language, entry.find('hw').text,
-                           entry.find('gl').text)
+                           # fallback to provided gloss if there is no
+                           # 'normalized' gloss
+                           entry.find('ngl').text
+                           if entry.find('ngl')
+                           else entry.find('gl').text)
              for entry in tree.iterfind('entry')]
     return RE.Lexicon(language, forms)
 
