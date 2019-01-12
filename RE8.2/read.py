@@ -109,12 +109,13 @@ def read_settings_file(filename):
 def read_lexicon(xmlfile):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
-    forms = [RE.ModernForm(language, entry.find('hw').text,
+    forms = [RE.ModernForm(language,
+                           get_element(language, entry, 'hw'),
                            # fallback to provided gloss if there is no
                            # 'normalized' gloss
-                           entry.find('ngl').text
+                           get_element(language, entry, 'ngl')
                            if entry.find('ngl')
-                           else entry.find('gl').text)
+                           else get_element(language, entry, 'gl'))
              for entry in tree.iterfind('entry')]
     return RE.Lexicon(language, forms)
 
@@ -142,3 +143,13 @@ def read_mel_file(filename):
     return [mel.Mel([seg.text for seg in child.iterfind('gl')],
                     child.attrib.get('id'))
             for child in tree.iterfind('mel')]
+
+def get_element(language, entry, field):
+    # return element.text if element else ''
+    element = entry.find(field)
+    if element is None:
+        id = entry.attrib['id']
+        print(f'Missing {field} field: {language}, id: {id}')
+        return ''
+    else:
+        return element.text
