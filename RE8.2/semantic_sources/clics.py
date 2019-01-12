@@ -63,7 +63,7 @@ processed = process_glosses()
 # TODO make this output the original gloss not the processed one.
 output_missing(processed)
 # compute nodes restricted to our glosses.
-syn_sets = calc(process_glosses())
+syn_sets = calc(processed)
 
 counter = 0
 for (gloss, synonyms) in syn_sets.items():
