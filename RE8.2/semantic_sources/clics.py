@@ -39,6 +39,12 @@ def calc(glosses):
             result[nodenames[nodeA]].append(nodenames[nodeB])
     return result
 
+def output_missing(glosses):
+    with open('clics.not_found', 'w') as f:
+        for gloss in glosses:
+            if gloss not in nameids:
+                f.write('{} \n'.format(gloss).lower())
+
 def process_glosses():
     glosses = set()
     for line in sys.stdin:
@@ -52,6 +58,10 @@ def process_glosses():
         glosses.add(gloss.upper())
     return glosses
 
+processed = process_glosses()
+
+# TODO make this output the original gloss not the processed one.
+output_missing(processed)
 # compute nodes restricted to our glosses.
 syn_sets = calc(process_glosses())
 

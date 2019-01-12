@@ -30,3 +30,6 @@ Now calculate the colexification networks: (takes a while)
 
 Finally, to produce the mel, do
 `python3 clics.py X < TGTM.glosses.csv > output.mel`
+
+# Both
+Both scripts should output a file not_found, which contains glosses that were not present in the semantic source.
