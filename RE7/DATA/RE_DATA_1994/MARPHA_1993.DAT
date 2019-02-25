@@ -1,0 +1,2987 @@
+.mar   °¢p¾i
+dff   \'ecorce
+inf   ML
+so   marpha.dico 4
+.mar   °¢p¾o
+dff   ventre
+inf   ML
+so   marpha.dico 4
+.mar   °Áp¾o
+dff   daim
+inf   ML
+so   marpha.dico 4
+.mar   °¢p¾¯ä
+dff   fer
+inf   ML
+nb   ? è
+so   marpha.dico 4
+.mar   °¢p¾¯
+dff   mari
+inf   ML
+so   marpha.dico 4
+.mar   °£p¾i³
+dff   nouille de riz
+inf   M
+so   marpha.dico 4
+.mar   °°'ªªp¾i-na
+dff   tr\`es tard
+nb   vb?
+so   marpha.dico 5
+.mar   °°'££p¾iò-wa
+dff   \'eplucher
+inf   M
+so   marpha.dico 5
+.mar   ¢¢'¢¢p¾i-dzi
+dff   avoir soif
+inf   ML
+so   marpha.dico 5
+.mar   °°'££p¾i-mo
+dfn   khapnu
+dff   durer, rester bon
+inf   M
+so   marpha.dico 5
+.mar   °°'¢¢p¾e-wa
+var   p¾jet-o
+dff   sortir
+inf   Z
+so   marpha.dico 5
+.mar   °°'°¢p¾a-wa
+var   °°'°¢p¾¯-w¯
+dff   payer
+inf   ML
+so   marpha.dico 5
+.mar   °°'°¢p¾¯-w¯
+dff   payer
+inf   M
+nb   voir °°'°¢p¾a-wa 'payer'
+so   marpha.dico 5
+.mar   °°'°¢p¾o-wa
+dff   faire bruit du fusil
+inf   M
+so   marpha.dico 5
+.mar   ¢¢'¢¢p¾o-w¯
+dff   couvrir d'un parapluie
+inf   M
+so   marpha.dico 5
+.mar   Xp¾or-ba
+dff   \'etaler
+so   marpha.dico 5
+.mar   ¢¢'££p¾ul-wa
+dff   offrir (dieu)
+inf   ML
+so   marpha.dico 5
+.mar   ¢¢'¢¢p¾um-mu
+dff   pondre
+so   marpha.dico 5
+.mar   °Áp¾ja
+dff   balai
+inf   ML
+so   marpha.dico 7
+.mar   ££'££p¾jaò-wa
+var   ££'££p¾ja-wa
+var   p¾ja-o
+dff   balayer, essuyer
+inf   M
+so   marpha.dico 7
+.mar   ¢¢'¢¢p¾ja-mo
+dff   briller (soleil)
+inf   P
+so   marpha.dico 7
+.mar   °£'££p¾ja-wa
+dff   d\'efricher
+inf   Z
+so   marpha.dico 7
+.mar   °°'¢¢p¾ja-wa
+dfn   namascar garne
+dff   saluer
+inf   ML
+so   marpha.dico 7
+.mar   Xp¾jär
+dff   fouet \`a chang
+inf   FP
+so   marpha.dico 8
+.mar   °°'¢¢p¾jäm-ba
+dff   se d\'ev\^etir
+so   marpha.dico 8
+.mar   ¢¢'££p¾jo³-ba
+dff   sauter
+inf   ML
+so   marpha.dico 8
+.mar   °¢'¢£p¾jur-w¯
+quot   °¢'¢£p¾jyr-w¯
+dff   vanner droit
+inf   Z
+comp   ris Áp¾jur
+so   marpha.dico 8
+.mar   °°'¢¢p¾j·r-wa
+dff   vanner
+so   marpha.dico 8
+.mar   Xp¾wi-wa
+dff   souffler
+so   marpha.dico 9
+.mar   °°'°¢p¾ra-ba
+dfn   masino
+dff   fin
+inf   ML
+so   marpha.dico 11
+.mar   °¢'¢¢p¾ro-wa
+dff   \'egrener
+inf   Z
+so   marpha.dico 11
+.mar   °°'¢¢p¾r¯m-b¯
+dff   d\'etacher
+inf   M
+so   marpha.dico 12
+.mar   ¢¢'££p¾la-wa
+dff   aplatir (pain)
+inf   TB
+so   marpha.dico 13
+.mar   £peÚ
+quot   peÚ
+dff   \'epouse
+inf   ML
+so   marpha.dico 15
+.mar   ¢£pa
+dff   chang
+inf   ML
+so   marpha.dico 15
+.mar   ªÁpaÚ
+dff   feuille
+inf   ML
+nb   hom 'masque'
+so   marpha.dico 15
+.mar   ªÁpaÚ
+dff   masque
+nb   hom 'feuille'
+inf   ML
+so   marpha.dico 15
+.mar   £poÚ
+quot   poÚ
+dff   p\^ate \`a chang
+inf   ML
+so   marpha.dico 15
+.mar   °¢pu
+dff   grande jarre en terre
+inf   ML
+so   marpha.dico 15
+.mar   °¢°p¯ä
+dff   laine
+inf   ML
+so   marpha.dico 15
+.mar   ÁÁp¯Úi
+dff   tr\`es
+inf   sM
+so   marpha.dico 15
+.mar   °°pin
+dff   bleu
+inf   ML
+so   marpha.dico 16
+.mar   °¢pa³
+dfn   lekh / caur
+dff   prairie
+inf   ML
+so   marpha.dico 16
+.mar   ªÁb¿Úm
+var   ªÁb¯Úm
+dff   \'epaule
+inf   sm
+so   marpha.dico 16
+.mar   °°'££pi-wa
+dff   abandonner
+so   marpha.dico 17
+.mar   ÁÁ'ÁÁbiÚ-dzi
+dff   dire
+inf   ML
+so   marpha.dico 17
+.mar   °°'°¢pa-wa
+dfn   patalo
+dff   peu \'epais (liquide)
+inf   ML
+nb   cf. p¯-w¯
+so   marpha.dico 17
+.mar   ÁÁ'ÁÁpaÚ-wa
+dff   apporter de dehors dedans
+inf   Z
+so   marpha.dico 17
+.mar   °°'¢¢'££po-dzj¯-wa
+dff   m\^urir
+inf   Z
+so   marpha.dico 17
+.mar   ªÁ'££pu-wa
+dff   enterrer (?)
+nb   cf 'mettre' (pumpa)
+so   marpha.dico 17
+.mar   ¢¢'¢¢p¯-w¯
+dfn   patalo
+dff   peu \'epais (liquide)
+inf   M
+so   marpha.dico 17
+.mar   Xpj¯-mu
+dff   couler (sueur), bouillir (eau), suinter (mur ...)
+inf   M
+nb   aussi 'source'
+cf   °°'°°pjš-dzi 'jaillir (source)'
+so   marpha.dico 17
+.mar   °°'¢¢paò-dzi
+var   °£'££paò-dzi
+dff   faire gonfler au feu (pain)
+inf   M
+so   marpha.dico 17
+.mar   Xpin-o
+var   °°'££pim-ba <M>
+dff   donner
+inf   ML
+so   marpha.dico 18
+.mar   ªª'ªÁpiÚmba
+ps   n
+dff   tapis de selle
+inf   ML
+so   marpha.dico 18
+.mar   Xpol-o
+dff   \`a tourner (?)
+inf   FP
+so   marpha.dico 18
+.mar   ªÁ'££'ªªpo-p¿l-wa
+dff   mo\"elleux
+inf   TB
+so   marpha.dico 18
+.mar   ÁÁ'ÁÁpoÚr-wa
+dff   emporter
+so   marpha.dico 18
+.mar   °°'¢¢por-wa
+dff   rajouter (riz)
+inf   M
+so   marpha.dico 18
+.mar   ¢¢'¢¢pul-na
+dff   verser (urine)
+so   marpha.dico 18
+.mar   ¢¢'¢¢pun-o
+dff   verser (riz)
+nb   idem pul-na ?
+.mar   °°'°¢puj-o
+var   °°'¢¢pwi-dzi
+dff   apporter de haut en bas/de dedans dehors
+inf   Z
+so   marpha.dico 18
+.mar   ¢¢'¢¢pum-ba
+dff   monter \`a cheval
+so   marpha.dico 18
+.mar   °°'££p¯m-ba
+var   °°'££pam-ba
+dff   attendre
+inf   ML
+so   marpha.dico 18
+.mar   ªÁ'££p¿Úm-ba
+var   ÁÁ'ÁÁp¿Úm-ba
+dff   tremper
+inf   ML
+so   marpha.dico 18
+.mar   °°'££pa³ro
+dff   g\'esier
+inf   mM
+so   marpha.dico 19
+.mar   °£'££pokæi (ÁÁgjaÚ³)
+dfn   puri
+dff   pain frit
+inf   sM
+nb   ß°£'££
+so   marpha.dico 19
+.mar   ªª'ªÁpum-ba
+dfn   karua
+dff   aigui\`ere
+inf   FP
+so   marpha.dico 19
+.mar   ªÁ'ªªpaÚle
+dff   jambe
+inf   mM
+cf   ªÁ'££pleûa 'cuisse'
+so   marpha.dico 19
+.mar   ÁÁ'ÁÁpobo
+dff   pouce
+inf   mM
+so   marpha.dico 19
+.mar   °°'°°puki
+dff   serpent
+inf   B, ML
+so   marpha.dico 19
+.mar   °°'¢¢puki
+var   £ª'ªªpuki <ML>
+dff   genou
+inf   mM
+so   marpha.dico 19
+.mar   £pjaÚ
+quot   pjaÚ
+dff   sabot
+so   marpha.dico 20
+.mar   £pjoÚ
+quot   pjoÚ
+dff   terrasse
+so   marpha.dico 20
+.mar   £pjoÚ
+quot   pjoÚ
+dff   natte
+so   marpha.dico 20
+.mar   ¢¢'¢¢pja-wa
+dff   taper du pied
+inf   ML
+so   marpha.dico 20
+.mar   °°'°°pjš-dzi
+dff   jaillir (source)
+cf   pj¯-mu
+so   marpha.dico 20
+.mar   ÁÁ'ªªpju³-mu
+dff   tousser
+so   marpha.dico 21
+.mar   ÁÁ'ÁÁbÚjur-dzi
+quot   ÁÁ'ÁÁbÚjŸur-dzi
+dff   s'envoler
+inf   ML
+so   marpha.dico 21
+.mar   °°'¢¢pjuku³
+dff   fesses
+inf   mM
+so   marpha.dico 22
+.mar   ¢°pwe
+dff   encens
+inf   ML
+so   marpha.dico 23
+.mar   °°'¢¢pwi-dzi
+var   puj-o
+dff   apporter de haut en bas
+comp   Ris ªpwi
+so   marpha.dico 23
+.mar   ªÁ'ÁÁpwi-wa
+var   £ª'ªªpwit-o
+dff   porter (enfant)
+so   marpha.dico 23
+.mar   °¢°pri
+dff   yack femelle
+inf   ML
+so   marpha.dico 26
+.mar   £priÚ
+quot   priÚ
+dff   racine
+inf   ML
+so   marpha.dico 26
+.mar   °¢°pre
+dff   huit
+inf   ML
+so   marpha.dico 26
+.mar   °¢pra
+dfn   bhir
+dff   falaise
+inf   ML
+nb   hom. 'farine'
+so   marpha.dico 26
+.mar   °¢pra
+dfn   pitho
+dff   farine
+inf   ML
+nb   hom. 'falaise'
+so   marpha.dico 26
+.mar   ÁÁ'ÁÁpri-wa
+dff   \'ecrire
+so   marpha.dico 26
+.mar   ÁÁ'£ªpre-dzi
+dff   \^etre vaincu
+inf   M
+so   marpha.dico 26
+.mar   ªª'££pre-wa
+dff   faire la raie
+so   marpha.dico 26
+.mar   ÁÁ'ÁÁpreÚ-w¯
+dff   \^etre cher
+so   marpha.dico 26
+.mar   ªÁ'ªªpraÚ-w¯
+dff   raser
+inf   M
+so   marpha.dico 26
+.mar   ªª'ªªpra-w¯
+var   °ª'ªªpra-w¯
+var   ¢¢'££pra-w¯ <ğ?>
+dff   exploser (feu)
+inf   M
+so   marpha.dico 26
+.mar   ªÁ'ªªpraÚ-w¯
+var   ªª'ªÁpraÚ-w¯ <ML>
+dff   moudre
+inf   M
+so   marpha.dico 26
+.mar   °ª'ªªpr¯-wa
+dff   marcher
+inf   ML
+so   marpha.dico 26
+.mar   ÁÁpraÚ³
+dff   \'etable
+inf   FP
+so   marpha.dico 27
+.mar   °¢prum
+dff	poivre de Chine
+dfn   timur
+inf   FP
+so   marpha.dico 27
+.mar   ¢¢'££proko³
+dff   nombril
+inf   mM
+so   marpha.dico 28
+.mar   °¢°pli
+dff   quatre
+inf   ML
+so   marpha.dico 29
+.mar   °¢pla
+dff   l\'egumes
+inf   ML
+so   marpha.dico 29
+.mar   ¢¢pla (ÁÁgjaÚ³)
+dff   pain frit
+inf   sM
+so   marpha.dico 29
+.mar   °¢plu
+dff   graine
+inf   ML
+so   marpha.dico 29
+.mar   °°'¢¢pli-mu
+dff   glisser
+inf   ML
+nb   mmes tons que pli-wa 'd\'epecer' <ML>
+so   marpha.dico 29
+.mar   °°'¢¢pli-wa
+dff   d\'epecer
+inf   Z
+nb   mmes tons que pli-mu 'glisser' <ML>
+so   marpha.dico 29
+.mar   °°'¢¢plo-mu
+dff   riche
+inf   sM
+so   marpha.dico 29
+.mar   °°'°¢pla³-mu
+var   ¢°'¢¢pla³-mu <M>
+dff   fade
+inf   TB
+so   marpha.dico 30
+.mar   Xpla³ la-dzi
+dff   retourner ; faire des galipettes
+inf   ML
+so   marpha.dico 30
+.mar   ªÁ'££pleûa
+quot   ªÁ'££pleÆja
+dff   cuisse
+inf   mM
+so   marpha.dico 31
+.mar   Xt¾a
+dff   ne ... pas!
+so   marpha.dico 32
+.mar   °Át¾a
+dff   planche
+inf   ML
+so   marpha.dico 32
+.mar   °°t¾o
+dff   salive
+inf   mM
+so   marpha.dico 32
+.mar   °°'°¢t¾i-to
+var   £Á'ÁÁt¾it-o <?inf>
+dff   soulever, mettre en haut
+inf   Z
+so   marpha.dico 32
+.mar   °¢'¢¢t¾iò-wa
+var   ¢°'££t¾iò-wa <?inf>
+dff   casser
+inf   Z
+so   marpha.dico 32
+.mar   °°'¢¢t¾e-wa
+dff   enrouler autour de la t\^ete
+inf   M
+nb   id. ML
+so   marpha.dico 32
+.mar   °°'¢¢t¾e¯-dzi
+dff   entendre
+nb   id. ML
+nb   ¯ en exposant
+so   marpha.dico 32
+.mar   ¢¢'¢¢t¾a-wa
+var   ¢¢'¢¢t¾a-w¯
+var   ¢¢'`££ <?inf>
+dff   couper
+inf   Z
+so   marpha.dico 32
+.mar   °°'¢¢t¾o-wa
+var   °ª'ªªt¾o-wa <?inf>
+dff   grand
+inf   TB, P
+so   marpha.dico 32
+.mar   ¢¢'¢¢t¾o-dzi
+var   £Á'ÁÁt¾o-dzi <?inf>
+var   °¢'¢¢t¾o-dzi <?inf>
+dff   gagner (jeu)
+inf   M
+so   marpha.dico 32
+.mar   Xt¾o-dzi
+dff   encorner
+so   marpha.dico 32
+.mar   °°'°¢t¾u-wa
+var   °°'°°
+dff   cueillir
+inf   Z
+so   marpha.dico 32
+.mar   °£t¾in
+dff   paume, plante
+inf   mM
+so   marpha.dico 33
+.mar   ¢¢t¾a³
+dff   plancher
+inf   FP
+nb   ? id. ¢£t¾a³ 'plaine'
+so   marpha.dico 33
+.mar   ¢£t¾a³
+dff   plaine
+inf   ML
+nb   ? id. ¢¢t¾a³ 'plancher'
+so   marpha.dico 33
+.mar   ¢¢'££t¾an-ba
+var   ¢¢'££t¾am-ba <M>
+var   t¾an-o
+dff   poser
+inf   ML
+so   marpha.dico 33
+.mar   ¢¢'¢¢'¢¢t¾ur-dzi-wa
+dff   toucher
+inf   ML
+so   marpha.dico 33
+.mar   ¢¢'¢£t¾u³-dzi
+var   ¢¢'¢£t¾u³-o
+dff   boire
+inf   M
+so   marpha.dico 33
+.mar   Xt¾¯ri
+dff   coussin
+inf   FP
+so   marpha.dico 34
+.mar   °¢°t¾ui
+dff   pelote
+inf   ML
+so   marpha.dico 37
+.mar   ¢¢'££t¾wi-wa
+dff   pelotonner, tordre deux fils ensemble
+inf   M
+nb   prob. id. 'joindre ensemble'
+so   marpha.dico 37
+.mar   Xt¾wi-wa
+dff   joindre ensemble
+nb   prob. id. ¢¢'££t¾i-wa 'pelotonner'
+so   marpha.dico 37
+.mar   £tiÚ
+quot   tiÚ
+dff   mite
+inf   ML
+so   marpha.dico 39
+.mar   ¢£¢te
+dff	ceci
+dfn   tyo
+inf   ML
+so   marpha.dico 39
+.mar   £taÚ
+quot   taÚ
+dff   poteau
+inf   ML
+so   marpha.dico 39
+.mar   °¢to
+dfn   kodali
+dff   houe
+inf   ML
+so   marpha.dico 39
+.mar   Xto
+dff   aiguille
+so   marpha.dico 39
+.mar   £toÚ
+quot   toÚ
+dff   sac en poil de ch\`evre
+inf   ML
+so   marpha.dico 39
+.mar   £tuÚ
+quot   tuÚ
+dff   tuyau
+inf   ML
+so   marpha.dico 39
+.mar   °Át¯
+dff   cheval
+inf   ML
+so   marpha.dico 39
+.mar   ªÁt¯Ú
+dff   panier plat
+inf   ML
+cf   ªÁt¯Úò
+so   marpha.dico 39
+.mar   °¢°taò
+dff   quoi ?
+inf   ML
+so   marpha.dico 39
+.mar   ªÁt¯Úò
+dff   panier plat
+inf   ML
+cf   ªÁt¯Ú
+so   marpha.dico 39
+.mar   °°tin
+dff   maison
+inf   ML
+so   marpha.dico 40
+.mar   °¢tin
+dff   coeur
+inf   mM
+so   marpha.dico 40
+.mar   -tin
+dff   compte des ans
+so   marpha.dico 40
+.mar   °°ta³
+dff   vaisselle
+so   marpha.dico 40
+.mar   °Áta³
+dff   cour de maison
+inf   FP
+so   marpha.dico 40
+.mar   Xt¯r
+dff   blanc
+so   marpha.dico 40
+.mar   ªª'ªÁdiÚ-w¯
+dfn   dhapÑaune
+dff   conduire des b\^etes
+inf   ML
+cf   ÁÁ'ªªdeÚ-wa
+so   marpha.dico 41
+.mar   ÁÁ'ªªdeÚ-wa
+dfn   dhapÑaune
+dff   conduire des b\^etes
+inf   ML
+nb   i ? M
+cf   ÁÁ'ªªdiÚ-wa
+so   marpha.dico 41
+.mar   °°'££te¯-dzi
+dff   tomber
+inf   ML,FTB
+nb   var. ton £Á'ÁÁ <ML>
+so   marpha.dico 41
+.mar   °°'¢¢te-wa
+dff   auxiliaire
+nb   ? id 'sortir'
+prh   ûuk te-wa 'mentir'
+so   marpha.dico 41
+.mar   °°'££te-to
+quot   °°'££tjeto
+dff   sortir qqch.
+inf   Z
+cf   °°'££tei-w¯ '\'ecr\'emer' <Z>
+nb   j en indice = t palatalis\'e
+so   marpha.dico 41
+.mar   °°'££tei-w¯
+dff   '\'ecr\'emer'
+inf   Z
+cf   'sortir'. prob id
+.mar   °°'¢¢taò-wa
+var   ¢¢'¢¢tag-o
+dfn   thÑapne
+dff   recevoir
+inf   ML
+so   marpha.dico 41
+.mar   Xta-dzi-mu
+dff   se produire
+inf   M
+so   marpha.dico 41
+.mar   °°'££to-w¯
+dff   \'echanger
+inf   M
+so   marpha.dico 41
+.mar   °°'¢¢to-wa
+dff   (faire) revenir
+inf   ML
+so   marpha.dico 41
+.mar   °°'¢¢toò-wa
+dff   battre (du grain)
+dfe   thresh
+inf   Z
+so   marpha.dico 41
+.mar   ££'££to-wa
+dff   plier
+inf   M, ML
+nb   var ¢¢'££to-wa <Z>
+comp   ris ¢toò 'tourner, retourner'
+so   marpha.dico 41
+.mar   ¢£'££to-mu
+dff   falloir
+inf   ML
+so   marpha.dico 41
+.mar   ÁÁ'ÁÁtoÚ-wa
+dff   transplanter
+inf   ML
+nb   var ÁÁ'Á¼ <Z>
+so   marpha.dico 41
+.mar   °ª'ªªto-go
+dff   \^oter du feu
+inf   Z
+so   marpha.dico 41
+.mar   ÁÁ'££toÚ-dzi
+var   °Á'ªªtoÚ-dzi
+dff   arriver
+inf   ML
+so   marpha.dico 41
+.mar   °°'££to-wa
+dff   changer (v\^etement)
+inf   M
+so   marpha.dico 41
+.mar   ¢¢'££tuò-w¯
+dff   hacher
+inf   Z
+so   marpha.dico 41
+.mar   ÁÁ'ªªduÚ-mu
+dff	fatigu\'e
+dfe   be tired
+inf   M
+nb   ? ÁÁ'ªªduÚò-mu
+so   marpha.dico 41
+.mar   °°'££tói-w¯
+dff   d\'ependre le linge
+inf   ML
+nb   compare 'scoop out'
+so   marpha.dico 41
+.mar   °°'££twi
+var   °°'££t·to <M>
+dfn   ukhala
+dff   ramasser (?)
+dfe   scoop out (?)
+inf   ML
+so   marpha.dico 41
+.mar   ¢¢'££t¯i-wa
+var   ¢¢'££tei-wa
+var   ¢¢'££te-dzi
+var   tai-wa <M, mar dic 42>
+dff   cuire \`a l'eau
+dfn   usinne
+inf   M, Z
+so   marpha.dico 41
+.mar   °°'££te-w¯
+dff   sortir qqch.(?), d\'ev\^etir (?)
+inf   ML
+nb   var. °°'°£tei-w¯ (M)
+so   marpha.dico 41
+.mar   ªÁ'££tem-ba
+var   ÁÁ'ÁÁteÚm-ba (ML)
+dff   vrai
+inf   TB
+so   marpha.dico 42
+.mar   ¢°'££ten-ba
+var   ¢¢'££tem-ba
+dff   barrer le chemin
+inf   ML
+so   marpha.dico 42
+.mar   ÁÁ'ªªtaÚ³-ba
+dff   poursuivre
+inf   ML
+so   marpha.dico 42
+.mar   ÁÁ'ÁÁtaÚr-ba
+dff   trembler
+inf   ML
+nb   var ÁÁ'ªª <ML>, ÁÁ'ÁÁ
+so   marpha.dico 42
+.mar   ¢¢'¢¢tar-wa
+dff   blanchir
+inf   Z
+nb   var. ¢¢'££
+so   marpha.dico 42
+.mar   °°'££tor-wa
+dff   creuser
+dfn   kotÑarnu <Sharma: peck, pick at, dig at>
+inf   Z
+var   °°'££tor-b¯
+so   marpha.dico 42
+.mar   ÁÁ'ÁÁtom-ba
+dff   r\'ecolter (bl\'e)
+inf   Z
+so   marpha.dico 42
+.mar   ¢¢'¢£tum-mo
+var   ¢¢'¢£tum-ba
+dfn   moto / baklo
+dff   gros, \'epais
+nb   var ton. °°'¢¢
+so   marpha.dico 42
+.mar   ÁÁ'ªª'ªªtuÚm-dzi-wa
+var   ÁÁ'ÁÁtuÚm-dzi-wa
+dff   heurter
+inf   ML
+so   marpha.dico 42
+.mar   ªÁ'ÁÁtuÚn-ba
+var   ªÁ'ªªtuÚm-ba <Z>
+var   tun-o
+dff   tremper dans (piment)
+inf   ML
+so   marpha.dico 42
+.mar   ¢¢'¢¢æ¯m-b¯
+dff   carder
+inf   M
+so   marpha.dico 42
+.mar   ÁÁ'ÁÁt¯Úm-b¯
+dff   serrer
+inf   M
+so   marpha.dico 42
+.mar   ÁÁ'££diÚøi
+dff   soleil
+inf   P
+so   marpha.dico 43
+.mar   £tebe
+quot   tebÚeÚ
+dff   sangsue
+inf   TB
+so   marpha.dico 43
+.mar   ÁÁ'ÁÁtoÚ-wa
+dff   m\^ale
+inf   TB
+so   marpha.dico 43
+.mar   Xtiaj~a
+dfn   tyo
+dff   cel\`a
+inf   ML
+so   marpha.dico 45
+.mar   ¢¢'¢¢tói-wa
+dff   arracher
+inf   Z
+so   marpha.dico 46
+.mar   °°'££tói-w¯
+dff   rassembler
+nb   eau ou farine, renvers\'ee
+comp   Ris. ¢tut 'ramasser'
+cf   'd\'ependre le linge' et 'scoop out'
+so   marpha.dico 46
+.mar   °Áæ¾o
+dff   grand baril \`a eau
+inf   ML
+nb   ton = ?
+so   marpha.dico 49
+.mar   °¢æ¾¯l
+dff   imp\^ot
+so   marpha.dico 50
+.mar   £æiÚ
+quot   æiÚ
+dff   peau
+inf   ML
+so   marpha.dico 53
+.mar   °¢æa
+dfn   namlo
+dff   bandeau de portage
+inf   ML
+nb   var ÁÁëaÚ FP
+so   marpha.dico 53
+.mar   ªÁæoÚ
+dfn   sÑag
+dff   br\`edes
+inf   ML
+so   marpha.dico 53
+.mar   ¢£¢æu
+dff   six
+inf   ML
+so   marpha.dico 53
+.mar   £æuÚ
+quot   æuÚ
+dff   grains
+dfn   anna
+inf   ML
+so   marpha.dico 53
+.mar   °¢°æ¯
+dff   cr\^ete de coq
+inf   ML
+so   marpha.dico 53
+.mar   ªÁæiÚn
+dff   mur de pierre
+inf   FP
+so   marpha.dico 54
+.mar   ¢£æin
+dff   vingt pathis
+inf   ML
+nb   ? from Eng. tin
+so   marpha.dico 54
+.mar   Xæa³
+dff   mo\"elle
+so   marpha.dico 54
+.mar   ªÁ'££æaÚ³-ba
+dff   donner (hon. receveur)
+inf   ML
+so   marpha.dico 54
+.mar   ¢¢'¢£æ¯m-b¯
+dff   r\'epandre
+inf   Z
+so   marpha.dico 54
+.mar   ÁÁ'ªªæiÚ-w¯
+var   æiÚt-o
+dff   tirer
+inf   Z
+so   marpha.dico 55
+.mar   ¢¢'¢¢æa-dzi
+dfn   lÑagne
+dff   atteindre
+inf   ML
+nb   var °£'££æ¯-dzi <M>
+so   marpha.dico 55
+.mar   ªÁ'££æa-dzi
+dff   vaincre
+inf   M
+nb   var ªª'ªÁ <ML>
+so   marpha.dico 55
+.mar   ªÁ'££æa-dzi
+dff   griffer, d\'echirer
+inf   M
+nb   var ªª'ªÁ <ML>
+cf   ªÁ'££æaò-dzi 'd\'echirer'
+comp   ris ¢æet 'griffer'
+so   marpha.dico 55
+.mar   ªÁ'££æaò-dzi
+dff   d\'echirer
+inf   M
+cf   ªÁ'££æa-dzi 'griffer'
+comp   ris £æeò 'd\'echirer'
+so   marpha.dico 55
+.mar   ªÁ'££æoÚ-w¯
+dff   lire
+inf   ML
+so   marpha.dico 55
+.mar   °£'££æu-wa
+dff   rester
+inf   ML
+so   marpha.dico 55
+.mar   ¢¢'££æu-wa
+var   ¢¢'££æu-w¯
+dff   coudre
+so   marpha.dico 55
+.mar   °°'¢¢tû¾im-ba
+quot   °°'¢¢tÆ¾im-ba
+var   °°'¢¢tÆ¾in-o
+dfn   samÑatne
+dff   attraper, tenir
+inf   Z
+comp   WT 'dzin-pa
+so   marpha.dico 57
+.mar   ¢¢'££tû¾o³-p¯
+quot   ¢¢'££tÆ¾o³-p¯
+var   ¢¢'££tÆ¾jo³-p¯
+dff   remuer en faisant couler
+inf   M, Z
+comp   ?WT mchong-ba 'to jump' <Jas>
+comp   ris Átshjo³ 'sauter'
+so   marpha.dico 57
+.mar   ¢£tû¾i
+quot   ¢£tÆ¾i
+dff   herbe
+inf   ML
+so   marpha.dico 57
+.mar   ¢£tû¾i
+quot   ¢£tÆ¾i
+dff   graisse
+inf   ML
+so   marpha.dico 57
+.mar   ¢£tû¾¯ä
+quot   ¢£tÆ¾¯ä
+dfn   pustak
+dff   livre
+so   marpha.dico 57
+.mar   ¢£ts¾i
+dff   cheville, poignet
+inf   mM
+so   marpha.dico 59
+.mar   °¢ts¾o
+dff   corde
+inf   ML
+so   marpha.dico 59
+.mar   °£ts¾o
+dfn   prasad
+dff   offrande
+inf   mM
+so   marpha.dico 59
+.mar   °¢°ts¾¯ä
+dff   couleur
+inf   ML
+so   marpha.dico 59
+.mar   °¢ts¾¯ä
+dfn   coya
+dff   lani\`eres de bambou
+inf   ML
+so   marpha.dico 59
+.mar   Xts¾¯
+dfe   cremation place
+dff   lieu de cr\'emation
+so   marpha.dico 59
+.mar   °°'¢¢tû¾e-wa
+quot   °°'¢¢tÆ¾ewa
+dfn   chyÑapne
+dff   asperger (en offrande)
+so   marpha.dico 59
+.mar   ££'££ts¾a-mu
+var   ££'££ts¾¯-mu (?)
+dff   chaud, br\^ulant
+inf   sM
+nb   var ¢¢'££ts¾a-wa <M>
+so   marpha.dico 59
+.mar   °°'¢¢ts¾o-wa
+dff   teindre
+inf   ML, M (d\'eb. rap.)
+cf   ¢¢'££ts¾¯i-wa
+so   marpha.dico 59
+.mar   ¢¢'££ts¾¯i-wa
+dff   teindre
+inf   M (d\'eb. lent)
+cf   °°'¢¢ts¾o-wa
+so   marpha.dico 59
+.mar   °°'¢¢ts¾u-me
+var   °°'¢¢ts¾u-w¯
+dfn   ramailo
+dfe   entertaining
+dff   plaisamment anim\'e
+inf   TB
+so   marpha.dico 59
+.mar   ¢¢'££ts¾·-wa
+dff   \'ecraser
+inf   ML
+nb   si le sens est 'casser en frapant' cf ris ªtsheò 'fendre du bois,
+  casser une noix'
+cf   °°'¢¢ts¾¯-w¯ 'fendre'
+so   marpha.dico 59
+.mar   ¢¢'¢¢ts¾¯i-wa
+dff   se chamailler
+inf   M
+so   marpha.dico 59
+.mar   ¢¢'££ts¾¯-mu
+dfn   piro
+dff   \'epic\'e
+inf   TB
+so   marpha.dico 59
+.mar   ¢¢'¢¢ts¾¯-w¯
+dff   faire pa\^itre
+inf   Z
+so   marpha.dico 59
+.mar   °°'¢¢ts¾¯-w¯
+dff   fendre (bois)
+inf   M
+cf   ¢¢'££ts¾·-wa '\'ecraser'
+comp   ris ªtsheò
+so   marpha.dico 59
+.mar   Xts¾am-ba
+dff   \'etirer qqch.
+inf   M
+so   marpha.dico 60
+.mar   ¢¢'¢¢ts¾a³-ba
+dff   trier
+inf   M
+so   marpha.dico 60
+.mar   °°'¢¢ts¾or-dzi
+dff   d\'ebouler
+so   marpha.dico 60
+.mar   °°'¢¢ts¾¯r-w¯
+dff   filtrer
+inf   Z
+so   marpha.dico 60
+.mar   ¢¢'¢¢ts¾epe
+dff   chaleur
+inf   sM
+comp   gha ªts¾aba 'hot'; Áts¾aeba 'sweat' <Gur Dic>
+comp   tuk îts¾úp-kju 'sweat'
+so   marpha.dico 61
+.mar   °°'°°tû¾eba
+quot   °°'°°tÆ¾jeba
+dff   amende
+so   marpha.dico 63
+.mar   ¢¢'¢¢ts¾juta
+dff   moulin
+inf   FP
+so   marpha.dico 63
+.mar   ¢°'¢¢tû¾¿l-wa
+quot   ¢°'¢¢tÆ¾j¿l-wa
+dff   m\'elanger
+inf   Z
+so   marpha.dico 63
+.mar   °¢°tso
+dfn   pewa
+dff   dot
+inf   ML
+so   marpha.dico 66
+.mar   ÁÁdzoÚ
+dfn   dzopa
+dff   yack hybride
+inf   ML
+so   marpha.dico 66
+.mar   ÁÁdzoÚ
+dff   pointe
+inf   ML
+so   marpha.dico 66
+.mar   °¢°tsu
+dfn   yo
+dff   ceci
+inf   ML
+so   marpha.dico 66
+.mar   ¢£ts¯
+dff   veine
+so   marpha.dico 66
+.mar   Xts¯
+dfn   tyo
+dff   cela
+so   marpha.dico 66
+.mar   £ts¯Ú
+quot   ts¯Ú
+dff   fils
+inf   ML
+so   marpha.dico 66
+.mar   ¢¢'ªªtsi-mu
+dff   se rappeler
+inf   TB
+so   marpha.dico 67
+.mar   £dziÚ-wa
+quot   dziÚ-wa
+dff   mordre
+inf   ML
+so   marpha.dico 67
+.mar   ªÁ'££tsaÚ-wa
+dff   fuir (pot)
+inf   Z
+so   marpha.dico 67
+.mar   °°'££tsu-wa
+dff   traverser
+inf   ML
+so   marpha.dico 67
+.mar   ¢¢'¢¢tsu-w¯
+dff   aboyer
+inf   ML
+so   marpha.dico 67
+.mar   °°'££ts¯-mo
+dff   pass\'e au soleil
+inf   M
+.mar   °°'££tsa-wa
+dff   manger
+inf   M
+so   marpha.dico 67
+.mar   ¢¢'££tûiò-w¯
+quot   ¢¢'££tÆiò-w¯
+dff   tamiser
+inf   Z
+so   marpha.dico 67
+.mar   °°'¢¢tsaò-mo
+dff   piquer du bec
+inf   M
+so   marpha.dico 67
+.mar   Xtsuò-wa
+dfn   basÑalne
+dff   mettre \`a cuire
+so   marpha.dico 67
+.mar   °¢tsa³
+dff   bru
+inf   ML
+so   marpha.dico 68
+.mar   ÁÁdza³
+var   °ªdza³
+dff   nid
+inf   TB
+so   marpha.dico 68
+.mar   ¢¢'¢£tsim-ba
+dff   suspendre
+inf   Z
+nb   ? tÆ
+so   marpha.dico 69
+.mar   ¢¢'¢£tsa³-ba
+dff   mettre dans
+inf   Z
+nb   'mettre dans' id.' envoyer' ?
+so   marpha.dico 69
+.mar   ¢¢'¢£tsa³-ba
+dff   envoyer
+inf   Z
+nb   'envoyer' id.'mettre dans' ?
+so   marpha.dico 69
+.mar   Xtsal-wa
+var   ts¯l-w¯
+dff   polir le riz
+so   marpha.dico 69
+.mar   °Á'ÁÁtsol-dzi
+var   ªª'ªÁtsol-dzi
+dff   manquer le but ; se tromper (de chemin)
+inf   M
+so   marpha.dico 69
+.mar   ÁÁ'ÁÁtsoÚr-wa
+dff   essorer le linge
+inf   M
+nb   M3
+so   marpha.dico 69
+.mar   ¢¢'¢¢tsu³-p¯
+dff   vendre
+inf   M
+comp   WT 'tso³-ba <Jas>
+so   marpha.dico 69
+.mar   ¢¢'¢¢ts¯m-ba
+var   ¢¢'¢¢ts¯m-b¯
+dff   mesurer tissu
+inf   M
+so   marpha.dico 69
+.mar   ÁÁ'ÁÁts¯m-ba
+dff   viser
+inf   M
+so   marpha.dico 69
+.mar   ¢¢'¢¢ts¯l-w¯
+var   ¢¢'¢¢tsal-wa
+dff   polir le riz
+inf   Z
+so   marpha.dico 69
+.mar   ¢¢'¢¢ts¯r-wa
+dff   essorer les l\'egumes ; faire couler tout d'un r\'ecipient
+so   marpha.dico 69
+.mar   ÁÁ'ÁÁdziÚn-dzi
+dff   achever
+inf   Z
+so   marpha.dico 69
+.mar   ££'££tsadza
+dff   petit d'animal
+inf   TB
+so   marpha.dico 70
+.mar   Xtsekúra
+dff   maigre
+inf   ML
+nb   ú en exposant
+so   marpha.dico 70
+.mar   Xts¯³ku
+dff   sac \`a coulant
+inf   FP
+so   marpha.dico 70
+.mar   °Átsjoò
+dff   bague
+inf   P
+nb   \'ecrit °Átsjoo
+so   marpha.dico 71
+.mar   °°tsju
+dff   corps
+so   marpha.dico 71
+.mar   °¢tsju
+dff   dix
+inf   ML
+nb   ? ton
+so   marpha.dico 71
+.mar   £tû¯Ú
+quot   tÆj¯Ú
+dfn   gidda
+dff   vautour
+inf   ML
+so   marpha.dico 71
+.mar   £tû¯Ú
+quot   tÆj¯Ú
+dff   th\'e
+inf   ML
+so   marpha.dico 71
+.mar   ¢¢'¢£tsjeò-wa
+dff   sauter en bas ou par-dessus
+inf   ML
+so   marpha.dico 71
+.mar   °°'¢¢tsja-wa
+var   ¢£'£ªtsja-wa <M>
+dff   chercher ; regarder, examiner
+inf   ML
+so   marpha.dico 71
+.mar   ¢¢'¢¢tsj¯-wa
+dfn   umrinu
+dff   pousser, germer
+inf   Z
+nb   pas ML
+so   marpha.dico 71
+.mar   Xtsjom
+var   c¯m
+dff   ensemble
+inf   ML
+so   marpha.dico 72
+.mar   ÁÁ'ÁÁtsjaÚrba
+dff   offrande
+so   marpha.dico 72
+.mar   ¢¢'¢¢tsjam-ba
+dff   mo\"elleux
+inf   sM
+so   marpha.dico 73
+.mar   ªÁ'££tû¯m-p¯
+dff   tr\`es fin (farine)
+inf   TB
+so   marpha.dico 73
+.mar   °°'££tsja³-ba
+dff   petit
+inf   TB
+so   marpha.dico 73
+.mar   ÁÁ'ÁÁtsjo³-g-o
+dff   venir (hon.)
+nb   prob *tsjon-ka-o <MM,93>
+inf   ML
+so   marpha.dico 73
+.mar   °°'°¢tsjun-o
+var   °°'¢¢tsjum-ba
+dff   attacher
+inf   M
+so   marpha.dico 73
+.mar   °°'¢¢tsjun-ba
+quot   °°'¢¢tsjyn-ba
+var   ¢¢'££tsjum-ba <M>
+dff   suspendre
+inf   ML
+so   marpha.dico 73
+.mar   °°'¢¢tûäm-p¯
+quot   °°'¢¢tÆjäm-p¯
+dff   malaxer
+inf   Z
+so   marpha.dico 73
+.mar   ¢°'¢¢tûom-pa
+quot   ¢°'¢¢tÆjom-pa
+var   ? tsjom-ba
+dff   frapper
+inf   ML
+so   marpha.dico 73
+.mar   ¢¢'¢¢tûol-wa
+quot   ¢¢'¢¢tÆjol-wa
+dff   embaucher
+inf   Z
+so   marpha.dico 73
+.mar   °Ák¾a
+var   °¢k¾a
+dff   cou
+inf   ML
+so   marpha.dico 76
+.mar   Xk¾aò
+dff   o\`u ?
+inf   ML
+nb   not\'e k¾aa
+so   marpha.dico 76
+.mar   ££'ªªk¾i-w¯
+var   ¢¢'¢¢k¾i-w¯
+dff   attacher
+so   marpha.dico
+.mar   °°'££k¾i-to
+var   °°'ªª k¾i-w¯
+dff   emprunter
+inf   M
+so   marpha.dico 76
+.mar   ¢¢'££k¾i-mo
+dff   \'eternuer
+so   marpha.dico 76
+.mar   °°'¢¢k¾e-wa  [[(¢¢k¾e) °°'¢¢k¾e-wa
+dff   r\'eciter (shamane)
+so   marpha.dico 76
+.mar   °°'°¢k¾a-mu
+var   °°'°¢k¾¯-mu
+var   °°'°°k¾a-mu/k¾¯-mu
+dff   venir
+so   marpha.dico 76
+.mar   Xk¾a-wa
+dff   nourrir
+inf   M
+so   marpha.dico 76
+.mar   °°'¢¢k¾o-wa
+dfn   osarne
+dff   apporter
+inf   M
+so   marpha.dico 76
+.mar   °°'°°k¾u-w¯
+var   °°'°¢k¾·-w¯ <M>
+dff   laver
+inf   FTB
+so   marpha.dico 76
+.mar   °°'££k¾u-w¯
+dff   voler
+inf   M
+so   marpha.dico
+.mar   °°'¢¢k¾ä-wa
+var   °°'¢¢k¾¯i-wa <M>
+dff   mordre dans de la viande
+inf   ML
+so   marpha.dico 76
+.mar   °°'¢¢k¾¯i-wa <d\'ebit lent>
+var   °°'¢¢k¾¯ä-wa <d\'ebit lent>
+var   ¢¢'££k¾eò-wa <d\'ebit rapide>
+dff   filer
+inf   M, ML
+so   marpha.dico 76
+.mar   °°'¢¢k¾¯-dzi
+dff   venir
+inf   M
+so   marpha.dico 76
+.mar   °¢k¾~u³
+var   k¾um <FP>
+dff   trou
+nb   ³ en exposant
+so   marpha.dico 77
+.mar   °°'££q¾il-ba
+dff   enrouler (une natte)
+inf   ML
+cf   k¾Ÿil-ba
+so   marpha.dico 77
+.mar   °°'°¢k¾am-dzi
+dff   pouvoir
+so   marpha.dico 77
+.mar   °°'°°k¾ol-tsi
+dff   bouillir
+nb   tsi : suffixe non vois\'e
+so   marpha.dico 77
+.mar   Xk¾Ÿil-ba
+dff   enrouler
+inf   ML
+cf   q¾il
+so   marpha.dico 77
+.mar   °°'¢¢k¾¯r-wa
+dff   faire tomber de l'arbre
+inf   Z
+nb   id. k¾¯r-wa 'lancer des pierres' ?
+so   marpha.dico 77
+.mar   Xk¾¯r-wa
+dff   lancer des pierres
+nb   id. k¾¯r-wa 'f. tomber de l'arbre' ?
+so   marpha.dico 77
+.mar   ¢¢'¢¢k¾¯r-b¯
+dff   s\'echer
+inf   M
+so   marpha.dico 77
+.mar   °°'¢¢k¾ora
+dff   bo\^iteux
+inf   ML
+so   marpha.dico 78
+.mar   °°'¢¢k¾¯lto
+dff   reins
+inf   mM
+so   marpha.dico 78
+.mar   °£'££k¾je-w¯
+dff   vieux
+inf   ML
+so   marpha.dico 79
+.mar   °°'¢¢k¾ja-mu
+dff   bon march\'e
+inf   TB
+nb   cf. ¯
+so   marpha.dico 79
+.mar   Xk¾ja-wa
+dff   rapi\'ecer, boucher un trou
+inf   M
+so   marpha.dico 79
+.mar   Xk¾jo-wa
+dfn   paskÑaunu
+dff   servir (\`a manger)
+inf   M
+so   marpha.dico 79
+.mar   ¢¢'¢¢k¾j¯-w¯
+dff   bon march\'e
+inf   M
+cf   °°'¢¢k¾ja-mu
+so   marpha.dico 79
+.mar   °°'££k¾jäm-mä
+var   °°'££k¾j¯m-mä
+dff   avoir faim
+inf   TB
+so   marpha.dico 80
+.mar   Xk¾ja³-ba
+dff   r\^otir
+inf   M
+so   marpha.dico 80
+.mar   £kiÚ
+quot   kiÚ
+dff   toi
+inf   ML
+so   marpha.dico 84
+.mar   °°ke
+dff   travail
+so   marpha.dico 84
+.mar   Xke
+var   k¯e
+dff   langage
+nb   ? cf. k¯e var. k¯ä 'langage'
+so   marpha.dico 84
+.mar   °Áka
+dff   sang
+inf   ML
+so   marpha.dico 84
+.mar   °¢°ko
+dff   bl\'e
+inf   ML
+nb   hom 'pince ˆ feu'
+so   marpha.dico 84
+.mar   °¢°ko
+dfn   cimta
+dff   pince \`a feu
+nb   hom 'bl\'e'
+inf   ML
+so   marpha.dico 84
+.mar   ªÁgoÚ
+dff   dos
+inf   sM
+so   marpha.dico 84
+.mar   £koÚ
+quot   koÚ
+dff   couvercle
+inf   ML
+so   marpha.dico 84
+.mar   °¢°ku
+dff   dieu
+inf   ML
+so   marpha.dico 84
+.mar   °£ku
+dff   neuf (nombre)
+inf   ML
+so   marpha.dico 84
+.mar   Xku  [[(££ja) ¢£ku
+dff   coude
+inf   mM
+so   marpha.dico 84
+.mar   Xku
+dff   coud\'ee
+so   marpha.dico
+.mar   °¢kŸi
+var   °¢k¯i
+dff   un (nombre)
+inf   ML
+so   marpha.dico 84
+.mar   °¢°k¯ä
+var   °°k¯e <sM>
+dff   langage
+inf   ML
+nb   cf. ke var. k¯ä
+so   marpha.dico 84
+.mar   °¢k¯e
+var   ¢¢kèe <sM / mM>
+dff   taille
+inf   sM
+so   marpha.dico 84
+.mar   ÁÁg¯Úe
+dff   panier filtre
+inf   sM
+so   marpha.dico
+.mar   °¢k¯
+dfn   cun
+dff   chaux
+inf   ML
+so   marpha.dico 84
+.mar   ªÁg¯Ú
+dff   selle
+inf   ML
+so   marpha.dico 84
+.mar   Xka³
+dff   os long, articulation
+so   marpha.dico 85
+.mar   £gaÚ³
+quot   gaÚ³
+dff   montagne
+inf   ML
+so   marpha.dico 85
+.mar   ¢£ko³
+quot   ¢£k…o³
+dff   urine
+inf   mM
+so   marpha.dico 85
+.mar   Xkum
+dff   poutrelle
+inf   FP
+comp   Ris. Áku³ 'poutre fa”tire'
+so   marpha.dico 85
+.mar   Xkum  [[(°°ja) ££kum
+dff   majeur, m\'edius
+inf   mM
+comp   Ris. £ku³ 'milieu'
+so   marpha.dico 85
+.mar   °Ákum
+dff   intestins
+inf   mM
+so   marpha.dico 85
+.mar   Xk¯m
+dff   coton
+so   marpha.dico 85
+.mar   °Ák¯m
+dff   bile
+inf   mM
+so   marpha.dico 85
+.mar   ££k¯m  [[(ªÁm¯) ££k¯m
+dff   menton
+inf   ML
+so   marpha.dico 85
+.mar   ¢¢k¯m (£ªsa)
+dff   molaire
+inf   ML
+so   marpha.dico 85
+.mar   Xk¯n
+dff   riz
+so   marpha.dico 85
+.mar   °°'°¢kji-wa
+dff   facile
+so   marpha.dico 86
+.mar   ªª'ªÁgiÚ-mu
+dfn   ramro
+dff   bon coeur
+inf   M, TB
+nb   demi-longueur sur giÚ
+so   marpha.dico 86
+.mar   ÁÁ'ÁÁka-dze
+dff   se coincer
+inf   M
+so   marpha.dico 86
+.mar   ªÁ'ªªgoÚ-wa
+dff   couvrir
+inf   M
+so   marpha.dico 86
+.mar   ¢¢'££ku-ko
+var   ¢¢'££kuò-wa
+var   ££'££  <ML>
+dff   remuer (le riz)
+inf   M
+so   marpha.dico 86
+.mar   °°'¢¢ku-tsi <ML>
+var   ¢¢'¢¢ku-tsi <M>
+var   ku-la
+dff   br\^uler
+nb   ku-la 'est-ce brl\'e ?'
+inf   TB
+so   marpha.dico 86
+.mar   ¢¢'¢¢ku-wa
+dff   mesurer tissu
+inf   ML
+nb   mesurer ˆ la coud\'ee
+so   marpha.dico 86
+.mar   ¢¢'££k¯i-wa
+var   ££kä-wa <ML>
+dff   monter, grimper
+inf   Z
+so   marpha.dico 86
+.mar   ¢¢'°°k¯-w¯
+dff   \'epais (liquide)
+inf   M
+so   marpha.dico 86
+.mar   °°'°°koò-wa
+dff   d\'eplacer
+inf   M
+nb   prob. id. koòmu 'contagieux'
+so   marpha.dico 86
+.mar   °¢'¢¢koò-mu
+dff   contagieux
+nb   prob. id. koòwa 'd\'eplacer'
+so   marpha.dico 86
+.mar   °°'°°kim-ba
+var   °°'¢¢kin-o
+dff   prendre
+inf   Z
+so   marpha.dico 87
+.mar   °°'°°kom-ba
+var   °°'°°kom-b¯
+dff   co\^uteux
+inf   TB, M
+so   marpha.dico 87
+.mar   °°'££kom-ba
+dff   mesurer volume
+inf   M
+so   marpha.dico 87
+.mar   ¢¢'¢¢kom-ba
+dff   rev\^etir
+so   marpha.dico 87
+.mar   °°'¢¢k¯m-mu
+dfn   tito
+dff   amer
+inf   TB
+so   marpha.dico 87
+.mar   ¢¢'¢¢kil-wa
+var   °°'¢¢kil-wa
+dff   nager
+inf   ML
+so   marpha.dico 87
+.mar   °°'££kor-wa
+dfn   ghumne
+dff   se promener
+inf   Z
+so   marpha.dico 87
+.mar   °°'££kol-wa
+dff   distiller
+nb   cf. k¾ 'bouillir'
+so   marpha.dico 87
+.mar   ¢¢'¢ªkoi-wa
+dff   peser
+inf   M
+so   marpha.dico 87
+.mar   °°'°°k¯r-mu
+dff   grincer des dents
+inf   M
+so   marpha.dico 87
+.mar   °°'££kolo³
+dff   estomac
+inf   mM
+so   marpha.dico 88
+.mar   Xkoto
+dff   foyer \`a quatre c\^ot\'es
+inf   FP
+comp   Ris. kut¾ap
+so   marpha.dico 88
+.mar   °Áûu³  [[ªÁª'¢ÁkoÚûu³
+quot   ªÁª'¢ÁkoÚÆju³
+dff   colonne vert\'ebrale
+inf   mM
+comp   Ris. £kosi³ma 'dos au-dessous de l'omoplate'
+so   marpha.dico 88
+.mar   ªÁ'ªªg·dzjo
+emp   nep
+dff   taquinerie
+inf   M
+so   marpha.dico
+.mar   ÁÁ'ÁÁg¯iwa
+ps   n
+dff   dharma
+so   marpha.dico 88
+.mar   ªª'ªÁg¯ilo³
+dff   moine
+so   marpha.dico
+.mar   ªÁgjaÚ (ts¾¯m)
+dff   barbe
+so   marpha.dico 89
+.mar   °¢kju
+dff   eau
+inf   ML
+so   marpha.dico 89
+.mar   °¢kj¯
+dff   t\^ete
+inf   ML
+so   marpha.dico 89
+.mar   °¢°kjuò
+dff   mouton
+inf   ML
+so   marpha.dico 89
+.mar   °¢'¢¢kjaò-mu
+var   kja-go
+dff   pleurer
+inf   M
+so   marpha.dico 90
+.mar   ¢¢'¢¢kjo-wa
+dff   labourer
+inf   Z
+so   marpha.dico 90
+.mar   °¢'¢¢kjo-dz·-mu  [[°¢'¢¢'¢¢kjo-dz·-mu
+dff   gu\'erir
+cf   ? caus de 'beau' (? 'rendre bon')
+inf   M
+so   marpha.dico 90
+.mar   ªª'ªÁgjoÚ-mu
+var   ªÁ'ªª <M>
+dff   beau
+cf   gu\'erir (? allofame)
+inf   sM
+so   marpha.dico 90
+.mar   °¢'¢¢kjuò-w¯
+dff   casser (ma\"is)
+inf   Z
+so   marpha.dico 90
+.mar   °¢'¢¢kj¯-mu
+dff   d\'emanger
+inf   sM
+so   marpha.dico 90
+.mar   °°'°°kji-kji-wa  [[°°'°°'¢¢kjikji-wa
+dff   sucr\'e
+inf   TB
+so   marpha.dico 90
+.mar   ÁÁ'ªªkjaÚ³-ba
+dff   \'etirer qqch.
+inf   ML
+so   marpha.dico 90
+.mar   °°'¢¢kjor-wa
+var   °°'¢¢kj¯r-wa
+dff   traire
+inf   FTB
+so   marpha.dico 90
+.mar   °£'¢¢kjo³-b¯
+var   °°'¢¢kjo³-b¯ <TB>
+dff   dur
+inf   M
+so   marpha.dico 90
+.mar   ¢¢'££kju³-mu
+var   ¢¢'££kju³-mo
+dfn   amilo
+dff   acide
+inf   TB
+so   marpha.dico 90
+.mar   °°'°¢kj¯m-pa
+var   °°'°¢ø¯m-ba <Z, mar dic 120>
+dff   ruminer
+inf   ML
+so   marpha.dico 90
+.mar   ªª'ªªkj¯Úm-ba
+dff   mettre tika
+inf   M
+so   marpha.dico 90
+.mar   ¢¢'¢¢kjaòmo
+dff   couteau de m\'etier \`a tisser
+inf   FP
+so   marpha.dico 91
+.mar   ªª'¢¢gjamba
+dff   joue
+so   marpha.dico 91
+.mar   Xkjem
+dff   chang (honor.)
+inf   ML
+so   marpha.dico 91
+.mar   ÁÁgjaÚ³
+dff   pain
+inf   sM
+so   marpha.dico 91
+.mar   ÁÁgjuÚ³
+dff   vall\'ee
+inf   ML
+so   marpha.dico 91
+.mar   °¢kj¯m
+dff   chemin
+inf   ML
+so   marpha.dico 91
+.mar   °ªkwe
+dfn   mauri
+dff   abeille (?)
+inf   sM
+so   marpha.dico 92
+.mar   °ªkwe
+dff   chant
+inf   sM
+so   marpha.dico 92
+.mar   °Ámi
+dff   feu
+inf   ML
+so   marpha.dico 96
+.mar   °Ámi
+dff   oeil
+inf   ML
+so   marpha.dico 96
+.mar   £miÚ
+quot   miÚ
+dff   homme
+inf   ML
+so   marpha.dico 96
+.mar   °¢°me
+dff   fl\`eche
+inf   ML
+so   marpha.dico 96
+.mar   °¢me
+dff   vache
+inf   ML
+so   marpha.dico 96
+.mar   °Áme
+dff   queue
+inf   ML
+so   marpha.dico 96
+.mar   ªÁmaÚ
+quot   ªÁmÚaÚ
+dff   gendre
+so   marpha.dico 96
+.mar   ªÁmo
+dff   fant\^ome
+so   marpha.dico 96
+.mar   ªÁmoÚ
+dff   nuage
+so   marpha.dico 96
+.mar   °¢°m¯i
+dff   buffle
+inf   ML
+so   marpha.dico 96
+.mar   °¢°m¯
+dfn   ni³alo
+dff   petit bambou
+so   marpha.dico 96
+.mar   °Ámuò
+dff   ciel
+inf   ML
+so   marpha.dico 96
+.mar   ¢¢'££meò-w¯
+dff   questionner
+inf   M
+so   marpha.dico 97
+.mar   ¢¢'££m¿-mo
+var   ma-mo <ML>
+dff   d\'esirer, aimer qqch.
+inf   M
+so   marpha.dico 97
+.mar   ¢¢'¢¢mu-mu
+dff   \^etre
+so   marpha.dico 97
+.mar   ÁÁ'££m¯-dzi
+dff   perdre
+inf   M
+so   marpha.dico 97
+.mar   °¢ma³
+dff   tigre
+inf   B
+so   marpha.dico 98
+.mar   £maÚ³
+quot   maÚ³
+dff   r\^eve
+inf   B
+so   marpha.dico 98
+.mar   Xmun
+dff   nuit
+so   marpha.dico 98
+.mar   °¢m¯r
+dff   or
+so   marpha.dico 98
+.mar   ªÁm¯r
+dfn   ghyu
+dff   beurre
+so   marpha.dico 98
+.mar   °°'¢¢min-dzi-  [[°°'¢¢'££min-dzi-mu
+dff   m\^urir
+inf   M
+so   marpha.dico 99
+.mar   ªÁ'££maÚr-wa
+dfn   pelne
+dff   exprimer huile
+so   marpha.dic 99
+.mar   °°'¢¢migi
+dff   ? fum\'ee
+so   marpha.dico 100
+.mar   °°'¢¢migi
+dff   larme
+so   marpha.dico 100
+.mar   °£'¢¢mipra
+dff   fusil
+so   marpha.dico 100
+.mar   ¢¢'¢¢mipra
+dff   cendres
+so   marpha.dico 100
+.mar   °°'¢¢more
+var   ¢¢'¢¢mo³æe <TB>
+dff   moustache
+inf   ML
+so   marpha.dico 100
+.mar   ££'££momo
+var   ££'££m¯m¯
+dff   femelle
+inf   TB
+so   marpha.dico 100
+.mar   °°'¢¢mjo-dzi-  [[(££k¾jur) °°'¢¢'££mjo-dzi-mu
+dff   se retourner
+inf   ML
+so   marpha.dico 101
+.mar   ÁÁ'ªªmjaÚ³-p¯
+var   ªª'ªÁmjaÚ³-p¯ <ML>
+dff   go\^uter
+inf   M
+so   marpha.dico 102
+.mar   °£mwi
+dff   grosseur au cou des poulet
+inf   mM
+so   marpha.dico 104
+.mar   Xmwi
+dff   argent
+inf   P
+so   marpha.dico 104
+.mar   °°'°°mwe-ba
+dff   poss\'eder (par un d\'emon ªÁmo)
+so   marpha.dico 104
+.mar   ÁÁ'ÁÁmwe-wa
+dff   marcher sur
+inf   ML
+so   marpha.dico 104
+.mar   °°mre
+dff   deuil
+so   marpha.dico 107
+.mar   °¢mra
+quot   °¢m^a
+dff   herbe
+inf   ML
+so   marpha.dico 107
+.mar   °¢mro
+dff   porte
+inf   ML
+so   marpha.dico 107
+.mar   °°'°¢mrän-dzi
+dff   \^etre rassasi\'e
+inf   M
+so   marpha.dico 108
+.mar   °°'°°mra³-dzi
+dff   voir
+so   marpha.dico 108
+.mar   °¢mr¯m
+dff   coffre \`a grains
+inf   FP
+so   marpha.dico 109
+.mar   °°'¢¢mrame
+dff   paon
+inf   TB
+comp   WT rma-bya
+so   marpha.dico 109
+.mar   £mlaÚ
+quot   mlaÚ
+dfn   cÑamal
+dff   riz d\'ecortiqu\'e
+so   marpha.dico 110
+.mar   °°'¢¢mle-dzi-  [[°°'¢¢'¢¢mle-dzi-mu
+dff   oublier
+so   marpha.dico 110
+.mar   °°'¢¢mlo-dzi
+dff   piquer
+so   marpha.dico 110
+.mar   °°ne
+dfn   than
+dff   temple
+inf   ML
+so   marpha.dico 113
+.mar   ÁÁnaÚ
+dff   pus
+inf   mM
+so   marpha.dico 113
+.mar   £naÚ
+quot   naÚ
+dff   for\^et
+inf   ML
+so   marpha.dico 113
+.mar   °¢°n~o
+dff   a\"il
+inf   ML
+so   marpha.dico 113
+.mar   °¢no
+dff   morve
+inf   mM
+so   marpha.dico 113
+.mar   °¢°n¯
+dff   nez
+inf   ML
+so   marpha.dico 113
+.mar   °¢n¯
+dff   lisse (de m\'etier)
+inf   ML
+so   marpha.dico 113
+.mar   °°'°°ne-dje-  [[°°'°°'ÁÁne-dje-wa
+dff   \^etre d\'ego\^ut\'e
+inf   Z
+nb   j en exposant
+so   marpha.dico 115
+.mar   °£'££na-wa
+dff   porter
+so   marpha.dico 115
+.mar   ÁÁ'ÁÁnaÚ-wa
+dff   accoucher ; d\'eposer
+so   marpha.dico 115
+.mar   °°'°°na-wa
+dff   \^etre malade, souffrir
+so   marpha.dico 115
+.mar   °°'££nu-wa
+dff   dormir
+inf   ML
+so   marpha.dico 115
+.mar   ÁÁ'ÁÁna³-dzi
+var   na³-o
+dff   donner (hon. donneur)
+so   marpha.dico 116
+.mar   °°'££na³-mu
+dff   renifler
+inf   M
+so   marpha.dico 116
+.mar   ¢¢'¢¢na³-ba
+dff   couver
+inf   M
+cf   °°'¢¢na³-ba 'marcher sur'
+so   marpha.dico 116
+.mar   °°'¢¢na³-ba
+dff   marcher sur
+cf   ¢¢'¢¢na³-ba 'couver'
+so   marpha.dico 116
+.mar   ¢¢'¢¢na³-p¯ (n¯m)
+var   ¢¢'¢¢n¯Ú³-p¯
+dff   faire jour
+comp   WT snang-ba 'to shine' <Jas>
+so   marpha.dico 116
+.mar   °°'°°naliò
+var   ¢¢'°°naliò <mM>
+dfe   earwax
+dff   c\'erumen
+nb   °°'ß°°
+so   marpha.dico 117
+.mar   °°'°°naga
+dff   poulet
+inf   TB
+so   marpha.dico 117
+.mar   °°'°°nokor
+dff   chat
+inf   TB
+so   marpha.dico 117
+.mar   °°'°°n¯li
+dff   van
+inf   mM
+so   marpha.dico 117
+.mar   °°'°°njeli
+dff   ganglions
+comp   Ris. Ánali Ásja
+so   marpha.dico 119
+.mar   Xnju³a
+var   øu³a <ML>
+dfn   nibuwa
+dff   gros citron
+nb   prob. empr. n\'ep.
+so   marpha.dico 119
+.mar   °¢°øi
+dff   deux
+inf   ML
+so   marpha.dico 120
+.mar   °¢°øi
+dfn   mama-ko swasni
+dff   femme de l'oncle maternel
+inf   ML
+so   marpha.dico 120
+.mar   °Áøi
+dff   nous (excl.)
+inf   ML
+so   marpha.dico 120
+.mar   °¢øe
+dff   foie
+inf   ML
+so   marpha.dico 120
+.mar   ÁÁøuÚ
+dff   lait
+var   ªÁøŸu <FTB>
+so   marpha.dico 120
+.mar   °°'°°øim-b¯
+var   °°'¢¢øim-b¯
+dff   \^etre vieux (v\^etement)
+inf   sM, ML
+so   marpha.dico 120
+.mar   ªÁ'££øiÚm-b¯
+dff   avoir peur
+inf   sM
+so   marpha.dico 120
+.mar   °°'¢¢øän-dze
+var   ¢¢'¢¢øäm-mo
+dff   accepter
+inf   M
+so   marpha.dico 120
+.mar   Xøan-l~a...
+dff   \'ecouter
+so   marpha.dico 120
+.mar   °°'££ø¯m-ba
+var   °°'¢¢kj¯m-pa <ML>
+dff   ruminer
+inf   Z
+nb   inf. h\'esite
+so   marpha.dico 120
+.mar   ªÁ'££ø¯Úp-p¯
+dff   exprimer le jus
+inf   Z
+nb   id. øaÚp-p¯ 'malaxer pour laver' ?
+so   marpha.dico 120
+.mar   £øaÚp-p¯
+quot   øaÚp-p¯
+dff   malaxer pour laver
+inf   ML
+nb   id. ø¯Úp-p¯ 'exprimer le jus' ?
+so   marpha.dico 120
+.mar   °°'°°'°°øindawa ªªna³
+dff   aisselle
+so   marpha.dico 121
+.mar   £øäÚr
+quot   øäÚr
+dff   rides
+so   marpha.dico 121
+.mar   °°'££øalwa
+dff   enfer
+so   marpha.dico 121
+.mar   °°'°¢øokor
+dff   tempe
+so   marpha.dico 121
+.mar   °£'££øŸumu³
+dff   souris
+inf   TB
+so   marpha.dico 121
+.mar   °°'££øi-tsi
+dfn   poknu
+dfe   spill
+dff   renverser
+inf   FTB, M
+so   marpha.dico 121
+.mar   °°'¢¢øe¯ò-dzi
+var   ¢¢'¢¢øe¯ò-dzi <M, ML>
+dff   rire
+inf   FTB
+so   marpha.dico 121
+.mar   ££'¢¢øeò-dzi
+var   °°'¢¢øeò-dzi <ML>
+dff   m\^acher
+inf   FTB
+so   marpha.dico 121
+.mar   ÁÁ'ÁÁøeÚ-wa  [[(ÁÁtoÚ) ÁÁ'ÁÁøeÚ-wa (££'££la-dzi)
+dff   approcher de l\`a-bas
+inf   Z
+comp   Tag. atterrir
+nb   Auxiliaire. Semble prendre le ton du radical verbal
+  pr\'ec\'edent. Voir (°°s¯)°°'°°øe¯wa
+so   marpha.dico 121
+.mar   °°s¯  [[°°s¯ °°'°°øe¯wa
+dff   accompagner
+inf   Z
+so   marpha.dico 121
+.mar   °°'°°øe¯wa  [[(°°s¯) °°'°°øe¯wa
+dff   accompagner
+inf   Z
+comp   Tag. atterrir *nat
+cf   ? jäwa 'aller'
+nb   ¯ exposant
+nb   Auxiliaire. Semble prendre le ton du radical verbal
+  pr\'ec\'edent. Voir (ÁÁtoÚ)ÁÁ'ÁÁøeÚ-wa
+so   marpha.dico 121
+.mar   ÁÁ'ÁÁøaÚ-wa
+dff   appeler
+inf   ML
+so   marpha.dico 121
+.mar   °°³o
+dff   fontanelle
+so   marpha.dico 122
+.mar   ªÁ³oÚ
+dff   front
+so   marpha.dico 122
+.mar   °¢°³¯
+dff   cinq
+inf   ML
+so   marpha.dico 122
+.mar   °¢³¯
+dff   moi, je
+inf   ML
+so   marpha.dico 122
+.mar   £³¯Ú
+quot   ³¯Ú
+dff   tambour
+so   marpha.dico 122
+.mar   °°'££³a-wa
+var   °£'££³a-wa
+dff   exorciser
+comp   Ris. Á³aò
+so   marpha.dico 123
+.mar   ÁÁ'ÁÁ³oò-wa
+dff   faire frire
+inf   M
+nb   ò ?
+so   marpha.dico 123
+.mar   °°'°°³a³-dzi
+dff   rester debout
+inf   ML
+so   marpha.dico 124
+.mar   °£'££³oi-mu  [[(°°tûš)°£'££³oi-mu
+quot   (°°tÆjš)°£'££³oi-mu
+dff   \^etre d\'ego\^ut\'e
+inf   M
+so   marpha.dico 124
+.mar   °°'°°³¯m-mu
+dff   bon, sal\'e
+inf   TB
+so   marpha.dico 124
+.mar   ªÁ'ÁÁ³¯Úm-mo
+dff   trop sal\'e
+inf   M
+so   marpha.dico 124
+.mar   ¢¢'££³¯m-b¯
+dff   emprunter (objet)
+inf   M
+so   marpha.dico 124
+.mar   °Á³wi
+dfn   mama ko chora
+dff   cousin crois\'e (MoBrS)
+inf   ML
+so   marpha.dico 126
+.mar   °¢°ja
+dff   yack
+inf   ML
+so   marpha.dico 130
+.mar   °Ája
+dff   main
+inf   ML
+so   marpha.dico 130
+.mar   °¢°ju
+dff   manche d'outil
+inf   ML
+so   marpha.dico 130
+.mar   °¢juò
+dff   turquoise
+inf   ML
+so   marpha.dico 130
+.mar   Xja³ (ra)
+dff   bouc
+inf   FP
+so   marpha.dico 131
+.mar   ÁÁjuÚòl
+quot   ÁÁjŸuÚòl
+dff   village
+so   marpha.dico 131
+.mar   °°'££jär-pa
+dff   astringent
+inf   FP
+nb   effet de timur sur langue
+so   marpha.dico 131
+.mar   °°'¢¢ja³-mu
+var   ¢°'°¢ja³-mu <M>
+dff   l\'eger
+inf   sM
+nb   ß¢°'°¢ja³-mu
+so   marpha.dico 131
+.mar   ¢°'°¢ja³-dzi
+dff   trouver
+inf   M
+so   marpha.dico 131
+.mar   ªÁ'ªªjaÚ³-b¯
+dff   desserrer
+inf   M
+so   marpha.dico 131
+.mar   ÁÁ'££jaÚl-dzi
+dff   mourir (hon.)
+inf   ML
+so   marpha.dico 131
+.mar   ¢¢'¢¢jä-wa
+var   ¢¢'¢¢ja-wa
+var   °°'¢¢j¯-wa
+dff   aller
+so   marpha.dico 132
+.mar   ¢¢'¢¢jo-dzi
+dff   suffire
+inf   M
+so   marpha.dico 132
+.mar   ÁÁ'£ªjo-wa
+dff   faire frire le pain
+inf   TB
+so   marpha.dico 132
+.mar   ÁÁ'ÁÁjoÚ-wa
+dff   touiller la boule de farine
+nb   touiller le dhero
+so   marpha.dico 132
+.mar   °°'°°ju-dze
+dff   couler (morve)
+nb   dze = dzi?
+so   marpha.dico 132
+.mar   ¢¢'¢£ju-wa
+dff   descendre
+inf   Z
+so   marpha.dico 132
+.mar   ££'££ju-dzi
+quot   ££'££jŸu-dzi
+dff   pleuvoir, neiger ...
+so   marpha.dico 132
+.mar   °°'°°j¯-wa
+var   °°'££j¯-wa
+dff   aller
+so   marpha.dico 132
+.mar   ¢¢'¢£jum-pa
+quot   ¢¢'¢£jŸum-pa
+dff   pierre
+inf   ML
+so   marpha.dico 132
+.mar   °°'¢¢wi-wa
+dff   pousser
+inf   Z
+so   marpha.dico 136
+.mar   °°'°¢wo³-ba
+dff   poss\'eder (d\'emon)
+nb   ? p\'en\'etrer
+so   marpha.dico 137
+.mar   ¢°'¢¢'££won-dzi-mu
+dff   ? montrer
+phr   (liæo) ¢°'¢¢'££won-dzi-mu 'tourner le dos'
+so   marpha.dico 137
+.mar   ªÁ'££w~o³-ba
+dfn   phakÑaune
+dff   faire la cour ?
+so   marpha.dico 137
+.mar   Xhri
+quot   h¡ŸÜi
+dff   doigt
+inf   ML
+nb   l'accent circonflexe souscrit sous r r\'etrof.
+so   marpha.dico 138
+.mar   °¢hru
+quot   °¢h¡ŸÜu
+dff   fil
+comp   Ris. ªæup
+nb   l'accent circonflexe souscrit sous r so	marpha.dico 138
+.mar   °¢hru
+quot   °¢h¡ŸÜu
+dff   sueur
+comp   Ris. ªæuò
+nb   l'accent circonflexe souscrit sous r so	marpha.dico 138
+.mar   Xhra³-ba
+quot   hŸÜa³-ba
+dff   enfler
+so   marpha.dico 139
+.mar   °°'££hrum-ba
+quot   °°'££ŸÜ¾um-ba
+dfn   bÑaklo
+dff   \'epais (tissu)
+nb   ? Æ
+so   marpha.dico 139, cah 72:27
+.mar   ¢°re
+dff   c\^ote (os)
+inf   mM
+so   marpha.dico 144
+.mar   £roÚ
+quot   roÚ
+dff   ami
+so   marpha.dico 144
+.mar   °¢°ru
+dff   corne
+so   marpha.dico 144
+.mar   °Ár¯
+dff   ch\`evre
+so   marpha.dico 144
+.mar   °°'°¢ri-w¯
+dff   gratter
+inf   FTB
+nb   cf. ªÁ'££reÚ-w¯ 'gratter' <Z>
+so   marpha.dico 146
+.mar   ªÁ'££reÚ-w¯
+dff   gratter
+inf   Z
+nb   cf. °°'°¢ri-w¯ 'gratter' <FTB>
+so   marpha.dico 146
+.mar   °°'¢¢re-wa
+dff   s'arr\^eter
+inf   ML
+so   marpha.dico 146
+.mar   ¢¢'°°reò-wa
+dff   se lever
+inf   ML
+so   marpha.dico 146
+.mar   °°'¢¢ra-wa
+var   °°'°°r¯-wa
+dff   tisser
+inf   M
+so   marpha.dico 146
+.mar   ÁÁ'ÁÁraÚ-wa
+dff   habile
+nb   cf. ¯
+so   marpha.dico 146
+.mar   °°'¢¢ro-wa
+dff   gonfler ? (ganglions njeli)
+inf   M
+so   marpha.dico 146
+.mar   ¢¢'°°ro-w¯
+dfn   patalo
+dff   peu \'epais (liquide)
+inf   M
+so   marpha.dico 146
+.mar   °°'¢¢ro-wa
+dff   chercher dans un tas
+inf   ML
+so   marpha.dico 146
+.mar   ÁÁ'ÁÁro-mu
+dfn   bajÑaune
+dff   jouer d'un instrument
+inf   M
+so   marpha.dico 146
+.mar   °°'¢¢r·-ba
+dff   gratter
+inf   mM
+so   marpha.dico 146
+.mar   °°'°°r¯-wa
+var   °°'¢¢ra-wa
+dff   tisser
+so   marpha.dico 146
+.mar   Xr¯-w¯
+dff   savoir faire
+inf   H
+so   marpha.dico 146
+.mar   °°'££ro-wa
+dff   faire des fruits
+inf   Z
+so   marpha.dico 146
+.mar   ÁÁ'££r·ò-to
+dff   r\'eclamer
+inf   mM
+nb   ? riò
+so   marpha.dico 146
+.mar   ªª'ªªrum-ba
+dff   long
+so   marpha.dico 147
+.mar   °°'°¢rum-ba
+dff   court
+so   marpha.dico 147
+.mar   ªÁ'££r¯m-ba
+dff   collant
+inf   TB
+so   marpha.dico 147
+.mar   °°'ªªr¯m-b¯
+dff   monter m\'etier
+so   marpha.dico 147
+.mar   ÁÁ'ªÁriÚnta
+dff   meule
+inf   FP
+so   marpha.dico 147
+.mar   °¢hÂi
+dff   excr\'ements
+inf   mM
+comp   WT lci-ba <Jas>
+so   marpha.dico 150
+.mar   °¢hÂa
+dff   grande feuille
+so   marpha.dico 150
+.mar   °¢hÂa
+dff   dieu
+so   marpha.dico 150
+.mar   XhÂa-wa
+dff   \^oter (\'ecume du riz)
+nb   cf. ÁÁhÂj 'jeter' ğ
+so   marpha.dico 150
+.mar   XhÂu
+quot   XhÂju
+dff   \`a l'envers
+phr   XhÂju la-dzi
+var   hÂju mu-mu
+comp   Ák¾lup (Ris.)
+dfphr   mettre ˆ l'envers
+nb   j en exposant
+so   marpha.dico 150
+.mar   ¢¢'¢¢hÂa-ba
+quot   ¢¢'¢¢hÂja-ba
+var   ¢¢'¢¢hÂja-w¯
+var   °°'¢¢ <FTB, M>
+dff   jeter, renoncer
+inf   ML
+comp   Ák¾laba (Ris.)
+so   marpha.dico 154
+.mar   °¢l¯
+dff   mois
+inf   K, B
+so   Voc Thak I:192
+.mar   °°li
+var   °¢li <mM>
+dff   visage
+inf   ML
+so   marpha.dico 156
+.mar   °Áli
+dff   \'echelle
+inf   ML
+so   marpha.dico 156
+.mar   °¢°le
+dff   langue
+inf   ML
+comp   WT lce
+so   marpha.dico 156
+.mar   °¢lo
+dff   chaud
+inf   ML
+so   marpha.dico 156
+.mar   £loÚ
+quot   loÚ
+dff   ann\'ee
+inf   ML
+so   marpha.dico 156
+.mar   °¢lu
+dfn   nÑagh
+dff   dieu aquatique
+inf   ML
+so   marpha.dico 156
+.mar   °°lói
+dff   faux corps
+nb   ? lwi ?
+comp   WT blus 'ransom' <Jas>
+so   marpha.dico 156
+.mar   ªÁlóÚi
+dff   corps
+comp   WT lus <Jas>
+so   marpha.dico 156
+.mar   ªÁl¯Ú
+dfn   ukhalo
+dff   mont\'ee
+so   marpha.dico 156
+.mar   ªª'ªÁliÚ-mu
+var   ªª'ªÁliÚ-mo
+dff   lourd
+inf   sM / M
+so   marpha.dico 157
+.mar   Xlo-wa
+dff   \'etudier
+so   marpha.dico 157
+.mar   °¢'¢¢lo-wa
+dff   faire chauffer
+inf   M
+so   marpha.dico 157
+.mar   ªÁ'ªªlo-wa
+var   ÁÁ'ªÁ'lo-wa <ML> ğ
+dff   baratter le th\'e
+inf   M
+so   marpha.dico 157
+.mar   ªª'ªÁluÚ-w¯
+dff   verser
+inf   Z
+so   marpha.dico 157
+.mar   °°'££liò-w¯
+dff   acheter
+inf   M
+so   marpha.dico 157
+.mar   °°lin
+dff   neige
+inf   ML
+so   marpha.dico 158
+.mar   °°'°°lim-mu
+var   °°'¢¢lim-mu
+dfn   mitho
+dff   savoureux
+so   marpha.dico 159
+.mar   ÁÁ'ªªläm-mu
+dff   l\'echer
+inf   M
+nb   ? ¯ä
+so   marpha.dico 159
+.mar   °°'°¢lumts¾i
+dff   graisseux
+inf   M
+so   marpha.dico 159
+.mar   °¢lja
+dff   place
+so   marpha.dico 160
+.mar   °¢ljo
+quot   °¢lio
+dff   poutre
+inf   ML
+so   marpha.dico 160
+.mar   ¢¢'¢¢lja-wa
+var   ¢¢'¢¢lja-w¯
+dff   fendre du bois
+inf   M
+so   marpha.dico 160
+.mar   °°'°¢lja-wa
+dff   s'enfuir
+inf   Z
+nb   ? cf ¢¢'¢¢hÂa-ba 'jeter, renoncer'
+so   marpha.dico 160
+.mar   ªÁ'ÁÁljaÚ-go
+var   ªÁ'ªªlja-wa
+dff   distribuer \`a tous, partager
+inf   M
+so   marpha.dico 160
+.mar   °°lj¯p
+dff   poumon
+inf   mM
+comp   tam gl¯pÆja ?
+so   marpha.dico 161
+.mar   °Á'ÁÁlja³-ba
+dff   jouer
+inf   ML
+so   marpha.dico 161
+.mar   ªª'ªÁljoÚ³-ba
+dff   avaler
+inf   M
+so   marpha.dico 161
+.mar   ÁÁ'¢¢lja³-ma
+var   ljaò-m¯ <H>
+dff   parole
+inf   ML
+so   marpha.dico 162
+.mar   °°sa
+dff   tr\`es
+inf   sM
+so   marpha.dico 163
+.mar   °¢°su
+dff   qui?
+inf   ML
+so   marpha.dico 163
+.mar   °¢°s¯
+dff   terre
+inf   ML
+so   marpha.dico 163
+.mar   °Ás¯
+dff   dent
+inf   ML
+so   marpha.dico 163
+.mar   °¢sa³
+dff   encens de dhubi
+so   marpha.dico 164
+.mar   °°su³
+dff   bouche
+so   marpha.dico 164
+.mar   °¢s¯m
+dff   \^ame
+so   marpha.dico 164
+.mar   °¢s¯r
+dff   \'etoiles
+inf   ML
+so   marpha.dico 164
+.mar   °°'££sa-wa
+dff   mener \`a la corde
+inf   ML
+so   marpha.dico 165
+.mar   ££'££sa-wa  [[(°°ø¯m) ££'££sa-wa
+dff   gros (homme)
+inf   ML
+so   marpha.dico 165
+.mar   °°ø¯m  [[(°°ø¯m) ££'££sa-wa
+dff   gros (homme)
+inf   ML
+so   marpha.dico 165
+.mar   ÁÁ'ªªsaÚ-wa
+dff   de bonne qualit\'e
+inf   TB
+so   marpha.dico 165
+.mar   °°'°°so-wa
+dff   fou
+inf   K
+so   marpha.dico 165
+.mar   °°'°°so-wa
+var   °°'¢¢so-wa <M>
+dff   retourner qqch.(le pain qui cuit)
+inf   ML
+so   marpha.dico 165
+.mar   °°'¢¢so-mu
+var   ¢¢'¢¢so-…o <M>
+var   ÁÁ'ÁÁ
+dff   fabriquer
+inf   ML
+so   marpha.dico 165
+.mar   ¢¢'¢¢s·-ba
+var   ¢¢'°ªsiò-wa <M>
+var   °°'¢¢syò-w¯ <FTB>
+dff   r\'ecurer
+nb   ? swi ?
+so   marpha.dico 165
+.mar   ¢¢'¢¢s¯i-wa
+dff   trier
+dff2   ? faire sauter pour remuer
+inf   M
+nb   (? Tukche)
+so   marpha.dico 165
+.mar   ¢¢s¯  [[¢¢'¢¢'¢¢s¯ øe¯-wa
+dff   accompagner
+inf   Z
+so   marpha.dico 165
+.mar   ¢¢'¢¢øe¯-wa  [[¢¢'¢¢'¢¢s¯ øe¯-wa
+dff   accompagner
+inf   Z
+nb   ¯ en exposant
+so   marpha.dico 165
+.mar   ¢¢'°ªsiò-wa
+var   °Á'ÁÁsiò-wa
+var   ¢¢'¢¢s·-ba
+var   °°'¢¢syò-w¯ <FTB>
+dff   r\'ecurer
+inf   M
+so   marpha.dico 165
+.mar   Xseò-wa
+var   s¯i-wa
+dff   tuer
+inf   M
+so   marpha.dico 165
+.mar   °°'¢¢sei-wa
+dff   \'elever
+inf   M
+so   marpha.dico 165
+.mar   °°'¢¢syò-w¯
+var   ¢¢'°ªsiò-wa <M>
+var   ¢¢'¢¢s·-ba
+dff   r\'ecurer
+inf   FTB
+so   marpha.dico 165
+.mar   °°'°¢sa³-mo  [[(°°k¾am)°°'°¢sa³-mo
+dff   propre
+inf   TB
+so   marpha.dico 166
+.mar   °°'°°k¾am-sa³  [[(°°k¾am)°°'°¢sa³-mo
+dff   propre
+inf   TB
+so   marpha.dico 166
+.mar   °°'££sa³-ba
+var   ¢¢'¢¢sa³-ba <ML>
+dff   faire s\'echer
+inf   Z
+so   marpha.dico 166
+.mar   °°'¢¢sam-pa
+dff   neuf
+inf   ML
+so   marpha.dico 166
+.mar   °°'°°s¯m-p¯
+dff   neuf
+inf   sM
+so   marpha.dico 166
+.mar   ¢¢'¢¢sol-ba
+var   °°'¢¢sol-ba
+dff   manger (hon.)
+inf   M, ML
+so   marpha.dico 166
+.mar   °°'¢¢s¯r-wa
+dff   fleurir
+inf   Z
+so   marpha.dico 166
+.mar   °°'°°'°°s~¿³guli(ÁÁgja³)
+dff   pain en couronne
+inf   sM
+so   marpha.dico 167
+.mar   °°'¢¢su³k¾a
+dff   l\`evres
+inf   ML
+so   marpha.dico 167
+.mar   ªª'ÁÁsuÚkp¯
+dff   corps
+inf   mM
+so   marpha.dico 167
+.mar   °°'¢¢s¯æu
+dff   bracelet
+so   marpha.dico 167
+.mar   °°'°°swi-ba
+var   s·-ba ?
+dff   r\'ecurer
+so   marpha.dico 170
+.mar   °¢ûi
+quot   °¢Æi
+var   °°Æiò <M>
+dff   sable
+inf   ML
+so   marpha.dico 173
+.mar   °°'¢¢ûi-wa
+quot   °°'¢¢Æi-wa
+dff   coiffer
+so   marpha.dico 174
+.mar   °¢'¢¢ûi-dzi-mu  [[°¢'¢¢'¢¢ûi-dzi-mu
+quot   °¢'¢¢'¢¢Æi-dzi-mu
+dff   mourir
+so   marpha.dico 174
+.mar   °¢ûin
+quot   °¢Æin
+dff   ongle
+inf   mM
+so   marpha.dico 175
+.mar   Xûin
+quot   Æin
+dfn   daura
+dff   bois
+so   marpha.dico 175
+.mar   °°'¢¢ûim-b¯
+quot   °°'¢¢Æim-b¯
+dff   ranger
+inf   M
+so   marpha.dico 175
+.mar   °°'££ûim-b¯
+quot   °°'££Æim-b¯
+var   ¢¢'¢¢Æin-dzi
+dff   refroidir
+inf   M
+so   marpha.dico175
+.mar   ? sum ğ
+dff   ? dormir
+so   marpha.dico 175
+.mar   °¢°ûe
+quot   °¢°Æje
+dff   pou
+inf   ML
+so   marpha.dico 177
+.mar   °¢°û¯ä
+quot   °¢°Æj¯ä
+dff   riz (honor.)
+cf   °°ûeò
+so   marpha.dico 177
+.mar   °¢°û¯
+quot   °¢°Æj¯
+dff   viande
+so   marpha.dico 177
+.mar   °°ûeò
+quot   °°Æjeò
+dff   riz (honor.)
+inf   ML, sM
+cf   °¢°û¯ä
+so   marpha.dico 177
+.mar   °°ûoò
+quot   °°Æjoò
+dff   adverbe d'oubli
+inf   P
+comp   Ris. sjo³
+so   marpha.dico 177
+.mar   °°'££ûe-ba
+quot   °°'££Æje-ba
+var   Æjeò-w¯ <H>
+var   Æja-w¯ <H>
+dff   savoir
+inf   ML
+so   marpha.dico 177
+.mar   ªÁ'££ûaò-w¯
+quot   ªÁ'££Æjaò-w¯
+dff   aller (honor.)
+inf   ML, H
+so   marpha.dico 178
+.mar   °°'°°û¿-wa
+quot   °°'°°Æj¿-wa
+dff   danser, tourner sur soi-m\^eme
+so   marpha.dico 178
+.mar   °¢'¢¢'¢¢ûo-dzi-mu
+quot   °¢'¢¢'¢¢Æjo-dzi-mu
+dff   rencontrer?
+inf   M
+nb   °°'°°s¯rm¯ rhume
+so   marpha.dico 178
+.mar   °°'¢¢'££ûu-dzi-mu
+quot   °°'¢¢'££Æju-dzi-mu
+dff   humide
+inf   TB
+so   marpha.dico 178
+.mar   °°'¢¢ûuò-w¯
+quot   °°'¢¢Æjuò-w¯
+var   °°'¢¢Æjyò-w¯
+var   °°'ªª <ML>
+dff   enfiler
+inf   M
+so   marpha.dico 178
+.mar   ÁÁ'ÁÁûu-to
+quot   ÁÁ'ÁÁÆjuto
+dff   s'asseoir (honor.)
+inf   ML
+nb   ÁÁ'ÁÁÆjÔuto
+so   marpha.dico 178
+.mar   °°'¢¢ûäl-ba
+quot   °°'¢¢Æjäl-ba
+dff   laver la vaisselle
+inf   M
+nb   cf. °°'¢¢û¯l-ba 'rincer'
+nb   cf. °°'¢¢ûal-w¯ 'laver'
+so   marpha.dico 179
+.mar   °°'¢¢û¯l-ba
+quot   °°'¢¢Æj¯l-ba
+dff   rincer
+inf   M
+nb   cf. °°'¢¢ûäl-ba 'laver la vaisselle'
+nb   cf. °°'¢¢ûal-w¯ 'laver'
+so   marpha.dico 179
+.mar   °°'¢¢ûal-w¯
+quot   °°'¢¢Æjal-w¯
+dff   laver
+inf   FTB
+nb   cf. °°'¢¢ûäl-ba 'laver la vaisselle'
+nb   cf. °°'¢¢û¯l-ba 'rincer'
+so   marpha.dico 179
+.mar   °°ûa³ ££'££ka-dzi
+quot   °°'££'££Æja³ ka-dzi
+dff   vomir
+inf   ML
+so   marpha.dico 179
+.mar   °°'££ûal-mu
+quot   °°'££Æjal-mu
+dff   avoir la diarrh\'ee
+inf   mM, ML
+cf   °°'¢¢ûyr-wa
+so   marpha.dico 179
+.mar   Xûor-ba
+quot   Æjor-ba
+dff   couler (larmes)
+so   marpha.dico 179
+.mar   XûuÚr-dzi
+quot   ÆjuÚr-dzi
+dff   \`a quatre pattes
+inf   ML
+so   marpha.dico 179
+.mar   °°'¢¢ûyr-wa
+quot   °°'¢¢Æjyr-wa
+dff   avoir la diarrh\'ee
+inf   M, ML
+cf   °°'££ûal-mu
+so   marpha.dico 179
+.mar   °¢ûo³  [[ (°°ja)°¢ûo³
+quot   (°°ja)°¢Æjo³
+dff   yack m\^ale
+inf   TB
+so   marpha.dico 179
+.mar   °°ja  [[ (°°ja)°¢ûo³
+quot   (°°ja)°¢Æjo³
+dff   yack
+inf   TB
+so   marpha.dico 179
+.mar   ÁÁ'ÁÁÀiÚ-mo
+dff   \^etre
+so   marpha.dico 186
+.mar   °°'¢¢a³-mu
+var   °°'¢¢am-ba <ML>
+dff   s'\'etirer
+inf   M
+so   marpha.dico 192
+.mar   Xo³-mu
+dff   faire \'echo
+so   marpha.dico 195
+.mar   °°ur
+dff   jaune
+inf   ML
+so   marpha.dico 199
+.mar   °°'°°urkum
+dff   pomme d'Adam
+inf   ML
+so   marpha.dico 200
