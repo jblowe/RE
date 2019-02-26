@@ -1,0 +1,119 @@
+
+git commit -m "starting over: need to to the backslash escape before the stedt font conversion"
+git push -v
+less MONRIS_1994.DAT 
+git status
+perl -i -pe 's/\\/#/g' *.DAT
+perl -i -pe 's/\\/#/g' *.RCN
+perl -i -pe 's/\\/#/g' *.PRM
+less MONRIS_1994.DAT 
+git status
+
+git clone https://github.com/jblowe/RE.git REgit
+cd REgit/RE7/DATA/RE_DATA_1994/
+
+perl -i -pe 's/\r//g' *.DAT
+perl -i -pe 's/\r//g' *.RCN
+perl -i -pe 's/\r//g' *.PRM
+
+git add *.DAT
+git add *.RCN
+git add *.PRM
+
+git commit -m "get rid of msdos newline \r everywhere"
+
+perl -i -pe 's/\\/#/g' *.DAT
+perl -i -pe 's/\\/#/g' *.RCN
+perl -i -pe 's/\\/#/g' *.PRM
+
+git add *.DAT
+git add *.RCN
+git add *.PRM
+
+git commit -m "protect backslash escapes from STEDT to unicode script"
+
+perl -i -pe 's/`/#/g' *.DAT
+perl -i -pe 's/`/#/g' *.RCN
+perl -i -pe 's/`/#/g' *.PRM
+
+git add *.DAT
+git add *.RCN
+git add *.PRM
+
+git commit  -m "protect backticks from STEDT to unicode script"
+
+vi STEDT5-U4Map-7.plx 
+mv STEDT5-U4Map-7.plx ..
+git checkout -- *
+git status
+cp ../STEDT5-U4Map-7.plx .
+git checkout -- ../STEDT5-U4Map-7.plx 
+rm unicode_conversion.log 
+perl STEDT5-U4Map-7.plx > unicode_conversion.log 2>&1
+
+perl -ne 'while (s/.*?(#..)//) { print "$1\n" }' *.DAT | sort | uniq -c > sequences.txt
+cp sequences.txt fix_sequences.py
+vi fix_sequences.py
+
+python fix_sequences.py ALLTHAK_1993.DAT	ALLTHAK_1993.DAT.fix
+python fix_sequences.py C794.DAT	C794.DAT.fix
+python fix_sequences.py FUZALL.PRM	FUZALL.PRM
+python fix_sequences.py MARPHA_1993.DAT	MARPHA_1993.DAT.fix
+python fix_sequences.py MM78.RCN	MM78.RCN.fix
+python fix_sequences.py MONGUR8_1994.DAT	MONGUR8_1994.DAT.fix
+python fix_sequences.py MONPRA8_1993.DAT	MONPRA8_1993.DAT.fix
+python fix_sequences.py MONRIS_1994.DAT	MONRIS_1994.DAT.fix
+python fix_sequences.py MONSAH_1992.DAT	MONSAH_1992.DAT.fix
+python fix_sequences.py MONTAG_1994.DAT	MONTAG_1994.DAT.fix
+python fix_sequences.py MONTUK_1991.DAT	MONTUK_1991.DAT.fix
+python fix_sequences.py MS75.RCN	MS75.RCN.fix
+python fix_sequences.py MS75TST.RCN	MS75TST.RCN.fix
+python fix_sequences.py SYANG_1994.DAT	SYANG_1994.DAT.fix
+python fix_sequences.py TAG6_1994Aug1.DAT	TAG6_1994Aug1.DAT.fix
+
+mv ALLTHAK_1993.DAT.fix ALLTHAK_1993.DAT
+mv C794.DAT.fix C794.DAT
+mv FUZALL.PRM.fix FUZALL.PRM
+mv MARPHA_1993.DAT.fix MARPHA_1993.DAT
+mv MM78.RCN.fix MM78.RCN
+mv MONGUR8_1994.DAT.fix MONGUR8_1994.DAT
+mv MONPRA8_1993.DAT.fix MONPRA8_1993.DAT
+mv MONRIS_1994.DAT.fix MONRIS_1994.DAT
+mv MONSAH_1992.DAT.fix MONSAH_1992.DAT
+mv MONTAG_1994.DAT.fix MONTAG_1994.DAT
+mv MONTUK_1991.DAT.fix MONTUK_1991.DAT
+mv MS75.RCN.fix MS75.RCN
+mv MS75TST.RCN.fix MS75TST.RCN
+mv SYANG_1994.DAT.fix SYANG_1994.DAT
+mv TAG6_1994Aug1.DAT.fix TAG6_1994Aug1.DAT
+
+perl -i -pe 's/\x1A//g' *.DAT
+perl -i -pe 's/\x1A//g' *.RCN
+perl -i -pe 's/\x1A//g' *.PRM
+
+git add *.DAT
+git add *.RCN
+
+git commit -m "recode french accented characters (i.e. backslash conventions)"
+
+perl Lex2XML.pl MARPHA_1993.DAT TEMP.mar.data.xml mar.xml.log mar
+perl Lex2XML.pl MONPRA8_1993.DAT TEMP.pra.data.xml pra.xml.log pra
+perl Lex2XML.pl MONRIS_1994.DAT TEMP.ris.data.xml ris.xml.log ris
+perl Lex2XML.pl MONSAH_1992.DAT TEMP.sahu.data.xml sahu.xml.log sahu
+perl Lex2XML.pl SYANG_1994.DAT TEMP.syang.data.xml syang.xml.log syang
+perl Lex2XML.pl MONTAG_1994.DAT TEMP.tag.data.xml tag.xml.log tag
+perl Lex2XML.pl MONTUK_1991.DAT TEMP.tuk.data.xml tuk.xml.log tuk
+perl Lex2XML.pl TAG6_1994Aug1.DAT TEMP.tag2.data.xml tag2.xml.log tag
+perl Lex2XML.pl ALLTHAK_1993.DAT TEMP.tuk2.data.xml tuk2.xml.log tuk
+
+xmllint --format TEMP.gur.data.xml > TGTM.gur.data.xml 2> gur.lint.log
+xmllint --format TEMP.mar.data.xml > TGTM.mar.data.xml 2> mar.lint.log
+xmllint --format TEMP.pra.data.xml > TGTM.pra.data.xml 2> pra.lint.log
+xmllint --format TEMP.ris.data.xml > TGTM.ris.data.xml 2> ris.lint.log
+xmllint --format TEMP.sahu.data.xml > TGTM.sahu.data.xml 2> sahu.lint.log
+xmllint --format TEMP.syang.data.xml > TGTM.syang.data.xml 2> syang.lint.log
+xmllint --format TEMP.tag.data.xml > TGTM.tag.data.xml 2> tag.lint.log
+xmllint --format TEMP.tag.data.xml > TGTM.tag2.data.xml 2> tag2.lint.log
+xmllint --format TEMP.tuk.data.xml > TGTM.tuk.data.xml 2> tuk.lint.log
+xmllint --format TEMP.tuk2.data.xml > TGTM.tu2k.data.xml 2> tuk2.lint.log
+
