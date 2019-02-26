@@ -1,5 +1,5 @@
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Started: Mon Feb 25 15:44:23 2019 ...
+Started: Mon Feb 25 16:26:28 2019 ...
 Perl 5.18.2
 ----------------------------------------------------------------
 Remapping Mac STEDT Font 5.1 text files to Unicode 4.0 ...
@@ -367,7 +367,7 @@ Frequencies for 119 character types occurring in `MARPHA_1993.DAT':
 0X4C	   246	=> [U+004C]
 0XAA	   235	=> [U+00B2]
 0X6A	   234	=> [U+006A]
-0X5C	   216	=> [U+0300]
+0X23	   216	=> [U+0023]
 0X6B	   206	=> [U+006B]
 0XBE	   188	=> [U+02B0]
 0X36	   180	=> [U+0036]
@@ -759,7 +759,7 @@ Frequencies for 91 character types occurring in `MONRIS_1994.DAT':
 0X2E	  1311	=> [U+002E]
 0X63	  1269	=> [U+0063]
 0X6D	  1037	=> [U+006D]
-0X5C	   929	=> [U+0300]
+0X23	   929	=> [U+0023]
 0X2C	   736	=> [U+002C]
 0X27	   652	=> [U+0027]
 0X67	   648	=> [U+0067]
@@ -1010,10 +1010,10 @@ Frequencies for 99 character types occurring in `MONTAG_1994.DAT':
 0X45	     3	=> [U+0045]
 0X4E	     3	=> [U+004E]
 0X22	     2	=> [U+0022]
+0X23	     2	=> [U+0023]
 0X46	     2	=> [U+0046]
 0X47	     2	=> [U+0047]
 0X52	     2	=> [U+0052]
-0X5C	     2	=> [U+0300]
 0X60	     2	=> [U+00D0]
 0XF1	     2	=> [U+1D38]
 0X1A	     1	=> 
@@ -1272,7 +1272,7 @@ Frequencies for 118 character types occurring in `SYANG_1994.DAT':
 0X34	   631	=> [U+0034]
 0X5B	   629	=> [U+005B]
 0X6A	   493	=> [U+006A]
-0X5C	   448	=> [U+0300]
+0X23	   448	=> [U+0023]
 0X33	   409	=> [U+0033]
 0X2D	   403	=> [U+002D]
 0X67	   398	=> [U+0067]
@@ -1398,7 +1398,7 @@ Frequencies for 105 character types occurring in `TAG6_1994Aug1.DAT':
 0X77	   151	=> [U+0077]
 0XA3	   139	=> [U+00B3]
 0X38	   126	=> [U+0038]
-0X5C	   125	=> [U+0300]
+0X23	   125	=> [U+0023]
 0X54	   123	=> [U+0054]
 0XB3	   121	=> [U+014B]
 0X43	   114	=> [U+0043]
