@@ -1,5 +1,5 @@
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Started: Mon Feb 25 16:26:28 2019 ...
+Started: Mon Feb 25 16:52:39 2019 ...
 Perl 5.18.2
 ----------------------------------------------------------------
 Remapping Mac STEDT Font 5.1 text files to Unicode 4.0 ...
@@ -332,7 +332,7 @@ Check for improper controls in file `MARPHA_1993.DAT':
 line count for `MARPHA_1993.DAT': 2987 .
 Finished converting `MARPHA_1993.DAT'.
 
-Frequencies for 119 character types occurring in `MARPHA_1993.DAT':
+Frequencies for 118 character types occurring in `MARPHA_1993.DAT':
 ----------------------------------------------------------------
 0X20	 10576	=> [U+0020]
 0X61	  3333	=> [U+0061]
@@ -364,10 +364,10 @@ Frequencies for 119 character types occurring in `MARPHA_1993.DAT':
 0X77	   303	=> [U+0077]
 0XAF	   303	=> [U+028C]
 0X76	   256	=> [U+0076]
+0X23	   248	=> [U+0023]
 0X4C	   246	=> [U+004C]
 0XAA	   235	=> [U+00B2]
 0X6A	   234	=> [U+006A]
-0X23	   216	=> [U+0023]
 0X6B	   206	=> [U+006B]
 0XBE	   188	=> [U+02B0]
 0X36	   180	=> [U+0036]
@@ -405,7 +405,6 @@ Frequencies for 119 character types occurring in `MARPHA_1993.DAT':
 0XE4	    36	=> [U+025B]
 0X46	    34	=> [U+0046]
 0X79	    34	=> [U+0079]
-0X60	    32	=> [U+00D0]
 0X50	    26	=> [U+0050]
 0XD1	    15	=> [U+0304]
 0X9F	    14	=> [U+0303]
@@ -737,7 +736,7 @@ Check for improper controls in file `MONRIS_1994.DAT':
 line count for `MONRIS_1994.DAT': 3341 .
 Finished converting `MONRIS_1994.DAT'.
 
-Frequencies for 91 character types occurring in `MONRIS_1994.DAT':
+Frequencies for 90 character types occurring in `MONRIS_1994.DAT':
 ----------------------------------------------------------------
 0X20	 15408	=> [U+0020]
 0X65	  6345	=> [U+0065]
@@ -758,8 +757,8 @@ Frequencies for 91 character types occurring in `MONRIS_1994.DAT':
 0X77	  1411	=> [U+0077]
 0X2E	  1311	=> [U+002E]
 0X63	  1269	=> [U+0063]
+0X23	  1118	=> [U+0023]
 0X6D	  1037	=> [U+006D]
-0X23	   929	=> [U+0023]
 0X2C	   736	=> [U+002C]
 0X27	   652	=> [U+0027]
 0X67	   648	=> [U+0067]
@@ -779,7 +778,6 @@ Frequencies for 91 character types occurring in `MONRIS_1994.DAT':
 0XA3	   232	=> [U+00B3]
 0XB3	   218	=> [U+014B]
 0XF2	   194	=> [U+02D0]
-0X60	   189	=> [U+00D0]
 0X32	   184	=> [U+0032]
 0X71	   175	=> [U+0071]
 0X2D	   170	=> [U+002D]
@@ -932,7 +930,7 @@ Check for improper controls in file `MONTAG_1994.DAT':
 line count for `MONTAG_1994.DAT': 2862 .
 Finished converting `MONTAG_1994.DAT'.
 
-Frequencies for 99 character types occurring in `MONTAG_1994.DAT':
+Frequencies for 98 character types occurring in `MONTAG_1994.DAT':
 ----------------------------------------------------------------
 0X20	  9877	=> [U+0020]
 0X65	  2255	=> [U+0065]
@@ -1005,16 +1003,15 @@ Frequencies for 99 character types occurring in `MONTAG_1994.DAT':
 0XEE	     6	=> [U+1D34]
 0X2A	     5	=> [U+002A]
 0X7E	     5	=> [U+0303]
+0X23	     4	=> [U+0023]
 0X44	     4	=> [U+0044]
 0X3D	     3	=> [U+003D]
 0X45	     3	=> [U+0045]
 0X4E	     3	=> [U+004E]
 0X22	     2	=> [U+0022]
-0X23	     2	=> [U+0023]
 0X46	     2	=> [U+0046]
 0X47	     2	=> [U+0047]
 0X52	     2	=> [U+0052]
-0X60	     2	=> [U+00D0]
 0XF1	     2	=> [U+1D38]
 0X1A	     1	=> 
 0X3B	     1	=> [U+003B]
@@ -1231,7 +1228,7 @@ Writing text file `SYANG_1994.u8' ...
 line count for `SYANG_1994.DAT': 5311 .
 Finished converting `SYANG_1994.DAT'.
 
-Frequencies for 118 character types occurring in `SYANG_1994.DAT':
+Frequencies for 117 character types occurring in `SYANG_1994.DAT':
 ----------------------------------------------------------------
 0X20	 23863	=> [U+0020]
 0X61	  5129	=> [U+0061]
@@ -1271,8 +1268,8 @@ Frequencies for 118 character types occurring in `SYANG_1994.DAT':
 0XAA	   702	=> [U+00B2]
 0X34	   631	=> [U+0034]
 0X5B	   629	=> [U+005B]
+0X23	   610	=> [U+0023]
 0X6A	   493	=> [U+006A]
-0X23	   448	=> [U+0023]
 0X33	   409	=> [U+0033]
 0X2D	   403	=> [U+002D]
 0X67	   398	=> [U+0067]
@@ -1286,7 +1283,6 @@ Frequencies for 118 character types occurring in `SYANG_1994.DAT':
 0X53	   234	=> [U+0053]
 0X58	   184	=> [U+0058]
 0XC6	   177	=> [U+0283]
-0X60	   162	=> [U+00D0]
 0X3E	   144	=> [U+003E]
 0X3C	   142	=> [U+003C]
 0X30	   123	=> [U+0030]
@@ -1356,7 +1352,7 @@ Writing text file `TAG6_1994Aug1.u8' ...
 line count for `TAG6_1994Aug1.DAT': 3669 .
 Finished converting `TAG6_1994Aug1.DAT'.
 
-Frequencies for 105 character types occurring in `TAG6_1994Aug1.DAT':
+Frequencies for 104 character types occurring in `TAG6_1994Aug1.DAT':
 ----------------------------------------------------------------
 0X20	 12126	=> [U+0020]
 0X65	  2840	=> [U+0065]
@@ -1397,8 +1393,8 @@ Frequencies for 105 character types occurring in `TAG6_1994Aug1.DAT':
 0X27	   156	=> [U+0027]
 0X77	   151	=> [U+0077]
 0XA3	   139	=> [U+00B3]
+0X23	   137	=> [U+0023]
 0X38	   126	=> [U+0038]
-0X23	   125	=> [U+0023]
 0X54	   123	=> [U+0054]
 0XB3	   121	=> [U+014B]
 0X43	   114	=> [U+0043]
@@ -1425,7 +1421,6 @@ Frequencies for 105 character types occurring in `TAG6_1994Aug1.DAT':
 0XE4	    18	=> [U+025B]
 0X7C	    16	=> [U+0301]
 0X2A	    13	=> [U+002A]
-0X60	    12	=> [U+00D0]
 0XFB	    12	=> [U+0255]
 0XBF	    10	=> [U+0254]
 0XFA	    10	=> [U+0259]
