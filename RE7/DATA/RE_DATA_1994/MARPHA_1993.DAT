@@ -1,5 +1,5 @@
 .mar   ⁵⁴pʰi
-dff   #'ecorce
+dff   écorce
 inf   ML
 so   marpha.dico 4
 .mar   ⁵⁴pʰo
@@ -24,11 +24,11 @@ dff   nouille de riz
 inf   M
 so   marpha.dico 4
 .mar   ⁵⁵'²²pʰi-na
-dff   tr##es tard
+dff   très tard
 nb   vb?
 so   marpha.dico 5
 .mar   ⁵⁵'³³pʰiː-wa
-dff   #'eplucher
+dff   éplucher
 inf   M
 so   marpha.dico 5
 .mar   ⁴⁴'⁴⁴pʰi-dzi
@@ -64,7 +64,7 @@ dff   couvrir d'un parapluie
 inf   M
 so   marpha.dico 5
 .mar   Xpʰor-ba
-dff   #'etaler
+dff   étaler
 so   marpha.dico 5
 .mar   ⁴⁴'³³pʰul-wa
 dff   offrir (dieu)
@@ -88,7 +88,7 @@ dff   briller (soleil)
 inf   P
 so   marpha.dico 7
 .mar   ⁵³'³³pʰja-wa
-dff   d#'efricher
+dff   défricher
 inf   Z
 so   marpha.dico 7
 .mar   ⁵⁵'⁴⁴pʰja-wa
@@ -97,11 +97,11 @@ dff   saluer
 inf   ML
 so   marpha.dico 7
 .mar   Xpʰjɛr
-dff   fouet ##a chang
+dff   fouet à chang
 inf   FP
 so   marpha.dico 8
 .mar   ⁵⁵'⁴⁴pʰjɛm-ba
-dff   se d#'ev#ɾetir
+dff   se dévêtir
 so   marpha.dico 8
 .mar   ⁴⁴'³³pʰjoŋ-ba
 dff   sauter
@@ -125,11 +125,11 @@ dff   fin
 inf   ML
 so   marpha.dico 11
 .mar   ⁵⁴'⁴⁴pʰro-wa
-dff   #'egrener
+dff   égrener
 inf   Z
 so   marpha.dico 11
 .mar   ⁵⁵'⁴⁴pʰrʌm-bʌ
-dff   d#'etacher
+dff   détacher
 inf   M
 so   marpha.dico 12
 .mar   ⁴⁴'³³pʰla-wa
@@ -138,7 +138,7 @@ inf   TB
 so   marpha.dico 13
 .mar   ³peʱ
 quot   peʱ
-dff   #'epouse
+dff   épouse
 inf   ML
 so   marpha.dico 15
 .mar   ⁴³pa
@@ -157,7 +157,7 @@ inf   ML
 so   marpha.dico 15
 .mar   ³poʱ
 quot   poʱ
-dff   p#ɾate ##a chang
+dff   pâte à chang
 inf   ML
 so   marpha.dico 15
 .mar   ⁵⁴pu
@@ -169,7 +169,7 @@ dff   laine
 inf   ML
 so   marpha.dico 15
 .mar   ¹¹pʌʱi
-dff   tr##es
+dff   très
 inf   sM
 so   marpha.dico 15
 .mar   ⁵⁵pin
@@ -183,7 +183,7 @@ inf   ML
 so   marpha.dico 16
 .mar   ²¹bɔʱm
 var   ²¹bʌʱm
-dff   #'epaule
+dff   épaule
 inf   sm
 so   marpha.dico 16
 .mar   ⁵⁵'³³pi-wa
@@ -195,7 +195,7 @@ inf   ML
 so   marpha.dico 17
 .mar   ⁵⁵'⁵⁴pa-wa
 dfn   patalo
-dff   peu #'epais (liquide)
+dff   peu épais (liquide)
 inf   ML
 nb   cf. pʌ-wʌ
 so   marpha.dico 17
@@ -204,7 +204,7 @@ dff   apporter de dehors dedans
 inf   Z
 so   marpha.dico 17
 .mar   ⁵⁵'⁴⁴'³³po-dzjʌ-wa
-dff   m#ɾurir
+dff   mûrir
 inf   Z
 so   marpha.dico 17
 .mar   ²¹'³³pu-wa
@@ -213,7 +213,7 @@ nb   cf 'mettre' (pumpa)
 so   marpha.dico 17
 .mar   ⁴⁴'⁴⁴pʌ-wʌ
 dfn   patalo
-dff   peu #'epais (liquide)
+dff   peu épais (liquide)
 inf   M
 so   marpha.dico 17
 .mar   Xpjʌ-mu
@@ -238,11 +238,11 @@ dff   tapis de selle
 inf   ML
 so   marpha.dico 18
 .mar   Xpol-o
-dff   ##a tourner (?)
+dff   à tourner (?)
 inf   FP
 so   marpha.dico 18
 .mar   ²¹'³³'²²po-pɔl-wa
-dff   mo#"elleux
+dff   moëlleux
 inf   TB
 so   marpha.dico 18
 .mar   ¹¹'¹¹poʱr-wa
@@ -264,7 +264,7 @@ dff   apporter de haut en bas/de dedans dehors
 inf   Z
 so   marpha.dico 18
 .mar   ⁴⁴'⁴⁴pum-ba
-dff   monter ##a cheval
+dff   monter à cheval
 so   marpha.dico 18
 .mar   ⁵⁵'³³pʌm-ba
 var   ⁵⁵'³³pam-ba
@@ -277,7 +277,7 @@ dff   tremper
 inf   ML
 so   marpha.dico 18
 .mar   ⁵⁵'³³paŋro
-dff   g#'esier
+dff   gésier
 inf   mM
 so   marpha.dico 19
 .mar   ⁵³'³³pokʈi (¹¹gjaʱŋ)
@@ -288,7 +288,7 @@ nb   ʼ⁵³'³³
 so   marpha.dico 19
 .mar   ²²'²¹pum-ba
 dfn   karua
-dff   aigui##ere
+dff   aiguière
 inf   FP
 so   marpha.dico 19
 .mar   ²¹'²²paʱle
@@ -380,17 +380,17 @@ inf   ML
 nb   hom. 'falaise'
 so   marpha.dico 26
 .mar   ¹¹'¹¹pri-wa
-dff   #'ecrire
+dff   écrire
 so   marpha.dico 26
 .mar   ¹¹'³²pre-dzi
-dff   #ɾetre vaincu
+dff   être vaincu
 inf   M
 so   marpha.dico 26
 .mar   ²²'³³pre-wa
 dff   faire la raie
 so   marpha.dico 26
 .mar   ¹¹'¹¹preʱ-wʌ
-dff   #ɾetre cher
+dff   être cher
 so   marpha.dico 26
 .mar   ²¹'²²praʱ-wʌ
 dff   raser
@@ -412,7 +412,7 @@ dff   marcher
 inf   ML
 so   marpha.dico 26
 .mar   ¹¹praʱŋ
-dff   #'etable
+dff   étable
 inf   FP
 so   marpha.dico 27
 .mar   ⁵⁴prum
@@ -429,7 +429,7 @@ dff   quatre
 inf   ML
 so   marpha.dico 29
 .mar   ⁵⁴pla
-dff   l#'egumes
+dff   légumes
 inf   ML
 so   marpha.dico 29
 .mar   ⁴⁴pla (¹¹gjaʱŋ)
@@ -443,10 +443,10 @@ so   marpha.dico 29
 .mar   ⁵⁵'⁴⁴pli-mu
 dff   glisser
 inf   ML
-nb   mⓒmes tons que pli-wa 'd#'epecer' <ML>
+nb   mⓒmes tons que pli-wa 'dépecer' <ML>
 so   marpha.dico 29
 .mar   ⁵⁵'⁴⁴pli-wa
-dff   d#'epecer
+dff   dépecer
 inf   Z
 nb   mⓒmes tons que pli-mu 'glisser' <ML>
 so   marpha.dico 29
@@ -490,7 +490,7 @@ dff   casser
 inf   Z
 so   marpha.dico 32
 .mar   ⁵⁵'⁴⁴tʰe-wa
-dff   enrouler autour de la t#ɾete
+dff   enrouler autour de la tête
 inf   M
 nb   id. ML
 so   marpha.dico 32
@@ -595,7 +595,7 @@ dff   aiguille
 so   marpha.dico 39
 .mar   ³toʱ
 quot   toʱ
-dff   sac en poil de ch##evre
+dff   sac en poil de chèvre
 inf   ML
 so   marpha.dico 39
 .mar   ³tuʱ
@@ -644,13 +644,13 @@ dff   blanc
 so   marpha.dico 40
 .mar   ²²'²¹diʱ-wʌ
 dfn   dhapāune
-dff   conduire des b#ɾetes
+dff   conduire des bêtes
 inf   ML
 cf   ¹¹'²²deʱ-wa
 so   marpha.dico 41
 .mar   ¹¹'²²deʱ-wa
 dfn   dhapāune
-dff   conduire des b#ɾetes
+dff   conduire des bêtes
 inf   ML
 nb   i ? M
 cf   ¹¹'²²diʱ-wa
@@ -669,11 +669,11 @@ so   marpha.dico 41
 quot   ⁵⁵'³³tjeto
 dff   sortir qqch.
 inf   Z
-cf   ⁵⁵'³³tei-wʌ '#'ecr#'emer' <Z>
-nb   j en indice = t palatalis#'e
+cf   ⁵⁵'³³tei-wʌ 'écrémer' <Z>
+nb   j en indice = t palatalisé
 so   marpha.dico 41
 .mar   ⁵⁵'³³tei-wʌ
-dff   '#'ecr#'emer'
+dff   'écrémer'
 inf   Z
 cf   'sortir'. prob id
 .mar   ⁵⁵'⁴⁴taː-wa
@@ -687,7 +687,7 @@ dff   se produire
 inf   M
 so   marpha.dico 41
 .mar   ⁵⁵'³³to-wʌ
-dff   #'echanger
+dff   échanger
 inf   M
 so   marpha.dico 41
 .mar   ⁵⁵'⁴⁴to-wa
@@ -715,7 +715,7 @@ inf   ML
 nb   var ¹¹'¹⁰ <Z>
 so   marpha.dico 41
 .mar   ⁵²'²²to-go
-dff   #ɾoter du feu
+dff   ôter du feu
 inf   Z
 so   marpha.dico 41
 .mar   ¹¹'³³toʱ-dzi
@@ -724,7 +724,7 @@ dff   arriver
 inf   ML
 so   marpha.dico 41
 .mar   ⁵⁵'³³to-wa
-dff   changer (v#ɾetement)
+dff   changer (vêtement)
 inf   M
 so   marpha.dico 41
 .mar   ⁴⁴'³³tuː-wʌ
@@ -732,13 +732,13 @@ dff   hacher
 inf   Z
 so   marpha.dico 41
 .mar   ¹¹'²²duʱ-mu
-dff	fatigu#'e
+dff	fatigué
 dfe   be tired
 inf   M
 nb   ? ¹¹'²²duʱː-mu
 so   marpha.dico 41
 .mar   ⁵⁵'³³tɥi-wʌ
-dff   d#'ependre le linge
+dff   dépendre le linge
 inf   ML
 nb   compare 'scoop out'
 so   marpha.dico 41
@@ -753,12 +753,12 @@ so   marpha.dico 41
 var   ⁴⁴'³³tei-wa
 var   ⁴⁴'³³te-dzi
 var   tai-wa <M, mar dic 42>
-dff   cuire ##a l'eau
+dff   cuire à l'eau
 dfn   usinne
 inf   M, Z
 so   marpha.dico 41
 .mar   ⁵⁵'³³te-wʌ
-dff   sortir qqch.(?), d#'ev#ɾetir (?)
+dff   sortir qqch.(?), dévêtir (?)
 inf   ML
 nb   var. ⁵⁵'⁵³tei-wʌ (M)
 so   marpha.dico 41
@@ -793,13 +793,13 @@ inf   Z
 var   ⁵⁵'³³tor-bʌ
 so   marpha.dico 42
 .mar   ¹¹'¹¹tom-ba
-dff   r#'ecolter (bl#'e)
+dff   récolter (blé)
 inf   Z
 so   marpha.dico 42
 .mar   ⁴⁴'⁴³tum-mo
 var   ⁴⁴'⁴³tum-ba
 dfn   moto / baklo
-dff   gros, #'epais
+dff   gros, épais
 nb   var ton. ⁵⁵'⁴⁴
 so   marpha.dico 42
 .mar   ¹¹'²²'²²tuʱm-dzi-wa
@@ -831,12 +831,12 @@ dff   sangsue
 inf   TB
 so   marpha.dico 43
 .mar   ¹¹'¹¹toʱ-wa
-dff   m#ɾale
+dff   mâle
 inf   TB
 so   marpha.dico 43
 .mar   Xtiajã
 dfn   tyo
-dff   cel##a
+dff   celà
 inf   ML
 so   marpha.dico 45
 .mar   ⁴⁴'⁴⁴tɥi-wa
@@ -845,17 +845,17 @@ inf   Z
 so   marpha.dico 46
 .mar   ⁵⁵'³³tɥi-wʌ
 dff   rassembler
-nb   eau ou farine, renvers#'ee
+nb   eau ou farine, renversée
 comp   Ris. ⁴tut 'ramasser'
-cf   'd#'ependre le linge' et 'scoop out'
+cf   'dépendre le linge' et 'scoop out'
 so   marpha.dico 46
 .mar   ⁵¹ʈʰo
-dff   grand baril ##a eau
+dff   grand baril à eau
 inf   ML
 nb   ton = ?
 so   marpha.dico 49
 .mar   ⁵⁴ʈʰʌl
-dff   imp#ɾot
+dff   impôt
 so   marpha.dico 50
 .mar   ³ʈiʱ
 quot   ʈiʱ
@@ -870,7 +870,7 @@ nb   var ¹¹ɖaʱ FP
 so   marpha.dico 53
 .mar   ²¹ʈoʱ
 dfn   sāg
-dff   br##edes
+dff   brèdes
 inf   ML
 so   marpha.dico 53
 .mar   ⁴³⁴ʈu
@@ -884,7 +884,7 @@ dfn   anna
 inf   ML
 so   marpha.dico 53
 .mar   ⁵⁴⁵ʈʌ
-dff   cr#ɾete de coq
+dff   crête de coq
 inf   ML
 so   marpha.dico 53
 .mar   ²¹ʈiʱn
@@ -897,14 +897,14 @@ inf   ML
 nb   ? from Eng. tin
 so   marpha.dico 54
 .mar   Xʈaŋ
-dff   mo#"elle
+dff   moëlle
 so   marpha.dico 54
 .mar   ²¹'³³ʈaʱŋ-ba
 dff   donner (hon. receveur)
 inf   ML
 so   marpha.dico 54
 .mar   ⁴⁴'⁴³ʈʌm-bʌ
-dff   r#'epandre
+dff   répandre
 inf   Z
 so   marpha.dico 54
 .mar   ¹¹'²²ʈiʱ-wʌ
@@ -924,17 +924,17 @@ inf   M
 nb   var ²²'²¹ <ML>
 so   marpha.dico 55
 .mar   ²¹'³³ʈa-dzi
-dff   griffer, d#'echirer
+dff   griffer, déchirer
 inf   M
 nb   var ²²'²¹ <ML>
-cf   ²¹'³³ʈaː-dzi 'd#'echirer'
+cf   ²¹'³³ʈaː-dzi 'déchirer'
 comp   ris ⁴ʈet 'griffer'
 so   marpha.dico 55
 .mar   ²¹'³³ʈaː-dzi
-dff   d#'echirer
+dff   déchirer
 inf   M
 cf   ²¹'³³ʈa-dzi 'griffer'
-comp   ris ³ʈeː 'd#'echirer'
+comp   ris ³ʈeː 'déchirer'
 so   marpha.dico 55
 .mar   ²¹'³³ʈoʱ-wʌ
 dff   lire
@@ -998,12 +998,12 @@ inf   ML
 so   marpha.dico 59
 .mar   ⁵⁴tsʰʌɛ
 dfn   coya
-dff   lani##eres de bambou
+dff   lanières de bambou
 inf   ML
 so   marpha.dico 59
 .mar   Xtsʰʌ
 dfe   cremation place
-dff   lieu de cr#'emation
+dff   lieu de crémation
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tɕʰe-wa
 quot   ⁵⁵'⁴⁴tʃʰewa
@@ -1012,29 +1012,29 @@ dff   asperger (en offrande)
 so   marpha.dico 59
 .mar   ³³'³³tsʰa-mu
 var   ³³'³³tsʰʌ-mu (?)
-dff   chaud, br#ɾulant
+dff   chaud, brûlant
 inf   sM
 nb   var ⁴⁴'³³tsʰa-wa <M>
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tsʰo-wa
 dff   teindre
-inf   ML, M (d#'eb. rap.)
+inf   ML, M (déb. rap.)
 cf   ⁴⁴'³³tsʰʌi-wa
 so   marpha.dico 59
 .mar   ⁴⁴'³³tsʰʌi-wa
 dff   teindre
-inf   M (d#'eb. lent)
+inf   M (déb. lent)
 cf   ⁵⁵'⁴⁴tsʰo-wa
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tsʰu-me
 var   ⁵⁵'⁴⁴tsʰu-wʌ
 dfn   ramailo
 dfe   entertaining
-dff   plaisamment anim#'e
+dff   plaisamment animé
 inf   TB
 so   marpha.dico 59
 .mar   ⁴⁴'³³tsʰɯ-wa
-dff   #'ecraser
+dff   écraser
 inf   ML
 nb   si le sens est 'casser en frapant' cf ris ²tsheː 'fendre du bois,
   casser une noix'
@@ -1046,21 +1046,21 @@ inf   M
 so   marpha.dico 59
 .mar   ⁴⁴'³³tsʰʌ-mu
 dfn   piro
-dff   #'epic#'e
+dff   épicé
 inf   TB
 so   marpha.dico 59
 .mar   ⁴⁴'⁴⁴tsʰʌ-wʌ
-dff   faire pa#ɾitre
+dff   faire paître
 inf   Z
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tsʰʌ-wʌ
 dff   fendre (bois)
 inf   M
-cf   ⁴⁴'³³tsʰɯ-wa '#'ecraser'
+cf   ⁴⁴'³³tsʰɯ-wa 'écraser'
 comp   ris ²tsheː
 so   marpha.dico 59
 .mar   Xtsʰam-ba
-dff   #'etirer qqch.
+dff   étirer qqch.
 inf   M
 so   marpha.dico 60
 .mar   ⁴⁴'⁴⁴tsʰaŋ-ba
@@ -1068,7 +1068,7 @@ dff   trier
 inf   M
 so   marpha.dico 60
 .mar   ⁵⁵'⁴⁴tsʰor-dzi
-dff   d#'ebouler
+dff   débouler
 so   marpha.dico 60
 .mar   ⁵⁵'⁴⁴tsʰʌr-wʌ
 dff   filtrer
@@ -1090,7 +1090,7 @@ inf   FP
 so   marpha.dico 63
 .mar   ⁴⁵'⁴⁴tɕʰɔl-wa
 quot   ⁴⁵'⁴⁴tʃʰjɔl-wa
-dff   m#'elanger
+dff   mélanger
 inf   Z
 so   marpha.dico 63
 .mar   ⁵⁴⁵tso
@@ -1146,7 +1146,7 @@ dff   aboyer
 inf   ML
 so   marpha.dico 67
 .mar   ⁵⁵'³³tsʌ-mo
-dff   pass#'e au soleil
+dff   passé au soleil
 inf   M
 .mar   ⁵⁵'³³tsa-wa
 dff   manger
@@ -1163,7 +1163,7 @@ inf   M
 so   marpha.dico 67
 .mar   Xtsuː-wa
 dfn   basālne
-dff   mettre ##a cuire
+dff   mettre à cuire
 so   marpha.dico 67
 .mar   ⁵⁴tsaŋ
 dff   bru
@@ -1223,7 +1223,7 @@ dff   polir le riz
 inf   Z
 so   marpha.dico 69
 .mar   ⁴⁴'⁴⁴tsʌr-wa
-dff   essorer les l#'egumes ; faire couler tout d'un r#'ecipient
+dff   essorer les légumes ; faire couler tout d'un récipient
 so   marpha.dico 69
 .mar   ¹¹'¹¹dziʱn-dzi
 dff   achever
@@ -1239,13 +1239,13 @@ inf   ML
 nb   ə en exposant
 so   marpha.dico 70
 .mar   Xtsʌŋku
-dff   sac ##a coulant
+dff   sac à coulant
 inf   FP
 so   marpha.dico 70
 .mar   ⁵¹tsjoː
 dff   bague
 inf   P
-nb   #'ecrit ⁵¹tsjoo
+nb   écrit ⁵¹tsjoo
 so   marpha.dico 71
 .mar   ⁵⁵tsju
 dff   corps
@@ -1263,7 +1263,7 @@ inf   ML
 so   marpha.dico 71
 .mar   ³tɕʌʱ
 quot   tʃjʌʱ
-dff   th#'e
+dff   thé
 inf   ML
 so   marpha.dico 71
 .mar   ⁴⁴'⁴³tsjeː-wa
@@ -1290,11 +1290,11 @@ so   marpha.dico 72
 dff   offrande
 so   marpha.dico 72
 .mar   ⁴⁴'⁴⁴tsjam-ba
-dff   mo#"elleux
+dff   moëlleux
 inf   sM
 so   marpha.dico 73
 .mar   ²¹'³³tɕʌm-pʌ
-dff   tr##es fin (farine)
+dff   très fin (farine)
 inf   TB
 so   marpha.dico 73
 .mar   ⁵⁵'³³tsjaŋ-ba
@@ -1339,9 +1339,9 @@ dff   cou
 inf   ML
 so   marpha.dico 76
 .mar   Xkʰaː
-dff   o##u ?
+dff   où ?
 inf   ML
-nb   not#'e kʰaa
+nb   noté kʰaa
 so   marpha.dico 76
 .mar   ³³'²²kʰi-wʌ
 var   ⁴⁴'⁴⁴kʰi-wʌ
@@ -1353,10 +1353,10 @@ dff   emprunter
 inf   M
 so   marpha.dico 76
 .mar   ⁴⁴'³³kʰi-mo
-dff   #'eternuer
+dff   éternuer
 so   marpha.dico 76
 .mar   ⁵⁵'⁴⁴kʰe-wa  [[(⁴⁴kʰe) ⁵⁵'⁴⁴kʰe-wa
-dff   r#'eciter (shamane)
+dff   réciter (shamane)
 so   marpha.dico 76
 .mar   ⁵⁵'⁵⁴kʰa-mu
 var   ⁵⁵'⁵⁴kʰʌ-mu
@@ -1386,9 +1386,9 @@ var   ⁵⁵'⁴⁴kʰʌi-wa <M>
 dff   mordre dans de la viande
 inf   ML
 so   marpha.dico 76
-.mar   ⁵⁵'⁴⁴kʰʌi-wa <d#'ebit lent>
-var   ⁵⁵'⁴⁴kʰʌɛ-wa <d#'ebit lent>
-var   ⁴⁴'³³kʰeː-wa <d#'ebit rapide>
+.mar   ⁵⁵'⁴⁴kʰʌi-wa <débit lent>
+var   ⁵⁵'⁴⁴kʰʌɛ-wa <débit lent>
+var   ⁴⁴'³³kʰeː-wa <débit rapide>
 dff   filer
 inf   M, ML
 so   marpha.dico 76
@@ -1411,7 +1411,7 @@ dff   pouvoir
 so   marpha.dico 77
 .mar   ⁵⁵'⁵⁵kʰol-tsi
 dff   bouillir
-nb   tsi : suffixe non vois#'e
+nb   tsi : suffixe non voisé
 so   marpha.dico 77
 .mar   Xkʰĩl-ba
 dff   enrouler
@@ -1428,11 +1428,11 @@ dff   lancer des pierres
 nb   id. kʰʌr-wa 'f. tomber de l'arbre' ?
 so   marpha.dico 77
 .mar   ⁴⁴'⁴⁴kʰʌr-bʌ
-dff   s#'echer
+dff   sécher
 inf   M
 so   marpha.dico 77
 .mar   ⁵⁵'⁴⁴kʰora
-dff   bo#ɾiteux
+dff   boîteux
 inf   ML
 so   marpha.dico 78
 .mar   ⁵⁵'⁴⁴kʰʌlto
@@ -1444,21 +1444,21 @@ dff   vieux
 inf   ML
 so   marpha.dico 79
 .mar   ⁵⁵'⁴⁴kʰja-mu
-dff   bon march#'e
+dff   bon marché
 inf   TB
 nb   cf. ʌ
 so   marpha.dico 79
 .mar   Xkʰja-wa
-dff   rapi#'ecer, boucher un trou
+dff   rapiécer, boucher un trou
 inf   M
 so   marpha.dico 79
 .mar   Xkʰjo-wa
 dfn   paskāunu
-dff   servir (##a manger)
+dff   servir (à manger)
 inf   M
 so   marpha.dico 79
 .mar   ⁴⁴'⁴⁴kʰjʌ-wʌ
-dff   bon march#'e
+dff   bon marché
 inf   M
 cf   ⁵⁵'⁴⁴kʰja-mu
 so   marpha.dico 79
@@ -1468,7 +1468,7 @@ dff   avoir faim
 inf   TB
 so   marpha.dico 80
 .mar   Xkʰjaŋ-ba
-dff   r#ɾotir
+dff   rôtir
 inf   M
 so   marpha.dico 80
 .mar   ³kiʱ
@@ -1489,14 +1489,14 @@ dff   sang
 inf   ML
 so   marpha.dico 84
 .mar   ⁵⁴⁵ko
-dff   bl#'e
+dff   blé
 inf   ML
 nb   hom 'pince ˇ feu'
 so   marpha.dico 84
 .mar   ⁵⁴⁵ko
 dfn   cimta
-dff   pince ##a feu
-nb   hom 'bl#'e'
+dff   pince à feu
+nb   hom 'blé'
 inf   ML
 so   marpha.dico 84
 .mar   ²¹goʱ
@@ -1521,7 +1521,7 @@ dff   coude
 inf   mM
 so   marpha.dico 84
 .mar   Xku
-dff   coud#'ee
+dff   coudée
 so   marpha.dico
 .mar   ⁵⁴kĩ
 var   ⁵⁴kʌi
@@ -1571,7 +1571,7 @@ inf   FP
 comp   Ris. ¹kuŋ 'poutre faıtiᴇre'
 so   marpha.dico 85
 .mar   Xkum  [[(⁵⁵ja) ³³kum
-dff   majeur, m#'edius
+dff   majeur, médius
 inf   mM
 comp   Ris. ³kuŋ 'milieu'
 so   marpha.dico 85
@@ -1623,14 +1623,14 @@ so   marpha.dico 86
 .mar   ⁵⁵'⁴⁴ku-tsi <ML>
 var   ⁴⁴'⁴⁴ku-tsi <M>
 var   ku-la
-dff   br#ɾuler
-nb   ku-la 'est-ce brⓈl#'e ?'
+dff   brûler
+nb   ku-la 'est-ce brⓈlé ?'
 inf   TB
 so   marpha.dico 86
 .mar   ⁴⁴'⁴⁴ku-wa
 dff   mesurer tissu
 inf   ML
-nb   mesurer ˇ la coud#'ee
+nb   mesurer ˇ la coudée
 so   marpha.dico 86
 .mar   ⁴⁴'³³kʌi-wa
 var   ³³kɛ-wa <ML>
@@ -1638,17 +1638,17 @@ dff   monter, grimper
 inf   Z
 so   marpha.dico 86
 .mar   ⁴⁴'⁵⁵kʌ-wʌ
-dff   #'epais (liquide)
+dff   épais (liquide)
 inf   M
 so   marpha.dico 86
 .mar   ⁵⁵'⁵⁵koː-wa
-dff   d#'eplacer
+dff   déplacer
 inf   M
 nb   prob. id. koːmu 'contagieux'
 so   marpha.dico 86
 .mar   ⁵⁴'⁴⁴koː-mu
 dff   contagieux
-nb   prob. id. koːwa 'd#'eplacer'
+nb   prob. id. koːwa 'déplacer'
 so   marpha.dico 86
 .mar   ⁵⁵'⁵⁵kim-ba
 var   ⁵⁵'⁴⁴kin-o
@@ -1657,7 +1657,7 @@ inf   Z
 so   marpha.dico 87
 .mar   ⁵⁵'⁵⁵kom-ba
 var   ⁵⁵'⁵⁵kom-bʌ
-dff   co#ɾuteux
+dff   coûteux
 inf   TB, M
 so   marpha.dico 87
 .mar   ⁵⁵'³³kom-ba
@@ -1665,7 +1665,7 @@ dff   mesurer volume
 inf   M
 so   marpha.dico 87
 .mar   ⁴⁴'⁴⁴kom-ba
-dff   rev#ɾetir
+dff   revêtir
 so   marpha.dico 87
 .mar   ⁵⁵'⁴⁴kʌm-mu
 dfn   tito
@@ -1699,13 +1699,13 @@ dff   estomac
 inf   mM
 so   marpha.dico 88
 .mar   Xkoto
-dff   foyer ##a quatre c#ɾot#'es
+dff   foyer à quatre côtés
 inf   FP
 comp   Ris. kutʰap
 so   marpha.dico 88
 .mar   ⁵¹ɕuŋ  [[²¹²'⁴¹koʱɕuŋ
 quot   ²¹²'⁴¹koʱʃjuŋ
-dff   colonne vert#'ebrale
+dff   colonne vertébrale
 inf   mM
 comp   Ris. ³kosiŋma 'dos au-dessous de l'omoplate'
 so   marpha.dico 88
@@ -1729,7 +1729,7 @@ dff   eau
 inf   ML
 so   marpha.dico 89
 .mar   ⁵⁴kjʌ
-dff   t#ɾete
+dff   tête
 inf   ML
 so   marpha.dico 89
 .mar   ⁵⁴⁵kjuː
@@ -1746,30 +1746,30 @@ dff   labourer
 inf   Z
 so   marpha.dico 90
 .mar   ⁵⁴'⁴⁴kjo-dzɯ-mu  [[⁵⁴'⁴⁴'⁴⁴kjo-dzɯ-mu
-dff   gu#'erir
+dff   guérir
 cf   ? caus de 'beau' (? 'rendre bon')
 inf   M
 so   marpha.dico 90
 .mar   ²²'²¹gjoʱ-mu
 var   ²¹'²² <M>
 dff   beau
-cf   gu#'erir (? allofame)
+cf   guérir (? allofame)
 inf   sM
 so   marpha.dico 90
 .mar   ⁵⁴'⁴⁴kjuː-wʌ
-dff   casser (ma#"is)
+dff   casser (maïs)
 inf   Z
 so   marpha.dico 90
 .mar   ⁵⁴'⁴⁴kjʌ-mu
-dff   d#'emanger
+dff   démanger
 inf   sM
 so   marpha.dico 90
 .mar   ⁵⁵'⁵⁵kji-kji-wa  [[⁵⁵'⁵⁵'⁴⁴kjikji-wa
-dff   sucr#'e
+dff   sucré
 inf   TB
 so   marpha.dico 90
 .mar   ¹¹'²²kjaʱŋ-ba
-dff   #'etirer qqch.
+dff   étirer qqch.
 inf   ML
 so   marpha.dico 90
 .mar   ⁵⁵'⁴⁴kjor-wa
@@ -1798,7 +1798,7 @@ dff   mettre tika
 inf   M
 so   marpha.dico 90
 .mar   ⁴⁴'⁴⁴kjaːmo
-dff   couteau de m#'etier ##a tisser
+dff   couteau de métier à tisser
 inf   FP
 so   marpha.dico 91
 .mar   ²²'⁴⁴gjamba
@@ -1813,7 +1813,7 @@ dff   pain
 inf   sM
 so   marpha.dico 91
 .mar   ¹¹gjuʱŋ
-dff   vall#'ee
+dff   vallée
 inf   ML
 so   marpha.dico 91
 .mar   ⁵⁴kjʌm
@@ -1843,7 +1843,7 @@ dff   homme
 inf   ML
 so   marpha.dico 96
 .mar   ⁵⁴⁵me
-dff   fl##eche
+dff   flèche
 inf   ML
 so   marpha.dico 96
 .mar   ⁵⁴me
@@ -1859,7 +1859,7 @@ quot   ²¹mʱaʱ
 dff   gendre
 so   marpha.dico 96
 .mar   ²¹mo
-dff   fant#ɾome
+dff   fantôme
 so   marpha.dico 96
 .mar   ²¹moʱ
 dff   nuage
@@ -1882,11 +1882,11 @@ inf   M
 so   marpha.dico 97
 .mar   ⁴⁴'³³mɔ-mo
 var   ma-mo <ML>
-dff   d#'esirer, aimer qqch.
+dff   désirer, aimer qqch.
 inf   M
 so   marpha.dico 97
 .mar   ⁴⁴'⁴⁴mu-mu
-dff   #ɾetre
+dff   être
 so   marpha.dico 97
 .mar   ¹¹'³³mʌ-dzi
 dff   perdre
@@ -1898,7 +1898,7 @@ inf   B
 so   marpha.dico 98
 .mar   ³maʱŋ
 quot   maʱŋ
-dff   r#ɾeve
+dff   rêve
 inf   B
 so   marpha.dico 98
 .mar   Xmun
@@ -1912,7 +1912,7 @@ dfn   ghyu
 dff   beurre
 so   marpha.dico 98
 .mar   ⁵⁵'⁴⁴min-dzi-  [[⁵⁵'⁴⁴'³³min-dzi-mu
-dff   m#ɾurir
+dff   mûrir
 inf   M
 so   marpha.dico 99
 .mar   ²¹'³³maʱr-wa
@@ -1920,7 +1920,7 @@ dfn   pelne
 dff   exprimer huile
 so   marpha.dic 99
 .mar   ⁵⁵'⁴⁴migi
-dff   ? fum#'ee
+dff   ? fumée
 so   marpha.dico 100
 .mar   ⁵⁵'⁴⁴migi
 dff   larme
@@ -1947,7 +1947,7 @@ inf   ML
 so   marpha.dico 101
 .mar   ¹¹'²²mjaʱŋ-pʌ
 var   ²²'²¹mjaʱŋ-pʌ <ML>
-dff   go#ɾuter
+dff   goûter
 inf   M
 so   marpha.dico 102
 .mar   ⁵³mwi
@@ -1959,7 +1959,7 @@ dff   argent
 inf   P
 so   marpha.dico 104
 .mar   ⁵⁵'⁵⁵mwe-ba
-dff   poss#'eder (par un d#'emon ²¹mo)
+dff   posséder (par un démon ²¹mo)
 so   marpha.dico 104
 .mar   ¹¹'¹¹mwe-wa
 dff   marcher sur
@@ -1978,14 +1978,14 @@ dff   porte
 inf   ML
 so   marpha.dico 107
 .mar   ⁵⁵'⁵⁴mrɛn-dzi
-dff   #ɾetre rassasi#'e
+dff   être rassasié
 inf   M
 so   marpha.dico 108
 .mar   ⁵⁵'⁵⁵mraŋ-dzi
 dff   voir
 so   marpha.dico 108
 .mar   ⁵⁴mrʌm
-dff   coffre ##a grains
+dff   coffre à grains
 inf   FP
 so   marpha.dico 109
 .mar   ⁵⁵'⁴⁴mrame
@@ -1996,7 +1996,7 @@ so   marpha.dico 109
 .mar   ³mlaʱ
 quot   mlaʱ
 dfn   cāmal
-dff   riz d#'ecortiqu#'e
+dff   riz décortiqué
 so   marpha.dico 110
 .mar   ⁵⁵'⁴⁴mle-dzi-  [[⁵⁵'⁴⁴'⁴⁴mle-dzi-mu
 dff   oublier
@@ -2015,11 +2015,11 @@ inf   mM
 so   marpha.dico 113
 .mar   ³naʱ
 quot   naʱ
-dff   for#ɾet
+dff   forêt
 inf   ML
 so   marpha.dico 113
 .mar   ⁵⁴⁵nõ
-dff   a#"il
+dff   aïl
 inf   ML
 so   marpha.dico 113
 .mar   ⁵⁴no
@@ -2031,11 +2031,11 @@ dff   nez
 inf   ML
 so   marpha.dico 113
 .mar   ⁵⁴nʌ
-dff   lisse (de m#'etier)
+dff   lisse (de métier)
 inf   ML
 so   marpha.dico 113
 .mar   ⁵⁵'⁵⁵ne-dje-  [[⁵⁵'⁵⁵'¹¹ne-dje-wa
-dff   #ɾetre d#'ego#ɾut#'e
+dff   être dégoûté
 inf   Z
 nb   j en exposant
 so   marpha.dico 115
@@ -2043,10 +2043,10 @@ so   marpha.dico 115
 dff   porter
 so   marpha.dico 115
 .mar   ¹¹'¹¹naʱ-wa
-dff   accoucher ; d#'eposer
+dff   accoucher ; déposer
 so   marpha.dico 115
 .mar   ⁵⁵'⁵⁵na-wa
-dff   #ɾetre malade, souffrir
+dff   être malade, souffrir
 so   marpha.dico 115
 .mar   ⁵⁵'³³nu-wa
 dff   dormir
@@ -2077,7 +2077,7 @@ so   marpha.dico 116
 .mar   ⁵⁵'⁵⁵naliː
 var   ⁴⁴'⁵⁵naliː <mM>
 dfe   earwax
-dff   c#'erumen
+dff   cérumen
 nb   ⁵⁵'ʼ⁵⁵
 so   marpha.dico 117
 .mar   ⁵⁵'⁵⁵naga
@@ -2100,7 +2100,7 @@ so   marpha.dico 119
 var   ɲuŋa <ML>
 dfn   nibuwa
 dff   gros citron
-nb   prob. empr. n#'ep.
+nb   prob. empr. nép.
 so   marpha.dico 119
 .mar   ⁵⁴⁵ɲi
 dff   deux
@@ -2125,7 +2125,7 @@ var   ²¹ɲũ <FTB>
 so   marpha.dico 120
 .mar   ⁵⁵'⁵⁵ɲim-bʌ
 var   ⁵⁵'⁴⁴ɲim-bʌ
-dff   #ɾetre vieux (v#ɾetement)
+dff   être vieux (vêtement)
 inf   sM, ML
 so   marpha.dico 120
 .mar   ²¹'³³ɲiʱm-bʌ
@@ -2138,13 +2138,13 @@ dff   accepter
 inf   M
 so   marpha.dico 120
 .mar   Xɲan-lã...
-dff   #'ecouter
+dff   écouter
 so   marpha.dico 120
 .mar   ⁵⁵'³³ɲʌm-ba
 var   ⁵⁵'⁴⁴kjʌm-pa <ML>
 dff   ruminer
 inf   Z
-nb   inf. h#'esite
+nb   inf. hésite
 so   marpha.dico 120
 .mar   ²¹'³³ɲʌʱp-pʌ
 dff   exprimer le jus
@@ -2187,15 +2187,15 @@ inf   FTB
 so   marpha.dico 121
 .mar   ³³'⁴⁴ɲeː-dzi
 var   ⁵⁵'⁴⁴ɲeː-dzi <ML>
-dff   m#ɾacher
+dff   mâcher
 inf   FTB
 so   marpha.dico 121
 .mar   ¹¹'¹¹ɲeʱ-wa  [[(¹¹toʱ) ¹¹'¹¹ɲeʱ-wa (³³'³³la-dzi)
-dff   approcher de l##a-bas
+dff   approcher de là-bas
 inf   Z
 comp   Tag. atterrir
 nb   Auxiliaire. Semble prendre le ton du radical verbal
-  pr#'ec#'edent. Voir (⁵⁵sʌ)⁵⁵'⁵⁵ɲeʌwa
+  précédent. Voir (⁵⁵sʌ)⁵⁵'⁵⁵ɲeʌwa
 so   marpha.dico 121
 .mar   ⁵⁵sʌ  [[⁵⁵sʌ ⁵⁵'⁵⁵ɲeʌwa
 dff   accompagner
@@ -2208,7 +2208,7 @@ comp   Tag. atterrir *nat
 cf   ? jɛwa 'aller'
 nb   ʌ exposant
 nb   Auxiliaire. Semble prendre le ton du radical verbal
-  pr#'ec#'edent. Voir (¹¹toʱ)¹¹'¹¹ɲeʱ-wa
+  précédent. Voir (¹¹toʱ)¹¹'¹¹ɲeʱ-wa
 so   marpha.dico 121
 .mar   ¹¹'¹¹ɲaʱ-wa
 dff   appeler
@@ -2248,15 +2248,15 @@ inf   ML
 so   marpha.dico 124
 .mar   ⁵³'³³ŋoi-mu  [[(⁵⁵tɕø)⁵³'³³ŋoi-mu
 quot   (⁵⁵tʃjø)⁵³'³³ŋoi-mu
-dff   #ɾetre d#'ego#ɾut#'e
+dff   être dégoûté
 inf   M
 so   marpha.dico 124
 .mar   ⁵⁵'⁵⁵ŋʌm-mu
-dff   bon, sal#'e
+dff   bon, salé
 inf   TB
 so   marpha.dico 124
 .mar   ²¹'¹¹ŋʌʱm-mo
-dff   trop sal#'e
+dff   trop salé
 inf   M
 so   marpha.dico 124
 .mar   ⁴⁴'³³ŋʌm-bʌ
@@ -2265,7 +2265,7 @@ inf   M
 so   marpha.dico 124
 .mar   ⁵¹ŋwi
 dfn   mama ko chora
-dff   cousin crois#'e (MoBrS)
+dff   cousin croisé (MoBrS)
 inf   ML
 so   marpha.dico 126
 .mar   ⁵⁴⁵ja
@@ -2299,7 +2299,7 @@ nb   effet de timur sur langue
 so   marpha.dico 131
 .mar   ⁵⁵'⁴⁴jaŋ-mu
 var   ⁴⁵'⁵⁴jaŋ-mu <M>
-dff   l#'eger
+dff   léger
 inf   sM
 nb   ʼ⁴⁵'⁵⁴jaŋ-mu
 so   marpha.dico 131
@@ -2358,8 +2358,8 @@ dff   pousser
 inf   Z
 so   marpha.dico 136
 .mar   ⁵⁵'⁵⁴woŋ-ba
-dff   poss#'eder (d#'emon)
-nb   ? p#'en#'etrer
+dff   posséder (démon)
+nb   ? pénétrer
 so   marpha.dico 137
 .mar   ⁴⁵'⁴⁴'³³won-dzi-mu
 dff   ? montrer
@@ -2373,7 +2373,7 @@ so   marpha.dico 137
 quot   h˰ɽ̃i
 dff   doigt
 inf   ML
-nb   l'accent circonflexe souscrit sous r r#'etrof.
+nb   l'accent circonflexe souscrit sous r rétrof.
 so   marpha.dico 138
 .mar   ⁵⁴hru
 quot   ⁵⁴h˰ɽ̃u
@@ -2392,11 +2392,11 @@ so   marpha.dico 139
 .mar   ⁵⁵'³³hrum-ba
 quot   ⁵⁵'³³ɽ̃ʰum-ba
 dfn   bāklo
-dff   #'epais (tissu)
+dff   épais (tissu)
 nb   ? ʃ
 so   marpha.dico 139, cah 72:27
 .mar   ⁴⁵re
-dff   c#ɾote (os)
+dff   côte (os)
 inf   mM
 so   marpha.dico 144
 .mar   ³roʱ
@@ -2407,7 +2407,7 @@ so   marpha.dico 144
 dff   corne
 so   marpha.dico 144
 .mar   ⁵¹rʌ
-dff   ch##evre
+dff   chèvre
 so   marpha.dico 144
 .mar   ⁵⁵'⁵⁴ri-wʌ
 dff   gratter
@@ -2420,7 +2420,7 @@ inf   Z
 nb   cf. ⁵⁵'⁵⁴ri-wʌ 'gratter' <FTB>
 so   marpha.dico 146
 .mar   ⁵⁵'⁴⁴re-wa
-dff   s'arr#ɾeter
+dff   s'arrêter
 inf   ML
 so   marpha.dico 146
 .mar   ⁴⁴'⁵⁵reː-wa
@@ -2442,7 +2442,7 @@ inf   M
 so   marpha.dico 146
 .mar   ⁴⁴'⁵⁵ro-wʌ
 dfn   patalo
-dff   peu #'epais (liquide)
+dff   peu épais (liquide)
 inf   M
 so   marpha.dico 146
 .mar   ⁵⁵'⁴⁴ro-wa
@@ -2471,7 +2471,7 @@ dff   faire des fruits
 inf   Z
 so   marpha.dico 146
 .mar   ¹¹'³³rɯː-to
-dff   r#'eclamer
+dff   réclamer
 inf   mM
 nb   ? riː
 so   marpha.dico 146
@@ -2486,14 +2486,14 @@ dff   collant
 inf   TB
 so   marpha.dico 147
 .mar   ⁵⁵'²²rʌm-bʌ
-dff   monter m#'etier
+dff   monter métier
 so   marpha.dico 147
 .mar   ¹¹'²¹riʱnta
 dff   meule
 inf   FP
 so   marpha.dico 147
 .mar   ⁵⁴hɬi
-dff   excr#'ements
+dff   excréments
 inf   mM
 comp   WT lci-ba <Jas>
 so   marpha.dico 150
@@ -2504,12 +2504,12 @@ so   marpha.dico 150
 dff   dieu
 so   marpha.dico 150
 .mar   Xhɬa-wa
-dff   #ɾoter (#'ecume du riz)
+dff   ôter (écume du riz)
 nb   cf. ¹¹hɬj 'jeter' ʑ
 so   marpha.dico 150
 .mar   Xhɬu
 quot   Xhɬju
-dff   ##a l'envers
+dff   à l'envers
 phr   Xhɬju la-dzi
 var   hɬju mu-mu
 comp   ¹kʰlup (Ris.)
@@ -2534,7 +2534,7 @@ dff   visage
 inf   ML
 so   marpha.dico 156
 .mar   ⁵¹li
-dff   #'echelle
+dff   échelle
 inf   ML
 so   marpha.dico 156
 .mar   ⁵⁴⁵le
@@ -2548,7 +2548,7 @@ inf   ML
 so   marpha.dico 156
 .mar   ³loʱ
 quot   loʱ
-dff   ann#'ee
+dff   année
 inf   ML
 so   marpha.dico 156
 .mar   ⁵⁴lu
@@ -2567,7 +2567,7 @@ comp   WT lus <Jas>
 so   marpha.dico 156
 .mar   ²¹lʌʱ
 dfn   ukhalo
-dff   mont#'ee
+dff   montée
 so   marpha.dico 156
 .mar   ²²'²¹liʱ-mu
 var   ²²'²¹liʱ-mo
@@ -2575,7 +2575,7 @@ dff   lourd
 inf   sM / M
 so   marpha.dico 157
 .mar   Xlo-wa
-dff   #'etudier
+dff   étudier
 so   marpha.dico 157
 .mar   ⁵⁴'⁴⁴lo-wa
 dff   faire chauffer
@@ -2583,7 +2583,7 @@ inf   M
 so   marpha.dico 157
 .mar   ²¹'²²lo-wa
 var   ¹¹'²¹'lo-wa <ML> ʑ
-dff   baratter le th#'e
+dff   baratter le thé
 inf   M
 so   marpha.dico 157
 .mar   ²²'²¹luʱ-wʌ
@@ -2604,7 +2604,7 @@ dfn   mitho
 dff   savoureux
 so   marpha.dico 159
 .mar   ¹¹'²²lɛm-mu
-dff   l#'echer
+dff   lécher
 inf   M
 nb   ? ʌɛ
 so   marpha.dico 159
@@ -2632,7 +2632,7 @@ nb   ? cf ⁴⁴'⁴⁴hɬa-ba 'jeter, renoncer'
 so   marpha.dico 160
 .mar   ²¹'¹¹ljaʱ-go
 var   ²¹'²²lja-wa
-dff   distribuer ##a tous, partager
+dff   distribuer à tous, partager
 inf   M
 so   marpha.dico 160
 .mar   ⁵⁵ljʌp
@@ -2654,7 +2654,7 @@ dff   parole
 inf   ML
 so   marpha.dico 162
 .mar   ⁵⁵sa
-dff   tr##es
+dff   très
 inf   sM
 so   marpha.dico 163
 .mar   ⁵⁴⁵su
@@ -2676,14 +2676,14 @@ so   marpha.dico 164
 dff   bouche
 so   marpha.dico 164
 .mar   ⁵⁴sʌm
-dff   #ɾame
+dff   âme
 so   marpha.dico 164
 .mar   ⁵⁴sʌr
-dff   #'etoiles
+dff   étoiles
 inf   ML
 so   marpha.dico 164
 .mar   ⁵⁵'³³sa-wa
-dff   mener ##a la corde
+dff   mener à la corde
 inf   ML
 so   marpha.dico 165
 .mar   ³³'³³sa-wa  [[(⁵⁵ɲʌm) ³³'³³sa-wa
@@ -2695,7 +2695,7 @@ dff   gros (homme)
 inf   ML
 so   marpha.dico 165
 .mar   ¹¹'²²saʱ-wa
-dff   de bonne qualit#'e
+dff   de bonne qualité
 inf   TB
 so   marpha.dico 165
 .mar   ⁵⁵'⁵⁵so-wa
@@ -2716,7 +2716,7 @@ so   marpha.dico 165
 .mar   ⁴⁴'⁴⁴sɯ-ba
 var   ⁴⁴'⁵²siː-wa <M>
 var   ⁵⁵'⁴⁴syː-wʌ <FTB>
-dff   r#'ecurer
+dff   récurer
 nb   ? swi ?
 so   marpha.dico 165
 .mar   ⁴⁴'⁴⁴sʌi-wa
@@ -2738,7 +2738,7 @@ so   marpha.dico 165
 var   ⁵¹'¹¹siː-wa
 var   ⁴⁴'⁴⁴sɯ-ba
 var   ⁵⁵'⁴⁴syː-wʌ <FTB>
-dff   r#'ecurer
+dff   récurer
 inf   M
 so   marpha.dico 165
 .mar   Xseː-wa
@@ -2747,13 +2747,13 @@ dff   tuer
 inf   M
 so   marpha.dico 165
 .mar   ⁵⁵'⁴⁴sei-wa
-dff   #'elever
+dff   élever
 inf   M
 so   marpha.dico 165
 .mar   ⁵⁵'⁴⁴syː-wʌ
 var   ⁴⁴'⁵²siː-wa <M>
 var   ⁴⁴'⁴⁴sɯ-ba
-dff   r#'ecurer
+dff   récurer
 inf   FTB
 so   marpha.dico 165
 .mar   ⁵⁵'⁵⁴saŋ-mo  [[(⁵⁵kʰam)⁵⁵'⁵⁴saŋ-mo
@@ -2766,7 +2766,7 @@ inf   TB
 so   marpha.dico 166
 .mar   ⁵⁵'³³saŋ-ba
 var   ⁴⁴'⁴⁴saŋ-ba <ML>
-dff   faire s#'echer
+dff   faire sécher
 inf   Z
 so   marpha.dico 166
 .mar   ⁵⁵'⁴⁴sam-pa
@@ -2791,7 +2791,7 @@ dff   pain en couronne
 inf   sM
 so   marpha.dico 167
 .mar   ⁵⁵'⁴⁴suŋkʰa
-dff   l##evres
+dff   lèvres
 inf   ML
 so   marpha.dico 167
 .mar   ²²'¹¹suʱkpʌ
@@ -2803,7 +2803,7 @@ dff   bracelet
 so   marpha.dico 167
 .mar   ⁵⁵'⁵⁵swi-ba
 var   sɯ-ba ?
-dff   r#'ecurer
+dff   récurer
 so   marpha.dico 170
 .mar   ⁵⁴ɕi
 quot   ⁵⁴ʃi
@@ -2883,7 +2883,7 @@ inf   ML, H
 so   marpha.dico 178
 .mar   ⁵⁵'⁵⁵ɕɔ-wa
 quot   ⁵⁵'⁵⁵ʃjɔ-wa
-dff   danser, tourner sur soi-m#ɾeme
+dff   danser, tourner sur soi-même
 so   marpha.dico 178
 .mar   ⁵⁴'⁴⁴'⁴⁴ɕo-dzi-mu
 quot   ⁵⁴'⁴⁴'⁴⁴ʃjo-dzi-mu
@@ -2937,7 +2937,7 @@ inf   ML
 so   marpha.dico 179
 .mar   ⁵⁵'³³ɕal-mu
 quot   ⁵⁵'³³ʃjal-mu
-dff   avoir la diarrh#'ee
+dff   avoir la diarrhée
 inf   mM, ML
 cf   ⁵⁵'⁴⁴ɕyr-wa
 so   marpha.dico 179
@@ -2947,18 +2947,18 @@ dff   couler (larmes)
 so   marpha.dico 179
 .mar   Xɕuʱr-dzi
 quot   ʃjuʱr-dzi
-dff   ##a quatre pattes
+dff   à quatre pattes
 inf   ML
 so   marpha.dico 179
 .mar   ⁵⁵'⁴⁴ɕyr-wa
 quot   ⁵⁵'⁴⁴ʃjyr-wa
-dff   avoir la diarrh#'ee
+dff   avoir la diarrhée
 inf   M, ML
 cf   ⁵⁵'³³ɕal-mu
 so   marpha.dico 179
 .mar   ⁵⁴ɕoŋ  [[ (⁵⁵ja)⁵⁴ɕoŋ
 quot   (⁵⁵ja)⁵⁴ʃjoŋ
-dff   yack m#ɾale
+dff   yack mâle
 inf   TB
 so   marpha.dico 179
 .mar   ⁵⁵ja  [[ (⁵⁵ja)⁵⁴ɕoŋ
@@ -2967,15 +2967,15 @@ dff   yack
 inf   TB
 so   marpha.dico 179
 .mar   ¹¹'¹¹ɦiʱ-mo
-dff   #ɾetre
+dff   être
 so   marpha.dico 186
 .mar   ⁵⁵'⁴⁴aŋ-mu
 var   ⁵⁵'⁴⁴am-ba <ML>
-dff   s'#'etirer
+dff   s'étirer
 inf   M
 so   marpha.dico 192
 .mar   Xoŋ-mu
-dff   faire #'echo
+dff   faire écho
 so   marpha.dico 195
 .mar   ⁵⁵ur
 dff   jaune
@@ -2984,4 +2984,4 @@ so   marpha.dico 199
 .mar   ⁵⁵'⁵⁵urkum
 dff   pomme d'Adam
 inf   ML
-so   marpha.dico 200
+so   marpha.dico 200

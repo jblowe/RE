@@ -14,7 +14,7 @@ dfn   aDaune
 so   1972:34
 .tag   ³bam
 phon   bəm
-dff   #'epaule
+dff   épaule
 dfe   shoulder
 so   1972:43
 .tag   Xbam-ba
@@ -73,7 +73,7 @@ dff   falaise
 dfe   cliff
 so   1972:32
 .tag   Xcip-pa
-dff   m#ɾur
+dff   mûr
 dfe   ripe
 dfn   chippieko
 ris   ¹cip
@@ -87,11 +87,11 @@ dff   battre
 dfe   to hit
 so   1972:15
 .tag   ³ɖam
-dff   brul#'e, gach#'e
+dff   brulé, gaché
 dfe   spoilt (burnt)
 so   1972:35
 .tag   Xɖeː-ba
-dff   se d#'echirer
+dff   se déchirer
 dfe   to be torn
 phr   kwan ɖeː-ba (whence intervocalic voicing?)
 so   1972:15
@@ -151,7 +151,7 @@ dff   quand
 dfe   when
 so   1972:53
 .tag   Xhan-aŋ
-dff   vers o##u
+dff   vers où
 dfe   to where
 so   1972:37
 .tag   Xhan-ba
@@ -174,11 +174,11 @@ dfe   to dry
 so   1972:26
 ..tag   Xhar-ba
 ton   55.44
-dff   s#'echer
+dff   sécher
 dfe   to dry
 so   1972:62
 ..tag   Xhar-ʃi
-dff   se dess#'echer
+dff   se dessécher
 dfe   to dry out
 so   1972:15
 .tag   Xhar-ba
@@ -228,14 +228,14 @@ dff   profond
 dfe   deep
 so   1972:46
 .tag   Xhoː-ba
-dff   d#'eplacer
+dff   déplacer
 dfe   to move sthg
 dfe   to shift
 dfn   osa:rne
 so   1972:8, 26
 ..tag   Xho-ba
 var   Xhwogo
-dff   d#'eplacer
+dff   déplacer
 dfe   to move (tr)
 dfn   osa:rne
 so   1972:37
@@ -252,7 +252,7 @@ ris   ²kʰu
 so   1972:42, 61
 .tag   Xhu
 ton   53
-dff   coud#'ee
+dff   coudée
 dfe   cubit
 ris   ¹kru
 so   1972:61
@@ -271,7 +271,7 @@ dfe   hair
 inf   la jeune bru
 so   1972:21
 .tag   ⁴hwa
-dff   bl#'e
+dff   blé
 dfe   wheat
 inf   la jeune bru
 so   1972:21
@@ -494,7 +494,7 @@ dff   un
 dfe   one
 so   1972:3
 .tag   Xkja-ba
-dff   d#'emanger
+dff   démanger
 dfe   to itch
 so   1972:42
 .tag   Xkja-ba
@@ -562,7 +562,7 @@ dff   dos
 dfe   back
 so   1972:42
 .tag   Xko-ba
-dff   casser le ma#"is
+dff   casser le maïs
 dfe   to break off (corn)
 Ptam   hok
 so   1972:16
@@ -587,12 +587,12 @@ dfe   to shiver
 so   1972:62
 .tag   Xkor
 phon   ton mid level
-dff   unit#'e
+dff   unité
 dfe   unit
 inf   la jeune bru
 so   1972:21
 .tag   ᴸkor
-dff   unit#'e
+dff   unité
 dfe   unit
 phr   kor ki:ˊone
 so   1972:3
@@ -612,7 +612,7 @@ dfe   to wear a hat
 ris   ¹kuː
 so   1972:64
 .tag   Xkwan
-dff   v##atement
+dff   vàtement
 dfe   clothes
 dfn   lugaː
 so   1972:8, 15
@@ -637,7 +637,7 @@ dfe   to tie
 so   1972:28
 .tag   Xkʰja-ba
 ton   55.44
-dff   rapi#'ecer
+dff   rapiécer
 dfe   to patch
 so   1972:34
 .tag   Xkʰjoe-ba
@@ -676,7 +676,7 @@ dff   porcherie
 dfe   pig sty
 so   1972:48
 .tag   Xkʰu
-dff   l#'egume
+dff   légume
 dfe   veggie
 so   1972:16
 .tag   Xla
@@ -897,13 +897,13 @@ dfe   to be sick
 nb   same tone as 'carry'
 so   1972:36
 .tag   ³na-ba
-dff   d#'eposer
+dff   déposer
 dfe   to put down
 ris   ³nat 'atterrir'
 ris   ³na 'accoucher'
 so   1972:17, 36
 .tag   ³na-ba
-dff   #'elever (enfants) = d#'eposer (charge)
+dff   élever (enfants) = déposer (charge)
 dfe   to raise, to put down
 inf   une jeune femme
 so   1972:24
@@ -939,7 +939,7 @@ phr   chjuku nai-ba
 so   1972:8, 10
 .tag   Xnai-ba
 ton   44.44 / 45.54
-dff   d#'egout#'e
+dff   dégouté
 dfe   to be disgusted
 so   1972:61
 .tag   Xnai-ba
@@ -958,12 +958,12 @@ dff   coucher
 dfe   to put to sleep
 so   1972:22
 .tag   Xnam
-dff   #'epi
+dff   épi
 dfe   ear of grain
 so   1972:7
 ..tag   Xnam
 ton   54 <1972:31>
-dff   #'epi
+dff   épi
 dfe   ear of grain
 so   1972:31, 36
 .tag   Xnam
@@ -1069,7 +1069,7 @@ so   1972:43
 .tag   Xɲan-go
 var   ɲan-na
 ton   44.33
-dff   #'ecouter
+dff   écouter
 dfe   to listen
 so   1972:30
 .tag   Xɲe
@@ -1109,7 +1109,7 @@ so   1972:37
 .tag   Xɲel-ba
 phon   ɲɛlba
 ton   55.44
-dff   #'ecraser des #'epices
+dff   écraser des épices
 dfe   to crush, grind
 ris   ²ŋil
 ris   0ŋjal
@@ -1122,11 +1122,11 @@ dfe   to chew cud
 ris   ¹ŋjal
 so   1972:48
 .tag   ³ɲep-pa
-dff   #'etrangler
+dff   étrangler
 dfe   to strangle
 so   1972:46
 .tag   Xɲeː-ba
-dff   m#ɾacher
+dff   mâcher
 dfe   to chew
 ptam   ŋjat
 so   1972:14
@@ -1141,7 +1141,7 @@ dfe   to spill
 so   1972:17
 ..tag   Xɲeː-ba
 var   Xɲe-ba
-dff   d#'eborder
+dff   déborder
 dfe   to spill over
 ris   net 'plein'
 so   1972:37, 67
@@ -1307,7 +1307,7 @@ dff   petite jarre de terre
 dfe   small earthen water jug
 so   1972:63
 .tag   ³poː-ba
-dff   se d#'ecoudre
+dff   se découdre
 dfe   to get unsewn
 so   1972:38
 .tag   ⁴pra
@@ -1401,7 +1401,7 @@ dfe   broom
 hom   'salut' <1972:44>
 so   1972:7, 44
 .tag   Xpʰjaː-go
-dff   d#'efricher
+dff   défricher
 dfe   to clear jungle
 dfn   jangal phaDne
 so   1972:8
@@ -1426,18 +1426,18 @@ inf   la vieille
 so   1972:24
 .tag   Xpʰoe-ba
 var   phoi-go
-dff   draper (#'echarpe ou turban)
+dff   draper (écharpe ou turban)
 dff   attacher les cordons de la blouse
 dfe   to wear by draping (scarf or turban)
 dfe   to tie fastening strings
 so   1972:14, 18
 .tag   Xpʰoi-ba
-dff   porter une #'echarpe
+dff   porter une écharpe
 dfe   to wear a scarf
 ris   ²phot 'nouer'
 so   1972:64
 .tag   Xpʰral-ba
-dff   #'ebrancher
+dff   ébrancher
 dfe   to strip tree branches
 phr   toŋ se sjaola pʰralba
 so   1972:48
@@ -1455,7 +1455,7 @@ dfe   earth clod
 so   1972:8
 .tag   Xphup-ko
 var   phup-tsi
-dff   d#'emolir, s'effondrer
+dff   démolir, s'effondrer
 dfe   to break down, collapse
 dfn   bhatgaːune
 so   1972:13
@@ -1464,7 +1464,7 @@ dff   souffler
 dfe   to blow
 so   1972:15
 .tag   Xra
-dff   ch##evre
+dff   chèvre
 dfe   goat
 ton   54 <1972:29>
 so   1972:6
@@ -1472,7 +1472,7 @@ so   1972:11
 so   1972:29
 .tag   ¹ra
 inf   fils
-dff   ch##evre
+dff   chèvre
 dfe   goat
 so   1972:20
 .tag   Xrai
@@ -1508,7 +1508,7 @@ dff   corde
 dfe   rope
 so   1972:28
 ..tag   ³rel
-dff   corde (du "namlo" <72:6>, pour les ch##evres <72:11>)
+dff   corde (du "namlo" <72:6>, pour les chèvres <72:11>)
 dfe   rope (of the carrying head-strap, to tie goats)
 phr   ra rel-dze cjyn-ba <72:11>
 so   1972:6, 11
@@ -1518,7 +1518,7 @@ dff   long
 dfe   long
 so   1972:36
 .tag   ¹reː-ba
-dff   s'#'eveiller
+dff   s'éveiller
 dfe   to wake up
 so   1972:27
 .tag   ³ri
@@ -1527,7 +1527,7 @@ dfe   forest
 so   1972:56
 .tag   ³ri-ba
 var   ri-si
-dff   r#'eclamer
+dff   réclamer
 dfe   to beg, ask for
 ris   ³rit
 so   1972:17
@@ -1577,7 +1577,7 @@ dff   fouetter (la biere)
 dfe   to whip beer
 so   1972:63
 .tag   Xruŋ-ba
-dff   #'epais
+dff   épais
 dfe   thick
 so   1972:16
 .tag   Xrup
@@ -1628,7 +1628,7 @@ dfe   clear (water)
 dfn   sanglo
 so   1972:8
 .tag   Xsaŋ-ba
-dff   faire s#'echer (grains)
+dff   faire sécher (grains)
 dfe   to set to dry (grains)
 so   1972:11
 .tag   Xsar
@@ -1643,7 +1643,7 @@ dfe   manure
 so   1972:36
 .tag   Xsar
 ton   54
-dff   #'etoile
+dff   étoile
 dfe   star
 so   1972:31
 .tag   Xsar-ba
@@ -1658,7 +1658,7 @@ dfe   breath
 dfn   sa:s
 so   1972:52
 .tag   Xsaː-ba
-dff   exorciser par pr#'esentation de riz
+dff   exorciser par présentation de riz
 dfe   to exorcise with rice
 dfn   mansaːune
 phr   məne saː-ba
@@ -1727,7 +1727,7 @@ dff   bambou
 dfe   bamboo
 so   1972:53, 63
 .tag   Xsir-ko
-dff   #'eplucher du bois, #'ebrancher
+dff   éplucher du bois, ébrancher
 dfe   to smooth off stick with knife
 so   1972:13
 .tag   Xsjaŋ-ba
@@ -1740,7 +1740,7 @@ dfe   to scrape clean
 so   1972:34
 .tag   Xsjaː-ba
 var   sjaːʃi
-dff   #ɾoter
+dff   ôter
 dfe   to take off some
 ris   ²sjaː
 ris   ²sjuaː
@@ -1751,12 +1751,12 @@ dff   pou
 dfe   louse
 so   1972:25
 .tag   Xsjeː-ba
-dff   r#'ep#'eter
+dff   répéter
 dfe   to repeat
 so   1972:14
 ..tag   Xsjeː-ba
 ton   454.33 (extra-high)
-dff   r#'ep#'eter
+dff   répéter
 dfe   to repeat
 ris   ¹sjat
 so   1972:33
@@ -1809,17 +1809,17 @@ dff   s'asseoir
 dfe   to sit
 so   1972:38
 .tag   Xsju-ba
-dff   d#'evetir
+dff   dévetir
 dfe   to undress
 so   1972:38
 ..tag   Xsju-ba
 ton   55.53
-dff   d#'epecer
+dff   dépecer
 dfe   to skin
 so   1972:48
 ..tag   Xsju-ba
 ton   53.32 (balist)
-dff   se d#'evetir
+dff   se dévetir
 dfe   to undress
 dfn   phuka:une
 so   1972:61
@@ -1950,7 +1950,7 @@ dff   savoir
 dfe   to know
 so   1972:37
 .tag   Xʃjeː-ba
-dff   r#'ep#'eter
+dff   répéter
 dfe   to repeat
 ris   sjat
 so   1972:37
@@ -1969,11 +1969,11 @@ dff   polir
 dfe   to polish (rice)
 so   1972:46
 .tag   Xʃjor-ba
-dff   d#'ef#'equer
+dff   déféquer
 dfe   to defecate
 so   1972:47
 .tag   Xʃju-ba
-dff   exorciser avec un plat d'offrandes pass#'e devant le visage
+dff   exorciser avec un plat d'offrandes passé devant le visage
 dfe   to exorcise with offering plate
 so   1972:14
 ..tag   Xʃju-ba
@@ -1996,7 +1996,7 @@ dfe   pillar
 so   1972:6
 .tag   ⁴tai-ba
 var   ⁴tai-go
-dff   mettre ##a cuire
+dff   mettre à cuire
 dfe   to set sthg to cook
 so   1972:11
 ..tag   Xtai-ba
@@ -2096,7 +2096,7 @@ dfe   to receive
 cf   te-u
 so   1972:31
 .tag   ³tep-pa
-dff   #'echanger
+dff   échanger
 dfe   to exchange
 so   1972:46
 .tag   Xte-si
@@ -2137,13 +2137,13 @@ dfn   masino
 so   1972:46
 .tag   Xtiː-ba
 ton   44.4
-dff   #'etendre
+dff   étendre
 dfe   to spread
 dfn   ocya:une
 so   1972:37
 ..tag   Xtiː-go
 var   tiː-si
-dff   #'etendre
+dff   étendre
 dfe   to spread out
 so   1972:13
 .tag   Xto-ba
@@ -2179,7 +2179,7 @@ dfe   tree
 ton   54.44
 so   1972:48
 .tag   ³toŋ
-dff   m#'elanger
+dff   mélanger
 dfe   to mix
 ris   ³toŋ
 so   1972:16
@@ -2204,7 +2204,7 @@ dff   falloir
 dfe   to need
 so   1972:65
 ..tag   Xtoː-la
-dff   n#'ecessiter
+dff   nécessiter
 dfe   to require
 so   1972:36
 .tag   ³toː-ba
@@ -2232,7 +2232,7 @@ dfe   fat
 dfn   boso
 so   1972:5
 .tag   ⁴tʃi
-dff   bi##ere
+dff   bière
 dfe   beer
 dfn   jãɖ
 so   1972:5
@@ -2342,7 +2342,7 @@ dfe   to drink
 so   1972:30
 .tag   ³ʈa
 phr   ʈaŋga ³ʈaˊsɟchoir au dessus du feu
-dff   s#'echoir
+dff   séchoir
 dfe   drying rack
 so   1972:49
 .tag   Xʈa-ba
@@ -2360,7 +2360,7 @@ dff   se rappeler
 dfe   to remember
 so   1972:28
 .tag   Xʈaŋ-ba
-dff   d#'echirer
+dff   déchirer
 dfe   to snap, break (rope)
 dfn   chinne
 phr   cho(ta) ʈaŋ-ba
@@ -2376,7 +2376,7 @@ dfe   to swell
 so   1972:22
 .tag   Xʈaŋ-ba
 ton   54.³³
-dff   d#'echirer en tirant
+dff   déchirer en tirant
 dfe   to break from pulling
 dfn   chinne
 so   1972:22
@@ -2386,7 +2386,7 @@ dfe   to swell (grain)
 so   1972:31
 .tag   Xʈap
 var   ɖap
-dff   br##edes
+dff   brèdes
 dfe   spinach
 dfn   sa:g
 so   1972:4
@@ -2450,7 +2450,7 @@ dfe   be solid, lasting
 so   1972:20
 .tag   Xʈui
 ton   45
-dff   #'eboulement
+dff   éboulement
 dfe   landslide
 so   1972:32
 .tag   Xʈui-ba
@@ -2505,7 +2505,7 @@ ris   ¹ʈʰwaŋ
 so   1972:39
 .tag   Xʈʰek
 phon   ʈʰɛk
-dff   #'etui de bois
+dff   étui de bois
 enc   pour porter la faucille (dessin 1972:44)
 dfe   wooden sheath
 so   1972:44
@@ -2544,7 +2544,7 @@ dfe   nest
 so   1972:54
 ..tag   Xtsaŋ
 ton   51
-dff   toile d'araign#'ee = nid
+dff   toile d'araignée = nid
 dfe   web, nest
 so   1972:58
 .tag   ³tsaŋ
@@ -2572,7 +2572,7 @@ dff   articulation
 dfe   joint
 so   1972:5
 .tag   ⁴tsi
-dff   bi##ere
+dff   bière
 dfe   beer
 dfn   jaD
 ris   ⁴tsi
@@ -2657,7 +2657,7 @@ dff   enfermer les poules
 dfe   to lock chicken up
 so   1972:46
 .tag   Xtsjur-go
-dff   #'egaliser le sol
+dff   égaliser le sol
 dfe   to plaster with mud
 dfn   lipnu
 so   1972:6
@@ -2715,7 +2715,7 @@ dff   hotte
 dfe   large basket
 so   1972:33
 .tag   Xtsʰap-pa
-dff   #'eplucher
+dff   éplucher
 dfe   to peel
 so   1972:46
 .tag   Xtsʰap-pa
@@ -2726,7 +2726,7 @@ hom   'ɟplucher'
 so   1972:62
 .tag   Xtsʰap-pa
 ton   44.44
-dff   #'eplucher au couteau
+dff   éplucher au couteau
 dfe   to peel (w/ knife)
 hom   avoir chaud
 so   1972:62
@@ -2764,7 +2764,7 @@ dfe   nail
 so   1972:43
 .tag   Xtsʰiː-ba
 ton   52.22
-dff   #'eternuer
+dff   éternuer
 dfe   to sneeze
 so   1972:60
 .tag   Xtsʰja-ba
@@ -2779,7 +2779,7 @@ so   1972:47
 ..tag   Xtsʰjek-pa
 phon   tsʰjɛk-pa
 ton   55.44
-dff   #'ecraser
+dff   écraser
 enc   des pommes de terre
 dfe   to mash
 so   1972:60
@@ -2869,7 +2869,7 @@ so   1972:57.
 *   presented by MM 7 Jan 94
 *
 .tag   ¹ŋeː-ba
-dff   m#ɾacher
+dff   mâcher
 dfe
 dfn
 set   1
@@ -2904,7 +2904,7 @@ set   5
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ¹nai
-dff   #ɾetre d#'ego#ɾut#'e
+dff   être dégoûté
 dfe
 dfn
 set   6
@@ -2918,14 +2918,14 @@ set   7
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ³ɲep-pa
-dff   #'etrangler
+dff   étrangler
 dfe
 dfn
 set   8
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ¹nai-ba
-dff   #ɾetre d#'ego#ɾut#'e
+dff   être dégoûté
 dfe
 dfn
 set   9
@@ -2968,21 +2968,21 @@ set   18
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ³na-ba
-dff   #'elever un enfant
+dff   élever un enfant
 dfe
 dfn
 set   19
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ³na-ba
-dff   d#'eposer
+dff   déposer
 dfe
 dfn
 set   20
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ¹na-ba
-dff   #ɾetre malade
+dff   être malade
 dfe
 dfn
 set   21
@@ -3010,7 +3010,7 @@ set   31
 nb
 so   Thak 72 Voc Comp Vb : 8
 .tag   ¹ɕjaː
-dff   #ɾoter le trop-plein
+dff   ôter le trop-plein
 dfe
 dfn
 set   33
@@ -3031,7 +3031,7 @@ set   37
 nb
 so   Thak 72 Voc Comp Vb : 9
 .tag   ¹tsha
-dff   faire pa#ɾitre
+dff   faire paître
 dfe
 dfn
 set   44
@@ -3052,7 +3052,7 @@ set   46
 nb
 so   Thak 72 Voc Comp Vb : 9
 .tag   ²tsha
-dff   faire mal (br#ɾuler)
+dff   faire mal (brûler)
 dfe
 dfn
 set   47
@@ -3079,7 +3079,7 @@ set   54
 nb
 so   Thak 72 Voc Comp Vb : 10
 .tag   ¹to-ba
-dff   d#'ecortiquer (le riz)
+dff   décortiquer (le riz)
 dfe   pound rice
 dfn
 set   55
@@ -3122,7 +3122,7 @@ set   72
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ³ra-ba
-dff   #ɾetre travailleur, #ɾetre habile
+dff   être travailleur, être habile
 dfe
 dfn
 set   73
@@ -3171,7 +3171,7 @@ set   85
 nb
 so   Thak 72 Voc Comp Vb : 14
 .tag   ³riː
-dff   r#'eclamer
+dff   réclamer
 dfe
 dfn
 set   86
@@ -3199,7 +3199,7 @@ set   92
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ³koː
-dff   r#'ecolter (ma#"is)
+dff   récolter (maïs)
 dfe   break off corn
 dfn
 set   93
@@ -3219,21 +3219,21 @@ set   96
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹kap
-dff   ajouter, compl#'eter
+dff   ajouter, compléter
 dfe
 dfn
 set   97
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹hoː
-dff   d#'eplacer
+dff   déplacer
 dfe
 dfn   osārnu
 set   101
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹ho
-dff   br#ɾuler (nourriture)
+dff   brûler (nourriture)
 dfe
 dfn
 set   102
@@ -3289,7 +3289,7 @@ set   122
 nb
 so   Thak 72 Voc Comp Vb : 17
 .tag   ¹kja
-dff   d#'emanger
+dff   démanger
 dfe
 dfn
 set   123
@@ -3332,7 +3332,7 @@ set   134
 nb
 so   Thak 72 Voc Comp Vb : 18
 .tag   ²sa
-dff   mener ##a la corde
+dff   mener à la corde
 dfe
 dfn
 set   136
@@ -3367,7 +3367,7 @@ set   149
 nb
 so   Thak 72 Voc Comp Vb : 20
 .tag   ²ɕjup
-dff   t#ɾeter
+dff   têter
 dfe
 dfn
 set   150
@@ -3395,14 +3395,14 @@ set   160
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ⁴tai
-dff   cuire ##a l'eau
+dff   cuire à l'eau
 dfe
 dfn
 set   163
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ¹tiː
-dff   #'etendre pour s'asseoir
+dff   étendre pour s'asseoir
 dfe
 dfn   richyāune
 set   164
@@ -3444,7 +3444,7 @@ set   173
 nb   d' "articulation"
 so   Thak 72 Voc Comp Vb : 21
 .tag   ³ʈeː
-dff   d#'echirer
+dff   déchirer
 dfe
 dfn
 set   175
@@ -3479,14 +3479,14 @@ set   188
 nb
 so   Thak 72 Voc Comp Vb : 23
 .tag   ²ʈuː
-dff   #ɾetre humide
+dff   être humide
 dfe
 dfn
 set   189
 nb
 so   Thak 72 Voc Comp Vb : 23
 .tag   ¹peː
-dff   #ɾetre timide
+dff   être timide
 dfe
 dfn
 set   191
@@ -3500,14 +3500,14 @@ set   193
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³beː
-dff   s#'eparer fourche de bois
+dff   séparer fourche de bois
 dfe
 dfn
 set   194
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³pʱr
-dff   se s#'eparer du tronc
+dff   se séparer du tronc
 dfe
 dfn
 set   195
@@ -3577,14 +3577,14 @@ set   214
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ¹pleː
-dff   #'ecraser du pied
+dff   écraser du pied
 dfe
 dfn   kuljeko
 set   215
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ³pla
-dff   d#'etacher, d#'ecoudre
+dff   détacher, découdre
 dfe
 dfn
 set   219
@@ -3612,7 +3612,7 @@ set   237
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ¹ɕu
-dff   #ɾoter les v#ɾetements, d#'epecer
+dff   ôter les vêtements, dépecer
 dfe
 dfn
 set   238
@@ -3654,14 +3654,14 @@ set   262
 nb
 so   Thak 72 Voc Comp Vb : 29
 .tag   ²har-ba
-dff   secouer (la poussi##ere)
+dff   secouer (la poussière)
 dfe
 dfn
 set   263
 nb
 so   Thak 72 Voc Comp Vb : 29
 .tag   ¹ho
-dff   br#ɾuler
+dff   brûler
 dfe
 dfn
 set   281
