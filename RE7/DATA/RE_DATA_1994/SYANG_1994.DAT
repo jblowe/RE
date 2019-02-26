@@ -157,7 +157,7 @@ dff   racine
 inf   m4: fa
 so   72 Thak Voc.I : 7
 .sya   °°'¢£Æin-p¾i
-dff   \'ecorce
+dff   #'ecorce
 inf   m4: fa
 nb   ğ .sya : 2 mots ?
 so   72 Thak Voc.I : 7
@@ -241,11 +241,11 @@ dff   cheveux
 inf   m4: p 72
 so   72 Thak Voc.I : 9
 .sya   °°kja
-dff   t\^ete
+dff   t#^ete
 inf   m68
 so   72 Thak Voc.I : 9
 .sya   °£kja
-dff   t\^ete
+dff   t#^ete
 inf   m4: p 72, fa, f
 so   72 Thak Voc.I : 9
 .sya   ñn¯ [[Xn¯Ú
@@ -393,7 +393,7 @@ nb
 so   72 Thak Voc.I : 11
 .sya   °°'¢¢øän-mu
 var   °°'¢¢øan-mu
-dff   \'ecouter
+dff   #'ecouter
 inf   m68
 so   72 Thak Voc.I : 11
 .sya   °°'°°Æje-ba
@@ -421,7 +421,7 @@ nb   b initial dvois
 so   72 Thak Voc.I : 13
 .sya   °°'°°æu-ba
 dfe   sit
-dff   \^etre assis
+dff   #^etre assis
 inf   m68
 so   72 Thak Voc.I : 13
 .sya   ÁÁ'ªÁdini [[ÁÁ'ªÁdiÚni
@@ -433,11 +433,11 @@ dff   lune
 inf   m68
 so   72 Thak Voc.I : 13
 .sya   °¢sar
-dff   \'etoile
+dff   #'etoile
 inf   m68
 so   72 Thak Voc.I : 15
 .sya   °°s¯r
-dff   \'etoile
+dff   #'etoile
 inf   m4: f
 so   72 Thak Voc.I : 15
 .sya   °°kju
@@ -473,7 +473,7 @@ inf   m68
 so   72 Thak Voc.I : 15
 .sya   Xmuiki
 var   Xm•ki
-dff   fum\'ee
+dff   fum#'ee
 inf   m4
 so   72 Thak Voc.I : 15
 .sya   °¢mi
@@ -497,19 +497,19 @@ nb   (de montagne)
 so   72 Thak Voc.I : 17
 .sya   °¢pa³
 dfn   lek¾ / caur
-dff   \'etendue sans v\'eg\'etation
+dff   #'etendue sans v#'eg#'etation
 inf   m4: p
 nb   ­ bÚaÚ³ 'force'
 so   72 Thak Voc.I : 17
 .sya   ªÁl¯ [[ªÁl¯Ú
 dfn   uk¾alo
-dff   mont\'ee
+dff   mont#'ee
 inf   m68
 nb   fortement breathy
 so   72 Thak Voc.I : 17
 .sya   £Ála [[£ÁlaÚ
 dfn   uk¾alo
-dff   mont\'ee
+dff   mont#'ee
 inf   m4: f
 so   72 Thak Voc.I : 17
 .sya   ÁÁpra [[ÁÁpraÚ
@@ -554,7 +554,7 @@ dff   noir
 inf   m68
 so   72 Thak Voc.I : 17
 .sya   ªª'ÁÁëo-mu [[ªª'ÁÁëoÚ-mu
-dff   chaud (v\^etement)
+dff   chaud (v#^etement)
 inf   m68
 so   72 Thak Voc.I : 19
 .sya   °°'¢¢Âogo
@@ -662,7 +662,7 @@ dff   poil du pubis (hom.)
 inf   m4: S
 so   72 Thak Voc.I : 21
 .sya   °°'°°miru
-dff   arcade sourcili\`ere
+dff   arcade sourcili#`ere
 inf   m68: p
 so   72 Thak Voc.I : 23
 .sya   °°'°¢mits¾¯m
@@ -719,15 +719,15 @@ dff   lobe d'oreille
 inf   m68
 so   72 Thak Voc.I : 25
 .sya   ÁÁ'£Ájamdzju
-dff   l\`evre sup\'erieure
+dff   l#`evre sup#'erieure
 inf   m68
 so   72 Thak Voc.I : 25
 .sya   °°'°°mane
-dff   l\`evre sup\'erieure
+dff   l#`evre sup#'erieure
 inf   m4: p
 so   72 Thak Voc.I : 25
 .sya   ªª'ªÁm¯mdzju
-dff   l\`evre inf\'erieure
+dff   l#`evre inf#'erieure
 inf   m68
 so   72 Thak Voc.I : 25
 .sya   °°'¢¢k¾ari
@@ -735,7 +735,7 @@ dff   molaire
 inf   m4: p
 so   72 Thak Voc.I : 25
 .sya   °°'°°'ªªolto³gja
-dff   trach\'ee
+dff   trach#'ee
 inf   m4: p
 so   72 Thak Voc.I : 25
 .sya   ¢¢'¢¢p¾omju³
@@ -743,7 +743,7 @@ dff   oesophage
 inf   m4: p
 so   72 Thak Voc.I : 25
 .sya   ªÁp¯m [[ªÁp¯Úm
-dff   \'epaule
+dff   #'epaule
 inf   m4: p
 so   72 Thak Voc.I : 25
 .sya   °°'££tagju³
@@ -764,7 +764,7 @@ dff   bas du dos (reins)
 inf   m4: p
 so   72 Thak Voc.I : 25
 .sya   ÁÁ'ÁÁguÆju³ °°'°°nakji
-dff   colonne vert\'ebrale
+dff   colonne vert#'ebrale
 inf   m68: p
 so   72 Thak Voc.I : 25
 .sya   °¢ku
@@ -773,11 +773,11 @@ inf   m4: p 42
 nb   ­ °¢kuò '9' <p>
 so   72 Thak Voc.I : 27
 .sya   °¢°re
-dff   c\^ote
+dff   c#^ote
 inf   m68
 so   72 Thak Voc.I : 27
 .sya   ¢°re
-dff   c\^ote
+dff   c#^ote
 inf   m4: f
 so   72 Thak Voc.I : 27
 .sya   ÁÁ'°°Æjo-Æja [[ÁÁ'°°ÆjoÚ-Æja
@@ -937,7 +937,7 @@ inf   m68
 nb   ­ ÁÁn¯Ú 'oreille' <S>
 so   72 Thak Voc.I : 31
 .sya   ÁÁ'°£napi
-dff   cire d'oreille, c\'erumen
+dff   cire d'oreille, c#'erumen
 inf   m4: p
 nb   61
 so   72 Thak Voc.I : 33
@@ -989,7 +989,7 @@ nb   (charg)
 nb   65
 so   72 Thak Voc.I : 33
 .sya   °°'°°k¯mkju
-dff   eau am\`ere dans bouche
+dff   eau am#`ere dans bouche
 inf   m68: S
 nb   65a.
 so   72 Thak Voc.I : 33
@@ -1024,13 +1024,13 @@ so   72 Thak Voc.I : 33
 .sya   °°ki
 var   °°li <S>
 var   °¢li <S>
-dff   excr\'ements
+dff   excr#'ements
 dfe   faeces
 inf   m68: m
 nb   69
 so   72 Thak Voc.I : 33
 .sya   °°li
-dff   excr\'ements
+dff   excr#'ements
 dfe   faeces
 inf   m4: f
 nb   69
@@ -1067,7 +1067,7 @@ inf   m4: 21
 nb   ­ ÁÁg•Ú '1'
 so   72 Thak Voc.I : 35
 .sya   °Ámle [[°ÁmleÚ
-dff   p\'enis
+dff   p#'enis
 inf   m68: S
 so   72 Thak Voc.I : 35
 .sya   ÁÁ'¢£gup¾um
@@ -1079,7 +1079,7 @@ dff   vagin
 inf   m68: S
 so   72 Thak Voc.I : 35
 .sya   Xk¾am asa³ba tamu
-dff   av. r\`egles
+dff   av. r#`egles
 inf   m68: S
 so   72 Thak Voc.I : 35
 .sya   °°øa
@@ -1108,15 +1108,15 @@ dff   qui a six doigts
 inf   m4: fa
 so   72 Thak Voc.I : 35
 .sya   °°su³ °°pre
-dff   qui a un bec de li\`evre
+dff   qui a un bec de li#`evre
 inf   m68: S
 so   72 Thak Voc.I : 35
 .sya   °¢pre
-dff   qui a un bec de li\`evre (homme)
+dff   qui a un bec de li#`evre (homme)
 inf   m4: f
 so   72 Thak Voc.I : 35
 .sya   °°'°°preÆja
-dff   qui a un bec de li\`evre (femme)
+dff   qui a un bec de li#`evre (femme)
 inf   m4: f
 so   72 Thak Voc.I : 35
 .sya   °°'°°'°¢kanaso
@@ -1161,7 +1161,7 @@ dff   poussin
 inf   m68
 so   72 Thak Voc.I :  37
 .sya   ªÁæa [[ªÁæaÚ
-dff   cr\^ete (de coq)
+dff   cr#^ete (de coq)
 inf   m4: p 108
 nb
 so   72 Thak Voc.I :  37
@@ -1178,7 +1178,7 @@ dff   bovin
 inf   m4: p 72
 so   72 Thak Voc.I : 41
 .sya   °°r¯
-dff   ch\`evre
+dff   ch#`evre
 inf   m4
 so   72 Thak Voc.I : 41
 .sya   ªÁkju [[ªÁkjuÚ
@@ -1196,7 +1196,7 @@ dff   cheval
 inf   m4: p
 so   72 Thak Voc.I : 43
 .sya   ÁÁ'££pumbu
-dff   \^ane
+dff   #^ane
 inf   m68: S ?
 so   72 Thak Voc.I : 43
 .sya   °¢°ja
@@ -1299,11 +1299,11 @@ inf   m4
 nb   id. ghit <p>
 so   72 Thak Voc.I : 53
 .sya   °¢'¢¢muti
-dff   excr\'ements d'animaux
+dff   excr#'ements d'animaux
 inf   m68: S
 so   72 Thak Voc.I : 55
 .sya   ªª'ªÁmudi [[ªª'ªÁmudiÚ
-dff   excr\'ements d'animaux
+dff   excr#'ements d'animaux
 inf   m4: p
 so   72 Thak Voc.I : 55
 .sya   °°'°°naga °¢°t·i
@@ -1327,7 +1327,7 @@ inf   m4: p
 so   72 Thak Voc.I : 55
 .sya   °°'°°pudzu
 var   °°'°°putsu
-dff   \'epine
+dff   #'epine
 inf   m68: p
 so   72 Thak Voc.I : 57
 .sya   XÆin
@@ -1394,7 +1394,7 @@ inf   m4: p
 nb   110 = boso
 so   72 Thak Voc.I : 63
 .sya   °¢tÆ¾i
-dff   paille de bl\'e
+dff   paille de bl#'e
 inf   m68
 so   72 Thak Voc.I : 63
 .sya   ¢°pwi
@@ -1405,25 +1405,25 @@ nb
 so   72 Thak Voc.I : 63
 .sya   Xp¾i
 var   Xk¾oila
-dff   \'ecorce du ma\"is
+dff   #'ecorce du ma#"is
 inf   m68
 so   72 Thak Voc.I : 63
 .sya   ¢¢kje °°ur
-dff   barbe du ma\"is
+dff   barbe du ma#"is
 inf   m68
 nb   sens incertain
 so   72 Thak Voc.I : 63
 .sya
 var   ££'££mlasun
-dff   riz non d\'ecortiqu\'e
+dff   riz non d#'ecortiqu#'e
 inf   m68: m
 so   72 Thak Voc.I : 63
 .sya   ÁÁ'°¢mlasun
-dff   riz non d\'ecortiqu\'e
+dff   riz non d#'ecortiqu#'e
 inf   m4
 so   72 Thak Voc.I : 63
 .sya   °¢p¾um
-dff   \'epi de riz
+dff   #'epi de riz
 inf   m4: p
 nb   = 'oeuf'
 so   72 Thak Voc.I : 63
@@ -1435,15 +1435,15 @@ so   72 Thak Voc.I : 65
 .sya   °Áæo [[°ÁæoÚ
 var   ¢Áëo
 var   ªÁæo [[ªÁæoÚ
-dff   l\'egume
+dff   l#'egume
 inf   m68
 so   72 Thak Voc.I : 65
 .sya   ñno [[XnoÚ
-dff   a\"il
+dff   a#"il
 inf   m68
 so   72 Thak Voc.I : 65
 .sya   ÁÁnoò [[ÁÁnoÚò
-dff   a\"il
+dff   a#"il
 inf   m4: p
 so   72 Thak Voc.I : 65
 .sya   °°'°¢t¯ja
@@ -1480,7 +1480,7 @@ nb   IV-67
 so   72 Thak Voc.I : 69
 .sya   ñna³ [[XnaÚ³
 var   Ñali
-dff   s\'eparation de champ
+dff   s#'eparation de champ
 inf   m68
 so   72 Thak Voc.I : 71
 .sya   °°'°°kotsja³
@@ -1489,12 +1489,12 @@ inf   m68
 so   72 Thak Voc.I : 71
 .sya   ¢¢le
 var   °¢lje
-dff   rizi\`ere
+dff   rizi#`ere
 inf   m68
 so   72 Thak Voc.I : 71
 .sya   °°lie
 var   °°le
-dff   rizi\`ere
+dff   rizi#`ere
 inf   m4: f
 so   72 Thak Voc.I : 71
 .sya   k¯ru
@@ -1509,13 +1509,13 @@ inf   m68
 so   72 Thak Voc.I : 71
 .sya   ñko [[XkoÚ
 dfn   g¯h~u
-dff   bl\'e
+dff   bl#'e
 dfe   wheat
 inf   m68
 so   72 Thak Voc.I : 71
 .sya   ñko [[XkoÚ
 dfn   g¯h~u
-dff   bl\'e
+dff   bl#'e
 dfe   wheat
 inf   m4: f
 nb   ­ ªÁ'ÁªgoÚ 'dos'
@@ -1532,11 +1532,11 @@ dff   ortie
 inf   m68
 so   72 Thak Voc.I : 71
 .sya   Xk¾ala
-dff   p\^eche (petite)
+dff   p#^eche (petite)
 inf   m68
 so   72 Thak Voc.I : 73
 .sya   Xkjak¾om
-dff   p\^eche (grosse)
+dff   p#^eche (grosse)
 inf   m68
 nb   ?
 so   72 Thak Voc.I : 73
@@ -1612,7 +1612,7 @@ inf   m4: fa
 so   72 Thak Voc.I : 73
 .sya   °°'°°Æiæi
 dfn   dhubi rukh
-dff   gen\'evrier
+dff   gen#'evrier
 inf   m68: m
 so   72 Thak Voc.I : 73
 .sya   Xs¯n
@@ -1633,7 +1633,7 @@ dff   jeune homme
 inf   m68: S
 so   72 Thak Voc.I : 75
 .sya   ªÁ'ªª'ªªp¾ja³gala
-dff   petit gar\,con
+dff   petit gar#,con
 inf   m4: f
 so   72 Thak Voc.I : 75
 .sya   °°'°°ts¾ämä
@@ -1665,12 +1665,12 @@ dff   mari
 inf   m4: f
 so   72 Thak Voc.I : 77
 .sya   ªÁpe [[ªÁpeÚ
-dff   \'epouse
+dff   #'epouse
 inf   m4: f
 so   72 Thak Voc.I : 77
 .sya   ªªpe ªÁg¾¯n [[ªªpeÚ ªÁg¾¯Ún
 var   ªÁpe ££'££t¾jowa <p> [[ªÁpeÚ ££'££t¾jowa <p>
-dff   premi\`ere femme
+dff   premi#`ere femme
 inf   m4: f
 so   72 Thak Voc.I : 77
 .sya   ªªpe ¢¢tÆin [[ªªpeÚ ¢¢tÆin
@@ -1679,82 +1679,82 @@ dff   seconde femme
 inf   m4: f
 so   72 Thak Voc.I : 77
 .sya   °°'¢¢aba
-dff   p\`ere
+dff   p#`ere
 inf   m68: m
 so   72 Thak Voc.I : 77
 .sya   °°'°°a¸a
-dff   p\`ere
+dff   p#`ere
 inf   m4: f
 so   72 Thak Voc.I :  77
 .sya   °°'¢¢ama
-dff   m\`ere
+dff   m#`ere
 inf   m68: m
 nb   ß°°
 so   72 Thak Voc.I :  77
 .sya   °°'°¢ama
-dff   m\`ere
+dff   m#`ere
 inf   m4: f
 so   72 Thak Voc.I :  77
 .sya   °¢k¾e
-dff   grand-p\`ere
+dff   grand-p#`ere
 inf   m68: m
 nb   N
 so   72 Thak Voc.I :  77
 .sya   °°'¢¢k¾jop¯n
-dff   grand-p\`ere
+dff   grand-p#`ere
 inf   m4
 so   72 Thak Voc.I :  77
 .sya   °¢m¯m
-dff   grand-m\`ere
+dff   grand-m#`ere
 inf   m68: m
 so   72 Thak Voc.I :  77
 .sya   °°'°¢mom¯i
-dff   grand-m\`ere
+dff   grand-m#`ere
 inf   m4
 so   72 Thak Voc.I :  77
 .sya   °¢k¾e
-dff   beau-p\`ere
+dff   beau-p#`ere
 inf   m68: m
 so   72 Thak Voc.I :  77
 .sya   °¢kjän
-dff   beau-p\`ere
+dff   beau-p#`ere
 inf   m4
 so   72 Thak Voc.I :  77
 .sya   ¢¢'££Æju³me
 var   °¢m¯m <m>
-dff   belle-m\`ere
+dff   belle-m#`ere
 inf   m68: S
 so   72 Thak Voc.I : 77
 .sya   ªÁ'¢¢Æju³me
-dff   belle-m\`ere
+dff   belle-m#`ere
 inf   m4
 so   72 Thak Voc.I :  77
 .sya   °°'°¢adzjo
-dff   fr\`ere a\^in\'e
+dff   fr#`ere a#^in#'e
 inf   m68: m
 so   72 Thak Voc.I : 79
 .sya   ¢¢'°¢adzjo
-dff   fr\`ere a\^in\'e
+dff   fr#`ere a#^in#'e
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   °¢pon
-dff   fr\`ere a\^in\'e premier n\'e
+dff   fr#`ere a#^in#'e premier n#'e
 inf   m4: p
 so   72 Thak Voc.I : 79
 .sya   °°'°¢ale
-dff   fr\`ere cadet
+dff   fr#`ere cadet
 inf   m68: m
 so   72 Thak Voc.I : 79
 .sya   °£tsjon
-dff   fr\`ere cadet
+dff   fr#`ere cadet
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   Xana
-dff   soeur a\^in\'ee
+dff   soeur a#^in#'ee
 inf   m68: m
 so   72 Thak Voc.I : 79
 .sya   °°'°¢ana
-dff   soeur a\^in\'ee
+dff   soeur a#^in#'ee
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   °°'°°pitsja³
@@ -1768,86 +1768,86 @@ nb   Ÿr dvois
 so   72 Thak Voc.I : 79
 .sya   °°ap ¢¢'¢¢t¾eba
 dfe   first born uncle
-dff   fr\`ere a\^in\'e du p\`ere (1er n\'e)
+dff   fr#`ere a#^in#'e du p#`ere (1er n#'e)
 inf   m4
 so   72 Thak Voc.I : 79
 .sya   °ªa ¢¢'¢¢p¾oba
 dfe   2nd and 3rd born uncle
-dff   fr\`ere a\^in\'e du p\`ere (2e ou 3e n\'e)
+dff   fr#`ere a#^in#'e du p#`ere (2e ou 3e n#'e)
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   °°am ¢¢'¢¢t¾eba
 dfe   wife of first
-dff   femme d'oncle a\^in\'e paternel (1er n\'e)
+dff   femme d'oncle a#^in#'e paternel (1er n#'e)
 inf   m4
 so   72 Thak Voc.I : 79
 .sya   °ªam ¢¢'££p¾oba
 dfe   wife of 2nd and 3rd
-dff   femme d'oncle a\^in\'e paternel (2e et 3e n\'e)
+dff   femme d'oncle a#^in#'e paternel (2e et 3e n#'e)
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   °ªa °°'££tsja³ba
 var   °ªap °°'££tsa³ba <p>
 dfn   bako bhai
-dff   f\`ere cadet du p\`ere
+dff   f#`ere cadet du p#`ere
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   °°'°¢øak¯n
 dfn   bako didi
 dfe   1st born
-dff   soeur a\^in\'ee du p\`ere (1\`ere n\'ee)
+dff   soeur a#^in#'ee du p#`ere (1#`ere n#'ee)
 inf   m4
 so   72 Thak Voc.I : 79
 .sya   °£a ££'££nja³ma
 var   am tsja³ba <p>
-dff   femme du fr\`ere cadet du p\`ere
+dff   femme du fr#`ere cadet du p#`ere
 inf   m4: f
 so   72 Thak Voc.I : 79
 .sya   °°'°¢øaptän
 dfe   2nd born
-dff   soeur a\^in\'ee du p\`ere (2\`eme n\'ee)
+dff   soeur a#^in#'ee du p#`ere (2#`eme n#'ee)
 inf   m4
 so   72 Thak Voc.I : 79
 .sya   °£a ££'££k¾oma
-dff   mari de soeur a\^in\'ee du p\`ere
+dff   mari de soeur a#^in#'ee du p#`ere
 inf   m4
 nb   de bako didi
 so   72 Thak Voc.I : 79
 .sya   °°'¢¢niòtsja³
 dfn   bako bahini
-dff   soeur cadette du p\`ere
+dff   soeur cadette du p#`ere
 inf   m4
 so   72 Thak Voc.I : 81
 .sya   °£a ££'££k¾oma
-dff   mari de soeur cadette du p\`ere
+dff   mari de soeur cadette du p#`ere
 inf   m4
 nb   de bako bahini
 so   72 Thak Voc.I : 81
 .sya   °°a °¢Æja³
 dfn   mama
-dff   fr\`ere de la m\`ere
+dff   fr#`ere de la m#`ere
 inf   m4
 so   72 Thak Voc.I : 81
 .sya   °°'°¢ani
-dff   femme du fr\`ere de la m\`ere
+dff   femme du fr#`ere de la m#`ere
 inf   m4
 nb   mama
 so   72 Thak Voc.I : 81
 .sya   Xatsjam
 var   Xtsjama
 dfn   amako didi
-dff   soeur a\^in\'ee de la m\`ere
+dff   soeur a#^in#'ee de la m#`ere
 inf   m68
 so   72 Thak Voc.I : 81
 .sya   °°'°¢ atsj¯m
 var   ¢¢'°¢ atsj¯m
 dfn   amako didi
-dff   soeur a\^in\'ee de la m\`ere
+dff   soeur a#^in#'ee de la m#`ere
 inf   m4: f
 so   72 Thak Voc.I : 81
 .sya   °Á'¢¢ak¾u
 var   °Á'££ak¾u
-dff   mari de la soeur a\^in\'ee de la m\`ere
+dff   mari de la soeur a#^in#'ee de la m#`ere
 inf   m4: f
 nb   de amako didi bahini
 so   72 Thak Voc.I :  81
@@ -1878,7 +1878,7 @@ nb   son mari : daju/bhai ; ses enfants : rien
 so   72 Thak Voc.I : 81
 .sya   °°'°¢utu³
 dfn   didiko logne
-dff   mari de la soeur a\^in\'ee
+dff   mari de la soeur a#^in#'ee
 inf   m4: f
 so   72 Thak Voc.I : 83
 .sya   °°'££ts¾aòbo
@@ -1888,35 +1888,35 @@ inf   m4: f
 so   72 Thak Voc.I : 83
 .sya   °£tsa³
 dfn   dajuko swasni, bhaiko swasni
-dff   femme du fr\`ere
+dff   femme du fr#`ere
 inf   m4: f
 so   72 Thak Voc.I : 83
 .sya   °°'¢¢apta³
 dfn   logneko daju
 dfe   1st
-dff   fr\`ere a\^in\'e du mari
+dff   fr#`ere a#^in#'e du mari
 inf   m4: f
 so   72 Thak Voc.I : 83
 .sya   °°'°¢ag¯n
 dfn   logneko daju
 dfe   1st
-dff   fr\`ere a\^in\'e du mari (1er n\'e)
+dff   fr#`ere a#^in#'e du mari (1er n#'e)
 inf   m4: p
 so   72 Thak Voc.I : 83
 .sya   °°'°¢apt¯n
 dfn   logneko daju
 dfe   2nd
-dff   fr\`ere a\^in\'e du mari (2e n\'e)
+dff   fr#`ere a#^in#'e du mari (2e n#'e)
 inf   m4: p
 so   72 Thak Voc.I : 83
 .sya   °°'¢¢aòtsja³
 dfn   logneko bhai
-dff   fr\`ere cadet du mari
+dff   fr#`ere cadet du mari
 inf   m4
 so   72 Thak Voc.I : 83
 .sya   °°'°°øak¯n
 dfn   logneko didi
-dff   soeur a\^in\'ee du mari
+dff   soeur a#^in#'ee du mari
 inf   m4
 so   72 Thak Voc.I : 83
 .sya   °°'¢¢niòtsja³
@@ -1926,22 +1926,22 @@ inf   m4
 so   72 Thak Voc.I : 83
 .sya   ªÁ'££Æja³bo
 dfn   swasniko daju bhai
-dff   fr\`ere de l'\'epouse
+dff   fr#`ere de l'#'epouse
 inf   m4: f
 so   72 Thak Voc.I : 83
 .sya   °£niò
-dff   femme du fr\`ere de l'\'epouse
+dff   femme du fr#`ere de l'#'epouse
 inf   m4
 nb   de swasniko daju
 so   72 Thak Voc.I : 83
 .sya   °°'°¢ atsj¯m
 dfn   swasniko didi bahini
-dff   soeur de l'\'epouse
+dff   soeur de l'#'epouse
 inf   m4: p
 nb   ?
 so   72 Thak Voc.I : 85
 .sya   °°'°°ts¾apo
-dff   mari de la soeur de l'\'epouse
+dff   mari de la soeur de l'#'epouse
 inf   m4
 nb   de swasni ko didi
 so   72 Thak Voc.I : 85
@@ -1962,19 +1962,19 @@ dff   fille
 inf   m4: f
 so   72 Thak Voc.I : 85
 .sya   °°'°¢kontsa
-dff   neveu crois\'e - petit-fils
+dff   neveu crois#'e - petit-fils
 inf   m68: m
 so   72 Thak Voc.I : 85
 .sya   °°'°¢kontsa
-dff   neveu crois\'e - petit-fils
+dff   neveu crois#'e - petit-fils
 inf   m4: f
 so   72 Thak Voc.I : 85
 .sya   Xkoime
-dff   ni\`ece crois\'ee - petite-fille
+dff   ni#`ece crois#'ee - petite-fille
 inf   m68: m
 so   72 Thak Voc.I : 85
 .sya   °°'¢¢koime
-dff   ni\`ece crois\'ee - petite-fille
+dff   ni#`ece crois#'ee - petite-fille
 inf   m4: f
 so   72 Thak Voc.I : 85
 .sya   ñma [[XmaÚ
@@ -1995,7 +1995,7 @@ dff   bru
 inf   m4: f
 so   72 Thak Voc.I : 85
 .sya   Xk¾jop¯n
-dff   arri\`ere grand-p\`ere
+dff   arri#`ere grand-p#`ere
 inf   m4
 so   72 Thak Voc.I : 85
 .sya   ¢¢'££Æjo-ba
@@ -2031,7 +2031,7 @@ nb   (taler)
 so   72 Thak Voc.I : 87
 .sya   °°'°°t¾a³gu
 dfn   tanka
-dff   peinture tib\'etaine
+dff   peinture tib#'etaine
 inf   m68: S
 so   72 Thak Voc.I : 87
 .sya   °°'°¢kja³-ba
@@ -2088,7 +2088,7 @@ nb   2me variante :le e de ke est barr : la barre ne passe pas ˆ
 so   72 Thak Voc.I : 89
 .sya   ÁÁm¯n ÁÁk¯i
 var   ªÁm¯n ££k¯i
-dff   n\'epali
+dff   n#'epali
 inf   m68
 so   72 Thak Voc.I : 89
 .sya   °°'¢¢lja³ba
@@ -2143,16 +2143,16 @@ inf   m68: S
 nb   m. ˆ m. l'a”n entre tous
 so   72 Thak Voc.I : 91
 .sya   ££Àil ¢Á'ªªtsompa
-dff   assembl\'ee
+dff   assembl#'ee
 inf   m68: S
 so   72 Thak Voc.I : 91
 .sya   ªÁ'££g¯hi ¢¢'¢¢taba
 var   ªÁ'££g¯hi °°'¢¢tsimta
-dff   \^etre d'accord
+dff   #^etre d'accord
 inf   m68: S
 so   72 Thak Voc.I : 93
 .sya   ªª'ªÁ'££'£Áag¯imu
-dff   diff\'erer
+dff   diff#'erer
 inf   m68: S
 so   72 Thak Voc.I : 93
 .sya   ªÁnor [[ªÁnoÚr
@@ -2219,11 +2219,11 @@ dff   marchand
 inf   m4: f
 so   72 Thak Voc.I : 95
 .sya   ªÁdim ÁÁ'ÁÁdaba [[ªÁdiÚm ÁÁ'ÁÁdaÚba
-dff   ma\^itre
+dff   ma#^itre
 inf   m68: S
 so   72 Thak Voc.I : 95
 .sya   ªÁ'¢¢daòba [[ªÁ'¢¢daÚòba
-dff   ma\^itre
+dff   ma#^itre
 inf   m4: f
 so   72 Thak Voc.I : 95
 .sya   ªÁ'ªªgjaba [[ªÁ'ªªgjaÚba
@@ -2284,7 +2284,7 @@ dff   cher
 inf   m68
 so   72 Thak Voc.I : 97
 .sya   Xk¾jamu
-dff   bon march\'e
+dff   bon march#'e
 inf   ğvrifier sur cahier
 so   72 Thak Voc.I : 97
 .sya   °°'°¢æa³dar
@@ -2370,22 +2370,22 @@ dff   boue
 inf   m4: f
 so   72 Thak Voc.I : 101
 .sya   °°'££sakar
-dff   terre \`a badigeon claire
+dff   terre #`a badigeon claire
 inf   m68: S
 so   72 Thak Voc.I : 101
 .sya   °¢k¯
 dfn   cun
-dff   chaux \`a badigeon
+dff   chaux #`a badigeon
 inf   m68: m
 so   72 Thak Voc.I : 101
 .sya   °¢ka
 dfn   cun
-dff   chaux \`a badigeon
+dff   chaux #`a badigeon
 inf   m4
 nb   ­ °£kaò 'sang' <p 109>
 so   72 Thak Voc.I : 101
 .sya   °¢k¯ °°'¢¢pum-ba
-dff   badigeonner \`a la chaux
+dff   badigeonner #`a la chaux
 inf   m68: m
 so   72 Thak Voc.I : 101
 .sya   ÁÁÆj¯l ££'££la-ba
@@ -2433,11 +2433,11 @@ dff   escalier de pierre
 inf   m4: f
 so   72 Thak Voc.I : 101
 .sya   °°li
-dff   \'echelle
+dff   #'echelle
 inf   m68: m
 so   72 Thak Voc.I : 101
 .sya   °°hÂi
-dff   \'echelle
+dff   #'echelle
 inf   m4: f
 nb   ­ ¢£ 'visage'
 so   72 Thak Voc.I : 101
@@ -2482,7 +2482,7 @@ inf   m4: f
 nb   °¢t¾a³ ­ °°t¾a³ 'odeur'
 so   72 Thak Voc.I : 103
 .sya   °°'¢¢p¾järbu
-dff   tapis de poil de ch\`evre
+dff   tapis de poil de ch#`evre
 inf   m68: m
 so   72 Thak Voc.I : 103
 .sya   ££'ÁÁæumts¯n
@@ -2499,11 +2499,11 @@ dff   oreiller
 inf   m68: m
 so   72 Thak Voc.I : 103
 .sya   °¢mr¯m
-dff   coffre \`a grain
+dff   coffre #`a grain
 inf   m68: S
 so   72 Thak Voc.I : 105
 .sya   °¢mram
-dff   coffre \`a grain
+dff   coffre #`a grain
 inf   m4: f
 so   72 Thak Voc.I : 105
 .sya   °£'££p¾aòto
@@ -2511,12 +2511,12 @@ dff   foyer central
 inf   m4: f
 so   72 Thak Voc.I : 105
 .sya   °°'¢¢koto³
-dff   d\'eversoir des cendres (devant le foyer)
+dff   d#'eversoir des cendres (devant le foyer)
 inf   m68: S
 nb
 so   72 Thak Voc.I : 105
 .sya   °°'°°koto³
-dff   d\'eversoir des cendres (devant le foyer)
+dff   d#'eversoir des cendres (devant le foyer)
 inf   m4: f
 nb
 so   72 Thak Voc.I : 105
@@ -2525,7 +2525,7 @@ dff   foyer ouvert (pour la distillation)
 inf   m68: S
 so   72 Thak Voc.I : 105
 .sya   ÁÁ'¢¢tsjato³
-dff   foyer \`a deux trous
+dff   foyer #`a deux trous
 inf   m68: S
 so   72 Thak Voc.I : 105
 .sya   °°'°¢mjoko
@@ -2542,7 +2542,7 @@ dff   charbons ardents
 inf   m4
 so   72 Thak Voc.I : 105
 .sya   °°'°°m¯k¯l
-dff   po\^ele \`a charbon
+dff   po#^ele #`a charbon
 inf   m68: S
 so   72 Thak Voc.I :
 .sya   Xr¯næa
@@ -2568,7 +2568,7 @@ inf   m68: m
 nb   N
 so   72 Thak Voc.I : 107
 .sya   Xmi Xmändo
-dff   \'etincelles
+dff   #'etincelles
 inf   m68: S
 so   72 Thak Voc.I : 107
 .sya   °°'¢¢Âa³ba
@@ -2585,15 +2585,15 @@ inf   m4: f
 nb   poussire : dulu
 so   72 Thak Voc.I : 107
 .sya   °°Æin
-dff   bois \`a br\^uler
+dff   bois #`a br#^uler
 inf   m68: S
 so   72 Thak Voc.I : 107
 .sya   °ªÆin
-dff   bois \`a br\^uler
+dff   bois #`a br#^uler
 inf   m4: f
 so   72 Thak Voc.I : 107
 .sya   °°Æin ÁÁ'¢¢to³ba
-dff   b\^uche
+dff   b#^uche
 inf   m4: f
 so   72 Thak Voc.I : 109
 .sya   °°ta³
@@ -2620,27 +2620,27 @@ inf   m68: S
 nb
 so   72 Thak Voc.I : 109
 .sya   ¢¢'¢¢tsjakjo
-dff   louche \`a th\'e
+dff   louche #`a th#'e
 inf   m68: S
 so   72 Thak Voc.I : 109
 .sya   ÁÁtsja £ªts¾¯r
-dff   passe-th\'e
+dff   passe-th#'e
 inf   m68: S
 so   72 Thak Voc.I : 109
 .sya   °°Æin ¢¢'¢¢tsa³bai ££'ªÁkaga
-dff   jarre \`a eau en cuivre
+dff   jarre #`a eau en cuivre
 inf   m68
 so   72 Thak Voc.I : 109
 .sya   °°'°¢rasa³
-dff   grande bassine \`a eau
+dff   grande bassine #`a eau
 inf   m68: S
 so   72 Thak Voc.I : 109
 .sya   ªÁ'££po³na [[ªÁ'££poÚ³na
-dff   petite bassine \`a eau
+dff   petite bassine #`a eau
 inf   m4: f
 so   72 Thak Voc.I : 109
 .sya   Xra³gjäl
-dff   jarre \`a eau en argile
+dff   jarre #`a eau en argile
 inf   m68: p
 so   72 Thak Voc.I : 111
 .sya   ¢¢'¢¢p¾urko
@@ -2663,20 +2663,20 @@ dff   bol en porcelaine (sans queue)
 inf   m68: S
 so   72 Thak Voc.I : 111
 .sya   ¢¢'££pakpur
-dff   pot \`a tsampa
+dff   pot #`a tsampa
 inf   m68: S
 nb   (ton : m)
 so   72 Thak Voc.I : 111
 .sya   Xpakpur
-dff   pot \`a farine d'orge grill\'ee
+dff   pot #`a farine d'orge grill#'ee
 inf   m4: f
 so   72 Thak Voc.I : 111
 .sya   ÁÁtÆj¯ ££pin
-dff   th\'ei\`ere
+dff   th#'ei#`ere
 inf   m4: f
 so   72 Thak Voc.I : 111
 .sya   ÁÁtsj¯ ¢£to³ [[ÁÁtsj¯Ú ¢£to³
-dff   baratte \`a th\'e
+dff   baratte #`a th#'e
 inf   m4: f
 so   72 Thak Voc.I : 111
 .sya   Áªdär [[ÁªdäÚr
@@ -2694,28 +2694,28 @@ nb   pour femmes
 so   72 Thak Voc.I : 111
 .sya   ¢¢'¢¢koÆjo
 var   kacaurÑa
-dff   bol \`a l\'egumes
+dff   bol #`a l#'egumes
 inf   m4: f
 so   72 Thak Voc.I : 111
 .sya   £Átik [[£ÁtiÚk
-dff   grande marmite en cuivre pr cuire le th\'e
+dff   grande marmite en cuivre pr cuire le th#'e
 inf   m68: S 123
 so   72 Thak Voc.I : 111
 .sya   °°'°°k¾uba
-dff   pot \`a cuire le l\'egume
+dff   pot #`a cuire le l#'egume
 inf   m4: f
 so   72 Thak Voc.I : 111
 .sya   °°'°°tÆjasa³
-dff   casserole \`a queue
+dff   casserole #`a queue
 inf   m68: S
 so   72 Thak Voc.I : 111
 .sya   ªÁ'££naltsa
-dff   casserole \`a 'ë¾ero'
+dff   casserole #`a 'ë¾ero'
 inf   m68: S
 so   72 Thak Voc.I : 111
 .sya   °°'°°ari
 dfn   dekci
-dff   pot \`a cuire le riz
+dff   pot #`a cuire le riz
 inf   m68
 so   72 Thak Voc.I : 111
 .sya   ñdu [[duÚ
@@ -2724,12 +2724,12 @@ inf   m4: f
 so   72 Thak Voc.I : 111
 .sya   °°'¢£ra³gjäl
 dfn   gairo
-dff   grande jarre ronde en terre, \`a chang
+dff   grande jarre ronde en terre, #`a chang
 inf   m68: S
 nb   cf. 61
 so   72 Thak Voc.I : 113
 .sya   °°'°°'°¢kala³sä
-dff   grande jarre ronde en terre, \`a chang
+dff   grande jarre ronde en terre, #`a chang
 inf   m4: f
 so   72 Thak Voc.I : 113
 .sya   °°pu
@@ -2747,11 +2747,11 @@ dff   chiffon
 inf   m68
 so   72 Thak Voc.I : 113
 .sya   °°æa³
-dff   s\'echoir au-dessus du feu
+dff   s#'echoir au-dessus du feu
 inf   m68: m
 so   72 Thak Voc.I : 113
 .sya   °¢'¢¢'¢£po³olo
-dff   panier \`a piments au-dessus du feu
+dff   panier #`a piments au-dessus du feu
 inf   m68: m
 so   72 Thak Voc.I : 113
 .sya   °°pja³
@@ -2769,28 +2769,28 @@ inf   m68: m
 so   72 Thak Voc.I : 113
 .sya   ªÁ'ªª'¢¢'¢¢gurumpudzu
 dfn   dik¾i
-dff   pot \`a raksi droit en bois tourn\'e
+dff   pot #`a raksi droit en bois tourn#'e
 inf   m68: S
 nb   petit crochet sous le ler u
 so   72 Thak Voc.I : 113
 .sya   °°'°°'¢¢'¢¢gurumpudzu
 dfn   dik¾i
-dff   pot \`a raksi droit en bois tourn\'e
+dff   pot #`a raksi droit en bois tourn#'e
 inf   m4: fa
 so   72 Thak Voc.I : 113
 .sya   °°'°°p¯ru
 dfn   dik¾i
-dff   pot de bois tourn\'e, \`a col
+dff   pot de bois tourn#'e, #`a col
 inf   m68: S
 so   72 Thak Voc.I : 113
 .sya   °°'°¢p¿ru
 dfn   dik¾i
-dff   pot de bois tourn\'e, \`a col
+dff   pot de bois tourn#'e, #`a col
 inf   m4: f
 nb   (ˆ huile)
 so   72 Thak Voc.I : 113
 .sya   °°'°°tsa³a
-dff   dieu sur le toit (\`a cornes ou \`a fleurs)
+dff   dieu sur le toit (#`a cornes ou #`a fleurs)
 inf   m4: p
 so   72 Thak Voc.I : 113
 .sya   °°'°°pulu
@@ -2818,19 +2818,19 @@ dff   suspendeur en bois fourchu
 inf   m68: ? S
 so   72 Thak Voc.I : 115
 .sya   ÁÁ'££k¯ja °°'°°t¾eba [[ÁÁ'££k¯Úja °°'°°t¾eba
-dff   gde bassine \`a cuire en cuivre rouge
+dff   gde bassine #`a cuire en cuivre rouge
 inf   m68: S
 so   72 Thak Voc.I : 115
 .sya   ££'££'°°taja³ta³
-dff   buffet \`a vaisselle
+dff   buffet #`a vaisselle
 inf   m68: S
 so   72 Thak Voc.I : 115
 .sya   °°'°°torka³
-dff   buffet \`a puja
+dff   buffet #`a puja
 inf   m68: S
 so   72 Thak Voc.I : 115
 .sya   °¢'¢¢'¢¢tsa³kuli
-dff   louche \`a eau
+dff   louche #`a eau
 inf   m68: S
 so   72 Thak Voc.I : 115
 .sya   °°'££taktak¾
@@ -2842,12 +2842,12 @@ dff   billot
 inf   m4: p
 so   72 Thak Voc.I : 115
 .sya   ªÁ'°°joto
-dff   int\'erieur de ma\"is fix\'e \`a baguette pr remuer grains qu'on
+dff   int#'erieur de ma#"is fix#'e #`a baguette pr remuer grains qu'on
   grille
 inf   m68: S
 so   72 Thak Voc.I : 117
 .sya   °°'°°Æjap¾o
-dff   vessie (r\'ecipient \`a yaourt lait)
+dff   vessie (r#'ecipient #`a yaourt lait)
 inf   m68
 so   72 Thak Voc.I : 117
 .sya   ÁÁda °¢Æin [[ÁÁdÚaÚ °¢Æin
@@ -2888,11 +2888,11 @@ dff   bandeau frontal
 inf   m4: p
 so   72 Thak Voc.I : 119
 .sya   ÁÁ'ªÁkja³ta
-dff   grand sac en poil de ch\`evre
+dff   grand sac en poil de ch#`evre
 inf   m68: f
 so   72 Thak Voc.I : 121
 .sya   ªª'ÁÁjato
-dff   petit sac en poil de ch\`evre
+dff   petit sac en poil de ch#`evre
 inf   m68: f
 so   72 Thak Voc.I : 121
 .sya   Xkjälpo
@@ -2906,15 +2906,15 @@ inf   m68: femme
 cf   Xkjälpo
 so   72 Thak Voc.I : 121
 .sya   ñg¯ [[Xg¯Ú
-dff   selle, b\^at
+dff   selle, b#^at
 inf   m68
 so   72 Thak Voc.I : 121
 .sya   ªÁga [[ªÁgaÚ
-dff   selle, b\^at
+dff   selle, b#^at
 inf   m4: p
 so   72 Thak Voc.I : 121
 .sya   °£me
-dff   fl\`eche
+dff   fl#`eche
 inf   m68
 so   72 Thak Voc.I : 123
 .sya   °¢t¯
@@ -2925,13 +2925,13 @@ nb   id. 'cheval' <p>
 so   72 Thak Voc.I : 123
 .sya   ªª'£ªko™tsa
 dfn   khukri
-dff   grand couteau n\'epalais
+dff   grand couteau n#'epalais
 inf   m68
 nb   ğPoint en exposant aprs ko.
 so   72 Thak Voc.I : 123
 .sya   ªª'ªÁgodza [[ªª'ªÁgoÚdza
 dfn   k¾ukri
-dff   grand couteau n\'epalais
+dff   grand couteau n#'epalais
 inf   m4: f
 so   72 Thak Voc.I : 123
 .sya   Xkartsa
@@ -2940,7 +2940,7 @@ dff   couteau
 inf   m68
 so   72 Thak Voc.I : 123
 .sya   °°ûju
-dff   \'etui / gaine
+dff   #'etui / gaine
 inf   m68: S
 so   72 Thak Voc.I : 123
 .sya   ªÁ'££k¯mpa [[ªÁ'££kÚ¯mpa
@@ -2986,7 +2986,7 @@ inf   m68: S
 so   72 Thak Voc.I : 129
 .sya   °£ts¾oò
 dfn   prasad
-dff   offrande, nourriture b\'enie
+dff   offrande, nourriture b#'enie
 inf   m4
 so   72 Thak Voc.I : 131
 .sya   °°'°¢p¾urba
@@ -3017,11 +3017,11 @@ dff   trompette d'os
 inf   m68: S
 so   72 Thak Voc.I : 131
 .sya   °°'°°parÆi³
-dff   plaque \`a graver ds la p\^ate de farine
+dff   plaque #`a graver ds la p#^ate de farine
 inf   m68: S
 so   72 Thak Voc.I : 131
 .sya   ªÁ'££mane
-dff   moulin \`a pri\`eres
+dff   moulin #`a pri#`eres
 inf   m68
 so   72 Thak Voc.I : 131
 .sya   ªÁ'££d¯ik¯p
@@ -3030,11 +3030,11 @@ inf   m68: S
 nb   ou ªÁ'££d¯iko
 so   72 Thak Voc.I : 131
 .sya   °°'°°'t¾iÆi ÁÁ'££pumu
-dff   aigui\`ere \`a plume
+dff   aigui#`ere #`a plume
 inf   m68: S
 so   72 Thak Voc.I : 131
 .sya   ÁÁ'¢¢jšnde ££'££koÆjo
-dff   pot \`a offrir l'eau
+dff   pot #`a offrir l'eau
 inf   m68: S
 so   72 Thak Voc.I : 131
 .sya   °°ku
@@ -3053,11 +3053,11 @@ dff   livre
 inf   m68: S
 so   72 Thak Voc.I : 131
 .sya   °°'°°tÆ¾jeme
-dff   lumi\`ere
+dff   lumi#`ere
 inf   m68: p
 so   72 Thak Voc.I : 131
 .sya   °°'°°tÆ¾eme °°'°°'°°p¾ulbai °°wo³
-dff   lampe \`a beurre
+dff   lampe #`a beurre
 inf   m68: S
 so   72 Thak Voc.I : 131
 .sya   ªÁkor [[ªÁkoÚr
@@ -3093,20 +3093,20 @@ dff   binette
 inf   m68
 so   72 Thak Voc.I : 133
 .sya   °°'°°t¾eda
-dff   planche \`a \'egaliser apr\`es semis
+dff   planche #`a #'egaliser apr#`es semis
 inf   m68
 so   72 Thak Voc.I : 133
 .sya   °°'°¢t¾ädia
 var   ¢¢'¢¢t¾ädia
-dff   planche \`a \'egaliser apr\`es semis
+dff   planche #`a #'egaliser apr#`es semis
 inf   m4: f
 so   72 Thak Voc.I : 133
 .sya   Xtsjaki
-dff   instrument \`a rassembler la terre en tas
+dff   instrument #`a rassembler la terre en tas
 inf   m68
 so   72 Thak Voc.I : 133
 .sya   ÁÁ'£ÁkeÆju [[ÁÁ'£ÁkeÚÆju
-dff   fl\'eau
+dff   fl#'eau
 inf   m68
 so   72 Thak Voc.I : 135
 .sya   °°'°¢nali
@@ -3119,18 +3119,18 @@ dff   van
 inf   m4
 so   72 Thak Voc.I : 135
 .sya   °£pra³ ¢¢'¢¢n¯li
-dff   van \`a clairevoie (tamis)
+dff   van #`a clairevoie (tamis)
 inf   m4: f
 so   72 Thak Voc.I : 135
 .sya   °¢min
 dfn   dallo
-dff   panier \`a pieds
+dff   panier #`a pieds
 inf   m68
 nb   (+ haut que 'nom')
 so   72 Thak Voc.I : 135
 .sya   °°min
 dfn   dallo
-dff   panier \`a pieds
+dff   panier #`a pieds
 inf   m4
 nb   ­ 51 'nom' <p>
 so   72 Thak Voc.I : 135
@@ -3188,16 +3188,16 @@ dff   riz cuit
 inf   m4
 so   72 Thak Voc.I : 139
 .sya   ¢¢kan °°'¢¢momo
-dff   \'ecume de riz
+dff   #'ecume de riz
 inf   m4
 so   72 Thak Voc.I : 139
 .sya   ÁÁmla [[ÁÁmlaÚ
 dfn   cÑamal
-dff   riz cru d\'ecortiqu\'e
+dff   riz cru d#'ecortiqu#'e
 inf   m4: f
 so   72 Thak Voc.I : 139
 .sya   °¢tun
-dff   piment \'ecras\'e
+dff   piment #'ecras#'e
 inf   m4: p
 so   72 Thak Voc.I : 139
 .sya   °°'°°p¯itu ¢¢k¾u
@@ -3207,17 +3207,17 @@ inf   m4: f
 so   72 Thak Voc.I : 139
 .sya   Xk¯n °£k¾u
 dfn   tiun
-dff   l\'egume
+dff   l#'egume
 inf   m68: S
 so   72 Thak Voc.I : 139
 .sya   °£k¾u
 dfn   tiun
-dff   l\'egume
+dff   l#'egume
 inf   m4: p
 so   72 Thak Voc.I : 139
 .sya   °°pla
 dfn   tark¾Ñari
-dff   l\'egume ou viande (sans jus)
+dff   l#'egume ou viande (sans jus)
 inf   m4: f
 so   72 Thak Voc.I : 139
 .sya   °°'¢¢tsadza
@@ -3254,43 +3254,43 @@ dff   lait
 inf   m68: S
 so   72 Thak Voc.I : 141
 .sya   ÁÁtÆj¯ °°ril
-dff   feuille de th\'e
+dff   feuille de th#'e
 inf   m4: f
 so   72 Thak Voc.I : 141
 .sya   ÁÁtÆj¯
-dff   th\'e
+dff   th#'e
 inf   m4
 so   72 Thak Voc.I : 141
 .sya   Áªm¯r ªÁtÆja
-dff   th\'e sal\'e
+dff   th#'e sal#'e
 inf   m4
 so   72 Thak Voc.I : 141
 .sya   °°'°°Æjoti
-dff   reste de la p\^ate apr\`es filtrage (de la bi\`ere)
+dff   reste de la p#^ate apr#`es filtrage (de la bi#`ere)
 inf   m4: S
 so   72 Thak Voc.I : 143
 .sya   ñpo [[XpoÚ
-dff   p\^ate \`a bi\`ere
+dff   p#^ate #`a bi#`ere
 inf   m68
 so   72 Thak Voc.I : 143
 .sya   ªÁp¾o [[ªÁp¾oÚ
-dff   p\^ate \`a bi\`ere
+dff   p#^ate #`a bi#`ere
 inf   m4: p
 so   72 Thak Voc.I : 143
 .sya   °°pa
-dff   bi\`ere
+dff   bi#`ere
 inf   m68: S
 so   72 Thak Voc.I : 143
 .sya   Xp¾i
-dff   bi\`ere
+dff   bi#`ere
 inf   m68: m
 so   72 Thak Voc.I : 143
 .sya   °¢paò
-dff   bi\`ere
+dff   bi#`ere
 inf   m4: p
 so   72 Thak Voc.I : 143
 .sya   °°kjem
-dff   bi\`ere (honor.)
+dff   bi#`ere (honor.)
 inf   m68: m
 so   72 Thak Voc.I : 143
 .sya   ££'££raÆi
@@ -3307,7 +3307,7 @@ inf   m4
 nb   = 'bhir' ­ ªÁbÚraÚ '100' <p>
 so   72 Thak Voc.I : 143
 .sya   ¢¢ts¾im ªªpra
-dff   farine de bl\'e
+dff   farine de bl#'e
 inf   m4: f
 so   72 Thak Voc.I : 143
 .sya   ¢¢'¢¢tsjaka ÁÁpra
@@ -3336,42 +3336,42 @@ inf   m4: f
 so   72 Thak Voc.I : 143
 .sya   Xk¯pra
 dfn   tsampa de uwa
-dff   farine d'orge grill\'e
+dff   farine d'orge grill#'e
 inf   m68: S
 so   72 Thak Voc.I : 143
 .sya   °°'¢¢k…opr¯
 dfn   tsampa de uwa
-dff   farine d'orge grill\'e
+dff   farine d'orge grill#'e
 inf   m4: f
 so   72 Thak Voc.I : 143
 .sya   ªª'ªÁÆipr¯ [[ªª'ªÁÆiÚpr¯
 dfn   tsampa de uwa
-dff   farine d'orge grill\'e au sable
+dff   farine d'orge grill#'e au sable
 inf   m68
 so   72 Thak Voc.I : 143
 .sya   ÁÁ'ÁÁgopra [[ÁÁ'ÁÁgoÚpra
-dff   farine de bl\'e grill\'e
+dff   farine de bl#'e grill#'e
 inf   m4: f
 cf   °°'¢¢k…opr¯ ?
 so   72 Thak Voc.I : 143
 .sya   ªÁ'££dzjamd¯l [[ªÁ'££dzjaÚmd¯l
-dff   farine de bl\'e grill\'e dans le th\'e
+dff   farine de bl#'e grill#'e dans le th#'e
 inf   m68: S
 so   72 Thak Voc.I : 143
 .sya   ªª'££k¾ole
-dff   farine de bl\'e grill\'e dans le th\'e
+dff   farine de bl#'e grill#'e dans le th#'e
 inf   m4: f
 so   72 Thak Voc.I : 143
 .sya   °°po
-dff   grains grill\'es
+dff   grains grill#'es
 inf   m68
 so   72 Thak Voc.I : 143
 .sya   ÁÁ'ÁÁpranda
-dff   p\^ate \`a pain
+dff   p#^ate #`a pain
 inf   m4
 so   72 Thak Voc.I : 145
 .sya   ÁÁ'ÁÁpranda ¢¢'¢¢tÆjom-ba
-dff   malaxer la p\^ate \`a pain
+dff   malaxer la p#^ate #`a pain
 inf   m4: f
 nb   ğvoir pranda ci-dessus
 so   72 Thak Voc.I : 145
@@ -3380,19 +3380,19 @@ dff   pain
 inf   m68
 so   72 Thak Voc.I : 145
 .sya   ÁÁkoi ÁÁkja³ [[ÁÁkoÚi ÁÁkjaÚ³
-dff   pain fait avec p\^ate liquide
+dff   pain fait avec p#^ate liquide
 inf   m68
 so   72 Thak Voc.I : 145
 .sya   ££'££sa³æen
 var   Xsa³ëä k¯n <S>
 var   Xsa³ëan
 dfn   ëhero
-dff   pur\'ee de farine
+dff   pur#'ee de farine
 inf   m68
 so   72 Thak Voc.I : 145
 .sya   ££'££sa³æän
 dfn   ëhero
-dff   pur\'ee de farine
+dff   pur#'ee de farine
 inf   m4: f
 so   72 Thak Voc.I : 145
 .sya   °°'°°k¾ugu
@@ -3412,12 +3412,12 @@ dff   yaourt
 inf   m4
 so   72 Thak Voc.I : 145
 .sya   °°'¢¢tÆ¾iòba
-dff   petit lait s\'ech\'e
+dff   petit lait s#'ech#'e
 inf   m4: f
 so   72 Thak Voc.I : 145
 .sya   ªÁæo
 dfn   sÑag
-dff   br\`edes
+dff   br#`edes
 inf   m4: f
 so   72 Thak Voc.I : 145
 .sya   ÁÁ'¢£prama
@@ -3425,11 +3425,11 @@ dff   ferment
 inf   m68: m
 so   72 Thak Voc.I : 145
 .sya   ªÁ'¢¢lo³g¯l [[ªÁ'¢¢loÚ³g¯l
-dff   petit d\'ejeuner
+dff   petit d#'ejeuner
 inf   m68: p
 so   72 Thak Voc.I : 147
 .sya   °ª'ªªøose
-dff   go\^uter
+dff   go#^uter
 inf   m68: p
 so   72 Thak Voc.I : 147
 .sya   XÆja ñgum [[XÆja guÚm
@@ -3454,11 +3454,11 @@ dff   couverture
 inf   m68
 so   72 Thak Voc.I : 149
 .sya   °°kon
-dff   v\^etement
+dff   v#^etement
 inf   m68
 so   72 Thak Voc.I : 149
 .sya   °°k…on
-dff   v\^etement
+dff   v#^etement
 inf   m4
 so   72 Thak Voc.I : 149
 .sya   °¢p¯i
@@ -3495,15 +3495,15 @@ nb	filer
 inf   m68: m
 so   72 Thak Voc.I : 149
 .sya   (¢¢'¢¢'¢¢po k¾eba) £Áto³
-dff   instrument \`a filer
+dff   instrument #`a filer
 inf   m68: m
 so   72 Thak Voc.I : 149
 .sya   ñdan¯m (tumba) [[XdaÚn¯m (tumba)
-dff   instrument \`a doubler le fil
+dff   instrument #`a doubler le fil
 inf   m68: m
 so   72 Thak Voc.I : 149
 .sya   °°'¢¢mrami
-dff   instrument \`a filer
+dff   instrument #`a filer
 inf   m68: m
 so   72 Thak Voc.I : 149
 .sya   ¢¢'££p¾jarba
@@ -3515,15 +3515,15 @@ dff   lancer le mrani en tournant
 inf   m68: serv
 so   72 Thak Voc.I : 149
 .sya   °°'££konæa
-dff   m\'etier \`a tisser
+dff   m#'etier #`a tisser
 inf   m68: m
 so   72 Thak Voc.I : 151
 .sya   ÁÁ'ÁÁgja³ba [[ÁÁ'ÁÁgjaÚ³ba
-dff   couteau (du m\'etier)
+dff   couteau (du m#'etier)
 inf   m68: S
 so   72 Thak Voc.I : 151
 .sya   ÁÁn¯ °°Æin
-dff   b\^aton de lisses
+dff   b#^aton de lisses
 inf   m68: S
 so   72 Thak Voc.I : 151
 .sya   °¢n¯
@@ -3539,7 +3539,7 @@ nb   id. 'nez' <p>
 nb
 so   72 Thak Voc.I : 151
 .sya   ÁÁtil °¢Æin [[ÁÁtiÚl °¢Æin
-dff   poitrini\`ere
+dff   poitrini#`ere
 inf   m68: m
 so   72 Thak Voc.I : 151
 .sya   °°'°°peæa
@@ -3553,7 +3553,7 @@ inf   m68
 nb   (ˆ cheveux ??)
 so   72 Thak Voc.I : 151
 .sya   ¢¢'ªªkonæa ¢¢'¢¢ram-ba
-dff   monter le m\'etier
+dff   monter le m#'etier
 inf   m68: m
 so   72 Thak Voc.I : 151
 .sya   °°'°¢ra-ba
@@ -3569,7 +3569,7 @@ dff   pelote de laine
 inf   m68: m
 so   72 Thak Voc.I : 151
 .sya   ¢¢'°°tokpa
-dff   \'echeveau
+dff   #'echeveau
 inf   m68
 so   72 Thak Voc.I : 151
 .sya   ¢¢par °°'¢¢pum-ba
@@ -3615,15 +3615,15 @@ dff   tablier de reins
 inf   m4: f
 so   72 Thak Voc.I : 153
 .sya   °£'££kjät¯m
-dff   ch\^ale
+dff   ch#^ale
 inf   m68
 so   72 Thak Voc.I : 155
 .sya   Xæutum
-dff   ch\^ale
+dff   ch#^ale
 inf   m68
 so   72 Thak Voc.I : 155
 .sya   °°'¢¢øur-ba
-dff   mettre un ch\^ale
+dff   mettre un ch#^ale
 inf   m68
 so   72 Thak Voc.I : 155
 .sya   ¢¢'¢£ts¯æi
@@ -3637,11 +3637,11 @@ inf   m4: f
 so   72 Thak Voc.I : 155
 .sya   ñgjo [[XgjoÚ
 var   ÁÁgjo <fa> [[ÁÁgjoÚ <fa>
-dff   chaussures tib\'etaines
+dff   chaussures tib#'etaines
 inf   m4: f
 so   72 Thak Voc.I : 155
 .sya   ªªgjo ªÁgi [[ªªgjoÚ ªÁgiÚ
-dff   lacet de chaussure tib\'etaines
+dff   lacet de chaussure tib#'etaines
 inf   m4: f
 so   72 Thak Voc.I : 155
 .sya   Xtsur¯p
@@ -3665,7 +3665,7 @@ inf   m68: m
 nb   id. ¢¢'¢¢p¾ja³pyr ?
 so   72 Thak Voc.I : 157
 .sya   ¢¢'¢¢p¾ja³pyr
-dff   collier (g\'en\'eral)
+dff   collier (g#'en#'eral)
 inf   m68: femme
 nb   id. ¢¢'¢£p¾ra³mo ?
 so   72 Thak Voc.I : 157
@@ -3718,7 +3718,7 @@ inf   m68: p
 so   72 Thak Voc.I : 159
 .sya   ªª'ªÁbuÆja [[ªª'ªÁbuÚÆja
 dfn   baula
-dff   manche de v\^etement
+dff   manche de v#^etement
 inf   m68
 so   72 Thak Voc.I : 159
 .sya   °°'°£k¾oma³
@@ -3744,7 +3744,7 @@ dff   corail pur
 inf   m4: f
 so   72 Thak Voc.I : 159
 .sya   ÁÁbjur ªª'ÁÁsokpo [[ÁÁbjuÚr ªª'ÁÁsokpo
-dff   corail de mauvaise qualit\'e
+dff   corail de mauvaise qualit#'e
 inf   m4: f
 so   72 Thak Voc.I : 159
 .sya   °£ju
@@ -3754,11 +3754,11 @@ nb   ­ ¢¢ju 'manche'
 so   72 Thak Voc.I : 159
 .sya   °°'¢¢mros¯i
 var   ¢¢'°°mrops¯i
-dff   brosse \`a cheveux
+dff   brosse #`a cheveux
 inf   m68
 so   72 Thak Voc.I : 159
 .sya   °°'°¢mresa
-dff   brosse \`a cheveux
+dff   brosse #`a cheveux
 inf   m4: f
 so   72 Thak Voc.I : 159
 .sya   ¢¢³o ªª'ªªpra-ba
@@ -3789,21 +3789,21 @@ nb   ğtaille humaine
 so   72 Thak Voc.I : 161
 .sya   °Ápa³ ££'££k¾a-ba
 var   tÑagat aune
-dff   \^etre en bonne sant\'e
+dff   #^etre en bonne sant#'e
 inf   m68
 so   72 Thak Voc.I : 161
 .sya   ÁÁba³ [[ÁÁbÚaÚ³
 var   tÑagat aune
-dff   \^etre en bonne sant\'e
+dff   #^etre en bonne sant#'e
 inf   m4: p
 nb   ­ °¢pa³ caur
 so   72 Thak Voc.I : 161
 .sya   °°'°°(k¾ok-pa) ªªa ªª'ªÁki-mo
-dff   ne pas \^etre bien
+dff   ne pas #^etre bien
 inf   m68 ; m4
 so   72 Thak Voc.I : 161
 .sya   °°'°°na-ba
-dff   \^etre malade
+dff   #^etre malade
 inf   m68: S
 so   72 Thak Voc.I : 161
 .sya   °°'°°na-ba
@@ -3837,13 +3837,13 @@ inf   m4: p
 so   72 Thak Voc.I : 163
 .sya   °°'°°k¾i-mu
 var   °£'££k¾i-ba
-dff   \'eternuer
+dff   #'eternuer
 inf   m68: m
 nb   ­ °¢'¢¢ iò 'attacher'
 so   72 Thak Voc.I : 163
 .sya   °°'¢¢k¾iò-ba
 var   ¢¢'¢¢k¾iò-ba
-dff   \'eternuer
+dff   #'eternuer
 inf   m4: f
 nb   ­ °°'°°i 'attacher' f 174
 nb   opposition de longueur inverse entre m68 et m4
@@ -3857,7 +3857,7 @@ dff   rhume
 inf   m4: p
 so   72 Thak Voc.I : 165
 .sya   °°'¢¢ÆjŸurba
-dff   diarrh\'ee
+dff   diarrh#'ee
 inf   m68
 so   72 Thak Voc.I : 165
 .sya   Xragat maÆi taba
@@ -3870,15 +3870,15 @@ dff   vers intestinaux
 inf   m4: p
 so   72 Thak Voc.I : 167
 .sya   °°m¯n
-dff   rem\`ede
+dff   rem#`ede
 inf   m68: S
 so   72 Thak Voc.I : 167
 .sya   ÁÁ'¢£sa-ba [[ÁÁ'¢£saÚ-ba
-dff   gu\'erir (maladie)
+dff   gu#'erir (maladie)
 inf   m68
 so   72 Thak Voc.I : 167
 .sya   °°'°¢kiò-mu
-dff   gu\'erir (maladie)
+dff   gu#'erir (maladie)
 inf   m68
 so   72 Thak Voc.I : 167
 .sya   °°'°¢æa³dar
@@ -3895,11 +3895,11 @@ dff   vacciner
 inf   m4: p
 so   72 Thak Voc.I : 167
 .sya   °°'¢¢p~a³a
-dff   go\^itre
+dff   go#^itre
 inf   m68
 so   72 Thak Voc.I : 167
 .sya   £Á'ªªba³a [[£Á'ªªbaÚ³a
-dff   go\^itre
+dff   go#^itre
 inf   m4: p
 so   72 Thak Voc.I : 167
 .sya   °°mla³ ÁÁ'ÁÁæuba
@@ -3944,15 +3944,15 @@ nb   Âjaò-ba 'jeter
 so   72 Thak Voc.I : 169
 .sya   ¢¢lem °°'¢¢Æje-ba
 var   °°p¾e °°ta³ ££'££pum-ba <S>
-dff   p\'eter
+dff   p#'eter
 inf   m68: m
 so   72 Thak Voc.I : 169
 .sya   ¢¢li ¢¢'¢£pum-ba
-dff   d\'ef\'equer
+dff   d#'ef#'equer
 inf   m68: S
 so   72 Thak Voc.I : 169
 .sya   °¢a ££'££pun-dzi
-dff   d\'ef\'equer
+dff   d#'ef#'equer
 inf   m4: fa
 so   72 Thak Voc.I : 169
 .sya   Xko³ pum-ba
@@ -3974,12 +3974,12 @@ dff   accoucher
 inf   m68
 so   72 Thak Voc.I : 171
 .sya   °°'°°p¾o-ri °°'¢¢'££tÆhja-dzi-mu
-dff   \^etre enceinte
+dff   #^etre enceinte
 inf   m68
 cf   ¢¢p¾o ÁÁ'ÁÁna-ba
 so   72 Thak Voc.I : 171
 .sya   ¢¢p¾o ÁÁ'ÁÁna-ba
-dff   \^etre enceinte
+dff   #^etre enceinte
 inf   m68: S
 cf   °°'°°p¾o-ri °°'¢¢'££tÆha-dzi-mu
 so   72 Thak Voc.I : 171
@@ -3989,7 +3989,7 @@ inf   m68: S
 so   72 Thak Voc.I : 171
 .sya   °°'¢¢k¾ja³-ba
 dfn   t¾ankÑaune
-dff   avoir une \'erection
+dff   avoir une #'erection
 inf   m68: S
 so   72 Thak Voc.I : 171
 .sya   °¢'¢¢Æi-ba
@@ -4003,12 +4003,12 @@ inf   m68: serv
 so   72 Thak Voc.I : 171
 .sya   ÁÁ'ªÁtu-mu [[ÁÁ'ªÁtuÚ-mu
 dfe   be tired
-dff   \^etre fatigu\'e
+dff   #^etre fatigu#'e
 inf   m68: S
 nb   cf ªª'ªÁduÚ-ba 'dormir'
 so   72 Thak Voc.I : 171
 .sya   ñæ¯ttu lawa [[Xæ¯Úttu lawa
-dff   \^etre paresseux
+dff   #^etre paresseux
 inf   m68: S
 so   72 Thak Voc.I : 171
 .sya   ªÁ'ÁÁdu-ba [[ªÁ'ÁÁduÚ-ba
@@ -4042,23 +4042,23 @@ dff   ronfler
 inf   m68
 so   72 Thak Voc.I : 173
 .sya   °°ma³ ¢¢'¢£ma³-ba
-dff   r\^ever
+dff   r#^ever
 inf   m68
 so   72 Thak Voc.I : 173
 .sya   ªÁma³ [[ªÁmaÚ³
-dff   r\^ever
+dff   r#^ever
 inf   m4: p
 so   72 Thak Voc.I : 173
 .sya   ££mi °°ha³ ££'££k¾a-ba
-dff   se r\'eveiller
+dff   se r#'eveiller
 inf   m68
 so   72 Thak Voc.I : 173
 .sya   ¢¢nam ÁÁ'ÁÁna³-ba [[¢¢nam ÁÁ'ÁÁnaÚ³-ba
-dff   se r\'eveiller
+dff   se r#'eveiller
 inf   m68: f
 so   72 Thak Voc.I : 173
 .sya   °°'°¢tÆ¾in-o
-dff   r\'eveiller qq'un
+dff   r#'eveiller qq'un
 inf   m68
 so   72 Thak Voc.I : 173
 .sya   °°sa ÁÁ'ÁÁæi-ba
@@ -4078,11 +4078,11 @@ dff   saigner
 inf   m68: S
 so   72 Thak Voc.I : 173
 .sya   Xk¾am a-sa³-ba ta-mu
-dff   avoir ses r\`egles
+dff   avoir ses r#`egles
 inf   m68
 so   72 Thak Voc.I : 173
 .sya   °°'°°kja-ba
-dff   d\'emanger
+dff   d#'emanger
 inf   m68
 so   72 Thak Voc.I : 173
 .sya   °°'££kja-mu
@@ -4112,7 +4112,7 @@ inf   m4: f a
 so   72 Thak Voc.I : 175
 .sya   °°k¾¯m ¢¢'££sa³-mu
 var   ¢¢k¾am °°'££sa³-mu <S>
-dff   \^etre propre
+dff   #^etre propre
 inf   m68
 so   72 Thak Voc.I : 175
 .sya   ÁÁ'ÁÁpra-ba
@@ -4166,7 +4166,7 @@ nb   sens = ?
 so   72 Thak Voc.I : 175
 .sya   °°'££tsi-ba
 var   °°'¢¢tsiò-ba
-dff   \'epiler
+dff   #'epiler
 inf   m68
 so   72 Thak Voc.I : 175
 .sya   °°'¢¢ri-¸a
@@ -4205,11 +4205,11 @@ dff   tordre (membre)
 inf   m4
 so   72 Thak Voc.I : 177
 .sya   ÁÁ'££mu-mo [[ÁÁ'££muÚ-mo
-dff   g\'emir
+dff   g#'emir
 inf   m68: S 153
 so   72 Thak Voc.I : 177
 .sya   ÁÁsu ¢¢'ÁÁte-mu [[ÁÁsuÚ ¢¢'ÁÁte-mu
-dff   g\'emir
+dff   g#'emir
 inf   m4: f
 cf   ££k¯i ¢¢'££te-ba 'grogner'
 so   72 Thak Voc.I : 177
@@ -4227,14 +4227,14 @@ dff   couper
 inf   m68
 so   72 Thak Voc.I : 179
 .sya   Xk¾ja³-ba
-dff   br\^uler
+dff   br#^uler
 inf   m68
 nb   vit -> æ¾a³-ba
 so   72 Thak Voc.I : 179
 .sya   ¢¢mid¯ ¢¢'°°'¢¢ku-dze
 var   ¢¢mida ¢¢'°°'¢¢ku-dze
 var   °°'¢¢'££ku-dzi-mu <f a>
-dff   br\^uler
+dff   br#^uler
 inf   m4: f
 so   72 Thak Voc.I : 179
 .sya   ¢¢'¢¢tÆ¾joko³ ££'££k¾a-ba
@@ -4270,11 +4270,11 @@ dff   tomber de haut
 inf   m68
 so   72 Thak Voc.I : 179
 .sya   ¢¢'¢¢so-ba
-dff   d\'ebouler de montagne
+dff   d#'ebouler de montagne
 inf   m68: m
 so   72 Thak Voc.I : 179
 .sya   °°'°°so-dze
-dff   d\'ebouler de montagne
+dff   d#'ebouler de montagne
 inf   m4: p
 so   72 Thak Voc.I : 179
 .sya   °°'££ts¾e-ba
@@ -4291,7 +4291,7 @@ dff   enterrer
 inf   m4: f 194
 so   72 Thak Voc.I : 181
 .sya   °°ts¾a
-dff   lieu de cr\'emation
+dff   lieu de cr#'emation
 inf   m4
 so   72 Thak Voc.I : 181
 .sya   °£li ££'££Âja-ba
@@ -4305,7 +4305,7 @@ inf   m4
 nb   id. 'mois' <p>
 so   72 Thak Voc.I : 183
 .sya   ¢¢'¢¢n¯iba
-dff   sorci\`ere
+dff   sorci#`ere
 inf   m4: f
 so   72 Thak Voc.I : 183
 .sya   ªÁp¾a [[ªÁp¾aÚ
@@ -4318,7 +4318,7 @@ dff   encens (de dhubi)
 inf   m4
 so   72 Thak Voc.I :  183
 .sya   °°sur
-dff   m\'elange de tsampa et beurre (br\^ul\'e comme encens)
+dff   m#'elange de tsampa et beurre (br#^ul#'e comme encens)
 inf   m4
 so   72 Thak Voc.I :  183
 .sya   ªÁ'ªªgompa [[ªÁ'ªªgoÚmpa
@@ -4330,21 +4330,21 @@ dff   offrir aux dieux
 inf   m68
 so   72 Thak Voc.I : 185
 .sya   ¢¢ma³ ££'£Áma³-ba
-dff   r\^ever
+dff   r#^ever
 inf   m68
 so   72 Thak Voc.I : 187
 .sya   ªÁma³ [[ªÁmaÚ³
-dff   r\^eve
+dff   r#^eve
 inf   m4: p
 nb   ­ 'tigre'
 so   72 Thak Voc.I : 187
 .sya   ÁÁma³ ÁÁja³ ªÁ'ÁÁto-dze [[ÁÁmaÚ³ ÁÁja³ ªÁ'ÁÁto-dze
-dff   r\^ever
+dff   r#^ever
 inf   m4
 nb   m. ˆ m. : rve ds rencontrer
 so   72 Thak Voc.I : 187
 .sya   °°'££Æibai ÁÁmi ££'££wa³-ba [[°°'££Æibai ÁÁmiÚ ££'££wa³-ba
-dff   \^etre poss\'ed\'e
+dff   #^etre poss#'ed#'e
 inf   m4: f
 so   72 Thak Voc.I : 189
 .sya   °ª pe
@@ -4382,7 +4382,7 @@ inf   m68
 so   72 Thak Voc.I : 195
 .sya   ÁÁ'£ªpjärdze
 var   ÁÁ'£ªpj¯rdze
-dff   \'et\'e
+dff   #'et#'e
 inf   m68
 so   72 Thak Voc.I : 195
 .sya   °°'°¢tini
@@ -4407,7 +4407,7 @@ dff   demain
 inf   m68
 so   72 Thak Voc.I : 195
 .sya   ££'¢¢nani
-dff   apr\`es-demain
+dff   apr#`es-demain
 inf   m68
 so   72 Thak Voc.I : 195
 .sya   ¢¢'¢¢nasom
@@ -4415,7 +4415,7 @@ dff   dans deux jours
 inf   m68
 so   72 Thak Voc.I : 197
 .sya   ¢¢tsu ªÁlo [[¢¢tsu ªÁloÚ
-dff   cette ann\'ee
+dff   cette ann#'ee
 inf   m68
 so   72 Thak Voc.I : 197
 .sya   ¢¢'¢¢tikju³
@@ -4439,11 +4439,11 @@ dff   nuage
 inf   m68
 so   72 Thak Voc.I : 197
 .sya   ££ur °°'££pjoba
-dff   temp\^ete
+dff   temp#^ete
 inf   m68
 so   72 Thak Voc.I : 197
 .sya   °°'¢¢tiÆj¿r
-dff   gr\^ele
+dff   gr#^ele
 inf   m68
 nb   -> [úr]
 so   72 Thak Voc.I : 197
@@ -4460,7 +4460,7 @@ dff   brouillard
 inf   m68
 so   72 Thak Voc.I : 199
 .sya   ¢¢'¢¢'¢¢k¿muli
-dff   \'eclair
+dff   #'eclair
 inf   m68
 so   72 Thak Voc.I : 199
 .sya   °°'°°namb¯r (££'££k¾amu)
@@ -4492,12 +4492,12 @@ inf   m68
 so   72 Thak Voc.I : 201
 .sya   ªÁl¯ [[ªÁl¯Ú
 dfn   uk¾alo
-dff   mont\'ee
+dff   mont#'ee
 inf   m68
 so   72 Thak Voc.I : 201
 .sya   £Ála [[£ÁlaÚ
 dfn   uk¾alo
-dff   mont\'ee
+dff   mont#'ee
 inf   m4: f
 so   72 Thak Voc.I : 201
 .sya   ÁÁpra¾
@@ -4509,7 +4509,7 @@ dff   falaise
 inf   m4: p
 so   72 Thak Voc.I : 201
 .sya   °°'¢¢urpa
-dff   \'echo
+dff   #'echo
 inf   m68
 so   72 Thak Voc.I : 203
 .sya   °¢t¾a³
@@ -4517,7 +4517,7 @@ dff   plaine
 inf   m68
 so   72 Thak Voc.I : 203
 .sya   £Ágj~uò
-dff   vall\'ee
+dff   vall#'ee
 inf   m68
 so   72 Thak Voc.I : 203
 .sya   ÁÁblaò [[ÁÁblaÚò
@@ -4526,26 +4526,26 @@ inf   m68
 nb
 so   72 Thak Voc.I : 203
 .sya   ÁÁnaò [[ÁÁnaÚò
-dff   for\^et
+dff   for#^et
 inf   m68
 so   72 Thak Voc.I : 203
 .sya   ÁÁnaò (¢¢'¢¢suba) [[ÁÁnaÚò (¢¢'¢¢suba)
-dff   for\^et dense
+dff   for#^et dense
 inf   m68
 so   72 Thak Voc.I : 203
 .sya   ªÁna [[ªÁnaÚ
-dff   for\^et
+dff   for#^et
 inf   m4
 nb   vs. ªÁn¯Ú ± ªÁnaÚ 'oreille'
 so   72 Thak Voc.I : 203
 .sya   ÁÁnaò [[ÁÁnaÚò
-dff   for\^et
+dff   for#^et
 inf   m4: p
 nb   vs ªÁnaÚ 'oreille'- id. 'pus'
 cf   ªÁnaÚ
 so   72 Thak Voc.I : 203
 .sya   °£pa³
-dff   \'etendue nue
+dff   #'etendue nue
 inf   m4: p
 so   72 Thak Voc.I : 203
 .sya   Xk¾u³
@@ -4574,7 +4574,7 @@ inf   m4: S
 nb   ­ °£ts¾oò 'prasad' ­ ¢¢ts¾o 'dori'
 so   72 Thak Voc.I : 205
 .sya   ¢¢tÆin
-dff   lac ass\'echable
+dff   lac ass#'echable
 inf   m68: S
 so   72 Thak Voc.I : 205
 .sya   °°'°°kjuje
@@ -4604,16 +4604,16 @@ dff   neiger
 inf   m68
 so   72 Thak Voc.I : 209
 .sya   °°'°°tiÆj¯r °°'°¢ju-dzi
-dff   gr\^eler
+dff   gr#^eler
 inf   m68
 so   72 Thak Voc.I : 209
 .sya   Xtsar tsar ta-mu
-dff   couler goutte \`a goutte
+dff   couler goutte #`a goutte
 inf   m68
 cf   Xt¾jar t¾jar ta-mu
 so   72 Thak Voc.I : 209
 .sya   Xt¾jar t¾jar ta-mu
-dff   couler goutte \`a goutte
+dff   couler goutte #`a goutte
 inf   m68
 cf   Xtsar tsar ta-mu
 so   72 Thak Voc.I : 209
@@ -4844,15 +4844,15 @@ dff   demi
 inf   m4: f
 so   72 Thak Voc.I : 219
 .sya   ££'ªÁ'ª£'ÁÁag¯i-mu
-dff   ne pas \^etre d'accord
+dff   ne pas #^etre d'accord
 inf   m68
 so   72 Thak Voc.I : 221
 .sya   ªÁ'££g¯hi ££'££ta-ba
-dff   1 seul est (= \^etre le m\^eme, \^etre d'accord)
+dff   1 seul est (= #^etre le m#^eme, #^etre d'accord)
 inf   m68: S
 so   72 Thak Voc.I : 221
 .sya   ªÁæe ££k¾i [[ªÁæeÚ ££k¾i
-dff   la moiti\'e seulement
+dff   la moiti#'e seulement
 inf   m4
 cf   ÁÁ³a ÁÁgè ££Åi et ªªøa ÁÁøiÚ ªªhi
 so   72 Thak Voc.I : 221
@@ -4899,16 +4899,16 @@ dff   un peu
 inf   m4: p
 so   72 Thak Voc.I : 223
 .sya   °°'¢¢ku-na
-dff   une coud\'ee
+dff   une coud#'ee
 inf   m4
 so   72 Thak Voc.I : 225
 .sya   °°'ÁÁku-øi [[°°'ÁÁku-øiÚ
-dff   deux coud\'ees
+dff   deux coud#'ees
 inf   m4
 cf   ÁÁkÚ¯s ÁÁkiÚ
 so   72 Thak Voc.I : 225
 .sya   ÁÁk¯s ÁÁki [[ÁÁkÚ¯s ÁÁkiÚ
-dff   deux coud\'ees
+dff   deux coud#'ees
 inf   m4
 cf   °°'ÁÁkuøiÚ
 so   72 Thak Voc.I : 225
@@ -4952,7 +4952,7 @@ dff   une mesure rase
 inf   m4
 so   72 Thak Voc.I : 227
 .sya   °°mjur ££'££laba
-dff   une mesure bomb\'ee
+dff   une mesure bomb#'ee
 inf   m4
 nb
 so   72 Thak Voc.I : 227
@@ -5027,7 +5027,7 @@ dff   (il y a) un an et demi
 inf   m4: f
 so   72 Thak Voc.I : 231
 .sya   ªÁlo ¢Áæe [[ªÁloÚ ¢Áæe
-dff   6 mois, une demi-ann\'ee
+dff   6 mois, une demi-ann#'ee
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ¢¢ten
@@ -5041,49 +5041,49 @@ inf   m4
 so   72 Thak Voc.I : 231
 .sya   ªÁti~u³ ££Âja
 dfn   p¾agun
-dff   deuxi\`eme mois
+dff   deuxi#`eme mois
 inf   m4
 nb   ğ³ et j en exposant
 so   72 Thak Voc.I : 231
 .sya   ¢¢'¢¢kubi °£Âa
-dff   3\`eme mois
+dff   3#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ÁÁÂu £ªÂa
-dff   4\`eme mois
+dff   4#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ¢¢pre ¢£Âja
-dff   5\`eme mois
+dff   5#`eme mois
 inf   m4
 nb   ğj en exposant
 so   72 Thak Voc.I : 231
 .sya   ÁÁdze ¢£Âa [[ÁÁdzeÚ ¢£Âa
-dff   6\`eme mois
+dff   6#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   °°k¾i °¢Âa
-dff   7\`eme mois
+dff   7#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   °°p¾a °¢Âa
-dff   8\`eme mois
+dff   8#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ÁÁ'ÁÁbibi °¢Âa
-dff   9\`eme mois
+dff   9#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ÁÁla³ ¢£Âa
-dff   10\`eme mois
+dff   10#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ¢¢tap ¢£Âa
-dff   11\`eme mois
+dff   11#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ÁÁbum £ªÂa [[ÁÁbuÚm £ªÂa
-dff   12\`eme mois
+dff   12#`eme mois
 inf   m4
 so   72 Thak Voc.I : 231
 .sya   ªÁgè ££hi
@@ -5092,18 +5092,18 @@ inf   m4: f
 nb   seulement 1
 so   72 Thak Voc.I : 233
 .sya   °¢'¢¢tÆ¾jol-ba
-dff   m\'elanger
+dff   m#'elanger
 inf   m68
 cf   °°'¢¢tÆhjela³ ££'££mala³ ÁÁ'ªª'ªªjoò-dzi-mu
 so   72 Thak Voc.I : 235
 .sya   °°'¢¢tÆhjela³ ££'££mala³ ÁÁ'ªª'ªªjoò-dzi-mu
-dff   m\'elanger
+dff   m#'elanger
 inf   m68
 nb   m. ˆ m. 'aller remuer'
 cf   °¢'¢¢tÆ¾jol-ba
 so   72 Thak Voc.I : 235
 .sya   °¢jom ¢¢'¢¢tÆ¾jol-o
-dff   m\'elanger
+dff   m#'elanger
 inf   m4
 nb   (mle tout!)
 so   72 Thak Voc.I : 235
@@ -5112,7 +5112,7 @@ dff   autrefois
 inf   m68
 so   72 Thak Voc.I : 237
 .sya   ªª'ªªtsjuri
-dff   apr\`es
+dff   apr#`es
 inf   m68
 so   72 Thak Voc.I : 237
 .sya   ÁÁgi ££t¾a³
@@ -5137,7 +5137,7 @@ inf   m4
 cf   ¢¢'°°'¢¢t¾a run-na
 so   72 Thak Voc.I : 239
 .sya   nadzi
-dff   pr\`es
+dff   pr#`es
 inf   m68
 nb   N najik
 so   72 Thak Voc.I : 239
@@ -5150,7 +5150,7 @@ dff   court
 inf   m68
 so   72 Thak Voc.I : 239
 .sya   ££'££hrum-ba
-dff   \'epais
+dff   #'epais
 inf   m68
 nb   vt.
 so   72 Thak Voc.I : 239
@@ -5196,7 +5196,7 @@ inf   m68
 nb   ğj en exposant
 so   72 Thak Voc.I : 243
 .sya   °°'°°mer-pa
-dff   aff\^uter
+dff   aff#^uter
 inf   m68
 so   72 Thak Voc.I : 243
 .sya   °°'¢¢sir-pa
@@ -5224,7 +5224,7 @@ inf   m4: f
 nb   ğtiret?
 so   72 Thak Voc.I : 245
 .sya   ££'££mrok¾a ÁÁ'ÁÁt¯r¯
-dff   ferm\'e
+dff   ferm#'e
 inf   m68: S
 cf   ¢¢'¢¢mrok¾a ÁÁ'ÁÁtu³g-o
 so   72 Thak Voc.I : 245
@@ -5233,7 +5233,7 @@ dff   ferme la porte!
 inf   m4: f
 so   72 Thak Voc.I : 245
 .sya   ¢¢'¢¢mrok¾a ÁÁ'ÁÁtu³g-o
-dff   ferm\'e
+dff   ferm#'e
 inf   m68: S
 cf   ££'££mrok¾a ÁÁ'ÁÁt¯r¯
 so   72 Thak Voc.I : 245
