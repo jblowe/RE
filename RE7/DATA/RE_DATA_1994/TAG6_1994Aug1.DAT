@@ -151,7 +151,7 @@ dff   quand
 dfe   when
 so   1972:53
 .tag   Xhan-a³
-dff   vers o#`u
+dff   vers o##u
 dfe   to where
 so   1972:37
 .tag   Xhan-ba
@@ -612,7 +612,7 @@ dfe   to wear a hat
 ris   Ákuò
 so   1972:64
 .tag   Xkwan
-dff   v#`atement
+dff   v##atement
 dfe   clothes
 dfn   lugaò
 so   1972:8, 15
@@ -1464,7 +1464,7 @@ dff   souffler
 dfe   to blow
 so   1972:15
 .tag   Xra
-dff   ch#`evre
+dff   ch##evre
 dfe   goat
 ton   54 <1972:29>
 so   1972:6
@@ -1472,7 +1472,7 @@ so   1972:11
 so   1972:29
 .tag   Ára
 inf   fils
-dff   ch#`evre
+dff   ch##evre
 dfe   goat
 so   1972:20
 .tag   Xrai
@@ -1508,7 +1508,7 @@ dff   corde
 dfe   rope
 so   1972:28
 ..tag   £rel
-dff   corde (du "namlo" <72:6>, pour les ch#`evres <72:11>)
+dff   corde (du "namlo" <72:6>, pour les ch##evres <72:11>)
 dfe   rope (of the carrying head-strap, to tie goats)
 phr   ra rel-dze cjyn-ba <72:11>
 so   1972:6, 11
@@ -1996,7 +1996,7 @@ dfe   pillar
 so   1972:6
 .tag   ¢tai-ba
 var   ¢tai-go
-dff   mettre #`a cuire
+dff   mettre ##a cuire
 dfe   to set sthg to cook
 so   1972:11
 ..tag   Xtai-ba
@@ -2232,7 +2232,7 @@ dfe   fat
 dfn   boso
 so   1972:5
 .tag   ¢tÆi
-dff   bi#`ere
+dff   bi##ere
 dfe   beer
 dfn   j~aë
 so   1972:5
@@ -2386,7 +2386,7 @@ dfe   to swell (grain)
 so   1972:31
 .tag   Xæap
 var   ëap
-dff   br#`edes
+dff   br##edes
 dfe   spinach
 dfn   sa:g
 so   1972:4
@@ -2572,7 +2572,7 @@ dff   articulation
 dfe   joint
 so   1972:5
 .tag   ¢tsi
-dff   bi#`ere
+dff   bi##ere
 dfe   beer
 dfn   jaD
 ris   ¢tsi
@@ -3332,7 +3332,7 @@ set   134
 nb
 so   Thak 72 Voc Comp Vb : 18
 .tag   ªsa
-dff   mener #`a la corde
+dff   mener ##a la corde
 dfe
 dfn
 set   136
@@ -3395,7 +3395,7 @@ set   160
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ¢tai
-dff   cuire #`a l'eau
+dff   cuire ##a l'eau
 dfe
 dfn
 set   163
@@ -3654,7 +3654,7 @@ set   262
 nb
 so   Thak 72 Voc Comp Vb : 29
 .tag   ªhar-ba
-dff   secouer (la poussi#`ere)
+dff   secouer (la poussi##ere)
 dfe
 dfn
 set   263

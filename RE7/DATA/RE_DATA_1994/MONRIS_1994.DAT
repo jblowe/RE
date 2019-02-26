@@ -13,7 +13,7 @@ dfe   *tuesday
 .hw   -ap
 dff   nominalisateur des vb d'emprunts
 .hw   Áap ªt¾epa
-dff   *oncle, *fr#`ere a#^in#'e du p#`ere
+dff   *oncle, *fr##ere a#^in#'e du p##ere
 dfe   *uncle, FeB
 .hw   Áam
 dff   action de *manger, *miam-miam
@@ -32,7 +32,7 @@ dff   *agacer les dents, avoir une sensation froide sur les dents
 dff   *nous (exclusif)
 dfe   *us, *we (exclusive)
 .hw   -u
-dff   (*imp#'eratif des vb #`a racine vocalique br#`eve)
+dff   (*imp#'eratif des vb ##a racine vocalique br##eve)
 dfe   (*imperative of verb roots ending in a short vowel)
 .hw   Áuò
 dff   *caverne
@@ -41,7 +41,7 @@ dfe   *cave
 dff   *couver
 dfe   to *brood
 .hw   ªup
-dff   *#'etouffer, *cuire #`a l'#'etouff#'ee
+dff   *#'etouffer, *cuire ##a l'#'etouff#'ee
 dfe   to *smother
 .hw   Áum
 dff   *poulailler
@@ -69,13 +69,13 @@ dff   (*imp#'eratif des verbes dont la racine se termine par une
   consonne)
 dfe   (*imperative of consonantic verb-roots)
 .hw   Xo
-dff   *ho! (en r#'eponse #`a un appel)
+dff   *ho! (en r#'eponse ##a un appel)
 dfe   *o! (in *answer to a call)
 .hw   îo -
-dff   *cel#`a (d#'emonstratif #'eloign#'e)
+dff   *cel##a (d#'emonstratif #'eloign#'e)
 dfe   *that
 .hw   Áo³
-dff   *cuire #`a la *vapeur
+dff   *cuire ##a la *vapeur
 dfe   to *steam <to *cook>
 .hw   Áor
 dff   *arracher (des l#'egumes) <*cueillir>
@@ -89,14 +89,14 @@ dff   (*focus)
 1dff   en venant *vers ici
 2dff   avec l'id#'ee de *commencer
 .hw   Áka
-dff   *fil #`a coudre ou #`a tisser
+dff   *fil ##a coudre ou ##a tisser
 dfe   *thread for sewing or weaving
 .hw   Áka
 dff   #^etre *#'epais
 .hw   Ákaò
 1dff   *arr#^eter, *bloquer une personne
 1dfe   to *stop someone
-2dff   *barrer une rivi#`ere
+2dff   *barrer une rivi##ere
 2dfe   to *stop a river
 .hw   ªkaò
 dff   *sang
@@ -144,7 +144,7 @@ dff   *montagne
 dfe   *mountain
 .hw   Ákat
 1dff   *broder, orner un tissu, faire un motif au tissage
-2dff   *attacher, *fermer #`a clef
+2dff   *attacher, *fermer ##a clef
 2dfe   to *fasten, to *lock
 .hw   ªkat
 dff   *voix
@@ -152,7 +152,7 @@ dfe   *voice
 .hw   ¢kat -t¾o-po
 dff   combien *grand!
 .hw   Ákan
-dff   *c#'er#'eale cuite #`a l'eau: @prototypiquement le *riz, mais
+dff   *c#'er#'eale cuite ##a l'eau: @prototypiquement le *riz, mais
   plus fr#'equemment ma#"is ou millet; *repas
 dfe   boiled *grain: ideally *rice, but more frequently maize or
   millet; *meal
@@ -165,9 +165,9 @@ dfe   *lid
 .hw   £kap
 1dff   *couvrir
 1dfe   to *cover
-2dff   *chasser, conduire les b#^etes #`a grande vitesse
+2dff   *chasser, conduire les b#^etes ##a grande vitesse
 .hw   ¢kap
-dff   *pince #`a feu
+dff   *pince ##a feu
 dfe   *fire-tongs
 .hw   Ákam $Á
 dff   *fiel, *bile
@@ -182,8 +182,8 @@ dfe   *chin
 dff   *m#^achoire
 dfe   *jaw
 .hw   ªkar $Á
-dff   faire *chauffer un r#'ecipient #`a sec avant d'y mettre des
-  aliments #`a cuire (gril #`a pain ou diable #`a ma#"is /2pokho/)
+dff   faire *chauffer un r#'ecipient ##a sec avant d'y mettre des
+  aliments ##a cuire (gril ##a pain ou diable ##a ma#"is /2pokho/)
 dfe   to *warm up an empty cooking pot before pouring the food to be
   cooked in it (bread or pop-corn)
 .hw   ªkar $ª
@@ -227,7 +227,7 @@ dfe   *corner (from the inside)
 dff   *rassembler avec la faucille avant de couper, *ramener vers soi
   avec faucille ou b#^aton <A86>
 .hw   ¢kuò
-dff   *attrapper un objet #'eloign#'e gr#^ace #`a une *extension du
+dff   *attrapper un objet #'eloign#'e gr#^ace ##a une *extension du
   corps, *tirer de loin, s'*#'etirer pour atteindre qqch
 dfe   to *stretch one self in order to *reach sthg
 .hw   ¢kui
@@ -273,7 +273,7 @@ dfe   *belt, waist-band
 dff   se mettre en frais, faire de larges *d#'epenses
 dfe   to *spend a lot
 .hw   ¢ke
-dff   avoir une *faiblesse musculaire d#^ue #`a la fatigue, *l#^acher
+dff   avoir une *faiblesse musculaire d#^ue ##a la fatigue, *l#^acher
   (involontairement)
 dfe   to let go, give (tired muscle)
 .hw   ¢keò
@@ -286,20 +286,20 @@ dfe   *bread
 dff   la *droite
 dfe   the *right
 .hw   Áken
-dff   *beau-p#`ere, p#`ere du mari ou de la femme
+dff   *beau-p##ere, p##ere du mari ou de la femme
 dfe   *father-in-law, husband's or wife's father
 .hw   ªken
 dff   *soutenir
 dfe   to *support
 .hw   Áker
 1dff   *autour, aux *environs de <fich perf>
-2dff   par *l#`a, de *c#^ot#'e, de ce c#^ot#'e <Voc N>
+2dff   par *l##a, de *c#^ot#'e, de ce c#^ot#'e <Voc N>
 2dfe   *over*there
 .hw   ¢kel
 dff   *boiter
 dfe   to *limp
 .hw   -ko
-dff   (*imp#'eratif des verbes #`a racine en voyelle longue)
+dff   (*imp#'eratif des verbes ##a racine en voyelle longue)
 .hw   Ákoò
 1dff   *creux, *trou, *vall#'ee, *d#'epression
 1dfe   *valley, *gulley, *canyon
@@ -323,7 +323,7 @@ dfe   to be *enough
 .hw   Áko³
 dff   #^etre *dur
 .hw   ¢ko³
-dff   #^etre #`a l'*aff#^ut <from Sprigg>
+dff   #^etre ##a l'*aff#^ut <from Sprigg>
 dfe   *lie in wait for, *ambush <Sprigg>
 .hw   ªkot
 dff   *peser
@@ -358,7 +358,7 @@ dff   *travail
 dff   *d#'ecorer (religieux)
 dfe   *decorate (monastery, self) (monks only) <Sprigg in fich perf>
 .hw   £kjap
-dff   *derri#`ere
+dff   *derri##ere
 dfe   *behind
 .hw   £kjam
 dff   *#'epointer
@@ -393,7 +393,7 @@ dff   *entretenir des *h#^otes <th 115>, *recevoir (des invit#'es)
 .hw   ªkjo³
 dff   *entier <Voc 74>, (? m#^ale) *entier <fich perf>
 .hw   ñkjo³
-dff   tr#`es grand *pot de cuivre ou de terre #`a grains ou #`a eau
+dff   tr##es grand *pot de cuivre ou de terre ##a grains ou ##a eau
 .hw   ªkjon
 dff   *r#'eparer, *soigner
 .hw   Xkjop
@@ -436,10 +436,10 @@ dfe   to *gnaw
 2dff   *scier
 2dfe   *saw <Sprigg in fich perf>
 .hw   Xkrep
-dff   bien ?*liss#'e, bien *tourn#'e (canne) <d'apr#`es Sprigg>
+dff   bien ?*liss#'e, bien *tourn#'e (canne) <d'apr##es Sprigg>
 dfe   be *rounded off, well *turned (walking-sticks)
 .hw   Ákrep Ákrep ªtsja ¢to³
-dff   une *plante #`a *infusion
+dff   une *plante ##a *infusion
 .hw   ªkrem
 dff   *grincer des dents
 dfe   to *grind teeth
@@ -455,7 +455,7 @@ dff   *Gurung (nom de peuple) <th 97>
 dff   *essorer
 dfe   *squeeze, *wring (clothes)
 .hw   £kron
-dff   *m#'elanger <d'apr#`es Sprigg>
+dff   *m#'elanger <d'apr##es Sprigg>
 dfe   *mix (flour, by hand)
 .hw   ¢kla
 dff   *place, *lieu <th 97, 168>
@@ -482,10 +482,10 @@ dfe   to *buy
 .hw   ¢kle
 dff   *roi <th 41, 59>
 .hw   Xklet
-dff   faire des *bouillons (riz qui bout) <d'apr#`es Sprigg>
+dff   faire des *bouillons (riz qui bout) <d'apr##es Sprigg>
 dfe   *bubble (boiling rice)
 .hw   îklep
-dff   *laper, *boire *bruyamment <d'apr#`es Sprigg>
+dff   *laper, *boire *bruyamment <d'apr##es Sprigg>
 .hw   £klo³
 dff   *avaler
 dfe   to *swallow
@@ -499,8 +499,8 @@ dff   le *haut <th 68>
 .hw   ¢kwa
 dff   *bl#'e <th 40, 68, 121>
 .hw   £kwai
-dff   *brasser (la bi#`ere) <Voc vb>, pr#'eparer la *boisson en
-  m#'elant la p#^ate ferment#'ee #`a l'eau <th 40, 119 on fich perf>
+dff   *brasser (la bi##ere) <Voc vb>, pr#'eparer la *boisson en
+  m#'elant la p#^ate ferment#'ee ##a l'eau <th 40, 119 on fich perf>
 .hw   Ákwa³
 dff   s'*habiller <th 24>
 .hw   ¢kwat
@@ -531,7 +531,7 @@ dff   *quoi ?, *comment ?
 .hw   Ák¾an
 dff   *mont#'ee, *pente <th 126>
 .hw   ªk¾an
-dff   *couper en *bottes #`a la *faucille <herbe, riz) <th 181, 125>
+dff   *couper en *bottes ##a la *faucille <herbe, riz) <th 181, 125>
 .hw   ªk¾am
 dff   *pouvoir (physiquement) <th 140>
 dff   #^etre *capable de <voc 74>, avoir la *force de
@@ -561,7 +561,7 @@ dfe   *vegetables <Munda N 593>
 dff   *vieille
 cf   1khwi
 .hw   Xk¾um
-dff   *poser la *t#^ete sur <d'apr#`es Sprigg>
+dff   *poser la *t#^ete sur <d'apr##es Sprigg>
 dfe   *lay head down, *rest head on
 .hw   Ák¾um
 dff   *oreiller
@@ -599,7 +599,7 @@ dfe   *plug a leak <Munda V 450 in fich perf>
 .hw   Ák¾ja³
 dff   *lit <voc N>, *lit fixe <Munda N 549>
 .hw   ªk¾jat
-1dff   *lire #`a voix haute <voc vb, th 169 in fich perf>, *lire #`a
+1dff   *lire ##a voix haute <voc vb, th 169 in fich perf>, *lire ##a
   l'#'ecole <A 86 in  voc 74>
 2dff   *psalmodier <voc vb et A 86 in voc 74>
 .hw   ªk¾jan
@@ -621,22 +621,22 @@ dff   *atteindre <voc vb>, *pouvoir atteindre (en tendant le bras)
 .hw   Ák¾joò
 dff   *remuer en faisant couler
 .hw   Xk¾joi
-dff   *#'eviter (qqn) <d'apr#`es Sprigg>
+dff   *#'eviter (qqn) <d'apr##es Sprigg>
 dfe   *avoid (somebody)
 .hw   Xk¾jot
 dff   *#'eviter (l'ennemi) <Sprigg> = ? *fuir <MM 87>
 dfe   *avoid meeting (enemy)
 .hw   Ák¾ra
-dff   *ciseau #`a bois
+dff   *ciseau ##a bois
 .hw   Ák¾rai
 dff   *peigner
 .hw   ªk¾ra³
 1dff   *griller, *incin#'erer
-2dff   faire *cuire des galettes, que ce soit #`a sec sur le gril ou
+2dff   faire *cuire des galettes, que ce soit ##a sec sur le gril ou
   en pleine huile comme le /$sel/. Au contraire les l#'egumes sont
-  toujours /ro:ba/, que ce soit du ma#"is #`a sec dans son /polko/,
+  toujours /ro:ba/, que ce soit du ma#"is ##a sec dans son /polko/,
   des l#'egumes qu'on cuit dans un peu d'huile comme des pdt au gras
-  (sans eau apr#`es) ou en pleine huile comme les frites.
+  (sans eau apr##es) ou en pleine huile comme les frites.
 .hw   Ák¾rap
 dff   *mordre (comme un chien)
 dfe   to *bite
@@ -652,25 +652,25 @@ dff   *laver
 dff   avoir *faim
 dfe   to be *hungry
 .hw   Ák¾roi
-dff   faire la *col#`ere
+dff   faire la *col##ere
 dfe   to have a *tantrum
 .hw   Ák¾laò
 1dff   *renverser
 2dff   *abandonner, *cesser
-3dff   *passer au-del#`a, *passer par
+3dff   *passer au-del##a, *passer par
 3dfe   *pass by
 4dff   *divorcer
 .hw   Ák¾lup
 1dff   se *renverser <th 41>  en d#'evidant son contenu <voc vb, voc
   74>
-2dff   *tomber la t#^ete la premi#`ere <th 103, voc vb, voc 74>
-3dff   *poser #`a l'envers <th 103, voc vb>
+2dff   *tomber la t#^ete la premi##ere <th 103, voc vb, voc 74>
+3dff   *poser ##a l'envers <th 103, voc vb>
 .hw   Xk¾lon
 dff   *accrocher ses v#^etements (involnt) <Sprigg>
 dfe   *catch (one's clothes) <Sprigg in fich perf>
 .hw   Ák¾wa
 dff   *piocher (dans un terrain non cultiv#'e) <voc vb>
-dff   *piocher (= *cultiver #`a la main, *labourer #`a la main <A 86
+dff   *piocher (= *cultiver ##a la main, *labourer ##a la main <A 86
   in voc 74>)
 .hw   ªk¾waò
 dff   *nourrir
@@ -694,17 +694,17 @@ dff   *tambour
 .hw   ¢³aò
 dff   *cinq
 .hw   Á³an
-dff   *emprunter qqch #`a rendre (outil, bijou ...) et non #`a
+dff   *emprunter qqch ##a rendre (outil, bijou ...) et non ##a
   remplacer ou rembourser
 .hw   £³an
 dff   ? *retors
 .hw   X³ap
-dff   *d#'evorer <d'apr#`es Eng. gobble>
+dff   *d#'evorer <d'apr##es Eng. gobble>
 dfe   *gobble
 .hw   ª³am
 dff   #^etre *sucr#'e
 .hw   ª³am
-dff   *pr#`es, *proximit#'e
+dff   *pr##es, *proximit#'e
 .hw   £³am $Á
 1dff   #^etre *sal#'e
 .hw   £³am $ª
@@ -753,7 +753,7 @@ dff   pleine *lune
 1dff   *crier (animal, ventre)
 2dff   *faire du bruit
 .hw   X³jak
-dff   *jeter par terre <d'apr#`es Sprigg>
+dff   *jeter par terre <d'apr##es Sprigg>
 dfe   throw to the ground
 .hw   Á³jat
 dff   *m#^acher
@@ -795,7 +795,7 @@ dff   *fils
 dff   *d#'ef#'equer, *#'emettre un *pet
 dfe   to *defecate
 .hw   ¢tsaò
-dff   *quant #`a
+dff   *quant ##a
 .hw   Átsa³
 dff   *bru
 .hw   £tsa³
@@ -803,7 +803,7 @@ dff   *nid
 .hw   ¢tsa³
 dff   *enfiler, *introduire
 .hw   Átsat
-dff   *d#'ef#'equer (enfants) <d'apr#`es Sprigg>
+dff   *d#'ef#'equer (enfants) <d'apr##es Sprigg>
 dfe   *shit (small children)
 .hw   ¢tsan
 dff   #^etre *comp#'etent et *consciencieux <Voc vb>, #^etre *habile,
@@ -828,9 +828,9 @@ dff   *articulation
 dfe   *joint
 .hw   £tsiò
 1dff   *pincer
-2dff   ? *mordre l#'eg#`erement (chien) <fich perf>
+2dff   ? *mordre l#'eg##erement (chien) <fich perf>
 .hw   ¢tsi
-dff   *bi#`ere (boisson ferment#'ee)
+dff   *bi##ere (boisson ferment#'ee)
 .hw   ¢tsiò
 1dff   *r#'efl#'echir, *penser, *croire
 2dff   se *rappeler
@@ -839,7 +839,7 @@ dff   *#'eclore (oeuf) <Munda V 307>
 dfe   ? *get out, be *born
 cf   ching 'wake up' <fich perf>
 .hw   îtsit
-dff   *s#'eparer, *trier, *vanner <d'apr#`es S[rigg>
+dff   *s#'eparer, *trier, *vanner <d'apr##es S[rigg>
 dfe   *separate good from bad (rice, in winnowing) <Sprigg>
 .hw   £tsin
 dff   *finir, *achever
@@ -847,10 +847,10 @@ dff   *finir, *achever
 dff   #^etre *m#^ur
 dfe   get *old (trees, beer, fruit), too old <Sprigg in fich perf>
 .hw   Átsim
-dff   *tiens!, *voil#`a que
+dff   *tiens!, *voil##a que
 cf   A86 in Voc 74 (cassette xb 187)
 .hw   ªtsim $Á
-dff   *ranger sur une #'etag#`ere
+dff   *ranger sur une #'etag##ere
 dfe   *arrange, put in a *proper place (pots) <Sprigg in fich perf>
 .hw   ªtsim $ª
 dff   *fermer et *froncer les yeux
@@ -898,7 +898,7 @@ dff   *seulement
 .hw   ªtset
 dff   *raser une b#^ete tu#'ee
 .hw   ªtsen
-dff   *retrousser <d'apr#`es Sprigg>
+dff   *retrousser <d'apr##es Sprigg>
 dfe   *pull up (clothes)
 .hw   Xtsep
 dff   *d#'echirer un v#^etement
@@ -906,7 +906,7 @@ dff   *d#'echirer un v#^etement
 dff   se *blesser <Voc vb>, se faire *mal <Voc 74, fich perf>
 dfe   *bump into accidentally <Sprigg in fich perf>
 .hw   ñtser
-dff   #^etre *constip#'e <d'apr#`es Sprigg>
+dff   #^etre *constip#'e <d'apr##es Sprigg>
 dfe   be *constipated <Sprigg in fich perf>
 .hw   ªtsel
 dff   *d#'ebiter en lamelles (l#'egumes)
@@ -925,7 +925,7 @@ dff   *composer (un chant)
 .hw   £tsom
 dff   se *r#'eunir
 .hw   Átsor
-dff   *rancir (bi#`ere, beurre)
+dff   *rancir (bi##ere, beurre)
 .hw   Átsor
 1dff   de ce *c#^ot#'e-ci
 2dff   par *ici, *vers ici
@@ -934,7 +934,7 @@ dff   *personne n#'ee la m#^eme *ann#'ee que soi
 .hw   ¢tsor
 dff   *envelopper, mettre dans un *paquet, *attacher en un paquet
 .hw   Átsol
-dff   *allumer <d'apr#`es Sprigg>
+dff   *allumer <d'apr##es Sprigg>
 dfe   *light (series of fires, children for amusement)
 .hw   ñtsol
 dff   ? (se) *tromper <from Sprigg>
@@ -959,7 +959,7 @@ dfe   be *insufficient <Sprigg in fich perf>
 .hw   £tsja³
 dff   *apprendre
 .hw   ¢tsjat
-dff   #^etre *pr#`es
+dff   #^etre *pr##es
 dfe   be *near
 .hw   Átsjan
 dff   *tigre <th 40>
@@ -1014,12 +1014,12 @@ dfe   to *dress up
 .hw   ªtsjoò
 dff   *#'egal
 .hw   Átsjon
-dff   *fr#`ere *cadet (pour un homme)
+dff   *fr##ere *cadet (pour un homme)
 .hw   £tsjon
 1dff   de *nouveau <th 62>
 2dff   ? en revenant <fich perf, Voc 74>
 .hw   ¢tsjon
-dff   ?se *rider <d'apr#`es Sprigg>
+dff   ?se *rider <d'apr##es Sprigg>
 dfe   get *wrinkled <Sprigg>
 .hw   ¢tsjop
 dff   *m#'eler en *p#'etrissant avec les mains
@@ -1032,7 +1032,7 @@ dfe   get *wrinkled <Sprigg in fich perf>
 .hw   £tsjor
 dff   *exprimer : *presser (fruit), *tordre le linge (pour essorer)
 .hw   îtsjol
-dff   *confier (qqch #`a qqn)
+dff   *confier (qqch ##a qqn)
 dfe   *entrust (goods) <Sprigg>
 .hw   £tswi
 dff   *brochette
@@ -1041,14 +1041,14 @@ dff   faire *pa#^itre <th 51, 99, 109>
 .hw   Áts¾aò
 dff   #^etre trop *sal#'e <th 52, 100, 109>
 .hw   ªts¾a
-dff   *br#^uler, *piquer (sensation d#^ue #`a blessure) <Voc vb>;
+dff   *br#^uler, *piquer (sensation d#^ue ##a blessure) <Voc vb>;
   faire *mal <A86 on fich perf>
 .hw   ªts¾aò
-1dff   s'*acheter des choses peu #`a peu, par #'economie <Voc vb>
+1dff   s'*acheter des choses peu ##a peu, par #'economie <Voc vb>
 2dff   s'*#'etablir (sens social), *fonder un foyer <fich perf, Voc
   74>
 .hw   Áts¾ai
-dff   *lani#`ere de bambou
+dff   *lani##ere de bambou
 .hw   Áts¾a³
 dff   *hotte
 .hw   Áts¾a³
@@ -1110,7 +1110,7 @@ dff   avoir la *diarrh#'ee, la *dysenterie <th 94, 160>
 .hw   ªts¾um
 dff   *cacher
 .hw   ªts¾ur
-dff   *filtre : *panier #`a filtrer la *bi#`ere (*chang) <th 160>
+dff   *filtre : *panier ##a filtrer la *bi##ere (*chang) <th 160>
 .hw   Áts¾eò
 dff   *vie <th 55, 94, 104>, *dur#'ee de la *vie <th 125>
 .hw   ªts¾eò
@@ -1122,9 +1122,9 @@ dff   (notion de *vacuit#'e)
 dfe   *uselessly (?)
 .hw   Áts¾er
 dff   ne pas #^etre en paix <MM jan 88>
-dff   #^etre *#'enerv#'e (par des enfants, par exc#`es de fatigue),
+dff   #^etre *#'enerv#'e (par des enfants, par exc##es de fatigue),
   #^etre *nerveux <th 94, 98, 104>, *agac#'e par qqch, *contrari#'e
-  <A86>, #^etre *anxieux, *angoiss#'e, *d#'eprim#'e <MM d'apr#`es il3>
+  <A86>, #^etre *anxieux, *angoiss#'e, *d#'eprim#'e <MM d'apr##es il3>
 .hw   Áts¾o
 dff   *assiette d'*offrandes
 .hw   Áts¾o
@@ -1187,7 +1187,7 @@ dff   *sauter (animal, #'etincelles ...)
 dff   *r#'epandre une *offrande from Spr.>
 dfe   *scatter (rice, beer) in offering to god <Sprigg>
 .hw   Áts¾jop
-dff   *m#'elanger deux choses d'esp#`eces diff#'erentes
+dff   *m#'elanger deux choses d'esp##eces diff#'erentes
 .hw   Áts¾jol
 dff   *m#'elanger, ne pas *distinguer
 .hw   Áts¾waò
@@ -1226,11 +1226,11 @@ dff   *pr#'esents qu'apporte un *invit#'e
   pour mise en culture <th 60, 136>
 2dff   *mur de maison <Ani 73 in fich perf>
 .hw   £æan
-1dff   *penser (en g#'en#'eral) <Ani 78 in fich perf>; *penser #`a,
+1dff   *penser (en g#'en#'eral) <Ani 78 in fich perf>; *penser ##a,
   penser que, croire que <voc vb>
 2dff   se *rappeler <th 156>
 .hw   £æap
-dff   genre d'*#'epinards, *br#`ede
+dff   genre d'*#'epinards, *br##ede
 dfe   *spinach
 .hw   ¢æap -¢æup
 dff   *l#'egumes <Ani, BL 761>
@@ -1266,7 +1266,7 @@ dff   *fermer
 1dff   *tirer <th 67>
 2dff   *inspirer
 .hw   ªæup
-dff   *fil #`a *coudre <th 180>
+dff   *fil ##a *coudre <th 180>
 cf   1naTup 'lisse' <fich perf>
 .hw   £æup
 1dff   *sombrer <Voc vb>
@@ -1275,7 +1275,7 @@ cf   1naTup 'lisse' <fich perf>
 dff   *coudre
 dfe   to *sew
 .hw   ªæum
-dff   *serrement des l#`evres
+dff   *serrement des l##evres
 .hw   Áæeò
 dff   s'*#'etrangler en buvant
 dfe   to *choke (while drinking)
@@ -1316,7 +1316,7 @@ dfe   *pig, *pork
 1dfe   to *dig, to *pick off
 2dff   *d#'eterrer (qqes pommes de terre) <A86 in Voc 74>
 .hw   £æwa³
-dff   *venir #`a *fruits (ou *graines)
+dff   *venir ##a *fruits (ou *graines)
 .hw   Áæwiò
 dff   *suivre partout, pleurnicher pour accompagner (petits enfants)
 .hw   ¢æwi
@@ -1325,7 +1325,7 @@ dfe   *landslide
 .hw   Áæ¾a
 dff   *partager
 .hw   Áæ¾a³
-dff   *distribuer la nourriture #`a tous dans un festin sans oublier
+dff   *distribuer la nourriture ##a tous dans un festin sans oublier
   personne <Ani 78, after Sprigg>
 .hw   ªæ¾am
 dff   *asperger, *saupoudrer, *r#'epandre (le fumier), ? *jeter par
@@ -1357,7 +1357,7 @@ dfe   to *hollow out, to *engrave
 dff   *ouvrir
 dfe   to *open
 .hw   -ta
-dff   *#`a, *pour
+dff   *##a, *pour
 .hw   Áta
 dff   *advenir, se *produire, *convenir
 dfe   to *happen, to be *acceptable
@@ -1414,7 +1414,7 @@ dff   *blanc
 dff   *trembler, *vibrer, #^etre en *transe
 dfe   to *shiver, shake, be in a *transe
 .hw   ªtal
-dff   *#'etendoir #`a linge
+dff   *#'etendoir ##a linge
 .hw   Xti -
 dff   *un
 .hw   £tiò
@@ -1429,7 +1429,7 @@ dff   *ann#'ee
 dff   *coeur
 dfe   *heart
 .hw   ¢ti³
-dff   *retourner / se retourner de mani#`ere #`a pr#'esenter le devant
+dff   *retourner / se retourner de mani##ere ##a pr#'esenter le devant
   <Ani 78 on fich perf>
 dfe   to *turn to face
 .hw   Átit
@@ -1460,7 +1460,7 @@ dff   faire de petites d#'epenses pour une c#'er#'emonie <voc vb, ?
 .hw   -Xtuku
 dff   *pluriel
 .hw   Átu -kju³-ma
-dff   l'*ann#'ee *derni#`ere
+dff   l'*ann#'ee *derni##ere
 .hw   Átut
 dff   *tremper (dans)
 dfe   to *dip
@@ -1473,7 +1473,7 @@ dff   *hacher (viande)
 .hw   Átum
 dff   *calfeutrer, *couvrir pour prot#'eger ou d#'ecorer, *recouvrir
 .hw   Xtum
-dff   *recouvrir de terre le mod#`ele de cire <MV 398>
+dff   *recouvrir de terre le mod##ele de cire <MV 398>
 .hw   £tum
 dff   *dard
 dfe   the *sting (of a bee)
@@ -1481,7 +1481,7 @@ dfe   the *sting (of a bee)
 dff   rendre ou devenir *mo#"elleux, *amollir, *civiliser
 dfe   to *soften
 .hw   -te
-dff   *autant que, *#'egal #`a, #`a peu *pr#`es
+dff   *autant que, *#'egal ##a, ##a peu *pr##es
 dff   (en contexte n#'egatif) *m#^eme pas
 .hw   Áteò
 dff   *verser
@@ -1518,8 +1518,8 @@ dff   se *cogner le pied en marchant
 .hw   ¢tot
 dff   *charge
 .hw   £ton
-1dff   *remettre, *passer qqch #`a qqn
-2dff   *donner d'inf#'erieur #`a sup#'erieur
+1dff   *remettre, *passer qqch ##a qqn
+2dff   *donner d'inf#'erieur ##a sup#'erieur
 .hw   Átor
 dff   en *amont, vers l'*int#'erieur de la maison
 .hw   Átor
@@ -1564,7 +1564,7 @@ dff   #^etre trop *#'epic#'e, *piquer (fum#'ee, les yeux)
 dff   *boire
 dfe   to *drink
 .hw   ªt¾ut
-dff   *ajouter bout #`a bout pour *rallonger, *rabouter <Ani 78 on fp>
+dff   *ajouter bout ##a bout pour *rallonger, *rabouter <Ani 78 on fp>
 .hw   Át¾um
 dff   *finir, ne plus *exister, *dispara#^itre
 .hw   ªt¾ur
@@ -1586,7 +1586,7 @@ dfe   to *stain
 dff   le *haut, en haut
 dfe   *top
 .hw   Át¾oò
-dff   *prendre #`a la main
+dff   *prendre ##a la main
 dfe   to *hold, ? to get hold of
 .hw   ªt¾o
 dff   *salive
@@ -1604,7 +1604,7 @@ dff   *trouver, *obtenir sa part de qqch, *suffire
 dff   *r#^evasser, ne pas se rappeler, ne pas finir un travail,
   s'arr#^eter sans raison au milieu, garder les yeux fixes
 .hw   Át¾om $ª
-dff   #^etre cuit #`a *point, *mo#"elleux
+dff   #^etre cuit ##a *point, *mo#"elleux
 .hw   ªt¾om
 dff   *r#^everie
 .hw   Át¾or
@@ -1613,12 +1613,12 @@ dfe   to get *lost
 .hw   -n
 dff   *aussi
 .hw   -na
-dff   (expression de la *mani#`ere)
+dff   (expression de la *mani##ere)
 .hw   Ána
 dff   *nez
 dfe   *nose
 .hw   Ánaò
-dff   *lisse de m#'etier #`a tisser
+dff   *lisse de m#'etier ##a tisser
 dfe   *heddle(s)
 .hw   ªna
 dff   #^etre *malade
@@ -1657,7 +1657,7 @@ dfe   *year before last
 dff   *os du nez
 dfe   *nose-ridge
 .hw   Ána³
-dff   *donner de sup#'erieur #`a inf#'erieur, donner (hh), octroyer
+dff   *donner de sup#'erieur ##a inf#'erieur, donner (hh), octroyer
 dfe   to *give, to *bestow
 .hw   ªna³
 dff   *plein
@@ -1673,7 +1673,7 @@ dff   *int#'erieur
 dff   *entrailles, *chair d'une *noix <th 32>
 dfe   *viscera, *entrails
 .hw   ªnat
-dff   *plein #`a *ras
+dff   *plein ##a *ras
 .hw   £nat
 dff   *atterrir, poser les pieds avec soin en marchant <*marcher>
 .hw   Xna -tawar
@@ -1783,11 +1783,11 @@ dff   *Newar
 .hw   £pak -Áæa³æa³
 dff   petit *serpent aveugle
 .hw   Ápa³
-dff   *clairi#`ere, *parc, *prairie
+dff   *clairi##ere, *parc, *prairie
 dfe   *meadow
 .hw   Ápa³
-1dff   *barrer une rivi#`ere
-2dff   *barrer le chemin #`a, *bloquer, *contenir (des animaux)
+1dff   *barrer une rivi##ere
+2dff   *barrer le chemin ##a, *bloquer, *contenir (des animaux)
 .hw   ªpa³
 dff   *dire, *parler
 dfe   to *speak
@@ -1812,11 +1812,11 @@ dff   *d#'edrusir, *#'eclaircir une culture
 .hw   Ápap
 dff   *tomber (de sa hauteur)
 .hw   £pap
-1dff   *p#^ate ferment#'ee pour la bi#`ere
+1dff   *p#^ate ferment#'ee pour la bi##ere
 1dfe   *beermash
 2dff   *cire du miel
 .hw   ¢pap
-dff   *fermenter (bi#`ere)
+dff   *fermenter (bi##ere)
 dfe   to *ferment
 .hw   £pam
 dff   *#'epaule
@@ -1824,10 +1824,10 @@ dfe   *shoulder
 .hw   £pam
 dff   *mouiller, *tremper
 .hw   ¢pam
-dff   *marcher #`a quatre pattes
+dff   *marcher ##a quatre pattes
 dfe   to *crawl
 .hw   Ápar
-dff   *planche #`a imprimer, *moule <A86>
+dff   *planche ##a imprimer, *moule <A86>
 .hw   £par
 dff   se *fracturer, se *fendre partiellement (e.g. du bois)
 dfe
@@ -1849,12 +1849,12 @@ dfe   to *bury
 .hw   Ápu
 dff   *#'ebullition
 .hw   ªpuò
-dff   *ressortir de terre, *repousser de soi-m#^eme, *sortir #`a peine
+dff   *ressortir de terre, *repousser de soi-m#^eme, *sortir ##a peine
   de terre (semis)
 .hw   £può
 dff   *bourgeonner, repousser du haut d'un arbre
 .hw   ¢pu
-dff   *rizi#`ere
+dff   *rizi##ere
 .hw   ªpui
 dff   *porter
 .hw   ¢pui
@@ -1867,16 +1867,16 @@ dff   *d#'ebordement (e.g. l'eau du riz)
 dff   *poils du corps humain, doigts ...
 dfe   *body*hair
 .hw   £put -£put
-dff   *poussi#`ere
+dff   *poussi##ere
 .hw   ªpup
-dff   sur le *ventre, #`a plat *ventre, *prostr#'e (position),
+dff   sur le *ventre, ##a plat *ventre, *prostr#'e (position),
   *pench#'e en avant le t#^ete sur les bras <A86>
 .hw   ¢pup
 1dff   *fermenter (grain), entasser pour faire fermenter
 2dff   *faisander
 2dfe   be *mildewed
 .hw   Ápe
-dff   *mod#`ele, *moule
+dff   *mod##ele, *moule
 .hw   ¢pe
 dff   *finir une provision, #'epuiser
 .hw   Ápe³
@@ -1896,7 +1896,7 @@ dff   *filtrer
 dfe   to *strain (milk, liquids)
 .hw   £per
 dff   avoir *froid aux pieds ou aux mains
-dff   #^etre *engourdi (g#'en#'eralement de froid) <MM d'apr#`es les
+dff   #^etre *engourdi (g#'en#'eralement de froid) <MM d'apr##es les
   ex sous /1perere/>
 .hw   Ápel
 dff   *croiser
@@ -1947,10 +1947,10 @@ dfe   to *fuck
 dff   *jeter
 dfe   to *throw away, *discard
 .hw   Ápjat
-dff   *tresser #`a trois brins (surtout cheveux)
+dff   *tresser ##a trois brins (surtout cheveux)
 dfe   to *plait
 .hw   £pjan
-dff   *arracher qqch #`a qqn
+dff   *arracher qqch ##a qqn
 dfe   to *snatch
 .hw   £pjap
 dff   *aile, grandes *plumes de l'aile
@@ -1970,10 +1970,10 @@ dff   *extraire, faire *sortir en glissant, e.g. arracher les grandes
 .hw   ªpjo
 dff   *jaillir, faire une *r#'esurgence
 .hw   £pjo
-dff   *natte de lani#`eres de *bambou utilis#'ee pour le s#'echage des
+dff   *natte de lani##eres de *bambou utilis#'ee pour le s#'echage des
   grains
 .hw   £pjo
-dff   *grimper comme #`a la perche ou au m#^at (sans l'aide de
+dff   *grimper comme ##a la perche ou au m#^at (sans l'aide de
   branches)
 .hw   Ápjok
 dff   *arracher (poteau)
@@ -2001,7 +2001,7 @@ dfe   to *lose, be *defeated
 .hw   Áprak
 dff   *schlouff, *crack, *fort
 .hw   Ápra³
-dff   *civi#`ere
+dff   *civi##ere
 .hw   £pra³
 dff   *abri provisoire
 dfe   *shed, *shelter
@@ -2035,10 +2035,10 @@ dff   *r#'epartir des petits morceaux (en part. de piment vert sur son
   assiette) <*parsemer>
 dfe   to *tear off small bits and *sprinkle
 .hw   ¢pru -ju³
-dff   *pierre tr#`es dure qui sert #`a enfoncer le manche de la meule
-  de maison (et seulement #`a #,ca)
+dff   *pierre tr##es dure qui sert ##a enfoncer le manche de la meule
+  de maison (et seulement ##a #,ca)
 .hw   Ápre
-dff   *a#'erer la laine ou le coton #`a la main avant de filer,
+dff   *a#'erer la laine ou le coton ##a la main avant de filer,
   *d#'echiqueter l'#'etoupe au moment de s'en servir
 dfe   to *fluff wool or coton
 .hw   ªpreò
@@ -2073,7 +2073,7 @@ dfe   to *untie, to *loosen
 dff   #^etre *fatigu#'e
 dfe   to be *tired
 .hw   ªpli
-dff   *r#'ecolter feuille #`a feuille, *effeuiller
+dff   *r#'ecolter feuille ##a feuille, *effeuiller
 dfe   to *collect leaves from a living plant
 .hw   ªpliò
 dff   *r#'ecurer
@@ -2088,7 +2088,7 @@ dff   #^etre *plein
 dfe   to be *full
 .hw   £pli³
 1dff   *pousser en faisant *rouler <th 180>
-2dff   tomber #`a la *renverse
+2dff   tomber ##a la *renverse
 .hw   Áplit
 dff   *gratter pour *#^oter
 dfe   to *scrape off
@@ -2112,14 +2112,14 @@ dfe   *width of a cloth
 .hw   £ple $ª
 dff   terrain en *pente
 .hw   Áplek
-dff   #`a *plat
+dff   ##a *plat
 dfe   *flat, stuck flat
 .hw   £plek
 dff   *#'epais (liquide)
 .hw   ¢plen
 dff   terrain en *pente
 .hw   £ploò
-dff   faire *cuire #`a l'eau, faire *bouillir
+dff   faire *cuire ##a l'eau, faire *bouillir
 .hw   ¢ploò
 dff   *piquer
 dfe   to *poke
@@ -2171,20 +2171,20 @@ dfe   to *peel
 dff   *aller, *partir
 dfe   to *go, to *push off
 .hw   Áp¾ir -£kjap
-dff   *derri#`ere
+dff   *derri##ere
 dfe   *behind
 .hw   ªp¾u
 dff   *tremper, #^etre *d#'etremp#'e
 dfe   to be *soak|ed
 .hw   Áp¾ui
-dff   *bi#`ere (h.h.)
+dff   *bi##ere (h.h.)
 .hw   ªp¾u³
 dff   *r#'eunion, rassemblement, *tas
 dfe   *group, *meeting, *heap
 .hw   Áp¾ut
 1dff   *souffler
 1dfe   to *blow
-2dff   *rater (ne pas r#'eussir #`a faire qqch apr#`es s'#^etre
+2dff   *rater (ne pas r#'eussir ##a faire qqch apr##es s'#^etre
   vant#'e de pouvoir le faire) <A86>
 2dfe   to *blow a job <A86>
 .hw   Áp¾up
@@ -2242,14 +2242,14 @@ dfe   *apply
 dff   *casser les mottes de terre
 dfe   to *break clods
 .hw   ªp¾ol $ª
-dff   *salir (un v#^etement) de terre ou de poussi#`ere,
+dff   *salir (un v#^etement) de terre ou de poussi##ere,
   *empoussi#'erer
 dfe   to cover with *dust
 .hw   Áp¾jaò
 dff   *prosternation
 dfe
 .hw   Áp¾jaò
-1dff   *couper lanc#'e, couper au volant ou #`a la sape <A86>
+1dff   *couper lanc#'e, couper au volant ou ##a la sape <A86>
 1dfe
 2dff   *d#'efricher
 .hw   ªp¾jaò
@@ -2279,7 +2279,7 @@ dff   *bouillir
 .hw   Xp¾jok
 dff   *arracher (clous, tenons)
 .hw   Áp¾jo³
-dff   *grimper #`a la corde, se *balancer sur une balan#,coire
+dff   *grimper ##a la corde, se *balancer sur une balan#,coire
 .hw   Xp¾jot
 dff   *couper en deux
 dfe   to *cut through (wood), *sever
@@ -2290,7 +2290,7 @@ dff   *d#'em#^eler
 .hw   Áp¾ral
 dff   *d#'epecer
 .hw   Áp¾riò
-dff   *cligner (oeil), avoir un tic #`a l'oeil
+dff   *cligner (oeil), avoir un tic ##a l'oeil
 dfe   to *twitch
 .hw   Áp¾ruò
 dff   *frissonner
@@ -2309,7 +2309,7 @@ dff   *s#'eparer, *d#'echirer
 .hw   Áp¾re³
 dff   *suspendre (tableau, peinture)
 .hw   Áp¾rok
-dff   *asperger l#'eg#`erement
+dff   *asperger l#'eg##erement
 .hw   Áp¾la
 dff   *plante~de~pied, *paume
 dfe   *sole of foot
@@ -2340,7 +2340,7 @@ dfe   *ghost
 .hw   ¢ma³
 dff   *r#^ever
 .hw   Áman
-dff   *rem#`ede
+dff   *rem##ede
 dfe   *medecine
 .hw   £man
 dff   *refuser (de donner qqch)
@@ -2348,7 +2348,7 @@ dff   #^etre *#'egoiste
 .hw   ¢man
 dff   *aimer, *d#'esirer
 .hw   Ámam
-1dff   *grand-*m#`ere
+1dff   *grand-*m##ere
 1dfe   *grand-*mother
 2dff   par extension terme d'adresse respectueux pour toute femme un
   peu #^ag#'ee
@@ -2366,8 +2366,8 @@ dff   bot 235
 .hw   ¢mar
 dff   (?) *moudre
 .hw   -mi
-1dff   marque de *th#`eme nominal, *quant #`a
-2dff   marque de ??*th#`eme verbal
+1dff   marque de *th##eme nominal, *quant ##a
+2dff   marque de ??*th##eme verbal
 .hw   ªmiò
 dff   *oeil
 dfe   *eye
@@ -2380,7 +2380,7 @@ dfe   *name
 .hw   ªmin
 dff   #^etre *m#^ur, *cuit
 .hw   ªmiò -Áp¾iò
-dff   *paupi#`ere
+dff   *paupi##ere
 dfe   *eyelid
 .hw   Ámu
 dff   *ciel
@@ -2432,9 +2432,9 @@ dfe   to *plough
 dff   (?) *#'ecraser (des #'epinards)
 dfe   to ? crush (spinach)
 .hw   ªmol
-dff   *m#'elanger #`a la main, remuer pour #'egaliser le sel etc
+dff   *m#'elanger ##a la main, remuer pour #'egaliser le sel etc
 .hw   Ámja
-dff   *fl#`eche
+dff   *fl##eche
 dfe   *arrow
 .hw   ªmja³
 dff   avoir le *loisir, le *temps ou l'occasion de faire qqch
@@ -2498,7 +2498,7 @@ dfe   be *satiated
 dff   *riz d#'ecortiqu#'e cru
 dfe   uncooked polished *rice
 .hw   ªmla³ -mla³-pa
-dff   tr#`es *noir
+dff   tr##es *noir
 dfe   very *black
 .hw   Ámlit
 dff   *sangsue d'eau
@@ -2519,7 +2519,7 @@ dfe   *too, *also
 dff   *main
 dfe   *hand
 .hw   Ájai
-dff   *exclamation pour faire avancer les ch#`evres
+dff   *exclamation pour faire avancer les ch##evres
 .hw   Ájai
 dff   *revenir
 dfe   to *come back
@@ -2533,7 +2533,7 @@ dfe   to be *light in weight
 dff   *nous
 dfe   *we, *us
 .hw   Ájap
-1dff   #^etre *adonn#'e #`a, avoir le vice de qqch, s'*adonner #`a
+1dff   #^etre *adonn#'e ##a, avoir le vice de qqch, s'*adonner ##a
 1dfe   to be *addicted to
 2dff   ne faire que
 3dff   obtenir par flatterie continuelle
@@ -2548,7 +2548,7 @@ dff   s'*enfuir, *courrir
 .hw   £jal
 dff   s'*#'eventer (alcool)
 .hw   Xjal
-dff   *lumi#`ere du jour
+dff   *lumi##ere du jour
 .hw   Ájuò
 dff   *manche d'outil
 dfe   *handle
@@ -2585,7 +2585,7 @@ dff   *oblique
 dff   *jour (dans le compte des jours)
 dfe   *day (when counting days)
 .hw   Ára
-dff   *ch#`evre
+dff   *ch##evre
 dfe   *goat
 .hw   ªraò $Á
 dff   *tisser
@@ -2596,20 +2596,20 @@ dff   *tisser
 dff   *c#^ote
 dfe   *rib
 .hw   Xrai -
-dff   deux unit#'es de *temps apr#`es le pr#'esent
+dff   deux unit#'es de *temps apr##es le pr#'esent
 .hw   Árak
 dff   *couverture fine
 dfe   a thin *blanket
 .hw   £ra³
 1dff   *soi-*m#^eme (r#'efl#'echi)
 1dfe   *self
-2dff   ?employ#'e comme pronom de la deuxi#`eme personne respectueux
+2dff   ?employ#'e comme pronom de la deuxi##eme personne respectueux
 .hw   Xra³
 dff   *comme
 .hw   Áran
-1dff   *tendre les fils de cha#^ine du m#`etier #`a tisser
+1dff   *tendre les fils de cha#^ine du m##etier ##a tisser
 1dfe
-2dff   *tresser en vannerie grossi#`ere (en part. une barri#`ere
+2dff   *tresser en vannerie grossi##ere (en part. une barri##ere
   /3wara/) <A86>
 .hw   ªrap
 dff   se tenir *debout
@@ -2619,7 +2619,7 @@ dff   *jouer de la musique
 dfe   *play a musical instrument
 2dff   ? faire du bruit <de Mem>
 .hw   ¢ram
-dff   reprendre en *choeur, r#'ep#'eter les paroles d'un chant apr#`es
+dff   reprendre en *choeur, r#'ep#'eter les paroles d'un chant apr##es
   le leader <*chanter>
 .hw   £ral
 dff   *emm#^eler, #^etre emm#^el#'e
@@ -2693,14 +2693,14 @@ dfe   to *wake up, to *get up
 .hw   £re³
 dff   #^etre *long
 .hw   ªrep
-dff   *plein #`a ras
+dff   *plein ##a ras
 .hw   -rem
 dff   *fois
 dfe   *times
 .hw   Árem
 1dff   *pr#'esents de nourriture donn#'es aux lamas qui viennent faire
   une c#'er#'emonie chez soi
-2dff   les pr#'esents que le mari#'e apporte chez sa belle-m#`ere
+2dff   les pr#'esents que le mari#'e apporte chez sa belle-m##ere
 .hw   £rem -Áp¾aipa
 dff   *homme (%vir|)
 dfe   *man (male)
@@ -2717,14 +2717,14 @@ dfe   to bear *fruit
 1dff   *ami, compagnon
 1dfe   *friend
 2dff   placenta
-3dff   *pronom de la 3#`eme personne
+3dff   *pronom de la 3##eme personne
 .hw   ¢ro
 dff   *cadavre
 dfe   *corpse
 .hw   ¢ro
 dff   *frire (prob. faire frire)
 .hw   Xrot
-dff   *#'eriger (une barri#`ere), ?*enclore
+dff   *#'eriger (une barri##ere), ?*enclore
 dfe   to *fence, to *bar
 .hw   Árop
 dff   *frapper
@@ -2754,7 +2754,7 @@ dfe   to *hide (oneself)
 dff   *flanc bois#'e de *montagne
 dfe   wooded *hill-side
 .hw   -lai
-dff   (deuxi#`eme partie de la n#'egation du pass#'e) *ne ... pas
+dff   (deuxi##eme partie de la n#'egation du pass#'e) *ne ... pas
 dfe   did *not
 .hw   ¢lao
 dff   *d'accord
@@ -2767,7 +2767,7 @@ dfe   *mortar
 .hw   Ála -£tsa³
 1dff   ?*nom~de~lieu
 1dfe   ?a place-*name
-2dff   *lieu o#`u r#'eside un dieu $jaMkri (?Bon)
+2dff   *lieu o##u r#'eside un dieu $jaMkri (?Bon)
 2dfe   the *residence of a shamanist god
 .hw   £lam
 dff   *flamme
@@ -2785,7 +2785,7 @@ dfe   to *rouse (sleeping person)
 dff   *ampleur (d'un sari), *longueur
 dfe   *length of a sari (horizontally)
 .hw   Áli -ts¾a
-dff   *apr#`es, *plus tard, *derri#`ere
+dff   *apr##es, *plus tard, *derri##ere
 dfe   *after
 .hw   ¢lip
 dff   *#'eventer <A86>
@@ -2823,7 +2823,7 @@ dff   *d#'eplacer (?tr, ?itr)
 dfe   to *move
 2dff   *emm#'enager <Rc 166>
 .hw   Ále³
-dff   *ami rituel, fr#`ere adopt#'e
+dff   *ami rituel, fr##ere adopt#'e
 dfe   bound-*friend
 .hw   Ále³
 dff   *laisser (un reliquat), ?rester
@@ -2873,7 +2873,7 @@ dfe   (*question marker: yes-no question or alternative), *or?
 2dff   *raie des cheveux
 2dfe   *hair-parting
 .hw   Xwa
-dff   *pi#`ege
+dff   *pi##ege
 dfe   *trap
 .hw   £wai
 dff   *chant
@@ -2911,7 +2911,7 @@ dfe   *ground, *floor
 dff   faire un effet *urticant dans la gorge, *br#^uler dans la gorge
 dfe   to *itch in the throat
 .hw   ªsa
-dff   une *plante #`a huile cultiv#'ee ressemblant au *s#'esame
+dff   une *plante ##a huile cultiv#'ee ressemblant au *s#'esame
 dfe   a cultivated *oil-seed resembling *sesame, *Niger seed
 .hw   ªsa
 dff   *accompagner qqn, aller *porter qqch
@@ -2920,13 +2920,13 @@ dfe   to *deliver, to take s.o or sthg someplace, to *accompany
 dff   respiration
 dfe   breath
 .hw   £saò
-dff   faire *tomber #`a coups de pierres, ou en secouant l'arbre
+dff   faire *tomber ##a coups de pierres, ou en secouant l'arbre
 dfe   to cause to *fall, to *shake down
 .hw   -sai
 1dff   *chose
 2dff   (*conditionnel irr#'eel)
 .hw   Ásai
-dff   *trier, *#^oter les salet#'es d'un tissu une #`a une
+dff   *trier, *#^oter les salet#'es d'un tissu une ##a une
 dfe   to *sort, to *pick
 .hw   ªsai
 dff   *prix
@@ -2973,7 +2973,7 @@ dfe   *manure
 .hw   -si
 1dff   ant#'eriorit#'e par rapport au pr#'edicat principal <th 159>,
   *ayant V <th 42>
-2dff   simultan#'eit#'e indiquant la *mani#`ere
+2dff   simultan#'eit#'e indiquant la *mani##ere
 3dff   valeur causale: *parce que
 3dfe   *because, *since
 4dff   formateur d'adverbes
@@ -2984,14 +2984,14 @@ dfe   to *die
 dff   #^etre *limpide, *fluide, *clair (liquide)
 dfe   to be *clear, ...
 .hw   ªsi³
-dff   ?*bois, *bois #`a br#^uler
+dff   ?*bois, *bois ##a br#^uler
 dfe   ?*wood, *firewood
 .hw   Ásit
 dff   *chair de noix
 .hw   Ásit
 dff   *secousse
 .hw   Ásit
-dff   *#^oter les yeux #`a la surface du bambou (geste semblable #`a
+dff   *#^oter les yeux ##a la surface du bambou (geste semblable ##a
   l'#'ebranchage) <*#'ebrancher>
 .hw   Ásip
 dff   d'un *coup
@@ -3041,7 +3041,7 @@ dfe   *rice (in the field, or collected but unpolished, unhusked)
 dff   *couche de *v#^etement
 dfe   a *layer of *clothes
 .hw   Ásup
-dff   mani#`ere d'#^etre *perdu, juste au mauvais moment
+dff   mani##ere d'#^etre *perdu, juste au mauvais moment
 .hw   ªsup
 dff   ne~pas~*#'eclore
 dfe   not~to~*hatch (egg)
@@ -3189,10 +3189,10 @@ dfe   to *treat a patient by rice presentation
 dff   *fourreau
 dfe   *sheath
 .hw   £sjur
-dff   faire une *fausse-couche (mammif#`eres)
+dff   faire une *fausse-couche (mammif##eres)
 dfe   to have a *miscarriage
 .hw   ªsjo
-dff   *coupe #`a boire
+dff   *coupe ##a boire
 dfe   drinking-*cup
 .hw   £sjo
 dff   *matin
@@ -3212,7 +3212,7 @@ dfe   *river
 2dff   *jeter un pont
 2dfe   to *bridge
 .hw   £sjo³
-dff   *compl#`etement (seulement pour oublier?)
+dff   *compl##etement (seulement pour oublier?)
 .hw   ªsjot
 dff   *arracher
 dfe   to *weed
@@ -3225,7 +3225,7 @@ dfe
 .hw   ªsjop
 dff   *d#'esenfler
 .hw   Xsjop
-dff   *blanchir le riz (second *polissage, apr#`es /2to-pa/)
+dff   *blanchir le riz (second *polissage, apr##es /2to-pa/)
 dfe   to *husk, to *mill (rice)
 .hw   Ásjom
 dff   *caresser
@@ -3238,21 +3238,21 @@ dfe   to *escape
 .hw   Ásjol
 1dff   *arr#^eter, ne pas *continuer
 1dfe   to *stop
-2dff   *repousser #`a plus tard
+2dff   *repousser ##a plus tard
 .hw   Áswa
 dff   *dent
 dfe   *tooth
 .hw   Áswaò
 1dff   *asperger
 1dfe   to *sprinkle
-2dff   *semer #`a la vol#'ee
+2dff   *semer ##a la vol#'ee
 .hw   ªswal
 dff   *tombant, pendant (cheveux, tissu)
 .hw   ªswal -ªswal (Áta-pa)
 dff   *beau (d'un enfant ou d'un jeune animal), frais, jeune, droit,
   pas tordu, pas malade <Voc 74, conf A86>
 hw   Xswa³ -Xswa³
-dff   *abondamment, #`a la vol#'ee
+dff   *abondamment, ##a la vol#'ee
 .hw   Áhaò
 dff   *rire aux #'eclats
 dfe   to *laugh loudly
@@ -3290,7 +3290,7 @@ dfe   to *push
 dff   *montrer
 dfe   to *show
 .hw   Áhur
-dff   *lancer #`a qqn
+dff   *lancer ##a qqn
 dfe   to *throw to (?at) s.o.
 .hw   Áhem
 dff   avoir *envie de *pleurer
@@ -3313,19 +3313,19 @@ dfe   to *snag clothes <to *tear>
 dff   *appeler
 dfe   to *call
 .hw   Áhjai
-dff   (*exclamation pour faire avancer les ch#`evres)
+dff   (*exclamation pour faire avancer les ch##evres)
 dfe   (an excl to prod goats forward)
 .hw   Áhri
 dff   *esprit d'un enfant mort
 dfe   *vampire
 .hw   Áhrum
-dff   *abc#`es
+dff   *abc##es
 dfe   *abcess
 .hw   Áhreò
 dff   s'*#'eveiller, se *lever
 dfe   to *wake up, to *get up
 .hw   Áhrwa³
-dff   *fr#`ere cadet du mari
+dff   *fr##ere cadet du mari
 dfe   husband's younger *brother
 .hw   Áhla
 dff   *divinit#'e m#^ale subalterne

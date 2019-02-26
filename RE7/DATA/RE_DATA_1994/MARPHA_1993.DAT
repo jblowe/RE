@@ -24,7 +24,7 @@ dff   nouille de riz
 inf   M
 so   marpha.dico 4
 .mar   °°'ªªp¾i-na
-dff   tr#`es tard
+dff   tr##es tard
 nb   vb?
 so   marpha.dico 5
 .mar   °°'££p¾iò-wa
@@ -97,7 +97,7 @@ dff   saluer
 inf   ML
 so   marpha.dico 7
 .mar   Xp¾jär
-dff   fouet #`a chang
+dff   fouet ##a chang
 inf   FP
 so   marpha.dico 8
 .mar   °°'¢¢p¾jäm-ba
@@ -157,7 +157,7 @@ inf   ML
 so   marpha.dico 15
 .mar   £poÚ
 quot   poÚ
-dff   p#^ate #`a chang
+dff   p#^ate ##a chang
 inf   ML
 so   marpha.dico 15
 .mar   °¢pu
@@ -169,7 +169,7 @@ dff   laine
 inf   ML
 so   marpha.dico 15
 .mar   ÁÁp¯Úi
-dff   tr#`es
+dff   tr##es
 inf   sM
 so   marpha.dico 15
 .mar   °°pin
@@ -238,7 +238,7 @@ dff   tapis de selle
 inf   ML
 so   marpha.dico 18
 .mar   Xpol-o
-dff   #`a tourner (?)
+dff   ##a tourner (?)
 inf   FP
 so   marpha.dico 18
 .mar   ªÁ'££'ªªpo-p¿l-wa
@@ -264,7 +264,7 @@ dff   apporter de haut en bas/de dedans dehors
 inf   Z
 so   marpha.dico 18
 .mar   ¢¢'¢¢pum-ba
-dff   monter #`a cheval
+dff   monter ##a cheval
 so   marpha.dico 18
 .mar   °°'££p¯m-ba
 var   °°'££pam-ba
@@ -288,7 +288,7 @@ nb   ß°£'££
 so   marpha.dico 19
 .mar   ªª'ªÁpum-ba
 dfn   karua
-dff   aigui#`ere
+dff   aigui##ere
 inf   FP
 so   marpha.dico 19
 .mar   ªÁ'ªªpaÚle
@@ -501,7 +501,7 @@ nb   ¯ en exposant
 so   marpha.dico 32
 .mar   ¢¢'¢¢t¾a-wa
 var   ¢¢'¢¢t¾a-w¯
-var   ¢¢'`££ <?inf>
+var   ¢¢'#££ <?inf>
 dff   couper
 inf   Z
 so   marpha.dico 32
@@ -595,7 +595,7 @@ dff   aiguille
 so   marpha.dico 39
 .mar   £toÚ
 quot   toÚ
-dff   sac en poil de ch#`evre
+dff   sac en poil de ch##evre
 inf   ML
 so   marpha.dico 39
 .mar   £tuÚ
@@ -753,7 +753,7 @@ so   marpha.dico 41
 var   ¢¢'££tei-wa
 var   ¢¢'££te-dzi
 var   tai-wa <M, mar dic 42>
-dff   cuire #`a l'eau
+dff   cuire ##a l'eau
 dfn   usinne
 inf   M, Z
 so   marpha.dico 41
@@ -836,7 +836,7 @@ inf   TB
 so   marpha.dico 43
 .mar   Xtiaj~a
 dfn   tyo
-dff   cel#`a
+dff   cel##a
 inf   ML
 so   marpha.dico 45
 .mar   ¢¢'¢¢tói-wa
@@ -850,7 +850,7 @@ comp   Ris. ¢tut 'ramasser'
 cf   'd#'ependre le linge' et 'scoop out'
 so   marpha.dico 46
 .mar   °Áæ¾o
-dff   grand baril #`a eau
+dff   grand baril ##a eau
 inf   ML
 nb   ton = ?
 so   marpha.dico 49
@@ -870,7 +870,7 @@ nb   var ÁÁëaÚ FP
 so   marpha.dico 53
 .mar   ªÁæoÚ
 dfn   sÑag
-dff   br#`edes
+dff   br##edes
 inf   ML
 so   marpha.dico 53
 .mar   ¢£¢æu
@@ -998,7 +998,7 @@ inf   ML
 so   marpha.dico 59
 .mar   °¢ts¾¯ä
 dfn   coya
-dff   lani#`eres de bambou
+dff   lani##eres de bambou
 inf   ML
 so   marpha.dico 59
 .mar   Xts¾¯
@@ -1163,7 +1163,7 @@ inf   M
 so   marpha.dico 67
 .mar   Xtsuò-wa
 dfn   basÑalne
-dff   mettre #`a cuire
+dff   mettre ##a cuire
 so   marpha.dico 67
 .mar   °¢tsa³
 dff   bru
@@ -1239,7 +1239,7 @@ inf   ML
 nb   ú en exposant
 so   marpha.dico 70
 .mar   Xts¯³ku
-dff   sac #`a coulant
+dff   sac ##a coulant
 inf   FP
 so   marpha.dico 70
 .mar   °Átsjoò
@@ -1294,7 +1294,7 @@ dff   mo#"elleux
 inf   sM
 so   marpha.dico 73
 .mar   ªÁ'££tû¯m-p¯
-dff   tr#`es fin (farine)
+dff   tr##es fin (farine)
 inf   TB
 so   marpha.dico 73
 .mar   °°'££tsja³-ba
@@ -1339,7 +1339,7 @@ dff   cou
 inf   ML
 so   marpha.dico 76
 .mar   Xk¾aò
-dff   o#`u ?
+dff   o##u ?
 inf   ML
 nb   not#'e k¾aa
 so   marpha.dico 76
@@ -1454,7 +1454,7 @@ inf   M
 so   marpha.dico 79
 .mar   Xk¾jo-wa
 dfn   paskÑaunu
-dff   servir (#`a manger)
+dff   servir (##a manger)
 inf   M
 so   marpha.dico 79
 .mar   ¢¢'¢¢k¾j¯-w¯
@@ -1495,7 +1495,7 @@ nb   hom 'pince ˆ feu'
 so   marpha.dico 84
 .mar   °¢°ko
 dfn   cimta
-dff   pince #`a feu
+dff   pince ##a feu
 nb   hom 'bl#'e'
 inf   ML
 so   marpha.dico 84
@@ -1699,7 +1699,7 @@ dff   estomac
 inf   mM
 so   marpha.dico 88
 .mar   Xkoto
-dff   foyer #`a quatre c#^ot#'es
+dff   foyer ##a quatre c#^ot#'es
 inf   FP
 comp   Ris. kut¾ap
 so   marpha.dico 88
@@ -1798,7 +1798,7 @@ dff   mettre tika
 inf   M
 so   marpha.dico 90
 .mar   ¢¢'¢¢kjaòmo
-dff   couteau de m#'etier #`a tisser
+dff   couteau de m#'etier ##a tisser
 inf   FP
 so   marpha.dico 91
 .mar   ªª'¢¢gjamba
@@ -1843,7 +1843,7 @@ dff   homme
 inf   ML
 so   marpha.dico 96
 .mar   °¢°me
-dff   fl#`eche
+dff   fl##eche
 inf   ML
 so   marpha.dico 96
 .mar   °¢me
@@ -1985,7 +1985,7 @@ so   marpha.dico 108
 dff   voir
 so   marpha.dico 108
 .mar   °¢mr¯m
-dff   coffre #`a grains
+dff   coffre ##a grains
 inf   FP
 so   marpha.dico 109
 .mar   °°'¢¢mrame
@@ -2191,7 +2191,7 @@ dff   m#^acher
 inf   FTB
 so   marpha.dico 121
 .mar   ÁÁ'ÁÁøeÚ-wa  [[(ÁÁtoÚ) ÁÁ'ÁÁøeÚ-wa (££'££la-dzi)
-dff   approcher de l#`a-bas
+dff   approcher de l##a-bas
 inf   Z
 comp   Tag. atterrir
 nb   Auxiliaire. Semble prendre le ton du radical verbal
@@ -2407,7 +2407,7 @@ so   marpha.dico 144
 dff   corne
 so   marpha.dico 144
 .mar   °Ár¯
-dff   ch#`evre
+dff   ch##evre
 so   marpha.dico 144
 .mar   °°'°¢ri-w¯
 dff   gratter
@@ -2509,7 +2509,7 @@ nb   cf. ÁÁhÂj 'jeter' ð
 so   marpha.dico 150
 .mar   XhÂu
 quot   XhÂju
-dff   #`a l'envers
+dff   ##a l'envers
 phr   XhÂju la-dzi
 var   hÂju mu-mu
 comp   Ák¾lup (Ris.)
@@ -2632,7 +2632,7 @@ nb   ? cf ¢¢'¢¢hÂa-ba 'jeter, renoncer'
 so   marpha.dico 160
 .mar   ªÁ'ÁÁljaÚ-go
 var   ªÁ'ªªlja-wa
-dff   distribuer #`a tous, partager
+dff   distribuer ##a tous, partager
 inf   M
 so   marpha.dico 160
 .mar   °°lj¯p
@@ -2654,7 +2654,7 @@ dff   parole
 inf   ML
 so   marpha.dico 162
 .mar   °°sa
-dff   tr#`es
+dff   tr##es
 inf   sM
 so   marpha.dico 163
 .mar   °¢°su
@@ -2683,7 +2683,7 @@ dff   #'etoiles
 inf   ML
 so   marpha.dico 164
 .mar   °°'££sa-wa
-dff   mener #`a la corde
+dff   mener ##a la corde
 inf   ML
 so   marpha.dico 165
 .mar   ££'££sa-wa  [[(°°ø¯m) ££'££sa-wa
@@ -2791,7 +2791,7 @@ dff   pain en couronne
 inf   sM
 so   marpha.dico 167
 .mar   °°'¢¢su³k¾a
-dff   l#`evres
+dff   l##evres
 inf   ML
 so   marpha.dico 167
 .mar   ªª'ÁÁsuÚkp¯
@@ -2947,7 +2947,7 @@ dff   couler (larmes)
 so   marpha.dico 179
 .mar   XûuÚr-dzi
 quot   ÆjuÚr-dzi
-dff   #`a quatre pattes
+dff   ##a quatre pattes
 inf   ML
 so   marpha.dico 179
 .mar   °°'¢¢ûyr-wa
