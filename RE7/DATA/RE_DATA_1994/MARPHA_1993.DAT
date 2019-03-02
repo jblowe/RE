@@ -5,6 +5,7 @@ inf   ML
 so   marpha.dico 4
 .mar   ⁵⁴pʰo
 dff   ventre
+dfe	belly
 inf   ML
 so   marpha.dico 4
 .mar   ⁵¹pʰo
@@ -14,168 +15,207 @@ inf   ML
 so   marpha.dico 4
 .mar   ⁵⁴pʰʌɛ
 dff   fer
+dfe	iron
 inf   ML
 nb   ? ᴜ
 so   marpha.dico 4
 .mar   ⁵⁴pʰʌ
 dff   mari
+dfe	husband
 inf   ML
 so   marpha.dico 4
 .mar   ⁵³pʰiŋ
 dff   nouille de riz
+dfe	noodle (rice-)
 inf   M
 so   marpha.dico 4
 .mar   ⁵⁵'²²pʰi-na
 dff   très tard
+dfe	late
 nb   vb?
+nb	emphasis noted on 1st Syll., whence the meaning very late
 so   marpha.dico 5
 .mar   ⁵⁵'³³pʰiː-wa
 dff   éplucher
+dfe	peel (to)
 inf   M
 so   marpha.dico 5
 .mar   ⁴⁴'⁴⁴pʰi-dzi
 dff   avoir soif
+dfe	thirsty (to be)
 inf   ML
 so   marpha.dico 5
 .mar   ⁵⁵'³³pʰi-mo
 dfn   khapnu
 dff   durer, rester bon
+dfe	last (to)
 inf   M
 so   marpha.dico 5
 .mar   ⁵⁵'⁴⁴pʰe-wa
-var   pʰjet-o
+imp   pʰjet-o
 dff   sortir
+dfe	exit (to), get out
 inf   Z
 so   marpha.dico 5
 .mar   ⁵⁵'⁵⁴pʰa-wa
 var   ⁵⁵'⁵⁴pʰʌ-wʌ
 dff   payer
+dfe	pay(to)
 inf   ML
 so   marpha.dico 5
 .mar   ⁵⁵'⁵⁴pʰʌ-wʌ
 dff   payer
+dfe	pay (to)
 inf   M
 nb   voir ⁵⁵'⁵⁴pʰa-wa 'payer'
 so   marpha.dico 5
 .mar   ⁵⁵'⁵⁴pʰo-wa
 dff   faire bruit du fusil
+dfe	explode (to_, make the noise of a gun)
 inf   M
 so   marpha.dico 5
 .mar   ⁴⁴'⁴⁴pʰo-wʌ
 dff   couvrir d'un parapluie
+dfe	wear an umbrella 
 inf   M
 so   marpha.dico 5
 .mar   Xpʰor-ba
 dff   étaler
+dfe	spread (to)
 so   marpha.dico 5
 .mar   ⁴⁴'³³pʰul-wa
 dff   offrir (dieu)
+dfe	offer (to a god, to_)
 inf   ML
 so   marpha.dico 5
 .mar   ⁴⁴'⁴⁴pʰum-mu
 dff   pondre
+dfe lay (egg, to_)
 so   marpha.dico 5
 .mar   ⁵¹pʰja
 dff   balai
+dfe	broom
 inf   ML
 so   marpha.dico 7
 .mar   ³³'³³pʰjaː-wa
 var   ³³'³³pʰja-wa
-var   pʰja-o
+imp   pʰja-o
 dff   balayer, essuyer
 inf   M
 so   marpha.dico 7
 .mar   ⁴⁴'⁴⁴pʰja-mo
 dff   briller (soleil)
+dfe	shine (sun_, to_)
 inf   P
 so   marpha.dico 7
 .mar   ⁵³'³³pʰja-wa
 dff   défricher
+dfe	clear (land, to_)
 inf   Z
 so   marpha.dico 7
 .mar   ⁵⁵'⁴⁴pʰja-wa
 dfn   namascar garne
 dff   saluer
+dfe	greet (to_), salute (to_)
 inf   ML
 so   marpha.dico 7
 .mar   Xpʰjɛr
 dff   fouet à chang
+dfe	whisk	
 inf   FP
 so   marpha.dico 8
 .mar   ⁵⁵'⁴⁴pʰjɛm-ba
 dff   se dévêtir
+dfe	undress (to_)
 so   marpha.dico 8
 .mar   ⁴⁴'³³pʰjoŋ-ba
 dff   sauter
+dfe	jump (to_)
 inf   ML
 so   marpha.dico 8
 .mar   ⁵⁴'⁴³pʰjur-wʌ
 quot   ⁵⁴'⁴³pʰjyr-wʌ
 dff   vanner droit
+dfe	winnow (to_)
 inf   Z
 comp   ris ¹pʰjur
 so   marpha.dico 8
 .mar   ⁵⁵'⁴⁴pʰjɯr-wa
 dff   vanner
+dfe	winnow (to_)
 so   marpha.dico 8
 .mar   Xpʰwi-wa
 dff   souffler
+dfe	blow (to_)
 so   marpha.dico 9
 .mar   ⁵⁵'⁵⁴pʰra-ba
 dfn   masino
 dff   fin
+dfe	fine
 inf   ML
 so   marpha.dico 11
 .mar   ⁵⁴'⁴⁴pʰro-wa
 dff   égrener
+dfe	shell (maize, to_)
 inf   Z
 so   marpha.dico 11
 .mar   ⁵⁵'⁴⁴pʰrʌm-bʌ
 dff   détacher
+dfe	untie (to_)
 inf   M
 so   marpha.dico 12
 .mar   ⁴⁴'³³pʰla-wa
 dff   aplatir (pain)
+dfe	flatten (to_)
 inf   TB
 so   marpha.dico 13
 .mar   ³peʱ
 quot   peʱ
 dff   épouse
+dfe	wife
 inf   ML
 so   marpha.dico 15
 .mar   ⁴³pa
 dff   chang
+dfe	beer
 inf   ML
 so   marpha.dico 15
 .mar   ²¹paʱ
 dff   feuille
+dfe	leaf
 inf   ML
 nb   hom 'masque'
 so   marpha.dico 15
 .mar   ²¹paʱ
 dff   masque
+dfe	mask
 nb   hom 'feuille'
 inf   ML
 so   marpha.dico 15
 .mar   ³poʱ
 quot   poʱ
 dff   pâte à chang
+dfe	beermash
 inf   ML
 so   marpha.dico 15
 .mar   ⁵⁴pu
 dff   grande jarre en terre
+dfe	jug, jar (large, earthen_)
 inf   ML
 so   marpha.dico 15
 .mar   ⁵⁴⁵pʌɛ
 dff   laine
+dfe	wool
 inf   ML
 so   marpha.dico 15
 .mar   ¹¹pʌʱi
 dff   très
+dfe	very
 inf   sM
 so   marpha.dico 15
 .mar   ⁵⁵pin
 dff   bleu
+dfe	blue
 inf   ML
 so   marpha.dico 16
 .mar   ⁵⁴paŋ
@@ -348,12 +388,12 @@ dff   encens
 inf   ML
 so   marpha.dico 23
 .mar   ⁵⁵'⁴⁴pwi-dzi
-var   puj-o
+imp   puj-o
 dff   apporter de haut en bas
 comp   Ris ²pwi
 so   marpha.dico 23
 .mar   ²¹'¹¹pwi-wa
-var   ³²'²²pwit-o
+imp   ³²'²²pwit-o
 dff   porter (enfant)
 so   marpha.dico 23
 .mar   ⁵⁴⁵pri
