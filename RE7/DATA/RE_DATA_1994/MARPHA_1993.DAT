@@ -221,45 +221,55 @@ so   marpha.dico 16
 .mar   ⁵⁴paŋ
 dfn   lekh / caur
 dff   prairie
+dfe	meadow
 inf   ML
 so   marpha.dico 16
 .mar   ²¹bɔʱm
 var   ²¹bʌʱm
 dff   épaule
+dfe	shoulder
 inf   sm
 so   marpha.dico 16
 .mar   ⁵⁵'³³pi-wa
 dff   abandonner
+dfe	abandon (to_)
 so   marpha.dico 17
 .mar   ¹¹'¹¹biʱ-dzi
 dff   dire
+dfe	say (to_)
 inf   ML
 so   marpha.dico 17
 .mar   ⁵⁵'⁵⁴pa-wa
 dfn   patalo
 dff   peu épais (liquide)
+dfe	thin (liquid)
 inf   ML
 nb   cf. pʌ-wʌ
 so   marpha.dico 17
 .mar   ¹¹'¹¹paʱ-wa
 dff   apporter de dehors dedans
+dfe	bring inside (to_)
 inf   Z
 so   marpha.dico 17
 .mar   ⁵⁵'⁴⁴'³³po-dzjʌ-wa
 dff   mûrir
+dfe	mature (to_), ripen (to_)
 inf   Z
 so   marpha.dico 17
 .mar   ²¹'³³pu-wa
 dff   enterrer (?)
+dfe	bury (to_) (?)
 nb   cf 'mettre' (pumpa)
 so   marpha.dico 17
 .mar   ⁴⁴'⁴⁴pʌ-wʌ
 dfn   patalo
 dff   peu épais (liquide)
+dfe	 thin (liquid)
 inf   M
 so   marpha.dico 17
 .mar   Xpjʌ-mu
 dff   couler (sueur), bouillir (eau), suinter (mur ...)
+dfe	ooze (to_), boil (water_) (to_)
 inf   M
 nb   aussi 'source'
 cf   ⁵⁵'⁵⁵pjø-dzi 'jaillir (source)'
@@ -267,64 +277,79 @@ so   marpha.dico 17
 .mar   ⁵⁵'⁴⁴paː-dzi
 var   ⁵³'³³paː-dzi
 dff   faire gonfler au feu (pain)
+dfe	rise (bread_, to_), puff up (to_)
 inf   M
 so   marpha.dico 17
-.mar   Xpin-o
-var   ⁵⁵'³³pim-ba <M>
+.mar  ⁵⁵'³³pim-ba <M>
+imp	Xpin-o <ML>
 dff   donner
-inf   ML
+dfe	give (to_)
+inf   M
 so   marpha.dico 18
 .mar   ²²'²¹piʱmba
 ps   n
 dff   tapis de selle
+dfe	rug (saddle_)
 inf   ML
 so   marpha.dico 18
 .mar   Xpol-o
 dff   à tourner (?)
+dfe	turn (to_)
 inf   FP
 so   marpha.dico 18
 .mar   ²¹'³³'²²po-pɔl-wa
 dff   moëlleux
+dfe	soft
 inf   TB
 so   marpha.dico 18
 .mar   ¹¹'¹¹poʱr-wa
 dff   emporter
+dfe	take away (to_), take with self
 so   marpha.dico 18
 .mar   ⁵⁵'⁴⁴por-wa
-dff   rajouter (riz)
+dff   rajouter (riz etc)
+dfe	add (rice etc, to_)
 inf   M
 so   marpha.dico 18
 .mar   ⁴⁴'⁴⁴pul-na
 dff   verser (urine)
+dfe	pour (urine, to_)
 so   marpha.dico 18
 .mar   ⁴⁴'⁴⁴pun-o
 dff   verser (riz)
+dfe	pour (rice, to_)
 nb   idem pul-na ?
 .mar   ⁵⁵'⁵⁴puj-o
 var   ⁵⁵'⁴⁴pwi-dzi
 dff   apporter de haut en bas/de dedans dehors
+dfe	bring down (to_), bring out (to_)
 inf   Z
 so   marpha.dico 18
 .mar   ⁴⁴'⁴⁴pum-ba
 dff   monter à cheval
+dfe	ride (to_)
 so   marpha.dico 18
 .mar   ⁵⁵'³³pʌm-ba
 var   ⁵⁵'³³pam-ba
 dff   attendre
+dfe	wait (to_)
 inf   ML
 so   marpha.dico 18
 .mar   ²¹'³³pɔʱm-ba
 var   ¹¹'¹¹pɔʱm-ba
 dff   tremper
+dfe	soak (to_)
 inf   ML
 so   marpha.dico 18
 .mar   ⁵⁵'³³paŋro
 dff   gésier
+dfe	 gizzard
 inf   mM
 so   marpha.dico 19
 .mar   ⁵³'³³pokʈi (¹¹gjaʱŋ)
 dfn   puri
 dff   pain frit
+dfe	bread (deep-fried)
 inf   sM
 nb   ʼ⁵³'³³
 so   marpha.dico 19
@@ -335,61 +360,75 @@ inf   FP
 so   marpha.dico 19
 .mar   ²¹'²²paʱle
 dff   jambe
+dfe	leg
 inf   mM
 cf   ²¹'³³pleɕa 'cuisse'
 so   marpha.dico 19
 .mar   ¹¹'¹¹pobo
 dff   pouce
+dfe	thumb
 inf   mM
 so   marpha.dico 19
 .mar   ⁵⁵'⁵⁵puki
 dff   serpent
+dfe	snake
 inf   B, ML
 so   marpha.dico 19
 .mar   ⁵⁵'⁴⁴puki
 var   ³²'²²puki <ML>
 dff   genou
+dfe	knee
 inf   mM
 so   marpha.dico 19
 .mar   ³pjaʱ
 quot   pjaʱ
 dff   sabot
+dfe	hoof
 so   marpha.dico 20
 .mar   ³pjoʱ
 quot   pjoʱ
-dff   terrasse
+dff   terrasse (de toit)
+dfe	terrace (roof)
 so   marpha.dico 20
 .mar   ³pjoʱ
 quot   pjoʱ
 dff   natte
+dfe	mat
 so   marpha.dico 20
 .mar   ⁴⁴'⁴⁴pja-wa
 dff   taper du pied
+dfe	stamp (foot, to_)
 inf   ML
 so   marpha.dico 20
 .mar   ⁵⁵'⁵⁵pjø-dzi
 dff   jaillir (source)
+dfe	spring (source_, to_)
 cf   pjʌ-mu
 so   marpha.dico 20
 .mar   ¹¹'²²pjuŋ-mu
 dff   tousser
+dfe	cough (to_)
 so   marpha.dico 21
 .mar   ¹¹'¹¹bʱjur-dzi
 quot   ¹¹'¹¹bʱjũr-dzi
 dff   s'envoler
+dfe	fly away (to_)
 inf   ML
 so   marpha.dico 21
 .mar   ⁵⁵'⁴⁴pjukuŋ
-dff   fesses
+dff   fesse
+dfe	buttock
 inf   mM
 so   marpha.dico 22
 .mar   ⁴⁵pwe
 dff   encens
+dfe	incense
 inf   ML
 so   marpha.dico 23
 .mar   ⁵⁵'⁴⁴pwi-dzi
 imp   puj-o
 dff   apporter de haut en bas
+dfe	bring down (to_)
 comp   Ris ²pwi
 so   marpha.dico 23
 .mar   ²¹'¹¹pwi-wa
@@ -398,55 +437,67 @@ dff   porter (enfant)
 so   marpha.dico 23
 .mar   ⁵⁴⁵pri
 dff   yack femelle
+dfe	yak (female)
 inf   ML
 so   marpha.dico 26
 .mar   ³priʱ
 quot   priʱ
 dff   racine
+dfe	root
 inf   ML
 so   marpha.dico 26
 .mar   ⁵⁴⁵pre
 dff   huit
+dfe	eight
 inf   ML
 so   marpha.dico 26
 .mar   ⁵⁴pra
 dfn   bhir
 dff   falaise
+dfe	cliff
 inf   ML
 nb   hom. 'farine'
 so   marpha.dico 26
 .mar   ⁵⁴pra
 dfn   pitho
 dff   farine
+dfe	flour
 inf   ML
 nb   hom. 'falaise'
 so   marpha.dico 26
 .mar   ¹¹'¹¹pri-wa
 dff   écrire
+dfe	write (to_)
 so   marpha.dico 26
 .mar   ¹¹'³²pre-dzi
 dff   être vaincu
+dfe	lose (to_), defeated (be, to_)
 inf   M
 so   marpha.dico 26
 .mar   ²²'³³pre-wa
-dff   faire la raie
+dff   faire la raie, séparer (les cheveux)
+dfe	part (hair, to_)
 so   marpha.dico 26
 .mar   ¹¹'¹¹preʱ-wʌ
 dff   être cher
+def	expensive (be, to_)
 so   marpha.dico 26
 .mar   ²¹'²²praʱ-wʌ
 dff   raser
+dfe	shave (to_)
 inf   M
 so   marpha.dico 26
 .mar   ²²'²²pra-wʌ
 var   ⁵²'²²pra-wʌ
 var   ⁴⁴'³³pra-wʌ <ʑ?>
 dff   exploser (feu)
+dfe	explode (in fire, to_)
 inf   M
 so   marpha.dico 26
 .mar   ²¹'²²praʱ-wʌ
 var   ²²'²¹praʱ-wʌ <ML>
 dff   moudre
+dfe	grind (to_)
 inf   M
 so   marpha.dico 26
 .mar   ⁵²'²²prʌ-wa
