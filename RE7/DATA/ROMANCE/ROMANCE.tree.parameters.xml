@@ -16,15 +16,6 @@
   <attested name="it" file="ROMANCE.it.data.xml"/>
   <attested name="fr" file="ROMANCE.fr.data.xml"/>
   <attested name="scn" file="ROMANCE.scn.data.xml"/>
-  <param name="correspondences" language="PIWR"
-         value="ROMANCE.correspondences.xml"/>
-  <param name="correspondences" language="PIWR"
-         value="ROMANCE.correspondences.xml"/>
-  <param name="correspondences" language="PIWR"
-         value="ROMANCE.correspondences.xml"/>
-  <param name="fuzzy" value="DEMO93.fuz.xml"/>
-  <action name="upstream" target="PIWR"/>
-  <action name="upstream" from="PWR,it,scn" to="PIWR"/>
-  <action name="upstream" from="PIR,fr" to="PWR"/>
-  <action name="upstream" from="es,pt,oldpt" to="PIR"/>
+  
+  
 </params>

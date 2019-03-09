@@ -7,6 +7,7 @@ import threading
 import sys
 import serialize
 import os
+from argparser import args, need_to_compare, project_dir
 
 class WrappedTextBuffer():
     def __init__(self, buffer):
@@ -317,20 +318,7 @@ def run(settings):
     sys.stdout = out
 
 if __name__ == "__main__":
-
-    base_dir = "../RE7/DATA"
-    # lexicons and parameters
-    try:
-        project = sys.argv[1]
-        try:
-            settings_type = sys.argv[2]
-        except:
-            settings_type = 'default'
-    except:
-        print('no project specified. Try "DEMO93" if you like')
-        sys.exit(1)
-
-    settings = read.read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
-    # lexicons = list(read.read_lexicons(settings.upstream, base_dir, project))
-    # params = read.read_correspondence_file(f'{base_dir}/{project}/{settings.correspondence_file}', project, settings.upstream)
+    settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
+                                       mel=args.mel,
+                                       recon=args.recon)
     run(settings)

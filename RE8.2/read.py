@@ -72,33 +72,36 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
     return table
 
 # xml reading
-def read_settings_file(filename):
+def read_settings_file(filename, mel='none', recon='default'):
     # for now we assume we don't want more than one proto-language
     upstream = {}
     downstream = []
     attested = {}
     proto_languages = {}
-    mel_filename = None
+    mel_filenames = {}
     for setting in ET.parse(filename).getroot():
-        if setting.tag == 'action':
-            if setting.attrib['name'] == 'upstream':
-                if setting.attrib.get('target'):
-                    target = setting.attrib.get('target')
-                if setting.attrib.get('to'):
-                    upstream[setting.attrib.get('to')] = \
-                        setting.attrib.get('from').split(',')
-            elif setting.attrib['name'] == 'downstram':
-                downstream.append(setting.attrib['to'])
-        elif setting.tag == 'proto_language':
-            proto_languages[setting.attrib['name']] = \
-                setting.attrib['correspondences']
+        if setting.tag == 'reconstruction' and setting.attrib['name'] == recon:
+            for spec in setting:
+                if spec.tag == 'action':
+                    if spec.attrib['name'] == 'upstream':
+                        if spec.attrib.get('target'):
+                            target = spec.attrib.get('target')
+                        if spec.attrib.get('to'):
+                            upstream[spec.attrib.get('to')] = \
+                                spec.attrib.get('from').split(',')
+                    elif spec.attrib['name'] == 'downstram':
+                        downstream.append(spec.attrib['to'])
+                elif spec.tag == 'proto_language':
+                    proto_languages[spec.attrib['name']] = \
+                        spec.attrib['correspondences']
         elif setting.tag == 'attested':
             attested[setting.attrib['name']] = setting.attrib['file']
+        elif setting.tag == 'mel':
+            mel_filenames[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'param':
-            if setting.attrib['name'] == 'mel':
-                mel_filename = setting.attrib.get('value')
+            pass
     return RE.ProjectSettings(os.path.dirname(filename),
-                              mel_filename,
+                              None if mel == 'none' else mel_filenames[mel],
                               attested,
                               proto_languages,
                               target,

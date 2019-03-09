@@ -1,26 +1,28 @@
 import read
 import RE
 import sys
+from argparser import args, need_to_compare, project_dir
 
-base_dir = "../RE7/DATA"
-# lexicons and parameters
-try:
-    project = sys.argv[1]
-    try:
-        settings_type = sys.argv[2]
-    except:
-        settings_type = 'default'
-    try:
-        run = sys.argv[3]
-    except:
-        run = 'default'
-except:
-    print('no project specified. Try "DEMO93" if you like')
-    sys.exit(1)
+settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
+                                   mel=args.mel,
+                                   recon=args.recon)
 
-settings = read.read_settings_file(f'{base_dir}/{project}/{project}.{settings_type}.parameters.xml')
+attested_lexicons = read.read_attested_lexicons(settings)
+B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons)
 
-B = RE.batch_all_upstream(settings)
-#print_sets(B)
-RE.dump_keys(B, f'{base_dir}/{project}/{project}.{run}.keys.txt')
-RE.dump_sets(B, f'{base_dir}/{project}/{project}.{run}.sets.txt')
+if need_to_compare:
+    settings2 = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
+                                        mel=(args.mel2 or args.mel),
+                                        recon=(args.recon2 or args.recon))
+    B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons)
+    analysis_file = f'{project_dir}/{args.project}.{args.run}.analysis.txt'
+    RE.analyze_sets(B, B2, analysis_file)
+    print(f'wrote analysis to {analysis_file}')
+else:
+    #print_sets(B)
+    keys_file = f'{project_dir}/{args.project}.{args.run}.keys.txt'
+    RE.dump_keys(B, keys_file)
+    print(f'wrote keys file to {keys_file}')
+    sets_file = f'{project_dir}/{args.project}.{args.run}.sets.txt'
+    RE.dump_sets(B, sets_file)
+    print(f'wrote sets file to {sets_file}')
