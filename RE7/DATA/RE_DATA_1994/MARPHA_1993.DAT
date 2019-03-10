@@ -502,132 +502,168 @@ inf   M
 so   marpha.dico 26
 .mar   ⁵²'²²prʌ-wa
 dff   marcher
+dfe	walk (to_)
 inf   ML
 so   marpha.dico 26
 .mar   ¹¹praʱŋ
 dff   étable
+dfe	shed (animal)
 inf   FP
 so   marpha.dico 27
 .mar   ⁵⁴prum
 dff	poivre de Chine
+dfe	pepper (Szechuan_)
 dfn   timur
 inf   FP
 so   marpha.dico 27
 .mar   ⁴⁴'³³prokoŋ
 dff   nombril
+dfe	navel
 inf   mM
 so   marpha.dico 28
 .mar   ⁵⁴⁵pli
 dff   quatre
+dfe	four
 inf   ML
 so   marpha.dico 29
 .mar   ⁵⁴pla
 dff   légumes
+dfe	vegetable
 inf   ML
 so   marpha.dico 29
 .mar   ⁴⁴pla (¹¹gjaʱŋ)
 dff   pain frit
+dfe	fried bread
+comp	?Tuk ²prap-la 'to dry-cook bread' <halepg 178>
 inf   sM
 so   marpha.dico 29
 .mar   ⁵⁴plu
 dff   graine
+dfe	seed
 inf   ML
 so   marpha.dico 29
 .mar   ⁵⁵'⁴⁴pli-mu
 dff   glisser
+dfe	slip (to_)
 inf   ML
-nb   mⓒmes tons que pli-wa 'dépecer' <ML>
+nb   mêmes tons que pli-wa 'to skin' <ML>
 so   marpha.dico 29
 .mar   ⁵⁵'⁴⁴pli-wa
-dff   dépecer
+dff   dépiauter, écorcher
+dfe	skin (to_)
+comp	ris ²pli-pa 'to peel off'
 inf   Z
-nb   mⓒmes tons que pli-mu 'glisser' <ML>
+nb   mêmes tons que pli-mu 'glisser' <ML>
 so   marpha.dico 29
 .mar   ⁵⁵'⁴⁴plo-mu
 dff   riche
+dfe	rich
 inf   sM
 so   marpha.dico 29
 .mar   ⁵⁵'⁵⁴plaŋ-mu
 var   ⁴⁵'⁴⁴plaŋ-mu <M>
 dff   fade
+dfe	tasteless
+comp	ris ²amlong
 inf   TB
 so   marpha.dico 30
 .mar   Xplaŋ la-dzi
-dff   retourner ; faire des galipettes
+dff   retourner; faire des galipettes
+dfe	turn over (to_), somersault (to do _)
 inf   ML
 so   marpha.dico 30
 .mar   ²¹'³³pleɕa
 quot   ²¹'³³pleʃja
 dff   cuisse
+dfe	thigh
+comp	ris, tuk ³pale
 inf   mM
 so   marpha.dico 31
 .mar   Xtʰa
 dff   ne ... pas!
+dfe	don't!
 so   marpha.dico 32
 .mar   ⁵¹tʰa
 dff   planche
+dfe	board
 inf   ML
 so   marpha.dico 32
 .mar   ⁵⁵tʰo
 dff   salive
+dfe	saliva
 inf   mM
 so   marpha.dico 32
-.mar   ⁵⁵'⁵⁴tʰi-to
+.mar   ⁵⁵'⁵⁴tʰit-o
 var   ³¹'¹¹tʰit-o <?inf>
 dff   soulever, mettre en haut
+dfe	lift (to_)
+comp	ris ¹thiː-pa
 inf   Z
 so   marpha.dico 32
 .mar   ⁵⁴'⁴⁴tʰiː-wa
 var   ⁴⁵'³³tʰiː-wa <?inf>
 dff   casser
+dfe	break (to_)
+comp	ris ²thi-pa
 inf   Z
 so   marpha.dico 32
 .mar   ⁵⁵'⁴⁴tʰe-wa
 dff   enrouler autour de la tête
+dfe	wrap around head (to_)
+comp	ris ¹thot-pa
 inf   M
 nb   id. ML
 so   marpha.dico 32
 .mar   ⁵⁵'⁴⁴tʰeʌ-dzi
 dff   entendre
+dfe	hear (to_)
 nb   id. ML
 nb   ʌ en exposant
 so   marpha.dico 32
 .mar   ⁴⁴'⁴⁴tʰa-wa
 var   ⁴⁴'⁴⁴tʰa-wʌ
-var   ⁴⁴'#³³ <?inf>
+var   ⁴⁴'³³ <?inf>
 dff   couper
+dfe	cut (to_)
 inf   Z
 so   marpha.dico 32
 .mar   ⁵⁵'⁴⁴tʰo-wa
 var   ⁵²'²²tʰo-wa <?inf>
 dff   grand
+dfe	large
 inf   TB, P
 so   marpha.dico 32
 .mar   ⁴⁴'⁴⁴tʰo-dzi
 var   ³¹'¹¹tʰo-dzi <?inf>
 var   ⁵⁴'⁴⁴tʰo-dzi <?inf>
 dff   gagner (jeu)
+dfe	win (to_)
 inf   M
 so   marpha.dico 32
 .mar   Xtʰo-dzi
 dff   encorner
+dfe	gore (to_)
 so   marpha.dico 32
 .mar   ⁵⁵'⁵⁴tʰu-wa
 var   ⁵⁵'⁵⁵
 dff   cueillir
+dfe	pick (to_)
 inf   Z
 so   marpha.dico 32
 .mar   ⁵³tʰin
 dff   paume, plante
+dfe	palm, sole
 inf   mM
 so   marpha.dico 33
 .mar   ⁴⁴tʰaŋ
 dff   plancher
+dfe	wooden floor
 inf   FP
 nb   ? id. ⁴³tʰaŋ 'plaine'
 so   marpha.dico 33
 .mar   ⁴³tʰaŋ
 dff   plaine
+dfe	flatland
 inf   ML
 nb   ? id. ⁴⁴tʰaŋ 'plancher'
 so   marpha.dico 33
@@ -635,105 +671,130 @@ so   marpha.dico 33
 var   ⁴⁴'³³tʰam-ba <M>
 var   tʰan-o
 dff   poser
+dfe	put down (to_)
 inf   ML
 so   marpha.dico 33
 .mar   ⁴⁴'⁴⁴'⁴⁴tʰur-dzi-wa
 dff   toucher
+dfe	touch (to_)
 inf   ML
 so   marpha.dico 33
 .mar   ⁴⁴'⁴³tʰuŋ-dzi
 var   ⁴⁴'⁴³tʰuŋ-o
 dff   boire
+dfe	drink (to_)
 inf   M
 so   marpha.dico 33
 .mar   Xtʰʌri
 dff   coussin
+dfe	cushion
 inf   FP
 so   marpha.dico 34
 .mar   ⁵⁴⁵tʰui
 dff   pelote
+dfe	ball of thread
 inf   ML
 so   marpha.dico 37
 .mar   ⁴⁴'³³tʰwi-wa
 dff   pelotonner, tordre deux fils ensemble
+dfe	roll up (thread, to_), twist (threads, to_)
 inf   M
 nb   prob. id. 'joindre ensemble'
 so   marpha.dico 37
 .mar   Xtʰwi-wa
 dff   joindre ensemble
+dfe	splice (to_)
 nb   prob. id. ⁴⁴'³³tʰi-wa 'pelotonner'
+comp	ris 1thutpa
 so   marpha.dico 37
 .mar   ³tiʱ
 quot   tiʱ
 dff   mite
+dfe	moth
 inf   ML
 so   marpha.dico 39
 .mar   ⁴³⁴te
 dff	ceci
+dfe	thiss
 dfn   tyo
 inf   ML
 so   marpha.dico 39
 .mar   ³taʱ
 quot   taʱ
 dff   poteau
+dfe	post
 inf   ML
 so   marpha.dico 39
 .mar   ⁵⁴to
 dfn   kodali
 dff   houe
+dfe	hoe
 inf   ML
 so   marpha.dico 39
 .mar   Xto
 dff   aiguille
+dfe	needle
 so   marpha.dico 39
 .mar   ³toʱ
 quot   toʱ
-dff   sac en poil de chèvre
+dff   sac (en poil de chèvre)
+dfe	(goat-hair) bag
 inf   ML
 so   marpha.dico 39
 .mar   ³tuʱ
 quot   tuʱ
 dff   tuyau
+dfe	pipe
 inf   ML
 so   marpha.dico 39
 .mar   ⁵¹tʌ
 dff   cheval
+dfe	horse
 inf   ML
 so   marpha.dico 39
 .mar   ²¹tʌʱ
 dff   panier plat
+dfe	(a flat) basket
 inf   ML
 cf   ²¹tʌʱː
 so   marpha.dico 39
 .mar   ⁵⁴⁵taː
 dff   quoi ?
+dfe	what?
 inf   ML
 so   marpha.dico 39
 .mar   ²¹tʌʱː
 dff   panier plat
+dfe	(a flat) basket
 inf   ML
 cf   ²¹tʌʱ
 so   marpha.dico 39
 .mar   ⁵⁵tin
 dff   maison
+dfe	house
 inf   ML
 so   marpha.dico 40
 .mar   ⁵⁴tin
 dff   coeur
+dfe	heart
 inf   mM
 so   marpha.dico 40
 .mar   -tin
-dff   compte des ans
+dff   année (dans le compte des années)
+dfe	year (in counting)
 so   marpha.dico 40
 .mar   ⁵⁵taŋ
 dff   vaisselle
+dfe	dish
 so   marpha.dico 40
 .mar   ⁵¹taŋ
 dff   cour de maison
+dfe	courtyard
 inf   FP
 so   marpha.dico 40
 .mar   Xtʌr
 dff   blanc
+dfe	white
 so   marpha.dico 40
 .mar   ²²'²¹diʱ-wʌ
 dfn   dhapāune
@@ -2472,12 +2533,14 @@ so   marpha.dico 138
 quot   ⁵⁴h˰ɽ̃u
 dff   fil
 comp   Ris. ²ʈup
-nb   l'accent circonflexe souscrit sous r so	marpha.dico 138
+nb   l'accent circonflexe souscrit sous r 
+so	marpha.dico 138
 .mar   ⁵⁴hru
 quot   ⁵⁴h˰ɽ̃u
 dff   sueur
 comp   Ris. ²ʈuː
-nb   l'accent circonflexe souscrit sous r so	marpha.dico 138
+nb   l'accent circonflexe souscrit sous r 
+so	marpha.dico 138
 .mar   Xhraŋ-ba
 quot   hɽ̃aŋ-ba
 dff   enfler
