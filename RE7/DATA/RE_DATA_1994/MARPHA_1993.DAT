@@ -705,7 +705,7 @@ so   marpha.dico 37
 dff   joindre ensemble
 dfe	splice (to_)
 nb   prob. id. ⁴⁴'³³tʰi-wa 'pelotonner'
-comp	ris 1thutpa
+comp	ris ¹thutpa
 so   marpha.dico 37
 .mar   ³tiʱ
 quot   tiʱ
@@ -799,100 +799,120 @@ so   marpha.dico 40
 .mar   ²²'²¹diʱ-wʌ
 dfn   dhapāune
 dff   conduire des bêtes
+dfe	drive (animals, to_)
 inf   ML
 cf   ¹¹'²²deʱ-wa
 so   marpha.dico 41
 .mar   ¹¹'²²deʱ-wa
 dfn   dhapāune
 dff   conduire des bêtes
+dfe	drive (animals, to_)
 inf   ML
 nb   i ? M
 cf   ¹¹'²²diʱ-wa
 so   marpha.dico 41
 .mar   ⁵⁵'³³teʌ-dzi
 dff   tomber
+dfe	fall (to_)
 inf   ML,FTB
 nb   var. ton ³¹'¹¹ <ML>
 so   marpha.dico 41
 .mar   ⁵⁵'⁴⁴te-wa
-dff   auxiliaire
+dff   auxiliaire, faire
+dfe	AUX, do (to_)
 nb   ? id 'sortir'
-prh   ɕuk te-wa 'mentir'
+phr   ɕuk te-wa 'mentir'
 so   marpha.dico 41
 .mar   ⁵⁵'³³te-to
 quot   ⁵⁵'³³tjeto
 dff   sortir qqch.
+dfe	pull out (to_), take out (to_)
 inf   Z
 cf   ⁵⁵'³³tei-wʌ 'écrémer' <Z>
 nb   j en indice = t palatalisé
 so   marpha.dico 41
 .mar   ⁵⁵'³³tei-wʌ
-dff   'écrémer'
+dff   écrémer
+dfe	take off the cream 
+dfi	extract (to_)
 inf   Z
 cf   'sortir'. prob id
 .mar   ⁵⁵'⁴⁴taː-wa
 var   ⁴⁴'⁴⁴tag-o
 dfn   thāpne
 dff   recevoir
+dfe	receive (to_)
 inf   ML
 so   marpha.dico 41
 .mar   Xta-dzi-mu
 dff   se produire
+dfe	happen (to_)
 inf   M
 so   marpha.dico 41
 .mar   ⁵⁵'³³to-wʌ
 dff   échanger
+dfe	exchange (to_)
 inf   M
 so   marpha.dico 41
 .mar   ⁵⁵'⁴⁴to-wa
 dff   (faire) revenir
+dfe	return (cause to, to_)
 inf   ML
 so   marpha.dico 41
 .mar   ⁵⁵'⁴⁴toː-wa
 dff   battre (du grain)
-dfe   thresh
+dfe   thresh (to_)
 inf   Z
 so   marpha.dico 41
 .mar   ³³'³³to-wa
 dff   plier
+dfe	fold (to_)
 inf   M, ML
 nb   var ⁴⁴'³³to-wa <Z>
 comp   ris ⁴toː 'tourner, retourner'
 so   marpha.dico 41
 .mar   ⁴³'³³to-mu
 dff   falloir
+dfe	need (to_)
 inf   ML
 so   marpha.dico 41
 .mar   ¹¹'¹¹toʱ-wa
 dff   transplanter
+dfe	transplant (to_)
 inf   ML
 nb   var ¹¹'¹⁰ <Z>
 so   marpha.dico 41
 .mar   ⁵²'²²to-go
 dff   ôter du feu
+dfe	take off (from fire, to_)
 inf   Z
 so   marpha.dico 41
 .mar   ¹¹'³³toʱ-dzi
 var   ⁵¹'²²toʱ-dzi
 dff   arriver
+dfe	reach (to_)
 inf   ML
 so   marpha.dico 41
 .mar   ⁵⁵'³³to-wa
 dff   changer (vêtement)
+dfe	change (clothes, to_)
 inf   M
 so   marpha.dico 41
 .mar   ⁴⁴'³³tuː-wʌ
 dff   hacher
+dfe	chop (meat, to_), grind (meat, to_)
 inf   Z
 so   marpha.dico 41
 .mar   ¹¹'²²duʱ-mu
 dff	fatigué
-dfe   be tired
+dfe   tired (be, to_)
 inf   M
 nb   ? ¹¹'²²duʱː-mu
 so   marpha.dico 41
 .mar   ⁵⁵'³³tɥi-wʌ
 dff   dépendre le linge
+dfi-f	ôter
+dfe	take off (drying clothes, to_), remove
 inf   ML
 nb   compare 'scoop out'
 so   marpha.dico 41
@@ -900,7 +920,7 @@ so   marpha.dico 41
 var   ⁵⁵'³³tɯto <M>
 dfn   ukhala
 dff   ramasser (?)
-dfe   scoop out (?)
+dfe   scoop out (to_) (?)
 inf   ML
 so   marpha.dico 41
 .mar   ⁴⁴'³³tʌi-wa
@@ -908,89 +928,108 @@ var   ⁴⁴'³³tei-wa
 var   ⁴⁴'³³te-dzi
 var   tai-wa <M, mar dic 42>
 dff   cuire à l'eau
+dfe	cook (in water, to_)
 dfn   usinne
 inf   M, Z
 so   marpha.dico 41
 .mar   ⁵⁵'³³te-wʌ
 dff   sortir qqch.(?), dévêtir (?)
+dfe	take out (to_), undress (someone to _)
 inf   ML
 nb   var. ⁵⁵'⁵³tei-wʌ (M)
 so   marpha.dico 41
 .mar   ²¹'³³tem-ba
 var   ¹¹'¹¹teʱm-ba (ML)
 dff   vrai
+dfe	true
 inf   TB
 so   marpha.dico 42
 .mar   ⁴⁵'³³ten-ba
 var   ⁴⁴'³³tem-ba
 dff   barrer le chemin
+dfe	block (road, to_)
 inf   ML
 so   marpha.dico 42
 .mar   ¹¹'²²taʱŋ-ba
 dff   poursuivre
+dfe	chase (to_)
 inf   ML
 so   marpha.dico 42
 .mar   ¹¹'¹¹taʱr-ba
 dff   trembler
+dfe	shake (to_), tremle (to_)
 inf   ML
 nb   var ¹¹'²² <ML>, ¹¹'¹¹
 so   marpha.dico 42
 .mar   ⁴⁴'⁴⁴tar-wa
 dff   blanchir
+dfe	whiten (to_)
 inf   Z
 nb   var. ⁴⁴'³³
 so   marpha.dico 42
 .mar   ⁵⁵'³³tor-wa
 dff   creuser
+dfe	peck (to_), pick at (to_), dig at (to)
 dfn   kotārnu <Sharma: peck, pick at, dig at>
 inf   Z
 var   ⁵⁵'³³tor-bʌ
 so   marpha.dico 42
 .mar   ¹¹'¹¹tom-ba
 dff   récolter (blé)
+dfe	harvest (wheat, to_)
+cf	ris ²tam-pa 'couper lancé'
 inf   Z
 so   marpha.dico 42
 .mar   ⁴⁴'⁴³tum-mo
 var   ⁴⁴'⁴³tum-ba
 dfn   moto / baklo
 dff   gros, épais
+dfe	fat, thick
 nb   var ton. ⁵⁵'⁴⁴
 so   marpha.dico 42
 .mar   ¹¹'²²'²²tuʱm-dzi-wa
 var   ¹¹'¹¹tuʱm-dzi-wa
 dff   heurter
+dfe	hit (to_)
 inf   ML
 so   marpha.dico 42
 .mar   ²¹'¹¹tuʱn-ba
 var   ²¹'²²tuʱm-ba <Z>
 var   tun-o
 dff   tremper dans (piment)
+dfe	dip into (to_)
 inf   ML
 so   marpha.dico 42
 .mar   ⁴⁴'⁴⁴ʈʌm-bʌ
 dff   carder
+dfe	card (wool, cotton, to_), fluff (to_)
 inf   M
 so   marpha.dico 42
 .mar   ¹¹'¹¹tʌʱm-bʌ
 dff   serrer
+dfe	tighten (to_)
 inf   M
 so   marpha.dico 42
 .mar   ¹¹'³³diʱɲi
 dff   soleil
+dfe	sun
 inf   P
 so   marpha.dico 43
 .mar   ³tebe
 quot   tebʱeʱ
 dff   sangsue
+dfe	leech
 inf   TB
 so   marpha.dico 43
 .mar   ¹¹'¹¹toʱ-wa
 dff   mâle
+dfe	male
 inf   TB
 so   marpha.dico 43
 .mar   Xtiajã
 dfn   tyo
 dff   celà
+de	that
 inf   ML
 so   marpha.dico 45
 .mar   ⁴⁴'⁴⁴tɥi-wa
