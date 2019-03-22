@@ -977,7 +977,7 @@ so   marpha.dico 42
 .mar   ¹¹'¹¹tom-ba
 dff   récolter (blé)
 dfe	harvest (wheat, to_)
-cf	ris ²tam-pa 'couper lancé'
+comp	ris ²tam-pa 'couper lancé'
 inf   Z
 so   marpha.dico 42
 .mar   ⁴⁴'⁴³tum-mo
@@ -990,7 +990,7 @@ so   marpha.dico 42
 .mar   ¹¹'²²'²²tuʱm-dzi-wa
 var   ¹¹'¹¹tuʱm-dzi-wa
 dff   heurter
-dfe	hit (to_)
+dfe	hit (to_), bump (to)
 inf   ML
 so   marpha.dico 42
 .mar   ²¹'¹¹tuʱn-ba
@@ -1034,118 +1034,143 @@ inf   ML
 so   marpha.dico 45
 .mar   ⁴⁴'⁴⁴tɥi-wa
 dff   arracher
+dfe	pull out (to_)
 inf   Z
 so   marpha.dico 46
 .mar   ⁵⁵'³³tɥi-wʌ
 dff   rassembler
 nb   eau ou farine, renversée
+dfe	scoop up (to_)
 comp   Ris. ⁴tut 'ramasser'
 cf   'dépendre le linge' et 'scoop out'
 so   marpha.dico 46
 .mar   ⁵¹ʈʰo
 dff   grand baril à eau
+dfe	large water basin
 inf   ML
 nb   ton = ?
 so   marpha.dico 49
 .mar   ⁵⁴ʈʰʌl
 dff   impôt
+dfe	tax
 so   marpha.dico 50
 .mar   ³ʈiʱ
 quot   ʈiʱ
 dff   peau
+dfe	skin
 inf   ML
 so   marpha.dico 53
 .mar   ⁵⁴ʈa
 dfn   namlo
 dff   bandeau de portage
+dfe	tumpline
 inf   ML
 nb   var ¹¹ɖaʱ FP
 so   marpha.dico 53
 .mar   ²¹ʈoʱ
 dfn   sāg
 dff   brèdes
+dfe	spinach
 inf   ML
 so   marpha.dico 53
 .mar   ⁴³⁴ʈu
 dff   six
+dfe	six
 inf   ML
 so   marpha.dico 53
 .mar   ³ʈuʱ
 quot   ʈuʱ
 dff   grains
+dfe	grain
 dfn   anna
 inf   ML
 so   marpha.dico 53
 .mar   ⁵⁴⁵ʈʌ
 dff   crête de coq
+dfe	coxcomb
 inf   ML
 so   marpha.dico 53
 .mar   ²¹ʈiʱn
 dff   mur de pierre
+dfe	(stone) wall
 inf   FP
 so   marpha.dico 54
 .mar   ⁴³ʈin
 dff   vingt pathis
+dfe	measure worth 20 pathis
 inf   ML
 nb   ? from Eng. tin
 so   marpha.dico 54
 .mar   Xʈaŋ
 dff   moëlle
+dfe	marrow
 so   marpha.dico 54
 .mar   ²¹'³³ʈaʱŋ-ba
 dff   donner (hon. receveur)
+dfe	give (to_) (hon of receiving person), offer (to_)
 inf   ML
 so   marpha.dico 54
 .mar   ⁴⁴'⁴³ʈʌm-bʌ
 dff   répandre
+dfe	spread (to_)
 inf   Z
 so   marpha.dico 54
 .mar   ¹¹'²²ʈiʱ-wʌ
 var   ʈiʱt-o
 dff   tirer
+dfe	pull (to_)
 inf   Z
 so   marpha.dico 55
 .mar   ⁴⁴'⁴⁴ʈa-dzi
 dfn   lāgne
 dff   atteindre
+dfe	reach (to_)
 inf   ML
 nb   var ⁵³'³³ʈʌ-dzi <M>
 so   marpha.dico 55
 .mar   ²¹'³³ʈa-dzi
 dff   vaincre
+dfe	win (to_)
 inf   M
 nb   var ²²'²¹ <ML>
 so   marpha.dico 55
 .mar   ²¹'³³ʈa-dzi
 dff   griffer, déchirer
+dfe	tear (to_)
 inf   M
 nb   var ²²'²¹ <ML>
 cf   ²¹'³³ʈaː-dzi 'déchirer'
 comp   ris ⁴ʈet 'griffer'
+comp	ris ³ʈeː 'déchirer'
 so   marpha.dico 55
 .mar   ²¹'³³ʈaː-dzi
 dff   déchirer
+dfe	tear (to_)
 inf   M
 cf   ²¹'³³ʈa-dzi 'griffer'
 comp   ris ³ʈeː 'déchirer'
 so   marpha.dico 55
 .mar   ²¹'³³ʈoʱ-wʌ
 dff   lire
+dfe	read (to_)
 inf   ML
 so   marpha.dico 55
 .mar   ⁵³'³³ʈu-wa
 dff   rester
+dfe	stay (to_), sit (to_)
 inf   ML
 so   marpha.dico 55
 .mar   ⁴⁴'³³ʈu-wa
 var   ⁴⁴'³³ʈu-wʌ
 dff   coudre
+dfe	sew (to_)
 so   marpha.dico 55
 .mar   ⁵⁵'⁴⁴tɕʰim-ba
 quot   ⁵⁵'⁴⁴tʃʰim-ba
 var   ⁵⁵'⁴⁴tʃʰin-o
 dfn   samātne
 dff   attraper, tenir
+dfe	catch (to_), hold (to_)
 inf   Z
 comp   WT 'dzin-pa
 so   marpha.dico 57
@@ -1153,6 +1178,7 @@ so   marpha.dico 57
 quot   ⁴⁴'³³tʃʰoŋ-pʌ
 var   ⁴⁴'³³tʃʰjoŋ-pʌ
 dff   remuer en faisant couler
+dfe	ladle (to_)
 inf   M, Z
 comp   ?WT mchong-ba 'to jump' <Jas>
 comp   ris ¹tshjoŋ 'sauter'
@@ -1160,38 +1186,46 @@ so   marpha.dico 57
 .mar   ⁴³tɕʰi
 quot   ⁴³tʃʰi
 dff   herbe
+dfe	grass
 inf   ML
 so   marpha.dico 57
 .mar   ⁴³tɕʰi
 quot   ⁴³tʃʰi
 dff   graisse
+dfe	fat
 inf   ML
 so   marpha.dico 57
 .mar   ⁴³tɕʰʌɛ
 quot   ⁴³tʃʰʌɛ
 dfn   pustak
 dff   livre
+dfe	book
 so   marpha.dico 57
 .mar   ⁴³tsʰi
 dff   cheville, poignet
+dfe	ankle, wrist
 inf   mM
 so   marpha.dico 59
 .mar   ⁵⁴tsʰo
 dff   corde
+dfe	rope
 inf   ML
 so   marpha.dico 59
 .mar   ⁵³tsʰo
 dfn   prasad
 dff   offrande
+dfe	offering
 inf   mM
 so   marpha.dico 59
 .mar   ⁵⁴⁵tsʰʌɛ
 dff   couleur
+dfe	colour
 inf   ML
 so   marpha.dico 59
 .mar   ⁵⁴tsʰʌɛ
 dfn   coya
 dff   lanières de bambou
+dfe	bamboo strip
 inf   ML
 so   marpha.dico 59
 .mar   Xtsʰʌ
@@ -1202,66 +1236,77 @@ so   marpha.dico 59
 quot   ⁵⁵'⁴⁴tʃʰewa
 dfn   chyāpne
 dff   asperger (en offrande)
+dfe	sprinkle (to_)
 so   marpha.dico 59
 .mar   ³³'³³tsʰa-mu
 var   ³³'³³tsʰʌ-mu (?)
 dff   chaud, brûlant
+dfe	hot, burning
 inf   sM
 nb   var ⁴⁴'³³tsʰa-wa <M>
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tsʰo-wa
 dff   teindre
+dfe	dye (to_)
 inf   ML, M (déb. rap.)
 cf   ⁴⁴'³³tsʰʌi-wa
 so   marpha.dico 59
 .mar   ⁴⁴'³³tsʰʌi-wa
 dff   teindre
+dfe	dye (to_)
 inf   M (déb. lent)
 cf   ⁵⁵'⁴⁴tsʰo-wa
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tsʰu-me
 var   ⁵⁵'⁴⁴tsʰu-wʌ
 dfn   ramailo
-dfe   entertaining
+dfe   entertaining, lively
 dff   plaisamment animé
 inf   TB
 so   marpha.dico 59
 .mar   ⁴⁴'³³tsʰɯ-wa
 dff   écraser
+dfe	crush (to_)
 inf   ML
-nb   si le sens est 'casser en frapant' cf ris ²tsheː 'fendre du bois,
-  casser une noix'
+nb   si le sens est 'casser en frapant' cf ris ²tsheː 'fendre du bois, casser une noix'
 cf   ⁵⁵'⁴⁴tsʰʌ-wʌ 'fendre'
 so   marpha.dico 59
 .mar   ⁴⁴'⁴⁴tsʰʌi-wa
 dff   se chamailler
+dfe	quarrel (to_)
 inf   M
 so   marpha.dico 59
 .mar   ⁴⁴'³³tsʰʌ-mu
 dfn   piro
 dff   épicé
+dfe	spicy
 inf   TB
 so   marpha.dico 59
 .mar   ⁴⁴'⁴⁴tsʰʌ-wʌ
 dff   faire paître
+dfe	graze (to_) (tr)
 inf   Z
 so   marpha.dico 59
 .mar   ⁵⁵'⁴⁴tsʰʌ-wʌ
 dff   fendre (bois)
+dfe	split wood (to_)
 inf   M
 cf   ⁴⁴'³³tsʰɯ-wa 'écraser'
 comp   ris ²tsheː
 so   marpha.dico 59
 .mar   Xtsʰam-ba
-dff   étirer qqch.
+dff   étirer qqch
+dfe	stretch (to_) (tr)
 inf   M
 so   marpha.dico 60
 .mar   ⁴⁴'⁴⁴tsʰaŋ-ba
 dff   trier
+dfe	sort (to_)
 inf   M
 so   marpha.dico 60
 .mar   ⁵⁵'⁴⁴tsʰor-dzi
 dff   débouler
+dfe	roll down (to_)
 so   marpha.dico 60
 .mar   ⁵⁵'⁴⁴tsʰʌr-wʌ
 dff   filtrer
