@@ -7,7 +7,7 @@ also, you'll need to install the associated WordNet files:
 
 http://www.nltk.org/howto/wordnet.html
 
-python3 wnlookup.py < TGTM.glosses.csv > output.mel
+`python3 ../all_glosses.py TGTM | python3 wnlookup.py > output.mel'
 
 http://www.nltk.org/howto/wordnet.html
 
@@ -29,7 +29,7 @@ Now calculate the colexification networks: (takes a while)
 (You may change the parameters to get different data, but you must also change the name of the file in the script.)
 
 Finally, to produce the mel, do
-`python3 clics.py X < TGTM.glosses.csv > output.mel`
+`python3 ../all_glosses.py TGTM | python3 clics.py X > output.mel`
 
 # Both
 Both scripts should output a file not_found, which contains glosses that were not present in the semantic source.
