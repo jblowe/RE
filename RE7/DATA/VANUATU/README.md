@@ -11,7 +11,7 @@ How to process (script does very little, as you'll see!):
 * cp ...../VANUATU/lexF_NorthVan-reconstructions_01.txt .
 * python3 vanuatu.py AlexF_NorthVan-reconstructions_01.txt | head -20
 
-
+```
 Marker: '\\_sh' Text: 'v3.0  400  Reconstructions'
 
 Marker: '\\pnv' Text: '°aᵐbena'
@@ -34,4 +34,4 @@ Marker: '\\psm' Text: 'starch'
 Marker: '\\poc' Text: '*Rabia'
 
 [...]
-
+```
