@@ -133,7 +133,9 @@ class ProtoForm(Form):
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
                  target, upstream, downstream):
-        self.mel_filename = mel_filename
+        self.mel_filename = (os.path.join(directory_path,
+                                          mel_filename)
+                             if mel_filename else None)
         self.directory_path = directory_path
         self.attested = attested
         self.proto_languages = proto_languages
@@ -397,9 +399,7 @@ def all_parameters(settings):
                 '------',
                 list(settings.upstream[target]),
                 target,
-                os.path.join(settings.directory_path,
-                             settings.mel_filename)
-                if settings.mel_filename else None)
+                settings.mel_filename)
         for daughter in settings.upstream[target]:
             rec(daughter)
     rec(settings.upstream_target)

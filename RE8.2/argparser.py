@@ -17,6 +17,12 @@ parser.add_argument('-r', '--run',
                     metavar='run',
                     default='default',
                     help='name of the run')
+parser.add_argument('-c',
+                    dest='coverage',
+                    nargs='?',
+                    const=True,
+                    metavar='coverage',
+                    help='specify for a coverage report for the specified MEL')
 parser.add_argument('--mel2',
                     metavar='mel2',
                     help='name of MEL to compare against')

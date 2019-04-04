@@ -49,7 +49,7 @@ def process_glosses():
     glosses = set()
     for line in sys.stdin:
         line = line.strip()
-        f, gloss = line.split('\t')[:2]
+        gloss = line.split('\t')[0]
         gloss = gloss.split('/')[0]
         gloss = gloss.split(' (')[0]
         gloss = gloss.replace('be ','')
