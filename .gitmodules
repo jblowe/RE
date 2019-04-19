@@ -1,0 +1,3 @@
+[submodule "RE8.2/toolbox"]
+	path = RE8.2/toolbox
+	url = https://github.com/goodmami/toolbox.git

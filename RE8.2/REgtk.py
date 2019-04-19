@@ -7,6 +7,7 @@ import threading
 import sys
 import serialize
 import os
+import load_hooks
 from argparser import args, need_to_compare, project_dir
 
 class WrappedTextBuffer():
@@ -318,6 +319,7 @@ def run(settings):
     sys.stdout = out
 
 if __name__ == "__main__":
+    load_hooks.load_hook(args.project)
     settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)

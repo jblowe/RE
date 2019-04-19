@@ -2,8 +2,10 @@ import read
 import RE
 import sys
 import coverage
+import load_hooks
 from argparser import args, need_to_compare, project_dir
 
+load_hooks.load_hook(args.project)
 settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
                                    mel=args.mel,
                                    recon=args.recon)

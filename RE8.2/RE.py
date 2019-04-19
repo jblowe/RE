@@ -198,7 +198,6 @@ def make_tokenizer(parameters, accessor):
 
     def tokenize(form):
         parses = set()
-
         def gen(form, parse, last, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
             making sure to skip over suprasegmental features when matching
