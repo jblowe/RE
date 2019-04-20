@@ -1,4 +1,7 @@
 # RE
+
+[![build status](https://travis-ci.com/jblowe/RE.svg?branch=master)](https://travis-ci.com/jblowe/RE)
+
 The Reconstruction Engine, a computer implementation of the comparative method
 
 Two versions exist here:
