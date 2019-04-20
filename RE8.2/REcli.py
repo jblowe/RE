@@ -10,6 +10,8 @@ settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml
                                    mel=args.mel,
                                    recon=args.recon)
 
+print(f'{project_dir}/{args.project}.parameters.xml')
+
 attested_lexicons = read.read_attested_lexicons(settings)
 
 if args.coverage:

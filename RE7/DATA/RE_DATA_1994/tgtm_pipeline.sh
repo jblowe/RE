@@ -24,11 +24,10 @@ xsltproc ../../../RE7/styles/fmtLex.xsl TEMP.tag.data.xml > TGTM.tag2.data.xml 2
 xsltproc ../../../RE7/styles/fmtLex.xsl TEMP.tuk.data.xml > TGTM.tuk.data.xml 2> tuk.xslt.log
 xsltproc ../../../RE7/styles/fmtLex.xsl TEMP.tuk2.data.xml > TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
+ls -l
+
 # overwrite the existing legacy files with the latest creations
 mv TGTM.*.data.xml ../TGTM
-
-# eliminate the linted files that are zero length (should be all of them!)
-find ./*.xslt.log -size  0 -print0 | xargs -0 rm --
 
 # combine the conversion logs (they have useful stats) into one
 cat *.xml.log > ../TGTM/TGTM.xml.log

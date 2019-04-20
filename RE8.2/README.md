@@ -31,7 +31,7 @@ requires Python 3
 Modules:
 
 * ```xml.etree.ElementTree``` (should be standard)
-* ```regex``` installabled via something like ```pip3 install regex``` 
+* ```regex``` installable via something like ```pip3 install regex```
 
 **Usage**
 * Notation for contexts
