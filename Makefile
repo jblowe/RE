@@ -1,3 +1,3 @@
 test:
 	echo 'starting tests'
-	cd RE8.2 ; ./testTGTM.sh
+	cd RE8.2 ; bash ./testTGTM.sh
