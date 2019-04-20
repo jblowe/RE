@@ -1,4 +1,5 @@
 #
+set -x
 # run the prel hack to convert the lexware files to XML
 perl Lex2XML.pl MONGUR8_1994.DAT TEMP.gha.data.xml gha.xml.log gha
 perl Lex2XML.pl MARPHA_1993.DAT TEMP.mar.data.xml mar.xml.log mar
