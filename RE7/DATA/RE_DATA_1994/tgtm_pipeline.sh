@@ -24,6 +24,9 @@ xsltproc ../../../RE7/styles/fmtLex.xsl TEMP.tag.data.xml > TGTM.tag2.data.xml 2
 xsltproc ../../../RE7/styles/fmtLex.xsl TEMP.tuk.data.xml > TGTM.tuk.data.xml 2> tuk.xslt.log
 xsltproc ../../../RE7/styles/fmtLex.xsl TEMP.tuk2.data.xml > TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
+cat *.xslt.log > all.logs
+cat all.logs
+
 ls -l
 
 # overwrite the existing legacy files with the latest creations
