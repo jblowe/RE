@@ -13,3 +13,4 @@
 | POLYNESIAN | 5 Polynesian languages, Bloomfield 1933| works | |
 | ROMANCE | Romance languages Zhang 2018 | in prep, works | |
 | TGTM | main TGTM lexicon Mazaudon 1994, etc.| works | |
+| VANUATU | 400 Vanuatu reconstructions by Alex François | works | |
