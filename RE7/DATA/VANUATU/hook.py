@@ -53,6 +53,8 @@ def write_parameters_file():
     for language in languages:
         ET.SubElement(root, 'attested', attrib={'name': language,
                                                 'file': xml_name(language)})
+
+    ET.SubElement(root, 'mel', attrib={'name': 'clics', 'file': 'VANUATU.mel-clics.xml'})
     recon = ET.SubElement(root, 'reconstruction', attrib={'name': 'default'})
     ET.SubElement(recon, 'proto_language',
                   attrib={'name': 'pvn',
