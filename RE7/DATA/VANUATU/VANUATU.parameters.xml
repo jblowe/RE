@@ -1,25 +1,26 @@
 <?xml version="1.0" ?>
 <params>
-   <attested file="vlw.xml" name="vlw"/>
-   <attested file="mrl.xml" name="mrl"/>
-   <attested file="lyp.xml" name="lyp"/>
-   <attested file="vra.xml" name="vra"/>
-   <attested file="mtp.xml" name="mtp"/>
-   <attested file="kro.xml" name="kro"/>
+   <attested file="msn.xml" name="msn"/>
    <attested file="num.xml" name="num"/>
+   <attested file="lkn.xml" name="lkn"/>
+   <attested file="vlw.xml" name="vlw"/>
+   <attested file="olr.xml" name="olr"/>
+   <attested file="mrl.xml" name="mrl"/>
+   <attested file="hiw.xml" name="hiw"/>
+   <attested file="lyp.xml" name="lyp"/>
+   <attested file="mta.xml" name="mta"/>
+   <attested file="vra.xml" name="vra"/>
+   <attested file="kro.xml" name="kro"/>
+   <attested file="ltg.xml" name="ltg"/>
+   <attested file="mtp.xml" name="mtp"/>
+   <attested file="lhi.xml" name="lhi"/>
    <attested file="drg.xml" name="drg"/>
    <attested file="lmg.xml" name="lmg"/>
-   <attested file="ltg.xml" name="ltg"/>
    <attested file="vrs.xml" name="vrs"/>
-   <attested file="lkn.xml" name="lkn"/>
-   <attested file="mta.xml" name="mta"/>
-   <attested file="olr.xml" name="olr"/>
-   <attested file="hiw.xml" name="hiw"/>
-   <attested file="lhi.xml" name="lhi"/>
-   <attested file="msn.xml" name="msn"/>
+   <mel file="VANUATU.mel-clics.xml" name="clics"/>
    <reconstruction name="default">
       <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
       <action name="upstream" target="pvn"/>
-      <action from="vlw,mrl,lyp,vra,mtp,kro,num,drg,lmg,ltg,vrs,lkn,mta,olr,hiw,lhi,msn" name="upstream" to="pvn"/>
+      <action from="msn,num,lkn,vlw,olr,mrl,hiw,lyp,mta,vra,kro,ltg,mtp,lhi,drg,lmg,vrs" name="upstream" to="pvn"/>
    </reconstruction>
 </params>
