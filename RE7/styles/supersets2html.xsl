@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	exclude-result-prefixes="xalan"
 >
-<!-- 
+<!--
      *** Liste tous les ensembles:
      ***    si tous les mots ont la meme glose: n'affiche que le ou les plus gros ensemble et sous ensembles
      ***    sinon affiche tous les sous ensembles
 -->
 	
-<xsl:output 
-	method="html" 
-	indent="yes" 
-	encoding="iso-8859-1"/>
+<xsl:output
+	method="html"
+	indent="yes"
+	encoding="utf-8"/>
 
 <xsl:template match="/">
 	<HTML>
@@ -22,7 +22,7 @@
 			<xsl:apply-templates select=".//sets"/>
 		</BODY>
 	</HTML>
-</xsl:template>  
+</xsl:template>
 
 <xsl:template match="sets">
 	Nb sets: <xsl:value-of select="count(set[not(@isolat='true')])"/>
@@ -44,9 +44,9 @@
 					</xsl:for-each>
 					<xsl:text>]</xsl:text>
 
-					<!-- 
+					<!--
 					***
-					*** si tout les mots ont la meme glose 
+					*** si tout les mots ont la meme glose
 					*** ne lister que les ens de meme taille
 					*** -->
 					<xsl:choose>
@@ -100,7 +100,7 @@
 			</xsl:for-each>
 		</hr>
 	</xsl:for-each>
-</xsl:template>  
+</xsl:template>
 
 </xsl:stylesheet>
 		

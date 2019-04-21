@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	exclude-result-prefixes="xalan"
 >
-  
+
   <xsl:param name="isolates"   select="'null'"/>
-  
-  <xsl:output 
-      method="html" 
-      indent="yes" 
+
+  <xsl:output
+      method="html"
+      indent="yes"
       encoding="utf-8"/>
-  
+
   <xsl:template match="/">
     <html>
       <head>
@@ -20,8 +20,8 @@
 	<xsl:apply-templates select=".//sets"/>
       </body>
     </html>
-  </xsl:template>  
-  
+  </xsl:template>
+
   <xsl:template match="sets">
     <xsl:for-each select="set">
       <table id="set">
@@ -39,11 +39,11 @@
       </table>
     </xsl:for-each>
   </xsl:template>
-  
+
   <xsl:template match="sf">
     <table id="sf">
       <xsl:for-each select="rfx">
-	<tr>	   
+	<tr>	 
 	  <td id="lg"><xsl:apply-templates select="lg"/></td>
 	  <td id="lx"><xsl:apply-templates select="lx"/></td>
 	  <td id="gl"><xsl:apply-templates select="gl"/></td>
@@ -52,9 +52,9 @@
       </xsl:for-each>
     </table>
   </xsl:template>
-  
+
   <xsl:template match="gl|hw">
     <xsl:apply-templates/>
   </xsl:template>
-  
+
 </xsl:stylesheet>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:param name="lg" select="'default value'"/>
-<xsl:output 
-	method="xml" 
-	indent="yes" 
+<xsl:output
+	method="xml"
+	indent="yes"
 	encoding="utf-8"/>
 <xsl:template match="LEXICON">
 	<lexicon dialecte="{$lg}">
@@ -11,7 +11,7 @@
 			<entry>
 			<xsl:attribute name="id">
 				<xsl:value-of select="concat($lg,@N)" />
-  			</xsl:attribute> 
+  			</xsl:attribute>
 			<xsl:choose>
 			<xsl:when test="DFE">
 				<gl><xsl:value-of select="DFE"/></gl>
@@ -25,7 +25,7 @@
 			</xsl:when>
 			<xsl:when test="MODE/DFE">
 				<gl><xsl:value-of select="MODE/DFE"/></gl>
-			</xsl:when>         
+			</xsl:when>       
 			<xsl:otherwise>
 				<gl><xsl:value-of select="concat('gloss',@N)" /></gl>
           		</xsl:otherwise>

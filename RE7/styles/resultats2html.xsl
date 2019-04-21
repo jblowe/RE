@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	exclude-result-prefixes="xalan"
 >
 
-<xsl:output 
-	method="html" 
-	indent="yes" 
-	encoding="iso-8859-1"/>
+<xsl:output
+	method="html"
+	indent="yes"
+	encoding="utf-8"/>
 
 <xsl:template match="/">
 	<HTML>
@@ -17,7 +17,7 @@
 			<xsl:apply-templates select=".//actionResult"/>
 		</BODY>
 	</HTML>
-</xsl:template>  
+</xsl:template>
 
 
 <xsl:template match="actionResult">

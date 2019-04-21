@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	xmlns:xalan="http://xml.apache.org/xalan"
 	exclude-result-prefixes="xalan"
 >
-<xsl:output 
-	method="xml" 
-	indent="yes" 
-	encoding="iso-8859-1"/>
-<xsl:strip-space 
+<xsl:output
+	method="xml"
+	indent="yes"
+	encoding="utf-8"/>
+<xsl:strip-space
 	elements="*"/>
 
 
@@ -31,7 +31,7 @@
 			</mel>
 		</xsl:for-each>
 	</semantics>
-</xsl:template>  
+</xsl:template>
 
 </xsl:stylesheet>
 		

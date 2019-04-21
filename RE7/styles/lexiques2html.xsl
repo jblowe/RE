@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
-<xsl:stylesheet 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0"
     xmlns:redirect="org.apache.xalan.xslt.extensions.Redirect"
     extension-element-prefixes="redirect">
 
 <xsl:param name="projectName"   select="'aaa'"/>
 
-<xsl:output 
-	method="html" 
-	indent="yes" 
-	encoding="iso-8859-1"/>
+<xsl:output
+	method="html"
+	indent="yes"
+	encoding="utf-8"/>
 
 <xsl:template match="/">
 	<redirect:write file="blank.htm">
@@ -62,7 +62,7 @@
 			<xsl:apply-templates select=".//lexicon"/>
 		</BODY>
 	</HTML>
-</xsl:template>  
+</xsl:template>
 
 
 <xsl:template match="lexicon">

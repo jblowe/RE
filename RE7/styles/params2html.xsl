@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
-<xsl:stylesheet 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
 
 
-<xsl:output 
-	method="html" 
-	indent="yes" 
-	encoding="iso-8859-1"/>
+<xsl:output
+	method="html"
+	indent="yes"
+	encoding="utf-8"/>
 
 <xsl:template match="/">
 	<HTML>
@@ -26,7 +26,7 @@
 </xsl:template>
 <xsl:template match="param">
 	<div>
-		<xsl:value-of select="@name"/> = 
+		<xsl:value-of select="@name"/> =
 		<xsl:choose>
 			<xsl:when test="@name='fuzzy'">
 				<xsl:value-of select="@value"/>
