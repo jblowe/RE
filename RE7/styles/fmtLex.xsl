@@ -27,7 +27,7 @@
 			<xsl:when test="tag">
 				<hw><xsl:value-of select="tag"/></hw>
 			</xsl:when>
-			<xsl:when test="SYA">
+			<xsl:when test="sya">
 				<hw><xsl:value-of select="sya"/></hw>
 			</xsl:when>
 			<xsl:otherwise>
