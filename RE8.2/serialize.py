@@ -35,7 +35,7 @@ def serialize_lexicons(lexicons, dirname):
         serialize_lexicon(
             lexicon,
             os.path.join(dirname,
-                         f'{lexicon.language}.DATA.xml'))
+                         f'{lexicon.language}.data.xml'))
 
 def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
