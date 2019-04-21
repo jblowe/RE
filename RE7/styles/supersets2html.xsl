@@ -15,13 +15,13 @@
 	encoding="utf-8"/>
 
 <xsl:template match="/">
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY style="font-family:'Arial unicode MS'">
+	<html>
+		<head>
+		</head>
+		<body>
 			<xsl:apply-templates select=".//sets"/>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 
 <xsl:template match="sets">
@@ -30,7 +30,7 @@
 		<xsl:variable name="countWord" select="count(word)"/>
 		<hr>
 			<xsl:for-each select="sol">
-				<pre style="font-family:'Arial unicode MS'">
+				<pre>
 					<xsl:for-each select="rule">
 						<xsl:variable name="corr" select="@idref"/>	
 						<xsl:value-of select="/sets/tableOfCorr/corr[@num=$corr]/proto"/>
@@ -91,7 +91,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 
-					<table style="font-family:'Arial unicode MS'">
+					<table>
 						<xsl:for-each select="../word">
 							<tr><td><xsl:value-of select="entry/@id"/></td><td><xsl:value-of select="entry/hw"/></td><td><xsl:value-of select="entry/gl"/></td></tr>
 						</xsl:for-each>

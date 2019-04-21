@@ -12,13 +12,13 @@
 	encoding="utf-8"/>
 
 <xsl:template match="/">
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY>
+	<html>
+		<head>
+		</head>
+		<body>
 			<xsl:apply-templates select=".//sets"/>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 
 <xsl:template match="sets">
@@ -32,7 +32,7 @@
 					<xsl:for-each select="entry">
 						<td>
 							<nobr>
-								<span style="font-family:'Arial unicode MS'"><xsl:apply-templates select="hw"/></span>
+								<span><xsl:apply-templates select="hw"/></span>
 								(<xsl:apply-templates select="gl"/>)
 								<i><xsl:apply-templates select="../@dialecte"/></i>
 							</nobr>

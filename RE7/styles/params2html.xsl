@@ -10,14 +10,14 @@
 	encoding="utf-8"/>
 
 <xsl:template match="/">
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY style="font-family:'Arial unicode MS','TITUS Cyberbit Basic'">
+	<html>
+		<head>
+		</head>
+		<body>
 			<h3>Parametres</h3>
 			<xsl:apply-templates select=".//params"/>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 <xsl:template match="action">
 	<div>
@@ -30,7 +30,14 @@
 		<xsl:choose>
 			<xsl:when test="@name='fuzzy'">
 				<xsl:value-of select="@value"/>
-				<table border="1">
+				<table class="table table-striped sortable">
+					<thead>
+						<tr>
+							<th>Dialect</th>
+							<th>To</th>
+							<th>From</th>
+						</tr>
+					</thead>
 					<xsl:for-each select="document(@value)/fuzzy/item">
 						<tr>
 							<td><xsl:value-of select="@dial"/></td>

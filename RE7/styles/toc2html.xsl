@@ -7,37 +7,48 @@
 	encoding="utf-8"/>
 
 <xsl:template match="/">
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY>
+	<html>
+		<head>
+		</head>
+		<body>
 			<xsl:apply-templates select=".//tableOfCorr"/>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 
 <xsl:template match="tableOfCorr">
-	<DIV>
-		<h3>Macro-classes</h3>
+	<div>
+		<h4>Macro-classes</h4>
+		<table class="table table-striped sortable">
+			<thead>
+				<tr>
+					<th>Class</th>
+					<th>Members</th>
+				</tr>
+			</thead>
 		<xsl:for-each select="parameters/class">
-			<div style="font-family:'Arial unicode MS'">
-				<xsl:value-of select="@name"/>: <xsl:value-of select="@value"/>
-			</div>
-		</xsl:for-each>
-		<h3>Table des correspondances</h3>
-		<table border="1" style="font-family:'Arial unicode MS'">
 			<tr>
-				<th>num</th>
-				<th>*</th>
-				<th>syll</th>
-				<th>left</th>
-				<th>right</th>
-
-				<xsl:for-each select="corr[1]/modern">
-					<xsl:sort select="@dialecte"/>
-					<th><xsl:value-of select="@dialecte"/></th>
-				</xsl:for-each>
+				<td><xsl:value-of select="@name"/></td>
+				<td><xsl:value-of select="@value"/></td>
 			</tr>
+		</xsl:for-each>
+		</table>
+		<h4>Table of correspondences</h4>
+		<table class="table table-striped sortable">
+			<thead>
+				<tr>
+					<th>num</th>
+					<th>*</th>
+					<th>syll</th>
+					<th>left</th>
+					<th>right</th>
+
+					<xsl:for-each select="corr[1]/modern">
+						<xsl:sort select="@dialecte"/>
+						<th><xsl:value-of select="@dialecte"/></th>
+					</xsl:for-each>
+				</tr>
+			</thead>
 			<xsl:for-each select="corr">
 				<tr>
 					<td><xsl:value-of select="@num"/></td>
@@ -59,7 +70,7 @@
 				</tr>
 			</xsl:for-each>
 		</table>
-	</DIV>
+	</div>
 </xsl:template>
 
 </xsl:stylesheet>

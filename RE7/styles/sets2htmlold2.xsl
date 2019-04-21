@@ -12,13 +12,13 @@
       encoding="utf-8"/>
 
   <xsl:template match="/">
-    <HTML>
-      <HEAD>
-      </HEAD>
-      <BODY>
+    <html>
+      <head>
+      </head>
+      <body>
 	<xsl:apply-templates select=".//sets"/>
-      </BODY>
-    </HTML>
+      </body>
+    </html>
   </xsl:template>
 
   <xsl:template match="sets">
@@ -43,7 +43,7 @@
       <xsl:for-each select="rfx">
 	<tr>	 
 	  <td><i><xsl:apply-templates select="lg"/></i></td>
-	  <td><b><span style="font-family:'Arial unicode MS'"><xsl:apply-templates select="lx"/></span></b></td>
+	  <td><b><span><xsl:apply-templates select="lx"/></span></b></td>
 	  <td><i><xsl:apply-templates select="gl"/></i></td>
 	</tr>
       </xsl:for-each>

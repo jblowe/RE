@@ -14,24 +14,24 @@
 
 <xsl:template match="/">
 	<redirect:write file="blank.htm">
-		<HTML>
-			<HEAD/>
-			<BODY/>
-		</HTML>
+		<html>
+			<head/>
+			<body/>
+		</html>
 	</redirect:write>
 	<redirect:write file="{$projectName}.index.htm">
-		<HTML>
-			<HEAD/>
+		<html>
+			<head/>
 			<frameset cols="250,*" Frameborder="Yes" FRAMESPACING="2">
 				<frame SRC="{$projectName}.cmds.htm" name="cmds"/>
 				<frame SRC="blank.htm" name="content"/>
 			</frameset>
-		</HTML>
+		</html>
 	</redirect:write>
 	<redirect:write file="{$projectName}.cmds.htm">
-		<HTML>
-			<HEAD/>
-			<BODY>
+		<html>
+			<head/>
+			<body>
 				<ul>
 					<li><a href="{$projectName}.lexiques.htm"    target="content">Lexiques</a></li>
 					<li><a href="{$projectName}.toc.htm"         target="content">Table des correspondances</a></li>
@@ -46,13 +46,13 @@
 					<li><a href="{$projectName}.afterExcl.htm"   target="content">Sets apres EXCL</a></li>
 					<li><a href="{$projectName}.isolatsExcl.htm" target="content">Isolats apres EXCL</a></li>
 				</ul>
-			</BODY>
-		</HTML>
+			</body>
+		</html>
 	</redirect:write>
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY>
+	<html>
+		<head>
+		</head>
+		<body>
 			<h3>Lexiques</h3>
 			<ul>
 				<xsl:for-each select=".//lexicon">
@@ -60,16 +60,16 @@
 				</xsl:for-each>
 			</ul>
 			<xsl:apply-templates select=".//lexicon"/>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 
 
 <xsl:template match="lexicon">
-	<DIV>
+	<div>
 		<a name="{@dialecte}"/>
 		<h3><xsl:value-of select="@dialecte"/></h3>
-		<table border="1" style="font-family:'Arial unicode MS'">
+		<table border="1">
 			<xsl:for-each select="entry">
 				<tr>
 					<td><xsl:apply-templates select="@id"/></td>
@@ -78,7 +78,7 @@
 				</tr>
 			</xsl:for-each>
 		</table>
-	</DIV>
+	</div>
 </xsl:template>
 
 <xsl:template match="gl|hw">

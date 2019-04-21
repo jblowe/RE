@@ -13,10 +13,10 @@
 	elements="*"/>
 
 <xsl:template match="/">
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY>
+	<html>
+		<head>
+		</head>
+		<body>
 			<xsl:variable name="nbEntry" select="count(xalan:distinct(//lexicon/entry/@id))"/>
 			<xsl:variable name="nbFind"  select="count(xalan:distinct(//actionResult[@to='proto']//references/ref/@idref))"/>
 			Nb rejets: <xsl:value-of select="$nbEntry -$nbFind"/>
@@ -28,14 +28,14 @@
 							<tr>
 								<td><xsl:value-of select="@id"/></td>
 								<td><xsl:apply-templates select="gl"/></td>
-								<td><span style="font-family:'Arial unicode MS'"><xsl:apply-templates select="hw"/></span></td>
+								<td><span><xsl:apply-templates select="hw"/></span></td>
 							</tr>
 						</xsl:if>
 					</xsl:for-each>
 				</xsl:for-each>
 			</table>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 
 </xsl:stylesheet>

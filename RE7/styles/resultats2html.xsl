@@ -10,18 +10,18 @@
 	encoding="utf-8"/>
 
 <xsl:template match="/">
-	<HTML>
-		<HEAD>
-		</HEAD>
-		<BODY style="font-family:'Arial unicode MS'">
+	<html>
+		<head>
+		</head>
+		<body>
 			<xsl:apply-templates select=".//actionResult"/>
-		</BODY>
-	</HTML>
+		</body>
+	</html>
 </xsl:template>
 
 
 <xsl:template match="actionResult">
-	<DIV>
+	<div>
 		<h3>
 			<xsl:for-each select="@*">
 				<xsl:value-of select="local-name()"/>="<xsl:value-of select="."/>"<xsl:text> </xsl:text>
@@ -32,11 +32,11 @@
 			<xsl:apply-templates select="."/>
 		</xsl:for-each>
 		<hr/>
-	</DIV>
+	</div>
 </xsl:template>
 
 <xsl:template match="solutions">
-	<DIV>
+	<div>
 		<xsl:apply-templates select="references"/>
 		<xsl:text> </xsl:text>
 		<font size="1">
@@ -46,7 +46,7 @@
 			<xsl:apply-templates select="sol"/>
 		</BLOCKQUOTE>
 		
-	</DIV>
+	</div>
 </xsl:template>
 <xsl:template match="references">
 	<xsl:for-each select="ref">
