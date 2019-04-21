@@ -1,37 +1,27 @@
 ### Vanuatu data
 
 Alex François
+
 in Toolbox format
 
-How to process (script does very little, as you'll see!):
-
-* git clone https://github.com/goodmami/toolbox.git
-* cd toolbox
-* cp ...../VANUATU/vanuatu.py .
-* cp ...../VANUATU/lexF_NorthVan-reconstructions_01.txt .
-* python3 vanuatu.py AlexF_NorthVan-reconstructions_01.txt | head -20
+How to make a "tabular" HTML version of the ToC
 
 ```
-Marker: '\\_sh' Text: 'v3.0  400  Reconstructions'
-
-Marker: '\\pnv' Text: '°aᵐbena'
-Marker: '\\psm' Text: 'Instrumental anaphoric (with it); inanimate oblique anaphoric\n(at/about… it); Existential  predicate'
-Marker: '\\pncv'Text: '*aᵐbe-na'
-Marker: '\\sem' Text: 'his/her/its body (?)'
-Marker: '\\cf'  Text: '°aia'
-Marker: '\\lhi' Text: 'pæn'
-Marker: '\\vlw' Text: 'ᵐbɛn'
-Marker: '\\lmg' Text: 'pæn'
-Marker: '\\vra' Text: 'ᵐbɛnɛ'
-Marker: '\\msn' Text: 'pɛn'
-Marker: '\\mta' Text: 'apena'
-Marker: '\\num' Text: 'aᵐbɛnɛ'
-Marker: '\\mrl' Text: 'ᵐbɪn'
-Marker: '\\dt'  Text: '22/Oct/2007'
-
-Marker: '\\pnv' Text: '°aᵐbia'
-Marker: '\\psm' Text: 'starch'
-Marker: '\\poc' Text: '*Rabia'
-
-[...]
+cd .../RE7/DATA/VANUATU
+xsltproc ../../styles/toc2html.xsl VANUATU.correspondences.xml > vanuatu.html
 ```
+
+How to process "upstream", using the defaults
+
+(to use different parameters, look inside ```testVanuatu.sh``` -- you may need to edit various files in
+the VANUATU directory as well)
+
+```
+cd .../RE8.2
+./testVanuatu.sh
+```
+
+Notes
+
+* This script uses a "SIL Toolbox File Module" (https://github.com/goodmami/toolbox.git)
+* It reads the Toolbox file and outputs XML data files and XML parameter files for RE.
