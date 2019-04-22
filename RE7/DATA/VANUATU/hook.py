@@ -10,7 +10,7 @@ from xml.dom import minidom
 base_dir = os.path.dirname(__file__)
 filename = os.path.join(base_dir, 'AlexF_NorthVan-reconstructions_01.txt')
 
-languages = {'hiw', 'ltg', 'lhi', 'lyp', 'vlw', 'mtp', 'lmg', 'vra', 'vrs', 'msn', 'mta', 'num', 'drg', 'lkn', 'mrl', 'olr', 'kro'}
+languages = {'hiw', 'ltg', 'lhi', 'lyp', 'vlw', 'mtp', 'lmg', 'vra', 'vrs', 'msn', 'mta', 'num', 'drg', 'kro', 'olr', 'lkn', 'mrl'}
 
 print('reading toolbox file')
 
