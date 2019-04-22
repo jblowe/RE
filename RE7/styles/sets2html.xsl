@@ -14,7 +14,7 @@
   <xsl:template match="/">
     <html>
       <head>
-	<link rel="stylesheet" type="text/css" href="../css/reconengine.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
       </head>
       <body>
 	<xsl:apply-templates select=".//sets"/>

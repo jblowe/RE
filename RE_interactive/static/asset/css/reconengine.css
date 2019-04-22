@@ -1,0 +1,21 @@
+/* reconstruction engine stylesheet */
+
+body {
+    font-size: 12px;
+    font-family: Helvetica, Arial, freesans, clean, sans-serif;
+    color: #333;
+    background: #FFF;
+}
+#set { cell-padding: 10px;}
+/* reconstructions block */
+#row { background-color: #E0E0E0; }
+#id  { padding-right: 10px;}
+#pfm { width: 80px; font-weight:bold;font-size: 16pt; }
+#pgl { width: 240px; font-style: italic; }
+#rcn { width: 80px; font-size: 9pt; }
+/* support forms block */
+#sf  { padding-left: 20px; }
+#lg  { width: 80px; font-style: italic; }
+#lx  { width: 80px; }
+#gl  { width: 160px; font-style: italic; }
+#nn  { width: 80px; font-family: 'Courier'; font-size: 9pt; }

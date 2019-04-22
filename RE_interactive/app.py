@@ -1,13 +1,19 @@
-from bottle import Bottle, run, template, debug, static_file
+from bottle import Bottle, default_app, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
+
+# from bottle import default_app, route, static_file, template, debug, static_file, BaseTemplate
+
 from RE8 import projects
 import utils
 
 import os, sys
 
-dirname = os.path.dirname(sys.argv[0])
+dirname = os.path.dirname(os.path.abspath(__file__))
 
 app = Bottle()
 debug(True)
+
+# add version and timestamp to footer
+BaseTemplate.defaults['footer_info'] = utils.add_time_and_version()
 
 
 @app.route('/static/<filename:re:.*\.css>')
@@ -55,3 +61,4 @@ def project_files(filename):
 
 
 run(app, host='localhost', port=8080)
+#application = default_app()

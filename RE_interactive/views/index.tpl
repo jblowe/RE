@@ -73,17 +73,14 @@
 				A computer implementation of the comparative method.
 				</p>
             % elif 'about' in data:
-			<h2>About the Reconstruction Engine</h2>
-				<p>
-				A computer implementation of the comparative method.
-				</p>
+                % include('about.tpl')
             % end
 		</div>
 		<!--./row-->
 		<div class="row">
 			<hr>
 			<footer>
-				<p>2019</p>
+				<p><i>Lowe, François, Mazaudon, and Zhang 2019.</i>  {{ footer_info }}</p>
 			</footer>			
 		</div>
 	</div>
