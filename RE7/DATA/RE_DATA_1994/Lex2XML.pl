@@ -19,11 +19,25 @@ while (<CVT>) {
     #while (!$_) {$_ = <> ; chop};
     s/</&lt;/g;
     s/>/&gt;/g;
-    s/ \[\[(.*)$/<srcxcr>\1<\/srcxcr>/ && ($taglist{srcxcr}++);
+
     if (/^\*/) {
         print OUT "\n<comment>$_</comment>";
         $taglist{'comment'}++;
         next;
+    }
+
+    # handle [[[... conventions
+    $depth = 1;
+    while (/\[/) {
+        s/\w*\[+([^\[<]+)/<srcxcr$depth>\1<\/srcxcr$depth>/ && ($taglist{srcxcr}++);
+        $depth++;
+    }
+    my $rest = '';
+    my $field = '';
+    if (/<srcxcr/) {
+        # ($field, $rest) = /^(\W*?)\w*(<srcxcr.*)/;
+        ($field, $rest) = /^(.*?)\w*(<srcxcr.*)/;
+        $_ = $field;
     }
     if (s/^(\d+)//) {
         my $mode_level = $1;
@@ -51,6 +65,10 @@ while (<CVT>) {
                 if ($insub == 1) {print OUT "\n</sub>";}
                 if ($n > 1) {print OUT "\n</entry>";}
                 print OUT "\n<entry id=\"$dialect.$n\">";
+                if ($rest ne '') {
+                    print OUT "\n$rest";
+                    $rest = '';
+                }
                 $taglist{'entry'}++;
                 $inmode = 0;
                 $insub = 0;
