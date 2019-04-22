@@ -30,7 +30,7 @@ with open(filename, encoding='utf-8', errors='ignore') as file:
             i += 1
 
 def xml_name(x):
-    return x + '.xml'
+    return x + '.data.xml'
             
 def write_vanuatu_data():
     for language in languages:
