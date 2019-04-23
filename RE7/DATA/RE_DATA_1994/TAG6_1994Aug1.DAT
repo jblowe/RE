@@ -1,14 +1,11 @@
 *   Nom du Ficher:       MONTAG
 *   contient les monosyllabes de Taglung (Tamang dialect)
 *   Fichier cree le 24 Avril 1989
-*   Avant dern ed:       24 Avril 1989
-*   Dern ed :            24 Avril 1989
-*
-*   (plus "moretag.dat" 7 Jan 1994)
+**   (plus "moretag.dat" 7 Jan 1994)
 *
 .tag   Xan-ba
 var   Xan-go
-dff   arcbouter (pot a dhero)
+dff   arcbouter (pot à dhero)
 dfe   to prop
 dfn   aDaune
 so   1972:34
@@ -87,7 +84,7 @@ dff   battre
 dfe   to hit
 so   1972:15
 .tag   ³ɖam
-dff   brulé, gaché
+dff   brulé, gâché
 dfe   spoilt (burnt)
 so   1972:35
 .tag   Xɖeː-ba
@@ -105,7 +102,7 @@ dff   fils
 dfe   son
 so   1972:50
 .tag   ³dzjaː-go
-phr   ³tan ³dzjaːgoˊasseyez-vous
+phr   ³tan ³dzjaːgo|asseyez-vous
 dff   s'asseoir (hh)
 dfe   to sit (hh)
 so   1972:59
@@ -185,7 +182,7 @@ so   1972:15
 ton   44.32
 dff   secouer
 dfe   to shake
-hom   'sɟcher'
+hom   'sécher'
 so   1972:47
 ..tag   Xhar-ba
 ton   44.44
@@ -317,7 +314,7 @@ dff   porter vet. ou chaussures
 dfe   to wear (ckothes or shoes)
 so   1972:64
 .tag   Xhwaŋ-ba
-phr   hwaŋ-ba aluˊpommes de terre cuites a la cendre
+phr   hwaŋ-ba alu|pommes de terre cuites a la cendre
 dff   rotir
 dfe   to roast
 ris   kʰraŋ
@@ -339,7 +336,7 @@ dfe   to bite
 so   1972:30
 .tag   ³jam
 phon   jəm
-phr   ³jam-la kanˊ(une injure menacante)
+phr   ³jam-la kan|(une injure menacante)
 dff   ??
 dfe   ??
 so   1972:60
@@ -391,7 +388,7 @@ so   1972:28
 .tag   ³kal-ba
 dff   frire
 dfe   to fry
-phr   cʰjukuri ³kal-baˊfrire dans l'huile
+phr   cʰjukuri ³kal-ba|frire dans l'huile
 so   1972:16
 ..tag   Xkal-ba
 dff   frire
@@ -550,7 +547,7 @@ so   1972:15
 .tag   Xkli
 dff   feces
 dfe   feces
-phr   kli ʃjorbaˊdɟfɟquer
+phr   kli ʃjorba|dɟfɟquer
 so   1972:47
 .tag   ⁴klu-si
 ton   55.22
@@ -594,7 +591,7 @@ so   1972:21
 .tag   ᴸkor
 dff   unité
 dfe   unit
-phr   kor ki:ˊone
+phr   kor ki:|one
 so   1972:3
 .tag   Xkriŋ-ba
 ris   ¹kriŋ
@@ -659,7 +656,7 @@ so   1972:5
 .tag   Xkʰli
 dff   feces
 dfe   feces
-phr   kʰli kokjaˊguhu kira (dessin p.48)
+phr   kʰli kokja|guhu kira (dessin p.48)
 so   1972:48
 ..tag   Xkʰli
 dff   feces
@@ -677,7 +674,7 @@ dfe   pig sty
 so   1972:48
 .tag   Xkʰu
 dff   légume
-dfe   veggie
+dfe   vegetable
 so   1972:16
 .tag   Xla
 dff   dieu
@@ -852,7 +849,7 @@ dfe   sting
 so   1972:57
 .tag   ¹mu
 ton   55
-phr   muzeˊdu ciel
+phr   muze|du ciel
 dff   ciel
 dfe   sky
 so   1972:31
@@ -1410,7 +1407,7 @@ dff   riche
 dfe   rich
 so   1972:16
 .tag   Xpʰo
-phr   bara pʰo tam-dzi?ˊEst-il midi?
+phr   bara pʰo tam-dzi?|Est-il midi?
 dff   sonner (heure)
 dfe   to strike (hour)
 nb   ?? cf ris pho-ba 'claquer (fusil)'
@@ -1809,17 +1806,17 @@ dff   s'asseoir
 dfe   to sit
 so   1972:38
 .tag   Xsju-ba
-dff   dévetir
+dff   dévêtir
 dfe   to undress
 so   1972:38
 ..tag   Xsju-ba
 ton   55.53
-dff   dépecer
+dff   dépouiller, dépiauter
 dfe   to skin
 so   1972:48
 ..tag   Xsju-ba
 ton   53.32 (balist)
-dff   se dévetir
+dff   se dévêtir
 dfe   to undress
 dfn   phuka:une
 so   1972:61
@@ -1834,7 +1831,7 @@ dfe   to sit
 so   1972:61
 .tag   Xso-dzi
 ton   ⁴⁴.⁴⁴
-phr   mi-ce ⁴ke so-dzi ⁴taremˊl'homme s'est mis au travail a prɟsent
+phr   mi-ce ⁴ke so-dzi ⁴tarem |l'homme s'est mis au travail à présent
 dff   ?commencer a faire
 dfe   ?to start doing
 so   1972:28
@@ -2033,16 +2030,16 @@ dfe   speech, word
 so   1972:33
 .tag   Xtam-ba
 phr   pu tamba
-dff   cultiver (une riziere)
+dff   cultiver (une rizière)
 dfe   to cultivate
 so   1972:27
 .tag   Xtam-dzi
-phr   bara pʰo tam-dzi?ˊEst-il midi?
-dff   ? etre sur le point de
+phr   bara pʰo tam-dzi?|Est-il midi?
+dff   ? être sur le point de
 dfe   to be about to ?
 so   1972:41
 .tag   ³tan
-phr   ³tan ³dzjaːgoˊasseyez-vous
+phr   ³tan ³dzjaːgo|asseyez-vous
 dff   facon de s'asseoir
 dfe   way of sitting
 so   1972:59
@@ -2303,12 +2300,12 @@ dfn   haːnne
 ris   ¹thap
 so   1972:16
 .tag   Xtʰe
-phr   tʰe miˊlui
+phr   tʰe mi|lui
 dff   lui, ce
 dfe   he, this
 so   1972:33
 ..tag   Xtʰe
-phr   tʰeriˊici
+phr   tʰeri|ici
 dff   ceci
 dfe   this
 so   1972:59
@@ -2341,7 +2338,7 @@ dff   boire
 dfe   to drink
 so   1972:30
 .tag   ³ʈa
-phr   ʈaŋga ³ʈaˊsɟchoir au dessus du feu
+phr   ʈaŋga ³ʈa|sɟchoir au dessus du feu
 dff   séchoir
 dfe   drying rack
 so   1972:49
@@ -2413,8 +2410,7 @@ dff   crete
 dfe   coxcomb
 so   1972:54
 .tag   ⁴ʈaː
-nb   difference de timbre notɟe avec ¹ʈaː 'racine'; namlo notɟ avec a
-  d'arri«re <so  1972:6>
+nb   difference de timbre notée avec ¹ʈaː 'racine'; namlo noté avec a d'arrière <so  1972:6>
 dff   courroie de portage
 dfe   carrying head-strap
 dfn   naːmlo
@@ -2628,7 +2624,7 @@ dff   honr de venir
 dfe   hon for come
 so   1972:65
 .tag   ³tsjon
-phr   hanaŋ se tsjon habaˊd'ou viens-tu
+phr   hanaŋ se tsjon haba|d'ou viens-tu
 dff   en revenant
 dfe   coming back
 so   1972:53
@@ -2995,8 +2991,8 @@ dfn
 set   28
 nb
 so   Thak 72 Voc Comp Vb : 8
-.tag   ²ɕeː-̃ba
-dff   moucharder
+.tag   ²ɕeː-ba
+dff   moucharder, répéter
 dfe
 dfn
 set   29
@@ -3093,7 +3089,7 @@ set   59
 nb
 so   Thak 72 Voc Comp Vb : 11
 .tag   ⁴tsuː-ba
-dff   mettre au feu
+dff   mettre à cuire
 enc   (pour un mort)
 dfe
 dfn
@@ -3404,7 +3400,7 @@ so   Thak 72 Voc Comp Vb : 21
 .tag   ¹tiː
 dff   étendre pour s'asseoir
 dfe
-dfn   richyāune
+dfn   oichyāune
 set   164
 nb
 so   Thak 72 Voc Comp Vb : 21
@@ -3413,7 +3409,6 @@ dff   allumer un feu
 dfe
 dfn   salgāune
 set   166
-nb   ◦ ·ter du feu
 so   Thak 72 Voc Comp Vb : 21
 .tag   ¹tui
 dff   tremper dans
@@ -3441,7 +3436,7 @@ dff   assembler
 dfe
 dfn
 set   173
-nb   d' "articulation"
+nb   cf 'articulation'
 so   Thak 72 Voc Comp Vb : 21
 .tag   ³ʈeː
 dff   déchirer
@@ -3506,12 +3501,11 @@ dfn
 set   194
 nb
 so   Thak 72 Voc Comp Vb : 24
-.tag   ³pʱr
+.tag   ³paʱr
 dff   se séparer du tronc
 dfe
 dfn
 set   195
-nb   ʑ vṛifier tag
 so   Thak 72 Voc Comp Vb : 24
 .tag   ²bjaː
 dff   taper du pied
@@ -3598,9 +3592,10 @@ set   224
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ple̥
-dff   parresseux
+dff   paresseux
 dfe
 dfn
+comp	ris plap 'fatigué'
 set   228
 nb
 so   Thak 72 Voc Comp Vb : 25
@@ -3612,7 +3607,7 @@ set   237
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ¹ɕu
-dff   ôter les vêtements, dépecer
+dff   ôter les vêtements, dépouiller
 dfe
 dfn
 set   238
