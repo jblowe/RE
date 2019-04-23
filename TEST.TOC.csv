@@ -1,0 +1,13 @@
+0	1	Type	*	context	OEP	OHGP	GotP	ONP
+1	1	V	a		a	a	a	a
+2	1	I	f		f	f	f	f
+3	1	C	f		f	f	f	f
+4	1	C	s		s	s	s	s
+5	1	I	s		s	s	s	s
+6	1	I	p		p	pf	p	p
+7	1	C	p	*/S-	p	p	p	p
+8	1	C	p	*/T-	p	pf	p	p
+9	1	C	k	*/-S	x	x	x	x
+10	1	C	k	*/-T	k	k	k	k
+
+
