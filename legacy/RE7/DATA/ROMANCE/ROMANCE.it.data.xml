@@ -1,0 +1,1137 @@
+<lexicon dialecte="it">
+  <entry id="it1">
+    <gl>I</gl>
+    <spell>io</spell>
+    <hw>ˈio</hw>
+  </entry>
+  <entry id="it2">
+    <gl>you (singular)</gl>
+    <spell>tu</spell>
+    <hw>tu</hw>
+  </entry>
+  <entry id="it3">
+    <gl>he</gl>
+    <spell>egli</spell>
+    <hw>ˈeʎʎi</hw>
+  </entry>
+  <entry id="it3.5">
+    <gl>he</gl>
+    <spell>lui</spell>
+    <hw>ˈlui</hw>
+  </entry>
+  <entry id="it4">
+    <gl>we</gl>
+    <spell>noi</spell>
+    <hw>ˈnoi</hw>
+  </entry>
+  <entry id="it5">
+    <gl>you (plural)</gl>
+    <spell>voi</spell>
+    <hw>ˈvoi</hw>
+  </entry>
+  <entry id="it6">
+    <gl>they</gl>
+    <spell>essi, loro</spell>
+    <hw>ˈloro</hw>
+  </entry>
+  <entry id="it7">
+    <gl>this</gl>
+    <spell>questo</spell>
+    <hw>ˈkwesto</hw>
+  </entry>
+  <entry id="it8">
+    <gl>that</gl>
+    <spell>quello</spell>
+    <hw>ˈkwello</hw>
+  </entry>
+  <entry id="it9">
+    <gl>here</gl>
+    <spell>qui</spell>
+    <hw>kwi</hw>
+  </entry>
+  <entry id="it9.5">
+    <gl>here</gl>
+    <spell>qua</spell>
+    <hw>kwa</hw>
+  </entry>
+  <entry id="it10">
+    <gl>there</gl>
+    <spell>là</spell>
+    <hw>la</hw>
+  </entry>
+  <entry id="it11">
+    <gl>who</gl>
+    <spell>chi</spell>
+    <hw>ki</hw>
+  </entry>
+  <entry id="it12">
+    <gl>what</gl>
+    <spell>che</spell>
+    <hw>ke</hw>
+  </entry>
+  <entry id="it13">
+    <gl>where</gl>
+    <spell>dove</spell>
+    <hw>ˈdove</hw>
+  </entry>
+  <entry id="it14">
+    <gl>when</gl>
+    <spell>quando</spell>
+    <hw>ˈkwando</hw>
+  </entry>
+  <entry id="it15">
+    <gl>how</gl>
+    <spell>come</spell>
+    <hw>ˈkome</hw>
+  </entry>
+  <entry id="it16">
+    <gl>not</gl>
+    <spell>non</spell>
+    <hw>non</hw>
+  </entry>
+  <entry id="it17">
+    <gl>all</gl>
+    <spell>tutto</spell>
+    <hw>ˈtutto</hw>
+  </entry>
+  <entry id="it18">
+    <gl>many</gl>
+    <spell>molti</spell>
+    <hw>ˈmolti</hw>
+  </entry>
+  <entry id="it18">
+    <gl>many</gl>
+    <spell>tanti</spell>
+    <hw>ˈtanti</hw>
+  </entry>
+  <entry id="it19">
+    <gl>some</gl>
+    <spell>alcuni</spell>
+    <hw>alˈkuni</hw>
+  </entry>
+  <entry id="it19">
+    <gl>some</gl>
+    <spell>qualche</spell>
+    <hw>ˈkwalke</hw>
+  </entry>
+  <entry id="it20">
+    <gl>few</gl>
+    <spell>poco</spell>
+    <hw>ˈpɔko</hw>
+  </entry>
+  <entry id="it21">
+    <gl>other</gl>
+    <spell>altro</spell>
+    <hw>ˈaltro</hw>
+  </entry>
+  <entry id="it22">
+    <gl>one</gl>
+    <spell>uno</spell>
+    <hw>ˈuno</hw>
+  </entry>
+  <entry id="it23">
+    <gl>two</gl>
+    <spell>due</spell>
+    <hw>ˈdue</hw>
+  </entry>
+  <entry id="it24">
+    <gl>three</gl>
+    <spell>tre</spell>
+    <hw>tre</hw>
+  </entry>
+  <entry id="it25">
+    <gl>four</gl>
+    <spell>quattro</spell>
+    <hw>ˈkwattro</hw>
+  </entry>
+  <entry id="it26">
+    <gl>five</gl>
+    <spell>cinque</spell>
+    <hw>ˈt͡ʃinkwe</hw>
+  </entry>
+  <entry id="it27">
+    <gl>big</gl>
+    <spell>grande</spell>
+    <hw>ˈgrande</hw>
+  </entry>
+  <entry id="it28">
+    <gl>long</gl>
+    <spell>lungo</spell>
+    <hw>ˈlungo</hw>
+  </entry>
+  <entry id="it29">
+    <gl>wide</gl>
+    <spell>largo</spell>
+    <hw>ˈlargo</hw>
+  </entry>
+  <entry id="it30">
+    <gl>thick</gl>
+    <spell>spesso</spell>
+    <hw>ˈspesso</hw>
+  </entry>
+  <entry id="it31">
+    <gl>heavy</gl>
+    <spell>pesante</spell>
+    <hw>peˈsante</hw>
+  </entry>
+  <entry id="it32">
+    <gl>small</gl>
+    <spell>piccolo</spell>
+    <hw>ˈpikkolo</hw>
+  </entry>
+  <entry id="it33">
+    <gl>short</gl>
+    <spell>corto</spell>
+    <hw>ˈkorto</hw>
+  </entry>
+  <entry id="it34">
+    <gl>narrow</gl>
+    <spell>stretto</spell>
+    <hw>ˈstretto</hw>
+  </entry>
+  <entry id="it35">
+    <gl>thin</gl>
+    <spell>sottile</spell>
+    <hw>soˈttile</hw>
+  </entry>
+  <entry id="it36">
+    <gl>woman</gl>
+    <spell>donna</spell>
+    <hw>ˈdɔnna</hw>
+  </entry>
+  <entry id="it37">
+    <gl>man (male), man (human)</gl>
+    <spell>uomo, persona, essere umano</spell>
+    <hw>ˈwɔmo</hw>
+  </entry>
+  <entry id="it39">
+    <gl>child</gl>
+    <spell>bambino</spell>
+    <hw>bamˈbino</hw>
+  </entry>
+  <entry id="it40">
+    <gl>wife</gl>
+    <spell>moglie</spell>
+    <hw>ˈmoʎʎe</hw>
+  </entry>
+  <entry id="it41">
+    <gl>husband</gl>
+    <spell>marito</spell>
+    <hw>maˈrito</hw>
+  </entry>
+  <entry id="it42">
+    <gl>mother</gl>
+    <spell>madre</spell>
+    <hw>ˈmadre</hw>
+  </entry>
+  <entry id="it43">
+    <gl>father</gl>
+    <spell>padre</spell>
+    <hw>ˈpadre</hw>
+  </entry>
+  <entry id="it44">
+    <gl>animal</gl>
+    <spell>animale</spell>
+    <hw>aniˈmale</hw>
+  </entry>
+  <entry id="it45">
+    <gl>fish</gl>
+    <spell>pesce</spell>
+    <hw>ˈpeʃʃe</hw>
+  </entry>
+  <entry id="it46">
+    <gl>bird</gl>
+    <spell>uccello</spell>
+    <hw>uˈtt͡ʃɛllo</hw>
+  </entry>
+  <entry id="it47">
+    <gl>dog</gl>
+    <spell>cane</spell>
+    <hw>ˈkane</hw>
+  </entry>
+  <entry id="it48">
+    <gl>louse</gl>
+    <spell>pidocchio</spell>
+    <hw>piˈdɔkkjo</hw>
+  </entry>
+  <entry id="it49">
+    <gl>snake</gl>
+    <spell>serpente</spell>
+    <hw>serˈpɛnte</hw>
+  </entry>
+  <entry id="it50">
+    <gl>worm</gl>
+    <spell>verme</spell>
+    <hw>ˈvɛrme</hw>
+  </entry>
+  <entry id="it51">
+    <gl>tree</gl>
+    <spell>albero</spell>
+    <hw>ˈalbero</hw>
+  </entry>
+  <entry id="it52">
+    <gl>forest</gl>
+    <spell>selva</spell>
+    <hw>ˈselva</hw>
+  </entry>
+  <entry id="it53">
+    <gl>stick</gl>
+    <spell>bastone</spell>
+    <hw>basˈtone</hw>
+  </entry>
+  <entry id="it54">
+    <gl>fruit</gl>
+    <spell>frutta</spell>
+    <hw>ˈfrutta</hw>
+  </entry>
+  <entry id="it55">
+    <gl>seed</gl>
+    <spell>seme</spell>
+    <hw>ˈseme</hw>
+  </entry>
+  <entry id="it56">
+    <gl>leaf</gl>
+    <spell>foglia</spell>
+    <hw>ˈfɔʎʎa</hw>
+  </entry>
+  <entry id="it57">
+    <gl>root</gl>
+    <spell>radice</spell>
+    <hw>raˈdit͡ʃe</hw>
+  </entry>
+  <entry id="it58">
+    <gl>bark (of a tree)</gl>
+    <spell>corteccia</spell>
+    <hw>korˈtett͡ʃa</hw>
+  </entry>
+  <entry id="it59">
+    <gl>flower</gl>
+    <spell>fiore</spell>
+    <hw>ˈfjore</hw>
+  </entry>
+  <entry id="it60">
+    <gl>grass</gl>
+    <spell>erba</spell>
+    <hw>ˈɛrba</hw>
+  </entry>
+  <entry id="it61">
+    <gl>rope</gl>
+    <spell>corda</spell>
+    <hw>ˈkɔrda</hw>
+  </entry>
+  <entry id="it62">
+    <gl>skin</gl>
+    <spell>pelle</spell>
+    <hw>ˈpɛlle</hw>
+  </entry>
+  <entry id="it63">
+    <gl>meat</gl>
+    <spell>carne</spell>
+    <hw>ˈkarne</hw>
+  </entry>
+  <entry id="it64">
+    <gl>blood</gl>
+    <spell>sangue</spell>
+    <hw>ˈsangwe</hw>
+  </entry>
+  <entry id="it65">
+    <gl>bone</gl>
+    <spell>osso</spell>
+    <hw>ˈɔsso</hw>
+  </entry>
+  <entry id="it66">
+    <gl>fat (noun)</gl>
+    <spell>grasso</spell>
+    <hw>ˈgrasso</hw>
+  </entry>
+  <entry id="it67">
+    <gl>egg</gl>
+    <spell>uovo</spell>
+    <hw>ˈwɔvo</hw>
+  </entry>
+  <entry id="it68">
+    <gl>horn</gl>
+    <spell>corno</spell>
+    <hw>ˈkɔrno</hw>
+  </entry>
+  <entry id="it69">
+    <gl>tail</gl>
+    <spell>coda</spell>
+    <hw>ˈkoda</hw>
+  </entry>
+  <entry id="it70">
+    <gl>feather</gl>
+    <spell>piuma</spell>
+    <hw>ˈpjuma</hw>
+  </entry>
+  <entry id="it71">
+    <gl>hair</gl>
+    <spell>capelli</spell>
+    <hw>kaˈpelli</hw>
+  </entry>
+  <entry id="it71.5">
+    <gl>hair (singular)</gl>
+    <spell>capello</spell>
+    <hw>kaˈpello</hw>
+  </entry>
+  <entry id="it72">
+    <gl>head</gl>
+    <spell>testa</spell>
+    <hw>ˈtɛsta</hw>
+  </entry>
+  <entry id="it73">
+    <gl>ear</gl>
+    <spell>orecchio</spell>
+    <hw>oˈrekkjo</hw>
+  </entry>
+  <entry id="it73.5">
+    <gl>ear</gl>
+    <spell>orecchia</spell>
+    <hw>oˈrekkja</hw>
+  </entry>
+  <entry id="it74">
+    <gl>eye</gl>
+    <spell>occhio</spell>
+    <hw>ˈɔkkjo</hw>
+  </entry>
+  <entry id="it75">
+    <gl>nose</gl>
+    <spell>naso</spell>
+    <hw>ˈnaso</hw>
+  </entry>
+  <entry id="it76">
+    <gl>mouth</gl>
+    <spell>bocca</spell>
+    <hw>ˈbokka</hw>
+  </entry>
+  <entry id="it77">
+    <gl>tooth</gl>
+    <spell>dente</spell>
+    <hw>ˈdɛnte</hw>
+  </entry>
+  <entry id="it78">
+    <gl>tongue</gl>
+    <spell>lingua</spell>
+    <hw>ˈlingwa</hw>
+  </entry>
+  <entry id="it79">
+    <gl>fingernail</gl>
+    <spell>unghia</spell>
+    <hw>ˈungja</hw>
+  </entry>
+  <entry id="it80">
+    <gl>foot</gl>
+    <spell>piede</spell>
+    <hw>ˈpjɛde</hw>
+  </entry>
+  <entry id="it81">
+    <gl>leg</gl>
+    <spell>gamba</spell>
+    <hw>ˈgamba</hw>
+  </entry>
+  <entry id="it82">
+    <gl>knee</gl>
+    <spell>ginocchio</spell>
+    <hw>d͡ʒiˈnɔkkjo</hw>
+  </entry>
+  <entry id="it83">
+    <gl>hand</gl>
+    <spell>mano</spell>
+    <hw>ˈmano</hw>
+  </entry>
+  <entry id="it84">
+    <gl>wing</gl>
+    <spell>ala</spell>
+    <hw>ˈala</hw>
+  </entry>
+  <entry id="it85">
+    <gl>belly</gl>
+    <spell>pancia</spell>
+    <hw>ˈpant͡ʃa</hw>
+  </entry>
+  <entry id="it86">
+    <gl>guts</gl>
+    <spell>intestino</spell>
+    <hw>intesˈtino</hw>
+  </entry>
+  <entry id="it87">
+    <gl>neck</gl>
+    <spell>collo</spell>
+    <hw>ˈkɔllo</hw>
+  </entry>
+  <entry id="it88">
+    <gl>back</gl>
+    <spell>schiena</spell>
+    <hw>ˈskjɛna</hw>
+  </entry>
+  <entry id="it89">
+    <gl>breast</gl>
+    <spell>petto</spell>
+    <hw>ˈpɛtto</hw>
+  </entry>
+  <entry id="it89.5">
+    <gl>breast</gl>
+    <spell>mammella</spell>
+    <hw>mamˈmɛlla</hw>
+  </entry>
+  <entry id="it90">
+    <gl>heart</gl>
+    <spell>cuore</spell>
+    <hw>ˈkwɔre</hw>
+  </entry>
+  <entry id="it91">
+    <gl>liver</gl>
+    <spell>fegato</spell>
+    <hw>ˈfegato</hw>
+  </entry>
+  <entry id="it92">
+    <gl>to drink</gl>
+    <spell>bere</spell>
+    <hw>ˈbere</hw>
+  </entry>
+  <entry id="it93">
+    <gl>to eat</gl>
+    <spell>mangiare</spell>
+    <hw>manˈd͡ʒare</hw>
+  </entry>
+  <entry id="it94">
+    <gl>to bite</gl>
+    <spell>mordere</spell>
+    <hw>ˈmɔrdere</hw>
+  </entry>
+  <entry id="it95">
+    <gl>to suck</gl>
+    <spell>succhiare</spell>
+    <hw>suˈkkjare</hw>
+  </entry>
+  <entry id="it96">
+    <gl>to spit</gl>
+    <spell>sputare</spell>
+    <hw>spuˈtare</hw>
+  </entry>
+  <entry id="it97">
+    <gl>to vomit</gl>
+    <spell>vomitare</spell>
+    <hw>vomiˈtare</hw>
+  </entry>
+  <entry id="it98">
+    <gl>to blow</gl>
+    <spell>soffiare</spell>
+    <hw>sofˈfjare</hw>
+  </entry>
+  <entry id="it99">
+    <gl>to breathe</gl>
+    <spell>respirare</spell>
+    <hw>respiˈrare</hw>
+  </entry>
+  <entry id="it100">
+    <gl>to laugh</gl>
+    <spell>ridere</spell>
+    <hw>ˈridere</hw>
+  </entry>
+  <entry id="it101">
+    <gl>to see</gl>
+    <spell>vedere</spell>
+    <hw>veˈdere</hw>
+  </entry>
+  <entry id="it102">
+    <gl>to hear</gl>
+    <spell>udire</spell>
+    <hw>uˈdire</hw>
+  </entry>
+  <entry id="it103">
+    <gl>to know</gl>
+    <spell>sapere</spell>
+    <hw>saˈpere</hw>
+  </entry>
+  <entry id="it104">
+    <gl>to think</gl>
+    <spell>pensare</spell>
+    <hw>penˈsare</hw>
+  </entry>
+  <entry id="it105">
+    <gl>to smell</gl>
+    <spell>odorare</spell>
+    <hw>odoˈrare</hw>
+  </entry>
+  <entry id="it106">
+    <gl>to fear</gl>
+    <spell>temere</spell>
+    <hw>teˈmere</hw>
+  </entry>
+  <entry id="it107">
+    <gl>to sleep</gl>
+    <spell>dormire</spell>
+    <hw>dorˈmire</hw>
+  </entry>
+  <entry id="it108">
+    <gl>to live</gl>
+    <spell>vivere</spell>
+    <hw>ˈvivere</hw>
+  </entry>
+  <entry id="it109">
+    <gl>to die</gl>
+    <spell>morire</spell>
+    <hw>moˈrire</hw>
+  </entry>
+  <entry id="it110">
+    <gl>to kill</gl>
+    <spell>uccidere</spell>
+    <hw>uˈtt͡ʃidere</hw>
+  </entry>
+  <entry id="it111">
+    <gl>to fight</gl>
+    <spell>combattere</spell>
+    <hw>komˈbattere</hw>
+  </entry>
+  <entry id="it112">
+    <gl>to hunt</gl>
+    <spell>cacciare</spell>
+    <hw>kaˈtt͡ʃare</hw>
+  </entry>
+  <entry id="it113">
+    <gl>to hit</gl>
+    <spell>colpire</spell>
+    <hw>kolˈpire</hw>
+  </entry>
+  <entry id="it114">
+    <gl>to cut</gl>
+    <spell>tagliare</spell>
+    <hw>taʎˈʎare</hw>
+  </entry>
+  <entry id="it115">
+    <gl>to split</gl>
+    <spell>fendere</spell>
+    <hw>ˈfɛndere</hw>
+  </entry>
+  <entry id="it116">
+    <gl>to stab</gl>
+    <spell>pugnalare</spell>
+    <hw>puɲɲaˈlare</hw>
+  </entry>
+  <entry id="it117">
+    <gl>to scratch</gl>
+    <spell>graffiare</spell>
+    <hw>grafˈfjare</hw>
+  </entry>
+  <entry id="it118">
+    <gl>to dig</gl>
+    <spell>scavare</spell>
+    <hw>skaˈvare</hw>
+  </entry>
+  <entry id="it118">
+    <gl>to take out</gl>
+    <spell>scavare</spell>
+    <hw>kaˈvare</hw>
+  </entry>
+  <entry id="it119">
+    <gl>to swim</gl>
+    <spell>nuotare</spell>
+    <hw>nwoˈtare</hw>
+  </entry>
+  <entry id="it120">
+    <gl>to fly</gl>
+    <spell>volare</spell>
+    <hw>voˈlare</hw>
+  </entry>
+  <entry id="it121">
+    <gl>to walk</gl>
+    <spell>camminare</spell>
+    <hw>kammiˈnare</hw>
+  </entry>
+  <entry id="it122">
+    <gl>to come</gl>
+    <spell>venire</spell>
+    <hw>veˈnire</hw>
+  </entry>
+  <entry id="it123">
+    <gl>to lie (as in a bed)</gl>
+    <spell>giacere</spell>
+    <hw>d͡ʒaˈt͡ʃere</hw>
+  </entry>
+  <entry id="it124">
+    <gl>to sit</gl>
+    <spell>sedere (action)</spell>
+    <hw>seˈdere</hw>
+  </entry>
+  <entry id="it124.1">
+    <gl>to sit</gl>
+    <spell>essere seduto</spell>
+    <hw>ˈɛssere seˈduto</hw>
+  </entry>
+  <entry id="it124.2">
+    <gl>to sit</gl>
+    <spell>stare seduto (state)</spell>
+    <hw>ˈstare seˈduto</hw>
+  </entry>
+  <entry id="it125">
+    <gl>to stand</gl>
+    <spell>stare in piedi (state)</spell>
+    <hw>ˈstare im ˈpjɛdi</hw>
+  </entry>
+  <entry id="it126">
+    <gl>to turn (intransitive)</gl>
+    <spell>girare</spell>
+    <hw>d͡ʒiˈrare</hw>
+  </entry>
+  <entry id="it127">
+    <gl>to fall</gl>
+    <spell>cadere</spell>
+    <hw>kaˈdere</hw>
+  </entry>
+  <entry id="it128">
+    <gl>to give</gl>
+    <spell>dare</spell>
+    <hw>ˈdare</hw>
+  </entry>
+  <entry id="it129">
+    <gl>to hold</gl>
+    <spell>tenere</spell>
+    <hw>teˈnere</hw>
+  </entry>
+  <entry id="it130">
+    <gl>to squeeze</gl>
+    <spell>spremere</spell>
+    <hw>ˈsprɛmere</hw>
+  </entry>
+  <entry id="it131">
+    <gl>to rub</gl>
+    <spell>strofinare</spell>
+    <hw>strofiˈnare</hw>
+  </entry>
+  <entry id="it132">
+    <gl>to wash</gl>
+    <spell>lavare</spell>
+    <hw>laˈvare</hw>
+  </entry>
+  <entry id="it133">
+    <gl>to wipe</gl>
+    <spell>asciugare</spell>
+    <hw>aʃʃuˈgare</hw>
+  </entry>
+  <entry id="it134">
+    <gl>to pull</gl>
+    <spell>tirare</spell>
+    <hw>tiˈrare</hw>
+  </entry>
+  <entry id="it135">
+    <gl>to push</gl>
+    <spell>spingere</spell>
+    <hw>ˈspind͡ʒere</hw>
+  </entry>
+  <entry id="it136">
+    <gl>to throw</gl>
+    <spell>lanciare</spell>
+    <hw>lanˈt͡ʃare</hw>
+  </entry>
+  <entry id="it137">
+    <gl>to tie</gl>
+    <spell>legare</spell>
+    <hw>leˈgare</hw>
+  </entry>
+  <entry id="it138">
+    <gl>to sew</gl>
+    <spell>cucire</spell>
+    <hw>kuˈt͡ʃire</hw>
+  </entry>
+  <entry id="it139">
+    <gl>to count</gl>
+    <spell>contare</spell>
+    <hw>konˈtare</hw>
+  </entry>
+  <entry id="it140">
+    <gl>to say</gl>
+    <spell>dire</spell>
+    <hw>ˈdire</hw>
+  </entry>
+  <entry id="it141">
+    <gl>to sing</gl>
+    <spell>cantare</spell>
+    <hw>kanˈtare</hw>
+  </entry>
+  <entry id="it142">
+    <gl>to play</gl>
+    <spell>giocare</spell>
+    <hw>d͡ʒoˈkare</hw>
+  </entry>
+  <entry id="it143">
+    <gl>to float</gl>
+    <spell>galleggiare</spell>
+    <hw>galleˈdd͡ʒare</hw>
+  </entry>
+  <entry id="it144">
+    <gl>to flow</gl>
+    <spell>fluire</spell>
+    <hw>fluˈire</hw>
+  </entry>
+  <entry id="it145">
+    <gl>to freeze</gl>
+    <spell>gelare</spell>
+    <hw>d͡ʒeˈlare</hw>
+  </entry>
+  <entry id="it146">
+    <gl>to swell</gl>
+    <spell>gonfiarsi</spell>
+    <hw>gonˈfjarsi</hw>
+  </entry>
+  <entry id="it147">
+    <gl>sun</gl>
+    <spell>sole</spell>
+    <hw>ˈsole</hw>
+  </entry>
+  <entry id="it148">
+    <gl>moon</gl>
+    <spell>luna</spell>
+    <hw>ˈluna</hw>
+  </entry>
+  <entry id="it149">
+    <gl>star</gl>
+    <spell>stella</spell>
+    <hw>ˈstella</hw>
+  </entry>
+  <entry id="it150">
+    <gl>water</gl>
+    <spell>acqua</spell>
+    <hw>ˈakkwa</hw>
+  </entry>
+  <entry id="it151">
+    <gl>rain</gl>
+    <spell>pioggia</spell>
+    <hw>ˈpjɔdd͡ʒa</hw>
+  </entry>
+  <entry id="it152">
+    <gl>river</gl>
+    <spell>fiume</spell>
+    <hw>ˈfjume</hw>
+  </entry>
+  <entry id="it153">
+    <gl>lake</gl>
+    <spell>lago</spell>
+    <hw>ˈlago</hw>
+  </entry>
+  <entry id="it154">
+    <gl>sea</gl>
+    <spell>mare</spell>
+    <hw>ˈmare</hw>
+  </entry>
+  <entry id="it155">
+    <gl>salt</gl>
+    <spell>sale</spell>
+    <hw>ˈsale</hw>
+  </entry>
+  <entry id="it156">
+    <gl>stone</gl>
+    <spell>pietra</spell>
+    <hw>ˈpjɛtra</hw>
+  </entry>
+  <entry id="it157">
+    <gl>sand</gl>
+    <spell>sabbia</spell>
+    <hw>ˈsabbja</hw>
+  </entry>
+  <entry id="it158">
+    <gl>dust</gl>
+    <spell>polvere</spell>
+    <hw>ˈpolvere</hw>
+  </entry>
+  <entry id="it159">
+    <gl>earth</gl>
+    <spell>suolo</spell>
+    <hw>ˈswɔlo</hw>
+  </entry>
+  <entry id="it159.5">
+    <gl>earth</gl>
+    <spell>terra</spell>
+    <hw>ˈtɛrra</hw>
+  </entry>
+  <entry id="it160">
+    <gl>cloud</gl>
+    <spell>nuvola</spell>
+    <hw>ˈnuvola</hw>
+  </entry>
+  <entry id="it161">
+    <gl>fog</gl>
+    <spell>nebbia</spell>
+    <hw>ˈnebbja</hw>
+  </entry>
+  <entry id="it162">
+    <gl>sky</gl>
+    <spell>cielo</spell>
+    <hw>ˈt͡ʃɛlo</hw>
+  </entry>
+  <entry id="it163">
+    <gl>wind</gl>
+    <spell>vento</spell>
+    <hw>ˈvɛnto</hw>
+  </entry>
+  <entry id="it164">
+    <gl>snow</gl>
+    <spell>neve</spell>
+    <hw>ˈneve</hw>
+  </entry>
+  <entry id="it165">
+    <gl>ice</gl>
+    <spell>ghiaccio</spell>
+    <hw>ˈgjatt͡ʃo</hw>
+  </entry>
+  <entry id="it166">
+    <gl>smoke</gl>
+    <spell>fumo</spell>
+    <hw>ˈfumo</hw>
+  </entry>
+  <entry id="it167">
+    <gl>fire</gl>
+    <spell>fuoco</spell>
+    <hw>ˈfwɔko</hw>
+  </entry>
+  <entry id="it168">
+    <gl>ash</gl>
+    <spell>ceneri</spell>
+    <hw>ˈt͡ʃeneri</hw>
+  </entry>
+  <entry id="it169">
+    <gl>to burn</gl>
+    <spell>bruciare</spell>
+    <hw>bruˈt͡ʃare</hw>
+  </entry>
+  <entry id="it170">
+    <gl>road</gl>
+    <spell>strada</spell>
+    <hw>ˈstrada</hw>
+  </entry>
+  <entry id="it171">
+    <gl>mountain</gl>
+    <spell>montagna</spell>
+    <hw>monˈtaɲɲa</hw>
+  </entry>
+  <entry id="it172">
+    <gl>red</gl>
+    <spell>rosso</spell>
+    <hw>ˈrosso</hw>
+  </entry>
+  <entry id="it173">
+    <gl>green</gl>
+    <spell>verde</spell>
+    <hw>ˈverde</hw>
+  </entry>
+  <entry id="it174">
+    <gl>yellow</gl>
+    <spell>giallo</spell>
+    <hw>ˈd͡ʒallo</hw>
+  </entry>
+  <entry id="it175">
+    <gl>white</gl>
+    <spell>bianco</spell>
+    <hw>ˈbjanko</hw>
+  </entry>
+  <entry id="it176">
+    <gl>black</gl>
+    <spell>nero</spell>
+    <hw>ˈnero</hw>
+  </entry>
+  <entry id="it177">
+    <gl>night</gl>
+    <spell>notte</spell>
+    <hw>ˈnɔtte</hw>
+  </entry>
+  <entry id="it178">
+    <gl>day</gl>
+    <spell>giorno</spell>
+    <hw>ˈd͡ʒorno</hw>
+  </entry>
+  <entry id="it179">
+    <gl>year</gl>
+    <spell>anno</spell>
+    <hw>ˈanno</hw>
+  </entry>
+  <entry id="it180">
+    <gl>warm</gl>
+    <spell>caldo</spell>
+    <hw>ˈkaldo</hw>
+  </entry>
+  <entry id="it181">
+    <gl>cold</gl>
+    <spell>freddo</spell>
+    <hw>ˈfreddo</hw>
+  </entry>
+  <entry id="it182">
+    <gl>full</gl>
+    <spell>pieno</spell>
+    <hw>ˈpjɛno</hw>
+  </entry>
+  <entry id="it183">
+    <gl>new</gl>
+    <spell>nuovo</spell>
+    <hw>ˈnwɔvo</hw>
+  </entry>
+  <entry id="it184">
+    <gl>old</gl>
+    <spell>vecchio</spell>
+    <hw>ˈvɛkkjo</hw>
+  </entry>
+  <entry id="it185">
+    <gl>good</gl>
+    <spell>buono</spell>
+    <hw>ˈbwɔno</hw>
+  </entry>
+  <entry id="it186">
+    <gl>bad</gl>
+    <spell>cattivo</spell>
+    <hw>kaˈttivo</hw>
+  </entry>
+  <entry id="it187">
+    <gl>rotten</gl>
+    <spell>marcio</spell>
+    <hw>ˈmart͡ʃo</hw>
+  </entry>
+  <entry id="it188">
+    <gl>dirty</gl>
+    <spell>sporco</spell>
+    <hw>ˈspɔrko</hw>
+  </entry>
+  <entry id="it189">
+    <gl>straight</gl>
+    <spell>dritto</spell>
+    <hw>dritto</hw>
+  </entry>
+  <entry id="it190">
+    <gl>round</gl>
+    <spell>rotondo</spell>
+    <hw>roˈtondo</hw>
+  </entry>
+  <entry id="it191">
+    <gl>sharp (as a knife)</gl>
+    <spell>aguzzo</spell>
+    <hw>aˈgutt͡so</hw>
+  </entry>
+  <entry id="it191">
+    <gl>sharp (as a knife)</gl>
+    <spell>affilato</spell>
+    <hw>affiˈlato</hw>
+  </entry>
+  <entry id="it192">
+    <gl>dull (as a knife)</gl>
+    <spell>smussato</spell>
+    <hw>zmusˈsato</hw>
+  </entry>
+  <entry id="it193">
+    <gl>smooth</gl>
+    <spell>liscio</spell>
+    <hw>ˈliʃʃo</hw>
+  </entry>
+  <entry id="it194">
+    <gl>wet</gl>
+    <spell>bagnato</spell>
+    <hw>baɲˈɲato</hw>
+  </entry>
+  <entry id="it195">
+    <gl>dry</gl>
+    <spell>asciutto</spell>
+    <hw>aʃˈʃutto</hw>
+  </entry>
+  <entry id="it195.5">
+    <gl>dry</gl>
+    <spell>secco</spell>
+    <hw>ˈsekko</hw>
+  </entry>
+  <entry id="it196">
+    <gl>correct</gl>
+    <spell>corretto</spell>
+    <hw>korˈrɛtto</hw>
+  </entry>
+  <entry id="it197">
+    <gl>near</gl>
+    <spell>vicino</spell>
+    <hw>viˈt͡ʃino</hw>
+  </entry>
+  <entry id="it198">
+    <gl>far</gl>
+    <spell>lontano</spell>
+    <hw>lonˈtano</hw>
+  </entry>
+  <entry id="it199">
+    <gl>right</gl>
+    <spell>destra</spell>
+    <hw>ˈdɛstra</hw>
+  </entry>
+  <entry id="it200">
+    <gl>left</gl>
+    <spell>sinistra</spell>
+    <hw>siˈnistra</hw>
+  </entry>
+  <entry id="it201">
+    <gl>at</gl>
+    <spell>a</spell>
+    <hw>a</hw>
+  </entry>
+  <entry id="it202">
+    <gl>in</gl>
+    <spell>in</spell>
+    <hw>in</hw>
+  </entry>
+  <entry id="it203">
+    <gl>with</gl>
+    <spell>con</spell>
+    <hw>kon</hw>
+  </entry>
+  <entry id="it204">
+    <gl>and</gl>
+    <spell>e</spell>
+    <hw>e</hw>
+  </entry>
+  <entry id="it205">
+    <gl>if</gl>
+    <spell>se</spell>
+    <hw>se</hw>
+  </entry>
+  <entry id="it206">
+    <gl>because</gl>
+    <spell>perché</spell>
+    <hw>perˈke</hw>
+  </entry>
+  <entry id="it207">
+    <gl>name</gl>
+    <spell>nome</spell>
+    <hw>ˈnome</hw>
+  </entry>
+  <entry id="it208">
+    <gl>flat</gl>
+    <spell>piano</spell>
+    <hw>ˈpjano</hw>
+  </entry>
+  <entry id="it209">
+    <gl>to beat, throb</gl>
+    <spell>pulsare</spell>
+    <hw>pulˈsare</hw>
+  </entry>
+  <entry id="it210">
+    <gl>to inflate, swell</gl>
+    <spell>enflare</spell>
+    <hw>enˈflare</hw>
+  </entry>
+  <entry id="it211">
+    <gl>six</gl>
+    <spell>sei</spell>
+    <hw>ˈsɛi</hw>
+  </entry>
+  <entry id="it212">
+    <gl>seven</gl>
+    <spell>sette</spell>
+    <hw>ˈsɛtte</hw>
+  </entry>
+  <entry id="it213">
+    <gl>eight</gl>
+    <spell>otto</spell>
+    <hw>ˈɔtto</hw>
+  </entry>
+  <entry id="it214">
+    <gl>nine</gl>
+    <spell>nove</spell>
+    <hw>ˈnɔve</hw>
+  </entry>
+  <entry id="it215">
+    <gl>ten</gl>
+    <spell>dieci</spell>
+    <hw>ˈdjɛt͡ʃi</hw>
+  </entry>
+</lexicon>

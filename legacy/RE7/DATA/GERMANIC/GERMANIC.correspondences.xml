@@ -1,0 +1,899 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+  <parameters>
+    <canon name="syllabe" value="IC?C?G?VC?C?V?C?F"/>
+    <class name="A" value="a,e,i,o,u,,̇ˇ,ɑ,ᴮ,t̑"/>
+    <class name="E" value="p,b,m,t,d,n,l,r,k,g,a,e,i,o,u,,̇ˇ,ɑ,ᴮ,t̑"/>
+    <class name="H" value="j"/>
+    <class name="K" value="p,b,f,v,t,d,ɪ,ɖ,l,r,s,ʁ,k,g,ȴ,a,e,i,o,u,,̇ˇ,ɑ,ᴮ,t̑"/>
+    <class name="N" value="n,m"/>
+    <class name="O" value="p,b,f,v,t,d,ɪ,ɖ,l,r,s,ʁ,k,g,ȴ,a,e,i,o,u,,̇ˇ,ɑ,ᴮ,t̑"/>
+    <class name="P" value="f,v,ɪ,ɖ,s,ʁ,x,ȴ"/>
+    <class name="Q" value="p,b,m,f,v,t,d,ɪ,ɖ,n,l,r,s,ʁ,k,g,ȴ,a,e,i,o,u,,̇ˇ,ɑ,ᴮ,t̑"/>
+    <class name="S" value="s,ʁ"/>
+    <class name="T" value="p,b,m,f,v,t,d,ɪ,ɖ,n,l,r,k,g,ȴ,a,e,i,o,u,,̇ˇ,ɑ,ᴮ,t̑"/>
+    <spec name="supra_segmentals" value=""/>
+  </parameters>
+  <corr num="1">
+    <proto syll="I">b</proto>
+    <modern dialecte="OEP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>b</seg>
+    </modern>
+  </corr>
+  <corr num="2">
+    <proto syll="I">d</proto>
+    <modern dialecte="OEP">
+      <seg>d</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>d</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>d</seg>
+    </modern>
+  </corr>
+  <corr num="3">
+    <proto syll="I">f</proto>
+    <modern dialecte="OEP">
+      <seg>f</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>f</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>f</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>f</seg>
+    </modern>
+  </corr>
+  <corr num="4">
+    <proto syll="I">g</proto>
+    <modern dialecte="OEP">
+      <seg>y</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>g</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>g</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>g</seg>
+    </modern>
+  </corr>
+  <corr num="5">
+    <proto syll="I">k</proto>
+    <modern dialecte="OEP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>kx</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>k</seg>
+    </modern>
+  </corr>
+  <corr num="6">
+    <proto syll="I">l</proto>
+    <modern dialecte="OEP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>l</seg>
+    </modern>
+  </corr>
+  <corr num="7">
+    <proto syll="I">m</proto>
+    <modern dialecte="OEP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>m</seg>
+    </modern>
+  </corr>
+  <corr num="8">
+    <proto syll="I">n</proto>
+    <modern dialecte="OEP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>n</seg>
+    </modern>
+  </corr>
+  <corr num="9">
+    <proto syll="I">p</proto>
+    <modern dialecte="OEP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>pf</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>p</seg>
+    </modern>
+  </corr>
+  <corr num="10">
+    <proto syll="I">r</proto>
+    <modern dialecte="OEP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>r</seg>
+    </modern>
+  </corr>
+  <corr num="11">
+    <proto syll="I">s</proto>
+    <modern dialecte="OEP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>s</seg>
+    </modern>
+  </corr>
+  <corr num="12">
+    <proto syll="I">t</proto>
+    <modern dialecte="OEP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ts</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>t</seg>
+    </modern>
+  </corr>
+  <corr num="13">
+    <proto syll="I">x</proto>
+    <modern dialecte="OEP">
+      <seg>h</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>h</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>h</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>h</seg>
+    </modern>
+  </corr>
+  <corr num="14">
+    <proto syll="I">ɪ</proto>
+    <modern dialecte="OEP">
+      <seg>ɪ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>d</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ɪ</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ɪ</seg>
+    </modern>
+  </corr>
+  <corr num="15">
+    <proto contextL="N" syll="C">b</proto>
+    <modern dialecte="OEP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>b</seg>
+    </modern>
+  </corr>
+  <corr num="16">
+    <proto contextL="N" syll="C">d</proto>
+    <modern dialecte="OEP">
+      <seg>d</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>d</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>d</seg>
+    </modern>
+  </corr>
+  <corr num="17">
+    <proto contextL="N" syll="C">g</proto>
+    <modern dialecte="OEP">
+      <seg>g</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>g</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>g</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>g</seg>
+    </modern>
+  </corr>
+  <corr num="18">
+    <proto contextR="H" syll="C">k</proto>
+    <modern dialecte="OEP">
+      <seg>đ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>k</seg>
+    </modern>
+  </corr>
+  <corr num="19">
+    <proto contextR="H" syll="C">k</proto>
+    <modern dialecte="OEP">
+      <seg>đ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>kx</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>k</seg>
+    </modern>
+  </corr>
+  <corr num="20">
+    <proto contextL="Q" syll="C">k</proto>
+    <modern dialecte="OEP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>xx</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>k</seg>
+    </modern>
+  </corr>
+  <corr num="21">
+    <proto contextL="S" syll="C">k</proto>
+    <modern dialecte="OEP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>k</seg>
+    </modern>
+  </corr>
+  <corr num="22">
+    <proto syll="C">l</proto>
+    <modern dialecte="OEP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>l</seg>
+    </modern>
+  </corr>
+  <corr num="23">
+    <proto syll="C">m</proto>
+    <modern dialecte="OEP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>m</seg>
+    </modern>
+  </corr>
+  <corr num="24">
+    <proto syll="C">n</proto>
+    <modern dialecte="OEP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>n</seg>
+    </modern>
+  </corr>
+  <corr num="25">
+    <proto contextL="s" syll="C">p</proto>
+    <modern dialecte="OEP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>p</seg>
+    </modern>
+  </corr>
+  <corr num="26">
+    <proto contextL="T" syll="C">p</proto>
+    <modern dialecte="OEP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>pf</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>p</seg>
+    </modern>
+  </corr>
+  <corr num="27">
+    <proto syll="C">r</proto>
+    <modern dialecte="OEP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>r</seg>
+    </modern>
+  </corr>
+  <corr num="28">
+    <proto syll="C">s</proto>
+    <modern dialecte="OEP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>s</seg>
+    </modern>
+  </corr>
+  <corr num="29">
+    <proto contextR="H" syll="C">t</proto>
+    <modern dialecte="OEP">
+      <seg>tt</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ts</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>t</seg>
+    </modern>
+  </corr>
+  <corr num="30">
+    <proto contextL="P" syll="C">t</proto>
+    <modern dialecte="OEP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>t</seg>
+    </modern>
+  </corr>
+  <corr num="31">
+    <proto contextL="A" syll="C">v</proto>
+    <modern dialecte="OEP">
+      <seg>v</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>v</seg>
+    </modern>
+  </corr>
+  <corr num="32">
+    <proto contextR="K" syll="C">x</proto>
+    <modern dialecte="OEP">
+      <seg>x</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>x</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>x</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ɤ</seg>
+    </modern>
+  </corr>
+  <corr num="33">
+    <proto contextL="A" syll="C">x</proto>
+    <modern dialecte="OEP">
+      <seg>ɤ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>h</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>h</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ɤ</seg>
+    </modern>
+  </corr>
+  <corr num="34">
+    <proto contextL="A" syll="C">ɖ</proto>
+    <modern dialecte="OEP">
+      <seg>ɖ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>d</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ɪ</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ɖ</seg>
+    </modern>
+  </corr>
+  <corr num="35">
+    <proto syll="F">an</proto>
+    <modern dialecte="OEP">
+      <seg>an</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>an</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>an</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>a</seg>
+    </modern>
+  </corr>
+  <corr num="36">
+    <proto syll="F">as</proto>
+    <modern dialecte="OEP">
+      <seg>as</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>a</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ᴮs</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ar</seg>
+    </modern>
+  </corr>
+  <corr num="37">
+    <proto syll="F">k</proto>
+    <modern dialecte="OEP">
+      <seg>đ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>xx</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>k</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>k</seg>
+    </modern>
+  </corr>
+  <corr num="38">
+    <proto syll="F">l</proto>
+    <modern dialecte="OEP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>l</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>l</seg>
+    </modern>
+  </corr>
+  <corr num="39">
+    <proto syll="F">m</proto>
+    <modern dialecte="OEP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>m</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>m</seg>
+    </modern>
+  </corr>
+  <corr num="40">
+    <proto syll="F">n</proto>
+    <modern dialecte="OEP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>n</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>n</seg>
+    </modern>
+  </corr>
+  <corr num="41">
+    <proto syll="F">p</proto>
+    <modern dialecte="OEP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ff</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>p</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>p</seg>
+    </modern>
+  </corr>
+  <corr num="42">
+    <proto syll="F">r</proto>
+    <modern dialecte="OEP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>r</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>r</seg>
+    </modern>
+  </corr>
+  <corr num="43">
+    <proto syll="F">s</proto>
+    <modern dialecte="OEP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>s</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>s</seg>
+    </modern>
+  </corr>
+  <corr num="44">
+    <proto syll="F">t</proto>
+    <modern dialecte="OEP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ss</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>t</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>t</seg>
+    </modern>
+  </corr>
+  <corr num="45">
+    <proto syll="F">v</proto>
+    <modern dialecte="OEP">
+      <seg>f</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>b</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>f</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>f</seg>
+    </modern>
+  </corr>
+  <corr num="46">
+    <proto syll="F">ȴ</proto>
+    <modern dialecte="OEP">
+      <seg>x</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>x</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>x</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ɤ</seg>
+    </modern>
+  </corr>
+  <corr num="47">
+    <proto syll="V">a</proto>
+    <modern dialecte="OEP">
+      <seg>a</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>a</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>a</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>a</seg>
+    </modern>
+  </corr>
+  <corr num="48">
+    <proto syll="V"> ̇</proto>
+    <modern dialecte="OEP">
+      <seg> ̇</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg> ̇</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg> ̇</seg>
+    </modern>
+  </corr>
+  <corr num="49">
+    <proto syll="V">aq</proto>
+    <modern dialecte="OEP">
+      <seg> ̇</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ei</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ai</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ai</seg>
+    </modern>
+  </corr>
+  <corr num="50">
+    <proto syll="V">au</proto>
+    <modern dialecte="OEP">
+      <seg>ˇa</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ᴮ</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>au</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>au</seg>
+    </modern>
+  </corr>
+  <corr num="51">
+    <proto syll="V">e</proto>
+    <modern dialecte="OEP">
+      <seg>e</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>e</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>e</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>e</seg>
+    </modern>
+  </corr>
+  <corr num="52">
+    <proto syll="V">ˇ</proto>
+    <modern dialecte="OEP">
+      <seg>ˇ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ˇ</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ˇ</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ˇ</seg>
+    </modern>
+  </corr>
+  <corr num="53">
+    <proto syll="V">i</proto>
+    <modern dialecte="OEP">
+      <seg>i</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>i</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>i</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>i</seg>
+    </modern>
+  </corr>
+  <corr num="54">
+    <proto syll="V">ɑ</proto>
+    <modern dialecte="OEP">
+      <seg>ɑ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ɑ</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ɑ</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ɑ</seg>
+    </modern>
+  </corr>
+  <corr num="55">
+    <proto syll="V">o</proto>
+    <modern dialecte="OEP">
+      <seg>o</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>o</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>o</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>o</seg>
+    </modern>
+  </corr>
+  <corr num="56">
+    <proto syll="V">ᴮ</proto>
+    <modern dialecte="OEP">
+      <seg>ᴮ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ᴮ</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>ᴮ</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>ᴮ</seg>
+    </modern>
+  </corr>
+  <corr num="57">
+    <proto syll="V">u</proto>
+    <modern dialecte="OEP">
+      <seg>u</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>u</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>u</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>u</seg>
+    </modern>
+  </corr>
+  <corr num="58">
+    <proto syll="V">t̑</proto>
+    <modern dialecte="OEP">
+      <seg>t̑</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>t̑</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>t̑</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>t̑</seg>
+    </modern>
+  </corr>
+  <corr num="59">
+    <proto syll="G">j</proto>
+    <modern dialecte="OEP">
+      <seg>ɤ</seg>
+    </modern>
+    <modern dialecte="OHGP">
+      <seg>ɤ</seg>
+    </modern>
+    <modern dialecte="GotP">
+      <seg>j</seg>
+    </modern>
+    <modern dialecte="ONP">
+      <seg>j</seg>
+    </modern>
+  </corr>
+</tableOfCorr>

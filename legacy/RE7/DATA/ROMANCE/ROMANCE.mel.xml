@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<semantics>
+  <mel id="rom-wn1">
+    <gl>all</gl>
+  </mel>
+  <mel id="rom-wn2">
+    <gl>and</gl>
+  </mel>
+  <mel id="rom-wn3">
+    <gl>animal</gl>
+  </mel>
+  <mel id="rom-wn4">
+    <gl>ash</gl>
+  </mel>
+  <mel id="rom-wn5">
+    <gl>bark (of a tree)</gl>
+  </mel>
+  <mel id="rom-wn6">
+    <gl>belly</gl>
+  </mel>
+  <mel id="rom-wn7">
+    <gl>big</gl>
+  </mel>
+  <mel id="rom-wn8">
+    <gl>bird</gl>
+  </mel>
+  <mel id="rom-wn9">
+    <gl>black</gl>
+  </mel>
+  <mel id="rom-wn10">
+    <gl>bone</gl>
+  </mel>
+  <mel id="rom-wn11">
+    <gl>breast</gl>
+  </mel>
+  <mel id="rom-wn12">
+    <gl>cloud</gl>
+  </mel>
+  <mel id="rom-wn13">
+    <gl>cold</gl>
+  </mel>
+  <mel id="rom-wn14">
+    <gl>correct</gl>
+    <gl>straight</gl>
+  </mel>
+  <mel id="rom-wn15">
+    <gl>day</gl>
+  </mel>
+  <mel id="rom-wn16">
+    <gl>dog</gl>
+  </mel>
+  <mel id="rom-wn17">
+    <gl>dry</gl>
+  </mel>
+  <mel id="rom-wn18">
+    <gl>dull (as a knife)</gl>
+  </mel>
+  <mel id="rom-wn19">
+    <gl>ear</gl>
+  </mel>
+  <mel id="rom-wn20">
+    <gl>earth</gl>
+  </mel>
+  <mel id="rom-wn21">
+    <gl>egg</gl>
+  </mel>
+  <mel id="rom-wn22">
+    <gl>eight</gl>
+  </mel>
+  <mel id="rom-wn23">
+    <gl>eye</gl>
+  </mel>
+  <mel id="rom-wn24">
+    <gl>fat (noun)</gl>
+  </mel>
+  <mel id="rom-wn25">
+    <gl>father</gl>
+  </mel>
+  <mel id="rom-wn26">
+    <gl>feather</gl>
+  </mel>
+  <mel id="rom-wn27">
+    <gl>few</gl>
+  </mel>
+  <mel id="rom-wn28">
+    <gl>fingernail</gl>
+  </mel>
+  <mel id="rom-wn29">
+    <gl>fire</gl>
+  </mel>
+  <mel id="rom-wn30">
+    <gl>five</gl>
+  </mel>
+  <mel id="rom-wn31">
+    <gl>flower</gl>
+  </mel>
+  <mel id="rom-wn32">
+    <gl>fog</gl>
+  </mel>
+  <mel id="rom-wn33">
+    <gl>foot</gl>
+  </mel>
+  <mel id="rom-wn34">
+    <gl>forest</gl>
+  </mel>
+  <mel id="rom-wn35">
+    <gl>four</gl>
+  </mel>
+  <mel id="rom-wn36">
+    <gl>fruit</gl>
+  </mel>
+  <mel id="rom-wn37">
+    <gl>full</gl>
+  </mel>
+  <mel id="rom-wn38">
+    <gl>good</gl>
+  </mel>
+  <mel id="rom-wn39">
+    <gl>grass</gl>
+  </mel>
+  <mel id="rom-wn40">
+    <gl>green</gl>
+  </mel>
+  <mel id="rom-wn41">
+    <gl>guts</gl>
+  </mel>
+  <mel id="rom-wn42">
+    <gl>hair</gl>
+  </mel>
+  <mel id="rom-wn43">
+    <gl>hair</gl>
+    <gl>hair (singular)</gl>
+  </mel>
+  <mel id="rom-wn44">
+    <gl>hand</gl>
+  </mel>
+  <mel id="rom-wn45">
+    <gl>head</gl>
+  </mel>
+  <mel id="rom-wn46">
+    <gl>heart</gl>
+  </mel>
+  <mel id="rom-wn47">
+    <gl>heavy</gl>
+  </mel>
+  <mel id="rom-wn48">
+    <gl>here</gl>
+  </mel>
+  <mel id="rom-wn49">
+    <gl>horn</gl>
+  </mel>
+  <mel id="rom-wn50">
+    <gl>how</gl>
+  </mel>
+  <mel id="rom-wn51">
+    <gl>husband</gl>
+  </mel>
+  <mel id="rom-wn52">
+    <gl>ice</gl>
+  </mel>
+  <mel id="rom-wn53">
+    <gl>if</gl>
+  </mel>
+  <mel id="rom-wn54">
+    <gl>lake</gl>
+  </mel>
+  <mel id="rom-wn55">
+    <gl>leaf</gl>
+  </mel>
+  <mel id="rom-wn58">
+    <gl>leg</gl>
+  </mel>
+  <mel id="rom-wn59">
+    <gl>liver</gl>
+  </mel>
+  <mel id="rom-wn60">
+    <gl>long</gl>
+  </mel>
+  <mel id="rom-wn61">
+    <gl>louse</gl>
+  </mel>
+  <mel id="rom-wn62">
+    <gl>man (male), man (human)</gl>
+  </mel>
+  <mel id="rom-wn63">
+    <gl>meat</gl>
+  </mel>
+  <mel id="rom-wn64">
+    <gl>moon</gl>
+  </mel>
+  <mel id="rom-wn65">
+    <gl>mother</gl>
+  </mel>
+  <mel id="rom-wn66">
+    <gl>mountain</gl>
+  </mel>
+  <mel id="rom-wn67">
+    <gl>mouth</gl>
+  </mel>
+  <mel id="rom-wn68">
+    <gl>narrow</gl>
+    <gl>straight/narrow</gl>
+  </mel>
+  <mel id="rom-wn70">
+    <gl>near</gl>
+  </mel>
+  <mel id="rom-wn71">
+    <gl>neck</gl>
+  </mel>
+  <mel id="rom-wn72">
+    <gl>new</gl>
+  </mel>
+  <mel id="rom-wn73">
+    <gl>night</gl>
+  </mel>
+  <mel id="rom-wn74">
+    <gl>nine</gl>
+  </mel>
+  <mel id="rom-wn75">
+    <gl>nose</gl>
+  </mel>
+  <mel id="rom-wn76">
+    <gl>old</gl>
+  </mel>
+  <mel id="rom-wn77">
+    <gl>one</gl>
+  </mel>
+  <mel id="rom-wn78">
+    <gl>other</gl>
+  </mel>
+  <mel id="rom-wn79">
+    <gl>red</gl>
+  </mel>
+  <mel id="rom-wn80">
+    <gl>right</gl>
+  </mel>
+  <mel id="rom-wn81">
+    <gl>river</gl>
+  </mel>
+  <mel id="rom-wn82">
+    <gl>root</gl>
+  </mel>
+  <mel id="rom-wn83">
+    <gl>rope</gl>
+  </mel>
+  <mel id="rom-wn84">
+    <gl>round</gl>
+  </mel>
+  <mel id="rom-wn85">
+    <gl>salt</gl>
+  </mel>
+  <mel id="rom-wn86">
+    <gl>salt</gl>
+    <gl>if</gl>
+  </mel>
+  <mel id="rom-wn87">
+    <gl>sand</gl>
+  </mel>
+  <mel id="rom-wn89">
+    <gl>seven</gl>
+  </mel>
+  <mel id="rom-wn90">
+    <gl>short</gl>
+  </mel>
+  <mel id="rom-wn91">
+    <gl>skin</gl>
+  </mel>
+  <mel id="rom-wn92">
+    <gl>sky</gl>
+  </mel>
+  <mel id="rom-wn93">
+    <gl>small</gl>
+  </mel>
+  <mel id="rom-wn94">
+    <gl>smoke</gl>
+  </mel>
+  <mel id="rom-wn96">
+    <gl>snake</gl>
+  </mel>
+  <mel id="rom-wn97">
+    <gl>snow</gl>
+  </mel>
+  <mel id="rom-wn98">
+    <gl>star</gl>
+  </mel>
+  <mel id="rom-wn99">
+    <gl>stick</gl>
+  </mel>
+  <mel id="rom-wn100">
+    <gl>stone</gl>
+  </mel>
+  <mel id="rom-wn101">
+    <gl>sun</gl>
+  </mel>
+  <mel id="rom-wn102">
+    <gl>tail</gl>
+  </mel>
+  <mel id="rom-wn103">
+    <gl>ten</gl>
+  </mel>
+  <mel id="rom-wn104">
+    <gl>that</gl>
+  </mel>
+  <mel id="rom-wn105">
+    <gl>there</gl>
+  </mel>
+  <mel id="rom-wn106">
+    <gl>they</gl>
+    <gl>he</gl>
+  </mel>
+  <mel id="rom-wn107">
+    <gl>three</gl>
+  </mel>
+  <mel id="rom-wn108">
+    <gl>to bite</gl>
+  </mel>
+  <mel id="rom-wn109">
+    <gl>to breathe</gl>
+  </mel>
+  <mel id="rom-wn110">
+    <gl>to come</gl>
+  </mel>
+  <mel id="rom-wn111">
+    <gl>to count</gl>
+  </mel>
+  <mel id="rom-wn112">
+    <gl>to cut</gl>
+  </mel>
+  <mel id="rom-wn113">
+    <gl>to cut</gl>
+    <gl>to split</gl>
+  </mel>
+  <mel id="rom-wn114">
+    <gl>to die</gl>
+  </mel>
+  <mel id="rom-wn115">
+    <gl>to dig</gl>
+  </mel>
+  <mel id="rom-wn116">
+    <gl>to drink</gl>
+  </mel>
+  <mel id="rom-wn117">
+    <gl>to eat</gl>
+  </mel>
+  <mel id="rom-wn118">
+    <gl>to fall</gl>
+  </mel>
+  <mel id="rom-wn119">
+    <gl>to fear</gl>
+  </mel>
+  <mel id="rom-wn120">
+    <gl>to float</gl>
+  </mel>
+  <mel id="rom-wn121">
+    <gl>to flow</gl>
+  </mel>
+  <mel id="rom-wn122">
+    <gl>to fly</gl>
+  </mel>
+  <mel id="rom-wn123">
+    <gl>to freeze</gl>
+  </mel>
+  <mel id="rom-wn124">
+    <gl>to give</gl>
+  </mel>
+  <mel id="rom-wn125">
+    <gl>to hear</gl>
+    <gl>to smell</gl>
+  </mel>
+  <mel id="rom-wn126">
+    <gl>to hold</gl>
+  </mel>
+  <mel id="rom-wn127">
+    <gl>to hunt</gl>
+  </mel>
+  <mel id="rom-wn128">
+    <gl>to inflate</gl>
+    <gl>to swell</gl>
+  </mel>
+  <mel id="rom-wn129">
+    <gl>to kill</gl>
+  </mel>
+  <mel id="rom-wn130">
+    <gl>to know</gl>
+  </mel>
+  <mel id="rom-wn131">
+    <gl>to laugh</gl>
+  </mel>
+  <mel id="rom-wn132">
+    <gl>to lie (as in a bed)</gl>
+  </mel>
+  <mel id="rom-wn133">
+    <gl>to live</gl>
+  </mel>
+  <mel id="rom-wn134">
+    <gl>to play</gl>
+  </mel>
+  <mel id="rom-wn135">
+    <gl>to pull</gl>
+    <gl>to throw</gl>
+  </mel>
+  <mel id="rom-wn136">
+    <gl>to rub</gl>
+  </mel>
+  <mel id="rom-wn137">
+    <gl>to say</gl>
+  </mel>
+  <mel id="rom-wn138">
+    <gl>to scratch</gl>
+  </mel>
+  <mel id="rom-wn139">
+    <gl>to see</gl>
+  </mel>
+  <mel id="rom-wn140">
+    <gl>to sew</gl>
+  </mel>
+  <mel id="rom-wn141">
+    <gl>to sing</gl>
+  </mel>
+  <mel id="rom-wn142">
+    <gl>to sleep</gl>
+  </mel>
+  <mel id="rom-wn143">
+    <gl>to struggle, to push</gl>
+    <gl>to push</gl>
+    <gl>to pull</gl>
+  </mel>
+  <mel id="rom-wn144">
+    <gl>to suck</gl>
+    <gl>to blow</gl>
+  </mel>
+  <mel id="rom-wn145">
+    <gl>to swim</gl>
+  </mel>
+  <mel id="rom-wn146">
+    <gl>to take out</gl>
+    <gl>to dig</gl>
+  </mel>
+  <mel id="rom-wn147">
+    <gl>to think</gl>
+  </mel>
+  <mel id="rom-wn148">
+    <gl>to throw</gl>
+  </mel>
+  <mel id="rom-wn149">
+    <gl>to tie</gl>
+  </mel>
+  <mel id="rom-wn150">
+    <gl>to vomit</gl>
+  </mel>
+  <mel id="rom-wn151">
+    <gl>to walk</gl>
+  </mel>
+  <mel id="rom-wn152">
+    <gl>to wash</gl>
+  </mel>
+  <mel id="rom-wn153">
+    <gl>tooth</gl>
+  </mel>
+  <mel id="rom-wn154">
+    <gl>two</gl>
+  </mel>
+  <mel id="rom-wn155">
+    <gl>water, rain</gl>
+    <gl>water</gl>
+  </mel>
+  <mel id="rom-wn156">
+    <gl>we</gl>
+  </mel>
+  <mel id="rom-wn157">
+    <gl>wet</gl>
+  </mel>
+  <mel id="rom-wn158">
+    <gl>what</gl>
+  </mel>
+  <mel id="rom-wn159">
+    <gl>when</gl>
+  </mel>
+  <mel id="rom-wn160">
+    <gl>when</gl>
+    <gl>what</gl>
+    <gl>who</gl>
+    <gl>here</gl>
+  </mel>
+  <mel id="rom-wn161">
+    <gl>where</gl>
+  </mel>
+  <mel id="rom-wn162">
+    <gl>white</gl>
+  </mel>
+  <mel id="rom-wn165">
+    <gl>wide/thick</gl>
+    <gl>wide</gl>
+    <gl>long</gl>
+  </mel>
+  <mel id="rom-wn167">
+    <gl>wife</gl>
+    <gl>woman, wife</gl>
+  </mel>
+  <mel id="rom-wn168">
+    <gl>wind</gl>
+  </mel>
+  <mel id="rom-wn169">
+    <gl>wing</gl>
+  </mel>
+  <mel id="rom-wn170">
+    <gl>with</gl>
+  </mel>
+  <mel id="rom-wn172">
+    <gl>worm</gl>
+  </mel>
+  <mel id="rom-wn173">
+    <gl>year</gl>
+  </mel>
+  <mel id="rom-wn174">
+    <gl>yellow</gl>
+  </mel>
+  <mel id="rom-wn175">
+    <gl>you (plural)</gl>
+    <gl>you (singular)</gl>
+  </mel>
+  <mel id="rom-wn176">
+    <gl>you (singular)</gl>
+    <gl>all</gl>
+  </mel>
+</semantics>

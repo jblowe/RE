@@ -1,0 +1,202 @@
+ID	gloss	sani	axi	nesu	lalo	li	nasu	neisu	nosu
+1.	son	za²¹	zo²¹	zo³³	za²¹	zo²¹	zo³³	zu³³	zɯ³³
+2.	salt	tsha²¹	tsho²¹	tsho³³	tsha²¹	tsho²¹	tsho³³	tshu³³	tshɯ³³
+3.	meat	xa²¹	xo²¹	xo³³	xa²¹	xo²¹	xo³³	xu³³	ʂɯ³³
+4.	buckwheat	qa²¹	go²¹	go³³	ɣa²¹	go²¹	ngho³³	ngu³³	ngɯ³³
+5.	eat	dza²¹	dzo²¹	dzo³³	dza²¹	dzo²¹	dzo³³	dzu³³	dzɯ³³
+6.	strength	ɣa²¹	ɣo²¹	ɣo³³	ɣa²¹	ɣo²¹	ɣo³³	ɣu³³	ɣɯ³³
+7.	chew	ga²¹	go²¹	go³³	ga²¹	go²¹	ngho³³	ngu³³	ngɯ³³
+8.	dragon	lu²¹	lo²¹	lo³³	lu²¹	lu²¹	lu³³	lu³³	lu³³
+9.	deaf	bu²¹	bo²¹	ba³³	bu²¹	ba²¹	bɔ³³	bo³³	bo³³
+10.	under	qho²¹	ko²¹	ka³³	ku²¹	ka²¹	kɔ³³	ko³³	ko³³
+11.	pine	tho²¹	tho²¹	tha³³	thu²¹	tha²¹	thɔ³³	tho³³	tho³³
+12.	wash	tʂhi²¹	tshi²¹	tɕhi³³	tshi²¹	tshi²¹	tshi³³	tshi³³	tshi³³
+13.	near	næ²¹	na²¹	nɛ³³	ne²¹	nɛ²¹	nɔ³³	nɛ³³	ȵi³³
+14.	daughter	mæ²¹	mɛ²¹	mɛ³³	me²¹	mɛ²¹	mɔ³³	mɛ³³	mi³³
+15.	use	zɤ²¹	zi²¹	zɤ³³	zy²¹	zɤ²¹	zɤ³³	zɤ³³	zɤ³³
+16.	steal	khɯ²¹	khɯ²¹	khɯ³³	khu²¹	khɯ²¹	khɯ³³	tɕhy³³	khu³³
+17.	bone	ɣɯ²¹	ɣɯ²¹	ɣɯ³³	ʔvu²¹	ɣɯ²¹	vɯ³³	ʑy³³	vu³³
+18.	raw	dzi²¹	dzɛ²¹	dzɛ³³	dzi²¹	dzi²¹	dzɿ³³	dzɛ³³	dzɪ³³
+19.	vegetable	ɣo²¹	vu²¹	ɣa²¹	ɣu²¹	va²¹	ɣɔ⁵⁵	ɣo⁵⁵	vo²¹
+20.	old	mo²¹	mu²¹	ma²¹	mu²¹	ma²¹	mɔ⁵⁵	mo⁵⁵	mo²¹
+21.	empty	qo²¹	gu²¹	ga²¹	gu²¹	ga²¹	gɔ⁵⁵	go⁵⁵	go²¹
+22.	sell	vu²¹	vu²¹	ɣu²¹	vu²¹	vu²¹	vu⁵⁵	ɣu⁵⁵	vɯ²¹
+23.	two	ni²¹	ni²¹	ȵi²¹	ni²¹	ȵi²¹	ȵi⁵⁵	ȵi⁵⁵	ȵi²¹
+24.	rot	tʂhi²¹	tʂhi²¹	tshi²¹	?	tʂhi²¹	tʂhi⁵⁵	tʂhy⁵⁵	tʂhi²¹
+25.	seven	ʂi²¹	ʂi²¹	ɕi²¹	xɯ²¹	ʂi²¹	ɕi⁵⁵	ɕi⁵⁵	ʂi²¹
+26.	let go	ɬɤ²¹	ʈhɯ²¹	thɤ²¹	phy²¹	phɤ²¹	ʈhɤ⁵⁵	ʈhɤ⁵⁵	thi²¹
+27.	tongue	ɬa³³	lo³³	ɬo⁵⁵	ʔla⁵⁵	lo³³	ɬo³³	ɬu¹³	ha³³
+28.	bamboo	ma³³	mo³³	mo⁵⁵	ma⁵⁵	mo³³	mo³³	mu¹³	ma³³
+29.	ask	na³³	no³³	no⁵⁵	ʔna⁵⁵	no³³	no³³	no¹³	ṇa³³
+30.	fry	ɬu³³	lo³³	ɬu⁵⁵	ʔlu̪⁵⁵	lu³³	ɬu³³	ɬu¹³	ɬu³³
+31.	bake	ko³³	ku³³	ka⁵⁵	ku⁵⁵	ka³³	kɔ³³	ko¹³	ko³³
+32.	turn	tʂo³³	tʂu³³	tsa⁵⁵	tʂu⁵⁵	tʂa³³	tʂɔ³³	tʂo¹³	tɕo³³
+33.	shy	to³³	tu³³	ta⁵⁵	tu⁵⁵	ta³³	tɔ³³	to¹³	to³³
+34.	fat	tshi³³	tsho³³	tshu⁵⁵	tshi⁵⁵	tshu³³	tshu³³	tshu¹³	tshu³³
+35.	star	tɕæ²¹	tʂa²¹	tsɛ³³	tɕe²¹	kɛ²¹	tɕɔ³³	tɕɛ³³	tɕi³³
+36.	grow	tæ²¹	ta²¹	tɛ³³	te²¹	tɛ²¹	tɔ³³	tɛ³³	tsi³³
+37.	rice (cooked)	tsa³³	tso²	dzo²¹	dza⁵⁵	dzo³³	dzo²¹	dzo²¹	dza³³
+38.	I	ŋa³³	ŋo²	ŋo²¹	ŋa⁵⁵	ŋo³³	ŋo²¹	ŋo²¹	ŋa³³
+39.	ill	na³³	no²	no²¹	na⁵⁵	no³³	no²¹	no²¹	na³³
+40.	hundred	ha³³	xo²	xo²¹	ha⁵⁵	xo³³	ho²¹	ho²¹	ha³³
+41.	intestines	vu³³	ɣo²	vu²¹	vu̪⁵⁵	vu³³	ɣu²¹	ɣu²¹	vu³³
+42.	make	mu³³	mo²	mu²¹	mu̪⁵⁵	mu³³	mu²¹	mu²¹	mu³³
+43.	wing	tu³³	to²	do²¹	du̪⁵⁵	du³³	du²¹	du²¹	du³³
+44.	human	tsho³³	tshu²	tsha²¹	tshu⁵⁵	tsha³³	tshɔ²¹	tsho²¹	tsho³³
+45.	pull	qo³³	ku²	ga²¹	ɣu⁵⁵	ga³³	gɔ²¹	go²¹	go³³
+46.	sheep	ʐo³³	ʐu²	xa²¹	ʐu⁵⁵	ʐa³³	hɔ²¹	ho²¹	ʐo³³
+47.	water	ʐi³³	ʐi²	ʐi²¹	ɣɯ⁵⁵	ʐi³³	ʐi²¹	ʐi²¹	ʐi³³
+48.	skin	tʂi³³	tɕi²	dʑi²¹	gɯ⁵⁵	dzi³³	ndʑi²¹	ndʑi²¹	ndʑi³³
+49.	die	ʂi³³	ʂi²	ɕi²¹	xɯ⁵⁵	si³³	ɕi²¹	ɕi²¹	si³³
+50.	melt	?	tɕi²	dʑi²¹	gɯ⁵⁵	dzi³³	dʑi²¹	dʑi²¹	dʑi³³
+51.	wine	tʂi³³	tɕi²	dʐi²¹	dʐi⁵⁵	dzi³³	ɳɖʐi²¹	ɳɖʐi²¹	ɳɖʐi³³
+52.	buy	væ³³	va²	vɛ²¹	ve⁵⁵	vɛ³³	vɔ²¹	vɛ²¹	vi³³
+53.	borrow	ŋa⁵⁵	ŋo⁵⁵	ŋo³³	a²¹	ŋo⁵⁵	ŋo³³	ŋu³³	hɯ³³
+54.	stop	na⁵⁵	no⁵⁵	no³³	ʔna²¹	no⁵⁵	no³³	nu³³	nɯ³³
+55.	lay up	ta⁵⁵	to⁵⁵	to³³	ta²¹	to⁵⁵	to³³	tu³³	ta³³
+56.	want	ŋo⁵⁵	ŋu⁵⁵	ŋa³³	?	ŋo⁵⁵	ŋɔ³³	ŋo³³	ŋo³³
+57.	kneel	kɯ⁵⁵	kɯ⁵⁵	kɯ³³	gɯ²¹	kɯ⁵⁵	kɯ³³	tɕy³³	ku³³
+58.	tiger	la⁵⁵	lo⁵⁵	lo²	la²	lo⁵⁵	lo⁵⁵	lu⁵⁵	la⁵⁵
+59.	trousers	ɬa⁵⁵	lo⁵⁵	ɬo²	ʔla²	lu⁵⁵	ɬo⁵⁵	ɬu⁵⁵	ɬa⁵⁵
+60.	teach	mo⁵⁵	mu⁵⁵	mo²	ʔma²	mu⁵⁵	mo⁵⁵	mu⁵⁵	ṃa⁵⁵
+61.	sweat	tɕæ⁵⁵	tʂa⁵⁵	tʂa²	tɕe²	kɛ⁵⁵	tɕɔ⁵⁵	tɕɛ⁵⁵	?
+62.	congeal	tɤ⁵⁵	tɯ⁵⁵	tɤ²	ty²	tɤ⁵⁵	te⁵⁵	tɤ⁵⁵	ti⁵⁵
+63.	chicken	ʑe⁴⁴	ʑe̱³³	ʑe̱³³	ʑi̱³³	ʑe̱³³	ɣa̱²	ɣa³³	va̱⁴
+64.	embrace	te⁴⁴	te̱³³	te̱³³	ti̱³³	te̱³³	ta̱²	ta³³	to̱⁴
+65.	harrow	tɕe⁴⁴	tɕe̱³³	tɕe̱³³	tɕi̱³³	tɕe̱³³	tɕa̱²	tɕa³³	go̱⁴
+66.	black	ne⁴⁴	ne̱³³	ne̱³³	ni̱³³	ne̱³³	na̱²	na³³	no̱⁴
+67.	sharpen	the⁴⁴	the̱³³	the̱³³	thi̱³³	the̱³³	tha̱²	tha³³	tho̱⁴
+68.	go up	de⁴⁴	de̱³³	de̱³³	di³³	de̱³³	da̱²	da³³	do̱⁴
+69.	bean	no⁴⁴	nu̱³³	nu̱³³	no̱³³	nu̱³³	no̱²	ȵe³³	nu̱⁴
+70.	be full	bo⁴⁴	bu̱³³	bu̱³³	bo̱³³	bu̱³³	mbho̱²	mbe³³	mbu̱⁴
+71.	go out	do⁴⁴	du̱³³	du̱³³	do̱³³	du̱³³	do̱²	de³³	du̱⁴
+72.	lean on	to⁴⁴	tu̱³³	tu̱³³	to̱³³	tu̱³³	to̱²	te³³	tu̱⁴
+73.	fear	go⁴⁴	dʐu̱³³	dʐu̱³³	go̱³³	dʐu̱³³	dʑo̱²	dʑe³³	dʑu̱⁴
+74.	stone	lo⁴⁴	lo̱³³	lu̱³³	lo̱³³	lu̱³³	lo̱²	le³³	lu̱⁴
+75.	hold in arms	va⁴⁴	va̱³³	va̱³³	va̱³³	va̱³³	vɚ̱²	va³³	va̱⁴
+76.	shoot	ba⁴⁴	ba̱³³	ba̱³³	ba̱³³	ba̱³³	mbhɚ̱²	mbɪ³³	bɪ̱⁴
+77.	light	dla⁴⁴	ɖa̱³³	da̱³³	ba̱³³	ba̱³³	ɖɚ̱²	ɖɪ³³	dɪ̱⁴
+78.	tree	si⁴⁴	si̱³³	ɕi̱³³	si̱³³	si̱³³	si̱²	sɪ³³	si̱⁴
+79.	blossom	vɪ⁴⁴	vi̱³³	vi̱³³	vi̱³³	vi̱³³	vi̱²	vɪ³³	vi̱⁴
+80.	bubble	ti⁴⁴	ti̱³³	ti̱³³	ti̱³³	ti̱³³	ti̱²	tɪ³³	tsi̱⁴
+81.	break	tshi⁴⁴	tsi̱³³	tɕhi̱³³	tɕhi̱³³	tshi̱³³	tshi̱²	gɪ³³	tɕhi̱⁴
+82.	hand	le²	le̱²	le̱²	ʔli̱²	le̱²	la̱⁵⁵	la¹³	lo̱⁵⁵
+83.	pig	ve²	ve̱²	ve̱²	vi̱²	ve̱²	va̱⁵⁵	va¹³	vo̱⁵⁵
+84.	soldier	me²	me̱²	me̱²	ʔmi̱²	me̱²	ma̱⁵⁵	ma¹³	mo̱⁵⁵
+85.	weave	ʑe²	ʑe̱²	ʑe̱²	?	ʑe̱²	ɣa⁵⁵	ɣa¹³	dʐo̱⁵⁵
+86.	year	kho²	khu̱²	khu̱²	kho̱²	khu̱²	kho̱⁵⁵	tɕhe¹³	khu̱⁵⁵
+87.	enough	lo²	lu̱²	lu̱²	ʔlo̱²	lu̱²	lo̱⁵⁵	le¹³	lu̱⁵⁵
+88.	six	kho²	tʂhu̱²	tʂhu̱²	kho̱²	tʂhu̱²	tʂho̱⁵⁵	tɕhe¹³	fu̱⁵⁵
+89.	brain	no²	nu̱²	nu̱²	ʔno̱²	nu̱²	no̱⁵⁵	ne¹³	no̱⁵⁵
+90.	waist	dʐo²	dʐu̱²	dzu²	dʐo̱²	dʐu̱²	dʐo̱⁵⁵	dʐe¹³	dʑu̱⁵⁵
+91.	poison	do²	du̱²	du̱²	do̱²	du̱²	to̱⁵⁵	te¹³	du̱⁵⁵
+92.	rub	va²	va̱²	va̱²	va̱²	va̱²	vɚ̱⁵⁵	vɪ¹³	vo̱⁵⁵
+93.	lick	đa²	đa̱²	la̱²	la̱²	la̱²	lɚ̱⁵⁵	lɪ¹³	ʑo̱⁵⁵
+94.	leopard	zi²	zi̱²	ʑi̱²	zi̱²	zi̱²	zi̱⁵⁵	zi¹³	zi̱⁵⁵
+95.	spit vomit	phɪ²	phi̱²	phi̱²	phi̱²	phi̱²	phi̱⁵⁵	phi¹³	phɪ̱⁵⁵
+96.	leech	vɪ²	vi̱²	vi̱²	vi̱²	bi̱²	vi̱⁵⁵	vi¹³	mbɪ̱⁵⁵
+97.	needle	ɣɤ²	ɣo̱²	ɣɤ̱²	ʑy̱²	vɤ̱²	ɣɤ̱⁵⁵	ɣi¹³	ʑɪ̱⁵⁵
+98.	hoof	bɤ²	bo̱²	ʑɤ̱²	by̱²	bɤ̱²	bɤ̱⁵⁵	bi¹³	bɪ̱⁵⁵
+99.	swell	phɤ²	pho̱²	phɤ̱²	phy̱²	phɤ̱²	phɤ̱⁵⁵	phi¹³	?
+100.	put on	dɤ²	do̱²	dɤ̱²	dy̱²	dɤ̱²	de̱⁵⁵	di¹³	ndi̱⁵⁵
+101.	stand	hɤ²	xo̱²	xɤ̱²	hy̱²	xɤ̱²	he̱⁵⁵	hi¹³	hi̱⁵⁵
+102.	catch	da²¹	do²¹	do²¹	da²¹	do²¹	do⁵⁵	du⁵⁵	?
+103.	thin	ba²¹	bo²¹	bo³³	ba²¹	bo²¹	bo³³	bu³³	bo³³
+104.	snow	va²¹	ɣo²¹	ɣo³³	va²¹	ɣo²¹	vo³³	ɣu³³	vo³³
+105.	plough	ŋa²¹	ŋo²¹	ŋo³³	ma²¹	mo²¹	ŋo³³	?	mo³³
+106.	bright	ba³³	bo²	bo²¹	ba⁵⁵	bo³³	bo²¹	bo²¹	bo³³
+107.	nephew	tu³³	to³³	du⁵⁵	du̪⁵⁵	du³³	ndu³³	ndu¹³	ndu³³
+108.	porcupine	pu³³	po³³	pu⁵⁵	ku̪⁵⁵	pu³³	pu³³	pu¹³	pu³³
+109.	thick	thu³³	tho²	thu²¹	thu̪⁵⁵	thu³³	thu²¹	thu²¹	tu³³
+110.	chopsticks	dʐi³³	dʐo²	dzu²¹	dzu̪⁵⁵	dʐu³³	dʐu²¹	dʐu²¹	dʐu³³
+111.	horse	mu²¹	mo²¹	mo³³	mu̪²¹	mu²¹	mu³³	mu³³	mu³³
+112.	soft	no²¹	no²¹	nu³³	nu̪²¹	nu²¹	nu³³	nu³³	nu³³
+113.	sky	mu²¹	mu²¹	mu³³	mi²¹	mɯ²¹	mu³³	mi³³	mu³³
+114.	insect	bu²¹	bu²¹	bu³³	vi²¹	bɯ²¹	bu³³	bi³³	bu³³
+115.	price	phu²¹	phu²¹	phu³³	fi²¹	phɯ²¹	phu³³	phi³³	phu³³
+116.	carry (on back)	bu²¹	bu²¹	bu²¹	vi²¹	bɯ²¹	bu⁵⁵	bi⁵⁵	pu²¹
+117.	mushroom	mu³³	mo³³	mu⁵⁵	mi⁵⁵	mɯ³³	mu³³	mi¹³	ṃu³³
+118.	crow	pu³³	pu²	bu²¹	vi⁵⁵	bɯ³³	mbu²¹	mbi²¹	ku³³
+119.	excrement	ɬi²¹	ʈhi²¹	thi³³	tɕhi²¹	si²¹	ɬi³³	ʈhi³³	tɕhi³³
+120.	urine	zi²¹	zi²¹	ɕi³³	ʐi²¹	zi²¹	zi³³	zi³³	zi³³
+121.	day	ni³³	ni²	ȵi²¹	ʔni⁵⁵	ȵi³³	ȵi²¹	ȵi²¹	ȵi³³
+122.	copper	dʐi²¹	dʐi²¹	dʐi³³	gɯ²¹	dzi²¹	dʑi³³	dʑi³³	dʑi³³
+123.	dung	tʂhi²¹	tɕhi²¹	tɕhi³³	khɯ²¹	tshi²¹	tɕhi³³	tɕhi³³	ɕi³³
+124.	sweet	tʂhi³³	tʂhi²	tshi²¹	tʂhi⁵⁵	tʂhɿ³³	tʂhɿ²¹	tʂhy²¹	tɕhi³³
+125.	blood	si²¹	si²¹	si³³	si²¹	sɿ²¹	sɯ³³	sy³³	si³³
+126.	squeeze	tshi²¹	tshi²¹	tshi²¹	tshi²¹	tshɿ²¹	tshɯ⁵⁵	tshy⁵⁵	tshi²¹
+127.	ride	?	dza²¹	dzɛ³³	dze²¹	dzɛ²¹	dzɔ³³	dzɛ³³	dzi³³
+128.	yellow	ʂi³³	ʂa³³	ɕɛ⁵⁵	xe⁵⁵	sɛ³³	ʂɔ³³	ʂɛ¹³	ʂi³³
+129.	grease	tshæ³³	tsha²	tshɛ²¹	tshe⁵⁵	tshɛ³³	tshɔ²¹	tshɛ²¹	tshi³³
+130.	smoke	khɯ²¹	khɯ²¹	khɯ³³	khu̪²¹	khɯ²¹	khɯ³³	tɕhy³³	ku³³
+131.	cry	ŋɯ³³	ŋɯ³³	ŋɯ⁵⁵	ŋu̪⁵⁵	ŋɯ³³	ŋɯ³³	ny¹³	ŋo³³
+132.	nine	kɯ⁵⁵	kɯ⁵⁵	kɯ³³	ku̪²¹	kɯ⁵⁵	kɯ³³	tɕy³³	gu³³
+133.	paddy	tɕhɪ³³	tɕhi²	tɕhe²¹	tɕhi⁵⁵	tɕhe³³	tʂhe²¹	tʂhi²¹	tʂhɯ³³
+134.	louse	ɕɪ³³	ɕi²	ɕe²¹	ɕi⁵⁵	ɕe³³	ɕe²¹	ɕi²¹	ʂɯ³³
+135.	livestock	dʑɪ²¹	dʑi²¹	dʑe³³	dʑi²¹	dʑe²¹	dʐe³³	dʐɤ³³	dʐɯ³³
+136.	be left	tsɪ³³	tsi²	dze²¹	dzi⁵⁵	dze³³	dze²¹	dzi²¹	dzɯ³³
+137.	sour	tɕɪ³³	tɕi³³	tɕe⁵⁵	tɕi⁵⁵	tse³³	tʂe³³	tʂi¹³	tɕɪ³³
+138.	frost	ŋɪ³³	ni³³	ne⁵⁵	?	ne³³	ȵe³³	ȵi¹³	?
+139.	lead	si³³	sɛ²	sɛ²¹	si⁵⁵	si³³	sɿ²¹	sɛ²¹	sɪ³³
+140.	name	mæ³³	mɛ³³	mɛ⁵⁵	ʔmɯ⁵⁵	mi³³	mɚ³³	mɛ¹³	ṃɪ³³
+141.	cloud	tæ³³	tɛ³³	tɛ⁵⁵	tɯ⁵⁵	ti³³	tɚ³³	tɛ¹³	tɪ³³
+142.	ripe	mæ³³	mɛ²	mɛ²¹	ʔmɯ⁵⁵	mi³³	mɚ²¹	mɛ²¹	ṃɪ³³
+143.	long	ɕæ³³	?	sɛ⁵⁵	ʂɯ⁵⁵	ʂi³³	ʂɚ³³	ʂɛ¹³	ʂo³³
+144.	thread	tɕhæ³³	tʂhɛ²	tshɛ²¹	khɯ⁵⁵	tshi³³	tɕɚ²¹	khɛ²¹	ɕɪ³³
+145.	wake up	tɕhæ²¹	?	tshɛ³³	gɯ²¹	tshi²¹	tɕhɚ³³	gɛ³³	dʐɪ³³
+146.	bridge	tsɤ³³	tsi²	dzɤ²¹	dʑy⁵⁵	dzɤ³³	ndzhe²¹	dzɛ²¹	dzɪ³³
+147.	smell	nɤ²¹	nɯ²¹	nɤ³³	ny²¹	nɤ²¹	ne³³	ȵɛ³³	ni³³
+148.	iron	xɤ³³	xɯ²	ɕe²¹	ɕy⁵⁵	xɤ³³	ɕe²¹	ɕɛ²¹	ʂi³³
+149.	eye	ne⁴⁴	ne̱³³	ne̱³³	ʔmi̱³³	me̱³³	na̱²	na³³	ȵo̱⁴
+150.	air	se²	se̱²	ɕe̱²	ɕi̱²	se̱²	sa̱⁵⁵	sa¹³	so̱⁵⁵
+151.	link up	tse²	tse̱²	tɕe̱²	tɕi̱²	?	tsa̱⁵⁵	tsa¹³	tso̱⁵⁵
+152.	drip	dze⁴⁴	dzɛ̱³³	the̱³³	dʑi̱³³	dʑe̱³³	ndzha̱²	ndza³³	?
+153.	cockspur	de²	de̱²	de̱²	di̱²	de̱²	da̱⁵⁵	da¹³	do̱⁵⁵
+154.	lock (v.)	ɖʐo⁴⁴	ɖʐu̱³³	dzu̱³³	?	ɖʐu̱³³	ɳɖʐo̱²	ɳɖʐe³³	ɳɖʐu̱⁴
+155.	peck	tho⁴⁴	thu̱³³	thu̱³³	tho̱³³	thu̱³³	tho̱²	?	thu̱⁴
+156.	turn over	po⁴⁴	pu̱³³	pu̱³³	pho̱³³	?	pho̱²	pe³³	phu̱⁴
+157.	frighten	?	tʂu̱³³	tsu̱³³	ko³³	ku̱³³	tɕo̱²	tɕe³³	ku̱⁴
+158.	scrape	?	tʂu̱³³	tsu̱³³	ko³³	tʂu̱³³	tʂo̱²	tʂe³³	ku̱⁴
+159.	herd	lo²	lu̱²	ɬu̱²	ʔlo̱²	lu̱²	ɬo̱⁵⁵	ɬe¹³	ɬu̱⁵⁵
+160.	kindle/light (v)	tɤ²	to̱²	tu̱²	to̱²	tu̱²	to̱⁵⁵	te¹³	tu̱⁵⁵
+161.	monkey	no²	nu̱²	nu̱²	mo̱²	mu̱²	ɳo̱⁵⁵	ɳe¹³	ȵu̱⁵⁵
+162.	weeding	ŋo²	ŋu̱²	ŋu̱²	mo̱²	?	ŋo̱⁵⁵	?	mu̱⁵⁵
+163.	lack	qha²	kha̱²	kha̱²	kha̱²	kha̱²	khɚ̱⁵⁵	khɪ¹³	tɕho̱⁵⁵
+164.	paste	na²	na̱²	na̱²	ʔna̱²	na̱²	nɚ̱⁵⁵	?	ȵo̱⁵⁵
+165.	bandit	dza⁴⁴	dza̱³³	dza̱³³	?	dza̱³³	dzɚ̱²	dzɪ³³	dzo̱⁴
+166.	know	sa²	sa̱²	sa̱²	sa̱²	sa̱²	sɚ̱⁵⁵	se¹³	si̱⁵⁵
+167.	sleep	ʑi²	ʑi̱²	ʑi̱²	ʔi̱²	ʑi̱²	ʑi⁵⁵	ʑi¹³	i̱⁵⁵
+168.	pinch	tshi²	tshi̱²	tshi̱²	tɕhi̱²	tshi̱²	tshi̱⁵⁵	tshi¹³	tshi̱⁵⁵
+169.	hungry	ni²	ni̱²	ȵi̱²	mi̱²	mi²	ȵi̱⁵⁵	ŋi¹³	mi̱⁵⁵
+170.	thirsty	si²	si̱²	si̱²	ɕi̱²	si̱²	si̱⁵⁵	si¹³	si̱⁵⁵
+171.	new	ɕi²	ɕi̱²	ɕi̱²	xɯ̱²	xi̱²	ɕi̱⁵⁵	xi¹³	ʂi̱⁵⁵
+172.	split	bɪ²	bi̱²	bi̱²	bi̱²	bi̱²	bi̱⁵⁵	bi¹³	bɪ̱⁵⁵
+173.	stomach	hɪ²	xi̱²	xi̱²	hi̱²	xi̱²	hi̱⁵⁵	hi¹³	hi̱⁵⁵
+174.	heart	ni⁴⁴	ȵi̱³³	ȵi̱³³	?	ȵi̱³³	ni̱²	nɪ³³	?
+175.	blink	tshi⁴⁴	tshi̱³³	tɕhi̱³³	tshi̱³³	?	tshi̱²	tshi³³	tshi̱⁴
+176.	goat	tɕhi²	tɕhi̱²	tɕhi̱²	tʂhi̱²	tʂhɿ̱²	tʂhɿ̱⁵⁵	tʂhi¹³	tʂhi̱⁵⁵
+177.	suck	?	tʂi̱²	tsi̱²	tʂi̱²	tʂɿ̱²	tʂɿ̱⁵⁵	tʂɤ¹³	tɕi̱⁵⁵
+178.	saddle	ɣa⁴⁴	ɣo̱³³	ɣo̱³³	ho̱³³	xo̱³³	ɣo̱²	ɣo̱³³	ɣa̱⁴
+179.	female	ma⁴⁴	mo̱³³	mo̱³³	mo̱³³	mo̱³³	mo̱²	mo̱³³	ma̱⁴
+180.	exchange	pa⁴⁴	po̱³³	po̱³³	po̱³³	po̱³³	ɬo̱²	ɬo̱³³	pa̱⁴
+181.	obtain	ɣa⁴⁴	ɣo̱³³	ɣo̱³³	ɣo̱³³	ɣo̱³³	ɣo̱²	ɣo̱³³	ɣɯ̱⁴
+182.	rabbit	ɬa⁴⁴	lo̱³³	ɬo̱³³	lo̱³³	lo̱³³	ɬo̱²	ɬo̱³³	lɯ̱⁴
+183.	brood	tsa⁴⁴	tso̱³³	tso̱³³	tso̱³³	tso̱³³	tso̱²	?	?
+184.	shine upon	ɬɤ²	li²	ɬɤ̱²	ʔly̱²	lɤ̱²	ɬɤ̱⁵⁵	ɬi¹³	ɬɪ̱⁵⁵
+185.	bite	qhɤ²	tʂho̱²	tshɤ̱²	kho²	khɤ̱²	khɤ̱⁵⁵	khi¹³	ɕɪ̱⁵⁵
+187.	prickly ash (tree)	dzɤ²	dzo̱²	dzɤ̱²	dzy̱²	dzɤ̱²	dze̱⁵⁵	dzi¹³	dzɪ̱⁵⁵
+188.	drill	lɤ²	ɬi²	lɤ̱²	ʔly̱²	lɤ̱²	lɤ̱⁵⁵	?	?
+189.	burn grass on waste land	dɤ²	do̱²	dɤ̱²	ty̱²	dɤ̱²	de̱⁵⁵	?	ndi⁵⁵
+190.	bear (fruit)	dɤ²	do̱²	dɤ̱²	?	?	de⁵⁵	di¹³	ndi⁵⁵
+191.	family	ɣɤ²	ɣo̱²	ɣɤ̱²	?	vɤ̱²	ɣɤ̱⁵⁵	ʑi¹³	ʑɪ⁵⁵
+192.	press from both sides	ȵɤ⁴⁴	no̱³³	nɤ̱³³	?	nɤ̱³³	ȵi²	ȵi³³	ȵi̱⁴
+193.	come apart	ɬɤ⁴⁴	lo̱³³	lɤ̱³³	?	lɤ̱³³	ɬɤ̱²	ɬi³³	li̱⁴
+194.	scoop up	tɤ⁴⁴	to̱³³	tɤ̱³³	ty̱³³	tɤ̱³³	tɤ̱²	ti³³	?
+195.	stick in	tʂhɤ⁴⁴	tʂho̱³³	tshɤ̱³³	?	tʂhɤ̱³³	tʂhɤ̱²	tʂhi³³	?
+196.	layer	tɤ⁴⁴	to̱³³	tɤ̱³³	?	?	tɤ̱²	ti³³	ti̱⁴
+197.	can	kɯ²	kɯ̱²	kɯ̱²	ʔi̱²	kɯ̱²	kɯ̱⁵⁵	kɤ¹³	kɯ̱⁵⁵
+198.	hold (between fingers)	tshi⁴⁴	tshi̱³³	tɯ̱³³	tshi̱³³	tshi̱³³	tshɯ̱²	tshɤ³³	tshi⁴
+199.	take off	ɬɯ²	lɯ̱²	ɬɯ̱²	ʔli̱²	lɯ̱²	lɯ̱⁵⁵	lɤ¹³	li̱⁵⁵
+200.	blow	mu⁴⁴	mu̱³³	mu̱³³	ʔmu̪̱³³	mɯ̱³³	mu̱²	mu³³	ṃu⁴
+201.	Buddha	bu⁴⁴	bu̱³³	bu̱³³	ʔbu̪̱³³	bɯ̱³³	bu̱²	bu³³	bu⁴
+202.	jar	bu²	bu̱²	bu̱²	bu̪̱²	bɯ̱²	bu̱⁵⁵	?	?

@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+   <parameters>
+      <canon name="syllabe" value="(C?V)+"/>
+      <spec name="supra_segmentals" value=""/>
+   </parameters>
+   <corr num="c1">
+      <proto syll="C">l</proto>
+      <modern dialecte="ltg">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="vrs">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="lkn">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="msn">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="lhi">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="lmg">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="olr">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="lyp">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="drg">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="mtp">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="kro">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="mta">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="vra">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="mrl">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="vlw">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="hiw">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="num">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="c2">
+      <proto syll="V">a</proto>
+      <modern dialecte="ltg">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="vrs">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="lkn">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="msn">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="lhi">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="lmg">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="olr">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="lyp">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="drg">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="mtp">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="kro">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="mta">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="vra">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="mrl">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="vlw">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="hiw">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="num">
+         <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="c3">
+      <proto syll="V">u</proto>
+      <modern dialecte="ltg">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="vrs">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="lkn">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="msn">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="lhi">
+         <seg>ɔ</seg>
+      </modern>
+      <modern dialecte="lmg">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="olr">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="lyp">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="drg">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="mtp">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="kro">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="mta">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="vra">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="mrl">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="vlw">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="hiw">
+         <seg>ɵ</seg>
+      </modern>
+      <modern dialecte="num">
+         <seg>ʊ</seg>
+      </modern>
+   </corr>
+   <corr num="c4">
+      <proto contextR="#" syll="V">o</proto>
+      <modern dialecte="ltg">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="vrs">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="lkn">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="msn">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="lhi">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="lmg">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="olr">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="lyp">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="drg">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="mtp">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="kro">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="mta">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="vra">
+         <seg>ʊ</seg>
+      </modern>
+      <modern dialecte="mrl">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="vlw">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="hiw">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="num">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="c5">
+      <proto syll="C">r</proto>
+      <modern dialecte="ltg">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="vrs">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="lkn">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="msn">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="lhi">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="lmg">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="olr">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="lyp">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="drg">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="mtp">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="kro">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="mta">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="vra">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="mrl">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="vlw">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="hiw">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="num">
+         <seg>r</seg>
+      </modern>
+   </corr>
+</tableOfCorr>

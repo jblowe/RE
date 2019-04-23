@@ -1,0 +1,1072 @@
+<lexicon dialecte="fr">
+  <entry id="fr1">
+    <gl>I</gl>
+    <spell>je</spell>
+    <hw>ʒə</hw>
+  </entry>
+  <entry id="fr2">
+    <gl>you (singular)</gl>
+    <spell>tu</spell>
+    <hw>ty</hw>
+  </entry>
+  <entry id="fr2.5">
+    <gl>you (singular), you (plural)</gl>
+    <spell>vous (formal), vous</spell>
+    <hw>vu</hw>
+  </entry>
+  <entry id="fr3">
+    <gl>he, they</gl>
+    <spell>il, ils/elles</spell>
+    <hw>il</hw>
+  </entry>
+  <entry id="fr4">
+    <gl>we</gl>
+    <spell>nous</spell>
+    <hw>nu</hw>
+  </entry>
+  <entry id="fr7">
+    <gl>this</gl>
+    <spell>ceci</spell>
+    <hw>səsi</hw>
+  </entry>
+  <entry id="fr8">
+    <gl>that</gl>
+    <spell>cela</spell>
+    <hw>səla</hw>
+  </entry>
+  <entry id="fr9">
+    <gl>here</gl>
+    <spell>ici</spell>
+    <hw>isi</hw>
+  </entry>
+  <entry id="fr10">
+    <gl>there</gl>
+    <spell>là</spell>
+    <hw>la</hw>
+  </entry>
+  <entry id="fr11">
+    <gl>who</gl>
+    <spell>qui</spell>
+    <hw>ki</hw>
+  </entry>
+  <entry id="fr12">
+    <gl>what</gl>
+    <spell>quoi</spell>
+    <hw>kwa</hw>
+  </entry>
+  <entry id="fr13">
+    <gl>where</gl>
+    <spell>où</spell>
+    <hw>u</hw>
+  </entry>
+  <entry id="fr14">
+    <gl>when</gl>
+    <spell>quand</spell>
+    <hw>kɑ̃</hw>
+  </entry>
+  <entry id="fr15">
+    <gl>how</gl>
+    <spell>comment</spell>
+    <hw>kɔmɑ̃</hw>
+  </entry>
+  <entry id="fr16">
+    <gl>not</gl>
+    <spell>ne pas</spell>
+    <hw>nə ... pɑ</hw>
+  </entry>
+  <entry id="fr17">
+    <gl>all</gl>
+    <spell>tout</spell>
+    <hw>tu</hw>
+  </entry>
+  <entry id="fr18">
+    <gl>many</gl>
+    <spell>beaucoup</spell>
+    <hw>boku</hw>
+  </entry>
+  <entry id="fr19">
+    <gl>some</gl>
+    <spell>quelques</spell>
+    <hw>kɛlk</hw>
+  </entry>
+  <entry id="fr20">
+    <gl>few</gl>
+    <spell>peu</spell>
+    <hw>pø</hw>
+  </entry>
+  <entry id="fr21">
+    <gl>other</gl>
+    <spell>autre</spell>
+    <hw>otʁ</hw>
+  </entry>
+  <entry id="fr22">
+    <gl>one</gl>
+    <spell>un</spell>
+    <hw>œ̃</hw>
+  </entry>
+  <entry id="fr23">
+    <gl>two</gl>
+    <spell>deux</spell>
+    <hw>dø</hw>
+  </entry>
+  <entry id="fr24">
+    <gl>three</gl>
+    <spell>trois</spell>
+    <hw>tʁwɑ</hw>
+  </entry>
+  <entry id="fr25">
+    <gl>four</gl>
+    <spell>quatre</spell>
+    <hw>katʁ</hw>
+  </entry>
+  <entry id="fr26">
+    <gl>five</gl>
+    <spell>cinq</spell>
+    <hw>sɛ̃k</hw>
+  </entry>
+  <entry id="fr27">
+    <gl>big</gl>
+    <spell>grand</spell>
+    <hw>gʁɑ̃</hw>
+  </entry>
+  <entry id="fr28">
+    <gl>long</gl>
+    <spell>long</spell>
+    <hw>lõ</hw>
+  </entry>
+  <entry id="fr29">
+    <gl>wide</gl>
+    <spell>large</spell>
+    <hw>laʁʒ</hw>
+  </entry>
+  <entry id="fr30">
+    <gl>thick</gl>
+    <spell>épais</spell>
+    <hw>epɛ</hw>
+  </entry>
+  <entry id="fr31">
+    <gl>heavy</gl>
+    <spell>lourd</spell>
+    <hw>luʁ</hw>
+  </entry>
+  <entry id="fr32">
+    <gl>small</gl>
+    <spell>petit</spell>
+    <hw>pəti</hw>
+  </entry>
+  <entry id="fr33">
+    <gl>short</gl>
+    <spell>court</spell>
+    <hw>kuʁ</hw>
+  </entry>
+  <entry id="fr34">
+    <gl>narrow</gl>
+    <spell>étroit</spell>
+    <hw>etʁwa</hw>
+  </entry>
+  <entry id="fr35">
+    <gl>thin</gl>
+    <spell>mince</spell>
+    <hw>mɛ̃s</hw>
+  </entry>
+  <entry id="fr36">
+    <gl>woman, wife</gl>
+    <spell>femme</spell>
+    <hw>fam</hw>
+  </entry>
+  <entry id="fr37">
+    <gl>man (male), man (human)</gl>
+    <spell>homme</spell>
+    <hw>ɔm</hw>
+  </entry>
+  <entry id="fr39">
+    <gl>child</gl>
+    <spell>enfant</spell>
+    <hw>ɑ̃fɑ̃</hw>
+  </entry>
+  <entry id="fr40.5">
+    <gl>wife</gl>
+    <spell>épouse</spell>
+    <hw>epuz</hw>
+  </entry>
+  <entry id="fr41">
+    <gl>husband</gl>
+    <spell>mari</spell>
+    <hw>maʁi</hw>
+  </entry>
+  <entry id="fr41.5">
+    <gl>husband</gl>
+    <spell>époux</spell>
+    <hw>epu</hw>
+  </entry>
+  <entry id="fr42">
+    <gl>mother, sea</gl>
+    <spell>mère, mer</spell>
+    <hw>mɛʁ</hw>
+  </entry>
+  <entry id="fr43">
+    <gl>father</gl>
+    <spell>père</spell>
+    <hw>pɛʁ</hw>
+  </entry>
+  <entry id="fr44">
+    <gl>animal</gl>
+    <spell>animal</spell>
+    <hw>animal</hw>
+  </entry>
+  <entry id="fr45">
+    <gl>fish</gl>
+    <spell>poisson</spell>
+    <hw>pwasõ</hw>
+  </entry>
+  <entry id="fr46">
+    <gl>bird</gl>
+    <spell>oiseau</spell>
+    <hw>wazo</hw>
+  </entry>
+  <entry id="fr47">
+    <gl>dog</gl>
+    <spell>chien</spell>
+    <hw>ʃjɛ̃</hw>
+  </entry>
+  <entry id="fr48">
+    <gl>louse</gl>
+    <spell>pou</spell>
+    <hw>pu</hw>
+  </entry>
+  <entry id="fr49">
+    <gl>snake</gl>
+    <spell>serpent</spell>
+    <hw>sɛʁpɑ̃</hw>
+  </entry>
+  <entry id="fr51">
+    <gl>tree</gl>
+    <spell>arbre</spell>
+    <hw>aʁbʁ</hw>
+  </entry>
+  <entry id="fr52">
+    <gl>forest</gl>
+    <spell>forêt</spell>
+    <hw>fɔʁɛ</hw>
+  </entry>
+  <entry id="fr53">
+    <gl>stick</gl>
+    <spell>bâton</spell>
+    <hw>bɑtɔ̃</hw>
+  </entry>
+  <entry id="fr54">
+    <gl>fruit</gl>
+    <spell>fruit</spell>
+    <hw>fʁɥi</hw>
+  </entry>
+  <entry id="fr55">
+    <gl>seed</gl>
+    <spell>graine</spell>
+    <hw>gʁɛn</hw>
+  </entry>
+  <entry id="fr56">
+    <gl>leaf</gl>
+    <spell>feuille</spell>
+    <hw>fœj</hw>
+  </entry>
+  <entry id="fr57">
+    <gl>root</gl>
+    <spell>racine</spell>
+    <hw>ʁasin</hw>
+  </entry>
+  <entry id="fr58">
+    <gl>bark (of a tree)</gl>
+    <spell>écorce</spell>
+    <hw>ekɔʁs</hw>
+  </entry>
+  <entry id="fr59">
+    <gl>flower</gl>
+    <spell>fleur</spell>
+    <hw>flœʁ</hw>
+  </entry>
+  <entry id="fr60">
+    <gl>grass</gl>
+    <spell>herbe</spell>
+    <hw>ɛʁb</hw>
+  </entry>
+  <entry id="fr61">
+    <gl>rope</gl>
+    <spell>corde</spell>
+    <hw>kɔʁd</hw>
+  </entry>
+  <entry id="fr62">
+    <gl>skin</gl>
+    <spell>peau</spell>
+    <hw>po</hw>
+  </entry>
+  <entry id="fr63">
+    <gl>meat</gl>
+    <spell>viande</spell>
+    <hw>vjɑ̃d</hw>
+  </entry>
+  <entry id="fr64">
+    <gl>blood</gl>
+    <spell>sang</spell>
+    <hw>sɑ̃</hw>
+  </entry>
+  <entry id="fr65">
+    <gl>bone</gl>
+    <spell>os</spell>
+    <hw>ɔs</hw>
+  </entry>
+  <entry id="fr66">
+    <gl>fat (noun)</gl>
+    <spell>graisse</spell>
+    <hw>gʁɛs</hw>
+  </entry>
+  <entry id="fr67">
+    <gl>egg</gl>
+    <spell>œuf</spell>
+    <hw>œf</hw>
+  </entry>
+  <entry id="fr68">
+    <gl>horn</gl>
+    <spell>corne</spell>
+    <hw>kɔʁn</hw>
+  </entry>
+  <entry id="fr69">
+    <gl>tail</gl>
+    <spell>queue</spell>
+    <hw>kø</hw>
+  </entry>
+  <entry id="fr70">
+    <gl>feather</gl>
+    <spell>plume</spell>
+    <hw>plym</hw>
+  </entry>
+  <entry id="fr71">
+    <gl>hair</gl>
+    <spell>cheveux</spell>
+    <hw>ʃəvø</hw>
+  </entry>
+  <entry id="fr72">
+    <gl>head</gl>
+    <spell>tête</spell>
+    <hw>tɛt</hw>
+  </entry>
+  <entry id="fr73">
+    <gl>ear</gl>
+    <spell>oreille</spell>
+    <hw>ɔʁɛj</hw>
+  </entry>
+  <entry id="fr74">
+    <gl>eye</gl>
+    <spell>œil</spell>
+    <hw>œj</hw>
+  </entry>
+  <entry id="fr75">
+    <gl>nose</gl>
+    <spell>nez</spell>
+    <hw>ne</hw>
+  </entry>
+  <entry id="fr76">
+    <gl>mouth</gl>
+    <spell>bouche</spell>
+    <hw>buʃ</hw>
+  </entry>
+  <entry id="fr77">
+    <gl>tooth, in</gl>
+    <spell>dent, dans</spell>
+    <hw>dɑ̃</hw>
+  </entry>
+  <entry id="fr78">
+    <gl>tongue</gl>
+    <spell>langue</spell>
+    <hw>lɑ̃g</hw>
+  </entry>
+  <entry id="fr79">
+    <gl>fingernail</gl>
+    <spell>ongle</spell>
+    <hw>ɔ̃gl</hw>
+  </entry>
+  <entry id="fr80">
+    <gl>foot</gl>
+    <spell>pied</spell>
+    <hw>pje</hw>
+  </entry>
+  <entry id="fr81">
+    <gl>leg</gl>
+    <spell>jambe</spell>
+    <hw>ʒɑ̃b</hw>
+  </entry>
+  <entry id="fr82">
+    <gl>knee</gl>
+    <spell>genou</spell>
+    <hw>ʒənu</hw>
+  </entry>
+  <entry id="fr83">
+    <gl>hand</gl>
+    <spell>main</spell>
+    <hw>mɛ̃</hw>
+  </entry>
+  <entry id="fr84">
+    <gl>wing</gl>
+    <spell>aile</spell>
+    <hw>ɛl</hw>
+  </entry>
+  <entry id="fr85">
+    <gl>belly</gl>
+    <spell>ventre</spell>
+    <hw>vɑ̃tʁ</hw>
+  </entry>
+  <entry id="fr86">
+    <gl>guts</gl>
+    <spell>entrailles</spell>
+    <hw>ɑ̃tʁɑj̃</hw>
+  </entry>
+  <entry id="fr86">
+    <gl>guts</gl>
+    <spell>intestins</spell>
+    <hw>ɛ̃tɛstɛ̃</hw>
+  </entry>
+  <entry id="fr87">
+    <gl>neck</gl>
+    <spell>cou</spell>
+    <hw>ku</hw>
+  </entry>
+  <entry id="fr88">
+    <gl>back</gl>
+    <spell>dos</spell>
+    <hw>do</hw>
+  </entry>
+  <entry id="fr89">
+    <gl>breast</gl>
+    <spell>sein, poitrine</spell>
+    <hw>pwatʁin</hw>
+  </entry>
+  <entry id="fr90">
+    <gl>heart</gl>
+    <spell>cœur</spell>
+    <hw>kœʁ</hw>
+  </entry>
+  <entry id="fr91">
+    <gl>liver</gl>
+    <spell>foie</spell>
+    <hw>fwɑ</hw>
+  </entry>
+  <entry id="fr92">
+    <gl>to drink</gl>
+    <spell>boire</spell>
+    <hw>bwɑʁ</hw>
+  </entry>
+  <entry id="fr93">
+    <gl>to eat</gl>
+    <spell>manger</spell>
+    <hw>mɑ̃ʒe</hw>
+  </entry>
+  <entry id="fr94">
+    <gl>to bite</gl>
+    <spell>mordre</spell>
+    <hw>mɔʁdʁ</hw>
+  </entry>
+  <entry id="fr95">
+    <gl>to suck</gl>
+    <spell>sucer</spell>
+    <hw>syse</hw>
+  </entry>
+  <entry id="fr96">
+    <gl>to spit</gl>
+    <spell>cracher</spell>
+    <hw>kʁaʃe</hw>
+  </entry>
+  <entry id="fr97">
+    <gl>to vomit</gl>
+    <spell>vomir</spell>
+    <hw>vɔmiʁ</hw>
+  </entry>
+  <entry id="fr98">
+    <gl>to blow</gl>
+    <spell>souffler</spell>
+    <hw>sufle</hw>
+  </entry>
+  <entry id="fr99">
+    <gl>to breathe</gl>
+    <spell>respirer</spell>
+    <hw>ʁɛspiʁe</hw>
+  </entry>
+  <entry id="fr100">
+    <gl>to laugh</gl>
+    <spell>rire</spell>
+    <hw>ʁiʁ</hw>
+  </entry>
+  <entry id="fr101">
+    <gl>to see</gl>
+    <spell>voir</spell>
+    <hw>vwaʁ</hw>
+  </entry>
+  <entry id="fr102">
+    <gl>to hear</gl>
+    <spell>entendre</spell>
+    <hw>ɑ̃tɑ̃dʁ</hw>
+  </entry>
+  <entry id="fr103">
+    <gl>to know</gl>
+    <spell>savoir</spell>
+    <hw>savwaʁ</hw>
+  </entry>
+  <entry id="fr104">
+    <gl>to think</gl>
+    <spell>penser</spell>
+    <hw>pɑ̃se</hw>
+  </entry>
+  <entry id="fr105">
+    <gl>to smell</gl>
+    <spell>sentir</spell>
+    <hw>sɑ̃tiʁ</hw>
+  </entry>
+  <entry id="fr106">
+    <gl>to fear</gl>
+    <spell>craindre</spell>
+    <hw>kʁɛ̃dʁ</hw>
+  </entry>
+  <entry id="fr107">
+    <gl>to sleep</gl>
+    <spell>dormir</spell>
+    <hw>dɔʁmiʁ</hw>
+  </entry>
+  <entry id="fr108">
+    <gl>to live</gl>
+    <spell>vivre</spell>
+    <hw>vivʁ</hw>
+  </entry>
+  <entry id="fr109">
+    <gl>to die</gl>
+    <spell>mourir</spell>
+    <hw>muʁiʁ</hw>
+  </entry>
+  <entry id="fr110">
+    <gl>to kill</gl>
+    <spell>tuer</spell>
+    <hw>tɥe</hw>
+  </entry>
+  <entry id="fr111">
+    <gl>to fight</gl>
+    <spell>se battre</spell>
+    <hw>səbatʁ</hw>
+  </entry>
+  <entry id="fr112">
+    <gl>to hunt</gl>
+    <spell>chasser</spell>
+    <hw>ʃase</hw>
+  </entry>
+  <entry id="fr113">
+    <gl>to hit</gl>
+    <spell>frapper</spell>
+    <hw>fʁape</hw>
+  </entry>
+  <entry id="fr114">
+    <gl>to cut</gl>
+    <spell>couper</spell>
+    <hw>kupe</hw>
+  </entry>
+  <entry id="fr115">
+    <gl>to split</gl>
+    <spell>fendre</spell>
+    <hw>fɑ̃dʁ</hw>
+  </entry>
+  <entry id="fr116">
+    <gl>to stab</gl>
+    <spell>poignarder</spell>
+    <hw>pwaɲaʁde</hw>
+  </entry>
+  <entry id="fr117">
+    <gl>to scratch</gl>
+    <spell>gratter</spell>
+    <hw>gʁate</hw>
+  </entry>
+  <entry id="fr118">
+    <gl>to dig</gl>
+    <spell>creuser</spell>
+    <hw>kʁøze</hw>
+  </entry>
+  <entry id="fr119">
+    <gl>to swim</gl>
+    <spell>nager</spell>
+    <hw>naʒe</hw>
+  </entry>
+  <entry id="fr120">
+    <gl>to fly</gl>
+    <spell>voler</spell>
+    <hw>vɔle</hw>
+  </entry>
+  <entry id="fr121">
+    <gl>to walk</gl>
+    <spell>marcher</spell>
+    <hw>maʁʃe</hw>
+  </entry>
+  <entry id="fr122">
+    <gl>to come</gl>
+    <spell>venir</spell>
+    <hw>vəniʁ</hw>
+  </entry>
+  <entry id="fr123">
+    <gl>to lie (as in a bed)</gl>
+    <spell>s'étendre (action)</spell>
+    <hw>setɑ̃dʁ</hw>
+  </entry>
+  <entry id="fr123.5">
+    <gl>to lie (as in a bed)</gl>
+    <spell>être étendu(state)</spell>
+    <hw>ɛtʁetɑ̃dy</hw>
+  </entry>
+  <entry id="fr124">
+    <gl>to sit</gl>
+    <spell>s'asseoir (action)</spell>
+    <hw>saswaʁ</hw>
+  </entry>
+  <entry id="fr124.5">
+    <gl>to sit</gl>
+    <spell>être assis (state)</spell>
+    <hw>ɛtʁasi</hw>
+  </entry>
+  <entry id="fr125">
+    <gl>to stand</gl>
+    <spell>se lever (action)</spell>
+    <hw>sələve</hw>
+  </entry>
+  <entry id="fr125.5">
+    <gl>to stand</gl>
+    <spell>se tenir debout (state)</spell>
+    <hw>sətəniʁdəbu</hw>
+  </entry>
+  <entry id="fr126">
+    <gl>to turn (intransitive)</gl>
+    <spell>tourner</spell>
+    <hw>tuʁne</hw>
+  </entry>
+  <entry id="fr127">
+    <gl>to fall</gl>
+    <spell>tomber</spell>
+    <hw>tɔ̃be</hw>
+  </entry>
+  <entry id="fr128">
+    <gl>to give</gl>
+    <spell>donner</spell>
+    <hw>dɔne</hw>
+  </entry>
+  <entry id="fr129">
+    <gl>to hold</gl>
+    <spell>tenir</spell>
+    <hw>təniʁ</hw>
+  </entry>
+  <entry id="fr130">
+    <gl>to squeeze</gl>
+    <spell>serrer</spell>
+    <hw>seʁe</hw>
+  </entry>
+  <entry id="fr131">
+    <gl>to rub</gl>
+    <spell>frotter</spell>
+    <hw>fʁɔte</hw>
+  </entry>
+  <entry id="fr132">
+    <gl>to wash</gl>
+    <spell>laver</spell>
+    <hw>lave</hw>
+  </entry>
+  <entry id="fr133">
+    <gl>to wipe</gl>
+    <spell>essuyer</spell>
+    <hw>esɥije</hw>
+  </entry>
+  <entry id="fr134">
+    <gl>to pull</gl>
+    <spell>tirer</spell>
+    <hw>tiʁe</hw>
+  </entry>
+  <entry id="fr135">
+    <gl>to push</gl>
+    <spell>pousser</spell>
+    <hw>puse</hw>
+  </entry>
+  <entry id="fr136">
+    <gl>to throw</gl>
+    <spell>jeter</spell>
+    <hw>ʒəte</hw>
+  </entry>
+  <entry id="fr136.5">
+    <gl>to throw</gl>
+    <spell>lancer</spell>
+    <hw>lɑ̃se</hw>
+  </entry>
+  <entry id="fr137">
+    <gl>to tie</gl>
+    <spell>lier</spell>
+    <hw>lje</hw>
+  </entry>
+  <entry id="fr138">
+    <gl>to sew</gl>
+    <spell>coudre</spell>
+    <hw>kudʁ</hw>
+  </entry>
+  <entry id="fr139">
+    <gl>to count</gl>
+    <spell>compter</spell>
+    <hw>kɔ̃te</hw>
+  </entry>
+  <entry id="fr140">
+    <gl>to say</gl>
+    <spell>dire</spell>
+    <hw>diʁ</hw>
+  </entry>
+  <entry id="fr141">
+    <gl>to sing</gl>
+    <spell>chanter</spell>
+    <hw>ʃɑ̃te</hw>
+  </entry>
+  <entry id="fr142">
+    <gl>to play</gl>
+    <spell>jouer</spell>
+    <hw>ʒwe</hw>
+  </entry>
+  <entry id="fr143">
+    <gl>to float</gl>
+    <spell>flotter</spell>
+    <hw>flɔte</hw>
+  </entry>
+  <entry id="fr144">
+    <gl>to flow</gl>
+    <spell>couler</spell>
+    <hw>kule</hw>
+  </entry>
+  <entry id="fr145">
+    <gl>to freeze</gl>
+    <spell>geler</spell>
+    <hw>ʒəle</hw>
+  </entry>
+  <entry id="fr146">
+    <gl>to swell</gl>
+    <spell>gonfler</spell>
+    <hw>gɔ̃fle</hw>
+  </entry>
+  <entry id="fr147">
+    <gl>sun</gl>
+    <spell>soleil</spell>
+    <hw>sɔlɛj</hw>
+  </entry>
+  <entry id="fr148">
+    <gl>moon</gl>
+    <spell>lune</spell>
+    <hw>lyn</hw>
+  </entry>
+  <entry id="fr149">
+    <gl>star</gl>
+    <spell>étoile</spell>
+    <hw>etwal</hw>
+  </entry>
+  <entry id="fr150">
+    <gl>water</gl>
+    <spell>eau</spell>
+    <hw>o</hw>
+  </entry>
+  <entry id="fr151">
+    <gl>rain</gl>
+    <spell>pluie</spell>
+    <hw>plɥi</hw>
+  </entry>
+  <entry id="fr152">
+    <gl>river</gl>
+    <spell>rivière</spell>
+    <hw>ʁivjɛʁ</hw>
+  </entry>
+  <entry id="fr153">
+    <gl>lake</gl>
+    <spell>lac</spell>
+    <hw>lak</hw>
+  </entry>
+  <entry id="fr155">
+    <gl>salt</gl>
+    <spell>sel</spell>
+    <hw>sɛl</hw>
+  </entry>
+  <entry id="fr156">
+    <gl>stone</gl>
+    <spell>pierre</spell>
+    <hw>pjɛʁ</hw>
+  </entry>
+  <entry id="fr157">
+    <gl>sand</gl>
+    <spell>sable</spell>
+    <hw>sabl</hw>
+  </entry>
+  <entry id="fr158">
+    <gl>dust</gl>
+    <spell>poussière</spell>
+    <hw>pusjɛʁ</hw>
+  </entry>
+  <entry id="fr159">
+    <gl>earth</gl>
+    <spell>terre</spell>
+    <hw>tɛʁ</hw>
+  </entry>
+  <entry id="fr160">
+    <gl>cloud</gl>
+    <spell>nuage</spell>
+    <hw>nɥaʒ</hw>
+  </entry>
+  <entry id="fr161">
+    <gl>fog</gl>
+    <spell>brouillard</spell>
+    <hw>bʁujaʁ</hw>
+  </entry>
+  <entry id="fr162">
+    <gl>sky</gl>
+    <spell>ciel</spell>
+    <hw>sjɛl</hw>
+  </entry>
+  <entry id="fr163">
+    <gl>wind</gl>
+    <spell>vent</spell>
+    <hw>vɑ̃</hw>
+  </entry>
+  <entry id="fr164">
+    <gl>snow</gl>
+    <spell>neige</spell>
+    <hw>nɛʒ</hw>
+  </entry>
+  <entry id="fr165">
+    <gl>ice</gl>
+    <spell>glace</spell>
+    <hw>glas</hw>
+  </entry>
+  <entry id="fr166">
+    <gl>smoke</gl>
+    <spell>fumée</spell>
+    <hw>fyme</hw>
+  </entry>
+  <entry id="fr167">
+    <gl>fire</gl>
+    <spell>feu</spell>
+    <hw>fø</hw>
+  </entry>
+  <entry id="fr168">
+    <gl>ash</gl>
+    <spell>cendre</spell>
+    <hw>sɑ̃dʁ</hw>
+  </entry>
+  <entry id="fr169">
+    <gl>to burn</gl>
+    <spell>brûler</spell>
+    <hw>bʁyle</hw>
+  </entry>
+  <entry id="fr170">
+    <gl>road</gl>
+    <spell>route</spell>
+    <hw>ʁut</hw>
+  </entry>
+  <entry id="fr171">
+    <gl>mountain</gl>
+    <spell>montagne</spell>
+    <hw>mɔ̃taɲ</hw>
+  </entry>
+  <entry id="fr172">
+    <gl>red</gl>
+    <spell>rouge</spell>
+    <hw>ʁuʒ</hw>
+  </entry>
+  <entry id="fr173">
+    <gl>green, worm</gl>
+    <spell>vert, ver</spell>
+    <hw>vɛʁ</hw>
+  </entry>
+  <entry id="fr174">
+    <gl>yellow</gl>
+    <spell>jaune</spell>
+    <hw>ʒon</hw>
+  </entry>
+  <entry id="fr175">
+    <gl>white</gl>
+    <spell>blanc</spell>
+    <hw>blɑ̃</hw>
+  </entry>
+  <entry id="fr176">
+    <gl>black</gl>
+    <spell>noir</spell>
+    <hw>nwaʁ</hw>
+  </entry>
+  <entry id="fr177">
+    <gl>night</gl>
+    <spell>nuit</spell>
+    <hw>nɥi</hw>
+  </entry>
+  <entry id="fr178">
+    <gl>day</gl>
+    <spell>jour</spell>
+    <hw>ʒuʁ</hw>
+  </entry>
+  <entry id="fr179">
+    <gl>year</gl>
+    <spell>an</spell>
+    <hw>ɑ̃</hw>
+  </entry>
+  <entry id="fr179.5">
+    <gl>year</gl>
+    <spell>année</spell>
+    <hw>ane</hw>
+  </entry>
+  <entry id="fr180">
+    <gl>warm</gl>
+    <spell>chaud</spell>
+    <hw>ʃo</hw>
+  </entry>
+  <entry id="fr181">
+    <gl>cold</gl>
+    <spell>froid</spell>
+    <hw>fʁwa</hw>
+  </entry>
+  <entry id="fr182">
+    <gl>full</gl>
+    <spell>plein</spell>
+    <hw>plɛ̃</hw>
+  </entry>
+  <entry id="fr183">
+    <gl>new</gl>
+    <spell>nouveau</spell>
+    <hw>nuvo</hw>
+  </entry>
+  <entry id="fr184">
+    <gl>old</gl>
+    <spell>vieux</spell>
+    <hw>vjø</hw>
+  </entry>
+  <entry id="fr185">
+    <gl>good</gl>
+    <spell>bon</spell>
+    <hw>bɔ̃</hw>
+  </entry>
+  <entry id="fr186">
+    <gl>bad</gl>
+    <spell>mauvais</spell>
+    <hw>movɛ</hw>
+  </entry>
+  <entry id="fr187">
+    <gl>rotten</gl>
+    <spell>pourri</spell>
+    <hw>puri</hw>
+  </entry>
+  <entry id="fr188">
+    <gl>dirty</gl>
+    <spell>sale</spell>
+    <hw>sal</hw>
+  </entry>
+  <entry id="fr189">
+    <gl>straight</gl>
+    <spell>droit</spell>
+    <hw>dʁwa</hw>
+  </entry>
+  <entry id="fr190">
+    <gl>round</gl>
+    <spell>rond</spell>
+    <hw>ʁɔ̃</hw>
+  </entry>
+  <entry id="fr191">
+    <gl>sharp (as a knife)</gl>
+    <spell>tranchant</spell>
+    <hw>tʁɑ̃ʃɑ̃</hw>
+  </entry>
+  <entry id="fr192">
+    <gl>dull (as a knife)</gl>
+    <spell>émoussé</spell>
+    <hw>emuse</hw>
+  </entry>
+  <entry id="fr193">
+    <gl>smooth</gl>
+    <spell>lisse</spell>
+    <hw>lis</hw>
+  </entry>
+  <entry id="fr194">
+    <gl>wet</gl>
+    <spell>mouillé</spell>
+    <hw>muje</hw>
+  </entry>
+  <entry id="fr195">
+    <gl>dry</gl>
+    <spell>sec</spell>
+    <hw>sɛk</hw>
+  </entry>
+  <entry id="fr196">
+    <gl>correct</gl>
+    <spell>juste</spell>
+    <hw>ʒyst</hw>
+  </entry>
+  <entry id="fr197">
+    <gl>near</gl>
+    <spell>près</spell>
+    <hw>pʁɛ</hw>
+  </entry>
+  <entry id="fr198">
+    <gl>far</gl>
+    <spell>loin</spell>
+    <hw>lwɛ̃</hw>
+  </entry>
+  <entry id="fr199">
+    <gl>right</gl>
+    <spell>droite</spell>
+    <hw>dʁwat</hw>
+  </entry>
+  <entry id="fr200">
+    <gl>left</gl>
+    <spell>gauche</spell>
+    <hw>goʃ</hw>
+  </entry>
+  <entry id="fr201">
+    <gl>at</gl>
+    <spell>à</spell>
+    <hw>a</hw>
+  </entry>
+  <entry id="fr203">
+    <gl>with</gl>
+    <spell>avec</spell>
+    <hw>avɛk</hw>
+  </entry>
+  <entry id="fr204">
+    <gl>and</gl>
+    <spell>et</spell>
+    <hw>e</hw>
+  </entry>
+  <entry id="fr205">
+    <gl>if</gl>
+    <spell>si</spell>
+    <hw>si</hw>
+  </entry>
+  <entry id="fr206">
+    <gl>because</gl>
+    <spell>parce que</spell>
+    <hw>paʁsəkə</hw>
+  </entry>
+  <entry id="fr207">
+    <gl>name</gl>
+    <spell>nom</spell>
+    <hw>nɔ̃</hw>
+  </entry>
+  <entry id="fr208">
+    <gl>six</gl>
+    <spell>six</spell>
+    <hw>sis</hw>
+  </entry>
+  <entry id="fr209">
+    <gl>seven</gl>
+    <spell>sept</spell>
+    <hw>sɛt</hw>
+  </entry>
+  <entry id="fr210">
+    <gl>eight</gl>
+    <spell>huit</spell>
+    <hw>ɥit</hw>
+  </entry>
+  <entry id="fr211">
+    <gl>nine</gl>
+    <spell>neuf</spell>
+    <hw>nœf</hw>
+  </entry>
+  <entry id="fr212">
+    <gl>ten</gl>
+    <spell>dix</spell>
+    <hw>dis</hw>
+  </entry>
+</lexicon>

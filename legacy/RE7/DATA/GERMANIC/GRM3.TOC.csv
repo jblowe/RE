@@ -1,0 +1,60 @@
+0	1	Type	*	context	OEP	OHGP	GotP	ONP
+1	1	I	b		b	b	b	b
+2	1	I	d		d	t	d	d
+3	1	I	f		f	f	f	f
+4	1	I	g		y	g	g	g
+5	1	I	k		k	kx	k	k
+6	1	I	l		l	l	l	l
+7	1	I	m		m	m	m	m
+8	1	I	n		n	n	n	n
+9	1	I	p		p	pf	p	p
+10	1	I	r		r	r	r	r
+11	1	I	s		s	s	s	s
+12	1	I	t		t	ts	t	t
+13	1	I	x		h	h	h	h
+14	1	I	ɪ		ɪ	d	ɪ	ɪ
+15	1	C	b	*/N-	b	b	b	b
+16	1	C	d	*/N-	d	t	d	d
+17	1	C	g	*/N-	g	g	g	g
+18	1	C	k	*/-H	đ	k	k	k
+19	1	C	k	*/-H	đ	kx	k	k
+20	1	C	k	*/Q-	k	xx	k	k
+21	1	C	k	*/S-	k	k	k	k
+22	1	C	l		l	l	l	l
+23	1	C	m		m	m	m	m
+24	1	C	n		n	n	n	n
+25	1	C	p	*/s-	p	p	p	p
+26	1	C	p	*/T-	p	pf	p	p
+27	1	C	r		r	r	r	r
+28	1	C	s		s	s	s	s
+29	1	C	t	*/-H	tt	ts	t	t
+30	1	C	t	*/P-	t	t	t	t
+31	1	C	v	*/A-	v	b	b	v
+32	1	C	x	*/-K	x	x	x	ɤ
+33	1	C	x	*/A-	ɤ	h	h	ɤ
+34	1	C	ɖ	*/A-	ɖ	d	ɪ	ɖ
+35	1	F	an		an	an	an	a
+36	1	F	as		as	a	ᴮs	ar
+37	1	F	k		đ	xx	k	k
+38	1	F	l		l	l	l	l
+39	1	F	m		m	m	m	m
+40	1	F	n		n	n	n	n
+41	1	F	p		p	ff	p	p
+42	1	F	r		r	r	r	r
+43	1	F	s		s	s	s	s
+44	1	F	t		t	ss	t	t
+45	1	F	v		f	b	f	f
+46	1	F	ȴ		x	x	x	ɤ
+47	1	V	a		a	a	a	a
+48	1	V	 ̇		 ̇	 ̇	 ̇	
+49	1	V	aq		 ̇	ei	ai	ai
+50	1	V	au		ˇa	ᴮ	au	au
+51	1	V	e		e	e	e	e
+52	1	V	ˇ		ˇ	ˇ	ˇ	ˇ
+53	1	V	i		i	i	i	i
+54	1	V	ɑ		ɑ	ɑ	ɑ	ɑ
+55	1	V	o		o	o	o	o
+56	1	V	ᴮ		ᴮ	ᴮ	ᴮ	ᴮ
+57	1	V	u		u	u	u	u
+58	1	V	t̑		t̑	t̑	t̑	t̑
+59	1	G	j		ɤ	ɤ	j	j

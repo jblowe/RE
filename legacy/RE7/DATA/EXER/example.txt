@@ -1,0 +1,16 @@
+N	L	Type	*	Env	A	B
+1	1	I	t		t	t
+2	1	I	th		t	d
+3	1	I	d		d	t
+4	1	I	dh		d	d
+5	1	V	i		i	i
+6	1	V	e		e	e
+7	1	V	uo		uo	uo
+8	1	V	o		o	o
+9	1	V	u		u	u
+10	1	V	oe		oe	oe
+11	1	V	iu		iu	iu
+12	1	V	oeoe		oeoe	oeoe
+13	1	F	p		p	p
+14	1	F	k		k	k
+15	1	F	s		s	s

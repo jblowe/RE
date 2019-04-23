@@ -1,0 +1,18 @@
+13.14.14.	saa	14.3	raroton	Qaa	quatre
+14.5.14.	aka	9.4	hawai	aQa	racine
+3.14.14.	faa	14.3	raroton	Qaa	quatre
+5.14.10.17.	karo	8.4	hawai	Qalo	viter
+5.14.11.17.	kalo	8.4	hawai	Qalo	viter
+5.14.13.14.	kasa	7.4	hawai	Qaha	fort
+5.14.3.14.	kafa	7.4	hawai	Qaha	fort
+6.14.12.15.	Qahu	10.1	tongien	Qahu	fiel
+6.14.13.15.	Qasu	10.1	tongien	Qahu	fiel
+7.14.10.15.	Naru	28.1	tongien	Nalu	vague
+7.14.10.15.	Naru	28.2	samoan	Nalu	vague
+7.14.10.15.	Naru	28.3	raroton	Naru	vague
+7.14.11.15.	Nalu	28.2	samoan	Nalu	vague
+7.14.11.15.	Nalu	28.3	raroton	Naru	vague
+7.15.1.15.	Nutu	29.1	tongien	Nutu	bouche
+7.15.1.15.	Nutu	29.2	samoan	Nutu	bouche
+7.15.1.15.	Nutu	29.3	raroton	Nutu	bouche
+FAILED.samoan		1.2	samoan		nombril

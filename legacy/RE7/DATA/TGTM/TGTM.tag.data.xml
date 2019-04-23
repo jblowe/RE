@@ -1,0 +1,2439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="tag">
+  <entry id="tag">
+    <gl>gloss</gl>
+    <hw>hw</hw>
+  </entry>
+  <entry id="tag1">
+    <gl>to prop</gl>
+    <hw>Xan-ba</hw>
+  </entry>
+  <entry id="tag2">
+    <gl>shoulder</gl>
+    <hw>³bam</hw>
+  </entry>
+  <entry id="tag3">
+    <gl>to soak</gl>
+    <hw>Xbam-ba</hw>
+  </entry>
+  <entry id="tag4">
+    <gl>dry field</gl>
+    <hw>Xbaŋ</hw>
+  </entry>
+  <entry id="tag5">
+    <gl>to be strong</gl>
+    <hw>³baŋ-ba</hw>
+  </entry>
+  <entry id="tag6">
+    <gl>place name</gl>
+    <hw>³bek</hw>
+  </entry>
+  <entry id="tag7">
+    <gl>to have cold feet</gl>
+    <hw>³ber-ba</hw>
+  </entry>
+  <entry id="tag8">
+    <gl>to throw away</gl>
+    <hw>Xbjaŋ-go</hw>
+  </entry>
+  <entry id="tag9">
+    <gl>wing</gl>
+    <hw>³bjap</hw>
+  </entry>
+  <entry id="tag10">
+    <gl>to bury</gl>
+    <hw>Xbjup-pa</hw>
+  </entry>
+  <entry id="tag11">
+    <gl>to take away</gl>
+    <hw>³bor-la</hw>
+  </entry>
+  <entry id="tag12">
+    <gl>cliff</gl>
+    <hw>³bra</hw>
+  </entry>
+  <entry id="tag13">
+    <gl>ripe</gl>
+    <hw>Xcip-pa</hw>
+  </entry>
+  <entry id="tag14">
+    <gl>to be warm (weather)</gl>
+    <hw>Xcʰap-pa</hw>
+  </entry>
+  <entry id="tag15">
+    <gl>to hit</gl>
+    <hw>Xcʰjek-la</hw>
+  </entry>
+  <entry id="tag16">
+    <gl>spoilt (burnt)</gl>
+    <hw>³ɖam</hw>
+  </entry>
+  <entry id="tag17">
+    <gl>to be torn</gl>
+    <hw>Xɖeː-ba</hw>
+  </entry>
+  <entry id="tag18">
+    <gl>to pull</gl>
+    <hw>³ɖui-go</hw>
+  </entry>
+  <entry id="tag19">
+    <gl>son</gl>
+    <hw>Xdza</hw>
+  </entry>
+  <entry id="tag20">
+    <gl>to sit (hh)</gl>
+    <hw>³dzjaː-go</hw>
+  </entry>
+  <entry id="tag21">
+    <gl>to become thin</gl>
+    <hw>³dzju-dzi</hw>
+  </entry>
+  <entry id="tag22">
+    <gl>you</gl>
+    <hw>Xe</hw>
+  </entry>
+  <entry id="tag23">
+    <gl>shawl</gl>
+    <hw>³ga</hw>
+  </entry>
+  <entry id="tag24">
+    <gl>to fall (tree)</gl>
+    <hw>Xgur-ba</hw>
+  </entry>
+  <entry id="tag25">
+    <gl>to rumble (sky)</gl>
+    <hw>³gur-dzi</hw>
+  </entry>
+  <entry id="tag26">
+    <gl>to come</gl>
+    <hw>Xha</hw>
+  </entry>
+  <entry id="tag27">
+    <gl>when</gl>
+    <hw>Xhai-ma</hw>
+  </entry>
+  <entry id="tag28">
+    <gl>to where</gl>
+    <hw>Xhan-aŋ</hw>
+  </entry>
+  <entry id="tag29">
+    <gl>to cut grass</gl>
+    <hw>Xhan-ba</hw>
+  </entry>
+  <entry id="tag30">
+    <gl>to feel cold</gl>
+    <hw>Xhaŋ-ba</hw>
+  </entry>
+  <entry id="tag31">
+    <gl>to dry</gl>
+    <hw>Xhar-ba</hw>
+  </entry>
+  <entry id="tag32">
+    <gl>to shake</gl>
+    <hw>Xhar-ba</hw>
+  </entry>
+  <entry id="tag33">
+    <gl>to be hungry</gl>
+    <hw>Xhen-ba</hw>
+  </entry>
+  <entry id="tag34">
+    <gl>to climb</gl>
+    <hw>Xheː-ba</hw>
+  </entry>
+  <entry id="tag35">
+    <gl>to make a rope</gl>
+    <hw>Xhim-ba</hw>
+  </entry>
+  <entry id="tag36">
+    <gl>to swallow</gl>
+    <hw>Xhloŋ-ba</hw>
+  </entry>
+  <entry id="tag37">
+    <gl>to burn</gl>
+    <hw>Xho-ba</hw>
+  </entry>
+  <entry id="tag38">
+    <gl>deep</gl>
+    <hw>Xhok-ka</hw>
+  </entry>
+  <entry id="tag39">
+    <gl>to move sthg</gl>
+    <hw>Xhoː-ba</hw>
+  </entry>
+  <entry id="tag40">
+    <gl>guts</gl>
+    <hw>Xhũ</hw>
+  </entry>
+  <entry id="tag41">
+    <gl>side-dish</gl>
+    <hw>Xhu</hw>
+  </entry>
+  <entry id="tag42">
+    <gl>cubit</gl>
+    <hw>Xhu</hw>
+  </entry>
+  <entry id="tag43">
+    <gl>to wash</gl>
+    <hw>Xhu-ba</hw>
+  </entry>
+  <entry id="tag44">
+    <gl>hair</gl>
+    <hw>Xhwa</hw>
+  </entry>
+  <entry id="tag45">
+    <gl>wheat</gl>
+    <hw>⁴hwa</hw>
+  </entry>
+  <entry id="tag46">
+    <gl>to cry</gl>
+    <hw>Xhwa-ba</hw>
+  </entry>
+  <entry id="tag47">
+    <gl>to feed</gl>
+    <hw>Xhwa-go</hw>
+  </entry>
+  <entry id="tag48">
+    <gl>buzzard</gl>
+    <hw>Xhwai</hw>
+  </entry>
+  <entry id="tag49">
+    <gl>to warm up (liquid)</gl>
+    <hw>Xhwai</hw>
+  </entry>
+  <entry id="tag50">
+    <gl>clothes</gl>
+    <hw>¹hwan</hw>
+  </entry>
+  <entry id="tag51">
+    <gl>to wear (ckothes or shoes)</gl>
+    <hw>Xhwan-ba</hw>
+  </entry>
+  <entry id="tag52">
+    <gl>to roast</gl>
+    <hw>Xhwaŋ-ba</hw>
+  </entry>
+  <entry id="tag53">
+    <gl>to bite</gl>
+    <hw>Xhwap-pa</hw>
+  </entry>
+  <entry id="tag54">
+    <gl>??</gl>
+    <hw>³jam</hw>
+  </entry>
+  <entry id="tag55">
+    <gl>to winnow</gl>
+    <hw>³jap-pa</hw>
+  </entry>
+  <entry id="tag56">
+    <gl>hand</gl>
+    <hw>Xjaː</hw>
+  </entry>
+  <entry id="tag57">
+    <gl>left hand</gl>
+    <hw>Xjom-lo</hw>
+  </entry>
+  <entry id="tag58">
+    <gl>to rock, shake</gl>
+    <hw>Xjoŋ-ba</hw>
+  </entry>
+  <entry id="tag59">
+    <gl>descend</gl>
+    <hw>Xju</hw>
+  </entry>
+  <entry id="tag60">
+    <gl>to rain</gl>
+    <hw>Xju-ba</hw>
+  </entry>
+  <entry id="tag61">
+    <gl>to pour</gl>
+    <hw>Xju-go</hw>
+  </entry>
+  <entry id="tag62">
+    <gl>to stop (river)</gl>
+    <hw>Xka-ba</hw>
+  </entry>
+  <entry id="tag63">
+    <gl>to require time</gl>
+    <hw>Xkai-ba</hw>
+  </entry>
+  <entry id="tag64">
+    <gl>to fry</gl>
+    <hw>³kal-ba</hw>
+  </entry>
+  <entry id="tag65">
+    <gl>bile</gl>
+    <hw>Xkam</hw>
+  </entry>
+  <entry id="tag66">
+    <gl>chin</gl>
+    <hw>Xkam</hw>
+  </entry>
+  <entry id="tag67">
+    <gl>rice</gl>
+    <hw>Xkan</hw>
+  </entry>
+  <entry id="tag68">
+    <gl>leg</gl>
+    <hw>Xkaŋ</hw>
+  </entry>
+  <entry id="tag69">
+    <gl>hill</gl>
+    <hw>³kaŋ</hw>
+  </entry>
+  <entry id="tag70">
+    <gl>to stir meal</gl>
+    <hw>Xkaŋ-ba</hw>
+  </entry>
+  <entry id="tag71">
+    <gl>slope</gl>
+    <hw>³kap-pa</hw>
+  </entry>
+  <entry id="tag72">
+    <gl>to cover</gl>
+    <hw>³kap-pa</hw>
+  </entry>
+  <entry id="tag73">
+    <gl>to set to cook</gl>
+    <hw>Xkar-ba</hw>
+  </entry>
+  <entry id="tag74">
+    <gl>belt</gl>
+    <hw>Xke</hw>
+  </entry>
+  <entry id="tag75">
+    <gl>work</gl>
+    <hw>⁴ke</hw>
+  </entry>
+  <entry id="tag76">
+    <gl>bread</gl>
+    <hw>³keŋ</hw>
+  </entry>
+  <entry id="tag77">
+    <gl>belt</gl>
+    <hw>Xkeː</hw>
+  </entry>
+  <entry id="tag78">
+    <gl>to curse</gl>
+    <hw>Xkeː-ba</hw>
+  </entry>
+  <entry id="tag79">
+    <gl>right hand</gl>
+    <hw>Xkeː-lo</hw>
+  </entry>
+  <entry id="tag80">
+    <gl>one</gl>
+    <hw>⁴kiː</hw>
+  </entry>
+  <entry id="tag81">
+    <gl>to itch</gl>
+    <hw>Xkja-ba</hw>
+  </entry>
+  <entry id="tag82">
+    <gl>to pin hair up</gl>
+    <hw>Xkja-ba</hw>
+  </entry>
+  <entry id="tag83">
+    <gl>to swim</gl>
+    <hw>Xkjal-ba</hw>
+  </entry>
+  <entry id="tag84">
+    <gl>road</gl>
+    <hw>⁴kjam</hw>
+  </entry>
+  <entry id="tag85">
+    <gl>to chew cud</gl>
+    <hw>Xkjan-ba</hw>
+  </entry>
+  <entry id="tag86">
+    <gl>father in law</gl>
+    <hw>Xkjen</hw>
+  </entry>
+  <entry id="tag87">
+    <gl>lake</gl>
+    <hw>³kjo</hw>
+  </entry>
+  <entry id="tag88">
+    <gl>to weight</gl>
+    <hw>Xkjo-go</hw>
+  </entry>
+  <entry id="tag89">
+    <gl>the whole</gl>
+    <hw>Xkjoŋ</hw>
+  </entry>
+  <entry id="tag90">
+    <gl>water</gl>
+    <hw>Xkju</hw>
+  </entry>
+  <entry id="tag91">
+    <gl>to break (wood)</gl>
+    <hw>Xkju-ba</hw>
+  </entry>
+  <entry id="tag92">
+    <gl>feces</gl>
+    <hw>Xkli</hw>
+  </entry>
+  <entry id="tag93">
+    <gl>to buy</gl>
+    <hw>⁴klu-si</hw>
+  </entry>
+  <entry id="tag94">
+    <gl>back</gl>
+    <hw>³ko</hw>
+  </entry>
+  <entry id="tag95">
+    <gl>to break off (corn)</gl>
+    <hw>Xko-ba</hw>
+  </entry>
+  <entry id="tag96">
+    <gl>grand-son, nephew</gl>
+    <hw>Xkon</hw>
+  </entry>
+  <entry id="tag97">
+    <gl>hard</gl>
+    <hw>Xkoŋ-ba</hw>
+  </entry>
+  <entry id="tag98">
+    <gl>to squat</gl>
+    <hw>Xkoŋ-ba</hw>
+  </entry>
+  <entry id="tag99">
+    <gl>to shiver</gl>
+    <hw>Xkoŋ-ba</hw>
+  </entry>
+  <entry id="tag100">
+    <gl>unit</gl>
+    <hw>Xkor</hw>
+  </entry>
+  <entry id="tag101">
+    <gl>unit</gl>
+    <hw>˩kor</hw>
+  </entry>
+  <entry id="tag102">
+    <gl>to shout</gl>
+    <hw>Xkriŋ-ba</hw>
+  </entry>
+  <entry id="tag103">
+    <gl>nine</gl>
+    <hw>²kuː</hw>
+  </entry>
+  <entry id="tag104">
+    <gl>to wear a hat</gl>
+    <hw>Xkuː-ba</hw>
+  </entry>
+  <entry id="tag105">
+    <gl>clothes</gl>
+    <hw>Xkwan</hw>
+  </entry>
+  <entry id="tag106">
+    <gl>to suffice</gl>
+    <hw>Xkʰa-dzi</hw>
+  </entry>
+  <entry id="tag107">
+    <gl>to read, chant</gl>
+    <hw>Xkʰeː-ba</hw>
+  </entry>
+  <entry id="tag108">
+    <gl>to borrow, give back</gl>
+    <hw>Xkʰi</hw>
+  </entry>
+  <entry id="tag109">
+    <gl>to tie</gl>
+    <hw>Xkhi-go</hw>
+  </entry>
+  <entry id="tag110">
+    <gl>to patch</gl>
+    <hw>Xkʰja-ba</hw>
+  </entry>
+  <entry id="tag111">
+    <gl>to laddle</gl>
+    <hw>Xkʰjoe-ba</hw>
+  </entry>
+  <entry id="tag112">
+    <gl>to cook a liquid</gl>
+    <hw>Xkʰlak-pa</hw>
+  </entry>
+  <entry id="tag113">
+    <gl>ox</gl>
+    <hw>Xkʰlap</hw>
+  </entry>
+  <entry id="tag114">
+    <gl>feces</gl>
+    <hw>Xkʰli</hw>
+  </entry>
+  <entry id="tag115">
+    <gl>to hoe</gl>
+    <hw>Xkʰo-ba</hw>
+  </entry>
+  <entry id="tag116">
+    <gl>pig sty</gl>
+    <hw>Xkʰor</hw>
+  </entry>
+  <entry id="tag117">
+    <gl>veggie</gl>
+    <hw>Xkʰu</hw>
+  </entry>
+  <entry id="tag118">
+    <gl>god</gl>
+    <hw>Xla</hw>
+  </entry>
+  <entry id="tag119">
+    <gl>month</gl>
+    <hw>Xla</hw>
+  </entry>
+  <entry id="tag120">
+    <gl>god</gl>
+    <hw>¹la</hw>
+  </entry>
+  <entry id="tag121">
+    <gl>forest</gl>
+    <hw>³la</hw>
+  </entry>
+  <entry id="tag122">
+    <gl>to do</gl>
+    <hw>¹la-dzi</hw>
+  </entry>
+  <entry id="tag123">
+    <gl>tongue</gl>
+    <hw>Xle</hw>
+  </entry>
+  <entry id="tag124">
+    <gl>to heat up</gl>
+    <hw>Xlɛp-pa</hw>
+  </entry>
+  <entry id="tag125">
+    <gl>face</gl>
+    <hw>Xliː</hw>
+  </entry>
+  <entry id="tag126">
+    <gl>to teach</gl>
+    <hw>Xlop-pa</hw>
+  </entry>
+  <entry id="tag127">
+    <gl>to burn</gl>
+    <hw>Xluŋ-ba</hw>
+  </entry>
+  <entry id="tag128">
+    <gl>to look for</gl>
+    <hw>Xmai</hw>
+  </entry>
+  <entry id="tag129">
+    <gl>grand mother</gl>
+    <hw>Xmam</hw>
+  </entry>
+  <entry id="tag130">
+    <gl>ghost</gl>
+    <hw>⁴maŋ</hw>
+  </entry>
+  <entry id="tag131">
+    <gl>cox ear lobes</gl>
+    <hw>Xmar</hw>
+  </entry>
+  <entry id="tag132">
+    <gl>down</gl>
+    <hw>¹mar</hw>
+  </entry>
+  <entry id="tag133">
+    <gl>butter</gl>
+    <hw>³mar</hw>
+  </entry>
+  <entry id="tag134">
+    <gl>gold</gl>
+    <hw>⁴mar</hw>
+  </entry>
+  <entry id="tag135">
+    <gl>son in law</gl>
+    <hw>³maː</hw>
+  </entry>
+  <entry id="tag136">
+    <gl>cow</gl>
+    <hw>Xme</hw>
+  </entry>
+  <entry id="tag137">
+    <gl>cow</gl>
+    <hw>⁴me</hw>
+  </entry>
+  <entry id="tag138">
+    <gl>fire</gl>
+    <hw>¹me</hw>
+  </entry>
+  <entry id="tag139">
+    <gl>tail</gl>
+    <hw>Xmeː</hw>
+  </entry>
+  <entry id="tag140">
+    <gl>eye</gl>
+    <hw>Xmi</hw>
+  </entry>
+  <entry id="tag141">
+    <gl>man</gl>
+    <hw>³mi</hw>
+  </entry>
+  <entry id="tag142">
+    <gl>eye</gl>
+    <hw>Xmiː</hw>
+  </entry>
+  <entry id="tag143">
+    <gl>rice</gl>
+    <hw>Xmla</hw>
+  </entry>
+  <entry id="tag144">
+    <gl>black</gl>
+    <hw>Xmlaŋ</hw>
+  </entry>
+  <entry id="tag145">
+    <gl>to forget</gl>
+    <hw>Xmleː-dzim</hw>
+  </entry>
+  <entry id="tag146">
+    <gl>large leech</gl>
+    <hw>Xmli</hw>
+  </entry>
+  <entry id="tag147">
+    <gl>to plough</gl>
+    <hw>Xmoe-ba</hw>
+  </entry>
+  <entry id="tag148">
+    <gl>to light</gl>
+    <hw>Xmra-ba</hw>
+  </entry>
+  <entry id="tag149">
+    <gl>to see</gl>
+    <hw>Xmraŋ-ba</hw>
+  </entry>
+  <entry id="tag150">
+    <gl>door</gl>
+    <hw>Xmrap</hw>
+  </entry>
+  <entry id="tag151">
+    <gl>weed</gl>
+    <hw>Xmraː</hw>
+  </entry>
+  <entry id="tag152">
+    <gl>sting</gl>
+    <hw>Xmru</hw>
+  </entry>
+  <entry id="tag153">
+    <gl>sky</gl>
+    <hw>¹mu</hw>
+  </entry>
+  <entry id="tag154">
+    <gl>night</gl>
+    <hw>³mun</hw>
+  </entry>
+  <entry id="tag155">
+    <gl>moth</gl>
+    <hw>Xmwoe</hw>
+  </entry>
+  <entry id="tag156">
+    <gl>nose</gl>
+    <hw>Xna</hw>
+  </entry>
+  <entry id="tag157">
+    <gl>pus</gl>
+    <hw>³na</hw>
+  </entry>
+  <entry id="tag158">
+    <gl>to carry</gl>
+    <hw>Xna-ba</hw>
+  </entry>
+  <entry id="tag159">
+    <gl>to be sick</gl>
+    <hw>Xna-ba</hw>
+  </entry>
+  <entry id="tag160">
+    <gl>to put down</gl>
+    <hw>³na-ba</hw>
+  </entry>
+  <entry id="tag161">
+    <gl>to raise, to put down</gl>
+    <hw>³na-ba</hw>
+  </entry>
+  <entry id="tag162">
+    <gl>to rot</gl>
+    <hw>Xnai-ba</hw>
+  </entry>
+  <entry id="tag163">
+    <gl>to massage</gl>
+    <hw>Xnai-ba</hw>
+  </entry>
+  <entry id="tag164">
+    <gl>to be disgusted</gl>
+    <hw>Xnai-ba</hw>
+  </entry>
+  <entry id="tag165">
+    <gl>to put to sleep</gl>
+    <hw>Xnai-ba</hw>
+  </entry>
+  <entry id="tag166">
+    <gl>ear of grain</gl>
+    <hw>Xnam</hw>
+  </entry>
+  <entry id="tag167">
+    <gl>rain</gl>
+    <hw>Xnam</hw>
+  </entry>
+  <entry id="tag168">
+    <gl>to cover</gl>
+    <hw>Xnan-ba</hw>
+  </entry>
+  <entry id="tag169">
+    <gl>snot</gl>
+    <hw>Xnap</hw>
+  </entry>
+  <entry id="tag170">
+    <gl>to carry</gl>
+    <hw>Xnaː-ba</hw>
+  </entry>
+  <entry id="tag171">
+    <gl>to sniff</gl>
+    <hw>³naː-ba</hw>
+  </entry>
+  <entry id="tag172">
+    <gl>to land</gl>
+    <hw>Xne-dzi</hw>
+  </entry>
+  <entry id="tag173">
+    <gl>to go</gl>
+    <hw>Xni</hw>
+  </entry>
+  <entry id="tag174">
+    <gl>two</gl>
+    <hw>˩ni</hw>
+  </entry>
+  <entry id="tag175">
+    <gl>gums</gl>
+    <hw>³nil</hw>
+  </entry>
+  <entry id="tag176">
+    <gl>seven</gl>
+    <hw>²nis</hw>
+  </entry>
+  <entry id="tag177">
+    <gl>to sleep</gl>
+    <hw>Xnuŋ-ba</hw>
+  </entry>
+  <entry id="tag178">
+    <gl>deep</gl>
+    <hw>Xnup-pa</hw>
+  </entry>
+  <entry id="tag179">
+    <gl>five</gl>
+    <hw>˥ŋa</hw>
+  </entry>
+  <entry id="tag180">
+    <gl>I</gl>
+    <hw>¹ŋa</hw>
+  </entry>
+  <entry id="tag181">
+    <gl>drum</gl>
+    <hw>³ŋa</hw>
+  </entry>
+  <entry id="tag182">
+    <gl>five</gl>
+    <hw>⁴ŋa</hw>
+  </entry>
+  <entry id="tag183">
+    <gl>to exorcise by blowing</gl>
+    <hw>Xŋa-ba</hw>
+  </entry>
+  <entry id="tag184">
+    <gl>forehead</gl>
+    <hw>³ŋo</hw>
+  </entry>
+  <entry id="tag185">
+    <gl>to listen</gl>
+    <hw>Xɲan-go</hw>
+  </entry>
+  <entry id="tag186">
+    <gl>liver</gl>
+    <hw>Xɲe</hw>
+  </entry>
+  <entry id="tag187">
+    <gl>milk</gl>
+    <hw>³ɲe</hw>
+  </entry>
+  <entry id="tag188">
+    <gl>to spill</gl>
+    <hw>Xɲe-ba</hw>
+  </entry>
+  <entry id="tag189">
+    <gl>to chew</gl>
+    <hw>¹ɲe-ba</hw>
+  </entry>
+  <entry id="tag190">
+    <gl>to milk</gl>
+    <hw>³ɲe-ba</hw>
+  </entry>
+  <entry id="tag191">
+    <gl>to crush, grind</gl>
+    <hw>Xɲel-ba</hw>
+  </entry>
+  <entry id="tag192">
+    <gl>to chew cud</gl>
+    <hw>Xɲep-pa</hw>
+  </entry>
+  <entry id="tag193">
+    <gl>to strangle</gl>
+    <hw>³ɲep-pa</hw>
+  </entry>
+  <entry id="tag194">
+    <gl>to chew</gl>
+    <hw>Xɲeː-ba</hw>
+  </entry>
+  <entry id="tag195">
+    <gl>to laugh</gl>
+    <hw>Xɲeː-ba</hw>
+  </entry>
+  <entry id="tag196">
+    <gl>to spill</gl>
+    <hw>Xɲeː-ba</hw>
+  </entry>
+  <entry id="tag197">
+    <gl>to land</gl>
+    <hw>Xɲeː-ba</hw>
+  </entry>
+  <entry id="tag198">
+    <gl>to laugh</gl>
+    <hw>²ɲeː-ba</hw>
+  </entry>
+  <entry id="tag199">
+    <gl>to ask</gl>
+    <hw>Xɲo-ba</hw>
+  </entry>
+  <entry id="tag200">
+    <gl>to be drunk</gl>
+    <hw>Xɲo-ba</hw>
+  </entry>
+  <entry id="tag201">
+    <gl>to be drunk</gl>
+    <hw>³ɲo-dzi</hw>
+  </entry>
+  <entry id="tag202">
+    <gl>to ask</gl>
+    <hw>Xɲoe-ba</hw>
+  </entry>
+  <entry id="tag203">
+    <gl>to call</gl>
+    <hw>Xɲoe-go</hw>
+  </entry>
+  <entry id="tag204">
+    <gl>to wear a shawl</gl>
+    <hw>Xɲon-ba</hw>
+  </entry>
+  <entry id="tag205">
+    <gl>to call</gl>
+    <hw>Xɲoː-ba</hw>
+  </entry>
+  <entry id="tag206">
+    <gl>to ask (a question)</gl>
+    <hw>Xɲoː-go</hw>
+  </entry>
+  <entry id="tag207">
+    <gl>to bring</gl>
+    <hw>³pa-dzi</hw>
+  </entry>
+  <entry id="tag208">
+    <gl>to be liquid, thin</gl>
+    <hw>Xpa-na</hw>
+  </entry>
+  <entry id="tag209">
+    <gl>to say</gl>
+    <hw>Xpaŋ-gje</hw>
+  </entry>
+  <entry id="tag210">
+    <gl>small leaf</gl>
+    <hw>³paː</hw>
+  </entry>
+  <entry id="tag211">
+    <gl>to roll up</gl>
+    <hw>Xpel-ba</hw>
+  </entry>
+  <entry id="tag212">
+    <gl>frog</gl>
+    <hw>Xpeŋ</hw>
+  </entry>
+  <entry id="tag213">
+    <gl>to stain</gl>
+    <hw>⁴per-dzi</hw>
+  </entry>
+  <entry id="tag214">
+    <gl>to be shy</gl>
+    <hw>Xpeː-ba</hw>
+  </entry>
+  <entry id="tag215">
+    <gl>to say</gl>
+    <hw>Xpi-la</hw>
+  </entry>
+  <entry id="tag216">
+    <gl>to give</gl>
+    <hw>Xpin-go</hw>
+  </entry>
+  <entry id="tag217">
+    <gl>lazy</gl>
+    <hw>Xplɛ-ba</hw>
+  </entry>
+  <entry id="tag218">
+    <gl>four</gl>
+    <hw>˥pli</hw>
+  </entry>
+  <entry id="tag219">
+    <gl>seed</gl>
+    <hw>⁴plu</hw>
+  </entry>
+  <entry id="tag220">
+    <gl>to swell under heat</gl>
+    <hw>Xpo-ba</hw>
+  </entry>
+  <entry id="tag221">
+    <gl>to brewd</gl>
+    <hw>Xpo-ba</hw>
+  </entry>
+  <entry id="tag222">
+    <gl>to spoil, make hole in</gl>
+    <hw>Xpo-ba</hw>
+  </entry>
+  <entry id="tag223">
+    <gl>to shake off earth</gl>
+    <hw>Xpoi-ba</hw>
+  </entry>
+  <entry id="tag224">
+    <gl>small earthen water jug</gl>
+    <hw>Xpoŋ</hw>
+  </entry>
+  <entry id="tag225">
+    <gl>to get unsewn</gl>
+    <hw>³poː-ba</hw>
+  </entry>
+  <entry id="tag226">
+    <gl>flour</gl>
+    <hw>⁴pra</hw>
+  </entry>
+  <entry id="tag227">
+    <gl>to walk</gl>
+    <hw>⁴pra-ba</hw>
+  </entry>
+  <entry id="tag228">
+    <gl>eight</gl>
+    <hw>˥pre</hw>
+  </entry>
+  <entry id="tag229">
+    <gl>to shave</gl>
+    <hw>³pre-ba</hw>
+  </entry>
+  <entry id="tag230">
+    <gl>to leak</gl>
+    <hw>⁴pre-ba</hw>
+  </entry>
+  <entry id="tag231">
+    <gl>snack</gl>
+    <hw>Xpro</hw>
+  </entry>
+  <entry id="tag232">
+    <gl>taste</gl>
+    <hw>³proi</hw>
+  </entry>
+  <entry id="tag233">
+    <gl>yoghourt pot</gl>
+    <hw>Xpu</hw>
+  </entry>
+  <entry id="tag234">
+    <gl>to send</gl>
+    <hw>Xpui-ba</hw>
+  </entry>
+  <entry id="tag235">
+    <gl>to breathe</gl>
+    <hw>Xpun-ba</hw>
+  </entry>
+  <entry id="tag236">
+    <gl>rice-field</gl>
+    <hw>Xpuː</hw>
+  </entry>
+  <entry id="tag237">
+    <gl>to go (hh)_</gl>
+    <hw>Xpʰep</hw>
+  </entry>
+  <entry id="tag238">
+    <gl>on top of</gl>
+    <hw>Xphi</hw>
+  </entry>
+  <entry id="tag239">
+    <gl>to be late</gl>
+    <hw>Xpʰi-dzi</hw>
+  </entry>
+  <entry id="tag240">
+    <gl>to fly</gl>
+    <hw>Xpʰjaŋ-ba</hw>
+  </entry>
+  <entry id="tag241">
+    <gl>bow</gl>
+    <hw>Xpʰjaː</hw>
+  </entry>
+  <entry id="tag242">
+    <gl>broom</gl>
+    <hw>Xpʰjaː</hw>
+  </entry>
+  <entry id="tag243">
+    <gl>to clear jungle</gl>
+    <hw>Xpʰjaː-go</hw>
+  </entry>
+  <entry id="tag244">
+    <gl>rich</gl>
+    <hw>Xpʰjuk-pa</hw>
+  </entry>
+  <entry id="tag245">
+    <gl>to strike (hour)</gl>
+    <hw>Xpʰo</hw>
+  </entry>
+  <entry id="tag246">
+    <gl>belly</gl>
+    <hw>Xpʰo</hw>
+  </entry>
+  <entry id="tag247">
+    <gl>belly, stomach</gl>
+    <hw>¹pʰo</hw>
+  </entry>
+  <entry id="tag248">
+    <gl>to wear by draping (scarf or turban)</gl>
+    <hw>Xpʰoe-ba</hw>
+  </entry>
+  <entry id="tag249">
+    <gl>to wear a scarf</gl>
+    <hw>Xpʰoi-ba</hw>
+  </entry>
+  <entry id="tag250">
+    <gl>to strip tree branches</gl>
+    <hw>Xpʰral-ba</hw>
+  </entry>
+  <entry id="tag251">
+    <gl>to comb</gl>
+    <hw>Xpʰre-ba</hw>
+  </entry>
+  <entry id="tag252">
+    <gl>to comb</gl>
+    <hw>pʰreː-ba</hw>
+  </entry>
+  <entry id="tag253">
+    <gl>earth clod</gl>
+    <hw>Xpʰum</hw>
+  </entry>
+  <entry id="tag254">
+    <gl>to break down, collapse</gl>
+    <hw>Xphup-ko</hw>
+  </entry>
+  <entry id="tag255">
+    <gl>to blow</gl>
+    <hw>Xpʰwi-go</hw>
+  </entry>
+  <entry id="tag256">
+    <gl>goat</gl>
+    <hw>Xra</hw>
+  </entry>
+  <entry id="tag257">
+    <gl>goat</gl>
+    <hw>¹ra</hw>
+  </entry>
+  <entry id="tag258">
+    <gl>rib</gl>
+    <hw>Xrai</hw>
+  </entry>
+  <entry id="tag259">
+    <gl>you (polite)</gl>
+    <hw>³raŋ</hw>
+  </entry>
+  <entry id="tag260">
+    <gl>to stand</gl>
+    <hw>Xrap-kje</hw>
+  </entry>
+  <entry id="tag261">
+    <gl>to play music</gl>
+    <hw>³rap-pa</hw>
+  </entry>
+  <entry id="tag262">
+    <gl>to weave</gl>
+    <hw>Xraː-ba</hw>
+  </entry>
+  <entry id="tag263">
+    <gl>day</gl>
+    <hw>-re</hw>
+  </entry>
+  <entry id="tag264">
+    <gl>rope</gl>
+    <hw>³rel</hw>
+  </entry>
+  <entry id="tag265">
+    <gl>long</gl>
+    <hw>Xreŋ-ba</hw>
+  </entry>
+  <entry id="tag266">
+    <gl>to wake up</gl>
+    <hw>¹reː-ba</hw>
+  </entry>
+  <entry id="tag267">
+    <gl>forest</gl>
+    <hw>³ri</hw>
+  </entry>
+  <entry id="tag268">
+    <gl>to beg, ask for</gl>
+    <hw>³ri-ba</hw>
+  </entry>
+  <entry id="tag269">
+    <gl>to scratch</gl>
+    <hw>Xriː-ba</hw>
+  </entry>
+  <entry id="tag270">
+    <gl>friend</gl>
+    <hw>³ro</hw>
+  </entry>
+  <entry id="tag271">
+    <gl>to fry</gl>
+    <hw>Xro-ba</hw>
+  </entry>
+  <entry id="tag272">
+    <gl>to bear fruit</gl>
+    <hw>Xro-ba</hw>
+  </entry>
+  <entry id="tag273">
+    <gl>to hit</gl>
+    <hw>Xrop-la</hw>
+  </entry>
+  <entry id="tag274">
+    <gl>to bear fruit</gl>
+    <hw>Xroː-ba</hw>
+  </entry>
+  <entry id="tag275">
+    <gl>to fry</gl>
+    <hw>Xroː-ba</hw>
+  </entry>
+  <entry id="tag276">
+    <gl>to vomit</gl>
+    <hw>Xrui-ba</hw>
+  </entry>
+  <entry id="tag277">
+    <gl>to whip beer</gl>
+    <hw>Xrun-ba</hw>
+  </entry>
+  <entry id="tag278">
+    <gl>thick</gl>
+    <hw>Xruŋ-ba</hw>
+  </entry>
+  <entry id="tag279">
+    <gl>meeting</gl>
+    <hw>Xrup</hw>
+  </entry>
+  <entry id="tag280">
+    <gl>to roll up</gl>
+    <hw>³rup-pa</hw>
+  </entry>
+  <entry id="tag281">
+    <gl>horn</gl>
+    <hw>Xruː</hw>
+  </entry>
+  <entry id="tag282">
+    <gl>from</gl>
+    <hw>-sə</hw>
+  </entry>
+  <entry id="tag283">
+    <gl>earth</gl>
+    <hw>Xsa</hw>
+  </entry>
+  <entry id="tag284">
+    <gl>tooth</gl>
+    <hw>Xsa</hw>
+  </entry>
+  <entry id="tag285">
+    <gl>earth</gl>
+    <hw>Xsa</hw>
+  </entry>
+  <entry id="tag286">
+    <gl>to wither</gl>
+    <hw>Xsam</hw>
+  </entry>
+  <entry id="tag287">
+    <gl>to handle</gl>
+    <hw>Xsam</hw>
+  </entry>
+  <entry id="tag288">
+    <gl>clear (water)</gl>
+    <hw>Xsaŋ-ba</hw>
+  </entry>
+  <entry id="tag289">
+    <gl>to set to dry (grains)</gl>
+    <hw>Xsaŋ-ba</hw>
+  </entry>
+  <entry id="tag290">
+    <gl>manure</gl>
+    <hw>Xsar</hw>
+  </entry>
+  <entry id="tag291">
+    <gl>star</gl>
+    <hw>Xsar</hw>
+  </entry>
+  <entry id="tag292">
+    <gl>to flower</gl>
+    <hw>Xsar-ba</hw>
+  </entry>
+  <entry id="tag293">
+    <gl>breath</gl>
+    <hw>Xsaː</hw>
+  </entry>
+  <entry id="tag294">
+    <gl>to exorcise with rice</gl>
+    <hw>Xsaː-ba</hw>
+  </entry>
+  <entry id="tag295">
+    <gl>to hurt</gl>
+    <hw>Xsaː-ba</hw>
+  </entry>
+  <entry id="tag296">
+    <gl>manure</gl>
+    <hw>Xsaːr</hw>
+  </entry>
+  <entry id="tag297">
+    <gl>by</gl>
+    <hw>-se</hw>
+  </entry>
+  <entry id="tag298">
+    <gl>to sweep</gl>
+    <hw>Xseŋ-ba</hw>
+  </entry>
+  <entry id="tag299">
+    <gl>to kill</gl>
+    <hw>Xseː-ba</hw>
+  </entry>
+  <entry id="tag300">
+    <gl>fresh (wind)</gl>
+    <hw>Xsil-ba</hw>
+  </entry>
+  <entry id="tag301">
+    <gl>give birth</gl>
+    <hw>Xsil-ba</hw>
+  </entry>
+  <entry id="tag302">
+    <gl>fresh (water)</gl>
+    <hw>Xsim-ba</hw>
+  </entry>
+  <entry id="tag303">
+    <gl>bamboo</gl>
+    <hw>Xsin</hw>
+  </entry>
+  <entry id="tag304">
+    <gl>to smooth off stick with knife</gl>
+    <hw>Xsir-ko</hw>
+  </entry>
+  <entry id="tag305">
+    <gl>to grind</gl>
+    <hw>Xsjaŋ-ba</hw>
+  </entry>
+  <entry id="tag306">
+    <gl>to scrape clean</gl>
+    <hw>³sjar-ba</hw>
+  </entry>
+  <entry id="tag307">
+    <gl>to take off some</gl>
+    <hw>Xsjaː-ba</hw>
+  </entry>
+  <entry id="tag308">
+    <gl>louse</gl>
+    <hw>Xsje</hw>
+  </entry>
+  <entry id="tag309">
+    <gl>to repeat</gl>
+    <hw>Xsjeː-ba</hw>
+  </entry>
+  <entry id="tag310">
+    <gl>to know</gl>
+    <hw>Xsjeː-ba</hw>
+  </entry>
+  <entry id="tag311">
+    <gl>to go (h)</gl>
+    <hw>Xsjeː-dzi</hw>
+  </entry>
+  <entry id="tag312">
+    <gl>morning</gl>
+    <hw>³sjo</hw>
+  </entry>
+  <entry id="tag313">
+    <gl>to pull out</gl>
+    <hw>Xsjoe-go</hw>
+  </entry>
+  <entry id="tag314">
+    <gl>river</gl>
+    <hw>Xsjoŋ</hw>
+  </entry>
+  <entry id="tag315">
+    <gl>to pull out</gl>
+    <hw>Xsjoː-go</hw>
+  </entry>
+  <entry id="tag316">
+    <gl>to sit</gl>
+    <hw>Xsju-ba</hw>
+  </entry>
+  <entry id="tag317">
+    <gl>to undress</gl>
+    <hw>Xsju-ba</hw>
+  </entry>
+  <entry id="tag318">
+    <gl>to thread (beads)</gl>
+    <hw>Xsjuː-ba</hw>
+  </entry>
+  <entry id="tag319">
+    <gl>to sit</gl>
+    <hw>³sjuː-go</hw>
+  </entry>
+  <entry id="tag320">
+    <gl>?to start doing</gl>
+    <hw>Xso-dzi</hw>
+  </entry>
+  <entry id="tag321">
+    <gl>to drink (hh)</gl>
+    <hw>Xsol-ba</hw>
+  </entry>
+  <entry id="tag322">
+    <gl>to touch</gl>
+    <hw>Xsol-go</hw>
+  </entry>
+  <entry id="tag323">
+    <gl>three</gl>
+    <hw>²som</hw>
+  </entry>
+  <entry id="tag324">
+    <gl>thatch</gl>
+    <hw>Xsoː</hw>
+  </entry>
+  <entry id="tag325">
+    <gl>to look (hon)</gl>
+    <hw>³sri-ba</hw>
+  </entry>
+  <entry id="tag326">
+    <gl>mouth</gl>
+    <hw>Xsũ</hw>
+  </entry>
+  <entry id="tag327">
+    <gl>to grate</gl>
+    <hw>Xsui-ba</hw>
+  </entry>
+  <entry id="tag328">
+    <gl>rice</gl>
+    <hw>Xsun</hw>
+  </entry>
+  <entry id="tag329">
+    <gl>mouth</gl>
+    <hw>Xsuŋ</hw>
+  </entry>
+  <entry id="tag330">
+    <gl>thigh</gl>
+    <hw>³suː</hw>
+  </entry>
+  <entry id="tag331">
+    <gl>to die</gl>
+    <hw>Xʃi-ba</hw>
+  </entry>
+  <entry id="tag332">
+    <gl>wood</gl>
+    <hw>Xʃiŋ</hw>
+  </entry>
+  <entry id="tag333">
+    <gl>frost</gl>
+    <hw>Xʃit</hw>
+  </entry>
+  <entry id="tag334">
+    <gl>meat</gl>
+    <hw>Xʃja</hw>
+  </entry>
+  <entry id="tag335">
+    <gl>face (of god)</gl>
+    <hw>Xʃjal</hw>
+  </entry>
+  <entry id="tag336">
+    <gl>to rinse</gl>
+    <hw>Xʃjal-ba</hw>
+  </entry>
+  <entry id="tag337">
+    <gl>louse</gl>
+    <hw>Xʃje</hw>
+  </entry>
+  <entry id="tag338">
+    <gl>to go</gl>
+    <hw>Xʃje-gje</hw>
+  </entry>
+  <entry id="tag339">
+    <gl>to know</gl>
+    <hw>Xʃjeː-ba</hw>
+  </entry>
+  <entry id="tag340">
+    <gl>to repeat</gl>
+    <hw>Xʃjeː-ba</hw>
+  </entry>
+  <entry id="tag341">
+    <gl>to go</gl>
+    <hw>Xʃjeː-ba</hw>
+  </entry>
+  <entry id="tag342">
+    <gl>snake skin</gl>
+    <hw>Xʃjop</hw>
+  </entry>
+  <entry id="tag343">
+    <gl>to polish (rice)</gl>
+    <hw>Xʃjop-pa</hw>
+  </entry>
+  <entry id="tag344">
+    <gl>to defecate</gl>
+    <hw>Xʃjor-ba</hw>
+  </entry>
+  <entry id="tag345">
+    <gl>to exorcise with offering plate</gl>
+    <hw>Xʃju-ba</hw>
+  </entry>
+  <entry id="tag346">
+    <gl>to nurse</gl>
+    <hw>Xʃjup-pa</hw>
+  </entry>
+  <entry id="tag347">
+    <gl>horse</gl>
+    <hw>Xta</hw>
+  </entry>
+  <entry id="tag348">
+    <gl>pillar</gl>
+    <hw>³ta</hw>
+  </entry>
+  <entry id="tag349">
+    <gl>to set sthg to cook</gl>
+    <hw>⁴tai-ba</hw>
+  </entry>
+  <entry id="tag350">
+    <gl>to fall</gl>
+    <hw>Xtai-ba</hw>
+  </entry>
+  <entry id="tag351">
+    <gl>to fall</gl>
+    <hw>¹tai-ba</hw>
+  </entry>
+  <entry id="tag352">
+    <gl>words, language</gl>
+    <hw>Xtam</hw>
+  </entry>
+  <entry id="tag353">
+    <gl>to cultivate</gl>
+    <hw>Xtam-ba</hw>
+  </entry>
+  <entry id="tag354">
+    <gl>to be about to ?</gl>
+    <hw>Xtam-dzi</hw>
+  </entry>
+  <entry id="tag355">
+    <gl>way of sitting</gl>
+    <hw>³tan</hw>
+  </entry>
+  <entry id="tag356">
+    <gl>dishes</gl>
+    <hw>Xtaŋ</hw>
+  </entry>
+  <entry id="tag357">
+    <gl>to chase</gl>
+    <hw>³taŋ</hw>
+  </entry>
+  <entry id="tag358">
+    <gl>drive (cattle)</gl>
+    <hw>Xtaŋ-ba</hw>
+  </entry>
+  <entry id="tag359">
+    <gl>happy</gl>
+    <hw>Xtaŋ-ba</hw>
+  </entry>
+  <entry id="tag360">
+    <gl>to shake off earth</gl>
+    <hw>Xta-o</hw>
+  </entry>
+  <entry id="tag361">
+    <gl>to measure</gl>
+    <hw>³tap-pa</hw>
+  </entry>
+  <entry id="tag362">
+    <gl>white</gl>
+    <hw>Xtar</hw>
+  </entry>
+  <entry id="tag363">
+    <gl>to receive</gl>
+    <hw>Xtaː-go</hw>
+  </entry>
+  <entry id="tag364">
+    <gl>to exchange</gl>
+    <hw>³tep-pa</hw>
+  </entry>
+  <entry id="tag365">
+    <gl>to take off</gl>
+    <hw>Xte-si</hw>
+  </entry>
+  <entry id="tag366">
+    <gl>to receive</gl>
+    <hw>Xte-u</hw>
+  </entry>
+  <entry id="tag367">
+    <gl>to light fire</gl>
+    <hw>Xti-ba</hw>
+  </entry>
+  <entry id="tag368">
+    <gl>what</gl>
+    <hw>Xtik</hw>
+  </entry>
+  <entry id="tag369">
+    <gl>house</gl>
+    <hw>⁴tim</hw>
+  </entry>
+  <entry id="tag370">
+    <gl>heart</gl>
+    <hw>Xtiŋ</hw>
+  </entry>
+  <entry id="tag371">
+    <gl>fine</gl>
+    <hw>Xtip-pa</hw>
+  </entry>
+  <entry id="tag372">
+    <gl>to spread</gl>
+    <hw>Xtiː-ba</hw>
+  </entry>
+  <entry id="tag373">
+    <gl>to hit</gl>
+    <hw>Xto-ba</hw>
+  </entry>
+  <entry id="tag374">
+    <gl>to need</gl>
+    <hw>Xto-ci</hw>
+  </entry>
+  <entry id="tag375">
+    <gl>load</gl>
+    <hw>Xtoi</hw>
+  </entry>
+  <entry id="tag376">
+    <gl>tree</gl>
+    <hw>Xtoŋ</hw>
+  </entry>
+  <entry id="tag377">
+    <gl>to mix</gl>
+    <hw>³toŋ</hw>
+  </entry>
+  <entry id="tag378">
+    <gl>hoe</gl>
+    <hw>Xtoː</hw>
+  </entry>
+  <entry id="tag379">
+    <gl>to scoop up manure</gl>
+    <hw>Xtoː-ba</hw>
+  </entry>
+  <entry id="tag380">
+    <gl>to turn</gl>
+    <hw>Xtoː-ba</hw>
+  </entry>
+  <entry id="tag381">
+    <gl>to need</gl>
+    <hw>Xtoː-ba</hw>
+  </entry>
+  <entry id="tag382">
+    <gl>to gather manure</gl>
+    <hw>³toː-ba</hw>
+  </entry>
+  <entry id="tag383">
+    <gl>to reach</gl>
+    <hw>³toː-ba</hw>
+  </entry>
+  <entry id="tag384">
+    <gl>to return</gl>
+    <hw>³toː-si</hw>
+  </entry>
+  <entry id="tag385">
+    <gl>fat</gl>
+    <hw>²tʃʰi</hw>
+  </entry>
+  <entry id="tag386">
+    <gl>beer</gl>
+    <hw>⁴tʃi</hw>
+  </entry>
+  <entry id="tag387">
+    <gl>to dip into</gl>
+    <hw>Xtui-ba</hw>
+  </entry>
+  <entry id="tag388">
+    <gl>to roll up thread</gl>
+    <hw>Xtui-ba</hw>
+  </entry>
+  <entry id="tag389">
+    <gl>to pick up</gl>
+    <hw>⁴tui-ba</hw>
+  </entry>
+  <entry id="tag390">
+    <gl>to pick up</gl>
+    <hw>Xtui-ba</hw>
+  </entry>
+  <entry id="tag391">
+    <gl>to spend</gl>
+    <hw>Xtui-go</hw>
+  </entry>
+  <entry id="tag392">
+    <gl>to chop (meat)</gl>
+    <hw>Xtup-pa</hw>
+  </entry>
+  <entry id="tag393">
+    <gl>don't</gl>
+    <hw>Xtʰa</hw>
+  </entry>
+  <entry id="tag394">
+    <gl>to cut, kill</gl>
+    <hw>Xtʰa-gje</hw>
+  </entry>
+  <entry id="tag395">
+    <gl>smell</gl>
+    <hw>Xtʰaŋ</hw>
+  </entry>
+  <entry id="tag396">
+    <gl>to hit with horn</gl>
+    <hw>Xtʰap-pa</hw>
+  </entry>
+  <entry id="tag397">
+    <gl>he, this</gl>
+    <hw>Xtʰe</hw>
+  </entry>
+  <entry id="tag398">
+    <gl>to hear</gl>
+    <hw>Xtʰeː-ba</hw>
+  </entry>
+  <entry id="tag399">
+    <gl>saliva</gl>
+    <hw>Xtʰo</hw>
+  </entry>
+  <entry id="tag400">
+    <gl>to pluck</gl>
+    <hw>Xtʰu</hw>
+  </entry>
+  <entry id="tag401">
+    <gl>to assemble</gl>
+    <hw>Xtʰui-go</hw>
+  </entry>
+  <entry id="tag402">
+    <gl>to drink</gl>
+    <hw>Xtʰuŋ-ba</hw>
+  </entry>
+  <entry id="tag403">
+    <gl>drying rack</gl>
+    <hw>³ʈa</hw>
+  </entry>
+  <entry id="tag404">
+    <gl>to sow</gl>
+    <hw>Xʈa-ba</hw>
+  </entry>
+  <entry id="tag405">
+    <gl>to plant</gl>
+    <hw>³ʈa-ba</hw>
+  </entry>
+  <entry id="tag406">
+    <gl>to remember</gl>
+    <hw>³ʈan-ba</hw>
+  </entry>
+  <entry id="tag407">
+    <gl>to snap, break (rope)</gl>
+    <hw>Xʈaŋ-ba</hw>
+  </entry>
+  <entry id="tag408">
+    <gl>to swell</gl>
+    <hw>Xʈaŋ-ba</hw>
+  </entry>
+  <entry id="tag409">
+    <gl>to break from pulling</gl>
+    <hw>Xʈaŋ-ba</hw>
+  </entry>
+  <entry id="tag410">
+    <gl>to swell (grain)</gl>
+    <hw>³ʈaŋ-ba</hw>
+  </entry>
+  <entry id="tag411">
+    <gl>spinach</gl>
+    <hw>Xʈap</hw>
+  </entry>
+  <entry id="tag412">
+    <gl>root</gl>
+    <hw>Xʈaː</hw>
+  </entry>
+  <entry id="tag413">
+    <gl>carrying headstrap</gl>
+    <hw>Xʈaː</hw>
+  </entry>
+  <entry id="tag414">
+    <gl>root</gl>
+    <hw>¹ʈaː</hw>
+  </entry>
+  <entry id="tag415">
+    <gl>coxcomb</gl>
+    <hw>³ʈaː</hw>
+  </entry>
+  <entry id="tag416">
+    <gl>carrying head-strap</gl>
+    <hw>⁴ʈaː</hw>
+  </entry>
+  <entry id="tag417">
+    <gl>to build</gl>
+    <hw>Xʈeŋ-ba</hw>
+  </entry>
+  <entry id="tag418">
+    <gl>skin</gl>
+    <hw>Xʈi</hw>
+  </entry>
+  <entry id="tag419">
+    <gl>to read</gl>
+    <hw>³ʈo-ba</hw>
+  </entry>
+  <entry id="tag420">
+    <gl>durable</gl>
+    <hw>Xʈu-ba</hw>
+  </entry>
+  <entry id="tag421">
+    <gl>landslide</gl>
+    <hw>Xʈui</hw>
+  </entry>
+  <entry id="tag422">
+    <gl>to press feet</gl>
+    <hw>Xʈui-ba</hw>
+  </entry>
+  <entry id="tag423">
+    <gl>to close</gl>
+    <hw>Xʈuŋ-go</hw>
+  </entry>
+  <entry id="tag424">
+    <gl>thread</gl>
+    <hw>Xʈup</hw>
+  </entry>
+  <entry id="tag425">
+    <gl>to sew</gl>
+    <hw>Xʈup-pa</hw>
+  </entry>
+  <entry id="tag426">
+    <gl>sweat</gl>
+    <hw>Xʈuː</hw>
+  </entry>
+  <entry id="tag427">
+    <gl>six</gl>
+    <hw>˥ʈuː</hw>
+  </entry>
+  <entry id="tag428">
+    <gl>pig</gl>
+    <hw>⁴ʈwa</hw>
+  </entry>
+  <entry id="tag429">
+    <gl>to pierce, to hollow</gl>
+    <hw>Xʈʰai-ba</hw>
+  </entry>
+  <entry id="tag430">
+    <gl>to open</gl>
+    <hw>Xʈʰaŋ-go</hw>
+  </entry>
+  <entry id="tag431">
+    <gl>to open</gl>
+    <hw>¹ʈʰaŋ-go</hw>
+  </entry>
+  <entry id="tag432">
+    <gl>wooden sheath</gl>
+    <hw>Xʈʰek</hw>
+  </entry>
+  <entry id="tag433">
+    <gl>to break earth clods</gl>
+    <hw>Xʈʰok-pa</hw>
+  </entry>
+  <entry id="tag434">
+    <gl>to eat</gl>
+    <hw>Xtsa-ba</hw>
+  </entry>
+  <entry id="tag435">
+    <gl>d.in law, s. in law</gl>
+    <hw>Xtsaŋ</hw>
+  </entry>
+  <entry id="tag436">
+    <gl>nest</gl>
+    <hw>Xtsaŋ</hw>
+  </entry>
+  <entry id="tag437">
+    <gl>nest</gl>
+    <hw>³tsaŋ</hw>
+  </entry>
+  <entry id="tag438">
+    <gl>to scrape with knife</gl>
+    <hw>Xtseː-ba</hw>
+  </entry>
+  <entry id="tag439">
+    <gl>to sit</gl>
+    <hw>Xtsi</hw>
+  </entry>
+  <entry id="tag440">
+    <gl>beer</gl>
+    <hw>Xtsi</hw>
+  </entry>
+  <entry id="tag441">
+    <gl>joint</gl>
+    <hw>³tsi</hw>
+  </entry>
+  <entry id="tag442">
+    <gl>beer</gl>
+    <hw>⁴tsi</hw>
+  </entry>
+  <entry id="tag443">
+    <gl>to bite (as a snake)</gl>
+    <hw>⁴tsi-la</hw>
+  </entry>
+  <entry id="tag444">
+    <gl>pretty</gl>
+    <hw>Xtsja-ba</hw>
+  </entry>
+  <entry id="tag445">
+    <gl>urine</gl>
+    <hw>Xtsjam</hw>
+  </entry>
+  <entry id="tag446">
+    <gl>tiger</gl>
+    <hw>Xtsjan</hw>
+  </entry>
+  <entry id="tag447">
+    <gl>to look</gl>
+    <hw>¹tsjaː-ba</hw>
+  </entry>
+  <entry id="tag448">
+    <gl>to count, to measure</gl>
+    <hw>⁴tsjaː-ba</hw>
+  </entry>
+  <entry id="tag449">
+    <gl>to look</gl>
+    <hw>Xtsjaː-dzi</hw>
+  </entry>
+  <entry id="tag450">
+    <gl>to hang</gl>
+    <hw>Xtsjo-ba</hw>
+  </entry>
+  <entry id="tag451">
+    <gl>hon for come</gl>
+    <hw>Xtsjon</hw>
+  </entry>
+  <entry id="tag452">
+    <gl>coming back</gl>
+    <hw>³tsjon</hw>
+  </entry>
+  <entry id="tag453">
+    <gl>to knead</gl>
+    <hw>Xtsjop-pa</hw>
+  </entry>
+  <entry id="tag454">
+    <gl>to squeeze water out</gl>
+    <hw>³tsjor-ba</hw>
+  </entry>
+  <entry id="tag455">
+    <gl>ten</gl>
+    <hw>²tsju</hw>
+  </entry>
+  <entry id="tag456">
+    <gl>to tie</gl>
+    <hw>Xtsjun-ba</hw>
+  </entry>
+  <entry id="tag457">
+    <gl>to lock chicken up</gl>
+    <hw>Xtsjup-pa</hw>
+  </entry>
+  <entry id="tag458">
+    <gl>to plaster with mud</gl>
+    <hw>Xtsjur-go</hw>
+  </entry>
+  <entry id="tag459">
+    <gl>stale</gl>
+    <hw>³tsjuː-ba</hw>
+  </entry>
+  <entry id="tag460">
+    <gl>to tie</gl>
+    <hw>Xtsjyn-ba</hw>
+  </entry>
+  <entry id="tag461">
+    <gl>to bark</gl>
+    <hw>Xtsu-ba</hw>
+  </entry>
+  <entry id="tag462">
+    <gl>to tie</gl>
+    <hw>Xtsuŋ-ba</hw>
+  </entry>
+  <entry id="tag463">
+    <gl>to sell</gl>
+    <hw>Xtsuŋ-ba</hw>
+  </entry>
+  <entry id="tag464">
+    <gl>to cook for the dead</gl>
+    <hw>Xtsuː-ba</hw>
+  </entry>
+  <entry id="tag465">
+    <gl>to press on the ground</gl>
+    <hw>³tsuː-ba</hw>
+  </entry>
+  <entry id="tag466">
+    <gl>take to graze</gl>
+    <hw>Xtsʰa-ba</hw>
+  </entry>
+  <entry id="tag467">
+    <gl>retreat</gl>
+    <hw>Xtsʰam</hw>
+  </entry>
+  <entry id="tag468">
+    <gl>hairs</gl>
+    <hw>Xtsʰam</hw>
+  </entry>
+  <entry id="tag469">
+    <gl>large basket</gl>
+    <hw>Xtsʰaŋ</hw>
+  </entry>
+  <entry id="tag470">
+    <gl>to peel</gl>
+    <hw>Xtsʰap-pa</hw>
+  </entry>
+  <entry id="tag471">
+    <gl>to feel hot</gl>
+    <hw>Xtsʰap-pa</hw>
+  </entry>
+  <entry id="tag472">
+    <gl>to peel (w/ knife)</gl>
+    <hw>Xtsʰap-pa</hw>
+  </entry>
+  <entry id="tag473">
+    <gl>fodder</gl>
+    <hw>Xtsʰe</hw>
+  </entry>
+  <entry id="tag474">
+    <gl>life</gl>
+    <hw>Xtsʰe</hw>
+  </entry>
+  <entry id="tag475">
+    <gl>to fight</gl>
+    <hw>Xtsʰeː-ba</hw>
+  </entry>
+  <entry id="tag476">
+    <gl>nail</gl>
+    <hw>Xtsʰin</hw>
+  </entry>
+  <entry id="tag477">
+    <gl>to sneeze</gl>
+    <hw>Xtsʰiː-ba</hw>
+  </entry>
+  <entry id="tag478">
+    <gl>to coagulate</gl>
+    <hw>Xtsʰja-ba</hw>
+  </entry>
+  <entry id="tag479">
+    <gl>to hit clothes with paddle</gl>
+    <hw>Xtsʰjek-pa</hw>
+  </entry>
+  <entry id="tag480">
+    <gl>to 'eat' (hurt) the belly</gl>
+    <hw>Xtsʰjoe-ba</hw>
+  </entry>
+  <entry id="tag481">
+    <gl>sacred book</gl>
+    <hw>Xtsʰjoi</hw>
+  </entry>
+  <entry id="tag482">
+    <gl>to run</gl>
+    <hw>Xtsʰjoŋ-ba</hw>
+  </entry>
+  <entry id="tag483">
+    <gl>to tread on clothes</gl>
+    <hw>Xtsʰjop-pa</hw>
+  </entry>
+  <entry id="tag484">
+    <gl>ligaments, vein</gl>
+    <hw>Xtsʰju</hw>
+  </entry>
+  <entry id="tag485">
+    <gl>to color</gl>
+    <hw>Xtsʰo</hw>
+  </entry>
+  <entry id="tag486">
+    <gl>rope</gl>
+    <hw>Xtsʰo</hw>
+  </entry>
+  <entry id="tag487">
+    <gl>fat</gl>
+    <hw>Xtsʰo-ba</hw>
+  </entry>
+  <entry id="tag488">
+    <gl>to stuff down, compress</gl>
+    <hw>Xtsʰui-go</hw>
+  </entry>
+  <entry id="tag489">
+    <gl>yellow</gl>
+    <hw>Xur</hw>
+  </entry>
+  <entry id="tag490">
+    <gl>to brew</gl>
+    <hw>³wai-ba</hw>
+  </entry>
+  <entry id="tag491">
+    <gl>to stir ?</gl>
+    <hw>Xwal-ba</hw>
+  </entry>
+  <entry id="tag492">
+    <gl>?to split hair</gl>
+    <hw>Xwat-si</hw>
+  </entry>
+  <entry id="tag493">
+    <gl>to push</gl>
+    <hw>Xwi-ba</hw>
+  </entry>
+  <entry id="tag494">
+    <gl>to show</gl>
+    <hw>Xwon-ba</hw>
+  </entry>
+  <entry id="tag495">
+    <gl/>
+    <hw>¹ŋeː-ba</hw>
+  </entry>
+  <entry id="tag496">
+    <gl/>
+    <hw>²ŋeː-ba</hw>
+  </entry>
+  <entry id="tag497">
+    <gl/>
+    <hw>⁴ŋeː-ba</hw>
+  </entry>
+  <entry id="tag498">
+    <gl/>
+    <hw>³ŋeː-ba</hw>
+  </entry>
+  <entry id="tag499">
+    <gl/>
+    <hw>³ŋe-ba</hw>
+  </entry>
+  <entry id="tag500">
+    <gl/>
+    <hw>¹nai</hw>
+  </entry>
+  <entry id="tag501">
+    <gl/>
+    <hw>¹ɲep-pa</hw>
+  </entry>
+  <entry id="tag502">
+    <gl/>
+    <hw>³ɲep-pa</hw>
+  </entry>
+  <entry id="tag503">
+    <gl/>
+    <hw>¹nai-ba</hw>
+  </entry>
+  <entry id="tag504">
+    <gl/>
+    <hw>¹nai-ba</hw>
+  </entry>
+  <entry id="tag505">
+    <gl/>
+    <hw>²nai-ba</hw>
+  </entry>
+  <entry id="tag506">
+    <gl/>
+    <hw>⁴nai-ba</hw>
+  </entry>
+  <entry id="tag507">
+    <gl/>
+    <hw>¹naː-ba</hw>
+  </entry>
+  <entry id="tag508">
+    <gl/>
+    <hw>²naː-ba</hw>
+  </entry>
+  <entry id="tag509">
+    <gl/>
+    <hw>³na-ba</hw>
+  </entry>
+  <entry id="tag510">
+    <gl/>
+    <hw>³na-ba</hw>
+  </entry>
+  <entry id="tag511">
+    <gl/>
+    <hw>¹na-ba</hw>
+  </entry>
+  <entry id="tag512">
+    <gl/>
+    <hw>¹ɕeː-ba</hw>
+  </entry>
+  <entry id="tag513">
+    <gl/>
+    <hw>²ɕeː-ba</hw>
+  </entry>
+  <entry id="tag514">
+    <gl/>
+    <hw>²ɕeː-ba</hw>
+  </entry>
+  <entry id="tag515">
+    <gl/>
+    <hw>¹ɕjaː</hw>
+  </entry>
+  <entry id="tag516">
+    <gl/>
+    <hw>²ɕja</hw>
+  </entry>
+  <entry id="tag517">
+    <gl/>
+    <hw>¹seː-ba</hw>
+  </entry>
+  <entry id="tag518">
+    <gl/>
+    <hw>¹tsha</hw>
+  </entry>
+  <entry id="tag519">
+    <gl/>
+    <hw>²tshaː</hw>
+  </entry>
+  <entry id="tag520">
+    <gl/>
+    <hw>¹tsa</hw>
+  </entry>
+  <entry id="tag521">
+    <gl/>
+    <hw>²tsha</hw>
+  </entry>
+  <entry id="tag522">
+    <gl/>
+    <hw>¹toː-ba</hw>
+  </entry>
+  <entry id="tag523">
+    <gl/>
+    <hw>⁴toː-ba</hw>
+  </entry>
+  <entry id="tag524">
+    <gl/>
+    <hw>³toː-ba</hw>
+  </entry>
+  <entry id="tag525">
+    <gl>pound rice</gl>
+    <hw>¹to-ba</hw>
+  </entry>
+  <entry id="tag526">
+    <gl/>
+    <hw>²tsuː-ba</hw>
+  </entry>
+  <entry id="tag527">
+    <gl/>
+    <hw>⁴tsuː-ba</hw>
+  </entry>
+  <entry id="tag528">
+    <gl/>
+    <hw>³tsuː-ba</hw>
+  </entry>
+  <entry id="tag529">
+    <gl/>
+    <hw>li</hw>
+  </entry>
+  <entry id="tag530">
+    <gl/>
+    <hw>²raː-ba</hw>
+  </entry>
+  <entry id="tag531">
+    <gl/>
+    <hw>³ra-ba</hw>
+  </entry>
+  <entry id="tag532">
+    <gl/>
+    <hw>²rap-pa</hw>
+  </entry>
+  <entry id="tag533">
+    <gl/>
+    <hw>²rap-pa</hw>
+  </entry>
+  <entry id="tag534">
+    <gl/>
+    <hw>³rap-pa</hw>
+  </entry>
+  <entry id="tag535">
+    <gl/>
+    <hw>²roː-ba</hw>
+  </entry>
+  <entry id="tag536">
+    <gl/>
+    <hw>⁴roː-ba</hw>
+  </entry>
+  <entry id="tag537">
+    <gl/>
+    <hw>²riː</hw>
+  </entry>
+  <entry id="tag538">
+    <gl/>
+    <hw>³riː</hw>
+  </entry>
+  <entry id="tag539">
+    <gl/>
+    <hw>¹ko</hw>
+  </entry>
+  <entry id="tag540">
+    <gl/>
+    <hw>²koː</hw>
+  </entry>
+  <entry id="tag541">
+    <gl/>
+    <hw>³ko</hw>
+  </entry>
+  <entry id="tag542">
+    <gl>break off corn</gl>
+    <hw>³koː</hw>
+  </entry>
+  <entry id="tag543">
+    <gl/>
+    <hw>⁴ko</hw>
+  </entry>
+  <entry id="tag544">
+    <gl/>
+    <hw>³kap</hw>
+  </entry>
+  <entry id="tag545">
+    <gl/>
+    <hw>¹kap</hw>
+  </entry>
+  <entry id="tag546">
+    <gl/>
+    <hw>¹hoː</hw>
+  </entry>
+  <entry id="tag547">
+    <gl/>
+    <hw>¹ho</hw>
+  </entry>
+  <entry id="tag548">
+    <gl/>
+    <hw>¹kho</hw>
+  </entry>
+  <entry id="tag549">
+    <gl/>
+    <hw>¹he</hw>
+  </entry>
+  <entry id="tag550">
+    <gl/>
+    <hw>¹heː</hw>
+  </entry>
+  <entry id="tag551">
+    <gl/>
+    <hw>²kheː</hw>
+  </entry>
+  <entry id="tag552">
+    <gl/>
+    <hw>¹kheː</hw>
+  </entry>
+  <entry id="tag553">
+    <gl/>
+    <hw>²kjeː</hw>
+  </entry>
+  <entry id="tag554">
+    <gl/>
+    <hw>²kjaː</hw>
+  </entry>
+  <entry id="tag555">
+    <gl/>
+    <hw>¹kja</hw>
+  </entry>
+  <entry id="tag556">
+    <gl/>
+    <hw>¹so</hw>
+  </entry>
+  <entry id="tag557">
+    <gl/>
+    <hw>²soː</hw>
+  </entry>
+  <entry id="tag558">
+    <gl/>
+    <hw>²sol</hw>
+  </entry>
+  <entry id="tag559">
+    <gl/>
+    <hw>³so</hw>
+  </entry>
+  <entry id="tag560">
+    <gl/>
+    <hw>¹sol</hw>
+  </entry>
+  <entry id="tag561">
+    <gl/>
+    <hw>²sa</hw>
+  </entry>
+  <entry id="tag562">
+    <gl/>
+    <hw>¹saː</hw>
+  </entry>
+  <entry id="tag563">
+    <gl/>
+    <hw>¹ɕi</hw>
+  </entry>
+  <entry id="tag564">
+    <gl/>
+    <hw>¹ɕim</hw>
+  </entry>
+  <entry id="tag565">
+    <gl/>
+    <hw>³sim</hw>
+  </entry>
+  <entry id="tag566">
+    <gl/>
+    <hw>²ɕjup</hw>
+  </entry>
+  <entry id="tag567">
+    <gl/>
+    <hw>¹tai</hw>
+  </entry>
+  <entry id="tag568">
+    <gl/>
+    <hw>²tee</hw>
+  </entry>
+  <entry id="tag569">
+    <gl/>
+    <hw>²te</hw>
+  </entry>
+  <entry id="tag570">
+    <gl/>
+    <hw>⁴tai</hw>
+  </entry>
+  <entry id="tag571">
+    <gl/>
+    <hw>¹tiː</hw>
+  </entry>
+  <entry id="tag572">
+    <gl/>
+    <hw>⁴ti</hw>
+  </entry>
+  <entry id="tag573">
+    <gl/>
+    <hw>¹tui</hw>
+  </entry>
+  <entry id="tag574">
+    <gl/>
+    <hw>⁴tui</hw>
+  </entry>
+  <entry id="tag575">
+    <gl/>
+    <hw>³ʈui</hw>
+  </entry>
+  <entry id="tag576">
+    <gl/>
+    <hw>²thwi</hw>
+  </entry>
+  <entry id="tag577">
+    <gl/>
+    <hw>³ʈeː</hw>
+  </entry>
+  <entry id="tag578">
+    <gl/>
+    <hw>⁴ʈeː</hw>
+  </entry>
+  <entry id="tag579">
+    <gl/>
+    <hw>¹ʈa</hw>
+  </entry>
+  <entry id="tag580">
+    <gl/>
+    <hw>⁴ʈup</hw>
+  </entry>
+  <entry id="tag581">
+    <gl/>
+    <hw>²tsi</hw>
+  </entry>
+  <entry id="tag582">
+    <gl/>
+    <hw>²ʈuː</hw>
+  </entry>
+  <entry id="tag583">
+    <gl/>
+    <hw>¹peː</hw>
+  </entry>
+  <entry id="tag584">
+    <gl/>
+    <hw>⁴pe</hw>
+  </entry>
+  <entry id="tag585">
+    <gl/>
+    <hw>³beː</hw>
+  </entry>
+  <entry id="tag586">
+    <gl/>
+    <hw>³pʱr</hw>
+  </entry>
+  <entry id="tag587">
+    <gl/>
+    <hw>²bjaː</hw>
+  </entry>
+  <entry id="tag588">
+    <gl/>
+    <hw>⁴pja</hw>
+  </entry>
+  <entry id="tag589">
+    <gl/>
+    <hw>⁴pre</hw>
+  </entry>
+  <entry id="tag590">
+    <gl/>
+    <hw>³breː</hw>
+  </entry>
+  <entry id="tag591">
+    <gl/>
+    <hw>³breː</hw>
+  </entry>
+  <entry id="tag592">
+    <gl/>
+    <hw>¹phre</hw>
+  </entry>
+  <entry id="tag593">
+    <gl/>
+    <hw>⁴pra</hw>
+  </entry>
+  <entry id="tag594">
+    <gl/>
+    <hw>³pra</hw>
+  </entry>
+  <entry id="tag595">
+    <gl/>
+    <hw>¹ple</hw>
+  </entry>
+  <entry id="tag596">
+    <gl/>
+    <hw>¹pleː</hw>
+  </entry>
+  <entry id="tag597">
+    <gl/>
+    <hw>³pla</hw>
+  </entry>
+  <entry id="tag598">
+    <gl/>
+    <hw>⁴ploː</hw>
+  </entry>
+  <entry id="tag599">
+    <gl/>
+    <hw>pl̥e</hw>
+  </entry>
+  <entry id="tag600">
+    <gl/>
+    <hw>¹ɕuː</hw>
+  </entry>
+  <entry id="tag601">
+    <gl/>
+    <hw>¹ɕu</hw>
+  </entry>
+  <entry id="tag602">
+    <gl/>
+    <hw>²ɕu</hw>
+  </entry>
+  <entry id="tag603">
+    <gl/>
+    <hw>³ɕuː</hw>
+  </entry>
+  <entry id="tag604">
+    <gl/>
+    <hw>²ju</hw>
+  </entry>
+  <entry id="tag605">
+    <gl/>
+    <hw>¹juː</hw>
+  </entry>
+  <entry id="tag606">
+    <gl/>
+    <hw>¹har-ba</hw>
+  </entry>
+  <entry id="tag607">
+    <gl/>
+    <hw>²har-ba</hw>
+  </entry>
+  <entry id="tag608">
+    <gl/>
+    <hw>¹ho</hw>
+  </entry>
+</lexicon>

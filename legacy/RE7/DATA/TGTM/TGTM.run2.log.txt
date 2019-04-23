@@ -1,0 +1,19 @@
+STAT : [Oct 18 07:51:15 2014] START    parameters: DATA/TGTM/TGTM.params.parameters.xml
+PRE  : [Oct 18 07:51:15 2014] START    number of words to process from each lexicon: unlimited
+PRE  : [Oct 18 07:51:15 2014] 
+RLS  : [Oct 18 07:51:15 2014] XML correspondence file:
+RLS  : [Oct 18 07:51:15 2014] DATA/TGTM/TGTM.C794DEM.corrs.xml
+RLS  : [Oct 18 07:51:15 2014] 2068 diachronic rules from 209 correspondence rows.
+LEX  : [Oct 18 07:51:15 2014] Run stats         Lg    Forms Recns  Fail
+LEX  : [Oct 18 07:51:15 2014] =========  ==========   ===== ===== =====
+STAT : [Oct 18 07:58:20 2014] LEXICON  gha : 720 words, 13386 recons ,311 failed
+STAT : [Oct 18 07:58:21 2014] LEXICON  ris : 1129 words, 14058 recons ,23 failed
+STAT : [Oct 18 07:59:49 2014] LEXICON  sahu : 766 words, 1344 recons ,678 failed
+STAT : [Oct 18 07:59:49 2014] LEXICON  man : TGTM.man.data.xml not found
+STAT : [Oct 18 07:59:50 2014] LEXICON  mar : 647 words, 3274 recons ,602 failed
+STAT : [Oct 18 08:00:39 2014] LEXICON  syang : 1110 words, 1016 recons ,1080 failed
+STAT : [Oct 18 08:00:39 2014] LEXICON  tag : 543 words, 18570 recons ,53 failed
+STAT : [Oct 18 08:02:26 2014] LEXICON  tuk : 1191 words, 2019 recons ,1124 failed
+STAT : [Oct 18 08:02:26 2014] DATA     6106 forms, 53667 recons, 3871 no rc
+STAT : [Oct 18 08:04:28 2014] SET      11843 raw sets, 1547 merged sets, 235 isolates
+STAT : [Oct 18 08:04:28 2014] END      *****
