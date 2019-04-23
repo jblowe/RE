@@ -1,0 +1,17 @@
+-e git+https://github.com/lingpy/lingpy.git@v2.6.4.alpha#egg=lingpy
+-e git+https://github.com/clics/clics2.git@v1.1.1#egg=pyclics
+-e git+https://github.com/lexibank/allenbai.git@v1.0#egg=lexibank_allenbai
+-e git+https://github.com/lexibank/bantubvd.git@v1.0#egg=lexibank_bantubvd
+-e git+https://github.com/lexibank/beidasinitic.git@v2.0#egg=lexibank_beidasinitic
+-e git+https://github.com/lexibank/bowernpny.git@v1.1.1#egg=lexibank_bowernpny
+-e git+https://github.com/lexibank/hubercolumbian.git@v1.0#egg=lexibank_hubercolumbian
+-e git+https://github.com/lexibank/ids.git@v1.2#egg=lexibank_ids
+-e git+https://github.com/lexibank/kraftchadic.git@v1.0#egg=lexibank_kraftchadic
+-e git+https://github.com/lexibank/northeuralex.git@v1.0#egg=lexibank_northeuralex
+-e git+https://github.com/lexibank/robinsonap.git@v1.1#egg=lexibank_robinsonap
+-e git+https://github.com/lexibank/satterthwaitetb.git@v1.0#egg=lexibank_satterthwaitetb
+-e git+https://github.com/lexibank/suntb.git@v1.1#egg=lexibank_suntb
+-e git+https://github.com/lexibank/tls.git@v1.1#egg=lexibank_tls
+-e git+https://github.com/lexibank/tryonsolomon.git@v1.0.1#egg=lexibank_tryonsolomon
+-e git+https://github.com/lexibank/wold.git@v1.1#egg=lexibank_wold
+-e git+https://github.com/lexibank/zgraggenmadang.git@v1.1#egg=lexibank_zgraggenmadang
