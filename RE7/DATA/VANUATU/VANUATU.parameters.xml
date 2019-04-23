@@ -17,7 +17,7 @@
    <attested file="olr.data.xml" name="olr"/>
    <attested file="vlw.data.xml" name="vlw"/>
    <attested file="mrl.data.xml" name="mrl"/>
-   <mel file="VANUATU.mel-clics.xml" name="clics"/>
+   <mel file="VANUATU.clics.mel.xml" name="clics"/>
    <reconstruction name="default">
       <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
       <action name="upstream" target="pvn"/>
