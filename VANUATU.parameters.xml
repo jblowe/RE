@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<params>
+   <attested file="hiw.data.xml" name="hiw"/>
+   <attested file="ltg.data.xml" name="ltg"/>
+   <attested file="lhi.data.xml" name="lhi"/>
+   <attested file="lyp.data.xml" name="lyp"/>
+   <attested file="vlw.data.xml" name="vlw"/>
+   <attested file="mtp.data.xml" name="mtp"/>
+   <attested file="lmg.data.xml" name="lmg"/>
+   <attested file="vra.data.xml" name="vra"/>
+   <attested file="vrs.data.xml" name="vrs"/>
+   <attested file="msn.data.xml" name="msn"/>
+   <attested file="mta.data.xml" name="mta"/>
+   <attested file="num.data.xml" name="num"/>
+   <attested file="drg.data.xml" name="drg"/>
+   <attested file="kro.data.xml" name="kro"/>
+   <attested file="olr.data.xml" name="olr"/>
+   <attested file="lkn.data.xml" name="lkn"/>
+   <attested file="mrl.data.xml" name="mrl"/>
+   <mel file="VANUATU.clics.mel.xml" name="clics"/>
+   <reconstruction name="default">
+      <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
+      <action name="upstream" target="pvn"/>
+      <action from="hiw,ltg,lhi,lyp,vlw,mtp,lmg,vra,vrs,msn,mta,num,drg,kro,olr,lkn,mrl" name="upstream" to="pvn"/>
+   </reconstruction>
+</params>
