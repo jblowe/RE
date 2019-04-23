@@ -13,4 +13,4 @@ N	L	Type	*	Env	A	B
 12	1	V	oeoe		oeoe	oeoe
 13	1	F	p		p	p
 14	1	F	k		k	k
-15	1	F	s		s	s
+15	1	F	s		s	s
