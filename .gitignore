@@ -1,5 +1,11 @@
 .idea
 .DS_Store
+
+# RE specific stuff
+__pycache__/
+*.log
+*.analysis.txt
+
 #
 !Build/
 .last_cover_stats
