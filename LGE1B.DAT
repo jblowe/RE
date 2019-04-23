@@ -1,0 +1,16 @@
+.hw	tob
+dff	a
+.hw	tuk
+dff	b
+.hw	tip
+dff	c
+.hw	toep
+dff	d
+.hw	des
+dff	e
+.hw	duo
+dff	f
+.hw	diu
+dff	g
+.hw	doeoe
+dff	h
