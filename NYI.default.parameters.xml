@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <param name="trace" value="N"/>
+  <param name="spec" value="Y"/>
+  <action name="downstream" from="proto" to="sa"/>
+  <param name="trace" value="N"/>
+  <param name="title" value="Northern Yi, mostly based on Chen Kang, 1990"/>
+  <param name="spec" value="Y"/>
+  <param name="SYLLABLE" value="[IM]*[NOS]+[CT]+"/>
+  <param name="correspondences" value="NYI.TOC.u8.csv"/>
+  <param name="csvdata" value="NYI.TAB.u8.csv"/>
+</params>

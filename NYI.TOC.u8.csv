@@ -1,0 +1,102 @@
+# Northern Yi correspondences, mostly induced from Chen Kang's data. See Lowe 1995 for details.
+N	L	Type	PL	Env	PNL	sani	axi	nesu	lalo	li	nasu	neisu	nosu
+1	1	C	ᴴ		ᴴ	⁴⁴	³³	³³	³³	³³	²	³³	⁴
+2	1	C	ᴸ		ᴸ	²	²	²	²	²	⁵⁵	¹³	⁵⁵
+3	1	C	ᴸ		ᴸ	⁵⁵,²¹	⁵⁵,²¹	²,³³,²¹	²,²¹	⁵⁵,²¹	⁵⁵,³³	⁵⁵,³³	⁵⁵,³³,²¹
+4	1	C	ᴴ		ᴴ	³³	³³,²	⁵⁵,²¹	⁵⁵	³³	³³,²¹	¹³,²¹	³³
+5	1	T	¹		¹	³³	³³	⁵⁵	⁵⁵	³³	³³	¹³	³³
+6	1	T	¹		¹	³³	²	²¹	⁵⁵	³³	²¹	²¹	³³
+7	1	T	³		³	⁴⁴	³³	³³	²¹	³³	²	³³	³³
+8	1	T	²		²	⁵⁵	⁵⁵	²	²	⁵⁵	⁵⁵	⁵⁵	⁵⁵
+9	1	T	²		²	²¹	²¹	³³	²¹	²¹	³³	³³	³³
+10	1	T	²		²	²¹	²¹	²¹	²¹	²¹	⁵⁵	⁵⁵	²¹
+11	1	T	²		²	⁵⁵	⁵⁵	³³	²¹	⁵⁵	³³	³³	³³
+12	1	I	d		d	d	d	d	d	d	t	t	d
+13	1	I	d		d	t	t	d	d	d	d	d	d
+14	1	I	dl		dl	dl	ɖ	d	b	b	ɖ	ɖ	d
+15	1	I	t		th	th	th	th	th	th	th	th	th,t
+16	1	I	Nd		nd	d	d	d	d,t	d	d	d	d,nd
+17	1	I	Nd		nd	t	t	d	d	d	nd	nd	nd
+18	1	I	k-r		zy	ʑ	ʑ	ʑ	ʑ,ʔ	ʑ	ɣ,ʑ	ɣ,ʑ	v,dʐ
+19	1	I	k-r		v	ɣ	ɣ,v	ɣ	ɣ,ʑ,ʔv,h	v,x	ɣ	ɣ,ʑ	ɣ,ʑ,v
+20	1	I	ʔr		h	h	x	x	h	x	h	h	h
+21	1	I	k		kh	kh	kh	kh	kh	kh	kh	tɕh	k,kh
+22	1	I	k		q	k,qh	k	k	k,ʔ	k	k	k	k
+23	1	I	kr		tc	tɕh	tʂh	tsh	kh	tsh	tɕ	kh	ɕ
+24	1	I	kr		k	k	k,tʂ	k,ts	k,g	k	k,tɕ	tɕ	k,g
+25	1	I	kr		qh	qh	kh	kh	kh	kh	kh	kh	tɕh
+26	1	I	kr		tsh	qh	tʂh	tsh	kh	kh	kh	kh	ɕ
+27	1	I	kl		tl	ɬ	ʈh	th	tɕh,ph	s,ph	ɬ,ʈh	ʈh	tɕh,th
+28	1	I	ky		tʂh	tʂh,tɕh	tʂh,tɕh	tsh,tɕh	tʂh	tʂh	tʂh	tʂh	tʂh,tɕh
+29	1	I	gr		dz	g,dʐ	dʐ,tɕ	dʐ,dʑ	g	dz,dʐ	dʑ	dʑ	dʑ
+30	1	I	ts		ts	ts	ts	ts,tɕ	ts,tɕ	ts	ts	ts	ts
+31	1	I	ts		tsh	tsh,tʂh	tsh	t,tsh,tɕh	tsh,tɕh	tsh	tsh	tsh	tsh
+32	1	I	tʂh		tʂh	kh	tʂh	tʂh	kh	tʂh	tʂh	tɕh	f
+33	1	I	dʐ		dʐ	dʐ	dʐ	dz	dz,dʐ	dʐ	dʐ	dʐ	dʐ,dʑ
+34	1	I	dz		dz	ts,dz	ts,dz	dz	dz	dz	dz	dz	dz
+35	1	I	dʑ		dʑ	dʑ	dʑ	dʑ	dʑ	dʑ	dʐ	dʐ	dʐ
+36	1	I	g		g	q	g,k	g	g,ɣ	g	g	g	g
+37	1	I	ly		dl	đ	đ	l	l	l	l	l	ʑ
+38	1	I	l		l	l	l,ɬ	l	l,ʔl	l	l	l	l
+39	1	I	l		l	ɬ	l	ɬ	ʔl	l	l	l	l
+40	1	I	l		l	ɬ	l	l,ɬ	l	l	ɬ	ɬ	l
+41	1	I	m		m	m	m	m	m,ʔm	m	m	m	m,ṃ
+42	1	I	mw		m	n	n	ȵ	m	m	ȵ	ŋ	m
+43	1	I	mb		mb	p	p	b	v,b	b	mb,bh	mb	b,mb
+44	1	I	n		n	ȵ,n	ȵ,n	ȵ,n	n,ʔn,ʔm	ȵ,n,m	ȵ,n	ȵ,n	ȵ,n,ṇ
+45	1	I	my		n	n	n	n	m	m	ɳ	ɳ	ȵ
+46	1	I	n		n	ŋ	n	n,ʔn	n,ny	n	ȵ	ȵ	n
+47	1	I	ŋ		ŋ	ŋ	ŋ	ŋ	ŋ,m	ŋ,m	ŋ	ŋ,h,n	ŋ,m
+48	1	I	ndz		ndʑ	tʂ	tɕ	dʑ	g	dz	ndʑ	ndʑ	ndʑ
+49	1	I	nts		nts	tɕh	?	tsh	g	tsh	tɕh	g	dʐ
+50	1	I	Nts		ndz	dz	dz	th	dʑ	dʑ	ndzh	ndz	?
+51	1	I	Ndz		ndz	ts	ts	dz	dʑ	dz	ndzh	dz	dz
+52	1	I	Ng		ng	q,g	g	g	g,ɣ	g	ngh	ng	ng
+53	1	I	Ndz		nɖʐ	tʂ,ɖʐ	tɕ,ɖʐ	dz,dʐ	dʐ	dz,ɖʐ	ɳɖʐ	ɳɖʐ	ɳɖʐ
+54	1	I	ʔpl		p	p	p	p	k	p	p	p	p
+55	1	I	b		b	b	b	b,ʑ	b,v,ʔb	b	b	b	b,p
+56	1	I	p		p	p	p	p	ph	ph	p,ph	ph	ph
+57	1	I	pl		p	p	p	p	p	p	ɬ	ɬ	p
+58	1	I	pw		ph	ph	ph	ph	f,ph	ph	ph	ph	ph
+59	1	I	s		s	s	s	s,ɕ	s,ɕ	s	s	s	s
+60	1	I	s	/I̱	ɕ	ʂ	ʂ	ɕ	x	s	ɕ	ɕ	s
+61	1	I	sy		sy	ɕ,ʂ	ʂ	s,ɕ	x,ʂ	ʂ,s	ɕ,ʂ	ɕ,ʂ	ʂ,s
+62	1	I	ʔt		t	t	t	t	t	t	t	t	t,ts
+63	1	I	ts		ts	tʂ	ts	k,ts	k,tʂ	tɕ,tʂ	tɕ,tʂ	k,tʂ	tɕ
+64	1	I	tɕ		tɕ	tɕ	tʂ,ts	tʂ,ts,tɕ	tɕ	k,tɕ	tɕ	tɕ	tɕ,g
+65	1	I	C-k		tɕh	tsh,tɕ	ts,tʂ	tɕh	tɕh	tsh	tsh	g	tɕh
+66	1	I	tɕh		tɕh	tʂh	tɕh	tɕh	kh	tsh	tɕh	tɕh	ɕ
+67	1	I	tɕh		tɕh	tɕh	tɕh	tɕh	tɕh	tɕh	tʂh	tʂh	tʂh
+68	1	I	r		w	v	ɣ	v	v	v	ɣ	ɣ	v
+69	1	I	w		w	v	v	v	v	b,v	v	v	mb,v
+70	1	I	sy		x	x,ɕ	x,ɕ	x,ɕ	x,ɕ	x,ɕ	x,ɕ	x,ɕ	ʂ
+71	1	I	s	/I̱	ɕ	ʂ	ʂ	ɕ	x	s	ɕ	ɕ	s
+72	1	I	z		z	z	z	z,ʑ,ɕ	z,ʐ	z	z	z	z
+73	1	I	zy		zy	ʐ	ʐ	ʐ,x	ɣ	ʐ	ʐ,h	ʐ,h	ʐ
+74	1	I	ɬ		ɬ	l,ɬ	l	ɬ	ʔl	l	ɬ	ɬ	ɬ,h
+75		O	a		a	a	o,u	o	a	o,u	o	o,u	o,a,ɯ
+76		O	ay		we	i,æ	a,ɛ	ɛ,a	e	ɛ	ɔ	ɛ	i
+77		O	i		i	i	i̱	i̱	i	i̱	i̱	ɪ	i̱
+78		O	u		u	u	u	u	u	u	u	u	ɯ
+79		O	uw		o	ɯ,o	ɯ	ɯ	u̪,u,ɯ	ɯ,u	ɯ	y	o,u
+80		O	uw		uw	u	o,u	u	i	ɯ	u	i	u
+81		N	in		ɛ	æ	ɛ	ɛ	ɯ	i	ɚ	ɛ	o,ɪ
+82		N	aŋ		u	o,i,u	o,u	u,o	i,u̪,u	u	u	u	u
+83		N	am		y	ɤ	i,ɯ	e,ɤ	y	ɤ	e,ɤ	ɛ,ɤ	i,ɪ,ɤ
+84		N	um		y	ɤ	i	ɤ	y	ɤ	ɤ	ɤ	ɤ
+85		N	im		ɛ	i	ɛ	ɛ	i	i	ɿ	ɛ	ɪ
+86		S	ak		o	o,u	o,u	a	u	a,o	ɔ	o	o
+87		S	ak		eʔ	e	e̱,ɛ̱	e̱	i̱,i	e̱	a,a̱	a	o̱,a̱
+88		S	ap		eʔ	ɤ	o̱,i	ɤ̱	y̱	ɤ̱	ɤ̱,e̱	i	i̱,ɪ,i,ɪ̱
+89		S	at		eʔ	ɤ	o̱	ɤ̱	o	ɤ̱	ɤ̱,e̱,e,i	i	i̱,ɪ,i,ɪ̱
+90		S	ik		e	ɪ	i	e	i	e	e	i,ɤ	ɯ,ɪ
+91		S	ik		iʔ	i	i̱	ɯ̱	i̱	i̱	ɯ̱	ɤ	i
+92		S	ip		iʔ	i	i̱	i̱	i̱	i̱,i	i,i̱	i	i̱
+93		S	it		i	i	i	i	i,ɯ	i,ɿ	i,ɿ,ɯ	i,y	i,i̱
+94		S	at		iʔ	ɪ,i	i̱	i̱	i̱	ɿ̱,i̱	ɿ̱,i̱	ɪ,ɤ,i	i̱
+95		S	ok		oʔ	a	o̱	o̱	o̱	o̱	o̱	o̱	a̱,ɯ̱
+96		S	ok		oʔ	ɤ,o	u̱,o̱	u̱,u	o,o̱	u̱	o̱	e	u̱,o̱
+97		S	ök		aʔ	a	a̱	a̱	a̱	a̱	ɚ̱	a,ɪ,e	a̱,o̱,ɪ̱,i̱
+98		S	uk		ɯʔ	ɯ	ɯ̱	ɯ̱	i̱	ɯ̱	ɯ̱	ɤ	i̱,ɯ̱
+99		S	ut		uʔ	u	u̱	u̱	u̪̱	ɯ̱	u̱	u	u
+100		S	at		iʔ	ɪ	i̱	i̱	i̱,ɯ̱	i̱	i̱	i̱	i̱,ɪ̱
