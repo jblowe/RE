@@ -11,9 +11,11 @@ RE Interactive
 
 **A few details**
 
- * To install:
+ * Requires ``lxml`` and ``regex`` To install:
 
- _nothing required if you have Python 3.6 or higher, I think_
+ ```
+ pip3 install -r requirements
+ ```
 
 
  * To run:
