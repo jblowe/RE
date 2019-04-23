@@ -1,0 +1,277 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+   <parameters>
+      <canon name="syllabe" value="(I*V+I*)+"/>
+      <spec name="supra_segmentals" value=""/>
+   </parameters>
+   <corr num="1">
+      <proto syll="I">t</proto>
+      <modern dialecte="tongien">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>k</seg>
+      </modern>
+   </corr>
+   <corr num="2">
+      <proto syll="I">p</proto>
+      <modern dialecte="tongien">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="3">
+      <proto syll="I">f</proto>
+      <modern dialecte="tongien">
+         <seg>f</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>f</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>Q</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>h</seg>
+      </modern>
+   </corr>
+   <corr num="4">
+      <proto syll="I">v</proto>
+      <modern dialecte="tongien">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>w</seg>
+      </modern>
+   </corr>
+   <corr num="5">
+      <proto syll="I">k</proto>
+      <modern dialecte="tongien">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>Q</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>Q</seg>
+      </modern>
+   </corr>
+   <corr num="6">
+      <proto syll="I">Q</proto>
+      <modern dialecte="tongien">
+         <seg>Q</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>0</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>0</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>0</seg>
+      </modern>
+   </corr>
+   <corr num="7">
+      <proto syll="I">N</proto>
+      <modern dialecte="tongien">
+         <seg>N</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>N</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>N</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>n</seg>
+      </modern>
+   </corr>
+   <corr num="8">
+      <proto syll="I">m</proto>
+      <modern dialecte="tongien">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>m</seg>
+      </modern>
+   </corr>
+   <corr num="9">
+      <proto syll="I">n</proto>
+      <modern dialecte="tongien">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>n</seg>
+      </modern>
+   </corr>
+   <corr num="10">
+      <proto syll="I">r</proto>
+      <modern dialecte="tongien">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="11">
+      <proto syll="I">l</proto>
+      <modern dialecte="tongien">
+         <seg>0</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="12">
+      <proto syll="I">h</proto>
+      <modern dialecte="tongien">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>0</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>0</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>0</seg>
+      </modern>
+   </corr>
+   <corr num="13">
+      <proto syll="I">s</proto>
+      <modern dialecte="tongien">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>Q</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>h</seg>
+      </modern>
+   </corr>
+   <corr num="14">
+      <proto syll="V">a</proto>
+      <modern dialecte="tongien">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="15">
+      <proto syll="V">u</proto>
+      <modern dialecte="tongien">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="16">
+      <proto syll="V">i</proto>
+      <modern dialecte="tongien">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>i</seg>
+      </modern>
+   </corr>
+   <corr num="17">
+      <proto syll="V">o</proto>
+      <modern dialecte="tongien">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="18">
+      <proto syll="V">e</proto>
+      <modern dialecte="tongien">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="samoan">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="raroton">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="hawai">
+         <seg>e</seg>
+      </modern>
+   </corr>
+</tableOfCorr>
