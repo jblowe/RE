@@ -18,11 +18,12 @@ with open(filename, encoding='utf-8', errors='ignore') as file:
     pairs = toolbox.read_toolbox_file(file)
     zipped = defaultdict(list)
     for (context, data) in toolbox.records(pairs, ['\\pnv', '\\psm']):
+        proto_gloss = context['\\psm']
         i = 0
         while (i < len(data) - 1):
             (tag, value) = data[i]
             if tag[1:] in languages and value:
-                gloss = None
+                gloss = proto_gloss
                 if data[i + 1][0] == '\\sem':
                     gloss = data[i + 1][1]
                     i += 1
