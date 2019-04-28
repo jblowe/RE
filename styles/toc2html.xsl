@@ -44,7 +44,7 @@
 					<th>right</th>
 
 					<xsl:for-each select="corr[1]/modern">
-						<xsl:sort select="@dialecte"/>
+						<!-- xsl:sort select="@dialecte"/ -->
 						<th><xsl:value-of select="@dialecte"/></th>
 					</xsl:for-each>
 				</tr>
@@ -58,7 +58,7 @@
 					<td><xsl:value-of select="proto/@contextR"/></td>
 					
 					<xsl:for-each select="modern">
-						<xsl:sort select="@dialecte"/>
+						<!-- xsl:sort select="@dialecte"/ -->
 						<td>
 							<xsl:for-each select="seg">
 								<xsl:if test="@statut='doute'">=</xsl:if>
