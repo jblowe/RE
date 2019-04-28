@@ -67,7 +67,7 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
         names = next_skipping_comment(reader)[5:]
         for row in reader: 
             table.add_correspondence(RE.Correspondence(
-                row[0], (None, None) if row[4] == '' else row[4], row[2].split(','), row[3],
+                row[0], (None, None) if row[4] == '' else (row[4], ''), row[2].split(','), row[3],
                 dict(zip(names, (x.split(',') for x in row[5:])))))
     return table
 
