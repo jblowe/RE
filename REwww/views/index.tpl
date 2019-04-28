@@ -46,12 +46,14 @@
                 <a href="/list_projects">&lt;&lt; back</a>
                 <h3>{{data['project']}}</h3>
                   % for (file_type, files) in data['files']:
-                    <h5>{{file_type}}</h5>
-                    <ul>
-                      % for file in files:
-                        <li><a href="/project_files/{{data['project']}}/{{file}}">{{file}}</a></li>
+                      % if len(files) > 0:
+                        <h5>{{file_type}}</h5>
+                        <ul>
+                          % for file in files:
+                            <li><a href="/project_files/{{data['project']}}/{{file}}">{{file}}</a></li>
+                          % end
+                        </ul>
                       % end
-                    </ul>
                   % end
               </div>
               % if 'content' in data:
