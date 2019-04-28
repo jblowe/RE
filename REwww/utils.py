@@ -17,7 +17,8 @@ def get_version():
 
 
 def add_time_and_version():
-    return 'code and data version: %s, updated: %s' % (get_version(), time.strftime("%b %d %Y %H:%M:%S", time.localtime()))
+    return 'code and data version: %s, updated: %s' % (
+    get_version(), time.strftime("%b %d %Y %H:%M:%S", time.localtime()))
 
 
 def data_files(project):
@@ -27,7 +28,7 @@ def data_files(project):
     to_display = []
     for type in 'data correspondences parameters mel sets'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.xml' in f]))
-    for type in 'correspondences data'.split(' '):
+    for type in 'correspondences data u8'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.csv' in f]))
     for type in 'keys sets'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.txt' in f]))
@@ -46,10 +47,16 @@ def file_content(file_path):
         except:
             data = '<span style="color: red">Problem handling this file, sorry!</span>'
     elif '.txt' in file_path:
-        f = open(file_path,'r')
+        f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = '<pre>' + data + '</pre>'
+        data = '<pre>' + limit_lines(data, 1000) + '</pre>'
+
+    elif '.csv' in file_path:
+        f = open(file_path, 'r')
+        data = f.read()
+        f.close()
+        data = reformat(data, 1000)
     return data, project
 
 
@@ -74,6 +81,32 @@ def determine_file_type(file_path):
         return 'sets2html.xsl'
     elif 'mel.xml' in file_path:
         return 'mel2html.xsl'
+
+
+# this somewhat desperate function makes an html table from a tab- and newline- delimited string
+def reformat(filecontent, max_rows):
+    rows = filecontent.split('\n')
+    rows = [r for r in rows if not '#' in r]
+    rows = rows[:max_rows]
+    header = rows[0]
+    header = header.replace('\t', '<th>')
+    header = '<thead><tr><th>' + header + '</thead>'
+    rows = rows[1:]
+    result = '<tr><td>'.join(rows)
+    result = '<tbody><tr><td>' + result.replace('\t', '<td>')
+    result += '</tbody></table>'
+    return '<table width="100%" class="table table-striped sortable">\n' + header + result
+
+
+# this somewhat desperate function makes an html table from a tab- and newline- delimited string
+def limit_lines(filecontent, max_rows):
+    rows = filecontent.split('\n')
+    num_rows = len(rows)
+    rows = rows[:max_rows]
+    message = ''
+    if num_rows > max_rows:
+        message = f'\n\n... and {num_rows - max_rows} more rows not shown.'
+    return '\n'.join(rows) + message
 
 
 VERSION = get_version()
