@@ -1,4 +1,5 @@
-import xml.etree.ElementTree as ET
+import os
+import lxml.etree as ET
 from xml.dom import minidom
 
 def serialize_correspondence_file(filename, parameters):
@@ -41,8 +42,15 @@ def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
     for (number, form) in enumerate(lexicon.forms):
         entry = ET.SubElement(root, 'entry', attrib={'id': str(number)})
-        ET.SubElement(entry, 'gl').text = form.gloss
-        ET.SubElement(entry, 'hw').text = form.glyphs
+        try:
+            ET.SubElement(entry, 'gl').text = form.gloss
+        except:
+            ET.SubElement(entry, 'gl').text = 'missing'
+            print(f'error in {lexicon.language} {number} {form.glyphs} {form.gloss}')
+        try:
+            ET.SubElement(entry, 'hw').text = form.glyphs
+        except:
+            ET.SubElement(entry, 'hw').text = 'missing'
+            print(f'conversion error in {lexicon.language} {number} {form.glyphs} {form.gloss}')
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(minidom.parseString(ET.tostring(root))
-                .toprettyxml(indent='   '))
+        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
