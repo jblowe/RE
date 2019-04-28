@@ -6,5 +6,6 @@ projects = {'TGTM': '../projects/TGTM',
             'POLYNESIAN': '../projects/POLYNESIAN',
             'LOLOISH': '../projects/LOLOISH',
             'GERMANIC': '../projects/GERMANIC',
-            'VANUATU': '../projects/VANUATU'
+            'VANUATU': '../projects/VANUATU',
+            'RE_DATA_1994': '../projects/RE_DATA_1994'
 }
