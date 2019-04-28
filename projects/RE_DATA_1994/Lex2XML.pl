@@ -38,7 +38,9 @@ sub brackets {
         return "\n<$tag>$field</$tag>\n$rest";
     }
     else {
-        return "\n<$tag>$data</$tag>";
+        if ($data ne '') {
+            return "\n<$tag>$data</$tag>";
+        }
     }
 }
 
