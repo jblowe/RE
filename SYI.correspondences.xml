@@ -1,7 +1,13 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
    <parameters>
-      <canon name="syllabe" value="placeholder"/>
+      <class name="V" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr"/>
+      <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml"/>
+      <class name="L" value="l,r"/>
+      <class name="P" value="p,pʰ,b,m,ʰm"/>
+      <class name="M" value="m,n,ŋ"/>
+      <class name="C" value="p,t,k"/>
+      <canon name="syllabe" value="[CT]+[PIM]*[NOS]+"/>
       <spec name="supra_segmentals" value=""/>
    </parameters>
    <corr num="1">
@@ -1562,7 +1568,7 @@
       </modern>
    </corr>
    <corr num="50">
-      <proto contextL="/" contextR="N" syll="O">a</proto>
+      <proto contextL="/,N,ˍ" syll="O">a</proto>
       <modern dialecte="PSL">
          <seg>a</seg>
       </modern>
@@ -1641,7 +1647,7 @@
       </modern>
    </corr>
    <corr num="52">
-      <proto contextL="/" contextR="D" syll="O">ay</proto>
+      <proto contextL="/,D,ˍ" syll="O">ay</proto>
       <modern dialecte="PSL">
          <seg>ay</seg>
       </modern>
@@ -1672,7 +1678,7 @@
       </modern>
    </corr>
    <corr num="53">
-      <proto contextL="/" contextR="N" syll="O">ay</proto>
+      <proto contextL="/,N,ˍ" syll="O">ay</proto>
       <modern dialecte="PSL">
          <seg>ay</seg>
       </modern>
@@ -1712,7 +1718,7 @@
       </modern>
    </corr>
    <corr num="54">
-      <proto contextL="/" contextR="D" syll="O">e</proto>
+      <proto contextL="/,D,ˍ" syll="O">e</proto>
       <modern dialecte="PSL">
          <seg>e</seg>
       </modern>
@@ -1778,7 +1784,7 @@
       </modern>
    </corr>
    <corr num="56">
-      <proto contextL="/" contextR="V" syll="O">e</proto>
+      <proto contextL="/,V,ˍ" syll="O">e</proto>
       <modern dialecte="PSL">
          <seg>e</seg>
       </modern>
@@ -1856,7 +1862,7 @@
       </modern>
    </corr>
    <corr num="58">
-      <proto contextL="/" contextR="N" syll="O">i</proto>
+      <proto contextL="/,N,ˍ" syll="O">i</proto>
       <modern dialecte="PSL">
          <seg>i</seg>
       </modern>
@@ -1893,7 +1899,7 @@
       </modern>
    </corr>
    <corr num="59">
-      <proto contextL="/" contextR="Z" syll="O">i</proto>
+      <proto contextL="/,Z,ˍ" syll="O">i</proto>
       <modern dialecte="PSL">
          <seg>i</seg>
       </modern>
@@ -2051,7 +2057,7 @@
       </modern>
    </corr>
    <corr num="63">
-      <proto contextL="/" contextR="L" syll="O">u</proto>
+      <proto contextL="/,L,ˍ" syll="O">u</proto>
       <modern dialecte="PSL">
          <seg>u</seg>
       </modern>
@@ -2147,7 +2153,7 @@
       </modern>
    </corr>
    <corr num="66">
-      <proto contextL="/" contextR="V" syll="O">we</proto>
+      <proto contextL="/,V,ˍ" syll="O">we</proto>
       <modern dialecte="PSL">
          <seg>we</seg>
       </modern>
