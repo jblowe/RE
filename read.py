@@ -28,6 +28,22 @@ def read_syllable_canon(parameters):
             supra_segmentals = parameter.attrib.get('value').split(',')
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals)
 
+
+def read_classes(parameters):
+    sound_classes = {}
+    supra_segmentals = []
+    regex = ''
+    for parameter in parameters:
+        if parameter.tag == 'class':
+            sound_classes[parameter.attrib.get('name')] = \
+                [x.strip() for x in parameter.attrib.get('value').split(',')]
+        if parameter.tag == 'canon':
+            regex = parameter.attrib.get('value')
+        if parameter.tag == 'spec':
+            supra_segmentals = parameter.attrib.get('value').split(',')
+    return sound_classes, regex, supra_segmentals
+
+
 def read_correspondences(correspondences, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)
     for correspondence in correspondences:
