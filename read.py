@@ -4,6 +4,7 @@ import os
 import RE
 import mel
 
+
 def read_correspondence_file(filename, project_name, daughter_languages, name, mel_filename):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
@@ -14,6 +15,7 @@ def read_correspondence_file(filename, project_name, daughter_languages, name, m
                          name,
                          read_mel_file(mel_filename)
                          if mel_filename else None)
+
 
 def read_syllable_canon(parameters):
     sound_classes = {}
@@ -68,6 +70,7 @@ def read_correspondences(correspondences, project_name, daughter_languages):
                 daughter_forms))
     return table
 
+
 def next_skipping_comment(reader):
     for row in reader:
         if '#' in row[0]:
@@ -75,17 +78,19 @@ def next_skipping_comment(reader):
         else:
             return row
 
+
 def read_csv_correspondences(filename, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)
     with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order
         names = next_skipping_comment(reader)[5:]
-        for row in reader: 
+        for row in reader:
             table.add_correspondence(RE.Correspondence(
                 row[0], (None, None) if row[4] == '' else (row[4], ''), row[2].split(','), row[3],
                 dict(zip(names, (x.split(',') for x in row[5:])))))
     return table
+
 
 # xml reading
 def read_settings_file(filename, mel='none', recon='default'):
@@ -124,6 +129,7 @@ def read_settings_file(filename, mel='none', recon='default'):
                               upstream,
                               downstream)
 
+
 # returns a generator returning the modern form and its gloss
 def read_lexicon(xmlfile):
     tree = ET.parse(xmlfile)
@@ -138,10 +144,12 @@ def read_lexicon(xmlfile):
              for entry in tree.iterfind('entry')]
     return RE.Lexicon(language, forms)
 
+
 def read_attested_lexicons(settings):
     return {language: read_lexicon(os.path.join(settings.directory_path,
                                                 settings.attested[language]))
             for language in settings.attested}
+
 
 def read_tabular_lexicons(tablefile, columns, delimiter='\t'):
     (gloss_column, id_column, data_start_column) = columns
@@ -158,11 +166,13 @@ def read_tabular_lexicons(tablefile, columns, delimiter='\t'):
                     forms_dict[language].append(RE.ModernForm(language, form, gloss))
         return [RE.Lexicon(language, forms) for language, forms in forms_dict.items()]
 
+
 def read_mel_file(filename):
     tree = ET.parse(filename)
     return [mel.Mel([seg.text for seg in child.iterfind('gl')],
                     child.attrib.get('id'))
             for child in tree.iterfind('mel')]
+
 
 def get_element(language, entry, field):
     # return element.text if element else ''
