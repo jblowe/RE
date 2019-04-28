@@ -10,4 +10,12 @@
   <param name="SYLLABLE" value="[CT]+[PIM]*[NOS]+"/>
   <param name="correspondences" value="SYI.TOC.u8.csv"/>
   <param name="csvdata" value="SYI.TAB.u8.csv"/>
+
+  <mel name="hand" file="LOLOISH.hand.mel.xml"/>
+
+  <reconstruction name="default">
+    <proto_language name="proto" correspondences="SYI.correspondences.xml"/>
+    <action name="upstream" target="proto"/>
+    <action name="upstream" from="PSL,WB, Akha,HaniW,HaniL,Khatu,Pijo,Haoni,Mpi" to="proto"/>
+  </reconstruction>
 </params>
