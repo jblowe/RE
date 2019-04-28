@@ -127,15 +127,16 @@ def read_attested_lexicons(settings):
                                                 settings.attested[language]))
             for language in settings.attested}
 
-def read_tabular_lexicons(tablefile, delimiter='\t'):
+def read_tabular_lexicons(tablefile, columns, delimiter='\t'):
+    (gloss_column, id_column, data_start_column) = columns
     with open(tablefile, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order
-        names = [x.strip() for x in next_skipping_comment(reader)[1:]]
+        names = [x.strip() for x in next_skipping_comment(reader)[data_start_column:]]
         forms_dict = {name: [] for name in names}
         for row in reader:
-            gloss = row[0]
-            for language, form in zip(names, row[1:]):
+            gloss = row[gloss_column]
+            for language, form in zip(names, row[data_start_column:]):
                 form = form.strip()
                 if form:
                     forms_dict[language].append(RE.ModernForm(language, form, gloss))
