@@ -27,6 +27,10 @@ def data_files(project):
     to_display = []
     for type in 'data correspondences parameters mel sets'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.xml' in f]))
+    for type in 'correspondences data'.split(' '):
+        to_display.append((type, [f for f in filelist if f'{type}.csv' in f]))
+    for type in 'keys sets'.split(' '):
+        to_display.append((type, [f for f in filelist if f'{type}.txt' in f]))
     return to_display, BASE_DIR
 
 
@@ -34,15 +38,18 @@ def file_content(file_path):
     # file_path contains the project and filename, e.g. TGTM/TGTM.mel.xml
     project = file_path.split('/')[0]
     file_path = os.path.join(BASE_DIR, 'projects', file_path)
-    xslt_path = determine_file_type(file_path)
-    xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
-    try:
-        data = xml2html(file_path, xslt_path)
-    except:
-        data = '<span style="color: red">Problem handling this file, sorry!</span>'
-    # f = open(file_path,'r')
-    # data = f.read()
-    # f.close()
+    if '.xml' in file_path:
+        xslt_path = determine_file_type(file_path)
+        xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
+        try:
+            data = xml2html(file_path, xslt_path)
+        except:
+            data = '<span style="color: red">Problem handling this file, sorry!</span>'
+    elif '.txt' in file_path:
+        f = open(file_path,'r')
+        data = f.read()
+        f.close()
+        data = '<pre>' + data + '</pre>'
     return data, project
 
 
