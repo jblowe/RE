@@ -32,6 +32,8 @@ def data_files(project):
         to_display.append((type, [f for f in filelist if f'{type}.csv' in f]))
     for type in 'keys sets'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.txt' in f]))
+    for type in 'DAT'.split(' '):
+        to_display.append((type, [f for f in filelist if f'.{type}' in f]))
     return to_display, BASE_DIR
 
 
@@ -46,7 +48,7 @@ def file_content(file_path):
             data = xml2html(file_path, xslt_path)
         except:
             data = '<span style="color: red">Problem handling this file, sorry!</span>'
-    elif '.txt' in file_path:
+    elif '.txt' in file_path or '.DAT' in file_path:
         f = open(file_path, 'r')
         data = f.read()
         f.close()
