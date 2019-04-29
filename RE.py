@@ -435,6 +435,9 @@ def dump_sets(lexicon, filename):
         print_sets(lexicon)
     sys.stdout = out
 
+def dump_xml_sets(sets, filename):
+    serialize.serialize_sets(sets, filename)
+
 def dump_keys(lexicon, filename):
     out = sys.stdout
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
