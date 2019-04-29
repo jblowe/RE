@@ -110,7 +110,7 @@ def read_settings_file(filename, mel='none', recon='default'):
                         if spec.attrib.get('to'):
                             upstream[spec.attrib.get('to')] = \
                                 spec.attrib.get('from').split(',')
-                    elif spec.attrib['name'] == 'downstram':
+                    elif spec.attrib['name'] == 'downstream':
                         downstream.append(spec.attrib['to'])
                 elif spec.tag == 'proto_language':
                     proto_languages[spec.attrib['name']] = \
@@ -119,6 +119,8 @@ def read_settings_file(filename, mel='none', recon='default'):
             attested[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'mel':
             mel_filenames[setting.attrib['name']] = setting.attrib['file']
+        elif setting.tag == 'csvdata':
+            attested['csvdata'] = setting.attrib['file']
         elif setting.tag == 'param':
             pass
     return RE.ProjectSettings(os.path.dirname(filename),
@@ -151,9 +153,9 @@ def read_attested_lexicons(settings):
             for language in settings.attested}
 
 
-def read_tabular_lexicons(tablefile, columns, delimiter='\t'):
+def read_tabular_lexicons(settings, columns, delimiter='\t'):
     (gloss_column, id_column, data_start_column) = columns
-    with open(tablefile, 'r') as csvfile:
+    with open(os.path.join(settings.directory_path, settings.attested['csvdata']), 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order
         names = [x.strip() for x in next_skipping_comment(reader)[data_start_column:]]

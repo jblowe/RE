@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <canon value="[CT]+[PIM]*[NOS]+"/>
+  <class name="V" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr"/>
+  <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml"/>
+  <class name="L" value="l,r"/>
+  <class name="P" value="p,pʰ,b,m,ʰm"/>
+  <class name="M" value="m,n,ŋ"/>
+  <class name="C" value="p,t,k"/>
+</parameters>
