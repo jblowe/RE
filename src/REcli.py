@@ -40,3 +40,6 @@ else:
         sets_file = f'{project_dir}/{args.project}.{args.run}.sets.txt'
         RE.dump_sets(B, sets_file)
         print(f'wrote sets file to {sets_file}')
+        sets_xml_file = f'{project_dir}/{args.project}.{args.run}.sets.xml'
+        RE.dump_xml_sets(B, sets_xml_file)
+        print(f'wrote sets file to {sets_xml_file}')
