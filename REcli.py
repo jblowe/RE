@@ -1,6 +1,7 @@
 import read
 import RE
 import sys
+import os
 import coverage
 import load_hooks
 from argparser import args, need_to_compare, project_dir
@@ -12,10 +13,7 @@ settings = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.par
 
 print(f'{project_dir}/{args.project}.{args.run}.parameters.xml')
 
-if 'csvdata' in settings.attested:
-    attested_lexicons = read.read_tabular_lexicons(settings, (1, 0, 2), delimiter='\t')
-else:
-    attested_lexicons = read.read_attested_lexicons(settings)
+attested_lexicons = read.read_attested_lexicons(settings)
 
 if args.coverage:
     if args.mel == 'none':
