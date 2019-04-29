@@ -7,7 +7,7 @@
       <class name="P" value="p,pʰ,b,m,ʰm"/>
       <class name="M" value="m,n,ŋ"/>
       <class name="C" value="p,t,k"/>
-      <canon name="syllabe" value="[CT]+[PIM]*[NOS]+"/>
+      <canon name="syllabe" value="[IM]*[NOS]+[CT]+"/>
       <spec name="supra_segmentals" value=""/>
    </parameters>
    <corr num="1">
@@ -1882,7 +1882,7 @@
       </modern>
    </corr>
    <corr num="60">
-      <proto contextL="/,I,̱" syll="I">s</proto>
+      <proto syll="I">s</proto>
       <modern dialecte="PNL">
          <seg>ɕ</seg>
       </modern>
@@ -2241,7 +2241,7 @@
       </modern>
    </corr>
    <corr num="71">
-      <proto contextL="/,I,̱" syll="I">s</proto>
+      <proto syll="I">s</proto>
       <modern dialecte="PNL">
          <seg>ɕ</seg>
       </modern>
