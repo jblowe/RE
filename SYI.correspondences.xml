@@ -1569,7 +1569,7 @@
       </modern>
    </corr>
    <corr num="50">
-      <proto contextL="/,N,ˍ" syll="O">a</proto>
+      <proto contextL="N" syll="O">a</proto>
       <modern dialecte="PSL">
          <seg>a</seg>
       </modern>
@@ -1648,7 +1648,7 @@
       </modern>
    </corr>
    <corr num="52">
-      <proto contextL="/,D,ˍ" syll="O">ay</proto>
+      <proto contextL="D" syll="O">ay</proto>
       <modern dialecte="PSL">
          <seg>ay</seg>
       </modern>
@@ -1679,7 +1679,7 @@
       </modern>
    </corr>
    <corr num="53">
-      <proto contextL="/,N,ˍ" syll="O">ay</proto>
+      <proto contextL="N" syll="O">ay</proto>
       <modern dialecte="PSL">
          <seg>ay</seg>
       </modern>
@@ -1719,7 +1719,7 @@
       </modern>
    </corr>
    <corr num="54">
-      <proto contextL="/,D,ˍ" syll="O">e</proto>
+      <proto contextL="D" syll="O">e</proto>
       <modern dialecte="PSL">
          <seg>e</seg>
       </modern>
@@ -1785,7 +1785,7 @@
       </modern>
    </corr>
    <corr num="56">
-      <proto contextL="/,V,ˍ" syll="O">e</proto>
+      <proto contextL="V" syll="O">e</proto>
       <modern dialecte="PSL">
          <seg>e</seg>
       </modern>
@@ -1863,7 +1863,7 @@
       </modern>
    </corr>
    <corr num="58">
-      <proto contextL="/,N,ˍ" syll="O">i</proto>
+      <proto contextL="N" syll="O">i</proto>
       <modern dialecte="PSL">
          <seg>i</seg>
       </modern>
@@ -1900,7 +1900,7 @@
       </modern>
    </corr>
    <corr num="59">
-      <proto contextL="/,Z,ˍ" syll="O">i</proto>
+      <proto contextL="Z" syll="O">i</proto>
       <modern dialecte="PSL">
          <seg>i</seg>
       </modern>
@@ -2058,7 +2058,7 @@
       </modern>
    </corr>
    <corr num="63">
-      <proto contextL="/,L,ˍ" syll="O">u</proto>
+      <proto contextL="L" syll="O">u</proto>
       <modern dialecte="PSL">
          <seg>u</seg>
       </modern>
@@ -2154,7 +2154,7 @@
       </modern>
    </corr>
    <corr num="66">
-      <proto contextL="/,V,ˍ" syll="O">we</proto>
+      <proto contextL="V" syll="O">we</proto>
       <modern dialecte="PSL">
          <seg>we</seg>
       </modern>
@@ -2634,7 +2634,6 @@
       <modern dialecte="Mpi">
          <seg>uʔ</seg>
          <seg>əʔ</seg>
-         <seg/>
       </modern>
    </corr>
    <corr num="80">

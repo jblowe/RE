@@ -10,6 +10,15 @@
   <param name="SYLLABLE" value="[IM]*[NOS]+[CT]+"/>
   <param name="correspondences" value="NYI.TOC.u8.csv"/>
 
+  <attested name="axi" file="axi.data.xml"/>
+  <attested name="lalo" file="lalo.data.xml"/>
+  <attested name="li" file="li.data.xml"/>
+  <attested name="nasu" file="nasu.data.xml"/>
+  <attested name="neisu" file="neisu.data.xml"/>
+  <attested name="nesu" file="nesu.data.xml"/>
+  <attested name="nosu" file="nosu.data.xml"/>
+  <attested name="sani" file="sani.data.xml"/>
+
   <csvdata name="data" file="NYI.TAB.u8.csv"/>
   <mel name="hand" file="NYI.hand.mel.xml"/>
 
