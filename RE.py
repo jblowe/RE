@@ -270,7 +270,11 @@ def project_back(lexicons, parameters, statistics):
         count = 0
         tokenize = make_tokenizer(parameters, daughter_form)
         for form in lexicon.forms:
-            parses = memo.setdefault(form.glyphs, tokenize(form.glyphs))
+            if form.glyphs is None:
+                print(f'form missing: {form.language} {form.gloss}')
+                parses = None
+            else:
+                parses = memo.setdefault(form.glyphs, tokenize(form.glyphs))
             if parses:
                 for cs in parses:
                     count += 1
