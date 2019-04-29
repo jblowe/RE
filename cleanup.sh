@@ -1,2 +1,2 @@
-for d in LOLOISH VANUATU; do rm ../projects/$d/*.data.xml ; done
+for d in ../projects; do git clean -fd ../projects/$d  ; done
 git checkout -- ../projects/TGTM/TGTM.*.data.xml
