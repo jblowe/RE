@@ -26,7 +26,8 @@ def serialize_correspondence_file(filename, parameters):
             if forms != ['']:
                 modern = ET.SubElement(corr, 'modern', dialecte=language)
                 for form in forms:
-                    ET.SubElement(modern, 'seg').text = form
+                    if form != '':
+                        ET.SubElement(modern, 'seg').text = form
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
