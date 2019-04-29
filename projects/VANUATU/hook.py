@@ -65,7 +65,7 @@ def write_parameters_file():
     ET.SubElement(recon, 'action', attrib={'name': 'upstream',
                                            'from': ','.join(languages),
                                            'to': 'pvn'})
-    with open(os.path.join(base_dir, 'VANUATU.parameters.xml'), 'w', encoding='utf-8') as f:
+    with open(os.path.join(base_dir, 'VANUATU.default.parameters.xml'), 'w', encoding='utf-8') as f:
             f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
 
