@@ -87,9 +87,21 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
         names = next_skipping_comment(reader)[5:]
         for row in reader:
             table.add_correspondence(RE.Correspondence(
-                row[0], (None, None) if row[4] == '' else (row[4], ''), row[2].split(','), row[3],
+                row[0], compute_context(row[4]), row[2].split(','), row[3],
                 dict(zip(names, (x.split(',') for x in row[5:])))))
     return table
+
+def compute_context(context_string):
+    if context_string == '':
+        return (None, None)
+    else:
+        contextL = None
+        contextR = None
+        context_string = context_string.replace('/', '')
+        context_string = context_string.replace('ˍ','_')
+        if '_' in context_string:
+            contextL, contextR = context_string.split('_')
+        return (contextL, contextR)
 
 
 # xml reading
@@ -119,8 +131,8 @@ def read_settings_file(filename, mel='none', recon='default'):
             attested[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'mel':
             mel_filenames[setting.attrib['name']] = setting.attrib['file']
-        elif setting.tag == 'csvdata':
-            attested['csvdata'] = setting.attrib['file']
+        #elif setting.tag == 'csvdata':
+        #    attested['csvdata'] = setting.attrib['file']
         elif setting.tag == 'param':
             pass
     return RE.ProjectSettings(os.path.dirname(filename),
@@ -153,9 +165,9 @@ def read_attested_lexicons(settings):
             for language in settings.attested}
 
 
-def read_tabular_lexicons(settings, columns, delimiter='\t'):
+def read_tabular_lexicons(filename, columns, delimiter='\t'):
     (gloss_column, id_column, data_start_column) = columns
-    with open(os.path.join(settings.directory_path, settings.attested['csvdata']), 'r') as csvfile:
+    with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order
         names = [x.strip() for x in next_skipping_comment(reader)[data_start_column:]]
@@ -167,6 +179,15 @@ def read_tabular_lexicons(settings, columns, delimiter='\t'):
                 if form:
                     forms_dict[language].append(RE.ModernForm(language, form, gloss))
         return [RE.Lexicon(language, forms) for language, forms in forms_dict.items()]
+
+
+def read_header_line(filename, delimiter='\t'):
+    with open(filename, 'r') as csvfile:
+        reader = csv.reader(csvfile, delimiter=delimiter)
+        # return first row (header)
+        for row in reader:
+            if "#" in row[0]: continue
+            return row
 
 
 def read_mel_file(filename):
