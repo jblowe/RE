@@ -1,12 +1,13 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
    <parameters>
-      <class name="V" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr"/>
-      <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml"/>
-      <class name="L" value="l,r"/>
-      <class name="P" value="p,pʰ,b,m,ʰm"/>
-      <class name="M" value="m,n,ŋ"/>
-      <class name="C" value="p,t,k"/>
+      <class name="L" value="p,Cp,ʔp,mp,p-ylr,b,ʔb,mb,b-yrl,m,my,mr,ml"/>
+      <class name="Z" value="ts,mts,dz,C-dz,c,j,ɲ"/>
+      <class name="V" value="k,ky,kr,kl,g,gy,gr,ŋ,ŋy"/>
+      <class name="F" value="s,ʃ,x,z,ʒ"/>
+      <class name="N" value="r,ʔə-r,g-r,ʔr,sr,Cr,ʃə-r,k-r,y,ʔ-y,r-y,s-y,C-y,ʃ-ʔp-y,n-y,ʔ.s-n-y,l,C-l,ʔ-ly,k-lw,k-l,m-l,b-l,ʔ-l,m-ly"/>
+      <class name="D" value="n,t,d"/>
+      <class name="G" value="y,w"/>
       <canon name="syllabe" value="[CT]+[PIM]*[NOS]+"/>
       <spec name="supra_segmentals" value=""/>
    </parameters>

@@ -9,14 +9,14 @@
   <param name="spec" value="Y"/>
   <param name="SYLLABLE" value="[IM]*[NOS]+[CT]+"/>
   <param name="correspondences" value="NYI.TOC.u8.csv"/>
-  <param name="csvdata" value="NYI.TAB.u8.csv"/>
 
-  <mel name="hand" file="LOLOISH.hand.mel.xml"/>
+  <csvdata name="data" file="NYI.TAB.u8.csv"/>
+  <mel name="hand" file="NYI.hand.mel.xml"/>
 
   <reconstruction name="default">
     <proto_language name="proto" correspondences="NYI.correspondences.xml"/>
     <action name="upstream" target="proto"/>
-    <action name="upstream" from="PNL, sani, axi,nesu, lalo, li, nasu, neisu,nosu" to="proto"/>
+    <action name="upstream" from="sani,axi,nesu,lalo,li,nasu,neisu,nosu" to="proto"/>
   </reconstruction>
 
 </params>
