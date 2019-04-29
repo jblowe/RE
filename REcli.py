@@ -6,13 +6,16 @@ import load_hooks
 from argparser import args, need_to_compare, project_dir
 
 load_hooks.load_hook(args.project)
-settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
+settings = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.parameters.xml',
                                    mel=args.mel,
                                    recon=args.recon)
 
-print(f'{project_dir}/{args.project}.parameters.xml')
+print(f'{project_dir}/{args.project}.{args.run}.parameters.xml')
 
-attested_lexicons = read.read_attested_lexicons(settings)
+if 'csvdata' in settings.attested:
+    attested_lexicons = read.read_tabular_lexicons(settings, (1, 0, 2), delimiter='\t')
+else:
+    attested_lexicons = read.read_attested_lexicons(settings)
 
 if args.coverage:
     if args.mel == 'none':
@@ -24,7 +27,7 @@ else:
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons)
 
     if need_to_compare:
-        settings2 = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
+        settings2 = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.parameters.xml',
                                         mel=(args.mel2 or args.mel),
                                         recon=(args.recon2 or args.recon))
         B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons)

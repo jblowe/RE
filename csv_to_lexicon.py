@@ -13,7 +13,7 @@ with open(sys.argv[1], 'r') as csvfile:
     for row in reader:
         header = row
         break
-x = sys.argv[2]
+
 table_layout = [int(x) for x in sys.argv[2].split(',')]
 
 lexicons = read.read_tabular_lexicons(sys.argv[1], table_layout)
