@@ -7,3 +7,4 @@ test:
 	cd src ; bash ./testVanuatu.sh
 	cd projects/LOLOISH ; bash ./yi_pipeline.sh
 	cd src ; bash ./testYi.sh
+	cd src ; time python3 REcli.py -t tree ROMANCE
