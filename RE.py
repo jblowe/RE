@@ -36,7 +36,7 @@ def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
 def correspondences_as_ids(cs):
-    return ' '.join(c.id for c in cs)
+    return ' '.join('%4s' % c.id for c in cs)
 
 def context_as_string(context):
     return ('' if context == (None, None) else

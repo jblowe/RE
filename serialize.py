@@ -88,13 +88,14 @@ def serialize_sets(sets, filename):
             ET.SubElement(rfx, 'gl').text = form.gloss
             #ET.SubElement(rfx, 'rn').text = form.id
         elif isinstance(form, RE.ProtoForm):
+            ET.SubElement(element, 'plg').text = form.language
             ET.SubElement(element, 'pfm').text = form.glyphs
             ET.SubElement(element, 'rcn').text = RE.correspondences_as_ids(form.correspondences)
             sf = ET.SubElement(element, 'sf')
             for supporting_form in form.supporting_forms:
                 render_xml(sf, supporting_form, level + 1)
 
-    for number,form in enumerate(sets.forms):
+    for number,form in enumerate(sorted(sets.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
         entry = ET.SubElement(root, 'set')
         ET.SubElement(entry, 'id').text = str(number + 1)
         render_xml(entry, form, 0)
