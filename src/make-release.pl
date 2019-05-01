@@ -5,15 +5,15 @@
 
 use strict;
 
-if (system("$(git status -s" eq "") != 0) {
+if (`git status -s` != 0) {
     print "repo needs to clean: no uncommitted changes!\n\n";
-    system("git status -s") . "\n";
+    print system('git status -s');
     die "\nexiting...\n";
 }
 
-if (system("$(git fetch --dry-run" eq "") != 0) {
+if (`git fetch --dry-run` != 0) {
     print "repo is not up to date! please update it (e.g. git pull)!\n\n";
-    system("git fetch --dry-run") . "\n";
+    print system('git fetch --dry-run');
     die "\nexiting...\n";
 }
 
@@ -64,9 +64,9 @@ system "date >> CHANGELOG.txt ; echo >> CHANGELOG.txt";
 system "git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\" >> CHANGELOG.txt";
 system "cp CHANGELOG.txt ..; rm CHANGELOG.txt";
 #system "git commit -a -m 'revise change log and VERSION file for version $version_number'";
-system "git add ../CHANGELOG.txt"; #system "git commit -m 'revised change log for version $version_number'";
-system "git push -v" ;
+#system "git add ../CHANGELOG.txt"; #system "git commit -m 'revised change log for version $version_number'";
+#system "git push -v" ;
 print  "git tag -a $version_number -m '$tag_message'\n";
-system "git tag -a $version_number -m '$tag_message'";
-system "git push --tags";
+#system "git tag -a $version_number -m '$tag_message'";
+#system "git push --tags";
 
