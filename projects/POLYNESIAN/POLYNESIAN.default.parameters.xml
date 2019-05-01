@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
 <params>
-  <attested name="raroton" file="raroton.DATA.xml"/>
-  <attested name="samoan" file="samoan.DATA.xml"/>
-  <attested name="hawai" file="hawai.DATA.xml"/>
-  <attested name="tongien" file="tongien.DATA.xml"/>
+  <attested name="raroton" file="raroton.data.xml"/>
+  <attested name="samoan" file="samoan.data.xml"/>
+  <attested name="hawai" file="hawai.data.xml"/>
+  <attested name="tongien" file="tongien.data.xml"/>
   <reconstruction name="default">
     <proto_language name="proto" correspondences="POLYNESIAN.correspondences.xml"/>
     <action name="upstream" target="proto"/>
