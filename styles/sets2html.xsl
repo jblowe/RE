@@ -1,60 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-	xmlns:xalan="http://xml.apache.org/xalan"
-	exclude-result-prefixes="xalan"
+                xmlns:xalan="http://xml.apache.org/xalan"
+                exclude-result-prefixes="xalan"
 >
 
-  <xsl:param name="isolates"   select="'null'"/>
+    <xsl:param name="isolates" select="'null'"/>
 
-  <xsl:output
-      method="html"
-      indent="yes"
-      encoding="utf-8"/>
+    <xsl:output
+            method="html"
+            indent="yes"
+            encoding="utf-8"/>
 
-  <xsl:template match="/">
-    <html>
-      <head>
-	<link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
-      </head>
-      <body>
-	<xsl:apply-templates select=".//sets"/>
-      </body>
-    </html>
-  </xsl:template>
+    <xsl:template match="/">
+        <html>
+            <head>
+                <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
+            </head>
+            <body>
+                <xsl:apply-templates select=".//sets"/>
+            </body>
+        </html>
+    </xsl:template>
 
-  <xsl:template match="sets">
-    <xsl:for-each select="set">
-      <table id="set">
-	<tr><td>
-	  <table id="row">
-	    <tr>
-	      <td id="id"><xsl:value-of select="id"/></td>
-	      <td id="pfm"><xsl:value-of select="pfm"/></td>
-	      <td id="pgl"><xsl:value-of select="pgl"/></td>
-	      <td id="rcn">[<xsl:value-of select="rcn"/>]</td>
-	    </tr>
-	  </table>
-	  <xsl:apply-templates select="sf"/>
-	</td></tr>
-      </table>
-    </xsl:for-each>
-  </xsl:template>
+    <xsl:template match="sets">
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="set"/>
+        </ul>
+    </xsl:template>
 
-  <xsl:template match="sf">
-    <table id="sf">
-      <xsl:for-each select="rfx">
-	<tr>	 
-	  <td id="lg"><xsl:apply-templates select="lg"/></td>
-	  <td id="lx"><xsl:apply-templates select="lx"/></td>
-	  <td id="gl"><xsl:apply-templates select="gl"/></td>
-	  <td id="nn">[<xsl:apply-templates select="rn"/>:<xsl:apply-templates select="hn"/>]</td>
-	</tr>
-      </xsl:for-each>
-    </table>
-  </xsl:template>
+    <xsl:template match="set">
+        <li id="sf">
+            <div class="wrapper etymonrow">
+                <div id="id"><xsl:value-of select="id"/></div>
+                <div id="plg"><xsl:value-of select="plg"/></div>
+                <div id="pfm"><xsl:value-of select="pfm"/></div>
+                <div id="pgl"><xsl:value-of select="pgl"/></div>
+                <div id="rcn">[<xsl:value-of select="rcn"/>]</div>
+            </div>
+            <xsl:apply-templates select="sf"/>
+        </li>
+    </xsl:template>
 
-  <xsl:template match="gl|hw">
-    <xsl:apply-templates/>
-  </xsl:template>
+    <xsl:template match="sf">
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="rfx"/>
+            <xsl:apply-templates select="subset"/>
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="subset">
+        <div class="level{@level}">
+        <li>
+            <div class="wrapper subsetrow">
+            <div id="id"><xsl:value-of select="id"/></div>
+            <div id="plg"><xsl:value-of select="plg"/></div>
+            <div id="pfm"><xsl:value-of select="pfm"/></div>
+            <div id="pgl"><xsl:value-of select="pgl"/></div>
+            <div id="rcn">[<xsl:value-of select="rcn"/>]</div>
+            </div>
+        </li>
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="sf"/>
+        </ul>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="rfx">
+        <li>
+            <div class="wrapper">
+            <div id="lg"><xsl:apply-templates select="lg"/></div>
+            <div id="lx"><xsl:apply-templates select="lx"/></div>
+            <div id="gl"><xsl:apply-templates select="gl"/></div>
+            <div id="nn">[<xsl:apply-templates select="hn"/>]</div>
+            </div>
+        </li>
+    </xsl:template>
+
+    <xsl:template match="gl|hw">
+        <xsl:apply-templates/>
+    </xsl:template>
 
 </xsl:stylesheet>
