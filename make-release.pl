@@ -64,9 +64,9 @@ system "date >> CHANGELOG.txt ; echo >> CHANGELOG.txt";
 system "git log --pretty=format:\"%h%x09%an%x09%ad%x09%s\" >> CHANGELOG.txt";
 system "cp CHANGELOG.txt ..; rm CHANGELOG.txt";
 #system "git commit -a -m 'revise change log and VERSION file for version $version_number'";
-#system "git add ../CHANGELOG.txt"; #system "git commit -m 'revised change log for version $version_number'";
-#system "git push -v" ;
+system "git add ../CHANGELOG.txt"; #system "git commit -m 'revised change log for version $version_number'";
+system "git push -v" ;
 print  "git tag -a $version_number -m '$tag_message'\n";
-#system "git tag -a $version_number -m '$tag_message'";
-#system "git push --tags";
+system "git tag -a $version_number -m '$tag_message'";
+system "git push --tags";
 
