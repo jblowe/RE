@@ -37,7 +37,7 @@ def write_vanuatu_data():
     for language in languages:
         root = ET.Element('lexicon', attrib={'dialecte': language})
         for (number, (glyphs, gloss)) in enumerate(zipped[language]):
-            entry = ET.SubElement(root, 'entry', attrib={'id': str(number)})
+            entry = ET.SubElement(root, 'entry', attrib={'id': str(number + 1)})
             ET.SubElement(entry, 'hw').text = glyphs
             ET.SubElement(entry, 'gl').text = gloss or 'placeholder'
         with open(os.path.join(base_dir, xml_name(language)), 'w', encoding='utf-8') as f:
