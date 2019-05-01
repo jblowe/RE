@@ -3,9 +3,10 @@ CHANGELOG for RE
 OK, it is not a *real* change log, but a list of changes resulting from git log
 with some human annotation after the fact.
 
-This is version 0.0.2
-Tue Apr 30 21:56:38 PDT 2019
+This is version 0.0.3
+Tue Apr 30 22:00:55 PDT 2019
 
+6dc0e2c	John Lowe	Tue Apr 30 22:00:37 2019 -0700	revised changelog and make-release.pl
 0487d06	John Lowe	Tue Apr 30 21:56:26 2019 -0700	make-release.pl now actually makes releases
 955c255	John Lowe	Tue Apr 30 21:55:16 2019 -0700	make-release.pl needed some more help
 7156965	John Lowe	Tue Apr 30 21:51:00 2019 -0700	make-release.pl needed some help
