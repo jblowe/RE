@@ -1,5 +1,4 @@
 /* reconstruction engine stylesheet */
-
 body {
     font-size: 12px;
     font-family: Helvetica, Arial, freesans, clean, sans-serif;
@@ -8,14 +7,19 @@ body {
 }
 #set { cell-padding: 10px;}
 /* reconstructions block */
-#row { background-color: #E0E0E0; }
-#id  { padding-right: 10px;}
-#pfm { width: 80px; font-weight:bold;font-size: 16pt; }
-#pgl { width: 240px; font-style: italic; }
-#rcn { width: 80px; font-size: 9pt; }
+.wrapper { display: table; table-layout: fixed; width:90%; }
+.level1  { padding-left: 15px;}
+.level2  { padding-left: 30px;}
+.etymonrow { background-color: #b9def0; }
+.subsetrow { background-color: #D0E0E0; }
+#id  { display: table-cell; width: 8%; padding-right: 10px; font-size: medium; }
+#plg { display: table-cell; width: 10%; padding-right: 20px; font-size: medium; }
+#pfm { display: table-cell; width: 15%; font-weight:bold; font-size: large; padding-right: 10px; }
+#pgl { display: table-cell; width: 20%; font-style: italic; padding-right: 10px; }
+#rcn { display: table-cell; width: 30%; font-family: 'Courier'; font-size: smaller; padding-right: 10px; }
 /* support forms block */
-#sf  { padding-left: 20px; }
-#lg  { width: 80px; font-style: italic; }
-#lx  { width: 80px; }
-#gl  { width: 160px; font-style: italic; }
-#nn  { width: 80px; font-family: 'Courier'; font-size: 9pt; }
+/* #sf  { padding-left: 20px; padding-right: 10px; } */
+#lg  { display: table-cell; width: 14%; padding-left: 20px; }
+#lx  { display: table-cell; width: 26%; font-family: 'Lucida Sans Unicode', sans-serif ; padding-right: 10px; }
+#gl  { display: table-cell; width: 40%; font-style: italic; padding-right: 10px; }
+#nn  { display: table-cell; width: 14%; font-family: 'Courier'; font-size: smaller; padding-left: 10px; }
