@@ -43,7 +43,7 @@ def serialize_lexicons(lexicons, dirname):
 def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
     for (number, form) in enumerate(lexicon.forms):
-        entry = ET.SubElement(root, 'entry', attrib={'id': str(number)})
+        entry = ET.SubElement(root, 'entry', attrib={'id': f'{lexicon.language.lower()}.{number + 1}'})
         try:
             ET.SubElement(entry, 'gl').text = form.gloss
         except:
@@ -86,7 +86,7 @@ def serialize_sets(sets, filename):
             ET.SubElement(rfx, 'lg').text = form.language
             ET.SubElement(rfx, 'lx').text = form.glyphs
             ET.SubElement(rfx, 'gl').text = form.gloss
-            #ET.SubElement(rfx, 'rn').text = form.id
+            ET.SubElement(rfx, 'id').text = form.id
         elif isinstance(form, RE.ProtoForm):
             if level != 0:
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})

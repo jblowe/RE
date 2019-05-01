@@ -154,7 +154,10 @@ def read_lexicon(xmlfile):
                            # 'normalized' gloss
                            get_element(language, entry, 'ngl')
                            if entry.find('ngl')
-                           else get_element(language, entry, 'gl'))
+                           else get_element(language, entry, 'gl'),
+                           # carry the id attribute along
+                           entry.attrib.get('id')
+                           )
              for entry in tree.iterfind('entry')]
     return RE.Lexicon(language, forms)
 
@@ -174,10 +177,11 @@ def read_tabular_lexicons(filename, columns, delimiter='\t'):
         forms_dict = {name: [] for name in names}
         for row in reader:
             gloss = row[gloss_column]
+            id = row[id_column]
             for language, form in zip(names, row[data_start_column:]):
                 form = form.strip()
                 if form:
-                    forms_dict[language].append(RE.ModernForm(language, form, gloss))
+                    forms_dict[language].append(RE.ModernForm(language, form, gloss, id))
         return [RE.Lexicon(language, forms) for language, forms in forms_dict.items()]
 
 
