@@ -1,8 +1,6 @@
 set -x
 
 pwd
+# only create "best sets" (i.e. using mel)
 time python3 REcli.py TGTM --mel hand
-echo 'Comparing No-MEL to gold stats'
-head ../projects/TGTM/TGTM.default.analysis.txt
-
 
