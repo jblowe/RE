@@ -15,9 +15,9 @@
   <mel name="wordnet-pairs" file="TGTM.wn-pairs.mel.xml"/>
   <mel name="clics" file="TGTM.clics.mel.xml"/>
   <reconstruction name="default">
-    <proto_language name="proto" correspondences="TGTM.C794DEM.correspondences.xml"/>
-    <action name="upstream" target="proto"/>
-    <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="proto"/>
+    <proto_language name="tgtm" correspondences="TGTM.C794DEM.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="tgtm"/>
   </reconstruction>
   <param name="trace" value="N"/>
   <param name="spec" value="N"/>

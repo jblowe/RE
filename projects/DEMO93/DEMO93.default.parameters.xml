@@ -12,15 +12,13 @@
   <mel name="hand" file="DEMO93.hand.mel.xml"/>
   <mel name="wordnet" file="DEMO93.wn.mel.xml"/>
   <reconstruction name="default">
-    <proto_language name="proto" correspondences="DEMO93.C794DEM.correspondences.xml"/>
-    <action name="upstream" target="proto"/>
-    <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="proto"/>
-    <action name="downstream" from="proto" to="gha"/>
+    <proto_language name="tgtm" correspondences="DEMO93.C794DEM.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="tgtm"/>
+    <action name="downstream" from="tgtm" to="gha"/>
   </reconstruction>
   <param name="trace" value="N"/>
   <param name="title" value="Test Run, Demo 1993"/>
   <param name="spec" value="Y"/>
-  <action name="unknown" from="proto" to="gha"/>
-  <action name="unknown" from="gha" to="proto"/>
   <param name="fuzzy" value="DEMO93.fuz.xml"/>
 </params>
