@@ -1,0 +1,308 @@
+CHANGELOG for RE
+
+OK, it is not a *real* change log, but a list of changes resulting from git log
+with some human annotation after the fact.
+
+This is version 0.0.2
+Tue Apr 30 21:56:38 PDT 2019
+
+0487d06	John Lowe	Tue Apr 30 21:56:26 2019 -0700	make-release.pl now actually makes releases
+955c255	John Lowe	Tue Apr 30 21:55:16 2019 -0700	make-release.pl needed some more help
+7156965	John Lowe	Tue Apr 30 21:51:00 2019 -0700	make-release.pl needed some help
+f6d18bd	John Lowe	Tue Apr 30 21:39:42 2019 -0700	improvements to make-release.pl
+5fe2cad	John Lowe	Tue Apr 30 21:18:45 2019 -0700	an initial version of a release script
+5b69d39	John Lowe	Tue Apr 30 20:35:07 2019 -0700	id numbers are now created by .csv scripts, and carried through Upstream process
+18db121	John Lowe	Tue Apr 30 20:34:16 2019 -0700	stylesheet improvements: id numbers now rendered in sets, canon now shows in corresondences
+b28357f	John Lowe	Tue Apr 30 20:33:05 2019 -0700	Vanuatu entry numbers now start at one, not zero
+7aa17fc	John Lowe	Tue Apr 30 20:32:34 2019 -0700	TGTM test script only test set creation, DEMO93 does both set creation and MEL comparison
+22c83f0	John Lowe	Tue Apr 30 20:31:23 2019 -0700	protolanguage for TGTM sets is now 'tgtm' not 'proto'
+f3cb02c	John Lowe	Tue Apr 30 17:47:34 2019 -0700	moderate refactoring of set rendering: now handles levels, etc.
+9a34a41	John Lowe	Mon Apr 29 17:27:38 2019 -0700	fix some typos
+7ad2449	John Lowe	Mon Apr 29 17:18:15 2019 -0700	do the 'tree' version of ROMANCE' as the test
+69c7f79	John Lowe	Mon Apr 29 17:17:40 2019 -0700	improve rendering and sorting of sets in xml
+076fe14	John Lowe	Mon Apr 29 16:19:49 2019 -0700	a better version of the cleanup script
+eb3fa32	John Lowe	Mon Apr 29 16:19:08 2019 -0700	small clarification of test run output
+85ec583	John Lowe	Mon Apr 29 16:18:04 2019 -0700	initial stab at xml serialization for cognate sets
+21ce0bd	John Lowe	Mon Apr 29 16:08:02 2019 -0700	... and get rid of the old versions
+93ceb11	John Lowe	Mon Apr 29 16:06:43 2019 -0700	revise some filenames in DEMO93
+2820f4b	John Lowe	Mon Apr 29 14:01:38 2019 -0700	a more robust submodule init command for Vanuatu
+38fb792	John Lowe	Mon Apr 29 13:56:04 2019 -0700	have RE create a proper default parms file for Vanuatu data
+069a65b	John Lowe	Mon Apr 29 13:52:48 2019 -0700	pipeline to create XML for Yi data and correspondences
+09f9457	John Lowe	Mon Apr 29 13:50:55 2019 -0700	do not allow empty <seg> elements in ToC xml
+24b0dae	John Lowe	Mon Apr 29 13:50:22 2019 -0700	complain if <hw> field is None, but continue
+ac94336	John Lowe	Mon Apr 29 13:49:26 2019 -0700	improve csv_to_lexicon.py
+c8be1b0	John Lowe	Mon Apr 29 13:47:41 2019 -0700	undo the idea of having RE itself handle csv input files
+a5a5def	John Lowe	Mon Apr 29 13:46:49 2019 -0700	more and better test scripts
+9a0d041	John Lowe	Mon Apr 29 13:46:10 2019 -0700	various parameter improvements for Yi data
+4387056	John Lowe	Mon Apr 29 13:45:19 2019 -0700	added more test: Yi data, etc.
+77ebfc9	John Lowe	Sun Apr 28 23:00:14 2019 -0700	fixes to code and data to help the Yi cause
+050a564	John Lowe	Sun Apr 28 16:05:16 2019 -0700	code reformat only. no changes.
+b12f00d	John Lowe	Sun Apr 28 16:00:52 2019 -0700	csv2RE.py now can insert classes, etc. into output XML
+3110bae	John Lowe	Sun Apr 28 11:32:36 2019 -0700	allow .DAT files to be displayed
+c8feace	John Lowe	Sun Apr 28 10:25:06 2019 -0700	incremental improvement to 'non-xml' file rendering in REwww
+7b49f25	John Lowe	Sun Apr 28 09:33:25 2019 -0700	the context element needs to always be a 2-tuple for the csv correspondence reader to work
+a71d2b0	John Lowe	Sun Apr 28 09:32:11 2019 -0700	time the execution of the various tests
+4b246a4	John Lowe	Sun Apr 28 09:26:30 2019 -0700	display certain text and csv files in REwww
+bbac722	John Lowe	Sun Apr 28 09:25:35 2019 -0700	don't sort columns of ToC in display
+6a9b369	John Lowe	Sun Apr 28 08:58:43 2019 -0700	'working' corrrespondences for Yi
+4937851	John Lowe	Sat Apr 27 20:01:44 2019 -0700	Lex2XML.pl no longer write out empty elements
+7b7f326	John Lowe	Sat Apr 27 19:51:03 2019 -0700	fix Makefile
+d831484	John Lowe	Sat Apr 27 19:48:22 2019 -0700	added tests for csv_to_re and csv_to_lexicon
+a4849bd	John Lowe	Sat Apr 27 19:45:11 2019 -0700	added LOLOISH to list of projects
+b38c67b	John Lowe	Sat Apr 27 19:44:44 2019 -0700	csv_to_lexicon.py creates RE-style XML from .csv files; fixed csv_to_re.py
+6e72dc7	John Lowe	Sat Apr 27 19:42:59 2019 -0700	revisions to Lex2XML.pl and TGTM pipeline
+b31d67d	Charles Zhang	Sat Apr 27 16:32:54 2019 -0700	Add csv_to_re
+c8ee324	Charles Zhang	Sat Apr 27 13:19:20 2019 -0700	Inherit protogloss
+3017e73	John Lowe	Sat Apr 27 14:55:01 2019 -0700	testVanuatu.sh now updates submodule toolbox
+5859b64	John Lowe	Sat Apr 27 14:51:45 2019 -0700	recommitting submodules
+7ea4743	John Lowe	Sat Apr 27 14:50:59 2019 -0700	get rid of directory, too, for now
+f8478eb	John Lowe	Sat Apr 27 14:49:28 2019 -0700	reiniting .gitmodules
+72fa136	John Lowe	Sat Apr 27 14:44:21 2019 -0700	re-add submodule
+b1e03e3	John Lowe	Sat Apr 27 14:06:00 2019 -0700	we shouldn't have to clone the toolbox manually
+f1487c3	John Lowe	Tue Apr 23 16:16:55 2019 -0700	a few 'bulk changes' to some of our 'demo' corpora: GERMANIC, EXER, POLYNESIAN
+c57d9d2	John Lowe	Tue Apr 23 15:38:54 2019 -0700	improve REwww README
+f7e5dd4	John Lowe	Tue Apr 23 15:28:38 2019 -0700	revise READMEs
+b0ec391	John Lowe	Tue Apr 23 15:04:45 2019 -0700	update paths in Makefile
+f83feeb	John Lowe	Tue Apr 23 15:02:29 2019 -0700	need to remove this submodule from the 'legacy' directory
+43b706f	John Lowe	Tue Apr 23 14:55:47 2019 -0700	reorganization of RE repo. most everything has moved. sorry.
+3e162e6	John Lowe	Tue Apr 23 09:15:16 2019 -0700	need to mention the correct MEL in the Vanuatu hooks.py
+c5c24ff	John Lowe	Tue Apr 23 09:09:43 2019 -0700	Merge branch 'master' of https://github.com/jblowe/RE
+bb1c2d5	John Lowe	Tue Apr 23 08:56:55 2019 -0700	now include the proper name for Vanuatu clics MEL in paramaters.xml
+a589d8b	mmazaudon	Tue Apr 23 16:08:16 2019 +0200	fixed some French accents inTAG6_1994Aug1.DAT
+bea9a8c	John Lowe	Mon Apr 22 18:41:22 2019 -0700	give the 'vanuatu clics mel' a proper name
+17e9c7a	John Lowe	Mon Apr 22 18:35:49 2019 -0700	an XSLT stylesheet for MELs
+40c60a6	John Lowe	Mon Apr 22 17:43:36 2019 -0700	show more of what's in in parameters.xml
+5c23a58	John Lowe	Mon Apr 22 17:43:02 2019 -0700	gitignore some more files
+b73a6d4	John Lowe	Mon Apr 22 14:40:01 2019 -0700	Merge branch 'master' of https://github.com/jblowe/RE
+0bacda9	John Lowe	Mon Apr 22 14:39:54 2019 -0700	revised about.tpl, footer, css for cognate sets, other cosmetic changes
+24668c6	John Lowe	Mon Apr 22 14:37:32 2019 -0700	a version of Lex2XML.pl that works a bit better, but still not quite right.
+d846d95	Tavalmayam	Mon Apr 22 22:14:09 2019 +0200	Order of N Vanuatu languages
+009561d	John Lowe	Sun Apr 21 23:05:16 2019 -0700	revisions to Vanuatu 'custom code' to make filenames consistent (e.g. *.data.xml)
+372c3f8	John Lowe	Sun Apr 21 18:04:22 2019 -0700	initial version of a web ui based on 'bottle'. And bootstrap.
+8077b5b	John Lowe	Sun Apr 21 17:13:45 2019 -0700	here's a list of the 'backslash characters' that were recoded
+f2c3871	John Lowe	Sun Apr 21 17:05:45 2019 -0700	'standardize' names of MEL files, and adjust parameters.xml
+43df4b8	John Lowe	Sun Apr 21 16:48:49 2019 -0700	serialize now names its files with lower case '*.data.xml'
+19a5fcb	John Lowe	Sun Apr 21 16:40:19 2019 -0700	revisions to stylesheet to modernize the html produced add bootstrap sortable features
+fd44efc	John Lowe	Sun Apr 21 16:39:12 2019 -0700	rename the TGTM correspondences file, for consistency
+bdd1549	John Lowe	Sun Apr 21 11:21:21 2019 -0700	simplify TGTM test: we only need one run
+4daec56	John Lowe	Sat Apr 20 21:48:49 2019 -0700	disable 'conversion' of Syang and Thakali Tukche data sets for now...
+e797429	John Lowe	Sat Apr 20 21:44:43 2019 -0700	correct lexicon XSLT stylesheet for Syang
+2ffb55c	John Lowe	Sat Apr 20 20:50:33 2019 -0700	how i did the character re-encoding, and other transformations of TGTM
+78f522d	John Lowe	Sat Apr 20 20:04:49 2019 -0700	revised XSLT stylesheets for various purposes
+f1c91a7	John Lowe	Sat Apr 20 20:01:10 2019 -0700	revised README for Vanuatu project
+d4d9101	John Lowe	Sat Apr 20 13:39:28 2019 -0700	revised autogenerated parameters for Vanuatu dataset
+89a3e18	John B. Lowe	Sat Apr 20 13:37:26 2019 -0700	Added Vanuatu to README.md
+cc38dfc	John Lowe	Sat Apr 20 13:06:48 2019 -0700	add a MEL (=TGTM clics MEL) to Vanuatu project; run Vanuatu project in make test
+7f6216b	John Lowe	Sat Apr 20 12:23:12 2019 -0700	seems we need to install xsltproc in travis
+3537808	John Lowe	Sat Apr 20 12:18:20 2019 -0700	xsltproc is failing on travis (ubuntu); need to find out why
+8e66e1e	John Lowe	Sat Apr 20 12:11:45 2019 -0700	further tweaks to assist debugging travis and in general
+d931069	John Lowe	Sat Apr 20 11:53:15 2019 -0700	debug travis failure for TGTM pipeline
+90cc1a0	John Lowe	Sat Apr 20 11:46:30 2019 -0700	tests now include TGTM data conversion pipeline
+41600af	John Lowe	Sat Apr 20 11:39:35 2019 -0700	travis can't do 3.7
+5fd9644	John Lowe	Sat Apr 20 11:37:51 2019 -0700	Merge branch 'master' of https://github.com/jblowe/RE
+99e40d6	John Lowe	Sat Apr 20 11:37:44 2019 -0700	revise Makefile and .travis.yml
+caa7c63	John B. Lowe	Sat Apr 20 11:30:41 2019 -0700	add Travis badge
+811fcbe	John Lowe	Sat Apr 20 11:24:33 2019 -0700	initial scaffolding for Travis CI
+ea98574	Charles Zhang	Fri Apr 19 21:12:35 2019 -0700	Do not load hooks when there are none.
+e2d5b2c	John Lowe	Fri Apr 19 19:05:11 2019 -0700	very minor tweaks to MONGUR8_1994.DAT and MONTUK_1991.DAT
+e9b0fcc	Charles Zhang	Fri Apr 19 12:18:19 2019 -0700	Add VANUATU hooks.
+adb02c1	Charles Zhang	Thu Apr 4 15:36:11 2019 -0700	Forgotten files
+f018332	Charles Zhang	Thu Apr 4 08:55:24 2019 -0700	Fix
+646369e	mmazaudon	Thu Apr 4 17:08:28 2019 +0200	added one dfe
+bf81288	John B. Lowe	Wed Apr 3 17:08:30 2019 -0700	Update README.md
+ea516f6	John Lowe	Wed Apr 3 17:03:16 2019 -0700	Merge branch 'master' of https://github.com/jblowe/RE
+ce37680	John Lowe	Wed Apr 3 17:03:03 2019 -0700	initial commit of Vanuatu data, and script to read Toolbox format
+8cf0d2e	Charles Zhang	Wed Apr 3 16:25:46 2019 -0700	Add MEL coverage command.
+f96cfe2	mmazaudon	Fri Mar 22 17:44:39 2019 +0100	some more dfe in Marpha
+46fb414	Charles Zhang	Wed Mar 20 18:06:28 2019 -0700	Checkin file
+e3c5616	mmazaudon	Mon Mar 18 09:26:24 2019 +0100	dfe to line 1010 in Marpha_1993.dat
+30a76fd	mmazaudon	Sun Mar 10 18:52:16 2019 +0100	added dfe upto line 798 in Marpha_1993.dat
+22f6fea	Charles Zhang	Fri Mar 8 17:23:56 2019 -0800	Restructure parameter files and have REcli select settings.
+f32b7a5	mmazaudon	Tue Mar 5 18:00:24 2019 +0100	added dfe to line 500
+b42bcc4	mmazaudon	Sat Mar 2 22:30:45 2019 +0100	added dfe upto line 218; changed var (variant) to imp (imperative form) where appropriate
+166cf00	John Lowe	Tue Feb 26 15:32:40 2019 -0800	list of 'pipeline' steps (howto.txt), and python script to file backslash characters
+ca2a854	John Lowe	Tue Feb 26 15:29:15 2019 -0800	revised Lexware to XML conversion script
+99c2753	mmazaudon	Tue Feb 26 18:18:00 2019 +0100	added 1 dfe
+c40ba75	mmazaudon	Tue Feb 26 17:39:20 2019 +0100	Update MARPHA_1993.DAT
+73f6f14	John Lowe	Mon Feb 25 18:10:19 2019 -0800	recode french accented characters (i.e. backslash conventions)
+72147b6	John Lowe	Mon Feb 25 18:00:14 2019 -0800	eliminate stray end of file mark
+d69fb75	John Lowe	Mon Feb 25 16:55:22 2019 -0800	stedt font to unicode conversion, again
+4fae872	John Lowe	Mon Feb 25 16:31:14 2019 -0800	revised conversion log
+0a2ffb7	John Lowe	Mon Feb 25 16:30:41 2019 -0800	protect backticks from STEDT to unicode script
+d5dba0f	John Lowe	Mon Feb 25 16:19:57 2019 -0800	protect backslash escapes from STEDT to unicode script
+86043e4	John Lowe	Mon Feb 25 16:16:23 2019 -0800	get rid of msdos newline \r everywhere
+98c130c	John Lowe	Mon Feb 25 16:10:55 2019 -0800	starting over: need to to the backslash escape before the stedt font conversion
+2284179	John Lowe	Mon Feb 25 15:45:58 2019 -0800	convert stedt font to unicode
+2f4b86b	John Lowe	Mon Feb 25 15:43:27 2019 -0800	get rid of msdos newline \r everywhere
+a1a60d1	John Lowe	Mon Feb 25 15:27:52 2019 -0800	this .doc file is too old to read alas. may try again later
+51e8226	John Lowe	Mon Feb 25 15:14:44 2019 -0800	TGTM data from 1994: lexware, stedt font, etc...
+82b101c	John Lowe	Sat Jan 12 15:51:20 2019 -0800	complain but do not fail if required elements are missing (gl, hw)
+109d98c	Charles Zhang	Sat Jan 12 18:15:14 2019 -0500	Accidental deletion
+8fce8d4	Charles Zhang	Sat Jan 12 17:27:00 2019 -0500	Add clics mel to RE
+3fbc78c	Charles Zhang	Sat Jan 12 17:19:19 2019 -0500	Fix clics.py
+454f6cf	Charles Zhang	Sat Jan 12 16:50:33 2019 -0500	Add fscore
+449e974	John Lowe	Sat Jan 12 13:04:13 2019 -0800	Merge branch 'master' of https://github.com/jblowe/RE
+6abc13a	John Lowe	Sat Jan 12 13:03:42 2019 -0800	revise Tukche file to correct 'corrupted' data
+94553c5	Charles Zhang	Sat Jan 12 16:03:26 2019 -0500	Write precision recall ratios
+6a21e6e	Charles Zhang	Sat Jan 12 15:22:49 2019 -0500	Output pre conflation keys
+08a1447	Charles Zhang	Sat Jan 12 15:00:56 2019 -0500	Propagate statistics to the end
+2f20288	Charles Zhang	Sat Jan 12 14:25:29 2019 -0500	Use <ngl> for RE when possible.
+3379ea3	Charles Zhang	Sat Jan 12 14:20:03 2019 -0500	Output files containing glosses not found in each semantic source
+a2b5f26	Charles Zhang	Sat Jan 12 14:03:51 2019 -0500	Delete old file
+7071541	Charles Zhang	Sat Jan 12 14:03:24 2019 -0500	Checkin semantic sources support
+25ba7e0	Charles Zhang	Sun Sep 30 23:28:12 2018 -0700	TGTM: rename pra to man
+a1886ed	Charles Zhang	Sun Sep 30 23:27:15 2018 -0700	Add flush method
+12f5bf3	Charles Zhang	Sun Sep 30 23:27:02 2018 -0700	Move away from deprecated thread usage
+f7d9f00	Charles Zhang	Sun Sep 30 20:59:07 2018 -0700	Clean up gui code
+4966bd5	Charles Zhang	Sun Sep 30 20:51:28 2018 -0700	Allow upstreaming without the need to save correspondences
+a505a4c	Charles Zhang	Sun Sep 30 20:50:47 2018 -0700	Daemonize batch upstream thread
+0442f2c	Charles Zhang	Tue Sep 25 23:34:32 2018 -0700	Clean up some of the Gtk code
+bdc07e7	Charles Zhang	Mon Sep 24 00:39:25 2018 -0700	Read files independently from upstreaming
+0663b8c	Charles Zhang	Mon Sep 24 00:05:22 2018 -0700	Rewrite lexicon sharing in a less hacky way
+c16bddd	Charles Zhang	Sun Sep 23 23:36:41 2018 -0700	Remove useless functions
+0231964	mmazaudon	Sat Aug 25 21:58:14 2018 +0200	Merge branch 'master' of https://github.com/jblowe/RE
+95b27cb	Charles Zhang	Sat Aug 25 09:00:39 2018 -0400	Make a todo file
+fb69ca2	mmazaudon	Sat Aug 25 14:59:51 2018 +0200	reminders about how to use git, etc.
+a57c895	Charles Zhang	Sat Aug 25 07:30:18 2018 -0400	Instructions for GTK
+6bef280	Charles Zhang	Sat Aug 25 07:19:23 2018 -0400	Germanic: Convert to xml
+fae8cc1	mmazaudon	Sat Aug 25 13:17:49 2018 +0200	fixed typo in Ris data
+9893bfc	Charles Zhang	Sat Aug 25 06:51:15 2018 -0400	Start of GERMANIC
+d60ac45	Charles Zhang	Sat Aug 25 06:08:36 2018 -0400	Fix comparison program
+7bac88c	Charles Zhang	Sat Aug 25 06:03:19 2018 -0400	Convert POLYNESIAN set to xml
+9979dcb	Charles Zhang	Sat Aug 25 06:01:41 2018 -0400	Improve read/serialize functionality
+c9eb30c	John Lowe	Sat Aug 25 02:35:25 2018 -0700	additional fixes to ROMANCE mel
+cb5213c	Charles Zhang	Sat Aug 25 04:36:13 2018 -0400	Rename IERE to GERMANIC
+7843a62	Charles Zhang	Sat Aug 25 04:33:36 2018 -0400	Fix tree for mel by ignoring mel
+4305393	John Lowe	Sat Aug 25 01:31:01 2018 -0700	more revisions to ROMANCE mel
+368dcd7	John Lowe	Fri Aug 24 07:37:49 2018 -0700	allow utf-8 characters in source. (not needed for python3, of course)
+2dd08cf	John Lowe	Fri Aug 24 07:36:30 2018 -0700	how to make the ROMANCE mel...
+15c9c8c	John Lowe	Fri Aug 24 07:31:41 2018 -0700	additional MEL experiments for TGTM
+b28fbc5	John Lowe	Fri Aug 24 07:29:26 2018 -0700	initial MEL, and parameters, for ROMANCE
+6582d1a	Charles Zhang	Fri Aug 24 07:54:21 2018 -0400	Change how wn sysnsets are created
+12324ff	Charles Zhang	Fri Aug 24 06:31:23 2018 -0400	Refactor Gtk
+3128ab5	John Lowe	Fri Aug 24 04:46:27 2018 -0700	a hack to convert output of wnlookup to MEL xml
+3759f55	John Lowe	Fri Aug 24 04:19:14 2018 -0700	REcompare takes AT LEAST 3 args
+c957ea5	John Lowe	Fri Aug 24 04:18:15 2018 -0700	proofreading Risiangku data
+632171a	John Lowe	Fri Aug 24 04:17:48 2018 -0700	wordnet MELs, and parameters therefor
+52635f2	Charles Zhang	Fri Aug 24 04:56:14 2018 -0400	Fix comparator
+381ecdf	Charles Zhang	Fri Aug 24 04:06:37 2018 -0400	Allow no mel
+75e6060	John Lowe	Fri Aug 24 01:01:23 2018 -0700	make stdout use utf-8 (windows needs this)
+c8b21e7	Charles Zhang	Fri Aug 24 03:49:29 2018 -0400	Mel file
+8d3af43	Charles Zhang	Thu Aug 23 09:46:25 2018 -0400	Add Mel stuff
+6a74301	Charles Zhang	Sun Apr 8 13:29:02 2018 -0700	Better Romance
+0372390	Charles Zhang	Sat Apr 7 17:26:13 2018 -0700	Show maximal subsets based only on attested forms
+904db5c	Charles Zhang	Sat Apr 7 17:25:57 2018 -0700	Romance: Add more numerals
+c09945b	John Lowe	Thu Aug 23 06:45:57 2018 -0700	initial version of REcompare.py
+0dfd2f3	John Lowe	Thu Aug 23 05:54:34 2018 -0700	experiment: look up TGTM glosses in WordNet
+387b648	John Lowe	Thu Aug 23 05:53:38 2018 -0700	list of TGTM glosses, with frequencies of their occurrence in the corpus
+658bcc3	John Lowe	Thu Aug 23 04:16:55 2018 -0700	repair MELs: fix French glosses; code to help
+36a3d6e	John Lowe	Thu Aug 23 04:13:11 2018 -0700	repair a couple of glosses
+3c76ff7	John Lowe	Tue Aug 21 14:35:42 2018 -0700	normalize multiple spaces in data files
+19c7682	John B. Lowe	Tue Aug 21 02:41:05 2018 -0700	Update README.md
+673d1a8	John B. Lowe	Tue Aug 21 02:15:56 2018 -0700	Update README.md
+ffc4fa2	John B. Lowe	Thu Aug 2 15:25:13 2018 -0700	Update README.md
+bc54ded	John B. Lowe	Thu Aug 2 15:13:53 2018 -0700	Create README.md
+a68a7a8	Charles Zhang	Fri Mar 30 17:04:13 2018 -0700	Romance: Improve correspondences
+af200d5	Charles Zhang	Fri Mar 30 17:02:00 2018 -0700	Filter all sets which have support from only one language
+d468a35	Charles Zhang	Fri Mar 30 16:06:41 2018 -0700	Use defaultdict where appropriate
+e366fa1	Charles Zhang	Fri Mar 30 16:06:18 2018 -0700	Memoize in project_back
+93af554	Charles Zhang	Fri Mar 30 15:16:45 2018 -0700	Choose a representative forms differently
+94acc6c	Charles Zhang	Wed Mar 28 23:03:56 2018 -0700	Reordre conditionals to avoid regex more
+9978c4b	Charles Zhang	Wed Mar 28 22:06:08 2018 -0700	Simplify tokenize
+f72a5a5	Charles Zhang	Wed Mar 28 21:57:51 2018 -0700	Remove unnecessary call to iter
+4981ef5	Charles Zhang	Wed Mar 28 21:49:28 2018 -0700	Romance: Reconstruct up to PIWR
+e845e29	Charles Zhang	Wed Mar 28 21:49:01 2018 -0700	Use a faster maximal set algorithm
+f77215a	Charles Zhang	Wed Mar 28 21:47:53 2018 -0700	Faster parsing algorithm
+92a3e39	Charles Zhang	Mon Mar 26 23:13:59 2018 -0700	Don't use such a crap algorithm for unique_surface_forms
+4e30614	Charles Zhang	Mon Mar 26 22:05:46 2018 -0700	Restore command line usage
+26b0b71	Charles Zhang	Mon Mar 26 20:32:22 2018 -0700	romance: Refine rules
+6a4c911	Charles Zhang	Mon Mar 26 20:32:03 2018 -0700	ROMANCE/oldpt: Fix missing stress
+299408f	Charles Zhang	Mon Mar 26 20:31:47 2018 -0700	Make TGTM subgrouping compatible
+7ad7811	Charles Zhang	Mon Mar 26 20:31:29 2018 -0700	Only print filter if filter
+66b68b4	Charles Zhang	Mon Mar 26 20:30:55 2018 -0700	Make subgroupings compatible with linear parameters
+978363d	Charles Zhang	Fri Mar 23 16:29:12 2018 -0700	Add Romance subgrouping
+36218a2	Charles Zhang	Fri Mar 23 16:28:19 2018 -0700	Adjust Romance data
+0ba35ed	Charles Zhang	Fri Mar 23 16:27:55 2018 -0700	Implement subgroups
+8c1ed59	Charles Zhang	Thu Mar 15 00:37:08 2018 -0700	Make context representation its own function
+de6b8d1	Charles Zhang	Sun Mar 11 23:41:30 2018 -0700	Fix typo
+45de657	Charles Zhang	Sun Mar 11 18:51:10 2018 -0700	Romance: Adjust data and correspondences
+2097b2c	Charles Zhang	Sun Mar 11 17:37:40 2018 -0700	Improve comment
+ee9f3c7	Charles Zhang	Sun Mar 11 17:33:39 2018 -0700	Precompute some invariants in tokenize
+4022343	Charles Zhang	Sun Mar 11 03:37:45 2018 -0700	Romance: Add some metaphony
+ac790bd	Charles Zhang	Sun Mar 11 03:37:30 2018 -0700	Romance: Improve data sets
+9700ab9	Charles Zhang	Sun Mar 11 03:37:00 2018 -0700	Fix bug regarding suprasegmental context passthrough
+471b815	Charles Zhang	Wed Mar 7 01:27:53 2018 -0800	Romance: Refine cluster rules significantly
+1680894	Charles Zhang	Wed Mar 7 00:00:47 2018 -0800	Romance: Add voiced counterparts to palatilization rule
+842f4fd	Charles Zhang	Tue Mar 6 23:26:57 2018 -0800	Pretty-print serialized correspondence xml
+355a3ca	Charles Zhang	Tue Mar 6 22:56:22 2018 -0800	ROmance: Significantly restructure syllable canon
+fa2d966	Charles Zhang	Mon Mar 5 21:34:24 2018 -0800	Parse context and present in human-readable form
+580d00b	Charles Zhang	Mon Mar 5 19:59:52 2018 -0800	Represent tokenize differently and speed it up
+59f8ab3	Charles Zhang	Mon Mar 5 18:29:42 2018 -0800	Romance: Improve data more
+79155bf	Charles Zhang	Sun Mar 4 19:34:44 2018 -0800	romance: Phonemecize more
+f03bf82	Charles Zhang	Sun Mar 4 19:08:07 2018 -0800	Constrain environment of rr
+628b354	Charles Zhang	Sun Mar 4 18:43:19 2018 -0800	Refactor and speed-up tokenize function
+06da96a	Charles Zhang	Sun Mar 4 18:23:54 2018 -0800	Improve data
+72a77c0	Charles Zhang	Sun Mar 4 01:21:10 2018 -0800	romance: fiddle more with correspondences
+2d51342	Charles Zhang	Sun Mar 4 00:21:53 2018 -0800	Phonemicize Italian; remove vowel length
+0729622	Charles Zhang	Sun Mar 4 00:21:37 2018 -0800	gtk: Make columns sortable
+02e9bbd	Charles Zhang	Sun Mar 4 00:03:00 2018 -0800	romance: Add alternative word for ear in Italian
+8dedaf0	Charles Zhang	Sun Mar 4 00:02:42 2018 -0800	Romance: Decompose nasal rules
+cd0c967	Charles Zhang	Sat Mar 3 22:08:00 2018 -0800	Actually parse sound classes
+cdd97e8	Charles Zhang	Sat Mar 3 18:49:15 2018 -0800	Make user interface resilient to empty correspondence entries
+7000cb4	Charles Zhang	Sat Mar 3 18:48:32 2018 -0800	Improve context handling; add suprasegmentals and deletion rules
+2c768a6	Charles Zhang	Sat Mar 3 18:47:55 2018 -0800	Add old portuguese to Romance data
+b71c5d2	Charles Zhang	Sat Mar 3 18:47:43 2018 -0800	Improve Romance data
+9018c0c	Charles Zhang	Fri Mar 2 02:00:34 2018 -0800	Allow copy/pasting from lexicon cells.
+57ebff7	Charles Zhang	Fri Mar 2 00:01:46 2018 -0800	Horridly hack in word boundrary context markers
+4c5d035	Charles Zhang	Thu Mar 1 23:37:52 2018 -0800	Handle an edge case for contexts
+4298254	Charles Zhang	Thu Mar 1 23:31:15 2018 -0800	Save cell contents when tabbing
+f6ecad9	Charles Zhang	Wed Feb 28 00:45:04 2018 -0800	Rename files
+89c500a	Charles Zhang	Wed Feb 28 00:43:04 2018 -0800	Split French entries
+2da2b9b	Charles Zhang	Wed Feb 28 00:33:19 2018 -0800	Split Italian lexicon
+dd2383a	Charles Zhang	Wed Feb 28 00:05:49 2018 -0800	Phonemecize Spanish
+4d6cc8f	Charles Zhang	Tue Feb 27 23:52:10 2018 -0800	Split spanish entries
+36e6b17	Charles Zhang	Tue Feb 27 21:56:33 2018 -0800	Check-in initial Romance lexicons
+fa6bdfd	Charles Zhang	Wed Feb 28 13:47:57 2018 -0800	Add a save button to interface
+95fbbb8	Charles Zhang	Wed Feb 28 13:47:33 2018 -0800	Fix serialize to preserve empty contexts
+6c65759	Charles Zhang	Mon Feb 26 21:14:29 2018 -0800	Add support for contexts
+418ce5b	Charles Zhang	Mon Feb 26 21:12:59 2018 -0800	Whitespace
+87670aa	Charles Zhang	Mon Feb 26 19:44:26 2018 -0800	Print out to statistics buffer in GUI mode
+9a95133	Charles Zhang	Mon Feb 26 19:34:51 2018 -0800	Adapt GUI to last change
+8545b4d	Charles Zhang	Mon Feb 26 18:37:14 2018 -0800	Return a statistics object recording various extra information
+b918694	Charles Zhang	Sat Feb 24 23:17:29 2018 -0800	Change button labels
+74e49f1	Charles Zhang	Sat Feb 24 23:05:13 2018 -0800	Erase unintended hunk
+3a685a3	Charles Zhang	Sat Feb 24 22:34:04 2018 -0800	Check in experimental user interface
+5b86021	Charles Zhang	Sat Feb 24 21:28:00 2018 -0800	Rename upstream to RE
+e543989	John Lowe	Sat Feb 24 11:59:29 2018 -0800	improve formatting of Syang data
+20e4f10	Charles Zhang	Thu Feb 22 10:55:28 2018 -0800	Modularize and add more serializing and reading functionality
+90e103f	Charles Zhang	Thu Feb 22 10:53:51 2018 -0800	Don't make the top line of a set a comment
+0f43ed1	Charles Zhang	Tue Feb 20 20:58:36 2018 -0800	Add downstream functionality
+36b0e0c	John Lowe	Mon Feb 19 21:10:14 2018 -0800	get rid of these superfluous files
+1402d82	John Lowe	Mon Feb 19 21:03:14 2018 -0800	separated READMEs for PERL and Python versions.
+4149792	Charles Zhang	Mon Feb 19 18:22:56 2018 -0800	Comment out problematic syang entry
+0a09265	Charles Zhang	Mon Feb 19 18:20:47 2018 -0800	Read from settings file
+649d945	Charles Zhang	Mon Feb 19 17:33:22 2018 -0800	Delete proto.py
+e323aa5	John B. Lowe	Mon Feb 19 17:19:56 2018 -0800	Update README.md
+838a877	John B. Lowe	Mon Feb 19 17:19:39 2018 -0800	Update README.md
+e0475a9	Charles Zhang	Mon Feb 19 17:01:10 2018 -0800	Use a relative path
+b69361c	Charles Zhang	Mon Feb 19 17:00:04 2018 -0800	Merge pre-access changes
+7e5c613	Charles Zhang	Mon Feb 19 16:51:02 2018 -0800	Merge branch 'master' of https://github.com/jblowe/RE
+96e6711	John Lowe	Mon Feb 19 16:34:20 2018 -0800	add a README for RE8.2
+0d54c78	John Lowe	Mon Feb 19 15:58:27 2018 -0800	next version of 'upstream.py': runs from the command line, etc.
+758ec98	John Lowe	Mon Feb 19 15:43:48 2018 -0800	TGTM Ghachok typo fix
+6ced014	John Lowe	Mon Feb 19 15:41:12 2018 -0800	TGTM data repair
+60fae1b	Charles Zhang	Mon Feb 19 02:04:38 2018 -0800	Make class variables instance allocated
+e5b9819	Charles Zhang	Sun Feb 18 21:17:50 2018 -0800	Check-in python port
+2bfb622	Charles Zhang	Sun Feb 18 21:16:29 2018 -0800	Make commands more robust by adding . to PATH
+34763de	John Lowe	Sun Feb 18 17:53:46 2018 -0800	rename proto to 'upstream'
+3a5ef25	John Lowe	Sun Feb 18 17:52:53 2018 -0800	initial version of Charles Zhang 'upstream' rewrite
+0a05d7c	John Lowe	Tue Feb 13 17:26:13 2018 -0800	logging in batch mode now works. improved README
+b59a645	John Lowe	Tue Feb 13 17:11:35 2018 -0800	logging in batch mode now works. improved README
+77023e9	John Lowe	Tue Feb 13 16:26:01 2018 -0800	improved XML for Sahu lexicon
+7793765	John B. Lowe	Mon Feb 5 05:57:03 2018 -0800	Update README.md
+2cd9164	John Lowe	Sat Feb 3 14:37:10 2018 -0800	fix newlines in one of the perl files
+db0a77f	John Lowe	Sat Feb 3 14:26:25 2018 -0800	cleanup up XML files (reformat only).
+5cfe09d	John Lowe	Sat Feb 3 14:20:30 2018 -0800	initial version of 'RE7', the latest PERL implementation
+5c27f67	John Lowe	Sat Feb 3 13:50:48 2018 -0800	update gitignore
+c3948d1	John B. Lowe	Sat Feb 3 13:02:07 2018 -0800	Update LICENSE
+c95b53e	John B. Lowe	Sat Feb 3 09:54:48 2018 -0800	Initial commit
