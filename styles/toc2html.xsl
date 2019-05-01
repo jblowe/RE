@@ -33,6 +33,10 @@
 			</tr>
 		</xsl:for-each>
 		</table>
+		<xsl:if test="parameters/canon">
+			<h4>Syllable canon</h4>
+			<xsl:value-of select="parameters/canon/@value"/>
+		</xsl:if>
 		<h4>Table of correspondences</h4>
 		<table class="table table-striped sortable">
 			<thead>

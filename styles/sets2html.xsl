@@ -71,7 +71,15 @@
             <div id="lg"><xsl:apply-templates select="lg"/></div>
             <div id="lx"><xsl:apply-templates select="lx"/></div>
             <div id="gl"><xsl:apply-templates select="gl"/></div>
-            <div id="nn">[<xsl:apply-templates select="hn"/>]</div>
+            <xsl:choose>
+                <xsl:when test="hn">
+                    <div id="nn">[<xsl:apply-templates select="hn"/>]</div>
+                </xsl:when>
+                <xsl:when test="id">
+                    <div id="nn">[<xsl:apply-templates select="id"/>]</div>
+                </xsl:when>
+                <xsl:otherwise/>
+            </xsl:choose>
             </div>
         </li>
     </xsl:template>
