@@ -5,13 +5,13 @@
 
 use strict;
 
-if (`git status -s` != 0) {
-    print "repo needs to clean: no uncommitted changes!\n\n";
+if (`git status -s | wc -l` != 0) {
+    print "repo needs to clean: no uncommitted changes or untracked files!\n\n";
     print system('git status -s');
     die "\nexiting...\n";
 }
 
-if (`git fetch --dry-run` != 0) {
+if (`git fetch --dry-run | wc -l` != 0) {
     print "repo is not up to date! please update it (e.g. git pull)!\n\n";
     print system('git fetch --dry-run');
     die "\nexiting...\n";
