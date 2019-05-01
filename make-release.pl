@@ -11,7 +11,7 @@ if (`git status -s | wc -l` != 0) {
     die "\nexiting...\n";
 }
 
-if (`git fetch --dry-run | wc -l` != 0) {
+if (`git fetch --dry-run 2>&1 | wc -l` != 0) {
     print "repo is not up to date! please update it (e.g. git pull)!\n\n";
     print system('git fetch --dry-run');
     die "\nexiting...\n";
