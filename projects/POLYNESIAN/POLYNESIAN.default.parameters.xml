@@ -5,6 +5,10 @@
   <attested name="samoan" file="samoan.data.xml"/>
   <attested name="hawai" file="hawai.data.xml"/>
   <attested name="tongien" file="tongien.data.xml"/>
+
+  <csvdata name="data" file="POLYNESIAN.data.csv"/>
+  <mel name="hand" file="POLYNESIAN.hand.mel.xml"/>
+
   <reconstruction name="default">
     <proto_language name="proto" correspondences="POLYNESIAN.correspondences.xml"/>
     <action name="upstream" target="proto"/>
@@ -12,8 +16,10 @@
     <action name="downstream" from="proto" to="hawai"/>
   </reconstruction>
   <action name="upstream"/>
+
+
   <param name="trace" value="N"/>
-  <param name="title" value="Polynesian sample data, Bloomfield 1933:310"/>
+  <param name="title" value="Polynesian sample data"/>
   <param name="spec" value="Y"/>
   <param name="trace" value="N"/>
   <param name="spec" value="Y"/>

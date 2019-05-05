@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
    <parameters>
-      <canon name="syllabe" value="(I*V+I*)+"/>
+      <class name="V" value="a,e,i,o,u"/>
+      <canon name="syllabe" value="(I*V)+"/>
       <spec name="supra_segmentals" value=""/>
    </parameters>
    <corr num="1">
@@ -43,7 +44,7 @@
          <seg>f</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>Q</seg>
+         <seg>Ɂ</seg>
       </modern>
       <modern dialecte="hawai">
          <seg>h</seg>
@@ -70,40 +71,40 @@
          <seg>k</seg>
       </modern>
       <modern dialecte="samoan">
-         <seg>Q</seg>
+         <seg>Ɂ</seg>
       </modern>
       <modern dialecte="raroton">
          <seg>k</seg>
       </modern>
       <modern dialecte="hawai">
-         <seg>Q</seg>
+         <seg>Ɂ</seg>
       </modern>
    </corr>
    <corr num="6">
-      <proto syll="I">Q</proto>
+      <proto contextL="V,$" contextR="V" syll="I">Ɂ</proto>
       <modern dialecte="tongien">
-         <seg>Q</seg>
+         <seg>Ɂ</seg>
       </modern>
       <modern dialecte="samoan">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="hawai">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
    </corr>
    <corr num="7">
-      <proto syll="I">N</proto>
+      <proto syll="I">ŋ</proto>
       <modern dialecte="tongien">
-         <seg>N</seg>
+         <seg>ŋ</seg>
       </modern>
       <modern dialecte="samoan">
-         <seg>N</seg>
+         <seg>ŋ</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>N</seg>
+         <seg>ŋ</seg>
       </modern>
       <modern dialecte="hawai">
          <seg>n</seg>
@@ -155,9 +156,9 @@
       </modern>
    </corr>
    <corr num="11">
-      <proto syll="I">l</proto>
+      <proto contextL="V,$" contextR="V" syll="I">l</proto>
       <modern dialecte="tongien">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="samoan">
          <seg>l</seg>
@@ -170,18 +171,18 @@
       </modern>
    </corr>
    <corr num="12">
-      <proto syll="I">h</proto>
+      <proto contextL="V,$" contextR="V" syll="I">h</proto>
       <modern dialecte="tongien">
          <seg>h</seg>
       </modern>
       <modern dialecte="samoan">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
       <modern dialecte="hawai">
-         <seg>0</seg>
+         <seg>Ø</seg>
       </modern>
    </corr>
    <corr num="13">
@@ -193,7 +194,7 @@
          <seg>s</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>Q</seg>
+         <seg>Ɂ</seg>
       </modern>
       <modern dialecte="hawai">
          <seg>h</seg>
