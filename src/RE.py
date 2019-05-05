@@ -272,6 +272,7 @@ def project_back(lexicons, parameters, statistics):
         count = 0
         tokenize = make_tokenizer(parameters, daughter_form)
         for form in lexicon.forms:
+            # print(form)
             if form.glyphs is None:
                 print(f'form missing: {form.language} {form.gloss}')
                 parses = None
