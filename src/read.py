@@ -84,8 +84,9 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
     with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order
-        names = skip_comments(reader)[5:]
-        for row in skip_comments(reader):
+        n1 = list(skip_comments(reader))
+        names = [x.strip() for x in n1[0][5:]]
+        for row in n1[1:]:
             table.add_correspondence(RE.Correspondence(
                 row[0], compute_context(row[4]), row[2].split(','), row[3],
                 dict(zip(names, (x.split(',') for x in row[5:])))))
