@@ -62,5 +62,10 @@ def project_files(filename):
     return template('index', data=data)
 
 
+@app.route('/make')
+def index():
+    data = {'make': utils.make(dirname)}
+    return template('index', data=data)
+
 run(app, host='localhost', port=8080)
 # application = default_app()

@@ -1,4 +1,5 @@
 import os, time
+import subprocess
 
 # nb: we are trying to get the directory above the directory this file is in
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,7 +19,7 @@ def get_version():
 
 def add_time_and_version():
     return 'code and data version: %s, updated: %s' % (
-    get_version(), time.strftime("%b %d %Y %H:%M:%S", time.localtime()))
+        get_version(), time.strftime("%b %d %Y %H:%M:%S", time.localtime()))
 
 
 def data_files(project):
@@ -109,6 +110,15 @@ def limit_lines(filecontent, max_rows):
     if num_rows > max_rows:
         message = f'\n\n... and {num_rows - max_rows} more rows not shown.'
     return '\n'.join(rows) + message
+
+
+def make(dirname):
+    script = os.path.join('make')
+    try:
+        p_object = subprocess.call([script, '-w', '-C', '..'])
+        return f'process {script} completed.'
+    except:
+        return f'process {script} failed.'
 
 
 VERSION = get_version()
