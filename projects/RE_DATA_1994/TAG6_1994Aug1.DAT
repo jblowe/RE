@@ -2866,77 +2866,70 @@ so   1972:57.
 *
 .tag   ¹ŋeː-ba
 dff   mâcher
-dfe
+dfe	to chew
 dfn
 set   1
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ²ŋeː-ba
 dff   rire
-dfe
+dfe	to laugh
 dfn
 set   2
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ⁴ŋeː-ba
 dff   renverser
-dfe
+dfe	to spill
 dfn
 set   3
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ³ŋeː-ba
 dff   atterrir
-dfe
+dfe	to land
 dfn
 set   4
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ³ŋe-ba
 dff   traire
-dfe
+dfe	to milk
 dfn
 set   5
 nb
 so   Thak 72 Voc Comp Vb : 5
-.tag   ¹nai
-dff   être dégoûté
-dfe
-dfn
-set   6
-nb
-so   Thak 72 Voc Comp Vb : 5
 .tag   ¹ɲep-pa
 dff   ruminer
-dfe
+dfe	to chew cud, ruminate
 dfn
 set   7
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ³ɲep-pa
 dff   étrangler
-dfe
+dfe	to strangle
 dfn
 set   8
 nb
 so   Thak 72 Voc Comp Vb : 5
 .tag   ¹nai-ba
 dff   être dégoûté
-dfe
+dfe	to be disgusted
 dfn
 set   9
-nb   voir set 6
+nb   = set 6 p 5: ¹nai
 so   Thak 72 Voc Comp Vb : 6
 .tag   ¹nai-ba
 dff   mettre au lit
-dfe
+dfe	to put to sleep
 dfn
 set   10
 nb
 so   Thak 72 Voc Comp Vb : 6
 .tag   ²nai-ba
 dff   pourrir
-dfe
+dfe	to rot
 dfn
 set   11
 nb
@@ -2944,146 +2937,146 @@ so   Thak 72 Voc Comp Vb : 6
 .tag   ⁴nai-ba
 dff   masser
 enc   frotter le linge, masser le cuir
-dfe
+dfe	to rub, massage
 dfn
 set   12
 nb
 so   Thak 72 Voc Comp Vb : 6
 .tag   ¹naː-ba
 dff   supporter
-dfe
+dfe	to bear
 dfn
 set   17
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ²naː-ba
 dff   porter
-dfe
+dfe	to carry
 dfn
 set   18
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ³na-ba
 dff   élever un enfant
-dfe
+dfe	to raise a child
 dfn
 set   19
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ³na-ba
 dff   déposer
-dfe
+dfe	to put down
 dfn
 set   20
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ¹na-ba
 dff   être malade
-dfe
+dfe	to be sick
 dfn
 set   21
 nb
 so   Thak 72 Voc Comp Vb : 7
 .tag   ¹ɕeː-ba
 dff   savoir
-dfe
+dfe	to know
 dfn
 set   28
 nb
 so   Thak 72 Voc Comp Vb : 8
 .tag   ²ɕeː-ba
 dff   moucharder, répéter
-dfe
+dfe	to repeat
 dfn
 set   29
 nb
 so   Thak 72 Voc Comp Vb : 8
 .tag   ²ɕeː-ba
-dff   aller (honor) moyen
-dfe
+dff   aller (honor moyen)
+dfe	to go (hon)
 dfn
 set   31
 nb
 so   Thak 72 Voc Comp Vb : 8
 .tag   ¹ɕjaː
 dff   ôter le trop-plein
-dfe
+dfe	to take off surplus
 dfn
 set   33
 nb   ? ²
 so   Thak 72 Voc Comp Vb : 8
 .tag   ²ɕja
 dff   danser
-dfe
+dfe	to danse
 dfn
 set   34
 nb
 so   Thak 72 Voc Comp Vb : 8
 .tag   ¹seː-ba
 dff   tuer I62
-dfe
+dfe	to kill
 dfn
 set   37
 nb
 so   Thak 72 Voc Comp Vb : 9
 .tag   ¹tsha
 dff   faire paître
-dfe
+dfe	to graze (tr)
 dfn
 set   44
 nb
 so   Thak 72 Voc Comp Vb : 9
 .tag   ²tshaː
 dff   piquer du bec
-dfe
+dfe	to peck
 dfn
 set   45
 nb
 so   Thak 72 Voc Comp Vb : 9
 .tag   ¹tsa
 dff   manger I55
-dfe
+dfe	to eat
 dfn
 set   46
 nb
 so   Thak 72 Voc Comp Vb : 9
 .tag   ²tsha
 dff   faire mal (brûler)
-dfe
+dfe	to hurt (burn)
 dfn
 set   47
 so   Thak 72 Voc Comp Vb : 9
 .tag   ¹toː-ba
 dff   avoir besoin
-dfe
+dfe	to need
 dfn
 set   51
 nb
 so   Thak 72 Voc Comp Vb : 10
 .tag   ⁴toː-ba
 dff   retourner, faire revenir
-dfe
+dfe	to turn over, turn around (tr)
 dfn
 set   52
 nb
 so   Thak 72 Voc Comp Vb : 10
 .tag   ³toː-ba
 dff   atteindre
-dfe
+dfe	to reach
 dfn
 set   54
 nb
 so   Thak 72 Voc Comp Vb : 10
 .tag   ¹to-ba
 dff   décortiquer (le riz)
-dfe   pound rice
+dfe   to pound rice
 dfn
 set   55
 nb
 so   Thak 72 Voc Comp Vb : 10
 .tag   ²tsuː-ba
 dff   aboyer
-dfe
+dfe	to bark
 dfn
 set   59
 nb
@@ -3091,230 +3084,231 @@ so   Thak 72 Voc Comp Vb : 11
 .tag   ⁴tsuː-ba
 dff   mettre à cuire
 enc   (pour un mort)
-dfe
+dfe	to set to cook (for the dead)
 dfn
 set   60
 nb
 so   Thak 72 Voc Comp Vb : 11
 .tag   ³tsuː-ba
 dff   poser les pieds par terre
-dfe
+dfe	to press on the ground
 dfn
 set   61
 nb
 so   Thak 72 Voc Comp Vb : 11
 .tag   li
 dff   jeter, lancer
-dfe
+dfe	to throw
 dfn
 set   70
 nb
 so   Thak 72 Voc Comp Vb : 12
 .tag   ²raː-ba
 dff   tisser
-dfe
+dfe	to weave
 dfn
 set   72
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ³ra-ba
 dff   être travailleur, être habile
-dfe
+dfe	to be industrious
 dfn
 set   73
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ²rap-pa
 dff   rester debout
-dfe
+dfe	to stand
 dfn
 set   75
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ²rap-pa
 dff   gonfler (ganglions)
-dfe
+dfe	to swell (lymph nodes)
 dfn
 set   76
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ³rap-pa
 dff   jouer (instrument)
-dfe
+dfe	to play (instrument)
 dfn   bajāune
 set   77
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ²roː-ba
 dff   faire des fruits
-dfe
+dfe	to bear fruit
 dfn
 set   78
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ⁴roː-ba
 dff   faire frire
-dfe
+dfe	to fry (tr)
 dfn
 set   79
 nb
 so   Thak 72 Voc Comp Vb : 13
 .tag   ²riː
 dff   se gratter
-dfe
+dfe	to scratch self
 dfn
 set   85
 nb
 so   Thak 72 Voc Comp Vb : 14
 .tag   ³riː
 dff   réclamer
-dfe
+dfe	to ask for, beg
 dfn
 set   86
 nb
 so   Thak 72 Voc Comp Vb : 14
 .tag   ¹ko
 dff   bouger
-dfe
+dfe	to move
 dfn
 set   90
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ²koː
 dff   contagieux
-dfe
+dfe	to be contagious
 dfn
 set   91
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ³ko
 dff   comprendre
-dfe
+dfe	to understand
 dfn
 set   92
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ³koː
 dff   récolter (maïs)
-dfe   break off corn
+dfe   to break off corn
 dfn
 set   93
 so   Thak 72 Voc Comp Vb : 15
 .tag   ⁴ko
 dff   chanter
-dfe
+dfe	to sing
 dfn
 set   94
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ³kap
 dff   couvrir
-dfe
+dfe	to cover
 dfn
 set   96
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹kap
 dff   ajouter, compléter
-dfe
+dfe	to add, complete
 dfn
 set   97
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹hoː
-dff   déplacer
-dfe
+dff   déplacer, transporter
+dfe	to move (tr), carry
 dfn   osārnu
 set   101
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹ho
 dff   brûler (nourriture)
-dfe
+dfe	to burn (food)
 dfn
 set   102
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹kho
 dff   piocher
-dfe
+dfe	to dig ground, to hoe
 dfn
 set   103
 nb
 so   Thak 72 Voc Comp Vb : 15
 .tag   ¹he
 dff   ronger
-dfe
+dfe	to gnaw
 dfn
 set   106
 nb
 so   Thak 72 Voc Comp Vb : 16
 .tag   ¹heː
 dff   grimper
-dfe
+dfe	to climb
 dfn
 set   107
 nb
 so   Thak 72 Voc Comp Vb : 16
 .tag   ²kheː
 dff   psalmodier
-dfe
+dfe	to chant
 dfn
 set   109
 nb
 so   Thak 72 Voc Comp Vb : 16
 .tag   ¹kheː
 dff   porter s/ hanche
-dfe
+dfe	to carry on the hip
 dfn
 set   110
 nb
 so   Thak 72 Voc Comp Vb : 16
 .tag   ²kjeː
 dff   maudire
-dfe
+dfe	to curse
 dfn
 set   111
 nb
 so   Thak 72 Voc Comp Vb : 16
 .tag   ²kjaː
-dff   faire chignon
-dfe
+dff   attacher en chignon
+dfe   to pin hair up
 dfn
+nb	prob same as 'to plant stakes', 'to stick in' in other TGTM
 set   122
 nb
 so   Thak 72 Voc Comp Vb : 17
 .tag   ¹kja
 dff   démanger
-dfe
+dfe	to itch
 dfn
 set   123
 nb
 so   Thak 72 Voc Comp Vb : 17
 .tag   ¹so
 dff   vivre
-dfe
+dfe	to live
 dfn
 set   128
 nb
 so   Thak 72 Voc Comp Vb : 18
 .tag   ²soː
 dff   remuer les grains
-dfe
-dfn   phijāune
+dfe	to spread, or stir grains
+dfn   phĩjāune
 set   129
 nb
 so   Thak 72 Voc Comp Vb : 18
 .tag   ²sol
 dff   remuer quelque chose
-dfe
+dfe	to stir something
 dfn
 set   131
 nb
 so   Thak 72 Voc Comp Vb : 18
 .tag   ³so
 dff   fabriquer
-dfe
+dfe	to make, fabricate
 dfn
 set   132
 nb
@@ -3322,278 +3316,278 @@ so   Thak 72 Voc Comp Vb : 18
 .tag   ¹sol
 dff   manger
 enc   hon
-dfe
+dfe	to eat (hon)
 dfn
 set   134
 nb
 so   Thak 72 Voc Comp Vb : 18
 .tag   ²sa
 dff   mener à la corde
-dfe
+dfe	to lead (with a rope)
 dfn
 set   136
 nb
 so   Thak 72 Voc Comp Vb : 19
 .tag   ¹saː
 dff   asperger (pour les dieux)
-dfe
+dfe	to sprinkle (for gods)
 dfn
 set   140
 nb
 so   Thak 72 Voc Comp Vb : 19
 .tag   ¹ɕi
 dff   mourir
-dfe
+dfe	to die
 dfn
 set   143
 nb
 so   Thak 72 Voc Comp Vb : 20
 .tag   ¹ɕim
 dff   refroidir
-dfe
+dfe	to cool
 dfn
 set   148
 nb
 so   Thak 72 Voc Comp Vb : 20
 .tag   ³sim
 dff   dormir (hon.)
-dfe
+dfe	to sleep
 dfn
 set   149
 nb
 so   Thak 72 Voc Comp Vb : 20
 .tag   ²ɕjup
 dff   têter
-dfe
+dfe	to suck
 dfn
 set   150
 nb
 so   Thak 72 Voc Comp Vb : 20
 .tag   ¹tai
 dff   tomber
-dfe
+dfe	to fall
 dfn
 set   158
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ²tee
 dff   sortir quelque chose
-dfe
+dfe	to take out
 dfn
 set   159
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ²te
 dff   verser
-dfe
+dfe	to pour
 dfn
 set   160
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ⁴tai
 dff   cuire à l'eau
-dfe
+dfe	to cook by boiling
 dfn
 set   163
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ¹tiː
 dff   étendre pour s'asseoir
-dfe
+dfe	to spread to sit on
 dfn   oichyāune
 set   164
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ⁴ti
 dff   allumer un feu
-dfe
+dfe	to light (a fire)
 dfn   salgāune
 set   166
 so   Thak 72 Voc Comp Vb : 21
 .tag   ¹tui
 dff   tremper dans
-dfe
+dfe	to dip into
 dfn   copālnu
 set   168
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ⁴tui
 dff   ramasser
-dfe
+dfe	to pick up
 dfn
 set   169
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ³ʈui
 dff   tirer
-dfe
+dfe	to pull
 dfn
 set   171
 nb
 so   Thak 72 Voc Comp Vb : 21
 .tag   ²thwi
 dff   assembler
-dfe
+dfe	to assemble
 dfn
 set   173
 nb   cf 'articulation'
 so   Thak 72 Voc Comp Vb : 21
 .tag   ³ʈeː
 dff   déchirer
-dfe
+dfe	to tear
 dfn
 set   175
 nb
 so   Thak 72 Voc Comp Vb : 22
 .tag   ⁴ʈeː
 dff   griffer
-dfe
+dfe	to scratch
 dfn
 set   176
 nb
 so   Thak 72 Voc Comp Vb : 22
 .tag   ¹ʈa
 dff   atteindre
-dfe
+dfe	to reach
 dfn
 set   178
 nb
 so   Thak 72 Voc Comp Vb : 22
 .tag   ⁴ʈup
 dff   coudre
-dfe
+dfe	to sew
 dfn
 set   187
 nb
 so   Thak 72 Voc Comp Vb : 23
 .tag   ²tsi
 dff   rester
-dfe
+dfe	to stay
 dfn
 set   188
 nb
 so   Thak 72 Voc Comp Vb : 23
 .tag   ²ʈuː
 dff   être humide
-dfe
+dfe	to be wet
 dfn
 set   189
 nb
 so   Thak 72 Voc Comp Vb : 23
 .tag   ¹peː
 dff   être timide
-dfe
+dfe	to be shy
 dfn
 set   191
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ⁴pe
 dff   finir
-dfe
+dfe	to finish
 dfn
 set   193
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³beː
 dff   séparer fourche de bois
-dfe
+dfe	to split (a tree fork)
 dfn
 set   194
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³paʱr
 dff   se séparer du tronc
-dfe
+dfe	to separate from the trunk
 dfn
 set   195
 so   Thak 72 Voc Comp Vb : 24
 .tag   ²bjaː
 dff   taper du pied
-dfe
+dfe	to stamp one's foot
 dfn
 set   196
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ⁴pja
 dff   avoir des rapports sexuels
-dfe
+dfe	to fuck
 dfn   ciknu
 set   197
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ⁴pre
 dff   fuir, suinter
-dfe
+dfe	to leak, to ooze
 dfn
 set   202
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³breː
 dff   perdre au jeu
-dfe
+dfe	to lose (at a game)
 dfn
 set   203
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³breː
 dff   raser
-dfe
+dfe	to shave
 dfn
 set   204
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ¹phre
-dff   faire la raie
-dfe
+dff   coiffer
+dfe	to comb
 dfn
 set   205
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ⁴pra
 dff   marcher
-dfe
+dfe	to walk
 dfn
 set   211
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ³pra
 dff   taquiner
-dfe
+dfe	to tease
 dfn   kisi garne
 set   212
 nb
 so   Thak 72 Voc Comp Vb : 24
 .tag   ¹ple
 dff   glisser
-dfe
+dfe	to slip
 dfn
 set   214
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ¹pleː
 dff   écraser du pied
-dfe
+dfe	to crush with foot
 dfn   kuljeko
 set   215
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ³pla
 dff   détacher, découdre
-dfe
+dfe	to untie, unsew
 dfn
 set   219
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ⁴ploː
 dff   piquer
-dfe
+dfe	to prick
 dfn
 set   224
 nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ple̥
 dff   paresseux
-dfe
+dfe	to be lazy
 dfn
 comp	ris plap 'fatigué'
 set   228
@@ -3601,63 +3595,63 @@ nb
 so   Thak 72 Voc Comp Vb : 25
 .tag   ¹ɕuː
 dff   exorciser
-dfe
+dfe	to exorcise
 dfn   mansāune
 set   237
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ¹ɕu
 dff   ôter les vêtements, dépouiller
-dfe
+dfe	to un dress, to skin
 dfn
 set   238
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ²ɕu
 dff   enfiler
-dfe
+dfe	to string
 dfn
 set   240
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ³ɕuː
-dff   s'asseoir (h.)
-dfe
+dff   s'asseoir (hon)
+dfe	to sit (hon)
 dfn
 set   241
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ²ju
 dff   descendre
-dfe
+dfe	to get down
 dfn
 set   243
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ¹juː
 dff   verser
-dfe
+dfe	to pour
 dfn
 set   244
 nb
 so   Thak 72 Voc Comp Vb : 26
 .tag   ¹har-ba
 dff   sec
-dfe
+dfe	dry
 dfn
 set   262
 nb
 so   Thak 72 Voc Comp Vb : 29
 .tag   ²har-ba
 dff   secouer (la poussière)
-dfe
+dfe	to shake dust
 dfn
 set   263
 nb
 so   Thak 72 Voc Comp Vb : 29
 .tag   ¹ho
 dff   brûler
-dfe
+dfe	to burn
 dfn
 set   281
 nb
