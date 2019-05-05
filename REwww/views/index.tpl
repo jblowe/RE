@@ -69,6 +69,13 @@
                 <li><a href="/project/{{project}}">{{project}}</a></li>
               % end
             </ul>
+            % elif 'make' in data:
+            <ul>
+			<h2>'Make' results</h2>
+				<p>
+				{{data['make']}}
+				</p>
+            </ul>
             % elif 'home' in data:
 			<h2>The Reconstruction Engine</h2>
 				<p>
