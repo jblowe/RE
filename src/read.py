@@ -71,12 +71,12 @@ def read_correspondences(correspondences, project_name, daughter_languages):
     return table
 
 
-def next_skipping_comment(reader):
+def skip_comments(reader):
     for row in reader:
         if '#' in row[0]:
-            None
+            continue
         else:
-            return row
+            yield row
 
 
 def read_csv_correspondences(filename, project_name, daughter_languages):
@@ -84,8 +84,8 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
     with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order
-        names = next_skipping_comment(reader)[5:]
-        for row in reader:
+        names = skip_comments(reader)[5:]
+        for row in skip_comments(reader):
             table.add_correspondence(RE.Correspondence(
                 row[0], compute_context(row[4]), row[2].split(','), row[3],
                 dict(zip(names, (x.split(',') for x in row[5:])))))
@@ -173,9 +173,11 @@ def read_tabular_lexicons(filename, columns, delimiter='\t'):
     with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order
-        names = [x.strip() for x in next_skipping_comment(reader)[data_start_column:]]
+        n1 = list(skip_comments(reader))
+        names = [x.strip() for x in n1[0][data_start_column:]]
+        #names = [x.strip() for x in list(skip_comments(reader))[data_start_column:]]
         forms_dict = {name: [] for name in names}
-        for row in reader:
+        for row in n1[1:]:
             gloss = row[gloss_column]
             id = row[id_column]
             for language, form in zip(names, row[data_start_column:]):
@@ -189,9 +191,7 @@ def read_header_line(filename, delimiter='\t'):
     with open(filename, 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # return first row (header)
-        for row in reader:
-            if "#" in row[0]: continue
-            return row
+        return skip_comments(reader)
 
 
 def read_mel_file(filename):
