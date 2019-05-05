@@ -63,7 +63,7 @@ def project_files(filename):
 
 
 @app.route('/make')
-def index():
+def make():
     data = {'make': utils.make(dirname)}
     return template('index', data=data)
 
