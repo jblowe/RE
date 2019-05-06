@@ -7,7 +7,7 @@ The Reconstruction Engine, a computer implementation of the comparative method
 This repository contains code and data files supporting the "Reconstruction Engine" project.
 
 RE has been written now in 4 languages (SPITBOL, PERL, Java, and now Python).
-The "legacy" PERL version is included here ([legacy/RE7](../legacy/RE7)) and may still work.
+The "legacy" PERL version is included here ([legacy/RE7](../tree/master/legacy/RE7)) and may still work.
 
 However, the modern version has three components:
 
