@@ -31,7 +31,7 @@ def data_files(project):
         to_display.append((type, [f for f in filelist if f'{type}.xml' in f]))
     for type in 'correspondences data u8'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.csv' in f]))
-    for type in 'keys sets'.split(' '):
+    for type in 'keys sets statistics'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.txt' in f]))
     for type in 'DAT'.split(' '):
         to_display.append((type, [f for f in filelist if f'.{type}' in f]))
@@ -113,12 +113,16 @@ def limit_lines(filecontent, max_rows):
 
 
 def make(dirname):
-    script = os.path.join('make')
     try:
-        p_object = subprocess.call([script, '-w', '-C', '..'])
-        return f'process {script} completed.'
+        elapsed_time = time.time()
+        os.chdir('..')
+        p_object = subprocess.call(['git', 'pull', '-v'])
+        p_object = subprocess.call(['make', '-w'])
+        os.chdir('REwww')
+        elapsed_time = time.time() - elapsed_time
+        return f'refresh from GitHub completed. {elapsed_time} ms.'
     except:
-        return f'process {script} failed.'
+        return f'refresh from GitHub failed.'
 
 
 VERSION = get_version()
