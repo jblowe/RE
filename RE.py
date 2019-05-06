@@ -63,6 +63,7 @@ def partition_correspondences(correspondences, accessor):
 # imperative interface
 class TableOfCorrespondences:
     initial_marker = Correspondence('', (None, None), '', '$', [])
+
     def __init__(self, family_name, daughter_languages):
         self.correspondences = []
         self.family_name = family_name
@@ -200,6 +201,7 @@ def make_tokenizer(parameters, accessor):
 
     def tokenize(form):
         parses = set()
+
         def gen(form, parse, last, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
             making sure to skip over suprasegmental features when matching
@@ -214,7 +216,7 @@ def make_tokenizer(parameters, accessor):
                 # check whether the last token's right context had a word final
                 # marker or a catch all environment
                 if (last.context[1] is None or
-                    '#' in last.expanded_context[1]):
+                        '#' in last.expanded_context[1]):
                     if regex.fullmatch(syllable_parse):
                         parses.add(tuple(parse))
             # if the last token was marked as only word final then stop
@@ -241,6 +243,7 @@ def make_tokenizer(parameters, accessor):
 
         gen(form, [], parameters.table.initial_marker, '')
         return parses
+
     return tokenize
 
 # set of all possible forms for a daughter language given correspondences
@@ -269,7 +272,8 @@ def project_back(lexicons, parameters, statistics):
         # memoize each parse
         memo = {}
         daughter_form = lambda c: c.daughter_forms[lexicon.language]
-        count = 0
+        count_of_parses = 0
+        count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form)
         for form in lexicon.forms:
             # print(form)
@@ -280,17 +284,20 @@ def project_back(lexicons, parameters, statistics):
                 parses = memo.setdefault(form.glyphs, tokenize(form.glyphs))
             if parses:
                 for cs in parses:
-                    count += 1
+                    count_of_parses += 1
                     reconstructions[cs].append(form)
             else:
+                count_of_no_parses += 1
                 statistics.failed_parses.add(form)
-        statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count} reconstructions')
+        statistics.add_note(
+            f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
 # we create cognate sets by comparing meaning.
 def create_sets(projections, statistics, mels, root=True):
     cognate_sets = set()
+
     def attested_forms(support):
         attested = set()
         for x in support:
@@ -315,13 +322,16 @@ def create_sets(projections, statistics, mels, root=True):
                                   frozenset(attested_forms(support)),
                                   distinct_mel))
             else:
-                statistics.singleton_support.add(reconstruction)
+                statistics.singleton_support.add((reconstruction,
+                                                  frozenset(support),
+                                                  frozenset(attested_forms(support)),
+                                                  distinct_mel))
 
     for reconstruction, support in projections.items():
         add_cognate_sets(reconstruction, support)
         # a cognate set requires support from more than 1 language
     statistics.add_note(
-        f'only {len(cognate_sets)} sets supported by multiple languages'
+        f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
         f'{len(cognate_sets)} cognate sets')
     return cognate_sets, statistics
@@ -359,7 +369,7 @@ def pick_derivation(cognate_sets, statistics):
         uniques[(correspondences_as_proto_form_string(cognate_set[0]),
                  cognate_set[1])] = cognate_set
     statistics.add_note(
-        f'{len(uniques)} distinct surface forms with distinct supporting forms')
+        f'{len(uniques)} distinct reconstructions with distinct supporting forms')
     return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, root):
@@ -390,11 +400,13 @@ def upstream_tree(target, tree, param_tree, attested_lexicons):
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
             statistics)
+
     return rec(target, True)
 
 def all_parameters(settings):
     # Return a mapping from protolanguage to its associated parameter object
     mapping = {}
+
     def rec(target):
         if target in settings.attested:
             return
@@ -408,6 +420,7 @@ def all_parameters(settings):
                 settings.mel_filename)
         for daughter in settings.upstream[target]:
             rec(daughter)
+
     rec(settings.upstream_target)
     return mapping
 
@@ -448,6 +461,9 @@ def dump_keys(lexicon, filename):
             print(f'*{correspondences_as_proto_form_string(reconstruction)}')
             for support1 in support:
                 print(f'  {str(support1)}')
+        print('***failures')
+        for failure in lexicon.statistics.failed_parses:
+            print(f'  {str(failure)}')
     sys.stdout = out
 
 def compare_proto_lexicons(lexicon1, lexicon2):
@@ -499,3 +515,21 @@ def analyze_sets(lexicon1, lexicon2, filename):
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
         compare_proto_lexicons(lexicon1, lexicon2)
     sys.stdout = out
+
+# create a fake cognate set with the first 2,000 forms that failed to reconstruct
+def extract_failures(lexicon):
+    return Lexicon(
+        lexicon.language,
+        [ProtoForm('failed', (), sorted(lexicon.statistics.failed_parses, key=lambda x: x.language)[:2000],
+                   (), [])],
+        lexicon.statistics)
+
+# create "cognate sets" for the first 2,000 the isolates
+def extract_isolates(lexicon):
+    return Lexicon(
+        lexicon.language,
+        [ProtoForm(lexicon.language, correspondences, supporting_forms,
+                   attested_support, mel)
+         for (correspondences, supporting_forms, attested_support, mel)
+         in lexicon.statistics.singleton_support][:2000],
+        lexicon.statistics)
