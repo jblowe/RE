@@ -67,5 +67,19 @@ def make():
     data = {'make': utils.make(dirname)}
     return template('index', data=data)
 
+
+@app.route('/interactive')
+def interactive():
+    data = {'interactive': 'start'}
+    return template('index', data=data)
+
+
+@app.route('/interactive/<project_name:re:.*>')
+def interactive_project(project_name):
+    files, base_dir = utils.data_files(project_name)
+    data = {'interactive': 'project', 'project': project_name, 'files': files, 'base_dir': base_dir}
+    return template('index', data=data)
+
+
 run(app, host='localhost', port=8080)
 # application = default_app()
