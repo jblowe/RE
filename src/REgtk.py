@@ -320,7 +320,7 @@ def run(settings):
 
 if __name__ == "__main__":
     load_hooks.load_hook(args.project)
-    settings = read.read_settings_file(f'{project_dir}/{args.project}.parameters.xml',
+    settings = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)
     run(settings)
