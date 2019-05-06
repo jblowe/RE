@@ -42,6 +42,9 @@
 		<div class="row">
 			<div class="container-fluid">
             % if 'project' in data:
+              % if 'interactive' in data:
+                % include('interactive.tpl')
+              % else:
               <div id="project" class="col-sm-4">
                 <a href="/list_projects">&lt;&lt; back</a>
                 <h3>{{data['project']}}</h3>
@@ -50,12 +53,15 @@
                         <h5>{{file_type}}</h5>
                         <ul>
                           % for file in files:
-                            <li><a href="/project_files/{{data['project']}}/{{file}}">{{file}}</a></li>
+                            <li>
+                                <a href="/project_files/{{data['project']}}/{{file}}">{{file}}</a>
+                            </li>
                           % end
                         </ul>
                       % end
                   % end
               </div>
+              %end
               % if 'content' in data:
                 <div id="content" class="col-sm-8">
                 <!-- a href="/project/{{data['project']}}">&lt;&lt; back</a -->
@@ -64,10 +70,21 @@
                 </div>
               % end
             % elif 'projects' in data:
-            <ul>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Project</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
               % for project in data['projects']:
-                <li><a href="/project/{{project}}">{{project}}</a></li>
+                <tr>
+                    <td><a href="/project/{{project}}">{{project}}</a></td>
+                    <td><a href="/interactive/{{project}}">interactive</a></td>
+                </tr>
               % end
+                <tbody>
             </ul>
             % elif 'make' in data:
             <ul>
