@@ -105,10 +105,9 @@ class Form:
     def __init__(self, language, glyphs):
         self.language = language
         self.glyphs = glyphs
-        self.id = id
 
     def __str__(self):
-        return f'{self.language} {self.glyphs} {self.id}'
+        return f'{self.language} {self.glyphs}'
 
 class ModernForm(Form):
     def __init__(self, language, glyphs, gloss, id):
