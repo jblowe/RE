@@ -545,7 +545,7 @@ def extract_isolates(lexicon):
     duplicates = {}
     new_isolates = []
     for item in isolates:
-        x, = item[1]
+        x = next(iter(item[1]))
         if not x in duplicates:
             duplicates[x] = 1
             new_isolates.append(item)
