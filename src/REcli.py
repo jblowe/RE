@@ -50,8 +50,9 @@ else:
         RE.dump_xml_sets(C, failures_xml_file)
         print(f'wrote {len(C.statistics.failed_parses)} failures to {failures_xml_file}')
         isolates_xml_file = f'{project_dir}/{args.project}.{args.run}.isolates.sets.xml'
-        C = RE.extract_isolates(B)
+        C, forms_used = RE.extract_isolates(B)
         RE.dump_xml_sets(C, isolates_xml_file)
+        print(f'{len(forms_used)} different reflexes in cognate sets')
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
 
 print(time.asctime())
