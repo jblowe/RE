@@ -14,9 +14,6 @@ perl Lex2XML.pl ALLTHAK_1993.DAT TEMP.tuk.data.xml tuk.xml.log tuk
 #perl Lex2XML.pl MONTAG_1994.DAT TEMP.tag2.data.xml tag.xml.log tag
 #perl Lex2XML.pl MONTUK_1991.DAT TEMP.tuk2.data.xml tuk.xml.log tuk
 
-# other minor fixups
-perl -i -pe 's/\-<.hw>/<\/hw>/;' TEMP.*.data.xml
-
 # apply xslt
 python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.gha.data.xml > TGTM.gha.data.xml 2> gha.xslt.log
 python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.mar.data.xml > TGTM.mar.data.xml 2> mar.xslt.log
@@ -29,6 +26,10 @@ python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk.data.xml > TGTM.t
 
 #python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tag2.data.xml > TGTM.tag2.data.xml 2> tag2.xslt.log
 #python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk2.data.xml > TGTM.tuk2.data.xml 2> tuk2.xslt.log
+
+# other minor fixups
+perl -i -pe 's/\-<.hw>/<\/hw>/;' TGTM.*.data.xml
+perl -i -pe 's# *([=\-].*?)</hw>#</hw><suffix>\1</suffix>#;' TGTM.*.data.xml
 
 cat *.xslt.log > all.logs
 cat all.logs
