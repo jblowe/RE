@@ -84,8 +84,8 @@
                     <td><a href="/interactive/{{project}}">interactive</a></td>
                 </tr>
               % end
-                <tbody>
-            </ul>
+                </tbody>
+            </table>
             % elif 'make' in data:
             <ul>
 			<h2>'Make' results</h2>
