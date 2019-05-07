@@ -212,7 +212,7 @@
       </modern>
    </corr>
    <corr num="c41">
-      <proto contextL="$" syll="C">f</proto>
+      <proto contextL="$" contextR="V" syll="C">f</proto>
       <modern dialecte="es">
          <seg>Ø</seg>
       </modern>
