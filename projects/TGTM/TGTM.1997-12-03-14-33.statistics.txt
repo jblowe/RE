@@ -1,0 +1,16 @@
+STAT : [Dec  3 14:33:36 1997] START RE v6.0 10 Nov 1997
+PRE  : [Dec  3 14:33:36 1997] TGTM database (22 Nov 1997)
+RLS  : [Dec  3 14:33:38 1997] 2081 basic rules from 212 <ROWS>.
+STAT : [Dec  3 14:36:56 1997] LEXICON  ris : 1130 words, 1039 recons ,507 failed
+STAT : [Dec  3 14:40:21 1997] LEXICON  tag : 543 words, 1585 recons ,185 failed
+STAT : [Dec  3 14:48:59 1997] LEXICON  syang : 1110 words, 340 recons ,1056 failed
+STAT : [Dec  3 15:18:25 1997] LEXICON  tuk : 1191 words, 2020 recons ,782 failed
+STAT : [Dec  3 15:21:33 1997] LEXICON  sahu : 769 words, 839 recons ,321 failed
+STAT : [Dec  3 15:22:48 1997] LEXICON  mar : 647 words, 308 recons ,618 failed
+STAT : [Dec  3 15:27:44 1997] LEXICON  gha : 757 words, 3091 recons ,305 failed
+STAT : [Dec  3 15:29:22 1997] LEXICON  pra : 466 words, 989 recons ,207 failed
+STAT : [Dec  3 15:29:22 1997] DATA            TOTAL    6613 10211  3981
+CONF : [Dec  3 15:29:22 1997] 1 : 4691 sets found; 2458 nonce; 2233 supported
+CONF : [Dec  3 15:45:47 1997] 2 : 1119 sets retained.
+STAT : [Dec  3 15:45:47 1997] SET      
+STAT : [Dec  3 15:45:53 1997] END      test was called 1842616 times
