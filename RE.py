@@ -267,6 +267,7 @@ def postdict_daughter_forms(proto_form, parameters):
 # return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters, statistics):
     reconstructions = collections.defaultdict(list)
+    forms_in_all_languages = 0
     for lexicon in lexicons:
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
@@ -289,8 +290,11 @@ def project_back(lexicons, parameters, statistics):
             else:
                 count_of_no_parses += 1
                 statistics.failed_parses.add(form)
+        forms_in_all_languages += len(lexicon.forms)
         statistics.add_note(
             f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
+
+    statistics.add_note(f'{forms_in_all_languages} forms in {len(lexicons)} lexicons')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
@@ -525,11 +529,30 @@ def extract_failures(lexicon):
         lexicon.statistics)
 
 # create "cognate sets" for the first 2,000 the isolates
+# (and we need to check to see that the singletons really are isolates -- not in any set)
 def extract_isolates(lexicon):
+    forms_used = collections.Counter()
+
+    def is_in(item, list_of_forms):
+        for form in item[1]:
+            if form in list_of_forms:
+                return True
+        return False
+
+    for set in lexicon.forms:
+        forms_used.update([supporting_form for supporting_form in set.supporting_forms])
+    isolates = [item for item in lexicon.statistics.singleton_support if not is_in(item, forms_used)]
+    duplicates = {}
+    new_isolates = []
+    for item in isolates:
+        x, = item[1]
+        if not x in duplicates:
+            duplicates[x] = 1
+            new_isolates.append(item)
     return Lexicon(
         lexicon.language,
         [ProtoForm(lexicon.language, correspondences, supporting_forms,
                    attested_support, mel)
          for (correspondences, supporting_forms, attested_support, mel)
-         in lexicon.statistics.singleton_support][:2000],
-        lexicon.statistics)
+         in new_isolates][:2000],
+        lexicon.statistics), forms_used
