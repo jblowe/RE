@@ -31,8 +31,11 @@
 				<hw><xsl:value-of select="sya"/></hw>
 			</xsl:when>
 			<xsl:otherwise>
-            			<hw><xsl:value-of select="concat('hw',@N)" /></hw>
-          		</xsl:otherwise>
+				<hw>
+					<xsl:value-of select="hw" />
+					<xsl:value-of select="position()"/>
+				</hw>
+			</xsl:otherwise>
 			</xsl:choose>
 
 			<xsl:choose>
@@ -45,9 +48,15 @@
 			<xsl:when test="mode/dfe">
 				<gl><xsl:value-of select="mode/dfe"/></gl>
 			</xsl:when>
+			<xsl:when test="dff">
+				<gl><xsl:value-of select="dff"/></gl>
+			</xsl:when>
 			<xsl:otherwise>
-				<gl><xsl:value-of select="concat('gloss',@N)" /></gl>
-          		</xsl:otherwise>
+				<gl>
+					<xsl:value-of select="gloss" />
+					<xsl:value-of select="position()"/>
+				</gl>
+			</xsl:otherwise>
 			</xsl:choose>
 
 			</entry>
