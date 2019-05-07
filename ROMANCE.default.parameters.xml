@@ -5,7 +5,7 @@
   <attested name="it" file="ROMANCE.it.data.xml"/>
   <attested name="fr" file="ROMANCE.fr.data.xml"/>
   <attested name="scn" file="ROMANCE.scn.data.xml"/>
-  <param name="mel" value="ROMANCE.mel.xml"/>
+  <param name="mel" value="ROMANCE.hand.mel.xml"/>
   <reconstruction name="default">
     <proto_language name="PIWR" correspondences="ROMANCE.correspondences.xml"/>
     <action name="upstream" target="PIWR"/>
