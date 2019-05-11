@@ -21,7 +21,7 @@ if args.coverage:
     if args.mel == 'none':
         print('no mel provided')
         sys.exit(1)
-    print(f'{args.project} glosses not found in {args.mel} mel:')
+    print(f'checking {args.project} glosses in {args.mel} mel:')
     coverage.check_mel_coverage(settings)
 else:
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons)
