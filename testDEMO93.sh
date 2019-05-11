@@ -9,7 +9,7 @@ cat ../projects/DEMO93/DEMO93.${DATE}.statistics.txt
 
 # second test mel comparison
 time python3 REcli.py DEMO93 --mel hand --mel2 none
-echo 'Comparing No-MEL to gold stats'
+echo 'Comparing Gold to No-MEL stats...'
 head ../projects/DEMO93/DEMO93.default.analysis.txt
 
 
