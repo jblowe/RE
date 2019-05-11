@@ -31,6 +31,9 @@ python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk.data.xml > TGTM.t
 perl -i -pe 's/\-<.hw>/<\/hw>/;' TGTM.*.data.xml
 perl -i -pe 's#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;' TGTM.*.data.xml
 perl -i -pe 's#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;' TGTM.*.data.xml
+perl -i -p addngl.pl TGTM.*.data.xml
+
+#exit
 
 cat *.xslt.log > all.logs
 cat all.logs
