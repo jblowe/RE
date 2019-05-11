@@ -92,6 +92,7 @@ def read_csv_correspondences(filename, project_name, daughter_languages):
                 dict(zip(names, (x.split(',') for x in row[5:])))))
     return table
 
+
 def compute_context(context_string):
     if context_string == '':
         return (None, None)
@@ -150,13 +151,14 @@ def read_lexicon(xmlfile):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
     forms = [RE.ModernForm(language,
-                           get_element(language, entry, 'hw'),
+                           entry.find('hw').text
+                           if entry.find('hw') is not None
+                           else '',
                            # fallback to provided gloss if there is no
                            # 'normalized' gloss
-                           get_element(language, entry, 'ngl')
-                           if entry.find('ngl')
-                           else get_element(language, entry, 'gl'),
-                           # carry the id attribute along
+                           entry.find('ngl').text
+                           if entry.find('ngl') is not None
+                           else entry.find('gl').text,
                            entry.attrib.get('id')
                            )
              for entry in tree.iterfind('entry')]
