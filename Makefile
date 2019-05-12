@@ -19,6 +19,9 @@ test:
 
 	cd src ; bash ./testROMANCE.sh
 
-	cd src ; for p in TGTM VANUATU ROMANCE DEMO93 POLYNESIAN; do echo $p; python3 REcli.py -c -m hand $p > ../projects/$p/$p.mel.coverage.txt ; done
+	cd src ; python3 REcli.py -c -m hand DEMO93 > ../projects/DEMO93/DEMO93.mel.coverage.txt
+	cd src ; python3 REcli.py -c -m hand TGTM > ../projects/TGTM/TGTM.mel.coverage.txt
+	cd src ; python3 REcli.py -c -m hand ROMANCE > ../projects/ROMANCE/ROMANCE.mel.coverage.txt
+	cd src ; python3 REcli.py -c -m hand POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.coverage.txt
 	cd src ; python3 REcli.py -c -m hand NYI > ../projects/LOLOISH/NYI.mel.coverage.txt
 	cd src ; python3 REcli.py -c -m hand SYI > ../projects/LOLOISH/SYI.mel.coverage.txt
