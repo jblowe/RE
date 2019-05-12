@@ -17,8 +17,11 @@ print('reading toolbox file')
 with open(filename, encoding='utf-8', errors='ignore') as file:
     pairs = toolbox.read_toolbox_file(file)
     zipped = defaultdict(list)
-    for (context, data) in toolbox.records(pairs, ['\\pnv', '\\psm']):
+    mels = defaultdict(list)
+    for set_number, (context, data) in enumerate(toolbox.records(pairs, ['\\pnv', '\\psm'])):
+        mel = set()
         proto_gloss = context['\\psm']
+        mel.add(proto_gloss)
         i = 0
         while (i < len(data) - 1):
             (tag, value) = data[i]
@@ -28,11 +31,15 @@ with open(filename, encoding='utf-8', errors='ignore') as file:
                     gloss = data[i + 1][1]
                     i += 1
                 zipped[tag[1:]].append((value, gloss))
+                mel.add(gloss)
             i += 1
+        mels[set_number] = mel
+
 
 def xml_name(x):
     return x + '.data.xml'
-            
+
+
 def write_vanuatu_data():
     for language in languages:
         root = ET.Element('lexicon', attrib={'dialecte': language})
@@ -42,12 +49,25 @@ def write_vanuatu_data():
             ET.SubElement(entry, 'gl').text = gloss or 'placeholder'
         with open(os.path.join(base_dir, xml_name(language)), 'w', encoding='utf-8') as f:
             f.write(minidom.parseString(ET.tostring(root))
+                    .toprettyxml(indent='   '))
+
+    root = ET.Element('semantics')
+    x = mels
+    for mel in mels:
+        entry = ET.SubElement(root, 'mel', attrib={'id': str(mel + 1)})
+        if mel == 0: continue
+        for gloss in mels[mel]:
+            ET.SubElement(entry, 'gl').text = gloss
+    with open(os.path.join(base_dir, 'VANUATU.hand.mel.xml'), 'w', encoding='utf-8') as f:
+        f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
+
 
 print('converting from toolbox format')
 
 write_vanuatu_data()
 print('conversion complete')
+
 
 def write_parameters_file():
     root = ET.Element('params')
@@ -56,6 +76,7 @@ def write_parameters_file():
                                                 'file': xml_name(language)})
 
     ET.SubElement(root, 'mel', attrib={'name': 'clics', 'file': 'VANUATU.clics.mel.xml'})
+    ET.SubElement(root, 'mel', attrib={'name': 'hand', 'file': 'VANUATU.hand.mel.xml'})
     recon = ET.SubElement(root, 'reconstruction', attrib={'name': 'default'})
     ET.SubElement(recon, 'proto_language',
                   attrib={'name': 'pvn',
@@ -66,8 +87,9 @@ def write_parameters_file():
                                            'from': ','.join(languages),
                                            'to': 'pvn'})
     with open(os.path.join(base_dir, 'VANUATU.default.parameters.xml'), 'w', encoding='utf-8') as f:
-            f.write(minidom.parseString(ET.tostring(root))
+        f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
+
 
 write_parameters_file()
 print('parameters file written')

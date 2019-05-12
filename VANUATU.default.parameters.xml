@@ -18,6 +18,7 @@
    <attested file="lkn.data.xml" name="lkn"/>
    <attested file="mrl.data.xml" name="mrl"/>
    <mel file="VANUATU.clics.mel.xml" name="clics"/>
+   <mel file="VANUATU.hand.mel.xml" name="hand"/>
    <reconstruction name="default">
       <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
       <action name="upstream" target="pvn"/>
