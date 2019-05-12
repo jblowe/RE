@@ -31,7 +31,7 @@ def data_files(project):
         to_display.append((type, [f for f in filelist if f'{type}.xml' in f]))
     for type in 'correspondences data u8'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.csv' in f]))
-    for type in 'keys sets statistics'.split(' '):
+    for type in 'keys sets statistics coverage'.split(' '):
         to_display.append((type, [f for f in filelist if f'{type}.txt' in f]))
     for type in 'DAT'.split(' '):
         to_display.append((type, [f for f in filelist if f'.{type}' in f]))
