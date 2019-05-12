@@ -120,7 +120,7 @@ def make(dirname):
         p_object = subprocess.call(['make', '-w'])
         os.chdir('REwww')
         elapsed_time = time.time() - elapsed_time
-        return f'refresh from GitHub completed. {elapsed_time} ms.'
+        return f'refresh from GitHub completed. {elapsed_time} s.'
     except:
         return f'refresh from GitHub failed.'
 
