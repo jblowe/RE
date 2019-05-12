@@ -1,11 +1,43 @@
 import read
 import utils
 
+
 # Coverage utilities
 def check_mel_coverage(settings):
     mel_glosses = set()
-    for mel in read.read_mel_file(settings.mel_filename):
-        mel_glosses.union(mel.glosses)
-    for gloss in utils.all_glosses(read.read_attested_lexicons(settings)):
-        if gloss not in mel_glosses:
-            print(f'{gloss}')
+    all_matched = 0
+    all_not_matched = 0
+    all_forms = 0
+    glosses_not_matched = {}
+    for number_of_mels, mel in enumerate(read.read_mel_file(settings.mel_filename)):
+        mel_glosses = mel_glosses.union(mel.glosses)
+        number_of_mels += 1
+    attested_lexicons = read.read_attested_lexicons(settings)
+    unused_mel_glosses = dict([(x, '') for x in mel_glosses])
+    for language in attested_lexicons:
+        glosses_not_matched[language] = set()
+        matched = 0
+        not_matched = 0
+        forms = len(attested_lexicons[language].forms)
+        for gloss in utils.all_glosses(attested_lexicons[language]):
+            if gloss not in mel_glosses:
+                not_matched += 1
+                glosses_not_matched[language].add(gloss)
+                # print(f'{language} {gloss}')
+            else:
+                matched += 1
+                try:
+                    del unused_mel_glosses[gloss]
+                except:
+                    pass
+        print(f'{language}: {matched + not_matched} distinct glosses, {matched} matched, {not_matched} did not match, {forms} forms')
+        all_matched += matched
+        all_not_matched += not_matched
+        all_forms += forms
+    unused_mels = len(unused_mel_glosses)
+    print(f'\nmel summary: mels {number_of_mels} mel glosses {len(mel_glosses)} unused mel glosses {unused_mels}')
+    print(f'gloss summary: {all_matched + all_not_matched} distinct glosses, {all_matched} matched, {all_not_matched} did not match, {all_forms} forms')
+    for language in glosses_not_matched:
+        if len(glosses_not_matched[language]) > 0:
+            print(language)
+            print(glosses_not_matched[language])
