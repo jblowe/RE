@@ -36,27 +36,25 @@
                 <thead>
                     <tr>
                         <th>Form</th>
-                        <th>Gloss</th>
+                        <th>Source Gloss</th>
+                        <th>Computed (Alternate) Gloss</th>
                         <th>ID</th>
                     </tr>
                 </thead>
                 <xsl:for-each select="entry">
                     <tr>
-                        <xsl:apply-templates select="hw"/>
-                        <xsl:apply-templates select="gl"/>
-                        <td>
-                            <xsl:apply-templates select="@id"/>
-                        </td>
+                        <td><xsl:apply-templates select="hw"/></td>
+                        <td><xsl:apply-templates select="gl"/></td>
+                        <td><xsl:apply-templates select="ngl"/></td>
+                        <td><xsl:apply-templates select="@id"/></td>
                     </tr>
                 </xsl:for-each>
             </table>
         </div>
     </xsl:template>
 
-    <xsl:template match="gl|hw">
-        <td>
+    <xsl:template match="gl|hw|ngl">
             <xsl:apply-templates/>
-        </td>
     </xsl:template>
 
 </xsl:stylesheet>
