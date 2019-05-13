@@ -5,6 +5,7 @@ sub extract_keyterm {
     $gl =~ s/^to //i;
     $gl =~ s/\|.*//;
     $gl =~ s/ +\((.*?)\)$//;
+    $gl =~ s/\)$//;
     $gl =~ s/ *\&lt;(.*)\&gt;//;
     return $gl;
 }
@@ -12,13 +13,16 @@ sub extract_keyterm {
 sub ngl {
     my ($gl) = @_;
     my @terms;
-    if (m/\*/) {
-        while ($gl =~ s/^.*\*([^\*]+)//) {
-            push(@terms, extract_keyterm($1));
+    my @gls = split /, /, $gl;
+    for my $glx (@gls) {
+        if ($glx =~ m/\*/) {
+            while ($glx =~ s/^.*?\*([^\*]+)//) {
+                push(@terms, extract_keyterm($1));
+            }
         }
-    }
-    else {
-        push(@terms, extract_keyterm($gl));
+        else {
+            push(@terms, extract_keyterm($glx));
+        }
     }
     return @terms;
 }

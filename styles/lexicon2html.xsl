@@ -45,7 +45,12 @@
                     <tr>
                         <td><xsl:apply-templates select="hw"/></td>
                         <td><xsl:apply-templates select="gl"/></td>
-                        <td><xsl:apply-templates select="ngl"/></td>
+                        <td>
+                            <xsl:for-each select="ngl">
+                                <xsl:value-of select="." />
+                                <xsl:if test="position() != last()">, </xsl:if>
+                            </xsl:for-each>
+                        </td>
                         <td><xsl:apply-templates select="@id"/></td>
                     </tr>
                 </xsl:for-each>
@@ -53,7 +58,7 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="gl|hw|ngl">
+    <xsl:template match="gl|hw">
             <xsl:apply-templates/>
     </xsl:template>
 
