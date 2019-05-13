@@ -31,7 +31,8 @@ with open(filename, encoding='utf-8', errors='ignore') as file:
                     gloss = data[i + 1][1]
                     i += 1
                 zipped[tag[1:]].append((value, gloss))
-                mel.add(gloss)
+                if gloss:
+                    mel.add(gloss)
             i += 1
         mels[set_number] = mel
 
@@ -52,11 +53,10 @@ def write_vanuatu_data():
                     .toprettyxml(indent='   '))
 
     root = ET.Element('semantics')
-    x = mels
     for mel in mels:
         entry = ET.SubElement(root, 'mel', attrib={'id': str(mel + 1)})
         if mel == 0: continue
-        for gloss in mels[mel]:
+        for gloss in sorted(mels[mel]):
             ET.SubElement(entry, 'gl').text = gloss
     with open(os.path.join(base_dir, 'VANUATU.hand.mel.xml'), 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
