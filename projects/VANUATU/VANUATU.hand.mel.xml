@@ -13,10 +13,10 @@
       <gl>throw, cast s.th.; throw away</gl>
    </mel>
    <mel id="5">
-      <gl>pull &lt;s.th.&gt; out</gl>
       <gl>heave up soil swith digging-stick</gl>
-      <gl>take up, move</gl>
       <gl>heave up soil with digging-stick</gl>
+      <gl>pull &lt;s.th.&gt; out</gl>
+      <gl>take up, move</gl>
    </mel>
    <mel id="6">
       <gl>pandanus mat; bed</gl>
@@ -64,8 +64,8 @@
       <gl>a tree of which bows are made</gl>
    </mel>
    <mel id="20">
-      <gl>Scarus blochi</gl>
       <gl>Acanthurus lineatus</gl>
+      <gl>Scarus blochi</gl>
    </mel>
    <mel id="21">
       <gl>Casuarina equisetifolia</gl>
@@ -77,28 +77,28 @@
       <gl/>
    </mel>
    <mel id="24">
+      <gl>my song</gl>
       <gl>religious hymn, holy song</gl>
       <gl>song</gl>
-      <gl>my song</gl>
    </mel>
    <mel id="25">
       <gl/>
    </mel>
    <mel id="26">
-      <gl>spear &lt;fish+&gt;, stab &lt;s.o.&gt;</gl>
       <gl>spear &lt;fish+&gt;</gl>
+      <gl>spear &lt;fish+&gt;, stab &lt;s.o.&gt;</gl>
       <gl>stab &lt;s.o.&gt; w. knife</gl>
    </mel>
    <mel id="27">
       <gl>smoke</gl>
    </mel>
    <mel id="28">
-      <gl>abode of the Dead</gl>
       <gl>a deep and narrow cave</gl>
-      <gl>volcano</gl>
-      <gl>deep rock cave; Entrance of Hell</gl>
+      <gl>abode of the Dead</gl>
       <gl>an area with deep caves</gl>
+      <gl>deep rock cave; Entrance of Hell</gl>
       <gl>narrow entrance; esp. entrance into Hades (Panoi)</gl>
+      <gl>volcano</gl>
    </mel>
    <mel id="29">
       <gl>soul; spirit of a deceased person</gl>
@@ -111,8 +111,8 @@ sago-leaves</gl>
       <gl>thither, towards non-speaker (you ~ him)</gl>
    </mel>
    <mel id="32">
-      <gl>strong bamboo</gl>
       <gl>bamboo</gl>
+      <gl>strong bamboo</gl>
    </mel>
    <mel id="33">
       <gl/>
@@ -136,15 +136,15 @@ sago-leaves</gl>
       <gl>squirrelfish, Sargocentron spiniferum</gl>
    </mel>
    <mel id="40">
-      <gl>spasm of tetanus+</gl>
       <gl>extremely thin</gl>
-      <gl>tetanus; skinny</gl>
       <gl>skinny</gl>
+      <gl>spasm of tetanus+</gl>
+      <gl>tetanus; skinny</gl>
    </mel>
    <mel id="41">
-      <gl>jaw, jawbone</gl>
       <gl>(pig) jaw bone; (man) jaw, chin</gl>
       <gl>cheek</gl>
+      <gl>jaw, jawbone</gl>
    </mel>
    <mel id="42">
       <gl/>
@@ -165,10 +165,10 @@ sago-leaves</gl>
       <gl>finish; do completely; then; all</gl>
    </mel>
    <mel id="48">
-      <gl>in, inwardly, secretly</gl>
-      <gl>(adv.) inwards, inside; (adj.) secret</gl>
       <gl>(adv.) inwards, inside</gl>
+      <gl>(adv.) inwards, inside; (adj.) secret</gl>
       <gl>go secretly in search of sexual partner</gl>
+      <gl>in, inwardly, secretly</gl>
    </mel>
    <mel id="49">
       <gl>breadfruit, Artocarpus</gl>
@@ -178,10 +178,10 @@ sago-leaves</gl>
    </mel>
    <mel id="51">
       <gl>Luthanus monostigma</gl>
+      <gl>Lutjanus fulviflamma</gl>
       <gl>Lutjanus fulvus, L. kasmira</gl>
       <gl>Lutjanus monostigma</gl>
       <gl>Lutjanus spp., k.o. fish</gl>
-      <gl>Lutjanus fulviflamma</gl>
    </mel>
    <mel id="52">
       <gl>bait</gl>
@@ -221,15 +221,15 @@ sago-leaves</gl>
    <mel id="63">
       <gl>bamboo</gl>
       <gl>bamboo bottle; bamboo stick (Mus)</gl>
-      <gl>bamboo stick (Mus)</gl>
-      <gl>bamboo stick used for a specific purpose</gl>
       <gl>bamboo bottle; bamboo stick (Mus+)</gl>
+      <gl>bamboo stick (Mus)</gl>
       <gl>bamboo stick marking limits within initiation house</gl>
+      <gl>bamboo stick used for a specific purpose</gl>
    </mel>
    <mel id="64">
-      <gl>rear with food, tame by feeding</gl>
-      <gl>rear with food (e.g. a pig); pig</gl>
       <gl>rear with food (child, pig+)</gl>
+      <gl>rear with food (e.g. a pig); pig</gl>
+      <gl>rear with food, tame by feeding</gl>
    </mel>
    <mel id="65">
       <gl>woven food-chest standing above fire for storing almonds and dried breadfruit</gl>
@@ -251,18 +251,18 @@ sago-leaves</gl>
       <gl/>
    </mel>
    <mel id="71">
-      <gl>[n] glue-tree, Cordia dichotoma</gl>
       <gl>[n] a sticky tree, Cerbera spp.</gl>
-      <gl>[v] glue, stick</gl>
+      <gl>[n] glue-tree, Cordia dichotoma</gl>
       <gl>[n] glue; glue-tree, Cordia dichotoma;</gl>
+      <gl>[v] glue, stick</gl>
       <gl>[vi] stick together</gl>
    </mel>
    <mel id="72">
       <gl/>
    </mel>
    <mel id="73">
-      <gl>[n] bunch of &lt;fruit+&gt;; [vi] be hanging in cluster</gl>
       <gl>[n] bunch of &lt;fruit+&gt;</gl>
+      <gl>[n] bunch of &lt;fruit+&gt;; [vi] be hanging in cluster</gl>
       <gl>cluster, bundle, bunch of &lt;fruit+&gt;, esp. bunch of fruit hanging
 together on tree</gl>
    </mel>
@@ -277,11 +277,11 @@ together on tree</gl>
       <gl>dirty, filthy</gl>
    </mel>
    <mel id="77">
-      <gl>[vi] stick together; [n] friend, companion</gl>
-      <gl>[n] friend</gl>
-      <gl>collaborate, mutual aid</gl>
-      <gl>[pstv] (put) together, jointly; [n] friend</gl>
       <gl>(put) together, jointly</gl>
+      <gl>[n] friend</gl>
+      <gl>[pstv] (put) together, jointly; [n] friend</gl>
+      <gl>[vi] stick together; [n] friend, companion</gl>
+      <gl>collaborate, mutual aid</gl>
    </mel>
    <mel id="78">
       <gl>[n] friend, companion; partner</gl>
@@ -297,8 +297,8 @@ together on tree</gl>
       <gl>fat</gl>
    </mel>
    <mel id="81">
-      <gl>cover with lid</gl>
       <gl>close, shut &lt;door+&gt;</gl>
+      <gl>cover with lid</gl>
    </mel>
    <mel id="82">
       <gl>sit down, sit</gl>
@@ -319,8 +319,8 @@ together on tree</gl>
       <gl>hole</gl>
    </mel>
    <mel id="88">
-      <gl>(v.) bake food in stone oven; (n.) ovenful of food</gl>
       <gl>(v.) bake food in stone oven; (n.) food baked in oven; (n.) oven</gl>
+      <gl>(v.) bake food in stone oven; (n.) ovenful of food</gl>
    </mel>
    <mel id="89">
       <gl>flying-fox</gl>
@@ -329,12 +329,12 @@ together on tree</gl>
       <gl>today</gl>
    </mel>
    <mel id="91">
-      <gl>his grave</gl>
-      <gl>mausoleum for ancient high chiefs</gl>
+      <gl>(s.o.) grave</gl>
       <gl>grave</gl>
       <gl>graveyard</gl>
+      <gl>his grave</gl>
+      <gl>mausoleum for ancient high chiefs</gl>
       <gl>stone grave of &lt;s.o.&gt;</gl>
-      <gl>(s.o.) grave</gl>
    </mel>
    <mel id="92">
       <gl>Myzomela cardinalis</gl>
@@ -355,14 +355,14 @@ together on tree</gl>
       <gl>mangrove, Rhizophora</gl>
    </mel>
    <mel id="98">
-      <gl>press, crush</gl>
-      <gl>smash; hit violently; (s.th.) affect s.o.</gl>
-      <gl>smash s.th. on ground; destroy</gl>
-      <gl>pound pudding on dish</gl>
-      <gl>go fetch (lit. smash) firewood</gl>
-      <gl>destroy s.o.'s properties as a punishment</gl>
-      <gl>smash</gl>
       <gl>damage, harm</gl>
+      <gl>destroy s.o.'s properties as a punishment</gl>
+      <gl>go fetch (lit. smash) firewood</gl>
+      <gl>pound pudding on dish</gl>
+      <gl>press, crush</gl>
+      <gl>smash</gl>
+      <gl>smash s.th. on ground; destroy</gl>
+      <gl>smash; hit violently; (s.th.) affect s.o.</gl>
    </mel>
    <mel id="99">
       <gl>pig</gl>
@@ -381,8 +381,8 @@ together on tree</gl>
       <gl>my ears</gl>
    </mel>
    <mel id="104">
-      <gl>(n.) wooden club; (v.) blow with a club</gl>
       <gl>(n.) wooden club</gl>
+      <gl>(n.) wooden club; (v.) blow with a club</gl>
       <gl>beat upon, be heavy on</gl>
    </mel>
    <mel id="105">
@@ -395,9 +395,9 @@ together on tree</gl>
       <gl>(its) bottom; (his) buttocks</gl>
    </mel>
    <mel id="108">
+      <gl>forget</gl>
       <gl>ignorant</gl>
       <gl>stupid</gl>
-      <gl>forget</gl>
    </mel>
    <mel id="109">
       <gl>a creeper providing solid rattan-like fibre</gl>
@@ -428,11 +428,11 @@ together on tree</gl>
       <gl>Pangium edule; dance rattles</gl>
    </mel>
    <mel id="118">
-      <gl>my chest; my liver</gl>
-      <gl>liver</gl>
-      <gl>my liver</gl>
       <gl>(my) liver</gl>
+      <gl>liver</gl>
       <gl>my chest</gl>
+      <gl>my chest; my liver</gl>
+      <gl>my liver</gl>
    </mel>
    <mel id="119">
       <gl>step, tread, stomp</gl>
@@ -456,12 +456,12 @@ together on tree</gl>
       <gl>to plant (taro+)</gl>
    </mel>
    <mel id="126">
-      <gl>count; read</gl>
       <gl>count</gl>
+      <gl>count; read</gl>
    </mel>
    <mel id="127">
-      <gl>teach, learn</gl>
       <gl>learn, recite; sing</gl>
+      <gl>teach, learn</gl>
    </mel>
    <mel id="128">
       <gl/>
@@ -479,8 +479,8 @@ together on tree</gl>
       <gl>climb (on tree, canoe, hill+)</gl>
    </mel>
    <mel id="133">
-      <gl>Presentative; Complete aspect</gl>
       <gl>(asp) already; Complete aspect</gl>
+      <gl>Presentative; Complete aspect</gl>
       <gl>Presentative; already</gl>
    </mel>
    <mel id="134">
@@ -494,9 +494,9 @@ together on tree</gl>
       <gl>Alocasia taro</gl>
    </mel>
    <mel id="137">
-      <gl>to fasten with pins, fold over and pin</gl>
       <gl>pin &lt;s.th.&gt;; esp. pin together &lt;thatch leaves&gt; onto a rod</gl>
       <gl>sew sago palm thatch</gl>
+      <gl>to fasten with pins, fold over and pin</gl>
    </mel>
    <mel id="138">
       <gl>umbrella leaf, Licuala sp.</gl>
@@ -508,21 +508,21 @@ together on tree</gl>
       <gl>skin; bark</gl>
    </mel>
    <mel id="141">
-      <gl>plexus at the based of the fronds of sago &amp; other palms</gl>
       <gl>k.o. mat</gl>
+      <gl>plexus at the based of the fronds of sago &amp; other palms</gl>
       <gl>sleeping bed, mat</gl>
    </mel>
    <mel id="142">
       <gl>(put, throw) away</gl>
    </mel>
    <mel id="143">
-      <gl>crossbeam</gl>
-      <gl>crossways</gl>
-      <gl>crossways; askance; a cross</gl>
-      <gl>crossways; askance</gl>
-      <gl>proximal directional: Southeast</gl>
       <gl>a cross</gl>
       <gl>across; crossways; transverse directional</gl>
+      <gl>crossbeam</gl>
+      <gl>crossways</gl>
+      <gl>crossways; askance</gl>
+      <gl>crossways; askance; a cross</gl>
+      <gl>proximal directional: Southeast</gl>
    </mel>
    <mel id="144">
       <gl>[vt] split;  [adv] asunder</gl>
@@ -538,18 +538,18 @@ together on tree</gl>
       <gl>moon</gl>
    </mel>
    <mel id="148">
-      <gl>to tire, weary, trouble one</gl>
       <gl>be boring; bore &lt;s.o.&gt;</gl>
+      <gl>to tire, weary, trouble one</gl>
    </mel>
    <mel id="149">
+      <gl>full</gl>
       <gl>full; abundant, plenty</gl>
       <gl>full; abundant, plenty; many</gl>
-      <gl>full</gl>
    </mel>
    <mel id="150">
-      <gl>leaf of a kind of vine that is used for traditional medecine</gl>
       <gl>Ipomoea pes-caprae</gl>
       <gl>k.o. yam</gl>
+      <gl>leaf of a kind of vine that is used for traditional medecine</gl>
    </mel>
    <mel id="151">
       <gl>volcano</gl>
@@ -614,10 +614,10 @@ together on tree</gl>
       <gl>wait, wait for</gl>
    </mel>
    <mel id="171">
-      <gl>k.o. small bird</gl>
       <gl>Lalage leucopyga</gl>
-      <gl>Rhipidura fuliginosa</gl>
       <gl>Lalage maculosa</gl>
+      <gl>Rhipidura fuliginosa</gl>
+      <gl>k.o. small bird</gl>
    </mel>
    <mel id="172">
       <gl>build a wall; walling, enclosure</gl>
@@ -668,19 +668,18 @@ together on tree</gl>
    <mel id="187">
       <gl>(tooth+) loose, shaky</gl>
       <gl>loosen and pull &lt;s.th.&gt; out</gl>
-      <gl>pull out</gl>
       <gl>loosen and pull out</gl>
+      <gl>pull out</gl>
    </mel>
    <mel id="188">
+      <gl>big drum</gl>
       <gl>horizontal slit drum</gl>
       <gl>small drum</gl>
-      <gl>big drum</gl>
    </mel>
    <mel id="189">
-      <gl>become dry, with heat or time</gl>
-      <gl>(plant, fruit) dry</gl>
       <gl>(plant) dry</gl>
-      <gl/>
+      <gl>(plant, fruit) dry</gl>
+      <gl>become dry, with heat or time</gl>
       <gl>biscuit made of dried breadfruit</gl>
    </mel>
    <mel id="190">
@@ -688,14 +687,14 @@ together on tree</gl>
    </mel>
    <mel id="191">
       <gl>dolphin</gl>
-      <gl>whale</gl>
       <gl>dolphin, porpoise</gl>
+      <gl>whale</gl>
    </mel>
    <mel id="192">
-      <gl>(man) crunch; (devil) eat &lt;man&gt;</gl>
       <gl>(man) crunch, chew ‹kava+›; (devil) eat ‹man›</gl>
-      <gl>crunch noisily; esp. (devil) eat ‹man›</gl>
+      <gl>(man) crunch; (devil) eat &lt;man&gt;</gl>
       <gl>(moskito) bite; (man) crunch; (devil) eat &lt;man&gt;</gl>
+      <gl>crunch noisily; esp. (devil) eat ‹man›</gl>
    </mel>
    <mel id="193">
       <gl>[n] sail</gl>
@@ -744,8 +743,8 @@ together on tree</gl>
       <gl>door of o.'s house</gl>
    </mel>
    <mel id="208">
-      <gl>chew (esp. kava)</gl>
       <gl>bite</gl>
+      <gl>chew (esp. kava)</gl>
    </mel>
    <mel id="209">
       <gl>my back</gl>
@@ -801,14 +800,14 @@ together on tree</gl>
       <gl>[adv.] (so as to) surround, cover, obstruct, prevent, protect…</gl>
    </mel>
    <mel id="226">
-      <gl>wooden knife for cutting pudding</gl>
-      <gl>prod, cut with point of knife</gl>
       <gl>cut w. knife</gl>
+      <gl>prod, cut with point of knife</gl>
+      <gl>wooden knife for cutting pudding</gl>
    </mel>
    <mel id="227">
-      <gl>[vt] take skin off</gl>
       <gl>(n) skin</gl>
       <gl>[n] skin;  [vt] take skin off</gl>
+      <gl>[vt] take skin off</gl>
    </mel>
    <mel id="228">
       <gl>spouse</gl>
@@ -826,13 +825,13 @@ together on tree</gl>
       <gl>fish</gl>
    </mel>
    <mel id="233">
-      <gl>seek, look for</gl>
-      <gl>see</gl>
       <gl>&lt; *iloa ?</gl>
+      <gl>see</gl>
+      <gl>seek, look for</gl>
    </mel>
    <mel id="234">
-      <gl>sip, sup, up</gl>
       <gl>drink</gl>
+      <gl>sip, sup, up</gl>
    </mel>
    <mel id="235">
       <gl>carry over the shoulder on a stick</gl>
@@ -847,16 +846,16 @@ together on tree</gl>
       <gl>dance, esp. village dance</gl>
    </mel>
    <mel id="239">
-      <gl>burn clear and hot</gl>
       <gl>(fire) smoulder; burn in a low manner to facilitate cooking</gl>
+      <gl>burn clear and hot</gl>
    </mel>
    <mel id="240">
       <gl>sweat</gl>
    </mel>
    <mel id="241">
-      <gl>deep sea, open sea, ocean</gl>
       <gl>(adj.) deep</gl>
       <gl>(n.) deep sea</gl>
+      <gl>deep sea, open sea, ocean</gl>
    </mel>
    <mel id="242">
       <gl>along the beach, at seaside</gl>
@@ -871,42 +870,42 @@ together on tree</gl>
       <gl>change; translate; replace</gl>
    </mel>
    <mel id="246">
-      <gl>swamp garden for taro</gl>
-      <gl>(n.) mud, swamp</gl>
-      <gl>(cultivable piece of) ground; soil</gl>
-      <gl>mud, swampy ground; muddy</gl>
       <gl>(adj.) dirty, muddy</gl>
+      <gl>(cultivable piece of) ground; soil</gl>
+      <gl>(n.) mud, swamp</gl>
+      <gl>mud, swampy ground; muddy</gl>
+      <gl>swamp garden for taro</gl>
    </mel>
    <mel id="247">
       <gl>a woman's dance</gl>
       <gl>women's dance</gl>
    </mel>
    <mel id="248">
-      <gl>be the odd one out, be isolated from a group</gl>
       <gl>be lost, be absent, be out of sight; disappear</gl>
       <gl>be lost, be absent, be out of sight; not be there, be somewhere else</gl>
+      <gl>be the odd one out, be isolated from a group</gl>
       <gl>get lost</gl>
    </mel>
    <mel id="249">
       <gl>cave</gl>
    </mel>
    <mel id="250">
-      <gl>put away</gl>
       <gl>hide</gl>
-      <gl>stow &lt;s.th.&gt; in discrete place, hide</gl>
       <gl>hide; (take+) inside, (come) in</gl>
+      <gl>put away</gl>
+      <gl>stow &lt;s.th.&gt; in discrete place, hide</gl>
    </mel>
    <mel id="251">
-      <gl>pour out</gl>
       <gl>pour</gl>
+      <gl>pour out</gl>
    </mel>
    <mel id="252">
       <gl>big</gl>
    </mel>
    <mel id="253">
       <gl>bend (esp. wood+), fold (s.th. more or less flexible)</gl>
-      <gl>bend; adjust, improve</gl>
       <gl>bend (wood+)</gl>
+      <gl>bend; adjust, improve</gl>
    </mel>
    <mel id="254">
       <gl>be ignorant; forget</gl>
@@ -937,8 +936,8 @@ together on tree</gl>
       <gl>split, broken</gl>
    </mel>
    <mel id="262">
-      <gl>orphan</gl>
       <gl>hungry</gl>
+      <gl>orphan</gl>
    </mel>
    <mel id="263">
       <gl>my nose</gl>
@@ -972,10 +971,10 @@ together on tree</gl>
       <gl>cold</gl>
    </mel>
    <mel id="273">
-      <gl>sole; footprint</gl>
-      <gl>trace, effect, impact</gl>
       <gl>footprint</gl>
       <gl>his sole</gl>
+      <gl>sole; footprint</gl>
+      <gl>trace, effect, impact</gl>
    </mel>
    <mel id="274">
       <gl>hungry</gl>
@@ -997,10 +996,10 @@ together on tree</gl>
       <gl>be dry; run out of water; (tide) be low</gl>
    </mel>
    <mel id="279">
+      <gl>painful, hurt</gl>
       <gl>painful; hurt</gl>
       <gl>painful; sick</gl>
       <gl>too much</gl>
-      <gl>painful, hurt</gl>
    </mel>
    <mel id="280">
       <gl>heavy</gl>
@@ -1018,22 +1017,22 @@ together on tree</gl>
       <gl>Ptilinopus tannensis</gl>
    </mel>
    <mel id="285">
-      <gl>cooked food in oven</gl>
-      <gl>cooked</gl>
       <gl>(food) done, cooked, ready to eat</gl>
+      <gl>cooked</gl>
+      <gl>cooked food in oven</gl>
    </mel>
    <mel id="286">
       <gl>[n] towel</gl>
-      <gl>wipe (hands+), tradit. using coconut husk fibres</gl>
       <gl>[v] wipe (hands+)</gl>
       <gl>[v] wipe (hands+); [n] coconut husk fibre</gl>
+      <gl>wipe (hands+), tradit. using coconut husk fibres</gl>
    </mel>
    <mel id="287">
-      <gl>mist</gl>
-      <gl>hazy; blurred</gl>
-      <gl>gray (sago)</gl>
-      <gl>fuzzy;  gray (sago)</gl>
       <gl>fuzzy</gl>
+      <gl>fuzzy;  gray (sago)</gl>
+      <gl>gray (sago)</gl>
+      <gl>hazy; blurred</gl>
+      <gl>mist</gl>
    </mel>
    <mel id="288">
       <gl>village chief</gl>
@@ -1057,8 +1056,8 @@ together on tree</gl>
       <gl>hard, strong; stubborn</gl>
    </mel>
    <mel id="295">
-      <gl>hungry</gl>
       <gl>famine, disaster</gl>
+      <gl>hungry</gl>
    </mel>
    <mel id="296">
       <gl>hunger; be hungry</gl>
@@ -1067,9 +1066,9 @@ together on tree</gl>
       <gl>want, like</gl>
    </mel>
    <mel id="298">
-      <gl>fish; bird</gl>
-      <gl>fish; (sometimes) bird</gl>
       <gl>fish</gl>
+      <gl>fish; (sometimes) bird</gl>
+      <gl>fish; bird</gl>
    </mel>
    <mel id="299">
       <gl>sweat</gl>
@@ -1085,9 +1084,9 @@ together on tree</gl>
       <gl>in vain</gl>
    </mel>
    <mel id="303">
+      <gl>full-grown, ripe, ready to harvest</gl>
       <gl>old man, old</gl>
       <gl>ripe; (moon) full</gl>
-      <gl>full-grown, ripe, ready to harvest</gl>
    </mel>
    <mel id="304">
       <gl/>
@@ -1114,8 +1113,8 @@ together on tree</gl>
       <gl>red</gl>
    </mel>
    <mel id="312">
-      <gl>skilful, clever</gl>
       <gl>clever, smart</gl>
+      <gl>skilful, clever</gl>
    </mel>
    <mel id="313">
       <gl>Classifier for temporary or inessential possession</gl>
@@ -1125,9 +1124,9 @@ together on tree</gl>
       <gl>too; again</gl>
    </mel>
    <mel id="315">
-      <gl>semen</gl>
-      <gl>(vulg) liar, bullshit</gl>
       <gl>(slg) stupidity</gl>
+      <gl>(vulg) liar, bullshit</gl>
+      <gl>semen</gl>
       <gl>semen; (slg) lazy+</gl>
    </mel>
    <mel id="316">
@@ -1177,9 +1176,9 @@ together on tree</gl>
       <gl>goatfish, Mullidae spp.</gl>
    </mel>
    <mel id="331">
+      <gl>(n.) abundance of fruit</gl>
       <gl>(v.) fall</gl>
       <gl>(v.) fall; (n.) abundance of fruit</gl>
-      <gl>(n.) abundance of fruit</gl>
    </mel>
    <mel id="332">
       <gl>purple swamphen, Porphyrio porphyrio</gl>
@@ -1191,13 +1190,13 @@ together on tree</gl>
       <gl>hundred</gl>
    </mel>
    <mel id="335">
+      <gl>[Pl] people, those who</gl>
       <gl>baby</gl>
       <gl>child</gl>
       <gl>children</gl>
       <gl>dummy noun: the one who/which; relativiser</gl>
-      <gl>those two</gl>
       <gl>someone</gl>
-      <gl>[Pl] people, those who</gl>
+      <gl>those two</gl>
    </mel>
    <mel id="336">
       <gl>before, coming first</gl>
@@ -1206,15 +1205,15 @@ together on tree</gl>
       <gl>Citrus sp.</gl>
    </mel>
    <mel id="338">
-      <gl>title of rank in women's suqe</gl>
       <gl>highly-ranked woman</gl>
+      <gl>title of rank in women's suqe</gl>
    </mel>
    <mel id="339">
-      <gl>Stative, Future</gl>
-      <gl>Stative (+ Future)</gl>
       <gl>Stative</gl>
-      <gl>proclitic for Stative and Future</gl>
+      <gl>Stative (+ Future)</gl>
+      <gl>Stative, Future</gl>
       <gl>be likely to (Future)</gl>
+      <gl>proclitic for Stative and Future</gl>
    </mel>
    <mel id="340">
       <gl>Pterocarpus indicus</gl>
@@ -1241,11 +1240,11 @@ together on tree</gl>
       <gl>shadow, reflection, silhouette</gl>
    </mel>
    <mel id="348">
-      <gl>sheath around base of coconut frond, used as strainer</gl>
       <gl>fibre in the coconut husk</gl>
-      <gl>fibrous spathe of coconut frond</gl>
       <gl>fibre in the coconut husk (and/or) strainer made of coconut
 frond sheath</gl>
+      <gl>fibrous spathe of coconut frond</gl>
+      <gl>sheath around base of coconut frond, used as strainer</gl>
    </mel>
    <mel id="349">
       <gl>pant; be exhausted</gl>
@@ -1255,22 +1254,22 @@ frond sheath</gl>
    </mel>
    <mel id="351">
       <gl>(bird) beak; snout, mouth; (knife) blade</gl>
-      <gl>face; (knife) blade</gl>
       <gl>blade</gl>
-      <gl>snout, mouth, lips; (bird) beak; (knife+) blade</gl>
+      <gl>face; (knife) blade</gl>
       <gl>snout, mouth</gl>
+      <gl>snout, mouth, lips; (bird) beak; (knife+) blade</gl>
    </mel>
    <mel id="352">
       <gl>cape, promontory</gl>
    </mel>
    <mel id="353">
       <gl>grunt, nort, snore</gl>
-      <gl>snore</gl>
       <gl>sleep</gl>
+      <gl>snore</gl>
    </mel>
    <mel id="354">
-      <gl>name of a shrub on the beach</gl>
       <gl>k.o. hardwood tree, Scaevola taccata</gl>
+      <gl>name of a shrub on the beach</gl>
    </mel>
    <mel id="355">
       <gl>beak; cape</gl>
@@ -1280,15 +1279,15 @@ frond sheath</gl>
       <gl>canoe tree, Gyrocarpus americanus</gl>
    </mel>
    <mel id="357">
-      <gl>go in; go out</gl>
       <gl>crawl</gl>
+      <gl>go in; go out</gl>
    </mel>
    <mel id="358">
       <gl>sand, beach</gl>
    </mel>
    <mel id="359">
-      <gl>barracuda, Sphyraena sp.</gl>
       <gl>Hemirhamphus</gl>
+      <gl>barracuda, Sphyraena sp.</gl>
    </mel>
    <mel id="360">
       <gl>play; game</gl>
@@ -1313,13 +1312,13 @@ frond sheath</gl>
       <gl>climb (hill, tree); esp. climb &lt;tree&gt; to get some fruit</gl>
    </mel>
    <mel id="367">
-      <gl>pull, drag</gl>
-      <gl>grab, pull; (s.th.) affect s.o.</gl>
-      <gl>pull out (vine)</gl>
-      <gl>pull out</gl>
-      <gl>pull, drag; bend (bow); (s.th.) affect s.o.</gl>
       <gl>(s.th.) affect s.o.</gl>
       <gl>draw, drag; pull out (vine); (sickness+) affect (s.o.)</gl>
+      <gl>grab, pull; (s.th.) affect s.o.</gl>
+      <gl>pull out</gl>
+      <gl>pull out (vine)</gl>
+      <gl>pull, drag</gl>
+      <gl>pull, drag; bend (bow); (s.th.) affect s.o.</gl>
    </mel>
    <mel id="368">
       <gl>on it, upon it</gl>
@@ -1366,9 +1365,9 @@ frond sheath</gl>
    </mel>
    <mel id="381">
       <gl>?</gl>
+      <gl>big, large</gl>
       <gl>swell</gl>
       <gl>swell; fat, big</gl>
-      <gl>big, large</gl>
    </mel>
    <mel id="382">
       <gl>dolphin</gl>
@@ -1392,8 +1391,8 @@ frond sheath</gl>
       <gl>stretch o.'s arm</gl>
    </mel>
    <mel id="388">
-      <gl>carry on shoulder a stick with burdens on both ends</gl>
       <gl>carry on shoulder a stick with burden in the back</gl>
+      <gl>carry on shoulder a stick with burdens on both ends</gl>
    </mel>
    <mel id="389">
       <gl>lazy, listless, tired</gl>
@@ -1405,21 +1404,21 @@ frond sheath</gl>
       <gl/>
    </mel>
    <mel id="392">
-      <gl>sink down, be low, be deep</gl>
+      <gl>(adj.) deep</gl>
+      <gl>(adj.) deep; (v.) sink</gl>
       <gl>(direc.) down; out, seawards; towards northwest</gl>
       <gl>(direc.) down; seawards; towards northwest</gl>
-      <gl>(adj.) deep</gl>
-      <gl>sink down; be low, be deep; down</gl>
       <gl>(v.) sink, go down to deep place; fall into hole</gl>
-      <gl>(adj.) deep; (v.) sink</gl>
       <gl>sink</gl>
+      <gl>sink down, be low, be deep</gl>
+      <gl>sink down; be low, be deep; down</gl>
    </mel>
    <mel id="393">
       <gl/>
    </mel>
    <mel id="394">
-      <gl>rumour, news, message; fame</gl>
       <gl>message</gl>
+      <gl>rumour, news, message; fame</gl>
    </mel>
    <mel id="395">
       <gl>holy</gl>
@@ -1427,8 +1426,8 @@ frond sheath</gl>
    </mel>
    <mel id="396">
       <gl>(n) coil ; roll ; bundle</gl>
-      <gl>tied, bound together</gl>
       <gl>bind, tie, bundle</gl>
+      <gl>tied, bound together</gl>
       <gl>to tie, bind things or parts of things together</gl>
    </mel>
    <mel id="397">
@@ -1436,8 +1435,8 @@ frond sheath</gl>
    </mel>
    <mel id="398">
       <gl>[vi] dash, rush out; fly away; jump</gl>
-      <gl>jump; fly off</gl>
       <gl>jump; (liquid) run</gl>
+      <gl>jump; fly off</gl>
    </mel>
    <mel id="399">
       <gl/>
@@ -1467,12 +1466,12 @@ frond sheath</gl>
       <gl>bad</gl>
    </mel>
    <mel id="408">
-      <gl>(n.) smoke</gl>
-      <gl>(v.t.) heat s.th. up with fire</gl>
       <gl>(adj.) hot, warm</gl>
-      <gl>hot steam</gl>
+      <gl>(n.) smoke</gl>
       <gl>(n.) steam</gl>
       <gl>(steam) puff forth, burst out</gl>
+      <gl>(v.t.) heat s.th. up with fire</gl>
+      <gl>hot steam</gl>
    </mel>
    <mel id="409">
       <gl>put in a crotch, hitch, to set a snare, esp. for birds (a children's
@@ -1503,8 +1502,8 @@ game)</gl>
       <gl>float</gl>
    </mel>
    <mel id="418">
-      <gl>channel on reef shore</gl>
       <gl>a creek in the coral of a reef through which canoes are brought through to shore</gl>
+      <gl>channel on reef shore</gl>
    </mel>
    <mel id="419">
       <gl>angle fish</gl>
@@ -1513,31 +1512,31 @@ game)</gl>
       <gl>cut with slashing motion</gl>
    </mel>
    <mel id="421">
-      <gl>ashore; (gen.) outside</gl>
       <gl>ashore, terra firma (opp. sea); outside</gl>
+      <gl>ashore; (gen.) outside</gl>
    </mel>
    <mel id="422">
-      <gl>clearing in middle of village</gl>
       <gl>area of (s.o.), private territory of (s.o.)</gl>
+      <gl>clearing in middle of village</gl>
    </mel>
    <mel id="423">
       <gl>rub, stroke</gl>
    </mel>
    <mel id="424">
-      <gl>[n] spear</gl>
+      <gl>(vt) husk coconut</gl>
       <gl>(vt) spear, poke</gl>
       <gl>(vt) stab, spear; play music with stamping bamboo</gl>
-      <gl>(vt) husk coconut</gl>
+      <gl>[n] spear</gl>
    </mel>
    <mel id="425">
       <gl/>
    </mel>
    <mel id="426">
-      <gl>spill, pour out, esp. in a mass (liquid); throw away
-(rubbish+)</gl>
-      <gl>spill (liquid)</gl>
       <gl>pour (liquid)</gl>
       <gl>pour (liquid); throw away (rubbish)</gl>
+      <gl>spill (liquid)</gl>
+      <gl>spill, pour out, esp. in a mass (liquid); throw away
+(rubbish+)</gl>
    </mel>
    <mel id="427">
       <gl/>
@@ -1552,9 +1551,9 @@ game)</gl>
       <gl>sea urchin</gl>
    </mel>
    <mel id="431">
-      <gl>different, other; separate</gl>
-      <gl>different, other</gl>
       <gl>different</gl>
+      <gl>different, other</gl>
+      <gl>different, other; separate</gl>
       <gl>separate</gl>
    </mel>
    <mel id="432">
@@ -1578,9 +1577,9 @@ wooden sticks on their shoulders</gl>
       <gl>perform manly dance</gl>
    </mel>
    <mel id="438">
-      <gl>traditional music and orchestra accompanying village dances</gl>
       <gl>(gen.) dance</gl>
       <gl>(n.) kind of manly dance</gl>
+      <gl>traditional music and orchestra accompanying village dances</gl>
    </mel>
    <mel id="439">
       <gl>sick</gl>
@@ -1591,8 +1590,8 @@ wooden sticks on their shoulders</gl>
    </mel>
    <mel id="441">
       <gl>[vt] break w. knife (?)</gl>
-      <gl>cut in thin slices</gl>
       <gl>[vt] slice</gl>
+      <gl>cut in thin slices</gl>
       <gl>slice, pare</gl>
    </mel>
    <mel id="442">
@@ -1605,25 +1604,25 @@ wooden sticks on their shoulders</gl>
       <gl>darkness</gl>
    </mel>
    <mel id="445">
-      <gl>sip, sup; drink</gl>
       <gl>sip, sup, up</gl>
+      <gl>sip, sup; drink</gl>
    </mel>
    <mel id="446">
       <gl>(sun) shine</gl>
    </mel>
    <mel id="447">
+      <gl>(sun, moon) shine; bright light</gl>
       <gl>[n, vt] light</gl>
-      <gl>moon (not month!)</gl>
       <gl>illuminate</gl>
+      <gl>moon (not month!)</gl>
       <gl>moon; month</gl>
       <gl>throw light upon</gl>
-      <gl>(sun, moon) shine; bright light</gl>
    </mel>
    <mel id="448">
-      <gl>grate</gl>
-      <gl>shave</gl>
       <gl>cut w. blade, peel; shave</gl>
+      <gl>grate</gl>
       <gl>grate coconut</gl>
+      <gl>shave</gl>
    </mel>
    <mel id="449">
       <gl>waterfall</gl>
@@ -1635,8 +1634,8 @@ wooden sticks on their shoulders</gl>
       <gl>excessively, very much</gl>
    </mel>
    <mel id="452">
-      <gl>rest on, lean against</gl>
       <gl>fall</gl>
+      <gl>rest on, lean against</gl>
    </mel>
    <mel id="453">
       <gl>seek, search, look for</gl>
@@ -1645,8 +1644,8 @@ wooden sticks on their shoulders</gl>
       <gl>pig</gl>
    </mel>
    <mel id="455">
-      <gl>stow, put &lt;s.th.&gt; in (basket)</gl>
       <gl>stow</gl>
+      <gl>stow, put &lt;s.th.&gt; in (basket)</gl>
    </mel>
    <mel id="456">
       <gl>give &lt;s.th.&gt; as a present</gl>
@@ -1694,8 +1693,8 @@ wooden sticks on their shoulders</gl>
       <gl>strength</gl>
    </mel>
    <mel id="469">
-      <gl>[conj.] because</gl>
       <gl>Dative</gl>
+      <gl>[conj.] because</gl>
    </mel>
    <mel id="470">
       <gl>downwards; towards northwest</gl>
@@ -1710,11 +1709,11 @@ wooden sticks on their shoulders</gl>
       <gl/>
    </mel>
    <mel id="474">
+      <gl>lift s.th.</gl>
       <gl>put s.th. back up after it fell</gl>
       <gl>put s.th. up, erect</gl>
       <gl>set up on end, hoist, erect</gl>
       <gl>‘lift up’ the song…</gl>
-      <gl>lift s.th.</gl>
    </mel>
    <mel id="475">
       <gl/>
@@ -1732,12 +1731,12 @@ wooden sticks on their shoulders</gl>
       <gl>wooden dish</gl>
    </mel>
    <mel id="479">
+      <gl>[adj] taboo, sacred, forbidden</gl>
       <gl>[n] graveyard</gl>
       <gl>a sign marking a place as taboo or forbidden, especially
 against ghosts</gl>
-      <gl>taboo place on island</gl>
       <gl>day of silence in sign of mourning</gl>
-      <gl>[adj] taboo, sacred, forbidden</gl>
+      <gl>taboo place on island</gl>
       <gl>taboo, sacred, forbidden</gl>
    </mel>
    <mel id="480">
@@ -1750,8 +1749,8 @@ against ghosts</gl>
       <gl>cuttlefish, Sepia sp.</gl>
    </mel>
    <mel id="483">
-      <gl>gourd, Crescentia cujete (?)</gl>
       <gl>a kind of gourd, eaten</gl>
+      <gl>gourd, Crescentia cujete (?)</gl>
    </mel>
    <mel id="484">
       <gl>defecate</gl>
@@ -1765,17 +1764,17 @@ against ghosts</gl>
 sago-leaves</gl>
    </mel>
    <mel id="487">
-      <gl>your behaviour</gl>
+      <gl>a morsel of food thrown for a ghost</gl>
+      <gl>a thing belonging to a person which has magic power</gl>
+      <gl>cultural hero</gl>
+      <gl>magic power of man (e.g. initiates)</gl>
+      <gl>magic power of spirits</gl>
+      <gl>magic power; divine inspiration in o.'s actions (?), luck</gl>
       <gl>magic stone in the bush, used as altar for sorcery</gl>
       <gl>stone, carried or hung up in a bag, possessed of magic
 powers as the abode of a 'vui'</gl>
-      <gl>magic power; divine inspiration in o.'s actions (?), luck</gl>
-      <gl>a morsel of food thrown for a ghost</gl>
-      <gl>magic power of spirits</gl>
-      <gl>cultural hero</gl>
+      <gl>your behaviour</gl>
       <gl>your magic power</gl>
-      <gl>a thing belonging to a person which has magic power</gl>
-      <gl>magic power of man (e.g. initiates)</gl>
    </mel>
    <mel id="488">
       <gl/>
@@ -1848,15 +1847,15 @@ powers as the abode of a 'vui'</gl>
       <gl>love, feel affection for s.o.; present s.o. with a gift</gl>
    </mel>
    <mel id="510">
-      <gl>carry over the shoulder on a stick</gl>
       <gl>(vt) carry with stick; (n) carrying stick</gl>
+      <gl>carry over the shoulder on a stick</gl>
    </mel>
    <mel id="511">
       <gl>pray</gl>
    </mel>
    <mel id="512">
-      <gl>year, season</gl>
       <gl>season of</gl>
+      <gl>year, season</gl>
    </mel>
    <mel id="513">
       <gl/>
@@ -1905,15 +1904,15 @@ powers as the abode of a 'vui'</gl>
       <gl>pregnant</gl>
    </mel>
    <mel id="528">
-      <gl>blunt arrow; shoot a blunt arrow (or stone…) at</gl>
-      <gl>shoot and hit</gl>
-      <gl>shoot a blunt arrow (or stone…) at</gl>
-      <gl>shoot; blunt arrow+</gl>
       <gl>blunt arrow</gl>
+      <gl>blunt arrow; shoot a blunt arrow (or stone…) at</gl>
+      <gl>shoot a blunt arrow (or stone…) at</gl>
+      <gl>shoot and hit</gl>
+      <gl>shoot; blunt arrow+</gl>
    </mel>
    <mel id="529">
-      <gl>show &lt;s.th.&gt;, reveal</gl>
       <gl>(rare) reveal to o.'s heirs their land properties</gl>
+      <gl>show &lt;s.th.&gt;, reveal</gl>
    </mel>
    <mel id="530">
       <gl>goatfish, Mullidae sp.</gl>
@@ -1929,8 +1928,8 @@ powers as the abode of a 'vui'</gl>
    </mel>
    <mel id="534">
       <gl>(eat) one's fill</gl>
-      <gl>his/her belly</gl>
       <gl>belly</gl>
+      <gl>his/her belly</gl>
       <gl>pregnant</gl>
    </mel>
    <mel id="535">
@@ -1940,12 +1939,12 @@ powers as the abode of a 'vui'</gl>
       <gl>wild cane, Miscanthus floridulus</gl>
    </mel>
    <mel id="537">
-      <gl>stiff; hard, strong</gl>
-      <gl>stiff, hard, tight, not slack; quickly</gl>
       <gl>quick; quickly</gl>
       <gl>stiff (from death)</gl>
-      <gl>stiff, tight</gl>
       <gl>stiff, hard</gl>
+      <gl>stiff, hard, tight, not slack; quickly</gl>
+      <gl>stiff, tight</gl>
+      <gl>stiff; hard, strong</gl>
    </mel>
    <mel id="538">
       <gl>sweet yam, Dioscorea esculenta</gl>
@@ -1981,8 +1980,8 @@ powers as the abode of a 'vui'</gl>
       <gl/>
    </mel>
    <mel id="549">
-      <gl>be torrential</gl>
       <gl>(water) be plenty, be torrential</gl>
+      <gl>be torrential</gl>
    </mel>
    <mel id="550">
       <gl/>
@@ -1994,17 +1993,17 @@ powers as the abode of a 'vui'</gl>
       <gl>cultivated garden</gl>
    </mel>
    <mel id="553">
-      <gl>(v) cough</gl>
       <gl>(n) cough</gl>
+      <gl>(v) cough</gl>
       <gl>cough</gl>
    </mel>
    <mel id="554">
-      <gl>‘drifts to the horizon’, personal name</gl>
-      <gl>‘beyond the sky/horizon’, honourific title</gl>
-      <gl>upper sky, where the stars are; (hence) honourific rank</gl>
-      <gl>‘beyond the sky’, honorific title</gl>
       <gl>horizon (not sky)</gl>
       <gl>upper sky (by day or by night)</gl>
+      <gl>upper sky, where the stars are; (hence) honourific rank</gl>
+      <gl>‘beyond the sky/horizon’, honourific title</gl>
+      <gl>‘beyond the sky’, honorific title</gl>
+      <gl>‘drifts to the horizon’, personal name</gl>
    </mel>
    <mel id="555">
       <gl/>
@@ -2014,17 +2013,16 @@ powers as the abode of a 'vui'</gl>
    </mel>
    <mel id="557">
       <gl>acquire &lt;s.th. valuable&gt; through formal exchange of goods</gl>
-      <gl/>
       <gl>buy</gl>
    </mel>
    <mel id="558">
       <gl>body</gl>
-      <gl>true</gl>
       <gl>body, trunk; the real, main, very X; really</gl>
+      <gl>true</gl>
    </mel>
    <mel id="559">
-      <gl>knock with fist; esp. technique used in catching birds</gl>
       <gl>knock (s.o., s.th.) with fist</gl>
+      <gl>knock with fist; esp. technique used in catching birds</gl>
    </mel>
    <mel id="560">
       <gl>hot, warm</gl>
@@ -2033,9 +2031,9 @@ powers as the abode of a 'vui'</gl>
       <gl>one</gl>
    </mel>
    <mel id="562">
-      <gl>ashes</gl>
-      <gl>accumulation of ashes in a fire-place</gl>
       <gl>accumulation of ashes</gl>
+      <gl>accumulation of ashes in a fire-place</gl>
+      <gl>ashes</gl>
    </mel>
    <mel id="563">
       <gl>not yet; wait!</gl>
@@ -2053,13 +2051,13 @@ powers as the abode of a 'vui'</gl>
       <gl>end a song with final verse</gl>
    </mel>
    <mel id="568">
-      <gl>howl, cry; call</gl>
-      <gl>yell, cry; call s.o.; name s.th.</gl>
-      <gl>yell</gl>
-      <gl>howl, cry</gl>
       <gl>(cock) crow; yell</gl>
-      <gl>shout, yell</gl>
       <gl>call a name+</gl>
+      <gl>howl, cry</gl>
+      <gl>howl, cry; call</gl>
+      <gl>shout, yell</gl>
+      <gl>yell</gl>
+      <gl>yell, cry; call s.o.; name s.th.</gl>
    </mel>
    <mel id="569">
       <gl>top of (tree); end</gl>
@@ -2069,8 +2067,8 @@ powers as the abode of a 'vui'</gl>
    </mel>
    <mel id="571">
       <gl>[n] bamboo drum; [vt] hit with two sticks</gl>
-      <gl>hit with stick</gl>
       <gl>bamboo drum</gl>
+      <gl>hit with stick</gl>
    </mel>
    <mel id="572">
       <gl>laugh</gl>
@@ -2083,10 +2081,10 @@ powers as the abode of a 'vui'</gl>
       <gl>dive, swim under water</gl>
    </mel>
    <mel id="575">
+      <gl>Hemirhamphus (??)</gl>
+      <gl>k.o. long fish with shining scales, similar to barracuda</gl>
       <gl>large long fish with very sharp teeth and small scales:  a sphyraenid, barracuda</gl>
       <gl>mackerel, Scomberomorus</gl>
-      <gl>k.o. long fish with shining scales, similar to barracuda</gl>
-      <gl>Hemirhamphus (??)</gl>
    </mel>
    <mel id="576">
       <gl>boat, esp. canoe</gl>
@@ -2102,10 +2100,10 @@ powers as the abode of a 'vui'</gl>
       <gl>reach; until</gl>
    </mel>
    <mel id="580">
-      <gl>string; sinew</gl>
+      <gl>sinew, tendon</gl>
       <gl>string</gl>
       <gl>string, cobweb; sinew+</gl>
-      <gl>sinew, tendon</gl>
+      <gl>string; sinew</gl>
    </mel>
    <mel id="581">
       <gl>Lethrinus miniatus</gl>
@@ -2116,8 +2114,8 @@ powers as the abode of a 'vui'</gl>
    </mel>
    <mel id="583">
       <gl>Lethrinus harak</gl>
-      <gl>a fish</gl>
       <gl>Lethrinus miniatus</gl>
+      <gl>a fish</gl>
       <gl>k.o. fish, Lethrinus sp.</gl>
    </mel>
    <mel id="584">
@@ -2127,8 +2125,8 @@ powers as the abode of a 'vui'</gl>
       <gl>good</gl>
    </mel>
    <mel id="586">
-      <gl>one who is liked, admired</gl>
       <gl>highly-ranked young man</gl>
+      <gl>one who is liked, admired</gl>
    </mel>
    <mel id="587">
       <gl>full, complete; shut</gl>
