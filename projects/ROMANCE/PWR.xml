@@ -139,7 +139,7 @@
    <corr num="br-inter">
       <proto contextL="V" contextR="V" syll="CC">br</proto>
       <modern dialecte="PIR">
-         <seg>br</seg>
+         <seg>bɾ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>vʁ</seg>
@@ -166,7 +166,7 @@
    <corr num="dr-inter">
       <proto contextL="V" contextR="V" syll="C">dr</proto>
       <modern dialecte="PIR">
-         <seg>dr</seg>
+         <seg>dɾ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>ʁ</seg>
@@ -344,7 +344,7 @@
    <corr num="gr-inter">
       <proto contextL="V" contextR="V" syll="CC">gr</proto>
       <modern dialecte="PIR">
-         <seg>gr</seg>
+         <seg>gɾ</seg>
       </modern>
       <modern dialecte="fr">
          <seg>ʁ</seg>
