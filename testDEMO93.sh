@@ -4,7 +4,7 @@ DATE=`date +%Y-%m-%d-%H-%M`
 
 pwd
 # first make sets
-time python3 REcli.py DEMO93 --mel hand > ../projects/DEMO93/DEMO93.${DATE}.statistics.txt
+time python3 REcli.py DEMO93 -r hand --mel hand > ../projects/DEMO93/DEMO93.${DATE}.statistics.txt
 cat ../projects/DEMO93/DEMO93.${DATE}.statistics.txt
 
 # second test mel comparison
