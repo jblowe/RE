@@ -11,6 +11,6 @@ def load_hook(project, settings, attested_lexicons):
     try:
         from hook import run_load_hooks
         run_load_hooks(settings, attested_lexicons)
-        
+
     except ModuleNotFoundError:
         print('No preprocessing needed.')
