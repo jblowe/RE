@@ -114,6 +114,7 @@ def read_settings_file(filename, mel='none', recon='default'):
     attested = {}
     proto_languages = {}
     mel_filenames = {}
+    other = {}
     for setting in ET.parse(filename).getroot():
         if setting.tag == 'reconstruction' and setting.attrib['name'] == recon:
             for spec in setting:
@@ -136,14 +137,15 @@ def read_settings_file(filename, mel='none', recon='default'):
         #elif setting.tag == 'csvdata':
         #    attested['csvdata'] = setting.attrib['file']
         elif setting.tag == 'param':
-            pass
+            other[setting.attrib['name']] = setting.attrib['value']
     return RE.ProjectSettings(os.path.dirname(filename),
                               None if mel == 'none' else mel_filenames[mel],
                               attested,
                               proto_languages,
                               target,
                               upstream,
-                              downstream)
+                              downstream,
+                              other)
 
 
 # returns a generator returning the modern form and its gloss
@@ -213,3 +215,19 @@ def get_element(language, entry, field):
         return ''
     else:
         return element.text
+
+
+# Return a map from representatives to the class they map to.
+def read_fuzzy_file(filename):
+    mapping = dict()
+    for child in ET.parse(filename).iterfind('item'):
+        dialect = child.attrib.get('dial')
+        target = child.attrib.get('to')
+        for representative in child:
+            previous_target = mapping.get(representative, False)
+            if previous_target:
+                raise Exception(f'ambiguous fuzzing for {representative}',
+                                'it maps to both {target} and {previous_target}')
+            else:
+                mapping[(dialect, representative.text)] = target
+    return mapping

@@ -12,36 +12,36 @@ filename = os.path.join(base_dir, 'AlexF_NorthVan-reconstructions_01.txt')
 
 languages = ['hiw', 'ltg', 'lhi', 'lyp', 'vlw', 'mtp', 'lmg', 'vra', 'vrs', 'msn', 'mta', 'num', 'drg', 'kro', 'olr', 'lkn', 'mrl']
 
-print('reading toolbox file')
-
-with open(filename, encoding='utf-8', errors='ignore') as file:
-    pairs = toolbox.read_toolbox_file(file)
-    zipped = defaultdict(list)
-    mels = defaultdict(list)
-    for set_number, (context, data) in enumerate(toolbox.records(pairs, ['\\pnv', '\\psm'])):
-        mel = set()
-        proto_gloss = context['\\psm']
-        mel.add(proto_gloss)
-        i = 0
-        while (i < len(data) - 1):
-            (tag, value) = data[i]
-            if tag[1:] in languages and value:
-                gloss = proto_gloss
-                if data[i + 1][0] == '\\sem':
-                    gloss = data[i + 1][1]
-                    i += 1
-                zipped[tag[1:]].append((value, gloss))
-                if gloss:
-                    mel.add(gloss)
-            i += 1
-        mels[set_number] = mel
-
+def read_toolbox_file():
+    print('reading toolbox file')
+    with open(filename, encoding='utf-8', errors='ignore') as file:
+        pairs = toolbox.read_toolbox_file(file)
+        zipped = defaultdict(list)
+        mels = defaultdict(list)
+        for set_number, (context, data) in enumerate(toolbox.records(pairs, ['\\pnv', '\\psm'])):
+            mel = set()
+            proto_gloss = context['\\psm']
+            mel.add(proto_gloss)
+            i = 0
+            while (i < len(data) - 1):
+                (tag, value) = data[i]
+                if tag[1:] in languages and value:
+                    gloss = proto_gloss
+                    if data[i + 1][0] == '\\sem':
+                        gloss = data[i + 1][1]
+                        i += 1
+                    zipped[tag[1:]].append((value, gloss))
+                    if gloss:
+                        mel.add(gloss)
+                i += 1
+            mels[set_number] = mel
+    return (zipped, mels)
 
 def xml_name(x):
     return x + '.data.xml'
 
-
-def write_vanuatu_data():
+def write_vanuatu_data(zipped, mels):
+    print('converting from toolbox format')
     for language in languages:
         root = ET.Element('lexicon', attrib={'dialecte': language})
         for (number, (glyphs, gloss)) in enumerate(zipped[language]):
@@ -61,13 +61,7 @@ def write_vanuatu_data():
     with open(os.path.join(base_dir, 'VANUATU.hand.mel.xml'), 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
-
-
-print('converting from toolbox format')
-
-write_vanuatu_data()
-print('conversion complete')
-
+    print('conversion complete')
 
 def write_parameters_file():
     root = ET.Element('params')
@@ -89,7 +83,8 @@ def write_parameters_file():
     with open(os.path.join(base_dir, 'VANUATU.default.parameters.xml'), 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
+    print('parameters file written')
 
-
-write_parameters_file()
-print('parameters file written')
+def run_load_hooks(settings, lexicons):
+    write_vanuatu_data(*read_toolbox_file())
+    write_parameters_file()
