@@ -134,7 +134,7 @@ class ProtoForm(Form):
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
-                 target, upstream, downstream):
+                 target, upstream, downstream, other):
         self.mel_filename = (os.path.join(directory_path,
                                           mel_filename)
                              if mel_filename else None)
@@ -144,6 +144,7 @@ class ProjectSettings:
         self.upstream_target = target
         self.upstream = upstream
         self.downstream = downstream
+        self.other = other
 
 class Statistics:
     def __init__(self):

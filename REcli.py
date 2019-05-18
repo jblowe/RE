@@ -9,7 +9,6 @@ from argparser import args, need_to_compare, project_dir
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
-load_hooks.load_hook(args.project)
 settings = read.read_settings_file(f'{project_dir}/{args.project}.default.parameters.xml',
                                    mel=args.mel,
                                    recon=args.recon)
@@ -17,6 +16,7 @@ settings = read.read_settings_file(f'{project_dir}/{args.project}.default.parame
 print(f'{project_dir}/{args.project}.default.parameters.xml')
 
 attested_lexicons = read.read_attested_lexicons(settings)
+load_hooks.load_hook(args.project, settings, attested_lexicons)
 
 if args.coverage:
     if args.mel == 'none':

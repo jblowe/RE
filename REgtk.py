@@ -287,7 +287,6 @@ class REWindow(Gtk.Window):
     def __init__(self, settings):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1024)
-        attested_lexicons = read.read_attested_lexicons(settings)
 
         statistics_pane = make_pane(vexpand=True, hexpand=True)
         statistics_view = Gtk.TextView()
@@ -319,8 +318,9 @@ def run(settings):
     sys.stdout = out
 
 if __name__ == "__main__":
-    load_hooks.load_hook(args.project)
     settings = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)
-    run(settings)
+    attested_lexicons = read.read_attested_lexicons(settings)
+    load_hooks.load_hook(args.project, settings, attested_lexicons)
+    run(settings, attested_lexicons, args_)
