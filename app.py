@@ -4,11 +4,6 @@ import os
 import sys
 import utils
 
-# we need some code from the sibling directory where the rest of the RE code lives
-sys.path.append("../src")
-
-import projects
-
 dirname = os.path.dirname(os.path.abspath(__file__))
 
 app = Bottle()
@@ -42,8 +37,8 @@ def index():
 
 @app.route('/list_projects')
 def list_projects():
-    project_names = [p for p in projects.projects]
-    data = {'projects': project_names}
+    project_info = utils.project_info()
+    data = {'projects': project_info}
     return template('index', data=data)
 
 
@@ -64,7 +59,13 @@ def project_files(filename):
 
 @app.route('/make')
 def make():
-    data = {'make': utils.make(dirname)}
+    data = {'make': utils.make('ALL')}
+    return template('index', data=data)
+
+
+@app.route('/make/<project_name:re:.*>')
+def make(project_name):
+    data = {'make': utils.make(project_name)}
     return template('index', data=data)
 
 

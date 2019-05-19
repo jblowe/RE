@@ -1,5 +1,10 @@
-import os, time
+import os, time, sys
 import subprocess
+
+# we need some code from the sibling directory where the rest of the RE code lives
+sys.path.append("../src")
+
+import projects
 
 # nb: we are trying to get the directory above the directory this file is in
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +28,7 @@ def add_time_and_version():
 
 
 def data_files(project):
-    project_dir = os.path.join(BASE_DIR, 'projects', project)
+    project_dir = projects.projects[project]
     filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
@@ -40,8 +45,8 @@ def data_files(project):
 
 def file_content(file_path):
     # file_path contains the project and filename, e.g. TGTM/TGTM.mel.xml
-    project = file_path.split('/')[0]
-    file_path = os.path.join(BASE_DIR, 'projects', file_path)
+    (project, filename) = file_path.split('/')
+    file_path = os.path.join(projects.projects[project], filename)
     if '.xml' in file_path:
         xslt_path = determine_file_type(file_path)
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
@@ -61,6 +66,12 @@ def file_content(file_path):
         f.close()
         data = reformat(data, 1000)
     return data, project
+
+
+def project_info():
+    #project_dir = os.path.join(BASE_DIR, 'projects', project)
+    #filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
+    return [(p, 'nnn', projects.projects[p]) for p in projects.projects]
 
 
 def xml2html(xml_filename, xsl_filename):
@@ -112,7 +123,7 @@ def limit_lines(filecontent, max_rows):
     return '\n'.join(rows) + message
 
 
-def make(dirname):
+def make(project_name):
     try:
         elapsed_time = time.time()
         os.chdir('..')

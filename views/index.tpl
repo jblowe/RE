@@ -74,14 +74,18 @@
                 <thead>
                 <tr>
                     <th>Project</th>
+                    <th>Last updated</th>
+                    <th></th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-              % for project in data['projects']:
+              % for (project, updated_at, project_dir) in data['projects']:
                 <tr>
                     <td><a href="/project/{{project}}">{{project}}</a></td>
+                    <td>{{updated_at}}</td>
                     <td><a href="/interactive/{{project}}">interactive</a></td>
+                    <td><a href="/make/{{project}}">refresh</a></td>
                 </tr>
               % end
                 </tbody>
