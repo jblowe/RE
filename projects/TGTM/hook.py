@@ -1,4 +1,5 @@
 import read
+import serialize
 import os
 
 base_dir = os.path.dirname(__file__)
@@ -22,8 +23,9 @@ def fuzzy_string(mapping, string):
             string = string[1:]
     return ''.join(new_string)
 
-def fuzzy_lexicons(mapping, attested_lexicons):
-    print('fuzzying in-memory lexicons')
+def fuzzy_lexicons(mapping, settings):
+    attested_lexicons = read.read_attested_lexicons(settings)
+    print('fuzzying lexicons')
     for (language, lexicon) in attested_lexicons.items():
         specific_mapping = {representative: target
                             for ((language1, representative), target) in mapping.items()
@@ -31,13 +33,15 @@ def fuzzy_lexicons(mapping, attested_lexicons):
         if specific_mapping:
             for form in lexicon.forms:
                 form.glyphs = fuzzy_string(specific_mapping, form.glyphs)
+    print('writing fuzzied lexicons')
+    serialize.serialize_lexicons(attested_lexicons.values(), base_dir, '.fuzz.data.xml')
+    # make settings use these instead.
+    settings.attested = {lexicon.language: f'{lexicon.language}.fuzz.data.xml'
+                         for lexicon in attested_lexicons.values()}
 
-def run_load_hooks(settings, attested_lexicons):
+def run_load_hooks(settings):
     if 'fuzzy' in settings.other:
-        return
-        # KLUDGE: Modifies the forms in attested_lexicons in
-        # place... Hence does not preserve the source form!
         fuzzy_lexicons(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
-                       attested_lexicons)
+                       settings)
     else:
         return

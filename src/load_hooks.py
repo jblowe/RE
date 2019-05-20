@@ -4,13 +4,14 @@ import projects
 import os
 import sys
 
-def load_hook(project, settings, attested_lexicons):
+def load_hook(project, settings):
     base_dir = projects.projects[project]
     sys.path.append('toolbox/')
     sys.path.append(base_dir)
     try:
+        print('trying for hooks')
         from hook import run_load_hooks
-        run_load_hooks(settings, attested_lexicons)
+        run_load_hooks(settings)
 
     except ModuleNotFoundError:
         print('No preprocessing needed.')
