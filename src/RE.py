@@ -116,7 +116,7 @@ class ModernForm(Form):
         self.id = id
 
     def __str__(self):
-        return f'{super().__str__()}: {self.gloss}'
+        return f'{super().__str__()}\t{self.gloss}\t{self.id}'
 
 class ProtoForm(Form):
     def __init__(self, language, correspondences, supporting_forms,
@@ -446,7 +446,8 @@ def print_form(form, level):
             print_form(supporting_form, level + 1)
 
 def print_sets(lexicon):
-    for form in lexicon.forms:
+    # for form in lexicon.forms:
+    for form in sorted(lexicon.forms, key=lambda corrs: correspondences_as_ids(corrs.correspondences)):
         print_form(form, 0)
 
 def dump_sets(lexicon, filename):
@@ -460,15 +461,21 @@ def dump_xml_sets(sets, filename):
 
 def dump_keys(lexicon, filename):
     out = sys.stdout
+    forms = []
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
+        print('\t'.join('language & form,gloss,id,protoform,correspondences'.split(',')))
         for reconstruction, support in lexicon.statistics.keys.items():
-            print(f'*{correspondences_as_proto_form_string(reconstruction)}')
+            #print(f'*{correspondences_as_proto_form_string(reconstruction)}')
             for support1 in support:
-                print(f'  {str(support1)}')
+                #print(f'  {str(support1)}')
+                forms.append(str(support1) + f'\t*{correspondences_as_proto_form_string(reconstruction)}\t*{correspondences_as_ids(reconstruction)}')
+        for f in sorted(forms):
+            print(f)
         print('***failures')
         for failure in lexicon.statistics.failed_parses:
             print(f'  {str(failure)}')
     sys.stdout = out
+    return len(forms), len(lexicon.statistics.failed_parses)
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)

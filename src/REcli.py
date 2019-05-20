@@ -6,6 +6,7 @@ import coverage
 import load_hooks
 from argparser import args, need_to_compare, project_dir
 
+
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
@@ -37,12 +38,12 @@ else:
         print(f'wrote analysis to {analysis_file}')
     else:
         #print_sets(B)
-        keys_file = f'{project_dir}/{args.project}.{args.run}.keys.txt'
-        RE.dump_keys(B, keys_file)
-        print(f'wrote keys to {keys_file}')
+        keys_file = f'{project_dir}/{args.project}.{args.run}.keys.csv'
+        n, failures = RE.dump_keys(B, keys_file)
+        print(f'wrote {n} keys and {failures} failures to {keys_file}')
         sets_file = f'{project_dir}/{args.project}.{args.run}.sets.txt'
         RE.dump_sets(B, sets_file)
-        print(f'wrote text sets to {sets_file}')
+        print(f'wrote {len(B.forms)} text sets to {sets_file}')
         sets_xml_file = f'{project_dir}/{args.project}.{args.run}.sets.xml'
         RE.dump_xml_sets(B, sets_xml_file)
         print(f'wrote {len(B.forms)} xml sets to {sets_xml_file}')
