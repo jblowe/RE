@@ -58,13 +58,13 @@ def file_content(file_path):
         f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = '<pre>' + limit_lines(data, 1000) + '</pre>'
+        data = '<pre>' + limit_lines(data, 5000) + '</pre>'
 
     elif '.csv' in file_path:
         f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = reformat(data, 1000)
+        data = reformat(data, 5000)
     return data, project
 
 
