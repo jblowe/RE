@@ -284,7 +284,7 @@ def make_pane_container(orientation):
 
 class REWindow(Gtk.Window):
 
-    def __init__(self, settings):
+    def __init__(self, settings, attested_lexicons):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1024)
 
@@ -307,9 +307,9 @@ class REWindow(Gtk.Window):
 
         left_pane.add2(parameters_widget)
 
-def run(settings):
+def run(settings, attested_lexicons):
     out = sys.stdout
-    win = REWindow(settings)
+    win = REWindow(settings, attested_lexicons)
     sys.stdout = win.statistics_buffer
     win.connect('delete_event', Gtk.main_quit)
     win.show_all()
@@ -323,4 +323,4 @@ if __name__ == "__main__":
                                        recon=args.recon)
     attested_lexicons = read.read_attested_lexicons(settings)
     load_hooks.load_hook(args.project, settings, attested_lexicons)
-    run(settings, attested_lexicons, args_)
+    run(settings, attested_lexicons)
