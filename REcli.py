@@ -15,8 +15,8 @@ settings = read.read_settings_file(f'{project_dir}/{args.project}.default.parame
 
 print(f'{project_dir}/{args.project}.default.parameters.xml')
 
+load_hooks.load_hook(args.project, settings)
 attested_lexicons = read.read_attested_lexicons(settings)
-load_hooks.load_hook(args.project, settings, attested_lexicons)
 
 if args.coverage:
     if args.mel == 'none':

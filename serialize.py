@@ -33,12 +33,12 @@ def serialize_correspondence_file(filename, parameters):
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
 
-def serialize_lexicons(lexicons, dirname):
+def serialize_lexicons(lexicons, dirname, ext='.data.xml'):
     for lexicon in lexicons:
         serialize_lexicon(
             lexicon,
             os.path.join(dirname,
-                         f'{lexicon.language}.data.xml'))
+                         f'{lexicon.language}{ext}'))
 
 def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
