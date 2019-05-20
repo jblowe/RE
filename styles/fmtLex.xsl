@@ -42,14 +42,20 @@
 			<xsl:when test="dfe">
 				<gl><xsl:value-of select="dfe"/></gl>
 			</xsl:when>
+			<xsl:when test="dff">
+				<gl><xsl:value-of select="dff"/></gl>
+			</xsl:when>
 			<xsl:when test="gl">
 				<gl><xsl:value-of select="gl"/></gl>
 			</xsl:when>
 			<xsl:when test="mode/dfe">
 				<gl><xsl:value-of select="mode/dfe"/></gl>
 			</xsl:when>
-			<xsl:when test="dff">
-				<gl><xsl:value-of select="dff"/></gl>
+			<xsl:when test="mode/dff">
+				<gl><xsl:value-of select="mode/dff"/></gl>
+			</xsl:when>
+			<xsl:when test="mode/gl">
+				<gl><xsl:value-of select="gl"/></gl>
 			</xsl:when>
 			<xsl:otherwise>
 				<gl>
