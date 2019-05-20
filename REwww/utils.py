@@ -33,14 +33,24 @@ def data_files(project):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     for type in 'data correspondences parameters mel sets'.split(' '):
-        to_display.append((type, [f for f in filelist if f'{type}.xml' in f]))
-    for type in 'correspondences data u8'.split(' '):
-        to_display.append((type, [f for f in filelist if f'{type}.csv' in f]))
+        to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
+    for type in 'correspondences data u8 keys'.split(' '):
+        to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
     for type in 'keys sets statistics coverage'.split(' '):
-        to_display.append((type, [f for f in filelist if f'{type}.txt' in f]))
+        to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
     for type in 'DAT'.split(' '):
         to_display.append((type, [f for f in filelist if f'.{type}' in f]))
     return to_display, BASE_DIR
+
+
+def all_file_content(file_path):
+    # file_path contains the project and filename, e.g. TGTM/TGTM.mel.xml
+    (project, filename) = file_path.split('/')
+    file_path = os.path.join(projects.projects[project], filename)
+    f = open(file_path, 'r')
+    data = f.read()
+    f.close()
+    return data, project
 
 
 def file_content(file_path):
@@ -59,7 +69,6 @@ def file_content(file_path):
         data = f.read()
         f.close()
         data = '<pre>' + limit_lines(data, 5000) + '</pre>'
-
     elif '.csv' in file_path:
         f = open(file_path, 'r')
         data = f.read()

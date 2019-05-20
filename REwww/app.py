@@ -1,4 +1,4 @@
-from bottle import Bottle, default_app, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
+from bottle import Bottle, HTTPResponse, default_app, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
 
 import os
 import sys
@@ -21,6 +21,11 @@ def send_css(filename):
 @app.route('/static/<filename:re:.*\.js>')
 def send_js(filename):
     return static_file(filename, root=dirname + '/static/asset/js')
+
+
+@app.route('/fonts/<filename:re:.*\.(woff|ttf).*>')
+def send_font(filename):
+    return static_file(filename, root=dirname + '/static/asset/fonts')
 
 
 @app.route('/')
@@ -55,6 +60,17 @@ def project_files(filename):
     files, base_dir = utils.data_files(project_name)
     data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'content': content}
     return template('index', data=data)
+
+
+@app.route('/download/<filename:re:.*>')
+def download(filename):
+    content, project_name = utils.all_file_content(filename)
+    files, base_dir = utils.data_files(project_name)
+    response = HTTPResponse()
+    response.body = content
+    response['Content-Disposition'] = 'attachment; filename="%s"' % filename
+    return response
+    #return template('index', data=data)
 
 
 @app.route('/make')

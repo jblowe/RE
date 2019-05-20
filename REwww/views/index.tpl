@@ -55,6 +55,7 @@
                           % for file in files:
                             <li>
                                 <a href="/project_files/{{data['project']}}/{{file}}">{{file}}</a>
+                                <a href="/download/{{data['project']}}/{{file}}"><span class="glyphicon glyphicon glyphicon-download-alt"></span></a>
                             </li>
                           % end
                         </ul>
