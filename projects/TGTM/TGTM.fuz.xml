@@ -132,7 +132,7 @@
     <from>²²'²²</from>
     <from>¹¹'²²'²²</from>
   </item>
-  <item dial="mar" to="ᴴ">
+  <item dial="mar" to="˥">
     <from>⁵⁴</from>
     <from>⁵¹</from>
     <from>⁵³</from>
@@ -150,7 +150,7 @@
     <from>⁴⁵'⁵⁴</from>
     <from>⁴⁵'⁴⁴'³³</from>
   </item>
-  <item dial="mar" to="ᴴ">
+  <item dial="mar" to="˥">
     <from>⁴³</from>
     <from>⁴⁴</from>
     <from>⁴⁵</from>
@@ -377,7 +377,7 @@
   <item dial="syang" to="hr">
     <from>çʰj</from>
   </item>
-  <item dial="syang" to="ᴸ">
+  <item dial="syang" to="˩">
     <from>¹¹</from>
     <from>²¹</from>
     <from>²³</from>
@@ -393,7 +393,7 @@
     <from>²²'¹¹</from>
     <from>²¹'¹¹</from>
   </item>
-  <item dial="syang" to="ᴸ">
+  <item dial="syang" to="˩">
     <from>¹¹'³³</from>
     <from>¹¹'²¹</from>
     <from>²¹'⁴⁴</from>
@@ -404,7 +404,7 @@
     <from>¹¹'²²</from>
     <from>²¹²</from>
   </item>
-  <item dial="syang" to="ᴴ">
+  <item dial="syang" to="˥">
     <from>⁵⁵</from>
     <from>⁵⁴</from>
     <from>⁵³</from>
