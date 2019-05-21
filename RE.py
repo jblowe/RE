@@ -151,6 +151,7 @@ class Statistics:
         self.failed_parses = set()
         self.singleton_support = set()
         self.subsets = set()
+        self.language_stats = {}
         self.notes = []
 
     def add_note(self, note):
@@ -291,6 +292,7 @@ def project_back(lexicons, parameters, statistics):
                 count_of_no_parses += 1
                 statistics.failed_parses.add(form)
         forms_in_all_languages += len(lexicon.forms)
+        statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(
             f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
 
@@ -463,19 +465,19 @@ def dump_keys(lexicon, filename):
     out = sys.stdout
     forms = []
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
-        print('\t'.join('language & form,gloss,id,protoform,correspondences'.split(',')))
         for reconstruction, support in lexicon.statistics.keys.items():
-            #print(f'*{correspondences_as_proto_form_string(reconstruction)}')
             for support1 in support:
-                #print(f'  {str(support1)}')
                 forms.append(str(support1) + f'\t*{correspondences_as_proto_form_string(reconstruction)}\t*{correspondences_as_ids(reconstruction)}')
+        print('\t'.join('language & form,gloss,id,protoform,correspondences'.split(',')))
         for f in sorted(forms):
             print(f)
         print('***failures')
         for failure in lexicon.statistics.failed_parses:
-            print(f'  {str(failure)}')
+            print(f'{str(failure)}')
     sys.stdout = out
-    return len(forms), len(lexicon.statistics.failed_parses)
+
+def write_xml_stats(stats, filename):
+    serialize.serialize_stats(stats, filename)
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)

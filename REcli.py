@@ -6,7 +6,6 @@ import coverage
 import load_hooks
 from argparser import args, need_to_compare, project_dir
 
-
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
@@ -37,10 +36,9 @@ else:
         RE.analyze_sets(B, B2, analysis_file)
         print(f'wrote analysis to {analysis_file}')
     else:
-        #print_sets(B)
         keys_file = f'{project_dir}/{args.project}.{args.run}.keys.csv'
-        n, failures = RE.dump_keys(B, keys_file)
-        print(f'wrote {n} keys and {failures} failures to {keys_file}')
+        RE.dump_keys(B, keys_file)
+        print(f'wrote {len(B.statistics.keys)} keys and {len(B.statistics.failed_parses)} failures to {keys_file}')
         sets_file = f'{project_dir}/{args.project}.{args.run}.sets.txt'
         RE.dump_sets(B, sets_file)
         print(f'wrote {len(B.forms)} text sets to {sets_file}')
@@ -48,13 +46,18 @@ else:
         RE.dump_xml_sets(B, sets_xml_file)
         print(f'wrote {len(B.forms)} xml sets to {sets_xml_file}')
         failures_xml_file = f'{project_dir}/{args.project}.{args.run}.failures.sets.xml'
-        C = RE.extract_failures(B)
-        RE.dump_xml_sets(C, failures_xml_file)
-        print(f'wrote {len(C.statistics.failed_parses)} failures to {failures_xml_file}')
+        RE.dump_xml_sets(RE.Lexicon(B.language, [
+            RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language)[:2000],
+                         (), [])],
+                         B.statistics), failures_xml_file)
+        print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
         isolates_xml_file = f'{project_dir}/{args.project}.{args.run}.isolates.sets.xml'
         C, forms_used = RE.extract_isolates(B)
         RE.dump_xml_sets(C, isolates_xml_file)
+        C.statistics.isolates = len(C.forms)
         print(f'{len(forms_used)} different reflexes in cognate sets')
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
+        stats_xml_file = f'{project_dir}/{args.project}.{args.run}.statistics.xml'
+        RE.write_xml_stats(C.statistics, stats_xml_file)
 
 print(time.asctime())

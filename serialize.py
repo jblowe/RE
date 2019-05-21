@@ -1,4 +1,5 @@
 import os
+import collections
 import lxml.etree as ET
 from xml.dom import minidom
 import RE
@@ -104,3 +105,26 @@ def serialize_sets(sets, filename):
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+
+
+def serialize_stats(stats, filename):
+    root = ET.Element('stats', attrib={'project': 'xxx'})
+
+    totals = collections.Counter()
+    for number, language in enumerate(sorted(stats.language_stats.keys())):
+        entry = ET.SubElement(root, 'lexicon', attrib={'language': language})
+        for stat in 'forms,no_parses,reconstructions'.split(','):
+            ET.SubElement(entry, stat).text = str(stats.language_stats[language][stat])
+            totals[stat] += stats.language_stats[language][stat]
+
+    runstats = ET.SubElement(root, 'totals')
+
+    for s in totals:
+        ET.SubElement(runstats, s).text = str(totals[s])
+
+    ET.SubElement(runstats, 'isolates').text = str(stats.isolates)
+    ET.SubElement(runstats, 'keys_in_sets').text = str(len(stats.keys))
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+
