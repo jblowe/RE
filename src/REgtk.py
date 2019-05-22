@@ -212,9 +212,7 @@ def make_parameters_widget(settings):
                     language,
                     settings.upstream[language],
                     language,
-                    os.path.join(settings.directory_path,
-                                 settings.mel_filename)
-                    if settings.mel_filename else None)),
+                    settings.mel_filename)),
             Gtk.Label(label=language))
     return notebook
 
@@ -321,6 +319,8 @@ if __name__ == "__main__":
     settings = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)
+    load_hooks.load_hook(args.project, settings)
+    # HACK: The statement above and the statement below are no longer
+    # independent due to fuzzying in TGTM...
     attested_lexicons = read.read_attested_lexicons(settings)
-    load_hooks.load_hook(args.project, settings, attested_lexicons)
     run(settings, attested_lexicons)
