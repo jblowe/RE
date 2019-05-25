@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-                xmlns:xalan="http://xml.apache.org/xalan"
-                exclude-result-prefixes="xalan"
->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
     <xsl:param name="isolates" select="'null'"/>
 
@@ -17,6 +14,8 @@
                 <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
             </head>
             <body>
+                <h5>n = <xsl:value-of select="count(sets/set)" />
+                </h5>
                 <xsl:apply-templates select=".//sets"/>
             </body>
         </html>

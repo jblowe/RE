@@ -11,16 +11,6 @@
             <head>
             </head>
             <body>
-                <h3>Lexiques</h3>
-                <ul>
-                    <xsl:for-each select=".//lexicon">
-                        <li>
-                            <a href="#{@dialecte}">
-                                <xsl:value-of select="@dialecte"/>
-                            </a>
-                        </li>
-                    </xsl:for-each>
-                </ul>
                 <xsl:apply-templates select=".//lexicon"/>
             </body>
         </html>
@@ -32,6 +22,7 @@
             <h3>
                 <xsl:value-of select="@dialecte"/>
             </h3>
+            <h5>n = <xsl:value-of select="count(entry)" /></h5>
             <table class="table table-striped sortable">
                 <thead>
                     <tr>
