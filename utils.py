@@ -54,7 +54,7 @@ def all_file_content(file_path):
 
 
 def file_content(file_path):
-    # file_path contains the project and filename, e.g. TGTM/TGTM.mel.xml
+    # file_path contains the project and filename, e.g. TGTM/TGTM.hand.mel.xml
     (project, filename) = file_path.split('/')
     file_path = os.path.join(projects.projects[project], filename)
     if '.xml' in file_path:
@@ -104,6 +104,8 @@ def determine_file_type(file_path):
         return 'sets2html.xsl'
     elif 'mel.xml' in file_path:
         return 'mel2html.xsl'
+    elif 'statistics.xml' in file_path:
+        return 'stats2html.xsl'
 
 
 # this somewhat desperate function makes an html table from a tab- and newline- delimited string
