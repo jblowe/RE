@@ -114,16 +114,16 @@ def serialize_stats(stats, filename):
     for number, language in enumerate(sorted(stats.language_stats.keys())):
         entry = ET.SubElement(root, 'lexicon', attrib={'language': language})
         for stat in 'forms,no_parses,reconstructions'.split(','):
-            ET.SubElement(entry, stat).text = str(stats.language_stats[language][stat])
+            ET.SubElement(entry, stat).set('value', str(stats.language_stats[language][stat]))
             totals[stat] += stats.language_stats[language][stat]
 
     runstats = ET.SubElement(root, 'totals')
-
     for s in totals:
-        ET.SubElement(runstats, s).text = str(totals[s])
+        ET.SubElement(runstats, s).set('value', str(totals[s]))
 
-    ET.SubElement(runstats, 'isolates').text = str(stats.isolates)
-    ET.SubElement(runstats, 'keys_in_sets').text = str(len(stats.keys))
+    ET.SubElement(runstats, 'isolates').set('value', str(stats.isolates))
+    ET.SubElement(runstats, 'keys_in_sets').set('value', str(len(stats.keys)))
+    ET.SubElement(runstats, 'sets').set('value', str(stats.sets))
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))

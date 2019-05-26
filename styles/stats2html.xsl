@@ -16,14 +16,14 @@
             <body>
                 <h3>Statistics</h3>
                 <h5>Summary statistics</h5>
-                <xsl:apply-templates select=".//totals" mode="custom"/>
+                <xsl:apply-templates select=".//totals" mode="summary"/>
                 <h5>Language statistics</h5>
                 <xsl:apply-templates select=".//stats"/>
             </body>
         </html>
     </xsl:template>
 
-    <xsl:template match="totals" mode="custom">
+    <xsl:template match="totals" mode="summary">
         <table class="table table-striped sortable">
             <thead>
                 <tr>
@@ -34,7 +34,7 @@
             <xsl:for-each select="./*">
                 <tr>
                     <td><xsl:value-of select ="name(.)"/></td>
-                    <td><xsl:value-of select="."/></td>
+                    <td><xsl:value-of select='format-number(@value, "###,###")' /></td>
                 </tr>
             </xsl:for-each>
         </table>
@@ -51,7 +51,7 @@
                 </tr>
             </thead>
             <xsl:apply-templates select="lexicon"/>
-            <xsl:apply-templates select="totals"/>
+            <xsl:apply-templates select="totals" mode="bottom"/>
         </table>
     </xsl:template>
 
@@ -60,21 +60,20 @@
             <td>
                 <xsl:value-of select="@language"/>
             </td>
-            <td><xsl:value-of select="forms"/></td>
-            <td><xsl:value-of select="no_parses"/></td>
-            <td><xsl:value-of select="reconstructions"/></td>
+            <td><xsl:value-of select='format-number(forms/@value, "###,###")' /></td>
+            <td><xsl:value-of select='format-number(no_parses/@value, "###,###")' /></td>
+            <td><xsl:value-of select='format-number(reconstructions/@value, "###,###")' /></td>
         </tr>
     </xsl:template>
 
-
-    <xsl:template match="totals">
+    <xsl:template match="totals" mode="bottom">
         <tr>
             <td>
                 Totals
             </td>
-            <td><xsl:value-of select="forms"/></td>
-            <td><xsl:value-of select="no_parses"/></td>
-            <td><xsl:value-of select="reconstructions"/></td>
+            <td><xsl:value-of select='format-number(forms/@value, "###,###")' /></td>
+            <td><xsl:value-of select='format-number(no_parses/@value, "###,###")' /></td>
+            <td><xsl:value-of select='format-number(reconstructions/@value, "###,###")' /></td>
         </tr>
     </xsl:template>
 
