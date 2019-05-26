@@ -22,5 +22,20 @@ def associated_mels(mels, gloss):
     '''Return all mels which contain gloss.'''
     if mels is None:
         return [default_mel]
-    associated = [mel for mel in mels if gloss in mel.glosses]
+    associated = [mel for mel in mels if search_mels(gloss, mel.glosses)]
     return associated if associated else [default_mel]
+
+def search_mels(gloss, mel_glosses):
+
+    # the new way: check every MEL gloss to see if it is contained in the (presumably) full gloss
+    for g in mel_glosses:
+        if gloss is not None and g is not None:
+            if g in gloss:
+                return True
+    return False
+
+    # the old way: check if gloss (string) is in the list of MEL glosses
+    if gloss in mel_glosses:
+        return True
+    else:
+        return False
