@@ -53,6 +53,7 @@ else:
         print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
         isolates_xml_file = f'{project_dir}/{args.project}.{args.run}.isolates.sets.xml'
         C, forms_used = RE.extract_isolates(B)
+        C.statistics.sets = len(B.forms)
         RE.dump_xml_sets(C, isolates_xml_file)
         C.statistics.isolates = len(C.forms)
         print(f'{len(forms_used)} different reflexes in cognate sets')
