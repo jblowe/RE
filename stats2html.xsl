@@ -16,6 +16,7 @@
             <head>
             </head>
             <body>
+                <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
                 <h4>Summary statistics</h4>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
                 <h4>Language statistics</h4>
