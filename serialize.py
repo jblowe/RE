@@ -1,11 +1,15 @@
 import os
+import time
 import collections
 import lxml.etree as ET
 from xml.dom import minidom
 import RE
 
+run_date = f'{time.asctime()}'
+
 def serialize_correspondence_file(filename, parameters):
     root = ET.Element('tableOfCorr')
+    ET.SubElement(root, 'createdat').text = run_date
     params = ET.SubElement(root, 'parameters')
     syllable_canon = parameters.syllable_canon
     for cover, values in syllable_canon.sound_classes.items():
@@ -43,6 +47,8 @@ def serialize_lexicons(lexicons, dirname, ext='.data.xml'):
 
 def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
+    ET.SubElement(root, 'createdat').text = run_date
+
     for (number, form) in enumerate(lexicon.forms):
         entry = ET.SubElement(root, 'entry', attrib={'id': f'{lexicon.language.lower()}.{number + 1}'})
         try:
@@ -80,6 +86,7 @@ def serialize_sets(sets, filename):
         </set>
     '''
     root = ET.Element('sets', attrib={'protolanguage': sets.language})
+    ET.SubElement(root, 'createdat').text = run_date
 
     def render_xml(element, form, level):
         if isinstance(form, RE.ModernForm):
@@ -109,6 +116,7 @@ def serialize_sets(sets, filename):
 
 def serialize_stats(stats, filename):
     root = ET.Element('stats', attrib={'project': 'xxx'})
+    ET.SubElement(root, 'createdat').text = run_date
 
     totals = collections.Counter()
     for number, language in enumerate(sorted(stats.language_stats.keys())):
