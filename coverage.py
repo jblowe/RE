@@ -1,5 +1,7 @@
 import read
 import utils
+from RE import Statistics
+coverage_statistics = Statistics()
 
 
 # Coverage utilities
@@ -31,13 +33,30 @@ def check_mel_coverage(settings):
                 except:
                     pass
         print(f'{language}: {matched + not_matched} distinct glosses, {matched} matched, {not_matched} did not match, {forms} forms')
+        coverage_statistics.language_stats[language] = {
+            'distinct_glosses': matched + not_matched,
+            'matched': matched,
+            'not_matched': not_matched,
+            'forms': forms
+        }
         all_matched += matched
         all_not_matched += not_matched
         all_forms += forms
     unused_mels = len(unused_mel_glosses)
+
+    coverage_statistics.matched = all_matched
+    coverage_statistics.not_matched = all_not_matched
+    coverage_statistics.forms = all_forms
+    coverage_statistics.unused_mels = unused_mels
+    coverage_statistics.number_of_mels = number_of_mels
+    coverage_statistics.mel_glosses = mel_glosses
+
     print(f'\nmel summary: mels {number_of_mels} mel glosses {len(mel_glosses)} unused mel glosses {unused_mels}')
     print(f'gloss summary: {all_matched + all_not_matched} distinct glosses, {all_matched} matched, {all_not_matched} did not match, {all_forms} forms')
     for language in glosses_not_matched:
+
         if len(glosses_not_matched[language]) > 0:
             print(language)
             print(glosses_not_matched[language])
+
+    return coverage_statistics
