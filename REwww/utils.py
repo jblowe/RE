@@ -32,11 +32,11 @@ def data_files(project):
     filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
-    for type in 'parameters statistics data correspondences mel sets'.split(' '):
+    for type in 'parameters statistics correspondences mel sets data'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
     for type in 'correspondences data u8 keys'.split(' '):
         to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
-    for type in 'keys sets statistics coverage'.split(' '):
+    for type in 'statistics keys sets coverage'.split(' '):
         to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
     for type in 'DAT'.split(' '):
         to_display.append((type, [f for f in filelist if f'.{type}' in f]))
