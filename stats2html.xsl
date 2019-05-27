@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+                xmlns:ext="http://exslt.org/common"
+>
 
     <xsl:output
             method="html"
@@ -14,10 +16,9 @@
             <head>
             </head>
             <body>
-                <h3>Statistics</h3>
-                <h5>Summary statistics</h5>
+                <h4>Summary statistics</h4>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
-                <h5>Language statistics</h5>
+                <h4>Language statistics</h4>
                 <xsl:apply-templates select=".//stats"/>
             </body>
         </html>
@@ -40,29 +41,61 @@
         </table>
     </xsl:template>
 
+  <xsl:key name="elements" match="lexicon/*" use="name()"/>
+  <xsl:key name="subtotals" match="totals/*" use="name()"/>
+
     <xsl:template match="stats">
         <table class="table table-striped sortable">
             <thead>
-                <tr>
-                    <th>Language</th>
-                    <th>Forms</th>
-                    <th>No Parses</th>
-                    <th>Reconstructions</th>
-                </tr>
+              <tr>
+                  <th>language</th>
+                <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
+                  <!-- xsl:sort select="name()"/ -->
+                  <xsl:for-each select="key('elements', name())">
+                    <xsl:if test="position()=1">
+                      <th><xsl:value-of select="name()"/></th>
+                    </xsl:if>
+                  </xsl:for-each>
+                </xsl:for-each>
+              </tr>
             </thead>
             <xsl:apply-templates select="lexicon"/>
-            <xsl:apply-templates select="totals" mode="bottom"/>
+            <tr>
+              <th>totals</th>
+
+                <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
+                  <!-- xsl:sort select="name()"/ -->
+                  <xsl:for-each select="key('subtotals', name())">
+                    <xsl:if test="position()=1">
+                      <th><xsl:value-of select='format-number(@value, "###,###")'/></th>
+                    </xsl:if>
+                  </xsl:for-each>
+                </xsl:for-each>
+            </tr>
         </table>
     </xsl:template>
+
 
     <xsl:template match="lexicon">
         <tr>
             <td>
                 <xsl:value-of select="@language"/>
             </td>
-            <td><xsl:value-of select='format-number(forms/@value, "###,###")' /></td>
-            <td><xsl:value-of select='format-number(no_parses/@value, "###,###")' /></td>
-            <td><xsl:value-of select='format-number(reconstructions/@value, "###,###")' /></td>
+            <xsl:for-each select="./*">
+                <td><xsl:value-of select='format-number(./@value, "###,###")' /></td>
+            </xsl:for-each>
+        </tr>
+    </xsl:template>
+
+
+    <xsl:template match="lexicon">
+        <tr>
+            <td>
+                <xsl:value-of select="@language"/>
+            </td>
+            <xsl:for-each select="./*">
+                <td><xsl:value-of select='format-number(./@value, "###,###")' /></td>
+            </xsl:for-each>
         </tr>
     </xsl:template>
 
@@ -71,11 +104,26 @@
             <td>
                 Totals
             </td>
-            <td><xsl:value-of select='format-number(forms/@value, "###,###")' /></td>
-            <td><xsl:value-of select='format-number(no_parses/@value, "###,###")' /></td>
-            <td><xsl:value-of select='format-number(reconstructions/@value, "###,###")' /></td>
+            <xsl:for-each select="./*">
+                <td><xsl:value-of select='format-number(./@value, "###,###")' /></td>
+            </xsl:for-each>
         </tr>
     </xsl:template>
+
+
+
+  <xsl:template match="xxx">
+      <tr>
+        <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
+          <!-- xsl:sort select="name()"/ -->
+          <xsl:for-each select="key('elements', name())">
+            <xsl:if test="position()=1">
+              <th><xsl:value-of select="name()"/></th>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:for-each>
+      </tr>
+  </xsl:template>
 
 
 </xsl:stylesheet>
