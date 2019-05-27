@@ -23,7 +23,9 @@ if args.coverage:
         print('no mel provided')
         sys.exit(1)
     print(f'checking {args.project} glosses in {args.mel} mel:')
-    coverage.check_mel_coverage(settings)
+    coverage_statistics = coverage.check_mel_coverage(settings)
+    coverage_xml_file = f'{project_dir}/{args.project}.{args.mel}.mel.statistics.xml'
+    RE.write_xml_stats(coverage_statistics, coverage_xml_file)
 else:
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons)
 
@@ -53,9 +55,9 @@ else:
         print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
         isolates_xml_file = f'{project_dir}/{args.project}.{args.run}.isolates.sets.xml'
         C, forms_used = RE.extract_isolates(B)
-        C.statistics.sets = len(B.forms)
+        C.statistics.sets = B.forms
         RE.dump_xml_sets(C, isolates_xml_file)
-        C.statistics.isolates = len(C.forms)
+        C.statistics.isolates = C.forms
         print(f'{len(forms_used)} different reflexes in cognate sets')
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
         stats_xml_file = f'{project_dir}/{args.project}.{args.run}.statistics.xml'

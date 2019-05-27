@@ -150,6 +150,9 @@ class Statistics:
     def __init__(self):
         self.failed_parses = set()
         self.singleton_support = set()
+        self.isolates = set()
+        self.keys = set()
+        self.sets = set()
         self.subsets = set()
         self.language_stats = {}
         self.notes = []
@@ -293,9 +296,7 @@ def project_back(lexicons, parameters, statistics):
                 statistics.failed_parses.add(form)
         forms_in_all_languages += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
-        statistics.add_note(
-            f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
-
+        statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
     statistics.add_note(f'{forms_in_all_languages} forms in {len(lexicons)} lexicons')
     statistics.keys = reconstructions
     return reconstructions, statistics
