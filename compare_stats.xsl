@@ -1,36 +1,51 @@
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<xsl:output
-	method="xml"
-	indent="yes"
-	encoding="utf-8"/>
+    <xsl:output
+            method="html"
+            indent="yes"
+            encoding="utf-8"/>
 
+    <xsl:strip-space
+            elements="*"/>
 
-  <xsl:template match="/">
-    <stats>
-        <xsl:for-each select="files/file">
-          <xsl:value-of select="."/>
-          <xsl:copy-of select="document(.)/*"/>
-        </xsl:for-each>
-    </stats>
-  </xsl:template>
+    <xsl:template match="/">
+        <html>
+            <head>
+            </head>
+            <body>
+                <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
+                <ul>
+                    <xsl:apply-templates select=".//file"/>
+                </ul>
+                <h4>Comparison</h4>
+                <xsl:apply-templates select=".//totals" mode="summary"/>
+            </body>
+        </html>
+    </xsl:template>
 
-  <xsl:template match="*">
-    <xsl:apply-templates select="totals"/>
-    <xsl:apply-templates select="lexicon"/>
-  </xsl:template>
+    <xsl:template match="totals" mode="summary">
+        <table class="table table-striped sortable">
+            <thead>
+                <tr>
+                    <th>Stat</th>
+                    <th>Value</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <xsl:for-each select="./*">
+                <tr>
+                    <td><xsl:value-of select ="name(.)"/></td>
+                    <xsl:for-each select="*">
+                        <td><xsl:value-of select='format-number(., "###,###")' /></td>
+                    </xsl:for-each>
+                </tr>
+            </xsl:for-each>
+        </table>
+    </xsl:template>
 
-  <xsl:template match="totals">
-    <xsl:for-each select=".">
-        <xsl:copy-of select="."/>
-    </xsl:for-each>
-  </xsl:template>
-
-  <xsl:template match="lexicon">
-    <xsl:for-each select=".">
-        <xsl:copy-of select="."/>
-    </xsl:for-each>
-  </xsl:template>
+    <xsl:template match="file">
+        <li><xsl:value-of select='.' /></li>
+    </xsl:template>
 
 </xsl:stylesheet>
