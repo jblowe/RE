@@ -32,7 +32,7 @@ def data_files(project):
     filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
-    for type in 'parameters statistics correspondences mel sets data'.split(' '):
+    for type in 'parameters statistics compare correspondences mel sets data'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
     for type in 'correspondences data u8 keys'.split(' '):
         to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
@@ -106,6 +106,8 @@ def determine_file_type(file_path):
         return 'mel2html.xsl'
     elif 'statistics.xml' in file_path:
         return 'stats2html.xsl'
+    elif 'compare.xml' in file_path:
+        return 'compare_stats.xsl'
 
 
 # this somewhat desperate function makes an html table from a tab- and newline- delimited string
