@@ -3,6 +3,7 @@ import RE
 import sys
 import time
 import coverage
+import compare
 import load_hooks
 from argparser import args, need_to_compare, project_dir
 
@@ -26,6 +27,9 @@ if args.coverage:
     coverage_statistics = coverage.check_mel_coverage(settings)
     coverage_xml_file = f'{project_dir}/{args.project}.{args.mel}.mel.statistics.xml'
     RE.write_xml_stats(coverage_statistics, coverage_xml_file)
+elif args.compare:
+    comparison = compare.compare(project_dir, args.project)
+    pass
 else:
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons)
 
