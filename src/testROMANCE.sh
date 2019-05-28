@@ -4,6 +4,6 @@ DATE=`date +%Y-%m-%d-%H-%M`
 
 pwd
 # first make sets
-time python3 REcli.py --run tree -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.statistics.txt
+time python3 REcli.py --run tree -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
 [ $? -ne 0 ] && exit 1;
-cat ../projects/ROMANCE/ROMANCE.${DATE}.statistics.txt
+cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt

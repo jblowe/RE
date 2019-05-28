@@ -14,4 +14,4 @@ head ../projects/VANUATU/VANUATU.default.analysis.txt
 
 time python3 REcli.py VANUATU -r hand --mel hand  > ../projects/VANUATU/VANUATU.${DATE}.statistics.txt
 [ $? -ne 0 ] && exit 1;
-cat ../projects/VANUATU/VANUATU.${DATE}.statistics.txt
+cat ../projects/VANUATU/VANUATU.${DATE}.hand.statistics.txt
