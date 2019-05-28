@@ -33,11 +33,11 @@ test:
 	cd src ; python3 REcli.py SYI > ../projects/LOLOISH/SYI.mel.coverage.txt
 	cd src ; python3 REcli.py VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
 
-	cd src ; python3 REcli.py -x -- DEMO93 > ../projects/DEMO93/DEMO93.mel.coverage.txt
-	cd src ; python3 REcli.py -x -- TGTM > ../projects/TGTM/TGTM.mel.coverage.txt
-	cd src ; python3 REcli.py -x -- ROMANCE > ../projects/ROMANCE/ROMANCE.mel.coverage.txt
-	cd src ; python3 REcli.py -x -- POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.coverage.txt
-	cd src ; python3 REcli.py -x -- NYI > ../projects/LOLOISH/NYI.mel.coverage.txt
-	cd src ; python3 REcli.py -x -- SYI > ../projects/LOLOISH/SYI.mel.coverage.txt
-	cd src ; python3 REcli.py -x -- VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
+	cd src ; python3 REcli.py -x -- DEMO93 > ../projects/DEMO93/DEMO93.mel.compare.txt
+	cd src ; python3 REcli.py -x -- TGTM > ../projects/TGTM/TGTM.mel.compare.txt
+	cd src ; python3 REcli.py -x -- ROMANCE > ../projects/ROMANCE/ROMANCE.mel.compare.txt
+	cd src ; python3 REcli.py -x -- POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.compare.txt
+	cd src ; python3 REcli.py -x -- NYI > ../projects/LOLOISH/NYI.mel.compare.txt
+	cd src ; python3 REcli.py -x -- SYI > ../projects/LOLOISH/SYI.mel.compare.txt
+	cd src ; python3 REcli.py -x -- VANUATU > ../projects/VANUATU/VANUATU.mel.compare.txt
 
