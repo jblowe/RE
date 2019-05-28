@@ -23,6 +23,13 @@ parser.add_argument('-c',
                     const=True,
                     metavar='coverage',
                     help='specify for a coverage report for the specified MEL')
+parser.add_argument('-x',
+                    dest='compare',
+                    nargs='?',
+                    default=False,
+                    const=True,
+                    metavar='compare',
+                    help='specify to compare statistics files')
 parser.add_argument('--mel2',
                     metavar='mel2',
                     help='name of MEL to compare against')
@@ -33,3 +40,4 @@ parser.add_argument('--recon2',
 args = parser.parse_args()
 project_dir = projects.projects[args.project]
 need_to_compare = (args.mel2 or args.recon2)
+compare_results = args.compare
