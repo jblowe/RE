@@ -13,7 +13,9 @@ then
 fi
 
 pwd
-for mel in hand wordnet clics none
+# for mel in hand wordnet clics none
+# wordnet version is too slow for regular testing use (8 mins) ... run by hand if needed.
+for mel in hand clics none
 do
     if [ -e ../projects/${PROJECT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
