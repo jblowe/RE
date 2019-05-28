@@ -89,17 +89,6 @@
     </xsl:template>
 
 
-    <xsl:template match="lexicon">
-        <tr>
-            <td>
-                <xsl:value-of select="@language"/>
-            </td>
-            <xsl:for-each select="./*">
-                <td><xsl:value-of select='format-number(./@value, "###,###")' /></td>
-            </xsl:for-each>
-        </tr>
-    </xsl:template>
-
     <xsl:template match="totals" mode="bottom">
         <tr>
             <td>
@@ -110,22 +99,6 @@
             </xsl:for-each>
         </tr>
     </xsl:template>
-
-
-
-  <xsl:template match="xxx">
-      <tr>
-        <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
-          <!-- xsl:sort select="name()"/ -->
-          <xsl:for-each select="key('elements', name())">
-            <xsl:if test="position()=1">
-              <th><xsl:value-of select="name()"/></th>
-            </xsl:if>
-          </xsl:for-each>
-        </xsl:for-each>
-      </tr>
-  </xsl:template>
-
 
 </xsl:stylesheet>
 		
