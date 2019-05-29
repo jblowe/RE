@@ -4,6 +4,7 @@ import collections
 import lxml.etree as ET
 from xml.dom import minidom
 import RE
+import inspect
 
 run_date = f'{time.asctime()}'
 
@@ -115,7 +116,7 @@ def serialize_sets(sets, filename):
 
 
 def serialize_stats(stats, filename):
-    root = ET.Element('stats', attrib={'project': 'xxx'})
+    root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
     totals = collections.Counter()
@@ -129,9 +130,21 @@ def serialize_stats(stats, filename):
     for s in totals:
         ET.SubElement(runstats, s).set('value', str(totals[s]))
 
-    ET.SubElement(runstats, 'isolates').set('value', str(len(stats.isolates)))
-    ET.SubElement(runstats, 'keys_in_sets').set('value', str(len(stats.keys)))
-    ET.SubElement(runstats, 'sets').set('value', str(len(stats.sets)))
+    #print(inspect.getmembers(stats))
+    for name, value in stats.summary_stats.items():
+        ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+
+
+def serialize_evaluation(stats, filename):
+    root = ET.Element('stats', attrib={'project': 'foo'})
+    ET.SubElement(root, 'createdat').text = run_date
+
+    entry = ET.SubElement(root, 'totals')
+    for k, v in stats.items():
+        ET.SubElement(entry, k).set('value', str(v))
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
