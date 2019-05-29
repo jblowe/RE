@@ -150,16 +150,16 @@ class Statistics:
     def __init__(self):
         self.failed_parses = set()
         self.singleton_support = set()
-        self.isolates = set()
-        self.keys = set()
-        self.sets = set()
-        self.subsets = set()
+        self.summary_stats = {}
         self.language_stats = {}
         self.notes = []
 
     def add_note(self, note):
         print(note)
         self.notes.append(note)
+
+    def add_stat(self, stat, value):
+        self.summary_stats[stat] = value
 
 def expanded_contexts(rule, i, sound_classes):
     contexts = set()
@@ -271,7 +271,6 @@ def postdict_daughter_forms(proto_form, parameters):
 # return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters, statistics):
     reconstructions = collections.defaultdict(list)
-    forms_in_all_languages = 0
     for lexicon in lexicons:
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
@@ -294,10 +293,9 @@ def project_back(lexicons, parameters, statistics):
             else:
                 count_of_no_parses += 1
                 statistics.failed_parses.add(form)
-        forms_in_all_languages += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
-    statistics.add_note(f'{forms_in_all_languages} forms in {len(lexicons)} lexicons')
+    statistics.add_stat('lexicons', len(lexicons))
     statistics.keys = reconstructions
     return reconstructions, statistics
 
@@ -365,6 +363,7 @@ def filter_subsets(cognate_sets, statistics, root=True):
                     break
     statistics.subsets = losers
     statistics.add_note(f'threw away {len(losers)} subsets')
+    statistics.add_stat('subsets_tossed', len(losers))
     return cognate_sets - losers, statistics
 
 # pick a representative derivation, i.e. choose a reconstruction from
@@ -480,6 +479,9 @@ def dump_keys(lexicon, filename):
 def write_xml_stats(stats, filename):
     serialize.serialize_stats(stats, filename)
 
+def write_evaluation_stats(stats, filename):
+    serialize.serialize_evaluation(stats, filename)
+
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
     common = set()
@@ -524,11 +526,25 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     for form in only_lex2:
         print_form(form, 0)
 
+    evaluation_dict = {
+        'sets_in_lexicon_1': nl1,
+        'sets_in_lexicon_2': nl2,
+        'sets_in_common': ncommon,
+        'only_in_lexicon_1': len(only_lex1),
+        'only_in_lexicon_2': len(only_lex2),
+        'precision': '{:04.3f}'.format(precision),
+        'pecall': '{:04.3f}'.format(recall),
+        'fscore': '{:04.3f}'.format(fscore)
+    }
+
+    return evaluation_dict
+
 def analyze_sets(lexicon1, lexicon2, filename):
     out = sys.stdout
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
-        compare_proto_lexicons(lexicon1, lexicon2)
+        evaluation_dict = compare_proto_lexicons(lexicon1, lexicon2)
     sys.stdout = out
+    return evaluation_dict
 
 # create a fake cognate set with the first 2,000 forms that failed to reconstruct
 def extract_failures(lexicon):

@@ -39,8 +39,12 @@ else:
                                         recon=(args.recon2 or args.recon))
         B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons)
         analysis_file = f'{project_dir}/{args.project}.{args.run}.analysis.txt'
-        RE.analyze_sets(B, B2, analysis_file)
+        evaluation_stats = RE.analyze_sets(B, B2, analysis_file)
+        evaluation_stats['lexicon_1'] = str(settings.mel_filename).replace(f'{project_dir}/{args.project}.','')
+        evaluation_stats['lexicon_2'] = str(settings2.mel_filename).replace(f'{project_dir}/{args.project}.','')
         print(f'wrote analysis to {analysis_file}')
+        evaluation_xml_file = f'{project_dir}/{args.project}.{args.run}.evaluation.xml'
+        RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
     else:
         keys_file = f'{project_dir}/{args.project}.{args.run}.keys.csv'
         RE.dump_keys(B, keys_file)
@@ -51,17 +55,21 @@ else:
         sets_xml_file = f'{project_dir}/{args.project}.{args.run}.sets.xml'
         RE.dump_xml_sets(B, sets_xml_file)
         print(f'wrote {len(B.forms)} xml sets to {sets_xml_file}')
+        # failures (no parses)
         failures_xml_file = f'{project_dir}/{args.project}.{args.run}.failures.sets.xml'
         RE.dump_xml_sets(RE.Lexicon(B.language, [
             RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language)[:2000],
                          (), [])],
                          B.statistics), failures_xml_file)
         print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
+        # isolates
         isolates_xml_file = f'{project_dir}/{args.project}.{args.run}.isolates.sets.xml'
         C, forms_used = RE.extract_isolates(B)
         C.statistics.sets = B.forms
         RE.dump_xml_sets(C, isolates_xml_file)
-        C.statistics.isolates = C.forms
+        C.statistics.add_stat('isolates', len(C.forms))
+        C.statistics.add_stat('sets', len(B.forms))
+        C.statistics.add_stat('reflexes_in_sets', len(forms_used))
         print(f'{len(forms_used)} different reflexes in cognate sets')
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
         stats_xml_file = f'{project_dir}/{args.project}.{args.run}.statistics.xml'
