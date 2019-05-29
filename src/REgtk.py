@@ -271,6 +271,9 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
             for form in proto_lexicon.forms:
                 store_row(None, form)
         GLib.idle_add(update_model)
+        sets_file = f'{project_dir}/{args.project}.{args.run}.sets.txt'
+        RE.dump_sets(proto_lexicon, sets_file)
+        print('dumped sets')
 
     box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
     return box
