@@ -9,7 +9,7 @@ test:
 	cd projects/RE_DATA_1994 ; bash ./tgtm_pipeline.sh
 	cd src ; bash ./testPROJECT.sh TGTM
 	cd src ; bash ./testPROJECT.sh DEMO93
-	cd src ; bash ./testPROJECT.sh VANUATU
+	#cd src ; bash ./testPROJECT.sh VANUATU
 	cd src ; bash ./testPROJECT.sh POLYNESIAN
 
 	cd projects/LOLOISH ; bash ./yi_pipeline.sh
@@ -31,7 +31,7 @@ test:
 	cd src ; python3 REcli.py POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.coverage.txt
 	cd src ; python3 REcli.py NYI > ../projects/LOLOISH/NYI.mel.coverage.txt
 	cd src ; python3 REcli.py SYI > ../projects/LOLOISH/SYI.mel.coverage.txt
-	cd src ; python3 REcli.py VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
+	#cd src ; python3 REcli.py VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
 
 	cd src ; python3 REcli.py -x -- DEMO93 > ../projects/DEMO93/DEMO93.mel.compare.txt
 	cd src ; python3 REcli.py -x -- TGTM > ../projects/TGTM/TGTM.mel.compare.txt
