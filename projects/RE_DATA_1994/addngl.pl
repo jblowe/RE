@@ -16,7 +16,7 @@ sub ngl {
     my @gls = split /, /, $gl;
     for my $glx (@gls) {
         if ($glx =~ m/\*/) {
-            while ($glx =~ s/^.*?\*([^\*]+)//) {
+            while ($glx =~ s/^.*?\*(.+?)\b//) {
                 push(@terms, extract_keyterm($1));
             }
         }
