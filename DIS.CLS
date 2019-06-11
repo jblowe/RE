@@ -1,6 +1,6 @@
-W=i,e,a,o,u,g,dz,ë,d,b,³,ø,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr,ð
-U=i,e,a,o,u,k,k¾,æ,æ¾,ts,ts¾,t,t¾,p,p¾,¾³,¾ø,¾n,¾m,¾j,¾r,¾l,¾w,s,h,H,kr,k¾r,kl,pj,p¾j,¾mj,¾mr,¾ml,û
-D=t,t¾,d,n,¾n
-P=p,p¾,b,m,¾m
-M=m,n,³
-C=p,t,k
+W=i,e,a,o,u,g,dz,É–,d,b,Å‹,É²,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr,Ê‘
+U=i,e,a,o,u,k,kÊ°,Êˆ,ÊˆÊ°,ts,tsÊ°,t,tÊ°,p,pÊ°,Ê°Å‹,Ê°É²,Ê°n,Ê°m,Ê°j,Ê°r,Ê°l,Ê°w,s,h,H,kr,kÊ°r,kl,pj,pÊ°j,Ê°mj,Ê°mr,Ê°ml,É•
+D=t,tÊ°,d,n,Ê°n
+P=p,pÊ°,b,m,Ê°m
+M=m,n,Å‹
+C=p,t,k
