@@ -8,6 +8,8 @@ test:
 
 	cd projects/RE_DATA_1994 ; bash ./tgtm_pipeline.sh
 	cd src ; bash ./testPROJECT.sh TGTM
+	cd projects/DIS ; bash ./dis_pipeline.sh
+	cd src ; bash ./testPROJECT.sh DIS
 	cd src ; bash ./testPROJECT.sh DEMO93
 	#cd src ; bash ./testPROJECT.sh VANUATU
 	cd src ; bash ./testPROJECT.sh POLYNESIAN
