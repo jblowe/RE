@@ -8,7 +8,7 @@
     <class name="D" value="t,tʰ,d,n,ʰn"/>
     <class name="P" value="p,pʰ,b,m,ʰm"/>
     <class name="M" value="m,n,ŋ"/>
-    <canon name="syllabe" value="(T?(OG?|IL?G?)?(R|VF))+"/>
+    <canon name="syllabe" value="T?(OG?|IL?G?)?(R|VF)"/>
   </parameters>
   <corr num="c1">
     <proto contextR="U" syll="T">A</proto>
