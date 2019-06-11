@@ -21,7 +21,7 @@ def check_mel_coverage(settings):
         matched = 0
         not_matched = 0
         forms = len(attested_lexicons[language].forms)
-        for gloss in utils.all_glosses(attested_lexicons[language]):
+        for gloss in utils.glosses_by_language(attested_lexicons[language]):
             if gloss not in mel_glosses:
                 not_matched += 1
                 glosses_not_matched[language].add(gloss)
