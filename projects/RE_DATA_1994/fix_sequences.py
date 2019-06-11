@@ -7,7 +7,7 @@ input  = codecs.open(sys.argv[1], 'r', encoding='utf-8')
 output = codecs.open(sys.argv[2], 'w', encoding='utf-8')
 
 for line in input.readlines():
-    line = line.encode('utf-8').rstrip()
+    line = line.rstrip()
     line = line.replace('#"e','ë')
     line = line.replace('#"i','ï')
     line = line.replace('##a','à')
@@ -29,4 +29,4 @@ for line in input.readlines():
     line = line.replace('#ɾo','ô')
     line = line.replace('#ɾu','û')
 
-    print >> output, line.decode('utf-8')
+    print(line, file=output)
