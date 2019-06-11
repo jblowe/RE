@@ -2,17 +2,17 @@ use strict;
 
 sub extract_keyterm {
     my ($gl) = @_;
-    $gl =~ s/^to //i;
-    $gl =~ s/\|.*//;
-    $gl =~ s/ +\((.*?)\)$//;
-    $gl =~ s/\)$//;
-    $gl =~ s/ *\&lt;(.*)\&gt;//;
+    $gl =~ s/^to //i; # get rid of initial 'to '
+    $gl =~ s/\|.*//;  # get rid of everything after vertical bar
+    $gl =~ s/ +\((.*?)\)$//; # get rid of text in parenthesis
+    $gl =~ s/ *\&lt;(.*)\&gt;//; # get rid of text in angle brackets
     return $gl;
 }
 
 sub ngl {
     my ($gl) = @_;
     my @terms;
+    $gl =~ s/ *\((.*?)\) *//; # get rid of text in parenthesis
     my @gls = split /, /, $gl;
     for my $glx (@gls) {
         if ($glx =~ m/\*/) {
