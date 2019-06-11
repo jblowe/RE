@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <attested name="gha" file="DIS.gha.data.xml"/>
+  <attested name="ris" file="DIS.ris.data.xml"/>
+  <attested name="sahu" file="DIS.sahu.data.xml"/>
+  <attested name="pra" file="DIS.pra.data.xml"/>
+  <attested name="mar" file="DIS.mar.data.xml"/>
+  <attested name="syang" file="DIS.syang.data.xml"/>
+  <attested name="tag" file="DIS.tag.data.xml"/>
+  <attested name="tuk" file="DIS.tuk.data.xml"/>
+  <mel name="hand" file="DIS.hand.mel.xml"/>
+  <reconstruction name="default">
+    <proto_language name="tgtm" correspondences="DIS.default.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+  </reconstruction>
+  <param name="title" value="'Display' dataset, using 7 TGTM sets"/>
+</params>

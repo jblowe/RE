@@ -1,0 +1,1180 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+   <createdat>Tue Jun 11 05:16:59 2019</createdat>
+   <parameters>
+      <class name="W" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr,ʑ"/>
+      <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml,ɕ"/>
+      <class name="D" value="t,tʰ,d,n,ʰn"/>
+      <class name="P" value="p,pʰ,b,m,ʰm"/>
+      <class name="M" value="m,n,ŋ"/>
+      <class name="C" value="p,t,k"/>
+    <canon name="syllabe" value="T?(OG?|IL?G?)?(R|VF)"/>
+      <spec name="supra_segmentals" value=""/>
+   </parameters>
+   <corr num="1">
+      <proto contextR="U" syll="T">A</proto>
+      <modern dialecte="ris">
+         <seg>¹</seg>
+         <seg>X</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>¹</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>¹</seg>
+         <seg>X</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>¹</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>¹</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>¹</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>¹</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>¹</seg>
+      </modern>
+   </corr>
+   <corr num="2">
+      <proto contextR="U" syll="T">B</proto>
+      <modern dialecte="ris">
+         <seg>²</seg>
+         <seg>X</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>²</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>²</seg>
+         <seg>X</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>²</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>²</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>²</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>²</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>²</seg>
+      </modern>
+   </corr>
+   <corr num="3">
+      <proto contextR="W" syll="T">A</proto>
+      <modern dialecte="ris">
+         <seg>³</seg>
+         <seg>X</seg>
+         <seg>ᴸ</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>³</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>³</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>³</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>³</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>³</seg>
+         <seg>ᴸ</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>³</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>³</seg>
+      </modern>
+   </corr>
+   <corr num="4">
+      <proto contextR="W" syll="T">B</proto>
+      <modern dialecte="ris">
+         <seg>⁴</seg>
+         <seg>X</seg>
+         <seg>ᴸ</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>⁴</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>⁴</seg>
+         <seg>X</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>⁴</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>⁴</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>⁴</seg>
+         <seg>ᴸ</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>⁴</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>⁴</seg>
+      </modern>
+   </corr>
+   <corr num="5">
+      <proto syll="R">iŋ</proto>
+      <modern dialecte="ris">
+         <seg>iŋ</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>iŋ</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>iŋ</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>in</seg>
+         <seg>im</seg>
+         <seg>un</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ĩ</seg>
+      </modern>
+   </corr>
+   <corr num="6">
+      <proto syll="R">in</proto>
+      <modern dialecte="ris">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ĩ</seg>
+         <seg>in+</seg>
+      </modern>
+   </corr>
+   <corr num="7">
+      <proto syll="R">im</proto>
+      <modern dialecte="ris">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ĩ</seg>
+         <seg>in+</seg>
+      </modern>
+   </corr>
+   <corr num="8">
+      <proto syll="R,V">e</proto>
+      <modern dialecte="ris">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>iɛ</seg>
+         <seg>ie</seg>
+         <seg>eɛ</seg>
+      </modern>
+   </corr>
+   <corr num="9">
+      <proto syll="R">eː</proto>
+      <modern dialecte="ris">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="10">
+      <proto syll="R,V">je</proto>
+      <modern dialecte="ris">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ie</seg>
+      </modern>
+   </corr>
+   <corr num="11">
+      <proto syll="R">et</proto>
+      <modern dialecte="ris">
+         <seg>et</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>et</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+         <seg>i+</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>i+</seg>
+         <seg>jo+</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+         <seg>eː</seg>
+      </modern>
+   </corr>
+   <corr num="12">
+      <proto syll="R">ep</proto>
+      <modern dialecte="ris">
+         <seg>ep</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>ep</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>əp</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="13">
+      <proto syll="R,V">a</proto>
+      <modern dialecte="ris">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ɤ</seg>
+      </modern>
+   </corr>
+   <corr num="14">
+      <proto syll="R">aː</proto>
+      <modern dialecte="ris">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>a=aː</seg>
+      </modern>
+   </corr>
+   <corr num="15">
+      <proto syll="R,V">ja</proto>
+      <modern dialecte="ris">
+         <seg>ja</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>ja</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>je</seg>
+      </modern>
+   </corr>
+   <corr num="16">
+      <proto syll="R,V">wa</proto>
+      <modern dialecte="ris">
+         <seg>wa</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>wa</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>wa</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ɔ</seg>
+      </modern>
+   </corr>
+   <corr num="17">
+      <proto syll="R">at</proto>
+      <modern dialecte="ris">
+         <seg>at</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>et</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>e</seg>
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>e</seg>
+         <seg>ae</seg>
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+         <seg>je</seg>
+         <seg>eː</seg>
+      </modern>
+   </corr>
+   <corr num="18">
+      <proto syll="R">ap</proto>
+      <modern dialecte="ris">
+         <seg>ap</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>ap</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>ap</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>əp</seg>
+         <seg>əw</seg>
+         <seg>a+</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="19">
+      <proto syll="R">an</proto>
+      <modern dialecte="ris">
+         <seg>an</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>an</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>ən</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>ən</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>ən</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>aẽ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>jɛ̃=jẽ</seg>
+         <seg>ẽ</seg>
+      </modern>
+   </corr>
+   <corr num="20">
+      <proto syll="R,V">o</proto>
+      <modern dialecte="ris">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>o</seg>
+         <seg>wo</seg>
+      </modern>
+   </corr>
+   <corr num="21">
+      <proto syll="R">oː</proto>
+      <modern dialecte="ris">
+         <seg>oː</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>oː</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>oː</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="22">
+      <proto syll="R">ot</proto>
+      <modern dialecte="ris">
+         <seg>ot</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>ot</seg>
+         <seg>oi</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>oi</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>oi=oj</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>wi</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="23">
+      <proto contextL="t,,,d,,,t,ʰ" syll="R">ot</proto>
+      <modern dialecte="ris">
+         <seg>ot</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>ot</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>oi=oj</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>əe</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="24">
+      <proto syll="I">k</proto>
+      <modern dialecte="ris">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>k</seg>
+      </modern>
+   </corr>
+   <corr num="25">
+      <proto contextL="B" syll="I">g</proto>
+      <modern dialecte="ris">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>k</seg>
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>k</seg>
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>kʰ</seg>
+      </modern>
+   </corr>
+   <corr num="26">
+      <proto syll="O">kr</proto>
+      <modern dialecte="ris">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>kr</seg>
+      </modern>
+   </corr>
+   <corr num="27">
+      <proto contextR="i,,,e" syll="O">kl</proto>
+      <modern dialecte="ris">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>kʰl</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>hl</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="28">
+      <proto contextL="A" syll="O">gl</proto>
+      <modern dialecte="ris">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>hl</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="29">
+      <proto contextL="B" syll="O">gl</proto>
+      <modern dialecte="ris">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>kʰl</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>kʰj</seg>
+      </modern>
+   </corr>
+   <corr num="30">
+      <proto contextL="B" contextR="i" syll="O">gl</proto>
+      <modern dialecte="ris">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>kl</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>kʰl</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>kʰ</seg>
+      </modern>
+   </corr>
+   <corr num="31">
+      <proto syll="I">t</proto>
+      <modern dialecte="ris">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="32">
+      <proto syll="I">tʰ</proto>
+      <modern dialecte="ris">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>tʰ</seg>
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>tʰ</seg>
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>tʰ</seg>
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>tʰ</seg>
+      </modern>
+   </corr>
+   <corr num="33">
+      <proto contextL="B" syll="I">d</proto>
+      <modern dialecte="ris">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>d</seg>
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>d</seg>
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>tʰ</seg>
+      </modern>
+   </corr>
+   <corr num="135">
+      <proto syll="I">p</proto>
+      <modern dialecte="ris">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="34">
+      <proto contextL="A" syll="I">b</proto>
+      <modern dialecte="ris">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>p</seg>
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="35">
+      <proto syll="O,G">j</proto>
+      <modern dialecte="ris">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="36">
+      <proto syll="I,L">l</proto>
+      <modern dialecte="ris">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="37">
+      <proto syll="F">t</proto>
+      <modern dialecte="ris">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>t</seg>
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>?</seg>
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>Ø</seg>
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ː</seg>
+      </modern>
+   </corr>
+   <corr num="38">
+      <proto syll="F">p</proto>
+      <modern dialecte="ris">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>p</seg>
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="39">
+      <proto contextL="o,,,u" syll="F">p</proto>
+      <modern dialecte="ris">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>p+</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>ː</seg>
+      </modern>
+   </corr>
+   <corr num="40">
+      <proto contextR="p" syll="V">a</proto>
+      <modern dialecte="ris">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sahu">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="tag">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="tuk">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="mar">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="syang">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="gha">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="pra">
+         <seg>e</seg>
+      </modern>
+   </corr>
+</tableOfCorr>

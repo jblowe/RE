@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<semantics>
+  <mel id="m1">
+    <gl>grain</gl>
+  </mel>
+  <mel id="m2">
+    <gl>beer</gl>
+    <gl>beermash</gl>
+    <gl>beer-mash</gl>
+  </mel>
+  <mel id="m3">
+    <gl>place</gl>
+  </mel>
+  <mel id="m4">
+    <gl>food</gl>
+    <gl>grain</gl>
+    <gl>rice</gl>
+    <gl>cooked rice</gl>
+  </mel>
+  <mel id="m5">
+    <gl>load</gl>
+    <gl>charge</gl>
+  </mel>
+  <mel id="m6">
+    <gl>leaf</gl>
+    <gl>small leaf</gl>
+  </mel>
+  <mel id="m7">
+    <gl>heart</gl>
+  </mel>
+  <mel id="m8">
+    <gl>snow</gl>
+  </mel>
+</semantics>
