@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
-   <createdat>Tue Jun 11 05:16:59 2019</createdat>
+   <createdat>Tue Jun 11 14:00:51 2019</createdat>
    <parameters>
       <class name="W" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr,ʑ"/>
       <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml,ɕ"/>
@@ -8,7 +8,7 @@
       <class name="P" value="p,pʰ,b,m,ʰm"/>
       <class name="M" value="m,n,ŋ"/>
       <class name="C" value="p,t,k"/>
-    <canon name="syllabe" value="T?(OG?|IL?G?)?(R|VF)"/>
+      <canon name="syllabe" value="T?(OG?|IL?G?)?(R|VF)"/>
       <spec name="supra_segmentals" value=""/>
    </parameters>
    <corr num="1">
@@ -422,7 +422,8 @@
          <seg>o</seg>
       </modern>
       <modern dialecte="pra">
-         <seg>a=aː</seg>
+         <seg>a</seg>
+         <seg>aː</seg>
       </modern>
    </corr>
    <corr num="15">
@@ -565,7 +566,8 @@
          <seg>aẽ</seg>
       </modern>
       <modern dialecte="pra">
-         <seg>jɛ̃=jẽ</seg>
+         <seg>jɛ̃</seg>
+         <seg>jẽ</seg>
          <seg>ẽ</seg>
       </modern>
    </corr>
@@ -637,7 +639,8 @@
          <seg>oi</seg>
       </modern>
       <modern dialecte="tuk">
-         <seg>oi=oj</seg>
+         <seg>oi</seg>
+         <seg>oj</seg>
       </modern>
       <modern dialecte="mar">
          <seg>?</seg>
@@ -661,7 +664,8 @@
          <seg>ot</seg>
       </modern>
       <modern dialecte="tag">
-         <seg>oi=oj</seg>
+         <seg>oi</seg>
+         <seg>oj</seg>
       </modern>
       <modern dialecte="tuk">
          <seg>e</seg>
