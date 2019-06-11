@@ -38,12 +38,13 @@ warn "Remapping Mac STEDT Font 5.1 text files to Unicode 4.0 ...\n";
 
 ##################################
 ###GET LIST OF FILES TO CONVERT###
-#opendir(DIR, ':') 
-opendir(DIR, '.') 
-    or die 'cannot open : $!';
-my @files = sort grep /\.txt$/, readdir(DIR);
+#opendir(DIR, ':')
+my ($dir) = @ARGV;
+opendir(DIR, $dir)
+    or die "cannot open : $dir";
+my @files = map {"$dir/$_"} readdir(DIR);
 closedir(DIR);
-die "Died: No file.txt in current directory to convert! (why not add some?)\n"
+die "Died: No files in current directory to convert! (why not add some?)\n"
     unless @files;
 my %files;
 warn "-"x64,"\n";
@@ -55,8 +56,7 @@ my $n;
 for my $infile (@files){
     $n++;
     my $outfile = $infile;
-    $outfile =~ s/\.txt/.u8/ 
-        or die "Died!: Infiles must be named with a `.txt' extension\n";
+    $outfile .= '.u8';
     $files{$infile}=$outfile;
     warn "$n:  $infile => $outfile\n";
 }
@@ -188,6 +188,9 @@ my $ctrl = '[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]';
 my $hd = '[\x9f\xff\xfc\xce\xe1\xab\xcf]';
 
 for my $f (sort keys %files){
+
+    next if -d $f;
+
     open IF, "< $f" 
         or die "cannot open `$f': $!";
     warn "Reading text file `$f' ...\n";
@@ -256,6 +259,9 @@ for my $f (sort keys %files){
 		s/ ̌/ˇ/g; # caron
 		s/ ̂/ˆ/g; # circumflex
 		s/ ̱/ˍ/g; # low macron, modifier letter
+
+        # get rid of ctrl-z
+        s/\cZ//g;
 
         print OF;
 
