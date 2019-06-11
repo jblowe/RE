@@ -3,6 +3,7 @@ import os
 projects = {'TGTM': '../projects/TGTM',
             'ROMANCE': '../projects/ROMANCE',
             'DEMO93': '../projects/DEMO93',
+            'DIS': '../projects/DIS',
             'POLYNESIAN': '../projects/POLYNESIAN',
             'LOLOISH': '../projects/LOLOISH',
             'NYI': '../projects/LOLOISH',
