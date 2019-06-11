@@ -20,7 +20,7 @@ do
     if [ -e ../projects/${PROJECT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
         # first test make sets, with 'hand' mel
-        time python3 REcli.py ${PROJECT} -r ${mel} --mel ${mel} > ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
+        time python3 REcli.py ${PROJECT} -r ${mel} -m ${mel} > ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
         [ $? -ne 0 ] && exit 1;
         cat ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
 
