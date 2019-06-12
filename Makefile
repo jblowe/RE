@@ -12,6 +12,7 @@ test:
 	cd src ; bash ./testPROJECT.sh DIS
 	cd src ; bash ./testPROJECT.sh DEMO93
 	#cd src ; bash ./testPROJECT.sh VANUATU
+	cd ../projects/POLYNESIAN/ ; bash ./polynesian_pipeline.sh 
 	cd src ; bash ./testPROJECT.sh POLYNESIAN
 
 	cd projects/LOLOISH ; bash ./yi_pipeline.sh
