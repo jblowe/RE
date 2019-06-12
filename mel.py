@@ -1,3 +1,5 @@
+import re
+
 class Mel:
     def __init__(self, glosses, id):
         self.glosses = glosses
@@ -27,15 +29,13 @@ def associated_mels(mels, gloss):
 
 def search_mels(gloss, mel_glosses):
 
-    # the new way: check every MEL gloss to see if it is contained in the (presumably) full gloss
-    for g in mel_glosses:
-        if gloss is not None and g is not None:
-            if g in gloss:
-                return True
-    return False
-
     # the old way: check if gloss (string) is in the list of MEL glosses
     if gloss in mel_glosses:
         return True
-    else:
-        return False
+
+    # the new way: check every MEL gloss to see if it is contained in the (presumably) full gloss
+    for g in mel_glosses:
+        if gloss is not None and g is not None:
+            if g in [x for x in re.split(r'[/ ,]', gloss) if x != '']:
+                return True
+    return False
