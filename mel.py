@@ -28,14 +28,5 @@ def associated_mels(mels, gloss):
     return associated if associated else [default_mel]
 
 def search_mels(gloss, mel_glosses):
-
-    # the old way: check if gloss (string) is in the list of MEL glosses
-    if gloss in mel_glosses:
-        return True
-
-    # the new way: check every MEL gloss to see if it is contained in the (presumably) full gloss
-    for g in mel_glosses:
-        if gloss is not None and g is not None:
-            if g in [x for x in re.split(r'[/ ,]', gloss) if x != '']:
-                return True
-    return False
+    return (gloss in mel_glosses or
+            any((mel_gloss in gloss for mel_gloss in mel_glosses)))
