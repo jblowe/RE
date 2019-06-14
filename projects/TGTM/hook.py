@@ -1,6 +1,7 @@
 import read
 import serialize
 import os
+from utils import cd
 
 base_dir = os.path.dirname(__file__)
 
@@ -39,7 +40,13 @@ def fuzzy_lexicons(mapping, settings):
     settings.attested = {lexicon.language: f'{lexicon.language}.fuzz.data.xml'
                          for lexicon in attested_lexicons.values()}
 
+def generate_xml_data():
+    print('running TGTM pipeline to generate data files from lexware')
+    with cd(os.path.join(base_dir, '../RE_DATA_1994/')):
+        os.system('./tgtm_pipeline.sh')
+
 def run_load_hooks(settings):
+    generate_xml_data()
     if 'fuzzy' in settings.other:
         fuzzy_lexicons(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
                        settings)
