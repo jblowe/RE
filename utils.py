@@ -1,3 +1,6 @@
+import os
+from contextlib import contextmanager
+
 # Misc. utils
 def all_glosses(lexicons):
     glosses = set()
@@ -15,3 +18,12 @@ def glosses_by_language(single_lexicon):
             glosses.add(form.gloss)
     return glosses
 
+## A pale imitation of unwind-protect wrapped in a `with' macro.
+@contextmanager
+def cd(newdir):
+    prevdir = os.getcwd()
+    os.chdir(os.path.expanduser(newdir))
+    try:
+        yield
+    finally:
+        os.chdir(prevdir)
