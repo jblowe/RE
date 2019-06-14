@@ -317,8 +317,7 @@ def create_sets(projections, statistics, mels, root=True):
         for supporting_form in support:
             if isinstance(supporting_form, ModernForm):
                 for associated_mel in mel.associated_mels(mels, supporting_form.gloss):
-                    if associated_mel.id != '' or mels is None:
-                        distinct_mels[associated_mel].append(supporting_form)
+                    distinct_mels[associated_mel].append(supporting_form)
             else:
                 distinct_mels[mel.default_mel].append(supporting_form)
         for distinct_mel, support in distinct_mels.items():
