@@ -41,4 +41,5 @@ def associated_mels(association, gloss):
     return list(association.get(gloss, [default_mel]))
 
 def search_mels(gloss, mel_glosses):
-    return any((mel_gloss in gloss for mel_gloss in mel_glosses))
+    return any((mel_gloss in re.split(r'[/ ,]', gloss)
+                for mel_gloss in mel_glosses))
