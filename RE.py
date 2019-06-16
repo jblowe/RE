@@ -312,11 +312,23 @@ def create_sets(projections, statistics, mels, root=True):
                 attested |= x.attested_support
         return attested
 
+    def all_glosses(projections):
+        all_glosses = set()
+        for support in projections.values():
+            for supporting_form in support:
+                if supporting_form.gloss:
+                    all_glosses.add(supporting_form.gloss)
+        return all_glosses
+
+    associated_mels_table = mel.compile_associated_mels(mels,
+                                                        all_glosses(projections))
+
     def add_cognate_sets(reconstruction, support):
         distinct_mels = collections.defaultdict(list)
         for supporting_form in support:
             if isinstance(supporting_form, ModernForm):
-                for associated_mel in mel.associated_mels(mels, supporting_form.gloss):
+                for associated_mel in mel.associated_mels(associated_mels_table,
+                                                          supporting_form.gloss):
                     distinct_mels[associated_mel].append(supporting_form)
             else:
                 distinct_mels[mel.default_mel].append(supporting_form)
