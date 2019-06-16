@@ -316,8 +316,9 @@ def create_sets(projections, statistics, mels, root=True):
         all_glosses = set()
         for support in projections.values():
             for supporting_form in support:
-                if supporting_form.gloss:
-                    all_glosses.add(supporting_form.gloss)
+                if isinstance(supporting_form, ModernForm):
+                    if supporting_form.gloss:
+                        all_glosses.add(supporting_form.gloss)
         return all_glosses
 
     associated_mels_table = mel.compile_associated_mels(mels,
