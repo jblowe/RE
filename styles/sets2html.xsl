@@ -36,8 +36,9 @@
                 <div id="pfm"><xsl:value-of select="pfm"/></div>
                 <div id="pgl"><xsl:value-of select="pgl"/></div>
                 <div id="rcn">[<xsl:value-of select="rcn"/>]</div>
-                <div id="mel"><xsl:value-of select="melid"/>:
-                [<xsl:value-of select="mel"/>]</div>
+                <div id="mel" title="{mel}"><xsl:value-of select="melid"/>:
+                    <xsl:value-of select="substring-before(mel, ',')"/>
+                </div>
             </div>
             <xsl:apply-templates select="sf"/>
         </li>
