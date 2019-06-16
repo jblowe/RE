@@ -1,4 +1,5 @@
 import re
+import collections
 
 class Mel:
     def __init__(self, glosses, id):
@@ -20,13 +21,24 @@ class DefaultMel(Mel):
 
 default_mel = DefaultMel([], '')
 
-def associated_mels(mels, gloss):
-    '''Return all mels which contain gloss.'''
+def compile_associated_mels(mels, glosses):
+    '''Compile a mapping of glosses to mels.'''
     if mels is None:
+        return None
+    association = collections.defaultdict(set)
+    for mel in mels:
+        for gloss in mel.glosses:
+            association[gloss].add(mel)
+        for gloss in glosses:
+            if search_mels(gloss, mel.glosses):
+                association[gloss].add(mel)
+    return association
+
+def associated_mels(association, gloss):
+    '''Lookup gloss in the table of MEL associations.'''
+    if association is None:
         return [default_mel]
-    associated = [mel for mel in mels if search_mels(gloss, mel.glosses)]
-    return associated if associated else [default_mel]
+    return list(association.get(gloss, [default_mel]))
 
 def search_mels(gloss, mel_glosses):
-    return (gloss in mel_glosses or
-            any((mel_gloss in gloss for mel_gloss in mel_glosses if gloss is not None)))
+    return any((mel_gloss in gloss for mel_gloss in mel_glosses))
