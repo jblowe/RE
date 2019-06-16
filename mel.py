@@ -29,4 +29,4 @@ def associated_mels(mels, gloss):
 
 def search_mels(gloss, mel_glosses):
     return (gloss in mel_glosses or
-            any((mel_gloss in gloss for mel_gloss in mel_glosses)))
+            any((mel_gloss in gloss for mel_gloss in mel_glosses if gloss is not None)))
