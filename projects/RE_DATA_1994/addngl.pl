@@ -32,7 +32,9 @@ if (m#<gl>(.*?)</gl>#) {
     my @terms = ngl($gl);
     if (join('', @terms) ne $gl) {
         foreach my $term (@terms) {
-            $_ .= "    <ngl>$term</ngl>\n";
+            if ($term) {
+                $_ .= "    <ngl>$term</ngl>\n";
+            }
         }
     }
 }
