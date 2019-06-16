@@ -1,6 +1,7 @@
 import read
 import serialize
 import os
+import sys
 from utils import cd
 
 base_dir = os.path.dirname(__file__)
@@ -43,7 +44,13 @@ def fuzzy_lexicons(mapping, settings):
 def generate_xml_data():
     print('running TGTM pipeline to generate data files from lexware')
     with cd(os.path.join(base_dir, '../RE_DATA_1994/')):
-        os.system('./tgtm_pipeline.sh')
+        with open('tgtm_pipeline.sh', 'r', encoding='utf-8') as commands:
+            for command in commands:
+                # print(command.strip())
+                if 'perl' in command or 'python' in command:
+                    exit_code = os.system(command.strip())
+                    if exit_code != 0:
+                        sys.exit(exit_code)
 
 def run_load_hooks(settings):
     generate_xml_data()

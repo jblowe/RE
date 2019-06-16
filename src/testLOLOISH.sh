@@ -2,6 +2,14 @@ set -x
 
 DATE=`date +%Y-%m-%d-%H-%M`
 
+XPWD=`pwd`
+# run the pipeline first to set up the data
+cd ../projects/LOLOISH; ./yi_pipeline.sh
+[ $? -ne 0 ] && exit 1;
+
+# make the "standard" sets -- with the MEL
+
+cd $XPWD
 # do the comparison of MEL with no-mel
 time python3 REcli.py NYI --mel hand --mel2 none
 [ $? -ne 0 ] && exit 1;
@@ -16,7 +24,9 @@ head ../projects/LOLOISH/SYI.default.analysis.txt
 time python3 REcli.py NYI -r hand --mel hand  > ../projects/LOLOISH/NYI.${DATE}.statistics.txt
 [ $? -ne 0 ] && exit 1;
 cat ../projects/LOLOISH/NYI.${DATE}.statistics.txt
+rm  ../projects/LOLOISH/NYI.${DATE}.statistics.txt
 
 time python3 REcli.py SYI -r hand --mel hand  > ../projects/LOLOISH/SYI.${DATE}.statistics.txt
 [ $? -ne 0 ] && exit 1;
 cat ../projects/LOLOISH/SYI.${DATE}.statistics.txt
+rm  ../projects/LOLOISH/SYI.${DATE}.statistics.txt

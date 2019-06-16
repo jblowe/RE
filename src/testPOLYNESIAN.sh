@@ -12,3 +12,4 @@ cd $XPWD
 time python3 REcli.py POLYNESIAN --run hand --mel hand > ../projects/POLYNESIAN/POLYNESIAN.${DATE}.statistics.txt
 [ $? -ne 0 ] && exit 1;
 cat ../projects/POLYNESIAN/POLYNESIAN.${DATE}.hand.statistics.txt
+rm  ../projects/POLYNESIAN/POLYNESIAN.${DATE}.hand.statistics.txt
