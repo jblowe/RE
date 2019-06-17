@@ -30,7 +30,7 @@ re-write the program in more current frameworks (i.e. PERL and Java) date from t
 to the early 21st century.
 </p>
 <p>
-The current implementation is written in Python, and this web interface is uses the
+The current implementation is written in Python, and this web interface uses the
 <a href="https://bottlepy.org">Bottle</a>
 web microframework and the
 <a href="https://getbootstrap.com">Bootstrap</a> CSS framework.
