@@ -1,5 +1,5 @@
 test:
-	echo 'starting tests'
+	echo 'starting tests `date`'
 
 	cd src ; bash ./cleanup.sh
 	
@@ -42,3 +42,4 @@ test:
 	cd src ; python3 REcli.py -x -- SYI > ../projects/LOLOISH/SYI.mel.compare.txt
 	cd src ; python3 REcli.py -x -- VANUATU > ../projects/VANUATU/VANUATU.mel.compare.txt
 
+	cd REwww; python3 -c "from utils import add_time_and_version;print(add_time_and_version())" >> ../updates.txt
