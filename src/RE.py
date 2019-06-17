@@ -300,7 +300,7 @@ def project_back(lexicons, parameters, statistics):
     return reconstructions, statistics
 
 # we create cognate sets by comparing meaning.
-def create_sets(projections, statistics, mels, root=True):
+def create_sets(projections, statistics, mels, only_with_mel, root=True):
     cognate_sets = set()
 
     def attested_forms(support):
@@ -330,7 +330,8 @@ def create_sets(projections, statistics, mels, root=True):
             if isinstance(supporting_form, ModernForm):
                 for associated_mel in mel.associated_mels(associated_mels_table,
                                                           supporting_form.gloss):
-                    distinct_mels[associated_mel].append(supporting_form)
+                    if not (only_with_mel and associated_mel.id == '') or mels is None:
+                        distinct_mels[associated_mel].append(supporting_form)
             else:
                 distinct_mels[mel.default_mel].append(supporting_form)
         for distinct_mel, support in distinct_mels.items():
@@ -344,10 +345,14 @@ def create_sets(projections, statistics, mels, root=True):
                                                   frozenset(support),
                                                   frozenset(attested_forms(support)),
                                                   distinct_mel))
-
+    seen = []
     for reconstruction, support in projections.items():
-        add_cognate_sets(reconstruction, support)
-        # a cognate set requires support from more than 1 language
+        if only_with_mel:
+            if support not in seen:
+                add_cognate_sets(reconstruction, support)
+                seen.append(support)
+        else:
+            add_cognate_sets(reconstruction, support)
     statistics.add_note(
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
@@ -391,16 +396,17 @@ def pick_derivation(cognate_sets, statistics):
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
     return uniques.values(), statistics
 
-def batch_upstream(lexicons, params, root):
+def batch_upstream(lexicons, params, only_with_mel, root):
     return pick_derivation(
         *filter_subsets(
             *create_sets(
                 *project_back(lexicons, params, Statistics()),
                 params.mels,
+                only_with_mel,
                 root),
             root))
 
-def upstream_tree(target, tree, param_tree, attested_lexicons):
+def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
@@ -411,6 +417,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons):
                              for daughter in tree[target]]
         forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
+                                           only_with_mel,
                                            root)
         return Lexicon(
             target,
@@ -443,13 +450,14 @@ def all_parameters(settings):
     rec(settings.upstream_target)
     return mapping
 
-def batch_all_upstream(settings, attested_lexicons=None):
+def batch_all_upstream(settings, attested_lexicons=None, only_with_mel=False):
     if attested_lexicons is None:
         attested_lexicons = read.read_attested_lexicons(settings)
     return upstream_tree(settings.upstream_target,
                          settings.upstream,
                          all_parameters(settings),
-                         attested_lexicons)
+                         attested_lexicons,
+                         only_with_mel)
 
 def print_form(form, level):
     if isinstance(form, ModernForm):

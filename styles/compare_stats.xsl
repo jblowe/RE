@@ -15,9 +15,9 @@
             </head>
             <body>
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
-                <ul>
+                <ol>
                     <xsl:apply-templates select=".//file"/>
-                </ul>
+                </ol>
                 <h4>Comparison</h4>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
             </body>

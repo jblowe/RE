@@ -5,7 +5,7 @@ import time
 import coverage
 import compare
 import load_hooks
-from argparser import args, need_to_compare, project_dir
+from argparser import args, need_to_compare, only_with_mel, project_dir
 
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
@@ -31,13 +31,13 @@ elif args.compare:
     comparison = compare.compare(project_dir, args.project)
     pass
 else:
-    B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons)
+    B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
 
     if need_to_compare:
         settings2 = read.read_settings_file(f'{project_dir}/{args.project}.default.parameters.xml',
                                         mel=(args.mel2 or args.mel),
                                         recon=(args.recon2 or args.recon))
-        B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons)
+        B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
         analysis_file = f'{project_dir}/{args.project}.{args.run}.analysis.txt'
         evaluation_stats = RE.analyze_sets(B, B2, analysis_file)
         evaluation_stats['lexicon_1'] = (str(settings.mel_filename).replace(f'{project_dir}/{args.project}.',''), 'string')
