@@ -34,18 +34,12 @@ do
     if [ -e ../projects/${PROJECT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
         # first test make sets, with 'hand' mel
-        time python3 REcli.py ${PROJECT} -r ${mel} -m ${mel} > ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
-        [ $? -ne 0 ] && exit 1;
-        cat ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
-        rm ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
+        time python3 REcli.py ${PROJECT} -r ${mel} -m ${mel} > ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt &
 
         # next test mel comparison
-        time python3 REcli.py ${PROJECT} -r ${mel} --mel hand --mel2 ${mel}
-        [ $? -ne 0 ] && exit 1;
-        head ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
-        rm ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
+        time python3 REcli.py ${PROJECT} -r ${mel} --mel hand --mel2 ${mel} &
     fi
 done
-
+wait
 # compare results of all runs
 python3 REcli.py -x -- ${PROJECT}

@@ -30,3 +30,6 @@ time python3 REcli.py SYI -r hand --mel hand  > ../projects/LOLOISH/SYI.${DATE}.
 [ $? -ne 0 ] && exit 1;
 cat ../projects/LOLOISH/SYI.${DATE}.statistics.txt
 rm  ../projects/LOLOISH/SYI.${DATE}.statistics.txt
+
+python3 REcli.py -x -- SYI
+python3 REcli.py -x -- NYI

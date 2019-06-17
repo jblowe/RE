@@ -13,3 +13,5 @@ time python3 REcli.py POLYNESIAN --run hand --mel hand > ../projects/POLYNESIAN/
 [ $? -ne 0 ] && exit 1;
 cat ../projects/POLYNESIAN/POLYNESIAN.${DATE}.hand.statistics.txt
 rm  ../projects/POLYNESIAN/POLYNESIAN.${DATE}.hand.statistics.txt
+
+python3 REcli.py -x -- POLYNESIAN
