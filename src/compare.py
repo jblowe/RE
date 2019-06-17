@@ -37,7 +37,7 @@ def walk(files):
 def compare(project_dir, project):
     compare_xml_files = f'{project_dir}/{project}.*.statistics.xml'
     files = glob.glob(compare_xml_files)
-    files = [f for f in files if 'mel' not in f and 'compare' not in f]
+    files = [f for f in files if 'mel' not in f and 'compare' not in f and 'evaluation' not in f]
     # run_types = [f.replace(f'{project_dir}/{project}.','').replace('.statistics.xml','') for f in files]
 
     root = xml2dict.dict_to_etree(walk(files))
