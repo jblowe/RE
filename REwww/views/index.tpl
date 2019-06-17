@@ -1,43 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="reconstruction engine">
-	<link rel="icon" href="/static/favicon.ico">		
-	<title>The Reconstruction Engine</title>
-	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap-sortable.css">
-    <script type="text/javascript" src="/static/moment.min.js"></script>
-	<script type="text/javascript" src="/static/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
-	<script type="text/javascript" src="/static/bootstrap.min.js"></script>
-</head>
+% include('head.tpl')
 <body>
-	<!-- Static navbar -->
-	<nav class="navbar navbar-default navbar-static-top">
-		<div class="container">
-			<div class="row">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">The Reconstruction Engine</a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/">Home</a></li>
-						<li><a href="/about">About</a></li>
-						<li><a href="/list_projects">Projects</a></li>
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</div>
-	</nav>
+    % include ('nav.tpl')
 	<div class="container">
 		<div class="row">
 			<div class="container-fluid">
@@ -54,7 +19,7 @@
                         <ul>
                           % for file in files:
                             <li>
-                                <a href="/project_files/{{data['project']}}/{{file}}">{{file}}</a>
+                                <a href="/project_file/{{data['project']}}/{{file}}">{{file}}</a>
                                 <a href="/download/{{data['project']}}/{{file}}"><span class="glyphicon glyphicon glyphicon-download-alt"></span></a>
                             </li>
                           % end
@@ -67,6 +32,7 @@
                 <div id="content" class="col-sm-8">
                 <!-- a href="/project/{{data['project']}}">&lt;&lt; back</a -->
                 <h3>{{data['filename']}}</h3>
+                <i>last updated: {{data['date']}}</i>
                 {{!data['content']}}
                 </div>
               % end

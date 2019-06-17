@@ -54,11 +54,11 @@ def project(project_name):
     return template('index', data=data)
 
 
-@app.route('/project_files/<filename:re:.*>')
-def project_files(filename):
-    content, project_name = utils.file_content(filename)
+@app.route('/project_file/<filename:re:.*>')
+def project_file(filename):
+    content, project_name, date = utils.file_content(filename)
     files, base_dir = utils.data_files(project_name)
-    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'content': content}
+    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date, 'content': content}
     return template('index', data=data)
 
 

@@ -74,13 +74,20 @@ def file_content(file_path):
         data = f.read()
         f.close()
         data = reformat(data, 5000)
-    return data, project
+    return data, project, get_info(file_path)
+
+def get_info(path):
+    try:
+        stat = os.stat(os.path.join(BASE_DIR, 'projects', path))
+        return str(time.ctime(stat.st_mtime))
+    except:
+        return 'unknown'
 
 
 def project_info():
     #project_dir = os.path.join(BASE_DIR, 'projects', project)
     #filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
-    return [(p, 'nnn', projects.projects[p]) for p in projects.projects]
+    return [(p, get_info(p), projects.projects[p]) for p in projects.projects]
 
 
 def xml2html(xml_filename, xsl_filename):
