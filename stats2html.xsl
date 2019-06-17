@@ -19,10 +19,14 @@
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
                 <h4>Summary statistics</h4>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
-                <h4>Language statistics</h4>
                 <xsl:apply-templates select=".//stats"/>
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="stats">
+        <h4>Language statistics</h4>
+        <xsl:apply-templates select=".//stats"/>
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
@@ -36,13 +40,13 @@
             <xsl:for-each select="./*">
                 <tr>
                     <td><xsl:value-of select ="name(.)"/></td>
-                    <td><xsl:value-of select='format-number(@value, "###,###")' /></td>
+                    <td><xsl:value-of select ="@value"/></td>
                 </tr>
             </xsl:for-each>
         </table>
     </xsl:template>
 
-  <xsl:key name="elements" match="lexicon/*" use="name()"/>
+  <xsl:key name="elements" match="lexicons/lexicon/*" use="name()"/>
   <xsl:key name="subtotals" match="totals/*" use="name()"/>
 
     <xsl:template match="stats">
@@ -60,7 +64,7 @@
                 </xsl:for-each>
               </tr>
             </thead>
-            <xsl:apply-templates select="lexicon"/>
+            <xsl:apply-templates select="lexicons/lexicon"/>
             <tr>
               <th>totals</th>
 
@@ -68,7 +72,7 @@
                   <!-- xsl:sort select="name()"/ -->
                   <xsl:for-each select="key('subtotals', name())">
                     <xsl:if test="position()=1">
-                      <th><xsl:value-of select='format-number(@value, "###,###")'/></th>
+                      <th><xsl:value-of select ="@value"/></th>
                     </xsl:if>
                   </xsl:for-each>
                 </xsl:for-each>
@@ -77,13 +81,13 @@
     </xsl:template>
 
 
-    <xsl:template match="lexicon">
+    <xsl:template match="lexicons/lexicon">
         <tr>
             <td>
                 <xsl:value-of select="@language"/>
             </td>
             <xsl:for-each select="./*">
-                <td><xsl:value-of select='format-number(./@value, "###,###")' /></td>
+                <td><xsl:value-of select ="@value"/></td>
             </xsl:for-each>
         </tr>
     </xsl:template>
@@ -95,9 +99,19 @@
                 Totals
             </td>
             <xsl:for-each select="./*">
-                <td><xsl:value-of select='format-number(./@value, "###,###")' /></td>
+                <td><xsl:value-of select ="@value"/></td>
             </xsl:for-each>
         </tr>
+    </xsl:template>
+
+    <xsl:template match="*[@type = 'string']">
+        <xsl:value-of select='@value'/>
+    </xsl:template>
+    <xsl:template match="*[@type = 'float']">
+        <xsl:value-of select='format-number(@value, "##.###")'/>
+    </xsl:template>
+    <xsl:template match="*[@type = 'integer']">
+        <xsl:value-of select='format-number(@value, "###,###")'/>
     </xsl:template>
 
 </xsl:stylesheet>
