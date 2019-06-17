@@ -124,9 +124,10 @@ def serialize_stats(stats, filename):
     root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
+    lexicons = ET.SubElement(root, 'lexicons')
     totals = collections.Counter()
     for number, language in enumerate(sorted(stats.language_stats.keys())):
-        entry = ET.SubElement(root, 'lexicon', attrib={'language': language})
+        entry = ET.SubElement(lexicons, 'lexicon', attrib={'language': language})
         for stat in stats.language_stats[language].keys():
             ET.SubElement(entry, stat).set('value', str(stats.language_stats[language][stat]))
             totals[stat] += stats.language_stats[language][stat]
@@ -149,7 +150,12 @@ def serialize_evaluation(stats, filename):
 
     entry = ET.SubElement(root, 'totals')
     for k, v in stats.items():
-        ET.SubElement(entry, k).set('value', str(v))
+        if type(v) == type(()):
+            element = ET.SubElement(entry, k)
+            element.set('value', str(v[0]))
+            element.set('type', str(v[1]))
+        else:
+            ET.SubElement(entry, k).set('value', str(v))
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))

@@ -540,14 +540,14 @@ def compare_proto_lexicons(lexicon1, lexicon2):
         print_form(form, 0)
 
     evaluation_dict = {
-        'sets_in_lexicon_1': nl1,
-        'sets_in_lexicon_2': nl2,
-        'sets_in_common': ncommon,
-        'only_in_lexicon_1': len(only_lex1),
-        'only_in_lexicon_2': len(only_lex2),
-        'precision': '{:04.3f}'.format(precision),
-        'pecall': '{:04.3f}'.format(recall),
-        'fscore': '{:04.3f}'.format(fscore)
+        'sets_in_lexicon_1': (nl1, 'integer'),
+        'sets_in_lexicon_2': (nl2, 'integer'),
+        'sets_in_common': (ncommon, 'integer'),
+        'only_in_lexicon_1': (len(only_lex1), 'integer'),
+        'only_in_lexicon_2': (len(only_lex2), 'integer'),
+        'precision': ('{:04.3f}'.format(precision), 'float'),
+        'recall': ('{:04.3f}'.format(recall), 'float'),
+        'fscore': ('{:04.3f}'.format(fscore), 'float')
     }
 
     return evaluation_dict
