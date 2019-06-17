@@ -8,5 +8,10 @@ time python3 REcli.py --run tree -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.$
 [ $? -ne 0 ] && exit 1;
 cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
 
+# second make parsimonious sets
+time python3 REcli.py -w --run tree-parsimonious -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
+[ $? -ne 0 ] && exit 1;
+cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
+
 # compare results of all runs
 python3 REcli.py -x -- ROMANCE

@@ -10,6 +10,11 @@ cd ../projects/LOLOISH; ./yi_pipeline.sh
 # make the "standard" sets -- with the MEL
 
 cd $XPWD
+
+# generate the parsimonious sets
+time python3 REcli.py NYI -w --run hand-parsimonious --mel hand
+time python3 REcli.py SYI -w --run hand-parsimonious --mel hand
+
 # do the comparison of MEL with no-mel
 time python3 REcli.py NYI --mel hand --mel2 none
 [ $? -ne 0 ] && exit 1;
