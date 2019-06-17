@@ -1,3 +1,4 @@
+
 <!-- Static navbar -->
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
@@ -9,13 +10,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Interlinear Texts</a>
+                <a class="navbar-brand" href="#">The Reconstruction Engine</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/list_texts">Texts</a></li>
+                    <li><a href="/list_projects">Projects</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
