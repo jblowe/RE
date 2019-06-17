@@ -40,10 +40,10 @@ else:
         B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons)
         analysis_file = f'{project_dir}/{args.project}.{args.run}.analysis.txt'
         evaluation_stats = RE.analyze_sets(B, B2, analysis_file)
-        evaluation_stats['lexicon_1'] = str(settings.mel_filename).replace(f'{project_dir}/{args.project}.','')
-        evaluation_stats['lexicon_2'] = str(settings2.mel_filename).replace(f'{project_dir}/{args.project}.','')
+        evaluation_stats['lexicon_1'] = (str(settings.mel_filename).replace(f'{project_dir}/{args.project}.',''), 'string')
+        evaluation_stats['lexicon_2'] = (str(settings2.mel_filename).replace(f'{project_dir}/{args.project}.',''), 'string')
         print(f'wrote analysis to {analysis_file}')
-        evaluation_xml_file = f'{project_dir}/{args.project}.{args.run}.evaluation.xml'
+        evaluation_xml_file = f'{project_dir}/{args.project}.{args.run}.evaluation.statistics.xml'
         RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
     else:
         keys_file = f'{project_dir}/{args.project}.{args.run}.keys.csv'
@@ -72,7 +72,7 @@ else:
         C.statistics.add_stat('reflexes_in_sets', len(forms_used))
         print(f'{len(forms_used)} different reflexes in cognate sets')
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
-        stats_xml_file = f'{project_dir}/{args.project}.{args.run}.statistics.xml'
+        stats_xml_file = f'{project_dir}/{args.project}.{args.run}.upstream.statistics.xml'
         RE.write_xml_stats(C.statistics, stats_xml_file)
 
 print(time.asctime())
