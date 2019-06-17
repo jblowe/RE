@@ -30,6 +30,13 @@ parser.add_argument('-x',
                     const=True,
                     metavar='compare',
                     help='specify to compare statistics files')
+parser.add_argument('-w', '--only-with-mel',
+                    dest='only_with_mel',
+                    nargs='?',
+                    default=False,
+                    const=True,
+                    metavar='only_with_mel',
+                    help='only keep sets which match a MEL')
 parser.add_argument('--mel2',
                     metavar='mel2',
                     help='name of MEL to compare against')
@@ -41,3 +48,4 @@ args = parser.parse_args()
 project_dir = projects.projects[args.project]
 need_to_compare = (args.mel2 or args.recon2)
 compare_results = args.compare
+only_with_mel = args.only_with_mel
