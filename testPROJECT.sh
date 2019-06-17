@@ -39,6 +39,10 @@ do
         cat ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
         rm ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
 
+        # next make the "parsimonious" sets: remove untouched mels and merge sets with identical support
+        time python3 REcli.py ${PROJECT} -w --run ${mel}-parsimonious --mel ${mel}
+        [ $? -ne 0 ] && exit 1;
+
         # next test mel comparison
         time python3 REcli.py ${PROJECT} -r ${mel} --mel hand --mel2 ${mel}
         [ $? -ne 0 ] && exit 1;

@@ -26,6 +26,12 @@ do
         time python3 REcli.py ${PROJECT} -r ${mel} --mel hand --mel2 ${mel} &
         #[ $? -ne 0 ] && exit 1;
         #head ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
+
+
+        # third make the parsimonious sets
+        time python3 REcli.py ${PROJECT} -w -r ${mel}-parsimonious --mel hand &
+        #[ $? -ne 0 ] && exit 1;
+        #head ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
     fi
 done
 wait
