@@ -25,6 +25,7 @@ test:
 	cd src ; python3 REcli.py -c -m hand VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
 
     # default sets, no mel
+	cd src ; python3 REcli.py DIS > ../projects/DIS/DIS.mel.coverage.txt
 	cd src ; python3 REcli.py DEMO93 > ../projects/DEMO93/DEMO93.mel.coverage.txt
 	cd src ; python3 REcli.py TGTM > ../projects/TGTM/TGTM.mel.coverage.txt
 	cd src ; python3 REcli.py ROMANCE > ../projects/ROMANCE/ROMANCE.mel.coverage.txt
@@ -34,6 +35,7 @@ test:
 	#cd src ; python3 REcli.py VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
 
     # compare
+	cd src ; python3 REcli.py -x -- DIS > ../projects/DIS/DIS.mel.compare.txt
 	cd src ; python3 REcli.py -x -- DEMO93 > ../projects/DEMO93/DEMO93.mel.compare.txt
 	cd src ; python3 REcli.py -x -- TGTM > ../projects/TGTM/TGTM.mel.compare.txt
 	cd src ; python3 REcli.py -x -- ROMANCE > ../projects/ROMANCE/ROMANCE.mel.compare.txt
