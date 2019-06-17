@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="reconstruction engine">
 	<link rel="icon" href="/static/favicon.ico">
-	<title>Interlinear Texts</title>
+	<title>The Reconstruction Engine</title>
 	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/bootstrap-sortable.css">
     <script type="text/javascript" src="/static/moment.min.js"></script>
