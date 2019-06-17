@@ -70,7 +70,14 @@ def download(filename):
     response.body = content
     response['Content-Disposition'] = 'attachment; filename="%s"' % filename
     return response
-    #return template('index', data=data)
+
+
+@app.post('/remake')
+def remake():
+    data = {'make': utils.make('DIS')}
+    response = HTTPResponse()
+    response.body = data['make']
+    return response
 
 
 @app.route('/make')
