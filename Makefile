@@ -9,7 +9,7 @@ test:
 	cd src ; bash ./testPROJECT.sh TGTM
 	cd src ; bash ./testPROJECT.sh DEMO93
 
-	#cd src ; bash ./testPROJECT.sh VANUATU
+	cd src ; bash ./testPROJECT.sh VANUATU
 	cd src ; bash ./testPROJECT.sh DIS
 	cd src ; bash ./testPROJECT.sh POLYNESIAN
 	cd src ; bash ./testPROJECT.sh LOLOISH
@@ -32,7 +32,7 @@ test:
 	cd src ; python3 REcli.py POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.coverage.txt
 	cd src ; python3 REcli.py NYI > ../projects/LOLOISH/NYI.mel.coverage.txt
 	cd src ; python3 REcli.py SYI > ../projects/LOLOISH/SYI.mel.coverage.txt
-	#cd src ; python3 REcli.py VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
+	cd src ; python3 REcli.py VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
 
     # compare
 	cd src ; python3 REcli.py -x -- DIS > ../projects/DIS/DIS.mel.compare.txt
