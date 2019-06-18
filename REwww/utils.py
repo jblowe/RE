@@ -5,6 +5,7 @@ import subprocess
 sys.path.append("../src")
 
 import projects
+import RE, read
 
 # nb: we are trying to get the directory above the directory this file is in
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +30,7 @@ def add_time_and_version():
 
 def data_files(project):
     project_dir = projects.projects[project]
-    filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
+    filelist = [f for f in sorted(os.listdir(project_dir)) if os.path.isfile(os.path.join(project_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     for type in 'parameters statistics compare correspondences mel sets data'.split(' '):
@@ -143,23 +144,18 @@ def limit_lines(filecontent, max_rows):
     return '\n'.join(rows) + message
 
 
-def make(project_name):
-    try:
-        elapsed_time = time.time()
-        if project_name == 'ALL':
-            os.chdir('..')
-            p_object = subprocess.call(['git', 'pull', '-v'])
-            p_object = subprocess.call(['make', '-w'])
-            os.chdir('REwww')
-        else:
-            os.chdir('../src')
-            p_object = subprocess.call(['git', 'pull', '-v'])
-            p_object = subprocess.call(['bash', 'testPROJECT.sh', project_name])
-            os.chdir('../REwww')
-        elapsed_time = time.time() - elapsed_time
-        return f'refresh of project {project_name} from GitHub completed. {elapsed_time} s.'
-    except:
-        return f'refresh from GitHub failed.'
-
+def upstream(request, language_forms, project, only_with_mel):
+    project_dir = projects.projects[project]
+    settings = read.read_settings_file(f'{project_dir}/{project}.default.parameters.xml',
+                                        mel='none',
+                                        recon='default')
+    if request == 'languages':
+        return settings.upstream[settings.upstream_target], settings.upstream_target, project_dir
+    elif request == 'upstream':
+        attested_lexicons = read.create_lexicon_from_parms(language_forms)
+        B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
+        isolates = [(RE.correspondences_as_ids(i[0]),str(list(i[1])[0])) for i in B.statistics.singleton_support]
+        return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses
+    pass
 
 VERSION = get_version()

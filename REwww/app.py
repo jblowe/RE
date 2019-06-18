@@ -1,8 +1,9 @@
-from bottle import Bottle, HTTPResponse, default_app, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
+from bottle import Bottle, HTTPResponse, default_app, request, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
 
 import os
 import sys
 import utils
+import run_make
 
 dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -72,9 +73,28 @@ def download(filename):
     return response
 
 
+@app.post('/interactive/<project_name:re:.*>')
+def upstream(project_name):
+    languages = [(i, getattr(request.forms, i)) for i in request.forms]
+    postdict = request
+    language_names, upstream_target, base_dir = utils.upstream('languages', [], project_name, True)
+    forms, notes, isolates, no_parses = utils.upstream('upstream', languages, project_name, True)
+    data = {'interactive': 'start', 'project': project_name, 'languages': languages, 'base_dir': base_dir,
+            'forms': forms, 'notes': notes, 'isolates': isolates, 'no_parses': no_parses}
+    return template('index', data=data)
+
+
+@app.route('/interactive/<project_name:re:.*>')
+def interactive_project(project_name):
+    languages, upstream_target, base_dir = utils.upstream('languages', [], project_name, True)
+    languages = [(l, '') for l in languages]
+    data = {'interactive': 'start', 'project': project_name, 'languages': languages, 'base_dir': base_dir}
+    return template('index', data=data)
+
+
 @app.post('/remake')
 def remake():
-    data = {'make': utils.make('DIS')}
+    data = {'make': run_make.make('ALL')}
     response = HTTPResponse()
     response.body = data['make']
     return response
@@ -82,26 +102,13 @@ def remake():
 
 @app.route('/make')
 def make():
-    data = {'make': utils.make('ALL')}
+    data = {'make': run_make.make('ALL')}
     return template('index', data=data)
 
 
 @app.route('/make/<project_name:re:.*>')
 def make(project_name):
-    data = {'make': utils.make(project_name)}
-    return template('index', data=data)
-
-
-@app.route('/interactive')
-def interactive():
-    data = {'interactive': 'start'}
-    return template('index', data=data)
-
-
-@app.route('/interactive/<project_name:re:.*>')
-def interactive_project(project_name):
-    files, base_dir = utils.data_files(project_name)
-    data = {'interactive': 'project', 'project': project_name, 'files': files, 'base_dir': base_dir}
+    data = {'make': run_make.make(project_name)}
     return template('index', data=data)
 
 
