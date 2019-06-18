@@ -345,14 +345,9 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                                                   frozenset(support),
                                                   frozenset(attested_forms(support)),
                                                   distinct_mel))
-    seen = []
+
     for reconstruction, support in projections.items():
-        if only_with_mel:
-            if support not in seen:
-                add_cognate_sets(reconstruction, support)
-                seen.append(support)
-        else:
-            add_cognate_sets(reconstruction, support)
+        add_cognate_sets(reconstruction, support)
     statistics.add_note(
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
@@ -387,11 +382,20 @@ def filter_subsets(cognate_sets, statistics, root=True):
 # pick a representative derivation, i.e. choose a reconstruction from
 # reconstructions with the same supporting forms yielding the same
 # surface string
-def pick_derivation(cognate_sets, statistics):
+def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
+    seen = {}
     for cognate_set in cognate_sets:
-        uniques[(correspondences_as_proto_form_string(cognate_set[0]),
-                 cognate_set[1])] = cognate_set
+        if only_with_mel:
+            if cognate_set[2] not in seen:
+                seen[cognate_set[2]] = True
+                uniques[(correspondences_as_proto_form_string(cognate_set[0]),
+                         cognate_set[1])] = cognate_set
+            else:
+                pass
+        else:
+            uniques[(correspondences_as_proto_form_string(cognate_set[0]),
+                     cognate_set[1])] = cognate_set
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
     return uniques.values(), statistics
@@ -404,7 +408,8 @@ def batch_upstream(lexicons, params, only_with_mel, root):
                 params.mels,
                 only_with_mel,
                 root),
-            root))
+            root),
+            only_with_mel)
 
 def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
     # batch upstream repeatedly up the action graph tree from leaves,
