@@ -12,7 +12,7 @@ from xml.dom import minidom
 
 base_dir = os.path.dirname(__file__)
 filename = os.path.join(base_dir, 'AlexF_NorthVan-reconstructions_01.txt')
-correspondence_filename = os.path.join(base_dir, 'AlexF_Vanuatu-correspondences.csv')
+correspondence_filename = os.path.join(base_dir, 'VANUATU.experimental.correspondences.csv')
 
 languages = ['hiw', 'ltg', 'lhi', 'lyp', 'vlw', 'mtp', 'lmg', 'vra', 'vrs', 'msn', 'mta', 'num', 'drg', 'kro', 'olr', 'lkn', 'mrl']
 
@@ -30,11 +30,12 @@ def read_toolbox_file():
             while (i < len(data) - 1):
                 (tag, value) = data[i]
                 if tag[1:] in languages and value:
+                    value = value.replace('{', '').replace('}', '').replace('na-', '')
                     gloss = proto_gloss
                     if data[i + 1][0] == '\\sem':
                         gloss = data[i + 1][1]
                         i += 1
-                    zipped[tag[1:]].append((value, gloss))
+                    zipped[tag[1:]].append((value, gloss, set_number + 1))
                     if gloss:
                         mel.add(gloss)
                 i += 1
@@ -92,8 +93,8 @@ def write_vanuatu_data(zipped, mels):
     print('converting from toolbox format')
     for language in languages:
         root = ET.Element('lexicon', attrib={'dialecte': language})
-        for (number, (glyphs, gloss)) in enumerate(zipped[language]):
-            entry = ET.SubElement(root, 'entry', attrib={'id': str(number + 1)})
+        for (number, (glyphs, gloss, set_number)) in enumerate(zipped[language]):
+            entry = ET.SubElement(root, 'entry', attrib={'id': str(set_number)})
             ET.SubElement(entry, 'hw').text = glyphs
             ET.SubElement(entry, 'gl').text = gloss or 'placeholder'
         with open(os.path.join(base_dir, xml_name(language)), 'w', encoding='utf-8') as f:
