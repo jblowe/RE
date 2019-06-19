@@ -34,13 +34,13 @@ def walk(files):
     return {'stats': {'file': files, 'totals': totals, 'stat': lexicons}}
 
 
-def compare(project_dir, project):
+def compare(project_dir, project, what_to_compare):
     compare_xml_files = f'{project_dir}/{project}.*.statistics.xml'
     files = glob.glob(compare_xml_files)
-    files = [f for f in files if 'mel' not in f and 'compare' not in f and 'evaluation' not in f]
+    files = [f for f in files if what_to_compare in f and 'compare' not in f]
     # run_types = [f.replace(f'{project_dir}/{project}.','').replace('.statistics.xml','') for f in files]
 
     root = xml2dict.dict_to_etree(walk(files))
 
-    with open(f'{project_dir}/{project}.compare.xml', 'w', encoding='utf-8') as f:
+    with open(f'{project_dir}/{project}.{what_to_compare}.compare.xml', 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True).decode("utf-8", "strict"))

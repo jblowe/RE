@@ -28,7 +28,8 @@ if args.coverage:
     coverage_xml_file = f'{project_dir}/{args.project}.{args.mel}.mel.statistics.xml'
     RE.write_xml_stats(coverage_statistics, coverage_xml_file)
 elif args.compare:
-    comparison = compare.compare(project_dir, args.project)
+    for what_to_compare in 'upstream evaluation mel'.split(' '):
+        compare.compare(project_dir, args.project, what_to_compare)
     pass
 else:
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
