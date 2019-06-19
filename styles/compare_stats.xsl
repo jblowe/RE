@@ -29,15 +29,17 @@
             <thead>
                 <tr>
                     <th>Stat</th>
-                    <th>Value</th>
-                    <th>Value</th>
+                    <xsl:for-each select="../file">
+                        <th><xsl:number/></th>
+                    </xsl:for-each>
                 </tr>
             </thead>
             <xsl:for-each select="./*">
                 <tr>
                     <td><xsl:value-of select ="name(.)"/></td>
                     <xsl:for-each select="*">
-                        <td><xsl:value-of select='format-number(., "###,###")' /></td>
+                        <!-- td><xsl:value-of select='format-number(., "###,###")' /></td -->
+                        <td><xsl:value-of select='.' /></td>
                     </xsl:for-each>
                 </tr>
             </xsl:for-each>
