@@ -1,4 +1,4 @@
-from bottle import Bottle, HTTPResponse, default_app, request, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
+from bottle import Bottle, HTTPResponse, default_app, post, request, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
 
 import os
 import sys
