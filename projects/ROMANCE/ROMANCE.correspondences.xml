@@ -10,21 +10,21 @@
       <proto syll="A">ˈ</proto>
       <modern dialecte="es">
          <seg>ˈ</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>ˈ</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="pt">
          <seg>ˈ</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="it">
          <seg>ˈ</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>ˈ</seg>
@@ -48,7 +48,7 @@
          <seg>a</seg>
       </modern>
       <modern dialecte="scn">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="a-open">
@@ -132,7 +132,7 @@
          <seg>a</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>a</seg>
@@ -333,21 +333,21 @@
       <proto contextL="V" contextR="V,r" syll="C">d</proto>
       <modern dialecte="es">
          <seg>d</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>d</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="pt">
          <seg>d</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="it">
          <seg>d</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>d</seg>
@@ -419,7 +419,7 @@
    <corr num="yod+tonic-i">
       <proto contextR="i" syll="J">d͡ʒ</proto>
       <modern dialecte="es">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>d͡ʒ</seg>
@@ -434,7 +434,7 @@
       <modern dialecte="fr">
          <seg>ʒ</seg>
          <seg>j</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>d͡ʒ</seg>
@@ -466,7 +466,7 @@
    <corr num="yod-initial2">
       <proto contextL="$" contextR="a,i,e,ɛ" syll="j">d͡ʒ</proto>
       <modern dialecte="es">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>d͡ʒ</seg>
@@ -573,7 +573,7 @@
          <seg>e</seg>
       </modern>
       <modern dialecte="scn">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="e+open">
@@ -688,7 +688,7 @@
    <corr num="c75">
       <proto contextL="d,t" contextR="#" syll="v">e</proto>
       <modern dialecte="es">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>e</seg>
@@ -700,7 +700,7 @@
          <seg>e</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>e</seg>
@@ -721,7 +721,7 @@
          <seg>e</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>i</seg>
@@ -730,19 +730,19 @@
    <corr num="c51">
       <proto contextL="r,l" contextR="#" syll="v">e</proto>
       <modern dialecte="es">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="it">
          <seg>e</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>i</seg>
@@ -861,7 +861,7 @@
    <corr num="c64">
       <proto contextL="$" syll="C">f</proto>
       <modern dialecte="es">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="oldpt">
          <seg>f</seg>
@@ -1006,7 +1006,7 @@
          <seg>g</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>g</seg>
@@ -1479,17 +1479,17 @@
          <seg>l</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="it">
          <seg>l</seg>
       </modern>
       <modern dialecte="fr">
          <seg>l</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>l</seg>
@@ -1606,17 +1606,17 @@
          <seg>n</seg>
       </modern>
       <modern dialecte="oldpt">
-         <seg>Ø</seg>
+         <seg>∅</seg>
          <seg>n</seg>
       </modern>
       <modern dialecte="pt">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="it">
          <seg>n</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>n</seg>
@@ -1790,7 +1790,7 @@
          <seg>o</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>u</seg>
@@ -2230,7 +2230,7 @@
       </modern>
       <modern dialecte="fr">
          <seg>ʁ</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>ɾi</seg>
@@ -2273,7 +2273,7 @@
          <seg>s</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="scn">
          <seg>s</seg>

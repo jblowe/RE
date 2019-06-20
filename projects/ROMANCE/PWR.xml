@@ -10,10 +10,10 @@
       <proto syll="A">ˈ</proto>
       <modern dialecte="PIR">
          <seg>ˈ</seg>
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="a-closed">
@@ -70,7 +70,7 @@
          <seg>a</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="a+ɲ-open">
@@ -160,7 +160,7 @@
          <seg>d</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="dr-inter">
@@ -217,7 +217,7 @@
          <seg>e</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="e-open">
@@ -338,7 +338,7 @@
          <seg>g</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="gr-inter">
@@ -356,7 +356,7 @@
          <seg>gw</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="i+n-closed">
@@ -529,7 +529,7 @@
          <seg>n</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="c44">
@@ -556,7 +556,7 @@
          <seg>o</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="o+n-closed">
@@ -724,7 +724,7 @@
          <seg>ɾe</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="c15">
@@ -751,7 +751,7 @@
          <seg>s</seg>
       </modern>
       <modern dialecte="fr">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="ss-inter">

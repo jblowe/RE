@@ -99,12 +99,12 @@
 98	1	R	ur		ur	ur	ur	ur	ur	ur	ur	ur
 99	1	R	ul		ul	ul	?	?	o	il,?	u,ul	uː
 100	1	I	k		k	k	k	k	k	k	k	k
-101	2	I	k	/w̱	k	Ø	h	k	k	k	k	k
+101	2	I	k	/w̱	k	∅	h	k	k	k	k	k
 102	1	I	kʰ		kʰ	kʰ	h	kʰ	kʰ	kʰ	kʰ	kʰ
 103	2	I	kʰ	/w̱	kʰ	h	h	kʰ	kʰ	kʰ	kʰ,k	kʰ
 104	2	I	g	/Aˍ	k	k	k,g	k	k,g	k,g	k	k
 105	2	I	g	/Bˍ	k	k	k,g	k	k	g	k,g	kʰ
-106	2	I	g	/w̱	k,Ø	Ø	Ø	k	k	?	k	k,kʰ
+106	2	I	g	/w̱	k,∅	∅	∅	k	k	?	k	k,kʰ
 107	2	O	gj	/Aˍ	kj	kj	kj	kj	kj	gj	kj	kj
 108	2	O	gj	/Bˍ	kj	kj	kj	kj	kj	gj	k,kj	kʰj
 109	2	O	kr	/e̱ː	k	k	k	ʈ	k	k	kr	kr
@@ -117,7 +117,7 @@
 116	3	O	gr	/Be̱	kr	?	h	?	?	?	?	?
 117	3	O	gr	/Bi̱	k	k	k	ʈ	k	g	gr	hr,kʰr
 118	2	O	gr	/Bˍ	kr	kr	kr	ʈ	k	g	kr	hr=rʰ
-119	3	O	gr	/Bw̱	k	Ø	h	ʈ	k,ʈ	k,ʈ	kr	hr
+119	3	O	gr	/Bw̱	k	∅	h	ʈ	k,ʈ	k,ʈ	kr	hr
 120	3	O	grw		kw	w	hw	ʈ	k,ʈ	k,g,ʈ	krw	hr
 121	2	O	kl	/i̱,e	kl	kl	kʰl,kl	k	hɬ	l	ɬ	k
 122	2	O	kl	/a̱	kl	kl	?	kj	lj	lj	ɬ	kj
@@ -157,7 +157,7 @@
 156	2	O	bl	/Aˍ	pl	pl	pl	pl	pl	pl	pl	pl
 157	2	O	bl	/Bˍ	pl	pl	pl	pl	pl	pl	pl	pʰl
 158	1	O	p.ml		pl	pl	?	ml	ml	ml	ml	?
-159	1	O	ʰŋ		ŋ,h,Ø	ŋ,Ø	ŋ,w	ŋ	ŋ,w	ŋ	ŋ,w,Ø	ŋ
+159	1	O	ʰŋ		ŋ,h,∅	ŋ,∅	ŋ,w	ŋ	ŋ,w	ŋ	ŋ,w,∅	ŋ
 160	2	O	ʰŋ	/a̱n	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ɲ
 161	2	O	ʰŋ	/i̱,j	ŋ	?	n	ɲ	ɲ	ɲ	n,ŋ	ɲ
 162	1	O	ŋ		ŋ,h ̃	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ
@@ -176,14 +176,14 @@
 175	1	O	ʰml		ml	ml	ml	ml	ml	ml	ml	?
 176	1	O	ml		ml	ml	ml	ml	ml	ml	ml	?
 177	1	O	ʰj		j	j	j	j	j	j	j	j
-178	1	O	j		j	j	j	j	j	j	j	j,Ø
-179	1	G	j		j	j	j	j	j	j	j	j,Ø
-180	2	G	j	/a̱t	j	j,Ø	j,Ø	j,Ø	?	Ø	Ø	j
+178	1	O	j		j	j	j	j	j	j	j	j,∅
+179	1	G	j		j	j	j	j	j	j	j	j,∅
+180	2	G	j	/a̱t	j	j,∅	j,∅	j,∅	?	∅	∅	j
 181	1	O	Hr		hr	r,hr	s	hr=rʰ	hr	hr	r	hr
 182	1	O	ʰr		r	r	r	r	r	r	r	r
 183	1	O	r		r	r	r	r	r	r	r	r
 184	2	L	r	/Pˍ	r	r	r	r	r	r	r	r
-185	2	L	r	/Pa̱n	r	r	?	r	Ø	r,Ø,?	Ø	r,Ø,?
+185	2	L	r	/Pa̱n	r	r	?	r	∅	r,∅,?	∅	r,∅,?
 186	1	O	Hl		hl	l	l	hl=lʰ	l,hɬ	hl	l	hl
 187	1	O	ʰl		l	l	l	l	l	hɬ	l	l
 188	1	O	l		l	l	l	l	l	l	l	l
@@ -197,16 +197,16 @@
 196	1	O	ɕ		sj	sj	ʃ=ʃj	s=sj	ɕ	ʃ=ʃj	ʃ=s	ʃ=ʃj
 197	1	I	z		s	s	s	s	s	s	s	s
 198	1	O	ʑ		sj	sj	ʃ=ʃj	s=sj	ɕ	ʃ=ʃj	ʃ=s	ʃ=ʃj
-199	2	I	h	/w̱	h	?	?	Ø	?	?	?	?
+199	2	I	h	/w̱	h	?	?	∅	?	?	?	?
 200	1	I	h		h	h	h	h	h	h	h	h
-201	1	F	k		k	ː	Ø,k	Ø,k	Ø	Ø	Ø	Ø
+201	1	F	k		k	ː	∅,k	∅,k	∅	∅	∅	∅
 202	2	V	i	/ḵ	i	i	i	i	ɤi	ɨ	i	i
-203	1	F	t		t	t,ː	?,ː	Ø	?	?	Ø,ː	ː
-204	1	F	p		p	p	p	p,w	p,Ø	p,Ø	Ø,ː	Ø,ː
+203	1	F	t		t	t,ː	?,ː	∅	?	?	∅,ː	ː
+204	1	F	p		p	p	p	p,w	p,∅	p,∅	∅,ː	∅,ː
 205	2	V	a	/p̱	a	a	a	ə	o	o	a	e
 206	2	V	o	/p̱	o	o	o	ə	ʌ	o	o,u	o
 207	2	V	u	/p̱	u	u	?	u	?	?	u	u
-208	1	F	l		l	l	l	l	l	?	Ø,ː	l
+208	1	F	l		l	l	l	l	l	?	∅,ː	l
 209	1	F	s		s	s	s	s	?	?	?	ː
 210	1	J	+		+	+	+	+	+	+	+	+
 211	1	J	-		-	-	-	-	-	-	-	-

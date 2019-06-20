@@ -227,7 +227,7 @@ def make_tokenizer(parameters, accessor):
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
             # otherwise keep building parses from epenthesis rules
-            for c in rule_map['Ø']:
+            for c in rule_map['∅']:
                 if matches_context(c, last):
                     for syllable_type in c.syllable_types:
                         gen(form,

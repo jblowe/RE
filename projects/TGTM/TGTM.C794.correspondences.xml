@@ -2910,7 +2910,7 @@
       <seg>k</seg>
     </modern>
     <modern dialecte="sahu">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tag">
       <seg>h</seg>
@@ -3049,13 +3049,13 @@
     <proto contextR="w" syll="I">g</proto>
     <modern dialecte="ris">
       <seg>k</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="sahu">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tag">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tuk">
       <seg>k</seg>
@@ -3414,7 +3414,7 @@
       <seg>k</seg>
     </modern>
     <modern dialecte="sahu">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tag">
       <seg>h</seg>
@@ -4523,11 +4523,11 @@
     <modern dialecte="ris">
       <seg>ŋ</seg>
       <seg>h</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="sahu">
       <seg>ŋ</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tag">
       <seg>ŋ</seg>
@@ -4546,7 +4546,7 @@
     <modern dialecte="gha">
       <seg>ŋ</seg>
       <seg>w</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="pra">
       <seg>ŋ</seg>
@@ -5081,7 +5081,7 @@
     </modern>
     <modern dialecte="pra">
       <seg>j</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
   </corr>
   <corr num="c179">
@@ -5109,7 +5109,7 @@
     </modern>
     <modern dialecte="pra">
       <seg>j</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
   </corr>
   <corr num="c180">
@@ -5119,24 +5119,24 @@
     </modern>
     <modern dialecte="sahu">
       <seg>j</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tag">
       <seg>j</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="tuk">
       <seg>j</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="mar">
       <seg>?</seg>
     </modern>
     <modern dialecte="syang">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="gha">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="pra">
       <seg>j</seg>
@@ -5267,19 +5267,19 @@
       <seg>r</seg>
     </modern>
     <modern dialecte="mar">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="syang">
       <seg>r</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>?</seg>
     </modern>
     <modern dialecte="gha">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="pra">
       <seg>r</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>?</seg>
     </modern>
   </corr>
@@ -5664,7 +5664,7 @@
       <seg>?</seg>
     </modern>
     <modern dialecte="tuk">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="mar">
       <seg>?</seg>
@@ -5715,24 +5715,24 @@
       <seg>ː</seg>
     </modern>
     <modern dialecte="tag">
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>k</seg>
     </modern>
     <modern dialecte="tuk">
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>k</seg>
     </modern>
     <modern dialecte="mar">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="syang">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="gha">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="pra">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
   </corr>
   <corr num="c202">
@@ -5776,7 +5776,7 @@
       <seg>ː</seg>
     </modern>
     <modern dialecte="tuk">
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="mar">
       <seg>?</seg>
@@ -5785,7 +5785,7 @@
       <seg>?</seg>
     </modern>
     <modern dialecte="gha">
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>ː</seg>
     </modern>
     <modern dialecte="pra">
@@ -5809,18 +5809,18 @@
     </modern>
     <modern dialecte="mar">
       <seg>p</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="syang">
       <seg>p</seg>
-      <seg>Ø</seg>
+      <seg>∅</seg>
     </modern>
     <modern dialecte="gha">
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>ː</seg>
     </modern>
     <modern dialecte="pra">
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>ː</seg>
     </modern>
   </corr>
@@ -5927,7 +5927,7 @@
       <seg>?</seg>
     </modern>
     <modern dialecte="gha">
-      <seg>Ø</seg>
+      <seg>∅</seg>
       <seg>ː</seg>
     </modern>
     <modern dialecte="pra">
