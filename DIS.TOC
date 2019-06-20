@@ -36,7 +36,7 @@ N	Chron	Type	*	context	ris	sahu	tag	tuk	mar	syang	gha	pra
 34	1	I	b	A_	p	p	p,b	p	p	p	p	p
 35	1	O,G	j		j	j	j	j	j	j	j	j
 36	1	I,L	l		l	l	l	l	l	l	l	l
-37	1	F	t		t	t,ː	?,ː	Ø	?	?	Ø,ː	ː
-38	1	F	p		p	p	p	p,w	Ø	Ø	ː	Ø
-39	1	F	p	o,u_	p	p	p	p	p	p+	Ø	ː
+37	1	F	t		t	t,ː	?,ː	∅	?	?	∅,ː	ː
+38	1	F	p		p	p	p	p,w	∅	∅	ː	∅
+39	1	F	p	o,u_	p	p	p	p	p	p+	∅	ː
 40	1	V	a	_p	a	a	a	ə	o	o	a	e

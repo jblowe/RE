@@ -1083,7 +1083,7 @@
          <seg>ː</seg>
       </modern>
       <modern dialecte="tuk">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="mar">
          <seg>?</seg>
@@ -1092,7 +1092,7 @@
          <seg>?</seg>
       </modern>
       <modern dialecte="gha">
-         <seg>Ø</seg>
+         <seg>∅</seg>
          <seg>ː</seg>
       </modern>
       <modern dialecte="pra">
@@ -1115,16 +1115,16 @@
          <seg>w</seg>
       </modern>
       <modern dialecte="mar">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="syang">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="gha">
          <seg>ː</seg>
       </modern>
       <modern dialecte="pra">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="39">
@@ -1148,7 +1148,7 @@
          <seg>p+</seg>
       </modern>
       <modern dialecte="gha">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="pra">
          <seg>ː</seg>
