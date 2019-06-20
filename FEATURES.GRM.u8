@@ -47,7 +47,7 @@ gmc	Front	= i,i:,e,e:,j
 gmc	Back	= u,u:,o,o:,w
 gmc	Nasal	= ĩ,ẽ,ã,õ,ũ
 gmc	Oral 	= i,e,a,o,u,i:,e:,a:,o:,u:
-gmc	Zero	= Ø
+gmc	Zero	= ∅
 
 	P̪LACE  = Labial,Dental,Flapped,Lateral,Retroflex,Palatal,Velar
 	P̪LACE	= Sibilant,Glottal
