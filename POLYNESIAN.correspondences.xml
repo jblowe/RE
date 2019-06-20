@@ -86,13 +86,13 @@
          <seg>Ɂ</seg>
       </modern>
       <modern dialecte="samoan">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="hawai">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="7">
@@ -158,7 +158,7 @@
    <corr num="11">
       <proto contextL="V,$" contextR="V" syll="I">l</proto>
       <modern dialecte="tongien">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="samoan">
          <seg>l</seg>
@@ -176,13 +176,13 @@
          <seg>h</seg>
       </modern>
       <modern dialecte="samoan">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="raroton">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
       <modern dialecte="hawai">
-         <seg>Ø</seg>
+         <seg>∅</seg>
       </modern>
    </corr>
    <corr num="13">
