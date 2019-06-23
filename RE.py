@@ -153,6 +153,7 @@ class Statistics:
         self.summary_stats = {}
         self.language_stats = {}
         self.notes = []
+        self.debug_notes = []
 
     def add_note(self, note):
         print(note)
@@ -160,6 +161,11 @@ class Statistics:
 
     def add_stat(self, stat, value):
         self.summary_stats[stat] = value
+
+    def add_debug_note(self, note):
+        if __debug__:
+            print(note)
+            self.debug_notes.append(note)
 
 def expanded_contexts(rule, i, sound_classes):
     contexts = set()
@@ -203,7 +209,7 @@ def make_tokenizer(parameters, accessor):
         return (matches_this_left_context(c, last) and
                 matches_last_right_context(c, last))
 
-    def tokenize(form):
+    def tokenize(form, statistics):
         parses = set()
 
         def gen(form, parse, last, syllable_parse):
@@ -211,6 +217,8 @@ def make_tokenizer(parameters, accessor):
             making sure to skip over suprasegmental features when matching
             contexts.
             '''
+            if __debug__:
+                statistics.add_debug_note(f'{len(parse)}, {form}, {correspondences_as_ids(parse)}, {syllable_parse})')
             # we can abandon parses that we know can't be completed
             # to satisfy the syllable canon. for DEMO93 this cuts the
             # number of branches from 182146 to 61631
@@ -281,11 +289,11 @@ def project_back(lexicons, parameters, statistics):
         tokenize = make_tokenizer(parameters, daughter_form)
         for form in lexicon.forms:
             # print(form)
-            if form.glyphs is None:
-                print(f'form missing: {form.language} {form.gloss}')
-                parses = None
+            if form.glyphs:
+                parses = memo.setdefault(form.glyphs, tokenize(form.glyphs, statistics))
             else:
-                parses = memo.setdefault(form.glyphs, tokenize(form.glyphs))
+                statistics.add_note(f'form missing: {form.language} {form.gloss}')
+                parses = None
             if parses:
                 for cs in parses:
                     count_of_parses += 1
