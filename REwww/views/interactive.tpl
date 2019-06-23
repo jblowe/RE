@@ -50,6 +50,12 @@
                   <li>{{note}}</li>
               % end
           % end
+          % if 'debug_notes' in data:
+          <h4>Debug</h4>
+              % for note in data['debug_notes']:
+                  <li>{{note}}</li>
+              % end
+          % end
           </div>
         </div>
     </form>

@@ -7,6 +7,10 @@ import serialize
 import collections
 import mel
 
+class Debug:
+    def __init__(self, debug):
+        self.debug = False
+
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex, supra_segmentals):
         self.sound_classes = sound_classes
@@ -163,7 +167,6 @@ class Statistics:
         self.summary_stats[stat] = value
 
     def add_debug_note(self, note):
-        if __debug__:
             print(note)
             self.debug_notes.append(note)
 
@@ -217,8 +220,8 @@ def make_tokenizer(parameters, accessor):
             making sure to skip over suprasegmental features when matching
             contexts.
             '''
-            if __debug__:
-                statistics.add_debug_note(f'{len(parse)}, {form}, {correspondences_as_ids(parse)}, {syllable_parse})')
+            if Debug.debug:
+                statistics.add_debug_note(f'{len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
             # we can abandon parses that we know can't be completed
             # to satisfy the syllable canon. for DEMO93 this cuts the
             # number of branches from 182146 to 61631
@@ -254,6 +257,10 @@ def make_tokenizer(parameters, accessor):
                                 syllable_parse + syllable_type)
 
         gen(form, [], parameters.table.initial_marker, '')
+        if Debug.debug:
+            statistics.add_debug_note(f'{len(parses)} reconstructions generated')
+            for p in parses:
+                statistics.add_debug_note(f'*{correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)}')
         return parses
 
     return tokenize
@@ -289,6 +296,9 @@ def project_back(lexicons, parameters, statistics):
         tokenize = make_tokenizer(parameters, daughter_form)
         for form in lexicon.forms:
             # print(form)
+            if Debug.debug:
+                statistics.add_debug_note(f'{form}')
+
             if form.glyphs:
                 parses = memo.setdefault(form.glyphs, tokenize(form.glyphs, statistics))
             else:
