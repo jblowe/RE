@@ -4,6 +4,7 @@ import os
 import sys
 import utils
 import run_make
+import RE
 
 dirname = os.path.dirname(os.path.abspath(__file__))
 
@@ -77,10 +78,11 @@ def download(filename):
 def upstream(project_name):
     languages = [(i, getattr(request.forms, i)) for i in request.forms]
     postdict = request
+    RE.Debug.debug = True
     language_names, upstream_target, base_dir = utils.upstream('languages', [], project_name, True)
-    forms, notes, isolates, no_parses = utils.upstream('upstream', languages, project_name, True)
+    forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project_name, True)
     data = {'interactive': 'start', 'project': project_name, 'languages': languages, 'base_dir': base_dir,
-            'forms': forms, 'notes': notes, 'isolates': isolates, 'no_parses': no_parses}
+            'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses}
     return template('index', data=data)
 
 
