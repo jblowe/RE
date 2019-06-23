@@ -6,7 +6,7 @@ git checkout -- ../projects/VANUATU/*
 ls -l ././projects/VANUATU
 
 # make a version of the code with the revised disyllabic canon
-perl -pe 's/\(CV\)./(C)V((C)V)+/' ../projects/VANUATU/hook.py > ../projects/VANUATU/CVCVhook.py
+perl -pe 's/\(CV\)./(C?V)+/' ../projects/VANUATU/hook.py > ../projects/VANUATU/CVCVhook.py
 
 # make a version of the correspondences which has *p,*w > zero
 perl -pe 's/([^\d],)([wp]),/\1\2|∅,/g if /,[wp],,,,/' ../projects/VANUATU/VANUATU.experimental.correspondences.csv > ../projects/VANUATU/VANUATU.pwzeroexperimental.correspondences.csv
