@@ -7,6 +7,8 @@ import compare
 import load_hooks
 from argparser import args, need_to_compare, only_with_mel, project_dir
 
+RE.Debug.debug = False
+
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
