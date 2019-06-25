@@ -16,5 +16,8 @@ time python3 REcli.py DIS    --run hand --mel hand > ../projects/DIS/DIS.${DATE}
 cat ../projects/DIS/DIS.${DATE}.hand.statistics.txt
 rm  ../projects/DIS/DIS.${DATE}.hand.statistics.txt
 
+# coverage
+python3 REcli.py -c -m hand DIS > ../projects/DIS/DIS.mel.coverage.txt
+
 # compare results of all runs
 python3 REcli.py -x -- DIS

@@ -13,5 +13,8 @@ time python3 REcli.py -w --run tree-parsimonious -t tree ROMANCE > ../projects/R
 [ $? -ne 0 ] && exit 1;
 cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
 
+# coverage
+python3 REcli.py -c -m hand ROMANCE > ../projects/ROMANCE/ROMANCE.mel.coverage.txt
+
 # compare results of all runs
 python3 REcli.py -x -- ROMANCE
