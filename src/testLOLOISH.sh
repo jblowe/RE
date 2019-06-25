@@ -36,5 +36,10 @@ time python3 REcli.py SYI -r hand --mel hand  > ../projects/LOLOISH/SYI.${DATE}.
 cat ../projects/LOLOISH/SYI.${DATE}.statistics.txt
 rm  ../projects/LOLOISH/SYI.${DATE}.statistics.txt
 
+# coverage
+python3 REcli.py -c -m hand SYI > ../projects/SYI/SYI.mel.coverage.txt
+python3 REcli.py -c -m hand NYI > ../projects/NYI/NYI.mel.coverage.txt
+
+# compare
 python3 REcli.py -x -- SYI
 python3 REcli.py -x -- NYI

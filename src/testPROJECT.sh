@@ -27,13 +27,17 @@ then
    bash test${PROJECT}.sh
    exit 0
 fi
+
+# make default sets, no mel
+time python3 REcli.py ${PROJECT} > ../projects/${PROJECT}/${PROJECT}.default.txt
+
 # for mel in hand wordnet clics none
 # wordnet version is too slow for regular testing use (8 mins) ... run by hand if needed.
 for mel in hand clics none
 do
     if [ -e ../projects/${PROJECT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
-        # first test make sets, with 'hand' mel
+        # first test make sets, with each mel
         time python3 REcli.py ${PROJECT} -r ${mel} -m ${mel} > ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
         [ $? -ne 0 ] && exit 1;
         cat ../projects/${PROJECT}/${PROJECT}.${DATE}.${mel}.statistics.txt
@@ -51,5 +55,8 @@ do
     fi
 done
 
-# compare results of all runs
-python3 REcli.py -x -- ${PROJECT}
+# coverage
+time python3 REcli.py -c -m hand ${PROJECT} > ../projects/${PROJECT}/${PROJECT}.mel.coverage.txt
+
+# compare
+time python3 REcli.py -x -- ${PROJECT} > ../projects/DIS/${PROJECT}.mel.compare.txt
