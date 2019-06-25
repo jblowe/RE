@@ -9,7 +9,7 @@ test:
 	cd src ; bash ./testPROJECT.sh TGTM
 	cd src ; bash ./testPROJECT.sh DEMO93
 
-	cd src ; bash ./testPROJECT.sh VANUATU
+	#cd src ; bash ./testPROJECT.sh VANUATU
 	cd src ; bash ./testPROJECT.sh DIS
 	cd src ; bash ./testPROJECT.sh POLYNESIAN
 	cd src ; bash ./testPROJECT.sh LOLOISH
@@ -22,7 +22,7 @@ test:
 	cd src ; python3 REcli.py -c -m hand POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.coverage.txt
 	cd src ; python3 REcli.py -c -m hand NYI > ../projects/LOLOISH/NYI.mel.coverage.txt
 	cd src ; python3 REcli.py -c -m hand SYI > ../projects/LOLOISH/SYI.mel.coverage.txt
-	cd src ; python3 REcli.py -c -m hand VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
+	#cd src ; python3 REcli.py -c -m hand VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt
 
     # default sets, no mel
 	cd src ; python3 REcli.py DIS > ../projects/DIS/DIS.mel.coverage.txt
@@ -42,6 +42,6 @@ test:
 	cd src ; python3 REcli.py -x -- POLYNESIAN > ../projects/POLYNESIAN/POLYNESIAN.mel.compare.txt
 	cd src ; python3 REcli.py -x -- NYI > ../projects/LOLOISH/NYI.mel.compare.txt
 	cd src ; python3 REcli.py -x -- SYI > ../projects/LOLOISH/SYI.mel.compare.txt
-	cd src ; python3 REcli.py -x -- VANUATU > ../projects/VANUATU/VANUATU.mel.compare.txt
+	#cd src ; python3 REcli.py -x -- VANUATU > ../projects/VANUATU/VANUATU.mel.compare.txt
 
 	cd REwww; python3 -c "from utils import add_time_and_version;print(add_time_and_version())" >> ../updates.txt
