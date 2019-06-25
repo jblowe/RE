@@ -136,7 +136,18 @@ def serialize_stats(stats, filename):
     for s in totals:
         ET.SubElement(runstats, s).set('value', str(totals[s]))
 
-    #print(inspect.getmembers(stats))
+    corrs = ET.SubElement(root, 'correspondences')
+    for c in sorted(stats.correspondences_used_in_recons, key=lambda corr: RE.tryconvert(corr.id, int)):
+        if c in stats.correspondences_used_in_sets:
+            set_count = stats.correspondences_used_in_sets[c]
+        else:
+            set_count = 0
+        corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
+        ET.SubElement(corr, 'used_in_reconstructions').set('value', str(stats.correspondences_used_in_recons[c]))
+        ET.SubElement(corr, 'used_in_sets').set('value', str(set_count))
+        #print(f'{c}', '%s %s' % (stats.correspondences_used_in_recons[c], set_count))
+    ET.SubElement(corrs, 'correspondences_used').set('value', str(len(stats.correspondences_used_in_recons)))
+
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
 

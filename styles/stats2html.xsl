@@ -67,7 +67,6 @@
             <xsl:apply-templates select="lexicons/lexicon"/>
             <tr>
               <th>totals</th>
-
                 <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
                   <!-- xsl:sort select="name()"/ -->
                   <xsl:for-each select="key('subtotals', name())">
@@ -78,8 +77,28 @@
                 </xsl:for-each>
             </tr>
         </table>
+
+        <table class="table table-striped sortable">
+            <thead>
+              <tr>
+                  <th>correspondence</th>
+                  <th>in reconstructions</th>
+                  <th>in sets</th>
+              </tr>
+            </thead>
+            <xsl:apply-templates select="correspondences/correspondence"/>
+        </table>
+        <p>correspondences_used: <xsl:value-of select=".//correspondences_used[@value]"/></p>
     </xsl:template>
 
+    <xsl:template match="correspondences/correspondence">
+        <tr>
+            <td><xsl:value-of select="@value"/></td>
+            <xsl:for-each select="./*">
+                <td><xsl:value-of select ="@value"/></td>
+            </xsl:for-each>
+        </tr>
+    </xsl:template>
 
     <xsl:template match="lexicons/lexicon">
         <tr>
