@@ -4,6 +4,7 @@ import toolbox
 import sys
 import os
 import xml.etree.ElementTree as ET
+import regex as re
 import RE
 import read
 import csv
@@ -30,11 +31,42 @@ def read_toolbox_file():
             while (i < len(data) - 1):
                 (tag, value) = data[i]
                 if tag[1:] in languages and value:
-                    value = value.replace('{', '').replace('}', '').replace('na-', '')
+                    # precisiate data to be used by RE
+                    # 1. extract gloss first (even if it's corresponding form is not used
                     gloss = proto_gloss
                     if data[i + 1][0] == '\\sem':
                         gloss = data[i + 1][1]
                         i += 1
+                    else:
+                        # the ith+2 element might not exist...
+                        try:
+                            if data[i + 2][0] == '\\sem':
+                                gloss = data[i + 2][1]
+                                i += 1
+                        except:
+                            pass
+                    # 2. 'fix' the forms themselves
+                    # skip forms that contain '{' (i.e. assume these are bracketed forms '{xxx}')
+                    v2 = value
+                    if '{' in value:
+                        print(f'skipping {value}')
+                        i += 1
+                        continue
+                    # skip forms that contain '('
+                    if '(' in value:
+                        value = re.sub(r'\((.*?)\)', r'\1', value).strip()
+                        if not value:
+                            print(f'skipping {v2}')
+                            i += 1
+                            continue
+                    value = value.replace('??', '').strip()
+                    value = re.sub(r'^n\-', '', value)
+                    value = re.sub(r'^n.\-', '', value)
+                    value = value.replace('-k', '').replace('-n', '')
+                    value = re.sub(r'^.*?\\','', value)
+                    value = re.sub(r'/.*?$','', value)
+                    if v2 != value:
+                        print(f'before: {v2} :: after {value}')
                     zipped[tag[1:]].append((value, gloss, set_number + 1))
                     if gloss:
                         mel.add(gloss)
@@ -54,10 +86,10 @@ def context_from(string):
     (left_context, right_context) = string.split('_')
     # We have to punt because we cannot handle these contexts as they
     # are now.
-    if 'C' in left_context or 'V' in left_context or 'ˈ' in left_context:
-        left_context = None
-    if 'C' in right_context or 'V' in right_context or 'ˈ' in right_context:
-        right_context = None
+    #if 'C' in left_context or 'V' in left_context or 'ˈ' in left_context:
+    #    left_context = None
+    #if 'C' in right_context or 'V' in right_context or 'ˈ' in right_context:
+    #    right_context = None
     if left_context:
         left_context = left_context.split('/')
     if right_context:
@@ -75,12 +107,13 @@ def read_vanuatu_csv(filename):
         for (number, row) in enumerate(skipped):
             print(row)
             table.add_correspondence(RE.Correspondence(
-                str(number), context_from(row[2]), syllable_type(row[1]), row[1],
+                # str(number), context_from(row[2]), syllable_type(row[1]), row[1],
+                str(number), context_from(row[2]), row[3], row[1],
                 dict(zip(names, (x.split('|') for x in row[5:])))))
     return table
 
 RE.Parameters(read_vanuatu_csv(correspondence_filename),
-              RE.SyllableCanon({}, 'C?V(C?V)+', []),
+              RE.SyllableCanon({}, 'C?I(C?V)+', []),
               'pnv', None).serialize(
                   os.path.join(base_dir, 'VANUATU.correspondences.xml'))
 
