@@ -10,7 +10,7 @@
     <class name="M" value="m,n,ŋ"/>
     <canon name="syllabe" value="T?(OG?|IL?G?)?(R|VF)"/>
   </parameters>
-  <corr num="c1">
+  <corr num="1">
     <proto contextR="U" syll="T">A</proto>
     <modern dialecte="ris">
       <seg>¹</seg>
@@ -45,7 +45,7 @@
       <seg>˥</seg>
     </modern>
   </corr>
-  <corr num="c2">
+  <corr num="2">
     <proto contextR="U" syll="T">B</proto>
     <modern dialecte="ris">
       <seg>²</seg>
@@ -80,7 +80,7 @@
       <seg>˥</seg>
     </modern>
   </corr>
-  <corr num="c3">
+  <corr num="3">
     <proto contextR="W" syll="T">A</proto>
     <modern dialecte="ris">
       <seg>³</seg>
@@ -107,7 +107,7 @@
       <seg>³</seg>
     </modern>
   </corr>
-  <corr num="c4">
+  <corr num="4">
     <proto contextR="W" syll="T">B</proto>
     <modern dialecte="ris">
       <seg>⁴</seg>
@@ -139,7 +139,7 @@
       <seg>⁴</seg>
     </modern>
   </corr>
-  <corr num="c5">
+  <corr num="5">
     <proto syll="R,V">i</proto>
     <modern dialecte="ris">
       <seg>i</seg>
@@ -166,7 +166,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c6">
+  <corr num="6">
     <proto syll="R">iː</proto>
     <modern dialecte="ris">
       <seg>iː</seg>
@@ -193,7 +193,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c7">
+  <corr num="7">
     <proto syll="R">ik</proto>
     <modern dialecte="ris">
       <seg>ik</seg>
@@ -221,7 +221,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c8">
+  <corr num="8">
     <proto syll="R">it</proto>
     <modern dialecte="ris">
       <seg>it</seg>
@@ -253,7 +253,7 @@
       <seg>iː</seg>
     </modern>
   </corr>
-  <corr num="c9">
+  <corr num="9">
     <proto syll="R">ip</proto>
     <modern dialecte="ris">
       <seg>ip</seg>
@@ -280,7 +280,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c10">
+  <corr num="10">
     <proto syll="R">is</proto>
     <modern dialecte="ris">
       <seg>is</seg>
@@ -307,7 +307,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c11">
+  <corr num="11">
     <proto syll="R">iŋ</proto>
     <modern dialecte="ris">
       <seg>iŋ</seg>
@@ -336,7 +336,7 @@
       <seg>ĩ</seg>
     </modern>
   </corr>
-  <corr num="c12">
+  <corr num="12">
     <proto syll="R">in</proto>
     <modern dialecte="ris">
       <seg>in</seg>
@@ -364,7 +364,7 @@
       <seg>in</seg>
     </modern>
   </corr>
-  <corr num="c13">
+  <corr num="13">
     <proto syll="R">ŋin</proto>
     <modern dialecte="ris">
       <seg>in</seg>
@@ -392,7 +392,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c14">
+  <corr num="14">
     <proto syll="R">im</proto>
     <modern dialecte="ris">
       <seg>im</seg>
@@ -421,7 +421,7 @@
       <seg>in</seg>
     </modern>
   </corr>
-  <corr num="c15">
+  <corr num="15">
     <proto syll="R">ir</proto>
     <modern dialecte="ris">
       <seg>ir</seg>
@@ -448,7 +448,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c16">
+  <corr num="16">
     <proto syll="R">il</proto>
     <modern dialecte="ris">
       <seg>il</seg>
@@ -477,7 +477,7 @@
       <seg>ɛr</seg>
     </modern>
   </corr>
-  <corr num="c17">
+  <corr num="17">
     <proto syll="R">wi</proto>
     <modern dialecte="ris">
       <seg>wi</seg>
@@ -509,7 +509,7 @@
       <seg>ui</seg>
     </modern>
   </corr>
-  <corr num="c18">
+  <corr num="18">
     <proto syll="R">jwi</proto>
     <modern dialecte="ris">
       <seg>jwi</seg>
@@ -537,7 +537,7 @@
       <seg>u</seg>
     </modern>
   </corr>
-  <corr num="c19">
+  <corr num="19">
     <proto syll="R">uiu</proto>
     <modern dialecte="ris">
       <seg>wi</seg>
@@ -564,7 +564,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c20">
+  <corr num="20">
     <proto syll="R,V">e</proto>
     <modern dialecte="ris">
       <seg>e</seg>
@@ -594,7 +594,7 @@
       <seg>eɛ</seg>
     </modern>
   </corr>
-  <corr num="c21">
+  <corr num="21">
     <proto syll="R">eː</proto>
     <modern dialecte="ris">
       <seg>eː</seg>
@@ -624,7 +624,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c22">
+  <corr num="22">
     <proto contextL="kr" syll="R">eː</proto>
     <modern dialecte="ris">
       <seg>eː</seg>
@@ -651,7 +651,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c23">
+  <corr num="23">
     <proto contextL="s" syll="R">eː</proto>
     <modern dialecte="ris">
       <seg>eː</seg>
@@ -679,7 +679,7 @@
       <seg>iː</seg>
     </modern>
   </corr>
-  <corr num="c24">
+  <corr num="24">
     <proto syll="R">je</proto>
     <modern dialecte="ris">
       <seg>e</seg>
@@ -706,7 +706,7 @@
       <seg>ie</seg>
     </modern>
   </corr>
-  <corr num="c25">
+  <corr num="25">
     <proto syll="R">ek</proto>
     <modern dialecte="ris">
       <seg>ep</seg>
@@ -734,7 +734,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c26">
+  <corr num="26">
     <proto syll="R">et</proto>
     <modern dialecte="ris">
       <seg>et</seg>
@@ -767,7 +767,7 @@
       <seg>eː</seg>
     </modern>
   </corr>
-  <corr num="c27">
+  <corr num="27">
     <proto syll="R">ep</proto>
     <modern dialecte="ris">
       <seg>ep</seg>
@@ -795,7 +795,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c28">
+  <corr num="28">
     <proto syll="R">eŋ</proto>
     <modern dialecte="ris">
       <seg>eŋ</seg>
@@ -823,7 +823,7 @@
       <seg>jaŋ</seg>
     </modern>
   </corr>
-  <corr num="c29">
+  <corr num="29">
     <proto syll="R">en</proto>
     <modern dialecte="ris">
       <seg>en</seg>
@@ -851,7 +851,7 @@
       <seg>ẽ</seg>
     </modern>
   </corr>
-  <corr num="c30">
+  <corr num="30">
     <proto syll="R">em</proto>
     <modern dialecte="ris">
       <seg>em</seg>
@@ -879,7 +879,7 @@
       <seg>ẽ</seg>
     </modern>
   </corr>
-  <corr num="c31">
+  <corr num="31">
     <proto syll="R">ew</proto>
     <modern dialecte="ris">
       <seg>e</seg>
@@ -906,7 +906,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c32">
+  <corr num="32">
     <proto syll="R">er</proto>
     <modern dialecte="ris">
       <seg>er</seg>
@@ -933,7 +933,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c33">
+  <corr num="33">
     <proto syll="R,V">a</proto>
     <modern dialecte="ris">
       <seg>a</seg>
@@ -960,7 +960,7 @@
       <seg>ɤ</seg>
     </modern>
   </corr>
-  <corr num="c34">
+  <corr num="34">
     <proto syll="R">aː</proto>
     <modern dialecte="ris">
       <seg>aː</seg>
@@ -988,7 +988,7 @@
       <seg statut="doute">aː</seg>
     </modern>
   </corr>
-  <corr num="c35">
+  <corr num="35">
     <proto syll="R,V">ja</proto>
     <modern dialecte="ris">
       <seg>ja</seg>
@@ -1017,7 +1017,7 @@
       <seg>je</seg>
     </modern>
   </corr>
-  <corr num="c36">
+  <corr num="36">
     <proto syll="R">jaː</proto>
     <modern dialecte="ris">
       <seg>jaː</seg>
@@ -1045,7 +1045,7 @@
       <seg statut="doute">jaː</seg>
     </modern>
   </corr>
-  <corr num="c37">
+  <corr num="37">
     <proto syll="R,V">wa</proto>
     <modern dialecte="ris">
       <seg>wa</seg>
@@ -1072,7 +1072,7 @@
       <seg>o</seg>
     </modern>
   </corr>
-  <corr num="c38">
+  <corr num="38">
     <proto contextL="tʰ" syll="R,V">wa</proto>
     <modern dialecte="ris">
       <seg>o</seg>
@@ -1099,7 +1099,7 @@
       <seg>a</seg>
     </modern>
   </corr>
-  <corr num="c39">
+  <corr num="39">
     <proto contextL="s" syll="R,V">wa</proto>
     <modern dialecte="ris">
       <seg>wa</seg>
@@ -1127,7 +1127,7 @@
       <seg>ɤ</seg>
     </modern>
   </corr>
-  <corr num="c40">
+  <corr num="40">
     <proto syll="R">waː</proto>
     <modern dialecte="ris">
       <seg>waː</seg>
@@ -1154,7 +1154,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c41">
+  <corr num="41">
     <proto contextL="s,tsʰ" syll="R">waː</proto>
     <modern dialecte="ris">
       <seg>waː</seg>
@@ -1182,7 +1182,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c42">
+  <corr num="42">
     <proto syll="R">ai</proto>
     <modern dialecte="ris">
       <seg>ai</seg>
@@ -1220,7 +1220,7 @@
       <seg>eː</seg>
     </modern>
   </corr>
-  <corr num="c43">
+  <corr num="43">
     <proto contextL="r,t" syll="R">ai</proto>
     <modern dialecte="ris">
       <seg>ai</seg>
@@ -1248,7 +1248,7 @@
       <seg>eː</seg>
     </modern>
   </corr>
-  <corr num="c44">
+  <corr num="44">
     <proto contextL="tʰ" syll="R">ai</proto>
     <modern dialecte="ris">
       <seg>ai</seg>
@@ -1276,7 +1276,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c45">
+  <corr num="45">
     <proto syll="R">jai</proto>
     <modern dialecte="ris">
       <seg>jai</seg>
@@ -1303,7 +1303,7 @@
       <seg>jeː</seg>
     </modern>
   </corr>
-  <corr num="c46">
+  <corr num="46">
     <proto syll="R">au</proto>
     <modern dialecte="ris">
       <seg>au</seg>
@@ -1330,7 +1330,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c47">
+  <corr num="47">
     <proto syll="R">ak</proto>
     <modern dialecte="ris">
       <seg>?</seg>
@@ -1357,7 +1357,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c48">
+  <corr num="48">
     <proto syll="R">at</proto>
     <modern dialecte="ris">
       <seg>at</seg>
@@ -1394,7 +1394,7 @@
       <seg>eː</seg>
     </modern>
   </corr>
-  <corr num="c49">
+  <corr num="49">
     <proto contextL="k" syll="R">at</proto>
     <modern dialecte="ris">
       <seg>at</seg>
@@ -1422,7 +1422,7 @@
       <seg>je</seg>
     </modern>
   </corr>
-  <corr num="c50">
+  <corr num="50">
     <proto syll="R">wat</proto>
     <modern dialecte="ris">
       <seg>wat</seg>
@@ -1450,7 +1450,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c51">
+  <corr num="51">
     <proto syll="R">ap</proto>
     <modern dialecte="ris">
       <seg>ap</seg>
@@ -1480,7 +1480,7 @@
       <seg>je</seg>
     </modern>
   </corr>
-  <corr num="c52">
+  <corr num="52">
     <proto syll="R">jap</proto>
     <modern dialecte="ris">
       <seg>jap</seg>
@@ -1509,7 +1509,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c53">
+  <corr num="53">
     <proto syll="R">aŋ</proto>
     <modern dialecte="ris">
       <seg>aŋ</seg>
@@ -1537,7 +1537,7 @@
       <seg>aŋ</seg>
     </modern>
   </corr>
-  <corr num="c54">
+  <corr num="54">
     <proto contextL="tʰ" syll="R">aŋ</proto>
     <modern dialecte="ris">
       <seg>aŋ</seg>
@@ -1564,7 +1564,7 @@
       <seg>aŋ</seg>
     </modern>
   </corr>
-  <corr num="c55">
+  <corr num="55">
     <proto syll="R">an</proto>
     <modern dialecte="ris">
       <seg>an</seg>
@@ -1593,7 +1593,7 @@
       <seg statut="doute">ẽ</seg>
     </modern>
   </corr>
-  <corr num="c56">
+  <corr num="56">
     <proto contextL="j,tʰ" syll="R">an</proto>
     <modern dialecte="ris">
       <seg>an</seg>
@@ -1621,7 +1621,7 @@
       <seg>ẽ</seg>
     </modern>
   </corr>
-  <corr num="c57">
+  <corr num="57">
     <proto syll="R">jan</proto>
     <modern dialecte="ris">
       <seg>jan</seg>
@@ -1649,7 +1649,7 @@
       <seg>jeː</seg>
     </modern>
   </corr>
-  <corr num="c58">
+  <corr num="58">
     <proto syll="R">wan</proto>
     <modern dialecte="ris">
       <seg>wan</seg>
@@ -1678,7 +1678,7 @@
       <seg statut="doute">wẽ</seg>
     </modern>
   </corr>
-  <corr num="c59">
+  <corr num="59">
     <proto syll="R">am</proto>
     <modern dialecte="ris">
       <seg>am</seg>
@@ -1710,7 +1710,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c60">
+  <corr num="60">
     <proto syll="R">ar</proto>
     <modern dialecte="ris">
       <seg>ar</seg>
@@ -1740,7 +1740,7 @@
       <seg>ɤr</seg>
     </modern>
   </corr>
-  <corr num="c61">
+  <corr num="61">
     <proto syll="R">jar</proto>
     <modern dialecte="ris">
       <seg>jar</seg>
@@ -1769,7 +1769,7 @@
       <seg>jɤr</seg>
     </modern>
   </corr>
-  <corr num="c62">
+  <corr num="62">
     <proto syll="R">wal</proto>
     <modern dialecte="ris">
       <seg>al</seg>
@@ -1799,7 +1799,7 @@
       <seg>wol</seg>
     </modern>
   </corr>
-  <corr num="c63">
+  <corr num="63">
     <proto syll="R">wai</proto>
     <modern dialecte="ris">
       <seg>wai</seg>
@@ -1827,7 +1827,7 @@
       <seg>we</seg>
     </modern>
   </corr>
-  <corr num="c64">
+  <corr num="64">
     <proto syll="R">jal</proto>
     <modern dialecte="ris">
       <seg>jal</seg>
@@ -1858,7 +1858,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c65">
+  <corr num="65">
     <proto syll="R,V">o</proto>
     <modern dialecte="ris">
       <seg>o</seg>
@@ -1887,7 +1887,7 @@
       <seg>wo</seg>
     </modern>
   </corr>
-  <corr num="c66">
+  <corr num="66">
     <proto syll="R">oː</proto>
     <modern dialecte="ris">
       <seg>oː</seg>
@@ -1915,7 +1915,7 @@
       <seg>o</seg>
     </modern>
   </corr>
-  <corr num="c67">
+  <corr num="67">
     <proto syll="R">oi</proto>
     <modern dialecte="ris">
       <seg>oi</seg>
@@ -1946,7 +1946,7 @@
       <seg statut="doute">we</seg>
     </modern>
   </corr>
-  <corr num="c68">
+  <corr num="68">
     <proto syll="R">joi</proto>
     <modern dialecte="ris">
       <seg>joi</seg>
@@ -1973,7 +1973,7 @@
       <seg>eː</seg>
     </modern>
   </corr>
-  <corr num="c69">
+  <corr num="69">
     <proto syll="R">ok</proto>
     <modern dialecte="ris">
       <seg>?</seg>
@@ -2000,7 +2000,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c70">
+  <corr num="70">
     <proto syll="R">ot</proto>
     <modern dialecte="ris">
       <seg>ot</seg>
@@ -2034,7 +2034,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c71">
+  <corr num="71">
     <proto contextL="t,d,tʰ" syll="R">ot</proto>
     <modern dialecte="ris">
       <seg>ot</seg>
@@ -2065,7 +2065,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c72">
+  <corr num="72">
     <proto syll="R">jot</proto>
     <modern dialecte="ris">
       <seg>jot</seg>
@@ -2094,7 +2094,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c73">
+  <corr num="73">
     <proto contextL="s" syll="R">jot</proto>
     <modern dialecte="ris">
       <seg>jot</seg>
@@ -2123,7 +2123,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c74">
+  <corr num="74">
     <proto syll="R">wap</proto>
     <modern dialecte="ris">
       <seg>op</seg>
@@ -2150,7 +2150,7 @@
       <seg>oː</seg>
     </modern>
   </corr>
-  <corr num="c75">
+  <corr num="75">
     <proto syll="R">op</proto>
     <modern dialecte="ris">
       <seg>op</seg>
@@ -2177,7 +2177,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c76">
+  <corr num="76">
     <proto syll="R">oŋ</proto>
     <modern dialecte="ris">
       <seg>oŋ</seg>
@@ -2209,7 +2209,7 @@
       <seg>oː</seg>
     </modern>
   </corr>
-  <corr num="c77">
+  <corr num="77">
     <proto syll="R">on</proto>
     <modern dialecte="ris">
       <seg>on</seg>
@@ -2238,7 +2238,7 @@
       <seg>ẽ</seg>
     </modern>
   </corr>
-  <corr num="c78">
+  <corr num="78">
     <proto contextL="tsʰ" syll="R">on</proto>
     <modern dialecte="ris">
       <seg>on</seg>
@@ -2267,7 +2267,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c79">
+  <corr num="79">
     <proto syll="R">jon</proto>
     <modern dialecte="ris">
       <seg>jon</seg>
@@ -2297,7 +2297,7 @@
       <seg>je</seg>
     </modern>
   </corr>
-  <corr num="c80">
+  <corr num="80">
     <proto syll="R">om</proto>
     <modern dialecte="ris">
       <seg>om</seg>
@@ -2324,7 +2324,7 @@
       <seg>ẽ</seg>
     </modern>
   </corr>
-  <corr num="c81">
+  <corr num="81">
     <proto syll="R">or</proto>
     <modern dialecte="ris">
       <seg>or</seg>
@@ -2353,7 +2353,7 @@
       <seg>or</seg>
     </modern>
   </corr>
-  <corr num="c82">
+  <corr num="82">
     <proto syll="R,V">u</proto>
     <modern dialecte="ris">
       <seg>u</seg>
@@ -2380,7 +2380,7 @@
       <seg>u</seg>
     </modern>
   </corr>
-  <corr num="c83">
+  <corr num="83">
     <proto syll="R">uː</proto>
     <modern dialecte="ris">
       <seg>uː</seg>
@@ -2407,7 +2407,7 @@
       <seg>u</seg>
     </modern>
   </corr>
-  <corr num="c84">
+  <corr num="84">
     <proto syll="R,V">ju</proto>
     <modern dialecte="ris">
       <seg>ju</seg>
@@ -2434,7 +2434,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c85">
+  <corr num="85">
     <proto syll="R">juː</proto>
     <modern dialecte="ris">
       <seg>juː</seg>
@@ -2461,7 +2461,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c86">
+  <corr num="86">
     <proto syll="R">uk</proto>
     <modern dialecte="ris">
       <seg>?</seg>
@@ -2488,7 +2488,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c87">
+  <corr num="87">
     <proto syll="R">ut</proto>
     <modern dialecte="ris">
       <seg>ut</seg>
@@ -2517,7 +2517,7 @@
       <seg>u</seg>
     </modern>
   </corr>
-  <corr num="c88">
+  <corr num="88">
     <proto contextL="j" syll="R">ut</proto>
     <modern dialecte="ris">
       <seg>ut</seg>
@@ -2545,7 +2545,7 @@
       <seg>iː</seg>
     </modern>
   </corr>
-  <corr num="c89">
+  <corr num="89">
     <proto contextL="r,ʈ,ɖ" syll="R">ut</proto>
     <modern dialecte="ris">
       <seg>ut</seg>
@@ -2576,7 +2576,7 @@
       <seg>iː</seg>
     </modern>
   </corr>
-  <corr num="c90">
+  <corr num="90">
     <proto contextL="t,d,tʰ" syll="R">ut</proto>
     <modern dialecte="ris">
       <seg>ut</seg>
@@ -2605,7 +2605,7 @@
       <seg>iː</seg>
     </modern>
   </corr>
-  <corr num="c91">
+  <corr num="91">
     <proto syll="R">up</proto>
     <modern dialecte="ris">
       <seg>up</seg>
@@ -2633,7 +2633,7 @@
       <seg>uː</seg>
     </modern>
   </corr>
-  <corr num="c92">
+  <corr num="92">
     <proto syll="R">jup</proto>
     <modern dialecte="ris">
       <seg>jup</seg>
@@ -2661,7 +2661,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c93">
+  <corr num="93">
     <proto syll="R">uŋ</proto>
     <modern dialecte="ris">
       <seg>uŋ</seg>
@@ -2693,7 +2693,7 @@
       <seg>um</seg>
     </modern>
   </corr>
-  <corr num="c94">
+  <corr num="94">
     <proto contextL="s" syll="R">un</proto>
     <modern dialecte="ris">
       <seg>un</seg>
@@ -2721,7 +2721,7 @@
       <seg>ĩ</seg>
     </modern>
   </corr>
-  <corr num="c95">
+  <corr num="95">
     <proto contextL="ʰŋ" syll="R">won</proto>
     <modern dialecte="ris">
       <seg>un</seg>
@@ -2749,7 +2749,7 @@
       <seg>wẽ</seg>
     </modern>
   </corr>
-  <corr num="c96">
+  <corr num="96">
     <proto syll="R">un</proto>
     <modern dialecte="ris">
       <seg>un</seg>
@@ -2777,7 +2777,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c97">
+  <corr num="97">
     <proto syll="R">um</proto>
     <modern dialecte="ris">
       <seg>um</seg>
@@ -2805,7 +2805,7 @@
       <seg statut="doute">uŋ</seg>
     </modern>
   </corr>
-  <corr num="c98">
+  <corr num="98">
     <proto syll="R">ur</proto>
     <modern dialecte="ris">
       <seg>ur</seg>
@@ -2832,7 +2832,7 @@
       <seg>ur</seg>
     </modern>
   </corr>
-  <corr num="c99">
+  <corr num="99">
     <proto syll="R">ul</proto>
     <modern dialecte="ris">
       <seg>ul</seg>
@@ -2861,7 +2861,7 @@
       <seg>uː</seg>
     </modern>
   </corr>
-  <corr num="c100">
+  <corr num="100">
     <proto syll="I">k</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -2888,7 +2888,7 @@
       <seg>k</seg>
     </modern>
   </corr>
-  <corr num="c101">
+  <corr num="101">
     <proto contextR="w" syll="I">k</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -2915,7 +2915,7 @@
       <seg>k</seg>
     </modern>
   </corr>
-  <corr num="c102">
+  <corr num="102">
     <proto syll="I">kʰ</proto>
     <modern dialecte="ris">
       <seg>kʰ</seg>
@@ -2942,7 +2942,7 @@
       <seg>kʰ</seg>
     </modern>
   </corr>
-  <corr num="c103">
+  <corr num="103">
     <proto contextR="w" syll="I">kʰ</proto>
     <modern dialecte="ris">
       <seg>kʰ</seg>
@@ -2970,7 +2970,7 @@
       <seg>kʰ</seg>
     </modern>
   </corr>
-  <corr num="c104">
+  <corr num="104">
     <proto contextL="A" syll="I">g</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -3000,7 +3000,7 @@
       <seg>k</seg>
     </modern>
   </corr>
-  <corr num="c105">
+  <corr num="105">
     <proto contextL="B" syll="I">g</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -3029,7 +3029,7 @@
       <seg>kʰ</seg>
     </modern>
   </corr>
-  <corr num="c106">
+  <corr num="106">
     <proto contextR="w" syll="I">g</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -3058,7 +3058,7 @@
       <seg>kʰ</seg>
     </modern>
   </corr>
-  <corr num="c107">
+  <corr num="107">
     <proto contextL="A" syll="O">gj</proto>
     <modern dialecte="ris">
       <seg>kj</seg>
@@ -3085,7 +3085,7 @@
       <seg>kj</seg>
     </modern>
   </corr>
-  <corr num="c108">
+  <corr num="108">
     <proto contextL="B" syll="O">gj</proto>
     <modern dialecte="ris">
       <seg>kj</seg>
@@ -3113,7 +3113,7 @@
       <seg>kʰj</seg>
     </modern>
   </corr>
-  <corr num="c109">
+  <corr num="109">
     <proto contextR="eː" syll="O">kr</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -3140,7 +3140,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c110">
+  <corr num="110">
     <proto contextR="u" syll="O">kr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3167,7 +3167,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c111">
+  <corr num="111">
     <proto contextR="a" syll="O">kr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3194,7 +3194,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c112">
+  <corr num="112">
     <proto contextR="at" syll="O">kr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3222,7 +3222,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c113">
+  <corr num="113">
     <proto syll="O">kr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3249,7 +3249,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c114">
+  <corr num="114">
     <proto syll="O">kʰr</proto>
     <modern dialecte="ris">
       <seg>kʰr</seg>
@@ -3280,7 +3280,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c115">
+  <corr num="115">
     <proto contextL="A" syll="O">gr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3309,7 +3309,7 @@
       <seg>kr</seg>
     </modern>
   </corr>
-  <corr num="c116">
+  <corr num="116">
     <proto contextL="B" contextR="e" syll="O">gr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3336,7 +3336,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c117">
+  <corr num="117">
     <proto contextL="B" contextR="i" syll="O">gr</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -3364,7 +3364,7 @@
       <seg>kʰr</seg>
     </modern>
   </corr>
-  <corr num="c118">
+  <corr num="118">
     <proto contextL="B" syll="O">gr</proto>
     <modern dialecte="ris">
       <seg>kr</seg>
@@ -3392,7 +3392,7 @@
       <seg statut="doute">rʰ</seg>
     </modern>
   </corr>
-  <corr num="c119">
+  <corr num="119">
     <proto contextL="B" contextR="w" syll="O">gr</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -3421,7 +3421,7 @@
       <seg>hr</seg>
     </modern>
   </corr>
-  <corr num="c120">
+  <corr num="120">
     <proto syll="O">grw</proto>
     <modern dialecte="ris">
       <seg>kw</seg>
@@ -3451,7 +3451,7 @@
       <seg>hr</seg>
     </modern>
   </corr>
-  <corr num="c121">
+  <corr num="121">
     <proto contextR="i,e" syll="O">kl</proto>
     <modern dialecte="ris">
       <seg>kl</seg>
@@ -3479,7 +3479,7 @@
       <seg>k</seg>
     </modern>
   </corr>
-  <corr num="c122">
+  <corr num="122">
     <proto contextR="a" syll="O">kl</proto>
     <modern dialecte="ris">
       <seg>kl</seg>
@@ -3506,7 +3506,7 @@
       <seg>kj</seg>
     </modern>
   </corr>
-  <corr num="c123">
+  <corr num="123">
     <proto syll="O">kl</proto>
     <modern dialecte="ris">
       <seg>kl</seg>
@@ -3533,7 +3533,7 @@
       <seg>kj</seg>
     </modern>
   </corr>
-  <corr num="c124">
+  <corr num="124">
     <proto syll="O">kʰl</proto>
     <modern dialecte="ris">
       <seg>kʰl</seg>
@@ -3560,7 +3560,7 @@
       <seg>kʰj</seg>
     </modern>
   </corr>
-  <corr num="c125">
+  <corr num="125">
     <proto contextL="A" syll="O">gl</proto>
     <modern dialecte="ris">
       <seg>kl</seg>
@@ -3588,7 +3588,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c126">
+  <corr num="126">
     <proto contextL="B" syll="O">gl</proto>
     <modern dialecte="ris">
       <seg>kl</seg>
@@ -3616,7 +3616,7 @@
       <seg>k</seg>
     </modern>
   </corr>
-  <corr num="c127">
+  <corr num="127">
     <proto contextL="B" contextR="i,e" syll="O">gl</proto>
     <modern dialecte="ris">
       <seg>kl</seg>
@@ -3643,7 +3643,7 @@
       <seg>kʰ</seg>
     </modern>
   </corr>
-  <corr num="c128">
+  <corr num="128">
     <proto contextR="i,j" syll="O">ts</proto>
     <modern dialecte="ris">
       <seg>ts</seg>
@@ -3671,7 +3671,7 @@
       <seg>tɕ</seg>
     </modern>
   </corr>
-  <corr num="c129">
+  <corr num="129">
     <proto syll="O">ts</proto>
     <modern dialecte="ris">
       <seg>ts</seg>
@@ -3698,7 +3698,7 @@
       <seg>ts</seg>
     </modern>
   </corr>
-  <corr num="c130">
+  <corr num="130">
     <proto contextR="i,j" syll="O">tsʰ</proto>
     <modern dialecte="ris">
       <seg>tsʰ</seg>
@@ -3725,7 +3725,7 @@
       <seg>tɕʰ</seg>
     </modern>
   </corr>
-  <corr num="c131">
+  <corr num="131">
     <proto syll="O">tsʰ</proto>
     <modern dialecte="ris">
       <seg>tsʰ</seg>
@@ -3752,7 +3752,7 @@
       <seg>tsʰ</seg>
     </modern>
   </corr>
-  <corr num="c132">
+  <corr num="132">
     <proto contextL="A" syll="O">dz</proto>
     <modern dialecte="ris">
       <seg>ts</seg>
@@ -3780,7 +3780,7 @@
       <seg>ts</seg>
     </modern>
   </corr>
-  <corr num="c133">
+  <corr num="133">
     <proto contextL="B" syll="O">dz</proto>
     <modern dialecte="ris">
       <seg>ts</seg>
@@ -3810,7 +3810,7 @@
       <seg>tsʰ</seg>
     </modern>
   </corr>
-  <corr num="c134">
+  <corr num="134">
     <proto syll="O">tsj</proto>
     <modern dialecte="ris">
       <seg>tsj</seg>
@@ -3839,7 +3839,7 @@
       <seg>tɕ</seg>
     </modern>
   </corr>
-  <corr num="c135">
+  <corr num="135">
     <proto syll="O">tsʰj</proto>
     <modern dialecte="ris">
       <seg>tsʰj</seg>
@@ -3867,7 +3867,7 @@
       <seg>tɕʰ</seg>
     </modern>
   </corr>
-  <corr num="c136">
+  <corr num="136">
     <proto syll="O">dzj</proto>
     <modern dialecte="ris">
       <seg>tsj</seg>
@@ -3897,7 +3897,7 @@
       <seg>tɕ</seg>
     </modern>
   </corr>
-  <corr num="c137">
+  <corr num="137">
     <proto syll="O">ʈ</proto>
     <modern dialecte="ris">
       <seg>ʈ</seg>
@@ -3924,7 +3924,7 @@
       <seg>ʈ</seg>
     </modern>
   </corr>
-  <corr num="c138">
+  <corr num="138">
     <proto syll="O">ʈʰ</proto>
     <modern dialecte="ris">
       <seg>ʈʰ</seg>
@@ -3951,7 +3951,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c139">
+  <corr num="139">
     <proto syll="O">ʈ.Hr.ʈʰ</proto>
     <modern dialecte="ris">
       <seg>ʈ</seg>
@@ -3979,7 +3979,7 @@
       <seg>ʈ</seg>
     </modern>
   </corr>
-  <corr num="c140">
+  <corr num="140">
     <proto contextL="A" syll="O">ɖ</proto>
     <modern dialecte="ris">
       <seg>ʈ</seg>
@@ -4007,7 +4007,7 @@
       <seg>ʈ</seg>
     </modern>
   </corr>
-  <corr num="c141">
+  <corr num="141">
     <proto contextL="B" syll="O">ɖ</proto>
     <modern dialecte="ris">
       <seg>ʈ</seg>
@@ -4034,7 +4034,7 @@
       <seg>ʈʰ</seg>
     </modern>
   </corr>
-  <corr num="c142">
+  <corr num="142">
     <proto syll="I">t</proto>
     <modern dialecte="ris">
       <seg>t</seg>
@@ -4061,7 +4061,7 @@
       <seg>t</seg>
     </modern>
   </corr>
-  <corr num="c143">
+  <corr num="143">
     <proto contextR="a" syll="I">tʰ</proto>
     <modern dialecte="ris">
       <seg>tʰ</seg>
@@ -4088,7 +4088,7 @@
       <seg>tʰ</seg>
     </modern>
   </corr>
-  <corr num="c144">
+  <corr num="144">
     <proto syll="I">tʰ</proto>
     <modern dialecte="ris">
       <seg>tʰ</seg>
@@ -4117,7 +4117,7 @@
       <seg>tʰ</seg>
     </modern>
   </corr>
-  <corr num="c145">
+  <corr num="145">
     <proto contextL="A" syll="I">d</proto>
     <modern dialecte="ris">
       <seg>t</seg>
@@ -4144,7 +4144,7 @@
       <seg>t</seg>
     </modern>
   </corr>
-  <corr num="c146">
+  <corr num="146">
     <proto contextL="B" syll="I">d</proto>
     <modern dialecte="ris">
       <seg>t</seg>
@@ -4173,7 +4173,7 @@
       <seg>tʰ</seg>
     </modern>
   </corr>
-  <corr num="c147">
+  <corr num="147">
     <proto syll="I">p</proto>
     <modern dialecte="ris">
       <seg>p</seg>
@@ -4200,7 +4200,7 @@
       <seg>p</seg>
     </modern>
   </corr>
-  <corr num="c148">
+  <corr num="148">
     <proto contextL="A" syll="I">pʰ</proto>
     <modern dialecte="ris">
       <seg>pʰ</seg>
@@ -4227,7 +4227,7 @@
       <seg>pʰ</seg>
     </modern>
   </corr>
-  <corr num="c149">
+  <corr num="149">
     <proto contextL="B" syll="I">pʰ</proto>
     <modern dialecte="ris">
       <seg>pʰ</seg>
@@ -4255,7 +4255,7 @@
       <seg>pʰ</seg>
     </modern>
   </corr>
-  <corr num="c150">
+  <corr num="150">
     <proto contextL="A" syll="I">b</proto>
     <modern dialecte="ris">
       <seg>p</seg>
@@ -4283,7 +4283,7 @@
       <seg>p</seg>
     </modern>
   </corr>
-  <corr num="c151">
+  <corr num="151">
     <proto contextL="B" syll="I">b</proto>
     <modern dialecte="ris">
       <seg>p</seg>
@@ -4311,7 +4311,7 @@
       <seg>pʰ</seg>
     </modern>
   </corr>
-  <corr num="c152">
+  <corr num="152">
     <proto contextL="B" contextR="j,r,l" syll="I">b</proto>
     <modern dialecte="ris">
       <seg>p</seg>
@@ -4338,7 +4338,7 @@
       <seg>pʰ</seg>
     </modern>
   </corr>
-  <corr num="c153">
+  <corr num="153">
     <proto syll="O">pj</proto>
     <modern dialecte="ris">
       <seg>pj</seg>
@@ -4365,7 +4365,7 @@
       <seg>pj</seg>
     </modern>
   </corr>
-  <corr num="c154">
+  <corr num="154">
     <proto syll="O">pʰj</proto>
     <modern dialecte="ris">
       <seg>pʰj</seg>
@@ -4392,7 +4392,7 @@
       <seg>pʰj</seg>
     </modern>
   </corr>
-  <corr num="c155">
+  <corr num="155">
     <proto syll="O">bj</proto>
     <modern dialecte="ris">
       <seg>pj</seg>
@@ -4421,7 +4421,7 @@
       <seg>pʰj</seg>
     </modern>
   </corr>
-  <corr num="c156">
+  <corr num="156">
     <proto contextL="A" syll="O">bl</proto>
     <modern dialecte="ris">
       <seg>pl</seg>
@@ -4448,7 +4448,7 @@
       <seg>pl</seg>
     </modern>
   </corr>
-  <corr num="c157">
+  <corr num="157">
     <proto contextL="B" syll="O">bl</proto>
     <modern dialecte="ris">
       <seg>pl</seg>
@@ -4475,7 +4475,7 @@
       <seg>pʰl</seg>
     </modern>
   </corr>
-  <corr num="c158">
+  <corr num="158">
     <proto syll="O">p.ml</proto>
     <modern dialecte="ris">
       <seg>pl</seg>
@@ -4502,7 +4502,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c159">
+  <corr num="159">
     <proto syll="O">ʰŋ</proto>
     <modern dialecte="ris">
       <seg>ŋ</seg>
@@ -4536,7 +4536,7 @@
       <seg>ŋ</seg>
     </modern>
   </corr>
-  <corr num="c160">
+  <corr num="160">
     <proto contextR="an" syll="O">ʰŋ</proto>
     <modern dialecte="ris">
       <seg>ŋ</seg>
@@ -4563,7 +4563,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c161">
+  <corr num="161">
     <proto contextR="i,j" syll="O">ʰŋ</proto>
     <modern dialecte="ris">
       <seg>ŋ</seg>
@@ -4591,7 +4591,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c162">
+  <corr num="162">
     <proto syll="O">ŋ</proto>
     <modern dialecte="ris">
       <seg>ŋ</seg>
@@ -4619,7 +4619,7 @@
       <seg>ŋ</seg>
     </modern>
   </corr>
-  <corr num="c163">
+  <corr num="163">
     <proto contextR="i,j" syll="O">ŋ</proto>
     <modern dialecte="ris">
       <seg>ŋ</seg>
@@ -4647,7 +4647,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c164">
+  <corr num="164">
     <proto syll="O">ʰɲ</proto>
     <modern dialecte="ris">
       <seg>ŋj</seg>
@@ -4678,7 +4678,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c165">
+  <corr num="165">
     <proto syll="O">ɲ</proto>
     <modern dialecte="ris">
       <seg>ŋj</seg>
@@ -4708,7 +4708,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c166">
+  <corr num="166">
     <proto syll="O">ʰn</proto>
     <modern dialecte="ris">
       <seg>n</seg>
@@ -4735,7 +4735,7 @@
       <seg>n</seg>
     </modern>
   </corr>
-  <corr num="c167">
+  <corr num="167">
     <proto syll="O">n</proto>
     <modern dialecte="ris">
       <seg>n</seg>
@@ -4762,7 +4762,7 @@
       <seg>n</seg>
     </modern>
   </corr>
-  <corr num="c168">
+  <corr num="168">
     <proto contextR="i,e" syll="O">ʰn</proto>
     <modern dialecte="ris">
       <seg>n</seg>
@@ -4793,7 +4793,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c169">
+  <corr num="169">
     <proto contextR="i" syll="O">n</proto>
     <modern dialecte="ris">
       <seg>n</seg>
@@ -4821,7 +4821,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c170">
+  <corr num="170">
     <proto contextR="e" syll="O">n</proto>
     <modern dialecte="ris">
       <seg>n</seg>
@@ -4851,7 +4851,7 @@
       <seg>ɲ</seg>
     </modern>
   </corr>
-  <corr num="c171">
+  <corr num="171">
     <proto syll="I">ʰm</proto>
     <modern dialecte="ris">
       <seg>m</seg>
@@ -4878,7 +4878,7 @@
       <seg>m</seg>
     </modern>
   </corr>
-  <corr num="c172">
+  <corr num="172">
     <proto syll="I">m</proto>
     <modern dialecte="ris">
       <seg>m</seg>
@@ -4905,7 +4905,7 @@
       <seg>m</seg>
     </modern>
   </corr>
-  <corr num="c173">
+  <corr num="173">
     <proto syll="O">ʰmj</proto>
     <modern dialecte="ris">
       <seg>mj</seg>
@@ -4932,7 +4932,7 @@
       <seg>mj</seg>
     </modern>
   </corr>
-  <corr num="c174">
+  <corr num="174">
     <proto syll="O">mj</proto>
     <modern dialecte="ris">
       <seg>mj</seg>
@@ -4959,7 +4959,7 @@
       <seg>mj</seg>
     </modern>
   </corr>
-  <corr num="c175">
+  <corr num="175">
     <proto syll="O">ʰml</proto>
     <modern dialecte="ris">
       <seg>ml</seg>
@@ -4986,7 +4986,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c176">
+  <corr num="176">
     <proto syll="O">ml</proto>
     <modern dialecte="ris">
       <seg>ml</seg>
@@ -5013,7 +5013,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c177">
+  <corr num="177">
     <proto syll="O">ʰj</proto>
     <modern dialecte="ris">
       <seg>j</seg>
@@ -5040,7 +5040,7 @@
       <seg>j</seg>
     </modern>
   </corr>
-  <corr num="c178">
+  <corr num="178">
     <proto syll="O">j</proto>
     <modern dialecte="ris">
       <seg>j</seg>
@@ -5068,7 +5068,7 @@
       <seg>∅</seg>
     </modern>
   </corr>
-  <corr num="c179">
+  <corr num="179">
     <proto syll="G">j</proto>
     <modern dialecte="ris">
       <seg>j</seg>
@@ -5096,7 +5096,7 @@
       <seg>∅</seg>
     </modern>
   </corr>
-  <corr num="c180">
+  <corr num="180">
     <proto contextR="at" syll="G">j</proto>
     <modern dialecte="ris">
       <seg>j</seg>
@@ -5126,7 +5126,7 @@
       <seg>j</seg>
     </modern>
   </corr>
-  <corr num="c181">
+  <corr num="181">
     <proto syll="O">Hr</proto>
     <modern dialecte="ris">
       <seg>hr</seg>
@@ -5155,7 +5155,7 @@
       <seg>hr</seg>
     </modern>
   </corr>
-  <corr num="c182">
+  <corr num="182">
     <proto syll="O">ʰr</proto>
     <modern dialecte="ris">
       <seg>r</seg>
@@ -5182,7 +5182,7 @@
       <seg>r</seg>
     </modern>
   </corr>
-  <corr num="c183">
+  <corr num="183">
     <proto syll="O">r</proto>
     <modern dialecte="ris">
       <seg>r</seg>
@@ -5209,7 +5209,7 @@
       <seg>r</seg>
     </modern>
   </corr>
-  <corr num="c184">
+  <corr num="184">
     <proto contextL="P" syll="L">r</proto>
     <modern dialecte="ris">
       <seg>r</seg>
@@ -5236,7 +5236,7 @@
       <seg>r</seg>
     </modern>
   </corr>
-  <corr num="c185">
+  <corr num="185">
     <proto contextL="P" contextR="an" syll="L">r</proto>
     <modern dialecte="ris">
       <seg>r</seg>
@@ -5267,7 +5267,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c186">
+  <corr num="186">
     <proto syll="O">Hl</proto>
     <modern dialecte="ris">
       <seg>hl</seg>
@@ -5296,7 +5296,7 @@
       <seg>hl</seg>
     </modern>
   </corr>
-  <corr num="c187">
+  <corr num="187">
     <proto syll="O">ʰl</proto>
     <modern dialecte="ris">
       <seg>l</seg>
@@ -5323,7 +5323,7 @@
       <seg>l</seg>
     </modern>
   </corr>
-  <corr num="c188">
+  <corr num="188">
     <proto syll="O">l</proto>
     <modern dialecte="ris">
       <seg>l</seg>
@@ -5350,7 +5350,7 @@
       <seg>l</seg>
     </modern>
   </corr>
-  <corr num="c189">
+  <corr num="189">
     <proto syll="L">l</proto>
     <modern dialecte="ris">
       <seg>l</seg>
@@ -5377,7 +5377,7 @@
       <seg>l</seg>
     </modern>
   </corr>
-  <corr num="c190">
+  <corr num="190">
     <proto syll="O">ʰw</proto>
     <modern dialecte="ris">
       <seg>w</seg>
@@ -5404,7 +5404,7 @@
       <seg>w</seg>
     </modern>
   </corr>
-  <corr num="c191">
+  <corr num="191">
     <proto syll="O">w</proto>
     <modern dialecte="ris">
       <seg>w</seg>
@@ -5431,7 +5431,7 @@
       <seg>w</seg>
     </modern>
   </corr>
-  <corr num="c192">
+  <corr num="192">
     <proto syll="G">w</proto>
     <modern dialecte="ris">
       <seg>w</seg>
@@ -5458,7 +5458,7 @@
       <seg>w</seg>
     </modern>
   </corr>
-  <corr num="c193">
+  <corr num="193">
     <proto syll="I">s</proto>
     <modern dialecte="ris">
       <seg>s</seg>
@@ -5485,7 +5485,7 @@
       <seg>s</seg>
     </modern>
   </corr>
-  <corr num="c194">
+  <corr num="194">
     <proto contextR="u" syll="I">s</proto>
     <modern dialecte="ris">
       <seg>s</seg>
@@ -5512,7 +5512,7 @@
       <seg>s</seg>
     </modern>
   </corr>
-  <corr num="c195">
+  <corr num="195">
     <proto contextR="i,j,e" syll="I">s</proto>
     <modern dialecte="ris">
       <seg>s</seg>
@@ -5545,7 +5545,7 @@
       <seg statut="doute">ʃj</seg>
     </modern>
   </corr>
-  <corr num="c196">
+  <corr num="196">
     <proto syll="O">ɕ</proto>
     <modern dialecte="ris">
       <seg>sj</seg>
@@ -5577,7 +5577,7 @@
       <seg statut="doute">ʃj</seg>
     </modern>
   </corr>
-  <corr num="c197">
+  <corr num="197">
     <proto syll="I">z</proto>
     <modern dialecte="ris">
       <seg>s</seg>
@@ -5604,7 +5604,7 @@
       <seg>s</seg>
     </modern>
   </corr>
-  <corr num="c198">
+  <corr num="198">
     <proto syll="O">ʑ</proto>
     <modern dialecte="ris">
       <seg>sj</seg>
@@ -5636,7 +5636,7 @@
       <seg statut="doute">ʃj</seg>
     </modern>
   </corr>
-  <corr num="c199">
+  <corr num="199">
     <proto contextR="w" syll="I">h</proto>
     <modern dialecte="ris">
       <seg>h</seg>
@@ -5663,7 +5663,7 @@
       <seg>?</seg>
     </modern>
   </corr>
-  <corr num="c200">
+  <corr num="200">
     <proto syll="I">h</proto>
     <modern dialecte="ris">
       <seg>h</seg>
@@ -5690,7 +5690,7 @@
       <seg>h</seg>
     </modern>
   </corr>
-  <corr num="c201">
+  <corr num="201">
     <proto syll="F">k</proto>
     <modern dialecte="ris">
       <seg>k</seg>
@@ -5719,7 +5719,7 @@
       <seg>∅</seg>
     </modern>
   </corr>
-  <corr num="c202">
+  <corr num="202">
     <proto contextR="k" syll="V">i</proto>
     <modern dialecte="ris">
       <seg>i</seg>
@@ -5746,7 +5746,7 @@
       <seg>i</seg>
     </modern>
   </corr>
-  <corr num="c203">
+  <corr num="203">
     <proto syll="F">t</proto>
     <modern dialecte="ris">
       <seg>t</seg>
@@ -5776,7 +5776,7 @@
       <seg>ː</seg>
     </modern>
   </corr>
-  <corr num="c204">
+  <corr num="204">
     <proto syll="F">p</proto>
     <modern dialecte="ris">
       <seg>p</seg>
@@ -5808,7 +5808,7 @@
       <seg>ː</seg>
     </modern>
   </corr>
-  <corr num="c205">
+  <corr num="205">
     <proto contextR="p" syll="V">a</proto>
     <modern dialecte="ris">
       <seg>a</seg>
@@ -5835,7 +5835,7 @@
       <seg>e</seg>
     </modern>
   </corr>
-  <corr num="c206">
+  <corr num="206">
     <proto contextR="p" syll="V">o</proto>
     <modern dialecte="ris">
       <seg>o</seg>
@@ -5863,7 +5863,7 @@
       <seg>o</seg>
     </modern>
   </corr>
-  <corr num="c207">
+  <corr num="207">
     <proto contextR="p" syll="V">u</proto>
     <modern dialecte="ris">
       <seg>u</seg>
@@ -5890,7 +5890,7 @@
       <seg>u</seg>
     </modern>
   </corr>
-  <corr num="c208">
+  <corr num="208">
     <proto syll="F">l</proto>
     <modern dialecte="ris">
       <seg>l</seg>
@@ -5918,7 +5918,7 @@
       <seg>l</seg>
     </modern>
   </corr>
-  <corr num="c209">
+  <corr num="209">
     <proto syll="F">s</proto>
     <modern dialecte="ris">
       <seg>s</seg>
