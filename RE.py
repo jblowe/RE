@@ -53,6 +53,15 @@ def read_context_from_string(string):
                   [y.strip() for y in x.split(',')]
                   for x in string.split('_')))
 
+# based on https://stackoverflow.com/questions/12451531/python-try-catch-block-inside-lambda
+def tryconvert(value, *types):
+    for t in types:
+        try:
+            return t(value)
+        except (ValueError, TypeError):
+            continue
+    return value
+
 # build a map from tokens to lists of correspondences containing the
 # token key.
 # also return all possible token lengths
@@ -156,6 +165,8 @@ class Statistics:
         self.singleton_support = set()
         self.summary_stats = {}
         self.language_stats = {}
+        self.correspondences_used_in_recons = collections.Counter()
+        self.correspondences_used_in_sets = collections.Counter()
         self.notes = []
         self.debug_notes = []
 
@@ -220,13 +231,15 @@ def make_tokenizer(parameters, accessor):
             making sure to skip over suprasegmental features when matching
             contexts.
             '''
-            if Debug.debug:
-                statistics.add_debug_note(f'{len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
             # we can abandon parses that we know can't be completed
             # to satisfy the syllable canon. for DEMO93 this cuts the
             # number of branches from 182146 to 61631
             if regex.fullmatch(syllable_parse, partial=True) is None:
+                if Debug.debug:
+                    statistics.add_debug_note(f'canon cannot match: {len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
                 return
+            if Debug.debug:
+                statistics.add_debug_note(f'{len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
             if form == '':
                 # check whether the last token's right context had a word final
                 # marker or a catch all environment
@@ -246,6 +259,8 @@ def make_tokenizer(parameters, accessor):
                             last if c.proto_form in supra_segmentals else c,
                             syllable_parse + syllable_type)
             if form == '':
+                #if Debug.debug:
+                #    statistics.add_debug_note(f'reached end of form!')
                 return
             for token_length in token_lengths:
                 for c in rule_map[form[:token_length]]:
@@ -313,9 +328,22 @@ def project_back(lexicons, parameters, statistics):
                 statistics.failed_parses.add(form)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
+    statistics.correspondences_used_in_recons = count_correspondences_used_in_reconstructions(reconstructions)
     statistics.add_stat('lexicons', len(lexicons))
     statistics.keys = reconstructions
     return reconstructions, statistics
+
+def count_correspondences_used_in_reconstructions(reconstructions):
+    correspondences_used = collections.Counter()
+    for r in reconstructions:
+        correspondences_used.update([correspondence for correspondence in r])
+    return correspondences_used
+
+def count_correspondences_used_in_sets(cognate_sets):
+    correspondences_used = collections.Counter()
+    for c in cognate_sets:
+        correspondences_used.update([correspondence for correspondence in c[0]])
+    return correspondences_used
 
 # we create cognate sets by comparing meaning.
 def create_sets(projections, statistics, mels, only_with_mel, root=True):
@@ -370,6 +398,7 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
         f'{len(cognate_sets)} cognate sets')
+    statistics.correspondences_used_in_sets = count_correspondences_used_in_sets(cognate_sets)
     return cognate_sets, statistics
 
 # given a collection of sets, we want to find all maximal sets,

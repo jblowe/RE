@@ -65,6 +65,13 @@ else:
                          (), [])],
                          B.statistics), failures_xml_file)
         print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
+        for c in sorted(B.statistics.correspondences_used_in_recons, key= lambda corr: RE.tryconvert(corr.id, int)):
+            if c in B.statistics.correspondences_used_in_sets:
+                set_count = B.statistics.correspondences_used_in_sets[c]
+            else:
+                set_count = 0
+            print(f'{c}', '%s %s' % (B.statistics.correspondences_used_in_recons[c], set_count))
+        print(f'{len(B.statistics.correspondences_used_in_recons)} correspondences used')
         # isolates
         isolates_xml_file = f'{project_dir}/{args.project}.{args.run}.isolates.sets.xml'
         C, forms_used = RE.extract_isolates(B)
