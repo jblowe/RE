@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <canon value="[IM]*[NOS]+[CT]+"/>
+  <canon value="[PI]?[NOS][CT]"/>
   <class name="V" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr"/>
   <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml"/>
   <class name="L" value="l,r"/>
