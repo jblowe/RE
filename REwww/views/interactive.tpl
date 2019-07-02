@@ -44,20 +44,20 @@
           % end
           </div>
           <div class="col-md-8 panel border rounded">
-          % if 'notes' in data:
-          <h4>Notes</h4>
-              % for note in data['notes']:
-                  <li>{{note}}</li>
-              % end
-          % end
           % if 'debug_notes' in data:
-          <h4>Debug</h4>
+          <h4>Trace</h4>
               % for note in data['debug_notes']:
                    % if note[0] == ' ':
                       {{note}}<br/>
                    % else:
                       <li>{{note}}</li>
                    % end
+              % end
+          % end
+          % if 'notes' in data:
+          <h4>Notes</h4>
+              % for note in data['notes']:
+                  <li>{{note}}</li>
               % end
           % end
           </div>

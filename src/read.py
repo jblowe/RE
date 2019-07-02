@@ -198,7 +198,7 @@ def read_tabular_lexicons(filename, columns, delimiter='\t'):
                 form = form.strip()
                 if form:
                     forms_dict[language].append(RE.ModernForm(language, form, gloss, id))
-        return [RE.Lexicon(language, forms) for language, forms in forms_dict.items()]
+        return [RE.Lexicon(language, forms, []) for language, forms in forms_dict.items()]
 
 
 def read_header_line(filename, delimiter='\t'):
