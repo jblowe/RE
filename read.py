@@ -165,14 +165,14 @@ def read_lexicon(xmlfile):
                            entry.attrib.get('id')
                            )
              for entry in tree.iterfind('entry')]
-    return RE.Lexicon(language, forms)
+    return RE.Lexicon(language, forms, [])
 
 # returns a generator returning the modern form and its gloss
 def create_lexicon_from_parms(language_forms):
     lexicons = {}
     for language,form in language_forms:
         forms = [RE.ModernForm(language,form,'','')]
-        lexicons[language] =RE.Lexicon(language, forms)
+        lexicons[language] = RE.Lexicon(language, forms, [])
     return lexicons
 
 
