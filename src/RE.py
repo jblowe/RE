@@ -44,7 +44,13 @@ def correspondences_as_ids(cs):
     return ' '.join('%4s' % c.id for c in cs)
 
 def syllable_structure(cs):
-    return ''.join(c.syllable_types[0] for c in cs)
+    return ''.join(pretty_join(c.syllable_types) for c in cs)
+
+def pretty_join(c):
+    if len(c) > 1:
+        return f'({",".join(c)})'
+    else:
+        return c[0]
 
 def context_as_string(context):
     return ('' if context == (None, None) else
