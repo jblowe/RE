@@ -43,6 +43,9 @@ def correspondences_as_proto_form_string(cs):
 def correspondences_as_ids(cs):
     return ' '.join('%4s' % c.id for c in cs)
 
+def syllable_structure(cs):
+    return ''.join(c.syllable_types[0] for c in cs)
+
 def context_as_string(context):
     return ('' if context == (None, None) else
             ','.join(context[0] or '') + '_'
@@ -144,7 +147,7 @@ class ProtoForm(Form):
         self.mel = mel
 
     def __str__(self):
-        return f'{self.language} *{self.glyphs}'
+        return f'{self.language} *{self.glyphs} = {correspondences_as_ids(self.correspondences)} {syllable_structure(self.correspondences)}'
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
@@ -283,9 +286,9 @@ def make_tokenizer(parameters, accessor):
             statistics.add_debug_note(f'{len(parses)} reconstructions generated')
             for p in attempts:
                 if p in parses:
-                    statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)}')
+                    statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)} {syllable_structure(p)}')
                 else:
-                    statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)}')
+                    statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)} {syllable_structure(p)}')
         return parses
 
     return tokenize
