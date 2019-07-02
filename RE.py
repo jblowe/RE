@@ -459,10 +459,11 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
 
 def check_uniques(uniques, list_of_recons, protoform, cognate_set):
     if protoform in list_of_recons:
-        print(f'already seen: {protoform} {correspondences_as_ids(cognate_set[0])}')
+        # print(f'already seen: {protoform} {correspondences_as_ids(cognate_set[0])}')
         list_of_recons[protoform].append(cognate_set[0])
     else:
         list_of_recons[protoform] = [cognate_set[0]]
+        uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
 
 def batch_upstream(lexicons, params, only_with_mel, root):
     return pick_derivation(
