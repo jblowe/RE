@@ -53,7 +53,11 @@
           % if 'debug_notes' in data:
           <h4>Debug</h4>
               % for note in data['debug_notes']:
-                  <li>{{note}}</li>
+                   % if note[0] == ' ':
+                      {{note}}<br/>
+                   % else:
+                      <li>{{note}}</li>
+                   % end
               % end
           % end
           </div>

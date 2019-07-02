@@ -31,9 +31,10 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
 
 class Lexicon:
-    def __init__(self, language, forms, statistics=None):
+    def __init__(self, language, forms, list_of_recons, statistics=None):
         self.language = language
         self.forms = forms
+        self.list_of_recons = []
         self.statistics = statistics
 
 def correspondences_as_proto_form_string(cs):
@@ -171,14 +172,14 @@ class Statistics:
         self.debug_notes = []
 
     def add_note(self, note):
-        print(note)
+        # print(note)
         self.notes.append(note)
 
     def add_stat(self, stat, value):
         self.summary_stats[stat] = value
 
     def add_debug_note(self, note):
-            print(note)
+            # print(note)
             self.debug_notes.append(note)
 
 def expanded_contexts(rule, i, sound_classes):
@@ -225,6 +226,7 @@ def make_tokenizer(parameters, accessor):
 
     def tokenize(form, statistics):
         parses = set()
+        attempts = set()
 
         def gen(form, parse, last, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
@@ -236,10 +238,14 @@ def make_tokenizer(parameters, accessor):
             # number of branches from 182146 to 61631
             if regex.fullmatch(syllable_parse, partial=True) is None:
                 if Debug.debug:
-                    statistics.add_debug_note(f'canon cannot match: {len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
+                    pass
+                    #filler = '. ' * len(parse)
+                    #statistics.add_debug_note(f'{filler}canon cannot match: {len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
                 return
             if Debug.debug:
-                statistics.add_debug_note(f'{len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
+                pass
+                #filler = '. ' * len(parse)
+                #statistics.add_debug_note(f'{filler}{len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
             if form == '':
                 # check whether the last token's right context had a word final
                 # marker or a catch all environment
@@ -247,6 +253,7 @@ def make_tokenizer(parameters, accessor):
                         '#' in last.expanded_context[1]):
                     if regex.fullmatch(syllable_parse):
                         parses.add(tuple(parse))
+                    attempts.add(tuple(parse))
             # if the last token was marked as only word final then stop
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
@@ -274,8 +281,11 @@ def make_tokenizer(parameters, accessor):
         gen(form, [], parameters.table.initial_marker, '')
         if Debug.debug:
             statistics.add_debug_note(f'{len(parses)} reconstructions generated')
-            for p in parses:
-                statistics.add_debug_note(f'*{correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)}')
+            for p in attempts:
+                if p in parses:
+                    statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)}')
+                else:
+                    statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)}')
         return parses
 
     return tokenize
@@ -431,21 +441,28 @@ def filter_subsets(cognate_sets, statistics, root=True):
 # surface string
 def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
+    list_of_recons = {}
     seen = {}
     for cognate_set in cognate_sets:
         if only_with_mel:
             if cognate_set[2] not in seen:
                 seen[cognate_set[2]] = True
-                uniques[(correspondences_as_proto_form_string(cognate_set[0]),
-                         cognate_set[1])] = cognate_set
+                check_uniques(uniques, list_of_recons, correspondences_as_proto_form_string(cognate_set[0]), cognate_set)
             else:
                 pass
         else:
-            uniques[(correspondences_as_proto_form_string(cognate_set[0]),
-                     cognate_set[1])] = cognate_set
+            check_uniques(uniques, list_of_recons, correspondences_as_proto_form_string(cognate_set[0]), cognate_set)
+            # print(cognate_set[0])
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
-    return uniques.values(), statistics
+    return uniques.values(), list_of_recons, statistics
+
+def check_uniques(uniques, list_of_recons, protoform, cognate_set):
+    if protoform in list_of_recons:
+        print(f'already seen: {protoform} {correspondences_as_ids(cognate_set[0])}')
+        list_of_recons[protoform].append(cognate_set[0])
+    else:
+        list_of_recons[protoform] = [cognate_set[0]]
 
 def batch_upstream(lexicons, params, only_with_mel, root):
     return pick_derivation(
@@ -467,7 +484,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
                              for daughter in tree[target]]
-        forms, statistics = batch_upstream(daughter_lexicons,
+        forms, list_of_recons, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel,
                                            root)
@@ -477,6 +494,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                        attested_support, mel)
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
+            list_of_recons,
             statistics)
 
     return rec(target, True)
@@ -625,6 +643,7 @@ def extract_failures(lexicon):
         lexicon.language,
         [ProtoForm('failed', (), sorted(lexicon.statistics.failed_parses, key=lambda x: x.language)[:2000],
                    (), [])],
+        [],
         lexicon.statistics)
 
 # create "cognate sets" for the first 2,000 the isolates
@@ -654,4 +673,5 @@ def extract_isolates(lexicon):
                    attested_support, mel)
          for (correspondences, supporting_forms, attested_support, mel)
          in new_isolates][:2000],
+        [],
         lexicon.statistics), forms_used
