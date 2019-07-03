@@ -8,8 +8,7 @@ import collections
 import mel
 
 class Debug:
-    def __init__(self, debug):
-        self.debug = False
+    debug = False
 
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex, supra_segmentals):
