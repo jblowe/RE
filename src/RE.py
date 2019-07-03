@@ -181,15 +181,15 @@ class Statistics:
         self.debug_notes = []
 
     def add_note(self, note):
-        # print(note)
+        print(note)
         self.notes.append(note)
 
     def add_stat(self, stat, value):
         self.summary_stats[stat] = value
 
     def add_debug_note(self, note):
-            # print(note)
-            self.debug_notes.append(note)
+        # print(note)
+        self.debug_notes.append(note)
 
 def expanded_contexts(rule, i, sound_classes):
     contexts = set()
