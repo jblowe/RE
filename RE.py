@@ -202,21 +202,19 @@ def expanded_contexts(rule, i, sound_classes):
             contexts.add(context)
     return contexts
 
-# tokenize an input string and return the set of all parses
-# which also conform to the syllable canon
-def make_tokenizer(parameters, accessor):
+# statically compute which correspondences can actually follow from
+# others based on context
+def next_correspondence_map(parameters):
     regex = parameters.syllable_canon.regex
     sound_classes = parameters.syllable_canon.sound_classes
-    supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
+    supra_segmentals = parameters.syllable_canon.supra_segmentals
+
     # expand out the cover class abbreviations
     for correspondence in correspondences:
         correspondence.expanded_context = (
             expanded_contexts(correspondence, 0, sound_classes),
             expanded_contexts(correspondence, 1, sound_classes))
-    rule_map, token_lengths = partition_correspondences(
-        correspondences,
-        accessor)
 
     def matches_this_left_context(c, last):
         return (c.context[0] is None or
@@ -232,6 +230,24 @@ def make_tokenizer(parameters, accessor):
     def matches_context(c, last):
         return (matches_this_left_context(c, last) and
                 matches_last_right_context(c, last))
+
+    next_map = collections.defaultdict(set)
+    for c in [parameters.table.initial_marker] + correspondences:
+        for nextc in correspondences:
+            if matches_context(nextc, c):
+                next_map[c].add(nextc)
+    return next_map
+
+# tokenize an input string and return the set of all parses
+# which also conform to the syllable canon
+def make_tokenizer(parameters, accessor, next_map):
+    regex = parameters.syllable_canon.regex
+    sound_classes = parameters.syllable_canon.sound_classes
+    supra_segmentals = parameters.syllable_canon.supra_segmentals
+    correspondences = parameters.table.correspondences
+    rule_map, token_lengths = partition_correspondences(
+        correspondences,
+        accessor)
 
     def tokenize(form, statistics):
         parses = set()
@@ -268,7 +284,7 @@ def make_tokenizer(parameters, accessor):
                 return
             # otherwise keep building parses from epenthesis rules
             for c in rule_map['∅']:
-                if matches_context(c, last):
+                if c in next_map[last]:
                     for syllable_type in c.syllable_types:
                         gen(form,
                             parse + [c],
@@ -280,7 +296,7 @@ def make_tokenizer(parameters, accessor):
                 return
             for token_length in token_lengths:
                 for c in rule_map[form[:token_length]]:
-                    if matches_context(c, last):
+                    if c in next_map[last]:
                         for syllable_type in c.syllable_types:
                             gen(form[token_length:],
                                 parse + [c],
@@ -296,7 +312,6 @@ def make_tokenizer(parameters, accessor):
                 else:
                     statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)} {syllable_structure(p)}')
         return parses
-
     return tokenize
 
 # set of all possible forms for a daughter language given correspondences
@@ -320,6 +335,7 @@ def postdict_daughter_forms(proto_form, parameters):
 # return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters, statistics):
     reconstructions = collections.defaultdict(list)
+    next_map = next_correspondence_map(parameters)
     for lexicon in lexicons:
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
@@ -327,7 +343,7 @@ def project_back(lexicons, parameters, statistics):
         daughter_form = lambda c: c.daughter_forms[lexicon.language]
         count_of_parses = 0
         count_of_no_parses = 0
-        tokenize = make_tokenizer(parameters, daughter_form)
+        tokenize = make_tokenizer(parameters, daughter_form, next_map)
         for form in lexicon.forms:
             # print(form)
             if Debug.debug:
