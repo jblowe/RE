@@ -446,10 +446,11 @@ def filter_subsets(cognate_sets, statistics, root=True):
     for cognate_set in cognate_sets:
         partitions[len(cognate_set[index])].append(cognate_set)
     losers = set()
-    for key1, sets1 in partitions.items():
+    for key1, sets1 in sorted(partitions.items(), reverse=True):
         larger_sets = [set for key2, sets2 in partitions.items()
                        if key2 > key1
-                       for set in sets2]
+                       for set in sets2
+                       if set not in losers]
         for cognate_set in sets1:
             supporting_forms1 = cognate_set[index]
             for cognate_set2 in larger_sets:
