@@ -443,19 +443,24 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
 def filter_subsets(cognate_sets, statistics, root=True):
     partitions = collections.defaultdict(list)
     index = 2 if root else 1
+    support_class = collections.defaultdict(list)
+    # collect all sets with the same support. if one loses, they all lose.
     for cognate_set in cognate_sets:
-        partitions[len(cognate_set[index])].append(cognate_set)
+        support_class[cognate_set[index]].append(cognate_set)
+    for support in support_class.keys():
+        partitions[len(support)].append(support)
     losers = set()
-    for key1, sets1 in sorted(partitions.items(), reverse=True):
+    # the largest sets are never losers
+    for key1, sets1 in sorted(partitions.items(), reverse=True)[1:]:
         larger_sets = [set for key2, sets2 in partitions.items()
                        if key2 > key1
                        for set in sets2
-                       if set not in losers]
-        for cognate_set in sets1:
-            supporting_forms1 = cognate_set[index]
-            for cognate_set2 in larger_sets:
-                if supporting_forms1 < cognate_set2[index]:
-                    losers.add(cognate_set)
+                       if support_class[set][0] not in losers]
+        for support_set in sets1:
+            for support_set2 in larger_sets:
+                if support_set < support_set2:
+                    for cognate_set in support_class[support_set]:
+                        losers.add(cognate_set)
                     break
     statistics.subsets = losers
     statistics.add_note(f'threw away {len(losers)} subsets')
