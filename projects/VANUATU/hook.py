@@ -108,7 +108,7 @@ def read_vanuatu_csv(filename):
             print(row)
             table.add_correspondence(RE.Correspondence(
                 # str(number), context_from(row[2]), syllable_type(row[1]), row[1],
-                str(number), context_from(row[2]), row[3], row[1],
+                row[0], context_from(row[2]), row[3], row[1],
                 dict(zip(names, (x.split('|') for x in row[5:])))))
     return table
 
