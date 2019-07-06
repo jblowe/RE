@@ -47,9 +47,9 @@ def generate_xml_data():
         with open('tgtm_pipeline.sh', 'r', encoding='utf-8') as commands:
             for command in commands:
                 if command[0] == '#': continue
-                if 'perl' in command or 'python' in command or 'cd' in command:
+                if 'perl' in command or 'python' in command:
                     print(command.strip())
-                    exit_code = os.system(command.strip())
+                    exit_code = os.system(command.strip().replace('/','\\'))
                     if exit_code != 0:
                         sys.exit(exit_code)
 

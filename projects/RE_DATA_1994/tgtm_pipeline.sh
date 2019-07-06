@@ -15,25 +15,23 @@ perl Lex2XML.pl ALLTHAK_1993.DAT TEMP.tuk.data.xml tuk.xml.log tuk
 #perl Lex2XML.pl MONTUK_1991.DAT TEMP.tuk2.data.xml tuk.xml.log tuk
 
 # apply xslt
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.gha.data.xml > ../TGTM/TGTM.gha.data.xml 2> gha.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.mar.data.xml > ../TGTM/TGTM.mar.data.xml 2> mar.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.pra.data.xml > ../TGTM/TGTM.pra.data.xml 2> pra.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.ris.data.xml > ../TGTM/TGTM.ris.data.xml 2> ris.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.sahu.data.xml > ../TGTM/TGTM.sahu.data.xml 2> sahu.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.syang.data.xml > ../TGTM/TGTM.syang.data.xml 2> syang.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tag.data.xml > ../TGTM/TGTM.tag.data.xml 2> tag.xslt.log
-python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk.data.xml > ../TGTM/TGTM.tuk.data.xml 2> tuk.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.gha.data.xml > ../TGTM/TGTM.gha.data.xml 2> gha.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.mar.data.xml > ../TGTM/TGTM.mar.data.xml 2> mar.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.pra.data.xml > ../TGTM/TGTM.pra.data.xml 2> pra.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.ris.data.xml > ../TGTM/TGTM.ris.data.xml 2> ris.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.sahu.data.xml > ../TGTM/TGTM.sahu.data.xml 2> sahu.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.syang.data.xml > ../TGTM/TGTM.syang.data.xml 2> syang.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tag.data.xml > ../TGTM/TGTM.tag.data.xml 2> tag.xslt.log
+python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk.data.xml > ../TGTM/TGTM.tuk.data.xml 2> tuk.xslt.log
 
-#python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tag2.data.xml > ../TGTM/TGTM.tag2.data.xml 2> tag2.xslt.log
-#python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk2.data.xml > ../TGTM/TGTM.tuk2.data.xml 2> tuk2.xslt.log
+#python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tag2.data.xml > ../TGTM/TGTM.tag2.data.xml 2> tag2.xslt.log
+#python3 ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk2.data.xml > ../TGTM/TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
 # other minor fixups
-cd ..
-cd TGTM
-perl -i -pe 's/\-<.hw>/<\/hw>/;' TGTM.*.data.xml
-perl -i -pe 's#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;' TGTM.*.data.xml
-perl -i -pe 's#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;' TGTM.*.data.xml
-perl -i -p addngl.pl TGTM.*.data.xml
+perl -i -pe 's/\-<.hw>/<\/hw>/;' ../TGTM/TGTM.*.data.xml
+perl -i -pe 's#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;' ../TGTM/TGTM.*.data.xml
+perl -i -pe 's#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;' ../TGTM/TGTM.*.data.xml
+perl -i -p addngl.pl ../TGTM/TGTM.*.data.xml
 
 #exit
 
