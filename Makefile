@@ -10,7 +10,7 @@ test:
 	cd src ; bash ./testPROJECT.sh DIS
 	cd src ; bash ./testPROJECT.sh POLYNESIAN
 	cd src ; bash ./testPROJECT.sh LOLOISH
-	cd src ; bash ./testPROJECT.sh TGTM
+	#cd src ; bash ./testPROJECT.sh TGTM
 	cd src ; bash ./testPROJECT.sh ROMANCE
 	#cd src ; bash ./testPROJECT.sh VANUATU
 
