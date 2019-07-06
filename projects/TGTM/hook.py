@@ -48,7 +48,7 @@ def generate_xml_data():
             for command in commands:
                 if command[0] == '#': continue
                 if 'perl' in command or 'python' in command:
-                    print(command.strip())
+                    print(command.strip().replace('/','\\'))
                     exit_code = os.system(command.strip().replace('/','\\'))
                     if exit_code != 0:
                         sys.exit(exit_code)
