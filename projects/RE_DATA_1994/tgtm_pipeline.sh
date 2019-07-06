@@ -28,10 +28,12 @@ python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk.data.xml > ../TGTM
 #python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.tuk2.data.xml > ../TGTM/TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
 # other minor fixups
-perl -i -pe 's/\-<.hw>/<\/hw>/;' ../TGTM/TGTM.*.data.xml
-perl -i -pe 's#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;' ../TGTM/TGTM.*.data.xml
-perl -i -pe 's#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;' ../TGTM/TGTM.*.data.xml
-perl -i -p addngl.pl ../TGTM/TGTM.*.data.xml
+cd ..
+cd TGTM
+perl -i -pe 's/\-<.hw>/<\/hw>/;' TGTM.*.data.xml
+perl -i -pe 's#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;' TGTM.*.data.xml
+perl -i -pe 's#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;' TGTM.*.data.xml
+perl -i -p addngl.pl TGTM.*.data.xml
 
 #exit
 
