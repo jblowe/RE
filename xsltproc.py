@@ -10,4 +10,4 @@ def xml2html(xsl_filename, xml_filename):
     return newdom
 
 
-sys.stdout.write(ET.tostring(xml2html(sys.argv[1], sys.argv[2]), encoding="unicode", pretty_print=True))
+sys.stdout.write(ET.tostring(xml2html(sys.argv[1], sys.argv[2]), pretty_print=True))
