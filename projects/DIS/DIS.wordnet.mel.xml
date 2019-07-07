@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<semantics>
+   <totals>
+      <found value="10"/>
+      <notfound value="4"/>
+      <total value="14"/>
+      <rawglosses value="14"/>
+      <lemmata value="193"/>
+   </totals>
+   <mel id="wn1">
+      <gl>adulterate</gl>
+      <gl>burden</gl>
+      <gl>cargo</gl>
+      <gl>charge</gl>
+      <gl>consignment</gl>
+      <gl>debase</gl>
+      <gl>dilute</gl>
+      <gl>encumbrance</gl>
+      <gl>freight</gl>
+      <gl>incumbrance</gl>
+      <gl>lade</gl>
+      <gl>laden</gl>
+      <gl>lading</gl>
+      <gl pivot="samelg">load</gl>
+      <gl>load up</gl>
+      <gl>loading</gl>
+      <gl>lode</gl>
+      <gl>onus</gl>
+      <gl>payload</gl>
+      <gl>shipment</gl>
+      <gl>stretch</gl>
+      <gl>warhead</gl>
+   </mel>
+   <mel id="wn2">
+      <gl pivot="samelg">beer</gl>
+   </mel>
+   <mel id="wn3">
+      <gl pivot="samelg">food</gl>
+      <gl>food for thought</gl>
+      <gl>intellectual nourishment</gl>
+      <gl>nutrient</gl>
+      <gl>solid food</gl>
+   </mel>
+   <mel id="wn4">
+      <gl>flick</gl>
+      <gl>flip</gl>
+      <gl>foliage</gl>
+      <gl>folio</gl>
+      <gl pivot="samelg">leaf</gl>
+      <gl>leafage</gl>
+      <gl>riff</gl>
+      <gl>riffle</gl>
+      <gl>thumb</gl>
+   </mel>
+   <mel id="wn5">
+      <gl>accusation</gl>
+      <gl>accuse</gl>
+      <gl>agitate</gl>
+      <gl>appoint</gl>
+      <gl>armorial bearing</gl>
+      <gl>bang</gl>
+      <gl>bear down</gl>
+      <gl>bearing</gl>
+      <gl>bill</gl>
+      <gl>billing</gl>
+      <gl>blame</gl>
+      <gl>boot</gl>
+      <gl>buck</gl>
+      <gl>burden</gl>
+      <gl>burster</gl>
+      <gl>bursting charge</gl>
+      <gl>care</gl>
+      <gl>cathexis</gl>
+      <gl pivot="samelg">charge</gl>
+      <gl>charge up</gl>
+      <gl>commission</gl>
+      <gl>commit</gl>
+      <gl>commove</gl>
+      <gl>complaint</gl>
+      <gl>consign</gl>
+      <gl>direction</gl>
+      <gl>electric charge</gl>
+      <gl>excite</gl>
+      <gl>explosive charge</gl>
+      <gl>file</gl>
+      <gl>flush</gl>
+      <gl>guardianship</gl>
+      <gl>heraldic bearing</gl>
+      <gl>institutionalise</gl>
+      <gl>institutionalize</gl>
+      <gl>kick</gl>
+      <gl>level</gl>
+      <gl>load</gl>
+      <gl>lodge</gl>
+      <gl>mission</gl>
+      <gl>point</gl>
+      <gl>rouse</gl>
+      <gl>rush</gl>
+      <gl>saddle</gl>
+      <gl>send</gl>
+      <gl>shoot</gl>
+      <gl>shoot down</gl>
+      <gl>tear</gl>
+      <gl>thrill</gl>
+      <gl>turn on</gl>
+      <gl>tutelage</gl>
+   </mel>
+   <mel id="wn6">
+      <gl>aim</gl>
+      <gl>berth</gl>
+      <gl>billet</gl>
+      <gl>blank space</gl>
+      <gl>come in</gl>
+      <gl>come out</gl>
+      <gl>commit</gl>
+      <gl>direct</gl>
+      <gl>grade</gl>
+      <gl>home</gl>
+      <gl>identify</gl>
+      <gl>invest</gl>
+      <gl>lay</gl>
+      <gl>lieu</gl>
+      <gl>localise</gl>
+      <gl>localize</gl>
+      <gl>locate</gl>
+      <gl>office</gl>
+      <gl>order</gl>
+      <gl>piazza</gl>
+      <gl pivot="samelg">place</gl>
+      <gl>plaza</gl>
+      <gl>point</gl>
+      <gl>pose</gl>
+      <gl>position</gl>
+      <gl>post</gl>
+      <gl>property</gl>
+      <gl>put</gl>
+      <gl>range</gl>
+      <gl>rank</gl>
+      <gl>rate</gl>
+      <gl>seat</gl>
+      <gl>send</gl>
+      <gl>set</gl>
+      <gl>shoes</gl>
+      <gl>site</gl>
+      <gl>situation</gl>
+      <gl>space</gl>
+      <gl>spot</gl>
+      <gl>station</gl>
+      <gl>stead</gl>
+      <gl>target</gl>
+      <gl>topographic point</gl>
+   </mel>
+   <mel id="wn7">
+      <gl>Baron Snow of Leicester</gl>
+      <gl>C</gl>
+      <gl>C. P. Snow</gl>
+      <gl>Charles Percy Snow</gl>
+      <gl>Snow</gl>
+      <gl>bamboozle</gl>
+      <gl>blow</gl>
+      <gl>coke</gl>
+      <gl>hoodwink</gl>
+      <gl>lead by the nose</gl>
+      <gl>nose candy</gl>
+      <gl>play false</gl>
+      <gl>pull the wool over someone's eyes</gl>
+      <gl pivot="samelg">snow</gl>
+      <gl>snowfall</gl>
+   </mel>
+   <mel id="wn8">
+      <gl>affection</gl>
+      <gl>affectionateness</gl>
+      <gl>bosom</gl>
+      <gl>center</gl>
+      <gl>centre</gl>
+      <gl>core</gl>
+      <gl>essence</gl>
+      <gl>eye</gl>
+      <gl>fondness</gl>
+      <gl>gist</gl>
+      <gl pivot="samelg">heart</gl>
+      <gl>heart and soul</gl>
+      <gl>inwardness</gl>
+      <gl>kernel</gl>
+      <gl>marrow</gl>
+      <gl>meat</gl>
+      <gl>mettle</gl>
+      <gl>middle</gl>
+      <gl>nerve</gl>
+      <gl>nitty-gritty</gl>
+      <gl>nub</gl>
+      <gl>philia</gl>
+      <gl>pith</gl>
+      <gl>pump</gl>
+      <gl>spirit</gl>
+      <gl>spunk</gl>
+      <gl>substance</gl>
+      <gl>sum</gl>
+      <gl>tenderness</gl>
+      <gl>ticker</gl>
+      <gl>warmheartedness</gl>
+      <gl>warmness</gl>
+   </mel>
+   <mel id="wn9">
+      <gl>caryopsis</gl>
+      <gl>cereal</gl>
+      <gl>food grain</gl>
+      <gl pivot="samelg">grain</gl>
+      <gl>granulate</gl>
+      <gl>ingrain</gl>
+      <gl>metric grain</gl>
+      <gl>texture</gl>
+   </mel>
+   <mel id="wn10">
+      <gl>Elmer Leopold Rice</gl>
+      <gl>Elmer Reizenstein</gl>
+      <gl>Elmer Rice</gl>
+      <gl>Rice</gl>
+      <gl>Sir Tim Rice</gl>
+      <gl>Timothy Miles Bindon Rice</gl>
+      <gl pivot="samelg">rice</gl>
+   </mel>
+   <mel id="wn11">
+      <gl pivot="notfound">beer-mash</gl>
+   </mel>
+   <mel id="wn12">
+      <gl pivot="notfound">beermash</gl>
+   </mel>
+   <mel id="wn13">
+      <gl pivot="notfound">cooked rice</gl>
+   </mel>
+   <mel id="wn14">
+      <gl pivot="notfound">small leaf</gl>
+   </mel>
+</semantics>
