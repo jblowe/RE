@@ -27,6 +27,10 @@ sub ngl {
     return @terms;
 }
 
+s/\-<.hw>/<\/hw>/;
+s#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;
+s#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;
+
 if (m#<gl>(.*?)</gl>#) {
     my $gl = $1;
     my @terms = ngl($gl);
