@@ -39,7 +39,7 @@
           <h4>Reconstructions not in sets</h4>
           <h6>(includes "Isolates")</h6>
               % for isolate in data['isolates']:
-                  <li>{{isolate[0]}}: {{isolate[1]}}</li>
+                  <li>{{isolate[0]}} - {{isolate[1]}}</li>
               % end
           % end
           </div>
