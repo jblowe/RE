@@ -77,7 +77,6 @@ def download(filename):
 @app.post('/interactive/<project_name:re:.*>')
 def upstream(project_name):
     languages = [(i, getattr(request.forms, i)) for i in request.forms]
-    postdict = request
     RE.Debug.debug = True
     language_names, upstream_target, base_dir = utils.upstream('languages', [], project_name, True)
     forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project_name, True)
