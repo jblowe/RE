@@ -1,5 +1,4 @@
 import os, time, sys
-import subprocess
 
 # we need some code from the sibling directory where the rest of the RE code lives
 sys.path.append("../src")
@@ -77,18 +76,18 @@ def file_content(file_path):
         data = reformat(data, 5000)
     return data, project, get_info(file_path)
 
+
 def get_info(path):
     try:
         stat = os.stat(os.path.join(BASE_DIR, 'projects', path))
-        #return time.strftime("%Y-%m-%d %H:%M:%S UTC", stat.st_mtime)
         return time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime(stat.st_mtime))
     except:
         return 'unknown'
 
 
 def project_info():
-    #project_dir = os.path.join(BASE_DIR, 'projects', project)
-    #filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
+    # project_dir = os.path.join(BASE_DIR, 'projects', project)
+    # filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
     return [(p, get_info(p), projects.projects[p]) for p in projects.projects]
 
 
@@ -148,15 +147,16 @@ def limit_lines(filecontent, max_rows):
 def upstream(request, language_forms, project, only_with_mel):
     project_dir = projects.projects[project]
     settings = read.read_settings_file(f'{project_dir}/{project}.default.parameters.xml',
-                                        mel='none',
-                                        recon='default')
+                                       mel='none',
+                                       recon='default')
     if request == 'languages':
         return settings.upstream[settings.upstream_target], settings.upstream_target, project_dir
     elif request == 'upstream':
         attested_lexicons = read.create_lexicon_from_parms(language_forms)
         B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
-        isolates = [(RE.correspondences_as_ids(i[0]),str(list(i[1])[0])) for i in B.statistics.singleton_support]
+        isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]
         return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
     pass
+
 
 VERSION = get_version()
