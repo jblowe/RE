@@ -307,9 +307,9 @@ def make_tokenizer(parameters, accessor, next_map):
             statistics.add_debug_note(f'{len(parses)} reconstructions generated')
             for p in attempts:
                 if p in parses:
-                    statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)} {syllable_structure(p)}')
+                    statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)} - {correspondences_as_ids(p)} {syllable_structure(p)}')
                 else:
-                    statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)}: {correspondences_as_ids(p)} {syllable_structure(p)}')
+                    statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)} - {correspondences_as_ids(p)} {syllable_structure(p)}')
         return parses
     return tokenize
 
