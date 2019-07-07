@@ -28,8 +28,8 @@ do
         #head ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
 
 
-        # third make the parsimonious sets
-        time python3 REcli.py ${PROJECT} -w -r ${mel}-parsimonious --mel hand &
+        # third make the strict sets
+        time python3 REcli.py ${PROJECT} -w -r ${mel}-strict --mel hand &
         #[ $? -ne 0 ] && exit 1;
         #head ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
     fi

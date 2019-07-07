@@ -3,7 +3,7 @@ set -x
 
 git submodule update --init --recursive
 
-PROJECT=$1
+PROJECT=TGTM
 DATE=`date +%Y-%m-%d-%H-%M`
 
 if [ ! -d ../projects/${PROJECT} ]
@@ -31,9 +31,7 @@ fi
 # make default sets, no mel
 time python3 REcli.py ${PROJECT} > ../projects/${PROJECT}/${PROJECT}.default.txt
 
-# for mel in hand wordnet clics none
-# wordnet version is too slow for regular testing use (8 mins) ... run by hand if needed.
-for mel in hand clics none
+for mel in hand clics wordnet wordnet2 none
 do
     if [ -e ../projects/${PROJECT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
