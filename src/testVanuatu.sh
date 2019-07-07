@@ -16,9 +16,9 @@ time python3 REcli.py VANUATU -r hand --mel hand  > ../projects/VANUATU/VANUATU.
 [ $? -ne 0 ] && exit 1;
 cat ../projects/VANUATU/VANUATU.${DATE}.hand.statistics.txt
 
-time python3 REcli.py VANUATU -w -r hand-parsimonious --mel hand  > ../projects/VANUATU/VANUATU.${DATE}.hand-parsimonious.statistics.txt
+time python3 REcli.py VANUATU -w -r hand-strict --mel hand  > ../projects/VANUATU/VANUATU.${DATE}.hand-strict.statistics.txt
 [ $? -ne 0 ] && exit 1;
-cat ../projects/VANUATU/VANUATU.${DATE}.hand-parsimonious.statistics.txt
+cat ../projects/VANUATU/VANUATU.${DATE}.hand-strict.statistics.txt
 
 # coverage
 python3 REcli.py -c -m hand VANUATU > ../projects/VANUATU/VANUATU.mel.coverage.txt

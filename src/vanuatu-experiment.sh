@@ -1,12 +1,12 @@
 set -x
 # start with a clean slate: restore any changed files to last commit 
 ./cleanup.sh
-git checkout -- ../projects/VANUATU/*
+#git checkout -- ../projects/VANUATU/*
 
 ls -l ././projects/VANUATU
 
 # make a version of the code with the revised disyllabic canon
-perl -pe 's/\(CV\)./(C?V)+/' ../projects/VANUATU/hook.py > ../projects/VANUATU/CVCVhook.py
+perl -pe 's/\(CV\)./C?V(C?V)+/' ../projects/VANUATU/hook.py > ../projects/VANUATU/CVCVhook.py
 
 # make a version of the correspondences which has *p,*w > zero
 perl -pe 's/([^\d],)([wp]),/\1\2|∅,/g if /,[wp],,,,/' ../projects/VANUATU/VANUATU.experimental.correspondences.csv > ../projects/VANUATU/VANUATU.pwzeroexperimental.correspondences.csv
@@ -17,10 +17,10 @@ diff ../projects/VANUATU/VANUATU.pwzeroexperimental.correspondences.csv ../proje
 # here are our two different Syllable canons
 grep RE.SyllableCanon ../projects/VANUATU/*hook.py
 
-# run the status quo, using Alex's "*p,*w without zero" version of ToC, without "parsimonious", call it "hand"
+# run the status quo, using Alex's "*p,*w without zero" version of ToC, without "strict", call it "hand"
 time python3 REcli.py VANUATU -r hand --mel hand > /dev/null
 
-# OK run the same thing, with parsimonious, call it "CV"
+# OK run the same thing, with strict, call it "CV"
 time python3 REcli.py VANUATU -w -r CV --mel hand > /dev/null
 
 # use the revised canon, call the run "CVCV"

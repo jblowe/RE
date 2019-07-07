@@ -4,12 +4,12 @@ DATE=`date +%Y-%m-%d-%H-%M`
 
 pwd
 # first make sets
-time python3 REcli.py --run tree -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
-[ $? -ne 0 ] && exit 1;
-cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
+#time python3 REcli.py --run tree -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
+#[ $? -ne 0 ] && exit 1;
+#cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
 
-# second make parsimonious sets
-time python3 REcli.py -w --run tree-parsimonious -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
+# second make strict sets
+time python3 REcli.py -w --run tree-strict -t tree ROMANCE > ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
 [ $? -ne 0 ] && exit 1;
 cat ../projects/ROMANCE/ROMANCE.${DATE}.tree.statistics.txt
 
