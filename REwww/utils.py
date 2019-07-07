@@ -25,7 +25,7 @@ def get_version():
 
 def add_time_and_version():
     return 'code and data version: %s, updated: %s' % (
-        get_version(), time.strftime("%b %d %Y %H:%M:%S", time.localtime()))
+        get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.localtime()))
 
 
 def data_files(project):
