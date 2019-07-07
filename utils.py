@@ -25,7 +25,7 @@ def get_version():
 
 def add_time_and_version():
     return 'code and data version: %s, system last restarted: %s' % (
-        get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.localtime()))
+        get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
 
 def data_files(project):
@@ -80,7 +80,8 @@ def file_content(file_path):
 def get_info(path):
     try:
         stat = os.stat(os.path.join(BASE_DIR, 'projects', path))
-        return str(time.ctime(stat.st_mtime))
+        #return time.strftime("%Y-%m-%d %H:%M:%S UTC", stat.st_mtime)
+        return time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime(stat.st_mtime))
     except:
         return 'unknown'
 
