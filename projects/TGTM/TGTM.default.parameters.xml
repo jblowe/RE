@@ -12,6 +12,7 @@
   <mel name="hand" file="TGTM.hand.mel.xml"/>
   <mel name="both" file="TGTM.both.mel.xml"/>
   <mel name="wordnet" file="TGTM.wordnet.mel.xml"/>
+  <mel name="wordnet2" file="TGTM.wordnet2.mel.xml"/>
   <mel name="wordnet-pairs" file="TGTM.wn-pairs.mel.xml"/>
   <mel name="clics" file="TGTM.clics.mel.xml"/>
   <reconstruction name="default">
