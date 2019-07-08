@@ -17,8 +17,9 @@
    <attested file="olr.data.xml" name="olr"/>
    <attested file="lkn.data.xml" name="lkn"/>
    <attested file="mrl.data.xml" name="mrl"/>
-   <mel file="VANUATU.clics.mel.xml" name="clics"/>
-   <mel file="VANUATU.hand.mel.xml" name="hand"/>
+   <mel name="clics" file="VANUATU.clics.mel.xml"/>
+   <mel name="hand" file="VANUATU.hand.mel.xml"/>
+   <mel name="wordnet" file="VANUATU.wordnet.mel.xml"/>
    <reconstruction name="default">
       <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
       <action name="upstream" target="pvn"/>
