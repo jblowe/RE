@@ -7,6 +7,7 @@ __pycache__/
 *.analysis.txt
 
 *.compare.txt
+*.default.txt
 *.compare.xml
 *.coverage.txt
 TGTM.*.data.xml
@@ -15,7 +16,8 @@ TEMP.*.data.xml
 DIS.*.data.xml
 POLYNESIAN.*.data.xml
 VANUATU.*.data.xml
-LOLOISH/*.data.xml
+*/LOLOISH/*.data.xml
+*/LOLOISH/*.correspondences.xml
 *.evaluation.statistics.xml
 *.failures.sets.xml
 *.isolates.sets.xml
