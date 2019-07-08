@@ -22,6 +22,7 @@
 
   <csvdata name="data" file="SYI.TAB.u8.csv"/>
   <mel name="hand" file="SYI.hand.mel.xml"/>
+  <mel name="wordnet" file="SYI.wordnet.mel.xml"/>
 
   <reconstruction name="default">
     <proto_language name="proto" correspondences="SYI.correspondences.xml"/>
