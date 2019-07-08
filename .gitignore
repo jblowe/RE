@@ -6,6 +6,24 @@ __pycache__/
 *.log
 *.analysis.txt
 
+*.compare.txt
+*.compare.xml
+*.coverage.txt
+TGTM.*.data.xml
+TEMP.*.data.xml
+POLYNESIAN.*.data.xml
+VANUATU.*.data.xml
+LOLOISH.*.data.xml
+*.evaluation.statistics.xml
+*.failures.sets.xml
+*.isolates.sets.xml
+*.keys.csv
+*.mel.statistics.xml
+*.sets.txt
+*.sets.xml
+*.statistics.txt
+*.upstream.statistics.xml
+
 #
 !Build/
 .last_cover_stats
