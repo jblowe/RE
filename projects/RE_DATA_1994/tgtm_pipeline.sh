@@ -15,7 +15,18 @@ perl Lex2XML.pl ALLTHAK_1993.DAT TEMP.tuk.data.xml tuk.xml.log tuk
 #perl Lex2XML.pl MONTUK_1991.DAT TEMP.tuk2.data.xml tuk.xml.log tuk
 
 # other minor fixups
-perl -i -p addngl.pl TEMP.*.data.xml
+#perl -i -p addngl.pl TEMP.*.data.xml
+perl -i -p addngl.pl TEMP.gha.data.xml
+perl -i -p addngl.pl TEMP.mar.data.xml
+perl -i -p addngl.pl TEMP.pra.data.xml
+perl -i -p addngl.pl TEMP.ris.data.xml
+perl -i -p addngl.pl TEMP.sahu.data.xml
+perl -i -p addngl.pl TEMP.syang.data.xml
+perl -i -p addngl.pl TEMP.tag.data.xml
+perl -i -p addngl.pl TEMP.tuk.data.xml
+
+#perl -i -p addngl.pl TEMP.tag2.data.xml
+#perl -i -p addngl.pl TEMP.tuk2.data.xml
 
 # apply xslt
 python ../../src/xsltproc.py ../../styles/fmtLex.xsl TEMP.gha.data.xml > ../TGTM/TGTM.gha.data.xml 2> gha.xslt.log
