@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<semantics>
+   <mel id="clics1">
+      <gl>face</gl>
+      <gl>forehead</gl>
+      <gl>eye</gl>
+   </mel>
+   <mel id="clics2">
+      <gl>heart</gl>
+      <gl>chest</gl>
+   </mel>
+   <mel id="clics3">
+      <gl>waist</gl>
+      <gl>back</gl>
+   </mel>
+   <mel id="clics4">
+      <gl>belly</gl>
+      <gl>intestines</gl>
+   </mel>
+</semantics>
