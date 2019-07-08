@@ -30,9 +30,9 @@ Now calculate the colexification networks: (takes a while)
 
 (You may change the parameters to get different data, but you must also change the name of the file in the script.)
 
-Finally, to produce the mel, do:
+Finally, to produce the mels for all projects, do:
 
-`python3 ../all_glosses.py TGTM | python3 clics.py X > output.mel`
+`python3 regenerate-clics.py X`
 
 # Both
 
