@@ -9,7 +9,7 @@ from xml.dom import minidom
 root = ET.Element('semantics')
 runstats = ET.SubElement(root, 'totals')
 glosses = set()
-final_glosses = set()
+final_glosses = {}
 count_found = 0
 count_not_found = 0
 raw_glosses = 0
@@ -20,6 +20,7 @@ for line in sys.stdin:
     raw_glosses += 1
     line = line.strip()
     line = line.split('/')
+    if line == ['']: break
     for l in line:
         [glosses.add(g.strip()) for g in l.split(', ')]
 
@@ -41,13 +42,16 @@ for gloss in glosses:
     gloss = re.sub(r' +', ' ', gloss)
     gloss = gloss.strip()
     gloss = gloss.replace(' ', '_')
-    final_glosses.add(gloss)
+    final_glosses[gloss] = True
 
 for gloss in final_glosses:
+    if not final_glosses[gloss]: continue
+    final_glosses[gloss] = False
     # print('{0}\t{1}'.format(line, wn.synsets(gloss)))
     lemmas = [l.lemmas() for l in wn.synsets(gloss)]
     if len(lemmas) == 0:
         lemmas = [l.lemmas() for l in wn.synsets(gloss, lang='fra')]
+    # mark this gloss as 'checked' (whether found or not)
     gloss = gloss.replace('_', ' ')
     if lemmas == []:
         # not_found.write('{} \n'.format(orig))
@@ -55,9 +59,14 @@ for gloss in final_glosses:
         not_found.append(gloss)
         continue
     synonyms = set()
+    synonyms.add(gloss)
     for lemma in lemmas:
         for l in lemma:
-            synonyms.add(l.name().replace('_', ' '))
+            if l.name() in final_glosses:
+                if final_glosses[l.name()]:
+                    # if we add a gloss to the mel, make a mark so we don't add it again.
+                    final_glosses[l.name()] = False
+                    synonyms.add(l.name().replace('_', ' '))
     count_found += 1
     mel = ET.SubElement(root, 'mel', id="wn" + str(count_found))
     pivot_set = False
