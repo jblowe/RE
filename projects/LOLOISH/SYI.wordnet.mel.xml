@@ -1,5258 +1,897 @@
 <?xml version="1.0" ?>
 <semantics>
    <totals>
-      <found value="278"/>
+      <found value="276"/>
       <notfound value="19"/>
       <total value="297"/>
       <rawglosses value="295"/>
-      <lemmata value="4384"/>
+      <lemmata value="278"/>
    </totals>
    <mel id="wn1">
-      <gl>area</gl>
-      <gl>arena</gl>
-      <gl>country</gl>
-      <gl>domain</gl>
-      <gl>expanse</gl>
-      <gl>field</gl>
-      <gl>orbit</gl>
-      <gl>region</gl>
-      <gl>sphere</gl>
-      <gl>surface area</gl>
-      <gl pivot="otherlg">Area</gl>
+      <gl pivot="samelg">Lend</gl>
    </mel>
    <mel id="wn2">
-      <gl>bait</gl>
-      <gl>cod</gl>
-      <gl>depend on</gl>
-      <gl>depend upon</gl>
-      <gl>devolve on</gl>
-      <gl>drive</gl>
-      <gl>hinge on</gl>
-      <gl>hinge upon</gl>
-      <gl>mount</gl>
-      <gl>rag</gl>
-      <gl>rally</gl>
-      <gl>razz</gl>
-      <gl>ride</gl>
-      <gl>sit</gl>
-      <gl>tantalise</gl>
-      <gl>tantalize</gl>
-      <gl>taunt</gl>
-      <gl>tease</gl>
-      <gl>turn on</gl>
-      <gl>twit</gl>
-      <gl pivot="otherlg">Ride</gl>
+      <gl pivot="samelg">Cabbage</gl>
+      <gl>scratch</gl>
    </mel>
    <mel id="wn3">
-      <gl>central</gl>
-      <gl>change</gl>
-      <gl>commutation</gl>
-      <gl>commute</gl>
-      <gl>convert</gl>
-      <gl>exchange</gl>
-      <gl>interchange</gl>
-      <gl>rally</gl>
-      <gl>replace</gl>
-      <gl>substitute</gl>
-      <gl>substitution</gl>
-      <gl>switch</gl>
-      <gl>switch over</gl>
-      <gl>telephone exchange</gl>
-      <gl pivot="otherlg">Exchange</gl>
+      <gl pivot="samelg">Pheasant</gl>
    </mel>
    <mel id="wn4">
-      <gl>become</gl>
-      <gl>get</gl>
-      <gl>go</gl>
-      <gl>suit</gl>
-      <gl>turn</gl>
-      <gl pivot="otherlg">Become</gl>
+      <gl pivot="samelg">Weave</gl>
    </mel>
    <mel id="wn5">
-      <gl>bury</gl>
-      <gl>cesspit</gl>
-      <gl>cesspool</gl>
-      <gl>dip</gl>
-      <gl>drop</gl>
-      <gl>drop down</gl>
-      <gl>fall off</gl>
-      <gl>go down</gl>
-      <gl>go under</gl>
-      <gl>lapse</gl>
-      <gl>pass</gl>
-      <gl>settle</gl>
-      <gl>sink</gl>
-      <gl>sinkhole</gl>
-      <gl>slide down</gl>
-      <gl>slump</gl>
-      <gl>subside</gl>
-      <gl>sump</gl>
-      <gl>swallow hole</gl>
-      <gl pivot="otherlg">Sink</gl>
+      <gl pivot="samelg">Goiter</gl>
    </mel>
    <mel id="wn6">
-      <gl>auricle</gl>
-      <gl>capitulum</gl>
-      <gl>ear</gl>
-      <gl>pinna</gl>
-      <gl>spike</gl>
-      <gl pivot="otherlg">Ear</gl>
+      <gl pivot="samelg">Horn</gl>
    </mel>
    <mel id="wn7">
-      <gl>become flat</gl>
-      <gl>break</gl>
-      <gl>break down</gl>
-      <gl>buy the farm</gl>
-      <gl>cash in one's chips</gl>
-      <gl>choke</gl>
-      <gl>conk</gl>
-      <gl>conk out</gl>
-      <gl>croak</gl>
-      <gl>decease</gl>
-      <gl>dice</gl>
-      <gl>die</gl>
-      <gl>die out</gl>
-      <gl>drop dead</gl>
-      <gl>exit</gl>
-      <gl>expire</gl>
-      <gl>fail</gl>
-      <gl>give out</gl>
-      <gl>give way</gl>
-      <gl>give-up the ghost</gl>
-      <gl>go</gl>
-      <gl>go bad</gl>
-      <gl>kick the bucket</gl>
-      <gl>pall</gl>
-      <gl>pass</gl>
-      <gl>pass away</gl>
-      <gl>perish</gl>
-      <gl>pop off</gl>
-      <gl>snuff it</gl>
-      <gl pivot="otherlg">Die</gl>
+      <gl pivot="samelg">Arrive</gl>
    </mel>
    <mel id="wn8">
-      <gl>advert</gl>
-      <gl>appoint</gl>
-      <gl>bring up</gl>
-      <gl>call</gl>
-      <gl>cite</gl>
-      <gl>constitute</gl>
-      <gl>describe</gl>
-      <gl>diagnose</gl>
-      <gl>discover</gl>
-      <gl>distinguish</gl>
-      <gl>epithet</gl>
-      <gl>figure</gl>
-      <gl>gens</gl>
-      <gl>identify</gl>
-      <gl>key</gl>
-      <gl>key out</gl>
-      <gl>list</gl>
-      <gl>make</gl>
-      <gl>mention</gl>
-      <gl>name</gl>
-      <gl>nominate</gl>
-      <gl>public figure</gl>
-      <gl>refer</gl>
-      <gl pivot="otherlg">Name</gl>
+      <gl pivot="samelg">Fat</gl>
    </mel>
    <mel id="wn9">
-      <gl>top</gl>
-      <gl>top side</gl>
-      <gl>upper side</gl>
-      <gl>upside</gl>
-      <gl pivot="otherlg">Upside</gl>
+      <gl pivot="samelg">Release</gl>
    </mel>
    <mel id="wn10">
-      <gl>abstract</gl>
-      <gl>apprehension</gl>
-      <gl>arrest</gl>
-      <gl>cabbage</gl>
-      <gl>catch</gl>
-      <gl>collar</gl>
-      <gl>crimp</gl>
-      <gl>emergency</gl>
-      <gl>exigency</gl>
-      <gl>filch</gl>
-      <gl>hint</gl>
-      <gl>hook</gl>
-      <gl>jot</gl>
-      <gl>lift</gl>
-      <gl>mite</gl>
-      <gl>nip</gl>
-      <gl>nobble</gl>
-      <gl>pilfer</gl>
-      <gl>pinch</gl>
-      <gl>purloin</gl>
-      <gl>snarf</gl>
-      <gl>sneak</gl>
-      <gl>soupcon</gl>
-      <gl>speck</gl>
-      <gl>squeeze</gl>
-      <gl>swipe</gl>
-      <gl>taking into custody</gl>
-      <gl>tinge</gl>
-      <gl>top</gl>
-      <gl>touch</gl>
-      <gl>tweak</gl>
-      <gl>tweet</gl>
-      <gl>twinge</gl>
-      <gl>twitch</gl>
-      <gl>vellicate</gl>
-      <gl pivot="otherlg">Pinch</gl>
+      <gl pivot="samelg">Bone</gl>
    </mel>
    <mel id="wn11">
-      <gl>1</gl>
-      <gl>I</gl>
-      <gl>ace</gl>
-      <gl>ane</gl>
-      <gl>i</gl>
-      <gl>matchless</gl>
-      <gl>nonpareil</gl>
-      <gl>one</gl>
-      <gl>one and only</gl>
-      <gl>peerless</gl>
-      <gl>single</gl>
-      <gl>unitary</gl>
-      <gl>unity</gl>
-      <gl>unmatchable</gl>
-      <gl>unmatched</gl>
-      <gl>unrivaled</gl>
-      <gl>unrivalled</gl>
-      <gl pivot="otherlg">One</gl>
+      <gl pivot="samelg">Hair</gl>
    </mel>
    <mel id="wn12">
-      <gl>Mexican valium</gl>
-      <gl>R-2</gl>
-      <gl>circle</gl>
-      <gl>forget me drug</gl>
-      <gl>lasso</gl>
-      <gl>leash</gl>
-      <gl>roach</gl>
-      <gl>roofy</gl>
-      <gl>rope</gl>
-      <gl>rophy</gl>
-      <gl pivot="otherlg">Rope</gl>
+      <gl pivot="samelg">A little</gl>
    </mel>
    <mel id="wn13">
-      <gl>anatomy</gl>
-      <gl>bod</gl>
-      <gl>body-build</gl>
-      <gl>build</gl>
-      <gl>build up</gl>
-      <gl>chassis</gl>
-      <gl>construct</gl>
-      <gl>establish</gl>
-      <gl>figure</gl>
-      <gl>flesh</gl>
-      <gl>form</gl>
-      <gl>frame</gl>
-      <gl>habitus</gl>
-      <gl>human body</gl>
-      <gl>make</gl>
-      <gl>material body</gl>
-      <gl>physical body</gl>
-      <gl>physique</gl>
-      <gl>progress</gl>
-      <gl>ramp up</gl>
-      <gl>shape</gl>
-      <gl>soma</gl>
-      <gl>work up</gl>
-      <gl pivot="otherlg">Build</gl>
+      <gl pivot="samelg">Numb</gl>
    </mel>
    <mel id="wn14">
-      <gl>able</gl>
-      <gl>able-bodied</gl>
-      <gl>capable</gl>
-      <gl pivot="otherlg">Able</gl>
+      <gl pivot="samelg">Name</gl>
    </mel>
    <mel id="wn15">
-      <gl>2</gl>
-      <gl>II</gl>
-      <gl>deuce</gl>
-      <gl>ii</gl>
-      <gl>two</gl>
-      <gl pivot="otherlg">Two</gl>
+      <gl pivot="samelg">Arrow</gl>
    </mel>
    <mel id="wn16">
-      <gl>bead</gl>
-      <gl>cast</gl>
-      <gl>cast off</gl>
-      <gl>cliff</gl>
-      <gl>cut down</gl>
-      <gl>dangle</gl>
-      <gl>degenerate</gl>
-      <gl>deteriorate</gl>
-      <gl>devolve</gl>
-      <gl>dip</gl>
-      <gl>discharge</gl>
-      <gl>dismiss</gl>
-      <gl>drib</gl>
-      <gl>dribble</gl>
-      <gl>driblet</gl>
-      <gl>drip</gl>
-      <gl>drop</gl>
-      <gl>drop cloth</gl>
-      <gl>drop curtain</gl>
-      <gl>drop down</gl>
-      <gl>drop off</gl>
-      <gl>drop-off</gl>
-      <gl>expend</gl>
-      <gl>fall</gl>
-      <gl>fell</gl>
-      <gl>flatten</gl>
-      <gl>free fall</gl>
-      <gl>knock off</gl>
-      <gl>leave out</gl>
-      <gl>miss</gl>
-      <gl>neglect</gl>
-      <gl>omit</gl>
-      <gl>overleap</gl>
-      <gl>overlook</gl>
-      <gl>pearl</gl>
-      <gl>pretermit</gl>
-      <gl>put down</gl>
-      <gl>send away</gl>
-      <gl>send packing</gl>
-      <gl>set down</gl>
-      <gl>shake off</gl>
-      <gl>shed</gl>
-      <gl>sink</gl>
-      <gl>spend</gl>
-      <gl>strike down</gl>
-      <gl>swing</gl>
-      <gl>throw</gl>
-      <gl>throw away</gl>
-      <gl>throw off</gl>
-      <gl>unload</gl>
-      <gl pivot="otherlg">Drop</gl>
+      <gl pivot="samelg">Hawk</gl>
    </mel>
    <mel id="wn17">
-      <gl>birl</gl>
-      <gl>gyrate</gl>
-      <gl>reel</gl>
-      <gl>spin</gl>
-      <gl>spin around</gl>
-      <gl>spin out</gl>
-      <gl>tailspin</gl>
-      <gl>twirl</gl>
-      <gl>twist</gl>
-      <gl>twisting</gl>
-      <gl>whirl</gl>
-      <gl pivot="otherlg">Spin</gl>
+      <gl pivot="samelg">Open</gl>
    </mel>
    <mel id="wn18">
-      <gl>grandson</gl>
-      <gl pivot="otherlg">Grandson</gl>
+      <gl pivot="samelg">Not</gl>
    </mel>
    <mel id="wn19">
-      <gl>bargain</gl>
-      <gl>buy</gl>
-      <gl>slip</gl>
-      <gl>steal</gl>
-      <gl pivot="otherlg">Steal</gl>
+      <gl pivot="samelg">Look like</gl>
    </mel>
    <mel id="wn20">
-      <gl>ash</gl>
-      <gl>ash tree</gl>
-      <gl pivot="otherlg">Ashes</gl>
+      <gl pivot="samelg">Want</gl>
    </mel>
    <mel id="wn21">
-      <gl>arrive</gl>
-      <gl>come</gl>
-      <gl>get</gl>
-      <gl>get in</gl>
-      <gl>go far</gl>
-      <gl>make it</gl>
-      <gl pivot="otherlg">Arrive</gl>
+      <gl pivot="samelg">Year</gl>
    </mel>
    <mel id="wn22">
-      <gl>consume</gl>
-      <gl>corrode</gl>
-      <gl>deplete</gl>
-      <gl>eat</gl>
-      <gl>eat on</gl>
-      <gl>eat up</gl>
-      <gl>exhaust</gl>
-      <gl>feed</gl>
-      <gl>run through</gl>
-      <gl>rust</gl>
-      <gl>use up</gl>
-      <gl>wipe out</gl>
-      <gl pivot="otherlg">Eat</gl>
+      <gl pivot="samelg">Close</gl>
    </mel>
    <mel id="wn23">
-      <gl>owner</gl>
-      <gl>possessor</gl>
-      <gl>proprietor</gl>
-      <gl pivot="otherlg">Owner</gl>
+      <gl pivot="samelg">Spin</gl>
    </mel>
    <mel id="wn24">
-      <gl>belittled</gl>
-      <gl>diminished</gl>
-      <gl>humble</gl>
-      <gl>little</gl>
-      <gl>low</gl>
-      <gl>lowly</gl>
-      <gl>minor</gl>
-      <gl>minuscule</gl>
-      <gl>modest</gl>
-      <gl>pocket-size</gl>
-      <gl>pocket-sized</gl>
-      <gl>small</gl>
-      <gl>small-scale</gl>
-      <gl pivot="otherlg">Small</gl>
+      <gl pivot="samelg">Fish</gl>
    </mel>
    <mel id="wn25">
-      <gl>river</gl>
-      <gl pivot="otherlg">River</gl>
+      <gl pivot="samelg">Brass</gl>
    </mel>
    <mel id="wn26">
-      <gl>braid</gl>
-      <gl>braiding</gl>
-      <gl>gold braid</gl>
-      <gl>lace</gl>
-      <gl>plait</gl>
-      <gl>pleach</gl>
-      <gl>tress</gl>
-      <gl>twist</gl>
-      <gl pivot="otherlg">Braid</gl>
+      <gl pivot="samelg">Sick</gl>
    </mel>
    <mel id="wn27">
-      <gl pivot="samelg">Old</gl>
-      <gl>erstwhile</gl>
-      <gl>former</gl>
-      <gl>honest-to-god</gl>
-      <gl>honest-to-goodness</gl>
-      <gl>old</gl>
-      <gl>older</gl>
-      <gl>one-time</gl>
-      <gl>onetime</gl>
-      <gl>previous</gl>
-      <gl>quondam</gl>
-      <gl>sometime</gl>
-      <gl>sure-enough</gl>
+      <gl pivot="samelg">Head</gl>
    </mel>
    <mel id="wn28">
-      <gl>after part</gl>
-      <gl>arse</gl>
-      <gl>ass</gl>
-      <gl>backside</gl>
-      <gl>behind</gl>
-      <gl>bob</gl>
-      <gl>bottom</gl>
-      <gl>bum</gl>
-      <gl>buns</gl>
-      <gl>butt</gl>
-      <gl>buttocks</gl>
-      <gl>can</gl>
-      <gl>chase</gl>
-      <gl>chase after</gl>
-      <gl>derriere</gl>
-      <gl>dock</gl>
-      <gl>dog</gl>
-      <gl>empennage</gl>
-      <gl>fag end</gl>
-      <gl>fanny</gl>
-      <gl>fundament</gl>
-      <gl>give chase</gl>
-      <gl>go after</gl>
-      <gl>hind end</gl>
-      <gl>hindquarters</gl>
-      <gl>keister</gl>
-      <gl>nates</gl>
-      <gl>poop</gl>
-      <gl>posterior</gl>
-      <gl>prat</gl>
-      <gl>quarter</gl>
-      <gl>rear</gl>
-      <gl>rear end</gl>
-      <gl>rump</gl>
-      <gl>seat</gl>
-      <gl>shadow</gl>
-      <gl>shadower</gl>
-      <gl>stern</gl>
-      <gl>tag</gl>
-      <gl>tail</gl>
-      <gl>tail assembly</gl>
-      <gl>tail end</gl>
-      <gl>tooshie</gl>
-      <gl>track</gl>
-      <gl>trail</gl>
-      <gl>tush</gl>
-      <gl pivot="otherlg">Tail</gl>
+      <gl pivot="samelg">Free</gl>
    </mel>
    <mel id="wn29">
-      <gl>H2O</gl>
-      <gl>body of water</gl>
-      <gl>irrigate</gl>
-      <gl>pee</gl>
-      <gl>piddle</gl>
-      <gl>piss</gl>
-      <gl>urine</gl>
-      <gl>water</gl>
-      <gl>water supply</gl>
-      <gl>water system</gl>
-      <gl>weewee</gl>
-      <gl pivot="otherlg">Water</gl>
+      <gl pivot="samelg">Eye</gl>
    </mel>
    <mel id="wn30">
-      <gl>audio</gl>
-      <gl>auditory sensation</gl>
-      <gl>effectual</gl>
-      <gl>fathom</gl>
-      <gl>go</gl>
-      <gl>good</gl>
-      <gl>healthy</gl>
-      <gl>heavy</gl>
-      <gl>intelligent</gl>
-      <gl>legal</gl>
-      <gl>level-headed</gl>
-      <gl>levelheaded</gl>
-      <gl>phone</gl>
-      <gl>profound</gl>
-      <gl>reasoned</gl>
-      <gl>sound</gl>
-      <gl>speech sound</gl>
-      <gl>strait</gl>
-      <gl>vocalise</gl>
-      <gl>vocalize</gl>
-      <gl>voice</gl>
-      <gl>wakeless</gl>
-      <gl>well-grounded</gl>
-      <gl pivot="otherlg">Sound</gl>
+      <gl pivot="samelg">Rain</gl>
    </mel>
    <mel id="wn31">
-      <gl>Modern</gl>
-      <gl pivot="samelg">New</gl>
-      <gl>fresh</gl>
-      <gl>freshly</gl>
-      <gl>new</gl>
-      <gl>newfangled</gl>
-      <gl>newly</gl>
-      <gl>novel</gl>
-      <gl>raw</gl>
-      <gl>unexampled</gl>
-      <gl>young</gl>
+      <gl pivot="samelg">Fathom</gl>
    </mel>
    <mel id="wn32">
-      <gl>cloth</gl>
-      <gl>fabric</gl>
-      <gl>material</gl>
-      <gl>textile</gl>
-      <gl pivot="otherlg">Cloth</gl>
+      <gl pivot="samelg">Child</gl>
    </mel>
    <mel id="wn33">
-      <gl>dry</gl>
-      <gl>dry out</gl>
-      <gl>ironic</gl>
-      <gl>ironical</gl>
-      <gl>juiceless</gl>
-      <gl>prohibitionist</gl>
-      <gl>teetotal</gl>
-      <gl>wry</gl>
-      <gl pivot="otherlg">Dry</gl>
+      <gl pivot="samelg">Face</gl>
    </mel>
    <mel id="wn34">
-      <gl>envenom</gl>
-      <gl>poison</gl>
-      <gl>poisonous substance</gl>
-      <gl>toxicant</gl>
-      <gl pivot="otherlg">Poison</gl>
+      <gl pivot="samelg">Animal</gl>
    </mel>
    <mel id="wn35">
-      <gl>act</gl>
-      <gl>act upon</gl>
-      <gl>body of work</gl>
-      <gl>bring</gl>
-      <gl>crop</gl>
-      <gl>cultivate</gl>
-      <gl>do work</gl>
-      <gl>employment</gl>
-      <gl>exercise</gl>
-      <gl>exploit</gl>
-      <gl>ferment</gl>
-      <gl>figure out</gl>
-      <gl>forge</gl>
-      <gl>form</gl>
-      <gl>function</gl>
-      <gl>go</gl>
-      <gl>influence</gl>
-      <gl>knead</gl>
-      <gl>lick</gl>
-      <gl>make</gl>
-      <gl>make for</gl>
-      <gl>mold</gl>
-      <gl>mould</gl>
-      <gl>oeuvre</gl>
-      <gl>operate</gl>
-      <gl>piece of work</gl>
-      <gl>play</gl>
-      <gl>process</gl>
-      <gl>put to work</gl>
-      <gl>puzzle out</gl>
-      <gl>run</gl>
-      <gl>shape</gl>
-      <gl>solve</gl>
-      <gl>sour</gl>
-      <gl>study</gl>
-      <gl>turn</gl>
-      <gl>work</gl>
-      <gl>work on</gl>
-      <gl>work out</gl>
-      <gl>workplace</gl>
-      <gl>wreak</gl>
-      <gl pivot="otherlg">Work</gl>
+      <gl pivot="samelg">Teach</gl>
    </mel>
    <mel id="wn36">
-      <gl>apprehension</gl>
-      <gl>arrest</gl>
-      <gl>becharm</gl>
-      <gl>beguile</gl>
-      <gl>bewitch</gl>
-      <gl>captivate</gl>
-      <gl>capture</gl>
-      <gl>catch</gl>
-      <gl>catch up with</gl>
-      <gl>charm</gl>
-      <gl>collar</gl>
-      <gl>enamor</gl>
-      <gl>enamour</gl>
-      <gl>enchant</gl>
-      <gl>entrance</gl>
-      <gl>fascinate</gl>
-      <gl>get</gl>
-      <gl>gimmick</gl>
-      <gl>grab</gl>
-      <gl>haul</gl>
-      <gl>hitch</gl>
-      <gl>match</gl>
-      <gl>overhear</gl>
-      <gl>overtake</gl>
-      <gl>pick up</gl>
-      <gl>pinch</gl>
-      <gl>see</gl>
-      <gl>snap</gl>
-      <gl>snatch</gl>
-      <gl>stop</gl>
-      <gl>take hold of</gl>
-      <gl>take in</gl>
-      <gl>taking into custody</gl>
-      <gl>trance</gl>
-      <gl>trip up</gl>
-      <gl>view</gl>
-      <gl>watch</gl>
-      <gl pivot="otherlg">Catch</gl>
+      <gl pivot="samelg">Divide</gl>
    </mel>
    <mel id="wn37">
-      <gl>afraid</gl>
-      <gl pivot="otherlg">Afraid</gl>
+      <gl pivot="samelg">Join</gl>
    </mel>
    <mel id="wn38">
-      <gl>individual</gl>
-      <gl>mortal</gl>
-      <gl>person</gl>
-      <gl>somebody</gl>
-      <gl>someone</gl>
-      <gl>soul</gl>
-      <gl pivot="otherlg">Person</gl>
+      <gl pivot="samelg">Half</gl>
    </mel>
    <mel id="wn39">
-      <gl>Canis familiaris</gl>
-      <gl>andiron</gl>
-      <gl>blackguard</gl>
-      <gl>bounder</gl>
-      <gl>cad</gl>
-      <gl>chase</gl>
-      <gl>chase after</gl>
-      <gl>click</gl>
-      <gl>detent</gl>
-      <gl>dog</gl>
-      <gl>dog-iron</gl>
-      <gl>domestic dog</gl>
-      <gl>firedog</gl>
-      <gl>frank</gl>
-      <gl>frankfurter</gl>
-      <gl>frump</gl>
-      <gl>give chase</gl>
-      <gl>go after</gl>
-      <gl>heel</gl>
-      <gl>hot dog</gl>
-      <gl>hotdog</gl>
-      <gl>hound</gl>
-      <gl>pawl</gl>
-      <gl>tag</gl>
-      <gl>tail</gl>
-      <gl>track</gl>
-      <gl>trail</gl>
-      <gl>weenie</gl>
-      <gl>wiener</gl>
-      <gl>wienerwurst</gl>
-      <gl pivot="otherlg">Dog</gl>
+      <gl pivot="samelg">Be born</gl>
    </mel>
    <mel id="wn40">
-      <gl>belt down</gl>
-      <gl>bolt down</gl>
-      <gl>defeat</gl>
-      <gl>down</gl>
-      <gl>drink down</gl>
-      <gl>kill</gl>
-      <gl>killing</gl>
-      <gl>obliterate</gl>
-      <gl>pop</gl>
-      <gl>pour down</gl>
-      <gl>putting to death</gl>
-      <gl>shoot down</gl>
-      <gl>stamp out</gl>
-      <gl>toss off</gl>
-      <gl>vote down</gl>
-      <gl>vote out</gl>
-      <gl>wipe out</gl>
-      <gl pivot="otherlg">Kill</gl>
+      <gl pivot="samelg">Many</gl>
    </mel>
    <mel id="wn41">
-      <gl>active</gl>
-      <gl>alert</gl>
-      <gl>alive</gl>
-      <gl>animated</gl>
-      <gl>awake</gl>
-      <gl>live</gl>
-      <gl pivot="otherlg">Alive</gl>
+      <gl pivot="samelg">Guest</gl>
    </mel>
    <mel id="wn42">
-      <gl>ask for</gl>
-      <gl>invite</gl>
-      <gl pivot="otherlg">Ask for</gl>
+      <gl pivot="samelg">Tongue</gl>
    </mel>
    <mel id="wn43">
-      <gl>bee</gl>
-      <gl pivot="otherlg">Bee</gl>
+      <gl pivot="samelg">Brain</gl>
    </mel>
    <mel id="wn44">
-      <gl>abrupt</gl>
-      <gl>acuate</gl>
-      <gl>acute</gl>
-      <gl>acutely</gl>
-      <gl>astute</gl>
-      <gl>crisp</gl>
-      <gl>discriminating</gl>
-      <gl>incisive</gl>
-      <gl>keen</gl>
-      <gl>knifelike</gl>
-      <gl>needlelike</gl>
-      <gl>penetrating</gl>
-      <gl>penetrative</gl>
-      <gl>piercing</gl>
-      <gl>precipitous</gl>
-      <gl>sharp</gl>
-      <gl>sharp-worded</gl>
-      <gl>sharply</gl>
-      <gl>shrewd</gl>
-      <gl>shrill</gl>
-      <gl>tart</gl>
-      <gl pivot="otherlg">Sharp</gl>
+      <gl pivot="samelg">Blossom</gl>
    </mel>
    <mel id="wn45">
-      <gl>7</gl>
-      <gl>VII</gl>
-      <gl>heptad</gl>
-      <gl>septenary</gl>
-      <gl>septet</gl>
-      <gl>seven</gl>
-      <gl>seven-spot</gl>
-      <gl>sevener</gl>
-      <gl>vii</gl>
-      <gl pivot="otherlg">Seven</gl>
+      <gl pivot="samelg">Crab</gl>
    </mel>
    <mel id="wn46">
-      <gl>brain</gl>
-      <gl>capitulum</gl>
-      <gl>caput</gl>
-      <gl>channelise</gl>
-      <gl>channelize</gl>
-      <gl>chief</gl>
-      <gl>direct</gl>
-      <gl>drumhead</gl>
-      <gl>forefront</gl>
-      <gl>foreland</gl>
-      <gl>fountainhead</gl>
-      <gl>guide</gl>
-      <gl>head</gl>
-      <gl>head teacher</gl>
-      <gl>head up</gl>
-      <gl>head word</gl>
-      <gl>header</gl>
-      <gl>heading</gl>
-      <gl>headland</gl>
-      <gl>headspring</gl>
-      <gl>headway</gl>
-      <gl>lead</gl>
-      <gl>maneuver</gl>
-      <gl>manoeuver</gl>
-      <gl>manoeuvre</gl>
-      <gl>mind</gl>
-      <gl>nous</gl>
-      <gl>oral sex</gl>
-      <gl>pass</gl>
-      <gl>point</gl>
-      <gl>principal</gl>
-      <gl>promontory</gl>
-      <gl>psyche</gl>
-      <gl>question</gl>
-      <gl>read/write head</gl>
-      <gl>school principal</gl>
-      <gl>steer</gl>
-      <gl>straits</gl>
-      <gl>top dog</gl>
-      <gl pivot="otherlg">Head</gl>
+      <gl pivot="samelg">Get</gl>
    </mel>
    <mel id="wn47">
-      <gl>absolve</gl>
-      <gl>barren</gl>
-      <gl>complimentary</gl>
-      <gl>costless</gl>
-      <gl>destitute</gl>
-      <gl>detached</gl>
-      <gl>devoid</gl>
-      <gl>discharge</gl>
-      <gl>disembarrass</gl>
-      <gl>disengage</gl>
-      <gl>dislodge</gl>
-      <gl>exempt</gl>
-      <gl>free</gl>
-      <gl>free people</gl>
-      <gl>give up</gl>
-      <gl>gratis</gl>
-      <gl>gratuitous</gl>
-      <gl>innocent</gl>
-      <gl>justify</gl>
-      <gl>liberal</gl>
-      <gl>liberate</gl>
-      <gl>loose</gl>
-      <gl>release</gl>
-      <gl>relieve</gl>
-      <gl>relinquish</gl>
-      <gl>resign</gl>
-      <gl>rid</gl>
-      <gl>spare</gl>
-      <gl>unblock</gl>
-      <gl>unfreeze</gl>
-      <gl>unloose</gl>
-      <gl>unloosen</gl>
-      <gl pivot="otherlg">Free</gl>
+      <gl pivot="samelg">Iron</gl>
    </mel>
    <mel id="wn48">
-      <gl>come</gl>
-      <gl>come down</gl>
-      <gl>condescend</gl>
-      <gl>deign</gl>
-      <gl>derive</gl>
-      <gl>descend</gl>
-      <gl>fall</gl>
-      <gl>go down</gl>
-      <gl>settle</gl>
-      <gl pivot="otherlg">Descend</gl>
+      <gl pivot="samelg">Person</gl>
    </mel>
    <mel id="wn49">
-      <gl>boldness</gl>
-      <gl>brass</gl>
-      <gl>buttock</gl>
-      <gl>cheek</gl>
-      <gl>face</gl>
-      <gl>impertinence</gl>
-      <gl>impudence</gl>
-      <gl>nerve</gl>
-      <gl pivot="otherlg">Cheek</gl>
+      <gl pivot="samelg">Trough</gl>
    </mel>
    <mel id="wn50">
-      <gl>add</gl>
-      <gl>bestow</gl>
-      <gl>bring</gl>
-      <gl>contribute</gl>
-      <gl>impart</gl>
-      <gl>lend</gl>
-      <gl>loan</gl>
-      <gl pivot="otherlg">Lend</gl>
+      <gl pivot="samelg">Able</gl>
    </mel>
    <mel id="wn51">
-      <gl>airstream</gl>
-      <gl>backwash</gl>
-      <gl>dampen</gl>
-      <gl>dry wash</gl>
-      <gl>lap</gl>
-      <gl>launder</gl>
-      <gl>laundry</gl>
-      <gl>lavation</gl>
-      <gl>lave</gl>
-      <gl>moisten</gl>
-      <gl>race</gl>
-      <gl>rinse</gl>
-      <gl>slipstream</gl>
-      <gl>wash</gl>
-      <gl>wash away</gl>
-      <gl>wash drawing</gl>
-      <gl>wash off</gl>
-      <gl>wash out</gl>
-      <gl>washables</gl>
-      <gl>washing</gl>
-      <gl>washout</gl>
-      <gl pivot="otherlg">Wash</gl>
+      <gl pivot="samelg">Cough</gl>
    </mel>
    <mel id="wn52">
-      <gl>pheasant</gl>
-      <gl pivot="otherlg">Pheasant</gl>
+      <gl pivot="samelg">Grandson</gl>
    </mel>
    <mel id="wn53">
-      <gl>animal</gl>
-      <gl>animate being</gl>
-      <gl>beast</gl>
-      <gl>brute</gl>
-      <gl>carnal</gl>
-      <gl>creature</gl>
-      <gl>fauna</gl>
-      <gl>fleshly</gl>
-      <gl>sensual</gl>
-      <gl pivot="otherlg">Animal</gl>
+      <gl pivot="samelg">Eat</gl>
    </mel>
    <mel id="wn54">
-      <gl>meal</gl>
-      <gl>repast</gl>
-      <gl pivot="otherlg">Meal</gl>
+      <gl pivot="samelg">Break</gl>
    </mel>
    <mel id="wn55">
-      <gl>Hydra</gl>
-      <gl pivot="samelg">Snake</gl>
-      <gl>Snake River</gl>
-      <gl>ophidian</gl>
-      <gl>serpent</gl>
-      <gl>snake</gl>
-      <gl>snake in the grass</gl>
+      <gl pivot="samelg">Rest</gl>
    </mel>
    <mel id="wn56">
-      <gl>Indian corn</gl>
-      <gl>Zea mays</gl>
-      <gl>clavus</gl>
-      <gl>corn</gl>
-      <gl>corn whiskey</gl>
-      <gl>corn whisky</gl>
-      <gl>edible corn</gl>
-      <gl>maize</gl>
-      <gl pivot="otherlg">Corn</gl>
+      <gl pivot="samelg">Five</gl>
    </mel>
    <mel id="wn57">
-      <gl>acclivity</gl>
-      <gl>advance</gl>
-      <gl>arouse</gl>
-      <gl>ascent</gl>
-      <gl>bring up</gl>
-      <gl>call down</gl>
-      <gl>call forth</gl>
-      <gl>climb</gl>
-      <gl>conjure</gl>
-      <gl>conjure up</gl>
-      <gl>elevate</gl>
-      <gl>elicit</gl>
-      <gl>enhance</gl>
-      <gl>enkindle</gl>
-      <gl>erect</gl>
-      <gl>evoke</gl>
-      <gl>farm</gl>
-      <gl>fire</gl>
-      <gl>get up</gl>
-      <gl>grow</gl>
-      <gl>heave</gl>
-      <gl>heighten</gl>
-      <gl>hike</gl>
-      <gl>invoke</gl>
-      <gl>kick upstairs</gl>
-      <gl>kindle</gl>
-      <gl>leaven</gl>
-      <gl>levy</gl>
-      <gl>lift</gl>
-      <gl>nurture</gl>
-      <gl>parent</gl>
-      <gl>produce</gl>
-      <gl>promote</gl>
-      <gl>prove</gl>
-      <gl>provoke</gl>
-      <gl>put forward</gl>
-      <gl>put up</gl>
-      <gl>raise</gl>
-      <gl>rear</gl>
-      <gl>recruit</gl>
-      <gl>resurrect</gl>
-      <gl>rise</gl>
-      <gl>salary increase</gl>
-      <gl>set up</gl>
-      <gl>stir</gl>
-      <gl>upgrade</gl>
-      <gl>upraise</gl>
-      <gl>wage hike</gl>
-      <gl>wage increase</gl>
-      <gl pivot="otherlg">Raise</gl>
+      <gl pivot="samelg">Cat</gl>
    </mel>
    <mel id="wn58">
-      <gl>abbreviate</gl>
-      <gl>abridge</gl>
-      <gl>baseball swing</gl>
-      <gl>bring down</gl>
-      <gl>burn</gl>
-      <gl>cold shoulder</gl>
-      <gl>contract</gl>
-      <gl>curve</gl>
-      <gl>cut</gl>
-      <gl>cut back</gl>
-      <gl>cut down</gl>
-      <gl>cut of meat</gl>
-      <gl>cut off</gl>
-      <gl>cutting</gl>
-      <gl>cutting off</gl>
-      <gl>deletion</gl>
-      <gl>dilute</gl>
-      <gl>disregard</gl>
-      <gl>edit</gl>
-      <gl>edit out</gl>
-      <gl>emasculated</gl>
-      <gl>excision</gl>
-      <gl>foreshorten</gl>
-      <gl>gash</gl>
-      <gl>geld</gl>
-      <gl>gelded</gl>
-      <gl>hack</gl>
-      <gl>ignore</gl>
-      <gl>issue</gl>
-      <gl>make out</gl>
-      <gl>mown</gl>
-      <gl>prune</gl>
-      <gl>rationalise</gl>
-      <gl>rationalize</gl>
-      <gl>reduce</gl>
-      <gl>sheer</gl>
-      <gl>shorten</gl>
-      <gl>shortened</gl>
-      <gl>skip</gl>
-      <gl>slash</gl>
-      <gl>slashed</gl>
-      <gl>slew</gl>
-      <gl>slice</gl>
-      <gl>slue</gl>
-      <gl>snub</gl>
-      <gl>stinger</gl>
-      <gl>swerve</gl>
-      <gl>swing</gl>
-      <gl>switch off</gl>
-      <gl>tailor</gl>
-      <gl>thin</gl>
-      <gl>thin out</gl>
-      <gl>thinned</gl>
-      <gl>track</gl>
-      <gl>trend</gl>
-      <gl>trim</gl>
-      <gl>trim back</gl>
-      <gl>trim down</gl>
-      <gl>trimmed</gl>
-      <gl>turn off</gl>
-      <gl>turn out</gl>
-      <gl>undercut</gl>
-      <gl>veer</gl>
-      <gl>weakened</gl>
-      <gl>write out</gl>
-      <gl pivot="otherlg">Cut</gl>
+      <gl pivot="samelg">Meat</gl>
    </mel>
    <mel id="wn59">
-      <gl>analyse</gl>
-      <gl>analyze</gl>
-      <gl>bailiwick</gl>
-      <gl>canvas</gl>
-      <gl>canvass</gl>
-      <gl>cogitation</gl>
-      <gl>consider</gl>
-      <gl>contemplate</gl>
-      <gl>discipline</gl>
-      <gl>examine</gl>
-      <gl>field</gl>
-      <gl>field of study</gl>
-      <gl>hit the books</gl>
-      <gl>learn</gl>
-      <gl>meditate</gl>
-      <gl>read</gl>
-      <gl>report</gl>
-      <gl>sketch</gl>
-      <gl>study</gl>
-      <gl>subject</gl>
-      <gl>subject area</gl>
-      <gl>subject field</gl>
-      <gl>survey</gl>
-      <gl>take</gl>
-      <gl>work</gl>
-      <gl>written report</gl>
-      <gl pivot="otherlg">Study</gl>
+      <gl pivot="samelg">Comb</gl>
    </mel>
    <mel id="wn60">
-      <gl>douse</gl>
-      <gl>dowse</gl>
-      <gl>drench</gl>
-      <gl>fleece</gl>
-      <gl>gazump</gl>
-      <gl>hit it up</gl>
-      <gl>hock</gl>
-      <gl>hook</gl>
-      <gl>imbue</gl>
-      <gl>inebriate</gl>
-      <gl>intoxicate</gl>
-      <gl>overcharge</gl>
-      <gl>pawn</gl>
-      <gl>pluck</gl>
-      <gl>plume</gl>
-      <gl>rob</gl>
-      <gl>soak</gl>
-      <gl>soakage</gl>
-      <gl>soaking</gl>
-      <gl>sop</gl>
-      <gl>souse</gl>
-      <gl>surcharge</gl>
-      <gl pivot="otherlg">Soak</gl>
+      <gl pivot="samelg">Sleep</gl>
    </mel>
    <mel id="wn61">
-      <gl>balmy</gl>
-      <gl>cushy</gl>
-      <gl>delicate</gl>
-      <gl>diffuse</gl>
-      <gl>diffused</gl>
-      <gl>easy</gl>
-      <gl>easygoing</gl>
-      <gl>flabby</gl>
-      <gl>flaccid</gl>
-      <gl>gentle</gl>
-      <gl>indulgent</gl>
-      <gl>lenient</gl>
-      <gl>mild</gl>
-      <gl>piano</gl>
-      <gl>soft</gl>
-      <gl>sonant</gl>
-      <gl>subdued</gl>
-      <gl>voiced</gl>
-      <gl pivot="otherlg">Soft</gl>
+      <gl pivot="samelg">Drop</gl>
    </mel>
    <mel id="wn62">
-      <gl>Sesamum indicum</gl>
-      <gl>benne</gl>
-      <gl>benni</gl>
-      <gl>benny</gl>
-      <gl>sesame</gl>
-      <gl pivot="otherlg">Sesame</gl>
+      <gl pivot="samelg">Cry</gl>
    </mel>
    <mel id="wn63">
-      <gl>ask</gl>
-      <gl>call for</gl>
-      <gl>demand</gl>
-      <gl>enquire</gl>
-      <gl>expect</gl>
-      <gl>inquire</gl>
-      <gl>involve</gl>
-      <gl>necessitate</gl>
-      <gl>need</gl>
-      <gl>postulate</gl>
-      <gl>require</gl>
-      <gl>take</gl>
-      <gl pivot="otherlg">Ask</gl>
+      <gl pivot="samelg">Other</gl>
    </mel>
    <mel id="wn64">
-      <gl>adept</gl>
-      <gl>beneficial</gl>
-      <gl>commodity</gl>
-      <gl>dear</gl>
-      <gl>dependable</gl>
-      <gl>effective</gl>
-      <gl>estimable</gl>
-      <gl>expert</gl>
-      <gl>full</gl>
-      <gl>good</gl>
-      <gl>goodness</gl>
-      <gl>honest</gl>
-      <gl>honorable</gl>
-      <gl>in effect</gl>
-      <gl>in force</gl>
-      <gl>just</gl>
-      <gl>near</gl>
-      <gl>practiced</gl>
-      <gl>proficient</gl>
-      <gl>respectable</gl>
-      <gl>right</gl>
-      <gl>ripe</gl>
-      <gl>safe</gl>
-      <gl>salutary</gl>
-      <gl>secure</gl>
-      <gl>serious</gl>
-      <gl>skilful</gl>
-      <gl>skillful</gl>
-      <gl>sound</gl>
-      <gl>soundly</gl>
-      <gl>thoroughly</gl>
-      <gl>trade good</gl>
-      <gl>undecomposed</gl>
-      <gl>unspoiled</gl>
-      <gl>unspoilt</gl>
-      <gl>upright</gl>
-      <gl>well</gl>
-      <gl pivot="otherlg">Good</gl>
+      <gl pivot="samelg">Hundred</gl>
    </mel>
    <mel id="wn65">
-      <gl pivot="samelg">Base</gl>
-      <gl>Qaeda</gl>
-      <gl>al-Qa'ida</gl>
-      <gl>al-Qaeda</gl>
-      <gl>al-Qaida</gl>
-      <gl>alkali</gl>
-      <gl>bag</gl>
-      <gl>basal</gl>
-      <gl>base</gl>
-      <gl>base of operations</gl>
-      <gl>baseborn</gl>
-      <gl>basis</gl>
-      <gl>cornerstone</gl>
-      <gl>establish</gl>
-      <gl>floor</gl>
-      <gl>foot</gl>
-      <gl>found</gl>
-      <gl>foundation</gl>
-      <gl>free-base</gl>
-      <gl>fundament</gl>
-      <gl>ground</gl>
-      <gl>groundwork</gl>
-      <gl>home</gl>
-      <gl>humble</gl>
-      <gl>immoral</gl>
-      <gl>infrastructure</gl>
-      <gl>lowly</gl>
-      <gl>mean</gl>
-      <gl>meanspirited</gl>
-      <gl>nucleotide</gl>
-      <gl>pedestal</gl>
-      <gl>radical</gl>
-      <gl>radix</gl>
-      <gl>root</gl>
-      <gl>root word</gl>
-      <gl>stand</gl>
-      <gl>stem</gl>
-      <gl>substructure</gl>
-      <gl>theme</gl>
-      <gl>understructure</gl>
+      <gl pivot="samelg">Tear</gl>
    </mel>
    <mel id="wn66">
-      <gl>associate</gl>
-      <gl>colligate</gl>
-      <gl>connect</gl>
-      <gl>get in touch</gl>
-      <gl>join</gl>
-      <gl>link</gl>
-      <gl>link up</gl>
-      <gl>plug in</gl>
-      <gl>plug into</gl>
-      <gl>relate</gl>
-      <gl>tie</gl>
-      <gl>tie in</gl>
-      <gl>touch base</gl>
-      <gl>unite</gl>
-      <gl pivot="otherlg">Connect</gl>
+      <gl pivot="samelg">Ear</gl>
    </mel>
    <mel id="wn67">
-      <gl>ascertain</gl>
-      <gl>assure</gl>
-      <gl>attend</gl>
-      <gl>catch</gl>
-      <gl>check</gl>
-      <gl>come across</gl>
-      <gl>consider</gl>
-      <gl>construe</gl>
-      <gl>control</gl>
-      <gl>date</gl>
-      <gl>determine</gl>
-      <gl>discover</gl>
-      <gl>encounter</gl>
-      <gl>ensure</gl>
-      <gl>envision</gl>
-      <gl>escort</gl>
-      <gl>examine</gl>
-      <gl>experience</gl>
-      <gl>fancy</gl>
-      <gl>figure</gl>
-      <gl>find</gl>
-      <gl>find out</gl>
-      <gl>get a line</gl>
-      <gl>get wind</gl>
-      <gl>get word</gl>
-      <gl>go out</gl>
-      <gl>go steady</gl>
-      <gl>go through</gl>
-      <gl>hear</gl>
-      <gl>image</gl>
-      <gl>insure</gl>
-      <gl>interpret</gl>
-      <gl>learn</gl>
-      <gl>look</gl>
-      <gl>meet</gl>
-      <gl>pick up</gl>
-      <gl>picture</gl>
-      <gl>project</gl>
-      <gl>realise</gl>
-      <gl>realize</gl>
-      <gl>reckon</gl>
-      <gl>regard</gl>
-      <gl>run across</gl>
-      <gl>run into</gl>
-      <gl>see</gl>
-      <gl>see to it</gl>
-      <gl>take care</gl>
-      <gl>take in</gl>
-      <gl>understand</gl>
-      <gl>view</gl>
-      <gl>visit</gl>
-      <gl>visualise</gl>
-      <gl>visualize</gl>
-      <gl>watch</gl>
-      <gl>witness</gl>
-      <gl pivot="otherlg">See</gl>
+      <gl pivot="samelg">Earth</gl>
    </mel>
    <mel id="wn68">
-      <gl>broad</gl>
-      <gl>entire</gl>
-      <gl>full</gl>
-      <gl>full moon</gl>
-      <gl>full phase of the moon</gl>
-      <gl>full-of-the-moon</gl>
-      <gl>fully</gl>
-      <gl>good</gl>
-      <gl>replete</gl>
-      <gl>to the full</gl>
-      <gl>total</gl>
-      <gl>wax</gl>
-      <gl>wide</gl>
-      <gl>wide-cut</gl>
-      <gl pivot="otherlg">Full</gl>
+      <gl pivot="samelg">Stick</gl>
    </mel>
    <mel id="wn69">
-      <gl>arise</gl>
-      <gl>bristle</gl>
-      <gl>get up</gl>
-      <gl>hold up</gl>
-      <gl>hold water</gl>
-      <gl>place upright</gl>
-      <gl>rise</gl>
-      <gl>stand</gl>
-      <gl>stand up</gl>
-      <gl>stick up</gl>
-      <gl>uprise</gl>
-      <gl pivot="otherlg">Stand up</gl>
+      <gl pivot="samelg">Sweet</gl>
    </mel>
    <mel id="wn70">
-      <gl>abruptly</gl>
-      <gl>brusk</gl>
-      <gl>brusque</gl>
-      <gl>curt</gl>
-      <gl>curtly</gl>
-      <gl>dead</gl>
-      <gl>forgetful</gl>
-      <gl>inadequate</gl>
-      <gl>light</gl>
-      <gl>little</gl>
-      <gl>myopic</gl>
-      <gl>poor</gl>
-      <gl>scant</gl>
-      <gl>short</gl>
-      <gl>short circuit</gl>
-      <gl>short-change</gl>
-      <gl>short-circuit</gl>
-      <gl>shortly</gl>
-      <gl>shortsighted</gl>
-      <gl>shortstop</gl>
-      <gl>suddenly</gl>
-      <gl>unawares</gl>
-      <gl>unforesightful</gl>
-      <gl>unretentive</gl>
-      <gl pivot="otherlg">Short</gl>
+      <gl pivot="samelg">Bitter</gl>
    </mel>
    <mel id="wn71">
-      <gl>Panthera pardus</gl>
-      <gl>leopard</gl>
-      <gl pivot="otherlg">Leopard</gl>
+      <gl pivot="samelg">Four</gl>
    </mel>
    <mel id="wn72">
-      <gl>decant</gl>
-      <gl>pelt</gl>
-      <gl>pour</gl>
-      <gl>pour out</gl>
-      <gl>pullulate</gl>
-      <gl>rain buckets</gl>
-      <gl>rain cats and dogs</gl>
-      <gl>stream</gl>
-      <gl>swarm</gl>
-      <gl>teem</gl>
-      <gl pivot="otherlg">Pour</gl>
+      <gl pivot="samelg">Clear</gl>
    </mel>
    <mel id="wn73">
-      <gl>charge</gl>
-      <gl>degree</gl>
-      <gl>dismantle</gl>
-      <gl>even</gl>
-      <gl>even out</gl>
-      <gl>flat</gl>
-      <gl>floor</gl>
-      <gl>flush</gl>
-      <gl>grade</gl>
-      <gl>horizontal surface</gl>
-      <gl>layer</gl>
-      <gl>level</gl>
-      <gl>level off</gl>
-      <gl>plane</gl>
-      <gl>point</gl>
-      <gl>pull down</gl>
-      <gl>rase</gl>
-      <gl>raze</gl>
-      <gl>spirit level</gl>
-      <gl>stage</gl>
-      <gl>storey</gl>
-      <gl>story</gl>
-      <gl>stratum</gl>
-      <gl>take down</gl>
-      <gl>tear down</gl>
-      <gl>tied</gl>
-      <gl>tier</gl>
-      <gl>unwavering</gl>
-      <gl pivot="otherlg">Level</gl>
+      <gl pivot="samelg">Go</gl>
    </mel>
    <mel id="wn74">
-      <gl>clear the throat</gl>
-      <gl>hawk</gl>
-      <gl>huckster</gl>
-      <gl>monger</gl>
-      <gl>mortarboard</gl>
-      <gl>peddle</gl>
-      <gl>pitch</gl>
-      <gl>vend</gl>
-      <gl>war hawk</gl>
-      <gl pivot="otherlg">Hawk</gl>
+      <gl pivot="samelg">Finger</gl>
    </mel>
    <mel id="wn75">
-      <gl>barf</gl>
-      <gl>be sick</gl>
-      <gl>brainsick</gl>
-      <gl>cast</gl>
-      <gl>cat</gl>
-      <gl>chuck</gl>
-      <gl>crazy</gl>
-      <gl>demented</gl>
-      <gl>disgorge</gl>
-      <gl>disgusted</gl>
-      <gl>disturbed</gl>
-      <gl>fed up</gl>
-      <gl>ghastly</gl>
-      <gl>grim</gl>
-      <gl>grisly</gl>
-      <gl>gruesome</gl>
-      <gl>honk</gl>
-      <gl>ill</gl>
-      <gl>macabre</gl>
-      <gl>mad</gl>
-      <gl>nauseated</gl>
-      <gl>nauseous</gl>
-      <gl>pale</gl>
-      <gl>pallid</gl>
-      <gl>puke</gl>
-      <gl>purge</gl>
-      <gl>queasy</gl>
-      <gl>regorge</gl>
-      <gl>regurgitate</gl>
-      <gl>retch</gl>
-      <gl>sick</gl>
-      <gl>sick of</gl>
-      <gl>sickish</gl>
-      <gl>spew</gl>
-      <gl>spue</gl>
-      <gl>throw up</gl>
-      <gl>tired of</gl>
-      <gl>unbalanced</gl>
-      <gl>unhinged</gl>
-      <gl>upchuck</gl>
-      <gl>vomit</gl>
-      <gl>vomit up</gl>
-      <gl>wan</gl>
-      <gl pivot="otherlg">Sick</gl>
+      <gl pivot="samelg">Cold</gl>
    </mel>
    <mel id="wn76">
-      <gl>pelting</gl>
-      <gl>rain</gl>
-      <gl>rain down</gl>
-      <gl>rainfall</gl>
-      <gl>rainwater</gl>
-      <gl pivot="otherlg">Rain</gl>
+      <gl pivot="samelg">Build</gl>
    </mel>
    <mel id="wn77">
-      <gl>chaff</gl>
-      <gl>husk</gl>
-      <gl>shell</gl>
-      <gl>shuck</gl>
-      <gl>stalk</gl>
-      <gl>straw</gl>
-      <gl>stubble</gl>
-      <gl pivot="otherlg">Husks</gl>
+      <gl pivot="samelg">Stone</gl>
    </mel>
    <mel id="wn78">
-      <gl>adipose tissue</gl>
-      <gl>avoirdupois</gl>
-      <gl>blubber</gl>
-      <gl>fat</gl>
-      <gl>fatness</gl>
-      <gl>fatten</gl>
-      <gl>fatten out</gl>
-      <gl>fatten up</gl>
-      <gl>fatty</gl>
-      <gl>fatty tissue</gl>
-      <gl>fertile</gl>
-      <gl>fill out</gl>
-      <gl>flesh out</gl>
-      <gl>juicy</gl>
-      <gl>plump</gl>
-      <gl>plump out</gl>
-      <gl>productive</gl>
-      <gl>rich</gl>
-      <gl pivot="otherlg">Fat</gl>
+      <gl pivot="samelg">See</gl>
    </mel>
    <mel id="wn79">
-      <gl>bat</gl>
-      <gl>biff</gl>
-      <gl>clobber</gl>
-      <gl>clout</gl>
-      <gl>cream</gl>
-      <gl>drub</gl>
-      <gl>figure out</gl>
-      <gl>lap</gl>
-      <gl>lap up</gl>
-      <gl>lick</gl>
-      <gl>poke</gl>
-      <gl>punch</gl>
-      <gl>puzzle out</gl>
-      <gl>salt lick</gl>
-      <gl>slug</gl>
-      <gl>solve</gl>
-      <gl>thrash</gl>
-      <gl>work</gl>
-      <gl>work out</gl>
-      <gl pivot="otherlg">Lick</gl>
+      <gl pivot="samelg">Cheek</gl>
    </mel>
    <mel id="wn80">
-      <gl>bit</gl>
-      <gl>bite</gl>
-      <gl>burn</gl>
-      <gl>chomp</gl>
-      <gl>collation</gl>
-      <gl>insect bite</gl>
-      <gl>morsel</gl>
-      <gl>prick</gl>
-      <gl>pungency</gl>
-      <gl>raciness</gl>
-      <gl>seize with teeth</gl>
-      <gl>sharpness</gl>
-      <gl>snack</gl>
-      <gl>sting</gl>
-      <gl pivot="otherlg">Bite</gl>
+      <gl pivot="samelg">Wing</gl>
    </mel>
    <mel id="wn81">
-      <gl>afford</gl>
-      <gl>apply</gl>
-      <gl>break</gl>
-      <gl>cave in</gl>
-      <gl>chip in</gl>
-      <gl>collapse</gl>
-      <gl>commit</gl>
-      <gl>consecrate</gl>
-      <gl>contribute</gl>
-      <gl>dedicate</gl>
-      <gl>devote</gl>
-      <gl>ease up</gl>
-      <gl>establish</gl>
-      <gl>fall in</gl>
-      <gl>feed</gl>
-      <gl>founder</gl>
-      <gl>generate</gl>
-      <gl>gift</gl>
-      <gl>give</gl>
-      <gl>give way</gl>
-      <gl>grant</gl>
-      <gl>hand</gl>
-      <gl>have</gl>
-      <gl>hold</gl>
-      <gl>impart</gl>
-      <gl>kick in</gl>
-      <gl>leave</gl>
-      <gl>make</gl>
-      <gl>move over</gl>
-      <gl>open</gl>
-      <gl>pass</gl>
-      <gl>pass on</gl>
-      <gl>pay</gl>
-      <gl>present</gl>
-      <gl>reach</gl>
-      <gl>render</gl>
-      <gl>return</gl>
-      <gl>sacrifice</gl>
-      <gl>spring</gl>
-      <gl>springiness</gl>
-      <gl>throw</gl>
-      <gl>turn over</gl>
-      <gl>yield</gl>
-      <gl pivot="otherlg">Give</gl>
+      <gl pivot="samelg">Level</gl>
    </mel>
    <mel id="wn82">
-      <gl>Bible</gl>
-      <gl>Book</gl>
-      <gl>Christian Bible</gl>
-      <gl>Good Book</gl>
-      <gl>Holy Scripture</gl>
-      <gl>Holy Writ</gl>
-      <gl>Logos</gl>
-      <gl>Scripture</gl>
-      <gl>Son</gl>
-      <gl pivot="samelg">Word</gl>
-      <gl>Word of God</gl>
-      <gl>articulate</gl>
-      <gl>countersign</gl>
-      <gl>discussion</gl>
-      <gl>formulate</gl>
-      <gl>give voice</gl>
-      <gl>give-and-take</gl>
-      <gl>intelligence</gl>
-      <gl>news</gl>
-      <gl>parole</gl>
-      <gl>password</gl>
-      <gl>phrase</gl>
-      <gl>tidings</gl>
-      <gl>watchword</gl>
-      <gl>word</gl>
-      <gl>word of honor</gl>
+      <gl pivot="samelg">Soak</gl>
    </mel>
    <mel id="wn83">
-      <gl>chile</gl>
-      <gl>chili</gl>
-      <gl>chili pepper</gl>
-      <gl>chilli</gl>
-      <gl>chilly</gl>
-      <gl pivot="otherlg">Chilli</gl>
+      <gl pivot="samelg">Become</gl>
    </mel>
    <mel id="wn84">
-      <gl>married woman</gl>
-      <gl>wife</gl>
-      <gl pivot="otherlg">Wife</gl>
+      <gl pivot="samelg">Good</gl>
    </mel>
    <mel id="wn85">
-      <gl>abstract</gl>
-      <gl>aerodynamic lift</gl>
-      <gl>airlift</gl>
-      <gl>annul</gl>
-      <gl>arise</gl>
-      <gl>bring up</gl>
-      <gl>cabbage</gl>
-      <gl>come up</gl>
-      <gl>cosmetic surgery</gl>
-      <gl>countermand</gl>
-      <gl>elevate</gl>
-      <gl>elevation</gl>
-      <gl>elevator</gl>
-      <gl>face lift</gl>
-      <gl>face lifting</gl>
-      <gl>face-lift</gl>
-      <gl>facelift</gl>
-      <gl>filch</gl>
-      <gl>get up</gl>
-      <gl>go up</gl>
-      <gl>heave</gl>
-      <gl>hoist</gl>
-      <gl>hook</gl>
-      <gl>lift</gl>
-      <gl>move up</gl>
-      <gl>nip and tuck</gl>
-      <gl>nobble</gl>
-      <gl>overturn</gl>
-      <gl>pilfer</gl>
-      <gl>pinch</gl>
-      <gl>plagiarise</gl>
-      <gl>plagiarize</gl>
-      <gl>purloin</gl>
-      <gl>raise</gl>
-      <gl>raising</gl>
-      <gl>rear</gl>
-      <gl>repeal</gl>
-      <gl>rescind</gl>
-      <gl>reverse</gl>
-      <gl>revoke</gl>
-      <gl>rhytidectomy</gl>
-      <gl>rhytidoplasty</gl>
-      <gl>rise</gl>
-      <gl>rustle</gl>
-      <gl>ski lift</gl>
-      <gl>ski tow</gl>
-      <gl>snarf</gl>
-      <gl>sneak</gl>
-      <gl>swipe</gl>
-      <gl>uprise</gl>
-      <gl>vacate</gl>
-      <gl>wind</gl>
-      <gl pivot="otherlg">Lift</gl>
+      <gl pivot="samelg">Tooth</gl>
    </mel>
    <mel id="wn86">
-      <gl>look like</gl>
-      <gl pivot="otherlg">Look like</gl>
+      <gl pivot="samelg">Strong</gl>
    </mel>
    <mel id="wn87">
-      <gl>10</gl>
-      <gl>X</gl>
-      <gl>decade</gl>
-      <gl>ten</gl>
-      <gl>ten-spot</gl>
-      <gl>tenner</gl>
-      <gl>x</gl>
-      <gl pivot="otherlg">Ten</gl>
+      <gl pivot="samelg">Keep</gl>
    </mel>
    <mel id="wn88">
-      <gl>8</gl>
-      <gl>Ashcan School</gl>
-      <gl pivot="samelg">Eight</gl>
-      <gl>VIII</gl>
-      <gl>eight</gl>
-      <gl>eight-spot</gl>
-      <gl>eighter</gl>
-      <gl>eighter from Decatur</gl>
-      <gl>octad</gl>
-      <gl>octet</gl>
-      <gl>octonary</gl>
-      <gl>ogdoad</gl>
-      <gl>viii</gl>
+      <gl pivot="samelg">Hit</gl>
    </mel>
    <mel id="wn89">
-      <gl>bend</gl>
-      <gl>braid</gl>
-      <gl>construction</gl>
-      <gl>convolute</gl>
-      <gl>crook</gl>
-      <gl>curve</gl>
-      <gl>deform</gl>
-      <gl>device</gl>
-      <gl>distort</gl>
-      <gl>eddy</gl>
-      <gl>flex</gl>
-      <gl>gimmick</gl>
-      <gl>kink</gl>
-      <gl>pervert</gl>
-      <gl>plait</gl>
-      <gl>pull</gl>
-      <gl>rick</gl>
-      <gl>sophisticate</gl>
-      <gl>spin</gl>
-      <gl>sprain</gl>
-      <gl>squirm</gl>
-      <gl>tress</gl>
-      <gl>turn</gl>
-      <gl>turn of events</gl>
-      <gl>twine</gl>
-      <gl>twirl</gl>
-      <gl>twist</gl>
-      <gl>twist around</gl>
-      <gl>twisting</gl>
-      <gl>whirl</gl>
-      <gl>wind</gl>
-      <gl>winding</gl>
-      <gl>worm</gl>
-      <gl>wrench</gl>
-      <gl>wrestle</gl>
-      <gl>wrick</gl>
-      <gl>wriggle</gl>
-      <gl>writhe</gl>
-      <gl pivot="otherlg">Twist</gl>
+      <gl pivot="samelg">Fast</gl>
    </mel>
    <mel id="wn90">
-      <gl>appear</gl>
-      <gl>break through</gl>
-      <gl>bug out</gl>
-      <gl>bulge</gl>
-      <gl>bulge out</gl>
-      <gl>come forth</gl>
-      <gl>come forward</gl>
-      <gl>come in</gl>
-      <gl>come on</gl>
-      <gl>come out</gl>
-      <gl>come out of the closet</gl>
-      <gl>come to the fore</gl>
-      <gl>egress</gl>
-      <gl>emerge</gl>
-      <gl>erupt</gl>
-      <gl>fall out</gl>
-      <gl>go forth</gl>
-      <gl>issue</gl>
-      <gl>out</gl>
-      <gl>place</gl>
-      <gl>pop</gl>
-      <gl>pop out</gl>
-      <gl>protrude</gl>
-      <gl>push through</gl>
-      <gl>show up</gl>
-      <gl>start</gl>
-      <gl>step forward</gl>
-      <gl>step to the fore</gl>
-      <gl>step up</gl>
-      <gl>surface</gl>
-      <gl>turn out</gl>
-      <gl>turn up</gl>
-      <gl pivot="otherlg">Come out</gl>
+      <gl pivot="samelg">Descend</gl>
    </mel>
    <mel id="wn91">
-      <gl>bread and butter</gl>
-      <gl>celebrate</gl>
-      <gl>continue</gl>
-      <gl>donjon</gl>
-      <gl>dungeon</gl>
-      <gl>go along</gl>
-      <gl>go on</gl>
-      <gl>hold</gl>
-      <gl>hold back</gl>
-      <gl>hold on</gl>
-      <gl>hold open</gl>
-      <gl>keep</gl>
-      <gl>keep back</gl>
-      <gl>keep on</gl>
-      <gl>keep open</gl>
-      <gl>livelihood</gl>
-      <gl>living</gl>
-      <gl>maintain</gl>
-      <gl>observe</gl>
-      <gl>preserve</gl>
-      <gl>prevent</gl>
-      <gl>proceed</gl>
-      <gl>restrain</gl>
-      <gl>retain</gl>
-      <gl>save</gl>
-      <gl>stay fresh</gl>
-      <gl>support</gl>
-      <gl>sustain</gl>
-      <gl>sustenance</gl>
-      <gl pivot="otherlg">Keep</gl>
+      <gl pivot="samelg">Husks</gl>
    </mel>
    <mel id="wn92">
-      <gl>blockheaded</gl>
-      <gl>boneheaded</gl>
-      <gl>buddy-buddy</gl>
-      <gl>chummy</gl>
-      <gl>compact</gl>
-      <gl>deep</gl>
-      <gl>dense</gl>
-      <gl>duncical</gl>
-      <gl>duncish</gl>
-      <gl>fatheaded</gl>
-      <gl>heavyset</gl>
-      <gl>loggerheaded</gl>
-      <gl>midst</gl>
-      <gl>slurred</gl>
-      <gl>stocky</gl>
-      <gl>thick</gl>
-      <gl>thick-skulled</gl>
-      <gl>thickheaded</gl>
-      <gl>thickly</gl>
-      <gl>thickset</gl>
-      <gl>wooden-headed</gl>
-      <gl pivot="otherlg">Thick</gl>
+      <gl pivot="samelg">Corn</gl>
    </mel>
    <mel id="wn93">
-      <gl>be</gl>
-      <gl pivot="samelg">exist</gl>
-      <gl>live</gl>
-      <gl>subsist</gl>
-      <gl>survive</gl>
+      <gl pivot="samelg">Tasty</gl>
    </mel>
    <mel id="wn94">
-      <gl>fiddle</gl>
-      <gl>imp</gl>
-      <gl>mess around</gl>
-      <gl>monkey</gl>
-      <gl>monkey around</gl>
-      <gl>muck about</gl>
-      <gl>muck around</gl>
-      <gl>potter</gl>
-      <gl>putter</gl>
-      <gl>rapscallion</gl>
-      <gl>rascal</gl>
-      <gl>scalawag</gl>
-      <gl>scallywag</gl>
-      <gl>scamp</gl>
-      <gl>tamper</gl>
-      <gl>tinker</gl>
-      <gl pivot="otherlg">Monkey</gl>
+      <gl pivot="samelg">Pumpkin</gl>
    </mel>
    <mel id="wn95">
-      <gl>deaf</gl>
-      <gl>deafen</gl>
-      <gl>indifferent</gl>
-      <gl pivot="otherlg">Deaf</gl>
+      <gl pivot="samelg">Raise</gl>
    </mel>
    <mel id="wn96">
-      <gl pivot="samelg">Shan</gl>
-      <gl>Tai Long</gl>
+      <gl pivot="samelg">Day</gl>
    </mel>
    <mel id="wn97">
-      <gl>booze</gl>
-      <gl>drink</gl>
-      <gl>drink in</gl>
-      <gl>drunk</gl>
-      <gl>drunkard</gl>
-      <gl>fuddle</gl>
-      <gl>imbibe</gl>
-      <gl>inebriate</gl>
-      <gl>inebriated</gl>
-      <gl>intoxicated</gl>
-      <gl>pledge</gl>
-      <gl>rummy</gl>
-      <gl>salute</gl>
-      <gl>sot</gl>
-      <gl>toast</gl>
-      <gl>tope</gl>
-      <gl>wassail</gl>
-      <gl>wino</gl>
-      <gl pivot="otherlg">Drunk</gl>
+      <gl pivot="samelg">Cloth</gl>
    </mel>
    <mel id="wn98">
-      <gl>arrow</gl>
-      <gl>pointer</gl>
-      <gl pivot="otherlg">Arrow</gl>
+      <gl pivot="samelg">Look</gl>
    </mel>
    <mel id="wn99">
-      <gl>cheer</gl>
-      <gl>cheerfulness</gl>
-      <gl>fair weather</gl>
-      <gl>sun</gl>
-      <gl>sunlight</gl>
-      <gl>sunniness</gl>
-      <gl>sunshine</gl>
-      <gl>temperateness</gl>
-      <gl pivot="otherlg">Sunshine</gl>
+      <gl pivot="samelg">Peel off</gl>
    </mel>
    <mel id="wn100">
-      <gl>bankrupt</gl>
-      <gl>better</gl>
-      <gl>breach</gl>
-      <gl>break</gl>
-      <gl>break away</gl>
-      <gl>break dance</gl>
-      <gl>break down</gl>
-      <gl>break in</gl>
-      <gl>break of serve</gl>
-      <gl>break off</gl>
-      <gl>break out</gl>
-      <gl>break up</gl>
-      <gl>break-dance</gl>
-      <gl>breakage</gl>
-      <gl>breaking</gl>
-      <gl>breakout</gl>
-      <gl>bring out</gl>
-      <gl>bump</gl>
-      <gl>burst</gl>
-      <gl>bust</gl>
-      <gl>cave in</gl>
-      <gl>check</gl>
-      <gl>collapse</gl>
-      <gl>come apart</gl>
-      <gl>conk out</gl>
-      <gl>crack</gl>
-      <gl>damp</gl>
-      <gl>dampen</gl>
-      <gl>demote</gl>
-      <gl>develop</gl>
-      <gl>die</gl>
-      <gl>disclose</gl>
-      <gl>discontinue</gl>
-      <gl>discover</gl>
-      <gl>disruption</gl>
-      <gl>divulge</gl>
-      <gl>erupt</gl>
-      <gl>expose</gl>
-      <gl>fail</gl>
-      <gl>fall apart</gl>
-      <gl>fall in</gl>
-      <gl>falling out</gl>
-      <gl>fault</gl>
-      <gl>faulting</gl>
-      <gl>founder</gl>
-      <gl>fracture</gl>
-      <gl>gaolbreak</gl>
-      <gl>gap</gl>
-      <gl>geological fault</gl>
-      <gl>get around</gl>
-      <gl>get out</gl>
-      <gl>give</gl>
-      <gl>give away</gl>
-      <gl>give out</gl>
-      <gl>give way</gl>
-      <gl>go</gl>
-      <gl>go against</gl>
-      <gl>go bad</gl>
-      <gl>good luck</gl>
-      <gl>happy chance</gl>
-      <gl>infract</gl>
-      <gl>intermission</gl>
-      <gl>intermit</gl>
-      <gl>interrupt</gl>
-      <gl>interruption</gl>
-      <gl>jailbreak</gl>
-      <gl>kick downstairs</gl>
-      <gl>let on</gl>
-      <gl>let out</gl>
-      <gl>offend</gl>
-      <gl>open frame</gl>
-      <gl>part</gl>
-      <gl>pause</gl>
-      <gl>prison-breaking</gl>
-      <gl>prisonbreak</gl>
-      <gl>recess</gl>
-      <gl>recrudesce</gl>
-      <gl>relegate</gl>
-      <gl>respite</gl>
-      <gl>reveal</gl>
-      <gl>rift</gl>
-      <gl>ruin</gl>
-      <gl>rupture</gl>
-      <gl>separate</gl>
-      <gl>severance</gl>
-      <gl>shift</gl>
-      <gl>smash</gl>
-      <gl>snap off</gl>
-      <gl>soften</gl>
-      <gl>split</gl>
-      <gl>split up</gl>
-      <gl>stop</gl>
-      <gl>suspension</gl>
-      <gl>time out</gl>
-      <gl>transgress</gl>
-      <gl>unwrap</gl>
-      <gl>violate</gl>
-      <gl>weaken</gl>
-      <gl>wear</gl>
-      <gl>wear out</gl>
-      <gl pivot="otherlg">Break</gl>
+      <gl pivot="samelg">Three</gl>
    </mel>
    <mel id="wn101">
-      <gl>clapper</gl>
-      <gl>glossa</gl>
-      <gl>knife</gl>
-      <gl>lingua</gl>
-      <gl>natural language</gl>
-      <gl>spit</gl>
-      <gl>tongue</gl>
-      <gl pivot="otherlg">Tongue</gl>
+      <gl pivot="samelg">Braid</gl>
    </mel>
    <mel id="wn102">
-      <gl>boil</gl>
-      <gl>boiling point</gl>
-      <gl>churn</gl>
-      <gl>furuncle</gl>
-      <gl>moil</gl>
-      <gl>roil</gl>
-      <gl>seethe</gl>
-      <gl pivot="otherlg">Boil</gl>
+      <gl pivot="samelg">Tail</gl>
    </mel>
    <mel id="wn103">
-      <gl>bloom</gl>
-      <gl>blossom</gl>
-      <gl>blossom forth</gl>
-      <gl>blossom out</gl>
-      <gl>efflorescence</gl>
-      <gl>flower</gl>
-      <gl>flush</gl>
-      <gl>heyday</gl>
-      <gl>peak</gl>
-      <gl>prime</gl>
-      <gl>unfold</gl>
-      <gl pivot="otherlg">Blossom</gl>
+      <gl pivot="samelg">Monkey</gl>
    </mel>
    <mel id="wn104">
-      <gl>back</gl>
-      <gl>block</gl>
-      <gl>blockade</gl>
-      <gl>embarrass</gl>
-      <gl>hamper</gl>
-      <gl>handicap</gl>
-      <gl>hind</gl>
-      <gl>hinder</gl>
-      <gl>impede</gl>
-      <gl>obstruct</gl>
-      <gl>stymie</gl>
-      <gl>stymy</gl>
-      <gl pivot="otherlg">Hinder</gl>
+      <gl pivot="samelg">Chew</gl>
    </mel>
    <mel id="wn105">
-      <gl>bile</gl>
-      <gl>gall</gl>
-      <gl pivot="otherlg">Bile</gl>
+      <gl pivot="samelg">Horse</gl>
    </mel>
    <mel id="wn106">
-      <gl>bargain</gl>
-      <gl>bribe</gl>
-      <gl>buy</gl>
-      <gl>corrupt</gl>
-      <gl>grease one's palms</gl>
-      <gl>purchase</gl>
-      <gl>steal</gl>
-      <gl pivot="otherlg">Buy</gl>
+      <gl pivot="samelg">Foot</gl>
    </mel>
    <mel id="wn107">
-      <gl>battle cry</gl>
-      <gl>blazon out</gl>
-      <gl>call</gl>
-      <gl>call out</gl>
-      <gl>cry</gl>
-      <gl>cry out</gl>
-      <gl>exclaim</gl>
-      <gl>holler</gl>
-      <gl>hollo</gl>
-      <gl>outcry</gl>
-      <gl>rallying cry</gl>
-      <gl>scream</gl>
-      <gl>shout</gl>
-      <gl>shout out</gl>
-      <gl>squall</gl>
-      <gl>vociferation</gl>
-      <gl>war cry</gl>
-      <gl>watchword</gl>
-      <gl>weep</gl>
-      <gl>yell</gl>
-      <gl pivot="otherlg">Cry</gl>
+      <gl pivot="samelg">Seed</gl>
    </mel>
    <mel id="wn108">
-      <gl>cakehole</gl>
-      <gl>fix</gl>
-      <gl>gob</gl>
-      <gl>golf hole</gl>
-      <gl>hole</gl>
-      <gl>hole out</gl>
-      <gl>hollow</gl>
-      <gl>jam</gl>
-      <gl>kettle of fish</gl>
-      <gl>maw</gl>
-      <gl>mess</gl>
-      <gl>muddle</gl>
-      <gl>pickle</gl>
-      <gl>trap</gl>
-      <gl>yap</gl>
-      <gl pivot="otherlg">Hole</gl>
+      <gl pivot="samelg">Lift</gl>
    </mel>
    <mel id="wn109">
-      <gl>tooth</gl>
-      <gl pivot="otherlg">Tooth</gl>
+      <gl pivot="samelg">Buffalo</gl>
    </mel>
    <mel id="wn110">
-      <gl>add up</gl>
-      <gl>amount</gl>
-      <gl>arrive</gl>
-      <gl>come</gl>
-      <gl>come in</gl>
-      <gl>come up</gl>
-      <gl>cum</gl>
-      <gl>derive</gl>
-      <gl>descend</gl>
-      <gl>do</gl>
-      <gl>ejaculate</gl>
-      <gl>fall</gl>
-      <gl>fare</gl>
-      <gl>follow</gl>
-      <gl>get</gl>
-      <gl>get along</gl>
-      <gl>hail</gl>
-      <gl>issue forth</gl>
-      <gl>make out</gl>
-      <gl>number</gl>
-      <gl>occur</gl>
-      <gl>seed</gl>
-      <gl>semen</gl>
-      <gl>seminal fluid</gl>
-      <gl>total</gl>
-      <gl pivot="otherlg">Come</gl>
+      <gl pivot="samelg">Sesame</gl>
    </mel>
    <mel id="wn111">
-      <gl>be born</gl>
-      <gl pivot="otherlg">Be born</gl>
+      <gl pivot="samelg">Wife</gl>
    </mel>
    <mel id="wn112">
-      <gl>fall over</gl>
-      <gl>go over</gl>
-      <gl pivot="otherlg">Fall over</gl>
+      <gl pivot="samelg">Two</gl>
    </mel>
    <mel id="wn113">
-      <gl>John Barleycorn</gl>
-      <gl>booze</gl>
-      <gl>hard drink</gl>
-      <gl>hard liquor</gl>
-      <gl>liquor</gl>
-      <gl>pot likker</gl>
-      <gl>pot liquor</gl>
-      <gl>spirits</gl>
-      <gl>strong drink</gl>
-      <gl pivot="otherlg">Liquor</gl>
+      <gl pivot="samelg">Sweat</gl>
    </mel>
    <mel id="wn114">
-      <gl>firm</gl>
-      <gl>hard</gl>
-      <gl>impregnable</gl>
-      <gl>inviolable</gl>
-      <gl>potent</gl>
-      <gl>secure</gl>
-      <gl>solid</gl>
-      <gl>stiff</gl>
-      <gl>strong</gl>
-      <gl>substantial</gl>
-      <gl>unassailable</gl>
-      <gl>unattackable</gl>
-      <gl>warm</gl>
-      <gl pivot="otherlg">Strong</gl>
+      <gl pivot="samelg">Fall over</gl>
    </mel>
    <mel id="wn115">
-      <gl>many</gl>
-      <gl pivot="otherlg">Many</gl>
+      <gl pivot="samelg">Thin</gl>
    </mel>
    <mel id="wn116">
-      <gl>ace</gl>
-      <gl>adept</gl>
-      <gl>asterisk</gl>
-      <gl>champion</gl>
-      <gl>genius</gl>
-      <gl>headliner</gl>
-      <gl>hotshot</gl>
-      <gl>lead</gl>
-      <gl>leading</gl>
-      <gl>maven</gl>
-      <gl>mavin</gl>
-      <gl>prima</gl>
-      <gl>principal</gl>
-      <gl>sensation</gl>
-      <gl>star</gl>
-      <gl>star topology</gl>
-      <gl>starring</gl>
-      <gl>stellar</gl>
-      <gl>superstar</gl>
-      <gl>virtuoso</gl>
-      <gl>whiz</gl>
-      <gl>whizz</gl>
-      <gl>wiz</gl>
-      <gl>wizard</gl>
-      <gl pivot="otherlg">Star</gl>
+      <gl pivot="samelg">Chilli</gl>
    </mel>
    <mel id="wn117">
-      <gl>Edward Durell Stone</gl>
-      <gl>Harlan F. Stone</gl>
-      <gl>Harlan Fisk Stone</gl>
-      <gl>Harlan Fiske Stone</gl>
-      <gl>Harlan Stone</gl>
-      <gl>I. F. Stone</gl>
-      <gl>Isidor Feinstein Stone</gl>
-      <gl>Lucy Stone</gl>
-      <gl>Oliver Stone</gl>
-      <gl pivot="samelg">Stone</gl>
-      <gl>endocarp</gl>
-      <gl>gem</gl>
-      <gl>gemstone</gl>
-      <gl>lapidate</gl>
-      <gl>pit</gl>
-      <gl>rock</gl>
-      <gl>stone</gl>
+      <gl pivot="samelg">Work</gl>
    </mel>
    <mel id="wn118">
-      <gl>center</gl>
-      <gl>centre</gl>
-      <gl>core</gl>
-      <gl>essence</gl>
-      <gl>gist</gl>
-      <gl>heart</gl>
-      <gl>heart and soul</gl>
-      <gl>inwardness</gl>
-      <gl>kernel</gl>
-      <gl>marrow</gl>
-      <gl>meat</gl>
-      <gl>nitty-gritty</gl>
-      <gl>nub</gl>
-      <gl>pith</gl>
-      <gl>substance</gl>
-      <gl>sum</gl>
-      <gl pivot="otherlg">Meat</gl>
+      <gl pivot="samelg">Full</gl>
    </mel>
    <mel id="wn119">
-      <gl>Elmer Leopold Rice</gl>
-      <gl>Elmer Reizenstein</gl>
-      <gl>Elmer Rice</gl>
-      <gl pivot="samelg">Rice</gl>
-      <gl>Sir Tim Rice</gl>
-      <gl>Timothy Miles Bindon Rice</gl>
-      <gl>rice</gl>
+      <gl pivot="samelg">Mosquito</gl>
    </mel>
    <mel id="wn120">
-      <gl>asymmetrical</gl>
-      <gl>corrupt</gl>
-      <gl>crook</gl>
-      <gl>crooked</gl>
-      <gl>curve</gl>
-      <gl>hunched</gl>
-      <gl>round-backed</gl>
-      <gl>round-shouldered</gl>
-      <gl>stooped</gl>
-      <gl>stooping</gl>
-      <gl pivot="otherlg">Crooked</gl>
+      <gl pivot="samelg">Pillow</gl>
    </mel>
    <mel id="wn121">
-      <gl>cut</gl>
-      <gl>dilute</gl>
-      <gl>flimsy</gl>
-      <gl>fragile</gl>
-      <gl>lean</gl>
-      <gl>lose weight</gl>
-      <gl>melt off</gl>
-      <gl>reduce</gl>
-      <gl>slender</gl>
-      <gl>slenderize</gl>
-      <gl>slight</gl>
-      <gl>slim</gl>
-      <gl>slim down</gl>
-      <gl>sparse</gl>
-      <gl>tenuous</gl>
-      <gl>thin</gl>
-      <gl>thin out</gl>
-      <gl>thinly</gl>
-      <gl pivot="otherlg">Thin</gl>
+      <gl pivot="samelg">Dig</gl>
    </mel>
    <mel id="wn122">
-      <gl>butch</gl>
-      <gl>dam</gl>
-      <gl>dike</gl>
-      <gl>dyke</gl>
-      <gl pivot="otherlg">Dike</gl>
+      <gl pivot="samelg">Ten</gl>
    </mel>
    <mel id="wn123">
-      <gl>discover</gl>
-      <gl>find out</gl>
-      <gl>get a line</gl>
-      <gl>get wind</gl>
-      <gl>get word</gl>
-      <gl>hear</gl>
-      <gl>learn</gl>
-      <gl>listen</gl>
-      <gl>pick up</gl>
-      <gl>see</gl>
-      <gl>take heed</gl>
-      <gl>try</gl>
-      <gl pivot="otherlg">Hear</gl>
+      <gl pivot="samelg">Ride</gl>
    </mel>
    <mel id="wn124">
-      <gl>Brassica oleracea</gl>
-      <gl>abstract</gl>
-      <gl>boodle</gl>
-      <gl>bread</gl>
-      <gl>cabbage</gl>
-      <gl>chou</gl>
-      <gl>clams</gl>
-      <gl>cultivated cabbage</gl>
-      <gl>dinero</gl>
-      <gl>dough</gl>
-      <gl>filch</gl>
-      <gl>gelt</gl>
-      <gl>hook</gl>
-      <gl>kale</gl>
-      <gl>lettuce</gl>
-      <gl>lift</gl>
-      <gl>lolly</gl>
-      <gl>loot</gl>
-      <gl>lucre</gl>
-      <gl>moolah</gl>
-      <gl>nobble</gl>
-      <gl>pelf</gl>
-      <gl>pilfer</gl>
-      <gl>pinch</gl>
-      <gl>purloin</gl>
-      <gl>scratch</gl>
-      <gl>shekels</gl>
-      <gl>simoleons</gl>
-      <gl>snarf</gl>
-      <gl>sneak</gl>
-      <gl>sugar</gl>
-      <gl>swipe</gl>
-      <gl>wampum</gl>
-      <gl pivot="otherlg">Cabbage</gl>
+      <gl pivot="samelg">Pinch</gl>
    </mel>
    <mel id="wn125">
-      <gl>articulation</gl>
-      <gl>bring together</gl>
-      <gl>conjoin</gl>
-      <gl>connect</gl>
-      <gl>fall in</gl>
-      <gl>get together</gl>
-      <gl>join</gl>
-      <gl>joint</gl>
-      <gl>junction</gl>
-      <gl>juncture</gl>
-      <gl>link</gl>
-      <gl>link up</gl>
-      <gl>sum</gl>
-      <gl>union</gl>
-      <gl>unite</gl>
-      <gl pivot="otherlg">Join</gl>
+      <gl pivot="samelg">Plow</gl>
    </mel>
    <mel id="wn126">
-      <gl>call out</gl>
-      <gl>cry</gl>
-      <gl>cry out</gl>
-      <gl>exclaim</gl>
-      <gl>outcry</gl>
-      <gl>shout</gl>
-      <gl pivot="otherlg">Call out</gl>
+      <gl pivot="samelg">Climb up</gl>
    </mel>
    <mel id="wn127">
-      <gl>cloudy</gl>
-      <gl>mirky</gl>
-      <gl>muddy</gl>
-      <gl>murky</gl>
-      <gl>turbid</gl>
-      <gl pivot="otherlg">Turbid</gl>
+      <gl pivot="samelg">Melt</gl>
    </mel>
    <mel id="wn128">
-      <gl>cold</gl>
-      <gl>cold-blooded</gl>
-      <gl>coldness</gl>
-      <gl>common cold</gl>
-      <gl>dusty</gl>
-      <gl>frigid</gl>
-      <gl>frigidity</gl>
-      <gl>frigidness</gl>
-      <gl>inhuman</gl>
-      <gl>insensate</gl>
-      <gl>low temperature</gl>
-      <gl>moth-eaten</gl>
-      <gl>stale</gl>
-      <gl pivot="otherlg">Cold</gl>
+      <gl pivot="samelg">Sunshine</gl>
    </mel>
    <mel id="wn129">
-      <gl>animal foot</gl>
-      <gl>base</gl>
-      <gl>foot</gl>
-      <gl>foot up</gl>
-      <gl>foundation</gl>
-      <gl>ft</gl>
-      <gl>fundament</gl>
-      <gl>groundwork</gl>
-      <gl>hoof</gl>
-      <gl>hoof it</gl>
-      <gl>human foot</gl>
-      <gl>infantry</gl>
-      <gl>invertebrate foot</gl>
-      <gl>leg it</gl>
-      <gl>metrical foot</gl>
-      <gl>metrical unit</gl>
-      <gl>pes</gl>
-      <gl>pick</gl>
-      <gl>substructure</gl>
-      <gl>understructure</gl>
-      <gl pivot="otherlg">Foot</gl>
+      <gl pivot="samelg">Fog</gl>
    </mel>
    <mel id="wn130">
-      <gl>calabash</gl>
-      <gl>gourd</gl>
-      <gl>gourd vine</gl>
-      <gl pivot="otherlg">Gourd</gl>
+      <gl pivot="samelg">Bridge</gl>
    </mel>
    <mel id="wn131">
-      <gl>center</gl>
-      <gl>centre</gl>
-      <gl>eye</gl>
-      <gl>eyeball</gl>
-      <gl>heart</gl>
-      <gl>middle</gl>
-      <gl>oculus</gl>
-      <gl>optic</gl>
-      <gl pivot="otherlg">Eye</gl>
+      <gl pivot="samelg">Cut</gl>
    </mel>
    <mel id="wn132">
-      <gl>a bit</gl>
-      <gl>a little</gl>
-      <gl>a trifle</gl>
-      <gl pivot="otherlg">A little</gl>
+      <gl pivot="samelg">Elephant</gl>
    </mel>
    <mel id="wn133">
-      <gl>cough</gl>
-      <gl>coughing</gl>
-      <gl pivot="otherlg">Cough</gl>
+      <gl pivot="samelg">Use</gl>
    </mel>
    <mel id="wn134">
-      <gl>fruit</gl>
-      <gl>yield</gl>
-      <gl pivot="otherlg">Fruit</gl>
+      <gl pivot="samelg">Wear</gl>
    </mel>
    <mel id="wn135">
-      <gl>beverage</gl>
-      <gl>booze</gl>
-      <gl>boozing</gl>
-      <gl>crapulence</gl>
-      <gl>deglutition</gl>
-      <gl>drink</gl>
-      <gl>drink in</gl>
-      <gl>drinkable</gl>
-      <gl>drinking</gl>
-      <gl>drunkenness</gl>
-      <gl>fuddle</gl>
-      <gl>imbibe</gl>
-      <gl>pledge</gl>
-      <gl>potable</gl>
-      <gl>salute</gl>
-      <gl>swallow</gl>
-      <gl>toast</gl>
-      <gl>tope</gl>
-      <gl>wassail</gl>
-      <gl pivot="otherlg">Drink</gl>
+      <gl pivot="samelg">Lice</gl>
    </mel>
    <mel id="wn136">
-      <gl>airfield</gl>
-      <gl>area</gl>
-      <gl>arena</gl>
-      <gl>athletic field</gl>
-      <gl>bailiwick</gl>
-      <gl>battlefield</gl>
-      <gl>battleground</gl>
-      <gl>champaign</gl>
-      <gl>discipline</gl>
-      <gl>domain</gl>
-      <gl>field</gl>
-      <gl>field of battle</gl>
-      <gl>field of force</gl>
-      <gl>field of honor</gl>
-      <gl>field of operation</gl>
-      <gl>field of operations</gl>
-      <gl>field of study</gl>
-      <gl>field of view</gl>
-      <gl>flying field</gl>
-      <gl>force field</gl>
-      <gl>landing field</gl>
-      <gl>line of business</gl>
-      <gl>orbit</gl>
-      <gl>plain</gl>
-      <gl>playing area</gl>
-      <gl>playing field</gl>
-      <gl>sphere</gl>
-      <gl>study</gl>
-      <gl>subject</gl>
-      <gl>subject area</gl>
-      <gl>subject field</gl>
-      <gl>theater</gl>
-      <gl>theater of operations</gl>
-      <gl>theatre</gl>
-      <gl>theatre of operations</gl>
-      <gl pivot="otherlg">Field</gl>
+      <gl pivot="samelg">Branch</gl>
    </mel>
    <mel id="wn137">
-      <gl>catch some Z's</gl>
-      <gl>eternal rest</gl>
-      <gl>eternal sleep</gl>
-      <gl>kip</gl>
-      <gl>log Z's</gl>
-      <gl>nap</gl>
-      <gl>quietus</gl>
-      <gl>rest</gl>
-      <gl>sleep</gl>
-      <gl>slumber</gl>
-      <gl>sopor</gl>
-      <gl pivot="otherlg">Sleep</gl>
+      <gl pivot="samelg">Have</gl>
    </mel>
    <mel id="wn138">
-      <gl>blistering</gl>
-      <gl>hot</gl>
-      <gl>live</gl>
-      <gl>raging</gl>
-      <gl>red-hot</gl>
-      <gl>spicy</gl>
-      <gl pivot="otherlg">Hot</gl>
+      <gl pivot="samelg">Wild boar</gl>
    </mel>
    <mel id="wn139">
-      <gl>balance</gl>
-      <gl>breathe</gl>
-      <gl>catch one's breath</gl>
-      <gl>ease</gl>
-      <gl>eternal rest</gl>
-      <gl>eternal sleep</gl>
-      <gl>lie</gl>
-      <gl>perch</gl>
-      <gl>pillow</gl>
-      <gl>quietus</gl>
-      <gl>relaxation</gl>
-      <gl>relief</gl>
-      <gl>remain</gl>
-      <gl>remainder</gl>
-      <gl>repose</gl>
-      <gl>reside</gl>
-      <gl>residual</gl>
-      <gl>residue</gl>
-      <gl>residuum</gl>
-      <gl>respite</gl>
-      <gl>rest</gl>
-      <gl>rest period</gl>
-      <gl>roost</gl>
-      <gl>sleep</gl>
-      <gl>stay</gl>
-      <gl>take a breather</gl>
-      <gl pivot="otherlg">Rest</gl>
+      <gl pivot="samelg">Word</gl>
    </mel>
    <mel id="wn140">
-      <gl>non</gl>
-      <gl>not</gl>
-      <gl pivot="otherlg">Not</gl>
+      <gl pivot="samelg">Needle</gl>
    </mel>
    <mel id="wn141">
-      <gl>focalise</gl>
-      <gl>focalize</gl>
-      <gl>focus</gl>
-      <gl>heighten</gl>
-      <gl>point</gl>
-      <gl>sharpen</gl>
-      <gl>taper</gl>
-      <gl pivot="otherlg">Sharpen</gl>
+      <gl pivot="samelg">Shake</gl>
    </mel>
    <mel id="wn142">
-      <gl>bone</gl>
-      <gl>bone up</gl>
-      <gl>cram</gl>
-      <gl>debone</gl>
-      <gl>drum</gl>
-      <gl>get up</gl>
-      <gl>grind away</gl>
-      <gl>ivory</gl>
-      <gl>mug up</gl>
-      <gl>off-white</gl>
-      <gl>os</gl>
-      <gl>osseous tissue</gl>
-      <gl>pearl</gl>
-      <gl>swot</gl>
-      <gl>swot up</gl>
-      <gl pivot="otherlg">Bone</gl>
+      <gl pivot="samelg">Blood</gl>
    </mel>
    <mel id="wn143">
-      <gl>athirst</gl>
-      <gl>hungry</gl>
-      <gl>thirsty</gl>
-      <gl pivot="otherlg">Hungry</gl>
+      <gl pivot="samelg">Bean</gl>
    </mel>
    <mel id="wn144">
-      <gl>ball</gl>
-      <gl>ballock</gl>
-      <gl>bollock</gl>
-      <gl>egg</gl>
-      <gl>eggs</gl>
-      <gl>nut</gl>
-      <gl>orchis</gl>
-      <gl>testicle</gl>
-      <gl>testis</gl>
-      <gl pivot="otherlg">Egg</gl>
+      <gl pivot="samelg">Buttocks</gl>
    </mel>
    <mel id="wn145">
-      <gl>asleep</gl>
-      <gl>benumb</gl>
-      <gl>benumbed</gl>
-      <gl>blunt</gl>
-      <gl>dead</gl>
-      <gl>dull</gl>
-      <gl>numb</gl>
-      <gl pivot="otherlg">Numb</gl>
+      <gl pivot="samelg">Laugh</gl>
    </mel>
    <mel id="wn146">
-      <gl>apprehend</gl>
-      <gl>archeological site</gl>
-      <gl>barb</gl>
-      <gl>compass</gl>
-      <gl>comprehend</gl>
-      <gl>cut into</gl>
-      <gl>delve</gl>
-      <gl>dig</gl>
-      <gl>dig out</gl>
-      <gl>dig up</gl>
-      <gl>digging</gl>
-      <gl>drudge</gl>
-      <gl>excavate</gl>
-      <gl>excavation</gl>
-      <gl>fag</gl>
-      <gl>get the picture</gl>
-      <gl>gibe</gl>
-      <gl>grasp</gl>
-      <gl>grind</gl>
-      <gl>grok</gl>
-      <gl>hollow</gl>
-      <gl>jab</gl>
-      <gl>jibe</gl>
-      <gl>labor</gl>
-      <gl>labour</gl>
-      <gl>moil</gl>
-      <gl>poke</gl>
-      <gl>prod</gl>
-      <gl>savvy</gl>
-      <gl>shaft</gl>
-      <gl>shot</gl>
-      <gl>slam</gl>
-      <gl>stab</gl>
-      <gl>toil</gl>
-      <gl>travail</gl>
-      <gl>turn over</gl>
-      <gl pivot="otherlg">Dig</gl>
+      <gl pivot="samelg">Itch</gl>
    </mel>
    <mel id="wn147">
-      <gl>acquittance</gl>
-      <gl>bring out</gl>
-      <gl>button</gl>
-      <gl>departure</gl>
-      <gl>discharge</gl>
-      <gl>dismissal</gl>
-      <gl>dismission</gl>
-      <gl>eject</gl>
-      <gl>exhaust</gl>
-      <gl>exit</gl>
-      <gl>expel</gl>
-      <gl>expiration</gl>
-      <gl>firing</gl>
-      <gl>free</gl>
-      <gl>freeing</gl>
-      <gl>give up</gl>
-      <gl>going</gl>
-      <gl>handout</gl>
-      <gl>issue</gl>
-      <gl>let go</gl>
-      <gl>let go of</gl>
-      <gl>liberate</gl>
-      <gl>liberation</gl>
-      <gl>loose</gl>
-      <gl>loss</gl>
-      <gl>outlet</gl>
-      <gl>passing</gl>
-      <gl>press release</gl>
-      <gl>publish</gl>
-      <gl>put out</gl>
-      <gl>release</gl>
-      <gl>relinquish</gl>
-      <gl>resign</gl>
-      <gl>sack</gl>
-      <gl>sacking</gl>
-      <gl>secrete</gl>
-      <gl>spill</gl>
-      <gl>spillage</gl>
-      <gl>tone ending</gl>
-      <gl>turn</gl>
-      <gl>unblock</gl>
-      <gl>unfreeze</gl>
-      <gl>unloose</gl>
-      <gl>unloosen</gl>
-      <gl>vent</gl>
-      <gl>waiver</gl>
-      <gl pivot="otherlg">Release</gl>
+      <gl pivot="samelg">New</gl>
    </mel>
    <mel id="wn148">
-      <gl>carve up</gl>
-      <gl>dissever</gl>
-      <gl>disunite</gl>
-      <gl>divide</gl>
-      <gl>fraction</gl>
-      <gl>part</gl>
-      <gl>separate</gl>
-      <gl>split</gl>
-      <gl>split up</gl>
-      <gl>water parting</gl>
-      <gl>watershed</gl>
-      <gl pivot="otherlg">Divide</gl>
+      <gl pivot="samelg">Pull</gl>
    </mel>
    <mel id="wn149">
-      <gl>French horn</gl>
-      <gl>automobile horn</gl>
-      <gl>car horn</gl>
-      <gl>cornet</gl>
-      <gl>hooter</gl>
-      <gl>horn</gl>
-      <gl>motor horn</gl>
-      <gl>saddle horn</gl>
-      <gl>trump</gl>
-      <gl>trumpet</gl>
-      <gl>tusk</gl>
-      <gl pivot="otherlg">Horn</gl>
+      <gl pivot="samelg">Dog</gl>
    </mel>
    <mel id="wn150">
-      <gl>Einstein</gl>
-      <gl>brain</gl>
-      <gl>brainiac</gl>
-      <gl>brainpower</gl>
-      <gl>encephalon</gl>
-      <gl>genius</gl>
-      <gl>head</gl>
-      <gl>learning ability</gl>
-      <gl>mastermind</gl>
-      <gl>mental capacity</gl>
-      <gl>mentality</gl>
-      <gl>mind</gl>
-      <gl>nous</gl>
-      <gl>psyche</gl>
-      <gl>wit</gl>
-      <gl pivot="otherlg">Brain</gl>
+      <gl pivot="samelg">Come</gl>
    </mel>
    <mel id="wn151">
-      <gl>interweave</gl>
-      <gl>meander</gl>
-      <gl>thread</gl>
-      <gl>tissue</gl>
-      <gl>wander</gl>
-      <gl>waver</gl>
-      <gl>weave</gl>
-      <gl>wind</gl>
-      <gl pivot="otherlg">Weave</gl>
+      <gl pivot="samelg">exist</gl>
    </mel>
    <mel id="wn152">
-      <gl>Henry Sweet</gl>
-      <gl pivot="samelg">Sweet</gl>
-      <gl>afters</gl>
-      <gl>angelic</gl>
-      <gl>angelical</gl>
-      <gl>cherubic</gl>
-      <gl>confection</gl>
-      <gl>dessert</gl>
-      <gl>dulcet</gl>
-      <gl>fresh</gl>
-      <gl>gratifying</gl>
-      <gl>honeyed</gl>
-      <gl>mellifluous</gl>
-      <gl>mellisonant</gl>
-      <gl>odoriferous</gl>
-      <gl>odorous</gl>
-      <gl>perfumed</gl>
-      <gl>scented</gl>
-      <gl>seraphic</gl>
-      <gl>sugared</gl>
-      <gl>sugariness</gl>
-      <gl>sweet</gl>
-      <gl>sweet-flavored</gl>
-      <gl>sweet-scented</gl>
-      <gl>sweet-smelling</gl>
-      <gl>sweetened</gl>
-      <gl>sweetly</gl>
-      <gl>sweetness</gl>
-      <gl>unfermented</gl>
+      <gl pivot="samelg">Shoot</gl>
    </mel>
    <mel id="wn153">
-      <gl>arm</gl>
-      <gl>branch</gl>
-      <gl>fork</gl>
-      <gl>furcate</gl>
-      <gl>leg</gl>
-      <gl>limb</gl>
-      <gl>offset</gl>
-      <gl>offshoot</gl>
-      <gl>outgrowth</gl>
-      <gl>ramification</gl>
-      <gl>ramify</gl>
-      <gl>separate</gl>
-      <gl>subdivision</gl>
-      <gl pivot="otherlg">Branch</gl>
+      <gl pivot="samelg">Die</gl>
    </mel>
    <mel id="wn154">
-      <gl>becloud</gl>
-      <gl>befog</gl>
-      <gl>cloud</gl>
-      <gl>daze</gl>
-      <gl>fog</gl>
-      <gl>fogginess</gl>
-      <gl>haze</gl>
-      <gl>haze over</gl>
-      <gl>mist</gl>
-      <gl>murk</gl>
-      <gl>murkiness</gl>
-      <gl>obnubilate</gl>
-      <gl>obscure</gl>
-      <gl pivot="otherlg">Fog</gl>
+      <gl pivot="samelg">Nest</gl>
    </mel>
    <mel id="wn155">
-      <gl>articulatio cubiti</gl>
-      <gl>cubital joint</gl>
-      <gl>cubitus</gl>
-      <gl>elbow</gl>
-      <gl>elbow joint</gl>
-      <gl>human elbow</gl>
-      <gl pivot="otherlg">Elbow</gl>
+      <gl pivot="samelg">Soft</gl>
    </mel>
    <mel id="wn156">
-      <gl>WHO</gl>
-      <gl>World Health Organization</gl>
-      <gl pivot="otherlg">Who</gl>
+      <gl pivot="samelg">Red</gl>
    </mel>
    <mel id="wn157">
-      <gl>appear</gl>
-      <gl>aspect</gl>
-      <gl>attend</gl>
-      <gl>await</gl>
-      <gl>bet</gl>
-      <gl>calculate</gl>
-      <gl>count</gl>
-      <gl>depend</gl>
-      <gl>expect</gl>
-      <gl>expression</gl>
-      <gl>face</gl>
-      <gl>facial expression</gl>
-      <gl>feel</gl>
-      <gl>feeling</gl>
-      <gl>flavor</gl>
-      <gl>flavour</gl>
-      <gl>front</gl>
-      <gl>look</gl>
-      <gl>looking</gl>
-      <gl>looking at</gl>
-      <gl>reckon</gl>
-      <gl>search</gl>
-      <gl>see</gl>
-      <gl>seem</gl>
-      <gl>smell</gl>
-      <gl>spirit</gl>
-      <gl>take care</gl>
-      <gl>tone</gl>
-      <gl>wait</gl>
-      <gl pivot="otherlg">Look</gl>
+      <gl pivot="samelg">Thick</gl>
    </mel>
    <mel id="wn158">
-      <gl>aspect</gl>
-      <gl>boldness</gl>
-      <gl>brass</gl>
-      <gl>case</gl>
-      <gl>cheek</gl>
-      <gl>confront</gl>
-      <gl>expression</gl>
-      <gl>face</gl>
-      <gl>face up</gl>
-      <gl>facial expression</gl>
-      <gl>font</gl>
-      <gl>fount</gl>
-      <gl>front</gl>
-      <gl>grimace</gl>
-      <gl>human face</gl>
-      <gl>look</gl>
-      <gl>nerve</gl>
-      <gl>present</gl>
-      <gl>side</gl>
-      <gl>typeface</gl>
-      <gl pivot="otherlg">Face</gl>
+      <gl pivot="samelg">Wind</gl>
    </mel>
    <mel id="wn159">
-      <gl>24-hour interval</gl>
-      <gl>Clarence Day</gl>
-      <gl>Clarence Shepard Day Jr.</gl>
-      <gl pivot="samelg">Day</gl>
-      <gl>day</gl>
-      <gl>daylight</gl>
-      <gl>daytime</gl>
-      <gl>mean solar day</gl>
-      <gl>sidereal day</gl>
-      <gl>solar day</gl>
-      <gl>twenty-four hour period</gl>
-      <gl>twenty-four hours</gl>
+      <gl pivot="samelg">Rat</gl>
    </mel>
    <mel id="wn160">
-      <gl>bridge</gl>
-      <gl>bridge circuit</gl>
-      <gl>bridge deck</gl>
-      <gl>bridge over</gl>
-      <gl>bridgework</gl>
-      <gl>nosepiece</gl>
-      <gl>span</gl>
-      <gl pivot="otherlg">Bridge</gl>
+      <gl pivot="samelg">Boil</gl>
    </mel>
    <mel id="wn161">
-      <gl>abrasion</gl>
-      <gl>boodle</gl>
-      <gl>bread</gl>
-      <gl>cabbage</gl>
-      <gl>cacography</gl>
-      <gl>call off</gl>
-      <gl>cancel</gl>
-      <gl>chafe</gl>
-      <gl>chicken feed</gl>
-      <gl>clams</gl>
-      <gl>come up</gl>
-      <gl>dent</gl>
-      <gl>dinero</gl>
-      <gl>dough</gl>
-      <gl>engrave</gl>
-      <gl>excise</gl>
-      <gl>excoriation</gl>
-      <gl>expunge</gl>
-      <gl>fray</gl>
-      <gl>fret</gl>
-      <gl>gelt</gl>
-      <gl>grave</gl>
-      <gl>incision</gl>
-      <gl>inscribe</gl>
-      <gl>itch</gl>
-      <gl>kale</gl>
-      <gl>lettuce</gl>
-      <gl>lolly</gl>
-      <gl>loot</gl>
-      <gl>lucre</gl>
-      <gl>mark</gl>
-      <gl>moolah</gl>
-      <gl>pelf</gl>
-      <gl>prick</gl>
-      <gl>rub</gl>
-      <gl>scar</gl>
-      <gl>scrape</gl>
-      <gl>scrape up</gl>
-      <gl>scraping</gl>
-      <gl pivot="samelg">scratch</gl>
-      <gl>scratch line</gl>
-      <gl>scratch up</gl>
-      <gl>scratching</gl>
-      <gl>scrawl</gl>
-      <gl>scribble</gl>
-      <gl>scrub</gl>
-      <gl>shekels</gl>
-      <gl>simoleons</gl>
-      <gl>slit</gl>
-      <gl>start</gl>
-      <gl>starting line</gl>
-      <gl>strike</gl>
-      <gl>sugar</gl>
-      <gl>wampum</gl>
+      <gl pivot="samelg">Drink</gl>
    </mel>
    <mel id="wn162">
-      <gl>Gaul</gl>
-      <gl>anuran</gl>
-      <gl>batrachian</gl>
-      <gl>frog</gl>
-      <gl>salientian</gl>
-      <gl>toad</gl>
-      <gl>toad frog</gl>
-      <gl pivot="otherlg">Frog</gl>
+      <gl pivot="samelg">Nine</gl>
    </mel>
    <mel id="wn163">
-      <gl>Adam</gl>
-      <gl>X</gl>
-      <gl>XTC</gl>
-      <gl>become</gl>
-      <gl>belong</gl>
-      <gl>blend</gl>
-      <gl>blend in</gl>
-      <gl>break</gl>
-      <gl>break down</gl>
-      <gl>buy the farm</gl>
-      <gl>cash in one's chips</gl>
-      <gl>choke</gl>
-      <gl>conk</gl>
-      <gl>conk out</gl>
-      <gl>crack</gl>
-      <gl>cristal</gl>
-      <gl>croak</gl>
-      <gl>decease</gl>
-      <gl>depart</gl>
-      <gl>die</gl>
-      <gl>disco biscuit</gl>
-      <gl>drop dead</gl>
-      <gl>ecstasy</gl>
-      <gl>endure</gl>
-      <gl>exit</gl>
-      <gl>expire</gl>
-      <gl>extend</gl>
-      <gl>fail</gl>
-      <gl>fit</gl>
-      <gl>fling</gl>
-      <gl>function</gl>
-      <gl>get</gl>
-      <gl>get going</gl>
-      <gl>give out</gl>
-      <gl>give way</gl>
-      <gl>give-up the ghost</gl>
-      <gl>go</gl>
-      <gl>go away</gl>
-      <gl>go bad</gl>
-      <gl>go game</gl>
-      <gl>hold out</gl>
-      <gl>hold up</gl>
-      <gl>hug drug</gl>
-      <gl>kick the bucket</gl>
-      <gl>last</gl>
-      <gl>lead</gl>
-      <gl>live</gl>
-      <gl>live on</gl>
-      <gl>locomote</gl>
-      <gl>move</gl>
-      <gl>offer</gl>
-      <gl>operate</gl>
-      <gl>pass</gl>
-      <gl>pass away</gl>
-      <gl>perish</gl>
-      <gl>plump</gl>
-      <gl>pop off</gl>
-      <gl>proceed</gl>
-      <gl>rifle</gl>
-      <gl>run</gl>
-      <gl>run low</gl>
-      <gl>run short</gl>
-      <gl>snuff it</gl>
-      <gl>sound</gl>
-      <gl>spell</gl>
-      <gl>start</gl>
-      <gl>survive</gl>
-      <gl>tour</gl>
-      <gl>travel</gl>
-      <gl>turn</gl>
-      <gl>whirl</gl>
-      <gl>work</gl>
-      <gl pivot="otherlg">Go</gl>
+      <gl pivot="samelg">Afraid</gl>
    </mel>
    <mel id="wn164">
-      <gl>apply</gl>
-      <gl>consumption</gl>
-      <gl>economic consumption</gl>
-      <gl>employ</gl>
-      <gl>employment</gl>
-      <gl>enjoyment</gl>
-      <gl>exercise</gl>
-      <gl>expend</gl>
-      <gl>function</gl>
-      <gl>habit</gl>
-      <gl>habituate</gl>
-      <gl>manipulation</gl>
-      <gl>practice</gl>
-      <gl>purpose</gl>
-      <gl>role</gl>
-      <gl>usage</gl>
-      <gl>usance</gl>
-      <gl>use</gl>
-      <gl>use of goods and services</gl>
-      <gl>utilisation</gl>
-      <gl>utilise</gl>
-      <gl>utilization</gl>
-      <gl>utilize</gl>
-      <gl pivot="otherlg">Use</gl>
+      <gl pivot="samelg">Bee</gl>
    </mel>
    <mel id="wn165">
-      <gl>elephant</gl>
-      <gl pivot="otherlg">Elephant</gl>
+      <gl pivot="samelg">Come out</gl>
    </mel>
    <mel id="wn166">
-      <gl>dethaw</gl>
-      <gl>disappear</gl>
-      <gl>dissolve</gl>
-      <gl>evaporate</gl>
-      <gl>fade</gl>
-      <gl>meld</gl>
-      <gl>mellow</gl>
-      <gl>mellow out</gl>
-      <gl>melt</gl>
-      <gl>melt down</gl>
-      <gl>melting</gl>
-      <gl>run</gl>
-      <gl>thaw</gl>
-      <gl>thawing</gl>
-      <gl>unfreeze</gl>
-      <gl>unthaw</gl>
-      <gl pivot="otherlg">Melt</gl>
+      <gl pivot="samelg">Sharpen</gl>
    </mel>
    <mel id="wn167">
-      <gl>argue</gl>
-      <gl>contend</gl>
-      <gl>debate</gl>
-      <gl>fence</gl>
-      <gl>fence in</gl>
-      <gl>fencing</gl>
-      <gl>palisade</gl>
-      <gl>surround</gl>
-      <gl>wall</gl>
-      <gl pivot="otherlg">Fence</gl>
+      <gl pivot="samelg">Sell</gl>
    </mel>
    <mel id="wn168">
-      <gl>box</gl>
-      <gl>box seat</gl>
-      <gl>boxful</gl>
-      <gl>boxwood</gl>
-      <gl>corner</gl>
-      <gl>loge</gl>
-      <gl>package</gl>
-      <gl pivot="otherlg">Box</gl>
+      <gl pivot="samelg">Deep</gl>
    </mel>
    <mel id="wn169">
-      <gl>baby</gl>
-      <gl>child</gl>
-      <gl>fry</gl>
-      <gl>kid</gl>
-      <gl>minor</gl>
-      <gl>nestling</gl>
-      <gl>nipper</gl>
-      <gl>shaver</gl>
-      <gl>small fry</gl>
-      <gl>tiddler</gl>
-      <gl>tike</gl>
-      <gl>tyke</gl>
-      <gl>youngster</gl>
-      <gl pivot="otherlg">Child</gl>
+      <gl pivot="samelg">Sew</gl>
    </mel>
    <mel id="wn170">
-      <gl>brace</gl>
-      <gl>copulate</gl>
-      <gl>couple</gl>
-      <gl>couplet</gl>
-      <gl>distich</gl>
-      <gl>duad</gl>
-      <gl>duet</gl>
-      <gl>duo</gl>
-      <gl>dyad</gl>
-      <gl>geminate</gl>
-      <gl>match</gl>
-      <gl>mate</gl>
-      <gl>pair</gl>
-      <gl>pair off</gl>
-      <gl>partner off</gl>
-      <gl>span</gl>
-      <gl>twain</gl>
-      <gl>twin</gl>
-      <gl>twosome</gl>
-      <gl>yoke</gl>
-      <gl pivot="otherlg">Pair</gl>
+      <gl pivot="samelg">Hand</gl>
    </mel>
    <mel id="wn171">
-      <gl>fuzz</gl>
-      <gl>hair</gl>
-      <gl>hair's-breadth</gl>
-      <gl>haircloth</gl>
-      <gl>hairsbreadth</gl>
-      <gl>pilus</gl>
-      <gl>tomentum</gl>
-      <gl>whisker</gl>
-      <gl pivot="otherlg">Hair</gl>
+      <gl pivot="samelg">Dike</gl>
    </mel>
    <mel id="wn172">
-      <gl>Pb</gl>
-      <gl>atomic number 82</gl>
-      <gl>booster cable</gl>
-      <gl>chair</gl>
-      <gl>conduce</gl>
-      <gl>conduct</gl>
-      <gl>confidential information</gl>
-      <gl>contribute</gl>
-      <gl>direct</gl>
-      <gl>extend</gl>
-      <gl>go</gl>
-      <gl>guide</gl>
-      <gl>head</gl>
-      <gl>hint</gl>
-      <gl>jumper cable</gl>
-      <gl>jumper lead</gl>
-      <gl>lead</gl>
-      <gl>lead story</gl>
-      <gl>lead-in</gl>
-      <gl>leading</gl>
-      <gl>leash</gl>
-      <gl>leave</gl>
-      <gl>lede</gl>
-      <gl>moderate</gl>
-      <gl>pass</gl>
-      <gl>pencil lead</gl>
-      <gl>precede</gl>
-      <gl>principal</gl>
-      <gl>result</gl>
-      <gl>run</gl>
-      <gl>spark advance</gl>
-      <gl>star</gl>
-      <gl>steer</gl>
-      <gl>take</gl>
-      <gl>tether</gl>
-      <gl>tip</gl>
-      <gl>top</gl>
-      <gl>track</gl>
-      <gl>trail</gl>
-      <gl>wind</gl>
-      <gl pivot="otherlg">Lead</gl>
+      <gl pivot="samelg">Egg</gl>
    </mel>
    <mel id="wn173">
-      <gl>Andrew D. White</gl>
-      <gl>Andrew Dickson White</gl>
-      <gl>Caucasian</gl>
-      <gl>E. B. White</gl>
-      <gl>Edward D. White</gl>
-      <gl>Edward Douglas White Jr.</gl>
-      <gl>Edward White</gl>
-      <gl>Elwyn Brooks White</gl>
-      <gl>Patrick Victor Martindale White</gl>
-      <gl>Patrick White</gl>
-      <gl>Stanford White</gl>
-      <gl>T. H. White</gl>
-      <gl>Theodore Harold White</gl>
-      <gl pivot="samelg">White</gl>
-      <gl>White River</gl>
-      <gl>White person</gl>
-      <gl>albumen</gl>
-      <gl>ashen</gl>
-      <gl>blanched</gl>
-      <gl>blank</gl>
-      <gl>bloodless</gl>
-      <gl>clean</gl>
-      <gl>egg white</gl>
-      <gl>flannel</gl>
-      <gl>gabardine</gl>
-      <gl>lily-white</gl>
-      <gl>livid</gl>
-      <gl>ovalbumin</gl>
-      <gl>snowy</gl>
-      <gl>tweed</gl>
-      <gl>white</gl>
-      <gl>white-hot</gl>
-      <gl>whiten</gl>
-      <gl>whitened</gl>
-      <gl>whiteness</gl>
+      <gl pivot="samelg">Frog</gl>
    </mel>
    <mel id="wn174">
-      <gl>cockscomb</gl>
-      <gl>comb</gl>
-      <gl>comb out</gl>
-      <gl>combing</gl>
-      <gl>coxcomb</gl>
-      <gl>disentangle</gl>
-      <gl>ransack</gl>
-      <gl pivot="otherlg">Comb</gl>
+      <gl pivot="samelg">Connect</gl>
    </mel>
    <mel id="wn175">
-      <gl>annihilate</gl>
-      <gl>blow out</gl>
-      <gl>carry off</gl>
-      <gl>crush out</gl>
-      <gl>decimate</gl>
-      <gl>do away with</gl>
-      <gl>eliminate</gl>
-      <gl>eradicate</gl>
-      <gl>extinguish</gl>
-      <gl>get rid of</gl>
-      <gl>press out</gl>
-      <gl>quench</gl>
-      <gl>snuff out</gl>
-      <gl>stub out</gl>
-      <gl>wipe out</gl>
-      <gl pivot="otherlg">Extinguish</gl>
+      <gl pivot="samelg">Area</gl>
    </mel>
    <mel id="wn176">
-      <gl>4</gl>
-      <gl>IV</gl>
-      <gl>Little Joe</gl>
-      <gl>four</gl>
-      <gl>four-spot</gl>
-      <gl>foursome</gl>
-      <gl>iv</gl>
-      <gl>quadruplet</gl>
-      <gl>quartet</gl>
-      <gl>quatern</gl>
-      <gl>quaternary</gl>
-      <gl>quaternion</gl>
-      <gl>quaternity</gl>
-      <gl>tetrad</gl>
-      <gl pivot="otherlg">Four</gl>
+      <gl pivot="samelg">Snake</gl>
    </mel>
    <mel id="wn177">
-      <gl>agitate</gl>
-      <gl>didder</gl>
-      <gl>escape from</gl>
-      <gl>excite</gl>
-      <gl>handclasp</gl>
-      <gl>handshake</gl>
-      <gl>handshaking</gl>
-      <gl>judder</gl>
-      <gl>milk shake</gl>
-      <gl>milkshake</gl>
-      <gl>rock</gl>
-      <gl>shake</gl>
-      <gl>shake off</gl>
-      <gl>shake up</gl>
-      <gl>shingle</gl>
-      <gl>shiver</gl>
-      <gl>stimulate</gl>
-      <gl>stir</gl>
-      <gl>sway</gl>
-      <gl>throw off</gl>
-      <gl>tremble</gl>
-      <gl>trill</gl>
-      <gl>wag</gl>
-      <gl>waggle</gl>
-      <gl pivot="otherlg">Shake</gl>
+      <gl pivot="samelg">Seven</gl>
    </mel>
    <mel id="wn178">
-      <gl>blast</gl>
-      <gl>bourgeon</gl>
-      <gl>buck</gl>
-      <gl>burgeon forth</gl>
-      <gl>charge</gl>
-      <gl>dart</gl>
-      <gl>dash</gl>
-      <gl>dissipate</gl>
-      <gl>film</gl>
-      <gl>flash</gl>
-      <gl>fool</gl>
-      <gl>fool away</gl>
-      <gl>fritter</gl>
-      <gl>fritter away</gl>
-      <gl>frivol away</gl>
-      <gl>germinate</gl>
-      <gl>hit</gl>
-      <gl>inject</gl>
-      <gl>photograph</gl>
-      <gl>pip</gl>
-      <gl>pullulate</gl>
-      <gl>scoot</gl>
-      <gl>scud</gl>
-      <gl>shoot</gl>
-      <gl>shoot down</gl>
-      <gl>snap</gl>
-      <gl>sprout</gl>
-      <gl>spud</gl>
-      <gl>take</gl>
-      <gl>tear</gl>
-      <gl pivot="otherlg">Shoot</gl>
+      <gl pivot="samelg">Ashes</gl>
    </mel>
    <mel id="wn179">
-      <gl>otter</gl>
-      <gl pivot="otherlg">Otter</gl>
+      <gl pivot="samelg">Tiger</gl>
    </mel>
    <mel id="wn180">
-      <gl>digit</gl>
-      <gl>feel</gl>
-      <gl>finger</gl>
-      <gl>finger's breadth</gl>
-      <gl>fingerbreadth</gl>
-      <gl>thumb</gl>
-      <gl pivot="otherlg">Finger</gl>
+      <gl pivot="samelg">Sink</gl>
    </mel>
    <mel id="wn181">
-      <gl pivot="samelg">Black</gl>
-      <gl>Black person</gl>
-      <gl>Joseph Black</gl>
-      <gl>Negro</gl>
-      <gl>Negroid</gl>
-      <gl>Shirley Temple</gl>
-      <gl>Shirley Temple Black</gl>
-      <gl>black</gl>
-      <gl>black-market</gl>
-      <gl>blackamoor</gl>
-      <gl>blacken</gl>
-      <gl>blackened</gl>
-      <gl>blackness</gl>
-      <gl>bleak</gl>
-      <gl>bootleg</gl>
-      <gl>calamitous</gl>
-      <gl>contraband</gl>
-      <gl>dark</gl>
-      <gl>dim</gl>
-      <gl>disastrous</gl>
-      <gl>disgraceful</gl>
-      <gl>fatal</gl>
-      <gl>fateful</gl>
-      <gl>grim</gl>
-      <gl>ignominious</gl>
-      <gl>inglorious</gl>
-      <gl>inkiness</gl>
-      <gl>lightlessness</gl>
-      <gl>melanise</gl>
-      <gl>melanize</gl>
-      <gl>mordant</gl>
-      <gl>nigrify</gl>
-      <gl>opprobrious</gl>
-      <gl>pitch blackness</gl>
-      <gl>pitch-black</gl>
-      <gl>pitch-dark</gl>
-      <gl>shameful</gl>
-      <gl>sinister</gl>
-      <gl>smuggled</gl>
-      <gl>smutty</gl>
-      <gl>total darkness</gl>
+      <gl pivot="samelg">Daughter-in-law</gl>
    </mel>
    <mel id="wn182">
-      <gl>bird louse</gl>
-      <gl>biting louse</gl>
-      <gl>dirt ball</gl>
-      <gl>insect</gl>
-      <gl>louse</gl>
-      <gl>plant louse</gl>
-      <gl>sucking louse</gl>
-      <gl>worm</gl>
-      <gl pivot="otherlg">Lice</gl>
+      <gl pivot="samelg">Strength</gl>
    </mel>
    <mel id="wn183">
-      <gl pivot="samelg">Fish</gl>
-      <gl>Pisces</gl>
-      <gl>Pisces the Fishes</gl>
-      <gl>angle</gl>
-      <gl>fish</gl>
+      <gl pivot="samelg">Alive</gl>
    </mel>
    <mel id="wn184">
-      <gl>goiter</gl>
-      <gl>goitre</gl>
-      <gl>struma</gl>
-      <gl>thyromegaly</gl>
-      <gl pivot="otherlg">Goiter</gl>
+      <gl pivot="samelg">Shan</gl>
    </mel>
    <mel id="wn185">
-      <gl>sandal</gl>
-      <gl pivot="otherlg">Sandals</gl>
+      <gl pivot="samelg">Hole</gl>
    </mel>
    <mel id="wn186">
-      <gl>early</gl>
-      <gl>former</gl>
-      <gl>other</gl>
-      <gl pivot="otherlg">Other</gl>
+      <gl pivot="samelg">Fry</gl>
    </mel>
    <mel id="wn187">
-      <gl>betray</gl>
-      <gl>betrayer</gl>
-      <gl>blabber</gl>
-      <gl>blackleg</gl>
-      <gl>bum</gl>
-      <gl>crumb</gl>
-      <gl>denounce</gl>
-      <gl>dirty dog</gl>
-      <gl>fink</gl>
-      <gl>git</gl>
-      <gl>give away</gl>
-      <gl>grass</gl>
-      <gl>informer</gl>
-      <gl>lowlife</gl>
-      <gl>puke</gl>
-      <gl>rat</gl>
-      <gl>rotter</gl>
-      <gl>scab</gl>
-      <gl>scum bag</gl>
-      <gl>shit</gl>
-      <gl>shop</gl>
-      <gl>skunk</gl>
-      <gl>snitch</gl>
-      <gl>so-and-so</gl>
-      <gl>squealer</gl>
-      <gl>stag</gl>
-      <gl>stinker</gl>
-      <gl>stinkpot</gl>
-      <gl>strikebreaker</gl>
-      <gl>tell on</gl>
-      <gl pivot="otherlg">Rat</gl>
+      <gl pivot="samelg">Fool</gl>
    </mel>
    <mel id="wn188">
-      <gl>deficiency</gl>
-      <gl>deprivation</gl>
-      <gl>desire</gl>
-      <gl>lack</gl>
-      <gl>need</gl>
-      <gl>neediness</gl>
-      <gl>privation</gl>
-      <gl>require</gl>
-      <gl>want</gl>
-      <gl>wish</gl>
-      <gl>wishing</gl>
-      <gl pivot="otherlg">Want</gl>
+      <gl pivot="samelg">Still</gl>
    </mel>
    <mel id="wn189">
-      <gl>bowl</gl>
-      <gl>gutter</gl>
-      <gl>manger</gl>
-      <gl>public treasury</gl>
-      <gl>till</gl>
-      <gl>trough</gl>
-      <gl pivot="otherlg">Trough</gl>
+      <gl pivot="samelg">Box</gl>
    </mel>
    <mel id="wn190">
-      <gl>affectionate</gl>
-      <gl>ardent</gl>
-      <gl>fond</gl>
-      <gl>lovesome</gl>
-      <gl>quick</gl>
-      <gl>strong</gl>
-      <gl>tender</gl>
-      <gl>warm</gl>
-      <gl>warm up</gl>
-      <gl>warmly</gl>
-      <gl pivot="otherlg">Warm</gl>
+      <gl pivot="samelg">Pig</gl>
    </mel>
    <mel id="wn191">
-      <gl>sheep</gl>
-      <gl pivot="otherlg">Sheep</gl>
+      <gl pivot="samelg">Crooked</gl>
    </mel>
    <mel id="wn192">
-      <gl>crappy</gl>
-      <gl>decayed</gl>
-      <gl>icky</gl>
-      <gl>lousy</gl>
-      <gl>rotted</gl>
-      <gl>rotten</gl>
-      <gl>shitty</gl>
-      <gl>stinking</gl>
-      <gl>stinky</gl>
-      <gl pivot="otherlg">Rotten</gl>
+      <gl pivot="samelg">Wash</gl>
    </mel>
    <mel id="wn193">
-      <gl>Eden</gl>
-      <gl pivot="samelg">Heaven</gl>
-      <gl>Shangri-la</gl>
-      <gl>heaven</gl>
-      <gl>nirvana</gl>
-      <gl>paradise</gl>
-      <gl>promised land</gl>
+      <gl pivot="samelg">Mother</gl>
    </mel>
    <mel id="wn194">
-      <gl>abide</gl>
-      <gl>accept</gl>
-      <gl>acquit</gl>
-      <gl>assume</gl>
-      <gl>bear</gl>
-      <gl>behave</gl>
-      <gl>birth</gl>
-      <gl>brook</gl>
-      <gl>carry</gl>
-      <gl>comport</gl>
-      <gl>conduct</gl>
-      <gl>contain</gl>
-      <gl>deliver</gl>
-      <gl>deport</gl>
-      <gl>digest</gl>
-      <gl>endure</gl>
-      <gl>expect</gl>
-      <gl>gestate</gl>
-      <gl>give birth</gl>
-      <gl>have</gl>
-      <gl>have a bun in the oven</gl>
-      <gl>hold</gl>
-      <gl>pay</gl>
-      <gl>put up</gl>
-      <gl>stand</gl>
-      <gl>stick out</gl>
-      <gl>stomach</gl>
-      <gl>suffer</gl>
-      <gl>support</gl>
-      <gl>take over</gl>
-      <gl>tolerate</gl>
-      <gl>turn out</gl>
-      <gl>wear</gl>
-      <gl>yield</gl>
-      <gl pivot="otherlg">Bear</gl>
+      <gl pivot="samelg">Black</gl>
    </mel>
    <mel id="wn195">
-      <gl>effort</gl>
-      <gl>elbow grease</gl>
-      <gl>exertion</gl>
-      <gl>fret</gl>
-      <gl>lather</gl>
-      <gl>perspiration</gl>
-      <gl>perspire</gl>
-      <gl>stew</gl>
-      <gl>sudate</gl>
-      <gl>sudor</gl>
-      <gl>sweat</gl>
-      <gl>swither</gl>
-      <gl>travail</gl>
-      <gl pivot="otherlg">Sweat</gl>
+      <gl pivot="samelg">Rice</gl>
    </mel>
    <mel id="wn196">
-      <gl>Sus scrofa</gl>
-      <gl>boar</gl>
-      <gl>wild boar</gl>
-      <gl pivot="otherlg">Wild boar</gl>
+      <gl pivot="samelg">Hear</gl>
    </mel>
    <mel id="wn197">
-      <gl>administration</gl>
-      <gl>boldness</gl>
-      <gl>brass</gl>
-      <gl>brass instrument</gl>
-      <gl>brass section</gl>
-      <gl>cheek</gl>
-      <gl>establishment</gl>
-      <gl>face</gl>
-      <gl>governance</gl>
-      <gl>governing body</gl>
-      <gl>memorial tablet</gl>
-      <gl>nerve</gl>
-      <gl>organisation</gl>
-      <gl>organization</gl>
-      <gl>plaque</gl>
-      <gl pivot="otherlg">Brass</gl>
+      <gl pivot="samelg">Kill</gl>
    </mel>
    <mel id="wn198">
-      <gl>bridge player</gl>
-      <gl>deal</gl>
-      <gl>give</gl>
-      <gl>hand</gl>
-      <gl>handwriting</gl>
-      <gl>helping hand</gl>
-      <gl>hired hand</gl>
-      <gl>hired man</gl>
-      <gl>manus</gl>
-      <gl>mitt</gl>
-      <gl>pass</gl>
-      <gl>pass on</gl>
-      <gl>paw</gl>
-      <gl>reach</gl>
-      <gl>script</gl>
-      <gl>turn over</gl>
-      <gl pivot="otherlg">Hand</gl>
+      <gl pivot="samelg">Hungry</gl>
    </mel>
    <mel id="wn199">
-      <gl>arse around</gl>
-      <gl>befool</gl>
-      <gl>chump</gl>
-      <gl>cod</gl>
-      <gl>dissipate</gl>
-      <gl>dupe</gl>
-      <gl>fall guy</gl>
-      <gl>fool</gl>
-      <gl>fool around</gl>
-      <gl>fool away</gl>
-      <gl>fritter</gl>
-      <gl>fritter away</gl>
-      <gl>frivol away</gl>
-      <gl>gull</gl>
-      <gl>horse around</gl>
-      <gl>jester</gl>
-      <gl>mark</gl>
-      <gl>motley fool</gl>
-      <gl>mug</gl>
-      <gl>muggins</gl>
-      <gl>patsy</gl>
-      <gl>put on</gl>
-      <gl>put one across</gl>
-      <gl>put one over</gl>
-      <gl>sap</gl>
-      <gl>saphead</gl>
-      <gl>shoot</gl>
-      <gl>slang</gl>
-      <gl>soft touch</gl>
-      <gl>sucker</gl>
-      <gl>take in</gl>
-      <gl>tomfool</gl>
-      <gl pivot="otherlg">Fool</gl>
+      <gl pivot="samelg">Otter</gl>
    </mel>
    <mel id="wn200">
-      <gl>run up</gl>
-      <gl>sew</gl>
-      <gl>sew together</gl>
-      <gl>stitch</gl>
-      <gl>tailor</gl>
-      <gl>tailor-make</gl>
-      <gl pivot="otherlg">Sew</gl>
+      <gl pivot="samelg">Owner</gl>
    </mel>
    <mel id="wn201">
-      <gl>ascend</gl>
-      <gl>climb</gl>
-      <gl>climb up</gl>
-      <gl>go up</gl>
-      <gl>jump</gl>
-      <gl>mount</gl>
-      <gl>rise</gl>
-      <gl pivot="otherlg">Climb up</gl>
+      <gl pivot="samelg">River</gl>
    </mel>
    <mel id="wn202">
-      <gl>address</gl>
-      <gl>cover</gl>
-      <gl>deal</gl>
-      <gl>handle</gl>
-      <gl>plough</gl>
-      <gl>plow</gl>
-      <gl>treat</gl>
-      <gl>turn</gl>
-      <gl pivot="otherlg">Plow</gl>
+      <gl pivot="samelg">Rope</gl>
    </mel>
    <mel id="wn203">
-      <gl>arse</gl>
-      <gl>ass</gl>
-      <gl>backside</gl>
-      <gl>behind</gl>
-      <gl>bottom</gl>
-      <gl>bum</gl>
-      <gl>buns</gl>
-      <gl>butt</gl>
-      <gl>buttock</gl>
-      <gl>buttocks</gl>
-      <gl>can</gl>
-      <gl>cheek</gl>
-      <gl>derriere</gl>
-      <gl>fanny</gl>
-      <gl>fundament</gl>
-      <gl>hind end</gl>
-      <gl>hindquarters</gl>
-      <gl>keister</gl>
-      <gl>nates</gl>
-      <gl>posterior</gl>
-      <gl>prat</gl>
-      <gl>rear</gl>
-      <gl>rear end</gl>
-      <gl>rump</gl>
-      <gl>seat</gl>
-      <gl>stern</gl>
-      <gl>tail</gl>
-      <gl>tail end</gl>
-      <gl>tooshie</gl>
-      <gl>tush</gl>
-      <gl pivot="otherlg">Buttocks</gl>
+      <gl pivot="samelg">Call out</gl>
    </mel>
    <mel id="wn204">
-      <gl>class</gl>
-      <gl>twelvemonth</gl>
-      <gl>year</gl>
-      <gl>yr</gl>
-      <gl pivot="otherlg">Year</gl>
+      <gl pivot="samelg">Old</gl>
    </mel>
    <mel id="wn205">
-      <gl>attract</gl>
-      <gl>clout</gl>
-      <gl>commit</gl>
-      <gl>deplumate</gl>
-      <gl>deplume</gl>
-      <gl>displume</gl>
-      <gl>drag</gl>
-      <gl>draw</gl>
-      <gl>draw in</gl>
-      <gl>draw out</gl>
-      <gl>extract</gl>
-      <gl>force</gl>
-      <gl>get out</gl>
-      <gl>overstretch</gl>
-      <gl>perpetrate</gl>
-      <gl>pluck</gl>
-      <gl>puff</gl>
-      <gl>pull</gl>
-      <gl>pull in</gl>
-      <gl>pull out</gl>
-      <gl>pull up</gl>
-      <gl>pulling</gl>
-      <gl>rend</gl>
-      <gl>rip</gl>
-      <gl>rive</gl>
-      <gl>root for</gl>
-      <gl>take out</gl>
-      <gl>tear</gl>
-      <gl>twist</gl>
-      <gl>wrench</gl>
-      <gl pivot="otherlg">Pull</gl>
+      <gl pivot="samelg">Sharp</gl>
    </mel>
    <mel id="wn206">
-      <gl>affection</gl>
-      <gl>affectionateness</gl>
-      <gl>bosom</gl>
-      <gl>center</gl>
-      <gl>centre</gl>
-      <gl>core</gl>
-      <gl>essence</gl>
-      <gl>eye</gl>
-      <gl>fondness</gl>
-      <gl>gist</gl>
-      <gl>heart</gl>
-      <gl>heart and soul</gl>
-      <gl>inwardness</gl>
-      <gl>kernel</gl>
-      <gl>marrow</gl>
-      <gl>meat</gl>
-      <gl>mettle</gl>
-      <gl>middle</gl>
-      <gl>nerve</gl>
-      <gl>nitty-gritty</gl>
-      <gl>nub</gl>
-      <gl>philia</gl>
-      <gl>pith</gl>
-      <gl>pump</gl>
-      <gl>spirit</gl>
-      <gl>spunk</gl>
-      <gl>substance</gl>
-      <gl>sum</gl>
-      <gl>tenderness</gl>
-      <gl>ticker</gl>
-      <gl>warmheartedness</gl>
-      <gl>warmness</gl>
-      <gl pivot="otherlg">Heart</gl>
+      <gl pivot="samelg">Call on</gl>
    </mel>
    <mel id="wn207">
-      <gl>mushroom</gl>
-      <gl>mushroom cloud</gl>
-      <gl>mushroom-shaped cloud</gl>
-      <gl pivot="otherlg">Mushroom</gl>
+      <gl pivot="samelg">Small</gl>
    </mel>
    <mel id="wn208">
-      <gl>3</gl>
-      <gl>III</gl>
-      <gl>deuce-ace</gl>
-      <gl>iii</gl>
-      <gl>leash</gl>
-      <gl>tercet</gl>
-      <gl>ternary</gl>
-      <gl>ternion</gl>
-      <gl>terzetto</gl>
-      <gl>three</gl>
-      <gl>threesome</gl>
-      <gl>tierce</gl>
-      <gl>trey</gl>
-      <gl>triad</gl>
-      <gl>trine</gl>
-      <gl>trinity</gl>
-      <gl>trio</gl>
-      <gl>triplet</gl>
-      <gl>troika</gl>
-      <gl pivot="otherlg">Three</gl>
+      <gl pivot="samelg">Bile</gl>
    </mel>
    <mel id="wn209">
-      <gl>cull out</gl>
-      <gl>fan</gl>
-      <gl>sifting</gl>
-      <gl>winnow</gl>
-      <gl>winnowing</gl>
-      <gl pivot="otherlg">Winnow</gl>
+      <gl pivot="samelg">Lead</gl>
    </mel>
    <mel id="wn210">
-      <gl>Fe</gl>
-      <gl>atomic number 26</gl>
-      <gl>branding iron</gl>
-      <gl>cast-iron</gl>
-      <gl>iron</gl>
-      <gl>iron out</gl>
-      <gl>press</gl>
-      <gl>smoothing iron</gl>
-      <gl pivot="otherlg">Iron</gl>
+      <gl pivot="samelg">Shirt</gl>
    </mel>
    <mel id="wn211">
-      <gl>5</gl>
-      <gl>Little Phoebe</gl>
-      <gl>Phoebe</gl>
-      <gl>V</gl>
-      <gl>basketball team</gl>
-      <gl>cinque</gl>
-      <gl>fin</gl>
-      <gl>five</gl>
-      <gl>five-spot</gl>
-      <gl>fivesome</gl>
-      <gl>pentad</gl>
-      <gl>quint</gl>
-      <gl>quintet</gl>
-      <gl>quintuplet</gl>
-      <gl>v</gl>
-      <gl pivot="otherlg">Five</gl>
+      <gl pivot="samelg">Drunk</gl>
    </mel>
    <mel id="wn212">
-      <gl pivot="samelg">Green</gl>
-      <gl>Green River</gl>
-      <gl>K</gl>
-      <gl>William Green</gl>
-      <gl>cat valium</gl>
-      <gl>common</gl>
-      <gl>commons</gl>
-      <gl>dark-green</gl>
-      <gl>fleeceable</gl>
-      <gl>green</gl>
-      <gl>greenish</gl>
-      <gl>greenness</gl>
-      <gl>greens</gl>
-      <gl>gullible</gl>
-      <gl>honey oil</gl>
-      <gl>immature</gl>
-      <gl>jet</gl>
-      <gl>leafy vegetable</gl>
-      <gl>light-green</gl>
-      <gl>park</gl>
-      <gl>putting green</gl>
-      <gl>putting surface</gl>
-      <gl>special K</gl>
-      <gl>super C</gl>
-      <gl>super acid</gl>
-      <gl>unripe</gl>
-      <gl>unripened</gl>
-      <gl>viridity</gl>
+      <gl pivot="samelg">Fire</gl>
    </mel>
    <mel id="wn213">
-      <gl pivot="samelg">Earth</gl>
-      <gl>dry land</gl>
-      <gl>earth</gl>
-      <gl>earthly concern</gl>
-      <gl>globe</gl>
-      <gl>ground</gl>
-      <gl>land</gl>
-      <gl>solid ground</gl>
-      <gl>terra firma</gl>
-      <gl>world</gl>
-      <gl>worldly concern</gl>
+      <gl pivot="samelg">Ripen</gl>
    </mel>
    <mel id="wn214">
-      <gl>acetify</gl>
-      <gl>acidify</gl>
-      <gl>acidity</gl>
-      <gl>acidulate</gl>
-      <gl>dark</gl>
-      <gl>dour</gl>
-      <gl>false</gl>
-      <gl>ferment</gl>
-      <gl>glowering</gl>
-      <gl>glum</gl>
-      <gl>moody</gl>
-      <gl>morose</gl>
-      <gl>off</gl>
-      <gl>off-key</gl>
-      <gl>rancid</gl>
-      <gl>saturnine</gl>
-      <gl>sour</gl>
-      <gl>sourness</gl>
-      <gl>sullen</gl>
-      <gl>tartness</gl>
-      <gl>turn</gl>
-      <gl>turned</gl>
-      <gl>work</gl>
-      <gl pivot="otherlg">Sour</gl>
+      <gl pivot="samelg">Meal</gl>
    </mel>
    <mel id="wn215">
-      <gl>adhere</gl>
-      <gl>amaze</gl>
-      <gl>baffle</gl>
-      <gl>beat</gl>
-      <gl>bewilder</gl>
-      <gl>bind</gl>
-      <gl>bond</gl>
-      <gl>cleave</gl>
-      <gl>cling</gl>
-      <gl>cohere</gl>
-      <gl>control stick</gl>
-      <gl>deposit</gl>
-      <gl>dumbfound</gl>
-      <gl>flummox</gl>
-      <gl>get</gl>
-      <gl>gravel</gl>
-      <gl>hold fast</gl>
-      <gl>joint</gl>
-      <gl>joystick</gl>
-      <gl>lodge</gl>
-      <gl>marijuana cigarette</gl>
-      <gl>mystify</gl>
-      <gl>nonplus</gl>
-      <gl>peg</gl>
-      <gl>perplex</gl>
-      <gl>pin</gl>
-      <gl>pose</gl>
-      <gl>puzzle</gl>
-      <gl>reefer</gl>
-      <gl>spliff</gl>
-      <gl>stand by</gl>
-      <gl>stay</gl>
-      <gl>stay put</gl>
-      <gl>stick</gl>
-      <gl>stick around</gl>
-      <gl>stick by</gl>
-      <gl>stick to</gl>
-      <gl>sting</gl>
-      <gl>stupefy</gl>
-      <gl>vex</gl>
-      <gl>wedge</gl>
-      <gl pivot="otherlg">Stick</gl>
+      <gl pivot="samelg">Breath</gl>
    </mel>
    <mel id="wn216">
-      <gl>100</gl>
-      <gl>C</gl>
-      <gl>c</gl>
-      <gl>century</gl>
-      <gl>hundred</gl>
-      <gl>one C</gl>
-      <gl>one hundred</gl>
-      <gl pivot="otherlg">Hundred</gl>
+      <gl pivot="samelg">Yellow</gl>
    </mel>
    <mel id="wn217">
-      <gl>6</gl>
-      <gl>Captain Hicks</gl>
-      <gl>VI</gl>
-      <gl>half a dozen</gl>
-      <gl>half dozen</gl>
-      <gl>half-dozen</gl>
-      <gl>hexad</gl>
-      <gl>sestet</gl>
-      <gl>sextet</gl>
-      <gl>sextuplet</gl>
-      <gl>sise</gl>
-      <gl>six</gl>
-      <gl>six-spot</gl>
-      <gl>sixer</gl>
-      <gl>vi</gl>
-      <gl pivot="otherlg">Six</gl>
+      <gl pivot="samelg">Thousand</gl>
    </mel>
    <mel id="wn218">
-      <gl>all the same</gl>
-      <gl>allay</gl>
-      <gl>calm</gl>
-      <gl>calm down</gl>
-      <gl>distillery</gl>
-      <gl>ease</gl>
-      <gl>even</gl>
-      <gl>even so</gl>
-      <gl>however</gl>
-      <gl>hush</gl>
-      <gl>hush up</gl>
-      <gl>inactive</gl>
-      <gl>lull</gl>
-      <gl>motionless</gl>
-      <gl>nevertheless</gl>
-      <gl>noneffervescent</gl>
-      <gl>nonetheless</gl>
-      <gl>notwithstanding</gl>
-      <gl>placid</gl>
-      <gl>quiet</gl>
-      <gl>quieten</gl>
-      <gl>relieve</gl>
-      <gl>shut up</gl>
-      <gl>silence</gl>
-      <gl>silent</gl>
-      <gl>smooth</gl>
-      <gl>soundless</gl>
-      <gl>static</gl>
-      <gl>still</gl>
-      <gl>stillness</gl>
-      <gl>stock-still</gl>
-      <gl>tranquil</gl>
-      <gl>tranquilize</gl>
-      <gl>tranquillise</gl>
-      <gl>tranquillize</gl>
-      <gl>unruffled</gl>
-      <gl>withal</gl>
-      <gl>yet</gl>
-      <gl pivot="otherlg">Still</gl>
+      <gl pivot="samelg">Water</gl>
    </mel>
    <mel id="wn219">
-      <gl>absolved</gl>
-      <gl>acquit</gl>
-      <gl>all the way</gl>
-      <gl>assoil</gl>
-      <gl>authorise</gl>
-      <gl>authorize</gl>
-      <gl>brighten</gl>
-      <gl>bring in</gl>
-      <gl>clean</gl>
-      <gl>clean-cut</gl>
-      <gl>clear</gl>
-      <gl>clear up</gl>
-      <gl>clear-cut</gl>
-      <gl>cleared</gl>
-      <gl>clearly</gl>
-      <gl>crystalise</gl>
-      <gl>crystalize</gl>
-      <gl>crystallise</gl>
-      <gl>crystallize</gl>
-      <gl>decipherable</gl>
-      <gl>discharge</gl>
-      <gl>earn</gl>
-      <gl>elucidate</gl>
-      <gl>enlighten</gl>
-      <gl>exculpate</gl>
-      <gl>exculpated</gl>
-      <gl>exonerate</gl>
-      <gl>exonerated</gl>
-      <gl>gain</gl>
-      <gl>illuminate</gl>
-      <gl>light</gl>
-      <gl>light up</gl>
-      <gl>make</gl>
-      <gl>net</gl>
-      <gl>open</gl>
-      <gl>pass</gl>
-      <gl>percipient</gl>
-      <gl>pull in</gl>
-      <gl>readable</gl>
-      <gl>realise</gl>
-      <gl>realize</gl>
-      <gl>sack</gl>
-      <gl>sack up</gl>
-      <gl>shed light on</gl>
-      <gl>solve</gl>
-      <gl>sort out</gl>
-      <gl>straighten out</gl>
-      <gl>take in</gl>
-      <gl>top</gl>
-      <gl>unclouded</gl>
-      <gl>unclutter</gl>
-      <gl>unmortgaged</gl>
-      <gl>vindicated</gl>
-      <gl>well-defined</gl>
-      <gl pivot="otherlg">Clear</gl>
+      <gl pivot="samelg">Lick</gl>
    </mel>
    <mel id="wn220">
-      <gl>adult</gl>
-      <gl>bad</gl>
-      <gl>big</gl>
-      <gl>bighearted</gl>
-      <gl>boastful</gl>
-      <gl>boastfully</gl>
-      <gl>bounteous</gl>
-      <gl>bountiful</gl>
-      <gl>braggart</gl>
-      <gl>bragging</gl>
-      <gl>braggy</gl>
-      <gl>cock-a-hoop</gl>
-      <gl>crowing</gl>
-      <gl>enceinte</gl>
-      <gl>expectant</gl>
-      <gl>freehanded</gl>
-      <gl>full-grown</gl>
-      <gl>fully grown</gl>
-      <gl>giving</gl>
-      <gl>gravid</gl>
-      <gl>great</gl>
-      <gl>grown</gl>
-      <gl>grownup</gl>
-      <gl>handsome</gl>
-      <gl>heavy</gl>
-      <gl>large</gl>
-      <gl>liberal</gl>
-      <gl>magnanimous</gl>
-      <gl>openhanded</gl>
-      <gl>prominent</gl>
-      <gl>self-aggrandising</gl>
-      <gl>self-aggrandizing</gl>
-      <gl>swelled</gl>
-      <gl>vainglorious</gl>
-      <gl>vauntingly</gl>
-      <gl>with child</gl>
-      <gl pivot="otherlg">Big</gl>
+      <gl pivot="samelg">Exchange</gl>
    </mel>
    <mel id="wn221">
-      <gl>mosquito</gl>
-      <gl pivot="otherlg">Mosquito</gl>
+      <gl pivot="samelg">Warm</gl>
    </mel>
    <mel id="wn222">
-      <gl>half</gl>
-      <gl>one-half</gl>
-      <gl pivot="otherlg">Half</gl>
+      <gl pivot="samelg">Leopard</gl>
    </mel>
    <mel id="wn223">
-      <gl>beget</gl>
-      <gl>bring forth</gl>
-      <gl>engender</gl>
-      <gl>father</gl>
-      <gl>female parent</gl>
-      <gl>fuss</gl>
-      <gl>generate</gl>
-      <gl>get</gl>
-      <gl>mother</gl>
-      <gl>overprotect</gl>
-      <gl>sire</gl>
-      <gl pivot="otherlg">Mother</gl>
+      <gl pivot="samelg">Bear</gl>
    </mel>
    <mel id="wn224">
-      <gl>arrive at</gl>
-      <gl>attain</gl>
-      <gl>bang</gl>
-      <gl>bump off</gl>
-      <gl>collide with</gl>
-      <gl>collision</gl>
-      <gl>come to</gl>
-      <gl>dispatch</gl>
-      <gl>gain</gl>
-      <gl>hit</gl>
-      <gl>hitting</gl>
-      <gl>impinge on</gl>
-      <gl>make</gl>
-      <gl>murder</gl>
-      <gl>off</gl>
-      <gl>pip</gl>
-      <gl>polish off</gl>
-      <gl>rack up</gl>
-      <gl>reach</gl>
-      <gl>remove</gl>
-      <gl>run into</gl>
-      <gl>score</gl>
-      <gl>shoot</gl>
-      <gl>slay</gl>
-      <gl>smash</gl>
-      <gl>smasher</gl>
-      <gl>strike</gl>
-      <gl>striking</gl>
-      <gl>stumble</gl>
-      <gl>tally</gl>
-      <gl pivot="otherlg">Hit</gl>
+      <gl pivot="samelg">Short</gl>
    </mel>
    <mel id="wn225">
-      <gl>Sus scrofa</gl>
-      <gl>bull</gl>
-      <gl>cop</gl>
-      <gl>copper</gl>
-      <gl>devour</gl>
-      <gl>farrow</gl>
-      <gl>fuzz</gl>
-      <gl>grunter</gl>
-      <gl>guttle</gl>
-      <gl>hog</gl>
-      <gl>pig</gl>
-      <gl>pig bed</gl>
-      <gl>pig it</gl>
-      <gl>raven</gl>
-      <gl>slob</gl>
-      <gl>sloven</gl>
-      <gl>slovenly person</gl>
-      <gl>squealer</gl>
-      <gl pivot="otherlg">Pig</gl>
+      <gl pivot="samelg">Sheep</gl>
    </mel>
    <mel id="wn226">
-      <gl>desquamate</gl>
-      <gl>flake</gl>
-      <gl>flake off</gl>
-      <gl>peel</gl>
-      <gl>peel off</gl>
-      <gl pivot="otherlg">Peel off</gl>
+      <gl pivot="samelg">Extinguish</gl>
    </mel>
    <mel id="wn227">
-      <gl>African tea</gl>
-      <gl>Arabian tea</gl>
-      <gl>CAT</gl>
-      <gl>CT</gl>
-      <gl>Caterpillar</gl>
-      <gl>barf</gl>
-      <gl>be sick</gl>
-      <gl>big cat</gl>
-      <gl>bozo</gl>
-      <gl>cast</gl>
-      <gl>cat</gl>
-      <gl>cat-o'-nine-tails</gl>
-      <gl>chuck</gl>
-      <gl>computed axial tomography</gl>
-      <gl>computed tomography</gl>
-      <gl>computerized axial tomography</gl>
-      <gl>computerized tomography</gl>
-      <gl>disgorge</gl>
-      <gl>guy</gl>
-      <gl>hombre</gl>
-      <gl>honk</gl>
-      <gl>kat</gl>
-      <gl>khat</gl>
-      <gl>puke</gl>
-      <gl>purge</gl>
-      <gl>qat</gl>
-      <gl>quat</gl>
-      <gl>regorge</gl>
-      <gl>regurgitate</gl>
-      <gl>retch</gl>
-      <gl>sick</gl>
-      <gl>spew</gl>
-      <gl>spue</gl>
-      <gl>throw up</gl>
-      <gl>true cat</gl>
-      <gl>upchuck</gl>
-      <gl>vomit</gl>
-      <gl>vomit up</gl>
-      <gl pivot="otherlg">Cat</gl>
+      <gl pivot="samelg">Turbid</gl>
    </mel>
    <mel id="wn228">
-      <gl>afford</gl>
-      <gl>assailable</gl>
-      <gl>candid</gl>
-      <gl>capable</gl>
-      <gl>clear</gl>
-      <gl>exposed</gl>
-      <gl>give</gl>
-      <gl>heart-to-heart</gl>
-      <gl>loose</gl>
-      <gl>open</gl>
-      <gl>open air</gl>
-      <gl>open up</gl>
-      <gl>opened</gl>
-      <gl>out-of-doors</gl>
-      <gl>outdoors</gl>
-      <gl>overt</gl>
-      <gl>receptive</gl>
-      <gl>spread</gl>
-      <gl>spread out</gl>
-      <gl>subject</gl>
-      <gl>surface</gl>
-      <gl>undecided</gl>
-      <gl>undefendable</gl>
-      <gl>undefended</gl>
-      <gl>undetermined</gl>
-      <gl>unfastened</gl>
-      <gl>unfold</gl>
-      <gl>unresolved</gl>
-      <gl pivot="otherlg">Open</gl>
+      <gl>I</gl>
+      <gl pivot="samelg">One</gl>
    </mel>
    <mel id="wn229">
-      <gl>Blackbeard</gl>
-      <gl>Edward Teach</gl>
-      <gl>Edward Thatch</gl>
-      <gl pivot="samelg">Teach</gl>
-      <gl>Thatch</gl>
-      <gl>instruct</gl>
-      <gl>learn</gl>
-      <gl>teach</gl>
+      <gl pivot="samelg">Stand up</gl>
    </mel>
    <mel id="wn230">
-      <gl>Equus caballus</gl>
-      <gl>buck</gl>
-      <gl>cavalry</gl>
-      <gl>gymnastic horse</gl>
-      <gl>horse</gl>
-      <gl>horse cavalry</gl>
-      <gl>knight</gl>
-      <gl>sawbuck</gl>
-      <gl>sawhorse</gl>
-      <gl pivot="otherlg">Horse</gl>
+      <gl pivot="samelg">Star</gl>
    </mel>
    <mel id="wn231">
-      <gl>ancestry</gl>
-      <gl>blood</gl>
-      <gl>blood line</gl>
-      <gl>bloodline</gl>
-      <gl>descent</gl>
-      <gl>line</gl>
-      <gl>line of descent</gl>
-      <gl>lineage</gl>
-      <gl>origin</gl>
-      <gl>parentage</gl>
-      <gl>pedigree</gl>
-      <gl>profligate</gl>
-      <gl>rake</gl>
-      <gl>rakehell</gl>
-      <gl>rip</gl>
-      <gl>roue</gl>
-      <gl>stemma</gl>
-      <gl>stock</gl>
-      <gl pivot="otherlg">Blood</gl>
+      <gl pivot="samelg">Sour</gl>
    </mel>
    <mel id="wn232">
-      <gl>airless</gl>
-      <gl>cheeseparing</gl>
-      <gl>close</gl>
-      <gl>close down</gl>
-      <gl>close up</gl>
-      <gl>close-fitting</gl>
-      <gl>closelipped</gl>
-      <gl>closely</gl>
-      <gl>closemouthed</gl>
-      <gl>closing</gl>
-      <gl>closing curtain</gl>
-      <gl>come together</gl>
-      <gl>conclude</gl>
-      <gl>conclusion</gl>
-      <gl>confining</gl>
-      <gl>end</gl>
-      <gl>ending</gl>
-      <gl>faithful</gl>
-      <gl>fill up</gl>
-      <gl>finale</gl>
-      <gl>finis</gl>
-      <gl>finish</gl>
-      <gl>fold</gl>
-      <gl>last</gl>
-      <gl>near</gl>
-      <gl>nigh</gl>
-      <gl>penny-pinching</gl>
-      <gl>secretive</gl>
-      <gl>shut</gl>
-      <gl>shut down</gl>
-      <gl>skinny</gl>
-      <gl>snug</gl>
-      <gl>stopping point</gl>
-      <gl>stuffy</gl>
-      <gl>tight</gl>
-      <gl>tightlipped</gl>
-      <gl>unaired</gl>
-      <gl pivot="otherlg">Close</gl>
+      <gl pivot="samelg">Mushroom</gl>
    </mel>
    <mel id="wn233">
-      <gl>binge</gl>
-      <gl>bout</gl>
-      <gl>buck</gl>
-      <gl>bust</gl>
-      <gl>charge</gl>
-      <gl>deplumate</gl>
-      <gl>deplume</gl>
-      <gl>displume</gl>
-      <gl>pluck</gl>
-      <gl>pull</gl>
-      <gl>rent</gl>
-      <gl>rip</gl>
-      <gl>rupture</gl>
-      <gl>shoot</gl>
-      <gl>shoot down</gl>
-      <gl>snag</gl>
-      <gl>snap</gl>
-      <gl>split</gl>
-      <gl>tear</gl>
-      <gl>teardrop</gl>
-      <gl pivot="otherlg">Tear</gl>
+      <gl pivot="samelg">Pour</gl>
    </mel>
    <mel id="wn234">
-      <gl>durability</gl>
-      <gl>effectiveness</gl>
-      <gl>enduringness</gl>
-      <gl>force</gl>
-      <gl>forcefulness</gl>
-      <gl>forte</gl>
-      <gl>intensity</gl>
-      <gl>intensity level</gl>
-      <gl>lastingness</gl>
-      <gl>long suit</gl>
-      <gl>metier</gl>
-      <gl>military capability</gl>
-      <gl>military posture</gl>
-      <gl>military strength</gl>
-      <gl>persuasiveness</gl>
-      <gl>posture</gl>
-      <gl>potency</gl>
-      <gl>speciality</gl>
-      <gl>specialty</gl>
-      <gl>strength</gl>
-      <gl>strong point</gl>
-      <gl>strong suit</gl>
-      <gl pivot="otherlg">Strength</gl>
+      <gl pivot="samelg">Thunder</gl>
    </mel>
    <mel id="wn235">
-      <gl>ardor</gl>
-      <gl>ardour</gl>
-      <gl>arouse</gl>
-      <gl>attack</gl>
-      <gl>blast</gl>
-      <gl>burn</gl>
-      <gl>burn down</gl>
-      <gl>can</gl>
-      <gl>discharge</gl>
-      <gl>dismiss</gl>
-      <gl>displace</gl>
-      <gl>elicit</gl>
-      <gl>enkindle</gl>
-      <gl>evoke</gl>
-      <gl>fervency</gl>
-      <gl>fervidness</gl>
-      <gl>fervor</gl>
-      <gl>fervour</gl>
-      <gl>fire</gl>
-      <gl>firing</gl>
-      <gl>flack</gl>
-      <gl>flak</gl>
-      <gl>flame</gl>
-      <gl>flaming</gl>
-      <gl>force out</gl>
-      <gl>fuel</gl>
-      <gl>give notice</gl>
-      <gl>give the axe</gl>
-      <gl>give the sack</gl>
-      <gl>go off</gl>
-      <gl>kindle</gl>
-      <gl>open fire</gl>
-      <gl>provoke</gl>
-      <gl>raise</gl>
-      <gl>sack</gl>
-      <gl>send away</gl>
-      <gl>terminate</gl>
-      <gl pivot="otherlg">Fire</gl>
+      <gl pivot="samelg">Clean</gl>
    </mel>
    <mel id="wn236">
-      <gl>express joy</gl>
-      <gl>express mirth</gl>
-      <gl>gag</gl>
-      <gl>jape</gl>
-      <gl>jest</gl>
-      <gl>joke</gl>
-      <gl>laugh</gl>
-      <gl>laughter</gl>
-      <gl pivot="otherlg">Laugh</gl>
+      <gl pivot="samelg">Twist</gl>
    </mel>
    <mel id="wn237">
-      <gl>1</gl>
-      <gl pivot="samelg">I</gl>
-      <gl>ace</gl>
-      <gl>ane</gl>
-      <gl>atomic number 53</gl>
-      <gl>i</gl>
-      <gl>iodin</gl>
-      <gl>iodine</gl>
-      <gl>one</gl>
-      <gl>single</gl>
-      <gl>unity</gl>
+      <gl pivot="samelg">Upside</gl>
    </mel>
    <mel id="wn238">
-      <gl>9</gl>
-      <gl>IX</gl>
-      <gl>Nina from Carolina</gl>
-      <gl>ball club</gl>
-      <gl>baseball club</gl>
-      <gl>club</gl>
-      <gl>ennead</gl>
-      <gl>ix</gl>
-      <gl>nine</gl>
-      <gl>nine-spot</gl>
-      <gl>niner</gl>
-      <gl pivot="otherlg">Nine</gl>
+      <gl pivot="samelg">Steal</gl>
    </mel>
    <mel id="wn239">
-      <gl>flick</gl>
-      <gl>flip</gl>
-      <gl>foliage</gl>
-      <gl>folio</gl>
-      <gl>leaf</gl>
-      <gl>leafage</gl>
-      <gl>riff</gl>
-      <gl>riffle</gl>
-      <gl>thumb</gl>
-      <gl pivot="otherlg">Leaf</gl>
+      <gl pivot="samelg">Base</gl>
    </mel>
    <mel id="wn240">
-      <gl>Christopher Fry</gl>
-      <gl pivot="samelg">Fry</gl>
-      <gl>Roger Eliot Fry</gl>
-      <gl>Roger Fry</gl>
-      <gl>child</gl>
-      <gl>electrocute</gl>
-      <gl>fry</gl>
-      <gl>kid</gl>
-      <gl>minor</gl>
-      <gl>nestling</gl>
-      <gl>nipper</gl>
-      <gl>shaver</gl>
-      <gl>small fry</gl>
-      <gl>tiddler</gl>
-      <gl>tike</gl>
-      <gl>tyke</gl>
-      <gl>youngster</gl>
+      <gl pivot="samelg">Who</gl>
    </mel>
    <mel id="wn241">
-      <gl pivot="samelg">Fall</gl>
-      <gl>accrue</gl>
-      <gl>autumn</gl>
-      <gl>capitulation</gl>
-      <gl>come</gl>
-      <gl>come down</gl>
-      <gl>crepuscle</gl>
-      <gl>crepuscule</gl>
-      <gl>declension</gl>
-      <gl>declination</gl>
-      <gl>decline</gl>
-      <gl>declivity</gl>
-      <gl>decrease</gl>
-      <gl>descend</gl>
-      <gl>descent</gl>
-      <gl>devolve</gl>
-      <gl>diminish</gl>
-      <gl>dip</gl>
-      <gl>downfall</gl>
-      <gl>downslope</gl>
-      <gl>drop</gl>
-      <gl>dusk</gl>
-      <gl>evenfall</gl>
-      <gl>fall</gl>
-      <gl>fall down</gl>
-      <gl>flow</gl>
-      <gl>free fall</gl>
-      <gl>gloam</gl>
-      <gl>gloaming</gl>
-      <gl>go down</gl>
-      <gl>hang</gl>
-      <gl>lessen</gl>
-      <gl>light</gl>
-      <gl>nightfall</gl>
-      <gl>pass</gl>
-      <gl>pin</gl>
-      <gl>precipitate</gl>
-      <gl>return</gl>
-      <gl>settle</gl>
-      <gl>shine</gl>
-      <gl>spill</gl>
-      <gl>strike</gl>
-      <gl>surrender</gl>
-      <gl>tumble</gl>
-      <gl>twilight</gl>
+      <gl pivot="samelg">Big</gl>
    </mel>
    <mel id="wn242">
-      <gl>mature</gl>
-      <gl>ripen</gl>
-      <gl pivot="otherlg">Ripen</gl>
+      <gl pivot="samelg">Long</gl>
    </mel>
    <mel id="wn243">
-      <gl>debauched</gl>
-      <gl>degenerate</gl>
-      <gl>degraded</gl>
-      <gl>dissipated</gl>
-      <gl>dissolute</gl>
-      <gl>fast</gl>
-      <gl>fasting</gl>
-      <gl>firm</gl>
-      <gl>flying</gl>
-      <gl>immobile</gl>
-      <gl>libertine</gl>
-      <gl>loyal</gl>
-      <gl>profligate</gl>
-      <gl>quick</gl>
-      <gl>riotous</gl>
-      <gl>tight</gl>
-      <gl>truehearted</gl>
-      <gl pivot="otherlg">Fast</gl>
+      <gl pivot="samelg">Bite</gl>
    </mel>
    <mel id="wn244">
-      <gl>accept</gl>
-      <gl>bear</gl>
-      <gl>birth</gl>
-      <gl>cause</gl>
-      <gl>consume</gl>
-      <gl>deliver</gl>
-      <gl>experience</gl>
-      <gl>feature</gl>
-      <gl>get</gl>
-      <gl>give</gl>
-      <gl>give birth</gl>
-      <gl>have</gl>
-      <gl>have got</gl>
-      <gl>hold</gl>
-      <gl>induce</gl>
-      <gl>ingest</gl>
-      <gl>let</gl>
-      <gl>make</gl>
-      <gl>own</gl>
-      <gl>possess</gl>
-      <gl>receive</gl>
-      <gl>rich person</gl>
-      <gl>stimulate</gl>
-      <gl>suffer</gl>
-      <gl>sustain</gl>
-      <gl>take</gl>
-      <gl>take in</gl>
-      <gl>throw</gl>
-      <gl>wealthy person</gl>
-      <gl pivot="otherlg">Have</gl>
+      <gl pivot="samelg">Liquor</gl>
    </mel>
    <mel id="wn245">
-      <gl>article of clothing</gl>
-      <gl>assume</gl>
-      <gl>bear</gl>
-      <gl>break</gl>
-      <gl>bust</gl>
-      <gl>clothing</gl>
-      <gl>don</gl>
-      <gl>endure</gl>
-      <gl>fag</gl>
-      <gl>fag out</gl>
-      <gl>fall apart</gl>
-      <gl>fatigue</gl>
-      <gl>get into</gl>
-      <gl>habiliment</gl>
-      <gl>have on</gl>
-      <gl>hold out</gl>
-      <gl>jade</gl>
-      <gl>outwear</gl>
-      <gl>put on</gl>
-      <gl>tire</gl>
-      <gl>tire out</gl>
-      <gl>vesture</gl>
-      <gl>wear</gl>
-      <gl>wear down</gl>
-      <gl>wear off</gl>
-      <gl>wear out</gl>
-      <gl>wear thin</gl>
-      <gl>wear upon</gl>
-      <gl>wearable</gl>
-      <gl>wearing</gl>
-      <gl>weary</gl>
-      <gl pivot="otherlg">Wear</gl>
+      <gl pivot="samelg">Fence</gl>
    </mel>
    <mel id="wn246">
-      <gl>tasty</gl>
-      <gl pivot="otherlg">Tasty</gl>
+      <gl pivot="samelg">Give</gl>
    </mel>
    <mel id="wn247">
-      <gl>call on</gl>
-      <gl>turn</gl>
-      <gl pivot="otherlg">Call on</gl>
+      <gl pivot="samelg">Hinder</gl>
    </mel>
    <mel id="wn248">
-      <gl>Panthera tigris</gl>
-      <gl>tiger</gl>
-      <gl pivot="otherlg">Tiger</gl>
+      <gl pivot="samelg">Fruit</gl>
    </mel>
    <mel id="wn249">
-      <gl>blank</gl>
-      <gl>clean</gl>
-      <gl>clean and jerk</gl>
-      <gl>clean house</gl>
-      <gl>clean-living</gl>
-      <gl>cleanse</gl>
-      <gl>clear</gl>
-      <gl>fair</gl>
-      <gl>fairly</gl>
-      <gl>fresh</gl>
-      <gl>houseclean</gl>
-      <gl>light</gl>
-      <gl>make clean</gl>
-      <gl>neat</gl>
-      <gl>pick</gl>
-      <gl>plum</gl>
-      <gl>plumb</gl>
-      <gl>scavenge</gl>
-      <gl>sporting</gl>
-      <gl>sportsmanlike</gl>
-      <gl>sporty</gl>
-      <gl>strip</gl>
-      <gl>unclouded</gl>
-      <gl>uncontaminating</gl>
-      <gl>uninfected</gl>
-      <gl>unobjectionable</gl>
-      <gl>white</gl>
-      <gl pivot="otherlg">Clean</gl>
+      <gl pivot="samelg">White</gl>
    </mel>
    <mel id="wn250">
-      <gl>air current</gl>
-      <gl>breaking wind</gl>
-      <gl>confidential information</gl>
-      <gl>current of air</gl>
-      <gl>curve</gl>
-      <gl>fart</gl>
-      <gl>farting</gl>
-      <gl>flatus</gl>
-      <gl>hint</gl>
-      <gl>hoist</gl>
-      <gl>idle words</gl>
-      <gl>jazz</gl>
-      <gl>lead</gl>
-      <gl>lift</gl>
-      <gl>malarkey</gl>
-      <gl>malarky</gl>
-      <gl>meander</gl>
-      <gl>nose</gl>
-      <gl>nothingness</gl>
-      <gl>roll</gl>
-      <gl>scent</gl>
-      <gl>steer</gl>
-      <gl>thread</gl>
-      <gl>tip</gl>
-      <gl>twine</gl>
-      <gl>twist</gl>
-      <gl>wander</gl>
-      <gl>weave</gl>
-      <gl>wind</gl>
-      <gl>wind instrument</gl>
-      <gl>wind up</gl>
-      <gl>winding</gl>
-      <gl>wrap</gl>
-      <gl>wreathe</gl>
-      <gl pivot="otherlg">Wind</gl>
+      <gl pivot="samelg">Boat</gl>
    </mel>
    <mel id="wn251">
-      <gl>acquire</gl>
-      <gl>aim</gl>
-      <gl>amaze</gl>
-      <gl>arrest</gl>
-      <gl>arrive</gl>
-      <gl>baffle</gl>
-      <gl>beat</gl>
-      <gl>become</gl>
-      <gl>beget</gl>
-      <gl>begin</gl>
-      <gl>bewilder</gl>
-      <gl>bring</gl>
-      <gl>bring forth</gl>
-      <gl>bugger off</gl>
-      <gl>buzz off</gl>
-      <gl>capture</gl>
-      <gl>catch</gl>
-      <gl>cause</gl>
-      <gl>come</gl>
-      <gl>commence</gl>
-      <gl>contract</gl>
-      <gl>convey</gl>
-      <gl>develop</gl>
-      <gl>draw</gl>
-      <gl>drive</gl>
-      <gl>dumbfound</gl>
-      <gl>engender</gl>
-      <gl>experience</gl>
-      <gl>father</gl>
-      <gl>fetch</gl>
-      <gl>find</gl>
-      <gl>fix</gl>
-      <gl>flummox</gl>
-      <gl>fuck off</gl>
-      <gl>generate</gl>
-      <gl>get</gl>
-      <gl>get down</gl>
-      <gl>get under one's skin</gl>
-      <gl>go</gl>
-      <gl>gravel</gl>
-      <gl>grow</gl>
-      <gl>have</gl>
-      <gl>incur</gl>
-      <gl>induce</gl>
-      <gl>let</gl>
-      <gl>make</gl>
-      <gl>mother</gl>
-      <gl>mystify</gl>
-      <gl>nonplus</gl>
-      <gl>obtain</gl>
-      <gl>pay back</gl>
-      <gl>pay off</gl>
-      <gl>perplex</gl>
-      <gl>pose</gl>
-      <gl>produce</gl>
-      <gl>puzzle</gl>
-      <gl>receive</gl>
-      <gl>scram</gl>
-      <gl>set about</gl>
-      <gl>set out</gl>
-      <gl>sire</gl>
-      <gl>start</gl>
-      <gl>start out</gl>
-      <gl>stick</gl>
-      <gl>stimulate</gl>
-      <gl>stupefy</gl>
-      <gl>suffer</gl>
-      <gl>sustain</gl>
-      <gl>take</gl>
-      <gl>vex</gl>
-      <gl pivot="otherlg">Get</gl>
+      <gl pivot="samelg">Eight</gl>
    </mel>
    <mel id="wn252">
-      <gl>abstruse</gl>
-      <gl>bass</gl>
-      <gl>cryptic</gl>
-      <gl>cryptical</gl>
-      <gl>deep</gl>
-      <gl>deeply</gl>
-      <gl>inscrutable</gl>
-      <gl>late</gl>
-      <gl>mysterious</gl>
-      <gl>mystifying</gl>
-      <gl>oceanic abyss</gl>
-      <gl>recondite</gl>
-      <gl>rich</gl>
-      <gl>thick</gl>
-      <gl>trench</gl>
-      <gl pivot="otherlg">Deep</gl>
+      <gl pivot="samelg">Dry</gl>
    </mel>
    <mel id="wn253">
-      <gl>breath</gl>
-      <gl>breather</gl>
-      <gl>breathing place</gl>
-      <gl>breathing space</gl>
-      <gl>breathing spell</gl>
-      <gl>breathing time</gl>
-      <gl>hint</gl>
-      <gl>intimation</gl>
-      <gl pivot="otherlg">Breath</gl>
+      <gl pivot="samelg">Mucus</gl>
    </mel>
    <mel id="wn254">
-      <gl>Edgar Albert Guest</gl>
-      <gl>Edgar Guest</gl>
-      <gl pivot="samelg">Guest</gl>
-      <gl>client</gl>
-      <gl>guest</gl>
-      <gl>invitee</gl>
-      <gl>node</gl>
+      <gl pivot="samelg">Deaf</gl>
    </mel>
    <mel id="wn255">
-      <gl>itch</gl>
-      <gl>itchiness</gl>
-      <gl>itching</gl>
-      <gl>rub</gl>
-      <gl>scabies</gl>
-      <gl>scratch</gl>
-      <gl>spoil</gl>
-      <gl>urge</gl>
-      <gl pivot="otherlg">Itch</gl>
+      <gl pivot="samelg">Rotten</gl>
    </mel>
    <mel id="wn256">
-      <gl>shirt</gl>
-      <gl pivot="otherlg">Shirt</gl>
+      <gl pivot="samelg">Fall</gl>
    </mel>
    <mel id="wn257">
-      <gl>bottom</gl>
-      <gl>fathom</gl>
-      <gl>fthm</gl>
-      <gl>penetrate</gl>
-      <gl>sound</gl>
-      <gl pivot="otherlg">Fathom</gl>
+      <gl pivot="samelg">Buy</gl>
    </mel>
    <mel id="wn258">
-      <gl>cuddle</gl>
-      <gl>draw close</gl>
-      <gl>nest</gl>
-      <gl>nestle</gl>
-      <gl>nuzzle</gl>
-      <gl>snuggle</gl>
-      <gl pivot="otherlg">Nest</gl>
+      <gl pivot="samelg">Field</gl>
    </mel>
    <mel id="wn259">
-      <gl>annex</gl>
-      <gl>annexe</gl>
-      <gl>backstage</gl>
-      <gl>extension</gl>
-      <gl>fender</gl>
-      <gl>flank</gl>
-      <gl>fly</gl>
-      <gl>offstage</gl>
-      <gl>wing</gl>
-      <gl pivot="otherlg">Wing</gl>
+      <gl pivot="samelg">Gourd</gl>
    </mel>
    <mel id="wn260">
-      <gl>Cancer</gl>
-      <gl>Cancer the Crab</gl>
-      <gl pivot="samelg">Crab</gl>
-      <gl>Phthirius pubis</gl>
-      <gl>beef</gl>
-      <gl>bellyache</gl>
-      <gl>bitch</gl>
-      <gl>crab</gl>
-      <gl>crab louse</gl>
-      <gl>crabby person</gl>
-      <gl>crabmeat</gl>
-      <gl>gripe</gl>
-      <gl>grouse</gl>
-      <gl>holler</gl>
-      <gl>pubic louse</gl>
-      <gl>squawk</gl>
+      <gl pivot="samelg">Leaf</gl>
    </mel>
    <mel id="wn261">
-      <gl>pillow</gl>
-      <gl>rest</gl>
-      <gl pivot="otherlg">Pillow</gl>
+      <gl pivot="samelg">Poison</gl>
    </mel>
    <mel id="wn262">
-      <gl>daughter-in-law</gl>
-      <gl pivot="otherlg">Daughter-in-law</gl>
+      <gl pivot="samelg">Study</gl>
    </mel>
    <mel id="wn263">
-      <gl>acerate leaf</gl>
-      <gl>goad</gl>
-      <gl>needle</gl>
-      <gl>phonograph needle</gl>
-      <gl pivot="otherlg">Needle</gl>
+      <gl pivot="samelg">Six</gl>
    </mel>
    <mel id="wn264">
-      <gl>Cucurbita pepo</gl>
-      <gl>autumn pumpkin</gl>
-      <gl>pumpkin</gl>
-      <gl>pumpkin vine</gl>
-      <gl pivot="otherlg">Pumpkin</gl>
+      <gl pivot="samelg">Enough</gl>
    </mel>
    <mel id="wn265">
-      <gl>Bolshevik</gl>
-      <gl>Marxist</gl>
-      <gl pivot="samelg">Red</gl>
-      <gl>Red River</gl>
-      <gl>blood-red</gl>
-      <gl>bolshie</gl>
-      <gl>bolshy</gl>
-      <gl>carmine</gl>
-      <gl>cerise</gl>
-      <gl>cherry</gl>
-      <gl>cherry-red</gl>
-      <gl>crimson</gl>
-      <gl>flushed</gl>
-      <gl>loss</gl>
-      <gl>red</gl>
-      <gl>red ink</gl>
-      <gl>red-faced</gl>
-      <gl>reddened</gl>
-      <gl>reddish</gl>
-      <gl>redness</gl>
-      <gl>ruby</gl>
-      <gl>ruby-red</gl>
-      <gl>ruddy</gl>
-      <gl>scarlet</gl>
-      <gl>violent</gl>
+      <gl pivot="samelg">Heart</gl>
    </mel>
    <mel id="wn266">
-      <gl>betray</gl>
-      <gl>deal</gl>
-      <gl>sell</gl>
-      <gl>trade</gl>
-      <gl pivot="otherlg">Sell</gl>
+      <gl pivot="samelg">Green</gl>
    </mel>
    <mel id="wn267">
-      <gl>chaw</gl>
-      <gl>chew</gl>
-      <gl>chewing</gl>
-      <gl>cud</gl>
-      <gl>jaw</gl>
-      <gl>manducate</gl>
-      <gl>manduction</gl>
-      <gl>masticate</gl>
-      <gl>mastication</gl>
-      <gl>plug</gl>
-      <gl>quid</gl>
-      <gl>wad</gl>
-      <gl pivot="otherlg">Chew</gl>
+      <gl pivot="samelg">Hot</gl>
    </mel>
    <mel id="wn268">
-      <gl>chicken</gl>
-      <gl>chickenhearted</gl>
-      <gl>icteric</gl>
-      <gl>jaundiced</gl>
-      <gl>lily-livered</gl>
-      <gl>scandalmongering</gl>
-      <gl>sensationalistic</gl>
-      <gl>white-livered</gl>
-      <gl>xanthous</gl>
-      <gl>yellow</gl>
-      <gl>yellow-bellied</gl>
-      <gl>yellowed</gl>
-      <gl>yellowish</gl>
-      <gl>yellowness</gl>
-      <gl pivot="otherlg">Yellow</gl>
+      <gl pivot="samelg">Heaven</gl>
    </mel>
    <mel id="wn269">
-      <gl>boat</gl>
-      <gl>gravy boat</gl>
-      <gl>gravy holder</gl>
-      <gl>sauceboat</gl>
-      <gl pivot="otherlg">Boat</gl>
+      <gl pivot="samelg">Elbow</gl>
    </mel>
    <mel id="wn270">
-      <gl>come</gl>
-      <gl>cum</gl>
-      <gl>ejaculate</gl>
-      <gl>germ</gl>
-      <gl>seed</gl>
-      <gl>seeded player</gl>
-      <gl>semen</gl>
-      <gl>seminal fluid</gl>
-      <gl>source</gl>
-      <gl>sow</gl>
-      <gl pivot="otherlg">Seed</gl>
+      <gl pivot="samelg">Sandals</gl>
    </mel>
    <mel id="wn271">
-      <gl>American bison</gl>
-      <gl>American buffalo</gl>
-      <gl>Bison bison</gl>
-      <gl pivot="samelg">Buffalo</gl>
-      <gl>Old World buffalo</gl>
-      <gl>buffalo</gl>
+      <gl pivot="samelg">Sound</gl>
    </mel>
    <mel id="wn272">
-      <gl>acerb</gl>
-      <gl>acerbic</gl>
-      <gl>acid</gl>
-      <gl>acrid</gl>
-      <gl>acrimonious</gl>
-      <gl>biting</gl>
-      <gl>bitingly</gl>
-      <gl>bitter</gl>
-      <gl>bitterly</gl>
-      <gl>bitterness</gl>
-      <gl>blistering</gl>
-      <gl>caustic</gl>
-      <gl>piercingly</gl>
-      <gl>sulfurous</gl>
-      <gl>sulphurous</gl>
-      <gl>virulent</gl>
-      <gl>vitriolic</gl>
-      <gl pivot="otherlg">Bitter</gl>
+      <gl pivot="samelg">Catch</gl>
    </mel>
    <mel id="wn273">
-      <gl>adequate</gl>
-      <gl>decent</gl>
-      <gl>enough</gl>
-      <gl>plenty</gl>
-      <gl>sufficiency</gl>
-      <gl pivot="otherlg">Enough</gl>
+      <gl pivot="samelg">Ask</gl>
    </mel>
    <mel id="wn274">
-      <gl>mucous secretion</gl>
-      <gl>mucus</gl>
-      <gl pivot="otherlg">Mucus</gl>
+      <gl pivot="samelg">Ask for</gl>
    </mel>
    <mel id="wn275">
-      <gl>1000</gl>
-      <gl>G</gl>
-      <gl>K</gl>
-      <gl>M</gl>
-      <gl>chiliad</gl>
-      <gl>grand</gl>
-      <gl>k</gl>
-      <gl>m</gl>
-      <gl>one thousand</gl>
-      <gl>thou</gl>
-      <gl>thousand</gl>
-      <gl>yard</gl>
-      <gl pivot="otherlg">Thousand</gl>
+      <gl pivot="samelg">Pair</gl>
    </mel>
    <mel id="wn276">
-      <gl>big H</gl>
-      <gl>boom</gl>
-      <gl>hell dust</gl>
-      <gl>nose drops</gl>
-      <gl>roar</gl>
-      <gl>roaring</gl>
-      <gl>scag</gl>
-      <gl>skag</gl>
-      <gl>smack</gl>
-      <gl>thunder</gl>
-      <gl pivot="otherlg">Thunder</gl>
+      <gl pivot="samelg">Winnow</gl>
    </mel>
    <mel id="wn277">
-      <gl>farseeing</gl>
-      <gl>farsighted</gl>
-      <gl>foresighted</gl>
-      <gl>foresightful</gl>
-      <gl>hanker</gl>
-      <gl>long</gl>
-      <gl>longsighted</gl>
-      <gl>prospicient</gl>
-      <gl>recollective</gl>
-      <gl>retentive</gl>
-      <gl>tenacious</gl>
-      <gl>yearn</gl>
-      <gl pivot="otherlg">Long</gl>
-   </mel>
-   <mel id="wn278">
-      <gl>attic</gl>
-      <gl>bean</gl>
-      <gl>bean plant</gl>
-      <gl>bonce</gl>
-      <gl>dome</gl>
-      <gl>edible bean</gl>
-      <gl>noggin</gl>
-      <gl>noodle</gl>
-      <gl pivot="otherlg">Bean</gl>
-   </mel>
-   <mel id="wn279">
       <gl pivot="notfound">Bamboo strip</gl>
    </mel>
-   <mel id="wn280">
+   <mel id="wn278">
       <gl pivot="notfound">Be a road</gl>
    </mel>
-   <mel id="wn281">
+   <mel id="wn279">
       <gl pivot="notfound">Be the case</gl>
    </mel>
-   <mel id="wn282">
+   <mel id="wn280">
       <gl pivot="notfound">Cooked rice</gl>
    </mel>
-   <mel id="wn283">
+   <mel id="wn281">
       <gl pivot="notfound">Don't</gl>
    </mel>
-   <mel id="wn284">
+   <mel id="wn282">
       <gl pivot="notfound">Dry in sun</gl>
    </mel>
-   <mel id="wn285">
+   <mel id="wn283">
       <gl pivot="notfound">Early morning</gl>
    </mel>
-   <mel id="wn286">
+   <mel id="wn284">
       <gl pivot="notfound">El Br W</gl>
    </mel>
-   <mel id="wn287">
+   <mel id="wn285">
       <gl pivot="notfound">Fa El Si</gl>
    </mel>
-   <mel id="wn288">
+   <mel id="wn286">
       <gl pivot="notfound">Fieldhut</gl>
    </mel>
-   <mel id="wn289">
+   <mel id="wn287">
       <gl pivot="notfound">Haveinan</gl>
    </mel>
-   <mel id="wn290">
+   <mel id="wn288">
       <gl pivot="notfound">Hillfield</gl>
    </mel>
-   <mel id="wn291">
+   <mel id="wn289">
       <gl pivot="notfound">Lines of hand</gl>
    </mel>
-   <mel id="wn292">
+   <mel id="wn290">
       <gl pivot="notfound">Mo Br</gl>
    </mel>
-   <mel id="wn293">
+   <mel id="wn291">
       <gl pivot="notfound">Paddyhouse</gl>
    </mel>
-   <mel id="wn294">
+   <mel id="wn292">
       <gl pivot="notfound">Rice ears</gl>
    </mel>
-   <mel id="wn295">
+   <mel id="wn293">
       <gl pivot="notfound">Root around</gl>
    </mel>
-   <mel id="wn296">
+   <mel id="wn294">
       <gl pivot="notfound">Wear hat</gl>
    </mel>
-   <mel id="wn297">
+   <mel id="wn295">
       <gl pivot="notfound">You</gl>
    </mel>
 </semantics>
