@@ -10,7 +10,8 @@
   <attested name="tag" file="DEMO93.tag.data.xml"/>
   <attested name="tuk" file="DEMO93.tuk.data.xml"/>
   <mel name="hand" file="DEMO93.hand.mel.xml"/>
-  <mel name="wordnet" file="DEMO93.wn.mel.xml"/>
+  <mel name="wordnet" file="DEMO93.wordnet.mel.xml"/>
+  <mel name="clics" file="DEMO93.clics.mel.xml"/>
   <reconstruction name="default">
     <proto_language name="tgtm" correspondences="DEMO93.C794DEM.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>

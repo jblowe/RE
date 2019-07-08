@@ -10,6 +10,7 @@
   <attested name="tag" file="DIS.tag.data.xml"/>
   <attested name="tuk" file="DIS.tuk.data.xml"/>
   <mel name="hand" file="DIS.hand.mel.xml"/>
+  <mel name="wordnet" file="DIS.wordnet.mel.xml"/>
   <reconstruction name="default">
     <proto_language name="tgtm" correspondences="DIS.default.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>

@@ -8,6 +8,7 @@
 
   <csvdata name="data" file="POLYNESIAN.data.csv"/>
   <mel name="hand" file="POLYNESIAN.hand.mel.xml"/>
+  <mel name="wordnet" file="POLYNESIAN.wordnet.mel.xml"/>
 
   <reconstruction name="default">
     <proto_language name="proto" correspondences="POLYNESIAN.correspondences.xml"/>
