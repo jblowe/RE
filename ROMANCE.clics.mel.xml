@@ -1,0 +1,375 @@
+<?xml version="1.0" ?>
+<semantics>
+   <mel id="clics1">
+      <gl>woman</gl>
+      <gl>wife</gl>
+   </mel>
+   <mel id="clics2">
+      <gl>foot</gl>
+      <gl>leg</gl>
+   </mel>
+   <mel id="clics3">
+      <gl>bark</gl>
+      <gl>skin</gl>
+   </mel>
+   <mel id="clics4">
+      <gl>fog</gl>
+      <gl>cloud</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics5">
+      <gl>small</gl>
+      <gl>few</gl>
+      <gl>narrow</gl>
+      <gl>short</gl>
+      <gl>egg</gl>
+      <gl>some</gl>
+   </mel>
+   <mel id="clics6">
+      <gl>water</gl>
+      <gl>river</gl>
+      <gl>wet</gl>
+      <gl>lake</gl>
+      <gl>year</gl>
+   </mel>
+   <mel id="clics7">
+      <gl>wing</gl>
+      <gl>feather</gl>
+   </mel>
+   <mel id="clics8">
+      <gl>husband</gl>
+      <gl>man</gl>
+      <gl>old</gl>
+   </mel>
+   <mel id="clics9">
+      <gl>ash</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics10">
+      <gl>wife</gl>
+      <gl>husband</gl>
+   </mel>
+   <mel id="clics11">
+      <gl>big</gl>
+      <gl>wide</gl>
+      <gl>thick</gl>
+      <gl>many</gl>
+      <gl>long</gl>
+      <gl>old</gl>
+   </mel>
+   <mel id="clics12">
+      <gl>what</gl>
+      <gl>how</gl>
+      <gl>because</gl>
+      <gl>where</gl>
+   </mel>
+   <mel id="clics13">
+      <gl>tree</gl>
+      <gl>stick</gl>
+      <gl>forest</gl>
+   </mel>
+   <mel id="clics14">
+      <gl>long</gl>
+      <gl>far</gl>
+      <gl>straight</gl>
+   </mel>
+   <mel id="clics15">
+      <gl>sky</gl>
+      <gl>cloud</gl>
+      <gl>sun</gl>
+   </mel>
+   <mel id="clics16">
+      <gl>few</gl>
+      <gl>some</gl>
+      <gl>two</gl>
+      <gl>one</gl>
+      <gl>narrow</gl>
+   </mel>
+   <mel id="clics17">
+      <gl>who</gl>
+      <gl>what</gl>
+      <gl>how</gl>
+   </mel>
+   <mel id="clics18">
+      <gl>snow</gl>
+      <gl>ice</gl>
+      <gl>cold</gl>
+   </mel>
+   <mel id="clics19">
+      <gl>black</gl>
+      <gl>dirty</gl>
+   </mel>
+   <mel id="clics20">
+      <gl>in</gl>
+      <gl>at</gl>
+      <gl>with</gl>
+   </mel>
+   <mel id="clics21">
+      <gl>this</gl>
+      <gl>that</gl>
+      <gl>here</gl>
+      <gl>he</gl>
+      <gl>louse</gl>
+   </mel>
+   <mel id="clics22">
+      <gl>lake</gl>
+      <gl>sea</gl>
+   </mel>
+   <mel id="clics23">
+      <gl>thick</gl>
+      <gl>wide</gl>
+      <gl>full</gl>
+      <gl>heavy</gl>
+      <gl>forest</gl>
+   </mel>
+   <mel id="clics24">
+      <gl>flat</gl>
+      <gl>smooth</gl>
+      <gl>wide</gl>
+   </mel>
+   <mel id="clics25">
+      <gl>seed</gl>
+      <gl>fruit</gl>
+      <gl>eye</gl>
+      <gl>egg</gl>
+      <gl>tooth</gl>
+   </mel>
+   <mel id="clics26">
+      <gl>sun</gl>
+      <gl>moon</gl>
+      <gl>near</gl>
+      <gl>name</gl>
+      <gl>year</gl>
+   </mel>
+   <mel id="clics27">
+      <gl>yellow</gl>
+      <gl>green</gl>
+      <gl>white</gl>
+   </mel>
+   <mel id="clics28">
+      <gl>right</gl>
+      <gl>straight</gl>
+      <gl>good</gl>
+   </mel>
+   <mel id="clics29">
+      <gl>bone</gl>
+      <gl>leg</gl>
+      <gl>stick</gl>
+      <gl>tree</gl>
+   </mel>
+   <mel id="clics30">
+      <gl>i</gl>
+      <gl>we</gl>
+   </mel>
+   <mel id="clics31">
+      <gl>where</gl>
+      <gl>how</gl>
+      <gl>when</gl>
+   </mel>
+   <mel id="clics32">
+      <gl>red</gl>
+      <gl>yellow</gl>
+   </mel>
+   <mel id="clics33">
+      <gl>you</gl>
+      <gl>they</gl>
+   </mel>
+   <mel id="clics34">
+      <gl>blood</gl>
+      <gl>red</gl>
+   </mel>
+   <mel id="clics35">
+      <gl>snake</gl>
+      <gl>worm</gl>
+   </mel>
+   <mel id="clics36">
+      <gl>river</gl>
+      <gl>sea</gl>
+      <gl>lake</gl>
+   </mel>
+   <mel id="clics37">
+      <gl>that</gl>
+      <gl>he</gl>
+      <gl>there</gl>
+   </mel>
+   <mel id="clics38">
+      <gl>meat</gl>
+      <gl>animal</gl>
+      <gl>fish</gl>
+   </mel>
+   <mel id="clics39">
+      <gl>straight</gl>
+      <gl>flat</gl>
+      <gl>smooth</gl>
+      <gl>good</gl>
+   </mel>
+   <mel id="clics40">
+      <gl>if</gl>
+      <gl>because</gl>
+      <gl>when</gl>
+   </mel>
+   <mel id="clics41">
+      <gl>mountain</gl>
+      <gl>stone</gl>
+   </mel>
+   <mel id="clics42">
+      <gl>leaf</gl>
+      <gl>feather</gl>
+      <gl>wing</gl>
+   </mel>
+   <mel id="clics43">
+      <gl>heart</gl>
+      <gl>liver</gl>
+   </mel>
+   <mel id="clics44">
+      <gl>cold</gl>
+      <gl>wind</gl>
+      <gl>ice</gl>
+   </mel>
+   <mel id="clics45">
+      <gl>short</gl>
+      <gl>few</gl>
+      <gl>near</gl>
+   </mel>
+   <mel id="clics46">
+      <gl>salt</gl>
+      <gl>sea</gl>
+   </mel>
+   <mel id="clics47">
+      <gl>hair</gl>
+      <gl>feather</gl>
+   </mel>
+   <mel id="clics48">
+      <gl>and</gl>
+      <gl>with</gl>
+      <gl>if</gl>
+   </mel>
+   <mel id="clics49">
+      <gl>many</gl>
+      <gl>all</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics50">
+      <gl>tooth</gl>
+      <gl>louse</gl>
+   </mel>
+   <mel id="clics51">
+      <gl>one</gl>
+      <gl>some</gl>
+      <gl>what</gl>
+      <gl>other</gl>
+   </mel>
+   <mel id="clics52">
+      <gl>fire</gl>
+      <gl>red</gl>
+      <gl>tree</gl>
+   </mel>
+   <mel id="clics53">
+      <gl>fruit</gl>
+      <gl>eye</gl>
+   </mel>
+   <mel id="clics54">
+      <gl>bird</gl>
+      <gl>animal</gl>
+   </mel>
+   <mel id="clics55">
+      <gl>bad</gl>
+      <gl>rotten</gl>
+      <gl>dirty</gl>
+   </mel>
+   <mel id="clics56">
+      <gl>hand</gl>
+      <gl>wing</gl>
+      <gl>five</gl>
+   </mel>
+   <mel id="clics57">
+      <gl>white</gl>
+      <gl>ash</gl>
+      <gl>cloud</gl>
+   </mel>
+   <mel id="clics58">
+      <gl>when</gl>
+      <gl>because</gl>
+   </mel>
+   <mel id="clics59">
+      <gl>how</gl>
+      <gl>when</gl>
+   </mel>
+   <mel id="clics60">
+      <gl>good</gl>
+      <gl>new</gl>
+   </mel>
+   <mel id="clics61">
+      <gl>sand</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics62">
+      <gl>narrow</gl>
+      <gl>thin</gl>
+   </mel>
+   <mel id="clics63">
+      <gl>mouth</gl>
+      <gl>tooth</gl>
+   </mel>
+   <mel id="clics64">
+      <gl>star</gl>
+      <gl>fish</gl>
+   </mel>
+   <mel id="clics65">
+      <gl>father</gl>
+      <gl>husband</gl>
+      <gl>mother</gl>
+   </mel>
+   <mel id="clics66">
+      <gl>stone</gl>
+      <gl>egg</gl>
+   </mel>
+   <mel id="clics67">
+      <gl>name</gl>
+      <gl>fish</gl>
+      <gl>straight</gl>
+   </mel>
+   <mel id="clics68">
+      <gl>we</gl>
+      <gl>you</gl>
+   </mel>
+   <mel id="clics69">
+      <gl>grass</gl>
+      <gl>green</gl>
+      <gl>leaf</gl>
+   </mel>
+   <mel id="clics70">
+      <gl>flower</gl>
+      <gl>red</gl>
+      <gl>fruit</gl>
+   </mel>
+   <mel id="clics71">
+      <gl>wet</gl>
+      <gl>rotten</gl>
+   </mel>
+   <mel id="clics72">
+      <gl>cloud</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics73">
+      <gl>here</gl>
+      <gl>there</gl>
+   </mel>
+   <mel id="clics74">
+      <gl>at</gl>
+      <gl>with</gl>
+   </mel>
+   <mel id="clics75">
+      <gl>they</gl>
+      <gl>he</gl>
+      <gl>that</gl>
+   </mel>
+   <mel id="clics76">
+      <gl>rotten</gl>
+      <gl>old</gl>
+   </mel>
+   <mel id="clics77">
+      <gl>back</gl>
+      <gl>bark</gl>
+   </mel>
+</semantics>
