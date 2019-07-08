@@ -18,9 +18,10 @@ Install the datasets:
 `pip install -r pip-requirements.txt`
 
 you'll need to clone these repositories in some directory X:
-https://github.com/clics/clics2
-https://github.com/clld/concepticon-data
-https://github.com/clld/glottolog
+
+* https://github.com/clics/clics2
+* https://github.com/clld/concepticon-data
+* https://github.com/clld/glottolog
 
 and for each directory run: `pip install -e`.
 
