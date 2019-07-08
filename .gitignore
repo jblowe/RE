@@ -11,6 +11,7 @@ __pycache__/
 *.coverage.txt
 TGTM.*.data.xml
 TEMP.*.data.xml
+DIS.*.data.xml
 POLYNESIAN.*.data.xml
 VANUATU.*.data.xml
 LOLOISH.*.data.xml
