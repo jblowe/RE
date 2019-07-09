@@ -7,6 +7,7 @@
   <attested name="scn" file="ROMANCE.scn.data.xml"/>
   <mel name="hand" file="ROMANCE.hand.mel.xml"/>
   <mel name="wordnet" file="ROMANCE.wordnet.mel.xml"/>
+  <mel name="clics" file="ROMANCE.clics.mel.xml"/>
   <reconstruction name="default">
     <proto_language name="PIWR" correspondences="ROMANCE.correspondences.xml"/>
     <action name="upstream" target="PIWR"/>
