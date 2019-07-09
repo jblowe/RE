@@ -8,8 +8,11 @@ __pycache__/
 
 *.compare.txt
 *.default.txt
-*.compare.xml
+*.statistics.txt
 *.coverage.txt
+*.sets.txt
+
+*.compare.xml
 TGTM.*.data.xml
 *.fuzz.data.xml
 TEMP.*.data.xml
@@ -21,12 +24,11 @@ DIS.*.data.xml
 *.evaluation.statistics.xml
 *.failures.sets.xml
 *.isolates.sets.xml
-*.keys.csv
 *.mel.statistics.xml
-*.sets.txt
 *.sets.xml
-*.statistics.txt
 *.upstream.statistics.xml
+
+*.keys.csv
 
 #
 !Build/
