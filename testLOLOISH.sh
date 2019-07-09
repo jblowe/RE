@@ -29,12 +29,10 @@ head ../projects/LOLOISH/SYI.default.analysis.txt
 time python3 REcli.py NYI -r hand --mel hand  > ../projects/LOLOISH/NYI.${DATE}.statistics.txt
 [ $? -ne 0 ] && exit 1;
 cat ../projects/LOLOISH/NYI.${DATE}.statistics.txt
-rm  ../projects/LOLOISH/NYI.${DATE}.statistics.txt
 
 time python3 REcli.py SYI -r hand --mel hand  > ../projects/LOLOISH/SYI.${DATE}.statistics.txt
 [ $? -ne 0 ] && exit 1;
 cat ../projects/LOLOISH/SYI.${DATE}.statistics.txt
-rm  ../projects/LOLOISH/SYI.${DATE}.statistics.txt
 
 # coverage
 python3 REcli.py -c -m hand SYI > ../projects/SYI/SYI.mel.coverage.txt
@@ -43,3 +41,5 @@ python3 REcli.py -c -m hand NYI > ../projects/NYI/NYI.mel.coverage.txt
 # compare
 python3 REcli.py -x -- SYI
 python3 REcli.py -x -- NYI
+
+exit 1
