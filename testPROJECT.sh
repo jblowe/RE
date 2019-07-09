@@ -13,13 +13,23 @@ then
    exit 1
 fi
 
+if [ -e "prepare${PROJECT}.sh" ]
+then
+   echo "running prepare${PROJECT}.sh ahead of ${PROJECT}."
+   bash prepare${PROJECT}.sh
+   # don't try to do anything else if previous script said not to...
+   [ $? -eq 0 ] || exit 0;
+fi
+
+
 if [ -e "test${PROJECT}.sh" ]
 then
-   echo "running test${PROJECT}.sh ahead of ${PROJECT}."
+   echo "running test${PROJECT}.sh instead...."
    bash test${PROJECT}.sh
    # don't try to do anything else if previous script said not to...
    [ $? -eq 0 ] || exit 0;
 fi
+
 
 if [ "$2" != "" ]
 then
@@ -32,9 +42,9 @@ fi
 time python3 REcli.py ${PROJECT} > ../projects/${PROJECT}/${PROJECT}.default.txt
 
 
-for mel in hand wordnet clics none
+# for mel in hand wordnet clics none
 # wordnet version is too slow for regular testing use (8 mins) ... run by hand if needed.
-# for mel in hand clics none
+for mel in hand clics none
 do
     if [ -e ../projects/${PROJECT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then

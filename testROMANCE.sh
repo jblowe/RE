@@ -18,3 +18,5 @@ python3 REcli.py -c -m hand ROMANCE > ../projects/ROMANCE/ROMANCE.mel.coverage.t
 
 # compare results of all runs
 python3 REcli.py -x -- ROMANCE
+
+exit 1
