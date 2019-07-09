@@ -1,5 +1,6 @@
 import glob
 import time
+import os
 import lxml.etree as ET
 import xml2dict
 from collections import defaultdict
@@ -35,7 +36,7 @@ def walk(files):
 
 
 def compare(project_dir, project, what_to_compare):
-    compare_xml_files = f'{project_dir}/{project}.*.statistics.xml'
+    compare_xml_files = os.path.join(project_dir, f'{project}.*.statistics.xml')
     files = glob.glob(compare_xml_files)
     files = [f for f in files if what_to_compare in f and 'compare' not in f]
     # run_types = [f.replace(f'{project_dir}/{project}.','').replace('.statistics.xml','') for f in files]
