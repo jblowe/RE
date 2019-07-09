@@ -7,7 +7,7 @@ PROJECT=$1
 
 if [ "$2" != "" ]
 then
-   RUN="$2"
+   RUN="--run $2"
 fi
 
 
