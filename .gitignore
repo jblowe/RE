@@ -14,8 +14,8 @@ TGTM.*.data.xml
 *.fuzz.data.xml
 TEMP.*.data.xml
 DIS.*.data.xml
-POLYNESIAN.*.data.xml
-VANUATU.*.data.xml
+*/POLYNESIAN/*.data.xml
+*/VANUATU/*.data.xml
 */LOLOISH/*.data.xml
 */LOLOISH/*.correspondences.xml
 *.evaluation.statistics.xml
