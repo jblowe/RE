@@ -146,7 +146,8 @@ def limit_lines(filecontent, max_rows):
 
 def upstream(request, language_forms, project, only_with_mel):
     project_dir = projects.projects[project]
-    settings = read.read_settings_file(f'{project_dir}/{project}.default.parameters.xml',
+    parameters_file = os.path.join(project_dir, f'{project}.default.parameters.xml')
+    settings = read.read_settings_file(parameters_file,
                                        mel='none',
                                        recon='default')
     if request == 'languages':
