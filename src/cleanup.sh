@@ -1,1 +1,1 @@
-for d in ../projects; do git clean -fd ../projects/$d ; done
+for d in ../projects; do git clean -fXd ../projects/$d ; done
