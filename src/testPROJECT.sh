@@ -38,10 +38,6 @@ then
     exit 0
 fi
 
-# make default sets, no mel
-time python3 REcli.py ${PROJECT} > ../projects/${PROJECT}/${PROJECT}.default.txt
-
-
 # for mel in hand wordnet clics none
 # wordnet version is too slow for regular testing use (8 mins) ... run by hand if needed.
 for mel in hand clics none
@@ -57,10 +53,13 @@ do
         time python3 REcli.py ${PROJECT} -w --run ${mel}-strict --mel ${mel}
         [ $? -ne 0 ] && exit 1;
 
-        # next test mel comparison
+        # next test mel comparison with and without strict
         time python3 REcli.py ${PROJECT} --run ${mel} --mel hand --mel2 ${mel}
         [ $? -ne 0 ] && exit 1;
         head ../projects/${PROJECT}/${PROJECT}.${mel}.analysis.txt
+        time python3 REcli.py ${PROJECT} -w --run ${mel}-strict --mel hand --mel2 ${mel}
+        [ $? -ne 0 ] && exit 1;
+        head ../projects/${PROJECT}/${PROJECT}.${mel}-strict.analysis.txt
     fi
 done
 
