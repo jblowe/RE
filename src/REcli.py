@@ -46,7 +46,7 @@ else:
         evaluation_stats['lexicon_1'] = (str(settings.mel_filename).replace(f'{project_dir}/{args.project}.',''), 'string')
         evaluation_stats['lexicon_2'] = (str(settings2.mel_filename).replace(f'{project_dir}/{args.project}.',''), 'string')
         print(f'wrote analysis to {analysis_file}')
-        evaluation_xml_file = os.path.join(project_dir, f'{args.project}.evaluation.statistics.xml')
+        evaluation_xml_file = os.path.join(project_dir, f'{args.project}.{args.run}.evaluation.statistics.xml')
         RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
     else:
         keys_file = os.path.join(project_dir, f'{args.project}.{args.run}.keys.csv')
