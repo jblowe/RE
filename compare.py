@@ -37,7 +37,7 @@ def walk(files):
 
 def compare(project_dir, project, what_to_compare):
     compare_xml_files = os.path.join(project_dir, f'{project}.*.statistics.xml')
-    files = glob.glob(compare_xml_files)
+    files = sorted(glob.glob(compare_xml_files))
     files = [f for f in files if what_to_compare in f and 'compare' not in f]
     # run_types = [f.replace(f'{project_dir}/{project}.','').replace('.statistics.xml','') for f in files]
 
