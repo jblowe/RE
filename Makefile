@@ -1,7 +1,7 @@
 test:
 	echo 'starting tests `date`'
 
-	cd src ; bash ./cleanup.sh
+	cd src ; bash ./cleanup.sh > /dev/null
 	
 	cd src ; bash ./testCSV2RE.sh
 	cd src ; bash ./testCSV2lexicon.sh
