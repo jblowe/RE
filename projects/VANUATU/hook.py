@@ -13,7 +13,7 @@ from xml.dom import minidom
 
 base_dir = os.path.dirname(__file__)
 filename = os.path.join(base_dir, 'AlexF_NorthVan-reconstructions_01.txt')
-correspondence_filename = os.path.join(base_dir, 'VANUATU.experimental.correspondences.csv')
+correspondence_filename = os.path.join(base_dir, 'AlexF_Vanuatu-correspondences (version 2019_7_10) - RE_readable.csv')
 
 languages = ['hiw', 'ltg', 'lhi', 'lyp', 'vlw', 'mtp', 'lmg', 'vra', 'vrs', 'msn', 'mta', 'num', 'drg', 'kro', 'olr', 'lkn', 'mrl']
 
@@ -84,12 +84,14 @@ def context_from(string):
     if '_' not in string:
         return (None, None)
     (left_context, right_context) = string.split('_')
+    string = string.strip(')')
+    string = string.strip('(')
     # We have to punt because we cannot handle these contexts as they
     # are now.
-    #if 'C' in left_context or 'V' in left_context or 'ˈ' in left_context:
-    #    left_context = None
-    #if 'C' in right_context or 'V' in right_context or 'ˈ' in right_context:
-    #    right_context = None
+    if 'C' in left_context or 'V' in left_context or 'ˈ' in left_context:
+        left_context = None
+    if 'C' in right_context or 'V' in right_context or 'ˈ' in right_context:
+        right_context = None
     if left_context:
         left_context = left_context.split('/')
     if right_context:
@@ -105,15 +107,14 @@ def read_vanuatu_csv(filename):
         names = next(skipped)[5:]
         print(names)
         for (number, row) in enumerate(skipped):
-            print(row)
             table.add_correspondence(RE.Correspondence(
                 # str(number), context_from(row[2]), syllable_type(row[1]), row[1],
-                row[0], context_from(row[2]), row[3], row[1],
+                row[0], context_from(row[2]), row[4].split(','), row[1],
                 dict(zip(names, (x.split('|') for x in row[5:])))))
     return table
 
 RE.Parameters(read_vanuatu_csv(correspondence_filename),
-              RE.SyllableCanon({}, 'C?I(C?V)+', []),
+              RE.SyllableCanon({}, '(c?v)?(c?wc?w)*(C?Vc?w)+', []),
               'pnv', None).serialize(
                   os.path.join(base_dir, 'VANUATU.correspondences.xml'))
 
