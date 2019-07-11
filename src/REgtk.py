@@ -265,7 +265,9 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
         proto_lexicon = RE.upstream_tree(settings.upstream_target,
                                          settings.upstream,
                                          read_parameter_tree_from_widget(parameter_tree_widget),
-                                         attested_lexicons)
+                                         attested_lexicons,
+                                         # HACK
+                                         False)
         def update_model():
             store.clear()
             for form in proto_lexicon.forms:
