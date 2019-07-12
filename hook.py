@@ -154,6 +154,7 @@ def write_parameters_file():
 
     ET.SubElement(root, 'mel', attrib={'name': 'clics', 'file': 'VANUATU.clics.mel.xml'})
     ET.SubElement(root, 'mel', attrib={'name': 'hand', 'file': 'VANUATU.hand.mel.xml'})
+    ET.SubElement(root, 'mel', attrib={'name': 'wordnet', 'file': 'VANUATU.wordnet.mel.xml'})
     recon = ET.SubElement(root, 'reconstruction', attrib={'name': 'default'})
     ET.SubElement(recon, 'proto_language',
                   attrib={'name': 'pvn',
