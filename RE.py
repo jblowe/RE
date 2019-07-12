@@ -559,7 +559,8 @@ def print_form(form, level):
     elif isinstance(form, ProtoForm):
         print('  ' * level + str(form) + ' ' +
               correspondences_as_ids(form.correspondences))
-        for supporting_form in form.supporting_forms:
+        # TODO: the output order should be the 'preferred order', not just alphabetical. but how?
+        for supporting_form in sorted(form.supporting_forms, key=lambda x: x.language + x.glyphs):
             print_form(supporting_form, level + 1)
 
 def print_sets(lexicon):
