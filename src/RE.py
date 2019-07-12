@@ -474,15 +474,18 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     list_of_recons = {}
     seen = {}
     for cognate_set in cognate_sets:
+        protoform = correspondences_as_proto_form_string(cognate_set[0])
         if only_with_mel:
             if cognate_set[2] not in seen:
                 seen[cognate_set[2]] = True
-                check_uniques(uniques, list_of_recons, correspondences_as_proto_form_string(cognate_set[0]), cognate_set)
-            if protoform in list_of_recons:
+                list_of_recons[protoform] = [cognate_set[0]]
+                uniques[(protoform, cognate_set[1])] = cognate_set
+            elif protoform in list_of_recons:
                 # print(f'already seen: {protoform} {correspondences_as_ids(cognate_set[0])}')
                 list_of_recons[protoform].append(cognate_set[0])
-                continue
-            list_of_recons[protoform] = [cognate_set[0]]
+            else:
+                list_of_recons[protoform] = [cognate_set[0]]
+            continue
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
