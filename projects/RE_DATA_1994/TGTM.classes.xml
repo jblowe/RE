@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <parameters>
+    <class name="W" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr"/>
+    <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,Hr,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml"/>
+    <class name="D" value="t,tʰ,d,n,ʰn"/>
+    <class name="P" value="p,pʰ,b,m,ʰm"/>
+    <class name="M" value="m,n,ŋ"/>
+    <canon value="T?(OG?|IL?G?)?(R|VF)"/>
+  </parameters>
