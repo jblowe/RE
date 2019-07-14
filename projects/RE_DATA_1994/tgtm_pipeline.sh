@@ -1,6 +1,10 @@
 #
 set -x
 
+# run the csv converter for the correspondences
+python3 ../../src/csv_to_re.py TGTM.C794.csv ../TGTM/TGTM.C794.correspondences.xml TGTM.classes.xml
+[ $? -ne 0 ] && exit 1;
+
 # run the perl hack to convert the lexware files to XML
 perl Lex2XML.pl MONGUR8_1994.DAT TEMP.gha.data.xml gha.xml.log gha
 perl Lex2XML.pl MARPHA_1993.DAT TEMP.mar.data.xml mar.xml.log mar
