@@ -1,5 +1,4 @@
 <div id="content" class="col-sm-12">
-<a href="/list_projects">&lt;&lt; back</a>
 <h3>{{data['project']}} Interactive</h3>
     <form method="post">
         <div class="row">
