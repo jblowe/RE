@@ -1,4 +1,5 @@
 import os, time, sys
+import lxml.etree as ET
 
 # we need some code from the sibling directory where the rest of the RE code lives
 sys.path.append("../src")
@@ -25,6 +26,29 @@ def get_version():
 def add_time_and_version():
     return 'code and data version: %s, system last restarted: %s' % (
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
+
+
+def list_experiments(project):
+    project_dir = projects.projects[project]
+    experiment_dirs = [f for f in sorted(os.listdir(os.path.join(project_dir, 'experiments'))) if os.path.isdir(os.path.join(project_dir, 'experiments', f))]
+    experiments = []
+    data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
+    for x in experiment_dirs:
+        experiments.append(get_experiment_info(project_dir, x, data_elements, project))
+    return experiments, BASE_DIR, data_elements
+
+
+def get_experiment_info(project_dir, experiment, data_elements, project):
+    parameters_file = os.path.join(project_dir, 'experiments', experiment, f'{project}.default.parameters.xml')
+    experiment_info = (experiment,) + (get_info(parameters_file),) + tuple(data_elements[2:])
+    settings = read.read_settings_file(parameters_file,
+                                       mel='none',
+                                       recon='default')
+    for s in settings.other:
+        pass
+    # dom = ET.parse(parameters_file)
+    # experiment_info = (experiment, 'date', settings.mel_filename,
+    return experiment_info
 
 
 def data_files(project):
@@ -92,7 +116,6 @@ def project_info():
 
 
 def xml2html(xml_filename, xsl_filename):
-    import lxml.etree as ET
 
     dom = ET.parse(xml_filename)
     xslt = ET.parse(xsl_filename)
@@ -159,5 +182,7 @@ def upstream(request, language_forms, project, only_with_mel):
         return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
     pass
 
+def show_experiment(project_dir, experiment):
+    pass
 
 VERSION = get_version()

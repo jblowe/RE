@@ -1,7 +1,9 @@
-from bottle import Bottle, HTTPResponse, default_app, post, request, run, route, template, debug, static_file, Jinja2Template, BaseTemplate
+from bottle import Bottle, HTTPResponse, default_app, post, request, run, route, template, debug, static_file, \
+    Jinja2Template, BaseTemplate
 
 import os
 import sys
+from shutil import copy
 import utils
 import run_make
 import RE
@@ -60,7 +62,8 @@ def project(project_name):
 def project_file(filename):
     content, project_name, date = utils.file_content(filename)
     files, base_dir = utils.data_files(project_name)
-    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date, 'content': content}
+    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date,
+            'content': content}
     return template('index', data=data)
 
 
@@ -90,6 +93,41 @@ def interactive_project(project_name):
     languages, upstream_target, base_dir = utils.upstream('languages', [], project_name, True)
     languages = [(l, '') for l in languages]
     data = {'interactive': 'start', 'project': project_name, 'languages': languages, 'base_dir': base_dir}
+    return template('index', data=data)
+
+@app.route('/experiments/<project_name:re:.*>/<experiment_name:re:.*>')
+@app.post('/experiments/<project_name:re:.*>/<experiment_name:re:.*>')
+def experiments(project_name, experiment_name):
+    experiments, base_dir, data_elements = utils.list_experiments(project_name)
+    error_messages = []
+    if experiment_name == 'NEW':
+        new_experiment = getattr(request.forms, 'new_experiment')
+        try:
+            new_dir = os.path.join(base_dir, 'projects', project_name, 'experiments', new_experiment)
+            os.mkdir(new_dir)
+            for root, dirs, files in os.walk(os.path.join(base_dir, 'projects', project_name)):
+                for f in files:
+                    print(os.path.join(root, f))
+                    copy(os.path.join(root, f), new_dir)
+                break
+        except:
+            raise
+            error_messages.append(f"couldn't make experiment {new_experiment}")
+    else:
+        utils.show_experiment(project, experiment_name)
+    experiments, base_dir, data_elements = utils.list_experiments(project_name)
+    data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
+            'data_elements': data_elements}
+    if len(error_messages) > 0:
+        data['errors'] = error_messages
+    return template('index', data=data)
+
+
+@app.route('/experiments/<project_name:re:.*>')
+def experiments_project(project_name):
+    experiments, base_dir, data_elements = utils.list_experiments(project_name)
+    data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
+            'data_elements': data_elements}
     return template('index', data=data)
 
 
