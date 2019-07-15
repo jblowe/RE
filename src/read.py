@@ -104,7 +104,9 @@ def compute_context(context_string):
         context_string = context_string.replace('ˍ','_')
         if '_' in context_string:
             contextL, contextR = context_string.split('_')
-        return (contextL.split(','), contextR.split(','))
+            contextL = contextL.split(',')
+            contextR = contextR.split(',')
+        return (contextL, contextR)
 
 
 # xml reading
