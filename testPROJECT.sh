@@ -15,8 +15,9 @@ DATE=`date +%Y-%m-%d-%H-%M`
 
 if [ ! -d ../projects/${PROJECT}${SPACER}${EXPERIMENT} ]
 then
-   echo "../projects/${PROJECT}${SPACER}${EXPERIMENT} does not exist."
-   exit 1
+   echo "../projects/${PROJECT}${SPACER}${EXPERIMENT} does not exist. creating..."
+   mkdir -p ../projects/${PROJECT}${SPACER}${EXPERIMENT}
+   cp ../projects/${PROJECT}/*  ../projects/${PROJECT}${SPACER}${EXPERIMENT}
 fi
 
 if [ -e "prepare${PROJECT}.sh" ]
