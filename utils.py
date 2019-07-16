@@ -28,9 +28,14 @@ def add_time_and_version():
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
 
+def show_experiment(project_dir, experiment, data_elements, project):
+    return get_experiment_info(project_dir, experiment, data_elements, project)
+
+
 def list_experiments(project):
-    project_dir = projects.projects[project]
-    experiment_dirs = [f for f in sorted(os.listdir(os.path.join(project_dir, 'experiments'))) if os.path.isdir(os.path.join(project_dir, 'experiments', f))]
+    project_dir = projects.find_project_path(project)
+    experiment_dirs = [f for f in sorted(os.listdir(os.path.join(project_dir, 'experiments'))) if
+                       os.path.isdir(os.path.join(project_dir, 'experiments', f))]
     experiments = []
     data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
     for x in experiment_dirs:
@@ -52,7 +57,7 @@ def get_experiment_info(project_dir, experiment, data_elements, project):
 
 
 def data_files(project):
-    project_dir = projects.projects[project]
+    project_dir = projects.find_project_path(project)
     filelist = [f for f in sorted(os.listdir(project_dir)) if os.path.isfile(os.path.join(project_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
@@ -70,7 +75,7 @@ def data_files(project):
 def all_file_content(file_path):
     # file_path contains the project and filename, e.g. TGTM/TGTM.mel.xml
     (project, filename) = file_path.split('/')
-    file_path = os.path.join(projects.projects[project], filename)
+    file_path = os.path.join(projects.find_project_path(project), filename)
     f = open(file_path, 'r')
     data = f.read()
     f.close()
@@ -79,8 +84,8 @@ def all_file_content(file_path):
 
 def file_content(file_path):
     # file_path contains the project and filename, e.g. TGTM/TGTM.hand.mel.xml
-    (project, filename) = file_path.split('/')
-    file_path = os.path.join(projects.projects[project], filename)
+    (project, filename) = file_path.split('/', 1)
+    file_path = os.path.join(projects.find_project_path(project), filename)
     if '.xml' in file_path:
         xslt_path = determine_file_type(file_path)
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
@@ -112,11 +117,11 @@ def get_info(path):
 def project_info():
     # project_dir = os.path.join(BASE_DIR, 'projects', project)
     # filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
-    return [(p, get_info(p), projects.projects[p]) for p in projects.projects]
+    x = projects.find_project_path('all')
+    return [(p, get_info(p), projects.projects[p]) for p in projects.find_project_path('all')]
 
 
 def xml2html(xml_filename, xsl_filename):
-
     dom = ET.parse(xml_filename)
     xslt = ET.parse(xsl_filename)
     transform = ET.XSLT(xslt)
@@ -168,7 +173,7 @@ def limit_lines(filecontent, max_rows):
 
 
 def upstream(request, language_forms, project, only_with_mel):
-    project_dir = projects.projects[project]
+    project_dir = projects.find_project_path(project)
     parameters_file = os.path.join(project_dir, f'{project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel='none',
@@ -182,7 +187,5 @@ def upstream(request, language_forms, project, only_with_mel):
         return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
     pass
 
-def show_experiment(project_dir, experiment):
-    pass
 
 VERSION = get_version()

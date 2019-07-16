@@ -99,6 +99,8 @@ def interactive_project(project_name):
 @app.post('/experiments/<project_name:re:.*>/<experiment_name:re:.*>')
 def experiments(project_name, experiment_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
+    project_dir = os.path.join(base_dir, 'projects', project_name)
+    experiment_path =  os.path.join(project_name, 'experiments', experiment_name)
     error_messages = []
     if experiment_name == 'NEW':
         new_experiment = getattr(request.forms, 'new_experiment')
@@ -113,11 +115,14 @@ def experiments(project_name, experiment_name):
         except:
             raise
             error_messages.append(f"couldn't make experiment {new_experiment}")
+        experiments, base_dir, data_elements = utils.list_experiments(project_name)
+        data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
+                'data_elements': data_elements}
     else:
-        utils.show_experiment(project, experiment_name)
-    experiments, base_dir, data_elements = utils.list_experiments(project_name)
-    data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
-            'data_elements': data_elements}
+        experiment_info = utils.show_experiment(project_dir, experiment_name, data_elements, project_name)
+        files, xxx = utils.data_files(os.path.join(project_name, 'experiments', experiment_name))
+        data = {'experiment': experiment_name, 'project': experiment_path, 'base_dir':base_dir,
+                'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files}
     if len(error_messages) > 0:
         data['errors'] = error_messages
     return template('index', data=data)
