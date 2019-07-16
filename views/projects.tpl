@@ -14,7 +14,6 @@
         <td>{{updated_at}}</td>
         <td><a href="/interactive/{{project}}">interactive</a></td>
         <td><a href="/experiments/{{project}}">experiments</a></td>
-        <td><a href="/make/{{project}}">refresh</a></td>
     </tr>
   % end
     </tbody>

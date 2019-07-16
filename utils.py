@@ -9,7 +9,8 @@ import RE, read
 
 # nb: we are trying to get the directory above the directory this file is in
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECTS = 'projects'
+EXPERIMENTS = 'experiments'
 
 def get_version():
     try:
@@ -28,14 +29,17 @@ def add_time_and_version():
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
 
-def show_experiment(project_dir, experiment, data_elements, project):
-    return get_experiment_info(project_dir, experiment, data_elements, project)
+def show_experiment(experiment_dir, experiment, data_elements, project):
+    return get_experiment_info(experiment_dir, experiment, data_elements, project)
 
 
 def list_experiments(project):
     project_dir = projects.find_project_path(project)
-    experiment_dirs = [f for f in sorted(os.listdir(os.path.join(project_dir, 'experiments'))) if
-                       os.path.isdir(os.path.join(project_dir, 'experiments', f))]
+    if 'experiments' in project_dir:
+        pass
+    else:
+        project_dir = os.path.join(project_dir, 'experiments')
+    experiment_dirs = [f for f in sorted(os.listdir(project_dir)) if os.path.isdir(os.path.join(project_dir, f))]
     experiments = []
     data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
     for x in experiment_dirs:
@@ -44,7 +48,7 @@ def list_experiments(project):
 
 
 def get_experiment_info(project_dir, experiment, data_elements, project):
-    parameters_file = os.path.join(project_dir, 'experiments', experiment, f'{project}.default.parameters.xml')
+    parameters_file = os.path.join(project_dir, experiment, f'{project}.default.parameters.xml')
     experiment_info = (experiment,) + (get_info(parameters_file),) + tuple(data_elements[2:])
     settings = read.read_settings_file(parameters_file,
                                        mel='none',
@@ -56,9 +60,9 @@ def get_experiment_info(project_dir, experiment, data_elements, project):
     return experiment_info
 
 
-def data_files(project):
-    project_dir = projects.find_project_path(project)
-    filelist = [f for f in sorted(os.listdir(project_dir)) if os.path.isfile(os.path.join(project_dir, f))]
+def data_files(directory):
+    directory_dir = projects.find_path(directory)
+    filelist = [f for f in sorted(os.listdir(directory_dir)) if os.path.isfile(os.path.join(directory_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     for type in 'parameters statistics compare correspondences mel sets data'.split(' '):
@@ -73,19 +77,19 @@ def data_files(project):
 
 
 def all_file_content(file_path):
-    # file_path contains the project and filename, e.g. TGTM/TGTM.mel.xml
-    (project, filename) = file_path.split('/')
-    file_path = os.path.join(projects.find_project_path(project), filename)
+    # file_path contains the directory and filename, e.g. TGTM/TGTM.mel.xml
+    (directory, filename) = file_path.split(os.sep, 1)
+    file_path = os.path.join(projects.find_path(directory), filename)
     f = open(file_path, 'r')
     data = f.read()
     f.close()
-    return data, project
+    return data, directory
 
 
 def file_content(file_path):
-    # file_path contains the project and filename, e.g. TGTM/TGTM.hand.mel.xml
-    (project, filename) = file_path.split('/', 1)
-    file_path = os.path.join(projects.find_project_path(project), filename)
+    # file_path contains the directory path and filename, e.g. TGTM/experiments/semantics/TGTM.hand.mel.xml
+    (directory, filename) = file_path.split(os.sep, 1)
+    file_path = os.path.join(projects.find_path(directory), filename)
     if '.xml' in file_path:
         xslt_path = determine_file_type(file_path)
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
@@ -103,7 +107,7 @@ def file_content(file_path):
         data = f.read()
         f.close()
         data = reformat(data, 5000)
-    return data, project, get_info(file_path)
+    return data, directory, get_info(file_path)
 
 
 def get_info(path):
@@ -117,7 +121,7 @@ def get_info(path):
 def project_info():
     # project_dir = os.path.join(BASE_DIR, 'projects', project)
     # filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
-    x = projects.find_project_path('all')
+    x = projects.find_project_path('projects', 'all')
     return [(p, get_info(p), projects.projects[p]) for p in projects.find_project_path('all')]
 
 

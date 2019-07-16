@@ -44,33 +44,32 @@ def index():
     return template('index', data=data)
 
 
-@app.route('/list_projects')
-def list_projects():
-    project_info = utils.project_info()
-    data = {'projects': project_info}
+@app.route('/list_tree/<trees:re:.*>')
+def list_tree(trees):
+    tree_info = utils.tree_info(trees)
+    data = {trees: tree_info, 'level': 'project_file'}
     return template('index', data=data)
 
 
 @app.route('/project/<project_name:re:.*>')
 def project(project_name):
     files, base_dir = utils.data_files(project_name)
-    data = {'project': project_name, 'files': files, 'base_dir': base_dir}
+    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'level': 'project_file'}
     return template('index', data=data)
 
 
-@app.route('/project_file/<filename:re:.*>')
-def project_file(filename):
-    content, project_name, date = utils.file_content(filename)
-    files, base_dir = utils.data_files(project_name)
-    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date,
-            'content': content}
+@app.route('/get_file/type:re:.*>/<filename:re:.*>')
+def get_file(type, filename):
+    content, name, date = utils.file_content(filename)
+    files, base_dir = utils.data_files(filename)
+    data = {type: name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date,
+            'content': content, 'level': 'project_file'}
     return template('index', data=data)
 
 
 @app.route('/download/<filename:re:.*>')
 def download(filename):
     content, project_name = utils.all_file_content(filename)
-    files, base_dir = utils.data_files(project_name)
     response = HTTPResponse()
     response.body = content
     response['Content-Disposition'] = 'attachment; filename="%s"' % filename
@@ -95,9 +94,22 @@ def interactive_project(project_name):
     data = {'interactive': 'start', 'project': project_name, 'languages': languages, 'base_dir': base_dir}
     return template('index', data=data)
 
-@app.route('/experiments/<project_name:re:.*>/<experiment_name:re:.*>')
-@app.post('/experiments/<project_name:re:.*>/<experiment_name:re:.*>')
-def experiments(project_name, experiment_name):
+@app.route('/experiment/<project_name:re:.*>/<experiment_name:re:.*>')
+def show_experiment(project_name, experiment_name):
+    experiments, base_dir, data_elements = utils.list_experiments(project_name)
+    error_messages = []
+    experiment_info = utils.show_experiment(project_name, experiment_name, data_elements, project_name)
+    files, xxx = utils.data_files(os.path.join(project_dir, 'experiments', experiment_name))
+    data = {'experiment': experiment_name, 'project': experiment_path, 'base_dir':base_dir,
+            'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files}
+    if len(error_messages) > 0:
+        data['errors'] = error_messages
+    data['level'] = 'experiment'
+    return template('index', data=data)
+
+
+@app.post('/experiment/<project_name:re:.*>/<experiment_name:re:.*>')
+def do_experiment(project_name, experiment_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
     project_dir = os.path.join(base_dir, 'projects', project_name)
     experiment_path =  os.path.join(project_name, 'experiments', experiment_name)
@@ -119,20 +131,15 @@ def experiments(project_name, experiment_name):
         data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
                 'data_elements': data_elements}
     else:
-        experiment_info = utils.show_experiment(project_dir, experiment_name, data_elements, project_name)
-        files, xxx = utils.data_files(os.path.join(project_name, 'experiments', experiment_name))
-        data = {'experiment': experiment_name, 'project': experiment_path, 'base_dir':base_dir,
-                'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files}
-    if len(error_messages) > 0:
-        data['errors'] = error_messages
+        pass
     return template('index', data=data)
 
 
 @app.route('/experiments/<project_name:re:.*>')
-def experiments_project(project_name):
+def experiments(project_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
     data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
-            'data_elements': data_elements}
+            'data_elements': data_elements, 'level': 'project_file'}
     return template('index', data=data)
 
 
