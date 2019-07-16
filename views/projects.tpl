@@ -8,7 +8,7 @@
     </tr>
     </thead>
     <tbody>
-  % for (project, updated_at, project_dir) in data['projects']:
+  % for (project, updated_at) in data['projects']:
     <tr>
         <td><a href="/project/{{project}}">{{project}}</a></td>
         <td>{{updated_at}}</td>

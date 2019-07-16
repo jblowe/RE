@@ -28,13 +28,16 @@ def add_time_and_version():
     return 'code and data version: %s, system last restarted: %s' % (
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
+def combine_parts(tree, project_name, filename):
+    return os.path.join('..', tree, project_name, filename)
+
 
 def show_experiment(experiment_dir, experiment, data_elements, project):
     return get_experiment_info(experiment_dir, experiment, data_elements, project)
 
 
 def list_experiments(project):
-    project_dir = projects.find_project_path(project)
+    project_dir = projects.find_path('experiments', project)
     if 'experiments' in project_dir:
         pass
     else:
@@ -60,36 +63,34 @@ def get_experiment_info(project_dir, experiment, data_elements, project):
     return experiment_info
 
 
-def data_files(directory):
-    directory_dir = projects.find_path(directory)
+def data_files(tree, directory):
+    directory_dir = projects.find_path(tree, directory)
     filelist = [f for f in sorted(os.listdir(directory_dir)) if os.path.isfile(os.path.join(directory_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
-    for type in 'parameters statistics compare correspondences mel sets data'.split(' '):
+    for type in 'parameters correspondences mel data'.split(' '):
+        to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
+    for type in 'statistics compare sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
     for type in 'correspondences data u8 keys'.split(' '):
         to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
     for type in 'statistics keys sets coverage'.split(' '):
         to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
-    for type in 'DAT'.split(' '):
-        to_display.append((type, [f for f in filelist if f'.{type}' in f]))
+    other_files = []
+    for type in 'DAT DIS csv xls xlsx ods'.split(' '):
+        [other_files.append(f) for f in filelist if f'.{type}' in f]
+    to_display.append(('Other data types', other_files))
     return to_display, BASE_DIR
 
 
 def all_file_content(file_path):
-    # file_path contains the directory and filename, e.g. TGTM/TGTM.mel.xml
-    (directory, filename) = file_path.split(os.sep, 1)
-    file_path = os.path.join(projects.find_path(directory), filename)
     f = open(file_path, 'r')
     data = f.read()
     f.close()
-    return data, directory
+    return data
 
 
 def file_content(file_path):
-    # file_path contains the directory path and filename, e.g. TGTM/experiments/semantics/TGTM.hand.mel.xml
-    (directory, filename) = file_path.split(os.sep, 1)
-    file_path = os.path.join(projects.find_path(directory), filename)
     if '.xml' in file_path:
         xslt_path = determine_file_type(file_path)
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
@@ -97,7 +98,7 @@ def file_content(file_path):
             data = xml2html(file_path, xslt_path)
         except:
             data = '<span style="color: red">Problem handling this file, sorry!</span>'
-    elif '.txt' in file_path or '.DAT' in file_path:
+    elif '.txt' in file_path or '.DAT' in file_path or '.DIS' in file_path:
         f = open(file_path, 'r')
         data = f.read()
         f.close()
@@ -107,7 +108,9 @@ def file_content(file_path):
         data = f.read()
         f.close()
         data = reformat(data, 5000)
-    return data, directory, get_info(file_path)
+    else:
+        data = '<span style="color: red">Not a type of file that can be displayed here, sorry!</span>'
+    return data, get_info(file_path)
 
 
 def get_info(path):
@@ -118,11 +121,11 @@ def get_info(path):
         return 'unknown'
 
 
-def project_info():
+def tree_info(tree):
     # project_dir = os.path.join(BASE_DIR, 'projects', project)
     # filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
-    x = projects.find_project_path('projects', 'all')
-    return [(p, get_info(p), projects.projects[p]) for p in projects.find_project_path('all')]
+    tree_list = projects.find_path(tree, 'all')
+    return [(p, get_info(p)) for p in tree_list]
 
 
 def xml2html(xml_filename, xsl_filename):
