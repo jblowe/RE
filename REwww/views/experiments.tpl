@@ -14,7 +14,7 @@
           <tbody>
           % for experiment in data['experiments']:
                 <tr>
-                <td><a href="/experiments/{{data['project']}}/{{experiment[0]}}">{{ experiment[0] }}</a></td>
+                <td><a href="/experiment/{{data['project']}}/{{experiment[0]}}">{{ experiment[0] }}</a></td>
                 % for e in experiment[1:]:
                 <td>{{e}}</td>
                 % end
