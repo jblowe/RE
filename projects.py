@@ -11,4 +11,11 @@ projects = {'TGTM': '../projects/TGTM',
             'GERMANIC': '../projects/GERMANIC',
             'VANUATU': '../projects/VANUATU',
             'RE_DATA_1994': '../projects/RE_DATA_1994'
-}
+            }
+
+def find_project_path(project):
+    if project == 'all':
+        return projects
+    else:
+        path = os.path.join('..', 'projects', project)
+        return path
