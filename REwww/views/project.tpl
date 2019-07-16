@@ -5,8 +5,8 @@
     <ul>
       % for file in files:
         <li>
-            <a href="/{{data['level']}}/{{data['project']}}/{{file}}">{{file}}</a>
-            <a href="/download/{{data['project']}}/{{file}}"><span class="glyphicon glyphicon glyphicon-download-alt"></span></a>
+            <a href="/get_file/projects/{{data['project']}}/{{file}}">{{file}}</a>
+            <a href="/download/projects/{{data['project']}}/{{file}}"><span class="glyphicon glyphicon glyphicon-download-alt"></span></a>
         </li>
       % end
     </ul>

@@ -44,32 +44,34 @@ def index():
     return template('index', data=data)
 
 
-@app.route('/list_tree/<trees:re:.*>')
-def list_tree(trees):
-    tree_info = utils.tree_info(trees)
-    data = {trees: tree_info, 'level': 'project_file'}
+@app.route('/list_tree/<tree:re:.*>')
+def list_tree(tree):
+    tree_info = utils.tree_info(tree)
+    data = {tree: tree_info}
     return template('index', data=data)
 
 
 @app.route('/project/<project_name:re:.*>')
 def project(project_name):
-    files, base_dir = utils.data_files(project_name)
-    data = {'project': project_name, 'files': files, 'base_dir': base_dir, 'level': 'project_file'}
+    files, base_dir = utils.data_files(utils.PROJECTS, project_name)
+    data = {'project': project_name, 'files': files, 'base_dir': base_dir}
     return template('index', data=data)
 
 
-@app.route('/get_file/type:re:.*>/<filename:re:.*>')
-def get_file(type, filename):
-    content, name, date = utils.file_content(filename)
-    files, base_dir = utils.data_files(filename)
-    data = {type: name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date,
-            'content': content, 'level': 'project_file'}
+@app.route('/get_file/<tree:re:.*>/<project_name:re:.*>/<filename:re:.*>')
+def get_file(tree, project_name, filename):
+    full_path = utils.combine_parts(tree, project_name, filename)
+    content, date = utils.file_content(full_path)
+    files, base_dir = utils.data_files(tree, project_name)
+    data = {tree[:-1]: project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date,
+            'content': content}
     return template('index', data=data)
 
 
-@app.route('/download/<filename:re:.*>')
-def download(filename):
-    content, project_name = utils.all_file_content(filename)
+@app.route('/download/<tree:re:.*>/<project_name:re:.*>/<filename:re:.*>')
+def download(tree, project_name, filename):
+    full_path = utils.combine_parts(tree, project_name, filename)
+    content = utils.all_file_content(full_path)
     response = HTTPResponse()
     response.body = content
     response['Content-Disposition'] = 'attachment; filename="%s"' % filename
@@ -99,7 +101,7 @@ def show_experiment(project_name, experiment_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
     error_messages = []
     experiment_info = utils.show_experiment(project_name, experiment_name, data_elements, project_name)
-    files, xxx = utils.data_files(os.path.join(project_dir, 'experiments', experiment_name))
+    files, xxx = utils.data_files('experiments', experiment_name)
     data = {'experiment': experiment_name, 'project': experiment_path, 'base_dir':base_dir,
             'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files}
     if len(error_messages) > 0:
@@ -138,8 +140,8 @@ def do_experiment(project_name, experiment_name):
 @app.route('/experiments/<project_name:re:.*>')
 def experiments(project_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
-    data = {'experiments': experiments, 'project': project_name, 'experiments': experiments, 'base_dir': base_dir,
-            'data_elements': data_elements, 'level': 'project_file'}
+    data = {'experiments': experiments, 'project': project_name, 'base_dir': base_dir,
+            'data_elements': data_elements}
     return template('index', data=data)
 
 
