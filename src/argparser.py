@@ -1,4 +1,5 @@
 import argparse
+import os
 import projects
 
 parser = argparse.ArgumentParser(description='The Reconstruction Engine.')
@@ -45,7 +46,9 @@ parser.add_argument('--recon2',
                     help='model of reconstruction to compare against')
 
 args = parser.parse_args()
-project_dir = projects.projects[args.project]
+args.project_dir = projects.find_project_path(args.project)
+args.project_path = args.project
+args.project = args.project.split(os.sep)[0]
 need_to_compare = (args.mel2 or args.recon2)
 compare_results = args.compare
 only_with_mel = args.only_with_mel

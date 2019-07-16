@@ -5,7 +5,7 @@ import os
 import sys
 
 def load_hook(project, settings):
-    base_dir = projects.projects[project]
+    base_dir = projects.find_project_path(project)
     sys.path.append('toolbox/')
     sys.path.append(base_dir)
     try:
