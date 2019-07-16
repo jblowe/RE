@@ -3,9 +3,9 @@ test:
 
 	cd src ; bash ./cleanup.sh > /dev/null
 
-	cd projects ; for i in `ls` ; do echo $i ; mkdir -p $i/experiments/semantics ; cp $i/* $i/experiments/semantics ; done
+	cd projects ; for $(i) in `ls` ; do echo $(i) ; mkdir -p $(i)/experiments/semantics ; cp $(i)/* $i/experiments/semantics ; done
 
-	cd src ; bash ./testCSV2RE.sh
+	cd src ; bash ./testCSV2RE.sh:
 	cd src ; bash ./testCSV2lexicon.sh
 
 	cd src ; bash ./testPROJECT.sh DEMO93 semantics
