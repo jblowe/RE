@@ -104,8 +104,10 @@ def compute_context(context_string):
         context_string = context_string.replace('ˍ','_')
         if '_' in context_string:
             contextL, contextR = context_string.split('_')
-            contextL = contextL.split(',')
-            contextR = contextR.split(',')
+            if contextL:
+                contextL = contextL.split(',')
+            if contextR:
+                contextR = contextR.split(',')
         return (contextL, contextR)
 
 
