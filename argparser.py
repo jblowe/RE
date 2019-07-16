@@ -46,8 +46,8 @@ parser.add_argument('--recon2',
                     help='model of reconstruction to compare against')
 
 args = parser.parse_args()
-args.project_dir = projects.find_project_path(args.project)
-args.project_path = args.project
+args.experiment_path = projects.find_path('experiments', args.project)
+args.experiment = args.project
 args.project = args.project.split(os.sep)[0]
 need_to_compare = (args.mel2 or args.recon2)
 compare_results = args.compare

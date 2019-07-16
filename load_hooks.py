@@ -4,10 +4,9 @@ import projects
 import os
 import sys
 
-def load_hook(project, settings):
-    base_dir = projects.find_project_path(project)
+def load_hook(experiment_path, settings):
     sys.path.append('toolbox/')
-    sys.path.append(base_dir)
+    sys.path.append(experiment_path)
     try:
         print('trying for hooks')
         from hook import run_load_hooks
