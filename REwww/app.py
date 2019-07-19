@@ -54,28 +54,46 @@ def list_tree(tree):
 @app.route('/project/<project_name:re:.*>')
 def project(project_name):
     files, base_dir = utils.data_files(utils.PROJECTS, project_name)
-    data = {'project': project_name, 'files': files, 'base_dir': base_dir}
+    data = {'tree': 'projects', 'project': project_name, 'files': files, 'base_dir': base_dir}
     return template('index', data=data)
 
 
 @app.route('/get_file/<tree:re:.*>/<project_name:re:.*>/<filename:re:.*>')
-def get_file(tree, project_name, filename):
+def get_project(tree, project_name, filename):
     full_path = utils.combine_parts(tree, project_name, filename)
     content, date = utils.file_content(full_path)
     files, base_dir = utils.data_files(tree, project_name)
-    data = {tree[:-1]: project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date,
-            'content': content}
+    data = {'tree': tree, 'project': project_name, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date, 'content': content}
     return template('index', data=data)
 
 
-@app.route('/download/<tree:re:.*>/<project_name:re:.*>/<filename:re:.*>')
-def download(tree, project_name, filename):
-    full_path = utils.combine_parts(tree, project_name, filename)
+@app.route('/get_file/<tree:re:.*>/<project_name:re:.*>/<experiment:re:.*>/<filename:re:.*>')
+def get_experiment(tree, project_name, experiment, filename):
+    full_path = utils.combine_parts(tree, project_name, experiment, filename)
+    content, date = utils.file_content(full_path)
+    files, base_dir = utils.data_files(tree, project_name)
+    data = {'tree': tree, 'project': project_name, 'experiment': experiment, 'files': files, 'base_dir': base_dir, 'filename': filename, 'date': date, 'content': content}
+    return template('index', data=data)
+
+
+def download(full_path, filename):
     content = utils.all_file_content(full_path)
     response = HTTPResponse()
     response.body = content
     response['Content-Disposition'] = 'attachment; filename="%s"' % filename
     return response
+
+
+@app.route('/download_file/<tree:re:.*>/<project_name:re:.*>/<experiment:re:.*>/<filename:re:.*>')
+def download_experiment(tree, project_name, filename):
+    full_path = utils.combine_parts(tree, project_name, filename)
+    return download(full_path, filename)
+
+
+@app.route('/download_file/<tree:re:.*>/<project_name:re:.*>/<filename:re:.*>')
+def download_project(tree, project_name, filename):
+    full_path = utils.combine_parts(tree, project_name, filename)
+    return download(full_path, filename)
 
 
 @app.post('/interactive/<project_name:re:.*>')
@@ -97,31 +115,30 @@ def interactive_project(project_name):
     return template('index', data=data)
 
 @app.route('/experiment/<project_name:re:.*>/<experiment_name:re:.*>')
-def show_experiment(project_name, experiment_name):
-    experiments, base_dir, data_elements = utils.list_experiments(project_name)
+def experiment(project_name, experiment_name):
+    experiments, exp_proj_path, data_elements = utils.list_experiments(project_name)
     error_messages = []
-    experiment_info = utils.show_experiment(project_name, experiment_name, data_elements, project_name)
-    files, xxx = utils.data_files('experiments', experiment_name)
-    data = {'experiment': experiment_name, 'project': experiment_path, 'base_dir':base_dir,
+    experiment_info = utils.get_experiment_info(exp_proj_path, experiment_name, data_elements, project_name)
+    files, experiment_path = utils.data_files(os.path.join(utils.EXPERIMENTS, project_name), experiment_name)
+    data = {'experiment': experiment_name, 'project': project_name, 'base_dir': experiment_path,
             'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files}
+    data['tree'] = 'experiment'
     if len(error_messages) > 0:
         data['errors'] = error_messages
-    data['level'] = 'experiment'
     return template('index', data=data)
 
 
-@app.post('/experiment/<project_name:re:.*>/<experiment_name:re:.*>')
+@app.post('/experiments/<project_name:re:.*>/<experiment_name:re:.*>')
 def do_experiment(project_name, experiment_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
-    project_dir = os.path.join(base_dir, 'projects', project_name)
-    experiment_path =  os.path.join(project_name, 'experiments', experiment_name)
+    project_dir = os.path.join('..', 'projects', project_name)
     error_messages = []
     if experiment_name == 'NEW':
         new_experiment = getattr(request.forms, 'new_experiment')
         try:
-            new_dir = os.path.join(base_dir, 'projects', project_name, 'experiments', new_experiment)
+            new_dir = os.path.join(base_dir, new_experiment)
             os.mkdir(new_dir)
-            for root, dirs, files in os.walk(os.path.join(base_dir, 'projects', project_name)):
+            for root, dirs, files in os.walk(project_dir):
                 for f in files:
                     print(os.path.join(root, f))
                     copy(os.path.join(root, f), new_dir)
@@ -138,7 +155,7 @@ def do_experiment(project_name, experiment_name):
 
 
 @app.route('/experiments/<project_name:re:.*>')
-def experiments(project_name):
+def list_experiments(project_name):
     experiments, base_dir, data_elements = utils.list_experiments(project_name)
     data = {'experiments': experiments, 'project': project_name, 'base_dir': base_dir,
             'data_elements': data_elements}

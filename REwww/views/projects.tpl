@@ -12,7 +12,6 @@
     <tr>
         <td><a href="/project/{{project}}">{{project}}</a></td>
         <td>{{updated_at}}</td>
-        <td><a href="/interactive/{{project}}">interactive</a></td>
         <td><a href="/experiments/{{project}}">experiments</a></td>
     </tr>
   % end

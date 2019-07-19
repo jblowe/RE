@@ -33,7 +33,7 @@
                     % include('projects.tpl')
                 % elif 'project' in data:
                     <div id="project" class="col-sm-4">
-                        % include('project.tpl')
+                        % include('render_project.tpl')
                     </div>
                     % if 'content' in data:
                         <div id="content" class="col-sm-8">
