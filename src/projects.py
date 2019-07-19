@@ -25,7 +25,7 @@ def find_path(root, path):
         elif os.path.isfile(os.path.join(base_dir, path)):
             return os.path.dirname(os.path.join(base_dir, path))
         else:
-            return os.path.join(base_dir, path)
+            return base_dir
 
 
 projects = get_dirs('projects')
