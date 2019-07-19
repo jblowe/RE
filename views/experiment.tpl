@@ -13,7 +13,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 panel border rounded">
-              % include('project.tpl')
+              % include('render_experiment.tpl')
           </div>
         </div>
     </form>

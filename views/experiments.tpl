@@ -15,9 +15,10 @@
           % for experiment in data['experiments']:
                 <tr>
                 <td><a href="/experiment/{{data['project']}}/{{experiment[0]}}">{{ experiment[0] }}</a></td>
-                % for e in experiment[1:]:
+                % for e in experiment[1],:
                 <td>{{e}}</td>
                 % end
+                <td><a href="/interactive/{{data['project']}}/{{experiment[0]}}">interactive</a></td>
                 </tr>
           % end
           </tbody>

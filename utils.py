@@ -32,26 +32,18 @@ def combine_parts(tree, project_name, filename):
     return os.path.join('..', tree, project_name, filename)
 
 
-def show_experiment(experiment_dir, experiment, data_elements, project):
-    return get_experiment_info(experiment_dir, experiment, data_elements, project)
-
-
 def list_experiments(project):
-    project_dir = projects.find_path('experiments', project)
-    if 'experiments' in project_dir:
-        pass
-    else:
-        project_dir = os.path.join(project_dir, 'experiments')
-    experiment_dirs = [f for f in sorted(os.listdir(project_dir)) if os.path.isdir(os.path.join(project_dir, f))]
+    experiment_dir = projects.find_path(EXPERIMENTS, project)
+    experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
     experiments = []
     data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
     for x in experiment_dirs:
-        experiments.append(get_experiment_info(project_dir, x, data_elements, project))
-    return experiments, BASE_DIR, data_elements
+        experiments.append(get_experiment_info(experiment_dir, x, data_elements, project))
+    return experiments, experiment_dir, data_elements
 
 
-def get_experiment_info(project_dir, experiment, data_elements, project):
-    parameters_file = os.path.join(project_dir, experiment, f'{project}.default.parameters.xml')
+def get_experiment_info(experiment_dir, experiment, data_elements, project):
+    parameters_file = os.path.join(experiment_dir, experiment, f'{project}.default.parameters.xml')
     experiment_info = (experiment,) + (get_info(parameters_file),) + tuple(data_elements[2:])
     settings = read.read_settings_file(parameters_file,
                                        mel='none',
@@ -80,13 +72,16 @@ def data_files(tree, directory):
     for type in 'DAT DIS csv xls xlsx ods'.split(' '):
         [other_files.append(f) for f in filelist if f'.{type}' in f]
     to_display.append(('Other data types', other_files))
-    return to_display, BASE_DIR
+    return to_display, directory_dir
 
 
 def all_file_content(file_path):
-    f = open(file_path, 'r')
-    data = f.read()
-    f.close()
+    try:
+        f = open(file_path, 'r')
+        data = f.read()
+        f.close()
+    except:
+        data = None
     return data
 
 
@@ -97,7 +92,7 @@ def file_content(file_path):
         try:
             data = xml2html(file_path, xslt_path)
         except:
-            data = '<span style="color: red">Problem handling this file, sorry!</span>'
+            data = '<p style="color: red">Problem handling this file, sorry!</p>'
     elif '.txt' in file_path or '.DAT' in file_path or '.DIS' in file_path:
         f = open(file_path, 'r')
         data = f.read()
@@ -109,7 +104,7 @@ def file_content(file_path):
         f.close()
         data = reformat(data, 5000)
     else:
-        data = '<span style="color: red">Not a type of file that can be displayed here, sorry!</span>'
+        data = '<p style="color: red">Not a type of file that can be displayed here, sorry!</p>'
     return data, get_info(file_path)
 
 
@@ -180,7 +175,7 @@ def limit_lines(filecontent, max_rows):
 
 
 def upstream(request, language_forms, project, only_with_mel):
-    project_dir = projects.find_project_path(project)
+    project_dir = projects.find_path(EXPERIMENTS, project)
     parameters_file = os.path.join(project_dir, f'{project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel='none',
