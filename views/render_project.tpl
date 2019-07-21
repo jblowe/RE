@@ -1,4 +1,5 @@
 <h3>{{data['project']}}</h3>
+<h4>Source data</h4>
 % for (file_type, files) in data['files']:
   % if len(files) > 0:
     <h5>{{file_type}}</h5>

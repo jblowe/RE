@@ -2,17 +2,19 @@
     <thead>
     <tr>
         <th>Project</th>
-        <th>Last updated</th>
         <th></th>
+        <th></th>
+        <th>Last updated</th>
         <th></th>
     </tr>
     </thead>
     <tbody>
   % for (project, updated_at) in data['projects']:
     <tr>
-        <td><a href="/project/{{project}}">{{project}}</a></td>
-        <td>{{updated_at}}</td>
+        <td>{{project}}</td>
+        <td><a href="/project/{{project}}">source data</a></td>
         <td><a href="/experiments/{{project}}">experiments</a></td>
+        <td>{{updated_at}}</td>
     </tr>
   % end
     </tbody>
