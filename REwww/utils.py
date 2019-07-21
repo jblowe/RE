@@ -6,6 +6,7 @@ sys.path.append("../src")
 
 import projects
 import RE, read
+from bottle import template
 
 # nb: we are trying to get the directory above the directory this file is in
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,8 +30,12 @@ def add_time_and_version():
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
 def combine_parts(*args):
-    x = args
     return os.path.join('..', *args)
+
+
+def check_template(tpl, data):
+    data['back'] = '/list_tree/projects'
+    return template(tpl, data=data)
 
 
 def list_experiments(project):
@@ -128,8 +133,6 @@ def get_info(path):
 
 
 def tree_info(tree):
-    # project_dir = os.path.join(BASE_DIR, 'projects', project)
-    # filelist = [f for f in os.listdir(project_dir) if os.path.isfile(os.path.join(project_dir, f))]
     tree_list = projects.find_path(tree, 'all')
     return [(p, get_info(p)) for p in tree_list]
 
@@ -185,8 +188,8 @@ def limit_lines(filecontent, max_rows):
     return '\n'.join(rows) + message
 
 
-def upstream(request, language_forms, project, only_with_mel):
-    project_dir = projects.find_path(EXPERIMENTS, project)
+def upstream(request, language_forms, project, experiment, only_with_mel):
+    project_dir = os.path.join('..', EXPERIMENTS, project, experiment)
     parameters_file = os.path.join(project_dir, f'{project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel='none',
