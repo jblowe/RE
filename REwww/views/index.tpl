@@ -25,23 +25,14 @@
                 % include('errors.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')
-                % elif 'experiments' in data:
-                    % include('experiments.tpl')
                 % elif 'experiment' in data:
                     % include('experiment.tpl')
+                % elif 'experiments' in data:
+                    % include('experiments.tpl')
                 % elif 'projects' in data:
                     % include('projects.tpl')
                 % elif 'project' in data:
-                    <div id="project" class="col-sm-4">
-                        % include('render_project.tpl')
-                    </div>
-                    % if 'content' in data:
-                        <div id="content" class="col-sm-8">
-                            <h3>{{data['filename']}}</h3>
-                            <i>last updated: {{data['date']}}</i>
-                            {{!data['content']}}
-                        </div>
-                    % end
+                    % include('project.tpl')
                 % end
             % end
         </div>

@@ -28,12 +28,13 @@ def add_time_and_version():
     return 'code and data version: %s, system last restarted: %s' % (
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
-def combine_parts(tree, project_name, filename):
-    return os.path.join('..', tree, project_name, filename)
+def combine_parts(*args):
+    x = args
+    return os.path.join('..', *args)
 
 
 def list_experiments(project):
-    experiment_dir = projects.find_path(EXPERIMENTS, project)
+    experiment_dir = combine_parts(EXPERIMENTS, project)
     experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
     experiments = []
     data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
@@ -45,13 +46,17 @@ def list_experiments(project):
 def get_experiment_info(experiment_dir, experiment, data_elements, project):
     parameters_file = os.path.join(experiment_dir, experiment, f'{project}.default.parameters.xml')
     experiment_info = (experiment,) + (get_info(parameters_file),) + tuple(data_elements[2:])
-    settings = read.read_settings_file(parameters_file,
-                                       mel='none',
-                                       recon='default')
-    for s in settings.other:
+    if experiment_info[1] == 'unknown':
         pass
-    # dom = ET.parse(parameters_file)
-    # experiment_info = (experiment, 'date', settings.mel_filename,
+    else:
+        settings = read.read_settings_file(parameters_file,
+                                           mel='none',
+                                           recon='default')
+        for s in settings.other:
+            pass
+        # dom = ET.parse(parameters_file)
+        # experiment_info = (experiment, 'date', settings.mel_filename,
+
     return experiment_info
 
 
@@ -60,19 +65,25 @@ def data_files(tree, directory):
     filelist = [f for f in sorted(os.listdir(directory_dir)) if os.path.isfile(os.path.join(directory_dir, f))]
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
+    num_files = 0
     for type in 'parameters correspondences mel data'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
+        num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'statistics compare sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
+        num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'correspondences data u8 keys'.split(' '):
         to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
+        num_files += len([f for f in filelist if f'{type}.csv' in f])
     for type in 'statistics keys sets coverage'.split(' '):
         to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
+        num_files += len([f for f in filelist if f'{type}.txt' in f])
     other_files = []
     for type in 'DAT DIS csv xls xlsx ods'.split(' '):
         [other_files.append(f) for f in filelist if f'.{type}' in f]
+        num_files += len([f for f in filelist if f'.{type}' in f])
     to_display.append(('Other data types', other_files))
-    return to_display, directory_dir
+    return to_display, directory_dir, num_files
 
 
 def all_file_content(file_path):
