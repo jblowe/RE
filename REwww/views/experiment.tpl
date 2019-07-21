@@ -8,7 +8,7 @@
                 <tr><td><i>{{d}}</i><td><input name="{{d}}" type="text" value="{{d}}"></td></tr>
           % end
           </table>
-          <button type="submit" name="run">Save and Run</button>
+          <a class="btn btn-primary" href="/make/{{data['project']}}/{{data['experiment']}}">Save and Run</a>
           % include('render_experiment.tpl')
           </div>
     </form>

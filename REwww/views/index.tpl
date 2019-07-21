@@ -12,6 +12,7 @@
                     <p>
                         {{data['make']}}
                     </p>
+                    <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
                 </ul>
             % elif 'home' in data:
                 <h2>The Reconstruction Engine</h2>
