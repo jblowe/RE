@@ -14,6 +14,13 @@
                     </p>
                     <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
                 </ul>
+            % elif 'compare' in data:
+                <ul>
+                    <h2>Compare</h2>
+                    <p>
+                    </p>
+                    <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Compare</a>
+                </ul>
             % elif 'home' in data:
                 <h2>The Reconstruction Engine</h2>
                 <p>
