@@ -189,9 +189,10 @@ def make():
     return utils.check_template('index', data)
 
 
-@app.route('/make/<project:re:.*>')
-def make(project):
-    data = {'make': run_make.make(project)}
+@app.route('/make/<project:re:.*>/<experiment:re:.*>')
+def make(project, experiment):
+    message, results = run_make.make(project, experiment)
+    data = {'make': message, 'project': project, 'experiment': experiment}
     return utils.check_template('index', data)
 
 
