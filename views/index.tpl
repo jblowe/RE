@@ -21,7 +21,7 @@
             % elif 'about' in data:
                 % include('about.tpl')
             % else:
-                <a href="/list_tree/projects">&lt;&lt; back</a>
+                <a href="{{data['back']}}">&lt;&lt; back</a>
                 % include('errors.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')

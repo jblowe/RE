@@ -1,5 +1,5 @@
 <div id="content" class="col-sm-12">
-<h3>{{data['project']}} Interactive</h3>
+<h3>{{data['project']}}/{{data['experiment']}} Interactive</h3>
     <form method="post">
         <div class="row">
           <div class="col-md-4 panel border rounded">
