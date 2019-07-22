@@ -38,7 +38,7 @@ def check_template(tpl, data):
     return template(tpl, data=data)
 
 
-def list_experiments(project):
+def list_of_experiments(project):
     experiment_dir = combine_parts(EXPERIMENTS, project)
     experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
     experiments = []
@@ -50,15 +50,19 @@ def list_experiments(project):
 
 def get_experiment_info(experiment_dir, experiment, data_elements, project):
     parameters_file = os.path.join(experiment_dir, experiment, f'{project}.default.parameters.xml')
-    experiment_info = (experiment,) + (get_info(parameters_file),) + tuple(data_elements[2:])
-    if experiment_info[1] == 'unknown':
+    experiment_info ={'name': experiment, 'date': get_info(parameters_file)}
+    if experiment_info['date'] == 'unknown':
         pass
     else:
         settings = read.read_settings_file(parameters_file,
                                            mel='none',
                                            recon='default')
         for s in settings.other:
-            pass
+            if s in 'mels title'.split(' '):
+                experiment_info[s] = settings.other[s]
+
+        # experiment_info['upstream'] = settings.upstream
+        # experiment_info['attested'] = settings.attested
         # dom = ET.parse(parameters_file)
         # experiment_info = (experiment, 'date', settings.mel_filename,
 
@@ -71,10 +75,10 @@ def data_files(tree, directory):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     num_files = 0
-    for type in 'parameters correspondences mel data'.split(' '):
+    for type in 'statistics compare sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
-    for type in 'statistics compare sets'.split(' '):
+    for type in 'parameters correspondences mel data'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'correspondences data u8 keys'.split(' '):

@@ -18,12 +18,12 @@
           <tbody>
           % for experiment in data['experiments']:
             <tr>
-            <td>{{ experiment[0] }}</td>
-            <td>{{experiment[1]}}</td>
-            <td><a href="/experiment/{{data['project']}}/{{experiment[0]}}">view and run</a></td>
-            <td><a href="/interactive/{{data['project']}}/{{experiment[0]}}">interactive</a></td>
-            <td><input type="checkbox" value="{{experiment[0]}}"></td>
-            <td><a class="btn" href="/delete/{{experiment[0]}}">delete</a></td>
+            <td>{{ experiment['name'] }}</td>
+            <td>{{experiment['date']}}</td>
+            <td><a href="/experiment/{{data['project']}}/{{experiment['name']}}">view and/or run</a></td>
+            <td><a href="/interactive/{{data['project']}}/{{experiment['name']}}">interactive</a></td>
+            <td><input type="checkbox" value="{{experiment['name']}}"></td>
+            <td><a class="btn" href="/delete/{{data['project']}}/{{experiment['name']}}">delete</a></td>
             </tr>
           % end
           </tbody>
@@ -31,7 +31,7 @@
           <button class="btn btn-primary" type="submit">Create new experiment</button>
           <input type="text" name="new_experiment">
           or
-          <a class="btn btn-primary" href="/compare">compare</a>
+          <a class="btn btn-primary" href="/compare">Compare selected experiments</a>
           </div>
     </form>
 </div>

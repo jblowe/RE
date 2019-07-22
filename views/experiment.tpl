@@ -2,14 +2,42 @@
 <div class="col-md-4 panel border rounded">
     <h3>Experiment: {{data['project']}}/{{data['experiment']}}</h3>
 % if data['num_files'] > 0:
-    <form method="post">
-          <table>
-          % for d in data['data_elements']:
-                <tr><td><i>{{d}}</i><td><input name="{{d}}" type="text" value="{{d}}"></td></tr>
-          % end
+    <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
+          <h4>Parameters</h4>
+          <table class="table table-striped">
+          <thead>
+          <tr>
+            <th/>
+            <th/>
+          </tr>
+          </thead>
+          <tbody>
+            <tr><td><i>Run name</i></td><td><input name="name" type="text" value="default"></td></tr>
+            % if 'title' in data['experiment_info']:
+              <tr><td><i>Title</i></td><td>{{data['experiment_info']['title']}}</td></tr>
+            % end
+            % if 'mels' in data['experiment_info']:
+                <tr><td><i>MEL</i></td><td>
+                <select name="mel">
+                    <option value="none">none</option>
+                % for m in data['experiment_info']['mels']:
+                    <option value="{{m}}">{{m}}</option>
+                % end
+                </select>
+                </td></tr>
+            % end
+            <tr><td><i>Strict</i></td><td>
+            <select name="strict">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+            </select>
+            </td></tr>
+          </tbody>
           </table>
-          <a class="btn btn-primary" href="/make/{{data['project']}}/{{data['experiment']}}">Save and Run</a>
+          <p/><p>
+          <button class="btn btn-primary" name="make">Run Upstream</button>
           % include('render_experiment.tpl')
+          </p>
           </div>
     </form>
     % if 'content' in data:
