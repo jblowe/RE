@@ -143,6 +143,7 @@ def read_settings_file(filename, mel='none', recon='default'):
         #    attested['csvdata'] = setting.attrib['file']
         elif setting.tag == 'param':
             other[setting.attrib['name']] = setting.attrib['value']
+    other['mels'] = mel_filenames
     return RE.ProjectSettings(os.path.dirname(filename),
                               None if mel == 'none' else mel_filenames[mel],
                               attested,
