@@ -19,13 +19,8 @@ def find_path(root, path):
     else:
         if os.path.isdir(os.path.join(base_dir, path)):
             return os.path.join(base_dir, path)
-        elif os.path.isfile(path):
-            dir = os.path.dirname(os.path.join(base_dir, path))
-            return dir
-        elif os.path.isfile(os.path.join(base_dir, path)):
-            return os.path.dirname(os.path.join(base_dir, path))
         else:
-            return base_dir
+            raise
 
 
 projects = get_dirs('projects')
