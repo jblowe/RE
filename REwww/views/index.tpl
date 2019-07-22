@@ -12,6 +12,8 @@
                     <p>
                         {{data['make']}}
                     </p>
+                    <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{data['project']}}.default.upstream.statistics.xml">View results</a>
+                    <br/>
                     <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
                 </ul>
             % elif 'compare' in data:
