@@ -39,9 +39,9 @@ def compare(project_dir, project, what_to_compare):
     compare_xml_files = os.path.join(project_dir, f'{project}.*.statistics.xml')
     files = sorted(glob.glob(compare_xml_files))
     files = [f for f in files if what_to_compare in f and 'compare' not in f]
-    # run_types = [f.replace(f'{project_dir}/{project}.','').replace('.statistics.xml','') for f in files]
 
-    root = xml2dict.dict_to_etree(walk(files))
+    if len(files) > 1:
+        root = xml2dict.dict_to_etree(walk(files))
 
-    with open(f'{project_dir}/{project}.{what_to_compare}.compare.xml', 'w', encoding='utf-8') as f:
-        f.write(ET.tostring(root, pretty_print=True).decode("utf-8", "strict"))
+        with open(f'{project_dir}/{project}.{what_to_compare}.compare.xml', 'w', encoding='utf-8') as f:
+            f.write(ET.tostring(root, pretty_print=True).decode("utf-8", "strict"))
