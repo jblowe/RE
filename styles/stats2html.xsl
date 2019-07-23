@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-                xmlns:ext="http://exslt.org/common"
->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
     <xsl:output
             method="html"
             indent="yes"
             encoding="utf-8"/>
 
-    <xsl:strip-space
-            elements="*"/>
+    <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
         <html>
@@ -18,10 +15,17 @@
             <body>
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
                 <h4>Summary statistics</h4>
+                <xsl:apply-templates select=".//settings"/>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
                 <xsl:apply-templates select=".//stats"/>
             </body>
         </html>
+    </xsl:template>
+
+
+    <xsl:template match="settings">
+        <h4>Experiment settings</h4>
+        <xsl:apply-templates select=".//settings"/>
     </xsl:template>
 
     <xsl:template match="stats">
@@ -86,10 +90,28 @@
                   <th>in sets</th>
               </tr>
             </thead>
-            <xsl:apply-templates select="correspondences/correspondence"/>
+            <tbody>
+                <xsl:apply-templates select="correspondences/correspondence"/>
+            </tbody>
         </table>
         <p>correspondences_used: <xsl:value-of select=".//correspondences_used[@value]"/></p>
     </xsl:template>
+
+
+    <xsl:template match="settings">
+        <table class="table table-striped sortable">
+            <thead>
+              <tr>
+                  <th>Setting</th>
+                  <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+                <xsl:apply-templates select="parm"/>
+            </tbody>
+        </table>
+    </xsl:template>
+
 
     <xsl:template match="correspondences/correspondence">
         <tr>
@@ -97,6 +119,13 @@
             <xsl:for-each select="./*">
                 <td><xsl:value-of select ="@value"/></td>
             </xsl:for-each>
+        </tr>
+    </xsl:template>
+
+    <xsl:template match="parm">
+        <tr>
+            <td><xsl:value-of select="@key"/></td>
+            <td><xsl:value-of select="@value"/></td>
         </tr>
     </xsl:template>
 

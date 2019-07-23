@@ -595,8 +595,8 @@ def dump_keys(lexicon, filename):
             print(f'{str(failure)}')
     sys.stdout = out
 
-def write_xml_stats(stats, filename):
-    serialize.serialize_stats(stats, filename)
+def write_xml_stats(stats, settings, args, filename):
+    serialize.serialize_stats(stats, settings, args, filename)
 
 def write_evaluation_stats(stats, filename):
     serialize.serialize_evaluation(stats, filename)

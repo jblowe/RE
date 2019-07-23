@@ -6,7 +6,7 @@ from xml.dom import minidom
 import RE
 import inspect
 
-run_date = f'{time.asctime()}'
+run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
 def serialize_correspondence_file(filename, parameters):
     root = ET.Element('tableOfCorr')
@@ -120,9 +120,19 @@ def serialize_sets(sets, filename):
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
 
 
-def serialize_stats(stats, filename):
+def serialize_stats(stats, settings, args, filename):
     root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
+
+    settings_element = ET.SubElement(root, 'settings')
+    ET.SubElement(settings_element, 'parm',attrib={'key': 'run', 'value': str(args.run)})
+    ET.SubElement(settings_element, 'parm',attrib={'key': 'mel_filename', 'value': str(settings.mel_filename)})
+    ET.SubElement(settings_element, 'parm',attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
+    ET.SubElement(settings_element, 'parm',attrib={'key': 'strict', 'value': str(args.only_with_mel)})
+    ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.other['fuzzy']})
+
+    # for s in settings.other:
+    #     ET.SubElement(settings_element, s).set('value', settings.other[s])
 
     lexicons = ET.SubElement(root, 'lexicons')
     totals = collections.Counter()
