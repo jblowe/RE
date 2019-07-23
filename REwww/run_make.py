@@ -21,6 +21,8 @@ def make(project, experiment, parameters):
             # p_object = subprocess.call(['git', 'pull', '-v'])
             print(['python3', 'REcli.py'] + cli)
             p_object = subprocess.call(['python3', 'REcli.py'] + cli)
+            # (re)run compare
+            p_object = subprocess.call(['python3', 'REcli.py', cli[0], '-x'])
             os.chdir(os.path.join('..', 'REwww'))
         elapsed_time = time.time() - elapsed_time
         return '{:.2f}'.format(elapsed_time), '(Re)run succeeded', True
