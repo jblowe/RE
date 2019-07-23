@@ -32,17 +32,19 @@ perl -i -p addngl.pl DIS.syang.data.xml
 perl -i -p addngl.pl DIS.tag.data.xml
 perl -i -p addngl.pl DIS.tuk.data.xml
 
-# combine the conversion logs (they have useful stats) into one
-cat *.xml.log > foo
-rm *.xml.log
-mv foo xml.log
-
-# combine the xslt logs into one
-cat *.xslt.log > foo
-rm *.xslt.log
-mv foo xslt.log
+#exit
 
 ls -l
 
+# combine the conversion logs (they have useful stats) into one
+cat *.xml.log > all.xml.logs
+rm *.xml.log
+
+# combine the xslt logs into one
+cat *.xslt.log > all.xslt.logs
+rm *.xslt.log
+
+python3 -c 'import os, glob;list(map(os.remove, glob.glob("*.xslt.log")))'
 # get rid of the temp files
-rm TEMP.*.data.xml
+python3 -c 'import os, glob;list(map(os.remove, glob.glob("TEMP.*.xml")))'
+
