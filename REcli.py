@@ -28,7 +28,7 @@ if args.coverage:
     print(f'checking {args.project} glosses in {args.mel} mel:')
     coverage_statistics = coverage.check_mel_coverage(settings)
     coverage_xml_file = os.path.join(args.experiment_path, f'{args.project}.mel.statistics.xml')
-    RE.write_xml_stats(coverage_statistics, coverage_xml_file)
+    RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
 elif args.compare:
     for what_to_compare in 'upstream evaluation mel'.split(' '):
         compare.compare(args.experiment_path, args.project, what_to_compare)
@@ -83,6 +83,6 @@ else:
         print(f'{len(forms_used)} different reflexes in cognate sets')
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
         stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')
-        RE.write_xml_stats(C.statistics, stats_xml_file)
+        RE.write_xml_stats(C.statistics, settings, args, stats_xml_file)
 
 print(time.asctime())
