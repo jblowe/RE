@@ -13,15 +13,17 @@ def make(project, experiment, parameters):
             p_object = subprocess.call(['make', '-w'])
             os.chdir('REwww')
         else:
-            run = f"-r {parameters['name']}" if 'name' in parameters else ''
-            mel = f"--mel {parameters['mel']}" if 'mel' in parameters else ''
-            strict = '-w' if parameters['strict'] == 'yes' else ''
+            cli = [os.path.join(project, experiment)]
+            if 'name' in parameters: cli.append(f"-r{parameters['name']}")
+            if 'mel' in parameters: cli.append(f"-m{parameters['mel']}" )
+            if parameters['strict'] == 'yes': cli.append('-w')
             os.chdir(os.path.join('..', 'src'))
             # p_object = subprocess.call(['git', 'pull', '-v'])
-            print(['python3', 'REcli.py', run, strict, mel, os.path.join(project, experiment)])
-            p_object = subprocess.call(['python3', 'REcli.py', run, strict, mel, os.path.join(project, experiment)])
+            print(['python3', 'REcli.py'] + cli)
+            p_object = subprocess.call(['python3', 'REcli.py'] + cli)
             os.chdir(os.path.join('..', 'REwww'))
         elapsed_time = time.time() - elapsed_time
-        return f'(Re)run of project {project}, experiment {experiment} completed. {elapsed_time} s.', ''
+        return '{:.2f}'.format(elapsed_time), '(Re)run succeeded', True
     except:
-        return f'refresh from GitHub failed.', ''
+        raise
+        return '{:.2f}'.format(elapsed_time), 'Upstream run failed.', False

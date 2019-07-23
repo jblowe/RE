@@ -28,14 +28,14 @@
             % end
             <tr><td><i>Strict</i></td><td>
             <select name="strict">
-            <option value="yes">yes</option>
             <option value="no">no</option>
+            <option value="yes">yes</option>
             </select>
             </td></tr>
           </tbody>
           </table>
           <p/><p>
-          <button class="btn btn-primary" name="make">Run Upstream</button>
+          <button class="btn btn-primary" name="make">Upstream</button>
           % include('render_experiment.tpl')
           </p>
           </div>

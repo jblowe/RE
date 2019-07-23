@@ -203,8 +203,8 @@ def make():
 
 @app.post('/make/<project:re:.*>/<experiment:re:.*>')
 def make(project, experiment):
-    message, results = run_make.make(project, experiment, request.forms)
-    data = {'make': message, 'project': project, 'experiment': experiment}
+    elapsed_time, message, success = run_make.make(project, experiment, request.forms)
+    data = {'make': message, 'project': project, 'experiment': experiment, 'elapsed_time': elapsed_time}
     return utils.check_template('index', data)
 
 
