@@ -129,7 +129,10 @@ def serialize_stats(stats, settings, args, filename):
     ET.SubElement(settings_element, 'parm',attrib={'key': 'mel_filename', 'value': str(settings.mel_filename)})
     ET.SubElement(settings_element, 'parm',attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
     ET.SubElement(settings_element, 'parm',attrib={'key': 'strict', 'value': str(args.only_with_mel)})
-    ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.other['fuzzy']})
+    try:
+        ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.other['fuzzy']})
+    except:
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': 'No fuzzying done.'})
 
     # for s in settings.other:
     #     ET.SubElement(settings_element, s).set('value', settings.other[s])
