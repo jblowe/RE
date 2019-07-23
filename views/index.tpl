@@ -10,11 +10,14 @@
                 <ul>
                     <h2>'Make' results</h2>
                     <p>
-                        {{data['make']}}
+                        (Re)run of project <b>{{data['project']}}</b>, experiment <b>{{data['experiment']}}</b> completed. {{data['elapsed_time']}} s.
                     </p>
-                    <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{data['project']}}.default.upstream.statistics.xml">View results</a>
-                    <br/>
-                    <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
+                    <p>
+                        <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{data['project']}}.default.upstream.statistics.xml">View results</a>
+                    </p>
+                    <p>
+                        <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
+                    </p>
                 </ul>
             % elif 'compare' in data:
                 <ul>
