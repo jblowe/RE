@@ -62,15 +62,6 @@ def read_context_from_string(string):
                   [y.strip() for y in x.split(',')]
                   for x in string.split('_')))
 
-# based on https://stackoverflow.com/questions/12451531/python-try-catch-block-inside-lambda
-def tryconvert(value, *types):
-    for t in types:
-        try:
-            return t(value)
-        except (ValueError, TypeError):
-            continue
-    return value
-
 # build a map from tokens to lists of correspondences containing the
 # token key.
 # also return all possible token lengths

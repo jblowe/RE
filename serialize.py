@@ -4,6 +4,7 @@ import collections
 import lxml.etree as ET
 from xml.dom import minidom
 import RE
+import utils
 import inspect
 
 run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
@@ -150,7 +151,7 @@ def serialize_stats(stats, settings, args, filename):
         ET.SubElement(runstats, s).set('value', str(totals[s]))
 
     corrs = ET.SubElement(root, 'correspondences')
-    for c in sorted(stats.correspondences_used_in_recons, key=lambda corr: RE.tryconvert(corr.id, int)):
+    for c in sorted(stats.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
         if c in stats.correspondences_used_in_sets:
             set_count = stats.correspondences_used_in_sets[c]
         else:
