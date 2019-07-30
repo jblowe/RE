@@ -27,3 +27,12 @@ def cd(newdir):
         yield
     finally:
         os.chdir(prevdir)
+
+# based on https://stackoverflow.com/questions/12451531/python-try-catch-block-inside-lambda
+def tryconvert(value, *types):
+    for t in types:
+        try:
+            return t(value)
+        except (ValueError, TypeError):
+            continue
+    return value

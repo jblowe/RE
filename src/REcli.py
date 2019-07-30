@@ -6,6 +6,7 @@ import time
 import coverage
 import compare
 import load_hooks
+import utils
 from argparser import args, need_to_compare, only_with_mel
 
 print(time.asctime())
@@ -65,7 +66,7 @@ else:
                          (), [])],
                          B.statistics), failures_xml_file)
         print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
-        for c in sorted(B.statistics.correspondences_used_in_recons, key= lambda corr: RE.tryconvert(corr.id, int)):
+        for c in sorted(B.statistics.correspondences_used_in_recons, key= lambda corr: utils.tryconvert(corr.id, int)):
             if c in B.statistics.correspondences_used_in_sets:
                 set_count = B.statistics.correspondences_used_in_sets[c]
             else:
