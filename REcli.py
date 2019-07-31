@@ -31,8 +31,7 @@ elif command_args.command == 'new-experiment':
         os.path.join('..', 'experiments', args.project, args.experiment_name))
     print('created new experiment')
 elif command_args.command == 'compare':
-    parameters_file = os.path.join(projects.find_path('projects',
-                                                      args.project),
+    parameters_file = os.path.join(args.experiment_path1,
                                    f'{args.project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file)
     attested_lexicons = read.read_attested_lexicons(settings)
