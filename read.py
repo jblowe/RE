@@ -3,7 +3,7 @@ import csv
 import os
 import RE
 import mel
-
+import pickle
 
 def read_correspondence_file(filename, project_name, daughter_languages, name, mel_filename):
     "Return syllable canon and table of correspondences"
@@ -245,3 +245,7 @@ def read_fuzzy_file(filename):
             else:
                 mapping[(dialect, representative.text)] = target
     return mapping
+
+def read_proto_lexicon(filename):
+    with open(filename, 'rb') as f:
+        return pickle.load(f)
