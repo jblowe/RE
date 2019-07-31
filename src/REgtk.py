@@ -8,7 +8,7 @@ import sys
 import serialize
 import os
 import load_hooks
-from argparser import args, need_to_compare, project_dir
+from argparser import args
 
 class WrappedTextBuffer():
     def __init__(self, buffer):
@@ -273,9 +273,6 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
             for form in proto_lexicon.forms:
                 store_row(None, form)
         GLib.idle_add(update_model)
-        sets_file = f'{project_dir}/{args.project}.{args.run}.sets.txt'
-        RE.dump_sets(proto_lexicon, sets_file)
-        print('dumped sets')
 
     box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
     return box
@@ -321,7 +318,7 @@ def run(settings, attested_lexicons):
     sys.stdout = out
 
 if __name__ == "__main__":
-    settings = read.read_settings_file(f'{project_dir}/{args.project}.{args.run}.parameters.xml',
+    settings = read.read_settings_file(f'../projects/{args.project}/{args.project}.{args.run}.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)
     load_hooks.load_hook(args.project, settings)
