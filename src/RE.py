@@ -639,25 +639,24 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     for form in only_lex2:
         print_form(form, 0)
 
-    evaluation_dict = {
-        'sets_in_lexicon_1': (nl1, 'integer'),
-        'sets_in_lexicon_2': (nl2, 'integer'),
-        'sets_in_common': (ncommon, 'integer'),
-        'only_in_lexicon_1': (len(only_lex1), 'integer'),
-        'only_in_lexicon_2': (len(only_lex2), 'integer'),
+    return {
+        'number_of_sets_in_lexicon_1': nl1,
+        'number_of_sets_in_lexicon_2': nl2,
+        'number_of_sets_in_common': ncommon,
+        'number_of_sets_only_in_lexicon_1': len(only_lex1),
+        'number_of_sets_only_in_lexicon_2': len(only_lex2),
         'precision': ('{:04.3f}'.format(precision), 'float'),
         'recall': ('{:04.3f}'.format(recall), 'float'),
-        'fscore': ('{:04.3f}'.format(fscore), 'float')
+        'fscore': ('{:04.3f}'.format(fscore), 'float'),
+        'sets_in_common': list(common),
+        'sets_only_in_lexicon1': list(only_lex1),
+        'sets_only_in_lexicon2': list(only_lex2)
     }
 
-    return evaluation_dict
-
-def analyze_sets(lexicon1, lexicon2, filename):
-    out = sys.stdout
-    with open(filename, 'w', encoding='utf-8') as sys.stdout:
-        evaluation_dict = compare_proto_lexicons(lexicon1, lexicon2)
-    sys.stdout = out
-    return evaluation_dict
+def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, attested_lexicons):
+    replace_underlying_lexicons(lexicon1, attested_lexicons)
+    replace_underlying_lexicons(lexicon2, attested_lexicons)
+    return compare_proto_lexicons(lexicon1, lexicon2)
 
 # create a fake cognate set with the first 2,000 forms that failed to reconstruct
 def extract_failures(lexicon):
