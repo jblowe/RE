@@ -36,6 +36,9 @@ class Lexicon:
         self.list_of_recons = []
         self.statistics = statistics
 
+    def key_forms_by_glyphs_and_gloss(self):
+        return {(form.glyphs, form.gloss): form for form in self.forms}
+
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
@@ -694,3 +697,18 @@ def extract_isolates(lexicon):
          in new_isolates][:2000],
         [],
         lexicon.statistics), forms_used
+
+# given a proto lexicon whose underlying attested forms are drawn
+# from lexicons isomorphic to attested_lexicons, destructively replace
+# the in-memory Form objects with those in attested_lexicons.
+# daughter_lexicons is a hash table mapping language -> Lexicon.
+# only works for non-tree lexicons for now.
+def replace_underlying_lexicons(proto_lexicon, attested_lexicons):
+    keyed_forms = {language: lexicon.key_forms_by_glyphs_and_gloss()
+                   for (language, lexicon) in attested_lexicons.items()} 
+    for form in proto_lexicon.forms:
+        def intern(form_set):
+            return frozenset((keyed_forms[form.language][(form.glyphs, form.gloss)]
+                              for form in form_set))
+        form.attested_support = intern(form.attested_support)
+        form.supporting_forms = intern(form.supporting_forms)
