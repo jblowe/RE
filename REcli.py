@@ -7,37 +7,46 @@ import coverage
 import compare
 import load_hooks
 import utils
-from argparser import args, need_to_compare, only_with_mel
+import serialize
+import projects
+from argparser import command_args, args
 
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
-parameters_file = os.path.join(args.experiment_path, f'{args.project}.default.parameters.xml')
-settings = read.read_settings_file(parameters_file,
-                                   mel=args.mel,
-                                   recon=args.recon)
-
-print(parameters_file)
-
-load_hooks.load_hook(args.experiment_path, settings)
-attested_lexicons = read.read_attested_lexicons(settings)
-
-if args.coverage:
-    if args.mel == 'none':
-        print('no mel provided')
-        sys.exit(1)
+if command_args.command == 'coverage':
     print(f'checking {args.project} glosses in {args.mel} mel:')
+    parameters_file = os.path.join(args.experiment_path,
+                                   f'{args.project}.default.parameters.xml')
+    settings = read.read_settings_file(parameters_file,
+                                       mel=args.mel_name)
     coverage_statistics = coverage.check_mel_coverage(settings)
-    coverage_xml_file = os.path.join(args.experiment_path, f'{args.project}.mel.statistics.xml')
+    coverage_xml_file = os.path.join(args.experiment_path,
+                                     f'{args.project}.mel.statistics.xml')
     RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
-elif args.compare:
-    for what_to_compare in 'upstream evaluation mel'.split(' '):
-        compare.compare(args.experiment_path, args.project, what_to_compare)
-    pass
-else:
-    B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
+elif command_args.command == 'compare':
+    parameters_file = os.path.join(projects.find_path('projects',
+                                                      args.project),
+                                   f'{args.project}.default.parameters.xml')
+    settings = read.read_settings_file(parameters_file)
+    attested_lexicons = read.read_attested_lexicons(settings)
+    B1 = read.read_proto_lexicon(
+        os.path.join(args.experiment_path1,
+                     f'{args.project}.{args.run1}.sets.json'))
+    B2 = read.read_proto_lexicon(
+        os.path.join(args.experiment_path2,
+                     f'{args.project}.{args.run2}.sets.json'))
+    RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons)
+elif command_args.command == 'run':
+    parameters_file = os.path.join(args.experiment_path,
+                                   f'{args.project}.default.parameters.xml')
+    settings = read.read_settings_file(parameters_file,
+                                       mel=args.mel)
+    load_hooks.load_hook(args.experiment_path, settings)
+    attested_lexicons = read.read_attested_lexicons(settings)
 
-    if need_to_compare:
+    B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=args.only_with_mel)
+    if args.need_to_compare:
         settings2 = read.read_settings_file(parameters_file,
                                         mel=(args.mel2 or args.mel),
                                         recon=(args.recon2 or args.recon))
@@ -85,5 +94,10 @@ else:
         print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
         stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')
         RE.write_xml_stats(C.statistics, settings, args, stats_xml_file)
+        print('serializing proto_lexicon')
+        serialize.serialize_proto_lexicon(
+            B,
+            os.path.join(args.experiment_path,
+                         f'{args.project}.{args.run}.sets.json'))
 
 print(time.asctime())
