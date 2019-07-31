@@ -9,6 +9,7 @@ import load_hooks
 import utils
 import serialize
 import projects
+import shutil
 from argparser import command_args, args
 
 print(time.asctime())
@@ -24,6 +25,11 @@ if command_args.command == 'coverage':
     coverage_xml_file = os.path.join(args.experiment_path,
                                      f'{args.project}.mel.statistics.xml')
     RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
+elif command_args.command == 'new-experiment':
+    shutil.copytree(
+        os.path.join('..', 'projects', args.project),
+        os.path.join('..', 'experiments', args.project, args.experiment_name))
+    print('created new experiment')
 elif command_args.command == 'compare':
     parameters_file = os.path.join(projects.find_path('projects',
                                                       args.project),
@@ -43,6 +49,8 @@ elif command_args.command == 'run':
     settings = read.read_settings_file(parameters_file,
                                        mel=args.mel)
     load_hooks.load_hook(args.experiment_path, settings)
+    # HACK: The statement above and the statement below are no longer
+    # independent due to fuzzying in TGTM...
     attested_lexicons = read.read_attested_lexicons(settings)
 
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=args.only_with_mel)
@@ -99,5 +107,6 @@ elif command_args.command == 'run':
             B,
             os.path.join(args.experiment_path,
                          f'{args.project}.{args.run}.sets.json'))
-
+else:
+    print(f'unknown command {command_args.command}')
 print(time.asctime())

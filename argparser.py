@@ -58,7 +58,7 @@ def parse_compare():
                         help='name of the run')
     return parser
 
-def parse_new():
+def parse_new_experiment():
     parser = argparse.ArgumentParser(description='Make a new experiment')
     parser.add_argument('project')
     parser.add_argument('experiment_name')
@@ -78,6 +78,7 @@ command_args = command_parser.parse_args(sys.argv[1:2])
 parser = (parse_run() if command_args.command == 'run'
           else parse_compare() if command_args.command == 'compare'
           else parse_coverage() if command_args.command == 'coverage'
+          else parse_new_experiment() if command_args.command == 'new-experiment'
           else raise_unknown_command(command_args.command))
 
 args = parser.parse_args(sys.argv[2:])
