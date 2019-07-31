@@ -16,12 +16,10 @@ def find_path(root, path):
     base_dir = os.path.join('..', root)
     if path == 'all':
         return get_dirs(root)
+    elif os.path.isdir(os.path.join(base_dir, path)):
+        return os.path.join(base_dir, path)
     else:
-        if os.path.isdir(os.path.join(base_dir, path)):
-            return os.path.join(base_dir, path)
-        else:
-            raise
-
+        raise Exception("Experiment not found.")
 
 projects = get_dirs('projects')
 experiments = get_dirs('experiments')
