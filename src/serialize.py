@@ -6,6 +6,7 @@ from xml.dom import minidom
 import RE
 import utils
 import inspect
+import pickle
 
 run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
@@ -185,3 +186,6 @@ def serialize_evaluation(stats, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
 
+def serialize_proto_lexicon(proto_lexicon, filename):
+    with open(filename, 'wb') as f:
+        pickle.dump(proto_lexicon, f)
