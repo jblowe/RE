@@ -17,8 +17,7 @@ DATE=`date +%Y-%m-%d-%H-%M`
 if [ ! -d ../experiments/${PROJECT}/${EXPERIMENT} ]
 then
    echo "../experiments/${PROJECT}/${EXPERIMENT} does not exist. creating..."
-   mkdir -p ../experiments/${PROJECT}/${EXPERIMENT}
-   cp ../projects/${PROJECT}/*  ../experiments/${PROJECT}/${EXPERIMENT}
+   python3 REcli.py new-experiment ${PROJECT} ${EXPERIMENT}
 fi
 
 if [ -e "prepare${PROJECT}.sh" ]
@@ -46,19 +45,19 @@ do
     if [ -e ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
         # first test make sets, with each mel
-        time python3 REcli.py ${PROJECT}/${EXPERIMENT} --run ${mel} -m ${mel} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${DATE}.${mel}.statistics.txt
+        time python3 REcli.py run ${PROJECT} ${EXPERIMENT} --run ${mel} -m ${mel} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${DATE}.${mel}.statistics.txt
         [ $? -ne 0 ] && exit 1;
         cat ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${DATE}.${mel}.statistics.txt
 
         # next make the "strict" sets: remove untouched mels and merge sets with identical support
-        time python3 REcli.py ${PROJECT}/${EXPERIMENT} -w --run ${mel}-strict --mel ${mel}
+        time python3 REcli.py run ${PROJECT} ${EXPERIMENT} -w --run ${mel}-strict --mel ${mel}
         [ $? -ne 0 ] && exit 1;
 
         # next test mel comparison with and without strict
-        time python3 REcli.py ${PROJECT}/${EXPERIMENT} --run ${mel} --mel hand --mel2 ${mel}
+        time python3 REcli.py run ${PROJECT} ${EXPERIMENT} --run ${mel} --mel hand --mel2 ${mel}
         [ $? -ne 0 ] && exit 1;
         head ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.analysis.txt
-        time python3 REcli.py ${PROJECT}/${EXPERIMENT} -w --run ${mel}-strict --mel hand --mel2 ${mel}
+        time python3 REcli.py run ${PROJECT} ${EXPERIMENT} -w --run ${mel}-strict --mel hand --mel2 ${mel}
         [ $? -ne 0 ] && exit 1;
         head ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}-strict.analysis.txt
     fi
@@ -68,4 +67,4 @@ done
 time python3 REcli.py -c -m hand ${PROJECT}/${EXPERIMENT} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.mel.coverage.txt
 
 # compare
-time python3 REcli.py -x -- ${PROJECT}/${EXPERIMENT} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.mel.compare.txt
+time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 ${mel}-strict --run2 ${mel} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.mel.compare.txt
