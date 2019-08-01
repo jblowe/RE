@@ -60,7 +60,7 @@ elif command_args.command == 'run':
         settings2 = read.read_settings_file(parameters_file,
                                         mel=(args.mel2 or args.mel),
                                         recon=(args.recon2 or args.recon))
-        B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
+        B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons, only_with_mel=args.only_with_mel)
         analysis_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.analysis.txt')
         evaluation_stats = RE.analyze_sets(B, B2, analysis_file)
         evaluation_stats['lexicon_1'] = (str(settings.mel_filename).replace(f'{args.experiment_path}/{args.project}.',''), 'string')
