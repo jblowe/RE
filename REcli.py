@@ -62,10 +62,9 @@ elif command_args.command == 'run':
                                         recon=(args.recon2 or args.recon))
         B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons, only_with_mel=args.only_with_mel)
         analysis_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.analysis.txt')
-        evaluation_stats = RE.analyze_sets(B, B2, analysis_file)
+        evaluation_stats = RE.compare_proto_lexicons(B, B2)
         evaluation_stats['lexicon_1'] = (str(settings.mel_filename).replace(f'{args.experiment_path}/{args.project}.',''), 'string')
         evaluation_stats['lexicon_2'] = (str(settings2.mel_filename).replace(f'{args.experiment_path}/{args.project}.',''), 'string')
-        print(f'wrote analysis to {analysis_file}')
         evaluation_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.evaluation.statistics.xml')
         RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
     else:
