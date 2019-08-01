@@ -34,6 +34,9 @@ elif command_args.command == 'compare':
     parameters_file = os.path.join(args.experiment_path1,
                                    f'{args.project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file)
+    # HACK we need this to fuzzy things correctly if we have TGTM
+    if args.project == 'TGTM':
+        load_hooks.load_hook(args.experiment_path1, settings)
     attested_lexicons = read.read_attested_lexicons(settings)
     B1 = read.read_proto_lexicon(
         os.path.join(args.experiment_path1,
