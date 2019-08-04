@@ -653,7 +653,7 @@ def compare_proto_lexicons(lexicon1, lexicon2):
         'sets_only_in_lexicon2': list(only_lex2)
     }
 
-def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, attested_lexicons):
+def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, attested_lexicons, compare_type):
     replace_underlying_lexicons(lexicon1, attested_lexicons)
     replace_underlying_lexicons(lexicon2, attested_lexicons)
     return compare_proto_lexicons(lexicon1, lexicon2)

@@ -16,21 +16,22 @@ print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
 if command_args.command == 'coverage':
-    print(f'checking {args.project} glosses in {args.mel} mel:')
+    print(f'checking {args.project} glosses in {args.mel_name} mel:')
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel=args.mel_name)
     coverage_statistics = coverage.check_mel_coverage(settings)
     coverage_xml_file = os.path.join(args.experiment_path,
-                                     f'{args.project}.mel.statistics.xml')
+                                     f'{args.project}.{args.mel_name}.coverage.statistics.xml')
+    args.run = args.mel_name
     RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
 elif command_args.command == 'new-experiment':
     shutil.copytree(
         os.path.join('..', 'projects', args.project),
         os.path.join('..', 'experiments', args.project, args.experiment_name))
     print('created new experiment')
-elif command_args.command == 'compare':
+elif command_args.command == 'compare' or command_args.command == 'diff':
     parameters_file = os.path.join(args.experiment_path1,
                                    f'{args.project}.default.parameters.xml')
     settings = read.read_settings_file(parameters_file)
@@ -44,7 +45,7 @@ elif command_args.command == 'compare':
     B2 = read.read_proto_lexicon(
         os.path.join(args.experiment_path2,
                      f'{args.project}.{args.run2}.sets.json'))
-    RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons)
+    RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons, command_args.command)
 elif command_args.command == 'run':
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.default.parameters.xml')
