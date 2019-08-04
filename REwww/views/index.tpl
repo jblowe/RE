@@ -17,8 +17,8 @@
                     </p>
                     <p>
                         <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
-                    </p>
-                    <p --!>
+                    </p -->
+                    <p>
                         <a class="btn btn-primary" href="/list_tree/projects">Return to project list</a>
                     </p>
                 </ul>
