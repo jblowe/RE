@@ -11,7 +11,8 @@ def check_mel_coverage(settings):
     all_not_matched = 0
     all_forms = 0
     glosses_not_matched = {}
-    for number_of_mels, mel in enumerate(read.read_mel_file(settings.mel_filename)):
+    number_of_mels = 0
+    for mel in read.read_mel_file(settings.mel_filename):
         mel_glosses = mel_glosses.union(mel.glosses)
         number_of_mels += 1
     attested_lexicons = read.read_attested_lexicons(settings)
