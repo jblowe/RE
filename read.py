@@ -214,10 +214,14 @@ def read_header_line(filename, delimiter='\t'):
 
 
 def read_mel_file(filename):
-    tree = ET.parse(filename)
-    return [mel.Mel([seg.text for seg in child.iterfind('gl')],
-                    child.attrib.get('id'))
-            for child in tree.iterfind('mel')]
+    try:
+        tree = ET.parse(filename)
+        return [mel.Mel([seg.text for seg in child.iterfind('gl')],
+                        child.attrib.get('id'))
+                for child in tree.iterfind('mel')]
+    except:
+        print(f'could not process mel file: {filename}')
+        return []
 
 
 def get_element(language, entry, field):
