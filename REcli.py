@@ -48,7 +48,10 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons, command_args.command)
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
-        compare.compare(args.experiment_path, args.project, what_to_compare)
+        try:
+            compare.compare(args.experiment_path, args.project, what_to_compare)
+        except:
+            compare.compare(args.experiment_path1, args.project, what_to_compare)
 elif command_args.command == 'run':
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.default.parameters.xml')
