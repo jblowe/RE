@@ -46,6 +46,9 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
         os.path.join(args.experiment_path2,
                      f'{args.project}.{args.run2}.sets.json'))
     RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons, command_args.command)
+    # make comparisons if there are things to compare
+    for what_to_compare in 'upstream evaluation mel'.split(' '):
+        compare.compare(args.experiment_path, args.project, what_to_compare)
 elif command_args.command == 'run':
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.default.parameters.xml')
@@ -109,6 +112,9 @@ elif command_args.command == 'run':
             B,
             os.path.join(args.experiment_path,
                          f'{args.project}.{args.run}.sets.json'))
+    # make comparisons if there are things to compare
+    for what_to_compare in 'upstream evaluation mel'.split(' '):
+        compare.compare(args.experiment_path, args.project, what_to_compare)
 else:
     print(f'unknown command {command_args.command}')
 print(time.asctime())
