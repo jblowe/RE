@@ -8,8 +8,6 @@ def make(project, experiment, parameters):
     try:
         elapsed_time = time.time()
         if project == 'ALL':
-            messages.append(f'make ALL is disabled for now.')
-            return messages
             os.chdir('..')
             p_object = subprocess.call(['git', 'pull', '-v'])
             p_object = subprocess.call(['make', '-w'])

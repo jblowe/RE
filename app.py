@@ -201,7 +201,7 @@ def remake():
 
 @app.route('/make')
 def make():
-    data = {'make': run_make.make('ALL')}
+    data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
     return utils.check_template('index', data)
 
 
