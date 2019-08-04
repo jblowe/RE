@@ -42,7 +42,7 @@ def parse_run():
     return parser
 
 def parse_compare():
-    parser = argparse.ArgumentParser(description='Compare two runs')
+    parser = argparse.ArgumentParser(description='Compare or Diff two runs')
     parser.add_argument('project',
                         metavar='project',
                         help='name of the project')
@@ -76,7 +76,7 @@ command_parser.add_argument('command', help='Subcommand to run')
 command_args = command_parser.parse_args(sys.argv[1:2])
 
 parser = (parse_run() if command_args.command == 'run'
-          else parse_compare() if command_args.command == 'compare'
+          else parse_compare() if command_args.command in 'compare diff'.split(' ')
           else parse_coverage() if command_args.command == 'coverage'
           else parse_new_experiment() if command_args.command == 'new-experiment'
           else raise_unknown_command(command_args.command))
@@ -91,7 +91,7 @@ if command_args.command == 'run' or command_args.command == 'coverage':
 if command_args.command == 'run':
     args.need_to_compare = (args.mel2 or args.recon2)
 
-if command_args.command == 'compare':
+if command_args.command == 'compare' or command_args.command == 'diff':
     args.experiment_path1 = projects.find_path(
         'experiments',
         os.path.join(args.project, args.experiment1))
