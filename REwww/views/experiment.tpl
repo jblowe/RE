@@ -36,6 +36,7 @@
           </table>
           <p/><p>
           <button class="btn btn-primary" name="make">Upstream</button>
+          <a href= "" class="btn btn-primary" name="refresh">Refresh</a>
           % include('render_experiment.tpl')
           </p>
           </div>

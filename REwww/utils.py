@@ -29,12 +29,14 @@ def add_time_and_version():
     return 'code and data version: %s, system last restarted: %s' % (
         get_version(), time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime()))
 
+
 def combine_parts(*args):
     return os.path.join('..', *args)
 
 
 def check_template(tpl, data):
-    data['back'] = '/list_tree/projects'
+    if 'back' not in data:
+        data['back'] = '/list_tree/projects'
     return template(tpl, data=data)
 
 

@@ -60,7 +60,7 @@ def project(project):
 
 
 @app.route('/get_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
-def get_experiment(tree, project, experiment, filename):
+def get_experiment_file(tree, project, experiment, filename):
     full_path = utils.combine_parts(tree, project, experiment, filename)
 
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
@@ -69,8 +69,9 @@ def get_experiment(tree, project, experiment, filename):
     content, date = utils.file_content(full_path)
     experiments, base_dir, data_elements = utils.list_of_experiments(project)
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
-    data = {'tree': tree, 'project': project, 'experiment': experiment, 'files': files, 'base_dir': base_dir, 'num_files': num_files,
-            'experiment_info': experiment_info, 'filename': filename, 'date': date, 'content': content, 'data_elements': data_elements}
+    data = {'tree': tree, 'project': project, 'experiment': experiment, 'files': files, 'base_dir': base_dir,
+            'num_files': num_files, 'experiment_info': experiment_info, 'filename': filename, 'date': date,
+            'content': content, 'data_elements': data_elements, 'back': f'/experiments/{project}'}
     return utils.check_template('index', data)
 
 
@@ -125,24 +126,27 @@ def interactive_project(project, experiment):
     else:
         languages, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, True)
         languages = [(l, '') for l in languages]
-        data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages, 'base_dir': base_dir}
+        data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages,
+                'base_dir': base_dir, 'back': f'/experiments/{project}'}
     return utils.check_template('index', data)
 
 
 @app.route('/experiment/<project:re:.*>/<experiment:re:.*>')
-def experiment(project, experiment):
+def show_experiment(project, experiment, messages=None):
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
     data = {'tree': 'experiment', 'experiment': experiment, 'project': project, 'base_dir': experiment_path,
-            'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files, 'num_files': num_files}
+            'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files, 'num_files': num_files,
+            'back': f'/experiments/{project}'}
+    if messages: data['errors'] = messages
     if num_files == 0:
         data['errors'] = ['No files in this experiment!']
     return utils.check_template('index', data)
 
 
 @app.post('/experiments/<project:re:.*>/<experiment:re:.*>')
-def do_experiment(project, experiment):
+def make_experiment(project, experiment):
     experiments, base_dir, data_elements = utils.list_of_experiments(project)
     project_dir = os.path.join('..', 'projects', project)
     error_messages = []
@@ -160,7 +164,7 @@ def do_experiment(project, experiment):
             error_messages.append(f"couldn't make experiment {new_experiment}")
         experiments, base_dir, data_elements = utils.list_of_experiments(project)
         data = {'experiments': experiments, 'project': project, 'experiments': experiments, 'base_dir': base_dir,
-                'data_elements': data_elements}
+                'data_elements': data_elements, 'back': f'/experiments/{project}'}
     else:
         pass
     if len(error_messages) > 0:
@@ -203,8 +207,10 @@ def make():
 
 @app.post('/make/<project:re:.*>/<experiment:re:.*>')
 def make(project, experiment):
-    elapsed_time, message, success = run_make.make(project, experiment, request.forms)
-    data = {'make': message, 'project': project, 'experiment': experiment, 'elapsed_time': elapsed_time}
+    messages, success = run_make.make(project, experiment, request.forms)
+    return show_experiment(project, experiment, messages)
+    data = {'errors': [message], 'project': project, 'experiment': experiment, 'elapsed_time': elapsed_time,
+            'back': f'/experiments/{project}', 'back': f'experiment/{project}/{experiment}'}
     return utils.check_template('index', data)
 
 
