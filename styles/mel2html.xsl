@@ -15,14 +15,33 @@
             </head>
             <body>
                 <h3>Meaning Equivalence List</h3>
-
+                <h4>MEL statistics</h4>
+                <xsl:apply-templates select=".//totals"/>
+                <h4>MELs</h4>
                 <xsl:apply-templates select=".//semantics"/>
-                <!--
+                <!-- e.g.
                 <mel id="wn1">
-                    <gl>american ginseng</gl>
+                    <gl>ginseng</gl>
                 -->
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="totals">
+        <table class="table table-striped sortable">
+            <thead>
+                <tr>
+                    <th>Stat</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <xsl:for-each select="./*">
+                <tr>
+                    <td><xsl:value-of select ="name(.)"/></td>
+                    <td><xsl:value-of select ="@value"/></td>
+                </tr>
+            </xsl:for-each>
+        </table>
     </xsl:template>
 
     <xsl:template match="semantics">
@@ -44,7 +63,7 @@
             </td>
             <td>
                 <xsl:for-each select=".//gl">
-                    <xsl:value-of select="."/>
+                    <span style="background-color: dodgerblue;color: white"><xsl:value-of select="."/></span>
                     <xsl:if test="position() != last()">, </xsl:if>
                 </xsl:for-each>
             </td>
@@ -53,7 +72,7 @@
 
 
     <xsl:template match="gl">
-            <span><xsl:apply-templates/></span>
+            <span class=".bg-info"><xsl:apply-templates/></span>
     </xsl:template>
 
 </xsl:stylesheet>
