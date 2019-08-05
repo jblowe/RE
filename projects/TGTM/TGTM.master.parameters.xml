@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <attested name="gha" file="TGTM.gha.data.xml"/>
+  <attested name="ris" file="TGTM.ris.data.xml"/>
+  <attested name="sahu" file="TGTM.sahu.data.xml"/>
+  <attested name="pra" file="TGTM.pra.data.xml"/>
+  <attested name="mar" file="TGTM.mar.data.xml"/>
+  <attested name="syang" file="TGTM.syang.data.xml"/>
+  <attested name="tag" file="TGTM.tag.data.xml"/>
+  <attested name="tuk" file="TGTM.tuk.data.xml"/>
+  <mel name="hand" file="TGTM.hand.mel.xml"/>
+  <mel name="both" file="TGTM.both.mel.xml"/>
+  <mel name="wordnet" file="TGTM.wordnet.mel.xml"/>
+  <mel name="wordnet2" file="TGTM.wordnet2.mel.xml"/>
+  <mel name="wordnet-pairs" file="TGTM.wn-pairs.mel.xml"/>
+  <mel name="clics" file="TGTM.clics.mel.xml"/>
+  <reconstruction name="default">
+    <proto_language name="tgtm" correspondences="TGTM.C794.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+  </reconstruction>
+  <param name="trace" value="N"/>
+  <param name="spec" value="N"/>
+  <param name="title" value="TGTM, 1994 version"/>
+  <param name="spec" value="Y"/>
+  <param name="fuzzy" value="TGTM.fuz.xml"/>
+</params>

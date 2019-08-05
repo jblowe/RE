@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <attested name="gha" file="DEMO93.gha.data.xml"/>
+  <attested name="ris" file="DEMO93.ris.data.xml"/>
+  <attested name="sahu" file="DEMO93.sahu.data.xml"/>
+  <attested name="man" file="DEMO93.man.data.xml"/>
+  <attested name="mar" file="DEMO93.mar.data.xml"/>
+  <attested name="syang" file="DEMO93.syang.data.xml"/>
+  <attested name="tag" file="DEMO93.tag.data.xml"/>
+  <attested name="tuk" file="DEMO93.tuk.data.xml"/>
+  <mel name="hand" file="DEMO93.hand.mel.xml"/>
+  <mel name="wordnet" file="DEMO93.wordnet.mel.xml"/>
+  <mel name="clics" file="DEMO93.clics.mel.xml"/>
+  <reconstruction name="default">
+    <proto_language name="tgtm" correspondences="DEMO93.C794DEM.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="tgtm"/>
+    <action name="downstream" from="tgtm" to="gha"/>
+  </reconstruction>
+  <param name="trace" value="N"/>
+  <param name="title" value="Test Run, Demo 1993"/>
+  <param name="spec" value="Y"/>
+  <param name="fuzzy" value="DEMO93.fuz.xml"/>
+</params>
