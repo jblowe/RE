@@ -199,7 +199,7 @@ def remake():
     return response
 
 
-@app.route('/make')
+@app.post('/make')
 def make():
     data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
     return utils.check_template('index', data)
