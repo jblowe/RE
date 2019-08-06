@@ -193,13 +193,13 @@ def list_experiments(project):
 
 @app.post('/remake')
 def remake():
-    data = {'make': run_make.make('ALL')}
+    data = {'make': run_make.make('ALL', None, None)}
     response = HTTPResponse()
     response.body = data['make']
     return response
 
 
-@app.post('/make')
+@app.get('/make')
 def make():
     data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
     return utils.check_template('index', data)
