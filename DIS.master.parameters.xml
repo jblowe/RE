@@ -11,10 +11,22 @@
   <attested name="tuk" file="DIS.tuk.data.xml"/>
   <mel name="hand" file="DIS.hand.mel.xml"/>
   <mel name="wordnet" file="DIS.wordnet.mel.xml"/>
+  <fuzzy name="fuzzy1" file="DIS.fuz.xml"/>
+  <fuzzy name="fuzzy2" file="DIS.fuz2.xml"/>
   <reconstruction name="default">
     <proto_language name="tgtm" correspondences="DIS.default.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
     <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
   </reconstruction>
-  <param name="title" value="'Display' dataset, using 7 TGTM sets"/>
+  <reconstruction name="v2">
+    <proto_language name="tgtm" correspondences="DIS.v2.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+  </reconstruction>
+  <reconstruction name="v3">
+    <proto_language name="tgtm" correspondences="DIS.v3.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+  </reconstruction>
+  <param name="title" value="'Display' dataset, using 8 TGTM sets"/>
 </params>
