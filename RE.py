@@ -109,10 +109,10 @@ class TableOfCorrespondences:
 
 class Parameters:
     def __init__(self, table, syllable_canon, proto_language_name, mels):
-        self.mels = mels
         self.table = table
         self.syllable_canon = syllable_canon
         self.proto_language_name = proto_language_name
+        self.mels = mels
 
     def serialize(self, filename):
         serialize.serialize_correspondence_file(filename, self)
@@ -648,9 +648,9 @@ def compare_proto_lexicons(lexicon1, lexicon2):
         'precision': ('{:04.3f}'.format(precision), 'float'),
         'recall': ('{:04.3f}'.format(recall), 'float'),
         'fscore': ('{:04.3f}'.format(fscore), 'float'),
-        'sets_in_common': list(common),
-        'sets_only_in_lexicon1': list(only_lex1),
-        'sets_only_in_lexicon2': list(only_lex2)
+        # 'sets_in_common': list(common),
+        # 'sets_only_in_lexicon1': list(only_lex1),
+        # 'sets_only_in_lexicon2': list(only_lex2)
     }
 
 def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, attested_lexicons, compare_type):
