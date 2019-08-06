@@ -1,10 +1,11 @@
+import os
 import utils
 import read
-from argparser import args, need_to_compare, project_dir
+from argparser import args
 
-settings = read.read_settings_file(f'../{project_dir}/{args.project}.default.parameters.xml',
-                                   mel=args.mel,
-                                   recon=args.recon)
+# invoke as: python3 all_glosses.py upstream DIS semantics
+
+settings = read.read_settings_file(os.path.join(args.experiment_path,f'{args.project}.master.parameters.xml'))
 
 for gloss in utils.all_glosses(read.read_attested_lexicons(settings)):
     print(gloss)
