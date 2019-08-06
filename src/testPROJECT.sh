@@ -56,6 +56,6 @@ do
         time python3 REcli.py coverage ${PROJECT} ${EXPERIMENT} ${mel}  > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.coverage.txt
 
         # compare
-        time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 ${mel}-strict --run2 ${mel} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
+        time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand-strict --run2 ${mel} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
     fi
 done
