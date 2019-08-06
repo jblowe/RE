@@ -3,8 +3,8 @@ set -x
 
 git submodule update --init --recursive
 
-PROJECT=$1
-EXPERIMENT=$2
+PROJECT="$1"
+EXPERIMENT="$2"
 
 if [ "${EXPERIMENT}" == "" ]
 then
@@ -45,11 +45,11 @@ do
     if [ -e ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.mel.xml ] || [ "${mel}" = "none" ]
     then
         # first test make sets, with each mel
-        time python3 REcli.py run ${PROJECT} ${EXPERIMENT}    --run ${mel}        --mel ${mel} > /dev/null
+        time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT}    --run ${mel}        --mel ${mel} > /dev/null
         [ $? -ne 0 ] && exit 1;
 
         # next make the "strict" sets: remove untouched mels and merge sets with identical support
-        time python3 REcli.py run ${PROJECT} ${EXPERIMENT} -w --run ${mel}-strict --mel ${mel} > /dev/null
+        time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} -w --run ${mel}-strict --mel ${mel} > /dev/null
         [ $? -ne 0 ] && exit 1;
 
         # coverage

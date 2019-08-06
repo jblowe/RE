@@ -34,4 +34,4 @@ time python3 REcli.py coverage NYI semantics hand
 time python3 REcli.py coverage SYI semantics hand
 [ $? -ne 0 ] && exit 1;
 
-exit 0
+exit 1

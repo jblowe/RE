@@ -17,13 +17,13 @@ diff ../projects/VANUATU/VANUATU.pwzeroexperimental.correspondences.csv ../proje
 # here are our two different Syllable canons
 grep RE.SyllableCanon ../projects/VANUATU/*hook.py
 
-# run the status quo, using Alex's "*p,*w without zero" version of ToC, without "strict", call it "hand"
+# upstream the status quo, using Alex's "*p,*w without zero" version of ToC, without "strict", call it "hand"
 time python3 REcli.py VANUATU -r hand --mel hand > /dev/null
 
-# OK run the same thing, with strict, call it "CV"
+# OK upstream the same thing, with strict, call it "CV"
 time python3 REcli.py VANUATU -w -r CV --mel hand > /dev/null
 
-# use the revised canon, call the run "CVCV"
+# use the revised canon, call the upstream "CVCV"
 cp ../projects/VANUATU/CVCVhook.py ../projects/VANUATU/hook.py 
 time python3 REcli.py VANUATU -w -r CVCV --mel hand  > /dev/null
 
