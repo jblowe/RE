@@ -11,7 +11,7 @@ test:
 	cd src ; bash ./testPROJECT.sh POLYNESIAN semantics
 	cd src ; bash ./testPROJECT.sh LOLOISH semantics
 	cd src ; bash ./testPROJECT.sh TGTM semantics
-	cd src ; bash ./testPROJECT.sh ROMANCE semantics
+	#cd src ; bash ./testPROJECT.sh ROMANCE semantics
 	#cd src ; bash ./testPROJECT.sh VANUATU semantics
 
 	cd REwww; python3 -c "from utils import add_time_and_version;print(add_time_and_version())" >> ../updates.txt
