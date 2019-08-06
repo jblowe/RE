@@ -7,6 +7,7 @@
   <attested name="tongien" file="tongien.data.xml"/>
 
   <csvdata name="data" file="POLYNESIAN.data.csv"/>
+
   <mel name="hand" file="POLYNESIAN.hand.mel.xml"/>
   <mel name="wordnet" file="POLYNESIAN.wordnet.mel.xml"/>
 
@@ -16,12 +17,6 @@
     <action name="upstream" from="raroton,samoan,hawai,tongien" to="proto"/>
     <action name="downstream" from="proto" to="hawai"/>
   </reconstruction>
-  <action name="upstream"/>
 
-
-  <param name="trace" value="N"/>
   <param name="title" value="Polynesian sample data"/>
-  <param name="spec" value="Y"/>
-  <param name="trace" value="N"/>
-  <param name="spec" value="Y"/>
 </params>

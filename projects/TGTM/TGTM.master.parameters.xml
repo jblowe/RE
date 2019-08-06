@@ -15,14 +15,11 @@
   <mel name="wordnet2" file="TGTM.wordnet2.mel.xml"/>
   <mel name="wordnet-pairs" file="TGTM.wn-pairs.mel.xml"/>
   <mel name="clics" file="TGTM.clics.mel.xml"/>
+  <fuzzy name="fuzzy" file="TGTM.fuz.xml"/>
   <reconstruction name="default">
     <proto_language name="tgtm" correspondences="TGTM.C794.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
     <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
   </reconstruction>
-  <param name="trace" value="N"/>
-  <param name="spec" value="N"/>
   <param name="title" value="TGTM, 1994 version"/>
-  <param name="spec" value="Y"/>
-  <param name="fuzzy" value="TGTM.fuz.xml"/>
 </params>
