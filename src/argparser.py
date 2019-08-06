@@ -6,8 +6,8 @@ import sys
 def raise_unknown_command(command):
     raise Exception(f'Unknown command {command}')
 
-def parse_run():
-    parser = argparse.ArgumentParser(description='Run a project.')
+def parse_upstream():
+    parser = argparse.ArgumentParser(description='Run a project "upstream".')
     parser.add_argument('project',
                         metavar='project',
                         help='name of the project')
@@ -21,12 +21,6 @@ def parse_run():
                         const=True,
                         metavar='only_with_mel',
                         help='only keep sets which match a MEL')
-    parser.add_argument('--mel2',
-                        metavar='mel2',
-                        help='name of MEL to compare against')
-    parser.add_argument('--recon2',
-                        metavar='recon2',
-                        help='model of reconstruction to compare against')
     parser.add_argument('-t', '--recon',
                         metavar='recon',
                         default='default',
@@ -35,6 +29,10 @@ def parse_run():
                         metavar='mel',
                         default='none',
                         help='name of the MEL desired')
+    parser.add_argument('-z', '--fuzzy',
+                        metavar='fuzzy',
+                        default='none',
+                        help='name of the Fuzzy file desired')
     parser.add_argument('-r', '--run',
                         metavar='run',
                         default='default',
@@ -75,7 +73,7 @@ command_parser = argparse.ArgumentParser(description='The Reconstruction Engine.
 command_parser.add_argument('command', help='Subcommand to run')
 command_args = command_parser.parse_args(sys.argv[1:2])
 
-parser = (parse_run() if command_args.command == 'run'
+parser = (parse_upstream() if command_args.command == 'upstream'
           else parse_compare() if command_args.command in 'compare diff'.split(' ')
           else parse_coverage() if command_args.command == 'coverage'
           else parse_new_experiment() if command_args.command == 'new-experiment'
@@ -83,13 +81,10 @@ parser = (parse_run() if command_args.command == 'run'
 
 args = parser.parse_args(sys.argv[2:])
 
-if command_args.command == 'run' or command_args.command == 'coverage':
+if command_args.command == 'upstream' or command_args.command == 'coverage':
     args.experiment_path = projects.find_path(
         'experiments',
         os.path.join(args.project, args.experiment))
-
-if command_args.command == 'run':
-    args.need_to_compare = (args.mel2 or args.recon2)
 
 if command_args.command == 'compare' or command_args.command == 'diff':
     args.experiment_path1 = projects.find_path(

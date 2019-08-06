@@ -112,38 +112,46 @@ def compute_context(context_string):
 
 
 # xml reading
-def read_settings_file(filename, mel='none', recon='default'):
+def read_settings_file(filename, mel='none', recon='default', fuzzy='none'):
     # for now we assume we don't want more than one proto-language
     upstream = {}
     downstream = []
     attested = {}
     proto_languages = {}
     mel_filenames = {}
+    reconstructions = {}
+    fuzzy_filenames = {}
     other = {}
     for setting in ET.parse(filename).getroot():
-        if setting.tag == 'reconstruction' and setting.attrib['name'] == recon:
-            for spec in setting:
-                if spec.tag == 'action':
-                    if spec.attrib['name'] == 'upstream':
-                        if spec.attrib.get('target'):
-                            target = spec.attrib.get('target')
-                        if spec.attrib.get('to'):
-                            upstream[spec.attrib.get('to')] = \
-                                spec.attrib.get('from').split(',')
-                    elif spec.attrib['name'] == 'downstream':
-                        downstream.append(spec.attrib['to'])
-                elif spec.tag == 'proto_language':
-                    proto_languages[spec.attrib['name']] = \
-                        spec.attrib['correspondences']
+        if setting.tag == 'reconstruction':
+            reconstructions[setting.attrib['name']] = setting
+            if setting.attrib['name'] == recon:
+                for spec in setting:
+                    if spec.tag == 'action':
+                        if spec.attrib['name'] == 'upstream':
+                            if spec.attrib.get('target'):
+                                target = spec.attrib.get('target')
+                            if spec.attrib.get('to'):
+                                upstream[spec.attrib.get('to')] = \
+                                    spec.attrib.get('from').split(',')
+                        elif spec.attrib['name'] == 'downstream':
+                            downstream.append(spec.attrib['to'])
+                    elif spec.tag == 'proto_language':
+                        proto_languages[spec.attrib['name']] = \
+                            spec.attrib['correspondences']
         elif setting.tag == 'attested':
             attested[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'mel':
             mel_filenames[setting.attrib['name']] = setting.attrib['file']
-        #elif setting.tag == 'csvdata':
-        #    attested['csvdata'] = setting.attrib['file']
+        elif setting.tag == 'fuzzy':
+            if setting.attrib['name'] == fuzzy:
+                other['fuzzy'] = setting.attrib['file']
+            fuzzy_filenames[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'param':
             other[setting.attrib['name']] = setting.attrib['value']
     other['mels'] = mel_filenames
+    other['fuzzies'] = fuzzy_filenames
+    other['reconstructions'] = reconstructions
     return RE.ProjectSettings(os.path.dirname(filename),
                               None if mel == 'none' else mel_filenames[mel],
                               attested,

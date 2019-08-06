@@ -18,7 +18,7 @@ print('Command line options used: ' + ' '.join(sys.argv[1:]))
 if command_args.command == 'coverage':
     print(f'checking {args.project} glosses in {args.mel_name} mel:')
     parameters_file = os.path.join(args.experiment_path,
-                                   f'{args.project}.default.parameters.xml')
+                                   f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel=args.mel_name)
     coverage_statistics = coverage.check_mel_coverage(settings)
@@ -32,8 +32,9 @@ elif command_args.command == 'new-experiment':
         os.path.join('..', 'experiments', args.project, args.experiment_name))
     print('created new experiment')
 elif command_args.command == 'compare' or command_args.command == 'diff':
+    both = f'{args.run1}+{args.run2}'
     parameters_file = os.path.join(args.experiment_path1,
-                                   f'{args.project}.default.parameters.xml')
+                                   f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file)
     # HACK we need this to fuzzy things correctly if we have TGTM
     if args.project == 'TGTM':
@@ -46,35 +47,31 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
         os.path.join(args.experiment_path2,
                      f'{args.project}.{args.run2}.sets.json'))
     RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons, command_args.command)
+
+    # analysis_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.analysis.txt')
+    evaluation_stats = RE.compare_proto_lexicons(B1, B2)
+    evaluation_stats['lexicon_1'] = (f'{args.experiment_path1}{args.project}.{args.run1}', 'string')
+    evaluation_stats['lexicon_2'] = (f'{args.experiment_path2}{args.project}.{args.run2}', 'string')
+    evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')
+    RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
+
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
-        try:
-            compare.compare(args.experiment_path, args.project, what_to_compare)
-        except:
-            compare.compare(args.experiment_path1, args.project, what_to_compare)
-elif command_args.command == 'run':
+        compare.compare(args.experiment_path1, args.project, what_to_compare)
+elif command_args.command == 'upstream':
     parameters_file = os.path.join(args.experiment_path,
-                                   f'{args.project}.default.parameters.xml')
+                                   f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
-                                       mel=args.mel)
+                                       mel=args.mel,
+                                       fuzzy=args.fuzzy,
+                                       recon=args.recon)
     load_hooks.load_hook(args.experiment_path, settings)
     # HACK: The statement above and the statement below are no longer
     # independent due to fuzzying in TGTM...
     attested_lexicons = read.read_attested_lexicons(settings)
 
     B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=args.only_with_mel)
-    if args.need_to_compare:
-        settings2 = read.read_settings_file(parameters_file,
-                                        mel=(args.mel2 or args.mel),
-                                        recon=(args.recon2 or args.recon))
-        B2 = RE.batch_all_upstream(settings2, attested_lexicons=attested_lexicons, only_with_mel=args.only_with_mel)
-        analysis_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.analysis.txt')
-        evaluation_stats = RE.compare_proto_lexicons(B, B2)
-        evaluation_stats['lexicon_1'] = (str(settings.mel_filename).replace(f'{args.experiment_path}/{args.project}.',''), 'string')
-        evaluation_stats['lexicon_2'] = (str(settings2.mel_filename).replace(f'{args.experiment_path}/{args.project}.',''), 'string')
-        evaluation_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.evaluation.statistics.xml')
-        RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
-    else:
+    if True:
         keys_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.keys.csv')
         RE.dump_keys(B, keys_file)
         print(f'wrote {len(B.statistics.keys)} keys and {len(B.statistics.failed_parses)} failures to {keys_file}')
