@@ -51,16 +51,17 @@ def list_of_experiments(project):
 
 
 def get_experiment_info(experiment_dir, experiment, data_elements, project):
-    parameters_file = os.path.join(experiment_dir, experiment, f'{project}.default.parameters.xml')
+    parameters_file = os.path.join(experiment_dir, experiment, f'{project}.master.parameters.xml')
     experiment_info ={'name': experiment, 'date': get_info(parameters_file)}
     if experiment_info['date'] == 'unknown':
         pass
     else:
         settings = read.read_settings_file(parameters_file,
                                            mel='none',
-                                           recon='default')
+                                           recon='default',
+                                           fuzzy='none')
         for s in settings.other:
-            if s in 'mels title'.split(' '):
+            if s in 'fuzzies reconstructions mels title'.split(' '):
                 experiment_info[s] = settings.other[s]
 
         # experiment_info['upstream'] = settings.upstream
