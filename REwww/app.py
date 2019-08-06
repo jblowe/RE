@@ -195,7 +195,7 @@ def list_experiments(project):
 def remake():
     data = {'make': run_make.make('ALL', None, None)}
     response = HTTPResponse()
-    response.body = data['make']
+    response.body = str(data['make'][1])
     return response
 
 
