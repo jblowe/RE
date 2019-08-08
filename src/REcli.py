@@ -50,8 +50,8 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
 
     # analysis_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.analysis.txt')
     evaluation_stats = RE.compare_proto_lexicons(B1, B2)
-    evaluation_stats['lexicon_1'] = (f'{args.experiment_path1}{args.project}.{args.run1}', 'string')
-    evaluation_stats['lexicon_2'] = (f'{args.experiment_path2}{args.project}.{args.run2}', 'string')
+    evaluation_stats['sets_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
+    evaluation_stats['sets_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
     evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')
     RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
 
