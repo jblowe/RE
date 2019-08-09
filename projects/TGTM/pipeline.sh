@@ -2,7 +2,7 @@
 set -x
 
 # run the csv converter for the correspondences
-python3 $1/csv_to_re.py TGTM.C794.csv TGTM.C794.correspondences.xml TGTM.classes.xml
+python $1/csv_to_re.py TGTM.C794.csv TGTM.C794.correspondences.xml TGTM.classes.xml
 [ $? -ne 0 ] && exit 1;
 
 # run the perl hack to convert the lexware files to XML
@@ -57,7 +57,7 @@ rm *.xml.log
 cat *.xslt.log > all.xslt.logs
 rm *.xslt.log
 
-python3 -c 'import os, glob;list(map(os.remove, glob.glob("*.xslt.log")))'
+python -c 'import os, glob;list(map(os.remove, glob.glob("*.xslt.log")))'
 # get rid of the temp files
-python3 -c 'import os, glob;list(map(os.remove, glob.glob("TEMP.*.xml")))'
+python -c 'import os, glob;list(map(os.remove, glob.glob("TEMP.*.xml")))'
 
