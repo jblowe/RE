@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 
 # insert list of language names here
 
-with open(sys.argv[1], 'r') as csvfile:
+with open(sys.argv[1], 'r', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile, delimiter='\t')
     # get first row (header)
     for row in reader:
