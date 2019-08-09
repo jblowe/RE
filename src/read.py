@@ -81,7 +81,7 @@ def skip_comments(reader):
 
 def read_csv_correspondences(filename, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)
-    with open(filename, 'r') as csvfile:
+    with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order
         n1 = list(skip_comments(reader))
@@ -197,7 +197,7 @@ def read_attested_lexicons(settings):
 
 def read_tabular_lexicons(filename, columns, delimiter='\t'):
     (gloss_column, id_column, data_start_column) = columns
-    with open(filename, 'r') as csvfile:
+    with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order
         n1 = list(skip_comments(reader))
@@ -215,7 +215,7 @@ def read_tabular_lexicons(filename, columns, delimiter='\t'):
 
 
 def read_header_line(filename, delimiter='\t'):
-    with open(filename, 'r') as csvfile:
+    with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # return first row (header)
         return skip_comments(reader)
@@ -259,5 +259,5 @@ def read_fuzzy_file(filename):
     return mapping
 
 def read_proto_lexicon(filename):
-    with open(filename, 'rb') as f:
+    with open(filename, 'r', encoding='utf-8') as f:
         return pickle.load(f)
