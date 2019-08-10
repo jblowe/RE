@@ -56,10 +56,12 @@ def get_experiment_info(experiment_dir, experiment, data_elements, project):
     if experiment_info['date'] == 'unknown':
         pass
     else:
+        # we need to set a recon in order to even read the parameters file
+        recon = 'standard'
         settings = read.read_settings_file(parameters_file,
-                                           mel='none',
-                                           recon='default',
-                                           fuzzy='none')
+                                           mel=None,
+                                           recon=recon,
+                                           fuzzy=None)
         for s in settings.other:
             if s in 'fuzzies reconstructions mels title'.split(' '):
                 experiment_info[s] = settings.other[s]
@@ -196,11 +198,13 @@ def limit_lines(filecontent, max_rows):
 
 
 def upstream(request, language_forms, project, experiment, only_with_mel):
+    mel = None
+    recon = 'standard'
     project_dir = os.path.join('..', EXPERIMENTS, project, experiment)
-    parameters_file = os.path.join(project_dir, f'{project}.default.parameters.xml')
+    parameters_file = os.path.join(project_dir, f'{project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
-                                       mel='none',
-                                       recon='default')
+                                       mel=None,
+                                       recon=recon)
     if request == 'languages':
         return settings.upstream[settings.upstream_target], settings.upstream_target, project_dir
     elif request == 'upstream':
