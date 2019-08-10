@@ -259,5 +259,5 @@ def read_fuzzy_file(filename):
     return mapping
 
 def read_proto_lexicon(filename):
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, 'rb') as f:
         return pickle.load(f)
