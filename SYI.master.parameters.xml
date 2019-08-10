@@ -18,7 +18,7 @@
   <mel name="hand" file="SYI.hand.mel.xml"/>
   <mel name="wordnet" file="SYI.wordnet.mel.xml"/>
 
-  <reconstruction name="default">
+  <reconstruction name="standard">
     <proto_language name="proto" correspondences="SYI.correspondences.xml"/>
     <action name="upstream" target="proto"/>
     <action name="upstream" from="WB,Akha,HaniW,HaniL,Khatu,Pijo,Haoni,Mpi" to="proto"/>
