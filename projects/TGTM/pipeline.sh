@@ -59,5 +59,5 @@ rm *.xslt.log
 
 python -c "import os, glob;list(map(os.remove, glob.glob('*.xslt.log')))"
 # get rid of the temp files
-python -c "import os, glob;list(map(os.remove, glob.glob('TEMP.*.xml')))""
+python -c "import os, glob;list(map(os.remove, glob.glob('TEMP.*.xml')))"
 
