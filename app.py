@@ -20,17 +20,17 @@ BaseTemplate.defaults['footer_info'] = utils.add_time_and_version()
 
 @app.route('/static/<filename:re:.*\.css>')
 def send_css(filename):
-    return static_file(filename, root=dirname + '/static/asset/css')
+    return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'css'))
 
 
 @app.route('/static/<filename:re:.*\.js>')
 def send_js(filename):
-    return static_file(filename, root=dirname + '/static/asset/js')
+    return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'js'))
 
 
 @app.route('/fonts/<filename:re:.*\.(woff|ttf).*>')
 def send_font(filename):
-    return static_file(filename, root=dirname + '/static/asset/fonts')
+    return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'fonts'))
 
 
 @app.route('/')
