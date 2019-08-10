@@ -13,7 +13,7 @@
   <mel name="wordnet" file="DEMO93.wordnet.mel.xml"/>
   <mel name="clics" file="DEMO93.clics.mel.xml"/>
   <fuzzy name="fuzzy" file="DEMO93.fuz.xml"/>
-  <reconstruction name="default">
+  <reconstruction name="standard">
     <proto_language name="tgtm" correspondences="DEMO93.C794DEM.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
     <action name="upstream" from="gha,ris,sahu,man,mar,syang,tag,tuk" to="tgtm"/>

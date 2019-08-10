@@ -8,7 +8,7 @@
   <mel name="hand" file="ROMANCE.hand.mel.xml"/>
   <mel name="wordnet" file="ROMANCE.wordnet.mel.xml"/>
   <mel name="clics" file="ROMANCE.clics.mel.xml"/>
-  <reconstruction name="default">
+  <reconstruction name="standard">
     <proto_language name="PIWR" correspondences="ROMANCE.correspondences.xml"/>
     <action name="upstream" target="PIWR"/>
     <action name="upstream" from="es,oldpt,pt,it,fr,scn" to="PIWR"/>

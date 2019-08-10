@@ -17,7 +17,7 @@
   <mel name="hand" file="NYI.hand.mel.xml"/>
   <mel name="wordnet" file="NYI.wordnet.mel.xml"/>
 
-  <reconstruction name="default">
+  <reconstruction name="standard">
     <proto_language name="proto" correspondences="NYI.correspondences.xml"/>
     <action name="upstream" target="proto"/>
     <action name="upstream" from="sani,axi,nesu,lalo,li,nasu,neisu,nosu" to="proto"/>

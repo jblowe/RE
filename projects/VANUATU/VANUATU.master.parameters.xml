@@ -20,7 +20,7 @@
    <mel name="clics" file="VANUATU.clics.mel.xml"/>
    <mel name="hand" file="VANUATU.hand.mel.xml"/>
    <mel name="wordnet" file="VANUATU.wordnet.mel.xml"/>
-   <reconstruction name="default">
+   <reconstruction name="standard">
       <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
       <action name="upstream" target="pvn"/>
       <action from="hiw,ltg,lhi,lyp,vlw,mtp,lmg,vra,vrs,msn,mta,num,drg,kro,olr,lkn,mrl" name="upstream" to="pvn"/>
