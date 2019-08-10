@@ -15,6 +15,27 @@ from argparser import command_args, args
 print(time.asctime())
 print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
+def check_setup(command, args, settings):
+    # only for checking 'upstream' setup at the moment; other setups mostly checked earlier
+    errors = False
+    if args.recon is None:
+        print('a --recon (or -t) argument is required.')
+        errors = True
+    if args.run is None:
+        print('a --run (or -r) argument is required.')
+        errors = True
+    if settings.proto_languages == {}:
+        print(f'{args.recon} does not seem to exist as a possible Reconstruction.')
+        errors = True
+    if args.fuzzy is not None and args.fuzzy not in settings.other['fuzzies']:
+        print(f'{args.fuzzy} does not seem to point to a fuzzy file.')
+        errors = True
+    if args.mel is not None and args.mel not in settings.other['mels']:
+        print(f'{args.mel} does not seem to point to a MEL file.')
+        errors = True
+    if errors:
+        sys.exit(1)
+
 if command_args.command == 'coverage':
     print(f'checking {args.project} glosses in {args.mel_name} mel:')
     parameters_file = os.path.join(args.experiment_path,
@@ -59,18 +80,13 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     for what_to_compare in 'upstream evaluation mel'.split(' '):
         compare.compare(args.experiment_path1, args.project, what_to_compare)
 elif command_args.command == 'upstream':
-    if args.recon == 'none':
-        print('a --tree (or -t) argument is required.')
-        sys.exit(1)
-    if args.run == 'none':
-        print('a --run (or -r) argument is required.')
-        sys.exit(1)
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel=args.mel,
                                        fuzzy=args.fuzzy,
                                        recon=args.recon)
+    check_setup(command_args.command, args, settings)
     load_hooks.load_hook(args.experiment_path, settings)
     # HACK: The statement above and the statement below are no longer
     # independent due to fuzzying in TGTM...
