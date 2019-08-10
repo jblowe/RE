@@ -3,5 +3,5 @@
 set -x
 
 # run the csv converter for the data
-python3 $1/csv_to_lexicon.py POLYNESIAN.data.csv "1,0, 3"
+python $1/csv_to_lexicon.py POLYNESIAN.data.csv "1,0, 3"
 

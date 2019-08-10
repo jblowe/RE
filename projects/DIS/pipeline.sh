@@ -12,14 +12,14 @@ perl Lex2XML.pl TAG.DIS TEMP.tag.data.xml tag.xml.log tag
 perl Lex2XML.pl TUK.DIS TEMP.tuk.data.xml tuk.xml.log tuk
 
 # apply xslt
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.gha.data.xml > DIS.gha.data.xml 2> gha.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.mar.data.xml > DIS.mar.data.xml 2> mar.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.pra.data.xml > DIS.pra.data.xml 2> pra.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.ris.data.xml > DIS.ris.data.xml 2> ris.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.sahu.data.xml > DIS.sahu.data.xml 2> sahu.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.syang.data.xml > DIS.syang.data.xml 2> syang.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tag.data.xml > DIS.tag.data.xml 2> tag.xslt.log
-python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk.data.xml > DIS.tuk.data.xml 2> tuk.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.gha.data.xml > DIS.gha.data.xml 2> gha.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.mar.data.xml > DIS.mar.data.xml 2> mar.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.pra.data.xml > DIS.pra.data.xml 2> pra.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.ris.data.xml > DIS.ris.data.xml 2> ris.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.sahu.data.xml > DIS.sahu.data.xml 2> sahu.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.syang.data.xml > DIS.syang.data.xml 2> syang.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tag.data.xml > DIS.tag.data.xml 2> tag.xslt.log
+python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk.data.xml > DIS.tuk.data.xml 2> tuk.xslt.log
 
 # other minor fixups
 perl -i -p addngl.pl DIS.*.data.xml
@@ -44,7 +44,7 @@ rm *.xml.log
 cat *.xslt.log > all.xslt.logs
 rm *.xslt.log
 
-python3 -c 'import os, glob;list(map(os.remove, glob.glob("*.xslt.log")))'
+python -c 'import os, glob;list(map(os.remove, glob.glob("*.xslt.log")))'
 # get rid of the temp files
-python3 -c 'import os, glob;list(map(os.remove, glob.glob("TEMP.*.xml")))'
+python -c 'import os, glob;list(map(os.remove, glob.glob("TEMP.*.xml")))'
 
