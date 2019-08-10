@@ -59,6 +59,12 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     for what_to_compare in 'upstream evaluation mel'.split(' '):
         compare.compare(args.experiment_path1, args.project, what_to_compare)
 elif command_args.command == 'upstream':
+    if args.recon == 'none':
+        print('a --tree (or -t) argument is required.')
+        sys.exit(1)
+    if args.run == 'none':
+        print('a --run (or -r) argument is required.')
+        sys.exit(1)
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,

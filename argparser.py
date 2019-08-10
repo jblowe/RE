@@ -23,7 +23,7 @@ def parse_upstream():
                         help='only keep sets which match a MEL')
     parser.add_argument('-t', '--recon',
                         metavar='recon',
-                        default='default',
+                        default='none',
                         help='the model of reconstruction')
     parser.add_argument('-m', '--mel',
                         metavar='mel',
@@ -35,7 +35,7 @@ def parse_upstream():
                         help='name of the Fuzzy file desired')
     parser.add_argument('-r', '--run',
                         metavar='run',
-                        default='default',
+                        default='none',
                         help='name of the run')
     return parser
 
@@ -48,11 +48,11 @@ def parse_compare():
     parser.add_argument('experiment2')
     parser.add_argument('-r1', '--run1',
                         metavar='run1',
-                        default='default',
+                        default='none',
                         help='name of the run')
     parser.add_argument('-r2', '--run2',
                         metavar='run2',
-                        default='default',
+                        default='none',
                         help='name of the run')
     return parser
 

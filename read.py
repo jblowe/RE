@@ -112,7 +112,7 @@ def compute_context(context_string):
 
 
 # xml reading
-def read_settings_file(filename, mel='none', recon='default', fuzzy='none'):
+def read_settings_file(filename, mel='none', recon='none', fuzzy='none'):
     # for now we assume we don't want more than one proto-language
     upstream = {}
     downstream = []
