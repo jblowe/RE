@@ -101,7 +101,6 @@ def compute_context(context_string):
         contextL = None
         contextR = None
         context_string = context_string.replace('/', '')
-        context_string = context_string.replace('ˍ','_')
         if '_' in context_string:
             contextL, contextR = context_string.split('_')
             if contextL:
