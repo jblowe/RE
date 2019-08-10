@@ -188,6 +188,26 @@ def serialize_evaluation(stats, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
 
+def serialize_mels(mel_sets, mel_name, filename):
+    '''
+    <semantics>
+      <mel id="m1">
+        <gl>beer</gl>
+      </mel>
+
+    :param mel_sets:
+    :param filename:
+    :return:
+    '''
+    root = ET.Element('semantics', attrib={'basedon': mel_name})
+    ET.SubElement(root, 'createdat').text = run_date
+
+    for (number, mel) in enumerate(list(mel_sets)):
+        entry = ET.SubElement(root, 'mel', attrib={'id': str(number + 1)})
+        ET.SubElement(entry, 'gl').text = mel
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+
 def serialize_proto_lexicon(proto_lexicon, filename):
     with open(filename, 'wb') as f:
         pickle.dump(proto_lexicon, f)

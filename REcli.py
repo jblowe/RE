@@ -7,8 +7,6 @@ import coverage
 import compare
 import load_hooks
 import utils
-import serialize
-import projects
 import shutil
 from argparser import command_args, args
 
@@ -46,7 +44,10 @@ if command_args.command == 'coverage':
     coverage_xml_file = os.path.join(args.experiment_path,
                                      f'{args.project}.{args.mel_name}.coverage.statistics.xml')
     args.run = args.mel_name
+    extra_mel_xml_file = os.path.join(args.experiment_path,
+                                     f'{args.project}.{args.mel_name}-extra.mel.xml')
     RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
+    RE.write_xml_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
 elif command_args.command == 'new-experiment':
     shutil.copytree(
         os.path.join('..', 'projects', args.project),
@@ -130,7 +131,7 @@ elif command_args.command == 'upstream':
         stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')
         RE.write_xml_stats(C.statistics, settings, args, stats_xml_file)
         print('serializing proto_lexicon')
-        serialize.serialize_proto_lexicon(
+        RE.write_proto_lexicon(
             B,
             os.path.join(args.experiment_path,
                          f'{args.project}.{args.run}.sets.json'))

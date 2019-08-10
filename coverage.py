@@ -10,7 +10,8 @@ def check_mel_coverage(settings):
     all_matched = 0
     all_not_matched = 0
     all_forms = 0
-    glosses_not_matched = {}
+    glosses_not_matched_by_language = {}
+    unmatched_glosses = set()
     number_of_mels = 0
     for mel in read.read_mel_file(settings.mel_filename):
         mel_glosses = mel_glosses.union(mel.glosses)
@@ -18,14 +19,15 @@ def check_mel_coverage(settings):
     attested_lexicons = read.read_attested_lexicons(settings)
     unused_mel_glosses = dict([(x, '') for x in mel_glosses])
     for language in attested_lexicons:
-        glosses_not_matched[language] = set()
+        glosses_not_matched_by_language[language] = set()
         matched = 0
         not_matched = 0
         forms = len(attested_lexicons[language].forms)
         for gloss in utils.glosses_by_language(attested_lexicons[language]):
             if gloss not in mel_glosses:
                 not_matched += 1
-                glosses_not_matched[language].add(gloss)
+                glosses_not_matched_by_language[language].add(gloss)
+                unmatched_glosses.add(gloss)
                 # print(f'{language} {gloss}')
             else:
                 matched += 1
@@ -51,13 +53,15 @@ def check_mel_coverage(settings):
     coverage_statistics.unused_mels = unused_mels
     coverage_statistics.number_of_mels = number_of_mels
     coverage_statistics.mel_glosses = mel_glosses
+    coverage_statistics.unmatched_by_language = glosses_not_matched_by_language
+    coverage_statistics.unmatched_glosses = unmatched_glosses
 
     print(f'\nmel summary: mels {number_of_mels} mel glosses {len(mel_glosses)} unused mel glosses {unused_mels}')
     print(f'gloss summary: {all_matched + all_not_matched} distinct glosses, {all_matched} matched, {all_not_matched} did not match, {all_forms} forms')
-    for language in glosses_not_matched:
+    for language in glosses_not_matched_by_language:
 
-        if len(glosses_not_matched[language]) > 0:
+        if len(glosses_not_matched_by_language[language]) > 0:
             print(language)
-            print(glosses_not_matched[language])
+            print(glosses_not_matched_by_language[language])
 
     return coverage_statistics
