@@ -11,7 +11,7 @@
   <mel name="hand" file="POLYNESIAN.hand.mel.xml"/>
   <mel name="wordnet" file="POLYNESIAN.wordnet.mel.xml"/>
 
-  <reconstruction name="default">
+  <reconstruction name="standard">
     <proto_language name="proto" correspondences="POLYNESIAN.correspondences.xml"/>
     <action name="upstream" target="proto"/>
     <action name="upstream" from="raroton,samoan,hawai,tongien" to="proto"/>
