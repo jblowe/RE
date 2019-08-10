@@ -117,3 +117,19 @@ xmllint --format TEMP.tag.data.xml > TGTM.tag2.data.xml 2> tag2.lint.log
 xmllint --format TEMP.tuk.data.xml > TGTM.tuk.data.xml 2> tuk.lint.log
 xmllint --format TEMP.tuk2.data.xml > TGTM.tu2k.data.xml 2> tuk2.lint.log
 
+# to make additional MELs from the list of non-matching glosses produced by "coverage"
+# first, run coverage to generate the "extra" mels
+
+cd src
+python REcli.py coverage TGTM semantics hand
+
+cd ../experiments/TGTM/semantics
+
+perl -p addngl.pl TGTM.hand-extra.mel.xml | perl -pe 's/ngl\>/gl>/g;s/id="/id="x/' > TGTM.additional.mel.xml
+
+# now add these to a new 'hand-extended' MEL via text editor...
+
+cat TGTM.hand.mel.xml TGTM.additional.mel.xml > TGTM.hand-extended.mel.xml
+vi TGTM.hand-extended.mel.xml
+xmllint --format --encode utf-8 TGTM.hand-extended.mel.xml > foo
+mv foo ../../../projects/TGTM/TGTM.hand-extended.mel.xml
