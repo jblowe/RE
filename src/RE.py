@@ -592,8 +592,14 @@ def dump_keys(lexicon, filename):
 def write_xml_stats(stats, settings, args, filename):
     serialize.serialize_stats(stats, settings, args, filename)
 
+def write_xml_mels(mel_sets, mel_name, filename):
+    serialize.serialize_mels(mel_sets, mel_name, filename)
+
 def write_evaluation_stats(stats, filename):
     serialize.serialize_evaluation(stats, filename)
+
+def write_proto_lexicon(proto_lexicon, filename):
+    serialize.serialize__proto_lexicon(proto_lexicon, filename)
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
