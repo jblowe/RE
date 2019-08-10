@@ -599,7 +599,7 @@ def write_evaluation_stats(stats, filename):
     serialize.serialize_evaluation(stats, filename)
 
 def write_proto_lexicon(proto_lexicon, filename):
-    serialize.serialize__proto_lexicon(proto_lexicon, filename)
+    serialize.serialize_proto_lexicon(proto_lexicon, filename)
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
