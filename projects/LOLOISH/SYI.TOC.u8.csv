@@ -49,23 +49,23 @@ N	L	Type	PL	Env	PSL	WB	Akha	HaniW	HaniL	Khatu	Pijo	Haoni	Mpi
 47	1	P	ʔ+r		ʔ+r	kr	h	h	xh	xh	xh	x	h
 48	1	O	a		a	a	a	a	a	ɔ,o,a	ɔ,a	ɔ	o
 49	2	O	a		a	a	a,ɛ,?	a,ɛ,?	a,ɛ,?	o,a,ɔ,i	ɔ,a,i	ɔ,ɛ,?	o,a
-50	2	O	a	/Nˍ	a	a	a,o,?	a,uo,o,?	a,o,?	ɔ,o,u	ɔ,a,u	ɔ	o,a
+50	2	O	a	/N_	a	a	a,o,?	a,uo,o,?	a,o,?	ɔ,o,u	ɔ,a,u	ɔ	o,a
 51	1	O	ay		ay	ay	o,y	u,y	y,ɛ	u,i	i,y	v̩,i,ɯ	i
-52	2	O	ay	/Dˍ	ay	ay	e	ɛ	e	y	y	i,ɯ	ə
-53	2	O	ay	/Nˍ	ay	ay	y,i,ə	y,ə,i	y,ə,i	y,u,i	y,i	i,ɯ	ɯ
-54	2	O	e	/Dˍ	e	e,i	aŋ,e	ɔ,i	ɔ,i	i,y	i,y	v̩	i
+52	2	O	ay	/D_	ay	ay	e	ɛ	e	y	y	i,ɯ	ə
+53	2	O	ay	/N_	ay	ay	y,i,ə	y,ə,i	y,ə,i	y,u,i	y,i	i,ɯ	ɯ
+54	2	O	e	/D_	e	e,i	aŋ,e	ɔ,i	ɔ,i	i,y	i,y	v̩	i
 55	1	O	e		e	e	ɛ,ö	ɛ,ö	i,ö	i	i		i
-56	2	O	e	/Vˍ	e	e	y	y	y	i	i	ɯ	i
+56	2	O	e	/V_	e	e	y	y	y	i	i	ɯ	i
 57	1	O	i		i	i,e	i,y,e,ö,iq	i,y,ö	i,y,ö,ü	i,y,ə,e	i,y,ə	i	i,ɯ,o,ə
-58	2	O	i	/Nˍ	i	i	ö,y	ö,y	ö,y,ü	i,y	i,y	ɯ	ɯ,i
-59	2	O	i	/Zˍ	i	i	i,y,e	i,y	i,y	y,ə,e	y,ə,e	i	ɯ,o,ə,i
+58	2	O	i	/N_	i	i	ö,y	ö,y	ö,y,ü	i,y	i,y	ɯ	ɯ,i
+59	2	O	i	/Z_	i	i	i,y,e	i,y	i,y	y,ə,e	y,ə,e	i	ɯ,o,ə,i
 60	1	O	o		o	ui	ö,i,m	ö,i,u,ɔ	ö,ü,y,i	i,y,e,o	i,y,e,o	u,o	i,ɯ,o
 61	1	O	aw		aw	aw	ɔ	o,ɔ	o	u,ɔ	u	v̩,a	o,oŋ,?
 62	1	O	u		u	u	u	u,o	u	u	u,y	v̩,ɿ	u,o,ə
-63	2	O	u	/Lˍ	u	u	u,ɔ	u,ö	u,ö	u,m,?	u,y	v̩	u
+63	2	O	u	/L_	u	u	u,ɔ	u,ö	u,ö	u,m,?	u,y	v̩	u
 64	1	O	u		u	u	uq	uq	u	u	u		uʔ
 65	1	O	we		we	we	y,i	y	y	y	y,i	ɯ	ɯ,i
-66	2	O	we	/Vˍ	we	we	y,ɔ,?	y,o,?	y,ə,?	y,i	y,i	ɯ	ɯ,i
+66	2	O	we	/V_	we	we	y,ɔ,?	y,o,?	y,ə,?	y,i	y,i	ɯ	ɯ,i
 67	1	O	wa		wa	wa	ə	ə	ə	y	y	ɯ	ə,o
 68	1	S	ak		ak	ak,ɔ	aq,əq	aq,əq	aq,yq,o	a,o,ɔ	a,aq,ɔ,y	a,i,o,e	aʔ,aŋʔ,o
 69	1	S	wak		ak	wak	oq,aq	uq,aq	uq,u,aq	o,a	ə,a	u̯	oʔ,a
