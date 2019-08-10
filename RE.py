@@ -629,15 +629,16 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     print(f'  Precision: {precision}')
     print(f'  Recall: {recall}')
     print(f'  F-score: {fscore}')
-    print('Sets in common:')
-    for form in common:
-        print_form(form, 0)
-    print(f'Sets only in lexicon1:')
-    for form in only_lex1:
-        print_form(form, 0)
-    print(f'Sets only in lexicon2:')
-    for form in only_lex2:
-        print_form(form, 0)
+    # TODO: leave these out for now
+    # print('Sets in common:')
+    # for form in common:
+    #     print_form(form, 0)
+    # print(f'Sets only in lexicon1:')
+    # for form in only_lex1:
+    #     print_form(form, 0)
+    # print(f'Sets only in lexicon2:')
+    # for form in only_lex2:
+    #     print_form(form, 0)
 
     return {
         'number_of_sets_in_lexicon_1': nl1,
