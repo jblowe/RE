@@ -112,7 +112,7 @@ def compute_context(context_string):
 
 
 # xml reading
-def read_settings_file(filename, mel='none', recon='none', fuzzy='none'):
+def read_settings_file(filename, mel=None, recon=None, fuzzy=None):
     # for now we assume we don't want more than one proto-language
     upstream = {}
     downstream = []
@@ -122,6 +122,7 @@ def read_settings_file(filename, mel='none', recon='none', fuzzy='none'):
     reconstructions = {}
     fuzzy_filenames = {}
     other = {}
+    target = None
     for setting in ET.parse(filename).getroot():
         if setting.tag == 'reconstruction':
             reconstructions[setting.attrib['name']] = setting
@@ -153,7 +154,7 @@ def read_settings_file(filename, mel='none', recon='none', fuzzy='none'):
     other['fuzzies'] = fuzzy_filenames
     other['reconstructions'] = reconstructions
     return RE.ProjectSettings(os.path.dirname(filename),
-                              None if mel == 'none' else mel_filenames[mel],
+                              None if mel is None else mel_filenames[mel],
                               attested,
                               proto_languages,
                               target,
