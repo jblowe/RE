@@ -17,12 +17,12 @@ cd ../../NYI/semantics         ; ./pipeline.sh
 cd $XPWD
 
 # make the "standard" sets -- with the MEL
-time python3 REcli.py upstream NYI semantics    --run hand        --mel hand
-time python3 REcli.py upstream SYI semantics    --run hand        --mel hand
+time python3 REcli.py upstream NYI semantics    --run hand        --mel hand --recon standard
+time python3 REcli.py upstream SYI semantics    --run hand        --mel hand --recon standard
 
 # generate the strict sets
-time python3 REcli.py upstream NYI semantics -w --run hand-strict --mel hand
-time python3 REcli.py upstream SYI semantics -w --run hand-strict --mel hand
+time python3 REcli.py upstream NYI semantics -w --run hand-strict --mel hand --recon standard
+time python3 REcli.py upstream SYI semantics -w --run hand-strict --mel hand --recon standard
 
 # compare
 time python3 REcli.py compare NYI semantics -r1 hand-strict semantics -r2 hand > dev/null
