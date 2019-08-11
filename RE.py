@@ -665,16 +665,16 @@ def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, attested_lexicons, com
     replace_underlying_lexicons(lexicon2, attested_lexicons)
     return compare_proto_lexicons(lexicon1, lexicon2)
 
-# create a fake cognate set with the first 2,000 forms that failed to reconstruct
+# create a fake cognate set with the forms that failed to reconstruct
 def extract_failures(lexicon):
     return Lexicon(
         lexicon.language,
-        [ProtoForm('failed', (), sorted(lexicon.statistics.failed_parses, key=lambda x: x.language)[:2000],
+        [ProtoForm('failed', (), sorted(lexicon.statistics.failed_parses, key=lambda x: x.language),
                    (), [])],
         [],
         lexicon.statistics)
 
-# create "cognate sets" for the first 2,000 the isolates
+# create "cognate sets" for the isolates
 # (and we need to check to see that the singletons really are isolates -- not in any set)
 def extract_isolates(lexicon):
     forms_used = collections.Counter()
@@ -695,14 +695,9 @@ def extract_isolates(lexicon):
         if not x in duplicates:
             duplicates[x] = 1
             new_isolates.append(item)
-    return Lexicon(
-        lexicon.language,
-        [ProtoForm(lexicon.language, correspondences, supporting_forms,
-                   attested_support, mel)
-         for (correspondences, supporting_forms, attested_support, mel)
-         in new_isolates][:2000],
-        [],
-        lexicon.statistics), forms_used
+    return [ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel)
+            for (correspondences, supporting_forms, attested_support, mel)
+            in new_isolates]
 
 # given a proto lexicon whose underlying attested forms are drawn
 # from lexicons isomorphic to attested_lexicons, destructively replace

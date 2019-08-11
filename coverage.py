@@ -58,10 +58,10 @@ def check_mel_coverage(settings):
 
     print(f'\nmel summary: mels {number_of_mels} mel glosses {len(mel_glosses)} unused mel glosses {unused_mels}')
     print(f'gloss summary: {all_matched + all_not_matched} distinct glosses, {all_matched} matched, {all_not_matched} did not match, {all_forms} forms')
-    for language in glosses_not_matched_by_language:
-
-        if len(glosses_not_matched_by_language[language]) > 0:
-            print(language)
-            print(glosses_not_matched_by_language[language])
+    # for language in glosses_not_matched_by_language:
+    #
+    #     if len(glosses_not_matched_by_language[language]) > 0:
+    #         print(language)
+    #         print(glosses_not_matched_by_language[language])
 
     return coverage_statistics

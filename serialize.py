@@ -68,7 +68,7 @@ def serialize_lexicon(lexicon, filename):
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
 
 
-def serialize_sets(sets, filename):
+def serialize_sets(reconstruction, filename):
     '''
     Here is the "classic schema" of cognate sets...
 
@@ -88,7 +88,7 @@ def serialize_sets(sets, filename):
           </sf>
         </set>
     '''
-    root = ET.Element('sets', attrib={'protolanguage': sets.language})
+    root = ET.Element('reconstruction', attrib={'protolanguage': reconstruction.language})
     ET.SubElement(root, 'createdat').text = run_date
 
     def render_xml(element, form, level):
@@ -114,9 +114,20 @@ def serialize_sets(sets, filename):
             for supporting_form in sorted(form.supporting_forms, key=lambda x: x.language):
                 render_xml(sf, supporting_form, level + 1)
 
-    for number,form in enumerate(sorted(sets.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
-        entry = ET.SubElement(root, 'set')
+    sets = ET.SubElement(root, 'sets')
+    for number,form in enumerate(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
+        entry = ET.SubElement(sets, 'set')
         render_xml(entry, form, 0)
+
+    isolates = ET.SubElement(root, 'isolates')
+    for number,form in enumerate(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
+        entry = ET.SubElement(isolates, 'set')
+        render_xml(entry, form, 0)
+
+    failures = ET.SubElement(root, 'failures')
+    entry = ET.SubElement(failures, 'set')
+    # there is only one (big) set for failures
+    render_xml(entry, reconstruction.failures, 0)
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
