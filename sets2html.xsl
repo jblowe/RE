@@ -15,14 +15,32 @@
             </head>
             <body>
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
-                <h5>n = <xsl:value-of select="count(sets/set)" />
-                </h5>
                 <xsl:apply-templates select=".//sets"/>
+                <xsl:apply-templates select=".//isolates"/>
+                <xsl:apply-templates select=".//failures"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="sets">
+        <h4>Regular cognate sets</h4>
+        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="set"/>
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="isolates">
+        <h4>Isolates</h4>
+        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="set"/>
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="failures">
+        <h4>Failures</h4>
+        <h5>n = <xsl:value-of select="count(set)" /></h5>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>
