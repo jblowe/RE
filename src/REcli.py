@@ -101,35 +101,21 @@ elif command_args.command == 'upstream':
         sets_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.txt')
         RE.dump_sets(B, sets_file)
         print(f'wrote {len(B.forms)} text sets to {sets_file}')
-        sets_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.xml')
-        RE.dump_xml_sets(B, sets_xml_file)
-        print(f'wrote {len(B.forms)} xml sets to {sets_xml_file}')
-        # failures (no parses)
-        failures_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.failures.sets.xml')
-        RE.dump_xml_sets(RE.Lexicon(B.language, [
-            RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language)[:2000],
-                         (), [])],
-                         B.statistics), failures_xml_file)
-        print(f'wrote {len(B.statistics.failed_parses)} failures to {failures_xml_file}')
         for c in sorted(B.statistics.correspondences_used_in_recons, key= lambda corr: utils.tryconvert(corr.id, int)):
             if c in B.statistics.correspondences_used_in_sets:
                 set_count = B.statistics.correspondences_used_in_sets[c]
             else:
                 set_count = 0
-            # print(f'{c}', '%s %s' % (B.statistics.correspondences_used_in_recons[c], set_count))
         print(f'{len(B.statistics.correspondences_used_in_recons)} correspondences used')
-        # isolates
-        isolates_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.isolates.sets.xml')
-        C, forms_used = RE.extract_isolates(B)
-        C.statistics.sets = B.forms
-        RE.dump_xml_sets(C, isolates_xml_file)
-        C.statistics.add_stat('isolates', len(C.forms))
-        C.statistics.add_stat('sets', len(B.forms))
-        C.statistics.add_stat('reflexes_in_sets', len(forms_used))
-        print(f'{len(forms_used)} different reflexes in cognate sets')
-        print(f'wrote {len(C.forms)} isolates to {isolates_xml_file}')
+        B.isolates = RE.extract_isolates(B)
+        B.failures = RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language), (), [])
+        sets_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.xml')
+        RE.dump_xml_sets(B, sets_xml_file)
+        print(f'wrote {len(B.forms)} xml sets and {len(B.isolates)} isolates to {sets_xml_file}')
+        B.statistics.add_stat('isolates', len(B.isolates))
+        B.statistics.add_stat('sets', len(B.forms))
         stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')
-        RE.write_xml_stats(C.statistics, settings, args, stats_xml_file)
+        RE.write_xml_stats(B.statistics, settings, args, stats_xml_file)
         print('serializing proto_lexicon')
         RE.write_proto_lexicon(
             B,
