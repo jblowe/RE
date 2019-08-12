@@ -49,10 +49,21 @@ if command_args.command == 'coverage':
     RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
     RE.write_xml_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
 elif command_args.command == 'new-experiment':
-    shutil.copytree(
-        os.path.join('..', 'projects', args.project),
-        os.path.join('..', 'experiments', args.project, args.experiment_name))
-    print('created new experiment')
+    directory = os.path.join('..', 'experiments', args.project, args.experiment_name)
+    if os.path.isdir(directory):
+        print(f'{directory} already exists, not (re)created')
+    else:
+        shutil.copytree(
+            os.path.join('..', 'projects', args.project),
+            os.path.join('..', 'experiments', args.project, args.experiment_name))
+        print(f'created new experiment')
+elif command_args.command == 'delete-experiment':
+    directory = os.path.join('..', 'experiments', args.project, args.experiment_name)
+    if os.path.isdir(directory):
+        shutil.rmtree(directory, ignore_errors=True)
+        print('deleted experiment')
+    else:
+        print(f'{directory} does not exist, not deleted')
 elif command_args.command == 'compare' or command_args.command == 'diff':
     both = f'{args.run1}+{args.run2}'
     parameters_file = os.path.join(args.experiment_path1,

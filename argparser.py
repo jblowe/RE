@@ -56,6 +56,12 @@ def parse_new_experiment():
     parser.add_argument('experiment_name')
     return parser
 
+def parse_delete_experiment():
+    parser = argparse.ArgumentParser(description='Delete an existing experiment')
+    parser.add_argument('project')
+    parser.add_argument('experiment_name')
+    return parser
+
 def parse_coverage():
     parser = argparse.ArgumentParser(description='Compute mel coverage')
     parser.add_argument('project')
@@ -71,6 +77,7 @@ parser = (parse_upstream() if command_args.command == 'upstream'
           else parse_compare() if command_args.command in 'compare diff'.split(' ')
           else parse_coverage() if command_args.command == 'coverage'
           else parse_new_experiment() if command_args.command == 'new-experiment'
+          else parse_delete_experiment() if command_args.command == 'delete-experiment'
           else raise_unknown_command(command_args.command))
 
 args = parser.parse_args(sys.argv[2:])
