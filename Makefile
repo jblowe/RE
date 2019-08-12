@@ -4,6 +4,9 @@ test:
 	#cd src ; bash ./cleanup.sh > /dev/null
 	rm -rf experiments/*/semantics
 
+	cd src ; python REcli.py new-experiment DIS test
+	cd src ; python REcli.py delete-experiment DIS test
+
 	cd src ; bash ./testCSV2RE.sh
 	cd src ; bash ./testCSV2lexicon.sh
 
