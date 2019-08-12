@@ -65,7 +65,7 @@ def serialize_lexicon(lexicon, filename):
             ET.SubElement(entry, 'hw').text = 'missing'
             print(f'conversion error in {lexicon.language} {number} {form.glyphs} {form.gloss}')
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
 def serialize_sets(reconstruction, filename):
@@ -130,7 +130,7 @@ def serialize_sets(reconstruction, filename):
     render_xml(entry, reconstruction.failures, 0)
 
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
 def serialize_stats(stats, settings, args, filename):
@@ -180,7 +180,7 @@ def serialize_stats(stats, settings, args, filename):
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
 
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
 def serialize_evaluation(stats, filename):
@@ -197,7 +197,7 @@ def serialize_evaluation(stats, filename):
             ET.SubElement(entry, k).set('value', str(v))
 
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 def serialize_mels(mel_sets, mel_name, filename):
     '''
@@ -217,7 +217,7 @@ def serialize_mels(mel_sets, mel_name, filename):
         entry = ET.SubElement(root, 'mel', attrib={'id': str(number + 1)})
         ET.SubElement(entry, 'gl').text = mel
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(ET.tostring(root, pretty_print = True).decode("utf-8", "strict"))
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 def serialize_proto_lexicon(proto_lexicon, filename):
     with open(filename, 'wb') as f:
