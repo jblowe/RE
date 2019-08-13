@@ -318,7 +318,7 @@ def run(settings, attested_lexicons):
     sys.stdout = out
 
 if __name__ == "__main__":
-    settings = read.read_settings_file(f'../projects/{args.project}/{args.project}.{args.run}.parameters.xml',
+    settings = read.read_settings_file(f'../projects/{args.project}/{args.project}.master.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)
     load_hooks.load_hook(args.project, settings)
