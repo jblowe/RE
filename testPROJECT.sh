@@ -33,7 +33,7 @@ echo ${PROJECT}/${EXPERIMENT}
 if [ -e "test${PROJECT}.sh" ]
 then
    echo "running test${PROJECT}.sh instead...."
-   bash test${PROJECT}.sh ${EXPERIMENT}
+   bash test${PROJECT}.sh ${PROJECT} ${EXPERIMENT}
    # don't try to do anything else if previous script said not to...
    [ $? -eq 0 ] || exit 0;
 fi
