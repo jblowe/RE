@@ -69,17 +69,14 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     parameters_file = os.path.join(args.experiment_path1,
                                    f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file)
-    # HACK we need this to fuzzy things correctly if we have TGTM
-    if args.project == 'TGTM':
-        load_hooks.load_hook(args.experiment_path1, settings)
-    attested_lexicons = read.read_attested_lexicons(settings)
+
     B1 = read.read_proto_lexicon(
         os.path.join(args.experiment_path1,
                      f'{args.project}.{args.run1}.sets.json'))
     B2 = read.read_proto_lexicon(
         os.path.join(args.experiment_path2,
                      f'{args.project}.{args.run2}.sets.json'))
-    RE.compare_isomorphic_proto_lexicons(B1, B2, attested_lexicons, command_args.command)
+    RE.compare_isomorphic_proto_lexicons(B1, B2, command_args.command)
 
     # analysis_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.analysis.txt')
     evaluation_stats = RE.compare_proto_lexicons(B1, B2)
