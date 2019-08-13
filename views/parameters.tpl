@@ -21,7 +21,7 @@
 % if 'fuzzies' in data['experiment_info']:
     <tr><td><i>Fuzzy files</i></td><td>
     <select name="fuzzy">
-        <option value="">None</option>
+        <option value="">No fuzzying</option>
     % for f in data['experiment_info']['fuzzies']:
         <option value="{{f}}">{{f}}</option>
     % end
@@ -31,7 +31,7 @@
 % if 'mels' in data['experiment_info']:
     <tr><td><i>MELs</i></td><td>
     <select name="mel">
-        <option value="">None</option>
+        <option value="">No MELs</option>
     % for m in data['experiment_info']['mels']:
         <option value="{{m}}">{{m}}</option>
     % end
