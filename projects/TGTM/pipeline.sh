@@ -32,18 +32,18 @@ python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk.data.xml > TGTM.tuk.data.
 #python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk2.data.xml > TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
 # other minor fixups
-#perl -i -p addngl.pl TEMP.*.data.xml
-perl -i -p addngl.pl TEMP.gha.data.xml
-perl -i -p addngl.pl TEMP.mar.data.xml
-perl -i -p addngl.pl TEMP.pra.data.xml
-perl -i -p addngl.pl TEMP.ris.data.xml
-perl -i -p addngl.pl TEMP.sahu.data.xml
-perl -i -p addngl.pl TEMP.syang.data.xml
-perl -i -p addngl.pl TEMP.tag.data.xml
-perl -i -p addngl.pl TEMP.tuk.data.xml
+#perl -i -p addngl.pl TGTM.*.data.xml
+perl -i -p addngl.pl TGTM.gha.data.xml
+perl -i -p addngl.pl TGTM.mar.data.xml
+perl -i -p addngl.pl TGTM.pra.data.xml
+perl -i -p addngl.pl TGTM.ris.data.xml
+perl -i -p addngl.pl TGTM.sahu.data.xml
+perl -i -p addngl.pl TGTM.syang.data.xml
+perl -i -p addngl.pl TGTM.tag.data.xml
+perl -i -p addngl.pl TGTM.tuk.data.xml
 
-#perl -i -p addngl.pl TEMP.tag2.data.xml
-#perl -i -p addngl.pl TEMP.tuk2.data.xml
+#perl -i -p addngl.pl TGTM.tag2.data.xml
+#perl -i -p addngl.pl TGTM.tuk2.data.xml
 
 #exit
 
