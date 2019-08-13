@@ -601,6 +601,17 @@ def write_evaluation_stats(stats, filename):
 def write_proto_lexicon(proto_lexicon, filename):
     serialize.serialize_proto_lexicon(proto_lexicon, filename)
 
+def compare_support(lex1_forms, forms):
+    key1 = sorted([str(k) for k in lex1_forms])
+    key2 = sorted([str(k) for k in forms])
+    # print(key1)
+    # print(key2)
+    # print()
+    if key1 == key2:
+        return True
+    else:
+        return False
+
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
     common = set()
@@ -614,7 +625,7 @@ def compare_proto_lexicons(lexicon1, lexicon2):
             lex1_forms = table[form.glyphs]
             form_matched = False
             for lex1_form in lex1_forms:
-                if lex1_form.supporting_forms == form.supporting_forms:
+                if compare_support(lex1_form.supporting_forms, form.supporting_forms):
                     common.add(lex1_form)
                     form_matched = True
             if not form_matched:
@@ -660,9 +671,9 @@ def compare_proto_lexicons(lexicon1, lexicon2):
         # 'sets_only_in_lexicon2': list(only_lex2)
     }
 
-def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, attested_lexicons, compare_type):
-    replace_underlying_lexicons(lexicon1, attested_lexicons)
-    replace_underlying_lexicons(lexicon2, attested_lexicons)
+def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, compare_type):
+    #replace_underlying_lexicons(lexicon1, attested_lexicons)
+    #replace_underlying_lexicons(lexicon2, attested_lexicons)
     return compare_proto_lexicons(lexicon1, lexicon2)
 
 # create a fake cognate set with the forms that failed to reconstruct
