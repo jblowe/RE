@@ -13,7 +13,6 @@ __pycache__/
 *.sets.txt
 
 *.compare.xml
-TGTM.*.data.xml
 *.fuzz.data.xml
 TEMP.*.data.xml
 DIS.*.data.xml
