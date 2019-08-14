@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="pra">
+  <entry id="pra.1">
+    <hw>ri</hw>
+    <gl>to</gl>
+  </entry>
+  <entry id="pra.2">
+    <hw>²cu</hw>
+    <gl>ten</gl>
+  </entry>
+  <entry id="pra.3">
+    <hw>²cʰe</hw>
+    <gl>bark (v.)</gl>
+  </entry>
+  <entry id="pra.4">
+    <hw>²cʰi</hw>
+    <gl>fat/grease</gl>
+  </entry>
+  <entry id="pra.5">
+    <hw>²hraŋ</hw>
+    <gl>roast</gl>
+  </entry>
+  <entry id="pra.6">
+    <hw>²hreː</hw>
+    <gl>scratch</gl>
+  </entry>
+  <entry id="pra.7">
+    <hw>²hru</hw>
+    <gl>wash</gl>
+  </entry>
+  <entry id="pra.8">
+    <hw>²joː</hw>
+    <gl>sufficient, be</gl>
+  </entry>
+  <entry id="pra.9">
+    <hw>²ju</hw>
+    <srcxcr1>¹mwo ²ju-</srcxcr1>
+    <gl>rain</gl>
+  </entry>
+  <entry id="pra.10">
+    <hw>²ju</hw>
+    <gl>come (from upside)</gl>
+  </entry>
+  <entry id="pra.11">
+    <hw>²juŋ</hw>
+    <gl>stone</gl>
+  </entry>
+  <entry id="pra.12">
+    <hw>²kaː</hw>
+    <gl>blood</gl>
+  </entry>
+  <entry id="pra.13">
+    <hw>²kjaː</hw>
+    <gl>thrust/dab</gl>
+  </entry>
+  <entry id="pra.14">
+    <hw>²kje</hw>
+    <gl>voice</gl>
+  </entry>
+  <entry id="pra.15">
+    <hw>²kju</hw>
+    <gl>water</gl>
+  </entry>
+  <entry id="pra.16">
+    <hw>²kjẽ</hw>
+    <gl>repair/mend</gl>
+  </entry>
+  <entry id="pra.17">
+    <hw>²kjẽ</hw>
+    <gl>rice (boiled)</gl>
+  </entry>
+  <entry id="pra.18">
+    <hw>²ku</hw>
+    <gl>nine</gl>
+  </entry>
+  <entry id="pra.19">
+    <hw>²kuː</hw>
+    <srcxcr2>¹lɤtse ⁴pʰro</srcxcr2>
+    <gl>crawl/creep</gl>
+  </entry>
+  <entry id="pra.20">
+    <hw>²kwe</hw>
+    <srcxcr1>²pɤr ²kwe-</srcxcr1>
+    <gl>weigh/measure</gl>
+  </entry>
+  <entry id="pra.21">
+    <hw>²kwe</hw>
+    <gl>lift</gl>
+  </entry>
+  <entry id="pra.22">
+    <hw>²kʰuŋ</hw>
+    <gl>hole/pit</gl>
+  </entry>
+  <entry id="pra.23">
+    <hw>²laː</hw>
+    <gl>escape/run away</gl>
+  </entry>
+  <entry id="pra.24">
+    <hw>²li</hw>
+    <gl>face</gl>
+  </entry>
+  <entry id="pra.25">
+    <hw>²lie</hw>
+    <gl>tongue</gl>
+  </entry>
+  <entry id="pra.26">
+    <hw>²luŋ</hw>
+    <gl>burn/blaze</gl>
+  </entry>
+  <entry id="pra.27">
+    <hw>²lɤ</hw>
+    <gl>month</gl>
+  </entry>
+  <entry id="pra.28">
+    <hw>²mi</hw>
+    <gl>eye</gl>
+  </entry>
+  <entry id="pra.29">
+    <hw>²mre</hw>
+    <gl>door</gl>
+  </entry>
+  <entry id="pra.30">
+    <hw>²mrẽ</hw>
+    <gl>drunken, be</gl>
+  </entry>
+  <entry id="pra.31">
+    <hw>²mui</hw>
+    <gl>hair (body)</gl>
+  </entry>
+  <entry id="pra.32">
+    <hw>²mĩ</hw>
+    <gl>ripe, become/ripen</gl>
+  </entry>
+  <entry id="pra.33">
+    <hw>²naː</hw>
+    <gl>bear on one's back</gl>
+  </entry>
+  <entry id="pra.34">
+    <hw>²naŋ</hw>
+    <gl>tread</gl>
+  </entry>
+  <entry id="pra.35">
+    <hw>²neː</hw>
+    <srcxcr2>¹mwopɤ</srcxcr2>
+    <gl>full</gl>
+  </entry>
+  <entry id="pra.36">
+    <hw>²neː</hw>
+    <gl>rot/rotten, become</gl>
+  </entry>
+  <entry id="pra.37">
+    <hw>²pi</hw>
+    <gl>send</gl>
+  </entry>
+  <entry id="pra.38">
+    <hw>²piː</hw>
+    <gl>stop/give up</gl>
+  </entry>
+  <entry id="pra.39">
+    <hw>²pjũ</hw>
+    <gl>man/male</gl>
+  </entry>
+  <entry id="pra.40">
+    <hw>²preː</hw>
+    <gl>cease</gl>
+  </entry>
+  <entry id="pra.41">
+    <hw>²prĩ</hw>
+    <gl>shoot</gl>
+  </entry>
+  <entry id="pra.42">
+    <hw>²pʰeː</hw>
+    <gl>iron</gl>
+  </entry>
+  <entry id="pra.43">
+    <hw>²pʰiː</hw>
+    <gl>peel</gl>
+  </entry>
+  <entry id="pra.44">
+    <hw>²pʰjaː</hw>
+    <gl>ascend/sunrise</gl>
+  </entry>
+  <entry id="pra.45">
+    <hw>²pʰjaŋ</hw>
+    <gl>fly</gl>
+  </entry>
+  <entry id="pra.46">
+    <hw>²pʰjaː</hw>
+    <gl>wipe</gl>
+  </entry>
+  <entry id="pra.47">
+    <hw>²pʰo</hw>
+    <gl>strike/beat/hit</gl>
+  </entry>
+  <entry id="pra.48">
+    <hw>²pʰuŋ</hw>
+    <gl>egg</gl>
+  </entry>
+  <entry id="pra.49">
+    <hw>²pʰwo</hw>
+    <gl>belly</gl>
+  </entry>
+  <entry id="pra.50">
+    <hw>²pʰwor</hw>
+    <gl>smear</gl>
+  </entry>
+  <entry id="pra.51">
+    <hw>²raː</hw>
+    <gl>knit/weave</gl>
+  </entry>
+  <entry id="pra.52">
+    <hw>²riː</hw>
+    <gl>vomit</gl>
+  </entry>
+  <entry id="pra.53">
+    <hw>²saŋ</hw>
+    <gl>dry/dry, make</gl>
+  </entry>
+  <entry id="pra.54">
+    <hw>²seː</hw>
+    <gl>price/cost</gl>
+  </entry>
+  <entry id="pra.55">
+    <hw>²sẽ</hw>
+    <gl>three</gl>
+  </entry>
+  <entry id="pra.56">
+    <hw>²sɤr</hw>
+    <gl>star</gl>
+  </entry>
+  <entry id="pra.57">
+    <hw>²taŋ</hw>
+    <gl>pan/pot</gl>
+  </entry>
+  <entry id="pra.58">
+    <hw>²te</hw>
+    <gl>dig</gl>
+  </entry>
+  <entry id="pra.59">
+    <hw>²tiː</hw>
+    <gl>take/adopt</gl>
+  </entry>
+  <entry id="pra.60">
+    <hw>²to</hw>
+    <srcxcr1>³laŋ ²to-</srcxcr1>
+    <gl>pound/hull</gl>
+  </entry>
+  <entry id="pra.61">
+    <hw>²to</hw>
+    <gl>crush/shutter (to pieces)</gl>
+  </entry>
+  <entry id="pra.62">
+    <hw>²to</hw>
+    <gl>hoe</gl>
+  </entry>
+  <entry id="pra.63">
+    <hw>²tseː</hw>
+    <gl>scratch</gl>
+  </entry>
+  <entry id="pra.64">
+    <hw>²tsuŋ</hw>
+    <gl>sell</gl>
+  </entry>
+  <entry id="pra.65">
+    <hw>²tsʰeː</hw>
+    <gl>contest/dispute</gl>
+  </entry>
+  <entry id="pra.66">
+    <hw>²tsʰeː</hw>
+    <gl>colour</gl>
+  </entry>
+  <entry id="pra.67">
+    <hw>²tsʰuŋ</hw>
+    <gl>hide/conceal</gl>
+  </entry>
+  <entry id="pra.68">
+    <hw>²tsʰɤr</hw>
+    <gl>bloom</gl>
+  </entry>
+  <entry id="pra.69">
+    <hw>²tɤ</hw>
+    <gl>horse</gl>
+  </entry>
+  <entry id="pra.70">
+    <hw>²tʰaː</hw>
+    <gl>cross/ferry</gl>
+  </entry>
+  <entry id="pra.71">
+    <hw>²tʰaː</hw>
+    <gl>spit</gl>
+  </entry>
+  <entry id="pra.72">
+    <hw>²tʰi</hw>
+    <gl>crack/smash</gl>
+  </entry>
+  <entry id="pra.73">
+    <hw>²tʰuŋ</hw>
+    <gl>drink</gl>
+  </entry>
+  <entry id="pra.74">
+    <hw>²ʈaŋ</hw>
+    <gl>swell</gl>
+  </entry>
+  <entry id="pra.75">
+    <hw>²ɲi</hw>
+    <gl>question/ask</gl>
+  </entry>
+  <entry id="pra.76">
+    <hw>²ʃiː</hw>
+    <gl>know</gl>
+  </entry>
+  <entry id="pra.77">
+    <hw>²ɲiː</hw>
+    <gl>laugh</gl>
+  </entry>
+  <entry id="pra.78">
+    <hw>²ɲiː</hw>
+    <gl>seven</gl>
+  </entry>
+  <entry id="pra.79">
+    <hw>²ʃje</hw>
+    <gl>louse</gl>
+  </entry>
+  <entry id="pra.80">
+    <hw>²ʃo</hw>
+    <gl>dance</gl>
+  </entry>
+  <entry id="pra.81">
+    <hw>²ʈu</hw>
+    <gl>sweat</gl>
+  </entry>
+  <entry id="pra.82">
+    <hw>²ʈu</hw>
+    <gl>thread</gl>
+  </entry>
+  <entry id="pra.83">
+    <hw>²ʈɤ</hw>
+    <gl>root</gl>
+  </entry>
+  <entry id="pra.84">
+    <hw>²ʃĩ</hw>
+    <gl>tree</gl>
+  </entry>
+  <entry id="pra.85">
+    <hw>³cĩ</hw>
+    <gl>finish/end</gl>
+  </entry>
+  <entry id="pra.86">
+    <hw>³jul</hw>
+    <gl>town</gl>
+  </entry>
+  <entry id="pra.87">
+    <hw>³kaŋ</hw>
+    <gl>snow</gl>
+  </entry>
+  <entry id="pra.88">
+    <hw>³kjaŋ</hw>
+    <gl>bread</gl>
+  </entry>
+  <entry id="pra.89">
+    <hw>³kjeː</hw>
+    <gl>adorn/decorate</gl>
+  </entry>
+  <entry id="pra.90">
+    <hw>³koŋ</hw>
+    <srcxcr2>¹kʰjepɤ</srcxcr2>
+    <gl>cheap</gl>
+  </entry>
+  <entry id="pra.91">
+    <hw>³kri</hw>
+    <gl>filth/grime</gl>
+  </entry>
+  <entry id="pra.92">
+    <hw>³kuŋ</hw>
+    <gl>middle</gl>
+  </entry>
+  <entry id="pra.93">
+    <hw>³laŋ</hw>
+    <gl>mortar</gl>
+  </entry>
+  <entry id="pra.94">
+    <hw>³lo</hw>
+    <gl>year</gl>
+  </entry>
+  <entry id="pra.95">
+    <hw>³lẽ</hw>
+    <gl>lick</gl>
+  </entry>
+  <entry id="pra.96">
+    <hw>³lẽ</hw>
+    <gl>answer</gl>
+  </entry>
+  <entry id="pra.97">
+    <hw>³maŋ</hw>
+    <gl>dream</gl>
+  </entry>
+  <entry id="pra.98">
+    <hw>³mi</hw>
+    <gl>person/man</gl>
+  </entry>
+  <entry id="pra.99">
+    <hw>³mle</hw>
+    <gl>penis</gl>
+  </entry>
+  <entry id="pra.100">
+    <hw>³mwo</hw>
+    <gl>sky</gl>
+  </entry>
+  <entry id="pra.101">
+    <hw>³naŋ</hw>
+    <gl>inside/inward/interior</gl>
+  </entry>
+  <entry id="pra.102">
+    <hw>³naː</hw>
+    <gl>pus</gl>
+  </entry>
+  <entry id="pra.103">
+    <hw>³nɤ</hw>
+    <srcxcr1>³nɤ ²nɤpɤ</srcxcr1>
+    <gl>ear</gl>
+  </entry>
+  <entry id="pra.104">
+    <hw>³nɤ</hw>
+    <gl>bear</gl>
+  </entry>
+  <entry id="pra.105">
+    <hw>³nɤ</hw>
+    <gl>born, be</gl>
+  </entry>
+  <entry id="pra.106">
+    <hw>³paŋ</hw>
+    <gl>contest/dispute</gl>
+  </entry>
+  <entry id="pra.107">
+    <hw>³paː</hw>
+    <gl>leaf</gl>
+  </entry>
+  <entry id="pra.108">
+    <hw>³pi</hw>
+    <gl>reply/answer</gl>
+  </entry>
+  <entry id="pra.109">
+    <hw>³pie</hw>
+    <gl>wife</gl>
+  </entry>
+  <entry id="pra.110">
+    <hw>³pjuː</hw>
+    <gl>bury</gl>
+  </entry>
+  <entry id="pra.111">
+    <hw>³pleː</hw>
+    <gl>rest (n.)</gl>
+  </entry>
+  <entry id="pra.112">
+    <hw>³praː</hw>
+    <gl>mow/cut</gl>
+  </entry>
+  <entry id="pra.113">
+    <hw>³preː</hw>
+    <gl>lose/defeated, be</gl>
+  </entry>
+  <entry id="pra.114">
+    <hw>³pri</hw>
+    <gl>write</gl>
+  </entry>
+  <entry id="pra.115">
+    <hw>³pwor</hw>
+    <gl>carry</gl>
+  </entry>
+  <entry id="pra.116">
+    <hw>³roː</hw>
+    <srcxcr2>¹lɤ</srcxcr2>
+    <gl>help</gl>
+  </entry>
+  <entry id="pra.117">
+    <hw>³sur</hw>
+    <srcxcr1>⁴pli ³sur</srcxcr1>
+    <gl>corner</gl>
+  </entry>
+  <entry id="pra.118">
+    <hw>³sur</hw>
+    <gl>village</gl>
+  </entry>
+  <entry id="pra.119">
+    <hw>³te</hw>
+    <gl>touch</gl>
+  </entry>
+  <entry id="pra.120">
+    <hw>³to</hw>
+    <gl>meet</gl>
+  </entry>
+  <entry id="pra.121">
+    <hw>³to</hw>
+    <gl>plant</gl>
+  </entry>
+  <entry id="pra.122">
+    <hw>³toː</hw>
+    <gl>arrive</gl>
+  </entry>
+  <entry id="pra.123">
+    <hw>³tsaŋ</hw>
+    <gl>nest</gl>
+  </entry>
+  <entry id="pra.124">
+    <hw>³tswo</hw>
+    <gl>point/tip</gl>
+  </entry>
+  <entry id="pra.125">
+    <hw>³tẽ</hw>
+    <srcxcr2>¹cʰatse ³moː</srcxcr2>
+    <gl>good day</gl>
+  </entry>
+  <entry id="pra.126">
+    <hw>³tẽ</hw>
+    <srcxcr1>¹ʃeː ³tẽ-</srcxcr1>
+    <gl>fasten/tighten</gl>
+  </entry>
+  <entry id="pra.127">
+    <hw>³tẽ</hw>
+    <gl>bind</gl>
+  </entry>
+  <entry id="pra.128">
+    <hw>³uː</hw>
+    <gl>cover</gl>
+  </entry>
+  <entry id="pra.129">
+    <hw>³we</hw>
+    <gl>light/ray</gl>
+  </entry>
+  <entry id="pra.130">
+    <hw>³ʈaː</hw>
+    <gl>torn, be</gl>
+  </entry>
+  <entry id="pra.131">
+    <hw>³ʈe</hw>
+    <srcxcr2>¹kʰɤpɤ</srcxcr2>
+    <gl>warm</gl>
+  </entry>
+  <entry id="pra.132">
+    <hw>³ɲeː</hw>
+    <gl>milk</gl>
+  </entry>
+  <entry id="pra.133">
+    <hw>³ʈi</hw>
+    <gl>pull</gl>
+  </entry>
+  <entry id="pra.134">
+    <hw>³ʈi</hw>
+    <gl>skin</gl>
+  </entry>
+  <entry id="pra.135">
+    <hw>³ʈiː</hw>
+    <gl>draw</gl>
+  </entry>
+  <entry id="pra.136">
+    <hw>³ɲo</hw>
+    <gl>look/see</gl>
+  </entry>
+  <entry id="pra.137">
+    <hw>³ʃu</hw>
+    <gl>request/ask</gl>
+  </entry>
+  <entry id="pra.138">
+    <hw>³ʃuː</hw>
+    <gl>enter</gl>
+  </entry>
+  <entry id="pra.139">
+    <hw>³ʈẽ</hw>
+    <gl>remind/recollect</gl>
+  </entry>
+  <entry id="pra.140">
+    <hw>³ɲĩ</hw>
+    <gl>fear/afraid/scared/dreadful</gl>
+  </entry>
+  <entry id="pra.141">
+    <hw>¹cʰeː</hw>
+    <srcxcr1>¹cʰeː ¹loːpɤ </srcxcr1>
+    <gl>book</gl>
+  </entry>
+  <entry id="pra.142">
+    <hw>¹cʰi</hw>
+    <gl>grass</gl>
+  </entry>
+  <entry id="pra.143">
+    <hw>¹cʰoŋ</hw>
+    <gl>jump</gl>
+  </entry>
+  <entry id="pra.144">
+    <hw>¹cʰĩ</hw>
+    <srcxcr1>⁴nuː- ¹cʰĩ-</srcxcr1>
+    <gl>wake up</gl>
+  </entry>
+  <entry id="pra.145">
+    <hw>¹hlɤ</hw>
+    <gl>god</gl>
+  </entry>
+  <entry id="pra.146">
+    <hw>¹hreː</hw>
+    <gl>rise/get up</gl>
+  </entry>
+  <entry id="pra.147">
+    <hw>¹hreː</hw>
+    <gl>stand</gl>
+  </entry>
+  <entry id="pra.148">
+    <hw>¹jaŋ</hw>
+    <gl>find</gl>
+  </entry>
+  <entry id="pra.149">
+    <hw>¹jaː</hw>
+    <gl>hand</gl>
+  </entry>
+  <entry id="pra.150">
+    <hw>¹jeː</hw>
+    <gl>pass</gl>
+  </entry>
+  <entry id="pra.151">
+    <hw>¹kaː</hw>
+    <gl>stop (v.t.)</gl>
+  </entry>
+  <entry id="pra.152">
+    <hw>¹ki</hw>
+    <srcxcr2>¹kjɤpɤ</srcxcr2>
+    <gl>sweet</gl>
+  </entry>
+  <entry id="pra.153">
+    <hw>¹ki</hw>
+    <gl>feces/stool</gl>
+  </entry>
+  <entry id="pra.154">
+    <hw>¹kiː</hw>
+    <gl>break</gl>
+  </entry>
+  <entry id="pra.155">
+    <hw>¹kjaŋ</hw>
+    <gl>play</gl>
+  </entry>
+  <entry id="pra.156">
+    <hw>¹kje</hw>
+    <gl>field (cultivated )</gl>
+  </entry>
+  <entry id="pra.157">
+    <hw>¹kjẽ</hw>
+    <gl>rice (cooked)</gl>
+  </entry>
+  <entry id="pra.158">
+    <hw>¹kraː</hw>
+    <gl>weep</gl>
+  </entry>
+  <entry id="pra.159">
+    <hw>¹kre</hw>
+    <gl>waist</gl>
+  </entry>
+  <entry id="pra.160">
+    <hw>¹kreː</hw>
+    <gl>climb</gl>
+  </entry>
+  <entry id="pra.161">
+    <hw>¹krɤ</hw>
+    <gl>hair (of head)</gl>
+  </entry>
+  <entry id="pra.162">
+    <hw>¹krẽ</hw>
+    <srcxcr1>²pʰwo ¹krẽ-</srcxcr1>
+    <gl>starve/hungry, be</gl>
+  </entry>
+  <entry id="pra.163">
+    <hw>¹ku</hw>
+    <gl>chest</gl>
+  </entry>
+  <entry id="pra.164">
+    <hw>¹kuŋ</hw>
+    <gl>urine</gl>
+  </entry>
+  <entry id="pra.165">
+    <hw>¹kwor</hw>
+    <gl>turn to</gl>
+  </entry>
+  <entry id="pra.166">
+    <hw>¹kwẽ</hw>
+    <gl>wear/put on</gl>
+  </entry>
+  <entry id="pra.167">
+    <hw>¹kwẽ</hw>
+    <gl>clothes/clothing</gl>
+  </entry>
+  <entry id="pra.168">
+    <hw>¹kwẽ</hw>
+    <gl>grandchild (male)</gl>
+  </entry>
+  <entry id="pra.169">
+    <hw>¹kĩ</hw>
+    <gl>receive/accept</gl>
+  </entry>
+  <entry id="pra.170">
+    <hw>¹kʰi</hw>
+    <gl>he/she</gl>
+  </entry>
+  <entry id="pra.171">
+    <hw>¹kʰjaː</hw>
+    <gl>abandon/cast away</gl>
+  </entry>
+  <entry id="pra.172">
+    <hw>¹kʰjeː</hw>
+    <gl>hook</gl>
+  </entry>
+  <entry id="pra.173">
+    <hw>¹kʰjoː</hw>
+    <gl>draw up</gl>
+  </entry>
+  <entry id="pra.174">
+    <hw>¹kʰu</hw>
+    <gl>steal</gl>
+  </entry>
+  <entry id="pra.175">
+    <hw>¹kʰɤ</hw>
+    <gl>come</gl>
+  </entry>
+  <entry id="pra.176">
+    <hw>¹liː</hw>
+    <gl>back/backside</gl>
+  </entry>
+  <entry id="pra.177">
+    <hw>¹loː</hw>
+    <gl>instruct/teach</gl>
+  </entry>
+  <entry id="pra.178">
+    <hw>¹lɤ</hw>
+    <gl>do</gl>
+  </entry>
+  <entry id="pra.179">
+    <hw>¹me</hw>
+    <gl>grandmother/grandmama</gl>
+  </entry>
+  <entry id="pra.180">
+    <hw>¹me</hw>
+    <gl>tail</gl>
+  </entry>
+  <entry id="pra.181">
+    <hw>¹mie</hw>
+    <gl>fire</gl>
+  </entry>
+  <entry id="pra.182">
+    <hw>¹mrĩ</hw>
+    <gl>woman/female</gl>
+  </entry>
+  <entry id="pra.183">
+    <hw>¹mwo</hw>
+    <gl>rain</gl>
+  </entry>
+  <entry id="pra.184">
+    <hw>¹mẽ</hw>
+    <gl>medicine</gl>
+  </entry>
+  <entry id="pra.185">
+    <hw>¹mĩ</hw>
+    <gl>name</gl>
+  </entry>
+  <entry id="pra.186">
+    <hw>¹ne</hw>
+    <gl>and</gl>
+  </entry>
+  <entry id="pra.187">
+    <hw>¹nɤ</hw>
+    <gl>nose</gl>
+  </entry>
+  <entry id="pra.188">
+    <hw>¹pu</hw>
+    <gl>jar/pot</gl>
+  </entry>
+  <entry id="pra.189">
+    <hw>¹pʰeː</hw>
+    <gl>come</gl>
+  </entry>
+  <entry id="pra.190">
+    <hw>¹pʰeː</hw>
+    <gl>fall/sunset</gl>
+  </entry>
+  <entry id="pra.191">
+    <hw>¹pĩ</hw>
+    <gl>give</gl>
+  </entry>
+  <entry id="pra.192">
+    <hw>¹pʰi</hw>
+    <gl>liquor (fermented)</gl>
+  </entry>
+  <entry id="pra.193">
+    <hw>¹pʰi</hw>
+    <gl>out/outside/exterior</gl>
+  </entry>
+  <entry id="pra.194">
+    <hw>¹pʰu</hw>
+    <gl>trap</gl>
+  </entry>
+  <entry id="pra.195">
+    <hw>¹pʰwo</hw>
+    <gl>male</gl>
+  </entry>
+  <entry id="pra.196">
+    <hw>¹pʰɤ</hw>
+    <gl>husband</gl>
+  </entry>
+  <entry id="pra.197">
+    <hw>¹ru</hw>
+    <gl>horn</gl>
+  </entry>
+  <entry id="pra.198">
+    <hw>¹sa</hw>
+    <gl>breath</gl>
+  </entry>
+  <entry id="pra.199">
+    <hw>¹seː</hw>
+    <gl>kill</gl>
+  </entry>
+  <entry id="pra.200">
+    <hw>¹suŋ</hw>
+    <gl>mouth</gl>
+  </entry>
+  <entry id="pra.201">
+    <hw>¹sɤ</hw>
+    <gl>earth</gl>
+  </entry>
+  <entry id="pra.202">
+    <hw>¹sɤ</hw>
+    <gl>tooth</gl>
+  </entry>
+  <entry id="pra.203">
+    <hw>¹sẽ</hw>
+    <gl>mind/heart</gl>
+  </entry>
+  <entry id="pra.204">
+    <hw>¹toː</hw>
+    <gl>need</gl>
+  </entry>
+  <entry id="pra.205">
+    <hw>¹tsu</hw>
+    <gl>this (one)</gl>
+  </entry>
+  <entry id="pra.206">
+    <hw>¹tsuː</hw>
+    <srcxcr1>⁴ko ¹tsuː-</srcxcr1>
+    <gl>begin (v.t.)</gl>
+  </entry>
+  <entry id="pra.207">
+    <hw>¹tsɤ</hw>
+    <gl>eat</gl>
+  </entry>
+  <entry id="pra.208">
+    <hw>¹tsʰaŋ</hw>
+    <gl>cage/basket</gl>
+  </entry>
+  <entry id="pra.209">
+    <hw>¹tsẽ</hw>
+    <gl>bridge</gl>
+  </entry>
+  <entry id="pra.210">
+    <hw>¹tsʰo</hw>
+    <srcxcr2>⁴tʰumpɤ</srcxcr2>
+    <gl>rope</gl>
+  </entry>
+  <entry id="pra.211">
+    <hw>¹tsʰo</hw>
+    <gl>lake</gl>
+  </entry>
+  <entry id="pra.212">
+    <hw>¹tsʰɤr</hw>
+    <gl>foster/bring up</gl>
+  </entry>
+  <entry id="pra.213">
+    <hw>¹tuː</hw>
+    <gl>cut</gl>
+  </entry>
+  <entry id="pra.214">
+    <hw>¹tɤ</hw>
+    <gl>happen</gl>
+  </entry>
+  <entry id="pra.215">
+    <hw>¹tʰaŋ</hw>
+    <gl>floor/field/plain</gl>
+  </entry>
+  <entry id="pra.216">
+    <hw>¹tʰaŋ</hw>
+    <gl>smell/scent/odour</gl>
+  </entry>
+  <entry id="pra.217">
+    <hw>¹tẽ</hw>
+    <gl>show</gl>
+  </entry>
+  <entry id="pra.218">
+    <hw>¹tẽ</hw>
+    <gl>be/is/are</gl>
+  </entry>
+  <entry id="pra.219">
+    <hw>¹tĩ</hw>
+    <gl>heart</gl>
+  </entry>
+  <entry id="pra.220">
+    <hw>¹tʰẽ</hw>
+    <srcxcr1>¹cĩ ¹tʰẽ-</srcxcr1>
+    <gl>connect/fasten</gl>
+  </entry>
+  <entry id="pra.221">
+    <hw>¹tʰẽ</hw>
+    <gl>set/put</gl>
+  </entry>
+  <entry id="pra.222">
+    <hw>¹tʰẽ</hw>
+    <gl>vacant/empty</gl>
+  </entry>
+  <entry id="pra.223">
+    <hw>¹ɲeː</hw>
+    <srcxcr1>¹sɤ ¹ɲeː-</srcxcr1>
+    <gl>bite</gl>
+  </entry>
+  <entry id="pra.224">
+    <hw>¹ʃeː</hw>
+    <gl>say</gl>
+  </entry>
+  <entry id="pra.225">
+    <hw>¹ʃi</hw>
+    <gl>die</gl>
+  </entry>
+  <entry id="pra.226">
+    <hw>¹ʈi</hw>
+    <gl>finger</gl>
+  </entry>
+  <entry id="pra.227">
+    <hw>¹ʃi</hw>
+    <gl>rice</gl>
+  </entry>
+  <entry id="pra.228">
+    <hw>¹ʃjoŋ</hw>
+    <gl>river</gl>
+  </entry>
+  <entry id="pra.229">
+    <hw>¹ʃjɤ</hw>
+    <gl>flesh</gl>
+  </entry>
+  <entry id="pra.230">
+    <hw>¹ʃjɤr</hw>
+    <gl>east</gl>
+  </entry>
+  <entry id="pra.231">
+    <hw>¹ʃor</hw>
+    <srcxcr1>²ɲiː ¹ʃor-</srcxcr1>
+    <gl>laugh</gl>
+  </entry>
+  <entry id="pra.232">
+    <hw>¹ʈu</hw>
+    <gl>sit</gl>
+  </entry>
+  <entry id="pra.233">
+    <hw>¹ŋwẽ</hw>
+    <gl>front</gl>
+  </entry>
+  <entry id="pra.234">
+    <hw>¹ŋɤ</hw>
+    <gl>I</gl>
+  </entry>
+  <entry id="pra.235">
+    <hw>¹ɲẽ</hw>
+    <gl>hear</gl>
+  </entry>
+  <entry id="pra.236">
+    <hw>¹ɲẽ</hw>
+    <gl>lend/borrow</gl>
+  </entry>
+  <entry id="pra.237">
+    <hw>¹ʃĩ</hw>
+    <gl>nail</gl>
+  </entry>
+  <entry id="pra.238">
+    <hw>⁴hriː</hw>
+    <gl>one</gl>
+  </entry>
+  <entry id="pra.239">
+    <hw>⁴hro</hw>
+    <gl>wheat</gl>
+  </entry>
+  <entry id="pra.240">
+    <hw>⁴hrɤ</hw>
+    <gl>enemy</gl>
+  </entry>
+  <entry id="pra.241">
+    <hw>⁴jo</hw>
+    <gl>shake</gl>
+  </entry>
+  <entry id="pra.242">
+    <hw>⁴jo</hw>
+    <gl>thief</gl>
+  </entry>
+  <entry id="pra.243">
+    <hw>⁴jɤ</hw>
+    <gl>go</gl>
+  </entry>
+  <entry id="pra.244">
+    <hw>⁴kʰja</hw>
+    <gl>place</gl>
+  </entry>
+  <entry id="pra.245">
+    <hw>⁴kʰje</hw>
+    <gl>?width/?road</gl>
+  </entry>
+  <entry id="pra.246">
+    <hw>⁴kʰje</hw>
+    <gl>business/job/work/task</gl>
+  </entry>
+  <entry id="pra.247">
+    <hw>⁴kʰju</hw>
+    <gl>buy/purchase</gl>
+  </entry>
+  <entry id="pra.248">
+    <hw>⁴kʰju</hw>
+    <gl>sheep</gl>
+  </entry>
+  <entry id="pra.249">
+    <hw>⁴kʰjẽ</hw>
+    <gl>way/road</gl>
+  </entry>
+  <entry id="pra.250">
+    <hw>⁴kʰriː</hw>
+    <gl>one</gl>
+  </entry>
+  <entry id="pra.251">
+    <hw>⁴kʰwe</hw>
+    <gl>song</gl>
+  </entry>
+  <entry id="pra.252">
+    <hw>⁴maː</hw>
+    <gl>war/warfare</gl>
+  </entry>
+  <entry id="pra.253">
+    <hw>⁴mie</hw>
+    <gl>cattle</gl>
+  </entry>
+  <entry id="pra.254">
+    <hw>⁴mui</hw>
+    <gl>money</gl>
+  </entry>
+  <entry id="pra.255">
+    <hw>⁴mɤr</hw>
+    <gl>gold</gl>
+  </entry>
+  <entry id="pra.256">
+    <hw>⁴nuː</hw>
+    <gl>lie/lie down</gl>
+  </entry>
+  <entry id="pra.257">
+    <hw>⁴pʰaŋ</hw>
+    <gl>force/strength/power/might</gl>
+  </entry>
+  <entry id="pra.258">
+    <hw>⁴pʰli</hw>
+    <gl>four</gl>
+  </entry>
+  <entry id="pra.259">
+    <hw>⁴pʰlo</hw>
+    <gl>strike/pierce</gl>
+  </entry>
+  <entry id="pra.260">
+    <hw>⁴pʰlu</hw>
+    <gl>seed</gl>
+  </entry>
+  <entry id="pra.261">
+    <hw>⁴pʰra</hw>
+    <gl>powder</gl>
+  </entry>
+  <entry id="pra.262">
+    <hw>⁴pʰreː</hw>
+    <gl>eight</gl>
+  </entry>
+  <entry id="pra.263">
+    <hw>⁴pʰrɤ</hw>
+    <gl>hundred</gl>
+  </entry>
+  <entry id="pra.264">
+    <hw>⁴su</hw>
+    <gl>who</gl>
+  </entry>
+  <entry id="pra.265">
+    <hw>⁴tsʰaŋ</hw>
+    <gl>put in</gl>
+  </entry>
+  <entry id="pra.266">
+    <hw>⁴tsʰor</hw>
+    <gl>pack/wrap</gl>
+  </entry>
+  <entry id="pra.267">
+    <hw>⁴tsʰu</hw>
+    <gl>divide/distribute</gl>
+  </entry>
+  <entry id="pra.268">
+    <hw>⁴tʰe</hw>
+    <gl>needle</gl>
+  </entry>
+  <entry id="pra.269">
+    <hw>⁴tʰiː</hw>
+    <gl>pick up</gl>
+  </entry>
+  <entry id="pra.270">
+    <hw>⁴tʰuŋ</hw>
+    <gl>stalk</gl>
+  </entry>
+  <entry id="pra.271">
+    <hw>⁴tʰĩ</hw>
+    <gl>house/home</gl>
+  </entry>
+  <entry id="pra.272">
+    <hw>⁴we</hw>
+    <gl>call</gl>
+  </entry>
+  <entry id="pra.273">
+    <hw>⁴ɲiː</hw>
+    <gl>two</gl>
+  </entry>
+  <entry id="pra.274">
+    <hw>⁴ɲu</hw>
+    <gl>melt/solve</gl>
+  </entry>
+  <entry id="pra.275">
+    <hw>⁴ŋɤ</hw>
+    <gl>five</gl>
+  </entry>
+  <entry id="pra.276">
+    <hw>⁴ʈʰu</hw>
+    <gl>sew</gl>
+  </entry>
+  <entry id="pra.277">
+    <hw>⁴ʈʰu</hw>
+    <gl>six</gl>
+  </entry>
+</lexicon>

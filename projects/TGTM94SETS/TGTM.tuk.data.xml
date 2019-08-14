@@ -1,0 +1,2297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="tuk">
+  <entry id="tuk.1">
+    <hw>e</hw>
+    <srcxcr1>=e [[-e</srcxcr1>
+    <gl>also</gl>
+  </entry>
+  <entry id="tuk.2">
+    <hw>ᴴsun</hw>
+    <srcxcr1>³mlə-ᴴsun [[mlɔh-sun</srcxcr1>
+    <gl>rice (unhusked)</gl>
+  </entry>
+  <entry id="tuk.3">
+    <hw>²jaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²jaŋ=lə [[jaŋ-lɔ</srcxcr1>
+    <gl>find</gl>
+  </entry>
+  <entry id="tuk.4">
+    <hw>²jaŋ</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²jaŋ=pə [[jaŋ-pɔ</srcxcr1>
+    <gl>light (adj.)</gl>
+  </entry>
+  <entry id="tuk.5">
+    <hw>²jo</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²jo=wə [[jo-wɔ</srcxcr1>
+    <gl>sufficient</gl>
+  </entry>
+  <entry id="tuk.6">
+    <hw>²ju</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴka ²ju=lə [[ka ju-lɔ</srcxcr1>
+    <gl>bleed, rain.</gl>
+  </entry>
+  <entry id="tuk.7">
+    <hw>²kjaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kjaŋ=lə [[kjaŋ-lɔ</srcxcr1>
+    <gl>play</gl>
+  </entry>
+  <entry id="tuk.8">
+    <hw>²kju</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kju=lə [[kju-lɔ</srcxcr1>
+    <gl>break (v.i.) (e.g. sticks)</gl>
+  </entry>
+  <entry id="tuk.9">
+    <hw>²kjuŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kjuŋ=lə [[kjuŋ-lɔ</srcxcr1>
+    <gl>sour, become (with ferment)</gl>
+  </entry>
+  <entry id="tuk.10">
+    <hw>²kjəl</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kjəl=lə [[kjɔl-lɔ</srcxcr1>
+    <gl>swim</gl>
+  </entry>
+  <entry id="tuk.11">
+    <hw>²koj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²koj=lə [[koj-lɔ</srcxcr1>
+    <gl>weigh</gl>
+  </entry>
+  <entry id="tuk.12">
+    <hw>²kon</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kon=lə [[kon-lɔ</srcxcr1>
+    <gl>dress (v.)</gl>
+  </entry>
+  <entry id="tuk.13">
+    <hw>²kum</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kum=lə [[kum-lɔ</srcxcr1>
+    <gl>gather up</gl>
+  </entry>
+  <entry id="tuk.14">
+    <hw>²kʰaŋ</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²kʰaŋ=pə [[kʰaŋ-pɔ</srcxcr1>
+    <gl>cold (weather)</gl>
+  </entry>
+  <entry id="tuk.15">
+    <hw>²kʰi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰi=lə [[kʰi-lɔ</srcxcr1>
+    <gl>borrow, lend</gl>
+  </entry>
+  <entry id="tuk.16">
+    <hw>²kʰi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰi=lə [[kʰi-lɔ</srcxcr1>
+    <gl>sneeze (v.)</gl>
+  </entry>
+  <entry id="tuk.17">
+    <hw>²kʰi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰi=lə [[kʰi-lɔ</srcxcr1>
+    <gl>tie up laces</gl>
+  </entry>
+  <entry id="tuk.18">
+    <hw>²kʰja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰja=lə [[kʰja-lɔ</srcxcr1>
+    <gl>discard</gl>
+  </entry>
+  <entry id="tuk.19">
+    <hw>²kəm</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²kəm=pə [[kɔm-pɔ</srcxcr1>
+    <gl>bitter</gl>
+  </entry>
+  <entry id="tuk.20">
+    <hw>²kʰoj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰoj=lə [[kʰoj-lɔ</srcxcr1>
+    <gl>wrap/wind up</gl>
+  </entry>
+  <entry id="tuk.21">
+    <hw>²kʰə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰə=lə [[kʰɔ-lɔ</srcxcr1>
+    <gl>come</gl>
+  </entry>
+  <entry id="tuk.22">
+    <hw>²kʰəm</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>=lə ²kʰəm=lə [[-lɔ kʰɔm-lɔ</srcxcr1>
+    <gl>can/be able to do sthg</gl>
+  </entry>
+  <entry id="tuk.23">
+    <hw>²kʰər</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰər=lə [[kʰɔr-lɔ</srcxcr1>
+    <gl>dry (v.i.)</gl>
+  </entry>
+  <entry id="tuk.24">
+    <hw>²kʰər</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²kʰər=lə [[kʰɔr-lɔ</srcxcr1>
+    <gl>thresh (rice ,wheat)</gl>
+  </entry>
+  <entry id="tuk.25">
+    <hw>²la</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²la=lə [[la-lɔ</srcxcr1>
+    <gl>to hide, to steal away</gl>
+  </entry>
+  <entry id="tuk.26">
+    <hw>²lim</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²lim=pə ᴴtʰaŋ ¹kʰə=wə [[lim-pɔ tʰaŋ 'kʰɔ-wɔ</srcxcr1>
+    <gl>fragrant</gl>
+  </entry>
+  <entry id="tuk.27">
+    <hw>²luŋ</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²luŋ=pə [[luŋ-pɔ</srcxcr1>
+    <gl>burn (v.i.)</gl>
+  </entry>
+  <entry id="tuk.28">
+    <hw>²lʰəp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²lʰəp=lə [[lʰɔp-lɔ</srcxcr1>
+    <gl>heat (v.i.)</gl>
+  </entry>
+  <entry id="tuk.29">
+    <hw>²lʰəp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²lʰəp=lə [[lʰɔp-lɔ</srcxcr1>
+    <gl>learn</gl>
+  </entry>
+  <entry id="tuk.30">
+    <hw>²me</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²me=lə [[me-lɔ</srcxcr1>
+    <gl>ask</gl>
+  </entry>
+  <entry id="tuk.31">
+    <hw>²mep</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²mep=lə [[mep-lɔ</srcxcr1>
+    <gl>whet</gl>
+  </entry>
+  <entry id="tuk.32">
+    <hw>²mle</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²mle=lə [[mle-lɔ</srcxcr1>
+    <gl>forget</gl>
+  </entry>
+  <entry id="tuk.33">
+    <hw>²mraŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²mraŋ=lə [[mraŋ-lɔ</srcxcr1>
+    <gl>see</gl>
+  </entry>
+  <entry id="tuk.34">
+    <hw>²mru</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²mru=lə [[mru-lɔ</srcxcr1>
+    <gl>plug a leak</gl>
+  </entry>
+  <entry id="tuk.35">
+    <hw>²mrən</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²mrən=lə [[mrɔn-lɔ</srcxcr1>
+    <gl>satiated</gl>
+  </entry>
+  <entry id="tuk.36">
+    <hw>²na</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²na=lə [[na-lɔ</srcxcr1>
+    <gl>carry (loads)</gl>
+  </entry>
+  <entry id="tuk.37">
+    <hw>²naŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²naŋ=lə [[naŋ-lɔ</srcxcr1>
+    <gl>press down</gl>
+  </entry>
+  <entry id="tuk.38">
+    <hw>²no</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²no=wə [[no-wɔ</srcxcr1>
+    <gl>high</gl>
+  </entry>
+  <entry id="tuk.39">
+    <hw>²nə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²nə=lə [[nɔ-lɔ</srcxcr1>
+    <gl>hurt/ache/pain (v.)</gl>
+  </entry>
+  <entry id="tuk.40">
+    <hw>²nə</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²nə=wə [[nɔ-wɔ</srcxcr1>
+    <gl>sick</gl>
+  </entry>
+  <entry id="tuk.41">
+    <hw>²paŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ləpər ²paŋ=lə [['lɔhpɔr paŋ-lɔ</srcxcr1>
+    <gl>to speak</gl>
+  </entry>
+  <entry id="tuk.42">
+    <hw>²pe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴʈə ²pe=lə [[ʈɔ pe-lɔ</srcxcr1>
+    <gl>comb (v.) (hair)</gl>
+  </entry>
+  <entry id="tuk.43">
+    <hw>²pe</hw>
+    <srcxcr2>=nə</srcxcr2>
+    <srcxcr1>²penə ¹lə=lə [[penɔ 'lɔ-lɔ</srcxcr1>
+    <gl>ashamed</gl>
+  </entry>
+  <entry id="tuk.44">
+    <hw>²pi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pi=lə [[pi-lɔ</srcxcr1>
+    <gl>let go</gl>
+  </entry>
+  <entry id="tuk.45">
+    <hw>²pin</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pin=lə [[pin-lɔ</srcxcr1>
+    <gl>give</gl>
+  </entry>
+  <entry id="tuk.46">
+    <hw>²pjo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pjo=lə [[pjo-lɔ</srcxcr1>
+    <gl>boil (water)</gl>
+  </entry>
+  <entry id="tuk.47">
+    <hw>²pun</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pun=lə [[pun-lɔ</srcxcr1>
+    <gl>to do, to hit</gl>
+  </entry>
+  <entry id="tuk.48">
+    <hw>²pʰa</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰa=lə [[pʰa-lɔ</srcxcr1>
+    <gl>pay</gl>
+  </entry>
+  <entry id="tuk.49">
+    <hw>²pʰe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰe=lə [[pʰe-lɔ</srcxcr1>
+    <gl>go out</gl>
+  </entry>
+  <entry id="tuk.50">
+    <hw>²pʰi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰi=lə [[pʰi-lɔ</srcxcr1>
+    <gl>peel (out of shells)</gl>
+  </entry>
+  <entry id="tuk.51">
+    <hw>²pʰja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰja=lə [[pʰja-lɔ</srcxcr1>
+    <gl>rise (sun)</gl>
+  </entry>
+  <entry id="tuk.52">
+    <hw>²pʰja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰja=lə [[pʰja-lɔ</srcxcr1>
+    <gl>shine (sun)</gl>
+  </entry>
+  <entry id="tuk.53">
+    <hw>²pʰja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰja=lə [[pʰja-lɔ</srcxcr1>
+    <gl>sweep</gl>
+  </entry>
+  <entry id="tuk.54">
+    <hw>²pʰjoŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²pʰjoŋ=lə [[pʰjoŋ-lɔ</srcxcr1>
+    <gl>jump up</gl>
+  </entry>
+  <entry id="tuk.55">
+    <hw>²pʰor</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹tsjuku ²pʰor=lə [['cjuku pʰor-lɔ</srcxcr1>
+    <gl>rub in (oil)</gl>
+  </entry>
+  <entry id="tuk.56">
+    <hw>²ra</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ra=lə [[ra-lɔ</srcxcr1>
+    <gl>weave/knit</gl>
+  </entry>
+  <entry id="tuk.57">
+    <hw>²re</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²re=lə [[re-lɔ</srcxcr1>
+    <gl>get up (v.i.)</gl>
+  </entry>
+  <entry id="tuk.58">
+    <hw>²ro</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²ro=wə ³so=lə [[ro-wɔ soh-lɔ</srcxcr1>
+    <gl>dilute</gl>
+  </entry>
+  <entry id="tuk.59">
+    <hw>²rʰaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²rʰaŋ=lə [[rʰaŋ-lɔ</srcxcr1>
+    <gl>swell</gl>
+  </entry>
+  <entry id="tuk.60">
+    <hw>²rʰe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²rʰe=lə [[rʰe-lɔ</srcxcr1>
+    <gl>grate</gl>
+  </entry>
+  <entry id="tuk.61">
+    <hw>²rʰuŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²rʰuŋ=lə [[rʰuŋ-lɔ</srcxcr1>
+    <gl>guard</gl>
+  </entry>
+  <entry id="tuk.62">
+    <hw>²rʰuŋ</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²rʰuŋ=pə [[rʰuŋ-pɔ</srcxcr1>
+    <gl>thick</gl>
+  </entry>
+  <entry id="tuk.63">
+    <hw>²si</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²si=lə [[si-lɔ</srcxcr1>
+    <gl>die</gl>
+  </entry>
+  <entry id="tuk.64">
+    <hw>²sja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sja=lə [[sja-lɔ</srcxcr1>
+    <gl>decrease (v.i.)</gl>
+  </entry>
+  <entry id="tuk.65">
+    <hw>²sjal</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sjal=lə [[sjal-lɔ</srcxcr1>
+    <gl>rinse</gl>
+  </entry>
+  <entry id="tuk.66">
+    <hw>²sje</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sje=lə [[sje-lɔ</srcxcr1>
+    <gl>dance</gl>
+  </entry>
+  <entry id="tuk.67">
+    <hw>²sje</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sje=lə [[sje-lɔ</srcxcr1>
+    <gl>go (hon.)</gl>
+  </entry>
+  <entry id="tuk.68">
+    <hw>²sje</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴmra ²sje=lə [[mra sje-lɔ</srcxcr1>
+    <gl>weed (v.)</gl>
+  </entry>
+  <entry id="tuk.69">
+    <hw>²sje</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴŋo ²sje=lə [[ŋo sje-lɔ</srcxcr1>
+    <gl>know (smn)</gl>
+  </entry>
+  <entry id="tuk.70">
+    <hw>²sjo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sjo=lə [[sjo-lɔ</srcxcr1>
+    <gl>pull out (e.g. khukuri)</gl>
+  </entry>
+  <entry id="tuk.71">
+    <hw>²sju</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sju=lə [[sju-lɔ</srcxcr1>
+    <gl>string (beads)</gl>
+  </entry>
+  <entry id="tuk.72">
+    <hw>²so</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²so=lə [[so-lɔ</srcxcr1>
+    <gl>live</gl>
+  </entry>
+  <entry id="tuk.73">
+    <hw>²soj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²soj=lə [[soj-lɔ</srcxcr1>
+    <gl>lead (on rope)</gl>
+  </entry>
+  <entry id="tuk.74">
+    <hw>²sol</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²sol=wə [[sol-wɔ</srcxcr1>
+    <gl>eat (hon.)</gl>
+  </entry>
+  <entry id="tuk.75">
+    <hw>²səm</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²səm=pə [[sɔm-pɔ</srcxcr1>
+    <gl>new</gl>
+  </entry>
+  <entry id="tuk.76">
+    <hw>²sər</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²sər=lə [[sɔr-lɔ</srcxcr1>
+    <gl>bloom (flowers)</gl>
+  </entry>
+  <entry id="tuk.77">
+    <hw>²ta</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ta=lə [[ta-lɔ</srcxcr1>
+    <gl>hold out</gl>
+  </entry>
+  <entry id="tuk.78">
+    <hw>²te</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²te=lə [[te-lɔ</srcxcr1>
+    <gl>fall down</gl>
+  </entry>
+  <entry id="tuk.79">
+    <hw>²te</hw>
+    <srcxcr2>=si</srcxcr2>
+    <srcxcr1>²te=si ²pin=lə [[te-si pin-lɔ</srcxcr1>
+    <gl>take out (of box)</gl>
+  </entry>
+  <entry id="tuk.80">
+    <hw>²ti</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ti=lə [[ti-lɔ</srcxcr1>
+    <gl>spread out (e.g. mats)</gl>
+  </entry>
+  <entry id="tuk.81">
+    <hw>²ti</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³mə ²ti=lə [[mɔh ti-lɔ</srcxcr1>
+    <gl>begin</gl>
+  </entry>
+  <entry id="tuk.82">
+    <hw>²to</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²to=lə [[to-lɔ</srcxcr1>
+    <gl>pound grain</gl>
+  </entry>
+  <entry id="tuk.83">
+    <hw>²tsja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsja=lə [[cja-lɔ</srcxcr1>
+    <gl>search for</gl>
+  </entry>
+  <entry id="tuk.84">
+    <hw>²tsjaŋ</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>²tsjaŋ=pə [[cjaŋ-pɔ</srcxcr1>
+    <gl>small</gl>
+  </entry>
+  <entry id="tuk.85">
+    <hw>²tsjen</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsjen=lə [[cjen-lɔ</srcxcr1>
+    <gl>knead</gl>
+  </entry>
+  <entry id="tuk.86">
+    <hw>²tsjup</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsjup=lə [[cjup-lɔ</srcxcr1>
+    <gl>pen up (animals)</gl>
+  </entry>
+  <entry id="tuk.87">
+    <hw>²tsu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsu=lə [[cu-lɔ</srcxcr1>
+    <gl>bark (v.)</gl>
+  </entry>
+  <entry id="tuk.88">
+    <hw>²tsuŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsuŋ=lə [[cuŋ-lɔ</srcxcr1>
+    <gl>sell</gl>
+  </entry>
+  <entry id="tuk.89">
+    <hw>²tsʰjar</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²tsʰjar=wə [[cʰjar-wɔ</srcxcr1>
+    <gl>sharp (edged)</gl>
+  </entry>
+  <entry id="tuk.90">
+    <hw>²tsʰoj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsʰoj=lə [[cʰoj-lɔ</srcxcr1>
+    <gl>dye</gl>
+  </entry>
+  <entry id="tuk.91">
+    <hw>²tsʰə</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²tsʰə=wə [[cʰɔ-wɔ</srcxcr1>
+    <gl>fever</gl>
+  </entry>
+  <entry id="tuk.92">
+    <hw>²tsʰə</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²tsʰə=wə [[cʰɔ-wɔ</srcxcr1>
+    <gl>hot</gl>
+  </entry>
+  <entry id="tuk.93">
+    <hw>²tsʰəp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsʰəp=lə [[cʰɔp-lɔ</srcxcr1>
+    <gl>peel (wood)</gl>
+  </entry>
+  <entry id="tuk.94">
+    <hw>²tsʰər</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tsʰər=lə [[cʰɔr-lɔ</srcxcr1>
+    <gl>grow up</gl>
+  </entry>
+  <entry id="tuk.95">
+    <hw>²tum</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tum=lə [[tum-lɔ</srcxcr1>
+    <gl>wrap (things)</gl>
+  </entry>
+  <entry id="tuk.96">
+    <hw>²tup</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tup=lə [[tup-lɔ</srcxcr1>
+    <gl>cut up (in pieces)</gl>
+  </entry>
+  <entry id="tuk.97">
+    <hw>²tʰa</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tʰa=lə [[tʰa-lɔ</srcxcr1>
+    <gl>cut</gl>
+  </entry>
+  <entry id="tuk.98">
+    <hw>²tʰe</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>²tʰe=wə [[tʰe-wɔ</srcxcr1>
+    <gl>hear</gl>
+  </entry>
+  <entry id="tuk.99">
+    <hw>²tʰi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tʰi=lə [[tʰi-lɔ</srcxcr1>
+    <gl>break (v.i.) (e.g. pots)</gl>
+  </entry>
+  <entry id="tuk.100">
+    <hw>²təp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²təp=lə [[tɔp-lɔ</srcxcr1>
+    <gl>take off (stove)</gl>
+  </entry>
+  <entry id="tuk.101">
+    <hw>²tʰuŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²tʰuŋ=lə [[tʰuŋ-lɔ</srcxcr1>
+    <gl>drink</gl>
+  </entry>
+  <entry id="tuk.102">
+    <hw>²um</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²um=lə [[um-lɔ</srcxcr1>
+    <gl>pour</gl>
+  </entry>
+  <entry id="tuk.103">
+    <hw>²ʈa</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ʈa=lə [[ʈa-lɔ</srcxcr1>
+    <gl>cry/weep</gl>
+  </entry>
+  <entry id="tuk.104">
+    <hw>²ʈaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ʈaŋ=lə [[ʈaŋ-lɔ</srcxcr1>
+    <gl>break (v.i.) (e.g. rope)</gl>
+  </entry>
+  <entry id="tuk.105">
+    <hw>²ʈe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ʈe=lə [[ʈe-lɔ</srcxcr1>
+    <gl>climb</gl>
+  </entry>
+  <entry id="tuk.106">
+    <hw>²ŋoj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ŋoj=lə [[ŋoj-lɔ</srcxcr1>
+    <gl>jump across</gl>
+  </entry>
+  <entry id="tuk.107">
+    <hw>²ŋon</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴja=tse ²ŋon=lə [[ja-ce ŋon-lɔ</srcxcr1>
+    <gl>to show</gl>
+  </entry>
+  <entry id="tuk.108">
+    <hw>²ʈʰaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ʈʰaŋ=lə [[ʈʰaŋ-lɔ</srcxcr1>
+    <gl>roast, burn</gl>
+  </entry>
+  <entry id="tuk.109">
+    <hw>²ʈʰim</hw>
+    <srcxcr2>=tsi=wə</srcxcr2>
+    <srcxcr1>²ʈʰim=tsi=wə [[ʈʰim-ci-wɔ</srcxcr1>
+    <gl>twisted</gl>
+  </entry>
+  <entry id="tuk.110">
+    <hw>²ʈʰu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>²ʈʰu=lə [[ʈʰu-lɔ</srcxcr1>
+    <gl>wash</gl>
+  </entry>
+  <entry id="tuk.111">
+    <hw>³jul</hw>
+    <srcxcr1>³jul [[juhl</srcxcr1>
+    <gl>village</gl>
+  </entry>
+  <entry id="tuk.112">
+    <hw>³ka</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ka=lə [[kah-lɔ</srcxcr1>
+    <gl>stuck, get</gl>
+  </entry>
+  <entry id="tuk.113">
+    <hw>³kaŋ</hw>
+    <srcxcr1>³kaŋ [[kahŋ</srcxcr1>
+    <gl>hill</gl>
+  </entry>
+  <entry id="tuk.114">
+    <hw>³kja</hw>
+    <srcxcr1>³kja [[kjah</srcxcr1>
+    <gl>place</gl>
+  </entry>
+  <entry id="tuk.115">
+    <hw>³kjo</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>³kjo=wə [[kjoh-wɔ</srcxcr1>
+    <gl>pretty</gl>
+  </entry>
+  <entry id="tuk.116">
+    <hw>³kjoŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³kjoŋ=lə [[kjohŋ-lɔ</srcxcr1>
+    <gl>swallow (v.)</gl>
+  </entry>
+  <entry id="tuk.117">
+    <hw>³ko</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ko=lə [[koh-lɔ</srcxcr1>
+    <gl>understand</gl>
+  </entry>
+  <entry id="tuk.118">
+    <hw>³ko</hw>
+    <srcxcr1>³ko [[koh</srcxcr1>
+    <gl>back</gl>
+  </entry>
+  <entry id="tuk.119">
+    <hw>³kom</hw>
+    <srcxcr1>³kom ³kjəp =lə [[kohm kjɔhp-lɔ</srcxcr1>
+    <gl>worship (v.)</gl>
+  </entry>
+  <entry id="tuk.120">
+    <hw>³koŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴʈo ³koŋ=lə [[ʈo kohŋ-lɔ</srcxcr1>
+    <gl>numb, be</gl>
+  </entry>
+  <entry id="tuk.121">
+    <hw>³koŋ</hw>
+    <srcxcr1>³koŋ ³təm =lə [[kohŋ tɔhm-lɔ</srcxcr1>
+    <gl>bargain</gl>
+  </entry>
+  <entry id="tuk.122">
+    <hw>³kuŋ</hw>
+    <srcxcr2>=ri</srcxcr2>
+    <srcxcr1>³kuŋ=ri [[kuhŋ-ri</srcxcr1>
+    <gl>between</gl>
+  </entry>
+  <entry id="tuk.123">
+    <hw>³kəp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³kəp=lə [[kɔhp-lɔ</srcxcr1>
+    <gl>cover (v.)</gl>
+  </entry>
+  <entry id="tuk.124">
+    <hw>³kəp</hw>
+    <srcxcr1>³kəp [[kɔhp</srcxcr1>
+    <gl>cover (n.)/lid</gl>
+  </entry>
+  <entry id="tuk.125">
+    <hw>³laŋ</hw>
+    <srcxcr1>³laŋ [[lahŋ</srcxcr1>
+    <gl>mortar</gl>
+  </entry>
+  <entry id="tuk.126">
+    <hw>³li</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>³li=wə [[lih-wɔ</srcxcr1>
+    <gl>heavy</gl>
+  </entry>
+  <entry id="tuk.127">
+    <hw>³li</hw>
+    <srcxcr1>³li [[lih</srcxcr1>
+    <gl>body</gl>
+  </entry>
+  <entry id="tuk.128">
+    <hw>³lo</hw>
+    <srcxcr1>³lo [[loh</srcxcr1>
+    <gl>year</gl>
+  </entry>
+  <entry id="tuk.129">
+    <hw>³lo</hw>
+    <srcxcr1>³lo ¹lə =lə [[loh 'lɔ-lɔ</srcxcr1>
+    <gl>plow (after putting manure)</gl>
+  </entry>
+  <entry id="tuk.130">
+    <hw>³maŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³maŋ ³maŋ=lə [[mahŋ mahŋ-lɔ</srcxcr1>
+    <gl>to dream</gl>
+  </entry>
+  <entry id="tuk.131">
+    <hw>³maŋ</hw>
+    <srcxcr1>³maŋ ³maŋ =lə [[mahŋ mahŋ-lɔ</srcxcr1>
+    <gl>dream</gl>
+  </entry>
+  <entry id="tuk.132">
+    <hw>³mi</hw>
+    <srcxcr1>³mi [[mih</srcxcr1>
+    <gl>person</gl>
+  </entry>
+  <entry id="tuk.133">
+    <hw>³mjaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³mjaŋ=lə [[mjahŋ-lɔ</srcxcr1>
+    <gl>taste/eat sample</gl>
+  </entry>
+  <entry id="tuk.134">
+    <hw>³mle</hw>
+    <srcxcr1>³mle-ᴴtsʰəm [[mleh-cʰɔm</srcxcr1>
+    <gl>penis</gl>
+  </entry>
+  <entry id="tuk.135">
+    <hw>³mlə</hw>
+    <srcxcr1>³mlə [[mlɔh</srcxcr1>
+    <gl>rice, uncooked</gl>
+  </entry>
+  <entry id="tuk.136">
+    <hw>³mo</hw>
+    <srcxcr1>³mo [[moh</srcxcr1>
+    <gl>cloud</gl>
+  </entry>
+  <entry id="tuk.137">
+    <hw>³na</hw>
+    <srcxcr1>³na [[nah</srcxcr1>
+    <gl>pus</gl>
+  </entry>
+  <entry id="tuk.138">
+    <hw>³naŋ</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>³naŋ=pə [[nahŋ-pɔ</srcxcr1>
+    <gl>give (hon.)</gl>
+  </entry>
+  <entry id="tuk.139">
+    <hw>³naŋ</hw>
+    <srcxcr2>=ri</srcxcr2>
+    <srcxcr1>³naŋ=ri [[nahŋ-ri</srcxcr1>
+    <gl>in/inside of</gl>
+  </entry>
+  <entry id="tuk.140">
+    <hw>³nə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³nə=lə [[nɔh-lɔ</srcxcr1>
+    <gl>birth, give</gl>
+  </entry>
+  <entry id="tuk.141">
+    <hw>³nə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³nə=lə [[nɔh-lɔ</srcxcr1>
+    <gl>raise</gl>
+  </entry>
+  <entry id="tuk.142">
+    <hw>³nə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³nə=lə [[nɔh-lɔ</srcxcr1>
+    <gl>rest</gl>
+  </entry>
+  <entry id="tuk.143">
+    <hw>³nə</hw>
+    <srcxcr2>=nə</srcxcr2>
+    <srcxcr1>ᴴsəm ³nə=nə ¹lə=lə [[sɔm nɔh-nɔ 'lɔ-lɔ</srcxcr1>
+    <gl>hurt (feelings)</gl>
+  </entry>
+  <entry id="tuk.144">
+    <hw>³nə</hw>
+    <srcxcr1>³nə [[nɔh</srcxcr1>
+    <gl>ear</gl>
+  </entry>
+  <entry id="tuk.145">
+    <hw>³pa</hw>
+    <srcxcr1>³pa [[pah</srcxcr1>
+    <gl>leaf</gl>
+  </entry>
+  <entry id="tuk.146">
+    <hw>³paŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³paŋ=lə [[pahŋ-lɔ</srcxcr1>
+    <gl>quarrel (with words)</gl>
+  </entry>
+  <entry id="tuk.147">
+    <hw>³pe</hw>
+    <srcxcr1>³pe ²kin =si ²pin=lə [[peh kin-si pin-lɔ</srcxcr1>
+    <gl>give in marriage</gl>
+  </entry>
+  <entry id="tuk.148">
+    <hw>³pi</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>³pi=wə [[pih-wɔ</srcxcr1>
+    <gl>say</gl>
+  </entry>
+  <entry id="tuk.149">
+    <hw>³pjuŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³pjuŋ=lə [[pjuhŋ-lɔ</srcxcr1>
+    <gl>cough (v.)</gl>
+  </entry>
+  <entry id="tuk.150">
+    <hw>³plo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³plo=lə [[ploh-lɔ</srcxcr1>
+    <gl>boil (food)</gl>
+  </entry>
+  <entry id="tuk.151">
+    <hw>³plə</hw>
+    <srcxcr1>³plə [[plɔh</srcxcr1>
+    <gl>spirit(s)</gl>
+  </entry>
+  <entry id="tuk.152">
+    <hw>³pləp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³pləp=lə [[plɔhp-lɔ</srcxcr1>
+    <gl>tire/tired, become</gl>
+  </entry>
+  <entry id="tuk.153">
+    <hw>³pom</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³pom=lə [[pohm-lɔ</srcxcr1>
+    <gl>soak</gl>
+  </entry>
+  <entry id="tuk.154">
+    <hw>³pom</hw>
+    <srcxcr1>ᴴja-³pom [[ja-pohm</srcxcr1>
+    <gl>shoulder</gl>
+  </entry>
+  <entry id="tuk.155">
+    <hw>³pra</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³pra=lə [[prah-lɔ</srcxcr1>
+    <gl>grind (with mill)</gl>
+  </entry>
+  <entry id="tuk.156">
+    <hw>³pra</hw>
+    <srcxcr1>³pra [[prah</srcxcr1>
+    <gl>range (mountain) (n.)</gl>
+  </entry>
+  <entry id="tuk.157">
+    <hw>³praŋ</hw>
+    <srcxcr1>⁴me ³praŋ [['meh prahŋ</srcxcr1>
+    <gl>cow shed</gl>
+  </entry>
+  <entry id="tuk.158">
+    <hw>³pre</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³pre=lə [[preh-lɔ</srcxcr1>
+    <gl>lose/defeated, be</gl>
+  </entry>
+  <entry id="tuk.159">
+    <hw>³pre</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴʈə ³pre=lə [[ʈɔ preh-lɔ</srcxcr1>
+    <gl>cut hair</gl>
+  </entry>
+  <entry id="tuk.160">
+    <hw>³pri</hw>
+    <srcxcr1>³pri [[prih</srcxcr1>
+    <gl>root (n.)</gl>
+  </entry>
+  <entry id="tuk.161">
+    <hw>³raŋ</hw>
+    <srcxcr1>³raŋ [[rahŋ</srcxcr1>
+    <gl>self</gl>
+  </entry>
+  <entry id="tuk.162">
+    <hw>³ri</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ri=lə [[rih-lɔ</srcxcr1>
+    <gl>beg</gl>
+  </entry>
+  <entry id="tuk.163">
+    <hw>³rim</hw>
+    <srcxcr1>³rim [[rihm</srcxcr1>
+    <gl>typhoid</gl>
+  </entry>
+  <entry id="tuk.164">
+    <hw>³ro</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>³ro=wə [[roh-wɔ</srcxcr1>
+    <gl>friend (bond) (male)</gl>
+  </entry>
+  <entry id="tuk.165">
+    <hw>³ro</hw>
+    <srcxcr1>³ro [[roh</srcxcr1>
+    <gl>friend</gl>
+  </entry>
+  <entry id="tuk.166">
+    <hw>³rə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³rə=lə [[rɔh-lɔ</srcxcr1>
+    <gl>know</gl>
+  </entry>
+  <entry id="tuk.167">
+    <hw>³rəp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³rəp=lə [[rɔhp-lɔ ('puli)</srcxcr1>
+    <gl>play instrument</gl>
+  </entry>
+  <entry id="tuk.168">
+    <hw>³sjar</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³sjar=lə [[sjahr-lɔ</srcxcr1>
+    <gl>peel (separate meat from bones)</gl>
+  </entry>
+  <entry id="tuk.169">
+    <hw>³sju</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³lem ³sju=lə [[lehm sjuh-lɔ</srcxcr1>
+    <gl>request (object)</gl>
+  </entry>
+  <entry id="tuk.170">
+    <hw>³sju</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>³sju=wə [[sjuh-wɔ</srcxcr1>
+    <gl>sit (hon.)</gl>
+  </entry>
+  <entry id="tuk.171">
+    <hw>³sjəl</hw>
+    <srcxcr1>³sjəl ¹lə =lə [[sjɔhl 'lɔ-lɔ</srcxcr1>
+    <gl>plaster (v.i.) (with mud)</gl>
+  </entry>
+  <entry id="tuk.172">
+    <hw>³so</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³so=lə [[soh-lɔ</srcxcr1>
+    <gl>prepare</gl>
+  </entry>
+  <entry id="tuk.173">
+    <hw>³sur</hw>
+    <srcxcr1>³sur [[suhr</srcxcr1>
+    <gl>corner</gl>
+  </entry>
+  <entry id="tuk.174">
+    <hw>³ta</hw>
+    <srcxcr1>³ta [[tah</srcxcr1>
+    <gl>post (n.)</gl>
+  </entry>
+  <entry id="tuk.175">
+    <hw>³te</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³te=lə [[teh-lɔ</srcxcr1>
+    <gl>touch</gl>
+  </entry>
+  <entry id="tuk.176">
+    <hw>³to</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³to=lə [[toh-lɔ</srcxcr1>
+    <gl>meet</gl>
+  </entry>
+  <entry id="tuk.177">
+    <hw>³to</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³to=lə [[toh-lɔ</srcxcr1>
+    <gl>plant (maize)</gl>
+  </entry>
+  <entry id="tuk.178">
+    <hw>³to</hw>
+    <srcxcr2>=wə=ri</srcxcr2>
+    <srcxcr1>³to=wə=ri ⁴jə=lə [[toh-wɔ-ri 'jɔh-lɔ</srcxcr1>
+    <gl>visit</gl>
+  </entry>
+  <entry id="tuk.179">
+    <hw>³tsa</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsa=lə [[cah-lɔ</srcxcr1>
+    <gl>leak</gl>
+  </entry>
+  <entry id="tuk.180">
+    <hw>³tsaŋ</hw>
+    <srcxcr1>¹neme ³tsaŋ [['neme cahŋ</srcxcr1>
+    <gl>nest</gl>
+  </entry>
+  <entry id="tuk.181">
+    <hw>³tsi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsi=lə [[cih-lɔ</srcxcr1>
+    <gl>bite (v.) (e.g. snake)</gl>
+  </entry>
+  <entry id="tuk.182">
+    <hw>³tsin</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsin=lə [[cihn-lɔ</srcxcr1>
+    <gl>finished, be</gl>
+  </entry>
+  <entry id="tuk.183">
+    <hw>³tsja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsja=lə [[cjah-lɔ</srcxcr1>
+    <gl>count</gl>
+  </entry>
+  <entry id="tuk.184">
+    <hw>³tsjor</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsjor=lə [[cjohr-lɔ</srcxcr1>
+    <gl>squeeze (juice)</gl>
+  </entry>
+  <entry id="tuk.185">
+    <hw>³tsjoŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsjoŋ=lə [[cjohŋ-lɔ</srcxcr1>
+    <gl>come (hon.)</gl>
+  </entry>
+  <entry id="tuk.186">
+    <hw>³tsjəl</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsjəl=lə [[cjɔhl-lɔ</srcxcr1>
+    <gl>have a vision</gl>
+  </entry>
+  <entry id="tuk.187">
+    <hw>³tso</hw>
+    <srcxcr1>³ŋje ³tso [[ŋjeh coh</srcxcr1>
+    <gl>tip</gl>
+  </entry>
+  <entry id="tuk.188">
+    <hw>³tsu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsu=lə [[cuh-lɔ</srcxcr1>
+    <gl>put on (stove)</gl>
+  </entry>
+  <entry id="tuk.189">
+    <hw>³tsən</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tsən=lə [[cɔhn-lɔ</srcxcr1>
+    <gl>measure (cloth)</gl>
+  </entry>
+  <entry id="tuk.190">
+    <hw>³tu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tu=lə [[tuh-lɔ</srcxcr1>
+    <gl>brood</gl>
+  </entry>
+  <entry id="tuk.191">
+    <hw>³tu</hw>
+    <srcxcr2>=tsi=wə</srcxcr2>
+    <srcxcr1>³tu=tsi=wə [[tuh-ci-wɔ</srcxcr1>
+    <gl>tired</gl>
+  </entry>
+  <entry id="tuk.192">
+    <hw>³tən</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tən=lə [[tɔhn-lɔ</srcxcr1>
+    <gl>tighten</gl>
+  </entry>
+  <entry id="tuk.193">
+    <hw>³tər</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³tər=lə [[tɔhr-lɔ</srcxcr1>
+    <gl>tremble</gl>
+  </entry>
+  <entry id="tuk.194">
+    <hw>³up</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³up=lə [[uhp-lɔ</srcxcr1>
+    <gl>ripen (artificially)/dry-ferment</gl>
+  </entry>
+  <entry id="tuk.195">
+    <hw>³ʈa</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ʈa=lə [[ʈah-lɔ</srcxcr1>
+    <gl>torn, become</gl>
+  </entry>
+  <entry id="tuk.196">
+    <hw>³ʈa</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ʈa=lə [[ʈah-lɔ</srcxcr1>
+    <gl>win</gl>
+  </entry>
+  <entry id="tuk.197">
+    <hw>³ʈaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ʈaŋ=lə [[ʈahŋ-lɔ</srcxcr1>
+    <gl>serve/offer</gl>
+  </entry>
+  <entry id="tuk.198">
+    <hw>³ʈi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ʈi=lə [[ʈih-lɔ</srcxcr1>
+    <gl>pull</gl>
+  </entry>
+  <entry id="tuk.199">
+    <hw>³ʈi</hw>
+    <srcxcr1>³ʈi [[ʈih</srcxcr1>
+    <gl>skin (n.)</gl>
+  </entry>
+  <entry id="tuk.200">
+    <hw>³ŋi</hw>
+    <srcxcr1>³ŋi-ᴴsju [[ŋih-sju</srcxcr1>
+    <gl>twenty</gl>
+  </entry>
+  <entry id="tuk.201">
+    <hw>³ŋin</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ŋin=lə [[ŋihn-lɔ</srcxcr1>
+    <gl>fear</gl>
+  </entry>
+  <entry id="tuk.202">
+    <hw>³ŋje</hw>
+    <srcxcr1>³ŋje [[ŋjeh</srcxcr1>
+    <gl>breasts</gl>
+  </entry>
+  <entry id="tuk.203">
+    <hw>³ŋo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³ŋo=lə [[ŋoh-lɔ</srcxcr1>
+    <gl>fry/dry-fry</gl>
+  </entry>
+  <entry id="tuk.204">
+    <hw>³ŋo</hw>
+    <srcxcr1>³ŋo [[ŋoh</srcxcr1>
+    <gl>forehead</gl>
+  </entry>
+  <entry id="tuk.205">
+    <hw>³ʈo</hw>
+    <srcxcr1>³ʈo ᴴtsʰi [[ʈoh cʰi</srcxcr1>
+    <gl>wheat</gl>
+  </entry>
+  <entry id="tuk.206">
+    <hw>³ŋom</hw>
+    <srcxcr1>³ŋom ²jaŋ =lə [[ŋohm jaŋ-lɔ</srcxcr1>
+    <gl>know</gl>
+  </entry>
+  <entry id="tuk.207">
+    <hw>³ŋə</hw>
+    <srcxcr1>³ŋə [[ŋɔh</srcxcr1>
+    <gl>drum (lama's)</gl>
+  </entry>
+  <entry id="tuk.208">
+    <hw>³ʈəw</hw>
+    <srcxcr1>³ʈaw-³ʈəw [[ʈahw-ʈɔhw</srcxcr1>
+    <gl>vegetable</gl>
+  </entry>
+  <entry id="tuk.209">
+    <hw>¹hə</hw>
+    <srcxcr2>=nə</srcxcr2>
+    <srcxcr1>ᴴŋjel ¹hə=nə ¹lə=lə [[ŋjel 'hɔ-nɔ 'lɔ-lɔ</srcxcr1>
+    <gl>to come (AUX variant)</gl>
+  </entry>
+  <entry id="tuk.210">
+    <hw>¹ke</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹ke=lə [['ke-lɔ</srcxcr1>
+    <gl>itch</gl>
+  </entry>
+  <entry id="tuk.211">
+    <hw>¹kʰe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹kʰe=lə [['kʰe-lɔ</srcxcr1>
+    <gl>patch (v.)</gl>
+  </entry>
+  <entry id="tuk.212">
+    <hw>¹kʰe</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>¹kʰe=wə [['kʰe-wɔ</srcxcr1>
+    <gl>cheap</gl>
+  </entry>
+  <entry id="tuk.213">
+    <hw>¹kʰi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹kʰi=lə [['kʰi-lɔ</srcxcr1>
+    <gl>tether (animal)</gl>
+  </entry>
+  <entry id="tuk.214">
+    <hw>¹kʰu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹kʰu=lə [['kʰu-lɔ</srcxcr1>
+    <gl>steal</gl>
+  </entry>
+  <entry id="tuk.215">
+    <hw>¹kʰə</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>¹kʰə=wə [['kʰɔ-wɔ</srcxcr1>
+    <gl>come</gl>
+  </entry>
+  <entry id="tuk.216">
+    <hw>¹kʰə</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>¹kʰə=wə-¹tsjowə [['kʰɔ-wɔ-'cjowɔ</srcxcr1>
+    <gl>which (of a number)</gl>
+  </entry>
+  <entry id="tuk.217">
+    <hw>¹kʰə</hw>
+    <srcxcr1>¹kʰə-²tsjuwə [['kʰɔ-cjuwɔ</srcxcr1>
+    <gl>how/in what way</gl>
+  </entry>
+  <entry id="tuk.218">
+    <hw>¹lə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹lə=lə [['lɔ-lɔ</srcxcr1>
+    <gl>do</gl>
+  </entry>
+  <entry id="tuk.219">
+    <hw>¹mrə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹mrə=lə [['mrɔ-lɔ</srcxcr1>
+    <gl>light (torches, v.t.)</gl>
+  </entry>
+  <entry id="tuk.220">
+    <hw>¹mu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹mu=lə [['mu-lɔ</srcxcr1>
+    <gl>be</gl>
+  </entry>
+  <entry id="tuk.221">
+    <hw>¹ple</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹ple=lə [['ple-lɔ</srcxcr1>
+    <gl>flatten dough (with roll)</gl>
+  </entry>
+  <entry id="tuk.222">
+    <hw>¹ple</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>¹ple=wə [['ple-wɔ</srcxcr1>
+    <gl>slick</gl>
+  </entry>
+  <entry id="tuk.223">
+    <hw>¹pli</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹pli=lə [['pli-lɔ</srcxcr1>
+    <gl>peel (strip skin by hand)</gl>
+  </entry>
+  <entry id="tuk.224">
+    <hw>¹pə</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>¹pə=wə [['pɔ-wɔ</srcxcr1>
+    <gl>thin</gl>
+  </entry>
+  <entry id="tuk.225">
+    <hw>¹pʰe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹pʰe=lə [['pʰe-lɔ</srcxcr1>
+    <gl>sort/separate kinds</gl>
+  </entry>
+  <entry id="tuk.226">
+    <hw>¹tsə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹tsə=lə [['cɔ-lɔ</srcxcr1>
+    <gl>eat</gl>
+  </entry>
+  <entry id="tuk.227">
+    <hw>¹tsʰə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹tsʰə=lə [['cʰɔ-lɔ</srcxcr1>
+    <gl>graze</gl>
+  </entry>
+  <entry id="tuk.228">
+    <hw>¹tə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹tə=lə [['tɔ-lɔ</srcxcr1>
+    <gl>be</gl>
+  </entry>
+  <entry id="tuk.229">
+    <hw>¹tʰu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹tʰu=lə [['tʰu-lɔ</srcxcr1>
+    <gl>pick</gl>
+  </entry>
+  <entry id="tuk.230">
+    <hw>¹ʈo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹ʈo=lə [['ʈo-lɔ</srcxcr1>
+    <gl>burn (v.i.)/scorch</gl>
+  </entry>
+  <entry id="tuk.231">
+    <hw>¹ʈu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>¹ʈu=lə [['ʈu-lɔ</srcxcr1>
+    <gl>sit (stay, live)</gl>
+  </entry>
+  <entry id="tuk.232">
+    <hw>ᴴhaŋ</hw>
+    <srcxcr1>ᴴhaŋ [[haŋ</srcxcr1>
+    <gl>open</gl>
+  </entry>
+  <entry id="tuk.233">
+    <hw>⁴ja</hw>
+    <srcxcr1>⁴ja [['jah</srcxcr1>
+    <gl>yak (male)</gl>
+  </entry>
+  <entry id="tuk.234">
+    <hw>ᴴja</hw>
+    <srcxcr1>ᴴja [[ja</srcxcr1>
+    <gl>hand</gl>
+  </entry>
+  <entry id="tuk.235">
+    <hw>⁴jo</hw>
+    <srcxcr1>⁴jo [['joh</srcxcr1>
+    <gl>thief</gl>
+  </entry>
+  <entry id="tuk.236">
+    <hw>⁴jə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴jə=lə [['jɔh-lɔ</srcxcr1>
+    <gl>go</gl>
+  </entry>
+  <entry id="tuk.237">
+    <hw>ᴴka</hw>
+    <srcxcr1>ᴴka [[ka</srcxcr1>
+    <gl>blood</gl>
+  </entry>
+  <entry id="tuk.238">
+    <hw>ᴴke</hw>
+    <srcxcr1>ᴴke [[ke</srcxcr1>
+    <gl>field</gl>
+  </entry>
+  <entry id="tuk.239">
+    <hw>⁴ke</hw>
+    <srcxcr1>⁴ke ¹lə =lə [['keh 'lɔ-lɔ</srcxcr1>
+    <gl>work (v.)</gl>
+  </entry>
+  <entry id="tuk.240">
+    <hw>ᴴki</hw>
+    <srcxcr1>ᴴki [[ki</srcxcr1>
+    <gl>feces</gl>
+  </entry>
+  <entry id="tuk.241">
+    <hw>ᴴki</hw>
+    <srcxcr1>ᴴki-ᴴja [[ki-ja</srcxcr1>
+    <gl>right</gl>
+  </entry>
+  <entry id="tuk.242">
+    <hw>⁴kin</hw>
+    <srcxcr1>⁴kin [['kihn</srcxcr1>
+    <gl>snow</gl>
+  </entry>
+  <entry id="tuk.243">
+    <hw>⁴kjo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴kjo=lə [['kjoh-lɔ</srcxcr1>
+    <gl>plow</gl>
+  </entry>
+  <entry id="tuk.244">
+    <hw>⁴kju</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴kju=lə [['kjuh-lɔ</srcxcr1>
+    <gl>buy</gl>
+  </entry>
+  <entry id="tuk.245">
+    <hw>⁴kju</hw>
+    <srcxcr1>⁴kju [['kjuh</srcxcr1>
+    <gl>sheep</gl>
+  </entry>
+  <entry id="tuk.246">
+    <hw>ᴴkju</hw>
+    <srcxcr1>ᴴkju [[kju</srcxcr1>
+    <gl>water</gl>
+  </entry>
+  <entry id="tuk.247">
+    <hw>⁴kjəm</hw>
+    <srcxcr1>⁴kjəm [['kjɔhm</srcxcr1>
+    <gl>path</gl>
+  </entry>
+  <entry id="tuk.248">
+    <hw>⁴kjəw</hw>
+    <srcxcr1>⁴kjəw [['kjɔhw</srcxcr1>
+    <gl>lung</gl>
+  </entry>
+  <entry id="tuk.249">
+    <hw>⁴koj</hw>
+    <srcxcr1>⁴koj [['kohj</srcxcr1>
+    <gl>bee</gl>
+  </entry>
+  <entry id="tuk.250">
+    <hw>⁴koj</hw>
+    <srcxcr1>⁴koj [['kohj</srcxcr1>
+    <gl>song</gl>
+  </entry>
+  <entry id="tuk.251">
+    <hw>ᴴku</hw>
+    <srcxcr1>ᴴku [[ku</srcxcr1>
+    <gl>chest (body part)</gl>
+  </entry>
+  <entry id="tuk.252">
+    <hw>ᴴku</hw>
+    <srcxcr1>ᴴku [[ku</srcxcr1>
+    <gl>nine</gl>
+  </entry>
+  <entry id="tuk.253">
+    <hw>ᴴkum</hw>
+    <srcxcr1>ᴴkum [[kum</srcxcr1>
+    <gl>urine</gl>
+  </entry>
+  <entry id="tuk.254">
+    <hw>ᴴkur</hw>
+    <srcxcr1>ᴴkur ¹lə =lə [[kur 'lɔ-lɔ</srcxcr1>
+    <gl>stoop /bend down</gl>
+  </entry>
+  <entry id="tuk.255">
+    <hw>ᴴkəj</hw>
+    <srcxcr1>ᴴkəj [[kɔj</srcxcr1>
+    <gl>voice, sound, language</gl>
+  </entry>
+  <entry id="tuk.256">
+    <hw>ᴴkʰjur</hw>
+    <srcxcr1>ᴴkʰjur ²mep =tsi=wə [[kʰjur mep-ci-wɔ</srcxcr1>
+    <gl>curved</gl>
+  </entry>
+  <entry id="tuk.257">
+    <hw>ᴴkəm</hw>
+    <srcxcr1>ᴴkəm [[kɔm</srcxcr1>
+    <gl>bile</gl>
+  </entry>
+  <entry id="tuk.258">
+    <hw>ᴴkəm</hw>
+    <srcxcr1>ᴴkəm-ᴴsə [[kɔm-sɔ</srcxcr1>
+    <gl>lower jaw, chin &lt;mm&gt;</gl>
+  </entry>
+  <entry id="tuk.259">
+    <hw>⁴kən</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴kən=lə [['kɔhn-lɔ</srcxcr1>
+    <gl>lean (against sthg)</gl>
+  </entry>
+  <entry id="tuk.260">
+    <hw>ᴴkən</hw>
+    <srcxcr1>ᴴkən [[kɔn</srcxcr1>
+    <gl>rice, cooked</gl>
+  </entry>
+  <entry id="tuk.261">
+    <hw>ᴴkʰop</hw>
+    <srcxcr1>ᴴkʰop ⁴tsaŋ-lə [[kʰop 'cahŋ-lɔ</srcxcr1>
+    <gl>peck</gl>
+  </entry>
+  <entry id="tuk.262">
+    <hw>ᴴkʰu</hw>
+    <srcxcr1>ᴴkʰu [[kʰu</srcxcr1>
+    <gl>soup/broth</gl>
+  </entry>
+  <entry id="tuk.263">
+    <hw>⁴kəw</hw>
+    <srcxcr1>⁴kəw [['kɔhw</srcxcr1>
+    <gl>fire tongs</gl>
+  </entry>
+  <entry id="tuk.264">
+    <hw>ᴴle</hw>
+    <srcxcr1>ᴴle [[le</srcxcr1>
+    <gl>tongue</gl>
+  </entry>
+  <entry id="tuk.265">
+    <hw>ᴴli</hw>
+    <srcxcr1>ᴴli [[li</srcxcr1>
+    <gl>face</gl>
+  </entry>
+  <entry id="tuk.266">
+    <hw>ᴴlə</hw>
+    <srcxcr1>ᴴlə [[lɔ</srcxcr1>
+    <gl>month</gl>
+  </entry>
+  <entry id="tuk.267">
+    <hw>ᴴlʰə</hw>
+    <srcxcr1>ᴴlʰə [[lʰɔ</srcxcr1>
+    <gl>idol</gl>
+  </entry>
+  <entry id="tuk.268">
+    <hw>ᴴlʰə</hw>
+    <srcxcr1>ᴴlʰə ³tiŋi [[lʰɔ tihŋi</srcxcr1>
+    <gl>moon</gl>
+  </entry>
+  <entry id="tuk.269">
+    <hw>ᴴlʰəp</hw>
+    <srcxcr1>ᴴlʰəp [[lʰɔp</srcxcr1>
+    <gl>hot</gl>
+  </entry>
+  <entry id="tuk.270">
+    <hw>⁴ma</hw>
+    <srcxcr1>⁴ma [['mah</srcxcr1>
+    <gl>war</gl>
+  </entry>
+  <entry id="tuk.271">
+    <hw>⁴maŋ</hw>
+    <srcxcr1>⁴maŋ ³tuj [['mahŋ tuhj</srcxcr1>
+    <gl>ghost</gl>
+  </entry>
+  <entry id="tuk.272">
+    <hw>ᴴme</hw>
+    <srcxcr1>ᴴme [[me</srcxcr1>
+    <gl>fire</gl>
+  </entry>
+  <entry id="tuk.273">
+    <hw>ᴴme</hw>
+    <srcxcr1>ᴴme [[me</srcxcr1>
+    <gl>tail</gl>
+  </entry>
+  <entry id="tuk.274">
+    <hw>⁴me</hw>
+    <srcxcr1>⁴me ¹momo [['meh 'momo</srcxcr1>
+    <gl>cow</gl>
+  </entry>
+  <entry id="tuk.275">
+    <hw>ᴴmi</hw>
+    <srcxcr1>ᴴmi [[mi</srcxcr1>
+    <gl>eye</gl>
+  </entry>
+  <entry id="tuk.276">
+    <hw>ᴴmin</hw>
+    <srcxcr1>ᴴmin [[min</srcxcr1>
+    <gl>name</gl>
+  </entry>
+  <entry id="tuk.277">
+    <hw>ᴴmjuŋ</hw>
+    <srcxcr1>ᴴmjuŋ [[mjuŋ</srcxcr1>
+    <gl>sharp (pointed)</gl>
+  </entry>
+  <entry id="tuk.278">
+    <hw>⁴mla</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴mla=lə [['mlah-lɔ</srcxcr1>
+    <gl>sprout</gl>
+  </entry>
+  <entry id="tuk.279">
+    <hw>ᴴmlaŋ</hw>
+    <srcxcr1>ᴴmlaŋ [[mlaŋ</srcxcr1>
+    <gl>black</gl>
+  </entry>
+  <entry id="tuk.280">
+    <hw>⁴mlo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴mlo=lə [['mloh-lɔ</srcxcr1>
+    <gl>prick (thorn)</gl>
+  </entry>
+  <entry id="tuk.281">
+    <hw>⁴mo</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴mo=lə [['moh-lɔ</srcxcr1>
+    <gl>groan</gl>
+  </entry>
+  <entry id="tuk.282">
+    <hw>ᴴmra</hw>
+    <srcxcr1>ᴴmra [[mra</srcxcr1>
+    <gl>weed (n.)</gl>
+  </entry>
+  <entry id="tuk.283">
+    <hw>ᴴmrin</hw>
+    <srcxcr1>ᴴmrin [[mrin</srcxcr1>
+    <gl>woman</gl>
+  </entry>
+  <entry id="tuk.284">
+    <hw>ᴴmu</hw>
+    <srcxcr1>ᴴmu [[mu</srcxcr1>
+    <gl>sky</gl>
+  </entry>
+  <entry id="tuk.285">
+    <hw>ᴴmə</hw>
+    <srcxcr1>ᴴmə [[mɔ</srcxcr1>
+    <gl>reed</gl>
+  </entry>
+  <entry id="tuk.286">
+    <hw>⁴mən</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴mən=lə [['mɔhn-lɔ</srcxcr1>
+    <gl>think</gl>
+  </entry>
+  <entry id="tuk.287">
+    <hw>ᴴmən</hw>
+    <srcxcr1>ᴴmən [[mɔn</srcxcr1>
+    <gl>medicine</gl>
+  </entry>
+  <entry id="tuk.288">
+    <hw>⁴mər</hw>
+    <srcxcr1>⁴mər [['mɔhr</srcxcr1>
+    <gl>gold</gl>
+  </entry>
+  <entry id="tuk.289">
+    <hw>⁴ne</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ne=lə [['neh-lɔ</srcxcr1>
+    <gl>massage</gl>
+  </entry>
+  <entry id="tuk.290">
+    <hw>ᴴne</hw>
+    <srcxcr1>ᴴne ²kor =lə [[ne kor-lɔ</srcxcr1>
+    <gl>go on pilgrimage</gl>
+  </entry>
+  <entry id="tuk.291">
+    <hw>ᴴnis</hw>
+    <srcxcr1>ᴴnigs [[nigs</srcxcr1>
+    <gl>seven</gl>
+  </entry>
+  <entry id="tuk.292">
+    <hw>⁴no</hw>
+    <srcxcr1>⁴no [['noh</srcxcr1>
+    <gl>garlic</gl>
+  </entry>
+  <entry id="tuk.293">
+    <hw>⁴nu</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>⁴nu=wə [['nuh-wɔ</srcxcr1>
+    <gl>sleep</gl>
+  </entry>
+  <entry id="tuk.294">
+    <hw>ᴴnə</hw>
+    <srcxcr1>ᴴnə [[nɔ</srcxcr1>
+    <gl>nose</gl>
+  </entry>
+  <entry id="tuk.295">
+    <hw>ᴴnəm</hw>
+    <srcxcr1>ᴴnəm ²ju =wə [[nɔm ju-wɔ</srcxcr1>
+    <gl>rain (n.)</gl>
+  </entry>
+  <entry id="tuk.296">
+    <hw>ᴴnəw</hw>
+    <srcxcr1>ᴴnəw [[nɔw</srcxcr1>
+    <gl>mucus (nasal)</gl>
+  </entry>
+  <entry id="tuk.297">
+    <hw>⁴paŋ</hw>
+    <srcxcr2>=nə</srcxcr2>
+    <srcxcr1>⁴paŋ=nə [['pahŋ-nɔ</srcxcr1>
+    <gl>to be strong</gl>
+  </entry>
+  <entry id="tuk.298">
+    <hw>⁴paŋ</hw>
+    <srcxcr1>⁴paŋ ¹tʰo =wə [['pahŋ 'tʰo-wɔ</srcxcr1>
+    <gl>strength</gl>
+  </entry>
+  <entry id="tuk.299">
+    <hw>ᴴpe</hw>
+    <srcxcr1>ᴴpe [[pe</srcxcr1>
+    <gl>story</gl>
+  </entry>
+  <entry id="tuk.300">
+    <hw>ᴴpen</hw>
+    <srcxcr1>ᴴpen [[pen</srcxcr1>
+    <gl>frog</gl>
+  </entry>
+  <entry id="tuk.301">
+    <hw>ᴴpin</hw>
+    <srcxcr1>ᴴpin [[pin</srcxcr1>
+    <gl>blue</gl>
+  </entry>
+  <entry id="tuk.302">
+    <hw>⁴pja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>³pəle ⁴pja=lə [[pɔhle 'pjah-lɔ</srcxcr1>
+    <gl>stamp</gl>
+  </entry>
+  <entry id="tuk.303">
+    <hw>⁴pja</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴pja=lə [['pjah-lɔ</srcxcr1>
+    <gl>fall over</gl>
+  </entry>
+  <entry id="tuk.304">
+    <hw>ᴴpjuŋ</hw>
+    <srcxcr1>ᴴpjuŋ [[pjuŋ</srcxcr1>
+    <gl>man</gl>
+  </entry>
+  <entry id="tuk.305">
+    <hw>⁴pli</hw>
+    <srcxcr1>⁴pli [['plih</srcxcr1>
+    <gl>four</gl>
+  </entry>
+  <entry id="tuk.306">
+    <hw>⁴plo</hw>
+    <srcxcr2>=wə</srcxcr2>
+    <srcxcr1>⁴plo=wə [['ploh-wɔ</srcxcr1>
+    <gl>rich</gl>
+  </entry>
+  <entry id="tuk.307">
+    <hw>⁴plu</hw>
+    <srcxcr1>⁴plu [['pluh</srcxcr1>
+    <gl>seed</gl>
+  </entry>
+  <entry id="tuk.308">
+    <hw>⁴pra</hw>
+    <srcxcr1>⁴pra [['prah</srcxcr1>
+    <gl>flour</gl>
+  </entry>
+  <entry id="tuk.309">
+    <hw>⁴pre</hw>
+    <srcxcr1>⁴pre [['preh</srcxcr1>
+    <gl>eight</gl>
+  </entry>
+  <entry id="tuk.310">
+    <hw>ᴴpre</hw>
+    <srcxcr1>ᴴpre [[pre</srcxcr1>
+    <gl>with (comitative)</gl>
+  </entry>
+  <entry id="tuk.311">
+    <hw>ᴴpri</hw>
+    <srcxcr1>ᴴpri [[pri</srcxcr1>
+    <gl>yak (female)</gl>
+  </entry>
+  <entry id="tuk.312">
+    <hw>⁴pro</hw>
+    <srcxcr1>⁴pro [['proh</srcxcr1>
+    <gl>smallpox</gl>
+  </entry>
+  <entry id="tuk.313">
+    <hw>⁴prə</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴prə=lə [['prɔh-lɔ</srcxcr1>
+    <gl>walk</gl>
+  </entry>
+  <entry id="tuk.314">
+    <hw>⁴prən</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴prən=lə [['prɔhn-lɔ</srcxcr1>
+    <gl>wait</gl>
+  </entry>
+  <entry id="tuk.315">
+    <hw>⁴pup</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>ᴴtʰun ⁴pup=lə [[tʰun 'puhp-lɔ</srcxcr1>
+    <gl>bury (body)</gl>
+  </entry>
+  <entry id="tuk.316">
+    <hw>ᴴpʰi</hw>
+    <srcxcr1>ᴴpʰi [[pʰi</srcxcr1>
+    <gl>bark, peel</gl>
+  </entry>
+  <entry id="tuk.317">
+    <hw>ᴴpʰi</hw>
+    <srcxcr1>ᴴpʰi [[pʰi</srcxcr1>
+    <gl>beer</gl>
+  </entry>
+  <entry id="tuk.318">
+    <hw>ᴴpʰja</hw>
+    <srcxcr1>ᴴpʰja [[pʰja</srcxcr1>
+    <gl>broom</gl>
+  </entry>
+  <entry id="tuk.319">
+    <hw>ᴴpʰo</hw>
+    <srcxcr1>ᴴpʰo [[pʰo</srcxcr1>
+    <gl>belly</gl>
+  </entry>
+  <entry id="tuk.320">
+    <hw>ᴴpʰo</hw>
+    <srcxcr1>ᴴpʰo [[pʰo</srcxcr1>
+    <gl>deer</gl>
+  </entry>
+  <entry id="tuk.321">
+    <hw>ᴴpər</hw>
+    <srcxcr1>ᴴpər ²pun =lə [[pɔr pun-lɔ</srcxcr1>
+    <gl>print (paper)</gl>
+  </entry>
+  <entry id="tuk.322">
+    <hw>ᴴpʰum</hw>
+    <srcxcr1>ᴴpʰum [[pʰum</srcxcr1>
+    <gl>egg</gl>
+  </entry>
+  <entry id="tuk.323">
+    <hw>ᴴpʰə</hw>
+    <srcxcr2>=ri</srcxcr2>
+    <srcxcr1>ᴴpʰə=ri ⁴jə=lə [[pʰɔ-ri 'jɔh-lɔ</srcxcr1>
+    <gl>husband</gl>
+  </entry>
+  <entry id="tuk.324">
+    <hw>⁴ri</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ri=lə [['rih-lɔ</srcxcr1>
+    <gl>scratch (itch)</gl>
+  </entry>
+  <entry id="tuk.325">
+    <hw>ᴴru</hw>
+    <srcxcr1>ᴴru [[ru</srcxcr1>
+    <gl>horn</gl>
+  </entry>
+  <entry id="tuk.326">
+    <hw>ᴴrə</hw>
+    <srcxcr1>ᴴrə [[rɔ</srcxcr1>
+    <gl>goat</gl>
+  </entry>
+  <entry id="tuk.327">
+    <hw>ᴴrʰe</hw>
+    <srcxcr1>ᴴja-ᴴrʰe [[ja-rʰe</srcxcr1>
+    <gl>finger</gl>
+  </entry>
+  <entry id="tuk.328">
+    <hw>ᴴrʰup</hw>
+    <srcxcr1>ᴴrʰup [[rʰup</srcxcr1>
+    <gl>thread (n.)</gl>
+  </entry>
+  <entry id="tuk.329">
+    <hw>ᴴsa</hw>
+    <srcxcr1>ᴴsa [[sa</srcxcr1>
+    <gl>breath</gl>
+  </entry>
+  <entry id="tuk.330">
+    <hw>ᴴsaŋ</hw>
+    <srcxcr1>ᴴsaŋ [[saŋ</srcxcr1>
+    <gl>incense</gl>
+  </entry>
+  <entry id="tuk.331">
+    <hw>ᴴsim</hw>
+    <srcxcr1>ᴴsim [[sim</srcxcr1>
+    <gl>cold (water)</gl>
+  </entry>
+  <entry id="tuk.332">
+    <hw>ᴴsin</hw>
+    <srcxcr1>ᴴja-ᴴsin [[ja-sin</srcxcr1>
+    <gl>fingernail</gl>
+  </entry>
+  <entry id="tuk.333">
+    <hw>ᴴsin</hw>
+    <srcxcr1>ᴴsin [[sin</srcxcr1>
+    <gl>wood</gl>
+  </entry>
+  <entry id="tuk.334">
+    <hw>ᴴsip</hw>
+    <srcxcr1>ᴴsip [[sip</srcxcr1>
+    <gl>sheath (n.)</gl>
+  </entry>
+  <entry id="tuk.335">
+    <hw>⁴sjaŋ</hw>
+    <srcxcr1>⁴sjaŋ [['sjahŋ</srcxcr1>
+    <gl>vomit (n.)</gl>
+  </entry>
+  <entry id="tuk.336">
+    <hw>ᴴsje</hw>
+    <srcxcr1>ᴴsje [[sje</srcxcr1>
+    <gl>louse</gl>
+  </entry>
+  <entry id="tuk.337">
+    <hw>ᴴsje</hw>
+    <srcxcr1>ᴴsje [[sje</srcxcr1>
+    <gl>rice, cooked (hon.)</gl>
+  </entry>
+  <entry id="tuk.338">
+    <hw>ᴴsjə</hw>
+    <srcxcr1>ᴴsjə [[sjɔ</srcxcr1>
+    <gl>flesh</gl>
+  </entry>
+  <entry id="tuk.339">
+    <hw>ᴴsom</hw>
+    <srcxcr1>ᴴsom [[som</srcxcr1>
+    <gl>three</gl>
+  </entry>
+  <entry id="tuk.340">
+    <hw>ᴴsu</hw>
+    <srcxcr1>ᴴsu [[su</srcxcr1>
+    <gl>who</gl>
+  </entry>
+  <entry id="tuk.341">
+    <hw>ᴴsuŋ</hw>
+    <srcxcr1>ᴴsuŋ [[suŋ</srcxcr1>
+    <gl>mouth</gl>
+  </entry>
+  <entry id="tuk.342">
+    <hw>ᴴsə</hw>
+    <srcxcr1>ᴴsə [[sɔ</srcxcr1>
+    <gl>earth</gl>
+  </entry>
+  <entry id="tuk.343">
+    <hw>ᴴsə</hw>
+    <srcxcr1>ᴴsə [[sɔ</srcxcr1>
+    <gl>tooth</gl>
+  </entry>
+  <entry id="tuk.344">
+    <hw>ᴴsəm</hw>
+    <srcxcr1>ᴴsəm [[sɔm</srcxcr1>
+    <gl>heart</gl>
+  </entry>
+  <entry id="tuk.345">
+    <hw>ᴴsər</hw>
+    <srcxcr1>ᴴsər [[sɔr</srcxcr1>
+    <gl>star</gl>
+  </entry>
+  <entry id="tuk.346">
+    <hw>ᴴta</hw>
+    <srcxcr1>ᴴta [[ta</srcxcr1>
+    <gl>what</gl>
+  </entry>
+  <entry id="tuk.347">
+    <hw>ᴴtaŋ</hw>
+    <srcxcr1>ᴴtaŋ [[taŋ</srcxcr1>
+    <gl>pot</gl>
+  </entry>
+  <entry id="tuk.348">
+    <hw>⁴te</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴te=lə [['teh-lɔ</srcxcr1>
+    <gl>cook (v.i.)</gl>
+  </entry>
+  <entry id="tuk.349">
+    <hw>⁴te</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>⁴te=pə [['teh-pɔ</srcxcr1>
+    <gl>porter</gl>
+  </entry>
+  <entry id="tuk.350">
+    <hw>⁴te</hw>
+    <srcxcr1>⁴te [['teh</srcxcr1>
+    <gl>load (n)</gl>
+  </entry>
+  <entry id="tuk.351">
+    <hw>ᴴti</hw>
+    <srcxcr1>ᴴti [[ti</srcxcr1>
+    <gl>corner</gl>
+  </entry>
+  <entry id="tuk.352">
+    <hw>ᴴti</hw>
+    <srcxcr1>⁴pli ²kəl =pe ᴴti-ᴴkəl [['plih kɔl-pe ti-kɔl</srcxcr1>
+    <gl>one</gl>
+  </entry>
+  <entry id="tuk.353">
+    <hw>ᴴti</hw>
+    <srcxcr1>ᴴti-ᴴtin [[ti-tin</srcxcr1>
+    <gl>this</gl>
+  </entry>
+  <entry id="tuk.354">
+    <hw>⁴tim</hw>
+    <srcxcr1>⁴tim [['tihm</srcxcr1>
+    <gl>house</gl>
+  </entry>
+  <entry id="tuk.355">
+    <hw>ᴴtin</hw>
+    <srcxcr1>ᴴti-ᴴtin [[ti-tin</srcxcr1>
+    <gl>year</gl>
+  </entry>
+  <entry id="tuk.356">
+    <hw>ᴴtin</hw>
+    <srcxcr1>ᴴtin [[tin</srcxcr1>
+    <gl>heart</gl>
+  </entry>
+  <entry id="tuk.357">
+    <hw>⁴to</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴to=lə [['toh-lɔ</srcxcr1>
+    <gl>barter</gl>
+  </entry>
+  <entry id="tuk.358">
+    <hw>ᴴto</hw>
+    <srcxcr1>ᴴto [[to</srcxcr1>
+    <gl>need to</gl>
+  </entry>
+  <entry id="tuk.359">
+    <hw>ᴴtom</hw>
+    <srcxcr1>ᴴtom [[tom</srcxcr1>
+    <gl>bear</gl>
+  </entry>
+  <entry id="tuk.360">
+    <hw>⁴toŋ</hw>
+    <srcxcr1>⁴toŋ [['tohŋ</srcxcr1>
+    <gl>spindle</gl>
+  </entry>
+  <entry id="tuk.361">
+    <hw>⁴tsaŋ</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴tsaŋ=lə [['cahŋ-lɔ</srcxcr1>
+    <gl>put in</gl>
+  </entry>
+  <entry id="tuk.362">
+    <hw>⁴tsi</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴tsi=lə [['cih-lɔ</srcxcr1>
+    <gl>remember</gl>
+  </entry>
+  <entry id="tuk.363">
+    <hw>ᴴtsjen</hw>
+    <srcxcr1>ᴴtsjen [[cjen</srcxcr1>
+    <gl>leopard</gl>
+  </entry>
+  <entry id="tuk.364">
+    <hw>ᴴtsju</hw>
+    <srcxcr1>ᴴtsju [[cju</srcxcr1>
+    <gl>ten</gl>
+  </entry>
+  <entry id="tuk.365">
+    <hw>⁴tsu</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴tsu=lə [['cuh-lɔ</srcxcr1>
+    <gl>distribute/serve out</gl>
+  </entry>
+  <entry id="tuk.366">
+    <hw>ᴴtsu</hw>
+    <srcxcr1>ᴴtsu [[cu</srcxcr1>
+    <gl>this</gl>
+  </entry>
+  <entry id="tuk.367">
+    <hw>ᴴtsə</hw>
+    <srcxcr1>ᴴtsə [[cɔ</srcxcr1>
+    <gl>that</gl>
+  </entry>
+  <entry id="tuk.368">
+    <hw>ᴴtsʰe</hw>
+    <srcxcr1>ᴴtsʰe ²lʰəp =lə [[cʰe lʰɔp-lɔ</srcxcr1>
+    <gl>book</gl>
+  </entry>
+  <entry id="tuk.369">
+    <hw>ᴴtsʰe</hw>
+    <srcxcr1>ᴴtsʰe ²pʰa =lə [[cʰe pʰa-lɔ</srcxcr1>
+    <gl>loan</gl>
+  </entry>
+  <entry id="tuk.370">
+    <hw>ᴴtsʰi</hw>
+    <srcxcr1>ᴴtsʰi [[cʰi</srcxcr1>
+    <gl>grass</gl>
+  </entry>
+  <entry id="tuk.371">
+    <hw>ᴴtsʰi</hw>
+    <srcxcr1>ᴴtsʰi [[cʰi</srcxcr1>
+    <gl>grease</gl>
+  </entry>
+  <entry id="tuk.372">
+    <hw>ᴴtsəm</hw>
+    <srcxcr1>ᴴtsəm [[cɔm</srcxcr1>
+    <gl>bridge</gl>
+  </entry>
+  <entry id="tuk.373">
+    <hw>ᴴtsʰo</hw>
+    <srcxcr1>ᴴtsʰo [[cʰo</srcxcr1>
+    <gl>lake</gl>
+  </entry>
+  <entry id="tuk.374">
+    <hw>ᴴtsʰoŋ</hw>
+    <srcxcr1>ᴴtsʰoŋ ¹lə =lə [[cʰoŋ 'lɔ-lɔ</srcxcr1>
+    <gl>trade</gl>
+  </entry>
+  <entry id="tuk.375">
+    <hw>ᴴtsʰə</hw>
+    <srcxcr1>ᴴtsʰə [[cʰɔ</srcxcr1>
+    <gl>burning place</gl>
+  </entry>
+  <entry id="tuk.376">
+    <hw>ᴴtsʰəm</hw>
+    <srcxcr1>ᴴtsʰəm [[cʰɔm</srcxcr1>
+    <gl>hair</gl>
+  </entry>
+  <entry id="tuk.377">
+    <hw>⁴tuj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴tuj=lə [['tuhj-lɔ</srcxcr1>
+    <gl>pick up (heaps)</gl>
+  </entry>
+  <entry id="tuk.378">
+    <hw>⁴tum</hw>
+    <srcxcr2>=pə</srcxcr2>
+    <srcxcr1>⁴tum=pə [['tuhm-pɔ</srcxcr1>
+    <gl>thick</gl>
+  </entry>
+  <entry id="tuk.379">
+    <hw>⁴tuŋ</hw>
+    <srcxcr1>⁴tuŋ ²ko =lə [['tuhŋ ko-lɔ</srcxcr1>
+    <gl>young plants</gl>
+  </entry>
+  <entry id="tuk.380">
+    <hw>ᴴtə</hw>
+    <srcxcr1>ᴴtə [[tɔ</srcxcr1>
+    <gl>axe</gl>
+  </entry>
+  <entry id="tuk.381">
+    <hw>ᴴtə</hw>
+    <srcxcr1>ᴴtə [[tɔ</srcxcr1>
+    <gl>horse</gl>
+  </entry>
+  <entry id="tuk.382">
+    <hw>ᴴtʰaŋ</hw>
+    <srcxcr1>ᴴtʰaŋ ²nuŋ =lə [[tʰaŋ nuŋ-lɔ</srcxcr1>
+    <gl>smell</gl>
+  </entry>
+  <entry id="tuk.383">
+    <hw>ᴴtʰe</hw>
+    <srcxcr1>ᴴtʰe [[tʰe</srcxcr1>
+    <gl>he</gl>
+  </entry>
+  <entry id="tuk.384">
+    <hw>ᴴtʰin</hw>
+    <srcxcr1>ᴴja-ᴴtʰin [[ja-tʰin</srcxcr1>
+    <gl>palm (hand)</gl>
+  </entry>
+  <entry id="tuk.385">
+    <hw>ᴴtʰo</hw>
+    <srcxcr1>ᴴtʰo [[tʰo</srcxcr1>
+    <gl>saliva</gl>
+  </entry>
+  <entry id="tuk.386">
+    <hw>ᴴtər</hw>
+    <srcxcr1>ᴴtər [[tɔr</srcxcr1>
+    <gl>white</gl>
+  </entry>
+  <entry id="tuk.387">
+    <hw>⁴təw</hw>
+    <srcxcr1>⁴təw [['tɔhw</srcxcr1>
+    <gl>needle</gl>
+  </entry>
+  <entry id="tuk.388">
+    <hw>ᴴtʰən</hw>
+    <srcxcr1>ᴴtʰən-ᴴsaŋ ᴴpʰir [[tʰɔn-saŋ pʰir</srcxcr1>
+    <gl>empty</gl>
+  </entry>
+  <entry id="tuk.389">
+    <hw>ᴴu</hw>
+    <srcxcr1>ᴴu [[u</srcxcr1>
+    <gl>cave</gl>
+  </entry>
+  <entry id="tuk.390">
+    <hw>ᴴur</hw>
+    <srcxcr1>ᴴur [[ur</srcxcr1>
+    <gl>yellow</gl>
+  </entry>
+  <entry id="tuk.391">
+    <hw>⁴ŋa</hw>
+    <srcxcr1>⁴ŋa [['ŋah</srcxcr1>
+    <gl>five</gl>
+  </entry>
+  <entry id="tuk.392">
+    <hw>⁴ʈa</hw>
+    <srcxcr1>⁴ʈa [['ʈah</srcxcr1>
+    <gl>tumpline</gl>
+  </entry>
+  <entry id="tuk.393">
+    <hw>ᴴʈaŋ</hw>
+    <srcxcr1>ᴴʈaŋ [[ʈaŋ</srcxcr1>
+    <gl>marrow</gl>
+  </entry>
+  <entry id="tuk.394">
+    <hw>⁴ʈe</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ʈe=lə [['ʈeh-lɔ</srcxcr1>
+    <gl>scratch (thorn)</gl>
+  </entry>
+  <entry id="tuk.395">
+    <hw>⁴ʈe</hw>
+    <srcxcr1>⁴ʈe [['ʈeh</srcxcr1>
+    <gl>vulture</gl>
+  </entry>
+  <entry id="tuk.396">
+    <hw>ᴴʈe</hw>
+    <srcxcr1>ᴴʈe [[ʈe</srcxcr1>
+    <gl>waist</gl>
+  </entry>
+  <entry id="tuk.397">
+    <hw>⁴ʈi</hw>
+    <srcxcr1>⁴ʈi [['ʈih</srcxcr1>
+    <gl>one</gl>
+  </entry>
+  <entry id="tuk.398">
+    <hw>⁴ŋi</hw>
+    <srcxcr1>⁴ŋi [['ŋih</srcxcr1>
+    <gl>two</gl>
+  </entry>
+  <entry id="tuk.399">
+    <hw>ᴴŋi</hw>
+    <srcxcr1>ᴴŋi [[ŋi</srcxcr1>
+    <gl>we (two)</gl>
+  </entry>
+  <entry id="tuk.400">
+    <hw>⁴ʈi</hw>
+    <srcxcr1>⁴ʈi ²ju =wə ¹kʰə=lə [['ʈih ju-wɔ 'kʰɔ-lɔ</srcxcr1>
+    <gl>landslide, flood</gl>
+  </entry>
+  <entry id="tuk.401">
+    <hw>⁴ŋje</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ŋje=lə [['ŋjeh-lɔ</srcxcr1>
+    <gl>spill</gl>
+  </entry>
+  <entry id="tuk.402">
+    <hw>⁴ŋje</hw>
+    <srcxcr1>⁴ŋje [['ŋjeh</srcxcr1>
+    <gl>liver</gl>
+  </entry>
+  <entry id="tuk.403">
+    <hw>ᴴŋo</hw>
+    <srcxcr1>ᴴŋo [[ŋo</srcxcr1>
+    <gl>bird trap</gl>
+  </entry>
+  <entry id="tuk.404">
+    <hw>ᴴʈo</hw>
+    <srcxcr1>ᴴʈo ³koŋ =lə [[ʈo kohŋ-lɔ</srcxcr1>
+    <gl>numb, be</gl>
+  </entry>
+  <entry id="tuk.405">
+    <hw>⁴ʈo</hw>
+    <srcxcr1>⁴ʈo-ᴴsim ⁴pra [['ʈoh-sim 'prah</srcxcr1>
+    <gl>flour, wheat</gl>
+  </entry>
+  <entry id="tuk.406">
+    <hw>⁴ŋoj</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ŋoj=lə [['ŋohj-lɔ</srcxcr1>
+    <gl>invite</gl>
+  </entry>
+  <entry id="tuk.407">
+    <hw>ᴴŋon</hw>
+    <srcxcr1>ᴴŋon-ᴴsaŋ [[ŋon-saŋ</srcxcr1>
+    <gl>front</gl>
+  </entry>
+  <entry id="tuk.408">
+    <hw>ᴴʈu</hw>
+    <srcxcr1>ᴴja-ᴴʈu [[ja-ʈu</srcxcr1>
+    <gl>cubit</gl>
+  </entry>
+  <entry id="tuk.409">
+    <hw>⁴ʈu</hw>
+    <srcxcr1>⁴ʈu [['ʈuh</srcxcr1>
+    <gl>six</gl>
+  </entry>
+  <entry id="tuk.410">
+    <hw>⁴ʈup</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ʈup=lə [['ʈuhp-lɔ</srcxcr1>
+    <gl>sew</gl>
+  </entry>
+  <entry id="tuk.411">
+    <hw>⁴ʈə</hw>
+    <srcxcr1>⁴ʈə [['ʈɔh</srcxcr1>
+    <gl>enemy</gl>
+  </entry>
+  <entry id="tuk.412">
+    <hw>ᴴŋə</hw>
+    <srcxcr1>ᴴŋə [[ŋɔ</srcxcr1>
+    <gl>I</gl>
+  </entry>
+  <entry id="tuk.413">
+    <hw>ᴴʈə</hw>
+    <srcxcr1>ᴴʈə [[ʈɔ</srcxcr1>
+    <gl>head</gl>
+  </entry>
+  <entry id="tuk.414">
+    <hw>⁴ŋəp</hw>
+    <srcxcr2>=lə</srcxcr2>
+    <srcxcr1>⁴ŋəp=lə [['ŋɔhp-lɔ</srcxcr1>
+    <gl>suck</gl>
+  </entry>
+  <entry id="tuk.415">
+    <hw>⁴ʈəw</hw>
+    <srcxcr1>⁴ʈəw [['ʈɔhw</srcxcr1>
+    <gl>mustard</gl>
+  </entry>
+</lexicon>

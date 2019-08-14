@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="ris">
+  <entry id="ris.1">
+    <hw>ja</hw>
+    <gl>aussi</gl>
+  </entry>
+  <entry id="ris.2">
+    <hw>ri</hw>
+    <gl>dans (locatif), en (temporel duratif)</gl>
+  </entry>
+  <entry id="ris.3">
+    <hw>se</hw>
+    <gl>par, venant de/ ergatif/ instrumental/ locatif d'origine matérielle ou logique/ locatif d'approximation (?): du côté de/ locatif de temps</gl>
+  </entry>
+  <entry id="ris.4">
+    <hw>Xjal</hw>
+    <gl>lumière du jour</gl>
+  </entry>
+  <entry id="ris.5">
+    <hw>Xjam</hw>
+    <gl>menacer (avec un baton)</gl>
+  </entry>
+  <entry id="ris.6">
+    <hw>Xkum</hw>
+    <gl>acte de plier</gl>
+  </entry>
+  <entry id="ris.7">
+    <hw>Xkur</hw>
+    <gl>hochement &lt;pencher&gt;</gl>
+  </entry>
+  <entry id="ris.8">
+    <hw>Xkʰjur</hw>
+    <gl>faire le tour/ faire tourner (meule etc..)</gl>
+  </entry>
+  <entry id="ris.9">
+    <hw>Xkʰwat</hw>
+    <gl>s'empêtrer (animaux) &lt;Sprigg&gt;</gl>
+  </entry>
+  <entry id="ris.10">
+    <hw>Xloː</hw>
+    <gl>fouiller avec le groin (porc)</gl>
+  </entry>
+  <entry id="ris.11">
+    <hw>Xmer</hw>
+    <gl>dormir (hon)</gl>
+  </entry>
+  <entry id="ris.12">
+    <hw>Xmriŋ</hw>
+    <srcxcr2>-kola</srcxcr2>
+    <gl>femme</gl>
+  </entry>
+  <entry id="ris.13">
+    <hw>Xsjop</hw>
+    <gl>blanchir le riz (second polissage, après /2to-pa/)</gl>
+  </entry>
+  <entry id="ris.14">
+    <hw>Xti</hw>
+    <srcxcr2/>
+    <gl>un</gl>
+  </entry>
+  <entry id="ris.15">
+    <hw>Xtsiŋ</hw>
+    <gl>éclore (oeuf) &lt;Munda V 307&gt;</gl>
+  </entry>
+  <entry id="ris.16">
+    <hw>Xtsʰjot</hw>
+    <gl>répandre une offrande from Spr.&gt;</gl>
+  </entry>
+  <entry id="ris.17">
+    <hw>Xtsʰop</hw>
+    <gl>injecter, piquer &lt;from Sprigg&gt;</gl>
+  </entry>
+  <entry id="ris.18">
+    <hw>Xtum</hw>
+    <gl>recouvrir de terre le modèle de cire &lt;MV 398&gt;</gl>
+  </entry>
+  <entry id="ris.19">
+    <hw>Xu</hw>
+    <gl>couver</gl>
+  </entry>
+  <entry id="ris.20">
+    <hw>Xwa</hw>
+    <gl>piège</gl>
+  </entry>
+  <entry id="ris.21">
+    <hw>Xwap</hw>
+    <gl>brûler, faire mal (plaies)</gl>
+  </entry>
+  <entry id="ris.22">
+    <hw>Xwat</hw>
+    <gl>franchir, enjamber, dépasser/ sauter par-dessus</gl>
+  </entry>
+  <entry id="ris.23">
+    <hw>Xŋap</hw>
+    <gl>dévorer &lt;d'après Eng. gobble&gt;</gl>
+  </entry>
+  <entry id="ris.24">
+    <hw>²ai</hw>
+    <srcxcr2>-ni</srcxcr2>
+    <gl>vous (pl)</gl>
+  </entry>
+  <entry id="ris.25">
+    <hw>²ai</hw>
+    <gl>tu, toi</gl>
+  </entry>
+  <entry id="ris.26">
+    <hw>²hun</hw>
+    <gl>montrer</gl>
+  </entry>
+  <entry id="ris.27">
+    <hw>²jaŋ</hw>
+    <gl>être léger</gl>
+  </entry>
+  <entry id="ris.28">
+    <hw>²jo</hw>
+    <gl>suffire</gl>
+  </entry>
+  <entry id="ris.29">
+    <hw>²kam</hw>
+    <gl>menton</gl>
+  </entry>
+  <entry id="ris.30">
+    <hw>²kar</hw>
+    <gl>enchasser, boucher</gl>
+  </entry>
+  <entry id="ris.31">
+    <hw>²kar</hw>
+    <gl>faire chauffer un récipient à sec avant d'y mettre des aliments à cuire (gril à pain ou diable à maïs /2pokho/)</gl>
+  </entry>
+  <entry id="ris.32">
+    <hw>²kat</hw>
+    <gl>voix</gl>
+  </entry>
+  <entry id="ris.33">
+    <hw>²kaː</hw>
+    <gl>bouffer, manger</gl>
+  </entry>
+  <entry id="ris.34">
+    <hw>²kaː</hw>
+    <gl>sang</gl>
+  </entry>
+  <entry id="ris.35">
+    <hw>²kjat</hw>
+    <gl>maudire</gl>
+  </entry>
+  <entry id="ris.36">
+    <hw>²kjaː</hw>
+    <gl>ficher, planter des piquets</gl>
+  </entry>
+  <entry id="ris.37">
+    <hw>²kjon</hw>
+    <gl>réparer, soigner</gl>
+  </entry>
+  <entry id="ris.38">
+    <hw>²kjoŋ</hw>
+    <gl>entier &lt;Voc 74&gt;, (? mâle) entier &lt;fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.39">
+    <hw>²kjui</hw>
+    <gl>eau &lt;th 40, 115&gt;</gl>
+  </entry>
+  <entry id="ris.40">
+    <hw>²kot</hw>
+    <gl>peser</gl>
+  </entry>
+  <entry id="ris.41">
+    <hw>²kur</hw>
+    <gl>se courber vers le sol (branches, vieillard)</gl>
+  </entry>
+  <entry id="ris.42">
+    <hw>²kuː</hw>
+    <gl>inclinaison du corps de face</gl>
+  </entry>
+  <entry id="ris.43">
+    <hw>²kuː</hw>
+    <gl>neuf, 9</gl>
+  </entry>
+  <entry id="ris.44">
+    <hw>²kʰai</hw>
+    <gl>filer (du fil)</gl>
+  </entry>
+  <entry id="ris.45">
+    <hw>²kʰam</hw>
+    <gl>pouvoir (physiquement) &lt;th 140&gt;/ être capable de &lt;voc 74&gt;, avoir la force de</gl>
+  </entry>
+  <entry id="ris.46">
+    <hw>²kʰan</hw>
+    <gl>couper en bottes à la faucille &lt;herbe, riz) &lt;th 181, 125&gt;</gl>
+  </entry>
+  <entry id="ris.47">
+    <hw>²kʰaŋ</hw>
+    <gl>avoir froid &lt;th 125, 181&gt;</gl>
+  </entry>
+  <entry id="ris.48">
+    <hw>²kʰit</hw>
+    <gl>emprunter &lt;A86 in voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.49">
+    <hw>²kʰiː</hw>
+    <gl>attacher &lt;th 162&gt;</gl>
+  </entry>
+  <entry id="ris.50">
+    <hw>²kʰjat</hw>
+    <gl>lire à voix haute &lt;voc vb, th 169 in fich perf&gt;, lire à l'école &lt;A 86 in voc 74&gt;/ psalmodier &lt;voc vb et A 86 in voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.51">
+    <hw>²kʰraŋ</hw>
+    <gl>griller, incinérer/ faire cuire des galettes, que ce soit à sec sur le gril ou en pleine huile comme le /$sel/. Au contraire les légumes sont toujours /ro:ba/, que ce soit du maïs à sec dans son /polko/, des légumes qu'on cuit dans un peu d'huile comme des pdt au gras (sans eau après) ou en pleine huile comme les frites</gl>
+  </entry>
+  <entry id="ris.52">
+    <hw>²kʰret</hw>
+    <gl>gratter, effacer au couteau &lt;voc vb&gt;, gratter au couteau pour effacer &lt;th 64 in fich perf, voc 74&gt;/ ronger (ongles) &lt;voc vb, th 168 in fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.53">
+    <hw>²kʰru</hw>
+    <gl>laver</gl>
+  </entry>
+  <entry id="ris.54">
+    <hw>²kʰu</hw>
+    <gl>légumes ou viande</gl>
+  </entry>
+  <entry id="ris.55">
+    <hw>²kʰwal</hw>
+    <gl>bouillir longtemps</gl>
+  </entry>
+  <entry id="ris.56">
+    <hw>²laː</hw>
+    <gl>se cacher</gl>
+  </entry>
+  <entry id="ris.57">
+    <hw>²leː</hw>
+    <gl>langue (organe)</gl>
+  </entry>
+  <entry id="ris.58">
+    <hw>²liː</hw>
+    <gl>visage</gl>
+  </entry>
+  <entry id="ris.59">
+    <hw>²luŋ</hw>
+    <gl>flamber, brûler (itr)</gl>
+  </entry>
+  <entry id="ris.60">
+    <hw>²min</hw>
+    <gl>être mûr, cuit</gl>
+  </entry>
+  <entry id="ris.61">
+    <hw>²miː</hw>
+    <gl>oeil</gl>
+  </entry>
+  <entry id="ris.62">
+    <hw>²mjap</hw>
+    <gl>récurer, ? frotter en général, astiquer</gl>
+  </entry>
+  <entry id="ris.63">
+    <hw>²mjaŋ</hw>
+    <gl>avoir le loisir, le temps ou l'occasion de faire qqch</gl>
+  </entry>
+  <entry id="ris.64">
+    <hw>²mlaŋ</hw>
+    <srcxcr2>-mlaŋ-pa</srcxcr2>
+    <gl>très noir</gl>
+  </entry>
+  <entry id="ris.65">
+    <hw>²mlet</hw>
+    <gl>oublier</gl>
+  </entry>
+  <entry id="ris.66">
+    <hw>²mra</hw>
+    <gl>mauvaise herbe</gl>
+  </entry>
+  <entry id="ris.67">
+    <hw>²mrap</hw>
+    <gl>porte</gl>
+  </entry>
+  <entry id="ris.68">
+    <hw>²mraŋ</hw>
+    <gl>champ</gl>
+  </entry>
+  <entry id="ris.69">
+    <hw>²mren</hw>
+    <gl>être rassasié</gl>
+  </entry>
+  <entry id="ris.70">
+    <hw>²na</hw>
+    <gl>être malade</gl>
+  </entry>
+  <entry id="ris.71">
+    <hw>²nai</hw>
+    <gl>pourrir</gl>
+  </entry>
+  <entry id="ris.72">
+    <hw>²nam</hw>
+    <gl>pluie</gl>
+  </entry>
+  <entry id="ris.73">
+    <hw>²nap</hw>
+    <gl>morve</gl>
+  </entry>
+  <entry id="ris.74">
+    <hw>²nat</hw>
+    <gl>plein à ras</gl>
+  </entry>
+  <entry id="ris.75">
+    <hw>²naŋ</hw>
+    <gl>plein</gl>
+  </entry>
+  <entry id="ris.76">
+    <hw>²naŋ</hw>
+    <gl>presser, masser/ marcher sur (les gens ou les choses) sans prêter attention/ bloquer (en part. un poulet, entre son corps et un mur etc quand on veut rentrer les poulets pour la nuit), plaquer &lt;MM 88 de mem&gt;</gl>
+  </entry>
+  <entry id="ris.77">
+    <hw>²net</hw>
+    <gl>rire</gl>
+  </entry>
+  <entry id="ris.78">
+    <hw>²neː</hw>
+    <gl>lieu de pélerinage</gl>
+  </entry>
+  <entry id="ris.79">
+    <hw>²nis</hw>
+    <srcxcr2>-ʈa</srcxcr2>
+    <gl>sept jours</gl>
+  </entry>
+  <entry id="ris.80">
+    <hw>²nis</hw>
+    <gl>sept</gl>
+  </entry>
+  <entry id="ris.81">
+    <hw>²no</hw>
+    <gl>être élevé, haut</gl>
+  </entry>
+  <entry id="ris.82">
+    <hw>²nup</hw>
+    <gl>être profond</gl>
+  </entry>
+  <entry id="ris.83">
+    <hw>²paŋ</hw>
+    <gl>dire, parler</gl>
+  </entry>
+  <entry id="ris.84">
+    <hw>²pit</hw>
+    <gl>envoyer, laisser aller</gl>
+  </entry>
+  <entry id="ris.85">
+    <hw>²pjo</hw>
+    <gl>jaillir, faire une résurgence</gl>
+  </entry>
+  <entry id="ris.86">
+    <hw>²pre</hw>
+    <gl>suinter, traverser (liquide, gaz), fuir (récipient)</gl>
+  </entry>
+  <entry id="ris.87">
+    <hw>²preː</hw>
+    <gl>avec, ensemble</gl>
+  </entry>
+  <entry id="ris.88">
+    <hw>²puŋ</hw>
+    <gl>causatif indirect: permettre, laisser faire, ordonner/ frapper, battre/ "foutre" (au propre et au figuré)</gl>
+  </entry>
+  <entry id="ris.89">
+    <hw>²pʰai</hw>
+    <gl>fer</gl>
+  </entry>
+  <entry id="ris.90">
+    <hw>²pʰaː</hw>
+    <gl>rendre, rembourser</gl>
+  </entry>
+  <entry id="ris.91">
+    <hw>²pʰiː</hw>
+    <gl>peler</gl>
+  </entry>
+  <entry id="ris.92">
+    <hw>²pʰjaː</hw>
+    <gl>balai/ la plante dont on fait les balais (on utilise les tiges du milieu de la plante)</gl>
+  </entry>
+  <entry id="ris.93">
+    <hw>²pʰjaː</hw>
+    <gl>essuyer, épousseter</gl>
+  </entry>
+  <entry id="ris.94">
+    <hw>²pʰjaŋ</hw>
+    <gl>voler</gl>
+  </entry>
+  <entry id="ris.95">
+    <hw>²pʰjo</hw>
+    <gl>bouillir</gl>
+  </entry>
+  <entry id="ris.96">
+    <hw>²pʰor</hw>
+    <gl>enduire</gl>
+  </entry>
+  <entry id="ris.97">
+    <hw>²pʰot</hw>
+    <gl>nouer (e.g. les cordons de la blouse)</gl>
+  </entry>
+  <entry id="ris.98">
+    <hw>²pʰoː</hw>
+    <gl>éclater, exploser, claquer (coup de fusil)</gl>
+  </entry>
+  <entry id="ris.99">
+    <hw>²pʰum</hw>
+    <gl>oeuf/ testicule &lt;Munda N 70&gt;</gl>
+  </entry>
+  <entry id="ris.100">
+    <hw>²pʰum</hw>
+    <gl>pondre</gl>
+  </entry>
+  <entry id="ris.101">
+    <hw>²rai</hw>
+    <gl>côte</gl>
+  </entry>
+  <entry id="ris.102">
+    <hw>²rap</hw>
+    <gl>se tenir debout</gl>
+  </entry>
+  <entry id="ris.103">
+    <hw>²raː</hw>
+    <gl>avoir sommeil</gl>
+  </entry>
+  <entry id="ris.104">
+    <hw>²raː</hw>
+    <gl>tisser</gl>
+  </entry>
+  <entry id="ris.105">
+    <hw>²rit</hw>
+    <gl>gratter</gl>
+  </entry>
+  <entry id="ris.106">
+    <hw>²roː</hw>
+    <gl>porter des fruits</gl>
+  </entry>
+  <entry id="ris.107">
+    <hw>²rut</hw>
+    <gl>vomir</gl>
+  </entry>
+  <entry id="ris.108">
+    <hw>²ruŋ</hw>
+    <gl>être épais</gl>
+  </entry>
+  <entry id="ris.109">
+    <hw>²sai</hw>
+    <gl>prix</gl>
+  </entry>
+  <entry id="ris.110">
+    <hw>²sam</hw>
+    <gl>manier, tripoter</gl>
+  </entry>
+  <entry id="ris.111">
+    <hw>²saŋ</hw>
+    <gl>faire sécher</gl>
+  </entry>
+  <entry id="ris.112">
+    <hw>²saː</hw>
+    <gl>respiration</gl>
+  </entry>
+  <entry id="ris.113">
+    <hw>²seː</hw>
+    <gl>savoir faire</gl>
+  </entry>
+  <entry id="ris.114">
+    <hw>²siŋ</hw>
+    <gl>?bois, bois à brûler</gl>
+  </entry>
+  <entry id="ris.115">
+    <hw>²sja</hw>
+    <gl>danser/ tourner vite</gl>
+  </entry>
+  <entry id="ris.116">
+    <hw>²sjap</hw>
+    <gl>rencontrer, rendre visite/ trouver par hasard (qqch qu'on n'a pas cherché)/ attrapper une maladie/ atteindre</gl>
+  </entry>
+  <entry id="ris.117">
+    <hw>²sjat</hw>
+    <gl>pou</gl>
+  </entry>
+  <entry id="ris.118">
+    <hw>²sjot</hw>
+    <gl>arracher</gl>
+  </entry>
+  <entry id="ris.119">
+    <hw>²sju</hw>
+    <gl>enfiler (perles ...)</gl>
+  </entry>
+  <entry id="ris.120">
+    <hw>²so</hw>
+    <gl>vivre/ guérir (survivre)</gl>
+  </entry>
+  <entry id="ris.121">
+    <hw>²som</hw>
+    <gl>trois</gl>
+  </entry>
+  <entry id="ris.122">
+    <hw>²ta</hw>
+    <gl>cheval</gl>
+  </entry>
+  <entry id="ris.123">
+    <hw>²tat</hw>
+    <gl>sortir (tr), dégager, extraire, faire sortir une forme, sculpter, faire la raie des cheveux</gl>
+  </entry>
+  <entry id="ris.124">
+    <hw>²taː</hw>
+    <gl>recevoir</gl>
+  </entry>
+  <entry id="ris.125">
+    <hw>²taŋ</hw>
+    <gl>vaisselle</gl>
+  </entry>
+  <entry id="ris.126">
+    <hw>²tip</hw>
+    <gl>être en poudre &lt;fin&gt;</gl>
+  </entry>
+  <entry id="ris.127">
+    <hw>²to</hw>
+    <gl>frapper, polir (le riz)</gl>
+  </entry>
+  <entry id="ris.128">
+    <hw>²toː</hw>
+    <gl>pioche</gl>
+  </entry>
+  <entry id="ris.129">
+    <hw>²tsi</hw>
+    <gl>s'asseoir/ rester</gl>
+  </entry>
+  <entry id="ris.130">
+    <hw>²tsim</hw>
+    <gl>ranger sur une étagère</gl>
+  </entry>
+  <entry id="ris.131">
+    <hw>²tsjam</hw>
+    <gl>urine &lt;th 169&gt;</gl>
+  </entry>
+  <entry id="ris.132">
+    <hw>²tsjan</hw>
+    <gl>fabriquer (un tormo)</gl>
+  </entry>
+  <entry id="ris.133">
+    <hw>²tsjap</hw>
+    <gl>bague &lt;th 64&gt;</gl>
+  </entry>
+  <entry id="ris.134">
+    <hw>²tsjar</hw>
+    <gl>visser/ se tourner de côté</gl>
+  </entry>
+  <entry id="ris.135">
+    <hw>²tsjo</hw>
+    <gl>suspendre/ grimper sur le dos</gl>
+  </entry>
+  <entry id="ris.136">
+    <hw>²tsjui</hw>
+    <gl>dix &lt;th 34&gt;</gl>
+  </entry>
+  <entry id="ris.137">
+    <hw>²tsjup</hw>
+    <gl>enfermer</gl>
+  </entry>
+  <entry id="ris.138">
+    <hw>²tsu</hw>
+    <gl>ce, cela, ceci</gl>
+  </entry>
+  <entry id="ris.139">
+    <hw>²tsuː</hw>
+    <gl>aboyer</gl>
+  </entry>
+  <entry id="ris.140">
+    <hw>²tsuŋ</hw>
+    <gl>vendre</gl>
+  </entry>
+  <entry id="ris.141">
+    <hw>²tsʰa</hw>
+    <gl>brûler, piquer (sensation dûe à blessure) &lt;Voc vb&gt;/ faire mal &lt;A86 on fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.142">
+    <hw>²tsʰam</hw>
+    <gl>poil pubic/ (terme d'injure)</gl>
+  </entry>
+  <entry id="ris.143">
+    <hw>²tsʰap</hw>
+    <gl>piocher &lt;Voc vb, fich perf&gt;/ faire des copeaux &lt;Voc vb, fich perf&gt;, éplucher au couteau (e.g. le fromage) &lt;A86 on fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.144">
+    <hw>²tsʰar</hw>
+    <gl>fleurir/ blanchir (cheveux) &lt;Voc vb&gt;, (?barbe + cheveux) &lt;fich perf&gt;/ filtrer &lt;th 101 on fich perf, Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.145">
+    <hw>²tsʰar</hw>
+    <gl>neuf, nouveau</gl>
+  </entry>
+  <entry id="ris.146">
+    <hw>²tsʰat</hw>
+    <gl>combattre</gl>
+  </entry>
+  <entry id="ris.147">
+    <hw>²tsʰaː</hw>
+    <gl>s'acheter des choses peu à peu, par économie &lt;Voc vb&gt;/ s'établir (sens social), fonder un foyer &lt;fich perf, Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.148">
+    <hw>²tsʰeː</hw>
+    <gl>fendre (du bois) &lt;th 61, 98, 160&gt;, casser une noix &lt;Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.149">
+    <hw>²tsʰi</hw>
+    <gl>graisse &lt;th 52, 136&gt;</gl>
+  </entry>
+  <entry id="ris.150">
+    <hw>²tsʰjar</hw>
+    <gl>être coupant</gl>
+  </entry>
+  <entry id="ris.151">
+    <hw>²tsʰjoi</hw>
+    <gl>déchirer (la viande avec les dents) &lt;manger&gt; &lt;from Spr.&gt;</gl>
+  </entry>
+  <entry id="ris.152">
+    <hw>²tsʰo</hw>
+    <gl>peindre, colorier</gl>
+  </entry>
+  <entry id="ris.153">
+    <hw>²tsʰum</hw>
+    <gl>cacher</gl>
+  </entry>
+  <entry id="ris.154">
+    <hw>²tsʰut</hw>
+    <gl>tasser/ enfoncer en forçant &lt;Ani 73 on fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.155">
+    <hw>²tun</hw>
+    <gl>être court</gl>
+  </entry>
+  <entry id="ris.156">
+    <hw>²tʰaː</hw>
+    <gl>couper</gl>
+  </entry>
+  <entry id="ris.157">
+    <hw>²tʰi</hw>
+    <gl>casser, briser</gl>
+  </entry>
+  <entry id="ris.158">
+    <hw>²tʰo</hw>
+    <gl>salive</gl>
+  </entry>
+  <entry id="ris.159">
+    <hw>²tʰoŋ</hw>
+    <gl>ustensile de bambou</gl>
+  </entry>
+  <entry id="ris.160">
+    <hw>²tʰur</hw>
+    <gl>toucher</gl>
+  </entry>
+  <entry id="ris.161">
+    <hw>²tʰut</hw>
+    <gl>ajouter bout à bout pour rallonger, rabouter &lt;Ani 78 on fp&gt;</gl>
+  </entry>
+  <entry id="ris.162">
+    <hw>²tʰuŋ</hw>
+    <gl>boire</gl>
+  </entry>
+  <entry id="ris.163">
+    <hw>²tʰuː</hw>
+    <gl>être trop épicé, piquer (fumée, les yeux)</gl>
+  </entry>
+  <entry id="ris.164">
+    <hw>²um</hw>
+    <gl>entasser en abondance (grain, vêtements, terre ...)</gl>
+  </entry>
+  <entry id="ris.165">
+    <hw>²up</hw>
+    <gl>étouffer, cuire à l'étouffée</gl>
+  </entry>
+  <entry id="ris.166">
+    <hw>²waŋ</hw>
+    <gl>entrer/ devenir</gl>
+  </entry>
+  <entry id="ris.167">
+    <hw>²ŋam</hw>
+    <gl>être sucré</gl>
+  </entry>
+  <entry id="ris.168">
+    <hw>²ʈaŋ</hw>
+    <gl>enfler &lt;th 52/ 56, 125&gt;</gl>
+  </entry>
+  <entry id="ris.169">
+    <hw>²ŋjot</hw>
+    <gl>questionner</gl>
+  </entry>
+  <entry id="ris.170">
+    <hw>²ʈup</hw>
+    <gl>fil à coudre &lt;th 180&gt;</gl>
+  </entry>
+  <entry id="ris.171">
+    <hw>²ʈuː</hw>
+    <gl>sueur &lt;th 64,135&gt;</gl>
+  </entry>
+  <entry id="ris.172">
+    <hw>²ʈuː</hw>
+    <gl>être humide</gl>
+  </entry>
+  <entry id="ris.173">
+    <hw>²ʈʰam</hw>
+    <gl>asperger, saupoudrer, répandre (le fumier), ? jeter par terre &lt;voc vb&gt;</gl>
+  </entry>
+  <entry id="ris.174">
+    <hw>³ka</hw>
+    <gl>châle</gl>
+  </entry>
+  <entry id="ris.175">
+    <hw>³kap</hw>
+    <gl>couvercle</gl>
+  </entry>
+  <entry id="ris.176">
+    <hw>³kap</hw>
+    <gl>couvrir/ chasser, conduire les bêtes à grande vitesse</gl>
+  </entry>
+  <entry id="ris.177">
+    <hw>³kaŋ</hw>
+    <gl>montagne</gl>
+  </entry>
+  <entry id="ris.178">
+    <hw>³kaː</hw>
+    <gl>se coincer dans la gorge (nourriture)</gl>
+  </entry>
+  <entry id="ris.179">
+    <hw>³keŋ</hw>
+    <gl>pain</gl>
+  </entry>
+  <entry id="ris.180">
+    <hw>³kjan</hw>
+    <gl>décorer (religieux)</gl>
+  </entry>
+  <entry id="ris.181">
+    <hw>³kjap</hw>
+    <gl>derrière</gl>
+  </entry>
+  <entry id="ris.182">
+    <hw>³kjoi</hw>
+    <gl>lac</gl>
+  </entry>
+  <entry id="ris.183">
+    <hw>³kloŋ</hw>
+    <gl>avaler</gl>
+  </entry>
+  <entry id="ris.184">
+    <hw>³ko</hw>
+    <gl>comprendre</gl>
+  </entry>
+  <entry id="ris.185">
+    <hw>³ko</hw>
+    <gl>dos</gl>
+  </entry>
+  <entry id="ris.186">
+    <hw>³kom</hw>
+    <gl>contempler, faire attention</gl>
+  </entry>
+  <entry id="ris.187">
+    <hw>³kor</hw>
+    <gl>unité, item</gl>
+  </entry>
+  <entry id="ris.188">
+    <hw>³kroŋ</hw>
+    <gl>Gurung (nom de peuple) &lt;th 97&gt;</gl>
+  </entry>
+  <entry id="ris.189">
+    <hw>³kruŋ</hw>
+    <gl>intestins &lt;th 97&gt;</gl>
+  </entry>
+  <entry id="ris.190">
+    <hw>³kur</hw>
+    <gl>tonner, gronder (ciel)</gl>
+  </entry>
+  <entry id="ris.191">
+    <hw>³kuŋ</hw>
+    <gl>le milieu</gl>
+  </entry>
+  <entry id="ris.192">
+    <hw>³kuː</hw>
+    <gl>rassembler avec la faucille avant de couper, ramener vers soi avec faucille ou bâton &lt;A86&gt;</gl>
+  </entry>
+  <entry id="ris.193">
+    <hw>³kwai</hw>
+    <gl>brasser (la bière) &lt;Voc vb&gt;, préparer la boisson en mélant la pâte fermentée à l'eau &lt;th 40, 119 on fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.194">
+    <hw>³la</hw>
+    <gl>flanc boisé de montagne</gl>
+  </entry>
+  <entry id="ris.195">
+    <hw>³lam</hw>
+    <gl>flamme</gl>
+  </entry>
+  <entry id="ris.196">
+    <hw>³laŋ</hw>
+    <gl>mortier</gl>
+  </entry>
+  <entry id="ris.197">
+    <hw>³lem</hw>
+    <gl>lécher</gl>
+  </entry>
+  <entry id="ris.198">
+    <hw>³len</hw>
+    <gl>prétexte</gl>
+  </entry>
+  <entry id="ris.199">
+    <hw>³liː</hw>
+    <gl>être lourd</gl>
+  </entry>
+  <entry id="ris.200">
+    <hw>³lo</hw>
+    <gl>année du cycle tibétain</gl>
+  </entry>
+  <entry id="ris.201">
+    <hw>³lut</hw>
+    <gl>déborder</gl>
+  </entry>
+  <entry id="ris.202">
+    <hw>³mar</hw>
+    <gl>beurre clarifié</gl>
+  </entry>
+  <entry id="ris.203">
+    <hw>³maː</hw>
+    <gl>gendre/ mari d'une soeur (d'homme ou de femme, aînée ou cadette)/ euphémisme pour mari</gl>
+  </entry>
+  <entry id="ris.204">
+    <hw>³maŋ</hw>
+    <gl>rêve</gl>
+  </entry>
+  <entry id="ris.205">
+    <hw>³mi</hw>
+    <gl>homme (%homo|)</gl>
+  </entry>
+  <entry id="ris.206">
+    <hw>³mjaŋ</hw>
+    <gl>goûter</gl>
+  </entry>
+  <entry id="ris.207">
+    <hw>³mla</hw>
+    <gl>riz décortiqué cru</gl>
+  </entry>
+  <entry id="ris.208">
+    <hw>³na</hw>
+    <gl>déposer (e.g. une charge)/ accoucher, naître/ soigner (un enfant), élever</gl>
+  </entry>
+  <entry id="ris.209">
+    <hw>³nat</hw>
+    <gl>atterrir, poser les pieds avec soin en marchant &lt;marcher&gt;</gl>
+  </entry>
+  <entry id="ris.210">
+    <hw>³naŋ</hw>
+    <srcxcr2>-¹sja</srcxcr2>
+    <gl>entrailles, chair d'une noix &lt;th 32&gt;</gl>
+  </entry>
+  <entry id="ris.211">
+    <hw>³naŋ</hw>
+    <gl>intérieur</gl>
+  </entry>
+  <entry id="ris.212">
+    <hw>³naː</hw>
+    <gl>pus</gl>
+  </entry>
+  <entry id="ris.213">
+    <hw>³nep</hw>
+    <gl>étrangler, (?) retenir avec force?</gl>
+  </entry>
+  <entry id="ris.214">
+    <hw>³neː</hw>
+    <gl>sein, mamelle, lait</gl>
+  </entry>
+  <entry id="ris.215">
+    <hw>³pa</hw>
+    <gl>apporter</gl>
+  </entry>
+  <entry id="ris.216">
+    <hw>³pam</hw>
+    <gl>mouiller, tremper</gl>
+  </entry>
+  <entry id="ris.217">
+    <hw>³pam</hw>
+    <gl>épaule</gl>
+  </entry>
+  <entry id="ris.218">
+    <hw>³paː</hw>
+    <gl>feuille d'arbre</gl>
+  </entry>
+  <entry id="ris.219">
+    <hw>³paŋ</hw>
+    <gl>gronder qqn, faire des remontrances</gl>
+  </entry>
+  <entry id="ris.220">
+    <hw>³per</hw>
+    <gl>avoir froid aux pieds ou aux mains/ être engourdi (généralement de froid) &lt;MM d'après les ex sous /1perere/&gt;</gl>
+  </entry>
+  <entry id="ris.221">
+    <hw>³pi</hw>
+    <gl>dire</gl>
+  </entry>
+  <entry id="ris.222">
+    <hw>³pjan</hw>
+    <gl>arracher qqch à qqn</gl>
+  </entry>
+  <entry id="ris.223">
+    <hw>³pjap</hw>
+    <gl>aile, grandes plumes de l'aile</gl>
+  </entry>
+  <entry id="ris.224">
+    <hw>³pjuŋ</hw>
+    <gl>tousser</gl>
+  </entry>
+  <entry id="ris.225">
+    <hw>³pla</hw>
+    <gl>principe vital, âme (ce qui renaît sous différentes formes)/ un papillon de nuit gris (?mite)</gl>
+  </entry>
+  <entry id="ris.226">
+    <hw>³plap</hw>
+    <gl>être fatigué</gl>
+  </entry>
+  <entry id="ris.227">
+    <hw>³plek</hw>
+    <gl>épais (liquide)</gl>
+  </entry>
+  <entry id="ris.228">
+    <hw>³pliŋ</hw>
+    <gl>pousser en faisant rouler &lt;th 180&gt;/ tomber à la renverse</gl>
+  </entry>
+  <entry id="ris.229">
+    <hw>³ploŋ</hw>
+    <gl>bouillir (itr)</gl>
+  </entry>
+  <entry id="ris.230">
+    <hw>³ploː</hw>
+    <gl>faire cuire à l'eau, faire bouillir</gl>
+  </entry>
+  <entry id="ris.231">
+    <hw>³pon</hw>
+    <gl>gerbe, botte, fagot</gl>
+  </entry>
+  <entry id="ris.232">
+    <hw>³por</hw>
+    <gl>emporter</gl>
+  </entry>
+  <entry id="ris.233">
+    <hw>³poː</hw>
+    <gl>découdre/ se découdre/ démonter un abri, découvrir une maison</gl>
+  </entry>
+  <entry id="ris.234">
+    <hw>³prai</hw>
+    <gl>perdre, être vaincu</gl>
+  </entry>
+  <entry id="ris.235">
+    <hw>³praŋ</hw>
+    <gl>abri provisoire</gl>
+  </entry>
+  <entry id="ris.236">
+    <hw>³praː</hw>
+    <gl>cueillir (du fourrage)</gl>
+  </entry>
+  <entry id="ris.237">
+    <hw>³preː</hw>
+    <gl>raser</gl>
+  </entry>
+  <entry id="ris.238">
+    <hw>³priː</hw>
+    <gl>écrire</gl>
+  </entry>
+  <entry id="ris.239">
+    <hw>³prot</hw>
+    <gl>bon goût</gl>
+  </entry>
+  <entry id="ris.240">
+    <hw>³prui</hw>
+    <gl>miette, bribe</gl>
+  </entry>
+  <entry id="ris.241">
+    <hw>³rap</hw>
+    <gl>jouer de la musique/ ? faire du bruit &lt;de Mem&gt;</gl>
+  </entry>
+  <entry id="ris.242">
+    <hw>³raŋ</hw>
+    <gl>soi-même (réfléchi)/ ?employé comme pronom de la deuxième personne respectueux</gl>
+  </entry>
+  <entry id="ris.243">
+    <hw>³reŋ</hw>
+    <gl>être long</gl>
+  </entry>
+  <entry id="ris.244">
+    <hw>³ri</hw>
+    <gl>forêt</gl>
+  </entry>
+  <entry id="ris.245">
+    <hw>³rit</hw>
+    <gl>mendier, réclamer</gl>
+  </entry>
+  <entry id="ris.246">
+    <hw>³ro</hw>
+    <gl>ami, compagnon/ placenta/ pronom de la 3ème personne</gl>
+  </entry>
+  <entry id="ris.247">
+    <hw>³rup</hw>
+    <gl>rassembler, récolter</gl>
+  </entry>
+  <entry id="ris.248">
+    <hw>³seŋ</hw>
+    <gl>construire, édifier, créer &lt;faire&gt;/ se lever</gl>
+  </entry>
+  <entry id="ris.249">
+    <hw>³sil</hw>
+    <gl>y avoir de la rosée</gl>
+  </entry>
+  <entry id="ris.250">
+    <hw>³sjar</hw>
+    <gl>ramasser avec le doigt</gl>
+  </entry>
+  <entry id="ris.251">
+    <hw>³sjo</hw>
+    <gl>matin</gl>
+  </entry>
+  <entry id="ris.252">
+    <hw>³sjoː</hw>
+    <gl>écorcher un animal, dépiauter</gl>
+  </entry>
+  <entry id="ris.253">
+    <hw>³sjuː</hw>
+    <gl>s'asseoir (mh)</gl>
+  </entry>
+  <entry id="ris.254">
+    <hw>³so</hw>
+    <gl>préparer, fabriquer/ gagner de l'argent</gl>
+  </entry>
+  <entry id="ris.255">
+    <hw>³tam</hw>
+    <gl>choisir</gl>
+  </entry>
+  <entry id="ris.256">
+    <hw>³tap</hw>
+    <gl>mesurer</gl>
+  </entry>
+  <entry id="ris.257">
+    <hw>³tar</hw>
+    <gl>trembler, vibrer, être en transe</gl>
+  </entry>
+  <entry id="ris.258">
+    <hw>³taŋ</hw>
+    <gl>chasser/ chasser pour faire partir &lt;A86 on fp&gt;/ chasser devant soi pour conduire qqpart &lt;A86 on fp&gt;</gl>
+  </entry>
+  <entry id="ris.259">
+    <hw>³taː</hw>
+    <gl>poteau</gl>
+  </entry>
+  <entry id="ris.260">
+    <hw>³tep</hw>
+    <gl>échanger</gl>
+  </entry>
+  <entry id="ris.261">
+    <hw>³toː</hw>
+    <gl>atteindre</gl>
+  </entry>
+  <entry id="ris.262">
+    <hw>³toŋ</hw>
+    <gl>mêler</gl>
+  </entry>
+  <entry id="ris.263">
+    <hw>³tsa</hw>
+    <gl>fils</gl>
+  </entry>
+  <entry id="ris.264">
+    <hw>³tsaː</hw>
+    <gl>déféquer, émettre un pet</gl>
+  </entry>
+  <entry id="ris.265">
+    <hw>³tsaŋ</hw>
+    <gl>nid</gl>
+  </entry>
+  <entry id="ris.266">
+    <hw>³tsin</hw>
+    <gl>finir, achever</gl>
+  </entry>
+  <entry id="ris.267">
+    <hw>³tsiː</hw>
+    <gl>articulation</gl>
+  </entry>
+  <entry id="ris.268">
+    <hw>³tsiː</hw>
+    <gl>pincer/ ? mordre légèrement (chien) &lt;fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.269">
+    <hw>³tsja</hw>
+    <gl>être beau ou bon</gl>
+  </entry>
+  <entry id="ris.270">
+    <hw>³tsjal</hw>
+    <gl>rendre hommage &lt;saluer&gt;</gl>
+  </entry>
+  <entry id="ris.271">
+    <hw>³tsjon</hw>
+    <gl>de nouveau &lt;th 62&gt;/ ? en revenant &lt;fich perf, Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.272">
+    <hw>³tsjor</hw>
+    <gl>exprimer : presser (fruit), tordre le linge (pour essorer)</gl>
+  </entry>
+  <entry id="ris.273">
+    <hw>³tsjut</hw>
+    <gl>maigrir/ ? se rider</gl>
+  </entry>
+  <entry id="ris.274">
+    <hw>³tsjuː</hw>
+    <gl>sûrir</gl>
+  </entry>
+  <entry id="ris.275">
+    <hw>³tso</hw>
+    <gl>sommet, pointe</gl>
+  </entry>
+  <entry id="ris.276">
+    <hw>³tsuː</hw>
+    <gl>appuyer ses pieds sur le sol &lt;th 67&gt;/ s'appuyer sur un bâton (une canne) pour marcher/ ? mettre son/du poids sur (qqch), faire porter le poids du corps sur &lt;Voc vb, fich perf&gt;/ poser par terre, appuyer par terre &lt;Voc 74, th 160&gt;</gl>
+  </entry>
+  <entry id="ris.277">
+    <hw>³tuː</hw>
+    <gl>deuil</gl>
+  </entry>
+  <entry id="ris.278">
+    <hw>³tuː</hw>
+    <gl>se chauffer au feu/ couver &lt;Ani 73&gt;</gl>
+  </entry>
+  <entry id="ris.279">
+    <hw>³wai</hw>
+    <gl>chant</gl>
+  </entry>
+  <entry id="ris.280">
+    <hw>³waŋ</hw>
+    <gl>creux, fossette</gl>
+  </entry>
+  <entry id="ris.281">
+    <hw>³ŋam</hw>
+    <gl>avoir expérimenté (le bonheur ou le malheur), avoir "trouvé le goût de"/ croire</gl>
+  </entry>
+  <entry id="ris.282">
+    <hw>³ŋam</hw>
+    <gl>être salé</gl>
+  </entry>
+  <entry id="ris.283">
+    <hw>³ʈan</hw>
+    <gl>penser (en général) &lt;Ani 78 in fich perf&gt;/ penser à, penser que, croire que &lt;voc vb&gt;/ se rappeler &lt;th 156&gt;</gl>
+  </entry>
+  <entry id="ris.284">
+    <hw>³ʈap</hw>
+    <gl>genre d'épinards, brède</gl>
+  </entry>
+  <entry id="ris.285">
+    <hw>³ʈaː</hw>
+    <gl>caroncule du cou du coq &lt;th 55&gt;</gl>
+  </entry>
+  <entry id="ris.286">
+    <hw>³ʈaː</hw>
+    <gl>courroie pour porter le tambour</gl>
+  </entry>
+  <entry id="ris.287">
+    <hw>³ʈaː</hw>
+    <gl>gagner</gl>
+  </entry>
+  <entry id="ris.288">
+    <hw>³ʈaŋ</hw>
+    <gl>présents qu'apporte un invité</gl>
+  </entry>
+  <entry id="ris.289">
+    <hw>³ŋaː</hw>
+    <gl>tambour</gl>
+  </entry>
+  <entry id="ris.290">
+    <hw>³ʈeː</hw>
+    <gl>déchirer</gl>
+  </entry>
+  <entry id="ris.291">
+    <hw>³ʈi</hw>
+    <gl>peau, cuir</gl>
+  </entry>
+  <entry id="ris.292">
+    <hw>³ŋil</hw>
+    <gl>gencive, palais</gl>
+  </entry>
+  <entry id="ris.293">
+    <hw>³ŋja</hw>
+    <gl>crier (animal, ventre)/ faire du bruit</gl>
+  </entry>
+  <entry id="ris.294">
+    <hw>³ŋjo</hw>
+    <gl>faire cuire &lt;Voc vb&gt;, cuire &lt;fich perf, Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.295">
+    <hw>³ŋo</hw>
+    <gl>front</gl>
+  </entry>
+  <entry id="ris.296">
+    <hw>³ʈot</hw>
+    <gl>chaleur</gl>
+  </entry>
+  <entry id="ris.297">
+    <hw>³ʈoː</hw>
+    <gl>lire</gl>
+  </entry>
+  <entry id="ris.298">
+    <hw>³ʈoŋ</hw>
+    <gl>mourir (h.h.)</gl>
+  </entry>
+  <entry id="ris.299">
+    <hw>³ʈut</hw>
+    <gl>tirer &lt;th 67&gt;/ inspirer</gl>
+  </entry>
+  <entry id="ris.300">
+    <hw>¹hreː</hw>
+    <gl>s'éveiller, se lever</gl>
+  </entry>
+  <entry id="ris.301">
+    <hw>¹hrum</hw>
+    <gl>abcès</gl>
+  </entry>
+  <entry id="ris.302">
+    <hw>¹in</hw>
+    <gl>nous (exclusif)</gl>
+  </entry>
+  <entry id="ris.303">
+    <hw>¹jai</hw>
+    <gl>revenir</gl>
+  </entry>
+  <entry id="ris.304">
+    <hw>¹jaː</hw>
+    <gl>main</gl>
+  </entry>
+  <entry id="ris.305">
+    <hw>¹jaŋ</hw>
+    <gl>trouver</gl>
+  </entry>
+  <entry id="ris.306">
+    <hw>¹juː</hw>
+    <gl>verser</gl>
+  </entry>
+  <entry id="ris.307">
+    <hw>¹ka</hw>
+    <gl>être épais</gl>
+  </entry>
+  <entry id="ris.308">
+    <hw>¹kam</hw>
+    <gl>fiel, bile</gl>
+  </entry>
+  <entry id="ris.309">
+    <hw>¹kam</hw>
+    <gl>être amer</gl>
+  </entry>
+  <entry id="ris.310">
+    <hw>¹kan</hw>
+    <gl>céréale cuite à l'eau: prototypiquement le riz, mais plus fréquemment maïs ou millet/ repas</gl>
+  </entry>
+  <entry id="ris.311">
+    <hw>¹kaː</hw>
+    <gl>arrêter, bloquer une personne/ barrer une rivière</gl>
+  </entry>
+  <entry id="ris.312">
+    <hw>¹kaŋ</hw>
+    <gl>pied, jambe</gl>
+  </entry>
+  <entry id="ris.313">
+    <hw>¹kaŋ</hw>
+    <gl>touiller la boule de maïs ou de millet</gl>
+  </entry>
+  <entry id="ris.314">
+    <hw>¹ket</hw>
+    <gl>la droite</gl>
+  </entry>
+  <entry id="ris.315">
+    <hw>¹keː</hw>
+    <gl>ceinture</gl>
+  </entry>
+  <entry id="ris.316">
+    <hw>¹kin</hw>
+    <gl>prendre</gl>
+  </entry>
+  <entry id="ris.317">
+    <hw>¹kja</hw>
+    <gl>démanger</gl>
+  </entry>
+  <entry id="ris.318">
+    <hw>¹kjal</hw>
+    <gl>nager &lt;th 171&gt;</gl>
+  </entry>
+  <entry id="ris.319">
+    <hw>¹kjut</hw>
+    <gl>casser (sauf du verre)</gl>
+  </entry>
+  <entry id="ris.320">
+    <hw>¹kjuŋ</hw>
+    <gl>être acide</gl>
+  </entry>
+  <entry id="ris.321">
+    <hw>¹klaŋ</hw>
+    <gl>jouer</gl>
+  </entry>
+  <entry id="ris.322">
+    <hw>¹kli</hw>
+    <srcxcr2>-³tsaŋ</srcxcr2>
+    <gl>latrines &lt;th 32&gt;</gl>
+  </entry>
+  <entry id="ris.323">
+    <hw>¹kli</hw>
+    <gl>excréments &lt;th 32, 59&gt;</gl>
+  </entry>
+  <entry id="ris.324">
+    <hw>¹kon</hw>
+    <gl>neveu croisé</gl>
+  </entry>
+  <entry id="ris.325">
+    <hw>¹kor</hw>
+    <gl>tourner, se promener, voyager</gl>
+  </entry>
+  <entry id="ris.326">
+    <hw>¹koː</hw>
+    <gl>creux, trou, vallée, dépression/ petit abreuvoir de bois ou de pierre</gl>
+  </entry>
+  <entry id="ris.327">
+    <hw>¹koŋ</hw>
+    <gl>être dur</gl>
+  </entry>
+  <entry id="ris.328">
+    <hw>¹kra</hw>
+    <srcxcr2>-sja</srcxcr2>
+    <gl>cervelle (viande)/ cerveau</gl>
+  </entry>
+  <entry id="ris.329">
+    <hw>¹kra</hw>
+    <gl>cheveu &lt;th 41&gt;/ poil des animaux &lt;th 100&gt;</gl>
+  </entry>
+  <entry id="ris.330">
+    <hw>¹kra</hw>
+    <gl>pleurer &lt;th 100, 97&gt;</gl>
+  </entry>
+  <entry id="ris.331">
+    <hw>¹krat</hw>
+    <gl>grimper &lt;th 167&gt;</gl>
+  </entry>
+  <entry id="ris.332">
+    <hw>¹kriŋ</hw>
+    <gl>crier</gl>
+  </entry>
+  <entry id="ris.333">
+    <hw>¹kro</hw>
+    <gl>brûler, être urticant (ortie)</gl>
+  </entry>
+  <entry id="ris.334">
+    <hw>¹kroː</hw>
+    <gl>brûler</gl>
+  </entry>
+  <entry id="ris.335">
+    <hw>¹kru</hw>
+    <gl>coudée (mesure) &lt;th 96&gt;</gl>
+  </entry>
+  <entry id="ris.336">
+    <hw>¹ku</hw>
+    <gl>poitrine/ statue</gl>
+  </entry>
+  <entry id="ris.337">
+    <hw>¹kuː</hw>
+    <gl>porter chapeau, être coiffé de</gl>
+  </entry>
+  <entry id="ris.338">
+    <hw>¹kwan</hw>
+    <gl>habiller &lt;Voc vb&gt;, s'habiller &lt;Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.339">
+    <hw>¹kwan</hw>
+    <gl>vêtements &lt;th 23, 180&gt;</gl>
+  </entry>
+  <entry id="ris.340">
+    <hw>¹kʰa</hw>
+    <srcxcr2>-raŋba</srcxcr2>
+    <gl>de quelle sorte ?/ quel ...!</gl>
+  </entry>
+  <entry id="ris.341">
+    <hw>¹kʰa</hw>
+    <gl>venir/ se produire, être</gl>
+  </entry>
+  <entry id="ris.342">
+    <hw>¹kʰen</hw>
+    <gl>être instruit, savoir</gl>
+  </entry>
+  <entry id="ris.343">
+    <hw>¹kʰil</hw>
+    <gl>tourbillonner, s'enrouler, se lover &lt;th 94&gt;, se lover comme un serpent &lt;voc vb, voc 74&gt;/ s'emmêler (fils, cordons) &lt;A86 in voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.344">
+    <hw>¹kʰjap</hw>
+    <gl>suspendre en coinçant horizontalement</gl>
+  </entry>
+  <entry id="ris.345">
+    <hw>¹kʰjaŋ</hw>
+    <gl>lit &lt;voc N&gt;, lit fixe &lt;Munda N 549&gt;</gl>
+  </entry>
+  <entry id="ris.346">
+    <hw>¹kʰjoː</hw>
+    <gl>remuer en faisant couler</gl>
+  </entry>
+  <entry id="ris.347">
+    <hw>¹kʰlaː</hw>
+    <gl>renverser/ abandonner, cesser/ passer au-delà, passer par/ divorcer</gl>
+  </entry>
+  <entry id="ris.348">
+    <hw>¹kʰoː</hw>
+    <gl>transporter</gl>
+  </entry>
+  <entry id="ris.349">
+    <hw>¹kʰrap</hw>
+    <gl>mordre (comme un chien)</gl>
+  </entry>
+  <entry id="ris.350">
+    <hw>¹kʰren</hw>
+    <gl>avoir faim</gl>
+  </entry>
+  <entry id="ris.351">
+    <hw>¹kʰrim</hw>
+    <gl>tresser en roulant dans ses mains</gl>
+  </entry>
+  <entry id="ris.352">
+    <hw>¹kʰui</hw>
+    <gl>vieille</gl>
+  </entry>
+  <entry id="ris.353">
+    <hw>¹kʰwi</hw>
+    <gl>vieille femme &lt;voc 74&gt;, vieille &lt;voc n&gt;</gl>
+  </entry>
+  <entry id="ris.354">
+    <hw>¹la</hw>
+    <gl>dieu</gl>
+  </entry>
+  <entry id="ris.355">
+    <hw>¹lep</hw>
+    <gl>être chaud</gl>
+  </entry>
+  <entry id="ris.356">
+    <hw>¹leŋ</hw>
+    <gl>ami rituel, frère adopté</gl>
+  </entry>
+  <entry id="ris.357">
+    <hw>¹li</hw>
+    <srcxcr2>-tsʰa</srcxcr2>
+    <gl>après, plus tard, derrière</gl>
+  </entry>
+  <entry id="ris.358">
+    <hw>¹lop</hw>
+    <gl>enseigner, conseiller, donner un avis</gl>
+  </entry>
+  <entry id="ris.359">
+    <hw>¹loŋ</hw>
+    <srcxcr2>-³tsur</srcxcr2>
+    <gl>peureux</gl>
+  </entry>
+  <entry id="ris.360">
+    <hw>¹lu</hw>
+    <gl>dieu souterrain</gl>
+  </entry>
+  <entry id="ris.361">
+    <hw>¹mam</hw>
+    <gl>grand-mère/ par extension terme d'adresse respectueux pour toute femme un peu âgée</gl>
+  </entry>
+  <entry id="ris.362">
+    <hw>¹man</hw>
+    <gl>remède</gl>
+  </entry>
+  <entry id="ris.363">
+    <hw>¹mar</hw>
+    <gl>en aval</gl>
+  </entry>
+  <entry id="ris.364">
+    <hw>¹me</hw>
+    <gl>feu</gl>
+  </entry>
+  <entry id="ris.365">
+    <hw>¹meː</hw>
+    <gl>queue</gl>
+  </entry>
+  <entry id="ris.366">
+    <hw>¹min</hw>
+    <gl>nom</gl>
+  </entry>
+  <entry id="ris.367">
+    <hw>¹mja</hw>
+    <gl>flèche</gl>
+  </entry>
+  <entry id="ris.368">
+    <hw>¹mjo</hw>
+    <gl>être fou</gl>
+  </entry>
+  <entry id="ris.369">
+    <hw>¹mjuŋ</hw>
+    <gl>affûter, être affûté</gl>
+  </entry>
+  <entry id="ris.370">
+    <hw>¹mlit</hw>
+    <gl>sangsue d'eau</gl>
+  </entry>
+  <entry id="ris.371">
+    <hw>¹moi</hw>
+    <gl>labourer</gl>
+  </entry>
+  <entry id="ris.372">
+    <hw>¹mra</hw>
+    <gl>allumer une lampe (et non le feu)</gl>
+  </entry>
+  <entry id="ris.373">
+    <hw>¹mraŋ</hw>
+    <gl>voir</gl>
+  </entry>
+  <entry id="ris.374">
+    <hw>¹mriŋ</hw>
+    <srcxcr2>-³maima</srcxcr2>
+    <gl>femme</gl>
+  </entry>
+  <entry id="ris.375">
+    <hw>¹mriŋ</hw>
+    <gl>femme (épouse)</gl>
+  </entry>
+  <entry id="ris.376">
+    <hw>¹mu</hw>
+    <gl>ciel</gl>
+  </entry>
+  <entry id="ris.377">
+    <hw>¹mu</hw>
+    <gl>être/ rester</gl>
+  </entry>
+  <entry id="ris.378">
+    <hw>¹na</hw>
+    <srcxcr2>-¹pʰiː</srcxcr2>
+    <gl>ailes du nez</gl>
+  </entry>
+  <entry id="ris.379">
+    <hw>¹na</hw>
+    <gl>nez</gl>
+  </entry>
+  <entry id="ris.380">
+    <hw>¹nai</hw>
+    <gl>coucher (un enfant)</gl>
+  </entry>
+  <entry id="ris.381">
+    <hw>¹nai</hw>
+    <gl>être dégoûté</gl>
+  </entry>
+  <entry id="ris.382">
+    <hw>¹nam</hw>
+    <gl>épi</gl>
+  </entry>
+  <entry id="ris.383">
+    <hw>¹ni</hw>
+    <gl>aller, partir</gl>
+  </entry>
+  <entry id="ris.384">
+    <hw>¹nup</hw>
+    <gl>être exterminé</gl>
+  </entry>
+  <entry id="ris.385">
+    <hw>¹or</hw>
+    <gl>arracher (des légumes) &lt;cueillir&gt;</gl>
+  </entry>
+  <entry id="ris.386">
+    <hw>¹pa</hw>
+    <gl>être trop mince ou trop liquide, manquer d'épaisseur, être clairsemé</gl>
+  </entry>
+  <entry id="ris.387">
+    <hw>¹par</hw>
+    <gl>planche à imprimer, moule &lt;A86&gt;</gl>
+  </entry>
+  <entry id="ris.388">
+    <hw>¹paŋ</hw>
+    <srcxcr2>²siŋ</srcxcr2>
+    <gl>grosses bûches de bois, grume</gl>
+  </entry>
+  <entry id="ris.389">
+    <hw>¹paŋ</hw>
+    <gl>clairière, parc, prairie</gl>
+  </entry>
+  <entry id="ris.390">
+    <hw>¹pe</hw>
+    <gl>modèle, moule</gl>
+  </entry>
+  <entry id="ris.391">
+    <hw>¹pel</hw>
+    <gl>croiser</gl>
+  </entry>
+  <entry id="ris.392">
+    <hw>¹pet</hw>
+    <gl>avoir honte, être timide</gl>
+  </entry>
+  <entry id="ris.393">
+    <hw>¹peŋ</hw>
+    <gl>grosse grenouille comestible</gl>
+  </entry>
+  <entry id="ris.394">
+    <hw>¹pin</hw>
+    <gl>donner</gl>
+  </entry>
+  <entry id="ris.395">
+    <hw>¹piŋ</hw>
+    <gl>vert</gl>
+  </entry>
+  <entry id="ris.396">
+    <hw>¹plek</hw>
+    <gl>à plat</gl>
+  </entry>
+  <entry id="ris.397">
+    <hw>¹pleː</hw>
+    <gl>glisser</gl>
+  </entry>
+  <entry id="ris.398">
+    <hw>¹pleː</hw>
+    <gl>marcher sur le pied</gl>
+  </entry>
+  <entry id="ris.399">
+    <hw>¹plit</hw>
+    <gl>gratter pour ôter</gl>
+  </entry>
+  <entry id="ris.400">
+    <hw>¹pliŋ</hw>
+    <gl>être plein</gl>
+  </entry>
+  <entry id="ris.401">
+    <hw>¹po</hw>
+    <gl>changer/ déplacer/ sortir les bêtes/ remuer, déménager</gl>
+  </entry>
+  <entry id="ris.402">
+    <hw>¹poŋ</hw>
+    <gl>jarre</gl>
+  </entry>
+  <entry id="ris.403">
+    <hw>¹pʰa</hw>
+    <gl>partenaire sexuel mâle d'un animal, mari</gl>
+  </entry>
+  <entry id="ris.404">
+    <hw>¹pʰan</hw>
+    <gl>avoir du loisir</gl>
+  </entry>
+  <entry id="ris.405">
+    <hw>¹pʰap</hw>
+    <gl>descendre</gl>
+  </entry>
+  <entry id="ris.406">
+    <hw>¹pʰe</hw>
+    <gl>séparer, trier</gl>
+  </entry>
+  <entry id="ris.407">
+    <hw>¹pʰep</hw>
+    <gl>partir (h.h.), se déplacer</gl>
+  </entry>
+  <entry id="ris.408">
+    <hw>¹pʰeː</hw>
+    <gl>briller (soleil et lune)</gl>
+  </entry>
+  <entry id="ris.409">
+    <hw>¹pʰeː</hw>
+    <gl>pet</gl>
+  </entry>
+  <entry id="ris.410">
+    <hw>¹pʰi</hw>
+    <gl>être en retard</gl>
+  </entry>
+  <entry id="ris.411">
+    <hw>¹pʰiː</hw>
+    <gl>écorce</gl>
+  </entry>
+  <entry id="ris.412">
+    <hw>¹pʰjaː</hw>
+    <gl>couper lancé, couper au volant ou à la sape &lt;A86&gt;/ défricher</gl>
+  </entry>
+  <entry id="ris.413">
+    <hw>¹pʰjaː</hw>
+    <gl>prosternation</gl>
+  </entry>
+  <entry id="ris.414">
+    <hw>¹pʰjor</hw>
+    <gl>cuire (une soupe)</gl>
+  </entry>
+  <entry id="ris.415">
+    <hw>¹pʰjoŋ</hw>
+    <gl>grimper à la corde, se balancer sur une balançoire</gl>
+  </entry>
+  <entry id="ris.416">
+    <hw>¹pʰjuː</hw>
+    <gl>germer, sortir de terre (plante)</gl>
+  </entry>
+  <entry id="ris.417">
+    <hw>¹pʰo</hw>
+    <gl>ventre</gl>
+  </entry>
+  <entry id="ris.418">
+    <hw>¹pʰrok</hw>
+    <gl>asperger légèrement</gl>
+  </entry>
+  <entry id="ris.419">
+    <hw>¹pʰui</hw>
+    <gl>bière (h.h.)</gl>
+  </entry>
+  <entry id="ris.420">
+    <hw>¹pʰum</hw>
+    <gl>motte</gl>
+  </entry>
+  <entry id="ris.421">
+    <hw>¹pʰup</hw>
+    <gl>s'effondrer, démolir</gl>
+  </entry>
+  <entry id="ris.422">
+    <hw>¹pʰut</hw>
+    <gl>souffler/ rater (ne pas réussir à faire qqch après s'être vanté de pouvoir le faire) &lt;A86&gt;</gl>
+  </entry>
+  <entry id="ris.423">
+    <hw>¹ra</hw>
+    <gl>chèvre</gl>
+  </entry>
+  <entry id="ris.424">
+    <hw>¹reː</hw>
+    <gl>s'éveiller, se lever</gl>
+  </entry>
+  <entry id="ris.425">
+    <hw>¹rop</hw>
+    <gl>frapper</gl>
+  </entry>
+  <entry id="ris.426">
+    <hw>¹ru</hw>
+    <gl>corne</gl>
+  </entry>
+  <entry id="ris.427">
+    <hw>¹sa</hw>
+    <gl>sol, terre</gl>
+  </entry>
+  <entry id="ris.428">
+    <hw>¹sai</hw>
+    <gl>trier, ôter les saletés d'un tissu une à une</gl>
+  </entry>
+  <entry id="ris.429">
+    <hw>¹sam</hw>
+    <gl>faner, se flétrir (fleur non cueillie ou fruit)</gl>
+  </entry>
+  <entry id="ris.430">
+    <hw>¹sar</hw>
+    <gl>fumier</gl>
+  </entry>
+  <entry id="ris.431">
+    <hw>¹sat</hw>
+    <gl>tuer</gl>
+  </entry>
+  <entry id="ris.432">
+    <hw>¹saŋ</hw>
+    <gl>encens de genévrier (%Juniperus recurva|)</gl>
+  </entry>
+  <entry id="ris.433">
+    <hw>¹sem</hw>
+    <gl>sentiments, âme, coeur (au sens figuré)</gl>
+  </entry>
+  <entry id="ris.434">
+    <hw>¹seː</hw>
+    <gl>partir (mh)/ se coucher (soleil)</gl>
+  </entry>
+  <entry id="ris.435">
+    <hw>¹si</hw>
+    <gl>mourir</gl>
+  </entry>
+  <entry id="ris.436">
+    <hw>¹sim</hw>
+    <gl>être froid et humide/ refroidir</gl>
+  </entry>
+  <entry id="ris.437">
+    <hw>¹sit</hw>
+    <gl>secousse</gl>
+  </entry>
+  <entry id="ris.438">
+    <hw>¹sit</hw>
+    <gl>ôter les yeux à la surface du bambou (geste semblable à l'ébranchage) &lt;ébrancher&gt;</gl>
+  </entry>
+  <entry id="ris.439">
+    <hw>¹sja</hw>
+    <gl>viande, chair</gl>
+  </entry>
+  <entry id="ris.440">
+    <hw>¹sjal</hw>
+    <gl>rincer</gl>
+  </entry>
+  <entry id="ris.441">
+    <hw>¹sjar</hw>
+    <gl>se lever (soleil)</gl>
+  </entry>
+  <entry id="ris.442">
+    <hw>¹sjat</hw>
+    <gl>répéter, moucharder</gl>
+  </entry>
+  <entry id="ris.443">
+    <hw>¹sjaŋ</hw>
+    <gl>cloche</gl>
+  </entry>
+  <entry id="ris.444">
+    <hw>¹sjoi</hw>
+    <gl>croc</gl>
+  </entry>
+  <entry id="ris.445">
+    <hw>¹sjop</hw>
+    <gl>mue de serpent, peau de la patte des oiseaux</gl>
+  </entry>
+  <entry id="ris.446">
+    <hw>¹sjor</hw>
+    <gl>s'échapper (vaches, urine, pet ...), sortir de la coiffure (cheveu), s'écarter (lignes du pouce)/ émettre involontairement</gl>
+  </entry>
+  <entry id="ris.447">
+    <hw>¹sjoŋ</hw>
+    <gl>fleuve</gl>
+  </entry>
+  <entry id="ris.448">
+    <hw>¹sjup</hw>
+    <gl>fourreau</gl>
+  </entry>
+  <entry id="ris.449">
+    <hw>¹sjut</hw>
+    <gl>soigner un patient en présentant le riz</gl>
+  </entry>
+  <entry id="ris.450">
+    <hw>¹sol</hw>
+    <gl>manger (mh)</gl>
+  </entry>
+  <entry id="ris.451">
+    <hw>¹sol</hw>
+    <gl>riz cuit (hh)</gl>
+  </entry>
+  <entry id="ris.452">
+    <hw>¹sun</hw>
+    <gl>riz, riz sur pied, riz non décortiqué</gl>
+  </entry>
+  <entry id="ris.453">
+    <hw>¹suŋ</hw>
+    <gl>bouche</gl>
+  </entry>
+  <entry id="ris.454">
+    <hw>¹swa</hw>
+    <gl>dent</gl>
+  </entry>
+  <entry id="ris.455">
+    <hw>¹ta</hw>
+    <gl>advenir, se produire, convenir</gl>
+  </entry>
+  <entry id="ris.456">
+    <hw>¹tai</hw>
+    <gl>tomber</gl>
+  </entry>
+  <entry id="ris.457">
+    <hw>¹tam</hw>
+    <gl>langue (langage)</gl>
+  </entry>
+  <entry id="ris.458">
+    <hw>¹tar</hw>
+    <gl>blanc</gl>
+  </entry>
+  <entry id="ris.459">
+    <hw>¹taŋ</hw>
+    <gl>être heureux, content</gl>
+  </entry>
+  <entry id="ris.460">
+    <hw>¹tik</hw>
+    <gl>quoi?</gl>
+  </entry>
+  <entry id="ris.461">
+    <hw>¹tit</hw>
+    <gl>déployer, étendre pour s'asseoir dessus</gl>
+  </entry>
+  <entry id="ris.462">
+    <hw>¹tiŋ</hw>
+    <gl>coeur</gl>
+  </entry>
+  <entry id="ris.463">
+    <hw>¹tor</hw>
+    <gl>en amont, vers l'intérieur de la maison</gl>
+  </entry>
+  <entry id="ris.464">
+    <hw>¹toː</hw>
+    <gl>falloir</gl>
+  </entry>
+  <entry id="ris.465">
+    <hw>¹tsa</hw>
+    <gl>manger</gl>
+  </entry>
+  <entry id="ris.466">
+    <hw>¹tsam</hw>
+    <gl>échelle</gl>
+  </entry>
+  <entry id="ris.467">
+    <hw>¹tsaŋ</hw>
+    <gl>bru</gl>
+  </entry>
+  <entry id="ris.468">
+    <hw>¹tsjan</hw>
+    <gl>tigre &lt;th 40&gt;</gl>
+  </entry>
+  <entry id="ris.469">
+    <hw>¹tsjaː</hw>
+    <gl>regarder/ examiner &lt;MV 224&gt;</gl>
+  </entry>
+  <entry id="ris.470">
+    <hw>¹tsjaŋ</hw>
+    <gl>être petit, un peu, y en avoir peu</gl>
+  </entry>
+  <entry id="ris.471">
+    <hw>¹tsjur</hw>
+    <gl>égaliser le sol</gl>
+  </entry>
+  <entry id="ris.472">
+    <hw>¹tsuŋ</hw>
+    <gl>attacher/ attraper</gl>
+  </entry>
+  <entry id="ris.473">
+    <hw>¹tsuː</hw>
+    <gl>commencer</gl>
+  </entry>
+  <entry id="ris.474">
+    <hw>¹tsʰa</hw>
+    <gl>faire paître &lt;th 51, 99, 109&gt;</gl>
+  </entry>
+  <entry id="ris.475">
+    <hw>¹tsʰai</hw>
+    <gl>lanière de bambou</gl>
+  </entry>
+  <entry id="ris.476">
+    <hw>¹tsʰam</hw>
+    <gl>méditation, étude</gl>
+  </entry>
+  <entry id="ris.477">
+    <hw>¹tsʰar</hw>
+    <gl>atteindre ses six ans, se débrouiller seul</gl>
+  </entry>
+  <entry id="ris.478">
+    <hw>¹tsʰaŋ</hw>
+    <gl>hotte</gl>
+  </entry>
+  <entry id="ris.479">
+    <hw>¹tsʰer</hw>
+    <gl>ne pas être en paix &lt;MM jan 88&gt;/ être énervé (par des enfants, par excès de fatigue), être nerveux &lt;th 94, 98, 104&gt;, agacé par qqch, contrarié &lt;A86&gt;, être anxieux, angoissé, déprimé &lt;MM d'après il3&gt;</gl>
+  </entry>
+  <entry id="ris.480">
+    <hw>¹tsʰeŋ</hw>
+    <gl>étirer, écarter, écarteler</gl>
+  </entry>
+  <entry id="ris.481">
+    <hw>¹tsʰin</hw>
+    <gl>ongle</gl>
+  </entry>
+  <entry id="ris.482">
+    <hw>¹tsʰiŋ</hw>
+    <gl>réveiller</gl>
+  </entry>
+  <entry id="ris.483">
+    <hw>¹tsʰiː</hw>
+    <gl>éternuer</gl>
+  </entry>
+  <entry id="ris.484">
+    <hw>¹tsʰjaː</hw>
+    <gl>coaguler, stagner (eau)/ rester (h.h.), s'établir dans un nouvel endroit/ (?) geler (eau) &lt;Voc vb&gt;</gl>
+  </entry>
+  <entry id="ris.485">
+    <hw>¹tsʰjoi</hw>
+    <gl>consommer (manger, boire)</gl>
+  </entry>
+  <entry id="ris.486">
+    <hw>¹tsʰjoi</hw>
+    <gl>livre sacré &lt;fich perf&gt;, livre religieux &lt;Voc 74&gt;</gl>
+  </entry>
+  <entry id="ris.487">
+    <hw>¹tsʰjop</hw>
+    <gl>mélanger deux choses d'espèces différentes</gl>
+  </entry>
+  <entry id="ris.488">
+    <hw>¹tsʰjoŋ</hw>
+    <gl>sauter (animal, étincelles ...)</gl>
+  </entry>
+  <entry id="ris.489">
+    <hw>¹tsʰo</hw>
+    <gl>être gros</gl>
+  </entry>
+  <entry id="ris.490">
+    <hw>¹tsʰon</hw>
+    <gl>peinture</gl>
+  </entry>
+  <entry id="ris.491">
+    <hw>¹tsʰor</hw>
+    <gl>souffrir d'insomnie &lt;th 104, 125&gt;/ ? se réveiller &lt;voc vb&gt;</gl>
+  </entry>
+  <entry id="ris.492">
+    <hw>¹tsʰoŋ</hw>
+    <gl>commerce</gl>
+  </entry>
+  <entry id="ris.493">
+    <hw>¹tsʰoː</hw>
+    <gl>corde</gl>
+  </entry>
+  <entry id="ris.494">
+    <hw>¹tsʰoː</hw>
+    <gl>se rassembler en foule, y avoir foule</gl>
+  </entry>
+  <entry id="ris.495">
+    <hw>¹tsʰuː</hw>
+    <gl>être plaisant/ se réjouir, être joyeux &lt;th 96, 103, 125&gt;</gl>
+  </entry>
+  <entry id="ris.496">
+    <hw>¹tsʰwaː</hw>
+    <gl>piquer du bec (poule ...), mordre (serpent)</gl>
+  </entry>
+  <entry id="ris.497">
+    <hw>¹tup</hw>
+    <gl>hacher (viande)</gl>
+  </entry>
+  <entry id="ris.498">
+    <hw>¹tut</hw>
+    <gl>tremper (dans)</gl>
+  </entry>
+  <entry id="ris.499">
+    <hw>¹tʰai</hw>
+    <gl>entendre</gl>
+  </entry>
+  <entry id="ris.500">
+    <hw>¹tʰan</hw>
+    <gl>poser</gl>
+  </entry>
+  <entry id="ris.501">
+    <hw>¹tʰap</hw>
+    <gl>encorner</gl>
+  </entry>
+  <entry id="ris.502">
+    <hw>¹tʰaŋ</hw>
+    <gl>mauvaise odeur</gl>
+  </entry>
+  <entry id="ris.503">
+    <hw>¹tʰe</hw>
+    <gl>il, elle, lui</gl>
+  </entry>
+  <entry id="ris.504">
+    <hw>¹tʰem</hw>
+    <gl>fermer les yeux, sommeiller</gl>
+  </entry>
+  <entry id="ris.505">
+    <hw>¹tʰiŋ</hw>
+    <gl>paume (sans les doigts)</gl>
+  </entry>
+  <entry id="ris.506">
+    <hw>¹tʰom</hw>
+    <gl>rêvasser, ne pas se rappeler, ne pas finir un travail, s'arrêter sans raison au milieu, garder les yeux fixes</gl>
+  </entry>
+  <entry id="ris.507">
+    <hw>¹tʰop</hw>
+    <gl>trouver, obtenir sa part de qqch, suffire</gl>
+  </entry>
+  <entry id="ris.508">
+    <hw>¹tʰot</hw>
+    <gl>enrouler autour du cou &lt;porter un vêtement&gt;</gl>
+  </entry>
+  <entry id="ris.509">
+    <hw>¹tʰu</hw>
+    <gl>cueillir/ faire les plis du sari &lt;plisser&gt;</gl>
+  </entry>
+  <entry id="ris.510">
+    <hw>¹ur</hw>
+    <gl>jaune</gl>
+  </entry>
+  <entry id="ris.511">
+    <hw>¹ur</hw>
+    <gl>jaunir</gl>
+  </entry>
+  <entry id="ris.512">
+    <hw>¹uː</hw>
+    <gl>caverne</gl>
+  </entry>
+  <entry id="ris.513">
+    <hw>¹wal</hw>
+    <gl>touiller, remuer (tr)/ ramer, pagayer</gl>
+  </entry>
+  <entry id="ris.514">
+    <hw>¹ʈa</hw>
+    <gl>atteindre le but, toucher, blesser (probablement de l'objet lancé, pas du tireur &lt;fich perf&gt;)/ se lever (soleil)</gl>
+  </entry>
+  <entry id="ris.515">
+    <hw>¹ŋa</hw>
+    <gl>je, moi</gl>
+  </entry>
+  <entry id="ris.516">
+    <hw>¹ŋan</hw>
+    <gl>emprunter qqch à rendre (outil, bijou ...) et non à remplacer ou rembourser</gl>
+  </entry>
+  <entry id="ris.517">
+    <hw>¹ʈaŋ</hw>
+    <gl>moelle</gl>
+  </entry>
+  <entry id="ris.518">
+    <hw>¹ʈaː</hw>
+    <gl>souche, racine</gl>
+  </entry>
+  <entry id="ris.519">
+    <hw>¹ʈaŋ</hw>
+    <gl>séparer en tirant sur les deux bouts &lt;Voc vb, fich perf&gt; casser (comme une corde, par tension) &lt;fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.520">
+    <hw>¹ʈeː</hw>
+    <gl>s'étrangler en buvant</gl>
+  </entry>
+  <entry id="ris.521">
+    <hw>¹ŋjal</hw>
+    <gl>ruminer</gl>
+  </entry>
+  <entry id="ris.522">
+    <hw>¹ŋjan</hw>
+    <gl>écouter &lt;th 181&gt;/ faire attention/ obéir, se laisser persuader</gl>
+  </entry>
+  <entry id="ris.523">
+    <hw>¹ŋjat</hw>
+    <gl>mâcher</gl>
+  </entry>
+  <entry id="ris.524">
+    <hw>¹ŋon</hw>
+    <gl>devant</gl>
+  </entry>
+  <entry id="ris.525">
+    <hw>¹ŋoː</hw>
+    <gl>taquiner &lt;th 100&gt;, agacer, chatouiller &lt;th 149&gt;</gl>
+  </entry>
+  <entry id="ris.526">
+    <hw>¹ʈu</hw>
+    <gl>être solide</gl>
+  </entry>
+  <entry id="ris.527">
+    <hw>¹ʈʰo</hw>
+    <gl>éclore, faire des petits, pondre</gl>
+  </entry>
+  <entry id="ris.528">
+    <hw>¹ʈʰok</hw>
+    <gl>casser (les mottes)</gl>
+  </entry>
+  <entry id="ris.529">
+    <hw>⁴hõt</hw>
+    <gl>appeler</gl>
+  </entry>
+  <entry id="ris.530">
+    <hw>⁴jap</hw>
+    <gl>vanner</gl>
+  </entry>
+  <entry id="ris.531">
+    <hw>⁴jar</hw>
+    <gl>s'enfuir, courrir</gl>
+  </entry>
+  <entry id="ris.532">
+    <hw>⁴joŋ</hw>
+    <gl>bercer, faire osciller</gl>
+  </entry>
+  <entry id="ris.533">
+    <hw>⁴kai</hw>
+    <gl>être en retard</gl>
+  </entry>
+  <entry id="ris.534">
+    <hw>⁴kap</hw>
+    <gl>pince à feu</gl>
+  </entry>
+  <entry id="ris.535">
+    <hw>⁴ki</hw>
+    <gl>chaume, paille</gl>
+  </entry>
+  <entry id="ris.536">
+    <hw>⁴kik</hw>
+    <gl>un, 1</gl>
+  </entry>
+  <entry id="ris.537">
+    <hw>⁴kjam</hw>
+    <gl>chemin &lt;th 169&gt;</gl>
+  </entry>
+  <entry id="ris.538">
+    <hw>⁴kjat</hw>
+    <gl>travail</gl>
+  </entry>
+  <entry id="ris.539">
+    <hw>⁴kjoi</hw>
+    <gl>enrouler &lt;Voc 74&gt;, (autour du corps, des mains) &lt;Voc vb, fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.540">
+    <hw>ᴸkjoŋ</hw>
+    <gl>très grand pot de cuivre ou de terre à grains ou à eau</gl>
+  </entry>
+  <entry id="ris.541">
+    <hw>⁴kju</hw>
+    <gl>mouton &lt;th 40, 68&gt;</gl>
+  </entry>
+  <entry id="ris.542">
+    <hw>ᴸkjui</hw>
+    <gl>provenance</gl>
+  </entry>
+  <entry id="ris.543">
+    <hw>⁴klap</hw>
+    <gl>boeuf</gl>
+  </entry>
+  <entry id="ris.544">
+    <hw>⁴kliŋ</hw>
+    <gl>neige</gl>
+  </entry>
+  <entry id="ris.545">
+    <hw>⁴klop</hw>
+    <srcxcr2>-¹sja</srcxcr2>
+    <gl>poumon &lt;Ani 73&gt;</gl>
+  </entry>
+  <entry id="ris.546">
+    <hw>⁴klu</hw>
+    <gl>acheter</gl>
+  </entry>
+  <entry id="ris.547">
+    <hw>⁴koŋ</hw>
+    <gl>être à l'affût &lt;from Sprigg&gt;</gl>
+  </entry>
+  <entry id="ris.548">
+    <hw>⁴kur</hw>
+    <gl>s'abattre, tomber (arbre)</gl>
+  </entry>
+  <entry id="ris.549">
+    <hw>⁴kwa</hw>
+    <gl>blé &lt;th 40, 68, 121&gt;</gl>
+  </entry>
+  <entry id="ris.550">
+    <hw>⁴kwat</hw>
+    <gl>buse, petit faucon, milan</gl>
+  </entry>
+  <entry id="ris.551">
+    <hw>⁴lip</hw>
+    <gl>éventer &lt;A86&gt;</gl>
+  </entry>
+  <entry id="ris.552">
+    <hw>⁴ma</hw>
+    <gl>cesser, finir (pluie...)/ perdre, casser</gl>
+  </entry>
+  <entry id="ris.553">
+    <hw>⁴mai</hw>
+    <gl>chercher</gl>
+  </entry>
+  <entry id="ris.554">
+    <hw>⁴man</hw>
+    <gl>aimer, désirer</gl>
+  </entry>
+  <entry id="ris.555">
+    <hw>⁴mar</hw>
+    <gl>or/ par ext. les caroncules du coq</gl>
+  </entry>
+  <entry id="ris.556">
+    <hw>⁴maŋ</hw>
+    <gl>fantôme, esprit d'un mort &lt;MN258&gt;</gl>
+  </entry>
+  <entry id="ris.557">
+    <hw>⁴maŋ</hw>
+    <gl>rêver</gl>
+  </entry>
+  <entry id="ris.558">
+    <hw>⁴me</hw>
+    <gl>bovin, vache</gl>
+  </entry>
+  <entry id="ris.559">
+    <hw>⁴mo</hw>
+    <gl>gémir</gl>
+  </entry>
+  <entry id="ris.560">
+    <hw>⁴mui</hw>
+    <gl>argent (métal)</gl>
+  </entry>
+  <entry id="ris.561">
+    <hw>⁴nai</hw>
+    <gl>pétrir, masser, fouler</gl>
+  </entry>
+  <entry id="ris.562">
+    <hw>⁴nan</hw>
+    <gl>couvrir</gl>
+  </entry>
+  <entry id="ris.563">
+    <hw>⁴net</hw>
+    <gl>foie</gl>
+  </entry>
+  <entry id="ris.564">
+    <hw>⁴niː</hw>
+    <srcxcr2>-ra</srcxcr2>
+    <gl>deux jours</gl>
+  </entry>
+  <entry id="ris.565">
+    <hw>⁴niː</hw>
+    <gl>deux</gl>
+  </entry>
+  <entry id="ris.566">
+    <hw>⁴no</hw>
+    <gl>aïl</gl>
+  </entry>
+  <entry id="ris.567">
+    <hw>⁴pam</hw>
+    <gl>marcher à quatre pattes</gl>
+  </entry>
+  <entry id="ris.568">
+    <hw>⁴paŋ</hw>
+    <gl>force</gl>
+  </entry>
+  <entry id="ris.569">
+    <hw>⁴pja</hw>
+    <gl>avoir des rapports sexuels (mâle)</gl>
+  </entry>
+  <entry id="ris.570">
+    <hw>⁴pjar</hw>
+    <gl>coller (itr), s'accrocher aux vêtements (e.g. teignes) tacher</gl>
+  </entry>
+  <entry id="ris.571">
+    <hw>⁴pjaŋ</hw>
+    <gl>jeter</gl>
+  </entry>
+  <entry id="ris.572">
+    <hw>⁴pjon</hw>
+    <gl>jeune homme</gl>
+  </entry>
+  <entry id="ris.573">
+    <hw>⁴pli</hw>
+    <gl>quatre</gl>
+  </entry>
+  <entry id="ris.574">
+    <hw>⁴ploː</hw>
+    <gl>piquer</gl>
+  </entry>
+  <entry id="ris.575">
+    <hw>⁴plu</hw>
+    <gl>semence, graine</gl>
+  </entry>
+  <entry id="ris.576">
+    <hw>⁴po</hw>
+    <gl>lever, gonfler au feu (pain)/ bouder</gl>
+  </entry>
+  <entry id="ris.577">
+    <hw>⁴pot</hw>
+    <gl>secouer les mottes pour faire tomber la terre/ carder</gl>
+  </entry>
+  <entry id="ris.578">
+    <hw>⁴pra</hw>
+    <gl>farine, poudre</gl>
+  </entry>
+  <entry id="ris.579">
+    <hw>⁴pra</hw>
+    <gl>marcher</gl>
+  </entry>
+  <entry id="ris.580">
+    <hw>⁴pran</hw>
+    <gl>attendre</gl>
+  </entry>
+  <entry id="ris.581">
+    <hw>⁴prat</hw>
+    <gl>huit</gl>
+  </entry>
+  <entry id="ris.582">
+    <hw>⁴praː</hw>
+    <gl>falaise</gl>
+  </entry>
+  <entry id="ris.583">
+    <hw>⁴pu</hw>
+    <gl>rizière</gl>
+  </entry>
+  <entry id="ris.584">
+    <hw>⁴pui</hw>
+    <gl>débordement (e.g. l'eau du riz)</gl>
+  </entry>
+  <entry id="ris.585">
+    <hw>⁴pup</hw>
+    <gl>fermenter (grain), entasser pour faire fermenter/ faisander</gl>
+  </entry>
+  <entry id="ris.586">
+    <hw>⁴ro</hw>
+    <gl>frire (prob. faire frire)</gl>
+  </entry>
+  <entry id="ris.587">
+    <hw>⁴rup</hw>
+    <gl>rencontre/ rencontrer</gl>
+  </entry>
+  <entry id="ris.588">
+    <hw>⁴sut</hw>
+    <gl>râper</gl>
+  </entry>
+  <entry id="ris.589">
+    <hw>⁴tam</hw>
+    <gl>retrouver l'appétit/ être sur le point de</gl>
+  </entry>
+  <entry id="ris.590">
+    <hw>⁴tap</hw>
+    <gl>aiguille</gl>
+  </entry>
+  <entry id="ris.591">
+    <hw>⁴ti</hw>
+    <gl>allumer (le feu, une allumette)</gl>
+  </entry>
+  <entry id="ris.592">
+    <hw>⁴tim</hw>
+    <gl>maison</gl>
+  </entry>
+  <entry id="ris.593">
+    <hw>ᴴtiː</hw>
+    <srcxcr2>-rem</srcxcr2>
+    <gl>une fois</gl>
+  </entry>
+  <entry id="ris.594">
+    <hw>⁴tot</hw>
+    <gl>charge</gl>
+  </entry>
+  <entry id="ris.595">
+    <hw>⁴toŋ</hw>
+    <gl>arbre</gl>
+  </entry>
+  <entry id="ris.596">
+    <hw>⁴toː</hw>
+    <gl>tourner, devenir, retourner</gl>
+  </entry>
+  <entry id="ris.597">
+    <hw>⁴tsaŋ</hw>
+    <gl>enfiler, introduire</gl>
+  </entry>
+  <entry id="ris.598">
+    <hw>⁴tsi</hw>
+    <gl>bière (boisson fermentée)</gl>
+  </entry>
+  <entry id="ris.599">
+    <hw>ᴴtsit</hw>
+    <gl>séparer, trier, vanner &lt;d'après S[rigg&gt;</gl>
+  </entry>
+  <entry id="ris.600">
+    <hw>⁴tsiː</hw>
+    <gl>réfléchir, penser, croire/ se rappeler</gl>
+  </entry>
+  <entry id="ris.601">
+    <hw>⁴tsjaː</hw>
+    <gl>compter &lt;th 59&gt;</gl>
+  </entry>
+  <entry id="ris.602">
+    <hw>⁴tsjop</hw>
+    <gl>méler en pétrissant avec les mains</gl>
+  </entry>
+  <entry id="ris.603">
+    <hw>⁴tsor</hw>
+    <gl>envelopper, mettre dans un paquet, attacher en un paquet</gl>
+  </entry>
+  <entry id="ris.604">
+    <hw>⁴tsuː</hw>
+    <gl>installer, poser &lt;th 67, 103&gt;/ poser sur le feu, faire cuire</gl>
+  </entry>
+  <entry id="ris.605">
+    <hw>ᴸtui</hw>
+    <gl>faire de petites dépenses pour une cérémonie &lt;voc vb, ? fich 70 on fp&gt; &lt;dépenser, contribuer&gt;</gl>
+  </entry>
+  <entry id="ris.606">
+    <hw>⁴tut</hw>
+    <gl>ramasser au sol</gl>
+  </entry>
+  <entry id="ris.607">
+    <hw>⁴ʈap</hw>
+    <srcxcr2>-⁴ʈup</srcxcr2>
+    <gl>légumes &lt;Ani, BL 761&gt;</gl>
+  </entry>
+  <entry id="ris.608">
+    <hw>⁴ʈaː</hw>
+    <gl>bandeau frontal pour porter</gl>
+  </entry>
+  <entry id="ris.609">
+    <hw>⁴ŋaː</hw>
+    <gl>cinq</gl>
+  </entry>
+  <entry id="ris.610">
+    <hw>⁴ʈet</hw>
+    <gl>griffer (chat, épine)/ gratter le sol avec les pieds (poulets) &lt;Ani 78 on fich perf&gt;</gl>
+  </entry>
+  <entry id="ris.611">
+    <hw>⁴ŋjoi</hw>
+    <gl>sari</gl>
+  </entry>
+  <entry id="ris.612">
+    <hw>⁴ŋju</hw>
+    <gl>dissoudre</gl>
+  </entry>
+  <entry id="ris.613">
+    <hw>⁴ŋot</hw>
+    <gl>appeler</gl>
+  </entry>
+  <entry id="ris.614">
+    <hw>⁴ʈu</hw>
+    <gl>six, chiffre 6</gl>
+  </entry>
+  <entry id="ris.615">
+    <hw>⁴ʈui</hw>
+    <gl>avalanche &lt;th 43&gt;</gl>
+  </entry>
+  <entry id="ris.616">
+    <hw>⁴ʈup</hw>
+    <gl>coudre</gl>
+  </entry>
+  <entry id="ris.617">
+    <hw>⁴ʈuŋ</hw>
+    <gl>fermer</gl>
+  </entry>
+  <entry id="ris.618">
+    <hw>⁴ʈwa</hw>
+    <gl>porc, cochon</gl>
+  </entry>
+  <entry id="ris.619">
+    <hw>⁴ʈwi</hw>
+    <gl>avalanche, éboulement</gl>
+  </entry>
+</lexicon>

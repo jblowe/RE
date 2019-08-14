@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="gha">
+  <entry id="gha.1">
+    <hw>²ju</hw>
+    <srcxcr1>juqba</srcxcr1>
+    <gl>come (from up or north)</gl>
+  </entry>
+  <entry id="gha.2">
+    <hw>²ju</hw>
+    <srcxcr1>juqbaː</srcxcr1>
+    <gl>sufficient</gl>
+  </entry>
+  <entry id="gha.3">
+    <hw>²jõ</hw>
+    <srcxcr1>jõqbaː</srcxcr1>
+    <gl>light</gl>
+  </entry>
+  <entry id="gha.4">
+    <hw>²ka</hw>
+    <srcxcr1>mi kaqba</srcxcr1>
+    <gl>light (fire) (v.t.)</gl>
+  </entry>
+  <entry id="gha.5">
+    <hw>²kaː</hw>
+    <srcxcr1>kaːq mubaːq</srcxcr1>
+    <gl>plugged</gl>
+  </entry>
+  <entry id="gha.6">
+    <hw>²kaː</hw>
+    <srcxcr1>kaːq</srcxcr1>
+    <gl>cover/lid</gl>
+  </entry>
+  <entry id="gha.7">
+    <hw>²kaː</hw>
+    <srcxcr1>kaːqba</srcxcr1>
+    <gl>cover</gl>
+  </entry>
+  <entry id="gha.8">
+    <hw>²ke</hw>
+    <srcxcr1>gaːl keqba</srcxcr1>
+    <gl>scold, curse</gl>
+  </entry>
+  <entry id="gha.9">
+    <hw>²kju</hw>
+    <srcxcr1>kjuq</srcxcr1>
+    <gl>water</gl>
+  </entry>
+  <entry id="gha.10">
+    <hw>²kjwẽ</hw>
+    <srcxcr1>kjwẽqba</srcxcr1>
+    <gl>mend</gl>
+  </entry>
+  <entry id="gha.11">
+    <hw>²ko</hw>
+    <srcxcr1>koq</srcxcr1>
+    <gl>blood</gl>
+  </entry>
+  <entry id="gha.12">
+    <hw>²ko</hw>
+    <srcxcr1>koqba</srcxcr1>
+    <gl>feed (solid food to child)</gl>
+  </entry>
+  <entry id="gha.13">
+    <hw>²krãː</hw>
+    <srcxcr1>krãːqba</srcxcr1>
+    <gl>spoil (fruit)(v.i.)</gl>
+  </entry>
+  <entry id="gha.14">
+    <hw>²ku</hw>
+    <srcxcr1>kuq</srcxcr1>
+    <gl>nine</gl>
+  </entry>
+  <entry id="gha.15">
+    <hw>²kwi</hw>
+    <srcxcr1>kwiqba</srcxcr1>
+    <gl>pick up (v.t.)</gl>
+  </entry>
+  <entry id="gha.16">
+    <hw>²kwi</hw>
+    <srcxcr1>kwiqba</srcxcr1>
+    <gl>weigh</gl>
+  </entry>
+  <entry id="gha.17">
+    <hw>²kʰae</hw>
+    <srcxcr1>kʰaeqba</srcxcr1>
+    <gl>comb nettle thread by hand</gl>
+  </entry>
+  <entry id="gha.18">
+    <hw>²kãː</hw>
+    <srcxcr1>kãːq</srcxcr1>
+    <gl>chin</gl>
+  </entry>
+  <entry id="gha.19">
+    <hw>²kʰe</hw>
+    <srcxcr1>kʰeqba</srcxcr1>
+    <gl>read</gl>
+  </entry>
+  <entry id="gha.20">
+    <hw>²kʰi</hw>
+    <srcxcr1>kʰiqba</srcxcr1>
+    <gl>borrow</gl>
+  </entry>
+  <entry id="gha.21">
+    <hw>²kõ</hw>
+    <srcxcr1>kõqba</srcxcr1>
+    <gl>numb (with cold)</gl>
+  </entry>
+  <entry id="gha.22">
+    <hw>²kʰri</hw>
+    <srcxcr1>kʰriqba</srcxcr1>
+    <gl>gnaw</gl>
+  </entry>
+  <entry id="gha.23">
+    <hw>²kʰru</hw>
+    <srcxcr1>dzju kʰruqba</srcxcr1>
+    <gl>to wash</gl>
+  </entry>
+  <entry id="gha.24">
+    <hw>²kʰu</hw>
+    <srcxcr1>kʰuq</srcxcr1>
+    <gl>soup/broth</gl>
+  </entry>
+  <entry id="gha.25">
+    <hw>²kʰãː</hw>
+    <srcxcr1>kʰãːqba</srcxcr1>
+    <gl>can</gl>
+  </entry>
+  <entry id="gha.26">
+    <hw>²kʰũ</hw>
+    <srcxcr1>kʰũq</srcxcr1>
+    <gl>hole</gl>
+  </entry>
+  <entry id="gha.27">
+    <hw>²kʰũ</hw>
+    <srcxcr1>kʰũq-ba</srcxcr1>
+    <gl>cold (of weather)</gl>
+  </entry>
+  <entry id="gha.28">
+    <hw>²le</hw>
+    <srcxcr1>leq</srcxcr1>
+    <gl>tongue</gl>
+  </entry>
+  <entry id="gha.29">
+    <hw>²li</hw>
+    <srcxcr1>liq</srcxcr1>
+    <gl>face</gl>
+  </entry>
+  <entry id="gha.30">
+    <hw>²lo</hw>
+    <srcxcr1>loqba</srcxcr1>
+    <gl>hide (v.i.)</gl>
+  </entry>
+  <entry id="gha.31">
+    <hw>²lĩ</hw>
+    <srcxcr1>lĩqbae tʰãː</srcxcr1>
+    <gl>fragrant</gl>
+  </entry>
+  <entry id="gha.32">
+    <hw>²lũ</hw>
+    <srcxcr1>lũqba</srcxcr1>
+    <gl>burn (v.i.)</gl>
+  </entry>
+  <entry id="gha.33">
+    <hw>²mjaː</hw>
+    <srcxcr1>mjaːqba</srcxcr1>
+    <gl>scrub (pots)</gl>
+  </entry>
+  <entry id="gha.34">
+    <hw>²mli</hw>
+    <srcxcr1>mliqba</srcxcr1>
+    <gl>forget</gl>
+  </entry>
+  <entry id="gha.35">
+    <hw>²mrẽ</hw>
+    <srcxcr1>mrẽqba</srcxcr1>
+    <gl>satiated</gl>
+  </entry>
+  <entry id="gha.36">
+    <hw>²mrõ</hw>
+    <srcxcr1>mrõq</srcxcr1>
+    <gl>field (wet)</gl>
+  </entry>
+  <entry id="gha.37">
+    <hw>²mwi</hw>
+    <srcxcr1>mwiq</srcxcr1>
+    <gl>fur</gl>
+  </entry>
+  <entry id="gha.38">
+    <hw>²mĩ</hw>
+    <srcxcr1>mĩqba</srcxcr1>
+    <gl>ripen</gl>
+  </entry>
+  <entry id="gha.39">
+    <hw>²na</hw>
+    <srcxcr1>naqba</srcxcr1>
+    <gl>carry</gl>
+  </entry>
+  <entry id="gha.40">
+    <hw>²na</hw>
+    <srcxcr1>naqbae</srcxcr1>
+    <gl>sick</gl>
+  </entry>
+  <entry id="gha.41">
+    <hw>²naː</hw>
+    <srcxcr1>naːq</srcxcr1>
+    <gl>mucus (nasal)</gl>
+  </entry>
+  <entry id="gha.42">
+    <hw>²ne</hw>
+    <srcxcr1>neq</srcxcr1>
+    <gl>full</gl>
+  </entry>
+  <entry id="gha.43">
+    <hw>²no</hw>
+    <srcxcr1>noqba</srcxcr1>
+    <gl>to bear, carry</gl>
+  </entry>
+  <entry id="gha.44">
+    <hw>²nu</hw>
+    <srcxcr1>nuqbaː</srcxcr1>
+    <gl>high</gl>
+  </entry>
+  <entry id="gha.45">
+    <hw>²nãː</hw>
+    <srcxcr1>nãːq</srcxcr1>
+    <gl>rain</gl>
+  </entry>
+  <entry id="gha.46">
+    <hw>²nõ</hw>
+    <srcxcr1>naqga nõqba</srcxcr1>
+    <gl>brood</gl>
+  </entry>
+  <entry id="gha.47">
+    <hw>²pi</hw>
+    <srcxcr1>piqba</srcxcr1>
+    <gl>give up/abstain from/forsake</gl>
+  </entry>
+  <entry id="gha.48">
+    <hw>²pi</hw>
+    <srcxcr1>piqba</srcxcr1>
+    <gl>peel</gl>
+  </entry>
+  <entry id="gha.49">
+    <hw>²pi</hw>
+    <srcxcr1>piqba</srcxcr1>
+    <gl>release</gl>
+  </entry>
+  <entry id="gha.50">
+    <hw>²pjo</hw>
+    <srcxcr1>pjoqba</srcxcr1>
+    <gl>boil (water)</gl>
+  </entry>
+  <entry id="gha.51">
+    <hw>²pjũ</hw>
+    <srcxcr1>pjũq</srcxcr1>
+    <gl>husband (respectful term)</gl>
+  </entry>
+  <entry id="gha.52">
+    <hw>²pre</hw>
+    <srcxcr1>tihjãː preqba</srcxcr1>
+    <gl>shine (sun)(v.i.)</gl>
+  </entry>
+  <entry id="gha.53">
+    <hw>²pri</hw>
+    <srcxcr1>-ne priq</srcxcr1>
+    <gl>with</gl>
+  </entry>
+  <entry id="gha.54">
+    <hw>²pri</hw>
+    <srcxcr1>priqba</srcxcr1>
+    <gl>leave behind</gl>
+  </entry>
+  <entry id="gha.55">
+    <hw>²prĩ</hw>
+    <srcxcr1>prĩqba</srcxcr1>
+    <gl>strike (smn.)/ shoot/ sing</gl>
+  </entry>
+  <entry id="gha.56">
+    <hw>²pwe</hw>
+    <srcxcr1>pweq</srcxcr1>
+    <gl>iron</gl>
+  </entry>
+  <entry id="gha.57">
+    <hw>²pʰjo</hw>
+    <srcxcr1>pʰjoqba</srcxcr1>
+    <gl>sweep/ wipe off</gl>
+  </entry>
+  <entry id="gha.58">
+    <hw>²pʰo</hw>
+    <srcxcr1>pʰoq</srcxcr1>
+    <gl>belly</gl>
+  </entry>
+  <entry id="gha.59">
+    <hw>²pʰo</hw>
+    <srcxcr1>pʰoqba</srcxcr1>
+    <gl>pay</gl>
+  </entry>
+  <entry id="gha.60">
+    <hw>²põ</hw>
+    <srcxcr1>põqba</srcxcr1>
+    <gl>speak</gl>
+  </entry>
+  <entry id="gha.61">
+    <hw>²pʰu</hw>
+    <srcxcr1>pʰuqba</srcxcr1>
+    <gl>rub in</gl>
+  </entry>
+  <entry id="gha.62">
+    <hw>²pʰwi</hw>
+    <srcxcr1>pʰwiqba</srcxcr1>
+    <gl>tie up (laces)</gl>
+  </entry>
+  <entry id="gha.63">
+    <hw>²pʰũ</hw>
+    <srcxcr1>pʰũq</srcxcr1>
+    <gl>egg</gl>
+  </entry>
+  <entry id="gha.64">
+    <hw>²raː</hw>
+    <srcxcr1>raːq-m</srcxcr1>
+    <gl>stand</gl>
+  </entry>
+  <entry id="gha.65">
+    <hw>²ro</hw>
+    <srcxcr1>raːhr roqba</srcxcr1>
+    <gl>wallow</gl>
+  </entry>
+  <entry id="gha.66">
+    <hw>²ro</hw>
+    <srcxcr1>roqba</srcxcr1>
+    <gl>lie down</gl>
+  </entry>
+  <entry id="gha.67">
+    <hw>²ro</hw>
+    <srcxcr1>roqba</srcxcr1>
+    <gl>weave/knit</gl>
+  </entry>
+  <entry id="gha.68">
+    <hw>²ru</hw>
+    <srcxcr1>ruq</srcxcr1>
+    <gl>thread/ string</gl>
+  </entry>
+  <entry id="gha.69">
+    <hw>²ru</hw>
+    <srcxcr1>ruqba</srcxcr1>
+    <gl>bear fruit</gl>
+  </entry>
+  <entry id="gha.70">
+    <hw>²rui</hw>
+    <srcxcr1>ruqi</srcxcr1>
+    <gl>vomit</gl>
+  </entry>
+  <entry id="gha.71">
+    <hw>²rõ</hw>
+    <srcxcr1>rõqba</srcxcr1>
+    <gl>swell</gl>
+  </entry>
+  <entry id="gha.72">
+    <hw>²rũ</hw>
+    <srcxcr1>rũqba</srcxcr1>
+    <gl>guard (fields, baggage)</gl>
+  </entry>
+  <entry id="gha.73">
+    <hw>²rũ</hw>
+    <gl>thick, stiff</gl>
+  </entry>
+  <entry id="gha.74">
+    <hw>²se</hw>
+    <srcxcr1>seq</srcxcr1>
+    <gl>louse</gl>
+  </entry>
+  <entry id="gha.75">
+    <hw>²se</hw>
+    <srcxcr1>seq-m</srcxcr1>
+    <gl>know</gl>
+  </entry>
+  <entry id="gha.76">
+    <hw>²se</hw>
+    <srcxcr1>seqba</srcxcr1>
+    <gl>dance</gl>
+  </entry>
+  <entry id="gha.77">
+    <hw>²se</hw>
+    <srcxcr1>seqba</srcxcr1>
+    <gl>tell (story)</gl>
+  </entry>
+  <entry id="gha.78">
+    <hw>²sjaː</hw>
+    <srcxcr1>sjaːqba</srcxcr1>
+    <gl>meet/met, be</gl>
+  </entry>
+  <entry id="gha.79">
+    <hw>²sjo</hw>
+    <srcxcr1>sjoqba</srcxcr1>
+    <gl>put away</gl>
+  </entry>
+  <entry id="gha.80">
+    <hw>²sju</hw>
+    <srcxcr1>tahq mĩq sjuqba</srcxcr1>
+    <gl>thread (needle) (v.)</gl>
+  </entry>
+  <entry id="gha.81">
+    <hw>²sjwi</hw>
+    <srcxcr1>sjwiqba</srcxcr1>
+    <gl>uproot</gl>
+  </entry>
+  <entry id="gha.82">
+    <hw>²so</hw>
+    <srcxcr1>soq</srcxcr1>
+    <gl>breath</gl>
+  </entry>
+  <entry id="gha.83">
+    <hw>²so</hw>
+    <srcxcr1>soqba</srcxcr1>
+    <gl>live</gl>
+  </entry>
+  <entry id="gha.84">
+    <hw>²sĩ</hw>
+    <srcxcr1>sĩq</srcxcr1>
+    <gl>wood</gl>
+  </entry>
+  <entry id="gha.85">
+    <hw>²sõ</hw>
+    <srcxcr1>sõq</srcxcr1>
+    <gl>three</gl>
+  </entry>
+  <entry id="gha.86">
+    <hw>²sõ</hw>
+    <srcxcr1>sõqba</srcxcr1>
+    <gl>spread (grains to dry)(v.t.)</gl>
+  </entry>
+  <entry id="gha.87">
+    <hw>²sũ</hw>
+    <srcxcr1>sũq tabaq</srcxcr1>
+    <gl>perforated</gl>
+  </entry>
+  <entry id="gha.88">
+    <hw>²ta</hw>
+    <srcxcr1>taq</srcxcr1>
+    <gl>axe</gl>
+  </entry>
+  <entry id="gha.89">
+    <hw>²ta</hw>
+    <srcxcr1>taqba</srcxcr1>
+    <gl>descend/ bouquet</gl>
+  </entry>
+  <entry id="gha.90">
+    <hw>²te</hw>
+    <srcxcr1>teqba</srcxcr1>
+    <gl>take out</gl>
+  </entry>
+  <entry id="gha.91">
+    <hw>²ti</hw>
+    <srcxcr1>tiq dzõhbaq</srcxcr1>
+    <gl>wind up</gl>
+  </entry>
+  <entry id="gha.92">
+    <hw>²ti</hw>
+    <srcxcr1>mwiq tiqba</srcxcr1>
+    <gl>singe (fowl)</gl>
+  </entry>
+  <entry id="gha.93">
+    <hw>²to</hw>
+    <srcxcr1>toq</srcxcr1>
+    <gl>what</gl>
+  </entry>
+  <entry id="gha.94">
+    <hw>²to</hw>
+    <srcxcr1>toqba</srcxcr1>
+    <gl>hold out (to receive sthg.)</gl>
+  </entry>
+  <entry id="gha.95">
+    <hw>²tsa</hw>
+    <srcxcr1>tsaq</srcxcr1>
+    <gl>that/ he</gl>
+  </entry>
+  <entry id="gha.96">
+    <hw>²tsju</hw>
+    <srcxcr1>tsjuq</srcxcr1>
+    <gl>ten</gl>
+  </entry>
+  <entry id="gha.97">
+    <hw>²tsju</hw>
+    <srcxcr1>tsjuqba</srcxcr1>
+    <gl>shut in</gl>
+  </entry>
+  <entry id="gha.98">
+    <hw>²tsu</hw>
+    <srcxcr1>tsuq</srcxcr1>
+    <gl>this/ it</gl>
+  </entry>
+  <entry id="gha.99">
+    <hw>²tsʰa</hw>
+    <srcxcr1>tsʰaq</srcxcr1>
+    <gl>cemetery</gl>
+  </entry>
+  <entry id="gha.100">
+    <hw>²tsʰa</hw>
+    <srcxcr1>tsʰaqba</srcxcr1>
+    <gl>heat (v.i.)</gl>
+  </entry>
+  <entry id="gha.101">
+    <hw>²tsʰa</hw>
+    <srcxcr1>tsʰaqba</srcxcr1>
+    <gl>pain</gl>
+  </entry>
+  <entry id="gha.102">
+    <hw>²tsʰaː</hw>
+    <srcxcr1>tsʰaːqba</srcxcr1>
+    <gl>peel</gl>
+  </entry>
+  <entry id="gha.103">
+    <hw>²tsʰe</hw>
+    <srcxcr1>tsʰeq</srcxcr1>
+    <gl>loan</gl>
+  </entry>
+  <entry id="gha.104">
+    <hw>²tsẽ</hw>
+    <srcxcr1>tsẽqba</srcxcr1>
+    <gl>knead</gl>
+  </entry>
+  <entry id="gha.105">
+    <hw>²tsʰi</hw>
+    <srcxcr1>tsʰiq</srcxcr1>
+    <gl>grease</gl>
+  </entry>
+  <entry id="gha.106">
+    <hw>²tsʰju</hw>
+    <srcxcr1>tsʰjuq</srcxcr1>
+    <gl>ligament</gl>
+  </entry>
+  <entry id="gha.107">
+    <hw>²tsʰu</hw>
+    <srcxcr1>tsʰuqba</srcxcr1>
+    <gl>bark</gl>
+  </entry>
+  <entry id="gha.108">
+    <hw>²tsũ</hw>
+    <srcxcr1>tsũqba</srcxcr1>
+    <gl>sell</gl>
+  </entry>
+  <entry id="gha.109">
+    <hw>²tsʰãː</hw>
+    <srcxcr1>tsʰãːq</srcxcr1>
+    <gl>hair (pubic)</gl>
+  </entry>
+  <entry id="gha.110">
+    <hw>²tu</hw>
+    <srcxcr1>tuq</srcxcr1>
+    <gl>saliva</gl>
+  </entry>
+  <entry id="gha.111">
+    <hw>²twĩ</hw>
+    <srcxcr1>twĩq-puhrih</srcxcr1>
+    <gl>centipede</gl>
+  </entry>
+  <entry id="gha.112">
+    <hw>²tõ</hw>
+    <srcxcr1>tõq</srcxcr1>
+    <gl>pot</gl>
+  </entry>
+  <entry id="gha.113">
+    <hw>²tũ</hw>
+    <srcxcr1>tũqba</srcxcr1>
+    <gl>gather up</gl>
+  </entry>
+  <entry id="gha.114">
+    <hw>²tʰur</hw>
+    <srcxcr1>tʰuqrba</srcxcr1>
+    <gl>fight (animals)</gl>
+  </entry>
+  <entry id="gha.115">
+    <hw>²tʰũ</hw>
+    <srcxcr1>tʰũq-m</srcxcr1>
+    <gl>drink</gl>
+  </entry>
+  <entry id="gha.116">
+    <hw>²ŋa</hw>
+    <srcxcr1>ŋaq</srcxcr1>
+    <gl>I</gl>
+  </entry>
+  <entry id="gha.117">
+    <hw>²ŋi</hw>
+    <srcxcr1>ŋiq</srcxcr1>
+    <gl>seven</gl>
+  </entry>
+  <entry id="gha.118">
+    <hw>²ŋjui</hw>
+    <srcxcr1>ŋjuiqba</srcxcr1>
+    <gl>ask</gl>
+  </entry>
+  <entry id="gha.119">
+    <hw>²ʈo</hw>
+    <srcxcr1>ʈoq-jaːhbaq</srcxcr1>
+    <gl>torn, become</gl>
+  </entry>
+  <entry id="gha.120">
+    <hw>²ŋo</hw>
+    <gl>a trap</gl>
+  </entry>
+  <entry id="gha.121">
+    <hw>²ũi</hw>
+    <srcxcr1>ũ'iba</srcxcr1>
+    <gl>to show</gl>
+  </entry>
+  <entry id="gha.122">
+    <hw>²ŋwe</hw>
+    <srcxcr1>ŋweqba</srcxcr1>
+    <gl>jump over</gl>
+  </entry>
+  <entry id="gha.123">
+    <hw>³jaː</hw>
+    <srcxcr2>i</srcxcr2>
+    <srcxcr1>raŋ jaːhi</srcxcr1>
+    <gl>faded</gl>
+  </entry>
+  <entry id="gha.124">
+    <hw>³jo</hw>
+    <srcxcr1>johba</srcxcr1>
+    <gl>cook (rice, cereal)(v.t.)</gl>
+  </entry>
+  <entry id="gha.125">
+    <hw>³jãː</hw>
+    <srcxcr1>jãːhba</srcxcr1>
+    <gl>punish/threaten to strike</gl>
+  </entry>
+  <entry id="gha.126">
+    <hw>³kae</hw>
+    <srcxcr1>kaehba</srcxcr1>
+    <gl>late, be</gl>
+  </entry>
+  <entry id="gha.127">
+    <hw>³ki</hw>
+    <srcxcr1>kih</srcxcr1>
+    <gl>you</gl>
+  </entry>
+  <entry id="gha.128">
+    <hw>³ko</hw>
+    <srcxcr1>koh</srcxcr1>
+    <gl>back (upper)</gl>
+  </entry>
+  <entry id="gha.129">
+    <hw>³ko</hw>
+    <srcxcr1>kohba</srcxcr1>
+    <gl>stuck, get</gl>
+  </entry>
+  <entry id="gha.130">
+    <hw>³ko</hw>
+    <srcxcr1>kohba</srcxcr1>
+    <gl>understand</gl>
+  </entry>
+  <entry id="gha.131">
+    <hw>³kri</hw>
+    <srcxcr1>krih</srcxcr1>
+    <gl>dirty</gl>
+  </entry>
+  <entry id="gha.132">
+    <hw>³krõ</hw>
+    <srcxcr1>krõh</srcxcr1>
+    <gl>chief</gl>
+  </entry>
+  <entry id="gha.133">
+    <hw>³kur</hw>
+    <srcxcr1>kuhr-waːbaq</srcxcr1>
+    <gl>fall over, cause to</gl>
+  </entry>
+  <entry id="gha.134">
+    <hw>³kwi</hw>
+    <srcxcr1>kwih paːq kwihba</srcxcr1>
+    <gl>brew (v.)</gl>
+  </entry>
+  <entry id="gha.135">
+    <hw>³kẽ</hw>
+    <srcxcr1>kẽh dzõhbaq</srcxcr1>
+    <gl>bread</gl>
+  </entry>
+  <entry id="gha.136">
+    <hw>³li</hw>
+    <srcxcr1>lihba</srcxcr1>
+    <gl>heavy</gl>
+  </entry>
+  <entry id="gha.137">
+    <hw>³lu</hw>
+    <srcxcr1>luh-jaːbaq</srcxcr1>
+    <gl>overflow</gl>
+  </entry>
+  <entry id="gha.138">
+    <hw>³lẽ</hw>
+    <srcxcr1>lẽhba</srcxcr1>
+    <gl>lick</gl>
+  </entry>
+  <entry id="gha.139">
+    <hw>³ma</hw>
+    <srcxcr1>mah-jaːbaq</srcxcr1>
+    <gl>go astray</gl>
+  </entry>
+  <entry id="gha.140">
+    <hw>³mae</hw>
+    <srcxcr1>maehba</srcxcr1>
+    <gl>search for</gl>
+  </entry>
+  <entry id="gha.141">
+    <hw>³mi</hw>
+    <srcxcr1>mih</srcxcr1>
+    <gl>person</gl>
+  </entry>
+  <entry id="gha.142">
+    <hw>³mjõ</hw>
+    <srcxcr1>mjõhba</srcxcr1>
+    <gl>taste/eat sample</gl>
+  </entry>
+  <entry id="gha.143">
+    <hw>³mla</hw>
+    <srcxcr1>mlah</srcxcr1>
+    <gl>rice (unhusked)</gl>
+  </entry>
+  <entry id="gha.144">
+    <hw>³mõ</hw>
+    <srcxcr1>mõhɖ mõhba</srcxcr1>
+    <gl>imagine/dream</gl>
+  </entry>
+  <entry id="gha.145">
+    <hw>³mõ</hw>
+    <srcxcr2>d</srcxcr2>
+    <gl>ghost</gl>
+  </entry>
+  <entry id="gha.146">
+    <hw>³na</hw>
+    <srcxcr1>nah</srcxcr1>
+    <gl>ear</gl>
+  </entry>
+  <entry id="gha.147">
+    <hw>³na</hw>
+    <srcxcr1>bõhq nahba</srcxcr1>
+    <gl>rest</gl>
+  </entry>
+  <entry id="gha.148">
+    <hw>³na</hw>
+    <srcxcr1>nahba</srcxcr1>
+    <gl>take care (child)</gl>
+  </entry>
+  <entry id="gha.149">
+    <hw>³ne</hw>
+    <srcxcr1>nehba</srcxcr1>
+    <gl>alight (e.g. bird, aircraft)</gl>
+  </entry>
+  <entry id="gha.150">
+    <hw>³no</hw>
+    <srcxcr1>noh</srcxcr1>
+    <gl>pus</gl>
+  </entry>
+  <entry id="gha.151">
+    <hw>³nõ</hw>
+    <srcxcr1>nõh nõh</srcxcr1>
+    <gl>under</gl>
+  </entry>
+  <entry id="gha.152">
+    <hw>³paẽ</hw>
+    <gl>bundle of rattan carried as a load</gl>
+  </entry>
+  <entry id="gha.153">
+    <hw>³pjaː</hw>
+    <srcxcr1>pjaːh</srcxcr1>
+    <gl>feather</gl>
+  </entry>
+  <entry id="gha.154">
+    <hw>³pjũ</hw>
+    <srcxcr1>pjũhba</srcxcr1>
+    <gl>cough (v.)</gl>
+  </entry>
+  <entry id="gha.155">
+    <hw>³pla</hw>
+    <srcxcr1>plah</srcxcr1>
+    <gl>spirit/mind/soul</gl>
+  </entry>
+  <entry id="gha.156">
+    <hw>³plõ</hw>
+    <srcxcr1>plõhba</srcxcr1>
+    <gl>boil over (water)</gl>
+  </entry>
+  <entry id="gha.157">
+    <hw>³po</hw>
+    <srcxcr1>poh</srcxcr1>
+    <gl>leaf</gl>
+  </entry>
+  <entry id="gha.158">
+    <hw>³pri</hw>
+    <srcxcr1>prihba</srcxcr1>
+    <gl>shear (sheep)</gl>
+  </entry>
+  <entry id="gha.159">
+    <hw>³pri</hw>
+    <srcxcr1>prihba</srcxcr1>
+    <gl>write/ draw</gl>
+  </entry>
+  <entry id="gha.160">
+    <hw>³pro</hw>
+    <srcxcr1>prohba</srcxcr1>
+    <gl>grind (grains)</gl>
+  </entry>
+  <entry id="gha.161">
+    <hw>³prõ</hw>
+    <srcxcr1>mehq prõh</srcxcr1>
+    <gl>cow shed</gl>
+  </entry>
+  <entry id="gha.162">
+    <hw>³pu</hw>
+    <srcxcr1>puhba</srcxcr1>
+    <gl>comb wool (with a bow)</gl>
+  </entry>
+  <entry id="gha.163">
+    <hw>³pãː</hw>
+    <srcxcr1>pãːh</srcxcr1>
+    <gl>thigh</gl>
+  </entry>
+  <entry id="gha.164">
+    <hw>³põ</hw>
+    <srcxcr1>põhba</srcxcr1>
+    <gl>quarrel (with words)</gl>
+  </entry>
+  <entry id="gha.165">
+    <hw>³ra</hw>
+    <srcxcr1>rahba</srcxcr1>
+    <gl>know</gl>
+  </entry>
+  <entry id="gha.166">
+    <hw>³raː</hw>
+    <srcxcr1>raːhba</srcxcr1>
+    <gl>play (instrument)</gl>
+  </entry>
+  <entry id="gha.167">
+    <hw>³ri</hw>
+    <srcxcr1>rihba</srcxcr1>
+    <gl>request (object)</gl>
+  </entry>
+  <entry id="gha.168">
+    <hw>³rĩ</hw>
+    <srcxcr1>rĩh</srcxcr1>
+    <gl>plague</gl>
+  </entry>
+  <entry id="gha.169">
+    <hw>³to</hw>
+    <srcxcr1>toh</srcxcr1>
+    <gl>post</gl>
+  </entry>
+  <entry id="gha.170">
+    <hw>³to</hw>
+    <srcxcr1>tohba</srcxcr1>
+    <gl>appear (person)</gl>
+  </entry>
+  <entry id="gha.171">
+    <hw>³to</hw>
+    <srcxcr1>tohba</srcxcr1>
+    <gl>meet</gl>
+  </entry>
+  <entry id="gha.172">
+    <hw>³tsaẽ</hw>
+    <srcxcr1>tsaẽhba</srcxcr1>
+    <gl>measure (cloth)</gl>
+  </entry>
+  <entry id="gha.173">
+    <hw>³tsi</hw>
+    <srcxcr1>tsih</srcxcr1>
+    <gl>knee</gl>
+  </entry>
+  <entry id="gha.174">
+    <hw>³tsi</hw>
+    <srcxcr1>tsih-m</srcxcr1>
+    <gl>bite</gl>
+  </entry>
+  <entry id="gha.175">
+    <hw>³tsjur</hw>
+    <srcxcr1>tsjuhrba</srcxcr1>
+    <gl>squeeze (juice)</gl>
+  </entry>
+  <entry id="gha.176">
+    <hw>³tso</hw>
+    <srcxcr1>ɖãːɖaeq tsoh tsutstsoq</srcxcr1>
+    <gl>peak</gl>
+  </entry>
+  <entry id="gha.177">
+    <hw>³tsĩ</hw>
+    <srcxcr1>tsĩhba</srcxcr1>
+    <gl>finished, be (v.i.)</gl>
+  </entry>
+  <entry id="gha.178">
+    <hw>³tsõ</hw>
+    <srcxcr1>tsõh</srcxcr1>
+    <gl>nest</gl>
+  </entry>
+  <entry id="gha.179">
+    <hw>³tu</hw>
+    <srcxcr1>tuhba</srcxcr1>
+    <gl>must</gl>
+  </entry>
+  <entry id="gha.180">
+    <hw>³tã</hw>
+    <srcxcr1>tãhba</srcxcr1>
+    <gl>choose (v.)</gl>
+  </entry>
+  <entry id="gha.181">
+    <hw>³u</hw>
+    <srcxcr1>uhba</srcxcr1>
+    <gl>cover (v.)</gl>
+  </entry>
+  <entry id="gha.182">
+    <hw>³ŋa</hw>
+    <srcxcr1>ŋah</srcxcr1>
+    <gl>drum (lama's)</gl>
+  </entry>
+  <entry id="gha.183">
+    <hw>³ʈaː</hw>
+    <srcxcr1>ʈaːh ʈuh</srcxcr1>
+    <gl>vegetable</gl>
+  </entry>
+  <entry id="gha.184">
+    <hw>³ŋe</hw>
+    <srcxcr1>ŋeh</srcxcr1>
+    <gl>milk</gl>
+  </entry>
+  <entry id="gha.185">
+    <hw>³ŋe</hw>
+    <srcxcr1>ŋehba</srcxcr1>
+    <gl>milk (cow)(v.t.)</gl>
+  </entry>
+  <entry id="gha.186">
+    <hw>³ŋe</hw>
+    <srcxcr1>ŋehba</srcxcr1>
+    <gl>to make noise</gl>
+  </entry>
+  <entry id="gha.187">
+    <hw>³ŋjo</hw>
+    <srcxcr1>ŋjohba</srcxcr1>
+    <gl>look at</gl>
+  </entry>
+  <entry id="gha.188">
+    <hw>³ŋo</hw>
+    <srcxcr1>ŋoh</srcxcr1>
+    <gl>forehead</gl>
+  </entry>
+  <entry id="gha.189">
+    <hw>³ŋo</hw>
+    <srcxcr1>ŋohba</srcxcr1>
+    <gl>fry/dry-fry</gl>
+  </entry>
+  <entry id="gha.190">
+    <hw>³ʈo</hw>
+    <srcxcr1>ʈohba</srcxcr1>
+    <gl>win</gl>
+  </entry>
+  <entry id="gha.191">
+    <hw>³ɬo</hw>
+    <gl>place</gl>
+  </entry>
+  <entry id="gha.192">
+    <hw>³ʈu</hw>
+    <srcxcr1>ʈaːh ʈuh</srcxcr1>
+    <gl>vegetable</gl>
+  </entry>
+  <entry id="gha.193">
+    <hw>³ʈwi</hw>
+    <srcxcr1>ʈwihba</srcxcr1>
+    <gl>take out</gl>
+  </entry>
+  <entry id="gha.194">
+    <hw>³ŋã</hw>
+    <srcxcr1>tsadz mlẽqmlẽ ŋãhbaː</srcxcr1>
+    <gl>salty</gl>
+  </entry>
+  <entry id="gha.195">
+    <hw>³ŋãː</hw>
+    <srcxcr1>ŋãːhba</srcxcr1>
+    <gl>think/feel/want</gl>
+  </entry>
+  <entry id="gha.196">
+    <hw>³ŋẽ</hw>
+    <srcxcr1>ŋẽh</srcxcr1>
+    <gl>breasts</gl>
+  </entry>
+  <entry id="gha.197">
+    <hw>³ŋĩ</hw>
+    <srcxcr1>ŋĩhbaː</srcxcr1>
+    <gl>fearful</gl>
+  </entry>
+  <entry id="gha.198">
+    <hw>³ɬõ</hw>
+    <gl>to swallow</gl>
+  </entry>
+  <entry id="gha.199">
+    <hw>¹hõ</hw>
+    <srcxcr1>hõ</srcxcr1>
+    <gl>valley</gl>
+  </entry>
+  <entry id="gha.200">
+    <hw>¹jaː</hw>
+    <srcxcr1>mah-jaːbaq</srcxcr1>
+    <gl>go (bound form)</gl>
+  </entry>
+  <entry id="gha.201">
+    <hw>¹jo</hw>
+    <srcxcr1>jo</srcxcr1>
+    <gl>hand</gl>
+  </entry>
+  <entry id="gha.202">
+    <hw>¹jõ</hw>
+    <srcxcr1>jõbaq</srcxcr1>
+    <gl>find</gl>
+  </entry>
+  <entry id="gha.203">
+    <hw>¹kae</hw>
+    <srcxcr1>tʰebaqe kae</srcxcr1>
+    <gl>voice</gl>
+  </entry>
+  <entry id="gha.204">
+    <hw>¹kaẽ</hw>
+    <srcxcr1>kaẽ</srcxcr1>
+    <gl>rice (cooked)</gl>
+  </entry>
+  <entry id="gha.205">
+    <hw>¹ke</hw>
+    <srcxcr1>kebaq</srcxcr1>
+    <gl>itch</gl>
+  </entry>
+  <entry id="gha.206">
+    <hw>¹kjũ</hw>
+    <srcxcr1>kjũbaːq</srcxcr1>
+    <gl>sour</gl>
+  </entry>
+  <entry id="gha.207">
+    <hw>¹kra</hw>
+    <srcxcr1>kra</srcxcr1>
+    <gl>head</gl>
+  </entry>
+  <entry id="gha.208">
+    <hw>¹kre</hw>
+    <srcxcr1>kre</srcxcr1>
+    <gl>back (lower)</gl>
+  </entry>
+  <entry id="gha.209">
+    <hw>¹kre</hw>
+    <srcxcr1>krebaq</srcxcr1>
+    <gl>ascend</gl>
+  </entry>
+  <entry id="gha.210">
+    <hw>¹kro</hw>
+    <srcxcr1>krobaq</srcxcr1>
+    <gl>burn/scorch</gl>
+  </entry>
+  <entry id="gha.211">
+    <hw>¹kro</hw>
+    <srcxcr1>krobaq</srcxcr1>
+    <gl>cry/weep</gl>
+  </entry>
+  <entry id="gha.212">
+    <hw>¹kru</hw>
+    <srcxcr1>kru</srcxcr1>
+    <gl>cubit</gl>
+  </entry>
+  <entry id="gha.213">
+    <hw>¹kru</hw>
+    <srcxcr1>krubaq</srcxcr1>
+    <gl>measure (length)</gl>
+  </entry>
+  <entry id="gha.214">
+    <hw>¹ku</hw>
+    <srcxcr1>ku</srcxcr1>
+    <gl>chest</gl>
+  </entry>
+  <entry id="gha.215">
+    <hw>¹kur</hw>
+    <srcxcr1>kur tabaq</srcxcr1>
+    <gl>stoop /bend down</gl>
+  </entry>
+  <entry id="gha.216">
+    <hw>¹kwẽ</hw>
+    <srcxcr1>aːrkoq kwẽ kʰibaq</srcxcr1>
+    <gl>clothes</gl>
+  </entry>
+  <entry id="gha.217">
+    <hw>¹kʰa</hw>
+    <srcxcr1>kʰa-m</srcxcr1>
+    <gl>come</gl>
+  </entry>
+  <entry id="gha.218">
+    <hw>¹kãː</hw>
+    <srcxcr1>kãː</srcxcr1>
+    <gl>bile</gl>
+  </entry>
+  <entry id="gha.219">
+    <hw>¹kãː</hw>
+    <srcxcr1>kãːbaːq</srcxcr1>
+    <gl>bitter</gl>
+  </entry>
+  <entry id="gha.220">
+    <hw>¹kʰi</hw>
+    <srcxcr1>kʰi</srcxcr1>
+    <gl>self</gl>
+  </entry>
+  <entry id="gha.221">
+    <hw>¹kĩ</hw>
+    <srcxcr1>kĩbaq</srcxcr1>
+    <gl>take</gl>
+  </entry>
+  <entry id="gha.222">
+    <hw>¹kʰju</hw>
+    <srcxcr1>kʰjubaq</srcxcr1>
+    <gl>scoop out</gl>
+  </entry>
+  <entry id="gha.223">
+    <hw>¹kõ</hw>
+    <srcxcr1>kõbaq</srcxcr1>
+    <gl>mixed</gl>
+  </entry>
+  <entry id="gha.224">
+    <hw>¹kʰrĩ</hw>
+    <srcxcr1>kʰrĩbaq</srcxcr1>
+    <gl>twist, braid</gl>
+  </entry>
+  <entry id="gha.225">
+    <hw>¹kʰrõ</hw>
+    <srcxcr1>kʰrõ-m</srcxcr1>
+    <gl>burn</gl>
+  </entry>
+  <entry id="gha.226">
+    <hw>¹kũ</hw>
+    <srcxcr1>kũ</srcxcr1>
+    <gl>urine</gl>
+  </entry>
+  <entry id="gha.227">
+    <hw>¹la</hw>
+    <srcxcr1>labaq</srcxcr1>
+    <gl>do</gl>
+  </entry>
+  <entry id="gha.228">
+    <hw>¹laː</hw>
+    <srcxcr1>laː</srcxcr1>
+    <gl>hot</gl>
+  </entry>
+  <entry id="gha.229">
+    <hw>¹laː</hw>
+    <srcxcr1>laːbaq</srcxcr1>
+    <gl>heat (v.t.)</gl>
+  </entry>
+  <entry id="gha.230">
+    <hw>¹li</hw>
+    <srcxcr1>li</srcxcr1>
+    <gl>ladder</gl>
+  </entry>
+  <entry id="gha.231">
+    <hw>¹lu</hw>
+    <srcxcr1>lubaq</srcxcr1>
+    <gl>learn</gl>
+  </entry>
+  <entry id="gha.232">
+    <hw>¹lõ</hw>
+    <srcxcr1>plah lõbaq</srcxcr1>
+    <gl>afraid/frightened</gl>
+  </entry>
+  <entry id="gha.233">
+    <hw>¹ma</hw>
+    <srcxcr1>ma</srcxcr1>
+    <gl>down</gl>
+  </entry>
+  <entry id="gha.234">
+    <hw>¹maẽ</hw>
+    <srcxcr1>maẽ</srcxcr1>
+    <gl>medicine</gl>
+  </entry>
+  <entry id="gha.235">
+    <hw>¹me</hw>
+    <srcxcr1>me tahlĩ</srcxcr1>
+    <gl>arrow</gl>
+  </entry>
+  <entry id="gha.236">
+    <hw>¹mi</hw>
+    <srcxcr1>mi</srcxcr1>
+    <gl>fire</gl>
+  </entry>
+  <entry id="gha.237">
+    <hw>¹mi</hw>
+    <srcxcr1>mi</srcxcr1>
+    <gl>tail</gl>
+  </entry>
+  <entry id="gha.238">
+    <hw>¹mjũ</hw>
+    <srcxcr1>mjũbaq</srcxcr1>
+    <gl>sharpen (point)</gl>
+  </entry>
+  <entry id="gha.239">
+    <hw>¹mlõ</hw>
+    <srcxcr1>mlõ-gjaː</srcxcr1>
+    <gl>black</gl>
+  </entry>
+  <entry id="gha.240">
+    <hw>¹mo</hw>
+    <srcxcr1>mo</srcxcr1>
+    <gl>haze</gl>
+  </entry>
+  <entry id="gha.241">
+    <hw>¹mro</hw>
+    <srcxcr1>mrobaq</srcxcr1>
+    <gl>light (lamp)(v.t.)</gl>
+  </entry>
+  <entry id="gha.242">
+    <hw>¹mrõ</hw>
+    <srcxcr1>mrõbaq</srcxcr1>
+    <gl>see</gl>
+  </entry>
+  <entry id="gha.243">
+    <hw>¹mu</hw>
+    <srcxcr1>mu</srcxcr1>
+    <gl>sky</gl>
+  </entry>
+  <entry id="gha.244">
+    <hw>¹mu</hw>
+    <srcxcr1>mubaq</srcxcr1>
+    <gl>be</gl>
+  </entry>
+  <entry id="gha.245">
+    <hw>¹mĩ</hw>
+    <srcxcr1>mĩ</srcxcr1>
+    <gl>name</gl>
+  </entry>
+  <entry id="gha.246">
+    <hw>¹ne</hw>
+    <srcxcr1>nebaq</srcxcr1>
+    <gl>thresh</gl>
+  </entry>
+  <entry id="gha.247">
+    <hw>¹ne</hw>
+    <srcxcr1>nebaqe</srcxcr1>
+    <gl>and</gl>
+  </entry>
+  <entry id="gha.248">
+    <hw>¹ni</hw>
+    <srcxcr1>ni herarra labaq</srcxcr1>
+    <gl>smile (in friendliness, mockery)</gl>
+  </entry>
+  <entry id="gha.249">
+    <hw>¹nu</hw>
+    <srcxcr1>nubaq</srcxcr1>
+    <gl>finish</gl>
+  </entry>
+  <entry id="gha.250">
+    <hw>¹nõ</hw>
+    <srcxcr1>nõ</srcxcr1>
+    <gl>farm laborer</gl>
+  </entry>
+  <entry id="gha.251">
+    <hw>¹pi</hw>
+    <srcxcr1>pi-bĩhbaq</srcxcr1>
+    <gl>send (sthg.)</gl>
+  </entry>
+  <entry id="gha.252">
+    <hw>¹ple</hw>
+    <srcxcr1>plebaq</srcxcr1>
+    <gl>slip</gl>
+  </entry>
+  <entry id="gha.253">
+    <hw>¹pli</hw>
+    <srcxcr1>plibaq</srcxcr1>
+    <gl>press down (with foot)</gl>
+  </entry>
+  <entry id="gha.254">
+    <hw>¹pli</hw>
+    <srcxcr1>plibaq</srcxcr1>
+    <gl>undress</gl>
+  </entry>
+  <entry id="gha.255">
+    <hw>¹pʰa</hw>
+    <srcxcr1>pʰa</srcxcr1>
+    <gl>husband (less respectful)</gl>
+  </entry>
+  <entry id="gha.256">
+    <hw>¹pẽ</hw>
+    <srcxcr1>pahdgu pẽ</srcxcr1>
+    <gl>frog</gl>
+  </entry>
+  <entry id="gha.257">
+    <hw>¹pʰe</hw>
+    <srcxcr1>pʰe-kʰabaq</srcxcr1>
+    <gl>arrive here</gl>
+  </entry>
+  <entry id="gha.258">
+    <hw>¹pʰi</hw>
+    <srcxcr1>pʰi</srcxcr1>
+    <gl>bark</gl>
+  </entry>
+  <entry id="gha.259">
+    <hw>¹pĩ</hw>
+    <srcxcr1>pĩ-m</srcxcr1>
+    <gl>give</gl>
+  </entry>
+  <entry id="gha.260">
+    <hw>¹pʰi</hw>
+    <srcxcr1>pʰibaq</srcxcr1>
+    <gl>born, be</gl>
+  </entry>
+  <entry id="gha.261">
+    <hw>¹pʰi</hw>
+    <gl>peel, bark (n.)</gl>
+  </entry>
+  <entry id="gha.262">
+    <hw>¹pʰo</hw>
+    <srcxcr1>pʰo</srcxcr1>
+    <gl>deer</gl>
+  </entry>
+  <entry id="gha.263">
+    <hw>¹põ</hw>
+    <srcxcr1>põbaq</srcxcr1>
+    <gl>fell (tree, animal)</gl>
+  </entry>
+  <entry id="gha.264">
+    <hw>¹pʰu</hw>
+    <srcxcr1>pʰu-jaːbaq</srcxcr1>
+    <gl>collapse</gl>
+  </entry>
+  <entry id="gha.265">
+    <hw>¹pʰwi</hw>
+    <srcxcr1>pʰwibaq</srcxcr1>
+    <gl>blow (with mouth)</gl>
+  </entry>
+  <entry id="gha.266">
+    <hw>¹pʰũ</hw>
+    <srcxcr1>mĩq pʰũ</srcxcr1>
+    <gl>eyeball</gl>
+  </entry>
+  <entry id="gha.267">
+    <hw>¹ra</hw>
+    <srcxcr1>ra</srcxcr1>
+    <gl>goat</gl>
+  </entry>
+  <entry id="gha.268">
+    <hw>¹ri</hw>
+    <srcxcr1>-ri</srcxcr1>
+    <gl>by</gl>
+  </entry>
+  <entry id="gha.269">
+    <hw>¹ri</hw>
+    <srcxcr1>jo ri</srcxcr1>
+    <gl>finger/ toe</gl>
+  </entry>
+  <entry id="gha.270">
+    <hw>¹ri</hw>
+    <srcxcr1>ribaq</srcxcr1>
+    <gl>get up (v.i.)</gl>
+  </entry>
+  <entry id="gha.271">
+    <hw>¹ru</hw>
+    <srcxcr1>ru</srcxcr1>
+    <gl>horn</gl>
+  </entry>
+  <entry id="gha.272">
+    <hw>¹rĩ</hw>
+    <srcxcr1>rĩ</srcxcr1>
+    <gl>bamboo</gl>
+  </entry>
+  <entry id="gha.273">
+    <hw>¹rũ</hw>
+    <gl>abscess</gl>
+  </entry>
+  <entry id="gha.274">
+    <hw>¹sa</hw>
+    <srcxcr1>sa</srcxcr1>
+    <gl>earth</gl>
+  </entry>
+  <entry id="gha.275">
+    <hw>¹sa</hw>
+    <srcxcr1>sa</srcxcr1>
+    <gl>tooth</gl>
+  </entry>
+  <entry id="gha.276">
+    <hw>¹sae</hw>
+    <srcxcr1>sae-m</srcxcr1>
+    <gl>kill</gl>
+  </entry>
+  <entry id="gha.277">
+    <hw>¹saẽ</hw>
+    <srcxcr1>saẽ</srcxcr1>
+    <gl>spirit/mind/soul</gl>
+  </entry>
+  <entry id="gha.278">
+    <hw>¹se</hw>
+    <srcxcr1>se</srcxcr1>
+    <gl>meat</gl>
+  </entry>
+  <entry id="gha.279">
+    <hw>¹se</hw>
+    <srcxcr1>pʰrem tãː sebaq</srcxcr1>
+    <gl>slander smn</gl>
+  </entry>
+  <entry id="gha.280">
+    <hw>¹se</hw>
+    <srcxcr1>pʰrem tãː sebaq</srcxcr1>
+    <gl>slander smn</gl>
+  </entry>
+  <entry id="gha.281">
+    <hw>¹si</hw>
+    <srcxcr1>si-labaq</srcxcr1>
+    <gl>clean (rice)/winnow</gl>
+  </entry>
+  <entry id="gha.282">
+    <hw>¹si</hw>
+    <srcxcr1>si-m</srcxcr1>
+    <gl>die</gl>
+  </entry>
+  <entry id="gha.283">
+    <hw>¹sju</hw>
+    <srcxcr1>sju kʰoqlaː</srcxcr1>
+    <gl>sheath</gl>
+  </entry>
+  <entry id="gha.284">
+    <hw>¹sju</hw>
+    <srcxcr1>ni-sjubaq</srcxcr1>
+    <gl>laugh</gl>
+  </entry>
+  <entry id="gha.285">
+    <hw>¹sjõ</hw>
+    <srcxcr1>sjõ</srcxcr1>
+    <gl>bell</gl>
+  </entry>
+  <entry id="gha.286">
+    <hw>¹sjõ</hw>
+    <gl>stream, river</gl>
+  </entry>
+  <entry id="gha.287">
+    <hw>¹swi</hw>
+    <srcxcr1>swibaq</srcxcr1>
+    <gl>clean (vegetables)</gl>
+  </entry>
+  <entry id="gha.288">
+    <hw>¹sĩ</hw>
+    <srcxcr1>jo sĩ</srcxcr1>
+    <gl>fingernail</gl>
+  </entry>
+  <entry id="gha.289">
+    <hw>¹sĩ</hw>
+    <srcxcr1>sĩbaq</srcxcr1>
+    <gl>cool (food)</gl>
+  </entry>
+  <entry id="gha.290">
+    <hw>¹sũ</hw>
+    <srcxcr1>sũ</srcxcr1>
+    <gl>mouth/ snout</gl>
+  </entry>
+  <entry id="gha.291">
+    <hw>¹ta</hw>
+    <srcxcr1>ta</srcxcr1>
+    <gl>horse</gl>
+  </entry>
+  <entry id="gha.292">
+    <hw>¹ta</hw>
+    <srcxcr1>ta</srcxcr1>
+    <gl>up, above</gl>
+  </entry>
+  <entry id="gha.293">
+    <hw>¹ta</hw>
+    <srcxcr1>ta</srcxcr1>
+    <gl>up</gl>
+  </entry>
+  <entry id="gha.294">
+    <hw>¹ta</hw>
+    <srcxcr1>tabaq</srcxcr1>
+    <gl>be/ happen/ be made/become ((v.i.))</gl>
+  </entry>
+  <entry id="gha.295">
+    <hw>¹taː</hw>
+    <srcxcr1>taːbaq</srcxcr1>
+    <gl>take off (stove)</gl>
+  </entry>
+  <entry id="gha.296">
+    <hw>¹te</hw>
+    <srcxcr1>tebaq</srcxcr1>
+    <gl>fall down</gl>
+  </entry>
+  <entry id="gha.297">
+    <hw>¹te</hw>
+    <srcxcr1>tebaq</srcxcr1>
+    <gl>pour/empty (v.t.)</gl>
+  </entry>
+  <entry id="gha.298">
+    <hw>¹ti</hw>
+    <srcxcr1>ti</srcxcr1>
+    <gl>corner, angle (of rice field)</gl>
+  </entry>
+  <entry id="gha.299">
+    <hw>¹ti</hw>
+    <srcxcr1>ti-dĩ-baqe saːqla</srcxcr1>
+    <gl>this year</gl>
+  </entry>
+  <entry id="gha.300">
+    <hw>¹ti</hw>
+    <srcxcr1>tibaaq</srcxcr1>
+    <gl>to spread out</gl>
+  </entry>
+  <entry id="gha.301">
+    <hw>¹ti</hw>
+    <srcxcr1>tibaq</srcxcr1>
+    <gl>break/shatter (glass)</gl>
+  </entry>
+  <entry id="gha.302">
+    <hw>¹ti</hw>
+    <srcxcr1>tibaq</srcxcr1>
+    <gl>wrap (around head) (v.)</gl>
+  </entry>
+  <entry id="gha.303">
+    <hw>¹tiː</hw>
+    <srcxcr1>tiːbaq</srcxcr1>
+    <gl>spread out (v.t.)</gl>
+  </entry>
+  <entry id="gha.304">
+    <hw>¹to</hw>
+    <gl>tiger (year)</gl>
+  </entry>
+  <entry id="gha.305">
+    <hw>¹tsa</hw>
+    <srcxcr1>tsa-m</srcxcr1>
+    <gl>eat</gl>
+  </entry>
+  <entry id="gha.306">
+    <hw>¹tsiː</hw>
+    <srcxcr1>tsiːbaq</srcxcr1>
+    <gl>sift</gl>
+  </entry>
+  <entry id="gha.307">
+    <hw>¹tsjo</hw>
+    <srcxcr1>tsjobaq</srcxcr1>
+    <gl>hang (on hook)</gl>
+  </entry>
+  <entry id="gha.308">
+    <hw>¹tsjwĩ</hw>
+    <srcxcr1>tsjwĩbaq</srcxcr1>
+    <gl>tether (animal)</gl>
+  </entry>
+  <entry id="gha.309">
+    <hw>¹tsu</hw>
+    <srcxcr1>tsubaq</srcxcr1>
+    <gl>break (sticks)(v.i.)</gl>
+  </entry>
+  <entry id="gha.310">
+    <hw>¹tsʰa</hw>
+    <srcxcr1>tsʰabaq</srcxcr1>
+    <gl>graze, cause to/herd</gl>
+  </entry>
+  <entry id="gha.311">
+    <hw>¹tsʰae</hw>
+    <srcxcr1>tsʰae</srcxcr1>
+    <gl>cane/rattan</gl>
+  </entry>
+  <entry id="gha.312">
+    <hw>¹tsãː</hw>
+    <srcxcr1>tsãː</srcxcr1>
+    <gl>bridge</gl>
+  </entry>
+  <entry id="gha.313">
+    <hw>¹tsẽ</hw>
+    <srcxcr1>tsẽ</srcxcr1>
+    <gl>tiger</gl>
+  </entry>
+  <entry id="gha.314">
+    <hw>¹tsʰer</hw>
+    <srcxcr1>tsʰerbaq</srcxcr1>
+    <gl>disgust (feel)/ annoyed/ exasperated</gl>
+  </entry>
+  <entry id="gha.315">
+    <hw>¹tsĩ</hw>
+    <srcxcr1>tsĩ tsĩ ŋehba</srcxcr1>
+    <gl>chirp</gl>
+  </entry>
+  <entry id="gha.316">
+    <hw>¹tsʰi</hw>
+    <srcxcr1>tsʰi</srcxcr1>
+    <gl>grass</gl>
+  </entry>
+  <entry id="gha.317">
+    <hw>¹tsʰo</hw>
+    <srcxcr1>tsʰobaq</srcxcr1>
+    <gl>peck</gl>
+  </entry>
+  <entry id="gha.318">
+    <hw>¹tsʰo</hw>
+    <srcxcr1>tsʰobaːq</srcxcr1>
+    <gl>fat</gl>
+  </entry>
+  <entry id="gha.319">
+    <hw>¹tsʰu</hw>
+    <srcxcr1>tsʰu</srcxcr1>
+    <gl>rope</gl>
+  </entry>
+  <entry id="gha.320">
+    <hw>¹tsʰu</hw>
+    <srcxcr1>tsʰubaːq</srcxcr1>
+    <gl>pleasant</gl>
+  </entry>
+  <entry id="gha.321">
+    <hw>¹tsʰur</hw>
+    <srcxcr1>tsʰurbaq</srcxcr1>
+    <gl>wake up (v.i.)</gl>
+  </entry>
+  <entry id="gha.322">
+    <hw>¹tsʰwi</hw>
+    <srcxcr1>tsʰwibaq</srcxcr1>
+    <gl>touch</gl>
+  </entry>
+  <entry id="gha.323">
+    <hw>¹tsʰĩ</hw>
+    <gl>nail</gl>
+  </entry>
+  <entry id="gha.324">
+    <hw>¹tsʰõ</hw>
+    <srcxcr1>tsʰõ labaq</srcxcr1>
+    <gl>trade</gl>
+  </entry>
+  <entry id="gha.325">
+    <hw>¹tu</hw>
+    <srcxcr1>tubaa'</srcxcr1>
+    <gl>to pick</gl>
+  </entry>
+  <entry id="gha.326">
+    <hw>¹tuː</hw>
+    <srcxcr1>tuːbaq</srcxcr1>
+    <gl>cut up (in pieces)</gl>
+  </entry>
+  <entry id="gha.327">
+    <hw>¹tãː</hw>
+    <srcxcr1>tãː pʰula</srcxcr1>
+    <gl>word</gl>
+  </entry>
+  <entry id="gha.328">
+    <hw>¹tẽ</hw>
+    <srcxcr1>tẽbaq</srcxcr1>
+    <gl>explain</gl>
+  </entry>
+  <entry id="gha.329">
+    <hw>¹tʰeː</hw>
+    <srcxcr1>tʰeː-m</srcxcr1>
+    <gl>hear</gl>
+  </entry>
+  <entry id="gha.330">
+    <hw>¹tĩ</hw>
+    <srcxcr1>tĩ</srcxcr1>
+    <gl>heart</gl>
+  </entry>
+  <entry id="gha.331">
+    <hw>¹tõ</hw>
+    <srcxcr1>saẽ tõbaq</srcxcr1>
+    <gl>pleased/happy</gl>
+  </entry>
+  <entry id="gha.332">
+    <hw>¹tʰo</hw>
+    <srcxcr1>tʰobaq</srcxcr1>
+    <gl>order sthg</gl>
+  </entry>
+  <entry id="gha.333">
+    <hw>¹tʰu</hw>
+    <srcxcr1>tʰubaq</srcxcr1>
+    <gl>pick (v.)</gl>
+  </entry>
+  <entry id="gha.334">
+    <hw>¹tʰãː</hw>
+    <srcxcr1>tʰãː</srcxcr1>
+    <gl>perfume</gl>
+  </entry>
+  <entry id="gha.335">
+    <hw>¹ur</hw>
+    <srcxcr1>ur-gjaː</srcxcr1>
+    <gl>yellow</gl>
+  </entry>
+  <entry id="gha.336">
+    <hw>¹ŋa</hw>
+    <srcxcr1>ŋa</srcxcr1>
+    <gl>I</gl>
+  </entry>
+  <entry id="gha.337">
+    <hw>¹ʈa</hw>
+    <gl>strike (projectile)</gl>
+  </entry>
+  <entry id="gha.338">
+    <hw>¹ŋaː</hw>
+    <srcxcr1>ŋaː</srcxcr1>
+    <gl>I</gl>
+  </entry>
+  <entry id="gha.339">
+    <hw>¹ŋaẽ</hw>
+    <srcxcr1>ŋaẽbaq</srcxcr1>
+    <gl>lend, borrow</gl>
+  </entry>
+  <entry id="gha.340">
+    <hw>¹ŋe</hw>
+    <srcxcr1>kãːtsʰi ŋebaq</srcxcr1>
+    <gl>ruminate</gl>
+  </entry>
+  <entry id="gha.341">
+    <hw>¹ŋe</hw>
+    <srcxcr1>ŋebaq</srcxcr1>
+    <gl>chew</gl>
+  </entry>
+  <entry id="gha.342">
+    <hw>¹ɬi</hw>
+    <srcxcr1>ɬi</srcxcr1>
+    <gl>feces</gl>
+  </entry>
+  <entry id="gha.343">
+    <hw>¹ŋi</hw>
+    <srcxcr1>ŋi</srcxcr1>
+    <gl>we (excl.)</gl>
+  </entry>
+  <entry id="gha.344">
+    <hw>¹ʈõ</hw>
+    <srcxcr1>ʈõ</srcxcr1>
+    <gl>marrow</gl>
+  </entry>
+  <entry id="gha.345">
+    <hw>¹ʈõ</hw>
+    <srcxcr1>ʈõbaq</srcxcr1>
+    <gl>break (rope ) (v.i.)</gl>
+  </entry>
+  <entry id="gha.346">
+    <hw>¹ɬõ</hw>
+    <srcxcr1>ɬõbaq</srcxcr1>
+    <gl>play</gl>
+  </entry>
+  <entry id="gha.347">
+    <hw>⁴baẽ</hw>
+    <srcxcr1>baẽhbaq</srcxcr1>
+    <gl>wait</gl>
+  </entry>
+  <entry id="gha.348">
+    <hw>⁴bjõ</hw>
+    <srcxcr1>bjõhbaq</srcxcr1>
+    <gl>throw down</gl>
+  </entry>
+  <entry id="gha.349">
+    <hw>⁴bĩ</hw>
+    <srcxcr1>bĩhbaq</srcxcr1>
+    <gl>allow</gl>
+  </entry>
+  <entry id="gha.350">
+    <hw>⁴bõ</hw>
+    <srcxcr1>bõhbaːq</srcxcr1>
+    <gl>strong</gl>
+  </entry>
+  <entry id="gha.351">
+    <hw>⁴dzõ</hw>
+    <srcxcr1>dzõhbaq</srcxcr1>
+    <gl>insert/put in</gl>
+  </entry>
+  <entry id="gha.352">
+    <hw>⁴dĩ</hw>
+    <srcxcr1>kaqbu dĩhq</srcxcr1>
+    <gl>shell (of animal)</gl>
+  </entry>
+  <entry id="gha.353">
+    <hw>⁴dũ</hw>
+    <srcxcr1>dũhq</srcxcr1>
+    <gl>tree</gl>
+  </entry>
+  <entry id="gha.354">
+    <hw>⁴gjãː</hw>
+    <srcxcr1>gjãːhq</srcxcr1>
+    <gl>path</gl>
+  </entry>
+  <entry id="gha.355">
+    <hw>⁴gri</hw>
+    <srcxcr1>grihq</srcxcr1>
+    <gl>one</gl>
+  </entry>
+  <entry id="gha.356">
+    <hw>⁴gẽ</hw>
+    <srcxcr1>gẽhbaq</srcxcr1>
+    <gl>lean</gl>
+  </entry>
+  <entry id="gha.357">
+    <hw>⁴jaː</hw>
+    <srcxcr1>jaːhbaq</srcxcr1>
+    <gl>go</gl>
+  </entry>
+  <entry id="gha.358">
+    <hw>⁴jo</hw>
+    <srcxcr1>johq</srcxcr1>
+    <gl>thief</gl>
+  </entry>
+  <entry id="gha.359">
+    <hw>⁴jo</hw>
+    <srcxcr1>johbaq</srcxcr1>
+    <gl>steal</gl>
+  </entry>
+  <entry id="gha.360">
+    <hw>⁴ke</hw>
+    <srcxcr1>kehq labaq</srcxcr1>
+    <gl>work</gl>
+  </entry>
+  <entry id="gha.361">
+    <hw>⁴ki</hw>
+    <srcxcr1>kihq</srcxcr1>
+    <gl>thatch</gl>
+  </entry>
+  <entry id="gha.362">
+    <hw>⁴kjo</hw>
+    <srcxcr1>kjohbaq</srcxcr1>
+    <gl>plow (v.)</gl>
+  </entry>
+  <entry id="gha.363">
+    <hw>⁴kju</hw>
+    <srcxcr1>kjuhq</srcxcr1>
+    <gl>sheep</gl>
+  </entry>
+  <entry id="gha.364">
+    <hw>⁴kjwi</hw>
+    <srcxcr1>kjwihq</srcxcr1>
+    <gl>language</gl>
+  </entry>
+  <entry id="gha.365">
+    <hw>⁴krwe</hw>
+    <srcxcr1>krwehq</srcxcr1>
+    <gl>vulture</gl>
+  </entry>
+  <entry id="gha.366">
+    <hw>⁴kwe</hw>
+    <srcxcr1>kwehq</srcxcr1>
+    <gl>bee</gl>
+  </entry>
+  <entry id="gha.367">
+    <hw>⁴kwe</hw>
+    <srcxcr1>kwehq</srcxcr1>
+    <gl>song</gl>
+  </entry>
+  <entry id="gha.368">
+    <hw>⁴maẽ</hw>
+    <srcxcr1>maẽhbaq</srcxcr1>
+    <gl>think/remember</gl>
+  </entry>
+  <entry id="gha.369">
+    <hw>⁴me</hw>
+    <srcxcr1>mehq</srcxcr1>
+    <gl>cow</gl>
+  </entry>
+  <entry id="gha.370">
+    <hw>⁴mlo</hw>
+    <srcxcr1>mlohbaq</srcxcr1>
+    <gl>sprout</gl>
+  </entry>
+  <entry id="gha.371">
+    <hw>⁴mlu</hw>
+    <srcxcr1>mluhbaq</srcxcr1>
+    <gl>prick (thorn)</gl>
+  </entry>
+  <entry id="gha.372">
+    <hw>⁴mo</hw>
+    <srcxcr1>mohbaq</srcxcr1>
+    <gl>to groan</gl>
+  </entry>
+  <entry id="gha.373">
+    <hw>⁴mõ</hw>
+    <srcxcr1>mõhq hã</srcxcr1>
+    <gl>ghost</gl>
+  </entry>
+  <entry id="gha.374">
+    <hw>⁴mõ</hw>
+    <srcxcr1>mõhɖ mõhbaq</srcxcr1>
+    <gl>to dream</gl>
+  </entry>
+  <entry id="gha.375">
+    <hw>⁴mõ</hw>
+    <gl>ghost</gl>
+  </entry>
+  <entry id="gha.376">
+    <hw>⁴nu</hw>
+    <srcxcr2/>
+    <gl>garlic</gl>
+  </entry>
+  <entry id="gha.377">
+    <hw>⁴pjo</hw>
+    <srcxcr1>pahli pjohbaq</srcxcr1>
+    <gl>stamp</gl>
+  </entry>
+  <entry id="gha.378">
+    <hw>⁴pjo</hw>
+    <srcxcr1>pjohq-jaːhbaq</srcxcr1>
+    <gl>fall over</gl>
+  </entry>
+  <entry id="gha.379">
+    <hw>⁴pli</hw>
+    <srcxcr1>plihq</srcxcr1>
+    <gl>four</gl>
+  </entry>
+  <entry id="gha.380">
+    <hw>⁴plu</hw>
+    <srcxcr1>pluhq</srcxcr1>
+    <gl>seed</gl>
+  </entry>
+  <entry id="gha.381">
+    <hw>⁴pra</hw>
+    <srcxcr1>prahq</srcxcr1>
+    <gl>hundred</gl>
+  </entry>
+  <entry id="gha.382">
+    <hw>⁴pra</hw>
+    <srcxcr1>prahq-m</srcxcr1>
+    <gl>walk</gl>
+  </entry>
+  <entry id="gha.383">
+    <hw>⁴pre</hw>
+    <srcxcr1>prehq</srcxcr1>
+    <gl>eight</gl>
+  </entry>
+  <entry id="gha.384">
+    <hw>⁴pro</hw>
+    <srcxcr1>prohq</srcxcr1>
+    <gl>cliff</gl>
+  </entry>
+  <entry id="gha.385">
+    <hw>⁴pro</hw>
+    <srcxcr1>prohq</srcxcr1>
+    <gl>flour</gl>
+  </entry>
+  <entry id="gha.386">
+    <hw>⁴taː</hw>
+    <srcxcr1>taːhq</srcxcr1>
+    <gl>needle</gl>
+  </entry>
+  <entry id="gha.387">
+    <hw>⁴te</hw>
+    <srcxcr1>tehbaq</srcxcr1>
+    <gl>cook (meat, vegetables)(v.t.)</gl>
+  </entry>
+  <entry id="gha.388">
+    <hw>⁴ti</hw>
+    <srcxcr1>tihq</srcxcr1>
+    <gl>load (n.)</gl>
+  </entry>
+  <entry id="gha.389">
+    <hw>⁴ti</hw>
+    <srcxcr1>txiba'</srcxcr1>
+    <gl>to gather into sheaves</gl>
+  </entry>
+  <entry id="gha.390">
+    <hw>⁴tsi</hw>
+    <srcxcr1>tsihbaq</srcxcr1>
+    <gl>remember</gl>
+  </entry>
+  <entry id="gha.391">
+    <hw>⁴tsu</hw>
+    <srcxcr1>tsuhbaq</srcxcr1>
+    <gl>set (pot on tripod)</gl>
+  </entry>
+  <entry id="gha.392">
+    <hw>⁴wi</hw>
+    <srcxcr1>wihbaq</srcxcr1>
+    <gl>call</gl>
+  </entry>
+  <entry id="gha.393">
+    <hw>⁴wãː</hw>
+    <srcxcr1>wãːhbaq</srcxcr1>
+    <gl>flatter/coax (promise gifts)</gl>
+  </entry>
+  <entry id="gha.394">
+    <hw>⁴ŋa</hw>
+    <srcxcr1>ŋahq</srcxcr1>
+    <gl>five</gl>
+  </entry>
+  <entry id="gha.395">
+    <hw>⁴ɬaː</hw>
+    <gl>bull</gl>
+  </entry>
+  <entry id="gha.396">
+    <hw>⁴ŋe</hw>
+    <srcxcr1>ŋehbaq</srcxcr1>
+    <gl>spill</gl>
+  </entry>
+  <entry id="gha.397">
+    <hw>⁴ŋjo</hw>
+    <srcxcr1>ŋjohq</srcxcr1>
+    <gl>we (incl.)</gl>
+  </entry>
+  <entry id="gha.398">
+    <hw>⁴ŋjwi</hw>
+    <srcxcr1>ŋjwihq</srcxcr1>
+    <gl>dhoti</gl>
+  </entry>
+  <entry id="gha.399">
+    <hw>⁴ʈu</hw>
+    <srcxcr1>ʈuhq</srcxcr1>
+    <gl>six</gl>
+  </entry>
+  <entry id="gha.400">
+    <hw>⁴ʈu</hw>
+    <srcxcr1>ʈuhbaq</srcxcr1>
+    <gl>sew</gl>
+  </entry>
+  <entry id="gha.401">
+    <hw>⁴ʈwi</hw>
+    <srcxcr1>ʈwihq jaːhbaq</srcxcr1>
+    <gl>slide (earth)</gl>
+  </entry>
+</lexicon>

@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="mar">
+  <entry id="mar.1">
+    <hw>Xhraŋ</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>enfler</gl>
+  </entry>
+  <entry id="mar.2">
+    <hw>Xhri</hw>
+    <gl>doigt</gl>
+  </entry>
+  <entry id="mar.3">
+    <hw>Xku</hw>
+    <gl>coudée</gl>
+  </entry>
+  <entry id="mar.4">
+    <hw>Xkʌn</hw>
+    <gl>riz</gl>
+  </entry>
+  <entry id="mar.5">
+    <hw>Xkʰĩl</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>enrouler</gl>
+  </entry>
+  <entry id="mar.6">
+    <hw>Xmwi</hw>
+    <gl>argent</gl>
+  </entry>
+  <entry id="mar.7">
+    <hw>Xpin</hw>
+    <srcxcr2>o</srcxcr2>
+    <gl>donner</gl>
+  </entry>
+  <entry id="mar.8">
+    <hw>Xpjʌ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>couler (sueur), bouillir (eau), suinter (mur ...)</gl>
+  </entry>
+  <entry id="mar.9">
+    <hw>Xpʰor</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>étaler</gl>
+  </entry>
+  <entry id="mar.10">
+    <hw>Xpʰwi</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>souffler</gl>
+  </entry>
+  <entry id="mar.11">
+    <hw>Xseː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>tuer</gl>
+  </entry>
+  <entry id="mar.12">
+    <hw>Xto</hw>
+    <gl>aiguille</gl>
+  </entry>
+  <entry id="mar.13">
+    <hw>Xtsuː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>mettre à cuire</gl>
+  </entry>
+  <entry id="mar.14">
+    <hw>Xtsʌ</hw>
+    <gl>cela</gl>
+  </entry>
+  <entry id="mar.15">
+    <hw>Xtʰo</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>encorner</gl>
+  </entry>
+  <entry id="mar.16">
+    <hw>Xtʌr</hw>
+    <gl>blanc</gl>
+  </entry>
+  <entry id="mar.17">
+    <hw>Xɲan</hw>
+    <srcxcr2>lã...</srcxcr2>
+    <gl>écouter</gl>
+  </entry>
+  <entry id="mar.18">
+    <hw>Xʈaŋ</hw>
+    <gl>moelle</gl>
+  </entry>
+  <entry id="mar.19">
+    <hw>Xɕin</hw>
+    <gl>bois</gl>
+  </entry>
+  <entry id="mar.20">
+    <hw>²²'²²rum</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>long</gl>
+  </entry>
+  <entry id="mar.21">
+    <hw>²²'²¹gjoʱ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>beau</gl>
+  </entry>
+  <entry id="mar.22">
+    <hw>²²'²¹liʱ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>lourd</gl>
+  </entry>
+  <entry id="mar.23">
+    <hw>²¹'²²goʱ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>couvrir</gl>
+  </entry>
+  <entry id="mar.24">
+    <hw>²¹'²²lo</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>baratter le thé</gl>
+  </entry>
+  <entry id="mar.25">
+    <hw>²¹'²²praʱ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>moudre</gl>
+  </entry>
+  <entry id="mar.26">
+    <hw>²¹'²²praʱ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>raser</gl>
+  </entry>
+  <entry id="mar.27">
+    <hw>²¹'³³pɔʱm</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>tremper</gl>
+  </entry>
+  <entry id="mar.28">
+    <hw>²¹'³³reʱ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>gratter</gl>
+  </entry>
+  <entry id="mar.29">
+    <hw>²¹'³³ʈa</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>griffer, déchirer</gl>
+  </entry>
+  <entry id="mar.30">
+    <hw>²¹'³³ʈaː</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>déchirer</gl>
+  </entry>
+  <entry id="mar.31">
+    <hw>²¹'³³ɕaː</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>aller (honor.)</gl>
+  </entry>
+  <entry id="mar.32">
+    <hw>²¹'³³ʈaʱŋ</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>donner (hon. receveur)</gl>
+  </entry>
+  <entry id="mar.33">
+    <hw>²¹'³³ʈoʱ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>lire</gl>
+  </entry>
+  <entry id="mar.34">
+    <hw>²¹bɔʱm</hw>
+    <gl>épaule</gl>
+  </entry>
+  <entry id="mar.35">
+    <hw>²¹goʱ</hw>
+    <gl>dos</gl>
+  </entry>
+  <entry id="mar.36">
+    <hw>²¹lɥʱi</hw>
+    <gl>corps</gl>
+  </entry>
+  <entry id="mar.37">
+    <hw>²¹maʱ</hw>
+    <gl>gendre</gl>
+  </entry>
+  <entry id="mar.38">
+    <hw>²¹mo</hw>
+    <gl>fantôme</gl>
+  </entry>
+  <entry id="mar.39">
+    <hw>²¹mʌr</hw>
+    <gl>beurre</gl>
+  </entry>
+  <entry id="mar.40">
+    <hw>²¹paʱ</hw>
+    <gl>feuille</gl>
+  </entry>
+  <entry id="mar.41">
+    <hw>²¹ŋoʱ</hw>
+    <gl>front</gl>
+  </entry>
+  <entry id="mar.42">
+    <hw>³dziʱ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>mordre</gl>
+  </entry>
+  <entry id="mar.43">
+    <hw>³gaʱŋ</hw>
+    <gl>montagne</gl>
+  </entry>
+  <entry id="mar.44">
+    <hw>³kiʱ</hw>
+    <gl>toi</gl>
+  </entry>
+  <entry id="mar.45">
+    <hw>³koʱ</hw>
+    <gl>couvercle</gl>
+  </entry>
+  <entry id="mar.46">
+    <hw>³loʱ</hw>
+    <gl>année</gl>
+  </entry>
+  <entry id="mar.47">
+    <hw>³maʱŋ</hw>
+    <gl>rêve</gl>
+  </entry>
+  <entry id="mar.48">
+    <hw>³miʱ</hw>
+    <gl>homme</gl>
+  </entry>
+  <entry id="mar.49">
+    <hw>³naʱ</hw>
+    <gl>forêt</gl>
+  </entry>
+  <entry id="mar.50">
+    <hw>³priʱ</hw>
+    <gl>racine</gl>
+  </entry>
+  <entry id="mar.51">
+    <hw>³roʱ</hw>
+    <gl>ami</gl>
+  </entry>
+  <entry id="mar.52">
+    <hw>³taʱ</hw>
+    <gl>poteau</gl>
+  </entry>
+  <entry id="mar.53">
+    <hw>³tiʱ</hw>
+    <gl>mite</gl>
+  </entry>
+  <entry id="mar.54">
+    <hw>³tsʌʱ</hw>
+    <gl>fils</gl>
+  </entry>
+  <entry id="mar.55">
+    <hw>³³'²²kʰi</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>attacher</gl>
+  </entry>
+  <entry id="mar.56">
+    <hw>³³'³³pʰjaː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>balayer, essuyer</gl>
+  </entry>
+  <entry id="mar.57">
+    <hw>³³'³³tsʰa</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>chaud, brûlant</gl>
+  </entry>
+  <entry id="mar.58">
+    <hw>³³'⁴⁴ɲeː</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>mâcher</gl>
+  </entry>
+  <entry id="mar.59">
+    <hw>³ʈiʱ</hw>
+    <gl>peau</gl>
+  </entry>
+  <entry id="mar.60">
+    <hw>³ŋʌʱ</hw>
+    <gl>tambour</gl>
+  </entry>
+  <entry id="mar.61">
+    <hw>¹reː</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>to wake up</gl>
+  </entry>
+  <entry id="mar.62">
+    <hw>¹¹'²²duʱ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>fatigué</gl>
+  </entry>
+  <entry id="mar.63">
+    <hw>¹¹'²²mjaʱŋ</hw>
+    <srcxcr2>pʌ</srcxcr2>
+    <gl>goûter</gl>
+  </entry>
+  <entry id="mar.64">
+    <hw>¹¹'²²pjuŋ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>tousser</gl>
+  </entry>
+  <entry id="mar.65">
+    <hw>¹¹'²²ʈiʱ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>tirer</gl>
+  </entry>
+  <entry id="mar.66">
+    <hw>¹¹'³²pre</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>être vaincu</gl>
+  </entry>
+  <entry id="mar.67">
+    <hw>¹¹'³³rɯː</hw>
+    <srcxcr2>to</srcxcr2>
+    <gl>réclamer</gl>
+  </entry>
+  <entry id="mar.68">
+    <hw>¹¹'¹¹biʱ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>dire</gl>
+  </entry>
+  <entry id="mar.69">
+    <hw>¹¹'¹¹dziʱn</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>achever</gl>
+  </entry>
+  <entry id="mar.70">
+    <hw>¹¹'¹¹ka</hw>
+    <srcxcr2>dze</srcxcr2>
+    <gl>se coincer</gl>
+  </entry>
+  <entry id="mar.71">
+    <hw>¹¹'¹¹naŋ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>donner (hon. donneur)</gl>
+  </entry>
+  <entry id="mar.72">
+    <hw>¹¹'¹¹naʱ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>accoucher / déposer</gl>
+  </entry>
+  <entry id="mar.73">
+    <hw>¹¹'¹¹poʱr</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>emporter</gl>
+  </entry>
+  <entry id="mar.74">
+    <hw>¹¹'¹¹pri</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>écrire</gl>
+  </entry>
+  <entry id="mar.75">
+    <hw>¹¹'¹¹taʱr</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>trembler</gl>
+  </entry>
+  <entry id="mar.76">
+    <hw>¹¹'¹¹tsjoŋ</hw>
+    <srcxcr2>g-o</srcxcr2>
+    <gl>venir (hon.)</gl>
+  </entry>
+  <entry id="mar.77">
+    <hw>¹¹'¹¹ŋoː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>faire frire</gl>
+  </entry>
+  <entry id="mar.78">
+    <hw>¹¹'¹¹ɕu</hw>
+    <srcxcr2>to</srcxcr2>
+    <gl>s'asseoir (honor.)</gl>
+  </entry>
+  <entry id="mar.79">
+    <hw>¹¹dzaŋ</hw>
+    <gl>nid</gl>
+  </entry>
+  <entry id="mar.80">
+    <hw>¹¹dzoʱ</hw>
+    <gl>pointe</gl>
+  </entry>
+  <entry id="mar.81">
+    <hw>¹¹gjaʱŋ</hw>
+    <gl>pain</gl>
+  </entry>
+  <entry id="mar.82">
+    <hw>¹¹juʱːl</hw>
+    <gl>village</gl>
+  </entry>
+  <entry id="mar.83">
+    <hw>¹¹naʱ</hw>
+    <gl>pus</gl>
+  </entry>
+  <entry id="mar.84">
+    <hw>¹¹ɲuʱ</hw>
+    <gl>lait</gl>
+  </entry>
+  <entry id="mar.85">
+    <hw>⁵²'²²prʌ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>marcher</gl>
+  </entry>
+  <entry id="mar.86">
+    <hw>⁵²'²²to</hw>
+    <srcxcr2>go</srcxcr2>
+    <gl>ôter du feu</gl>
+  </entry>
+  <entry id="mar.87">
+    <hw>⁵²kwe</hw>
+    <gl>abeille (?)</gl>
+  </entry>
+  <entry id="mar.88">
+    <hw>⁵²kwe</hw>
+    <gl>chant</gl>
+  </entry>
+  <entry id="mar.89">
+    <hw>⁵³'³³pʰja</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>défricher</gl>
+  </entry>
+  <entry id="mar.90">
+    <hw>⁴³'³³to</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>falloir</gl>
+  </entry>
+  <entry id="mar.91">
+    <hw>⁵³'³³ʈu</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>rester</gl>
+  </entry>
+  <entry id="mar.92">
+    <hw>⁵³ku</hw>
+    <gl>neuf (nombre)</gl>
+  </entry>
+  <entry id="mar.93">
+    <hw>⁴³tɕʰi</hw>
+    <gl>graisse</gl>
+  </entry>
+  <entry id="mar.94">
+    <hw>⁴³tɕʰi</hw>
+    <gl>herbe</gl>
+  </entry>
+  <entry id="mar.95">
+    <hw>⁴³tɕʰʌɛ</hw>
+    <gl>livre</gl>
+  </entry>
+  <entry id="mar.96">
+    <hw>⁴³⁴te</hw>
+    <gl>ceci</gl>
+  </entry>
+  <entry id="mar.97">
+    <hw>⁴³⁴ʈu</hw>
+    <gl>six</gl>
+  </entry>
+  <entry id="mar.98">
+    <hw>⁵¹ja</hw>
+    <gl>main</gl>
+  </entry>
+  <entry id="mar.99">
+    <hw>⁵¹ka</hw>
+    <gl>sang</gl>
+  </entry>
+  <entry id="mar.100">
+    <hw>⁵¹kum</hw>
+    <gl>intestins</gl>
+  </entry>
+  <entry id="mar.101">
+    <hw>⁵¹kʰa</hw>
+    <gl>cou</gl>
+  </entry>
+  <entry id="mar.102">
+    <hw>⁵¹kʌm</hw>
+    <gl>bile</gl>
+  </entry>
+  <entry id="mar.103">
+    <hw>⁵¹li</hw>
+    <gl>échelle</gl>
+  </entry>
+  <entry id="mar.104">
+    <hw>⁵¹me</hw>
+    <gl>queue</gl>
+  </entry>
+  <entry id="mar.105">
+    <hw>⁵¹mi</hw>
+    <gl>feu</gl>
+  </entry>
+  <entry id="mar.106">
+    <hw>⁵¹mi</hw>
+    <gl>oeil</gl>
+  </entry>
+  <entry id="mar.107">
+    <hw>⁵¹muː</hw>
+    <gl>ciel</gl>
+  </entry>
+  <entry id="mar.108">
+    <hw>⁵¹pʰja</hw>
+    <gl>balai</gl>
+  </entry>
+  <entry id="mar.109">
+    <hw>⁵¹rʌ</hw>
+    <gl>chèvre</gl>
+  </entry>
+  <entry id="mar.110">
+    <hw>⁵¹sʌ</hw>
+    <gl>dent</gl>
+  </entry>
+  <entry id="mar.111">
+    <hw>⁵¹tsjoː</hw>
+    <gl>bague</gl>
+  </entry>
+  <entry id="mar.112">
+    <hw>⁵¹tʌ</hw>
+    <gl>cheval</gl>
+  </entry>
+  <entry id="mar.113">
+    <hw>⁵¹tʰa</hw>
+    <gl>planche</gl>
+  </entry>
+  <entry id="mar.114">
+    <hw>⁵¹ɲi</hw>
+    <gl>nous (excl.)</gl>
+  </entry>
+  <entry id="mar.115">
+    <hw>⁴⁴'²²tsi</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>se rappeler</gl>
+  </entry>
+  <entry id="mar.116">
+    <hw>⁵⁵'³³hrum</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>épais (tissu)</gl>
+  </entry>
+  <entry id="mar.117">
+    <hw>⁴⁴'³³kjuŋ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>acide</gl>
+  </entry>
+  <entry id="mar.118">
+    <hw>⁵⁵'³³kor</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>se promener</gl>
+  </entry>
+  <entry id="mar.119">
+    <hw>⁴⁴'³³kʰi</hw>
+    <srcxcr2>mo</srcxcr2>
+    <gl>éternuer</gl>
+  </entry>
+  <entry id="mar.120">
+    <hw>⁵⁵'³³kʰi</hw>
+    <srcxcr2>to</srcxcr2>
+    <gl>emprunter</gl>
+  </entry>
+  <entry id="mar.121">
+    <hw>⁴⁴'³³kʌi</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>monter, grimper</gl>
+  </entry>
+  <entry id="mar.122">
+    <hw>⁵⁵'³³kʰu</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>voler</gl>
+  </entry>
+  <entry id="mar.123">
+    <hw>⁵⁵'³³liː</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>acheter</gl>
+  </entry>
+  <entry id="mar.124">
+    <hw>⁴⁴'³³meː</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>questionner</gl>
+  </entry>
+  <entry id="mar.125">
+    <hw>⁵⁵'³³nu</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>dormir</gl>
+  </entry>
+  <entry id="mar.126">
+    <hw>⁵⁵'³³pʰiː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>éplucher</gl>
+  </entry>
+  <entry id="mar.127">
+    <hw>⁵⁵'³³pʌm</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>attendre</gl>
+  </entry>
+  <entry id="mar.128">
+    <hw>⁵⁵'³³qʰil</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>enrouler (une natte)</gl>
+  </entry>
+  <entry id="mar.129">
+    <hw>⁵⁵'³³saŋ</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>faire sécher</gl>
+  </entry>
+  <entry id="mar.130">
+    <hw>⁵⁵'³³teʌ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>tomber</gl>
+  </entry>
+  <entry id="mar.131">
+    <hw>⁵⁵'³³tsa</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>manger</gl>
+  </entry>
+  <entry id="mar.132">
+    <hw>⁵⁵'³³tsjaŋ</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>petit</gl>
+  </entry>
+  <entry id="mar.133">
+    <hw>⁴⁴'³³tsʰʌ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>épicé</gl>
+  </entry>
+  <entry id="mar.134">
+    <hw>⁴⁴'³³tuː</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>hacher</gl>
+  </entry>
+  <entry id="mar.135">
+    <hw>⁵⁵'³³twi</hw>
+    <gl>ramasser (?)</gl>
+  </entry>
+  <entry id="mar.136">
+    <hw>⁴⁴'³³tʰan</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>poser</gl>
+  </entry>
+  <entry id="mar.137">
+    <hw>⁵⁵'³³tɥi</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>rassembler</gl>
+  </entry>
+  <entry id="mar.138">
+    <hw>⁵⁵'³³ɕe</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>savoir</gl>
+  </entry>
+  <entry id="mar.139">
+    <hw>⁵⁵'³³ɲi</hw>
+    <srcxcr2>tsi</srcxcr2>
+    <gl>renverser</gl>
+  </entry>
+  <entry id="mar.140">
+    <hw>⁴⁴'³³ʈu</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>coudre</gl>
+  </entry>
+  <entry id="mar.141">
+    <hw>⁵⁵'³³ɲʌm</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>ruminer</gl>
+  </entry>
+  <entry id="mar.142">
+    <hw>⁴⁴'³³ŋʌm</hw>
+    <srcxcr2>bʌ</srcxcr2>
+    <gl>emprunter (objet)</gl>
+  </entry>
+  <entry id="mar.143">
+    <hw>⁴⁴'⁴³ju</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>descendre</gl>
+  </entry>
+  <entry id="mar.144">
+    <hw>⁴⁴'⁴³jum</hw>
+    <srcxcr2>pa</srcxcr2>
+    <gl>pierre</gl>
+  </entry>
+  <entry id="mar.145">
+    <hw>⁴⁴'⁴³tum</hw>
+    <srcxcr2>mo</srcxcr2>
+    <gl>gros, épais</gl>
+  </entry>
+  <entry id="mar.146">
+    <hw>⁴⁴'⁴³tʰuŋ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>boire</gl>
+  </entry>
+  <entry id="mar.147">
+    <hw>⁴⁵'⁴⁴'³³won</hw>
+    <srcxcr2>dzi-mu</srcxcr2>
+    <gl>? montrer</gl>
+  </entry>
+  <entry id="mar.148">
+    <hw>⁴⁴'⁴⁴hɬa</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>jeter, renoncer</gl>
+  </entry>
+  <entry id="mar.149">
+    <hw>⁴⁵'⁵⁴jaŋ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>trouver</gl>
+  </entry>
+  <entry id="mar.150">
+    <hw>⁵⁵'⁴⁴jaŋ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>léger</gl>
+  </entry>
+  <entry id="mar.151">
+    <hw>⁴⁴'⁴⁴jo</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>suffire</gl>
+  </entry>
+  <entry id="mar.152">
+    <hw>⁵⁵'⁵⁵jʌ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>aller</gl>
+  </entry>
+  <entry id="mar.153">
+    <hw>⁴⁴'⁴⁴kil</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>nager</gl>
+  </entry>
+  <entry id="mar.154">
+    <hw>⁵⁴'⁴⁴kjaː</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>pleurer</gl>
+  </entry>
+  <entry id="mar.155">
+    <hw>⁵⁵'⁵⁵kji</hw>
+    <srcxcr2>kji-wa</srcxcr2>
+    <srcxcr1>⁵⁵'⁵⁵'⁴⁴kjikji-wa</srcxcr1>
+    <gl>sucré</gl>
+  </entry>
+  <entry id="mar.156">
+    <hw>⁴⁴'⁴⁴kjo</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>labourer</gl>
+  </entry>
+  <entry id="mar.157">
+    <hw>⁵⁴'⁴⁴kjuː</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>casser (maïs)</gl>
+  </entry>
+  <entry id="mar.158">
+    <hw>⁵⁴'⁴⁴kjʌ</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>démanger</gl>
+  </entry>
+  <entry id="mar.159">
+    <hw>⁵⁵'⁵⁴kjʌm</hw>
+    <srcxcr2>pa</srcxcr2>
+    <gl>ruminer</gl>
+  </entry>
+  <entry id="mar.160">
+    <hw>⁵⁵'⁴⁴ku</hw>
+    <srcxcr2>tsi &lt;ML&gt;</srcxcr2>
+    <gl>brûler</gl>
+  </entry>
+  <entry id="mar.161">
+    <hw>⁴⁴'⁵⁵kʌ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>épais (liquide)</gl>
+  </entry>
+  <entry id="mar.162">
+    <hw>⁵⁵'⁵⁴kʰa</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>venir</gl>
+  </entry>
+  <entry id="mar.163">
+    <hw>⁵⁵'⁵⁴kʰam</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>pouvoir</gl>
+  </entry>
+  <entry id="mar.164">
+    <hw>⁵⁵'⁴⁴kʌm</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>amer</gl>
+  </entry>
+  <entry id="mar.165">
+    <hw>⁵⁵'⁵⁵kʰol</hw>
+    <srcxcr2>tsi</srcxcr2>
+    <gl>bouillir</gl>
+  </entry>
+  <entry id="mar.166">
+    <hw>⁵⁵'⁵⁵kʰu</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>laver</gl>
+  </entry>
+  <entry id="mar.167">
+    <hw>⁵⁵'⁴⁴kʰʌ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>venir</gl>
+  </entry>
+  <entry id="mar.168">
+    <hw>⁵⁵'⁴⁴kʰʌi</hw>
+    <srcxcr2>wa &lt;dɖit lent&gt;</srcxcr2>
+    <gl>filer</gl>
+  </entry>
+  <entry id="mar.169">
+    <hw>⁴⁴'⁴⁴kʰʌr</hw>
+    <srcxcr2>bʌ</srcxcr2>
+    <gl>sécher</gl>
+  </entry>
+  <entry id="mar.170">
+    <hw>⁵⁴'⁴⁴lo</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>faire chauffer</gl>
+  </entry>
+  <entry id="mar.171">
+    <hw>⁵⁵'⁴⁴mle</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <srcxcr1>⁵⁵'⁴⁴'⁴⁴mle-dzi-mu</srcxcr1>
+    <gl>oublier</gl>
+  </entry>
+  <entry id="mar.172">
+    <hw>⁵⁵'⁴⁴mlo</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>piquer</gl>
+  </entry>
+  <entry id="mar.173">
+    <hw>⁵⁵'⁵⁵mraŋ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>voir</gl>
+  </entry>
+  <entry id="mar.174">
+    <hw>⁴⁴'⁴⁴mu</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>être</gl>
+  </entry>
+  <entry id="mar.175">
+    <hw>⁵⁵'⁵⁵na</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>être malade, souffrir</gl>
+  </entry>
+  <entry id="mar.176">
+    <hw>⁴⁴'⁴⁴naŋ</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>couver</gl>
+  </entry>
+  <entry id="mar.177">
+    <hw>⁵⁵'⁵⁵ne</hw>
+    <srcxcr2>dje</srcxcr2>
+    <srcxcr1>⁵⁵'⁵⁵'¹¹ne-dje-wa</srcxcr1>
+    <gl>être dégoûté</gl>
+  </entry>
+  <entry id="mar.178">
+    <hw>⁵⁵'⁴⁴pli</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>glisser</gl>
+  </entry>
+  <entry id="mar.179">
+    <hw>⁵⁵'⁴⁴plo</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>riche</gl>
+  </entry>
+  <entry id="mar.180">
+    <hw>⁵⁵'⁴⁴pʰe</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>sortir</gl>
+  </entry>
+  <entry id="mar.181">
+    <hw>⁴⁴'⁴⁴pʰja</hw>
+    <srcxcr2>mo</srcxcr2>
+    <gl>briller (soleil)</gl>
+  </entry>
+  <entry id="mar.182">
+    <hw>⁴⁴'⁴⁴pʰum</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>pondre</gl>
+  </entry>
+  <entry id="mar.183">
+    <hw>⁵⁵'⁴⁴ra</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>tisser</gl>
+  </entry>
+  <entry id="mar.184">
+    <hw>⁴⁴'⁵⁵reː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>se lever</gl>
+  </entry>
+  <entry id="mar.185">
+    <hw>⁵⁵'⁵⁴ri</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>gratter</gl>
+  </entry>
+  <entry id="mar.186">
+    <hw>⁵⁵'⁵⁴rum</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>court</gl>
+  </entry>
+  <entry id="mar.187">
+    <hw>⁵⁵'⁴⁴rɯ</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>gratter</gl>
+  </entry>
+  <entry id="mar.188">
+    <hw>⁵⁵'⁵⁵rʌ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>tisser</gl>
+  </entry>
+  <entry id="mar.189">
+    <hw>⁵⁵'⁴⁴sam</hw>
+    <srcxcr2>pa</srcxcr2>
+    <gl>neuf</gl>
+  </entry>
+  <entry id="mar.190">
+    <hw>⁵⁵'⁴⁴so</hw>
+    <srcxcr2>mu</srcxcr2>
+    <gl>fabriquer</gl>
+  </entry>
+  <entry id="mar.191">
+    <hw>⁴⁴'⁴⁴sol</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>manger (hon.)</gl>
+  </entry>
+  <entry id="mar.192">
+    <hw>⁵⁵'⁵⁵sʌm</hw>
+    <srcxcr2>pʌ</srcxcr2>
+    <gl>neuf</gl>
+  </entry>
+  <entry id="mar.193">
+    <hw>⁵⁵'⁴⁴sʌr</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>fleurir</gl>
+  </entry>
+  <entry id="mar.194">
+    <hw>⁵⁵'⁴⁴taː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>recevoir</gl>
+  </entry>
+  <entry id="mar.195">
+    <hw>⁵⁵'⁴⁴toː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>battre (du grain)</gl>
+  </entry>
+  <entry id="mar.196">
+    <hw>⁵⁵'⁴⁴tsja</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>chercher / regarder, examiner</gl>
+  </entry>
+  <entry id="mar.197">
+    <hw>⁵⁵'⁵⁴tsjun</hw>
+    <srcxcr2>o</srcxcr2>
+    <gl>attacher</gl>
+  </entry>
+  <entry id="mar.198">
+    <hw>⁴⁴'⁴⁴tsu</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>aboyer</gl>
+  </entry>
+  <entry id="mar.199">
+    <hw>⁴⁴'⁴⁴tsuŋ</hw>
+    <srcxcr2>pʌ</srcxcr2>
+    <gl>vendre</gl>
+  </entry>
+  <entry id="mar.200">
+    <hw>⁴⁴'⁴⁴tsʰʌ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>faire paître</gl>
+  </entry>
+  <entry id="mar.201">
+    <hw>⁵⁵'⁴⁴tsʰʌ</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>fendre (bois)</gl>
+  </entry>
+  <entry id="mar.202">
+    <hw>⁵⁵'⁴⁴tsʰʌr</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>filtrer</gl>
+  </entry>
+  <entry id="mar.203">
+    <hw>⁴⁴'⁴⁴tʰa</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>couper</gl>
+  </entry>
+  <entry id="mar.204">
+    <hw>⁵⁵'⁴⁴tʰeʌ</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>entendre</gl>
+  </entry>
+  <entry id="mar.205">
+    <hw>⁵⁴'⁴⁴tʰiː</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>casser</gl>
+  </entry>
+  <entry id="mar.206">
+    <hw>⁵⁵'⁵⁴tʰu</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>cueillir/ paume, plante</gl>
+  </entry>
+  <entry id="mar.207">
+    <hw>⁵⁵'⁴⁴tɕʰe</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>asperger (en offrande)</gl>
+  </entry>
+  <entry id="mar.208">
+    <hw>⁵⁵'⁴⁴ɲeʌː</hw>
+    <srcxcr2>dzi</srcxcr2>
+    <gl>rire</gl>
+  </entry>
+  <entry id="mar.209">
+    <hw>⁵⁴'⁴⁴ɕi</hw>
+    <srcxcr2>dzi-mu</srcxcr2>
+    <srcxcr1>⁵⁴'⁴⁴'⁴⁴ɕi-dzi-mu</srcxcr1>
+    <gl>mourir</gl>
+  </entry>
+  <entry id="mar.210">
+    <hw>⁵⁵'⁴⁴ɕuː</hw>
+    <srcxcr2>wʌ</srcxcr2>
+    <gl>enfiler</gl>
+  </entry>
+  <entry id="mar.211">
+    <hw>⁵⁵'⁵⁵ɕɔ</hw>
+    <srcxcr2>wa</srcxcr2>
+    <gl>danser, tourner sur soi-même</gl>
+  </entry>
+  <entry id="mar.212">
+    <hw>⁵⁵'⁴⁴ɕʌl</hw>
+    <srcxcr2>ba</srcxcr2>
+    <gl>rincer</gl>
+  </entry>
+  <entry id="mar.213">
+    <hw>⁵⁴hru</hw>
+    <gl>fil</gl>
+  </entry>
+  <entry id="mar.214">
+    <hw>⁵⁴hru</hw>
+    <gl>sueur</gl>
+  </entry>
+  <entry id="mar.215">
+    <hw>⁵⁴hɬa</hw>
+    <gl>dieu</gl>
+  </entry>
+  <entry id="mar.216">
+    <hw>⁵⁴hɬi</hw>
+    <gl>excréments</gl>
+  </entry>
+  <entry id="mar.217">
+    <hw>⁵⁵ja</hw>
+    <srcxcr1>(⁵⁵ja)⁵⁴ɕoŋ</srcxcr1>
+    <gl>yack</gl>
+  </entry>
+  <entry id="mar.218">
+    <hw>⁵⁵ke</hw>
+    <gl>travail</gl>
+  </entry>
+  <entry id="mar.219">
+    <hw>⁵⁴kju</hw>
+    <gl>eau</gl>
+  </entry>
+  <entry id="mar.220">
+    <hw>⁵⁴kjʌm</hw>
+    <gl>chemin</gl>
+  </entry>
+  <entry id="mar.221">
+    <hw>⁵⁴kĩ</hw>
+    <gl>un (nombre)</gl>
+  </entry>
+  <entry id="mar.222">
+    <hw>⁵⁴kʰũŋ</hw>
+    <gl>trou</gl>
+  </entry>
+  <entry id="mar.223">
+    <hw>⁵⁵li</hw>
+    <gl>visage</gl>
+  </entry>
+  <entry id="mar.224">
+    <hw>⁵⁵lin</hw>
+    <gl>neige</gl>
+  </entry>
+  <entry id="mar.225">
+    <hw>⁵⁴lja</hw>
+    <gl>place</gl>
+  </entry>
+  <entry id="mar.226">
+    <hw>⁵⁵ljʌp</hw>
+    <gl>poumon</gl>
+  </entry>
+  <entry id="mar.227">
+    <hw>⁵⁴lo</hw>
+    <gl>chaud</gl>
+  </entry>
+  <entry id="mar.228">
+    <hw>⁵⁴maŋ</hw>
+    <gl>tigre</gl>
+  </entry>
+  <entry id="mar.229">
+    <hw>⁵⁴me</hw>
+    <gl>vache</gl>
+  </entry>
+  <entry id="mar.230">
+    <hw>⁵⁴mra</hw>
+    <gl>herbe</gl>
+  </entry>
+  <entry id="mar.231">
+    <hw>⁵⁴mro</hw>
+    <gl>porte</gl>
+  </entry>
+  <entry id="mar.232">
+    <hw>⁵⁴mʌr</hw>
+    <gl>or</gl>
+  </entry>
+  <entry id="mar.233">
+    <hw>⁵⁴no</hw>
+    <gl>morve</gl>
+  </entry>
+  <entry id="mar.234">
+    <hw>⁵⁴paŋ</hw>
+    <gl>prairie</gl>
+  </entry>
+  <entry id="mar.235">
+    <hw>⁵⁴plu</hw>
+    <gl>graine</gl>
+  </entry>
+  <entry id="mar.236">
+    <hw>⁵⁴pra</hw>
+    <gl>falaise</gl>
+  </entry>
+  <entry id="mar.237">
+    <hw>⁵⁴pra</hw>
+    <gl>farine</gl>
+  </entry>
+  <entry id="mar.238">
+    <hw>⁵⁴pʰi</hw>
+    <gl>écorce</gl>
+  </entry>
+  <entry id="mar.239">
+    <hw>⁵⁴pʰo</hw>
+    <gl>ventre</gl>
+  </entry>
+  <entry id="mar.240">
+    <hw>⁵⁴pʰʌ</hw>
+    <gl>mari</gl>
+  </entry>
+  <entry id="mar.241">
+    <hw>⁵⁴pʰʌɛ</hw>
+    <gl>fer</gl>
+  </entry>
+  <entry id="mar.242">
+    <hw>⁴⁵re</hw>
+    <gl>côte (os)</gl>
+  </entry>
+  <entry id="mar.243">
+    <hw>⁵⁵suŋ</hw>
+    <gl>bouche</gl>
+  </entry>
+  <entry id="mar.244">
+    <hw>⁵⁴sʌm</hw>
+    <gl>âme</gl>
+  </entry>
+  <entry id="mar.245">
+    <hw>⁵⁵taŋ</hw>
+    <gl>vaisselle</gl>
+  </entry>
+  <entry id="mar.246">
+    <hw>⁵⁴tin</hw>
+    <gl>coeur</gl>
+  </entry>
+  <entry id="mar.247">
+    <hw>⁵⁵tin</hw>
+    <gl>maison</gl>
+  </entry>
+  <entry id="mar.248">
+    <hw>⁵⁴to</hw>
+    <gl>houe</gl>
+  </entry>
+  <entry id="mar.249">
+    <hw>⁵⁴tsaŋ</hw>
+    <gl>bru</gl>
+  </entry>
+  <entry id="mar.250">
+    <hw>⁵⁴tsju</hw>
+    <gl>dix</gl>
+  </entry>
+  <entry id="mar.251">
+    <hw>⁵⁴tsʰo</hw>
+    <gl>corde</gl>
+  </entry>
+  <entry id="mar.252">
+    <hw>⁵⁵tʰo</hw>
+    <gl>salive</gl>
+  </entry>
+  <entry id="mar.253">
+    <hw>⁵⁵ur</hw>
+    <gl>jaune</gl>
+  </entry>
+  <entry id="mar.254">
+    <hw>⁵⁵ɕaŋ</hw>
+    <srcxcr2>³³'³³ka-dzi</srcxcr2>
+    <gl>vomir</gl>
+  </entry>
+  <entry id="mar.255">
+    <hw>⁵⁴ɲe</hw>
+    <gl>foie</gl>
+  </entry>
+  <entry id="mar.256">
+    <hw>⁵⁵ɕeː</hw>
+    <gl>riz (honor.)</gl>
+  </entry>
+  <entry id="mar.257">
+    <hw>⁵⁴ɕin</hw>
+    <gl>ongle</gl>
+  </entry>
+  <entry id="mar.258">
+    <hw>⁵⁴⁵ja</hw>
+    <gl>yack</gl>
+  </entry>
+  <entry id="mar.259">
+    <hw>⁵⁴⁵kjuː</hw>
+    <gl>mouton</gl>
+  </entry>
+  <entry id="mar.260">
+    <hw>⁵⁴⁵ko</hw>
+    <gl>blé/ pince à feu</gl>
+  </entry>
+  <entry id="mar.261">
+    <hw>⁵⁴⁵ku</hw>
+    <gl>dieu</gl>
+  </entry>
+  <entry id="mar.262">
+    <hw>⁵⁴⁵le</hw>
+    <gl>langue</gl>
+  </entry>
+  <entry id="mar.263">
+    <hw>⁵⁴⁵me</hw>
+    <gl>flèche</gl>
+  </entry>
+  <entry id="mar.264">
+    <hw>⁵⁴⁵nʌ</hw>
+    <gl>nez</gl>
+  </entry>
+  <entry id="mar.265">
+    <hw>⁵⁴⁵nõ</hw>
+    <gl>aïl</gl>
+  </entry>
+  <entry id="mar.266">
+    <hw>⁵⁴⁵pli</hw>
+    <gl>quatre</gl>
+  </entry>
+  <entry id="mar.267">
+    <hw>⁵⁴⁵pre</hw>
+    <gl>huit</gl>
+  </entry>
+  <entry id="mar.268">
+    <hw>⁵⁴⁵pri</hw>
+    <gl>yack femelle</gl>
+  </entry>
+  <entry id="mar.269">
+    <hw>⁵⁴⁵ru</hw>
+    <gl>corne</gl>
+  </entry>
+  <entry id="mar.270">
+    <hw>⁵⁴⁵su</hw>
+    <gl>qui?</gl>
+  </entry>
+  <entry id="mar.271">
+    <hw>⁵⁴⁵sʌ</hw>
+    <gl>terre</gl>
+  </entry>
+  <entry id="mar.272">
+    <hw>⁵⁴⁵taː</hw>
+    <gl>quoi ?</gl>
+  </entry>
+  <entry id="mar.273">
+    <hw>⁵⁴⁵tsu</hw>
+    <gl>ceci</gl>
+  </entry>
+  <entry id="mar.274">
+    <hw>⁵⁴ŋʌ</hw>
+    <gl>moi, je</gl>
+  </entry>
+  <entry id="mar.275">
+    <hw>⁵⁴⁵ɕe</hw>
+    <gl>pou</gl>
+  </entry>
+  <entry id="mar.276">
+    <hw>⁵⁴⁵ɲi</hw>
+    <gl>deux</gl>
+  </entry>
+  <entry id="mar.277">
+    <hw>⁵⁴⁵ŋʌ</hw>
+    <gl>cinq</gl>
+  </entry>
+  <entry id="mar.278">
+    <hw>⁵⁴⁵ɕʌ</hw>
+    <gl>viande</gl>
+  </entry>
+  <entry id="mar.279">
+    <hw>⁵⁴⁵ɕʌɛ</hw>
+    <gl>riz (honor.)</gl>
+  </entry>
+</lexicon>

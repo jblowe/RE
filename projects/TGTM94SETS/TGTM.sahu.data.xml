@@ -1,0 +1,2257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lexicon dialecte="sahu">
+  <entry id="sahu.1">
+    <hw>²eː</hw>
+    <srcxcr1>²eː</srcxcr1>
+    <gl>thou/ you</gl>
+  </entry>
+  <entry id="sahu.2">
+    <hw>²jaŋ</hw>
+    <srcxcr1>²jaŋ=pa [['yaŋpa</srcxcr1>
+    <gl>light (in weight)</gl>
+  </entry>
+  <entry id="sahu.3">
+    <hw>²joː</hw>
+    <srcxcr1>²joː-¹tsi</srcxcr1>
+    <gl>sufficient</gl>
+  </entry>
+  <entry id="sahu.4">
+    <hw>²ju</hw>
+    <srcxcr1>²ju=pa [['yupa</srcxcr1>
+    <gl>to come/ to come down</gl>
+  </entry>
+  <entry id="sahu.5">
+    <hw>²juŋ</hw>
+    <srcxcr1>²juŋ=pa [['yuŋpa</srcxcr1>
+    <gl>stone</gl>
+  </entry>
+  <entry id="sahu.6">
+    <hw>²juː</hw>
+    <srcxcr1>²kaː ²juː=pa [['kaː 'yuː-pa</srcxcr1>
+    <gl>to bleed</gl>
+  </entry>
+  <entry id="sahu.7">
+    <hw>²juː</hw>
+    <srcxcr1>¹ʈaː ²juː=pa [[Taː 'yuː-pa</srcxcr1>
+    <gl>to germinate</gl>
+  </entry>
+  <entry id="sahu.8">
+    <hw>²kam</hw>
+    <srcxcr1>²kam</srcxcr1>
+    <gl>chin</gl>
+  </entry>
+  <entry id="sahu.9">
+    <hw>²kam</hw>
+    <srcxcr1>²kam=pa [['kampa</srcxcr1>
+    <gl>bitter</gl>
+  </entry>
+  <entry id="sahu.10">
+    <hw>²kaː</hw>
+    <srcxcr1>²kaː</srcxcr1>
+    <gl>blood</gl>
+  </entry>
+  <entry id="sahu.11">
+    <hw>²ket</hw>
+    <gl>voice</gl>
+  </entry>
+  <entry id="sahu.12">
+    <hw>²ki</hw>
+    <srcxcr1>²ki</srcxcr1>
+    <gl>water</gl>
+  </entry>
+  <entry id="sahu.13">
+    <hw>²kjon</hw>
+    <gl>to mend</gl>
+  </entry>
+  <entry id="sahu.14">
+    <hw>²kot</hw>
+    <gl>to weigh/ to cause to weigh/ to weigh</gl>
+  </entry>
+  <entry id="sahu.15">
+    <hw>²kram</hw>
+    <srcxcr1>²kram=pa [['kram-pa</srcxcr1>
+    <gl>to ferment (itr)</gl>
+  </entry>
+  <entry id="sahu.16">
+    <hw>²kru</hw>
+    <srcxcr1>²kru ²naŋ</srcxcr1>
+    <gl>cubit (elbow to fingertip)</gl>
+  </entry>
+  <entry id="sahu.17">
+    <hw>²ku</hw>
+    <srcxcr1>²ku</srcxcr1>
+    <gl>nine</gl>
+  </entry>
+  <entry id="sahu.18">
+    <hw>²kuː</hw>
+    <srcxcr1>²kuː ¹la=pa [['kuː la-pa</srcxcr1>
+    <gl>to stoop (bend down)</gl>
+  </entry>
+  <entry id="sahu.19">
+    <hw>²kuː</hw>
+    <srcxcr1>²kuː=pa [['kuː-pa</srcxcr1>
+    <gl>to bend</gl>
+  </entry>
+  <entry id="sahu.20">
+    <hw>²kʰa</hw>
+    <srcxcr1>³toː ²kʰa=pa [[toːh 'kʰa-pa</srcxcr1>
+    <gl>to arrive (here)</gl>
+  </entry>
+  <entry id="sahu.21">
+    <hw>²kʰam</hw>
+    <srcxcr1>³seŋ=pa ²kʰam=pa [[sehŋ-pa 'kʰam-pa</srcxcr1>
+    <gl>can (to be able to) do s.th</gl>
+  </entry>
+  <entry id="sahu.22">
+    <hw>²kʰar</hw>
+    <srcxcr1>²kʰar=pa [['kʰar-pa</srcxcr1>
+    <gl>to shake (vigorously)</gl>
+  </entry>
+  <entry id="sahu.23">
+    <hw>²kʰaŋ</hw>
+    <srcxcr1>²kʰaŋ=pa [['kʰaŋpa</srcxcr1>
+    <gl>cold</gl>
+  </entry>
+  <entry id="sahu.24">
+    <hw>²kʰet</hw>
+    <gl>to read, to chant</gl>
+  </entry>
+  <entry id="sahu.25">
+    <hw>²kʰit</hw>
+    <gl>to lend, to borrow/ to lend (money)</gl>
+  </entry>
+  <entry id="sahu.26">
+    <hw>²kʰoː</hw>
+    <srcxcr1>¹plat ¹plit-¹le ²kʰoː=pa [[plat plit-le 'kʰoː-pa</srcxcr1>
+    <gl>to disarrange</gl>
+  </entry>
+  <entry id="sahu.27">
+    <hw>²kʰraŋ</hw>
+    <srcxcr1>²kʰraŋ=pa [['kʰraŋ-pa</srcxcr1>
+    <gl>to burn/ to roast</gl>
+  </entry>
+  <entry id="sahu.28">
+    <hw>²kʰret</hw>
+    <gl>to gnaw</gl>
+  </entry>
+  <entry id="sahu.29">
+    <hw>²kʰru</hw>
+    <srcxcr1>²kʰru=pa [['kʰru-pa</srcxcr1>
+    <gl>to wash</gl>
+  </entry>
+  <entry id="sahu.30">
+    <hw>²kʰu</hw>
+    <srcxcr1>²kʰu</srcxcr1>
+    <gl>cooked vegetable</gl>
+  </entry>
+  <entry id="sahu.31">
+    <hw>²kʰuŋ</hw>
+    <srcxcr1>²kʰuŋ</srcxcr1>
+    <gl>hole</gl>
+  </entry>
+  <entry id="sahu.32">
+    <hw>²la</hw>
+    <srcxcr1>²la</srcxcr1>
+    <gl>month</gl>
+  </entry>
+  <entry id="sahu.33">
+    <hw>²laː</hw>
+    <srcxcr1>²laː=pa [['laː-pa</srcxcr1>
+    <gl>to hide (itr) (animate)</gl>
+  </entry>
+  <entry id="sahu.34">
+    <hw>²le</hw>
+    <srcxcr1>²le</srcxcr1>
+    <gl>tongue</gl>
+  </entry>
+  <entry id="sahu.35">
+    <hw>²lum</hw>
+    <srcxcr1>²lum=pa [['lum-pa</srcxcr1>
+    <gl>to light (itr)/ to transmit fire, to light (itr)/ to flare up</gl>
+  </entry>
+  <entry id="sahu.36">
+    <hw>²ma</hw>
+    <srcxcr1>²ma</srcxcr1>
+    <gl>cane, rattan</gl>
+  </entry>
+  <entry id="sahu.37">
+    <hw>²min</hw>
+    <gl>to ripen/ to become soft, ripe/ to cook (itr)</gl>
+  </entry>
+  <entry id="sahu.38">
+    <hw>²miː</hw>
+    <srcxcr1>²miː</srcxcr1>
+    <gl>eye</gl>
+  </entry>
+  <entry id="sahu.39">
+    <hw>²mjap</hw>
+    <srcxcr1>²mjap=pa [['myap-pa</srcxcr1>
+    <gl>to scrub (pots)/ to whet (by hand, with whet stone)</gl>
+  </entry>
+  <entry id="sahu.40">
+    <hw>²mjaŋ</hw>
+    <srcxcr1>³seŋ-²mjaŋ=pa [[sehŋ-'myaŋ-pa</srcxcr1>
+    <gl>to be allowed to</gl>
+  </entry>
+  <entry id="sahu.41">
+    <hw>²mlaŋ</hw>
+    <srcxcr1>²mlaŋ</srcxcr1>
+    <gl>black</gl>
+  </entry>
+  <entry id="sahu.42">
+    <hw>²mlet</hw>
+    <gl>to forget/ to omit, to err (forget)</gl>
+  </entry>
+  <entry id="sahu.43">
+    <hw>²mrap</hw>
+    <srcxcr1>²mrap</srcxcr1>
+    <gl>door</gl>
+  </entry>
+  <entry id="sahu.44">
+    <hw>²mren</hw>
+    <gl>to have eaten enough</gl>
+  </entry>
+  <entry id="sahu.45">
+    <hw>²na</hw>
+    <srcxcr1>²na=pa [['napa</srcxcr1>
+    <gl>sick/ pain/ painful/ to hurt (ache, pain)</gl>
+  </entry>
+  <entry id="sahu.46">
+    <hw>²nam</hw>
+    <srcxcr1>²nam</srcxcr1>
+    <gl>rain</gl>
+  </entry>
+  <entry id="sahu.47">
+    <hw>²nap</hw>
+    <srcxcr1>²nap</srcxcr1>
+    <gl>nasal mucus</gl>
+  </entry>
+  <entry id="sahu.48">
+    <hw>²naː</hw>
+    <srcxcr1>²naː=pa [['naː-pa</srcxcr1>
+    <gl>to carry</gl>
+  </entry>
+  <entry id="sahu.49">
+    <hw>²naŋ</hw>
+    <gl>whole</gl>
+  </entry>
+  <entry id="sahu.50">
+    <hw>²net</hw>
+    <srcxcr1>²net</srcxcr1>
+    <gl>full/ even</gl>
+  </entry>
+  <entry id="sahu.51">
+    <hw>²no</hw>
+    <srcxcr1>²no=pa [['nopa</srcxcr1>
+    <gl>high</gl>
+  </entry>
+  <entry id="sahu.52">
+    <hw>²paŋ</hw>
+    <srcxcr1>²paŋ=pa [['paŋpa</srcxcr1>
+    <gl>to say/ to speak (a language)</gl>
+  </entry>
+  <entry id="sahu.53">
+    <hw>²pet</hw>
+    <gl>to comb fiber, wool</gl>
+  </entry>
+  <entry id="sahu.54">
+    <hw>²pit</hw>
+    <gl>to send</gl>
+  </entry>
+  <entry id="sahu.55">
+    <hw>²puŋ</hw>
+    <srcxcr1>²puŋ=pa [['puŋ-pa</srcxcr1>
+    <gl>to allow</gl>
+  </entry>
+  <entry id="sahu.56">
+    <hw>²puŋ</hw>
+    <srcxcr1>²puŋ=pa [['puŋ-pa</srcxcr1>
+    <gl>to strike (distant)/ to shoot</gl>
+  </entry>
+  <entry id="sahu.57">
+    <hw>²pʰai</hw>
+    <srcxcr1>²pʰai</srcxcr1>
+    <gl>iron</gl>
+  </entry>
+  <entry id="sahu.58">
+    <hw>²pʰaː</hw>
+    <srcxcr1>²tsʰeː ²pʰaː=pa [['cʰeː 'pʰaː-pa</srcxcr1>
+    <gl>to repay (a loan)</gl>
+  </entry>
+  <entry id="sahu.59">
+    <hw>²pʰiː</hw>
+    <srcxcr1>²pʰiː=pa [['pʰiː-pa</srcxcr1>
+    <gl>to peel (to strip skin with hands)</gl>
+  </entry>
+  <entry id="sahu.60">
+    <hw>²pʰjaː</hw>
+    <srcxcr1>²pʰjaː</srcxcr1>
+    <gl>broom</gl>
+  </entry>
+  <entry id="sahu.61">
+    <hw>²pʰjaː</hw>
+    <srcxcr1>²pʰjaː=pa [['pʰyaː-pa</srcxcr1>
+    <gl>to shine (sun)</gl>
+  </entry>
+  <entry id="sahu.62">
+    <hw>²pʰjaː</hw>
+    <srcxcr1>²pʰjaː=pa [['pʰyaː-pa</srcxcr1>
+    <gl>to wipe off</gl>
+  </entry>
+  <entry id="sahu.63">
+    <hw>²pʰjaŋ</hw>
+    <srcxcr1>²pʰjaŋ=pa [['pʰyaŋpa</srcxcr1>
+    <gl>to fly</gl>
+  </entry>
+  <entry id="sahu.64">
+    <hw>²pʰjoŋ</hw>
+    <srcxcr1>²pʰjoŋ ¹pʰjoŋ ¹ta=pa [['pʰyoŋ pʰyoŋ ta-pa</srcxcr1>
+    <gl>to float (as wood in water)</gl>
+  </entry>
+  <entry id="sahu.65">
+    <hw>²pʰo</hw>
+    <srcxcr1>²pʰo</srcxcr1>
+    <gl>belly</gl>
+  </entry>
+  <entry id="sahu.66">
+    <hw>²pʰot</hw>
+    <gl>to tie up (laces)</gl>
+  </entry>
+  <entry id="sahu.67">
+    <hw>²pʰoː</hw>
+    <srcxcr1>²pʰoː=pa [['pʰoː-pa</srcxcr1>
+    <gl>to burst, to explode</gl>
+  </entry>
+  <entry id="sahu.68">
+    <hw>²pʰum</hw>
+    <srcxcr1>²pʰum</srcxcr1>
+    <gl>egg</gl>
+  </entry>
+  <entry id="sahu.69">
+    <hw>²rai</hw>
+    <srcxcr1>²rai</srcxcr1>
+    <gl>rib</gl>
+  </entry>
+  <entry id="sahu.70">
+    <hw>²rap</hw>
+    <srcxcr1>²rap=pa [['rap-pa</srcxcr1>
+    <gl>to stand</gl>
+  </entry>
+  <entry id="sahu.71">
+    <hw>²raː</hw>
+    <srcxcr1>²raː=pa [['raː-pa</srcxcr1>
+    <gl>to weave</gl>
+  </entry>
+  <entry id="sahu.72">
+    <hw>²ret</hw>
+    <gl>to grind (small amount)</gl>
+  </entry>
+  <entry id="sahu.73">
+    <hw>²riː</hw>
+    <srcxcr1>²riː=pa [['riː-pa</srcxcr1>
+    <gl>to scratch (an itch)</gl>
+  </entry>
+  <entry id="sahu.74">
+    <hw>²ro</hw>
+    <srcxcr1>²ro=pa [['ro-pa</srcxcr1>
+    <gl>to dilute</gl>
+  </entry>
+  <entry id="sahu.75">
+    <hw>²roː</hw>
+    <srcxcr1>²roːro ²roː=pa [['roːro 'roː-pa</srcxcr1>
+    <gl>to bear fruit</gl>
+  </entry>
+  <entry id="sahu.76">
+    <hw>²rut</hw>
+    <srcxcr1>²rut</srcxcr1>
+    <gl>vomit</gl>
+  </entry>
+  <entry id="sahu.77">
+    <hw>²rut</hw>
+    <gl>to vomit</gl>
+  </entry>
+  <entry id="sahu.78">
+    <hw>²ruŋ</hw>
+    <srcxcr1>²ruŋ=pa [['ruŋ-pa</srcxcr1>
+    <gl>to guard</gl>
+  </entry>
+  <entry id="sahu.79">
+    <hw>²sar</hw>
+    <srcxcr1>²sar=pa [['sar-pa</srcxcr1>
+    <gl>to bloom</gl>
+  </entry>
+  <entry id="sahu.80">
+    <hw>²saŋ</hw>
+    <srcxcr1>²saŋ=pa [['saŋ-pa</srcxcr1>
+    <gl>to hang up</gl>
+  </entry>
+  <entry id="sahu.81">
+    <hw>²saŋ</hw>
+    <srcxcr1>²saŋ=pa [['saŋ-pa</srcxcr1>
+    <gl>to heat up roti on the fire</gl>
+  </entry>
+  <entry id="sahu.82">
+    <hw>²se</hw>
+    <srcxcr1>²se=pa [['se-pa</srcxcr1>
+    <gl>to lead (on a rope)</gl>
+  </entry>
+  <entry id="sahu.83">
+    <hw>²sja</hw>
+    <srcxcr1>²sja=pa [['sya-pa</srcxcr1>
+    <gl>dance</gl>
+  </entry>
+  <entry id="sahu.84">
+    <hw>²sjap</hw>
+    <srcxcr1>²sjap=pa [['syap-pa</srcxcr1>
+    <gl>to meet (to catch up with)</gl>
+  </entry>
+  <entry id="sahu.85">
+    <hw>²sjet</hw>
+    <srcxcr1>²sjet</srcxcr1>
+    <gl>louse</gl>
+  </entry>
+  <entry id="sahu.86">
+    <hw>²sjeː</hw>
+    <srcxcr1>²sjeː=pa [['syeːpa</srcxcr1>
+    <gl>to know</gl>
+  </entry>
+  <entry id="sahu.87">
+    <hw>²sjiŋ</hw>
+    <srcxcr1>²sjiŋ</srcxcr1>
+    <gl>wood</gl>
+  </entry>
+  <entry id="sahu.88">
+    <hw>²sjot</hw>
+    <gl>to weed</gl>
+  </entry>
+  <entry id="sahu.89">
+    <hw>²sju</hw>
+    <srcxcr1>²sju=pa [['syu-pa</srcxcr1>
+    <gl>to string (beads)</gl>
+  </entry>
+  <entry id="sahu.90">
+    <hw>²so</hw>
+    <srcxcr1>²so=pa [['so-pa</srcxcr1>
+    <gl>to live</gl>
+  </entry>
+  <entry id="sahu.91">
+    <hw>²som</hw>
+    <srcxcr1>²som</srcxcr1>
+    <gl>three</gl>
+  </entry>
+  <entry id="sahu.92">
+    <hw>²ta</hw>
+    <srcxcr1>²ta=pa [['ta-pa</srcxcr1>
+    <gl>to cause to fall off</gl>
+  </entry>
+  <entry id="sahu.93">
+    <hw>²taː</hw>
+    <srcxcr1>²taː</srcxcr1>
+    <gl>what?</gl>
+  </entry>
+  <entry id="sahu.94">
+    <hw>²taː</hw>
+    <srcxcr1>²taː=pa [['taː-pa</srcxcr1>
+    <gl>to hold out</gl>
+  </entry>
+  <entry id="sahu.95">
+    <hw>²tet</hw>
+    <gl>to take out (of box)/ to take down</gl>
+  </entry>
+  <entry id="sahu.96">
+    <hw>²tip</hw>
+    <srcxcr1>²tip=pa [['tip-pa</srcxcr1>
+    <gl>to begin</gl>
+  </entry>
+  <entry id="sahu.97">
+    <hw>²to</hw>
+    <srcxcr1>²to=pa [['to-pa</srcxcr1>
+    <gl>to strike, to thresh, to pound (grain)</gl>
+  </entry>
+  <entry id="sahu.98">
+    <hw>²tsi</hw>
+    <srcxcr1>²tsi</srcxcr1>
+    <gl>ten</gl>
+  </entry>
+  <entry id="sahu.99">
+    <hw>²tsim</hw>
+    <srcxcr1>²tsim=pa [['cim-pa</srcxcr1>
+    <gl>to store, to put in the right place</gl>
+  </entry>
+  <entry id="sahu.100">
+    <hw>²tsjam</hw>
+    <srcxcr1>²tsjam</srcxcr1>
+    <gl>urine</gl>
+  </entry>
+  <entry id="sahu.101">
+    <hw>²tsjap</hw>
+    <srcxcr1>²tsjap</srcxcr1>
+    <gl>ring</gl>
+  </entry>
+  <entry id="sahu.102">
+    <hw>²tsjar</hw>
+    <srcxcr1>²tsjar=pa [['cyarpa</srcxcr1>
+    <gl>twisted/ to twist (a limb)</gl>
+  </entry>
+  <entry id="sahu.103">
+    <hw>²tsjo</hw>
+    <srcxcr1>²tsjo=pa [['cyo-pa</srcxcr1>
+    <gl>to hang (on a hook) (itr)/ to string, to hang (a rope)</gl>
+  </entry>
+  <entry id="sahu.104">
+    <hw>²tsjup</hw>
+    <srcxcr1>²tsjup=pa [['cyup-pa</srcxcr1>
+    <gl>to shut in</gl>
+  </entry>
+  <entry id="sahu.105">
+    <hw>²tsu</hw>
+    <srcxcr1>²tsu</srcxcr1>
+    <gl>this, it</gl>
+  </entry>
+  <entry id="sahu.106">
+    <hw>²tsuŋ</hw>
+    <srcxcr1>²tsuŋ=pa [['cuŋ-pa</srcxcr1>
+    <gl>to sell</gl>
+  </entry>
+  <entry id="sahu.107">
+    <hw>²tsʰa</hw>
+    <srcxcr1>²tsʰa=pa [['cʰa-pa</srcxcr1>
+    <gl>to graze</gl>
+  </entry>
+  <entry id="sahu.108">
+    <hw>²tsʰam</hw>
+    <srcxcr1>²tsʰam ³puluŋ</srcxcr1>
+    <gl>hair</gl>
+  </entry>
+  <entry id="sahu.109">
+    <hw>²tsʰap</hw>
+    <srcxcr1>²tsʰap=pa [['cʰap-pa</srcxcr1>
+    <gl>to cut the bark off a tree</gl>
+  </entry>
+  <entry id="sahu.110">
+    <hw>²tsʰar</hw>
+    <srcxcr1>²tsʰar</srcxcr1>
+    <gl>new</gl>
+  </entry>
+  <entry id="sahu.111">
+    <hw>²tsʰaː</hw>
+    <srcxcr1>²tsʰaː=pa [['cʰaː-pa</srcxcr1>
+    <gl>to earn</gl>
+  </entry>
+  <entry id="sahu.112">
+    <hw>²tsʰet</hw>
+    <srcxcr1>²tsʰet ¹klaŋ=pa [['cʰet klaŋ-pa</srcxcr1>
+    <gl>to wrestle</gl>
+  </entry>
+  <entry id="sahu.113">
+    <hw>²tsʰeː</hw>
+    <srcxcr1>²tsʰeː ²pʰaː=pa [['cʰeː 'pʰaː-pa</srcxcr1>
+    <gl>a loan</gl>
+  </entry>
+  <entry id="sahu.114">
+    <hw>²tsʰin</hw>
+    <srcxcr1>¹jaː-²tsʰin</srcxcr1>
+    <gl>fingernail</gl>
+  </entry>
+  <entry id="sahu.115">
+    <hw>²tsʰjar</hw>
+    <srcxcr1>²tsʰjar=pa [['cʰyarpa</srcxcr1>
+    <gl>sharp</gl>
+  </entry>
+  <entry id="sahu.116">
+    <hw>²tsʰju</hw>
+    <srcxcr1>²tsʰju</srcxcr1>
+    <gl>nerve</gl>
+  </entry>
+  <entry id="sahu.117">
+    <hw>²tsʰoŋ</hw>
+    <srcxcr1>²tsʰoŋ ³seŋ=pa [['cʰoŋ sehŋ-pa</srcxcr1>
+    <gl>to trade</gl>
+  </entry>
+  <entry id="sahu.118">
+    <hw>²tsʰum</hw>
+    <srcxcr1>²tsʰum=pa [['cʰum-pa</srcxcr1>
+    <gl>to hide (inanimate)</gl>
+  </entry>
+  <entry id="sahu.119">
+    <hw>²tsʰut</hw>
+    <gl>to cram into/ to bury (a body)</gl>
+  </entry>
+  <entry id="sahu.120">
+    <hw>²tʰaː</hw>
+    <srcxcr1>²tʰaː=pa [['tʰaː-pa</srcxcr1>
+    <gl>to cut</gl>
+  </entry>
+  <entry id="sahu.121">
+    <hw>²tʰaŋ</hw>
+    <gl>smell</gl>
+  </entry>
+  <entry id="sahu.122">
+    <hw>²tʰi</hw>
+    <srcxcr1>²tʰi=pa [['tʰi-pa</srcxcr1>
+    <gl>to break (as pots) (itr)</gl>
+  </entry>
+  <entry id="sahu.123">
+    <hw>²tʰur</hw>
+    <srcxcr1>²tʰur=pa [['tʰur-pa</srcxcr1>
+    <gl>fight (of animals)</gl>
+  </entry>
+  <entry id="sahu.124">
+    <hw>²tʰuː</hw>
+    <srcxcr1>²tʰuː=pa [['tʰuːpa</srcxcr1>
+    <gl>hot, spicy</gl>
+  </entry>
+  <entry id="sahu.125">
+    <hw>²tʰuŋ</hw>
+    <srcxcr1>²tʰuŋ=pa [['tʰuŋpa</srcxcr1>
+    <gl>to drink</gl>
+  </entry>
+  <entry id="sahu.126">
+    <hw>²up</hw>
+    <srcxcr1>²up=pa [['up-pa</srcxcr1>
+    <gl>to brood</gl>
+  </entry>
+  <entry id="sahu.127">
+    <hw>²wa</hw>
+    <srcxcr1>²wa</srcxcr1>
+    <gl>trap</gl>
+  </entry>
+  <entry id="sahu.128">
+    <hw>²waŋ</hw>
+    <srcxcr1>²waŋ=pa [['waŋ-pa</srcxcr1>
+    <gl>to enter (go in)</gl>
+  </entry>
+  <entry id="sahu.129">
+    <hw>²wet</hw>
+    <gl>to jump over/ to jump across</gl>
+  </entry>
+  <entry id="sahu.130">
+    <hw>²ŋam</hw>
+    <srcxcr1>²ŋam=pa [['ŋampa</srcxcr1>
+    <gl>sweet</gl>
+  </entry>
+  <entry id="sahu.131">
+    <hw>²ʈaŋ</hw>
+    <srcxcr1>²ʈaŋ=pa [['Taŋ-pa</srcxcr1>
+    <gl>to swell</gl>
+  </entry>
+  <entry id="sahu.132">
+    <hw>²ɲep</hw>
+    <srcxcr1>²ɲep=pa [['nyep-pa</srcxcr1>
+    <gl>to chew</gl>
+  </entry>
+  <entry id="sahu.133">
+    <hw>²ɲet</hw>
+    <gl>to laugh</gl>
+  </entry>
+  <entry id="sahu.134">
+    <hw>²ɲis</hw>
+    <srcxcr1>²ɲis</srcxcr1>
+    <gl>seven</gl>
+  </entry>
+  <entry id="sahu.135">
+    <hw>²ŋom</hw>
+    <srcxcr1>²ŋom=pa [['ŋom-pa</srcxcr1>
+    <gl>to show</gl>
+  </entry>
+  <entry id="sahu.136">
+    <hw>²ɲot</hw>
+    <gl>to ask/ to request</gl>
+  </entry>
+  <entry id="sahu.137">
+    <hw>²ʈʰam</hw>
+    <srcxcr1>²ʈʰam=pa [['Tʰam-pa</srcxcr1>
+    <gl>to spread (manure) (tr)</gl>
+  </entry>
+  <entry id="sahu.138">
+    <hw>²ʈʰok</hw>
+    <srcxcr1>²ʈʰok=pa [['Tʰok-pa</srcxcr1>
+    <gl>to collide/ to hammer</gl>
+  </entry>
+  <entry id="sahu.139">
+    <hw>³jaː</hw>
+    <srcxcr1>³jaː=pa [[yaːh-pa</srcxcr1>
+    <gl>to fade</gl>
+  </entry>
+  <entry id="sahu.140">
+    <hw>³jo</hw>
+    <srcxcr1>³jo=pa [[yoh-pa</srcxcr1>
+    <gl>to cook (tr)</gl>
+  </entry>
+  <entry id="sahu.141">
+    <hw>³kap</hw>
+    <srcxcr1>³kap</srcxcr1>
+    <gl>cover, lid</gl>
+  </entry>
+  <entry id="sahu.142">
+    <hw>³kap</hw>
+    <srcxcr1>³kap=pa [[kahp-pa</srcxcr1>
+    <gl>to cover</gl>
+  </entry>
+  <entry id="sahu.143">
+    <hw>³kap</hw>
+    <srcxcr1>³kap=pa [[kahppa</srcxcr1>
+    <gl>terrace wall</gl>
+  </entry>
+  <entry id="sahu.144">
+    <hw>³kaŋ</hw>
+    <srcxcr1>³kaŋ</srcxcr1>
+    <gl>range/ hill</gl>
+  </entry>
+  <entry id="sahu.145">
+    <hw>³kaː</hw>
+    <srcxcr1>³kaː=pa [[kaːh-pa</srcxcr1>
+    <gl>to get stuck/ to choke</gl>
+  </entry>
+  <entry id="sahu.146">
+    <hw>³kjap</hw>
+    <srcxcr1>³kjap=tse [[kyahp-ce</srcxcr1>
+    <gl>behind</gl>
+  </entry>
+  <entry id="sahu.147">
+    <hw>³kje</hw>
+    <srcxcr1>³kje</srcxcr1>
+    <gl>pool</gl>
+  </entry>
+  <entry id="sahu.148">
+    <hw>³kjoŋ</hw>
+    <srcxcr1>³kjoŋ</srcxcr1>
+    <gl>clay water jar</gl>
+  </entry>
+  <entry id="sahu.149">
+    <hw>³kloŋ</hw>
+    <srcxcr1>³kloŋ=pa [[klohŋ-pa</srcxcr1>
+    <gl>to swallow</gl>
+  </entry>
+  <entry id="sahu.150">
+    <hw>³ko</hw>
+    <srcxcr1>³ko</srcxcr1>
+    <gl>lower back</gl>
+  </entry>
+  <entry id="sahu.151">
+    <hw>³ko</hw>
+    <srcxcr1>³ko=pa [[koh-pa</srcxcr1>
+    <gl>to understand</gl>
+  </entry>
+  <entry id="sahu.152">
+    <hw>³koŋ</hw>
+    <srcxcr1>³koŋ ²tsʰem=pa [[kohŋ 'cʰem-pa</srcxcr1>
+    <gl>to bargain</gl>
+  </entry>
+  <entry id="sahu.153">
+    <hw>³kruŋ</hw>
+    <srcxcr1>³kruŋ</srcxcr1>
+    <gl>intestines</gl>
+  </entry>
+  <entry id="sahu.154">
+    <hw>³kuː</hw>
+    <srcxcr1>³kuː=pa [[kuːh-pa</srcxcr1>
+    <gl>to hinder (tr)/ to stop, to hold up</gl>
+  </entry>
+  <entry id="sahu.155">
+    <hw>³la</hw>
+    <srcxcr1>³la</srcxcr1>
+    <gl>mountain</gl>
+  </entry>
+  <entry id="sahu.156">
+    <hw>³lam</hw>
+    <srcxcr1>¹me-³lam</srcxcr1>
+    <gl>flame</gl>
+  </entry>
+  <entry id="sahu.157">
+    <hw>³lem</hw>
+    <srcxcr1>³lem=pa [[lehm-pa</srcxcr1>
+    <gl>to lick</gl>
+  </entry>
+  <entry id="sahu.158">
+    <hw>³liː</hw>
+    <srcxcr1>³liː=pa [[liːhpa</srcxcr1>
+    <gl>heavy</gl>
+  </entry>
+  <entry id="sahu.159">
+    <hw>³loː</hw>
+    <srcxcr1>³loː=pa [[loːh-pa</srcxcr1>
+    <gl>to overflow</gl>
+  </entry>
+  <entry id="sahu.160">
+    <hw>³ma</hw>
+    <srcxcr1>³ma=pa [[mah-pa</srcxcr1>
+    <gl>to lose s.th</gl>
+  </entry>
+  <entry id="sahu.161">
+    <hw>³mar</hw>
+    <srcxcr1>³mar</srcxcr1>
+    <gl>grease</gl>
+  </entry>
+  <entry id="sahu.162">
+    <hw>³maŋ</hw>
+    <srcxcr1>³maŋ ⁴maŋ=pa [[mahŋ 'mahŋ-pa</srcxcr1>
+    <gl>to dream</gl>
+  </entry>
+  <entry id="sahu.163">
+    <hw>³mer</hw>
+    <srcxcr1>³mer=pa [[mehrpa</srcxcr1>
+    <gl>to sleep/ to sleep</gl>
+  </entry>
+  <entry id="sahu.164">
+    <hw>³miː</hw>
+    <srcxcr1>³miː</srcxcr1>
+    <gl>person/ people</gl>
+  </entry>
+  <entry id="sahu.165">
+    <hw>³mjaŋ</hw>
+    <srcxcr1>³mjaŋ=pa [[myahŋ-pa</srcxcr1>
+    <gl>to taste (eat a sample)</gl>
+  </entry>
+  <entry id="sahu.166">
+    <hw>³na</hw>
+    <srcxcr1>²kola ³na=pa [['kola nah-pa</srcxcr1>
+    <gl>to be born</gl>
+  </entry>
+  <entry id="sahu.167">
+    <hw>³na</hw>
+    <srcxcr1>³na=pa [[nah-pa</srcxcr1>
+    <gl>to raise</gl>
+  </entry>
+  <entry id="sahu.168">
+    <hw>³na</hw>
+    <srcxcr1>³na=pa [[nah-pa</srcxcr1>
+    <gl>to rest</gl>
+  </entry>
+  <entry id="sahu.169">
+    <hw>³naŋ</hw>
+    <srcxcr1>-³naŋ</srcxcr1>
+    <gl>into/ in, inside of</gl>
+  </entry>
+  <entry id="sahu.170">
+    <hw>³naː</hw>
+    <srcxcr1>³naː</srcxcr1>
+    <gl>pus</gl>
+  </entry>
+  <entry id="sahu.171">
+    <hw>³naŋ</hw>
+    <srcxcr1>³naŋ=pa [[nahŋ-pa</srcxcr1>
+    <gl>to serve, to offer</gl>
+  </entry>
+  <entry id="sahu.172">
+    <hw>³net</hw>
+    <gl>to step on/ to perch</gl>
+  </entry>
+  <entry id="sahu.173">
+    <hw>³pa</hw>
+    <srcxcr1>³pa=pa [[pah-pa</srcxcr1>
+    <gl>to bring up</gl>
+  </entry>
+  <entry id="sahu.174">
+    <hw>³pam</hw>
+    <srcxcr1>³pam</srcxcr1>
+    <gl>shoulder</gl>
+  </entry>
+  <entry id="sahu.175">
+    <hw>³paː</hw>
+    <srcxcr1>³paː</srcxcr1>
+    <gl>leaf</gl>
+  </entry>
+  <entry id="sahu.176">
+    <hw>³paŋ</hw>
+    <srcxcr1>³paŋ=pa [[pahŋ-pa</srcxcr1>
+    <gl>to quarrel with words</gl>
+  </entry>
+  <entry id="sahu.177">
+    <hw>³pen</hw>
+    <gl>to snatch away</gl>
+  </entry>
+  <entry id="sahu.178">
+    <hw>³pjap</hw>
+    <srcxcr1>³pjap.¹sjiŋ</srcxcr1>
+    <gl>feather/ wing</gl>
+  </entry>
+  <entry id="sahu.179">
+    <hw>³pjuŋ</hw>
+    <srcxcr1>³pjuŋ=pa [[pyuhŋpa</srcxcr1>
+    <gl>to cough</gl>
+  </entry>
+  <entry id="sahu.180">
+    <hw>³plek</hw>
+    <srcxcr1>³plek=pa [[plehkpa</srcxcr1>
+    <gl>broad</gl>
+  </entry>
+  <entry id="sahu.181">
+    <hw>³pliŋ</hw>
+    <srcxcr1>³pliŋ=pa [[plihŋ-pa</srcxcr1>
+    <gl>to fall down (animate)</gl>
+  </entry>
+  <entry id="sahu.182">
+    <hw>³ploː</hw>
+    <srcxcr1>³ploː=pa [[ploːh-pa</srcxcr1>
+    <gl>to boil (food)</gl>
+  </entry>
+  <entry id="sahu.183">
+    <hw>³por</hw>
+    <srcxcr1>³por=pa [[pohr-pa</srcxcr1>
+    <gl>to wash away, to erode/ to take away &lt;MM&gt;</gl>
+  </entry>
+  <entry id="sahu.184">
+    <hw>³praː</hw>
+    <srcxcr1>³praː=pa [[praːh-pa</srcxcr1>
+    <gl>to grind (large amount)</gl>
+  </entry>
+  <entry id="sahu.185">
+    <hw>³preː</hw>
+    <srcxcr1>³preː=pa [[preːh-pa</srcxcr1>
+    <gl>to lose (to be defeated)</gl>
+  </entry>
+  <entry id="sahu.186">
+    <hw>³preː</hw>
+    <gl>to shave, to shear, to cut hair</gl>
+  </entry>
+  <entry id="sahu.187">
+    <hw>³pri</hw>
+    <srcxcr1>³pri=pa [[prih-pa</srcxcr1>
+    <gl>to write/ to compose/ to draw</gl>
+  </entry>
+  <entry id="sahu.188">
+    <hw>³rap</hw>
+    <srcxcr1>³rap=pi ³miː [[rahp-pi miːh</srcxcr1>
+    <gl>musician</gl>
+  </entry>
+  <entry id="sahu.189">
+    <hw>³raŋ</hw>
+    <srcxcr1>³raŋ</srcxcr1>
+    <gl>self</gl>
+  </entry>
+  <entry id="sahu.190">
+    <hw>³reŋ</hw>
+    <srcxcr1>³reŋ=pa [[rehŋpa</srcxcr1>
+    <gl>long</gl>
+  </entry>
+  <entry id="sahu.191">
+    <hw>³rit</hw>
+    <gl>to beg</gl>
+  </entry>
+  <entry id="sahu.192">
+    <hw>³roː</hw>
+    <srcxcr1>³roː</srcxcr1>
+    <gl>friend</gl>
+  </entry>
+  <entry id="sahu.193">
+    <hw>³rup</hw>
+    <srcxcr1>³rup=pa [[ruhp-pa</srcxcr1>
+    <gl>to gather up</gl>
+  </entry>
+  <entry id="sahu.194">
+    <hw>³seŋ</hw>
+    <srcxcr1>³seŋ=pa [[sehŋ-pa</srcxcr1>
+    <gl>to do</gl>
+  </entry>
+  <entry id="sahu.195">
+    <hw>³sjal</hw>
+    <gl>to rub</gl>
+  </entry>
+  <entry id="sahu.196">
+    <hw>³sjoː</hw>
+    <srcxcr1>³sjoː</srcxcr1>
+    <gl>morning</gl>
+  </entry>
+  <entry id="sahu.197">
+    <hw>³suː</hw>
+    <srcxcr1>³suː</srcxcr1>
+    <gl>thigh</gl>
+  </entry>
+  <entry id="sahu.198">
+    <hw>³tam</hw>
+    <srcxcr1>³tam=pa [[tahm-pa</srcxcr1>
+    <gl>to choose, to compare</gl>
+  </entry>
+  <entry id="sahu.199">
+    <hw>³tap</hw>
+    <srcxcr1>³tap=pa [[tahp-pa</srcxcr1>
+    <gl>to measure (e.g. grains)</gl>
+  </entry>
+  <entry id="sahu.200">
+    <hw>³tar</hw>
+    <srcxcr1>³tar=pa [[tahr-pa</srcxcr1>
+    <gl>to shiver</gl>
+  </entry>
+  <entry id="sahu.201">
+    <hw>³taː</hw>
+    <srcxcr1>³taː</srcxcr1>
+    <gl>post</gl>
+  </entry>
+  <entry id="sahu.202">
+    <hw>³taŋ</hw>
+    <srcxcr1>³taŋ=pa [[tahŋ-pa</srcxcr1>
+    <gl>to drive (itr) (cattle)</gl>
+  </entry>
+  <entry id="sahu.203">
+    <hw>³tep</hw>
+    <srcxcr1>³tep=pa [[tehp-pa</srcxcr1>
+    <gl>to exchange (money)</gl>
+  </entry>
+  <entry id="sahu.204">
+    <hw>³tot</hw>
+    <srcxcr1>³tot ²naː=pi ³miː [[toht 'naː-pi miːh</srcxcr1>
+    <gl>porter</gl>
+  </entry>
+  <entry id="sahu.205">
+    <hw>³toː</hw>
+    <srcxcr1>³toː=pa [[toːh-pa</srcxcr1>
+    <gl>to arrive</gl>
+  </entry>
+  <entry id="sahu.206">
+    <hw>³tsaŋ</hw>
+    <srcxcr1>³tsaŋ</srcxcr1>
+    <gl>nest</gl>
+  </entry>
+  <entry id="sahu.207">
+    <hw>³tsiː</hw>
+    <srcxcr1>³tsiː</srcxcr1>
+    <gl>joint</gl>
+  </entry>
+  <entry id="sahu.208">
+    <hw>³tsiː</hw>
+    <srcxcr1>³tsiː=pa [[ciːh-pa</srcxcr1>
+    <gl>to sting (insect)/ to pinch</gl>
+  </entry>
+  <entry id="sahu.209">
+    <hw>³tsja</hw>
+    <srcxcr1>³tsja=pa [[cyahpa</srcxcr1>
+    <gl>good/ funny/ pretty/ sacred/ attractive</gl>
+  </entry>
+  <entry id="sahu.210">
+    <hw>³tsjor</hw>
+    <srcxcr1>³tsjor=pa [[cyohr-pa</srcxcr1>
+    <gl>to squeeze (juice)/ to wring</gl>
+  </entry>
+  <entry id="sahu.211">
+    <hw>³tsjuː</hw>
+    <srcxcr1>²a-³tsjuː=pa [['a-cyuːhpa</srcxcr1>
+    <gl>spoilt, rotten</gl>
+  </entry>
+  <entry id="sahu.212">
+    <hw>³tso</hw>
+    <gl>peak, point &lt;MM&gt;</gl>
+  </entry>
+  <entry id="sahu.213">
+    <hw>³tsuː</hw>
+    <srcxcr1>³tsuː=pa [[cuːh-pa</srcxcr1>
+    <gl>to step on a support</gl>
+  </entry>
+  <entry id="sahu.214">
+    <hw>³tuː</hw>
+    <srcxcr1>³tuː</srcxcr1>
+    <gl>mourning</gl>
+  </entry>
+  <entry id="sahu.215">
+    <hw>³tuː</hw>
+    <srcxcr1>³tuː=pa [[tuːh-pa</srcxcr1>
+    <gl>to tire (become tired)</gl>
+  </entry>
+  <entry id="sahu.216">
+    <hw>³wai</hw>
+    <srcxcr1>³wai</srcxcr1>
+    <gl>song</gl>
+  </entry>
+  <entry id="sahu.217">
+    <hw>³waŋ</hw>
+    <srcxcr1>³waŋ</srcxcr1>
+    <gl>valley</gl>
+  </entry>
+  <entry id="sahu.218">
+    <hw>³ɲa</hw>
+    <srcxcr1>³ɲa=pa [[nyah-pa</srcxcr1>
+    <gl>to crow (cock)</gl>
+  </entry>
+  <entry id="sahu.219">
+    <hw>³ŋa</hw>
+    <gl>five (in compound '100 = 5x20')</gl>
+  </entry>
+  <entry id="sahu.220">
+    <hw>³ŋam</hw>
+    <srcxcr1>¹tsata ³ŋam=pa [[tsata ŋahmpa</srcxcr1>
+    <gl>salty</gl>
+  </entry>
+  <entry id="sahu.221">
+    <hw>³ʈap</hw>
+    <srcxcr1>³ʈap ³ʈup</srcxcr1>
+    <gl>green vegetable</gl>
+  </entry>
+  <entry id="sahu.222">
+    <hw>³ʈaː</hw>
+    <srcxcr1>³ʈaː=pa [[Taːh-pa</srcxcr1>
+    <gl>to win</gl>
+  </entry>
+  <entry id="sahu.223">
+    <hw>³ɲe</hw>
+    <srcxcr1>³ɲe</srcxcr1>
+    <gl>milk</gl>
+  </entry>
+  <entry id="sahu.224">
+    <hw>³ɲe</hw>
+    <srcxcr1>³ɲe=pa [[nyeh-pa</srcxcr1>
+    <gl>to milk (a cow)</gl>
+  </entry>
+  <entry id="sahu.225">
+    <hw>³ɲep</hw>
+    <srcxcr1>³ɲep=pa [[nyehppa</srcxcr1>
+    <gl>tight</gl>
+  </entry>
+  <entry id="sahu.226">
+    <hw>³ʈeː</hw>
+    <srcxcr1>³ʈeː=pa [[Teːh-pa</srcxcr1>
+    <gl>to tear</gl>
+  </entry>
+  <entry id="sahu.227">
+    <hw>³ʈi</hw>
+    <srcxcr1>³ʈi</srcxcr1>
+    <gl>skin</gl>
+  </entry>
+  <entry id="sahu.228">
+    <hw>³ɲiː</hw>
+    <gl>two (in compounds)</gl>
+  </entry>
+  <entry id="sahu.229">
+    <hw>³ŋo</hw>
+    <srcxcr1>³ŋo</srcxcr1>
+    <gl>forehead</gl>
+  </entry>
+  <entry id="sahu.230">
+    <hw>³ʈoŋ</hw>
+    <srcxcr1>³ʈoŋ=pa [[Tohŋ-pa</srcxcr1>
+    <gl>to go out</gl>
+  </entry>
+  <entry id="sahu.231">
+    <hw>³ʈup</hw>
+    <srcxcr1>³ʈap ³ʈup</srcxcr1>
+    <gl>green vegetable</gl>
+  </entry>
+  <entry id="sahu.232">
+    <hw>³ʈup</hw>
+    <srcxcr1>³ʈup=pa [[Tuhp-pa</srcxcr1>
+    <gl>to sew</gl>
+  </entry>
+  <entry id="sahu.233">
+    <hw>³ʈut</hw>
+    <gl>to pull (along ground)</gl>
+  </entry>
+  <entry id="sahu.234">
+    <hw>¹jaː</hw>
+    <srcxcr1>¹jaː</srcxcr1>
+    <gl>hand</gl>
+  </entry>
+  <entry id="sahu.235">
+    <hw>¹jaŋ</hw>
+    <srcxcr1>¹jaŋ=pa [[yaŋ-pa</srcxcr1>
+    <gl>to find (s.th. sought for)</gl>
+  </entry>
+  <entry id="sahu.236">
+    <hw>¹jen</hw>
+    <srcxcr2/>
+    <gl>to dress</gl>
+  </entry>
+  <entry id="sahu.237">
+    <hw>¹jen</hw>
+    <srcxcr1>¹jen ¹jem=pa [[yen yem-pa</srcxcr1>
+    <gl>clothes</gl>
+  </entry>
+  <entry id="sahu.238">
+    <hw>¹juː</hw>
+    <gl>to put, to pour, to serve</gl>
+  </entry>
+  <entry id="sahu.239">
+    <hw>¹kaŋ</hw>
+    <srcxcr1>¹kaŋ</srcxcr1>
+    <gl>foot/ leg</gl>
+  </entry>
+  <entry id="sahu.240">
+    <hw>¹kep</hw>
+    <srcxcr1>¹kep=pa [[keppa</srcxcr1>
+    <gl>waist</gl>
+  </entry>
+  <entry id="sahu.241">
+    <hw>¹ket</hw>
+    <srcxcr1>¹ket</srcxcr1>
+    <gl>right</gl>
+  </entry>
+  <entry id="sahu.242">
+    <hw>¹kin</hw>
+    <gl>to take/ to accept (to take food)</gl>
+  </entry>
+  <entry id="sahu.243">
+    <hw>¹kja</hw>
+    <srcxcr1>¹kja=pa [[kya-pa</srcxcr1>
+    <gl>to itch</gl>
+  </entry>
+  <entry id="sahu.244">
+    <hw>¹kjal</hw>
+    <srcxcr1>¹kjal=pa [[kyalpa</srcxcr1>
+    <gl>to swim</gl>
+  </entry>
+  <entry id="sahu.245">
+    <hw>¹kjut</hw>
+    <gl>to break (as sticks)</gl>
+  </entry>
+  <entry id="sahu.246">
+    <hw>¹kjuŋ</hw>
+    <srcxcr1>¹kjuŋ=pa [[kyuŋpa</srcxcr1>
+    <gl>sour</gl>
+  </entry>
+  <entry id="sahu.247">
+    <hw>¹klaŋ</hw>
+    <srcxcr1>¹klaŋ=pa [[klaŋ-pa</srcxcr1>
+    <gl>to play</gl>
+  </entry>
+  <entry id="sahu.248">
+    <hw>¹kli</hw>
+    <srcxcr1>¹kli</srcxcr1>
+    <gl>feces</gl>
+  </entry>
+  <entry id="sahu.249">
+    <hw>¹kor</hw>
+    <srcxcr1>¹kor=pa [[kor-pa</srcxcr1>
+    <gl>to go around/ to wander</gl>
+  </entry>
+  <entry id="sahu.250">
+    <hw>¹koŋ</hw>
+    <srcxcr1>¹koŋ=pa [[koŋpa</srcxcr1>
+    <gl>hard</gl>
+  </entry>
+  <entry id="sahu.251">
+    <hw>¹kra</hw>
+    <srcxcr1>¹kra</srcxcr1>
+    <gl>head</gl>
+  </entry>
+  <entry id="sahu.252">
+    <hw>¹kraː</hw>
+    <srcxcr1>¹kraː=pa [[kraː-pa</srcxcr1>
+    <gl>to cry, to weep</gl>
+  </entry>
+  <entry id="sahu.253">
+    <hw>¹kret</hw>
+    <gl>to ascend/ to climb</gl>
+  </entry>
+  <entry id="sahu.254">
+    <hw>¹kriŋ</hw>
+    <srcxcr1>¹kriŋ=pa [[kriŋ-pa</srcxcr1>
+    <gl>to shout, to scream, to howl/ loud</gl>
+  </entry>
+  <entry id="sahu.255">
+    <hw>¹kro</hw>
+    <srcxcr1>¹kro=pa [[kropa</srcxcr1>
+    <gl>hot/ to burn (itr), to scorch</gl>
+  </entry>
+  <entry id="sahu.256">
+    <hw>¹kʰa</hw>
+    <srcxcr1>¹kʰa=pa [[kʰapa</srcxcr1>
+    <gl>to come</gl>
+  </entry>
+  <entry id="sahu.257">
+    <hw>¹kʰar</hw>
+    <srcxcr1>¹kʰar=pa [[kʰarpa</srcxcr1>
+    <gl>dry/ to dry (itr)</gl>
+  </entry>
+  <entry id="sahu.258">
+    <hw>¹kʰe</hw>
+    <srcxcr1>¹kʰe=pa [[kʰepa</srcxcr1>
+    <gl>cheap</gl>
+  </entry>
+  <entry id="sahu.259">
+    <hw>¹kʰeː</hw>
+    <srcxcr1>²sjeː=pa ¹kʰeː=pa [['syeː-pa kʰeː-pa</srcxcr1>
+    <gl>experienced</gl>
+  </entry>
+  <entry id="sahu.260">
+    <hw>¹kʰja</hw>
+    <srcxcr1>¹kʰja=pa [[kʰya-pa</srcxcr1>
+    <gl>to patch</gl>
+  </entry>
+  <entry id="sahu.261">
+    <hw>¹kʰjaŋ</hw>
+    <srcxcr1>¹kʰjaŋ</srcxcr1>
+    <gl>bench</gl>
+  </entry>
+  <entry id="sahu.262">
+    <hw>¹kʰjoː</hw>
+    <srcxcr1>¹kʰjoː=pa [[kʰyoː-pa</srcxcr1>
+    <gl>to scoop out, to dip into (itr)</gl>
+  </entry>
+  <entry id="sahu.263">
+    <hw>¹kʰlaː</hw>
+    <srcxcr1>¹kʰlaː=pa [[kʰlaː-pa</srcxcr1>
+    <gl>to throw away/ to discard (fluids and other things) (tr)</gl>
+  </entry>
+  <entry id="sahu.264">
+    <hw>¹kʰrap</hw>
+    <srcxcr1>¹kʰrap=pa [[kʰrappa</srcxcr1>
+    <gl>to bite</gl>
+  </entry>
+  <entry id="sahu.265">
+    <hw>¹kʰrem</hw>
+    <srcxcr1>¹kʰrem=pa [[kʰrem-pa</srcxcr1>
+    <gl>to twist/ to twist (a rope), to braid</gl>
+  </entry>
+  <entry id="sahu.266">
+    <hw>¹la</hw>
+    <srcxcr1>¹la</srcxcr1>
+    <gl>god</gl>
+  </entry>
+  <entry id="sahu.267">
+    <hw>¹la</hw>
+    <srcxcr1>¹la=pa [[la-pa</srcxcr1>
+    <gl>to do</gl>
+  </entry>
+  <entry id="sahu.268">
+    <hw>¹lep</hw>
+    <srcxcr1>¹lep=pa [[lep-pa</srcxcr1>
+    <gl>to heat (itr)</gl>
+  </entry>
+  <entry id="sahu.269">
+    <hw>¹leŋ</hw>
+    <srcxcr1>¹leŋ</srcxcr1>
+    <gl>bond friend</gl>
+  </entry>
+  <entry id="sahu.270">
+    <hw>¹lop</hw>
+    <gl>to teach</gl>
+  </entry>
+  <entry id="sahu.271">
+    <hw>¹loŋ</hw>
+    <srcxcr1>¹loŋ=pa [[loŋ-pa</srcxcr1>
+    <gl>to fear</gl>
+  </entry>
+  <entry id="sahu.272">
+    <hw>¹lu</hw>
+    <srcxcr1>¹lu</srcxcr1>
+    <gl>god</gl>
+  </entry>
+  <entry id="sahu.273">
+    <hw>¹me</hw>
+    <srcxcr1>¹me</srcxcr1>
+    <gl>fire</gl>
+  </entry>
+  <entry id="sahu.274">
+    <hw>¹men</hw>
+    <srcxcr1>¹men</srcxcr1>
+    <gl>medicine</gl>
+  </entry>
+  <entry id="sahu.275">
+    <hw>¹meː</hw>
+    <srcxcr1>¹meː</srcxcr1>
+    <gl>tail</gl>
+  </entry>
+  <entry id="sahu.276">
+    <hw>¹min</hw>
+    <srcxcr1>¹min</srcxcr1>
+    <gl>name</gl>
+  </entry>
+  <entry id="sahu.277">
+    <hw>¹mja</hw>
+    <srcxcr1>¹mja</srcxcr1>
+    <gl>arrow</gl>
+  </entry>
+  <entry id="sahu.278">
+    <hw>¹mjo</hw>
+    <srcxcr1>¹mjo=pa [[myopa</srcxcr1>
+    <gl>insane</gl>
+  </entry>
+  <entry id="sahu.279">
+    <hw>¹mjuŋ</hw>
+    <srcxcr1>¹mjuŋ=pa [[myuŋ-pa</srcxcr1>
+    <gl>to sharpen (a point)</gl>
+  </entry>
+  <entry id="sahu.280">
+    <hw>¹moi</hw>
+    <srcxcr1>¹moi=pa [[moi-pa</srcxcr1>
+    <gl>to plow</gl>
+  </entry>
+  <entry id="sahu.281">
+    <hw>¹mor</hw>
+    <srcxcr1>¹mor</srcxcr1>
+    <gl>down</gl>
+  </entry>
+  <entry id="sahu.282">
+    <hw>¹mra</hw>
+    <srcxcr1>¹mra=pa [[mra-pa</srcxcr1>
+    <gl>to light (tr)</gl>
+  </entry>
+  <entry id="sahu.283">
+    <hw>¹mraŋ</hw>
+    <srcxcr1>¹mraŋ=pa [[mraŋ-pa</srcxcr1>
+    <gl>to appear/ to see</gl>
+  </entry>
+  <entry id="sahu.284">
+    <hw>¹mu</hw>
+    <srcxcr1>¹mu</srcxcr1>
+    <gl>sky</gl>
+  </entry>
+  <entry id="sahu.285">
+    <hw>¹mu</hw>
+    <srcxcr1>¹mu=pa [[mu-pa</srcxcr1>
+    <gl>to remain</gl>
+  </entry>
+  <entry id="sahu.286">
+    <hw>¹mu</hw>
+    <gl>to be</gl>
+  </entry>
+  <entry id="sahu.287">
+    <hw>¹na</hw>
+    <srcxcr1>¹na</srcxcr1>
+    <gl>nose</gl>
+  </entry>
+  <entry id="sahu.288">
+    <hw>¹nai</hw>
+    <srcxcr1>¹nai=pa [[nai-pa</srcxcr1>
+    <gl>to put to sleep</gl>
+  </entry>
+  <entry id="sahu.289">
+    <hw>¹nai</hw>
+    <srcxcr1>¹nai=pa [[naipa</srcxcr1>
+    <gl>dirty</gl>
+  </entry>
+  <entry id="sahu.290">
+    <hw>¹nam</hw>
+    <srcxcr1>¹sun ¹ki ¹nam</srcxcr1>
+    <gl>paddy ear/ paddy ear</gl>
+  </entry>
+  <entry id="sahu.291">
+    <hw>¹nap</hw>
+    <srcxcr1>¹nap ²hiːn=pa [[nap 'hiːn-pa</srcxcr1>
+    <gl>to blow nose</gl>
+  </entry>
+  <entry id="sahu.292">
+    <hw>¹naŋ</hw>
+    <srcxcr1>¹naŋ</srcxcr1>
+    <gl>whole</gl>
+  </entry>
+  <entry id="sahu.293">
+    <hw>¹naŋ</hw>
+    <srcxcr1>¹naŋ=pa [[naŋpa</srcxcr1>
+    <gl>worker</gl>
+  </entry>
+  <entry id="sahu.294">
+    <hw>¹nup</hw>
+    <srcxcr1>¹nup=pa [[nuppa</srcxcr1>
+    <gl>deep</gl>
+  </entry>
+  <entry id="sahu.295">
+    <hw>¹or</hw>
+    <srcxcr1>¹or=pa [[or-pa</srcxcr1>
+    <gl>to uproot</gl>
+  </entry>
+  <entry id="sahu.296">
+    <hw>¹pet</hw>
+    <gl>to feel shy</gl>
+  </entry>
+  <entry id="sahu.297">
+    <hw>¹pin</hw>
+    <gl>to give</gl>
+  </entry>
+  <entry id="sahu.298">
+    <hw>¹piŋ</hw>
+    <srcxcr1>¹piŋ</srcxcr1>
+    <gl>blue</gl>
+  </entry>
+  <entry id="sahu.299">
+    <hw>¹plek</hw>
+    <srcxcr1>¹plek=pa [[plek-pa</srcxcr1>
+    <gl>to flatten dough</gl>
+  </entry>
+  <entry id="sahu.300">
+    <hw>¹pleː</hw>
+    <srcxcr1>¹pleː=pa [[pleː-pa</srcxcr1>
+    <gl>to press down</gl>
+  </entry>
+  <entry id="sahu.301">
+    <hw>¹pliŋ</hw>
+    <srcxcr1>¹pliŋ=pa [[pliŋ-pa</srcxcr1>
+    <gl>to fill</gl>
+  </entry>
+  <entry id="sahu.302">
+    <hw>¹po</hw>
+    <srcxcr1>¹po=pa [[po-pa</srcxcr1>
+    <gl>to change (alter)</gl>
+  </entry>
+  <entry id="sahu.303">
+    <hw>¹prep</hw>
+    <srcxcr1>¹prep ¹prep</srcxcr1>
+    <gl>together</gl>
+  </entry>
+  <entry id="sahu.304">
+    <hw>¹pʰap</hw>
+    <srcxcr1>¹pʰap=pa [[pʰap-pa</srcxcr1>
+    <gl>to descend/ to alight</gl>
+  </entry>
+  <entry id="sahu.305">
+    <hw>¹pʰe</hw>
+    <srcxcr1>¹pʰe=pa [[pʰe-pa</srcxcr1>
+    <gl>to separate (itr)</gl>
+  </entry>
+  <entry id="sahu.306">
+    <hw>¹pʰen</hw>
+    <gl>to get well (recover)</gl>
+  </entry>
+  <entry id="sahu.307">
+    <hw>¹pʰi</hw>
+    <srcxcr1>¹pʰi=pa [[pʰi-pa</srcxcr1>
+    <gl>to be late (time)</gl>
+  </entry>
+  <entry id="sahu.308">
+    <hw>¹pʰiː</hw>
+    <srcxcr1>¹pʰiː</srcxcr1>
+    <gl>bark</gl>
+  </entry>
+  <entry id="sahu.309">
+    <hw>¹pʰjor</hw>
+    <srcxcr1>¹pʰjor=pa ²kʰu [[pʰyor-pa 'kʰu</srcxcr1>
+    <gl>dal, pulse</gl>
+  </entry>
+  <entry id="sahu.310">
+    <hw>¹pʰjoŋ</hw>
+    <srcxcr1>²pʰjoŋ ¹pʰjoŋ ¹ta=pa [['pʰyoŋ pʰyoŋ ta-pa</srcxcr1>
+    <gl>to float (as wood in water)</gl>
+  </entry>
+  <entry id="sahu.311">
+    <hw>¹pʰjuk</hw>
+    <srcxcr1>¹pʰjuk=pa [[pʰyukpa</srcxcr1>
+    <gl>rich</gl>
+  </entry>
+  <entry id="sahu.312">
+    <hw>¹pʰrok</hw>
+    <srcxcr1>²ki ¹pʰrok=pa [['ki pʰrok-pa</srcxcr1>
+    <gl>to sprinkle pure water on s.o. for purification</gl>
+  </entry>
+  <entry id="sahu.313">
+    <hw>¹pʰup</hw>
+    <srcxcr1>¹pʰup=pa [[pʰup-pa</srcxcr1>
+    <gl>to slide (earth)/ to collapse (itr)</gl>
+  </entry>
+  <entry id="sahu.314">
+    <hw>¹pʰut</hw>
+    <gl>to blow (with mouth)</gl>
+  </entry>
+  <entry id="sahu.315">
+    <hw>¹ra</hw>
+    <srcxcr1>¹ra</srcxcr1>
+    <gl>goat</gl>
+  </entry>
+  <entry id="sahu.316">
+    <hw>¹rin</hw>
+    <srcxcr1>¹rin</srcxcr1>
+    <gl>bamboo</gl>
+  </entry>
+  <entry id="sahu.317">
+    <hw>¹ru</hw>
+    <srcxcr1>¹ru</srcxcr1>
+    <gl>horn</gl>
+  </entry>
+  <entry id="sahu.318">
+    <hw>¹sa</hw>
+    <srcxcr1>¹sa</srcxcr1>
+    <gl>earth</gl>
+  </entry>
+  <entry id="sahu.319">
+    <hw>¹sa</hw>
+    <srcxcr1>¹sa</srcxcr1>
+    <gl>tooth</gl>
+  </entry>
+  <entry id="sahu.320">
+    <hw>¹sai</hw>
+    <srcxcr1>¹sai=pa [[sai-pa</srcxcr1>
+    <gl>to clean (grain and vegetables)</gl>
+  </entry>
+  <entry id="sahu.321">
+    <hw>¹sem</hw>
+    <gl>mind, soul, heart</gl>
+  </entry>
+  <entry id="sahu.322">
+    <hw>¹set</hw>
+    <gl>to kill/ to extinguish a fire</gl>
+  </entry>
+  <entry id="sahu.323">
+    <hw>¹sja</hw>
+    <srcxcr1>¹sja</srcxcr1>
+    <gl>flesh, meat</gl>
+  </entry>
+  <entry id="sahu.324">
+    <hw>¹sjal</hw>
+    <srcxcr1>¹sjal=pa [[syal-pa</srcxcr1>
+    <gl>to rinse/ to polish/ to rub (slowly)</gl>
+  </entry>
+  <entry id="sahu.325">
+    <hw>¹sjar</hw>
+    <srcxcr1>¹sjar</srcxcr1>
+    <gl>east</gl>
+  </entry>
+  <entry id="sahu.326">
+    <hw>¹sjaŋ</hw>
+    <srcxcr1>¹sjaŋ</srcxcr1>
+    <gl>bell</gl>
+  </entry>
+  <entry id="sahu.327">
+    <hw>¹sjet</hw>
+    <gl>to tell</gl>
+  </entry>
+  <entry id="sahu.328">
+    <hw>¹sji</hw>
+    <srcxcr1>¹sji=pa [[syi-pa</srcxcr1>
+    <gl>to die</gl>
+  </entry>
+  <entry id="sahu.329">
+    <hw>¹sjim</hw>
+    <srcxcr1>¹sjim=pa [[syim-pa</srcxcr1>
+    <gl>to cool (food)</gl>
+  </entry>
+  <entry id="sahu.330">
+    <hw>¹sjit</hw>
+    <srcxcr1>¹sjit</srcxcr1>
+    <gl>uncooked rice</gl>
+  </entry>
+  <entry id="sahu.331">
+    <hw>¹sjoi</hw>
+    <srcxcr1>¹sjoi</srcxcr1>
+    <gl>tusks</gl>
+  </entry>
+  <entry id="sahu.332">
+    <hw>¹sjor</hw>
+    <srcxcr1>¹sjor=pa [[syor-pa</srcxcr1>
+    <gl>to escape</gl>
+  </entry>
+  <entry id="sahu.333">
+    <hw>¹sjoŋ</hw>
+    <srcxcr1>¹sjoŋ</srcxcr1>
+    <gl>stream</gl>
+  </entry>
+  <entry id="sahu.334">
+    <hw>¹sun</hw>
+    <srcxcr1>¹sun</srcxcr1>
+    <gl>unhusked rice</gl>
+  </entry>
+  <entry id="sahu.335">
+    <hw>¹suŋ</hw>
+    <srcxcr1>¹suŋ</srcxcr1>
+    <gl>mouth</gl>
+  </entry>
+  <entry id="sahu.336">
+    <hw>¹ta</hw>
+    <srcxcr1>¹ta=pa [[ta-pa</srcxcr1>
+    <gl>to become, to be</gl>
+  </entry>
+  <entry id="sahu.337">
+    <hw>¹tai</hw>
+    <srcxcr1>¹tai=pa [[tai-pa</srcxcr1>
+    <gl>to fall down (inanimate)/ to fall off/ to drop (itr)</gl>
+  </entry>
+  <entry id="sahu.338">
+    <hw>¹tam</hw>
+    <srcxcr1>¹tam</srcxcr1>
+    <gl>word</gl>
+  </entry>
+  <entry id="sahu.339">
+    <hw>¹tap</hw>
+    <srcxcr1>¹tap=pa [[tap-pa</srcxcr1>
+    <gl>to take off (the stove)</gl>
+  </entry>
+  <entry id="sahu.340">
+    <hw>¹tar</hw>
+    <srcxcr1>¹tar</srcxcr1>
+    <gl>white</gl>
+  </entry>
+  <entry id="sahu.341">
+    <hw>¹taː</hw>
+    <srcxcr1>¹taː</srcxcr1>
+    <gl>none (refers to things)</gl>
+  </entry>
+  <entry id="sahu.342">
+    <hw>¹taː</hw>
+    <srcxcr1>¹taː</srcxcr1>
+    <gl>tiger</gl>
+  </entry>
+  <entry id="sahu.343">
+    <hw>¹taŋ</hw>
+    <srcxcr1>¹taŋ=pa [[taŋpa</srcxcr1>
+    <gl>happy/ to be pleased, to be happy</gl>
+  </entry>
+  <entry id="sahu.344">
+    <hw>¹te</hw>
+    <srcxcr1>¹te=pa [[te-pa</srcxcr1>
+    <gl>to pour</gl>
+  </entry>
+  <entry id="sahu.345">
+    <hw>¹tip</hw>
+    <srcxcr1>¹tip=pa [[tip-pa</srcxcr1>
+    <gl>to spead out (e.g. mats)</gl>
+  </entry>
+  <entry id="sahu.346">
+    <hw>¹tiː</hw>
+    <srcxcr1>¹tiː ¹tiŋ</srcxcr1>
+    <gl>this year</gl>
+  </entry>
+  <entry id="sahu.347">
+    <hw>¹tiŋ</hw>
+    <srcxcr1>¹tiː ¹tiŋ</srcxcr1>
+    <gl>year</gl>
+  </entry>
+  <entry id="sahu.348">
+    <hw>¹tiŋ</hw>
+    <srcxcr1>¹tiŋ</srcxcr1>
+    <gl>heart</gl>
+  </entry>
+  <entry id="sahu.349">
+    <hw>¹tor</hw>
+    <srcxcr1>¹tor</srcxcr1>
+    <gl>up</gl>
+  </entry>
+  <entry id="sahu.350">
+    <hw>¹toː</hw>
+    <srcxcr1>¹toː=pa [[toː-pa</srcxcr1>
+    <gl>to want (desire)</gl>
+  </entry>
+  <entry id="sahu.351">
+    <hw>¹tsa</hw>
+    <srcxcr1>¹tsa=pa [[capa</srcxcr1>
+    <gl>to eat</gl>
+  </entry>
+  <entry id="sahu.352">
+    <hw>¹tsen</hw>
+    <gl>leopard</gl>
+  </entry>
+  <entry id="sahu.353">
+    <hw>¹tsjaː</hw>
+    <srcxcr1>¹tsjaː=pa [[cyaːpa</srcxcr1>
+    <gl>to see/ to look at</gl>
+  </entry>
+  <entry id="sahu.354">
+    <hw>¹tsu</hw>
+    <srcxcr1>⁴po ¹tsu=pa [['poh cu-pa</srcxcr1>
+    <gl>to divide</gl>
+  </entry>
+  <entry id="sahu.355">
+    <hw>¹tsuŋ</hw>
+    <srcxcr1>¹tsuŋ=pa [[cuŋ-pa</srcxcr1>
+    <gl>to catch/ to hold/ to catch (in a trap)/ to tether (an animal)/ to pen up (animals)</gl>
+  </entry>
+  <entry id="sahu.356">
+    <hw>¹tsʰai</hw>
+    <srcxcr1>¹tsʰai</srcxcr1>
+    <gl>bamboo tie strips for building</gl>
+  </entry>
+  <entry id="sahu.357">
+    <hw>¹tsʰar</hw>
+    <srcxcr1>¹tsʰar=pa [[cʰar-pa</srcxcr1>
+    <gl>to grow up</gl>
+  </entry>
+  <entry id="sahu.358">
+    <hw>¹tsʰaŋ</hw>
+    <srcxcr1>¹tsʰaŋ ⁴paː=pa [[cʰaŋ 'paːhpa</srcxcr1>
+    <gl>basket</gl>
+  </entry>
+  <entry id="sahu.359">
+    <hw>¹tsʰaː</hw>
+    <srcxcr1>¹tsʰaː=pa [[cʰaː-pa</srcxcr1>
+    <gl>to sting/ to peck/ to bite (as a snake)</gl>
+  </entry>
+  <entry id="sahu.360">
+    <hw>¹tsʰet</hw>
+    <gl>to quarrel</gl>
+  </entry>
+  <entry id="sahu.361">
+    <hw>¹tsʰeŋ</hw>
+    <srcxcr1>¹tsʰeŋ=pa [[cʰeŋ-pa</srcxcr1>
+    <gl>to pull</gl>
+  </entry>
+  <entry id="sahu.362">
+    <hw>¹tsʰi</hw>
+    <srcxcr1>¹tsʰi</srcxcr1>
+    <gl>grass</gl>
+  </entry>
+  <entry id="sahu.363">
+    <hw>¹tsʰiŋ</hw>
+    <srcxcr1>¹tsʰiŋ=pa [[cʰiŋ-pa</srcxcr1>
+    <gl>to wake up (itr)</gl>
+  </entry>
+  <entry id="sahu.364">
+    <hw>¹tsʰjaː</hw>
+    <srcxcr1>¹keltuŋ ¹tsʰjaː=pa [[keltuŋ cʰyaː-pa</srcxcr1>
+    <gl>to sit cross legged</gl>
+  </entry>
+  <entry id="sahu.365">
+    <hw>¹tsʰjoŋ</hw>
+    <srcxcr1>¹tsʰjoŋ=pa [[cʰyoŋ-pa</srcxcr1>
+    <gl>to run, to flee, to jump</gl>
+  </entry>
+  <entry id="sahu.366">
+    <hw>¹tsʰo</hw>
+    <srcxcr1>¹tsʰo=pa [[cʰopa</srcxcr1>
+    <gl>healthy/ fat/ stout</gl>
+  </entry>
+  <entry id="sahu.367">
+    <hw>¹tsʰon</hw>
+    <srcxcr1>¹tsʰon</srcxcr1>
+    <gl>paint</gl>
+  </entry>
+  <entry id="sahu.368">
+    <hw>¹tsʰoː</hw>
+    <srcxcr1>³miː ¹tsʰoː=pa [[miːh cʰoː-pa</srcxcr1>
+    <gl>assembly</gl>
+  </entry>
+  <entry id="sahu.369">
+    <hw>¹tsʰuː</hw>
+    <srcxcr1>¹tsʰuː=pa [[cʰuːpa</srcxcr1>
+    <gl>pleasant</gl>
+  </entry>
+  <entry id="sahu.370">
+    <hw>¹tʰaŋ</hw>
+    <srcxcr1>¹tʰaŋ ¹kʰa=pa [[tʰaŋ kʰapa</srcxcr1>
+    <gl>fetid</gl>
+  </entry>
+  <entry id="sahu.371">
+    <hw>¹tʰaŋ</hw>
+    <gl>smell</gl>
+  </entry>
+  <entry id="sahu.372">
+    <hw>¹tʰe</hw>
+    <srcxcr1>¹tʰe</srcxcr1>
+    <gl>he</gl>
+  </entry>
+  <entry id="sahu.373">
+    <hw>¹tʰen</hw>
+    <gl>to put</gl>
+  </entry>
+  <entry id="sahu.374">
+    <hw>¹tʰeː</hw>
+    <gl>to hear/ deaf</gl>
+  </entry>
+  <entry id="sahu.375">
+    <hw>¹tʰoi</hw>
+    <srcxcr1>¹tʰoi=pa [[tʰoi-pa</srcxcr1>
+    <gl>to wrap around head</gl>
+  </entry>
+  <entry id="sahu.376">
+    <hw>¹tʰom</hw>
+    <srcxcr1>¹tʰom=na ¹la=pa [[tʰom-na la-pa</srcxcr1>
+    <gl>to stagger</gl>
+  </entry>
+  <entry id="sahu.377">
+    <hw>¹tʰu</hw>
+    <srcxcr1>¹tʰu=pa [[tʰu-pa</srcxcr1>
+    <gl>to pick (from bush, tree)</gl>
+  </entry>
+  <entry id="sahu.378">
+    <hw>¹ur</hw>
+    <srcxcr1>¹ur</srcxcr1>
+    <gl>yellow</gl>
+  </entry>
+  <entry id="sahu.379">
+    <hw>¹uː</hw>
+    <srcxcr1>¹uː</srcxcr1>
+    <gl>cave</gl>
+  </entry>
+  <entry id="sahu.380">
+    <hw>¹wal</hw>
+    <srcxcr1>¹me ¹wal=pa [[me wal-pa</srcxcr1>
+    <gl>to stoke, to stir up fire</gl>
+  </entry>
+  <entry id="sahu.381">
+    <hw>¹ŋa</hw>
+    <srcxcr1>¹ŋa</srcxcr1>
+    <gl>I</gl>
+  </entry>
+  <entry id="sahu.382">
+    <hw>¹ɲal</hw>
+    <srcxcr1>¹ɲal=pa [[nyal-pa</srcxcr1>
+    <gl>to ruminate</gl>
+  </entry>
+  <entry id="sahu.383">
+    <hw>¹ʈaŋ</hw>
+    <srcxcr1>¹ʈaŋ</srcxcr1>
+    <gl>marrow</gl>
+  </entry>
+  <entry id="sahu.384">
+    <hw>¹ʈaː</hw>
+    <srcxcr1>¹ʈaː</srcxcr1>
+    <gl>root</gl>
+  </entry>
+  <entry id="sahu.385">
+    <hw>¹ʈaŋ</hw>
+    <srcxcr1>¹ʈaŋ=pa [[Taŋ-pa</srcxcr1>
+    <gl>to break (as a rope) (itr)</gl>
+  </entry>
+  <entry id="sahu.386">
+    <hw>¹ɲen</hw>
+    <gl>to listen/ to hear</gl>
+  </entry>
+  <entry id="sahu.387">
+    <hw>¹ʈeː</hw>
+    <srcxcr1>¹ʈeː=pa [[Teː-pa</srcxcr1>
+    <gl>to choke with liquids</gl>
+  </entry>
+  <entry id="sahu.388">
+    <hw>¹ɲi</hw>
+    <srcxcr1>¹ɲi=pa [[nyi-pa</srcxcr1>
+    <gl>to go</gl>
+  </entry>
+  <entry id="sahu.389">
+    <hw>¹ɲiː</hw>
+    <srcxcr1>¹ɲiː</srcxcr1>
+    <gl>we</gl>
+  </entry>
+  <entry id="sahu.390">
+    <hw>¹ŋoː</hw>
+    <srcxcr1>¹ŋoː=pa [[ŋoː-pa</srcxcr1>
+    <gl>to tease</gl>
+  </entry>
+  <entry id="sahu.391">
+    <hw>¹ʈup</hw>
+    <srcxcr1>¹ʈup</srcxcr1>
+    <gl>thread</gl>
+  </entry>
+  <entry id="sahu.392">
+    <hw>¹ʈʰo</hw>
+    <srcxcr1>²naktsa ¹ʈʰo=pa [['nakca Tʰo-pa</srcxcr1>
+    <gl>to hatch</gl>
+  </entry>
+  <entry id="sahu.393">
+    <hw>⁴jal</hw>
+    <srcxcr1>³tiɲi ⁴jal</srcxcr1>
+    <gl>daylight</gl>
+  </entry>
+  <entry id="sahu.394">
+    <hw>⁴jap</hw>
+    <srcxcr1>⁴jap=pa [['yahp-pa</srcxcr1>
+    <gl>to winnow (small quantities)</gl>
+  </entry>
+  <entry id="sahu.395">
+    <hw>⁴jar</hw>
+    <srcxcr1>⁴jar=pa [['yahr-pa</srcxcr1>
+    <gl>to go (direction)/ to pass (time)</gl>
+  </entry>
+  <entry id="sahu.396">
+    <hw>⁴jaː</hw>
+    <srcxcr1>⁴jaː</srcxcr1>
+    <gl>yak</gl>
+  </entry>
+  <entry id="sahu.397">
+    <hw>⁴jo</hw>
+    <srcxcr1>⁴jo</srcxcr1>
+    <gl>thief</gl>
+  </entry>
+  <entry id="sahu.398">
+    <hw>⁴joŋ</hw>
+    <srcxcr1>⁴joŋ=pa [['yohŋ-pa</srcxcr1>
+    <gl>to shake (slowly)</gl>
+  </entry>
+  <entry id="sahu.399">
+    <hw>⁴ki</hw>
+    <srcxcr1>⁴ki</srcxcr1>
+    <gl>hay/ thatch</gl>
+  </entry>
+  <entry id="sahu.400">
+    <hw>⁴kiː</hw>
+    <srcxcr1>⁴kiː</srcxcr1>
+    <gl>one</gl>
+  </entry>
+  <entry id="sahu.401">
+    <hw>⁴kja</hw>
+    <srcxcr1>⁴kja ⁴ʈet</srcxcr1>
+    <gl>(half) way</gl>
+  </entry>
+  <entry id="sahu.402">
+    <hw>⁴kjam</hw>
+    <srcxcr1>⁴kjam</srcxcr1>
+    <gl>path/ road</gl>
+  </entry>
+  <entry id="sahu.403">
+    <hw>⁴kjeː</hw>
+    <srcxcr1>⁴kjeː=pa [['kyeːhpa</srcxcr1>
+    <gl>late/ to be late (action)/ to delay (itr)</gl>
+  </entry>
+  <entry id="sahu.404">
+    <hw>⁴kjoi</hw>
+    <srcxcr1>⁴kjoi=pa [['kyoih-pa</srcxcr1>
+    <gl>to wind up</gl>
+  </entry>
+  <entry id="sahu.405">
+    <hw>⁴kjot</hw>
+    <srcxcr1>⁴kjot</srcxcr1>
+    <gl>language</gl>
+  </entry>
+  <entry id="sahu.406">
+    <hw>⁴kjuː</hw>
+    <srcxcr1>⁴kjuː</srcxcr1>
+    <gl>sheep</gl>
+  </entry>
+  <entry id="sahu.407">
+    <hw>⁴klaː</hw>
+    <srcxcr1>⁴klaː</srcxcr1>
+    <gl>place</gl>
+  </entry>
+  <entry id="sahu.408">
+    <hw>⁴kliŋ</hw>
+    <srcxcr1>⁴kliŋ ²ju=pa [['klihŋ 'yu-pa</srcxcr1>
+    <gl>snow</gl>
+  </entry>
+  <entry id="sahu.409">
+    <hw>⁴klu</hw>
+    <srcxcr1>⁴klu=pa [['kluh-pa</srcxcr1>
+    <gl>to buy</gl>
+  </entry>
+  <entry id="sahu.410">
+    <hw>⁴koŋ</hw>
+    <srcxcr1>⁴koŋ=pa [['kohŋ-pa</srcxcr1>
+    <gl>to sit</gl>
+  </entry>
+  <entry id="sahu.411">
+    <hw>⁴kur</hw>
+    <srcxcr1>⁴kur=pa [['kuhr-pa</srcxcr1>
+    <gl>to fall over/ to fall (itr)</gl>
+  </entry>
+  <entry id="sahu.412">
+    <hw>⁴lip</hw>
+    <srcxcr1>⁴lip=pa [['lihp-pa</srcxcr1>
+    <gl>to winnow</gl>
+  </entry>
+  <entry id="sahu.413">
+    <hw>⁴ma</hw>
+    <srcxcr1>⁴ma=pa [['mah-pa</srcxcr1>
+    <gl>to disappear</gl>
+  </entry>
+  <entry id="sahu.414">
+    <hw>⁴mai</hw>
+    <srcxcr1>⁴mai=pa [['maih-pa</srcxcr1>
+    <gl>to search for</gl>
+  </entry>
+  <entry id="sahu.415">
+    <hw>⁴mar</hw>
+    <srcxcr1>⁴mar</srcxcr1>
+    <gl>gold</gl>
+  </entry>
+  <entry id="sahu.416">
+    <hw>⁴maŋ</hw>
+    <srcxcr1>³maŋ ⁴maŋ=pa [[mahŋ 'mahŋ-pa</srcxcr1>
+    <gl>to dream</gl>
+  </entry>
+  <entry id="sahu.417">
+    <hw>⁴maŋ</hw>
+    <srcxcr1>⁴maŋ</srcxcr1>
+    <gl>ghost/ spirit</gl>
+  </entry>
+  <entry id="sahu.418">
+    <hw>⁴me</hw>
+    <srcxcr1>⁴me</srcxcr1>
+    <gl>cow</gl>
+  </entry>
+  <entry id="sahu.419">
+    <hw>⁴mo</hw>
+    <srcxcr1>⁴mo=pa [['moh-pa</srcxcr1>
+    <gl>to groan/ to growl</gl>
+  </entry>
+  <entry id="sahu.420">
+    <hw>⁴nai</hw>
+    <srcxcr1>⁴nai=pa [['naih-pa</srcxcr1>
+    <gl>to massage/ to rub (vigorously)</gl>
+  </entry>
+  <entry id="sahu.421">
+    <hw>⁴noː</hw>
+    <srcxcr1>⁴noː</srcxcr1>
+    <gl>garlic</gl>
+  </entry>
+  <entry id="sahu.422">
+    <hw>⁴nuː</hw>
+    <srcxcr1>⁴nuː=pa [['nuːh-pa</srcxcr1>
+    <gl>to wallow (buffalo in water)</gl>
+  </entry>
+  <entry id="sahu.423">
+    <hw>⁴pam</hw>
+    <srcxcr1>⁴pam=pa [['pahm-pa</srcxcr1>
+    <gl>to crawl/ to crawl (babies)</gl>
+  </entry>
+  <entry id="sahu.424">
+    <hw>⁴pja</hw>
+    <srcxcr1>⁴pja=pa [['pyah-pa</srcxcr1>
+    <gl>to have sexual intercourse</gl>
+  </entry>
+  <entry id="sahu.425">
+    <hw>⁴pjon</hw>
+    <srcxcr1>⁴pjon</srcxcr1>
+    <gl>young</gl>
+  </entry>
+  <entry id="sahu.426">
+    <hw>⁴pli</hw>
+    <srcxcr1>⁴pli</srcxcr1>
+    <gl>four</gl>
+  </entry>
+  <entry id="sahu.427">
+    <hw>⁴ploː</hw>
+    <srcxcr1>⁴ploː=pa [['ploːh-pa</srcxcr1>
+    <gl>to prickle/ to prick (as a thorn)/ to thrust (knife)</gl>
+  </entry>
+  <entry id="sahu.428">
+    <hw>⁴plu</hw>
+    <srcxcr1>⁴plu</srcxcr1>
+    <gl>seed</gl>
+  </entry>
+  <entry id="sahu.429">
+    <hw>⁴pra</hw>
+    <srcxcr1>⁴pra=pa [['prahpa</srcxcr1>
+    <gl>to walk</gl>
+  </entry>
+  <entry id="sahu.430">
+    <hw>⁴praː</hw>
+    <srcxcr1>⁴praː</srcxcr1>
+    <gl>cliff/ rock</gl>
+  </entry>
+  <entry id="sahu.431">
+    <hw>⁴praː</hw>
+    <gl>flour</gl>
+  </entry>
+  <entry id="sahu.432">
+    <hw>⁴pre</hw>
+    <srcxcr1>⁴pre=pa [['preh-pa</srcxcr1>
+    <gl>to leak</gl>
+  </entry>
+  <entry id="sahu.433">
+    <hw>⁴pren</hw>
+    <gl>to wait</gl>
+  </entry>
+  <entry id="sahu.434">
+    <hw>⁴pret</hw>
+    <srcxcr1>⁴pret</srcxcr1>
+    <gl>eight</gl>
+  </entry>
+  <entry id="sahu.435">
+    <hw>⁴proː</hw>
+    <srcxcr1>⁴proː</srcxcr1>
+    <gl>smallpox</gl>
+  </entry>
+  <entry id="sahu.436">
+    <hw>⁴pu</hw>
+    <srcxcr1>⁴pu</srcxcr1>
+    <gl>field</gl>
+  </entry>
+  <entry id="sahu.437">
+    <hw>⁴pup</hw>
+    <srcxcr1>⁴pup=pa [['puhp-pa</srcxcr1>
+    <gl>to ripen artificially in hot bed, to dry-ferment</gl>
+  </entry>
+  <entry id="sahu.438">
+    <hw>⁴roː</hw>
+    <srcxcr1>⁴roː=pa [['roːh-pa</srcxcr1>
+    <gl>to fry (most often dry-fry)</gl>
+  </entry>
+  <entry id="sahu.439">
+    <hw>⁴rup</hw>
+    <srcxcr1>⁴rup ¹ta=pa [['ruhp ta-pa</srcxcr1>
+    <gl>to assemble</gl>
+  </entry>
+  <entry id="sahu.440">
+    <hw>⁴tap</hw>
+    <srcxcr1>⁴tap</srcxcr1>
+    <gl>needle</gl>
+  </entry>
+  <entry id="sahu.441">
+    <hw>⁴ti</hw>
+    <srcxcr1>⁴ti=pa [['tih-pa</srcxcr1>
+    <gl>to kindle, to transmit fire (tr)</gl>
+  </entry>
+  <entry id="sahu.442">
+    <hw>⁴tim</hw>
+    <srcxcr1>⁴tim</srcxcr1>
+    <gl>house</gl>
+  </entry>
+  <entry id="sahu.443">
+    <hw>⁴tot</hw>
+    <srcxcr1>⁴tot ⁴tsaŋ=pa [['toht 'cahŋ-pa</srcxcr1>
+    <gl>to load</gl>
+  </entry>
+  <entry id="sahu.444">
+    <hw>⁴toː</hw>
+    <srcxcr1>⁴toː=pa [['toːh-pa</srcxcr1>
+    <gl>to turn over (itr)/ to turn back (itr)/ to give back/ to return (come back)</gl>
+  </entry>
+  <entry id="sahu.445">
+    <hw>⁴tsaŋ</hw>
+    <gl>to insert, to instill, to bring in</gl>
+  </entry>
+  <entry id="sahu.446">
+    <hw>⁴tsiː</hw>
+    <srcxcr1>⁴tsiː</srcxcr1>
+    <gl>beer</gl>
+  </entry>
+  <entry id="sahu.447">
+    <hw>⁴tsjaː</hw>
+    <srcxcr1>⁴tsjaː=pa [['cyaːh-pa</srcxcr1>
+    <gl>to count</gl>
+  </entry>
+  <entry id="sahu.448">
+    <hw>⁴tsjop</hw>
+    <srcxcr1>⁴tsjop-¹pala ³jim=pa [['cyohp-pala yihm-pa</srcxcr1>
+    <gl>to mix (itr)/ to knead</gl>
+  </entry>
+  <entry id="sahu.449">
+    <hw>⁴tsu</hw>
+    <srcxcr1>⁴tsu=pa [['cuh-pa</srcxcr1>
+    <gl>to distribute, to serve out/ to share</gl>
+  </entry>
+  <entry id="sahu.450">
+    <hw>⁴tsuː</hw>
+    <srcxcr1>⁴tsuː=pa [['cuːh-pa</srcxcr1>
+    <gl>to bark</gl>
+  </entry>
+  <entry id="sahu.451">
+    <hw>⁴tsuː</hw>
+    <srcxcr1>⁴tsuː=pa [['cuːh-pa</srcxcr1>
+    <gl>to put on (the stove)</gl>
+  </entry>
+  <entry id="sahu.452">
+    <hw>⁴tut</hw>
+    <gl>to pick up (tr)/ to pick (up from ground)</gl>
+  </entry>
+  <entry id="sahu.453">
+    <hw>⁴wam</hw>
+    <srcxcr1>⁴wam=pa [['wahm-pa</srcxcr1>
+    <gl>to persuade</gl>
+  </entry>
+  <entry id="sahu.454">
+    <hw>⁴ŋa</hw>
+    <srcxcr1>⁴ŋa</srcxcr1>
+    <gl>five</gl>
+  </entry>
+  <entry id="sahu.455">
+    <hw>⁴ŋap</hw>
+    <srcxcr1>⁴ŋap=pa [['ŋahp-pa</srcxcr1>
+    <gl>to suck</gl>
+  </entry>
+  <entry id="sahu.456">
+    <hw>⁴ɲet</hw>
+    <gl>to spill</gl>
+  </entry>
+  <entry id="sahu.457">
+    <hw>⁴ɲiː</hw>
+    <srcxcr1>⁴ɲiː</srcxcr1>
+    <gl>two</gl>
+  </entry>
+  <entry id="sahu.458">
+    <hw>⁴ŋot</hw>
+    <gl>to call</gl>
+  </entry>
+  <entry id="sahu.459">
+    <hw>⁴ɲu</hw>
+    <srcxcr1>⁴ɲu=pa [['nyuh-pa</srcxcr1>
+    <gl>to melt (itr)</gl>
+  </entry>
+  <entry id="sahu.460">
+    <hw>⁴ʈui</hw>
+    <srcxcr1>⁴ʈui ¹ɲi=pa [['Tuih nyi-pa</srcxcr1>
+    <gl>to slide (earth)</gl>
+  </entry>
+  <entry id="sahu.461">
+    <hw>⁴ʈuː</hw>
+    <srcxcr1>⁴ʈuː</srcxcr1>
+    <gl>six</gl>
+  </entry>
+  <entry id="sahu.462">
+    <hw>⁴ʈuŋ</hw>
+    <srcxcr1>⁴ʈuŋ=pa [['Tuhŋ-pa</srcxcr1>
+    <gl>to shut</gl>
+  </entry>
+</lexicon>
