@@ -83,7 +83,7 @@ def data_files(tree, directory):
     for type in 'statistics compare sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
-    for type in 'parameters correspondences mel data'.split(' '):
+    for type in 'parameters correspondences mel data fuz'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'correspondences data u8 keys'.split(' '):
@@ -161,6 +161,8 @@ def determine_file_type(file_path):
         return 'lexicon2html.xsl'
     elif 'parameters.xml' in file_path:
         return 'params2html.xsl'
+    elif 'fuz.xml' in file_path:
+        return 'fuzzy2html.xsl'
     elif 'sets.xml' in file_path:
         return 'sets2html.xsl'
     elif 'mel.xml' in file_path:
@@ -197,17 +199,26 @@ def limit_lines(filecontent, max_rows):
     return '\n'.join(rows) + message
 
 
-def upstream(request, language_forms, project, experiment, only_with_mel):
-    mel = None
-    recon = 'standard'
+def upstream(request, language_forms, project, experiment, parameters, only_with_mel):
     project_dir = os.path.join('..', EXPERIMENTS, project, experiment)
     parameters_file = os.path.join(project_dir, f'{project}.master.parameters.xml')
-    settings = read.read_settings_file(parameters_file,
-                                       mel=None,
-                                       recon=recon)
     if request == 'languages':
+        mel = None
+        fuzzy = None
+        recon = 'standard'
+        settings = read.read_settings_file(parameters_file,
+                                           mel=mel,
+                                           fuzzy=fuzzy,
+                                           recon=recon)
         return settings.upstream[settings.upstream_target], settings.upstream_target, project_dir
     elif request == 'upstream':
+        mel = parameters['mel'] if 'mel' in parameters and parameters['mel'] != '' else None
+        recon = parameters['recon'] if 'recon' in parameters and parameters['recon'] != '' else None
+        fuzzy = parameters['fuzzy'] if 'fuzzy' in parameters and parameters['fuzzy'] != '' else None
+        settings = read.read_settings_file(parameters_file,
+                                           mel=mel,
+                                           fuzzy=fuzzy,
+                                           recon=recon)
         attested_lexicons = read.create_lexicon_from_parms(language_forms)
         B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
         isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]

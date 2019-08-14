@@ -109,25 +109,30 @@ def download_project(tree, project, filename):
 def upstream(project, experiment):
     languages = [(i, getattr(request.forms, i)) for i in request.forms]
     RE.Debug.debug = True
-    language_names, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, True)
-    forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project, experiment, True)
+    experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
+    experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
+    language_names, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, True)
+    forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project, experiment, request.forms, True)
     data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages, 'base_dir': base_dir,
-            'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses}
+            'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses,
+            'experiment_info': experiment_info}
     return utils.check_template('index', data)
 
 
 @app.route('/interactive/<project:re:.*>/<experiment:re:.*>')
 def interactive_project(project, experiment):
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
+    experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
+    experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
     if num_files == 0:
         experiments, base_dir, data_elements = utils.list_of_experiments(project)
         data = {'experiments': experiments, 'project': project, 'base_dir': base_dir,
                 'data_elements': data_elements, 'errors': ['No files in this experiment!']}
     else:
-        languages, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, True)
+        languages, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, True)
         languages = [(l, '') for l in languages]
         data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages,
-                'base_dir': base_dir, 'back': f'/experiments/{project}'}
+                'base_dir': base_dir, 'back': f'/experiments/{project}', 'experiment_info': experiment_info}
     return utils.check_template('index', data)
 
 
