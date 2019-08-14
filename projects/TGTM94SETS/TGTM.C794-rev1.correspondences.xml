@@ -25,10 +25,11 @@
       <seg>¹</seg>
       <seg>X</seg>
       <seg>˥</seg>
+      <seg>ᴴ</seg>
     </modern>
     <modern dialecte="tuk">
       <seg>¹</seg>
-      <seg>˥</seg>
+      <seg>ᴴ</seg>
     </modern>
     <modern dialecte="mar">
       <seg>¹</seg>
@@ -64,10 +65,11 @@
       <seg>²</seg>
       <seg>X</seg>
       <seg>˥</seg>
+      <seg>ᴴ</seg>
     </modern>
     <modern dialecte="tuk">
       <seg>²</seg>
-      <seg>˥</seg>
+      <seg>ᴴ</seg>
     </modern>
     <modern dialecte="mar">
       <seg>²</seg>
@@ -100,6 +102,7 @@
     <modern dialecte="tag">
       <seg>³</seg>
       <seg>X</seg>
+      <seg>˩</seg>
     </modern>
     <modern dialecte="tuk">
       <seg>³</seg>
@@ -107,10 +110,13 @@
     <modern dialecte="mar">
       <seg>³</seg>
       <seg>X</seg>
+      <seg>˩</seg>
     </modern>
     <modern dialecte="syang">
       <seg>³</seg>
       <seg>X</seg>
+      <seg>˩</seg>
+      <seg>ᴸ</seg>
     </modern>
     <modern dialecte="gha">
       <seg>³</seg>
@@ -146,6 +152,7 @@
       <seg>⁴</seg>
       <seg>X</seg>
       <seg>˩</seg>
+      <seg>ᴸ</seg>
     </modern>
     <modern dialecte="gha">
       <seg>⁴</seg>

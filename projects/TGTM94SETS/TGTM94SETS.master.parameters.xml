@@ -12,7 +12,12 @@
   <mel name="hand" file="TGTM.hand.mel.xml"/>
   <fuzzy name="fuzzy" file="TGTM.fuz.xml"/>
   <reconstruction name="standard">
-    <proto_language name="tgtm" correspondences="TGTM.C794.correspondences.xml"/>
+    <proto_language name="tgtm" correspondences="TGTM.C794-rev1.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+  </reconstruction>
+  <reconstruction name="rev1">
+    <proto_language name="tgtm" correspondences="TGTM.C794-rev1.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
     <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
   </reconstruction>
