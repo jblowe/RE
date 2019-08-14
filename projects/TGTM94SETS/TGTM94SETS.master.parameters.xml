@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <attested name="gha" file="TGTM.gha.data.xml"/>
+  <attested name="ris" file="TGTM.ris.data.xml"/>
+  <attested name="sahu" file="TGTM.sahu.data.xml"/>
+  <attested name="pra" file="TGTM.pra.data.xml"/>
+  <attested name="mar" file="TGTM.mar.data.xml"/>
+  <attested name="syang" file="TGTM.syang.data.xml"/>
+  <attested name="tag" file="TGTM.tag.data.xml"/>
+  <attested name="tuk" file="TGTM.tuk.data.xml"/>
+  <mel name="hand" file="TGTM.hand.mel.xml"/>
+  <fuzzy name="fuzzy" file="TGTM.fuz.xml"/>
+  <reconstruction name="standard">
+    <proto_language name="tgtm" correspondences="TGTM.C794.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+  </reconstruction>
+  <param name="title" value="check sets for TGTM, 1994 version"/>
+</params>
