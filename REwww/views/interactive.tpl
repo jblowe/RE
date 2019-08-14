@@ -3,6 +3,7 @@
     <form method="post">
         <div class="row">
           <div class="col-md-4 panel border rounded">
+          % include('parameters.tpl')
           <table>
           % for (language, value) in data['languages']:
                 <tr><td><i>{{language}}</i><td><input name="{{language}}" type="text" value="{{value}}"></td></tr>

@@ -7,8 +7,10 @@
 </tr>
 </thead>
 <tbody>
-<tr><td><i>Run name (required)</i></td><td><input name="run" type="text"></td></tr>
-<tr><td><i>Remarks (optional)</i></td><td><input name="remarks" type="text"></td></tr>
+% if not 'interactive' in data:
+    <tr><td><i>Run name (required)</i></td><td><input name="run" type="text"></td></tr>
+    <tr><td><i>Remarks (optional)</i></td><td><input name="remarks" type="text"></td></tr>
+% end
 % if 'reconstructions' in data['experiment_info']:
     <tr><td><i>Reconstructions (required)</i></td><td>
     <select name="recon">
@@ -28,21 +30,23 @@
     </select>
     </td></tr>
 % end
-% if 'mels' in data['experiment_info']:
-    <tr><td><i>MELs</i></td><td>
-    <select name="mel">
-        <option value="">No MELs</option>
-    % for m in data['experiment_info']['mels']:
-        <option value="{{m}}">{{m}}</option>
+% if not 'interactive' in data:
+    % if 'mels' in data['experiment_info']:
+        <tr><td><i>MELs</i></td><td>
+        <select name="mel">
+            <option value="">No MELs</option>
+        % for m in data['experiment_info']['mels']:
+            <option value="{{m}}">{{m}}</option>
+        % end
+        </select>
+        </td></tr>
     % end
+    <tr><td><i>Strict</i></td><td>
+    <select name="strict">
+    <option value="no">no</option>
+    <option value="yes">yes</option>
     </select>
     </td></tr>
 % end
-<tr><td><i>Strict</i></td><td>
-<select name="strict">
-<option value="no">no</option>
-<option value="yes">yes</option>
-</select>
-</td></tr>
 </tbody>
 </table>
