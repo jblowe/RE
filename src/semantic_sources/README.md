@@ -33,7 +33,9 @@ Now calculate the colexification networks: (takes a while)
 
 Finally, to produce the mels for all projects, do:
 
-`python3 regenerate-clics.py X`
+`python3 semantic_sources/regenerate-clics.py X`
+
+You must run this from the parent directory.
 
 # Both
 
