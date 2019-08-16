@@ -10,9 +10,6 @@ import utils
 import shutil
 from argparser import command_args, args
 
-print(time.asctime())
-print('Command line options used: ' + ' '.join(sys.argv[1:]))
-
 def check_setup(command, args, settings):
     # only for checking 'upstream' setup at the moment; other setups mostly checked earlier
     errors = False
@@ -48,6 +45,10 @@ if command_args.command == 'coverage':
                                      f'{args.project}.{args.mel_name}-extra.mel.xml')
     RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
     RE.write_xml_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
+elif command_args.command == 'list-all-glosses':
+    settings = read.read_settings_file(os.path.join('..', 'projects', args.project, f'{args.project}.master.parameters.xml'))
+    for gloss in utils.all_glosses(read.read_attested_lexicons(settings)):
+        print(gloss)
 elif command_args.command == 'new-experiment':
     directory = os.path.join('..', 'experiments', args.project, args.experiment_name)
     if os.path.isdir(directory):
@@ -89,6 +90,9 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     for what_to_compare in 'upstream evaluation mel'.split(' '):
         compare.compare(args.experiment_path1, args.project, what_to_compare)
 elif command_args.command == 'upstream':
+    print(time.asctime())
+    print('Command line options used: ' + ' '.join(sys.argv[1:]))
+
     parameters_file = os.path.join(args.experiment_path,
                                    f'{args.project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
@@ -132,6 +136,6 @@ elif command_args.command == 'upstream':
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
         compare.compare(args.experiment_path, args.project, what_to_compare)
+    print(time.asctime())
 else:
     print(f'unknown command {command_args.command}')
-print(time.asctime())

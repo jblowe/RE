@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<semantics>
+   <mel id="clics1">
+      <gl>hold</gl>
+      <gl>catch</gl>
+      <gl>carry</gl>
+      <gl>embrace</gl>
+      <gl>buy</gl>
+   </mel>
+   <mel id="clics2">
+      <gl>son</gl>
+      <gl>daughter</gl>
+      <gl>nephew</gl>
+   </mel>
+   <mel id="clics3">
+      <gl>sky</gl>
+      <gl>cloud</gl>
+      <gl>air</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics4">
+      <gl>eat</gl>
+      <gl>bite</gl>
+      <gl>chew</gl>
+      <gl>suck</gl>
+   </mel>
+   <mel id="clics5">
+      <gl>bite</gl>
+      <gl>chew</gl>
+   </mel>
+   <mel id="clics6">
+      <gl>buy</gl>
+      <gl>sell</gl>
+      <gl>carry</gl>
+      <gl>catch</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics7">
+      <gl>rub</gl>
+      <gl>scrape</gl>
+   </mel>
+   <mel id="clics8">
+      <gl>intestines</gl>
+      <gl>stomach</gl>
+   </mel>
+   <mel id="clics9">
+      <gl>squeeze</gl>
+      <gl>pinch</gl>
+      <gl>rub</gl>
+   </mel>
+   <mel id="clics10">
+      <gl>sheep</gl>
+      <gl>goat</gl>
+   </mel>
+   <mel id="clics11">
+      <gl>yellow</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics12">
+      <gl>pull</gl>
+      <gl>suck</gl>
+      <gl>steal</gl>
+   </mel>
+   <mel id="clics13">
+      <gl>fry</gl>
+      <gl>bake</gl>
+      <gl>wash</gl>
+   </mel>
+   <mel id="clics14">
+      <gl>water</gl>
+      <gl>urine</gl>
+      <gl>year</gl>
+   </mel>
+   <mel id="clics15">
+      <gl>shoot</gl>
+      <gl>pull</gl>
+      <gl>eat</gl>
+      <gl>bite</gl>
+   </mel>
+   <mel id="clics16">
+      <gl>stomach</gl>
+      <gl>heart</gl>
+   </mel>
+   <mel id="clics17">
+      <gl>wake up</gl>
+      <gl>stand</gl>
+   </mel>
+   <mel id="clics18">
+      <gl>daughter</gl>
+      <gl>nephew</gl>
+      <gl>female</gl>
+   </mel>
+   <mel id="clics19">
+      <gl>lick</gl>
+      <gl>suck</gl>
+   </mel>
+   <mel id="clics20">
+      <gl>catch</gl>
+      <gl>borrow</gl>
+      <gl>carry</gl>
+   </mel>
+   <mel id="clics21">
+      <gl>thick</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics22">
+      <gl>hand</gl>
+      <gl>wing</gl>
+   </mel>
+   <mel id="clics23">
+      <gl>suck</gl>
+      <gl>squeeze</gl>
+   </mel>
+   <mel id="clics24">
+      <gl>carry</gl>
+      <gl>borrow</gl>
+   </mel>
+   <mel id="clics25">
+      <gl>blood</gl>
+      <gl>eat</gl>
+   </mel>
+   <mel id="clics26">
+      <gl>swell</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics27">
+      <gl>copper</gl>
+      <gl>iron</gl>
+   </mel>
+   <mel id="clics28">
+      <gl>snow</gl>
+      <gl>frost</gl>
+   </mel>
+   <mel id="clics29">
+      <gl>full</gl>
+      <gl>enough</gl>
+   </mel>
+   <mel id="clics30">
+      <gl>old</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics31">
+      <gl>bone</gl>
+      <gl>tree</gl>
+   </mel>
+   <mel id="clics32">
+      <gl>waist</gl>
+      <gl>stomach</gl>
+   </mel>
+</semantics>
