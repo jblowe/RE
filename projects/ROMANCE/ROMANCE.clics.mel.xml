@@ -321,54 +321,58 @@
       <gl>mother</gl>
    </mel>
    <mel id="clics66">
+      <gl>swell</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics67">
       <gl>stone</gl>
       <gl>egg</gl>
    </mel>
-   <mel id="clics67">
+   <mel id="clics68">
       <gl>name</gl>
       <gl>fish</gl>
       <gl>straight</gl>
    </mel>
-   <mel id="clics68">
+   <mel id="clics69">
       <gl>we</gl>
       <gl>you</gl>
    </mel>
-   <mel id="clics69">
+   <mel id="clics70">
       <gl>grass</gl>
       <gl>green</gl>
       <gl>leaf</gl>
    </mel>
-   <mel id="clics70">
+   <mel id="clics71">
       <gl>flower</gl>
       <gl>red</gl>
       <gl>fruit</gl>
    </mel>
-   <mel id="clics71">
+   <mel id="clics72">
       <gl>wet</gl>
       <gl>rotten</gl>
    </mel>
-   <mel id="clics72">
+   <mel id="clics73">
       <gl>cloud</gl>
       <gl>dust</gl>
    </mel>
-   <mel id="clics73">
+   <mel id="clics74">
       <gl>here</gl>
       <gl>there</gl>
    </mel>
-   <mel id="clics74">
+   <mel id="clics75">
       <gl>at</gl>
       <gl>with</gl>
    </mel>
-   <mel id="clics75">
+   <mel id="clics76">
       <gl>they</gl>
       <gl>he</gl>
       <gl>that</gl>
    </mel>
-   <mel id="clics76">
+   <mel id="clics77">
       <gl>rotten</gl>
       <gl>old</gl>
    </mel>
-   <mel id="clics77">
+   <mel id="clics78">
       <gl>back</gl>
       <gl>bark</gl>
    </mel>

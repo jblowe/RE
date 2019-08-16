@@ -14,41 +14,65 @@
       <gl>board</gl>
    </mel>
    <mel id="clics3">
+      <gl>listen</gl>
+      <gl>hear</gl>
+      <gl>obey</gl>
+      <gl>understand</gl>
+      <gl>feel</gl>
+      <gl>believe</gl>
+   </mel>
+   <mel id="clics4">
       <gl>meat</gl>
       <gl>flesh</gl>
       <gl>animal</gl>
       <gl>fish</gl>
+      <gl>food</gl>
    </mel>
-   <mel id="clics4">
+   <mel id="clics5">
       <gl>language</gl>
       <gl>word</gl>
    </mel>
-   <mel id="clics5">
+   <mel id="clics6">
       <gl>blue</gl>
       <gl>green</gl>
       <gl>black</gl>
-   </mel>
-   <mel id="clics6">
-      <gl>road</gl>
-      <gl>path</gl>
+      <gl>bruise</gl>
    </mel>
    <mel id="clics7">
+      <gl>road</gl>
+      <gl>path</gl>
+      <gl>manner</gl>
+      <gl>footprint</gl>
+   </mel>
+   <mel id="clics8">
       <gl>man</gl>
       <gl>male</gl>
    </mel>
-   <mel id="clics8">
+   <mel id="clics9">
+      <gl>dish</gl>
+      <gl>plate</gl>
+      <gl>bowl</gl>
+      <gl>cup</gl>
+      <gl>spoon</gl>
+      <gl>pan</gl>
+   </mel>
+   <mel id="clics10">
       <gl>woman</gl>
       <gl>wife</gl>
       <gl>female</gl>
+      <gl>daughter</gl>
    </mel>
-   <mel id="clics9">
+   <mel id="clics11">
       <gl>foot</gl>
       <gl>leg</gl>
+      <gl>footprint</gl>
       <gl>heel</gl>
+      <gl>ankle</gl>
       <gl>thigh</gl>
+      <gl>toe</gl>
       <gl>corner</gl>
    </mel>
-   <mel id="clics10">
+   <mel id="clics12">
       <gl>dark</gl>
       <gl>black</gl>
       <gl>night</gl>
@@ -58,17 +82,17 @@
       <gl>blue</gl>
       <gl>red</gl>
    </mel>
-   <mel id="clics11">
+   <mel id="clics13">
       <gl>bark</gl>
       <gl>skin</gl>
       <gl>shell</gl>
       <gl>fur</gl>
    </mel>
-   <mel id="clics12">
+   <mel id="clics14">
       <gl>chin</gl>
       <gl>jaw</gl>
    </mel>
-   <mel id="clics13">
+   <mel id="clics15">
       <gl>walk</gl>
       <gl>go</gl>
       <gl>leave</gl>
@@ -77,81 +101,128 @@
       <gl>run</gl>
       <gl>move</gl>
    </mel>
-   <mel id="clics14">
+   <mel id="clics16">
       <gl>fog</gl>
       <gl>cloud</gl>
       <gl>dew</gl>
       <gl>steam</gl>
+      <gl>dust</gl>
    </mel>
-   <mel id="clics15">
+   <mel id="clics17">
       <gl>look</gl>
       <gl>see</gl>
       <gl>find</gl>
       <gl>read</gl>
       <gl>understand</gl>
    </mel>
-   <mel id="clics16">
+   <mel id="clics18">
       <gl>go</gl>
       <gl>leave</gl>
       <gl>drive</gl>
       <gl>move</gl>
+      <gl>come back</gl>
       <gl>enter</gl>
       <gl>pass</gl>
    </mel>
-   <mel id="clics17">
+   <mel id="clics19">
       <gl>seed</gl>
       <gl>grain</gl>
       <gl>fruit</gl>
+      <gl>nut</gl>
       <gl>eye</gl>
+      <gl>bead</gl>
       <gl>egg</gl>
       <gl>spirit</gl>
       <gl>penis</gl>
       <gl>tooth</gl>
    </mel>
-   <mel id="clics18">
+   <mel id="clics20">
       <gl>learn</gl>
       <gl>study</gl>
       <gl>understand</gl>
       <gl>show</gl>
    </mel>
-   <mel id="clics19">
+   <mel id="clics21">
+      <gl>finger</gl>
+      <gl>toe</gl>
+      <gl>fingernail</gl>
+      <gl>ring</gl>
+   </mel>
+   <mel id="clics22">
       <gl>neck</gl>
       <gl>throat</gl>
       <gl>voice</gl>
    </mel>
-   <mel id="clics20">
+   <mel id="clics23">
       <gl>do</gl>
       <gl>make</gl>
       <gl>build</gl>
       <gl>give</gl>
    </mel>
-   <mel id="clics21">
+   <mel id="clics24">
       <gl>say</gl>
       <gl>speak</gl>
       <gl>explain</gl>
       <gl>word</gl>
       <gl>language</gl>
+      <gl>order</gl>
+      <gl>sing</gl>
    </mel>
-   <mel id="clics22">
+   <mel id="clics25">
+      <gl>paper</gl>
+      <gl>book</gl>
+   </mel>
+   <mel id="clics26">
       <gl>clothes</gl>
       <gl>cloth</gl>
       <gl>dress</gl>
+      <gl>put on</gl>
    </mel>
-   <mel id="clics23">
+   <mel id="clics27">
+      <gl>today</gl>
+      <gl>now</gl>
+      <gl>immediately</gl>
+   </mel>
+   <mel id="clics28">
       <gl>skin</gl>
       <gl>fur</gl>
       <gl>shell</gl>
       <gl>flesh</gl>
       <gl>basket</gl>
    </mel>
-   <mel id="clics24">
+   <mel id="clics29">
+      <gl>nephew</gl>
+      <gl>niece</gl>
+      <gl>cousin</gl>
+   </mel>
+   <mel id="clics30">
       <gl>in front of</gl>
       <gl>before</gl>
       <gl>first</gl>
       <gl>beside</gl>
       <gl>early</gl>
    </mel>
-   <mel id="clics25">
+   <mel id="clics31">
+      <gl>get</gl>
+      <gl>take</gl>
+      <gl>find</gl>
+      <gl>catch</gl>
+      <gl>have</gl>
+      <gl>arrive</gl>
+      <gl>carry</gl>
+      <gl>meet</gl>
+      <gl>bring</gl>
+      <gl>choose</gl>
+      <gl>borrow</gl>
+      <gl>come</gl>
+      <gl>understand</gl>
+      <gl>keep</gl>
+      <gl>marry</gl>
+      <gl>seize</gl>
+      <gl>want</gl>
+      <gl>gather</gl>
+   </mel>
+   <mel id="clics32">
       <gl>catch</gl>
       <gl>take</gl>
       <gl>touch</gl>
@@ -159,30 +230,32 @@
       <gl>carry</gl>
       <gl>keep</gl>
    </mel>
-   <mel id="clics26">
+   <mel id="clics33">
       <gl>hear</gl>
       <gl>understand</gl>
       <gl>obey</gl>
+      <gl>feel</gl>
       <gl>carry</gl>
       <gl>cease</gl>
    </mel>
-   <mel id="clics27">
+   <mel id="clics34">
       <gl>small</gl>
       <gl>few</gl>
       <gl>narrow</gl>
       <gl>young</gl>
       <gl>short</gl>
+      <gl>baby</gl>
       <gl>low</gl>
       <gl>egg</gl>
       <gl>some</gl>
    </mel>
-   <mel id="clics28">
+   <mel id="clics35">
       <gl>meet</gl>
       <gl>find</gl>
       <gl>join</gl>
       <gl>arrive</gl>
    </mel>
-   <mel id="clics29">
+   <mel id="clics36">
       <gl>water</gl>
       <gl>river</gl>
       <gl>sap</gl>
@@ -193,30 +266,59 @@
       <gl>lake</gl>
       <gl>year</gl>
    </mel>
-   <mel id="clics30">
+   <mel id="clics37">
+      <gl>good</gl>
+      <gl>beautiful</gl>
+      <gl>healthy</gl>
+      <gl>sweet</gl>
+      <gl>new</gl>
+      <gl>happy</gl>
+      <gl>ready</gl>
+      <gl>cure</gl>
+   </mel>
+   <mel id="clics38">
+      <gl>she</gl>
+      <gl>he</gl>
+      <gl>it</gl>
+   </mel>
+   <mel id="clics39">
       <gl>belly</gl>
       <gl>stomach</gl>
       <gl>intestines</gl>
    </mel>
-   <mel id="clics31">
+   <mel id="clics40">
+      <gl>bad</gl>
+      <gl>ugly</gl>
+      <gl>wrong</gl>
+      <gl>evil</gl>
+      <gl>rotten</gl>
+      <gl>dirty</gl>
+      <gl>anger</gl>
+   </mel>
+   <mel id="clics41">
       <gl>pot</gl>
       <gl>kettle</gl>
       <gl>pan</gl>
+      <gl>bowl</gl>
+      <gl>jug</gl>
       <gl>dish</gl>
    </mel>
-   <mel id="clics32">
+   <mel id="clics42">
       <gl>behind</gl>
       <gl>after</gl>
       <gl>back</gl>
       <gl>late</gl>
+      <gl>side</gl>
+      <gl>outside</gl>
       <gl>beside</gl>
       <gl>before</gl>
    </mel>
-   <mel id="clics33">
+   <mel id="clics43">
       <gl>hold</gl>
       <gl>catch</gl>
       <gl>take</gl>
       <gl>keep</gl>
+      <gl>get</gl>
       <gl>have</gl>
       <gl>seize</gl>
       <gl>carry</gl>
@@ -227,17 +329,50 @@
       <gl>buy</gl>
       <gl>bring</gl>
    </mel>
-   <mel id="clics34">
+   <mel id="clics44">
+      <gl>flee</gl>
+      <gl>run</gl>
+      <gl>retreat</gl>
+      <gl>escape</gl>
+      <gl>leave</gl>
+      <gl>jump</gl>
+   </mel>
+   <mel id="clics45">
+      <gl>family</gl>
+      <gl>relatives</gl>
+      <gl>house</gl>
+      <gl>clan</gl>
+      <gl>sibling</gl>
+   </mel>
+   <mel id="clics46">
       <gl>laugh</gl>
       <gl>smile</gl>
    </mel>
-   <mel id="clics35">
+   <mel id="clics47">
+      <gl>money</gl>
+      <gl>silver</gl>
+      <gl>coin</gl>
+      <gl>iron</gl>
+      <gl>copper</gl>
+   </mel>
+   <mel id="clics48">
+      <gl>sister</gl>
+      <gl>brother</gl>
+      <gl>friend</gl>
+   </mel>
+   <mel id="clics49">
       <gl>wing</gl>
       <gl>feather</gl>
       <gl>shoulder</gl>
       <gl>branch</gl>
    </mel>
-   <mel id="clics36">
+   <mel id="clics50">
+      <gl>breast</gl>
+      <gl>chest</gl>
+      <gl>milk</gl>
+      <gl>suck</gl>
+   </mel>
+   <mel id="clics51">
       <gl>husband</gl>
       <gl>man</gl>
       <gl>male</gl>
@@ -247,16 +382,21 @@
       <gl>friend</gl>
       <gl>old</gl>
    </mel>
-   <mel id="clics37">
+   <mel id="clics52">
+      <gl>cooked</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics53">
       <gl>village</gl>
       <gl>town</gl>
       <gl>clan</gl>
    </mel>
-   <mel id="clics38">
+   <mel id="clics54">
       <gl>pick up</gl>
       <gl>lift</gl>
       <gl>gather</gl>
       <gl>take</gl>
+      <gl>get</gl>
       <gl>catch</gl>
       <gl>choose</gl>
       <gl>carry</gl>
@@ -269,43 +409,84 @@
       <gl>join</gl>
       <gl>begin</gl>
    </mel>
-   <mel id="clics39">
+   <mel id="clics55">
+      <gl>round</gl>
+      <gl>circle</gl>
+   </mel>
+   <mel id="clics56">
       <gl>divide</gl>
       <gl>separate</gl>
+      <gl>share</gl>
       <gl>split</gl>
       <gl>leave</gl>
       <gl>spread out</gl>
    </mel>
-   <mel id="clics40">
+   <mel id="clics57">
+      <gl>firewood</gl>
+      <gl>fire</gl>
+      <gl>wood</gl>
+      <gl>tree</gl>
+      <gl>match</gl>
+   </mel>
+   <mel id="clics58">
+      <gl>floor</gl>
+      <gl>land</gl>
+      <gl>plain</gl>
+   </mel>
+   <mel id="clics59">
+      <gl>love</gl>
+      <gl>want</gl>
+      <gl>like</gl>
+      <gl>happy</gl>
+      <gl>good</gl>
+   </mel>
+   <mel id="clics60">
       <gl>person</gl>
       <gl>man</gl>
       <gl>clan</gl>
       <gl>male</gl>
       <gl>husband</gl>
    </mel>
-   <mel id="clics41">
+   <mel id="clics61">
       <gl>borrow</gl>
       <gl>lend</gl>
    </mel>
-   <mel id="clics42">
+   <mel id="clics62">
+      <gl>shout</gl>
+      <gl>call</gl>
+      <gl>howl</gl>
+      <gl>sing</gl>
+      <gl>cry</gl>
+      <gl>voice</gl>
+      <gl>groan</gl>
+   </mel>
+   <mel id="clics63">
       <gl>spirit</gl>
       <gl>ghost</gl>
       <gl>mind</gl>
+      <gl>shade</gl>
       <gl>breath</gl>
       <gl>breathe</gl>
       <gl>wind</gl>
       <gl>life</gl>
       <gl>chest</gl>
    </mel>
-   <mel id="clics43">
+   <mel id="clics64">
       <gl>low</gl>
       <gl>short</gl>
+      <gl>shallow</gl>
+      <gl>bottom</gl>
       <gl>down</gl>
       <gl>deep</gl>
       <gl>few</gl>
       <gl>cheap</gl>
    </mel>
-   <mel id="clics44">
+   <mel id="clics65">
+      <gl>sibling</gl>
+      <gl>brother</gl>
+      <gl>sister</gl>
+   </mel>
+   <mel id="clics66">
       <gl>cut</gl>
       <gl>chop</gl>
       <gl>mow</gl>
@@ -317,55 +498,81 @@
       <gl>grind</gl>
       <gl>saw</gl>
    </mel>
-   <mel id="clics45">
+   <mel id="clics67">
       <gl>come</gl>
       <gl>arrive</gl>
       <gl>go</gl>
+      <gl>come back</gl>
       <gl>give</gl>
+      <gl>become</gl>
       <gl>bring</gl>
       <gl>enter</gl>
       <gl>move</gl>
    </mel>
-   <mel id="clics46">
+   <mel id="clics68">
       <gl>feather</gl>
       <gl>fur</gl>
       <gl>wool</gl>
    </mel>
-   <mel id="clics47">
+   <mel id="clics69">
+      <gl>son</gl>
+      <gl>daughter</gl>
+      <gl>nephew</gl>
+      <gl>niece</gl>
+      <gl>man</gl>
+      <gl>small</gl>
+   </mel>
+   <mel id="clics70">
+      <gl>ash</gl>
+      <gl>dust</gl>
+      <gl>charcoal</gl>
+   </mel>
+   <mel id="clics71">
       <gl>build</gl>
       <gl>make</gl>
+      <gl>mold</gl>
+      <gl>put</gl>
       <gl>lift</gl>
+      <gl>put on</gl>
       <gl>cultivate</gl>
    </mel>
-   <mel id="clics48">
-      <gl>money</gl>
-      <gl>coin</gl>
-      <gl>iron</gl>
-      <gl>copper</gl>
-   </mel>
-   <mel id="clics49">
+   <mel id="clics72">
       <gl>wife</gl>
       <gl>husband</gl>
       <gl>female</gl>
       <gl>marry</gl>
    </mel>
-   <mel id="clics50">
+   <mel id="clics73">
       <gl>sour</gl>
       <gl>bitter</gl>
       <gl>salty</gl>
    </mel>
-   <mel id="clics51">
+   <mel id="clics74">
       <gl>hole</gl>
       <gl>cave</gl>
       <gl>window</gl>
    </mel>
-   <mel id="clics52">
+   <mel id="clics75">
+      <gl>big</gl>
+      <gl>wide</gl>
+      <gl>thick</gl>
+      <gl>many</gl>
+      <gl>long</gl>
+      <gl>high</gl>
+      <gl>grow</gl>
+      <gl>old</gl>
+      <gl>loud</gl>
+      <gl>strong</gl>
+      <gl>enough</gl>
+   </mel>
+   <mel id="clics76">
       <gl>hot</gl>
       <gl>warm</gl>
       <gl>fever</gl>
       <gl>heat</gl>
+      <gl>burning</gl>
    </mel>
-   <mel id="clics53">
+   <mel id="clics77">
       <gl>hard</gl>
       <gl>strong</gl>
       <gl>solid</gl>
@@ -374,24 +581,25 @@
       <gl>dry</gl>
       <gl>expensive</gl>
    </mel>
-   <mel id="clics54">
+   <mel id="clics78">
       <gl>leg</gl>
       <gl>thigh</gl>
       <gl>shin</gl>
+      <gl>footprint</gl>
    </mel>
-   <mel id="clics55">
+   <mel id="clics79">
       <gl>measure</gl>
       <gl>weigh</gl>
       <gl>painting</gl>
    </mel>
-   <mel id="clics56">
+   <mel id="clics80">
       <gl>cow</gl>
       <gl>cattle</gl>
       <gl>bull</gl>
       <gl>ox</gl>
       <gl>calf</gl>
    </mel>
-   <mel id="clics57">
+   <mel id="clics81">
       <gl>early</gl>
       <gl>morning</gl>
       <gl>fast</gl>
@@ -399,28 +607,50 @@
       <gl>before</gl>
       <gl>immediately</gl>
    </mel>
-   <mel id="clics58">
+   <mel id="clics82">
       <gl>voice</gl>
       <gl>language</gl>
       <gl>word</gl>
       <gl>throat</gl>
+      <gl>noise</gl>
    </mel>
-   <mel id="clics59">
+   <mel id="clics83">
       <gl>finish</gl>
       <gl>cease</gl>
+      <gl>destroy</gl>
+      <gl>ready</gl>
    </mel>
-   <mel id="clics60">
+   <mel id="clics84">
+      <gl>squeeze</gl>
+      <gl>press</gl>
+      <gl>pinch</gl>
+      <gl>knead</gl>
+      <gl>rub</gl>
+   </mel>
+   <mel id="clics85">
       <gl>up</gl>
       <gl>high</gl>
       <gl>above</gl>
+      <gl>top</gl>
       <gl>before</gl>
       <gl>north</gl>
    </mel>
-   <mel id="clics61">
+   <mel id="clics86">
       <gl>shut</gl>
       <gl>cover</gl>
    </mel>
-   <mel id="clics62">
+   <mel id="clics87">
+      <gl>he</gl>
+      <gl>it</gl>
+   </mel>
+   <mel id="clics88">
+      <gl>teach</gl>
+      <gl>learn</gl>
+      <gl>explain</gl>
+      <gl>study</gl>
+      <gl>show</gl>
+   </mel>
+   <mel id="clics89">
       <gl>sick</gl>
       <gl>pain</gl>
       <gl>disease</gl>
@@ -431,30 +661,46 @@
       <gl>tired</gl>
       <gl>bad</gl>
    </mel>
-   <mel id="clics63">
+   <mel id="clics90">
+      <gl>cup</gl>
+      <gl>bowl</gl>
+      <gl>plate</gl>
+   </mel>
+   <mel id="clics91">
       <gl>see</gl>
       <gl>find</gl>
       <gl>meet</gl>
       <gl>understand</gl>
+      <gl>get</gl>
       <gl>hear</gl>
+      <gl>seem</gl>
    </mel>
-   <mel id="clics64">
+   <mel id="clics92">
+      <gl>send</gl>
+      <gl>order</gl>
+      <gl>drive</gl>
+      <gl>take</gl>
+      <gl>carry</gl>
+   </mel>
+   <mel id="clics93">
       <gl>read</gl>
       <gl>count</gl>
       <gl>study</gl>
       <gl>learn</gl>
+      <gl>sing</gl>
+      <gl>teach</gl>
       <gl>call</gl>
       <gl>weigh</gl>
       <gl>say</gl>
    </mel>
-   <mel id="clics65">
+   <mel id="clics94">
       <gl>what</gl>
       <gl>how</gl>
       <gl>which</gl>
       <gl>why</gl>
       <gl>where</gl>
    </mel>
-   <mel id="clics66">
+   <mel id="clics95">
       <gl>shoot</gl>
       <gl>throw</gl>
       <gl>pull</gl>
@@ -464,30 +710,47 @@
       <gl>bite</gl>
       <gl>kick</gl>
    </mel>
-   <mel id="clics67">
+   <mel id="clics96">
       <gl>grass</gl>
       <gl>hay</gl>
       <gl>thatch</gl>
       <gl>green</gl>
       <gl>leaf</gl>
    </mel>
-   <mel id="clics68">
+   <mel id="clics97">
+      <gl>long</gl>
+      <gl>far</gl>
+      <gl>high</gl>
+      <gl>deep</gl>
+      <gl>straight</gl>
+      <gl>length</gl>
+   </mel>
+   <mel id="clics98">
+      <gl>cousin</gl>
+      <gl>brother</gl>
+      <gl>sister</gl>
+      <gl>sibling</gl>
+      <gl>aunt</gl>
+      <gl>friend</gl>
+   </mel>
+   <mel id="clics99">
       <gl>sleep</gl>
       <gl>lie down</gl>
       <gl>marry</gl>
    </mel>
-   <mel id="clics69">
+   <mel id="clics100">
       <gl>sky</gl>
       <gl>cloud</gl>
       <gl>god</gl>
       <gl>up</gl>
+      <gl>top</gl>
       <gl>high</gl>
       <gl>blue</gl>
       <gl>above</gl>
       <gl>sun</gl>
       <gl>thunder</gl>
    </mel>
-   <mel id="clics70">
+   <mel id="clics101">
       <gl>few</gl>
       <gl>some</gl>
       <gl>two</gl>
@@ -495,14 +758,14 @@
       <gl>narrow</gl>
       <gl>young</gl>
    </mel>
-   <mel id="clics71">
-      <gl>long</gl>
-      <gl>high</gl>
-      <gl>deep</gl>
-      <gl>straight</gl>
-      <gl>length</gl>
+   <mel id="clics102">
+      <gl>house</gl>
+      <gl>home</gl>
+      <gl>village</gl>
+      <gl>roof</gl>
+      <gl>town</gl>
    </mel>
-   <mel id="clics72">
+   <mel id="clics103">
       <gl>bright</gl>
       <gl>shine</gl>
       <gl>clear</gl>
@@ -512,32 +775,34 @@
       <gl>dawn</gl>
       <gl>smooth</gl>
       <gl>lightning</gl>
+      <gl>anger</gl>
    </mel>
-   <mel id="clics73">
+   <mel id="clics104">
       <gl>lame</gl>
       <gl>limp</gl>
       <gl>crooked</gl>
    </mel>
-   <mel id="clics74">
+   <mel id="clics105">
       <gl>thou</gl>
       <gl>you</gl>
       <gl>he</gl>
       <gl>master</gl>
    </mel>
-   <mel id="clics75">
+   <mel id="clics106">
       <gl>first</gl>
       <gl>before</gl>
       <gl>begin</gl>
    </mel>
-   <mel id="clics76">
+   <mel id="clics107">
       <gl>who</gl>
       <gl>what</gl>
       <gl>which</gl>
       <gl>how</gl>
    </mel>
-   <mel id="clics77">
+   <mel id="clics108">
       <gl>fire</gl>
       <gl>flame</gl>
+      <gl>hell</gl>
       <gl>hot</gl>
       <gl>match</gl>
       <gl>fireplace</gl>
@@ -545,73 +810,108 @@
       <gl>tree</gl>
       <gl>fever</gl>
    </mel>
-   <mel id="clics78">
+   <mel id="clics109">
+      <gl>bowl</gl>
+      <gl>plate</gl>
+      <gl>pan</gl>
+   </mel>
+   <mel id="clics110">
       <gl>late</gl>
       <gl>afternoon</gl>
       <gl>evening</gl>
       <gl>after</gl>
       <gl>night</gl>
    </mel>
-   <mel id="clics79">
+   <mel id="clics111">
       <gl>count</gl>
       <gl>measure</gl>
       <gl>weigh</gl>
       <gl>give</gl>
    </mel>
-   <mel id="clics80">
+   <mel id="clics112">
       <gl>gather</gl>
       <gl>join</gl>
       <gl>mow</gl>
+      <gl>put</gl>
       <gl>harvest</gl>
       <gl>fold</gl>
       <gl>wrap</gl>
    </mel>
-   <mel id="clics81">
+   <mel id="clics113">
+      <gl>field</gl>
+      <gl>plain</gl>
+      <gl>land</gl>
+   </mel>
+   <mel id="clics114">
+      <gl>eyebrow</gl>
+      <gl>eyelash</gl>
+      <gl>eyelid</gl>
+   </mel>
+   <mel id="clics115">
+      <gl>bead</gl>
+      <gl>necklace</gl>
+   </mel>
+   <mel id="clics116">
       <gl>carry</gl>
       <gl>take</gl>
       <gl>drive</gl>
       <gl>borrow</gl>
    </mel>
-   <mel id="clics82">
+   <mel id="clics117">
       <gl>quarrel</gl>
       <gl>fight</gl>
+      <gl>anger</gl>
    </mel>
-   <mel id="clics83">
+   <mel id="clics118">
       <gl>thread</gl>
       <gl>rope</gl>
       <gl>line</gl>
       <gl>blood vessel</gl>
    </mel>
-   <mel id="clics84">
+   <mel id="clics119">
       <gl>twist</gl>
       <gl>spin</gl>
       <gl>squeeze</gl>
       <gl>bend</gl>
       <gl>turn</gl>
+      <gl>roll</gl>
       <gl>weave</gl>
       <gl>fold</gl>
       <gl>wrap</gl>
       <gl>knead</gl>
+      <gl>plait</gl>
       <gl>crooked</gl>
       <gl>rub</gl>
       <gl>grind</gl>
    </mel>
-   <mel id="clics85">
+   <mel id="clics120">
+      <gl>bee</gl>
+      <gl>honey</gl>
+      <gl>wasp</gl>
+   </mel>
+   <mel id="clics121">
       <gl>pumpkin</gl>
       <gl>gourd</gl>
    </mel>
-   <mel id="clics86">
+   <mel id="clics122">
       <gl>beam</gl>
       <gl>rafter</gl>
       <gl>post</gl>
       <gl>wood</gl>
       <gl>board</gl>
    </mel>
-   <mel id="clics87">
+   <mel id="clics123">
+      <gl>side</gl>
+      <gl>edge</gl>
+      <gl>beside</gl>
+      <gl>half</gl>
+      <gl>part</gl>
+   </mel>
+   <mel id="clics124">
       <gl>dye</gl>
       <gl>painting</gl>
    </mel>
-   <mel id="clics88">
+   <mel id="clics125">
       <gl>eat</gl>
       <gl>bite</gl>
       <gl>drink</gl>
@@ -621,22 +921,22 @@
       <gl>throw</gl>
       <gl>fall</gl>
    </mel>
-   <mel id="clics89">
+   <mel id="clics126">
       <gl>tomorrow</gl>
       <gl>morning</gl>
       <gl>dawn</gl>
    </mel>
-   <mel id="clics90">
+   <mel id="clics127">
       <gl>stand</gl>
       <gl>cease</gl>
       <gl>remain</gl>
    </mel>
-   <mel id="clics91">
+   <mel id="clics128">
       <gl>mountain</gl>
       <gl>hill</gl>
       <gl>stone</gl>
    </mel>
-   <mel id="clics92">
+   <mel id="clics129">
       <gl>tell</gl>
       <gl>speak</gl>
       <gl>say</gl>
@@ -644,53 +944,51 @@
       <gl>talk</gl>
       <gl>count</gl>
    </mel>
-   <mel id="clics93">
-      <gl>bad</gl>
-      <gl>wrong</gl>
-      <gl>dirty</gl>
+   <mel id="clics130">
+      <gl>head</gl>
+      <gl>top</gl>
+      <gl>skull</gl>
+      <gl>mind</gl>
+      <gl>king</gl>
+      <gl>roof</gl>
+      <gl>brain</gl>
+      <gl>begin</gl>
    </mel>
-   <mel id="clics94">
+   <mel id="clics131">
       <gl>tongue</gl>
       <gl>language</gl>
       <gl>word</gl>
    </mel>
-   <mel id="clics95">
+   <mel id="clics132">
       <gl>snow</gl>
       <gl>ice</gl>
       <gl>cold</gl>
       <gl>frost</gl>
       <gl>dew</gl>
    </mel>
-   <mel id="clics96">
+   <mel id="clics133">
       <gl>sit</gl>
       <gl>remain</gl>
       <gl>have</gl>
       <gl>near</gl>
       <gl>chair</gl>
    </mel>
-   <mel id="clics97">
+   <mel id="clics134">
       <gl>middle</gl>
       <gl>half</gl>
       <gl>between</gl>
    </mel>
-   <mel id="clics98">
+   <mel id="clics135">
       <gl>snail</gl>
       <gl>shell</gl>
    </mel>
-   <mel id="clics99">
+   <mel id="clics136">
       <gl>crooked</gl>
       <gl>bend</gl>
+      <gl>mistake</gl>
       <gl>wrong</gl>
    </mel>
-   <mel id="clics100">
-      <gl>head</gl>
-      <gl>skull</gl>
-      <gl>mind</gl>
-      <gl>roof</gl>
-      <gl>brain</gl>
-      <gl>begin</gl>
-   </mel>
-   <mel id="clics101">
+   <mel id="clics137">
       <gl>bring</gl>
       <gl>carry</gl>
       <gl>take</gl>
@@ -699,12 +997,12 @@
       <gl>send</gl>
       <gl>catch</gl>
    </mel>
-   <mel id="clics102">
+   <mel id="clics138">
       <gl>eagle</gl>
       <gl>hawk</gl>
       <gl>vulture</gl>
    </mel>
-   <mel id="clics103">
+   <mel id="clics139">
       <gl>heart</gl>
       <gl>spirit</gl>
       <gl>mind</gl>
@@ -713,33 +1011,50 @@
       <gl>lung</gl>
       <gl>breathe</gl>
    </mel>
-   <mel id="clics104">
+   <mel id="clics140">
       <gl>bull</gl>
       <gl>ox</gl>
       <gl>cattle</gl>
    </mel>
-   <mel id="clics105">
+   <mel id="clics141">
       <gl>ball</gl>
       <gl>round</gl>
+      <gl>circle</gl>
    </mel>
-   <mel id="clics106">
+   <mel id="clics142">
       <gl>soft</gl>
       <gl>smooth</gl>
       <gl>weak</gl>
       <gl>gentle</gl>
    </mel>
-   <mel id="clics107">
+   <mel id="clics143">
       <gl>black</gl>
       <gl>dirty</gl>
    </mel>
-   <mel id="clics108">
+   <mel id="clics144">
+      <gl>calm</gl>
+      <gl>quiet</gl>
+   </mel>
+   <mel id="clics145">
+      <gl>now</gl>
+      <gl>immediately</gl>
+      <gl>again</gl>
+      <gl>give</gl>
+   </mel>
+   <mel id="clics146">
+      <gl>touch</gl>
+      <gl>feel</gl>
+   </mel>
+   <mel id="clics147">
       <gl>arrow</gl>
       <gl>bow</gl>
       <gl>spear</gl>
    </mel>
-   <mel id="clics109">
+   <mel id="clics148">
       <gl>give</gl>
       <gl>lend</gl>
+      <gl>put</gl>
+      <gl>share</gl>
       <gl>say</gl>
       <gl>speak</gl>
       <gl>carry</gl>
@@ -749,20 +1064,13 @@
       <gl>run</gl>
       <gl>give back</gl>
    </mel>
-   <mel id="clics110">
-      <gl>good</gl>
-      <gl>healthy</gl>
-      <gl>sweet</gl>
-      <gl>new</gl>
-      <gl>happy</gl>
-   </mel>
-   <mel id="clics111">
+   <mel id="clics149">
       <gl>wood</gl>
       <gl>post</gl>
       <gl>board</gl>
       <gl>rafter</gl>
    </mel>
-   <mel id="clics112">
+   <mel id="clics150">
       <gl>chop</gl>
       <gl>split</gl>
       <gl>weave</gl>
@@ -771,47 +1079,50 @@
       <gl>grind</gl>
       <gl>throw</gl>
    </mel>
-   <mel id="clics113">
+   <mel id="clics151">
       <gl>afternoon</gl>
       <gl>evening</gl>
    </mel>
-   <mel id="clics114">
+   <mel id="clics152">
       <gl>night</gl>
       <gl>evening</gl>
    </mel>
-   <mel id="clics115">
+   <mel id="clics153">
       <gl>die</gl>
       <gl>corpse</gl>
       <gl>kill</gl>
+      <gl>rotten</gl>
       <gl>finish</gl>
       <gl>give</gl>
       <gl>hear</gl>
    </mel>
-   <mel id="clics116">
-      <gl>big</gl>
-      <gl>thick</gl>
-      <gl>many</gl>
-      <gl>long</gl>
-      <gl>high</gl>
-      <gl>grow</gl>
-      <gl>old</gl>
-      <gl>loud</gl>
-      <gl>strong</gl>
+   <mel id="clics154">
+      <gl>shiver</gl>
+      <gl>shake</gl>
    </mel>
-   <mel id="clics117">
+   <mel id="clics155">
+      <gl>food</gl>
+      <gl>eat</gl>
+      <gl>bread</gl>
+      <gl>thing</gl>
+      <gl>flour</gl>
+   </mel>
+   <mel id="clics156">
       <gl>open</gl>
       <gl>untie</gl>
       <gl>spread out</gl>
    </mel>
-   <mel id="clics118">
+   <mel id="clics157">
       <gl>grind</gl>
       <gl>squeeze</gl>
+      <gl>press</gl>
       <gl>pound</gl>
+      <gl>destroy</gl>
       <gl>thresh</gl>
       <gl>knead</gl>
       <gl>split</gl>
    </mel>
-   <mel id="clics119">
+   <mel id="clics158">
       <gl>body</gl>
       <gl>skin</gl>
       <gl>corpse</gl>
@@ -822,7 +1133,7 @@
       <gl>idol</gl>
       <gl>waist</gl>
    </mel>
-   <mel id="clics120">
+   <mel id="clics159">
       <gl>speak</gl>
       <gl>talk</gl>
       <gl>word</gl>
@@ -830,7 +1141,11 @@
       <gl>voice</gl>
       <gl>explain</gl>
    </mel>
-   <mel id="clics121">
+   <mel id="clics160">
+      <gl>wrong</gl>
+      <gl>mistake</gl>
+   </mel>
+   <mel id="clics161">
       <gl>pull</gl>
       <gl>stretch</gl>
       <gl>suck</gl>
@@ -839,139 +1154,175 @@
       <gl>weigh</gl>
       <gl>grind</gl>
    </mel>
-   <mel id="clics122">
+   <mel id="clics162">
       <gl>in</gl>
       <gl>at</gl>
       <gl>with</gl>
    </mel>
-   <mel id="clics123">
+   <mel id="clics163">
       <gl>hit</gl>
       <gl>beat</gl>
       <gl>kill</gl>
       <gl>knock</gl>
    </mel>
-   <mel id="clics124">
+   <mel id="clics164">
       <gl>mud</gl>
       <gl>swamp</gl>
       <gl>dirty</gl>
+      <gl>dust</gl>
    </mel>
-   <mel id="clics125">
+   <mel id="clics165">
       <gl>day before yesterday</gl>
       <gl>day after tomorrow</gl>
    </mel>
-   <mel id="clics126">
+   <mel id="clics166">
       <gl>this</gl>
       <gl>that</gl>
+      <gl>here</gl>
       <gl>he</gl>
       <gl>louse</gl>
    </mel>
-   <mel id="clics127">
+   <mel id="clics167">
       <gl>keep</gl>
       <gl>guard</gl>
       <gl>have</gl>
    </mel>
-   <mel id="clics128">
+   <mel id="clics168">
       <gl>fur</gl>
       <gl>wool</gl>
    </mel>
-   <mel id="clics129">
+   <mel id="clics169">
+      <gl>scar</gl>
+      <gl>wound</gl>
+      <gl>bruise</gl>
+      <gl>footprint</gl>
+   </mel>
+   <mel id="clics170">
       <gl>north</gl>
       <gl>south</gl>
+      <gl>bottom</gl>
    </mel>
-   <mel id="clics130">
+   <mel id="clics171">
       <gl>face</gl>
       <gl>forehead</gl>
       <gl>eye</gl>
       <gl>cheek</gl>
       <gl>mouth</gl>
       <gl>in front of</gl>
+      <gl>side</gl>
       <gl>jaw</gl>
+      <gl>edge</gl>
    </mel>
-   <mel id="clics131">
+   <mel id="clics172">
+      <gl>thick</gl>
+      <gl>wide</gl>
+      <gl>full</gl>
+      <gl>heavy</gl>
+      <gl>forest</gl>
+   </mel>
+   <mel id="clics173">
       <gl>roof</gl>
       <gl>thatch</gl>
    </mel>
-   <mel id="clics132">
+   <mel id="clics174">
       <gl>cheek</gl>
       <gl>jaw</gl>
       <gl>chin</gl>
    </mel>
-   <mel id="clics133">
+   <mel id="clics175">
       <gl>flat</gl>
       <gl>smooth</gl>
+      <gl>plain</gl>
+      <gl>wide</gl>
       <gl>floor</gl>
+      <gl>plate</gl>
       <gl>board</gl>
    </mel>
-   <mel id="clics134">
+   <mel id="clics176">
+      <gl>silver</gl>
+      <gl>coin</gl>
+   </mel>
+   <mel id="clics177">
       <gl>hip</gl>
       <gl>thigh</gl>
    </mel>
-   <mel id="clics135">
+   <mel id="clics178">
       <gl>green</gl>
       <gl>raw</gl>
    </mel>
-   <mel id="clics136">
+   <mel id="clics179">
       <gl>bridge</gl>
       <gl>ladder</gl>
    </mel>
-   <mel id="clics137">
+   <mel id="clics180">
       <gl>yesterday</gl>
       <gl>tomorrow</gl>
       <gl>day before yesterday</gl>
    </mel>
-   <mel id="clics138">
-      <gl>cousin</gl>
-      <gl>sibling</gl>
-      <gl>friend</gl>
-   </mel>
-   <mel id="clics139">
+   <mel id="clics181">
       <gl>seize</gl>
       <gl>catch</gl>
       <gl>take</gl>
    </mel>
-   <mel id="clics140">
+   <mel id="clics182">
+      <gl>manner</gl>
+      <gl>custom</gl>
+   </mel>
+   <mel id="clics183">
       <gl>chicken</gl>
       <gl>rooster</gl>
       <gl>bird</gl>
    </mel>
-   <mel id="clics141">
+   <mel id="clics184">
+      <gl>many</gl>
+      <gl>enough</gl>
+      <gl>more</gl>
+      <gl>all</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics185">
       <gl>pile up</gl>
       <gl>gather</gl>
       <gl>fold</gl>
       <gl>join</gl>
    </mel>
-   <mel id="clics142">
+   <mel id="clics186">
       <gl>plough</gl>
       <gl>cultivate</gl>
    </mel>
-   <mel id="clics143">
+   <mel id="clics187">
       <gl>knife</gl>
       <gl>sword</gl>
       <gl>iron</gl>
    </mel>
-   <mel id="clics144">
+   <mel id="clics188">
       <gl>sell</gl>
       <gl>give</gl>
       <gl>change</gl>
    </mel>
-   <mel id="clics145">
+   <mel id="clics189">
       <gl>bite</gl>
       <gl>chew</gl>
       <gl>cut</gl>
    </mel>
-   <mel id="clics146">
+   <mel id="clics190">
+      <gl>separate</gl>
+      <gl>share</gl>
+      <gl>divorce</gl>
+   </mel>
+   <mel id="clics191">
       <gl>wind</gl>
       <gl>storm</gl>
       <gl>breathe</gl>
    </mel>
-   <mel id="clics147">
+   <mel id="clics192">
       <gl>how</gl>
       <gl>why</gl>
       <gl>which</gl>
       <gl>how much</gl>
       <gl>when</gl>
    </mel>
-   <mel id="clics148">
+   <mel id="clics193">
       <gl>pay</gl>
       <gl>buy</gl>
       <gl>give</gl>
@@ -980,31 +1331,37 @@
       <gl>answer</gl>
       <gl>price</gl>
    </mel>
-   <mel id="clics149">
+   <mel id="clics194">
+      <gl>clan</gl>
+      <gl>relatives</gl>
+   </mel>
+   <mel id="clics195">
       <gl>buy</gl>
       <gl>sell</gl>
       <gl>take</gl>
+      <gl>get</gl>
       <gl>carry</gl>
       <gl>change</gl>
       <gl>catch</gl>
+      <gl>want</gl>
    </mel>
-   <mel id="clics150">
+   <mel id="clics196">
       <gl>brain</gl>
       <gl>mind</gl>
    </mel>
-   <mel id="clics151">
+   <mel id="clics197">
       <gl>fast</gl>
       <gl>immediately</gl>
       <gl>strong</gl>
       <gl>clever</gl>
    </mel>
-   <mel id="clics152">
+   <mel id="clics198">
       <gl>red</gl>
       <gl>ripe</gl>
       <gl>yellow</gl>
       <gl>flame</gl>
    </mel>
-   <mel id="clics153">
+   <mel id="clics199">
       <gl>sun</gl>
       <gl>moon</gl>
       <gl>god</gl>
@@ -1012,31 +1369,32 @@
       <gl>name</gl>
       <gl>year</gl>
    </mel>
-   <mel id="clics154">
+   <mel id="clics200">
       <gl>rub</gl>
       <gl>scrape</gl>
       <gl>knead</gl>
       <gl>thresh</gl>
    </mel>
-   <mel id="clics155">
+   <mel id="clics201">
       <gl>spread out</gl>
       <gl>stretch</gl>
       <gl>rub</gl>
+      <gl>share</gl>
       <gl>untie</gl>
       <gl>separate</gl>
       <gl>wipe</gl>
    </mel>
-   <mel id="clics156">
+   <mel id="clics202">
       <gl>cry</gl>
       <gl>howl</gl>
       <gl>groan</gl>
       <gl>regret</gl>
    </mel>
-   <mel id="clics157">
+   <mel id="clics203">
       <gl>master</gl>
       <gl>host</gl>
    </mel>
-   <mel id="clics158">
+   <mel id="clics204">
       <gl>yellow</gl>
       <gl>green</gl>
       <gl>ripe</gl>
@@ -1045,36 +1403,37 @@
       <gl>yolk</gl>
       <gl>blue</gl>
    </mel>
-   <mel id="clics159">
+   <mel id="clics205">
       <gl>knee</gl>
       <gl>elbow</gl>
+      <gl>ankle</gl>
    </mel>
-   <mel id="clics160">
+   <mel id="clics206">
       <gl>right</gl>
       <gl>straight</gl>
       <gl>good</gl>
       <gl>south</gl>
       <gl>true</gl>
    </mel>
-   <mel id="clics161">
+   <mel id="clics207">
       <gl>flea</gl>
       <gl>louse</gl>
    </mel>
-   <mel id="clics162">
+   <mel id="clics208">
       <gl>half</gl>
       <gl>part</gl>
    </mel>
-   <mel id="clics163">
+   <mel id="clics209">
       <gl>intestines</gl>
       <gl>stomach</gl>
    </mel>
-   <mel id="clics164">
+   <mel id="clics210">
       <gl>mat</gl>
       <gl>rug</gl>
       <gl>blanket</gl>
       <gl>bed</gl>
    </mel>
-   <mel id="clics165">
+   <mel id="clics211">
       <gl>waist</gl>
       <gl>hip</gl>
       <gl>back</gl>
@@ -1082,19 +1441,24 @@
       <gl>belt</gl>
       <gl>stomach</gl>
    </mel>
-   <mel id="clics166">
+   <mel id="clics212">
+      <gl>dirty</gl>
+      <gl>ugly</gl>
+   </mel>
+   <mel id="clics213">
       <gl>drink</gl>
       <gl>suck</gl>
       <gl>give</gl>
       <gl>swallow</gl>
+      <gl>kiss</gl>
       <gl>cut</gl>
       <gl>take</gl>
    </mel>
-   <mel id="clics167">
+   <mel id="clics214">
       <gl>lightning</gl>
       <gl>thunder</gl>
    </mel>
-   <mel id="clics168">
+   <mel id="clics215">
       <gl>bone</gl>
       <gl>leg</gl>
       <gl>shin</gl>
@@ -1103,88 +1467,135 @@
       <gl>corpse</gl>
       <gl>tree</gl>
    </mel>
-   <mel id="clics169">
+   <mel id="clics216">
       <gl>statue</gl>
       <gl>idol</gl>
    </mel>
-   <mel id="clics170">
-      <gl>love</gl>
-      <gl>like</gl>
-      <gl>happy</gl>
-      <gl>good</gl>
+   <mel id="clics217">
+      <gl>again</gl>
+      <gl>and</gl>
+      <gl>more</gl>
    </mel>
-   <mel id="clics171">
+   <mel id="clics218">
+      <gl>mouth</gl>
+      <gl>edge</gl>
+      <gl>language</gl>
+      <gl>door</gl>
+      <gl>tooth</gl>
+      <gl>word</gl>
+      <gl>throat</gl>
+      <gl>hole</gl>
+   </mel>
+   <mel id="clics219">
       <gl>i</gl>
       <gl>we</gl>
       <gl>give</gl>
       <gl>say</gl>
       <gl>move</gl>
    </mel>
-   <mel id="clics172">
+   <mel id="clics220">
       <gl>call</gl>
       <gl>invite</gl>
       <gl>dig</gl>
+      <gl>sing</gl>
+      <gl>order</gl>
    </mel>
-   <mel id="clics173">
-      <gl>house</gl>
-      <gl>village</gl>
-      <gl>roof</gl>
-      <gl>town</gl>
-   </mel>
-   <mel id="clics174">
+   <mel id="clics221">
       <gl>near</gl>
       <gl>beside</gl>
       <gl>join</gl>
    </mel>
-   <mel id="clics175">
+   <mel id="clics222">
       <gl>bitter</gl>
       <gl>salty</gl>
    </mel>
-   <mel id="clics176">
+   <mel id="clics223">
+      <gl>eyelash</gl>
+      <gl>eyelid</gl>
+   </mel>
+   <mel id="clics224">
+      <gl>comb</gl>
+      <gl>brush</gl>
+      <gl>rake</gl>
+   </mel>
+   <mel id="clics225">
       <gl>pain</gl>
       <gl>disease</gl>
+      <gl>ache</gl>
    </mel>
-   <mel id="clics177">
+   <mel id="clics226">
       <gl>where</gl>
       <gl>how</gl>
       <gl>when</gl>
       <gl>which</gl>
    </mel>
-   <mel id="clics178">
+   <mel id="clics227">
       <gl>medicine</gl>
       <gl>poison</gl>
+      <gl>cure</gl>
       <gl>tree</gl>
+      <gl>tobacco</gl>
       <gl>wood</gl>
    </mel>
-   <mel id="clics179">
+   <mel id="clics228">
+      <gl>that</gl>
+      <gl>it</gl>
+      <gl>he</gl>
+      <gl>there</gl>
+      <gl>she</gl>
+   </mel>
+   <mel id="clics229">
       <gl>salt</gl>
       <gl>salty</gl>
    </mel>
-   <mel id="clics180">
+   <mel id="clics230">
+      <gl>put</gl>
+      <gl>keep</gl>
+      <gl>put on</gl>
+      <gl>send</gl>
+      <gl>throw</gl>
+      <gl>carry</gl>
+      <gl>remain</gl>
+      <gl>cause</gl>
+      <gl>fold</gl>
+      <gl>lift</gl>
+   </mel>
+   <mel id="clics231">
       <gl>fold</gl>
       <gl>bend</gl>
+      <gl>roll</gl>
    </mel>
-   <mel id="clics181">
+   <mel id="clics232">
+      <gl>believe</gl>
+      <gl>obey</gl>
+      <gl>understand</gl>
+      <gl>worship</gl>
+      <gl>hear</gl>
+      <gl>feel</gl>
+   </mel>
+   <mel id="clics233">
       <gl>cheap</gl>
       <gl>easy</gl>
    </mel>
-   <mel id="clics182">
+   <mel id="clics234">
       <gl>wet</gl>
       <gl>damp</gl>
       <gl>raw</gl>
+      <gl>rotten</gl>
    </mel>
-   <mel id="clics183">
+   <mel id="clics235">
       <gl>horse</gl>
       <gl>mare</gl>
       <gl>donkey</gl>
    </mel>
-   <mel id="clics184">
+   <mel id="clics236">
       <gl>inside</gl>
       <gl>in</gl>
+      <gl>bottom</gl>
       <gl>up</gl>
       <gl>deep</gl>
    </mel>
-   <mel id="clics185">
+   <mel id="clics237">
       <gl>ride</gl>
       <gl>climb</gl>
       <gl>drive</gl>
@@ -1194,41 +1605,72 @@
       <gl>move</gl>
       <gl>run</gl>
    </mel>
-   <mel id="clics186">
+   <mel id="clics238">
       <gl>new</gl>
       <gl>young</gl>
       <gl>fresh</gl>
+      <gl>again</gl>
    </mel>
-   <mel id="clics187">
-      <gl>dish</gl>
-      <gl>cup</gl>
-      <gl>spoon</gl>
-      <gl>pan</gl>
+   <mel id="clics239">
+      <gl>not</gl>
+      <gl>no</gl>
+      <gl>nothing</gl>
    </mel>
-   <mel id="clics188">
+   <mel id="clics240">
+      <gl>push</gl>
+      <gl>press</gl>
+      <gl>squeeze</gl>
+      <gl>grind</gl>
+      <gl>kick</gl>
+      <gl>pound</gl>
+   </mel>
+   <mel id="clics241">
+      <gl>weave</gl>
+      <gl>plait</gl>
+      <gl>sew</gl>
+      <gl>build</gl>
+      <gl>spin</gl>
+      <gl>grind</gl>
+      <gl>tie</gl>
+      <gl>loom</gl>
+      <gl>kill</gl>
+   </mel>
+   <mel id="clics242">
       <gl>fruit</gl>
       <gl>grain</gl>
+      <gl>nut</gl>
       <gl>harvest</gl>
       <gl>eye</gl>
+      <gl>bunch</gl>
+      <gl>bead</gl>
    </mel>
-   <mel id="clics189">
+   <mel id="clics243">
       <gl>cloth</gl>
       <gl>dress</gl>
       <gl>part</gl>
+      <gl>linen</gl>
       <gl>laugh</gl>
       <gl>wool</gl>
       <gl>cotton</gl>
    </mel>
-   <mel id="clics190">
+   <mel id="clics244">
       <gl>lazy</gl>
       <gl>weak</gl>
    </mel>
-   <mel id="clics191">
+   <mel id="clics245">
+      <gl>uncle</gl>
+      <gl>aunt</gl>
+      <gl>brother</gl>
+      <gl>nephew</gl>
+      <gl>cousin</gl>
+   </mel>
+   <mel id="clics246">
       <gl>sweet</gl>
       <gl>fragrant</gl>
       <gl>salty</gl>
+      <gl>honey</gl>
    </mel>
-   <mel id="clics192">
+   <mel id="clics247">
       <gl>thing</gl>
       <gl>what</gl>
       <gl>some</gl>
@@ -1236,7 +1678,7 @@
       <gl>animal</gl>
       <gl>which</gl>
    </mel>
-   <mel id="clics193">
+   <mel id="clics248">
       <gl>strong</gl>
       <gl>loud</gl>
       <gl>healthy</gl>
@@ -1244,74 +1686,160 @@
       <gl>solid</gl>
       <gl>happy</gl>
    </mel>
-   <mel id="clics194">
+   <mel id="clics249">
       <gl>wipe</gl>
       <gl>rub</gl>
    </mel>
-   <mel id="clics195">
+   <mel id="clics250">
+      <gl>become</gl>
+      <gl>happen</gl>
+      <gl>succeed</gl>
+      <gl>remain</gl>
+   </mel>
+   <mel id="clics251">
+      <gl>board</gl>
+      <gl>shelf</gl>
+      <gl>floor</gl>
+   </mel>
+   <mel id="clics252">
       <gl>wound</gl>
       <gl>pain</gl>
    </mel>
-   <mel id="clics196">
+   <mel id="clics253">
+      <gl>alone</gl>
+      <gl>only</gl>
+   </mel>
+   <mel id="clics254">
       <gl>split</gl>
       <gl>separate</gl>
+      <gl>share</gl>
    </mel>
-   <mel id="clics197">
+   <mel id="clics255">
       <gl>steal</gl>
       <gl>thief</gl>
    </mel>
-   <mel id="clics198">
+   <mel id="clics256">
+      <gl>come back</gl>
+      <gl>give back</gl>
+      <gl>arrive</gl>
+      <gl>turn</gl>
+      <gl>leave</gl>
+      <gl>retreat</gl>
+      <gl>change</gl>
+      <gl>turn around</gl>
+      <gl>again</gl>
+      <gl>remain</gl>
+   </mel>
+   <mel id="clics257">
+      <gl>top</gl>
+      <gl>high</gl>
+      <gl>edge</gl>
+      <gl>skull</gl>
+      <gl>above</gl>
+      <gl>roof</gl>
+   </mel>
+   <mel id="clics258">
       <gl>one</gl>
       <gl>only</gl>
+      <gl>alone</gl>
       <gl>some</gl>
       <gl>what</gl>
+      <gl>other</gl>
    </mel>
-   <mel id="clics199">
+   <mel id="clics259">
       <gl>slow</gl>
       <gl>late</gl>
+      <gl>quiet</gl>
       <gl>soft</gl>
    </mel>
-   <mel id="clics200">
+   <mel id="clics260">
+      <gl>king</gl>
+      <gl>master</gl>
+   </mel>
+   <mel id="clics261">
+      <gl>bottom</gl>
+      <gl>floor</gl>
+   </mel>
+   <mel id="clics262">
+      <gl>pour</gl>
+      <gl>cast</gl>
+      <gl>throw</gl>
+      <gl>spread out</gl>
+   </mel>
+   <mel id="clics263">
       <gl>morning</gl>
       <gl>dawn</gl>
    </mel>
-   <mel id="clics201">
+   <mel id="clics264">
       <gl>move</gl>
       <gl>mix</gl>
       <gl>drive</gl>
       <gl>shake</gl>
       <gl>change</gl>
    </mel>
-   <mel id="clics202">
+   <mel id="clics265">
       <gl>expensive</gl>
       <gl>price</gl>
    </mel>
-   <mel id="clics203">
+   <mel id="clics266">
+      <gl>daughter</gl>
+      <gl>niece</gl>
+      <gl>nephew</gl>
+      <gl>female</gl>
+   </mel>
+   <mel id="clics267">
       <gl>you</gl>
       <gl>they</gl>
    </mel>
-   <mel id="clics204">
+   <mel id="clics268">
+      <gl>goose</gl>
+      <gl>duck</gl>
+   </mel>
+   <mel id="clics269">
       <gl>fight</gl>
       <gl>kill</gl>
+      <gl>scold</gl>
       <gl>pound</gl>
    </mel>
-   <mel id="clics205">
+   <mel id="clics270">
+      <gl>scold</gl>
+      <gl>curse</gl>
+      <gl>threaten</gl>
+   </mel>
+   <mel id="clics271">
       <gl>straight</gl>
       <gl>true</gl>
       <gl>flat</gl>
       <gl>smooth</gl>
       <gl>good</gl>
    </mel>
-   <mel id="clics206">
+   <mel id="clics272">
+      <gl>niece</gl>
+      <gl>cousin</gl>
+      <gl>aunt</gl>
+   </mel>
+   <mel id="clics273">
+      <gl>suck</gl>
+      <gl>kiss</gl>
+      <gl>squeeze</gl>
+      <gl>breathe</gl>
+   </mel>
+   <mel id="clics274">
+      <gl>belt</gl>
+      <gl>strap</gl>
+   </mel>
+   <mel id="clics275">
       <gl>write</gl>
       <gl>painting</gl>
       <gl>scrape</gl>
    </mel>
-   <mel id="clics207">
+   <mel id="clics276">
       <gl>part</gl>
       <gl>some</gl>
+      <gl>slice</gl>
+      <gl>share</gl>
    </mel>
-   <mel id="clics208">
+   <mel id="clics277">
       <gl>tie</gl>
       <gl>connect</gl>
       <gl>knot</gl>
@@ -1321,248 +1849,311 @@
       <gl>knit</gl>
       <gl>rope</gl>
    </mel>
-   <mel id="clics209">
+   <mel id="clics278">
       <gl>ear</gl>
       <gl>hear</gl>
    </mel>
-   <mel id="clics210">
+   <mel id="clics279">
       <gl>beat</gl>
       <gl>knock</gl>
    </mel>
-   <mel id="clics211">
+   <mel id="clics280">
       <gl>blood</gl>
       <gl>red</gl>
       <gl>sap</gl>
       <gl>eat</gl>
    </mel>
-   <mel id="clics212">
+   <mel id="clics281">
       <gl>wrap</gl>
       <gl>fold</gl>
+      <gl>roll</gl>
    </mel>
-   <mel id="clics213">
+   <mel id="clics282">
       <gl>rope</gl>
       <gl>line</gl>
    </mel>
-   <mel id="clics214">
-      <gl>sheep</gl>
-      <gl>goat</gl>
-   </mel>
-   <mel id="clics215">
+   <mel id="clics283">
       <gl>hand</gl>
+      <gl>wrist</gl>
       <gl>finger</gl>
       <gl>branch</gl>
       <gl>wing</gl>
       <gl>five</gl>
    </mel>
-   <mel id="clics216">
-      <gl>weave</gl>
-      <gl>sew</gl>
-      <gl>build</gl>
-      <gl>spin</gl>
-      <gl>grind</gl>
-      <gl>tie</gl>
-      <gl>loom</gl>
-      <gl>kill</gl>
+   <mel id="clics284">
+      <gl>snake</gl>
+      <gl>worm</gl>
    </mel>
-   <mel id="clics217">
+   <mel id="clics285">
+      <gl>sheep</gl>
+      <gl>goat</gl>
+   </mel>
+   <mel id="clics286">
+      <gl>feel</gl>
+      <gl>understand</gl>
+      <gl>obey</gl>
+   </mel>
+   <mel id="clics287">
+      <gl>turn</gl>
+      <gl>roll</gl>
+      <gl>change</gl>
+   </mel>
+   <mel id="clics288">
+      <gl>dance</gl>
+      <gl>sing</gl>
+      <gl>play</gl>
+      <gl>jump</gl>
+   </mel>
+   <mel id="clics289">
       <gl>sweep</gl>
       <gl>wipe</gl>
       <gl>rub</gl>
       <gl>scrape</gl>
       <gl>gather</gl>
+      <gl>brush</gl>
    </mel>
-   <mel id="clics218">
+   <mel id="clics290">
       <gl>tired</gl>
       <gl>weak</gl>
       <gl>lazy</gl>
    </mel>
-   <mel id="clics219">
+   <mel id="clics291">
       <gl>bury</gl>
       <gl>dig</gl>
       <gl>shut</gl>
       <gl>cover</gl>
    </mel>
-   <mel id="clics220">
+   <mel id="clics292">
       <gl>white</gl>
       <gl>clean</gl>
       <gl>ash</gl>
       <gl>cloud</gl>
    </mel>
-   <mel id="clics221">
-      <gl>that</gl>
-      <gl>he</gl>
-   </mel>
-   <mel id="clics222">
+   <mel id="clics293">
       <gl>clean</gl>
       <gl>clear</gl>
+      <gl>beautiful</gl>
       <gl>good</gl>
       <gl>new</gl>
       <gl>fresh</gl>
    </mel>
-   <mel id="clics223">
+   <mel id="clics294">
       <gl>climb</gl>
       <gl>crawl</gl>
    </mel>
-   <mel id="clics224">
-      <gl>many</gl>
-      <gl>more</gl>
-      <gl>all</gl>
-      <gl>full</gl>
+   <mel id="clics295">
+      <gl>table</gl>
+      <gl>board</gl>
+      <gl>shelf</gl>
+      <gl>chair</gl>
+      <gl>plate</gl>
+      <gl>dish</gl>
    </mel>
-   <mel id="clics225">
+   <mel id="clics296">
       <gl>be</gl>
       <gl>have</gl>
+      <gl>become</gl>
       <gl>remain</gl>
    </mel>
-   <mel id="clics226">
+   <mel id="clics297">
       <gl>high</gl>
       <gl>deep</gl>
       <gl>loud</gl>
       <gl>above</gl>
    </mel>
-   <mel id="clics227">
+   <mel id="clics298">
       <gl>back</gl>
       <gl>shoulder</gl>
       <gl>after</gl>
       <gl>bark</gl>
    </mel>
-   <mel id="clics228">
+   <mel id="clics299">
+      <gl>lose</gl>
+      <gl>destroy</gl>
+      <gl>forget</gl>
+      <gl>throw</gl>
+   </mel>
+   <mel id="clics300">
       <gl>cattle</gl>
       <gl>ox</gl>
       <gl>calf</gl>
    </mel>
-   <mel id="clics229">
+   <mel id="clics301">
       <gl>understand</gl>
       <gl>obey</gl>
       <gl>study</gl>
    </mel>
-   <mel id="clics230">
+   <mel id="clics302">
+      <gl>blunt</gl>
+      <gl>blind</gl>
+      <gl>smooth</gl>
+   </mel>
+   <mel id="clics303">
       <gl>rug</gl>
       <gl>blanket</gl>
    </mel>
-   <mel id="clics231">
+   <mel id="clics304">
       <gl>leaf</gl>
       <gl>feather</gl>
       <gl>branch</gl>
+      <gl>paper</gl>
       <gl>wing</gl>
       <gl>fur</gl>
       <gl>thatch</gl>
       <gl>board</gl>
+      <gl>tobacco</gl>
    </mel>
-   <mel id="clics232">
+   <mel id="clics305">
       <gl>god</gl>
       <gl>master</gl>
+      <gl>king</gl>
    </mel>
-   <mel id="clics233">
+   <mel id="clics306">
       <gl>hawk</gl>
       <gl>vulture</gl>
    </mel>
-   <mel id="clics234">
+   <mel id="clics307">
       <gl>river</gl>
       <gl>lake</gl>
       <gl>drink</gl>
       <gl>valley</gl>
    </mel>
-   <mel id="clics235">
+   <mel id="clics308">
       <gl>groan</gl>
       <gl>howl</gl>
    </mel>
-   <mel id="clics236">
+   <mel id="clics309">
       <gl>run</gl>
       <gl>retreat</gl>
       <gl>jump</gl>
       <gl>escape</gl>
    </mel>
-   <mel id="clics237">
+   <mel id="clics310">
+      <gl>press</gl>
+      <gl>pinch</gl>
+   </mel>
+   <mel id="clics311">
+      <gl>bow</gl>
+      <gl>arch</gl>
+      <gl>rainbow</gl>
+   </mel>
+   <mel id="clics312">
       <gl>ground</gl>
       <gl>floor</gl>
    </mel>
-   <mel id="clics238">
+   <mel id="clics313">
       <gl>cold</gl>
       <gl>wind</gl>
+      <gl>winter</gl>
       <gl>ice</gl>
    </mel>
-   <mel id="clics239">
+   <mel id="clics314">
       <gl>knead</gl>
       <gl>mix</gl>
+      <gl>mold</gl>
+      <gl>press</gl>
    </mel>
-   <mel id="clics240">
+   <mel id="clics315">
+      <gl>if</gl>
+      <gl>when</gl>
+      <gl>or</gl>
+   </mel>
+   <mel id="clics316">
       <gl>stick</gl>
       <gl>wood</gl>
       <gl>post</gl>
    </mel>
-   <mel id="clics241">
+   <mel id="clics317">
       <gl>animal</gl>
       <gl>cattle</gl>
    </mel>
-   <mel id="clics242">
+   <mel id="clics318">
+      <gl>bruise</gl>
+      <gl>wound</gl>
+      <gl>pain</gl>
+   </mel>
+   <mel id="clics319">
       <gl>lake</gl>
       <gl>swamp</gl>
    </mel>
-   <mel id="clics243">
+   <mel id="clics320">
+      <gl>father</gl>
+      <gl>uncle</gl>
+      <gl>husband</gl>
+      <gl>male</gl>
+      <gl>chop</gl>
+      <gl>mother</gl>
+      <gl>master</gl>
+      <gl>god</gl>
+   </mel>
+   <mel id="clics321">
+      <gl>heel</gl>
+      <gl>ankle</gl>
+      <gl>bottom</gl>
+   </mel>
+   <mel id="clics322">
       <gl>worship</gl>
       <gl>pray</gl>
    </mel>
-   <mel id="clics244">
+   <mel id="clics323">
       <gl>fever</gl>
       <gl>heat</gl>
    </mel>
-   <mel id="clics245">
+   <mel id="clics324">
+      <gl>like</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics325">
       <gl>cultivate</gl>
       <gl>dig</gl>
    </mel>
-   <mel id="clics246">
+   <mel id="clics326">
       <gl>root</gl>
       <gl>blood vessel</gl>
+      <gl>bottom</gl>
       <gl>vein</gl>
       <gl>cause</gl>
       <gl>clan</gl>
    </mel>
-   <mel id="clics247">
-      <gl>push</gl>
-      <gl>squeeze</gl>
-      <gl>grind</gl>
-      <gl>kick</gl>
-      <gl>pound</gl>
+   <mel id="clics327">
+      <gl>chain</gl>
+      <gl>necklace</gl>
    </mel>
-   <mel id="clics248">
+   <mel id="clics328">
       <gl>short</gl>
       <gl>few</gl>
       <gl>near</gl>
+      <gl>shallow</gl>
    </mel>
-   <mel id="clics249">
+   <mel id="clics329">
       <gl>cotton</gl>
       <gl>thread</gl>
+      <gl>linen</gl>
       <gl>wool</gl>
    </mel>
-   <mel id="clics250">
-      <gl>turn</gl>
-      <gl>change</gl>
+   <mel id="clics330">
+      <gl>sing</gl>
+      <gl>song</gl>
    </mel>
-   <mel id="clics251">
-      <gl>dance</gl>
-      <gl>play</gl>
-      <gl>jump</gl>
-   </mel>
-   <mel id="clics252">
+   <mel id="clics331">
       <gl>barley</gl>
       <gl>wheat</gl>
       <gl>grain</gl>
    </mel>
-   <mel id="clics253">
+   <mel id="clics332">
       <gl>pan</gl>
       <gl>kettle</gl>
    </mel>
-   <mel id="clics254">
+   <mel id="clics333">
       <gl>take</gl>
       <gl>borrow</gl>
       <gl>keep</gl>
    </mel>
-   <mel id="clics255">
+   <mel id="clics334">
       <gl>scratch</gl>
       <gl>scrape</gl>
    </mel>
-   <mel id="clics256">
+   <mel id="clics335">
       <gl>peel</gl>
       <gl>scrape</gl>
       <gl>skin</gl>
@@ -1570,200 +2161,282 @@
       <gl>tie</gl>
       <gl>bark</gl>
    </mel>
-   <mel id="clics257">
+   <mel id="clics336">
+      <gl>mold</gl>
+      <gl>cast</gl>
+   </mel>
+   <mel id="clics337">
+      <gl>gourd</gl>
+      <gl>bowl</gl>
+      <gl>cup</gl>
+   </mel>
+   <mel id="clics338">
       <gl>spear</gl>
       <gl>sword</gl>
    </mel>
-   <mel id="clics258">
+   <mel id="clics339">
       <gl>mill</gl>
       <gl>grind</gl>
       <gl>flour</gl>
       <gl>twist</gl>
    </mel>
-   <mel id="clics259">
+   <mel id="clics340">
+      <gl>jug</gl>
+      <gl>cup</gl>
+      <gl>bowl</gl>
+      <gl>kettle</gl>
+      <gl>pan</gl>
+   </mel>
+   <mel id="clics341">
       <gl>choose</gl>
       <gl>take</gl>
       <gl>separate</gl>
       <gl>gather</gl>
       <gl>catch</gl>
    </mel>
-   <mel id="clics260">
+   <mel id="clics342">
       <gl>follow</gl>
       <gl>obey</gl>
    </mel>
-   <mel id="clics261">
-      <gl>bow</gl>
-      <gl>rainbow</gl>
+   <mel id="clics343">
+      <gl>relatives</gl>
+      <gl>sibling</gl>
+      <gl>friend</gl>
+      <gl>brother</gl>
+      <gl>cousin</gl>
+      <gl>sister</gl>
+      <gl>guest</gl>
    </mel>
-   <mel id="clics262">
+   <mel id="clics344">
+      <gl>ghost</gl>
+      <gl>shade</gl>
+      <gl>corpse</gl>
+      <gl>god</gl>
+   </mel>
+   <mel id="clics345">
       <gl>mix</gl>
       <gl>shake</gl>
    </mel>
-   <mel id="clics263">
+   <mel id="clics346">
       <gl>pound</gl>
       <gl>thresh</gl>
    </mel>
-   <mel id="clics264">
+   <mel id="clics347">
       <gl>easy</gl>
       <gl>soft</gl>
    </mel>
-   <mel id="clics265">
+   <mel id="clics348">
       <gl>heavy</gl>
       <gl>pregnant</gl>
       <gl>expensive</gl>
       <gl>weigh</gl>
       <gl>load</gl>
    </mel>
-   <mel id="clics266">
+   <mel id="clics349">
+      <gl>play</gl>
+      <gl>game</gl>
+   </mel>
+   <mel id="clics350">
       <gl>door</gl>
       <gl>window</gl>
       <gl>gate</gl>
       <gl>path</gl>
       <gl>many</gl>
    </mel>
-   <mel id="clics267">
+   <mel id="clics351">
+      <gl>mouse</gl>
+      <gl>rat</gl>
+   </mel>
+   <mel id="clics352">
       <gl>hair</gl>
       <gl>feather</gl>
    </mel>
-   <mel id="clics268">
+   <mel id="clics353">
       <gl>and</gl>
       <gl>with</gl>
       <gl>or</gl>
+      <gl>if</gl>
    </mel>
-   <mel id="clics269">
-      <gl>pour</gl>
-      <gl>throw</gl>
-      <gl>spread out</gl>
-   </mel>
-   <mel id="clics270">
-      <gl>mouth</gl>
-      <gl>language</gl>
-      <gl>door</gl>
-      <gl>tooth</gl>
-      <gl>word</gl>
-      <gl>throat</gl>
-      <gl>hole</gl>
-   </mel>
-   <mel id="clics271">
+   <mel id="clics354">
       <gl>tail</gl>
       <gl>penis</gl>
    </mel>
-   <mel id="clics272">
+   <mel id="clics355">
       <gl>marry</gl>
       <gl>take</gl>
    </mel>
-   <mel id="clics273">
-      <gl>squeeze</gl>
-      <gl>knead</gl>
-      <gl>rub</gl>
-   </mel>
-   <mel id="clics274">
+   <mel id="clics356">
       <gl>join</gl>
       <gl>connect</gl>
       <gl>touch</gl>
    </mel>
-   <mel id="clics275">
+   <mel id="clics357">
+      <gl>circle</gl>
+      <gl>ring</gl>
+   </mel>
+   <mel id="clics358">
+      <gl>corner</gl>
+      <gl>edge</gl>
+   </mel>
+   <mel id="clics359">
+      <gl>mother</gl>
+      <gl>aunt</gl>
+      <gl>female</gl>
+      <gl>give</gl>
+   </mel>
+   <mel id="clics360">
+      <gl>burning</gl>
+      <gl>shine</gl>
+   </mel>
+   <mel id="clics361">
       <gl>young</gl>
       <gl>soft</gl>
+      <gl>baby</gl>
    </mel>
-   <mel id="clics276">
+   <mel id="clics362">
       <gl>forest</gl>
       <gl>wood</gl>
    </mel>
-   <mel id="clics277">
+   <mel id="clics363">
+      <gl>poor</gl>
+      <gl>beggar</gl>
+   </mel>
+   <mel id="clics364">
       <gl>lift</gl>
       <gl>carry</gl>
       <gl>weigh</gl>
       <gl>take</gl>
    </mel>
-   <mel id="clics278">
+   <mel id="clics365">
       <gl>fall</gl>
       <gl>go</gl>
       <gl>cut</gl>
       <gl>kill</gl>
       <gl>slip</gl>
    </mel>
-   <mel id="clics279">
+   <mel id="clics366">
       <gl>tooth</gl>
       <gl>louse</gl>
       <gl>grain</gl>
    </mel>
-   <mel id="clics280">
+   <mel id="clics367">
       <gl>egg</gl>
       <gl>penis</gl>
+      <gl>nit</gl>
    </mel>
-   <mel id="clics281">
+   <mel id="clics368">
       <gl>window</gl>
       <gl>glass</gl>
    </mel>
-   <mel id="clics282">
+   <mel id="clics369">
+      <gl>path</gl>
+      <gl>footprint</gl>
+      <gl>manner</gl>
+   </mel>
+   <mel id="clics370">
       <gl>broom</gl>
       <gl>sweep</gl>
+      <gl>rake</gl>
    </mel>
-   <mel id="clics283">
+   <mel id="clics371">
+      <gl>sieve</gl>
+      <gl>squeeze</gl>
+   </mel>
+   <mel id="clics372">
+      <gl>line</gl>
+      <gl>furrow</gl>
+   </mel>
+   <mel id="clics373">
       <gl>boast</gl>
       <gl>praise</gl>
    </mel>
-   <mel id="clics284">
+   <mel id="clics374">
       <gl>stomach</gl>
       <gl>heart</gl>
       <gl>inside</gl>
    </mel>
-   <mel id="clics285">
+   <mel id="clics375">
       <gl>wake up</gl>
       <gl>stand</gl>
       <gl>remember</gl>
    </mel>
-   <mel id="clics286">
+   <mel id="clics376">
       <gl>cover</gl>
       <gl>wrap</gl>
    </mel>
-   <mel id="clics287">
+   <mel id="clics377">
+      <gl>maize</gl>
+      <gl>grain</gl>
+   </mel>
+   <mel id="clics378">
+      <gl>down</gl>
+      <gl>bottom</gl>
+   </mel>
+   <mel id="clics379">
       <gl>load</gl>
       <gl>weight</gl>
    </mel>
-   <mel id="clics288">
+   <mel id="clics380">
       <gl>wash</gl>
       <gl>rinse</gl>
       <gl>swim</gl>
    </mel>
-   <mel id="clics289">
+   <mel id="clics381">
       <gl>grandmother</gl>
+      <gl>aunt</gl>
       <gl>mother</gl>
    </mel>
-   <mel id="clics290">
+   <mel id="clics382">
       <gl>throw</gl>
       <gl>divorce</gl>
       <gl>lie down</gl>
    </mel>
-   <mel id="clics291">
+   <mel id="clics383">
       <gl>show</gl>
       <gl>explain</gl>
+      <gl>seem</gl>
    </mel>
-   <mel id="clics292">
+   <mel id="clics384">
+      <gl>healthy</gl>
+      <gl>beautiful</gl>
+   </mel>
+   <mel id="clics385">
       <gl>bird</gl>
       <gl>animal</gl>
       <gl>duck</gl>
       <gl>penis</gl>
    </mel>
-   <mel id="clics293">
+   <mel id="clics386">
+      <gl>rotten</gl>
+      <gl>pus</gl>
+      <gl>old</gl>
+   </mel>
+   <mel id="clics387">
       <gl>bed</gl>
       <gl>nest</gl>
    </mel>
-   <mel id="clics294">
+   <mel id="clics388">
       <gl>enter</gl>
       <gl>crawl</gl>
+      <gl>put on</gl>
       <gl>near</gl>
+      <gl>put</gl>
    </mel>
-   <mel id="clics295">
+   <mel id="clics389">
       <gl>pick</gl>
       <gl>gather</gl>
    </mel>
-   <mel id="clics296">
+   <mel id="clics390">
       <gl>lick</gl>
       <gl>suck</gl>
    </mel>
-   <mel id="clics297">
+   <mel id="clics391">
+      <gl>destroy</gl>
+      <gl>kill</gl>
+      <gl>spread out</gl>
+      <gl>rub</gl>
+   </mel>
+   <mel id="clics392">
       <gl>dig</gl>
       <gl>sew</gl>
       <gl>scrape</gl>
@@ -1772,7 +2445,17 @@
       <gl>swim</gl>
       <gl>lie down</gl>
    </mel>
-   <mel id="clics298">
+   <mel id="clics393">
+      <gl>dust</gl>
+      <gl>land</gl>
+      <gl>flour</gl>
+   </mel>
+   <mel id="clics394">
+      <gl>sand</gl>
+      <gl>land</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics395">
       <gl>leave</gl>
       <gl>retreat</gl>
       <gl>separate</gl>
@@ -1780,443 +2463,527 @@
       <gl>drive</gl>
       <gl>pass</gl>
    </mel>
-   <mel id="clics299">
+   <mel id="clics396">
       <gl>lung</gl>
       <gl>foam</gl>
       <gl>chest</gl>
    </mel>
-   <mel id="clics300">
+   <mel id="clics397">
+      <gl>outside</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics398">
       <gl>bamboo</gl>
       <gl>flute</gl>
    </mel>
-   <mel id="clics301">
-      <gl>separate</gl>
-      <gl>divorce</gl>
+   <mel id="clics399">
+      <gl>immediately</gl>
+      <gl>suddenly</gl>
+      <gl>together</gl>
    </mel>
-   <mel id="clics302">
+   <mel id="clics400">
       <gl>breath</gl>
       <gl>breathe</gl>
       <gl>life</gl>
    </mel>
-   <mel id="clics303">
-      <gl>mother</gl>
-      <gl>female</gl>
-      <gl>give</gl>
-   </mel>
-   <mel id="clics304">
-      <gl>board</gl>
-      <gl>floor</gl>
-   </mel>
-   <mel id="clics305">
+   <mel id="clics401">
       <gl>grain</gl>
       <gl>wheat</gl>
       <gl>harvest</gl>
+      <gl>berry</gl>
+      <gl>nut</gl>
    </mel>
-   <mel id="clics306">
+   <mel id="clics402">
       <gl>rest</gl>
       <gl>cease</gl>
       <gl>breathe</gl>
       <gl>lie down</gl>
    </mel>
-   <mel id="clics307">
+   <mel id="clics403">
       <gl>cease</gl>
       <gl>remain</gl>
       <gl>divorce</gl>
    </mel>
-   <mel id="clics308">
-      <gl>thick</gl>
-      <gl>full</gl>
-      <gl>heavy</gl>
-      <gl>forest</gl>
-   </mel>
-   <mel id="clics309">
+   <mel id="clics404">
       <gl>praise</gl>
       <gl>worship</gl>
    </mel>
-   <mel id="clics310">
+   <mel id="clics405">
       <gl>hook</gl>
       <gl>crooked</gl>
    </mel>
-   <mel id="clics311">
+   <mel id="clics406">
+      <gl>ankle</gl>
+      <gl>knot</gl>
+   </mel>
+   <mel id="clics407">
+      <gl>valley</gl>
+      <gl>plain</gl>
+   </mel>
+   <mel id="clics408">
+      <gl>edge</gl>
+      <gl>beside</gl>
+      <gl>border</gl>
+   </mel>
+   <mel id="clics409">
       <gl>penis</gl>
       <gl>male</gl>
    </mel>
-   <mel id="clics312">
+   <mel id="clics410">
+      <gl>shallow</gl>
+      <gl>flat</gl>
+   </mel>
+   <mel id="clics411">
+      <gl>pen</gl>
+      <gl>feather</gl>
+   </mel>
+   <mel id="clics412">
       <gl>ripen</gl>
       <gl>ripe</gl>
    </mel>
-   <mel id="clics313">
+   <mel id="clics413">
       <gl>hoe</gl>
       <gl>dig</gl>
    </mel>
-   <mel id="clics314">
+   <mel id="clics414">
+      <gl>elbow</gl>
+      <gl>wrist</gl>
+      <gl>corner</gl>
+   </mel>
+   <mel id="clics415">
+      <gl>nose</gl>
+      <gl>nostril</gl>
+   </mel>
+   <mel id="clics416">
+      <gl>want</gl>
+      <gl>say</gl>
+   </mel>
+   <mel id="clics417">
       <gl>think</gl>
       <gl>hear</gl>
    </mel>
-   <mel id="clics315">
+   <mel id="clics418">
       <gl>guest</gl>
       <gl>host</gl>
    </mel>
-   <mel id="clics316">
+   <mel id="clics419">
       <gl>dry</gl>
       <gl>empty</gl>
+      <gl>shallow</gl>
    </mel>
-   <mel id="clics317">
-      <gl>ghost</gl>
-      <gl>corpse</gl>
-      <gl>god</gl>
+   <mel id="clics420">
+      <gl>embrace</gl>
+      <gl>kiss</gl>
    </mel>
-   <mel id="clics318">
+   <mel id="clics421">
       <gl>sharp</gl>
       <gl>fast</gl>
       <gl>rough</gl>
       <gl>bitter</gl>
    </mel>
-   <mel id="clics319">
+   <mel id="clics422">
       <gl>frost</gl>
       <gl>cold</gl>
       <gl>ice</gl>
    </mel>
-   <mel id="clics320">
+   <mel id="clics423">
       <gl>narrow</gl>
       <gl>thin</gl>
    </mel>
-   <mel id="clics321">
+   <mel id="clics424">
       <gl>three</gl>
       <gl>third</gl>
    </mel>
-   <mel id="clics322">
-      <gl>suck</gl>
-      <gl>squeeze</gl>
-      <gl>breathe</gl>
+   <mel id="clics425">
+      <gl>smooth</gl>
+      <gl>plain</gl>
+      <gl>slip</gl>
    </mel>
-   <mel id="clics323">
+   <mel id="clics426">
       <gl>chest</gl>
       <gl>rib</gl>
    </mel>
-   <mel id="clics324">
+   <mel id="clics427">
       <gl>spin</gl>
       <gl>turn</gl>
    </mel>
-   <mel id="clics325">
+   <mel id="clics428">
+      <gl>year</gl>
+      <gl>winter</gl>
+   </mel>
+   <mel id="clics429">
       <gl>raw</gl>
       <gl>damp</gl>
    </mel>
-   <mel id="clics326">
+   <mel id="clics430">
       <gl>dog</gl>
       <gl>cat</gl>
    </mel>
-   <mel id="clics327">
+   <mel id="clics431">
       <gl>flour</gl>
       <gl>bread</gl>
    </mel>
-   <mel id="clics328">
+   <mel id="clics432">
       <gl>hay</gl>
       <gl>thatch</gl>
    </mel>
-   <mel id="clics329">
-      <gl>elbow</gl>
-      <gl>corner</gl>
+   <mel id="clics433">
+      <gl>plain</gl>
+      <gl>land</gl>
    </mel>
-   <mel id="clics330">
+   <mel id="clics434">
       <gl>stretch</gl>
       <gl>lift</gl>
       <gl>weigh</gl>
    </mel>
-   <mel id="clics331">
+   <mel id="clics435">
       <gl>grow</gl>
       <gl>increase</gl>
    </mel>
-   <mel id="clics332">
+   <mel id="clics436">
       <gl>warm</gl>
       <gl>heat</gl>
    </mel>
-   <mel id="clics333">
-      <gl>ash</gl>
-      <gl>charcoal</gl>
+   <mel id="clics437">
+      <gl>hate</gl>
+      <gl>anger</gl>
+      <gl>envy</gl>
    </mel>
-   <mel id="clics334">
+   <mel id="clics438">
       <gl>remember</gl>
       <gl>understand</gl>
    </mel>
-   <mel id="clics335">
+   <mel id="clics439">
       <gl>arrive</gl>
       <gl>ripen</gl>
+      <gl>become</gl>
       <gl>find</gl>
       <gl>follow</gl>
       <gl>understand</gl>
    </mel>
-   <mel id="clics336">
+   <mel id="clics440">
+      <gl>deep</gl>
+      <gl>bottom</gl>
+   </mel>
+   <mel id="clics441">
       <gl>star</gl>
       <gl>fish</gl>
    </mel>
-   <mel id="clics337">
+   <mel id="clics442">
       <gl>answer</gl>
       <gl>say</gl>
       <gl>obey</gl>
       <gl>speak</gl>
       <gl>tell</gl>
    </mel>
-   <mel id="clics338">
+   <mel id="clics443">
       <gl>nest</gl>
       <gl>basket</gl>
    </mel>
-   <mel id="clics339">
-      <gl>send</gl>
-      <gl>drive</gl>
-      <gl>take</gl>
-      <gl>carry</gl>
+   <mel id="clics444">
+      <gl>carpenter</gl>
+      <gl>mason</gl>
    </mel>
-   <mel id="clics340">
-      <gl>finger</gl>
-      <gl>fingernail</gl>
-      <gl>ring</gl>
-   </mel>
-   <mel id="clics341">
+   <mel id="clics445">
       <gl>before</gl>
       <gl>beside</gl>
       <gl>after</gl>
    </mel>
-   <mel id="clics342">
+   <mel id="clics446">
+      <gl>aunt</gl>
+      <gl>sister</gl>
+   </mel>
+   <mel id="clics447">
       <gl>itch</gl>
       <gl>scratch</gl>
    </mel>
-   <mel id="clics343">
-      <gl>lose</gl>
-      <gl>forget</gl>
-      <gl>throw</gl>
-   </mel>
-   <mel id="clics344">
+   <mel id="clics448">
       <gl>post</gl>
       <gl>rafter</gl>
    </mel>
-   <mel id="clics345">
+   <mel id="clics449">
       <gl>find</gl>
       <gl>have</gl>
       <gl>understand</gl>
    </mel>
-   <mel id="clics346">
-      <gl>son</gl>
-      <gl>man</gl>
-      <gl>small</gl>
-   </mel>
-   <mel id="clics347">
+   <mel id="clics450">
       <gl>time</gl>
       <gl>when</gl>
    </mel>
-   <mel id="clics348">
+   <mel id="clics451">
       <gl>happen</gl>
       <gl>pass</gl>
    </mel>
-   <mel id="clics349">
-      <gl>today</gl>
-      <gl>immediately</gl>
-   </mel>
-   <mel id="clics350">
+   <mel id="clics452">
       <gl>kill</gl>
       <gl>pound</gl>
    </mel>
-   <mel id="clics351">
+   <mel id="clics453">
       <gl>spit</gl>
       <gl>vomit</gl>
    </mel>
-   <mel id="clics352">
+   <mel id="clics454">
       <gl>sew</gl>
       <gl>pierce</gl>
    </mel>
-   <mel id="clics353">
+   <mel id="clics455">
       <gl>swell</gl>
       <gl>full</gl>
    </mel>
-   <mel id="clics354">
+   <mel id="clics456">
+      <gl>hill</gl>
+      <gl>heap</gl>
+   </mel>
+   <mel id="clics457">
       <gl>harvest</gl>
       <gl>mow</gl>
    </mel>
-   <mel id="clics355">
-      <gl>immediately</gl>
-      <gl>together</gl>
-   </mel>
-   <mel id="clics356">
+   <mel id="clics458">
       <gl>two</gl>
       <gl>second</gl>
    </mel>
-   <mel id="clics357">
+   <mel id="clics459">
       <gl>copper</gl>
       <gl>iron</gl>
    </mel>
-   <mel id="clics358">
+   <mel id="clics460">
       <gl>story</gl>
       <gl>message</gl>
    </mel>
-   <mel id="clics359">
+   <mel id="clics461">
       <gl>stone</gl>
       <gl>egg</gl>
    </mel>
-   <mel id="clics360">
+   <mel id="clics462">
+      <gl>kiss</gl>
+      <gl>sniff</gl>
+   </mel>
+   <mel id="clics463">
       <gl>eye</gl>
       <gl>grain</gl>
       <gl>look</gl>
    </mel>
-   <mel id="clics361">
+   <mel id="clics464">
       <gl>fry</gl>
       <gl>wash</gl>
       <gl>ripen</gl>
    </mel>
-   <mel id="clics362">
+   <mel id="clics465">
       <gl>crow</gl>
       <gl>vulture</gl>
    </mel>
-   <mel id="clics363">
+   <mel id="clics466">
       <gl>clear</gl>
       <gl>understand</gl>
       <gl>true</gl>
    </mel>
-   <mel id="clics364">
+   <mel id="clics467">
+      <gl>anger</gl>
+      <gl>envy</gl>
+   </mel>
+   <mel id="clics468">
       <gl>glass</gl>
       <gl>cup</gl>
    </mel>
-   <mel id="clics365">
+   <mel id="clics469">
       <gl>remain</gl>
       <gl>have</gl>
    </mel>
-   <mel id="clics366">
+   <mel id="clics470">
       <gl>book</gl>
       <gl>word</gl>
    </mel>
-   <mel id="clics367">
+   <mel id="clics471">
       <gl>rich</gl>
       <gl>have</gl>
    </mel>
-   <mel id="clics368">
+   <mel id="clics472">
       <gl>name</gl>
       <gl>fish</gl>
       <gl>straight</gl>
    </mel>
-   <mel id="clics369">
+   <mel id="clics473">
+      <gl>more</gl>
+      <gl>enough</gl>
+   </mel>
+   <mel id="clics474">
       <gl>we</gl>
       <gl>you</gl>
    </mel>
-   <mel id="clics370">
+   <mel id="clics475">
       <gl>spoon</gl>
       <gl>shell</gl>
    </mel>
-   <mel id="clics371">
+   <mel id="clics476">
+      <gl>bean</gl>
+      <gl>nut</gl>
+      <gl>kidney</gl>
+   </mel>
+   <mel id="clics477">
       <gl>iron</gl>
       <gl>tool</gl>
       <gl>coin</gl>
    </mel>
-   <mel id="clics372">
+   <mel id="clics478">
       <gl>rice</gl>
       <gl>grain</gl>
    </mel>
-   <mel id="clics373">
+   <mel id="clics479">
+      <gl>foam</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics480">
+      <gl>knot</gl>
+      <gl>bunch</gl>
+   </mel>
+   <mel id="clics481">
       <gl>axe</gl>
       <gl>iron</gl>
    </mel>
-   <mel id="clics374">
-      <gl>hate</gl>
-      <gl>envy</gl>
-   </mel>
-   <mel id="clics375">
+   <mel id="clics482">
       <gl>happy</gl>
       <gl>healthy</gl>
    </mel>
-   <mel id="clics376">
+   <mel id="clics483">
       <gl>male</gl>
       <gl>brave</gl>
    </mel>
-   <mel id="clics377">
+   <mel id="clics484">
       <gl>cough</gl>
       <gl>sneeze</gl>
    </mel>
-   <mel id="clics378">
+   <mel id="clics485">
       <gl>milk</gl>
       <gl>sap</gl>
    </mel>
-   <mel id="clics379">
+   <mel id="clics486">
       <gl>flower</gl>
       <gl>red</gl>
       <gl>fruit</gl>
    </mel>
-   <mel id="clics380">
-      <gl>smooth</gl>
-      <gl>slip</gl>
+   <mel id="clics487">
+      <gl>cure</gl>
+      <gl>healthy</gl>
    </mel>
-   <mel id="clics381">
+   <mel id="clics488">
+      <gl>cloud</gl>
+      <gl>dust</gl>
+   </mel>
+   <mel id="clics489">
       <gl>evening</gl>
       <gl>west</gl>
    </mel>
-   <mel id="clics382">
+   <mel id="clics490">
       <gl>pus</gl>
       <gl>wound</gl>
    </mel>
-   <mel id="clics383">
+   <mel id="clics491">
+      <gl>full</gl>
+      <gl>enough</gl>
+   </mel>
+   <mel id="clics492">
       <gl>all</gl>
       <gl>always</gl>
    </mel>
-   <mel id="clics384">
+   <mel id="clics493">
+      <gl>ant</gl>
+      <gl>termite</gl>
+   </mel>
+   <mel id="clics494">
       <gl>old</gl>
       <gl>ripe</gl>
    </mel>
-   <mel id="clics385">
+   <mel id="clics495">
+      <gl>here</gl>
+      <gl>there</gl>
+   </mel>
+   <mel id="clics496">
+      <gl>rib</gl>
+      <gl>side</gl>
+   </mel>
+   <mel id="clics497">
       <gl>kick</gl>
       <gl>pound</gl>
    </mel>
-   <mel id="clics386">
+   <mel id="clics498">
+      <gl>thumb</gl>
+      <gl>toe</gl>
+   </mel>
+   <mel id="clics499">
       <gl>at</gl>
       <gl>with</gl>
    </mel>
-   <mel id="clics387">
+   <mel id="clics500">
       <gl>regret</gl>
       <gl>howl</gl>
    </mel>
-   <mel id="clics388">
+   <mel id="clics501">
       <gl>connect</gl>
       <gl>knit</gl>
    </mel>
-   <mel id="clics389">
+   <mel id="clics502">
       <gl>they</gl>
       <gl>he</gl>
       <gl>that</gl>
    </mel>
-   <mel id="clics390">
+   <mel id="clics503">
       <gl>bracelet</gl>
       <gl>ring</gl>
    </mel>
-   <mel id="clics391">
+   <mel id="clics504">
       <gl>fish</gl>
       <gl>flesh</gl>
    </mel>
-   <mel id="clics392">
+   <mel id="clics505">
       <gl>swamp</gl>
       <gl>valley</gl>
    </mel>
-   <mel id="clics393">
+   <mel id="clics506">
+      <gl>flame</gl>
+      <gl>hell</gl>
+   </mel>
+   <mel id="clics507">
       <gl>ice</gl>
       <gl>dew</gl>
    </mel>
-   <mel id="clics394">
-      <gl>gourd</gl>
-      <gl>cup</gl>
+   <mel id="clics508">
+      <gl>make</gl>
+      <gl>mold</gl>
    </mel>
-   <mel id="clics395">
+   <mel id="clics509">
       <gl>navel</gl>
       <gl>middle</gl>
    </mel>
-   <mel id="clics396">
+   <mel id="clics510">
+      <gl>ripe</gl>
+      <gl>ready</gl>
+   </mel>
+   <mel id="clics511">
+      <gl>ready</gl>
+      <gl>enough</gl>
+   </mel>
+   <mel id="clics512">
+      <gl>other</gl>
+      <gl>second</gl>
+   </mel>
+   <mel id="clics513">
       <gl>liver</gl>
       <gl>spleen</gl>
    </mel>
-   <mel id="clics397">
+   <mel id="clics514">
       <gl>sap</gl>
       <gl>pus</gl>
    </mel>
-   <mel id="clics398">
+   <mel id="clics515">
+      <gl>brother</gl>
+      <gl>friend</gl>
+   </mel>
+   <mel id="clics516">
       <gl>splash</gl>
       <gl>jump</gl>
    </mel>
-   <mel id="clics399">
-      <gl>bean</gl>
-      <gl>kidney</gl>
+   <mel id="clics517">
+      <gl>louse</gl>
+      <gl>nit</gl>
    </mel>
 </semantics>
