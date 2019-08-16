@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
+   <createdat>2019-08-13 21:00:41 UTC</createdat>
    <parameters>
-      <class name="V" value="a,e,i,o,u,ɔ,ɛ"/>
+      <class name="V" value="a,aw,e,i,o,u,ɔ,ɛ"/>
       <class name="C" value="t,kj,ls,k,g,d,n,l,p,ss,kk,k,f,v,r,d,s,tt,m,b,ll,pl,nn,z,s,tt,kt,d͡z,s,d,kw,rr,t͡s,d͡ʒ,pp,fl,nj,lj"/>
       <canon name="syllabe" value="((C?C)?j?(vC?))*(A(C?C)?J?(G(?=CC|C$)C|O(?!CC)))?((C?C)?j?(vC?))*"/>
       <spec name="supra_segmentals" value="ˈ"/>
