@@ -10,6 +10,7 @@ import sys
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from collections import defaultdict
+import re
 
 try:
     root_dir = sys.argv[1]
@@ -47,15 +48,25 @@ def output_missing(glosses):
 
 def process_glosses():
     glosses = set()
+    def process_gloss(gloss):
+        split = re.split('/|,|;', gloss)
+        if len(split) != 1:
+            for x in split:
+                process_gloss(x.strip().strip('*'))
+        else:
+            gloss = gloss.split(' (')[0]
+            gloss = gloss.replace('be ','')
+            gloss = gloss.replace('go ','')
+            gloss = gloss.replace('être ','')
+            glosses.add(gloss.upper())
     for line in sys.stdin:
         line = line.strip()
         gloss = line.split('\t')[0]
-        gloss = gloss.split('/')[0]
-        gloss = gloss.split(' (')[0]
-        gloss = gloss.replace('be ','')
-        gloss = gloss.replace('go ','')
-        gloss = gloss.replace('être ','')
-        glosses.add(gloss.upper())
+        starmatch = re.search(r'\*(\w+)', gloss)
+        if starmatch:
+            glosses.add(starmatch.group(0)[1:].upper())
+        else:
+            process_gloss(gloss)
     return glosses
 
 processed = process_glosses()
