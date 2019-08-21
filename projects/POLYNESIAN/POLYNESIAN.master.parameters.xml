@@ -9,6 +9,7 @@
   <csvdata name="data" file="POLYNESIAN.data.csv"/>
 
   <mel name="hand" file="POLYNESIAN.hand.mel.xml"/>
+  <mel name="clics" file="POLYNESIAN.clics.mel.xml"/>
   <mel name="wordnet" file="POLYNESIAN.wordnet.mel.xml"/>
 
   <reconstruction name="standard">
