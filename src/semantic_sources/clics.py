@@ -35,16 +35,19 @@ for edgeA, edgeB, data in graph.edges(data=True):
 # calculate depth 2 colexification sets
 def calc(glosses):
     result = defaultdict(list)
+    all_colexified_glosses = set()
     for (nodeA, nodeB), (fc, lc, wc) in sorted(edges.items(), key=lambda i: i[1], reverse=True):
-        if nodenames[nodeA] in glosses and nodenames[nodeB] in glosses:
-            result[nodenames[nodeA]].append(nodenames[nodeB])
-    return result
-
-def output_missing(glosses):
-    with open('clics.not_found', 'w') as f:
-        for gloss in glosses:
-            if gloss not in nameids:
-                f.write('{} \n'.format(gloss).lower())
+        A = nodenames[nodeA]
+        B = nodenames[nodeB]
+        if A in glosses and B in glosses:
+            result[A].append(B)
+            all_colexified_glosses.add(A)
+            all_colexified_glosses.add(B)
+        elif A in glosses and A not in result:
+            result[A] = []
+        if B in glosses and B not in result:
+            result[B] = []
+    return result, all_colexified_glosses
 
 def process_glosses():
     glosses = set()
@@ -59,7 +62,13 @@ def process_glosses():
             gloss = gloss.replace('go ','')
             gloss = gloss.replace('être ','')
             glosses.add(gloss.upper())
-    for line in sys.stdin:
+            gloss2 = gloss.replace('-','')
+            if gloss2 != gloss:
+                glosses.add(gloss2.upper())
+
+    # f = open(sys.argv[2], 'r')
+    # for raw_gloss_count, line in enumerate(f):
+    for raw_gloss_count, line in enumerate(sys.stdin):
         line = line.strip()
         gloss = line.split('\t')[0]
         starmatch = re.search(r'\*(\w+)', gloss)
@@ -67,21 +76,41 @@ def process_glosses():
             glosses.add(starmatch.group(0)[1:].upper())
         else:
             process_gloss(gloss)
-    return glosses
+    return glosses, raw_gloss_count
 
-processed = process_glosses()
+processed, raw_glosses = process_glosses()
 
-# TODO make this output the original gloss not the processed one.
-output_missing(processed)
 # compute nodes restricted to our glosses.
-syn_sets = calc(processed)
+syn_sets, all_colexified_glosses = calc(processed)
 
-counter = 0
-for (gloss, synonyms) in syn_sets.items():
-    counter += 1
-    mel = ET.SubElement(root, 'mel', id="clics" + str(counter))
-    ET.SubElement(mel, 'gl').text = gloss.lower()
-    for synonym in synonyms:
+runstats = ET.SubElement(root, 'totals')
+count_found = 0
+seen = set()
+for (gloss, synonyms) in sorted(syn_sets.items()):
+    count_found += 1
+    if len(synonyms) == 0 and gloss in all_colexified_glosses: continue
+    mel = ET.SubElement(root, 'mel', id="clics" + str(count_found))
+    sub = ET.SubElement(mel, 'gl')
+    sub.text = gloss.lower()
+    if len(synonyms) == 0 and gloss not in all_colexified_glosses:
+        sub.set('singleton', 'yes')
+    for synonym in sorted(synonyms):
         ET.SubElement(mel, 'gl').text = synonym.lower()
+
+count_not_found = 0
+for gloss in sorted(processed):
+    # TODO make this output the original gloss not the processed one.
+    if gloss not in nameids:
+        count_not_found += 1
+        mel = ET.SubElement(root, 'mel', id="nf" + str(count_found + count_not_found))
+        sub = ET.SubElement(mel, 'gl')
+        sub.text = gloss.lower()
+        sub.set('pivot', 'notfound')
+
+ET.SubElement(runstats, 'found').set('value', str(count_found))
+ET.SubElement(runstats, 'notfound').set('value', str(count_not_found))
+ET.SubElement(runstats, 'total').set('value', str(count_found + count_not_found))
+ET.SubElement(runstats, 'rawglosses').set('value', str(raw_glosses))
+ET.SubElement(runstats, 'lemmata').set('value', str(len(processed)))
 
 sys.stdout.write(minidom.parseString(ET.tostring(root)).toprettyxml(indent='   '))

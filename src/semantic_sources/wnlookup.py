@@ -13,7 +13,7 @@ final_glosses = {}
 count_found = 0
 count_not_found = 0
 raw_glosses = 0
-lemmata = 0
+lemmata_count = 0
 not_found = []
 
 for line in sys.stdin:
@@ -43,41 +43,50 @@ for gloss in glosses:
     gloss = gloss.strip()
     gloss = gloss.replace(' ', '_')
     final_glosses[gloss] = True
+    gloss2 = gloss.replace('-', '')
+    if gloss2 != gloss:
+        final_glosses[gloss2] = True
 
-for gloss in final_glosses:
+for gloss in sorted(final_glosses):
     if not final_glosses[gloss]: continue
-    final_glosses[gloss] = False
-    # print('{0}\t{1}'.format(line, wn.synsets(gloss)))
-    lemmas = [l.lemmas() for l in wn.synsets(gloss)]
-    if len(lemmas) == 0:
-        lemmas = [l.lemmas() for l in wn.synsets(gloss, lang='fra')]
     # mark this gloss as 'checked' (whether found or not)
+    # final_glosses[gloss] = False
+    # print('{0}\t{1}'.format(line, wn.synsets(gloss)))
+    target = None
+    synsets = [l.lemmas() for l in wn.synsets(gloss)]
+    # if not found in English, look up gloss in French wordnet
+    if len(synsets) != 0:
+        target = 'english'
+    else:
+        synsets = [l.lemmas() for l in wn.synsets(gloss, lang='fra')]
+        target = 'french'
     gloss = gloss.replace('_', ' ')
-    if lemmas == []:
-        # not_found.write('{} \n'.format(orig))
+    if synsets == []:
         count_not_found += 1
         not_found.append(gloss)
         continue
     synonyms = set()
     synonyms.add(gloss)
-    for lemma in lemmas:
-        for l in lemma:
+    for lemmata in synsets:
+        for l in lemmata:
             if l.name() in final_glosses:
-                if final_glosses[l.name()]:
-                    # if we add a gloss to the mel, make a mark so we don't add it again.
-                    final_glosses[l.name()] = False
-                    synonyms.add(l.name().replace('_', ' '))
+                synonyms.add(l.name().replace('_', ' '))
+            # if l.name() in final_glosses:
+            #     if final_glosses[l.name()]:
+            #         # if we add a gloss to the mel, make a mark so we don't add it again to another mel.
+            #         final_glosses[l.name()] = False
+            #         synonyms.add(l.name().replace('_', ' '))
     count_found += 1
     mel = ET.SubElement(root, 'mel', id="wn" + str(count_found))
-    pivot_set = False
-    lemmata += len(synonyms)
+    target = False
+    lemmata_count += len(synonyms)
     for synonym in sorted(synonyms):
         sub = ET.SubElement(mel, 'gl')
         sub.text = synonym
         if gloss == synonym:
-            sub.set('pivot', 'samelg')
-            pivot_set = True
-    if not pivot_set:
+            sub.set('pivot', 'key')
+            target = True
+    if not target:
         sub = ET.SubElement(mel, 'gl')
         sub.text = gloss
         sub.set('pivot', 'otherlg')
@@ -86,12 +95,12 @@ ET.SubElement(runstats, 'found').set('value', str(count_found))
 ET.SubElement(runstats, 'notfound').set('value', str(count_not_found))
 ET.SubElement(runstats, 'total').set('value', str(len(final_glosses)))
 ET.SubElement(runstats, 'rawglosses').set('value', str(raw_glosses))
-ET.SubElement(runstats, 'lemmata').set('value', str(lemmata))
+ET.SubElement(runstats, 'lemmata').set('value', str(lemmata_count))
 
 for gloss in sorted(not_found):
     if gloss == '' or gloss is None: continue
     count_found += 1
-    mel = ET.SubElement(root, 'mel', id="wn" + str(count_found))
+    mel = ET.SubElement(root, 'mel', id="nf" + str(count_found))
     sub = ET.SubElement(mel, 'gl')
     sub.text = gloss.replace('_', ' ')
     sub.set('pivot', 'notfound')
