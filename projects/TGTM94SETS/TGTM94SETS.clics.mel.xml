@@ -1,0 +1,6906 @@
+<?xml version="1.0" ?>
+<semantics>
+   <totals>
+      <found value="396"/>
+      <notfound value="1852"/>
+      <total value="2248"/>
+      <rawglosses value="2139"/>
+      <lemmata value="2328"/>
+   </totals>
+   <mel id="clics3">
+      <gl>and</gl>
+      <gl>or</gl>
+      <gl>with</gl>
+   </mel>
+   <mel id="clics4">
+      <gl>answer</gl>
+      <gl>say</gl>
+      <gl>speak</gl>
+      <gl>tell</gl>
+   </mel>
+   <mel id="clics5">
+      <gl>arrive</gl>
+      <gl>become</gl>
+      <gl>find</gl>
+      <gl>ripen</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics6">
+      <gl>arrow</gl>
+      <gl>bow</gl>
+   </mel>
+   <mel id="clics7">
+      <gl>axe</gl>
+      <gl>iron</gl>
+   </mel>
+   <mel id="clics8">
+      <gl>back</gl>
+      <gl>bark</gl>
+      <gl>shoulder</gl>
+   </mel>
+   <mel id="clics9">
+      <gl singleton="yes">bamboo</gl>
+   </mel>
+   <mel id="clics10">
+      <gl>bark</gl>
+      <gl>fur</gl>
+      <gl>shell</gl>
+      <gl>skin</gl>
+   </mel>
+   <mel id="clics12">
+      <gl>be</gl>
+      <gl>become</gl>
+   </mel>
+   <mel id="clics14">
+      <gl>become</gl>
+      <gl>happen</gl>
+   </mel>
+   <mel id="clics15">
+      <gl singleton="yes">bee</gl>
+   </mel>
+   <mel id="clics16">
+      <gl singleton="yes">beer</gl>
+   </mel>
+   <mel id="clics18">
+      <gl>behind</gl>
+      <gl>back</gl>
+      <gl>late</gl>
+      <gl>outside</gl>
+   </mel>
+   <mel id="clics19">
+      <gl>belly</gl>
+      <gl>intestines</gl>
+      <gl>stomach</gl>
+   </mel>
+   <mel id="clics22">
+      <gl>bite</gl>
+      <gl>chew</gl>
+      <gl>cut</gl>
+   </mel>
+   <mel id="clics23">
+      <gl>bitter</gl>
+      <gl>salty</gl>
+   </mel>
+   <mel id="clics24">
+      <gl>black</gl>
+      <gl>dirty</gl>
+   </mel>
+   <mel id="clics25">
+      <gl>blood</gl>
+      <gl>eat</gl>
+   </mel>
+   <mel id="clics26">
+      <gl>blue</gl>
+      <gl>black</gl>
+   </mel>
+   <mel id="clics27">
+      <gl>body</gl>
+      <gl>bark</gl>
+      <gl>flesh</gl>
+      <gl>idol</gl>
+      <gl>meat</gl>
+      <gl>person</gl>
+      <gl>skin</gl>
+      <gl>waist</gl>
+   </mel>
+   <mel id="clics28">
+      <gl>book</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics29">
+      <gl>borrow</gl>
+      <gl>lend</gl>
+   </mel>
+   <mel id="clics33">
+      <gl>bridge</gl>
+      <gl>ladder</gl>
+   </mel>
+   <mel id="clics34">
+      <gl>broom</gl>
+      <gl>sweep</gl>
+   </mel>
+   <mel id="clics35">
+      <gl>bull</gl>
+      <gl>cattle</gl>
+      <gl>ox</gl>
+   </mel>
+   <mel id="clics36">
+      <gl singleton="yes">burn</gl>
+   </mel>
+   <mel id="clics37">
+      <gl>bury</gl>
+      <gl>cover</gl>
+      <gl>dig</gl>
+   </mel>
+   <mel id="clics38">
+      <gl singleton="yes">business</gl>
+   </mel>
+   <mel id="clics39">
+      <gl singleton="yes">butter</gl>
+   </mel>
+   <mel id="clics40">
+      <gl>buy</gl>
+      <gl>carry</gl>
+      <gl>get</gl>
+      <gl>sell</gl>
+      <gl>take</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics41">
+      <gl>call</gl>
+      <gl>dig</gl>
+      <gl>invite</gl>
+      <gl>sing</gl>
+   </mel>
+   <mel id="clics42">
+      <gl singleton="yes">can</gl>
+   </mel>
+   <mel id="clics43">
+      <gl>carry</gl>
+      <gl>borrow</gl>
+      <gl>drive</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics44">
+      <gl>cattle</gl>
+      <gl>ox</gl>
+   </mel>
+   <mel id="clics47">
+      <gl singleton="yes">centipede</gl>
+   </mel>
+   <mel id="clics49">
+      <gl singleton="yes">cheap</gl>
+   </mel>
+   <mel id="clics50">
+      <gl>chest</gl>
+      <gl>rib</gl>
+   </mel>
+   <mel id="clics52">
+      <gl singleton="yes">chin</gl>
+   </mel>
+   <mel id="clics53">
+      <gl>choose</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics54">
+      <gl>clean</gl>
+      <gl>fresh</gl>
+      <gl>good</gl>
+      <gl>new</gl>
+   </mel>
+   <mel id="clics55">
+      <gl>climb</gl>
+      <gl>crawl</gl>
+   </mel>
+   <mel id="clics56">
+      <gl>clothes</gl>
+      <gl>dress</gl>
+      <gl>put on</gl>
+   </mel>
+   <mel id="clics59">
+      <gl singleton="yes">comb</gl>
+   </mel>
+   <mel id="clics60">
+      <gl>come</gl>
+      <gl>arrive</gl>
+      <gl>become</gl>
+      <gl>enter</gl>
+      <gl>give</gl>
+      <gl>go</gl>
+   </mel>
+   <mel id="clics61">
+      <gl>connect</gl>
+      <gl>knit</gl>
+   </mel>
+   <mel id="clics62">
+      <gl>cooked</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics64">
+      <gl>cough</gl>
+      <gl>sneeze</gl>
+   </mel>
+   <mel id="clics65">
+      <gl>count</gl>
+      <gl>give</gl>
+      <gl>measure</gl>
+      <gl>weigh</gl>
+   </mel>
+   <mel id="clics66">
+      <gl singleton="yes">court</gl>
+   </mel>
+   <mel id="clics67">
+      <gl>cover</gl>
+      <gl>wrap</gl>
+   </mel>
+   <mel id="clics68">
+      <gl>cow</gl>
+      <gl>bull</gl>
+      <gl>cattle</gl>
+      <gl>ox</gl>
+   </mel>
+   <mel id="clics70">
+      <gl>cry</gl>
+      <gl>groan</gl>
+   </mel>
+   <mel id="clics72">
+      <gl>cut</gl>
+      <gl>cease</gl>
+      <gl>divide</gl>
+      <gl>grind</gl>
+      <gl>mow</gl>
+      <gl>weave</gl>
+   </mel>
+   <mel id="clics73">
+      <gl>dance</gl>
+      <gl>jump</gl>
+      <gl>play</gl>
+      <gl>sing</gl>
+   </mel>
+   <mel id="clics74">
+      <gl singleton="yes">deaf</gl>
+   </mel>
+   <mel id="clics75">
+      <gl singleton="yes">decrease</gl>
+   </mel>
+   <mel id="clics77">
+      <gl>die</gl>
+      <gl>finish</gl>
+      <gl>give</gl>
+      <gl>hear</gl>
+      <gl>kill</gl>
+      <gl>rotten</gl>
+   </mel>
+   <mel id="clics78">
+      <gl>dig</gl>
+      <gl>lie down</gl>
+      <gl>scratch</gl>
+      <gl>sew</gl>
+      <gl>swim</gl>
+   </mel>
+   <mel id="clics80">
+      <gl>divide</gl>
+      <gl>spread out</gl>
+   </mel>
+   <mel id="clics81">
+      <gl>do</gl>
+      <gl>give</gl>
+      <gl>make</gl>
+   </mel>
+   <mel id="clics82">
+      <gl>door</gl>
+      <gl>path</gl>
+   </mel>
+   <mel id="clics83">
+      <gl singleton="yes">down</gl>
+   </mel>
+   <mel id="clics84">
+      <gl singleton="yes">dream</gl>
+   </mel>
+   <mel id="clics86">
+      <gl>drink</gl>
+      <gl>cut</gl>
+      <gl>give</gl>
+      <gl>suck</gl>
+      <gl>swallow</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics88">
+      <gl>dry</gl>
+      <gl>empty</gl>
+   </mel>
+   <mel id="clics89">
+      <gl singleton="yes">dye</gl>
+   </mel>
+   <mel id="clics90">
+      <gl>ear</gl>
+      <gl>hear</gl>
+   </mel>
+   <mel id="clics91">
+      <gl>eat</gl>
+      <gl>bite</gl>
+      <gl>chew</gl>
+      <gl>drink</gl>
+      <gl>fall</gl>
+      <gl>suck</gl>
+      <gl>swallow</gl>
+   </mel>
+   <mel id="clics92">
+      <gl>egg</gl>
+      <gl>penis</gl>
+   </mel>
+   <mel id="clics94">
+      <gl>enter</gl>
+      <gl>crawl</gl>
+      <gl>put</gl>
+      <gl>put on</gl>
+   </mel>
+   <mel id="clics95">
+      <gl singleton="yes">escape</gl>
+   </mel>
+   <mel id="clics97">
+      <gl>eye</gl>
+      <gl>look</gl>
+   </mel>
+   <mel id="clics98">
+      <gl>face</gl>
+      <gl>eye</gl>
+      <gl>forehead</gl>
+      <gl>mouth</gl>
+   </mel>
+   <mel id="clics99">
+      <gl>fall</gl>
+      <gl>cut</gl>
+      <gl>go</gl>
+      <gl>kill</gl>
+      <gl>slip</gl>
+   </mel>
+   <mel id="clics100">
+      <gl>feather</gl>
+      <gl>fur</gl>
+      <gl>wool</gl>
+   </mel>
+   <mel id="clics101">
+      <gl singleton="yes">feed</gl>
+   </mel>
+   <mel id="clics102">
+      <gl>feel</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics104">
+      <gl>fever</gl>
+      <gl>heat</gl>
+   </mel>
+   <mel id="clics105">
+      <gl>field</gl>
+      <gl>plain</gl>
+   </mel>
+   <mel id="clics106">
+      <gl>fight</gl>
+      <gl>kill</gl>
+      <gl>pound</gl>
+      <gl>scold</gl>
+   </mel>
+   <mel id="clics107">
+      <gl>find</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics108">
+      <gl>finger</gl>
+      <gl>fingernail</gl>
+      <gl>ring</gl>
+      <gl>toe</gl>
+   </mel>
+   <mel id="clics110">
+      <gl>finish</gl>
+      <gl>cease</gl>
+   </mel>
+   <mel id="clics111">
+      <gl>fire</gl>
+      <gl>fever</gl>
+      <gl>flame</gl>
+      <gl>hot</gl>
+      <gl>tree</gl>
+   </mel>
+   <mel id="clics115">
+      <gl>floor</gl>
+      <gl>plain</gl>
+   </mel>
+   <mel id="clics116">
+      <gl>flour</gl>
+      <gl>bread</gl>
+   </mel>
+   <mel id="clics117">
+      <gl>foot</gl>
+      <gl>corner</gl>
+      <gl>leg</gl>
+      <gl>thigh</gl>
+      <gl>toe</gl>
+   </mel>
+   <mel id="clics119">
+      <gl>forest</gl>
+      <gl>wood</gl>
+   </mel>
+   <mel id="clics124">
+      <gl>fry</gl>
+      <gl>ripen</gl>
+      <gl>wash</gl>
+   </mel>
+   <mel id="clics126">
+      <gl>fur</gl>
+      <gl>wool</gl>
+   </mel>
+   <mel id="clics127">
+      <gl>get</gl>
+      <gl>arrive</gl>
+      <gl>borrow</gl>
+      <gl>carry</gl>
+      <gl>choose</gl>
+      <gl>come</gl>
+      <gl>find</gl>
+      <gl>meet</gl>
+      <gl>take</gl>
+      <gl>understand</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics128">
+      <gl>ghost</gl>
+      <gl>god</gl>
+   </mel>
+   <mel id="clics129">
+      <gl>give</gl>
+      <gl>carry</gl>
+      <gl>hear</gl>
+      <gl>kill</gl>
+      <gl>lend</gl>
+      <gl>put</gl>
+      <gl>say</gl>
+      <gl>speak</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics130">
+      <gl>go</gl>
+      <gl>drive</gl>
+      <gl>enter</gl>
+      <gl>pass</gl>
+   </mel>
+   <mel id="clics134">
+      <gl>good</gl>
+      <gl>happy</gl>
+      <gl>healthy</gl>
+      <gl>new</gl>
+      <gl>sweet</gl>
+   </mel>
+   <mel id="clics136">
+      <gl>grandmother</gl>
+      <gl>grandson</gl>
+   </mel>
+   <mel id="clics137">
+      <gl>grandson</gl>
+      <gl>grandchild</gl>
+   </mel>
+   <mel id="clics138">
+      <gl>grass</gl>
+      <gl>hay</gl>
+      <gl>leaf</gl>
+      <gl>thatch</gl>
+   </mel>
+   <mel id="clics139">
+      <gl>grind</gl>
+      <gl>knead</gl>
+      <gl>pound</gl>
+      <gl>squeeze</gl>
+      <gl>thresh</gl>
+   </mel>
+   <mel id="clics141">
+      <gl singleton="yes">guard</gl>
+   </mel>
+   <mel id="clics142">
+      <gl>hair</gl>
+      <gl>feather</gl>
+   </mel>
+   <mel id="clics143">
+      <gl>hand</gl>
+      <gl>finger</gl>
+      <gl>five</gl>
+      <gl>wing</gl>
+   </mel>
+   <mel id="clics144">
+      <gl singleton="yes">hang</gl>
+   </mel>
+   <mel id="clics145">
+      <gl>happen</gl>
+      <gl>pass</gl>
+   </mel>
+   <mel id="clics146">
+      <gl>happy</gl>
+      <gl>healthy</gl>
+   </mel>
+   <mel id="clics147">
+      <gl>hard</gl>
+      <gl>dry</gl>
+      <gl>loud</gl>
+      <gl>strong</gl>
+   </mel>
+   <mel id="clics148">
+      <gl>hay</gl>
+      <gl>thatch</gl>
+   </mel>
+   <mel id="clics149">
+      <gl>he</gl>
+      <gl>it</gl>
+   </mel>
+   <mel id="clics150">
+      <gl>head</gl>
+      <gl>begin</gl>
+      <gl>mind</gl>
+   </mel>
+   <mel id="clics152">
+      <gl>hear</gl>
+      <gl>carry</gl>
+      <gl>cease</gl>
+      <gl>feel</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics153">
+      <gl>heart</gl>
+      <gl>chest</gl>
+      <gl>liver</gl>
+      <gl>lung</gl>
+      <gl>mind</gl>
+      <gl>spirit</gl>
+   </mel>
+   <mel id="clics155">
+      <gl>heavy</gl>
+      <gl>load</gl>
+      <gl>weigh</gl>
+   </mel>
+   <mel id="clics156">
+      <gl singleton="yes">help</gl>
+   </mel>
+   <mel id="clics157">
+      <gl>high</gl>
+      <gl>above</gl>
+      <gl>deep</gl>
+      <gl>loud</gl>
+   </mel>
+   <mel id="clics159">
+      <gl>hit</gl>
+      <gl>beat</gl>
+      <gl>kill</gl>
+   </mel>
+   <mel id="clics160">
+      <gl>hoe</gl>
+      <gl>dig</gl>
+   </mel>
+   <mel id="clics161">
+      <gl>hole</gl>
+      <gl>cave</gl>
+   </mel>
+   <mel id="clics163">
+      <gl singleton="yes">hook</gl>
+   </mel>
+   <mel id="clics164">
+      <gl singleton="yes">horse</gl>
+   </mel>
+   <mel id="clics165">
+      <gl>hot</gl>
+      <gl>fever</gl>
+      <gl>heat</gl>
+      <gl>warm</gl>
+   </mel>
+   <mel id="clics166">
+      <gl>house</gl>
+      <gl>home</gl>
+      <gl>town</gl>
+      <gl>village</gl>
+   </mel>
+   <mel id="clics167">
+      <gl>how</gl>
+      <gl>which</gl>
+   </mel>
+   <mel id="clics168">
+      <gl>husband</gl>
+      <gl>friend</gl>
+      <gl>male</gl>
+      <gl>man</gl>
+   </mel>
+   <mel id="clics169">
+      <gl>i</gl>
+      <gl>give</gl>
+      <gl>say</gl>
+      <gl>we</gl>
+   </mel>
+   <mel id="clics171">
+      <gl>in</gl>
+      <gl>with</gl>
+   </mel>
+   <mel id="clics172">
+      <gl>inside</gl>
+      <gl>deep</gl>
+      <gl>in</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics173">
+      <gl>intestines</gl>
+      <gl>stomach</gl>
+   </mel>
+   <mel id="clics177">
+      <gl>itch</gl>
+      <gl>scratch</gl>
+   </mel>
+   <mel id="clics178">
+      <gl singleton="yes">item</gl>
+   </mel>
+   <mel id="clics180">
+      <gl>kill</gl>
+      <gl>pound</gl>
+   </mel>
+   <mel id="clics182">
+      <gl singleton="yes">knee</gl>
+   </mel>
+   <mel id="clics186">
+      <gl>language</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics188">
+      <gl>laugh</gl>
+      <gl>smile</gl>
+   </mel>
+   <mel id="clics189">
+      <gl>leaf</gl>
+      <gl>feather</gl>
+      <gl>fur</gl>
+      <gl>thatch</gl>
+      <gl>wing</gl>
+   </mel>
+   <mel id="clics190">
+      <gl>learn</gl>
+      <gl>show</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics191">
+      <gl>leg</gl>
+      <gl>thigh</gl>
+   </mel>
+   <mel id="clics193">
+      <gl>lick</gl>
+      <gl>suck</gl>
+   </mel>
+   <mel id="clics195">
+      <gl>lift</gl>
+      <gl>carry</gl>
+      <gl>take</gl>
+      <gl>weigh</gl>
+   </mel>
+   <mel id="clics198">
+      <gl>long</gl>
+      <gl>deep</gl>
+      <gl>high</gl>
+   </mel>
+   <mel id="clics199">
+      <gl>look</gl>
+      <gl>find</gl>
+      <gl>read</gl>
+      <gl>see</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics200">
+      <gl>lose</gl>
+      <gl>forget</gl>
+   </mel>
+   <mel id="clics203">
+      <gl>lung</gl>
+      <gl>chest</gl>
+   </mel>
+   <mel id="clics206">
+      <gl>man</gl>
+      <gl>male</gl>
+      <gl>people</gl>
+   </mel>
+   <mel id="clics207">
+      <gl>measure</gl>
+      <gl>weigh</gl>
+   </mel>
+   <mel id="clics208">
+      <gl>meat</gl>
+      <gl>flesh</gl>
+   </mel>
+   <mel id="clics209">
+      <gl>medicine</gl>
+      <gl>tree</gl>
+      <gl>wood</gl>
+   </mel>
+   <mel id="clics210">
+      <gl>meet</gl>
+      <gl>arrive</gl>
+      <gl>find</gl>
+   </mel>
+   <mel id="clics211">
+      <gl singleton="yes">melt</gl>
+   </mel>
+   <mel id="clics212">
+      <gl>middle</gl>
+      <gl>between</gl>
+   </mel>
+   <mel id="clics213">
+      <gl singleton="yes">milk</gl>
+   </mel>
+   <mel id="clics215">
+      <gl>money</gl>
+      <gl>iron</gl>
+   </mel>
+   <mel id="clics217">
+      <gl>moon</gl>
+      <gl>month</gl>
+   </mel>
+   <mel id="clics218">
+      <gl singleton="yes">morning</gl>
+   </mel>
+   <mel id="clics219">
+      <gl>mountain</gl>
+      <gl>hill</gl>
+      <gl>stone</gl>
+   </mel>
+   <mel id="clics220">
+      <gl>mouth</gl>
+      <gl>door</gl>
+      <gl>hole</gl>
+      <gl>language</gl>
+      <gl>tooth</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics222">
+      <gl singleton="yes">name</gl>
+   </mel>
+   <mel id="clics223">
+      <gl>nephew</gl>
+      <gl>grandson</gl>
+   </mel>
+   <mel id="clics224">
+      <gl>nest</gl>
+      <gl>basket</gl>
+   </mel>
+   <mel id="clics225">
+      <gl>new</gl>
+      <gl>fresh</gl>
+      <gl>young</gl>
+   </mel>
+   <mel id="clics226">
+      <gl singleton="yes">nose</gl>
+   </mel>
+   <mel id="clics227">
+      <gl>one</gl>
+      <gl>what</gl>
+   </mel>
+   <mel id="clics228">
+      <gl>open</gl>
+      <gl>spread out</gl>
+   </mel>
+   <mel id="clics230">
+      <gl>outside</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics232">
+      <gl>pain</gl>
+      <gl>ache</gl>
+   </mel>
+   <mel id="clics236">
+      <gl>pay</gl>
+      <gl>answer</gl>
+      <gl>buy</gl>
+      <gl>give</gl>
+      <gl>price</gl>
+      <gl>sell</gl>
+   </mel>
+   <mel id="clics237">
+      <gl>peel</gl>
+      <gl>bark</gl>
+      <gl>skin</gl>
+      <gl>thresh</gl>
+   </mel>
+   <mel id="clics238">
+      <gl>penis</gl>
+      <gl>male</gl>
+   </mel>
+   <mel id="clics240">
+      <gl>person</gl>
+      <gl>husband</gl>
+      <gl>male</gl>
+      <gl>man</gl>
+      <gl>people</gl>
+   </mel>
+   <mel id="clics241">
+      <gl singleton="yes">pick</gl>
+   </mel>
+   <mel id="clics242">
+      <gl>pick up</gl>
+      <gl>begin</gl>
+      <gl>buy</gl>
+      <gl>carry</gl>
+      <gl>choose</gl>
+      <gl>get</gl>
+      <gl>lift</gl>
+      <gl>mow</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics244">
+      <gl singleton="yes">pig</gl>
+   </mel>
+   <mel id="clics248">
+      <gl>pot</gl>
+      <gl>pan</gl>
+   </mel>
+   <mel id="clics249">
+      <gl>pound</gl>
+      <gl>thresh</gl>
+   </mel>
+   <mel id="clics250">
+      <gl>pour</gl>
+      <gl>spread out</gl>
+   </mel>
+   <mel id="clics251">
+      <gl singleton="yes">prepare</gl>
+   </mel>
+   <mel id="clics253">
+      <gl>pull</gl>
+      <gl>grind</gl>
+      <gl>steal</gl>
+      <gl>suck</gl>
+      <gl>weigh</gl>
+   </mel>
+   <mel id="clics255">
+      <gl>put</gl>
+      <gl>carry</gl>
+      <gl>lift</gl>
+      <gl>put on</gl>
+      <gl>send</gl>
+   </mel>
+   <mel id="clics257">
+      <gl>quarrel</gl>
+      <gl>fight</gl>
+   </mel>
+   <mel id="clics258">
+      <gl>read</gl>
+      <gl>call</gl>
+      <gl>count</gl>
+      <gl>learn</gl>
+      <gl>say</gl>
+      <gl>sing</gl>
+      <gl>teach</gl>
+      <gl>weigh</gl>
+   </mel>
+   <mel id="clics259">
+      <gl>remember</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics260">
+      <gl singleton="yes">repair</gl>
+   </mel>
+   <mel id="clics261">
+      <gl>rest</gl>
+      <gl>cease</gl>
+      <gl>lie down</gl>
+   </mel>
+   <mel id="clics262">
+      <gl singleton="yes">retreat</gl>
+   </mel>
+   <mel id="clics264">
+      <gl singleton="yes">rice</gl>
+   </mel>
+   <mel id="clics265">
+      <gl singleton="yes">rich</gl>
+   </mel>
+   <mel id="clics266">
+      <gl>right</gl>
+      <gl>good</gl>
+   </mel>
+   <mel id="clics270">
+      <gl>ripen</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics271">
+      <gl>river</gl>
+      <gl>drink</gl>
+      <gl>lake</gl>
+      <gl>valley</gl>
+   </mel>
+   <mel id="clics272">
+      <gl>road</gl>
+      <gl>path</gl>
+   </mel>
+   <mel id="clics273">
+      <gl>root</gl>
+      <gl>vein</gl>
+   </mel>
+   <mel id="clics275">
+      <gl singleton="yes">rot</gl>
+   </mel>
+   <mel id="clics276">
+      <gl>rotten</gl>
+      <gl>pus</gl>
+   </mel>
+   <mel id="clics278">
+      <gl>say</gl>
+      <gl>explain</gl>
+      <gl>language</gl>
+      <gl>sing</gl>
+      <gl>speak</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics279">
+      <gl>scold</gl>
+      <gl>curse</gl>
+   </mel>
+   <mel id="clics281">
+      <gl>see</gl>
+      <gl>find</gl>
+      <gl>get</gl>
+      <gl>hear</gl>
+      <gl>meet</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics282">
+      <gl>seed</gl>
+      <gl>egg</gl>
+      <gl>eye</gl>
+      <gl>penis</gl>
+      <gl>spirit</gl>
+      <gl>tooth</gl>
+   </mel>
+   <mel id="clics283">
+      <gl>sell</gl>
+      <gl>give</gl>
+   </mel>
+   <mel id="clics284">
+      <gl>send</gl>
+      <gl>carry</gl>
+      <gl>drive</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics285">
+      <gl>sew</gl>
+      <gl>pierce</gl>
+   </mel>
+   <mel id="clics286">
+      <gl singleton="yes">shake</gl>
+   </mel>
+   <mel id="clics287">
+      <gl>sharp</gl>
+      <gl>bitter</gl>
+   </mel>
+   <mel id="clics288">
+      <gl>she</gl>
+      <gl>he</gl>
+      <gl>it</gl>
+   </mel>
+   <mel id="clics289">
+      <gl>sheep</gl>
+      <gl>goat</gl>
+   </mel>
+   <mel id="clics291">
+      <gl singleton="yes">shine</gl>
+   </mel>
+   <mel id="clics292">
+      <gl>shoot</gl>
+      <gl>bite</gl>
+      <gl>eat</gl>
+      <gl>fight</gl>
+      <gl>kill</gl>
+      <gl>pull</gl>
+   </mel>
+   <mel id="clics294">
+      <gl>show</gl>
+      <gl>explain</gl>
+   </mel>
+   <mel id="clics295">
+      <gl>sick</gl>
+      <gl>die</gl>
+      <gl>fever</gl>
+      <gl>pain</gl>
+      <gl>tired</gl>
+   </mel>
+   <mel id="clics296">
+      <gl>sing</gl>
+      <gl>song</gl>
+   </mel>
+   <mel id="clics297">
+      <gl>sit</gl>
+      <gl>chair</gl>
+   </mel>
+   <mel id="clics298">
+      <gl>skin</gl>
+      <gl>basket</gl>
+      <gl>flesh</gl>
+      <gl>fur</gl>
+      <gl>shell</gl>
+   </mel>
+   <mel id="clics299">
+      <gl>sky</gl>
+      <gl>above</gl>
+      <gl>blue</gl>
+      <gl>cloud</gl>
+      <gl>god</gl>
+      <gl>high</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics300">
+      <gl>sleep</gl>
+      <gl>lie down</gl>
+   </mel>
+   <mel id="clics302">
+      <gl>small</gl>
+      <gl>egg</gl>
+      <gl>young</gl>
+   </mel>
+   <mel id="clics305">
+      <gl>snow</gl>
+      <gl>cold</gl>
+   </mel>
+   <mel id="clics306">
+      <gl>son</gl>
+      <gl>man</gl>
+      <gl>nephew</gl>
+      <gl>small</gl>
+   </mel>
+   <mel id="clics309">
+      <gl>sour</gl>
+      <gl>bitter</gl>
+      <gl>salty</gl>
+   </mel>
+   <mel id="clics310">
+      <gl>speak</gl>
+      <gl>explain</gl>
+      <gl>language</gl>
+      <gl>voice</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics311">
+      <gl singleton="yes">spindle</gl>
+   </mel>
+   <mel id="clics312">
+      <gl>spirit</gl>
+      <gl>breath</gl>
+      <gl>chest</gl>
+      <gl>ghost</gl>
+      <gl>mind</gl>
+   </mel>
+   <mel id="clics313">
+      <gl>spit</gl>
+      <gl>vomit</gl>
+   </mel>
+   <mel id="clics314">
+      <gl>spread out</gl>
+      <gl>wipe</gl>
+   </mel>
+   <mel id="clics315">
+      <gl>squeeze</gl>
+      <gl>knead</gl>
+   </mel>
+   <mel id="clics316">
+      <gl>stand</gl>
+      <gl>cease</gl>
+   </mel>
+   <mel id="clics317">
+      <gl singleton="yes">star</gl>
+   </mel>
+   <mel id="clics318">
+      <gl>statue</gl>
+      <gl>idol</gl>
+   </mel>
+   <mel id="clics319">
+      <gl>steal</gl>
+      <gl>thief</gl>
+   </mel>
+   <mel id="clics320">
+      <gl>stomach</gl>
+      <gl>heart</gl>
+      <gl>inside</gl>
+   </mel>
+   <mel id="clics321">
+      <gl>stone</gl>
+      <gl>egg</gl>
+   </mel>
+   <mel id="clics322">
+      <gl singleton="yes">story</gl>
+   </mel>
+   <mel id="clics323">
+      <gl singleton="yes">strength</gl>
+   </mel>
+   <mel id="clics324">
+      <gl singleton="yes">string</gl>
+   </mel>
+   <mel id="clics325">
+      <gl>strong</gl>
+      <gl>happy</gl>
+      <gl>healthy</gl>
+      <gl>loud</gl>
+   </mel>
+   <mel id="clics326">
+      <gl>suck</gl>
+      <gl>squeeze</gl>
+   </mel>
+   <mel id="clics328">
+      <gl>sweep</gl>
+      <gl>wipe</gl>
+   </mel>
+   <mel id="clics329">
+      <gl>sweet</gl>
+      <gl>fragrant</gl>
+      <gl>salty</gl>
+   </mel>
+   <mel id="clics330">
+      <gl>swell</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics332">
+      <gl>tail</gl>
+      <gl>penis</gl>
+   </mel>
+   <mel id="clics333">
+      <gl>take</gl>
+      <gl>borrow</gl>
+   </mel>
+   <mel id="clics334">
+      <gl>teach</gl>
+      <gl>explain</gl>
+      <gl>learn</gl>
+      <gl>show</gl>
+   </mel>
+   <mel id="clics335">
+      <gl>tell</gl>
+      <gl>count</gl>
+      <gl>explain</gl>
+      <gl>say</gl>
+      <gl>speak</gl>
+   </mel>
+   <mel id="clics336">
+      <gl>that</gl>
+      <gl>he</gl>
+      <gl>it</gl>
+      <gl>she</gl>
+   </mel>
+   <mel id="clics338">
+      <gl>thick</gl>
+      <gl>forest</gl>
+      <gl>full</gl>
+      <gl>heavy</gl>
+   </mel>
+   <mel id="clics341">
+      <gl singleton="yes">thin</gl>
+   </mel>
+   <mel id="clics342">
+      <gl>think</gl>
+      <gl>hear</gl>
+   </mel>
+   <mel id="clics343">
+      <gl>this</gl>
+      <gl>he</gl>
+      <gl>louse</gl>
+      <gl>that</gl>
+   </mel>
+   <mel id="clics344">
+      <gl>thou</gl>
+      <gl>he</gl>
+      <gl>you</gl>
+   </mel>
+   <mel id="clics345">
+      <gl>thread</gl>
+      <gl>rope</gl>
+   </mel>
+   <mel id="clics346">
+      <gl singleton="yes">three</gl>
+   </mel>
+   <mel id="clics350">
+      <gl singleton="yes">together</gl>
+   </mel>
+   <mel id="clics351">
+      <gl>tongue</gl>
+      <gl>language</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics352">
+      <gl>tooth</gl>
+      <gl>louse</gl>
+   </mel>
+   <mel id="clics353">
+      <gl>touch</gl>
+      <gl>feel</gl>
+   </mel>
+   <mel id="clics355">
+      <gl>tree</gl>
+      <gl>forest</gl>
+      <gl>post</gl>
+      <gl>wood</gl>
+   </mel>
+   <mel id="clics356">
+      <gl>twist</gl>
+      <gl>grind</gl>
+      <gl>knead</gl>
+      <gl>squeeze</gl>
+      <gl>weave</gl>
+      <gl>wrap</gl>
+   </mel>
+   <mel id="clics357">
+      <gl singleton="yes">two</gl>
+   </mel>
+   <mel id="clics359">
+      <gl>up</gl>
+      <gl>above</gl>
+      <gl>high</gl>
+   </mel>
+   <mel id="clics361">
+      <gl>valley</gl>
+      <gl>plain</gl>
+   </mel>
+   <mel id="clics363">
+      <gl>village</gl>
+      <gl>people</gl>
+      <gl>town</gl>
+   </mel>
+   <mel id="clics364">
+      <gl>voice</gl>
+      <gl>language</gl>
+      <gl>word</gl>
+   </mel>
+   <mel id="clics366">
+      <gl singleton="yes">vulture</gl>
+   </mel>
+   <mel id="clics367">
+      <gl>waist</gl>
+      <gl>back</gl>
+      <gl>belt</gl>
+      <gl>middle</gl>
+      <gl>stomach</gl>
+   </mel>
+   <mel id="clics368">
+      <gl>wake up</gl>
+      <gl>remember</gl>
+      <gl>stand</gl>
+   </mel>
+   <mel id="clics369">
+      <gl>walk</gl>
+      <gl>come</gl>
+      <gl>drive</gl>
+      <gl>go</gl>
+   </mel>
+   <mel id="clics370">
+      <gl>want</gl>
+      <gl>say</gl>
+   </mel>
+   <mel id="clics371">
+      <gl>warm</gl>
+      <gl>heat</gl>
+   </mel>
+   <mel id="clics372">
+      <gl>wash</gl>
+      <gl>rinse</gl>
+      <gl>swim</gl>
+   </mel>
+   <mel id="clics373">
+      <gl>water</gl>
+      <gl>drink</gl>
+      <gl>lake</gl>
+      <gl>river</gl>
+      <gl>soup</gl>
+      <gl>urine</gl>
+      <gl>year</gl>
+   </mel>
+   <mel id="clics374">
+      <gl>we</gl>
+      <gl>you</gl>
+   </mel>
+   <mel id="clics375">
+      <gl>weave</gl>
+      <gl>grind</gl>
+      <gl>kill</gl>
+      <gl>sew</gl>
+   </mel>
+   <mel id="clics377">
+      <gl>what</gl>
+      <gl>how</gl>
+      <gl>which</gl>
+   </mel>
+   <mel id="clics378">
+      <gl singleton="yes">wheat</gl>
+   </mel>
+   <mel id="clics380">
+      <gl>white</gl>
+      <gl>clean</gl>
+      <gl>cloud</gl>
+   </mel>
+   <mel id="clics381">
+      <gl>who</gl>
+      <gl>how</gl>
+      <gl>what</gl>
+      <gl>which</gl>
+   </mel>
+   <mel id="clics382">
+      <gl>wife</gl>
+      <gl>female</gl>
+      <gl>husband</gl>
+   </mel>
+   <mel id="clics383">
+      <gl>wing</gl>
+      <gl>feather</gl>
+      <gl>shoulder</gl>
+   </mel>
+   <mel id="clics386">
+      <gl>woman</gl>
+      <gl>female</gl>
+      <gl>wife</gl>
+   </mel>
+   <mel id="clics387">
+      <gl>wood</gl>
+      <gl>post</gl>
+   </mel>
+   <mel id="clics390">
+      <gl singleton="yes">worship</gl>
+   </mel>
+   <mel id="clics392">
+      <gl singleton="yes">write</gl>
+   </mel>
+   <mel id="clics394">
+      <gl>yellow</gl>
+      <gl>blue</gl>
+      <gl>gold</gl>
+      <gl>ripe</gl>
+      <gl>white</gl>
+   </mel>
+   <mel id="nf397">
+      <gl pivot="notfound"/>
+   </mel>
+   <mel id="nf398">
+      <gl pivot="notfound">&quot;foutre&quot;</gl>
+   </mel>
+   <mel id="nf399">
+      <gl pivot="notfound">$sel</gl>
+   </mel>
+   <mel id="nf400">
+      <gl pivot="notfound">(? mâle) entier &lt;fich perf&gt;</gl>
+   </mel>
+   <mel id="nf401">
+      <gl pivot="notfound">(?) geler</gl>
+   </mel>
+   <mel id="nf402">
+      <gl pivot="notfound">(?) retenir avec force?</gl>
+   </mel>
+   <mel id="nf403">
+      <gl pivot="notfound">(?bar+ cheveux) &lt;fich perf&gt;</gl>
+   </mel>
+   <mel id="nf404">
+      <gl pivot="notfound">(autour du corps</gl>
+   </mel>
+   <mel id="nf405">
+      <gl pivot="notfound">(half) way</gl>
+   </mel>
+   <mel id="nf406">
+      <gl pivot="notfound">(terme d'injure)</gl>
+   </mel>
+   <mel id="nf407">
+      <gl pivot="notfound">)</gl>
+   </mel>
+   <mel id="nf408">
+      <gl pivot="notfound">. au contraire les légumes sont toujours</gl>
+   </mel>
+   <mel id="nf409">
+      <gl pivot="notfound">1</gl>
+   </mel>
+   <mel id="nf410">
+      <gl pivot="notfound">103</gl>
+   </mel>
+   <mel id="nf411">
+      <gl pivot="notfound">103&gt;</gl>
+   </mel>
+   <mel id="nf412">
+      <gl pivot="notfound">104&gt;</gl>
+   </mel>
+   <mel id="nf413">
+      <gl pivot="notfound">109&gt;</gl>
+   </mel>
+   <mel id="nf414">
+      <gl pivot="notfound">115&gt;</gl>
+   </mel>
+   <mel id="nf415">
+      <gl pivot="notfound">119 on fich perf&gt;</gl>
+   </mel>
+   <mel id="nf416">
+      <gl pivot="notfound">121&gt;</gl>
+   </mel>
+   <mel id="nf417">
+      <gl pivot="notfound">125&gt;</gl>
+   </mel>
+   <mel id="nf418">
+      <gl pivot="notfound">135&gt;</gl>
+   </mel>
+   <mel id="nf419">
+      <gl pivot="notfound">136&gt;</gl>
+   </mel>
+   <mel id="nf420">
+      <gl pivot="notfound">160&gt;</gl>
+   </mel>
+   <mel id="nf421">
+      <gl pivot="notfound">180&gt;</gl>
+   </mel>
+   <mel id="nf422">
+      <gl pivot="notfound">181&gt;</gl>
+   </mel>
+   <mel id="nf423">
+      <gl pivot="notfound">1perere</gl>
+   </mel>
+   <mel id="nf424">
+      <gl pivot="notfound">2pokho</gl>
+   </mel>
+   <mel id="nf425">
+      <gl pivot="notfound">2to-pa</gl>
+   </mel>
+   <mel id="nf426">
+      <gl pivot="notfound">2topa</gl>
+   </mel>
+   <mel id="nf427">
+      <gl pivot="notfound">56</gl>
+   </mel>
+   <mel id="nf428">
+      <gl pivot="notfound">59&gt;</gl>
+   </mel>
+   <mel id="nf429">
+      <gl pivot="notfound">68</gl>
+   </mel>
+   <mel id="nf430">
+      <gl pivot="notfound">68&gt;</gl>
+   </mel>
+   <mel id="nf431">
+      <gl pivot="notfound">9</gl>
+   </mel>
+   <mel id="nf432">
+      <gl pivot="notfound">97&gt;</gl>
+   </mel>
+   <mel id="nf433">
+      <gl pivot="notfound">98</gl>
+   </mel>
+   <mel id="nf434">
+      <gl pivot="notfound">99</gl>
+   </mel>
+   <mel id="nf435">
+      <gl pivot="notfound">&gt;</gl>
+   </mel>
+   <mel id="nf436">
+      <gl pivot="notfound">? en revenant &lt;fich perf</gl>
+   </mel>
+   <mel id="nf437">
+      <gl pivot="notfound">? faire du bruit &lt;de mem&gt;</gl>
+   </mel>
+   <mel id="nf438">
+      <gl pivot="notfound">? fich 70 on fp&gt; &lt;dépenser</gl>
+   </mel>
+   <mel id="nf439">
+      <gl pivot="notfound">? frotter en général</gl>
+   </mel>
+   <mel id="nf440">
+      <gl pivot="notfound">? jeter par terre &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf441">
+      <gl pivot="notfound">? mettre son</gl>
+   </mel>
+   <mel id="nf442">
+      <gl pivot="notfound">? montrer</gl>
+   </mel>
+   <mel id="nf443">
+      <gl pivot="notfound">? mordre légèrement</gl>
+   </mel>
+   <mel id="nf444">
+      <gl pivot="notfound">? se rider</gl>
+   </mel>
+   <mel id="nf445">
+      <gl pivot="notfound">? se réveiller &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf446">
+      <gl pivot="notfound">?bois</gl>
+   </mel>
+   <mel id="nf447">
+      <gl pivot="notfound">?employé comme pronom de la deuxième personne respectueux</gl>
+   </mel>
+   <mel id="nf448">
+      <gl pivot="notfound">?road</gl>
+   </mel>
+   <mel id="nf449">
+      <gl pivot="notfound">?to start doing</gl>
+   </mel>
+   <mel id="nf450">
+      <gl pivot="notfound">?width</gl>
+   </mel>
+   <mel id="nf451">
+      <gl pivot="notfound">a loan</gl>
+   </mel>
+   <mel id="nf452">
+      <gl pivot="notfound">a trap</gl>
+   </mel>
+   <mel id="nf453">
+      <gl pivot="notfound">abandon</gl>
+   </mel>
+   <mel id="nf454">
+      <gl pivot="notfound">abandonner</gl>
+   </mel>
+   <mel id="nf455">
+      <gl pivot="notfound">abcès</gl>
+   </mel>
+   <mel id="nf456">
+      <gl pivot="notfound">abeille</gl>
+   </mel>
+   <mel id="nf457">
+      <gl pivot="notfound">able to do sthg</gl>
+   </mel>
+   <mel id="nf458">
+      <gl pivot="notfound">aboyer</gl>
+   </mel>
+   <mel id="nf459">
+      <gl pivot="notfound">abreuvoir</gl>
+   </mel>
+   <mel id="nf460">
+      <gl pivot="notfound">abri provisoire</gl>
+   </mel>
+   <mel id="nf461">
+      <gl pivot="notfound">abscess</gl>
+   </mel>
+   <mel id="nf462">
+      <gl pivot="notfound">abstain from</gl>
+   </mel>
+   <mel id="nf463">
+      <gl pivot="notfound">accept</gl>
+   </mel>
+   <mel id="nf464">
+      <gl pivot="notfound">accoucher</gl>
+   </mel>
+   <mel id="nf465">
+      <gl pivot="notfound">acheter</gl>
+   </mel>
+   <mel id="nf466">
+      <gl pivot="notfound">achever</gl>
+   </mel>
+   <mel id="nf467">
+      <gl pivot="notfound">acide</gl>
+   </mel>
+   <mel id="nf468">
+      <gl pivot="notfound">acte de plier</gl>
+   </mel>
+   <mel id="nf469">
+      <gl pivot="notfound">adopt</gl>
+   </mel>
+   <mel id="nf470">
+      <gl pivot="notfound">adorn</gl>
+   </mel>
+   <mel id="nf471">
+      <gl pivot="notfound">advenir</gl>
+   </mel>
+   <mel id="nf472">
+      <gl pivot="notfound">affûter</gl>
+   </mel>
+   <mel id="nf473">
+      <gl pivot="notfound">affûté</gl>
+   </mel>
+   <mel id="nf474">
+      <gl pivot="notfound">afraid</gl>
+   </mel>
+   <mel id="nf475">
+      <gl pivot="notfound">agacer</gl>
+   </mel>
+   <mel id="nf476">
+      <gl pivot="notfound">agacé par qqch</gl>
+   </mel>
+   <mel id="nf477">
+      <gl pivot="notfound">aiguille</gl>
+   </mel>
+   <mel id="nf478">
+      <gl pivot="notfound">aile</gl>
+   </mel>
+   <mel id="nf479">
+      <gl pivot="notfound">ailes du nez</gl>
+   </mel>
+   <mel id="nf480">
+      <gl pivot="notfound">aimer</gl>
+   </mel>
+   <mel id="nf481">
+      <gl pivot="notfound">aircraft)</gl>
+   </mel>
+   <mel id="nf482">
+      <gl pivot="notfound">ajouter bout à bout pour rallonger</gl>
+   </mel>
+   <mel id="nf483">
+      <gl pivot="notfound">alight</gl>
+   </mel>
+   <mel id="nf484">
+      <gl pivot="notfound">aller</gl>
+   </mel>
+   <mel id="nf485">
+      <gl pivot="notfound">allow</gl>
+   </mel>
+   <mel id="nf486">
+      <gl pivot="notfound">allumer</gl>
+   </mel>
+   <mel id="nf487">
+      <gl pivot="notfound">allumer une lampe</gl>
+   </mel>
+   <mel id="nf488">
+      <gl pivot="notfound">also</gl>
+   </mel>
+   <mel id="nf489">
+      <gl pivot="notfound">amer</gl>
+   </mel>
+   <mel id="nf490">
+      <gl pivot="notfound">ami</gl>
+   </mel>
+   <mel id="nf491">
+      <gl pivot="notfound">ami rituel</gl>
+   </mel>
+   <mel id="nf492">
+      <gl pivot="notfound">angle</gl>
+   </mel>
+   <mel id="nf493">
+      <gl pivot="notfound">angoissé</gl>
+   </mel>
+   <mel id="nf494">
+      <gl pivot="notfound">animal)</gl>
+   </mel>
+   <mel id="nf495">
+      <gl pivot="notfound">annoyed</gl>
+   </mel>
+   <mel id="nf496">
+      <gl pivot="notfound">année</gl>
+   </mel>
+   <mel id="nf497">
+      <gl pivot="notfound">année du cycle tibétain</gl>
+   </mel>
+   <mel id="nf498">
+      <gl pivot="notfound">anxieux</gl>
+   </mel>
+   <mel id="nf499">
+      <gl pivot="notfound">appear</gl>
+   </mel>
+   <mel id="nf500">
+      <gl pivot="notfound">appeler</gl>
+   </mel>
+   <mel id="nf501">
+      <gl pivot="notfound">apporter</gl>
+   </mel>
+   <mel id="nf502">
+      <gl pivot="notfound">appuyer par terre &lt;voc 74</gl>
+   </mel>
+   <mel id="nf503">
+      <gl pivot="notfound">appuyer ses pieds sur le sol &lt;th 67&gt;</gl>
+   </mel>
+   <mel id="nf504">
+      <gl pivot="notfound">après</gl>
+   </mel>
+   <mel id="nf505">
+      <gl pivot="notfound">arbre</gl>
+   </mel>
+   <mel id="nf506">
+      <gl pivot="notfound">are</gl>
+   </mel>
+   <mel id="nf507">
+      <gl pivot="notfound">argent</gl>
+   </mel>
+   <mel id="nf508">
+      <gl pivot="notfound">arracher</gl>
+   </mel>
+   <mel id="nf509">
+      <gl pivot="notfound">arracher qqch à qqn</gl>
+   </mel>
+   <mel id="nf510">
+      <gl pivot="notfound">arrive here</gl>
+   </mel>
+   <mel id="nf511">
+      <gl pivot="notfound">arrêter</gl>
+   </mel>
+   <mel id="nf512">
+      <gl pivot="notfound">articulation</gl>
+   </mel>
+   <mel id="nf513">
+      <gl pivot="notfound">ascend</gl>
+   </mel>
+   <mel id="nf514">
+      <gl pivot="notfound">ask</gl>
+   </mel>
+   <mel id="nf515">
+      <gl pivot="notfound">ask for</gl>
+   </mel>
+   <mel id="nf516">
+      <gl pivot="notfound">asperger</gl>
+   </mel>
+   <mel id="nf517">
+      <gl pivot="notfound">asperger légèrement</gl>
+   </mel>
+   <mel id="nf518">
+      <gl pivot="notfound">assembly</gl>
+   </mel>
+   <mel id="nf519">
+      <gl pivot="notfound">astiquer</gl>
+   </mel>
+   <mel id="nf520">
+      <gl pivot="notfound">astray</gl>
+   </mel>
+   <mel id="nf521">
+      <gl pivot="notfound">attacher</gl>
+   </mel>
+   <mel id="nf522">
+      <gl pivot="notfound">attacher &lt;th 162&gt;</gl>
+   </mel>
+   <mel id="nf523">
+      <gl pivot="notfound">attacher en un paquet</gl>
+   </mel>
+   <mel id="nf524">
+      <gl pivot="notfound">atteindre</gl>
+   </mel>
+   <mel id="nf525">
+      <gl pivot="notfound">atteindre le but</gl>
+   </mel>
+   <mel id="nf526">
+      <gl pivot="notfound">atteindre ses six ans</gl>
+   </mel>
+   <mel id="nf527">
+      <gl pivot="notfound">attendre</gl>
+   </mel>
+   <mel id="nf528">
+      <gl pivot="notfound">atterrir</gl>
+   </mel>
+   <mel id="nf529">
+      <gl pivot="notfound">attractive</gl>
+   </mel>
+   <mel id="nf530">
+      <gl pivot="notfound">attraper</gl>
+   </mel>
+   <mel id="nf531">
+      <gl pivot="notfound">attrapper une maladie</gl>
+   </mel>
+   <mel id="nf532">
+      <gl pivot="notfound">aussi</gl>
+   </mel>
+   <mel id="nf533">
+      <gl pivot="notfound">avalanche</gl>
+   </mel>
+   <mel id="nf534">
+      <gl pivot="notfound">avalanche &lt;th 43&gt;</gl>
+   </mel>
+   <mel id="nf535">
+      <gl pivot="notfound">avaler</gl>
+   </mel>
+   <mel id="nf536">
+      <gl pivot="notfound">avec</gl>
+   </mel>
+   <mel id="nf537">
+      <gl pivot="notfound">avoir &quot;trouvé le goût de&quot;</gl>
+   </mel>
+   <mel id="nf538">
+      <gl pivot="notfound">avoir des rapports sexuels</gl>
+   </mel>
+   <mel id="nf539">
+      <gl pivot="notfound">avoir du loisir</gl>
+   </mel>
+   <mel id="nf540">
+      <gl pivot="notfound">avoir expérimenté</gl>
+   </mel>
+   <mel id="nf541">
+      <gl pivot="notfound">avoir faim</gl>
+   </mel>
+   <mel id="nf542">
+      <gl pivot="notfound">avoir froid &lt;th 125</gl>
+   </mel>
+   <mel id="nf543">
+      <gl pivot="notfound">avoir froid aux pieds ou aux mains</gl>
+   </mel>
+   <mel id="nf544">
+      <gl pivot="notfound">avoir honte</gl>
+   </mel>
+   <mel id="nf545">
+      <gl pivot="notfound">avoir la force de</gl>
+   </mel>
+   <mel id="nf546">
+      <gl pivot="notfound">avoir le loisir</gl>
+   </mel>
+   <mel id="nf547">
+      <gl pivot="notfound">avoir sommeil</gl>
+   </mel>
+   <mel id="nf548">
+      <gl pivot="notfound">aînée ou cadette)</gl>
+   </mel>
+   <mel id="nf549">
+      <gl pivot="notfound">aïl</gl>
+   </mel>
+   <mel id="nf550">
+      <gl pivot="notfound">backside</gl>
+   </mel>
+   <mel id="nf551">
+      <gl pivot="notfound">badigeonner</gl>
+   </mel>
+   <mel id="nf552">
+      <gl pivot="notfound">baggage)</gl>
+   </mel>
+   <mel id="nf553">
+      <gl pivot="notfound">bague</gl>
+   </mel>
+   <mel id="nf554">
+      <gl pivot="notfound">bague &lt;th 64&gt;</gl>
+   </mel>
+   <mel id="nf555">
+      <gl pivot="notfound">balai</gl>
+   </mel>
+   <mel id="nf556">
+      <gl pivot="notfound">balayer</gl>
+   </mel>
+   <mel id="nf557">
+      <gl pivot="notfound">bamboo tie strips for building</gl>
+   </mel>
+   <mel id="nf558">
+      <gl pivot="notfound">bandeau frontal pour porter</gl>
+   </mel>
+   <mel id="nf559">
+      <gl pivot="notfound">baratter le thé</gl>
+   </mel>
+   <mel id="nf560">
+      <gl pivot="notfound">bargain</gl>
+   </mel>
+   <mel id="nf561">
+      <gl pivot="notfound">barrer une rivière</gl>
+   </mel>
+   <mel id="nf562">
+      <gl pivot="notfound">barter</gl>
+   </mel>
+   <mel id="nf563">
+      <gl pivot="notfound">battre</gl>
+   </mel>
+   <mel id="nf564">
+      <gl pivot="notfound">bear on one's back</gl>
+   </mel>
+   <mel id="nf565">
+      <gl pivot="notfound">beau</gl>
+   </mel>
+   <mel id="nf566">
+      <gl pivot="notfound">beau ou bon</gl>
+   </mel>
+   <mel id="nf567">
+      <gl pivot="notfound">beg</gl>
+   </mel>
+   <mel id="nf568">
+      <gl pivot="notfound">bench</gl>
+   </mel>
+   <mel id="nf569">
+      <gl pivot="notfound">bend down</gl>
+   </mel>
+   <mel id="nf570">
+      <gl pivot="notfound">bercer</gl>
+   </mel>
+   <mel id="nf571">
+      <gl pivot="notfound">beurre</gl>
+   </mel>
+   <mel id="nf572">
+      <gl pivot="notfound">beurre clarifié</gl>
+   </mel>
+   <mel id="nf573">
+      <gl pivot="notfound">bijou ...) et non à remplacer ou rembourser</gl>
+   </mel>
+   <mel id="nf574">
+      <gl pivot="notfound">bind</gl>
+   </mel>
+   <mel id="nf575">
+      <gl pivot="notfound">bird trap</gl>
+   </mel>
+   <mel id="nf576">
+      <gl pivot="notfound">birth</gl>
+   </mel>
+   <mel id="nf577">
+      <gl pivot="notfound">bière</gl>
+   </mel>
+   <mel id="nf578">
+      <gl pivot="notfound">bl 761&gt;</gl>
+   </mel>
+   <mel id="nf579">
+      <gl pivot="notfound">blanc</gl>
+   </mel>
+   <mel id="nf580">
+      <gl pivot="notfound">blanchir</gl>
+   </mel>
+   <mel id="nf581">
+      <gl pivot="notfound">blanchir le riz</gl>
+   </mel>
+   <mel id="nf582">
+      <gl pivot="notfound">blaze</gl>
+   </mel>
+   <mel id="nf583">
+      <gl pivot="notfound">bleed</gl>
+   </mel>
+   <mel id="nf584">
+      <gl pivot="notfound">blesser</gl>
+   </mel>
+   <mel id="nf585">
+      <gl pivot="notfound">bloom</gl>
+   </mel>
+   <mel id="nf586">
+      <gl pivot="notfound">bloquer</gl>
+   </mel>
+   <mel id="nf587">
+      <gl pivot="notfound">bloquer une personne</gl>
+   </mel>
+   <mel id="nf588">
+      <gl pivot="notfound">blow</gl>
+   </mel>
+   <mel id="nf589">
+      <gl pivot="notfound">blé</gl>
+   </mel>
+   <mel id="nf590">
+      <gl pivot="notfound">blé &lt;th 40</gl>
+   </mel>
+   <mel id="nf591">
+      <gl pivot="notfound">boeuf</gl>
+   </mel>
+   <mel id="nf592">
+      <gl pivot="notfound">boil over</gl>
+   </mel>
+   <mel id="nf593">
+      <gl pivot="notfound">boire</gl>
+   </mel>
+   <mel id="nf594">
+      <gl pivot="notfound">boire)</gl>
+   </mel>
+   <mel id="nf595">
+      <gl pivot="notfound">bois</gl>
+   </mel>
+   <mel id="nf596">
+      <gl pivot="notfound">bois à brûler</gl>
+   </mel>
+   <mel id="nf597">
+      <gl pivot="notfound">bon goût</gl>
+   </mel>
+   <mel id="nf598">
+      <gl pivot="notfound">bond friend</gl>
+   </mel>
+   <mel id="nf599">
+      <gl pivot="notfound">born</gl>
+   </mel>
+   <mel id="nf600">
+      <gl pivot="notfound">botte</gl>
+   </mel>
+   <mel id="nf601">
+      <gl pivot="notfound">bouche</gl>
+   </mel>
+   <mel id="nf602">
+      <gl pivot="notfound">boucher</gl>
+   </mel>
+   <mel id="nf603">
+      <gl pivot="notfound">bouder</gl>
+   </mel>
+   <mel id="nf604">
+      <gl pivot="notfound">bouffer</gl>
+   </mel>
+   <mel id="nf605">
+      <gl pivot="notfound">bouillir</gl>
+   </mel>
+   <mel id="nf606">
+      <gl pivot="notfound">bouillir longtemps</gl>
+   </mel>
+   <mel id="nf607">
+      <gl pivot="notfound">bouquet</gl>
+   </mel>
+   <mel id="nf608">
+      <gl pivot="notfound">bovin</gl>
+   </mel>
+   <mel id="nf609">
+      <gl pivot="notfound">brasser</gl>
+   </mel>
+   <mel id="nf610">
+      <gl pivot="notfound">break</gl>
+   </mel>
+   <mel id="nf611">
+      <gl pivot="notfound">breasts</gl>
+   </mel>
+   <mel id="nf612">
+      <gl pivot="notfound">brew</gl>
+   </mel>
+   <mel id="nf613">
+      <gl pivot="notfound">bribe</gl>
+   </mel>
+   <mel id="nf614">
+      <gl pivot="notfound">briller</gl>
+   </mel>
+   <mel id="nf615">
+      <gl pivot="notfound">bring up</gl>
+   </mel>
+   <mel id="nf616">
+      <gl pivot="notfound">briser</gl>
+   </mel>
+   <mel id="nf617">
+      <gl pivot="notfound">brood</gl>
+   </mel>
+   <mel id="nf618">
+      <gl pivot="notfound">broth</gl>
+   </mel>
+   <mel id="nf619">
+      <gl pivot="notfound">bru</gl>
+   </mel>
+   <mel id="nf620">
+      <gl pivot="notfound">brède</gl>
+   </mel>
+   <mel id="nf621">
+      <gl pivot="notfound">brûlant</gl>
+   </mel>
+   <mel id="nf622">
+      <gl pivot="notfound">brûler</gl>
+   </mel>
+   <mel id="nf623">
+      <gl pivot="notfound">bundle of rattan carried as a load</gl>
+   </mel>
+   <mel id="nf624">
+      <gl pivot="notfound">burning place</gl>
+   </mel>
+   <mel id="nf625">
+      <gl pivot="notfound">buse</gl>
+   </mel>
+   <mel id="nf626">
+      <gl pivot="notfound">by</gl>
+   </mel>
+   <mel id="nf627">
+      <gl pivot="notfound">cacher</gl>
+   </mel>
+   <mel id="nf628">
+      <gl pivot="notfound">cage</gl>
+   </mel>
+   <mel id="nf629">
+      <gl pivot="notfound">cane</gl>
+   </mel>
+   <mel id="nf630">
+      <gl pivot="notfound">capable de &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf631">
+      <gl pivot="notfound">carder</gl>
+   </mel>
+   <mel id="nf632">
+      <gl pivot="notfound">caroncule du cou du coq &lt;th 55&gt;</gl>
+   </mel>
+   <mel id="nf633">
+      <gl pivot="notfound">carrying head-strap</gl>
+   </mel>
+   <mel id="nf634">
+      <gl pivot="notfound">carrying headstrap</gl>
+   </mel>
+   <mel id="nf635">
+      <gl pivot="notfound">casser</gl>
+   </mel>
+   <mel id="nf636">
+      <gl pivot="notfound">casser une noix &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf637">
+      <gl pivot="notfound">cast away</gl>
+   </mel>
+   <mel id="nf638">
+      <gl pivot="notfound">causatif indirect: permettre</gl>
+   </mel>
+   <mel id="nf639">
+      <gl pivot="notfound">cause to</gl>
+   </mel>
+   <mel id="nf640">
+      <gl pivot="notfound">caverne</gl>
+   </mel>
+   <mel id="nf641">
+      <gl pivot="notfound">ce</gl>
+   </mel>
+   <mel id="nf642">
+      <gl pivot="notfound">ceci</gl>
+   </mel>
+   <mel id="nf643">
+      <gl pivot="notfound">ceinture</gl>
+   </mel>
+   <mel id="nf644">
+      <gl pivot="notfound">cela</gl>
+   </mel>
+   <mel id="nf645">
+      <gl pivot="notfound">cemetery</gl>
+   </mel>
+   <mel id="nf646">
+      <gl pivot="notfound">cereal)(v.t.)</gl>
+   </mel>
+   <mel id="nf647">
+      <gl pivot="notfound">cerveau</gl>
+   </mel>
+   <mel id="nf648">
+      <gl pivot="notfound">cervelle</gl>
+   </mel>
+   <mel id="nf649">
+      <gl pivot="notfound">cesser</gl>
+   </mel>
+   <mel id="nf650">
+      <gl pivot="notfound">chair d'une noix &lt;th 32&gt;</gl>
+   </mel>
+   <mel id="nf651">
+      <gl pivot="notfound">chaleur</gl>
+   </mel>
+   <mel id="nf652">
+      <gl pivot="notfound">champ</gl>
+   </mel>
+   <mel id="nf653">
+      <gl pivot="notfound">changer</gl>
+   </mel>
+   <mel id="nf654">
+      <gl pivot="notfound">chant</gl>
+   </mel>
+   <mel id="nf655">
+      <gl pivot="notfound">chanter</gl>
+   </mel>
+   <mel id="nf656">
+      <gl pivot="notfound">charge</gl>
+   </mel>
+   <mel id="nf657">
+      <gl pivot="notfound">chasser</gl>
+   </mel>
+   <mel id="nf658">
+      <gl pivot="notfound">chasser devant soi pour conduire qqpart &lt;a86 on fp&gt;</gl>
+   </mel>
+   <mel id="nf659">
+      <gl pivot="notfound">chasser pour faire partir &lt;a86 on fp&gt;</gl>
+   </mel>
+   <mel id="nf660">
+      <gl pivot="notfound">chatouiller &lt;th 149&gt;</gl>
+   </mel>
+   <mel id="nf661">
+      <gl pivot="notfound">chaud</gl>
+   </mel>
+   <mel id="nf662">
+      <gl pivot="notfound">chaume</gl>
+   </mel>
+   <mel id="nf663">
+      <gl pivot="notfound">chemin</gl>
+   </mel>
+   <mel id="nf664">
+      <gl pivot="notfound">chemin &lt;th 169&gt;</gl>
+   </mel>
+   <mel id="nf665">
+      <gl pivot="notfound">chercher</gl>
+   </mel>
+   <mel id="nf666">
+      <gl pivot="notfound">cheval</gl>
+   </mel>
+   <mel id="nf667">
+      <gl pivot="notfound">cheveu &lt;th 41&gt;</gl>
+   </mel>
+   <mel id="nf668">
+      <gl pivot="notfound">chief</gl>
+   </mel>
+   <mel id="nf669">
+      <gl pivot="notfound">chiffre 6</gl>
+   </mel>
+   <mel id="nf670">
+      <gl pivot="notfound">chin &lt;mm&gt;</gl>
+   </mel>
+   <mel id="nf671">
+      <gl pivot="notfound">chirp</gl>
+   </mel>
+   <mel id="nf672">
+      <gl pivot="notfound">choisir</gl>
+   </mel>
+   <mel id="nf673">
+      <gl pivot="notfound">châle</gl>
+   </mel>
+   <mel id="nf674">
+      <gl pivot="notfound">chèvre</gl>
+   </mel>
+   <mel id="nf675">
+      <gl pivot="notfound">ciel</gl>
+   </mel>
+   <mel id="nf676">
+      <gl pivot="notfound">cinq</gl>
+   </mel>
+   <mel id="nf677">
+      <gl pivot="notfound">clairière</gl>
+   </mel>
+   <mel id="nf678">
+      <gl pivot="notfound">clairsemé</gl>
+   </mel>
+   <mel id="nf679">
+      <gl pivot="notfound">claquer</gl>
+   </mel>
+   <mel id="nf680">
+      <gl pivot="notfound">clay water jar</gl>
+   </mel>
+   <mel id="nf681">
+      <gl pivot="notfound">cloche</gl>
+   </mel>
+   <mel id="nf682">
+      <gl pivot="notfound">clothing</gl>
+   </mel>
+   <mel id="nf683">
+      <gl pivot="notfound">coaguler</gl>
+   </mel>
+   <mel id="nf684">
+      <gl pivot="notfound">coax</gl>
+   </mel>
+   <mel id="nf685">
+      <gl pivot="notfound">cochon</gl>
+   </mel>
+   <mel id="nf686">
+      <gl pivot="notfound">coeur</gl>
+   </mel>
+   <mel id="nf687">
+      <gl pivot="notfound">coiffé de</gl>
+   </mel>
+   <mel id="nf688">
+      <gl pivot="notfound">collapse</gl>
+   </mel>
+   <mel id="nf689">
+      <gl pivot="notfound">coller</gl>
+   </mel>
+   <mel id="nf690">
+      <gl pivot="notfound">colorier</gl>
+   </mel>
+   <mel id="nf691">
+      <gl pivot="notfound">colour</gl>
+   </mel>
+   <mel id="nf692">
+      <gl pivot="notfound">comb nettle thread by hand</gl>
+   </mel>
+   <mel id="nf693">
+      <gl pivot="notfound">comb wool</gl>
+   </mel>
+   <mel id="nf694">
+      <gl pivot="notfound">combattre</gl>
+   </mel>
+   <mel id="nf695">
+      <gl pivot="notfound">coming back</gl>
+   </mel>
+   <mel id="nf696">
+      <gl pivot="notfound">commencer</gl>
+   </mel>
+   <mel id="nf697">
+      <gl pivot="notfound">commerce</gl>
+   </mel>
+   <mel id="nf698">
+      <gl pivot="notfound">compagnon</gl>
+   </mel>
+   <mel id="nf699">
+      <gl pivot="notfound">comprendre</gl>
+   </mel>
+   <mel id="nf700">
+      <gl pivot="notfound">compress</gl>
+   </mel>
+   <mel id="nf701">
+      <gl pivot="notfound">compter</gl>
+   </mel>
+   <mel id="nf702">
+      <gl pivot="notfound">compter &lt;th 59&gt;</gl>
+   </mel>
+   <mel id="nf703">
+      <gl pivot="notfound">conceal</gl>
+   </mel>
+   <mel id="nf704">
+      <gl pivot="notfound">conduire les bêtes à grande vitesse</gl>
+   </mel>
+   <mel id="nf705">
+      <gl pivot="notfound">conseiller</gl>
+   </mel>
+   <mel id="nf706">
+      <gl pivot="notfound">consommer</gl>
+   </mel>
+   <mel id="nf707">
+      <gl pivot="notfound">construire</gl>
+   </mel>
+   <mel id="nf708">
+      <gl pivot="notfound">contempler</gl>
+   </mel>
+   <mel id="nf709">
+      <gl pivot="notfound">content</gl>
+   </mel>
+   <mel id="nf710">
+      <gl pivot="notfound">contest</gl>
+   </mel>
+   <mel id="nf711">
+      <gl pivot="notfound">contrarié &lt;a86&gt;</gl>
+   </mel>
+   <mel id="nf712">
+      <gl pivot="notfound">contribuer&gt;</gl>
+   </mel>
+   <mel id="nf713">
+      <gl pivot="notfound">convenir</gl>
+   </mel>
+   <mel id="nf714">
+      <gl pivot="notfound">cook</gl>
+   </mel>
+   <mel id="nf715">
+      <gl pivot="notfound">cooked vegetable</gl>
+   </mel>
+   <mel id="nf716">
+      <gl pivot="notfound">cool</gl>
+   </mel>
+   <mel id="nf717">
+      <gl pivot="notfound">corde</gl>
+   </mel>
+   <mel id="nf718">
+      <gl pivot="notfound">cordons) &lt;a86 in voc 74&gt;</gl>
+   </mel>
+   <mel id="nf719">
+      <gl pivot="notfound">corne</gl>
+   </mel>
+   <mel id="nf720">
+      <gl pivot="notfound">corps</gl>
+   </mel>
+   <mel id="nf721">
+      <gl pivot="notfound">cou</gl>
+   </mel>
+   <mel id="nf722">
+      <gl pivot="notfound">coucher</gl>
+   </mel>
+   <mel id="nf723">
+      <gl pivot="notfound">coudre</gl>
+   </mel>
+   <mel id="nf724">
+      <gl pivot="notfound">coudée</gl>
+   </mel>
+   <mel id="nf725">
+      <gl pivot="notfound">couler</gl>
+   </mel>
+   <mel id="nf726">
+      <gl pivot="notfound">coupant</gl>
+   </mel>
+   <mel id="nf727">
+      <gl pivot="notfound">couper</gl>
+   </mel>
+   <mel id="nf728">
+      <gl pivot="notfound">couper au volant ou à la sape &lt;a86&gt;</gl>
+   </mel>
+   <mel id="nf729">
+      <gl pivot="notfound">couper en bottes à la faucille &lt;herbe</gl>
+   </mel>
+   <mel id="nf730">
+      <gl pivot="notfound">couper lancé</gl>
+   </mel>
+   <mel id="nf731">
+      <gl pivot="notfound">courrir</gl>
+   </mel>
+   <mel id="nf732">
+      <gl pivot="notfound">courroie pour porter le tambour</gl>
+   </mel>
+   <mel id="nf733">
+      <gl pivot="notfound">couver</gl>
+   </mel>
+   <mel id="nf734">
+      <gl pivot="notfound">couver &lt;ani 73&gt;</gl>
+   </mel>
+   <mel id="nf735">
+      <gl pivot="notfound">couvercle</gl>
+   </mel>
+   <mel id="nf736">
+      <gl pivot="notfound">couvrir</gl>
+   </mel>
+   <mel id="nf737">
+      <gl pivot="notfound">cow shed</gl>
+   </mel>
+   <mel id="nf738">
+      <gl pivot="notfound">cox ear lobes</gl>
+   </mel>
+   <mel id="nf739">
+      <gl pivot="notfound">coxcomb</gl>
+   </mel>
+   <mel id="nf740">
+      <gl pivot="notfound">crack</gl>
+   </mel>
+   <mel id="nf741">
+      <gl pivot="notfound">creep</gl>
+   </mel>
+   <mel id="nf742">
+      <gl pivot="notfound">creux</gl>
+   </mel>
+   <mel id="nf743">
+      <gl pivot="notfound">crier</gl>
+   </mel>
+   <mel id="nf744">
+      <gl pivot="notfound">croc</gl>
+   </mel>
+   <mel id="nf745">
+      <gl pivot="notfound">croire</gl>
+   </mel>
+   <mel id="nf746">
+      <gl pivot="notfound">croire que &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf747">
+      <gl pivot="notfound">croiser</gl>
+   </mel>
+   <mel id="nf748">
+      <gl pivot="notfound">créer &lt;faire&gt;</gl>
+   </mel>
+   <mel id="nf749">
+      <gl pivot="notfound">cubit</gl>
+   </mel>
+   <mel id="nf750">
+      <gl pivot="notfound">cueillir</gl>
+   </mel>
+   <mel id="nf751">
+      <gl pivot="notfound">cuir</gl>
+   </mel>
+   <mel id="nf752">
+      <gl pivot="notfound">cuire</gl>
+   </mel>
+   <mel id="nf753">
+      <gl pivot="notfound">cuire &lt;fich perf</gl>
+   </mel>
+   <mel id="nf754">
+      <gl pivot="notfound">cuire à l'étouffée</gl>
+   </mel>
+   <mel id="nf755">
+      <gl pivot="notfound">cuit</gl>
+   </mel>
+   <mel id="nf756">
+      <gl pivot="notfound">curved</gl>
+   </mel>
+   <mel id="nf757">
+      <gl pivot="notfound">cut hair</gl>
+   </mel>
+   <mel id="nf758">
+      <gl pivot="notfound">cut up</gl>
+   </mel>
+   <mel id="nf759">
+      <gl pivot="notfound">céréale cuite à l'eau: prototypiquement le riz</gl>
+   </mel>
+   <mel id="nf760">
+      <gl pivot="notfound">côte</gl>
+   </mel>
+   <mel id="nf761">
+      <gl pivot="notfound">d.in law</gl>
+   </mel>
+   <mel id="nf762">
+      <gl pivot="notfound">dab</gl>
+   </mel>
+   <mel id="nf763">
+      <gl pivot="notfound">dal</gl>
+   </mel>
+   <mel id="nf764">
+      <gl pivot="notfound">dance(r)</gl>
+   </mel>
+   <mel id="nf765">
+      <gl pivot="notfound">dans</gl>
+   </mel>
+   <mel id="nf766">
+      <gl pivot="notfound">danser</gl>
+   </mel>
+   <mel id="nf767">
+      <gl pivot="notfound">daylight</gl>
+   </mel>
+   <mel id="nf768">
+      <gl pivot="notfound">de nouveau &lt;th 62&gt;</gl>
+   </mel>
+   <mel id="nf769">
+      <gl pivot="notfound">de quelle sorte ?</gl>
+   </mel>
+   <mel id="nf770">
+      <gl pivot="notfound">defeated</gl>
+   </mel>
+   <mel id="nf771">
+      <gl pivot="notfound">dent</gl>
+   </mel>
+   <mel id="nf772">
+      <gl pivot="notfound">derrière</gl>
+   </mel>
+   <mel id="nf773">
+      <gl pivot="notfound">des légumes qu'on cuit dans un peu d'huile comme des pdt au gras</gl>
+   </mel>
+   <mel id="nf774">
+      <gl pivot="notfound">des mains) &lt;voc vb</gl>
+   </mel>
+   <mel id="nf775">
+      <gl pivot="notfound">descend</gl>
+   </mel>
+   <mel id="nf776">
+      <gl pivot="notfound">descendre</gl>
+   </mel>
+   <mel id="nf777">
+      <gl pivot="notfound">deuil</gl>
+   </mel>
+   <mel id="nf778">
+      <gl pivot="notfound">deux</gl>
+   </mel>
+   <mel id="nf779">
+      <gl pivot="notfound">deux jours</gl>
+   </mel>
+   <mel id="nf780">
+      <gl pivot="notfound">devant</gl>
+   </mel>
+   <mel id="nf781">
+      <gl pivot="notfound">devenir</gl>
+   </mel>
+   <mel id="nf782">
+      <gl pivot="notfound">dhoti</gl>
+   </mel>
+   <mel id="nf783">
+      <gl pivot="notfound">dieu</gl>
+   </mel>
+   <mel id="nf784">
+      <gl pivot="notfound">dieu souterrain</gl>
+   </mel>
+   <mel id="nf785">
+      <gl pivot="notfound">dilute</gl>
+   </mel>
+   <mel id="nf786">
+      <gl pivot="notfound">dire</gl>
+   </mel>
+   <mel id="nf787">
+      <gl pivot="notfound">discard</gl>
+   </mel>
+   <mel id="nf788">
+      <gl pivot="notfound">disgust</gl>
+   </mel>
+   <mel id="nf789">
+      <gl pivot="notfound">dishes</gl>
+   </mel>
+   <mel id="nf790">
+      <gl pivot="notfound">dispute</gl>
+   </mel>
+   <mel id="nf791">
+      <gl pivot="notfound">dissoudre</gl>
+   </mel>
+   <mel id="nf792">
+      <gl pivot="notfound">distribute</gl>
+   </mel>
+   <mel id="nf793">
+      <gl pivot="notfound">divorcer</gl>
+   </mel>
+   <mel id="nf794">
+      <gl pivot="notfound">dix</gl>
+   </mel>
+   <mel id="nf795">
+      <gl pivot="notfound">dix &lt;th 34&gt;</gl>
+   </mel>
+   <mel id="nf796">
+      <gl pivot="notfound">doigt</gl>
+   </mel>
+   <mel id="nf797">
+      <gl pivot="notfound">donner</gl>
+   </mel>
+   <mel id="nf798">
+      <gl pivot="notfound">donner un avis</gl>
+   </mel>
+   <mel id="nf799">
+      <gl pivot="notfound">dormir</gl>
+   </mel>
+   <mel id="nf800">
+      <gl pivot="notfound">dos</gl>
+   </mel>
+   <mel id="nf801">
+      <gl pivot="notfound">draw</gl>
+   </mel>
+   <mel id="nf802">
+      <gl pivot="notfound">draw up</gl>
+   </mel>
+   <mel id="nf803">
+      <gl pivot="notfound">dreadful</gl>
+   </mel>
+   <mel id="nf804">
+      <gl pivot="notfound">drunken</gl>
+   </mel>
+   <mel id="nf805">
+      <gl pivot="notfound">dry-ferment</gl>
+   </mel>
+   <mel id="nf806">
+      <gl pivot="notfound">dry-fry</gl>
+   </mel>
+   <mel id="nf807">
+      <gl pivot="notfound">dryferment</gl>
+   </mel>
+   <mel id="nf808">
+      <gl pivot="notfound">dryfry</gl>
+   </mel>
+   <mel id="nf809">
+      <gl pivot="notfound">du poids sur</gl>
+   </mel>
+   <mel id="nf810">
+      <gl pivot="notfound">dur</gl>
+   </mel>
+   <mel id="nf811">
+      <gl pivot="notfound">durable</gl>
+   </mel>
+   <mel id="nf812">
+      <gl pivot="notfound">débordement</gl>
+   </mel>
+   <mel id="nf813">
+      <gl pivot="notfound">déborder</gl>
+   </mel>
+   <mel id="nf814">
+      <gl pivot="notfound">déchirer</gl>
+   </mel>
+   <mel id="nf815">
+      <gl pivot="notfound">décorer</gl>
+   </mel>
+   <mel id="nf816">
+      <gl pivot="notfound">découdre</gl>
+   </mel>
+   <mel id="nf817">
+      <gl pivot="notfound">découvrir une maison</gl>
+   </mel>
+   <mel id="nf818">
+      <gl pivot="notfound">défricher</gl>
+   </mel>
+   <mel id="nf819">
+      <gl pivot="notfound">déféquer</gl>
+   </mel>
+   <mel id="nf820">
+      <gl pivot="notfound">dégager</gl>
+   </mel>
+   <mel id="nf821">
+      <gl pivot="notfound">dégoûté</gl>
+   </mel>
+   <mel id="nf822">
+      <gl pivot="notfound">démanger</gl>
+   </mel>
+   <mel id="nf823">
+      <gl pivot="notfound">démolir</gl>
+   </mel>
+   <mel id="nf824">
+      <gl pivot="notfound">démonter un abri</gl>
+   </mel>
+   <mel id="nf825">
+      <gl pivot="notfound">déménager</gl>
+   </mel>
+   <mel id="nf826">
+      <gl pivot="notfound">dépasser</gl>
+   </mel>
+   <mel id="nf827">
+      <gl pivot="notfound">dépiauter</gl>
+   </mel>
+   <mel id="nf828">
+      <gl pivot="notfound">déplacer</gl>
+   </mel>
+   <mel id="nf829">
+      <gl pivot="notfound">déployer</gl>
+   </mel>
+   <mel id="nf830">
+      <gl pivot="notfound">déposer</gl>
+   </mel>
+   <mel id="nf831">
+      <gl pivot="notfound">dépression</gl>
+   </mel>
+   <mel id="nf832">
+      <gl pivot="notfound">déprimé &lt;mm d'après il3&gt;</gl>
+   </mel>
+   <mel id="nf833">
+      <gl pivot="notfound">désirer</gl>
+   </mel>
+   <mel id="nf834">
+      <gl pivot="notfound">dévorer &lt;d'après eng. gobble&gt;</gl>
+   </mel>
+   <mel id="nf835">
+      <gl pivot="notfound">ear of grain</gl>
+   </mel>
+   <mel id="nf836">
+      <gl pivot="notfound">earth</gl>
+   </mel>
+   <mel id="nf837">
+      <gl pivot="notfound">earth clod</gl>
+   </mel>
+   <mel id="nf838">
+      <gl pivot="notfound">eat sample</gl>
+   </mel>
+   <mel id="nf839">
+      <gl pivot="notfound">eau</gl>
+   </mel>
+   <mel id="nf840">
+      <gl pivot="notfound">eau &lt;th 40</gl>
+   </mel>
+   <mel id="nf841">
+      <gl pivot="notfound">effacer au couteau &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf842">
+      <gl pivot="notfound">elle</gl>
+   </mel>
+   <mel id="nf843">
+      <gl pivot="notfound">emporter</gl>
+   </mel>
+   <mel id="nf844">
+      <gl pivot="notfound">emprunter</gl>
+   </mel>
+   <mel id="nf845">
+      <gl pivot="notfound">emprunter &lt;a86 in voc 74&gt;</gl>
+   </mel>
+   <mel id="nf846">
+      <gl pivot="notfound">emprunter qqch à rendre</gl>
+   </mel>
+   <mel id="nf847">
+      <gl pivot="notfound">en</gl>
+   </mel>
+   <mel id="nf848">
+      <gl pivot="notfound">en amont</gl>
+   </mel>
+   <mel id="nf849">
+      <gl pivot="notfound">en aval</gl>
+   </mel>
+   <mel id="nf850">
+      <gl pivot="notfound">en poudre &lt;fin&gt;</gl>
+   </mel>
+   <mel id="nf851">
+      <gl pivot="notfound">en retard</gl>
+   </mel>
+   <mel id="nf852">
+      <gl pivot="notfound">en transe</gl>
+   </mel>
+   <mel id="nf853">
+      <gl pivot="notfound">encens</gl>
+   </mel>
+   <mel id="nf854">
+      <gl pivot="notfound">encens de genévrier</gl>
+   </mel>
+   <mel id="nf855">
+      <gl pivot="notfound">enchasser</gl>
+   </mel>
+   <mel id="nf856">
+      <gl pivot="notfound">encorner</gl>
+   </mel>
+   <mel id="nf857">
+      <gl pivot="notfound">end</gl>
+   </mel>
+   <mel id="nf858">
+      <gl pivot="notfound">enduire</gl>
+   </mel>
+   <mel id="nf859">
+      <gl pivot="notfound">enfermer</gl>
+   </mel>
+   <mel id="nf860">
+      <gl pivot="notfound">enfiler</gl>
+   </mel>
+   <mel id="nf861">
+      <gl pivot="notfound">enfler</gl>
+   </mel>
+   <mel id="nf862">
+      <gl pivot="notfound">enfler &lt;th 52</gl>
+   </mel>
+   <mel id="nf863">
+      <gl pivot="notfound">enfoncer en forçant &lt;ani 73 on fich perf&gt;</gl>
+   </mel>
+   <mel id="nf864">
+      <gl pivot="notfound">engourdi</gl>
+   </mel>
+   <mel id="nf865">
+      <gl pivot="notfound">enjamber</gl>
+   </mel>
+   <mel id="nf866">
+      <gl pivot="notfound">enrouler</gl>
+   </mel>
+   <mel id="nf867">
+      <gl pivot="notfound">enrouler &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf868">
+      <gl pivot="notfound">enrouler autour du cou &lt;porter un vêtement&gt;</gl>
+   </mel>
+   <mel id="nf869">
+      <gl pivot="notfound">enseigner</gl>
+   </mel>
+   <mel id="nf870">
+      <gl pivot="notfound">ensemble</gl>
+   </mel>
+   <mel id="nf871">
+      <gl pivot="notfound">entasser en abondance</gl>
+   </mel>
+   <mel id="nf872">
+      <gl pivot="notfound">entasser pour faire fermenter</gl>
+   </mel>
+   <mel id="nf873">
+      <gl pivot="notfound">entendre</gl>
+   </mel>
+   <mel id="nf874">
+      <gl pivot="notfound">entier &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf875">
+      <gl pivot="notfound">entrailles</gl>
+   </mel>
+   <mel id="nf876">
+      <gl pivot="notfound">entre son corps et un mur etc quand on veut rentrer les poulets pour la nuit)</gl>
+   </mel>
+   <mel id="nf877">
+      <gl pivot="notfound">entrer</gl>
+   </mel>
+   <mel id="nf878">
+      <gl pivot="notfound">envelopper</gl>
+   </mel>
+   <mel id="nf879">
+      <gl pivot="notfound">envoyer</gl>
+   </mel>
+   <mel id="nf880">
+      <gl pivot="notfound">ergatif</gl>
+   </mel>
+   <mel id="nf881">
+      <gl pivot="notfound">esprit d'un mort &lt;mn258&gt;</gl>
+   </mel>
+   <mel id="nf882">
+      <gl pivot="notfound">essuyer</gl>
+   </mel>
+   <mel id="nf883">
+      <gl pivot="notfound">euphémisme pour mari</gl>
+   </mel>
+   <mel id="nf884">
+      <gl pivot="notfound">even</gl>
+   </mel>
+   <mel id="nf885">
+      <gl pivot="notfound">examiner</gl>
+   </mel>
+   <mel id="nf886">
+      <gl pivot="notfound">examiner &lt;mv 224&gt;</gl>
+   </mel>
+   <mel id="nf887">
+      <gl pivot="notfound">exasperated</gl>
+   </mel>
+   <mel id="nf888">
+      <gl pivot="notfound">excréments</gl>
+   </mel>
+   <mel id="nf889">
+      <gl pivot="notfound">excréments &lt;th 32</gl>
+   </mel>
+   <mel id="nf890">
+      <gl pivot="notfound">experienced</gl>
+   </mel>
+   <mel id="nf891">
+      <gl pivot="notfound">exploser</gl>
+   </mel>
+   <mel id="nf892">
+      <gl pivot="notfound">exprimer : presser</gl>
+   </mel>
+   <mel id="nf893">
+      <gl pivot="notfound">exterior</gl>
+   </mel>
+   <mel id="nf894">
+      <gl pivot="notfound">exterminé</gl>
+   </mel>
+   <mel id="nf895">
+      <gl pivot="notfound">extraire</gl>
+   </mel>
+   <mel id="nf896">
+      <gl pivot="notfound">eyeball</gl>
+   </mel>
+   <mel id="nf897">
+      <gl pivot="notfound">fabriquer</gl>
+   </mel>
+   <mel id="nf898">
+      <gl pivot="notfound">faded</gl>
+   </mel>
+   <mel id="nf899">
+      <gl pivot="notfound">fagot</gl>
+   </mel>
+   <mel id="nf900">
+      <gl pivot="notfound">faire attention</gl>
+   </mel>
+   <mel id="nf901">
+      <gl pivot="notfound">faire bouillir</gl>
+   </mel>
+   <mel id="nf902">
+      <gl pivot="notfound">faire chauffer</gl>
+   </mel>
+   <mel id="nf903">
+      <gl pivot="notfound">faire chauffer un récipient à sec avant d'y mettre des aliments à cuire</gl>
+   </mel>
+   <mel id="nf904">
+      <gl pivot="notfound">faire cuire</gl>
+   </mel>
+   <mel id="nf905">
+      <gl pivot="notfound">faire cuire &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf906">
+      <gl pivot="notfound">faire cuire des galettes</gl>
+   </mel>
+   <mel id="nf907">
+      <gl pivot="notfound">faire cuire à l'eau</gl>
+   </mel>
+   <mel id="nf908">
+      <gl pivot="notfound">faire de petites dépenses pour une cérémonie &lt;voc vb</gl>
+   </mel>
+   <mel id="nf909">
+      <gl pivot="notfound">faire des copeaux &lt;voc vb</gl>
+   </mel>
+   <mel id="nf910">
+      <gl pivot="notfound">faire des petits</gl>
+   </mel>
+   <mel id="nf911">
+      <gl pivot="notfound">faire des remontrances</gl>
+   </mel>
+   <mel id="nf912">
+      <gl pivot="notfound">faire du bruit</gl>
+   </mel>
+   <mel id="nf913">
+      <gl pivot="notfound">faire frire</gl>
+   </mel>
+   <mel id="nf914">
+      <gl pivot="notfound">faire la raie des cheveux</gl>
+   </mel>
+   <mel id="nf915">
+      <gl pivot="notfound">faire le tour</gl>
+   </mel>
+   <mel id="nf916">
+      <gl pivot="notfound">faire les plis du sari &lt;plisser&gt;</gl>
+   </mel>
+   <mel id="nf917">
+      <gl pivot="notfound">faire mal</gl>
+   </mel>
+   <mel id="nf918">
+      <gl pivot="notfound">faire mal &lt;a86 on fich perf&gt;</gl>
+   </mel>
+   <mel id="nf919">
+      <gl pivot="notfound">faire osciller</gl>
+   </mel>
+   <mel id="nf920">
+      <gl pivot="notfound">faire paître</gl>
+   </mel>
+   <mel id="nf921">
+      <gl pivot="notfound">faire paître &lt;th 51</gl>
+   </mel>
+   <mel id="nf922">
+      <gl pivot="notfound">faire porter le poids du corps sur &lt;voc vb</gl>
+   </mel>
+   <mel id="nf923">
+      <gl pivot="notfound">faire sortir une forme</gl>
+   </mel>
+   <mel id="nf924">
+      <gl pivot="notfound">faire sécher</gl>
+   </mel>
+   <mel id="nf925">
+      <gl pivot="notfound">faire tourner</gl>
+   </mel>
+   <mel id="nf926">
+      <gl pivot="notfound">faire une résurgence</gl>
+   </mel>
+   <mel id="nf927">
+      <gl pivot="notfound">faisander</gl>
+   </mel>
+   <mel id="nf928">
+      <gl pivot="notfound">falaise</gl>
+   </mel>
+   <mel id="nf929">
+      <gl pivot="notfound">fall down</gl>
+   </mel>
+   <mel id="nf930">
+      <gl pivot="notfound">fall over</gl>
+   </mel>
+   <mel id="nf931">
+      <gl pivot="notfound">falloir</gl>
+   </mel>
+   <mel id="nf932">
+      <gl pivot="notfound">faner</gl>
+   </mel>
+   <mel id="nf933">
+      <gl pivot="notfound">fantôme</gl>
+   </mel>
+   <mel id="nf934">
+      <gl pivot="notfound">farine</gl>
+   </mel>
+   <mel id="nf935">
+      <gl pivot="notfound">farm laborer</gl>
+   </mel>
+   <mel id="nf936">
+      <gl pivot="notfound">fat</gl>
+   </mel>
+   <mel id="nf937">
+      <gl pivot="notfound">fatigué</gl>
+   </mel>
+   <mel id="nf938">
+      <gl pivot="notfound">fear</gl>
+   </mel>
+   <mel id="nf939">
+      <gl pivot="notfound">fearful</gl>
+   </mel>
+   <mel id="nf940">
+      <gl pivot="notfound">feces</gl>
+   </mel>
+   <mel id="nf941">
+      <gl pivot="notfound">fell</gl>
+   </mel>
+   <mel id="nf942">
+      <gl pivot="notfound">femme</gl>
+   </mel>
+   <mel id="nf943">
+      <gl pivot="notfound">fendre</gl>
+   </mel>
+   <mel id="nf944">
+      <gl pivot="notfound">fer</gl>
+   </mel>
+   <mel id="nf945">
+      <gl pivot="notfound">fermenter</gl>
+   </mel>
+   <mel id="nf946">
+      <gl pivot="notfound">fermer</gl>
+   </mel>
+   <mel id="nf947">
+      <gl pivot="notfound">fermer les yeux</gl>
+   </mel>
+   <mel id="nf948">
+      <gl pivot="notfound">ferry</gl>
+   </mel>
+   <mel id="nf949">
+      <gl pivot="notfound">fetid</gl>
+   </mel>
+   <mel id="nf950">
+      <gl pivot="notfound">feu</gl>
+   </mel>
+   <mel id="nf951">
+      <gl pivot="notfound">feuille</gl>
+   </mel>
+   <mel id="nf952">
+      <gl pivot="notfound">feuille d'arbre</gl>
+   </mel>
+   <mel id="nf953">
+      <gl pivot="notfound">fich perf&gt;</gl>
+   </mel>
+   <mel id="nf954">
+      <gl pivot="notfound">fich perf&gt; casser</gl>
+   </mel>
+   <mel id="nf955">
+      <gl pivot="notfound">ficher</gl>
+   </mel>
+   <mel id="nf956">
+      <gl pivot="notfound">fiel</gl>
+   </mel>
+   <mel id="nf957">
+      <gl pivot="notfound">fil</gl>
+   </mel>
+   <mel id="nf958">
+      <gl pivot="notfound">fil à coudre &lt;th 180&gt;</gl>
+   </mel>
+   <mel id="nf959">
+      <gl pivot="notfound">filer</gl>
+   </mel>
+   <mel id="nf960">
+      <gl pivot="notfound">fils</gl>
+   </mel>
+   <mel id="nf961">
+      <gl pivot="notfound">filth</gl>
+   </mel>
+   <mel id="nf962">
+      <gl pivot="notfound">filtrer</gl>
+   </mel>
+   <mel id="nf963">
+      <gl pivot="notfound">filtrer &lt;th 101 on fich perf</gl>
+   </mel>
+   <mel id="nf964">
+      <gl pivot="notfound">fine</gl>
+   </mel>
+   <mel id="nf965">
+      <gl pivot="notfound">finir</gl>
+   </mel>
+   <mel id="nf966">
+      <gl pivot="notfound">finished</gl>
+   </mel>
+   <mel id="nf967">
+      <gl pivot="notfound">fire tongs</gl>
+   </mel>
+   <mel id="nf968">
+      <gl pivot="notfound">flamber</gl>
+   </mel>
+   <mel id="nf969">
+      <gl pivot="notfound">flamme</gl>
+   </mel>
+   <mel id="nf970">
+      <gl pivot="notfound">flanc boisé de montagne</gl>
+   </mel>
+   <mel id="nf971">
+      <gl pivot="notfound">flatten dough</gl>
+   </mel>
+   <mel id="nf972">
+      <gl pivot="notfound">fleurir</gl>
+   </mel>
+   <mel id="nf973">
+      <gl pivot="notfound">fleuve</gl>
+   </mel>
+   <mel id="nf974">
+      <gl pivot="notfound">flood</gl>
+   </mel>
+   <mel id="nf975">
+      <gl pivot="notfound">fly</gl>
+   </mel>
+   <mel id="nf976">
+      <gl pivot="notfound">flèche</gl>
+   </mel>
+   <mel id="nf977">
+      <gl pivot="notfound">foie</gl>
+   </mel>
+   <mel id="nf978">
+      <gl pivot="notfound">fonder un foyer &lt;fich perf</gl>
+   </mel>
+   <mel id="nf979">
+      <gl pivot="notfound">force</gl>
+   </mel>
+   <mel id="nf980">
+      <gl pivot="notfound">forsake</gl>
+   </mel>
+   <mel id="nf981">
+      <gl pivot="notfound">forêt</gl>
+   </mel>
+   <mel id="nf982">
+      <gl pivot="notfound">fossette</gl>
+   </mel>
+   <mel id="nf983">
+      <gl pivot="notfound">foster</gl>
+   </mel>
+   <mel id="nf984">
+      <gl pivot="notfound">fou</gl>
+   </mel>
+   <mel id="nf985">
+      <gl pivot="notfound">fouiller avec le groin</gl>
+   </mel>
+   <mel id="nf986">
+      <gl pivot="notfound">fouler</gl>
+   </mel>
+   <mel id="nf987">
+      <gl pivot="notfound">fourreau</gl>
+   </mel>
+   <mel id="nf988">
+      <gl pivot="notfound">franchir</gl>
+   </mel>
+   <mel id="nf989">
+      <gl pivot="notfound">frapper</gl>
+   </mel>
+   <mel id="nf990">
+      <gl pivot="notfound">frightened</gl>
+   </mel>
+   <mel id="nf991">
+      <gl pivot="notfound">frire</gl>
+   </mel>
+   <mel id="nf992">
+      <gl pivot="notfound">froid</gl>
+   </mel>
+   <mel id="nf993">
+      <gl pivot="notfound">froid et humide</gl>
+   </mel>
+   <mel id="nf994">
+      <gl pivot="notfound">front</gl>
+   </mel>
+   <mel id="nf995">
+      <gl pivot="notfound">frère adopté</gl>
+   </mel>
+   <mel id="nf996">
+      <gl pivot="notfound">fuir</gl>
+   </mel>
+   <mel id="nf997">
+      <gl pivot="notfound">fumier</gl>
+   </mel>
+   <mel id="nf998">
+      <gl pivot="notfound">funny</gl>
+   </mel>
+   <mel id="nf999">
+      <gl pivot="notfound">gagner</gl>
+   </mel>
+   <mel id="nf1000">
+      <gl pivot="notfound">gagner de l'argent</gl>
+   </mel>
+   <mel id="nf1001">
+      <gl pivot="notfound">garder les yeux fixes</gl>
+   </mel>
+   <mel id="nf1002">
+      <gl pivot="notfound">gather up</gl>
+   </mel>
+   <mel id="nf1003">
+      <gl pivot="notfound">gaz)</gl>
+   </mel>
+   <mel id="nf1004">
+      <gl pivot="notfound">gencive</gl>
+   </mel>
+   <mel id="nf1005">
+      <gl pivot="notfound">gendre</gl>
+   </mel>
+   <mel id="nf1006">
+      <gl pivot="notfound">genre d'épinards</gl>
+   </mel>
+   <mel id="nf1007">
+      <gl pivot="notfound">gerbe</gl>
+   </mel>
+   <mel id="nf1008">
+      <gl pivot="notfound">germer</gl>
+   </mel>
+   <mel id="nf1009">
+      <gl pivot="notfound">get up</gl>
+   </mel>
+   <mel id="nf1010">
+      <gl pivot="notfound">give in marriage</gl>
+   </mel>
+   <mel id="nf1011">
+      <gl pivot="notfound">give up</gl>
+   </mel>
+   <mel id="nf1012">
+      <gl pivot="notfound">glisser</gl>
+   </mel>
+   <mel id="nf1013">
+      <gl pivot="notfound">gonfler au feu</gl>
+   </mel>
+   <mel id="nf1014">
+      <gl pivot="notfound">good day</gl>
+   </mel>
+   <mel id="nf1015">
+      <gl pivot="notfound">goûter</gl>
+   </mel>
+   <mel id="nf1016">
+      <gl pivot="notfound">graine</gl>
+   </mel>
+   <mel id="nf1017">
+      <gl pivot="notfound">graisse</gl>
+   </mel>
+   <mel id="nf1018">
+      <gl pivot="notfound">graisse &lt;th 52</gl>
+   </mel>
+   <mel id="nf1019">
+      <gl pivot="notfound">grand mother</gl>
+   </mel>
+   <mel id="nf1020">
+      <gl pivot="notfound">grand-mère</gl>
+   </mel>
+   <mel id="nf1021">
+      <gl pivot="notfound">grand-son</gl>
+   </mel>
+   <mel id="nf1022">
+      <gl pivot="notfound">grandes plumes de l'aile</gl>
+   </mel>
+   <mel id="nf1023">
+      <gl pivot="notfound">grandmama</gl>
+   </mel>
+   <mel id="nf1024">
+      <gl pivot="notfound">grandmère</gl>
+   </mel>
+   <mel id="nf1025">
+      <gl pivot="notfound">grate</gl>
+   </mel>
+   <mel id="nf1026">
+      <gl pivot="notfound">gratter</gl>
+   </mel>
+   <mel id="nf1027">
+      <gl pivot="notfound">gratter au couteau pour effacer &lt;th 64 in fich perf</gl>
+   </mel>
+   <mel id="nf1028">
+      <gl pivot="notfound">gratter le sol avec les pieds</gl>
+   </mel>
+   <mel id="nf1029">
+      <gl pivot="notfound">gratter pour ôter</gl>
+   </mel>
+   <mel id="nf1030">
+      <gl pivot="notfound">grease</gl>
+   </mel>
+   <mel id="nf1031">
+      <gl pivot="notfound">green vegetable</gl>
+   </mel>
+   <mel id="nf1032">
+      <gl pivot="notfound">grenouille</gl>
+   </mel>
+   <mel id="nf1033">
+      <gl pivot="notfound">griffer</gl>
+   </mel>
+   <mel id="nf1034">
+      <gl pivot="notfound">griller</gl>
+   </mel>
+   <mel id="nf1035">
+      <gl pivot="notfound">grime</gl>
+   </mel>
+   <mel id="nf1036">
+      <gl pivot="notfound">grimper</gl>
+   </mel>
+   <mel id="nf1037">
+      <gl pivot="notfound">grimper &lt;th 167&gt;</gl>
+   </mel>
+   <mel id="nf1038">
+      <gl pivot="notfound">grimper sur le dos</gl>
+   </mel>
+   <mel id="nf1039">
+      <gl pivot="notfound">grimper à la corde</gl>
+   </mel>
+   <mel id="nf1040">
+      <gl pivot="notfound">gronder</gl>
+   </mel>
+   <mel id="nf1041">
+      <gl pivot="notfound">gronder qqn</gl>
+   </mel>
+   <mel id="nf1042">
+      <gl pivot="notfound">gros</gl>
+   </mel>
+   <mel id="nf1043">
+      <gl pivot="notfound">grosse grenouille comestible</gl>
+   </mel>
+   <mel id="nf1044">
+      <gl pivot="notfound">grosses bûches de bois</gl>
+   </mel>
+   <mel id="nf1045">
+      <gl pivot="notfound">grume</gl>
+   </mel>
+   <mel id="nf1046">
+      <gl pivot="notfound">gurung</gl>
+   </mel>
+   <mel id="nf1047">
+      <gl pivot="notfound">guérir</gl>
+   </mel>
+   <mel id="nf1048">
+      <gl pivot="notfound">gémir</gl>
+   </mel>
+   <mel id="nf1049">
+      <gl pivot="notfound">habiller &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf1050">
+      <gl pivot="notfound">hache</gl>
+   </mel>
+   <mel id="nf1051">
+      <gl pivot="notfound">hacher</gl>
+   </mel>
+   <mel id="nf1052">
+      <gl pivot="notfound">hairs</gl>
+   </mel>
+   <mel id="nf1053">
+      <gl pivot="notfound">haut</gl>
+   </mel>
+   <mel id="nf1054">
+      <gl pivot="notfound">have a vision</gl>
+   </mel>
+   <mel id="nf1055">
+      <gl pivot="notfound">haze</gl>
+   </mel>
+   <mel id="nf1056">
+      <gl pivot="notfound">herbe</gl>
+   </mel>
+   <mel id="nf1057">
+      <gl pivot="notfound">herd</gl>
+   </mel>
+   <mel id="nf1058">
+      <gl pivot="notfound">heureux</gl>
+   </mel>
+   <mel id="nf1059">
+      <gl pivot="notfound">hochement &lt;pencher&gt;</gl>
+   </mel>
+   <mel id="nf1060">
+      <gl pivot="notfound">hold out</gl>
+   </mel>
+   <mel id="nf1061">
+      <gl pivot="notfound">homme</gl>
+   </mel>
+   <mel id="nf1062">
+      <gl pivot="notfound">horn</gl>
+   </mel>
+   <mel id="nf1063">
+      <gl pivot="notfound">hotte</gl>
+   </mel>
+   <mel id="nf1064">
+      <gl pivot="notfound">houe</gl>
+   </mel>
+   <mel id="nf1065">
+      <gl pivot="notfound">huit</gl>
+   </mel>
+   <mel id="nf1066">
+      <gl pivot="notfound">hull</gl>
+   </mel>
+   <mel id="nf1067">
+      <gl pivot="notfound">humide</gl>
+   </mel>
+   <mel id="nf1068">
+      <gl pivot="notfound">hungry</gl>
+   </mel>
+   <mel id="nf1069">
+      <gl pivot="notfound">hurt</gl>
+   </mel>
+   <mel id="nf1070">
+      <gl pivot="notfound">il</gl>
+   </mel>
+   <mel id="nf1071">
+      <gl pivot="notfound">imagine</gl>
+   </mel>
+   <mel id="nf1072">
+      <gl pivot="notfound">in what way</gl>
+   </mel>
+   <mel id="nf1073">
+      <gl pivot="notfound">incense</gl>
+   </mel>
+   <mel id="nf1074">
+      <gl pivot="notfound">incinérer</gl>
+   </mel>
+   <mel id="nf1075">
+      <gl pivot="notfound">inclinaison du corps de face</gl>
+   </mel>
+   <mel id="nf1076">
+      <gl pivot="notfound">injecter</gl>
+   </mel>
+   <mel id="nf1077">
+      <gl pivot="notfound">insane</gl>
+   </mel>
+   <mel id="nf1078">
+      <gl pivot="notfound">inside of</gl>
+   </mel>
+   <mel id="nf1079">
+      <gl pivot="notfound">inspirer</gl>
+   </mel>
+   <mel id="nf1080">
+      <gl pivot="notfound">installer</gl>
+   </mel>
+   <mel id="nf1081">
+      <gl pivot="notfound">instruct</gl>
+   </mel>
+   <mel id="nf1082">
+      <gl pivot="notfound">instruit</gl>
+   </mel>
+   <mel id="nf1083">
+      <gl pivot="notfound">instrumental</gl>
+   </mel>
+   <mel id="nf1084">
+      <gl pivot="notfound">interior</gl>
+   </mel>
+   <mel id="nf1085">
+      <gl pivot="notfound">intestins</gl>
+   </mel>
+   <mel id="nf1086">
+      <gl pivot="notfound">intestins &lt;th 97&gt;</gl>
+   </mel>
+   <mel id="nf1087">
+      <gl pivot="notfound">into</gl>
+   </mel>
+   <mel id="nf1088">
+      <gl pivot="notfound">introduire</gl>
+   </mel>
+   <mel id="nf1089">
+      <gl pivot="notfound">intérieur</gl>
+   </mel>
+   <mel id="nf1090">
+      <gl pivot="notfound">inward</gl>
+   </mel>
+   <mel id="nf1091">
+      <gl pivot="notfound">is</gl>
+   </mel>
+   <mel id="nf1092">
+      <gl pivot="notfound">jaillir</gl>
+   </mel>
+   <mel id="nf1093">
+      <gl pivot="notfound">jambe</gl>
+   </mel>
+   <mel id="nf1094">
+      <gl pivot="notfound">jar</gl>
+   </mel>
+   <mel id="nf1095">
+      <gl pivot="notfound">jarre</gl>
+   </mel>
+   <mel id="nf1096">
+      <gl pivot="notfound">jaune</gl>
+   </mel>
+   <mel id="nf1097">
+      <gl pivot="notfound">jaunir</gl>
+   </mel>
+   <mel id="nf1098">
+      <gl pivot="notfound">je</gl>
+   </mel>
+   <mel id="nf1099">
+      <gl pivot="notfound">jeter</gl>
+   </mel>
+   <mel id="nf1100">
+      <gl pivot="notfound">jeune homme</gl>
+   </mel>
+   <mel id="nf1101">
+      <gl pivot="notfound">job</gl>
+   </mel>
+   <mel id="nf1102">
+      <gl pivot="notfound">jouer</gl>
+   </mel>
+   <mel id="nf1103">
+      <gl pivot="notfound">jouer de la musique</gl>
+   </mel>
+   <mel id="nf1104">
+      <gl pivot="notfound">joyeux &lt;th 96</gl>
+   </mel>
+   <mel id="nf1105">
+      <gl pivot="notfound">jump across</gl>
+   </mel>
+   <mel id="nf1106">
+      <gl pivot="notfound">jump over</gl>
+   </mel>
+   <mel id="nf1107">
+      <gl pivot="notfound">jump up</gl>
+   </mel>
+   <mel id="nf1108">
+      <gl pivot="notfound">knife)</gl>
+   </mel>
+   <mel id="nf1109">
+      <gl pivot="notfound">know</gl>
+   </mel>
+   <mel id="nf1110">
+      <gl pivot="notfound">la droite</gl>
+   </mel>
+   <mel id="nf1111">
+      <gl pivot="notfound">la plante dont on fait les balais</gl>
+   </mel>
+   <mel id="nf1112">
+      <gl pivot="notfound">labourer</gl>
+   </mel>
+   <mel id="nf1113">
+      <gl pivot="notfound">lac</gl>
+   </mel>
+   <mel id="nf1114">
+      <gl pivot="notfound">laisser aller</gl>
+   </mel>
+   <mel id="nf1115">
+      <gl pivot="notfound">laisser faire</gl>
+   </mel>
+   <mel id="nf1116">
+      <gl pivot="notfound">lait</gl>
+   </mel>
+   <mel id="nf1117">
+      <gl pivot="notfound">landslide</gl>
+   </mel>
+   <mel id="nf1118">
+      <gl pivot="notfound">langue</gl>
+   </mel>
+   <mel id="nf1119">
+      <gl pivot="notfound">lanière de bambou</gl>
+   </mel>
+   <mel id="nf1120">
+      <gl pivot="notfound">large basket</gl>
+   </mel>
+   <mel id="nf1121">
+      <gl pivot="notfound">large leech</gl>
+   </mel>
+   <mel id="nf1122">
+      <gl pivot="notfound">latrines &lt;th 32&gt;</gl>
+   </mel>
+   <mel id="nf1123">
+      <gl pivot="notfound">laver</gl>
+   </mel>
+   <mel id="nf1124">
+      <gl pivot="notfound">le milieu</gl>
+   </mel>
+   <mel id="nf1125">
+      <gl pivot="notfound">le temps ou l'occasion de faire qqch</gl>
+   </mel>
+   <mel id="nf1126">
+      <gl pivot="notfound">lead</gl>
+   </mel>
+   <mel id="nf1127">
+      <gl pivot="notfound">leak</gl>
+   </mel>
+   <mel id="nf1128">
+      <gl pivot="notfound">lean</gl>
+   </mel>
+   <mel id="nf1129">
+      <gl pivot="notfound">leave behind</gl>
+   </mel>
+   <mel id="nf1130">
+      <gl pivot="notfound">les yeux)</gl>
+   </mel>
+   <mel id="nf1131">
+      <gl pivot="notfound">let go</gl>
+   </mel>
+   <mel id="nf1132">
+      <gl pivot="notfound">lever</gl>
+   </mel>
+   <mel id="nf1133">
+      <gl pivot="notfound">lid</gl>
+   </mel>
+   <mel id="nf1134">
+      <gl pivot="notfound">lie</gl>
+   </mel>
+   <mel id="nf1135">
+      <gl pivot="notfound">lieu de pélerinage</gl>
+   </mel>
+   <mel id="nf1136">
+      <gl pivot="notfound">ligament</gl>
+   </mel>
+   <mel id="nf1137">
+      <gl pivot="notfound">ligaments</gl>
+   </mel>
+   <mel id="nf1138">
+      <gl pivot="notfound">light</gl>
+   </mel>
+   <mel id="nf1139">
+      <gl pivot="notfound">lire</gl>
+   </mel>
+   <mel id="nf1140">
+      <gl pivot="notfound">lire à l'école &lt;a 86 in voc 74&gt;</gl>
+   </mel>
+   <mel id="nf1141">
+      <gl pivot="notfound">lire à voix haute &lt;voc vb</gl>
+   </mel>
+   <mel id="nf1142">
+      <gl pivot="notfound">lit &lt;voc n&gt;</gl>
+   </mel>
+   <mel id="nf1143">
+      <gl pivot="notfound">lit fixe &lt;munda n 549&gt;</gl>
+   </mel>
+   <mel id="nf1144">
+      <gl pivot="notfound">live)</gl>
+   </mel>
+   <mel id="nf1145">
+      <gl pivot="notfound">livre</gl>
+   </mel>
+   <mel id="nf1146">
+      <gl pivot="notfound">livre religieux &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf1147">
+      <gl pivot="notfound">livre sacré &lt;fich perf&gt;</gl>
+   </mel>
+   <mel id="nf1148">
+      <gl pivot="notfound">loan</gl>
+   </mel>
+   <mel id="nf1149">
+      <gl pivot="notfound">locatif d'approximation</gl>
+   </mel>
+   <mel id="nf1150">
+      <gl pivot="notfound">locatif d'origine matérielle ou logique</gl>
+   </mel>
+   <mel id="nf1151">
+      <gl pivot="notfound">locatif de temps</gl>
+   </mel>
+   <mel id="nf1152">
+      <gl pivot="notfound">look at</gl>
+   </mel>
+   <mel id="nf1153">
+      <gl pivot="notfound">lourd</gl>
+   </mel>
+   <mel id="nf1154">
+      <gl pivot="notfound">lower back</gl>
+   </mel>
+   <mel id="nf1155">
+      <gl pivot="notfound">lower jaw</gl>
+   </mel>
+   <mel id="nf1156">
+      <gl pivot="notfound">lui</gl>
+   </mel>
+   <mel id="nf1157">
+      <gl pivot="notfound">lumière du jour</gl>
+   </mel>
+   <mel id="nf1158">
+      <gl pivot="notfound">lécher</gl>
+   </mel>
+   <mel id="nf1159">
+      <gl pivot="notfound">léger</gl>
+   </mel>
+   <mel id="nf1160">
+      <gl pivot="notfound">légume</gl>
+   </mel>
+   <mel id="nf1161">
+      <gl pivot="notfound">légumes &lt;ani</gl>
+   </mel>
+   <mel id="nf1162">
+      <gl pivot="notfound">légumes ou viande</gl>
+   </mel>
+   <mel id="nf1163">
+      <gl pivot="notfound">made</gl>
+   </mel>
+   <mel id="nf1164">
+      <gl pivot="notfound">maigrir</gl>
+   </mel>
+   <mel id="nf1165">
+      <gl pivot="notfound">main</gl>
+   </mel>
+   <mel id="nf1166">
+      <gl pivot="notfound">mais plus fréquemment maïs ou millet</gl>
+   </mel>
+   <mel id="nf1167">
+      <gl pivot="notfound">maison</gl>
+   </mel>
+   <mel id="nf1168">
+      <gl pivot="notfound">malade</gl>
+   </mel>
+   <mel id="nf1169">
+      <gl pivot="notfound">mamelle</gl>
+   </mel>
+   <mel id="nf1170">
+      <gl pivot="notfound">manger</gl>
+   </mel>
+   <mel id="nf1171">
+      <gl pivot="notfound">manier</gl>
+   </mel>
+   <mel id="nf1172">
+      <gl pivot="notfound">manquer d'épaisseur</gl>
+   </mel>
+   <mel id="nf1173">
+      <gl pivot="notfound">manure</gl>
+   </mel>
+   <mel id="nf1174">
+      <gl pivot="notfound">marcher</gl>
+   </mel>
+   <mel id="nf1175">
+      <gl pivot="notfound">marcher sur</gl>
+   </mel>
+   <mel id="nf1176">
+      <gl pivot="notfound">marcher sur le pied</gl>
+   </mel>
+   <mel id="nf1177">
+      <gl pivot="notfound">marcher à quatre pattes</gl>
+   </mel>
+   <mel id="nf1178">
+      <gl pivot="notfound">mari</gl>
+   </mel>
+   <mel id="nf1179">
+      <gl pivot="notfound">mari d'une soeur</gl>
+   </mel>
+   <mel id="nf1180">
+      <gl pivot="notfound">massage</gl>
+   </mel>
+   <mel id="nf1181">
+      <gl pivot="notfound">masser</gl>
+   </mel>
+   <mel id="nf1182">
+      <gl pivot="notfound">matin</gl>
+   </mel>
+   <mel id="nf1183">
+      <gl pivot="notfound">maudire</gl>
+   </mel>
+   <mel id="nf1184">
+      <gl pivot="notfound">mauvaise herbe</gl>
+   </mel>
+   <mel id="nf1185">
+      <gl pivot="notfound">mauvaise odeur</gl>
+   </mel>
+   <mel id="nf1186">
+      <gl pivot="notfound">meeting</gl>
+   </mel>
+   <mel id="nf1187">
+      <gl pivot="notfound">menacer</gl>
+   </mel>
+   <mel id="nf1188">
+      <gl pivot="notfound">mend</gl>
+   </mel>
+   <mel id="nf1189">
+      <gl pivot="notfound">mendier</gl>
+   </mel>
+   <mel id="nf1190">
+      <gl pivot="notfound">menton</gl>
+   </mel>
+   <mel id="nf1191">
+      <gl pivot="notfound">mesurer</gl>
+   </mel>
+   <mel id="nf1192">
+      <gl pivot="notfound">met</gl>
+   </mel>
+   <mel id="nf1193">
+      <gl pivot="notfound">mettre dans un paquet</gl>
+   </mel>
+   <mel id="nf1194">
+      <gl pivot="notfound">mettre à cuire</gl>
+   </mel>
+   <mel id="nf1195">
+      <gl pivot="notfound">miette</gl>
+   </mel>
+   <mel id="nf1196">
+      <gl pivot="notfound">might</gl>
+   </mel>
+   <mel id="nf1197">
+      <gl pivot="notfound">milan</gl>
+   </mel>
+   <mel id="nf1198">
+      <gl pivot="notfound">mince</gl>
+   </mel>
+   <mel id="nf1199">
+      <gl pivot="notfound">mite</gl>
+   </mel>
+   <mel id="nf1200">
+      <gl pivot="notfound">mixed</gl>
+   </mel>
+   <mel id="nf1201">
+      <gl pivot="notfound">mockery)</gl>
+   </mel>
+   <mel id="nf1202">
+      <gl pivot="notfound">modèle</gl>
+   </mel>
+   <mel id="nf1203">
+      <gl pivot="notfound">moelle</gl>
+   </mel>
+   <mel id="nf1204">
+      <gl pivot="notfound">moi</gl>
+   </mel>
+   <mel id="nf1205">
+      <gl pivot="notfound">montagne</gl>
+   </mel>
+   <mel id="nf1206">
+      <gl pivot="notfound">monter</gl>
+   </mel>
+   <mel id="nf1207">
+      <gl pivot="notfound">montrer</gl>
+   </mel>
+   <mel id="nf1208">
+      <gl pivot="notfound">mordre</gl>
+   </mel>
+   <mel id="nf1209">
+      <gl pivot="notfound">mortar</gl>
+   </mel>
+   <mel id="nf1210">
+      <gl pivot="notfound">mortier</gl>
+   </mel>
+   <mel id="nf1211">
+      <gl pivot="notfound">morve</gl>
+   </mel>
+   <mel id="nf1212">
+      <gl pivot="notfound">motte</gl>
+   </mel>
+   <mel id="nf1213">
+      <gl pivot="notfound">moucharder</gl>
+   </mel>
+   <mel id="nf1214">
+      <gl pivot="notfound">moudre</gl>
+   </mel>
+   <mel id="nf1215">
+      <gl pivot="notfound">mouiller</gl>
+   </mel>
+   <mel id="nf1216">
+      <gl pivot="notfound">moule</gl>
+   </mel>
+   <mel id="nf1217">
+      <gl pivot="notfound">moule &lt;a86&gt;</gl>
+   </mel>
+   <mel id="nf1218">
+      <gl pivot="notfound">mourir</gl>
+   </mel>
+   <mel id="nf1219">
+      <gl pivot="notfound">mourning</gl>
+   </mel>
+   <mel id="nf1220">
+      <gl pivot="notfound">mouton</gl>
+   </mel>
+   <mel id="nf1221">
+      <gl pivot="notfound">mouton &lt;th 40</gl>
+   </mel>
+   <mel id="nf1222">
+      <gl pivot="notfound">mucus</gl>
+   </mel>
+   <mel id="nf1223">
+      <gl pivot="notfound">mue de serpent</gl>
+   </mel>
+   <mel id="nf1224">
+      <gl pivot="notfound">musician</gl>
+   </mel>
+   <mel id="nf1225">
+      <gl pivot="notfound">mustard</gl>
+   </mel>
+   <mel id="nf1226">
+      <gl pivot="notfound">mâcher</gl>
+   </mel>
+   <mel id="nf1227">
+      <gl pivot="notfound">méditation</gl>
+   </mel>
+   <mel id="nf1228">
+      <gl pivot="notfound">mélanger deux choses d'espèces différentes</gl>
+   </mel>
+   <mel id="nf1229">
+      <gl pivot="notfound">méler en pétrissant avec les mains</gl>
+   </mel>
+   <mel id="nf1230">
+      <gl pivot="notfound">mêler</gl>
+   </mel>
+   <mel id="nf1231">
+      <gl pivot="notfound">mûr</gl>
+   </mel>
+   <mel id="nf1232">
+      <gl pivot="notfound">nager</gl>
+   </mel>
+   <mel id="nf1233">
+      <gl pivot="notfound">nager &lt;th 171&gt;</gl>
+   </mel>
+   <mel id="nf1234">
+      <gl pivot="notfound">nail</gl>
+   </mel>
+   <mel id="nf1235">
+      <gl pivot="notfound">nasal mucus</gl>
+   </mel>
+   <mel id="nf1236">
+      <gl pivot="notfound">naître</gl>
+   </mel>
+   <mel id="nf1237">
+      <gl pivot="notfound">ne pas en paix &lt;mm jan 88&gt;</gl>
+   </mel>
+   <mel id="nf1238">
+      <gl pivot="notfound">ne pas finir un travail</gl>
+   </mel>
+   <mel id="nf1239">
+      <gl pivot="notfound">ne pas se rappeler</gl>
+   </mel>
+   <mel id="nf1240">
+      <gl pivot="notfound">need</gl>
+   </mel>
+   <mel id="nf1241">
+      <gl pivot="notfound">need to</gl>
+   </mel>
+   <mel id="nf1242">
+      <gl pivot="notfound">needle</gl>
+   </mel>
+   <mel id="nf1243">
+      <gl pivot="notfound">neige</gl>
+   </mel>
+   <mel id="nf1244">
+      <gl pivot="notfound">nerve</gl>
+   </mel>
+   <mel id="nf1245">
+      <gl pivot="notfound">nerveux &lt;th 94</gl>
+   </mel>
+   <mel id="nf1246">
+      <gl pivot="notfound">neuf</gl>
+   </mel>
+   <mel id="nf1247">
+      <gl pivot="notfound">neveu croisé</gl>
+   </mel>
+   <mel id="nf1248">
+      <gl pivot="notfound">nez</gl>
+   </mel>
+   <mel id="nf1249">
+      <gl pivot="notfound">nid</gl>
+   </mel>
+   <mel id="nf1250">
+      <gl pivot="notfound">noir</gl>
+   </mel>
+   <mel id="nf1251">
+      <gl pivot="notfound">nom</gl>
+   </mel>
+   <mel id="nf1252">
+      <gl pivot="notfound">none</gl>
+   </mel>
+   <mel id="nf1253">
+      <gl pivot="notfound">nouer</gl>
+   </mel>
+   <mel id="nf1254">
+      <gl pivot="notfound">nous</gl>
+   </mel>
+   <mel id="nf1255">
+      <gl pivot="notfound">nouveau</gl>
+   </mel>
+   <mel id="nf1256">
+      <gl pivot="notfound">numb</gl>
+   </mel>
+   <mel id="nf1257">
+      <gl pivot="notfound">obtenir sa part de qqch</gl>
+   </mel>
+   <mel id="nf1258">
+      <gl pivot="notfound">obéir</gl>
+   </mel>
+   <mel id="nf1259">
+      <gl pivot="notfound">odour</gl>
+   </mel>
+   <mel id="nf1260">
+      <gl pivot="notfound">oeil</gl>
+   </mel>
+   <mel id="nf1261">
+      <gl pivot="notfound">oeuf</gl>
+   </mel>
+   <mel id="nf1262">
+      <gl pivot="notfound">offer</gl>
+   </mel>
+   <mel id="nf1263">
+      <gl pivot="notfound">on pilgrimage</gl>
+   </mel>
+   <mel id="nf1264">
+      <gl pivot="notfound">ongle</gl>
+   </mel>
+   <mel id="nf1265">
+      <gl pivot="notfound">order sthg</gl>
+   </mel>
+   <mel id="nf1266">
+      <gl pivot="notfound">ordonner</gl>
+   </mel>
+   <mel id="nf1267">
+      <gl pivot="notfound">oublier</gl>
+   </mel>
+   <mel id="nf1268">
+      <gl pivot="notfound">out</gl>
+   </mel>
+   <mel id="nf1269">
+      <gl pivot="notfound">overflow</gl>
+   </mel>
+   <mel id="nf1270">
+      <gl pivot="notfound">pack</gl>
+   </mel>
+   <mel id="nf1271">
+      <gl pivot="notfound">paddy ear</gl>
+   </mel>
+   <mel id="nf1272">
+      <gl pivot="notfound">pagayer</gl>
+   </mel>
+   <mel id="nf1273">
+      <gl pivot="notfound">paille</gl>
+   </mel>
+   <mel id="nf1274">
+      <gl pivot="notfound">pain)</gl>
+   </mel>
+   <mel id="nf1275">
+      <gl pivot="notfound">paint</gl>
+   </mel>
+   <mel id="nf1276">
+      <gl pivot="notfound">palais</gl>
+   </mel>
+   <mel id="nf1277">
+      <gl pivot="notfound">palm</gl>
+   </mel>
+   <mel id="nf1278">
+      <gl pivot="notfound">par</gl>
+   </mel>
+   <mel id="nf1279">
+      <gl pivot="notfound">par excès de fatigue)</gl>
+   </mel>
+   <mel id="nf1280">
+      <gl pivot="notfound">par ext. les caroncules du coq</gl>
+   </mel>
+   <mel id="nf1281">
+      <gl pivot="notfound">par extension terme d'adresse respectueux pour toute femme un peu âgée</gl>
+   </mel>
+   <mel id="nf1282">
+      <gl pivot="notfound">par tension) &lt;fich perf&gt;</gl>
+   </mel>
+   <mel id="nf1283">
+      <gl pivot="notfound">par économie &lt;voc vb&gt;</gl>
+   </mel>
+   <mel id="nf1284">
+      <gl pivot="notfound">parc</gl>
+   </mel>
+   <mel id="nf1285">
+      <gl pivot="notfound">parler</gl>
+   </mel>
+   <mel id="nf1286">
+      <gl pivot="notfound">partenaire sexuel mâle d'un animal</gl>
+   </mel>
+   <mel id="nf1287">
+      <gl pivot="notfound">partir</gl>
+   </mel>
+   <mel id="nf1288">
+      <gl pivot="notfound">pas du tireur &lt;fich perf&gt;)</gl>
+   </mel>
+   <mel id="nf1289">
+      <gl pivot="notfound">passer au-delà</gl>
+   </mel>
+   <mel id="nf1290">
+      <gl pivot="notfound">passer audelà</gl>
+   </mel>
+   <mel id="nf1291">
+      <gl pivot="notfound">passer par</gl>
+   </mel>
+   <mel id="nf1292">
+      <gl pivot="notfound">patch</gl>
+   </mel>
+   <mel id="nf1293">
+      <gl pivot="notfound">paume</gl>
+   </mel>
+   <mel id="nf1294">
+      <gl pivot="notfound">peau</gl>
+   </mel>
+   <mel id="nf1295">
+      <gl pivot="notfound">peau de la patte des oiseaux</gl>
+   </mel>
+   <mel id="nf1296">
+      <gl pivot="notfound">peck</gl>
+   </mel>
+   <mel id="nf1297">
+      <gl pivot="notfound">peindre</gl>
+   </mel>
+   <mel id="nf1298">
+      <gl pivot="notfound">peinture</gl>
+   </mel>
+   <mel id="nf1299">
+      <gl pivot="notfound">peler</gl>
+   </mel>
+   <mel id="nf1300">
+      <gl pivot="notfound">pen up</gl>
+   </mel>
+   <mel id="nf1301">
+      <gl pivot="notfound">penser</gl>
+   </mel>
+   <mel id="nf1302">
+      <gl pivot="notfound">penser que</gl>
+   </mel>
+   <mel id="nf1303">
+      <gl pivot="notfound">penser à</gl>
+   </mel>
+   <mel id="nf1304">
+      <gl pivot="notfound">pente</gl>
+   </mel>
+   <mel id="nf1305">
+      <gl pivot="notfound">perdre</gl>
+   </mel>
+   <mel id="nf1306">
+      <gl pivot="notfound">perforated</gl>
+   </mel>
+   <mel id="nf1307">
+      <gl pivot="notfound">perfume</gl>
+   </mel>
+   <mel id="nf1308">
+      <gl pivot="notfound">peser</gl>
+   </mel>
+   <mel id="nf1309">
+      <gl pivot="notfound">pet</gl>
+   </mel>
+   <mel id="nf1310">
+      <gl pivot="notfound">pet ...)</gl>
+   </mel>
+   <mel id="nf1311">
+      <gl pivot="notfound">petit</gl>
+   </mel>
+   <mel id="nf1312">
+      <gl pivot="notfound">petit abreuvoir de bois ou de pierre</gl>
+   </mel>
+   <mel id="nf1313">
+      <gl pivot="notfound">petit faucon</gl>
+   </mel>
+   <mel id="nf1314">
+      <gl pivot="notfound">peureux</gl>
+   </mel>
+   <mel id="nf1315">
+      <gl pivot="notfound">pied</gl>
+   </mel>
+   <mel id="nf1316">
+      <gl pivot="notfound">pierre</gl>
+   </mel>
+   <mel id="nf1317">
+      <gl pivot="notfound">pince à feu</gl>
+   </mel>
+   <mel id="nf1318">
+      <gl pivot="notfound">pincer</gl>
+   </mel>
+   <mel id="nf1319">
+      <gl pivot="notfound">pioche</gl>
+   </mel>
+   <mel id="nf1320">
+      <gl pivot="notfound">piocher &lt;voc vb</gl>
+   </mel>
+   <mel id="nf1321">
+      <gl pivot="notfound">piquer</gl>
+   </mel>
+   <mel id="nf1322">
+      <gl pivot="notfound">piquer &lt;from sprigg&gt;</gl>
+   </mel>
+   <mel id="nf1323">
+      <gl pivot="notfound">piquer du bec</gl>
+   </mel>
+   <mel id="nf1324">
+      <gl pivot="notfound">pit</gl>
+   </mel>
+   <mel id="nf1325">
+      <gl pivot="notfound">piège</gl>
+   </mel>
+   <mel id="nf1326">
+      <gl pivot="notfound">place</gl>
+   </mel>
+   <mel id="nf1327">
+      <gl pivot="notfound">placenta</gl>
+   </mel>
+   <mel id="nf1328">
+      <gl pivot="notfound">plague</gl>
+   </mel>
+   <mel id="nf1329">
+      <gl pivot="notfound">plaisant</gl>
+   </mel>
+   <mel id="nf1330">
+      <gl pivot="notfound">planche</gl>
+   </mel>
+   <mel id="nf1331">
+      <gl pivot="notfound">planche à imprimer</gl>
+   </mel>
+   <mel id="nf1332">
+      <gl pivot="notfound">plant</gl>
+   </mel>
+   <mel id="nf1333">
+      <gl pivot="notfound">plante</gl>
+   </mel>
+   <mel id="nf1334">
+      <gl pivot="notfound">planter des piquets</gl>
+   </mel>
+   <mel id="nf1335">
+      <gl pivot="notfound">plaquer &lt;mm 88 de mem&gt;</gl>
+   </mel>
+   <mel id="nf1336">
+      <gl pivot="notfound">plaster</gl>
+   </mel>
+   <mel id="nf1337">
+      <gl pivot="notfound">plat</gl>
+   </mel>
+   <mel id="nf1338">
+      <gl pivot="notfound">play instrument</gl>
+   </mel>
+   <mel id="nf1339">
+      <gl pivot="notfound">pleasant</gl>
+   </mel>
+   <mel id="nf1340">
+      <gl pivot="notfound">pleased</gl>
+   </mel>
+   <mel id="nf1341">
+      <gl pivot="notfound">plein</gl>
+   </mel>
+   <mel id="nf1342">
+      <gl pivot="notfound">plein à ras</gl>
+   </mel>
+   <mel id="nf1343">
+      <gl pivot="notfound">pleurer</gl>
+   </mel>
+   <mel id="nf1344">
+      <gl pivot="notfound">pleurer &lt;th 100</gl>
+   </mel>
+   <mel id="nf1345">
+      <gl pivot="notfound">plow</gl>
+   </mel>
+   <mel id="nf1346">
+      <gl pivot="notfound">plug a leak</gl>
+   </mel>
+   <mel id="nf1347">
+      <gl pivot="notfound">plugged</gl>
+   </mel>
+   <mel id="nf1348">
+      <gl pivot="notfound">pluie</gl>
+   </mel>
+   <mel id="nf1349">
+      <gl pivot="notfound">plume</gl>
+   </mel>
+   <mel id="nf1350">
+      <gl pivot="notfound">plus tard</gl>
+   </mel>
+   <mel id="nf1351">
+      <gl pivot="notfound">poil</gl>
+   </mel>
+   <mel id="nf1352">
+      <gl pivot="notfound">poil des animaux &lt;th 100&gt;</gl>
+   </mel>
+   <mel id="nf1353">
+      <gl pivot="notfound">poil pubic</gl>
+   </mel>
+   <mel id="nf1354">
+      <gl pivot="notfound">point</gl>
+   </mel>
+   <mel id="nf1355">
+      <gl pivot="notfound">point &lt;mm&gt;</gl>
+   </mel>
+   <mel id="nf1356">
+      <gl pivot="notfound">pointe</gl>
+   </mel>
+   <mel id="nf1357">
+      <gl pivot="notfound">poitrine</gl>
+   </mel>
+   <mel id="nf1358">
+      <gl pivot="notfound">polir</gl>
+   </mel>
+   <mel id="nf1359">
+      <gl pivot="notfound">polko</gl>
+   </mel>
+   <mel id="nf1360">
+      <gl pivot="notfound">pondre</gl>
+   </mel>
+   <mel id="nf1361">
+      <gl pivot="notfound">pont</gl>
+   </mel>
+   <mel id="nf1362">
+      <gl pivot="notfound">pool</gl>
+   </mel>
+   <mel id="nf1363">
+      <gl pivot="notfound">porc</gl>
+   </mel>
+   <mel id="nf1364">
+      <gl pivot="notfound">porte</gl>
+   </mel>
+   <mel id="nf1365">
+      <gl pivot="notfound">porter</gl>
+   </mel>
+   <mel id="nf1366">
+      <gl pivot="notfound">porter chapeau</gl>
+   </mel>
+   <mel id="nf1367">
+      <gl pivot="notfound">porter des fruits</gl>
+   </mel>
+   <mel id="nf1368">
+      <gl pivot="notfound">poser</gl>
+   </mel>
+   <mel id="nf1369">
+      <gl pivot="notfound">poser &lt;th 67</gl>
+   </mel>
+   <mel id="nf1370">
+      <gl pivot="notfound">poser les pieds avec soin en marchant &lt;marcher&gt;</gl>
+   </mel>
+   <mel id="nf1371">
+      <gl pivot="notfound">poser par terre</gl>
+   </mel>
+   <mel id="nf1372">
+      <gl pivot="notfound">poser sur le feu</gl>
+   </mel>
+   <mel id="nf1373">
+      <gl pivot="notfound">poteau</gl>
+   </mel>
+   <mel id="nf1374">
+      <gl pivot="notfound">pou</gl>
+   </mel>
+   <mel id="nf1375">
+      <gl pivot="notfound">poudre</gl>
+   </mel>
+   <mel id="nf1376">
+      <gl pivot="notfound">poumon</gl>
+   </mel>
+   <mel id="nf1377">
+      <gl pivot="notfound">poumon &lt;ani 73&gt;</gl>
+   </mel>
+   <mel id="nf1378">
+      <gl pivot="notfound">pound grain</gl>
+   </mel>
+   <mel id="nf1379">
+      <gl pivot="notfound">pourrir</gl>
+   </mel>
+   <mel id="nf1380">
+      <gl pivot="notfound">pousser en faisant rouler &lt;th 180&gt;</gl>
+   </mel>
+   <mel id="nf1381">
+      <gl pivot="notfound">pouvoir</gl>
+   </mel>
+   <mel id="nf1382">
+      <gl pivot="notfound">powder</gl>
+   </mel>
+   <mel id="nf1383">
+      <gl pivot="notfound">prairie</gl>
+   </mel>
+   <mel id="nf1384">
+      <gl pivot="notfound">prendre</gl>
+   </mel>
+   <mel id="nf1385">
+      <gl pivot="notfound">press down</gl>
+   </mel>
+   <mel id="nf1386">
+      <gl pivot="notfound">presser</gl>
+   </mel>
+   <mel id="nf1387">
+      <gl pivot="notfound">pretty</gl>
+   </mel>
+   <mel id="nf1388">
+      <gl pivot="notfound">prick</gl>
+   </mel>
+   <mel id="nf1389">
+      <gl pivot="notfound">principe vital</gl>
+   </mel>
+   <mel id="nf1390">
+      <gl pivot="notfound">print</gl>
+   </mel>
+   <mel id="nf1391">
+      <gl pivot="notfound">prix</gl>
+   </mel>
+   <mel id="nf1392">
+      <gl pivot="notfound">profond</gl>
+   </mel>
+   <mel id="nf1393">
+      <gl pivot="notfound">pronom de la 3ème personne</gl>
+   </mel>
+   <mel id="nf1394">
+      <gl pivot="notfound">prosternation</gl>
+   </mel>
+   <mel id="nf1395">
+      <gl pivot="notfound">provenance</gl>
+   </mel>
+   <mel id="nf1396">
+      <gl pivot="notfound">préparer</gl>
+   </mel>
+   <mel id="nf1397">
+      <gl pivot="notfound">préparer la boisson en mélant la pâte fermentée à l'eau &lt;th 40</gl>
+   </mel>
+   <mel id="nf1398">
+      <gl pivot="notfound">présents qu'apporte un invité</gl>
+   </mel>
+   <mel id="nf1399">
+      <gl pivot="notfound">prétexte</gl>
+   </mel>
+   <mel id="nf1400">
+      <gl pivot="notfound">psalmodier &lt;voc vb et a 86 in voc 74&gt;</gl>
+   </mel>
+   <mel id="nf1401">
+      <gl pivot="notfound">pulse</gl>
+   </mel>
+   <mel id="nf1402">
+      <gl pivot="notfound">punish</gl>
+   </mel>
+   <mel id="nf1403">
+      <gl pivot="notfound">purchase</gl>
+   </mel>
+   <mel id="nf1404">
+      <gl pivot="notfound">put away</gl>
+   </mel>
+   <mel id="nf1405">
+      <gl pivot="notfound">put in</gl>
+   </mel>
+   <mel id="nf1406">
+      <gl pivot="notfound">pénis</gl>
+   </mel>
+   <mel id="nf1407">
+      <gl pivot="notfound">pétrir</gl>
+   </mel>
+   <mel id="nf1408">
+      <gl pivot="notfound">quatre</gl>
+   </mel>
+   <mel id="nf1409">
+      <gl pivot="notfound">que ce soit du maïs à sec dans son</gl>
+   </mel>
+   <mel id="nf1410">
+      <gl pivot="notfound">que ce soit à sec sur le gril ou en pleine huile comme le</gl>
+   </mel>
+   <mel id="nf1411">
+      <gl pivot="notfound">quel ...!</gl>
+   </mel>
+   <mel id="nf1412">
+      <gl pivot="notfound">question</gl>
+   </mel>
+   <mel id="nf1413">
+      <gl pivot="notfound">questionner</gl>
+   </mel>
+   <mel id="nf1414">
+      <gl pivot="notfound">queue</gl>
+   </mel>
+   <mel id="nf1415">
+      <gl pivot="notfound">qui ?</gl>
+   </mel>
+   <mel id="nf1416">
+      <gl pivot="notfound">qui?</gl>
+   </mel>
+   <mel id="nf1417">
+      <gl pivot="notfound">quoi ?</gl>
+   </mel>
+   <mel id="nf1418">
+      <gl pivot="notfound">quoi?</gl>
+   </mel>
+   <mel id="nf1419">
+      <gl pivot="notfound">rabouter &lt;ani 78 on fp&gt;</gl>
+   </mel>
+   <mel id="nf1420">
+      <gl pivot="notfound">racine</gl>
+   </mel>
+   <mel id="nf1421">
+      <gl pivot="notfound">rain</gl>
+   </mel>
+   <mel id="nf1422">
+      <gl pivot="notfound">rain.</gl>
+   </mel>
+   <mel id="nf1423">
+      <gl pivot="notfound">raise</gl>
+   </mel>
+   <mel id="nf1424">
+      <gl pivot="notfound">ramasser</gl>
+   </mel>
+   <mel id="nf1425">
+      <gl pivot="notfound">ramasser au sol</gl>
+   </mel>
+   <mel id="nf1426">
+      <gl pivot="notfound">ramasser avec le doigt</gl>
+   </mel>
+   <mel id="nf1427">
+      <gl pivot="notfound">ramener vers soi avec faucille ou bâton &lt;a86&gt;</gl>
+   </mel>
+   <mel id="nf1428">
+      <gl pivot="notfound">ramer</gl>
+   </mel>
+   <mel id="nf1429">
+      <gl pivot="notfound">range</gl>
+   </mel>
+   <mel id="nf1430">
+      <gl pivot="notfound">ranger sur une étagère</gl>
+   </mel>
+   <mel id="nf1431">
+      <gl pivot="notfound">raser</gl>
+   </mel>
+   <mel id="nf1432">
+      <gl pivot="notfound">rassasié</gl>
+   </mel>
+   <mel id="nf1433">
+      <gl pivot="notfound">rassembler</gl>
+   </mel>
+   <mel id="nf1434">
+      <gl pivot="notfound">rassembler avec la faucille avant de couper</gl>
+   </mel>
+   <mel id="nf1435">
+      <gl pivot="notfound">rater</gl>
+   </mel>
+   <mel id="nf1436">
+      <gl pivot="notfound">ray</gl>
+   </mel>
+   <mel id="nf1437">
+      <gl pivot="notfound">receive</gl>
+   </mel>
+   <mel id="nf1438">
+      <gl pivot="notfound">recevoir</gl>
+   </mel>
+   <mel id="nf1439">
+      <gl pivot="notfound">recollect</gl>
+   </mel>
+   <mel id="nf1440">
+      <gl pivot="notfound">recouvrir de terre le modèle de cire &lt;mv 398&gt;</gl>
+   </mel>
+   <mel id="nf1441">
+      <gl pivot="notfound">refroidir</gl>
+   </mel>
+   <mel id="nf1442">
+      <gl pivot="notfound">regarder</gl>
+   </mel>
+   <mel id="nf1443">
+      <gl pivot="notfound">release</gl>
+   </mel>
+   <mel id="nf1444">
+      <gl pivot="notfound">rembourser</gl>
+   </mel>
+   <mel id="nf1445">
+      <gl pivot="notfound">remind</gl>
+   </mel>
+   <mel id="nf1446">
+      <gl pivot="notfound">remuer</gl>
+   </mel>
+   <mel id="nf1447">
+      <gl pivot="notfound">remuer en faisant couler</gl>
+   </mel>
+   <mel id="nf1448">
+      <gl pivot="notfound">remède</gl>
+   </mel>
+   <mel id="nf1449">
+      <gl pivot="notfound">rencontre</gl>
+   </mel>
+   <mel id="nf1450">
+      <gl pivot="notfound">rencontrer</gl>
+   </mel>
+   <mel id="nf1451">
+      <gl pivot="notfound">rendre</gl>
+   </mel>
+   <mel id="nf1452">
+      <gl pivot="notfound">rendre hommage &lt;saluer&gt;</gl>
+   </mel>
+   <mel id="nf1453">
+      <gl pivot="notfound">rendre visite</gl>
+   </mel>
+   <mel id="nf1454">
+      <gl pivot="notfound">renoncer</gl>
+   </mel>
+   <mel id="nf1455">
+      <gl pivot="notfound">renverser</gl>
+   </mel>
+   <mel id="nf1456">
+      <gl pivot="notfound">repas</gl>
+   </mel>
+   <mel id="nf1457">
+      <gl pivot="notfound">reply</gl>
+   </mel>
+   <mel id="nf1458">
+      <gl pivot="notfound">request</gl>
+   </mel>
+   <mel id="nf1459">
+      <gl pivot="notfound">respiration</gl>
+   </mel>
+   <mel id="nf1460">
+      <gl pivot="notfound">rester</gl>
+   </mel>
+   <mel id="nf1461">
+      <gl pivot="notfound">retourner</gl>
+   </mel>
+   <mel id="nf1462">
+      <gl pivot="notfound">retrouver l'appétit</gl>
+   </mel>
+   <mel id="nf1463">
+      <gl pivot="notfound">revenir</gl>
+   </mel>
+   <mel id="nf1464">
+      <gl pivot="notfound">riche</gl>
+   </mel>
+   <mel id="nf1465">
+      <gl pivot="notfound">rincer</gl>
+   </mel>
+   <mel id="nf1466">
+      <gl pivot="notfound">rire</gl>
+   </mel>
+   <mel id="nf1467">
+      <gl pivot="notfound">rise</gl>
+   </mel>
+   <mel id="nf1468">
+      <gl pivot="notfound">riz</gl>
+   </mel>
+   <mel id="nf1469">
+      <gl pivot="notfound">riz cuit</gl>
+   </mel>
+   <mel id="nf1470">
+      <gl pivot="notfound">riz décortiqué cru</gl>
+   </mel>
+   <mel id="nf1471">
+      <gl pivot="notfound">riz non décortiqué</gl>
+   </mel>
+   <mel id="nf1472">
+      <gl pivot="notfound">riz sur pied</gl>
+   </mel>
+   <mel id="nf1473">
+      <gl pivot="notfound">riz) &lt;th 181</gl>
+   </mel>
+   <mel id="nf1474">
+      <gl pivot="notfound">rizière</gl>
+   </mel>
+   <mel id="nf1475">
+      <gl pivot="notfound">ro:ba</gl>
+   </mel>
+   <mel id="nf1476">
+      <gl pivot="notfound">roast</gl>
+   </mel>
+   <mel id="nf1477">
+      <gl pivot="notfound">ronger</gl>
+   </mel>
+   <mel id="nf1478">
+      <gl pivot="notfound">rub in</gl>
+   </mel>
+   <mel id="nf1479">
+      <gl pivot="notfound">ruminate</gl>
+   </mel>
+   <mel id="nf1480">
+      <gl pivot="notfound">ruminer</gl>
+   </mel>
+   <mel id="nf1481">
+      <gl pivot="notfound">râper</gl>
+   </mel>
+   <mel id="nf1482">
+      <gl pivot="notfound">réclamer</gl>
+   </mel>
+   <mel id="nf1483">
+      <gl pivot="notfound">récolter</gl>
+   </mel>
+   <mel id="nf1484">
+      <gl pivot="notfound">récurer</gl>
+   </mel>
+   <mel id="nf1485">
+      <gl pivot="notfound">réfléchir</gl>
+   </mel>
+   <mel id="nf1486">
+      <gl pivot="notfound">répandre</gl>
+   </mel>
+   <mel id="nf1487">
+      <gl pivot="notfound">répandre une offrande from spr.&gt;</gl>
+   </mel>
+   <mel id="nf1488">
+      <gl pivot="notfound">réparer</gl>
+   </mel>
+   <mel id="nf1489">
+      <gl pivot="notfound">répéter</gl>
+   </mel>
+   <mel id="nf1490">
+      <gl pivot="notfound">réveiller</gl>
+   </mel>
+   <mel id="nf1491">
+      <gl pivot="notfound">rêvasser</gl>
+   </mel>
+   <mel id="nf1492">
+      <gl pivot="notfound">rêve</gl>
+   </mel>
+   <mel id="nf1493">
+      <gl pivot="notfound">rêver</gl>
+   </mel>
+   <mel id="nf1494">
+      <gl pivot="notfound">s'abattre</gl>
+   </mel>
+   <mel id="nf1495">
+      <gl pivot="notfound">s'accrocher aux vêtements</gl>
+   </mel>
+   <mel id="nf1496">
+      <gl pivot="notfound">s'acheter des choses peu à peu</gl>
+   </mel>
+   <mel id="nf1497">
+      <gl pivot="notfound">s'appuyer sur un bâton</gl>
+   </mel>
+   <mel id="nf1498">
+      <gl pivot="notfound">s'arrêter sans raison au milieu</gl>
+   </mel>
+   <mel id="nf1499">
+      <gl pivot="notfound">s'asseoir</gl>
+   </mel>
+   <mel id="nf1500">
+      <gl pivot="notfound">s'effondrer</gl>
+   </mel>
+   <mel id="nf1501">
+      <gl pivot="notfound">s'emmêler</gl>
+   </mel>
+   <mel id="nf1502">
+      <gl pivot="notfound">s'empêtrer</gl>
+   </mel>
+   <mel id="nf1503">
+      <gl pivot="notfound">s'enfuir</gl>
+   </mel>
+   <mel id="nf1504">
+      <gl pivot="notfound">s'enrouler</gl>
+   </mel>
+   <mel id="nf1505">
+      <gl pivot="notfound">s'habiller &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf1506">
+      <gl pivot="notfound">s'écarter</gl>
+   </mel>
+   <mel id="nf1507">
+      <gl pivot="notfound">s'échapper</gl>
+   </mel>
+   <mel id="nf1508">
+      <gl pivot="notfound">s'établir</gl>
+   </mel>
+   <mel id="nf1509">
+      <gl pivot="notfound">s'établir dans un nouvel endroit</gl>
+   </mel>
+   <mel id="nf1510">
+      <gl pivot="notfound">s'étrangler en buvant</gl>
+   </mel>
+   <mel id="nf1511">
+      <gl pivot="notfound">s'éveiller</gl>
+   </mel>
+   <mel id="nf1512">
+      <gl pivot="notfound">s. in law</gl>
+   </mel>
+   <mel id="nf1513">
+      <gl pivot="notfound">sacred</gl>
+   </mel>
+   <mel id="nf1514">
+      <gl pivot="notfound">sacred book</gl>
+   </mel>
+   <mel id="nf1515">
+      <gl pivot="notfound">salive</gl>
+   </mel>
+   <mel id="nf1516">
+      <gl pivot="notfound">salé</gl>
+   </mel>
+   <mel id="nf1517">
+      <gl pivot="notfound">sang</gl>
+   </mel>
+   <mel id="nf1518">
+      <gl pivot="notfound">sangsue d'eau</gl>
+   </mel>
+   <mel id="nf1519">
+      <gl pivot="notfound">sari</gl>
+   </mel>
+   <mel id="nf1520">
+      <gl pivot="notfound">saupoudrer</gl>
+   </mel>
+   <mel id="nf1521">
+      <gl pivot="notfound">sauter</gl>
+   </mel>
+   <mel id="nf1522">
+      <gl pivot="notfound">sauter par-dessus</gl>
+   </mel>
+   <mel id="nf1523">
+      <gl pivot="notfound">sauter pardessus</gl>
+   </mel>
+   <mel id="nf1524">
+      <gl pivot="notfound">savoir</gl>
+   </mel>
+   <mel id="nf1525">
+      <gl pivot="notfound">savoir faire</gl>
+   </mel>
+   <mel id="nf1526">
+      <gl pivot="notfound">scent</gl>
+   </mel>
+   <mel id="nf1527">
+      <gl pivot="notfound">scoop out</gl>
+   </mel>
+   <mel id="nf1528">
+      <gl pivot="notfound">scorch</gl>
+   </mel>
+   <mel id="nf1529">
+      <gl pivot="notfound">scrub</gl>
+   </mel>
+   <mel id="nf1530">
+      <gl pivot="notfound">sculpter</gl>
+   </mel>
+   <mel id="nf1531">
+      <gl pivot="notfound">se balancer sur une balançoire</gl>
+   </mel>
+   <mel id="nf1532">
+      <gl pivot="notfound">se cacher</gl>
+   </mel>
+   <mel id="nf1533">
+      <gl pivot="notfound">se chauffer au feu</gl>
+   </mel>
+   <mel id="nf1534">
+      <gl pivot="notfound">se coincer</gl>
+   </mel>
+   <mel id="nf1535">
+      <gl pivot="notfound">se coincer dans la gorge</gl>
+   </mel>
+   <mel id="nf1536">
+      <gl pivot="notfound">se coucher</gl>
+   </mel>
+   <mel id="nf1537">
+      <gl pivot="notfound">se courber vers le sol</gl>
+   </mel>
+   <mel id="nf1538">
+      <gl pivot="notfound">se débrouiller seul</gl>
+   </mel>
+   <mel id="nf1539">
+      <gl pivot="notfound">se découdre</gl>
+   </mel>
+   <mel id="nf1540">
+      <gl pivot="notfound">se déplacer</gl>
+   </mel>
+   <mel id="nf1541">
+      <gl pivot="notfound">se flétrir</gl>
+   </mel>
+   <mel id="nf1542">
+      <gl pivot="notfound">se laisser persuader</gl>
+   </mel>
+   <mel id="nf1543">
+      <gl pivot="notfound">se laver</gl>
+   </mel>
+   <mel id="nf1544">
+      <gl pivot="notfound">se lever</gl>
+   </mel>
+   <mel id="nf1545">
+      <gl pivot="notfound">se lover &lt;th 94&gt;</gl>
+   </mel>
+   <mel id="nf1546">
+      <gl pivot="notfound">se lover comme un serpent &lt;voc vb</gl>
+   </mel>
+   <mel id="nf1547">
+      <gl pivot="notfound">se produire</gl>
+   </mel>
+   <mel id="nf1548">
+      <gl pivot="notfound">se promener</gl>
+   </mel>
+   <mel id="nf1549">
+      <gl pivot="notfound">se rappeler</gl>
+   </mel>
+   <mel id="nf1550">
+      <gl pivot="notfound">se rappeler &lt;th 156&gt;</gl>
+   </mel>
+   <mel id="nf1551">
+      <gl pivot="notfound">se rassembler en foule</gl>
+   </mel>
+   <mel id="nf1552">
+      <gl pivot="notfound">se réjouir</gl>
+   </mel>
+   <mel id="nf1553">
+      <gl pivot="notfound">se tenir debout</gl>
+   </mel>
+   <mel id="nf1554">
+      <gl pivot="notfound">se tourner de côté</gl>
+   </mel>
+   <mel id="nf1555">
+      <gl pivot="notfound">search for</gl>
+   </mel>
+   <mel id="nf1556">
+      <gl pivot="notfound">secouer les mottes pour faire tomber la terre</gl>
+   </mel>
+   <mel id="nf1557">
+      <gl pivot="notfound">secousse</gl>
+   </mel>
+   <mel id="nf1558">
+      <gl pivot="notfound">sein</gl>
+   </mel>
+   <mel id="nf1559">
+      <gl pivot="notfound">semence</gl>
+   </mel>
+   <mel id="nf1560">
+      <gl pivot="notfound">sentiments</gl>
+   </mel>
+   <mel id="nf1561">
+      <gl pivot="notfound">separate kinds</gl>
+   </mel>
+   <mel id="nf1562">
+      <gl pivot="notfound">sept</gl>
+   </mel>
+   <mel id="nf1563">
+      <gl pivot="notfound">sept jours</gl>
+   </mel>
+   <mel id="nf1564">
+      <gl pivot="notfound">serve</gl>
+   </mel>
+   <mel id="nf1565">
+      <gl pivot="notfound">serve out</gl>
+   </mel>
+   <mel id="nf1566">
+      <gl pivot="notfound">set</gl>
+   </mel>
+   <mel id="nf1567">
+      <gl pivot="notfound">sharpen</gl>
+   </mel>
+   <mel id="nf1568">
+      <gl pivot="notfound">shatter</gl>
+   </mel>
+   <mel id="nf1569">
+      <gl pivot="notfound">shear</gl>
+   </mel>
+   <mel id="nf1570">
+      <gl pivot="notfound">sheath</gl>
+   </mel>
+   <mel id="nf1571">
+      <gl pivot="notfound">shut in</gl>
+   </mel>
+   <mel id="nf1572">
+      <gl pivot="notfound">shutter</gl>
+   </mel>
+   <mel id="nf1573">
+      <gl pivot="notfound">side-dish</gl>
+   </mel>
+   <mel id="nf1574">
+      <gl pivot="notfound">sidedish</gl>
+   </mel>
+   <mel id="nf1575">
+      <gl pivot="notfound">sift</gl>
+   </mel>
+   <mel id="nf1576">
+      <gl pivot="notfound">singe</gl>
+   </mel>
+   <mel id="nf1577">
+      <gl pivot="notfound">slander smn</gl>
+   </mel>
+   <mel id="nf1578">
+      <gl pivot="notfound">slick</gl>
+   </mel>
+   <mel id="nf1579">
+      <gl pivot="notfound">slide</gl>
+   </mel>
+   <mel id="nf1580">
+      <gl pivot="notfound">small earthen water jug</gl>
+   </mel>
+   <mel id="nf1581">
+      <gl pivot="notfound">small leaf</gl>
+   </mel>
+   <mel id="nf1582">
+      <gl pivot="notfound">smash</gl>
+   </mel>
+   <mel id="nf1583">
+      <gl pivot="notfound">smear</gl>
+   </mel>
+   <mel id="nf1584">
+      <gl pivot="notfound">snake skin</gl>
+   </mel>
+   <mel id="nf1585">
+      <gl pivot="notfound">snot</gl>
+   </mel>
+   <mel id="nf1586">
+      <gl pivot="notfound">snout</gl>
+   </mel>
+   <mel id="nf1587">
+      <gl pivot="notfound">soak</gl>
+   </mel>
+   <mel id="nf1588">
+      <gl pivot="notfound">soi-même</gl>
+   </mel>
+   <mel id="nf1589">
+      <gl pivot="notfound">soigner</gl>
+   </mel>
+   <mel id="nf1590">
+      <gl pivot="notfound">soigner un patient en présentant le riz</gl>
+   </mel>
+   <mel id="nf1591">
+      <gl pivot="notfound">soimême</gl>
+   </mel>
+   <mel id="nf1592">
+      <gl pivot="notfound">sol</gl>
+   </mel>
+   <mel id="nf1593">
+      <gl pivot="notfound">solide</gl>
+   </mel>
+   <mel id="nf1594">
+      <gl pivot="notfound">solve</gl>
+   </mel>
+   <mel id="nf1595">
+      <gl pivot="notfound">sommeiller</gl>
+   </mel>
+   <mel id="nf1596">
+      <gl pivot="notfound">sommet</gl>
+   </mel>
+   <mel id="nf1597">
+      <gl pivot="notfound">son in law</gl>
+   </mel>
+   <mel id="nf1598">
+      <gl pivot="notfound">sort</gl>
+   </mel>
+   <mel id="nf1599">
+      <gl pivot="notfound">sortir</gl>
+   </mel>
+   <mel id="nf1600">
+      <gl pivot="notfound">sortir de la coiffure</gl>
+   </mel>
+   <mel id="nf1601">
+      <gl pivot="notfound">sortir de terre</gl>
+   </mel>
+   <mel id="nf1602">
+      <gl pivot="notfound">sortir les bêtes</gl>
+   </mel>
+   <mel id="nf1603">
+      <gl pivot="notfound">souche</gl>
+   </mel>
+   <mel id="nf1604">
+      <gl pivot="notfound">souffler</gl>
+   </mel>
+   <mel id="nf1605">
+      <gl pivot="notfound">souffrir</gl>
+   </mel>
+   <mel id="nf1606">
+      <gl pivot="notfound">souffrir d'insomnie &lt;th 104</gl>
+   </mel>
+   <mel id="nf1607">
+      <gl pivot="notfound">sound</gl>
+   </mel>
+   <mel id="nf1608">
+      <gl pivot="notfound">spill</gl>
+   </mel>
+   <mel id="nf1609">
+      <gl pivot="notfound">spinach</gl>
+   </mel>
+   <mel id="nf1610">
+      <gl pivot="notfound">spirit(s)</gl>
+   </mel>
+   <mel id="nf1611">
+      <gl pivot="notfound">spoil</gl>
+   </mel>
+   <mel id="nf1612">
+      <gl pivot="notfound">spoilt</gl>
+   </mel>
+   <mel id="nf1613">
+      <gl pivot="notfound">spread</gl>
+   </mel>
+   <mel id="nf1614">
+      <gl pivot="notfound">sprout</gl>
+   </mel>
+   <mel id="nf1615">
+      <gl pivot="notfound">stagner</gl>
+   </mel>
+   <mel id="nf1616">
+      <gl pivot="notfound">stale</gl>
+   </mel>
+   <mel id="nf1617">
+      <gl pivot="notfound">stalk</gl>
+   </mel>
+   <mel id="nf1618">
+      <gl pivot="notfound">stamp</gl>
+   </mel>
+   <mel id="nf1619">
+      <gl pivot="notfound">starve</gl>
+   </mel>
+   <mel id="nf1620">
+      <gl pivot="notfound">stiff</gl>
+   </mel>
+   <mel id="nf1621">
+      <gl pivot="notfound">stoop</gl>
+   </mel>
+   <mel id="nf1622">
+      <gl pivot="notfound">stop</gl>
+   </mel>
+   <mel id="nf1623">
+      <gl pivot="notfound">stout</gl>
+   </mel>
+   <mel id="nf1624">
+      <gl pivot="notfound">stuck</gl>
+   </mel>
+   <mel id="nf1625">
+      <gl pivot="notfound">sucré</gl>
+   </mel>
+   <mel id="nf1626">
+      <gl pivot="notfound">sueur</gl>
+   </mel>
+   <mel id="nf1627">
+      <gl pivot="notfound">sueur &lt;th 64</gl>
+   </mel>
+   <mel id="nf1628">
+      <gl pivot="notfound">sufficient</gl>
+   </mel>
+   <mel id="nf1629">
+      <gl pivot="notfound">suffire</gl>
+   </mel>
+   <mel id="nf1630">
+      <gl pivot="notfound">suinter</gl>
+   </mel>
+   <mel id="nf1631">
+      <gl pivot="notfound">sunrise</gl>
+   </mel>
+   <mel id="nf1632">
+      <gl pivot="notfound">sunset</gl>
+   </mel>
+   <mel id="nf1633">
+      <gl pivot="notfound">sur le point de</gl>
+   </mel>
+   <mel id="nf1634">
+      <gl pivot="notfound">suspendre</gl>
+   </mel>
+   <mel id="nf1635">
+      <gl pivot="notfound">suspendre en coinçant horizontalement</gl>
+   </mel>
+   <mel id="nf1636">
+      <gl pivot="notfound">sweat</gl>
+   </mel>
+   <mel id="nf1637">
+      <gl pivot="notfound">sécher</gl>
+   </mel>
+   <mel id="nf1638">
+      <gl pivot="notfound">séparer</gl>
+   </mel>
+   <mel id="nf1639">
+      <gl pivot="notfound">séparer en tirant sur les deux bouts &lt;voc vb</gl>
+   </mel>
+   <mel id="nf1640">
+      <gl pivot="notfound">sûrir</gl>
+   </mel>
+   <mel id="nf1641">
+      <gl pivot="notfound">take care</gl>
+   </mel>
+   <mel id="nf1642">
+      <gl pivot="notfound">take off</gl>
+   </mel>
+   <mel id="nf1643">
+      <gl pivot="notfound">take out</gl>
+   </mel>
+   <mel id="nf1644">
+      <gl pivot="notfound">take to graze</gl>
+   </mel>
+   <mel id="nf1645">
+      <gl pivot="notfound">tambour</gl>
+   </mel>
+   <mel id="nf1646">
+      <gl pivot="notfound">taquiner &lt;th 100&gt;</gl>
+   </mel>
+   <mel id="nf1647">
+      <gl pivot="notfound">task</gl>
+   </mel>
+   <mel id="nf1648">
+      <gl pivot="notfound">tasser</gl>
+   </mel>
+   <mel id="nf1649">
+      <gl pivot="notfound">terrace wall</gl>
+   </mel>
+   <mel id="nf1650">
+      <gl pivot="notfound">terre</gl>
+   </mel>
+   <mel id="nf1651">
+      <gl pivot="notfound">terre ...)</gl>
+   </mel>
+   <mel id="nf1652">
+      <gl pivot="notfound">testicule &lt;munda n 70&gt;</gl>
+   </mel>
+   <mel id="nf1653">
+      <gl pivot="notfound">tether</gl>
+   </mel>
+   <mel id="nf1654">
+      <gl pivot="notfound">th 160&gt;</gl>
+   </mel>
+   <mel id="nf1655">
+      <gl pivot="notfound">th 168 in fich perf&gt;</gl>
+   </mel>
+   <mel id="nf1656">
+      <gl pivot="notfound">th 169 in fich perf&gt;</gl>
+   </mel>
+   <mel id="nf1657">
+      <gl pivot="notfound">the whole</gl>
+   </mel>
+   <mel id="nf1658">
+      <gl pivot="notfound">threaten to strike</gl>
+   </mel>
+   <mel id="nf1659">
+      <gl pivot="notfound">throw down</gl>
+   </mel>
+   <mel id="nf1660">
+      <gl pivot="notfound">thrust</gl>
+   </mel>
+   <mel id="nf1661">
+      <gl pivot="notfound">tie up</gl>
+   </mel>
+   <mel id="nf1662">
+      <gl pivot="notfound">tie up laces</gl>
+   </mel>
+   <mel id="nf1663">
+      <gl pivot="notfound">tighten</gl>
+   </mel>
+   <mel id="nf1664">
+      <gl pivot="notfound">tigre</gl>
+   </mel>
+   <mel id="nf1665">
+      <gl pivot="notfound">tigre &lt;th 40&gt;</gl>
+   </mel>
+   <mel id="nf1666">
+      <gl pivot="notfound">timide</gl>
+   </mel>
+   <mel id="nf1667">
+      <gl pivot="notfound">tip</gl>
+   </mel>
+   <mel id="nf1668">
+      <gl pivot="notfound">tire</gl>
+   </mel>
+   <mel id="nf1669">
+      <gl pivot="notfound">tirer</gl>
+   </mel>
+   <mel id="nf1670">
+      <gl pivot="notfound">tirer &lt;th 67&gt;</gl>
+   </mel>
+   <mel id="nf1671">
+      <gl pivot="notfound">tisser</gl>
+   </mel>
+   <mel id="nf1672">
+      <gl pivot="notfound">to</gl>
+   </mel>
+   <mel id="nf1673">
+      <gl pivot="notfound">to 'eat'</gl>
+   </mel>
+   <mel id="nf1674">
+      <gl pivot="notfound">to about to ?</gl>
+   </mel>
+   <mel id="nf1675">
+      <gl pivot="notfound">to accept</gl>
+   </mel>
+   <mel id="nf1676">
+      <gl pivot="notfound">to alight</gl>
+   </mel>
+   <mel id="nf1677">
+      <gl pivot="notfound">to allow</gl>
+   </mel>
+   <mel id="nf1678">
+      <gl pivot="notfound">to allowed to</gl>
+   </mel>
+   <mel id="nf1679">
+      <gl pivot="notfound">to appear</gl>
+   </mel>
+   <mel id="nf1680">
+      <gl pivot="notfound">to around</gl>
+   </mel>
+   <mel id="nf1681">
+      <gl pivot="notfound">to arrive</gl>
+   </mel>
+   <mel id="nf1682">
+      <gl pivot="notfound">to ascend</gl>
+   </mel>
+   <mel id="nf1683">
+      <gl pivot="notfound">to ask</gl>
+   </mel>
+   <mel id="nf1684">
+      <gl pivot="notfound">to assemble</gl>
+   </mel>
+   <mel id="nf1685">
+      <gl pivot="notfound">to bargain</gl>
+   </mel>
+   <mel id="nf1686">
+      <gl pivot="notfound">to bark</gl>
+   </mel>
+   <mel id="nf1687">
+      <gl pivot="notfound">to be</gl>
+   </mel>
+   <mel id="nf1688">
+      <gl pivot="notfound">to bear</gl>
+   </mel>
+   <mel id="nf1689">
+      <gl pivot="notfound">to bear fruit</gl>
+   </mel>
+   <mel id="nf1690">
+      <gl pivot="notfound">to become</gl>
+   </mel>
+   <mel id="nf1691">
+      <gl pivot="notfound">to become soft</gl>
+   </mel>
+   <mel id="nf1692">
+      <gl pivot="notfound">to become thin</gl>
+   </mel>
+   <mel id="nf1693">
+      <gl pivot="notfound">to beg</gl>
+   </mel>
+   <mel id="nf1694">
+      <gl pivot="notfound">to begin</gl>
+   </mel>
+   <mel id="nf1695">
+      <gl pivot="notfound">to bend</gl>
+   </mel>
+   <mel id="nf1696">
+      <gl pivot="notfound">to bite</gl>
+   </mel>
+   <mel id="nf1697">
+      <gl pivot="notfound">to bleed</gl>
+   </mel>
+   <mel id="nf1698">
+      <gl pivot="notfound">to bloom</gl>
+   </mel>
+   <mel id="nf1699">
+      <gl pivot="notfound">to blow</gl>
+   </mel>
+   <mel id="nf1700">
+      <gl pivot="notfound">to blow nose</gl>
+   </mel>
+   <mel id="nf1701">
+      <gl pivot="notfound">to boil</gl>
+   </mel>
+   <mel id="nf1702">
+      <gl pivot="notfound">to born</gl>
+   </mel>
+   <mel id="nf1703">
+      <gl pivot="notfound">to borrow</gl>
+   </mel>
+   <mel id="nf1704">
+      <gl pivot="notfound">to braid</gl>
+   </mel>
+   <mel id="nf1705">
+      <gl pivot="notfound">to break</gl>
+   </mel>
+   <mel id="nf1706">
+      <gl pivot="notfound">to break earth clods</gl>
+   </mel>
+   <mel id="nf1707">
+      <gl pivot="notfound">to break from pulling</gl>
+   </mel>
+   <mel id="nf1708">
+      <gl pivot="notfound">to breathe</gl>
+   </mel>
+   <mel id="nf1709">
+      <gl pivot="notfound">to brew</gl>
+   </mel>
+   <mel id="nf1710">
+      <gl pivot="notfound">to brewd</gl>
+   </mel>
+   <mel id="nf1711">
+      <gl pivot="notfound">to bring</gl>
+   </mel>
+   <mel id="nf1712">
+      <gl pivot="notfound">to bring in</gl>
+   </mel>
+   <mel id="nf1713">
+      <gl pivot="notfound">to bring up</gl>
+   </mel>
+   <mel id="nf1714">
+      <gl pivot="notfound">to brood</gl>
+   </mel>
+   <mel id="nf1715">
+      <gl pivot="notfound">to burn</gl>
+   </mel>
+   <mel id="nf1716">
+      <gl pivot="notfound">to burst</gl>
+   </mel>
+   <mel id="nf1717">
+      <gl pivot="notfound">to bury</gl>
+   </mel>
+   <mel id="nf1718">
+      <gl pivot="notfound">to buy</gl>
+   </mel>
+   <mel id="nf1719">
+      <gl pivot="notfound">to call</gl>
+   </mel>
+   <mel id="nf1720">
+      <gl pivot="notfound">to carry</gl>
+   </mel>
+   <mel id="nf1721">
+      <gl pivot="notfound">to catch</gl>
+   </mel>
+   <mel id="nf1722">
+      <gl pivot="notfound">to cause to fall off</gl>
+   </mel>
+   <mel id="nf1723">
+      <gl pivot="notfound">to cause to weigh</gl>
+   </mel>
+   <mel id="nf1724">
+      <gl pivot="notfound">to change</gl>
+   </mel>
+   <mel id="nf1725">
+      <gl pivot="notfound">to chant</gl>
+   </mel>
+   <mel id="nf1726">
+      <gl pivot="notfound">to chase</gl>
+   </mel>
+   <mel id="nf1727">
+      <gl pivot="notfound">to chew</gl>
+   </mel>
+   <mel id="nf1728">
+      <gl pivot="notfound">to chew cud</gl>
+   </mel>
+   <mel id="nf1729">
+      <gl pivot="notfound">to choke</gl>
+   </mel>
+   <mel id="nf1730">
+      <gl pivot="notfound">to choke with liquids</gl>
+   </mel>
+   <mel id="nf1731">
+      <gl pivot="notfound">to choose</gl>
+   </mel>
+   <mel id="nf1732">
+      <gl pivot="notfound">to chop</gl>
+   </mel>
+   <mel id="nf1733">
+      <gl pivot="notfound">to clean</gl>
+   </mel>
+   <mel id="nf1734">
+      <gl pivot="notfound">to clear jungle</gl>
+   </mel>
+   <mel id="nf1735">
+      <gl pivot="notfound">to climb</gl>
+   </mel>
+   <mel id="nf1736">
+      <gl pivot="notfound">to close</gl>
+   </mel>
+   <mel id="nf1737">
+      <gl pivot="notfound">to collapse</gl>
+   </mel>
+   <mel id="nf1738">
+      <gl pivot="notfound">to collide</gl>
+   </mel>
+   <mel id="nf1739">
+      <gl pivot="notfound">to color</gl>
+   </mel>
+   <mel id="nf1740">
+      <gl pivot="notfound">to comb fiber</gl>
+   </mel>
+   <mel id="nf1741">
+      <gl pivot="notfound">to come</gl>
+   </mel>
+   <mel id="nf1742">
+      <gl pivot="notfound">to come down</gl>
+   </mel>
+   <mel id="nf1743">
+      <gl pivot="notfound">to compare</gl>
+   </mel>
+   <mel id="nf1744">
+      <gl pivot="notfound">to compose</gl>
+   </mel>
+   <mel id="nf1745">
+      <gl pivot="notfound">to cook</gl>
+   </mel>
+   <mel id="nf1746">
+      <gl pivot="notfound">to cook for the dead</gl>
+   </mel>
+   <mel id="nf1747">
+      <gl pivot="notfound">to cool</gl>
+   </mel>
+   <mel id="nf1748">
+      <gl pivot="notfound">to cough</gl>
+   </mel>
+   <mel id="nf1749">
+      <gl pivot="notfound">to count</gl>
+   </mel>
+   <mel id="nf1750">
+      <gl pivot="notfound">to cover</gl>
+   </mel>
+   <mel id="nf1751">
+      <gl pivot="notfound">to cram into</gl>
+   </mel>
+   <mel id="nf1752">
+      <gl pivot="notfound">to crawl</gl>
+   </mel>
+   <mel id="nf1753">
+      <gl pivot="notfound">to crow</gl>
+   </mel>
+   <mel id="nf1754">
+      <gl pivot="notfound">to crush</gl>
+   </mel>
+   <mel id="nf1755">
+      <gl pivot="notfound">to cry</gl>
+   </mel>
+   <mel id="nf1756">
+      <gl pivot="notfound">to curse</gl>
+   </mel>
+   <mel id="nf1757">
+      <gl pivot="notfound">to cut</gl>
+   </mel>
+   <mel id="nf1758">
+      <gl pivot="notfound">to cut grass</gl>
+   </mel>
+   <mel id="nf1759">
+      <gl pivot="notfound">to cut hair</gl>
+   </mel>
+   <mel id="nf1760">
+      <gl pivot="notfound">to cut the bark off a tree</gl>
+   </mel>
+   <mel id="nf1761">
+      <gl pivot="notfound">to defecate</gl>
+   </mel>
+   <mel id="nf1762">
+      <gl pivot="notfound">to delay</gl>
+   </mel>
+   <mel id="nf1763">
+      <gl pivot="notfound">to descend</gl>
+   </mel>
+   <mel id="nf1764">
+      <gl pivot="notfound">to die</gl>
+   </mel>
+   <mel id="nf1765">
+      <gl pivot="notfound">to dilute</gl>
+   </mel>
+   <mel id="nf1766">
+      <gl pivot="notfound">to dip into</gl>
+   </mel>
+   <mel id="nf1767">
+      <gl pivot="notfound">to disappear</gl>
+   </mel>
+   <mel id="nf1768">
+      <gl pivot="notfound">to disarrange</gl>
+   </mel>
+   <mel id="nf1769">
+      <gl pivot="notfound">to discard</gl>
+   </mel>
+   <mel id="nf1770">
+      <gl pivot="notfound">to disgusted</gl>
+   </mel>
+   <mel id="nf1771">
+      <gl pivot="notfound">to distribute</gl>
+   </mel>
+   <mel id="nf1772">
+      <gl pivot="notfound">to divide</gl>
+   </mel>
+   <mel id="nf1773">
+      <gl pivot="notfound">to do</gl>
+   </mel>
+   <mel id="nf1774">
+      <gl pivot="notfound">to draw</gl>
+   </mel>
+   <mel id="nf1775">
+      <gl pivot="notfound">to dream</gl>
+   </mel>
+   <mel id="nf1776">
+      <gl pivot="notfound">to dress</gl>
+   </mel>
+   <mel id="nf1777">
+      <gl pivot="notfound">to drink</gl>
+   </mel>
+   <mel id="nf1778">
+      <gl pivot="notfound">to drive</gl>
+   </mel>
+   <mel id="nf1779">
+      <gl pivot="notfound">to drop</gl>
+   </mel>
+   <mel id="nf1780">
+      <gl pivot="notfound">to dry</gl>
+   </mel>
+   <mel id="nf1781">
+      <gl pivot="notfound">to dry-ferment</gl>
+   </mel>
+   <mel id="nf1782">
+      <gl pivot="notfound">to dryferment</gl>
+   </mel>
+   <mel id="nf1783">
+      <gl pivot="notfound">to earn</gl>
+   </mel>
+   <mel id="nf1784">
+      <gl pivot="notfound">to eat</gl>
+   </mel>
+   <mel id="nf1785">
+      <gl pivot="notfound">to enter</gl>
+   </mel>
+   <mel id="nf1786">
+      <gl pivot="notfound">to erode</gl>
+   </mel>
+   <mel id="nf1787">
+      <gl pivot="notfound">to err</gl>
+   </mel>
+   <mel id="nf1788">
+      <gl pivot="notfound">to escape</gl>
+   </mel>
+   <mel id="nf1789">
+      <gl pivot="notfound">to exchange</gl>
+   </mel>
+   <mel id="nf1790">
+      <gl pivot="notfound">to exorcise with offering plate</gl>
+   </mel>
+   <mel id="nf1791">
+      <gl pivot="notfound">to explode</gl>
+   </mel>
+   <mel id="nf1792">
+      <gl pivot="notfound">to extinguish a fire</gl>
+   </mel>
+   <mel id="nf1793">
+      <gl pivot="notfound">to fade</gl>
+   </mel>
+   <mel id="nf1794">
+      <gl pivot="notfound">to fall</gl>
+   </mel>
+   <mel id="nf1795">
+      <gl pivot="notfound">to fall down</gl>
+   </mel>
+   <mel id="nf1796">
+      <gl pivot="notfound">to fall off</gl>
+   </mel>
+   <mel id="nf1797">
+      <gl pivot="notfound">to fall over</gl>
+   </mel>
+   <mel id="nf1798">
+      <gl pivot="notfound">to fear</gl>
+   </mel>
+   <mel id="nf1799">
+      <gl pivot="notfound">to feed</gl>
+   </mel>
+   <mel id="nf1800">
+      <gl pivot="notfound">to feel cold</gl>
+   </mel>
+   <mel id="nf1801">
+      <gl pivot="notfound">to feel shy</gl>
+   </mel>
+   <mel id="nf1802">
+      <gl pivot="notfound">to ferment</gl>
+   </mel>
+   <mel id="nf1803">
+      <gl pivot="notfound">to fight</gl>
+   </mel>
+   <mel id="nf1804">
+      <gl pivot="notfound">to fill</gl>
+   </mel>
+   <mel id="nf1805">
+      <gl pivot="notfound">to find</gl>
+   </mel>
+   <mel id="nf1806">
+      <gl pivot="notfound">to flare up</gl>
+   </mel>
+   <mel id="nf1807">
+      <gl pivot="notfound">to flatten dough</gl>
+   </mel>
+   <mel id="nf1808">
+      <gl pivot="notfound">to flee</gl>
+   </mel>
+   <mel id="nf1809">
+      <gl pivot="notfound">to float</gl>
+   </mel>
+   <mel id="nf1810">
+      <gl pivot="notfound">to flower</gl>
+   </mel>
+   <mel id="nf1811">
+      <gl pivot="notfound">to fly</gl>
+   </mel>
+   <mel id="nf1812">
+      <gl pivot="notfound">to forget</gl>
+   </mel>
+   <mel id="nf1813">
+      <gl pivot="notfound">to fry</gl>
+   </mel>
+   <mel id="nf1814">
+      <gl pivot="notfound">to gather into sheaves</gl>
+   </mel>
+   <mel id="nf1815">
+      <gl pivot="notfound">to gather up</gl>
+   </mel>
+   <mel id="nf1816">
+      <gl pivot="notfound">to germinate</gl>
+   </mel>
+   <mel id="nf1817">
+      <gl pivot="notfound">to get stuck</gl>
+   </mel>
+   <mel id="nf1818">
+      <gl pivot="notfound">to get unsewn</gl>
+   </mel>
+   <mel id="nf1819">
+      <gl pivot="notfound">to get well</gl>
+   </mel>
+   <mel id="nf1820">
+      <gl pivot="notfound">to give</gl>
+   </mel>
+   <mel id="nf1821">
+      <gl pivot="notfound">to give back</gl>
+   </mel>
+   <mel id="nf1822">
+      <gl pivot="notfound">to gnaw</gl>
+   </mel>
+   <mel id="nf1823">
+      <gl pivot="notfound">to go</gl>
+   </mel>
+   <mel id="nf1824">
+      <gl pivot="notfound">to grate</gl>
+   </mel>
+   <mel id="nf1825">
+      <gl pivot="notfound">to graze</gl>
+   </mel>
+   <mel id="nf1826">
+      <gl pivot="notfound">to grind</gl>
+   </mel>
+   <mel id="nf1827">
+      <gl pivot="notfound">to groan</gl>
+   </mel>
+   <mel id="nf1828">
+      <gl pivot="notfound">to grow up</gl>
+   </mel>
+   <mel id="nf1829">
+      <gl pivot="notfound">to growl</gl>
+   </mel>
+   <mel id="nf1830">
+      <gl pivot="notfound">to guard</gl>
+   </mel>
+   <mel id="nf1831">
+      <gl pivot="notfound">to hammer</gl>
+   </mel>
+   <mel id="nf1832">
+      <gl pivot="notfound">to handle</gl>
+   </mel>
+   <mel id="nf1833">
+      <gl pivot="notfound">to hang</gl>
+   </mel>
+   <mel id="nf1834">
+      <gl pivot="notfound">to hang up</gl>
+   </mel>
+   <mel id="nf1835">
+      <gl pivot="notfound">to happy</gl>
+   </mel>
+   <mel id="nf1836">
+      <gl pivot="notfound">to hatch</gl>
+   </mel>
+   <mel id="nf1837">
+      <gl pivot="notfound">to have cold feet</gl>
+   </mel>
+   <mel id="nf1838">
+      <gl pivot="notfound">to have eaten enough</gl>
+   </mel>
+   <mel id="nf1839">
+      <gl pivot="notfound">to have sexual intercourse</gl>
+   </mel>
+   <mel id="nf1840">
+      <gl pivot="notfound">to hear</gl>
+   </mel>
+   <mel id="nf1841">
+      <gl pivot="notfound">to heat</gl>
+   </mel>
+   <mel id="nf1842">
+      <gl pivot="notfound">to heat up roti on the fire</gl>
+   </mel>
+   <mel id="nf1843">
+      <gl pivot="notfound">to hide</gl>
+   </mel>
+   <mel id="nf1844">
+      <gl pivot="notfound">to hinder</gl>
+   </mel>
+   <mel id="nf1845">
+      <gl pivot="notfound">to hit</gl>
+   </mel>
+   <mel id="nf1846">
+      <gl pivot="notfound">to hit with horn</gl>
+   </mel>
+   <mel id="nf1847">
+      <gl pivot="notfound">to hold</gl>
+   </mel>
+   <mel id="nf1848">
+      <gl pivot="notfound">to hold out</gl>
+   </mel>
+   <mel id="nf1849">
+      <gl pivot="notfound">to hold up</gl>
+   </mel>
+   <mel id="nf1850">
+      <gl pivot="notfound">to howl</gl>
+   </mel>
+   <mel id="nf1851">
+      <gl pivot="notfound">to hungry</gl>
+   </mel>
+   <mel id="nf1852">
+      <gl pivot="notfound">to hurt</gl>
+   </mel>
+   <mel id="nf1853">
+      <gl pivot="notfound">to insert</gl>
+   </mel>
+   <mel id="nf1854">
+      <gl pivot="notfound">to instill</gl>
+   </mel>
+   <mel id="nf1855">
+      <gl pivot="notfound">to itch</gl>
+   </mel>
+   <mel id="nf1856">
+      <gl pivot="notfound">to jump</gl>
+   </mel>
+   <mel id="nf1857">
+      <gl pivot="notfound">to jump across</gl>
+   </mel>
+   <mel id="nf1858">
+      <gl pivot="notfound">to jump over</gl>
+   </mel>
+   <mel id="nf1859">
+      <gl pivot="notfound">to kill</gl>
+   </mel>
+   <mel id="nf1860">
+      <gl pivot="notfound">to kindle</gl>
+   </mel>
+   <mel id="nf1861">
+      <gl pivot="notfound">to knead</gl>
+   </mel>
+   <mel id="nf1862">
+      <gl pivot="notfound">to know</gl>
+   </mel>
+   <mel id="nf1863">
+      <gl pivot="notfound">to land</gl>
+   </mel>
+   <mel id="nf1864">
+      <gl pivot="notfound">to late</gl>
+   </mel>
+   <mel id="nf1865">
+      <gl pivot="notfound">to laugh</gl>
+   </mel>
+   <mel id="nf1866">
+      <gl pivot="notfound">to lead</gl>
+   </mel>
+   <mel id="nf1867">
+      <gl pivot="notfound">to leak</gl>
+   </mel>
+   <mel id="nf1868">
+      <gl pivot="notfound">to lend</gl>
+   </mel>
+   <mel id="nf1869">
+      <gl pivot="notfound">to lick</gl>
+   </mel>
+   <mel id="nf1870">
+      <gl pivot="notfound">to light</gl>
+   </mel>
+   <mel id="nf1871">
+      <gl pivot="notfound">to light fire</gl>
+   </mel>
+   <mel id="nf1872">
+      <gl pivot="notfound">to liquid</gl>
+   </mel>
+   <mel id="nf1873">
+      <gl pivot="notfound">to listen</gl>
+   </mel>
+   <mel id="nf1874">
+      <gl pivot="notfound">to live</gl>
+   </mel>
+   <mel id="nf1875">
+      <gl pivot="notfound">to load</gl>
+   </mel>
+   <mel id="nf1876">
+      <gl pivot="notfound">to lock chicken up</gl>
+   </mel>
+   <mel id="nf1877">
+      <gl pivot="notfound">to look</gl>
+   </mel>
+   <mel id="nf1878">
+      <gl pivot="notfound">to look at</gl>
+   </mel>
+   <mel id="nf1879">
+      <gl pivot="notfound">to look for</gl>
+   </mel>
+   <mel id="nf1880">
+      <gl pivot="notfound">to lose</gl>
+   </mel>
+   <mel id="nf1881">
+      <gl pivot="notfound">to lose s.th</gl>
+   </mel>
+   <mel id="nf1882">
+      <gl pivot="notfound">to make a rope</gl>
+   </mel>
+   <mel id="nf1883">
+      <gl pivot="notfound">to make noise</gl>
+   </mel>
+   <mel id="nf1884">
+      <gl pivot="notfound">to massage</gl>
+   </mel>
+   <mel id="nf1885">
+      <gl pivot="notfound">to measure</gl>
+   </mel>
+   <mel id="nf1886">
+      <gl pivot="notfound">to meet</gl>
+   </mel>
+   <mel id="nf1887">
+      <gl pivot="notfound">to melt</gl>
+   </mel>
+   <mel id="nf1888">
+      <gl pivot="notfound">to mend</gl>
+   </mel>
+   <mel id="nf1889">
+      <gl pivot="notfound">to milk</gl>
+   </mel>
+   <mel id="nf1890">
+      <gl pivot="notfound">to mix</gl>
+   </mel>
+   <mel id="nf1891">
+      <gl pivot="notfound">to move sthg</gl>
+   </mel>
+   <mel id="nf1892">
+      <gl pivot="notfound">to need</gl>
+   </mel>
+   <mel id="nf1893">
+      <gl pivot="notfound">to offer</gl>
+   </mel>
+   <mel id="nf1894">
+      <gl pivot="notfound">to omit</gl>
+   </mel>
+   <mel id="nf1895">
+      <gl pivot="notfound">to out</gl>
+   </mel>
+   <mel id="nf1896">
+      <gl pivot="notfound">to overflow</gl>
+   </mel>
+   <mel id="nf1897">
+      <gl pivot="notfound">to pass</gl>
+   </mel>
+   <mel id="nf1898">
+      <gl pivot="notfound">to patch</gl>
+   </mel>
+   <mel id="nf1899">
+      <gl pivot="notfound">to peck</gl>
+   </mel>
+   <mel id="nf1900">
+      <gl pivot="notfound">to peel</gl>
+   </mel>
+   <mel id="nf1901">
+      <gl pivot="notfound">to pen up</gl>
+   </mel>
+   <mel id="nf1902">
+      <gl pivot="notfound">to perch</gl>
+   </mel>
+   <mel id="nf1903">
+      <gl pivot="notfound">to persuade</gl>
+   </mel>
+   <mel id="nf1904">
+      <gl pivot="notfound">to pick</gl>
+   </mel>
+   <mel id="nf1905">
+      <gl pivot="notfound">to pick up</gl>
+   </mel>
+   <mel id="nf1906">
+      <gl pivot="notfound">to pinch</gl>
+   </mel>
+   <mel id="nf1907">
+      <gl pivot="notfound">to plaster with mud</gl>
+   </mel>
+   <mel id="nf1908">
+      <gl pivot="notfound">to play</gl>
+   </mel>
+   <mel id="nf1909">
+      <gl pivot="notfound">to play music</gl>
+   </mel>
+   <mel id="nf1910">
+      <gl pivot="notfound">to pleased</gl>
+   </mel>
+   <mel id="nf1911">
+      <gl pivot="notfound">to plough</gl>
+   </mel>
+   <mel id="nf1912">
+      <gl pivot="notfound">to plow</gl>
+   </mel>
+   <mel id="nf1913">
+      <gl pivot="notfound">to pluck</gl>
+   </mel>
+   <mel id="nf1914">
+      <gl pivot="notfound">to polish</gl>
+   </mel>
+   <mel id="nf1915">
+      <gl pivot="notfound">to pound</gl>
+   </mel>
+   <mel id="nf1916">
+      <gl pivot="notfound">to pour</gl>
+   </mel>
+   <mel id="nf1917">
+      <gl pivot="notfound">to press down</gl>
+   </mel>
+   <mel id="nf1918">
+      <gl pivot="notfound">to press on the ground</gl>
+   </mel>
+   <mel id="nf1919">
+      <gl pivot="notfound">to prick</gl>
+   </mel>
+   <mel id="nf1920">
+      <gl pivot="notfound">to prickle</gl>
+   </mel>
+   <mel id="nf1921">
+      <gl pivot="notfound">to pull</gl>
+   </mel>
+   <mel id="nf1922">
+      <gl pivot="notfound">to pull out</gl>
+   </mel>
+   <mel id="nf1923">
+      <gl pivot="notfound">to put</gl>
+   </mel>
+   <mel id="nf1924">
+      <gl pivot="notfound">to put down</gl>
+   </mel>
+   <mel id="nf1925">
+      <gl pivot="notfound">to put in the right place</gl>
+   </mel>
+   <mel id="nf1926">
+      <gl pivot="notfound">to put on</gl>
+   </mel>
+   <mel id="nf1927">
+      <gl pivot="notfound">to put to sleep</gl>
+   </mel>
+   <mel id="nf1928">
+      <gl pivot="notfound">to quarrel</gl>
+   </mel>
+   <mel id="nf1929">
+      <gl pivot="notfound">to quarrel with words</gl>
+   </mel>
+   <mel id="nf1930">
+      <gl pivot="notfound">to rain</gl>
+   </mel>
+   <mel id="nf1931">
+      <gl pivot="notfound">to raise</gl>
+   </mel>
+   <mel id="nf1932">
+      <gl pivot="notfound">to reach</gl>
+   </mel>
+   <mel id="nf1933">
+      <gl pivot="notfound">to read</gl>
+   </mel>
+   <mel id="nf1934">
+      <gl pivot="notfound">to receive</gl>
+   </mel>
+   <mel id="nf1935">
+      <gl pivot="notfound">to remain</gl>
+   </mel>
+   <mel id="nf1936">
+      <gl pivot="notfound">to remember</gl>
+   </mel>
+   <mel id="nf1937">
+      <gl pivot="notfound">to repay</gl>
+   </mel>
+   <mel id="nf1938">
+      <gl pivot="notfound">to repeat</gl>
+   </mel>
+   <mel id="nf1939">
+      <gl pivot="notfound">to request</gl>
+   </mel>
+   <mel id="nf1940">
+      <gl pivot="notfound">to require time</gl>
+   </mel>
+   <mel id="nf1941">
+      <gl pivot="notfound">to rest</gl>
+   </mel>
+   <mel id="nf1942">
+      <gl pivot="notfound">to return</gl>
+   </mel>
+   <mel id="nf1943">
+      <gl pivot="notfound">to rinse</gl>
+   </mel>
+   <mel id="nf1944">
+      <gl pivot="notfound">to ripen</gl>
+   </mel>
+   <mel id="nf1945">
+      <gl pivot="notfound">to ripen artificially in hot bed</gl>
+   </mel>
+   <mel id="nf1946">
+      <gl pivot="notfound">to roast</gl>
+   </mel>
+   <mel id="nf1947">
+      <gl pivot="notfound">to rock</gl>
+   </mel>
+   <mel id="nf1948">
+      <gl pivot="notfound">to roll up</gl>
+   </mel>
+   <mel id="nf1949">
+      <gl pivot="notfound">to roll up thread</gl>
+   </mel>
+   <mel id="nf1950">
+      <gl pivot="notfound">to rot</gl>
+   </mel>
+   <mel id="nf1951">
+      <gl pivot="notfound">to rub</gl>
+   </mel>
+   <mel id="nf1952">
+      <gl pivot="notfound">to rumble</gl>
+   </mel>
+   <mel id="nf1953">
+      <gl pivot="notfound">to ruminate</gl>
+   </mel>
+   <mel id="nf1954">
+      <gl pivot="notfound">to run</gl>
+   </mel>
+   <mel id="nf1955">
+      <gl pivot="notfound">to say</gl>
+   </mel>
+   <mel id="nf1956">
+      <gl pivot="notfound">to scoop out</gl>
+   </mel>
+   <mel id="nf1957">
+      <gl pivot="notfound">to scorch</gl>
+   </mel>
+   <mel id="nf1958">
+      <gl pivot="notfound">to scrape clean</gl>
+   </mel>
+   <mel id="nf1959">
+      <gl pivot="notfound">to scrape with knife</gl>
+   </mel>
+   <mel id="nf1960">
+      <gl pivot="notfound">to scratch</gl>
+   </mel>
+   <mel id="nf1961">
+      <gl pivot="notfound">to scream</gl>
+   </mel>
+   <mel id="nf1962">
+      <gl pivot="notfound">to scrub</gl>
+   </mel>
+   <mel id="nf1963">
+      <gl pivot="notfound">to search for</gl>
+   </mel>
+   <mel id="nf1964">
+      <gl pivot="notfound">to see</gl>
+   </mel>
+   <mel id="nf1965">
+      <gl pivot="notfound">to sell</gl>
+   </mel>
+   <mel id="nf1966">
+      <gl pivot="notfound">to send</gl>
+   </mel>
+   <mel id="nf1967">
+      <gl pivot="notfound">to separate</gl>
+   </mel>
+   <mel id="nf1968">
+      <gl pivot="notfound">to serve</gl>
+   </mel>
+   <mel id="nf1969">
+      <gl pivot="notfound">to serve out</gl>
+   </mel>
+   <mel id="nf1970">
+      <gl pivot="notfound">to set to cook</gl>
+   </mel>
+   <mel id="nf1971">
+      <gl pivot="notfound">to set to dry</gl>
+   </mel>
+   <mel id="nf1972">
+      <gl pivot="notfound">to sew</gl>
+   </mel>
+   <mel id="nf1973">
+      <gl pivot="notfound">to shake</gl>
+   </mel>
+   <mel id="nf1974">
+      <gl pivot="notfound">to shake off earth</gl>
+   </mel>
+   <mel id="nf1975">
+      <gl pivot="notfound">to share</gl>
+   </mel>
+   <mel id="nf1976">
+      <gl pivot="notfound">to sharpen</gl>
+   </mel>
+   <mel id="nf1977">
+      <gl pivot="notfound">to shave</gl>
+   </mel>
+   <mel id="nf1978">
+      <gl pivot="notfound">to shear</gl>
+   </mel>
+   <mel id="nf1979">
+      <gl pivot="notfound">to shift</gl>
+   </mel>
+   <mel id="nf1980">
+      <gl pivot="notfound">to shine</gl>
+   </mel>
+   <mel id="nf1981">
+      <gl pivot="notfound">to shiver</gl>
+   </mel>
+   <mel id="nf1982">
+      <gl pivot="notfound">to shoot</gl>
+   </mel>
+   <mel id="nf1983">
+      <gl pivot="notfound">to shout</gl>
+   </mel>
+   <mel id="nf1984">
+      <gl pivot="notfound">to show</gl>
+   </mel>
+   <mel id="nf1985">
+      <gl pivot="notfound">to shut</gl>
+   </mel>
+   <mel id="nf1986">
+      <gl pivot="notfound">to shut in</gl>
+   </mel>
+   <mel id="nf1987">
+      <gl pivot="notfound">to shy</gl>
+   </mel>
+   <mel id="nf1988">
+      <gl pivot="notfound">to sick</gl>
+   </mel>
+   <mel id="nf1989">
+      <gl pivot="notfound">to sit</gl>
+   </mel>
+   <mel id="nf1990">
+      <gl pivot="notfound">to sit cross legged</gl>
+   </mel>
+   <mel id="nf1991">
+      <gl pivot="notfound">to sleep</gl>
+   </mel>
+   <mel id="nf1992">
+      <gl pivot="notfound">to slide</gl>
+   </mel>
+   <mel id="nf1993">
+      <gl pivot="notfound">to snap</gl>
+   </mel>
+   <mel id="nf1994">
+      <gl pivot="notfound">to snatch away</gl>
+   </mel>
+   <mel id="nf1995">
+      <gl pivot="notfound">to sneeze</gl>
+   </mel>
+   <mel id="nf1996">
+      <gl pivot="notfound">to soak</gl>
+   </mel>
+   <mel id="nf1997">
+      <gl pivot="notfound">to spead out</gl>
+   </mel>
+   <mel id="nf1998">
+      <gl pivot="notfound">to speak</gl>
+   </mel>
+   <mel id="nf1999">
+      <gl pivot="notfound">to spend</gl>
+   </mel>
+   <mel id="nf2000">
+      <gl pivot="notfound">to spill</gl>
+   </mel>
+   <mel id="nf2001">
+      <gl pivot="notfound">to spread</gl>
+   </mel>
+   <mel id="nf2002">
+      <gl pivot="notfound">to spread out</gl>
+   </mel>
+   <mel id="nf2003">
+      <gl pivot="notfound">to sprinkle pure water on s.o. for purification</gl>
+   </mel>
+   <mel id="nf2004">
+      <gl pivot="notfound">to squat</gl>
+   </mel>
+   <mel id="nf2005">
+      <gl pivot="notfound">to squeeze</gl>
+   </mel>
+   <mel id="nf2006">
+      <gl pivot="notfound">to squeeze water out</gl>
+   </mel>
+   <mel id="nf2007">
+      <gl pivot="notfound">to stagger</gl>
+   </mel>
+   <mel id="nf2008">
+      <gl pivot="notfound">to stain</gl>
+   </mel>
+   <mel id="nf2009">
+      <gl pivot="notfound">to stand</gl>
+   </mel>
+   <mel id="nf2010">
+      <gl pivot="notfound">to steal away</gl>
+   </mel>
+   <mel id="nf2011">
+      <gl pivot="notfound">to step on</gl>
+   </mel>
+   <mel id="nf2012">
+      <gl pivot="notfound">to step on a support</gl>
+   </mel>
+   <mel id="nf2013">
+      <gl pivot="notfound">to sting</gl>
+   </mel>
+   <mel id="nf2014">
+      <gl pivot="notfound">to stir ?</gl>
+   </mel>
+   <mel id="nf2015">
+      <gl pivot="notfound">to stir meal</gl>
+   </mel>
+   <mel id="nf2016">
+      <gl pivot="notfound">to stir up fire</gl>
+   </mel>
+   <mel id="nf2017">
+      <gl pivot="notfound">to stoke</gl>
+   </mel>
+   <mel id="nf2018">
+      <gl pivot="notfound">to stoop</gl>
+   </mel>
+   <mel id="nf2019">
+      <gl pivot="notfound">to stop</gl>
+   </mel>
+   <mel id="nf2020">
+      <gl pivot="notfound">to store</gl>
+   </mel>
+   <mel id="nf2021">
+      <gl pivot="notfound">to strangle</gl>
+   </mel>
+   <mel id="nf2022">
+      <gl pivot="notfound">to strike</gl>
+   </mel>
+   <mel id="nf2023">
+      <gl pivot="notfound">to string</gl>
+   </mel>
+   <mel id="nf2024">
+      <gl pivot="notfound">to strong</gl>
+   </mel>
+   <mel id="nf2025">
+      <gl pivot="notfound">to stuff down</gl>
+   </mel>
+   <mel id="nf2026">
+      <gl pivot="notfound">to suck</gl>
+   </mel>
+   <mel id="nf2027">
+      <gl pivot="notfound">to swallow</gl>
+   </mel>
+   <mel id="nf2028">
+      <gl pivot="notfound">to swell</gl>
+   </mel>
+   <mel id="nf2029">
+      <gl pivot="notfound">to swell under heat</gl>
+   </mel>
+   <mel id="nf2030">
+      <gl pivot="notfound">to swim</gl>
+   </mel>
+   <mel id="nf2031">
+      <gl pivot="notfound">to take</gl>
+   </mel>
+   <mel id="nf2032">
+      <gl pivot="notfound">to take away</gl>
+   </mel>
+   <mel id="nf2033">
+      <gl pivot="notfound">to take away &lt;mm&gt;</gl>
+   </mel>
+   <mel id="nf2034">
+      <gl pivot="notfound">to take down</gl>
+   </mel>
+   <mel id="nf2035">
+      <gl pivot="notfound">to take off</gl>
+   </mel>
+   <mel id="nf2036">
+      <gl pivot="notfound">to take out</gl>
+   </mel>
+   <mel id="nf2037">
+      <gl pivot="notfound">to taste</gl>
+   </mel>
+   <mel id="nf2038">
+      <gl pivot="notfound">to teach</gl>
+   </mel>
+   <mel id="nf2039">
+      <gl pivot="notfound">to tear</gl>
+   </mel>
+   <mel id="nf2040">
+      <gl pivot="notfound">to tease</gl>
+   </mel>
+   <mel id="nf2041">
+      <gl pivot="notfound">to tell</gl>
+   </mel>
+   <mel id="nf2042">
+      <gl pivot="notfound">to tether</gl>
+   </mel>
+   <mel id="nf2043">
+      <gl pivot="notfound">to thresh</gl>
+   </mel>
+   <mel id="nf2044">
+      <gl pivot="notfound">to throw away</gl>
+   </mel>
+   <mel id="nf2045">
+      <gl pivot="notfound">to thrust</gl>
+   </mel>
+   <mel id="nf2046">
+      <gl pivot="notfound">to tie</gl>
+   </mel>
+   <mel id="nf2047">
+      <gl pivot="notfound">to tie fastening strings</gl>
+   </mel>
+   <mel id="nf2048">
+      <gl pivot="notfound">to tie up</gl>
+   </mel>
+   <mel id="nf2049">
+      <gl pivot="notfound">to tire</gl>
+   </mel>
+   <mel id="nf2050">
+      <gl pivot="notfound">to torn</gl>
+   </mel>
+   <mel id="nf2051">
+      <gl pivot="notfound">to trade</gl>
+   </mel>
+   <mel id="nf2052">
+      <gl pivot="notfound">to transmit fire</gl>
+   </mel>
+   <mel id="nf2053">
+      <gl pivot="notfound">to tread on clothes</gl>
+   </mel>
+   <mel id="nf2054">
+      <gl pivot="notfound">to turn</gl>
+   </mel>
+   <mel id="nf2055">
+      <gl pivot="notfound">to turn back</gl>
+   </mel>
+   <mel id="nf2056">
+      <gl pivot="notfound">to turn over</gl>
+   </mel>
+   <mel id="nf2057">
+      <gl pivot="notfound">to twist</gl>
+   </mel>
+   <mel id="nf2058">
+      <gl pivot="notfound">to understand</gl>
+   </mel>
+   <mel id="nf2059">
+      <gl pivot="notfound">to uproot</gl>
+   </mel>
+   <mel id="nf2060">
+      <gl pivot="notfound">to vomit</gl>
+   </mel>
+   <mel id="nf2061">
+      <gl pivot="notfound">to wait</gl>
+   </mel>
+   <mel id="nf2062">
+      <gl pivot="notfound">to wake up</gl>
+   </mel>
+   <mel id="nf2063">
+      <gl pivot="notfound">to walk</gl>
+   </mel>
+   <mel id="nf2064">
+      <gl pivot="notfound">to wallow</gl>
+   </mel>
+   <mel id="nf2065">
+      <gl pivot="notfound">to wander</gl>
+   </mel>
+   <mel id="nf2066">
+      <gl pivot="notfound">to want</gl>
+   </mel>
+   <mel id="nf2067">
+      <gl pivot="notfound">to wash</gl>
+   </mel>
+   <mel id="nf2068">
+      <gl pivot="notfound">to wash away</gl>
+   </mel>
+   <mel id="nf2069">
+      <gl pivot="notfound">to wear</gl>
+   </mel>
+   <mel id="nf2070">
+      <gl pivot="notfound">to wear a hat</gl>
+   </mel>
+   <mel id="nf2071">
+      <gl pivot="notfound">to wear by draping</gl>
+   </mel>
+   <mel id="nf2072">
+      <gl pivot="notfound">to weave</gl>
+   </mel>
+   <mel id="nf2073">
+      <gl pivot="notfound">to weed</gl>
+   </mel>
+   <mel id="nf2074">
+      <gl pivot="notfound">to weep</gl>
+   </mel>
+   <mel id="nf2075">
+      <gl pivot="notfound">to weigh</gl>
+   </mel>
+   <mel id="nf2076">
+      <gl pivot="notfound">to whet</gl>
+   </mel>
+   <mel id="nf2077">
+      <gl pivot="notfound">to win</gl>
+   </mel>
+   <mel id="nf2078">
+      <gl pivot="notfound">to wind up</gl>
+   </mel>
+   <mel id="nf2079">
+      <gl pivot="notfound">to winnow</gl>
+   </mel>
+   <mel id="nf2080">
+      <gl pivot="notfound">to wipe off</gl>
+   </mel>
+   <mel id="nf2081">
+      <gl pivot="notfound">to wither</gl>
+   </mel>
+   <mel id="nf2082">
+      <gl pivot="notfound">to wrap around head</gl>
+   </mel>
+   <mel id="nf2083">
+      <gl pivot="notfound">to wrestle</gl>
+   </mel>
+   <mel id="nf2084">
+      <gl pivot="notfound">to wring</gl>
+   </mel>
+   <mel id="nf2085">
+      <gl pivot="notfound">to write</gl>
+   </mel>
+   <mel id="nf2086">
+      <gl pivot="notfound">toi</gl>
+   </mel>
+   <mel id="nf2087">
+      <gl pivot="notfound">tomber</gl>
+   </mel>
+   <mel id="nf2088">
+      <gl pivot="notfound">tomber à la renverse</gl>
+   </mel>
+   <mel id="nf2089">
+      <gl pivot="notfound">tonner</gl>
+   </mel>
+   <mel id="nf2090">
+      <gl pivot="notfound">tordre le linge</gl>
+   </mel>
+   <mel id="nf2091">
+      <gl pivot="notfound">torn</gl>
+   </mel>
+   <mel id="nf2092">
+      <gl pivot="notfound">toucher</gl>
+   </mel>
+   <mel id="nf2093">
+      <gl pivot="notfound">touiller</gl>
+   </mel>
+   <mel id="nf2094">
+      <gl pivot="notfound">touiller la boule de maïs ou de millet</gl>
+   </mel>
+   <mel id="nf2095">
+      <gl pivot="notfound">tourbillonner</gl>
+   </mel>
+   <mel id="nf2096">
+      <gl pivot="notfound">tourner</gl>
+   </mel>
+   <mel id="nf2097">
+      <gl pivot="notfound">tourner sur soi-même</gl>
+   </mel>
+   <mel id="nf2098">
+      <gl pivot="notfound">tourner sur soimême</gl>
+   </mel>
+   <mel id="nf2099">
+      <gl pivot="notfound">tourner vite</gl>
+   </mel>
+   <mel id="nf2100">
+      <gl pivot="notfound">tous</gl>
+   </mel>
+   <mel id="nf2101">
+      <gl pivot="notfound">tousser</gl>
+   </mel>
+   <mel id="nf2102">
+      <gl pivot="notfound">trade</gl>
+   </mel>
+   <mel id="nf2103">
+      <gl pivot="notfound">transporter</gl>
+   </mel>
+   <mel id="nf2104">
+      <gl pivot="notfound">trap</gl>
+   </mel>
+   <mel id="nf2105">
+      <gl pivot="notfound">travail</gl>
+   </mel>
+   <mel id="nf2106">
+      <gl pivot="notfound">traverser</gl>
+   </mel>
+   <mel id="nf2107">
+      <gl pivot="notfound">tree)</gl>
+   </mel>
+   <mel id="nf2108">
+      <gl pivot="notfound">tremble</gl>
+   </mel>
+   <mel id="nf2109">
+      <gl pivot="notfound">trembler</gl>
+   </mel>
+   <mel id="nf2110">
+      <gl pivot="notfound">tremper</gl>
+   </mel>
+   <mel id="nf2111">
+      <gl pivot="notfound">tresser en roulant dans ses mains</gl>
+   </mel>
+   <mel id="nf2112">
+      <gl pivot="notfound">trier</gl>
+   </mel>
+   <mel id="nf2113">
+      <gl pivot="notfound">tripoter</gl>
+   </mel>
+   <mel id="nf2114">
+      <gl pivot="notfound">trois</gl>
+   </mel>
+   <mel id="nf2115">
+      <gl pivot="notfound">trop mince ou trop liquide</gl>
+   </mel>
+   <mel id="nf2116">
+      <gl pivot="notfound">trop épicé</gl>
+   </mel>
+   <mel id="nf2117">
+      <gl pivot="notfound">trou</gl>
+   </mel>
+   <mel id="nf2118">
+      <gl pivot="notfound">trouver</gl>
+   </mel>
+   <mel id="nf2119">
+      <gl pivot="notfound">trouver par hasard</gl>
+   </mel>
+   <mel id="nf2120">
+      <gl pivot="notfound">très grand pot de cuivre ou de terre à grains ou à eau</gl>
+   </mel>
+   <mel id="nf2121">
+      <gl pivot="notfound">très noir</gl>
+   </mel>
+   <mel id="nf2122">
+      <gl pivot="notfound">tu</gl>
+   </mel>
+   <mel id="nf2123">
+      <gl pivot="notfound">tuer</gl>
+   </mel>
+   <mel id="nf2124">
+      <gl pivot="notfound">turn to</gl>
+   </mel>
+   <mel id="nf2125">
+      <gl pivot="notfound">tusks</gl>
+   </mel>
+   <mel id="nf2126">
+      <gl pivot="notfound">twisted</gl>
+   </mel>
+   <mel id="nf2127">
+      <gl pivot="notfound">typhoid</gl>
+   </mel>
+   <mel id="nf2128">
+      <gl pivot="notfound">un</gl>
+   </mel>
+   <mel id="nf2129">
+      <gl pivot="notfound">un papillon de nuit gris</gl>
+   </mel>
+   <mel id="nf2130">
+      <gl pivot="notfound">un peu</gl>
+   </mel>
+   <mel id="nf2131">
+      <gl pivot="notfound">uncooked</gl>
+   </mel>
+   <mel id="nf2132">
+      <gl pivot="notfound">uncooked rice</gl>
+   </mel>
+   <mel id="nf2133">
+      <gl pivot="notfound">under</gl>
+   </mel>
+   <mel id="nf2134">
+      <gl pivot="notfound">une allumette)</gl>
+   </mel>
+   <mel id="nf2135">
+      <gl pivot="notfound">une fois</gl>
+   </mel>
+   <mel id="nf2136">
+      <gl pivot="notfound">unit</gl>
+   </mel>
+   <mel id="nf2137">
+      <gl pivot="notfound">unité</gl>
+   </mel>
+   <mel id="nf2138">
+      <gl pivot="notfound">uproot</gl>
+   </mel>
+   <mel id="nf2139">
+      <gl pivot="notfound">urine &lt;th 169&gt;</gl>
+   </mel>
+   <mel id="nf2140">
+      <gl pivot="notfound">urticant</gl>
+   </mel>
+   <mel id="nf2141">
+      <gl pivot="notfound">ustensile de bambou</gl>
+   </mel>
+   <mel id="nf2142">
+      <gl pivot="notfound">v.t.)</gl>
+   </mel>
+   <mel id="nf2143">
+      <gl pivot="notfound">vacant</gl>
+   </mel>
+   <mel id="nf2144">
+      <gl pivot="notfound">vache</gl>
+   </mel>
+   <mel id="nf2145">
+      <gl pivot="notfound">vaincu</gl>
+   </mel>
+   <mel id="nf2146">
+      <gl pivot="notfound">vaisselle</gl>
+   </mel>
+   <mel id="nf2147">
+      <gl pivot="notfound">vallée</gl>
+   </mel>
+   <mel id="nf2148">
+      <gl pivot="notfound">vanner</gl>
+   </mel>
+   <mel id="nf2149">
+      <gl pivot="notfound">vanner &lt;d'après s[rigg&gt;</gl>
+   </mel>
+   <mel id="nf2150">
+      <gl pivot="notfound">vegetable</gl>
+   </mel>
+   <mel id="nf2151">
+      <gl pivot="notfound">vegetables)(v.t.)</gl>
+   </mel>
+   <mel id="nf2152">
+      <gl pivot="notfound">venant de</gl>
+   </mel>
+   <mel id="nf2153">
+      <gl pivot="notfound">vendre</gl>
+   </mel>
+   <mel id="nf2154">
+      <gl pivot="notfound">venir</gl>
+   </mel>
+   <mel id="nf2155">
+      <gl pivot="notfound">ventre</gl>
+   </mel>
+   <mel id="nf2156">
+      <gl pivot="notfound">ventre)</gl>
+   </mel>
+   <mel id="nf2157">
+      <gl pivot="notfound">vers l'intérieur de la maison</gl>
+   </mel>
+   <mel id="nf2158">
+      <gl pivot="notfound">verser</gl>
+   </mel>
+   <mel id="nf2159">
+      <gl pivot="notfound">vert</gl>
+   </mel>
+   <mel id="nf2160">
+      <gl pivot="notfound">viande</gl>
+   </mel>
+   <mel id="nf2161">
+      <gl pivot="notfound">vibrer</gl>
+   </mel>
+   <mel id="nf2162">
+      <gl pivot="notfound">vieillard)</gl>
+   </mel>
+   <mel id="nf2163">
+      <gl pivot="notfound">vieille</gl>
+   </mel>
+   <mel id="nf2164">
+      <gl pivot="notfound">vieille &lt;voc n&gt;</gl>
+   </mel>
+   <mel id="nf2165">
+      <gl pivot="notfound">vieille femme</gl>
+   </mel>
+   <mel id="nf2166">
+      <gl pivot="notfound">vieille femme &lt;voc 74&gt;</gl>
+   </mel>
+   <mel id="nf2167">
+      <gl pivot="notfound">visage</gl>
+   </mel>
+   <mel id="nf2168">
+      <gl pivot="notfound">visser</gl>
+   </mel>
+   <mel id="nf2169">
+      <gl pivot="notfound">vivre</gl>
+   </mel>
+   <mel id="nf2170">
+      <gl pivot="notfound">voc 74&gt;</gl>
+   </mel>
+   <mel id="nf2171">
+      <gl pivot="notfound">voir</gl>
+   </mel>
+   <mel id="nf2172">
+      <gl pivot="notfound">voix</gl>
+   </mel>
+   <mel id="nf2173">
+      <gl pivot="notfound">voler</gl>
+   </mel>
+   <mel id="nf2174">
+      <gl pivot="notfound">vomir</gl>
+   </mel>
+   <mel id="nf2175">
+      <gl pivot="notfound">vous</gl>
+   </mel>
+   <mel id="nf2176">
+      <gl pivot="notfound">voyager</gl>
+   </mel>
+   <mel id="nf2177">
+      <gl pivot="notfound">vêtement</gl>
+   </mel>
+   <mel id="nf2178">
+      <gl pivot="notfound">vêtements</gl>
+   </mel>
+   <mel id="nf2179">
+      <gl pivot="notfound">vêtements &lt;th 23</gl>
+   </mel>
+   <mel id="nf2180">
+      <gl pivot="notfound">wait</gl>
+   </mel>
+   <mel id="nf2181">
+      <gl pivot="notfound">wallow</gl>
+   </mel>
+   <mel id="nf2182">
+      <gl pivot="notfound">warfare</gl>
+   </mel>
+   <mel id="nf2183">
+      <gl pivot="notfound">way</gl>
+   </mel>
+   <mel id="nf2184">
+      <gl pivot="notfound">way of sitting</gl>
+   </mel>
+   <mel id="nf2185">
+      <gl pivot="notfound">weed</gl>
+   </mel>
+   <mel id="nf2186">
+      <gl pivot="notfound">weep</gl>
+   </mel>
+   <mel id="nf2187">
+      <gl pivot="notfound">what?</gl>
+   </mel>
+   <mel id="nf2188">
+      <gl pivot="notfound">wheat)</gl>
+   </mel>
+   <mel id="nf2189">
+      <gl pivot="notfound">whet</gl>
+   </mel>
+   <mel id="nf2190">
+      <gl pivot="notfound">whole</gl>
+   </mel>
+   <mel id="nf2191">
+      <gl pivot="notfound">wind up</gl>
+   </mel>
+   <mel id="nf2192">
+      <gl pivot="notfound">winnow</gl>
+   </mel>
+   <mel id="nf2193">
+      <gl pivot="notfound">wipe off</gl>
+   </mel>
+   <mel id="nf2194">
+      <gl pivot="notfound">with whet stone)</gl>
+   </mel>
+   <mel id="nf2195">
+      <gl pivot="notfound">words</gl>
+   </mel>
+   <mel id="nf2196">
+      <gl pivot="notfound">work</gl>
+   </mel>
+   <mel id="nf2197">
+      <gl pivot="notfound">y avoir de la rosée</gl>
+   </mel>
+   <mel id="nf2198">
+      <gl pivot="notfound">y avoir foule</gl>
+   </mel>
+   <mel id="nf2199">
+      <gl pivot="notfound">y en avoir peu</gl>
+   </mel>
+   <mel id="nf2200">
+      <gl pivot="notfound">yack</gl>
+   </mel>
+   <mel id="nf2201">
+      <gl pivot="notfound">yack femelle</gl>
+   </mel>
+   <mel id="nf2202">
+      <gl pivot="notfound">yak</gl>
+   </mel>
+   <mel id="nf2203">
+      <gl pivot="notfound">yoghourt pot</gl>
+   </mel>
+   <mel id="nf2204">
+      <gl pivot="notfound">young plants</gl>
+   </mel>
+   <mel id="nf2205">
+      <gl pivot="notfound">à l'affût &lt;from sprigg&gt;</gl>
+   </mel>
+   <mel id="nf2206">
+      <gl pivot="notfound">à plat</gl>
+   </mel>
+   <mel id="nf2207">
+      <gl pivot="notfound">âme</gl>
+   </mel>
+   <mel id="nf2208">
+      <gl pivot="notfound">éboulement</gl>
+   </mel>
+   <mel id="nf2209">
+      <gl pivot="notfound">écarteler</gl>
+   </mel>
+   <mel id="nf2210">
+      <gl pivot="notfound">écarter</gl>
+   </mel>
+   <mel id="nf2211">
+      <gl pivot="notfound">échanger</gl>
+   </mel>
+   <mel id="nf2212">
+      <gl pivot="notfound">échelle</gl>
+   </mel>
+   <mel id="nf2213">
+      <gl pivot="notfound">éclater</gl>
+   </mel>
+   <mel id="nf2214">
+      <gl pivot="notfound">éclore</gl>
+   </mel>
+   <mel id="nf2215">
+      <gl pivot="notfound">écorce</gl>
+   </mel>
+   <mel id="nf2216">
+      <gl pivot="notfound">écorcher un animal</gl>
+   </mel>
+   <mel id="nf2217">
+      <gl pivot="notfound">écouter</gl>
+   </mel>
+   <mel id="nf2218">
+      <gl pivot="notfound">écouter &lt;th 181&gt;</gl>
+   </mel>
+   <mel id="nf2219">
+      <gl pivot="notfound">écrire</gl>
+   </mel>
+   <mel id="nf2220">
+      <gl pivot="notfound">édifier</gl>
+   </mel>
+   <mel id="nf2221">
+      <gl pivot="notfound">égaliser le sol</gl>
+   </mel>
+   <mel id="nf2222">
+      <gl pivot="notfound">élever</gl>
+   </mel>
+   <mel id="nf2223">
+      <gl pivot="notfound">élevé</gl>
+   </mel>
+   <mel id="nf2224">
+      <gl pivot="notfound">émettre involontairement</gl>
+   </mel>
+   <mel id="nf2225">
+      <gl pivot="notfound">émettre un pet</gl>
+   </mel>
+   <mel id="nf2226">
+      <gl pivot="notfound">énervé</gl>
+   </mel>
+   <mel id="nf2227">
+      <gl pivot="notfound">épais</gl>
+   </mel>
+   <mel id="nf2228">
+      <gl pivot="notfound">épaule</gl>
+   </mel>
+   <mel id="nf2229">
+      <gl pivot="notfound">épi</gl>
+   </mel>
+   <mel id="nf2230">
+      <gl pivot="notfound">épicé</gl>
+   </mel>
+   <mel id="nf2231">
+      <gl pivot="notfound">épine)</gl>
+   </mel>
+   <mel id="nf2232">
+      <gl pivot="notfound">éplucher</gl>
+   </mel>
+   <mel id="nf2233">
+      <gl pivot="notfound">éplucher au couteau</gl>
+   </mel>
+   <mel id="nf2234">
+      <gl pivot="notfound">épousseter</gl>
+   </mel>
+   <mel id="nf2235">
+      <gl pivot="notfound">étaler</gl>
+   </mel>
+   <mel id="nf2236">
+      <gl pivot="notfound">étendre pour s'asseoir dessus</gl>
+   </mel>
+   <mel id="nf2237">
+      <gl pivot="notfound">éternuer</gl>
+   </mel>
+   <mel id="nf2238">
+      <gl pivot="notfound">étincelles ...)</gl>
+   </mel>
+   <mel id="nf2239">
+      <gl pivot="notfound">étirer</gl>
+   </mel>
+   <mel id="nf2240">
+      <gl pivot="notfound">étoile</gl>
+   </mel>
+   <mel id="nf2241">
+      <gl pivot="notfound">étouffer</gl>
+   </mel>
+   <mel id="nf2242">
+      <gl pivot="notfound">étrangler</gl>
+   </mel>
+   <mel id="nf2243">
+      <gl pivot="notfound">étude</gl>
+   </mel>
+   <mel id="nf2244">
+      <gl pivot="notfound">éventer &lt;a86&gt;</gl>
+   </mel>
+   <mel id="nf2245">
+      <gl pivot="notfound">être</gl>
+   </mel>
+   <mel id="nf2246">
+      <gl pivot="notfound">ôter du feu</gl>
+   </mel>
+   <mel id="nf2247">
+      <gl pivot="notfound">ôter les saletés d'un tissu une à une</gl>
+   </mel>
+   <mel id="nf2248">
+      <gl pivot="notfound">ôter les yeux à la surface du bambou</gl>
+   </mel>
+</semantics>

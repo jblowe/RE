@@ -1,590 +1,757 @@
 <?xml version="1.0" ?>
 <semantics>
    <totals>
-      <found value="170"/>
+      <found value="204"/>
       <notfound value="12"/>
       <total value="216"/>
       <rawglosses value="230"/>
-      <lemmata value="204"/>
+      <lemmata value="303"/>
    </totals>
    <mel id="wn1">
-      <gl pivot="samelg">six</gl>
-   </mel>
-   <mel id="wn2">
-      <gl pivot="samelg">liver</gl>
-   </mel>
-   <mel id="wn3">
-      <gl>guts</gl>
-      <gl pivot="samelg">sand</gl>
-   </mel>
-   <mel id="wn4">
-      <gl pivot="samelg">not</gl>
-   </mel>
-   <mel id="wn5">
-      <gl pivot="samelg">night</gl>
-   </mel>
-   <mel id="wn6">
-      <gl pivot="samelg">nose</gl>
-      <gl>wind</gl>
-   </mel>
-   <mel id="wn7">
-      <gl pivot="samelg">freeze</gl>
-   </mel>
-   <mel id="wn8">
-      <gl>good</gl>
-      <gl pivot="samelg">near</gl>
-   </mel>
-   <mel id="wn9">
-      <gl pivot="samelg">animal</gl>
-   </mel>
-   <mel id="wn10">
-      <gl pivot="samelg">he</gl>
-   </mel>
-   <mel id="wn11">
-      <gl pivot="samelg">sew</gl>
-   </mel>
-   <mel id="wn12">
-      <gl pivot="samelg">eye</gl>
-      <gl>heart</gl>
-   </mel>
-   <mel id="wn13">
-      <gl pivot="samelg">stone</gl>
-   </mel>
-   <mel id="wn14">
-      <gl pivot="samelg">bite</gl>
-      <gl>burn</gl>
-   </mel>
-   <mel id="wn15">
-      <gl>fight</gl>
-      <gl>skin</gl>
-      <gl pivot="samelg">struggle</gl>
-   </mel>
-   <mel id="wn16">
-      <gl pivot="samelg">cut</gl>
-      <gl>thin</gl>
-   </mel>
-   <mel id="wn17">
-      <gl pivot="samelg">back</gl>
-   </mel>
-   <mel id="wn18">
-      <gl pivot="samelg">moon</gl>
-   </mel>
-   <mel id="wn19">
-      <gl pivot="samelg">split</gl>
-   </mel>
-   <mel id="wn20">
-      <gl pivot="samelg">ear</gl>
-   </mel>
-   <mel id="wn21">
-      <gl>give</gl>
-      <gl pivot="samelg">hold</gl>
-      <gl>throw</gl>
-   </mel>
-   <mel id="wn22">
-      <gl>flat</gl>
-      <gl pivot="samelg">straight</gl>
-   </mel>
-   <mel id="wn23">
-      <gl pivot="samelg">in</gl>
-   </mel>
-   <mel id="wn24">
-      <gl pivot="samelg">water</gl>
-   </mel>
-   <mel id="wn25">
-      <gl>rub</gl>
-      <gl pivot="samelg">scratch</gl>
-   </mel>
-   <mel id="wn26">
-      <gl>come</gl>
-      <gl pivot="samelg">seed</gl>
-   </mel>
-   <mel id="wn27">
-      <gl pivot="samelg">throb</gl>
-   </mel>
-   <mel id="wn28">
-      <gl pivot="samelg">sleep</gl>
-   </mel>
-   <mel id="wn29">
-      <gl pivot="samelg">all</gl>
-   </mel>
-   <mel id="wn30">
-      <gl>hear</gl>
-      <gl pivot="samelg">see</gl>
-   </mel>
-   <mel id="wn31">
-      <gl pivot="samelg">rain</gl>
-   </mel>
-   <mel id="wn32">
-      <gl pivot="samelg">new</gl>
-   </mel>
-   <mel id="wn33">
-      <gl pivot="samelg">forest</gl>
-   </mel>
-   <mel id="wn34">
-      <gl pivot="samelg">nine</gl>
-   </mel>
-   <mel id="wn35">
-      <gl pivot="samelg">cold</gl>
-   </mel>
-   <mel id="wn36">
-      <gl pivot="samelg">know</gl>
-      <gl>live</gl>
-   </mel>
-   <mel id="wn37">
-      <gl pivot="samelg">snake</gl>
-   </mel>
-   <mel id="wn38">
-      <gl pivot="samelg">name</gl>
-   </mel>
-   <mel id="wn39">
-      <gl pivot="samelg">die</gl>
-   </mel>
-   <mel id="wn40">
-      <gl pivot="samelg">two</gl>
-   </mel>
-   <mel id="wn41">
-      <gl pivot="samelg">count</gl>
-   </mel>
-   <mel id="wn42">
-      <gl pivot="samelg">swell</gl>
-   </mel>
-   <mel id="wn43">
-      <gl>play</gl>
-      <gl>round</gl>
-      <gl pivot="samelg">turn</gl>
-   </mel>
-   <mel id="wn44">
-      <gl pivot="samelg">smooth</gl>
-   </mel>
-   <mel id="wn45">
-      <gl>fall</gl>
-      <gl pivot="samelg">flow</gl>
-   </mel>
-   <mel id="wn46">
-      <gl pivot="samelg">fire</gl>
-   </mel>
-   <mel id="wn47">
-      <gl>fly</gl>
-      <gl pivot="samelg">wing</gl>
-   </mel>
-   <mel id="wn48">
-      <gl pivot="samelg">seven</gl>
-   </mel>
-   <mel id="wn49">
-      <gl pivot="samelg">short</gl>
-   </mel>
-   <mel id="wn50">
-      <gl pivot="samelg">old</gl>
-   </mel>
-   <mel id="wn51">
-      <gl pivot="samelg">father</gl>
-      <gl>mother</gl>
-   </mel>
-   <mel id="wn52">
-      <gl pivot="samelg">sun</gl>
-   </mel>
-   <mel id="wn53">
-      <gl pivot="samelg">road</gl>
-   </mel>
-   <mel id="wn54">
-      <gl pivot="samelg">grass</gl>
-      <gl>smoke</gl>
-   </mel>
-   <mel id="wn55">
-      <gl pivot="samelg">laugh</gl>
-   </mel>
-   <mel id="wn56">
-      <gl>correct</gl>
-      <gl pivot="samelg">right</gl>
-   </mel>
-   <mel id="wn57">
-      <gl pivot="samelg">belly</gl>
-   </mel>
-   <mel id="wn58">
-      <gl pivot="samelg">wife</gl>
-   </mel>
-   <mel id="wn59">
-      <gl pivot="samelg">there</gl>
-   </mel>
-   <mel id="wn60">
-      <gl pivot="samelg">sky</gl>
-   </mel>
-   <mel id="wn61">
-      <gl pivot="samelg">knee</gl>
-   </mel>
-   <mel id="wn62">
-      <gl>pull</gl>
-      <gl pivot="samelg">take out</gl>
-   </mel>
-   <mel id="wn63">
-      <gl>float</gl>
-      <gl pivot="samelg">swim</gl>
-   </mel>
-   <mel id="wn64">
-      <gl pivot="samelg">here</gl>
-   </mel>
-   <mel id="wn65">
-      <gl pivot="samelg">squeeze</gl>
-   </mel>
-   <mel id="wn66">
-      <gl pivot="samelg">woman</gl>
-   </mel>
-   <mel id="wn67">
-      <gl pivot="samelg">I</gl>
+      <gl pivot="key">I</gl>
       <gl>one</gl>
    </mel>
-   <mel id="wn68">
-      <gl pivot="samelg">kill</gl>
+   <mel id="wn2">
+      <gl pivot="key">all</gl>
    </mel>
-   <mel id="wn69">
+   <mel id="wn3">
+      <gl pivot="key">animal</gl>
+   </mel>
+   <mel id="wn4">
+      <gl pivot="key">ash</gl>
+   </mel>
+   <mel id="wn5">
+      <gl pivot="key">at</gl>
+   </mel>
+   <mel id="wn6">
+      <gl pivot="key">back</gl>
+   </mel>
+   <mel id="wn7">
+      <gl pivot="key">bad</gl>
       <gl>big</gl>
-      <gl pivot="samelg">heavy</gl>
    </mel>
-   <mel id="wn70">
-      <gl pivot="samelg">hair</gl>
+   <mel id="wn8">
+      <gl pivot="key">bark</gl>
+      <gl>skin</gl>
    </mel>
-   <mel id="wn71">
-      <gl pivot="samelg">ash</gl>
-   </mel>
-   <mel id="wn72">
-      <gl pivot="samelg">man</gl>
-   </mel>
-   <mel id="wn73">
-      <gl pivot="samelg">narrow</gl>
-   </mel>
-   <mel id="wn74">
-      <gl pivot="samelg">white</gl>
-   </mel>
-   <mel id="wn75">
-      <gl pivot="samelg">who</gl>
-   </mel>
-   <mel id="wn76">
-      <gl pivot="samelg">bark</gl>
-   </mel>
-   <mel id="wn77">
-      <gl pivot="samelg">eat</gl>
-   </mel>
-   <mel id="wn78">
-      <gl pivot="samelg">other</gl>
-   </mel>
-   <mel id="wn79">
-      <gl>blow</gl>
-      <gl pivot="samelg">suck</gl>
-   </mel>
-   <mel id="wn80">
-      <gl pivot="samelg">drink</gl>
-   </mel>
-   <mel id="wn81">
-      <gl>spit</gl>
-      <gl pivot="samelg">tongue</gl>
-   </mel>
-   <mel id="wn82">
-      <gl pivot="samelg">tooth</gl>
-   </mel>
-   <mel id="wn83">
-      <gl pivot="samelg">dull</gl>
-   </mel>
-   <mel id="wn84">
-      <gl pivot="samelg">egg</gl>
-   </mel>
-   <mel id="wn85">
-      <gl pivot="samelg">tie</gl>
-   </mel>
-   <mel id="wn86">
-      <gl pivot="samelg">cloud</gl>
-      <gl>fog</gl>
-   </mel>
-   <mel id="wn87">
-      <gl pivot="samelg">hand</gl>
-   </mel>
-   <mel id="wn88">
-      <gl pivot="samelg">day</gl>
-   </mel>
-   <mel id="wn89">
-      <gl pivot="samelg">neck</gl>
-   </mel>
-   <mel id="wn90">
-      <gl pivot="samelg">say</gl>
-   </mel>
-   <mel id="wn91">
-      <gl pivot="samelg">eight</gl>
-   </mel>
-   <mel id="wn92">
-      <gl pivot="samelg">rope</gl>
-   </mel>
-   <mel id="wn93">
-      <gl pivot="samelg">star</gl>
-   </mel>
-   <mel id="wn94">
-      <gl pivot="samelg">root</gl>
-   </mel>
-   <mel id="wn95">
-      <gl pivot="samelg">thick</gl>
-   </mel>
-   <mel id="wn96">
-      <gl pivot="samelg">few</gl>
-   </mel>
-   <mel id="wn97">
-      <gl pivot="samelg">sing</gl>
-   </mel>
-   <mel id="wn98">
-      <gl pivot="samelg">three</gl>
-   </mel>
-   <mel id="wn99">
-      <gl pivot="samelg">river</gl>
-   </mel>
-   <mel id="wn100">
-      <gl pivot="samelg">vomit</gl>
-   </mel>
-   <mel id="wn101">
-      <gl pivot="samelg">beat</gl>
+   <mel id="wn9">
+      <gl pivot="key">beat</gl>
+      <gl>round</gl>
       <gl>stick</gl>
    </mel>
-   <mel id="wn102">
-      <gl pivot="samelg">fingernail</gl>
+   <mel id="wn10">
+      <gl pivot="key">belly</gl>
    </mel>
-   <mel id="wn103">
-      <gl pivot="samelg">five</gl>
+   <mel id="wn11">
+      <gl>bad</gl>
+      <gl pivot="key">big</gl>
+      <gl>heavy</gl>
    </mel>
-   <mel id="wn104">
-      <gl pivot="samelg">stand</gl>
+   <mel id="wn12">
+      <gl pivot="key">bird</gl>
    </mel>
-   <mel id="wn105">
-      <gl pivot="samelg">head</gl>
+   <mel id="wn13">
+      <gl pivot="key">bite</gl>
+      <gl>burn</gl>
    </mel>
-   <mel id="wn106">
-      <gl pivot="samelg">hit</gl>
+   <mel id="wn14">
+      <gl pivot="key">black</gl>
    </mel>
-   <mel id="wn107">
-      <gl pivot="samelg">mouth</gl>
+   <mel id="wn15">
+      <gl pivot="key">blood</gl>
    </mel>
-   <mel id="wn108">
-      <gl pivot="samelg">yellow</gl>
+   <mel id="wn16">
+      <gl pivot="key">blow</gl>
+      <gl>float</gl>
+      <gl>snow</gl>
+      <gl>suck</gl>
    </mel>
-   <mel id="wn109">
-      <gl pivot="samelg">blood</gl>
+   <mel id="wn17">
+      <gl pivot="key">bone</gl>
    </mel>
-   <mel id="wn110">
-      <gl pivot="samelg">leaf</gl>
+   <mel id="wn18">
+      <gl pivot="key">breast</gl>
    </mel>
-   <mel id="wn111">
-      <gl pivot="samelg">husband</gl>
+   <mel id="wn19">
+      <gl pivot="key">breathe</gl>
    </mel>
-   <mel id="wn112">
-      <gl pivot="samelg">sea</gl>
+   <mel id="wn20">
+      <gl>bite</gl>
+      <gl pivot="key">burn</gl>
+      <gl>cut</gl>
+      <gl>fire</gl>
    </mel>
-   <mel id="wn113">
-      <gl pivot="samelg">at</gl>
+   <mel id="wn21">
+      <gl pivot="key">child</gl>
    </mel>
-   <mel id="wn114">
-      <gl pivot="samelg">meat</gl>
+   <mel id="wn22">
+      <gl pivot="key">cloud</gl>
+      <gl>fog</gl>
    </mel>
-   <mel id="wn115">
-      <gl pivot="samelg">inflate</gl>
+   <mel id="wn23">
+      <gl pivot="key">cold</gl>
    </mel>
-   <mel id="wn116">
-      <gl pivot="samelg">wet</gl>
+   <mel id="wn24">
+      <gl pivot="key">come</gl>
+      <gl>fall</gl>
+      <gl>seed</gl>
    </mel>
-   <mel id="wn117">
-      <gl pivot="samelg">dust</gl>
+   <mel id="wn25">
+      <gl pivot="key">correct</gl>
+      <gl>right</gl>
    </mel>
-   <mel id="wn118">
-      <gl pivot="samelg">tree</gl>
+   <mel id="wn26">
+      <gl pivot="key">count</gl>
    </mel>
-   <mel id="wn119">
-      <gl pivot="samelg">year</gl>
+   <mel id="wn27">
+      <gl>burn</gl>
+      <gl pivot="key">cut</gl>
+      <gl>thin</gl>
    </mel>
-   <mel id="wn120">
-      <gl pivot="samelg">child</gl>
+   <mel id="wn28">
+      <gl pivot="key">day</gl>
    </mel>
-   <mel id="wn121">
-      <gl>full</gl>
-      <gl pivot="samelg">wide</gl>
+   <mel id="wn29">
+      <gl pivot="key">die</gl>
    </mel>
-   <mel id="wn122">
-      <gl pivot="samelg">red</gl>
-   </mel>
-   <mel id="wn123">
-      <gl pivot="samelg">left</gl>
-   </mel>
-   <mel id="wn124">
-      <gl pivot="samelg">salt</gl>
-   </mel>
-   <mel id="wn125">
-      <gl pivot="samelg">feather</gl>
-   </mel>
-   <mel id="wn126">
-      <gl pivot="samelg">rotten</gl>
-   </mel>
-   <mel id="wn127">
-      <gl pivot="samelg">wipe</gl>
-   </mel>
-   <mel id="wn128">
-      <gl pivot="samelg">lie</gl>
-   </mel>
-   <mel id="wn129">
-      <gl pivot="samelg">small</gl>
-   </mel>
-   <mel id="wn130">
-      <gl pivot="samelg">bad</gl>
-   </mel>
-   <mel id="wn131">
-      <gl pivot="samelg">dirty</gl>
-   </mel>
-   <mel id="wn132">
-      <gl pivot="samelg">fish</gl>
-   </mel>
-   <mel id="wn133">
-      <gl pivot="samelg">fear</gl>
-   </mel>
-   <mel id="wn134">
-      <gl pivot="samelg">breathe</gl>
-   </mel>
-   <mel id="wn135">
-      <gl pivot="samelg">fat</gl>
-   </mel>
-   <mel id="wn136">
-      <gl pivot="samelg">bird</gl>
-   </mel>
-   <mel id="wn137">
-      <gl pivot="samelg">four</gl>
-   </mel>
-   <mel id="wn138">
-      <gl pivot="samelg">long</gl>
-   </mel>
-   <mel id="wn139">
-      <gl pivot="samelg">dig</gl>
+   <mel id="wn30">
+      <gl pivot="key">dig</gl>
       <gl>stab</gl>
    </mel>
-   <mel id="wn140">
-      <gl pivot="samelg">if</gl>
+   <mel id="wn31">
+      <gl pivot="key">dirty</gl>
    </mel>
-   <mel id="wn141">
-      <gl pivot="samelg">many</gl>
-   </mel>
-   <mel id="wn142">
-      <gl pivot="samelg">mountain</gl>
-   </mel>
-   <mel id="wn143">
-      <gl pivot="samelg">leg</gl>
-   </mel>
-   <mel id="wn144">
-      <gl pivot="samelg">walk</gl>
-   </mel>
-   <mel id="wn145">
-      <gl pivot="samelg">flower</gl>
-   </mel>
-   <mel id="wn146">
-      <gl pivot="samelg">ice</gl>
-   </mel>
-   <mel id="wn147">
-      <gl pivot="samelg">push</gl>
-   </mel>
-   <mel id="wn148">
-      <gl pivot="samelg">dog</gl>
+   <mel id="wn32">
+      <gl pivot="key">dog</gl>
       <gl>tail</gl>
    </mel>
+   <mel id="wn33">
+      <gl pivot="key">drink</gl>
+   </mel>
+   <mel id="wn34">
+      <gl pivot="key">dry</gl>
+   </mel>
+   <mel id="wn35">
+      <gl pivot="key">dull</gl>
+   </mel>
+   <mel id="wn36">
+      <gl pivot="key">dust</gl>
+   </mel>
+   <mel id="wn37">
+      <gl pivot="key">ear</gl>
+   </mel>
+   <mel id="wn38">
+      <gl pivot="key">earth</gl>
+   </mel>
+   <mel id="wn39">
+      <gl pivot="key">eat</gl>
+   </mel>
+   <mel id="wn40">
+      <gl pivot="key">egg</gl>
+   </mel>
+   <mel id="wn41">
+      <gl pivot="key">eight</gl>
+   </mel>
+   <mel id="wn42">
+      <gl pivot="key">eye</gl>
+      <gl>heart</gl>
+   </mel>
+   <mel id="wn43">
+      <gl>come</gl>
+      <gl pivot="key">fall</gl>
+      <gl>flow</gl>
+   </mel>
+   <mel id="wn44">
+      <gl pivot="key">far</gl>
+   </mel>
+   <mel id="wn45">
+      <gl pivot="key">fat</gl>
+   </mel>
+   <mel id="wn46">
+      <gl pivot="key">father</gl>
+      <gl>mother</gl>
+   </mel>
+   <mel id="wn47">
+      <gl pivot="key">fear</gl>
+   </mel>
+   <mel id="wn48">
+      <gl pivot="key">feather</gl>
+   </mel>
+   <mel id="wn49">
+      <gl pivot="key">few</gl>
+   </mel>
+   <mel id="wn50">
+      <gl pivot="key">fight</gl>
+      <gl>push</gl>
+      <gl>struggle</gl>
+   </mel>
+   <mel id="wn51">
+      <gl pivot="key">fingernail</gl>
+   </mel>
+   <mel id="wn52">
+      <gl>burn</gl>
+      <gl pivot="key">fire</gl>
+   </mel>
+   <mel id="wn53">
+      <gl pivot="key">fish</gl>
+   </mel>
+   <mel id="wn54">
+      <gl pivot="key">five</gl>
+   </mel>
+   <mel id="wn55">
+      <gl pivot="key">flat</gl>
+      <gl>straight</gl>
+   </mel>
+   <mel id="wn56">
+      <gl>blow</gl>
+      <gl pivot="key">float</gl>
+      <gl>swim</gl>
+   </mel>
+   <mel id="wn57">
+      <gl>fall</gl>
+      <gl pivot="key">flow</gl>
+   </mel>
+   <mel id="wn58">
+      <gl pivot="key">flower</gl>
+   </mel>
+   <mel id="wn59">
+      <gl pivot="key">fly</gl>
+      <gl>wing</gl>
+   </mel>
+   <mel id="wn60">
+      <gl>cloud</gl>
+      <gl pivot="key">fog</gl>
+   </mel>
+   <mel id="wn61">
+      <gl pivot="key">foot</gl>
+   </mel>
+   <mel id="wn62">
+      <gl pivot="key">forest</gl>
+   </mel>
+   <mel id="wn63">
+      <gl pivot="key">four</gl>
+   </mel>
+   <mel id="wn64">
+      <gl pivot="key">freeze</gl>
+   </mel>
+   <mel id="wn65">
+      <gl pivot="key">fruit</gl>
+   </mel>
+   <mel id="wn66">
+      <gl pivot="key">full</gl>
+      <gl>good</gl>
+      <gl>wide</gl>
+   </mel>
+   <mel id="wn67">
+      <gl pivot="key">give</gl>
+      <gl>hand</gl>
+      <gl>hold</gl>
+      <gl>throw</gl>
+   </mel>
+   <mel id="wn68">
+      <gl>full</gl>
+      <gl pivot="key">good</gl>
+      <gl>near</gl>
+      <gl>right</gl>
+   </mel>
+   <mel id="wn69">
+      <gl pivot="key">grass</gl>
+      <gl>smoke</gl>
+   </mel>
+   <mel id="wn70">
+      <gl pivot="key">green</gl>
+   </mel>
+   <mel id="wn71">
+      <gl pivot="key">guts</gl>
+      <gl>sand</gl>
+   </mel>
+   <mel id="wn72">
+      <gl pivot="key">hair</gl>
+   </mel>
+   <mel id="wn73">
+      <gl>give</gl>
+      <gl pivot="key">hand</gl>
+   </mel>
+   <mel id="wn74">
+      <gl pivot="key">he</gl>
+   </mel>
+   <mel id="wn75">
+      <gl pivot="key">head</gl>
+   </mel>
+   <mel id="wn76">
+      <gl pivot="key">hear</gl>
+      <gl>see</gl>
+   </mel>
+   <mel id="wn77">
+      <gl>eye</gl>
+      <gl pivot="key">heart</gl>
+      <gl>meat</gl>
+   </mel>
+   <mel id="wn78">
+      <gl>big</gl>
+      <gl pivot="key">heavy</gl>
+   </mel>
+   <mel id="wn79">
+      <gl pivot="key">here</gl>
+   </mel>
+   <mel id="wn80">
+      <gl pivot="key">hit</gl>
+   </mel>
+   <mel id="wn81">
+      <gl>give</gl>
+      <gl pivot="key">hold</gl>
+      <gl>throw</gl>
+   </mel>
+   <mel id="wn82">
+      <gl pivot="key">horn</gl>
+   </mel>
+   <mel id="wn83">
+      <gl pivot="key">hunt</gl>
+   </mel>
+   <mel id="wn84">
+      <gl pivot="key">husband</gl>
+   </mel>
+   <mel id="wn85">
+      <gl pivot="key">ice</gl>
+   </mel>
+   <mel id="wn86">
+      <gl pivot="key">if</gl>
+   </mel>
+   <mel id="wn87">
+      <gl pivot="key">in</gl>
+   </mel>
+   <mel id="wn88">
+      <gl pivot="key">inflate</gl>
+   </mel>
+   <mel id="wn89">
+      <gl pivot="key">kill</gl>
+   </mel>
+   <mel id="wn90">
+      <gl pivot="key">knee</gl>
+   </mel>
+   <mel id="wn91">
+      <gl pivot="key">know</gl>
+      <gl>live</gl>
+   </mel>
+   <mel id="wn92">
+      <gl pivot="key">lake</gl>
+   </mel>
+   <mel id="wn93">
+      <gl pivot="key">laugh</gl>
+   </mel>
+   <mel id="wn94">
+      <gl pivot="key">leaf</gl>
+   </mel>
+   <mel id="wn95">
+      <gl>give</gl>
+      <gl pivot="key">left</gl>
+   </mel>
+   <mel id="wn96">
+      <gl pivot="key">leg</gl>
+   </mel>
+   <mel id="wn97">
+      <gl pivot="key">lie</gl>
+   </mel>
+   <mel id="wn98">
+      <gl>know</gl>
+      <gl pivot="key">live</gl>
+   </mel>
+   <mel id="wn99">
+      <gl pivot="key">liver</gl>
+   </mel>
+   <mel id="wn100">
+      <gl pivot="key">long</gl>
+   </mel>
+   <mel id="wn101">
+      <gl pivot="key">louse</gl>
+      <gl>worm</gl>
+   </mel>
+   <mel id="wn102">
+      <gl pivot="key">man</gl>
+   </mel>
+   <mel id="wn103">
+      <gl pivot="key">many</gl>
+   </mel>
+   <mel id="wn104">
+      <gl>heart</gl>
+      <gl pivot="key">meat</gl>
+   </mel>
+   <mel id="wn105">
+      <gl pivot="key">moon</gl>
+   </mel>
+   <mel id="wn106">
+      <gl>father</gl>
+      <gl pivot="key">mother</gl>
+   </mel>
+   <mel id="wn107">
+      <gl pivot="key">mountain</gl>
+   </mel>
+   <mel id="wn108">
+      <gl pivot="key">mouth</gl>
+   </mel>
+   <mel id="wn109">
+      <gl pivot="key">name</gl>
+   </mel>
+   <mel id="wn110">
+      <gl pivot="key">narrow</gl>
+   </mel>
+   <mel id="wn111">
+      <gl>good</gl>
+      <gl pivot="key">near</gl>
+   </mel>
+   <mel id="wn112">
+      <gl pivot="key">neck</gl>
+   </mel>
+   <mel id="wn113">
+      <gl pivot="key">new</gl>
+   </mel>
+   <mel id="wn114">
+      <gl pivot="key">night</gl>
+   </mel>
+   <mel id="wn115">
+      <gl pivot="key">nine</gl>
+   </mel>
+   <mel id="wn116">
+      <gl pivot="key">nose</gl>
+      <gl>wind</gl>
+   </mel>
+   <mel id="wn117">
+      <gl pivot="key">not</gl>
+   </mel>
+   <mel id="wn118">
+      <gl pivot="key">old</gl>
+   </mel>
+   <mel id="wn119">
+      <gl>I</gl>
+      <gl pivot="key">one</gl>
+   </mel>
+   <mel id="wn120">
+      <gl pivot="key">other</gl>
+   </mel>
+   <mel id="wn121">
+      <gl pivot="key">play</gl>
+      <gl>turn</gl>
+   </mel>
+   <mel id="wn122">
+      <gl pivot="key">pull</gl>
+      <gl>take out</gl>
+   </mel>
+   <mel id="wn123">
+      <gl>fight</gl>
+      <gl pivot="key">push</gl>
+   </mel>
+   <mel id="wn124">
+      <gl pivot="key">rain</gl>
+   </mel>
+   <mel id="wn125">
+      <gl pivot="key">red</gl>
+   </mel>
+   <mel id="wn126">
+      <gl>correct</gl>
+      <gl>good</gl>
+      <gl pivot="key">right</gl>
+   </mel>
+   <mel id="wn127">
+      <gl pivot="key">river</gl>
+   </mel>
+   <mel id="wn128">
+      <gl pivot="key">road</gl>
+   </mel>
+   <mel id="wn129">
+      <gl pivot="key">root</gl>
+   </mel>
+   <mel id="wn130">
+      <gl pivot="key">rope</gl>
+   </mel>
+   <mel id="wn131">
+      <gl pivot="key">rotten</gl>
+   </mel>
+   <mel id="wn132">
+      <gl>beat</gl>
+      <gl pivot="key">round</gl>
+      <gl>turn</gl>
+   </mel>
+   <mel id="wn133">
+      <gl pivot="key">rub</gl>
+      <gl>scratch</gl>
+      <gl>wipe</gl>
+   </mel>
+   <mel id="wn134">
+      <gl pivot="key">salt</gl>
+   </mel>
+   <mel id="wn135">
+      <gl>guts</gl>
+      <gl pivot="key">sand</gl>
+   </mel>
+   <mel id="wn136">
+      <gl pivot="key">say</gl>
+   </mel>
+   <mel id="wn137">
+      <gl>rub</gl>
+      <gl pivot="key">scratch</gl>
+   </mel>
+   <mel id="wn138">
+      <gl pivot="key">sea</gl>
+   </mel>
+   <mel id="wn139">
+      <gl>hear</gl>
+      <gl pivot="key">see</gl>
+   </mel>
+   <mel id="wn140">
+      <gl>come</gl>
+      <gl pivot="key">seed</gl>
+   </mel>
+   <mel id="wn141">
+      <gl pivot="key">seven</gl>
+   </mel>
+   <mel id="wn142">
+      <gl pivot="key">sew</gl>
+   </mel>
+   <mel id="wn143">
+      <gl pivot="key">sharp</gl>
+   </mel>
+   <mel id="wn144">
+      <gl pivot="key">short</gl>
+   </mel>
+   <mel id="wn145">
+      <gl pivot="key">sing</gl>
+   </mel>
+   <mel id="wn146">
+      <gl pivot="key">sit</gl>
+   </mel>
+   <mel id="wn147">
+      <gl pivot="key">six</gl>
+   </mel>
+   <mel id="wn148">
+      <gl>bark</gl>
+      <gl pivot="key">skin</gl>
+      <gl>struggle</gl>
+   </mel>
    <mel id="wn149">
-      <gl pivot="samelg">sharp</gl>
+      <gl pivot="key">sky</gl>
    </mel>
    <mel id="wn150">
-      <gl pivot="samelg">black</gl>
+      <gl pivot="key">sleep</gl>
    </mel>
    <mel id="wn151">
-      <gl pivot="samelg">some</gl>
+      <gl pivot="key">small</gl>
    </mel>
    <mel id="wn152">
-      <gl pivot="samelg">green</gl>
+      <gl pivot="key">smell</gl>
    </mel>
    <mel id="wn153">
-      <gl pivot="samelg">bone</gl>
+      <gl>grass</gl>
+      <gl pivot="key">smoke</gl>
    </mel>
    <mel id="wn154">
-      <gl pivot="samelg">breast</gl>
+      <gl pivot="key">smooth</gl>
    </mel>
    <mel id="wn155">
-      <gl pivot="samelg">earth</gl>
+      <gl pivot="key">snake</gl>
    </mel>
    <mel id="wn156">
-      <gl>louse</gl>
-      <gl pivot="samelg">worm</gl>
+      <gl>blow</gl>
+      <gl pivot="key">snow</gl>
    </mel>
    <mel id="wn157">
-      <gl pivot="samelg">think</gl>
+      <gl pivot="key">some</gl>
    </mel>
    <mel id="wn158">
-      <gl pivot="samelg">far</gl>
+      <gl pivot="key">spit</gl>
+      <gl>tongue</gl>
    </mel>
    <mel id="wn159">
-      <gl pivot="samelg">hunt</gl>
+      <gl pivot="key">split</gl>
    </mel>
    <mel id="wn160">
-      <gl pivot="samelg">dry</gl>
+      <gl pivot="key">squeeze</gl>
    </mel>
    <mel id="wn161">
-      <gl pivot="samelg">sit</gl>
+      <gl>dig</gl>
+      <gl pivot="key">stab</gl>
    </mel>
    <mel id="wn162">
-      <gl pivot="samelg">warm</gl>
+      <gl pivot="key">stand</gl>
    </mel>
    <mel id="wn163">
-      <gl pivot="samelg">foot</gl>
+      <gl pivot="key">star</gl>
    </mel>
    <mel id="wn164">
-      <gl pivot="samelg">ten</gl>
+      <gl>beat</gl>
+      <gl pivot="key">stick</gl>
    </mel>
    <mel id="wn165">
-      <gl pivot="samelg">lake</gl>
+      <gl pivot="key">stone</gl>
    </mel>
    <mel id="wn166">
-      <gl pivot="samelg">smell</gl>
+      <gl>flat</gl>
+      <gl pivot="key">straight</gl>
    </mel>
    <mel id="wn167">
-      <gl pivot="samelg">snow</gl>
+      <gl>fight</gl>
+      <gl>skin</gl>
+      <gl pivot="key">struggle</gl>
    </mel>
    <mel id="wn168">
-      <gl pivot="samelg">horn</gl>
+      <gl>blow</gl>
+      <gl pivot="key">suck</gl>
    </mel>
    <mel id="wn169">
-      <gl pivot="samelg">fruit</gl>
+      <gl pivot="key">sun</gl>
    </mel>
    <mel id="wn170">
-      <gl pivot="samelg">wash</gl>
+      <gl pivot="key">swell</gl>
    </mel>
    <mel id="wn171">
-      <gl pivot="notfound">and</gl>
+      <gl>float</gl>
+      <gl pivot="key">swim</gl>
    </mel>
    <mel id="wn172">
-      <gl pivot="notfound">because</gl>
+      <gl>dog</gl>
+      <gl pivot="key">tail</gl>
    </mel>
    <mel id="wn173">
-      <gl pivot="notfound">how</gl>
+      <gl>pull</gl>
+      <gl pivot="key">take out</gl>
    </mel>
    <mel id="wn174">
-      <gl pivot="notfound">that</gl>
+      <gl pivot="key">ten</gl>
    </mel>
    <mel id="wn175">
-      <gl pivot="notfound">they</gl>
+      <gl pivot="key">there</gl>
    </mel>
    <mel id="wn176">
-      <gl pivot="notfound">this</gl>
+      <gl pivot="key">thick</gl>
    </mel>
    <mel id="wn177">
-      <gl pivot="notfound">we</gl>
+      <gl>cut</gl>
+      <gl pivot="key">thin</gl>
    </mel>
    <mel id="wn178">
-      <gl pivot="notfound">what</gl>
+      <gl pivot="key">think</gl>
    </mel>
    <mel id="wn179">
-      <gl pivot="notfound">when</gl>
+      <gl pivot="key">three</gl>
    </mel>
    <mel id="wn180">
-      <gl pivot="notfound">where</gl>
+      <gl pivot="key">throb</gl>
    </mel>
    <mel id="wn181">
-      <gl pivot="notfound">with</gl>
+      <gl>give</gl>
+      <gl>hold</gl>
+      <gl pivot="key">throw</gl>
    </mel>
    <mel id="wn182">
+      <gl pivot="key">tie</gl>
+   </mel>
+   <mel id="wn183">
+      <gl>spit</gl>
+      <gl pivot="key">tongue</gl>
+   </mel>
+   <mel id="wn184">
+      <gl pivot="key">tooth</gl>
+   </mel>
+   <mel id="wn185">
+      <gl pivot="key">tree</gl>
+   </mel>
+   <mel id="wn186">
+      <gl>play</gl>
+      <gl>round</gl>
+      <gl pivot="key">turn</gl>
+   </mel>
+   <mel id="wn187">
+      <gl pivot="key">two</gl>
+   </mel>
+   <mel id="wn188">
+      <gl pivot="key">vomit</gl>
+   </mel>
+   <mel id="wn189">
+      <gl pivot="key">walk</gl>
+   </mel>
+   <mel id="wn190">
+      <gl pivot="key">warm</gl>
+   </mel>
+   <mel id="wn191">
+      <gl pivot="key">wash</gl>
+   </mel>
+   <mel id="wn192">
+      <gl pivot="key">water</gl>
+   </mel>
+   <mel id="wn193">
+      <gl pivot="key">wet</gl>
+   </mel>
+   <mel id="wn194">
+      <gl pivot="key">white</gl>
+   </mel>
+   <mel id="wn195">
+      <gl pivot="key">who</gl>
+   </mel>
+   <mel id="wn196">
+      <gl>full</gl>
+      <gl pivot="key">wide</gl>
+   </mel>
+   <mel id="wn197">
+      <gl pivot="key">wife</gl>
+   </mel>
+   <mel id="wn198">
+      <gl>nose</gl>
+      <gl pivot="key">wind</gl>
+   </mel>
+   <mel id="wn199">
+      <gl>fly</gl>
+      <gl pivot="key">wing</gl>
+   </mel>
+   <mel id="wn200">
+      <gl>rub</gl>
+      <gl pivot="key">wipe</gl>
+   </mel>
+   <mel id="wn201">
+      <gl pivot="key">woman</gl>
+   </mel>
+   <mel id="wn202">
+      <gl>louse</gl>
+      <gl pivot="key">worm</gl>
+   </mel>
+   <mel id="wn203">
+      <gl pivot="key">year</gl>
+   </mel>
+   <mel id="wn204">
+      <gl pivot="key">yellow</gl>
+   </mel>
+   <mel id="nf205">
+      <gl pivot="notfound">and</gl>
+   </mel>
+   <mel id="nf206">
+      <gl pivot="notfound">because</gl>
+   </mel>
+   <mel id="nf207">
+      <gl pivot="notfound">how</gl>
+   </mel>
+   <mel id="nf208">
+      <gl pivot="notfound">that</gl>
+   </mel>
+   <mel id="nf209">
+      <gl pivot="notfound">they</gl>
+   </mel>
+   <mel id="nf210">
+      <gl pivot="notfound">this</gl>
+   </mel>
+   <mel id="nf211">
+      <gl pivot="notfound">we</gl>
+   </mel>
+   <mel id="nf212">
+      <gl pivot="notfound">what</gl>
+   </mel>
+   <mel id="nf213">
+      <gl pivot="notfound">when</gl>
+   </mel>
+   <mel id="nf214">
+      <gl pivot="notfound">where</gl>
+   </mel>
+   <mel id="nf215">
+      <gl pivot="notfound">with</gl>
+   </mel>
+   <mel id="nf216">
       <gl pivot="notfound">you</gl>
    </mel>
 </semantics>

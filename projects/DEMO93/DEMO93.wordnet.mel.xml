@@ -1,219 +1,238 @@
 <?xml version="1.0" ?>
 <semantics>
    <totals>
-      <found value="63"/>
-      <notfound value="6"/>
-      <total value="71"/>
+      <found value="65"/>
+      <notfound value="9"/>
+      <total value="74"/>
       <rawglosses value="69"/>
-      <lemmata value="65"/>
+      <lemmata value="71"/>
    </totals>
    <mel id="wn1">
-      <gl pivot="samelg">load</gl>
+      <gl pivot="key">back</gl>
    </mel>
    <mel id="wn2">
-      <gl pivot="samelg">tongue</gl>
+      <gl pivot="key">belly</gl>
    </mel>
    <mel id="wn3">
-      <gl pivot="samelg">horse</gl>
+      <gl pivot="key">chest</gl>
    </mel>
    <mel id="wn4">
-      <gl pivot="samelg">nest</gl>
+      <gl pivot="key">chin</gl>
    </mel>
    <mel id="wn5">
-      <gl pivot="samelg">head</gl>
-      <gl>point</gl>
+      <gl pivot="key">cow</gl>
    </mel>
    <mel id="wn6">
-      <gl pivot="samelg">intestines</gl>
+      <gl pivot="key">cowshed</gl>
    </mel>
    <mel id="wn7">
-      <gl pivot="samelg">feces</gl>
+      <gl pivot="key">cubit</gl>
    </mel>
    <mel id="wn8">
-      <gl pivot="samelg">friend</gl>
+      <gl pivot="key">deer</gl>
    </mel>
    <mel id="wn9">
-      <gl pivot="samelg">belly</gl>
+      <gl pivot="key">dishes</gl>
    </mel>
    <mel id="wn10">
-      <gl pivot="samelg">hand</gl>
+      <gl pivot="key">eagle</gl>
    </mel>
    <mel id="wn11">
-      <gl pivot="samelg">ten</gl>
+      <gl pivot="key">enemy</gl>
    </mel>
    <mel id="wn12">
-      <gl pivot="samelg">leaf</gl>
-   </mel>
-   <mel id="wn13">
-      <gl pivot="samelg">man</gl>
-   </mel>
-   <mel id="wn14">
-      <gl pivot="samelg">voice</gl>
-   </mel>
-   <mel id="wn15">
-      <gl pivot="samelg">hair</gl>
-   </mel>
-   <mel id="wn16">
-      <gl pivot="samelg">food</gl>
-   </mel>
-   <mel id="wn17">
-      <gl pivot="samelg">back</gl>
-   </mel>
-   <mel id="wn18">
-      <gl pivot="samelg">place</gl>
-   </mel>
-   <mel id="wn19">
-      <gl pivot="samelg">hole</gl>
-   </mel>
-   <mel id="wn20">
-      <gl pivot="samelg">waist</gl>
-   </mel>
-   <mel id="wn21">
-      <gl pivot="samelg">cubit</gl>
-   </mel>
-   <mel id="wn22">
-      <gl pivot="samelg">house</gl>
-   </mel>
-   <mel id="wn23">
-      <gl pivot="samelg">dishes</gl>
-   </mel>
-   <mel id="wn24">
-      <gl pivot="samelg">gold</gl>
-   </mel>
-   <mel id="wn25">
-      <gl pivot="samelg">chest</gl>
-   </mel>
-   <mel id="wn26">
-      <gl pivot="samelg">eye</gl>
+      <gl pivot="key">eye</gl>
       <gl>heart</gl>
    </mel>
+   <mel id="wn13">
+      <gl pivot="key">face</gl>
+   </mel>
+   <mel id="wn14">
+      <gl pivot="key">falcon</gl>
+   </mel>
+   <mel id="wn15">
+      <gl pivot="key">feces</gl>
+   </mel>
+   <mel id="wn16">
+      <gl pivot="key">fire</gl>
+   </mel>
+   <mel id="wn17">
+      <gl pivot="key">fodder</gl>
+   </mel>
+   <mel id="wn18">
+      <gl pivot="key">fontanel</gl>
+   </mel>
+   <mel id="wn19">
+      <gl pivot="key">food</gl>
+   </mel>
+   <mel id="wn20">
+      <gl pivot="key">forehead</gl>
+   </mel>
+   <mel id="wn21">
+      <gl pivot="key">friend</gl>
+   </mel>
+   <mel id="wn22">
+      <gl pivot="key">garlic</gl>
+   </mel>
+   <mel id="wn23">
+      <gl pivot="key">goat</gl>
+   </mel>
+   <mel id="wn24">
+      <gl pivot="key">gold</gl>
+   </mel>
+   <mel id="wn25">
+      <gl pivot="key">hair</gl>
+   </mel>
+   <mel id="wn26">
+      <gl pivot="key">hand</gl>
+   </mel>
    <mel id="wn27">
-      <gl pivot="samelg">garlic</gl>
+      <gl pivot="key">head</gl>
+      <gl>point</gl>
    </mel>
    <mel id="wn28">
-      <gl pivot="samelg">fire</gl>
+      <gl>eye</gl>
+      <gl pivot="key">heart</gl>
    </mel>
    <mel id="wn29">
-      <gl pivot="samelg">cowshed</gl>
+      <gl pivot="key">hill</gl>
    </mel>
    <mel id="wn30">
-      <gl pivot="samelg">road</gl>
+      <gl pivot="key">hoe</gl>
    </mel>
    <mel id="wn31">
-      <gl pivot="samelg">lungs</gl>
+      <gl pivot="key">hole</gl>
    </mel>
    <mel id="wn32">
-      <gl pivot="samelg">fodder</gl>
+      <gl pivot="key">horse</gl>
    </mel>
    <mel id="wn33">
-      <gl pivot="samelg">hill</gl>
+      <gl pivot="key">house</gl>
    </mel>
    <mel id="wn34">
-      <gl pivot="samelg">thief</gl>
+      <gl pivot="key">intestines</gl>
    </mel>
    <mel id="wn35">
-      <gl pivot="samelg">cow</gl>
+      <gl pivot="key">leaf</gl>
    </mel>
    <mel id="wn36">
-      <gl pivot="samelg">hoe</gl>
+      <gl pivot="key">lid</gl>
    </mel>
    <mel id="wn37">
-      <gl pivot="samelg">one</gl>
+      <gl pivot="key">load</gl>
    </mel>
    <mel id="wn38">
-      <gl pivot="samelg">strength</gl>
+      <gl pivot="key">louse</gl>
    </mel>
    <mel id="wn39">
-      <gl pivot="samelg">deer</gl>
+      <gl pivot="key">lungs</gl>
    </mel>
    <mel id="wn40">
-      <gl pivot="samelg">falcon</gl>
+      <gl pivot="key">man</gl>
    </mel>
    <mel id="wn41">
-      <gl pivot="samelg">chin</gl>
+      <gl pivot="key">nest</gl>
    </mel>
    <mel id="wn42">
-      <gl pivot="samelg">saliva</gl>
+      <gl pivot="key">nine</gl>
    </mel>
    <mel id="wn43">
-      <gl pivot="samelg">lid</gl>
+      <gl pivot="key">nose</gl>
    </mel>
    <mel id="wn44">
-      <gl pivot="samelg">nose</gl>
+      <gl pivot="key">one</gl>
    </mel>
    <mel id="wn45">
-      <gl pivot="samelg">face</gl>
+      <gl pivot="key">place</gl>
+      <gl>point</gl>
    </mel>
    <mel id="wn46">
-      <gl pivot="samelg">fontanel</gl>
+      <gl>head</gl>
+      <gl>place</gl>
+      <gl pivot="key">point</gl>
    </mel>
    <mel id="wn47">
-      <gl pivot="samelg">siblings</gl>
+      <gl pivot="key">road</gl>
    </mel>
    <mel id="wn48">
-      <gl pivot="samelg">enemy</gl>
+      <gl pivot="key">ropeway</gl>
    </mel>
    <mel id="wn49">
-      <gl pivot="samelg">thread</gl>
+      <gl pivot="key">saliva</gl>
    </mel>
    <mel id="wn50">
-      <gl pivot="samelg">skin</gl>
+      <gl pivot="key">siblings</gl>
    </mel>
    <mel id="wn51">
-      <gl pivot="samelg">snow</gl>
+      <gl pivot="key">skin</gl>
    </mel>
    <mel id="wn52">
-      <gl pivot="samelg">tail</gl>
+      <gl pivot="key">snow</gl>
    </mel>
    <mel id="wn53">
-      <gl pivot="samelg">wife</gl>
+      <gl pivot="key">steam</gl>
    </mel>
    <mel id="wn54">
-      <gl pivot="samelg">eagle</gl>
+      <gl pivot="key">strength</gl>
    </mel>
    <mel id="wn55">
-      <gl pivot="samelg">goat</gl>
+      <gl pivot="key">tail</gl>
    </mel>
    <mel id="wn56">
-      <gl pivot="samelg">louse</gl>
+      <gl pivot="key">ten</gl>
    </mel>
    <mel id="wn57">
-      <gl pivot="samelg">forehead</gl>
+      <gl pivot="key">thief</gl>
    </mel>
    <mel id="wn58">
-      <gl pivot="samelg">water</gl>
+      <gl pivot="key">thread</gl>
    </mel>
    <mel id="wn59">
-      <gl pivot="samelg">nine</gl>
+      <gl pivot="key">tongue</gl>
    </mel>
    <mel id="wn60">
-      <gl pivot="samelg">steam</gl>
+      <gl pivot="key">voice</gl>
    </mel>
    <mel id="wn61">
-      <gl pivot="samelg">work</gl>
+      <gl pivot="key">waist</gl>
    </mel>
    <mel id="wn62">
-      <gl pivot="samelg">ropeway</gl>
+      <gl pivot="key">water</gl>
    </mel>
    <mel id="wn63">
-      <gl pivot="samelg">wheat</gl>
+      <gl pivot="key">wheat</gl>
    </mel>
    <mel id="wn64">
-      <gl pivot="notfound">beer-mash</gl>
+      <gl pivot="key">wife</gl>
    </mel>
    <mel id="wn65">
+      <gl pivot="key">work</gl>
+   </mel>
+   <mel id="nf66">
+      <gl pivot="notfound">beer-mash</gl>
+   </mel>
+   <mel id="nf67">
+      <gl pivot="notfound">beermash</gl>
+   </mel>
+   <mel id="nf68">
       <gl pivot="notfound">bird-trap</gl>
    </mel>
-   <mel id="wn66">
+   <mel id="nf69">
+      <gl pivot="notfound">birdtrap</gl>
+   </mel>
+   <mel id="nf70">
       <gl pivot="notfound">carrying headband</gl>
    </mel>
-   <mel id="wn67">
+   <mel id="nf71">
       <gl pivot="notfound">daughter in law</gl>
    </mel>
-   <mel id="wn68">
+   <mel id="nf72">
       <gl pivot="notfound">snake-god</gl>
    </mel>
-   <mel id="wn69">
+   <mel id="nf73">
+      <gl pivot="notfound">snakegod</gl>
+   </mel>
+   <mel id="nf74">
       <gl pivot="notfound">tumpline</gl>
    </mel>
 </semantics>

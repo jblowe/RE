@@ -1,116 +1,120 @@
 <?xml version="1.0" ?>
 <semantics>
    <totals>
-      <found value="32"/>
+      <found value="33"/>
       <notfound value="3"/>
       <total value="36"/>
       <rawglosses value="36"/>
-      <lemmata value="33"/>
+      <lemmata value="35"/>
    </totals>
    <mel id="wn1">
-      <gl pivot="samelg">navel</gl>
+      <gl pivot="key">blow</gl>
    </mel>
    <mel id="wn2">
-      <gl pivot="samelg">feces</gl>
+      <gl pivot="key">branch</gl>
+      <gl>leg</gl>
    </mel>
    <mel id="wn3">
-      <gl pivot="samelg">dew</gl>
+      <gl pivot="key">canoe</gl>
    </mel>
    <mel id="wn4">
-      <gl pivot="samelg">root</gl>
+      <gl pivot="key">constant</gl>
    </mel>
    <mel id="wn5">
-      <gl pivot="samelg">two</gl>
+      <gl pivot="key">dew</gl>
    </mel>
    <mel id="wn6">
-      <gl pivot="samelg">up</gl>
+      <gl pivot="key">dodge</gl>
    </mel>
    <mel id="wn7">
-      <gl pivot="samelg">canoe</gl>
+      <gl pivot="key">enter</gl>
    </mel>
    <mel id="wn8">
-      <gl pivot="samelg">fish</gl>
+      <gl pivot="key">feces</gl>
    </mel>
    <mel id="wn9">
-      <gl pivot="samelg">strong</gl>
+      <gl pivot="key">fire</gl>
    </mel>
    <mel id="wn10">
-      <gl pivot="samelg">sit</gl>
+      <gl pivot="key">fish</gl>
    </mel>
    <mel id="wn11">
-      <gl pivot="samelg">yam</gl>
+      <gl pivot="key">forbidden</gl>
    </mel>
    <mel id="wn12">
-      <gl pivot="samelg">constant</gl>
+      <gl pivot="key">four</gl>
    </mel>
    <mel id="wn13">
-      <gl pivot="samelg">hear</gl>
+      <gl pivot="key">gall</gl>
    </mel>
    <mel id="wn14">
-      <gl pivot="samelg">forbidden</gl>
+      <gl pivot="key">head</gl>
    </mel>
    <mel id="wn15">
-      <gl pivot="samelg">fire</gl>
+      <gl pivot="key">hear</gl>
    </mel>
    <mel id="wn16">
-      <gl pivot="samelg">dodge</gl>
+      <gl>branch</gl>
+      <gl pivot="key">leg</gl>
    </mel>
    <mel id="wn17">
-      <gl>branch</gl>
-      <gl pivot="samelg">leg</gl>
+      <gl pivot="key">man</gl>
    </mel>
    <mel id="wn18">
-      <gl pivot="samelg">octopus</gl>
+      <gl pivot="key">mouth</gl>
    </mel>
    <mel id="wn19">
-      <gl pivot="samelg">scrotum</gl>
+      <gl pivot="key">navel</gl>
    </mel>
    <mel id="wn20">
-      <gl pivot="samelg">nose</gl>
+      <gl pivot="key">nose</gl>
    </mel>
    <mel id="wn21">
-      <gl pivot="samelg">sea</gl>
+      <gl pivot="key">octopus</gl>
    </mel>
    <mel id="wn22">
-      <gl pivot="samelg">head</gl>
+      <gl pivot="key">quieten</gl>
    </mel>
    <mel id="wn23">
-      <gl pivot="samelg">tail</gl>
+      <gl pivot="key">root</gl>
    </mel>
    <mel id="wn24">
-      <gl pivot="samelg">blow</gl>
+      <gl pivot="key">scrotum</gl>
    </mel>
    <mel id="wn25">
-      <gl pivot="samelg">four</gl>
+      <gl pivot="key">sea</gl>
    </mel>
    <mel id="wn26">
-      <gl pivot="samelg">side</gl>
+      <gl pivot="key">side</gl>
    </mel>
    <mel id="wn27">
-      <gl pivot="samelg">man</gl>
+      <gl pivot="key">sit</gl>
    </mel>
    <mel id="wn28">
-      <gl pivot="samelg">quieten</gl>
+      <gl pivot="key">strong</gl>
    </mel>
    <mel id="wn29">
-      <gl pivot="samelg">gall</gl>
+      <gl pivot="key">tail</gl>
    </mel>
    <mel id="wn30">
-      <gl pivot="samelg">enter</gl>
+      <gl pivot="key">two</gl>
    </mel>
    <mel id="wn31">
-      <gl pivot="samelg">wave</gl>
+      <gl pivot="key">up</gl>
    </mel>
    <mel id="wn32">
-      <gl pivot="samelg">mouth</gl>
+      <gl pivot="key">wave</gl>
    </mel>
    <mel id="wn33">
+      <gl pivot="key">yam</gl>
+   </mel>
+   <mel id="nf34">
       <gl pivot="notfound">fermented food</gl>
    </mel>
-   <mel id="wn34">
+   <mel id="nf35">
       <gl pivot="notfound">firemaking</gl>
    </mel>
-   <mel id="wn35">
+   <mel id="nf36">
       <gl pivot="notfound">fruit picking pole</gl>
    </mel>
 </semantics>
