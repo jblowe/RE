@@ -7,7 +7,8 @@ also, you'll need to install the associated WordNet files:
 
 http://www.nltk.org/howto/wordnet.html
 
-`python3 ../all_glosses.py TGTM | python3 wnlookup.py > output.mel`
+`cd src
+python semantic_sources/regenerate-wordnet.py`
 
 http://www.nltk.org/howto/wordnet.html
 
