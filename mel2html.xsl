@@ -63,7 +63,14 @@
             </td>
             <td>
                 <xsl:for-each select=".//gl">
-                    <span style="background-color: dodgerblue;color: white"><xsl:value-of select="."/></span>
+                    <xsl:choose>
+                    <xsl:when test="@pivot">
+                        <span style="background-color: red;color: white"><xsl:value-of select="."/></span>
+                    </xsl:when>
+                    <xsl:otherwise>
+                         <span style="background-color: dodgerblue;color: white"><xsl:value-of select="."/></span>
+                    </xsl:otherwise>
+                    </xsl:choose>
                     <xsl:if test="position() != last()">, </xsl:if>
                 </xsl:for-each>
             </td>
