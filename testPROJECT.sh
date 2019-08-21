@@ -43,7 +43,7 @@ fi
 # first make run 'none' with no MEL
 time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run none --recon standard > /dev/null
 [ $? -ne 0 ] && exit 1;
-for mel in hand clics
+for mel in hand clics wordnet
 do
     if [ -e ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.mel.xml ]
     then
@@ -65,4 +65,8 @@ do
         time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 ${mel} --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
 
     fi
+
+    # compare hand-strict to none
+    time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand-strict --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
+
 done
