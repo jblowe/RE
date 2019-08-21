@@ -10,6 +10,7 @@
   <attested name="tag" file="DIS.tag.data.xml"/>
   <attested name="tuk" file="DIS.tuk.data.xml"/>
   <mel name="hand" file="DIS.hand.mel.xml"/>
+  <mel name="clics" file="DIS.clics.mel.xml"/>
   <mel name="wordnet" file="DIS.wordnet.mel.xml"/>
   <fuzzy name="fuzzy1" file="DIS.fuz.xml"/>
   <fuzzy name="fuzzy2" file="DIS.fuz2.xml"/>
