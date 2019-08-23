@@ -68,7 +68,7 @@ def serialize_lexicon(lexicon, filename):
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
-def serialize_sets(reconstruction, filename):
+def serialize_sets(reconstruction, languages, filename):
     '''
     Here is the "classic schema" of cognate sets...
 
@@ -90,6 +90,9 @@ def serialize_sets(reconstruction, filename):
     '''
     root = ET.Element('reconstruction', attrib={'protolanguage': reconstruction.language})
     ET.SubElement(root, 'createdat').text = run_date
+    lgs = ET.SubElement(root, 'languages')
+    for language in languages:
+        ET.SubElement(lgs, 'lg').text = language
 
     def render_xml(element, form, level):
         if isinstance(form, RE.ModernForm):

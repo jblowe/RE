@@ -122,7 +122,7 @@ elif command_args.command == 'upstream':
         B.isolates = RE.extract_isolates(B)
         B.failures = RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language), (), [])
         sets_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.xml')
-        RE.dump_xml_sets(B, sets_xml_file)
+        RE.dump_xml_sets(B, settings.upstream[settings.upstream_target], sets_xml_file)
         print(f'wrote {len(B.forms)} xml sets and {len(B.isolates)} isolates to {sets_xml_file}')
         B.statistics.add_stat('isolates', len(B.isolates))
         B.statistics.add_stat('sets', len(B.forms))
