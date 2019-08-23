@@ -57,6 +57,7 @@
                 <td>
                     <xsl:for-each select="$reflexes/*">
                         <xsl:if test="lg = $label">
+                            <xsl:text> </xsl:text>
                             <xsl:value-of select="lx"/>
                         </xsl:if>
                     </xsl:for-each>
