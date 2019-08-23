@@ -164,7 +164,7 @@ def determine_file_type(file_path):
     elif 'fuz.xml' in file_path:
         return 'fuzzy2html.xsl'
     elif 'sets.xml' in file_path:
-        return 'sets2html.xsl'
+        return 'sets2tabular.xsl'
     elif 'mel.xml' in file_path:
         return 'mel2html.xsl'
     elif 'statistics.xml' in file_path:
