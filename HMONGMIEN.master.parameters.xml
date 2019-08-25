@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <attested name="lg0" file="lg0.data.xml"/>
+  <attested name="lg1" file="lg1.data.xml"/>
+  <attested name="lg10" file="lg10.data.xml"/>
+  <attested name="lg11" file="lg11.data.xml"/>
+  <attested name="lg12" file="lg12.data.xml"/>
+  <attested name="lg13" file="lg13.data.xml"/>
+  <attested name="lg14" file="lg14.data.xml"/>
+  <attested name="lg15" file="lg15.data.xml"/>
+  <attested name="lg16" file="lg16.data.xml"/>
+  <attested name="lg2" file="lg2.data.xml"/>
+  <attested name="lg3" file="lg3.data.xml"/>
+  <attested name="lg4" file="lg4.data.xml"/>
+  <attested name="lg5" file="lg5.data.xml"/>
+  <attested name="lg6" file="lg6.data.xml"/>
+  <attested name="lg7" file="lg7.data.xml"/>
+  <attested name="lg8" file="lg8.data.xml"/>
+  <attested name="lg9" file="lg9.data.xml"/>
+  <mel name="hand" file="HM.hand.mel.xml"/>
+  <reconstruction name="standard">
+    <proto_language name="phm" correspondences="HM.standard.correspondences.xml"/>
+    <action name="upstream" target="phm"/>
+    <action name="upstream" from="lg0,lg1,lg2,lg3,lg4,lg5,lg6,lg7,lg8,lg9,lg10,lg11,lg12,lg13,lg14,lg15,lg16" to="phm"/>
+  </reconstruction>
+  <param name="title" value="Ratliffe HM dataset"/>
+</params>
