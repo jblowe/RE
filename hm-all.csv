@@ -7,14 +7,14 @@
 7			1.1	*-p- 															
 8																			
 9	P		PHM	*-p-		1	2	3	4	5	6	7	8	9	10	11			
-10	D	1	to know	*-pei	(12/17)		pu1	--	pau1	pɔ1a	--	pe1	pɪ1	pei1	pei1	pəi1	bɛi1		
+10	D	1	to know	*-pei	(12/17)	pu1	--	pau1	pɔ1a	--	pe1	pɪ1	pei1	pei1	pəi1	bɛi1			
 11	D	2	molar tooth	*-pæ	(5)	--	pa2	pua1	--	--	--	--	--	--	--	ba1			
 12	D	3	full	*-pu̯ɛŋX	(22)	pɛ3	pe3	pu3	poŋ3a	paŋB	paŋ3	pɔ̃3	pwəŋ3	pɔŋ3	pɔŋ3	baŋ3			
 13	D	4	to shoot	*-pənX	(21)	paŋ3	pɑŋ3	pɔ3	poŋ3a	poŋB	poŋ3	pɔ̃3	pwan3	fan3	--	bun3			
 14	D	5	to sleep/lie down	*-pu̯eiH	(8)	pi5	pə5	pɯ5	pu5a	puC	pau5	pɛ5	pwei5’	fei5	--	bui5			
 15	D	6	1pl (we/us)	*-N-pɔu	(3)	pi1	pɯ1	pe1	pæ1a	peiA	pa1	pɯ5	--	pu1	--	bu1			
 16	D	7	husband	*-N-poX	(7)	--	po3	--	--	--	--	--	--	--	bu3	--			
-17	D	8	soybean	*-N-peiX	(12/17)		pu3	--	pau3	--	--	--	--	--	bei3	bi3	mɛi3		
+17	D	8	soybean	*-N-peiX	(12/17)	pu3	--	pau3	--	--	--	--	--	bei3	bi3	mɛi3			
 18	D	9	百 hundred	*-pæk	(5)	pa5	pa5	pua5	pa5a	piC	pa5	pe5	pɛ7	pe7	pɛ7	ba7			
 19																			
 20	P		PH	*-p- 		1	2	3	4	5	6	7							
@@ -24,7 +24,7 @@
 24	D	13	to open (door)	*-powD	(13)	pu7	pu7	--	--	poD	--	pɔ7							
 25	D	14	風 air	*-poŋC	(28)	poŋ5	--	pa5	paŋ5a	poŋC	--	--							
 26																			
-27			PM	*-p-									8	9	10	11			
+27	P		PM	*-p-									8	9	10	11			
 28	D	15	to burn	*-pɔuB	(3)								pu3	pu3	pau3	bu3			
 29	D	16	鞭 whip	*-pinA	(18)								biŋ1	pin1	pin1	--			
 30	D	17	斧 axe	*-pouB	(13)								pou3	pɔu3	bəu3	pu3			
@@ -56,7 +56,7 @@
 56	D	6	thread	*-S-phoB	(7)	fhə3	so3	sɔ3	so3b	suB	--	(mo3)							
 57	D	7	to twist/rub	*-S-phu̯aA	(15)	fha1	-- 	sua1	sa1b	saA	va1’	--							
 58																			
-59			PM	*-ph- 									8	9	10	11			
+59	P		PM	*-ph- 									8	9	10	11			
 60	D	8	奉 to carry in 2 hands	*-phu̯ɛŋB	(22)								phwəŋ3	pɔŋ3	phɔŋ3	--			
 61	D	9	拂 to sweep	*-phu̯ətD	(7)								phut7	--	--	--			
 62																			
@@ -84,7 +84,7 @@
 84	D	10	shoulder	*-bʉC	(8)	--	pə6	pɯ6	--	vuC	--	--							
 85	D	11	腐 bad/spoiled	*-bu̯aB	(15)	pa4	pɑ4	pua4	pəa4	vuB	--	--							
 86																			
-87			PM	*-b-									8	9	10	11			
+87	P		PM	*-b-									8	9	10	11			
 88	D	12	to hold w/2 hands	*-bouA	(13)								pou2	pɔu2	--	--			
 89	D	13	平 level	*-beŋA	(29)								pɛŋ2	peːŋ2	pɛ2	pɛŋ2			
 90	D	14	耙 to rake	*-baA	(4)								pa2	pa2	--	pa2			
@@ -114,16 +114,16 @@
 114																			
 115	P		PHM	*-mp-		1	2	3	4	5	6	7	8	9	10	11			
 116	D	1	thunder	*-mpuə	(16)	--	--	--	--	--	--	mo1	bu1	bu5	--	bjau1			
-117	D	2	to dream	*-mpeiH	(12/17)		pu5	mpei5	mpau5	mpɔ5a	mʔpuC	mpe5	mi5	bei5	bei5	bəi5	bɛi5		
+117	D	2	to dream	*-mpeiH	(12/17)	pu5	mpei5	mpau5	mpɔ5a	mʔpuC	mpe5	mi5	bei5	bei5	bəi5	bɛi5			
 118	D	3	name	*-mpɔuH	(3)	pi5	mpu5	mpe5	mpæ5a	mʔpeiC	mpa5	mo5	bu5’	bu5	bau5	bu5			
-119	D	4	沸 to boil (intr)	*-mpu̯eiH	(12/17)		--	--	mpau5	mpɔ5a	mʔpuC	mpei5	mɪ5	bwei5’	vei5	--	bui5		
+119	D	4	沸 to boil (intr)	*-mpu̯eiH	(12/17)	--	--	mpau5	mpɔ5a	mʔpuC	mpei5	mɪ5	bwei5’	vei5	--	bui5			
 120																			
 121	P		PH	*-mp-		1	2	3	4	5	6	7							
 122	D	5	to hold in mouth	*-mpæB	(5)	--	--	mpua3	mpa3a	mʔpziB	--	--							
 123	D	6	pig	*-mpæC	(5)	pa5	mpa5	mpua5	mpa5a	mʔpeiC	mpei5	me5							
 124	D	7	to throw on (clothes)	*-mpu̯aC	(15)	pa5	--	mpua5	mpa5a	--	--	ma5							
 125																			
-126			PM	*-ʔb- (< *mp- )									8	9	10	11			
+126	P		PM	*-ʔb- (< *mp- )									8	9	10	11			
 127	D	8	loud/sound	*-ʔbujA	(9)								bui1	buːi1’	bəi1	bai1			
 128	D	9	bat (animal)	*-ʔbujA	(9)								bui1	buːi1’	bəi1	bai1			
 129	D	10	monkey	*-ʔbiŋA	(18)								biŋ1	biːŋ1	--	bjaŋ1			
@@ -156,7 +156,7 @@
 156	P		PH	*-mph-		1	2	3	4	5	6	7							
 157	D	3	ant	*-mphæB	(5)	phen3	mpha3	--	--	--	mphai3	m̥je3							
 158																			
-159			PM	*-bh- (< *mph- )									8	9	10	11			
+159	P		PM	*-bh- (< *mph- )									8	9	10	11			
 160	D	4	拍 to clap	*-bhækD	(5)								bɛ7	be4	bɛ7	--			
 161																			
 162			Notes																
@@ -170,7 +170,7 @@
 170	D	1	to cover	*-mboC	(7)	mə6	--	mpɔ6	mpu6	mpuC	--	pho5							
 171	D	2	拍 to clap	*-mbæA	(5)	ma2	ma2	mpua2	mpa2	mpziA	--	--							
 172																			
-173			PM	*-mb-									8	9	10	11			
+173	P		PM	*-mb-									8	9	10	11			
 174	D	3	婦 daughter-in-law/bride	*-mbu̯ɛŋB	(22)								bwəŋ4	bɔŋ4	bɔŋ4	--			
 175	D	4	浮 to float	*-mbi̯̯əuA	(1)								bjeu2	bjɔu2	bjau2	bɛu2			
 176																			
@@ -186,7 +186,7 @@
 186	P		PH	*-ʔm-		1	2	3	4	5	6	7							
 187	D	2	to grasp	*-ʔmu̯ɛA	(11)	mɛ1	me1	mua1	muɑ1a	--	--	--							
 188																			
-189			PM	*-ʔm-									8	9	10	11			
+189	P		PM	*-ʔm-									8	9	10	11			
 190	D	3	green/blue	*-ʔmeŋA	(29)								mɛŋ1	meːŋ1	mɛ1	mɛŋ1			
 191																			
 192			Notes																
@@ -203,17 +203,17 @@
 203	P		PHM	*-hm-		1	2	3	4	5	6	7	8	9	10	11			
 204	D	1	flea	*-hmiəŋ	(23)	m̥hen1	--	hm̥ɔ1	mɔŋ1b	m̥enA	mɔ1	n̩1	mɛŋ1	muŋ1’	m̥au1	mɔŋ1			
 205	D	2	vine	*-hmein	(25)	--	ɕi1	hm̥a1	ma1b	m̥oŋA	m̥e1’	m̥a1	m̥ei1	mei1’	m̥əi1	mɛi1			
-206	D	3	to taste/try	*-hmeiH	(12/17)		m̥hu5	--	--	--	--	--	--	--	--	m̥i5	--		
+206	D	3	to taste/try	*-hmeiH	(12/17)	m̥hu5	--	--	--	--	--	--	--	--	m̥i5	--			
 207	D	4	night	*-hməŋH	(21)	m̥haŋ5	m̥hɑŋ5	hm̥ɔ5	mɔ5b	m̥oŋC	--	mæ̃4	m̥aŋ3	--	m̥ɔŋ5	mɔŋ5			
 208																			
 209	P		PH	*-hm-		1	2	3	4	5	6	7							
 210	D	5	Hmong	*-hmʉŋA	(30)	m̥hu1	ɕoŋ1	hm̥ɔŋ1	maŋ1b	m̥joA	--	ŋ̥ŋ1							
 211	D	6	wild dog	*-hmaŋC	(24)	m̥hɑŋ5	--	hm̥a5	ma5b	--	--	--							
 212																			
-213			PM	*-hm-									8	9	10	11			
+213	P		PM	*-hm-									8	9	10	11			
 214	D	7	animal fat/oil	*-hmejA	(10)								m̥ei1	mei1’	m̥əi1	mi1			
 215	D	8	面 face	*-hmienA (C)									mjen1	min1’	m̥in1	mɛn1			
-216	D	9	米 husked rice	*-hmeiB	(12/17)									m̥ei3	mei3	m̥i3	mɛi3		
+216	D	9	米 husked rice	*-hmeiB	(12/17)								m̥ei3	mei3	m̥i3	mɛi3			
 217																			
 218			Notes																
 219		2	Possibly the same as Chinese 蔓 ‘creeping plant’ (OC *ma[n]-s > MC mjonH > Man. wàn).																
@@ -243,7 +243,7 @@
 243	D	12	wheat	*-muŋC	(27)	maŋ4	--	mɔ6	məŋ6	muC	--	--							
 244	D	13	female	*-minD	(18)	mi8	--	nia8	mi8	menC	mai8	mɛ̃7							
 245																			
-246			PM	*-m-									8	9	10	11			
+246	P		PM	*-m-									8	9	10	11			
 247	D	14	bee	*-mu̯eiB	(8)								mwei4	ŋwei4	mi4	mui4			
 248	D	15	brother	*-mɔuB	(3)								mai4	--	mau4	mu4			
 249	D	16	carrying pole	*-mu̯əŋB	(29)								moŋ5	muŋ4	mɔŋ4	--			
@@ -266,7 +266,7 @@
 266			1.1	*-ʔw-															
 267																			
 268	P		PHM	*-ʔw-		1	2	3	4	5	6	7	8	9	10	11			
-269	D	1	son-in-law	*-ʔweiX	(12/17)		--	--	vau3	wɔ3a	ʔwuB	ve3	vi3	vei3	--	--	vɛi3		
+269	D	1	son-in-law	*-ʔweiX	(12/17)	--	--	vau3	wɔ3a	ʔwuB	ve3	vi3	vei3	--	--	vɛi3			
 270	D	2	冠 crest/comb	*-ʔwi̯æn	(1)	--	--	ʔi1	--	ʔweA	--	--	--	--	--	vɔn1			
 271																			
 272	P		PH	*-ʔw-		1	2	3	4	5	6	7							
@@ -275,7 +275,7 @@
 275	D	5	to cover self	*-ʔwoB	(7)	--	--	vɔ3	wo3a	ʔwuB	--	va3							
 276	D	6	wife	*-ʔwæwB	(3)	vi3	--	vi3	--	--	va3	vo3							
 277																			
-278			PM	*-ʔw-									8	9	10	11			
+278	P		PM	*-ʔw-									8	9	10	11			
 279	D	7	that	*-ʔweB	(10)								wa3	va3	wə3	vɛi3			
 280	D	8	碗 bowl	*-ʔwənB (D)									van3	van3	wan3	vjɛn3			
 281	D	9	抉 to dig	*-ʔwetD	(10)								vet7	veːt7’	wun7	vɛt7			
@@ -287,7 +287,7 @@
 287																			
 288			1.11	*-hw-															
 289																			
-290			PM	*-hw-									8	9	10	11			
+290	P		PM	*-hw-									8	9	10	11			
 291	D	1	園 garden	*-hwunA	(27)								hun1	vin1’	hun1	von1			
 292																			
 293			Notes																
@@ -304,7 +304,7 @@
 304	D	4	園 garden	*-waŋA	(24)	vaŋ2	--	va2	wua2	--	vi2	ɦje2							
 305	D	5	萬 ten thousand	*-wi̯aŋC	(26)	vaŋ6	--	va8	waŋ6	waŋC	--	--							
 306																			
-307			PM	*-w-									8	9	10	11			
+307	P		PM	*-w-									8	9	10	11			
 308	D	6	皇 yellow	*-wi̯əŋA	(24)								waŋ2	vaŋ2	waŋ2	vjaŋ2			
 309																			
 310			Notes																
@@ -324,7 +324,7 @@
 324	D	5	crop of bird	*-pjinB	(18)	pi3	--	tsia5	pjein5a	puB	pai3	pẽ1							
 325	D	6	to bear fruit	*-pjiC	(1)	tsen5	--	tsi5	pei5a	pzeC	--	--							
 326																			
-327			PM	*-pj-									8	9	10	11			
+327	P		PM	*-pj-									8	9	10	11			
 328	D	7	wooden basin	*-pjatD	(4)								pwat7	--	--	--			
 329																			
 330			Notes																
@@ -365,7 +365,7 @@
 365	P		PHM	*-mbj-		1	2	3	4	5	6	7	8	9	10	11			
 366	D	1	辮 to braid/a braid	*-mbjinX	(18)	mi4	--	ntsia4	mpjein4	mpen4	pjen6	ma1	bin4/bin5	bin4	--	pin4/bjɛn6			
 367																			
-368			PM	*-mbj-									8	9	10	11			
+368	P		PM	*-mbj-									8	9	10	11			
 369	D	2	young man	*-mbjauA	(5)								bjaːu2	baːu2	--	--			
 370																			
 371			Notes																
@@ -379,7 +379,7 @@
 379	D	2	tooth	*-hmjinX	(18)	m̥hi3	ɕɛ3	hn̥ia3	mi3b	m̥jenB	m̥ai3	mɪ̃3	--	--	mjen3	--			
 380	D	3	to sniff at	*-hmji̯əmH	(18)	m̥hi5	--	hn̥ia5	mi5b	m̥jenC	m̥ai5	mi5	hom5	hɔːm5’	m̥ja5	--			
 381																			
-382			PM	*-hmj-									8	9	10	11			
+382	P		PM	*-hmj-									8	9	10	11			
 383	D	4	grass	*-hmjaB	(4)								m̥wa3	wa3	m̥ja3	mjɛ3			
 384	D	5	spirit/ghost	*-hmjænB	(19)								m̥wan3	ŋwaːn3	m̥jɛn3	mjɛn3			
 385																			
@@ -394,7 +394,7 @@
 394	P		PH	*-mj-		1	2	3	4	5	6	7							
 395	D	1	horse	*-mjænB	(19)	ma4	--	nɛŋ4	mein4	maB	me4	mɪ̃4							
 396																			
-397			PM	*-mj-									8	9	10	11			
+397	P		PM	*-mj-									8	9	10	11			
 398	D	2	person/Mien	*-mjænA	(19)								mwan2	mun2	min2	min2			
 399	D	3	wife of mother’s brother	*-mjəŋA	(29)								mwaŋ2	ŋwaŋ2	mjaŋ2	mjaŋ2			
 400																			
@@ -414,14 +414,14 @@
 414			1.31	*-pl-															
 415																			
 416	P		PHM	*-pl-		1	2	3	4	5	6	7	8	9	10	11			
-417	D	1	four	*-plei	(12/17)		l̥u1	pʐei1	plau1	plɔ1a	plouA	ple1	pi1	pje1	pjei1	pləi1	pɛi5		
+417	D	1	four	*-plei	(12/17)	l̥u1	pʐei1	plau1	plɔ1a	plouA	ple1	pi1	pje1	pjei1	pləi1	pɛi5			
 418																			
 419	P		PH	*-pl-		1	2	3	4	5	6	7							
 420	D	2	stomach	*-plaŋA	(24)	--	--	pla1	--	--	--	--							
 421	D	3	flour	*-plu̯eiB	(12/17)		--	--	--	plɔ5a	plouB	--	--						
 422	D	4	owl	*-ploŋD	(28)	l̥ioŋ5	--	pla7	--	--	--	--							
 423																			
-424			PM	*-pl-									8	9	10	11			
+424	P		PM	*-pl-									8	9	10	11			
 425	D	5	to bury	*-plopD	(9)								plop7	plɔp7	--	--			
 426																			
 427			Notes																
@@ -439,7 +439,7 @@
 439	D	2	cheek/face	*-phl-C (xx)		--	phɑ5	phlu5	--	--	--	--							
 440	D	3	to stroke	*-phlʉC	(8)	l̥hɛ5	phʐə5	phlɯ7	plou5b	phluC	--	--							
 441																			
-442			PM	*-phl-									8	9	10	11			
+442	P		PM	*-phl-									8	9	10	11			
 443	D	4	to stroke	*-phlunA	(27)								phjun1	--	phlən1	--			
 444	D	5	to play (flute)	*-phlu̯əmB	(29)								pwəm3	pjɔm3	--	--			
 445																			
@@ -465,7 +465,7 @@
 465	P		PHM	*-mpl-		1	2	3	4	5	6	7	8	9	10	11			
 466	D	1	butterfly	*-mpleuH	(2)	--	--	--	mpei5a	mʔpleC	--	--	bjeu5’	blɔu5’	bja4	--			
 467																			
-468			PM	*-ʔbl- (< *mpl- )									8	9	10	11			
+468	P		PM	*-ʔbl- (< *mpl- )									8	9	10	11			
 469	D	2	blind	*-ʔblɔuB	(3)								bu3	bu4	--	--			
 470																			
 471			Notes																
@@ -493,7 +493,7 @@
 493	D	5	leaf	*-mblɔŋA	(29)	nə2	nu2	mplɔŋ2	mplaŋ2	mploŋA	mplɔŋ2	mjɔ̃2							
 494	D	6	whip	*-mblowD	(13)	--	--	mplaɯ8	mplə8	mʔploD	--	--							
 495																			
-496			PM	*-mbl-									8	9	10	11			
+496	P		PM	*-mbl-									8	9	10	11			
 497	D	7	to shed leaves/drop	*-mblu̯eiC	(8)								blwei6	blei6	--	--			
 498	D	8	rain	*-mbluŋC	(28)								bluŋ6	buŋ6	blə6	biŋ6			
 499																			
@@ -652,7 +652,7 @@
 652	D	21	to ignite/light	*-towD	(13)	tu7	--	taɯ7	te7a	toD	--	--							
 653	D	22	to pick up/clamp	*-teD	(10)	--	tɑ7	tai7	te7a	teD	--	næ̃6							
 654																			
-655			PM	*-t-									8	9	10	11			
+655	P		PM	*-t-									8	9	10	11			
 656	D	23	酒 liquor	*-tiuB (A)									tiu3	tiu3	tiu3	diu3			
 657	D	24	碓 tilt-hammer/pestle	*-tu̯ɔiC	(11)								tɔi5’	tɔːi5	twai5	dui5			
 658	D	25	凳 stool/bench	*-təŋC	(22)								taŋ5’	taŋ5	taŋ5	daŋ5			
@@ -705,7 +705,7 @@
 705	D	18	which	*-dʉC	(8)	tei6	--	tɯ6	tu6	ðuB	--	ti1							
 706	D	19	蹋 to step on/tread	*-dæD	(5)	ten8	tɑ8	tua8	ti8	--	--	--							
 707																			
-708			PM	*-d-									8	9	10	11			
+708	P		PM	*-d-									8	9	10	11			
 709	D	20	to soak	*-doA	(7)								tu2	--	ta2	tɔu2			
 710	D	21	to put on/wear (jewelry)	*-dəŋA	(22)								taŋ2	taŋ2	--	--			
 711	D	22	back (of body)	*-danB	(19)								tan4	tan4	--	--			
@@ -749,7 +749,7 @@
 749	D	15	many/much	*-ntɔC	(6)	nɛ5	--	ntau5	ntɔ5a	nʔtuC	ntei5	--							
 750	D	16	to beat (someone)	*-ntuwD	(9)	--	--	ntau7	ntu7a	--	--	ta7							
 751																			
-752			PM	*-ʔd- (< *nt- )									8	9	10	11			
+752	P		PM	*-ʔd- (< *nt- )									8	9	10	11			
 753	D	17	deaf	*-ʔduŋA	(21) 								--	duŋ1	dwə1	dɔŋ1			
 754	D	18	to ladle	*-ʔdəmB	(22) 								dam3	--	--	da3			
 755	D	19	to fly	*-ʔdəiC	(15)								dai5	dai5’	dai5	--			
@@ -783,7 +783,7 @@
 783	P		PH	*-nd-		1	2	3	4	5	6	7							
 784	D	5	long sword	*-ndaŋA	(24)	--	--	nta2	ntua2	ntenA	--	--							
 785																			
-786			PM	*-nd-									8	9	10	11			
+786	P		PM	*-nd-									8	9	10	11			
 787	D	6	river	*-ndaiA	(15)								--	--	da2	dɔi2			
 788	D	7	table	*-ndɔuA	(3)								du2	nu2	--	--			
 789	D	8	in front	*ndaŋC									daːŋ6	daːŋ6	--	--			
@@ -799,7 +799,7 @@
 799	D	2	this	*-ʔneinX	(25)	noŋ3	nei3	nɔ5	na3a	ʔnoŋB	ne3	n̩3	nei3	nei3	na3	na3			
 800	D	3	cold	*-ʔnu̯ɔmH	(27)	--	noŋ5	nɔ5	nɔ5a	--	nɐŋ5	ȵɔ̃5	nam5’	nam5	nan5	nam5			
 801																			
-802			PM	*-ʔn-									8	9	10	11			
+802	P		PM	*-ʔn-									8	9	10	11			
 803	D	4	clf-bowls/houses	*-ʔnɛɔmA	(22)								nɔm1	nɔ1	nɔ1	na1			
 804	D	5	short	*-ʔnəŋB	(22)								naŋ3	niŋ3	naŋ3	naŋ3			
 805	D	6	to swallow	*-ʔnəkD	(7)								na7	na7	na7	--			
@@ -825,7 +825,7 @@
 825	D	7	to forget	*-hnuŋB	(27)	n̥hoŋ1	noŋ3	hn̥ɔ3	na3a	n̥oŋA	n̥ɐŋ3	nõ3							
 826	D	8	perilla (sū má)	*hnaŋB	(24)	n̥haŋ3	n̥hen3	hn̥a3	--	n̥enB	--	--							
 827																			
-828			PM	*-hn-									8	9	10	11			
+828	P		PM	*-hn-									8	9	10	11			
 829	D	9	sun/day	*-hnu̯ɔiA	(11)								n̥ɔi1	nɔːi1’	n̥wai1	nai1			
 830	D	10	to resemble	*-hnəŋB	(22)								n̥aŋ2	naŋ3’	--	--			
 831	D	11	to lift	*-hnɨŋC	(30)								niŋ5	niŋ5’	--	--			
@@ -862,7 +862,7 @@
 862	D	7	to ask	*-nɛŋC	(22)	nɛ6	ne6	nu6	noŋ6	naC	nɔ6	nɪ̃6							
 863	D	8	rain	*-m-noŋC	(28)	noŋ6	noŋ6	na6	naŋ6	noŋC	nɐŋ6	mõ6							
 864																			
-865			PM	*-n-									8	9	10	11			
+865	P		PM	*-n-									8	9	10	11			
 866	D	9	leaf	*-nɔmA	(29)								nɔm2	nɔːm2	nan2	num2			
 867	D	10	mouse/rat	*-nauB	(3)								naːu4	--	nɔ4	--			
 868	D	11	to ask	*-nu̯aiC	(11)								naːi6	naːi6	na6	nɔi6			
@@ -888,7 +888,7 @@
 888	P		PH	*-s-		1	2	3	4	5	6	7							
 889	D	4	to shut (door)	*-sowD	(13)	shu7	--	--	ʂə7	--	--	--							
 890																			
-891			PM	*-s-									8	9	10	11			
+891	P		PM	*-s-									8	9	10	11			
 892	D	5	stomach	*-siA	(1)								ɕi1	tθi1’	--	sɛi1			
 893	D	6	quilt	*-su̯ɛŋC	(22)								ɕwəŋ5	tθɔŋ5’	sɔŋ5	suŋ5			
 894	D	7	thread	*-sujC	(9)								ɕui5	tθuːi5’	sui5	si5			
@@ -901,7 +901,7 @@
 901	D	14	雙 pair	*-suŋB	(28)								ɕuŋ1	tθuŋ1’	swə1	hiŋ1			
 902	D	15	聲 sound	*-siŋA	(18)								ɕiŋ1	tθiːŋ1’	ɕɛ1	--			
 903	D	16	醒 to sober up	*-siŋB	(18)								--	tθiŋ3	ɕɛ3	--			
-904	D	17	細 small/fine	*-sæiC	(12/17)									--	--	--	hɛi5		
+904	D	17	細 small/fine	*-sæiC	(12/17)								--	--	--	hɛi5			
 905	D	18	赤 red	*-sekD	(2)								ɕi7	tθi7’	ɕi7	sjɛ7			
 906	D	19	刷 to wipe	*-sotD	(13)								ɕot7	--	--	--			
 907																			
@@ -919,7 +919,7 @@
 919	P		PHM	*-tj-		1	2	3	4	5	6	7	8	9	10	11			
 920	D	1	種 to grow	*-n-tju̯ɛŋH	(22)	--	--	--	--	--	--	ȵɤ5	ʨwəŋ5	sɔŋ5	ȶɔŋ5	tsuŋ5			
 921																			
-922			PM	*-tj-									8	9	10	11			
+922	P		PM	*-tj-									8	9	10	11			
 923	D	2	to wait	*-tjɔuB	(3)								ʨu3	ȶu3	ȶu3	--			
 924	D	3	粢 millet	*-tjəiA	(15)								ʨai1	ȶai1	ȶai1	tɛi1			
 925	D	4	煮 to boil (tr)	*-tjouB	(13)								ʨou3	ȶɔu5	ȶəu3	tsu3			
@@ -943,9 +943,9 @@
 943	P		PHM	*-dj-		1	2	3	4	5	6	7	8	9	10	11			
 944	D	1	seven	*-djuŋH	(28)	ɕoŋ6	tɕoŋ6	ɕa5	tɕaŋ6	zoŋC	ʃɐŋ6	tɕɤ6	sje6	--	--	--			
 945																			
-946			PM	*-dj-									8	9	10	11			
+946	P		PM	*-dj-									8	9	10	11			
 947	D	2	thigh	*-djujA	(9)								ʨui2	ȶuːi2	--	si2			
-948	D	3	遲 late	*-djæiA	(12/17)									ʨai2	--	ȶai2	--		
+948	D	3	遲 late	*-djæiA	(12/17)								ʨai2	--	ȶai2	--			
 949	D	4	是 to be	*-djejB	(10)								ʨei4	ȶei4	ȶəi4	sɛi4			
 950	D	5	柿 persimmon	*-djəiB	(15)								ʨai4	ȶai6	--	--			
 951	D	6	灼 to burn	*-dji̯ɛkD	(1)								ʨa8	sa8	ȶha8	sa8			
@@ -959,7 +959,7 @@
 959	P		PHM	*-ntj-		1	2	3	4	5	6	7	8	9	10	11			
 960	D	1	tree	*-ntju̯əŋH	(29)	tə5	ntu5	ntɔŋ5	--	nʔtoŋC	ntwaŋ5	--	djaŋ5’	gjaŋ5	djaŋ5	djaŋ5			
 961																			
-962			PM	*-ʔdj- (< ntj- )									8	9	10	11			
+962	P		PM	*-ʔdj- (< ntj- )									8	9	10	11			
 963	D	2	to drip	*-ʔdjɛpD	(9)								djep7	--	djan7	dɛp7			
 964																			
 965			Notes																
@@ -970,7 +970,7 @@
 970	P		PHM	*-nthj-		1	2	3	4	5	6	7	8	9	10	11			
 971	D	1	秤 balance	*-nthju̯əŋH	(29)	--	--	--	--	--	--	ȵ̥ɔ̃5	ʥaŋ5	ȡaŋ5’	ȡaŋ5	dzaŋ5			
 972																			
-973			PM	*-dhj- (< *nthj-)									8	9	10	11			
+973	P		PM	*-dhj- (< *nthj-)									8	9	10	11			
 974	D	2	to sharpen/grind	*-dhjæuC	(3)								ʥeu5	gjɔu5’	ȡau5	dziu5			
 975																			
 976			Notes																
@@ -978,7 +978,7 @@
 978																			
 979			2.21	*-ndj-															
 980																			
-981			PM	*-ndj-									8	9	10	11			
+981	P		PM	*-ndj-									8	9	10	11			
 982	D	1	慈 mother/aunt	*-ndjiB	(1)								ʥi4	--	ȡai4	--			
 983																			
 984			2.23	*-hnj-															
@@ -1027,7 +1027,7 @@
 1027	D	6	clf-mouthfuls	*-ʔloC	(7)	lo5	--	lɔ5	lo5a	--	lu5	--							
 1028	D	7	拗 to break	*-ʔloB	(7)	lo3	--	lɔ3	lo3a	ʔluB	lu3	ljõ3’							
 1029																			
-1030			PM	*-ʔl-									8	9	10	11			
+1030	P		PM	*-ʔl-									8	9	10	11			
 1031	D	8	clf-fields	*-ʔli̯əuC	(1)								lau5’	--	--	--			
 1032																			
 1033			Notes																
@@ -1064,7 +1064,7 @@
 1064	D	8	湯 to scald	*-hlaŋA	(24)	--	--	hl̥a1	lua1b	l̥enA	--	la6							
 1065	D	9	鐵 iron	*-hluwC	(9)	l̥hə5	l̥hɔ5	hl̥au5	lu5b	l̥oC	l̥ɔ5	l̥ɯ5							
 1066																			
-1067			PM	*-hl-									8	9	10	11			
+1067	P		PM	*-hl-									8	9	10	11			
 1068	D	10	petal	*-hlemC	(20)								ɬim5	leːm5	--	ɬiŋ5			
 1069	D	11	which	*-[hl]aiC	(15)								laːi5	--	ha5	--			
 1070																			
@@ -1109,7 +1109,7 @@
 1109	D	8	兩 tael (40 grams)	*-li̯aŋB	(26)	laŋ4	--	la4	--	laŋB	--	ljɔ̃6							
 1110	D	9	露 dew	*-lʉC	(8)	--	--	lɯ6	lu6	--	--	--							
 1111																			
-1112			PM	*-l-									8	9	10	11			
+1112	P		PM	*-l-									8	9	10	11			
 1113	D	10	bellows	*-louA	(13)								lou2	lɔu2	ləu2	lu2			
 1114	D	11	累 lazy	*-lu̯eiC	(8)								lwei6	lei6	lwəi6	--			
 1115																			
@@ -1135,7 +1135,7 @@
 1135	D	6	lightning flash	*-ljeD	(10)	ȴi8	ȴɑ8	lai8	ɭe8	leD	--	--							
 1136	D	7	量 to measure (rice)	*-ljɛŋA	(22)	ȴi2	--	lu2	ɭoŋ2	laŋA	--	--							
 1137																			
-1138			PM	*-lj-									8	9	10	11			
+1138	P		PM	*-lj-									8	9	10	11			
 1139	D	8	lightning flash	*-ljəpD	(7)								gap7	--	--	dzjɛp8			
 1140	D	9	聯 (Cant. /lyːn2/) to sew	*-lju̯ɛnA	(22)								gwən2	gɔn2	--	--			
 1141	D	10	兩 tael (40 grams)	*-lji̯oŋB	(26)								guŋ4	guŋ4	lwə4	liŋ4			
@@ -1155,7 +1155,7 @@
 1155	D	4	蹢 hoof/claw/nail	*-tru̯eiC	(12/17)		--	ʈa5	ʈau5	ʈɔ5a	--	--	--						
 1156	D	5	著 to put on/wear (shoes)	*-trɔC	(6)	ȶi5	ʈɔ5	ʈau5	ʈɔ5a	tʂuC	--	tɕɯ5							
 1157																			
-1158			PM	*-tr-									8	9	10	11			
+1158	P		PM	*-tr-									8	9	10	11			
 1159	D	6	張 clf-tools	*-truŋA	(28)								--	ȶuŋ1	ȶwə5	--			
 1160																			
 1161			Notes																
@@ -1244,7 +1244,7 @@
 1244	D	1	stone	*-ʔrəu	(3)	ɣi1	ʐɯ1	ʐe1	ʐæ1a	ʔwjiA	ŋkja1	jo1	gau1	gjau1	lau1	dzu1			
 1245	D	2	tender	*-ʔrəunH	(21)	ɣaŋ5	ʐɑŋ5	--	--	--	ɳtʃoŋ5	--	gun5’	--	lun5	in5			
 1246	D	3	good	*-ʔrɔŋH	(29)	ɣu5	ʐu5	ʐɔŋ5	ʐaŋ5a	ʔwjoŋC	ŋwaŋ5	jɔ̃5	gwəŋ5’	gɔŋ5	lɔŋ5	dzɔŋ5			
-1247	D	4	vegetable	*-ʔræi	(12/17)		ɣu1	ʐei1	ʐau1	ʐɔ1a	ʔwjuA	ji1	ɦji1	gai1	gjai1	lai1	ɛi1		
+1247	D	4	vegetable	*-ʔræi	(12/17)	ɣu1	ʐei1	ʐau1	ʐɔ1a	ʔwjuA	ji1	ɦji1	gai1	gjai1	lai1	ɛi1			
 1248																			
 1249	P		PH	*-ʔr-		1	2	3	4	5	6	7							
 1250	D	5	to dry in sun	*-ʔrinA	(18)	--	--	ʐia1	ʐæin1a	--	--	--							
@@ -1254,7 +1254,7 @@
 1254	D	9	near	*-ʔræwC	(3)	ɣi5	ʐɯ5	ʐe5	ʐæ5a	ʔwjiC	ŋkja5	jo5							
 1255	D	10	to conceal	*-ʔreD	(10)	ɣi7	ʐɑ7	ʐai7	ʐe7a	ʔwjeD	vwei7	ɛ7							
 1256																			
-1257			PM	*-ʔr-									8	9	10	11			
+1257	P		PM	*-ʔr-									8	9	10	11			
 1258	D	11	clothes	*-ʔrujA	(9)								gui1	gui1	lwəi1	--			
 1259																			
 1260			Discussion																
@@ -1279,7 +1279,7 @@
 1279	D	6	quick	*-hreC	(10)	xhi5	ʂɑŋ5	ʂai5	--	seC	v̥wei5	--							
 1280	D	7	to write	*-hru̯eiC	(12/17)		xho5	ʂei5	ʂau5	ʐɔ5b	--	--	--						
 1281																			
-1282			PM	*-hr-									8	9	10	11			
+1282	P		PM	*-hr-									8	9	10	11			
 1283	D	8	to measure (rice)	*-hrauA	(5)								gaːu1	gaːu1’	ɬa1	dzau1			
 1284	D	9	鐵 iron	*-hrɛkD	(9)								gja7	gja7’	ɬja7	ljɛ7			
 1285																			
@@ -1307,11 +1307,11 @@
 1307	D	10	comb	*-ræC	(5)	ɣa6	ʐa6	ʐua6	ʐəa6	wjiC	vi6	ɦji6							
 1308	D	11	to grind (grain)	*-roD	(7)	--	ʐo8	ʐɔ8	ʐo8	wjuD	--	--							
 1309																			
-1310			PM	*-r-									8	9	10	11			
+1310	P		PM	*-r-									8	9	10	11			
 1311	D	12	pair	*-reŋC	(20)								--	geːŋ6	lɛ6	dzaŋ6			
 1312	D	13	淋 to water	*-rəmA	(21)								gjem2	--	ljen2	dzum2			
 1313	D	14	流 to flow 	ri̯̯əuC	(1)								gjeu6	gjɔu6	ljɔu6	--			
-1314	D	15	立 to erect	 ri̯̯ɛpD	(1)								gjep8	gjap8	--	--			
+1314	D	15	立 to erect	ri̯̯ɛpD	(1)								gjep8	gjap8	--	--			
 1315	D	16	笠 bamboo hat	*rəpD	(7)								gap8	gjap8	ɬan8	dzup8			
 1316																			
 1317			Discussion																
@@ -1335,7 +1335,7 @@
 1335	D	4	to join	*-tsæD	(5)	sen7	tshɑ7	tsua7	sa7a	--	--	--							
 1336	D	5	騣 mane	*-tsʉŋA	(30)	soŋ1	tsoŋ3	tsɔŋ1	saŋ1a	pjoŋA	--	--							
 1337																			
-1338			PM	*-ts-									8	9	10	11			
+1338	P		PM	*-ts-									8	9	10	11			
 1339	D	6	to dry (clothes)	*-tsekD	(2)								--	si7	ʨi7	tsaŋ1			
 1340	D	7	grave/tomb	*-tsouB	(13)								θou3	tθɔu3	tsəu3	--			
 1341	D	8	bland/tasteless	*-tsamB	(24)								θaːm3	tθaːm3	tsan3	tɔm3			
@@ -1370,7 +1370,7 @@
 1370	P		PHM	*-dz-		1	2	3	4	5	6	7	8	9	10	11			
 1371	D	1	錢 money	*-dzi̯en	(20)	saŋ2	--	tsia2	sæin2	zenA	ʃiŋ2	ʨɪ̃2	θin2	tθin2	tsən2	hɛn2			
 1372	D	2	匠 craftsman	*-dzi̯ɔŋH	(26)	ɕaŋ6	ʨɑŋ6	--	saŋ6	zaŋC	--	--	θɛŋ6	tθaːŋ6	tsaŋ6	--			
-1373	D	3	漬 to soak	*-dzeiH	(12/17)		--	--	--	--	--	--	ʨi6	θei6	tθei6	--	hɛi6		
+1373	D	3	漬 to soak	*-dzeiH	(12/17)	--	--	--	--	--	--	ʨi6	θei6	tθei6	--	hɛi6			
 1374	D	4	鑿 chisel	*-dzəuk	(6)	so6	--	tsau6	so6	zuC	ʃu8	ʨɪ̃4	θu8	tθu6	tshu8	hiu8			
 1375																			
 1376	P		PH	*-dz-		1	2	3	4	5	6	7							
@@ -1379,7 +1379,7 @@
 1379	D	7	慚 ashamed	*-dzaŋA	(24)	--	tsei2	tsa2	sua2	zenA	--	ʨe2							
 1380	D	8	造 to reach/arrive at	*-dzoC	(7)	so6	--	tsɔ6	--	zuC	--	θu5							
 1381																			
-1382			PM	*-dz-									8	9	10	11			
+1382	P		PM	*-dz-									8	9	10	11			
 1383	D	9	firewood	*-dzaŋA	(24)								θaːŋ2	tθaːŋ2	tsaŋ2	hɔŋ2			
 1384	D	10	槽 trough	*-dzuA	(16)								θou2	--	tsu2	--			
 1385	D	11	坐 to sit	*-dzu̯eiB	(8)								θwei4	tθei4	tswei4	hɛi4			
@@ -1400,7 +1400,7 @@
 1400	D	4	grave/tomb	*-ntsaŋC	(24)	saŋ5	ntsei5	ntsa5	ntsua5a	--	--	ȵe5							
 1401	D	5	to suck	*-ntseD	(10)	--	--	ntsai7	--	--	--	--							
 1402																			
-1403			PM	*-ʔdz- (<*nts-)									8	9	10	11			
+1403	P		PM	*-ʔdz- (<*nts-)									8	9	10	11			
 1404	D	6	boat/ship	*-ʔdzaŋB	(24)								daːŋ3	daːŋ3	dzaŋ3	dɔŋ3			
 1405	D	7	騣 mane	*-ʔdzɔŋA	(29)								θoŋ1	dɔŋ1	tsɔŋ1	dzəŋ1			
 1406																			
@@ -1419,7 +1419,7 @@
 1419	D	4	steep	*-ntshoŋA	(28)	shoŋ1	ntshoŋ1	ntsha1	ntsaŋ1b	nʔtshoŋA	ɳtʃɐŋ3	--							
 1420	D	5	elephant	*-ntshʉC	(8)	shɛ5	--	ntshɯ5	--	nʔtshuC	--	--							
 1421																			
-1422			PM	*-dzh- (<*ntsh-)									8	9	10	11			
+1422	P		PM	*-dzh- (<*ntsh-)									8	9	10	11			
 1423	D	6	to disperse	*-dzhanC	(19)								daːn5	daːn5’	dzan5	--			
 1424																			
 1425			Notes																
@@ -1435,7 +1435,7 @@
 1435	P		PH	*-ndz-		1	2	3	4	5	6	7							
 1436	D	2	thin (person)	*-ndzu̯eiC	(12/17)		su5	ntsei5	ntsau6	ntso6	--	ɳtʃe6	nʑi6						
 1437																			
-1438			PM	*-ndz-									8	9	10	11			
+1438	P		PM	*-ndz-									8	9	10	11			
 1439	D	3	root	*-ndzuŋA	(28)								duŋ2	duːŋ2	--	--			
 1440	D	4	word/character	*-ndzaŋC	(24)								--	daŋ6	dzaŋ6	--			
 1441	D	5	鹺 salty	*-ndzaiA	(15)								daːi2	daːi2	dza2	dɔi2			
@@ -1469,7 +1469,7 @@
 1469	P		PHM	*-tshj-		1	2	3	4	5	6	7	8	9	10	11			
 1470	D	1	hungry	*-tshje	(10)	--	ɕi1	tʂhai1	se1b	tsheA	--	sa1	ɕa1	sa1’	--	--			
 1471	D	2	new	*-tshji̯əŋ	(18)	xhi1	ɕɛ1	tʂhia1	sæin1b	senA	ŋkheŋ1’	sɪ̃1	ɕaŋ2	saŋ2	saŋ1	sjaŋ1			
-1472	D	3	ashes	*-tshju̯əiX	(12/17)		ɕhu3	ɕi3	tʂhau3	sɔ3b	tshuB	θe3	ɕi3	ɕwai3	saːi3	swai3	sɔi3		
+1472	D	3	ashes	*-tshju̯əiX	(12/17)	ɕhu3	ɕi3	tʂhau3	sɔ3b	tshuB	θe3	ɕi3	ɕwai3	saːi3	swai3	sɔi3			
 1473																			
 1474	P		PH	*-tshj-		1	2	3	4	5	6	7							
 1475	D	4	spinning wheel	*-tshju̯aA	(15)	--	--	tʂhua1	--	tshaA	--	--							
@@ -1484,7 +1484,7 @@
 1484																			
 1485	P		PHM	*-dzj-		1	2	3	4	5	6	7	8	9	10	11			
 1486	D	1	few/lack	*-dzjok	(13)	ɕu6	--	tʂaɯ6	--	zoC	ʃau6	ʨɤ6	θo8	tθɔ6	tshɔ8	hu8			
-1487	D	2	porcupine	*-N-dzjeiH	(12/17)		ɕen6	ʨi6	tʂau6	so6	zuC	ʃa6	ʨi6	dei6	dei6	--	hɛi6		
+1487	D	2	porcupine	*-N-dzjeiH	(12/17)	ɕen6	ʨi6	tʂau6	so6	zuC	ʃa6	ʨi6	dei6	dei6	--	hɛi6			
 1488																			
 1489	P		PH	*-dzj-		1	2	3	4	5	6	7							
 1490	D	3	bland/tasteless	*-dzjæC	(5)	ɕen6	--	tʂua6	səa6	ziC	ʃi6	ʨi6							
@@ -1520,7 +1520,7 @@
 1520																			
 1521	P		PHM	*-ntshj-		1	2	3	4	5	6	7	8	9	10	11			
 1522	D	1	blood	*-ntshjamX	(24)	ɕhaŋ3	ȵʨhi3	ɳtʂha3	ntsua3b	nʔtshenB	θi3	ȵ̥e3	ɕam3	saːm3	san3	dzjɛm3			
-1523	D	2	head louse	*-ntshjeiX	(12/17)		ɕhu3	ȵʨhi3	ɳtʂhau3	ntsɔ3b	nʔtshuB	--	ʨhi3	ɕei3	tθei3	--	dzɛi3		
+1523	D	2	head louse	*-ntshjeiX	(12/17)	ɕhu3	ȵʨhi3	ɳtʂhau3	ntsɔ3b	nʔtshuB	--	ʨhi3	ɕei3	tθei3	--	dzɛi3			
 1524	D	3	to fear/be afraid	*-ntshjeH	(10)	ɕhi1	ȵʨha5	ɳtʂhai5	ntse5b	nʔtsheC	ɳtʃei1	ȵ̥ɛ5	ʥa5	ȡa5’	ȡa5	dzjɛ5			
 1525	D	4	清 clear	*-ntshji̯əŋ	(18)	ɕhi1	--	ɳtʂhia1	ntsæin1b	nʔtsheA	--	nɪ̃1	dzaŋ1	--	--	--			
 1526																			
@@ -1561,7 +1561,7 @@
 1561	D	11	炙 to bake/toast	*-ciC	(1)	ʨen5	--	ci5	ʨi5a	ʨiC	--	--							
 1562	D	12	嚼 to chew	*-cu̯aC	(15)	ʨu5	ca5	cua5	ʨa5a	ʨaC	tʃa5	ʨa5							
 1563																			
-1564			PM	*-c-									8	9	10	11			
+1564	P		PM	*-c-									8	9	10	11			
 1565	D	13	crop (of bird)/gizzard	*-ciŋB	(18)								ʨiŋ3	ȡiŋ3	--	--			
 1566	D	14	to bark	*-cuŋC	(21)								ʨuŋ5’	ȶuŋ5	ȡwə5	--			
 1567	D	15	獐 deer	*-cuŋA	(28)								ʨuŋ1	ȶuːŋ1	--	--			
@@ -1588,7 +1588,7 @@
 1588	D	5	clf-rooms	*-choŋB	(28)	ʨhoŋ3	--	cha3	ʨaŋ3b	khoŋB	--	--							
 1589	D	6	to peel/shave	*-cheD	(10)	--	--	chai7	tɕe7b	tɕheD	--	--							
 1590																			
-1591			PM	*-ch-									8	9	10	11			
+1591	P		PM	*-ch-									8	9	10	11			
 1592	D	7	炒 to fry	*-chauB	(5)								ɕaːu3	ȶaːu3	ȶha3	hau3			
 1593																			
 1594			Notes																
@@ -1601,7 +1601,7 @@
 1601																			
 1602	P		PHM	*-ɟ-		1	2	3	4	5	6	7	8	9	10	11			
 1603	D	1	male (human)	*-ɟi̯aŋH	(24)	ʨaŋ6	--	--	ʨua6	--	ɳtʃi6	--	ʨaŋ2	--	--	kjaŋ2			
-1604	D	2	knee	*-ɟu̯əiH	(12/17)		ʨu6	ʨɔ6	cau6	ʨo6	ʑuC	--	ʨi6	ʨwai6	--	ȶwai6	--		
+1604	D	2	knee	*-ɟu̯əiH	(12/17)	ʨu6	ʨɔ6	cau6	ʨo6	ʑuC	--	ʨi6	ʨwai6	--	ȶwai6	--			
 1605	D	3	nine	*-N-ɟuə	(16)	ʨə2	ʨo2	cua2	ʨa2	ʑaA	tʃu2	ko5	du2	du2	ju2	ku2			
 1606	D	4	蕎 buckwheat	*-ɟæu	(3)	--	--	ce2	ʨæ2	ʑiA	--	--	ʨou2	--	ȶɔ4	--			
 1607	D	5	茄 eggplant	*-ɟa	(4)	ʨa2	--	--	ʨəa6	--	--	--	ʨe2	--	ȶa2	kjɛ2			
@@ -1619,7 +1619,7 @@
 1619	D	15	臼 mortar/treadmill	*-ɟoB	(7)	ʨə4	ʨo4	cɔ4	ʨu4	ʑiB	--	--							
 1620	D	16	炙 to burn/be alight	*-ɟiC	(1)	ʨen6	--	ci6	ʨi6	ʑeC	--	--							
 1621																			
-1622			PM	*-ɟ-									8	9	10	11			
+1622	P		PM	*-ɟ-									8	9	10	11			
 1623	D	17	茶 tea	*-ɟaA	(4)								ʨa2	ȶa2	ȶa2	ta2			
 1624	D	18	韭 Allium	*-ɟiuB (A)									ʨiu4	--	--	kiu4			
 1625																			
@@ -1646,7 +1646,7 @@
 1646	D	5	to peck/dig	*-ɲcowD	(13)	ʨu7	ȵʨu7	ɲcaɯ7	ȵʨə7a	ȵʔʨoD	--	ʨɔ1							
 1647	D	6	正 straight	*-ɲci̯aŋA	(26)	--	--	ɲca1	ȵʨaŋ1a	ȵʔʨaŋA	ntjeu1	--							
 1648																			
-1649			PM	*-ʔɟ- (<*ɲc- )									8	9	10	11			
+1649	P		PM	*-ʔɟ- (<*ɲc- )									8	9	10	11			
 1650	D	7	thorn	*-ʔɟimB	(18)								jim3	ȡim3	--	--			
 1651	D	8	to sweep	*-ʔɟæuC	(3)								--	ȡɔu5	--	--			
 1652	D	9	夾 to pick up	*-ʔɟəpD	(7)								dʑap7	--	kan7	--			
@@ -1666,7 +1666,7 @@
 1666	P		PH	*-ɲch-		1	2	3	4	5	6	7							
 1667	D	2	to sprinkle/spill	*-ɲchuB	(16)	--	ȵʨho3	ɲchua3	ȵʨa3b	ȵʔʨhaB	--	--							
 1668																			
-1669			PM	*-ɟh (< *ɲch-)									8	9	10	11			
+1669	P		PM	*-ɟh (< *ɲch-)									8	9	10	11			
 1670	D	3	ant	*-ɟhi̯əuB	(1)								ɕeu3	sɔu3	sau3	dziu3			
 1671																			
 1672			Notes																
@@ -1679,7 +1679,7 @@
 1679	D	1	mouth/beak	*-ɲɟuj	(9)	ȵu2	ȵɔ2	ɲcau2	ȵʨu2	ȵʨoA	ntjɔ2	ȵʑɯ2	dzuːi2	--	ʨi2	dzi2			
 1680	D	2	pillar	*-ɲɟæu	(3)	ȵi2	ȵɯ2	ɲce2	ȵʨæ2	ȵʨiA	--	ŋo2	--	--	ʨɔu2	--			
 1681																			
-1682			PM	*-ɲɟ-									8	9	10	11			
+1682	P		PM	*-ɲɟ-									8	9	10	11			
 1683	D	3	to water	*-ɲɟunA	(27)								dzun2	--	--	--			
 1684	D	4	sword	*-ɲɟəukD	(6)								dʑu8	ȡu6	ȡu8	dziu8			
 1685																			
@@ -1697,10 +1697,10 @@
 1697	P		PH	*-ʔɲ-		1	2	3	4	5	6	7							
 1698	D	3	to be at/live	*-ʔɲəŋA	(21)	ȵaŋ1	ȵi1	ȵɔ1	ȵɔ1a	ʔȵoŋA	ȵɐŋ1	ȵõ1							
 1699																			
-1700			PM	*-ʔɲ-									8	9	10	11			
+1700	P		PM	*-ʔɲ-									8	9	10	11			
 1701	D	4	possessive	*-ʔɲi̯əŋA	(18)								ȵaŋ1	ȵaŋ1	nin2	--			
 1702	D	5	to crawl	*-ʔɲɛɔŋA	(22)								ȵɔŋ1	ȵɔːŋ1	--	--			
-1703	D	6	shy	*-ʔɲæiA/B	(12/17)									ȵai3	ȵai1	--	--		
+1703	D	6	shy	*-ʔɲæiA/B	(12/17)								ȵai3	ȵai1	--	--			
 1704	D	7	claw/talon	*-ʔɲauB	(5)								ȵau1	ȵaːu3	--	--			
 1705																			
 1706			Discussion																
@@ -1722,7 +1722,7 @@
 1722	P		PH	*-hɲ-		1	2	3	4	5	6	7							
 1723	D	3	forehead	*-hɲenA	(20)	ȵ̥haŋ1	ɕɛ1	--	ȵi1b	--	--	nɪ̃1							
 1724																			
-1725			PM	*-hɲ-									8	9	10	11			
+1725	P		PM	*-hɲ-									8	9	10	11			
 1726	D		--ȵɔu3n	*hɲouB	(13)								--	ȵɔu3	n̥au3	nau3			
 1727	D	5	to carry on back	*-hɲaC	(4)								ȵa5’	ȵa5	ȵa3	--			
 1728	D	6	to squeeze	*-hɲaiC	(11)								ȵai5’	ȵai5	--	--			
@@ -1744,7 +1744,7 @@
 1744	D	4	姌 thin	*-ɲenB	(20)	ȵaŋ4	ȵɛ4	ȵia4	ȵi4	ȵenB	ȵiŋ4	nɪ̃4							
 1745	D	5	髯 beard	*-ɲaŋC	(24)	ȵaŋ6	ȵi6	--	ȵa6	ȵenC	ȵi6	nɪ̃6							
 1746																			
-1747			PM	*-ɲ-									8	9	10	11			
+1747	P		PM	*-ɲ-									8	9	10	11			
 1748	D	6	to dye	*-ɲumC	(27)								ȵum6	ȵum6	ȵin6	ȵam6			
 1749	D	7	to eat	*-ɲənC	(27)								ȵen6	ŋjin4	ȵin6	ȵan6			
 1750																			
@@ -1767,7 +1767,7 @@
 1767	D	4	要 to ask for/want	*-ʔjuB	(16)	ə3	--	jua3	ʑa3a	--	wjaŋ3	ja3							
 1768	D	5	幼 small/young	*-ʔjuwC	(9)	ʑu5	ʑɔ5	jau5	ʑu5a	ʔʑoC	ju5	jɯ5							
 1769																			
-1770			PM	*-ʔj-									8	9	10	11			
+1770	P		PM	*-ʔj-									8	9	10	11			
 1771	D	6	to be at/live	*-ʔjəmA	(21)								jem1	jam1	jan1	--			
 1772	D	7	1sg (I/me)	*-ʔjaA	(4)								ja1	ja1	--	--			
 1773	D	8	to spill	*-(ʔ)jamC	(24)								ɕaːm5	jaːm6	ja6	--			
@@ -1808,7 +1808,7 @@
 1808	D	10	楊 poplar tree	*-ji̯aŋA	(26)	--	--	--	ʑaŋ2	--	--	--							
 1809	D	11	養 to raise (chickens)	*-jɛŋC	(22)	ʑi6	--	ju6	ʑoŋ6	ʑaŋC	jɐŋ6	--							
 1810																			
-1811			PM	*-j-									8	9	10	11			
+1811	P		PM	*-j-									8	9	10	11			
 1812	D	12	(Hakka /njam/) armspan 	*ju̯amA	(29)								jwam2	jɔm2	jaŋ2	dzjam2			
 1813	D	13	to walk	*-jəŋA	(29)								jaŋ2	jaŋ2	ȵaŋ2	dzaŋ2			
 1814	D	14	to dissolve	*-jəukD	(6)								ju8	ju6	--	--			
@@ -1834,7 +1834,7 @@
 1834	D	2	to breed/propagate	*-ɕaŋC	(24)	ɕhaŋ5	--	ɕa5	--	--	--	--							
 1835	D	3	year	*-ɕɔŋC	(29)	--	ʨu5	ɕɔŋ5	ʨaŋ5a	--	--	ʨɔ̃5							
 1836																			
-1837			PM	*-ɕ-									8	9	10	11			
+1837	P		PM	*-ɕ-									8	9	10	11			
 1838	D	4	winnowing fan	*-ɕi̯əŋA	(24)								ɕaŋ1	saŋ1’	ȶaŋ1	--			
 1839	D	5	to twist/rub	*-ɕætD	(5)								ɕat7	saːt7’	saːt7’	sjɛt7			
 1840	D	6	媳 daughter/girl	*-ɕi̯ɛkD	(1)								ɕa7	sa7’	sa7	sa7			
@@ -1859,7 +1859,7 @@
 1859	D	4	bamboo hat	*-kuwD	(9)	--	ku7	kau7	ku7a	koD	--	kɯ7							
 1860	D	5	to gnaw	*-kowD	(13)	ki7	ku7	kaɯ7	kə7a	koD	--	--							
 1861																			
-1862			PM	*-k-									8	9	10	11			
+1862	P		PM	*-k-									8	9	10	11			
 1863	D	6	to cover	*-komB	(21)								kom3	kɔm3	--	--			
 1864																			
 1865			Discussion																
@@ -1877,7 +1877,7 @@
 1877	D	1	plum	*-khowA	(13)	--	--	khaɯ1	kə1b	khoA	--	--							
 1878	D	2	to pick up	*-khowD	(13)	ʨhə1	--	khaɯ7	kɯ7b	khoD	--	--							
 1879																			
-1880			PM	*-kh-									8	9	10	11			
+1880	P		PM	*-kh-									8	9	10	11			
 1881	D	3	good/tasty	*-khuB	(3)								--	ku3	--	kɔm3			
 1882	D	4	開 to open	*-khu̯ɔiA	(11)								khɔi1	kɔːi1’	khwai1	--			
 1883	D	5	堀 hole	*-khotD	(13)								khot7	kɔt7	khwan7	--			
@@ -1929,7 +1929,7 @@
 1929																			
 1930			5.13	*-ɣ-															
 1931																			
-1932			PM	*-ɣ-									8	9	10	11			
+1932	P		PM	*-ɣ-									8	9	10	11			
 1933	D	1	嫌 to dislike	*-ɣi̯emA	(20)								jem2	ȡiːm2	gjɛn2	--			
 1934	D	2	下 to descend	*-ɣaC	(4)								ja8	ȡa6	ȡa6	ga6			
 1935																			
@@ -1944,7 +1944,7 @@
 1944	P		PH	*-kj-		1	2	3	4	5	6	7							
 1945	D	4	needle	*-kjɔŋA	(29)	tɕu1	tɕu1	kɔŋ1	kaŋ1a	koŋA	tʃwaŋ1	kɔ̃1							
 1946																			
-1947			PM	*-kj-									8	9	10	11			
+1947	P		PM	*-kj-									8	9	10	11			
 1948	D	5	cold (day)	*-kju̯ɛŋB	(22)								tɕwəŋ3	sɔŋ3	ȶɔŋ3	kuŋ3			
 1949	D	6	to remember	*-kji̯əŋC	(24)								ʨjaŋ5’	saŋ5	ȶaŋ5	kɛŋ5			
 1950	D	7	緊 tight	*-kjənB	(27)								tɕen3	sen3	tɕin3	--			
@@ -1961,9 +1961,9 @@
 1961	P		PHM	*-kʷj-		1	2	3	4	5	6	7	8	9	10	11			
 1962	D	1	斤 catty	*-kʷjan	(20)	ʨaŋ1	kɑŋ1	--	ʨein1a	ʨenA	tʃoŋ1	kõ1	ʨwan1	san1	ȶwan1	tsan1			
 1963																			
-1964			PM	*-kʷj-									8	9	10	11			
+1964	P		PM	*-kʷj-									8	9	10	11			
 1965	D	2	sore/boil/blister	*-kʷjejA	(10)								ʨwei2	sei2	--	--			
-1966	D	3	child	*-kʷjeiB	(12/17)									ʨwei3	sei3	hwjəi7	--		
+1966	D	3	child	*-kʷjeiB	(12/17)								ʨwei3	sei3	hwjəi7	--			
 1967	D	4	筋 sinew	*-kʷjanA	(19)								ʨwan1	saːn1	ȶwan1	tsan1			
 1968	D	5	蕨 fern	*-kʷjətD	(7)								ʨwət7	set7	ȶwan7	kɔt7			
 1969																			
@@ -1981,7 +1981,7 @@
 1981	P		PH	*-khj-		1	2	3	4	5	6	7							
 1982	D	2	shoes	*-khjɔC	(6)	--	ɕɔ5	khau5	kɔ5b	khuC	ʃu5	ŋkʉ5							
 1983																			
-1984			PM	*-khj-									8	9	10	11			
+1984	P		PM	*-khj-									8	9	10	11			
 1985	D	3	薑 ginger	*-khjuŋA	(21)								ɕuŋ1	tθuŋ1’	--	kɔŋ1			
 1986																			
 1987			Discussion																
@@ -1998,7 +1998,7 @@
 1998	P		PH	*-gj-		1	2	3	4	5	6	7							
 1999	D	2	tea	*-gjiB	(1)	tɕen4	ci4	--	tɕi4	ʑiB	tʃi4	tɕi4							
 2000																			
-2001			PM	*-gj-									8	9	10	11			
+2001	P		PM	*-gj-									8	9	10	11			
 2002	D	3	bracelet	*-gjəmA	(21)								tɕem2	sam2	--	--			
 2003	D	4	steep	*-gjujB	(9)								tɕui4	ȶui4	--	ki4			
 2004	D	5	裙 skirt	*-gjunA	(27)								--	ȶun2	ȶwən2	kɔn2			
@@ -2019,7 +2019,7 @@
 2019	D	1	mushroom	*-ŋkjæu	(3)	tɕi1	ŋkɯ1	ɲce1	ȵtɕæ1a	ȵʔtɕiA	ɳtʃa1	ŋo1	tɕeu1	sɔu1	ȶau1	ku1			
 2020	D	2	粔 rice cake	*-ŋkjuəX	(16)	tɕə3	--	ɲcua3	ȵtɕa3a	ŋʔkaB	--	ŋo3	ju3	ȡu3	ȡu3	gu3			
 2021																			
-2022			PM	*-ʔgj- (< *ŋkj-)									8	9	10	11			
+2022	P		PM	*-ʔgj- (< *ŋkj-)									8	9	10	11			
 2023	D	3	含 to hold in mouth	*-ʔgjɔmA	(29)								gɔm1	gjɔːm1	gan1	--			
 2024																			
 2025			Notes																
@@ -2033,7 +2033,7 @@
 2033	D	3	thick (liquid)	*-ŋgjɔŋC	(29)	ȵu6	--	ŋkɔŋ6	ŋkəŋ6	ŋkoŋC	--	ŋa8							
 2034	D	4	pair	*-ŋgjowD	(13)	ȵu8	ŋoŋ8	ŋkaɯ8	ŋkə8	ŋkoD	ɳtʃau8	ŋɤ8							
 2035																			
-2036			PM	*-ŋgj-									8	9	10	11			
+2036	P		PM	*-ŋgj-									8	9	10	11			
 2037	D	5	asleep	*-ŋgjɔmA	(29)								gɔm2	--	--	--			
 2038	D	6	to snore	*-ŋgjanA	(19)								gaŋ2	daːn2	--	--			
 2039																			
@@ -2044,7 +2044,7 @@
 2044																			
 2045			5.24	*-ŋj-															
 2046																			
-2047			PM	*-ŋj-									8	9	10	11			
+2047	P		PM	*-ŋj-									8	9	10	11			
 2048	D	1	seven	*-ŋjiC	(1)								ȵi6	ŋji6	ni6	ȵi6			
 2049	D	2	硬 hard/solid	*-ŋjeŋC	(20)								ȵɛŋ6	ŋjeŋ6	--	--			
 2050																			
@@ -2053,12 +2053,12 @@
 2053																			
 2054			5.28	*-xj-															
 2055																			
-2056			PM	*-xj-									8	9	10	11			
+2056	P		PM	*-xj-									8	9	10	11			
 2057	D	1	寫 to write	*-xjaB	(4)								θja3	kja3	ɕa3	sjɛ3			
 2058																			
 2059			5.3	*-ɣj-															
 2060																			
-2061			PM	*-ɣj-									8	9	10	11			
+2061	P		PM	*-ɣj-									8	9	10	11			
 2062	D	1	象 elephant	*-ɣji̯ɔŋB	(26)								θɛŋ4	kjaːŋ4	--	sjaŋ4			
 2063																			
 2064			5.31	*-kl- 															
@@ -2075,7 +2075,7 @@
 2075	P		PH	*-kl-		1	2	3	4	5	6	7							
 2076	D	8	maggot	*-klaŋC	(24)	kaŋ5	--	ka7	kua7a	tɕenC	--	kɛ1-lõ7							
 2077																			
-2078			PM	*-kl-									8	9	10	11			
+2078	P		PM	*-kl-									8	9	10	11			
 2079	D	9	pullet/hen	*-klanC	(19)								kaːn5	kjaːn5	--	--			
 2080	D	10	egg	*-kləuC	(3)								kjau5’	kjau5	klau5	tsu5			
 2081	D	11	蝸 snail	*-klu̯eiA/B	(8)								kwei1	kui3	kjau3	--			
@@ -2095,7 +2095,7 @@
 2095																			
 2096			5.31.1	*-klj- 															
 2097																			
-2098			PM	*-klj-									8	9	10	11			
+2098	P		PM	*-klj-									8	9	10	11			
 2099	D	1	龍 dragon	*-kljuŋA	(28)								kuŋ1	kuːŋ1	kljɔŋ1	--			
 2100																			
 2101			Notes																
@@ -2109,7 +2109,7 @@
 2109	P		PH	*-khl-		1	2	3	4	5	6	7							
 2110	D	2	centipede	*-khluwD	(9)	khu7	--	--	--	--	khjɔ5	--							
 2111																			
-2112			PM	*-khl-									8	9	10	11			
+2112	P		PM	*-khl-									8	9	10	11			
 2113	D	3	力 strength	*-khləkD	(7)								kha7	--	khla7	--			
 2114																			
 2115			Notes																
@@ -2119,9 +2119,9 @@
 2119																			
 2120			5.33	*-gl-															
 2121																			
-2122			PM	*-gl-									8	9	10	11			
+2122	P		PM	*-gl-									8	9	10	11			
 2123	D	1	mountain (range)	*-gli̯emA	(20)								kem2	kiːm2	kleŋ2	--			
-2124	D	2	thin	*-glæiC	(12/17)									kje6	kjai6	klai6	kɛi6		
+2124	D	2	thin	*-glæiC	(12/17)								kje6	kjai6	klai6	kɛi6			
 2125																			
 2126			Notes																
 2127		1	Sunjiang Biao Min (Wang and Mao 22) has been substituted for Dongshan Biao Min (10).																
@@ -2130,7 +2130,7 @@
 2130			5.33.1	*-glj-															
 2131																			
 2132	P		PHM	*-glj-		1	2	3	4	5	6	7	8	9	10	11			
-2133	E	1	to fool/humor (children)		(10)	--	--	--	--	--	kle1	--	--	kja4	kljɔu4	kɛi4			
+2133	D	1	to fool/humor (children)	xxx	(10)	--	--	--	--	--	kle1	--	--	kja4	kljɔu4	kɛi4			
 2134																			
 2135			Notes																
 2136		1	Sunjiang Biao Min (Wang and Mao 22) has been substituted for Dongshan Biao Min (10). The meaning of this word is given as hǒng as in hǒng xiǎo há ‘to handle children’ in Wang and Mao 1995.																
@@ -2145,7 +2145,7 @@
 2145																			
 2146			5.34.1	*-ŋklj-															
 2147																			
-2148			PM	*-ʔglj- (< *ŋklj-)									8	9	10	11			
+2148	P		PM	*-ʔglj- (< *ŋklj-)									8	9	10	11			
 2149	D	1	scissors	*-ʔglji̯euB	(2)								jeu3	ȡiːu3	gjau3	gɛu3			
 2150																			
 2151			Notes																
@@ -2160,7 +2160,7 @@
 2160	P		PH	*-ŋgl-		1	2	3	4	5	6	7							
 2161	D	3	lazy	*-ŋglænB	(19)	ŋi4	ɲe4	ŋkɛŋ4	ȵtɕein4	ŋkaŋB	--	ŋɛ4							
 2162																			
-2163			PM	*-ŋgl-									8	9	10	11			
+2163	P		PM	*-ŋgl-									8	9	10	11			
 2164	D	4	turbid	*-ŋglokD	(13)								glo8	glɔ6	--	--			
 2165																			
 2166			Notes																
@@ -2171,7 +2171,7 @@
 2171																			
 2172			5.36.1	*-ŋglj-															
 2173																			
-2174			PM	*-ŋglj-									8	9	10	11			
+2174	P		PM	*-ŋglj-									8	9	10	11			
 2175	D	1	tiger	*-ŋgljænA	(19)								ʥan2	gjaːn2	jɛn2	kjɛn2			
 2176																			
 2177			Notes																
@@ -2239,7 +2239,7 @@
 2239	D	11	to scold/curse	*-qeC	(10)	--	--	--	he5a	qeC	--	--							
 2240	D	12	egg	*-qæwC	(3)	ki5	--	qe5	hæ5a	qwjiC	kja5	ko5							
 2241																			
-2242			PM	*-k- (< *K-)									8	9	10	11			
+2242	P		PM	*-k- (< *K-)									8	9	10	11			
 2243	D	13	鴿 pigeon	*-kɔpD	(29)								kop7	kɔp7	--	ku7			
 2244	D	14	割 to cut	*-katD	(4)								kaːt7	kaːt7’	kwan7	kɔt7			
 2245																			
@@ -2275,7 +2275,7 @@
 2275	D	5	to tie/cross (legs)	*-qheA	(10)	qhei1	--	qhai1	he1b	qheA	khai1	--							
 2276	D	6	孔 hole	*-qhəŋB	(21)	qhaŋ3	qhu3	qhɔ3	hoŋ3b	qhoŋB	khoŋ3	khõ3							
 2277																			
-2278			PM	*-kh- (< *Kh-)									8	9	10	11			
+2278	P		PM	*-kh- (< *Kh-)									8	9	10	11			
 2279	D	7	bamboo bowl	*-khɔkD	(29)								khɔ7	--	--	--			
 2280	D	8	牽 to lead	*-khienA (C)									--	kiːn1’	khən1	--			
 2281																			
@@ -2295,7 +2295,7 @@
 2295	D	4	to slant/slanting	*-ɢeA	(10)	--	qa2	qai2	--	ʁeA	--	--							
 2296	D	5	葫 garlic	*-ɢaA	(4)	qa2	--	qe2	hɪ2	ʁaA	--	--							
 2297																			
-2298			PM	*-g- (< *G-)									8	9	10	11			
+2298	P		PM	*-g- (< *G-)									8	9	10	11			
 2299	D	6	oneself	*-gənA	(21)								kan2	kan2	kan4	--			
 2300	D	7	thick (porridge)	*-gətD	(7)								--	kat8	--	--			
 2301																			
@@ -2334,7 +2334,7 @@
 2334	P		PHM	*-NKʷ-		1	2	3	4	5	6	7	8	9	10	11			
 2335	D	1	缺 to have a gap	*-NKʷet	(10)	qei5	ɴqwɑ3	ntai3	--	--	--	--	gwa7	gu7	--	--			
 2336																			
-2337			PM	*-ʔgʷ- (< *NKʷ- )									8	9	10	11			
+2337	P		PM	*-ʔgʷ- (< *NKʷ- )									8	9	10	11			
 2338	D	2	黃 bright	*-ʔgʷi̯əŋA	(24)								gwaŋ1	gwaŋ1	gwaŋ1	vjaŋ1			
 2339																			
 2340			Notes																
@@ -2370,7 +2370,7 @@
 2370																			
 2371			5-6’.31	*-Kʷl-															
 2372																			
-2373			PM	*-kʷl- (< *Kʷl- )									8	9	10	11			
+2373	P		PM	*-kʷl- (< *Kʷl- )									8	9	10	11			
 2374	D	1	蝸 snail	*-kʷlejA	(10)								kwei1	gwei1	kli3	ki1			
 2375																			
 2376			Notes																
@@ -2446,7 +2446,7 @@
 2446	D	6	to roll down	*-qləŋB	(21)	ȴ̥aŋ3	cɑŋ3	dɔ3	--	qloŋB	--	--							
 2447	D	7	walnut	*-qlowC	(13)	--	--	--	l̥ə5a	qloC	--	--							
 2448																			
-2449			PM	*-ql-									8	9	10	11			
+2449	P		PM	*-ql-									8	9	10	11			
 2450	D	8	to repay	*-qlauB	(5)								--	klaːu3	klau3	kau3			
 2451																			
 2452			Discussion																
@@ -2474,7 +2474,7 @@
 2474																			
 2475			6.33.1	*-ɢlj-															
 2476																			
-2477			PM	*-ɢlj-									8	9	10	11			
+2477	P		PM	*-ɢlj-									8	9	10	11			
 2478	D	1	腸 intestines	*-ɢljaŋA	(24)								klaːŋ2	klaːŋ2	klaŋ2	kjaŋ2			
 2479																			
 2480			6.36	*-ɴɢl-															
@@ -2484,7 +2484,7 @@
 2484	D	2	to flow	*-ɴɢlʉB	(8)	--	--	ntɯ4	--	qluB	ljɔu4	--							
 2485	D	3	ragged/shabby	*-ɴɢluC	(16)	nei6	--	ntua6	--	qlaC	--	--							
 2486																			
-2487			PM	*-ɴɢl-									8	9	10	11			
+2487	P		PM	*-ɴɢl-									8	9	10	11			
 2488	D	4	shuttle	*-ɴɢlowB	(16)								gou4	glɔu4	--	--			
 2489																			
 2490			Notes																
@@ -2506,7 +2506,7 @@
 2506	D	7	salty	*-qrowC	(13)	ȴ̥u5	--	daɯ5	l̥ə5a	--	--	--							
 2507	D	8	ice	*-qru̯eiD	(12/17)		ȴ̥u7	--	dau7	--	--	--	--						
 2508																			
-2509			PM	*-kr- (< *qr- )									8	9	10	11			
+2509	P		PM	*-kr- (< *qr- )									8	9	10	11			
 2510	D	9	black	*-qri̯ɛkD	(1)								kje7	kja7	kja7	kjɛ7			
 2511																			
 2512			Notes																
@@ -2542,7 +2542,7 @@
 2542	D	11	cloud/haze	*-ʔɔŋC	(29)	en5	--	ɔŋ5	aŋ5a	--	--	--							
 2543	D	12	烏 crow (bird)	*-ʔuA	(16)	--	--	ua1	a7a	--	--	--							
 2544																			
-2545			PM	*-ʔ-									8	9	10	11			
+2545	P		PM	*-ʔ-									8	9	10	11			
 2546	D	13	meat	*-ʔaB	(4)								a3	a3	--	--			
 2547	D	14	愛 to love	*-ʔu̯ɔiC	(11)								--	ɔːi5	--	i5			
 2548																			
@@ -2565,7 +2565,7 @@
 2565	D	8	to rob	*-hæD	(5)	--	--	--	ɦa7b	hiD	--	--							
 2566	D	9	腐 bean curd	*-hʉB	(8)	--	--	--	ɦou3b	huB	--	--							
 2567																			
-2568			PM	*-h-									8	9	10	11			
+2568	P		PM	*-h-									8	9	10	11			
 2569	D	10	to cover (with tile)	*-hi̯əmB/C	(18)								hom6	hɔːm3	--	hum3			
 2570	D	11	to scold/curse	*-hi̯emC	(20)								heːm5	--	--	--			
 2571	D	12	狹 narrow	*-hep	(10)								hep8	heːp8	hjɛn8	hɛp8			
@@ -2578,25 +2578,25 @@
 2578																			
 2579			7.15	*-ɦ-															
 2580																			
-2581			PM	*-ɦ-									8	9	10	11			
+2581	P		PM	*-ɦ-									8	9	10	11			
 2582	D	1	厚 thick	*-ɦɔuB	(3)								ho4	hu4	hau4	hu4			
 2583																			
 2584			1a. H	*-i															
 2585						1	2	3	4	5	6	7	H						
-2586	E	1	to grow (tr)			tɕen4	--	--	--	ʑeB	tei4	--	*i						
-2587	E	2	noose/trap			--	--	tʂi4	--	--	--	--	*i						
-2588	E	3	tea			tɕen4	ci4	--	tɕi4	ʑiB	tʃi4	tɕi4	*i						
-2589	E	4	to bear fruit			tsen5	--	tsi5	pei5a	pzeC	--	--	*i						
-2590	E	5	late			--	--	li6	li6	--	--	lɦe6	*i						
+2586	E	1	to grow (tr)			tɕen4	--	--	--	ʑeB	tei4	--							*i
+2587	E	2	noose/trap			--	--	tʂi4	--	--	--	--							*i
+2588	E	3	tea			tɕen4	ci4	--	tɕi4	ʑiB	tʃi4	tɕi4							*i
+2589	E	4	to bear fruit			tsen5	--	tsi5	pei5a	pzeC	--	--							*i
+2590	E	5	late			--	--	li6	li6	--	--	lɦe6							*i
 2591																			
 2592	C		Chinese loanword in set 1a:			tsyek (MC)	炙	zhì  ‘to roast/broil’	>	H *ciC ‘to bake/toast’									
 2593									>	H *ɟiC ‘to burn/be alight’									
 2594																			
 2595			1b. HM *i (1, 18) The numbers following each rime reconstruction represent the rime sets in Wang and Mao 1995 to which these words are assigned.																
-2596						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2597	E	6	bedbug			--	--	--	-- 	--	pi1	pɪ5	*i	*i	*i	pi1	pi1	pi1	bɛi1
-2598	E	7	stomach												*i	ɕi1	tθi1’	--	sɛi1
-2599	E	8	seven												*i	ȵi6	ŋji6	ni6	ȵi6
+2596	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2597	E	6	bedbug			--	--	--	-- 	--	pi1	pɪ5	pi1	pi1	pi1	bɛi1	*i	*i	*i
+2598	E	7	stomach										ɕi1	tθi1’	--	sɛi1			*i
+2599	E	8	seven										ȵi6	ŋji6	ni6	ȵi6			*i
 2600																			
 2601	C		Chinese loanwords in set 1b:			nej (MC)	泥	ní  ‘mud’	>	M *hniA									
 2602						tejX (MC)	底	dǐ  ‘bottom/base’	>	M *ʔdiB ‘lower level’									
@@ -2604,26 +2604,26 @@
 2604						dojH (MC)	袋	dài  ‘bag’	>	M *diC									
 2605																			
 2606			1c. HM	*-i̯æn	(81)														
-2607						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2608	E	9	3sg (he/she/it)			nen2	--	nɯ4	ȵi4	nenB	nɐŋ4	nɯ4	*i	*i̯æn	*æn	nan2	nen2	nin2	--
+2607	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2608	E	9	3sg (he/she/it)			nen2	--	nɯ4	ȵi4	nenB	nɐŋ4	nɯ4	nan2	nen2	nin2	--	*i	*i̯æn	*æn
 2609																			
 2610	C		Chinese loanword in set 1c:			*[k]ˤon (OC)	>	kwan (MC)	冠	guān ‘crest/comb’	>	HM *ʔwi̯æn							
 2611																			
 2612			1d. HM	*-i̯əu	(210)														
-2613						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2614	E	10	gall bladder			ɕen1	tɕi1	tʂi1	sei1a 	tseA	--	tɕe1	*i	*i̯əu	*i̯əu	--	--	--	tɛu1
-2615	E	11	2pl (you)			maŋ2	me2	ne2	mein2	menA	--	--	*i	*i̯əu	*i̯əu	--	njou2	--	--
-2616	E	12	fruit			tsen3	pi3	tsi3	pei3a 	pzeB	pi3	pje3	*i	*i̯əu	*i̯əu	pjeu3	pjɔu3	pjau3	bɛu3
-2617	E	13	ant												*i̯əu	ɕeu3	sɔu3	sau3	dziu3
-2618	E	14	clf-fields												*i̯əu	lau5’	--	--	--
+2613	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2614	E	10	gall bladder			ɕen1	tɕi1	tʂi1	sei1a 	tseA	--	tɕe1	--	--	--	tɛu1	*i	*i̯əu	*i̯əu
+2615	E	11	2pl (you)			maŋ2	me2	ne2	mein2	menA	--	--	--	njou2	--	--	*i	*i̯əu	*i̯əu
+2616	E	12	fruit			tsen3	pi3	tsi3	pei3a 	pzeB	pi3	pje3	pjeu3	pjɔu3	pjau3	bɛu3	*i	*i̯əu	*i̯əu
+2617	E	13	ant										ɕeu3	sɔu3	sau3	dziu3			*i̯əu
+2618	E	14	clf-fields										lau5’	--	--	--			*i̯əu
 2619																			
 2620	C		Chinese loanwords in set 1d:			*m.b(r)u (OC)	>	bjuw (MC)	浮	fú  ‘to float’	>	M *mbi̯̯əuA							
 2621	X					*[r]u (OC)	>	ljuw (MC)	流	liú  ‘to flow’	>	M *ri̯̯əuC							
 2622																			
 2623			1e. HM	*-i̯ɛk (148, 110)															
-2624						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2625	E	15	chaff/husk			--	--	--	--	--	--	m̥e5	*i	*i̯ɛk	*i̯ɛk	bwa7	va7’	bja7	bjɛ7
-2626	E	16	black												*i̯ɛk	kje7	kja7	kja7	kjɛ7
+2624	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2625	E	15	chaff/husk			--	--	--	--	--	--	m̥e5	bwa7	va7’	bja7	bjɛ7	*i	*i̯ɛk	*i̯ɛk
+2626	E	16	black										kje7	kja7	kja7	kjɛ7			*i̯ɛk
 2627																			
 2628	C		Chinese loanwords in set 1e:			tsyak (MC)	灼	zhuó  ‘to burn’	>	M *dji̯ɛkD									
 2629						tsyek (MC)	隻	zhī  ‘clf-birds’	>	M *tsi̯ɛkD									
@@ -2652,39 +2652,39 @@
 2652			2																
 2653			2a. H	*-ɨ															
 2654						1	2	3	4	5	6	7	H						
-2655	E	1	clean			sha1	ntsha1	--	ntsei1b	nʔtsheA 	θei1	--	*ɨ						
-2656	E	2	that/the former			i3	a3	i5	i3a	eB	--	--	*ɨ						
-2657	E	3	what			ɕi3	--	tʂi5	si7b	tsiB	--	--	*ɨ						
-2658	E	4	whorl at top of head			ʑi6	--	ji4	ʑi4	weB	--	--	*ɨ						
-2659	E	5	hoop			tha5	--	thi5	tei5b	theC	--	--	*ɨ						
-2660	E	6	to squeeze/pinch			la5	lɑ5	li5	lei5a	--	l̥i5	la5	*ɨ						
-2661	E	7	wildcat			ȴ̥aŋ7	--	pli7	pɭei5a	pleC	--	--	*ɨ						
+2655	E	1	clean			sha1	ntsha1	--	ntsei1b	nʔtsheA 	θei1	--							*ɨ
+2656	E	2	that/the former			i3	a3	i5	i3a	eB	--	--							*ɨ
+2657	E	3	what			ɕi3	--	tʂi5	si7b	tsiB	--	--							*ɨ
+2658	E	4	whorl at top of head			ʑi6	--	ji4	ʑi4	weB	--	--							*ɨ
+2659	E	5	hoop			tha5	--	thi5	tei5b	theC	--	--							*ɨ
+2660	E	6	to squeeze/pinch			la5	lɑ5	li5	lei5a	--	l̥i5	la5							*ɨ
+2661	E	7	wildcat			ȴ̥aŋ7	--	pli7	pɭei5a	pleC	--	--							*ɨ
 2662																			
 2663	C		Chinese loanword in set 2a:			sje (MC) ‘mutually’	廝	sī ‘with each other’	>	HM *sjɨA-D reciprocal									
 2664																			
 2665			2b. HM	*-ɨ	(35)														
-2666						1	2	3	4	5	6	7	 H	HM	M	8	9	10	11
-2667	E	8	one			i1	ɑ3	i1	ei1a	--	i3	--	*ɨ	*ɨ	*ɨ	--	--	i1	a1
+2666	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2667	E	8	one			i1	ɑ3	i1	ei1a	--	i3	--	--	--	i1	a1	*ɨ	*ɨ	*ɨ
 2668																			
 2669	C		Chinese loanword in set 2b:			liX (MC)	里	lǐ  ‘half kilometer’	>	HM *ljɨX									
 2670																			
 2671	E		2c. HM	*-eu	(35)														
-2672						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2673	E	9	to fry			ka1	ca1	ki1	tɕi1a	tɕeA	--	--	*ɨ	*eu	*eu	--	[tjiː1]	khla1	--
-2674	E	10	butterfly			--	--	--	mpei5a	mʔpleC	--	--	*ɨ	*eu	*eu	bjeu5’	blɔu5’ 	bja4	--
+2672	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2673	E	9	to fry			ka1	ca1	ki1	tɕi1a	tɕeA	--	--	--	[tjiː1]	khla1	--	*ɨ	*eu	*eu
+2674	E	10	butterfly			--	--	--	mpei5a	mʔpleC	--	--	bjeu5’	blɔu5’ 	bja4	--	*ɨ	*eu	*eu
 2675																			
 2676			2d. HM	*-i̯eu (2, 35)															
-2677						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2678	E	11	light(weight)			fha1	ɕa1	ʂi1	sei1b	seA	v̥uai1’	fɤ1	*ɨ	*i̯eu	*i̯eu	ɕeu1	sɔu1’	hjau1	--
-2679	E	12	scissors												*i̯eu	jeu3	ȡiːu3	gjau3	gɛu3
+2677	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2678	E	11	light(weight)			fha1	ɕa1	ʂi1	sei1b	seA	v̥uai1’	fɤ1	ɕeu1	sɔu1’	hjau1	--	*ɨ	*i̯eu	*i̯eu
+2679	E	12	scissors										jeu3	ȡiːu3	gjau3	gɛu3			*i̯eu
 2680																			
 2681			2e. HM	*-ik	(15)														
-2682						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2683	E	13	to flip with finger			--	--	nti3	ntei5a	--	ntai5	na5	*ɨ	*ik	*it	dit7	--	--	--
+2682	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2683	E	13	to flip with finger			--	--	nti3	ntei5a	--	ntai5	na5	dit7	--	--	--	*ɨ	*ik	*it
 2684																			
 2685			2f. HM	*-ek (17, 34)															
-2686						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2687	E	14	to dry (clothes)											*ek	*ek	--	si7	ʨi7	tsaŋ1
+2686	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2687	E	14	to dry (clothes)										--	si7	ʨi7	tsaŋ1		*ek	*ek
 2688																			
 2689	C		Chinese loanwords in set 2f:			phek (MC)	劈	pī  ‘to split/chop’	>	HM *phek									
 2690						tsyhek (MC)	赤	chì  ‘red’	>	M *sekD									
@@ -2704,80 +2704,80 @@
 2704			3																
 2705			3a. H	*-æw															
 2706						1	2	3	4	5	6	7	H						
-2707	E	1	to sow			--	pʐo1	tʂe1	pʐæ1a	pjiA	--	--	*æw						
-2708	E	2	steel			sha1	sɯ1	--	sæ1b	--	-- 	tɕo1	*æw						
-2709	E	3	to sweep			ʨhi1	--	che1	ʨæ1b	ʨhiA	--	--	*æw						
-2710	E	4	river			--	--	de2	--	ʁleiA	--	--	*æw						
-2711	E	5	body/trunk			ʨi3	ʨɯ3	ce3	ʨæ3a	ʨiB	--	--	*æw						
-2712	E	6	to burn (tr)			phi3	--	--	--	--	v̥a3	pho3	*æw						
-2713	E	7	wife			vi3	--	vi3	--	--	va3	vo3	*æw						
-2714	E	8	leg/branch			ʨi4	kɯ4	ce6	ʨe4	ʑaB	--	--	*æw						
-2715	E	9	mountain			pi4	--	pe8	pe4	veiB	--	--	*æw						
-2716	E	10	to carry on shoulder			ʨi5	--	--	ʨæ5a	--	--	--	*æw						
-2717	E	11	to climb			ʨi5	ȵʨɯ5	ɲce5	ȵʨæ5a	ȵʔʨiC	ntja5	--	*æw						
-2718	E	12	egg			ki5	--	qe5	hæ5a	qwjiC	kja5	ko5	*æw						
-2719	E	13	frost			ta5	tɯ5	te5	tæ5a	tiC	ða5	no5	*æw						
-2720	E	14	near			ɣi5	ʐɯ5	ʐe5	ʐæ5a	ʔwjiC	ŋkja5	jo5	*æw						
-2721	E	15	to soak			--	ȵʨɯ5	ɳtʂe5	ntsæ5a	nʔʦiC	ɳʧa5	ȵʨo5	*æw						
+2707	E	1	to sow			--	pʐo1	tʂe1	pʐæ1a	pjiA	--	--							*æw
+2708	E	2	steel			sha1	sɯ1	--	sæ1b	--	-- 	tɕo1							*æw
+2709	E	3	to sweep			ʨhi1	--	che1	ʨæ1b	ʨhiA	--	--							*æw
+2710	E	4	river			--	--	de2	--	ʁleiA	--	--							*æw
+2711	E	5	body/trunk			ʨi3	ʨɯ3	ce3	ʨæ3a	ʨiB	--	--							*æw
+2712	E	6	to burn (tr)			phi3	--	--	--	--	v̥a3	pho3							*æw
+2713	E	7	wife			vi3	--	vi3	--	--	va3	vo3							*æw
+2714	E	8	leg/branch			ʨi4	kɯ4	ce6	ʨe4	ʑaB	--	--							*æw
+2715	E	9	mountain			pi4	--	pe8	pe4	veiB	--	--							*æw
+2716	E	10	to carry on shoulder			ʨi5	--	--	ʨæ5a	--	--	--							*æw
+2717	E	11	to climb			ʨi5	ȵʨɯ5	ɲce5	ȵʨæ5a	ȵʔʨiC	ntja5	--							*æw
+2718	E	12	egg			ki5	--	qe5	hæ5a	qwjiC	kja5	ko5							*æw
+2719	E	13	frost			ta5	tɯ5	te5	tæ5a	tiC	ða5	no5							*æw
+2720	E	14	near			ɣi5	ʐɯ5	ʐe5	ʐæ5a	ʔwjiC	ŋkja5	jo5							*æw
+2721	E	15	to soak			--	ȵʨɯ5	ɳtʂe5	ntsæ5a	nʔʦiC	ɳʧa5	ȵʨo5							*æw
 2722																			
 2723	C		Chinese loanwords in set 3a:			*mə-qˤ(r)o (OC)	>	kuw (MC)	鉤	gōu ‘hook’	>	H *ɴqæwC							
 2724	X					*[tsʰ]rək (OC)	>	tsrhik (MC)	畟	cè ‘sharp-cutting’	>	H *ntsjæwC ‘sharp’							
 2725	X					*N-t<r>ək (OC)	>	drik (MC)	直	zhí ‘straight/vertical’	>	H *ndzjæwC ‘vertical/upright’ ‘Upright/erect’ is attested only in Xianjin and Shimen (Wang 1994) and in White Hmong (ntseg ‘erect/vertical/steep’), closely related West Hmongic dialects.							
 2726																			
 2727			3b. HM	*-æu (113, 259)															
-2728						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2729	E	16	ear			zɛ2	mʐɯ2	ɳtʂe2	mpʐæ2	mpjiA	mpja2	mjo2	*æw	*æu	*æu	--	--	blau2	bju2
-2730	E	17	mushroom			ʨi1	ŋkɯ1	ɲce1	ȵʨæ1a	ȵʔʨiA	ɳtʃa1	ŋo1	*æw	*æu	*æu	ʨeu1	sɔu1	ȶau1	ku1
-2731	E	18	pillar			ȵi2	ȵɯ2	ɲce2	ȵʨæ2	ȵʨiA	--	ŋo2	*æw	*æu	*æu	--	--	ʨɔu2	--
-2732	E	19	uncle			ʑu5	ʑo4	--	--	--	ja2	jo4	*æw	*æu	*æu	--	jɔu4	--	--
-2733	E	20	to sharpen/grind												*æu	ʥeu5	gjɔu5’	ȡau5	dziu5
-2734	E	21	to sweep												*æu	--	ȡɔu5	--	--
+2728	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2729	E	16	ear			zɛ2	mʐɯ2	ɳtʂe2	mpʐæ2	mpjiA	mpja2	mjo2	--	--	blau2	bju2	*æw	*æu	*æu
+2730	E	17	mushroom			ʨi1	ŋkɯ1	ɲce1	ȵʨæ1a	ȵʔʨiA	ɳtʃa1	ŋo1	ʨeu1	sɔu1	ȶau1	ku1	*æw	*æu	*æu
+2731	E	18	pillar			ȵi2	ȵɯ2	ɲce2	ȵʨæ2	ȵʨiA	--	ŋo2	--	--	ʨɔu2	--	*æw	*æu	*æu
+2732	E	19	uncle			ʑu5	ʑo4	--	--	--	ja2	jo4	--	jɔu4	--	--	*æw	*æu	*æu
+2733	E	20	to sharpen/grind										ʥeu5	gjɔu5’	ȡau5	dziu5			*æu
+2734	E	21	to sweep										--	ȡɔu5	--	--			*æu
 2735																			
 2736	C		Chinese loanword in set 3b:			gjew (MC)	蕎	qiáo ‘buckwheat’	>	HM *ɟæu									
 2737																			
 2738	E		3c. HM	*-əu	(96)														
-2739						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2740	E	22	earth			ta1	tɯ1	te1	tæ1a	tiA	ta1	to1	*æw	*əu	*əu	dau1	--	--	--
-2741	E	23	stone			ɣi1	ʐɯ1	ʐe1	ʐæ1a	ʔwjiA	ŋkja1	jo1	*æw	*əu	*əu	gau1	gjau1	lau1	dzu1
-2742	E	24	long (time)			la2	lɯ2	le2	læ2	liA	la2	lo2	*æw	*əu	*əu	lau2	lau2	--	lu2
-2743	E	25	rice plant/paddy			na2	nɯ2	mple2	mplæ2	--	mpla2	mjo2	*æw	*əu	*əu	blau2	blau2	blau2	bjau2
-2744	E	26	house			tsɛ3	pʐɯ3	tʂe3	pʐæ3a	peiB	pja3	pjo3	*æw	*əu	*əu	pjau3	pjau3	pla3	pju3
-2745	E	27	road/way			ki3	kɯ3	ke3	kæ3a	ʨiB	kja3	ko3	*æw	*əu	*əu	kjau3	kjau3	kla3	tsu3
-2746	E	28	salt			ɕi3	ȵʨɯ3	ɳtʂe3	ntsæ3a	nʔʦiB	--	ȵo3	*æw	*əu	*əu	dau3	dau3	dza3	--
-2747	E	29	fish			zɛ4	mʐɯ4	ɳtʂe4	mpʐe4	mpjiB	mpja4	mjo4	*æw	*əu	*əu	bjau4	bjau4	bla4	bju4
-2748	E	30	nest			ɣi4	ʐɯ4	ʐe4	ʐe4	wjiB	ŋkja4	--	*æw	*əu	*əu	gau4	gjau4	la4	--
-2749	E	31	to lay eggs			na6	--	nte6	nte6	ntiC	tei5	no6	*æw	*əu	*əu	--	--	dau6	du6
-2750	E	32	egg												*əu	kjau5’	kjau5	klau5	tsu5
+2739	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2740	E	22	earth			ta1	tɯ1	te1	tæ1a	tiA	ta1	to1	dau1	--	--	--	*æw	*əu	*əu
+2741	E	23	stone			ɣi1	ʐɯ1	ʐe1	ʐæ1a	ʔwjiA	ŋkja1	jo1	gau1	gjau1	lau1	dzu1	*æw	*əu	*əu
+2742	E	24	long (time)			la2	lɯ2	le2	læ2	liA	la2	lo2	lau2	lau2	--	lu2	*æw	*əu	*əu
+2743	E	25	rice plant/paddy			na2	nɯ2	mple2	mplæ2	--	mpla2	mjo2	blau2	blau2	blau2	bjau2	*æw	*əu	*əu
+2744	E	26	house			tsɛ3	pʐɯ3	tʂe3	pʐæ3a	peiB	pja3	pjo3	pjau3	pjau3	pla3	pju3	*æw	*əu	*əu
+2745	E	27	road/way			ki3	kɯ3	ke3	kæ3a	ʨiB	kja3	ko3	kjau3	kjau3	kla3	tsu3	*æw	*əu	*əu
+2746	E	28	salt			ɕi3	ȵʨɯ3	ɳtʂe3	ntsæ3a	nʔʦiB	--	ȵo3	dau3	dau3	dza3	--	*æw	*əu	*əu
+2747	E	29	fish			zɛ4	mʐɯ4	ɳtʂe4	mpʐe4	mpjiB	mpja4	mjo4	bjau4	bjau4	bla4	bju4	*æw	*əu	*əu
+2748	E	30	nest			ɣi4	ʐɯ4	ʐe4	ʐe4	wjiB	ŋkja4	--	gau4	gjau4	la4	--	*æw	*əu	*əu
+2749	E	31	to lay eggs			na6	--	nte6	nte6	ntiC	tei5	no6	--	--	dau6	du6	*æw	*əu	*əu
+2750	E	32	egg										kjau5’	kjau5	klau5	tsu5			*əu
 2751																			
 2752	C		Chinese loanword in set 3c:			*ʔˤuʔ (OC)	>	ʔawX (MC)	媼	ǎ̀o ‘old woman’	>	HM *ʔəuX ‘elder sister/wife’							
 2753																			
 2754			3d. HM	*-au (76, 95, 177)															
-2755						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2756	E	33	to answer			ta1	tɯ1	te1	tæ1a	tiA	ta1	no1	*æw	*au	*au	--	tau1	--	du1
-2757	E	34	long			ta3	ntɯ3	nte3	ntæ3a	nʔtiB	ða3	to3	*æw	*au	*au	daːu3	daːu3	da3	du3
-2758	E	35	to warm self by fire 			ta5	ntɯ5	nte5	ntæ5a	nʔtiC	nta5	no5	*æw	*au	*au	--	daːu5	dau5	du5
-2759	E	36	mouse/rat												*au	naːu4	--	--	--
+2755	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2756	E	33	to answer			ta1	tɯ1	te1	tæ1a	tiA	ta1	no1	--	tau1	--	du1	*æw	*au	*au
+2757	E	34	long			ta3	ntɯ3	nte3	ntæ3a	nʔtiB	ða3	to3	daːu3	daːu3	da3	du3	*æw	*au	*au
+2758	E	35	to warm self by fire 			ta5	ntɯ5	nte5	ntæ5a	nʔtiC	nta5	no5	--	daːu5	dau5	du5	*æw	*au	*au
+2759	E	36	mouse/rat										naːu4	--	--	--			*au
 2760																			
 2761			3e. HM	*-ɔu (77, 244)															
-2762						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2763	E	37	three			pi1	pu1	pe1	pæ1a	pziA	pa1	po1	*æw	*ɔu	*ɔu	pu1	pu1	pau1	bu5
-2764	E	38	1pl (we/us)			pi1	pɯ1	pe1	pæ1a	peiA	pa1	pɯ5	*æw	*ɔu	*ɔu	--	pu1	--	bu1
-2765	E	39	hand/arm			pi4	tɯ4	te4	ʂe4	weiB	tʃa4	tɛ-pɯ4	*æw	*ɔu	*ɔu	pu4	pu4	pau4	pu4
-2766	E	40	name			pi5	mpu5	mpe5	mpæ5a	mʔpeiC	mpa5	mo5	*æw	*ɔu	*ɔu	bu5’	bu5	bau5	bu5
-2767	E	41	table												*ɔu	du2	nu2	--	--
-2768	E	42	blind												*ɔu	bu3	bu4	--	--
-2769	E	43	to burn												*ɔu	pu3	pu3	pau3	bu3
-2770	E	44	grey												*ɔu	bu2	bu3	bau3	--
-2771	E	45	to wait												*ɔu	ʨu3	ȶu3	ȶu3	--
-2772	E	46	brother												*ɔu	mai4	--	mau4	mu4
+2762	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2763	E	37	three			pi1	pu1	pe1	pæ1a	pziA	pa1	po1	pu1	pu1	pau1	bu5	*æw	*ɔu	*ɔu
+2764	E	38	1pl (we/us)			pi1	pɯ1	pe1	pæ1a	peiA	pa1	pɯ5	--	pu1	--	bu1	*æw	*ɔu	*ɔu
+2765	E	39	hand/arm			pi4	tɯ4	te4	ʂe4	weiB	tʃa4	tɛ-pɯ4	pu4	pu4	pau4	pu4	*æw	*ɔu	*ɔu
+2766	E	40	name			pi5	mpu5	mpe5	mpæ5a	mʔpeiC	mpa5	mo5	bu5’	bu5	bau5	bu5	*æw	*ɔu	*ɔu
+2767	E	41	table										du2	nu2	--	--			*ɔu
+2768	E	42	blind										bu3	bu4	--	--			*ɔu
+2769	E	43	to burn										pu3	pu3	pau3	bu3			*ɔu
+2770	E	44	grey										bu2	bu3	bau3	--			*ɔu
+2771	E	45	to wait										ʨu3	ȶu3	ȶu3	--			*ɔu
+2772	E	46	brother										mai4	--	mau4	mu4			*ɔu
 2773																			
 2774	C		Chinese loanword in set 3e:			huwX (MC)	厚	hòu ‘thick’	>	M *ɦɔuB									
 2775																			
-2776	D		3f. HM	*-uw	(115)														
-2777						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2778	E	47	far			--	qɯ1	de1	hwæ1a	qweiA	kwa1	ko1	*æw	*uw	*u	ko1	ku1	ku1	kɔu1
-2779	E	48	dog			l̥a3	qwɯ3	de3	l̥æ3a	qleiB	kla3	ka-ljɔ̃7	*æw	*uw	*u	klo3	klu3	klu3	ku3
-2780	E	49	good/tasty												*u	--	ku3	--	kɔm3
+2776	P		3f. HM	*-uw	(115)														
+2777	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2778	E	47	far			--	qɯ1	de1	hwæ1a	qweiA	kwa1	ko1	ko1	ku1	ku1	kɔu1	*æw	*uw	*u
+2779	E	48	dog			l̥a3	qwɯ3	de3	l̥æ3a	qleiB	kla3	ka-ljɔ̃7	klo3	klu3	klu3	ku3	*æw	*uw	*u
+2780	E	49	good/tasty										--	ku3	--	kɔm3			*u
 2781																			
 2782			Discussion																
 2783			The details of the phonetic values assigned to the subsets of set 3 are approximate: the general pattern of a back vowel followed by a back rounded vowel is what they all share, however, and what allowed them to merge into Hmongic *-æw.																
@@ -2806,32 +2806,32 @@
 2806			4																
 2807			4a. H	*-a	(92, 130, 149, 187)														
 2808						1	2	3	4	5	6	7	H						
-2809	E	1	cherry			va1	wɑ1	--	ʑi1a	--	--	--	*a						
-2810	E	2	honey			va1	--	ʐi1	ʐɪ1a	ʔwjaA	--	--	*a						
-2811	E	3	rough/coarse			sha1	ntshɑ1	ntshi1	ntsi1b	nʔtshaA	--	--	*a						
-2812	E	4	soul/spirit			ȴ̥u2	pjə2	pli6	pɭɪ6	vloA	--	pjɔ2	*a						
-2813	E	5	finger			ta3	ntɑ3	nti3	nti3a	nʔtaB	--	--	*a						
-2814	E	6	to pour			tsɑ5	pʐa5 	tʂi5	--	--	--	--	*a						
-2815	E	7	to lean (on stick)			ȵa6	ɳɑ6	ɳʈi6	ɳʈe4	ɳtʂaC	--	ȵa2	*a						
-2816	E	8	to escape			fa8	qwei8	di8	hwɪ8	ʁwaD	--	--	*a						
-2817	E	9	to wake			--	--	tʂi8	si8	zaD	--	ʨi8	*a						
+2809	E	1	cherry			va1	wɑ1	--	ʑi1a	--	--	--							*a
+2810	E	2	honey			va1	--	ʐi1	ʐɪ1a	ʔwjaA	--	--							*a
+2811	E	3	rough/coarse			sha1	ntshɑ1	ntshi1	ntsi1b	nʔtshaA	--	--							*a
+2812	E	4	soul/spirit			ȴ̥u2	pjə2	pli6	pɭɪ6	vloA	--	pjɔ2							*a
+2813	E	5	finger			ta3	ntɑ3	nti3	nti3a	nʔtaB	--	--							*a
+2814	E	6	to pour			tsɑ5	pʐa5 	tʂi5	--	--	--	--							*a
+2815	E	7	to lean (on stick)			ȵa6	ɳɑ6	ɳʈi6	ɳʈe4	ɳtʂaC	--	ȵa2							*a
+2816	E	8	to escape			fa8	qwei8	di8	hwɪ8	ʁwaD	--	--							*a
+2817	E	9	to wake			--	--	tʂi8	si8	zaD	--	ʨi8							*a
 2818																			
 2819	C		Chinese loanwords in set 4a:			*[g]ˤa ‘gourd’ (OC)	>	hu (MC)	葫	hú  ‘garlic’	>	H *ɢaA ‘garlic’							
 2820	X					*mə.qˤ<r>aʔ-s (OC)	>	kæH (MC)	價	jià  ‘price’	>	H *ɴqaC							
 2821																			
 2822			4b. HM	*-a															
-2823						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2824	E	10	five			tsa1	pʐɑ1	tʂi1	pʐɪ1a	pjaA	pui1	pja1	*a	*a	*a	pla1	pja1	pla1	pjɛ5
-2825	E	11	father/male			pa3	pɑ3	tsi3	pi3a	paB	pe3	pa7	*a	*a	*a	pwa3	fa3	--	--
-2826	E	12	stick			--	pʐɑ3	--	--	--	--	pja3	*a	*a	*a	pla3	pja3	--	--
-2827	E	13	to get up			--	--	--	--	--	tʃe4	--	*a	*a	*a	kja4	kwe4	ȶɔ4	kjɛ4
-2828	E	14	moon/month			l̥ha5	l̥hɑ5	hl̥i5	li5b	l̥aC	l̥e5	l̥a5	*a	*a	*a	la5	la5	ɬa5	lɔu5
-2829	E	15	elder brother			ta2	--	ti2	ti2	ðaA	--	--	*a	*a	*a	--	ta2	--	--
-2830	E	16	urine			va4	ʐɑ4	ʐi4	ʐɪ4	wjaB	ŋkwe4	ve4	*a	*a	*a	wa4	va4	lɔ4	vjɛ4
-2831	E	17	1sg (I/me)												*a	ja1	ja1	--	--
-2832	E	18	grass												*a	m̥wa3	wa3	m̥ja3	mjɛ3
-2833	E	19	meat												*a	a3	a3	--	--
-2834	E	20	to carry on back												*a	ȵa5’	ȵa5	ȵa3	--
+2823	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2824	E	10	five			tsa1	pʐɑ1	tʂi1	pʐɪ1a	pjaA	pui1	pja1	pla1	pja1	pla1	pjɛ5	*a	*a	*a
+2825	E	11	father/male			pa3	pɑ3	tsi3	pi3a	paB	pe3	pa7	pwa3	fa3	--	--	*a	*a	*a
+2826	E	12	stick			--	pʐɑ3	--	--	--	--	pja3	pla3	pja3	--	--	*a	*a	*a
+2827	E	13	to get up			--	--	--	--	--	tʃe4	--	kja4	kwe4	ȶɔ4	kjɛ4	*a	*a	*a
+2828	E	14	moon/month			l̥ha5	l̥hɑ5	hl̥i5	li5b	l̥aC	l̥e5	l̥a5	la5	la5	ɬa5	lɔu5	*a	*a	*a
+2829	E	15	elder brother			ta2	--	ti2	ti2	ðaA	--	--	--	ta2	--	--	*a	*a	*a
+2830	E	16	urine			va4	ʐɑ4	ʐi4	ʐɪ4	wjaB	ŋkwe4	ve4	wa4	va4	lɔ4	vjɛ4	*a	*a	*a
+2831	E	17	1sg (I/me)										ja1	ja1	--	--			*a
+2832	E	18	grass										m̥wa3	wa3	m̥ja3	mjɛ3			*a
+2833	E	19	meat										a3	a3	--	--			*a
+2834	E	20	to carry on back										ȵa5’	ȵa5	ȵa3	--			*a
 2835																			
 2836	C		Chinese loanwords in set 4b:			*kʷˤra (OC)	>	kwæ (MC)	瓜	guā  ‘melon/gourd’	>	HM *Kʷa ‘cucumber’							
 2837								gja (MC)	茄	qié  ‘eggplant’	>	HM *ɟa							
@@ -2845,18 +2845,18 @@
 2845								sjæX (MC)	寫	xiě  ‘to write’	>	M *xjaB							
 2846																			
 2847			4c. HM	*-at (88, 107, 127 and 221)															
-2848						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2849	E	21	wing			ta7	tei7	ti7	ti7a	taD	ðe7	te7	*a	*at	*at	daːt7	daːt7	--	dɔt7
-2850	E	22	spicy			za8	mʐei8	ɳtʂi8	mpʐɪ8	mpjaD	mpwai8	mje8	*a	*at	*at	blaːt8	bjat8	blan8	bjɛt8
-2851	E	23	eight			ʑa8	ʑi8	ji8	ʑi8	ʑaD	je8	ji8	*a	*at	*at	jat8	jet8	hjɛn8	dzjat8
-2852	E	24	wooden basin												*at	pwat7	--	--	--
+2848	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2849	E	21	wing			ta7	tei7	ti7	ti7a	taD	ðe7	te7	daːt7	daːt7	--	dɔt7	*a	*at	*at
+2850	E	22	spicy			za8	mʐei8	ɳtʂi8	mpʐɪ8	mpjaD	mpwai8	mje8	blaːt8	bjat8	blan8	bjɛt8	*a	*at	*at
+2851	E	23	eight			ʑa8	ʑi8	ji8	ʑi8	ʑaD	je8	ji8	jat8	jet8	hjɛn8	dzjat8	*a	*at	*at
+2852	E	24	wooden basin										pwat7	--	--	--			*at
 2853																			
 2854	C		Chinese loanwords in set 4c:			*Nə-qʰˤat (OC)	>	khat (MC)	渴	kě ‘thirsty’	>	HM *NKhat							
 2855	X					*mə-kˤat (OC)	>	kat (MC)	割	gē ‘to cut’	>	M *katD							
 2856																			
 2857			4d. M	*-ak	(184)														
-2858						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2859	E	25	thick/dense												*ak	ma8	ma6	--	mɔu8
+2858	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2859	E	25	thick/dense										ma8	ma6	--	mɔu8			*ak
 2860																			
 2861			Discussion																
 2862			The most interesting feature of this rime set is the way that Jiwei (Qo Xiong) (2) and Pa-Hng (12) pattern.  They show a rime difference that reflects whether or not the Hmong-Mien rimes of this set (as reflected in the Mienic forms) were open or closed.  Open Hmong-Mien rime 4b yields Jiwei /ɑ/ and Pa-Hng /a/, whereas the closed Hmong-Mien rime 4c yields Jiwei /ei, i/ and Pa-Hng /e, i/.  The reflection of the open/closed Hmong-Mien contrast as a vowel quality difference can also be seen in Jiwei in rimes 12/17 and 13, and in Pa Hng in rime 7.  This suggests that Jiwei and Pa-Hng may have split off the main Hmongic branch at an early stage (see Strecker 1987a,b on the conservatism of “Na-e”, or Pa-Hng).																
@@ -2880,46 +2880,46 @@
 2880			5																
 2881			5a. H	*-æ	(54, 149)														
 2882						1	2	3	4	5	6	7	H						
-2883	E	1	bridge			--	--	--	la1b	--	--	--	*æ						
-2884	E	2	thick			ta1	ta1	tua1	ta1a	tiA	tei1	te1	*æ						
-2885	E	3	thigh			pa1	pa1	pua1	pa1a	--	--	pe1	*æ						
-2886	E	4	ant			phen3	mpha3	--	--	--	mphai3	m̥je3	*æ						
-2887	E	5	to hold/grasp hand			--	--	tua3	ta3a	tiB	--	--	*æ						
-2888	E	6	to hold in mouth			--	--	mpua3	mpa3a	mʔpziB	--	--	*æ						
-2889	E	7	billhook			sa5	--	tsua7	sa7a	tsiC	--	--	*æ						
-2890	E	8	chaff/husk			fha5	sa5	sua5	sa5b	siB	v̥ei5	m̥e5	*æ						
-2891	E	9	pig			pa5	mpa5	mpua5	mpa5a	mʔpeiC	mpei5	me5	*æ						
-2892	E	10	rope			l̥ha5	l̥ha5	hl̥ua5	la5b	l̥iC	l̥ei5	l̥e5	*æ						
-2893	E	11	bland/tasteless			ɕen6	--	tʂua6	səa6	ziC	ʃi6	tɕi6	*æ						
-2894	E	12	comb			ɣa6	ʐa6	ʐua6	ʐəa6	wjiC	vi6	ɦji6	*æ						
-2895	E	13	to have food w/rice			--	--	ntsua6	mpje6	mpjiC	--	--	*æ						
-2896	E	14	to join			sen7	tshɑ7	tsua7	sa7a	--	--	--	*æ						
-2897	E	15	to rob			--	--	--	ɦa7b	hiD	--	--	*æ						
-2898	E	16	tin			--	--	tshua7	sa7b	--	--	--	*æ						
-2899	E	17	young			--	--	hl̥ua7	ɭa7b	--	--	--	*æ						
+2883	E	1	bridge			--	--	--	la1b	--	--	--							*æ
+2884	E	2	thick			ta1	ta1	tua1	ta1a	tiA	tei1	te1							*æ
+2885	E	3	thigh			pa1	pa1	pua1	pa1a	--	--	pe1							*æ
+2886	E	4	ant			phen3	mpha3	--	--	--	mphai3	m̥je3							*æ
+2887	E	5	to hold/grasp hand			--	--	tua3	ta3a	tiB	--	--							*æ
+2888	E	6	to hold in mouth			--	--	mpua3	mpa3a	mʔpziB	--	--							*æ
+2889	E	7	billhook			sa5	--	tsua7	sa7a	tsiC	--	--							*æ
+2890	E	8	chaff/husk			fha5	sa5	sua5	sa5b	siB	v̥ei5	m̥e5							*æ
+2891	E	9	pig			pa5	mpa5	mpua5	mpa5a	mʔpeiC	mpei5	me5							*æ
+2892	E	10	rope			l̥ha5	l̥ha5	hl̥ua5	la5b	l̥iC	l̥ei5	l̥e5							*æ
+2893	E	11	bland/tasteless			ɕen6	--	tʂua6	səa6	ziC	ʃi6	tɕi6							*æ
+2894	E	12	comb			ɣa6	ʐa6	ʐua6	ʐəa6	wjiC	vi6	ɦji6							*æ
+2895	E	13	to have food w/rice			--	--	ntsua6	mpje6	mpjiC	--	--							*æ
+2896	E	14	to join			sen7	tshɑ7	tsua7	sa7a	--	--	--							*æ
+2897	E	15	to rob			--	--	--	ɦa7b	hiD	--	--							*æ
+2898	E	16	tin			--	--	tshua7	sa7b	--	--	--							*æ
+2899	E	17	young			--	--	hl̥ua7	ɭa7b	--	--	--							*æ
 2900																			
 2901	C		Chinese loanwords in set 5a:			*mə-pʰˤrak (OC)	>	phæk (MC)	拍	pāi  ‘to strike’	>	H *mbæA ‘to clap’							
 2902								dap (MC)	蹋	tà  ‘to trample/tread’	>	H *dæD ‘to step on/tread’							
 2903																			
 2904			5b. HM	*-æ															
-2905						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2906	E	18	molar tooth			--	pa2	pua1	--	--	--	--	*æ	*æ	*æ	--	--	--	ba1
-2907	E	19	mountain pass			--	--	--	--	--	e7	--	*æ	*æ	*æ	ɛ7	e1	ɛ7	a1
+2905	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2906	E	18	molar tooth			--	pa2	pua1	--	--	--	--	--	--	--	ba1	*æ	*æ	*æ
+2907	E	19	mountain pass			--	--	--	--	--	e7	--	ɛ7	e1	ɛ7	a1	*æ	*æ	*æ
 2908																			
 2909	C		Chinese loanword in set 5b:			ngwæX (MC)	瓦	wǎ  ‘tile’	>	HM *ŋʷæX									
 2910																			
 2911			5c. HM	*-æj	(169)														
-2912						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2913	E	20	dry/thirsty			qha1	--	ɴqhua1	ŋka1b	ɴʔqheiA	ŋkhei1	--	*æ	*æj	*aj	gaːi1	gaːi1’	--	gɔi1
+2912	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2913	E	20	dry/thirsty			qha1	--	ɴqhua1	ŋka1b	ɴʔqheiA	ŋkhei1	--	gaːi1	gaːi1’	--	gɔi1	*æ	*æj	*aj
 2914																			
 2915			5d. HM	*-æw (114, 152, 171)															
-2916						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2917	E	21	liquid/soup			--	ca3	kua5	ka3a	tɕiB	--	--	*æ	*æw	*au	--	--	kla3	--
-2918	E	22	to play			--	tsa4	--	--	--	--	--	*æ	*æw	*au	dzjaːu6	dzaːu6	dza6	--
-2919	E	23	wind			tɕen5	ci5	cua5	--	tɕiC	tʃi5	tɕi5	*æ	*æw	*au	ʥau5	ȡaːu5	hja5	dzau5
-2920	E	24	to measure (rice)												*au	gaːu1	gaːu1'	ɬa1	dzau1
-2921	E	25	young man												*au	bjaːu2	baːu2	--	--
-2922	E	26	to repay												*au	--	klaːu3	klau3	kau3
+2916	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2917	E	21	liquid/soup			--	ca3	kua5	ka3a	tɕiB	--	--	--	--	kla3	--	*æ	*æw	*au
+2918	E	22	to play			--	tsa4	--	--	--	--	--	dzjaːu6	dzaːu6	dza6	--	*æ	*æw	*au
+2919	E	23	wind			tɕen5	ci5	cua5	--	tɕiC	tʃi5	tɕi5	ʥau5	ȡaːu5	hja5	dzau5	*æ	*æw	*au
+2920	E	24	to measure (rice)										gaːu1	gaːu1'	ɬa1	dzau1			*au
+2921	E	25	young man										bjaːu2	baːu2	--	--			*au
+2922	E	26	to repay										--	klaːu3	klau3	kau3			*au
 2923																			
 2924	C		Chinese loanwords in set 5d: Another Chinese loan which might fit here would be the irregular Mienic word for ‘claw/talon’ (M *ʔɲauB); Downer (1973) noted the resemblance to Amoy /jiaù/.			*lˤaw (OC)	>	daw (MC)	桃	táo ‘peach’	>	HM *ɢlæw							
 2925	X					*[g]aw (OC)	>	haw (MC)	號	háo ‘to shout/cry out’	>	HM *Gæw ‘to sing/cry out’							
@@ -2928,14 +2928,14 @@
 2928								tsrhæwX (MC)	炒	chǎo ‘to fry’	>	M *chauB							
 2929																			
 2930			5e. HM	*-æp (86, 144)															
-2931						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2932	E	27	to cut			ken7	ɴqɑ7	--	--	--	tʃei7	--	*æ	*æp	*æp	kap7	kjap7	klan7	kɛp7
-2933	E	28	fan			zen8	mjɑ7	ntsua8	mpja8	mpziD	mpli8	mi8	*æ	*æp	*æp	bjap8	bjaːp8	bjɛn8	dzjɛp8
+2931	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2932	E	27	to cut			ken7	ɴqɑ7	--	--	--	tʃei7	--	kap7	kjap7	klan7	kɛp7	*æ	*æp	*æp
+2933	E	28	fan			zen8	mjɑ7	ntsua8	mpja8	mpziD	mpli8	mi8	bjap8	bjaːp8	bjɛn8	dzjɛp8	*æ	*æp	*æp
 2934																			
 2935																			
 2936			5f. M	*-æt	(164)														
-2937						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2938	E	29	to twist/rub												*æt	ɕat7	saːt7’	saːt7’	sjɛt7
+2937	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2938	E	29	to twist/rub										ɕat7	saːt7’	saːt7’	sjɛt7			*æt
 2939																			
 2940			Discussion																
 2941			There was a merger of Hmong-Mien *au (3d) and *æw (5c) into Mienic *au.  ‘To measure rice’, ‘young man’, ‘to repay’, and ‘to stir fry’ have been placed here, in rime 5c, given a slightly better fit with the reflexes of Hmong-Mien ‘wind’.  But it should be remembered that these words could be taken back to either *au or *æw in Proto Hmong-Mien.																
@@ -2968,24 +2968,24 @@
 2968			6																
 2969			6a. H	*-ɔ															
 2970						1	2	3	4	5	6	7	H						
-2971	E	1	many/much			nɛ5	--	ntau5	ntɔ5a	nʔtuC	ntei5	--	*ɔ						
-2972	E	2	shoes			--	ɕɔ5	khau5	kɔ5b	khuC	ʃu5	ŋkʉ5	*ɔ						
-2973	E	3	to sieve			--	ɕɔ5	tʂhau5	--	--	--	--	*ɔ						
-2974	E	4	bracelet			--	pɔ6	pau6	po6	vuC	--	po6	*ɔ						
-2975	E	5	ant			--	--	ɳtʂau8	mpʐɔ8	mpjuD	--	--	*ɔ						
+2971	E	1	many/much			nɛ5	--	ntau5	ntɔ5a	nʔtuC	ntei5	--							*ɔ
+2972	E	2	shoes			--	ɕɔ5	khau5	kɔ5b	khuC	ʃu5	ŋkʉ5							*ɔ
+2973	E	3	to sieve			--	ɕɔ5	tʂhau5	--	--	--	--							*ɔ
+2974	E	4	bracelet			--	pɔ6	pau6	po6	vuC	--	po6							*ɔ
+2975	E	5	ant			--	--	ɳtʂau8	mpʐɔ8	mpjuD	--	--							*ɔ
 2976																			
 2977	C		Chinese loanwords in set 6a:			*[d]rak ‘to put on clothes; be attached’ (OC) 	>	drjak (MC)	著	zhuó ‘to wear, touch, etc.	>	H *drɔC ‘to hit target’							
 2978	X					*trak ‘to place’ (OC) 	>	trjak (MC)	著	zhuó ‘to wear, touch, etc.’	>	H *trɔC ‘to put on/wear (shoes)’							
 2979																			
 2980	D		6b. HM	*-ɔi	(131)														
-2981						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2982	E	6	pangolin			ɣo6	ʐɔ6	ʐau6	ʐo6	wjoŋA	--	ɦje6	*ɔ	*ɔi	*əi	gai6	gjai6	--	--
+2981	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2982	E	6	pangolin			ɣo6	ʐɔ6	ʐau6	ʐo6	wjoŋA	--	ɦje6	gai6	gjai6	--	--	*ɔ	*ɔi	*əi
 2983																			
 2984	E		6c. HM	*-əuk	(241)														
-2985						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-2986	E	7	straw sandals											*əuk	*əuk	ɕu7	tθu7’	ȶu7	--
-2987	E	8	to dissolve											*əuk	*əuk	ju8	ju6	--	--
-2988	E	9	sword											*əuk	*əuk	ʥu8	ȡu6	ȡu8	dziu8
+2985	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+2986	E	7	straw sandals										ɕu7	tθu7’	ȶu7	--		*əuk	*əuk
+2987	E	8	to dissolve										ju8	ju6	--	--		*əuk	*əuk
+2988	E	9	sword										ʥu8	ȡu6	ȡu8	dziu8		*əuk	*əuk
 2989																			
 2990	C		Chinese loanwords in set 6c:			*tʕək (OC)	>	tok (MC)	得	dé  ‘to get/gain’	>	HM *təuk							
 2991	X					*truk (OC)	>	trjuwk (MC)	竹	zhú ‘bamboo’	>	HM *ɲcəuk ‘bamboo strip’							
@@ -3004,28 +3004,28 @@
 3004			7																
 3005			7a. H	*-o															
 3006						1	2	3	4	5	6	7	H						
-3007	E	1	to   (tr)			tho1	--	--	to1b	thuA	--	--	*o						
-3008	E	2	thunder			ho1	so1	sɔ1	so1b	suA	xu1	--	*o						
-3009	E	3	female/woman			--	--	pɔ2	--	vuA	--	--	*o						
-3010	E	4	step			ȶə2	ʈo2	ʈɔ2	ʈo2	ʐuA	tʃa2	tɕa6	*o						
-3011	E	5	to cover self			--	--	vɔ3	wo3a	ʔwuB	--	va3	*o						
-3012	E	6	to look after			ɣə3	--	ʐɔ3	ʐo3a	ʔwjuB	--	--	*o						
-3013	E	7	to play (flute)			--	--	tʂhɔ3	pʐo3b	--	--	--	*o						
-3014	E	8	to sharpen/grind			xhə3	ho3	hɔ3	ho3b	huB	xu3	ho3	*o						
-3015	E	9	thread			fhə3	so3	sɔ3	so3b	suB	--	--	*o						
-3016	E	10	turbid			--	ɳʈo3	ɳʈɔ5	ɳʈo3a	ɳʔtʂuB	ɳtʃu4	ȵ~ɔ3	*o						
-3017	E	11	cow/ox			--	ʑu4	--	--	ʑuB	--	--	*o						
-3018	E	12	thorn			pə4	to4	pɔ4	pɯ4	vuB	--	--	*o						
-3019	E	13	clf-mouthfuls			lo5	--	lɔ5	lo5a	--	lu5	--	*o						
-3020	E	14	to remember			--	--	ɲcɔ5	ȵʨo5a	ȵʔʨuC	--	--	*o						
-3021	E	15	to rest			ʨhə5	ɕo5	ʂɔ5	so5b	suC	θjeu5	--	*o						
-3022	E	16	span, finger			l̥o5	--	dɔ7	l̥o5a	qlouC	--	--	*o						
-3023	E	17	to wring			--	pʐo5	--	pʐo5a	pjuC	--	pja5	*o						
-3024	E	18	to cover			mə6	--	mpɔ6	mpu6	mpuC	--	pho5	*o						
-3025	E	19	to track			--	ɳɑŋ6	ɳʈɔ6	--	--	--	--	*o						
-3026	E	20	armpit			ɕə5	ʨo5	tʂɔ7	so7a	tsuC	--	ʨa5	*o						
-3027	E	21	muddy			--	--	ŋkɔ7	ŋko7a	--	--	ŋa7	*o						
-3028	E	22	to grind (grain)			--	ʐo8	ʐɔ8	ʐo8	wjuD	--	--	*o						
+3007	E	1	to   (tr)			tho1	--	--	to1b	thuA	--	--							*o
+3008	E	2	thunder			ho1	so1	sɔ1	so1b	suA	xu1	--							*o
+3009	E	3	female/woman			--	--	pɔ2	--	vuA	--	--							*o
+3010	E	4	step			ȶə2	ʈo2	ʈɔ2	ʈo2	ʐuA	tʃa2	tɕa6							*o
+3011	E	5	to cover self			--	--	vɔ3	wo3a	ʔwuB	--	va3							*o
+3012	E	6	to look after			ɣə3	--	ʐɔ3	ʐo3a	ʔwjuB	--	--							*o
+3013	E	7	to play (flute)			--	--	tʂhɔ3	pʐo3b	--	--	--							*o
+3014	E	8	to sharpen/grind			xhə3	ho3	hɔ3	ho3b	huB	xu3	ho3							*o
+3015	E	9	thread			fhə3	so3	sɔ3	so3b	suB	--	--							*o
+3016	E	10	turbid			--	ɳʈo3	ɳʈɔ5	ɳʈo3a	ɳʔtʂuB	ɳtʃu4	ȵ~ɔ3							*o
+3017	E	11	cow/ox			--	ʑu4	--	--	ʑuB	--	--							*o
+3018	E	12	thorn			pə4	to4	pɔ4	pɯ4	vuB	--	--							*o
+3019	E	13	clf-mouthfuls			lo5	--	lɔ5	lo5a	--	lu5	--							*o
+3020	E	14	to remember			--	--	ɲcɔ5	ȵʨo5a	ȵʔʨuC	--	--							*o
+3021	E	15	to rest			ʨhə5	ɕo5	ʂɔ5	so5b	suC	θjeu5	--							*o
+3022	E	16	span, finger			l̥o5	--	dɔ7	l̥o5a	qlouC	--	--							*o
+3023	E	17	to wring			--	pʐo5	--	pʐo5a	pjuC	--	pja5							*o
+3024	E	18	to cover			mə6	--	mpɔ6	mpu6	mpuC	--	pho5							*o
+3025	E	19	to track			--	ɳɑŋ6	ɳʈɔ6	--	--	--	--							*o
+3026	E	20	armpit			ɕə5	ʨo5	tʂɔ7	so7a	tsuC	--	ʨa5							*o
+3027	E	21	muddy			--	--	ŋkɔ7	ŋko7a	--	--	ŋa7							*o
+3028	E	22	to grind (grain)			--	ʐo8	ʐɔ8	ʐo8	wjuD	--	--							*o
 3029																			
 3030			Chinese loanwords in set 7a:					gjuwX (MC)	臼	jiù  ‘mortar/treadmill’	>	H *ɟoB							
 3031								tsuX (MC)	祖	zǔ  ‘ancestor’	>	H *tsjoB ‘tiger’							
@@ -3034,62 +3034,62 @@
 3034	X					*(mə-)tsʰˤuʔ-s (OC)	>	tshawH (MC)	造	zào  ‘to arrive at’	>	H *dzoC ‘to reach/arrive at’							
 3035																			
 3036	D		7b. HM	*-o	(225)														
-3037						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3038	E	23	big			ȴ̥hə1	--	hl̥ɔ1	ɭo1b	l̥uA	l̥jeu1’	ȴo1	*o	*o	*o	lo1	lu1’	ɬu1	lɔu1
-3039	E	24	husband			--	po3	--	--	--	--	--	*o	*o	*o	--	--	bu3	--
-3040	E	25	to soak												*o	--	--	ta2	tɔu2
+3037	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3038	E	23	big			ȴ̥hə1	--	hl̥ɔ1	ɭo1b	l̥uA	l̥jeu1’	ȴo1	lo1	lu1’	ɬu1	lɔu1	*o	*o	*o
+3039	E	24	husband			--	po3	--	--	--	--	--	--	--	bu3	--	*o	*o	*o
+3040	E	25	to soak										--	--	ta2	tɔu2			*o
 3041																			
 3042	C		Chinese loanwords in set 7b:			*[ts]ˤuk-s (OC)	>	tsawH (MC)	竈	zào  ‘stove’	>	HM *N-tsoH							
 3043	X					*(mə-)pˤuk-s (OC)	>	pawH (MC)	報	bào  ‘to announce/report’	>	M *ʔboC (< *mpoH) ‘to tell’							
 3044																			
 3045			7c. HM	*-u̯o (206, 225)															
-3046						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3047	E	26	deep			to1	to1	tɔ1	to1a	tuA	ðu1	to1	*o	*u̯o	*u	do1	du1	du1	--
-3048	E	27	old			qo5	qɔ5	qu1	--	--	ku5	ko5	*o	*u̯o	*u	ko5’	ku5	ku5	ku5
+3046	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3047	E	26	deep			to1	to1	tɔ1	to1a	tuA	ðu1	to1	do1	du1	du1	--	*o	*u̯o	*u
+3048	E	27	old			qo5	qɔ5	qu1	--	--	ku5	ko5	ko5’	ku5	ku5	ku5	*o	*u̯o	*u
 3049																			
 3050	E		7d. HM	*-əw	(206)														
-3051						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3052	E	28	bamboo			l̥ho3	l̥ho3	hl̥ɔ3	--	--	--	--	*o	*əw	*əu	l̥au3	lɔu3	ɬau3	lau3
-3053	E	29	to chop			to3	--	ntɔ3	nto3a	nʔtuB	ntu3	no3	*o	*əw	*əu	--	--	dau3	dau3
-3054	E	30	to come back			lo4	lo4	lɔ4	lu4	luB	lɔu4	lo4	*o	*əw	*əu	lau4	lau4	lau4	lau4
+3051	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3052	E	28	bamboo			l̥ho3	l̥ho3	hl̥ɔ3	--	--	--	--	l̥au3	lɔu3	ɬau3	lau3	*o	*əw	*əu
+3053	E	29	to chop			to3	--	ntɔ3	nto3a	nʔtuB	ntu3	no3	--	--	dau3	dau3	*o	*əw	*əu
+3054	E	30	to come back			lo4	lo4	lɔ4	lu4	luB	lɔu4	lo4	lau4	lau4	lau4	lau4	*o	*əw	*əu
 3055																			
 3056	C		Chinese loanword in set 7d:			ʔæwX (MC)	拗	ǎo  ‘to break’	>	H *ʔloB, M *ʔnəuB (< *ʔəwX) This word appears with different “cover” consonants in Hmongic (ʔl- ) and Mienic (ʔn- ).  It is not clear if this was borrowed once as *ʔəwX, or separately into the two branches, from Chinese sources that had already added a cover consonant, as H *ʔloB and M *ʔnəuB; they have been entered separately in the onsets section and in the appendix.									
 3057																			
 3058			7e. HM	*-i̯ou	(134)														
-3059						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3060	E	31	cooking smoke			--	ȵʨho5	ɲchɔ5	ȵʨo5b	ȵʔʨhuB	--	--	*o	*i̯ou	*i̯ou	ɕeu5	sɔu5’	--	--
+3059	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3060	E	31	cooking smoke			--	ȵʨho5	ɲchɔ5	ȵʨo5b	ȵʔʨhuB	--	--	ɕeu5	sɔu5’	--	--	*o	*i̯ou	*i̯ou
 3061																			
 3062	C		Chinese loanwords in set 7e:			*Nə.[ts]ˤuʔ (OC)	>	tsawX (MC)	早	zǎo  ‘early’	>	HM *ntsi̯ouX							
 3063								syoX (MC)	暑	shǔ  ‘warm’	>	HM *sji̯ouX							
 3064																			
 3065	E		7f. HM	*-əp	(106)														
-3066						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3067	E	32	to bite			tə8	to8	tɔ8	to8	ðuD	--	ta8	*o	*əp	*əp	tap8	tap8	than8	--
-3068	E	33	centipede												*əp	ɕap7	tθap7’	sən7	tsap7
-3069	E	34	lightning flash												*əp	gap7	--	--	dzjɛp8
+3066	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3067	E	32	to bite			tə8	to8	tɔ8	to8	ðuD	--	ta8	tap8	tap8	than8	--	*o	*əp	*əp
+3068	E	33	centipede										ɕap7	tθap7’	sən7	tsap7			*əp
+3069	E	34	lightning flash										gap7	--	--	dzjɛp8			*əp
 3070																			
 3071	C		Chinese loanwords in set 7f:			*kˤ<r>ep (OC)	>	kɛp (MC)	夾	jiā  ‘to pinch’	>	M *ʔɟəpD ‘to pick up’							
 3072	X					*(kə.)rəp (OC)	>	lip (MC)	笠	lì  ‘bamboo hat’	>	M *rəpD							
 3073																			
 3074			7g. HM	*-ət (222, 108)															
-3075						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3076	E	35	to weave			to7	nto7	ntɔ7	--	--	ntu7	na7	*o	*ət	*ət	dat7	dat7	dan7	dat7
-3077	E	36	to laugh			ȶə7	ʈo7	ʈɔ7	ʂo7a	tʂuD	tsu7	ʨa7	*o	*ət	*ət	kjat7	kjet7	klan7	tut7
-3078	E	37	near												*ət	θat7	tθat7	--	--
-3079	E	38	thick (porridge)												*ət	--	kat8	--	--
+3075	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3076	E	35	to weave			to7	nto7	ntɔ7	--	--	ntu7	na7	dat7	dat7	dan7	dat7	*o	*ət	*ət
+3077	E	36	to laugh			ȶə7	ʈo7	ʈɔ7	ʂo7a	tʂuD	tsu7	ʨa7	kjat7	kjet7	klan7	tut7	*o	*ət	*ət
+3078	E	37	near										θat7	tθat7	--	--			*ət
+3079	E	38	thick (porridge)										--	kat8	--	--			*ət
 3080																			
 3081	C		Chinese loanword in set 7g:			kjwot (MC)	蕨	jué  ‘fern’	>	M *kʷjətD									
 3082																			
-3083	D		7h. HM	*-u̯ət	(108)														
-3084						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3085	E	39	to see			poŋ8	--	pɔ8	po8	mpuD	pu8	pa8	*o	*u̯ət	*u̯ət	pwat8	fat8	phi8	--
+3083	P		7h. HM	*-u̯ət	(108)														
+3084	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3085	E	39	to see			poŋ8	--	pɔ8	po8	mpuD	pu8	pa8	pwat8	fat8	phi8	--	*o	*u̯ət	*u̯ət
 3086																			
 3087	C		Chinese loanword in set 7h:			phjut (MC)	拂	fú  ‘to brush’	>	M *phu̯ətD ‘to sweep’									
 3088																			
 3089	E		7i. HM	*-ək	(167)														
-3090						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3091	E	40	crossbow											*ək	*ək	n̥ak5	na7’	--	--
-3092	E	41	to swallow											*ək	*ək	na7	na7	na7	--
+3090	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3091	E	40	crossbow										n̥ak5	na7’	--	--		*ək	*ək
+3092	E	41	to swallow										na7	na7	na7	--		*ək	*ək
 3093																			
 3094	C		Chinese loanword in set 7i:			*kə.rək (OC)	>	lik (MC)	力	lì  ‘strength’	>	HM *-rək, M *khləkD							
 3095																			
@@ -3126,40 +3126,40 @@
 3126			8																
 3127			8a. H	*-ʉ															
 3128						1	2	3	4	5	6	7	H						
-3129	E	1	to push earth aside			phɛ1	--	phua1	pou1b	--	phau1	phɪ1	*ʉ						
-3130	E	2	marrow/brains			l̥hɛ1	l̥hə1	hl̥ɯ1	lou1b	l̥uA	--	--	*ʉ						
-3131	E	3	to rot			la2	--	lɯ2	lou2	lenA	--	--	*ʉ						
-3132	E	4	2sg (you)			--	--	kɔ2	--	--	--	--	*ʉ						
-3133	E	5	to pack/wrap			qhɛ3	--	qhɯ3	hou3b	qhuB	khau3	--	*ʉ						
-3134	E	6	to flow			--	--	ntɯ4	--	qluB	ljɔu4	--	*ʉ						
-3135	E	7	cuckoo			--	qu4	--	hu4	--	--	--	*ʉ						
-3136	E	8	elephant			shɛ5	--	ntshɯ5	--	nʔtshuC	--	--	*ʉ						
-3137	E	9	lung			zɛ6	mʐə5	ɳtʂɯ7	mpʐou5a	mʔpjuC	--	mɔ5	*ʉ						
-3138	E	10	to stroke			l̥hɛ5	phʐə5	phlɯ7	plou5b	phluC	--	--	*ʉ						
-3139	E	11	which			tei6	--	tɯ6	tu6	ðuB	--	ti1	*ʉ						
-3140	E	12	shoulder			--	pə6	pɯ6	--	vuC	--	--	*ʉ						
+3129	E	1	to push earth aside			phɛ1	--	phua1	pou1b	--	phau1	phɪ1							*ʉ
+3130	E	2	marrow/brains			l̥hɛ1	l̥hə1	hl̥ɯ1	lou1b	l̥uA	--	--							*ʉ
+3131	E	3	to rot			la2	--	lɯ2	lou2	lenA	--	--							*ʉ
+3132	E	4	2sg (you)			--	--	kɔ2	--	--	--	--							*ʉ
+3133	E	5	to pack/wrap			qhɛ3	--	qhɯ3	hou3b	qhuB	khau3	--							*ʉ
+3134	E	6	to flow			--	--	ntɯ4	--	qluB	ljɔu4	--							*ʉ
+3135	E	7	cuckoo			--	qu4	--	hu4	--	--	--							*ʉ
+3136	E	8	elephant			shɛ5	--	ntshɯ5	--	nʔtshuC	--	--							*ʉ
+3137	E	9	lung			zɛ6	mʐə5	ɳtʂɯ7	mpʐou5a	mʔpjuC	--	mɔ5							*ʉ
+3138	E	10	to stroke			l̥hɛ5	phʐə5	phlɯ7	plou5b	phluC	--	--							*ʉ
+3139	E	11	which			tei6	--	tɯ6	tu6	ðuB	--	ti1							*ʉ
+3140	E	12	shoulder			--	pə6	pɯ6	--	vuC	--	--							*ʉ
 3141																			
 3142	C		Chinese loanwords in set 8a:			luH (MC)	露	lù  ‘dew’	>	H *lʉC									
 3143	X					bjuX (MC)	腐	fǔ  ‘curd’	>	H *hʉB ‘bean curd’									
 3144																			
 3145			8b. HM	*-u̯ei (39, 170, 242)															
-3146						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3147	E	13	2sg (you)			moŋ2	mɯ2	--	--	--	mɐŋ2	mɯ6	*ʉ	*u̯ei	*u̯ei	mwei 2	mei2	məi2	mui2
-3148	E	14	tail			tɛ3	tə3	tɯ5	tou3a	tuB	ðau3	tɛ3	*ʉ	*u̯ei	*u̯ei	twei3	tei3	dwai3	dui3
-3149	E	15	younger brother			--	kɯ3	kɯ3	kou3a	kuB	--	--	*ʉ	*u̯ei	*u̯ei	--	--	ki3	kui3
-3150	E	16	malodorous			--	ʨə5	tʂɯ5	sou5a	tsuC	tʃau5 	ʨɔ5	*ʉ	*u̯ei	*u̯ei	θwei5’	tθei5	tswəi5	ti5
-3151	E	17	to sleep/lie down			pi5	pə5	pɯ5	pu5a	puC	pau5	pɛ5	*ʉ	*u̯ei	*u̯ei	pwei5’	fei5	--	bui5
-3152	E	18	bee												*u̯ei	mwei4	ŋwei4	mi4	mui4
-3153	E	19	to shed leaves/drop												*u̯ei	blwei6	blei6	--	--
+3146	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3147	E	13	2sg (you)			moŋ2	mɯ2	--	--	--	mɐŋ2	mɯ6	mwei 2	mei2	məi2	mui2	*ʉ	*u̯ei	*u̯ei
+3148	E	14	tail			tɛ3	tə3	tɯ5	tou3a	tuB	ðau3	tɛ3	twei3	tei3	dwai3	dui3	*ʉ	*u̯ei	*u̯ei
+3149	E	15	younger brother			--	kɯ3	kɯ3	kou3a	kuB	--	--	--	--	ki3	kui3	*ʉ	*u̯ei	*u̯ei
+3150	E	16	malodorous			--	ʨə5	tʂɯ5	sou5a	tsuC	tʃau5 	ʨɔ5	θwei5’	tθei5	tswəi5	ti5	*ʉ	*u̯ei	*u̯ei
+3151	E	17	to sleep/lie down			pi5	pə5	pɯ5	pu5a	puC	pau5	pɛ5	pwei5’	fei5	--	bui5	*ʉ	*u̯ei	*u̯ei
+3152	E	18	bee										mwei4	ŋwei4	mi4	mui4			*u̯ei
+3153	E	19	to shed leaves/drop										blwei6	blei6	--	--			*u̯ei
 3154																			
 3155	C		Chinese loanwords in set 8b: 			*[k]ʷˤraj (OC)	>	kwæ (MC)	蝸	wō  ‘snail’	>	H *ɢʉA							
 3156	X					*[k]ʷˤraj (OC)	>	kwæ (MC)	蝸	wō  ‘snail’	>	M *klu̯eiA/B							
 3157	X					*[dz]ˤo[j]ʔ (OC)	>	dzwaX (MC)	坐	zuò  ‘to sit’	>	M *dzu̯eiB							
 3158								lwojH (MC)	累	lèi  ‘tired’	>	M *lu̯eiC ‘lazy’							
 3159																			
-3160	D		8c. HM	*-ui	(226) 														
-3161						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3162	E	20	nose			zɛ6	mʐə6	ɳtʂɯ6	mpʐu6	mpjuC	mpjau6	mjɔ6	*ʉ	*ui	*ui	pa6	--	bli6	--
+3160	P		8c. HM	*-ui	(226) 														
+3161	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3162	E	20	nose			zɛ6	mʐə6	ɳtʂɯ6	mpʐu6	mpjuC	mpjau6	mjɔ6	pa6	--	bli6	--	*ʉ	*ui	*ui
 3163																			
 3164			Discussion																
 3165			It is clear that the medial -w- in the Mienic forms of rime 8b point to a rounded element in the rime, not secondary rounding of the initial consonant, since it occurs consistently in this rime.																
@@ -3177,68 +3177,68 @@
 3177			9																
 3178			9a. H	*-uw															
 3179						1	2	3	4	5	6	7	H						
-3180	E	1	gourd			--	tɔ1	tau1	tu1a	toA	--	--	*uw						
-3181	E	2	to butt (of bulls)			ȶu5	--	ɳʈau5	ɳʈu5a	ɳʔtʂoC	--	--	*uw						
-3182	E	3	husked rice			--	ntsɔ5	--	--	--	ɳtʃei5	ȵɯ5	*uw						
-3183	E	4	male			--	--	lau5	ɭu3a	ʔloB	--	--	*uw						
-3184	E	5	centipede			khu7	--	--	--	--	khjɔ5	--	*uw						
-3185	E	6	bamboo hat			--	ku7	kau7	ku7a	koD	--	kɯ7	*uw						
-3186	E	7	to beat (someone)			--	--	ntau7	ntu7a	--	--	ta7	*uw						
-3187	E	8	crooked			--	ŋkhu7	ŋkhau7	ŋko7b	ŋʔkhaD	--	ŋɔ1	*uw						
-3188	E	9	dark			tsə7	pʐu7	tʂau7	pʐu7a	pjoD	pjɔu7	--	*uw						
-3189	E	10	houttuynia cordata			ȶu7	ʈu7	ʈau7	ʈu7a	tʂoD	--	--	*uw						
-3190	E	11	back (of body)			kə8	--	qau8	hu8	ʁoD	kɔ8	kɯ8	*uw						
+3180	E	1	gourd			--	tɔ1	tau1	tu1a	toA	--	--							*uw
+3181	E	2	to butt (of bulls)			ȶu5	--	ɳʈau5	ɳʈu5a	ɳʔtʂoC	--	--							*uw
+3182	E	3	husked rice			--	ntsɔ5	--	--	--	ɳtʃei5	ȵɯ5							*uw
+3183	E	4	male			--	--	lau5	ɭu3a	ʔloB	--	--							*uw
+3184	E	5	centipede			khu7	--	--	--	--	khjɔ5	--							*uw
+3185	E	6	bamboo hat			--	ku7	kau7	ku7a	koD	--	kɯ7							*uw
+3186	E	7	to beat (someone)			--	--	ntau7	ntu7a	--	--	ta7							*uw
+3187	E	8	crooked			--	ŋkhu7	ŋkhau7	ŋko7b	ŋʔkhaD	--	ŋɔ1							*uw
+3188	E	9	dark			tsə7	pʐu7	tʂau7	pʐu7a	pjoD	pjɔu7	--							*uw
+3189	E	10	houttuynia cordata			ȶu7	ʈu7	ʈau7	ʈu7a	tʂoD	--	--							*uw
+3190	E	11	back (of body)			kə8	--	qau8	hu8	ʁoD	kɔ8	kɯ8							*uw
 3191																			
 3192			Chinese loanwords in set 9a:					syuw (MC)	收	shōu ‘to receive/gather in’	>	H *sjuwA							
 3193								ʔjiwH (MC)	幼	yòu ‘young’	>	H *ʔjuwC ‘small/young’							
 3194	X					*l̥ˤik (OC)	>	thet (MC)	鐵	tiě  ‘iron’	>	H *hluwC							
 3195																			
 3196			9b. HM	*-uj (243, 260)															
-3197						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3198	E	12	sour			ɕhu1	ɕɔ1	--	su1b	soA	θjɔ1	sɯ1	*uw	*uj	*uj	ɕui1	tθui1’	swəi1	si1
-3199	E	13	mouth/beak			ȵu2	ȵɔ2	ɲcau2	ȵʨu2	ȵʨoA	ntjɔ2	ȵʑɯ2	*uw	*uj	*uj	dzuːi2	--	ʨi2	dzi2
-3200	E	14	loud/sound												*uj	bui1	buːi1’	bəi1	bai1
-3201	E	15	bat (animal)												*uj	bui1	buːi1’	bəi1	bai1
-3202	E	16	clothes												*uj	gui1	gui1	lwəi1	--
-3203	E	17	thigh												*uj	ʨui2	ȶuːi2	--	si2
-3204	E	18	steep												*uj	ʨui4	ȶui4	--	ki4
-3205	E	19	thread												*uj	ɕui5	tθuːi5’	sui5	si5
+3197	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3198	E	12	sour			ɕhu1	ɕɔ1	--	su1b	soA	θjɔ1	sɯ1	ɕui1	tθui1’	swəi1	si1	*uw	*uj	*uj
+3199	E	13	mouth/beak			ȵu2	ȵɔ2	ɲcau2	ȵʨu2	ȵʨoA	ntjɔ2	ȵʑɯ2	dzuːi2	--	ʨi2	dzi2	*uw	*uj	*uj
+3200	E	14	loud/sound										bui1	buːi1’	bəi1	bai1			*uj
+3201	E	15	bat (animal)										bui1	buːi1’	bəi1	bai1			*uj
+3202	E	16	clothes										gui1	gui1	lwəi1	--			*uj
+3203	E	17	thigh										ʨui2	ȶuːi2	--	si2			*uj
+3204	E	18	steep										ʨui4	ȶui4	--	ki4			*uj
+3205	E	19	thread										ɕui5	tθuːi5’	sui5	si5			*uj
 3206																			
 3207	C		Chinese loanword in set 9b:			dwoj (MC) ‘violent wind; collapse’	頹	tuí	>	M *dujA ‘to fall (of rain)’									
 3208																			
-3209	D		9c. HM	*-up	(271)														
-3210						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3211	E	20	grasshopper			--	--	--	--	--	--	ka-jɔ7	*uw	*up	*op	tɕop7	--	klin7	--
-3212	E	21	to bury												*op	plop7	plɔp7	--	--
+3209	P		9c. HM	*-up	(271)														
+3210	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3211	E	20	grasshopper			--	--	--	--	--	--	ka-jɔ7	tɕop7	--	klin7	--	*uw	*up	*op
+3212	E	21	to bury										plop7	plɔp7	--	--			*op
 3213																			
 3214	C		Chinese loanwords in set 9c:			*qʰˤ[ə]p (OC)	>	xop (MC)	欱	hē  ‘drink/smoke’	>	HM *hup							
 3215	X					*[t]ˤ[ə]p (OC)	>	top (MC)	荅	dá  ‘small bean’	>	HM *dup ‘bean’ See Sagart 1999:187.							
 3216																			
-3217	D		9d. HM	*-ut	(239)														
-3218						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3219	E	22	glutinous/sticky			nə8	nu8	mplau8	mplu8	mploD	--	--	*uw	*ut	*ut	but8	blut8	blun8	bit8
+3217	P		9d. HM	*-ut	(239)														
+3218	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3219	E	22	glutinous/sticky			nə8	nu8	mplau8	mplu8	mploD	--	--	but8	blut8	blun8	bit8	*uw	*ut	*ut
 3220																			
 3221	C		Chinese loanword in set 9d:			*l̥ˤot (OC)	>	thwat (MC)	脫	tuō  ‘to peel off/escape’	>	M *ʔdutD							
 3222																			
 3223			9e. HM	*-uk (204, 203)															
-3224						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3225	E	23	six			ȶu5	ʈɔ5	ʈau5	ʂu5a	tʂoC	tʃɔ5	tɕɯ5	*uw	*uk	*ok	kwo7	kjɔ7	klɔ7	tɔu7
-3226	E	24	to shrink			xhu7	--	--	--	--	--	--	*uw	*uk	*ok	ɕo7	--	--	--
+3224	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3225	E	23	six			ȶu5	ʈɔ5	ʈau5	ʂu5a	tʂoC	tʃɔ5	tɕɯ5	kwo7	kjɔ7	klɔ7	tɔu7	*uw	*uk	*ok
+3226	E	24	to shrink			xhu7	--	--	--	--	--	--	ɕo7	--	--	--	*uw	*uk	*ok
 3227																			
-3228	D		9f. HM	*-u̯ɛp	(163)														
-3229						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3230	E	25	to drip											*u̯ɛp	*ɛp	djep7	--	djan7	dɛp7
+3228	P		9f. HM	*-u̯ɛp	(163)														
+3229	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3230	E	25	to drip										djep7	--	djan7	dɛp7		*u̯ɛp	*ɛp
 3231																			
 3232	C		Chinese loanwords in set 9f:			*[g][i]p (OC)	>	dzyip (MC)	十	shí  ‘ten’	>	HM *gju̯ɛp This could also have been borrowed from Tibeto-Burman, as were the numerals from ‘four’ through ‘nine’ (see chapter 5, section 2).  Benedict (1987a:14) reconstructs *g(j)iap for Hmong-Mien.							
 3233								dzjep (MC)	捷	jié  ‘quick’	>	HM *cu̯ɛp							
 3234																			
-3235	D		9g. HM	*-u̯ɛt	(70)														
-3236						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3237	E	26	itch(y)/scratch(y)			ʨhu5	ɕi5	khau7	ko7b	khoD	ʃɔ7	ŋɯ7	*uw	*u̯ɛt	*ɛt	ɕet7	set7’	hin7	kɛt7
+3235	P		9g. HM	*-u̯ɛt	(70)														
+3236	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3237	E	26	itch(y)/scratch(y)			ʨhu5	ɕi5	khau7	ko7b	khoD	ʃɔ7	ŋɯ7	ɕet7	set7’	hin7	kɛt7	*uw	*u̯ɛt	*ɛt
 3238																			
-3239	D		9h. HM	*-u̯ɛk	(224)														
-3240						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3241	E	27	to enter			pə6	pɔ5	--	--	--	pɔ6	pɯ6	*uw	*u̯ɛk	*ɛk	pja8	--	phja8	pjɛ8
+3239	P		9h. HM	*-u̯ɛk	(224)														
+3240	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3241	E	27	to enter			pə6	pɔ5	--	--	--	pɔ6	pɯ6	pja8	--	phja8	pjɛ8	*uw	*u̯ɛk	*ɛk
 3242																			
 3243	C		Chinese loanword in set 9h:			*l̥ˤik (OC)	>	thet (MC)	鐵	tiě  ‘iron’	>	M *hrɛkD							
 3244																			
@@ -3266,38 +3266,38 @@
 3266			10																
 3267			10a. H	*-e															
 3268						1	2	3	4	5	6	7	H						
-3269	E	1	finger ring			--	--	mphlai1	--	mʔphleA	--	--	*e						
-3270	E	2	to tie/cross			qhei1	--	qhai1	he1b	qheA	khai1	--	*e						
-3271	E	3	twin			pi1	--	ntsai1	mpje1a	mʔpleA	--	--	*e						
-3272	E	4	to slant/slanting			--	qa2	qai2	--	ʁeA	--	--	*e						
-3273	E	5	bowl			--	--	tai4	te4	--	--	ta4	*e						
-3274	E	6	half			--	--	--	pje7b	phjeC	--	--	*e						
-3275	E	7	quick			xhi5	ʂɑŋ5	ʂai5	--	seC	v̥wei5	--	*e						
-3276	E	8	to scold/curse			--	--	--	he5a	qeC	--	--	*e						
-3277	E	9	to conceal			ɣi7	ʐɑ7	ʐai7	ʐe7a	ʔwjeD	vwei7	ɛ7	*e						
-3278	E	10	daughter/girl			phi7	mphɑ7	ntshai7	mpje7b	mʔphjeD	phai7	phe7	*e						
-3279	E	11	to ladle			hei7	--	hai7	ɦe7b	heD	--	fɛ7	*e						
-3280	E	12	to peel/shave			--	--	chai7	ʨe7b	ʨheD	--	--	*e						
-3281	E	13	to pick up/clamp			--	tɑ7	tai7	te7a	teD	--	n~æ6	*e						
-3282	E	14	to suck			--	--	ntsai7	--	--	--	--	*e						
-3283	E	15	chin/lower jaw			ɕi1	ʨɑ8	tʂai8	se8	zeD	--	--	*e						
-3284	E	16	lightning flash			ȴi8	ȴɑ8	lai8	ɭe8	leD	--	--	*e						
-3285	E	17	to seek shelter			--	--	ɳʈai8	ɳʈe8	ɳtʂeD	--	--	*e						
+3269	E	1	finger ring			--	--	mphlai1	--	mʔphleA	--	--							*e
+3270	E	2	to tie/cross			qhei1	--	qhai1	he1b	qheA	khai1	--							*e
+3271	E	3	twin			pi1	--	ntsai1	mpje1a	mʔpleA	--	--							*e
+3272	E	4	to slant/slanting			--	qa2	qai2	--	ʁeA	--	--							*e
+3273	E	5	bowl			--	--	tai4	te4	--	--	ta4							*e
+3274	E	6	half			--	--	--	pje7b	phjeC	--	--							*e
+3275	E	7	quick			xhi5	ʂɑŋ5	ʂai5	--	seC	v̥wei5	--							*e
+3276	E	8	to scold/curse			--	--	--	he5a	qeC	--	--							*e
+3277	E	9	to conceal			ɣi7	ʐɑ7	ʐai7	ʐe7a	ʔwjeD	vwei7	ɛ7							*e
+3278	E	10	daughter/girl			phi7	mphɑ7	ntshai7	mpje7b	mʔphjeD	phai7	phe7							*e
+3279	E	11	to ladle			hei7	--	hai7	ɦe7b	heD	--	fɛ7							*e
+3280	E	12	to peel/shave			--	--	chai7	ʨe7b	ʨheD	--	--							*e
+3281	E	13	to pick up/clamp			--	tɑ7	tai7	te7a	teD	--	n~æ6							*e
+3282	E	14	to suck			--	--	ntsai7	--	--	--	--							*e
+3283	E	15	chin/lower jaw			ɕi1	ʨɑ8	tʂai8	se8	zeD	--	--							*e
+3284	E	16	lightning flash			ȴi8	ȴɑ8	lai8	ɭe8	leD	--	--							*e
+3285	E	17	to seek shelter			--	--	ɳʈai8	ɳʈe8	ɳtʂeD	--	--							*e
 3286																			
 3287	C		Chinese loanword in set 10a:			*N-kˤ<r>ep (OC)	>	hɛp (MC)	狹	xiá  ‘narrow’	>	H *ɴɢeD							
 3288																			
 3289	E		10b. HM	*-e	(73)														
-3290						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3291	E	18	hungry			--	ɕi1	tʂhai1	se1b	tsheA	--	sa1	*e	*e	*e	ɕa1	sa1’	--	--
-3292	E	19	to fear/be afraid			ɕhi1	ȵʨha5	ɳtʂhai5	ntse5b	nʔtsheC	ɳtʃei1	ȵ̥ɛ5	*e	*e	*e	ʥa5	ȡa5’	ȡa5	dzjɛ5
-3293	E	20	to fool/humor (children)			--	--	--	--	--	kle1	--	*e	*e	*e	--	kja4	kljɔu4	kɛi4
-3294	E	21	that												*e	wa3	va3	wə3	vɛi5
+3290	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3291	E	18	hungry			--	ɕi1	tʂhai1	se1b	tsheA	--	sa1	ɕa1	sa1’	--	--	*e	*e	*e
+3292	E	19	to fear/be afraid			ɕhi1	ȵʨha5	ɳtʂhai5	ntse5b	nʔtsheC	ɳtʃei1	ȵ̥ɛ5	ʥa5	ȡa5’	ȡa5	dzjɛ5	*e	*e	*e
+3293	E	20	to fool/humor (children)			--	--	--	--	--	kle1	--	--	kja4	kljɔu4	kɛi4	*e	*e	*e
+3294	E	21	that										wa3	va3	wə3	vɛi5			*e
 3295																			
 3296	E		10c. HM	*-ej	(37)														
-3297						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3298	E	22	meat			ŋi2	ɲa2	ɴqai2	ŋke2	ɴqeA	ŋkai2	ŋɛ2	*e	*ej	*ej	--	--	ʥi2	hɔi2
-3299	E	23	animal fat/oil												*ej	m̥ei1	mei1’	m̥əi1	mi1
-3300	E	24	sore/boil/blister												*ej	ʨwei2	sei2	--	--
+3297	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3298	E	22	meat			ŋi2	ɲa2	ɴqai2	ŋke2	ɴqeA	ŋkai2	ŋɛ2	--	--	ʥi2	hɔi2	*e	*ej	*ej
+3299	E	23	animal fat/oil										m̥ei1	mei1’	m̥əi1	mi1			*ej
+3300	E	24	sore/boil/blister										ʨwei2	sei2	--	--			*ej
 3301																			
 3302			Chinese loanwords in set 10c:					dej (MC)	蹄	tí  ‘hoof’	>	HM *dej							
 3303	X					*[g](r)aj (OC)	>	gje (MC)	騎	qí  ‘to ride’	>	HM *ɟej							
@@ -3308,10 +3308,10 @@
 3308								dijH (MC)	地	dì  ‘non-irrigated land’	>	M *dejC							
 3309																			
 3310			10d. HM	*-ep (48, 68, 87, 91, 124, 220)															
-3311						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3312	E	25	bear			ȴ̥i7	--	dai7	l̥e7a	--	--	--	*e	*ep	*ep	kjep7	kjaːp7	kljɛ7	--
-3313	E	26	to slice			l̥hei7	l̥hɑ7	hl̥ai7	le7b	--	l̥ai7	--	*e	*ep	*ep	le7	--	--	--
-3314	E	27	to lick			ʑi8	ʑɑ8	jai8	ʑe8	--	ŋklai8	jɛ8	*e	*ep	*ep	--	--	--	dzjɛp8
+3311	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3312	E	25	bear			ȴ̥i7	--	dai7	l̥e7a	--	--	--	kjep7	kjaːp7	kljɛ7	--	*e	*ep	*ep
+3313	E	26	to slice			l̥hei7	l̥hɑ7	hl̥ai7	le7b	--	l̥ai7	--	le7	--	--	--	*e	*ep	*ep
+3314	E	27	to lick			ʑi8	ʑɑ8	jai8	ʑe8	--	ŋklai8	jɛ8	--	--	--	dzjɛp8	*e	*ep	*ep
 3315																			
 3316	C		Chinese loanwords in set 10d: 			*[ts]ap (OC)	>	tsjep (MC)	接	jiē  ‘to receive/accept’	>	HM *tsep ‘to receive/borrow’							
 3317	X					*mə-[tsʰ]<r>op (OC)	>	tsrhɛp (MC)	插	chā  ‘to insert’	>	HM *threp							
@@ -3319,8 +3319,8 @@
 3319								hɛp (MC)	狹	xiá  ‘narrow’	>	M *hep							
 3320																			
 3321	E		10e. HM	*-et	(51)														
-3322						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3323	E	28	tongue			ȵi8	mjɑ8	mplai6	mple8	mpleD	mpli8	mje8	*e	*et	*et	bjet8	bjet8	blin8	bɛt8
+3322	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3323	E	28	tongue			ȵi8	mjɑ8	mplai6	mple8	mpleD	mpli8	mje8	bjet8	bjet8	blin8	bɛt8	*e	*et	*et
 3324																			
 3325	C		Chinese loanwords in set 10e:			*[tsʰ]i[t] ‘varnish’ (OC)	>	tshit (MC)	漆	qī  ‘lacquer’	>	HM *thjet							
 3326	X					*[k]ʷʰˤet ‘break; defective’ (OC)	>	khwet (MC)	缺	quē  ‘to have a gap’	>	HM *NKʷet							
@@ -3345,28 +3345,28 @@
 3345			11																
 3346			11a. H	*-u̯ɛ															
 3347						1	2	3	4	5	6	7	H						
-3348	E	1	to grasp			mɛ1	me1	mua1	muɑ1a	--	--	--	*u̯ɛ						
+3348	E	1	to grasp			mɛ1	me1	mua1	muɑ1a	--	--	--							*u̯ɛ
 3349																			
 3350			11b. HM	*-ɛj (55, 93)															
-3351						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3352	E	2	to have			mɛ2	me2	mua2	--	maA	mɔ2	m~ɪ2	*u̯ɛ	*ɛj	*ai	maːi2	naːi2	ma2	--
-3353	E	3	to squeeze												*ai	ȵai5'	ȵai5	--	--
+3351	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3352	E	2	to have			mɛ2	me2	mua2	--	maA	mɔ2	m~ɪ2	maːi2	naːi2	ma2	--	*u̯ɛ	*ɛj	*ai
+3353	E	3	to squeeze										ȵai5'	ȵai5	--	--			*ai
 3354																			
 3355	C		Chinese loanwords in set 11b: 			*m.rˤajʔ (OC)	>	mɛɨX (MC)	買	mǎi  ‘to buy’	>	HM *mɛjX							
 3356	X					*m.rˤajʔ-s (OC)	>	mɛɨH (MC)	賣	mài  ‘to sell’	>	HM *mɛjH							
 3357																			
-3358	D		11c. HM	*-u̯̯ɛj	(75)														
-3359						1	2	3	4	5	6	7	 H	 HM	 M	8	9	10	11
-3360	E	4	soft			mɛ6	ne6	mua6	noŋ6	mjaC	mɔ6	m~ɪ6	*u̯ɛ	*u̯̯ɛj	*u̯ɛi	mwei6	ŋwei6	mi6	mai6
-3361	E	5	eye			mɛ6	me6	mua6	moŋ6	maC	mɔ6	m~ɪ6	*u̯̯ɛ	*u̯̯ɛj	*u̯̯ɛi	mwei6	ŋwei6	mi6	mai2
+3358	P		11c. HM	*-u̯̯ɛj	(75)														
+3359	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3360	E	4	soft			mɛ6	ne6	mua6	noŋ6	mjaC	mɔ6	m~ɪ6	mwei6	ŋwei6	mi6	mai6	*u̯ɛ	*u̯̯ɛj	*u̯ɛi
+3361	E	5	eye			mɛ6	me6	mua6	moŋ6	maC	mɔ6	m~ɪ6	mwei6	ŋwei6	mi6	mai2	*u̯̯ɛ	*u̯̯ɛj	*u̯̯ɛi
 3362																			
-3363	D		11d. M	*-u̯ai	(61)														
-3364						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3365	E	6	to ask												*u̯ai	naːi6	naːi6	na6	nɔi6
+3363	P		11d. M	*-u̯ai	(61)														
+3364	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3365	E	6	to ask										naːi6	naːi6	na6	nɔi6			*u̯ai
 3366																			
-3367	D		11e. M	*-u̯ɔi	(188)														
-3368						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3369	E	7	sun/day												*u̯ɔi	n̥ɔi1	nɔːi1’	n̥wai1	nai1
+3367	P		11e. M	*-u̯ɔi	(188)														
+3368	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3369	E	7	sun/day										n̥ɔi1	nɔːi1’	n̥wai1	nai1			*u̯ɔi
 3370																			
 3371	C		Chinese loanwords in set 11e:			khoj (MC)	開	kāi  ‘to open’	>	M *khu̯ɔiA									
 3372						twojH (MC)	碓	duì  ‘tilt-hammer/pestle’	>	M *tu̯ɔiC									
@@ -3386,58 +3386,58 @@
 3386			12/17 This category merges two of the rime categories in Wang 1994, 12 and 17.  These two categories differ only in the Jiwei (Qo Xiong) reflex, for which an explanation is proposed in section 2.1.3.1.																
 3387			12/17a. H	*-u̯ei															
 3388						1	2	3	4	5	6	7	H						
-3389	E	1	belly			ʨhu1	ʨhi1	chau1	ʨɔ1b	ʨhuA	the1	--	*u̯ei						
-3390	E	2	to pour			ȴu1	--	lau1	ɭo1a	ʔluA	--	--	*u̯ei						
-3391	E	3	to repay			pə2	pi2	pau2	pɔ2	vuA	--	--	*u̯ei						
-3392	E	4	to burn (tr)			ȶu3	--	ʈau3	ʂɔ3a	tʂuB	--	--	*u̯ei						
-3393	E	5	flour			--	--	--	plɔ5a	plouB	--	--	*u̯ei						
-3394	E	6	sinew			ɕhu3	ɕi3	--	sɔ3b	suB	--	si3	*u̯ei						
-3395	E	7	old			lu4	--	lau4	lo4	lauB	--	--	*u̯ei						
-3396	E	8	river deer			--	--	--	ŋko4	ŋkuB	--	--	*u̯ei						
-3397	E	9	axe			to5	tɔ5	tau7	tɔ5a	tuC	ðei5	ti5	*u̯ei						
-3398	E	10	to boil (tr)			hu5	hɔ3	hau5	--	--	--	--	*u̯ei						
-3399	E	11	to write			xho5	ʂei5	ʂau5	ʐɔ5b	--	--	--	*u̯ei						
-3400	E	12	to fall (over)			ku6	qɔ6	qau6	ho6	ʁuC	--	--	*u̯ei						
-3401	E	13	pus			pu6	pɔ6	pau6	po6	vuB	pei6	pɪ6	*u̯ei						
-3402	E	14	thin (person)			su5	ntsei5	ntsau6	ntso6	--	ɳtʃe6	nʑi6	*u̯ei						
-3403	E	15	young man			ȵo6	--	ɳʈau6	ɳʈo6	ɳtʂuC	ɳtʃi6	--	*u̯ei						
-3404	E	16	ice			ȴ̥u7	--	dau7	--	--	--	--	*u̯ei						
+3389	E	1	belly			ʨhu1	ʨhi1	chau1	ʨɔ1b	ʨhuA	the1	--							*u̯ei
+3390	E	2	to pour			ȴu1	--	lau1	ɭo1a	ʔluA	--	--							*u̯ei
+3391	E	3	to repay			pə2	pi2	pau2	pɔ2	vuA	--	--							*u̯ei
+3392	E	4	to burn (tr)			ȶu3	--	ʈau3	ʂɔ3a	tʂuB	--	--							*u̯ei
+3393	E	5	flour			--	--	--	plɔ5a	plouB	--	--							*u̯ei
+3394	E	6	sinew			ɕhu3	ɕi3	--	sɔ3b	suB	--	si3							*u̯ei
+3395	E	7	old			lu4	--	lau4	lo4	lauB	--	--							*u̯ei
+3396	E	8	river deer			--	--	--	ŋko4	ŋkuB	--	--							*u̯ei
+3397	E	9	axe			to5	tɔ5	tau7	tɔ5a	tuC	ðei5	ti5							*u̯ei
+3398	E	10	to boil (tr)			hu5	hɔ3	hau5	--	--	--	--							*u̯ei
+3399	E	11	to write			xho5	ʂei5	ʂau5	ʐɔ5b	--	--	--							*u̯ei
+3400	E	12	to fall (over)			ku6	qɔ6	qau6	ho6	ʁuC	--	--							*u̯ei
+3401	E	13	pus			pu6	pɔ6	pau6	po6	vuB	pei6	pɪ6							*u̯ei
+3402	E	14	thin (person)			su5	ntsei5	ntsau6	ntso6	--	ɳtʃe6	nʑi6							*u̯ei
+3403	E	15	young man			ȵo6	--	ɳʈau6	ɳʈo6	ɳtʂuC	ɳtʃi6	--							*u̯ei
+3404	E	16	ice			ȴ̥u7	--	dau7	--	--	--	--							*u̯ei
 3405																			
 3406	C		Chinese loanwords in set 12/17a:			*tˤek (OC)	>	tek (MC)	蹢	dí ‘hoof’	>	H *tru̯eiC ‘hoof/claw/nail’							
 3407	X					*(mə-)t(ˤ)rek (OC)	>	trɛk (MC)	摘	zhāi ‘to pluck’	>	H *ndru̯eiC ‘to strip leaves’							
 3408																			
 3409			12/17b. HM	*-ei (39, 170, 208)															
-3410						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3411	E	17	cloth			--	ntei1	ntau1	ntɔ1a	nʔtuA	nte1	ni1	*u̯ei	*ei	*ei	di1	--	di1	dɛi1
-3412	E	18	four			l̥u1	pʐei1	plau1	plɔ1a	plouA	ple1	pi1	*u̯ei	*ei	*ei	pje1	pjei1	pləi1	pɛi5
-3413	E	19	hair			ȴ̥u1	pi1	plau1	pɭɔ1a	plouA	ple1	pi1	*u̯ei	*ei	*ei	pje1	pjei1	pli1	pɛi1
-3414	E	20	to know			pu1	--	pau1	pɔ1a	--	pe1	pɪ1	*u̯ei	*ei	*ei	pei1	pei1	pəi1	bɛi1
-3415	E	21	shell/covering			l̥hu7	--	phlau1	--	phlauC	--	--	*u̯ei	*ei	*ei	--	--	--	fɔu1
-3416	E	22	head			fhu3	pʐei3	hau3	wɔ5b	huB	--	pɦi3’	*u̯ei	*ei	*ei	pje3	pjei3	pli3	pɛi3
-3417	E	23	head louse			ɕhu3	ȵʨhi3	ɳtʂhau3	ntsɔ3b 	nʔtshuB	--	ʨhi3	*u̯ei	*ei	*ei	ɕei3	tθei3	--	dzɛi3
-3418	E	24	son-in-law			--	--	vau3	wɔ3a	ʔwuB	ve3	vi3	*u̯ei	*ei	*ei	vei3	--	--	vɛi3
-3419	E	25	soybean			pu3	--	pau3	--	--	--	--	*u̯ei	*ei	*ei	--	bei3	bi3	mɛi3
-3420	E	26	to dream			pu5	mpei5	mpau5	mpɔ5a	mʔpuC	mpe5	mi5	*u̯ei	*ei	*ei	bei5	bei5	bəi5	bɛi5
-3421	E	27	to taste/try flavor			m̥hu5	--	--	--	--	--	--	*u̯ei	*ei	*ei	--	--	m̥i5	--
-3422	E	28	porcupine			ɕen6	ʨi6	tʂau6	so6	zuC	ʃa6	ʨi6	*u̯ei	*ei	*ei	dei6	dei6	--	hɛi6
-3423	E	29	child												*ei	ʨwei3	sei3	hwjəi7	--
+3410	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3411	E	17	cloth			--	ntei1	ntau1	ntɔ1a	nʔtuA	nte1	ni1	di1	--	di1	dɛi1	*u̯ei	*ei	*ei
+3412	E	18	four			l̥u1	pʐei1	plau1	plɔ1a	plouA	ple1	pi1	pje1	pjei1	pləi1	pɛi5	*u̯ei	*ei	*ei
+3413	E	19	hair			ȴ̥u1	pi1	plau1	pɭɔ1a	plouA	ple1	pi1	pje1	pjei1	pli1	pɛi1	*u̯ei	*ei	*ei
+3414	E	20	to know			pu1	--	pau1	pɔ1a	--	pe1	pɪ1	pei1	pei1	pəi1	bɛi1	*u̯ei	*ei	*ei
+3415	E	21	shell/covering			l̥hu7	--	phlau1	--	phlauC	--	--	--	--	--	fɔu1	*u̯ei	*ei	*ei
+3416	E	22	head			fhu3	pʐei3	hau3	wɔ5b	huB	--	pɦi3’	pje3	pjei3	pli3	pɛi3	*u̯ei	*ei	*ei
+3417	E	23	head louse			ɕhu3	ȵʨhi3	ɳtʂhau3	ntsɔ3b 	nʔtshuB	--	ʨhi3	ɕei3	tθei3	--	dzɛi3	*u̯ei	*ei	*ei
+3418	E	24	son-in-law			--	--	vau3	wɔ3a	ʔwuB	ve3	vi3	vei3	--	--	vɛi3	*u̯ei	*ei	*ei
+3419	E	25	soybean			pu3	--	pau3	--	--	--	--	--	bei3	bi3	mɛi3	*u̯ei	*ei	*ei
+3420	E	26	to dream			pu5	mpei5	mpau5	mpɔ5a	mʔpuC	mpe5	mi5	bei5	bei5	bəi5	bɛi5	*u̯ei	*ei	*ei
+3421	E	27	to taste/try flavor			m̥hu5	--	--	--	--	--	--	--	--	m̥i5	--	*u̯ei	*ei	*ei
+3422	E	28	porcupine			ɕen6	ʨi6	tʂau6	so6	zuC	ʃa6	ʨi6	dei6	dei6	--	hɛi6	*u̯ei	*ei	*ei
+3423	E	29	child										ʨwei3	sei3	hwjəi7	--			*ei
 3424																			
 3425	C		Chinese loanwords in set 12/17b:			dzjeH (MC)	漬	zì  ‘to soak’	>	HM *dzeiH									
 3426						mejX (MC)	米	mǐ  ‘husked rice’	>	M *hmeiB									
 3427																			
 3428			12/17c. HM	*-æi	(132)														
-3429						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3430	E	30	vegetable			ɣu1	ʐei1	ʐau1	ʐɔ1a	ʔwjuA	ji1	ɦji1	*u̯ei	*æi	*æi	gai1	gjai1	lai1	ɛi1
-3431	E	31	shy												*æi	ȵai3	ȵai1	--	--
-3432	E	32	thin												*æi	kje6	kjai6	klai6	kɛi6
+3429	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3430	E	30	vegetable			ɣu1	ʐei1	ʐau1	ʐɔ1a	ʔwjuA	ji1	ɦji1	gai1	gjai1	lai1	ɛi1	*u̯ei	*æi	*æi
+3431	E	31	shy										ȵai3	ȵai1	--	--			*æi
+3432	E	32	thin										kje6	kjai6	klai6	kɛi6			*æi
 3433																			
 3434	C		Chinese loanwords in set 12/17c:			drij (MC)	遲	chí  ‘late’	>	M *djæiA									
 3435						sejH (MC)	細	xì  ‘fine, small’	>	M *sæiC ‘small/fine’									
 3436																			
 3437			12/17d. HM	*-u̯əi (39, 207)															
-3438						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3439	E	33	ashes			ɕhu3	ɕi3	tʂhau3	sɔ3b	tshuB	θe3	ɕi3	*u̯ei	*u̯əi	*u̯əi	ɕwai3	saːi3	swai3	sɔi3
-3440	E	34	knee			ʨu6	ʨɔ6	cau6	ʨo6	ʑuC	--	ʨi6	*u̯ei	*u̯əi	*u̯əi	ʨwai6	--	ȶwai6	--
+3438	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3439	E	33	ashes			ɕhu3	ɕi3	tʂhau3	sɔ3b	tshuB	θe3	ɕi3	ɕwai3	saːi3	swai3	sɔi3	*u̯ei	*u̯əi	*u̯əi
+3440	E	34	knee			ʨu6	ʨɔ6	cau6	ʨo6	ʑuC	--	ʨi6	ʨwai6	--	ȶwai6	--	*u̯ei	*u̯əi	*u̯əi
 3441			Discussion																
 3442			Hmong-Mien rimes 12/17b-c share with rimes 11b and 15b, d the characteristic that the final high front vocalic element triggered the introduction of a back rounded on-glide in the development of Hmongic.  For discussion, see section 2.1.3.  Thus all words in rime 12/17 have an intermediate Proto Hmongic form in *-u̯ei, whether or not a back rounded on-glide is reconstructed at the Hmong-Mien level on the basis of its appearance in Mienic.																
 3443																			
@@ -3467,42 +3467,42 @@
 3467			13																
 3468			13a. H	*-ow															
 3469						1	2	3	4	5	6	7	H						
-3470	E	1	plum			--	--	khaɯ1	kə1b	khoA	--	--	*ow						
-3471	E	2	soot			ʨhu1	--	ŋkhaɯ1	ŋkə1b	ŋʔkhoA	--	--	*ow						
-3472	E	3	white			l̥u1	qwə1	daɯ1	l̥ə1a	qloA	klau1	kwɔ1	*ow						
-3473	E	4	able			su2	--	tsaɯ2	sə2	--	--	--	*ow						
-3474	E	5	heart			ȴ̥u3	--	plaɯ3	pɭə3b	ploB	--	--	*ow						
-3475	E	6	paper			tu3	ntə3	ntaɯ3	ntə3a	nʔtoB	ntau3	nɔ3	*ow						
-3476	E	7	face			--	--	--	pɯ4	--	--	--	*ow						
-3477	E	8	foot			tu5	tə5	taɯ5	tə5a	toC	--	--	*ow						
-3478	E	9	salty			ȴ̥u5	--	daɯ5	l̥ə5a	--	--	--	*ow						
-3479	E	10	to swallow			--	--	--	ŋkə5a	--	ŋkau5	ŋɛ5	*ow						
-3480	E	11	walnut			--	--	--	l̥ə5a	qloC	--	--	*ow						
-3481	E	12	to gnaw			ki7	ku7	kaɯ7	kə7a	koD	--	--	*ow						
-3482	E	13	to ignite/light			tu7	--	taɯ7	te7a	toD	--	--	*ow						
-3483	E	14	to open (door)			pu7	pu7	--	--	poD	--	pɔ7	*ow						
-3484	E	15	to peck/dig			ʨu7	ȵʨu7	ɲcaɯ7	ȵʨə7a	ȵʔʨoD	--	ʨɔ1	*ow						
-3485	E	16	pheasant			--	--	tʂaɯ7	sə7a	--	--	--	*ow						
-3486	E	17	to pick up			ʨhə1	--	khaɯ7	kɯ7b	khoD	--	--	*ow						
-3487	E	18	to shut (door)			shu7	--	--	ʂə7	--	--	--	*ow						
-3488	E	19	bamboo			--	--	ʈaɯ8	ʈə8	--	--	--	*ow						
-3489	E	20	mountain pass			--	--	daɯ8	l̥ə8	--	--	--	*ow						
-3490	E	21	pair			ȵu8	ŋoŋ8	ŋkaɯ8	ŋkə8	ŋkoD	ɳtʃau8	ŋɤ8	*ow						
-3491	E	22	to stumble			--	--	--	--	--	--	--	*ow	 					
-3492	E	23	whip			--	--	mplaɯ8	mplə8	mpʔloD	--	--	*ow						
+3470	E	1	plum			--	--	khaɯ1	kə1b	khoA	--	--							*ow
+3471	E	2	soot			ʨhu1	--	ŋkhaɯ1	ŋkə1b	ŋʔkhoA	--	--							*ow
+3472	E	3	white			l̥u1	qwə1	daɯ1	l̥ə1a	qloA	klau1	kwɔ1							*ow
+3473	E	4	able			su2	--	tsaɯ2	sə2	--	--	--							*ow
+3474	E	5	heart			ȴ̥u3	--	plaɯ3	pɭə3b	ploB	--	--							*ow
+3475	E	6	paper			tu3	ntə3	ntaɯ3	ntə3a	nʔtoB	ntau3	nɔ3							*ow
+3476	E	7	face			--	--	--	pɯ4	--	--	--							*ow
+3477	E	8	foot			tu5	tə5	taɯ5	tə5a	toC	--	--							*ow
+3478	E	9	salty			ȴ̥u5	--	daɯ5	l̥ə5a	--	--	--							*ow
+3479	E	10	to swallow			--	--	--	ŋkə5a	--	ŋkau5	ŋɛ5							*ow
+3480	E	11	walnut			--	--	--	l̥ə5a	qloC	--	--							*ow
+3481	E	12	to gnaw			ki7	ku7	kaɯ7	kə7a	koD	--	--							*ow
+3482	E	13	to ignite/light			tu7	--	taɯ7	te7a	toD	--	--							*ow
+3483	E	14	to open (door)			pu7	pu7	--	--	poD	--	pɔ7							*ow
+3484	E	15	to peck/dig			ʨu7	ȵʨu7	ɲcaɯ7	ȵʨə7a	ȵʔʨoD	--	ʨɔ1							*ow
+3485	E	16	pheasant			--	--	tʂaɯ7	sə7a	--	--	--							*ow
+3486	E	17	to pick up			ʨhə1	--	khaɯ7	kɯ7b	khoD	--	--							*ow
+3487	E	18	to shut (door)			shu7	--	--	ʂə7	--	--	--							*ow
+3488	E	19	bamboo			--	--	ʈaɯ8	ʈə8	--	--	--							*ow
+3489	E	20	mountain pass			--	--	daɯ8	l̥ə8	--	--	--							*ow
+3490	E	21	pair			ȵu8	ŋoŋ8	ŋkaɯ8	ŋkə8	ŋkoD	ɳtʃau8	ŋɤ8							*ow
+3491	E	22	to stumble			--	--	--	--	--	--	--		 					*ow
+3492	E	23	whip			--	--	mplaɯ8	mplə8	mpʔloD	--	--							*ow
 3493																			
 3494			Chinese loanwords in set 13a:					tsjuwX (MC)	酒	jiǔ  ‘liquor’	>	H *cowB							
 3495	X					*[r]awʔ (OC)	>	ljewX (MC)	燎	liǎo  ‘to singe’	>	H *hljowB ‘to burn (mountain)’							
 3496																			
 3497	D		13b. HM	*-ou	(263)														
-3498						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3499	E	24	to stand/get up			ɕhu3	ɕə3	ʂaɯ3	sə3b	soB	θjau3	sɤ3	*ow	*ou	*ou	ɕou3	--	səu3	fu3
-3500	E	25	fire			tu4	tə4	taɯ4	tɯ4	ðoB	tau4	tɤ4	*ow	*ou	*ou	tou4	tɔu4	təu4	tu4
-3501	E	26	explode			tu6	tə6	taɯ6	tɯ6	ðoC	--	tɤ6	*ow	*ou	*ou	--	tɔ6	--	--
-3502	E	27	bellows												*ou	lou2	lɔu2	ləu2	lu2
-3503	E	28	to hold w/2 hands												*ou	pou2	pɔu2	--	--
-3504	E	29	to forget												*ou	--	ȵɔu3	n̥au3	nau3
-3505	E	30	grave/tomb												*ou	θou3	tθɔu3	tsəu3	--
+3498	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3499	E	24	to stand/get up			ɕhu3	ɕə3	ʂaɯ3	sə3b	soB	θjau3	sɤ3	ɕou3	--	səu3	fu3	*ow	*ou	*ou
+3500	E	25	fire			tu4	tə4	taɯ4	tɯ4	ðoB	tau4	tɤ4	tou4	tɔu4	təu4	tu4	*ow	*ou	*ou
+3501	E	26	explode			tu6	tə6	taɯ6	tɯ6	ðoC	--	tɤ6	--	tɔ6	--	--	*ow	*ou	*ou
+3502	E	27	bellows										lou2	lɔu2	ləu2	lu2			*ou
+3503	E	28	to hold w/2 hands										pou2	pɔu2	--	--			*ou
+3504	E	29	to forget										--	ȵɔu3	n̥au3	nau3			*ou
+3505	E	30	grave/tomb										θou3	tθɔu3	tsəu3	--			*ou
 3506																			
 3507	C		Chinese loanwords in set 13b:			tsyhoH (MC)	處	chù  ‘bed/place’	>	HM *chouH									
 3508						drjoH (MC)	箸	zhù  ‘chopsticks’	>	HM *drouH									
@@ -3512,25 +3512,25 @@
 3512						kjuH (MC)	句	jù  ‘clf-sentences’	>	M *kjouC									
 3513																			
 3514	D		13c. HM	*-op	(237)														
-3515						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3516	E	31	skin			tu3	tə3	taɯ5	tə3a	toB	--	--	*ow	*op	*op	dup7	dup7	din7	dip7
+3515	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3516	E	31	skin			tu3	tə3	taɯ5	tə3a	toB	--	--	dup7	dup7	din7	dip7	*ow	*op	*op
 3517																			
 3518	D		13d. HM	*-ot	(256)														
-3519						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3520	E	32	to stop up/plug			--	ntshu7	ɳtʂaɯ7	ntsəu5a	nʔtsuD	ɳtʃau7	sɔ7	*ow	*ot	*ot	tsot7	--	--	--
+3519	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3520	E	32	to stop up/plug			--	ntshu7	ɳtʂaɯ7	ntsəu5a	nʔtsuD	ɳtʃau7	sɔ7	tsot7	--	--	--	*ow	*ot	*ot
 3521																			
 3522	C		Chinese loanwords in set 13d:			*[s][r][o]t (OC)	>	srwæt (MC)	刷	shuā  ‘to brush’	>	M *sotD ‘to wipe’							
 3523								khwot (MC)	堀	kū  ‘hole’	>	M *khotD							
 3524																			
 3525			13e. HM	*-ok (186, 203)															
-3526						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3527	E	33	few/lack			ɕu6	--	tʂaɯ6	--	zoC	ʃau6	ʨɤ6	*ow	*ok	*ok	θo8	tθɔ6	tshɔ8	hu8
-3528	E	34	finger												*ok	do7	dɔ7	dɔ7	--
-3529	E	35	turbid												*ok	glo8	glɔ6	--	--
+3526	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3527	E	33	few/lack			ɕu6	--	tʂaɯ6	--	zoC	ʃau6	ʨɤ6	θo8	tθɔ6	tshɔ8	hu8	*ow	*ok	*ok
+3528	E	34	finger										do7	dɔ7	dɔ7	--			*ok
+3529	E	35	turbid										glo8	glɔ6	--	--			*ok
 3530																			
 3531	E		13f. HM	*-əut	(255)														
-3532						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3533	E	36	navel			tu7	ntu7	ntaɯ7	ntə7a	nʔtoD	ntu7	--	*ow	*əut	*ut	dut7	duːt7’	din7	--
+3532	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3533	E	36	navel			tu7	ntu7	ntaɯ7	ntə7a	nʔtoD	ntu7	--	dut7	duːt7’	din7	--	*ow	*əut	*ut
 3534																			
 3535			Discussion																
 3536			The variant reflexes in Jiwei (Qo Xiong) (2) and Pa-Hng (12) are in complementary distribution.  In Jiwei the rime is /u/ in tone 7 and /ə/ elsewhere, which follows the generalization made in the introduction to the reconstruction (2.1.3) that traces of coda consonants can be detected in vowel distinctions in this language.  In Pa-Hng the distribution of rimes is conditioned by the register of the initial consonant:  it is /ɤ/ after low register tones 4, 6, 8 and /ɔ/ after high register tones 1, 3, 7.																
@@ -3551,9 +3551,9 @@
 3551		35	Compare Hmongic *ŋkroB/*ŋgroB ‘turbid’ (5.49/7).																
 3552																			
 3553			14																
-3554	D		HM	*-u̯i	(20)														
-3555						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3556	E	1	two			o1	ɯ1	ɔ1	ɔ1a	uA	u1	va1	*u̯u	*u̯i	*u̯i	vi1	i1	wəi1	vi5
+3554	P		HM	*-u̯i	(20)														
+3555	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3556	E	1	two			o1	ɯ1	ɔ1	ɔ1a	uA	u1	va1	vi1	i1	wəi1	vi5	*u̯u	*u̯i	*u̯i
 3557																			
 3558			Discussion																
 3559			A correspondence “set” containing only one word is not of great significance to the reconstruction.  ‘Two’ is a common word which is phonologically slight. There is no supporting external evidence for this reconstruction from Chinese loans that pattern the same way.  Nonetheless, this reconstruction is faithful both to the Hmongic and Mienic reflexes and to the pattern of preservation of the initial part of the rime in Hmongic, and seems reasonable.																
@@ -3561,48 +3561,48 @@
 3561			15																
 3562			15a. H	*-u̯a															
 3563						1	2	3	4	5	6	7	H						
-3564	E	1	otter			ɕha1	ȵʨhɑ1	ɳtʂhua1	ntsa1b	nʔtshaAθja1		--	*u̯a						
-3565	E	2	spinning wheel			--	--	tʂhua1	--	tshaA	--	--	*u̯a						
-3566	E	3	to twist/rub			fha1	--	sua1	sa1b	saA	va1’	--	*u̯a						
-3567	E	4	to open out/undo			tha3	nthɑ3	nthua3	--	nʔthaB	--	--	*u̯a						
-3568	E	5	to marry (a woman)			qha5	--	--	ha5a	kaC	--	--	*u̯a						
-3569	E	6	to tear			ȴ̥i5	--	dua5	ɭ̥a5a 	qlaC	--	kwɛ3	*u̯a						
-3570	E	7	to throw on (clothes)			pa5	--	mpua5	mpa5a	--	--	ma5	*u̯a						
-3571	E	8	to be used to			ȴa6	ȴɑ6	--	ɭəa6 	laC	--	--	*u̯a						
-3572	E	9	duck			ka6	--	--	--	ʁwaC	--	--	*u̯a						
-3573	E	10	to meet			ʨa6	--	cua6	ʨəa6	ʑaC	--	--	*u̯a						
-3574	E	11	rat			--	--	tʂua6	pʐəa6	vjaB	--	--	*u̯a						
+3564	E	1	otter			ɕha1	ȵʨhɑ1	ɳtʂhua1	ntsa1b	nʔtshaAθja1		--							*u̯a
+3565	E	2	spinning wheel			--	--	tʂhua1	--	tshaA	--	--							*u̯a
+3566	E	3	to twist/rub			fha1	--	sua1	sa1b	saA	va1’	--							*u̯a
+3567	E	4	to open out/undo			tha3	nthɑ3	nthua3	--	nʔthaB	--	--							*u̯a
+3568	E	5	to marry (a woman)			qha5	--	--	ha5a	kaC	--	--							*u̯a
+3569	E	6	to tear			ȴ̥i5	--	dua5	ɭ̥a5a 	qlaC	--	kwɛ3							*u̯a
+3570	E	7	to throw on (clothes)			pa5	--	mpua5	mpa5a	--	--	ma5							*u̯a
+3571	E	8	to be used to			ȴa6	ȴɑ6	--	ɭəa6 	laC	--	--							*u̯a
+3572	E	9	duck			ka6	--	--	--	ʁwaC	--	--							*u̯a
+3573	E	10	to meet			ʨa6	--	cua6	ʨəa6	ʑaC	--	--							*u̯a
+3574	E	11	rat			--	--	tʂua6	pʐəa6	vjaB	--	--							*u̯a
 3575																			
 3576	C		Chinese loanwords in set 15a:			bjuX (MC)	腐	fǔ  ‘rotten’	>	H *bu̯aB									
 3577						dzjak (MC)	嚼	jué  ‘to chew’	>	H *cu̯aC  If this is indeed the source of the word in Hmongic, an explanation is needed for the register difference. See also Chinese 噍 ‘to chew’ (OC *[dz]ewk-s > MC dzjewH > Man. jiào).									
 3578																			
 3579			15b. HM	*-əj (94, 151)															
-3580						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3581	E	12	excrement			qa3	qɑ3	qua3	ha3a	qaB	ka3	ka3	*u̯a	*əj	*əi	dai3	dai3	kai3	kai3
-3582	E	13	to do			ɛ5	--	ua5	aŋ5a	aC	--	ɪ̃5	*u̯a	*əj	*əi	--	ai5	wəi5	ai5
-3583	E	14	to kill			ta5	tɑ5	tua5	ta5a	--	ta5	ta5	*u̯a	*əj	*əi	tai5’	tai5	tai5	dai5
-3584	E	15	to die			ta6	tɑ6	tua6	təa6	ðaC	ta6	te6	*u̯a	*əj	*əi	tai6	tai6	tai6	tai6
-3585	E	16	bamboo shoot/orphan			za6	mʐɑ6	ɳtʂua6	mpʐəa6	mpjaC	mpja6	mje6	*u̯a	*əj	*əi	bje6	bjai6	blai6	bɛi6
-3586	E	17	diligent			ŋa6	ŋɑ6	ɴqua6	ŋkəa6	ɴqaC	ŋka6	ŋe6	*u̯a	*əj	*əi	--	--	gwai6	--
-3587	E	18	to fly												*əi	dai5	dai5’	dai5	--
+3580	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3581	E	12	excrement			qa3	qɑ3	qua3	ha3a	qaB	ka3	ka3	dai3	dai3	kai3	kai3	*u̯a	*əj	*əi
+3582	E	13	to do			ɛ5	--	ua5	aŋ5a	aC	--	ɪ̃5	--	ai5	wəi5	ai5	*u̯a	*əj	*əi
+3583	E	14	to kill			ta5	tɑ5	tua5	ta5a	--	ta5	ta5	tai5’	tai5	tai5	dai5	*u̯a	*əj	*əi
+3584	E	15	to die			ta6	tɑ6	tua6	təa6	ðaC	ta6	te6	tai6	tai6	tai6	tai6	*u̯a	*əj	*əi
+3585	E	16	bamboo shoot/orphan			za6	mʐɑ6	ɳtʂua6	mpʐəa6	mpjaC	mpja6	mje6	bje6	bjai6	blai6	bɛi6	*u̯a	*əj	*əi
+3586	E	17	diligent			ŋa6	ŋɑ6	ɴqua6	ŋkəa6	ɴqaC	ŋka6	ŋe6	--	--	gwai6	--	*u̯a	*əj	*əi
+3587	E	18	to fly										dai5	dai5’	dai5	--			*əi
 3588																			
 3589	C		Chinese loanwords in set 15b:			*[r][ə][j] (OC)	>	lij (MC)	梨	lí  ‘pear’	>	HM *rəj							
 3590								tsij (MC)	粢	zī  ‘sacrificial grain’	>	M *tjəiA ‘millet’							
 3591								dzyiX (MC)	柿	shì  ‘persimmon’	>	M *djəiB							
 3592																			
-3593	D		15c. HM	*-u̯əj	(222)														
-3594						1	2	3	4	5	6	7	 H	HM	M	8	9	10	11
-3595	E	19	sweet potato			na2	--	--	--	--	--	--	*u̯a	*u̯əj	*u̯əj	du2	dɔːi2	dwai2	dai2
+3593	P		15c. HM	*-u̯əj	(222)														
+3594	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3595	E	19	sweet potato			na2	--	--	--	--	--	--	du2	dɔːi2	dwai2	dai2	*u̯a	*u̯əj	*u̯əj
 3596																			
 3597			15d. HM	*-aj (74, 112, 150, 151)															
-3598						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3599	E	20	medicine			ʨa1	ŋkɑ1	--	ka1a	kaA	ðja1	ȵa1	*u̯a	*aj	*ai	--	gjaːi1	hja1	tsɛi1
-3600	E	21	to come			ta2	--	tua2	ta2	ðaA	--	te2	*u̯a	*aj	*ai	taːi2	taːi2	ta2	tɛi2
-3601	E	22	waist			l̥a3	qwɑ3	dua3	l̥a3a	qlaB	kla3	la3	*u̯a	*aj	*ai	klaːi3	klaːi3	kla3	lai3
-3602	E	23	to crow			qa5	qɑ5	qua5	ha5a	qaC	ka5	ŋa5	*u̯a	*aj	*ai	kaːi5’	kaːi5	--	kɔi5
-3603	E	24	sharp			ɣa6	ʐɑ6	ʐua6	--	wjaC	ŋkja6	--	*u̯a	*aj	*ai	gai6	gjai6	lai6	hɛi6
-3604	E	25	river												*ai	--	--	da2	dɔi2
-3605	E	26	which												*ai	laːi5	--	ha2	--
+3598	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3599	E	20	medicine			ʨa1	ŋkɑ1	--	ka1a	kaA	ðja1	ȵa1	--	gjaːi1	hja1	tsɛi1	*u̯a	*aj	*ai
+3600	E	21	to come			ta2	--	tua2	ta2	ðaA	--	te2	taːi2	taːi2	ta2	tɛi2	*u̯a	*aj	*ai
+3601	E	22	waist			l̥a3	qwɑ3	dua3	l̥a3a	qlaB	kla3	la3	klaːi3	klaːi3	kla3	lai3	*u̯a	*aj	*ai
+3602	E	23	to crow			qa5	qɑ5	qua5	ha5a	qaC	ka5	ŋa5	kaːi5’	kaːi5	--	kɔi5	*u̯a	*aj	*ai
+3603	E	24	sharp			ɣa6	ʐɑ6	ʐua6	--	wjaC	ŋkja6	--	gai6	gjai6	lai6	hɛi6	*u̯a	*aj	*ai
+3604	E	25	river										--	--	da2	dɔi2			*ai
+3605	E	26	which										laːi5	--	ha2	--			*ai
 3606																			
 3607	C		Chinese loanwords in set 15d:			*pʰˤaj-s (OC)	>	phaH (MC)	破	pò  ‘to break’	>	HM *phajH ‘to cut open’							
 3608	X					*[k]ʷˤaj-s (OC)	>	kwaH (MC)	過	guò  ‘to pass/surpass’	>	HM *KʷajH ‘to cross (river)’							
@@ -3626,48 +3626,48 @@
 3626			16																
 3627			16a. H	*-u															
 3628						1	2	3	4	5	6	7	H						
-3629	E	1	to blow			tsho1	phʐo1	tʂhua1	pʐa1b	phjaA	phu1	phjo1	*u						
-3630	E	2	to trap/ensnare			--	--	cua1	ʨæ1a	ʨaA	--	--	*u						
-3631	E	3	fern			xhə1	ʂo1	ʂua1	ʐa1b	saA	ŋkjeu1’	--	*u						
-3632	E	4	on top of			--	--	--	sa1b	saA	--	--	*u						
-3633	E	5	sound/noise			xhə1	ʂo1	ʂua1	ʐa1b	saA	ŋkjeu1’	ɕo1	*u						
-3634	E	6	tree			fhu3	--	--	wa1b	--	--	--	*u						
-3635	E	7	fog/cloud			ho1	ho1	hua1	ɦa1b	haA	--	ho1	*u						
-3636	E	8	green/blue			zo2	mʐo1	ɳtʂua1	mpʐa1a	mʔpjaA	--	mjo1	*u						
-3637	E	9	firm/durable			--	--	ʈua2	ʈa2	--	--	--	*u						
-3638	E	10	to sprinkle/spill			--	ȵʨho3	ɲchua3	ȵʨha3b	ȵʔʨhaB	--	--	*u						
-3639	E	11	rabbit			--	--	lua3	ɭa3a	ʔlaB	--	--	*u						
-3640	E	12	sorghum			--	--	ɳtʂua7	ntsa7a	--	--	--	*u						
-3641	E	13	to weed/hoe			--	ntho5	nthua5	--	--	--	--	*u						
-3642	E	14	ragged/shabby			nei6	--	ntua6	--	qlaC	--	--	*u						
+3629	E	1	to blow			tsho1	phʐo1	tʂhua1	pʐa1b	phjaA	phu1	phjo1							*u
+3630	E	2	to trap/ensnare			--	--	cua1	ʨæ1a	ʨaA	--	--							*u
+3631	E	3	fern			xhə1	ʂo1	ʂua1	ʐa1b	saA	ŋkjeu1’	--							*u
+3632	E	4	on top of			--	--	--	sa1b	saA	--	--							*u
+3633	E	5	sound/noise			xhə1	ʂo1	ʂua1	ʐa1b	saA	ŋkjeu1’	ɕo1							*u
+3634	E	6	tree			fhu3	--	--	wa1b	--	--	--							*u
+3635	E	7	fog/cloud			ho1	ho1	hua1	ɦa1b	haA	--	ho1							*u
+3636	E	8	green/blue			zo2	mʐo1	ɳtʂua1	mpʐa1a	mʔpjaA	--	mjo1							*u
+3637	E	9	firm/durable			--	--	ʈua2	ʈa2	--	--	--							*u
+3638	E	10	to sprinkle/spill			--	ȵʨho3	ɲchua3	ȵʨha3b	ȵʔʨhaB	--	--							*u
+3639	E	11	rabbit			--	--	lua3	ɭa3a	ʔlaB	--	--							*u
+3640	E	12	sorghum			--	--	ɳtʂua7	ntsa7a	--	--	--							*u
+3641	E	13	to weed/hoe			--	ntho5	nthua5	--	--	--	--							*u
+3642	E	14	ragged/shabby			nei6	--	ntua6	--	qlaC	--	--							*u
 3643																			
 3644			Chinese loanwords in set 16a:					ʔu (MC)	烏	wū  ‘crow’	>	H *ʔuA							
 3645	X					*[k](r)u (OC)	>	kjuw (MC)	鳩	jiū  ‘turtledove’	>	H *ɴquA ‘pigeon’ This word also could have been borrowed from Tibeto-Burman *k(r)əw ‘dove’.							
 3646								ʔjiewH (MC)	要	yào  ‘important/to want’	>	H *ʔjuB ‘to want/ask for/get’							
 3647																			
 3648			16b. HM	*-u (111, 225)															
-3649						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3650	E	15	drum			ȵə4	ɳɑŋ4	ɳʈua4	ɳʈəa4	ɳtʂaB	ɳtʃu4	mjo4	*u	*u	*u	dʑo4	ȡu4	du4	--
-3651	E	16	to launder			sho5	ntsho5	ntshua5	ntsa5b	nʔtshaC	ɳtʃu5	ȵo5	*u	*u	*u	do5	du5’	dzu5	du5
-3652	E	17	ramie/hemp			no6	no6	ntua6	ntəa6	ntaC	ntu6	mjo6	*u	*u	*u	do6	du6	du6	--
-3653	E	18	tortoise			--	--	--	--	--	--	--	*u	*u	*u	to6	tu6	--	--
-3654	E	19	to return home												*u	mu4	mu4	mu4	mu4
+3649	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3650	E	15	drum			ȵə4	ɳɑŋ4	ɳʈua4	ɳʈəa4	ɳtʂaB	ɳtʃu4	mjo4	dʑo4	ȡu4	du4	--	*u	*u	*u
+3651	E	16	to launder			sho5	ntsho5	ntshua5	ntsa5b	nʔtshaC	ɳtʃu5	ȵo5	do5	du5’	dzu5	du5	*u	*u	*u
+3652	E	17	ramie/hemp			no6	no6	ntua6	ntəa6	ntaC	ntu6	mjo6	do6	du6	du6	--	*u	*u	*u
+3653	E	18	tortoise			--	--	--	--	--	--	--	to6	tu6	--	--	*u	*u	*u
+3654	E	19	to return home										mu4	mu4	mu4	mu4			*u
 3655																			
 3656	C		Chinese loanwords in set 16b:			*tˤuʔ (OC)	>	tawX (MC)	搗	dǎo  ‘to husk/pound’	>	HM *tuX							
 3657	X					*[dz]ˤu (OC)	>	dzaw (MC)	槽	cáo  ‘trough’	>	M *dzuA							
 3658																			
-3659	D		16c. HM	*-uə	(191)														
-3660						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3661	E	20	nine			ʨə2	ʨo2	cua2	ʨa2	ʑaA	tʃu2	ko2	*u	*uə	*uə	du2	du2	ju2	ku2
-3662	E	21	cattle pen			ŋə2	--	ŋkua2	ŋka2	ŋkaA	--	tɕõ2	*u	*uə	*uə	--	gu2	glu2	dzu2
-3663	E	22	thunder			--	--	--	--	--	--	mo1	*u	*uə	*uə	bu1	bu5	--	bjau1
+3659	P		16c. HM	*-uə	(191)														
+3660	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3661	E	20	nine			ʨə2	ʨo2	cua2	ʨa2	ʑaA	tʃu2	ko2	du2	du2	ju2	ku2	*u	*uə	*uə
+3662	E	21	cattle pen			ŋə2	--	ŋkua2	ŋka2	ŋkaA	--	tɕõ2	--	gu2	glu2	dzu2	*u	*uə	*uə
+3663	E	22	thunder			--	--	--	--	--	--	mo1	bu1	bu5	--	bjau1	*u	*uə	*uə
 3664																			
 3665	C		Chinese loanwords in set 16c:			*[g](r)aʔ (OC)	>	gjoX (MC)	粔	jù  ‘rice cake’	>	HM *ŋkjuəX 							
 3666	X					*[b]ək-s (OC)	>	bjuwH (MC)	伏	fú  ‘to hatch’	>	HM *buəH ‘to hatch/embrace’							
 3667																			
 3668	D		16d. HM	*-ow	(172)														
-3669						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3670	E	23	shuttle											*ow	*ow	gou4	glɔu4	--	--
+3669	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3670	E	23	shuttle										gou4	glɔu4	--	--		*ow	*ow
 3671																			
 3672	C		Chinese loanwords in set 16d:			*[g](r)aw (OC)	>	gjew (MC)	橋	qiáo  ‘bridge’	>	HM *ɟow							
 3673								mjuH (MC)	霧	wù  ‘fog’ (Cantonese /mou6/)	>	M *mowC							
@@ -3691,72 +3691,72 @@
 3691			18																
 3692			18a. H	*-in															
 3693						1	2	3	4	5	6	7	H						
-3694	E	1	to dry in sun			--	--	ʐia1	ʐæin1a	--	--	--	*in						
-3695	E	2	monkey			lei1	--	lia1	læin1a	--	lai1	--	*in						
-3696	E	3	red			--	--	lia1	læin1a	ʔlenA	--	--	*in						
-3697	E	4	skirt			tei1	tɛ1	tia1	tæin1a	tenA	ðai1	tĩ1	*in						
-3698	E	5	to weave/plait			hei1	hɛ1	hia1	ɦæin1b	henA	xan1	--	*in						
-3699	E	6	alive			--	--	cia2	ʨein2	ʑiA	--	--	*in						
-3700	E	7	front surface			--	--	ntia2	--	ɴqlenA	--	--	*in						
-3701	E	8	level			--	--	tia2	tæin2	--	--	--	*in						
-3702	E	9	crop of bird			pi3	--	tsia5	pjein5a	puB	pai3	pẽ1	*in						
-3703	E	10	ginger			khi3	--	qhia3	hæin3b	qhwjenB	khai3	--	*in						
-3704	E	11	grape			qei3	qɛ3	--	hæin3a	qenB	--	ji3	*in						
-3705	E	12	cooking pot/pan			vi4	wɛ4	jia4	ʑein4	wenB	van4	vɪ̃4	*in						
-3706	E	13	cool (water)			sei4	tsɛ4	tsia4	sein4	--	tʃai4	ʨɦɪ̃4	*in						
-3707	E	14	persimmon			mi4	mɛ4	--	--	menB	--	--	*in						
-3708	E	15	to drive in (nail)			--	ȵʨɛ5	ɳtʂia5	--	nʔtsenC	--	ni5	*in						
-3709	E	16	mussel/clam			l̥iə6	pɹɛ4	plia6	--	--	--	--	*in						
-3710	E	17	to be wedged in			--	ɳʈhɑ7	--	ɳʈei5b	--	--	--	*in						
-3711	E	18	female			mi8	--	nia8	mi8	menC	mai8	mɛ̃7	*in						
+3694	E	1	to dry in sun			--	--	ʐia1	ʐæin1a	--	--	--							*in
+3695	E	2	monkey			lei1	--	lia1	læin1a	--	lai1	--							*in
+3696	E	3	red			--	--	lia1	læin1a	ʔlenA	--	--							*in
+3697	E	4	skirt			tei1	tɛ1	tia1	tæin1a	tenA	ðai1	tĩ1							*in
+3698	E	5	to weave/plait			hei1	hɛ1	hia1	ɦæin1b	henA	xan1	--							*in
+3699	E	6	alive			--	--	cia2	ʨein2	ʑiA	--	--							*in
+3700	E	7	front surface			--	--	ntia2	--	ɴqlenA	--	--							*in
+3701	E	8	level			--	--	tia2	tæin2	--	--	--							*in
+3702	E	9	crop of bird			pi3	--	tsia5	pjein5a	puB	pai3	pẽ1							*in
+3703	E	10	ginger			khi3	--	qhia3	hæin3b	qhwjenB	khai3	--							*in
+3704	E	11	grape			qei3	qɛ3	--	hæin3a	qenB	--	ji3							*in
+3705	E	12	cooking pot/pan			vi4	wɛ4	jia4	ʑein4	wenB	van4	vɪ̃4							*in
+3706	E	13	cool (water)			sei4	tsɛ4	tsia4	sein4	--	tʃai4	ʨɦɪ̃4							*in
+3707	E	14	persimmon			mi4	mɛ4	--	--	menB	--	--							*in
+3708	E	15	to drive in (nail)			--	ȵʨɛ5	ɳtʂia5	--	nʔtsenC	--	ni5							*in
+3709	E	16	mussel/clam			l̥iə6	pɹɛ4	plia6	--	--	--	--							*in
+3710	E	17	to be wedged in			--	ɳʈhɑ7	--	ɳʈei5b	--	--	--							*in
+3711	E	18	female			mi8	--	nia8	mi8	menC	mai8	mɛ̃7							*in
 3712																			
 3713	C		Chinese loanword in set 18a:			sying (MC)	升	shēng  ‘liter measure’	>	H *sjinA ‘measure for grain’									
 3714																			
 3715			18b. HM	*-im (4, 5)															
-3716						1	2	3	4	5	6	7	H	 HM	 M	8	9	10	11
-3717	E	19	bitter			i1	ɛ1	ia1	æin1a	--	an1	jɪ̃1	*in	*im	*im	im1	im1	in1	jɛm1
-3718	E	20	thorn												*im	jim3	ȡim3	--	--
+3716	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3717	E	19	bitter			i1	ɛ1	ia1	æin1a	--	an1	jɪ̃1	im1	im1	in1	jɛm1	*in	*im	*im
+3718	E	20	thorn										jim3	ȡim3	--	--			*im
 3719																			
 3720	C		Chinese loanwords in set 18b:			ljem (MC)	鎌	lián  ‘sickle’	>	HM *ljim									
 3721						sim (MC)	心	xīn  ‘heart’	>	M *simA									
 3722						tsyim (MC)	箴	zhēn  ‘needle’	>	M *simA									
 3723																			
 3724			18c. HM	*-in	(7)														
-3725						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3726	E	21	tooth			m̥hi3	ɕɛ3	hn̥ia3	mi3b	m̥jenB	m̥ai3	m~ɪ3	*in	*in	*in	--	--	mjen3	--
+3725	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3726	E	21	tooth			m̥hi3	ɕɛ3	hn̥ia3	mi3b	m̥jenB	m̥ai3	m~ɪ3	--	--	mjen3	--	*in	*in	*in
 3727																			
 3728	C		Chinese loanwords in set 18c:			*-[b]ˤe[n]ʔ (OC)	>	benX (MC)	辮	biàn  ‘a braid’	>	HM *mbjinX ‘to braid/a braid’							
 3729								pjien (MC)	鞭	biān  ‘whip’ (Cant. /pin1/)	>	M *pinA							
 3730																			
 3731			18d. HM	*-iŋ	(8)														
-3732						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3733	E	22	field			ȴi2	--	lia2	ɭæin2	lenA	leŋ2	l~i2	*in	*iŋ	*iŋ	giŋ2	giːŋ2	ljɛ2	ljaŋ2
-3734	E	23	monkey												*iŋ	biŋ1	biːŋ1	--	bjaŋ1
-3735	E	24	crop (of bird)/gizzard												*iŋ	ʨiŋ3	ȡiŋ3	--	--
+3732	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3733	E	22	field			ȴi2	--	lia2	ɭæin2	lenA	leŋ2	l~i2	giŋ2	giːŋ2	ljɛ2	ljaŋ2	*in	*iŋ	*iŋ
+3734	E	23	monkey										biŋ1	biːŋ1	--	bjaŋ1			*iŋ
+3735	E	24	crop (of bird)/gizzard										ʨiŋ3	ȡiŋ3	--	--			*iŋ
 3736																			
 3737	C		Chinese loanwords in set 18d:			syeng (MC)	聲	shēng  ‘sound’	>	M *siŋA									
 3738						sengX (MC)	醒	xǐng  ‘to sober up’	>	M *siŋB									
 3739								Cant. /pɛːŋ5/  ‘to hide onself’	>	M *piŋC									
 3740																			
 3741			18e. HM	*-i̯əm	(135)														
-3742						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3743	E	25	to sniff			m̥hi5	--	hni̥a5	mi5b	m̥jenC	m̥ai5	mi5	*in	*i̯əm	*i̯əm	hom5	hɔːm5’	m̥ja5	--
-3744	E	26	to cover (with tile)												*i̯əm	hom6	hɔːm3	--	hum3
+3742	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3743	E	25	to sniff			m̥hi5	--	hni̥a5	mi5b	m̥jenC	m̥ai5	mi5	hom5	hɔːm5’	m̥ja5	--	*in	*i̯əm	*i̯əm
+3744	E	26	to cover (with tile)										hom6	hɔːm3	--	hum3			*i̯əm
 3745																			
 3746			18f. HM	*-i̯ən (119, 137)															
-3747						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3748	E	27	liver			xhi1	ʂɛ1	ʂia1	ʐæin1b	senA	ŋkheŋ1’	hɪ̃1	*in	*i̯ən	*i̯ən	gan1	gjen1’	ɬan1	--
+3747	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3748	E	27	liver			xhi1	ʂɛ1	ʂia1	ʐæin1b	senA	ŋkheŋ1’	hɪ̃1	gan1	gjen1’	ɬan1	--	*in	*i̯ən	*i̯ən
 3749																			
 3750	C		Chinese loanword in set 18f:			ngin (MC)	銀	yín  ‘silver’	>	HM *ɲʷi̯ən									
 3751																			
 3752			18g. HM	*-i̯əŋ (83, 159)															
-3753						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3754	E	28	high/tall			xhi1	ʂɛ1	ʂia1	ʐæin1b	senA	ŋkheŋ1’	hɪ̃1	*in	*i̯əŋ	*i̯əŋ	gaŋ1	gjaŋ1’	ɬaŋ1	dzɔŋ1
-3755	E	29	new			xhi1	ɕɛ1	tʂhia1	sæin1b	senA	ŋkheŋ1’	sɪ̃1	*in	*i̯əŋ	*i̯əŋ	ɕaŋ2	saŋ2	saŋ1	sjaŋ1
-3756	E	30	plum			--	--	--	--	--	--	le3	*in	*i̯əŋ	*i̯əŋ	gaŋ3	--	ɬaŋ3	ȵɔŋ3
-3757	E	31	shallow			--	--	ŋkla3	--	--	--	--	*in	*i̯əŋ	*i̯əŋ	glaŋ3	gjaŋ3	--	lɛŋ3
-3758	E	32	smooth/glossy			--	mjɛ6	mpla6	mplein6	mplenC	--	w~ɪ6	*in	*i̯əŋ	*i̯əŋ	--	bjaŋ6	--	--
-3759	E	33	possessive												*i̯əŋ	ȵaŋ1	ȵaŋ1	nin2	--
+3753	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3754	E	28	high/tall			xhi1	ʂɛ1	ʂia1	ʐæin1b	senA	ŋkheŋ1’	hɪ̃1	gaŋ1	gjaŋ1’	ɬaŋ1	dzɔŋ1	*in	*i̯əŋ	*i̯əŋ
+3755	E	29	new			xhi1	ɕɛ1	tʂhia1	sæin1b	senA	ŋkheŋ1’	sɪ̃1	ɕaŋ2	saŋ2	saŋ1	sjaŋ1	*in	*i̯əŋ	*i̯əŋ
+3756	E	30	plum			--	--	--	--	--	--	le3	gaŋ3	--	ɬaŋ3	ȵɔŋ3	*in	*i̯əŋ	*i̯əŋ
+3757	E	31	shallow			--	--	ŋkla3	--	--	--	--	glaŋ3	gjaŋ3	--	lɛŋ3	*in	*i̯əŋ	*i̯əŋ
+3758	E	32	smooth/glossy			--	mjɛ6	mpla6	mplein6	mplenC	--	w~ɪ6	--	bjaŋ6	--	--	*in	*i̯əŋ	*i̯əŋ
+3759	E	33	possessive										ȵaŋ1	ȵaŋ1	nin2	--			*i̯əŋ
 3760																			
 3761	C		Chinese loanword in set 18g:			*N-s-r̥eŋ (OC)	>	tshjeng (MC)	清	qīng  ‘clear’	>	HM *ntshji̯əŋ							
 3762																			
@@ -3783,27 +3783,27 @@
 3783			19																
 3784			19a. H	*-æn															
 3785						1	2	3	4	5	6	7	H						
-3786	E	1	bamboo pipes			ki2	--	qen2	hæin2	ʁwjaŋA	--	--	*æn						
-3787	E	2	person			nɛ2	ne2	nɛŋ2	--	naA	nai2	--	*æn						
-3788	E	3	crossbow			n̥hen3	--	hn̥ɛŋ3	nein3b	n̥aB	--	n̥~e3	*æn						
-3789	E	4	horse			ma4	--	nɛŋ4	mein4	maB	me4	m~ɪ4	*æn						
-3790	E	5	lazy			ŋi4	ɲe4	ŋkɛŋ4	ȵʨein4	ŋkaŋB	--	ŋɛ4	*æn						
+3786	E	1	bamboo pipes			ki2	--	qen2	hæin2	ʁwjaŋA	--	--							*æn
+3787	E	2	person			nɛ2	ne2	nɛŋ2	--	naA	nai2	--							*æn
+3788	E	3	crossbow			n̥hen3	--	hn̥ɛŋ3	nein3b	n̥aB	--	n̥~e3							*æn
+3789	E	4	horse			ma4	--	nɛŋ4	mein4	maB	me4	m~ɪ4							*æn
+3790	E	5	lazy			ŋi4	ɲe4	ŋkɛŋ4	ȵʨein4	ŋkaŋB	--	ŋɛ4							*æn
 3791																			
 3792			19b. HM	*-æn (42, 175, 247)															
-3793						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3794	E	6	footprint/track			m̥ha3	--	nen3	mein3a	m̥aB	--	--	*æn	*æn	*æn	m̥wan3	ŋwaːn3’	m̥jɛn3	--
-3795	E	7	tiger												*æn	ʥan2	gjaːn2	jɛn2	kjɛn2
-3796	E	8	person/Mien												*æn	mwan2	mun2	min2	min2
-3797	E	9	spirit/ghost												*æn	m̥wan3	ŋwaːn3	m̥jɛn3	mjɛn3
+3793	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3794	E	6	footprint/track			m̥ha3	--	nen3	mein3a	m̥aB	--	--	m̥wan3	ŋwaːn3’	m̥jɛn3	--	*æn	*æn	*æn
+3795	E	7	tiger										ʥan2	gjaːn2	jɛn2	kjɛn2			*æn
+3796	E	8	person/Mien										mwan2	mun2	min2	min2			*æn
+3797	E	9	spirit/ghost										m̥wan3	ŋwaːn3	m̥jɛn3	mjɛn3			*æn
 3798																			
 3799			19c. HM	*-an (99, 118)															
-3800						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3801	E	10	cogongrass			qɛ1	--	ɴqɛŋ1	ŋkæin1a	--	ŋkan1	ŋɛ1	*æn	*an	*an	gaːn1	gaːn1	gwan1	gɔn1
-3802	E	11	clf-people			lɛ2	le1	lɛŋ2	læ2	--	laŋ1	l~æ2	*æn	*an	*an	laːn2	laːn2	--	na1
-3803	E	12	back (of body)												*an	tan4	tan4	--	--
-3804	E	13	to snore												*an	gaŋ2	daːn2	--	--
-3805	E	14	to disperse												*an	daːn5	daːn5’	dzan5	--
-3806	E	15	pullet/hen												*an	kaːn5	kjaːn5	--	--
+3800	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3801	E	10	cogongrass			qɛ1	--	ɴqɛŋ1	ŋkæin1a	--	ŋkan1	ŋɛ1	gaːn1	gaːn1	gwan1	gɔn1	*æn	*an	*an
+3802	E	11	clf-people			lɛ2	le1	lɛŋ2	læ2	--	laŋ1	l~æ2	laːn2	laːn2	--	na1	*æn	*an	*an
+3803	E	12	back (of body)										tan4	tan4	--	--			*an
+3804	E	13	to snore										gaŋ2	daːn2	--	--			*an
+3805	E	14	to disperse										daːn5	daːn5’	dzan5	--			*an
+3806	E	15	pullet/hen										kaːn5	kjaːn5	--	--			*an
 3807																			
 3808	C		Chinese loanwords in set 19c:			*[tʰ]ˤa[n]-s (OC)	>	thanH (MC)	炭	tàn  ‘charcoal’	>	HM *thanH							
 3809								kjɨn (MC)	筋	jīn  ‘sinew’	>	M *kʷjanA							
@@ -3824,36 +3824,36 @@
 3824			20																
 3825	E		20a. H	*-en	(24)														
 3826						1	2	3	4	5	6	7	H						
-3827	E	1	forehead			ȵ̥haŋ1	ɕɛ1	--	ȵi1b	--	--	nɪ̃1	*en						
-3828	E	2	cooked/ripe			ɕhaŋ3	ɕɛ3	ʂia3	sæin3b	senB	θeŋ3	sɪ̃3	*en						
-3829	E	3	shallow			ȵi4	--	--	ȵi4	--	--	ȵɦɪ4	*en						
+3827	E	1	forehead			ȵ̥haŋ1	ɕɛ1	--	ȵi1b	--	--	nɪ̃1							*en
+3828	E	2	cooked/ripe			ɕhaŋ3	ɕɛ3	ʂia3	sæin3b	senB	θeŋ3	sɪ̃3							*en
+3829	E	3	shallow			ȵi4	--	--	ȵi4	--	--	ȵɦɪ4							*en
 3830																			
 3831	C		Chinese loanword in set 20a:			nyemX (MC)	姌	rǎn ‘slender’	>	H *ɲenB ‘thin’									
 3832																			
 3833	E		20b. HM	*-em	(59)														
-3834						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3835	E	4	to steal			ȵaŋ6	ȵɛ6	ȵia6	ȵi6	ȵenC	ȵiŋ6	ȵɪ̃6	*en	*em	*em	nim6	neːm6	--	ȵɛm6
-3836	E	5	petal												*em	ɬim5	leːm5	--	ɬiŋ5
+3834	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3835	E	4	to steal			ȵaŋ6	ȵɛ6	ȵia6	ȵi6	ȵenC	ȵiŋ6	ȵɪ̃6	nim6	neːm6	--	ȵɛm6	*en	*em	*em
+3836	E	5	petal										ɬim5	leːm5	--	ɬiŋ5			*em
 3837																			
 3838			20c. M	*-i̯em	(40)														
-3839						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3840	E	6	mountain (range)												*i̯em	kem2	kiːm2	kleŋ2	--
-3841	E	7	to scold/curse												*i̯em	heːm5	--	--	--
+3839	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3840	E	6	mountain (range)										kem2	kiːm2	kleŋ2	--			*i̯em
+3841	E	7	to scold/curse										heːm5	--	--	--			*i̯em
 3842																			
 3843	C		Chinese loanword in set 20d:			*N-kˤem ‘to doubt’ (OC)	>	hem (MC)	嫌	xián ‘to dislike’	>	M *ɣi̯emA ‘to dislike’							
 3844																			
 3845	E		20d. HM	*-eŋ	(44)														
-3846						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3847	E	8	first day of month			--	--	sia1	sæin1b	senA	--	--	*en	*eŋ	*eŋ	--	--	--	hɛŋ1
-3848	E	9	to lift			--	--	--	--	--	--	ʨõ1	*en	*eŋ	*eŋ	ʨɛŋ1	ȶeːŋ1	kjɛ1	kaŋ1
-3849	E	10	to choke			--	--	--	--	--	ɳtʃei5	ni5	*en	*eŋ	*eŋ	ʥɛːŋ5	--	ʥɛ5	jaŋ5
-3850	E	11	pair												*eŋ	--	geːŋ6	lɛ6	dzaŋ6
+3846	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3847	E	8	first day of month			--	--	sia1	sæin1b	senA	--	--	--	--	--	hɛŋ1	*en	*eŋ	*eŋ
+3848	E	9	to lift			--	--	--	--	--	--	ʨõ1	ʨɛŋ1	ȶeːŋ1	kjɛ1	kaŋ1	*en	*eŋ	*eŋ
+3849	E	10	to choke			--	--	--	--	--	ɳtʃei5	ni5	ʥɛːŋ5	--	ʥɛ5	jaŋ5	*en	*eŋ	*eŋ
+3850	E	11	pair										--	geːŋ6	lɛ6	dzaŋ6			*eŋ
 3851																			
 3852	C		Chinese loanword in set 20e:			ngængH (MC)	硬	yìng ‘hard/solid’	>	M *ŋjeŋC									
 3853																			
 3854			20e. HM	*-æm	(79)														
-3855						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3856	E	12	to weep			ȵaŋ1	ȵɛ3	ȵia3	ȵi3a	ʔȵenB	ȵiŋ3	--	*en	*æm	*æm	ȵem3	ŋjim3	ȵan3	ȵɛm3
+3855	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3856	E	12	to weep			ȵaŋ1	ȵɛ3	ȵia3	ȵi3a	ʔȵenB	ȵiŋ3	--	ȵem3	ŋjim3	ȵan3	ȵɛm3	*en	*æm	*æm
 3857																			
 3858			Discussion																
 3859			Note the close similarity in the reflexes of rime 18 (*in) and 20 (*-en).  Notable is the absence of Hmong-Mien *en in this rime set, which has been reconstructed for rime 25 instead (Hmong-Mien *en > H *ɛŋ, M *ei).  It may be that Hmong-Mien *en was inherently unstable.																
@@ -3875,79 +3875,79 @@
 3875			21																
 3876			21a. H	*-əŋ															
 3877						1	2	3	4	5	6	7	H						
-3878	E	1	to be at/live			ȵaŋ1	ȵi1	ȵɔ1	ȵɔ1a	ʔȵoŋA	ȵɐŋ1	ȵõ1	*əŋ						
-3879	E	2	breast/chest			--	--	ɳʈɔ 1	ɳʈoŋ1a	--	--	--	*əŋ						
-3880	E	3	animal fat/oil			ȶaŋ2	--	ʈɔ2	ʂoŋ2	ʐoŋA	--	--	*əŋ						
-3881	E	4	boat/ship			ȵaŋ2	ŋɑŋ2	ŋkɔ2	ŋkoŋ2	ŋkoŋA	ɳtʃoŋ2	ŋɯ2	*əŋ						
-3882	E	5	to sink			taŋ2	--	tɔ6	toŋ6	toŋA	--	t~æ4	*əŋ						
-3883	E	6	to low/bellow			--	--	ɴqɔ3	ŋkoŋ3a	ɴʔqoŋB	--	--	*əŋ						
-3884	E	7	to return			ȶaŋ3	--	ʈɔ3	ʈoŋ3a	tʂoŋB	--	--	*əŋ						
-3885	E	8	to roll down			ȴ̥aŋ3	cɑŋ3	dɔ3	--	qloŋB	--	--	*əŋ						
-3886	E	9	to bury			ȴaŋ4	ȴɑŋ4	lɔ4	ɭoŋ4	loŋB	--	l~æ4	*əŋ						
-3887	E	10	Allium			--	--	dɔ4	l̥oŋ4	ʁloŋB	--	--	*əŋ						
-3888	E	11	shuttle			ŋaŋ4	nɑŋ4	ɴqɔ4	ŋkoŋ4	ɴqoŋB	ŋwaŋ4	--	*əŋ						
-3889	E	12	to swallow			ŋaŋ4	ŋu4	--	--	ɴqoŋB	--	--	*əŋ						
-3890	E	13	to wait			taŋ4	tɑŋ4	tɔ4	toŋ4	ðoŋB	--	te4	*əŋ						
-3891	E	14	to let go			ɕaŋ5	ʨɑŋ5	tʂɔ5	--	--	--	ʨõ5	*əŋ						
-3892	E	15	to wipe			ɕhaŋ5	ɕɑŋ5	ʂɔ5	soŋ5b	soŋC	--	--	*əŋ						
-3893	E	16	to be			--	--	jɔ6	ʑoŋ6	ʑoŋC	--	ȵɯ6	*əŋ						
-3894	E	17	interior			ȵaŋ6	ɳɑŋ6	ɳʈɔ6	--	--	--	--	*əŋ						
+3878	E	1	to be at/live			ȵaŋ1	ȵi1	ȵɔ1	ȵɔ1a	ʔȵoŋA	ȵɐŋ1	ȵõ1							*əŋ
+3879	E	2	breast/chest			--	--	ɳʈɔ 1	ɳʈoŋ1a	--	--	--							*əŋ
+3880	E	3	animal fat/oil			ȶaŋ2	--	ʈɔ2	ʂoŋ2	ʐoŋA	--	--							*əŋ
+3881	E	4	boat/ship			ȵaŋ2	ŋɑŋ2	ŋkɔ2	ŋkoŋ2	ŋkoŋA	ɳtʃoŋ2	ŋɯ2							*əŋ
+3882	E	5	to sink			taŋ2	--	tɔ6	toŋ6	toŋA	--	t~æ4							*əŋ
+3883	E	6	to low/bellow			--	--	ɴqɔ3	ŋkoŋ3a	ɴʔqoŋB	--	--							*əŋ
+3884	E	7	to return			ȶaŋ3	--	ʈɔ3	ʈoŋ3a	tʂoŋB	--	--							*əŋ
+3885	E	8	to roll down			ȴ̥aŋ3	cɑŋ3	dɔ3	--	qloŋB	--	--							*əŋ
+3886	E	9	to bury			ȴaŋ4	ȴɑŋ4	lɔ4	ɭoŋ4	loŋB	--	l~æ4							*əŋ
+3887	E	10	Allium			--	--	dɔ4	l̥oŋ4	ʁloŋB	--	--							*əŋ
+3888	E	11	shuttle			ŋaŋ4	nɑŋ4	ɴqɔ4	ŋkoŋ4	ɴqoŋB	ŋwaŋ4	--							*əŋ
+3889	E	12	to swallow			ŋaŋ4	ŋu4	--	--	ɴqoŋB	--	--							*əŋ
+3890	E	13	to wait			taŋ4	tɑŋ4	tɔ4	toŋ4	ðoŋB	--	te4							*əŋ
+3891	E	14	to let go			ɕaŋ5	ʨɑŋ5	tʂɔ5	--	--	--	ʨõ5							*əŋ
+3892	E	15	to wipe			ɕhaŋ5	ɕɑŋ5	ʂɔ5	soŋ5b	soŋC	--	--							*əŋ
+3893	E	16	to be			--	--	jɔ6	ʑoŋ6	ʑoŋC	--	ȵɯ6							*əŋ
+3894	E	17	interior			ȵaŋ6	ɳɑŋ6	ɳʈɔ6	--	--	--	--							*əŋ
 3895																			
 3896	C		Chinese loanword in set 21a:			*[k]ʰˤoŋʔ (OC)	>	khuwngX (MC)	孔	kǒng  ‘hole’	>	H *qhəŋB							
 3897																			
 3898	E		21b. M	*-əm	(229)														
-3899						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3900	E	18	to be at/live												*əm	jem1	jam1	jan1	--
-3901	E	19	bracelet												*əm	ʨem2	sam2	--	--
+3899	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3900	E	18	to be at/live										jem1	jam1	jan1	--			*əm
+3901	E	19	bracelet										ʨem2	sam2	--	--			*əm
 3902																			
 3903	C		Chinese loanword in set 21b:			*[r][ə]m (OC)	>	lim (MC)	淋	lín ‘to pour’	>	M *rəmA ‘to water’							
 3904																			
 3905			21c. HM	*-ən (157, 176, 194)															
-3906						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3907	E	20	to shoot			paŋ3	pɑŋ3	pɔ3	poŋ3a	poŋB	poŋ3	pɔ̃3	*əŋ	*ən	*ən	pwan3	fan3	--	bun3
-3908	E	21	fine (flour)			moŋ4	mɑŋ4	mɔ4	--	--	--	m~æ4	*əŋ	*ən	*ən	mwən6	--	mun6	mun6
-3909	E	22	oneself												*ən	kan2	kan2	kan4	--
+3906	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3907	E	20	to shoot			paŋ3	pɑŋ3	pɔ3	poŋ3a	poŋB	poŋ3	pɔ̃3	pwan3	fan3	--	bun3	*əŋ	*ən	*ən
+3908	E	21	fine (flour)			moŋ4	mɑŋ4	mɔ4	--	--	--	m~æ4	mwən6	--	mun6	mun6	*əŋ	*ən	*ən
+3909	E	22	oneself										kan2	kan2	kan4	--			*ən
 3910																			
 3911	C		Chinese loanword in set 21c:			ʔwanX (MC)	碗	wǎn ‘bowl’	>	M *ʔwənB									
 3912																			
 3913	E		21d. HM	*-əŋ	(140)														
-3914						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3915	E	23	night			m̥haŋ5	m̥hɑŋ5	hm̥ɔ5	mɔ5b	m̥oŋC	--	mæ̃4	*əŋ	*əŋ	*əŋ	m̥aŋ3	--	m̥ɔŋ5	mɔŋ5
+3914	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3915	E	23	night			m̥haŋ5	m̥hɑŋ5	hm̥ɔ5	mɔ5b	m̥oŋC	--	mæ̃4	m̥aŋ3	--	m̥ɔŋ5	mɔŋ5	*əŋ	*əŋ	*əŋ
 3916																			
 3917	C		Chinese loanwords in set 21d:			*(mə.)rəʔ (OC)	>	liX (MC)	里	lǐ  ‘village’	>	HM *rəŋX							
 3918	X					*N-[dz]eŋ-s (OC)	>	dzjengH (MC)	淨	jìng  ‘clean’	>	M *ndzəŋC							
 3919																			
 3920	E		21e. HM	*-əum	(193)														
-3921						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3922	E	24	to hear			n̥haŋ3	n̥hɑŋ3	hn̥ɔ3	nɔ3b	n̥uB	n̥ɐŋ3	n̥~ɔ3	*əŋ	*əum	*om	nom3	num3	n̥ən3	--
-3923	E	25	to swell			aŋ5	ɑŋ5	ɔ5	oŋ5a	oŋC	oŋ5	ʔõ5	*əŋ	*əum	*om	om5’	ɔm5	ən5	--
-3924	E	26	to cover												*om	kom3	kɔm3	--	--
+3921	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3922	E	24	to hear			n̥haŋ3	n̥hɑŋ3	hn̥ɔ3	nɔ3b	n̥uB	n̥ɐŋ3	n̥~ɔ3	nom3	num3	n̥ən3	--	*əŋ	*əum	*om
+3923	E	25	to swell			aŋ5	ɑŋ5	ɔ5	oŋ5a	oŋC	oŋ5	ʔõ5	om5’	ɔm5	ən5	--	*əŋ	*əum	*om
+3924	E	26	to cover										kom3	kɔm3	--	--			*om
 3925																			
 3926	E		21f. HM	*-əun	(214)														
-3927						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3928	E	27	tender			ɣaŋ5	ʐɑŋ5	--	--	--	ɳtʃoŋ5	--	*əŋ	*əun	*un	gun5’	--	lun5	in5
-3929	E	28	to be fat			ȶaŋ6	ʈɑŋ6	ʈɔ6	ʂoŋ6	ʐoŋC	ʃoŋ6	ʨõ6	*əŋ	*əun	*un	kun6	kun6	klin6	tin6
+3927	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3928	E	27	tender			ɣaŋ5	ʐɑŋ5	--	--	--	ɳtʃoŋ5	--	gun5’	--	lun5	in5	*əŋ	*əun	*un
+3929	E	28	to be fat			ȶaŋ6	ʈɑŋ6	ʈɔ6	ʂoŋ6	ʐoŋC	ʃoŋ6	ʨõ6	kun6	kun6	klin6	tin6	*əŋ	*əun	*un
 3930																			
 3931	E		21g. HM	*-əuŋ	(218)														
-3932						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3933	E	29	deaf											*əuŋ	*uŋ	--	duŋ1	dwə1	dɔŋ1
-3934	E	30	to bark											*əuŋ	*uŋ	ʨuŋ5’	ȶuŋ5	ȡwə5	--
+3932	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3933	E	29	deaf										--	duŋ1	dwə1	dɔŋ1		*əuŋ	*uŋ
+3934	E	30	to bark										ʨuŋ5’	ȶuŋ5	ȡwə5	--		*əuŋ	*uŋ
 3935																			
 3936	C		Chinese loanwords in set 21g:			*mˤoŋʔ (OC)	>	muwngX (MC)	蠓	měng  ‘midge’	>	HM *məuŋX ‘fly (n.)’							
 3937								kjang (MC)	薑	jiāng  ‘ginger’	>	M *khjuŋA							
 3938								pjangH (MC)	放	fàng  ‘to let go’	>	M *puŋC							
 3939																			
 3940			21h. HM	*-əaŋ	(101)	 All other words in Wang and Mao rime set 101 are attested in Mienic only, and can be placed in rime 24.  ‘Rope’ has Hmongic cognates meaning ‘sash/cord/belt’, and the expanded set also belongs in rime 24 rather than here.													
-3941						1	2	3	4	5	6	7	H	HM	M	8	9	10	11
-3942	E	31	cooked rice			--	--	hn̥ɔ5	ɳɔ5b	--	--	--	*əŋ	*əaŋ	*aŋ	naːŋ5	naŋ5’	n̥aŋ5	nɔŋ5
+3941	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3942	E	31	cooked rice			--	--	hn̥ɔ5	ɳɔ5b	--	--	--	naːŋ5	naŋ5’	n̥aŋ5	nɔŋ5	*əŋ	*əaŋ	*aŋ
 3943																			
 3944			Discussion																
 3945			Set 21b, made up of Mienic words entirely, is included here because it is assumed that Hmongic ‘to be at/live’ with a palatal nasal initial in this set 21a is related to Mienic ‘be at/live’ with a palatal glide initial.  Sets 21c and 21d contain words with labial initials that developed a rounded glide in Mienic before -əN (see also rime 28 ). 																
 3946																			
 3947			There is only one loanword to exemplify each of two more rimes belonging to set 21:																
 3948																			
-3949	E		21i. HM	*-əan	(194):  HM *phəan ‘clf-quilts’ from Chinese 片 ‘half; partial; one-sided’ (MC phenH > Man. piàn).														
-3950	E		21j. HM	*-u̯en	(194):  HM *chu̯en ‘to thread’ from Chinese 穿 ‘to bore through’ (MC tsyhwen > Man. chuān).														
+3949	X		21i. HM	*-əan	(194):  HM *phəan ‘clf-quilts’ from Chinese 片 ‘half; partial; one-sided’ (MC phenH > Man. piàn).														
+3950	X		21j. HM	*-u̯en	(194):  HM *chu̯en ‘to thread’ from Chinese 穿 ‘to bore through’ (MC tsyhwen > Man. chuān).														
 3951																			
 3952			Notes																
 3953		1	Mienic *ʔjəmA (4.10/21) ‘to be at/live’ is probably related to this word.																
@@ -3967,63 +3967,63 @@
 3967			22																
 3968			22a. H	*-ɛŋ															
 3969						1	2	3	4	5	6	7	H						
-3970	E	1	black			l̥ɛ1	qwe1	du1	l̥oŋ1a	qlaŋA	klaŋ1	--	*ɛŋ						
-3971	E	2	clay pot/earthen jar			--	--	hu1	ɦoŋ1b	haŋA	--	--	*ɛŋ						
-3972	E	3	clf-bowls/houses			lɛ1	le1	lu1	noŋ1a	ʔlaŋA	xoŋ1	lɔ̃1	*ɛŋ 						
-3973	E	4	to feed			pɛ1	--	pu1	--	--	--	--	*ɛŋ						
-3974	E	5	star			qɛ1	qe1	qu1	hoŋ1a	qaŋA	ka1	kɔ̃1	*ɛŋ						
-3975	E	6	sun/day			n̥hɛ1	n̥he1	hn̥u1	noŋ1b	n̥aA	n̥ɔ1’	n̥̥ẽ1	*ɛŋ						
-3976	E	7	tree of heaven			--	--	ju2	ʑoŋ2	ʑaŋA	--	--	*ɛŋ						
-3977	E	8	1sg (I/me)			--	--	ku3	koŋ3a	kaŋB	--	--	*ɛŋ						
-3978	E	9	artemisia			xhi3	--	--	ʐoŋ3b	saŋB	--	--	*ɛŋ						
-3979	E	10	husked rice/millet			shɛ3	se3	tshu3	soŋ3b	tshaŋB	--	--	*ɛŋ						
-3980	E	11	short			lɛ3	le3	lu3	loŋ3a	ʔlaŋB	laŋ3	lɔ̃3	*ɛŋ						
-3981	E	12	1sg (I/me)			vi4	we4	--	--	--	va4	vɔ̃4	*ɛŋ						
-3982	E	13	clf-horses			tɛ4	--	tu4	toŋ4	ðaŋB	--	--	*ɛŋ						
-3983	E	14	midday meal			--	--	ʂu5	soŋ5b	saŋC	--	--	*ɛŋ						
-3984	E	15	to ask			nɛ6	ne6	nu6	noŋ6	naC	nɔ6	nɪ̃6	*ɛŋ						
+3970	E	1	black			l̥ɛ1	qwe1	du1	l̥oŋ1a	qlaŋA	klaŋ1	--							*ɛŋ
+3971	E	2	clay pot/earthen jar			--	--	hu1	ɦoŋ1b	haŋA	--	--							*ɛŋ
+3972	E	3	clf-bowls/houses			lɛ1	le1	lu1	noŋ1a	ʔlaŋA	xoŋ1	lɔ̃1							*ɛŋ 
+3973	E	4	to feed			pɛ1	--	pu1	--	--	--	--							*ɛŋ
+3974	E	5	star			qɛ1	qe1	qu1	hoŋ1a	qaŋA	ka1	kɔ̃1							*ɛŋ
+3975	E	6	sun/day			n̥hɛ1	n̥he1	hn̥u1	noŋ1b	n̥aA	n̥ɔ1’	n̥̥ẽ1							*ɛŋ
+3976	E	7	tree of heaven			--	--	ju2	ʑoŋ2	ʑaŋA	--	--							*ɛŋ
+3977	E	8	1sg (I/me)			--	--	ku3	koŋ3a	kaŋB	--	--							*ɛŋ
+3978	E	9	artemisia			xhi3	--	--	ʐoŋ3b	saŋB	--	--							*ɛŋ
+3979	E	10	husked rice/millet			shɛ3	se3	tshu3	soŋ3b	tshaŋB	--	--							*ɛŋ
+3980	E	11	short			lɛ3	le3	lu3	loŋ3a	ʔlaŋB	laŋ3	lɔ̃3							*ɛŋ
+3981	E	12	1sg (I/me)			vi4	we4	--	--	--	va4	vɔ̃4							*ɛŋ
+3982	E	13	clf-horses			tɛ4	--	tu4	toŋ4	ðaŋB	--	--							*ɛŋ
+3983	E	14	midday meal			--	--	ʂu5	soŋ5b	saŋC	--	--							*ɛŋ
+3984	E	15	to ask			nɛ6	ne6	nu6	noŋ6	naC	nɔ6	nɪ̃6							*ɛŋ
 3985																			
 3986	C		Chinese loanwords in set 22a:			ljang (MC)	量	liáng  ‘to weigh/measure’	>	H *ljɛŋA ‘to measure (rice)’									
 3987						ʔjang (MC)	秧	yāng  ‘seedling’	>	H *ʔjɛŋA									
 3988						yangH (MC)	養	yàng  ‘to keep, support’	>	H *jɛŋC ‘to raise (chickens)’									
 3989																			
 3990	E		22b. HM	*-ɛm	(174)														
-3991						1	2	3	4	5	6	7	H	 HM	 M	8	9	10	11
-3992	E	16	body louse			tɛ3	te3	tu3	toŋ3a	taŋB	taŋ3	n~ɔ3	*ɛŋ 	*ɛm	*əm	tam3	tam3	dan3	dam3
-3993	E	17	to ladle												*əm	dam3	--	--	da3
+3991	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+3992	E	16	body louse			tɛ3	te3	tu3	toŋ3a	taŋB	taŋ3	n~ɔ3	tam3	tam3	dan3	dam3	*ɛŋ 	*ɛm	*əm
+3993	E	17	to ladle										dam3	--	--	da3			*əm
 3994																			
 3995	C		Chinese loanwords in set 22b:			*(pə.)r[ə]mʔ (OC)	>	limX (MC)	廩	lǐn  ‘barn/granary’	>	HM *rɛmX							
 3996								nemH (MC)	念	Cant. /nɐm3/ ‘to think of’	>	M *hnəmB~*hləmB							
 3997																			
-3998	D		22c. HM	*-u̯ɛn	(100)														
-3999						1	2	3	4	5	6	7	H	 HM	 M	8	9	10	11
-4000	E	18	son/boy			tɛ1	te1	tu1	toŋ1a	taŋA	--	tɔ̃1	*ɛŋ	*u̯ɛn	*u̯ɛn	--	tɔːn1	twan1	dan1
-4001	E	19	wet			--	nte1	ntu1	ntoŋ1a	nʔtaŋA	ntaŋ1	tɔ̃4	*ɛŋ	*u̯ɛn	*u̯ɛn	--	dɔːn1	--	--
+3998	P		22c. HM	*-u̯ɛn	(100)														
+3999	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+4000	E	18	son/boy			tɛ1	te1	tu1	toŋ1a	taŋA	--	tɔ̃1	--	tɔːn1	twan1	dan1	*ɛŋ	*u̯ɛn	*u̯ɛn
+4001	E	19	wet			--	nte1	ntu1	ntoŋ1a	nʔtaŋA	ntaŋ1	tɔ̃4	--	dɔːn1	--	--	*ɛŋ	*u̯ɛn	*u̯ɛn
 4002																			
 4003	C		Chinese loanword in set 22c:			ljen (MC)	聯	Cant. /lyːn2/ ‘to sew’	>	M *lju̯ɛnA									
 4004																			
 4005			22d. HM	*-ɛŋ (102, 104)															
-4006						1	2	3	4	5	6	7	H	 HM	 M	8	9	10	11
-4007	E	20	sky/heaven			vɛ2	--	--	--	--	--	vɔ̃2	*ɛŋ	*ɛŋ	*əŋ	--	--	--	vaŋ2
-4008	E	21	to snap			tɛ5	te5	tu5	toŋ5a	taŋC	taŋ5	tɔ̃5	*ɛŋ	*ɛŋ	*əŋ	--	--	taŋ5	daŋ5
-4009	E	22	to put on/wear (jewelry)												*əŋ	taŋ2	taŋ2	--	--
-4010	E	23	to resemble												*əŋ	n̥aŋ2	naŋ3’	--	--
-4011	E	24	short												*əŋ	naŋ3	niŋ3	naŋ3	naŋ3
+4006	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+4007	E	20	sky/heaven			vɛ2	--	--	--	--	--	vɔ̃2	--	--	--	vaŋ2	*ɛŋ	*ɛŋ	*əŋ
+4008	E	21	to snap			tɛ5	te5	tu5	toŋ5a	taŋC	taŋ5	tɔ̃5	--	--	taŋ5	daŋ5	*ɛŋ	*ɛŋ	*əŋ
+4009	E	22	to put on/wear (jewelry)										taŋ2	taŋ2	--	--			*əŋ
+4010	E	23	to resemble										n̥aŋ2	naŋ3’	--	--			*əŋ
+4011	E	24	short										naŋ3	niŋ3	naŋ3	naŋ3			*əŋ
 4012																			
 4013	C		Chinese loanwords in set 22d:			*s-təŋ-s (OC)	>	tsingH (MC)	甑	zèng  ‘rice steamer’	>	HM *tsjɛŋH							
 4014								tongH (MC)	凳	dèng  ‘stool/bench’	>	M *təŋC							
 4015																			
-4016	D		22e. HM	*-u̯ɛŋ	(252)														
-4017						1	2	3	4	5	6	7	H	 HM	 M	8	9	10	11
-4018	E	25	full			pɛ3	pe3	pu3	poŋ3a	paŋB	paŋ3	pɔ̃3	*ɛŋ	*u̯ɛŋ	*u̯ɛŋ	pwəŋ3	pɔŋ3	pɔŋ3	baŋ3
-4019	E	26	cold (day)												*u̯ɛŋ	ʨwəŋ3	sɔŋ3	ȶɔŋ3	kuŋ3
-4020	E	27	quilt												*u̯ɛŋ	ɕwəŋ5	tθɔŋ5’	sɔŋ5	suŋ5
+4016	P		22e. HM	*-u̯ɛŋ	(252)														
+4017	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+4018	E	25	full			pɛ3	pe3	pu3	poŋ3a	paŋB	paŋ3	pɔ̃3	pwəŋ3	pɔŋ3	pɔŋ3	baŋ3	*ɛŋ	*u̯ɛŋ	*u̯ɛŋ
+4019	E	26	cold (day)										ʨwəŋ3	sɔŋ3	ȶɔŋ3	kuŋ3			*u̯ɛŋ
+4020	E	27	quilt										ɕwəŋ5	tθɔŋ5’	sɔŋ5	suŋ5			*u̯ɛŋ
 4021																			
 4022	C		Chinese loanwords in set 22e:			tsyowngH (MC)	種	zhòng  ‘to grow’	>	HM *n-tju̯ɛŋH									
 4023						phjowngX (MC)	奉	fèng  ‘to present with both hands’	>	M *phu̯ɛŋB ‘to carry in 2 hands’									
 4024	X					bjuwX (MC)	婦	fù  ‘woman/wife’	>	M *mbu̯ɛŋB ‘daughter-in-law/bride’									
 4025																			
 4026			22f. HM	*-ɛɔm (100, 173, 245)															
-4027						1	2	3	4	5	6	7	H	 HM	 M	8	9	10	11
-4028	E	28	hot (water)			khi1	ce1	ku1	koŋ1a	kaŋA	khjaŋ1	kɔ̃1	*ɛŋ	*ɛɔm	*ɛɔm	kɔm1	kjɔːm1	klœn1	tsam1
-4029	D	29	clf-bowls/houses	*glje(X)											*ɛɔm	nɔm1	nɔ1	nɔ1	na1
+4027	L1					1	2	3	4	5	6	7	8	9	10	11	H	HM	M
+4028	E	28	hot (water)			khi1	ce1	ku1	koŋ1a	kaŋA	khjaŋ1	kɔ̃1	kɔm1	kjɔːm1	klœn1	tsam1	*ɛŋ	*ɛɔm	*ɛɔm
+4029	E	29	clf-bowls/houses	*glje(X)									nɔm1	nɔ1	nɔ1	na1			*ɛɔm

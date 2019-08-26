@@ -11,7 +11,7 @@ cons = r'([^GKMNORSWZbcdfghjklmnqpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃ�
 notrimes = r'^([ABCDXHL0123456789DGHKMNORSWXZbcdfghjklmnpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
 
 
-LANGUAGES = ['lg'+ str(i) for i in range(17)]
+LANGUAGES = ['lg'+ str(i) for i in range(11)]
 NLG = len(LANGUAGES)
 
 def make_header(prefix):
