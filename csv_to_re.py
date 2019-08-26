@@ -18,11 +18,10 @@ table = read.read_csv_correspondences(sys.argv[1], 'placeholder', languages)
 
 if len(sys.argv) == 4:
     root = ET.parse(sys.argv[3])
-    sound_classes, regex, supra_segmentals = read.read_classes(root.findall('.//'))
+    canon = read.read_syllable_canon(root.findall('.//'))
 else:
-    sound_classes, regex, supra_segmentals = {}, None, None
-
+    canon = RE.SyllableCanon({}, None, [], 'constituent')
 
 RE.Parameters(table,
-              RE.SyllableCanon(sound_classes, 'placeholder' if regex is None else regex, []),
+              canon,
               'placeholder', None).serialize(sys.argv[2])

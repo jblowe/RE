@@ -20,6 +20,8 @@ def read_correspondence_file(filename, project_name, daughter_languages, name, m
 def read_syllable_canon(parameters):
     sound_classes = {}
     supra_segmentals = []
+    regex = None
+    context_match_type = 'constituent'
     for parameter in parameters:
         if parameter.tag == 'class':
             sound_classes[parameter.attrib.get('name')] = \
@@ -28,23 +30,9 @@ def read_syllable_canon(parameters):
             regex = parameter.attrib.get('value')
         if parameter.tag == 'spec':
             supra_segmentals = parameter.attrib.get('value').split(',')
-    return RE.SyllableCanon(sound_classes, regex, supra_segmentals)
-
-
-def read_classes(parameters):
-    sound_classes = {}
-    supra_segmentals = []
-    regex = ''
-    for parameter in parameters:
-        if parameter.tag == 'class':
-            sound_classes[parameter.attrib.get('name')] = \
-                [x.strip() for x in parameter.attrib.get('value').split(',')]
-        if parameter.tag == 'canon':
-            regex = parameter.attrib.get('value')
-        if parameter.tag == 'spec':
-            supra_segmentals = parameter.attrib.get('value').split(',')
-    return sound_classes, regex, supra_segmentals
-
+        if parameter.tag == 'context_match_type':
+            context_match_type = parameter.attrib.get('value')
+    return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
 
 def read_correspondences(correspondences, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)

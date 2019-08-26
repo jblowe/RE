@@ -11,10 +11,11 @@ class Debug:
     debug = False
 
 class SyllableCanon:
-    def __init__(self, sound_classes, syllable_regex, supra_segmentals):
+    def __init__(self, sound_classes, syllable_regex, supra_segmentals, context_match_type):
         self.sound_classes = sound_classes
         self.regex = re.compile(syllable_regex)
         self.supra_segmentals = supra_segmentals
+        self.context_match_type = context_match_type
 
 class Correspondence:
     def __init__(self, id, context, syllable_types, proto_form, daughter_forms):
@@ -201,6 +202,7 @@ def next_correspondence_map(parameters):
     sound_classes = parameters.syllable_canon.sound_classes
     correspondences = parameters.table.correspondences
     supra_segmentals = parameters.syllable_canon.supra_segmentals
+    context_match_type = parameters.syllable_canon.context_match_type
 
     # expand out the cover class abbreviations
     for correspondence in correspondences:
@@ -210,14 +212,20 @@ def next_correspondence_map(parameters):
 
     def matches_this_left_context(c, last):
         return (c.context[0] is None or
-                last.proto_form in c.expanded_context[0])
+                (any(last.proto_form.startswith(context)
+                     for context in c.expanded_context[0])
+                 if context_match_type == 'glyphs' else
+                 last.proto_form in c.expanded_context[0]))
 
     def matches_last_right_context(c, last):
         # implements bypassing of suprasegmentals the other way
         if c.proto_form in supra_segmentals:
             return True
         return (last.context[1] is None or
-                c.proto_form in last.expanded_context[1])
+                (any(c.proto_form.startswith(context)
+                     for context in last.expanded_context[1])
+                 if context_match_type == 'glyphs' else
+                 c.proto_form in last.expanded_context[1]))
 
     def matches_context(c, last):
         return (matches_this_left_context(c, last) and
@@ -525,9 +533,8 @@ def all_parameters(settings):
     rec(settings.upstream_target)
     return mapping
 
-def batch_all_upstream(settings, attested_lexicons=None, only_with_mel=False):
-    if attested_lexicons is None:
-        attested_lexicons = read.read_attested_lexicons(settings)
+def batch_all_upstream(settings, only_with_mel=False):
+    attested_lexicons = read.read_attested_lexicons(settings)
     return upstream_tree(settings.upstream_target,
                          settings.upstream,
                          all_parameters(settings),

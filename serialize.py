@@ -22,6 +22,8 @@ def serialize_correspondence_file(filename, parameters):
                   value=syllable_canon.regex.pattern)
     ET.SubElement(params, 'spec', name='supra_segmentals',
                   value=','.join(syllable_canon.supra_segmentals))
+    ET.SubElement(params, 'context_match_type', name='context_match_type',
+                  value=syllable_canon.context_match_type)
     for correspondence in parameters.table.correspondences:
         corr = ET.SubElement(root, 'corr', num=correspondence.id)
         attributes = {'syll': ','.join(correspondence.syllable_types)}
