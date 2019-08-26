@@ -8,6 +8,7 @@ import compare
 import load_hooks
 import utils
 import shutil
+import serialize
 from argparser import command_args, args
 
 def check_setup(command, args, settings):
@@ -43,8 +44,8 @@ if command_args.command == 'coverage':
     args.run = args.mel_name
     extra_mel_xml_file = os.path.join(args.experiment_path,
                                      f'{args.project}.{args.mel_name}-extra.mel.xml')
-    RE.write_xml_stats(coverage_statistics, settings, args, coverage_xml_file)
-    RE.write_xml_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
+    serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
+    serialize.serialize_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
 elif command_args.command == 'list-all-glosses':
     settings = read.read_settings_file(os.path.join('..', 'projects', args.project, f'{args.project}.master.parameters.xml'))
     for gloss in utils.all_glosses(read.read_attested_lexicons(settings)):
@@ -84,7 +85,7 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     evaluation_stats['sets_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
     evaluation_stats['sets_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
     evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')
-    RE.write_evaluation_stats(evaluation_stats, evaluation_xml_file)
+    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file)
 
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
@@ -127,9 +128,9 @@ elif command_args.command == 'upstream':
         B.statistics.add_stat('isolates', len(B.isolates))
         B.statistics.add_stat('sets', len(B.forms))
         stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')
-        RE.write_xml_stats(B.statistics, settings, args, stats_xml_file)
+        serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
         print('serializing proto_lexicon')
-        RE.write_proto_lexicon(
+        serialize.serialize_proto_lexicon(
             B,
             os.path.join(args.experiment_path,
                          f'{args.project}.{args.run}.sets.json'))

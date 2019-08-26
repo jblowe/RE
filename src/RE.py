@@ -577,18 +577,6 @@ def dump_keys(lexicon, filename):
             print(f'{str(failure)}')
     sys.stdout = out
 
-def write_xml_stats(stats, settings, args, filename):
-    serialize.serialize_stats(stats, settings, args, filename)
-
-def write_xml_mels(mel_sets, mel_name, filename):
-    serialize.serialize_mels(mel_sets, mel_name, filename)
-
-def write_evaluation_stats(stats, filename):
-    serialize.serialize_evaluation(stats, filename)
-
-def write_proto_lexicon(proto_lexicon, filename):
-    serialize.serialize_proto_lexicon(proto_lexicon, filename)
-
 def compare_support(lex1_forms, forms):
     key1 = sorted([str(k) for k in lex1_forms])
     key2 = sorted([str(k) for k in forms])
