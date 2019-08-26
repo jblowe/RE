@@ -11,7 +11,7 @@ cons = r'([^GKMNORSWZbcdfghjklmnqpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃ�
 notrimes = r'^([ABCDXHL0123456789DGHKMNORSWXZbcdfghjklmnpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
 
 
-LANGUAGES = ['lg'+ str(i) for i in range(11)]
+LANGUAGES = ['lg'+ str(i+1) for i in range(11)]
 NLG = len(LANGUAGES)
 
 def make_header(prefix):
@@ -47,7 +47,7 @@ def filter_corrs(corrs):
         ancestor[corr[1]].append(corr)
     new_corrs = []
     for key in sorted(ancestor):
-        this_one = [[] for i in range(NLG)]
+        this_one = [[] for i in range(NLG + 5)]
         for corr in ancestor[key]:
             for i,c in enumerate(corr):
                 if c == '': continue
