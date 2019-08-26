@@ -581,15 +581,8 @@ def dump_keys(lexicon, filename):
     sys.stdout = out
 
 def compare_support(lex1_forms, forms):
-    key1 = sorted([str(k) for k in lex1_forms])
-    key2 = sorted([str(k) for k in forms])
-    # print(key1)
-    # print(key2)
-    # print()
-    if key1 == key2:
-        return True
-    else:
-        return False
+    # FIXME: there's a subtle dependency here on the Form.str method.
+    return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
