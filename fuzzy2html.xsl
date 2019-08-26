@@ -29,8 +29,8 @@
             <thead>
                 <tr>
                     <th>Language</th>
-                    <th>To</th>
-                    <th>From</th>
+                    <th>Input data values</th>
+                    <th>Fuzzied value</th>
                 </tr>
             </thead>
             <xsl:for-each select="./*">
