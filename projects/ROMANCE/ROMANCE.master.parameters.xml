@@ -14,9 +14,9 @@
     <action name="upstream" from="es,oldpt,pt,it,fr,scn" to="PIWR"/>
   </reconstruction>
   <reconstruction name="tree">
-    <proto_language name="PWR" correspondences="PWR.xml"/>
-    <proto_language name="PIWR" correspondences="PIWR.xml"/>
-    <proto_language name="PIR" correspondences="PIR.xml"/>
+    <proto_language name="PWR" correspondences="ROMANCE.PWR.correspondences.xml"/>
+    <proto_language name="PIWR" correspondences="ROMANCE.PIWR.correspondences.xml"/>
+    <proto_language name="PIR" correspondences="ROMANCE.PIR.correspondences.xml"/>
     <action name="upstream" target="PIWR"/>
     <action name="upstream" from="PWR,it,scn" to="PIWR"/>
     <action name="upstream" from="PIR,fr" to="PWR"/>
