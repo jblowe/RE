@@ -30,10 +30,9 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
 
 class Lexicon:
-    def __init__(self, language, forms, list_of_recons, statistics=None):
+    def __init__(self, language, forms, statistics=None):
         self.language = language
         self.forms = forms
-        self.list_of_recons = []
         self.statistics = statistics
 
     def key_forms_by_glyphs_and_gloss(self):
@@ -465,25 +464,18 @@ def filter_subsets(cognate_sets, statistics, root=True):
 # surface string
 def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
-    list_of_recons = {}
     seen = {}
     for cognate_set in cognate_sets:
         protoform = correspondences_as_proto_form_string(cognate_set[0])
         if only_with_mel:
             if cognate_set[2] not in seen:
                 seen[cognate_set[2]] = True
-                list_of_recons[protoform] = [cognate_set[0]]
                 uniques[(protoform, cognate_set[1])] = cognate_set
-            elif protoform in list_of_recons:
-                # print(f'already seen: {protoform} {correspondences_as_ids(cognate_set[0])}')
-                list_of_recons[protoform].append(cognate_set[0])
-            else:
-                list_of_recons[protoform] = [cognate_set[0]]
             continue
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
-    return uniques.values(), list_of_recons, statistics
+    return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, only_with_mel, root):
     return pick_derivation(
@@ -505,7 +497,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
                              for daughter in tree[target]]
-        forms, list_of_recons, statistics = batch_upstream(daughter_lexicons,
+        forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel,
                                            root)
@@ -515,7 +507,6 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                        attested_support, mel)
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
-            list_of_recons,
             statistics)
 
     return rec(target, True)
