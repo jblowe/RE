@@ -12,9 +12,9 @@ body {
 .level2  { padding-left: 30px;}
 .etymonrow { background-color: #b9def0; }
 .subsetrow { background-color: #D0E0E0; }
-#id  { display: table-cell; width: 8%; padding-right: 10px; font-size: medium; }
-#plg { display: table-cell; width: 10%; padding-right: 20px; font-size: medium; }
-#pfm { display: table-cell; width: 15%; font-weight:bold; font-size: large; padding-right: 10px; }
+#id  { display: table-cell; width: 8%; padding-right: 10px; font-size: smaller; }
+#plg { display: table-cell; width: 10%; padding-right: 20px; font-size: smaller; }
+#pfm { display: table-cell; width: 15%; font-weight:bold; font-size: small; padding-right: 10px; }
 #pgl { display: table-cell; width: 20%; font-style: italic; padding-right: 10px; }
 #rcn { display: table-cell; width: 30%; font-family: 'Courier'; font-size: smaller; padding-right: 10px; }
 /* support forms block */
