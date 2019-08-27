@@ -60,6 +60,18 @@
   <item dial="tuk" to="hl">
     <from>lʰ</from>
   </item>
+  <item dial="tuk" to="˥">
+    <from>ᴴ</from>
+  </item>
+  <item dial="tuk" to="˩">
+    <from>ᴸ</from>
+  </item>
+  <item dial="syang" to="˥">
+    <from>ᴴ</from>
+  </item>
+  <item dial="syang" to="˩">
+    <from>ᴸ</from>
+  </item>
   <item dial="mar" to="ʌi">
     <from>ʌʱi</from>
     <from>ĩ</from>
