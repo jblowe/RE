@@ -114,7 +114,7 @@ def read_vanuatu_csv(filename):
     return table
 
 RE.Parameters(read_vanuatu_csv(correspondence_filename),
-              RE.SyllableCanon({}, '(c?v)?(C?Vc?w)+', []),
+              RE.SyllableCanon({}, '(c?v)?(C?Vc?w)+', [], 'glyphs'),
               'pnv', None).serialize(
                   os.path.join(base_dir, 'VANUATU.correspondences.xml'))
 
