@@ -1,3 +1,4 @@
+# -*- coding: utf-8
 import sys
 import lxml.etree as ET
 
@@ -10,4 +11,4 @@ def xml2html(xsl_filename, xml_filename):
     return newdom
 
 
-sys.stdout.write(ET.tostring(xml2html(sys.argv[1], sys.argv[2]), pretty_print=True, encoding='unicode'))
+sys.stdout.write(ET.tostring(xml2html(sys.argv[1], sys.argv[2]), pretty_print=True, encoding='ascii').decode('ascii'))

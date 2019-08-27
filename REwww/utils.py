@@ -2,7 +2,7 @@ import os, time, sys
 import lxml.etree as ET
 
 # we need some code from the sibling directory where the rest of the RE code lives
-sys.path.append("../src")
+sys.path.append("..\src")
 
 import projects
 import RE, read
