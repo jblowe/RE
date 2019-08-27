@@ -20,7 +20,7 @@
 
                 <h4>Regular cognate sets</h4>
                 <h5>n = <xsl:value-of select="count(set)" /></h5>
-                <table class="table table-striped sortable">
+                <table class="table table-striped sortable sticky-top">
                     <thead>
                         <tr>
                             <th>num</th>

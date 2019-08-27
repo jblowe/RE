@@ -28,7 +28,7 @@
     </xsl:template>
 
     <xsl:template match="totals">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -45,7 +45,7 @@
     </xsl:template>
 
     <xsl:template match="semantics">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
                 <tr>
                     <th>ID</th>

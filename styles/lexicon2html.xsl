@@ -23,7 +23,7 @@
                 <xsl:value-of select="@dialecte"/>
             </h3>
             <h5>n = <xsl:value-of select="count(entry)" /></h5>
-            <table class="table table-striped sortable">
+            <table class="table table-striped sortable sticky-top">
                 <thead>
                     <tr>
                         <th>Form</th>

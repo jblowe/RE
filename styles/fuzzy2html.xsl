@@ -25,7 +25,7 @@
     </xsl:template>
 
     <xsl:template match="fuzzy">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
                 <tr>
                     <th>Language</th>

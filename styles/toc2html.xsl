@@ -19,7 +19,7 @@
 <xsl:template match="tableOfCorr">
 	<div>
 		<h4>Macro-classes</h4>
-		<table class="table table-striped sortable">
+		<table class="table table-striped sortable sticky-top">
 			<thead>
 				<tr>
 					<th>Class</th>
@@ -38,7 +38,7 @@
 			<xsl:value-of select="parameters/canon/@value"/>
 		</xsl:if>
 		<h4>Table of correspondences</h4>
-		<table class="table table-striped sortable">
+		<table class="table table-striped sortable sticky-top">
 			<thead>
 				<tr>
 					<th>num</th>
