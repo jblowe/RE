@@ -2,10 +2,11 @@ import os, time, sys
 import lxml.etree as ET
 
 # we need some code from the sibling directory where the rest of the RE code lives
-sys.path.append(os.path.join('..','src'))
+sys.path.append("../src")
 
 import projects
 import RE, read
+import load_hooks
 from bottle import template
 
 # nb: we are trying to get the directory above the directory this file is in
@@ -34,14 +35,19 @@ def combine_parts(*args):
     return os.path.join('..', *args)
 
 
-def check_template(tpl, data):
+def check_template(tpl, data, parameters):
     if 'back' not in data:
         data['back'] = '/list_tree/projects'
+    if 'experiment_info' in data:
+        for i in 'fuzzy recon mel'.split(' '):
+            data['experiment_info'][i] = parameters[i] if i in parameters else ''
     return template(tpl, data=data)
 
 
 def list_of_experiments(project):
     experiment_dir = combine_parts(EXPERIMENTS, project)
+    if not os.path.isdir(experiment_dir):
+        os.mkdir(experiment_dir)
     experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
     experiments = []
     data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
@@ -98,6 +104,11 @@ def data_files(tree, directory):
         num_files += len([f for f in filelist if f'.{type}' in f])
     to_display.append(('Other data types', other_files))
     return to_display, directory_dir, num_files
+
+
+def set_defaults(data, parameters):
+    for i in 'fuzzy recon mel'.split(' '):
+        data['experiment_info'][i] = parameters[i] if i in parameters else None
 
 
 def all_file_content(file_path):
@@ -165,6 +176,7 @@ def determine_file_type(file_path):
         return 'fuzzy2html.xsl'
     elif 'sets.xml' in file_path:
         return 'sets2tabular.xsl'
+        #return 'sets2html.xsl'
     elif 'mel.xml' in file_path:
         return 'mel2html.xsl'
     elif 'statistics.xml' in file_path:
@@ -185,7 +197,7 @@ def reformat(filecontent, max_rows):
     result = '<tr><td>'.join(rows)
     result = '<tbody><tr><td>' + result.replace('\t', '<td>')
     result += '</tbody></table>'
-    return '<table width="100%" class="table table-striped sortable">\n' + header + result
+    return '<table width="100%" class="table table-striped sortable table-fixed">\n' + header + result
 
 
 # this somewhat desperate function makes an html table from a tab- and newline- delimited string
@@ -219,6 +231,7 @@ def upstream(request, language_forms, project, experiment, parameters, only_with
                                            mel=mel,
                                            fuzzy=fuzzy,
                                            recon=recon)
+        load_hooks.load_hook(None, settings)
         attested_lexicons = read.create_lexicon_from_parms(language_forms)
         B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
         isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]

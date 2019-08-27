@@ -36,27 +36,27 @@ def send_font(filename):
 @app.route('/')
 def index():
     data = {'home': 'here'}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/about')
 def index():
     data = {'about': 'here'}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/list_tree/<tree:re:.*>')
 def list_tree(tree):
     tree_info = utils.tree_info(tree)
     data = {tree: tree_info}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/project/<project:re:.*>')
 def project(project):
     files, base_dir, num_files = utils.data_files(utils.PROJECTS, project)
     data = {'tree': 'projects', 'project': project, 'files': files, 'base_dir': base_dir}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/get_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
@@ -72,7 +72,7 @@ def get_experiment_file(tree, project, experiment, filename):
     data = {'tree': tree, 'project': project, 'experiment': experiment, 'files': files, 'base_dir': base_dir,
             'num_files': num_files, 'experiment_info': experiment_info, 'filename': filename, 'date': date,
             'content': content, 'data_elements': data_elements, 'back': f'/experiments/{project}'}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/get_file/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
@@ -82,7 +82,7 @@ def get_project(tree, project, filename):
     files, base_dir, num_files = utils.data_files(tree, project)
     data = {'tree': tree, 'project': project, 'files': files, 'base_dir': base_dir, 'filename': filename,
             'source': 'Source data', 'date': date, 'content': content}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 def download(full_path, filename):
@@ -107,7 +107,7 @@ def download_project(tree, project, filename):
 
 @app.post('/interactive/<project:re:.*>/<experiment:re:.*>')
 def upstream(project, experiment):
-    languages = [(i, getattr(request.forms, i)) for i in request.forms]
+    languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel'.split()]
     RE.Debug.debug = True
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
@@ -116,7 +116,7 @@ def upstream(project, experiment):
     data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages, 'base_dir': base_dir,
             'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses,
             'experiment_info': experiment_info}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/interactive/<project:re:.*>/<experiment:re:.*>')
@@ -133,7 +133,7 @@ def interactive_project(project, experiment):
         languages = [(l, '') for l in languages]
         data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages,
                 'base_dir': base_dir, 'back': f'/experiments/{project}', 'experiment_info': experiment_info}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/experiment/<project:re:.*>/<experiment:re:.*>')
@@ -147,7 +147,7 @@ def show_experiment(project, experiment, messages=None):
     if messages: data['errors'] = messages
     if num_files == 0:
         data['errors'] = ['No files in this experiment!']
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.post('/experiments/<project:re:.*>/<experiment:re:.*>')
@@ -174,7 +174,7 @@ def make_experiment(project, experiment):
         pass
     if len(error_messages) > 0:
         data['errors'] = error_messages
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.route('/delete/<project:re:.*>/<experiment:re:.*>')
@@ -193,7 +193,7 @@ def list_experiments(project):
     experiments, base_dir, data_elements = utils.list_of_experiments(project)
     data = {'experiments': experiments, 'project': project, 'base_dir': base_dir,
             'data_elements': data_elements}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.post('/remake')
@@ -207,7 +207,7 @@ def remake():
 @app.get('/make')
 def make():
     data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 @app.post('/make/<project:re:.*>/<experiment:re:.*>')
@@ -216,7 +216,7 @@ def make(project, experiment):
     return show_experiment(project, experiment, messages)
     data = {'errors': [message], 'project': project, 'experiment': experiment, 'elapsed_time': elapsed_time,
             'back': f'/experiments/{project}', 'back': f'experiment/{project}/{experiment}'}
-    return utils.check_template('index', data)
+    return utils.check_template('index', data, request.forms)
 
 
 run(app, host='localhost', port=8080)
