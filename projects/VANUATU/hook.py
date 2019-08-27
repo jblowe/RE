@@ -100,7 +100,7 @@ def context_from(string):
 
 def read_vanuatu_csv(filename):
     table = RE.TableOfCorrespondences('VANUATU', languages)
-    with open(filename, 'r') as csvfile:
+    with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         # element of redundancy here, but we can't assume order
         skipped = read.skip_comments(reader)
