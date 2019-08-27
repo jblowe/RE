@@ -40,7 +40,11 @@
             % elif 'about' in data:
                 % include('about.tpl')
             % else:
+                <div>
                 <a href="{{data['back']}}">&lt;&lt; back</a>
+                &nbsp; | &nbsp;
+                <a href="#" onclick="return toggle();">toggle full screen</a>
+                </div>
                 % include('errors.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')

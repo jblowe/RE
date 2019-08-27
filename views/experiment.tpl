@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-md-4 panel border rounded">
+<div id="leftpane" class="col-md-4 panel border rounded">
     <h3>Experiment: {{data['project']}}/{{data['experiment']}}</h3>
 % if 'title' in data['experiment_info']:
     <p>Source data description: {{data['experiment_info']['title']}}</p>

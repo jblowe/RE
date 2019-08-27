@@ -7,8 +7,10 @@
 	<title>The Reconstruction Engine</title>
 	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/bootstrap-sortable.css">
+    <link href="/static/bootstrap-table.min.css" rel="stylesheet">
     <script type="text/javascript" src="/static/moment.min.js"></script>
 	<script type="text/javascript" src="/static/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
 	<script type="text/javascript" src="/static/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
+    <script src="/static/bootstrap-table.min.js"></script>
 </head>

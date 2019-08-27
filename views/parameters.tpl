@@ -15,7 +15,11 @@
     <tr><td><i>Reconstructions (required)</i></td><td>
     <select name="recon">
     % for c in data['experiment_info']['reconstructions']:
-        <option value="{{c}}">{{c}}</option>
+        <option value="{{c}}"
+        % if c == data['experiment_info']['recon']:
+            selected
+        % end
+        >{{c}}</option>
     % end
     </select>
     </td></tr>
@@ -25,7 +29,11 @@
     <select name="fuzzy">
         <option value="">No fuzzying</option>
     % for f in data['experiment_info']['fuzzies']:
-        <option value="{{f}}">{{f}}</option>
+        <option value="{{f}}"
+        % if f == data['experiment_info']['fuzzy']:
+            selected
+        % end
+        >{{f}}</option>
     % end
     </select>
     </td></tr>
@@ -36,7 +44,11 @@
         <select name="mel">
             <option value="">No MELs</option>
         % for m in data['experiment_info']['mels']:
-            <option value="{{m}}">{{m}}</option>
+            <option value="{{m}}"
+            % if m == data['experiment_info']['mel']:
+                selected
+            % end
+            >{{m}}</option>
         % end
         </select>
         </td></tr>
