@@ -6,4 +6,5 @@
     <class name="P" value="p,pʰ,b,m,ʰm"/>
     <class name="M" value="m,n,ŋ"/>
     <canon value="T?(OG?|IL?G?)?(R|VF)"/>
+    <context_match_type value="glyphs"/>
   </parameters>

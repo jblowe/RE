@@ -11,10 +11,11 @@ class Debug:
     debug = False
 
 class SyllableCanon:
-    def __init__(self, sound_classes, syllable_regex, supra_segmentals):
+    def __init__(self, sound_classes, syllable_regex, supra_segmentals, context_match_type):
         self.sound_classes = sound_classes
         self.regex = re.compile(syllable_regex)
         self.supra_segmentals = supra_segmentals
+        self.context_match_type = context_match_type
 
 class Correspondence:
     def __init__(self, id, context, syllable_types, proto_form, daughter_forms):
@@ -30,10 +31,9 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
 
 class Lexicon:
-    def __init__(self, language, forms, list_of_recons, statistics=None):
+    def __init__(self, language, forms, statistics=None):
         self.language = language
         self.forms = forms
-        self.list_of_recons = []
         self.statistics = statistics
 
     def key_forms_by_glyphs_and_gloss(self):
@@ -202,6 +202,7 @@ def next_correspondence_map(parameters):
     sound_classes = parameters.syllable_canon.sound_classes
     correspondences = parameters.table.correspondences
     supra_segmentals = parameters.syllable_canon.supra_segmentals
+    context_match_type = parameters.syllable_canon.context_match_type
 
     # expand out the cover class abbreviations
     for correspondence in correspondences:
@@ -211,14 +212,20 @@ def next_correspondence_map(parameters):
 
     def matches_this_left_context(c, last):
         return (c.context[0] is None or
-                last.proto_form in c.expanded_context[0])
+                (any(last.proto_form.startswith(context)
+                     for context in c.expanded_context[0])
+                 if context_match_type == 'glyphs' else
+                 last.proto_form in c.expanded_context[0]))
 
     def matches_last_right_context(c, last):
         # implements bypassing of suprasegmentals the other way
         if c.proto_form in supra_segmentals:
             return True
         return (last.context[1] is None or
-                c.proto_form in last.expanded_context[1])
+                (any(c.proto_form.startswith(context)
+                     for context in last.expanded_context[1])
+                 if context_match_type == 'glyphs' else
+                 c.proto_form in last.expanded_context[1]))
 
     def matches_context(c, last):
         return (matches_this_left_context(c, last) and
@@ -465,25 +472,11 @@ def filter_subsets(cognate_sets, statistics, root=True):
 # surface string
 def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
-    list_of_recons = {}
-    seen = {}
     for cognate_set in cognate_sets:
-        protoform = correspondences_as_proto_form_string(cognate_set[0])
-        if only_with_mel:
-            if cognate_set[2] not in seen:
-                seen[cognate_set[2]] = True
-                list_of_recons[protoform] = [cognate_set[0]]
-                uniques[(protoform, cognate_set[1])] = cognate_set
-            elif protoform in list_of_recons:
-                # print(f'already seen: {protoform} {correspondences_as_ids(cognate_set[0])}')
-                list_of_recons[protoform].append(cognate_set[0])
-            else:
-                list_of_recons[protoform] = [cognate_set[0]]
-            continue
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
-    return uniques.values(), list_of_recons, statistics
+    return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, only_with_mel, root):
     return pick_derivation(
@@ -505,7 +498,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
                              for daughter in tree[target]]
-        forms, list_of_recons, statistics = batch_upstream(daughter_lexicons,
+        forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel,
                                            root)
@@ -515,7 +508,6 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                        attested_support, mel)
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
-            list_of_recons,
             statistics)
 
     return rec(target, True)
@@ -541,9 +533,8 @@ def all_parameters(settings):
     rec(settings.upstream_target)
     return mapping
 
-def batch_all_upstream(settings, attested_lexicons=None, only_with_mel=False):
-    if attested_lexicons is None:
-        attested_lexicons = read.read_attested_lexicons(settings)
+def batch_all_upstream(settings, only_with_mel=False):
+    attested_lexicons = read.read_attested_lexicons(settings)
     return upstream_tree(settings.upstream_target,
                          settings.upstream,
                          all_parameters(settings),
@@ -589,28 +580,9 @@ def dump_keys(lexicon, filename):
             print(f'{str(failure)}')
     sys.stdout = out
 
-def write_xml_stats(stats, settings, args, filename):
-    serialize.serialize_stats(stats, settings, args, filename)
-
-def write_xml_mels(mel_sets, mel_name, filename):
-    serialize.serialize_mels(mel_sets, mel_name, filename)
-
-def write_evaluation_stats(stats, filename):
-    serialize.serialize_evaluation(stats, filename)
-
-def write_proto_lexicon(proto_lexicon, filename):
-    serialize.serialize_proto_lexicon(proto_lexicon, filename)
-
 def compare_support(lex1_forms, forms):
-    key1 = sorted([str(k) for k in lex1_forms])
-    key2 = sorted([str(k) for k in forms])
-    # print(key1)
-    # print(key2)
-    # print()
-    if key1 == key2:
-        return True
-    else:
-        return False
+    # FIXME: there's a subtle dependency here on the Form.str method.
+    return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
