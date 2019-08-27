@@ -25,7 +25,7 @@
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
                 <tr>
                     <th>Stat</th>

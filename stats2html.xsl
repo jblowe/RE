@@ -34,7 +34,7 @@
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -54,7 +54,7 @@
   <xsl:key name="subtotals" match="totals/*" use="name()"/>
 
     <xsl:template match="stats">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
               <tr>
                   <th>language</th>
@@ -82,7 +82,7 @@
             </tr>
         </table>
 
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
               <tr>
                   <th>correspondence</th>
@@ -99,7 +99,7 @@
 
 
     <xsl:template match="settings">
-        <table class="table table-striped sortable">
+        <table class="table table-striped sortable sticky-top">
             <thead>
               <tr>
                   <th>Setting</th>
