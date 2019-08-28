@@ -121,9 +121,9 @@ def all_file_content(file_path):
     return data
 
 
-def file_content(file_path):
+def file_content(file_path, display):
     if '.xml' in file_path:
-        xslt_path = determine_file_type(file_path)
+        xslt_path = determine_file_type(file_path, display)
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
         try:
             data = xml2html(file_path, xslt_path)
@@ -165,7 +165,7 @@ def xml2html(xml_filename, xsl_filename):
     return newdom
 
 
-def determine_file_type(file_path):
+def determine_file_type(file_path, display):
     if 'correspondences.xml' in file_path:
         return 'toc2html.xsl'
     elif 'data.xml' in file_path:
@@ -175,8 +175,10 @@ def determine_file_type(file_path):
     elif 'fuz.xml' in file_path:
         return 'fuzzy2html.xsl'
     elif 'sets.xml' in file_path:
-        return 'sets2tabular.xsl'
-        #return 'sets2html.xsl'
+        if display == 'paragraph':
+            return 'sets2html.xsl'
+        else:
+            return 'sets2tabular.xsl'
     elif 'mel.xml' in file_path:
         return 'mel2html.xsl'
     elif 'statistics.xml' in file_path:

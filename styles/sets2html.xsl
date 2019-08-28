@@ -14,7 +14,7 @@
                 <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
             </head>
             <body>
-                <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
+                <!-- p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p -->
                 <xsl:apply-templates select=".//sets"/>
                 <xsl:apply-templates select=".//isolates"/>
                 <xsl:apply-templates select=".//failures"/>
@@ -24,13 +24,20 @@
 
     <xsl:template match="sets">
         <h4>Regular cognate sets</h4>
-        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <p>
+            <b><div style="float: left; width:100px;">n = <xsl:value-of select="count(set)" /></div>
+            <div style="float: left; width:200px;"><a href="?display=tabular">switch to tabular display</a></div>
+            <div style="float: left; width:100px;"><a href="#isolates">isolates</a></div>
+            <div style="float: left; width:100px;"><a href="#failures">failures</a></div>
+            </b>
+        </p>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>
     </xsl:template>
 
     <xsl:template match="isolates">
+        <a name="isolates"/>
         <h4>Isolates</h4>
         <h5>n = <xsl:value-of select="count(set)" /></h5>
         <ul class="list-unstyled">
@@ -39,6 +46,7 @@
     </xsl:template>
 
     <xsl:template match="failures">
+        <a name="failures"/>
         <h4>Failures</h4>
         <h5>n = <xsl:value-of select="count(set)" /></h5>
         <ul class="list-unstyled">

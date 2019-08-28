@@ -62,11 +62,11 @@ def project(project):
 @app.route('/get_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
 def get_experiment_file(tree, project, experiment, filename):
     full_path = utils.combine_parts(tree, project, experiment, filename)
-
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
 
-    content, date = utils.file_content(full_path)
+    display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
+    content, date = utils.file_content(full_path, display)
     experiments, base_dir, data_elements = utils.list_of_experiments(project)
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
     data = {'tree': tree, 'project': project, 'experiment': experiment, 'files': files, 'base_dir': base_dir,
@@ -78,7 +78,8 @@ def get_experiment_file(tree, project, experiment, filename):
 @app.route('/get_file/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
 def get_project(tree, project, filename):
     full_path = utils.combine_parts(tree, project, filename)
-    content, date = utils.file_content(full_path)
+    display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
+    content, date = utils.file_content(full_path, display)
     files, base_dir, num_files = utils.data_files(tree, project)
     data = {'tree': tree, 'project': project, 'files': files, 'base_dir': base_dir, 'filename': filename,
             'source': 'Source data', 'date': date, 'content': content}
@@ -94,7 +95,7 @@ def download(full_path, filename):
 
 
 @app.route('/download_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
-def download_experiment(tree, project, filename):
+def download_experiment(tree, project, experiment, filename):
     full_path = utils.combine_parts(tree, project, filename)
     return download(full_path, filename)
 
