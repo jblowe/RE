@@ -15,10 +15,10 @@
             </head>
             <body>
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
+                <h5>Comparison</h5>
                 <ol>
                     <xsl:apply-templates select=".//file"/>
                 </ol>
-                <h5>Comparison</h5>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
             </body>
         </html>

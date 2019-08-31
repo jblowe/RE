@@ -9,7 +9,7 @@
             <tr>
                 % if 'sets' == file_type:
                    <td width="15%"><a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download""></span></a>
-                   &nbsp;<a href="/get_file/{{data['tree']}}/{{data['project']}}/{{data['experiment']}}/{{file}}?paragraph"><span class="fas fa-file-alt"></span></a></td>
+                   &nbsp;<a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?paragraph"><span class="fas fa-file-alt"></span></a></td>
                 % else:
                    <td><a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download"></span></a></td>
                 % end
