@@ -1,23 +1,19 @@
 <!-- Static navbar -->
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <div class="row">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">The Reconstruction Engine</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/list_tree/projects">Projects</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
+  <a class="navbar-brand" href="#">The Reconstruction Engine</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/"><span class="fas fa-home" /></a>
+      <a class="nav-item nav-link" href="about"><span class="fas fa-info-circle" /></a>
+      <a class="nav-item nav-link" href="/list_tree/projects">Projects</a>
     </div>
+  </div>
+          </div>
+    </div>
+
 </nav>

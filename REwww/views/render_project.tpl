@@ -1,8 +1,8 @@
-<h3>{{data['project']}}</h3>
-<h4>Source data</h4>
+<h4>{{data['project']}}</h4>
+<h5>Source data</h5>
 % for (file_type, files) in data['files']:
   % if len(files) > 0:
-    <h5>{{file_type}}</h5>
+    <h6>{{file_type}}</h6>
     <ul>
       % for file in files:
         <li>

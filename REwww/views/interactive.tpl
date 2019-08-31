@@ -1,5 +1,5 @@
 <div id="content" class="col-sm-12">
-<h3>{{data['project']}}/{{data['experiment']}} Interactive</h3>
+<h4>{{data['project']}}/{{data['experiment']}} Interactive</h4>
     <form method="post">
         <div class="row">
           <div class="col-md-4 panel border rounded">
@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-8 panel border rounded">
           % if 'forms' in data:
-          <h4>Sets</h4>
+          <h5>Sets</h5>
               % for form in data['forms']:
                   <li>{{form}}
                   <ul>
@@ -31,13 +31,13 @@
         <div class="row">
           <div class="col-md-4 panel border rounded">
           % if 'no_parses' in data:
-          <h4>No parses</h4>
+          <h5>No parses</h5>
               % for no_parse in data['no_parses']:
                   <li>{{no_parse}}</li>
               % end
           % end
           % if 'isolates' in data:
-          <h4>Reconstructions not in sets</h4>
+          <h5>Reconstructions not in sets</h5>
           <h6>(includes "Isolates")</h6>
               % for isolate in data['isolates']:
                   <li>{{isolate[0]}} - {{isolate[1]}}</li>
@@ -46,7 +46,7 @@
           </div>
           <div class="col-md-8 panel border rounded">
           % if 'debug_notes' in data:
-          <h4>Trace</h4>
+          <h5>Trace</h5>
               % for note in data['debug_notes']:
                    % if note[0] == ' ':
                       {{note}}<br/>
@@ -56,7 +56,7 @@
               % end
           % end
           % if 'notes' in data:
-          <h4>Notes</h4>
+          <h5>Notes</h5>
               % for note in data['notes']:
                   <li>{{note}}</li>
               % end
