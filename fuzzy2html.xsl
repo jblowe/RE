@@ -14,7 +14,7 @@
             <head>
             </head>
             <body>
-                <h3>Fuzzy</h3>
+                <h4>Fuzzy</h4>
                 <xsl:apply-templates select=".//fuzzy"/>
                 <!-- e.g.
                 <mel id="wn1">
@@ -25,7 +25,7 @@
     </xsl:template>
 
     <xsl:template match="fuzzy">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
                 <tr>
                     <th>Language</th>

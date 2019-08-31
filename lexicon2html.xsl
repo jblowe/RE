@@ -19,11 +19,11 @@
     <xsl:template match="lexicon">
         <div>
             <a name="{@dialecte}"/>
-            <h3>
+            <h4>
                 <xsl:value-of select="@dialecte"/>
-            </h3>
-            <h5>n = <xsl:value-of select="count(entry)" /></h5>
-            <table class="table table-striped sortable sticky-top">
+            </h4>
+            <h6>n = <xsl:value-of select="count(entry)" /></h6>
+            <table class="table table-striped sortable">
                 <thead>
                     <tr>
                         <th>Form</th>

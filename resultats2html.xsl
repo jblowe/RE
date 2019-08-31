@@ -22,11 +22,11 @@
 
 <xsl:template match="actionResult">
 	<div>
-		<h3>
+		<h4>
 			<xsl:for-each select="@*">
 				<xsl:value-of select="local-name()"/>="<xsl:value-of select="."/>"<xsl:text> </xsl:text>
 			</xsl:for-each>
-		</h3>
+		</h4>
 		<xsl:for-each select="solutions">
 			<xsl:sort select="id(sol/rule/@idref)/proto"/>
 			<xsl:apply-templates select="."/>

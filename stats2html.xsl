@@ -14,7 +14,7 @@
             </head>
             <body>
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
-                <h4>Summary statistics</h4>
+                <h5>Summary statistics</h5>
                 <xsl:apply-templates select=".//settings"/>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
                 <xsl:apply-templates select=".//stats"/>
@@ -24,17 +24,17 @@
 
 
     <xsl:template match="settings">
-        <h4>Experiment settings</h4>
+        <h5>Experiment settings</h5>
         <xsl:apply-templates select=".//settings"/>
     </xsl:template>
 
     <xsl:template match="stats">
-        <h4>Language statistics</h4>
+        <h5>Language statistics</h5>
         <xsl:apply-templates select=".//stats"/>
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -54,7 +54,7 @@
   <xsl:key name="subtotals" match="totals/*" use="name()"/>
 
     <xsl:template match="stats">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
               <tr>
                   <th>language</th>
@@ -82,7 +82,7 @@
             </tr>
         </table>
 
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
               <tr>
                   <th>correspondence</th>
@@ -99,7 +99,7 @@
 
 
     <xsl:template match="settings">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
               <tr>
                   <th>Setting</th>

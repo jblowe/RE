@@ -23,7 +23,7 @@
     </xsl:template>
 
     <xsl:template match="sets">
-        <h4>Regular cognate sets</h4>
+        <h5>Regular cognate sets</h5>
         <p>
             <b><div style="float: left; width:100px;">n = <xsl:value-of select="count(set)" /></div>
             <div style="float: left; width:200px;"><a href="?display=tabular">switch to tabular display</a></div>
@@ -38,8 +38,8 @@
 
     <xsl:template match="isolates">
         <a name="isolates"/>
-        <h4>Isolates</h4>
-        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <h5>Isolates</h5>
+        <h6>n = <xsl:value-of select="count(set)" /></h6>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>
@@ -47,8 +47,8 @@
 
     <xsl:template match="failures">
         <a name="failures"/>
-        <h4>Failures</h4>
-        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <h5>Failures</h5>
+        <h6>n = <xsl:value-of select="count(set)" /></h6>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>

@@ -14,10 +14,10 @@
             <head>
             </head>
             <body>
-                <h3>Meaning Equivalence List</h3>
-                <h4>MEL statistics</h4>
+                <h4>Meaning Equivalence List</h4>
+                <h5>MEL statistics</h5>
                 <xsl:apply-templates select=".//totals"/>
-                <h4>MELs</h4>
+                <h5>MELs</h5>
                 <xsl:apply-templates select=".//semantics"/>
                 <!-- e.g.
                 <mel id="wn1">
@@ -28,7 +28,7 @@
     </xsl:template>
 
     <xsl:template match="totals">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -45,7 +45,7 @@
     </xsl:template>
 
     <xsl:template match="semantics">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
                 <tr>
                     <th>ID</th>
