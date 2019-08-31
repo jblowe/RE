@@ -1,5 +1,5 @@
 <p>
-The inspiration for this effort is work done in the 1990's and published as:
+One of the inspirations for this effort is work done in the 1990's and published as:
 </p>
 <p>
 Lowe, John and Martine Mazaudon. <i>The reconstruction engine: a computer implementation of the comparative method</i>, Association for
