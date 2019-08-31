@@ -18,14 +18,14 @@
                 <ol>
                     <xsl:apply-templates select=".//file"/>
                 </ol>
-                <h4>Comparison</h4>
+                <h5>Comparison</h5>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
-        <table class="table table-striped sortable sticky-top">
+        <table class="table table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>

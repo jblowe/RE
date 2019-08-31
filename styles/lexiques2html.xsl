@@ -53,7 +53,7 @@
 		<head>
 		</head>
 		<body>
-			<h3>Lexiques</h3>
+			<h4>Lexiques</h4>
 			<ul>
 				<xsl:for-each select=".//lexicon">
 					<li><a href="#{@dialecte}"><xsl:value-of select="@dialecte"/></a></li>
@@ -68,7 +68,7 @@
 <xsl:template match="lexicon">
 	<div>
 		<a name="{@dialecte}"/>
-		<h3><xsl:value-of select="@dialecte"/></h3>
+		<h4><xsl:value-of select="@dialecte"/></h4>
 		<table border="1">
 			<xsl:for-each select="entry">
 				<tr>

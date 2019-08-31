@@ -11,41 +11,35 @@
             encoding="utf-8"/>
 
     <xsl:template match="/">
-        <html>
-            <head>
-                <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
-            </head>
-            <body>
-                <!-- p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p -->
-                <h4>Regular cognate sets</h4>
-                <p>
-                    <b><div style="float: left; width:100px;">n = <xsl:value-of select="count(.//sets/set)" /></div>
-                    <div style="float: left; width:200px;"><a href="?paragraph">switch to paragraph display</a></div>
-                    <div style="float: left; width:100px;"><a href="#isolates">isolates</a></div>
-                    <div style="float: left; width:100px;"><a href="#failures">failures</a></div>
-                    </b>
-                </p>
-                <table class="table table-striped sortable sticky-top">
-                    <thead>
-                        <tr>
-                            <th>num</th>
-                            <th>plg</th>
-                            <th>pfm</th>
-                            <!-- th>pgl</th -->
-                            <th>rcn</th>
-                            <th>mel</th>
-                            <xsl:apply-templates select=".//languages"/>
-                        </tr>
-                    </thead>
-                    <xsl:call-template name="sets">
-                       <xsl:with-param name="lgs" select=".//languages"/>
-                    </xsl:call-template>
-		        </table>
-                <xsl:apply-templates select=".//isolates"/>
-                <xsl:apply-templates select=".//failures"/>
-
-            </body>
-        </html>
+        <!-- p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p -->
+        <h5>Regular cognate sets</h5>
+        <p>
+            <b><div style="float: left; width:100px;">n = <xsl:value-of select="count(.//sets/set)" /></div>
+            <div style="float: left; width:200px;"><a href="?paragraph">switch to paragraph display</a></div>
+            <div style="float: left; width:100px;"><a href="#isolates">isolates</a></div>
+            <div style="float: left; width:100px;"><a href="#failures">failures</a></div>
+            </b>
+        </p>
+        <div class="should-be-responsive">
+        <table class="table sets">
+            <thead>
+                <tr>
+                    <th>num</th>
+                    <th>plg</th>
+                    <th>pfm</th>
+                    <!-- th>pgl</th -->
+                    <th>rcn</th>
+                    <th>mel</th>
+                    <xsl:apply-templates select=".//languages"/>
+                </tr>
+            </thead>
+            <xsl:call-template name="sets">
+               <xsl:with-param name="lgs" select=".//languages"/>
+            </xsl:call-template>
+        </table>
+        </div>
+        <xsl:apply-templates select=".//isolates"/>
+        <xsl:apply-templates select=".//failures"/>
     </xsl:template>
 
     <xsl:template name="sets">
@@ -147,8 +141,8 @@
 
     <xsl:template match="isolates">
         <a name="isolates"/>
-        <h4>Isolates</h4>
-        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <h5>Isolates</h5>
+        <h6>n = <xsl:value-of select="count(set)" /></h6>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>
@@ -156,8 +150,8 @@
 
     <xsl:template match="failures">
         <a name="failures"/>
-        <h4>Failures</h4>
-        <h5>n = <xsl:value-of select="count(set)" /></h5>
+        <h5>Failures</h5>
+        <h6>n = <xsl:value-of select="count(set)" /></h6>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>

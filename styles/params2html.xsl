@@ -14,11 +14,11 @@
             <head>
             </head>
             <body>
-                <h3>Parameters</h3>
+                <h5>Parameters</h5>
                 <xsl:apply-templates select=".//params"/>
                 <div>
-                    <h4>Lexicons</h4>
-                    <table class="table table-striped sortable sticky-top">
+                    <h5>Lexicons</h5>
+                    <table class="table table-striped sortable">
                         <thead>
                             <tr>
                                 <th>Language</th>
@@ -58,7 +58,7 @@
             <xsl:choose>
                 <xsl:when test="@name='fuzzy'">
                     <xsl:value-of select="@value"/>
-                    <table class="table table-striped sortable sticky-top">
+                    <table class="table table-striped sortable">
                         <thead>
                             <tr>
                                 <th>Dialect</th>
