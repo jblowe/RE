@@ -44,6 +44,7 @@ def make_corrs(row):
 def filter_corrs(corrs):
     ancestor = collections.defaultdict(list)
     for corr in corrs:
+        if corr[1] == '': corr[1] = 'U'
         ancestor[corr[1]].append(corr)
     new_corrs = []
     for key in sorted(ancestor):
