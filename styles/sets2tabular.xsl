@@ -20,6 +20,7 @@
             <div style="float: left; width:100px;"><a href="#failures">failures</a></div>
             </b>
         </p>
+        <!-- TODO: figure out what class, if any makes table both sortable and header-sticky -->
         <div class="should-be-responsive">
         <table class="table sets">
             <thead>
@@ -74,6 +75,24 @@
         </xsl:for-each>
     </xsl:template>
 
+    <xsl:template match="isolates">
+        <a name="isolates"/>
+        <h5>Isolates</h5>
+        <h6>n = <xsl:value-of select="count(set)" /></h6>
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="set"/>
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="failures">
+        <a name="failures"/>
+        <h5>Failures</h5>
+        <h6>n = <xsl:value-of select="count(set)" /></h6>
+        <ul class="list-unstyled">
+            <xsl:apply-templates select="set"/>
+        </ul>
+    </xsl:template>
+
     <xsl:template match="set">
         <li id="sf">
             <div class="wrapper etymonrow">
@@ -91,7 +110,7 @@
     </xsl:template>
 
     <xsl:template match="sf">
-        <xsl:apply-templates select="rfx2"/>
+        <xsl:apply-templates select="rfx"/>
         <xsl:apply-templates select="subset"/>
     </xsl:template>
 
@@ -107,20 +126,12 @@
             </div>
         </li>
         <ul class="list-unstyled">
-            <xsl:apply-templates select="sf"/>
+            <xsl:apply-templates select="sf2"/>
         </ul>
         </div>
     </xsl:template>
 
     <xsl:template match="rfx">
-        <td><span title='{gl}'><xsl:apply-templates select="lx"/></span></td>
-    </xsl:template>
-
-    <xsl:template match="gl|hw">
-        <xsl:apply-templates/>
-    </xsl:template>
-
-    <xsl:template match="rfx2">
         <li>
             <div class="wrapper">
             <div id="lg"><xsl:apply-templates select="lg"/></div>
@@ -139,22 +150,8 @@
         </li>
     </xsl:template>
 
-    <xsl:template match="isolates">
-        <a name="isolates"/>
-        <h5>Isolates</h5>
-        <h6>n = <xsl:value-of select="count(set)" /></h6>
-        <ul class="list-unstyled">
-            <xsl:apply-templates select="set"/>
-        </ul>
-    </xsl:template>
-
-    <xsl:template match="failures">
-        <a name="failures"/>
-        <h5>Failures</h5>
-        <h6>n = <xsl:value-of select="count(set)" /></h6>
-        <ul class="list-unstyled">
-            <xsl:apply-templates select="set"/>
-        </ul>
+    <xsl:template match="gl|hw|lx">
+        <xsl:apply-templates/>
     </xsl:template>
 
 </xsl:stylesheet>
