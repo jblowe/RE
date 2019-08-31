@@ -19,10 +19,10 @@
                         <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{data['project']}}.default.upstream.statistics.xml">View results</a>
                     </p>
                     <p>
-                        <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
+                        <a class="btn-sm btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
                     </p -->
                     <p>
-                        <a class="btn btn-primary" href="/list_tree/projects">Return to project list</a>
+                        <a class="btn-sm btn-primary" href="/list_tree/projects">Return to project list</a>
                     </p>
                 </ul>
             % elif 'compare' in data:
@@ -30,7 +30,7 @@
                     <h2>Compare</h2>
                     <p>
                     </p>
-                    <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Compare</a>
+                    <a class="btn-sm btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Compare</a>
                 </ul>
             % elif 'home' in data:
                 <p>
@@ -39,10 +39,6 @@
             % elif 'about' in data:
                 % include('about.tpl')
             % else:
-                <div>
-                <a class="btn btn-primary" href="{{data['back']}}">&lt;&lt; back</a>
-                <button class="btn btn-primary" id="toggle_sidebar">toggle sidebar</button>
-                </div>
                 % include('errors.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')

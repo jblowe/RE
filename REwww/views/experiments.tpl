@@ -3,7 +3,7 @@
     <input type="hidden" name="project" value="{{data['project']}}">
     <form method="post" action="/experiments/{{data['project']}}/NEW">
         <div class="row">
-          <div class="col-md-12 panel border rounded">
+          <div class="col-md-12">
           <table class="table table-striped sortable">
           <thead>
           <tr>
@@ -28,10 +28,10 @@
           % end
           </tbody>
           </table>
-          <button class="btn btn-primary" type="submit">Create new experiment</button>
+          <button class="btn-sm btn-primary" type="submit">Create new experiment</button>
           <input type="text" name="new_experiment">
           or
-          <a class="btn btn-primary" href="/compare">Compare selected experiments</a>
+          <a class="btn-sm btn-primary" href="/compare">Compare selected experiments</a>
           </div>
     </form>
 </div>

@@ -1,7 +1,7 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>Project</th>
+        <th>Corpus</th>
         <th></th>
         <th></th>
         <th>Last updated</th>
