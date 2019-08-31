@@ -696,3 +696,11 @@ def replace_underlying_lexicons(proto_lexicon, attested_lexicons):
                               for form in form_set))
         form.attested_support = intern(form.attested_support)
         form.supporting_forms = intern(form.supporting_forms)
+
+# Given a lexicon of protoforms, return a mapping between cognate sets
+# and possible reconstructions.
+def collate_proto_lexicon(proto_lexicon):
+    mapping = collections.defaultdict(list)
+    for proto_form in proto_lexicon:
+        mapping[proto_form.supporting_forms].append(proto_form)
+    return mapping
