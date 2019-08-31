@@ -33,7 +33,6 @@
                     <a class="btn btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Compare</a>
                 </ul>
             % elif 'home' in data:
-                <h2>The Reconstruction Engine</h2>
                 <p>
                     A computer implementation of the comparative method.
                 </p>
@@ -41,9 +40,8 @@
                 % include('about.tpl')
             % else:
                 <div>
-                <a href="{{data['back']}}">&lt;&lt; back</a>
-                &nbsp; | &nbsp;
-                <a href="#" onclick="return toggle();">toggle full screen</a>
+                <a class="btn btn-primary" href="{{data['back']}}">&lt;&lt; back</a>
+                <button class="btn btn-primary" id="toggle_sidebar">toggle sidebar</button>
                 </div>
                 % include('errors.tpl')
                 % if 'interactive' in data:
@@ -70,5 +68,14 @@
         </div>
     </div>
 </div>
+<script>
+    $( "#toggle_sidebar" ).click(function() {
+      $( "#leftpane" ).toggle();
+      $( "#content" ).toggleClass( "col-sm-8", "col-sm-12" );
+    });
+    $( "#toggle_parameters" ).click(function() {
+      $( "#upstream" ).toggle();
+    });
+</script>
 </body>
 </html>

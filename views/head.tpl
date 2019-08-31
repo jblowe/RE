@@ -7,10 +7,18 @@
 	<title>The Reconstruction Engine</title>
 	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/bootstrap-sortable.css">
-    <link href="/static/bootstrap-table.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/all.min.css"/>
+    <style>
+    #retable >tbody>tr>td{
+      height:20px;
+      padding:0px;
+      border-top: 0px;
+    }
+    .sets th { position: sticky; top: 0; background: white}
+    </style>
     <script type="text/javascript" src="/static/moment.min.js"></script>
 	<script type="text/javascript" src="/static/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
-    <script src="/static/bootstrap-table.min.js"></script>
 </head>

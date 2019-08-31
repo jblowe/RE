@@ -1,5 +1,5 @@
 <div id="content" class="col-sm-12">
-<h3>{{data['project']}} Experiments</h3>
+<h4>{{data['project']}} Experiments</h4>
     <input type="hidden" name="project" value="{{data['project']}}">
     <form method="post" action="/experiments/{{data['project']}}/NEW">
         <div class="row">
@@ -23,7 +23,7 @@
             <td><a href="/experiment/{{data['project']}}/{{experiment['name']}}">view and/or run</a></td>
             <td><a href="/interactive/{{data['project']}}/{{experiment['name']}}">interactive</a></td>
             <td><input type="checkbox" value="{{experiment['name']}}"></td>
-            <td><a class="btn" href="/delete/{{data['project']}}/{{experiment['name']}}">delete</a></td>
+            <td><a class="btn" href="/delete/{{data['project']}}/{{experiment['name']}}"><span class="fas fa-trash"></span> delete</a></td>
             </tr>
           % end
           </tbody>
