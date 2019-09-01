@@ -16,8 +16,7 @@
   <reconstruction name="standard">
     <proto_language name="tgtm" correspondences="DEMO93.C794DEM.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
-    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra" to="tgtm"/>
-    <action name="downstream" from="tgtm" to="gha"/>
+    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,man" to="tgtm"/>
   </reconstruction>
   <param name="title" value="Test Run, Demo 1993"/>
 </params>
