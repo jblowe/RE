@@ -14,12 +14,12 @@
   <reconstruction name="standard">
     <proto_language name="tgtm" correspondences="TGTM.C794-rev1.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
-    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra" to="tgtm"/>
   </reconstruction>
   <reconstruction name="rev1">
     <proto_language name="tgtm" correspondences="TGTM.C794-rev1.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
-    <action name="upstream" from="gha,ris,sahu,pra,mar,syang,tag,tuk" to="tgtm"/>
+    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra" to="tgtm"/>
   </reconstruction>
   <param name="title" value="check sets for TGTM, 1994 version"/>
 </params>
