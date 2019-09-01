@@ -2,7 +2,12 @@ import os, time, sys
 import lxml.etree as ET
 
 # we need some code from the sibling directory where the rest of the RE code lives
+
+# this path is valid on 'local' deployments
 sys.path.append(os.path.join('..', 'src'))
+
+# this path is only valid on pythonanywhere
+sys.path.append(os.path.join('RE', 'src'))
 
 import projects
 import RE, read
