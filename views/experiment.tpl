@@ -4,15 +4,9 @@
         % if 'title' in data['experiment_info']:
             <p>Source data description: {{data['experiment_info']['title']}}</p>
         % end
-        <button class="btn-sm btn-primary" id="toggle_parameters" >setup and perform upstream run</button>
-        <div id="upstream" class="panel panel-default" style="display:none;">
-            <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
-                  % include('parameters.tpl')
-                  <p/><p>
-                  <button class="btn-sm btn-primary" name="make">Upstream</button>
-                  <a href= "" class="btn-sm btn-primary" name="refresh">Refresh</a>
-                  </p>
-            </form>
+        <h6>click <button class="btn-sm btn-primary" id="toggle_parameters" >here</button> to setup and perform upstream runs</h6>
+        <div id="upstream" style="display:none;">
+            % include('parameters.tpl')
         </div>
         % if data['num_files'] > 0:
             % include('render_experiment.tpl')

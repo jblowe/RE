@@ -39,7 +39,7 @@
             % elif 'about' in data:
                 % include('about.tpl')
             % else:
-                % include('errors.tpl')
+                % include('alerts.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')
                 % elif 'experiment' in data:

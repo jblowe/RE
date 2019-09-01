@@ -1,6 +1,6 @@
-<div id="experiment_files" class="panel panel-default">
-    <div class="panel-heading">Files in this experiment</div>
-    <div class="panel-body">
+<div id="experiment_files" class="card">
+    <h6 class="card-header">Files in this experiment</h6>
+    <div class="card-body">
     <table class="table table-sm retable">
     % for (file_type, files) in data['files']:
       % if len(files) > 0:
