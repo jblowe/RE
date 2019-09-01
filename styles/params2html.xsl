@@ -9,82 +9,98 @@
             indent="yes"
             encoding="utf-8"/>
 
-    <xsl:template match="/">
+    <xsl:template match="params">
         <html>
             <head>
             </head>
             <body>
-                <h5>Parameters</h5>
-                <xsl:apply-templates select=".//params"/>
-                <div>
-                    <h5>Lexicons</h5>
-                    <table class="table table-striped sortable">
-                        <thead>
-                            <tr>
-                                <th>Language</th>
-                                <th>File</th>
-                            </tr>
-                        </thead>
-                        <xsl:for-each select=".//attested">
-                            <tr>
-                                <td><xsl:value-of select="@name"/></td>
-                                <td><xsl:value-of select="@file"/></td>
-                            </tr>
-                        </xsl:for-each>
-                    </table>
-                </div>
+                <h5>Parameters available</h5>
+                <table class="table table-sm retable">
+                    <thead/>
+                    <tr><th class="table-primary" colspan="2"><h6>Tables and languages ("reconstructions")</h6></th></tr>
+                    <xsl:apply-templates select="reconstruction"/>
+                    <xsl:if test="fuzzy">
+                        <tr><th class="table-primary" colspan="2"><h6>Fuzzy files</h6></th></tr>
+                        <xsl:apply-templates select="fuzzy"/>
+                    </xsl:if>
+                    <xsl:if test="mel">
+                        <tr><th class="table-primary" colspan="2"><h6>MELs</h6></th></tr>
+                        <xsl:apply-templates select="mel"/>
+                    </xsl:if>
+                    <xsl:if test="csvdata">
+                        <tr><th class="table-primary" colspan="2"><h6>Tabular data files</h6></th></tr>
+                        <xsl:apply-templates select="csvdata"/>
+                    </xsl:if>
+                    <xsl:if test="param">
+                        <tr><th class="table-primary" colspan="2"><h6>Other parameters</h6></th></tr>
+                        <xsl:apply-templates select="param"/>
+                    </xsl:if>
+                    <tr><th class="table-primary" colspan="2">
+                        <h6 class="table-primary">Lexicons</h6>
+                    </th></tr>
+                    <tr><td>
+                        <table class="table table-striped sortable">
+                            <thead>
+                                <tr>
+                                    <th>Language</th>
+                                    <th>File</th>
+                                </tr>
+                            </thead>
+                            <xsl:for-each select=".//attested">
+                                <tr>
+                                    <td><xsl:value-of select="@name"/></td>
+                                    <td><xsl:value-of select="@file"/></td>
+                                </tr>
+                            </xsl:for-each>
+                        </table>
+                    </td></tr>
+                </table>
             </body>
         </html>
     </xsl:template>
 
+    <xsl:template match="reconstruction">
+        <tr><th colspan="3">"<xsl:value-of select="@name"/>"</th>
+            <xsl:apply-templates select="proto_language"/>
+            <xsl:apply-templates select="action"/>
+        </tr>
+    </xsl:template>
+
+
     <xsl:template match="proto_language">
-        <div>
-            Name: <xsl:value-of select="@name"/>
-            Correspondences: <xsl:value-of select="@correspondences"/>
-        </div>
+        <tr>
+        <td><xsl:value-of select="@name"/></td>
+        <td><xsl:value-of select="@correspondences"/></td>
+        </tr>
     </xsl:template>
 
     <xsl:template match="action">
-        <div>
-            Run: <xsl:value-of select="@name"/>
-            : from <xsl:value-of select="@from"/>
-            to <xsl:value-of select="@to"/>
-        </div>
-    </xsl:template>
-    <xsl:template match="param">
-        <div>
-            <xsl:value-of select="@name"/>
-            =
-            <xsl:choose>
-                <xsl:when test="@name='fuzzy'">
-                    <xsl:value-of select="@value"/>
-                    <table class="table table-striped sortable">
-                        <thead>
-                            <tr>
-                                <th>Dialect</th>
-                                <th>From</th>
-                                <th>To</th>
-                            </tr>
-                        </thead>
-                        <xsl:for-each select="document(@value)/fuzzy/item">
-                            <tr>
-                                <td><xsl:value-of select="@dial"/></td>
-                                <td>
-                                    <xsl:for-each select="from">
-                                        <xsl:value-of select="."/>
-                                        <xsl:if test="position()!=last()">,</xsl:if>
-                                    </xsl:for-each>
-                                </td>
-                                <td><xsl:value-of select="@to"/></td>
-                            </tr>
-                        </xsl:for-each>
-                    </table>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="@value"/>
-                </xsl:otherwise>
+        <tr>
+          <xsl:choose>
+            <xsl:when test="@target">
+                <td>target protolanguage</td><td><xsl:value-of select="@target"/></td>
+            </xsl:when>
+            <xsl:otherwise>
+                <td>upstream</td><td><xsl:value-of select="@from"/>
+                >
+                <xsl:value-of select="@to"/></td>
+            </xsl:otherwise>
             </xsl:choose>
-        </div>
+        </tr>
+    </xsl:template>
+
+    <xsl:template match="param">
+        <tr>
+            <td><xsl:value-of select="@name"/></td>
+            <td><xsl:value-of select="@value"/></td>
+        </tr>
+    </xsl:template>
+
+    <xsl:template match="fuzzy|mel|csvdata">
+        <tr>
+            <td><xsl:value-of select="@name"/></td>
+            <td><xsl:value-of select="@file"/></td>
+        </tr>
     </xsl:template>
 
 </xsl:stylesheet>
