@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
     <link rel="stylesheet" type="text/css" href="/static/all.min.css"/>
     <style>
-    #retable >tbody>tr>td{
+    .retable >tbody>tr>td{
       height:20px;
       padding:0px;
       border-top: 0px;

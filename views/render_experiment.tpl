@@ -1,7 +1,7 @@
 <div id="experiment_files" class="panel panel-default">
     <div class="panel-heading">Files in this experiment</div>
     <div class="panel-body">
-    <table id="retable" class="table table-sm">
+    <table class="table table-sm retable">
     % for (file_type, files) in data['files']:
       % if len(files) > 0:
         <tr><td colspan="4"><h6>{{file_type}}</h6></td></tr>
