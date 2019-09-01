@@ -35,9 +35,14 @@
             </thead>
             <xsl:for-each select="./*">
                 <tr>
-                    <td><xsl:value-of select ="@dial"/></td>
-                    <td width="50%"><xsl:apply-templates select="from"/></td>
-                    <td><xsl:value-of select ="@to"/></td>
+                    <td><xsl:value-of select="@dial"/></td>
+                    <td>
+                        <xsl:for-each select="from">
+                            <xsl:value-of select="."/>
+                            <xsl:if test="position()!=last()">,</xsl:if>
+                        </xsl:for-each>
+                    </td>
+                    <td><xsl:value-of select="@to"/></td>
                 </tr>
             </xsl:for-each>
         </table>
