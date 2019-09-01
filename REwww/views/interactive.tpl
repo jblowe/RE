@@ -2,7 +2,7 @@
 <h4>{{data['project']}}/{{data['experiment']}} Interactive</h4>
     <form method="post">
         <div class="row">
-          <div class="col-md-4 panel border rounded">
+          <div class="col-md-4">
           % include('parameters.tpl')
           <hr/>
           <table>
@@ -13,7 +13,7 @@
           <button type="submit">Upstream</button>
           <button type="reset">Reset</button>
           </div>
-          <div class="col-md-8 panel border rounded">
+          <div class="col-md-8 card border rounded">
           % if 'forms' in data:
           <h5>Sets</h5>
               % for form in data['forms']:
@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 panel border rounded">
+          <div class="col-md-4 card border rounded">
           % if 'no_parses' in data:
           <h5>No parses</h5>
               % for no_parse in data['no_parses']:
@@ -44,7 +44,7 @@
               % end
           % end
           </div>
-          <div class="col-md-8 panel border rounded">
+          <div class="col-md-8 card border rounded">
           % if 'debug_notes' in data:
           <h5>Trace</h5>
               % for note in data['debug_notes']:
