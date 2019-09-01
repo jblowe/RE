@@ -24,7 +24,7 @@ DIS.*.data.xml
 *.failures.sets.xml
 *.isolates.sets.xml
 *.mel.statistics.xml
-*.sets.xml
+*/experiments/*/*.xml
 *.upstream.statistics.xml
 
 *.keys.csv
