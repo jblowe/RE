@@ -238,9 +238,9 @@ def upstream(request, language_forms, project, experiment, parameters, only_with
                                            mel=mel,
                                            fuzzy=fuzzy,
                                            recon=recon)
-        load_hooks.load_hook(None, settings)
+        #load_hooks.load_hook(None, settings)
         attested_lexicons = read.create_lexicon_from_parms(language_forms)
-        B = RE.batch_all_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
+        B = RE.interactive_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
         isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]
         return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
     pass

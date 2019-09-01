@@ -113,7 +113,7 @@ def download_project(tree, project, filename):
 
 @post('/interactive/<project:re:.*>/<experiment:re:.*>')
 def upstream(project, experiment):
-    languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel'.split()]
+    languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel make'.split()]
     RE.Debug.debug = True
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
@@ -143,21 +143,22 @@ def interactive_project(project, experiment):
 
 
 @route('/experiment/<project:re:.*>/<experiment:re:.*>')
-def show_experiment(project, experiment, messages=None):
+def show_experiment(project, experiment, messages=None, errors=None):
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
     data = {'tree': 'experiment', 'experiment': experiment, 'project': project, 'base_dir': experiment_path,
             'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files, 'num_files': num_files,
             'back': f'/experiments/{project}'}
-    if messages: data['errors'] = messages
+    if messages: data['messages'] = messages
+    if errors: data['errors'] = errors
     if num_files == 0:
         data['errors'] = ['No files in this experiment!']
     return utils.check_template('index', data, request.forms)
 
 
 @post('/experiments/<project:re:.*>/<experiment:re:.*>')
-def make_experiment(project, experiment):
+def new_experiment(project, experiment):
     experiments, base_dir, data_elements = utils.list_of_experiments(project)
     project_dir = os.path.join('..', 'projects', project)
     error_messages = []
@@ -211,19 +212,17 @@ def remake():
 
 
 @route('/make')
-def make():
+def make_all():
     data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
     return utils.check_template('index', data, request.forms)
 
 
 @post('/make/<project:re:.*>/<experiment:re:.*>')
-def make(project, experiment):
-    messages, success = run_make.make(project, experiment, request.forms)
-    return show_experiment(project, experiment, messages)
-    data = {'errors': [message], 'project': project, 'experiment': experiment, 'elapsed_time': elapsed_time,
-            'back': f'/experiments/{project}', 'back': f'experiment/{project}/{experiment}'}
-    return utils.check_template('index', data, request.forms)
-
+def make_experiment(project, experiment):
+    alerts, success = run_make.make(project, experiment, request.forms)
+    errors = alerts if not success else None
+    messages = alerts if success else None
+    return show_experiment(project, experiment, messages, errors)
 
 # application = default_app()
 run()
