@@ -5,11 +5,9 @@ import lxml.etree as ET
 import xml2dict
 from collections import defaultdict
 
-run_date = time.asctime()
+run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
 def walk(files):
-    results = ET.Element('stats')
-    ET.SubElement(results, 'createdat').text = run_date
     language_stats = defaultdict(dict)
     totals = defaultdict(dict)
     for x, filename in enumerate(files):
@@ -42,6 +40,7 @@ def compare(project_dir, project, what_to_compare):
 
     if len(files) > 1:
         root = xml2dict.dict_to_etree(walk(files))
+        ET.SubElement(root, 'createdat').text = run_date
 
         with open(f'{project_dir}/{project}.{what_to_compare}.compare.xml', 'w', encoding='utf-8') as f:
             f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
