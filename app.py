@@ -1,19 +1,23 @@
-from bottle import Bottle, HTTPResponse, default_app, post, request, run, route, template, debug, static_file, \
-    Jinja2Template, BaseTemplate
+from bottle import Bottle, HTTPResponse, default_app, post, request, run, route, template, debug, static_file, BaseTemplate
 
 import os
 import sys
 import shutil
 from shutil import copy
+
+# we need some code from the sibling directory where the rest of the RE code lives
+
+# this path is valid on 'local' deployments
+sys.path.append(os.path.join('..', 'src'))
+
+# this path is only valid on pythonanywhere
+sys.path.append(os.path.join('RE', 'src'))
+
 import utils
 import run_make
 import RE
 
 dirname = os.path.dirname(os.path.abspath(__file__))
-
-# we need some code from the sibling directory where the rest of the RE code lives
-sys.path.append(os.path.join('RE', 'src'))
-import RE
 
 # add version and start timestamp to footer
 BaseTemplate.defaults['footer_info'] = utils.add_time_and_version()
