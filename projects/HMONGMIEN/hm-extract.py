@@ -11,7 +11,7 @@ cons = r'([^GKMNORSWZbcdfghjklmnqpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃ�
 notrimes = r'^([ABCDXHL0123456789DGHKMNORSWXZbcdfghjklmnpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
 
 
-LANGUAGES = ['lg'+ str(i+1) for i in range(11)]
+LANGUAGES = 'Qiandong,Xiangxi,WhiteHmong,Masha,Luopohe,Jiongnai,Baiyun,Luoxiang,Mun,BiaoMin,ZaoMin'.split(',')
 NLG = len(LANGUAGES)
 
 def make_header(prefix):
