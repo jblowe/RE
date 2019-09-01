@@ -541,6 +541,14 @@ def batch_all_upstream(settings, only_with_mel=False):
                          attested_lexicons,
                          only_with_mel)
 
+def interactive_upstream(settings, attested_lexicons, only_with_mel=False):
+    # attested_lexicons are passed in for this type of upstream...
+    return upstream_tree(settings.upstream_target,
+                         settings.upstream,
+                         all_parameters(settings),
+                         attested_lexicons,
+                         only_with_mel)
+
 def print_form(form, level):
     if isinstance(form, ModernForm):
         print('  ' * level + str(form))
