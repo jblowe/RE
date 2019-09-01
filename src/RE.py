@@ -562,8 +562,8 @@ def dump_sets(lexicon, filename):
         print_sets(lexicon)
     sys.stdout = out
 
-def dump_xml_sets(sets, languages, filename):
-    serialize.serialize_sets(sets, languages, filename)
+def dump_xml_sets(sets, languages, filename, only_with_mel):
+    serialize.serialize_sets(sets, languages, filename, only_with_mel)
 
 def dump_keys(lexicon, filename):
     out = sys.stdout

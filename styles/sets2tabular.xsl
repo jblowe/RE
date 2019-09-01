@@ -11,14 +11,13 @@
             encoding="utf-8"/>
 
     <xsl:template match="/">
-        <!-- p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p -->
         <h5>Regular cognate sets</h5>
         <p>
-            <b><div style="float: left; width:100px;">n = <xsl:value-of select="count(.//sets/set)" /></div>
+            <div style="float: left; width:100px;"><b>n = <xsl:value-of select="count(.//sets/set)" /></b></div>
+            <div style="float: left; width:240px;"><i>created at: <xsl:value-of select=".//createdat"/></i></div>
             <div style="float: left; width:200px;"><a href="?paragraph">switch to paragraph display</a></div>
-            <div style="float: left; width:100px;"><a href="#isolates">isolates</a></div>
-            <div style="float: left; width:100px;"><a href="#failures">failures</a></div>
-            </b>
+            <div style="float: left; width:80px;"><a href="#isolates">isolates</a></div>
+            <div style="float: left; width:80px;"><a href="#failures">failures</a></div>
         </p>
         <!-- TODO: figure out what class, if any makes table both sortable and header-sticky -->
         <div class="should-be-responsive">
@@ -47,12 +46,12 @@
         <xsl:param name="lgs"/>
         <xsl:for-each select=".//sets/set">
             <tr>
-            <td id="id"><xsl:value-of select="id"/></td>
-            <td id="plg"><xsl:value-of select="plg"/></td>
-            <td id="pfm"><xsl:value-of select="pfm"/></td>
-            <!-- td id="pgl"><xsl:value-of select="pgl"/></td -->
-            <td id="rcn"><xsl:value-of select="rcn"/></td>
-            <td id="mel" title="{mel}"><xsl:value-of select="melid"/></td>
+            <td class="id"><xsl:value-of select="id"/></td>
+            <td class="plg"><xsl:value-of select="plg"/></td>
+            <td class="pfm"><xsl:value-of select="pfm"/></td>
+            <!-- td class="pgl"><xsl:value-of select="pgl"/></td -->
+            <td class="rcn"><xsl:value-of select="rcn"/></td>
+            <td class="mel" title="{mel}"><xsl:value-of select="melid"/></td>
             <xsl:variable name="reflexes" select="sf"/>
             <xsl:for-each select="$lgs/*">
                 <xsl:variable name="label" select="."/>
@@ -94,14 +93,14 @@
     </xsl:template>
 
     <xsl:template match="set">
-        <li id="sf">
+        <li class="sf">
             <div class="wrapper etymonrow">
-                <div id="id"><xsl:value-of select="id"/></div>
-                <div id="plg"><xsl:value-of select="plg"/></div>
-                <div id="pfm"><xsl:value-of select="pfm"/></div>
-                <div id="pgl"><xsl:value-of select="pgl"/></div>
-                <div id="rcn">[<xsl:value-of select="rcn"/>]</div>
-                <div id="mel" title="{mel}"><xsl:value-of select="melid"/>:
+                <div class="id"><xsl:value-of select="id"/></div>
+                <div class="plg"><xsl:value-of select="plg"/></div>
+                <div class="pfm"><xsl:value-of select="pfm"/></div>
+                <div class="pgl"><xsl:value-of select="pgl"/></div>
+                <div class="rcn">[<xsl:value-of select="rcn"/>]</div>
+                <div class="mel" title="{mel}"><xsl:value-of select="melid"/>:
                     <xsl:value-of select="substring-before(concat(mel, ',' ) , ',')"/>
                 </div>
             </div>
@@ -118,11 +117,11 @@
         <div class="level{@level}">
         <li>
             <div class="wrapper subsetrow">
-            <div id="id"><xsl:value-of select="id"/></div>
-            <div id="plg"><xsl:value-of select="plg"/></div>
-            <div id="pfm"><xsl:value-of select="pfm"/></div>
-            <div id="pgl"><xsl:value-of select="pgl"/></div>
-            <div id="rcn">[<xsl:value-of select="rcn"/>]</div>
+            <div class="id"><xsl:value-of select="id"/></div>
+            <div class="plg"><xsl:value-of select="plg"/></div>
+            <div class="pfm"><xsl:value-of select="pfm"/></div>
+            <div class="pgl"><xsl:value-of select="pgl"/></div>
+            <div class="rcn">[<xsl:value-of select="rcn"/>]</div>
             </div>
         </li>
         <ul class="list-unstyled">
@@ -134,15 +133,15 @@
     <xsl:template match="rfx">
         <li>
             <div class="wrapper">
-            <div id="lg"><xsl:apply-templates select="lg"/></div>
-            <div id="lx"><xsl:apply-templates select="lx"/></div>
-            <div id="gl"><xsl:apply-templates select="gl"/></div>
+            <div class="lg"><xsl:apply-templates select="lg"/></div>
+            <div class="lx"><xsl:apply-templates select="lx"/></div>
+            <div class="gl"><xsl:apply-templates select="gl"/></div>
             <xsl:choose>
                 <xsl:when test="hn">
-                    <div id="nn">[<xsl:apply-templates select="hn"/>]</div>
+                    <div class="nn">[<xsl:apply-templates select="hn"/>]</div>
                 </xsl:when>
                 <xsl:when test="id">
-                    <div id="nn">[<xsl:apply-templates select="id"/>]</div>
+                    <div class="nn">[<xsl:apply-templates select="id"/>]</div>
                 </xsl:when>
                 <xsl:otherwise/>
             </xsl:choose>

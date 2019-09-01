@@ -70,7 +70,7 @@ def serialize_lexicon(lexicon, filename):
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
-def serialize_sets(reconstruction, languages, filename):
+def serialize_sets(reconstruction, languages, filename, only_with_mel):
     '''
     Here is the "classic schema" of cognate sets...
 
@@ -96,7 +96,34 @@ def serialize_sets(reconstruction, languages, filename):
     for language in languages:
         ET.SubElement(lgs, 'lg').text = language
 
+    def add_protoform_element(element, protoform):
+        ET.SubElement(element, 'plg').text = protoform.language
+        ET.SubElement(element, 'pfm').text = protoform.glyphs
+        ET.SubElement(element, 'rcn').text = RE.correspondences_as_ids(protoform.correspondences).strip()
+
     def render_xml(element, form, level):
+
+        # handle 'strict' case: possibly output a set with multiple reconstructions
+        if isinstance(form, list):
+            if level != 0:
+                element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
+            ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
+            if len(form) > 1:
+                for protoform in form:
+                    reconstruction_block = ET.SubElement(element, 'multi')
+                    add_protoform_element(reconstruction_block, protoform)
+            else:
+                add_protoform_element(element, form[0])
+            if form[0].mel:
+                ET.SubElement(element, 'mel').text = ', '.join(form[0].mel.glosses)
+                ET.SubElement(element, 'melid').text = form[0].mel.id
+            else:
+                pass
+            sf = ET.SubElement(element, 'sf')
+            for supporting_form in sorted(form[0].supporting_forms, key=lambda x: x.language):
+                render_xml(sf, supporting_form, level + 1)
+            return
+
         if isinstance(form, RE.ModernForm):
             rfx = ET.SubElement(element, 'rfx')
             ET.SubElement(rfx, 'lg').text = form.language
@@ -107,22 +134,29 @@ def serialize_sets(reconstruction, languages, filename):
             if level != 0:
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
             ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
-            ET.SubElement(element, 'plg').text = form.language
-            ET.SubElement(element, 'pfm').text = form.glyphs
-            if form.mel:
-                ET.SubElement(element, 'mel').text = ', '.join(form.mel.glosses)
-                ET.SubElement(element, 'melid').text = form.mel.id
-            else:
-                pass
-            ET.SubElement(element, 'rcn').text = RE.correspondences_as_ids(form.correspondences).strip()
+            add_protoform_element(element, form)
             sf = ET.SubElement(element, 'sf')
             for supporting_form in sorted(form.supporting_forms, key=lambda x: x.language):
                 render_xml(sf, supporting_form, level + 1)
 
     sets = ET.SubElement(root, 'sets')
-    for number,form in enumerate(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
-        entry = ET.SubElement(sets, 'set')
-        render_xml(entry, form, 0)
+
+    # if 'strict' is on, squish the sets before output
+    if only_with_mel:
+        uniques = collections.defaultdict(list)
+        for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
+            uniques[form.supporting_forms].append(form)
+
+        for number,set in enumerate(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences))):
+            entry = ET.SubElement(sets, 'set')
+            render_xml(entry, set[1], 0)
+
+
+    # otherwise, make sets the 'usual' way
+    else:
+        for number,form in enumerate(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
+            entry = ET.SubElement(sets, 'set')
+            render_xml(entry, form, 0)
 
     isolates = ET.SubElement(root, 'isolates')
     for number,form in enumerate(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
