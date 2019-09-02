@@ -47,10 +47,25 @@
         <xsl:for-each select=".//sets/set">
             <tr>
             <td class="id"><xsl:value-of select="id"/></td>
-            <td class="plg"><xsl:value-of select="plg"/></td>
-            <td class="pfm"><xsl:value-of select="pfm"/></td>
-            <!-- td class="pgl"><xsl:value-of select="pgl"/></td -->
-            <td class="rcn"><xsl:value-of select="rcn"/></td>
+
+
+            <xsl:choose>
+                <xsl:when test="multi">
+                    <td class="plg"><span class=""><xsl:value-of select="multi[1]/plg"/></span></td>
+                    <td class="pfm"><span class="multiple"><xsl:value-of select="multi[1]/pfm"/></span></td>
+                    <!-- td class="pgl"><xsl:value-of select="pgl"/></td -->
+                    <td class="rcn"><span class=""><xsl:value-of select="multi[1]/rcn"/></span></td>
+                    <!-- td colspan="3">multi</td -->
+                    <!-- xsl:apply-templates select="multi"/ -->
+                </xsl:when>
+                <xsl:otherwise>
+                    <td class="plg"><xsl:value-of select="plg"/></td>
+                    <td class="pfm"><xsl:value-of select="pfm"/></td>
+                    <!-- td class="pgl"><xsl:value-of select="pgl"/></td -->
+                    <td class="rcn"><xsl:value-of select="rcn"/></td>
+                </xsl:otherwise>
+            </xsl:choose>
+
             <td class="mel" title="{mel}"><xsl:value-of select="melid"/></td>
             <xsl:variable name="reflexes" select="sf"/>
             <xsl:for-each select="$lgs/*">
@@ -67,6 +82,17 @@
             </tr>
         </xsl:for-each>
     </xsl:template>
+
+
+    <xsl:template match="multi">
+        <td>
+        <div class="plg"><xsl:value-of select="plg"/></div>
+        <div class="pfm"><xsl:value-of select="pfm"/></div>
+        <div class="pgl"><xsl:value-of select="pgl"/></div>
+        <div class="rcn">[<xsl:value-of select="rcn"/>]</div>
+        </td>
+    </xsl:template>
+
 
     <xsl:template match="languages">
         <xsl:for-each select="*">
