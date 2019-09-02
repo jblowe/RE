@@ -9,6 +9,8 @@ cd ..
 
 # need to make a few changes to source code on pythonanywhere
 
+mv app.py bottle_app.py
+
 perl -i -pe 's/^run/# run/' bottle_app.py 
 perl -i -pe 's/# application/application/' bottle_app.py
 
