@@ -46,9 +46,7 @@
 					<th>syll</th>
 					<th>left</th>
 					<th>right</th>
-
 					<xsl:for-each select="corr[1]/modern">
-						<!-- xsl:sort select="@dialecte"/ -->
 						<th><xsl:value-of select="@dialecte"/></th>
 					</xsl:for-each>
 				</tr>
