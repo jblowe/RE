@@ -17,6 +17,15 @@ body {
 .pfm { display: table-cell; width: 15%; font-weight:bold; font-size: small; padding-right: 10px; }
 .pgl { display: table-cell; width: 20%; font-style: italic; padding-right: 10px; }
 .rcn { display: table-cell; width: 30%; font-family: 'Courier'; font-size: smaller; padding-right: 10px; }
+.mel { display: table-cell; width: 20%; font-size: smaller; }
+.multiple {
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
 /* support forms block */
 /* .sf  { padding-left: 20px; padding-right: 10px; } */
 .lg  { display: table-cell; width: 14%; padding-left: 20px; }
