@@ -3,6 +3,7 @@ print('preprocessing Vanuatu data')
 import toolbox
 import sys
 import os
+import glob
 import xml.etree.ElementTree as ET
 import regex as re
 import RE
@@ -13,7 +14,7 @@ from xml.dom import minidom
 
 base_dir = os.path.dirname(__file__)
 filename = os.path.join(base_dir, 'AlexF_NorthVan-reconstructions_01.txt')
-correspondence_filename = os.path.join(base_dir, 'AlexF_Vanuatu-correspondences (version 2019_7_10) - RE_readable.csv')
+correspondence_filenames = [os.path.basename(f) for f in glob.glob(os.path.join(base_dir, '*.correspondences.csv'))]
 
 languages = ['hiw', 'ltg', 'lhi', 'lyp', 'vlw', 'mtp', 'lmg', 'vra', 'vrs', 'msn', 'mta', 'num', 'drg', 'kro', 'olr', 'lkn', 'mrl']
 
@@ -113,12 +114,13 @@ def read_vanuatu_csv(filename):
                 dict(zip(names, (x.split('|') for x in row[5:])))))
     return table
 
-RE.Parameters(read_vanuatu_csv(correspondence_filename),
-              RE.SyllableCanon({}, '(c?v)?(C?Vc?w)+', [], 'glyphs'),
-              'pnv', None).serialize(
-                  os.path.join(base_dir, 'VANUATU.correspondences.xml'))
-
-print('made correspondence xml')
+for corr_file in correspondence_filenames:
+    correspondence_filename = os.path.join(base_dir, corr_file)
+    RE.Parameters(read_vanuatu_csv(correspondence_filename),
+                  RE.SyllableCanon({}, '(c?v)?(C?Vc?w)+', [], 'glyphs'),
+                  'pnv', None).serialize(
+                      os.path.join(base_dir, corr_file.replace('.csv','.xml')))
+    print(f'made correspondence xml from {corr_file}')
 
 def xml_name(x):
     return x + '.data.xml'
@@ -155,16 +157,17 @@ def write_parameters_file():
     ET.SubElement(root, 'mel', attrib={'name': 'clics', 'file': 'VANUATU.clics.mel.xml'})
     ET.SubElement(root, 'mel', attrib={'name': 'hand', 'file': 'VANUATU.hand.mel.xml'})
     ET.SubElement(root, 'mel', attrib={'name': 'wordnet', 'file': 'VANUATU.wordnet.mel.xml'})
-    recon = ET.SubElement(root, 'reconstruction', attrib={'name': 'default'})
-    ET.SubElement(recon, 'proto_language',
-                  attrib={'name': 'pvn',
-                          'correspondences': 'VANUATU.correspondences.xml'})
-    ET.SubElement(recon, 'action', attrib={'name': 'upstream',
-                                           'target': 'pvn'})
-    ET.SubElement(recon, 'action', attrib={'name': 'upstream',
-                                           'from': ','.join(languages),
-                                           'to': 'pvn'})
-    with open(os.path.join(base_dir, 'VANUATU.default.parameters.xml'), 'w', encoding='utf-8') as f:
+    for corr_file in correspondence_filenames:
+        recon = ET.SubElement(root, 'reconstruction', attrib={'name': corr_file.replace('.correspondences.csv','').replace('VANUATU.','')})
+        ET.SubElement(recon, 'proto_language',
+                      attrib={'name': 'pvn',
+                              'correspondences': corr_file.replace('.csv','.xml')})
+        ET.SubElement(recon, 'action', attrib={'name': 'upstream',
+                                               'target': 'pvn'})
+        ET.SubElement(recon, 'action', attrib={'name': 'upstream',
+                                               'from': ','.join(languages),
+                                               'to': 'pvn'})
+    with open(os.path.join(base_dir, 'VANUATU.generated.parameters.xml'), 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
     print('parameters file written')

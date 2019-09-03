@@ -17,11 +17,26 @@
    <attested file="olr.data.xml" name="olr"/>
    <attested file="lkn.data.xml" name="lkn"/>
    <attested file="mrl.data.xml" name="mrl"/>
-   <mel name="clics" file="VANUATU.clics.mel.xml"/>
-   <mel name="hand" file="VANUATU.hand.mel.xml"/>
-   <mel name="wordnet" file="VANUATU.wordnet.mel.xml"/>
+   <mel file="VANUATU.clics.mel.xml" name="clics"/>
+   <mel file="VANUATU.hand.mel.xml" name="hand"/>
+   <mel file="VANUATU.wordnet.mel.xml" name="wordnet"/>
    <reconstruction name="standard">
-      <proto_language correspondences="VANUATU.correspondences.xml" name="pvn"/>
+      <proto_language correspondences="VANUATU.standard.correspondences.xml" name="pvn"/>
+      <action name="upstream" target="pvn"/>
+      <action from="hiw,ltg,lhi,lyp,vlw,mtp,lmg,vra,vrs,msn,mta,num,drg,kro,olr,lkn,mrl" name="upstream" to="pvn"/>
+   </reconstruction>
+   <reconstruction name="AlexF_Vanuatu_v1">
+      <proto_language correspondences="AlexF_Vanuatu_v1.correspondences.xml" name="pvn"/>
+      <action name="upstream" target="pvn"/>
+      <action from="hiw,ltg,lhi,lyp,vlw,mtp,lmg,vra,vrs,msn,mta,num,drg,kro,olr,lkn,mrl" name="upstream" to="pvn"/>
+   </reconstruction>
+   <reconstruction name="experimental">
+      <proto_language correspondences="VANUATU.experimental.correspondences.xml" name="pvn"/>
+      <action name="upstream" target="pvn"/>
+      <action from="hiw,ltg,lhi,lyp,vlw,mtp,lmg,vra,vrs,msn,mta,num,drg,kro,olr,lkn,mrl" name="upstream" to="pvn"/>
+   </reconstruction>
+   <reconstruction name="AlexF_Vanuatu_2019_7_10">
+      <proto_language correspondences="AlexF_Vanuatu_2019_7_10.correspondences.xml" name="pvn"/>
       <action name="upstream" target="pvn"/>
       <action from="hiw,ltg,lhi,lyp,vlw,mtp,lmg,vra,vrs,msn,mta,num,drg,kro,olr,lkn,mrl" name="upstream" to="pvn"/>
    </reconstruction>
