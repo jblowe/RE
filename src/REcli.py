@@ -108,7 +108,7 @@ elif command_args.command == 'upstream':
     print(f'wrote {len(B.statistics.keys)} keys and {len(B.statistics.failed_parses)} failures to {keys_file}')
     sets_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.txt')
     RE.dump_sets(B, sets_file)
-    print(f'wrote {len(B.forms)} text sets to {sets_file}')
+    # print(f'wrote {len(B.forms)} text sets to {sets_file}')
     for c in sorted(B.statistics.correspondences_used_in_recons, key= lambda corr: utils.tryconvert(corr.id, int)):
         if c in B.statistics.correspondences_used_in_sets:
             set_count = B.statistics.correspondences_used_in_sets[c]
@@ -119,7 +119,7 @@ elif command_args.command == 'upstream':
     B.failures = RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language), (), [])
     sets_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.xml')
     RE.dump_xml_sets(B, settings.upstream[settings.upstream_target], sets_xml_file, args.only_with_mel)
-    print(f'wrote {len(B.forms)} xml sets and {len(B.isolates)} isolates to {sets_xml_file}')
+    print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
     B.statistics.add_stat('isolates', len(B.isolates))
     B.statistics.add_stat('sets', len(B.forms))
     stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')

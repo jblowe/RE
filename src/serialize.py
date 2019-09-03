@@ -102,9 +102,10 @@ def serialize_sets(reconstruction, languages, filename, only_with_mel):
         lglist = [x.language for x in form.supporting_forms]
         for language in languages:
             try:
-                i = lglist.index(language)
-                supporting_form = unfrozenset[i]
-                render_xml(sf, supporting_form, level + 1)
+                indices = [i for i, x in enumerate(lglist) if x == language]
+                for i in indices:
+                    supporting_form = unfrozenset[i]
+                    render_xml(sf, supporting_form, level + 1)
             except:
                 pass
         return
