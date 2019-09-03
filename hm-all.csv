@@ -52,8 +52,8 @@
 52																			
 53	P		PH	*-ph- 		1	2	3	4	5	6	7							
 54	D	4	to push earth aside	*-phʉA	(8)	phɛ1	--	phua1	pou1b	--	phau1	phɪ1							
-55	D	5	thunder	*-S-phoA	(7)	ho1	so1	sɔ1	so1b	suA	xu1	(mo1)							
-56	D	6	thread	*-S-phoB	(7)	fhə3	so3	sɔ3	so3b	suB	--	(mo3)							
+55	D	5	thunder	*-S-phoA	(7)	ho1	so1	sɔ1	so1b	suA	xu1	mo1							
+56	D	6	thread	*-S-phoB	(7)	fhə3	so3	sɔ3	so3b	suB	--	mo3							
 57	D	7	to twist/rub	*-S-phu̯aA	(15)	fha1	-- 	sua1	sa1b	saA	va1’	--							
 58																			
 59	P		PM	*-ph- 									8	9	10	11			
@@ -684,7 +684,7 @@
 684																			
 685	P		PHM	*-d-		1	2	3	4	5	6	7	8	9	10	11			
 686	D	1	elder brother	*-da	(4)	ta2	--	ti2	ti2	ðaA	--	--	--	ta2	--	--			
-687	D	2	to come	*-daj	(15)	ta2	--	tua2	ta2	ðaA	--	te2	taːi2	taːi 2	ta2	tɛi2			
+687	D	2	to come	*-daj	(15)	ta2	--	tua2	ta2	ðaA	--	te2	taːi2	taːi2	ta2	tɛi2			
 688	D	3	fire	*-douX	(13)	tu4	tə4	taɯ4	tɯ4	ðoB	tau4	tɤ4	tou4	tɔu4	təu4	tu4			
 689	D	4	to explode	*-douH	(13)	tu6	tə6	taɯ6	tɯ6	ðoC	--	tɤ6	--	tɔ6	--	--			
 690	D	5	to die	*-dəjH	(15)	ta6	tɑ6	tua6	təa6	ðaC	ta6	te6	tai6	tai6	tai6	tai6			
@@ -1004,7 +1004,7 @@
 1004	D	8	midday meal	*-sjɛŋC	(22)	--	--	ʂu5	soŋ5b	saŋC	--	--							
 1005	D	9	to rest	*-sjoC	(7)	ʨhə5	ɕo5	ʂɔ5	so5b	suC	θjeu5	--							
 1006	D	10	to wipe	*-sjəŋC	(21)	ɕhaŋ5	ɕɑŋ5	ʂɔ5	soŋ5b	soŋC	--	--							
-1007	D	11	廝 reciprocal	*-sjɨA-D	(2)	ɕi5	--	ʂi1	--	siA-D	--	--							
+1007	D	11	廝 reciprocal	*-sjɨA	(2)	ɕi5	--	ʂi1	--	siA	--	--							
 1008	D	12	升 measure for grain	*-sjinA	(18)	ɕhen1	--	ʂia1	sæin1b	senA	--	ʨhɔ̃1							
 1009	D	13	收 to receive/gather in	*-sjuwA	(9)	ɕhu1	--	ʂau5	--	suA	--	--							
 1010																			
@@ -1301,7 +1301,7 @@
 1301	D	6	梨 pear	*-rəj	(15)	ɣa2	ʐɑ2	--	ʐa2	wjaA	--	ɦje2	gei2	gei4	lai2	dzai2			
 1302	D	7	里 village	*-rəŋX	(21)	ɣaŋ4	ʐɑŋ4	ʐɔ4	ʐoŋ4	wjoB	--	--	gaŋ4	gjaŋ4	laŋ4	dzɔŋ4			
 1303	D	8	廩 barn/granary	*-rɛmX	(22)	--	ʐe4	--	ʐoŋ4	wjaŋB	--	--	gam4	gjam4	lan4	dzum4			
-1304	D	9	力 strength	*-rək	(7)	ɣə6	ʐo6	ʐɔ6	ʐu6	wjuC	ŋkjeu6	ja6	[kha7	--	khla7]	dzja6			
+1304	D	9	力 strength	*-rək	(7)	ɣə6	ʐo6	ʐɔ6	ʐu6	wjuC	ŋkjeu6	ja6	kha7	--	khla7	dzja6			
 1305																			
 1306	P		PH	*-r-		1	2	3	4	5	6	7							
 1307	D	10	comb	*-ræC	(5)	ɣa6	ʐa6	ʐua6	ʐəa6	wjiC	vi6	ɦji6							
@@ -2064,7 +2064,7 @@
 2064			5.31	*-kl- 															
 2065																			
 2066	P		PHM	*-kl-		1	2	3	4	5	6	7	8	9	10	11			
-2067	D	1	to fry	*-kleu	(2)	ka1	ca1	ki1	tɕi1a	tɕeA	--	--	--	[tjiː1]	khla1	--			
+2067	D	1	to fry	*-kleu	(2)	ka1	ca1	ki1	tɕi1a	tɕeA	--	--	--	tjiː1	khla1	--			
 2068	D	2	horn	*-klɛɔŋ	(22)	ki1	ce1	ku1	koŋ1a	kaŋA	kjaŋ1	kɔ̃1	kɔŋ1	kjɔːŋ1	klɔ1	kɔu1			
 2069	D	3	insect/worm	*-klæŋ	(24)	kaŋ1	ci1	ka1	kua1a	tɕenA	kjen1	kɛ1	kɛŋ1	kjeːŋ1	klɛ1	tsaŋ1			
 2070	D	4	road/way	*-kləuX	(3)	ki3	kɯ3	ke3	kæ3a	tɕiB	kja3	ko3	kjau3	kjau3	kla3	tsu3			
