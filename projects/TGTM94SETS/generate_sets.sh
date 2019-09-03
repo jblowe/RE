@@ -17,7 +17,7 @@ EOF
 # get ready for xml
 perl -pe 's/&/&amp;/g;s/</&lt;/g;s/>/&gt;/g;s/\.$//;' SETS0111-SRT > lex.txt
 
-perl -i -pe 's#(\d+)\.\s+(.*?) +\[(.*?)\](.*)#</sf></set>\n<set>\n<id>\1</id>\n<plg>tgtm</plg>\n<pfm>A\2</pfm>\n<rcn>\3</rcn><rest>\4</rest>\n<sf>#' lex.txt
+perl -i -pe 's#(\d+)\.\s+(.*?) +\[(.*?)\](.*)#</sf></set>\n<set>\n<id>\1</id>\n<plg>tgtm</plg>\n<pfm>\2</pfm>\n<rcn>\3</rcn><rest>\4</rest>\n<sf>#' lex.txt
 # 64.  ᴬkra [1.111.33]
 
 # 	sahu	¹kra [[¹kra	head
