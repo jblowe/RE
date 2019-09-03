@@ -120,8 +120,16 @@ def serialize_sets(reconstruction, languages, filename, only_with_mel):
             else:
                 pass
             sf = ET.SubElement(element, 'sf')
-            for supporting_form in sorted(form[0].supporting_forms, key=lambda x: x.language):
-                render_xml(sf, supporting_form, level + 1)
+            # we need to output the supporting forms in the order specified by "languages"
+            unfrozenset = [x for x in form[0].supporting_forms]
+            lglist = [x.language for x in form[0].supporting_forms]
+            for language in languages:
+                try:
+                    i = lglist.index(language)
+                    supporting_form = unfrozenset[i]
+                    render_xml(sf, supporting_form, level + 1)
+                except:
+                    pass
             return
 
         if isinstance(form, RE.ModernForm):
