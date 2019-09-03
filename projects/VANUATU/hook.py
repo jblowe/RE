@@ -4,6 +4,7 @@ import toolbox
 import sys
 import os
 import glob
+import collections
 import xml.etree.ElementTree as ET
 import regex as re
 import RE
@@ -50,14 +51,14 @@ def read_toolbox_file():
                     # skip forms that contain '{' (i.e. assume these are bracketed forms '{xxx}')
                     v2 = value
                     if '{' in value:
-                        print(f'skipping {value}')
+                        # print(f'skipping {value}')
                         i += 1
                         continue
                     # skip forms that contain '('
                     if '(' in value:
-                        value = re.sub(r'\((.*?)\)', r'\1', value).strip()
+                        value = re.sub(r' *\((.*?)\) *', r'', value).strip()
                         if not value:
-                            print(f'skipping {v2}')
+                            # print(f'skipping {v2}')
                             i += 1
                             continue
                     value = value.replace('??', '').strip()
@@ -66,8 +67,12 @@ def read_toolbox_file():
                     value = value.replace('-k', '').replace('-n', '')
                     value = re.sub(r'^.*?\\','', value)
                     value = re.sub(r'/.*?$','', value)
+                    value = re.sub(r'\-.*$', '', value)
+                    value = re.sub(r'\?', '', value)
+                    value = value.strip()
                     if v2 != value:
-                        print(f'before: {v2} :: after {value}')
+                        # print(f'before: {v2} :: after {value}')
+                        pass
                     zipped[tag[1:]].append((value, gloss, set_number + 1))
                     if gloss:
                         mel.add(gloss)
@@ -112,12 +117,23 @@ def read_vanuatu_csv(filename):
                 # str(number), context_from(row[2]), syllable_type(row[1]), row[1],
                 row[0], context_from(row[2]), row[4].split(','), row[1],
                 dict(zip(names, (x.split('|') for x in row[5:])))))
-    return table
+    sound_classes = collections.defaultdict(list)
+    for c in table.correspondences:
+        for type in c.syllable_types:
+            if type in 'CVcv':
+                if c.proto_form not in sound_classes[type]:
+                    sound_classes[type].append(c.proto_form)
+    return table, sound_classes
 
 for corr_file in correspondence_filenames:
     correspondence_filename = os.path.join(base_dir, corr_file)
-    RE.Parameters(read_vanuatu_csv(correspondence_filename),
-                  RE.SyllableCanon({}, '(c?v)?(C?Vc?w)+', [], 'glyphs'),
+    table, sound_classes = read_vanuatu_csv(correspondence_filename)
+    # TODO: fix this hack regarding canons
+    if 'standard' in corr_file: canon = '(c?v)?(C?Vc?w)+'
+    elif 'experimental' in corr_file: canon = '(c?vc?)?(C?Vc?)+'
+    else: canon = '(c?v)?(C?Vc?w)+'
+    RE.Parameters(table,
+                  RE.SyllableCanon(sound_classes, canon, [], 'glyphs'),
                   'pnv', None).serialize(
                       os.path.join(base_dir, corr_file.replace('.csv','.xml')))
     print(f'made correspondence xml from {corr_file}')
