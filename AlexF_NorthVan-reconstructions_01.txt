@@ -399,7 +399,7 @@
 \mta
 \num {ɪl}
 \drg aːm
-\kro ɛ​͡am
+\kro ɛ͡am
 \olr ɪm
 \lkn æm
 \mrl
@@ -833,8 +833,8 @@
 \msn
 \mta ata-na
 \num
-\drg na-taŋ​͡mʷnɪ-n
-\kro na-taŋ​͡mʷnɪ-n
+\drg na-taŋ͡mʷnɪ-n
+\kro na-taŋ͡mʷnɪ-n
 \olr
 \lkn talatɪ-n
 \mrl
@@ -1773,7 +1773,7 @@ sago-leaves
 \sem bamboo
 \lkn pʊ
 \sem bamboo
-\mrl nɞ-ᵐbʊ​͡ɵ
+\mrl nɞ-ᵐbʊ͡ɵ
 \sem bamboo stick (Mus)
 \ark
 \dt 10/Nov/2011
@@ -2065,8 +2065,8 @@ together on tree
 \mtp
 \lmg
 \vra
-\vrs k​͡pʷʊlʊ
-\msn k​͡pʷʊlʊ
+\vrs k͡pʷʊlʊ
+\msn k͡pʷʊlʊ
 \mta pulua
 \num ᵐbulu
 \drg ᵐbʊᵐblʊ
@@ -2354,7 +2354,7 @@ together on tree
 \ltg
 \lhi
 \lyp k͡pʷaŋjis
-\vlw ᵑg​͡bʷaŋjis
+\vlw ᵑg͡bʷaŋjis
 \mtp k͡pʷaŋjis
 \mtp k͡pʷajŋis
 \lmg k͡pʷɒŋris
@@ -2557,7 +2557,7 @@ together on tree
 \hiw kʷujəkʷujə
 \ltg t̻ʉr\kʷilə
 \nt noté /t̻ʉrəkʷilə/ ici, mais je supprime le schwa d'après cahier FP1-xx.
-\lyp n-k͡pʷi​͡ɛlk͡pʷi​͡ɛl
+\lyp n-k͡pʷi͡ɛlk͡pʷi͡ɛl
 \mtp nɪ-k͡pʷɪk͡pʷɪl
 \vra k͡pʷik͡pʷilɪ
 \vrs k͡pʷɪk͡pʷɪl
@@ -2878,14 +2878,14 @@ together on tree
 \hiw
 \ltg kʷʉ
 \lhi
-\lyp n-ɣak​͡pʷij
+\lyp n-ɣak͡pʷij
 \vlw
-\mtp na-ɣak​͡pʷij
+\mtp na-ɣak͡pʷij
 \lmg
 \vra
 \vrs
 \msn
-\mta k​͡pʷir
+\mta k͡pʷir
 \num
 \drg
 \kro
@@ -3067,7 +3067,7 @@ together on tree
 \kro
 \olr
 \lkn βæræk
-\mrl wʊ\βɛrɛ​͡ak
+\mrl wʊ\βɛrɛ͡ak
 \nt cf. MS18-18, 01'02"
 \ark lahe
 \dt 22/Sep/2011
@@ -4314,7 +4314,7 @@ together on tree
 \lhi ⁿdɒj
 \lyp ⁿdøj
 \vlw
-\mtp {sak​͡pʷ}
+\mtp {sak͡pʷ}
 \lmg tœr
 \vra ⁿdɔr
 \rf Séwées-'i'i.46
@@ -4324,7 +4324,7 @@ together on tree
 \num ⁿdar
 \rf Num.Wenawon2.12
 \drg ⁿdaːr
-\kro ⁿdɛ​͡ar
+\kro ⁿdɛ͡ar
 \olr ʧaj
 \rf Olr.Vieille.014
 \lkn ʧaː
@@ -5252,7 +5252,7 @@ together on tree
 \vanb 3
 \drg wir
 \nt ??
-\drg {k​͡pʷriŋ}
+\drg {k͡pʷriŋ}
 \kro
 \olr
 \lkn βirih
@@ -5361,17 +5361,17 @@ together on tree
 \ltg
 \lhi (ɣajŋʷih)
 \nt reconstitué d'après Tryon 1976: 480
-\lyp (ɣajŋ​͡mʷis)
+\lyp (ɣajŋ͡mʷis)
 \nt reconstitué d'après Tryon 1976: 480
 \vlw
 \mtp
-\lmg (ɣarŋ​͡mʷis)
+\lmg (ɣarŋ͡mʷis)
 \nt reconstitué d'après Tryon 1976: 480
-\vra ɣarŋ​͡mʷis
+\vra ɣarŋ͡mʷis
 \nt Hyslop
-\vrs ɣarŋ​͡mʷøs
+\vrs ɣarŋ͡mʷøs
 \nt Hyslop
-\msn (ɣarŋ​͡mʷʊs)
+\msn (ɣarŋ͡mʷʊs)
 \nt reconstitué d'après Tryon 1976: 480
 \mta
 \num
@@ -5556,7 +5556,7 @@ together on tree
 \div
 \num {na-tarwu-k}
 \drg n-ɣatɣʊ-k
-\kro na-wɛtɣɛ​͡a-k
+\kro na-wɛtɣɛ͡a-k
 \nt donné en 3sg /na-wɛtɣa-n/
 \olr wɪtɣɪ-k
 \lkn ɣatwɔ-k
@@ -6243,7 +6243,7 @@ together on tree
 \kro ɪl
 \olr
 \lkn
-\mrl (​ɛl)ɛ​͡al
+\mrl (ɛl)ɛ͡al
 \sem seek, look for
 \ark
 \dt 08/Apr/2012
@@ -6573,7 +6573,7 @@ together on tree
 \kro lɛŋ
 \olr lɛŋ
 \lkn lɛŋ
-\mrl na-lɛ​͡aŋ
+\mrl na-lɛ͡aŋ
 \nt or /na-laŋ/ ?? cf. enreg. MS16-16.   Monika note 'na-liang'.
 \div
 \sdi leŋa
@@ -6597,7 +6597,7 @@ together on tree
 \sem be the odd one out, be isolated from a group
 \lmg
 \vra
-\vrs li​͡ar
+\vrs li͡ar
 \sem get lost
 \rfc BP2-40b
 \msn
@@ -7921,7 +7921,7 @@ together on tree
 \kro
 \olr
 \lkn
-\mrl masɣɛ​͡at
+\mrl masɣɛ͡at
 \dt 17/Nov/2011
 
 \pnv °mataβa(si)
@@ -8727,7 +8727,7 @@ together on tree
 \rfc EG3-02b
 \ltg ŋʷehə
 \lhi
-\lyp n-ŋ​͡mʷas
+\lyp n-ŋ͡mʷas
 \mtp na-ŋ͡mʷah
 \lmg ŋ͡mʷɒs
 \rfc EP1-42a
@@ -8751,7 +8751,7 @@ together on tree
 \lhi
 \vlw
 \mtp {sisɣɔj}
-\mtp {k​͡pʷɪsⁿdi}
+\mtp {k͡pʷɪsⁿdi}
 \mtp nɛ-ŋ͡mʷɛs
 \sem (n.) abundance of fruit
 \lmg ŋ͡mʷɛs
@@ -8884,28 +8884,28 @@ together on tree
 \cf °towotowo
 \ps
 \div
-\hiw ŋ​ʷo
+\hiw ŋʷo
 \hiw {tʊwtʊw}
 \ltg {təwtʊw}
-\lhi ŋ​ʷa
+\lhi ŋʷa
 \et < *a mʷoˈa-ɣa
-\lyp ŋ​͡mʷa
+\lyp ŋ͡mʷa
 \et < *a mʷoˈa-ɣa
-\vlw a\ŋ​͡mʷaɣ
+\vlw a\ŋ͡mʷaɣ
 \et < *a mʷoˈa-ɣa
-\mtp a\ŋ​͡mʷaɣ
+\mtp a\ŋ͡mʷaɣ
 \et < *a mʷoˈa-ɣa
 \lmg {ʔœwʔœw}
 \vra {ʔʊwʔʊw}
-\vrs ŋ​͡mʷʊ
-\msn tur\ŋ​͡mʷɔ
-\mta a\ŋ​͡mʷoa
-\num a\ŋ​͡mʷɔ
-\drg ŋ​͡mʷɔ
-\kro ŋ​͡mʷɔ
-\olr ŋ​͡mʷɔ
-\lkn ŋ​͡mʷɔ
-\mrl a\ŋ​͡mʷɔ
+\vrs ŋ͡mʷʊ
+\msn tur\ŋ͡mʷɔ
+\mta a\ŋ͡mʷoa
+\num a\ŋ͡mʷɔ
+\drg ŋ͡mʷɔ
+\kro ŋ͡mʷɔ
+\olr ŋ͡mʷɔ
+\lkn ŋ͡mʷɔ
+\mrl a\ŋ͡mʷɔ
 \dt 20/Nov/2011
 
 \pnv °mʷoli
@@ -11222,7 +11222,7 @@ game)
 \mta sal
 \num
 \drg saːl
-\kro sɛlsɛ​͡al
+\kro sɛlsɛ͡al
 \olr sal
 \lkn hæl
 \mrl
@@ -11413,7 +11413,7 @@ game)
 \ps
 \div
 \hiw tɵt\sɔᶢʟ
-\ltg hi​͡ɛr
+\ltg hi͡ɛr
 \rfc FG1-28b+29a
 \lhi
 \lyp
@@ -11429,7 +11429,7 @@ game)
 \kro
 \olr
 \lkn {ŋatɛ}
-\mrl {nɛ-kɛ​͡an}
+\mrl {nɛ-kɛ͡an}
 \dt 17/Nov/2011
 
 \pnv °[sa]sae
@@ -12688,7 +12688,7 @@ or two people carrying, one on each side
 \sem taboo place on island
 \lyp
 \vlw
-\mtp nɛ-tɛk​͡pʷ
+\mtp nɛ-tɛk͡pʷ
 \sem [n] graveyard
 \lmg
 \vra
@@ -12698,7 +12698,7 @@ or two people carrying, one on each side
 \sem day of silence in sign of mourning
 \num
 \drg taːᵐb
-\kro tɛ​͡am
+\kro tɛ͡am
 \olr
 \lkn
 \mrl tɔm
@@ -12846,8 +12846,8 @@ against ghosts
 \mtp na-tɛ-n
 \lmg
 \vra ʔa
-\vrs ti​͡a
-\vrs ti​ɪ-k || tia-n
+\vrs ti͡a
+\vrs tiɪ-k || tia-n
 \msn ta-k
 \rf Tryon p.210
 \mta tae
@@ -13159,7 +13159,7 @@ powers as the abode of a 'vui'
 \vanb 8
 \msn tɛmɛk
 \vanb 8
-\mta taŋ​͡mʷa
+\mta taŋ͡mʷa
 \vanb 4
 \num taŋ
 \vanb 4
@@ -13223,7 +13223,7 @@ powers as the abode of a 'vui'
 \olr tɛnnɛ
 \vanb 2
 \lkn {tawɔlwɔl}
-\mrl tanɛ​͡aɣ
+\mrl tanɛ͡aɣ
 \vanb 3
 \dt 06/Sep/2011
 
@@ -13301,7 +13301,7 @@ powers as the abode of a 'vui'
 \lyp n-ʧajpɛ-n
 \vlw n-tajᵐbɛ-n
 \mtp na-tajᵐbɛ-n
-\mtp {na-tak​͡pʷŋ​͡mʷɪ-n}
+\mtp {na-tak͡pʷŋ͡mʷɪ-n}
 \lmg n-ʔɒrpæ-n
 \vra ʔirᵐbɪ-ɣi
 \vrs tarᵐbia-n
@@ -13460,7 +13460,7 @@ powers as the abode of a 'vui'
 \sem affection; present
 \lmg
 \vra
-\vrs timti​͡am
+\vrs timti͡am
 \sem affection; present
 \msn
 \mta tape
@@ -13998,27 +13998,27 @@ powers as the abode of a 'vui'
 \sem pregnant
 \ltg təkʷe-nə
 \lhi n-tɔkʷa-n
-\lyp n-tak​͡pʷa-n
+\lyp n-tak͡pʷa-n
 \vlw n-taᵑg͡bʷa-n
-\mtp na-tk​͡pʷa-n
-\mtp tɔk​͡pʷsis
+\mtp na-tk͡pʷa-n
+\mtp tɔk͡pʷsis
 \sem (eat) one's fill
-\lmg ʔɒk​͡pʷɒ-n
+\lmg ʔɒk͡pʷɒ-n
 \rfc EG2-08b
-\vra ʔak​͡pʷa-ɣi
-\vrs na tak​͡pʷa-n
-\vrs wɔtɔk​͡pʷtɔk​͡pʷ
+\vra ʔak͡pʷa-ɣi
+\vrs na tak͡pʷa-n
+\vrs wɔtɔk͡pʷtɔk͡pʷ
 \sem pregnant
-\msn tak​͡pʷa-n
+\msn tak͡pʷa-n
 \rfc AG5-19b
-\mta na tok​͡pʷa-na
-\num na tak​͡pʷa-n
-\drg na tk​͡pʷa-n
+\mta na tok͡pʷa-na
+\num na tak͡pʷa-n
+\drg na tk͡pʷa-n
 \kro
-\olr tak​͡pʷa-n
-\olr tɔk​tɔk​
+\olr tak͡pʷa-n
+\olr tɔktɔk
 \sem (eat) one's fill
-\lkn tok​͡pʷa-n
+\lkn tok͡pʷa-n
 \mrl na-takʷa-n
 \dt 22/Oct/2014
 
