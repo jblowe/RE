@@ -17,8 +17,14 @@ EOF
 # get ready for xml
 perl -pe 's/&/&amp;/g;s/</&lt;/g;s/>/&gt;/g;s/\.$//;' SETS0111-SRT > lex.txt
 
-perl -i -pe 's#(\d+)\.\s+(.*?) +\[(.*?)\](.*)#</sf></set>\n<set>\n<id>\1</id>\n<plg>tgtm</plg>\n<pfm>\2</pfm>\n<rcn>\3</rcn><rest>\4</rest>\n<sf>#' lex.txt
+perl -i -pe 's#(\d+)\.\s+(.*?) +\[(.*?)\](.*)#</sf></set>\n<set>\n<id>\1</id>\n<multi><plg>tgtm</plg><pfm>\2</pfm><rcn>\3</rcn></multi><rest>\4</rest>\n<sf>#' lex.txt
 # 64.  ᴬkra [1.111.33]
+
+perl -i -pe 's# / (.*?) +\[(.*?)\]#<multi><plg>tgtm</plg><pfm>\1</pfm><rcn>\2</rcn></multi>#g if /<rest>/' lex.txt
+
+perl -i -pe 's#<rest>(.*?)</rest>#\1#' lex.txt
+
+perl -i -pe 's#<multi>(.*?)</multi>#\1# unless /plg.*plg.*plg/' lex.txt
 
 # 	sahu	¹kra [[¹kra	head
 perl -i -ne 'if (/^</){print;}else{$i++;s#^\t(.*)\t(.*?)\t(.*)#<rfx>\n<lg>\1</lg>\n<lx>\2</lx>\n<gl>\3</gl>\n<id>\1.$i</id>\n</rfx>#;print}' lex.txt
@@ -37,6 +43,6 @@ echo "</sf></set></sets></reconstruction>" > tail.txt
 
 cat header.txt l2.txt tail.txt > both.txt
 
-xmllint --format --encode 'utf-8' both.txt | grep -v "<rest/>"> SETS0111-SRT.sets.xml
+xmllint --format --encode 'utf-8' both.txt | grep -v "<rest/>" > SETS0111-SRT.sets.xml
 
 #rm both.txt tail.txt header.txt l2.txt lex.txt
