@@ -37,6 +37,6 @@ echo "</sf></set></sets></reconstruction>" > tail.txt
 
 cat header.txt l2.txt tail.txt > both.txt
 
-xmllint --format --encode 'utf-8' both.txt > SETS0111-SRT.sets.xml
+xmllint --format --encode 'utf-8' both.txt | grep -v "<rest/>"> SETS0111-SRT.sets.xml
 
 #rm both.txt tail.txt header.txt l2.txt lex.txt
