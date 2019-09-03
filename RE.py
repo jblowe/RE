@@ -476,6 +476,9 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
+    reflexes = sum([len(x[1]) for x in list(uniques.values())])
+    statistics.add_note(
+        f'{reflexes} reflexes in sets')
     return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, only_with_mel, root):
