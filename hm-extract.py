@@ -7,8 +7,8 @@ import collections
 
 skip = r'[\(\)\*,\-\./<>\[\] ]'
 tones = r'([ABCDXHL0123456789]?’??[ab]?)$'
-cons = r'([^GKMNORSWZbcdfghjklmnqpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
-notrimes = r'^([ABCDXHL0123456789DGHKMNORSWXZbcdfghjklmnpqrstvwxyzɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
+cons = r'([^GKMNORSWZbcdfghjklmnqpqrstvwxyzʷɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
+notrimes = r'^([ABCDXHL0123456789DGHKMNORSWXZbcdfghjklmnpqrstvwxyzʷɟɢʁɲȡʥɬɦɳʐʔʨɣȴɴȶʑʃʈɭʂɕȵŋθð ̥]*)'
 
 
 LANGUAGES = 'Qiandong,Xiangxi,WhiteHmong,Masha,Luopohe,Jiongnai,Baiyun,Luoxiang,Mun,BiaoMin,ZaoMin'.split(',')
