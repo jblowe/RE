@@ -65,8 +65,10 @@
                     <td class="rcn"><xsl:value-of select="rcn"/></td>
                 </xsl:otherwise>
             </xsl:choose>
-
-            <td class="mel" title="{mel}"><xsl:value-of select="melid"/></td>
+            <td class="mel" title="{mel}">
+                <xsl:value-of select="melid"/>:
+                <xsl:value-of select="substring-before(concat(mel, ',' ) , ',')"/>
+            </td>
             <xsl:variable name="reflexes" select="sf"/>
             <xsl:for-each select="$lgs/*">
                 <xsl:variable name="label" select="."/>
