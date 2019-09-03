@@ -2,6 +2,7 @@ import read
 import serialize
 import os
 import sys
+import collections
 from utils import cd
 
 base_dir = os.path.dirname(__file__)
@@ -26,6 +27,38 @@ def fuzzy_string(mapping, string):
             new_string.append(string[0])
             string = string[1:]
     return ''.join(new_string)
+
+# map targets to representatives
+def invert_fuzzy_map(mapping):
+    invert = collections.defaultdict(list)
+    for ((dialect, representative), target) in mapping.items():
+        invert[(dialect, target)].append(representative)
+    return invert
+
+def fuzzy_table(mapping, settings):
+    parameters = read.read_correspondence_file(os.path.join(settings.directory_path,
+                                                            settings.proto_languages['tgtm']),
+                                               '-------',
+                                               list(settings.upstream['tgtm']),
+                                               'tgtm',
+                                               settings.mel_filename)
+    print('fuzzying table of correspondences')
+    invert = invert_fuzzy_map(mapping)
+    for c in parameters.table.correspondences:
+        modified = False
+        for (language, reflexes) in c.daughter_forms.items():
+            for reflex in reflexes:
+                if (language, reflex) in invert:
+                    modified = True
+                    c.daughter_forms[language] = list(set(c.daughter_forms[language] + invert[(language, reflex)]))
+        if modified:
+            c.id += '*'
+    print('writing fuzzied table')
+    new_table_file = 'fuzz' + settings.proto_languages['tgtm']
+    serialize.serialize_correspondence_file(os.path.join(base_dir, new_table_file),
+                                            parameters)
+    # make settings use these instead.
+    settings.proto_languages['tgtm'] = new_table_file
 
 def fuzzy_lexicons(mapping, settings):
     attested_lexicons = read.read_attested_lexicons(settings)
@@ -60,7 +93,7 @@ def generate_xml_data():
 def run_load_hooks(settings):
     generate_xml_data()
     if 'fuzzy' in settings.other:
-        fuzzy_lexicons(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
-                       settings)
+        fuzzy_table(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
+                    settings)
     else:
         return
