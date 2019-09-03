@@ -3,7 +3,9 @@
 set -x
 
 # do the 'initial' extraction
-python hm-extract.py hm-all.csv HM.TAB.csv HM.TOC.csv
+
+# don't do this for now: the ToC and tabular data are now committed in GitHub for development
+#python hm-extract.py hm-all.csv HM.TAB.csv HM.TOC.csv
 
 # run the csv converter for the data
 python ../../../src/csv_to_lexicon.py HM.TAB.csv "1,0, 2"
