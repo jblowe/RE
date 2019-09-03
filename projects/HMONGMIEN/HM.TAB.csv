@@ -22,8 +22,8 @@ id	gloss	PHM	class	Qiandong	Xiangxi	WhiteHmong	Masha	Luopohe	Jiongnai	Baiyun	Luo
 21	劈 to split/chop	*-phek	(2)	pha1	pha1	tshi1		phoA			phi7						
 22	破 to cut open	*-phajH	(15)	pha5	pha5	phua5	pa5b	phaC	pha5	pha5	phaːi5	paːi5’	pha5				
 23	to push earth aside	*-phʉA	(8)	phɛ1		phua1	pou1b		phau1	phɪ1							
-24	thunder	*-S-phoA	(7)	ho1	so1	sɔ1	so1b	suA	xu1	(mo1)							
-25	thread	*-S-phoB	(7)	fhə3	so3	sɔ3	so3b	suB		(mo3)							
+24	thunder	*-S-phoA	(7)	ho1	so1	sɔ1	so1b	suA	xu1	mo1							
+25	thread	*-S-phoB	(7)	fhə3	so3	sɔ3	so3b	suB		mo3							
 26	to twist/rub	*-S-phu̯aA	(15)	fha1	 	sua1	sa1b	saA	va1’								
 27	奉 to carry in 2 hands	*-phu̯ɛŋB	(22)								phwəŋ3	pɔŋ3	phɔŋ3				
 28	拂 to sweep	*-phu̯ətD	(7)								phut7						
@@ -227,7 +227,7 @@ id	gloss	PHM	class	Qiandong	Xiangxi	WhiteHmong	Masha	Luopohe	Jiongnai	Baiyun	Luo
 226	bellows	*-thoŋB	(28)	thoŋ3	thɑŋ3		thaŋ3b	thoŋB		tho3							
 227	hoop	*-thɨC	(2)	tha5		thi5	tei5b	theC									
 228	elder brother	*-da	(4)	ta2		ti2	ti2	ðaA				ta2					
-229	to come	*-daj	(15)	ta2		tua2	ta2	ðaA		te2	taːi2	taːi 2	ta2	tɛi2			
+229	to come	*-daj	(15)	ta2		tua2	ta2	ðaA		te2	taːi2	taːi2	ta2	tɛi2			
 230	fire	*-douX	(13)	tu4	tə4	taɯ4	tɯ4	ðoB	tau4	tɤ4	tou4	tɔu4	təu4	tu4			
 231	to explode	*-douH	(13)	tu6	tə6	taɯ6	tɯ6	ðoC		tɤ6		tɔ6					
 232	to die	*-dəjH	(15)	ta6	tɑ6	tua6	təa6	ðaC	ta6	te6	tai6	tai6	tai6	tai6			
@@ -368,7 +368,7 @@ id	gloss	PHM	class	Qiandong	Xiangxi	WhiteHmong	Masha	Luopohe	Jiongnai	Baiyun	Luo
 367	midday meal	*-sjɛŋC	(22)			ʂu5	soŋ5b	saŋC									
 368	to rest	*-sjoC	(7)	ʨhə5	ɕo5	ʂɔ5	so5b	suC	θjeu5								
 369	to wipe	*-sjəŋC	(21)	ɕhaŋ5	ɕɑŋ5	ʂɔ5	soŋ5b	soŋC									
-370	廝 reciprocal	*-sjɨA-D	(2)	ɕi5		ʂi1		siA-D									
+370	廝 reciprocal	*-sjɨA	(2)	ɕi5		ʂi1		siA									
 371	升 measure for grain	*-sjinA	(18)	ɕhen1		ʂia1	sæin1b	senA		ʨhɔ̃1							
 372	收 to receive/gather in	*-sjuwA	(9)	ɕhu1		ʂau5		suA									
 373	clf-bowls/houses	*-ʔlɛŋA	(22)	lɛ1	le1	lu1	noŋ1a	ʔlaŋA	xoŋ1	lɔ̃1							
@@ -474,7 +474,7 @@ id	gloss	PHM	class	Qiandong	Xiangxi	WhiteHmong	Masha	Luopohe	Jiongnai	Baiyun	Luo
 473	梨 pear	*-rəj	(15)	ɣa2	ʐɑ2		ʐa2	wjaA		ɦje2	gei2	gei4	lai2	dzai2			
 474	里 village	*-rəŋX	(21)	ɣaŋ4	ʐɑŋ4	ʐɔ4	ʐoŋ4	wjoB			gaŋ4	gjaŋ4	laŋ4	dzɔŋ4			
 475	廩 barn/granary	*-rɛmX	(22)		ʐe4		ʐoŋ4	wjaŋB			gam4	gjam4	lan4	dzum4			
-476	力 strength	*-rək	(7)	ɣə6	ʐo6	ʐɔ6	ʐu6	wjuC	ŋkjeu6	ja6	[kha7		khla7]	dzja6			
+476	力 strength	*-rək	(7)	ɣə6	ʐo6	ʐɔ6	ʐu6	wjuC	ŋkjeu6	ja6	kha7		khla7	dzja6			
 477	comb	*-ræC	(5)	ɣa6	ʐa6	ʐua6	ʐəa6	wjiC	vi6	ɦji6							
 478	to grind (grain)	*-roD	(7)		ʐo8	ʐɔ8	ʐo8	wjuD									
 479	pair	*-reŋC	(20)									geːŋ6	lɛ6	dzaŋ6			
@@ -729,7 +729,7 @@ id	gloss	PHM	class	Qiandong	Xiangxi	WhiteHmong	Masha	Luopohe	Jiongnai	Baiyun	Luo
 728	硬 hard/solid	*-ŋjeŋC	(20)								ȵɛŋ6	ŋjeŋ6					
 729	寫 to write	*-xjaB	(4)								θja3	kja3	ɕa3	sjɛ3			
 730	象 elephant	*-ɣji̯ɔŋB	(26)								θɛŋ4	kjaːŋ4		sjaŋ4			
-731	to fry	*-kleu	(2)	ka1	ca1	ki1	tɕi1a	tɕeA				[tjiː1]	khla1				
+731	to fry	*-kleu	(2)	ka1	ca1	ki1	tɕi1a	tɕeA				tjiː1	khla1				
 732	horn	*-klɛɔŋ	(22)	ki1	ce1	ku1	koŋ1a	kaŋA	kjaŋ1	kɔ̃1	kɔŋ1	kjɔːŋ1	klɔ1	kɔu1			
 733	insect/worm	*-klæŋ	(24)	kaŋ1	ci1	ka1	kua1a	tɕenA	kjen1	kɛ1	kɛŋ1	kjeːŋ1	klɛ1	tsaŋ1			
 734	road/way	*-kləuX	(3)	ki3	kɯ3	ke3	kæ3a	tɕiB	kja3	ko3	kjau3	kjau3	kla3	tsu3			
