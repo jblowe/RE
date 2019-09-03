@@ -18,26 +18,53 @@ Install the datasets:
 
 `pip install -r pip-requirements.txt`
 
-you'll need to clone these repositories in some directory X:
+You'll need to clone these repositories in some directory X:
 
 * https://github.com/clics/clics2
 * https://github.com/clld/concepticon-data
 * https://github.com/clld/glottolog
 
-and for each directory run: `pip install -e`.
+Then:
 
-Now calculate the colexification networks: (takes a while)
+* cd to the X directory.
+* cd to each directory and run: `pip install -e`, making sure you checkout the correct branch of each.
+* `load` the concepticon and glottolog resources.
+* calculate the colexification networks: (takes a while) `clics -t 3 -f families colexification`
+* make sure you have the lexical data files in the source directories!
+* then regenerate the CLICS MELS. `python3 semantic_sources/regenerate-clics.py X`.
 
-`clics -t 3 -f families colexification`
+Possible dialog for this:
 
-(You may change the parameters to get different data, but you must also change the name of the file in the script.)
+```
+cd semantic_sources/
 
-Finally, to produce the mels for all projects, do:
+git clone https://github.com/clics/clics2
+git clone https://github.com/clld/concepticon-data
+git clone https://github.com/clld/glottolog
 
-`python3 semantic_sources/regenerate-clics.py X`
+cd clics2
+pip install -e .
+cd ../concepticon-data
+git checkout v1.2.0
+pip install -e .
+cd ../glottolog
+git checkout 9701cb0
+pip install -e .
 
-You must run this from the parent directory.
+cd ../clics2
+clics load ~/RE/src/semantic_sources/concepticon-data ~/RE/src/semantic_sources/glottolog
+clics -t 3 -f families colexification
 
-# Both
+cd ../..
+python REcli.py upstream HMONGMIEN semantics -t standard -r hand-std-strict -m hand -w
+for t in DIS TGTM VANUATU HMONGMIEN POLYNESIAN ROMANCE; do cp ../experiments/$t/semantics/*.data.xml ../projects/$t/ ; done
 
-Both scripts should output a file not_found, which contains glosses that were not present in the semantic source.
+python semantic_sources/regenerate-clics.py /Users/jblowe/RE2/src/semantic_sources/clics2
+git clean -fd ../projects/*/*.data.xml
+```
+
+# "Not founds"
+
+Both scripts add the glosses that were not present in the semantic source as "not found", "singleton"
+MELs in their respective MEL files.
+
