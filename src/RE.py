@@ -584,7 +584,10 @@ def dump_keys(lexicon, filename):
             for support1 in support:
                 forms.append(str(support1) + f'\t*{correspondences_as_proto_form_string(reconstruction)}\t*{correspondences_as_ids(reconstruction)}')
         print('\t'.join('language & form,gloss,id,protoform,correspondences'.split(',')))
-        for f in sorted(forms):
+        for i,f in enumerate(sorted(forms)):
+            if i > 100000:
+                print('**** output terminated after 100,000 lines')
+                break
             print(f)
         print('***failures')
         for failure in lexicon.statistics.failed_parses:
