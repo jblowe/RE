@@ -117,8 +117,8 @@ def upstream(project, experiment):
     RE.Debug.debug = True
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
-    language_names, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, True)
-    forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project, experiment, request.forms, True)
+    language_names, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, False)
+    forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project, experiment, request.forms, False)
     data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages, 'base_dir': base_dir,
             'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses,
             'experiment_info': experiment_info}
