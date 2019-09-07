@@ -69,8 +69,7 @@ def serialize_lexicon(lexicon, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
-
-def serialize_sets(reconstruction, languages, filename, only_with_mel):
+def create_xml_sets(reconstruction, languages, only_with_mel):
     '''
     Here is the "classic schema" of cognate sets...
 
@@ -179,9 +178,12 @@ def serialize_sets(reconstruction, languages, filename, only_with_mel):
     # there is only one (big) set for failures
     render_xml(entry, reconstruction.failures, 0)
 
+    return root
+
+def serialize_sets(reconstruction, languages, filename, only_with_mel):
+    root = create_xml_sets(reconstruction, languages, only_with_mel)
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
-
 
 def serialize_stats(stats, settings, args, filename):
     root = ET.Element('stats', attrib={'project': 'foo'})
@@ -229,17 +231,23 @@ def serialize_stats(stats, settings, args, filename):
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
 
+
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
-def serialize_evaluation(stats, filename):
+def serialize_evaluation(stats, filename, languages):
     root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
     entry = ET.SubElement(root, 'totals')
     for k, v in stats.items():
-        if type(v) == type(()):
+        if 'sets_' == k[:5]:
+            # if this is one of the 'sets' elements, make it a child of the root (not <totals>)
+            element = ET.SubElement(root, k)
+            #element.append(create)
+            continue
+        elif type(v) == type(()):
             element = ET.SubElement(entry, k)
             element.set('value', str(v[0]))
             element.set('type', str(v[1]))

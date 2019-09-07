@@ -224,5 +224,43 @@ def make_experiment(project, experiment):
     messages = alerts if success else None
     return show_experiment(project, experiment, messages, errors)
 
+@route('/plot/<type:re:.*>/<data:re:.*>')
+def plot(type, data):
+    import numpy as np
+    import matplotlib.pyplot as plt
+    plt.close()
+    if type == 'venn':
+        from matplotlib_venn import venn2
+        t = tuple([int(t) for t in data.split(',')])
+        #plt.figure()  # needed to avoid adding curves in plot
+        venn2(subsets=t, set_labels=('Cognate sets 1', 'Cognate sets 2'))
+        plt.title('Set overlap')
+
+    elif type == 'sankey':
+        from matplotlib.sankey import Sankey
+        # three values come in: isolates, failures, total forms
+        counts = [int(t) for t in data.split(',')]
+        # create 'in sets' count using the other two values
+        counts[2] = counts[2] - int(counts[0] + counts[1])
+        sum_triple = sum(counts)
+        counts = [-sum_triple] + counts
+        flows = [-(100 * t / sum_triple) for t in counts]
+        labels = 'all forms,isolates,failures,in sets'.split(',')
+        labels = [f'{labels[i]} ({abs(counts[i])})' for i in range(len(labels))]
+        orientations = [0, 1, 1, 0]
+        pathlengths = [0.25, 0.25, 0.25, 0.25]
+        Sankey(unit='%', scale=0.01, pathlengths=pathlengths, format='%.0f', flows=flows, labels=labels, orientations=orientations).finish()
+        plt.title("Sankey diagram")
+
+    from io import BytesIO
+    figfile = BytesIO()
+    plt.savefig(figfile, format='png')
+    figfile.seek(0)
+
+    response = HTTPResponse(content_type="image/png")
+    response.body = figfile
+
+    return response
+
 # application = default_app()
 run()

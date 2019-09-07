@@ -15,22 +15,30 @@
             <body>
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
                 <h5>Summary statistics</h5>
+                <xsl:apply-templates select=".//venn"/>
+                <xsl:apply-templates select=".//sankey"/>
                 <xsl:apply-templates select=".//settings"/>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
                 <xsl:apply-templates select=".//stats"/>
+                <xsl:apply-templates select="sets_in_common"/>
+                <xsl:apply-templates select="sets_only_in_lexicon1"/>
+                <xsl:apply-templates select="sets_only_in_lexicon2"/>
+                <xsl:apply-templates select="sets_diff"/>
             </body>
         </html>
     </xsl:template>
 
+    <xsl:template match="venn">
+        <img height="200px;" src="/plot/venn/{@value}"/>
+    </xsl:template>
+
+    <xsl:template match="sankey">
+        <img height="300px;" src="/plot/sankey/{@value}"/>
+    </xsl:template>
 
     <xsl:template match="settings">
         <h5>Experiment settings</h5>
         <xsl:apply-templates select=".//settings"/>
-    </xsl:template>
-
-    <xsl:template match="stats">
-        <h5>Language statistics</h5>
-        <xsl:apply-templates select=".//stats"/>
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
@@ -54,6 +62,11 @@
   <xsl:key name="subtotals" match="totals/*" use="name()"/>
 
     <xsl:template match="stats">
+        <xsl:apply-templates select="lexicons"/>
+        <xsl:apply-templates select="correspondences"/>
+    </xsl:template>
+
+    <xsl:template match="lexicons">
         <table class="table table-striped sortable">
             <thead>
               <tr>
@@ -68,7 +81,7 @@
                 </xsl:for-each>
               </tr>
             </thead>
-            <xsl:apply-templates select="lexicons/lexicon"/>
+            <xsl:apply-templates select="lexicon"/>
             <tr>
               <th>totals</th>
                 <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
@@ -81,7 +94,9 @@
                 </xsl:for-each>
             </tr>
         </table>
+    </xsl:template>
 
+    <xsl:template match="correspondences">
         <table class="table table-striped sortable">
             <thead>
               <tr>
@@ -91,7 +106,7 @@
               </tr>
             </thead>
             <tbody>
-                <xsl:apply-templates select="correspondences/correspondence"/>
+                <xsl:apply-templates select="correspondence"/>
             </tbody>
         </table>
         <p>correspondences_used: <xsl:value-of select=".//correspondences_used[@value]"/></p>
@@ -113,7 +128,7 @@
     </xsl:template>
 
 
-    <xsl:template match="correspondences/correspondence">
+    <xsl:template match="correspondence">
         <tr>
             <td><xsl:value-of select="@value"/></td>
             <xsl:for-each select="./*">
@@ -129,7 +144,7 @@
         </tr>
     </xsl:template>
 
-    <xsl:template match="lexicons/lexicon">
+    <xsl:template match="lexicon">
         <tr>
             <td>
                 <xsl:value-of select="@language"/>

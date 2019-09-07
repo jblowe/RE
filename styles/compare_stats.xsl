@@ -9,7 +9,7 @@
     <xsl:strip-space
             elements="*"/>
 
-    <xsl:template match="/">
+    <xsl:template match="stats">
         <html>
             <head>
             </head>
@@ -17,7 +17,7 @@
                 <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
                 <h5>Comparison</h5>
                 <ol>
-                    <xsl:apply-templates select=".//file"/>
+                    <xsl:apply-templates select="file"/>
                 </ol>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
             </body>

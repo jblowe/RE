@@ -336,6 +336,7 @@ def postdict_daughter_forms(proto_form, parameters):
 def project_back(lexicons, parameters, statistics):
     reconstructions = collections.defaultdict(list)
     next_map = next_correspondence_map(parameters)
+    number_of_forms = 0
     for lexicon in lexicons:
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
@@ -361,10 +362,13 @@ def project_back(lexicons, parameters, statistics):
             else:
                 count_of_no_parses += 1
                 statistics.failed_parses.add(form)
+        number_of_forms += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
     statistics.correspondences_used_in_recons = count_correspondences_used_in_reconstructions(reconstructions)
     statistics.add_stat('lexicons', len(lexicons))
+    statistics.add_stat('reflexes', number_of_forms)
+    statistics.add_note(f'{number_of_forms} input forms')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
@@ -477,8 +481,8 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     statistics.add_note(
         f'{len(uniques)} distinct reconstructions with distinct supporting forms')
     reflexes = sum([len(x[1]) for x in list(uniques.values())])
-    statistics.add_note(
-        f'{reflexes} reflexes in sets')
+    statistics.add_note(f'{reflexes} reflexes in sets')
+    statistics.add_stat('reflexes_in_sets', reflexes)
     return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, only_with_mel, root):
@@ -598,6 +602,38 @@ def compare_support(lex1_forms, forms):
     # FIXME: there's a subtle dependency here on the Form.str method.
     return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
 
+def list_intersection(lst1, lst2):
+    lst3 = [value for value in lst1 if value in lst2]
+    return lst3
+
+def set_compare(lex1, lex2):
+    diffs = []
+    union = lex1 + lex2
+    for l1 in union:
+        l1_sf = set()
+        [l1_sf.add(str(k)) for k in l1.supporting_forms]
+        for l2 in lex2:
+            l2_sf = set()
+            [l2_sf.add(str(k)) for k in l2.supporting_forms]
+            form_intersection = l1_sf & l2_sf
+            if form_intersection == set(): continue
+            form_union = l1_sf | l2_sf
+            form_l1 = l1_sf - l2_sf
+            form_l2 = l2_sf - l1_sf
+            diff = collections.defaultdict(list)
+            for form in form_union:
+                if form in form_intersection:
+                    diff['both'].append(form)
+                elif form in form_l1:
+                    diff['l1'].append(form)
+                elif form in form_l2:
+                    diff['l2'].append(form)
+                else:
+                    print('we should never get here')
+        diffs.append(diff)
+    return diffs
+
+
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)
     common = set()
@@ -633,15 +669,16 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     print(f'  Recall: {recall}')
     print(f'  F-score: {fscore}')
     # TODO: leave in for now, but figure out how to render the diff better..
-    print(f'Sets only in lexicon1:')
-    for form in only_lex1:
-        print_form(form, 0)
-    print(f'Sets only in lexicon2:')
-    for form in only_lex2:
-        print_form(form, 0)
-    print('Sets in common:')
-    for form in common:
-        print_form(form, 0)
+    # print(f'Sets only in lexicon1:')
+    # for form in only_lex1:
+    #     print_form(form, 0)
+    # print(f'Sets only in lexicon2:')
+    # for form in only_lex2:
+    #     print_form(form, 0)
+    # print('Sets in common:')
+    # for form in common:
+    #     print_form(form, 0)
+    set_diff = set_compare(list(only_lex1), list(only_lex2))
 
     return {
         'number_of_sets_in_lexicon_1': nl1,
@@ -649,18 +686,21 @@ def compare_proto_lexicons(lexicon1, lexicon2):
         'number_of_sets_in_common': ncommon,
         'number_of_sets_only_in_lexicon_1': len(only_lex1),
         'number_of_sets_only_in_lexicon_2': len(only_lex2),
+        'venn': f'{len(only_lex1)},{len(only_lex2)},{ncommon}',
         'precision': ('{:04.3f}'.format(precision), 'float'),
         'recall': ('{:04.3f}'.format(recall), 'float'),
         'fscore': ('{:04.3f}'.format(fscore), 'float'),
-        # 'sets_in_common': list(common),
-        # 'sets_only_in_lexicon1': list(only_lex1),
-        # 'sets_only_in_lexicon2': list(only_lex2)
+        'sets_in_common': list(common),
+        'sets_only_in_lexicon1': list(only_lex1),
+        'sets_only_in_lexicon2': list(only_lex2),
+        'sets_diff': list(set_diff)
     }
 
-def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, compare_type):
-    #replace_underlying_lexicons(lexicon1, attested_lexicons)
-    #replace_underlying_lexicons(lexicon2, attested_lexicons)
-    return compare_proto_lexicons(lexicon1, lexicon2)
+
+# def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, compare_type):
+#     # replace_underlying_lexicons(lexicon1, attested_lexicons)
+#     # replace_underlying_lexicons(lexicon2, attested_lexicons)
+#     return compare_proto_lexicons(lexicon1, lexicon2)
 
 # create a fake cognate set with the forms that failed to reconstruct
 def extract_failures(lexicon):
