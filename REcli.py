@@ -78,14 +78,14 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     B2 = read.read_proto_lexicon(
         os.path.join(args.experiment_path2,
                      f'{args.project}.{args.run2}.sets.json'))
-    RE.compare_isomorphic_proto_lexicons(B1, B2, command_args.command)
+    # RE.compare_isomorphic_proto_lexicons(B1, B2, command_args.command)
 
     # analysis_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.analysis.txt')
     evaluation_stats = RE.compare_proto_lexicons(B1, B2)
-    evaluation_stats['sets_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
-    evaluation_stats['sets_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
+    evaluation_stats['set_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
+    evaluation_stats['set_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
     evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')
-    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file)
+    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file, settings.upstream[settings.upstream_target])
 
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
@@ -122,6 +122,7 @@ elif command_args.command == 'upstream':
     print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
     B.statistics.add_stat('isolates', len(B.isolates))
     B.statistics.add_stat('sets', len(B.forms))
+    B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures.supporting_forms)},{B.statistics.summary_stats["reflexes"]}')
     stats_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.upstream.statistics.xml')
     serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
     print('serializing proto_lexicon')
