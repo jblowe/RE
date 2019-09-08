@@ -656,15 +656,15 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     recall = ncommon / nl2
     fscore = 2 * (precision * recall) / (precision + recall)
     # TODO: is it useful to simply print these stats. Ever?
-    # print(f'Number of sets in lexicon 1: {nl1}')
-    # print(f'Number of sets in lexicon 2: {nl2}')
-    # print(f'Number of sets in common: {ncommon}')
-    # print(f'Number of sets only in lexicon 1: {len(only_lex1)}')
-    # print(f'Number of sets only in lexicon 2: {len(only_lex2)}')
-    # print('Assuming set 1 is gold:')
-    # print(f'  Precision: {precision}')
-    # print(f'  Recall: {recall}')
-    # print(f'  F-score: {fscore}')
+    print(f'Number of sets in lexicon 1: {nl1}')
+    print(f'Number of sets in lexicon 2: {nl2}')
+    print(f'Number of sets in common: {ncommon}')
+    print(f'Number of sets only in lexicon 1: {len(only_lex1)}')
+    print(f'Number of sets only in lexicon 2: {len(only_lex2)}')
+    print('Assuming set 1 is gold:')
+    print(f'  Precision: {precision}')
+    print(f'  Recall: {recall}')
+    print(f'  F-score: {fscore}')
     # TODO: leave in for now, but figure out how to render the diff better..
     # print(f'Sets only in lexicon1:')
     # for form in only_lex1:
