@@ -602,10 +602,6 @@ def compare_support(lex1_forms, forms):
     # FIXME: there's a subtle dependency here on the Form.str method.
     return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
 
-def list_intersection(lst1, lst2):
-    lst3 = [value for value in lst1 if value in lst2]
-    return lst3
-
 def set_compare(lex1, lex2):
     diffs = []
     union = lex1 + lex2

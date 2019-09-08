@@ -236,7 +236,7 @@ def serialize_stats(stats, settings, args, filename):
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
-def serialize_evaluation(stats, filename, languages):
+def serialize_evaluation(stats, filename):
     root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
