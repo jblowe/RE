@@ -85,7 +85,7 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     evaluation_stats['set_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
     evaluation_stats['set_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
     evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')
-    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file, settings.upstream[settings.upstream_target])
+    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file)
 
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
