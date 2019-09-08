@@ -236,7 +236,7 @@ def serialize_stats(stats, settings, args, filename):
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
-def serialize_evaluation(stats, filename):
+def serialize_evaluation(stats, filename, languages):
     root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
@@ -245,8 +245,8 @@ def serialize_evaluation(stats, filename):
         if 'sets_' == k[:5]:
             # if this is one of the 'sets' elements, make it a child of the root (not <totals>)
             element = ET.SubElement(root, k)
-            #element.append(create)
-            continue
+            render_sets(v, element, languages)
+            # continue
         elif type(v) == type(()):
             element = ET.SubElement(entry, k)
             element.set('value', str(v[0]))

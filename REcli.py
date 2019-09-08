@@ -70,7 +70,12 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     both = f'{args.run1}+{args.run2}'
     parameters_file = os.path.join(args.experiment_path1,
                                    f'{args.project}.master.parameters.xml')
-    settings = read.read_settings_file(parameters_file)
+
+    # there must be a 'standard' reconstruction element for compare to work... need languages
+    settings = read.read_settings_file(parameters_file,
+                                       mel=None,
+                                       fuzzy=None,
+                                       recon='standard')
 
     B1 = read.read_proto_lexicon(
         os.path.join(args.experiment_path1,
@@ -85,7 +90,7 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     evaluation_stats['set_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
     evaluation_stats['set_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
     evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')
-    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file)
+    serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file, settings.upstream[settings.upstream_target])
 
     # make comparisons if there are things to compare
     for what_to_compare in 'upstream evaluation mel'.split(' '):
