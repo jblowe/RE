@@ -20,6 +20,14 @@
     }
     .sets th { position: sticky; top: 0; background: white}
     </style>
+    <script>
+    $(document).ready(function(){
+      $("h5").click(function(){
+        event.preventDefault();
+        $(this).closest('h5').next('div').toggle();
+      });
+    });
+    </script
     <script type="text/javascript" src="/static/moment.min.js"></script>
 	<script type="text/javascript" src="/static/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bootstrap.min.js"></script>
