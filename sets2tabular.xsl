@@ -120,7 +120,7 @@
         </ul>
     </xsl:template>
 
-    <xsl:template match="set">
+    <xsl:template match="set" name="set">
         <li class="sf">
             <div class="wrapper etymonrow">
                 <div class="id"><xsl:value-of select="id"/></div>

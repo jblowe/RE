@@ -30,7 +30,7 @@
         </html>
     </xsl:template>
 
-    <xsl:template match="sets">
+    <xsl:template match="sets" name="sets">
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:import href="sets2html.xsl" />
 
     <xsl:output
             method="html"
@@ -20,12 +21,37 @@
                 <xsl:apply-templates select=".//settings"/>
                 <xsl:apply-templates select=".//totals" mode="summary"/>
                 <xsl:apply-templates select=".//stats"/>
-                <xsl:apply-templates select="sets_in_common"/>
-                <xsl:apply-templates select="sets_only_in_lexicon1"/>
-                <xsl:apply-templates select="sets_only_in_lexicon2"/>
-                <xsl:apply-templates select="sets_diff"/>
+                <xsl:apply-templates select="stats/sets_in_common"/>
+                <xsl:apply-templates select="stats/sets_only_in_lexicon1"/>
+                <xsl:apply-templates select="stats/sets_only_in_lexicon2"/>
+                <xsl:apply-templates select="stats/sets_diff"/>
             </body>
         </html>
+    </xsl:template>
+
+    <xsl:template match="sets_in_common">
+        <h5>Sets in common</h5>
+        <div style="display: none;">
+            <xsl:call-template name="sets"/>
+        </div>
+    </xsl:template>
+    <xsl:template match="sets_only_in_lexicon1">
+        <h5>Sets only in "Sets 1"</h5>
+        <div style="display: none;">
+            <xsl:call-template name="sets"/>
+        </div>
+    </xsl:template>
+    <xsl:template match="sets_only_in_lexicon2">
+        <h5>Sets only in "Sets 2"</h5>
+        <div style="display: none;">
+            <xsl:call-template name="sets"/>
+        </div>
+    </xsl:template>
+    <xsl:template match="sets_diff">
+        <h5>Sets Diff</h5>
+        <div style="display: none;">
+            <xsl:apply-templates select="set_diff"/>
+        </div>
     </xsl:template>
 
     <xsl:template match="venn">
