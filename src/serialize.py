@@ -69,6 +69,68 @@ def serialize_lexicon(lexicon, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
+def render_sets(forms, sets, languages):
+
+    def sort_forms(form, sf, level):
+        # we need to output the supporting forms in the order specified by "languages"
+        unfrozenset = [x for x in form.supporting_forms]
+        lglist = [x.language for x in form.supporting_forms]
+        for language in languages:
+            try:
+                indices = [i for i, x in enumerate(lglist) if x == language]
+                for i in indices:
+                    supporting_form = unfrozenset[i]
+                    render_xml(sf, supporting_form, level + 1)
+            except:
+                pass
+        return
+
+    def add_protoform_element(element, protoform):
+        ET.SubElement(element, 'plg').text = protoform.language
+        ET.SubElement(element, 'pfm').text = protoform.glyphs
+        ET.SubElement(element, 'rcn').text = RE.correspondences_as_ids(protoform.correspondences).strip()
+
+    def render_xml(element, form, level):
+
+        # handle 'strict' case: possibly output a set with multiple reconstructions
+        if isinstance(form, tuple):
+            if level != 0:
+                element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
+            ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
+            if len(form[1]) > 1:
+                for protoform in form[1]:
+                    reconstruction_block = ET.SubElement(element, 'multi')
+                    add_protoform_element(reconstruction_block, protoform)
+            else:
+                add_protoform_element(element, form[1][0])
+            if form[1][0].mel:
+                ET.SubElement(element, 'mel').text = ', '.join(form[1][0].mel.glosses)
+                ET.SubElement(element, 'melid').text = form[1][0].mel.id
+            else:
+                pass
+            sf = ET.SubElement(element, 'sf')
+            sort_forms(form[1][0], sf, level)
+
+        elif isinstance(form, RE.ModernForm):
+            rfx = ET.SubElement(element, 'rfx')
+            ET.SubElement(rfx, 'lg').text = form.language
+            ET.SubElement(rfx, 'lx').text = form.glyphs
+            ET.SubElement(rfx, 'gl').text = form.gloss
+            ET.SubElement(rfx, 'id').text = form.id
+        elif isinstance(form, RE.ProtoForm):
+            if level != 0:
+                element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
+            ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
+            add_protoform_element(element, form)
+            sf = ET.SubElement(element, 'sf')
+            sort_forms(form, sf, level)
+
+    for number, form in enumerate(forms):
+        entry = ET.SubElement(sets, 'set')
+        render_xml(entry, form, 0)
+
+    return sets
+
 def create_xml_sets(reconstruction, languages, only_with_mel):
     '''
     Here is the "classic schema" of cognate sets...
@@ -95,60 +157,6 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
     for language in languages:
         ET.SubElement(lgs, 'lg').text = language
 
-    def sort_forms(form, sf, level):
-        # we need to output the supporting forms in the order specified by "languages"
-        unfrozenset = [x for x in form.supporting_forms]
-        lglist = [x.language for x in form.supporting_forms]
-        for language in languages:
-            try:
-                indices = [i for i, x in enumerate(lglist) if x == language]
-                for i in indices:
-                    supporting_form = unfrozenset[i]
-                    render_xml(sf, supporting_form, level + 1)
-            except:
-                pass
-        return
-
-    def add_protoform_element(element, protoform):
-        ET.SubElement(element, 'plg').text = protoform.language
-        ET.SubElement(element, 'pfm').text = protoform.glyphs
-        ET.SubElement(element, 'rcn').text = RE.correspondences_as_ids(protoform.correspondences).strip()
-
-    def render_xml(element, form, level):
-
-        # handle 'strict' case: possibly output a set with multiple reconstructions
-        if isinstance(form, list):
-            if level != 0:
-                element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
-            ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
-            if len(form) > 1:
-                for protoform in form:
-                    reconstruction_block = ET.SubElement(element, 'multi')
-                    add_protoform_element(reconstruction_block, protoform)
-            else:
-                add_protoform_element(element, form[0])
-            if form[0].mel:
-                ET.SubElement(element, 'mel').text = ', '.join(form[0].mel.glosses)
-                ET.SubElement(element, 'melid').text = form[0].mel.id
-            else:
-                pass
-            sf = ET.SubElement(element, 'sf')
-            sort_forms(form[0], sf, level)
-
-        if isinstance(form, RE.ModernForm):
-            rfx = ET.SubElement(element, 'rfx')
-            ET.SubElement(rfx, 'lg').text = form.language
-            ET.SubElement(rfx, 'lx').text = form.glyphs
-            ET.SubElement(rfx, 'gl').text = form.gloss
-            ET.SubElement(rfx, 'id').text = form.id
-        elif isinstance(form, RE.ProtoForm):
-            if level != 0:
-                element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
-            ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
-            add_protoform_element(element, form)
-            sf = ET.SubElement(element, 'sf')
-            sort_forms(form, sf, level)
-
     sets = ET.SubElement(root, 'sets')
 
     # if 'strict' is on, squish the sets before output
@@ -157,26 +165,18 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
         for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
             uniques[form.supporting_forms].append(form)
 
-        for number,set in enumerate(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences))):
-            entry = ET.SubElement(sets, 'set')
-            render_xml(entry, set[1], 0)
-
+        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)), sets, languages)
 
     # otherwise, make sets the 'usual' way
     else:
-        for number,form in enumerate(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
-            entry = ET.SubElement(sets, 'set')
-            render_xml(entry, form, 0)
+        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages)
 
     isolates = ET.SubElement(root, 'isolates')
-    for number,form in enumerate(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences))):
-        entry = ET.SubElement(isolates, 'set')
-        render_xml(entry, form, 0)
+    render_sets(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), isolates, languages)
 
     failures = ET.SubElement(root, 'failures')
-    entry = ET.SubElement(failures, 'set')
-    # there is only one (big) set for failures
-    render_xml(entry, reconstruction.failures, 0)
+    # there is only one (big) set for failures, pass it in as a list
+    render_sets([reconstruction.failures], failures, languages)
 
     return root
 
