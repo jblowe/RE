@@ -21,7 +21,7 @@
         </p>
         <!-- TODO: figure out what class, if any makes table both sortable and header-sticky -->
         <div class="should-be-responsive">
-        <table class="table sets">
+        <table class="table-sm table-bordered sets sortable">
             <thead>
                 <tr>
                     <th>num</th>

@@ -38,7 +38,7 @@
 			<xsl:value-of select="parameters/canon/@value"/>
 		</xsl:if>
 		<h5>Table of correspondences</h5>
-		<table class="table table-striped sortable sets">
+		<table class="table-sm sets sortable">
 			<thead>
 				<tr>
 					<th>num</th>
