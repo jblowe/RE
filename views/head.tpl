@@ -5,10 +5,13 @@
 	<meta name="description" content="reconstruction engine">
 	<link rel="icon" href="/static/favicon.ico">
 	<title>The Reconstruction Engine</title>
+
+    <script src="/static/jquery.min.js"/>
+    <script src="/static/bootstrap-table.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap-sortable.css">
-    <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
+    <link href="/static/bootstrap-table.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
     <style>
     .retable >tbody>tr>td{
       height:20px;
