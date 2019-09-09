@@ -112,7 +112,7 @@
 
     <xsl:template match="rfx">
         <li>
-            <div class="wrapper">
+            <div class="wrapper {membership}">
             <div class="lg"><xsl:apply-templates select="lg"/></div>
             <div class="lx"><xsl:apply-templates select="lx"/></div>
             <div class="gl"><xsl:apply-templates select="gl"/></div>
