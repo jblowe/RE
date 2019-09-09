@@ -22,9 +22,9 @@
     </style>
     <script>
     $(document).ready(function(){
-      $("h5").click(function(){
+      $("h6").click(function(){
         event.preventDefault();
-        $(this).closest('h5').next('div').toggle();
+        $(this).closest('h6').next('div').toggle();
       });
     });
     </script
