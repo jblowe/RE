@@ -6,6 +6,7 @@ import sys
 import serialize
 import collections
 import mel
+from copy import deepcopy
 
 class Debug:
     debug = False
@@ -602,54 +603,75 @@ def compare_support(lex1_forms, forms):
     # FIXME: there's a subtle dependency here on the Form.str method.
     return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
 
+def all_the_same(lex, value):
+    l_sf = set()
+    diff = collections.defaultdict(list)
+    [l_sf.add(str(k)) for k in sorted(lex.supporting_forms, key=lambda x: x.id)]
+    [diff[value].append(form) for form in l_sf]
+    return diff
+
 def set_compare(lex1, lex2):
     diffs = []
     union = lex1 + lex2
-    u = {}
+    list_of_sf = {}
     for i in union:
         for j in i.supporting_forms:
-            u[str(j)] = j
-    base_sets = collate_proto_lexicon(union)
-    for i, l1 in enumerate(union):
-        l1_sf = set()
-        [l1_sf.add(str(k)) for k in l1.supporting_forms]
+            list_of_sf[str(j)] = j
+    # base_sets = collate_proto_lexicon(union)
+    # handle case where one or the other is empty
+    if lex1 == []:
         for l2 in lex2:
-            diff = collections.defaultdict(list)
-            l2_sf = set()
-            [l2_sf.add(str(k)) for k in l2.supporting_forms]
-            form_intersection = l1_sf & l2_sf
-            if form_intersection == set(): continue
-            form_union = l1_sf | l2_sf
-            form_l1 = l1_sf - l2_sf
-            form_l2 = l2_sf - l1_sf
-            for form in form_union:
-                if form in form_intersection:
-                    diff['both'].append(form)
-                elif form in form_l1:
-                    diff['l1'].append(form)
-                elif form in form_l2:
-                    diff['l2'].append(form)
-                else:
-                    print('we should never get here')
-        if diff != {}:
-            diffs.append(make_set(l1,l2,diff, u))
-            #diffs.append((l1, l2, diff))
+            diffs.append(make_set(l2, l2, all_the_same(l2, 'l2'), list_of_sf))
+    elif lex2 == []:
+        for l1 in lex1:
+            diffs.append(make_set(l1, [], all_the_same(l1, 'l1'), list_of_sf))
+    else:
+        for i, l1 in enumerate(union):
+            l1_sf = set()
+            [l1_sf.add(str(k)) for k in sorted(l1.supporting_forms, key=lambda x: x.id)]
+            for l2 in lex2:
+                diff = collections.defaultdict(list)
+                l2_sf = set()
+                [l2_sf.add(str(k)) for k in sorted(l2.supporting_forms, key=lambda x: x.id)]
+
+                # if the supporting forms are the same
+                if l1_sf == l2_sf: continue
+
+                form_intersection = l1_sf & l2_sf
+                # if the sets have no forms in common
+                if form_intersection == set(): continue
+
+                form_union = l1_sf | l2_sf
+                form_l1 = l1_sf - l2_sf
+                form_l2 = l2_sf - l1_sf
+                for form in form_union:
+                    if form in form_intersection:
+                        diff['both'].append(form)
+                    elif form in form_l1:
+                        diff['l1'].append(form)
+                    elif form in form_l2:
+                        diff['l2'].append(form)
+                    else:
+                        print('we should never get here')
+                if diff != {}:
+                    diffs.append(make_set(l1, l2, diff, list_of_sf))
+                    #diffs.append((l1, l2, diff))
     return diffs
 
 def make_set(l1,l2,diff, union):
-    MF = set()
+    MF = []
     for s in sorted(diff):
         for x in diff[s]:
-            MF.add(union[x])
-    # ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel
+            m = deepcopy(union[x])
+            m.membership = s
+            MF.append(m)
+    # ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel)
     return ProtoForm(l1.language,
               l1.correspondences,
-              frozenset(MF),
-              frozenset(MF),
+              MF,
+              MF,
               l1.mel
               )
-
-
 
 def compare_proto_lexicons(lexicon1, lexicon2):
     table = collections.defaultdict(list)

@@ -69,7 +69,7 @@ def serialize_lexicon(lexicon, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
-def render_sets(forms, sets, languages):
+def render_sets(forms, sets, languages, set_type):
 
     def sort_forms(form, sf, level):
         # we need to output the supporting forms in the order specified by "languages"
@@ -117,6 +117,10 @@ def render_sets(forms, sets, languages):
             ET.SubElement(rfx, 'lx').text = form.glyphs
             ET.SubElement(rfx, 'gl').text = form.gloss
             ET.SubElement(rfx, 'id').text = form.id
+            try:
+                ET.SubElement(rfx, 'membership').text = form.membership
+            except:
+                pass
         elif isinstance(form, RE.ProtoForm):
             if level != 0:
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
@@ -165,18 +169,18 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
         for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
             uniques[form.supporting_forms].append(form)
 
-        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)), sets, languages)
+        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)), sets, languages, 'strict sets')
 
     # otherwise, make sets the 'usual' way
     else:
-        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages)
+        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
-    render_sets(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), isolates, languages)
+    render_sets(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), isolates, languages, 'isolates')
 
     failures = ET.SubElement(root, 'failures')
     # there is only one (big) set for failures, pass it in as a list
-    render_sets([reconstruction.failures], failures, languages)
+    render_sets([reconstruction.failures], failures, languages, 'failures')
 
     return root
 
@@ -245,7 +249,7 @@ def serialize_evaluation(stats, filename, languages):
         if 'sets_' == k[:5]:
             # if this is one of the 'sets' elements, make it a child of the root (not <totals>)
             element = ET.SubElement(root, k)
-            render_sets(v, element, languages)
+            render_sets(v, element, languages, k)
             # continue
         elif type(v) == type(()):
             element = ET.SubElement(entry, k)
