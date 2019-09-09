@@ -19,6 +19,10 @@
       border-top: 0px;
     }
     .sets th { position: sticky; top: 0; background: white}
+
+    .both { background-color: lightgreen; }
+    .l1 { background-color: lightcoral; }
+    .l2 { background-color: lightpink; }
     </style>
     <script>
     $(document).ready(function(){
