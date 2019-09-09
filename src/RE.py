@@ -605,10 +605,16 @@ def compare_support(lex1_forms, forms):
 def set_compare(lex1, lex2):
     diffs = []
     union = lex1 + lex2
-    for l1 in union:
+    u = {}
+    for i in union:
+        for j in i.supporting_forms:
+            u[str(j)] = j
+    base_sets = collate_proto_lexicon(union)
+    for i, l1 in enumerate(union):
         l1_sf = set()
         [l1_sf.add(str(k)) for k in l1.supporting_forms]
         for l2 in lex2:
+            diff = collections.defaultdict(list)
             l2_sf = set()
             [l2_sf.add(str(k)) for k in l2.supporting_forms]
             form_intersection = l1_sf & l2_sf
@@ -616,7 +622,6 @@ def set_compare(lex1, lex2):
             form_union = l1_sf | l2_sf
             form_l1 = l1_sf - l2_sf
             form_l2 = l2_sf - l1_sf
-            diff = collections.defaultdict(list)
             for form in form_union:
                 if form in form_intersection:
                     diff['both'].append(form)
@@ -626,8 +631,24 @@ def set_compare(lex1, lex2):
                     diff['l2'].append(form)
                 else:
                     print('we should never get here')
-        diffs.append(diff)
+        if diff != {}:
+            diffs.append(make_set(l1,l2,diff, u))
+            #diffs.append((l1, l2, diff))
     return diffs
+
+def make_set(l1,l2,diff, union):
+    MF = set()
+    for s in sorted(diff):
+        for x in diff[s]:
+            MF.add(union[x])
+    # ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel
+    return ProtoForm(l1.language,
+              l1.correspondences,
+              frozenset(MF),
+              frozenset(MF),
+              l1.mel
+              )
+
 
 
 def compare_proto_lexicons(lexicon1, lexicon2):
