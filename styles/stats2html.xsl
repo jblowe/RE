@@ -30,27 +30,27 @@
     </xsl:template>
 
     <xsl:template match="sets_in_common">
-        <h5>Sets in common</h5>
+        <h6><span class="fas fa-angle-double-down"/> Sets in common</h6>
         <div style="display: none;">
             <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
     <xsl:template match="sets_only_in_lexicon1">
-        <h5>Sets only in "Sets 1"</h5>
+        <h6><span class="fas fa-angle-double-down"/> Sets only in "Sets 1"</h6>
         <div style="display: none;">
             <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
     <xsl:template match="sets_only_in_lexicon2">
-        <h5>Sets only in "Sets 2"</h5>
+        <h6><span class="fas fa-angle-double-down"/> Sets only in "Sets 2"</h6>
         <div style="display: none;">
             <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
     <xsl:template match="sets_diff">
-        <h5>Sets Diff</h5>
+        <h6><span class="fas fa-angle-double-down"/> Sets Diff</h6>
         <div style="display: none;">
-            <xsl:apply-templates select="set_diff"/>
+            <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
 
