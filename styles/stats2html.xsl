@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:import href="sets2html.xsl" />
+  <xsl:import href="sets2venn.xsl" />
 
     <xsl:output
             method="html"
@@ -55,7 +56,7 @@
                 <button class="w-25 p-1 rounded l2">in sets 2</button>
                 <button class="w-25 p-1 rounded both">in both</button>
             </div>
-            <xsl:call-template name="sets"/>
+            <xsl:call-template name="threeway"/>
         </div>
     </xsl:template>
 

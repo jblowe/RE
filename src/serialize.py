@@ -89,6 +89,10 @@ def render_sets(forms, sets, languages, set_type):
         ET.SubElement(element, 'plg').text = protoform.language
         ET.SubElement(element, 'pfm').text = protoform.glyphs
         ET.SubElement(element, 'rcn').text = RE.correspondences_as_ids(protoform.correspondences).strip()
+        try:
+            ET.SubElement(element, 'venn').text = form.venn
+        except:
+            pass
 
     def render_xml(element, form, level):
 
@@ -249,8 +253,22 @@ def serialize_evaluation(stats, filename, languages):
         if 'sets_' == k[:5]:
             # if this is one of the 'sets' elements, make it a child of the root (not <totals>)
             element = ET.SubElement(root, k)
-            render_sets(v, element, languages, k)
-            # continue
+            if k == 'sets_diff':
+                for members in v:
+                    for setx in members:
+                        z = ET.SubElement(element, 'sets', attrib={'which': 'one'})
+                        for m in 'l1 both l2'.split(' '):
+                            diff = ET.SubElement(z, m)
+                            if m in setx:
+                                for form in setx[m]:
+                                    rfx = ET.SubElement(diff, 'rfx')
+                                    ET.SubElement(rfx, 'lg').text = form.language
+                                    ET.SubElement(rfx, 'lx').text = form.glyphs
+                                    ET.SubElement(rfx, 'gl').text = form.gloss
+                                    ET.SubElement(rfx, 'id').text = form.id
+
+            else:
+                render_sets(v, element, languages, k)
         elif type(v) == type(()):
             element = ET.SubElement(entry, k)
             element.set('value', str(v[0]))
