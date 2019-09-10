@@ -611,20 +611,20 @@ def all_the_same(lex, value):
     return diff
 
 def set_compare(lex1, lex2):
-    diffs = []
+    diffs = collections.defaultdict(list)
     union = lex1 + lex2
     list_of_sf = {}
     for i in union:
         for j in i.supporting_forms:
             list_of_sf[str(j)] = j
-    # base_sets = collate_proto_lexicon(union)
+
     # handle case where one or the other is empty
     if lex1 == []:
         for l2 in lex2:
-            diffs.append(make_set(l2, l2, all_the_same(l2, 'l2'), list_of_sf))
+            diffs[(l2,l2)].append(divvy_set(l2, l2, all_the_same(l2, 'l2'), list_of_sf))
     elif lex2 == []:
         for l1 in lex1:
-            diffs.append(make_set(l1, [], all_the_same(l1, 'l1'), list_of_sf))
+            diffs[(l1,l1)].append(divvy_set(l1, [], all_the_same(l1, 'l1'), list_of_sf))
     else:
         for i, l1 in enumerate(union):
             l1_sf = set()
@@ -653,10 +653,13 @@ def set_compare(lex1, lex2):
                         diff['l2'].append(form)
                     else:
                         print('we should never get here')
-                if diff != {}:
-                    diffs.append(make_set(l1, l2, diff, list_of_sf))
-                    #diffs.append((l1, l2, diff))
-    return diffs
+            if diff != {}:
+                diffs[(l1,l2)].append(divvy_set(l1, l2, diff, list_of_sf))
+                #diffs.append((l1, l2, diff))
+    return diffs.values()
+
+def divvy_set(l1, l2, diff, union):
+    return dict([(s, [union[x] for x in diff[s]]) for s in diff])
 
 def make_set(l1,l2,diff, union):
     MF = []
