@@ -820,6 +820,7 @@
   <mel id="m123">
     <gl>beat</gl>
     <gl>beat foods</gl>
+    <gl>become</gl>
     <gl>made</gl>
   </mel>
   <mel id="m124">
@@ -845,6 +846,7 @@
     <gl>maigrir</gl>
   </mel>
   <mel id="m127">
+    <gl>become</gl>
     <gl>become soft</gl>
     <gl>cook</gl>
     <gl>cuit</gl>
@@ -855,6 +857,7 @@
     <gl>soldier</gl>
   </mel>
   <mel id="m128">
+    <gl>become</gl>
     <gl>fatigue</gl>
     <gl>repose</gl>
     <gl>rest</gl>
@@ -863,6 +866,7 @@
     <gl>tired</gl>
   </mel>
   <mel id="m129">
+    <gl>become</gl>
     <gl>pourrir</gl>
     <gl>rot</gl>
     <gl>rotten</gl>
@@ -922,9 +926,7 @@
   <mel id="m140">
     <gl>beurre</gl>
     <gl>butter</gl>
-    <gl>graisse</gl>
     <gl>grease</gl>
-    <gl>fat</gl>
   </mel>
   <mel id="m141">
     <gl>bind</gl>
@@ -1530,6 +1532,7 @@
   <mel id="m237">
     <gl>chair</gl>
     <gl>entrailles</gl>
+    <gl>in</gl>
     <gl>inside</gl>
     <gl>inside of</gl>
     <gl>intérieur</gl>
@@ -1822,7 +1825,6 @@
   <mel id="m286">
     <gl>compress</gl>
     <gl>stuff down</gl>
-    <gl>cram into</gl>
     <gl>touch</gl>
   </mel>
   <mel id="m287">
@@ -2065,7 +2067,7 @@
   <mel id="m329">
     <gl>dans</gl>
     <gl>en</gl>
-    <gl>in</gl>
+    <gl>to</gl>
   </mel>
   <mel id="m330">
     <gl>daylight</gl>
@@ -2708,6 +2710,7 @@
     <gl>field</gl>
   </mel>
   <mel id="m449">
+    <gl>fat</gl>
     <gl>father</gl>
   </mel>
   <mel id="m450">
@@ -2996,7 +2999,6 @@
   <mel id="m503">
     <gl>go astray</gl>
     <gl>lose s.th.</gl>
-    <gl>perdre</gl>
   </mel>
   <mel id="m504">
     <gl>go on pilgrimage</gl>
@@ -3019,11 +3021,10 @@
   <mel id="m508">
     <gl>graisse</gl>
     <gl>grease</gl>
-    <gl>fat</gl>
   </mel>
   <mel id="m509">
     <gl>grand mother</gl>
-    <gl>grand-mere</gl>
+    <gl>grand- mere</gl>
     <gl>grandmama</gl>
     <gl>grandmother</gl>
   </mel>
@@ -3272,8 +3273,6 @@
     <gl>labourer</gl>
     <gl>plough</gl>
     <gl>plow</gl>
-    <gl>break down</gl>
-    <gl>break clods</gl>
   </mel>
   <mel id="m555">
     <gl>lac</gl>
