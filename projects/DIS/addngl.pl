@@ -1,6 +1,6 @@
 use strict;
 
-my $no_ngl;
+our $has_ngl;
 
 sub extract_keyterm {
     my ($gl) = @_;
@@ -15,7 +15,7 @@ sub ngl {
     my ($gl) = @_;
     my @terms;
     $gl =~ s/ *\((.*?)\) *//; # get rid of text in parenthesis
-    my @gls = split /, /, $gl;
+    my @gls = split /, +/, $gl;
     for my $glx (@gls) {
         if ($glx =~ m/\*/) {
             while ($glx =~ s/^.*?\*(.+?)\b//) {
@@ -33,16 +33,15 @@ s/\-<.hw>/<\/hw>/;
 s#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;
 s#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;
 
+if (m#<entry#) {
+    $has_ngl = 0;
+}
+
 if (m#<ngl>(.*?)</ngl>#) {
-    $no_ngl = 0;
+    $has_ngl = 1;
 }
 
-
-if (m#<entry>#) {
-    $no_ngl = 1;
-}
-
-if (m#<gl>(.*?)</gl># && $no_ngl) {
+if (m#<gl>(.*?)</gl># && $has_ngl eq 0) {
     my $gl = $1;
     my @terms = ngl($gl);
     if (join('', @terms) ne $gl) {
