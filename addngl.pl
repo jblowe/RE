@@ -1,5 +1,7 @@
 use strict;
 
+my $no_ngl;
+
 sub extract_keyterm {
     my ($gl) = @_;
     $gl =~ s/^to //i; # get rid of initial 'to '
@@ -31,7 +33,16 @@ s/\-<.hw>/<\/hw>/;
 s#<hw>( *[=\-])#<prefix>\1</prefix><hw>#;
 s#<hw>(.*?)( *[=\-].*?)</hw>#<hw>\1</hw><suffix>\2</suffix>#;
 
-if (m#<gl>(.*?)</gl>#) {
+if (m#<ngl>(.*?)</ngl>#) {
+    $no_ngl = 0;
+}
+
+
+if (m#<entry>#) {
+    $no_ngl = 1;
+}
+
+if (m#<gl>(.*?)</gl># && $no_ngl) {
     my $gl = $1;
     my @terms = ngl($gl);
     if (join('', @terms) ne $gl) {
