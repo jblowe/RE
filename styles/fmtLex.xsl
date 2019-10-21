@@ -37,6 +37,8 @@
 			</xsl:otherwise>
 			</xsl:choose>
 
+			<xsl:apply-templates select="althw"/>
+
 			<xsl:choose>
 			<xsl:when test="dfe">
 				<gl><xsl:value-of select="dfe"/></gl>
@@ -64,9 +66,19 @@
 			</xsl:otherwise>
 			</xsl:choose>
 
+			<xsl:apply-templates select="ngl"/>
+
 			</entry>
 		</xsl:for-each>
 	</lexicon>
+</xsl:template>
+
+<xsl:template match="althw">
+	<althw><xsl:value-of select="."/></althw>
+</xsl:template>
+
+<xsl:template match="ngl">
+	<ngl><xsl:value-of select="."/></ngl>
 </xsl:template>
 
 </xsl:stylesheet>
