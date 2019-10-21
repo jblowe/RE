@@ -1,7 +1,7 @@
 <div id="content" class="col-sm-12">
 <h4>{{data['project']}} Experiments</h4>
+  <form method="post" action="/experiments/{{data['project']}}/NEW">
     <input type="hidden" name="project" value="{{data['project']}}">
-    <form method="post" action="/experiments/{{data['project']}}/NEW">
         <div class="row">
           <div class="col-md-12">
           <table class="table table-striped sortable">
@@ -33,5 +33,5 @@
           or
           <a class="btn-sm btn-primary" href="/compare">Compare selected experiments</a>
           </div>
-    </form>
+  </form>
 </div>
