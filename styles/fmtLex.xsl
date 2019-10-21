@@ -39,6 +39,8 @@
 
 			<xsl:apply-templates select="althw"/>
 
+			<xsl:apply-templates select="ngl"/>
+
 			<xsl:choose>
 			<xsl:when test="dfe">
 				<gl><xsl:value-of select="dfe"/></gl>
@@ -65,8 +67,6 @@
 				</gl>
 			</xsl:otherwise>
 			</xsl:choose>
-
-			<xsl:apply-templates select="ngl"/>
 
 			</entry>
 		</xsl:for-each>
