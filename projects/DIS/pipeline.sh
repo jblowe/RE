@@ -22,7 +22,6 @@ python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tag.data.xml > DIS.tag.data.x
 python $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk.data.xml > DIS.tuk.data.xml 2> tuk.xslt.log
 
 # other minor fixups
-perl -i -p addngl.pl DIS.*.data.xml
 perl -i -p addngl.pl DIS.gha.data.xml
 perl -i -p addngl.pl DIS.mar.data.xml
 perl -i -p addngl.pl DIS.pra.data.xml
