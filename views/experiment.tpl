@@ -4,7 +4,8 @@
         % if 'title' in data['experiment_info']:
             <p>Source data description: {{data['experiment_info']['title']}}</p>
         % end
-        <h6>click <button class="btn-sm btn-primary" id="toggle_parameters" >here</button> to setup and perform upstream runs</h6>
+        <h6>click <a href="#" id="toggle_parameters">here</a> to do computations (compare, upstream)</h6>
+        <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
         <div id="upstream" style="display:none;">
             % include('parameters.tpl')
         </div>
@@ -13,6 +14,7 @@
         % else:
             <hr/>
         % end
+        </form>
     </div>
     % if 'content' in data:
         <div id="content" class="col-sm-8">

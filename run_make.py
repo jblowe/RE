@@ -43,5 +43,28 @@ def make(project, experiment, parameters):
                 messages.append('{:.2f} seconds. Upstream run failed.'.format(elapsed_time))
             return messages, False
 
-def compare(project, experiment1, experiment2, run1, run2):
+
+def compare(project, experiment, runs):
+    PYTHON = 'python'
     messages = []
+
+    elapsed_time = time.time()
+    os.chdir(os.path.join('..', 'src'))
+    p_object = -1
+    try:
+        # time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 $1 --run2 $2
+        cli = [project, experiment, experiment]
+        cli += ['--run1', runs[0]]
+        cli += ['--run2', runs[1]]
+        messages.append(' '.join([PYTHON, 'REcli.py', 'compare', ] + cli))
+        p_object = subprocess.call([PYTHON, 'REcli.py', 'compare'] + cli)
+    except:
+        pass
+    os.chdir(os.path.join('..', 'REwww'))
+    elapsed_time = time.time() - elapsed_time
+    if p_object == 0:
+        messages.append('{:.2f} seconds. "compare" succeeded.'.format(elapsed_time))
+        return messages, True
+    else:
+        messages.append('{:.2f} seconds. "compare" failed.'.format(elapsed_time))
+        return messages, False

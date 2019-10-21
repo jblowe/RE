@@ -13,8 +13,14 @@
     <link rel="stylesheet" type="text/css" href="/static/all.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
     <style>
+    .btn-xs {
+        padding: .25rem .4rem;
+        font-size: .875rem;
+        line-height: .5;
+        border-radius: .2rem;
+    }
+    .subheadr { padding-top: 8px; }
     .retable >tbody>tr>td{
-      height:20px;
       padding:0px;
       border-top: 0px;
     }

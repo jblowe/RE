@@ -111,9 +111,18 @@ def download_project(tree, project, filename):
     return download(full_path, filename)
 
 
+@post('/compare/<project:re:.*>/<experiment:re:.*>')
+def compare(project, experiment):
+    runs = [i.replace(f'{project}.','').replace('.sets.xml','') for i in request.forms if i not in 'compare'.split()]
+    alerts, success = run_make.compare(project, experiment, runs)
+    errors = alerts if not success else None
+    messages = alerts if success else None
+    return show_experiment(project, experiment, messages, errors)
+
+
 @post('/interactive/<project:re:.*>/<experiment:re:.*>')
 def upstream(project, experiment):
-    languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel make'.split()]
+    languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel make'.split(' ')]
     RE.Debug.debug = True
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
