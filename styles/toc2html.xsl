@@ -19,7 +19,8 @@
 <xsl:template match="tableOfCorr">
 	<div>
 		<h5>Macro-classes</h5>
-		<table class="table table-striped sortable">
+		<div class="table-responsive">
+<table class="table-sm table-striped sortable">
 			<thead>
 				<tr>
 					<th>Class</th>
@@ -33,12 +34,14 @@
 			</tr>
 		</xsl:for-each>
 		</table>
+</div>
 		<xsl:if test="parameters/canon">
 			<h5>Syllable canon</h5>
 			<xsl:value-of select="parameters/canon/@value"/>
 		</xsl:if>
 		<h5>Table of correspondences</h5>
-		<table class="table-sm table-bordered sets sortable">
+		<div class="table-responsive">
+<table class="table-sm table-bordered sets sortable">
 			<thead>
 				<tr>
 					<th>num</th>
@@ -72,6 +75,7 @@
 				</tr>
 			</xsl:for-each>
 		</table>
+</div>
 	</div>
 </xsl:template>
 

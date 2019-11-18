@@ -28,7 +28,8 @@
     </xsl:template>
 
     <xsl:template match="totals">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+<table class="table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -42,10 +43,12 @@
                 </tr>
             </xsl:for-each>
         </table>
+</div>
     </xsl:template>
 
     <xsl:template match="semantics">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+<table class="table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -54,6 +57,7 @@
             </thead>
             <xsl:apply-templates select="mel"/>
         </table>
+</div>
     </xsl:template>
 
     <xsl:template match="mel">

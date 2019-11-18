@@ -96,6 +96,7 @@
 							<tr><td><xsl:value-of select="entry/@id"/></td><td><xsl:value-of select="entry/hw"/></td><td><xsl:value-of select="entry/gl"/></td></tr>
 						</xsl:for-each>
 					</table>
+</div>
 				</pre>
 			</xsl:for-each>
 		</hr>

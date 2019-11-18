@@ -23,7 +23,8 @@
 
 <xsl:template match="sets">
 	Nb sets: <xsl:value-of select="count(xalan:distinct(set[@isolat=$isolats]))"/>
-	<table border="1">
+	<div class="table-responsive">
+<table border="1">
 		<xsl:for-each select="set[@isolat=$isolats]">
 			<tr>
 				<td><xsl:value-of select="@analysis"/></td>
@@ -42,6 +43,7 @@
 			</tr>
 		</xsl:for-each>
 	</table>
+</div>
 </xsl:template>
 
 <xsl:template match="gl|hw">

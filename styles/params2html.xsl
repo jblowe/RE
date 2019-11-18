@@ -15,7 +15,8 @@
             </head>
             <body>
                 <h5>Parameters available</h5>
-                <table class="table table-sm retable">
+                <div class="table-responsive">
+                <table class="table-sm table-sm retable">
                     <thead/>
                     <tr><th class="table-primary" colspan="2"><h6>Tables and languages ("reconstructions")</h6></th></tr>
                     <xsl:apply-templates select="reconstruction"/>
@@ -39,7 +40,8 @@
                         <h6 class="table-primary">Lexicons</h6>
                     </th></tr>
                     <tr><td>
-                        <table class="table table-striped sortable">
+                        <div class="table-responsive">
+                        <table class="table-sm table-striped sortable">
                             <thead>
                                 <tr>
                                     <th>Language</th>
@@ -53,8 +55,10 @@
                                 </tr>
                             </xsl:for-each>
                         </table>
+                        </div>
                     </td></tr>
                 </table>
+                </div>
             </body>
         </html>
     </xsl:template>
