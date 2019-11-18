@@ -2,7 +2,8 @@
     <h6 class="card-header">Files in this experiment</h6>
     <div class="card-body">
         <form method="post" action="/compare/{{data['project']}}/{{data['experiment']}}">
-            <table class="table table-sm retable">
+            <div class="table-responsive">
+            <table class="table-sm table-sm retable">
                 <tbody>
                 % for (file_type, files) in data['files']:
                   % if len(files) > 0:
@@ -36,6 +37,7 @@
                 % end
                 </tbody>
             </table>
+            </div>
         </form>
     </div>
 </div>

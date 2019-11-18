@@ -2,7 +2,8 @@
     <h6 class="card-header">Upstream parameters available</h6>
     <div class="card-body">
         <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
-            <table class="table table-striped">
+            <div class="table-responsive">
+            <table class="table-sm table-striped">
             <thead/>
             <tbody>
             % if not 'interactive' in data:
@@ -10,7 +11,7 @@
                 <tr><td><i>Remarks (optional)</i></td><td><input name="remarks" type="text"></td></tr>
             % end
             % if 'reconstructions' in data['experiment_info']:
-                <tr><td><i>Reconstructions (required)</i></td><td>
+                <tr><td><i>Correspondences</i></td><td>
                 <select name="recon">
                 % for c in data['experiment_info']['reconstructions']:
                     <option value="{{c}}"
@@ -60,8 +61,12 @@
             % end
             </tbody>
             </table>
-          <button class="btn-sm btn-primary" name="make">Upstream</button>
-          <input class="btn-sm btn-primary" type="reset" value="Reset">
+            </div>
+
+          % if not 'interactive' in data:
+              <button class="btn-sm btn-primary" name="make">Upstream</button>
+              <input class="btn-sm btn-primary" type="reset" value="Reset">
+          % end
           </p>
         </form>
     </div>

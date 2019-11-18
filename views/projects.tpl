@@ -1,3 +1,4 @@
+<div class="table-responsive">
 <table class="table table-striped">
     <thead>
     <tr>
@@ -19,3 +20,4 @@
   % end
     </tbody>
 </table>
+</div>

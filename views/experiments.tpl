@@ -4,6 +4,7 @@
     <input type="hidden" name="project" value="{{data['project']}}">
         <div class="row">
           <div class="col-md-12">
+          <div class="table-responsive">
           <table class="table table-striped sortable">
           <thead>
           <tr>
@@ -28,6 +29,7 @@
           % end
           </tbody>
           </table>
+          </div>
           <button class="btn-sm btn-primary" type="submit">Create new experiment</button>
           <input type="text" name="new_experiment">
           or

@@ -9,7 +9,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="/"><span class="fas fa-home" /></a>
-          <a class="nav-item nav-link" href="about"><span class="fas fa-info-circle" /></a>
+          <a class="nav-item nav-link" href="/about"><span class="fas fa-info-circle" /></a>
           <a class="nav-item nav-link" href="/list_tree/projects">Corpora</a>
         </div>
       </div>
