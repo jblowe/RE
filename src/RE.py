@@ -603,63 +603,30 @@ def compare_support(lex1_forms, forms):
     # FIXME: there's a subtle dependency here on the Form.str method.
     return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
 
-def all_the_same(lex, value):
-    l_sf = set()
-    diff = collections.defaultdict(list)
-    [l_sf.add(str(k)) for k in sorted(lex.supporting_forms, key=lambda x: x.id)]
-    [diff[value].append(form) for form in l_sf]
-    return diff
-
-def set_compare(lex1, lex2):
-    diffs = collections.defaultdict(list)
+def set_compare(lex1, lex2, languages):
     union = lex1 + lex2
-    list_of_sf = {}
+    list_of_sf = collections.defaultdict(list)
+    overlap = collections.defaultdict(list)
     for i in union:
+        # print(i)
         for j in i.supporting_forms:
-            list_of_sf[str(j)] = j
+            # print(f'   {j}')
+            if not i in list_of_sf[j]:
+                list_of_sf[j].append(i)
 
-    # handle case where one or the other is empty
-    if lex1 == []:
-        for l2 in lex2:
-            diffs[(l2,l2)].append(divvy_set(l2, l2, all_the_same(l2, 'l2'), list_of_sf))
-    elif lex2 == []:
-        for l1 in lex1:
-            diffs[(l1,l1)].append(divvy_set(l1, [], all_the_same(l1, 'l1'), list_of_sf))
-    else:
-        for i, l1 in enumerate(union):
-            l1_sf = set()
-            [l1_sf.add(str(k)) for k in sorted(l1.supporting_forms, key=lambda x: x.id)]
-            for l2 in lex2:
-                diff = collections.defaultdict(list)
-                l2_sf = set()
-                [l2_sf.add(str(k)) for k in sorted(l2.supporting_forms, key=lambda x: x.id)]
+    graph = collections.defaultdict(list)
+    for i, form in enumerate(list_of_sf):
+        sets = list_of_sf[form]
+        for protoform in sets:
+            pformshort = f'{protoform.glyphs} {correspondences_as_ids(protoform.correspondences)}'
+            reflexshort = f'{form.language} {form.glyphs} {form.gloss}'
+            if not pformshort in graph[reflexshort]:
+                graph[reflexshort].append(pformshort)
 
-                # if the supporting forms are the same
-                if l1_sf == l2_sf: continue
+    print(graph)
+    return list_of_sf, graph
 
-                form_intersection = l1_sf & l2_sf
-                # if the sets have no forms in common
-                if form_intersection == set(): continue
 
-                form_union = l1_sf | l2_sf
-                form_l1 = l1_sf - l2_sf
-                form_l2 = l2_sf - l1_sf
-                for form in form_union:
-                    if form in form_intersection:
-                        diff['both'].append(form)
-                    elif form in form_l1:
-                        diff['l1'].append(form)
-                    elif form in form_l2:
-                        diff['l2'].append(form)
-                    else:
-                        print('we should never get here')
-            if diff != {}:
-                diffs[(l1,l2)].append(divvy_set(l1, l2, diff, list_of_sf))
-                #diffs.append((l1, l2, diff))
-    return diffs.values()
-
-def divvy_set(l1, l2, diff, union):
-    return dict([(s, [union[x] for x in diff[s]]) for s in diff])
 
 def make_set(l1,l2,diff, union):
     MF = []
@@ -676,7 +643,7 @@ def make_set(l1,l2,diff, union):
               l1.mel
               )
 
-def compare_proto_lexicons(lexicon1, lexicon2):
+def compare_proto_lexicons(lexicon1, lexicon2, languages):
     table = collections.defaultdict(list)
     common = set()
     only_lex2 = set()
@@ -721,7 +688,7 @@ def compare_proto_lexicons(lexicon1, lexicon2):
     # print('Sets in common:')
     # for form in common:
     #     print_form(form, 0)
-    set_diff = set_compare(list(only_lex1), list(only_lex2))
+    set_diff, graph = set_compare(list(only_lex1), list(only_lex2), languages)
 
     return {
         'number_of_sets_in_lexicon_1': nl1,
@@ -736,7 +703,7 @@ def compare_proto_lexicons(lexicon1, lexicon2):
         'sets_in_common': list(common),
         'sets_only_in_lexicon1': list(only_lex1),
         'sets_only_in_lexicon2': list(only_lex2),
-        'sets_diff': list(set_diff)
+        'sets_diff': set_diff
     }
 
 
@@ -786,7 +753,7 @@ def extract_isolates(lexicon):
 # only works for non-tree lexicons for now.
 def replace_underlying_lexicons(proto_lexicon, attested_lexicons):
     keyed_forms = {language: lexicon.key_forms_by_glyphs_and_gloss()
-                   for (language, lexicon) in attested_lexicons.items()} 
+                   for (language, lexicon) in attested_lexicons.items()}
     for form in proto_lexicon.forms:
         def intern(form_set):
             return frozenset((keyed_forms[form.language][(form.glyphs, form.gloss)]

@@ -86,7 +86,7 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     # RE.compare_isomorphic_proto_lexicons(B1, B2, command_args.command)
 
     # analysis_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.analysis.txt')
-    evaluation_stats = RE.compare_proto_lexicons(B1, B2)
+    evaluation_stats = RE.compare_proto_lexicons(B1, B2, settings.upstream[settings.upstream_target])
     evaluation_stats['set_1'] = (f'{args.experiment1}: {args.project}.{args.run1}', 'string')
     evaluation_stats['set_2'] = (f'{args.experiment2}: {args.project}.{args.run2}', 'string')
     evaluation_xml_file = os.path.join(args.experiment_path1, f'{args.project}.{both}.evaluation.statistics.xml')

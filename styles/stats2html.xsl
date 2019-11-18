@@ -50,7 +50,7 @@
     </xsl:template>
     <xsl:template match="sets_diff">
         <h6><span class="fas fa-angle-double-down"/> Sets Diff</h6>
-        <div style="display: none;">
+        <div style="display: inline;">
             <div class="p-2">
                 <button class="w-25 p-1 rounded l1">in sets 1</button>
                 <button class="w-25 p-1 rounded l2">in sets 2</button>

@@ -9,8 +9,15 @@
 
     <xsl:template match="threeway" name="threeway">
         <ul class="list-unstyled">
-            <xsl:apply-templates select="set"/>
+            <xsl:apply-templates select="sxt"/>
         </ul>
+    </xsl:template>
+
+    <xsl:template match="sxt">
+        <xsl:for-each select="*">
+            <h6><xsl:value-of select="name(.)"/></h6>
+            <xsl:apply-templates/>
+        </xsl:for-each>
     </xsl:template>
 
     <xsl:template match="set">
