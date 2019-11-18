@@ -74,7 +74,8 @@
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+<table class="table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -88,6 +89,7 @@
                 </tr>
             </xsl:for-each>
         </table>
+</div>
     </xsl:template>
 
   <xsl:key name="elements" match="lexicons/lexicon/*" use="name()"/>
@@ -99,7 +101,8 @@
     </xsl:template>
 
     <xsl:template match="lexicons">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+<table class="table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>language</th>
@@ -126,10 +129,12 @@
                 </xsl:for-each>
             </tr>
         </table>
+</div>
     </xsl:template>
 
     <xsl:template match="correspondences">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+<table class="table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>correspondence</th>
@@ -141,12 +146,14 @@
                 <xsl:apply-templates select="correspondence"/>
             </tbody>
         </table>
+</div>
         <p>correspondences_used: <xsl:value-of select=".//correspondences_used[@value]"/></p>
     </xsl:template>
 
 
     <xsl:template match="settings">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+<table class="table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>Setting</th>
@@ -157,6 +164,7 @@
                 <xsl:apply-templates select="parm"/>
             </tbody>
         </table>
+</div>
     </xsl:template>
 
 

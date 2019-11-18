@@ -23,23 +23,28 @@
 
   <xsl:template match="sets">
     <xsl:for-each select="set">
-      <table border="1">
+      <div class="table-responsive">
+<table border="1">
 	<tr><td>
-	  <table border="1">
+	  <div class="table-responsive">
+<table border="1">
 	    <tr>
 	      <td><xsl:value-of select="id"/></td>
 	      <td><xsl:value-of select="rcn"/></td>
 	      <td><xsl:value-of select="pfm"/></td>
 	    </tr>
 	  </table>
+</div>
 	  <xsl:apply-templates select="sf"/>
 	</td></tr>
       </table>
+</div>
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="sf">
-    <table border="1">
+    <div class="table-responsive">
+<table border="1">
       <xsl:for-each select="rfx">
 	<tr>	 
 	  <td><i><xsl:apply-templates select="lg"/></i></td>
@@ -48,6 +53,7 @@
 	</tr>
       </xsl:for-each>
     </table>
+</div>
   </xsl:template>
 
   <xsl:template match="gl|hw">

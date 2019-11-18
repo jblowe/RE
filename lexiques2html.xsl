@@ -69,7 +69,8 @@
 	<div>
 		<a name="{@dialecte}"/>
 		<h4><xsl:value-of select="@dialecte"/></h4>
-		<table border="1">
+		<div class="table-responsive">
+<table border="1">
 			<xsl:for-each select="entry">
 				<tr>
 					<td><xsl:apply-templates select="@id"/></td>
@@ -78,6 +79,7 @@
 				</tr>
 			</xsl:for-each>
 		</table>
+</div>
 	</div>
 </xsl:template>
 

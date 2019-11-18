@@ -25,7 +25,8 @@
     </xsl:template>
 
     <xsl:template match="totals" mode="summary">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+        <table class="table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -44,6 +45,7 @@
                 </tr>
             </xsl:for-each>
         </table>
+        </div>
     </xsl:template>
 
     <xsl:template match="file">

@@ -25,7 +25,8 @@
     </xsl:template>
 
     <xsl:template match="fuzzy">
-        <table class="table table-striped sortable">
+        <div class="table-responsive">
+        <table class="table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Language</th>
@@ -46,6 +47,7 @@
                 </tr>
             </xsl:for-each>
         </table>
+        </div>
     </xsl:template>
 
 

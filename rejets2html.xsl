@@ -20,7 +20,8 @@
 			<xsl:variable name="nbEntry" select="count(xalan:distinct(//lexicon/entry/@id))"/>
 			<xsl:variable name="nbFind"  select="count(xalan:distinct(//actionResult[@to='proto']//references/ref/@idref))"/>
 			Nb rejets: <xsl:value-of select="$nbEntry -$nbFind"/>
-			<table border="1">
+			<div class="table-responsive">
+<table border="1">
 				<xsl:for-each select="xalan:distinct(.//actionResult[@to='proto']/@from)">
 					<xsl:variable name="from" select="."/>
 					<xsl:for-each select="//lexicon[@dialecte=$from]/entry">
@@ -34,6 +35,7 @@
 					</xsl:for-each>
 				</xsl:for-each>
 			</table>
+</div>
 		</body>
 	</html>
 </xsl:template>
