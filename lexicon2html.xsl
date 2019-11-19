@@ -24,7 +24,7 @@
             </h4>
             <h6>n = <xsl:value-of select="count(entry)" /></h6>
             <div class="table-responsive">
-<table class="table-sm table-striped sortable">
+            <table class="table-sm table-striped sortable">
                 <thead>
                     <tr>
                         <th>Form</th>
@@ -47,7 +47,7 @@
                     </tr>
                 </xsl:for-each>
             </table>
-</div>
+            </div>
         </div>
     </xsl:template>
 
