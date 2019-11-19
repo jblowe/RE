@@ -248,32 +248,75 @@ def serialize_evaluation(stats, filename, languages):
     root = ET.Element('stats', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
-    graph = collections.defaultdict(list)
     entry = ET.SubElement(root, 'totals')
     for k, v in stats.items():
         if 'sets_' == k[:5]:
             # if this is one of the 'sets' elements, make it a child of the root (not <totals>)
             element = ET.SubElement(root, k)
-            if k == 'sets_diff':
-                for i, form in enumerate(v):
-                    rfx = ET.SubElement(element, 'rfx')
-                    ET.SubElement(rfx, 'lg').text = form.language
-                    ET.SubElement(rfx, 'lx').text = form.glyphs
-                    ET.SubElement(rfx, 'gl').text = form.gloss
-                    ET.SubElement(rfx, 'id').text = form.id
-                    sets = v[form]
-                    for protoform in sets:
-                        # print('xxxx')
-                        z = ET.SubElement(element, 'sxt', attrib={'which': 'one'})
-                        print(f'  {protoform}')
-                        ET.SubElement(z, 'plg').text = protoform.language
-                        ET.SubElement(z, 'pfm').text = protoform.glyphs
-                        ET.SubElement(z, 'rcn').text = RE.correspondences_as_ids(
-                            protoform.correspondences).strip()
+            render_sets(v, element, languages, k)
+        elif k == 'graph':
+            graph = stats['graph']
+            refs = stats['refs']
+            pfms = stats['pfms']
+            list_of_sf = stats['list_of_sf']
+
+            # make the table version
+            element = ET.SubElement(root, 'matrix')
+
+            # make a table of the overlapping sets
+            header = ET.SubElement(element, 'header')
+            ET.SubElement(header, 'th').text = 'reflex'
+            for p in pfms:
+                ET.SubElement(header, 'th').text = p
+
+            table = ET.SubElement(element, 'table')
+            for i in range(len(refs)):
+                tr = ET.SubElement(table, 'tr')
+                ET.SubElement(tr, 'th').text = refs[i]
+                for j in range(len(pfms)):
+                    if pfms[j] in graph[refs[i]]:
+                        ET.SubElement(tr, 'td').text = 'X'
+                    else:
+                        ET.SubElement(tr, 'td').text = ''
+
+            # previous iteration
+            # for i in range(len(refs)):
+            #     tr = ET.SubElement(element, 'tr')
+            #     ET.SubElement(tr, 'th').text = refs[i]
+            #     for j in range(len(pfms)):
+            #         if pfms[j] in graph[refs[i]]:
+            #             ET.SubElement(tr, 'td').text = pfms[j]
+            #         else:
+            #             ET.SubElement(tr, 'td').text = ''
 
 
-            else:
-                render_sets(v, element, languages, k)
+            # make the graph version
+            element = ET.SubElement(root, 'graph')
+            # make a table of the overlapping sets
+            for node in graph:
+                xnode = ET.SubElement(element, 'node')
+                ET.SubElement(xnode, 'ref').set('value', node)
+                for node2 in graph[node]:
+                    ET.SubElement(xnode, 'pfm').set('value', node2)
+
+            # for i, form in enumerate(v):
+            #     rfx = ET.SubElement(element, 'rfx')
+            #     ET.SubElement(rfx, 'lg').text = form.language
+            #     ET.SubElement(rfx, 'lx').text = form.glyphs
+            #     ET.SubElement(rfx, 'gl').text = form.gloss
+            #     ET.SubElement(rfx, 'id').text = form.id
+            #     sets = v[form]
+            #     for protoform in sets:
+            #         # print('xxxx')
+            #         z = ET.SubElement(element, 'sxt', attrib={'which': 'one'})
+            #         print(f'  {protoform}')
+            #         ET.SubElement(z, 'plg').text = protoform.language
+            #         ET.SubElement(z, 'pfm').text = protoform.glyphs
+            #         ET.SubElement(z, 'rcn').text = RE.correspondences_as_ids(
+            #             protoform.correspondences).strip()
+
+        elif k in 'pfms refs list_of_sf'.split(' '):
+            pass
         elif type(v) == type(()):
             element = ET.SubElement(entry, k)
             element.set('value', str(v[0]))

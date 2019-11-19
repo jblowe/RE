@@ -615,16 +615,21 @@ def set_compare(lex1, lex2, languages):
                 list_of_sf[j].append(i)
 
     graph = collections.defaultdict(list)
+    pfms = set()
     for i, form in enumerate(list_of_sf):
         sets = list_of_sf[form]
         for protoform in sets:
             pformshort = f'{protoform.glyphs} {correspondences_as_ids(protoform.correspondences)}'
             reflexshort = f'{form.language} {form.glyphs} {form.gloss}'
+            pfms.add(pformshort)
             if not pformshort in graph[reflexshort]:
                 graph[reflexshort].append(pformshort)
 
-    print(graph)
-    return list_of_sf, graph
+    # print(graph)
+    pfms = list(pfms)
+    refs = list(graph.keys())
+
+    return list_of_sf, graph, pfms, refs
 
 
 
@@ -688,7 +693,7 @@ def compare_proto_lexicons(lexicon1, lexicon2, languages):
     # print('Sets in common:')
     # for form in common:
     #     print_form(form, 0)
-    set_diff, graph = set_compare(list(only_lex1), list(only_lex2), languages)
+    list_of_sf, graph, pfms, refs = set_compare(list(only_lex1), list(only_lex2), languages)
 
     return {
         'number_of_sets_in_lexicon_1': nl1,
@@ -703,7 +708,10 @@ def compare_proto_lexicons(lexicon1, lexicon2, languages):
         'sets_in_common': list(common),
         'sets_only_in_lexicon1': list(only_lex1),
         'sets_only_in_lexicon2': list(only_lex2),
-        'sets_diff': set_diff
+        'list_of_sf': list_of_sf,
+        'graph': graph,
+        'pfms': pfms,
+        'refs': refs
     }
 
 
