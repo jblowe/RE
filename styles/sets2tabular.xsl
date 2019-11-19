@@ -22,7 +22,7 @@
         <!-- TODO: figure out what class, if any makes table both sortable and header-sticky -->
         <div class="should-be-responsive">
         <div class="table-responsive">
-<table class="table-sm table-bordered sets sortable">
+        <table class="table-sm table-bordered sets sortable">
             <thead>
                 <tr>
                     <th>num</th>
@@ -38,7 +38,7 @@
                <xsl:with-param name="lgs" select=".//languages"/>
             </xsl:call-template>
         </table>
-</div>
+        </div>
         </div>
         <xsl:apply-templates select=".//isolates"/>
         <xsl:apply-templates select=".//failures"/>
