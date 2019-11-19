@@ -165,6 +165,7 @@ def tree_info(tree):
 def xml2html(xml_filename, xsl_filename):
     dom = ET.parse(xml_filename)
     xslt = ET.parse(xsl_filename)
+    print(f'xsltproc.py {xsl_filename} {xml_filename}')
     transform = ET.XSLT(xslt)
     newdom = transform(dom)
     return newdom
