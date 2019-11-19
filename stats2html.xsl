@@ -25,31 +25,31 @@
                 <xsl:apply-templates select="stats/sets_in_common"/>
                 <xsl:apply-templates select="stats/sets_only_in_lexicon1"/>
                 <xsl:apply-templates select="stats/sets_only_in_lexicon2"/>
-                <xsl:apply-templates select="stats/sets_diff"/>
+                <xsl:apply-templates select="stats/matrix"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="sets_in_common">
-        <h6><span class="fas fa-angle-double-down"/> Sets in common</h6>
+        <h6><span class="fas fa-angle-double-down"/>Sets in common</h6>
         <div style="display: none;">
             <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
     <xsl:template match="sets_only_in_lexicon1">
-        <h6><span class="fas fa-angle-double-down"/> Sets only in "Sets 1"</h6>
+        <h6><span class="fas fa-angle-double-down"/>Sets only in "Sets 1"</h6>
         <div style="display: none;">
             <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
     <xsl:template match="sets_only_in_lexicon2">
-        <h6><span class="fas fa-angle-double-down"/> Sets only in "Sets 2"</h6>
+        <h6><span class="fas fa-angle-double-down"/>Sets only in "Sets 2"</h6>
         <div style="display: none;">
             <xsl:call-template name="sets"/>
         </div>
     </xsl:template>
     <xsl:template match="sets_diff">
-        <h6><span class="fas fa-angle-double-down"/> Sets Diff</h6>
+        <h6><span class="fas fa-angle-double-down"/>Sets Diff</h6>
         <div style="display: inline;">
             <div class="p-2">
                 <button class="w-25 p-1 rounded l1">in sets 1</button>
@@ -57,6 +57,22 @@
                 <button class="w-25 p-1 rounded both">in both</button>
             </div>
             <xsl:call-template name="threeway"/>
+        </div>
+    </xsl:template>
+    <xsl:template match="matrix">
+        <h6><span class="fas fa-angle-double-down"/>Table of Overlaps</h6>
+        <div style="display: inline;">
+            <div class="p-2">
+                <table class="table-sm table-striped sortable">
+                    <thead>
+                        <xsl:copy-of select="header/*"/>
+                    </thead>
+                    <tbody>
+                        <xsl:copy-of select="table/*"/>
+                    </tbody>
+                </table>
+
+            </div>
         </div>
     </xsl:template>
 
@@ -75,7 +91,7 @@
 
     <xsl:template match="totals" mode="summary">
         <div class="table-responsive">
-<table class="table-sm table-striped sortable">
+        <table class="table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -89,7 +105,7 @@
                 </tr>
             </xsl:for-each>
         </table>
-</div>
+    </div>
     </xsl:template>
 
   <xsl:key name="elements" match="lexicons/lexicon/*" use="name()"/>
@@ -102,7 +118,7 @@
 
     <xsl:template match="lexicons">
         <div class="table-responsive">
-<table class="table-sm table-striped sortable">
+        <table class="table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>language</th>
@@ -129,12 +145,12 @@
                 </xsl:for-each>
             </tr>
         </table>
-</div>
+        </div>
     </xsl:template>
 
     <xsl:template match="correspondences">
         <div class="table-responsive">
-<table class="table-sm table-striped sortable">
+        <table class="table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>correspondence</th>
@@ -146,14 +162,14 @@
                 <xsl:apply-templates select="correspondence"/>
             </tbody>
         </table>
-</div>
+        </div>
         <p>correspondences_used: <xsl:value-of select=".//correspondences_used[@value]"/></p>
     </xsl:template>
 
 
     <xsl:template match="settings">
         <div class="table-responsive">
-<table class="table-sm table-striped sortable">
+        <table class="table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>Setting</th>
@@ -164,7 +180,7 @@
                 <xsl:apply-templates select="parm"/>
             </tbody>
         </table>
-</div>
+        </div>
     </xsl:template>
 
 
