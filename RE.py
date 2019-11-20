@@ -625,7 +625,6 @@ def set_compare(lex1, lex2, languages):
             if not pformshort in graph[reflexshort]:
                 graph[reflexshort].append(pformshort)
 
-    # print(graph)
     pfms = list(pfms)
     refs = list(graph.keys())
 
@@ -709,6 +708,8 @@ def compare_proto_lexicons(lexicon1, lexicon2, languages):
         'sets_only_in_lexicon1': list(only_lex1),
         'sets_only_in_lexicon2': list(only_lex2),
         'list_of_sf': list_of_sf,
+        'number_of_pfms': len(pfms),
+        'number_of_refs': len(refs),
         'graph': graph,
         'pfms': pfms,
         'refs': refs

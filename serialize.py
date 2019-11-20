@@ -7,6 +7,7 @@ import RE
 import utils
 import inspect
 import pickle
+import json
 
 run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
@@ -258,7 +259,37 @@ def serialize_evaluation(stats, filename, languages):
             graph = stats['graph']
             refs = stats['refs']
             pfms = stats['pfms']
-            list_of_sf = stats['list_of_sf']
+
+            # make the xml for the graph version
+            element = ET.SubElement(root, 'graph')
+            for node in graph:
+                xnode = ET.SubElement(element, 'node')
+                ET.SubElement(xnode, 'ref').set('value', node)
+                for node2 in graph[node]:
+                    ET.SubElement(xnode, 'pfm').set('value', node2)
+
+            # make a json file of the graph version
+            nodes = []
+            links = []
+            seen = set()
+            # make a table of the overlapping sets
+            for node in graph:
+                nodes.append({'id': node, 'radius': len(graph[node]), 'group': 'rfx'})
+                for node2 in graph[node]:
+                    if node2 not in seen:
+                        nodes.append({'id': node2, 'radius': len(graph[node]), 'group': 'pfm'})
+                        seen.add(node2)
+                    links.append({'source': node2, 'target': node, 'value': 2})
+
+            with open(filename.replace('.xml','.json'), 'w', encoding='utf-8') as f:
+                f.write(json.dumps({'nodes': nodes, 'links': links}, indent=2))
+
+            # for now, just handle the first 200 reflexes and first 100 protoforms for the table version
+            refs = refs[:200]
+            pset = set()
+            [[pset.add(p) for p in graph[r]] for r in graph]
+            pfms = list(pset)
+            pfms = pfms[:100]
 
             # make the table version
             element = ET.SubElement(root, 'matrix')
@@ -279,7 +310,7 @@ def serialize_evaluation(stats, filename, languages):
                     else:
                         ET.SubElement(tr, 'td').text = ''
 
-            # previous iteration
+            # a previous iteration
             # for i in range(len(refs)):
             #     tr = ET.SubElement(element, 'tr')
             #     ET.SubElement(tr, 'th').text = refs[i]
@@ -288,32 +319,6 @@ def serialize_evaluation(stats, filename, languages):
             #             ET.SubElement(tr, 'td').text = pfms[j]
             #         else:
             #             ET.SubElement(tr, 'td').text = ''
-
-
-            # make the graph version
-            element = ET.SubElement(root, 'graph')
-            # make a table of the overlapping sets
-            for node in graph:
-                xnode = ET.SubElement(element, 'node')
-                ET.SubElement(xnode, 'ref').set('value', node)
-                for node2 in graph[node]:
-                    ET.SubElement(xnode, 'pfm').set('value', node2)
-
-            # for i, form in enumerate(v):
-            #     rfx = ET.SubElement(element, 'rfx')
-            #     ET.SubElement(rfx, 'lg').text = form.language
-            #     ET.SubElement(rfx, 'lx').text = form.glyphs
-            #     ET.SubElement(rfx, 'gl').text = form.gloss
-            #     ET.SubElement(rfx, 'id').text = form.id
-            #     sets = v[form]
-            #     for protoform in sets:
-            #         # print('xxxx')
-            #         z = ET.SubElement(element, 'sxt', attrib={'which': 'one'})
-            #         print(f'  {protoform}')
-            #         ET.SubElement(z, 'plg').text = protoform.language
-            #         ET.SubElement(z, 'pfm').text = protoform.glyphs
-            #         ET.SubElement(z, 'rcn').text = RE.correspondences_as_ids(
-            #             protoform.correspondences).strip()
 
         elif k in 'pfms refs list_of_sf'.split(' '):
             pass
