@@ -229,7 +229,7 @@ def make_all():
 @post('/make/<project:re:.*>/<experiment:re:.*>')
 @route('/make/<project:re:.*>/<experiment:re:.*>')
 def make_experiment(project, experiment):
-    alerts, success = run_make.make(project, experiment, request.query)
+    alerts, success = run_make.make(project, experiment, request.forms)
     errors = alerts if not success else None
     messages = alerts if success else None
     return show_experiment(project, experiment, messages, errors)
