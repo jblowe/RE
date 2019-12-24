@@ -12,8 +12,11 @@ def make(project, experiment, parameters):
             os.chdir('..')
             try:
                 p_object = subprocess.call(['git', 'pull', '-v'])
-                p_object = subprocess.call(['make', '-w'])
+                p_object = subprocess.call(['make', '-w'],
+                                           stdout=open('stdout.txt', 'w'),
+                                           stderr=open('stderr.txt', 'w'))
             except:
+                messages.append('failed.')
                 pass
             os.chdir('REwww')
         else:
@@ -24,9 +27,12 @@ def make(project, experiment, parameters):
             if 'strict' in parameters and parameters['strict'] == 'yes': cli.append('-w')
             os.chdir(os.path.join('..', 'src'))
             try:
-                messages.append(' '.join([PYTHON, 'REcli.py', 'upstream',] + cli))
-                p_object = subprocess.call([PYTHON, 'REcli.py', 'upstream'] + cli)
+                messages.append(' '.join([PYTHON, 'REcli.py', 'upstream', ] + cli))
+                p_object = subprocess.call([PYTHON, 'REcli.py', 'upstream'] + cli,
+                                           stdout=open(f'{project}.{experiment}.stdout.txt', 'w'),
+                                           stderr=open(f'{project}.{experiment}.stderr.txt', 'w'))
             except:
+                messages.append('failed.')
                 pass
             os.chdir(os.path.join('..', 'REwww'))
         elapsed_time = time.time() - elapsed_time
