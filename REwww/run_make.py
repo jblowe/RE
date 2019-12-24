@@ -21,7 +21,7 @@ def make(project, experiment, parameters):
             for p in 'recon fuzzy mel run'.split(' '):
                 if p in parameters and parameters[p] != '':
                     cli += [f'--{p}', f'{parameters[p]}']
-            if parameters['strict'] == 'yes': cli.append('-w')
+            if 'strict' in parameters and parameters['strict'] == 'yes': cli.append('-w')
             os.chdir(os.path.join('..', 'src'))
             try:
                 messages.append(' '.join([PYTHON, 'REcli.py', 'upstream',] + cli))
