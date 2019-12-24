@@ -1,7 +1,7 @@
 <div id="parameters" class="card">
     <h6 class="card-header">Upstream parameters available</h6>
     <div class="card-body">
-        <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
+        <form method="get" action="/make/{{data['project']}}/{{data['experiment']}}">
             <div class="table-responsive">
             <table class="table-sm table-striped">
             <thead/>

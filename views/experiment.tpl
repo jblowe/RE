@@ -6,7 +6,7 @@
         % end
         <h6>
             <a href="#" id="toggle_parameters"><span class="far fa-caret-square-right" /></a>
-            <small>computations (compare, upstream)</small>
+            <small>click to perform 'upstream' computations</small>
         </h6>
         <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
         <div id="upstream" style="display:none;">

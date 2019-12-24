@@ -220,15 +220,16 @@ def remake():
     return response
 
 
-@route('/make')
+@route('/make/ALL')
 def make_all():
     data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
     return utils.check_template('index', data, request.forms)
 
 
 @post('/make/<project:re:.*>/<experiment:re:.*>')
+@route('/make/<project:re:.*>/<experiment:re:.*>')
 def make_experiment(project, experiment):
-    alerts, success = run_make.make(project, experiment, request.forms)
+    alerts, success = run_make.make(project, experiment, request.query)
     errors = alerts if not success else None
     messages = alerts if success else None
     return show_experiment(project, experiment, messages, errors)

@@ -16,7 +16,19 @@
                       </td>
                     </tr>
                   % end
+
+                  % short_files = {}
                   % for file in files:
+                  %     short_file = file.replace(data['project'] + '.','').replace('.' + file_type + '.xml','')
+                  %     short_parts = short_file.split('.')
+                  %     if len(short_parts) == 2:
+                  %         short_file = f'{short_parts[1]} of {short_parts[0]}'
+                  %     end
+                  %     short_files[short_file] = file
+                  % end
+
+                  % for short_file in sorted(short_files):
+                        % file = short_files[short_file]
                         <tr>
                             % if 'sets' == file_type:
                                <td>
@@ -30,7 +42,7 @@
                             % else:
                                <td><a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download"></span></a></td>
                             % end
-                            <td><a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?tabular">{{file}}</a></td>
+                            <td><a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?tabular">{{short_file}}</a></td>
                         </tr>
                       % end
 
