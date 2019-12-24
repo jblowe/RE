@@ -25,7 +25,7 @@
                 <xsl:apply-templates select="stats/sets_in_common"/>
                 <xsl:apply-templates select="stats/sets_only_in_lexicon1"/>
                 <xsl:apply-templates select="stats/sets_only_in_lexicon2"/>
-                <xsl:apply-templates select="stats/matrix"/>
+                <!-- xsl:apply-templates select="stats/matrix"/ -->
             </body>
         </html>
     </xsl:template>
