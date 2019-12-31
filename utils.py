@@ -55,7 +55,8 @@ def list_of_experiments(project):
         os.mkdir(experiment_dir)
     experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
     experiments = []
-    data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
+    # data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
+    data_elements =[]
     for x in experiment_dirs:
         experiments.append(get_experiment_info(experiment_dir, x, data_elements, project))
     return experiments, experiment_dir, data_elements
@@ -159,7 +160,7 @@ def get_info(path):
 
 def tree_info(tree):
     tree_list = projects.find_path(tree, 'all')
-    return [(p, get_info(p)) for p in tree_list]
+    return [(p, get_info(p), list_of_experiments(p)) for p in tree_list]
 
 
 def xml2html(xml_filename, xsl_filename):

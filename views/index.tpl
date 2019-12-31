@@ -33,21 +33,19 @@
                     <a class="btn-sm btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Compare</a>
                 </ul>
             % elif 'home' in data:
-                <p>
-                    A computer implementation of the comparative method.
-                </p>
+                <p>A computer implementation of the comparative method.</p>
             % elif 'about' in data:
                 % include('about.tpl')
             % else:
                 % include('alerts.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')
+                % elif 'projects' in data:
+                    % include('projects.tpl')
                 % elif 'experiment' in data:
                     % include('experiment.tpl')
                 % elif 'experiments' in data:
                     % include('experiments.tpl')
-                % elif 'projects' in data:
-                    % include('projects.tpl')
                 % elif 'project' in data:
                     % include('project.tpl')
                 % end
