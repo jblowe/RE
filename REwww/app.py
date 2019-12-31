@@ -76,7 +76,7 @@ def get_experiment_file(tree, project, experiment, filename):
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
     data = {'tree': tree, 'project': project, 'experiment': experiment, 'files': files, 'base_dir': base_dir,
             'num_files': num_files, 'experiment_info': experiment_info, 'filename': filename, 'date': date,
-            'content': content, 'data_elements': data_elements, 'back': f'/experiments/{project}'}
+            'content': content, 'data_elements': data_elements, 'back': '/list_tree/projects'}
     return utils.check_template('index', data, request.forms)
 
 
@@ -147,7 +147,7 @@ def interactive_project(project, experiment):
         languages, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, True)
         languages = [(l, '') for l in languages]
         data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages,
-                'base_dir': base_dir, 'back': f'/experiments/{project}', 'experiment_info': experiment_info}
+                'base_dir': base_dir, 'back': '/list_tree/projects', 'experiment_info': experiment_info}
     return utils.check_template('index', data, request.forms)
 
 
@@ -158,7 +158,7 @@ def show_experiment(project, experiment, messages=None, errors=None):
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
     data = {'tree': 'experiment', 'experiment': experiment, 'project': project, 'base_dir': experiment_path,
             'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files, 'num_files': num_files,
-            'back': f'/experiments/{project}'}
+            'back': '/list_tree/projects'}
     if messages: data['messages'] = messages
     if errors: data['errors'] = errors
     if num_files == 0:
@@ -166,30 +166,29 @@ def show_experiment(project, experiment, messages=None, errors=None):
     return utils.check_template('index', data, request.forms)
 
 
-@post('/experiments/<project:re:.*>/<experiment:re:.*>')
-def new_experiment(project, experiment):
+@post('/new/<project:re:.*>')
+def new_experiment(project):
     experiments, base_dir, data_elements = utils.list_of_experiments(project)
     project_dir = os.path.join('..', 'projects', project)
     error_messages = []
-    if experiment == 'NEW':
-        new_experiment = getattr(request.forms, 'new_experiment')
-        try:
-            new_dir = os.path.join(base_dir, new_experiment)
-            os.mkdir(new_dir)
-            for root, dirs, files in os.walk(project_dir):
-                for f in files:
-                    print(os.path.join(root, f))
-                    copy(os.path.join(root, f), new_dir)
-                break
-        except:
-            error_messages.append(f"couldn't make experiment {new_experiment}")
-        experiments, base_dir, data_elements = utils.list_of_experiments(project)
-        data = {'experiments': experiments, 'project': project, 'experiments': experiments, 'base_dir': base_dir,
-                'data_elements': data_elements, 'back': f'/experiments/{project}'}
-    else:
-        pass
+    new_experiment = getattr(request.forms, 'new_experiment')
+    try:
+        new_dir = os.path.join(base_dir, new_experiment)
+        os.mkdir(new_dir)
+        for root, dirs, files in os.walk(project_dir):
+            for f in files:
+                print(os.path.join(root, f))
+                copy(os.path.join(root, f), new_dir)
+            break
+    except:
+        error_messages.append(f"couldn't make experiment {new_experiment}")
+    experiments, base_dir, data_elements = utils.list_of_experiments(project)
+    data = {'projects': utils.tree_info('projects'), 'experiments': experiments,
+            'project': project, 'base_dir': base_dir,
+            'data_elements': data_elements, 'back': '/list_tree/projects'}
     if len(error_messages) > 0:
         data['errors'] = error_messages
+    #return list_tree('projects')
     return utils.check_template('index', data, request.forms)
 
 
@@ -201,7 +200,7 @@ def delete_experiment(project, experiment):
         shutil.rmtree(delete_dir)
     except:
         pass
-    return list_experiments(project)
+    return list_tree('projects')
 
 
 @route('/experiments/<project:re:.*>')
@@ -233,6 +232,7 @@ def make_experiment(project, experiment):
     errors = alerts if not success else None
     messages = alerts if success else None
     return show_experiment(project, experiment, messages, errors)
+
 
 @route('/plot/<type:re:.*>/<data:re:.*>')
 def plot(type, data):
@@ -267,10 +267,14 @@ def plot(type, data):
     plt.savefig(figfile, format='png')
     figfile.seek(0)
 
-    response = HTTPResponse(content_type="image/png")
-    response.body = figfile
+    headers = {
+    'Content-Type': 'image/png'
+    }
+    return HTTPResponse(figfile.getvalue(), **headers)
 
-    return response
+    #response = HTTPResponse(content_type="image/png")
+    #response.body = figfile
+    #return response
 
 # application = default_app()
 run()

@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
     <link href="/static/bootstrap-table.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/mdb.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
     <style>
     .btn-xs {
@@ -36,10 +37,13 @@
         event.preventDefault();
         $(this).closest('h6').next('div').toggle();
       });
+      // Treeview Initialization
+      $('.treeview').mdbTreeview()
     });
     </script
     <script type="text/javascript" src="/static/moment.min.js"></script>
 	<script type="text/javascript" src="/static/jquery.min.js"></script>
 	<script type="text/javascript" src="/static/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
+	<script type="text/javascript" src="/static/mdb.min.js"></script>
 </head>

@@ -11,7 +11,7 @@
                       <td colspan="2">
                         <h6 class="subheadr">{{file_type}}</h6>
                           % if 'sets' == file_type:
-                            to compare sets, check 2 and click <button class="btn btn-xs btn-primary" name="compare">compare</button>
+                            to compare sets: check 2 &amp; click <button class="btn btn-xs btn-primary" name="compare">compare</button>
                           % end
                       </td>
                     </tr>
@@ -32,7 +32,7 @@
                         <tr>
                             % if 'sets' == file_type:
                                <td>
-                                 <div style="width: 42px;">
+                                 <div style="width: 60px;">
                                      <a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download""></span></a>
                                      <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?paragraph"><span class="fas fa-file-alt"></span></a>
                                       <input type="checkbox" value="{{file}}" name="{{file}}">
