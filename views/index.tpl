@@ -3,35 +3,13 @@
 % include('head.tpl')
 <body>
 % include ('nav.tpl')
-<div class="container">
+<main role="main" class="container" style="padding-top: 15px;">
     <div class="row">
         <div class="container-fluid">
             % if 'make' in data:
-                <ul>
-                    <h2>'Make' results</h2>
-                    <p>
-                        (Re)run completed.
-                    </p>
-                    <p>
-                        {{data['make'][0][0]}}
-                    </p>
-                    <!-- p>
-                        <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{data['project']}}.default.upstream.statistics.xml">View results</a>
-                    </p>
-                    <p>
-                        <a class="btn-sm btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Return to experiment</a>
-                    </p -->
-                    <p>
-                        <a class="btn-sm btn-primary" href="/list_tree/projects">Return to project list</a>
-                    </p>
-                </ul>
+                % include('make.tpl')
             % elif 'compare' in data:
-                <ul>
-                    <h2>Compare</h2>
-                    <p>
-                    </p>
-                    <a class="btn-sm btn-primary" href="/experiment/{{data['project']}}/{{data['experiment']}}">Compare</a>
-                </ul>
+                % include('compare.tpl')
             % elif 'home' in data:
                 <p>A computer implementation of the comparative method.</p>
             % elif 'about' in data:
@@ -71,5 +49,6 @@
       $( "#upstream" ).toggle();
     });
 </script>
+</main>
 </body>
 </html>

@@ -12,31 +12,16 @@
           </table>
           <button type="submit">Upstream</button>
           <button type="reset">Reset</button>
-          </div>
-          <div class="col-md-8 card border rounded">
-          % if 'forms' in data:
-          <h5>Sets</h5>
-              % for form in data['forms']:
-                  <li>{{form}}
-                  <ul>
-                  % for support in form.supporting_forms:
-                  <li>{{support}}</li>
-                  % end
-                  </li>
-                  </ul>
-              % end
-          % end
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 card border rounded">
+
           % if 'no_parses' in data:
+          <hr/>
           <h5>No parses</h5>
               % for no_parse in data['no_parses']:
                   <li>{{no_parse}}</li>
               % end
           % end
           % if 'isolates' in data:
+          <hr/>
           <h5>Reconstructions not in sets</h5>
           <h6>(includes "Isolates")</h6>
               % for isolate in data['isolates']:
@@ -45,18 +30,32 @@
           % end
           </div>
           <div class="col-md-8 card border rounded">
+          % if 'forms' in data:
+          <h5>Sets</h5>
+              % for form in data['forms']:
+                  <li><b>{{form}}</b>
+                  <ul>
+                  % for support in form.supporting_forms:
+                  <li>{{support}}</li>
+                  % end
+                  </li>
+                  </ul>
+              % end
+          % end
           % if 'debug_notes' in data:
+          <hr/>
           <h5>Trace</h5>
               % for note in data['debug_notes']:
-                   % if note[0] == ' ':
-                      {{note}}<br/>
+                   % if note[0] == '!':
+                      <br/><b>{{note[1:]}}</b><br/>
                    % else:
-                      <li>{{note}}</li>
+                      {{note}}<br/>
                    % end
               % end
           % end
           % if 'notes' in data:
-          <h5>Notes</h5>
+          <hr/>
+          <h5>Summary</h5>
               % for note in data['notes']:
                   <li>{{note}}</li>
               % end

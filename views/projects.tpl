@@ -7,10 +7,12 @@
             <li>
             <i class="fas fa-angle-right rotate"></i>
             <a href="/project/{{project}}">{{project}}</a>
-            {{updated_at}}
+            <!-- {{updated_at}} -->
             <ul class="nested">
                 % for experiment in experiments[0]:
                     <li>
+                    <a href="/interactive/{{project}}/{{ experiment['name'] }}">
+                    <span class="fas fa-eye"></span></a>
                     <a href="/experiment/{{project}}/{{ experiment['name'] }}">
                     <span class="fas fa-folder-open"></span> {{ experiment['name'] }}</a>
                     <!-- {{ experiment['date'] }} -->
