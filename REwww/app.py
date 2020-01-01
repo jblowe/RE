@@ -120,6 +120,7 @@ def compare(project, experiment):
     return show_experiment(project, experiment, messages, errors)
 
 
+# one cycle through interactive environment
 @post('/interactive/<project:re:.*>/<experiment:re:.*>')
 def upstream(project, experiment):
     languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel make'.split(' ')]
@@ -128,12 +129,16 @@ def upstream(project, experiment):
     experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
     language_names, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, False)
     forms, notes, isolates, no_parses, debug_notes = utils.upstream('upstream', languages, project, experiment, request.forms, False)
+    # clean out unused elements from upstream results
+    no_parses = [n for n in no_parses if n.glyphs != '']
+    notes = [n for n in notes if 'form missing' not in n]
     data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages, 'base_dir': base_dir,
             'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses,
             'experiment_info': experiment_info}
     return utils.check_template('index', data, request.forms)
 
 
+# initial setup of interactive environment
 @route('/interactive/<project:re:.*>/<experiment:re:.*>')
 def interactive_project(project, experiment):
     files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)

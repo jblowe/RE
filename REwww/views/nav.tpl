@@ -1,5 +1,5 @@
 <!-- Static navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #EC5800;">
   <div class="container">
     <div class="row">
       <a class="navbar-brand" href="#">The Reconstruction Engine</a>

@@ -347,9 +347,10 @@ def project_back(lexicons, parameters, statistics):
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map)
         for form in lexicon.forms:
-            # print(form)
+            if form.glyphs == '':
+                continue
             if Debug.debug:
-                statistics.add_debug_note(f'{form}')
+                statistics.add_debug_note(f'!Parsing {form}...')
 
             if form.glyphs:
                 parses = memo.setdefault(form.glyphs, tokenize(form.glyphs, statistics))
@@ -479,8 +480,7 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
     for cognate_set in cognate_sets:
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
-    statistics.add_note(
-        f'{len(uniques)} distinct reconstructions with distinct supporting forms')
+    statistics.add_note(f'{len(uniques)} distinct reconstructions with distinct supporting forms')
     reflexes = sum([len(x[1]) for x in list(uniques.values())])
     statistics.add_note(f'{reflexes} reflexes in sets')
     statistics.add_stat('reflexes_in_sets', reflexes)
