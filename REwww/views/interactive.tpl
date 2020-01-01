@@ -29,7 +29,7 @@
               % end
           % end
           </div>
-          <div class="col-md-8 card border rounded">
+          <div class="col-md-4 card border rounded">
           % if 'forms' in data:
           <h5>Sets</h5>
               % for form in data['forms']:
@@ -53,8 +53,9 @@
                    % end
               % end
           % end
+          </div>
+          <div class="col-md-4 card border rounded">
           % if 'notes' in data:
-          <hr/>
           <h5>Summary</h5>
               % for note in data['notes']:
                   <li>{{note}}</li>
