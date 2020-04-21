@@ -1,7 +1,7 @@
 <div class="row">
     <div id="leftpane" class="col-md-4">
         <h5>Experiment: {{data['project']}}/{{data['experiment']}}
-        <a class="btn-sm" href="/delete/{{data['project']}}/{{data['experiment']}}"><span class="fas fa-trash"></span></a>
+        <a class="btn-sm" href="/delete/{{data['project']}}/{{data['experiment']}}"><span class="fas fa-trash-alt"></span></a>
         </h5>
         % if 'title' in data['experiment_info']:
             <p>Source data description: {{data['experiment_info']['title']}}</p>
