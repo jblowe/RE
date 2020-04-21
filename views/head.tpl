@@ -38,7 +38,11 @@
         $(this).closest('h6').next('div').toggle();
       });
       // Treeview Initialization
-      $('.treeview').mdbTreeview()
+      // $('.treeview').mdbTreeview()
+      // Treeview Initialization
+      $(document).ready(function() {
+      $('.treeview-animated').mdbTreeview();
+      });
     });
     </script
     <script type="text/javascript" src="/static/moment.min.js"></script>
