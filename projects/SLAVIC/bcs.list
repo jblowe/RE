@@ -1,0 +1,209 @@
+ID	GLOSS	bcs	bcs
+1	I (1sg)	ja	ја
+2	you (2sg)	ti	ти
+3	he, she, it (3sg)	on	он
+4	we (1pl)	mi	ми
+5	you (2pl)	vi	ви
+6	they (3pl)	oni	они
+7	this	ovaj, taj	овај, тај
+8	that	taj, onaj	тај, онај
+9	here	ovde, ovdje	овде, овдје
+10	there	tamo	тамо
+11	who	ko, tko	ко, тко
+12	what	što, šta	што, шта
+13	where	gde, gdje	где, гдје
+14	when	kad	кад
+15	how	kako	како
+16	not	ne	не
+17	all	sve	све
+18	many	mnogo, puno	много, пуно
+19	some	nekoliko	неколико
+20	few	malo	мало
+21	other	drugi	други
+22	one	jedan	један
+23	two	dva	два
+24	three	tri	три
+25	four	četiri	четири
+26	five	pet	пет
+27	big	velik	велик
+28	long	dug, dugačak	дуг, дугачак
+29	wide	širok	широк
+30	thick	debeo	дебео
+31	heavy	težak	тежак
+32	small	malen	мален
+33	short	kratak	кратак
+34	narrow	uzak	узак
+35	thin	tanak	танак
+36	woman	žena	жена
+37	man (adult male)	muškarac	мушкарац
+38	man (human being)	čovek, čovjek	човек, човјек
+39	child	dete, dijete	дете, дијете
+40	wife	žena, supruga	жена, супруга
+41	husband	muž, suprug	муж, супруг
+42	mother	majka	мајка
+43	father	otac	отац
+44	animal	životinja	животиња
+45	fish	riba	риба
+46	bird	ptica	птица
+47	dog	pas	пас
+48	louse	uš, vaš	уш, ваш
+49	snake	zmija	змија
+50	worm	crv, glista	црв, глиста
+51	tree	drvo	дрво
+52	forest	šuma	шума
+53	stick	štap, prut, drška	штап, прут, дршка
+54	fruit	voće, plod	воће, плод
+55	seed	seme, sjeme	семе, сјеме
+56	leaf	list	лист
+57	root	koren, korijen	корен, коријен
+58	bark (of a tree)	kora	кора
+59	flower	cvet, cvijet	цвет, цвијет
+60	grass	trava	трава
+61	rope	konopac, uže, špaga	конопац, уже, шпага
+62	skin	koža	кожа
+63	meat	meso	месо
+64	blood	krv	крв
+65	bone	kost	кост
+66	fat (noun)	mast, salo	маст, сало
+67	egg	jaje	јаје
+68	horn	rog	рог
+69	tail	rep	реп
+70	feather	pero	перо
+71	hair	kosa, dlaka, vlas	коса, длака, влас
+72	head	glava	глава
+73	ear	uho, uvo	ухо, уво
+74	eye	oko	око
+75	nose	nos	нос
+76	mouth	usta	уста
+77	tooth	zub	зуб
+78	tongue (organ)	jezik	језик
+79	fingernail	nokat	нокат
+80	foot	stopa, stopalo	стопа, стопало
+81	leg	noga	нога
+82	knee	koleno, koljeno	колено, кољено
+83	hand	ruka, šaka	рука, шака
+84	wing	krilo	крило
+85	belly	stomak, trbuh	стомак, трбух
+86	guts	crevo, crijevo	црево, цријево
+87	neck	vrat	врат
+88	back	leđa	леђа
+89	breast	grudi, prsa	прса
+90	heart	srce	срце
+91	liver	jetra	јетра
+92	to drink	piti	пити
+93	to eat	jesti	јести
+94	to bite	ujesti, ugristi	ујести, угристи
+95	to suck	sisati	сисати
+96	to spit	pljuvati	пљувати
+97	to vomit	povraćati	повраћати
+98	to blow	puhati, duvati	пухати, дувати
+99	to breathe	disati	дисати
+100	to laugh	smijati se, smejati se	смијати се, смејати се
+101	to see	videti, vidjeti	видети, видјети
+102	to hear	čuti	чути
+103	to know	znati	знати
+104	to think	misliti	мислити
+105	to smell	mirisati	мирисати
+106	to fear	plašiti, bojati se, strahovati	плашити, бојати се, страховати
+107	to sleep	spavati	спавати
+108	to live	živeti, živjeti	живети, живјети
+109	to die	umreti, umrijeti	умрети, умријети
+110	to kill	ubiti	убити
+111	to fight	tući, boriti se	тући, борити се
+112	to hunt	loviti	ловити
+113	to hit	udarati	udarati, ударати
+114	to cut	seći, sjeći, rezati	сећи, сјећи, резати
+115	to split	deliti, dijeliti	делити, дијелити
+116	to stab	ubosti	убости
+117	to scratch	češati	чешати
+118	to dig	kopati	копати
+119	to swim	plivati	пливати
+120	to fly	leteti, letjeti	летети, летјети
+121	to walk	hodati	ходати
+122	to come	dolaziti	долазити
+123	to lie (as in a bed)	ležati	лежати
+124	to sit	sedeti, sjediti	седети, сједити
+125	to stand	stajati	стајати
+126	to turn (intransitive)	skrenuti	скренути
+127	to fall	pasti	пасти
+128	to give	dati	дати
+129	to hold	držati	држати
+130	to squeeze	stisnuti, stegnuti	стиснути, стегнути
+131	to rub	trljati	трљати
+132	to wash	prati	прати
+133	to wipe	brisati	брисати
+134	to pull	vući	вући
+135	to push	gurati	гурати
+136	to throw	bacati	бацати
+137	to tie	vezati	везати
+138	to sew	šiti	шити
+139	to count	brojati, brojiti	бројати, бројити
+140	to say	reći, kazati	рећи, казати
+141	to sing	pevati, pjevati	певати, пјевати
+142	to play	igrati	играти
+143	to float	plutati, ploviti	плутати, пловити
+144	to flow	teći	тећи
+145	to freeze	zalediti, smrznuti	заледити, смрзнути
+146	to swell	oteći, oteknuti	отећи, отекнути
+147	sun	sunce	сунце
+148	moon	mesec, mjesec	месец, мјесец
+149	star	zvezda, zvijezda	звезда, звијезда
+150	water	voda	вода
+151	rain	kiša	киша
+152	river	reka, rijeka	река, ријека
+153	lake	jezero	језеро
+154	sea	more	море
+155	salt	sol, so	сол, со
+156	stone	kamen, stena, stijena	камен, стена, стијена
+157	sand	pesak, pijesak	песак, пијесак
+158	dust	prašina	прашина
+159	earth	zemlja	земља
+160	cloud	oblak	облак
+161	fog	magla	магла
+162	sky	nebo	небо
+163	wind	vetar, vjetar	ветар, вјетар
+164	snow	sneg, snijeg	снег, снијег
+165	ice	led	лед
+166	smoke	dim	дим
+167	fire	vatra	ватра
+168	ash	pepeo	пепео
+169	to burn	goreti, gorjeti	горети, горјети
+170	road	put	пут 
+209	road	cesta	цеста
+171	mountain	planina	планина
+172	red	crven	црвен
+173	green	zelen	зелен
+174	yellow	žut	жут
+175	white	beo, bijel	бео, бијел
+176	black	crn	црн
+177	night	noć	ноћ
+178	day	dan	дан
+179	year	godina	година
+180	warm	topao	топао
+181	cold	hladno, hladnoća	хладно, хладноћа
+182	full	pun	пун
+183	new	nov	нов
+184	old	star	стар
+185	good	dobar	добар
+186	bad	loš	лош
+187	rotten	truo, gnjio	труо, гњио
+188	dirty	prljav	прљав
+189	straight	prav, ravan	прав, раван
+190	round	obao, okrugao	обао, округао
+191	sharp (as a knife)	oštar	оштар
+192	dull (as a knife)	tup	туп
+193	smooth	gladak	гладак
+194	wet	mokar	мокар
+195	dry	suh	сув
+196	correct	točan, tačan	точан, тачан
+197	near	blizak	близак
+198	far	dalek	далек
+199	right	desno	десно
+200	left	levo, lijevo	лево, лијево
+201	at	kod	код
+202	in	u	у
+203	with	s, sa	с, са
+204	and	i	и
+205	if	ako	ако
+206	because	zato, radi, jer, budući da	зато, ради, јер, будући да
+207	name	ime	име

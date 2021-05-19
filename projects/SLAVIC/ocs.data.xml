@@ -1,0 +1,911 @@
+<lexicon dialecte="ocs">
+  <createdat>2021-03-12 07:05:04 UTC</createdat>
+  <entry id="ocs.1">
+    <gl>I (1sg)</gl>
+    <hw>azŭ</hw>
+  </entry>
+  <entry id="ocs.2">
+    <gl>you (2sg)</gl>
+    <hw>ty</hw>
+  </entry>
+  <entry id="ocs.3">
+    <gl>he, she, it (3sg)</gl>
+    <hw>onŭ</hw>
+  </entry>
+  <entry id="ocs.4">
+    <gl>he, she, it (3sg)</gl>
+    <hw>tŭ</hw>
+  </entry>
+  <entry id="ocs.5">
+    <gl>we (1pl)</gl>
+    <hw>my</hw>
+  </entry>
+  <entry id="ocs.6">
+    <gl>you (2pl)</gl>
+    <hw>vy</hw>
+  </entry>
+  <entry id="ocs.7">
+    <gl>they (3pl)</gl>
+    <hw>oni</hw>
+  </entry>
+  <entry id="ocs.8">
+    <gl>they (3pl)</gl>
+    <hw>ti</hw>
+  </entry>
+  <entry id="ocs.9">
+    <gl>this</gl>
+    <hw>ovŭ</hw>
+  </entry>
+  <entry id="ocs.10">
+    <gl>this</gl>
+    <hw>sĭ</hw>
+  </entry>
+  <entry id="ocs.11">
+    <gl>that</gl>
+    <hw>tŭ</hw>
+  </entry>
+  <entry id="ocs.12">
+    <gl>that</gl>
+    <hw>ta</hw>
+  </entry>
+  <entry id="ocs.13">
+    <gl>that</gl>
+    <hw>to</hw>
+  </entry>
+  <entry id="ocs.14">
+    <gl>here</gl>
+    <hw>sĭde</hw>
+  </entry>
+  <entry id="ocs.15">
+    <gl>here</gl>
+    <hw>ovŭde</hw>
+  </entry>
+  <entry id="ocs.16">
+    <gl>there</gl>
+    <hw>tu</hw>
+  </entry>
+  <entry id="ocs.17">
+    <gl>there</gl>
+    <hw>onŭde</hw>
+  </entry>
+  <entry id="ocs.18">
+    <gl>who</gl>
+    <hw>kŭto</hw>
+  </entry>
+  <entry id="ocs.19">
+    <gl>what</gl>
+    <hw>čĭto</hw>
+  </entry>
+  <entry id="ocs.20">
+    <gl>where</gl>
+    <hw>kŭde</hw>
+  </entry>
+  <entry id="ocs.21">
+    <gl>when</gl>
+    <hw>kŭgda</hw>
+  </entry>
+  <entry id="ocs.22">
+    <gl>how</gl>
+    <hw>kako</hw>
+  </entry>
+  <entry id="ocs.23">
+    <gl>how</gl>
+    <hw>jako</hw>
+  </entry>
+  <entry id="ocs.24">
+    <gl>not</gl>
+    <hw>ne</hw>
+  </entry>
+  <entry id="ocs.25">
+    <gl>all</gl>
+    <hw>vĭsĭ</hw>
+  </entry>
+  <entry id="ocs.26">
+    <gl>many</gl>
+    <hw>mŭnogŭ</hw>
+  </entry>
+  <entry id="ocs.27">
+    <gl>some</gl>
+    <hw>několiko</hw>
+  </entry>
+  <entry id="ocs.28">
+    <gl>few</gl>
+    <hw>maly</hw>
+  </entry>
+  <entry id="ocs.29">
+    <gl>other</gl>
+    <hw>inŭ</hw>
+  </entry>
+  <entry id="ocs.30">
+    <gl>one</gl>
+    <hw>jedinŭ</hw>
+  </entry>
+  <entry id="ocs.31">
+    <gl>two</gl>
+    <hw>dŭva</hw>
+  </entry>
+  <entry id="ocs.32">
+    <gl>three</gl>
+    <hw>trije</hw>
+  </entry>
+  <entry id="ocs.33">
+    <gl>four</gl>
+    <hw>četyre</hw>
+  </entry>
+  <entry id="ocs.34">
+    <gl>five</gl>
+    <hw>pętĭ</hw>
+  </entry>
+  <entry id="ocs.35">
+    <gl>big</gl>
+    <hw>velikŭ</hw>
+  </entry>
+  <entry id="ocs.36">
+    <gl>long</gl>
+    <hw>dlĭgŭ</hw>
+  </entry>
+  <entry id="ocs.37">
+    <gl>wide</gl>
+    <hw>širokŭ</hw>
+  </entry>
+  <entry id="ocs.38">
+    <gl>thick</gl>
+    <hw>debelŭ</hw>
+  </entry>
+  <entry id="ocs.39">
+    <gl>heavy</gl>
+    <hw>tęžĭkŭ</hw>
+  </entry>
+  <entry id="ocs.40">
+    <gl>small</gl>
+    <hw>malŭ</hw>
+  </entry>
+  <entry id="ocs.41">
+    <gl>short</gl>
+    <hw>kratŭkŭ</hw>
+  </entry>
+  <entry id="ocs.42">
+    <gl>narrow</gl>
+    <hw>ǫzŭkŭ</hw>
+  </entry>
+  <entry id="ocs.43">
+    <gl>thin</gl>
+    <hw>tĭnŭkŭ</hw>
+  </entry>
+  <entry id="ocs.44">
+    <gl>woman</gl>
+    <hw>žena</hw>
+  </entry>
+  <entry id="ocs.45">
+    <gl>man (adult male)</gl>
+    <hw>mǫžĭ</hw>
+  </entry>
+  <entry id="ocs.46">
+    <gl>man (human being)</gl>
+    <hw>člověkŭ</hw>
+  </entry>
+  <entry id="ocs.47">
+    <gl>child</gl>
+    <hw>dětĭ</hw>
+  </entry>
+  <entry id="ocs.48">
+    <gl>child</gl>
+    <hw>otrokŭ</hw>
+  </entry>
+  <entry id="ocs.49">
+    <gl>wife</gl>
+    <hw>žena</hw>
+  </entry>
+  <entry id="ocs.50">
+    <gl>husband</gl>
+    <hw>mǫžĭ</hw>
+  </entry>
+  <entry id="ocs.51">
+    <gl>mother</gl>
+    <hw>mati</hw>
+  </entry>
+  <entry id="ocs.52">
+    <gl>father</gl>
+    <hw>otĭcĭ</hw>
+  </entry>
+  <entry id="ocs.53">
+    <gl>animal</gl>
+    <hw>zvěrĭ</hw>
+  </entry>
+  <entry id="ocs.54">
+    <gl>fish</gl>
+    <hw>ryba</hw>
+  </entry>
+  <entry id="ocs.55">
+    <gl>bird</gl>
+    <hw>pŭtica</hw>
+  </entry>
+  <entry id="ocs.56">
+    <gl>dog</gl>
+    <hw>pĭsŭ</hw>
+  </entry>
+  <entry id="ocs.57">
+    <gl>louse</gl>
+    <hw>vŭšĭ</hw>
+  </entry>
+  <entry id="ocs.58">
+    <gl>snake</gl>
+    <hw>zmija</hw>
+  </entry>
+  <entry id="ocs.59">
+    <gl>worm</gl>
+    <hw>črĭvĭ</hw>
+  </entry>
+  <entry id="ocs.60">
+    <gl>tree</gl>
+    <hw>drěvo</hw>
+  </entry>
+  <entry id="ocs.61">
+    <gl>forest</gl>
+    <hw>lěsŭ</hw>
+  </entry>
+  <entry id="ocs.62">
+    <gl>stick</gl>
+    <hw>palica</hw>
+  </entry>
+  <entry id="ocs.63">
+    <gl>fruit</gl>
+    <hw>ovošte</hw>
+  </entry>
+  <entry id="ocs.64">
+    <gl>seed</gl>
+    <hw>sěmę</hw>
+  </entry>
+  <entry id="ocs.65">
+    <gl>leaf</gl>
+    <hw>listŭ</hw>
+  </entry>
+  <entry id="ocs.66">
+    <gl>root</gl>
+    <hw>korenĭ</hw>
+  </entry>
+  <entry id="ocs.67">
+    <gl>bark (of a tree)</gl>
+    <hw>kora</hw>
+  </entry>
+  <entry id="ocs.68">
+    <gl>flower</gl>
+    <hw>cvětŭ</hw>
+  </entry>
+  <entry id="ocs.69">
+    <gl>grass</gl>
+    <hw>trava</hw>
+  </entry>
+  <entry id="ocs.70">
+    <gl>rope</gl>
+    <hw>vĭrvĭ</hw>
+  </entry>
+  <entry id="ocs.71">
+    <gl>skin</gl>
+    <hw>koža</hw>
+  </entry>
+  <entry id="ocs.72">
+    <gl>meat</gl>
+    <hw>męso</hw>
+  </entry>
+  <entry id="ocs.73">
+    <gl>blood</gl>
+    <hw>kry</hw>
+  </entry>
+  <entry id="ocs.74">
+    <gl>blood</gl>
+    <hw>ruda</hw>
+  </entry>
+  <entry id="ocs.75">
+    <gl>bone</gl>
+    <hw>kostĭ</hw>
+  </entry>
+  <entry id="ocs.76">
+    <gl>fat (noun)</gl>
+    <hw>tukŭ</hw>
+  </entry>
+  <entry id="ocs.77">
+    <gl>egg</gl>
+    <hw>aice</hw>
+  </entry>
+  <entry id="ocs.78">
+    <gl>horn</gl>
+    <hw>rogŭ</hw>
+  </entry>
+  <entry id="ocs.79">
+    <gl>tail</gl>
+    <hw>opašŭ</hw>
+  </entry>
+  <entry id="ocs.80">
+    <gl>tail</gl>
+    <hw>xvostŭ</hw>
+  </entry>
+  <entry id="ocs.81">
+    <gl>feather</gl>
+    <hw>perie</hw>
+  </entry>
+  <entry id="ocs.82">
+    <gl>hair</gl>
+    <hw>vlasŭ</hw>
+  </entry>
+  <entry id="ocs.83">
+    <gl>head</gl>
+    <hw>glava</hw>
+  </entry>
+  <entry id="ocs.84">
+    <gl>ear</gl>
+    <hw>uxo</hw>
+  </entry>
+  <entry id="ocs.85">
+    <gl>eye</gl>
+    <hw>oko</hw>
+  </entry>
+  <entry id="ocs.86">
+    <gl>nose</gl>
+    <hw>nosŭ</hw>
+  </entry>
+  <entry id="ocs.87">
+    <gl>mouth</gl>
+    <hw>usta</hw>
+  </entry>
+  <entry id="ocs.88">
+    <gl>tooth</gl>
+    <hw>zǫbŭ</hw>
+  </entry>
+  <entry id="ocs.89">
+    <gl>tongue (organ)</gl>
+    <hw>językŭ</hw>
+  </entry>
+  <entry id="ocs.90">
+    <gl>fingernail</gl>
+    <hw>nogŭtĭ</hw>
+  </entry>
+  <entry id="ocs.91">
+    <gl>foot</gl>
+    <hw>stopa</hw>
+  </entry>
+  <entry id="ocs.92">
+    <gl>leg</gl>
+    <hw>noga</hw>
+  </entry>
+  <entry id="ocs.93">
+    <gl>knee</gl>
+    <hw>kolěno</hw>
+  </entry>
+  <entry id="ocs.94">
+    <gl>hand</gl>
+    <hw>rǫka</hw>
+  </entry>
+  <entry id="ocs.95">
+    <gl>wing</gl>
+    <hw>krilo</hw>
+  </entry>
+  <entry id="ocs.96">
+    <gl>belly</gl>
+    <hw>črěvo</hw>
+  </entry>
+  <entry id="ocs.97">
+    <gl>guts</gl>
+    <hw>ǫtroba</hw>
+  </entry>
+  <entry id="ocs.98">
+    <gl>guts</gl>
+    <hw>črěvo</hw>
+  </entry>
+  <entry id="ocs.99">
+    <gl>neck</gl>
+    <hw>šię</hw>
+  </entry>
+  <entry id="ocs.100">
+    <gl>back</gl>
+    <hw>xrebetŭ</hw>
+  </entry>
+  <entry id="ocs.101">
+    <gl>breast</gl>
+    <hw>prĭsi</hw>
+  </entry>
+  <entry id="ocs.102">
+    <gl>heart</gl>
+    <hw>srĭdĭce</hw>
+  </entry>
+  <entry id="ocs.103">
+    <gl>liver</gl>
+    <hw>-------</hw>
+  </entry>
+  <entry id="ocs.104">
+    <gl>to drink</gl>
+    <hw>piti</hw>
+  </entry>
+  <entry id="ocs.105">
+    <gl>to eat</gl>
+    <hw>jasti</hw>
+  </entry>
+  <entry id="ocs.106">
+    <gl>to bite</gl>
+    <hw>xapati</hw>
+  </entry>
+  <entry id="ocs.107">
+    <gl>to suck</gl>
+    <hw>sŭsati</hw>
+  </entry>
+  <entry id="ocs.108">
+    <gl>to spit</gl>
+    <hw>plĭvati</hw>
+  </entry>
+  <entry id="ocs.109">
+    <gl>to vomit</gl>
+    <hw>blĭvati</hw>
+  </entry>
+  <entry id="ocs.110">
+    <gl>to blow</gl>
+    <hw>duxati</hw>
+  </entry>
+  <entry id="ocs.111">
+    <gl>to breathe</gl>
+    <hw>dyxati</hw>
+  </entry>
+  <entry id="ocs.112">
+    <gl>to laugh</gl>
+    <hw>smijati</hw>
+  </entry>
+  <entry id="ocs.113">
+    <gl>to see</gl>
+    <hw>viděti</hw>
+  </entry>
+  <entry id="ocs.114">
+    <gl>to hear</gl>
+    <hw>slyšati</hw>
+  </entry>
+  <entry id="ocs.115">
+    <gl>to know</gl>
+    <hw>věděti</hw>
+  </entry>
+  <entry id="ocs.116">
+    <gl>to know</gl>
+    <hw>znati</hw>
+  </entry>
+  <entry id="ocs.117">
+    <gl>to think</gl>
+    <hw>mysliti</hw>
+  </entry>
+  <entry id="ocs.118">
+    <gl>to smell</gl>
+    <hw>-------</hw>
+  </entry>
+  <entry id="ocs.119">
+    <gl>to fear</gl>
+    <hw>bojati</hw>
+  </entry>
+  <entry id="ocs.120">
+    <gl>to sleep</gl>
+    <hw>sŭpati</hw>
+  </entry>
+  <entry id="ocs.121">
+    <gl>to live</gl>
+    <hw>žiti</hw>
+  </entry>
+  <entry id="ocs.122">
+    <gl>to die</gl>
+    <hw>umrěti</hw>
+  </entry>
+  <entry id="ocs.123">
+    <gl>to kill</gl>
+    <hw>ubiti</hw>
+  </entry>
+  <entry id="ocs.124">
+    <gl>to fight</gl>
+    <hw>brati</hw>
+  </entry>
+  <entry id="ocs.125">
+    <gl>to hunt</gl>
+    <hw>loviti</hw>
+  </entry>
+  <entry id="ocs.126">
+    <gl>to hit</gl>
+    <hw>udariti</hw>
+  </entry>
+  <entry id="ocs.127">
+    <gl>to cut</gl>
+    <hw>sěšti</hw>
+  </entry>
+  <entry id="ocs.128">
+    <gl>to cut</gl>
+    <hw>rězati</hw>
+  </entry>
+  <entry id="ocs.129">
+    <gl>to split</gl>
+    <hw>-------</hw>
+  </entry>
+  <entry id="ocs.130">
+    <gl>to stab</gl>
+    <hw>bosti</hw>
+  </entry>
+  <entry id="ocs.131">
+    <gl>to scratch</gl>
+    <hw>česati</hw>
+  </entry>
+  <entry id="ocs.132">
+    <gl>to dig</gl>
+    <hw>kopati</hw>
+  </entry>
+  <entry id="ocs.133">
+    <gl>to swim</gl>
+    <hw>plavati</hw>
+  </entry>
+  <entry id="ocs.134">
+    <gl>to fly</gl>
+    <hw>letěti</hw>
+  </entry>
+  <entry id="ocs.135">
+    <gl>to walk</gl>
+    <hw>xoditi</hw>
+  </entry>
+  <entry id="ocs.136">
+    <gl>to come</gl>
+    <hw>------</hw>
+  </entry>
+  <entry id="ocs.137">
+    <gl>to lie (as in a bed)</gl>
+    <hw>ležati</hw>
+  </entry>
+  <entry id="ocs.138">
+    <gl>to sit</gl>
+    <hw>sěděti</hw>
+  </entry>
+  <entry id="ocs.139">
+    <gl>to stand</gl>
+    <hw>stati</hw>
+  </entry>
+  <entry id="ocs.140">
+    <gl>to turn (intransitive)</gl>
+    <hw>-------</hw>
+  </entry>
+  <entry id="ocs.141">
+    <gl>to fall</gl>
+    <hw>pasti</hw>
+  </entry>
+  <entry id="ocs.142">
+    <gl>to fall</gl>
+    <hw>padati</hw>
+  </entry>
+  <entry id="ocs.143">
+    <gl>to give</gl>
+    <hw>dati</hw>
+  </entry>
+  <entry id="ocs.144">
+    <gl>to give</gl>
+    <hw>dajati</hw>
+  </entry>
+  <entry id="ocs.145">
+    <gl>to hold</gl>
+    <hw>drĭžati</hw>
+  </entry>
+  <entry id="ocs.146">
+    <gl>to squeeze</gl>
+    <hw>--------</hw>
+  </entry>
+  <entry id="ocs.147">
+    <gl>to rub</gl>
+    <hw>trĭti</hw>
+  </entry>
+  <entry id="ocs.148">
+    <gl>to wash</gl>
+    <hw>myti</hw>
+  </entry>
+  <entry id="ocs.149">
+    <gl>to wipe</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.150">
+    <gl>to pull</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.151">
+    <gl>to push</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.152">
+    <gl>to throw</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.153">
+    <gl>to tie</gl>
+    <hw>vęzati</hw>
+  </entry>
+  <entry id="ocs.154">
+    <gl>to say</gl>
+    <hw>rešti</hw>
+  </entry>
+  <entry id="ocs.155">
+    <gl>to sing</gl>
+    <hw>pěti</hw>
+  </entry>
+  <entry id="ocs.156">
+    <gl>to play</gl>
+    <hw>igrati</hw>
+  </entry>
+  <entry id="ocs.157">
+    <gl>to flow</gl>
+    <hw>tešti</hw>
+  </entry>
+  <entry id="ocs.158">
+    <gl>to freeze</gl>
+    <hw>pomrŭznǫti</hw>
+  </entry>
+  <entry id="ocs.159">
+    <gl>sun</gl>
+    <hw>slŭnĭce</hw>
+  </entry>
+  <entry id="ocs.160">
+    <gl>moon</gl>
+    <hw>měsęcĭ</hw>
+  </entry>
+  <entry id="ocs.161">
+    <gl>moon</gl>
+    <hw>luna</hw>
+  </entry>
+  <entry id="ocs.162">
+    <gl>star</gl>
+    <hw>zvězda</hw>
+  </entry>
+  <entry id="ocs.163">
+    <gl>water</gl>
+    <hw>voda</hw>
+  </entry>
+  <entry id="ocs.164">
+    <gl>rain</gl>
+    <hw>dŭždĭ</hw>
+  </entry>
+  <entry id="ocs.165">
+    <gl>river</gl>
+    <hw>rěka</hw>
+  </entry>
+  <entry id="ocs.166">
+    <gl>lake</gl>
+    <hw>jezero</hw>
+  </entry>
+  <entry id="ocs.167">
+    <gl>sea</gl>
+    <hw>morje</hw>
+  </entry>
+  <entry id="ocs.168">
+    <gl>salt</gl>
+    <hw>solĭ</hw>
+  </entry>
+  <entry id="ocs.169">
+    <gl>stone</gl>
+    <hw>kamy</hw>
+  </entry>
+  <entry id="ocs.170">
+    <gl>sand</gl>
+    <hw>pěsŭkŭ</hw>
+  </entry>
+  <entry id="ocs.171">
+    <gl>dust</gl>
+    <hw>praxŭ</hw>
+  </entry>
+  <entry id="ocs.172">
+    <gl>earth</gl>
+    <hw>zemlja</hw>
+  </entry>
+  <entry id="ocs.173">
+    <gl>cloud</gl>
+    <hw>oblakŭ</hw>
+  </entry>
+  <entry id="ocs.174">
+    <gl>fog</gl>
+    <hw>mĭgla</hw>
+  </entry>
+  <entry id="ocs.175">
+    <gl>sky</gl>
+    <hw>nebo</hw>
+  </entry>
+  <entry id="ocs.176">
+    <gl>wind</gl>
+    <hw>větrŭ</hw>
+  </entry>
+  <entry id="ocs.177">
+    <gl>snow</gl>
+    <hw>sněgŭ</hw>
+  </entry>
+  <entry id="ocs.178">
+    <gl>ice</gl>
+    <hw>ledŭ</hw>
+  </entry>
+  <entry id="ocs.179">
+    <gl>smoke</gl>
+    <hw>dymŭ</hw>
+  </entry>
+  <entry id="ocs.180">
+    <gl>fire</gl>
+    <hw>ognĭ</hw>
+  </entry>
+  <entry id="ocs.181">
+    <gl>ash</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.182">
+    <gl>to burn</gl>
+    <hw>gorěti</hw>
+  </entry>
+  <entry id="ocs.183">
+    <gl>road</gl>
+    <hw>pǫtĭ</hw>
+  </entry>
+  <entry id="ocs.184">
+    <gl>mountain</gl>
+    <hw>gora</hw>
+  </entry>
+  <entry id="ocs.185">
+    <gl>red</gl>
+    <hw>črŭvenŭ</hw>
+  </entry>
+  <entry id="ocs.186">
+    <gl>green</gl>
+    <hw>zelenŭ</hw>
+  </entry>
+  <entry id="ocs.187">
+    <gl>yellow</gl>
+    <hw>-----</hw>
+  </entry>
+  <entry id="ocs.188">
+    <gl>white</gl>
+    <hw>bělŭ</hw>
+  </entry>
+  <entry id="ocs.189">
+    <gl>black</gl>
+    <hw>črŭnŭ</hw>
+  </entry>
+  <entry id="ocs.190">
+    <gl>night</gl>
+    <hw>noštĭ</hw>
+  </entry>
+  <entry id="ocs.191">
+    <gl>day</gl>
+    <hw>dĭnĭ</hw>
+  </entry>
+  <entry id="ocs.192">
+    <gl>year</gl>
+    <hw>lěto</hw>
+  </entry>
+  <entry id="ocs.193">
+    <gl>warm</gl>
+    <hw>toplŭ</hw>
+  </entry>
+  <entry id="ocs.194">
+    <gl>cold</gl>
+    <hw>xladĭnŭ</hw>
+  </entry>
+  <entry id="ocs.195">
+    <gl>cold</gl>
+    <hw>studenŭ</hw>
+  </entry>
+  <entry id="ocs.196">
+    <gl>full</gl>
+    <hw>isplĭnĭ</hw>
+  </entry>
+  <entry id="ocs.197">
+    <gl>new</gl>
+    <hw>novŭ</hw>
+  </entry>
+  <entry id="ocs.198">
+    <gl>old</gl>
+    <hw>starŭ</hw>
+  </entry>
+  <entry id="ocs.199">
+    <gl>good</gl>
+    <hw>dobrŭ</hw>
+  </entry>
+  <entry id="ocs.200">
+    <gl>bad</gl>
+    <hw>zŭlŭ</hw>
+  </entry>
+  <entry id="ocs.201">
+    <gl>rotten</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.202">
+    <gl>dirty</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.203">
+    <gl>straight</gl>
+    <hw>pravŭ</hw>
+  </entry>
+  <entry id="ocs.204">
+    <gl>straight</gl>
+    <hw>ravĭnŭ</hw>
+  </entry>
+  <entry id="ocs.205">
+    <gl>round</gl>
+    <hw>----</hw>
+  </entry>
+  <entry id="ocs.206">
+    <gl>sharp (as a knife)</gl>
+    <hw>ostrŭ</hw>
+  </entry>
+  <entry id="ocs.207">
+    <gl>dull (as a knife)</gl>
+    <hw>-----</hw>
+  </entry>
+  <entry id="ocs.208">
+    <gl>smooth</gl>
+    <hw>gladŭkŭ</hw>
+  </entry>
+  <entry id="ocs.209">
+    <gl>wet</gl>
+    <hw>mokrŭ</hw>
+  </entry>
+  <entry id="ocs.210">
+    <gl>dry</gl>
+    <hw>suxŭ</hw>
+  </entry>
+  <entry id="ocs.211">
+    <gl>correct</gl>
+    <hw>pravŭ</hw>
+  </entry>
+  <entry id="ocs.212">
+    <gl>near</gl>
+    <hw>blizŭ</hw>
+  </entry>
+  <entry id="ocs.213">
+    <gl>far</gl>
+    <hw>dalĭnii</hw>
+  </entry>
+  <entry id="ocs.214">
+    <gl>far</gl>
+    <hw>dalĭnŭ</hw>
+  </entry>
+  <entry id="ocs.215">
+    <gl>right</gl>
+    <hw>desnŭ</hw>
+  </entry>
+  <entry id="ocs.216">
+    <gl>right</gl>
+    <hw>pravŭ</hw>
+  </entry>
+  <entry id="ocs.217">
+    <gl>left</gl>
+    <hw>lěvŭ</hw>
+  </entry>
+  <entry id="ocs.218">
+    <gl>at</gl>
+    <hw>u</hw>
+  </entry>
+  <entry id="ocs.219">
+    <gl>at</gl>
+    <hw>pri</hw>
+  </entry>
+  <entry id="ocs.220">
+    <gl>in</gl>
+    <hw>vŭ</hw>
+  </entry>
+  <entry id="ocs.221">
+    <gl>with</gl>
+    <hw>sŭ</hw>
+  </entry>
+  <entry id="ocs.222">
+    <gl>and</gl>
+    <hw>i</hw>
+  </entry>
+  <entry id="ocs.223">
+    <gl>if</gl>
+    <hw>ašte</hw>
+  </entry>
+  <entry id="ocs.224">
+    <gl>because</gl>
+    <hw>ponʹeže</hw>
+  </entry>
+  <entry id="ocs.225">
+    <gl>name</gl>
+    <hw>imę</hw>
+  </entry>
+  <entry id="ocs.226">
+    <gl>friend</gl>
+    <hw>drugŭ</hw>
+  </entry>
+  <entry id="ocs.227">
+    <gl>other</gl>
+    <hw>drugŭ</hw>
+  </entry>
+</lexicon>

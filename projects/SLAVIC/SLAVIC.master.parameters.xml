@@ -1,0 +1,13 @@
+<params>
+  <attested name="cz" file="cz.data.xml"/>
+  <attested name="pl" file="pl.data.xml"/>
+  <attested name="bcs" file="bcs.data.xml"/>
+  <attested name="sl" file="sl.data.xml"/>
+  <attested name="rus" file="rus.data.xml"/>
+  <attested name="ocs" file="ocs.data.xml"/>
+  <reconstruction name="standard">
+    <proto_language name="PSLAVIC" correspondences="SLAVIC.correspondences.xml"/>
+    <action name="upstream" target="PSLAVIC"/>
+    <action name="upstream" from="cz,pl,bcs,sl,rus,ocs" to="PSLAVIC"/>
+  </reconstruction>
+</params>
