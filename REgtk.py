@@ -87,6 +87,7 @@ def make_syllable_canon_widget(syllable_canon):
     grid.regex_entry = make_entry(syllable_canon.regex.pattern)
     grid.sound_class_entry = make_entry(str(syllable_canon.sound_classes))
     grid.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
+    grid.context_match_type_entry = make_entry(syllable_canon.context_match_type)
     grid.attach(Gtk.Label(label='Syllable regex:'), 0, 0, 1, 1)
     grid.attach(grid.regex_entry, 1, 0, 1, 1)
     grid.attach(Gtk.Label(label='Sound classes:'), 0, 1, 1, 1)
@@ -94,13 +95,18 @@ def make_syllable_canon_widget(syllable_canon):
     grid.attach(Gtk.Label(label='Supra-segmentals'), 0, 2, 1, 1)
     grid.attach(grid.supra_segmental_entry,
                 1, 2, 1, 1)
+    grid.attach(Gtk.Label(label='Context match type'), 0, 3, 1, 1)
+    grid.attach(grid.context_match_type_entry,
+                1, 3, 1, 1)
     return grid
 
 def read_syllable_canon_from_widget(widget):
     return RE.SyllableCanon(
         eval(widget.sound_class_entry.get_text()),
         widget.regex_entry.get_text(),
-        [x.strip() for x in widget.supra_segmental_entry.get_text().split(',')])
+        [x.strip() for x in widget.supra_segmental_entry.get_text().split(',')],
+        widget.context_match_type_entry.get_text()
+    )
 
 def make_lexicon_widget(words):
     store = Gtk.ListStore(str, str)
