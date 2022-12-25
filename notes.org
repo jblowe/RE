@@ -1,0 +1,79 @@
+* DONE make null sound actually reconstruct back
+** to do this, just make tokenize match anything to '' while fitting syllable canon
+** it's possible to make a distinction between empty set notation and '' notation
+*** empty set shows explicit deletion
+
+* Statistics features
+"Need to know how many forms fail to reconstruct in each lexicon, and
+ which one's reconstruct but fail to find their way into a final
+ set. Both the counts and the actual values will be useful; probably
+ need to put the "failures" in one or more separate files in the
+ "standard" XML format so they can be studied and run again on their
+ own. We'll also want a more details characterization of the final
+ cognate sets: number of forms, distribution of forms (avg no of forms
+ per set, how many sets have forms from all lgs, all but one lg,
+ etc. etc.  Probably this should be written as a "post set creation
+ function" -- i.e. it will be useful to be able to run it separately,
+ so as to be able to characterize differences between sets created by
+ different runs. It will also be useful to know which correspondence
+ rows are used to create the sets -- it is known that not all the rows
+ are used, depending on the datasets input, etc. ..."
+
+** DONE Record how many forms fail to reconstruct in lexicon
+** DONE Record which ones reconstruct but don't go into the final set
+** DONE Counts and actual objects
+** TODO More details on final cognate sets
+*** TODO Number of forms
+*** TODO Distribution of forms
+- average number of forms per set
+- how many have sets have forms from all languages/all but one
+  languages
+*** TODO Record which correspondences were never used for a data set, etc
+
+* TODO Add chronology
+* DONE Add support for contexts
+* TODO Add more strip()
+** TODO Make code resilient to comma separated lists like p,t,k vs p, t, k
+
+** Use a zig zag approach for epenthesis
+Downstream to get possible forms
+
+* TODO Add a stressed syllable in the syllable canon following A!
+* TODO Panini's rule
+* Notes
+** Context algorithm
+Consider the epenthesis rule:
+eskuela -> schòla
+
+how do w model this change?
+nil / _ s[STOP]-> e or at least parse it?
+
+
+** Syllable canon only specified for proto language - syllable
+structure properties emergent from correspondence rules
+
+** How to handle morphemes
+caridad = cari + dad
+
+
+** How to handle stress
+*** in terms of contexts, we don't want it to act like vowels
+*** but we still want it to bleed through
+
+* instances where we need chronology
+** awtro ~ altro
+** nasals and denasilization
+
+* TODO How do we deal with stress
+For example, we can't have italian *pol'sare integrate with pu'lsare
+
+
+* Restructure file loading etc.
+- Load lexicons, table of reconstructions into a running program.
+- Restructure how incremental modification works, etc.
+
+* incremental runs of 'tree' reconstructions
+- one change causes
+- [X] one should be able to make incremental changes to the table of
+  correspondences without saving ### This is now done in the GTK
+  interface
