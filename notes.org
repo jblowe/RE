@@ -1,0 +1,19 @@
+JEZERO in OCS doesn't reconstruct... so its an irregularity?
+
+WHO KDO WHY
+
+look at kridlo. see that the russian krydlo does not appear. possibly
+analogous.
+
+### This is indeed due to irregular sound change,
+
+
+Syllable canon:
+
+V?((CC?C?V)|((CC?C?Y)?(CC?C?y)))+
+
+Y = strong yer
+y = weak yer
+
+--- supposed to encode Havlík's law, i.e. where the position of the
+    strong and weak yers are.
