@@ -35,8 +35,8 @@
                                  <div style="width: 60px;">
                                      <a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download""></span></a>
                                      <a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?paragraph"><span class="fas fa-file-alt"></span></a>
-                                      <input type="checkbox" value="{{file}}" name="{{file}}">
-                                      <!-- label for="{{file}}">{{file}}</label -->
+                                     <input type="checkbox" value="{{file}}" name="{{file}}">
+                                     <!-- label for="{{file}}">{{file}}</label -->
                                  <div>
                                </td>
                             % else:
@@ -45,8 +45,8 @@
                             <td><a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?tabular">{{short_file}}</a></td>
                         </tr>
                       % end
-
                 % end
+
                 </tbody>
             </table>
             </div>

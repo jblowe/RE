@@ -7,7 +7,7 @@
       % for file in files:
         <li>
             <a href="/get_file/{{data['tree']}}/{{data['project']}}/{{file}}">{{file}}</a>
-            <a href="/download_file/{{data['tree']}}/{{data['project']}}/{{file}}"><span class="glyphicon glyphicon glyphicon-download-alt"></span></a>
+            <a href="/download_file/{{data['tree']}}/{{data['project']}}/{{file}}"><span class="glyphicon-download-alt"></span></a>
         </li>
       % end
     </ul>
