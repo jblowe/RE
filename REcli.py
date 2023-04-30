@@ -97,6 +97,7 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
         compare.compare(args.experiment_path1, args.project, what_to_compare)
 elif command_args.command == 'upstream':
     print(time.asctime())
+    elapsed_time = time.time()
     print('Command line options used: ' + ' '.join(sys.argv[1:]))
 
     parameters_file = os.path.join(args.experiment_path,

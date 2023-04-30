@@ -29,7 +29,8 @@ class Correspondence:
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
-        return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
+        # return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
+        return f'{self.id}, {",".join(self.syllable_types)}, {self.proto_form}'
 
 class Lexicon:
     def __init__(self, language, forms, statistics=None):
