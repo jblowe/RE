@@ -148,7 +148,8 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
           <id>779</id>
           <rcn>c2.c194.c23.</rcn>
           <pfm>Bse&#x2D0;</pfm>
-          <ref>46 488 683 850 4674 4775 4835</ref>
+          <mel>heart</mel>
+          <melid>m6</melid>
           <sf>
             <rfx>
               <lg>ris</lg>

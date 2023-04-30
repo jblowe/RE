@@ -292,7 +292,7 @@ class REWindow(Gtk.Window):
 
     def __init__(self, settings, attested_lexicons):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
-                            default_height=800, default_width=1024)
+                            default_height=800, default_width=1400)
 
         statistics_pane = make_pane(vexpand=True, hexpand=True)
         statistics_view = Gtk.TextView()
