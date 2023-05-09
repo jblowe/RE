@@ -504,4 +504,24 @@
   <item dial="pra" to="tɕʰ">
     <from>cʰ</from>
   </item>
+  <item dial="tang" to="˩">
+    <from>¹¹</from>
+    <from>¹⁰</from>
+    <from>²²</from>
+    <from>²¹</from>
+    <from>²¹⁰</from>
+  </item>
+  <item dial="tang" to="˥">
+    <from>³²</from>
+    <from>³³</from>
+    <from>⁴²</from>
+    <from>⁴³</from>
+    <from>⁴¹</from>
+    <from>⁴⁴</from>
+    <from>⁴⁵</from>
+    <from>⁵⁴</from>
+    <from>⁵⁵</from>
+    <from>⁶⁵</from>
+    <from>⁶⁶</from>
+  </item>
 </fuzzy>
