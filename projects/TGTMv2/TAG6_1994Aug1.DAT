@@ -1,0 +1,3658 @@
+*   Nom du Ficher:       MONTAG
+*   contient les monosyllabes de Taglung (Tamang dialect)
+*   Fichier cree le 24 Avril 1989
+**   (plus "moretag.dat" 7 Jan 1994)
+*
+.tag   Xan-ba
+var   Xan-go
+dff   arcbouter (pot à dhero)
+dfe   to prop
+dfn   aDaune
+so   1972:34
+.tag   ³bam
+phon   bəm
+dff   épaule
+dfe   shoulder
+so   1972:43
+.tag   Xbam-ba
+dff   tremper
+dfe   to soak
+so   1972:15
+.tag   Xbaŋ
+dff   champ sec
+dfe   dry field
+ris   mraŋ
+so   1972:19
+.tag   ³baŋ-ba
+inf   fils
+dff   fort
+dfe   to be strong
+so   1972:20
+.tag   ³bek
+dff   nom de lieu
+dfe   place name
+so   1972:41
+.tag   ³ber-ba
+ris   ³per
+dff   avoir froid aux pieds
+dfe   to have cold feet
+so   1972:22
+..tag   ³ber-ba
+var   ³ber-dzi
+dff   ?av froid
+dfe   ?to be cold
+so   1972:65
+.tag   Xbjaŋ-go
+dff   jeter
+dfe   to throw away
+so   1972:11
+.tag   ³bjap
+dff   aile
+dfe   wing
+so   1972:54
+.tag   Xbjup-pa
+dff   enterrer
+dfe   to bury
+so   1972:33
+.tag   ³bor-la
+dff   emporter
+dfe   to take away
+so   1972:33
+.tag   ³bra
+inf   le fils
+dff   falaise
+dfe   cliff
+so   1972:20
+..tag   Xbraː
+var   praː
+ton   51
+dff   falaise
+dfe   cliff
+so   1972:32
+.tag   Xcip-pa
+dff   mûr
+dfe   ripe
+dfn   chippieko
+ris   ¹cip
+so   1972:16
+.tag   Xcʰap-pa
+dff   faire chaud
+dfe   to be warm (weather)
+so   1972:41
+.tag   Xcʰjek-la
+dff   battre
+dfe   to hit
+so   1972:15
+.tag   ³ɖam
+dff   brulé, gâché
+dfe   spoilt (burnt)
+so   1972:35
+.tag   Xɖeː-ba
+dff   se déchirer
+dfe   to be torn
+phr   kwan ɖeː-ba (whence intervocalic voicing?)
+so   1972:15
+.tag   ³ɖui-go
+dff   tirer
+dfe   to pull
+so   1972:19
+.tag   Xdza
+ton   42
+dff   fils
+dfe   son
+so   1972:50
+.tag   ³dzjaː-go
+phr   ³tan ³dzjaːgo|asseyez-vous
+dff   s'asseoir (hh)
+dfe   to sit (hh)
+so   1972:59
+.tag   ³dzju-dzi
+dff   maigrir
+dfe   to become thin
+so   1972:19
+.tag   Xe
+phon   ɛ ³³
+dff   toi
+dfe   you
+inf   la jeune bru
+so   1972:21
+..tag   Xe
+phon   jɛ
+dff   toi
+dfe   you
+so   1972:28
+.tag   ³ga
+dff   chale
+dfe   shawl
+so   1972:64
+.tag   Xgur-ba
+dff   tomber (arbre)
+dfe   to fall (tree)
+phr   toŋ gur-ba (whence intervocalic voicing?)
+so   1972:15
+.tag   ³gur-dzi
+dff   gronder (ciel)
+dfe   to rumble (sky)
+so   1972:65
+.tag   Xha
+dff   venir
+dfe   to come
+phr   ta-ha-dzi
+so   1972:13
+..tag   Xha-ba
+dff   venir
+dfe   to come
+so   1972:26
+.tag   Xhai-ma
+dff   quand
+dfe   when
+so   1972:53
+.tag   Xhan-aŋ
+dff   vers où
+dfe   to where
+so   1972:37
+.tag   Xhan-ba
+dff   couper l'herbe
+dfe   to cut grass
+so   1972:26
+.tag   Xhaŋ-ba
+dff   avoir froid
+dfe   to feel cold
+so   1972:26
+..tag   Xhaŋ-dzi
+ton   45.43
+dff   avoir froid
+dfe   to feel cold
+so   1972:64
+.tag   Xhar-ba
+ris   khar
+dff   sec
+dfe   to dry
+so   1972:26
+..tag   Xhar-ba
+ton   55.44
+dff   sécher
+dfe   to dry
+so   1972:62
+..tag   Xhar-ʃi
+dff   se dessécher
+dfe   to dry out
+so   1972:15
+.tag   Xhar-ba
+ton   44.32
+dff   secouer
+dfe   to shake
+hom   'sécher'
+so   1972:47
+..tag   Xhar-ba
+ton   44.44
+dff   secouer, brosser
+dfe   to shake dust off
+so   1972:62
+..tag   Xhar-go
+dff   faire tomber la terre des mottes
+dfe   to shake earth off clods
+ris   khar
+so   1972:19
+.tag   Xhen-ba
+dff   evoir faim
+dfe   to be hungry
+so   1972:27
+.tag   Xheː-ba
+dff   grimper
+dfe   to climb
+ris   ¹krat
+so   1972:14, 1972:27
+.tag   Xhim-ba
+ris   ¹kʰrim
+dff   tresser
+dfe   to make a rope
+so   1972:27
+.tag   Xhloŋ-ba
+dff   avaler
+dfe   to swallow
+so   1972:48
+.tag   Xho-ba
+dff   bruler
+dfe   to burn
+so   1972:7, 27
+..tag   ¹ho-dzi
+dff   bruler
+dfe   to burn
+so   1972:37
+.tag   Xhok-ka
+dff   profond
+dfe   deep
+so   1972:46
+.tag   Xhoː-ba
+dff   déplacer
+dfe   to move sthg
+dfe   to shift
+dfn   osa:rne
+so   1972:8, 26
+..tag   Xho-ba
+var   Xhwogo
+dff   déplacer
+dfe   to move (tr)
+dfn   osa:rne
+so   1972:37
+.tag   Xhũ
+ris   ³kruŋ
+dff   intestins
+dfe   guts
+so   1972:23
+.tag   Xhu
+dff   legume
+dfe   side-dish
+ton   545 <1972:61>
+ris   ²kʰu
+so   1972:42, 61
+.tag   Xhu
+ton   53
+dff   coudée
+dfe   cubit
+ris   ¹kru
+so   1972:61
+.tag   Xhu-ba
+ris   ²khru
+dff   laver
+dfe   to wash
+so   1972:27
+.tag   Xhwa
+dff   cheveux
+dfe   hair
+so   1972:14, 18
+..tag   ¹hwa
+dff   cheveux
+dfe   hair
+inf   la jeune bru
+so   1972:21
+.tag   ⁴hwa
+dff   blé
+dfe   wheat
+inf   la jeune bru
+so   1972:21
+.tag   Xhwa-ba
+dff   pleurer
+dfe   to cry
+ris   ¹kra
+so   1972:23
+.tag   Xhwa-go
+dff   nourrir
+dfe   to feed
+so   1972:24
+.tag   Xhwai
+ris   ¹kwat
+dff   buse
+dfe   buzzard
+so   1972:23
+..tag   Xhwai
+ton   52
+dff   buse
+dfe   hawk
+so   1972:55
+.tag   Xhwai
+ris   ²kʰwal
+dff   faire chauffer, pasteuriser
+dfe   to warm up (liquid)
+1inf   la vieille
+1so   1972:24
+so   1972:27
+..tag   Xhwai-ba
+ton   53.33
+dff   faire bouillir
+dfe   to boil
+so   1972:63
+.tag   ¹hwan
+dff   vetement
+dfe   clothes
+inf   la jeune bru
+so   1972:21
+.tag   Xhwan-ba
+ton   55.44
+dff   porter vet. ou chaussures
+dfe   to wear (ckothes or shoes)
+so   1972:64
+.tag   Xhwaŋ-ba
+phr   hwaŋ-ba alu|pommes de terre cuites a la cendre
+dff   rotir
+dfe   to roast
+ris   kʰraŋ
+so   1972:34
+.tag   Xhwap-pa
+dff   mordre, ronger (ongles)
+dfe   to bite
+ris   ¹kʰrap
+so   1972:16, 18
+..tag   Xhwap-pa
+dff   mordre
+dfe   to bite
+ris   ¹khrap
+so   1972:23
+..tag   Xhwap-pa
+ton   55.44
+dff   mordre
+dfe   to bite
+so   1972:30
+.tag   ³jam
+phon   jəm
+phr   ³jam-la kan|(une injure menacante)
+dff   ??
+dfe   ??
+so   1972:60
+.tag   ³jap-pa
+dff   vanner
+dfe   to winnow
+so   1972:47
+.tag   Xjaː
+dff   main
+dfe   hand
+so   1972:42
+.tag   Xjom-lo
+phon   jɔmlɔ jaː
+dff   gauche
+dfe   left hand
+so   1972:52
+.tag   Xjoŋ-ba
+dff   secouer, bercer
+dfe   to rock, shake
+ton   44.22
+so   1972:47
+.tag   Xju
+dff   descendre
+dfe   descend
+so   1972:6
+.tag   Xju-ba
+ton   33.33
+dff   tomber (pluie)
+dfe   to rain
+so   1972:31
+..tag   Xju-dzi
+dff   pleuvoir
+dfe   to rain
+so   1972:36
+.tag   Xju-go
+ton   33.44
+dff   verser
+dfe   to pour
+so   1972:31
+.tag   Xka-ba
+dff   barrer
+dfe   to stop (river)
+phr   sjoŋ ka-ba
+so   1972:11
+.tag   Xkai-ba
+dff   prendre un certain temps
+dfe   to require time
+so   1972:28
+.tag   ³kal-ba
+dff   frire
+dfe   to fry
+phr   cʰjukuri ³kal-ba|frire dans l'huile
+so   1972:16
+..tag   Xkal-ba
+dff   frire
+dfe   to fry
+ton   44.44 . refuse 45.43
+so   1972:48
+.tag   Xkam
+var   kəm
+dff   fiel
+dfe   bile
+so   1972:7
+.tag   Xkam
+var   kəm
+dff   menton
+dfe   chin
+so   1972:7
+..tag   Xkam
+phon   kəm
+dff   menton
+dfe   chin
+so   1972:43
+.tag   Xkan
+dff   riz
+dfe   rice
+so   1972:11
+..tag   Xkan
+phon   kən
+dff   riz cuit
+dfe   cooked rice
+so   1972:42
+.tag   Xkaŋ
+dff   jambe
+dfe   leg
+so   1972:22
+so   1972:42
+.tag   ³kaŋ
+phon   back /a/
+dff   montagne
+dfe   hill
+so   1972:32
+.tag   Xkaŋ-ba
+ton   55.44
+dff   touiller la boule
+dfe   to stir meal
+so   1972:34
+.tag   ³kap-pa
+ps   n
+dff   devers de terrace
+dfe   slope
+dfn   gaːro
+so   1972:9
+.tag   ³kap-pa
+dff   couvrir
+dfe   to cover
+so   1972:15
+so   1972:46
+.tag   Xkar-ba
+dff   mettre a cuire
+dfe   to set to cook
+so   1972:61
+.tag   Xke
+dff   ceinture
+dfe   belt
+dfn   patugaː
+so   1972:9
+.tag   ⁴ke
+dff   travail
+dfe   work
+so   1972:28
+..tag   Xke
+dff   travail
+dfe   work
+dfn   kaːm
+so   1972:9, 14
+.tag   ³keŋ
+dff   pain
+dfe   bread
+inf   la jeune bru
+so   1972:21
+..tag   ³keŋ
+dff   pain
+dfe   bread
+so   1972:35
+.tag   Xkeː
+ton   ⁴⁴
+dff   ceinture
+dfe   belt
+so   1972:28
+.tag   Xkeː-ba
+dff   maudire
+dfe   to curse
+so   1972:18
+.tag   Xkeː-lo
+phon   keːlɔ jaː
+dff   droite
+dfe   right hand
+so   1972:52
+.tag   ⁴kiː
+dff   un
+dfe   one
+so   1972:3
+.tag   Xkja-ba
+dff   démanger
+dfe   to itch
+so   1972:42
+.tag   Xkja-ba
+ton   454 ou 44 . looks like /1/
+dff   attacher en chignon
+dfe   to pin hair up
+ris   cf ¹kʰjap
+so   1972:58
+.tag   Xkjal-ba
+ton   55.33
+dff   nager
+dfe   to swim
+so   1972:30
+.tag   ⁴kjam
+ton   52 si long, 54 si court
+dff   chemin
+dfe   road
+so   1972:32
+.tag   Xkjan-ba
+dff   ruminer
+dfe   to chew cud
+so   1972:48
+.tag   Xkjen
+dff   beau-pere
+dfe   father in law
+so   1972:51
+.tag   ³kjo
+dff   lac
+dfe   lake
+so   1972:59
+.tag   Xkjo-go
+dff   peser
+dfe   to weight
+ris   ²kot
+so   1972:18
+.tag   Xkjoŋ
+dff   tout, entier
+dfe   the whole
+so   1972:36
+.tag   Xkju
+dff   eau
+dfe   water
+so   1972:8
+..tag   Xkju
+ton   55, 44
+dff   eau
+dfe   water
+so   1972:30, 31
+.tag   Xkju-ba
+dff   casser (bois)
+dfe   to break (wood)
+so   1972:15
+.tag   Xkli
+dff   feces
+dfe   feces
+phr   kli ʃjorba|dɟfɟquer
+so   1972:47
+.tag   ⁴klu-si
+ton   55.22
+dff   acheter
+dfe   to buy
+so   1972:65
+.tag   ³ko
+dff   dos
+dfe   back
+so   1972:42
+.tag   Xko-ba
+dff   casser le maïs
+dfe   to break off (corn)
+Ptam   hok
+so   1972:16
+.tag   Xkon
+dff   petit-fils, neveu
+dfe   grand-son, nephew
+so   1972:51
+.tag   Xkoŋ-ba
+ton   45.43
+dff   dur
+dfe   hard
+so   1972:62
+.tag   Xkoŋ-ba
+ton   44.44
+dff   s'accroupir
+dfe   to squat
+so   1972:62
+.tag   Xkoŋ-ba
+ton   11.11 (?breathy)
+dff   trembler de froid
+dfe   to shiver
+so   1972:62
+.tag   Xkor
+phon   ton mid level
+dff   unité
+dfe   unit
+inf   la jeune bru
+so   1972:21
+.tag   ᴸkor
+dff   unité
+dfe   unit
+phr   kor ki:|one
+so   1972:3
+.tag   Xkriŋ-ba
+ris   ¹kriŋ
+dff   crier
+dfe   to shout
+so   1972:27
+.tag   ²kuː
+dff   neuf
+dfe   nine
+so   1972:3
+.tag   Xkuː-ba
+ton   55.54
+dff   porter un chapeau
+dfe   to wear a hat
+ris   ¹kuː
+so   1972:64
+.tag   Xkwan
+dff   vàtement
+dfe   clothes
+dfn   lugaː
+so   1972:8, 15
+.tag   Xkʰa-dzi
+dff   suffire
+dfe   to suffice
+syn   jo-dzi
+so   1972:44
+.tag   Xkʰeː-ba
+dff   lire, psalmodier
+dfe   to read, chant
+so   1972:18
+.tag   Xkʰi
+dff   emprunter, rendre
+dfe   to borrow, give back
+phr   khi pin-ba (whence shortness of vowel?)
+ris   ²kʰit
+so   1972:17
+.tag   Xkhi-go
+dff   attacher
+dfe   to tie
+so   1972:28
+.tag   Xkʰja-ba
+ton   55.44
+dff   rapiécer
+dfe   to patch
+so   1972:34
+.tag   Xkʰjoe-ba
+ris   kʰjo:
+dff   remuer en faisant couler, servir le riz
+dfe   to laddle
+dfn   paska:une
+so   1972:26, 35
+.tag   Xkʰlak-pa
+dff   faire cuire un liquide
+dfe   to cook a liquid
+so   1972:27
+.tag   Xkʰlap
+quot   me kʰlap
+dff   boeuf
+dfe   ox
+dfn   goru
+so   1972:5
+.tag   Xkʰli
+dff   feces
+dfe   feces
+phr   kʰli kokja|guhu kira (dessin p.48)
+so   1972:48
+..tag   Xkʰli
+dff   feces
+dfe   feces
+so   1972:52
+.tag   Xkʰo-ba
+phon   khɔba 44.45
+dff   piocher
+dfe   to hoe
+ris   ¹kʰwa
+so   1972:27
+.tag   Xkʰor
+dff   porcherie
+dfe   pig sty
+so   1972:48
+.tag   Xkʰu
+dff   légume
+dfe   vegetable
+so   1972:16
+.tag   Xla
+dff   dieu
+dfe   god
+so   1972:7
+.tag   Xla
+dff   mois
+dfe   month
+so   1972:7
+.tag   ¹la
+dff   dieu
+dfe   god
+so   1972:20
+.tag   ³la
+dff   foret
+dfe   forest
+so   1972:54
+.tag   ¹la-dzi
+dff   faire
+dfe   to do
+so   1972:28
+..tag   Xla-o
+dff   faire
+dfe   to do
+so   1972:16
+.tag   Xle
+ton   55
+dff   langue
+dfe   tongue
+so   1972:29
+.tag   Xlɛp-pa
+var   lɛp-ko
+dff   chauffer
+dfe   to heat up
+ris   ¹lep
+so   1972:16
+.tag   Xliː
+dff   visage
+dfe   face
+so   1972:42
+.tag   Xlop-pa
+dff   enseigner
+dfe   to teach
+ris   ¹lop
+so   1972:16
+.tag   Xluŋ-ba
+ris   ²luŋ
+dff   bruler
+dfe   to burn
+so   1972:35
+.tag   Xmai
+dff   chercher
+dfe   to look for
+so   1972:14
+.tag   Xmam
+phon   məm
+dff   grand-mere
+dfe   grand mother
+so   1972:51
+.tag   ⁴maŋ
+ton   52
+dff   fantome
+dfe   ghost
+so   1972:61
+.tag   Xmar
+ton   54
+dff   caroncules
+dfe   cox ear lobes
+so   1972:54
+.tag   ¹mar
+dff   en bas
+dfe   down
+so   1972:9
+.tag   ³mar
+dff   beurre
+dfe   butter
+dfn   ghyu
+so   1972:9
+.tag   ⁴mar
+dff   or
+dfe   gold
+dfn   sun
+so   1972:9
+.tag   ³maː
+dff   gendre
+dfe   son in law
+so   1972:51
+.tag   Xme
+dff   vache
+dfe   cow
+so   1972:9
+.tag   ⁴me
+dff   vache
+dfe   cow
+so   1972:5
+.tag   ¹me
+dff   feu
+dfe   fire
+so   1972:5
+..tag   Xme
+dff   feu
+dfe   fire
+so   1972:9
+.tag   Xmeː
+ton   54
+dff   queue
+dfe   tail
+so   1972:29
+..tag   ᴴmeː
+dff   queue
+dfe   tail
+so   1972:5
+.tag   Xmi
+dff   oeil
+dfe   eye
+so   1972:42
+.tag   ³mi
+dff   homme
+dfe   man
+so   1972:5
+.tag   Xmiː
+dff   oeil
+dfe   eye
+ton   44 <1972:29>
+so   1972:5
+so   1972:29
+.tag   Xmla
+dff   riz
+dfe   rice
+so   1972:46
+.tag   Xmlaŋ
+ton   55
+dff   noir
+dfe   black
+so   1972:32
+.tag   Xmleː-dzim
+var   mlɛ-ba
+dff   oublier
+dfe   to forget
+ris   ²mlet
+so   1972:17
+.tag   Xmli
+ton   44
+dff   grosse sangsue
+dfe   large leech
+so   1972:57
+.tag   Xmoe-ba
+dff   labourer
+dfe   to plough
+so   1972:18
+.tag   Xmra-ba
+ris   ¹mra
+dff   allumer
+dfe   to light
+so   1972:35
+.tag   Xmraŋ-ba
+ton   44.33
+dff   voir
+dfe   to see
+so   1972:30
+.tag   Xmrap
+dff   porte
+dfe   door
+so   1972:13
+.tag   Xmraː
+dff   herbe
+dfe   weed
+so   1972:18
+.tag   Xmru
+dff   dard
+dfe   sting
+so   1972:57
+.tag   ¹mu
+ton   55
+phr   muze|du ciel
+dff   ciel
+dfe   sky
+so   1972:31
+..tag   Xmu
+ton   55
+dff   ciel
+dfe   sky
+so   1972:65
+.tag   ³mun
+dff   nuit
+dfe   night
+so   1972:47
+.tag   Xmwoe
+phon   mwɔe
+dff   mite
+dfe   moth
+so   1972:58
+.tag   Xna
+dff   nez
+dfe   nose
+ton   54 stopped <1972:29>
+so   1972:5
+so   1972:29
+so   1972:42
+.tag   ³na
+dff   pus
+dfe   pus
+so   1972:35
+.tag   Xna-ba
+dff   porter
+dfe   to carry
+nb   ton 55.11 = ¹ ou ⁴. Si ⁴ cf ris ⁴naː 'supporter douleur'
+so   1972:17
+..tag   Xna-ba
+dff   porter
+dfe   to carry
+nb   same tone as 'be sick'
+so   1972:36
+.tag   Xna-ba
+dff   malade
+dfe   to be sick
+nb   same tone as 'carry'
+so   1972:36
+.tag   ³na-ba
+dff   déposer
+dfe   to put down
+ris   ³nat 'atterrir'
+ris   ³na 'accoucher'
+so   1972:17, 36
+.tag   ³na-ba
+dff   élever (enfants) = déposer (charge)
+dfe   to raise, to put down
+inf   une jeune femme
+so   1972:24
+.tag   Xnai-ba
+dff   pourrir
+dfe   to rot
+dfn   kuhine
+ton   54.44 <1972:22>
+so   1972:8, 10, 22
+..tag   Xnai-ba
+ton   53 (balistique)
+dff   pourrir
+dfe   to rot
+so   1972:61
+.tag   Xnai-ba
+dff   masser
+dfe   to massage
+so   1972:22
+..tag   Xnai-ba
+dff   fouler
+dfe   to trample
+ton   353.33
+so   1972:47
+..tag   Xnai-ba
+ton   454.44
+dff   masser, fouler
+dfe   to massage, to tread
+so   1972:61
+..tag   ⁴nai-ba
+dff   masser, appliquer en massant
+dfe   to rub on, to massage
+phr   chjuku nai-ba
+so   1972:8, 10
+.tag   Xnai-ba
+ton   44.44 / 45.54
+dff   dégouté
+dfe   to be disgusted
+so   1972:61
+.tag   Xnai-ba
+ton   53.44
+dff   coucher
+dfe   to put to sleep
+so   1972:61
+..tag   Xnai-go
+dff   coucher
+dfe   put to bed
+dfn   sutaːunu
+so   1972:8, 10
+..tag   Xnai-ba
+ton   ³²³.³³
+dff   coucher
+dfe   to put to sleep
+so   1972:22
+.tag   Xnam
+dff   épi
+dfe   ear of grain
+so   1972:7
+..tag   Xnam
+ton   54 <1972:31>
+dff   épi
+dfe   ear of grain
+so   1972:31, 36
+.tag   Xnam
+dff   pluie
+dfe   rain
+ton   55 <1972:31>
+so   1972:7, 18, 31, 36
+.tag   Xnan-ba
+ton   55.43 (decrescendo)
+dff   recouvrir
+dfe   to cover
+so   1972:57
+.tag   Xnap
+ton   54
+dff   morve
+dfe   snot
+so   1972:45
+.tag   Xnaː-ba
+ton   ⁴⁴.⁴³
+dff   porter
+dfe   to carry
+inf   une jeune femme
+so   1972:24
+.tag   ³naː-ba
+dff   renifler
+dfe   to sniff
+so   1972:36
+.tag   Xne-dzi
+phon   nɛ
+dff   atterrir
+dfe   to land
+so   1972:19
+.tag   Xni
+dff   aller
+dfe   to go
+so   1972:14
+..tag   Xni-na
+ton   54.44
+dff   aller
+dfe   to go
+so   1972:32
+.tag   ᴸni
+dff   deux
+dfe   two
+so   1972:3
+.tag   ³nil
+dff   gencives
+dfe   gums
+so   1972:43
+.tag   ²nis
+dff   sept
+dfe   seven
+so   1972:3
+.tag   Xnuŋ-ba
+dff   dormir
+dfe   to sleep
+so   1972:47
+..tag   Xnuŋ-dzi
+dff   dormir
+dfe   to sleep
+so   1972:6
+..tag   Xnuŋ-gje
+ton   55.44
+dff   dormir
+dfe   to sleep
+so   1972:30
+..tag   Xnuŋ-go
+dff   dormir
+dfe   to sleep
+so   1972:14
+.tag   Xnup-pa
+dff   profond
+dfe   deep
+so   1972:46
+.tag   ᴴŋa
+dff   cinq
+dfe   five
+so   1972:3
+.tag   ¹ŋa
+dff   moi
+dfe   I
+inf   la jeune bru
+so   1972:21
+.tag   ³ŋa
+dff   tambour
+dfe   drum
+inf   la jeune bru
+so   1972:21
+.tag   ⁴ŋa
+dff   cinq
+dfe   five
+inf   la jeune bru
+so   1972:21
+.tag   Xŋa-ba
+dff   exorciser en soufflant
+dfe   to exorcise by blowing
+dfn   mansaːune
+so   1972:14
+.tag   ³ŋo
+dff   front
+dfe   forehead
+so   1972:43
+.tag   Xɲan-go
+var   ɲan-na
+ton   44.33
+dff   écouter
+dfe   to listen
+so   1972:30
+.tag   Xɲe
+ton   52 / 55
+dff   foie
+dfe   liver
+ris   ⁴net
+so   1972:30
+.tag   ³ɲe
+dff   lait
+dfe   milk
+so   1972:5, 1972:17, 1972:24, 1972:37
+.tag   Xɲe-ba
+dff   renverser
+dfe   to spill
+so   1972:33
+..tag   Xɲe-dzi
+ton   55.33
+dff   renverser
+dfe   to spill
+so   1972:62
+.tag   ¹ɲe-ba
+dff   macher
+dfe   to chew
+so   1972:37
+..tag   Xɲe-ʃi
+phon   ɲɛ
+dff   macher
+dfe   to chew
+ris   ¹ŋjat
+so   1972:48
+.tag   ³ɲe-ba
+dff   traire
+dfe   to milk
+so   1972:17
+so   1972:37
+.tag   Xɲel-ba
+phon   ɲɛlba
+ton   55.44
+dff   écraser des épices
+dfe   to crush, grind
+ris   ²ŋil
+ris   0ŋjal
+so   1972:60
+.tag   Xɲep-pa
+phon   ɲɛppa
+phr   ɲɛp-ʃi tsi-ba
+dff   ruminer
+dfe   to chew cud
+ris   ¹ŋjal
+so   1972:48
+.tag   ³ɲep-pa
+dff   étrangler
+dfe   to strangle
+so   1972:46
+.tag   Xɲeː-ba
+dff   mâcher
+dfe   to chew
+ptam   ŋjat
+so   1972:14
+.tag   Xɲeː-ba
+dff   rire
+dfe   to laugh
+ris   ²net
+so   1972:17
+.tag   Xɲeː-ba
+dff   renverser
+dfe   to spill
+so   1972:17
+..tag   Xɲeː-ba
+var   Xɲe-ba
+dff   déborder
+dfe   to spill over
+ris   net 'plein'
+so   1972:37, 67
+.tag   Xɲeː-ba
+dff   atterrir
+dfe   to land
+ris   ³nat
+so   1972:62
+.tag   ²ɲeː-ba
+dff   rire
+dfe   to laugh
+so   1972:37
+.tag   Xɲo-ba
+nb   corr de ɲoe-ba
+dff   questionner
+dfe   to ask
+so   1972:38
+.tag   Xɲo-ba
+ton   /4/
+nb   corr de ɲoe-ba
+dff   etre ivre
+dfe   to be drunk
+so   1972:38
+.tag   ³ɲo-dzi
+dff   etre ivre
+dfe   to be drunk
+ris   ³ŋjot
+so   1972:18
+.tag   Xɲoe-ba
+dff   demander
+dfe   to ask
+so   1972:53
+.tag   Xɲoe-go
+ris   ŋot 'appeler'
+ris   ŋjot 'demander'
+dff   appeler
+dfe   to call
+var   ɲoː-go <la vieille>
+so   1972:20
+.tag   Xɲon-ba
+phon   ɲɔn-ba
+ton   55.44
+dff   porter un chale
+dfe   to wear a shawl
+so   1972:64
+.tag   Xɲoː-ba
+dff   appeler
+dfe   to call
+so   1972:38
+..tag   Xɲoː-go
+dff   appeler
+dfe   to call
+ris   ⁴ŋot
+ris   ⁴hõt
+so   1972:18
+.tag   Xɲoː-go
+dff   questionner
+dfe   to ask (a question)
+ris   ²ŋjot
+so   1972:18
+.tag   ³pa-dzi
+ton   11.11
+dff   apporter
+dfe   to bring
+so   1972:65
+..tag   ³pa-o
+dff   apporter
+dfe   to bring
+so   1972:64
+.tag   Xpa-na
+dff   liquide
+dfe   to be liquid, thin
+so   1972:16
+.tag   Xpaŋ-gje
+ton   55.44
+dff   dire
+dfe   to say
+so   1972:31
+.tag   ³paː
+dff   petites feuilles
+dfe   small leaf
+so   1972:29
+.tag   Xpel-ba
+dff   enrouler
+dfe   to roll up
+so   1972:48
+..tag   Xpel-go
+dff   tresser
+dfe   to plait
+so   1972:14
+.tag   Xpeŋ
+dff   grenouille
+dfe   frog
+so   1972:56
+.tag   ⁴per-dzi
+ris   ⁴pjar
+dff   se tacher
+dfe   to stain
+so   1972:22
+.tag   Xpeː-ba
+dff   avoir honte
+dfe   to be shy
+so   1972:13
+.tag   Xpi-la
+ton   33.44
+dff   dire
+dfe   to say
+so   1972:31
+.tag   Xpin-go
+dff   donner
+dfe   to give
+so   1972:10
+..tag   Xpin-na
+ton   55.44
+dff   donner
+dfe   to give
+so   1972:31
+.tag   Xplɛ-ba
+dff   paresseux
+dfe   lazy
+ris   plap
+so   1972:16
+.tag   ᴴpli
+dff   quatre
+dfe   four
+so   1972:3
+.tag   ⁴plu
+ton   55 tense
+dff   graine
+dfe   seed
+so   1972:29
+.tag   Xpo-ba
+ton   55.35
+dff   gonfler au feu
+dfe   to swell under heat
+so   1972:35
+..tag   Xpo-ba
+ton   ?/2/
+xr   'bouder'
+dff   gonfler au feu
+dfe   to swell under heat
+so   1972:38
+.tag   Xpo-ba
+ton   ? /4/
+dff   bouder
+xr   'gonfler'
+dfe   to brewd
+ris   pomo 'anger'
+so   1972:38
+.tag   Xpo-ba
+dff   abimer, trouer
+dfe   to spoil, make hole in
+so   1972:38
+.tag   Xpoi-ba
+ris   pot
+dff   secouer la terre des mottes
+dfe   to shake off earth
+so   1972:19
+.tag   Xpoŋ
+phon   pɔŋ
+ton   44
+dff   petite jarre de terre
+dfe   small earthen water jug
+so   1972:63
+.tag   ³poː-ba
+dff   se découdre
+dfe   to get unsewn
+so   1972:38
+.tag   ⁴pra
+dff   farine
+dfe   flour
+so   1972:11
+so   1972:20
+.tag   ⁴pra-ba
+var   pra-i
+dff   marcher
+dfe   to walk
+so   1972:31
+.tag   ᴴpre
+var   ᴴbre
+dff   huit
+dfe   eight
+so   1972:3
+.tag   ³pre-ba
+dff   raser (barbe, cheveux)
+dfe   to shave
+ris   ³pre:
+so   1972:17
+.tag   ⁴pre-ba
+dff   fuir
+dfe   to leak
+ris   4pre
+so   1972:18
+.tag   Xpro
+ton   52
+dff   gouter
+dfe   snack
+so   1972:35
+.tag   ³proi
+dff   gout
+dfe   taste
+so   1972:35
+.tag   Xpu
+ton   ⁴⁴
+dff   pot a dahi
+dfe   yoghourt pot
+so   1972:33
+..tag   Xpu
+ton   44
+dff   pot a cuire
+dfe   cooking pot
+so   1972:63
+.tag   Xpui-ba
+dff   envoyer
+dfe   to send
+so   1972:17
+.tag   Xpun-ba
+ton   55.44
+dff   respirer
+dfe   to breathe
+so   1972:52
+.tag   Xpuː
+ton   51
+dff   riziere
+dfe   rice-field
+so   1972:63
+.tag   Xpʰep
+dff   partir (hh)
+dfe   to go (hh)ˍ
+so   1972:14
+.tag   Xphi
+dff   sur
+dfe   on top of
+phr   ta phi-ri heː-ba 'monter a cheval'
+so   1972:14
+.tag   Xpʰi-dzi
+ton   44.44
+dff   etre en retard
+dfe   to be late
+so   1972:53
+.tag   Xpʰjaŋ-ba
+ton   44.43
+dff   voler
+dfe   to fly
+so   1972:30
+..tag   Xpʰjaŋ-dzi
+dff   voler
+dfe   to fly
+so   1972:19
+.tag   Xpʰjaː
+dff   salutation
+dfe   bow
+so   1972:7
+.tag   Xpʰjaː
+dff   balai
+dfe   broom
+hom   'salut' <1972:44>
+so   1972:7, 44
+.tag   Xpʰjaː-go
+dff   défricher
+dfe   to clear jungle
+dfn   jangal phaDne
+so   1972:8
+.tag   Xpʰjuk-pa
+dff   riche
+dfe   rich
+so   1972:16
+.tag   Xpʰo
+phr   bara pʰo tam-dzi?|Est-il midi?
+dff   sonner (heure)
+dfe   to strike (hour)
+nb   ?? cf ris pho-ba 'claquer (fusil)'
+so   1972:41
+.tag   Xpʰo
+dff   ventre
+dfe   belly
+so   1972:42
+.tag   ¹pʰo
+dff   ventre, estomac
+dfe   belly, stomach
+inf   la vieille
+so   1972:24
+.tag   Xpʰoe-ba
+var   phoi-go
+dff   draper (écharpe ou turban)
+dff   attacher les cordons de la blouse
+dfe   to wear by draping (scarf or turban)
+dfe   to tie fastening strings
+so   1972:14, 18
+.tag   Xpʰoi-ba
+dff   porter une écharpe
+dfe   to wear a scarf
+ris   ²phot 'nouer'
+so   1972:64
+.tag   Xpʰral-ba
+dff   ébrancher
+dfe   to strip tree branches
+phr   toŋ se sjaola pʰralba
+so   1972:48
+.tag   Xpʰre-ba
+dff   coiffer
+dfe   to comb
+so   1972:17
+.tag   pʰreː-ba
+dff   peigner
+dfe   to comb
+so   1972:27
+.tag   Xpʰum
+dff   motte de terre
+dfe   earth clod
+so   1972:8
+.tag   Xphup-ko
+var   phup-tsi
+dff   démolir, s'effondrer
+dfe   to break down, collapse
+dfn   bhatgaːune
+so   1972:13
+.tag   Xpʰwi-go
+dff   souffler
+dfe   to blow
+so   1972:15
+.tag   Xra
+dff   chèvre
+dfe   goat
+ton   54 <1972:29>
+so   1972:6
+so   1972:11
+so   1972:29
+.tag   ¹ra
+inf   fils
+dff   chèvre
+dfe   goat
+so   1972:20
+.tag   Xrai
+dff   cote
+dfe   rib
+so   1972:43
+.tag   ³raŋ
+dff   vous
+dfe   you (polite)
+so   1972:28
+.tag   Xrap-kje
+ton   44.55
+dff   se tenir debout
+dfe   to stand
+so   1972:31
+.tag   ³rap-pa
+dff   jouer de la musique
+dfe   to play music
+so   1972:36
+so   1972:46
+.tag   Xraː-ba
+ton   44.43
+dff   tisser
+dfe   to weave
+so   1972:64
+.tag   -re
+dff   jour
+dfe   day
+ris   -ra
+so   1972:41
+.tag   ³rel
+dff   corde
+dfe   rope
+so   1972:28
+..tag   ³rel
+dff   corde (du "namlo" <72:6>, pour les chèvres <72:11>)
+dfe   rope (of the carrying head-strap, to tie goats)
+phr   ra rel-dze cjyn-ba <72:11>
+so   1972:6, 11
+.tag   Xreŋ-ba
+phon   rɛŋ
+dff   long
+dfe   long
+so   1972:36
+.tag   ¹reː-ba
+dff   s'éveiller
+dfe   to wake up
+so   1972:27
+.tag   ³ri
+dff   foret
+dfe   forest
+so   1972:56
+.tag   ³ri-ba
+var   ri-si
+dff   réclamer
+dfe   to beg, ask for
+ris   ³rit
+so   1972:17
+.tag   Xriː-ba
+dff   gratter
+dfe   to scratch
+ris   ²rit
+so   1972:17
+.tag   ³ro
+phon   rɔ
+dff   ami
+dfe   friend
+so   1972:50
+.tag   Xro-ba
+ton   55.53
+dff   frire
+dfe   to fry
+so   1972:48
+.tag   Xro-ba
+ton   45.44
+dff   faire des fruits
+dfe   to bear fruit
+so   1972:48
+.tag   Xrop-la
+var   rop-pa
+dff   battre
+dfe   to hit
+so   1972:15, 16
+.tag   Xroː-ba
+ton   44.44
+dff   porter des fruits
+dfe   to bear fruit
+so   1972:36
+.tag   Xroː-ba
+ton   53.22
+dff   faire frire
+dfe   to fry
+so   1972:36
+.tag   Xrui-ba
+dff   vomir
+dfe   to vomit
+ris   ²rut
+so   1972:18
+.tag   Xrun-ba
+ton   44.44
+dff   fouetter (la biere)
+dfe   to whip beer
+so   1972:63
+.tag   Xruŋ-ba
+dff   épais
+dfe   thick
+so   1972:16
+.tag   Xrup
+dff   rencontre
+dfe   meeting
+so   1972:46
+.tag   ³rup-pa
+dff   enrouler
+dfe   to roll up
+dfn   baTulne
+so   1972:46
+.tag   Xruː
+ton   55
+dff   corne
+dfe   horn
+so   1972:29
+.tag   -sə
+dff   de (ABL, Ris /se/)
+dfe   from
+so   1972:11
+.tag   Xsa
+dff   terre
+dfe   earth
+so   1972:7
+.tag   Xsa
+dff   dent
+dfe   tooth
+ton   5. <1972:29>
+so   1972:14
+so   1972:29
+.tag   Xsa
+ton   44
+dff   terre
+dfe   earth
+hom   'tooth'
+so   1972:32
+.tag   Xsam
+dff   faner
+dfe   to wither
+so   1972:11
+.tag   Xsam
+dff   tripoter
+dfe   to handle
+so   1972:11, 78
+.tag   Xsaŋ-ba
+dff   limpide (eau)
+dfe   clear (water)
+dfn   sanglo
+so   1972:8
+.tag   Xsaŋ-ba
+dff   faire sécher (grains)
+dfe   to set to dry (grains)
+so   1972:11
+.tag   Xsar
+dff   fumier
+dfe   manure
+dfn   mal
+so   1972:8
+..tag   Xsar
+ton   45
+dff   fumier
+dfe   manure
+so   1972:36
+.tag   Xsar
+ton   54
+dff   étoile
+dfe   star
+so   1972:31
+.tag   Xsar-ba
+ton   44.44
+dff   fleurir
+dfe   to flower
+so   1972:48
+.tag   Xsaː
+ton   33
+dff   souffle
+dfe   breath
+dfn   sa:s
+so   1972:52
+.tag   Xsaː-ba
+dff   exorciser par présentation de riz
+dfe   to exorcise with rice
+dfn   mansaːune
+phr   məne saː-ba
+so   1972:14
+.tag   Xsaː-ba
+dff   souffrir
+dfe   to hurt
+so   1972:59
+.tag   Xsaːr
+ton   44
+dff   fumier
+dfe   manure
+so   1972:31
+.tag   -se
+dff   par (ERG)
+dfe   by
+so   1972:14
+.tag   Xseŋ-ba
+dff   balayer
+dfe   to sweep
+so   1972:11
+..tag   Xseŋ-ba
+phon   sɛŋba 55.53
+dff   balayer
+dfe   to sweep
+so   1972:44
+..tag   Xseŋ-go
+dff   balayer
+dfe   to sweep
+so   1972:6
+.tag   Xseː-ba
+ton   55.22
+dff   tuer
+dfe   to kill
+so   1972:30
+..tag   Xseː-dzi
+dff   tuer
+dfe   to kill
+ris   ¹sat
+so   1972:37
+..tag   Xseː-go
+dff   tuer
+dfe   to kill
+so   1972:13
+..tag   Xseː-si
+dff   tuer
+dfe   to kill
+so   1972:48
+.tag   Xsil-ba
+dff   frais (vent)
+dfe   fresh (wind)
+so   1972:8
+.tag   Xsil-ba
+dff   accoucher
+dfe   give birth
+dfn   biyaːune
+so   1972:8, 9
+.tag   Xsim-ba
+dff   frais (eau)
+dfe   fresh (water)
+so   1972:8
+.tag   Xsin
+var   ʃin 54 <1972:63>
+ton   54
+dff   bambou
+dfe   bamboo
+so   1972:53, 63
+.tag   Xsir-ko
+dff   éplucher du bois, ébrancher
+dfe   to smooth off stick with knife
+so   1972:13
+.tag   Xsjaŋ-ba
+dff   moudre
+dfe   to grind
+so   1972:11
+.tag   ³sjar-ba
+dff   essuyer sur le bord du pot
+dfe   to scrape clean
+so   1972:34
+.tag   Xsjaː-ba
+var   sjaːʃi
+dff   ôter
+dfe   to take off some
+ris   ²sjaː
+ris   ²sjuaː
+so   1972:17
+.tag   Xsje
+phon   ʃje
+dff   pou
+dfe   louse
+so   1972:25
+.tag   Xsjeː-ba
+dff   répéter
+dfe   to repeat
+so   1972:14
+..tag   Xsjeː-ba
+ton   454.33 (extra-high)
+dff   répéter
+dfe   to repeat
+ris   ¹sjat
+so   1972:33
+.tag   Xsjeː-ba
+dff   savoir
+dfe   to know
+phr   ke sjeː-ba
+so   1972:14
+..tag   Xsjeː-ba
+ton   44.43
+dff   savoir
+dfe   to know
+ris   ²seː
+so   1972:33
+.tag   Xsjeː-dzi
+dff   partir (h)
+dfe   to go (h)
+so   1972:14
+..tag   Xsjeː-la
+ton   33.44
+nb   pitch pattern like /3/ but no breathiness
+dff   partir (hh)
+dfe   to go (hh)
+ris   ¹seː
+so   1972:33
+.tag   ³sjo
+dff   matin
+dfe   morning
+nb   is it really /s/ not grooved?
+so   1972:47
+.tag   Xsjoe-go
+phon   ʃjoe
+inf   la bru
+xr   Xsjoː <la vieille>
+dff   arracher
+dfe   to pull out
+so   1972:19
+.tag   Xsjoŋ
+dff   fleuve
+dfe   river
+so   1972:11
+.tag   Xsjoː-go
+inf   la vieille
+xr   Xsjoe <la bru>
+dff   arracher
+dfe   to pull out
+so   1972:18
+.tag   Xsju-ba
+dff   s'asseoir
+dfe   to sit
+so   1972:38
+.tag   Xsju-ba
+dff   dévêtir
+dfe   to undress
+so   1972:38
+..tag   Xsju-ba
+ton   55.53
+dff   dépouiller, dépiauter
+dfe   to skin
+so   1972:48
+..tag   Xsju-ba
+ton   53.32 (balist)
+dff   se dévêtir
+dfe   to undress
+dfn   phuka:une
+so   1972:61
+.tag   Xsjuː-ba
+ton   44.44
+dff   enfiler
+dfe   to thread (beads)
+so   1972:61
+.tag   ³sjuː-go
+dff   s'asseoir
+dfe   to sit
+so   1972:61
+.tag   Xso-dzi
+ton   ⁴⁴.⁴⁴
+phr   mi-ce ⁴ke so-dzi ⁴tarem |l'homme s'est mis au travail à présent
+dff   ?commencer a faire
+dfe   ?to start doing
+so   1972:28
+.tag   Xsol-ba
+ton   55.33
+dff   boire (hh)
+dfe   to drink (hh)
+so   1972:30
+..tag   Xsol-go
+dff   manger (H)
+dfe   to eat (h)
+so   1972:25
+.tag   Xsol-go
+dff   toucher
+dfe   to touch
+so   1972:25
+.tag   ²som
+dff   trois
+dfe   three
+so   1972:3
+.tag   Xsoː
+dff   chaume
+dfe   thatch
+so   1972:4
+.tag   ³sri-ba
+dff   regarder (hon)
+dfe   to look (hon)
+dfn   nadzar garnu
+so   1972:59
+.tag   Xsũ
+ton   54 stopped
+dff   bouche
+dfe   mouth
+so   1972:29
+.tag   Xsui-ba
+dff   raper
+dfe   to grate
+so   1972:19
+.tag   Xsun
+ton   55
+dff   riz
+dfe   rice
+so   1972:31
+..tag   Xsun
+dff   riz
+dfe   rice
+so   1972:36
+.tag   Xsuŋ
+dff   bouche
+dfe   mouth
+so   1972:5
+..tag   Xsuŋ
+dff   bouche
+dfe   mouth
+so   1972:42
+..tag   Xsuŋ
+phon   sũŋ 55
+dff   bec
+dfe   beak
+so   1972:54
+.tag   ³suː
+dff   cuisse
+dfe   thigh
+so   1972:43
+.tag   Xʃi-ba
+dff   mourir
+dfe   to die
+so   1972:11
+..tag   Xʃi-la
+ton   55.44
+dff   mourir
+dfe   to die
+so   1972:30
+.tag   Xʃiŋ
+dff   bois
+dfe   wood
+so   1972:15, 63
+..tag   Xʃiŋ
+ton   51
+dff   bois
+dfe   firewood
+nb   Tarbhil inf
+so   1972:49
+.tag   Xʃit
+ton   35
+dff   gel
+dfe   frost
+so   1972:65
+.tag   Xʃja
+dff   viande
+dfe   meat
+so   1972:16
+.tag   Xʃjal
+niv   hh
+dff   visage d'un dieu
+dfe   face (of god)
+so   1972:6
+.tag   Xʃjal-ba
+dff   rincer, laver (vaisselle)
+dfe   to rinse
+so   1972:48
+.tag   Xʃje
+dff   pou
+dfe   louse
+so   1972:13
+so   1972:58
+.tag   Xʃje-gje
+dff   aller (hh)
+dfe   to go
+so   1972:11
+.tag   Xʃjeː-ba
+dff   savoir
+dfe   to know
+so   1972:37
+.tag   Xʃjeː-ba
+dff   répéter
+dfe   to repeat
+ris   sjat
+so   1972:37
+.tag   Xʃjeː-ba
+dff   partir
+dfe   to go
+so   1972:37
+.tag   Xʃjop
+ton   51
+dff   mue
+dfe   snake skin
+so   1972:57
+.tag   Xʃjop-pa
+ton   55.22
+dff   polir
+dfe   to polish (rice)
+so   1972:46
+.tag   Xʃjor-ba
+dff   déféquer
+dfe   to defecate
+so   1972:47
+.tag   Xʃju-ba
+dff   exorciser avec un plat d'offrandes passé devant le visage
+dfe   to exorcise with offering plate
+so   1972:14
+..tag   Xʃju-ba
+dff   soigner en soufflant
+dfe   to blow-cure
+so   1972:61
+.tag   Xʃjup-pa
+dff   teter
+dfe   to nurse
+ton   55.22
+so   1972:47
+.tag   Xta
+dff   cheval
+dfe   horse
+so   1972:5
+so   1972:14
+.tag   ³ta
+dff   pilier
+dfe   pillar
+so   1972:6
+.tag   ⁴tai-ba
+var   ⁴tai-go
+dff   mettre à cuire
+dfe   to set sthg to cook
+so   1972:11
+..tag   Xtai-ba
+dff   bouillir (tr)
+dfe   to boil (tr)
+so   1972:41
+..tag   Xtai-ba
+ton   45.43
+dff   faire cuire
+dfe   to cook
+so   1972:62
+.tag   Xtai-ba
+ton   44
+dff   tomber
+dfe   to fall
+so   1972:62
+..tag   Xtai-dzi
+ton   54.55
+dff   tomber
+dfe   to fall
+so   1972:65
+.tag   ¹tai-ba
+dff   tomber
+dfe   to fall
+so   1972:11
+.tag   Xtam
+dff   paroles
+dfe   words, language
+so   1972:14
+..tag   Xtam
+ton   44
+dff   parole, langue
+dfe   speech, word
+so   1972:33
+.tag   Xtam-ba
+phr   pu tamba
+dff   cultiver (une rizière)
+dfe   to cultivate
+so   1972:27
+.tag   Xtam-dzi
+phr   bara pʰo tam-dzi?|Est-il midi?
+dff   ? être sur le point de
+dfe   to be about to ?
+so   1972:41
+.tag   ³tan
+phr   ³tan ³dzjaːgo|asseyez-vous
+dff   facon de s'asseoir
+dfe   way of sitting
+so   1972:59
+.tag   Xtaŋ
+dff   vaisselle
+dfe   dishes
+so   1972:48
+..tag   Xtaŋ
+ton   35
+dff   pot
+dfe   pot
+so   1972:60
+.tag   ³taŋ
+dff   chasser
+dfe   to chase
+dfn   dhapa:une
+so   1972:28
+.tag   Xtaŋ-ba
+dff   chasser, faire avancer
+dfe   drive (cattle)
+dfn   dhaːpaːunu
+so   1972:5
+.tag   Xtaŋ-ba
+ton   44.44
+dff   content
+dfe   happy
+so   1972:59
+.tag   Xta-o
+phr   sapra tao
+dff   secouer les mottes
+dfe   to shake off earth
+so   1972:19
+.tag   ³tap-pa
+dff   mesurer
+dfe   to measure
+so   1972:46
+.tag   Xtar
+ton   55
+dff   blanc
+dfe   white
+so   1972:32
+..tag   Xtar
+phon   tər
+dff   blanc
+dfe   white
+so   1972:46
+.tag   Xtaː-go
+ton   33.44
+dff   recevoir
+dfe   to receive
+cf   te-u
+so   1972:31
+.tag   ³tep-pa
+dff   échanger
+dfe   to exchange
+so   1972:46
+.tag   Xte-si
+dff   enlever
+dfe   to take off
+ris   ²tat
+so   1972:18
+.tag   Xte-u
+phon   tɛu
+dff   recevoir
+dfe   to receive
+cf   Xtaː-go
+so   1972:32
+.tag   Xti-ba
+ton   55.44
+dff   allumer le feu
+dfe   to light fire
+dfn   salga:une
+so   1972:37
+.tag   Xtik
+dff   quoi
+dfe   what
+so   1972:11
+.tag   ⁴tim
+ton   52' (stopped tone)
+dff   maison
+dfe   house
+so   1972:53
+.tag   Xtiŋ
+ton   54
+dff   coeur
+dfe   heart
+so   1972:30
+.tag   Xtip-pa
+dff   fin
+dfe   fine
+dfn   masino
+so   1972:46
+.tag   Xtiː-ba
+ton   44.4
+dff   étendre
+dfe   to spread
+dfn   ocya:une
+so   1972:37
+..tag   Xtiː-go
+var   tiː-si
+dff   étendre
+dfe   to spread out
+so   1972:13
+.tag   Xto-ba
+dff   frapper
+dfe   to hit
+so   1972:36
+.tag   Xto-ci
+dff   falloir
+dfe   to need
+so   1972:14
+.tag   Xtoi
+dff   charge
+dfe   load
+so   1972:17
+..tag   Xtoi
+dff   charge
+dfe   load
+inf   une jeune femme
+so   1972:24
+.tag   Xtoŋ
+dff   arbre
+dfe   tree
+so   1972:6
+so   1972:11
+..tag   Xtoŋ
+phon   tɔŋ
+dff   arbre
+dfe   tree
+so   1972:19
+..tag   Xtoŋ-ri
+dff   arbre
+dfe   tree
+ton   54.44
+so   1972:48
+.tag   ³toŋ
+dff   mélanger
+dfe   to mix
+ris   ³toŋ
+so   1972:16
+.tag   Xtoː
+ton   55
+dff   houe
+dfe   hoe
+dfn   koda:lo
+so   1972:22
+.tag   Xtoː-ba
+ton   44.44 / 55.44
+dff   ramasser fumier
+dfe   to scoop up manure
+so   1972:36
+.tag   Xtoː-ba
+dff   tourner
+dfe   to turn
+so   1972:36
+.tag   Xtoː-ba
+ton   44.43 / 55.54
+dff   falloir
+dfe   to need
+so   1972:65
+..tag   Xtoː-la
+dff   nécessiter
+dfe   to require
+so   1972:36
+.tag   ³toː-ba
+dff   ramasser (le fumier)
+dfe   to gather manure
+dfn   (mal) pharkeko
+so   1972:8
+.tag   ³toː-ba
+dff   atteindre
+dfe   to reach
+so   1972:36
+..tag   Xta
+phr   ta-ha-dzi
+dff   arriver
+dfe   to reach
+nb   voc harm
+so   1972:13
+.tag   ³toː-si
+dff   retourner
+dfe   to return
+so   1972:65
+.tag   ²tʃʰi
+dff   gras
+dfe   fat
+dfn   boso
+so   1972:5
+.tag   ⁴tʃi
+dff   bière
+dfe   beer
+dfn   jãɖ
+so   1972:5
+.tag   Xtui-ba
+ton   44.44
+dff   tremper
+dfe   to dip into
+so   1972:35
+..tag   Xtui-ba
+dff   tremper dans
+dfe   to dip into
+ris   ¹tut
+so   1972:38
+.tag   Xtui-ba
+dff   enrouler du fil
+dfe   to roll up thread
+so   1972:38
+..tag   Xtui-ba
+ton   454.44
+dff   enrouler
+dfe   to roll up
+so   1972:48
+.tag   ⁴tui-ba
+dff   ramasser
+dfe   to pick up
+so   1972:35
+.tag   Xtui-ba
+ton   ? /4/
+dff   ramasser
+dfe   to pick up
+ris   ⁴tut
+so   1972:38
+..tag   Xtui-go
+dff   ramasser
+dfe   to pick up
+dfn   utaːune
+so   1972:13
+so   1972:19
+.tag   Xtui-go
+dff   contribuer
+dfe   to spend
+enc   to collect contributions from guests in a ceremony <1978 f perf>
+ris   ⁴tui
+so   1972:38
+.tag   Xtup-pa
+dff   hacher
+dfe   to chop (meat)
+ris   ¹tup
+so   1972:16
+.tag   Xtʰa
+dff   Ne...pas
+dfe   don't
+so   1972:25
+.tag   Xtʰa-gje
+ton   55.44
+var   Xtʰaː-ba 44.44
+dff   couper, tuer
+dfe   to cut, kill
+so   1972:30
+.tag   Xtʰaŋ
+dff   odeur
+dfe   smell
+so   1972:36
+.tag   Xtʰap-pa
+dff   encorner
+dfe   to hit with horn
+dfn   haːnne
+ris   ¹thap
+so   1972:16
+.tag   Xtʰe
+phr   tʰe mi|lui
+dff   lui, ce
+dfe   he, this
+so   1972:33
+..tag   Xtʰe
+phr   tʰeri|ici
+dff   ceci
+dfe   this
+so   1972:59
+.tag   Xtʰeː-ba
+phon   tʰɛː-ba
+ton   55.44
+dff   entendre
+dfe   to hear
+so   1972:30
+.tag   Xtʰo
+ton   55
+dff   salive
+dfe   saliva
+dfn   thuk
+so   1972:52
+.tag   Xtʰu
+ton   55 / 44
+dff   cueillir
+dfe   to pluck
+so   1972:65
+.tag   Xtʰui-go
+dff   assembler
+dfe   to assemble
+dfn   gaːsne
+ris   ²tʰut
+so   1972:18
+.tag   Xtʰuŋ-ba
+ton   44.44
+dff   boire
+dfe   to drink
+so   1972:30
+.tag   ³ʈa
+phr   ʈaŋga ³ʈa|sɟchoir au dessus du feu
+dff   séchoir
+dfe   drying rack
+so   1972:49
+.tag   Xʈa-ba
+dff   semer (kodo)
+dfe   to sow
+ris   ³ʈwa
+so   1972:35
+.tag   ³ʈa-ba
+dff   planter
+dfe   to plant
+ris   ³ʈwa
+so   1972:39
+.tag   ³ʈan-ba
+dff   se rappeler
+dfe   to remember
+so   1972:28
+.tag   Xʈaŋ-ba
+dff   déchirer
+dfe   to snap, break (rope)
+dfn   chinne
+phr   cho(ta) ʈaŋ-ba
+so   1972:11
+.tag   Xʈaŋ-ba
+dff   enfler
+dfe   to swell
+so   1972:11
+..tag   Xʈaŋ-ba
+ton   ⁴⁴.³³
+dff   enfler
+dfe   to swell
+so   1972:22
+.tag   Xʈaŋ-ba
+ton   54.³³
+dff   déchirer en tirant
+dfe   to break from pulling
+dfn   chinne
+so   1972:22
+.tag   ³ʈaŋ-ba
+dff   gonfler (grain)
+dfe   to swell (grain)
+so   1972:31
+.tag   Xʈap
+var   ɖap
+dff   brèdes
+dfe   spinach
+dfn   sa:g
+so   1972:4
+so   1972:60
+.tag   Xʈaː
+dff   racine
+dfe   root
+so   1972:9
+..tag   Xʈaː
+ton   55
+dff   racine
+dfe   root
+so   1972:29
+.tag   Xʈaː
+dff   bandeau frontal
+dfe   carrying headstrap
+so   1972:9
+.tag   ¹ʈaː
+dff   racine
+dfe   root
+so   1972:6
+.tag   ³ʈaː
+dff   crete
+dfe   coxcomb
+so   1972:54
+.tag   ⁴ʈaː
+nb   difference de timbre notée avec ¹ʈaː 'racine'; namlo noté avec a d'arrière <so  1972:6>
+dff   courroie de portage
+dfe   carrying head-strap
+dfn   naːmlo
+so   1972:6
+..tag   ⁴ʈaː
+ton   51
+dff   bandeau de portage
+dfe   carrying strap
+dfn   namlo
+so   1972:49
+.tag   Xʈeŋ-ba
+dff   construire
+dfe   to build
+nb   inf de Tarbhil (2 miles of Taglung)
+so   1972:49
+.tag   Xʈi
+ton   11
+dff   peau
+dfe   skin
+so   1972:48
+.tag   ³ʈo-ba
+dff   lire
+dfe   to read
+so   1972:18
+.tag   Xʈu-ba
+dff   solide
+dfe   durable
+so   1972:8
+..tag   Xʈu-ba
+inf   fils
+dff   durer, etre solide
+dfe   be solid, lasting
+so   1972:20
+.tag   Xʈui
+ton   45
+dff   éboulement
+dfe   landslide
+so   1972:32
+.tag   Xʈui-ba
+dff   appuyer les pieds
+dfe   to press feet
+so   1972:38
+.tag   Xʈuŋ-go
+dff   fermer
+dfe   to close
+so   1972:13
+.tag   Xʈup
+dff   fil
+dfe   thread
+so   1972:48
+.tag   Xʈup-pa
+dff   coudre
+dfe   to sew
+so   1972:47
+..tag   Xʈup-pa
+ton   55.22
+dff   coudre
+dfe   to sew
+so   1972:59
+.tag   Xʈuː
+ton   55
+dff   sueur
+dfe   sweat
+so   1972:52
+.tag   ᴴʈuː
+dff   six
+dfe   six
+so   1972:3
+.tag   ⁴ʈwa
+ton   65 (extra-high)
+dff   porc
+dfe   pig
+so   1972:54
+.tag   Xʈʰai-ba
+dff   percer, creuser
+dfe   to pierce, to hollow
+ris   ²ʈʰwaː
+ris   ²ʈʰwai
+so   1972:39
+.tag   Xʈʰaŋ-go
+dff   ouvrir
+dfe   to open
+so   1972:13
+.tag   ¹ʈʰaŋ-go
+dff   ouvrir
+dfe   to open
+ris   ¹ʈʰwaŋ
+so   1972:39
+.tag   Xʈʰek
+phon   ʈʰɛk
+dff   étui de bois
+enc   pour porter la faucille (dessin 1972:44)
+dfe   wooden sheath
+so   1972:44
+.tag   Xʈʰok-pa
+dff   casser (les mottes)
+dfe   to break earth clods
+so   1972:8
+.tag   Xtsa-ba
+ton   55.44
+dff   manger
+dfe   to eat
+so   1972:30
+.tag   Xtsaŋ
+dff   bru
+dfe   d.in law, s. in law
+so   1972:33
+..tag   Xtsaŋ
+ton   52
+dff   bru
+dfe   daughter in law
+so   1972:51
+..tag   Xtsaŋ
+ton   54
+dff   bru
+dfe   daughter in law
+so   1972:61
+.tag   Xtsaŋ
+ton   52
+dff   nid
+dfe   nest
+so   1972:46
+..tag   Xtsaŋ
+ton   54
+dff   nid
+dfe   nest
+so   1972:54
+..tag   Xtsaŋ
+ton   51
+dff   toile d'araignée = nid
+dfe   web, nest
+so   1972:58
+.tag   ³tsaŋ
+ton   21
+dff   nid
+dfe   nest
+so   1972:61
+.tag   Xtseː-ba
+dff   gratter au couteau
+dfe   to scrape with knife
+ris   ²tset 'raser une carcasse'
+so   1972:17
+.tag   Xtsi
+ton   33
+dff   rester assis
+dfe   to sit
+so   1972:31
+.tag   Xtsi
+ton   35
+dff   biere
+dfe   beer
+so   1972:63
+.tag   ³tsi
+dff   articulation
+dfe   joint
+so   1972:5
+.tag   ⁴tsi
+dff   bière
+dfe   beer
+dfn   jaD
+ris   ⁴tsi
+so   1972:18
+.tag   ⁴tsi-la
+phon   dzi-la (voisement intervoc.)
+dff   mordre (serpent)
+dfe   to bite (as a snake)
+so   1972:23
+.tag   Xtsja-ba
+phon   ton ²².²²
+dff   beau
+dfe   pretty
+inf   la jeune bru
+so   1972:21
+..tag   Xtsja-ba
+dff   beau
+dfe   nice
+ton   44.44
+so   1972:53
+.tag   Xtsjam
+ton   55
+dff   urine
+dfe   urine
+so   1972:52
+.tag   Xtsjan
+ton   44 / 54
+dff   tigre
+dfe   tiger
+so   1972:56
+.tag   ¹tsjaː-ba
+dff   regarder
+dfe   to look
+so   1972:4
+.tag   ⁴tsjaː-ba
+var   ⁴tsʰjaː-ba
+dff   compter, mesurer
+dfe   to count, to measure
+so   1972:4
+.tag   Xtsjaː-dzi
+ton   55.22
+dff   regarder
+dfe   to look
+so   1972:30
+.tag   Xtsjo-ba
+ton   55.43
+dff   pendre
+dfe   to hang
+so   1972:46
+.tag   Xtsjon
+phon   tsjɔn
+dff   honr de venir
+dfe   hon for come
+so   1972:65
+.tag   ³tsjon
+phr   hanaŋ se tsjon haba|d'ou viens-tu
+dff   en revenant
+dfe   coming back
+so   1972:53
+.tag   Xtsjop-pa
+dff   meler du bout des doigts
+enc   farine et eau
+dfe   to knead
+so   1972:34
+.tag   ³tsjor-ba
+dff   essorer en pressant
+enc   legumes
+dfe   to squeeze water out
+so   1972:60
+.tag   ²tsju
+dff   dix
+dfe   ten
+so   1972:3
+.tag   Xtsjun-ba
+ton   ³³.⁴⁴
+ris   ¹tsuŋ
+dff   attacher
+dfe   to tie
+so   1972:28
+.tag   Xtsjup-pa
+dff   enfermer les poules
+dfe   to lock chicken up
+so   1972:46
+.tag   Xtsjur-go
+dff   égaliser le sol
+dfe   to plaster with mud
+dfn   lipnu
+so   1972:6
+.tag   ³tsjuː-ba
+dff   rance
+dfe   stale
+so   1972:59
+.tag   Xtsjyn-ba
+dff   attacher
+dfe   to tie
+dfn   samatne
+so   1972:11
+.tag   Xtsu-ba
+ton   44.44
+dff   aboyer
+dfe   to bark
+so   1972:61
+.tag   Xtsuŋ-ba
+dff   attacher
+dfe   to tie
+dfn   baːnne
+so   1972:11
+.tag   Xtsuŋ-ba
+dff   vendre
+dfe   to sell
+so   1972:11
+.tag   Xtsuː-ba
+ton   44.44
+dff   cuisiner pour un mort
+dfe   to cook for the dead
+so   1972:61
+.tag   ³tsuː-ba
+dff   appuyer par terre
+dfe   to press on the ground
+so   1972:61
+.tag   Xtsʰa-ba
+dff   faire paitre
+dfe   take to graze
+so   1972:7
+.tag   Xtsʰam
+dff   retraite
+dfe   retreat
+so   1972:7
+.tag   Xtsʰam
+dff   poil
+dfe   hairs
+so   1972:7
+..tag   Xtsʰam
+ton   54
+dff   fourrure
+dfe   fur
+so   1972:55
+.tag   Xtsʰaŋ
+dff   hotte
+dfe   large basket
+so   1972:33
+.tag   Xtsʰap-pa
+dff   éplucher
+dfe   to peel
+so   1972:46
+.tag   Xtsʰap-pa
+ton   44.44
+dff   avoir chaud
+dfe   to feel hot
+hom   'ɟplucher'
+so   1972:62
+.tag   Xtsʰap-pa
+ton   44.44
+dff   éplucher au couteau
+dfe   to peel (w/ knife)
+hom   avoir chaud
+so   1972:62
+.tag   Xtsʰe
+dff   fourrage
+dfe   fodder
+so   1972:14
+..tag   Xtsʰe
+dff   herbe
+dfe   grass
+so   1972:19
+..tag   Xtsʰe
+ton   53
+dff   fourrage
+dfe   grass
+so   1972:36
+.tag   Xtsʰe
+phon   tsʰɛː ⁴⁴
+dff   vie
+dfe   life
+so   1972:36
+.tag   Xtsʰeː-ba
+dff   lutter
+dfe   to fight
+phr   me tsʰeː-ba
+so   1972:18
+.tag   Xtsʰin
+ton   54
+dff   ongle
+dfe   nail
+so   1972:18, 63
+..tag   Xtsʰin
+dff   ongle
+dfe   nail
+so   1972:43
+.tag   Xtsʰiː-ba
+ton   52.22
+dff   éternuer
+dfe   to sneeze
+so   1972:60
+.tag   Xtsʰja-ba
+dff   se prendre (creme du lait)
+dfe   to coagulate
+so   1972:65
+.tag   Xtsʰjek-pa
+ton   55.53
+dff   battre le linge
+dfe   to hit clothes with paddle
+so   1972:47
+..tag   Xtsʰjek-pa
+phon   tsʰjɛk-pa
+ton   55.44
+dff   écraser
+enc   des pommes de terre
+dfe   to mash
+so   1972:60
+.tag   Xtsʰjoe-ba
+dff   'manger' le ventre (f. mal)
+dfe   to 'eat' (hurt) the belly
+so   1972:59
+.tag   Xtsʰjoi
+dff   livre religieux
+dfe   sacred book
+so   1972:18
+.tag   Xtsʰjoŋ-ba
+var   Xtsʰjuŋ-ba
+dff   courrir
+dfe   to run
+inf   le fils
+so   1972:20
+.tag   Xtsʰjop-pa
+dff   fouler
+dfe   to tread on clothes
+so   1972:34
+.tag   Xtsʰju
+dff   ligaments, veine
+dfe   ligaments, vein
+so   1972:43, 45
+.tag   Xtsʰo
+dff   colorer
+dfe   to color
+dfn   rangaːune
+so   1972:8
+.tag   Xtsʰo
+dff   corde
+dfe   rope
+so   1972:22
+.tag   Xtsʰo-ba
+dff   gros
+dfe   fat
+dfn   moTo
+so   1972:8
+..tag   Xtsʰo-dzi
+dff   grossir
+dfe   to become fat
+so   1972:19
+.tag   Xtsʰui-go
+dff   tasser
+dfe   to stuff down, compress
+ris   ²tsʰut
+so   1972:18
+.tag   Xur
+ton   55
+dff   jaune
+dfe   yellow
+so   1972:32
+.tag   ³wai-ba
+dff   meler la biere
+dfe   to brew
+ris   ³kwai
+so   1972:39
+..tag   ³wai-ba
+dff   meler la biere
+dfe   to mix beer
+so   1972:63
+.tag   Xwal-ba
+ton   44.44
+dff   servir, remuer
+dfe   to stir ?
+dfn   paska:une
+so   1972:63
+.tag   Xwat-si
+dff   ?faire la raie
+dfe   ?to split hair
+so   1972:18
+.tag   Xwi-ba
+ton   44.33
+dff   pousser
+dfe   to push
+nb   refuse /hwi/
+so   1972:49
+.tag   Xwon-ba
+ton   55.43
+dff   montrer
+dfe   to show
+so   1972:57.
+*
+*   More Taglung data
+*
+*   presented by MM 7 Jan 94
+*
+.tag   ¹ŋeː-ba
+dff   mâcher
+dfe	to chew
+dfn
+set   1
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ²ŋeː-ba
+dff   rire
+dfe	to laugh
+dfn
+set   2
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ⁴ŋeː-ba
+dff   renverser
+dfe	to spill
+dfn
+set   3
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ³ŋeː-ba
+dff   atterrir
+dfe	to land
+dfn
+set   4
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ³ŋe-ba
+dff   traire
+dfe	to milk
+dfn
+set   5
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ¹ɲep-pa
+dff   ruminer
+dfe	to chew cud, ruminate
+dfn
+set   7
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ³ɲep-pa
+dff   étrangler
+dfe	to strangle
+dfn
+set   8
+nb
+so   Thak 72 Voc Comp Vb : 5
+.tag   ¹nai-ba
+dff   être dégoûté
+dfe	to be disgusted
+dfn
+set   9
+nb   = set 6 p 5: ¹nai
+so   Thak 72 Voc Comp Vb : 6
+.tag   ¹nai-ba
+dff   mettre au lit
+dfe	to put to sleep
+dfn
+set   10
+nb
+so   Thak 72 Voc Comp Vb : 6
+.tag   ²nai-ba
+dff   pourrir
+dfe	to rot
+dfn
+set   11
+nb
+so   Thak 72 Voc Comp Vb : 6
+.tag   ⁴nai-ba
+dff   masser
+enc   frotter le linge, masser le cuir
+dfe	to rub, massage
+dfn
+set   12
+nb
+so   Thak 72 Voc Comp Vb : 6
+.tag   ¹naː-ba
+dff   supporter
+dfe	to bear
+dfn
+set   17
+nb
+so   Thak 72 Voc Comp Vb : 7
+.tag   ²naː-ba
+dff   porter
+dfe	to carry
+dfn
+set   18
+nb
+so   Thak 72 Voc Comp Vb : 7
+.tag   ³na-ba
+dff   élever un enfant
+dfe	to raise a child
+dfn
+set   19
+nb
+so   Thak 72 Voc Comp Vb : 7
+.tag   ³na-ba
+dff   déposer
+dfe	to put down
+dfn
+set   20
+nb
+so   Thak 72 Voc Comp Vb : 7
+.tag   ¹na-ba
+dff   être malade
+dfe	to be sick
+dfn
+set   21
+nb
+so   Thak 72 Voc Comp Vb : 7
+.tag   ¹ɕeː-ba
+dff   savoir
+dfe	to know
+dfn
+set   28
+nb
+so   Thak 72 Voc Comp Vb : 8
+.tag   ²ɕeː-ba
+dff   moucharder, répéter
+dfe	to repeat
+dfn
+set   29
+nb
+so   Thak 72 Voc Comp Vb : 8
+.tag   ²ɕeː-ba
+dff   aller (honor moyen)
+dfe	to go (hon)
+dfn
+set   31
+nb
+so   Thak 72 Voc Comp Vb : 8
+.tag   ¹ɕjaː
+dff   ôter le trop-plein
+dfe	to take off surplus
+dfn
+set   33
+nb   ? ²
+so   Thak 72 Voc Comp Vb : 8
+.tag   ²ɕja
+dff   danser
+dfe	to danse
+dfn
+set   34
+nb
+so   Thak 72 Voc Comp Vb : 8
+.tag   ¹seː-ba
+dff   tuer I62
+dfe	to kill
+dfn
+set   37
+nb
+so   Thak 72 Voc Comp Vb : 9
+.tag   ¹tsha
+dff   faire paître
+dfe	to graze (tr)
+dfn
+set   44
+nb
+so   Thak 72 Voc Comp Vb : 9
+.tag   ²tshaː
+dff   piquer du bec
+dfe	to peck
+dfn
+set   45
+nb
+so   Thak 72 Voc Comp Vb : 9
+.tag   ¹tsa
+dff   manger I55
+dfe	to eat
+dfn
+set   46
+nb
+so   Thak 72 Voc Comp Vb : 9
+.tag   ²tsha
+dff   faire mal (brûler)
+dfe	to hurt (burn)
+dfn
+set   47
+so   Thak 72 Voc Comp Vb : 9
+.tag   ¹toː-ba
+dff   avoir besoin
+dfe	to need
+dfn
+set   51
+nb
+so   Thak 72 Voc Comp Vb : 10
+.tag   ⁴toː-ba
+dff   retourner, faire revenir
+dfe	to turn over, turn around (tr)
+dfn
+set   52
+nb
+so   Thak 72 Voc Comp Vb : 10
+.tag   ³toː-ba
+dff   atteindre
+dfe	to reach
+dfn
+set   54
+nb
+so   Thak 72 Voc Comp Vb : 10
+.tag   ¹to-ba
+dff   décortiquer (le riz)
+dfe   to pound rice
+dfn
+set   55
+nb
+so   Thak 72 Voc Comp Vb : 10
+.tag   ²tsuː-ba
+dff   aboyer
+dfe	to bark
+dfn
+set   59
+nb
+so   Thak 72 Voc Comp Vb : 11
+.tag   ⁴tsuː-ba
+dff   mettre à cuire
+enc   (pour un mort)
+dfe	to set to cook (for the dead)
+dfn
+set   60
+nb
+so   Thak 72 Voc Comp Vb : 11
+.tag   ³tsuː-ba
+dff   poser les pieds par terre
+dfe	to press on the ground
+dfn
+set   61
+nb
+so   Thak 72 Voc Comp Vb : 11
+.tag   li
+dff   jeter, lancer
+dfe	to throw
+dfn
+set   70
+nb
+so   Thak 72 Voc Comp Vb : 12
+.tag   ²raː-ba
+dff   tisser
+dfe	to weave
+dfn
+set   72
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ³ra-ba
+dff   être travailleur, être habile
+dfe	to be industrious
+dfn
+set   73
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ²rap-pa
+dff   rester debout
+dfe	to stand
+dfn
+set   75
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ²rap-pa
+dff   gonfler (ganglions)
+dfe	to swell (lymph nodes)
+dfn
+set   76
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ³rap-pa
+dff   jouer (instrument)
+dfe	to play (instrument)
+dfn   bajāune
+set   77
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ²roː-ba
+dff   faire des fruits
+dfe	to bear fruit
+dfn
+set   78
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ⁴roː-ba
+dff   faire frire
+dfe	to fry (tr)
+dfn
+set   79
+nb
+so   Thak 72 Voc Comp Vb : 13
+.tag   ²riː
+dff   se gratter
+dfe	to scratch self
+dfn
+set   85
+nb
+so   Thak 72 Voc Comp Vb : 14
+.tag   ³riː
+dff   réclamer
+dfe	to ask for, beg
+dfn
+set   86
+nb
+so   Thak 72 Voc Comp Vb : 14
+.tag   ¹ko
+dff   bouger
+dfe	to move
+dfn
+set   90
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ²koː
+dff   contagieux
+dfe	to be contagious
+dfn
+set   91
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ³ko
+dff   comprendre
+dfe	to understand
+dfn
+set   92
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ³koː
+dff   récolter (maïs)
+dfe   to break off corn
+dfn
+set   93
+so   Thak 72 Voc Comp Vb : 15
+.tag   ⁴ko
+dff   chanter
+dfe	to sing
+dfn
+set   94
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ³kap
+dff   couvrir
+dfe	to cover
+dfn
+set   96
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ¹kap
+dff   ajouter, compléter
+dfe	to add, complete
+dfn
+set   97
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ¹hoː
+dff   déplacer, transporter
+dfe	to move (tr), carry
+dfn   osārnu
+set   101
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ¹ho
+dff   brûler (nourriture)
+dfe	to burn (food)
+dfn
+set   102
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ¹kho
+dff   piocher
+dfe	to dig ground, to hoe
+dfn
+set   103
+nb
+so   Thak 72 Voc Comp Vb : 15
+.tag   ¹he
+dff   ronger
+dfe	to gnaw
+dfn
+set   106
+nb
+so   Thak 72 Voc Comp Vb : 16
+.tag   ¹heː
+dff   grimper
+dfe	to climb
+dfn
+set   107
+nb
+so   Thak 72 Voc Comp Vb : 16
+.tag   ²kheː
+dff   psalmodier
+dfe	to chant
+dfn
+set   109
+nb
+so   Thak 72 Voc Comp Vb : 16
+.tag   ¹kheː
+dff   porter s/ hanche
+dfe	to carry on the hip
+dfn
+set   110
+nb
+so   Thak 72 Voc Comp Vb : 16
+.tag   ²kjeː
+dff   maudire
+dfe	to curse
+dfn
+set   111
+nb
+so   Thak 72 Voc Comp Vb : 16
+.tag   ²kjaː
+dff   attacher en chignon
+dfe   to pin hair up
+dfn
+nb	prob same as 'to plant stakes', 'to stick in' in other TGTM
+set   122
+nb
+so   Thak 72 Voc Comp Vb : 17
+.tag   ¹kja
+dff   démanger
+dfe	to itch
+dfn
+set   123
+nb
+so   Thak 72 Voc Comp Vb : 17
+.tag   ¹so
+dff   vivre
+dfe	to live
+dfn
+set   128
+nb
+so   Thak 72 Voc Comp Vb : 18
+.tag   ²soː
+dff   remuer les grains
+dfe	to spread, or stir grains
+dfn   phĩjāune
+set   129
+nb
+so   Thak 72 Voc Comp Vb : 18
+.tag   ²sol
+dff   remuer quelque chose
+dfe	to stir something
+dfn
+set   131
+nb
+so   Thak 72 Voc Comp Vb : 18
+.tag   ³so
+dff   fabriquer
+dfe	to make, fabricate
+dfn
+set   132
+nb
+so   Thak 72 Voc Comp Vb : 18
+.tag   ¹sol
+dff   manger
+enc   hon
+dfe	to eat (hon)
+dfn
+set   134
+nb
+so   Thak 72 Voc Comp Vb : 18
+.tag   ²sa
+dff   mener à la corde
+dfe	to lead (with a rope)
+dfn
+set   136
+nb
+so   Thak 72 Voc Comp Vb : 19
+.tag   ¹saː
+dff   asperger (pour les dieux)
+dfe	to sprinkle (for gods)
+dfn
+set   140
+nb
+so   Thak 72 Voc Comp Vb : 19
+.tag   ¹ɕi
+dff   mourir
+dfe	to die
+dfn
+set   143
+nb
+so   Thak 72 Voc Comp Vb : 20
+.tag   ¹ɕim
+dff   refroidir
+dfe	to cool
+dfn
+set   148
+nb
+so   Thak 72 Voc Comp Vb : 20
+.tag   ³sim
+dff   dormir (hon.)
+dfe	to sleep
+dfn
+set   149
+nb
+so   Thak 72 Voc Comp Vb : 20
+.tag   ²ɕjup
+dff   têter
+dfe	to suck
+dfn
+set   150
+nb
+so   Thak 72 Voc Comp Vb : 20
+.tag   ¹tai
+dff   tomber
+dfe	to fall
+dfn
+set   158
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ²tee
+dff   sortir quelque chose
+dfe	to take out
+dfn
+set   159
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ²te
+dff   verser
+dfe	to pour
+dfn
+set   160
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ⁴tai
+dff   cuire à l'eau
+dfe	to cook by boiling
+dfn
+set   163
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ¹tiː
+dff   étendre pour s'asseoir
+dfe	to spread to sit on
+dfn   oichyāune
+set   164
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ⁴ti
+dff   allumer un feu
+dfe	to light (a fire)
+dfn   salgāune
+set   166
+so   Thak 72 Voc Comp Vb : 21
+.tag   ¹tui
+dff   tremper dans
+dfe	to dip into
+dfn   copālnu
+set   168
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ⁴tui
+dff   ramasser
+dfe	to pick up
+dfn
+set   169
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ³ʈui
+dff   tirer
+dfe	to pull
+dfn
+set   171
+nb
+so   Thak 72 Voc Comp Vb : 21
+.tag   ²thwi
+dff   assembler
+dfe	to assemble
+dfn
+set   173
+nb   cf 'articulation'
+so   Thak 72 Voc Comp Vb : 21
+.tag   ³ʈeː
+dff   déchirer
+dfe	to tear
+dfn
+set   175
+nb
+so   Thak 72 Voc Comp Vb : 22
+.tag   ⁴ʈeː
+dff   griffer
+dfe	to scratch
+dfn
+set   176
+nb
+so   Thak 72 Voc Comp Vb : 22
+.tag   ¹ʈa
+dff   atteindre
+dfe	to reach
+dfn
+set   178
+nb
+so   Thak 72 Voc Comp Vb : 22
+.tag   ⁴ʈup
+dff   coudre
+dfe	to sew
+dfn
+set   187
+nb
+so   Thak 72 Voc Comp Vb : 23
+.tag   ²tsi
+dff   rester
+dfe	to stay
+dfn
+set   188
+nb
+so   Thak 72 Voc Comp Vb : 23
+.tag   ²ʈuː
+dff   être humide
+dfe	to be wet
+dfn
+set   189
+nb
+so   Thak 72 Voc Comp Vb : 23
+.tag   ¹peː
+dff   être timide
+dfe	to be shy
+dfn
+set   191
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ⁴pe
+dff   finir
+dfe	to finish
+dfn
+set   193
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ³beː
+dff   séparer fourche de bois
+dfe	to split (a tree fork)
+dfn
+set   194
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ³paʱr
+dff   se séparer du tronc
+dfe	to separate from the trunk
+dfn
+set   195
+so   Thak 72 Voc Comp Vb : 24
+.tag   ²bjaː
+dff   taper du pied
+dfe	to stamp one's foot
+dfn
+set   196
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ⁴pja
+dff   avoir des rapports sexuels
+dfe	to fuck
+dfn   ciknu
+set   197
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ⁴pre
+dff   fuir, suinter
+dfe	to leak, to ooze
+dfn
+set   202
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ³breː
+dff   perdre au jeu
+dfe	to lose (at a game)
+dfn
+set   203
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ³breː
+dff   raser
+dfe	to shave
+dfn
+set   204
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ¹phre
+dff   coiffer
+dfe	to comb
+dfn
+set   205
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ⁴pra
+dff   marcher
+dfe	to walk
+dfn
+set   211
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ³pra
+dff   taquiner
+dfe	to tease
+dfn   kisi garne
+set   212
+nb
+so   Thak 72 Voc Comp Vb : 24
+.tag   ¹ple
+dff   glisser
+dfe	to slip
+dfn
+set   214
+nb
+so   Thak 72 Voc Comp Vb : 25
+.tag   ¹pleː
+dff   écraser du pied
+dfe	to crush with foot
+dfn   kuljeko
+set   215
+nb
+so   Thak 72 Voc Comp Vb : 25
+.tag   ³pla
+dff   détacher, découdre
+dfe	to untie, unsew
+dfn
+set   219
+nb
+so   Thak 72 Voc Comp Vb : 25
+.tag   ⁴ploː
+dff   piquer
+dfe	to prick
+dfn
+set   224
+nb
+so   Thak 72 Voc Comp Vb : 25
+.tag   ple̥
+dff   paresseux
+dfe	to be lazy
+dfn
+comp	ris plap 'fatigué'
+set   228
+nb
+so   Thak 72 Voc Comp Vb : 25
+.tag   ¹ɕuː
+dff   exorciser
+dfe	to exorcise
+dfn   mansāune
+set   237
+nb
+so   Thak 72 Voc Comp Vb : 26
+.tag   ¹ɕu
+dff   ôter les vêtements, dépouiller
+dfe	to un dress, to skin
+dfn
+set   238
+nb
+so   Thak 72 Voc Comp Vb : 26
+.tag   ²ɕu
+dff   enfiler
+dfe	to string
+dfn
+set   240
+nb
+so   Thak 72 Voc Comp Vb : 26
+.tag   ³ɕuː
+dff   s'asseoir (hon)
+dfe	to sit (hon)
+dfn
+set   241
+nb
+so   Thak 72 Voc Comp Vb : 26
+.tag   ²ju
+dff   descendre
+dfe	to get down
+dfn
+set   243
+nb
+so   Thak 72 Voc Comp Vb : 26
+.tag   ¹juː
+dff   verser
+dfe	to pour
+dfn
+set   244
+nb
+so   Thak 72 Voc Comp Vb : 26
+.tag   ¹har-ba
+dff   sec
+dfe	dry
+dfn
+set   262
+nb
+so   Thak 72 Voc Comp Vb : 29
+.tag   ²har-ba
+dff   secouer (la poussière)
+dfe	to shake dust
+dfn
+set   263
+nb
+so   Thak 72 Voc Comp Vb : 29
+.tag   ¹ho
+dff   brûler
+dfe	to burn
+dfn
+set   281
+nb
+so   Thak 72 Voc Comp Vb : 31
