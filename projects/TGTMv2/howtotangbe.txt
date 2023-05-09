@@ -1,0 +1,16 @@
+cd ~/Sites/RE
+python3 REcli.py upstream TGTM new-tangbe --mel hand -w -r std-hand -t standard
+cd ~/Sites/RE/REwww
+cd ../projects/TGTM
+cp ~/Downloads/TGTM.tang.data.txt MONTANG_1978.DAT
+vi TGTM.master.parameters.xml
+vi pipeline.sh
+vi ../../styles/fmtLex.xsl 
+cp TGTM.C794.csv TGTM.20230508.csv
+./pipeline.sh ../../src
+grep tang MONTANG_1978.DAT| cut -f2 | cut -c1-2 | sort | uniq -c | sort -rn | head -30
+less MONTANG_1978.DAT
+perl -p split.pl MONTANG_1978.DAT | grep syll > x
+grep tang MONTANG_1978.DAT| cut -f2 | cut -c1-2 | sort | uniq -c | sort -rn | head -30 | cut -c6- | head -10
+cat > fuzz
+mv fuzz fuzz.csv
