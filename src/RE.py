@@ -263,7 +263,8 @@ def make_tokenizer(parameters, accessor, next_map):
             # we can abandon parses that we know can't be completed
             # to satisfy the syllable canon. for DEMO93 this cuts the
             # number of branches from 182146 to 61631
-            if regex.fullmatch(syllable_parse, partial=True) is None:
+            match = regex.fullmatch(syllable_parse, partial=True)
+            if match is None:
                 if Debug.debug:
                     pass
                     #filler = '. ' * len(parse)
@@ -278,7 +279,7 @@ def make_tokenizer(parameters, accessor, next_map):
                 # marker or a catch all environment
                 if (last.context[1] is None or
                         '#' in last.expanded_context[1]):
-                    if regex.fullmatch(syllable_parse):
+                    if match.partial is False:
                         parses.add(tuple(parse))
                     attempts.add(tuple(parse))
             # if the last token was marked as only word final then stop
