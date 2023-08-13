@@ -1,0 +1,130 @@
+* Rules in RE
+** Is it useful to consider rules without features?
+Consider the correspondences:
+
+| CID | Syll | Context | * | A | B | C | D |
+| c1  | C    |         | k | x | k | k | h |
+| c2  | V    | _#      | a | a | a | e | 0 |
+
+According to Lowe and Mazaudon (1994) the straightforward
+representation as rules would look like:
+
+| RID | CID | Syll | Context | * | Outcome | Languages |
+| r1  | c1  | C    |         | k | k       | B,C       |
+| r2  | c1  | C    |         | k | x       | A         |
+| r3  | c1  | C    |         | k | h       | D         |
+| r4  | c2  | V    | _#      | a | a       | A,B       |
+| r5  | c2  | V    | _#      | a | e       | C         |
+| r6  | c2  | V    | _#      | a | 0       | D         |
+
+While this may seem obvious, the following problem appears: Without a
+featural analysis, how do we know we group the rules like this? That
+is, how do we know that the /k/ in language B and C (and /a/ in
+language A and B resp.) are even related at all, and that they should
+be grouped under the same rule? This could just be an orthographical
+coincidence. Rules don't appear to be useful absent featural
+analysis - if we forget about trying to group outcomes by language and
+treat each daughter segment as unrelated to the segments in any other
+daughter language, we basically just get the same thing as the
+correspondence table, except that each correspondence row is
+multiplied by the number of languages to produce a rule row for each
+outcome segment.
+
+*On the other hand*, if the starting point is instead the rule table
+above, in other words it was input from the linguist, then of course
+it would be useful to get a correspondence table out, and it would
+implicitly encode some of the cross-daughter-language equivalencies we
+want to make which are inherently phonological (although the featural
+nature of such equivalencies is grossly underspecified).
+
+So maybe accepting a rule table written by the linguist is useful? The
+computer would internally represent this as a correspondence table
+with the implicit understanding that the linguist is assuming that
+same glyphs are considered (somehow) phonological equivalencies across
+daughter languages. Or we could carry extra data structure denoting
+equivalencies between the daughter languages that the linguist has
+made, as a coarse featural isomorphism approximation.
+
+Or maybe we just want to go all the way and fully support featural
+annotations and rules based on features. Would require more input to
+RE in the form of feature descriptions. Rule analysis would then
+become more-or-less synonymous with featural analysis.
+
+** Rules and chronology
+The above discussion did not even take into account chronology, which
+exacerbates the representation problem above, since now we need to
+deal with all chronological steps.
+
+How should we represent chronology? There are a few different
+approaches:
+
+- ToC with chronology numbers acting as timestamps.
+  - Cons: Potentially huge amount of duplicated rows in the ToC where
+    nothing changes in various daughter languages.
+- Using a list of rules which are partially ordered with an optional
+  "Occurs after" specifier.
+  - Problem: The representational issue. The linguist omits a rule in
+    a "nothing happened" context, but a /k/ staying a /k/ in the above
+    example being omitted means that the linguist makes some kind of
+    implicit phonological equivalence between proto-*/k/ and /k/ in a
+    daughter language, when that might be an accident of orthography.
+  - Counterpoint: Perhaps this isn't an issue at all, and we can find
+    a way to only care about mergers or conditioned splits inside the
+    chronological history of one language.
+
+Example: If we have the correspondence rows
+
+| CID | Syll | Context | * | A | B | C | D |
+| c1  | C    |         | k | x | k | k | h |
+| c2  | C    |         | g | x | g | g | g |
+
+demonstrating an unconditional merger of */k/ and */g/ to /x/ in
+language A, it is definitely worth expressing this fact. However,
+imagine we want to express a chain shift:
+
+*/k/ > /x/ > /h/ in language A, where the second shift is conditioned
+on intervocalism, and the first shift _never_ feeds into the
+second. Then the rules must look like this:
+
+| RID | Syll | Context | * | Outcome | Language | Occurs after |
+| r1  | C    |         | k | x       | A        | r2           |
+| r2  | C    | V_V     | x | h       | A        |              |
+
+A big part of the comparative method for more researched languages is
+discovering such partially ordered relations.
+
+This presents somewhat of a problem for the computational apparatus,
+since the computer has to now reason that the * in the first row does
+not express the same point in time in the languages history as the *
+in the second, so perhaps we should rename the * column to something
+like INPUT. In any case if we want to use such a rule representation
+in a way similar to the current algorithm, we will probably have to
+first convert this into an "exploded" correspondence table with
+chronology numbers in order to keep the different * stages
+straight. Under this view rules are really just a sparse
+representation for the three dimensional correspondence table where
+the 3rd dimensional axis is the chronology number.
+
+** Chronology conclusion
+The right internal data structure the computer will use for chronology
+is probably just the exploded 3-dimensional ToC indexed by chronology
+numbers. Of course this is much too massive and unwieldy for the
+linguist to work directly on, so a rule view with an "Occurs after"
+relation to partially order the rules will be the thing the linguist
+actually works on after initial conversion from a flat ToC (which is
+just a 3-dimensional ToC where everything is indexed by a single
+chronology step.) Implicitly we probably assume that any omitted rules
+between two chronological steps should be interpreted as the
+orthographical glyph remaining unchanged. I suspect that computing the
+minimum number of chronology steps needed to represent the partially
+ordered rule information and then filling in the resulting 3-d ToC is
+an algorithmically solved problem. I don't have an algorithm on the
+spot but it seems doable. In fact telling the linguist based on the
+rules they made how many distinct /proto-language/ stages are implied
+could be intrinsically interesting in itself.
+
+** Next steps (in order)
+* TODO Give a go at implementing 3d ToC with chronology numbers, see if it jives with the algorithm.
+* TODO Write code to go from a 2d ToC with no chronology numbers to a rule view.
+* TODO Write code to go from a partially ordered rule view to a 3d TOC.
+* TODO Maybe incorporate featural analysis to make rule view without chronology more useful.
