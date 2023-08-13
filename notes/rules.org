@@ -124,7 +124,7 @@ rules they made how many distinct /proto-language/ stages are implied
 could be intrinsically interesting in itself.
 
 ** Next steps (in order)
-* TODO Give a go at implementing 3d ToC with chronology numbers, see if it jives with the algorithm.
-* TODO Write code to go from a 2d ToC with no chronology numbers to a rule view.
-* TODO Write code to go from a partially ordered rule view to a 3d TOC.
-* TODO Maybe incorporate featural analysis to make rule view without chronology more useful.
+1. TODO Give a go at implementing 3d ToC with chronology numbers, see if it jives with the algorithm.
+1. TODO Write code to go from a 2d ToC with no chronology numbers to a rule view.
+1. TODO Write code to go from a partially ordered rule view to a 3d TOC.
+1. TODO Maybe incorporate featural analysis to make rule view without chronology more useful.
