@@ -1,0 +1,366 @@
+*
+*  Feature Analysis Subsytem of RE
+*
+*  Statement of segments by class.
+*  Each line is of the form:
+*
+* 	<lg> <class> = segment,segment,...
+*
+*  Note:
+*    1.	 CLASS may be any number of alpha characters, CASE IS SIGNIFICANT!
+*    2.	 Segments must be separated by commas.
+*    3.	 Sorry, "-" is not allowed (i.e. you can't say Voiced = -UnVoiced)
+*    4.	 Lines begining with * are treated as comments. Blank lines ignored.
+*    5.  Tabs are permitted between fields.
+*
+TGTM	Cluster   = gr,gl,gj,gw,bl,bj,ml,mj,Hl,Hr
+TGTM	Cluster   = kr,kl,kj,pl,pj,pʰj,kʰr,ʰmj,ʰmr,ʰml
+TGTM	Voiced    = g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,gw,bl,bj,ml,mj
+TGTM	Unvoiced  = k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw
+TGTM	Unvoiced  = s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml
+TGTM	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+TGTM	Aspirated = kʰr
+TGTM	Nasal	  = ŋ,ɲ,n,m,ʰŋ,ʰɲ,ʰn,ʰm,mj,mr,ml,ʰmj,ʰmr,ʰml
+TGTM	Liquid	  = l,r,ʰl,ʰr
+TGTM	Glottal	= h
+TGTM	Velar	  = k,kʰ,g,ŋ,ʰŋ
+TGTM	Velar	= kr,kʰr,gr,kl,kʰl,gl,kj,kʰj,gj,kw,kʰw,gw
+TGTM	Palatal	  = ɲ,ʰɲ,j,ʰj
+TGTM	Palatal	  = pj,pʰj,bj,mj,ʰmj,gj
+TGTM	Flapped   = ʈ,ʈʰ,ɖ,r,ʰr,Hr,gr,kr,kʰr,ʰmr
+TGTM	Lateral	  = l,ʰl
+TGTM	Lateral	  = bl,pl,pʰl,ml,ʰml,gl,kl,Hl
+TGTM	Dental    = t,tʰ,d,n,ʰn,ts,tsʰ,dz,s,z
+TGTM	Labial    = p,pʰ,b,m,ʰm,w,ʰw
+TGTM	Labial	  = bj,bl,pj,pl,pʰj,pʰl,mj,mr,ml,ʰmj,ʰmr,ʰml
+TGTM	Labial	  = gw
+TGTM	Stop	  = k,kʰ,g,ts,tsʰ,dz,ʈ,ʈʰ,ɖ,t,tʰ,d,p,pʰ,b
+TGTM	Fricative = s,z,h
+TGTM	Fricative = ts,tsʰ,dz
+TGTM	Glide	 = j,w,ʰj,ʰw
+TGTM	Long 	= iː,eː,aː,oː,uː
+TGTM	Short 	= i,e,a,o,u
+TGTM	Close 	= i,iː,u,uː
+TGTM	Half-close = e,eː,o,oː
+TGTM	Open	= a,aː
+TGTM	Front	= i,iː,e,eː
+TGTM	Back	= u,uː,o,oː
+TGTM	Nasal	= ĩ,ẽ,ã,õ,ũ
+TGTM	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+TGTM	Ahood	= A
+TGTM	Bhood	= B
+
+* Risiangku Feature Set. last updated 6/1/90 JBL
+ris	Cluster	= hl,hr,kj,kr,kʰr,kl,kw,pj,pʰj,pr,pl,ŋj,mj,ml,mr
+ris	Stop	= k,kʰ,ts,tsʰ,ʈ,ʈʰ,t,tʰ,p,pʰ
+ris	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+ris	Aspirated = kʰr,pʰj
+ris	Unaspirated = k,ʈ,ts,t,p
+ris	Unaspirated = kj,kr,kl,kw,pj,pl
+ris	Nasal	= ŋ,n,m
+ris	Nasal	= ŋj,mj,ml,mr
+ris	Liquid	= l,r
+ris	Semi-vowel = j,w
+ris	Fricative = s,h
+ris	Glottal	= h,hl,hr
+ris	Velar	= k,kʰ,ŋ
+ris	Velar	= kj,kr,kʰr,kl,kw
+ris	Sibilant = ts,tsʰ,s
+ris	Flapped = ʈ,ʈʰ,r,hr
+ris	Flapped	= kr,kʰr,mr
+ris	Dental	= t,tʰ,n
+ris	Labial	= p,pʰ,m
+ris	Labial	= pj,pʰj,mj,pl,ml,pr,mr
+ris	Lateral	= l,hl
+ris	Lateral = kl,pl,ml
+ris	Long = iː,eː,aː,oː,uː
+ris	Short = i,e,a,o,u
+ris	Super-close = j,w
+ris	Close = i,iː,u,uː
+ris	Half-close = e,eː,o,oː
+ris	Open	= a,aː
+ris	Front	= i,iː,e,eː,j
+ris	Back	= u,uː,o,oː,w
+ris	Nasal	= ĩ,ẽ,ã,õ,ũ
+ris	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+ris	Ahood = ¹,³
+ris	Bhood = ²,⁴
+ris	HIGH 	= ¹,²
+ris	LOW	= ³,⁴
+ris	Zero	= Ø
+
+* Sahu Feature Set. last updated 6/1/90 JBL
+sahu	Cluster	= hl,hr,kj,kr,kʰr,kl,kw,pj,pʰj,pr,pl,ŋj,mj,ml,mr
+sahu	Stop	= k,kʰ,ts,tsʰ,ʈ,ʈʰ,t,tʰ,p,pʰ
+sahu	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+sahu	Aspirated = kʰr,pʰj
+sahu	Unaspirated = k,ʈ,ts,t,p
+sahu	Unaspirated = kj,kr,kl,kw,pj,pl
+sahu	Nasal	= ŋ,n,m
+sahu	Nasal	= ŋj,mj,ml,mr
+sahu	Liquid	= l,r
+sahu	Semi-vowel = j,w
+sahu	Fricative = s,h
+sahu	Glottal	= h,hl,hr
+sahu	Velar	= k,kʰ,ŋ
+sahu	Velar	= kj,kr,kʰr,kl,kw
+sahu	Sibilant = ts,tsʰ,s
+sahu	Flapped = ʈ,ʈʰ,r,hr
+sahu	Flapped	= kr,kʰr,mr
+sahu	Dental	= t,tʰ,n
+sahu	Labial	= p,pʰ,m
+sahu	Labial	= pj,pʰj,mj,pl,ml,pr,mr
+sahu	Lateral	= l,hl
+sahu	Lateral = kl,pl,ml
+sahu	Long = iː,eː,aː,oː,uː
+sahu	Short = i,e,a,o,u
+sahu	Super-close = j,w
+sahu	Close = i,iː,u,uː
+sahu	Half-close = e,eː,o,oː
+sahu	Open	= a,aː
+sahu	Front	= i,iː,e,eː,j
+sahu	Back	= u,uː,o,oː,w
+sahu	Nasal	= ĩ,ẽ,ã,õ,ũ
+sahu	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+sahu	Ahood = ¹,³
+sahu	Bhood = ²,⁴
+sahu	HIGH 	= ¹,²
+sahu	LOW	= ³,⁴
+sahu	Zero	= Ø
+
+* Taglung Feature Set. last updated 6/1/90 JBL
+tag	Cluster	= hl,hr,kj,kr,kʰr,kl,kw,pj,pʰj,pr,pl,ŋj,mj,ml,mr
+tag	Stop	= k,kʰ,ts,tsʰ,ʈ,ʈʰ,t,tʰ,p,pʰ
+tag	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+tag	Aspirated = kʰr,pʰj
+tag	Unaspirated = k,ʈ,ts,t,p
+tag	Unaspirated = kj,kr,kl,kw,pj,pl
+tag	Nasal	= ŋ,n,m
+tag	Nasal	= ŋj,mj,ml,mr
+tag	Liquid	= l,r
+tag	Semi-vowel = j,w
+tag	Fricative = s,h
+tag	Glottal	= h,hl,hr
+tag	Velar	= k,kʰ,ŋ
+tag	Velar	= kj,kr,kʰr,kl,kw
+tag	Sibilant = ts,tsʰ,s
+tag	Flapped = ʈ,ʈʰ,r,hr
+tag	Flapped	= kr,kʰr,mr
+tag	Dental	= t,tʰ,n
+tag	Labial	= p,pʰ,m
+tag	Labial	= pj,pʰj,mj,pl,ml,pr,mr
+tag	Lateral	= l,hl
+tag	Lateral = kl,pl,ml
+tag	Long = iː,eː,aː,oː,uː
+tag	Short = i,e,a,o,u
+tag	Super-close = j,w
+tag	Close = i,iː,u,uː
+tag	Half-close = e,eː,o,oː
+tag	Open	= a,aː
+tag	Front	= i,iː,e,eː,j
+tag	Back	= u,uː,o,oː,w
+tag	Nasal	= ĩ,ẽ,ã,õ,ũ
+tag	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+tag	Ahood = ¹,³
+tag	Bhood = ²,⁴
+tag	HIGH 	= ¹,²
+tag	LOW	= ³,⁴
+tag	Zero	= Ø
+
+
+* Tukche Feature Set. last updated 6/1/90 JBL
+tuk	Cluster	= hl,hr,kj,kr,kʰr,kl,kw,pj,pʰj,pr,pl,ŋj,mj,ml,mr
+tuk	Stop	= k,kʰ,ts,tsʰ,ʈ,ʈʰ,t,tʰ,p,pʰ
+tuk	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+tuk	Aspirated = kʰr,pʰj
+tuk	Unaspirated = k,ʈ,ts,t,p
+tuk	Unaspirated = kj,kr,kl,kw,pj,pl
+tuk	Nasal	= ŋ,n,m
+tuk	Nasal	= ŋj,mj,ml,mr
+tuk	Liquid	= l,r
+tuk	Semi-vowel = j,w
+tuk	Fricative = s,h
+tuk	Glottal	= h,hl,hr
+tuk	Velar	= k,kʰ,ŋ
+tuk	Velar	= kj,kr,kʰr,kl,kw
+tuk	Sibilant = ts,tsʰ,s
+tuk	Flapped = ʈ,ʈʰ,r,hr
+tuk	Flapped	= kr,kʰr,mr
+tuk	Dental	= t,tʰ,n
+tuk	Labial	= p,pʰ,m
+tuk	Labial	= pj,pʰj,mj,pl,ml,pr,mr
+tuk	Lateral	= l,hl
+tuk	Lateral = kl,pl,ml
+tuk	Long = iː,eː,aː,oː,uː
+tuk	Short = i,e,a,o,u
+tuk	Super-close = j,w
+tuk	Close = i,iː,u,uː
+tuk	Half-close = e,eː,o,oː
+tuk	Open	= a,aː
+tuk	Front	= i,iː,e,eː,j
+tuk	Back	= u,uː,o,oː,w
+tuk	Nasal	= ĩ,ẽ,ã,õ,ũ
+tuk	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+tuk	Ahood = ¹,³
+tuk	Bhood = ²,⁴
+tuk	HIGH 	= ¹,²
+tuk	LOW	= ³,⁴
+tuk	Zero	= Ø
+
+* Marpha Feature Set. last updated 6/1/90 JBL
+mar	Cluster	= hl,hr,kj,kr,kʰr,kl,kw,pj,pʰj,pr,pl,ŋj,mj,ml,mr
+mar	Stop	= k,kʰ,ts,tsʰ,ʈ,ʈʰ,t,tʰ,p,pʰ
+mar	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+mar	Aspirated = kʰr,pʰj
+mar	Unaspirated = k,ʈ,ts,t,p
+mar	Unaspirated = kj,kr,kl,kw,pj,pl
+mar	Nasal	= ŋ,n,m
+mar	Nasal	= ŋj,mj,ml,mr
+mar	Liquid	= l,r
+mar	Semi-vowel = j,w
+mar	Fricative = s,h
+mar	Glottal	= h,hl,hr
+mar	Velar	= k,kʰ,ŋ
+mar	Velar	= kj,kr,kʰr,kl,kw
+mar	Sibilant = ts,tsʰ,s
+mar	Flapped = ʈ,ʈʰ,r,hr
+mar	Flapped	= kr,kʰr,mr
+mar	Dental	= t,tʰ,n
+mar	Labial	= p,pʰ,m
+mar	Labial	= pj,pʰj,mj,pl,ml,pr,mr
+mar	Lateral	= l,hl
+mar	Lateral = kl,pl,ml
+mar	Long = iː,eː,aː,oː,uː
+mar	Short = i,e,a,o,u
+mar	Super-close = j,w
+mar	Close = i,iː,u,uː
+mar	Half-close = e,eː,o,oː
+mar	Open	= a,aː
+mar	Front	= i,iː,e,eː,j
+mar	Back	= u,uː,o,oː,w
+mar	Nasal	= ĩ,ẽ,ã,õ,ũ
+mar	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+mar	Ahood = ¹,³
+mar	Bhood = ²,⁴
+mar	HIGH 	= ¹,²
+mar	LOW	= ³,⁴
+mar	Zero	= Ø
+
+* Syang Feature Set. last updated 6/1/90 JBL
+syang	Cluster	= hl,hr,kj,kr,kʰr,kl,kw,pj,pʰj,pr,pl,ŋj,mj,ml,mr
+syang	Stop	= k,kʰ,ts,tsʰ,ʈ,ʈʰ,t,tʰ,p,pʰ
+syang	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+syang	Aspirated = kʰr,pʰj
+syang	Unaspirated = k,ʈ,ts,t,p
+syang	Unaspirated = kj,kr,kl,kw,pj,pl
+syang	Nasal	= ŋ,n,m
+syang	Nasal	= ŋj,mj,ml,mr
+syang	Liquid	= l,r
+syang	Semi-vowel = j,w
+syang	Fricative = s,h
+syang	Glottal	= h,hl,hr
+syang	Velar	= k,kʰ,ŋ
+syang	Velar	= kj,kr,kʰr,kl,kw
+syang	Sibilant = ts,tsʰ,s
+syang	Flapped = ʈ,ʈʰ,r,hr
+syang	Flapped	= kr,kʰr,mr
+syang	Dental	= t,tʰ,n
+syang	Labial	= p,pʰ,m
+syang	Labial	= pj,pʰj,mj,pl,ml,pr,mr
+syang	Lateral	= l,hl
+syang	Lateral = kl,pl,ml
+syang	Long = iː,eː,aː,oː,uː
+syang	Short = i,e,a,o,u
+syang	Super-close = j,w
+syang	Close = i,iː,u,uː
+syang	Half-close = e,eː,o,oː
+syang	Open	= a,aː
+syang	Front	= i,iː,e,eː,j
+syang	Back	= u,uː,o,oː,w
+syang	Nasal	= ĩ,ẽ,ã,õ,ũ
+syang	Oral 	= i,e,a,o,u,iː,eː,aː,oː,uː
+syang	Ahood = ¹,³
+syang	Bhood = ²,⁴
+syang	HIGH 	= ¹,²
+syang	LOW	= ³,⁴
+syang	Zero	= Ø
+
+* Gurung Feature Set. last updated 6/1/90 JBL
+gha	Stop	= k,kʰ,g,ts,tsʰ,dz,ʈ,ʈʰ,ɖ,t,tʰ,d,p,pʰ,b
+gha	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+gha	Unaspirated = k,ʈ,ts,t,p
+gha	Voiced	= g,ɖ,dz,d,b
+gha	Nasal	= ŋ,n,m
+gha	Liquid	= l,r
+gha	Fricative = s,h,ɬ
+gha	Glottal	= h
+gha	Velar	= k,kʰ,g,ŋ
+gha	Palatal = ɬ,j
+gha	Sibilant = ts,tsʰ,dz,s
+gha	Flapped = ʈ,ʈʰ,ɖ,r
+gha	Dental	= t,tʰ,d,n
+gha	Labial	= p,pʰ,b,m,w
+gha	Lateral	= l
+gha	Semi-vowel = w,j
+gha	Front	 = i,e,ĩ,ẽ
+gha	Back 	= u,o,a,ũ,õ,ã
+gha	Close	= i,u,ĩ,ũ
+gha	Half-close	= e,o,ẽ,õ
+gha	Open	= a,ã
+gha	Long	= aː
+gha	Nasal	= ĩ,ẽ,ã,õ,ũ
+gha	Oral 	= i,e,a,o,u,aː
+gha	Ahood 	= ¹,³
+gha	Bhood 	= ²,⁴
+gha	HIGH 	= ¹,²
+gha	LOW	= ³,⁴
+gha	Zero	= Ø
+
+* Praka Feature Set. last updated 6/1/90 JBL
+pra	Stop	= k,kʰ,g,ts,tsʰ,dz,ʈ,ʈʰ,ɖ,t,tʰ,d,p,pʰ,b
+pra	Aspirated = kʰ,ʈʰ,tsʰ,tʰ,pʰ
+pra	Unaspirated = k,ʈ,ts,t,p
+pra	Voiced	= g,ɖ,dz,d,b
+pra	Nasal	= ŋ,n,m
+pra	Liquid	= l,r
+pra	Fricative = s,h,ɬ
+pra	Glottal	= h
+pra	Velar	= k,kʰ,g,ŋ
+pra	Palatal = ɬ,j
+pra	Sibilant = ts,tsʰ,dz,s
+pra	Flapped = ʈ,ʈʰ,ɖ,r
+pra	Dental	= t,tʰ,d,n
+pra	Labial	= p,pʰ,b,m,w
+pra	Lateral	= l
+pra	Semi-vowel = w,j
+pra	Front	 = i,e,ĩ,ẽ
+pra	Back 	= u,o,a,ũ,õ,ã
+pra	Close	= i,u,ĩ,ũ
+pra	Half-close	= e,o,ẽ,õ
+pra	Open	= a,ã
+pra	Long	= aː
+pra	Nasal	= ĩ,ẽ,ã,õ,ũ
+pra	Oral 	= i,e,a,o,u,aː
+pra	Ahood 	= ¹,³
+pra	Bhood 	= ²,⁴
+pra	HIGH 	= ¹,²
+pra	LOW	= ³,⁴
+pra	Zero	= Ø
+
+
+* "Tier" specifications
+*
+*  Last updated 6/1/90 JBL
+*
+	P̪LACE  = Labial,Dental,Flapped,Lateral,Retroflex,Palatal,Velar
+	P̪LACE	= Sibilant,Glottal
+	M̪ANNER = Stop,Fricative,Cluster,Liquid,Semi-vowel,Glide
+	M̪ODE	= Voiced,Unvoiced,Aspirated,Unaspirated,Nasal
+	T̪ONE	= Ahood,Bhood,HIGH,LOW
+	V̪OWEL	= Close,Half-close,Open,Front,Back,Short,Long,Oral,Nasal
+	V̪OWEL	= Super-close
+
+*Notes:
+* What should TGTM j, w be??
+* ?? ãː in gha ?? or only in tAAn < ta-en with morpheme break?
+

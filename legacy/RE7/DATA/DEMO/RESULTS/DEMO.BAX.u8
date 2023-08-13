@@ -1,0 +1,42 @@
+0	1	Type	*	context	ris	sahu	tag	tuk	mar	syang	gha	pra
+1	1	T	A	/-i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml	¹,X,ᴴ	¹	¹,X,ᴴ	¹,ᴴ	¹,ᴴ	¹,ᴴ	¹,X	¹
+2	1	T	B	/-i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml	²,X,ᴴ	²	²,X,ᴴ	²,ᴴ	²,ᴴ	²,ᴴ	²,X	²
+3	2	T	A	/i̱,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr	³,X,ᴸ	³	³,X	³	³	³,ᴸ	³,X	³
+4	1	T	B	/-i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr	⁴,X,ᴸ	⁴	⁴,X,ᴴ	⁴	⁴	⁴,ᴸ	⁴,X	⁴
+5	1	R	iŋ		iŋ	iŋ	iŋ	in	in	in,im,un	ĩ	ĩ
+6	1	R	in		in	in	in	in	in	in	ĩ	ĩ,in+
+7	1	R	im		im	im	im	im	in	im	ĩ	ĩ,in+
+8	1	R,V	e		e	e	e	e	e	e	e	iɛ,ie,eɛ
+9	1	R	eː		eː	eː	eː	e	e	e	i	e
+10	1	R,V	je		e	e	e	e	i	i	i	ie
+11	1	R	et		et	et	eː	e,i+	e	e	i+,jo+	e,eː
+12	1	R	ep		ep	ep	?	əp	o	o	aː	e
+13	1	R,V	a		a	a	a	ə	ə	ə	a	ɤ
+14	1	R	aː		aː	aː	aː	a	a	a	o	a=aː
+15	1	R,V	ja		ja	ja	?	e	e	e	e	je
+16	1	R,V	wa		wa	wa	wa	o	o	o	o	ɔ
+17	1	R	at		at	et,e	eː	e	e,je	e	e,ae,aː	e,je,eː
+18	1	R	ap		ap	ap	ap	əp,əw,a+	o	o	aː	e
+19	1	R	an		an	en	an	ən	ən	ən	aẽ	jɛ̃=jẽ,ẽ
+20	1	R,V	o		o	o	o	o	o	o	o	o,wo
+21	1	R	oː		oː	oː	oː	o	o	o	u	o
+22	1	R	ot		ot	ot,oi	oi	oi=oj	?	?	wi	e
+23	1	R	ot	/t,d,tʰ-	ot	ot	oi=oj	e	e	əe	i	e
+24	1	I	k		k	k	k	k	k	k	k	k
+25	1	I	g	/B-	k	k	k,g	k	k	g	k,g	kʰ
+26	1	O	kr	/	kr	kr	h	ʈ	k	k	kr	kr
+27	1	O	kl	/-i,e	kl	kl	kʰl	k	hl	l	ɬ	?
+28	1	O	gl	/A-	kl	kl	hl	kj	lj	?	ɬ	?
+29	1	O	gl	/B-	kl	kl	kʰl	kj	lj	lj	ɬ	kʰj
+30	1	O	gl	/B-i	kl	kl	kʰl	k	l	l	ɬ	kʰ
+31	1	I	t		t	t	t	t	t	t	t	t
+32	1	I	tʰ		tʰ	tʰ	tʰ,?	tʰ	tʰ	tʰ,t	tʰ,t	tʰ
+33	1	I	d	/B-	t	t	t	t	t	d,t	d,t	tʰ
+34	1	I	p		p	p	p	p	p	p	p	p
+35	1	I	b	/A-	p	p	p,b	p	p	p	p	p
+36	1	O,G	j		j	j	j	j	j	j	j	j
+37	1	I,L	l		l	l	l	l	l	l	l	l
+38	1	F	t		t	t,ː	?,ː	Ø	?	?	Ø,ː	ː
+39	1	F	p		p	p	p	p,w	Ø	Ø	ː	Ø
+40	1	F	p	/o,u-	p	p	p	p	p	p+	Ø	ː
+41	1	V	a	/-p	a	a	a	ə	o	o	a	e

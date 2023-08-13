@@ -41,7 +41,7 @@ warn "Remapping Mac STEDT Font 5.1 text files to Unicode 4.0 ...\n";
 #opendir(DIR, ':') 
 opendir(DIR, '.') 
     or die 'cannot open : $!';
-my @files = sort grep /\.txt$/, readdir(DIR);
+my @files = readdir(DIR);
 closedir(DIR);
 die "Died: No file.txt in current directory to convert! (why not add some?)\n"
     unless @files;
@@ -55,8 +55,7 @@ my $n;
 for my $infile (@files){
     $n++;
     my $outfile = $infile;
-    $outfile =~ s/\.txt/.u8/ 
-        or die "Died!: Infiles must be named with a `.txt' extension\n";
+    $outfile .= '.u8'; 
     $files{$infile}=$outfile;
     warn "$n:  $infile => $outfile\n";
 }
