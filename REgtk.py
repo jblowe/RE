@@ -272,7 +272,7 @@ def make_sets_view(model):
                                                text=2))
     return sets_view
 
-def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
+def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statistics_buffer):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     window = make_pane(vexpand=True)
     store = make_sets_store()
@@ -285,6 +285,8 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
         thread.start()
 
     def batch_upstream():
+        out = sys.stdout
+        sys.stdout = statistics_buffer
         def store_row(parent, form):
             if isinstance(form, RE.ProtoForm):
                 row = store.append(
@@ -309,6 +311,7 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget):
             store.clear()
             for form in proto_lexicon.forms:
                 store_row(None, form)
+        sys.stdout = out
         GLib.idle_add(update_model)
 
     box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
@@ -319,6 +322,68 @@ def make_pane_container(orientation):
     container.set_orientation(orientation)
     return container
 
+def make_open_dialog_window(window):
+    def add_filters(dialog):
+        filter_text = Gtk.FileFilter()
+        filter_text.set_name("Text files")
+        filter_text.add_mime_type("text/plain")
+        dialog.add_filter(filter_text)
+
+        filter_py = Gtk.FileFilter()
+        filter_py.set_name("Python files")
+        filter_py.add_mime_type("text/x-python")
+        dialog.add_filter(filter_py)
+
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name("Any files")
+        filter_any.add_pattern("*")
+        dialog.add_filter(filter_any)
+    def activate(widget):
+        dialog = Gtk.FileChooserDialog(
+            title="Please choose a file", parent=window, action=Gtk.FileChooserAction.OPEN
+        )
+        dialog.add_buttons(
+            Gtk.STOCK_CANCEL,
+            Gtk.ResponseType.CANCEL,
+            Gtk.STOCK_OPEN,
+            Gtk.ResponseType.OK,
+        )
+        add_filters(dialog)
+        response = dialog.run()
+        print('what')
+        if response == Gtk.ResponseType.OK:
+            print("Open clicked")
+            print("File selected: " + dialog.get_filename())
+        elif response == Gtk.ResponseType.CANCEL:
+            print("Cancel clicked")
+        dialog.destroy()
+    return activate
+
+def make_RE_menu_bar(window):
+    menu_bar = Gtk.MenuBar()
+
+    file_menu_item = Gtk.MenuItem(label="File")
+    menu_bar.append(file_menu_item)
+    file_menu = Gtk.Menu()
+    file_menu_item.set_submenu(file_menu)
+
+    open_menu = Gtk.MenuItem(label="Open Experiment")
+    file_menu.add(open_menu)
+    open_menu.connect('activate', make_open_dialog_window(window))
+
+    save_menu = Gtk.MenuItem(label="Save Experiment")
+    file_menu.add(save_menu)
+    save_menu.connect('activate', make_open_dialog_window(window))
+
+    quit_menu = Gtk.MenuItem(label="Quit")
+    file_menu.add(quit_menu)
+    quit_menu.connect('activate', quit)
+
+    edit_menu_item = Gtk.MenuItem(label="Edit Parameters")
+    menu_bar.append(edit_menu_item)
+
+    return menu_bar
+
 class REWindow(Gtk.Window):
 
     def __init__(self, settings, attested_lexicons):
@@ -328,31 +393,35 @@ class REWindow(Gtk.Window):
         statistics_pane = make_pane(vexpand=True, hexpand=True)
         statistics_view = Gtk.TextView()
         statistics_pane.add(statistics_view)
-        self.statistics_buffer = WrappedTextBuffer(statistics_view.get_buffer())
+        statistics_buffer = WrappedTextBuffer(statistics_view.get_buffer())
+
+        menu_bar = make_RE_menu_bar(self)
+
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        box.pack_start(menu_bar, False, False, 0)
 
         # layout
         pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
-        self.add(pane_layout)
+        box.pack_start(pane_layout, True, True, 0)
         left_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         left_pane.add(make_lexicons_widget(attested_lexicons.values()))
         pane_layout.add1(left_pane)
         right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         pane_layout.add2(right_pane)
         parameters_widget = make_parameters_widget(settings)
-        right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget))
+        right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget, statistics_buffer))
         right_pane.add2(statistics_pane)
 
         left_pane.add2(parameters_widget)
 
+        self.add(box)
+
 def run(settings, attested_lexicons):
-    out = sys.stdout
     win = REWindow(settings, attested_lexicons)
-    sys.stdout = win.statistics_buffer
     win.connect('delete_event', Gtk.main_quit)
     win.show_all()
     Gdk.threads_init()
     Gtk.main()
-    sys.stdout = out
 
 if __name__ == "__main__":
     settings = read.read_settings_file(f'../projects/{args.project}/{args.project}.master.parameters.xml',
