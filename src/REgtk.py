@@ -367,20 +367,39 @@ def make_RE_menu_bar(window):
     file_menu = Gtk.Menu()
     file_menu_item.set_submenu(file_menu)
 
-    open_menu = Gtk.MenuItem(label="Open Experiment")
+    open_menu = Gtk.MenuItem(label="New Experiment")
     file_menu.add(open_menu)
     open_menu.connect('activate', make_open_dialog_window(window))
 
-    save_menu = Gtk.MenuItem(label="Save Experiment")
+    open_menu = Gtk.MenuItem(label="Open Experiment...")
+    file_menu.add(open_menu)
+    open_menu.connect('activate', make_open_dialog_window(window))
+
+    save_menu = Gtk.MenuItem(label="Save All Parameters")
     file_menu.add(save_menu)
+    save_menu.connect('activate', make_open_dialog_window(window))
+
+    save_menu = Gtk.MenuItem(label="Save All Parameters As...")
+    file_menu.add(save_menu)
+    save_menu.connect('activate', make_open_dialog_window(window))
+
+    save_menu = Gtk.MenuItem(label="Save Run...")
+    file_menu.add(save_menu)
+    save_menu.connect('activate', make_open_dialog_window(window))
+
+    save_run_menu = Gtk.MenuItem(label="Compare Runs...")
+    file_menu.add(save_run_menu)
     save_menu.connect('activate', make_open_dialog_window(window))
 
     quit_menu = Gtk.MenuItem(label="Quit")
     file_menu.add(quit_menu)
     quit_menu.connect('activate', quit)
 
-    edit_menu_item = Gtk.MenuItem(label="Edit Parameters")
+    edit_menu_item = Gtk.MenuItem(label="Edit")
     menu_bar.append(edit_menu_item)
+
+    view_menu_item = Gtk.MenuItem(label="View")
+    menu_bar.append(view_menu_item)
 
     return menu_bar
 
