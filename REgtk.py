@@ -32,6 +32,11 @@ def make_pane(vexpand=False, hexpand=False):
     pane.set_hexpand(hexpand)
     return pane
 
+def make_expander(widget, label='Insert text here'):
+    expander = Gtk.Expander(label=label)
+    expander.add(widget)
+    return expander
+
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
             RE.context_as_string(correspondence.context),
@@ -48,21 +53,22 @@ def make_correspondence_store(table):
         store.append(make_correspondence_row(c, table.daughter_languages))
     return store
 
+def tab_key_press_handler(view, event):
+    if Gdk.keyval_name(event.keyval) == 'Tab':
+        path, column = view.get_cursor()
+        columns = view.get_columns()
+        index = columns.index(column)
+        next_column = columns[index + 1
+                              if index + 1 < len(columns)
+                              else 0]
+        # timeout needed to save cell contents
+        GLib.timeout_add(50, view.set_cursor,
+                         path, next_column, True)
+
 def make_correspondence_view(table):
     store = make_correspondence_store(table)
-    def key_press_handler(view, event):
-        if Gdk.keyval_name(event.keyval) == 'Tab':
-            path, column = view.get_cursor()
-            columns = view.get_columns()
-            index = columns.index(column)
-            next_column = columns[index + 1
-                                  if index + 1 < len(columns)
-                                  else 0]
-            # timeout needed to save cell contents
-            GLib.timeout_add(50, view.set_cursor,
-                             path, next_column, True)
     treeview = Gtk.TreeView.new_with_model(store)
-    treeview.connect('key-press-event', key_press_handler)
+    treeview.connect('key-press-event', tab_key_press_handler)
     def store_edit_text(i):
         def f(widget, path, text):
             store[path][i] = text
@@ -82,27 +88,52 @@ def make_entry(text):
     entry.set_text(text)
     return entry
 
+# given a sound classes object, construct a widget that allows users
+# to specify a dictionary.
+def make_sound_classes_widget(sound_classes):
+    store = Gtk.ListStore(*([str, str]))
+    for (sound_class, constituents) in sound_classes.items():
+        store.append([sound_class,
+                      ', '.join(constituents)])
+    treeview = Gtk.TreeView.new_with_model(store)
+    treeview.connect('key-press-event', tab_key_press_handler)
+    def store_edit_text(i):
+        def f(widget, path, text):
+            store[path][i] = text
+        return f
+    for i, column_title in enumerate(['Class', 'Constituents']):
+        cell = Gtk.CellRendererText()
+        cell.set_property('editable', True)
+        cell.connect('edited', store_edit_text(i))
+        column = Gtk.TreeViewColumn(column_title, cell, text=i)
+        column.set_sort_column_id(i)
+        treeview.append_column(column)
+    return make_expander(treeview, label="Sound classes"), store
+
 def make_syllable_canon_widget(syllable_canon):
     grid = Gtk.Grid()
-    grid.regex_entry = make_entry(syllable_canon.regex.pattern)
-    grid.sound_class_entry = make_entry(str(syllable_canon.sound_classes))
-    grid.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
-    grid.context_match_type_entry = make_entry(syllable_canon.context_match_type)
+    widget = make_expander(grid, label="Syllable canon") 
+    widget.regex_entry = make_entry(syllable_canon.regex.pattern)
+    sound_class_widget, sound_class_store = make_sound_classes_widget(syllable_canon.sound_classes)
+    widget.sound_class_store = sound_class_store
+    widget.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
+    widget.context_match_type_entry = make_entry(syllable_canon.context_match_type)
     grid.attach(Gtk.Label(label='Syllable regex:'), 0, 0, 1, 1)
-    grid.attach(grid.regex_entry, 1, 0, 1, 1)
-    grid.attach(Gtk.Label(label='Sound classes:'), 0, 1, 1, 1)
-    grid.attach(grid.sound_class_entry, 1, 1, 1, 1)
-    grid.attach(Gtk.Label(label='Supra-segmentals'), 0, 2, 1, 1)
-    grid.attach(grid.supra_segmental_entry,
+    grid.attach(widget.regex_entry, 1, 0, 1, 1)
+    grid.attach(Gtk.Label(label='Supra-segmentals'), 0, 1, 1, 1)
+    grid.attach(widget.supra_segmental_entry,
+                1, 1, 1, 1)
+    grid.attach(Gtk.Label(label='Context match type'), 0, 2, 1, 1)
+    grid.attach(widget.context_match_type_entry,
                 1, 2, 1, 1)
-    grid.attach(Gtk.Label(label='Context match type'), 0, 3, 1, 1)
-    grid.attach(grid.context_match_type_entry,
-                1, 3, 1, 1)
-    return grid
+    grid.attach(sound_class_widget, 0, 3, 1, 1)
+    return widget
 
 def read_syllable_canon_from_widget(widget):
+    sound_classes = {row[0]: [x.strip() for x in row[1].split(',')]
+                     for row in widget.sound_class_store}
     return RE.SyllableCanon(
-        eval(widget.sound_class_entry.get_text()),
+        sound_classes,
         widget.regex_entry.get_text(),
         [x.strip() for x in widget.supra_segmental_entry.get_text().split(',')],
         widget.context_match_type_entry.get_text()
