@@ -6,7 +6,7 @@ sub extract_keyterm {
     my ($gl) = @_;
     $gl =~ s/^to //i; # get rid of initial 'to '
     $gl =~ s/\|.*//;  # get rid of everything after vertical bar
-    $gl =~ s/ +\((.*?)\)$//; # get rid of text in parenthesis
+    $gl =~ s/ +\(+(.*?)\)+$//g; # get rid of text in parenthesis
     $gl =~ s/ *\&lt;(.*)\&gt;//; # get rid of text in angle brackets
     return $gl;
 }
@@ -14,16 +14,16 @@ sub extract_keyterm {
 sub ngl {
     my ($gl) = @_;
     my @terms;
-    $gl =~ s/ *\((.*?)\) *//; # get rid of text in parenthesis
+    $gl =~ s/ *\(+(.*?)\)+ *//g; # get rid of text in parenthesis
     my @gls = split /, +/, $gl;
     for my $glx (@gls) {
-        if ($glx =~ m/\*/) {
-            while ($glx =~ s/^.*?\*(.+?)\b//) {
-                push(@terms, extract_keyterm($1));
-            }
-        }
-        else {
-            push(@terms, extract_keyterm($glx));
+        $glx =~ s/\*//g;
+        push(@terms, extract_keyterm($glx));
+        # handle plurals encoded in lexware
+        if ($glx =~ /\|e?s\b/) {
+            my $glx2 = $glx;
+            $glx2 =~ s/\|(e?s)\b/\1/;
+            push(@terms, extract_keyterm($glx2));
         }
     }
     return @terms;
