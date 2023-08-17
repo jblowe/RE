@@ -22,14 +22,14 @@ python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tag.data.xml > DIS.tag.data.
 python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk.data.xml > DIS.tuk.data.xml 2> tuk.xslt.log
 
 # other minor fixups
-perl -i -p addngl.pl DIS.gha.data.xml
-perl -i -p addngl.pl DIS.mar.data.xml
-perl -i -p addngl.pl DIS.pra.data.xml
-perl -i -p addngl.pl DIS.ris.data.xml
-perl -i -p addngl.pl DIS.sahu.data.xml
-perl -i -p addngl.pl DIS.syang.data.xml
-perl -i -p addngl.pl DIS.tag.data.xml
-perl -i -p addngl.pl DIS.tuk.data.xml
+python3 addngl.py DIS.gha.data.xml
+python3 addngl.py DIS.mar.data.xml
+python3 addngl.py DIS.pra.data.xml
+python3 addngl.py DIS.ris.data.xml
+python3 addngl.py DIS.sahu.data.xml
+python3 addngl.py DIS.syang.data.xml
+python3 addngl.py DIS.tag.data.xml
+python3 addngl.py DIS.tuk.data.xml
 
 #exit
 
