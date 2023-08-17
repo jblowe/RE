@@ -15,7 +15,7 @@ perl ../STEDT5-U4Map-7.plx .
 
 for f in `ls *.u8`
 do
-  python ../RE_DATA_1994/fix_sequences.py $f $f.fix
+  python3 ../RE_DATA_1994/fix_sequences.py $f $f.fix
 done
 
 for f in `ls *.DIS *.TOC *.CLS`
