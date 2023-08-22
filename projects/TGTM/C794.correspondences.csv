@@ -1,0 +1,213 @@
+#	L	Type	*	Env	ris	sahu	tag	tuk	mar	syang	gha	pra
+1	2	T	A	/U̱	¹,X,ᴴ	¹	¹,X,ᴴ	¹,ᴴ	¹,ᴴ,X	¹,X,ᴴ	¹,X	¹
+2	2	T	B	/U̱	²,X,ᴴ	²	²,X,ᴴ	²,ᴴ	²,ᴴ,X	²,X,ᴴ	²,X	²
+3	2	T	A	/W̱	³,X,ᴸ	³	³,X	³	³,X	³,X,ᴸ	³,X	³
+4	2	T	B	/W̱	⁴,X,ᴸ	⁴	⁴,X,ᴴ	⁴	⁴,ᴴ,X	⁴,X,ᴸ	⁴,X	⁴
+5	1	R,V	i		i	i	i	i	i	i	i	i
+6	1	R	iː		iː	iː	iː	i	i	i	i	i
+7	1	R	ik		ik	iː,ik	iː	i	ɤi	ɨ	i	i
+8	1	R	it		it	it,iː,ip	iː,i	i	it,i	?	i,iː	iː
+9	1	R	ip		ip	ip	ip	i	?	?	?	i
+10	1	R	is		is	is	is	is	is	is	i	i
+11	1	R	iŋ		iŋ	iŋ	iŋ	in	in	in,im,un	ĩ	ĩ
+12	1	R	in		in	in	in	in	in	in	ĩ	ĩ,in
+13	1	R	ŋin		in	njiː,njin	?	ŋi	ɲi	ni	ŋi	?
+14	1	R	im		im	im,em	im	im	in	im	ĩ	ĩ,in
+15	1	R	ir		ir	ir	ir	ir	?	ir	?	?
+16	1	R	il		il	?	?	i	e,il,ĩl	e	e	ɛr
+17	1	R	wi		wi	ui,ai	wi	i,ui	wi	wi,i	wi,i	i,ui
+18	1	R	jwi		jwi	i	ju	ju	ju	ju	ju	ju,u
+19	1	R	uiu		wi	uju	uju	uju	uju	uju	?	?
+20	1	R,V	e		e	e	e	e	e	e,ja	e	iɛ,ie,eɛ
+21	1	R	eː		eː	eː	eː	e	e,a,i,ʌ	e	i	e
+22	2	R	eː	/kr_	eː	?	eː	e	ʌe	ʌe	e	e
+23	2	R	eː	/s_	eː	eː	eː=jeː	e	e	?	e	iː
+24	1	R	je		e	e	e	e	i	i	i	ie
+25	1	R	ek		ep,ek	ek	?	e	?	?	?	?
+26	1	R	et		et	et,ep	eː	e,i	e,eʌ,i	e	i,jo	e,eː
+27	1	R	ep		ep	ep	?	əp	o,e	o	aː	e
+28	1	R	eŋ		eŋ	eŋ	eŋ	en	jaŋ	jaŋ,en	ẽ	jaŋ
+29	1	R	en		en	eː,en	en	ən	en	en	ẽ	ẽ
+30	1	R	em		em	em	?	əm	ʌm	ʌm	aẽ,ẽ	ẽ
+31	1	R	ew		e	e	e	e	u	e	e	e
+32	1	R	er		er	er	er	er	?	?	er	?
+33	1	R,V	a		a	a	a	ə	ʌ	ʌ	a	ɤ
+34	1	R	aː		aː	aː	aː	a	a	a	o	a=aː
+35	1	R,V	ja		ja	ja	ja	e	e	e,jo,jɛ	e	je
+36	1	R	jaː		jaː	jaː	jaː	ja	ja	ja	jo	ja=jaː
+37	1	R,V	wa		wa	wa	wa	o	o	o	o	o
+38	2	R,V	wa	/tʰ_	o	?	o	o	o	o	u	a
+39	2	R,V	wa	/s_	wa	a	a,wa	ə	ʌ	o	a	ɤ
+40	1	R	waː		waː	aː	?	o	?	?	o	?
+41	2	R	waː	/s,tsʰ_	waː	waː,aː	?	o	a	?	o	?
+42	1	R	ai		ai	ai,eː=jeː	ai	ʌi=ʌj,e	əi,e,əe	ʌi,ai,ɛ	ae,we,ai,wi	eː
+43	2	R	ai	/r,t_	ai	ai,eː	ai	e	e	ɛ	e	eː
+44	2	R	ai	/tʰ_	ai	eː	eː	e	eʌ,eː	?	eː	?
+45	1	R	jai		jai	?	?	?	?	?	e	jeː
+46	1	R	au		au	?	?	ap	?	?	?	?
+47	1	R	ak		?	ak	?	?	?	?	?	?
+48	1	R	at		at	et,e,ep	eː,e	e	e,je,ʌi	e,ʌi	e,ae,aː	e,je,eː
+49	2	R	at	/k_	at	et	eː	əi=əj	ʌe	ʌe	ae	je
+50	1	R	wat		wat	wet	wai	oj,e	?	?	we	?
+51	1	R	ap		ap	ap	ap	əp,əw,a	o	o	aː	e,je
+52	1	R	jap		jap	jap	?	ep,e,jəp	?	jo	jaː	?
+53	1	R	aŋ		aŋ	aŋ	aŋ	aŋ	aŋ	aŋ	õ,ũ	aŋ
+54	2	R	aŋ	/tʰ_	aŋ	aŋ	aŋ	aŋ	aŋ	aŋ	ãː	aŋ
+55	1	R	an		an	en	an	ən	ʌn	ʌn	aẽ	jɛ̃=jẽ,ẽ
+56	2	R	an	/j,tʰ_	an	en	an	en	an	ɛn	ẽ	e,ẽ
+57	1	R	jan		jan	en	jan	jen	?	jɛn	ẽ	e,jeː
+58	1	R	wan		wan	wen,jen	wan	on	on	on	wẽ	wɛ̃=wẽ
+59	1	R	am		am	am	am	om,əm	ʌm	ʌm	ãẽ,ã,ãː	ən,ẽ,e
+60	1	R	ar		ar	ar	ar	ər,ar	ʌr	ʌr	a,aː,aːra	ɤr
+61	1	R	jar		jar	jar	er,jar	jar	ʌr	?	jaː	je,jɤr
+62	2	R	wal		al,wal	al	wal,wai	o	ol	?	ad,ol	wol
+63	1	R	wai		wai	wai	wai	oj	we	?	we,wi	we
+64	1	R	jal		jal	jal	jal	jal,jəl	il,iː,jal	?	jaːla,e	?
+65	1	R,V	o		o	o	o	o	o	o,u	o	o,wo
+66	1	R	oː		oː	oː	oː	o	o,u	o	u	o
+67	1	R	oi		oi	oi,e	oe	oi=oj	oi	we	we=oe	wɛː=we
+68	1	R	joi		joi	joi	joe	e	ʌe	e	jwi	eː
+69	1	R	ok		?	ok	?	?	?	?	?	?
+70	1	R	ot		ot	ot,oi,op	oi=oe,oː	oi=oj	?	oi	wi	e,we,i
+71	2	R	ot	/t,d,tʰ_	ot	ot,oi,op	oi=oj	e	e	ʌi,e	i	e
+72	1	R	jot		jot	jot,joi,jop	?	je	?	?	jwi	i
+73	2	R	jot	/s_	jot	jot,jop	joː,joe	je	?	?	jwi	?
+74	1	R	wap		op	?	?	əw	ʌp	op	o	oː
+75	1	R	op		op	op	op	əp	o	?	o	?
+76	1	R	oŋ		oŋ	oŋ	oŋ	oŋ,uŋ	oŋ,oː,uŋ	uŋ	õ	oŋ,o,oː
+77	1	R	on		on	?	on	on	ʌn	on	aẽ,wẽ	wẽ,ẽ
+78	2	R	on	/tsʰ_	on	on,om	?	oi=oj	ʌe	ɛ	?	e
+79	1	R	jon		jon	jon	jon	en	jen	jan,jon	rẽ,jwẽ	jẽ,je
+80	1	R	om		om	om	om	om	?	?	õ	ẽ
+81	1	R	or		or	or	or	or	or	o	u,a,ur	or
+82	1	R,V	u		u	u	u	u	u	u	u	u
+83	1	R	uː		uː	uː	uː	u	u	?	u	u
+84	1	R,V	ju		ju	?	?	?	?	?	ju	?
+85	1	R	juː		juː	juː	juː	?	?	?	i	?
+86	1	R	uk		?	uk	?	?	?	?	?	?
+87	1	R	ut		ut	ut,up	ui	?	?	wi	ui=wi	u
+88	2	R	ut	/j_	ut	ut,up	u	u	uː	?	?	iː
+89	2	R	ut	/r,ʈ,ɖ_	ut	ut,up	ui=uj	i	i,it	i	i,wi	iː
+90	2	R	ut	/t,d,tʰ_	ut	ut,up	ui	ui=uj	wi	?	i	iː
+91	1	R	up		up	up	up	up	u	u	u,uː	uː
+92	1	R	jup		jup	jup	jup	ip,jup	ju	ju	ju	?
+93	1	R	uŋ		uŋ	uŋ	uŋ,ũ	uŋ	uŋ,um	uŋ,um	ũ	ũ,uŋ
+94	2	R	un	/s_	un	un,um	un	un	un	?	i	ĩ
+95	2	R	won	/ʰŋ_	un	on,om	on	on	?	?	wĩ	wẽ
+96	1	R	un		un	un,una	un	un	un	?	wĩ	?
+97	1	R	um		um	um	um	um	um	um	ũ	ũ=uŋ
+98	1	R	ur		ur	ur	ur	ur	ur	ur	ur	ur
+99	1	R	ul		ul	ul	?	?	o	il,?	u,ul	uː
+100	1	I	k		k	k	k	k	k	k	k	k
+101	2	I	k	/w̱	k	∅	h	k	k	k	k	k
+102	1	I	kʰ		kʰ	kʰ	h	kʰ	kʰ	kʰ	kʰ	kʰ
+103	2	I	kʰ	/w̱	kʰ	h	h	kʰ	kʰ	kʰ	kʰ,k	kʰ
+104	2	I	g	/A_	k	k	k,g	k	k,g	k,g	k	k
+105	2	I	g	/B_	k	k	k,g	k	k	g	k,g	kʰ
+106	2	I	g	/w̱	k,∅	∅	∅	k	k	?	k	k,kʰ
+107	2	O	gj	/A_	kj	kj	kj	kj	kj	gj	kj	kj
+108	2	O	gj	/B_	kj	kj	kj	kj	kj	gj	k,kj	kʰj
+109	2	O	kr	/e̱ː	k	k	k	ʈ	k	k	kr	kr
+110	2	O	kr	/u̱	kr	kr	h	ʈ	k	k	kr	kr
+111	2	O	kr	/a̱	kr	kr	hw	ʈ	kj	kj	kr	kr
+112	2	O	kr	/a̱t	kr	kr	h	ʈ	kj,k	kj	kr	kr
+113	1	O	kr		kr	kr	h	ʈ	k	k	kr	kr
+114	1	O	kʰr		kʰr	kʰr,hr	hw,h	ʈʰ	kʰj	kʰj	kʰr	hr,tʃʰj,kr
+115	2	O	gr	/A_	kr	kr	w,h	?	k	g,gj	kr	kr
+116	3	O	gr	/Be̱	kr	?	h	?	?	?	?	?
+117	3	O	gr	/Bi̱	k	k	k	ʈ	k	g	gr	hr,kʰr
+118	2	O	gr	/B_	kr	kr	kr	ʈ	k	g	kr	hr=rʰ
+119	3	O	gr	/Bw̱	k	∅	h	ʈ	k,ʈ	k,ʈ	kr	hr
+120	3	O	grw		kw	w	hw	ʈ	k,ʈ	k,g,ʈ	krw	hr
+121	2	O	kl	/i̱,e	kl	kl	kʰl,kl	k	hɬ	l	ɬ	k
+122	2	O	kl	/a̱	kl	kl	?	kj	lj	lj	ɬ	kj
+123	1	O	kl		kl	kl	kl	kj	lj	lj	ɬ	kj
+124	1	O	kʰl		kʰl	kʰl	kʰl	kʰj	hɬ	ɬj	ɬ	kʰj
+125	2	O	gl	/A_	kl	kl	hl	kj	lj	?	ɬ	?
+126	2	O	gl	/B_	kl	kl	kʰl	kj	lj	lj	ɬ	kʰj,k
+127	3	O	gl	/Bi̱,e	kl	kl	kʰl	k	l	l	ɬ	kʰ
+128	2	O	ts	/i̱,j	ts	ts	ts	ts	tɕ,ts	tʃ	ts	tɕ
+129	1	O	ts		ts	ts	ts	ts	ts	ts	ts	ts
+130	2	O	tsʰ	/i̱,j	tsʰ	tsʰ	tsʰ	tsʰ	tɕʰ	tʃʰ	tsʰ	tɕʰ
+131	1	O	tsʰ		tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ
+132	2	O	dz	/A_	ts	ts	ts,dz	ts	ts	ts	ts	ts
+133	2	O	dz	/B_	ts	?	ts,dz	ts,s	ts	ts	ts,dz	tsʰ
+134	1	O	tsj		tsj	tsj	tsj	tsj,ts	tɕ,tsj	?	tsj	tɕ
+135	1	O	tsʰj		tsʰj	tsʰj	tsʰj	tsʰj,tsʰ	tɕʰ	?	tsʰj	tɕʰ
+136	1	O	dzj		tsj	tsj	tsj,dzj	tsj,ts	tɕ,tsj	?	tsj	tɕ
+137	1	O	ʈ		ʈ	ʈ	ʈ	ʈ	ʈ	ʈ	ʈ	ʈ
+138	1	O	ʈʰ		ʈʰ	ʈʰ	?	?	?	?	?	?
+139	1	O	ʈ.Hr.ʈʰ		ʈ	ʈ	ʈ	hr=ʰr	hr	hr	r	ʈ
+140	2	O	ɖ	/A_	ʈ	ʈ	ʈ,ɖ	ʈ	ʈ	ʈ	ʈ	ʈ
+141	2	O	ɖ	/B_	ʈ	ʈ	ʈ	ʈ	ʈ	ɖ	ʈ	ʈʰ
+142	1	I	t		t	t	t	t	t	t	t	t
+143	2	I	tʰ	/a̱	tʰ	tʰ	tʰ	tʰ	tʰ	tʰ	tʰ	tʰ
+144	1	I	tʰ		tʰ	tʰ	tʰ	tʰ	tʰ	tʰ,t	tʰ,t	tʰ
+145	2	I	d	/A_	t	t	t	t	t	t	t	t
+146	2	I	d	/B_	t	t	t	t	t	d,t	d,t	tʰ
+147	1	I	p		p	p	p	p	p	p	p	p
+148	2	I	pʰ	/A_	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ
+149	2	I	pʰ	/B_	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ,p	pʰ
+150	2	I	b	/A_	p	p	p,b	p	p	p	p	p
+151	2	I	b	/B_	p	p	p,b	p	p	b	b	pʰ
+152	3	I	b	/Bj̱,r,l	p	p	p	p	p	p	p	pʰ
+153	1	O	pj		pj	pj	pj	pj	pj	pj	pj	pj
+154	1	O	pʰj		pʰj	pʰj	?	pʰj	pʰj	pʰj	pʰj	pʰj
+155	1	O	bj		pj	pj	bj	?	bj	bj	pj,bj	pj,pʰj
+156	2	O	bl	/A_	pl	pl	pl	pl	pl	pl	pl	pl
+157	2	O	bl	/B_	pl	pl	pl	pl	pl	pl	pl	pʰl
+158	1	O	p.ml		pl	pl	?	ml	ml	ml	ml	?
+159	1	O	ʰŋ		ŋ,h,∅	ŋ,∅	ŋ,w	ŋ	ŋ,w	ŋ	ŋ,w,∅	ŋ
+160	2	O	ʰŋ	/a̱n	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ɲ
+161	2	O	ʰŋ	/i̱,j	ŋ	?	n	ɲ	ɲ	ɲ	n,ŋ	ɲ
+162	1	O	ŋ		ŋ,h ̃	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ
+163	2	O	ŋ	/i̱,j	ŋ	?	n	ɲ	ɲ	ɲ	n,ŋ	ɲ
+164	1	O	ʰɲ		ŋj	ɲ	ɲ	ɲ,m	?	?	ɲ=ŋj,n,ŋ	ɲ
+165	1	O	ɲ		ŋj	ɲ	ɲ	ɲ	?	?	ɲ=ŋj,n,j	ɲ
+166	1	O	ʰn		n	n	n	n	n	n	n	n
+167	1	O	n		n	n	n	n	n	n	n	n
+168	2	O	ʰn	/i̱,e	n	ɲ	n,ɲ	ɲ,n	ɲ	n,ɲ	n,ɲ	ɲ
+169	2	O	n	/i̱	n	ɲ	n	ɲ=ŋ	ɲ	n	ŋ	ɲ
+170	2	O	n	/e̱	n	ɲ	ɲ	ɲ=ŋj	ɲ	nj,ɲ	ɲ=ŋ	ɲ
+171	1	I	ʰm		m	m	m	m	m	m	m	m
+172	1	I	m		m	m	m	m	m	m	m	m
+173	1	O	ʰmj		mj	mj	mj	mj	mj	mj	mj	mj
+174	1	O	mj		mj	mj	mj	mj	mj	mj	mj	mj
+175	1	O	ʰml		ml	ml	ml	ml	ml	ml	ml	?
+176	1	O	ml		ml	ml	ml	ml	ml	ml	ml	?
+177	1	O	ʰj		j	j	j	j	j	j	j	j
+178	1	O	j		j	j	j	j	j	j	j	j,∅
+179	1	G	j		j	j	j	j	j	j	j	j,∅
+180	2	G	j	/a̱t	j	j,∅	j,∅	j,∅	?	∅	∅	j
+181	1	O	Hr		hr	r,hr	s	hr=rʰ	hr	hr	r	hr
+182	1	O	ʰr		r	r	r	r	r	r	r	r
+183	1	O	r		r	r	r	r	r	r	r	r
+184	2	L	r	/P_	r	r	r	r	r	r	r	r
+185	2	L	r	/Pa̱n	r	r	?	r	∅	r,∅,?	∅	r,∅,?
+186	1	O	Hl		hl	l	l	hl=lʰ	l,hɬ	hl	l	hl
+187	1	O	ʰl		l	l	l	l	l	hɬ	l	l
+188	1	O	l		l	l	l	l	l	l	l	l
+189	1	L	l		l	l	l	l	l	l	l	l
+190	1	O	ʰw		w	w	w	w	w	w	w	w
+191	1	O	w		w	w	w	w	w	w	w	w
+192	1	G	w		w	w	w	w	w	w	w	w
+193	1	I	s		s	s	s	s	s	s	s	s
+194	2	I	s	/u̱	s	s	s	s	s	ʃj	s	s
+195	2	I	s	/i̱,j,e	s=ʃ	s=sj	ʃ=ʃj	s=sj	ɕ	ʃ	ʃ=s	ʃ=ʃj
+196	1	O	ɕ		sj	sj	ʃ=ʃj	s=sj	ɕ	ʃ=ʃj	ʃ=s	ʃ=ʃj
+197	1	I	z		s	s	s	s	s	s	s	s
+198	1	O	ʑ		sj	sj	ʃ=ʃj	s=sj	ɕ	ʃ=ʃj	ʃ=s	ʃ=ʃj
+199	2	I	h	/w̱	h	?	?	∅	?	?	?	?
+200	1	I	h		h	h	h	h	h	h	h	h
+201	1	F	k		k	ː	∅,k	∅,k	∅	∅	∅	∅
+202	2	V	i	/ḵ	i	i	i	i	ɤi	ɨ	i	i
+203	1	F	t		t	t,ː	?,ː	∅	?	?	∅,ː	ː
+204	1	F	p		p	p	p	p,w	p,∅	p,∅	∅,ː	∅,ː
+205	2	V	a	/p̱	a	a	a	ə	o	o	a	e
+206	2	V	o	/p̱	o	o	o	ə	ʌ	o	o,u	o
+207	2	V	u	/p̱	u	u	?	u	?	?	u	u
+208	1	F	l		l	l	l	l	l	?	∅,ː	l
+209	1	F	s		s	s	s	s	?	?	?	ː
+210	1	J	+		+	+	+	+	+	+	+	+
+211	1	J	-		-	-	-	-	-	-	-	-
+212	1	J	=		=	=	=	=	=	=	=	=
