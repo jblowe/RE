@@ -47,7 +47,7 @@ python3 addngl.py TGTM.sahu.data.xml dfe
 python3 addngl.py TGTM.syang.data.xml dff
 python3 addngl.py TGTM.tag.data.xml dff
 python3 addngl.py TGTM.tuk.data.xml dff
-python3 addngl.py TGTM.tang.data.xml dff
+#python3 addngl.py TGTM.tang.data.xml dff
 
 #python3 addngl.py TGTM.tag2.data.xml
 #python3 addngl.py TGTM.tuk2.data.xml
