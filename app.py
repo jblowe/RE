@@ -23,12 +23,17 @@ dirname = os.path.dirname(os.path.abspath(__file__))
 BaseTemplate.defaults['footer_info'] = utils.add_time_and_version()
 
 
-@route('/static/<filename:re:.*\.(css|map)>')
+@route('/static/<filename:re:.*\.(ico|jpg|png|gif)>')
+def send_ico(filename):
+    return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'images'))
+
+
+@route('/static/<filename:re:.*\.css(.map)?>')
 def send_css(filename):
     return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'css'))
 
 
-@route('/static/<filename:re:.*\.(js|map)>')
+@route('/static/<filename:re:.*\.js(.map)?>')
 def send_js(filename):
     return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'js'))
 
@@ -113,7 +118,7 @@ def download_project(tree, project, filename):
 
 @post('/compare/<project:re:.*>/<experiment:re:.*>')
 def compare(project, experiment):
-    runs = [i.replace(f'{project}.','').replace('.sets.xml','') for i in request.forms if i not in 'compare'.split()]
+    runs = [i.replace(f'{project}.', '').replace('.sets.xml', '') for i in request.forms if i not in 'compare'.split()]
     alerts, success = run_make.compare(project, experiment, runs)
     errors = alerts if not success else None
     messages = alerts if success else None
@@ -193,7 +198,7 @@ def new_experiment(project):
             'data_elements': data_elements, 'back': '/list_tree/projects'}
     if len(error_messages) > 0:
         data['errors'] = error_messages
-    #return list_tree('projects')
+    # return list_tree('projects')
     return utils.check_template('index', data, request.forms)
 
 
@@ -247,7 +252,7 @@ def plot(type, data):
     if type == 'venn':
         from matplotlib_venn import venn2
         t = tuple([int(t) for t in data.split(',')])
-        #plt.figure()  # needed to avoid adding curves in plot
+        # plt.figure()  # needed to avoid adding curves in plot
         venn2(subsets=t, set_labels=('Cognate sets 1', 'Cognate sets 2'))
         plt.title('Set overlap')
 
@@ -273,13 +278,14 @@ def plot(type, data):
     figfile.seek(0)
 
     headers = {
-    'Content-Type': 'image/png'
+        'Content-Type': 'image/png'
     }
     return HTTPResponse(figfile.getvalue(), **headers)
 
-    #response = HTTPResponse(content_type="image/png")
-    #response.body = figfile
-    #return response
+    # response = HTTPResponse(content_type="image/png")
+    # response.body = figfile
+    # return response
+
 
 # application = default_app()
 run()

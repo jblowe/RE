@@ -39,6 +39,13 @@
                                      <!-- label for="{{file}}">{{file}}</label -->
                                  <div>
                                </td>
+                            % elif 'mel' == file_type:
+                               <td>
+                                 <div style="width: 60px;">
+                                     <a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download""></span></a>
+                                     <a href="/d3/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-share-alt"></span></a>
+                                 <div>
+                               </td>
                             % else:
                                <td><a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download"></span></a></td>
                             % end
@@ -46,7 +53,6 @@
                         </tr>
                       % end
                 % end
-
                 </tbody>
             </table>
             </div>
