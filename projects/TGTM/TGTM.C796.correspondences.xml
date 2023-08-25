@@ -1,0 +1,4399 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+   <createdat>2023-08-24 08:01:12 UTC</createdat>
+   <parameters>
+      <class name="W" value="i,e,a,o,u,g,dz,ɖ,d,b,ŋ,ɲ,n,m,j,r,l,w,z,gr,gl,gj,bl,bj,ml,mj,mr"/>
+      <class name="U" value="i,e,a,o,u,k,kʰ,ʈ,ʈʰ,ts,tsʰ,t,tʰ,p,pʰ,ʰŋ,ʰɲ,ʰn,ʰm,ʰj,ʰr,ʰl,ʰw,s,h,H,Hr,kr,kʰr,kl,pj,pʰj,ʰmj,ʰmr,ʰml"/>
+      <class name="D" value="t,tʰ,d,n,ʰn"/>
+      <class name="P" value="p,pʰ,b,m,ʰm"/>
+      <class name="M" value="m,n,ŋ"/>
+      <canon name="syllabe" value="T?((OG?|IL?G?)?(R|VF))+"/>
+      <spec name="supra_segmentals" value=""/>
+      <context_match_type name="context_match_type" value="glyphs"/>
+   </parameters>
+   <corr num="2">
+      <proto syll="T">B</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>²</seg>
+         <seg>X</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>²</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>²</seg>
+         <seg>ᴴ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>²</seg>
+         <seg>ᴴ</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>²</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>⁵⁵</seg>
+         <seg>⁴⁵</seg>
+      </modern>
+   </corr>
+   <corr num="3">
+      <proto syll="T">A</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>³</seg>
+         <seg>X</seg>
+         <seg>ᴸ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>³</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>³</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>³</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>³</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>²¹</seg>
+         <seg>¹¹</seg>
+      </modern>
+   </corr>
+   <corr num="4">
+      <proto syll="T">B</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>⁴</seg>
+         <seg>X</seg>
+         <seg>ᴸ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>⁴</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>⁴</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>⁴</seg>
+         <seg>ᴴ</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>⁴</seg>
+         <seg>X</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>¹²</seg>
+         <seg>¹³</seg>
+      </modern>
+   </corr>
+   <corr num="5">
+      <proto syll="R,V">i</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɪ</seg>
+      </modern>
+   </corr>
+   <corr num="6">
+      <proto syll="R">iː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>iː</seg>
+      </modern>
+   </corr>
+   <corr num="7">
+      <proto syll="R">ik</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɨ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɤi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>iː</seg>
+      </modern>
+   </corr>
+   <corr num="8">
+      <proto syll="R">it</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>iː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>it</seg>
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+         <seg>iː</seg>
+      </modern>
+   </corr>
+   <corr num="9">
+      <proto syll="R">ip</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="10">
+      <proto syll="R">is</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>is</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>is</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>is</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>i</seg>
+         <seg>iː</seg>
+      </modern>
+   </corr>
+   <corr num="11">
+      <proto syll="R">iŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>in</seg>
+         <seg>im</seg>
+         <seg>un</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>iŋ</seg>
+         <seg>ɯŋ</seg>
+      </modern>
+   </corr>
+   <corr num="12">
+      <proto syll="R">in</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ĩ</seg>
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>in</seg>
+      </modern>
+   </corr>
+   <corr num="13">
+      <proto syll="R">ŋin</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ni</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ŋi</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɲi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ŋi</seg>
+      </modern>
+   </corr>
+   <corr num="14">
+      <proto syll="R">im</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ĩ</seg>
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>im</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>in</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>im</seg>
+      </modern>
+   </corr>
+   <corr num="15">
+      <proto syll="R">ir</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ir</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ir</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="16">
+      <proto syll="R">il</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɛr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+         <seg>il</seg>
+         <seg>ĩl</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="17">
+      <proto syll="R">wi</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>wi</seg>
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+         <seg>ui</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+         <seg>ui</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>wi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>wi</seg>
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>iː</seg>
+         <seg>yi</seg>
+         <seg>yiː</seg>
+      </modern>
+   </corr>
+   <corr num="18">
+      <proto syll="R">jwi</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ju</seg>
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>yi</seg>
+         <seg>ju</seg>
+      </modern>
+   </corr>
+   <corr num="19">
+      <proto syll="R">uiu</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>uju</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>uju</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>uju</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="20">
+      <proto syll="R,V">e</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+         <seg>ja</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>iɛ</seg>
+         <seg>ie</seg>
+         <seg>eɛ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>jɛ</seg>
+      </modern>
+   </corr>
+   <corr num="21">
+      <proto syll="R">eː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+         <seg>a</seg>
+         <seg>i</seg>
+         <seg>ʌ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>jeː</seg>
+      </modern>
+   </corr>
+   <corr num="22">
+      <proto syll="R">eː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌe</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌe</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>e</seg>
+         <seg>eː</seg>
+      </modern>
+   </corr>
+   <corr num="23">
+      <proto syll="R">eː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>iː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="24">
+      <proto syll="R">je</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ie</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>jɛ</seg>
+      </modern>
+   </corr>
+   <corr num="25">
+      <proto syll="R">ek</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="26">
+      <proto syll="R">et</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+         <seg>eʌ</seg>
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+         <seg>jo</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>je</seg>
+      </modern>
+   </corr>
+   <corr num="27">
+      <proto syll="R">ep</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>əp</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ou</seg>
+      </modern>
+   </corr>
+   <corr num="28">
+      <proto syll="R">eŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>jaŋ</seg>
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>jaŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>jaŋ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>jaŋ</seg>
+      </modern>
+   </corr>
+   <corr num="29">
+      <proto syll="R">en</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ən</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ẽ</seg>
+      </modern>
+   </corr>
+   <corr num="30">
+      <proto syll="R">em</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌm</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>əm</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌm</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>aẽ</seg>
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɛm</seg>
+         <seg>əm</seg>
+      </modern>
+   </corr>
+   <corr num="31">
+      <proto syll="R">ew</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="32">
+      <proto syll="R">er</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>er</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>er</seg>
+      </modern>
+   </corr>
+   <corr num="33">
+      <proto syll="R,V">a</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɤ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>æ</seg>
+      </modern>
+   </corr>
+   <corr num="34">
+      <proto syll="R">aː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>a</seg>
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>aː</seg>
+      </modern>
+   </corr>
+   <corr num="35">
+      <proto syll="R,V">ja</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+         <seg>jo</seg>
+         <seg>jɛ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>æ</seg>
+         <seg>jæ</seg>
+      </modern>
+   </corr>
+   <corr num="36">
+      <proto syll="R">jaː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ja</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ja</seg>
+         <seg>jaː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ja</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ja</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jo</seg>
+      </modern>
+   </corr>
+   <corr num="37">
+      <proto syll="R,V">wa</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɔ</seg>
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="38">
+      <proto syll="R,V">wa</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>oː</seg>
+      </modern>
+   </corr>
+   <corr num="39">
+      <proto syll="R,V">wa</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɤ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɔ</seg>
+      </modern>
+   </corr>
+   <corr num="40">
+      <proto syll="R">waː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="41">
+      <proto syll="R">waː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="42">
+      <proto syll="R">ai</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌi</seg>
+         <seg>ai</seg>
+         <seg>ɛ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʌi</seg>
+         <seg>ʌj</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>əi</seg>
+         <seg>e</seg>
+         <seg>əe</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ae</seg>
+         <seg>we</seg>
+         <seg>ai</seg>
+         <seg>wi</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɛi</seg>
+      </modern>
+   </corr>
+   <corr num="43">
+      <proto syll="R">ai</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɛ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>e</seg>
+         <seg>ɛ</seg>
+         <seg>eː</seg>
+      </modern>
+   </corr>
+   <corr num="44">
+      <proto syll="R">ai</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>eʌ</seg>
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>eː</seg>
+      </modern>
+   </corr>
+   <corr num="45">
+      <proto syll="R">jai</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>jeː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="46">
+      <proto syll="R">au</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ap</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="47">
+      <proto syll="R">ak</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="48">
+      <proto syll="R">at</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+         <seg>ʌi</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+         <seg>je</seg>
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+         <seg>je</seg>
+         <seg>ʌi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>e</seg>
+         <seg>ae</seg>
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>e</seg>
+         <seg>eː</seg>
+      </modern>
+   </corr>
+   <corr num="49">
+      <proto syll="R">at</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌe</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>əi</seg>
+         <seg>əj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌe</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ae</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>e</seg>
+         <seg>eː</seg>
+         <seg>əe</seg>
+      </modern>
+   </corr>
+   <corr num="50">
+      <proto syll="R">wat</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>oj</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>we</seg>
+      </modern>
+   </corr>
+   <corr num="51">
+      <proto syll="R">ap</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>əp</seg>
+         <seg>əw</seg>
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>aː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ou</seg>
+         <seg>ɔu</seg>
+      </modern>
+   </corr>
+   <corr num="52">
+      <proto syll="R">jap</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>jo</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ep</seg>
+         <seg>e</seg>
+         <seg>jəp</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jaː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>jɔu</seg>
+      </modern>
+   </corr>
+   <corr num="53">
+      <proto syll="R">aŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>õ</seg>
+         <seg>ũ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>aŋ</seg>
+      </modern>
+   </corr>
+   <corr num="54">
+      <proto syll="R">aŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>aŋ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ãː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>aŋ</seg>
+      </modern>
+   </corr>
+   <corr num="55">
+      <proto syll="R">an</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌn</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>j‰̃</seg>
+         <seg>jẽ</seg>
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ən</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌn</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>aẽ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>an</seg>
+      </modern>
+   </corr>
+   <corr num="56">
+      <proto syll="R">an</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɛn</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>an</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɛn</seg>
+      </modern>
+   </corr>
+   <corr num="57">
+      <proto syll="R">jan</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>jɛn</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+         <seg>jeː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>jen</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>jɛn</seg>
+      </modern>
+   </corr>
+   <corr num="58">
+      <proto syll="R">wan</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>on</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>w‰̃</seg>
+         <seg>wẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>on</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>on</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>wẽ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>on</seg>
+      </modern>
+   </corr>
+   <corr num="59">
+      <proto syll="R">am</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌm</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ən</seg>
+         <seg>ẽ</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>om</seg>
+         <seg>əm</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌm</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ãẽ</seg>
+         <seg>ã</seg>
+         <seg>ãː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>am</seg>
+      </modern>
+   </corr>
+   <corr num="60">
+      <proto syll="R">ar</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌr</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɤr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ər</seg>
+         <seg>ar</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌr</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>a</seg>
+         <seg>aː</seg>
+         <seg>aːra</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ar</seg>
+         <seg>ər</seg>
+      </modern>
+   </corr>
+   <corr num="61">
+      <proto syll="R">jar</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>je</seg>
+         <seg>jɤr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>jar</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌr</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jaː</seg>
+      </modern>
+   </corr>
+   <corr num="261">
+      <proto syll="R">al</proto>
+      <modern dialecte="¹">
+         <seg>eː</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɛi</seg>
+      </modern>
+   </corr>
+   <corr num="62">
+      <proto syll="R">wal</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>wol</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ol</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ad</seg>
+         <seg>ol</seg>
+      </modern>
+   </corr>
+   <corr num="63">
+      <proto syll="R">wai</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>we</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>oj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>we</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>we</seg>
+         <seg>wi</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>we</seg>
+         <seg>ɔe</seg>
+         <seg>øe</seg>
+      </modern>
+   </corr>
+   <corr num="64">
+      <proto syll="R">jal</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>jal</seg>
+         <seg>jəl</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>il</seg>
+         <seg>iː</seg>
+         <seg>jal</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jaːla</seg>
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="65">
+      <proto syll="R,V">o</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>o</seg>
+         <seg>wo</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɔ</seg>
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="66">
+      <proto syll="R">oː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɔː</seg>
+         <seg>oː</seg>
+      </modern>
+   </corr>
+   <corr num="67">
+      <proto syll="R">oi</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>we</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>wɛː</seg>
+         <seg>we</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>oi</seg>
+         <seg>oj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>oi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>we</seg>
+         <seg>oe</seg>
+      </modern>
+   </corr>
+   <corr num="68">
+      <proto syll="R">joi</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>eː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌe</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jwi</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>juː</seg>
+      </modern>
+   </corr>
+   <corr num="69">
+      <proto syll="R">ok</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="70">
+      <proto syll="R">ot</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>oi</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+         <seg>we</seg>
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>oi</seg>
+         <seg>oj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>wi</seg>
+      </modern>
+   </corr>
+   <corr num="71">
+      <proto syll="R">ot</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʌi</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɔe</seg>
+         <seg>øe</seg>
+         <seg>we</seg>
+      </modern>
+   </corr>
+   <corr num="72">
+      <proto syll="R">jot</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jwi</seg>
+      </modern>
+   </corr>
+   <corr num="73">
+      <proto syll="R">jot</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>jwi</seg>
+      </modern>
+   </corr>
+   <corr num="74">
+      <proto syll="R">wap</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>op</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>oː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>əw</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌp</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="75">
+      <proto syll="R">op</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>əp</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="76">
+      <proto syll="R">oŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>uŋ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>oŋ</seg>
+         <seg>o</seg>
+         <seg>oː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>oŋ</seg>
+         <seg>uŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>oŋ</seg>
+         <seg>oː</seg>
+         <seg>uŋ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>õ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɔŋ</seg>
+      </modern>
+   </corr>
+   <corr num="77">
+      <proto syll="R">on</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>on</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>wẽ</seg>
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>on</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌn</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>aẽ</seg>
+         <seg>wẽ</seg>
+      </modern>
+   </corr>
+   <corr num="78">
+      <proto syll="R">on</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɛ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>oi</seg>
+         <seg>oj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌe</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="79">
+      <proto syll="R">jon</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>jan</seg>
+         <seg>jon</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>jẽ</seg>
+         <seg>je</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>en</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>jen</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>rẽ</seg>
+         <seg>jwẽ</seg>
+      </modern>
+   </corr>
+   <corr num="80">
+      <proto syll="R">om</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>om</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>õ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>om</seg>
+      </modern>
+   </corr>
+   <corr num="81">
+      <proto syll="R">or</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>or</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>or</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>or</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+         <seg>a</seg>
+         <seg>ur</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>or</seg>
+      </modern>
+   </corr>
+   <corr num="281">
+      <proto syll="R">ol</proto>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ol</seg>
+      </modern>
+   </corr>
+   <corr num="82">
+      <proto syll="R,V">u</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="83">
+      <proto syll="R">uː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>uː</seg>
+      </modern>
+   </corr>
+   <corr num="84">
+      <proto syll="R,V">ju</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ju</seg>
+      </modern>
+   </corr>
+   <corr num="85">
+      <proto syll="R">juː</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>juː</seg>
+      </modern>
+   </corr>
+   <corr num="86">
+      <proto syll="R">uk</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="87">
+      <proto syll="R">ut</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>wi</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ui</seg>
+         <seg>wi</seg>
+      </modern>
+   </corr>
+   <corr num="88">
+      <proto syll="R">ut</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>iː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>uː</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="89">
+      <proto syll="R">ut</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>iː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>i</seg>
+         <seg>it</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+         <seg>wi</seg>
+      </modern>
+   </corr>
+   <corr num="90">
+      <proto syll="R">ut</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>iː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ui</seg>
+         <seg>uj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>wi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>yiː</seg>
+      </modern>
+   </corr>
+   <corr num="91">
+      <proto syll="R">up</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>uː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>up</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+         <seg>uː</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>uː</seg>
+      </modern>
+   </corr>
+   <corr num="92">
+      <proto syll="R">jup</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ip</seg>
+         <seg>jup</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ju</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>juː</seg>
+      </modern>
+   </corr>
+   <corr num="93">
+      <proto syll="R">uŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>uŋ</seg>
+         <seg>um</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ũ</seg>
+         <seg>uŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>uŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>uŋ</seg>
+         <seg>um</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ũ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>uŋ</seg>
+      </modern>
+   </corr>
+   <corr num="94">
+      <proto syll="R">un</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ĩ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>un</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>un</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>un</seg>
+      </modern>
+   </corr>
+   <corr num="95">
+      <proto syll="R">won</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>wẽ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>on</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>wĩ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>um</seg>
+      </modern>
+   </corr>
+   <corr num="96">
+      <proto syll="R">un</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>un</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>un</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>wĩ</seg>
+      </modern>
+   </corr>
+   <corr num="97">
+      <proto syll="R">um</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>um</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ũ</seg>
+         <seg>uŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>um</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>um</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ũ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>um</seg>
+      </modern>
+   </corr>
+   <corr num="98">
+      <proto syll="R">ur</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ur</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ur</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ur</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ur</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ur</seg>
+      </modern>
+   </corr>
+   <corr num="99">
+      <proto syll="R">ul</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>il</seg>
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>uː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+         <seg>ul</seg>
+      </modern>
+   </corr>
+   <corr num="100">
+      <proto syll="I">k</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>k</seg>
+      </modern>
+   </corr>
+   <corr num="101">
+      <proto syll="I">k</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>k</seg>
+      </modern>
+   </corr>
+   <corr num="102">
+      <proto syll="I">kʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>kh</seg>
+      </modern>
+   </corr>
+   <corr num="103">
+      <proto syll="I">kʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kʰ</seg>
+         <seg>k</seg>
+      </modern>
+   </corr>
+   <corr num="104">
+      <proto syll="I">g</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>k </seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>k</seg>
+         <seg>g</seg>
+      </modern>
+   </corr>
+   <corr num="105">
+      <proto syll="I">g</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>k</seg>
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>g</seg>
+      </modern>
+   </corr>
+   <corr num="106">
+      <proto syll="I">g</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>k</seg>
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>g</seg>
+      </modern>
+   </corr>
+   <corr num="107">
+      <proto syll="O">gj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>gj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kj</seg>
+      </modern>
+   </corr>
+   <corr num="108">
+      <proto syll="O">gj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>gj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>k</seg>
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gj</seg>
+      </modern>
+   </corr>
+   <corr num="109">
+      <proto syll="O">kr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>kr</seg>
+      </modern>
+   </corr>
+   <corr num="110">
+      <proto syll="O">kr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>kr</seg>
+      </modern>
+   </corr>
+   <corr num="111">
+      <proto syll="O">kr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>kr</seg>
+      </modern>
+   </corr>
+   <corr num="112">
+      <proto syll="O">kr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kj</seg>
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+   </corr>
+   <corr num="113">
+      <proto syll="O">kr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+   </corr>
+   <corr num="114">
+      <proto syll="O">kʰr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>kʰj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+         <seg>tʃʰj</seg>
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kʰj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kʰr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>khr</seg>
+      </modern>
+   </corr>
+   <corr num="214">
+      <proto syll="O">kʰr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+         <seg>tʃʰj</seg>
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kʰr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>khr</seg>
+      </modern>
+   </corr>
+   <corr num="115">
+      <proto syll="O">gr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>g</seg>
+         <seg>gj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gr</seg>
+      </modern>
+   </corr>
+   <corr num="116">
+      <proto syll="O">gr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="117">
+      <proto syll="O">gr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+         <seg>kʰr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>gr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gr</seg>
+      </modern>
+   </corr>
+   <corr num="118">
+      <proto syll="O">gr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+         <seg>rʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gr</seg>
+      </modern>
+   </corr>
+   <corr num="119">
+      <proto syll="O">gr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>kr</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gr</seg>
+      </modern>
+   </corr>
+   <corr num="120">
+      <proto syll="O">grw</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>k</seg>
+         <seg>g</seg>
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>k</seg>
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>krw</seg>
+      </modern>
+   </corr>
+   <corr num="121">
+      <proto syll="O">kl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>hɬ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>kl</seg>
+      </modern>
+   </corr>
+   <corr num="122">
+      <proto syll="O">kl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+   </corr>
+   <corr num="123">
+      <proto syll="O">kl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+   </corr>
+   <corr num="124">
+      <proto syll="O">kʰl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɬj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kʰj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>hɬ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+   </corr>
+   <corr num="125">
+      <proto syll="O">gl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>kl</seg>
+      </modern>
+   </corr>
+   <corr num="126">
+      <proto syll="O">gl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰj</seg>
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>kj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>lj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gl</seg>
+      </modern>
+   </corr>
+   <corr num="127">
+      <proto syll="O">gl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>kʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɬ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>gl</seg>
+      </modern>
+   </corr>
+   <corr num="128">
+      <proto syll="O">ts</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>tʃ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tɕ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tɕ</seg>
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ts</seg>
+      </modern>
+   </corr>
+   <corr num="129">
+      <proto syll="O">ts</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ts</seg>
+      </modern>
+   </corr>
+   <corr num="130">
+      <proto syll="O">tsʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>tʃʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tɕʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tɕʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tsʰ</seg>
+      </modern>
+   </corr>
+   <corr num="131">
+      <proto syll="O">tsʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>tsh</seg>
+      </modern>
+   </corr>
+   <corr num="132">
+      <proto syll="O">dz</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ts</seg>
+      </modern>
+   </corr>
+   <corr num="133">
+      <proto syll="O">dz</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ts</seg>
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ts</seg>
+         <seg>dz</seg>
+      </modern>
+   </corr>
+   <corr num="134">
+      <proto syll="O">tsj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tɕ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tsj</seg>
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tɕ</seg>
+         <seg>tsj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tsj</seg>
+      </modern>
+   </corr>
+   <corr num="135">
+      <proto syll="O">tsʰj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tɕʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tsʰj</seg>
+         <seg>tsʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tɕʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tsʰj</seg>
+      </modern>
+   </corr>
+   <corr num="136">
+      <proto syll="O">dzj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tɕ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tsj</seg>
+         <seg>ts</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tɕ</seg>
+         <seg>tsj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tsj</seg>
+      </modern>
+   </corr>
+   <corr num="137">
+      <proto syll="O">ʈ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ʈ</seg>
+      </modern>
+   </corr>
+   <corr num="138">
+      <proto syll="O">ʈʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="139">
+      <proto syll="O">ʈ.Hr.ʈʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>hr</seg>
+         <seg>ʰr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>hr</seg>
+      </modern>
+   </corr>
+   <corr num="140">
+      <proto syll="O">ɖ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ʈ</seg>
+      </modern>
+   </corr>
+   <corr num="141">
+      <proto syll="O">ɖ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɖ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʈʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ʈ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɖ</seg>
+      </modern>
+   </corr>
+   <corr num="142">
+      <proto syll="I">t</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="143">
+      <proto syll="I">tʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tʰ</seg>
+      </modern>
+   </corr>
+   <corr num="144">
+      <proto syll="I">tʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>tʰ</seg>
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>tʰ</seg>
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="145">
+      <proto syll="I">d</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="146">
+      <proto syll="I">d</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>d</seg>
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>tʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>d</seg>
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="147">
+      <proto syll="I">p</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="148">
+      <proto syll="I">pʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pʰ</seg>
+      </modern>
+   </corr>
+   <corr num="149">
+      <proto syll="I">pʰ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pʰ</seg>
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ph</seg>
+      </modern>
+   </corr>
+   <corr num="150">
+      <proto syll="I">b</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="151">
+      <proto syll="I">b</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>b</seg>
+      </modern>
+   </corr>
+   <corr num="152">
+      <proto syll="I">b</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="153">
+      <proto syll="O">pj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>pj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>pj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>pj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pj</seg>
+      </modern>
+   </corr>
+   <corr num="154">
+      <proto syll="O">pʰj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>pʰj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pʰj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>pʰj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>pʰj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pʰj</seg>
+      </modern>
+   </corr>
+   <corr num="155">
+      <proto syll="O">bj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>bj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pj</seg>
+         <seg>pʰj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>bj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pj</seg>
+         <seg>bj</seg>
+      </modern>
+   </corr>
+   <corr num="156">
+      <proto syll="O">bl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pl</seg>
+      </modern>
+   </corr>
+   <corr num="157">
+      <proto syll="O">bl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>pʰl</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>pl</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>pl</seg>
+      </modern>
+   </corr>
+   <corr num="158">
+      <proto syll="O">p.ml</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ml</seg>
+      </modern>
+   </corr>
+   <corr num="159">
+      <proto syll="O">ʰŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ŋ</seg>
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ŋ</seg>
+         <seg>w</seg>
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ŋ</seg>
+      </modern>
+   </corr>
+   <corr num="160">
+      <proto syll="O">ʰŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ŋ</seg>
+      </modern>
+   </corr>
+   <corr num="161">
+      <proto syll="O">ʰŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>n</seg>
+         <seg>ŋ</seg>
+      </modern>
+   </corr>
+   <corr num="162">
+      <proto syll="O">ŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ŋ</seg>
+      </modern>
+   </corr>
+   <corr num="163">
+      <proto syll="O">ŋ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>n</seg>
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɲ</seg>
+      </modern>
+   </corr>
+   <corr num="164">
+      <proto syll="O">ʰɲ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɲ</seg>
+         <seg>ŋj</seg>
+         <seg>n</seg>
+         <seg>ŋ</seg>
+      </modern>
+   </corr>
+   <corr num="165">
+      <proto syll="O">ɲ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɲ</seg>
+         <seg>ŋj</seg>
+         <seg>n</seg>
+         <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="166">
+      <proto syll="O">ʰn</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>n</seg>
+      </modern>
+   </corr>
+   <corr num="167">
+      <proto syll="O">n</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>n</seg>
+      </modern>
+   </corr>
+   <corr num="168">
+      <proto syll="O">ʰn</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>n</seg>
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>n</seg>
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɲ</seg>
+      </modern>
+   </corr>
+   <corr num="169">
+      <proto syll="O">n</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɲ</seg>
+      </modern>
+   </corr>
+   <corr num="170">
+      <proto syll="O">n</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>nj</seg>
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ɲ</seg>
+         <seg>ŋj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɲ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ɲ</seg>
+         <seg>ŋ</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ɲ</seg>
+      </modern>
+   </corr>
+   <corr num="171">
+      <proto syll="I">ʰm</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>m</seg>
+      </modern>
+   </corr>
+   <corr num="172">
+      <proto syll="I">m</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>m</seg>
+      </modern>
+   </corr>
+   <corr num="173">
+      <proto syll="O">ʰmj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>mj</seg>
+      </modern>
+   </corr>
+   <corr num="174">
+      <proto syll="O">mj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>mj</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>mj</seg>
+      </modern>
+   </corr>
+   <corr num="175">
+      <proto syll="O">ʰml</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ml</seg>
+      </modern>
+   </corr>
+   <corr num="176">
+      <proto syll="O">ml</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ml</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ml</seg>
+      </modern>
+   </corr>
+   <corr num="177">
+      <proto syll="O">ʰj</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="178">
+      <proto syll="O">j</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>j</seg>
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="179">
+      <proto syll="G">j</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>j</seg>
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="180">
+      <proto syll="G">j</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>j</seg>
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="181">
+      <proto syll="O">Hr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>hr</seg>
+         <seg>rʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>hr</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>r</seg>
+      </modern>
+   </corr>
+   <corr num="182">
+      <proto syll="O">ʰr</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>r</seg>
+      </modern>
+   </corr>
+   <corr num="183">
+      <proto syll="O">r</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>r</seg>
+      </modern>
+   </corr>
+   <corr num="184">
+      <proto syll="L">r</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>r</seg>
+      </modern>
+   </corr>
+   <corr num="185">
+      <proto syll="L">r</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>r</seg>
+         <seg>Ø</seg>
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>r</seg>
+         <seg>Ø</seg>
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="186">
+      <proto syll="O">Hl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>hl</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>hl</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>hl</seg>
+         <seg>lʰ</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+         <seg>hɬ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>hɬ</seg>
+         <seg>ɬ</seg>
+      </modern>
+   </corr>
+   <corr num="187">
+      <proto syll="O">ʰl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>hɬ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="387">
+      <proto syll="O">ʰl</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>hɬ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>hɬ</seg>
+         <seg>ɬ</seg>
+      </modern>
+   </corr>
+   <corr num="188">
+      <proto syll="O">l</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="189">
+      <proto syll="L">l</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="190">
+      <proto syll="O">ʰw</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>w</seg>
+      </modern>
+   </corr>
+   <corr num="191">
+      <proto syll="O">w</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>w</seg>
+      </modern>
+   </corr>
+   <corr num="192">
+      <proto syll="G">w</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>w</seg>
+      </modern>
+   </corr>
+   <corr num="193">
+      <proto syll="I">s</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="194">
+      <proto syll="I">s</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʃj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="195">
+      <proto syll="I">s</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʃ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʃ</seg>
+         <seg>ʃj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+         <seg>sj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɕ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ʃ</seg>
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="⁵⁴,⁴³,⁵³">
+         <seg>ʃ</seg>
+      </modern>
+   </corr>
+   <corr num="196">
+      <proto syll="O">ɕ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʃ</seg>
+         <seg>ʃj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʃ</seg>
+         <seg>ʃj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+         <seg>sj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɕ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ʃ</seg>
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="197">
+      <proto syll="I">z</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="198">
+      <proto syll="O">ʑ</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ʃ</seg>
+         <seg>ʃj</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ʃ</seg>
+         <seg>ʃj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+         <seg>sj</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɕ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>ʃ</seg>
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="199">
+      <proto syll="I">h</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="200">
+      <proto syll="I">h</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>h</seg>
+      </modern>
+   </corr>
+   <corr num="201">
+      <proto syll="F">k</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>Ø</seg>
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>Ø</seg>
+      </modern>
+   </corr>
+   <corr num="202">
+      <proto syll="V">i</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>ɨ</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ɤi</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>i</seg>
+      </modern>
+   </corr>
+   <corr num="203">
+      <proto syll="F">t</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>Ø</seg>
+         <seg>ː</seg>
+      </modern>
+   </corr>
+   <corr num="204">
+      <proto syll="F">p</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>p</seg>
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>Ø</seg>
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>p</seg>
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>p</seg>
+         <seg>Ø</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>Ø</seg>
+         <seg>ː</seg>
+      </modern>
+   </corr>
+   <corr num="205">
+      <proto syll="V">a</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="206">
+      <proto syll="V">o</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>ə</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>ʌ</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>o</seg>
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="207">
+      <proto syll="V">u</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="208">
+      <proto syll="F">l</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>Ø</seg>
+         <seg>ː</seg>
+      </modern>
+   </corr>
+   <corr num="209">
+      <proto syll="F">s</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>ː</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>?</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>?</seg>
+      </modern>
+   </corr>
+   <corr num="210">
+      <proto syll="J">+</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>+</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>+</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>+</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>+</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>+</seg>
+      </modern>
+   </corr>
+   <corr num="211">
+      <proto syll="J">-</proto>
+      <modern dialecte="¹,X,ᴴ">
+         <seg>-</seg>
+      </modern>
+      <modern dialecte="¹">
+         <seg>-</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ">
+         <seg>-</seg>
+      </modern>
+      <modern dialecte="¹,ᴴ,X">
+         <seg>-</seg>
+      </modern>
+      <modern dialecte="¹,X">
+         <seg>-</seg>
+      </modern>
+   </corr>
+   <corr num="212">
+      <proto syll="J">,</proto>
+      <modern dialecte="¹,X,ᴴ"/>
+      <modern dialecte="¹"/>
+      <modern dialecte="¹,ᴴ"/>
+      <modern dialecte="¹,ᴴ,X"/>
+      <modern dialecte="¹,X"/>
+   </corr>
+</tableOfCorr>
