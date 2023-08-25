@@ -1,14 +1,14 @@
 <div id="content" class="col-sm-12">
     <h6 class="pt-3 pl-3">Projects and Their Experiments</h6>
-    <div class="treeview-animated w-20 border">
-      <ul class="treeview-animated-list mb-3 pl-3 pb-2">
+    <div class="w-20 border">
+      <ul class="mb-3 pl-3 pb-2">
       % for (project, updated_at, experiments) in data['projects']:
-            <li class="treeview-animated-items w-10">
+            <li class="w-10">
             <a title="view project source" class="closed">
             <i class="fas fa-angle-right rotate"></i>
             <span>{{project}}</span></a>
             <!-- {{updated_at}} -->
-            <ul class="nested">
+            <ul>
                 <li><a title="view project source" href="/project/{{project}}">
                 <span class="fas fa-archive"></span> source data</a></li>
                 % for experiment in experiments[0]:

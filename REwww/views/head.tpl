@@ -6,13 +6,16 @@
 	<link rel="icon" href="/static/favicon.ico">
 	<title>The Reconstruction Engine</title>
 
-    <script src="/static/jquery.min.js"/>
-    <script src="/static/bootstrap-table.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
-    <link href="/static/bootstrap-table.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/static/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-sortable.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-table.min.css">
     <link rel="stylesheet" type="text/css" href="/static/all.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/mdb.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
+    <!-- script type="text/javascript" src="/static/moment.min.js"></script -->
+    <script type="text/javascript" src="/static/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
+    <script type="text/javascript" src="/static/bootstrap-table.min.js"></script>
     <style>
     .btn-xs {
         padding: .25rem .4rem;
@@ -40,14 +43,9 @@
       // Treeview Initialization
       // $('.treeview').mdbTreeview()
       // Treeview Initialization
-      $(document).ready(function() {
-      $('.treeview-animated').mdbTreeview();
-      });
+      // $(document).ready(function() {
+      //  $('.treeview').mdbTreeview();
+      //});
     });
-    </script
-    <script type="text/javascript" src="/static/moment.min.js"></script>
-	<script type="text/javascript" src="/static/jquery.min.js"></script>
-	<script type="text/javascript" src="/static/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/static/bootstrap-sortable.js"></script>
-	<script type="text/javascript" src="/static/mdb.min.js"></script>
+    </script>
 </head>

@@ -139,12 +139,12 @@ def file_content(file_path, display):
         f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = '<pre>' + limit_lines(data, 5000) + '</pre>'
+        data = '<pre>' + limit_lines(data, 10000) + '</pre>'
     elif '.csv' in file_path:
         f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = reformat(data, 5000)
+        data = reformat(data, 10000)
     else:
         data = '<p style="color: red">Not a type of file that can be displayed here, sorry!</p>'
     return data, get_info(file_path)
@@ -226,7 +226,7 @@ def upstream(request, language_forms, project, experiment, parameters, only_with
     if request == 'languages':
         mel = None
         fuzzy = None
-        recon = 'standard'
+        recon = parameters['recon'] if 'recon' in parameters and parameters['recon'] != '' else 'standard'
         settings = read.read_settings_file(parameters_file,
                                            mel=mel,
                                            fuzzy=fuzzy,
