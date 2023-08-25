@@ -9,6 +9,7 @@
   <attested name="syang" file="TGTM.syang.data.xml"/>
   <attested name="tag" file="TGTM.tag.data.xml"/>
   <attested name="tuk" file="TGTM.tuk.data.xml"/>
+  <attested name="tang" file="TGTM.tang.data.xml"/>
   <mel name="hand" file="TGTM.hand.mel.xml"/>
   <mel name="hand-extended" file="TGTM.hand-extended.mel.xml"/>
   <mel name="both" file="TGTM.both.mel.xml"/>
@@ -21,6 +22,26 @@
     <proto_language name="tgtm" correspondences="TGTM.C794.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
     <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra" to="tgtm"/>
+    <title value="TGTM, 'version classique', 1994"/>
   </reconstruction>
-  <param name="title" value="TGTM, 1994 version"/>
+  <reconstruction name="C2023-C796">
+    <proto_language name="tgtm" correspondences="TGTM.C796.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra,nar" to="tgtm"/>
+    <title value="TGTM, 'C796' revised ToC, including nar"/>
+  </reconstruction>
+  <reconstruction name="C2023">
+    <proto_language name="tgtm" correspondences="TGTM.C2023.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra,tang" to="tgtm"/>
+    <title value="TGTM, 2023 9 languages, including Tangbe"/>
+    <!-- action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra,tang" to="tgtm"/ -->
+  </reconstruction>
+  <reconstruction name="C2023-3lgs">
+    <proto_language name="tgtm" correspondences="TGTM.C2023.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="ris,pra,tang" to="tgtm"/>
+    <title value="TGTM, 2023 version, Ris, Pra, and Tang only"/>
+  </reconstruction>
+  <param name="title" value="TGTM, 2023 version, including Tangbe, Narpha, and Phu"/>
 </params>
