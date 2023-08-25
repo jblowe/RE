@@ -37,21 +37,25 @@
     </xsl:template>
 
     <xsl:template match="isolates">
+        <div style="float: left;" >
         <a name="isolates"/>
         <h5>Isolates</h5>
         <h6>n = <xsl:value-of select="count(set)" /></h6>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>
+        </div>
     </xsl:template>
 
     <xsl:template match="failures">
+        <div style="float: left;" >
         <a name="failures"/>
         <h5>Failures</h5>
         <h6>n = <xsl:value-of select="count(set)" /></h6>
         <ul class="list-unstyled">
             <xsl:apply-templates select="set"/>
         </ul>
+        </div>
     </xsl:template>
 
     <xsl:template match="set">
