@@ -2,7 +2,6 @@ import read
 import sys
 import os
 import RE
-import csv
 import serialize
 
 table_layout = [int(x) for x in sys.argv[2].split(',')]
