@@ -52,7 +52,8 @@ def fuzzy_table(mapping, settings):
                     modified = True
                     c.daughter_forms[language] = list(set(c.daughter_forms[language] + invert[(language, reflex)]))
         if modified:
-            c.id += '*'
+            pass
+            #c.id += '*'
     print('writing fuzzied table')
     new_table_file = 'fuzz' + settings.proto_languages['tgtm']
     serialize.serialize_correspondence_file(os.path.join(base_dir, new_table_file),
@@ -82,7 +83,9 @@ def generate_xml_data():
     with cd(os.path.join(base_dir)):
         with open('pipeline.sh', 'r', encoding='utf-8') as commands:
             for command in commands:
-                if command[0] == '#': continue
+                if command[0] == '#':
+                    print(command.strip())
+                    continue
                 if 'perl' in command or 'python' in command:
                     command = command.replace('$1', code_dir)
                     print(command.strip())
