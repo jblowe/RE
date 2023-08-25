@@ -108,6 +108,8 @@ elif command_args.command == 'upstream':
                                        recon=args.recon)
     check_setup(command_args.command, args, settings)
     load_hooks.load_hook(args.experiment_path, settings)
+    mel_status = 'strict MELs' if args.only_with_mel else 'MELs not enforced'
+    print(mel_status)
     B = RE.batch_all_upstream(settings, only_with_mel=args.only_with_mel)
     keys_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.keys.csv')
     RE.dump_keys(B, keys_file)
@@ -115,7 +117,7 @@ elif command_args.command == 'upstream':
     sets_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.txt')
     RE.dump_sets(B, sets_file)
     # print(f'wrote {len(B.forms)} text sets to {sets_file}')
-    for c in sorted(B.statistics.correspondences_used_in_recons, key= lambda corr: utils.tryconvert(corr.id, int)):
+    for c in sorted(B.statistics.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
         if c in B.statistics.correspondences_used_in_sets:
             set_count = B.statistics.correspondences_used_in_sets[c]
         else:
