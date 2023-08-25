@@ -6343,7 +6343,6 @@
   <mel id="x632">
     <gl>rot/rotten, become</gl>
     <gl>rot/rotten</gl>
-    <gl>become</gl>
   </mel>
   <mel id="x633">
     <gl>wife of 2nd and 3rd</gl>
@@ -6382,9 +6381,6 @@
   <mel id="x642">
     <gl>to *wither</gl>
     <gl>wither</gl>
-  </mel>
-  <mel id="x643">
-    <gl>195</gl>
   </mel>
   <mel id="x644">
     <gl>kill (sacrificial animal)</gl>
@@ -8176,8 +8172,7 @@
     <gl>what</gl>
   </mel>
   <mel id="x1098">
-    <gl>to *un*dress</gl>
-    <gl>un</gl>
+    <gl>to *undress</gl>
     <gl>dress</gl>
   </mel>
   <mel id="x1099">
@@ -13211,7 +13206,7 @@
     <gl>antelope</gl>
   </mel>
   <mel id="x2380">
-    <gl>*soy*bean</gl>
+    <gl>*soybean</gl>
     <gl>soy</gl>
     <gl>bean</gl>
   </mel>
@@ -17070,8 +17065,7 @@
     <gl>grove/cope/wood</gl>
   </mel>
   <mel id="x3366">
-    <gl>*hot*pad</gl>
-    <gl>hot</gl>
+    <gl>*hotpad</gl>
     <gl>pad</gl>
   </mel>
   <mel id="x3367">
