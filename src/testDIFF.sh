@@ -16,7 +16,7 @@ DATE=`date +%Y-%m-%d-%H-%M`
 if [ ! -d ../projects/${PROJECT} ]
 then
    echo "../projects/${PROJECT} does not exist."
-   exit 1
+   exit 0
 fi
 
 if [ -e "test${PROJECT}.sh" ]
