@@ -134,10 +134,12 @@ def render_sets(forms, sets, languages, set_type):
             sf = ET.SubElement(element, 'sf')
             sort_forms(form, sf, level)
 
+    number = -1
     for number, form in enumerate(forms):
         entry = ET.SubElement(sets, 'set')
         render_xml(entry, form, 0)
 
+    print(f'number of "{set_type}" {number + 1}')
     return sets
 
 def create_xml_sets(reconstruction, languages, only_with_mel):
@@ -169,7 +171,7 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
     sets = ET.SubElement(root, 'sets')
 
-    # if 'strict' is on, squish the sets before output
+    # if 'strict' is on, squish the sets using mels before output
     if only_with_mel:
         uniques = collections.defaultdict(list)
         for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
@@ -177,7 +179,7 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
         render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)), sets, languages, 'strict sets')
 
-    # otherwise, make sets the 'usual' way
+    # otherwise, make sets the 'usual' way (no mels)
     else:
         render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages, 'sets')
 
