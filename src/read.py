@@ -132,8 +132,6 @@ def read_settings_file(filename, mel=None, recon=None, fuzzy=None):
         elif setting.tag == 'mel':
             mel_filenames[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'fuzzy':
-            if setting.attrib['name'] == fuzzy:
-                other['fuzzy'] = setting.attrib['file']
             fuzzy_filenames[setting.attrib['name']] = setting.attrib['file']
         elif setting.tag == 'param':
             other[setting.attrib['name']] = setting.attrib['value']
