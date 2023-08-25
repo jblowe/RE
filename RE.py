@@ -622,7 +622,10 @@ def set_compare(lex1, lex2, languages):
         sets = list_of_sf[form]
         for protoform in sets:
             pformshort = f'{protoform.glyphs} {correspondences_as_ids(protoform.correspondences)}'
-            reflexshort = f'{form.language} {form.glyphs} {form.gloss}'
+            try:
+                reflexshort = f'{form.language} {form.glyphs} {form.gloss}'
+            except:
+                reflexshort = f'{form.language} {form.glyphs} {i}'
             pfms.add(pformshort)
             if not pformshort in graph[reflexshort]:
                 graph[reflexshort].append(pformshort)
