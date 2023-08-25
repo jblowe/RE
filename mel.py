@@ -1,5 +1,6 @@
 import re
 import collections
+import time
 
 class Mel:
     def __init__(self, glosses, id):
@@ -23,6 +24,7 @@ default_mel = DefaultMel([], '')
 
 def compile_associated_mels(mels, glosses):
     '''Compile a mapping of glosses to mels.'''
+    elapsed_time = time.time()
     if mels is None:
         return None
     association = collections.defaultdict(set)
@@ -32,6 +34,7 @@ def compile_associated_mels(mels, glosses):
         for gloss in glosses:
             if search_mels(gloss, mel.glosses):
                 association[gloss].add(mel)
+    print('{:.2f} seconds to compile {} associated MELs.'.format(time.time() - elapsed_time, len(association)))
     return association
 
 def associated_mels(association, gloss):
@@ -41,5 +44,18 @@ def associated_mels(association, gloss):
     return list(association.get(gloss, [default_mel]))
 
 def search_mels(gloss, mel_glosses):
-    return any((mel_gloss in re.split(r'[/ ,]', gloss)
+    glosses = normalize_gloss(gloss)
+    return any((mel_gloss in glosses
                 for mel_gloss in mel_glosses))
+
+def normalize_gloss(gloss):
+    glosses = re.split(r'[/ ,]', gloss.replace('*', ''))
+    if '|' in gloss:
+        for i, g in enumerate(glosses):
+            # handle lexware | delimiter: replace gloss with two term -- one trimmed, one with | removed
+            if '|' in g:
+                glosses.append(g.replace('|', ''))
+                glosses.append(re.sub('\|.*', '', g))
+                del glosses[i]
+    glosses = [g for g in glosses if g != '']
+    return glosses
