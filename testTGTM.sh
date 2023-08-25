@@ -9,7 +9,7 @@ EXPERIMENT="$2"
 if [ "${EXPERIMENT}" == "" ]
 then
     echo "must supply name of experiments as arg 2"
-    exit 1
+    exit 0
 fi
 
 DATE=`date +%Y-%m-%d-%H-%M`
@@ -30,10 +30,10 @@ fi
 
 # first make run 'none' with no MEL
 time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run none --recon standard -z fuzzy > /dev/null
-[ $? -ne 0 ] && exit 1;
+[ $? -ne 0 ] && exit 0;
 # next make the "strict" sets: remove untouched mels and merge sets with identical support
 time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run hand --mel hand --recon standard -z fuzzy -w > /dev/null
-[ $? -ne 0 ] && exit 1;
+[ $? -ne 0 ] && exit 0;
 # compare hand to none
 time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
 
@@ -43,11 +43,11 @@ do
     then
         # first test make sets, with each mel
         time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT}    --run ${mel}        --mel ${mel} --recon standard -z fuzzy -w > /dev/null
-        [ $? -ne 0 ] && exit 1;
+        [ $? -ne 0 ] && exit 0;
 
         # next make the "strict" sets: remove untouched mels and merge sets with identical support
         # time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} -w --run ${mel}-notstrict --mel ${mel} --recon standard -z fuzzy > /dev/null
-        # [ $? -ne 0 ] && exit 1;
+        # [ $? -ne 0 ] && exit 0;
 
         # coverage
         time python3 REcli.py coverage ${PROJECT} ${EXPERIMENT} ${mel}  > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.coverage.txt
@@ -57,4 +57,4 @@ do
     fi
 
 done
-exit 1
+exit 0

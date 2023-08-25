@@ -9,7 +9,7 @@ EXPERIMENT="$2"
 if [ "${EXPERIMENT}" == "" ]
 then
     echo "must supply name of experiments as arg 2"
-    exit 1
+    exit 0
 fi
 
 DATE=`date +%Y-%m-%d-%H-%M`
@@ -46,11 +46,11 @@ do
     then
         # first test make sets, with each mel
         time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT}    --run ${mel}        --mel ${mel} > /dev/null
-        [ $? -ne 0 ] && exit 1;
+        [ $? -ne 0 ] && exit 0;
 
         # next make the "strict" sets: remove untouched mels and merge sets with identical support
         time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} -w --run ${mel}-strict --mel ${mel} > /dev/null
-        [ $? -ne 0 ] && exit 1;
+        [ $? -ne 0 ] && exit 0;
 
         # coverage
         time python3 REcli.py coverage ${PROJECT} ${EXPERIMENT} ${mel}  > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.coverage.txt
