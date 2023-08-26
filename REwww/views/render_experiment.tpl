@@ -22,12 +22,12 @@
                   %     short_file = file.replace(data['project'] + '.','').replace('.' + file_type + '.xml','')
                   %     short_parts = short_file.split('.')
                   %     if len(short_parts) == 2:
-                  %         short_file = f'{short_parts[1]} of {short_parts[0]}'
+                  %         short_file = f'{short_parts[0]} {short_parts[1]}'
                   %     end
                   %     short_files[short_file] = file
                   % end
 
-                  % for short_file in sorted(short_files):
+                  % for short_file in short_files:
                         % file = short_files[short_file]
                         <tr>
                             % if 'sets' == file_type:
