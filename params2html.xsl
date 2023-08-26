@@ -15,8 +15,8 @@
             </head>
             <body>
                 <h5>Parameters available</h5>
-                <div class="table-responsive">
-                <table class="table-sm table-sm retable">
+                <div>
+                <table class="table table-responsive table-sm retable">
                     <thead/>
                     <tr><th class="table-primary" colspan="2"><h6>Tables and languages ("reconstructions")</h6></th></tr>
                     <xsl:apply-templates select="reconstruction"/>
@@ -37,11 +37,11 @@
                         <xsl:apply-templates select="param"/>
                     </xsl:if>
                     <tr><th class="table-primary" colspan="2">
-                        <h6 class="table-primary">Lexicons</h6>
+                        <h6>Lexicons</h6>
                     </th></tr>
                     <tr><td>
-                        <div class="table-responsive">
-                        <table class="table-sm table-striped sortable">
+                        <div>
+                        <table class="table table-responsive table-sm sortable">
                             <thead>
                                 <tr>
                                     <th>Language</th>
@@ -64,12 +64,23 @@
     </xsl:template>
 
     <xsl:template match="reconstruction">
-        <tr><th colspan="3">"<xsl:value-of select="@name"/>"</th>
+        <tr class="table-secondary">
+            <th>
+                "<xsl:value-of select="@name"/>"
+            </th>
+            <td>
+                <i><xsl:value-of select="title/@value"/></i>
+            </td>
             <xsl:apply-templates select="proto_language"/>
             <xsl:apply-templates select="action"/>
         </tr>
     </xsl:template>
 
+    <xsl:template match="title">
+        <tr>
+        <td>title</td>
+        </tr>
+    </xsl:template>
 
     <xsl:template match="proto_language">
         <tr>
