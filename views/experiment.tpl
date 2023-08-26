@@ -4,7 +4,7 @@
         <a class="btn-sm" href="/delete/{{data['project']}}/{{data['experiment']}}"><span class="fas fa-trash-alt"></span></a>
         </h5>
         % if 'title' in data['experiment_info']:
-            <p>Source data description: {{data['experiment_info']['title']}}</p>
+            <p><i>{{data['experiment_info']['title']}}</i></p>
         % end
         <h6>
             <a href="#" id="toggle_parameters"><span class="far fa-caret-square-right" /></a>

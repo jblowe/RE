@@ -92,10 +92,13 @@ def data_files(tree, directory):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     num_files = 0
-    for type in 'statistics compare sets'.split(' '):
+    for type in 'sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'parameters correspondences mel data fuz'.split(' '):
+        to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
+        num_files += len([f for f in filelist if f'{type}.xml' in f])
+    for type in 'statistics compare'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'correspondences data u8 keys'.split(' '):
