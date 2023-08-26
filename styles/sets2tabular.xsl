@@ -11,6 +11,11 @@
             encoding="utf-8"/>
 
     <xsl:template match="/">
+        <html>
+            <head>
+                <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
+            </head>
+        <body>
         <h5>Regular cognate sets</h5>
         <div style="float: left; width:60px;">
             <b>n =
@@ -57,6 +62,9 @@
         </div>
         <xsl:apply-templates select=".//isolates"/>
         <xsl:apply-templates select=".//failures"/>
+
+        </body>
+    </html>
     </xsl:template>
 
     <xsl:template name="sets">

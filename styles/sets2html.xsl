@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-
-    <xsl:param name="isolates" select="'null'"/>
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:exsl="http://xmlns.opentechnology.org/xslt-extensions/functions"
+                xmlns:re="http://exslt.org/re"
+>
 
     <xsl:output
             method="html"
@@ -16,19 +18,39 @@
             <body>
                 <h5>Regular cognate sets</h5>
                 <p>
-                    <div style="float: left; width:100px;"><b>n = <xsl:value-of select="count(.//sets/set)" /></b></div>
-                    <div style="float: left; width:240px;"><i>created at: <xsl:value-of select=".//createdat"/></i></div>
-                    <div style="float: left; width:200px;"><a href="?tabular">switch to tabular display</a></div>
-                    <div style="float: left; width:80px;"><a href="#isolates">isolates</a></div>
-                    <div style="float: left; width:80px;"><a href="#failures">failures</a></div>
+                   <div style="float: left; width:60px;">
+                        <b>n =
+                            <xsl:value-of select="count(.//sets/set)"/>
+                        </b>
+                    </div>
+                    <div style="float: left; width:220px;">
+                        <i>created at:
+                            <xsl:value-of select=".//createdat"/>
+                        </i>
+                    </div>
+                    <div style="float: left; width:160px;">
+                        <a href="?tabular">switch to tabular display</a>
+                    </div>
+                     <div style="float: left; width:80px;">
+                        <a href="#isolates">
+                            <xsl:value-of select="count(.//isolates/set)"/>
+                            isolates
+                        </a>
+                    </div>
+                    <div style="float: left; width:80px;">
+                        <a href="#failures">
+                            <xsl:value-of select="count(.//failures/set/sf/rfx)"/>
+                            failures</a>
+                    </div>
                 </p>
-
                 <xsl:apply-templates select=".//sets"/>
                 <xsl:apply-templates select=".//isolates"/>
                 <xsl:apply-templates select=".//failures"/>
             </body>
         </html>
     </xsl:template>
+
+    <xsl:param name="isolates" select="'null'"/>
 
     <xsl:template match="sets" name="sets">
         <ul class="list-unstyled">
