@@ -1,5 +1,5 @@
 #
-set -x
+# set -x
 
 # run the csv converter for the correspondences
 python3 $1/csv_to_re.py TGTM.C794.csv TGTM.C794.correspondences.xml TGTM.classes.xml
@@ -63,6 +63,7 @@ rm *.xml.log
 # combine the xslt logs into one
 cat *.xslt.log > all.xslt.logs
 rm *.xslt.log
+rm TEMP.*.xml
 
 #python3 -c "import os, glob;list(map(os.remove, glob.glob('*.xslt.log')))"
 # get rid of the temp files
