@@ -38,19 +38,19 @@ perl Lex2XML.pl ALLTHAK_1993.DAT TGTM.tuk.data.xml tuk.xml.log tuk
 #python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk2.data.xml > TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
 # other minor fixups
-#python3 addngl.py TGTM.*.data.xml
-python3 addngl.py TGTM.gha.data.xml gl
-python3 addngl.py TGTM.mar.data.xml dff
-python3 addngl.py TGTM.pra.data.xml gl
-python3 addngl.py TGTM.ris.data.xml dff
-python3 addngl.py TGTM.sahu.data.xml dfe
-python3 addngl.py TGTM.syang.data.xml dff
-python3 addngl.py TGTM.tag.data.xml dff
-python3 addngl.py TGTM.tuk.data.xml dff
-#python3 addngl.py TGTM.tang.data.xml dff
+#python3 $1/addngl.py TGTM.*.data.xml
+python3 $1/addngl.py TGTM.gha.data.xml gl
+python3 $1/addngl.py TGTM.mar.data.xml dff
+python3 $1/addngl.py TGTM.pra.data.xml gl
+python3 $1/addngl.py TGTM.ris.data.xml dff
+python3 $1/addngl.py TGTM.sahu.data.xml dfe
+python3 $1/addngl.py TGTM.syang.data.xml dff
+python3 $1/addngl.py TGTM.tag.data.xml dff
+python3 $1/addngl.py TGTM.tuk.data.xml dff
+#python3 $1/addngl.py TGTM.tang.data.xml dff
 
-#python3 addngl.py TGTM.tag2.data.xml
-#python3 addngl.py TGTM.tuk2.data.xml
+#python3 $1/addngl.py TGTM.tag2.data.xml
+#python3 $1/addngl.py TGTM.tuk2.data.xml
 
 #exit
 
