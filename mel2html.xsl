@@ -69,12 +69,18 @@
                 <xsl:for-each select=".//gl">
                     <xsl:choose>
                     <xsl:when test="@pivot">
+                        <span style="background-color: pink;color: white"><xsl:value-of select="."/></span>
+                    </xsl:when>
+                    <xsl:when test="@uses = '0'">
                         <span style="background-color: red;color: white"><xsl:value-of select="."/></span>
                     </xsl:when>
                     <xsl:otherwise>
-                         <span style="background-color: dodgerblue;color: white"><xsl:value-of select="."/></span>
+                         <span style="background-color: white;color: black"><xsl:value-of select="."/></span>
                     </xsl:otherwise>
                     </xsl:choose>
+                    <xsl:if test="@uses">
+                        &#160;<xsl:value-of select="@uses"/>
+                    </xsl:if>
                     <xsl:if test="position() != last()">, </xsl:if>
                 </xsl:for-each>
             </td>

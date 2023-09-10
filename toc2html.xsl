@@ -41,8 +41,8 @@
 		</xsl:if>
 		<h5>Table of correspondences</h5>
 		<div>
-		<table class="table table-sm table-bordered sets sortable">
-			<thead>
+		<table class="table table-sm table-hover table-bordered sets sortable">
+			<thead class="sticky-top top-0">
 				<tr>
 					<th>num</th>
 					<th>*</th>
