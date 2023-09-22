@@ -57,7 +57,7 @@ def generate_xml_data():
                     if exit_code != 0:
                         sys.exit(exit_code)
 
-def run_load_hooks(settings):
+def run_load_hooks(arg, settings):
     generate_xml_data()
     if 'fuzzy' in settings.other:
         fuzzy_lexicons(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
