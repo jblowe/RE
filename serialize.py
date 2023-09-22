@@ -40,6 +40,17 @@ def serialize_correspondence_file(filename, parameters):
                 for form in forms:
                     if form != '':
                         ET.SubElement(modern, 'seg').text = form
+    for rule in parameters.table.rules:
+        r = ET.SubElement(root, 'rule', num=rule.id, stage=str(rule.stage))
+        attributes = {}
+        if rule.context[0]:
+            attributes['contextL'] = ','.join(rule.context[0])
+        if rule.context[1]:
+            attributes['contextR'] = ','.join(rule.context[1])
+        ET.SubElement(r, 'input', **attributes).text = \
+            rule.input
+        ET.SubElement(r, 'outcome', languages=','.join(rule.languages)).text = \
+            rule.outcome
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))

@@ -32,6 +32,13 @@ def make_pane(vexpand=False, hexpand=False):
     pane.set_hexpand(hexpand)
     return pane
 
+def make_labeled_entry(entry, label='Insert text here'):
+    box = Gtk.Box()
+    label = Gtk.Label(label='Syllable regex:')
+    box.add(label)
+    box.add(entry)
+    return box
+
 def make_expander(widget, label='Insert text here'):
     expander = Gtk.Expander(label=label)
     expander.add(widget)
@@ -65,24 +72,6 @@ def tab_key_press_handler(view, event):
         GLib.timeout_add(50, view.set_cursor,
                          path, next_column, True)
 
-def make_correspondence_view(table):
-    store = make_correspondence_store(table)
-    treeview = Gtk.TreeView.new_with_model(store)
-    treeview.connect('key-press-event', tab_key_press_handler)
-    def store_edit_text(i):
-        def f(widget, path, text):
-            store[path][i] = text
-        return f
-    for i, column_title in enumerate(['ID', 'Context', 'Syllable Type', '*']
-                                     + table.daughter_languages):
-        cell = Gtk.CellRendererText()
-        cell.set_property('editable', True)
-        cell.connect('edited', store_edit_text(i))
-        column = Gtk.TreeViewColumn(column_title, cell, text=i)
-        column.set_sort_column_id(i)
-        treeview.append_column(column)
-    return treeview, store
-
 def make_entry(text):
     entry = Gtk.Entry()
     entry.set_text(text)
@@ -95,38 +84,20 @@ def make_sound_classes_widget(sound_classes):
     for (sound_class, constituents) in sound_classes.items():
         store.append([sound_class,
                       ', '.join(constituents)])
-    treeview = Gtk.TreeView.new_with_model(store)
-    treeview.connect('key-press-event', tab_key_press_handler)
-    def store_edit_text(i):
-        def f(widget, path, text):
-            store[path][i] = text
-        return f
-    for i, column_title in enumerate(['Class', 'Constituents']):
-        cell = Gtk.CellRendererText()
-        cell.set_property('editable', True)
-        cell.connect('edited', store_edit_text(i))
-        column = Gtk.TreeViewColumn(column_title, cell, text=i)
-        column.set_sort_column_id(i)
-        treeview.append_column(column)
-    return make_expander(treeview, label="Sound classes"), store
+    return make_sheet(['Class', 'Constituents'], store, name='Sound Classes'), store
 
 def make_syllable_canon_widget(syllable_canon):
-    grid = Gtk.Grid()
-    widget = make_expander(grid, label="Syllable canon") 
+    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+    widget = make_expander(box, label="Syllable canon")
     widget.regex_entry = make_entry(syllable_canon.regex.pattern)
     sound_class_widget, sound_class_store = make_sound_classes_widget(syllable_canon.sound_classes)
     widget.sound_class_store = sound_class_store
     widget.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
     widget.context_match_type_entry = make_entry(syllable_canon.context_match_type)
-    grid.attach(Gtk.Label(label='Syllable regex:'), 0, 0, 1, 1)
-    grid.attach(widget.regex_entry, 1, 0, 1, 1)
-    grid.attach(Gtk.Label(label='Supra-segmentals'), 0, 1, 1, 1)
-    grid.attach(widget.supra_segmental_entry,
-                1, 1, 1, 1)
-    grid.attach(Gtk.Label(label='Context match type'), 0, 2, 1, 1)
-    grid.attach(widget.context_match_type_entry,
-                1, 2, 1, 1)
-    grid.attach(sound_class_widget, 0, 3, 1, 1)
+    box.add(make_labeled_entry(widget.regex_entry, 'Syllable regex:'))
+    box.add(make_labeled_entry(widget.supra_segmental_entry, 'Supra-segmentals:'))
+    box.add(make_labeled_entry(widget.context_match_type_entry, 'Context match type'))
+    box.add(sound_class_widget)
     return widget
 
 def read_syllable_canon_from_widget(widget):
@@ -161,12 +132,11 @@ def make_lexicons_widget(lexicons):
                              Gtk.Label(label=lexicon.language))
     return notebook
 
-def read_table_from_widget(widget):
+def read_table_from_widget(widget, rule_widget):
     view = widget.view
-    model = view.get_model()
     names = [col.get_title() for col in view.get_columns()][4:]
     table = RE.TableOfCorrespondences('', names)
-    for row in model:
+    for row in view.get_model():
         table.add_correspondence(
             RE.Correspondence(
                 row[0],
@@ -174,11 +144,34 @@ def read_table_from_widget(widget):
                 [x.strip() for x in row[2].split(',')], row[3],
                 dict(zip(names, ([x.strip() for x in token.split(',')]
                                  for token in row[4:])))))
+    for row in rule_widget.view.get_model():
+        table.add_rule(
+            RE.Rule(
+                row[0],
+                RE.read_context_from_string(row[1]),
+                row[2].strip(),
+                row[3].strip(),
+                [x.strip() for x in row[4].split(',')],
+                int(row[5])))
     return table
 
-def make_correspondence_widget(table):
+# A sheet is an expandable editable spreadsheet which has Add and
+# Delete buttons to add or remove rows.
+def make_sheet(column_names, store, name='Insert name here'):
+    view = Gtk.TreeView.new_with_model(store)
+    view.connect('key-press-event', tab_key_press_handler)
+    def store_edit_text(i):
+        def f(widget, path, text):
+            store[path][i] = text
+        return f
+    for i, column_title in enumerate(column_names):
+        cell = Gtk.CellRendererText()
+        cell.set_property('editable', True)
+        cell.connect('edited', store_edit_text(i))
+        column = Gtk.TreeViewColumn(column_title, cell, text=i)
+        column.set_sort_column_id(i)
+        view.append_column(column)
     pane = make_pane(vexpand=True)
-    view, store = make_correspondence_view(table)
     pane.add(view)
 
     def add_button_clicked(widget):
@@ -191,17 +184,40 @@ def make_correspondence_widget(table):
         store.remove(store.get_iter(view.get_cursor()[0]))
 
     buttons_box = Gtk.Box(spacing=0)
-    buttons_box.add(make_clickable_button('Add correspondence', add_button_clicked))
-    buttons_box.add(make_clickable_button('Delete correspondence', delete_button_clicked))
+    buttons_box.add(make_clickable_button('Add', add_button_clicked))
+    buttons_box.add(make_clickable_button('Delete', delete_button_clicked))
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-    box.view = view
     box.add(pane)
     box.add(buttons_box)
-    return box
+    pane.set_vexpand(False)
+    expander = make_expander(box, name)
+    expander.view = view
+    # we need to manually expand and unexpand the pane to trick layout
+    # into working right.
+    def action(widget, spec):
+        pane.set_vexpand(widget.get_expanded())
+    expander.connect('notify::expanded', action)
+    return expander
 
-def read_parameters_from_widgets(table_widget, canon_widget, name, mels):
+def make_correspondence_widget(table):
+    store = make_correspondence_store(table)
+    return make_sheet(['ID', 'Context', 'Syllable Type', '*'] + table.daughter_languages,
+                      store, 'Correspondences')
+
+def make_rule_widget(table):
+    store = Gtk.ListStore(*([str, str, str, str, str, str]))
+    for rule in table.rules:
+        store.append([rule.id,
+                      RE.context_as_string(rule.context),
+                      rule.input,
+                      rule.outcome,
+                      ', '.join(rule.languages),
+                      str(rule.stage)])
+    return make_sheet(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'], store, 'Rules')
+
+def read_parameters_from_widgets(table_widget, rule_widget, canon_widget, name, mels):
     return RE.Parameters(
-        read_table_from_widget(table_widget),
+        read_table_from_widget(table_widget, rule_widget),
         read_syllable_canon_from_widget(canon_widget),
         name,
         mels)
@@ -209,12 +225,14 @@ def read_parameters_from_widgets(table_widget, canon_widget, name, mels):
 def make_parameter_widget(settings, parameters):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     box.table_widget = make_correspondence_widget(parameters.table)
+    box.rule_widget = make_rule_widget(parameters.table)
     box.canon_widget = make_syllable_canon_widget(parameters.syllable_canon)
     box.proto_language_name = parameters.proto_language_name
     box.mels = parameters.mels
     box.add(box.canon_widget)
     box.add(box.table_widget)
-    
+    box.add(box.rule_widget)
+
     def save_button_clicked(widget):
         serialize.serialize_correspondence_file(
             os.path.join(
@@ -222,6 +240,7 @@ def make_parameter_widget(settings, parameters):
                 settings.proto_languages[parameters.proto_language_name]),
             read_parameters_from_widgets(
                 box.table_widget,
+                box.rule_widget,
                 box.canon_widget,
                 parameters.proto_language_name,
                 parameters.mels))
@@ -232,6 +251,7 @@ def make_parameter_widget(settings, parameters):
 def read_parameter_tree_from_widget(notebook_widget):
     return {page.proto_language_name:
             read_parameters_from_widgets(page.table_widget,
+                                         page.rule_widget,
                                          page.canon_widget,
                                          page.proto_language_name,
                                          page.mels)
@@ -300,6 +320,21 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
             elif isinstance(form, RE.ModernForm):
                 row = store.append(parent=parent,
                                    row=[str(form), '', ''])
+            elif isinstance(form, RE.Stage0Form):
+                row = store.append(parent=parent,
+                                   row=[str(form), '', ''])
+                ids = None
+                for (stage, rules_applied) in form.history:
+                    if ids:
+                        store.append(parent=row,
+                                     row=['> *' + stage,
+                                          f' by applying {ids}',
+                                          ''])
+                    ids = ','.join([rule.id for rule in rules_applied])
+                store.append(parent=row,
+                             row=['> ' + str(form.modern),
+                                  f' by applying {ids}',
+                                  ''])
 
         proto_lexicon = RE.upstream_tree(settings.upstream_target,
                                          settings.upstream,
