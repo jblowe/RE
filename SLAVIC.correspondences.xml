@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
-   <createdat>2021-05-13 08:12:46 UTC</createdat>
+   <createdat>2023-09-20 19:32:08 UTC</createdat>
    <parameters>
       <class name="V" value="a,e,ě,ę,ę̄,i,ĭ,o,ǫ,ǭ,u,ŭ,y"/>
       <class name="F" value="ĭ,i,e,ě,ę,ę̄"/>
@@ -739,7 +739,6 @@
       <proto syll="V">o</proto>
       <modern dialecte="cz">
          <seg>o</seg>
-         <seg>ů</seg>
       </modern>
       <modern dialecte="pl">
          <seg>o</seg>
@@ -1257,4 +1256,12 @@
          <seg>ž</seg>
       </modern>
    </corr>
+   <rule num="r1" stage="2">
+      <input contextR="ž">uo</input>
+      <outcome languages="cz">ů</outcome>
+   </rule>
+   <rule num="r2" stage="1">
+      <input>o</input>
+      <outcome languages="cz">uo</outcome>
+   </rule>
 </tableOfCorr>
