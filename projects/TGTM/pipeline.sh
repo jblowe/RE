@@ -1,13 +1,14 @@
 #
-# set -x
+set -v
 
 # run the csv converter for the correspondences
 python3 $1/csv_to_re.py TGTM.C794.csv TGTM.C794.correspondences.xml TGTM.classes.xml
 [ $? -ne 0 ] && exit 1;
 python3 $1/csv_to_re.py C796.correspondences.csv TGTM.C796.correspondences.xml TGTM.classes.xml
 [ $? -ne 0 ] && exit 1;
-python3 $1/csv_to_re.py C2023.correspondences.csv TGTM.C2023.correspondences.xml TGTM.classes.xml
+python3 $1/csv_to_re.py C2023-09-14.correspondences.csv TGTM.C2023-09-14.correspondences.xml TGTM.classes.xml
 [ $? -ne 0 ] && exit 1;
+
 
 # run the perl hack to convert the lexware files to XML
 perl Lex2XML.pl MONGUR8_1994.DAT TGTM.gha.data.xml gha.xml.log gha
@@ -18,7 +19,14 @@ perl Lex2XML.pl MONSAH_1992.DAT TGTM.sahu.data.xml sahu.xml.log sahu
 perl Lex2XML.pl SYANG_1994.DAT TGTM.syang.data.xml syang.xml.log syang
 perl Lex2XML.pl TAG6_1994Aug1.DAT TGTM.tag.data.xml tag.xml.log tag
 perl Lex2XML.pl ALLTHAK_1993.DAT TGTM.tuk.data.xml tuk.xml.log tuk
-#perl Lex2XML.pl TANG_2023.DAT TGTM.tang.data.xml tang.xml.log tang
+# special change for Tangbe
+if [ -e TANGBE2023.DAT ]
+then
+  perl Lex2XML.pl TANGBE2023.DAT TGTM.tang.data.xml tang.xml.log tang
+  perl -i -pe 's/<(\/?)phrase_?/<\1hw/g;s/form>/hw>/g;s/(hw)?gloss>/gl>/g;' TGTM.tang.data.xml
+  perl -i -pe 's/<hw>([^⁰¹²³⁴⁵⁶])/<hw>X\1/g;s/ʱ//g;' TGTM.tang.data.xml
+  python3 $1/addngl.py TGTM.tang.data.xml gloss
+fi
 
 #perl Lex2XML.pl MONTAG_1994.DAT TGTM.tag2.data.xml tag.xml.log tag
 #perl Lex2XML.pl MONTUK_1991.DAT TGTM.tuk2.data.xml tuk.xml.log tuk
@@ -38,7 +46,6 @@ perl Lex2XML.pl ALLTHAK_1993.DAT TGTM.tuk.data.xml tuk.xml.log tuk
 #python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.tuk2.data.xml > TGTM.tuk2.data.xml 2> tuk2.xslt.log
 
 # other minor fixups
-#python3 $1/addngl.py TGTM.*.data.xml
 python3 $1/addngl.py TGTM.gha.data.xml gl
 python3 $1/addngl.py TGTM.mar.data.xml dff
 python3 $1/addngl.py TGTM.pra.data.xml gl
@@ -47,7 +54,6 @@ python3 $1/addngl.py TGTM.sahu.data.xml dfe
 python3 $1/addngl.py TGTM.syang.data.xml dff
 python3 $1/addngl.py TGTM.tag.data.xml dff
 python3 $1/addngl.py TGTM.tuk.data.xml dff
-#python3 $1/addngl.py TGTM.tang.data.xml dff
 
 #python3 $1/addngl.py TGTM.tag2.data.xml
 #python3 $1/addngl.py TGTM.tuk2.data.xml

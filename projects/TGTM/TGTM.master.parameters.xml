@@ -9,9 +9,12 @@
   <attested name="syang" file="TGTM.syang.data.xml"/>
   <attested name="tag" file="TGTM.tag.data.xml"/>
   <attested name="tuk" file="TGTM.tuk.data.xml"/>
-  <!-- attested name="tang" file="TGTM.tang.data.xml"/ -->
+  <attested name="tang" file="TGTM.tang.data.xml"/>
   <mel name="hand" file="TGTM.hand.mel.xml"/>
+  <mel name="hand-v2" file="TGTM.hand-v2.mel.xml"/>
   <mel name="hand-extended" file="TGTM.hand-extended.mel.xml"/>
+  <mel name="hand-extended-v2" file="TGTM.hand-extended-v2.mel.xml"/>
+  <mel name="hand-extended-v3" file="TGTM.hand-extended-v3.mel.xml"/>
   <mel name="both" file="TGTM.both.mel.xml"/>
   <mel name="wordnet" file="TGTM.wordnet.mel.xml"/>
   <mel name="wordnet2" file="TGTM.wordnet2.mel.xml"/>
@@ -30,12 +33,17 @@
     <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra,nar" to="tgtm"/>
     <title value="TGTM, 'C796' revised ToC, including nar"/>
   </reconstruction>
-  <reconstruction name="C2023">
-    <proto_language name="tgtm" correspondences="TGTM.C2023.correspondences.xml"/>
+  <reconstruction name="C2023-09-14">
+    <proto_language name="tgtm" correspondences="TGTM.C2023-09-14.correspondences.xml"/>
     <action name="upstream" target="tgtm"/>
     <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra,tang" to="tgtm"/>
     <title value="TGTM, 2023 9 languages, including Tangbe"/>
-    <!-- action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra,tang" to="tgtm"/ -->
+  </reconstruction>
+  <reconstruction name="C2023-no-tangbe">
+    <proto_language name="tgtm" correspondences="TGTM.C2023-09-14.correspondences.xml"/>
+    <action name="upstream" target="tgtm"/>
+    <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra" to="tgtm"/>
+    <title value="TGTM, 2023 8 languages"/>
   </reconstruction>
   <reconstruction name="C2023-3lgs">
     <proto_language name="tgtm" correspondences="TGTM.C2023.correspondences.xml"/>
@@ -43,5 +51,5 @@
     <action name="upstream" from="ris,pra,tang" to="tgtm"/>
     <title value="TGTM, 2023 version, Ris, Pra, and Tang only"/>
   </reconstruction>
-  <param name="title" value="TGTM, 2023 version, including Tangbe, Narpha, and Phu"/>
+  <param name="title" value="TGTM, 2023 version"/>
 </params>

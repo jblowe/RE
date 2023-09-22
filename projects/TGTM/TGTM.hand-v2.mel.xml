@@ -1,0 +1,3837 @@
+<?xml version='1.0' encoding='utf-8'?>
+<semantics>
+  <mel id="m0001">
+    <gl xml:lang="xx">sari</gl>
+    <gl xml:lang="en">dhoti</gl>
+  </mel>
+  <mel id="m0002">
+    <gl xml:lang="xx">abandon</gl>
+    <gl xml:lang="fr">abandonner</gl>
+    <gl>cast away</gl>
+    <gl xml:lang="fr">cesser</gl>
+    <gl xml:lang="en">discard</gl>
+    <gl xml:lang="fr">divorcer</gl>
+    <gl>jete</gl>
+    <gl xml:lang="fr">jeter</gl>
+    <gl xml:lang="xx">passer</gl>
+    <gl xml:lang="fr">renverser</gl>
+    <gl>throw away</gl>
+  </mel>
+  <mel id="m0003">
+    <gl xml:lang="xx">abandon</gl>
+    <gl>abstain from</gl>
+    <gl xml:lang="en">desert</gl>
+    <gl xml:lang="fr">envoyer</gl>
+    <gl xml:lang="en">forsake</gl>
+    <gl>give up</gl>
+    <gl xml:lang="fr">laisser</gl>
+    <gl xml:lang="en">release</gl>
+    <gl xml:lang="en">send</gl>
+    <gl xml:lang="xx">stop</gl>
+  </mel>
+  <mel id="m0004">
+    <gl xml:lang="xx">abandon</gl>
+    <gl>cast away</gl>
+    <gl>eviter</gl>
+  </mel>
+  <mel id="m0005">
+    <gl xml:lang="fr">abattre</gl>
+    <gl>cause to</gl>
+    <gl xml:lang="en">fall</gl>
+    <gl>fall over</gl>
+    <gl>hochement</gl>
+    <gl xml:lang="fr">tomber</gl>
+  </mel>
+  <mel id="m0006">
+    <gl>abces</gl>
+    <gl xml:lang="en">abscess</gl>
+  </mel>
+  <mel id="m0007">
+    <gl xml:lang="fr">abeille</gl>
+    <gl xml:lang="en">bee</gl>
+  </mel>
+  <mel id="m0008">
+    <gl>abimer</gl>
+    <gl xml:lang="en">damage</gl>
+    <gl xml:lang="en">ruin</gl>
+  </mel>
+  <mel id="m0009">
+    <gl>able to do sthg</gl>
+    <gl xml:lang="en">can</gl>
+    <gl>can do s.th.</gl>
+    <gl xml:lang="xx">capable</gl>
+    <gl xml:lang="xx">force</gl>
+    <gl xml:lang="fr">pouvoir</gl>
+  </mel>
+  <mel id="m0010">
+    <gl>about to</gl>
+    <gl>appetit</gl>
+  </mel>
+  <mel id="m0011">
+    <gl xml:lang="en">about</gl>
+    <gl>allowed to</gl>
+    <gl xml:lang="en">bathe</gl>
+    <gl xml:lang="xx">laver</gl>
+    <gl xml:lang="en">wash</gl>
+  </mel>
+  <mel id="m0012">
+    <gl xml:lang="fr">aboyer</gl>
+    <gl xml:lang="en">bark</gl>
+  </mel>
+  <mel id="m0013">
+    <gl xml:lang="fr">abreuvoir</gl>
+    <gl xml:lang="fr">creux</gl>
+    <gl xml:lang="en">depression</gl>
+    <gl xml:lang="en">hole</gl>
+    <gl xml:lang="fr">trou</gl>
+    <gl xml:lang="en">trough</gl>
+    <gl xml:lang="fr">vallée</gl>
+    <gl xml:lang="en">valley</gl>
+  </mel>
+  <mel id="m0014">
+    <gl xml:lang="fr">abri</gl>
+    <gl>cow shed</gl>
+  </mel>
+  <mel id="m0015">
+    <gl>abstain from</gl>
+    <gl xml:lang="fr">envoyer</gl>
+    <gl xml:lang="en">forsake</gl>
+    <gl>give up</gl>
+    <gl xml:lang="fr">laisser</gl>
+    <gl>let go</gl>
+    <gl xml:lang="en">release</gl>
+    <gl xml:lang="en">send</gl>
+    <gl xml:lang="xx">stop</gl>
+  </mel>
+  <mel id="m0016">
+    <gl xml:lang="en">abstain</gl>
+    <gl>oter le surplus</gl>
+  </mel>
+  <mel id="m0017">
+    <gl xml:lang="en">accept</gl>
+    <gl xml:lang="en">adopt</gl>
+    <gl xml:lang="fr">prendre</gl>
+    <gl xml:lang="en">receive</gl>
+    <gl xml:lang="en">take</gl>
+  </mel>
+  <mel id="m0018">
+    <gl>bear on one's back</gl>
+    <gl xml:lang="fr">accoucher</gl>
+    <gl xml:lang="en">be</gl>
+    <gl xml:lang="en">bear</gl>
+    <gl xml:lang="en">birth</gl>
+    <gl xml:lang="xx">born</gl>
+    <gl xml:lang="en">carry</gl>
+    <gl xml:lang="fr">déposer</gl>
+    <gl xml:lang="fr">élever</gl>
+    <gl xml:lang="en">give</gl>
+    <gl>naitre</gl>
+    <gl>put down</gl>
+    <gl xml:lang="en">raise</gl>
+    <gl xml:lang="fr">soigner</gl>
+    <gl>take care</gl>
+  </mel>
+  <mel id="m0019">
+    <gl xml:lang="fr">accoucher</gl>
+    <gl>give birth</gl>
+    <gl xml:lang="fr">mettre</gl>
+  </mel>
+  <mel id="m0020">
+    <gl xml:lang="fr">accrocher</gl>
+    <gl xml:lang="fr">coller</gl>
+    <gl xml:lang="en">stain</gl>
+  </mel>
+  <mel id="m0021">
+    <gl>accroupir</gl>
+    <gl xml:lang="xx">squat</gl>
+  </mel>
+  <mel id="m0022">
+    <gl xml:lang="en">ache</gl>
+    <gl xml:lang="en">hurt</gl>
+    <gl xml:lang="fr">malade</gl>
+    <gl xml:lang="xx">pain</gl>
+    <gl xml:lang="en">painful</gl>
+    <gl xml:lang="en">sick</gl>
+  </mel>
+  <mel id="m0023">
+    <gl xml:lang="fr">acheter</gl>
+    <gl xml:lang="en">buy</gl>
+    <gl xml:lang="en">buyer</gl>
+    <gl xml:lang="en">purchase</gl>
+  </mel>
+  <mel id="m0024">
+    <gl xml:lang="fr">acheter</gl>
+    <gl xml:lang="en">earn</gl>
+    <gl>etablir</gl>
+    <gl xml:lang="fr">fonder</gl>
+  </mel>
+  <mel id="m0025">
+    <gl xml:lang="fr">achever</gl>
+    <gl>disparaitre</gl>
+    <gl xml:lang="fr">exister</gl>
+    <gl xml:lang="fr">finir</gl>
+    <gl xml:lang="en">finish</gl>
+    <gl xml:lang="en">finished</gl>
+    <gl xml:lang="en">pass</gl>
+  </mel>
+  <mel id="m0026">
+    <gl xml:lang="fr">acide</gl>
+    <gl xml:lang="en">sour</gl>
+  </mel>
+  <mel id="m0027">
+    <gl xml:lang="en">admit</gl>
+    <gl>advendir</gl>
+    <gl xml:lang="en">allow</gl>
+    <gl xml:lang="fr">convenir</gl>
+    <gl xml:lang="en">grant</gl>
+  </mel>
+  <mel id="m0028">
+    <gl xml:lang="en">adorn</gl>
+    <gl xml:lang="en">decorate</gl>
+    <gl>decorer</gl>
+  </mel>
+  <mel id="m0029">
+    <gl xml:lang="fr">advenir</gl>
+    <gl xml:lang="en">arise</gl>
+    <gl xml:lang="en">be</gl>
+    <gl xml:lang="en">become</gl>
+    <gl xml:lang="fr">convenir</gl>
+    <gl xml:lang="en">fit</gl>
+    <gl xml:lang="en">happen</gl>
+    <gl xml:lang="en">made</gl>
+    <gl xml:lang="fr">produire</gl>
+    <gl xml:lang="en">reach</gl>
+    <gl xml:lang="en">suit</gl>
+  </mel>
+  <mel id="m0030">
+    <gl>affut</gl>
+    <gl xml:lang="xx">durable</gl>
+    <gl xml:lang="en">sit</gl>
+    <gl xml:lang="fr">solide</gl>
+    <gl xml:lang="xx">squat</gl>
+    <gl xml:lang="en">stationary</gl>
+  </mel>
+  <mel id="m0031">
+    <gl>affûter</gl>
+    <gl xml:lang="en">sharp</gl>
+    <gl xml:lang="en">sharpen</gl>
+  </mel>
+  <mel id="m0032">
+    <gl xml:lang="en">afraid</gl>
+    <gl xml:lang="en">dreadful</gl>
+    <gl xml:lang="en">fear</gl>
+    <gl xml:lang="en">fearful</gl>
+    <gl xml:lang="en">scared</gl>
+  </mel>
+  <mel id="m0033">
+    <gl xml:lang="en">afraid</gl>
+    <gl xml:lang="en">fear</gl>
+    <gl xml:lang="en">frightened</gl>
+    <gl xml:lang="fr">peureux</gl>
+  </mel>
+  <mel id="m0034">
+    <gl xml:lang="fr">agacer</gl>
+    <gl>taquiner</gl>
+    <gl xml:lang="en">tease</gl>
+  </mel>
+  <mel id="m0035">
+    <gl xml:lang="fr">aiguille</gl>
+    <gl xml:lang="en">needle</gl>
+    <gl xml:lang="en">spindle</gl>
+  </mel>
+  <mel id="m0036">
+    <gl>aïl</gl>
+    <gl xml:lang="en">garlic</gl>
+  </mel>
+  <mel id="m0037">
+    <gl xml:lang="fr">aile</gl>
+    <gl xml:lang="en">feather</gl>
+    <gl>plumes</gl>
+    <gl xml:lang="en">wing</gl>
+  </mel>
+  <mel id="m0038">
+    <gl xml:lang="fr">croire</gl>
+    <gl>experimente</gl>
+    <gl xml:lang="en">feel</gl>
+    <gl xml:lang="en">know</gl>
+    <gl xml:lang="fr">savoir</gl>
+    <gl xml:lang="en">think</gl>
+    <gl xml:lang="en">want</gl>
+    <gl xml:lang="fr">penser</gl>
+    <gl xml:lang="fr">rappeler</gl>
+    <gl>reflechir</gl>
+    <gl xml:lang="en">remember</gl>
+    <gl xml:lang="en">recollect</gl>
+  </mel>
+  <mel id="m0039">
+    <gl xml:lang="fr">aimer</gl>
+    <gl xml:lang="fr">désirer</gl>
+    <gl>like sthg.</gl>
+    <gl>like to do sthg.</gl>
+    <gl xml:lang="en">remember</gl>
+    <gl xml:lang="en">think</gl>
+    <gl xml:lang="en">want</gl>
+  </mel>
+  <mel id="m0040">
+    <gl xml:lang="fr">ajouter</gl>
+    <gl xml:lang="en">assemble</gl>
+    <gl>rabouter</gl>
+    <gl xml:lang="fr">rallonger</gl>
+  </mel>
+  <mel id="m0041">
+    <gl xml:lang="en">alight</gl>
+    <gl xml:lang="fr">atterrir</gl>
+    <gl xml:lang="en">land</gl>
+    <gl xml:lang="en">perch</gl>
+    <gl>step on</gl>
+  </mel>
+  <mel id="m0042">
+    <gl xml:lang="en">arrive</gl>
+    <gl>arrive here</gl>
+    <gl xml:lang="en">come</gl>
+    <gl xml:lang="fr">atteindre</gl>
+    <gl xml:lang="en">meet</gl>
+    <gl xml:lang="en">reach</gl>
+  </mel>
+  <mel id="m0043">
+    <gl xml:lang="en">alight</gl>
+    <gl xml:lang="en">come</gl>
+    <gl>come down</gl>
+    <gl xml:lang="en">descend</gl>
+    <gl xml:lang="fr">descendre</gl>
+    <gl xml:lang="en">germinate</gl>
+    <gl xml:lang="en">bleed</gl>
+    <gl xml:lang="en">rain</gl>
+    <gl>rain...</gl>
+  </mel>
+  <mel id="m0044">
+    <gl xml:lang="fr">aller</gl>
+    <gl xml:lang="xx">go</gl>
+    <gl xml:lang="fr">partir</gl>
+  </mel>
+  <mel id="m0045">
+    <gl xml:lang="en">allow</gl>
+    <gl xml:lang="fr">battre</gl>
+    <gl xml:lang="fr">foutre</gl>
+    <gl xml:lang="fr">frapper</gl>
+    <gl xml:lang="fr">ordonner</gl>
+    <gl xml:lang="fr">permettre</gl>
+    <gl xml:lang="en">shoot</gl>
+    <gl xml:lang="en">strike</gl>
+  </mel>
+  <mel id="m0046">
+    <gl xml:lang="en">allow</gl>
+    <gl xml:lang="fr">donner</gl>
+    <gl xml:lang="en">give</gl>
+  </mel>
+  <mel id="m0047">
+    <gl>allowed to</gl>
+    <gl xml:lang="fr">loisir</gl>
+    <gl xml:lang="fr">temps</gl>
+  </mel>
+  <mel id="m0048">
+    <gl xml:lang="fr">allumer</gl>
+    <gl xml:lang="en">blaze</gl>
+    <gl xml:lang="fr">brûler</gl>
+    <gl xml:lang="en">burn</gl>
+    <gl xml:lang="fr">chauffer</gl>
+    <gl>flamber</gl>
+    <gl>flare up</gl>
+    <gl xml:lang="fr">griller</gl>
+    <gl xml:lang="fr">léger</gl>
+    <gl xml:lang="xx">light</gl>
+    <gl xml:lang="en">ray</gl>
+    <gl xml:lang="xx">rayon</gl>
+    <gl xml:lang="en">roast</gl>
+    <gl>set to cook</gl>
+    <gl>transmit fire</gl>
+  </mel>
+  <mel id="m0049">
+    <gl xml:lang="fr">allumer</gl>
+    <gl xml:lang="en">kindle</gl>
+    <gl xml:lang="xx">light</gl>
+    <gl>light fire</gl>
+    <gl>transmit fire</gl>
+  </mel>
+  <mel id="m0050">
+    <gl xml:lang="en">also</gl>
+    <gl xml:lang="fr">aussi</gl>
+  </mel>
+  <mel id="m0051">
+    <gl xml:lang="fr">âme</gl>
+    <gl xml:lang="fr">coeur</gl>
+    <gl xml:lang="en">feeling</gl>
+    <gl xml:lang="en">heart</gl>
+    <gl xml:lang="en">mind</gl>
+    <gl>sentiments</gl>
+    <gl xml:lang="en">soul</gl>
+    <gl xml:lang="en">spirit</gl>
+  </mel>
+  <mel id="m0052">
+    <gl xml:lang="fr">âme</gl>
+    <gl xml:lang="en">mind</gl>
+    <gl xml:lang="xx">mite</gl>
+    <gl xml:lang="xx">papillon</gl>
+    <gl xml:lang="en">soul</gl>
+    <gl xml:lang="en">spirit</gl>
+    <gl xml:lang="xx">vital</gl>
+  </mel>
+  <mel id="m0053">
+    <gl xml:lang="fr">amer</gl>
+    <gl xml:lang="xx">bile</gl>
+    <gl xml:lang="en">bitter</gl>
+    <gl xml:lang="fr">fiel</gl>
+  </mel>
+  <mel id="m0054">
+    <gl xml:lang="fr">ami</gl>
+    <gl xml:lang="en">assist</gl>
+    <gl xml:lang="en">friend</gl>
+    <gl xml:lang="en">help</gl>
+    <gl xml:lang="fr">pronom</gl>
+  </mel>
+  <mel id="m0055">
+    <gl xml:lang="fr">ami</gl>
+    <gl>bond friend</gl>
+  </mel>
+  <mel id="m0056">
+    <gl xml:lang="fr">amont</gl>
+    <gl xml:lang="fr">intérieur</gl>
+    <gl xml:lang="en">up</gl>
+  </mel>
+  <mel id="m0057">
+    <gl>and</gl>
+    <gl xml:lang="fr">et</gl>
+  </mel>
+  <mel id="m0058">
+    <gl>and</gl>
+    <gl xml:lang="en">twenty-two</gl>
+  </mel>
+  <mel id="m0059">
+    <gl xml:lang="fr">année</gl>
+    <gl xml:lang="en">year</gl>
+  </mel>
+  <mel id="m0060">
+    <gl xml:lang="en">annoyed</gl>
+    <gl xml:lang="en">disgust</gl>
+    <gl>enerve</gl>
+    <gl xml:lang="en">exasperated</gl>
+  </mel>
+  <mel id="m0061">
+    <gl>ans</gl>
+    <gl>bring up</gl>
+    <gl>debrouiller</gl>
+    <gl xml:lang="xx">foster</gl>
+    <gl>grow up</gl>
+    <gl xml:lang="xx">six</gl>
+  </mel>
+  <mel id="m0062">
+    <gl xml:lang="en">answer</gl>
+    <gl xml:lang="xx">dire</gl>
+    <gl xml:lang="fr">parler</gl>
+    <gl xml:lang="en">reply</gl>
+    <gl xml:lang="en">say</gl>
+    <gl xml:lang="en">speak</gl>
+    <gl xml:lang="en">tell</gl>
+    <gl>pretexte</gl>
+  </mel>
+  <mel id="m0063">
+    <gl>anything</gl>
+    <gl xml:lang="en">none</gl>
+    <gl>something</gl>
+    <gl>what</gl>
+  </mel>
+  <mel id="m0064">
+    <gl xml:lang="en">appear</gl>
+    <gl xml:lang="en">arrive</gl>
+    <gl xml:lang="en">meet</gl>
+    <gl xml:lang="en">see</gl>
+    <gl xml:lang="xx">visible</gl>
+    <gl xml:lang="fr">voir</gl>
+  </mel>
+  <mel id="m0065">
+    <gl xml:lang="fr">appeler</gl>
+    <gl xml:lang="en">call</gl>
+    <gl xml:lang="en">invite</gl>
+  </mel>
+  <mel id="m0066">
+    <gl xml:lang="fr">apporter</gl>
+    <gl xml:lang="en">bring</gl>
+    <gl>bring up</gl>
+  </mel>
+  <mel id="m0067">
+    <gl xml:lang="fr">appuyer</gl>
+    <gl>marcher sur</gl>
+    <gl>press feet</gl>
+    <gl>poser les pieds par terre</gl>
+    <gl xml:lang="fr">poids</gl>
+    <gl xml:lang="xx">poser</gl>
+    <gl>press on the ground</gl>
+    <gl>step on a support</gl>
+  </mel>
+  <mel id="m0068">
+    <gl xml:lang="fr">après</gl>
+    <gl xml:lang="en">back</gl>
+    <gl xml:lang="en">backside</gl>
+    <gl xml:lang="en">derriere</gl>
+    <gl xml:lang="xx">plus</gl>
+  </mel>
+  <mel id="m0069">
+    <gl xml:lang="fr">arbre</gl>
+    <gl xml:lang="en">stalk</gl>
+    <gl xml:lang="en">tree</gl>
+    <gl>young plants</gl>
+  </mel>
+  <mel id="m0070">
+    <gl xml:lang="xx">are</gl>
+    <gl xml:lang="en">be</gl>
+    <gl xml:lang="fr">être</gl>
+    <gl>is</gl>
+    <gl xml:lang="en">remain</gl>
+    <gl xml:lang="xx">rester</gl>
+  </mel>
+  <mel id="m0071">
+    <gl xml:lang="xx">argent</gl>
+    <gl>monetary unit</gl>
+    <gl xml:lang="en">money</gl>
+  </mel>
+  <mel id="m0072">
+    <gl xml:lang="fr">arracher</gl>
+    <gl>pull out</gl>
+    <gl>snatch away</gl>
+    <gl xml:lang="en">uproot</gl>
+    <gl xml:lang="en">weed</gl>
+  </mel>
+  <mel id="m0073">
+    <gl>arreter</gl>
+    <gl xml:lang="fr">barrer</gl>
+    <gl xml:lang="fr">bloquer</gl>
+    <gl xml:lang="fr">contenir</gl>
+    <gl xml:lang="en">forbid</gl>
+    <gl xml:lang="en">prohibit</gl>
+    <gl xml:lang="xx">stop</gl>
+  </mel>
+  <mel id="m0074">
+    <gl>arreter</gl>
+    <gl xml:lang="fr">barrer</gl>
+    <gl xml:lang="fr">bloquer</gl>
+    <gl xml:lang="en">forbid</gl>
+    <gl xml:lang="en">hinder</gl>
+    <gl>hold up</gl>
+    <gl xml:lang="en">prohibit</gl>
+    <gl xml:lang="fr">ramener</gl>
+    <gl xml:lang="fr">rassembler</gl>
+    <gl xml:lang="xx">stop</gl>
+  </mel>
+  <mel id="m0075">
+    <gl xml:lang="en">arrow</gl>
+    <gl xml:lang="fr">flèche</gl>
+  </mel>
+  <mel id="m0076">
+    <gl xml:lang="xx">articulation</gl>
+    <gl xml:lang="xx">joint</gl>
+    <gl xml:lang="en">knee</gl>
+  </mel>
+  <mel id="m0077">
+    <gl xml:lang="xx">as</gl>
+    <gl xml:lang="en">like</gl>
+  </mel>
+  <mel id="m0078">
+    <gl xml:lang="en">ascend</gl>
+    <gl xml:lang="en">climb</gl>
+    <gl xml:lang="fr">grimper</gl>
+  </mel>
+  <mel id="m0079">
+    <gl xml:lang="en">ascend</gl>
+    <gl xml:lang="en">rise</gl>
+    <gl xml:lang="en">shine</gl>
+    <gl xml:lang="en">sunrise</gl>
+  </mel>
+  <mel id="m0080">
+    <gl xml:lang="en">ashamed</gl>
+    <gl>feel shy</gl>
+    <gl xml:lang="fr">honte</gl>
+    <gl xml:lang="en">shy</gl>
+    <gl xml:lang="fr">timide</gl>
+  </mel>
+  <mel id="m0081">
+    <gl>ask for</gl>
+    <gl xml:lang="en">beg</gl>
+    <gl xml:lang="en">beggar</gl>
+    <gl xml:lang="fr">mendier</gl>
+    <gl xml:lang="fr">réclamer</gl>
+    <gl xml:lang="en">request</gl>
+  </mel>
+  <mel id="m0082">
+    <gl xml:lang="en">ask</gl>
+    <gl xml:lang="xx">question</gl>
+    <gl xml:lang="fr">questionner</gl>
+    <gl xml:lang="en">request</gl>
+  </mel>
+  <mel id="m0083">
+    <gl>asperger</gl>
+    <gl xml:lang="fr">jeter</gl>
+    <gl xml:lang="fr">répandre</gl>
+    <gl>saupoudrer</gl>
+    <gl xml:lang="en">spread</gl>
+  </mel>
+  <mel id="m0084">
+    <gl>asperger</gl>
+    <gl xml:lang="fr">semer</gl>
+  </mel>
+  <mel id="m0085">
+    <gl>asperger</gl>
+    <gl>sprinkle pure water on s.o. for purification</gl>
+  </mel>
+  <mel id="m0086">
+    <gl xml:lang="en">assemble</gl>
+    <gl xml:lang="xx">assembler</gl>
+    <gl xml:lang="en">assembly</gl>
+    <gl xml:lang="en">gather</gl>
+    <gl xml:lang="en">meeting</gl>
+    <gl xml:lang="fr">rencontre</gl>
+    <gl xml:lang="fr">rencontrer</gl>
+  </mel>
+  <mel id="m0087">
+    <gl xml:lang="en">assembly</gl>
+    <gl xml:lang="fr">foule</gl>
+    <gl xml:lang="en">pleasant</gl>
+    <gl xml:lang="fr">rassembler</gl>
+  </mel>
+  <mel id="m0088">
+    <gl xml:lang="fr">asseoir</gl>
+    <gl xml:lang="en">enter</gl>
+    <gl xml:lang="en">live</gl>
+    <gl xml:lang="en">remain</gl>
+    <gl xml:lang="xx">rester</gl>
+    <gl xml:lang="en">sit</gl>
+    <gl xml:lang="en">stationary</gl>
+    <gl xml:lang="en">stay</gl>
+  </mel>
+  <mel id="m0089">
+    <gl xml:lang="fr">assiette</gl>
+    <gl>offrandes</gl>
+    <gl xml:lang="en">worship</gl>
+  </mel>
+  <mel id="m0090">
+    <gl xml:lang="fr">attacher</gl>
+    <gl xml:lang="fr">attraper</gl>
+    <gl xml:lang="xx">catch</gl>
+    <gl xml:lang="en">hold</gl>
+    <gl>pen up</gl>
+    <gl xml:lang="en">tether</gl>
+    <gl xml:lang="en">tie</gl>
+    <gl>tie up laces</gl>
+  </mel>
+  <mel id="m0091">
+    <gl xml:lang="fr">attacher</gl>
+    <gl xml:lang="fr">broder</gl>
+    <gl xml:lang="en">fasten</gl>
+    <gl xml:lang="fr">fermer</gl>
+    <gl xml:lang="en">fix</gl>
+    <gl>put in</gl>
+    <gl xml:lang="en">tighten</gl>
+  </mel>
+  <mel id="m0092">
+    <gl xml:lang="fr">attacher</gl>
+    <gl xml:lang="fr">envelopper</gl>
+    <gl xml:lang="xx">pack</gl>
+    <gl xml:lang="fr">paquet</gl>
+    <gl xml:lang="en">wrap</gl>
+  </mel>
+  <mel id="m0093">
+    <gl xml:lang="fr">atteindre</gl>
+    <gl>attrapper</gl>
+    <gl xml:lang="en">meet</gl>
+    <gl>met</gl>
+    <gl xml:lang="fr">rencontrer</gl>
+    <gl xml:lang="fr">rendre</gl>
+    <gl xml:lang="fr">trouver</gl>
+  </mel>
+  <mel id="m0094">
+    <gl xml:lang="fr">atteindre</gl>
+    <gl xml:lang="fr">blesser</gl>
+    <gl xml:lang="xx">lever</gl>
+    <gl xml:lang="en">strike</gl>
+    <gl xml:lang="xx">toucher</gl>
+  </mel>
+  <mel id="m0095">
+    <gl xml:lang="fr">atteindre</gl>
+    <gl>reach for</gl>
+  </mel>
+  <mel id="m0096">
+    <gl xml:lang="fr">attendre</gl>
+    <gl xml:lang="fr">guetter</gl>
+    <gl xml:lang="fr">surveiller</gl>
+    <gl xml:lang="en">wait</gl>
+  </mel>
+  <mel id="m0097">
+    <gl xml:lang="xx">attention</gl>
+    <gl xml:lang="fr">contempler</gl>
+    <gl xml:lang="en">worship</gl>
+  </mel>
+  <mel id="m0098">
+    <gl xml:lang="en">attractive</gl>
+    <gl xml:lang="xx">beau</gl>
+    <gl xml:lang="fr">bon</gl>
+    <gl xml:lang="en">clean</gl>
+    <gl xml:lang="en">funny</gl>
+    <gl xml:lang="en">good</gl>
+    <gl xml:lang="en">pretty</gl>
+    <gl xml:lang="en">price</gl>
+    <gl xml:lang="en">sacred</gl>
+  </mel>
+  <mel id="m0099">
+    <gl xml:lang="fr">aval</gl>
+    <gl xml:lang="en">down</gl>
+  </mel>
+  <mel id="m0100">
+    <gl xml:lang="xx">avalanche</gl>
+    <gl>eboulement</gl>
+    <gl xml:lang="en">landslide</gl>
+    <gl xml:lang="en">slide</gl>
+  </mel>
+  <mel id="m0101">
+    <gl xml:lang="fr">avaler</gl>
+    <gl xml:lang="en">swallow</gl>
+  </mel>
+  <mel id="m0102">
+    <gl>avec</gl>
+    <gl xml:lang="xx">ensemble</gl>
+    <gl xml:lang="en">together</gl>
+    <gl>with</gl>
+  </mel>
+  <mel id="m0103">
+    <gl xml:lang="fr">avis</gl>
+    <gl xml:lang="fr">conseiller</gl>
+    <gl xml:lang="fr">enseigner</gl>
+    <gl xml:lang="en">instruct</gl>
+    <gl xml:lang="en">learn</gl>
+    <gl xml:lang="en">teach</gl>
+  </mel>
+  <mel id="m0104">
+    <gl xml:lang="xx">axe</gl>
+    <gl xml:lang="fr">hache</gl>
+  </mel>
+  <mel id="m0105">
+    <gl xml:lang="en">back</gl>
+    <gl xml:lang="en">belt</gl>
+    <gl xml:lang="fr">ceinture</gl>
+    <gl xml:lang="en">waist</gl>
+  </mel>
+  <mel id="m0106">
+    <gl xml:lang="en">back</gl>
+    <gl xml:lang="fr">dos</gl>
+    <gl>lower back</gl>
+    <gl xml:lang="en">spine</gl>
+  </mel>
+  <mel id="m0107">
+    <gl>badigeonner</gl>
+    <gl>egaliser le sol</gl>
+    <gl xml:lang="en">plaster</gl>
+    <gl xml:lang="en">polish</gl>
+    <gl>récurer</gl>
+    <gl xml:lang="fr">rincer</gl>
+    <gl xml:lang="en">rinse</gl>
+    <gl xml:lang="en">rub</gl>
+  </mel>
+  <mel id="m0108">
+    <gl xml:lang="fr">bague</gl>
+    <gl xml:lang="xx">ring</gl>
+  </mel>
+  <mel id="m0109">
+    <gl xml:lang="fr">balai</gl>
+    <gl xml:lang="en">broom</gl>
+  </mel>
+  <mel id="m0110">
+    <gl xml:lang="en">balancer</gl>
+    <gl xml:lang="en">float</gl>
+    <gl xml:lang="fr">grimper</gl>
+  </mel>
+  <mel id="m0111">
+    <gl xml:lang="en">balancer</gl>
+    <gl xml:lang="xx">swing</gl>
+  </mel>
+  <mel id="m0112">
+    <gl>bamboo joint</gl>
+  </mel>
+  <mel id="m0113">
+    <gl>bamboo tie strips for building</gl>
+    <gl xml:lang="xx">cane</gl>
+    <gl>laniere</gl>
+    <gl xml:lang="en">rattan</gl>
+  </mel>
+  <mel id="m0114">
+    <gl xml:lang="en">bamboo</gl>
+    <gl xml:lang="fr">bambou</gl>
+  </mel>
+  <mel id="m0115">
+    <gl xml:lang="fr">bambou</gl>
+    <gl xml:lang="xx">pot</gl>
+    <gl xml:lang="fr">ustensile</gl>
+  </mel>
+  <mel id="m0116">
+    <gl xml:lang="xx">bandeau</gl>
+    <gl>carrying head-strap</gl>
+    <gl>carrying headstrap</gl>
+    <gl>tumpline</gl>
+  </mel>
+  <mel id="m0117">
+    <gl>baratter le the</gl>
+    <gl xml:lang="fr">fouiller</gl>
+    <gl xml:lang="en">plow</gl>
+  </mel>
+  <mel id="m0118">
+    <gl xml:lang="en">bargain</gl>
+    <gl xml:lang="en">cheap</gl>
+  </mel>
+  <mel id="m0119">
+    <gl xml:lang="en">bark</gl>
+    <gl xml:lang="fr">écorce</gl>
+    <gl xml:lang="en">exterior</gl>
+    <gl xml:lang="en">husk</gl>
+    <gl xml:lang="en">out</gl>
+    <gl xml:lang="en">outside</gl>
+    <gl xml:lang="en">peel</gl>
+  </mel>
+  <mel id="m0120">
+    <gl xml:lang="en">barter</gl>
+    <gl xml:lang="xx">change</gl>
+    <gl>change clothes</gl>
+    <gl xml:lang="fr">devenir</gl>
+    <gl xml:lang="en">exchange</gl>
+    <gl>give back</gl>
+    <gl xml:lang="fr">retourner</gl>
+    <gl xml:lang="en">return</gl>
+    <gl xml:lang="fr">tourner</gl>
+    <gl xml:lang="en">turn</gl>
+    <gl>turn back</gl>
+    <gl>turn over</gl>
+  </mel>
+  <mel id="m0121">
+    <gl xml:lang="xx">basket</gl>
+    <gl xml:lang="xx">cage</gl>
+    <gl xml:lang="fr">hotte</gl>
+    <gl>large basket</gl>
+  </mel>
+  <mel id="m0122">
+    <gl>bear fruit</gl>
+    <gl>fruits</gl>
+  </mel>
+  <mel id="m0123">
+    <gl xml:lang="en">beat</gl>
+    <gl>beat foods</gl>
+    <gl xml:lang="en">made</gl>
+  </mel>
+  <mel id="m0124">
+    <gl xml:lang="en">beat</gl>
+    <gl xml:lang="en">burst</gl>
+    <gl xml:lang="fr">claquer</gl>
+    <gl>eclater</gl>
+    <gl xml:lang="en">explode</gl>
+    <gl xml:lang="fr">exploser</gl>
+    <gl xml:lang="en">hit</gl>
+    <gl xml:lang="en">strike</gl>
+  </mel>
+  <mel id="m0125">
+    <gl xml:lang="en">beat</gl>
+    <gl xml:lang="en">hit</gl>
+    <gl xml:lang="fr">jouer</gl>
+    <gl>play an instrument</gl>
+    <gl xml:lang="en">rattle</gl>
+    <gl xml:lang="en">strike</gl>
+  </mel>
+  <mel id="m0126">
+    <gl xml:lang="en">become thin</gl>
+    <gl>maigrir</gl>
+  </mel>
+  <mel id="m0127">
+    <gl xml:lang="en">become soft</gl>
+    <gl xml:lang="xx">cook</gl>
+    <gl xml:lang="fr">cuit</gl>
+    <gl xml:lang="fr">mur</gl>
+    <gl xml:lang="en">ripe</gl>
+    <gl xml:lang="en">ripen</gl>
+    <gl xml:lang="en">soft</gl>
+    <gl xml:lang="en">soldier</gl>
+  </mel>
+  <mel id="m0128">
+    <gl xml:lang="xx">fatigue</gl>
+    <gl xml:lang="en">repose</gl>
+    <gl xml:lang="en">rest</gl>
+    <gl xml:lang="en">take</gl>
+    <gl xml:lang="en">tire</gl>
+    <gl xml:lang="en">tired</gl>
+  </mel>
+  <mel id="m0129">
+    <gl xml:lang="fr">pourrir</gl>
+    <gl xml:lang="xx">rot</gl>
+    <gl xml:lang="en">rotten</gl>
+    <gl xml:lang="en">spoil</gl>
+  </mel>
+  <mel id="m0130">
+    <gl xml:lang="en">beer</gl>
+    <gl xml:lang="fr">bière</gl>
+    <gl xml:lang="en">liquor</gl>
+  </mel>
+  <mel id="m0131">
+    <gl xml:lang="en">begin</gl>
+    <gl xml:lang="fr">commencer</gl>
+  </mel>
+  <mel id="m0132">
+    <gl xml:lang="en">behind</gl>
+    <gl xml:lang="en">derriere</gl>
+  </mel>
+  <mel id="m0133">
+    <gl xml:lang="en">bell</gl>
+    <gl xml:lang="xx">cloche</gl>
+  </mel>
+  <mel id="m0134">
+    <gl xml:lang="en">belly</gl>
+    <gl xml:lang="en">stomach</gl>
+    <gl xml:lang="fr">ventre</gl>
+  </mel>
+  <mel id="m0135">
+    <gl xml:lang="en">bench</gl>
+    <gl xml:lang="xx">lit</gl>
+  </mel>
+  <mel id="m0136">
+    <gl>bend down</gl>
+    <gl xml:lang="fr">courber</gl>
+    <gl>hochement</gl>
+    <gl xml:lang="en">stoop</gl>
+  </mel>
+  <mel id="m0137">
+    <gl xml:lang="en">bend</gl>
+    <gl xml:lang="xx">crawl</gl>
+    <gl xml:lang="en">creep</gl>
+    <gl xml:lang="fr">inclinaison</gl>
+    <gl xml:lang="xx">marcher</gl>
+    <gl xml:lang="en">stoop</gl>
+  </mel>
+  <mel id="m0138">
+    <gl>bercer</gl>
+    <gl xml:lang="fr">osciller</gl>
+    <gl xml:lang="xx">rock</gl>
+    <gl xml:lang="en">shake</gl>
+  </mel>
+  <mel id="m0139">
+    <gl xml:lang="en">between</gl>
+    <gl xml:lang="en">middle</gl>
+    <gl xml:lang="xx">milieu</gl>
+  </mel>
+  <mel id="m0140">
+    <gl xml:lang="fr">beurre</gl>
+    <gl xml:lang="en">butter</gl>
+    <gl xml:lang="fr">graisse</gl>
+    <gl xml:lang="en">grease</gl>
+    <gl xml:lang="xx">fat</gl>
+  </mel>
+  <mel id="m0141">
+    <gl xml:lang="en">bind</gl>
+    <gl xml:lang="en">tighten</gl>
+  </mel>
+  <mel id="m0142">
+    <gl>bird trap</gl>
+    <gl>piege</gl>
+    <gl xml:lang="en">trap</gl>
+  </mel>
+  <mel id="m0143">
+    <gl xml:lang="xx">bite</gl>
+    <gl xml:lang="en">chew</gl>
+    <gl>chew cud</gl>
+    <gl xml:lang="en">gnaw</gl>
+    <gl xml:lang="fr">mâcher</gl>
+    <gl xml:lang="en">ruminate</gl>
+    <gl xml:lang="fr">ruminer</gl>
+    <gl xml:lang="fr">sucer</gl>
+  </mel>
+  <mel id="m0144">
+    <gl xml:lang="xx">bite</gl>
+    <gl xml:lang="xx">dent</gl>
+    <gl xml:lang="fr">mordre</gl>
+    <gl xml:lang="en">tooth</gl>
+  </mel>
+  <mel id="m0145">
+    <gl xml:lang="xx">bite</gl>
+    <gl xml:lang="fr">mordre</gl>
+    <gl xml:lang="en">peck</gl>
+    <gl xml:lang="xx">pincer</gl>
+    <gl xml:lang="en">pinch</gl>
+    <gl xml:lang="fr">piquer</gl>
+    <gl xml:lang="en">sting</gl>
+  </mel>
+  <mel id="m0146">
+    <gl xml:lang="en">black</gl>
+    <gl xml:lang="fr">noir</gl>
+  </mel>
+  <mel id="m0147">
+    <gl xml:lang="en">blade</gl>
+    <gl xml:lang="en">edge</gl>
+    <gl xml:lang="xx">lame</gl>
+  </mel>
+  <mel id="m0148">
+    <gl xml:lang="xx">blanc</gl>
+    <gl xml:lang="en">white</gl>
+  </mel>
+  <mel id="m0149">
+    <gl xml:lang="fr">blanchir</gl>
+    <gl xml:lang="xx">bloom</gl>
+    <gl xml:lang="fr">filtrer</gl>
+    <gl xml:lang="fr">fleurir</gl>
+    <gl xml:lang="en">flower</gl>
+    <gl>grow up</gl>
+  </mel>
+  <mel id="m0150">
+    <gl xml:lang="fr">blanchir</gl>
+    <gl xml:lang="en">polish</gl>
+    <gl>polissage</gl>
+  </mel>
+  <mel id="m0151">
+    <gl xml:lang="fr">blé</gl>
+    <gl xml:lang="en">flour</gl>
+    <gl xml:lang="en">rice</gl>
+    <gl xml:lang="en">wheat</gl>
+  </mel>
+  <mel id="m0152">
+    <gl xml:lang="xx">blend</gl>
+    <gl xml:lang="en">knead</gl>
+    <gl xml:lang="fr">mêler</gl>
+    <gl xml:lang="en">mix</gl>
+    <gl>petrissant</gl>
+  </mel>
+  <mel id="m0153">
+    <gl xml:lang="en">blood</gl>
+    <gl xml:lang="xx">sang</gl>
+  </mel>
+  <mel id="m0154">
+    <gl xml:lang="fr">bloquer</gl>
+    <gl xml:lang="en">brood</gl>
+    <gl xml:lang="xx">marcher</gl>
+    <gl xml:lang="fr">masser</gl>
+    <gl>press down</gl>
+    <gl xml:lang="fr">presser</gl>
+    <gl xml:lang="en">tread</gl>
+  </mel>
+  <mel id="m0155">
+    <gl>blow nose</gl>
+    <gl xml:lang="fr">morve</gl>
+    <gl xml:lang="xx">mucus</gl>
+    <gl xml:lang="en">snot</gl>
+  </mel>
+  <mel id="m0156">
+    <gl xml:lang="en">blow</gl>
+    <gl xml:lang="fr">rater</gl>
+    <gl xml:lang="fr">souffler</gl>
+  </mel>
+  <mel id="m0157">
+    <gl xml:lang="en">blue</gl>
+    <gl xml:lang="xx">green</gl>
+    <gl xml:lang="fr">vert</gl>
+  </mel>
+  <mel id="m0158">
+    <gl xml:lang="en">body</gl>
+    <gl xml:lang="xx">corps</gl>
+  </mel>
+  <mel id="m0159">
+    <gl xml:lang="en">boeuf</gl>
+    <gl xml:lang="en">bull</gl>
+    <gl xml:lang="en">ox</gl>
+  </mel>
+  <mel id="m0160">
+    <gl xml:lang="en">boil</gl>
+    <gl>boil over</gl>
+    <gl xml:lang="fr">bouillir</gl>
+    <gl xml:lang="fr">cuire</gl>
+  </mel>
+  <mel id="m0161">
+    <gl xml:lang="en">boil</gl>
+    <gl xml:lang="fr">jaillir</gl>
+    <gl xml:lang="en">resurgence</gl>
+  </mel>
+  <mel id="m0162">
+    <gl xml:lang="fr">boire</gl>
+    <gl xml:lang="fr">consommer</gl>
+    <gl>eat the belly</gl>
+    <gl xml:lang="xx">manger</gl>
+  </mel>
+  <mel id="m0163">
+    <gl xml:lang="fr">boire</gl>
+    <gl xml:lang="en">drink</gl>
+  </mel>
+  <mel id="m0164">
+    <gl xml:lang="fr">bois</gl>
+    <gl>paddy plant</gl>
+    <gl xml:lang="en">tree</gl>
+    <gl xml:lang="en">wood</gl>
+  </mel>
+  <mel id="m0165">
+    <gl xml:lang="fr">boisson</gl>
+    <gl xml:lang="fr">brasser</gl>
+    <gl xml:lang="en">brew</gl>
+  </mel>
+  <mel id="m0166">
+    <gl xml:lang="fr">boite</gl>
+    <gl xml:lang="xx">box</gl>
+    <gl xml:lang="en">chest</gl>
+    <gl xml:lang="fr">coffre</gl>
+  </mel>
+  <mel id="m0167">
+    <gl xml:lang="en">bone</gl>
+    <gl xml:lang="xx">os</gl>
+  </mel>
+  <mel id="m0168">
+    <gl xml:lang="en">book</gl>
+    <gl xml:lang="fr">livre</gl>
+    <gl>sacred book</gl>
+  </mel>
+  <mel id="m0169">
+    <gl xml:lang="xx">bore</gl>
+    <gl xml:lang="fr">percer</gl>
+    <gl xml:lang="xx">pierce</gl>
+    <gl xml:lang="fr">piquer</gl>
+    <gl xml:lang="en">prick</gl>
+    <gl xml:lang="en">prickle</gl>
+    <gl>punch hole</gl>
+    <gl xml:lang="en">strike</gl>
+    <gl xml:lang="en">thrust</gl>
+  </mel>
+  <mel id="m0170">
+    <gl xml:lang="xx">born</gl>
+    <gl xml:lang="fr">germer</gl>
+  </mel>
+  <mel id="m0171">
+    <gl xml:lang="en">borrow</gl>
+    <gl xml:lang="fr">emprunter</gl>
+    <gl xml:lang="en">lend</gl>
+  </mel>
+  <mel id="m0172">
+    <gl>bottes</gl>
+    <gl xml:lang="fr">couper</gl>
+    <gl>cut grass</gl>
+    <gl xml:lang="fr">faucille</gl>
+  </mel>
+  <mel id="m0173">
+    <gl xml:lang="fr">bouche</gl>
+    <gl xml:lang="en">mouth</gl>
+    <gl xml:lang="en">perforated</gl>
+    <gl xml:lang="en">snout</gl>
+  </mel>
+  <mel id="m0174">
+    <gl xml:lang="fr">boucher</gl>
+    <gl xml:lang="fr">chasser</gl>
+    <gl xml:lang="fr">couvercle</gl>
+    <gl xml:lang="fr">couvrir</gl>
+    <gl xml:lang="en">cover</gl>
+    <gl xml:lang="en">covered</gl>
+    <gl xml:lang="en">covering</gl>
+    <gl>enchasser</gl>
+    <gl xml:lang="en">lid</gl>
+    <gl xml:lang="en">plugged</gl>
+  </mel>
+  <mel id="m0175">
+    <gl xml:lang="fr">bouder</gl>
+    <gl>brewd</gl>
+    <gl xml:lang="xx">lever</gl>
+    <gl>swell under heat</gl>
+  </mel>
+  <mel id="m0176">
+    <gl xml:lang="fr">bouffer</gl>
+    <gl xml:lang="en">feed</gl>
+    <gl xml:lang="xx">manger</gl>
+  </mel>
+  <mel id="m0177">
+    <gl xml:lang="fr">bovin</gl>
+    <gl xml:lang="en">cattle</gl>
+    <gl xml:lang="en">cow</gl>
+    <gl xml:lang="fr">vache</gl>
+  </mel>
+  <mel id="m0178">
+    <gl xml:lang="en">bow</gl>
+    <gl>prosternation</gl>
+  </mel>
+  <mel id="m0179">
+    <gl xml:lang="fr">tourner</gl>
+    <gl xml:lang="en">twist</gl>
+    <gl xml:lang="en">twisted</gl>
+    <gl>visser</gl>
+    <gl xml:lang="en">braid</gl>
+    <gl>make a rope</gl>
+    <gl xml:lang="fr">tresser</gl>
+    <gl xml:lang="en">twist</gl>
+    <gl xml:lang="en">twisted</gl>
+    <gl>make rope</gl>
+  </mel>
+  <mel id="m0180">
+    <gl xml:lang="en">bread</gl>
+    <gl xml:lang="xx">pain</gl>
+  </mel>
+  <mel id="m0181">
+    <gl>break earth clods</gl>
+    <gl xml:lang="fr">casser</gl>
+    <gl xml:lang="en">collide</gl>
+    <gl xml:lang="en">hammer</gl>
+  </mel>
+  <mel id="m0182">
+    <gl xml:lang="xx">break</gl>
+    <gl>break from pulling</gl>
+    <gl>separer</gl>
+    <gl xml:lang="en">snap</gl>
+    <gl xml:lang="fr">briser</gl>
+    <gl xml:lang="fr">casser</gl>
+    <gl xml:lang="en">crack</gl>
+    <gl>cracked apart</gl>
+    <gl xml:lang="en">destroy</gl>
+    <gl xml:lang="en">divide</gl>
+    <gl xml:lang="en">shatter</gl>
+    <gl xml:lang="en">smash</gl>
+  </mel>
+  <mel id="m0183">
+    <gl xml:lang="xx">break</gl>
+    <gl xml:lang="en">tear</gl>
+    <gl xml:lang="en">torn</gl>
+  </mel>
+  <mel id="m0184">
+    <gl>breasts</gl>
+    <gl xml:lang="fr">lait</gl>
+    <gl xml:lang="fr">mamelle</gl>
+    <gl xml:lang="en">milk</gl>
+    <gl xml:lang="fr">sein</gl>
+  </mel>
+  <mel id="m0185">
+    <gl xml:lang="en">breath</gl>
+    <gl xml:lang="en">breathe</gl>
+    <gl xml:lang="xx">respiration</gl>
+  </mel>
+  <mel id="m0186">
+    <gl xml:lang="en">breathe</gl>
+    <gl xml:lang="xx">do</gl>
+    <gl xml:lang="en">hit</gl>
+    <gl xml:lang="en">shoot</gl>
+  </mel>
+  <mel id="m0187">
+    <gl xml:lang="en">broth</gl>
+    <gl>cooked vegetable</gl>
+    <gl>légumes</gl>
+    <gl>side-dish</gl>
+    <gl xml:lang="en">soup</gl>
+    <gl xml:lang="fr">viande</gl>
+    <gl>légumes</gl>
+  </mel>
+  <mel id="m0188">
+    <gl>brede</gl>
+    <gl>epinards</gl>
+    <gl>green vegetable</gl>
+    <gl xml:lang="fr">légume</gl>
+    <gl>légumes</gl>
+    <gl xml:lang="en">mustard</gl>
+    <gl xml:lang="en">spinach</gl>
+    <gl xml:lang="en">vegetable</gl>
+  </mel>
+  <mel id="m0189">
+    <gl xml:lang="xx">bribe</gl>
+    <gl xml:lang="fr">miette</gl>
+    <gl xml:lang="en">root</gl>
+  </mel>
+  <mel id="m0190">
+    <gl xml:lang="xx">bridge</gl>
+    <gl xml:lang="fr">échelle</gl>
+    <gl xml:lang="en">ladder</gl>
+    <gl xml:lang="fr">pont</gl>
+  </mel>
+  <mel id="m0191">
+    <gl xml:lang="en">bright</gl>
+    <gl xml:lang="en">bring</gl>
+  </mel>
+  <mel id="m0192">
+    <gl xml:lang="en">bright</gl>
+    <gl xml:lang="xx">light</gl>
+  </mel>
+  <mel id="m0193">
+    <gl xml:lang="fr">briller</gl>
+    <gl xml:lang="en">fall</gl>
+    <gl xml:lang="xx">set</gl>
+    <gl xml:lang="en">sunset</gl>
+  </mel>
+  <mel id="m0194">
+    <gl xml:lang="en">brittle</gl>
+    <gl>craquer</gl>
+    <gl>croustiller</gl>
+  </mel>
+  <mel id="m0195">
+    <gl xml:lang="en">broad</gl>
+    <gl xml:lang="fr">épais</gl>
+  </mel>
+  <mel id="m0196">
+    <gl xml:lang="en">brood</gl>
+    <gl xml:lang="fr">chauffer</gl>
+    <gl xml:lang="fr">couver</gl>
+    <gl xml:lang="fr">cuire</gl>
+    <gl>etouffer</gl>
+  </mel>
+  <mel id="m0197">
+    <gl xml:lang="fr">bru</gl>
+    <gl>d.in law</gl>
+    <gl xml:lang="en">marriage</gl>
+    <gl>s. in law</gl>
+  </mel>
+  <mel id="m0198">
+    <gl xml:lang="fr">épicé</gl>
+    <gl xml:lang="fr">piquer</gl>
+    <gl xml:lang="en">spicy</gl>
+    <gl xml:lang="fr">chaud</gl>
+    <gl xml:lang="en">heat</gl>
+    <gl xml:lang="fr">brûler</gl>
+    <gl xml:lang="en">burn</gl>
+    <gl xml:lang="en">hot</gl>
+    <gl xml:lang="en">scorch</gl>
+    <gl>urticant</gl>
+    <gl xml:lang="en">fever</gl>
+    <gl xml:lang="en">hot</gl>
+    <gl xml:lang="xx">pain</gl>
+    <gl xml:lang="fr">piquer</gl>
+    <gl xml:lang="fr">épicé</gl>
+    <gl xml:lang="en">peck</gl>
+  </mel>
+  <mel id="m0199">
+    <gl>buches</gl>
+    <gl xml:lang="en">fell</gl>
+    <gl xml:lang="en">grume</gl>
+  </mel>
+  <mel id="m0200">
+    <gl>bundle of rattan carried as a load</gl>
+    <gl xml:lang="fr">gerbe</gl>
+  </mel>
+  <mel id="m0201">
+    <gl xml:lang="en">burn</gl>
+    <gl xml:lang="fr">cuire</gl>
+    <gl xml:lang="fr">griller</gl>
+    <gl>incinerer</gl>
+    <gl xml:lang="en">roast</gl>
+    <gl>roast burn</gl>
+  </mel>
+  <mel id="m0202">
+    <gl xml:lang="en">burn</gl>
+    <gl>rajouter du bois au feu</gl>
+    <gl>rapprocher le bois du centre du foyer</gl>
+  </mel>
+  <mel id="m0203">
+    <gl xml:lang="en">burn</gl>
+    <gl xml:lang="en">tinder</gl>
+  </mel>
+  <mel id="m0204">
+    <gl>burning place</gl>
+    <gl xml:lang="en">cemetery</gl>
+  </mel>
+  <mel id="m0205">
+    <gl xml:lang="en">burning</gl>
+    <gl xml:lang="en">charcoal</gl>
+    <gl xml:lang="fr">feu</gl>
+    <gl xml:lang="en">fire</gl>
+  </mel>
+  <mel id="m0206">
+    <gl xml:lang="en">bury</gl>
+    <gl xml:lang="en">compress</gl>
+    <gl>cram into</gl>
+    <gl xml:lang="fr">enfoncer</gl>
+    <gl>stuff down</gl>
+    <gl>tasser</gl>
+  </mel>
+  <mel id="m0207">
+    <gl xml:lang="en">bury</gl>
+    <gl xml:lang="en">cover</gl>
+    <gl>dry-ferment</gl>
+    <gl>faisander</gl>
+    <gl xml:lang="fr">fermenter</gl>
+    <gl xml:lang="en">ripen</gl>
+    <gl>ripen artificially in hot bed</gl>
+  </mel>
+  <mel id="m0208">
+    <gl xml:lang="en">bury</gl>
+    <gl xml:lang="fr">enterrer</gl>
+  </mel>
+  <mel id="m0209">
+    <gl xml:lang="fr">buse</gl>
+    <gl xml:lang="en">buzzard</gl>
+    <gl xml:lang="fr">faucon</gl>
+    <gl xml:lang="fr">milan</gl>
+    <gl xml:lang="en">vulture</gl>
+  </mel>
+  <mel id="m0210">
+    <gl xml:lang="xx">business</gl>
+    <gl xml:lang="xx">job</gl>
+    <gl xml:lang="en">task</gl>
+    <gl xml:lang="xx">travail</gl>
+    <gl xml:lang="xx">work</gl>
+  </mel>
+  <mel id="m0211">
+    <gl xml:lang="en">by</gl>
+    <gl xml:lang="fr">côte</gl>
+    <gl>ergatif</gl>
+    <gl xml:lang="xx">instrumental</gl>
+    <gl xml:lang="fr">locatif</gl>
+    <gl xml:lang="fr">origine</gl>
+    <gl xml:lang="xx">par</gl>
+    <gl>venant</gl>
+  </mel>
+  <mel id="m0212">
+    <gl xml:lang="en">bye-bye</gl>
+    <gl>good day</gl>
+    <gl xml:lang="en">good-bye</gl>
+    <gl>way of sitting</gl>
+  </mel>
+  <mel id="m0213">
+    <gl xml:lang="fr">cacher</gl>
+    <gl xml:lang="en">escape</gl>
+    <gl xml:lang="en">hide</gl>
+    <gl>run away</gl>
+  </mel>
+  <mel id="m0214">
+    <gl>cajeoler</gl>
+    <gl xml:lang="xx">coax</gl>
+    <gl xml:lang="xx">flatter</gl>
+    <gl xml:lang="en">persuade</gl>
+    <gl xml:lang="xx">persuader</gl>
+  </mel>
+  <mel id="m0215">
+    <gl xml:lang="xx">cane</gl>
+    <gl xml:lang="en">rattan</gl>
+    <gl xml:lang="en">reed</gl>
+  </mel>
+  <mel id="m0216">
+    <gl xml:lang="xx">canine</gl>
+    <gl xml:lang="fr">croc</gl>
+    <gl xml:lang="en">fang</gl>
+    <gl xml:lang="en">tusk</gl>
+    <gl>tusks</gl>
+  </mel>
+  <mel id="m0217">
+    <gl>carder</gl>
+    <gl xml:lang="fr">secouer</gl>
+    <gl>shake off earth</gl>
+  </mel>
+  <mel id="m0218">
+    <gl>caroncule</gl>
+    <gl>cox ear lobes</gl>
+    <gl xml:lang="en">coxcomb</gl>
+    <gl xml:lang="en">gold</gl>
+    <gl xml:lang="fr">or</gl>
+  </mel>
+  <mel id="m0219">
+    <gl xml:lang="en">carry</gl>
+    <gl xml:lang="fr">emporter</gl>
+    <gl xml:lang="en">erode</gl>
+    <gl>take away</gl>
+    <gl>wash away</gl>
+  </mel>
+  <mel id="m0220">
+    <gl>carrying headstrap</gl>
+    <gl xml:lang="fr">courroie</gl>
+    <gl xml:lang="xx">tambour</gl>
+    <gl>tumpline</gl>
+  </mel>
+  <mel id="m0221">
+    <gl xml:lang="xx">catch</gl>
+    <gl xml:lang="en">hold</gl>
+    <gl xml:lang="en">trap</gl>
+  </mel>
+  <mel id="m0222">
+    <gl>cause to fall off</gl>
+    <gl xml:lang="en">descend</gl>
+    <gl>shake off earth</gl>
+  </mel>
+  <mel id="m0223">
+    <gl>cause to go out</gl>
+    <gl>degager</gl>
+    <gl xml:lang="en">dig</gl>
+    <gl xml:lang="en">go out</gl>
+    <gl xml:lang="fr">sortir</gl>
+    <gl>take down</gl>
+    <gl>take out</gl>
+  </mel>
+  <mel id="m0224">
+    <gl>cause to graze</gl>
+    <gl>eat grass</gl>
+    <gl xml:lang="en">graze</gl>
+    <gl xml:lang="en">herd</gl>
+    <gl>paitre</gl>
+    <gl>take to graze</gl>
+  </mel>
+  <mel id="m0225">
+    <gl>cause to grow</gl>
+    <gl xml:lang="en">grow</gl>
+    <gl xml:lang="en">sow</gl>
+    <gl xml:lang="en">sprout</gl>
+  </mel>
+  <mel id="m0226">
+    <gl>cause to sink</gl>
+    <gl xml:lang="en">sink</gl>
+  </mel>
+  <mel id="m0227">
+    <gl>cause to weigh</gl>
+    <gl xml:lang="en">lift</gl>
+    <gl xml:lang="en">measure</gl>
+    <gl xml:lang="fr">peser</gl>
+    <gl>pick up</gl>
+    <gl xml:lang="en">weigh</gl>
+  </mel>
+  <mel id="m0228">
+    <gl>cause to</gl>
+    <gl xml:lang="en">go around</gl>
+    <gl xml:lang="fr">promener</gl>
+    <gl xml:lang="fr">tourner</gl>
+    <gl xml:lang="xx">voyager</gl>
+    <gl xml:lang="en">wander</gl>
+  </mel>
+  <mel id="m0229">
+    <gl xml:lang="xx">cave</gl>
+    <gl xml:lang="fr">caverne</gl>
+  </mel>
+  <mel id="m0230">
+    <gl xml:lang="fr">ce</gl>
+    <gl>ceci</gl>
+    <gl>celà</gl>
+    <gl>demonstratif</gl>
+    <gl>it</gl>
+    <gl>this</gl>
+  </mel>
+  <mel id="m0231">
+    <gl xml:lang="en">cease</gl>
+    <gl>leave behind</gl>
+  </mel>
+  <mel id="m0232">
+    <gl xml:lang="xx">cent</gl>
+    <gl xml:lang="en">hundred</gl>
+  </mel>
+  <mel id="m0233">
+    <gl xml:lang="en">centipede</gl>
+    <gl xml:lang="xx">court</gl>
+  </mel>
+  <mel id="m0234">
+    <gl>cereale</gl>
+    <gl xml:lang="en">cooked</gl>
+    <gl>cooking place</gl>
+    <gl xml:lang="en">kitchen</gl>
+    <gl xml:lang="en">rice</gl>
+    <gl xml:lang="fr">riz</gl>
+  </mel>
+  <mel id="m0235">
+    <gl xml:lang="fr">cerveau</gl>
+    <gl xml:lang="fr">cervelle</gl>
+    <gl xml:lang="en">hair</gl>
+    <gl xml:lang="en">head</gl>
+    <gl xml:lang="fr">poil</gl>
+    <gl xml:lang="fr">cheveu</gl>
+  </mel>
+  <mel id="m0236">
+    <gl xml:lang="fr">cesser</gl>
+    <gl xml:lang="en">disappear</gl>
+    <gl xml:lang="fr">perdre</gl>
+  </mel>
+  <mel id="m0237">
+    <gl xml:lang="xx">chair</gl>
+    <gl xml:lang="fr">entrailles</gl>
+    <gl xml:lang="en">inside</gl>
+    <gl>inside of</gl>
+    <gl xml:lang="fr">intérieur</gl>
+    <gl xml:lang="en">interior</gl>
+    <gl>into</gl>
+    <gl xml:lang="en">inward</gl>
+    <gl xml:lang="fr">noix</gl>
+    <gl xml:lang="en">under</gl>
+  </mel>
+  <mel id="m0238">
+    <gl xml:lang="xx">chair</gl>
+    <gl xml:lang="en">flesh</gl>
+    <gl xml:lang="en">meat</gl>
+    <gl xml:lang="fr">viande</gl>
+  </mel>
+  <mel id="m0239">
+    <gl xml:lang="fr">châle</gl>
+    <gl xml:lang="en">shawl</gl>
+  </mel>
+  <mel id="m0240">
+    <gl xml:lang="fr">chaleur</gl>
+    <gl xml:lang="en">warm</gl>
+  </mel>
+  <mel id="m0241">
+    <gl xml:lang="xx">champ</gl>
+    <gl xml:lang="en">field</gl>
+  </mel>
+  <mel id="m0242">
+    <gl xml:lang="xx">change</gl>
+    <gl xml:lang="xx">changer</gl>
+    <gl>demenager</gl>
+    <gl xml:lang="fr">déplacer</gl>
+    <gl xml:lang="fr">remuer</gl>
+    <gl xml:lang="fr">sortir</gl>
+  </mel>
+  <mel id="m0243">
+    <gl xml:lang="xx">chant</gl>
+    <gl xml:lang="xx">chanter</gl>
+    <gl xml:lang="en">sing</gl>
+    <gl xml:lang="xx">song</gl>
+  </mel>
+  <mel id="m0244">
+    <gl xml:lang="xx">chant</gl>
+    <gl xml:lang="fr">lire</gl>
+    <gl>psalmodier</gl>
+    <gl xml:lang="en">read</gl>
+  </mel>
+  <mel id="m0245">
+    <gl xml:lang="xx">charge</gl>
+    <gl xml:lang="en">load</gl>
+    <gl xml:lang="xx">porter</gl>
+  </mel>
+  <mel id="m0246">
+    <gl xml:lang="en">chase</gl>
+    <gl xml:lang="fr">chasser</gl>
+    <gl xml:lang="fr">conduire</gl>
+    <gl xml:lang="en">drive</gl>
+  </mel>
+  <mel id="m0247">
+    <gl xml:lang="fr">chaume</gl>
+    <gl xml:lang="xx">hay</gl>
+    <gl xml:lang="fr">paille</gl>
+    <gl xml:lang="en">thatch</gl>
+  </mel>
+  <mel id="m0248">
+    <gl xml:lang="fr">chemin</gl>
+    <gl xml:lang="en">path</gl>
+    <gl xml:lang="en">road</gl>
+    <gl xml:lang="en">way</gl>
+  </mel>
+  <mel id="m0249">
+    <gl xml:lang="fr">chercher</gl>
+    <gl xml:lang="xx">examiner</gl>
+    <gl xml:lang="en">look</gl>
+    <gl>look at</gl>
+    <gl>look for</gl>
+    <gl xml:lang="fr">regarder</gl>
+    <gl>search for</gl>
+    <gl xml:lang="en">see</gl>
+  </mel>
+  <mel id="m0250">
+    <gl xml:lang="en">chest</gl>
+    <gl xml:lang="fr">dieu</gl>
+    <gl xml:lang="en">god</gl>
+    <gl xml:lang="en">idol</gl>
+    <gl xml:lang="fr">poitrine</gl>
+    <gl xml:lang="xx">statue</gl>
+  </mel>
+  <mel id="m0251">
+    <gl xml:lang="fr">cheval</gl>
+    <gl xml:lang="en">horse</gl>
+  </mel>
+  <mel id="m0252">
+    <gl xml:lang="fr">chèvre</gl>
+    <gl xml:lang="en">goat</gl>
+  </mel>
+  <mel id="m0253">
+    <gl xml:lang="en">chief</gl>
+    <gl>gurung</gl>
+    <gl xml:lang="en">king</gl>
+    <gl xml:lang="xx">master</gl>
+    <gl xml:lang="en">owner</gl>
+    <gl xml:lang="fr">roi</gl>
+  </mel>
+  <mel id="m0254">
+    <gl xml:lang="en">chin</gl>
+    <gl>lower jaw</gl>
+    <gl xml:lang="fr">menton</gl>
+  </mel>
+  <mel id="m0255">
+    <gl xml:lang="en">chirp</gl>
+    <gl>eclore</gl>
+  </mel>
+  <mel id="m0256">
+    <gl xml:lang="fr">choisir</gl>
+    <gl xml:lang="en">choose</gl>
+    <gl xml:lang="en">compare</gl>
+  </mel>
+  <mel id="m0257">
+    <gl xml:lang="en">choke</gl>
+    <gl>choke with liquids</gl>
+    <gl>coincer</gl>
+    <gl>etrangler</gl>
+    <gl>get stuck</gl>
+    <gl xml:lang="en">stuck</gl>
+  </mel>
+  <mel id="m0258">
+    <gl xml:lang="en">choose</gl>
+    <gl xml:lang="en">select</gl>
+  </mel>
+  <mel id="m0259">
+    <gl xml:lang="en">chop</gl>
+    <gl xml:lang="en">cut</gl>
+    <gl>cut up</gl>
+    <gl xml:lang="fr">hacher</gl>
+  </mel>
+  <mel id="m0260">
+    <gl xml:lang="fr">ciel</gl>
+    <gl xml:lang="en">cloud</gl>
+    <gl xml:lang="en">sky</gl>
+  </mel>
+  <mel id="m0261">
+    <gl xml:lang="fr">cinq</gl>
+    <gl xml:lang="en">five</gl>
+  </mel>
+  <mel id="m0262">
+    <gl>clairiere</gl>
+    <gl xml:lang="xx">hay</gl>
+    <gl xml:lang="fr">parc</gl>
+    <gl xml:lang="xx">prairie</gl>
+  </mel>
+  <mel id="m0263">
+    <gl xml:lang="xx">clan</gl>
+  </mel>
+  <mel id="m0264">
+    <gl>clay water jar</gl>
+    <gl xml:lang="xx">pot</gl>
+  </mel>
+  <mel id="m0265">
+    <gl xml:lang="en">clean</gl>
+    <gl>oter</gl>
+    <gl xml:lang="fr">secousse</gl>
+    <gl xml:lang="xx">trier</gl>
+    <gl xml:lang="en">winnow</gl>
+  </mel>
+  <mel id="m0266">
+    <gl>clear jungle</gl>
+    <gl xml:lang="fr">couper</gl>
+    <gl>défricher</gl>
+  </mel>
+  <mel id="m0267">
+    <gl xml:lang="en">cliff</gl>
+    <gl xml:lang="fr">falaise</gl>
+    <gl xml:lang="en">range</gl>
+    <gl xml:lang="xx">rock</gl>
+  </mel>
+  <mel id="m0268">
+    <gl xml:lang="en">close</gl>
+    <gl xml:lang="fr">fermer</gl>
+    <gl xml:lang="en">shut</gl>
+  </mel>
+  <mel id="m0269">
+    <gl xml:lang="en">clothes</gl>
+    <gl xml:lang="en">clothing</gl>
+    <gl>vetement</gl>
+    <gl>vetements</gl>
+  </mel>
+  <mel id="m0270">
+    <gl xml:lang="fr">coaguler</gl>
+    <gl>decider</gl>
+    <gl>etablir</gl>
+    <gl xml:lang="fr">geler</gl>
+    <gl>reflechir</gl>
+    <gl>renaitre</gl>
+    <gl xml:lang="xx">rester</gl>
+    <gl>sit cross legged</gl>
+    <gl xml:lang="fr">stagner</gl>
+  </mel>
+  <mel id="m0271">
+    <gl xml:lang="fr">cochon</gl>
+    <gl xml:lang="en">pig</gl>
+    <gl xml:lang="xx">porc</gl>
+  </mel>
+  <mel id="m0272">
+    <gl xml:lang="en">coiffe</gl>
+    <gl xml:lang="xx">porter</gl>
+    <gl>wear a hat</gl>
+  </mel>
+  <mel id="m0273">
+    <gl xml:lang="en">cold</gl>
+    <gl xml:lang="xx">cool</gl>
+    <gl>feel cold</gl>
+    <gl xml:lang="en">fresh</gl>
+    <gl xml:lang="fr">froid</gl>
+    <gl xml:lang="fr">refroidir</gl>
+  </mel>
+  <mel id="m0274">
+    <gl xml:lang="en">collapse</gl>
+    <gl>demolir</gl>
+    <gl xml:lang="fr">effondrer</gl>
+    <gl xml:lang="en">slide</gl>
+    <gl xml:lang="en">trap</gl>
+  </mel>
+  <mel id="m0275">
+    <gl xml:lang="en">collect</gl>
+    <gl xml:lang="en">gather</gl>
+    <gl xml:lang="fr">ramasser</gl>
+  </mel>
+  <mel id="m0276">
+    <gl xml:lang="en">color</gl>
+    <gl xml:lang="fr">colorier</gl>
+    <gl xml:lang="en">colour</gl>
+    <gl xml:lang="en">dye</gl>
+    <gl xml:lang="fr">peindre</gl>
+  </mel>
+  <mel id="m0277">
+    <gl xml:lang="en">comb</gl>
+    <gl>comb fiber</gl>
+    <gl>comb nettle thread by hand</gl>
+    <gl>comb wool</gl>
+    <gl>decoudre</gl>
+    <gl>decouvrir</gl>
+    <gl>demonter</gl>
+    <gl xml:lang="xx">filer</gl>
+    <gl>get unsewn</gl>
+    <gl>spin thread</gl>
+    <gl xml:lang="en">wool</gl>
+  </mel>
+  <mel id="m0278">
+    <gl xml:lang="fr">combattre</gl>
+    <gl xml:lang="en">contest</gl>
+    <gl xml:lang="xx">dispute</gl>
+    <gl xml:lang="en">fight</gl>
+    <gl xml:lang="en">wrestle</gl>
+  </mel>
+  <mel id="m0279">
+    <gl xml:lang="en">come</gl>
+    <gl xml:lang="fr">être</gl>
+    <gl xml:lang="fr">produire</gl>
+    <gl xml:lang="fr">venir</gl>
+  </mel>
+  <mel id="m0280">
+    <gl xml:lang="en">come</gl>
+    <gl>go _</gl>
+    <gl xml:lang="fr">partir</gl>
+  </mel>
+  <mel id="m0281">
+    <gl>coming back</gl>
+    <gl xml:lang="fr">nouveau</gl>
+    <gl xml:lang="fr">revenir</gl>
+  </mel>
+  <mel id="m0282">
+    <gl xml:lang="xx">commander</gl>
+    <gl xml:lang="en">order</gl>
+    <gl xml:lang="fr">ordonner</gl>
+  </mel>
+  <mel id="m0283">
+    <gl xml:lang="xx">commerce</gl>
+    <gl xml:lang="en">trade</gl>
+  </mel>
+  <mel id="m0284">
+    <gl xml:lang="en">compose</gl>
+    <gl xml:lang="en">draw</gl>
+    <gl xml:lang="en">write</gl>
+  </mel>
+  <mel id="m0285">
+    <gl xml:lang="fr">comprendre</gl>
+    <gl xml:lang="en">understand</gl>
+  </mel>
+  <mel id="m0286">
+    <gl xml:lang="en">compress</gl>
+    <gl>stuff down</gl>
+    <gl>cram into</gl>
+    <gl xml:lang="en">touch</gl>
+  </mel>
+  <mel id="m0287">
+    <gl xml:lang="fr">compter</gl>
+    <gl xml:lang="en">count</gl>
+    <gl xml:lang="en">measure</gl>
+  </mel>
+  <mel id="m0288">
+    <gl xml:lang="fr">construire</gl>
+    <gl xml:lang="xx">do</gl>
+    <gl xml:lang="xx">lever</gl>
+  </mel>
+  <mel id="m0289">
+    <gl xml:lang="fr">contaminer</gl>
+    <gl xml:lang="xx">infection</gl>
+  </mel>
+  <mel id="m0290">
+    <gl xml:lang="xx">content</gl>
+    <gl xml:lang="xx">cook</gl>
+    <gl xml:lang="en">glad</gl>
+    <gl xml:lang="en">rejoice</gl>
+  </mel>
+  <mel id="m0291">
+    <gl xml:lang="xx">content</gl>
+    <gl xml:lang="en">happy</gl>
+    <gl xml:lang="fr">heureux</gl>
+    <gl xml:lang="en">pleased</gl>
+  </mel>
+  <mel id="m0292">
+    <gl xml:lang="en">contest</gl>
+    <gl xml:lang="xx">dispute</gl>
+    <gl xml:lang="fr">gronder</gl>
+    <gl xml:lang="en">quarrel</gl>
+    <gl>quarrel with words</gl>
+  </mel>
+  <mel id="m0293">
+    <gl xml:lang="xx">cook</gl>
+    <gl>cook for the dead</gl>
+    <gl xml:lang="fr">cuire</gl>
+    <gl xml:lang="fr">feu</gl>
+    <gl xml:lang="fr">installer</gl>
+    <gl>mettre a cuire</gl>
+    <gl xml:lang="xx">poser</gl>
+    <gl>put on</gl>
+    <gl xml:lang="xx">set</gl>
+    <gl>mettre au feu</gl>
+  </mel>
+  <mel id="m0294">
+    <gl xml:lang="en">cope</gl>
+    <gl xml:lang="en">forest</gl>
+    <gl xml:lang="en">grove</gl>
+    <gl xml:lang="en">wood</gl>
+  </mel>
+  <mel id="m0295">
+    <gl>copeaux</gl>
+    <gl>cut the bark off a tree</gl>
+    <gl xml:lang="fr">éplucher</gl>
+    <gl xml:lang="en">peel</gl>
+    <gl xml:lang="fr">peler</gl>
+    <gl xml:lang="fr">piocher</gl>
+  </mel>
+  <mel id="m0296">
+    <gl xml:lang="fr">corde</gl>
+    <gl xml:lang="en">rope</gl>
+  </mel>
+  <mel id="m0297">
+    <gl xml:lang="fr">corne</gl>
+    <gl xml:lang="en">horn</gl>
+  </mel>
+  <mel id="m0298">
+    <gl xml:lang="xx">corner</gl>
+    <gl xml:lang="xx">village</gl>
+  </mel>
+  <mel id="m0299">
+    <gl xml:lang="en">cost</gl>
+    <gl xml:lang="en">price</gl>
+    <gl xml:lang="fr">prix</gl>
+  </mel>
+  <mel id="m0300">
+    <gl xml:lang="fr">côte</gl>
+    <gl xml:lang="en">rib</gl>
+  </mel>
+  <mel id="m0301">
+    <gl xml:lang="fr">cou</gl>
+    <gl xml:lang="fr">enrouler</gl>
+    <gl xml:lang="en">wrap</gl>
+    <gl>wrap around head</gl>
+  </mel>
+  <mel id="m0302">
+    <gl xml:lang="fr">coucher</gl>
+    <gl>lay down</gl>
+    <gl>put to sleep</gl>
+  </mel>
+  <mel id="m0303">
+    <gl xml:lang="fr">coudée</gl>
+    <gl xml:lang="en">cubit</gl>
+    <gl xml:lang="en">measure</gl>
+  </mel>
+  <mel id="m0304">
+    <gl xml:lang="fr">coudre</gl>
+    <gl xml:lang="fr">fil</gl>
+    <gl xml:lang="en">sew</gl>
+    <gl xml:lang="xx">string</gl>
+    <gl xml:lang="en">thread</gl>
+  </mel>
+  <mel id="m0305">
+    <gl xml:lang="en">cough</gl>
+    <gl xml:lang="fr">tousser</gl>
+  </mel>
+  <mel id="m0306">
+    <gl xml:lang="fr">couler</gl>
+    <gl xml:lang="en">flow</gl>
+    <gl xml:lang="en">stream</gl>
+  </mel>
+  <mel id="m0307">
+    <gl xml:lang="fr">coupant</gl>
+    <gl xml:lang="en">sharp</gl>
+  </mel>
+  <mel id="m0308">
+    <gl xml:lang="fr">couper</gl>
+    <gl xml:lang="en">cross</gl>
+    <gl xml:lang="en">cut</gl>
+    <gl xml:lang="xx">ferry</gl>
+  </mel>
+  <mel id="m0309">
+    <gl xml:lang="fr">couper</gl>
+    <gl xml:lang="fr">fendre</gl>
+    <gl xml:lang="en">saw</gl>
+    <gl xml:lang="fr">scier</gl>
+    <gl xml:lang="en">split</gl>
+  </mel>
+  <mel id="m0310">
+    <gl>courrir</gl>
+    <gl>enfuir</gl>
+    <gl xml:lang="xx">go</gl>
+    <gl xml:lang="en">pass</gl>
+  </mel>
+  <mel id="m0311">
+    <gl xml:lang="fr">couver</gl>
+    <gl xml:lang="en">cover</gl>
+  </mel>
+  <mel id="m0312">
+    <gl>crampes</gl>
+    <gl xml:lang="en">hurt</gl>
+    <gl>lanciner</gl>
+  </mel>
+  <mel id="m0313">
+    <gl xml:lang="fr">crasse</gl>
+    <gl xml:lang="en">dirty</gl>
+    <gl xml:lang="en">filth</gl>
+    <gl xml:lang="en">grime</gl>
+    <gl xml:lang="xx">sale</gl>
+  </mel>
+  <mel id="m0314">
+    <gl xml:lang="en">cremation</gl>
+  </mel>
+  <mel id="m0315">
+    <gl xml:lang="xx">crier</gl>
+    <gl xml:lang="en">crow</gl>
+    <gl xml:lang="fr">faire</gl>
+    <gl>make noise</gl>
+  </mel>
+  <mel id="m0316">
+    <gl xml:lang="xx">crier</gl>
+    <gl xml:lang="en">howl</gl>
+    <gl xml:lang="en">loud</gl>
+    <gl xml:lang="en">scream</gl>
+    <gl xml:lang="en">shout</gl>
+  </mel>
+  <mel id="m0317">
+    <gl xml:lang="xx">crochet</gl>
+    <gl xml:lang="xx">hook</gl>
+  </mel>
+  <mel id="m0318">
+    <gl>croiser</gl>
+    <gl>roll up</gl>
+  </mel>
+  <mel id="m0319">
+    <gl xml:lang="en">crush</gl>
+    <gl xml:lang="fr">frapper</gl>
+    <gl xml:lang="en">hit</gl>
+    <gl xml:lang="fr">polir</gl>
+    <gl xml:lang="en">pound</gl>
+    <gl>pound grain</gl>
+    <gl xml:lang="en">shutter</gl>
+    <gl xml:lang="en">strike</gl>
+    <gl xml:lang="en">thresh</gl>
+  </mel>
+  <mel id="m0320">
+    <gl xml:lang="en">cry</gl>
+    <gl xml:lang="fr">pleurer</gl>
+    <gl xml:lang="en">weep</gl>
+  </mel>
+  <mel id="m0321">
+    <gl xml:lang="fr">cueillir</gl>
+    <gl xml:lang="en">cut</gl>
+    <gl xml:lang="en">mow</gl>
+    <gl xml:lang="en">pick</gl>
+    <gl>pick up</gl>
+    <gl xml:lang="en">pluck</gl>
+  </mel>
+  <mel id="m0322">
+    <gl xml:lang="fr">cuir</gl>
+    <gl xml:lang="fr">peau</gl>
+    <gl xml:lang="en">skin</gl>
+  </mel>
+  <mel id="m0323">
+    <gl xml:lang="fr">cuire</gl>
+    <gl xml:lang="en">dal</gl>
+    <gl xml:lang="en">pulse</gl>
+  </mel>
+  <mel id="m0324">
+    <gl xml:lang="en">curse</gl>
+    <gl>maudire</gl>
+    <gl xml:lang="en">scold</gl>
+  </mel>
+  <mel id="m0325">
+    <gl xml:lang="en">curved</gl>
+    <gl xml:lang="xx">tour</gl>
+    <gl xml:lang="fr">tourner</gl>
+  </mel>
+  <mel id="m0326">
+    <gl>cut hair</gl>
+    <gl xml:lang="fr">raser</gl>
+    <gl xml:lang="en">shave</gl>
+    <gl xml:lang="en">shear</gl>
+  </mel>
+  <mel id="m0327">
+    <gl xml:lang="en">dab</gl>
+    <gl>ficher</gl>
+    <gl>piquets</gl>
+    <gl xml:lang="xx">planter</gl>
+    <gl xml:lang="en">thrust</gl>
+  </mel>
+  <mel id="m0328">
+    <gl xml:lang="en">dance</gl>
+    <gl xml:lang="fr">danser</gl>
+    <gl xml:lang="fr">tourner</gl>
+  </mel>
+  <mel id="m0329">
+    <gl xml:lang="fr">dans</gl>
+    <gl xml:lang="xx">en</gl>
+    <gl xml:lang="en">in</gl>
+  </mel>
+  <mel id="m0330">
+    <gl xml:lang="en">daylight</gl>
+    <gl xml:lang="fr">lumière</gl>
+  </mel>
+  <mel id="m0331">
+    <gl>de petites depenses pour une ceremonie</gl>
+    <gl xml:lang="en">spend</gl>
+  </mel>
+  <mel id="m0332">
+    <gl xml:lang="en">deaf</gl>
+    <gl xml:lang="fr">entendre</gl>
+    <gl xml:lang="en">hear</gl>
+  </mel>
+  <mel id="m0333">
+    <gl>debordement</gl>
+    <gl>deborder</gl>
+    <gl xml:lang="en">overflow</gl>
+    <gl xml:lang="en">send</gl>
+  </mel>
+  <mel id="m0334">
+    <gl xml:lang="fr">debout</gl>
+    <gl>eveiller</gl>
+    <gl>get up</gl>
+    <gl xml:lang="xx">lever</gl>
+    <gl xml:lang="en">rise</gl>
+    <gl xml:lang="en">stand</gl>
+    <gl>wake up</gl>
+  </mel>
+  <mel id="m0335">
+    <gl xml:lang="fr">déchirer</gl>
+    <gl>eat the belly</gl>
+  </mel>
+  <mel id="m0336">
+    <gl xml:lang="fr">déchirer</gl>
+    <gl xml:lang="en">separate</gl>
+    <gl>separate kinds</gl>
+    <gl>separer</gl>
+    <gl xml:lang="en">sift</gl>
+    <gl xml:lang="xx">sort</gl>
+    <gl xml:lang="xx">trier</gl>
+    <gl>vanner</gl>
+  </mel>
+  <mel id="m0337">
+    <gl xml:lang="fr">déchirer</gl>
+    <gl xml:lang="en">tear</gl>
+    <gl xml:lang="en">torn</gl>
+  </mel>
+  <mel id="m0338">
+    <gl xml:lang="en">decrease</gl>
+    <gl>put away</gl>
+    <gl>take off some</gl>
+  </mel>
+  <mel id="m0339">
+    <gl xml:lang="en">deep</gl>
+    <gl xml:lang="en">high</gl>
+    <gl xml:lang="fr">profond</gl>
+    <gl xml:lang="en">profound</gl>
+  </mel>
+  <mel id="m0340">
+    <gl xml:lang="en">deer</gl>
+    <gl xml:lang="fr">mâle</gl>
+  </mel>
+  <mel id="m0341">
+    <gl xml:lang="en">defeated</gl>
+    <gl xml:lang="en">lose</gl>
+    <gl xml:lang="fr">perdre</gl>
+    <gl>vaincu</gl>
+  </mel>
+  <mel id="m0342">
+    <gl xml:lang="en">defecate</gl>
+    <gl xml:lang="fr">déféquer</gl>
+    <gl>echapper</gl>
+    <gl>emettre</gl>
+    <gl xml:lang="en">escape</gl>
+    <gl xml:lang="en">laugh</gl>
+    <gl xml:lang="en">leak</gl>
+    <gl xml:lang="xx">pet</gl>
+  </mel>
+  <mel id="m0343">
+    <gl>degoute</gl>
+    <gl xml:lang="en">dirty</gl>
+    <gl xml:lang="en">disgusted</gl>
+  </mel>
+  <mel id="m0344">
+    <gl xml:lang="en">delay</gl>
+    <gl xml:lang="en">late</gl>
+    <gl>require time</gl>
+    <gl xml:lang="xx">retard</gl>
+  </mel>
+  <mel id="m0345">
+    <gl xml:lang="fr">démanger</gl>
+    <gl xml:lang="en">itch</gl>
+  </mel>
+  <mel id="m0346">
+    <gl>démêler</gl>
+    <gl xml:lang="en">untie</gl>
+  </mel>
+  <mel id="m0347">
+    <gl>depasser</gl>
+    <gl xml:lang="fr">enjamber</gl>
+    <gl xml:lang="fr">franchir</gl>
+    <gl>jump across</gl>
+    <gl>jump over</gl>
+    <gl xml:lang="fr">sauter</gl>
+  </mel>
+  <mel id="m0348">
+    <gl>dépecer</gl>
+    <gl>strip tree branches</gl>
+  </mel>
+  <mel id="m0349">
+    <gl xml:lang="fr">dépenser</gl>
+    <gl xml:lang="en">spend</gl>
+  </mel>
+  <mel id="m0350">
+    <gl>depiauter</gl>
+    <gl>ecorcher</gl>
+    <gl>pull out</gl>
+  </mel>
+  <mel id="m0351">
+    <gl>deployer</gl>
+    <gl xml:lang="xx">mat</gl>
+    <gl xml:lang="fr">ouvrir</gl>
+    <gl xml:lang="en">spread</gl>
+    <gl>spread out</gl>
+  </mel>
+  <mel id="m0352">
+    <gl xml:lang="fr">dessous</gl>
+    <gl xml:lang="en">under</gl>
+  </mel>
+  <mel id="m0353">
+    <gl>detrempe</gl>
+    <gl xml:lang="fr">tremper</gl>
+  </mel>
+  <mel id="m0354">
+    <gl xml:lang="fr">deuil</gl>
+    <gl xml:lang="en">mourning</gl>
+  </mel>
+  <mel id="m0355">
+    <gl xml:lang="fr">deux</gl>
+    <gl xml:lang="en">two</gl>
+  </mel>
+  <mel id="m0356">
+    <gl xml:lang="fr">devant</gl>
+    <gl xml:lang="xx">front</gl>
+  </mel>
+  <mel id="m0357">
+    <gl xml:lang="fr">devenir</gl>
+    <gl xml:lang="en">enter</gl>
+    <gl xml:lang="fr">entrer</gl>
+  </mel>
+  <mel id="m0358">
+    <gl>devorer</gl>
+    <gl xml:lang="en">suck</gl>
+  </mel>
+  <mel id="m0359">
+    <gl xml:lang="en">die</gl>
+    <gl xml:lang="fr">mourir</gl>
+    <gl xml:lang="en">wither</gl>
+  </mel>
+  <mel id="m0360">
+    <gl xml:lang="en">dilute</gl>
+    <gl xml:lang="fr">dissoudre</gl>
+    <gl xml:lang="en">melt</gl>
+    <gl xml:lang="en">solve</gl>
+  </mel>
+  <mel id="m0361">
+    <gl>dip into</gl>
+    <gl>draw up</gl>
+    <gl xml:lang="fr">remuer</gl>
+    <gl>scoop out</gl>
+    <gl xml:lang="fr">tremper</gl>
+  </mel>
+  <mel id="m0362">
+    <gl xml:lang="en">disarrange</gl>
+    <gl>move sthg</gl>
+    <gl xml:lang="en">shift</gl>
+  </mel>
+  <mel id="m0363">
+    <gl>dishes</gl>
+    <gl xml:lang="xx">pan</gl>
+    <gl xml:lang="xx">pot</gl>
+    <gl xml:lang="fr">vaisselle</gl>
+  </mel>
+  <mel id="m0364">
+    <gl xml:lang="en">dissolve</gl>
+    <gl xml:lang="fr">dissoudre</gl>
+    <gl xml:lang="en">melt</gl>
+    <gl xml:lang="en">solve</gl>
+  </mel>
+  <mel id="m0365">
+    <gl xml:lang="en">distribute</gl>
+    <gl xml:lang="en">divide</gl>
+    <gl>serve out</gl>
+    <gl xml:lang="en">share</gl>
+  </mel>
+  <mel id="m0366">
+    <gl xml:lang="fr">dix</gl>
+    <gl xml:lang="en">ten</gl>
+  </mel>
+  <mel id="m0367">
+    <gl xml:lang="fr">doigt</gl>
+    <gl xml:lang="en">finger</gl>
+  </mel>
+  <mel id="m0368">
+    <gl xml:lang="fr">donner</gl>
+    <gl xml:lang="en">give</gl>
+    <gl xml:lang="en">present</gl>
+  </mel>
+  <mel id="m0369">
+    <gl xml:lang="en">door</gl>
+    <gl xml:lang="en">gate</gl>
+    <gl xml:lang="fr">porte</gl>
+  </mel>
+  <mel id="m0370">
+    <gl xml:lang="fr">dormir</gl>
+    <gl xml:lang="en">sleep</gl>
+  </mel>
+  <mel id="m0371">
+    <gl xml:lang="en">draw</gl>
+    <gl xml:lang="fr">écrire</gl>
+    <gl xml:lang="en">write</gl>
+  </mel>
+  <mel id="m0372">
+    <gl xml:lang="en">draw</gl>
+    <gl xml:lang="xx">inspirer</gl>
+    <gl xml:lang="xx">pull</gl>
+    <gl>take out</gl>
+    <gl xml:lang="fr">tirer</gl>
+  </mel>
+  <mel id="m0373">
+    <gl xml:lang="en">dream</gl>
+    <gl xml:lang="en">imagine</gl>
+    <gl xml:lang="fr">rêve</gl>
+    <gl xml:lang="fr">rêver</gl>
+  </mel>
+  <mel id="m0374">
+    <gl xml:lang="en">dress</gl>
+    <gl xml:lang="fr">habiller</gl>
+    <gl xml:lang="en">wear</gl>
+  </mel>
+  <mel id="m0375">
+    <gl xml:lang="en">drink</gl>
+    <gl xml:lang="en">eat</gl>
+    <gl xml:lang="xx">manger</gl>
+    <gl xml:lang="fr">riz</gl>
+  </mel>
+  <mel id="m0376">
+    <gl xml:lang="en">drive</gl>
+    <gl xml:lang="fr">emmener</gl>
+    <gl xml:lang="en">lead</gl>
+    <gl xml:lang="fr">troupeau</gl>
+  </mel>
+  <mel id="m0377">
+    <gl xml:lang="fr">droite</gl>
+    <gl xml:lang="en">right</gl>
+    <gl>right hand</gl>
+  </mel>
+  <mel id="m0378">
+    <gl xml:lang="en">drop</gl>
+    <gl xml:lang="en">fall</gl>
+    <gl>fall down</gl>
+    <gl>fall off</gl>
+    <gl xml:lang="fr">tomber</gl>
+  </mel>
+  <mel id="m0379">
+    <gl xml:lang="en">drum</gl>
+    <gl xml:lang="xx">tambour</gl>
+  </mel>
+  <mel id="m0380">
+    <gl xml:lang="en">drunken</gl>
+    <gl xml:lang="en">enough</gl>
+    <gl>had</gl>
+    <gl>have eaten enough</gl>
+    <gl>rassasie</gl>
+    <gl xml:lang="en">satiated</gl>
+  </mel>
+  <mel id="m0381">
+    <gl xml:lang="en">dry</gl>
+    <gl>hang up</gl>
+    <gl>heat up roti on the fire</gl>
+    <gl xml:lang="en">make</gl>
+    <gl xml:lang="fr">sécher</gl>
+    <gl>set to dry</gl>
+    <gl xml:lang="en">spread</gl>
+  </mel>
+  <mel id="m0382">
+    <gl>dry-fry</gl>
+    <gl xml:lang="en">fry</gl>
+  </mel>
+  <mel id="m0383">
+    <gl xml:lang="fr">dur</gl>
+    <gl xml:lang="en">hard</gl>
+  </mel>
+  <mel id="m0384">
+    <gl xml:lang="en">dwell</gl>
+    <gl xml:lang="en">live</gl>
+  </mel>
+  <mel id="m0385">
+    <gl>ear of grain</gl>
+    <gl>epi</gl>
+    <gl>paddy ear</gl>
+  </mel>
+  <mel id="m0386">
+    <gl xml:lang="en">ear</gl>
+    <gl xml:lang="en">earring</gl>
+    <gl xml:lang="en">earwax</gl>
+    <gl xml:lang="en">noisy</gl>
+    <gl xml:lang="en">whisper</gl>
+  </mel>
+  <mel id="m0387">
+    <gl>earth clod</gl>
+    <gl xml:lang="en">eyeball</gl>
+    <gl>motte</gl>
+  </mel>
+  <mel id="m0388">
+    <gl xml:lang="en">earth</gl>
+    <gl xml:lang="en">floor</gl>
+    <gl xml:lang="xx">place</gl>
+    <gl xml:lang="xx">sol</gl>
+    <gl xml:lang="fr">terre</gl>
+  </mel>
+  <mel id="m0389">
+    <gl xml:lang="en">east</gl>
+    <gl xml:lang="xx">lever</gl>
+  </mel>
+  <mel id="m0390">
+    <gl>eat sample</gl>
+    <gl xml:lang="fr">goûter</gl>
+    <gl xml:lang="en">taste</gl>
+  </mel>
+  <mel id="m0391">
+    <gl xml:lang="fr">eau</gl>
+    <gl xml:lang="en">water</gl>
+  </mel>
+  <mel id="m0392">
+    <gl>ecarteler</gl>
+    <gl>ecarter</gl>
+    <gl>etirer</gl>
+    <gl xml:lang="xx">pull</gl>
+  </mel>
+  <mel id="m0393">
+    <gl xml:lang="fr">échanger</gl>
+    <gl xml:lang="en">exchange</gl>
+    <gl xml:lang="fr">remplacer</gl>
+    <gl xml:lang="fr">rendre</gl>
+    <gl xml:lang="en">replace</gl>
+  </mel>
+  <mel id="m0394">
+    <gl xml:lang="fr">écho</gl>
+  </mel>
+  <mel id="m0395">
+    <gl>eclore</gl>
+    <gl xml:lang="en">hatch</gl>
+  </mel>
+  <mel id="m0396">
+    <gl xml:lang="fr">écouter</gl>
+    <gl xml:lang="en">hear</gl>
+    <gl xml:lang="en">listen</gl>
+  </mel>
+  <mel id="m0397">
+    <gl xml:lang="fr">effacer</gl>
+    <gl xml:lang="en">gnaw</gl>
+    <gl xml:lang="fr">gratter</gl>
+    <gl xml:lang="fr">ronger</gl>
+    <gl xml:lang="xx">scratch</gl>
+  </mel>
+  <mel id="m0398">
+    <gl>egaliser</gl>
+    <gl>plaster with mud</gl>
+  </mel>
+  <mel id="m0399">
+    <gl xml:lang="en">egg</gl>
+    <gl>oeuf</gl>
+    <gl xml:lang="fr">testicule</gl>
+  </mel>
+  <mel id="m0400">
+    <gl xml:lang="en">eight</gl>
+    <gl xml:lang="fr">huit</gl>
+  </mel>
+  <mel id="m0401">
+    <gl xml:lang="en">elder</gl>
+    <gl>elder brother</gl>
+    <gl>elder sister</gl>
+    <gl xml:lang="fr">haut</gl>
+  </mel>
+  <mel id="m0402">
+    <gl>eleve</gl>
+    <gl xml:lang="fr">haut</gl>
+    <gl xml:lang="en">high</gl>
+  </mel>
+  <mel id="m0403">
+    <gl>elle</gl>
+    <gl xml:lang="xx">he</gl>
+    <gl xml:lang="xx">il</gl>
+    <gl>lui</gl>
+    <gl xml:lang="en">self</gl>
+    <gl>she</gl>
+    <gl>that</gl>
+    <gl>this</gl>
+  </mel>
+  <mel id="m0404">
+    <gl>empetrer</gl>
+    <gl>wind up</gl>
+    <gl xml:lang="en">wrap</gl>
+  </mel>
+  <mel id="m0405">
+    <gl>emply</gl>
+    <gl>falloir</gl>
+    <gl xml:lang="en">need</gl>
+    <gl>need to</gl>
+    <gl xml:lang="en">use</gl>
+    <gl xml:lang="en">utilize</gl>
+    <gl xml:lang="en">want</gl>
+  </mel>
+  <mel id="m0406">
+    <gl xml:lang="en">empty</gl>
+    <gl xml:lang="xx">pour</gl>
+  </mel>
+  <mel id="m0407">
+    <gl xml:lang="fr">encens</gl>
+    <gl xml:lang="fr">genévrier</gl>
+    <gl xml:lang="en">incense</gl>
+  </mel>
+  <mel id="m0408">
+    <gl>encorner</gl>
+    <gl>hit with horn</gl>
+  </mel>
+  <mel id="m0409">
+    <gl xml:lang="fr">enduire</gl>
+    <gl xml:lang="fr">étaler</gl>
+    <gl xml:lang="fr">peindre</gl>
+    <gl>rub in</gl>
+    <gl xml:lang="en">smear</gl>
+  </mel>
+  <mel id="m0410">
+    <gl xml:lang="en">enemy</gl>
+    <gl xml:lang="fr">ennemi</gl>
+  </mel>
+  <mel id="m0411">
+    <gl xml:lang="fr">enfermer</gl>
+    <gl>lock chicken up</gl>
+    <gl>pen up</gl>
+    <gl>shut in</gl>
+  </mel>
+  <mel id="m0412">
+    <gl xml:lang="fr">enfiler</gl>
+    <gl xml:lang="en">insert</gl>
+    <gl xml:lang="fr">introduire</gl>
+    <gl>kukhuri</gl>
+    <gl>put in</gl>
+    <gl xml:lang="en">thrust</gl>
+  </mel>
+  <mel id="m0413">
+    <gl xml:lang="fr">enfiler</gl>
+    <gl xml:lang="xx">string</gl>
+    <gl xml:lang="en">thread</gl>
+  </mel>
+  <mel id="m0414">
+    <gl>enfler</gl>
+    <gl xml:lang="en">rise</gl>
+    <gl xml:lang="en">swell</gl>
+  </mel>
+  <mel id="m0415">
+    <gl xml:lang="fr">engourdi</gl>
+    <gl xml:lang="fr">froid</gl>
+    <gl>have cold feet</gl>
+  </mel>
+  <mel id="m0416">
+    <gl xml:lang="fr">enrouler</gl>
+    <gl>roll up thread</gl>
+    <gl>wind up</gl>
+  </mel>
+  <mel id="m0417">
+    <gl xml:lang="fr">entasser</gl>
+    <gl xml:lang="xx">pour</gl>
+  </mel>
+  <mel id="m0418">
+    <gl xml:lang="fr">entier</gl>
+    <gl>the whole</gl>
+  </mel>
+  <mel id="m0419">
+    <gl xml:lang="fr">épais</gl>
+    <gl xml:lang="en">stiff</gl>
+    <gl xml:lang="en">thick</gl>
+  </mel>
+  <mel id="m0420">
+    <gl xml:lang="fr">épaule</gl>
+    <gl xml:lang="en">shoulder</gl>
+    <gl xml:lang="en">thigh</gl>
+  </mel>
+  <mel id="m0421">
+    <gl xml:lang="fr">éplucher</gl>
+    <gl>moucher</gl>
+    <gl xml:lang="fr">nettoyer</gl>
+    <gl>smooth off stick with knife</gl>
+  </mel>
+  <mel id="m0422">
+    <gl xml:lang="en">err</gl>
+    <gl xml:lang="en">forget</gl>
+    <gl xml:lang="en">make</gl>
+    <gl xml:lang="en">mistake</gl>
+    <gl xml:lang="en">omit</gl>
+    <gl xml:lang="fr">oublier</gl>
+    <gl xml:lang="fr">tromper</gl>
+  </mel>
+  <mel id="m0423">
+    <gl xml:lang="xx">esprit</gl>
+    <gl xml:lang="fr">fantôme</gl>
+    <gl xml:lang="en">ghost</gl>
+    <gl xml:lang="en">spirit</gl>
+  </mel>
+  <mel id="m0424">
+    <gl xml:lang="fr">essuyer</gl>
+    <gl xml:lang="en">sweep</gl>
+    <gl xml:lang="en">wipe</gl>
+    <gl>wipe off</gl>
+  </mel>
+  <mel id="m0425">
+    <gl xml:lang="fr">éternuer</gl>
+    <gl xml:lang="en">sneeze</gl>
+  </mel>
+  <mel id="m0426">
+    <gl xml:lang="fr">étoile</gl>
+    <gl xml:lang="xx">star</gl>
+  </mel>
+  <mel id="m0427">
+    <gl>etrangler</gl>
+    <gl xml:lang="en">strangle</gl>
+    <gl xml:lang="en">tight</gl>
+  </mel>
+  <mel id="m0428">
+    <gl xml:lang="en">etude</gl>
+    <gl xml:lang="en">meditation</gl>
+    <gl xml:lang="en">retreat</gl>
+  </mel>
+  <mel id="m0429">
+    <gl>even out</gl>
+    <gl xml:lang="en">stalk</gl>
+    <gl>thin out</gl>
+    <gl xml:lang="en">tree</gl>
+  </mel>
+  <mel id="m0430">
+    <gl>eventer</gl>
+    <gl xml:lang="en">winnow</gl>
+  </mel>
+  <mel id="m0431">
+    <gl>excréments</gl>
+    <gl xml:lang="en">feces</gl>
+    <gl>latrines</gl>
+    <gl xml:lang="en">stool</gl>
+  </mel>
+  <mel id="m0432">
+    <gl>exorcise with offering plate</gl>
+    <gl xml:lang="fr">soigner</gl>
+  </mel>
+  <mel id="m0433">
+    <gl xml:lang="en">experienced</gl>
+    <gl xml:lang="fr">instruit</gl>
+    <gl xml:lang="fr">savoir</gl>
+  </mel>
+  <mel id="m0434">
+    <gl xml:lang="en">explain</gl>
+    <gl xml:lang="fr">montrer</gl>
+    <gl xml:lang="en">show</gl>
+  </mel>
+  <mel id="m0435">
+    <gl xml:lang="fr">exprimer</gl>
+    <gl xml:lang="fr">presser</gl>
+    <gl xml:lang="en">squeeze</gl>
+    <gl>squeeze water out</gl>
+    <gl xml:lang="fr">tordre</gl>
+    <gl xml:lang="en">wring</gl>
+  </mel>
+  <mel id="m0436">
+    <gl>extermine</gl>
+    <gl xml:lang="en">finish</gl>
+  </mel>
+  <mel id="m0437">
+    <gl xml:lang="en">extinguish</gl>
+    <gl>extinguish a fire</gl>
+    <gl xml:lang="en">kill</gl>
+    <gl>put out</gl>
+    <gl xml:lang="fr">tuer</gl>
+  </mel>
+  <mel id="m0438">
+    <gl>extract nettle thread</gl>
+    <gl xml:lang="fr">faner</gl>
+    <gl>fletrir</gl>
+    <gl xml:lang="en">wither</gl>
+  </mel>
+  <mel id="m0439">
+    <gl xml:lang="en">eye</gl>
+    <gl>oeil</gl>
+  </mel>
+  <mel id="m0440">
+    <gl xml:lang="fr">fabriquer</gl>
+    <gl xml:lang="fr">gagner</gl>
+    <gl xml:lang="en">made</gl>
+    <gl xml:lang="en">prepare</gl>
+    <gl>preparer</gl>
+    <gl>start doing</gl>
+  </mel>
+  <mel id="m0441">
+    <gl xml:lang="fr">fabriquer</gl>
+    <gl xml:lang="en">knead</gl>
+  </mel>
+  <mel id="m0442">
+    <gl xml:lang="xx">face</gl>
+    <gl xml:lang="xx">visage</gl>
+  </mel>
+  <mel id="m0443">
+    <gl xml:lang="xx">fade</gl>
+    <gl xml:lang="en">faded</gl>
+    <gl xml:lang="xx">passe</gl>
+  </mel>
+  <mel id="m0444">
+    <gl xml:lang="fr">faim</gl>
+    <gl xml:lang="en">hungry</gl>
+  </mel>
+  <mel id="m0445">
+    <gl>fall down</gl>
+    <gl xml:lang="fr">pousser</gl>
+    <gl>renverse</gl>
+    <gl xml:lang="fr">rouler</gl>
+  </mel>
+  <mel id="m0446">
+    <gl xml:lang="fr">farine</gl>
+    <gl xml:lang="en">fine</gl>
+    <gl xml:lang="en">flour</gl>
+    <gl xml:lang="fr">poudre</gl>
+    <gl xml:lang="en">powder</gl>
+  </mel>
+  <mel id="m0447">
+    <gl>farm laborer</gl>
+    <gl xml:lang="en">worker</gl>
+  </mel>
+  <mel id="m0448">
+    <gl xml:lang="en">farmer</gl>
+    <gl xml:lang="en">field</gl>
+  </mel>
+  <mel id="m0449">
+    <gl xml:lang="en">father</gl>
+  </mel>
+  <mel id="m0450">
+    <gl xml:lang="xx">fat</gl>
+    <gl xml:lang="fr">gros</gl>
+    <gl xml:lang="en">healthy</gl>
+    <gl xml:lang="en">stout</gl>
+  </mel>
+  <mel id="m0451">
+    <gl xml:lang="en">feather</gl>
+    <gl xml:lang="en">fur</gl>
+    <gl xml:lang="en">hair</gl>
+    <gl xml:lang="xx">plume</gl>
+  </mel>
+  <mel id="m0452">
+    <gl xml:lang="en">female</gl>
+    <gl xml:lang="fr">femme</gl>
+    <gl xml:lang="en">woman</gl>
+  </mel>
+  <mel id="m0453">
+    <gl xml:lang="fr">fer</gl>
+    <gl xml:lang="en">iron</gl>
+  </mel>
+  <mel id="m0454">
+    <gl xml:lang="en">ferment</gl>
+    <gl xml:lang="en">spoil</gl>
+  </mel>
+  <mel id="m0455">
+    <gl xml:lang="en">fetid</gl>
+    <gl xml:lang="fr">odeur</gl>
+    <gl xml:lang="en">odour</gl>
+    <gl xml:lang="en">perfume</gl>
+    <gl xml:lang="en">scent</gl>
+    <gl xml:lang="en">smell</gl>
+    <gl>smell at</gl>
+    <gl>smell of</gl>
+    <gl xml:lang="en">smelling</gl>
+    <gl xml:lang="en">stinking</gl>
+  </mel>
+  <mel id="m0456">
+    <gl xml:lang="fr">feuille</gl>
+    <gl xml:lang="en">leaf</gl>
+    <gl>small leaf</gl>
+  </mel>
+  <mel id="m0457">
+    <gl xml:lang="en">few</gl>
+    <gl xml:lang="fr">peu</gl>
+  </mel>
+  <mel id="m0458">
+    <gl xml:lang="en">field</gl>
+    <gl xml:lang="fr">rizière</gl>
+  </mel>
+  <mel id="m0459">
+    <gl xml:lang="en">fight</gl>
+    <gl xml:lang="en">quarrel</gl>
+    <gl xml:lang="xx">toucher</gl>
+  </mel>
+  <mel id="m0460">
+    <gl xml:lang="en">fill</gl>
+    <gl xml:lang="fr">plein</gl>
+  </mel>
+  <mel id="m0461">
+    <gl xml:lang="xx">fils</gl>
+    <gl xml:lang="xx">son</gl>
+  </mel>
+  <mel id="m0462">
+    <gl xml:lang="en">find</gl>
+    <gl xml:lang="en">get</gl>
+    <gl xml:lang="en">obtain</gl>
+    <gl xml:lang="fr">trouver</gl>
+  </mel>
+  <mel id="m0463">
+    <gl xml:lang="en">fingernail</gl>
+    <gl xml:lang="en">nail</gl>
+    <gl xml:lang="fr">ongle</gl>
+  </mel>
+  <mel id="m0464">
+    <gl>fire tongs</gl>
+    <gl xml:lang="fr">pince</gl>
+    <gl>pince a feu</gl>
+  </mel>
+  <mel id="m0465">
+    <gl xml:lang="en">firefly</gl>
+    <gl xml:lang="fr">fumier</gl>
+    <gl xml:lang="en">manure</gl>
+  </mel>
+  <mel id="m0466">
+    <gl xml:lang="en">flame</gl>
+    <gl xml:lang="fr">flamme</gl>
+  </mel>
+  <mel id="m0467">
+    <gl>flatten dough</gl>
+    <gl xml:lang="xx">marcher</gl>
+    <gl xml:lang="xx">plat</gl>
+    <gl>press down</gl>
+  </mel>
+  <mel id="m0468">
+    <gl xml:lang="en">flavor</gl>
+    <gl xml:lang="xx">gout</gl>
+    <gl xml:lang="en">taste</gl>
+  </mel>
+  <mel id="m0469">
+    <gl xml:lang="en">flee</gl>
+    <gl xml:lang="en">jump</gl>
+    <gl xml:lang="en">run</gl>
+    <gl xml:lang="fr">sauter</gl>
+  </mel>
+  <mel id="m0470">
+    <gl xml:lang="fr">fleuve</gl>
+    <gl xml:lang="en">river</gl>
+    <gl xml:lang="en">stream</gl>
+  </mel>
+  <mel id="m0471">
+    <gl xml:lang="en">float</gl>
+    <gl>jump up</gl>
+  </mel>
+  <mel id="m0472">
+    <gl xml:lang="en">fly</gl>
+    <gl xml:lang="fr">voler</gl>
+  </mel>
+  <mel id="m0473">
+    <gl xml:lang="en">fodder</gl>
+    <gl xml:lang="xx">forage</gl>
+    <gl>forrage</gl>
+    <gl>fourrage</gl>
+    <gl xml:lang="en">grass</gl>
+    <gl xml:lang="fr">herbe</gl>
+    <gl xml:lang="en">weed</gl>
+  </mel>
+  <mel id="m0474">
+    <gl xml:lang="fr">foie</gl>
+    <gl xml:lang="en">liver</gl>
+  </mel>
+  <mel id="m0475">
+    <gl xml:lang="fr">fois</gl>
+    <gl>this year</gl>
+  </mel>
+  <mel id="m0476">
+    <gl xml:lang="xx">foot</gl>
+    <gl xml:lang="fr">jambe</gl>
+    <gl xml:lang="en">leg</gl>
+    <gl xml:lang="xx">pied</gl>
+    <gl xml:lang="en">stand</gl>
+    <gl xml:lang="xx">support</gl>
+  </mel>
+  <mel id="m0477">
+    <gl xml:lang="xx">force</gl>
+    <gl xml:lang="en">might</gl>
+    <gl xml:lang="en">power</gl>
+    <gl xml:lang="en">strength</gl>
+    <gl xml:lang="en">strong</gl>
+  </mel>
+  <mel id="m0478">
+    <gl xml:lang="en">forehead</gl>
+    <gl xml:lang="xx">front</gl>
+  </mel>
+  <mel id="m0479">
+    <gl xml:lang="en">forest</gl>
+    <gl xml:lang="fr">forêt</gl>
+  </mel>
+  <mel id="m0480">
+    <gl xml:lang="fr">fou</gl>
+    <gl xml:lang="xx">insane</gl>
+  </mel>
+  <mel id="m0481">
+    <gl xml:lang="fr">fouler</gl>
+    <gl xml:lang="xx">massage</gl>
+    <gl xml:lang="fr">masser</gl>
+    <gl>petrir</gl>
+    <gl xml:lang="en">rub</gl>
+    <gl xml:lang="en">scrub</gl>
+  </mel>
+  <mel id="m0482">
+    <gl xml:lang="xx">four</gl>
+    <gl xml:lang="fr">quatre</gl>
+  </mel>
+  <mel id="m0483">
+    <gl xml:lang="fr">fourreau</gl>
+    <gl xml:lang="en">sheath</gl>
+  </mel>
+  <mel id="m0484">
+    <gl xml:lang="en">fragrant</gl>
+  </mel>
+  <mel id="m0485">
+    <gl xml:lang="fr">frais</gl>
+    <gl xml:lang="en">fresh</gl>
+    <gl>rosee</gl>
+    <gl xml:lang="xx">transparent</gl>
+  </mel>
+  <mel id="m0486">
+    <gl xml:lang="fr">frire</gl>
+    <gl xml:lang="en">fry</gl>
+  </mel>
+  <mel id="m0487">
+    <gl xml:lang="en">frog</gl>
+    <gl xml:lang="fr">grenouille</gl>
+  </mel>
+  <mel id="m0488">
+    <gl xml:lang="fr">frotter</gl>
+    <gl>récurer</gl>
+    <gl xml:lang="en">scrub</gl>
+    <gl xml:lang="en">whet</gl>
+  </mel>
+  <mel id="m0489">
+    <gl xml:lang="fr">fuir</gl>
+    <gl xml:lang="en">shine</gl>
+    <gl xml:lang="fr">suinter</gl>
+    <gl xml:lang="xx">traverser</gl>
+  </mel>
+  <mel id="m0490">
+    <gl xml:lang="en">full</gl>
+    <gl xml:lang="fr">plein</gl>
+    <gl>ras</gl>
+  </mel>
+  <mel id="m0491">
+    <gl xml:lang="en">fur</gl>
+    <gl xml:lang="en">hair</gl>
+    <gl>hairs</gl>
+    <gl xml:lang="xx">injure</gl>
+    <gl xml:lang="fr">poil</gl>
+  </mel>
+  <mel id="m0492">
+    <gl xml:lang="fr">gagner</gl>
+    <gl xml:lang="en">win</gl>
+  </mel>
+  <mel id="m0493">
+    <gl>gather into sheaves</gl>
+    <gl xml:lang="en">pick</gl>
+    <gl>pick up</gl>
+    <gl xml:lang="fr">ramasser</gl>
+  </mel>
+  <mel id="m0494">
+    <gl>gather up</gl>
+    <gl xml:lang="en">meeting</gl>
+    <gl xml:lang="xx">plier</gl>
+    <gl xml:lang="fr">rassembler</gl>
+    <gl>recolter</gl>
+    <gl xml:lang="fr">recouvrir</gl>
+    <gl>roll up</gl>
+    <gl xml:lang="en">wrap</gl>
+  </mel>
+  <mel id="m0495">
+    <gl xml:lang="fr">gémir</gl>
+    <gl xml:lang="en">groan</gl>
+    <gl xml:lang="en">growl</gl>
+  </mel>
+  <mel id="m0496">
+    <gl xml:lang="fr">gencive</gl>
+    <gl>gums</gl>
+    <gl xml:lang="fr">palais</gl>
+  </mel>
+  <mel id="m0497">
+    <gl xml:lang="fr">gendre</gl>
+    <gl xml:lang="fr">mari</gl>
+    <gl>son in law</gl>
+  </mel>
+  <mel id="m0498">
+    <gl>get well</gl>
+    <gl xml:lang="fr">loisir</gl>
+  </mel>
+  <mel id="m0499">
+    <gl>give in marriage</gl>
+    <gl xml:lang="en">wife</gl>
+  </mel>
+  <mel id="m0500">
+    <gl xml:lang="en">give</gl>
+    <gl xml:lang="en">let</gl>
+    <gl xml:lang="en">offer</gl>
+    <gl xml:lang="en">serve</gl>
+    <gl xml:lang="fr">donner</gl>
+  </mel>
+  <mel id="m0501">
+    <gl xml:lang="fr">glisser</gl>
+    <gl xml:lang="en">slick</gl>
+    <gl xml:lang="xx">slip</gl>
+    <gl xml:lang="en">smooth</gl>
+  </mel>
+  <mel id="m0502">
+    <gl xml:lang="en">go around</gl>
+    <gl xml:lang="fr">promener</gl>
+    <gl xml:lang="fr">tourner</gl>
+    <gl>turn to</gl>
+    <gl xml:lang="xx">voyager</gl>
+    <gl xml:lang="en">wander</gl>
+  </mel>
+  <mel id="m0503">
+    <gl xml:lang="en">go astray</gl>
+    <gl>lose s.th.</gl>
+    <gl xml:lang="fr">perdre</gl>
+  </mel>
+  <mel id="m0504">
+    <gl>go on pilgrimage</gl>
+    <gl>pelerinage</gl>
+  </mel>
+  <mel id="m0505">
+    <gl xml:lang="en">go out</gl>
+    <gl xml:lang="fr">mourir</gl>
+  </mel>
+  <mel id="m0506">
+    <gl xml:lang="xx">go</gl>
+    <gl xml:lang="en">moving</gl>
+    <gl xml:lang="en">much</gl>
+  </mel>
+  <mel id="m0507">
+    <gl xml:lang="fr">graine</gl>
+    <gl xml:lang="en">seed</gl>
+    <gl xml:lang="fr">semence</gl>
+  </mel>
+  <mel id="m0508">
+    <gl xml:lang="fr">graisse</gl>
+    <gl xml:lang="en">grease</gl>
+    <gl xml:lang="xx">fat</gl>
+  </mel>
+  <mel id="m0509">
+    <gl>grand mother</gl>
+    <gl>grand-mere</gl>
+    <gl>grandmama</gl>
+    <gl xml:lang="en">grandmother</gl>
+  </mel>
+  <mel id="m0510">
+    <gl>grand-son</gl>
+    <gl xml:lang="en">grandchild</gl>
+    <gl xml:lang="en">nephew</gl>
+    <gl xml:lang="fr">neveu</gl>
+  </mel>
+  <mel id="m0511">
+    <gl xml:lang="en">grate</gl>
+    <gl xml:lang="en">grind</gl>
+    <gl xml:lang="en">raper</gl>
+    <gl xml:lang="en">scrape</gl>
+  </mel>
+  <mel id="m0512">
+    <gl xml:lang="fr">gratter</gl>
+    <gl xml:lang="fr">griffer</gl>
+    <gl xml:lang="xx">scratch</gl>
+  </mel>
+  <mel id="m0513">
+    <gl xml:lang="fr">gratter</gl>
+    <gl>oter</gl>
+    <gl xml:lang="en">peel</gl>
+    <gl xml:lang="en">undress</gl>
+  </mel>
+  <mel id="m0514">
+    <gl xml:lang="fr">grimper</gl>
+    <gl xml:lang="en">hang</gl>
+    <gl xml:lang="xx">string</gl>
+    <gl xml:lang="fr">suspendre</gl>
+  </mel>
+  <mel id="m0515">
+    <gl xml:lang="en">grind</gl>
+    <gl xml:lang="fr">mélanger</gl>
+    <gl xml:lang="fr">moudre</gl>
+    <gl>sculpter</gl>
+  </mel>
+  <mel id="m0516">
+    <gl xml:lang="en">grind</gl>
+    <gl>press through</gl>
+  </mel>
+  <mel id="m0517">
+    <gl xml:lang="fr">gronder</gl>
+    <gl xml:lang="en">rumble</gl>
+    <gl xml:lang="fr">tonner</gl>
+  </mel>
+  <mel id="m0518">
+    <gl xml:lang="en">guard</gl>
+    <gl>guarder</gl>
+  </mel>
+  <mel id="m0519">
+    <gl xml:lang="fr">guérir</gl>
+    <gl xml:lang="en">live</gl>
+    <gl>spared</gl>
+    <gl xml:lang="fr">vivre</gl>
+  </mel>
+  <mel id="m0520">
+    <gl xml:lang="fr">guerre</gl>
+    <gl xml:lang="en">war</gl>
+    <gl xml:lang="en">warfare</gl>
+  </mel>
+  <mel id="m0521">
+    <gl xml:lang="en">guts</gl>
+    <gl>intestines</gl>
+    <gl>intestins</gl>
+  </mel>
+  <mel id="m0522">
+    <gl xml:lang="en">hair</gl>
+    <gl xml:lang="fr">pénis</gl>
+  </mel>
+  <mel id="m0523">
+    <gl xml:lang="en">hand</gl>
+    <gl xml:lang="xx">main</gl>
+  </mel>
+  <mel id="m0524">
+    <gl xml:lang="en">handle</gl>
+    <gl xml:lang="fr">manier</gl>
+    <gl xml:lang="fr">tripoter</gl>
+  </mel>
+  <mel id="m0525">
+    <gl xml:lang="en">hanging</gl>
+    <gl xml:lang="fr">mouiller</gl>
+    <gl xml:lang="en">soak</gl>
+    <gl>tombant</gl>
+    <gl xml:lang="fr">tremper</gl>
+    <gl xml:lang="en">wet</gl>
+  </mel>
+  <mel id="m0526">
+    <gl>have a vision</gl>
+    <gl xml:lang="fr">hommage</gl>
+  </mel>
+  <mel id="m0527">
+    <gl>have sexual intercourse</gl>
+    <gl>sexuels</gl>
+  </mel>
+  <mel id="m0528">
+    <gl xml:lang="en">haze</gl>
+    <gl xml:lang="en">rain</gl>
+  </mel>
+  <mel id="m0529">
+    <gl xml:lang="en">heavy</gl>
+    <gl xml:lang="fr">lourd</gl>
+  </mel>
+  <mel id="m0530">
+    <gl xml:lang="en">hill</gl>
+    <gl xml:lang="xx">horizon</gl>
+    <gl xml:lang="fr">montagne</gl>
+    <gl xml:lang="en">mountain</gl>
+    <gl xml:lang="fr">neige</gl>
+    <gl xml:lang="en">range</gl>
+    <gl xml:lang="en">saddle</gl>
+    <gl xml:lang="en">snow</gl>
+    <gl xml:lang="en">stream</gl>
+  </mel>
+  <mel id="m0531">
+    <gl xml:lang="en">hit</gl>
+    <gl xml:lang="en">punish</gl>
+    <gl xml:lang="en">smack</gl>
+  </mel>
+  <mel id="m0532">
+    <gl xml:lang="en">hoe</gl>
+    <gl xml:lang="fr">houe</gl>
+    <gl xml:lang="fr">pioche</gl>
+  </mel>
+  <mel id="m0533">
+    <gl>hold out</gl>
+    <gl xml:lang="en">receive</gl>
+    <gl xml:lang="fr">recevoir</gl>
+  </mel>
+  <mel id="m0534">
+    <gl xml:lang="en">hole</gl>
+    <gl xml:lang="en">pit</gl>
+    <gl xml:lang="fr">trou</gl>
+    <gl xml:lang="en">window</gl>
+  </mel>
+  <mel id="m0535">
+    <gl xml:lang="en">home</gl>
+    <gl xml:lang="en">house</gl>
+    <gl xml:lang="fr">maison</gl>
+    <gl xml:lang="en">shell</gl>
+  </mel>
+  <mel id="m0536">
+    <gl xml:lang="fr">homme</gl>
+    <gl xml:lang="xx">man</gl>
+    <gl xml:lang="en">people</gl>
+    <gl xml:lang="en">person</gl>
+  </mel>
+  <mel id="m0537">
+    <gl xml:lang="fr">homme</gl>
+    <gl xml:lang="en">young</gl>
+  </mel>
+  <mel id="m0538">
+    <gl xml:lang="xx">hook</gl>
+    <gl xml:lang="fr">suspendre</gl>
+  </mel>
+  <mel id="m0539">
+    <gl xml:lang="xx">host</gl>
+    <gl xml:lang="fr">maître</gl>
+    <gl xml:lang="xx">master</gl>
+  </mel>
+  <mel id="m0540">
+    <gl>how</gl>
+    <gl>in what way</gl>
+    <gl xml:lang="en">never</gl>
+    <gl>quel</gl>
+    <gl xml:lang="fr">sorte</gl>
+    <gl>when</gl>
+    <gl>where</gl>
+    <gl>which</gl>
+  </mel>
+  <mel id="m0541">
+    <gl xml:lang="fr">humide</gl>
+    <gl xml:lang="fr">sueur</gl>
+    <gl xml:lang="en">sweat</gl>
+  </mel>
+  <mel id="m0542">
+    <gl xml:lang="en">husband</gl>
+    <gl xml:lang="fr">mâle</gl>
+    <gl xml:lang="xx">man</gl>
+    <gl xml:lang="fr">mari</gl>
+  </mel>
+  <mel id="m0543">
+    <gl xml:lang="en">i</gl>
+    <gl xml:lang="fr">je</gl>
+    <gl xml:lang="fr">moi</gl>
+  </mel>
+  <mel id="m0544">
+    <gl xml:lang="fr">injecter</gl>
+    <gl xml:lang="en">peck</gl>
+    <gl xml:lang="fr">piquer</gl>
+  </mel>
+  <mel id="m0545">
+    <gl xml:lang="en">invite</gl>
+    <gl xml:lang="en">offer</gl>
+    <gl>presents</gl>
+    <gl xml:lang="en">serve</gl>
+  </mel>
+  <mel id="m0546">
+    <gl xml:lang="en">item</gl>
+    <gl xml:lang="en">unit</gl>
+    <gl xml:lang="en">unite</gl>
+  </mel>
+  <mel id="m0547">
+    <gl xml:lang="en">jar</gl>
+    <gl>jarre</gl>
+    <gl xml:lang="xx">pot</gl>
+    <gl>small earthen water jug</gl>
+    <gl>yoghourt pot</gl>
+  </mel>
+  <mel id="m0548">
+    <gl xml:lang="fr">jaune</gl>
+    <gl>jaunir</gl>
+    <gl xml:lang="en">yellow</gl>
+  </mel>
+  <mel id="m0549">
+    <gl xml:lang="fr">jeter</gl>
+    <gl>throw away</gl>
+    <gl>throw down</gl>
+  </mel>
+  <mel id="m0550">
+    <gl xml:lang="en">join</gl>
+    <gl xml:lang="xx">match</gl>
+    <gl>rabouter</gl>
+    <gl xml:lang="fr">rassembler</gl>
+  </mel>
+  <mel id="m0551">
+    <gl xml:lang="fr">jouer</gl>
+    <gl xml:lang="en">musician</gl>
+    <gl xml:lang="en">play</gl>
+    <gl>play instrument</gl>
+    <gl>play music</gl>
+  </mel>
+  <mel id="m0552">
+    <gl xml:lang="fr">joyeux</gl>
+    <gl xml:lang="fr">plaisant</gl>
+    <gl xml:lang="en">pleasant</gl>
+    <gl>rejouir</gl>
+  </mel>
+  <mel id="m0553">
+    <gl xml:lang="en">knit</gl>
+    <gl xml:lang="fr">tisser</gl>
+    <gl xml:lang="en">weave</gl>
+  </mel>
+  <mel id="m0554">
+    <gl xml:lang="xx">labourer</gl>
+    <gl xml:lang="en">plough</gl>
+    <gl xml:lang="en">plow</gl>
+    <gl>break down</gl>
+    <gl>break clods</gl>
+  </mel>
+  <mel id="m0555">
+    <gl xml:lang="xx">lac</gl>
+    <gl xml:lang="en">lake</gl>
+    <gl xml:lang="en">pond</gl>
+    <gl xml:lang="xx">pool</gl>
+  </mel>
+  <mel id="m0556">
+    <gl xml:lang="en">language</gl>
+    <gl xml:lang="fr">langue</gl>
+    <gl xml:lang="xx">provenance</gl>
+    <gl xml:lang="en">sound</gl>
+    <gl xml:lang="en">speech</gl>
+    <gl xml:lang="en">voice</gl>
+    <gl xml:lang="fr">voix</gl>
+    <gl xml:lang="en">word</gl>
+    <gl xml:lang="en">words</gl>
+  </mel>
+  <mel id="m0557">
+    <gl xml:lang="fr">langue</gl>
+    <gl xml:lang="en">tongue</gl>
+  </mel>
+  <mel id="m0558">
+    <gl>large leech</gl>
+    <gl xml:lang="fr">sangsue</gl>
+    <gl>sangsue d eau</gl>
+  </mel>
+  <mel id="m0559">
+    <gl xml:lang="en">laugh</gl>
+    <gl xml:lang="fr">rire</gl>
+    <gl xml:lang="en">smile</gl>
+  </mel>
+  <mel id="m0560">
+    <gl>lay eggs</gl>
+    <gl>pondre</gl>
+  </mel>
+  <mel id="m0561">
+    <gl xml:lang="en">lean</gl>
+  </mel>
+  <mel id="m0562">
+    <gl xml:lang="fr">lécher</gl>
+    <gl xml:lang="en">lick</gl>
+  </mel>
+  <mel id="m0563">
+    <gl xml:lang="en">leopard</gl>
+    <gl xml:lang="en">tiger</gl>
+    <gl xml:lang="fr">tigre</gl>
+  </mel>
+  <mel id="m0564">
+    <gl>level ground</gl>
+    <gl xml:lang="en">slope</gl>
+    <gl>terrace wall</gl>
+  </mel>
+  <mel id="m0565">
+    <gl>levy fine</gl>
+    <gl xml:lang="en">punish</gl>
+  </mel>
+  <mel id="m0566">
+    <gl xml:lang="xx">lie</gl>
+    <gl>lie down</gl>
+    <gl xml:lang="en">sleep</gl>
+    <gl xml:lang="fr">sommeil</gl>
+    <gl xml:lang="en">wallow</gl>
+  </mel>
+  <mel id="m0567">
+    <gl xml:lang="xx">ligament</gl>
+    <gl>ligaments</gl>
+    <gl xml:lang="en">nerve</gl>
+    <gl xml:lang="en">vein</gl>
+  </mel>
+  <mel id="m0568">
+    <gl>light fire</gl>
+    <gl xml:lang="xx">singe</gl>
+  </mel>
+  <mel id="m0569">
+    <gl xml:lang="en">liquid</gl>
+    <gl xml:lang="fr">liquide</gl>
+    <gl xml:lang="xx">mince</gl>
+    <gl xml:lang="en">thin</gl>
+  </mel>
+  <mel id="m0570">
+    <gl xml:lang="en">loan</gl>
+    <gl>repay loan</gl>
+  </mel>
+  <mel id="m0571">
+    <gl xml:lang="xx">long</gl>
+  </mel>
+  <mel id="m0572">
+    <gl xml:lang="en">louse</gl>
+    <gl xml:lang="fr">pou</gl>
+  </mel>
+  <mel id="m0573">
+    <gl xml:lang="en">lung</gl>
+    <gl xml:lang="fr">poumon</gl>
+  </mel>
+  <mel id="m0574">
+    <gl xml:lang="xx">marcher</gl>
+    <gl xml:lang="en">walk</gl>
+  </mel>
+  <mel id="m0575">
+    <gl xml:lang="en">marrow</gl>
+    <gl>moëlle</gl>
+  </mel>
+  <mel id="m0576">
+    <gl xml:lang="fr">matin</gl>
+    <gl xml:lang="en">morning</gl>
+  </mel>
+  <mel id="m0577">
+    <gl xml:lang="en">measure</gl>
+    <gl xml:lang="fr">mesurer</gl>
+  </mel>
+  <mel id="m0578">
+    <gl xml:lang="en">medicine</gl>
+    <gl xml:lang="fr">remède</gl>
+  </mel>
+  <mel id="m0579">
+    <gl xml:lang="en">meet</gl>
+    <gl xml:lang="en">visit</gl>
+  </mel>
+  <mel id="m0580">
+    <gl xml:lang="fr">mélanger</gl>
+    <gl>tread on clothes</gl>
+  </mel>
+  <mel id="m0581">
+    <gl xml:lang="fr">menacer</gl>
+    <gl xml:lang="en">punish</gl>
+    <gl xml:lang="en">threaten</gl>
+    <gl>threaten to strike</gl>
+  </mel>
+  <mel id="m0582">
+    <gl xml:lang="en">mend</gl>
+    <gl xml:lang="en">merchant</gl>
+    <gl xml:lang="en">repair</gl>
+    <gl>reparer</gl>
+    <gl xml:lang="fr">soigner</gl>
+  </mel>
+  <mel id="m0583">
+    <gl xml:lang="fr">mettre</gl>
+    <gl xml:lang="xx">porter</gl>
+    <gl>put on</gl>
+    <gl xml:lang="en">wear</gl>
+  </mel>
+  <mel id="m0584">
+    <gl xml:lang="en">mixed</gl>
+    <gl>stir meal</gl>
+    <gl>touiller</gl>
+  </mel>
+  <mel id="m0585">
+    <gl>modele</gl>
+    <gl xml:lang="fr">moule</gl>
+    <gl xml:lang="en">story</gl>
+  </mel>
+  <mel id="m0586">
+    <gl xml:lang="en">month</gl>
+    <gl xml:lang="xx">moon</gl>
+  </mel>
+  <mel id="m0587">
+    <gl xml:lang="en">mortar</gl>
+    <gl xml:lang="fr">mortier</gl>
+  </mel>
+  <mel id="m0588">
+    <gl xml:lang="fr">morve</gl>
+    <gl xml:lang="xx">mucus</gl>
+    <gl>nasal mucus</gl>
+    <gl xml:lang="en">snot</gl>
+  </mel>
+  <mel id="m0589">
+    <gl xml:lang="fr">moule</gl>
+    <gl xml:lang="fr">planche</gl>
+    <gl xml:lang="en">print</gl>
+  </mel>
+  <mel id="m0590">
+    <gl xml:lang="xx">mouton</gl>
+    <gl xml:lang="en">sheep</gl>
+  </mel>
+  <mel id="m0591">
+    <gl>move sthg</gl>
+    <gl xml:lang="en">shift</gl>
+    <gl xml:lang="xx">transporter</gl>
+  </mel>
+  <mel id="m0592">
+    <gl xml:lang="fr">mue</gl>
+    <gl xml:lang="fr">peau</gl>
+    <gl>snake skin</gl>
+  </mel>
+  <mel id="m0593">
+    <gl xml:lang="fr">mur</gl>
+    <gl xml:lang="en">wall</gl>
+  </mel>
+  <mel id="m0594">
+    <gl xml:lang="en">must</gl>
+    <gl xml:lang="en">need</gl>
+  </mel>
+  <mel id="m0595">
+    <gl xml:lang="fr">nager</gl>
+    <gl xml:lang="en">swim</gl>
+  </mel>
+  <mel id="m0596">
+    <gl xml:lang="en">name</gl>
+    <gl xml:lang="fr">nom</gl>
+  </mel>
+  <mel id="m0597">
+    <gl xml:lang="en">nest</gl>
+    <gl xml:lang="fr">nid</gl>
+  </mel>
+  <mel id="m0598">
+    <gl xml:lang="fr">neuf</gl>
+    <gl xml:lang="en">new</gl>
+    <gl xml:lang="fr">nouveau</gl>
+  </mel>
+  <mel id="m0599">
+    <gl xml:lang="fr">neuf</gl>
+    <gl xml:lang="en">nine</gl>
+  </mel>
+  <mel id="m0600">
+    <gl xml:lang="fr">nez</gl>
+    <gl xml:lang="en">nose</gl>
+  </mel>
+  <mel id="m0601">
+    <gl xml:lang="fr">nouer</gl>
+    <gl>tie fastening strings</gl>
+    <gl>tie up</gl>
+    <gl>wear by draping</gl>
+  </mel>
+  <mel id="m0602">
+    <gl xml:lang="en">nous</gl>
+    <gl>we</gl>
+  </mel>
+  <mel id="m0603">
+    <gl xml:lang="en">numb</gl>
+    <gl xml:lang="en">shiver</gl>
+  </mel>
+  <mel id="m0604">
+    <gl xml:lang="fr">obtenir</gl>
+    <gl>order sthg.</gl>
+    <gl xml:lang="fr">suffire</gl>
+    <gl xml:lang="fr">trouver</gl>
+  </mel>
+  <mel id="m0605">
+    <gl xml:lang="fr">odeur</gl>
+    <gl xml:lang="en">odour</gl>
+    <gl xml:lang="en">scent</gl>
+    <gl xml:lang="en">smell</gl>
+    <gl xml:lang="en">stink</gl>
+  </mel>
+  <mel id="m0606">
+    <gl xml:lang="en">one</gl>
+    <gl xml:lang="xx">same</gl>
+    <gl xml:lang="fr">un</gl>
+  </mel>
+  <mel id="m0607">
+    <gl xml:lang="en">open</gl>
+    <gl xml:lang="en">valley</gl>
+  </mel>
+  <mel id="m0608">
+    <gl>oter</gl>
+    <gl>oter du feu</gl>
+    <gl>take off</gl>
+  </mel>
+  <mel id="m0609">
+    <gl xml:lang="en">own</gl>
+    <gl xml:lang="en">owner</gl>
+    <gl xml:lang="en">self</gl>
+    <gl>soi- meme</gl>
+    <gl>you</gl>
+  </mel>
+  <mel id="m0610">
+    <gl>pagayer</gl>
+    <gl xml:lang="fr">ramer</gl>
+    <gl xml:lang="fr">remuer</gl>
+    <gl xml:lang="en">stir</gl>
+    <gl>stir up fire</gl>
+    <gl xml:lang="en">stoke</gl>
+    <gl>touiller</gl>
+  </mel>
+  <mel id="m0611">
+    <gl xml:lang="en">paint</gl>
+    <gl xml:lang="fr">peinture</gl>
+  </mel>
+  <mel id="m0612">
+    <gl xml:lang="en">palm</gl>
+    <gl xml:lang="fr">paume</gl>
+  </mel>
+  <mel id="m0613">
+    <gl xml:lang="en">pass</gl>
+    <gl xml:lang="fr">revenir</gl>
+  </mel>
+  <mel id="m0614">
+    <gl xml:lang="en">patch</gl>
+    <gl xml:lang="en">piece</gl>
+    <gl>racommoder</gl>
+  </mel>
+  <mel id="m0615">
+    <gl xml:lang="en">pay</gl>
+    <gl xml:lang="fr">rembourser</gl>
+    <gl xml:lang="fr">rendre</gl>
+    <gl xml:lang="en">repay</gl>
+  </mel>
+  <mel id="m0616">
+    <gl xml:lang="en">peak</gl>
+    <gl xml:lang="xx">point</gl>
+    <gl xml:lang="fr">pointe</gl>
+    <gl xml:lang="fr">sommet</gl>
+    <gl xml:lang="en">tip</gl>
+  </mel>
+  <mel id="m0617">
+    <gl xml:lang="en">peel</gl>
+    <gl xml:lang="fr">ramasser</gl>
+    <gl>scrape clean</gl>
+  </mel>
+  <mel id="m0618">
+    <gl xml:lang="fr">petit</gl>
+    <gl xml:lang="en">small</gl>
+  </mel>
+  <mel id="m0619">
+    <gl xml:lang="fr">pierre</gl>
+    <gl xml:lang="en">stone</gl>
+  </mel>
+  <mel id="m0620">
+    <gl xml:lang="en">plague</gl>
+    <gl xml:lang="en">typhoid</gl>
+  </mel>
+  <mel id="m0621">
+    <gl xml:lang="xx">plant</gl>
+    <gl xml:lang="en">sow</gl>
+    <gl xml:lang="en">stalk</gl>
+    <gl xml:lang="en">transplant</gl>
+    <gl xml:lang="en">tree</gl>
+  </mel>
+  <mel id="m0622">
+    <gl xml:lang="fr">plein</gl>
+    <gl xml:lang="en">whole</gl>
+  </mel>
+  <mel id="m0623">
+    <gl>plug a leak</gl>
+    <gl xml:lang="en">sting</gl>
+  </mel>
+  <mel id="m0624">
+    <gl xml:lang="fr">pluie</gl>
+    <gl xml:lang="en">rain</gl>
+  </mel>
+  <mel id="m0625">
+    <gl xml:lang="xx">poser</gl>
+    <gl xml:lang="en">put</gl>
+    <gl xml:lang="xx">set</gl>
+  </mel>
+  <mel id="m0626">
+    <gl>possede</gl>
+    <gl xml:lang="en">possessed</gl>
+  </mel>
+  <mel id="m0627">
+    <gl xml:lang="en">post</gl>
+    <gl xml:lang="fr">poteau</gl>
+  </mel>
+  <mel id="m0628">
+    <gl xml:lang="xx">pour</gl>
+    <gl xml:lang="en">put</gl>
+    <gl xml:lang="en">serve</gl>
+    <gl xml:lang="fr">verser</gl>
+  </mel>
+  <mel id="m0629">
+    <gl xml:lang="fr">pousser</gl>
+    <gl xml:lang="en">push</gl>
+  </mel>
+  <mel id="m0630">
+    <gl xml:lang="xx">pus</gl>
+  </mel>
+  <mel id="m0631">
+    <gl>put in the right place</gl>
+    <gl xml:lang="xx">ranger</gl>
+    <gl xml:lang="xx">store</gl>
+  </mel>
+  <mel id="m0632">
+    <gl>put out</gl>
+    <gl>take out</gl>
+  </mel>
+  <mel id="m0633">
+    <gl xml:lang="xx">queue</gl>
+    <gl xml:lang="en">tail</gl>
+  </mel>
+  <mel id="m0634">
+    <gl>qui?</gl>
+    <gl>who</gl>
+  </mel>
+  <mel id="m0635">
+    <gl>quoi?</gl>
+    <gl>what</gl>
+  </mel>
+  <mel id="m0636">
+    <gl xml:lang="fr">racine</gl>
+    <gl xml:lang="en">root</gl>
+    <gl xml:lang="fr">souche</gl>
+  </mel>
+  <mel id="m0637">
+    <gl>rainshield</gl>
+  </mel>
+  <mel id="m0638">
+    <gl xml:lang="en">recollect</gl>
+    <gl xml:lang="en">remember</gl>
+    <gl xml:lang="en">remind</gl>
+  </mel>
+  <mel id="m0639">
+    <gl xml:lang="fr">renverser</gl>
+    <gl xml:lang="en">spill</gl>
+  </mel>
+  <mel id="m0640">
+    <gl xml:lang="en">repeat</gl>
+    <gl>repeter</gl>
+    <gl xml:lang="en">say</gl>
+    <gl>slander smn.</gl>
+    <gl xml:lang="en">tell</gl>
+  </mel>
+  <mel id="m0641">
+    <gl>revasser</gl>
+    <gl xml:lang="en">stagger</gl>
+  </mel>
+  <mel id="m0642">
+    <gl xml:lang="fr">réveiller</gl>
+    <gl>wake up</gl>
+  </mel>
+  <mel id="m0643">
+    <gl xml:lang="en">rice</gl>
+    <gl xml:lang="fr">riz</gl>
+    <gl xml:lang="en">uncooked</gl>
+    <gl>uncooked rice</gl>
+  </mel>
+  <mel id="m0644">
+    <gl xml:lang="en">rice</gl>
+    <gl xml:lang="fr">riz</gl>
+    <gl>unhusked rice</gl>
+  </mel>
+  <mel id="m0645">
+    <gl xml:lang="en">rich</gl>
+    <gl xml:lang="fr">riche</gl>
+  </mel>
+  <mel id="m0646">
+    <gl xml:lang="en">rotten</gl>
+    <gl xml:lang="en">spoilt</gl>
+    <gl xml:lang="en">stale</gl>
+    <gl>sûrir</gl>
+  </mel>
+  <mel id="m0647">
+    <gl xml:lang="xx">sacrifice</gl>
+  </mel>
+  <mel id="m0648">
+    <gl xml:lang="xx">sale</gl>
+    <gl xml:lang="en">salty</gl>
+  </mel>
+  <mel id="m0649">
+    <gl xml:lang="en">saliva</gl>
+    <gl xml:lang="fr">salive</gl>
+    <gl xml:lang="en">spit</gl>
+  </mel>
+  <mel id="m0650">
+    <gl xml:lang="en">scrape</gl>
+    <gl>scrape with knife</gl>
+    <gl xml:lang="xx">scratch</gl>
+  </mel>
+  <mel id="m0651">
+    <gl xml:lang="en">sell</gl>
+    <gl xml:lang="xx">seller</gl>
+    <gl xml:lang="fr">vendre</gl>
+  </mel>
+  <mel id="m0652">
+    <gl xml:lang="xx">sept</gl>
+    <gl xml:lang="en">seven</gl>
+  </mel>
+  <mel id="m0653">
+    <gl xml:lang="en">shake</gl>
+    <gl xml:lang="en">thresh</gl>
+  </mel>
+  <mel id="m0654">
+    <gl xml:lang="en">shiver</gl>
+    <gl xml:lang="fr">transe</gl>
+    <gl xml:lang="xx">tremble</gl>
+    <gl xml:lang="xx">trembler</gl>
+    <gl xml:lang="fr">vibrer</gl>
+  </mel>
+  <mel id="m0655">
+    <gl xml:lang="en">shoot</gl>
+    <gl xml:lang="en">sing</gl>
+    <gl xml:lang="en">strike</gl>
+  </mel>
+  <mel id="m0656">
+    <gl xml:lang="en">smallpox</gl>
+    <gl xml:lang="fr">variole</gl>
+  </mel>
+  <mel id="m0657">
+    <gl>spead out</gl>
+    <gl>spread out</gl>
+  </mel>
+  <mel id="m0658">
+    <gl xml:lang="en">stammerer</gl>
+    <gl xml:lang="en">stutter</gl>
+  </mel>
+  <mel id="m0659">
+    <gl xml:lang="en">stamp</gl>
+  </mel>
+  <mel id="m0660">
+    <gl xml:lang="en">steal</gl>
+    <gl xml:lang="en">theft</gl>
+    <gl xml:lang="en">thief</gl>
+  </mel>
+  <mel id="m0661">
+    <gl xml:lang="en">stick</gl>
+    <gl xml:lang="en">stuck</gl>
+  </mel>
+  <mel id="m0662">
+    <gl xml:lang="fr">sucré</gl>
+    <gl xml:lang="xx">sweet</gl>
+  </mel>
+  <mel id="m0663">
+    <gl xml:lang="en">sufficient</gl>
+    <gl xml:lang="fr">suffire</gl>
+  </mel>
+  <mel id="m0664">
+    <gl xml:lang="fr">suivre</gl>
+    <gl>yearn to follow</gl>
+  </mel>
+  <mel id="m0665">
+    <gl xml:lang="xx">thou</gl>
+    <gl>toi</gl>
+    <gl xml:lang="fr">tu</gl>
+    <gl>vous</gl>
+    <gl>you</gl>
+  </mel>
+  <mel id="m0666">
+    <gl xml:lang="en">three</gl>
+    <gl xml:lang="fr">trois</gl>
+  </mel>
+  <mel id="m0667">
+    <gl xml:lang="xx">town</gl>
+    <gl xml:lang="xx">village</gl>
+  </mel>
+  <mel id="m0668">
+    <gl xml:lang="en">twenty</gl>
+    <gl xml:lang="en">two</gl>
+  </mel>
+  <mel id="m0669">
+    <gl xml:lang="en">urinate</gl>
+    <gl xml:lang="xx">urine</gl>
+    <gl xml:lang="fr">uriner</gl>
+  </mel>
+  <mel id="m0670">
+    <gl>vanner</gl>
+    <gl xml:lang="en">winnow</gl>
+  </mel>
+  <mel id="m0671">
+    <gl xml:lang="fr">vieille</gl>
+    <gl>vieille femme</gl>
+  </mel>
+  <mel id="m0672">
+    <gl xml:lang="fr">vomir</gl>
+    <gl xml:lang="en">vomit</gl>
+  </mel>
+  <mel id="m0673">
+    <gl xml:lang="xx">yack</gl>
+    <gl>yack femelle</gl>
+    <gl xml:lang="xx">yak</gl>
+  </mel>
+</semantics>

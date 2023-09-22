@@ -1,0 +1,223 @@
+N	L	Type	TGTM	Env	ris	sahu	tag	tuk	mar	syang	gha	pra	nar	phu	tangbe-checked	tang	examples
+1	1	T	ᴬ	_U	¹,˥,X	¹,˥	¹,X,˥	¹,˥	¹,X,˥	¹,X,˥	¹,˥	¹,˥	⁵⁴,⁴³,⁵³		ᴴ	X	
+2	1	T	ᴮ	_U	²,X,˥	²,˥	²,X,˥	²,˥	²,X,˥	²,X,˥	²,˥	²,˥	⁵⁵,⁴⁵		ᴴ	X	
+3	1	T	ᴬ	_W	³,X	³	³,X	³	³,X	³,X	³	³	²¹,¹¹		ᴸ	X	
+4	1	T	ᴮ	_W	⁴,X,˩	⁴	⁴,X,˥	⁴	⁴,X,˥	⁴,X,˩	⁴,˩	⁴	¹²,¹³		ᴸ	X	
+900	1	Type	TGTM	Contexte	ris	sahu	tag	tukche	marpha	syang	ghachok	praka	nar	phu	tangbe-checked	tangbe-tst	examples
+901	1	X	ᴬ	_U	¹,ᴴ	¹	¹,ᴴ	¹,ᴴ	¹,ᴴ	¹,ᴴ	¹	¹	⁵⁴,⁴³,⁵³		ᴴ	ᴴ	
+901	1	X	ᴮ	_U	²,ᴴ	²	²,ᴴ	²,ᴴ	²,ᴴ	²,ᴴ	²	²	⁵⁵,⁴⁵		ᴴ	ᴴ	
+903	1	X	ᴬ	_W	³,ᴸ	³	³	³	³	³,ᴸ	³	³	²¹,¹¹		ᴸ	ᴸ	
+4	1	X	ᴮ	_W	⁴,ᴸ	⁴	⁴,ᴴ	⁴	⁴,ᴴ	⁴,ᴸ	⁴	⁴	¹²,¹³		ᴸ	ᴸ	
+5	1	R,V	i		i	i	i	i	i	i	i	i	ɪ	ɪ=ẹ		i	yak femelle' Phu ⁵⁴prɪ ,  ;'quatre' Phu ²²blɪ , ‘peau, cuir’ Phu ¹¹ɖɪ̆  ;'homme' TGTM *Ami > nar ²²mɪʱ phu ²¹mɪ̆ʱ  ;'échelle' TGTM *Aʰli (GT) > nar ⁵⁴ɬhɪ , phu ⁴³hɬɪ  ;'filth' TGTM *Agri > nar ²¹grɪ , phu ¹¹grɪ
+6	1	R	iː		iː	iː	iː	i	i	i	i	i	iː	iː 		i	oeil' *ᴮʰmiː > Phu ⁵⁴miː / ⁵⁵miː ;'écorce' TGTM *Apʰiː > nar ⁴⁴³phiː , phu ⁴⁴phiː ;'deux' TGTM *Bniː > nar ¹²ɲiː
+7	1	R	ik		ik	iː,ik	iː	i	ɤi	ɨ	i	i	iː	i,iː		i	un' *ᴮgrik > nar ¹²kriː , Phu ²²griː, ²²kri
+8	1	R	it		it	it,iː,ip	iː,i	i	it,i	?	i,iː	iː				i	
+9	1	R	ip		ip	ip	ip	i	?	?	?	i				ip	
+10	1	R	is		is	is	is	is	is	is	i	i	i=iː	i	is	is	sept' TGTM *ᴮsnis > nar ⁶⁶ɲi(ː) , phu ⁵⁵ɲĭ , Tangbe ⁴⁴ɲis
+11	1	R	iŋ		iŋ	iŋ	iŋ	in	in	in,im,un	ĩ	ĩ	iŋ=ɯŋ	iŋ,ĩ,ɯŋ		iŋ	bois' phu ⁴⁵ʃĩŋ , 'coeur' phu ⁴⁴kĩ·  ;'femme' TGTM *Aʰmriŋ > nar ³³mrɯŋ / ⁵⁴mriŋ  phu ⁴²mrɯŋ / ³⁴²mrĩŋ  ;'vert' phu ⁵⁵pĩː ;'neige' TGTM *Bgliŋ > nar ¹²gliŋ ;'terrasse, paume, plante' TGTM *Atʰiŋ (TT) > nar ⁴³thiŋ
+12	1	R	in		in	in	in	in	in	in	ĩ	ĩ,in	in	in		iŋ	nom' TGTM *Aʰmin > nar ⁴³min , phu ⁵⁴min , Tgb ᴴmiŋ
+13	1	Z	Z	Z	Z	Z	Z	Z	Z	Z	Z	Z	Z	Z	Z	Z	
+14	1	R	im		im	im,em	im	im	in	im	ĩ	ĩ,in	im	ɪm		im	maison' TGTM *Bdim > nar ¹²dim , phu ²¹gjĭm , Tgb dim
+15	1	R	ir		ir	ir	ir	ir	?	ir	?	?	?	?		?	
+16	1	R	il		il	?	?	i	e,il,ĩl	e	e	ɛr	ilɛ	ɪl		 ?	paume' nar ⁴⁴jaː ⁵⁴thil , Phu ³³jaː ⁴²khɪl (comp Manang (1972) ⁵⁵jaː ³²'³³thili) ;'gencive' TGTM *Aŋil/nil > nar ²³'³²ɲillɛ , phu ¹⁰ɲĭl 
+17	1	R	wi		wi	ui,ai	wi	i,ui	wi	wi,i	wi,i	i,ui	wiː,yi=yiː	wi=yi,ɯ		ʷi	argent' TGTM *Bmwi > nar ¹²mwiː , phu ¹¹mỹi , TGB mʷiʱ  ;'clan paternel' phu ²¹rɯʱ < TGTM *Arwi (seulnt ris.³rui)
+18	1	R	jwi		jwi	i	ju	ju	ju	ju	ju	ju,jy	yi,ju	ju		ju	dix' TGTM *Btsjui > nar ⁵⁴tʃju , Phu ⁴⁴tsjuʰ / ⁵⁴tʃju / ⁴³tʃju  ;'eau' TGTM *Bkjui > nar ⁴³kjuː / ⁵³kju (comp phu ⁴³tʃju), Tgb ⁴⁴kju ;'tradition' TGTM *Bgjui > Nar ¹²gyi 'caste' , Phu 
+19	1	R	uiu		wi	uju	uju	uju	uju	uju	?	?				uju	vieille femme' Tgb ⁵⁵'³³khujuk
+20	1	R,V	e		e	e	e	e	e	e,ja	e	iɛ,ie,eɛ	jɛ	jɛ	e	e	femme' TGTM *ᴬbe > nar ²¹bjɛ , Phu ³²pjɛʱː  ;'boeuf/vache' TGTM *Bme > nar ²¹mjɛʱ / ¹¹²mjɛʱ , Phu ²²mjɛ̆ʱ / ²¹mjɛ / ¹¹mjɛ̆ , Tangbe ²¹meʱ ;'langue' TGTM *Bʰle > nar ⁵³ɬhɛ , phu ⁴³hɬɛ
+21	1	R	eː		eː	eː	eː	e	e,a,i,ʌ	e	i	e	jeː	je,jeː		?	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+22	1	R	eː	/kr_	eː	?	eː	e	ʌe	ʌe	e	e	e,eː	eː		jeʔ	la taille' TGTM *Akreː > nar ⁴³kre / ⁵⁴ kre , phu ⁵⁵kreː
+23	1	R	eː	/s_	eː	eː	eː=jeː	e	e	?	e	iː	?	?		?	
+24	1	R	je		e	e	e	e	i	i	i	ie	jɛ	jɛ		e	feu' TGTM *Aʰmje > nar ⁵⁴mjɛ Phu ⁵⁴mjɛ̆ / ⁴³miɛ 
+25	1	R	ek		ep,ek	ek	?	e	?	?	?	?				ek	
+26	1	R	et		et	et,ep	eː	e,i	e,eʌ,i	e	i,jo	e,eː	je	je,eː		e	la droite' TGTM *Aket (TT) > nar ⁵⁴kje / ⁵⁴kje , phu ⁴³kje / kjeː , Tgb ja ke  ;'honte' TGTM  > nar ⁵⁵pje
+27	1	R	ep		ep	ep	?	əp	o,e	o	aː	e	ou			e,ɛ	chaud (nourriture)' TGTM *Aʰlep > nar ⁵⁴lou (??)
+28	1	R	eŋ		eŋ	eŋ	eŋ	en	jaŋ	jaŋ,en	ẽ	jaŋ	jaŋ			?	pain' TGTM *Ageŋ > nar ²¹gjaŋ
+29	1	R	en		en	eː,en	en	ən	en	en	ẽ	ẽ				ɛn=en	faim' TGTM *khren > Tgb (pho) khɛn
+30	1	R	em		em	em	?	əm	ʌm	ʌm	aẽ,ẽ	ẽ	ɛm=əm	ɛm			esprit, sentiment' TGTM *Asem > phu ⁴³sɛm (sɛ̨m) , nar ⁵⁴sɛm/səm
+31	1	R	ew		e	e	e	e	u	e	e	e					
+32	1	R	er		er	er	er	er	?	?	er	?				er	gold' Tgb ᴴser
+332	1	R	es		eː	eː	eː	e	e	e	e	e	jeː	je,jeː		er	queue' TGTM *Aʰmeː > nar ⁵⁴mjeː , phu ⁴⁴mje(ː) (comp Tangbe ⁵⁴mĕr)
+33	1	R,V	a		a	a	a	ə	ʌ	ʌ	a	ɤ	æ	ɛ		ə	mari' TGTM *Apha > nar ⁴³phæ , Phu ⁵⁵phɛ  ;'tête/cheveu' TGTM *Akra > nar ⁴³kræ / ⁵⁴kræ, Phu ⁴⁴krɛ  ;'ennemi' TGTM *Bgra > nar ¹³græ, phu ¹¹krɛː (comp Tangbe ²⁰ɖə) ;'chèvre' TGTM *ᴬʰra > nar ⁵⁴ræ, phu ⁵⁴rɛ ;'petit bambou' TGTM *Bʰma > nar ⁵⁴mæ , Phu ³²mɛ ;'terre' TGTM *Asa > nar ⁵⁴sæ̆  , phu ⁴³sɛ̆
+34	1	R	aː		aː	aː	aː	a	a	a	o	a=aː	aː	aː=a		a,ɔː	falaise' TGTM *Bbraː > nar ¹¹²braː , Phu ¹¹praː ;'courroie de portage' TGTM *Bɖaː > nar ¹²¹ɖhaʱː , phu ¹¹ɖaː  ;'sang' TGTM *Bkaː > nar ⁵⁵⁴kaː , phu ³³kaː ;'gendre' TGTM Amaː > nar ³³maʱː phu ²¹maʱ  ;'poteau' TGTM Adaː > nar ¹¹taː , phu ²¹taːʱ ;'pus' TGTM *Anaː > phu ²¹naʱ , nar ¹⁰¹naː ;'mauvaise herbe' TGTM *A/Bʰmra(ː) > nar ⁵⁵⁴mr̃ãː phu ⁵⁵mrã̃
+35	1	R,V	ja		ja	ja	ja	e	e	e,jo,jɛ	e	je	æ,jæ	jɛ,ja			viande' TGTM *Asja > nar ⁵⁴ɕæ , Phu ⁴³ʃjɛ ;'cent' TGTM *ᴮgja > nar ²¹gjæ , phu ²¹gjæ / ²¹gjɛ (comp WT brgya, Ris 4kjarca) ;'flèche' TGTM *Aʰmja > nar ⁵⁴mję , phu ³²mja (ja en Phu est un apax)
+36	1	R	jaː		jaː	jaː	jaː	ja	ja	ja	jo	ja=jaː					
+37	1	R,V	wa		wa	wa	wa	o	o	o	o	o	ɔ=o	ɔ		ɑː,o	blé' TGTM *Bgrwa > nar ²³¹grɔ phu ²¹grɔ̆ , Tgb ²²kʱoʱ ;'fontanelle' TGTM *Bʰŋwa >  Nar ⁵³ŋɔ , Phu ⁵⁴ŋɔ  ;'piège' TGTM *Bʰŋwa > nar ⁵⁴ŋo (ton plutôt *A que *B), Tgb ³³ɲɑː
+38	1	R,V	wa	/tʰ_	o	?	o	o	o	o	u	a	oː	ɔː			salive' TGTM *ᴮthwa > nar ⁵⁴thoː, phu ⁴⁴thɔː
+39	1	R,V	wa	/s_	wa	a	a,wa	ə	ʌ	o	a	ɤ	ɔ	ɔ	ə	ə=ʌ	dent', TGTM *Aswa > phu ³²sɔ , nar ⁵⁴sɔ , Tangbe ⁴³sə
+40	1	R	waː		waː	aː	?	o	?	?	o	?				o	
+41	1	R	waː	/s,tsʰ_	waː	waː,aː	?	o	a	?	o	?					
+42	1	R	ai		ai	ai,eː=jeː	ai	ʌi=ʌj,e	əi,e,əe	ʌi,ai,ɛ	ae,we,ai,wi	eː	ɛi				fer' TGTM *Bphai > nar ⁵³phɛi 
+43	1	R	ai	/r,t_	ai	ai,eː	ai	e	e	ɛ	e	eː	e,ɛ,eː			e	côte (os)' TGTM *Bʰrai > nar ⁵⁵rɛ ³·ʃiŋ / ⁵⁵re ³·ʃiŋ , Tgb ⁴⁴re ;'cuire à l'eau' TGTM *Bdai (Tag)> nar ²¹'²²deːbɛ , Tgb ᴸteʱ
+44	1	R	ai	/tʰ_	ai	eː	eː	e	eʌ,eː	?	eː	?				?	
+45	1	R	jai		jai	?	?	?	?	?	e	jeː					
+46	1	R	au		au	?	?	ap	?	?	?	?					
+47	1	R	ak		aː,ak	aː,ak	?	a	a	a	?	?				ak	broom'
+48	1	R	at		at	et,e,ep	eː,e	e	e,je,ʌi	e,ʌi	e,ae,aː	e,je,eː	e,eː	e	eʔ	eʔ,eː	plein à ras' TGTM *ᴮʰnat > nar ⁵³ne  ;'huit' TGTM *ᴮbrat > nar ¹¹²prɛːʱ , phu ¹¹pre , Tangbe ¹¹prɛʔ ;'pou' TGTM *ᴮsjat > nar ⁵⁵⁴ʃje ;'travail' TGTM *ᴮgjat > nar ¹¹²gje , phu ¹¹¹gjẽː , Tangbe ³³³kjeʔ 
+49	1	R	at	/k_	at	et	eː	əi=əj	ʌe	ʌe	ae	je	e,eː,ᵊe	e		je,e,eʔ	voix' TGTM *Bkat (sauf Gha *Akat) > nar ⁵⁴keː / ⁵⁴kᵊe , phu ⁴³ke , Tgb ⁴⁴kjeʔ
+50	1	R	wat		wat	wet	wai	oj,e	?	?	we	?		ɛ		?	petit aigle' phu ¹¹krɛ < TGTM *Bgrwat (comp tib. khra)
+51	1	R	ap		ap	ap	ap	əp,əw,a	o	o	aː	e,je	ou,ɔu	oː=ɑː,ɑu	əp	əp=ʌp	(pâte à )bière' TGTM *Abap > nar ¹²pɔu / ³²pɔu, Phu ¹¹poʱː ⁵⁴kheː ; 'bière' Phu ¹¹poʱː / ³¹poː , Tangbe ¹⁰bɔʱp ;'aiguille' TGTM *Bdap > nar ¹¹²dou , phu ¹¹tọːʱ , Tangbe ²¹təp ⁴⁴gaŋ 'porte-aiguille'  ;'pincettes' TGTM *Bgap > nar ¹¹²gou , phu ¹¹'¹²²gɑu ;'couvercle' TGTM *Agap > nar ²¹gou , phu ¹¹˰gɑː ;'boeuf' TGTM *Bglap > nar ²³²glou, phu ¹¹gloː  ;'porte' TGTM *Bʰmrap > nar ⁵⁴mrou phu ³²mroː Tangbe ⁴³nəp ;'légume feuillu' TGTM *ᴬɖap > nar ¹¹ʈou / ²¹ʈou ;'morve' TGTM *Bʰnap (sauf Sahu *A) > nar ⁵⁴nou (phu ⁴⁴na)Tangbe ⁴³nəp
+52	1	R	jap		jap	jap	?	ep,e,jəp	?	jo	jaː	?	jɔu	joː		jəp	‘ring’ TGTM *Btsjap > nar⁴⁴'³tsjɔu , Phu ⁴⁴tʃjoː , Tgb ⁴⁴tsjəp
+53	1	R	aŋ		aŋ	aŋ	aŋ	aŋ	aŋ	aŋ	õ,ũ	aŋ	aŋ	aŋ,ãː		aŋ	-ful' Phu -⁴⁴naŋ,  ;'noir' phu ⁵⁴mlaŋ ,  ;'bru' TGTM *Atsaŋ > nar ⁵⁴tsaŋ , phu ⁴⁴³tsãː  ;'os long' TGTM *Akaŋ > nar ⁵⁴kaŋ , phu ⁴³kaŋ  ;'mortier' TGTM *Alaŋ (TTM) > nar ²¹laʱŋ , phu ¹⁰laʱŋ
+54	1	R	aŋ	/tʰ_	aŋ	aŋ	aŋ	aŋ	aŋ	aŋ	ãː	aŋ	aŋ	aŋ			odeur' TGTM *Athaŋ > nar ⁵⁵thaŋ , phu ⁴³thaŋ
+254	1	R	jaŋ		jaŋ,eŋ	jaŋ,eŋ	jaŋ,eŋ	jaŋ	jaŋ	jaŋ	jõ	jaŋ	jaŋ	jaŋ		jaŋ	
+55	1	R	an		an	en	an	ən	ʌn	ʌn	aẽ	jɛ̃=jẽ,ẽ	an	ɛn		en	riz', *Akan > nar ²²kan /⁴³kan, Phu ⁵⁴kɛ̆n (comp Man ³²kjẽ) ;'remède' TGTM *Aʰman > nar ⁵⁴man , phu ⁵³mɛn / mən
+56	1	R	an	/j,tʰ_	an	en	an	en	an	ɛn	ẽ	e,ẽ	ɛn	ɛn			panthère' TGTM *Atsjan > nar ⁴⁴paŋ ⁴⁴tsjɛn , Phu ³¹tʃjɛn
+57	1	R	jan		jan	en	jan	jen	?	jɛn	ẽ	e,jeː	jɛn	jɛn			panthère' TGTM *Atsjan > nar ⁴⁴paŋ ⁴⁴tsjɛn , Phu ³¹tʃjɛn
+58	1	R	wan		wan	wen,jen	wan	on	on	on	wẽ	wɛ̃=wẽ	on	on		ɔ,ɔn	vêtement' TGTM *Akwan > nar ⁵⁴kon , Phu ⁵⁴kon 
+59	1	R	am		am	am	am	om,əm	ʌm	ʌm	ãẽ,ã,ãː	ən,ẽ,e	am	am			épi' TGTM *Aʰnam > phu ⁵⁵nam  ;'parole' TGTM *Atam > nar ⁵³tam
+60	1	R	ar		ar	ar	ar	ər,ar	ʌr	ʌr	a,aː,aːra	ɤr	ar,ər	ar		ar,ʌr	blanc' TGTM *Atar > nar ⁵⁴tar phu ⁵⁵tar  ;'aval' TGTM *Aʰmar > nar ⁵⁵mər Phu ⁵⁴mar ;'or' TGTM *Bmar > nar ²¹²mar , phu ²²mar  ;'étoile' TGTM *Bsar > nar ⁴³'⁵⁴sara , phu ³²sar 
+61	1	R	jar		jar	jar	er,jar	jar	ʌr	?	jaː	je,jɤr					
+261	1	R	al	/+	ai,al							eː,e	ɛi	al		al	rein' Man (MM) ⁵⁶khxeː , nar ³²khęi , Phu ⁴³'³³khalma , Tgb khaltɔ ;'laine' TGTM *Abal > Man (MM) ²²pe , nar ⁴³pɛi  ;'crapaud' Phu ²²'³²paːlbə ;nb: maybe in Ris *l > i /-r, mais elsewhere *l > l
+62	1	R	wal		al,wal	al	wal,wai	o	ol	?	ad,ol	wol					
+63	1	R	wai		wai	wai	wai	oj	we	?	we,wi	we	we,ɔe,øe	øi		oe,je	chant' TGTM *Bgwai > nar ¹²gweʱ , phu ¹¹gøi , Tgb ¹¹koeʱ ~kjeʱ
+64	1	R	jal		jal	jal	jal	jal,jəl	il,iː,jal	?	jaːla,e	?					
+65	1	R,V	o		o	o	o	o	o	o,u	o	o,wo	ɔ,o	ɔ	o	o	daim' TGTM *Apho > nar ⁵³phoː , phu ⁴³phɔ ;'lac' TGTM *Atsho > nar ⁴³tshɔ̆ , phu ⁵⁴tshɔ̆ , Tangbe ⁴⁴³tsho
+66	1	R	oː		oː	oː	oː	o	o,u	o	u	o	ɔː,oː	ɔː	oʔ	oʔ	variole' TGTM *Bbroː > nar ¹¹prɔʱː , phu ¹¹brɔː , Tangbe ³³proʔ ;'corde' TGTM *Atshoː > nar ⁴³tshoː , (phu ⁵⁴'⁴thakpᵊ) , Tangbe ⁴³tshoʔ
+67	1	R	oi		oi	oi,e	oe	oi=oj	oi	we	we=oe	wɛː=we					
+68	1	R	joi		joi	joi	joe	e	ʌe	e	jwi	eː	juː			jɔ	croc' TGTM (¹sjoi / ²tshjoi) > nar ⁵⁴³tʃhjuː , Tgb tshjɔ
+69	1	R	ok		oː,o	ok	?	?	?	?	?	?				ok	salive' TGTM *Bthok > ris ²tho , Tgb thok
+70	1	R	ot		ot	ot,oi,op	oi=oe,oː	oi=oj	?	oi	wi	e,we,i					
+71	1	R	ot	/t,d,tʰ_	ot	ot,oi,op	oi=oj	e	e	ʌi,e	i	e	ɔe,øe,we	øː	e	e	charge' TGTM *Bdot > nar ²¹²dɔe / ²¹²døe , Tgb ²²te ;(?) 'couleur' TGTM *Atshon/Btshot > nar ⁴⁴tshøe , phu ⁴⁴³tshøː
+72	1	R	jot		jot	jot,joi,jop	?	je	?	?	jwi	i				e	
+73	1	R	jot	/s_	jot	jot,jop	joː,joe	je	?	?	jwi	?				e	
+74	1	R	wap		op	?	?	əw	ʌp	op	o	oː				əu	poumon' TGTM *Bglop/*Bglwap > nar ¹¹'¹⁰globɛ/¹¹¹'¹¹glɔ̆bɛ (comp phu ²¹lŏʱ) , Tgb kʱjəu
+75	1	R	op		op	op	op	əp	o	?	o	?				əu	
+76	1	R	oŋ		oŋ	oŋ	oŋ	oŋ,uŋ	oŋ,oː,uŋ	uŋ	õ	oŋ,o,oː	ɔŋ	ɔ̃		oŋ	vallée' TGTM *Asjoŋ > nar ⁴³ʃjɔŋ phu ⁴³⁴ʃjɔ̃ː
+77	1	R	on		on	?	on	on	ʌn	on	aẽ,wẽ	wẽ,ẽ					
+78	1	R	on	/tsʰ_	on	on,om	?	oi=oj	ʌe	ɛ	?	e					
+79	1	R	jon		jon	jon	jon	en	jen	jan,jon	rẽ,jwẽ	jẽ,je		jon=jøn		en	frère cadet' phu ⁴⁴'¹tʃjøntsə cf Ris cjon; 'jeune homme' TGTM *bjon> Tgb ¹¹peɦn
+80	1	R	om		om	om	om	om	?	?	õ	ẽ	om	om		om	trois' TGTM *Bsom > nar ⁵⁴som / ⁵⁵ /⁴⁴ , phu ⁴²sọm
+81	1	R	or		or	or	or	or	or	o	u,a,ur	or	or	or		or	en amont' TGTM *Ator > nar ⁵⁵tor
+281	1	R	ol		ol								ol			ol	nourriture (honor.)' TGTM *A/Bsol > nar ⁴³sol ; 'gorge' Tgb oldoŋa
+82	1	R,V	u		u	u	u	u	u	u	u	u	u	ᴜ		u	graine' TGTM *Bblu > nar ²¹blu , Phu ²¹blᴜ̆
+83	1	R	uː		uː	uː	uː	u	u	u,uː	u	u	uː	u		u	neuf, 9' TGTM *Bkuː > nar ⁵⁴kuː / ⁵⁴kŭ , Phu ⁵⁵ku  ;'six' TGTM *Bɖuː > nar ²¹²ɖuː , Phu ²¹ɖu
+84	1	R,V	ju		ju	?	?	?	?	?	ju	?	ju	ju			ligament'.TGTM *Btshju > nar ⁵⁴tʃhjŭ phu ⁴³tʃhju 
+85	1	R	juː		juː	juː	juː	?	?	?	i	?	juː	juː		i,ju,juː	mouton' TGTM *Bgjuː > nar ¹¹kjuʱː , phu ¹¹gjuː , Tgb ²²kju(ː) ;  'soif' ris ¹phjuː , Tgb phi-n
+86	1	R	uk		uː	uk	?	?	?	?	?	?	u	u	uk	uk	sueur' TGTM *Bʈ.Hr.ʈʰuː > nar ⁵⁵hru , Phu ³³hʃu, Tangbe hruk
+87	1	R	ut		ut	ut,up	ui	?	?	wi	ui=wi	u					
+88	1	R	ut	/j_	ut	ut,up	u	u	uː	?	?	iː					
+89	1	R	ut	/r,ʈ,ɖ_	ut	ut,up	ui=uj	i	i,it	i	i,wi	iː			i	i	tirer' TGTM *Aɖut > Tgb ²²'²²ɖiʱwa
+90	1	R	ut	/t,d,tʰ_	ut	ut,up	ui	ui=uj	wi	?	i	iː	yiː	y,yi		i	pelote' TGTM *Bthut 'rabouter' > nar ⁵⁵⁴thyiː , phu ⁵⁵thy / ⁴⁴thyi (comp Man (MM) ⁴⁴thi)
+91	1	R	up		up	up	up	up	u	u	u,uː	uː	uː	uː	up	up	étui' TGTM *Asjup (Tam,Gha,Tuk) > nar ⁴³ʃjuː , phu ³³sjuː ;'fil à coudre' TGTM *Bʈ.Hr.ʈʰup > nar ⁵⁵hru , phu ³³²hruː , Tangbe ⁴⁴hrup
+92	1	R	jup		jup	jup	jup	ip,jup	ju	ju	ju	?	juː	juː			étui' TGTM *Asjup (Tam,Gha,Tuk) > nar ⁴³ʃjuː , phu ³³sjuː , (comp Tangbe ⁵⁵ʃjuk)
+93	1	R	uŋ		uŋ	uŋ	uŋ,ũ	uŋ	uŋ,um	uŋ,um	ũ	ũ,uŋ	uŋ	uŋ,ũ 		uŋ	acide' TGTM *Akjuŋ > nar⁵⁴kjuŋ phu ²²kjuŋ  ;'trou' TGTM *Bkhuŋ > nar ⁵⁵⁴khuŋ phu ⁴³khũ  ;'pierre' TGTM *Bʰjuŋ > nar ⁵⁴'⁴jũŋ phu ⁴³jũ  ;'bouche' TGTM *Asuŋ / ? Asuŋ-ba > nar ⁴³sũm , phu ⁴³sum
+94	1	R	un	/s_	un	un,um	un	un	un	?	i	ĩ	un				riz' TGTM *Asun (TT) > nar ⁴³sun
+95	1	R	won	/ʰŋ_	un	on,om	on	on	?	?	wĩ	wẽ	um				montrer' TGTM *ʰŋwon- > nar ⁵⁵'³³ŋumbɛ
+96	1	R	un		un	un,una	un	un	un	?	wĩ	?				un	
+97	1	R	um		um	um	um	um	um	um	ũ	ũ=uŋ	um		uŋ	uŋ	oeuf' TGTM *Bphum > nar ⁴³phum
+98	1	R	ur		ur	ur	ur	ur	ur	ur	ur	ur		ur		ur	
+99	1	R	ul		ul	ul	?	?	o	il,?	u,ul	uː					
+100	1	I	k		k	k	k	k	k	k	k	k	k	k		k	os long' TGTM *Akaŋ > nar ⁵⁴kaŋ , phu ⁴³kaŋ 
+101	1	I	k	/_w	k	Ø	h	k	k	k	k	k	k	k		k	vêtement' TGTM *Akwan > nar ⁵⁴kon , Phu ⁵⁴kon 
+102	1	I	kʰ		kʰ	kʰ	h	kʰ	kʰ	kʰ	kʰ	kʰ	kʰ	kʰ		kʰ	légume/soupe'TGTM *Bkhu > nar ⁵⁴khu , phu ⁵³khŭ ;'trou' TGTM *Bkhuŋ > phu ⁴³khũ 
+103	1	I	kʰ	/_w	kʰ	h	h	kʰ	kʰ	kʰ	kʰ,k	kʰ					
+104	1	I	g	/ᴬ_	k	k	k,g	k	k,g	k,g	k	k	k,g	˰g		k,kʰ,g	couvercle' TGTM *Agap > nar ²³²gou / ³⁴³kou , phu ¹¹˰gɑː (comp Tangbe ³³'⁴⁴khapgəp)
+105	1	I	g	/ᴮ_	k	k	k,g	k	k	g	k,g	kʰ	g	g		k,kʰ,g	pincettes' TGTM *Bgap > nar ¹¹²gouʱ , phu ¹¹'¹²²gɑu (comp Tangbe ³³'³³kɔmbə)
+106	1	I	g	/_w	k,Ø	Ø	Ø	k	k	?	k	k,kʰ	g	g		kj,k	chant' TGTM *Bgwai > nar ¹²gweʱ , phu ¹¹gøi
+107	1	O	gj	/ᴬ_	kj	kj	kj	kj	kj	gj	kj	kj				kj	
+108	1	O	gj	/ᴮ_	kj	kj	kj	kj	kj	gj	k,kj	kʰj	gj	gj	kj	kj,kɟ	mouton' TGTM *Bgjuː > phu ¹¹gjuː , Tangbe ²²kju ;'travail' TGTM *ᴮgjat > nar ¹¹²gje , phu ¹¹¹gjẽː , Tangbe ³³³kjeʔ
+109	1	O	kr	/_eː	k	k	k	ʈ	k	k	kr	kr	kr	kr	kr	kr,k	‘la taille’ TGTM *Akreː > nar ⁴³kre / ⁵⁴ kre , phu ⁵⁵kreː , Tangbe ⁴⁴⁵kreʔ ∼ ⁵⁵ke(ʔ)
+110	1	O	kr	/_u	kr	kr	h	ʈ	k	k	kr	kr	kr	kr	k	k	coudée' nar ⁵⁴kru , phu ⁵⁵'⁵⁵kuru / ³³kru ⁴²naŋ , Tangbe ⁴³ku
+111	1	O	kr	/_a	kr	kr	hw	ʈ	kj	kj	kr	kr	kr	kr	kr	kr,k	tête/cheveu' TGTM *Akra > nar ⁴³kræ / ⁵⁴kræ, Phu ⁴⁴krɛ , Tangbe ⁴³krə (?1978) ∼ ⁴⁴kʌ (1996)
+112	1	O	kr	/_at	kr	kr	h	ʈ	kj,k	kj	kr	kr				k,kj	
+113	1	O	kr		kr	kr	h	ʈ	k	k	kr	kr				k	
+114	1	O	kʰr		kʰr	kʰr,hr	hw,h	ʈʰ	kʰj	kʰj	kʰr	hr,tʃʰj,kr	khr			kʰ=kh	filer' TGTM *Akhrim (TG) *Bkhrim (Tuk) > nar ⁵⁵'³³khrimbɛ; 'griller' Tgb khaŋ
+214	1	O	kʰr	/_u	kʰr	kʰr,hr	hw,h	ʈʰ	kʰ	kʰ	kʰr	hr,tʃʰj,kr	khr		kʰ=kh,k,h	kʰ=kh,k	laver' TGTM *Bkhru > nar ⁵⁵'³³khrubɛ, 'mordre' TGTM khrap > Tgb hap
+115	1	O	gr	/ᴬ_	kr	kr	w,h	?	k	g,gj	kr	kr	gr	gr		ɖ	filth' TGTM *Agri > nar ²¹grɪ , phu ¹¹grɪ, Tgb ɖiʱma
+116	1	O	gr	/ᴮ_e	kr	?	h	?	?	?	?	?					
+117	1	O	gr	/ᴮ_i	k	k	k	ʈ	k	g	gr	hr,kʰr	gr	gr=kr	g	k,g,ɖ	un' TGTM *ᴮgrik > nar ¹¹gri / ¹²griː Phu ²²grįː, ²²kri , Tangbe ¹¹¹giʱʔ/kiʱ
+118	1	O	gr	/ᴮ_	kr	kr	kr	ʈ	k	g	kr	hr=rʰ	gr	kr,gr			ennemi' TGTM *Bgra > nar ¹³græ, phu ¹¹krɛː (comp Tangbe ²⁰ɖə)
+119	1	O	gr	/ᴮ_w	k	Ø	h	ʈ	k,ʈ	k,ʈ	kr	hr	gr	kr,gr	g	g,kʱ,kʰ	buse, milan' TGTM *Bgrwat > phu ¹¹krɛ (??comp Tangbe ³³'¹¹tigaʔ) ;'blé' TGTM *Bgrwa > nar ²³¹grɔ phu ²¹grɔ̆ , Tangbe ⁰⁰goʱ/²²kʱoʱˑ
+120	1	O	grw		kw	w	hw	ʈ	k,ʈ	k,g,ʈ	krw	hr		kr			
+121	1	O	kl	/_i,e	kl	kl	kʰl,kl	k	hɬ	l	ɬ	k	kl		k	k	feces' TGTM *Akli > Tangbe ⁴⁴kiʔ ;'champ' TGTM *Akle > nar ⁴³kleː (comp *A/Bgle > phu ¹²gle)
+122	1	O	kl	/_a	kl	kl	?	kj	lj	lj	ɬ	kj					
+123	1	O	kl		kl	kl	kl	kj	lj	lj	ɬ	kj					
+124	1	O	kʰl		kʰl	kʰl	kʰl	kʰj	hɬ	ɬj	ɬ	kʰj				kʰj	jeter' Ris ¹khlaː , Tgb kʰjak-
+125	1	O	gl	/ᴬ_	kl	kl	hl	kj	lj	?	ɬ	?	kl			kj,kʱj,kʰ	avaler' TGTM *Agloŋ > nar ³³'²²klɔʱŋba
+126	1	O	gl	/ᴮ_	kl	kl	kʰl	kj	lj	lj	ɬ	kʰj,k	gl	gl		kj,kʱj,kʰj	place' TGTM *A/Bglaː > nar ¹¹klaʱː , phu ¹¹glaː ;'boeuf' TGTM *Bglap > nar ¹¹glou , phu ¹¹gloː  ;'poumon' TGTM *Bglop/*Bglwap > nar ¹¹'¹⁰globɛ/¹¹¹'¹¹glɔ̆bɛ (comp phu ²¹lŏʱ)
+127	1	O	gl	/ᴮ_i,e	kl	kl	kʰl	k	l	l	ɬ	kʰ	gl	gl	kʰ	kʰ	neige' TGTM *Bgliŋ > nar ¹²gliŋ , phu ²¹gliʱŋ , Tangbe ²¹kʱiʱŋ
+128	1	O	ts	/_i	ts	ts	ts	ts	tɕ	tʃ	ts	tɕ				ts	
+129	1	O	ts		ts	ts	ts	ts	ts	ts	ts	ts				ts	
+130	1	O	tsʰ	/_i,j	tsʰ	tsʰ	tsʰ	tsʰ	tɕʰ	tʃʰ	tsʰ	tɕʰ					
+131	1	O	tsʰ		tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ	tsʰ		tsh	hotte' TGTM *Atshaŋ > nar ⁵³tshaŋ , Phu ⁵⁴tshăŋ
+132	1	O	dz	/ᴬ_	ts	ts	ts,dz	ts	ts	ts	ts	ts				ts,dz,tsʱ	nid' TGTM *Adzaŋ > Tgb tsʱaʱŋ
+133	1	O	dz	/ᴮ_	ts	?	ts,dz	ts,s	ts	ts	ts,dz	tsʰ				ts,dz	
+134	1	O	tsj		tsj	tsj	tsj	tsj,ts	tɕ,tsj	?	tsj	tɕ					
+135	1	O	tsʰj		tsʰj	tsʰj	tsʰj	tsʰj,tsʰ	tɕʰ	?	tsʰj	tɕʰ				tʃhj	marais, mare' TGTM *chjume/i > ris ¹chjumi , Tgb tʃhjumeʔ(i) kju
+136	1	O	dzj		tsj	tsj	tsj,dzj	tsj,ts	tɕ,tsj	?	tsj	tɕ					
+137	1	O	ʈ		ʈ	ʈ	ʈ	ʈ	ʈ	ʈ	ʈ	ʈ	ʈ	ʈ		ʈ	moëlle' TGTM *Aʈaŋ > nar ⁵³ʈaŋ , Phu ⁵⁴ʈaŋ
+138	1	O	ʈʰ		ʈʰ	ʈʰ	?	?	?	?	?	?					
+139	1	O	ʈ.Hr.ʈʰ		ʈ	ʈ	ʈ	hr=ʰr	hr	hr	r	ʈ	hr	hʃ=hr	hr	hr	sueur' TGTM *Bʈ.Hr.ʈʰuː > nar ⁵⁵hru , Phu ³³hʃu, Tangbe hruk  ;'fil à coudre' TGTM *Bʈ.Hr.ʈʰup > nar ⁵⁵hru , phu ³³²hruː , Tangbe ⁴⁴hrup
+140	1	O	ɖ	/ᴬ_	ʈ	ʈ	ʈ,ɖ	ʈ	ʈ	ʈ	ʈ	ʈ				ɖ,ʈ	
+141	1	O	ɖ	/ᴮ_	ʈ	ʈ	ʈ	ʈ	ʈ	ɖ	ʈ	ʈʰ	ɖ	ɖ		ɖ,ʈ	six' TGTM *Bɖuː (sauf ris *Bɖu) > nar ²¹²ɖuː , Phu ²¹ɖu(ː)
+142	1	I	t		t	t	t	t	t	t	t	t				t	
+143	1	I	tʰ	/_a	tʰ	tʰ	tʰ	tʰ	tʰ	tʰ	tʰ	tʰ				tʰ=th	
+144	1	I	tʰ		tʰ	tʰ	tʰ	tʰ	tʰ	tʰ,t	tʰ,t	tʰ				tʰ=th	
+145	1	I	d	/ᴬ_	t	t	t	t	t	t	t	t				d,t	
+146	1	I	d	/ᴮ_	t	t	t	t	t	d,t	d,t	tʰ			d	d,t	maison' Tangbe dim
+147	1	I	p		p	p	p	p	p	p	p	p				p	
+148	1	I	pʰ	/ᴬ_	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ				pʰ=ph,f	
+149	1	I	pʰ	/ᴮ_	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ	pʰ,p	pʰ				pʰ=ph,f	
+150	1	I	b	/ᴬ_	p	p	p,b	p	p	p	p	p	p	p	b	b,p	abri de berger' TGTM *Abraŋ > nar ²¹praŋ ;'(pâte à )bière' TGTM *Abap > nar ¹²pɔu / ³²pɔu, 'bière' Phu ¹¹poʱː / ³¹poː , Tangbe ¹⁰bɔʱp
+151	1	I	b	/ᴮ_	p	p	p,b	p	p	b	b	pʰ				b,p	
+152	1	I	b	/ᴮ_j,r,l	p	p	p	p	p	p	p	pʰ					
+153	1	O	pj		pj	pj	pj	pj	pj	pj	pj	pj					
+154	1	O	pʰj		pʰj	pʰj	?	pʰj	pʰj	pʰj	pʰj	pʰj					
+155	1	O	bj		pj	pj	bj	?	bj	bj	pj,bj	pj,pʰj					
+156	1	O	bl	/ᴬ_	pl	pl	pl	pl	pl	pl	pl	pl				p	
+157	1	O	bl	/ᴮ_	pl	pl	pl	pl	pl	pl	pl	pʰl				p	
+158	1	O	p.ml		pl	pl	?	ml	ml	ml	ml	?					
+159	1	O	ʰŋ		ŋ,h,Ø	ŋ,Ø	ŋ,w	ŋ	ŋ,w	ŋ	ŋ,w,Ø	ŋ	ŋ	ŋ		ŋ,n	fontanelle' TGTM *Bʰŋwa > Nar ⁵³ŋɔ , Phu ⁵⁴ŋɔ ;'montrer' TGTM *ʰŋwon- > nar ⁵⁵'³³ŋumbɛ
+160	1	O	ʰŋ	/_an	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ɲ					
+161	1	O	ʰŋ	/_i,j	ŋ	?	n	ɲ	ɲ	ɲ	n,ŋ	ɲ					
+162	1	O	ŋ		ŋ,h̃	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ	ŋ				n	se coucher' ris ⁴ŋu , Tgb ³³nuko
+163	1	O	ŋ	/_i,j	ŋ	?	n	ɲ	ɲ	ɲ	n,ŋ	ɲ	ɲ	ɲ			gencive' TGTM *Aŋil/nil > nar ²³'³²ɲillɛ , phu ¹⁰ɲĭl 
+164	1	O	ʰɲ		ŋj	ɲ	ɲ	ɲ,m	?	?	ɲ=ŋj,n,ŋ	ɲ					
+165	1	O	ɲ		ŋj	ɲ	ɲ	ɲ	?	?	ɲ=ŋj,n,j	ɲ				j	cuire (ḍheṛo)' TGTM *Aɲo(k) > ris ¹ɲo , Tgb joʱwa
+166	1	O	ʰn		n	n	n	n	n	n	n	n		n		n	épi' phu ⁵⁵nam < TGTM *Aʰnam
+167	1	O	n		n	n	n	n	n	n	n	n		n		n	pus' .phu ²¹naʱ < TGTM *Anaː
+168	1	O	ʰn	/_i,e	n	ɲ	n,ɲ	ɲ,n	ɲ	n,ɲ	n,ɲ	ɲ	ɲ		ɲ,n	ɲ,n	aller' TGTM *Aʰni > nar ⁵⁵'³³ɲiʃje
+169	1	O	n	/_i	n	ɲ	n	ɲ=ŋ	ɲ	n	ŋ	ɲ				ɲ,n	
+170	1	O	n	/_e	n	ɲ	ɲ	ɲ=ŋj	ɲ	nj,ɲ	ɲ=ŋ	ɲ	ɲ			ɲ	lait' TGTM *Ane > nar ²²'⁴³ɲɛnam
+171	1	I	ʰm		m	m	m	m	m	m	m	m				m	
+172	1	I	m		m	m	m	m	m	m	m	m				m	
+173	1	O	ʰmj		mj	mj	mj	mj	mj	mj	mj	mj				mj	
+174	1	O	mj		mj	mj	mj	mj	mj	mj	mj	mj				mj	
+175	1	O	ʰml		ml	ml	ml	ml	ml	ml	ml	?	ml	ml		m	noir' TGTM *A/Bʰmlaŋ > nar ⁴³mlaŋ , phu ⁵⁴mlaŋ , Tgb 
+176	1	O	ml		ml	ml	ml	ml	ml	ml	ml	?	ml			m,mɾ	riz cru' TGTM *Amla > nar ²¹mlaʱ , Tgb ²²mɾa (pas de var. sans /ɾ/)
+276	1	O	ʰmr		mr											m,n	voir' TGTM *Aʰmraŋ > Tgb maŋdze, 'porte' TGTM *Bʰmrap > ris ²mrap , Tgb nʌp; 'mauvaise herbe' TGTM *Bʰmra > Tgb maʔ / mɾaʔ /
+177	1	O	ʰj		j	j	j	j	j	j	j	j				j	
+178	1	O	j		j	j	j	j	j	j	j	j,Ø		j		j	voleur' TGTM *Bjo (sauf ris *Bjoː) > nar ²³²jo , phu ¹⁰jɔ 
+179	1	G	j		j	j	j	j	j	j	j	j,Ø				j	
+180	1	G	j	/_at	j	j,Ø	j,Ø	j,Ø	?	Ø	Ø	j				Ø,j	
+181	1	O	Hr		hr	r,hr	s	hr=rʰ	hr	hr	r	hr				hr	
+182	1	O	ʰr		r	r	r	r	r	r	r	r	r	r		r	chèvre' TGTM *ᴬʰra > nar ⁵⁴ræ, phu ⁵⁴rɛ ;'corne' TGTM *Aʰru > nar ⁵⁴ru , phu ⁴³ru
+183	1	O	r		r	r	r	r	r	r	r	r	r	r		r	ami' TGTM *Aro > nar ²¹rɔ , phu ²¹rɔ
+184	1	L	r	/P_	r	r	r	r	r	r	r	r	r	r		Ø,r	femme' TGTM *Aʰmriŋ > nar ⁵⁴mriŋ , phu ⁴²mrɯŋ ;'porte' TGTM *Bʰmrap > nar ⁵⁴mrou , phu ³²mroː
+185	1	L	r	/P_an	r	r	?	r	Ø	r,Ø,?	Ø	r,Ø,?				Ø,r	
+186	1	O	Hl		hl	l	l	hl=lʰ	l,hɬ	hl	l	hl	hɬ,ɬ	hɬ		lh=hl	dieu' TGTM *Aʰla (Tam) / *AHla (TTM sauf Ris) > nar ⁴³ɬæ , phu  ⁴³hɬɛ (= mois) 
+187	1	O	ʰl		l	l	l	l	l	hɬ	l	l	l	l		l,lh=hl	dieu aquatique' TGTM *Aʰlu (Tam) > nar ⁵⁴lu , phu ⁴³lu
+387	1	O	ʰl	/_i,e	l	l	l	l	l	hɬ	l	l	hɬ,ɬ	hɬ		l,lh=hl	échelle' TGTM *Aʰli (GT) > nar ⁵⁴ɬhɪ phu ⁴³hɬɪ ;'langue (organe)' TGTM *Bʰle > nar ⁵⁴ɬɛ phu ⁴³hɬɛ 
+188	1	O	l		l	l	l	l	l	l	l	l	l	l		l	mortier' TGTM *Alaŋ (TTM) > nar ²¹laʱŋ , phu ¹⁰laʱŋ
+189	1	L	l		l	l	l	l	l	l	l	l				Ø	
+190	1	O	ʰw		w	w	w	w	w	w	w	w				?	
+191	1	O	w		w	w	w	w	w	w	w	w				?	
+192	1	G	w		w	w	w	w	w	w	w	w				Ø	
+193	1	I	s		s	s	s	s	s	s	s	s	s	s		s	étoile' TGTM *Bsar > nar ⁴³'⁵⁴sara , phu ³²sar 
+194	1	I	s	/_u	s	s	s	s	s	ʃj	s	s				s	
+195	1	I	s	/_i,j,e	s=ʃ	s=sj	ʃ=ʃj	s=sj	ɕ	ʃ	ʃ=s	ʃ=ʃj	ʃ	ʃ		s,ʃ	bois' TGTM *Bsiŋ > nar ⁵⁴ʃiŋ , phu ⁴⁵ʃĩŋ
+196	1	O	ɕ		sj	sj	ʃ=ʃj	s=sj	ɕ	ʃ=ʃj	ʃ=s	ʃ=ʃj				sj	
+197	1	I	z		s	s	s	s	s	s	s	s				s	
+198	1	O	ʑ		sj	sj	ʃ=ʃj	s=sj	ɕ	ʃ=ʃj	ʃ=s	ʃ=ʃj				sj	
+199	1	I	h	/_w	h	?	?	Ø	?	?	?	?				h	
+200	1	I	h		h	h	h	h	h	h	h	h				h	
+201	1	F	k		k	ː	Ø,k	Ø,k	Ø	Ø	Ø	Ø				k	
+202	1	V	i	/_k	i	i	i	i	ɤi	ɨ	i	i				i	
+203	1	F	t		t	t,ː	?,ː	Ø	?	?	Ø,ː	ː				Ø	
+204	1	F	p		p	p	p	p,w	p,Ø	p,Ø	Ø,ː	Ø,ː				p	
+205	1	V	a	/_p	a	a	a	ə	o	o	a	e				a	
+206	1	V	o	/_p	o	o	o	ə	ʌ	o	o,u	o				o	
+207	1	V	u	/_p	u	u	?	u	?	?	u	u				u	
+208	1	F	l		l	l	l	l	l	?	Ø,ː	l				l	
+209	1	F	s		s	s	s	s	?	?	?	ː				r,s,Ø	
+387	1	O	ʰl	/_i,e	l	l	l	l	l	hɬ	l	l	hɬ,ɬ	hɬ		l,lh=hl	échelle' TGTM *Aʰli (GT) > nar ⁵⁴ɬhɪ phu ⁴³hɬɪ ;'langue (organe)' TGTM *Bʰle > nar ⁵⁴ɬɛ phu ⁴³hɬɛ 
