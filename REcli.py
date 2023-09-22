@@ -46,10 +46,15 @@ if command_args.command == 'coverage':
                                      f'{args.project}.{args.mel_name}-extra.mel.xml')
     serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
     serialize.serialize_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
-elif command_args.command == 'list-all-glosses':
-    settings = read.read_settings_file(os.path.join('..', 'projects', args.project, f'{args.project}.master.parameters.xml'))
-    for gloss in utils.all_glosses(read.read_attested_lexicons(settings)):
-        print(gloss)
+elif command_args.command == 'analyze-glosses':
+    settings = read.read_settings_file(os.path.join('..', 'experiments', args.project, args.experiment, f'{args.project}.master.parameters.xml'))
+
+    glosses = sorted(utils.all_glosses(read.read_attested_lexicons(settings)))
+    gloss_analysis_statistics = coverage.check_glosses(settings, args, glosses)
+    gloss_analysis_xml_file = os.path.join(args.experiment_path,
+                                           f'{args.project}.{args.mel_name}.gloss_analysis.statistics.xml')
+    serialize.serialize_stats(gloss_analysis_statistics, settings, args, gloss_analysis_xml_file)
+
 elif command_args.command == 'new-experiment':
     directory = os.path.join('..', 'experiments', args.project, args.experiment_name)
     if os.path.isdir(directory):
@@ -107,7 +112,7 @@ elif command_args.command == 'upstream':
                                        fuzzy=args.fuzzy,
                                        recon=args.recon)
     check_setup(command_args.command, args, settings)
-    load_hooks.load_hook(args.experiment_path, settings)
+    load_hooks.load_hook(args.experiment_path, args, settings)
     mel_status = 'strict MELs' if args.only_with_mel else 'MELs not enforced'
     print(mel_status)
     B = RE.batch_all_upstream(settings, only_with_mel=args.only_with_mel)
@@ -127,7 +132,7 @@ elif command_args.command == 'upstream':
     B.failures = RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language), (), [])
     sets_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.xml')
     RE.dump_xml_sets(B, settings.upstream[settings.upstream_target], sets_xml_file, args.only_with_mel)
-    print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
+    # print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
     B.statistics.add_stat('isolates', len(B.isolates))
     B.statistics.add_stat('sets', len(B.forms))
     B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures.supporting_forms)},{B.statistics.summary_stats["reflexes"]}')
