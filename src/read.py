@@ -9,6 +9,7 @@ def read_correspondence_file(filename, project_name, daughter_languages, name, m
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
     return RE.Parameters(read_correspondences(tree.iterfind('corr'),
+                                              tree.iterfind('rule'),
                                               project_name,
                                               daughter_languages),
                          read_syllable_canon(tree.find('parameters')),
@@ -34,7 +35,7 @@ def read_syllable_canon(parameters):
             context_match_type = parameter.attrib.get('value')
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
 
-def read_correspondences(correspondences, project_name, daughter_languages):
+def read_correspondences(correspondences, rules, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)
     for correspondence in correspondences:
         daughter_forms = {name: '' for name in daughter_languages}
@@ -56,8 +57,26 @@ def read_correspondences(correspondences, project_name, daughter_languages):
                  in proto_form_info.attrib.get('syll').split(',')],
                 proto_form_info.text,
                 daughter_forms))
+    for rule in rules:
+        daughter_forms = {name: '' for name in daughter_languages}
+        input_info = rule.find('input')
+        contextL = input_info.attrib.get('contextL')
+        contextR = input_info.attrib.get('contextR')
+        context = ([x.strip() for x in contextL.split(',')]
+                   if contextL else None,
+                   [x.strip() for x in contextR.split(',')]
+                   if contextR else None)
+        outcome_info = rule.find('outcome')
+        languages = [x.strip() for x in outcome_info.attrib.get('languages').split(',')]
+        table.add_rule(
+            RE.Rule(
+                rule.attrib.get('num'),
+                context,
+                input_info.text,
+                outcome_info.text,
+                languages,
+                int(rule.attrib.get('stage'))))
     return table
-
 
 def skip_comments(reader):
     for row in reader:

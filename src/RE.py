@@ -6,7 +6,7 @@ import sys
 import serialize
 import collections
 import mel
-from copy import deepcopy
+from copy import copy, deepcopy
 
 class Debug:
     debug = False
@@ -29,8 +29,29 @@ class Correspondence:
         self.daughter_forms = daughter_forms
 
     def __repr__(self):
-        # return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
-        return f'{self.id}, {",".join(self.syllable_types)}, {self.proto_form}'
+        return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
+        #return f'{self.id}, {",".join(self.syllable_types)}, {self.proto_form}'
+
+# A rule is like a correspondence that only applies to a subset of
+# languages. Absence of a rule implies nothing changes. There is also
+# chronology with rules, as they can be applied in stages until we
+# reach a 'stage 0' form which is then used to compare with other
+# daughter languages via Correspondences. Thus, rules can almost be
+# viewed as staged "synchronic" phonology. We ignore syllable types
+# for now since we don't have a reprsentation for a syllable canon at
+# each stage,
+class Rule:
+    def __init__(self, id, context, input, outcome, languages, stage):
+        self.id = id
+        # context is a tuple of left and right contexts
+        self.context = context
+        self.input = input
+        self.outcome = outcome
+        self.languages = languages
+        self.stage = stage
+
+    def __repr__(self):
+        return f'<Rule({self.id}, {self.input}, {self.outcome}, {self.languages}, {self.stage})>'
 
 class Lexicon:
     def __init__(self, language, forms, statistics=None):
@@ -84,11 +105,16 @@ class TableOfCorrespondences:
 
     def __init__(self, family_name, daughter_languages):
         self.correspondences = []
+        self.rules = []
         self.family_name = family_name
         self.daughter_languages = daughter_languages
 
     def add_correspondence(self, correspondence):
         self.correspondences.append(correspondence)
+
+    def add_rule(self, rule):
+        print(rule)
+        self.rules.append(rule)
 
     def rule_view(self):
         # make a rule view of the form
@@ -135,6 +161,18 @@ class ModernForm(Form):
 
     def __str__(self):
         return f'{super().__str__()}\t{self.gloss}\t{self.id}'
+
+class Stage0Form(Form):
+    def __init__(self, form, history):
+        glyphs = history[0][0]
+        super().__init__('proto-' + form.language, glyphs)
+        self.modern = form
+        self.gloss = form.gloss
+        self.history = history
+        self.attested_support = frozenset([form])
+
+    def __str__(self):
+        return f'{self.language} *{self.glyphs}'
 
 class ProtoForm(Form):
     def __init__(self, language, correspondences, supporting_forms,
@@ -239,6 +277,136 @@ def next_correspondence_map(parameters):
             if matches_context(nextc, c):
                 next_map[c].add(nextc)
     return next_map
+
+# build a map from tokens to lists of rules containing the token key.
+# also return all possible token lengths
+def partition_rules(rules, language):
+    partitions = collections.defaultdict(list)
+    token_lengths = []
+    max_stage = 1
+    for rule in rules:
+        if language in rule.languages:
+            if rule.stage < 1:
+                raise Exception('Stage must be greater than or equal to 1')
+            partitions[rule.outcome].append(rule)
+            token_lengths.append(len(rule.outcome))
+            max_stage = max(max_stage, rule.stage)
+    return partitions, token_lengths, max_stage
+
+# This class represents the state of yet-to-be-matched-and-consumed
+# portions of right contexts during rule parsing, which people use to
+# check that a potential parse is valid. This is a functional data
+# structure which returns new instances rather than mutates itself.
+#
+# XXXXX Not 100% debugged yet especially with long segments or
+# multiple outstanding contexts.
+class RContextQueue:
+    def __init__(self, todo):
+        # todo is a list of lists (contexts which are valid)
+        self.todo = todo
+
+    # Add the expanded contexts for rule to self, returning a new
+    # instance.
+    def add_rule_right_contexts(self, rule):
+        if rule.context[1] == None:
+            return self
+        return RContextQueue([rule.expanded_context[1]] + self.todo)
+
+    # If segment matches every context group in self, consume the
+    # segment in each matching context in the context group, returning
+    # a new instance. Otherwise return false.
+    def match_consume(self, segment):
+        new = []
+        for contexts in self.todo:
+            new_group = []
+            matches = True
+            for context in contexts:
+                if segment.startswith(context):
+                    pass
+                elif context.startswith(segment):
+                    new_group.append(context[len(segment):])
+                else:
+                    matches = False
+            if matches is False:
+                return False
+            if new_group:
+                new.append(new_group)
+        return RContextQueue(new)
+
+    # We are in the 'end' state if there are no outstanding contexts
+    # or the only group left has an end of parse marker '#'.
+    def end(self):
+        for contexts in self.todo:
+            ok = False
+            for context in contexts:
+                if context == '#':
+                    ok = True
+            if ok is False:
+                return False
+        return True
+
+# create a rule applier that applies rules to yield stage 0
+# forms. unlike for tokenizing we don't generate all possibilities;
+# because we don't have a separate syllable canon there are not really
+# multiple analysis to try, and hence we just scan the form at each
+# stage and perform string substitution to get the form at a previous
+# stage.
+def make_apply_rules(parameters, language):
+    rules = parameters.table.rules
+    sound_classes = parameters.syllable_canon.sound_classes
+    rule_map, token_lengths, max_stage = partition_rules(rules, language)
+
+    # expand out the cover class abbreviations
+    for rule in rules:
+        rule.expanded_context = (
+            expanded_contexts(rule, 0, sound_classes),
+            expanded_contexts(rule, 1, sound_classes))
+
+    def matches_this_left_context(rule, input):
+        return (rule.context[0] is None or
+                any(input.endswith(context) if context != '$'
+                    else input == ''
+                    for context in rule.expanded_context[0]))
+
+    def apply_rules(form):
+        # for each stage, generate the candidate forms for the next
+        # stage.
+        candidates = [(form, [])]
+        next_candidates = []
+        for stage in reversed(range(max_stage + 1)):
+            def gen_next_candidates(form, history):
+                # consume tokens from outcome, applying all possible
+                # applicable rules to build input, and also generate a
+                # form where nothing changed.
+                def gen(outcome, input, rqueue, applied_rules):
+                    if outcome == '':
+                        if rqueue.end():
+                            next_candidates.append((input,
+                                                    [(input, applied_rules)] + history
+                                                    if applied_rules != []
+                                                    else history))
+                        return
+                    for token_length in token_lengths:
+                        for rule in rule_map[outcome[:token_length]]:
+                            if rule.stage == stage:
+                                rmatch = rqueue.match_consume(rule.input)
+                                if (rmatch
+                                    and matches_this_left_context(rule, input)):
+                                    gen(outcome[token_length:],
+                                        input + rule.input,
+                                        rmatch.add_rule_right_contexts(rule),
+                                        applied_rules + [rule])
+                    rmatch = rqueue.match_consume(outcome[0])
+                    if rmatch:
+                        gen(outcome[1:], input + outcome[0], rmatch, applied_rules)
+                gen(form, '', RContextQueue([]), [])
+            for (candidate, history) in candidates:
+                gen_next_candidates(candidate, history)
+            candidates = next_candidates
+            next_candidates = []
+        return candidates
+
+    return apply_rules
 
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
@@ -348,21 +516,29 @@ def project_back(lexicons, parameters, statistics):
         count_of_parses = 0
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map)
+        apply_rules = make_apply_rules(parameters, lexicon.language)
         for form in lexicon.forms:
             if form.glyphs == '':
                 continue
-            if Debug.debug:
-                statistics.add_debug_note(f'!Parsing {form}...')
-
+            statistics.add_debug_note(f'!Parsing {form}...')
             if form.glyphs:
-                parses = memo.setdefault(form.glyphs, tokenize(form.glyphs, statistics))
+                def all_tokenizations():
+                    parses = []
+                    for (stage_0_form, history) in apply_rules(form.glyphs):
+                        parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
+                    return parses
+                parses = memo.setdefault(form.glyphs, all_tokenizations())
             else:
                 statistics.add_note(f'form missing: {form.language} {form.gloss}')
                 parses = None
             if parses:
-                for cs in parses:
+                for (cs, history) in parses:
                     count_of_parses += 1
-                    reconstructions[cs].append(form)
+                    if history == []:
+                        reconstructions[cs].append(form)
+                    else:
+                        proto_stage_0_form = Stage0Form(form, history)
+                        reconstructions[cs].append(proto_stage_0_form)
             else:
                 count_of_no_parses += 1
                 statistics.failed_parses.add(form)
@@ -568,6 +744,8 @@ def print_form(form, level):
         # TODO: the output order should be the 'preferred order', not just alphabetical. but how?
         for supporting_form in sorted(form.supporting_forms, key=lambda x: x.language + x.glyphs):
             print_form(supporting_form, level + 1)
+    elif isinstance(form, Stage0Form):
+        print(" TODO don't know how to display Stage0FOrm yet ")
 
 def print_sets(lexicon):
     # for form in lexicon.forms:
