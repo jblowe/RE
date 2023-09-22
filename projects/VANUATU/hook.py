@@ -188,7 +188,7 @@ def write_parameters_file():
                 .toprettyxml(indent='   '))
     print('parameters file written')
 
-def run_load_hooks(settings):
+def run_load_hooks(arg, settings):
     print('running these')
     write_vanuatu_data(*read_toolbox_file())
     write_parameters_file()

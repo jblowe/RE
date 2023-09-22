@@ -44,7 +44,7 @@ def fuzzy_lexicons(mapping, settings):
                          for lexicon in attested_lexicons.values()}
 
 
-def run_load_hooks(settings):
+def run_load_hooks(arg, settings):
     if 'fuzzy' in settings.other:
         fuzzy_lexicons(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
                        settings)
