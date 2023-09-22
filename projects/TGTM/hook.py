@@ -84,19 +84,20 @@ def generate_xml_data():
         with open('pipeline.sh', 'r', encoding='utf-8') as commands:
             for command in commands:
                 if command[0] == '#':
-                    print(command.strip())
+                    # print(command.strip())
                     continue
                 if 'perl' in command or 'python' in command:
                     command = command.replace('$1', code_dir)
-                    print(command.strip())
+                    # print(command.strip())
                     exit_code = os.system(command.strip())
                     if exit_code != 0:
                         sys.exit(exit_code)
 
-def run_load_hooks(settings):
+def run_load_hooks(arg, settings):
     generate_xml_data()
-    if 'fuzzy' in settings.other:
-        fuzzy_table(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzy'])),
+    if arg.fuzzy is not None:
+        print(f"fuzzying using {settings.other['fuzzies'][arg.fuzzy]}")
+        fuzzy_table(read.read_fuzzy_file(os.path.join(base_dir, settings.other['fuzzies'][arg.fuzzy])),
                     settings)
     else:
         return
