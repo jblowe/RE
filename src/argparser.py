@@ -70,8 +70,12 @@ def parse_coverage():
     return parser
 
 def parse_all_glosses():
-    parser = argparse.ArgumentParser(description='List all glosses in a project')
+    parser = argparse.ArgumentParser(description='List and analyze all glosses in a project')
     parser.add_argument('project')
+    parser.add_argument('experiment')
+    parser.add_argument('-m', '--mel',
+                        metavar='mel',
+                        help='name of the MEL desired')
     return parser
 
 command_parser = argparse.ArgumentParser(description='The Reconstruction Engine.')
@@ -83,7 +87,7 @@ parser = (parse_upstream() if command_args.command == 'upstream'
           else parse_coverage() if command_args.command == 'coverage'
           else parse_new_experiment() if command_args.command == 'new-experiment'
           else parse_delete_experiment() if command_args.command == 'delete-experiment'
-          else parse_all_glosses() if command_args.command == 'list-all-glosses'
+          else parse_all_glosses() if command_args.command == 'analyze-glosses'
           else raise_unknown_command(command_args.command))
 
 args = parser.parse_args(sys.argv[2:])
