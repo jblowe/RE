@@ -15,4 +15,4 @@ sys.stdout.write(
     ET.tostring(xml2html(sys.argv[1], sys.argv[2]),
                 pretty_print=True,
                 xml_declaration=True,
-                encoding='ascii').decode('ascii'))
+                encoding='utf-8').decode('utf-8'))
