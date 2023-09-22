@@ -113,7 +113,6 @@ class TableOfCorrespondences:
         self.correspondences.append(correspondence)
 
     def add_rule(self, rule):
-        print(rule)
         self.rules.append(rule)
 
     def rule_view(self):
