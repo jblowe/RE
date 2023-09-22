@@ -75,9 +75,12 @@
                         <span style="background-color: red;color: white"><xsl:value-of select="."/></span>
                     </xsl:when>
                     <xsl:otherwise>
-                         <span style="background-color: white;color: black"><xsl:value-of select="."/></span>
+                        <span style="background-color: white;color: black"><xsl:value-of select="."/></span>
                     </xsl:otherwise>
                     </xsl:choose>
+                    <xsl:if test="@xml:lang">
+                        <sub><xsl:value-of select="@xml:lang"/></sub>
+                    </xsl:if>
                     <xsl:if test="@uses">
                         &#160;<xsl:value-of select="@uses"/>
                     </xsl:if>
