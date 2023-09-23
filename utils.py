@@ -191,6 +191,8 @@ def determine_file_type(file_path, display):
             return 'sets2tabular.xsl'
     elif 'mel.xml' in file_path:
         return 'mel2html.xsl'
+    elif 'coverage.statistics.xml' in file_path:
+        return 'mel2html.xsl'
     elif 'statistics.xml' in file_path:
         return 'stats2html.xsl'
     elif 'compare.xml' in file_path:

@@ -11,15 +11,15 @@
             <small>click to perform 'upstream' computations</small>
         </h6>
         <form method="post" action="/make/{{data['project']}}/{{data['experiment']}}">
-        <div id="upstream" style="display:none;">
-            % include('parameters.tpl')
-        </div>
+            <div id="upstream" style="display:none;">
+                % include('parameters.tpl')
+            </div>
+        </form>
         % if data['num_files'] > 0:
             % include('render_experiment.tpl')
         % else:
             <hr/>
         % end
-        </form>
     </div>
     % if 'content' in data:
         <div id="content" class="col-sm-8">
