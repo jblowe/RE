@@ -24,39 +24,33 @@
             </h4>
             <h6>n = <xsl:value-of select="count(entry)" /></h6>
             <div class="table-responsive">
-            <table class="table table-sm" border="1">
-                <thead/>
+            <table class="table table-sm table-striped sortable">
+                <thead>
+                    <tr>
+                        <th>Form</th>
+                        <th>Computed (Alternate) Gloss</th>
+                        <th>ID</th>
+                    </tr>
+                </thead>
                 <xsl:for-each select="entry">
-                    <tr class="table-secondary">
-                        <th>
-                        <xsl:apply-templates select="@id"/>
-                        </th>
-                        <th>
-                        <b><xsl:value-of select="hw"/></b>
-                        </th>
-                        <th>
+                    <tr>
+                        <td><xsl:apply-templates select="hw"/></td>
+                        <td>
                             <xsl:for-each select="ngl">
                                 <i><xsl:value-of select="." /></i>
                                 <xsl:if test="position() != last()">, </xsl:if>
                             </xsl:for-each>
-                        </th>
+                        </td>
+                        <td><xsl:apply-templates select="@id"/></td>
                     </tr>
-                    <xsl:apply-templates/>
                 </xsl:for-each>
             </table>
             </div>
         </div>
     </xsl:template>
 
-    <xsl:template match="*">
-        <tr>
-            <td>
-                <xsl:value-of select="name(.)" />
-            </td>
-            <td colspan="2">
-                <xsl:value-of select="." />
-            </td>
-        </tr>
+    <xsl:template match="gl|hw">
+            <xsl:apply-templates/>
     </xsl:template>
 
 </xsl:stylesheet>
