@@ -118,6 +118,7 @@ def download_project(tree, project, filename):
 
 @post('/compare/<project:re:.*>/<experiment:re:.*>')
 def compare(project, experiment):
+    x = request.forms
     runs = [i.replace(f'{project}.', '').replace('.sets.xml', '') for i in request.forms if i not in 'compare'.split()]
     alerts, success = run_make.compare(project, experiment, runs)
     errors = alerts if not success else None

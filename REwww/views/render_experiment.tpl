@@ -10,9 +10,6 @@
                     <tr>
                       <td colspan="2">
                         <h6 class="subheadr">{{file_type}}</h6>
-                          % if 'sets' == file_type:
-                            to compare sets: check 2 &amp; click <button class="btn btn-xs btn-primary" name="compare">compare</button>
-                          % end
                       </td>
                     </tr>
                   % end
@@ -52,6 +49,15 @@
                             <td><a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?tabular">{{short_file}}</a></td>
                         </tr>
                       % end
+
+                  % if 'sets' == file_type:
+                    <tr>
+                      <td colspan="2">
+                      <hr/>
+                      check 2 above to <button class="btn btn-xs btn-primary" name="compare">compare</button>
+                      </td>
+                    </tr>
+                  % end
                 % end
                 </tbody>
             </table>

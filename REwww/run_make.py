@@ -2,9 +2,9 @@ import subprocess
 import os
 import time
 
+PYTHON = 'python3'
 
 def make(project, experiment, parameters):
-    PYTHON = 'python3'
     messages = []
     if True:
         elapsed_time = time.time()
@@ -51,7 +51,6 @@ def make(project, experiment, parameters):
 
 
 def compare(project, experiment, runs):
-    PYTHON = 'python3'
     messages = []
 
     elapsed_time = time.time()
