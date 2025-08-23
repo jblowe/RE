@@ -35,7 +35,9 @@ time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run none --recon stand
 time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run hand --mel hand --recon standard -z fuzzy -w > /dev/null
 [ $? -ne 0 ] && exit 0;
 # compare hand to none
-time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
+time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.hand-none.compare.txt
+time python3 REcli.py coverage ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} hand > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.hand.coverage.txt
+
 
 for mel in clics wordnet
 do

@@ -12,22 +12,31 @@
     <xsl:template match="/">
         <html>
             <head>
+                <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
             </head>
             <body>
-                <h4>Meaning Equivalence List</h4>
-                <h5>MEL statistics</h5>
+                <a name="top">
+                    <h4>Meaning Equivalence List</h4>
+                </a>
+                <div style="float: right; width:200px;">
+                    <a href="#unmatched">
+                        <xsl:value-of select="count(.//unmatched/mel/gl)"/>
+                        unmatched glosses by language
+                    </a>
+                </div>
                 <xsl:apply-templates select=".//totals"/>
-                <h5>MELs</h5>
                 <xsl:apply-templates select=".//semantics"/>
                 <!-- e.g.
                 <mel id="wn1">
                     <gl>ginseng</gl>
                 -->
+                <xsl:apply-templates select=".//unmatched"/>
             </body>
         </html>
     </xsl:template>
 
     <xsl:template match="totals">
+        <h5>MEL statistics</h5>
         <div class="table-responsive">
         <table class="table-sm table-striped sortable">
             <thead>
@@ -47,6 +56,23 @@
     </xsl:template>
 
     <xsl:template match="semantics">
+        <h5>MELs</h5>
+        <xsl:call-template name="mel_header"/>
+    </xsl:template>
+
+    <xsl:template match="unmatched">
+        <a name="unmatched">
+            <h5>Unmatched Glosses, by language</h5>
+        </a>
+        <div style="float: right; width:200px;">
+            <a href="#top">
+                top
+            </a>
+        </div>
+        <xsl:call-template name="mel_header"/>
+    </xsl:template>
+
+    <xsl:template name="mel_header">
         <div class="table-responsive">
         <table class="table-sm table-striped sortable">
             <thead>
@@ -62,7 +88,7 @@
 
     <xsl:template match="mel">
         <tr>
-            <td>
+            <td style="vertical-align: top">
                 <xsl:value-of select="@id"/>
             </td>
             <td>
@@ -72,10 +98,10 @@
                         <span style="background-color: pink;color: white"><xsl:value-of select="."/></span>
                     </xsl:when>
                     <xsl:when test="@uses = '0'">
-                        <span style="background-color: red;color: white"><xsl:value-of select="."/></span>
+                        <span style="background-color: hotpink;color: white"><xsl:value-of select="."/></span>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span style="background-color: white;color: black"><xsl:value-of select="."/></span>
+                        <span style="background-color: antiquewhite;color: black"><xsl:value-of select="."/></span>
                     </xsl:otherwise>
                     </xsl:choose>
                     <xsl:if test="@xml:lang">

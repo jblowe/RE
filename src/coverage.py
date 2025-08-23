@@ -24,12 +24,14 @@ def check_mel_coverage(settings):
         number_of_mels += 1
     attested_lexicons = read.read_attested_lexicons(settings)
     mel_stats = dict([(x, 0) for x in mel_glosses])
+    glosses = Counter()
     for language in attested_lexicons:
         glosses_not_matched_by_language[language] = set()
         matched = 0
         not_matched = 0
         forms = len(attested_lexicons[language].forms)
         for gloss in utils.glosses_by_language(attested_lexicons[language]):
+            glosses[gloss] += 1
             matched_terms = search_mels(gloss, mel_glosses)
             if len(matched_terms) == 0:
                 not_matched += 1
@@ -44,7 +46,7 @@ def check_mel_coverage(settings):
 
         print(f'{language}: {matched + not_matched} distinct glosses, {matched} matched, {not_matched} did not match, {forms} forms')
         coverage_statistics.language_stats[language] = {
-            'distinct_glosses': matched + not_matched,
+            'input_glosses': matched + not_matched,
             'matched': matched,
             'not_matched': not_matched,
             'forms': forms
@@ -63,11 +65,14 @@ def check_mel_coverage(settings):
     unused_mels = Counter([mel_usage[m]['usage'] for m in mel_usage.keys()])
     unused_mel_glosses = Counter([mel_stats[m] for m in mel_stats.keys()])
 
-    coverage_statistics.add_stat('matched', all_matched)
-    coverage_statistics.add_stat('not_matched', all_not_matched)
-    coverage_statistics.add_stat('forms', all_forms)
+    coverage_statistics.add_stat('distinct_input_glosses', len(glosses))
+    # coverage_statistics.add_stat('not_matched', all_not_matched)
+    # coverage_statistics.add_stat('forms', all_forms)
     coverage_statistics.add_stat('unused_mels', unused_mels[False])
     coverage_statistics.add_stat('number_of_mels', number_of_mels)
+    coverage_statistics.add_stat('number_of_mels_glosses', len(mel_glosses))
+    coverage_statistics.add_stat('unused_mel_glosses', unused_mel_glosses[0])
+    coverage_statistics.add_stat('used_mel_glosses', len(mel_glosses) - unused_mel_glosses[0])
     # coverage_statistics.add_stat('mel_glosses', mel_glosses)
 
     coverage_statistics.unmatched_by_language = glosses_not_matched_by_language
@@ -85,3 +90,8 @@ def check_mel_coverage(settings):
     #         print(glosses_not_matched_by_language[language])
 
     return coverage_statistics
+
+def check_glosses(settings, args, glosses):
+    x = settings
+    g = glosses
+    pass

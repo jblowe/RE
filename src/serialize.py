@@ -239,21 +239,45 @@ def serialize_stats(stats, settings, args, filename):
     for s in totals:
         ET.SubElement(runstats, s).set('value', str(totals[s]))
 
-    corrs = ET.SubElement(root, 'correspondences')
-    for c in sorted(stats.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
-        if c in stats.correspondences_used_in_sets:
-            set_count = stats.correspondences_used_in_sets[c]
-        else:
-            set_count = 0
-        corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
-        ET.SubElement(corr, 'used_in_reconstructions').set('value', str(stats.correspondences_used_in_recons[c]))
-        ET.SubElement(corr, 'used_in_sets').set('value', str(set_count))
-        #print(f'{c}', '%s %s' % (stats.correspondences_used_in_recons[c], set_count))
-    ET.SubElement(corrs, 'correspondences_used').set('value', str(len(stats.correspondences_used_in_recons)))
+    if len(stats.correspondences_used_in_recons) > 0:
+        corrs = ET.SubElement(root, 'correspondences')
+        for c in sorted(stats.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
+            if c in stats.correspondences_used_in_sets:
+                set_count = stats.correspondences_used_in_sets[c]
+            else:
+                set_count = 0
+            corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
+            ET.SubElement(corr, 'used_in_reconstructions').set('value', str(stats.correspondences_used_in_recons[c]))
+            ET.SubElement(corr, 'used_in_sets').set('value', str(set_count))
+            #print(f'{c}', '%s %s' % (stats.correspondences_used_in_recons[c], set_count))
+        ET.SubElement(corrs, 'correspondences_used').set('value', str(len(stats.correspondences_used_in_recons)))
 
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
 
+
+    try:
+        if len(stats.mel_usage.items()) > 0:
+            semantics = ET.SubElement(root, 'semantics')
+            for mel in stats.mel_usage.items():
+                entry = ET.SubElement(semantics, 'mel', attrib={'id': mel[0]})
+                for gl in mel[1]:
+                    if gl == 'usage': continue
+                    gl_element = ET.SubElement(entry, 'gl', attrib={'uses': str(mel[1][gl])})
+                    gl_element.text = gl
+    except:
+        pass
+
+    try:
+        if len(stats.unmatched_by_language.items()) > 0:
+            unmatched = ET.SubElement(root, 'unmatched')
+            for lg in stats.unmatched_by_language:
+                unmatched_by_language = ET.SubElement(unmatched, 'mel', attrib={'id': lg})
+                for g in sorted(stats.unmatched_by_language[lg]):
+                    gl_element = ET.SubElement(unmatched_by_language, 'gl')
+                    gl_element.text = g
+    except:
+        pass
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))

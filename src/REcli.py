@@ -72,7 +72,7 @@ elif command_args.command == 'delete-experiment':
     else:
         print(f'{directory} does not exist, not deleted')
 elif command_args.command == 'compare' or command_args.command == 'diff':
-    both = f'{args.run1}+{args.run2}'
+    both = f'{args.run1}-and-{args.run2}'
     parameters_file = os.path.join(args.experiment_path1,
                                    f'{args.project}.master.parameters.xml')
 
