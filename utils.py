@@ -142,12 +142,12 @@ def file_content(file_path, display):
         f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = '<pre>' + limit_lines(data, 10000) + '</pre>'
+        data = '<pre>' + limit_lines(data, 30000) + '</pre>'
     elif '.csv' in file_path:
         f = open(file_path, 'r')
         data = f.read()
         f.close()
-        data = reformat(data, 10000)
+        data = reformat(data, 30000)
     else:
         data = '<p style="color: red">Not a type of file that can be displayed here, sorry!</p>'
     return data, get_info(file_path)

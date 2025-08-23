@@ -46,7 +46,7 @@
                             % else:
                                <td><a href="/download_file/experiment/{{data['project']}}/{{data['experiment']}}/{{file}}"><span class="fas fa-download"></span></a></td>
                             % end
-                            <td><a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}?tabular">{{short_file}}</a></td>
+                            <td><a href="/get_file/experiments/{{data['project']}}/{{data['experiment']}}/{{file}}">{{short_file}}</a></td>
                         </tr>
                       % end
 
