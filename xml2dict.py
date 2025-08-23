@@ -31,20 +31,20 @@ def dict_to_etree(d):
             pass
         elif isinstance(d, str):
             root.text = d
-        elif isinstance(d, dict):
+        elif isinstance(d, dict) or isinstance(d, defaultdict):
             for k, v in d.items():
                 assert isinstance(k, str)
                 if k.startswith('#'):
                     assert k == '#text' and isinstance(v, str)
                     root.text = v
                 elif k.startswith('@'):
-                    assert isinstance(v, str)
-                    root.set(k[1:], v)
+                    # assert isinstance(v, str)
+                    root.set(k[1:], str(v))
                 elif isinstance(v, list):
                     for e in v:
-                        _to_etree(e, ET.SubElement(root, k))
+                        _to_etree(str(e), ET.SubElement(root, k))
                 else:
-                    _to_etree(v, ET.SubElement(root, k))
+                    _to_etree(str(v), ET.SubElement(root, k))
         else:
             raise TypeError('invalid type: ' + str(type(d)))
 
