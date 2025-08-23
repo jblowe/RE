@@ -23,22 +23,22 @@ dirname = os.path.dirname(os.path.abspath(__file__))
 BaseTemplate.defaults['footer_info'] = utils.add_time_and_version()
 
 
-@route('/static/<filename:re:.*\.(ico|jpg|png|gif)>')
+@route('/static/<filename:re:.*\\.(ico|jpg|png|gif)>')
 def send_ico(filename):
     return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'images'))
 
 
-@route('/static/<filename:re:.*\.css(.map)?>')
+@route('/static/<filename:re:.*\\.css(.map)?>')
 def send_css(filename):
     return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'css'))
 
 
-@route('/static/<filename:re:.*\.js(.map)?>')
+@route('/static/<filename:re:.*\\.js(.map)?>')
 def send_js(filename):
     return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'js'))
 
 
-@route('/webfonts/<filename:re:.*\.(woff2?|ttf|svg)>')
+@route('/webfonts/<filename:re:.*\\.(woff2?|ttf|svg)>')
 def send_font(filename):
     return static_file(filename, root=dirname + os.sep + os.path.join('static', 'asset', 'webfonts'))
 
@@ -118,7 +118,6 @@ def download_project(tree, project, filename):
 
 @post('/compare/<project:re:.*>/<experiment:re:.*>')
 def compare(project, experiment):
-    x = request.forms
     runs = [i.replace(f'{project}.', '').replace('.sets.xml', '') for i in request.forms if i not in 'compare'.split()]
     alerts, success = run_make.compare(project, experiment, runs)
     errors = alerts if not success else None
@@ -288,5 +287,4 @@ def plot(type, data):
     # return response
 
 
-# application = default_app()
-run()
+# run()

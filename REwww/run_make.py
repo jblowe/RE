@@ -28,15 +28,24 @@ def make(project, experiment, parameters):
             os.chdir(os.path.join('..', 'src'))
             try:
                 messages.append(' '.join([PYTHON, 'REcli.py', 'upstream', ] + cli))
-                p_object = subprocess.call([PYTHON, 'REcli.py', 'upstream'] + cli,
+                venv_path = "/home/ubuntu/venv"
+
+                env = os.environ.copy()
+                env["PATH"] = f"{venv_path}/bin:" + env["PATH"]
+                env["VIRTUAL_ENV"] = venv_path
+                #  env["PYTHONHOME"] = ""
+                p_object = subprocess.run([PYTHON, 'REcli.py', 'upstream'] + cli,
+                                           env=env,
+                                           check=True,
+                                           text=True,
                                            stdout=open(f'../experiments/{project}/{experiment}/mostrecent.stdout.txt', 'w'),
                                            stderr=open(f'../experiments/{project}/{experiment}/mostrecent.stderr.txt', 'w'))
             except:
-                messages.append('failed.')
+                messages.append('failed' + p_object)
                 pass
             os.chdir(os.path.join('..', 'REwww'))
         elapsed_time = time.time() - elapsed_time
-        if p_object == 0:
+        if p_object.returncode == 0:
             if project == 'ALL':
                 messages.append('{:.2f} seconds. "make all" succeeded.'.format(elapsed_time))
             else:
@@ -44,13 +53,14 @@ def make(project, experiment, parameters):
             return messages, True
         else:
             if project == 'ALL':
-                messages.append('{:.2f} seconds. "make all" failed.'.format(elapsed_time))
+                messages.append('{:.2f} seconds. "make all" failed (returncode = {p_object.returncode}).'.format(elapsed_time))
             else:
-                messages.append('{:.2f} seconds. Upstream run failed.'.format(elapsed_time))
+                messages.append('{:.2f} seconds. Upstream run failed (returncode = {p_object.returncode}).'.format(elapsed_time))
             return messages, False
 
 
 def compare(project, experiment, runs):
+    PYTHON = 'python3'
     messages = []
 
     elapsed_time = time.time()
