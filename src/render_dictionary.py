@@ -309,7 +309,7 @@ def generate_html(entries_by_letter):
           const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
           const nodes = [];
           while (tw.nextNode()) nodes.push(tw.currentNode);
-        
+
           for (const node of nodes){
             const text = node.nodeValue;
             // Build folded string + map from folded index -> original index
@@ -320,21 +320,21 @@ def generate_html(entries_by_letter):
               folded += f;
               for (let k=0; k<f.length; k++) map.push(i);
             }
-        
+
             let pos = 0, prevOrig = 0, changed = false;
             const frag = document.createDocumentFragment();
-        
+
             while (true){
               const hit = folded.indexOf(qf, pos);
               if (hit === -1) break;
               const startOrig = map[hit];
               const endOrig = map[hit + qf.length - 1] + 1;
-        
+
               if (startOrig > prevOrig) frag.appendChild(document.createTextNode(text.slice(prevOrig, startOrig)));
               const mark = document.createElement('mark');
               mark.textContent = text.slice(startOrig, endOrig);
               frag.appendChild(mark);
-        
+
               prevOrig = endOrig;
               pos = hit + qf.length;
               changed = true;
