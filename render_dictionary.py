@@ -287,6 +287,7 @@ def generate_html(entries_by_letter):
             const long = clone.querySelector('.long');
             if (long) long.style.display = 'none';
             resultsDiv.appendChild(clone);
+            highlightInElementFold(clone.querySelector('.short'), input.value);
           }
         });
 
@@ -301,6 +302,49 @@ def generate_html(entries_by_letter):
         const firstLink = document.querySelector('#letter-nav .nav-link');
         if (firstLink) firstLink.classList.add('active');
       });
+      function fold(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
+      function highlightInElementFold(el, query){
+          if (!el || !query) return;
+          const qf = fold(query);
+          const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+          const nodes = [];
+          while (tw.nextNode()) nodes.push(tw.currentNode);
+        
+          for (const node of nodes){
+            const text = node.nodeValue;
+            // Build folded string + map from folded index -> original index
+            let folded = '';
+            const map = [];
+            for (let i=0; i<text.length; i++){
+              const f = fold(text[i]);
+              folded += f;
+              for (let k=0; k<f.length; k++) map.push(i);
+            }
+        
+            let pos = 0, prevOrig = 0, changed = false;
+            const frag = document.createDocumentFragment();
+        
+            while (true){
+              const hit = folded.indexOf(qf, pos);
+              if (hit === -1) break;
+              const startOrig = map[hit];
+              const endOrig = map[hit + qf.length - 1] + 1;
+        
+              if (startOrig > prevOrig) frag.appendChild(document.createTextNode(text.slice(prevOrig, startOrig)));
+              const mark = document.createElement('mark');
+              mark.textContent = text.slice(startOrig, endOrig);
+              frag.appendChild(mark);
+        
+              prevOrig = endOrig;
+              pos = hit + qf.length;
+              changed = true;
+            }
+            if (changed){
+              if (prevOrig < text.length) frag.appendChild(document.createTextNode(text.slice(prevOrig)));
+              node.parentNode.replaceChild(frag, node);
+            }
+          }
+        }
     </script>
     """
 
@@ -372,6 +416,7 @@ def generate_html(entries_by_letter):
           opacity: .8;            /* subtle */
           font-style: italic;     /* often transliteration */
         }}
+        #search-results mark {{ background: #fff3cd; padding: 0 .1em; }}
       </style>
     </head>
     <body>
