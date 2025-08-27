@@ -220,6 +220,228 @@ def generate_html(entries_by_letter):
             </div>'''
         content_divs += f'<div class="letter-section" id="section-{esc(letter)}" style="display:none;">{entry_divs}</div>'
 
+    style = """
+/* ===== 1) Base fonts & typography ===== */
+:root{
+  --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, Consolas, Menlo, monospace;
+}
+html, body{
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.small-caps{
+  font-variant-caps: small-caps;
+  font-size: 0.5em;
+  line-height: 1;
+}
+
+/* ===== 2) Topbar header (mobile-first) ===== */
+.topbar{
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; align-items: center; gap: 1rem;
+  background: #A51931; color: #fff;
+  padding: .5rem .75rem; border-bottom: none;
+}
+/* Title link: white, no hover underline */
+.topbar > a:first-of-type{
+  color:#fff; text-decoration:none; font-weight:600;
+}
+.topbar > a:first-of-type:hover,
+.topbar > a:first-of-type:focus{
+  text-decoration:none; /* no hover effect */
+}
+/* Accessible focus ring */
+.topbar > a:first-of-type:focus-visible{
+  outline:2px solid #fff; outline-offset:2px;
+}
+
+/* Hidden checkbox & hamburger icon */
+.menu-toggle{ position:absolute; left:-9999px; }
+.hamburger{ display:block; cursor:pointer; margin-left:auto; padding:.25rem; }
+.hamburger span{ display:block; width:24px; height:2px; background:#fff; margin:5px 0; }
+
+/* ===== 3) Navlinks — single source of truth ===== */
+/* Mobile-first: dropdown is WHITE panel with BLACK links */
+.navlinks{
+  display:none;
+  position:absolute; left:0; right:0; top:100%;
+  background:#fff; color:#111;
+  border:1px solid #e5e7eb;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+  padding:.5rem;
+  flex-direction:column; gap:0;
+}
+.navlinks a{
+  color:#111; text-decoration:none;
+  padding:.5rem; border-radius:.375rem;
+}
+.navlinks a:hover, .navlinks a:focus{
+  background:#f2f2f2; color:#111;
+}
+/* Toggle open */
+.menu-toggle:checked ~ .navlinks{ display:flex; }
+
+/* Desktop (≥768px): right-justified, transparent on crimson, WHITE links */
+@media (min-width:768px){
+  .hamburger{ display:none; }
+  .navlinks{
+    margin-left:auto;
+    position:static; background:transparent; border:0; box-shadow:none;
+    display:flex; flex-direction:row; gap:.75rem; padding:0;
+  }
+  .navlinks a{
+    background:transparent; color:#fff; padding:.25rem .5rem; border-radius:.375rem;
+  }
+  .navlinks a:hover, .navlinks a:focus{
+    background:rgba(255,255,255,.18); color:#fff;
+  }
+}
+
+/* ===== 4) Letter navbar (Bootstrap-like nav-pills) ===== */
+#letter-nav{
+  display:flex; flex-wrap:wrap; align-items:center;
+  gap:.25rem; padding:.25rem;
+  background:#f8f9fa; border:1px solid #e9ecef; border-radius:.5rem;
+}
+#letter-nav .nav-link{
+  display:inline-block; padding:.25rem .5rem;
+  font-size:1.0rem; line-height:1.0;
+  color:#0d6efd; text-decoration:none;
+  border:1px solid transparent; border-radius:9999px; /* pill */
+  transition:background-color .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+#letter-nav .nav-link:hover{
+  background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2);
+}
+#letter-nav .nav-link.active{
+  color:#fff; background:#0d6efd; border-color:#0d6efd;
+}
+#letter-nav .nav-link:focus-visible{
+  outline:none; box-shadow:0 0 0 .2rem rgba(13,110,253,.25);
+}
+#letter-nav .nav-link.disabled{ pointer-events:none; opacity:.5; }
+
+/* ===== 5) Dictionary entries ===== */
+p{
+  text-indent:-1.5em; margin-left:1.5em; margin-bottom:0.2em;
+}
+p.no-hang { 
+  text-indent: 0; 
+  margin-left: 0; 
+}
+dt {
+font-style:italic;
+font-weight:bold;
+}
+.short{ cursor:pointer; }
+.short:hover{ background:#f8f9fa; }
+.entry.expanded{
+  background:#f7f7f7; border-color:#e2e3e5;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* Full-width search row */
+.searchbar{
+  display:flex; align-items:stretch; gap:.5rem;
+  width:100%; margin:.75rem 0;
+}
+.searchbar input[type="text"]{
+  flex:1 1 auto; min-width:0;
+  font-size:1rem; padding:.5rem .75rem;
+  border:1px solid #ced4da; border-radius:.375rem;
+}
+.searchbar button{
+  flex:0 0 auto;
+  font-size:1rem; padding:.5rem .9rem;
+  border:1px solid #ced4da; border-radius:.375rem;
+  background:#fff; cursor:pointer;
+}
+.searchbar button:hover{ background:#f1f3f5; }
+
+#search-results .long{ display:none; }               /* keep search results “short” */
+#search-results mark{ background:#fff3cd; padding:0 .1em; }  /* highlight hits */
+
+.dfn{ margin-left:.35rem; opacity:.85; font-style:italic; }
+
+/* Minimal replacements for Bootstrap badge utilities used in markup */
+.text-bg-secondary{ background:#6c757d; color:#fff; }
+.ms-1{ margin-left:.25rem; }
+.badge.level{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.15em .45em; line-height:1.15; font-size:.85em; border-radius:9999px;
+}
+
+/* ===== 6) Static “pages” (About / Credits) ===== */
+.hidden{ display:none !important; }
+.page-view{
+  position:relative; display:block; min-height:60vh;
+  max-width:900px; margin:1rem auto; padding:1rem 1.25rem;
+  background:#fff; border:1px solid #e5e7eb; border-radius:.5rem;
+  box-shadow:0 1px 2px rgba(0,0,0,.04);
+}
+.page-view .lead{ font-size:1.1rem; opacity:.9; }
+.page-view .back{
+  position:absolute; top:.75rem; right:.75rem;
+  font-size:.9rem; padding:.35rem .7rem;
+  background:#fff; border:1px solid #ced4da; border-radius:.375rem; cursor:pointer;
+}
+.page-view .back:hover{ background:#f1f3f5; }
+
+/* back buttons/links: no underline in any state */
+.page-view .back,
+.page-view .back:link,
+.page-view .back:visited,
+.page-view .back:hover,
+.page-view .back:focus,
+.page-view .back:active {
+  text-decoration: none;
+  color: inherit; /* keep current text color */
+}
+
+/* CSS-only view switching (About shown by default) */
+#views > *{ display:none; }
+#views > #page-about{ display:block; }
+
+/* Show About */
+#about:target ~ #views > *{ display:none; }
+#about:target ~ #views > #page-about{ display:block; }
+
+/* Show Credits */
+#credits:target ~ #views > *{ display:none; }
+#credits:target ~ #views > #page-credits{ display:block; }
+
+/* Show Dictionary */
+#dictionary:target ~ #views > *{ display:none; }
+#dictionary:target ~ #views > #dictionary-view{ display:block; }
+
+/* Reduce jump under sticky header when following hash */
+#about, #credits, #dictionary{ scroll-margin-top: 72px; }
+
+/* ===== 7) Mobile tweaks (iPhone readability, denser pills, smaller title) ===== */
+@media (max-width:576px){
+  html{ font-size: 18px; }
+
+  /* Smaller single-line title with ellipsis */
+  .topbar{ padding:.4rem .6rem; }
+  .topbar > a:first-of-type{
+    flex:1 1 auto; min-width:0;
+    font-size:.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .hamburger{ padding:.2rem; }
+  .hamburger span{ width:22px; }
+
+  /* Search & entries readability */
+  .searchbar input[type="text"],
+  .searchbar button{ font-size: 1.1rem; }
+  #letter-nav{ gap:.2rem; padding: 0.1rem; }
+  #letter-nav .nav-link{ font-size: 1.0rem; padding: 0.1rem 0.1rem; }
+  .short p, .long{ font-size:1.1rem; line-height:1.45; }
+  .page-view{ padding: 1rem; margin:.75rem auto; }
+  .page-view .back{ top:.5rem; right:.5rem; font-size:1rem; padding:.45rem .85rem; }
+}
+    """
     script = """
     <script>
       function toggleEntry(id) {
@@ -274,6 +496,19 @@ def generate_html(entries_by_letter):
           resetSearch();
           return;
         }
+        
+        // Debounce helper: run fn only after the user stops typing for N ms
+        function debounce(fn, ms = 200) {
+          let t;
+          return function (...args) {
+            clearTimeout(t);
+            t = setTimeout(() => fn.apply(this, args), ms);
+            };
+          }
+
+        // Create a debounced version of your existing handleSearch
+        // (handleSearch(input) should already be defined elsewhere)
+        window.debouncedSearch = debounce(handleSearch, 200);
 
         navBar.style.display = 'none';
         hideAllSections();
@@ -350,94 +585,114 @@ def generate_html(entries_by_letter):
 
     html = f"""
     <!DOCTYPE html>
-    <html lang=\"en\">
+    <html lang="en">
     <head>
-      <meta charset=\"UTF-8\">
+      <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
       <title>Tamang Dictionary</title>
-      <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
       <style>
-        .small-caps {{
-            font-variant: small-caps;
-            font-size: 0.5em;
-            line-height: 1;
-            }}
-        p {{
-            text-indent: -1.5em;
-            margin-left: 1.5em;
-            margin-bottom: 0.2em;
-            }}
-        .short {{ cursor: pointer; }}
-        .short:hover {{ background-color: #f8f9fa; }}
-        nav#letter-nav {{ flex-wrap: wrap; }}
-        #letter-nav {{
-          padding: 0.2rem;        /* shrink the nav container padding */
-          gap: 0.2rem;            /* tighten space between pills */
-        }}
-        #letter-nav .nav-link {{
-          padding: 0.15rem 0.4rem;  /* smaller pill padding */
-          margin: 0;                /* no extra margin */
-          font-size: 0.85rem;        /* slightly smaller text */
-          line-height: 1.1;          /* tighter vertical spacing */
-        }}
-        #search-results .long {{ display: none; }}
-        /* Shading for expanded entries (covers short + long) */
-        .entry.expanded {{
-          background-color: #f7f7f7;
-          border-color: #e2e3e5;
-          box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
-        }}
-        .dictionary-banner {{
-          background-color: #A51931;
-          color: white;
-          text-align: center;
-          padding: 0.2rem;
-        }}
-        /* If something upstream clips inline content, force visibility */
-        .entry .short {{ overflow: visible; }}
-        .badge {{ 
-            display: inline;
-            font-size: 0.95em;
-            padding: .2em .5em;
-        }}
-        
-        /* Mobile tweaks */
-        @media (max-width: 576px) {{
-          html {{ font-size: \18px; }}
-          body {{ -webkit-text-size-adjust: 115%; text-size-adjust: 115%; }}
-        
-          /* Optional: make nav pills & entry text a bit larger too */
-          #letter-nav .nav-link {{ font-size: 1.1rem; padding: 0.2rem 0.2rem; }}
-          .badge {{ font-size: 0.95rem; padding: .25em .55em; }}
-          .short p, .long {{ font-size: 1.1rem; line-height: 1.45; }}
-        }}
-        .dfn {{
-          margin-left: .35rem;
-          opacity: .8;            /* subtle */
-          font-style: italic;     /* often transliteration */
-        }}
-        #search-results mark {{ background: #fff3cd; padding: 0 .1em; }}
+        {style}
       </style>
     </head>
     <body>
-      <div class="dictionary-banner">
-        <h6 class="m-0">Tamang | Nepali – French – English Dictionary</h6>
-      </div>
-      <div class="container my-2">
-      <div class=\"input-group mb-3\">
-        <input type=\"text\" id=\"search-box\" class=\"form-control\" placeholder=\"Search entries...\" oninput=\"handleSearch(this)\">
-        <button class=\"btn btn-outline-secondary\" type=\"button\" onclick=\"resetSearch()\">Reset</button>
+<!-- Standalone header with hamburger -->
+
+<header class="topbar">
+  <a href="#dictionary">Tamang | Nepali – French – English Dictionary</a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+  <label for="menu-toggle" class="hamburger" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </label>
+
+  <nav class="navlinks">
+    <a href="#about" onclick="document.getElementById('menu-toggle').checked=false">About</a>
+    <a href="#credits" onclick="document.getElementById('menu-toggle').checked=false">Credits</a>
+  </nav>
+</header>
+
+<!-- invisible anchors used by :target -->
+<span id="about" aria-hidden="true"></span>
+<span id="credits" aria-hidden="true"></span>
+<span id="dictionary" aria-hidden="true"></span>
+
+<!-- About page (hidden by default) -->
+<div id="views">
+  <!-- About is default (visible when no hash) -->
+  <section id="page-about" class="page-view">
+    <a class="back" href="#dictionary">Close</a>
+    <h2>About</h2>
+    <p class="lead no-hang">
+    This is an early prototype of an online dictionary for the
+    Tamang language of Nepal that works on both mobile devices
+    and "desktop" computers. It is built as a single standalone
+    HTML page: it requires a web browser but does not require a
+    connection to the internet.
+    </p>
+    <p class="no-hang">
+    Two facilities for searching the dictionary are provided:
+    <ul>
+    <li>Point-and-click searching using the ordered initial
+    "letters" shown in the navigation bar.</li>
+    <li>A "search box" that performs an instantaneous
+    <i>free text</i> search of the entire dictionary.</li>
+    </ul>
+    </p>
+    <p class="no-hang">
+    The dictionary contains 3,517 entries, and most have definitions
+    in three languages: Nepali (in Devanagari with transliteration),
+    French, and English. 
+    </p>
+    <p class="no-hang">
+    Continue to <a href="./dictionary.html#dictionary">The Dictionary</a>. 
+    </p>
+
+  </section>
+
+<!-- Credits page (hidden by default) -->
+  <section id="page-credits" class="page-view">
+    <a class="back" href="#dictionary">Close</a>
+    <h2>Acknowledgements</h2>
+    <dl>
+      <dt>Dictionary</dt> <dd>the machine-reaable dictionary used in this application is a
+      work-in-progress of Martine Mazaudon (CNRS). The dictionary is the result of
+      over 50 years of fieldwork in Nepal and careful lexicography. The original
+      digital version is in 
+      <a href="http://www.montler.net/lexware/" target="_blank">Lexware</a> format,
+      a dictionary tool written some 60 years ago.
+      ago.
+      </dd>
+      <dt>Software</dt> <dd>the "HTML only" version of the dictionary was created by a Python
+      script written by John B. Lowe (UC Berkeley) with the help with ChatGPT. The CSS styling is
+      based on Bootstrap 5, but the CSS and Javascript needed to drive the application
+      was extracted and included inline. The page can be found on the web at
+      <a href="https://projects.johnblowe.com/dictionary.html">https://projects.johnblowe.com/dictionary.html</a>
+      </dd>
+    </dl>
+    <p class="no-hang">
+    Please send comments, suggestions, indeed any feedback to
+    <a href="mailto:example@example.com">the creators</a>. We would love to hear what you think.
+    </p>
+    </section>
+    
+  <div id="dictionary-view">
+      
+      <div class="searchbar">
+        <input id="search-box" type="text" placeholder="Search entries..."
+        oninput="(window.debouncedSearch || handleSearch)(this)">
+        <button type="button" onclick="resetSearch()">Reset</button>
       </div>
 
       {nav_bar}
 
       {content_divs}
 
-      <div id=\"search-results\" class=\"mt-4\" style=\"display:none;\"></div>
-
+      <div id="search-results" class="mt-4" style="display:none;"></div>
       {script}
-    </body>
-    </html>
+    </div>
+  </div>
+</body>
+</html>
     """
     return html
 
