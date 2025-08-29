@@ -161,6 +161,22 @@ def interactive_project(project, experiment):
     return utils.check_template('index', data, request.forms)
 
 
+@route('/interactive_batch/<project:re:.*>/<experiment:re:.*>')
+def interactive_batch(project, experiment):
+    files, experiment_path, num_files = utils.data_files(os.path.join(utils.EXPERIMENTS, project), experiment)
+    experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)
+    experiment_info = utils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
+    if num_files == 0:
+        experiments, base_dir, data_elements = utils.list_of_experiments(project)
+        data = {'experiments': experiments, 'project': project, 'base_dir': base_dir,
+                'data_elements': data_elements, 'errors': ['No files in this experiment!']}
+    else:
+        languages, upstream_target, base_dir = utils.upstream('languages', [], project, experiment, request.forms, True)
+        languages = [(l, '') for l in languages]
+        data = {'interactive_batch': 'start', 'project': project, 'experiment': experiment, 'languages': languages,
+                'base_dir': base_dir, 'back': '/list_tree/projects', 'experiment_info': experiment_info}
+    return utils.check_template('index', data, request.forms)
+
 @route('/experiment/<project:re:.*>/<experiment:re:.*>')
 def show_experiment(project, experiment, messages=None, errors=None):
     experiments, exp_proj_path, data_elements = utils.list_of_experiments(project)

@@ -13,8 +13,8 @@ def make(project, experiment, parameters):
             try:
                 p_object = subprocess.call(['git', 'pull', '-v'])
                 p_object = subprocess.call(['make', '-w'],
-                                           stdout=open('make-all.stdout.txt', 'w'),
-                                           stderr=open('make-all.stderr.txt', 'w'))
+                                           stdout=open('make-all.stdout.log', 'w'),
+                                           stderr=open('make-all.stderr.log', 'w'))
             except:
                 messages.append('failed.')
                 pass
@@ -38,8 +38,8 @@ def make(project, experiment, parameters):
                                            env=env,
                                            check=True,
                                            text=True,
-                                           stdout=open(f'../experiments/{project}/{experiment}/mostrecent.stdout.txt', 'w'),
-                                           stderr=open(f'../experiments/{project}/{experiment}/mostrecent.stderr.txt', 'w'))
+                                           stdout=open(f'../experiments/{project}/{experiment}/mostrecent.stdout.log', 'w'),
+                                           stderr=open(f'../experiments/{project}/{experiment}/mostrecent.stderr.log', 'w'))
             except:
                 messages.append('failed' + p_object)
                 pass

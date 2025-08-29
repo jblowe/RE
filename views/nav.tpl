@@ -8,7 +8,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-      <div class="collapse navbar-collapse col-sm-3" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse col-sm-3" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-item nav-link active" href="/"><span class="fas fa-home" /></a>
           <a class="nav-item nav-link" href="/about"><span class="fas fa-info-circle" /></a>
