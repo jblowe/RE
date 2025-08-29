@@ -654,18 +654,17 @@ font-weight:bold;
     <a class="back" href="#dictionary">Close</a>
     <h2>Acknowledgements</h2>
     <dl>
-      <dt>Dictionary</dt> <dd>the machine-reaable dictionary used in this application is a
-      work-in-progress of Martine Mazaudon (CNRS). The dictionary is the result of
+      <dt>Dictionary</dt> <dd>the machine-readable dictionary used in this application is a
+      work-in-progress by Martine Mazaudon (CNRS). The dictionary is the result of
       over 50 years of fieldwork in Nepal and careful lexicography. The original
       digital version is in 
       <a href="http://www.montler.net/lexware/" target="_blank">Lexware</a> format,
-      a dictionary tool written some 60 years ago.
-      ago.
+      a computational dictionary tool written some 60 years ago.
       </dd>
-      <dt>Software</dt> <dd>the "HTML only" version of the dictionary was created by a Python
+      <dt>Software</dt> <dd>this "HTML only" version of the dictionary was created by a Python
       script written by John B. Lowe (UC Berkeley) with the help with ChatGPT. The CSS styling is
-      based on Bootstrap 5, but the CSS and Javascript needed to drive the application
-      was extracted and included inline. The page can be found on the web at
+      based on Bootstrap 5, but the minimal CSS and Javascript needed to drive the application
+      was extracted and is included inline. The page can be found on the web at
       <a href="https://projects.johnblowe.com/dictionary.html">https://projects.johnblowe.com/dictionary.html</a>
       </dd>
     </dl>
@@ -676,7 +675,6 @@ font-weight:bold;
     </section>
     
   <div id="dictionary-view">
-      
       <div class="searchbar">
         <input id="search-box" type="text" placeholder="Search entries..."
         oninput="(window.debouncedSearch || handleSearch)(this)">
