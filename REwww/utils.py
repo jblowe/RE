@@ -108,7 +108,7 @@ def data_files(tree, directory):
         to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
         num_files += len([f for f in filelist if f'{type}.txt' in f])
     other_files = []
-    for type in 'DAT DIS csv xls xlsx ods'.split(' '):
+    for type in 'DAT DIS csv xls xlsx ods log'.split(' '):
         [other_files.append(f) for f in filelist if f'.{type}' in f]
         num_files += len([f for f in filelist if f'.{type}' in f])
     to_display.append(('Other data types', other_files))

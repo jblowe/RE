@@ -18,6 +18,8 @@
                 % include('alerts.tpl')
                 % if 'interactive' in data:
                     % include('interactive.tpl')
+                % elif 'interactive_batch' in data:
+                    % include('interactive_batch.tpl')
                 % elif 'projects' in data:
                     % include('projects.tpl')
                 % elif 'experiment' in data:
