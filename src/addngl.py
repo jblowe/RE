@@ -49,7 +49,10 @@ def select_hw(dom):
             adjust_hw(hw_to_use)
             e.append(hw_to_use)
         else:
-            adjust_hw(hw)
+            hw_to_use = ET.Element('hw')
+            hw_to_use.text = hw.text
+            adjust_hw(hw_to_use)
+            e.append(hw_to_use)
     return dom
 
 def adjust_hw(element):
