@@ -481,7 +481,7 @@ if __name__ == "__main__":
     settings = read.read_settings_file(f'../projects/{args.project}/{args.project}.master.parameters.xml',
                                        mel=args.mel,
                                        recon=args.recon)
-    load_hooks.load_hook(args.project, settings)
+    load_hooks.load_hook(args.project, args, settings)
     # HACK: The statement above and the statement below are no longer
     # independent due to fuzzying in TGTM...
     attested_lexicons = read.read_attested_lexicons(settings)
