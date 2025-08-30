@@ -38,7 +38,7 @@ def make_pane(vexpand=False, hexpand=False):
 
 def make_labeled_entry(entry, label='Insert text here'):
     box = Gtk.Box()
-    label = Gtk.Label(label='Syllable regex:')
+    label = Gtk.Label(label=label)
     box.add(label)
     box.add(entry)
     return box
