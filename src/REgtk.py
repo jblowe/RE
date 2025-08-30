@@ -10,6 +10,10 @@ import os
 import load_hooks
 from argparser import args
 
+
+settings = Gtk.Settings.get_default()
+settings.set_property("gtk-xft-dpi", 112 * 1024)
+
 class WrappedTextBuffer():
     def __init__(self, buffer):
         self.buffer = buffer
