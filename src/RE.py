@@ -454,7 +454,8 @@ def make_tokenizer(parameters, accessor, next_map):
                         '#' in last.expanded_context[1]):
                     if match.partial is False:
                         parses.add(tuple(parse))
-                    attempts.add(tuple(parse))
+                    if Debug.debug:
+                        attempts.add(tuple(parse))
             # if the last token was marked as only word final then stop
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
