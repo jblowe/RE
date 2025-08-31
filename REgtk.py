@@ -296,7 +296,7 @@ def make_sets_view(model):
                                                text=2))
     return sets_view
 
-def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statistics_buffer):
+def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statistics_buffer, failed_forms_store):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     window = make_pane(vexpand=True)
     store = make_sets_store()
@@ -348,8 +348,13 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
                                          False)
         def update_model():
             store.clear()
+            failed_forms_store.clear()
             for form in proto_lexicon.forms:
                 store_row(None, form)
+            for failed_parse in proto_lexicon.statistics.failed_parses:
+                failed_forms_store.append([failed_parse.language,
+                                           failed_parse.glyphs,
+                                           failed_parse.gloss])
         sys.stdout = out
         GLib.idle_add(update_model)
 
@@ -448,13 +453,43 @@ class REWindow(Gtk.Window):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1400)
 
-        statistics_pane = make_pane(vexpand=True, hexpand=True)
-        statistics_view = Gtk.TextView()
-        statistics_pane.add(statistics_view)
-        statistics_buffer = WrappedTextBuffer(statistics_view.get_buffer())
+        # -----------------------------
+        # Stack-based statistics pane
+        # -----------------------------
+        self.statistics_stack = Gtk.Stack()
+        self.statistics_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
+        self.statistics_stack.set_transition_duration(200)
 
+        # Text log view
+        text_view_pane = make_pane(vexpand=True, hexpand=True)
+        text_view = Gtk.TextView()
+        text_view_pane.add(text_view)
+        self.statistics_buffer = WrappedTextBuffer(text_view.get_buffer())
+        self.statistics_stack.add_titled(text_view_pane, "log", "Log")
+
+        self.failed_forms_store = Gtk.ListStore(str, str, str)
+        failed_forms_view = Gtk.TreeView.new_with_model(self.failed_forms_store)
+        cell = Gtk.CellRendererText()
+        for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            failed_forms_view.append_column(column)
+        failed_forms_pane = make_pane(vexpand=True, hexpand=True)
+        failed_forms_pane.add(failed_forms_view)
+        self.statistics_stack.add_titled(failed_forms_pane, "failed", "Failed Parses")
+
+        # StackSwitcher to switch between views
+        stack_switcher = Gtk.StackSwitcher()
+        stack_switcher.set_stack(self.statistics_stack)
+
+        # -----------------------------
+        # Menu
+        # -----------------------------
         menu_bar = make_RE_menu_bar(self)
 
+        # -----------------------------
+        # Main layout
+        # -----------------------------
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         box.pack_start(menu_bar, False, False, 0)
 
@@ -467,8 +502,12 @@ class REWindow(Gtk.Window):
         right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         pane_layout.add2(right_pane)
         parameters_widget = make_parameters_widget(settings)
-        right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget, statistics_buffer))
-        right_pane.add2(statistics_pane)
+        right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget,
+                                         self.statistics_buffer, self.failed_forms_store))
+        stats_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        stats_box.pack_start(stack_switcher, False, False, 0)
+        stats_box.pack_start(self.statistics_stack, True, True, 0)
+        right_pane.add2(stats_box)  # add the stack here
 
         left_pane.add2(parameters_widget)
 
