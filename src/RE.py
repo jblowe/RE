@@ -59,6 +59,15 @@ class Lexicon:
         self.language = language
         self.forms = forms
         self.statistics = statistics
+        # Create an index of correspondences to ProtoForms using the
+        # correspondence and add it to the statistics object if there
+        # is one.
+        if statistics:
+            correspondence_index = collections.defaultdict(set)
+            for form in forms:
+                for correspondence in form.correspondences:
+                    correspondence_index[correspondence].add(form)
+            statistics.correspondence_index = correspondence_index
 
     def key_forms_by_glyphs_and_gloss(self):
         return {(form.glyphs, form.gloss): form for form in self.forms}
