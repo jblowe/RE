@@ -405,8 +405,10 @@ def make_apply_rules(parameters, language):
             candidates = next_candidates
             next_candidates = []
         return candidates
-
-    return apply_rules
+    if rules:
+        return apply_rules
+    else:
+        return lambda form: [(form, [])]
 
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
