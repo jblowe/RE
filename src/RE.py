@@ -6,6 +6,7 @@ import sys
 import serialize
 import collections
 import mel
+from functools import lru_cache
 from copy import copy, deepcopy
 
 class Debug:
@@ -418,6 +419,10 @@ def make_tokenizer(parameters, accessor, next_map):
         correspondences,
         accessor)
 
+    @lru_cache(maxsize=None)
+    def partial_regex_match(syllable_parse):
+        return regex.fullmatch(syllable_parse, partial=True)
+
     def tokenize(form, statistics):
         parses = set()
         attempts = set()
@@ -430,7 +435,7 @@ def make_tokenizer(parameters, accessor, next_map):
             # we can abandon parses that we know can't be completed
             # to satisfy the syllable canon. for DEMO93 this cuts the
             # number of branches from 182146 to 61631
-            match = regex.fullmatch(syllable_parse, partial=True)
+            match = partial_regex_match(syllable_parse)
             if match is None:
                 if Debug.debug:
                     pass
