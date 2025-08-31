@@ -57,6 +57,11 @@ def associated_mels(association, gloss):
         return [default_mel]
     return list(association.get(gloss, [default_mel]))
 
+def search_mels(gloss, mel_glosses):
+    glosses = normalize_gloss(gloss)
+    return any((mel_gloss in glosses
+                for mel_gloss in mel_glosses))
+
 # Split a gloss into a list of `normalized' glosses.
 def normalize_gloss(gloss):
     glosses = re.split(r'[/ ,]', gloss.replace('*', ''))
