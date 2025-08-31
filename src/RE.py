@@ -426,8 +426,9 @@ def make_tokenizer(parameters, accessor, next_map):
     def tokenize(form, statistics):
         parses = set()
         attempts = set()
+        form_length = len(form)
 
-        def gen(form, parse, last, syllable_parse):
+        def gen(position, parse, last, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
             making sure to skip over suprasegmental features when matching
             contexts.
@@ -446,7 +447,7 @@ def make_tokenizer(parameters, accessor, next_map):
                 pass
                 #filler = '. ' * len(parse)
                 #statistics.add_debug_note(f'{filler}{len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
-            if form == '':
+            if position >= form_length:
                 # check whether the last token's right context had a word final
                 # marker or a catch all environment
                 if (last.context[1] is None or
@@ -461,24 +462,27 @@ def make_tokenizer(parameters, accessor, next_map):
             for c in rule_map['∅']:
                 if c in next_map[last]:
                     for syllable_type in c.syllable_types:
-                        gen(form,
+                        gen(position,
                             parse + [c],
                             last if c.proto_form in supra_segmentals else c,
                             syllable_parse + syllable_type)
-            if form == '':
+            if position >= form_length:
                 #if Debug.debug:
                 #    statistics.add_debug_note(f'reached end of form!')
                 return
             for token_length in token_lengths:
-                for c in rule_map[form[:token_length]]:
+                next_position = position + token_length
+                if next_position > form_length:
+                    continue
+                for c in rule_map[form[position:next_position]]:
                     if c in next_map[last]:
                         for syllable_type in c.syllable_types:
-                            gen(form[token_length:],
+                            gen(next_position,
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
                                 syllable_parse + syllable_type)
 
-        gen(form, [], parameters.table.initial_marker, '')
+        gen(0, [], parameters.table.initial_marker, '')
         if Debug.debug:
             statistics.add_debug_note(f'{len(parses)} reconstructions generated')
             for p in attempts:
