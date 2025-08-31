@@ -482,10 +482,11 @@ def run(settings, attested_lexicons):
     Gtk.main()
 
 if __name__ == "__main__":
-    settings = read.read_settings_file(f'../projects/{args.project}/{args.project}.master.parameters.xml',
+    settings = read.read_settings_file(f'{args.experiment_path}/{args.project}.master.parameters.xml',
                                        mel=args.mel,
+                                       fuzzy=args.fuzzy,
                                        recon=args.recon)
-    load_hooks.load_hook(args.project, args, settings)
+    load_hooks.load_hook(args.experiment_path, args, settings)
     # HACK: The statement above and the statement below are no longer
     # independent due to fuzzying in TGTM...
     attested_lexicons = read.read_attested_lexicons(settings)
