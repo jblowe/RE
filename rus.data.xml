@@ -202,7 +202,11 @@
   </entry>
   <entry id="rus.51">
     <gl>worm</gl>
-    <hw>червь (červʹ), червя́к (červják)</hw>
+    <hw>červʹ</hw>
+  </entry>
+  <entry id="rus.51.2">
+    <gl>worm</gl>
+    <hw>červják</hw>
   </entry>
   <entry id="rus.52">
     <gl>tree</gl>
@@ -464,9 +468,13 @@
     <gl>to hit</gl>
     <hw>udáritʹ</hw>
   </entry>
-  <entry id="rus.117">
+  <entry id="rus.117.1">
     <gl>to cut</gl>
-    <hw>ре́зать (rézatʹ), руби́ть (rubítʹ)</hw>
+    <hw>rézatʹ</hw>
+  </entry>
+  <entry id="rus.117.2">
+    <gl>to cut</gl>
+    <hw>rubítʹ</hw>
   </entry>
   <entry id="rus.118">
     <gl>to split</gl>
@@ -480,9 +488,13 @@
     <gl>to scratch</gl>
     <hw>цара́пать (carápatʹ), поцара́пать (pocarápatʹ)</hw>
   </entry>
-  <entry id="rus.121">
+  <entry id="rus.121.1">
     <gl>to dig</gl>
-    <hw>копа́ть (kopátʹ), рыть (rytʹ)</hw>
+    <hw>kopátʹ</hw>
+  </entry>
+    <entry id="rus.121.2">
+    <gl>to dig</gl>
+    <hw>rytʹ</hw>
   </entry>
   <entry id="rus.122">
     <gl>to swim</gl>
@@ -505,16 +517,16 @@
     <hw>приходи́ть (prixodítʹ), прийти́ (prijtí)</hw>
   </entry>
   <entry id="rus.127">
-    <gl>to lie (as in a bed)</gl>
-    <hw>лежа́ть (ležátʹ) (state)</hw>
+    <gl>to lie (as in a bed) (state)</gl>
+    <hw>ležátʹ</hw>
   </entry>
   <entry id="rus.128">
-    <gl>to sit</gl>
-    <hw>сиде́ть (sidétʹ) (state)</hw>
+    <gl>to sit (state)</gl>
+    <hw>sidétʹ</hw>
   </entry>
   <entry id="rus.129">
-    <gl>to stand</gl>
-    <hw>стоя́ть (stojátʹ) (state)</hw>
+    <gl>to stand (state)</gl>
+    <hw>stojátʹ</hw>
   </entry>
   <entry id="rus.130">
     <gl>to turn (intransitive)</gl>
@@ -564,9 +576,13 @@
     <gl>to tie</gl>
     <hw>вяза́ть (vjazátʹ), свя́зывать (svjázyvatʹ)</hw>
   </entry>
-  <entry id="rus.142">
+  <entry id="rus.142.1">
     <gl>to sew</gl>
-    <hw>шить (šitʹ), сшить (sšitʹ)</hw>
+    <hw>šitʹ</hw>
+  </entry>
+  <entry id="rus.142.2">
+    <gl>to sew</gl>
+    <hw>sšitʹ</hw>
   </entry>
   <entry id="rus.143">
     <gl>to count</gl>
@@ -590,7 +606,7 @@
   </entry>
   <entry id="rus.148">
     <gl>to flow</gl>
-    <hw>течь (tečʹ)</hw>
+    <hw>tečʹ</hw>
   </entry>
   <entry id="rus.149">
     <gl>to freeze</gl>
@@ -604,9 +620,13 @@
     <gl>sun</gl>
     <hw>sólnce</hw>
   </entry>
-  <entry id="rus.152">
+  <entry id="rus.152.1">
     <gl>moon</gl>
-    <hw>луна́ (luná), ме́сяц (mésjac) (half moon)</hw>
+    <hw>luná</hw>
+  </entry>
+  <entry id="rus.152.2">
+    <gl>half moon</gl>
+    <hw>mésjac</hw>
   </entry>
   <entry id="rus.153">
     <gl>star</gl>
@@ -698,11 +718,11 @@
   </entry>
   <entry id="rus.175">
     <gl>mountain</gl>
-    <hw>гора́ (gorá)</hw>
+    <hw>gorá</hw>
   </entry>
   <entry id="rus.176">
     <gl>red</gl>
-    <hw>кра́сный (krásnyj)</hw>
+    <hw>krásnyj</hw>
   </entry>
   <entry id="rus.177">
     <gl>green</gl>
@@ -762,27 +782,27 @@
   </entry>
   <entry id="rus.191">
     <gl>rotten</gl>
-    <hw>гнило́й (gnilój)</hw>
+    <hw>gnilój</hw>
   </entry>
   <entry id="rus.192">
     <gl>dirty</gl>
-    <hw>гря́зный (grjáznyj)</hw>
+    <hw>grjáznyj</hw>
   </entry>
   <entry id="rus.193">
     <gl>straight</gl>
-    <hw>прямо́й (prjamój)</hw>
+    <hw>prjamój</hw>
   </entry>
   <entry id="rus.194">
     <gl>round</gl>
-    <hw>кру́глый (krúglyj)</hw>
+    <hw>krúglyj</hw>
   </entry>
   <entry id="rus.195">
     <gl>sharp (as a knife)</gl>
-    <hw>о́стрый (óstryj)</hw>
+    <hw>óstryj</hw>
   </entry>
   <entry id="rus.196">
     <gl>dull (as a knife)</gl>
-    <hw>тупо́й (tupój)</hw>
+    <hw>tupój</hw>
   </entry>
   <entry id="rus.197">
     <gl>smooth</gl>
@@ -790,19 +810,19 @@
   </entry>
   <entry id="rus.198">
     <gl>wet</gl>
-    <hw>мо́крый (mókryj)</hw>
+    <hw>mókryj</hw>
   </entry>
   <entry id="rus.199">
     <gl>dry</gl>
-    <hw>сухо́й (suxój)</hw>
+    <hw>suxój</hw>
   </entry>
   <entry id="rus.200">
     <gl>correct</gl>
-    <hw>пра́вильный (právilʹnyj)</hw>
+    <hw>právilʹnyj</hw>
   </entry>
   <entry id="rus.201">
     <gl>near</gl>
-    <hw>бли́зкий (blízkij)</hw>
+    <hw>blízkij</hw>
   </entry>
   <entry id="rus.202">
     <gl>far</gl>
@@ -810,7 +830,7 @@
   </entry>
   <entry id="rus.203">
     <gl>right</gl>
-    <hw>пра́вый (právyj)</hw>
+    <hw>právyj</hw>
   </entry>
   <entry id="rus.204">
     <gl>left</gl>
@@ -822,11 +842,11 @@
   </entry>
   <entry id="rus.206">
     <gl>in</gl>
-    <hw>в (v)</hw>
+    <hw>v</hw>
   </entry>
   <entry id="rus.207">
     <gl>with</gl>
-    <hw>с (s)</hw>
+    <hw>s</hw>
   </entry>
   <entry id="rus.208">
     <gl>and</gl>
