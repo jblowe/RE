@@ -301,8 +301,11 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     window = make_pane(vexpand=True)
     store = make_sets_store()
-    window.add(make_sets_view(store))
+    view = make_sets_view(store)
+    window.add(view)
     box.add(window)
+    box.store = store
+    box.view = view
 
     def batch_upstream_clicked(widget):
         thread = threading.Thread(target=batch_upstream)
@@ -312,6 +315,7 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
     def batch_upstream():
         out = sys.stdout
         sys.stdout = statistics_buffer
+        box.form_row_map = {}
         def store_row(parent, form):
             if isinstance(form, RE.ProtoForm):
                 row = store.append(
@@ -340,6 +344,7 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
                              row=['> ' + str(form.modern),
                                   f' by applying {ids}',
                                   ''])
+            box.form_row_map[form] = row
 
         proto_lexicon = RE.upstream_tree(settings.upstream_target,
                                          settings.upstream,
@@ -359,10 +364,12 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
                                            failed_parse.gloss])
             for (correspondence, forms) in proto_lexicon.statistics.correspondence_index.items():
                 row = correspondence_index_store.append(parent=None,
-                                                        row=[str(correspondence), len(forms)])
+                                                        row=[str(correspondence),
+                                                             len(forms),
+                                                             None])
                 for form in forms:
                     correspondence_index_store.append(parent=row,
-                                                      row=[str(form), 1])
+                                                      row=[str(form), None, form])
         sys.stdout = out
         GLib.idle_add(update_model)
 
@@ -486,13 +493,71 @@ class REWindow(Gtk.Window):
         failed_forms_pane.add(failed_forms_view)
         self.statistics_stack.add_titled(failed_forms_pane, "failed", "Failed Parses")
 
-        self.correspondence_index_store = Gtk.TreeStore(str, int)
+        self.correspondence_index_store = Gtk.TreeStore(str, int, object)
         correspondence_index_view = Gtk.TreeView.new_with_model(self.correspondence_index_store)
+        def correspondence_cell_fun(column, cell, model, iter_, data=None):
+            target = model.get_value(iter_, 2)
+            text = model.get_value(iter_, 0)
+            # highlight children as a link
+            if target:
+                cell.set_property("markup", f'<span foreground="blue" underline="single">{text}</span>')
+        def ref_cell_fun(column, cell, model, iter_, data=None):
+            target = model.get_value(iter_, 2)   # "link target" object for children
+            refs = model.get_value(iter_, 1)     # # of references column
+            if target is None:                   # parent row
+                cell.set_property("text", str(refs))
+            else:                                # child row
+                cell.set_property("text", "")    # blank out children
         for i, column_title in enumerate(['Correspondence', '# of references']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
             column.set_sort_column_id(i)
+            if i == 0:
+                column.set_cell_data_func(cell, correspondence_cell_fun)
+            if i == 1:
+                column.set_cell_data_func(cell, ref_cell_fun)
             correspondence_index_view.append_column(column)
+
+        def on_button_press(view, event):
+            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:  # left click
+                # Convert click coordinates to tree path
+                x = int(event.x)
+                y = int(event.y)
+                pthinfo = view.get_path_at_pos(x, y)
+                if pthinfo is not None:
+                    path, col, cellx, celly = pthinfo
+                    model = view.get_model()
+                    iter_ = model.get_iter(path)
+                    target = model.get_value(iter_, 2)
+                    if target is not None:
+                        # child row with hyperlink target
+                        scroll_to_form(target)
+                        return True  # stop further handling
+            return False
+
+        correspondence_index_view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK)
+        correspondence_index_view.connect("button-press-event", on_button_press)
+
+        # ---------- Cursor change on hover ----------
+        def on_motion_notify(view, event):
+            x = int(event.x)
+            y = int(event.y)
+            pthinfo = view.get_path_at_pos(x, y)
+            window = view.get_window()
+            if pthinfo is not None:
+                path, col, cellx, celly = pthinfo
+                model = view.get_model()
+                iter_ = model.get_iter(path)
+                target = model.get_value(iter_, 2)
+                if target is not None:  # child row
+                    window.set_cursor(Gdk.Cursor.new(Gdk.CursorType.HAND2))
+                    return False
+                window.set_cursor(None)  # reset
+            return False
+
+        correspondence_index_view.add_events(Gdk.EventMask.POINTER_MOTION_MASK)
+        correspondence_index_view.connect("motion-notify-event", on_motion_notify)
+
         correspondence_index_pane = make_pane(vexpand=True, hexpand=True)
         correspondence_index_pane.add(correspondence_index_view)
         self.statistics_stack.add_titled(correspondence_index_pane, "index", "Correspondence index")
@@ -521,13 +586,28 @@ class REWindow(Gtk.Window):
         right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         pane_layout.add2(right_pane)
         parameters_widget = make_parameters_widget(settings)
-        right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget,
-                                         self.statistics_buffer, self.failed_forms_store,
-                                         self.correspondence_index_store))
+        sets_widget = make_sets_widget(settings, attested_lexicons, parameters_widget,
+                                       self.statistics_buffer, self.failed_forms_store,
+                                       self.correspondence_index_store)
+        right_pane.add1(sets_widget)
         stats_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         stats_box.pack_start(stack_switcher, False, False, 0)
         stats_box.pack_start(self.statistics_stack, True, True, 0)
         right_pane.add2(stats_box)  # add the stack here
+
+        def scroll_to_form(form):
+            """Scroll and select the row with the given form_id."""
+            # Find iter associated with form.
+            iter_ = sets_widget.form_row_map[form]
+            if iter_:
+                path = sets_widget.store.get_path(iter_)
+                # ensure parents are expanded (since the user is most
+                # likely going to do that anyway)
+                sets_widget.view.expand_to_path(path)
+                sets_widget.view.scroll_to_cell(path, None, True, 0.5, 0.0)
+                sets_widget.view.set_cursor(path)  # also select it
+                return True
+            return False
 
         left_pane.add2(parameters_widget)
 
