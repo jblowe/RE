@@ -1,0 +1,7 @@
+python render_dictionary-v6.py
+scp -i ~/Downloads/jblowe.pem ~/Downloads/Tamang\ IGT/multilingual_dictionary_browser/dictionary.html  ubuntu@54.71.209.160:/var/www/html/dictionary.html
+cp ~/Downloads/Tamang\ IGT/multilingual_dictionary_browser/render_dictionary-v6.py ~/GitHub/RE/src/render_dictionary.py
+cd ~/GitHub/RE/src
+git add render_dictionary.py
+git commit -m "substantial refactoring of render_dictionary.py: layout, about/credits, etc."
+git push -v

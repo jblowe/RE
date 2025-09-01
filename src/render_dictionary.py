@@ -33,14 +33,21 @@ def collect_texts(parent, tags_list):
 
 
 def get_text(parent, tag):
-    return (parent.findtext(tag, '') or '').strip()
+    result = parent.findtext(tag, '') or ''
+    return (result).strip()
 
+
+def tidy_str(result):
+    result = result.replace('*', '')
+    result = re.sub('<.*?>', '', result)
+    result = re.sub(r'&lt;.*?&gt;', '', result)
+    return result
 
 def minify_html(s: str) -> str:
     # remove HTML comments
     s = re.sub(r"<!--.*?-->", "", s, flags=re.DOTALL)
     # collapse whitespace between tags: ...>   <...  ->  ><
-    s = re.sub(r">\s+<", "><", s)
+    s = re.sub(r">\s+<", "> <", s)
     # trim leading/trailing whitespace
     return s.strip()
 
@@ -49,7 +56,7 @@ def parse_base_entry(entry, i):
     base = {
         'id': entry.attrib.get('id', f'e{i}'),
         'hw': get_text(entry, 'hw'),
-        'hwX': get_text(entry, 'hwX'),
+        # 'hwX': get_text(entry, 'hwX'),
         'ps': get_text(entry, 'ps'),
         'dff': get_text(entry, 'dff'),
         'dfe': get_text(entry, 'dfe'),
@@ -101,11 +108,13 @@ def parse_entries_from_file(xml_path):
 
     for i, entry in enumerate(root.findall('.//entry')):
         base = parse_base_entry(entry, i)
-        try:
-            hw = base['hw'] if base['hw'] else base['hwX']
-            base['hw'] = hw
-        except:
-            pass
+        hw = entry.findtext('hw', '').strip()
+        # uncomment the following to include hwX
+        # try:
+        #     hw = base['hw'] if base['hw'] else base['hwX']
+        #     base['hw'] = hw
+        # except:
+        #     pass
         if not hw:
             continue
         # Group by initial (ignore numeric prefixes)
@@ -125,7 +134,21 @@ def parse_entries_from_file(xml_path):
 # ---------- Rendering helpers ----------
 
 def esc(s):
-    return escape(s or '', quote=True)
+    return escape(tidy_str(s) or '', quote=True)
+
+
+def render_tamang(t):
+    return (f'<b>{t}</b>')
+
+
+def render_il(il):
+    try:
+        tamang, trans = il.split('|')
+        tamang = render_tamang(tamang)
+        trans = f'<i>{trans}</i>'
+        return (f'{tamang}&nbsp;{trans}')
+    except:
+        return(il)
 
 
 def render_short(entry):
@@ -145,7 +168,7 @@ def render_short(entry):
     return f"""
     <div class=\"short\" onclick=\"toggleEntry('{esc(entry['id'])}')\">
       <p class=\"mb-0\">
-        <b>{esc(entry['hw'])}</b>&nbsp;{level_badge} <i>{esc(entry['ps'])}</i><br/>
+        {render_tamang(esc(entry['hw']))}&nbsp;{level_badge} <i>{esc(entry['ps'])}</i><br/>
         {nag}
         {only_if}
         {cf}
@@ -163,7 +186,7 @@ def render_long(entry, indent=0):
 
     il_all = entry.get('il', []) + entry.get('ilold', [])
     if il_all:
-        il_items = ''.join(f'<li><i>{esc(il)}</i></li>' for il in il_all)
+        il_items = ''.join(f'<li><i>{render_il(esc(il))}</i></li>' for il in il_all)
         blocks.append(f'{pad}<ol class="mb-2">{il_items}</ol>')
 
     for phr in entry.get('phr', []):
@@ -171,17 +194,17 @@ def render_long(entry, indent=0):
     for gram in entry.get('gram', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Grammar:</b> <i>{esc(gram)}</i></div>')
     for enc in entry.get('enc', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Note (EN):</b> {esc(enc)}</div>')
+        blocks.append(f'{pad}<div class="mb-1"><b>Note:</b> {esc(enc)}</div>')
     for xr in entry.get('xr', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>See also:</b> {esc(xr)}</div>')
+        blocks.append(f'{pad}<div class="mb-1"><b>See also:</b> <a href="">{esc(xr)}</a></div>')
     for so in entry.get('so', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Source:</b> {esc(so)}</div>')
     for rec in entry.get('rec', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Recorded:</b> {esc(rec)}</div>')
     for nb in entry.get('nb', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Note:</b> {esc(nb)}</div>')
-    for nbi in entry.get('nbi', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Note (internal):</b> {esc(nbi)}</div>')
+    # for nbi in entry.get('nbi', []):
+    #    blocks.append(f'{pad}<div class="mb-1"><b>Note (internal):</b> {esc(nbi)}</div>')
 
     for sub in entry.get('sub', []):
         blocks.append(
