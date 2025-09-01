@@ -76,6 +76,33 @@
 			</xsl:for-each>
 		</table>
 		</div>
+		    <h5>Rules</h5>
+		<div>
+		<table class="table table-sm table-hover table-bordered sets sortable">
+			<thead class="sticky-top top-0">
+				<tr>
+					<th>num</th>
+					<th>input</th>
+					<th>output</th>
+					<th>contextL</th>
+					<th>contextR</th>
+					<th>stage</th>
+					<th>language</th>
+				</tr>
+			</thead>
+			<xsl:for-each select="rule">
+				<tr>
+					<td><xsl:value-of select="@num"/></td>
+					<td><xsl:value-of select="input"/></td>
+					<td><xsl:value-of select="outcome"/></td>
+					<td><xsl:value-of select="input/@contextL"/></td>
+					<td><xsl:value-of select="input/@contextR"/></td>
+					<td><xsl:value-of select="@stage"/></td>
+					<td><xsl:value-of select="outcome/@languages"/></td>
+				</tr>
+			</xsl:for-each>
+		</table>
+		</div>
 	</div>
 </xsl:template>
 
