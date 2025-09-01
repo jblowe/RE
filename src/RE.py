@@ -59,15 +59,17 @@ class Lexicon:
         self.language = language
         self.forms = forms
         self.statistics = statistics
-        # Create an index of correspondences to ProtoForms using the
-        # correspondence and add it to the statistics object if there
-        # is one.
-        if statistics:
-            correspondence_index = collections.defaultdict(set)
-            for form in forms:
-                for correspondence in form.correspondences:
-                    correspondence_index[correspondence].add(form)
-            statistics.correspondence_index = correspondence_index
+
+    # Create an index of correspondences to ProtoForms using the
+    # correspondence and add it to the statistics object if there
+    # is one.
+    def compute_correspondence_index(self, params):
+        correspondence_index = {c: set() for c in params.table.correspondences}
+        for form in self.forms:
+            for correspondence in form.correspondences:
+                correspondence_index[correspondence].add(form)
+        self.statistics.correspondence_index = correspondence_index
+        return self
 
     def key_forms_by_glyphs_and_gloss(self):
         return {(form.glyphs, form.gloss): form for form in self.forms}
@@ -715,7 +717,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                        attested_support, mel)
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
-            statistics)
+            statistics).compute_correspondence_index(param_tree[target])
 
     return rec(target, True)
 
