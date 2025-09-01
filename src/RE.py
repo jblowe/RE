@@ -181,7 +181,7 @@ class Stage0Form(Form):
         self.attested_support = frozenset([form])
 
     def __str__(self):
-        return f'{self.language} *{self.glyphs}'
+        return f'{self.language} *{self.glyphs}\t{self.gloss}'
 
 class ProtoForm(Form):
     def __init__(self, language, correspondences, supporting_forms,
@@ -612,7 +612,8 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
     def add_cognate_sets(reconstruction, support):
         distinct_mels = collections.defaultdict(list)
         for supporting_form in support:
-            if isinstance(supporting_form, ModernForm):
+            # stage0 forms also have meaning
+            if isinstance(supporting_form, ModernForm) or isinstance(supporting_form, Stage0Form):
                 for associated_mel in mel.associated_mels(associated_mels_table,
                                                           supporting_form.gloss):
                     if not (only_with_mel and associated_mel.id == '') or mels is None:
