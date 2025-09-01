@@ -296,7 +296,8 @@ def make_sets_view(model):
                                                text=2))
     return sets_view
 
-def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statistics_buffer, failed_forms_store):
+def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statistics_buffer,
+                     failed_forms_store, correspondence_index_store):
     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
     window = make_pane(vexpand=True)
     store = make_sets_store()
@@ -349,12 +350,19 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
         def update_model():
             store.clear()
             failed_forms_store.clear()
+            correspondence_index_store.clear()
             for form in proto_lexicon.forms:
                 store_row(None, form)
             for failed_parse in proto_lexicon.statistics.failed_parses:
                 failed_forms_store.append([failed_parse.language,
                                            failed_parse.glyphs,
                                            failed_parse.gloss])
+            for (correspondence, forms) in proto_lexicon.statistics.correspondence_index.items():
+                row = correspondence_index_store.append(parent=None,
+                                                        row=[str(correspondence), len(forms)])
+                for form in forms:
+                    correspondence_index_store.append(parent=row,
+                                                      row=[str(form), 1])
         sys.stdout = out
         GLib.idle_add(update_model)
 
@@ -469,14 +477,25 @@ class REWindow(Gtk.Window):
 
         self.failed_forms_store = Gtk.ListStore(str, str, str)
         failed_forms_view = Gtk.TreeView.new_with_model(self.failed_forms_store)
-        cell = Gtk.CellRendererText()
         for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
+            cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
             column.set_sort_column_id(i)
             failed_forms_view.append_column(column)
         failed_forms_pane = make_pane(vexpand=True, hexpand=True)
         failed_forms_pane.add(failed_forms_view)
         self.statistics_stack.add_titled(failed_forms_pane, "failed", "Failed Parses")
+
+        self.correspondence_index_store = Gtk.TreeStore(str, int)
+        correspondence_index_view = Gtk.TreeView.new_with_model(self.correspondence_index_store)
+        for i, column_title in enumerate(['Correspondence', '# of references']):
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            correspondence_index_view.append_column(column)
+        correspondence_index_pane = make_pane(vexpand=True, hexpand=True)
+        correspondence_index_pane.add(correspondence_index_view)
+        self.statistics_stack.add_titled(correspondence_index_pane, "index", "Correspondence index")
 
         # StackSwitcher to switch between views
         stack_switcher = Gtk.StackSwitcher()
@@ -503,7 +522,8 @@ class REWindow(Gtk.Window):
         pane_layout.add2(right_pane)
         parameters_widget = make_parameters_widget(settings)
         right_pane.add1(make_sets_widget(settings, attested_lexicons, parameters_widget,
-                                         self.statistics_buffer, self.failed_forms_store))
+                                         self.statistics_buffer, self.failed_forms_store,
+                                         self.correspondence_index_store))
         stats_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         stats_box.pack_start(stack_switcher, False, False, 0)
         stats_box.pack_start(self.statistics_stack, True, True, 0)
