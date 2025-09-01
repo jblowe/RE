@@ -2,14 +2,14 @@
 set -x
 
 # run the perl hack to convert the lexware files to XML
-perl Lex2XML.pl GHA.DIS TEMP.gha.data.xml gha.xml.log gha
-perl Lex2XML.pl MAR.DIS TEMP.mar.data.xml mar.xml.log mar
-perl Lex2XML.pl MAN.DIS TEMP.pra.data.xml pra.xml.log pra
-perl Lex2XML.pl RIS.DIS TEMP.ris.data.xml ris.xml.log ris
-perl Lex2XML.pl SAHU.DIS TEMP.sahu.data.xml sahu.xml.log sahu
-perl Lex2XML.pl SYANG.DIS TEMP.syang.data.xml syang.xml.log syang
-perl Lex2XML.pl TAG.DIS TEMP.tag.data.xml tag.xml.log tag
-perl Lex2XML.pl TUK.DIS TEMP.tuk.data.xml tuk.xml.log tuk
+perl $1/Lex2XML.pl GHA.DIS TEMP.gha.data.xml gha.xml.log gha
+perl $1/Lex2XML.pl MAR.DIS TEMP.mar.data.xml mar.xml.log mar
+perl $1/Lex2XML.pl MAN.DIS TEMP.pra.data.xml pra.xml.log pra
+perl $1/Lex2XML.pl RIS.DIS TEMP.ris.data.xml ris.xml.log ris
+perl $1/Lex2XML.pl SAHU.DIS TEMP.sahu.data.xml sahu.xml.log sahu
+perl $1/Lex2XML.pl SYANG.DIS TEMP.syang.data.xml syang.xml.log syang
+perl $1/Lex2XML.pl TAG.DIS TEMP.tag.data.xml tag.xml.log tag
+perl $1/Lex2XML.pl TUK.DIS TEMP.tuk.data.xml tuk.xml.log tuk
 
 # apply xslt
 python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.gha.data.xml > DIS.gha.data.xml 2> gha.xslt.log

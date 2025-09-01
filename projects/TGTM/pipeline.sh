@@ -11,25 +11,25 @@ python3 $1/csv_to_re.py C2023-09-14.correspondences.csv TGTM.C2023-09-14.corresp
 
 
 # run the perl hack to convert the lexware files to XML
-perl Lex2XML.pl MONGUR8_1994.DAT TGTM.gha.data.xml gha.xml.log gha
-perl Lex2XML.pl MARPHA_1993.DAT TGTM.mar.data.xml mar.xml.log mar
-perl Lex2XML.pl MONPRA8_1993.DAT TGTM.pra.data.xml pra.xml.log pra
-perl Lex2XML.pl ALLRIS2019.DAT TGTM.ris.data.xml ris.xml.log ris
-perl Lex2XML.pl MONSAH_1992.DAT TGTM.sahu.data.xml sahu.xml.log sahu
-perl Lex2XML.pl SYANG_1994.DAT TGTM.syang.data.xml syang.xml.log syang
-perl Lex2XML.pl TAG6_1994Aug1.DAT TGTM.tag.data.xml tag.xml.log tag
-perl Lex2XML.pl ALLTHAK_1993.DAT TGTM.tuk.data.xml tuk.xml.log tuk
+perl $1/Lex2XML.pl MONGUR8_1994.DAT TGTM.gha.data.xml gha.xml.log gha
+perl $1/Lex2XML.pl MARPHA_1993.DAT TGTM.mar.data.xml mar.xml.log mar
+perl $1/Lex2XML.pl MONPRA8_1993.DAT TGTM.pra.data.xml pra.xml.log pra
+perl $1/Lex2XML.pl ALLRIS2019.DAT TGTM.ris.data.xml ris.xml.log ris
+perl $1/Lex2XML.pl MONSAH_1992.DAT TGTM.sahu.data.xml sahu.xml.log sahu
+perl $1/Lex2XML.pl SYANG_1994.DAT TGTM.syang.data.xml syang.xml.log syang
+perl $1/Lex2XML.pl TAG6_1994Aug1.DAT TGTM.tag.data.xml tag.xml.log tag
+perl $1/Lex2XML.pl ALLTHAK_1993.DAT TGTM.tuk.data.xml tuk.xml.log tuk
 # special change for Tangbe
 if [ -e TANGBE2023.DAT ]
 then
-  perl Lex2XML.pl TANGBE2023.DAT TGTM.tang.data.xml tang.xml.log tang
+  perl $1/Lex2XML.pl TANGBE2023.DAT TGTM.tang.data.xml tang.xml.log tang
   perl -i -pe 's/<(\/?)phrase_?/<\1hw/g;s/form>/hw>/g;s/(hw)?gloss>/gl>/g;' TGTM.tang.data.xml
   perl -i -pe 's/<hw>([^⁰¹²³⁴⁵⁶])/<hw>X\1/g;s/ʱ//g;' TGTM.tang.data.xml
   python3 $1/addngl.py TGTM.tang.data.xml gloss
 fi
 
-#perl Lex2XML.pl MONTAG_1994.DAT TGTM.tag2.data.xml tag.xml.log tag
-#perl Lex2XML.pl MONTUK_1991.DAT TGTM.tuk2.data.xml tuk.xml.log tuk
+#perl $1/Lex2XML.pl MONTAG_1994.DAT TGTM.tag2.data.xml tag.xml.log tag
+#perl $1/Lex2XML.pl MONTUK_1991.DAT TGTM.tuk2.data.xml tuk.xml.log tuk
 
 # apply xslt
 #python3 $1/xsltproc.py $1/../styles/fmtLex.xsl TEMP.gha.data.xml > TGTM.gha.data.xml 2> gha.xslt.log
