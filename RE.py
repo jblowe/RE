@@ -549,7 +549,11 @@ def project_back(lexicons, parameters, statistics):
                     for (stage_0_form, history) in apply_rules(form.glyphs):
                         parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
                     return parses
-                parses = memo.setdefault(form.glyphs, all_tokenizations())
+                if form.glyphs in memo:
+                    parses = memo[form.glyphs]
+                else:
+                    parses = all_tokenizations()
+                    memo[form.glyphs] = parses
             else:
                 statistics.add_note(f'form missing: {form.language} {form.gloss}')
                 parses = None
