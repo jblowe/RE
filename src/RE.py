@@ -594,14 +594,20 @@ def count_correspondences_used_in_sets(cognate_sets):
 def create_sets(projections, statistics, mels, only_with_mel, root=True):
     cognate_sets = set()
 
+    attested_forms_memo = {}
     def attested_forms(support):
-        attested = set()
-        for x in support:
-            if isinstance(x, ModernForm):
-                attested.add(x)
-            else:
-                attested |= x.attested_support
-        return attested
+        if support in attested_forms_memo:
+            return attested_forms_memo[support]
+        else:
+            attested = set()
+            for x in support:
+                if isinstance(x, ModernForm):
+                    attested.add(x)
+                else:
+                    attested |= x.attested_support
+            freeze = frozenset(attested)
+            attested_forms_memo[support] = freeze
+            return freeze
 
     def all_glosses(projections):
         all_glosses = set()
@@ -615,31 +621,30 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
     associated_mels_table = mel.compile_associated_mels(mels,
                                                         all_glosses(projections))
 
-    def add_cognate_sets(reconstruction, support):
+    for reconstruction, support in projections.items():
         distinct_mels = collections.defaultdict(list)
         for supporting_form in support:
             # stage0 forms also have meaning
-            if isinstance(supporting_form, ModernForm) or isinstance(supporting_form, Stage0Form):
+            if (mels and isinstance(supporting_form, (ModernForm, Stage0Form))):
                 for associated_mel in mel.associated_mels(associated_mels_table,
-                                                          supporting_form.gloss):
-                    if not (only_with_mel and associated_mel.id == '') or mels is None:
-                        distinct_mels[associated_mel].append(supporting_form)
+                                                          supporting_form.gloss,
+                                                          only_with_mel):
+                    distinct_mels[associated_mel].append(supporting_form)
             else:
                 distinct_mels[mel.default_mel].append(supporting_form)
         for distinct_mel, support in distinct_mels.items():
+            frozen_support = frozenset(support)
+            attested_support = attested_forms(frozen_support)
             if not root or len({form.language for form in support}) > 1:
                 cognate_sets.add((reconstruction,
-                                  frozenset(support),
-                                  frozenset(attested_forms(support)),
+                                  frozen_support,
+                                  attested_support,
                                   distinct_mel))
             else:
                 statistics.singleton_support.add((reconstruction,
-                                                  frozenset(support),
-                                                  frozenset(attested_forms(support)),
+                                                  frozen_support,
+                                                  attested_support,
                                                   distinct_mel))
-
-    for reconstruction, support in projections.items():
-        add_cognate_sets(reconstruction, support)
     statistics.add_note(
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else

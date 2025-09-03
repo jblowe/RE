@@ -51,11 +51,12 @@ def compile_associated_mels(mels, glosses):
     print('{:.2f} seconds to compile {} associated MELs.'.format(time.time() - elapsed_time, len(association)))
     return association
 
-def associated_mels(association, gloss):
+default_mel_singleton = [default_mel]
+
+def associated_mels(association, gloss, only_with_mel):
     '''Lookup gloss in the table of MEL associations.'''
-    if association is None:
-        return [default_mel]
-    return list(association.get(gloss, [default_mel]))
+    default = [] if only_with_mel else default_mel_singleton
+    return association.get(gloss, default)
 
 def search_mels(gloss, mel_glosses):
     glosses = normalize_gloss(gloss)
