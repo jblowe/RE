@@ -571,24 +571,11 @@ def project_back(lexicons, parameters, statistics):
         number_of_forms += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
-    statistics.correspondences_used_in_recons = count_correspondences_used_in_reconstructions(reconstructions)
     statistics.add_stat('lexicons', len(lexicons))
     statistics.add_stat('reflexes', number_of_forms)
     statistics.add_note(f'{number_of_forms} input forms')
     statistics.keys = reconstructions
     return reconstructions, statistics
-
-def count_correspondences_used_in_reconstructions(reconstructions):
-    correspondences_used = collections.Counter()
-    for r in reconstructions:
-        correspondences_used.update([correspondence for correspondence in r])
-    return correspondences_used
-
-def count_correspondences_used_in_sets(cognate_sets):
-    correspondences_used = collections.Counter()
-    for c in cognate_sets:
-        correspondences_used.update([correspondence for correspondence in c[0]])
-    return correspondences_used
 
 # we create cognate sets by comparing meaning.
 def create_sets(projections, statistics, mels, only_with_mel, root=True):
@@ -649,7 +636,6 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
         f'{len(cognate_sets)} cognate sets')
-    statistics.correspondences_used_in_sets = count_correspondences_used_in_sets(cognate_sets)
     return cognate_sets, statistics
 
 # given a collection of sets, we want to find all maximal sets,
