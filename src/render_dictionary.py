@@ -122,12 +122,14 @@ def parse_entries_from_file(xml_path):
 
         modes = entry.findall('mode')
         if modes:
+            subentry = {}
             for idx, mode_el in enumerate(modes, 1):
                 level = mode_el.attrib.get('level') or mode_el.attrib.get('n') or str(idx)
                 sense = apply_mode(base, mode_el, level, i, idx)
-                entries_by_letter[key].append(sense)
+                subentry[int(level)] = sense
+            entries_by_letter[key].append(subentry)
         else:
-            entries_by_letter[key].append(base)
+            entries_by_letter[key].append({'base': base})
 
     return entries_by_letter
 
@@ -141,37 +143,45 @@ def render_tamang(t):
     return (f'<b>{t}</b>')
 
 
-def render_il(il):
+def render_2part(part):
     try:
-        tamang, trans = il.split('|')
+        tamang, trans = part.split('|')
         tamang = render_tamang(tamang)
         trans = f'<i>{trans}</i>'
         return (f'{tamang}&nbsp;{trans}')
     except:
-        return(il)
+        return(part)
 
-
-def render_short(entry):
+def assemble_definienda(entry):
     level_badge = f"<span class=\"badge bg-secondary ms-1\">{esc(str(entry['level']))}</span>&nbsp;" if entry.get('level') else ''
     defs = [('fr', 'dff'), ('en', 'dfe')]
     only_if = '\n'.join(
         [f"""<span class=\"small-caps\">{x[0]}</span> {esc(entry[x[1]])}<br/>""" for x in defs if entry[x[1]] != '']
     )
     cf = f"""see <a href="">{entry['cf']}</a>""" if entry['cf'] else ''
-    if cf != '':
-        pass
+    # if cf != '':
+    #     pass
     dfn_html = f" <span class=\"dfn\">{esc(entry['dfn'])}</span>" if entry.get('dfn') else ''
     if 'nag' in entry and entry['nag'] != '':
         nag = f"""<span class="small-caps">np</span> {esc(entry['nag'])}&nbsp;{dfn_html}<br/>"""
     else:
         nag = ''
+    return(level_badge, defs, only_if, dfn_html, nag, cf)
+
+def render_short(entry):
+    formatted_entry = ''
+    if 'base' in entry:
+        level_badge, defs, only_if, dfn_html, nag, cf = assemble_definienda(entry['base'])
+        formatted_entry = f'{nag} {only_if} {cf}'
+    else:
+        for subentry in entry:
+            level_badge, defs, only_if, dfn_html, nag, cf = assemble_definienda(entry[subentry])
+            formatted_entry += f'{nag} {only_if} {cf}'
     return f"""
     <div class=\"short\" onclick=\"toggleEntry('{esc(entry['id'])}')\">
       <p class=\"mb-0\">
         {render_tamang(esc(entry['hw']))}&nbsp;{level_badge} <i>{esc(entry['ps'])}</i><br/>
-        {nag}
-        {only_if}
-        {cf}
+        {formatted_entry}
       </p>
     </div>
     """
@@ -186,19 +196,19 @@ def render_long(entry, indent=0):
 
     il_all = entry.get('il', []) + entry.get('ilold', [])
     if il_all:
-        il_items = ''.join(f'<li><i>{render_il(esc(il))}</i></li>' for il in il_all)
+        il_items = ''.join(f'<li>{render_2part(esc(il))}</li>' for il in il_all)
         blocks.append(f'{pad}<ol class="mb-2">{il_items}</ol>')
 
     for phr in entry.get('phr', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Phrase:</b> <i>{esc(phr)}</i></div>')
+        blocks.append(f'{pad}<div class="mb-1"><b>Phrase:</b> {render_2part(esc(phr))}</div>')
     for gram in entry.get('gram', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Grammar:</b> <i>{esc(gram)}</i></div>')
     for enc in entry.get('enc', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Note:</b> {esc(enc)}</div>')
     for xr in entry.get('xr', []):
         blocks.append(f'{pad}<div class="mb-1"><b>See also:</b> <a href="">{esc(xr)}</a></div>')
-    for so in entry.get('so', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Source:</b> {esc(so)}</div>')
+    # for so in entry.get('so', []):
+    #     blocks.append(f'{pad}<div class="mb-1"><b>Source:</b> {esc(so)}</div>')
     for rec in entry.get('rec', []):
         blocks.append(f'{pad}<div class="mb-1"><b>Recorded:</b> {esc(rec)}</div>')
     for nb in entry.get('nb', []):
@@ -643,7 +653,7 @@ font-weight:bold;
 <div id="views">
   <!-- About is default (visible when no hash) -->
   <section id="page-about" class="page-view">
-    <a class="back" href="#dictionary">Close</a>
+    <a class="back" href="#dictionary">To Dictionary</a>
     <h2>About</h2>
     <p class="lead no-hang">
     This is an early prototype of an online dictionary for the
@@ -666,10 +676,6 @@ font-weight:bold;
     in three languages: Nepali (in Devanagari with transliteration),
     French, and English. 
     </p>
-    <p class="no-hang">
-    Continue to <a href="./dictionary.html#dictionary">The Dictionary</a>. 
-    </p>
-
   </section>
 
 <!-- Credits page (hidden by default) -->
