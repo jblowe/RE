@@ -178,8 +178,8 @@ def render_long_bits(d):
     parts = []
     if d.get('sem'):
         parts.append(f"<div class='mb-1'><b>semantic domain:</b> {esc(d['sem'])}</div>")
-    for cf in d.get('cf', []):
-        parts.append(f"<div class='mb-1'><b>cf:</b> {esc(cf)}</div>")
+    # for cf in d.get('cf', []):
+    #     parts.append(f"<div class='mb-1'><b>cf:</b> {esc(cf)}</div>")
     ils = d.get('il', []) + d.get('ilold', [])
     if ils:
         items = ''.join(f"<li>{render_2part(esc(il))}</li>" for il in ils)
