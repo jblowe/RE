@@ -19,5 +19,5 @@
     <action name="downstream" from="proto" to="hawai"/>
   </reconstruction>
 
-  <param name="title" value="Polynesian sample data"/>
+  <param name="title" value="Crowley (1983) p.80 TABLE 5.1 Data from Four Polynesian Languages"/>
 </params>
