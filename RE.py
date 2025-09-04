@@ -102,14 +102,14 @@ def read_context_from_string(string):
 
 # build a map from tokens to lists of correspondences containing the
 # token key.
-# also return all possible token lengths
+# also return all possible token lengths, sorted
 def partition_correspondences(correspondences, accessor):
     partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
             partitions[token].append(c)
-    return partitions, list(set.union(*(set(map(len, accessor(c)))
-                                        for c in correspondences)))
+    return partitions, sorted(list(set.union(*(set(map(len, accessor(c)))
+                                               for c in correspondences))))
 
 # imperative interface
 class TableOfCorrespondences:
@@ -290,7 +290,7 @@ def next_correspondence_map(parameters):
     return next_map
 
 # build a map from tokens to lists of rules containing the token key.
-# also return all possible token lengths
+# also return all possible token lengths, sorted
 def partition_rules(rules, language):
     partitions = collections.defaultdict(list)
     token_lengths = []
@@ -302,7 +302,7 @@ def partition_rules(rules, language):
             partitions[rule.outcome].append(rule)
             token_lengths.append(len(rule.outcome))
             max_stage = max(max_stage, rule.stage)
-    return partitions, token_lengths, max_stage
+    return partitions, sorted(token_lengths), max_stage
 
 # This class represents the state of yet-to-be-matched-and-consumed
 # portions of right contexts during rule parsing, which people use to
@@ -487,7 +487,7 @@ def make_tokenizer(parameters, accessor, next_map):
             for token_length in token_lengths:
                 next_position = position + token_length
                 if next_position > form_length:
-                    continue
+                    break
                 for c in rule_map[form[position:next_position]]:
                     if c in next_map[last]:
                         for syllable_type in c.syllable_types:
