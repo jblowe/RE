@@ -4,271 +4,222 @@ from pathlib import Path
 from html import escape
 import re
 
-# ---------- Parsing ----------
+# =====================
+# Parsing
+# =====================
 
-TAGS_SIMPLE = [
-    'hw', 'hwX', 'ps', 'dff', 'dfe', 'nag', 'dfn'
-]
-TAGS_LIST = [
-    'phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc'
-]
+TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
 
-# Define sets
-vowels = "aeiouāīūȳôêöüAEIOU"
-consonants = f"^{vowels}"  # everything not a vowel
-
-# Regex: start of string, then either vowel-sequence or consonant-sequence
-pattern = re.compile(rf"^([{vowels}]+|[^{vowels}\W\d_]+)")
-
-def initial_cluster(word):
-    word = re.sub(r'^[0-9,\-\$\?]+', '', word)
-    m = pattern.match(word)
-    return m.group(1)[:2] if m else ""
+def get_text(parent, tag):
+    return (parent.findtext(tag, '') or '').strip()
 
 def collect_texts(parent, tags_list):
     out = {}
     for tag in tags_list:
-        out[tag] = [(el.text or '').strip() for el in parent.findall(tag) if el is not None and el.text]
+        out[tag] = [(el.text or '').strip()
+                    for el in parent.findall(tag)
+                    if el is not None and el.text and el.text.strip()]
     return out
-
-
-def get_text(parent, tag):
-    result = parent.findtext(tag, '') or ''
-    return (result).strip()
-
-
-def tidy_str(result):
-    result = result.replace('*', '')
-    result = re.sub('<.*?>', '', result)
-    result = re.sub(r'&lt;.*?&gt;', '', result)
-    return result
-
-def minify_html(s: str) -> str:
-    # remove HTML comments
-    s = re.sub(r"<!--.*?-->", "", s, flags=re.DOTALL)
-    # collapse whitespace between tags: ...>   <...  ->  ><
-    s = re.sub(r">\s+<", "> <", s)
-    # trim leading/trailing whitespace
-    return s.strip()
-
 
 def parse_base_entry(entry, i):
     base = {
         'id': entry.attrib.get('id', f'e{i}'),
         'hw': get_text(entry, 'hw'),
-        # 'hwX': get_text(entry, 'hwX'),
         'ps': get_text(entry, 'ps'),
         'dff': get_text(entry, 'dff'),
         'dfe': get_text(entry, 'dfe'),
         'nag': get_text(entry, 'nag'),
         'dfn': get_text(entry, 'dfn'),
-        'cf': get_text(entry, 'cf'),
-        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [], 'il': [], 'ilold': [], 'enc': [],
         'sem': get_text(entry, 'sem'),
-        'level': None,
+        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'il': [], 'ilold': [], 'enc': [], 'cf': [],
         'sub': []
     }
     lists = collect_texts(entry, TAGS_LIST)
     for k, v in lists.items():
         base[k] = v
-
+    # Keep nested <sub> blocks if they exist (harmless passthrough)
     for j, sub in enumerate(entry.findall('sub')):
         sub_base = parse_base_entry(sub, f"{i}-sub{j}")
         base['sub'].append(sub_base)
-
     return base
 
-
-def apply_mode(base, mode_el, level_label, i, idx):
-    sense = {k: (v[:] if isinstance(v, list) else v) for k, v in base.items()}
-    sense['id'] = f"{base['id']}-m{idx}"
-    sense['level'] = level_label
-
-    for t in TAGS_SIMPLE:
-        val = get_text(mode_el, t)
-        if val:
-            sense[t] = val
-
+def parse_mode_block(mode_el, base_id, idx):
+    """Parse a <mode> as a 'subentry' (no headword repeat)."""
+    level = mode_el.attrib.get('level') or mode_el.attrib.get('n') or str(idx)
+    mode = {
+        'id': f"{base_id}-m{idx}",
+        'level': level,
+        'dff': get_text(mode_el, 'dff'),
+        'dfe': get_text(mode_el, 'dfe'),
+        'nag': get_text(mode_el, 'nag'),
+        'dfn': get_text(mode_el, 'dfn'),
+        'sem': get_text(mode_el, 'sem'),
+        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'il': [], 'ilold': [], 'enc': [], 'cf': [],
+        '_is_base': False,
+    }
     lists = collect_texts(mode_el, TAGS_LIST)
     for k, v in lists.items():
-        if v:
-            sense[k] = v
-
-    return sense
-
+        mode[k] = v
+    return mode
 
 def parse_entries_from_file(xml_path):
     xml_text = Path(xml_path).read_text(encoding='utf-8')
+    # Allow loose XML: remove xml decl and wrap in <root> if needed
     xml_text = re.sub(r'<\?xml[^>]*\?>', '', xml_text).strip()
     if not xml_text.startswith('<root>'):
         xml_text = f"<root>{xml_text}</root>"
-
     root = ET.fromstring(xml_text)
+
     entries_by_letter = defaultdict(list)
 
     for i, entry in enumerate(root.findall('.//entry')):
         base = parse_base_entry(entry, i)
-        hw = entry.findtext('hw', '').strip()
-        # uncomment the following to include hwX
-        # try:
-        #     hw = base['hw'] if base['hw'] else base['hwX']
-        #     base['hw'] = hw
-        # except:
-        #     pass
+        hw = base.get('hw', '')
         if not hw:
             continue
-        # Group by initial (ignore numeric prefixes)
-        key = initial_cluster(hw)
 
+        # Collect modes as subentries of the single entry
+        base_modes = []
         modes = entry.findall('mode')
         if modes:
-            subentry = {}
+            # If the base has its own definitions/notes/illustrations, include it first as mode 0
+            if base.get('dff') or base.get('dfe') or base.get('nag') or base.get('dfn') or any(
+                base.get(k) for k in ['il', 'ilold', 'phr', 'gram', 'enc', 'cf', 'xr', 'so', 'rec', 'nb', 'nbi']
+            ):
+                base_mode = {
+                    'id': f"{base['id']}-m0",
+                    'level': None,
+                    'dff': base.get('dff', ''),
+                    'dfe': base.get('dfe', ''),
+                    'nag': base.get('nag', ''),
+                    'dfn': base.get('dfn', ''),
+                    'sem': base.get('sem', ''),
+                    'phr': base.get('phr', []), 'gram': base.get('gram', []), 'xr': base.get('xr', []),
+                    'so': base.get('so', []), 'rec': base.get('rec', []), 'nb': base.get('nb', []), 'nbi': base.get('nbi', []),
+                    'il': base.get('il', []), 'ilold': base.get('ilold', []), 'enc': base.get('enc', []), 'cf': base.get('cf', []),
+                    '_is_base': True,
+                }
+                base_modes.append(base_mode)
             for idx, mode_el in enumerate(modes, 1):
-                level = mode_el.attrib.get('level') or mode_el.attrib.get('n') or str(idx)
-                sense = apply_mode(base, mode_el, level, i, idx)
-                subentry[int(level)] = sense
-            entries_by_letter[key].append(subentry)
-        else:
-            entries_by_letter[key].append({'base': base})
+                base_modes.append(parse_mode_block(mode_el, base['id'], idx))
+        base['modes'] = base_modes  # may be empty
+
+        # Key by first alphabetic letter (ignore numeric tone prefixes)
+        m = re.search(r'[A-Za-zÀ-ÿ]', hw)
+        key = m.group(0).lower() if m else '?'
+        entries_by_letter[key].append(base)
 
     return entries_by_letter
 
-# ---------- Rendering helpers ----------
+# =====================
+# Rendering
+# =====================
 
-def esc(s):
-    return escape(tidy_str(s) or '', quote=True)
+def esc(s: str) -> str:
+    return escape(s or '', quote=True)
 
-
-def render_tamang(t):
-    return (f'<b>{t}</b>')
-
-
-def render_2part(part):
-    try:
-        tamang, trans = part.split('|')
-        tamang = render_tamang(tamang)
-        trans = f'<i>{trans}</i>'
-        return (f'{tamang}&nbsp;{trans}')
-    except:
-        return(part)
-
-def assemble_definienda(entry):
-    level_badge = f"<span class=\"badge bg-secondary ms-1\">{esc(str(entry['level']))}</span>&nbsp;" if entry.get('level') else ''
-    defs = [('fr', 'dff'), ('en', 'dfe')]
-    only_if = '\n'.join(
-        [f"""<span class=\"small-caps\">{x[0]}</span> {esc(entry[x[1]])}<br/>""" for x in defs if entry[x[1]] != '']
-    )
-    cf = f"""see <a href="">{entry['cf']}</a>""" if entry['cf'] else ''
-    # if cf != '':
-    #     pass
-    dfn_html = f" <span class=\"dfn\">{esc(entry['dfn'])}</span>" if entry.get('dfn') else ''
-    if 'nag' in entry and entry['nag'] != '':
-        nag = f"""<span class="small-caps">np</span> {esc(entry['nag'])}&nbsp;{dfn_html}<br/>"""
-    else:
-        nag = ''
-    return(level_badge, defs, only_if, dfn_html, nag, cf)
-
-def render_short(entry):
-    formatted_entry = ''
-    if 'base' in entry:
-        level_badge, defs, only_if, dfn_html, nag, cf = assemble_definienda(entry['base'])
-        formatted_entry = f'{nag} {only_if} {cf}'
-    else:
-        for subentry in entry:
-            level_badge, defs, only_if, dfn_html, nag, cf = assemble_definienda(entry[subentry])
-            formatted_entry += f'{nag} {only_if} {cf}'
+def render_mode_short(m):
+    badge = f"<span class='badge text-bg-secondary level ms-1'>{esc(str(m['level']))}</span> " if m.get('level') else ""
+    dfn_html = f" <span class='dfn'>{esc(m['dfn'])}</span>" if m.get('dfn') else ""
     return f"""
-    <div class=\"short\" onclick=\"toggleEntry('{esc(entry['id'])}')\">
-      <p class=\"mb-0\">
-        {render_tamang(esc(entry['hw']))}&nbsp;{level_badge} <i>{esc(entry['ps'])}</i><br/>
-        {formatted_entry}
+    <div class="mode-short">
+      <p class="mb-0 no-hang">
+        {badge}<span class="small-caps">np</span> {esc(m.get('nag',''))}{dfn_html}<br/>
+        <span class="small-caps">fr</span> <i>{esc(m.get('dff',''))}</i><br/>
+        <span class="small-caps">en</span> <i>{esc(m.get('dfe',''))}</i>
       </p>
     </div>
     """
 
+def render_short(entry):
+    head = f"<b>{esc(entry['hw'])}</b>" + (f" <i>{esc(entry['ps'])}</i>" if entry.get('ps') else "")
+    if entry.get('modes'):
+        modes_html = '\n'.join(render_mode_short(m) for m in entry['modes'])
+        return f"""
+        <div class="short" onclick="toggleEntry('{esc(entry['id'])}')">
+          <p class="mb-0 no-hang">{head}</p>
+          {modes_html}
+        </div>
+        """
+    else:
+        # Single entry without modes
+        dfn_html = f" <span class='dfn'>{esc(entry.get('dfn',''))}</span>" if entry.get('dfn') else ""
+        return f"""
+        <div class="short" onclick="toggleEntry('{esc(entry['id'])}')">
+          <p class="mb-0 no-hang">
+            {head}<br/>
+            <span class="small-caps">np</span> {esc(entry.get('nag',''))}{dfn_html}<br/>
+            <span class="small-caps">fr</span> <i>{esc(entry.get('dff',''))}</i><br/>
+            <span class="small-caps">en</span> <i>{esc(entry.get('dfe',''))}</i>
+          </p>
+        </div>
+        """
+
+def render_long_bits(d):
+    bits = []
+    if d.get('sem'):
+        bits.append(f"<div class='mb-1'><b>Semantic domain:</b> {esc(d['sem'])}</div>")
+    for cf in d.get('cf', []):
+        bits.append(f"<div class='mb-1'><b>Cf.:</b> {esc(cf)}</div>")
+    il_all = d.get('il', []) + d.get('ilold', [])
+    if il_all:
+        il_items = ''.join(f'<li><i>{esc(il)}</i></li>' for il in il_all)
+        bits.append(f'<ol class="mb-2">{il_items}</ol>')
+    for phr in d.get('phr', []):
+        bits.append(f'<div class="mb-1"><b>Phrase:</b> <i>{esc(phr)}</i></div>')
+    for gram in d.get('gram', []):
+        bits.append(f'<div class="mb-1"><b>Grammar:</b> <i>{esc(gram)}</i></div>')
+    for enc in d.get('enc', []):
+        bits.append(f"<div class='mb-1'><b>Note (EN):</b> {esc(enc)}</div>")
+    for xr in d.get('xr', []):
+        bits.append(f'<div class="mb-1"><b>See also:</b> {esc(xr)}</div>')
+    # for so in d.get('so', []):
+    #     bits.append(f'<div class="mb-1"><b>Source:</b> {esc(so)}</div>')
+    for rec in d.get('rec', []):
+        bits.append(f"<div class='mb-1'><b>Recorded:</b> {esc(rec)}</div>")
+    for nb in d.get('nb', []):
+        bits.append(f"<div class='mb-1'><b>Note:</b> {esc(nb)}</div>")
+    # for nbi in d.get('nbi', []):
+    #    bits.append(f"<div class='mb-1'><b>Note (internal):</b> {esc(nbi)}</div>")
+    return ''.join(bits)
 
 def render_long(entry, indent=0):
-    pad = '  ' * indent
+    if not entry.get('modes'):
+        return render_long_bits(entry)
+
     blocks = []
-
-    if entry.get('sem'):
-        blocks.append(f"{pad}<div class=\"mb-1\"><b>Semantic domain:</b> {esc(entry['sem'])}</div>")
-
-    il_all = entry.get('il', []) + entry.get('ilold', [])
-    if il_all:
-        il_items = ''.join(f'<li>{render_2part(esc(il))}</li>' for il in il_all)
-        blocks.append(f'{pad}<ol class="mb-2">{il_items}</ol>')
-
-    for phr in entry.get('phr', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Phrase:</b> {render_2part(esc(phr))}</div>')
-    for gram in entry.get('gram', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Grammar:</b> <i>{esc(gram)}</i></div>')
-    for enc in entry.get('enc', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Note:</b> {esc(enc)}</div>')
-    for xr in entry.get('xr', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>See also:</b> <a href="">{esc(xr)}</a></div>')
-    # for so in entry.get('so', []):
-    #     blocks.append(f'{pad}<div class="mb-1"><b>Source:</b> {esc(so)}</div>')
-    for rec in entry.get('rec', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Recorded:</b> {esc(rec)}</div>')
-    for nb in entry.get('nb', []):
-        blocks.append(f'{pad}<div class="mb-1"><b>Note:</b> {esc(nb)}</div>')
-    # for nbi in entry.get('nbi', []):
-    #    blocks.append(f'{pad}<div class="mb-1"><b>Note (internal):</b> {esc(nbi)}</div>')
-
-    for sub in entry.get('sub', []):
-        blocks.append(
-            f'{pad}<div class="ms-4 border-start ps-3 mt-3">'
-            f'{render_short(sub)}'
-            f'<div class="long mt-2">{render_long(sub, indent+1)}</div>'
-            f'</div>'
+    for m in entry['modes']:
+        dfn_html = f" <span class='dfn'>{esc(m.get('dfn',''))}</span>" if m.get('dfn') else ""
+        badge = f"<span class='badge text-bg-secondary level ms-1'>{esc(str(m['level']))}</span> " if m.get('level') else ""
+        header = (
+            f"<div class='mode-header mb-1 no-hang'>"
+            f"{badge}<span class='small-caps'>np</span> {esc(m.get('nag',''))}{dfn_html} — "
+            f"<span class='small-caps'>fr</span> <i>{esc(m.get('dff',''))}</i> — "
+            f"<span class='small-caps'>en</span> <i>{esc(m.get('dfe',''))}</i>"
+            f"</div>"
         )
-
+        blocks.append(
+            f"<div class='mode-long' style='border-left:2px solid #ececec; padding-left:.75rem; margin-left:1rem; margin-top:.5rem;'>"
+            f"{header}{render_long_bits(m)}"
+            f"</div>"
+        )
     return '\n'.join(blocks)
 
-# ---------- Page generation ----------
+# =====================
+# HTML generation (standalone; no external CSS/JS)
+# =====================
 
-def generate_html(entries_by_letter):
-    nav_links = ''.join(
-        f'<a class="nav-link" href="#" onclick="return showLetter(\'{escape(letter)}\')">{escape(letter)}</a>'
-        for letter in entries_by_letter
-    )
-    nav_bar = f"""
-    <nav class="nav nav-pills flex-wrap sticky-top bg-light p-2 mb-3" id="letter-nav">
-        {nav_links}
-    </nav>
-    """
-
-    content_divs = ''
-    for letter, entries in entries_by_letter.items():
-        entry_divs = ''
-        for entry in entries:
-            entry_id = esc(entry['id'])
-            entry_divs += f'''
-            <div id="{entry_id}" class="entry mb-3 p-3 rounded border">
-              {render_short(entry)}
-              <div class="long mt-2" id="{entry_id}-long" style="display:none;">
-                {render_long(entry)}
-              </div>
-            </div>'''
-        content_divs += f'<div class="letter-section" id="section-{esc(letter)}" style="display:none;">{entry_divs}</div>'
-
-    style = """
+STYLE_BLOCK = r"""
 /* ===== 1) Base fonts & typography ===== */
 :root{
   --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, Consolas, Menlo, monospace;
 }
-html, body{
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.small-caps{
-  font-variant-caps: small-caps;
-  font-size: 0.5em;
-  line-height: 1;
-}
+html, body{ font-family: var(--font-sans); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.small-caps{ font-variant-caps: small-caps; }
+.no-hang{ text-indent: 0; margin-left: 0; }
 
 /* ===== 2) Topbar header (mobile-first) ===== */
 .topbar{
@@ -278,25 +229,15 @@ html, body{
   padding: .5rem .75rem; border-bottom: none;
 }
 /* Title link: white, no hover underline */
-.topbar > a:first-of-type{
-  color:#fff; text-decoration:none; font-weight:600;
-}
+.topbar > a:first-of-type{ color:#fff; text-decoration:none; font-weight:600; }
 .topbar > a:first-of-type:hover,
-.topbar > a:first-of-type:focus{
-  text-decoration:none; /* no hover effect */
-}
-/* Accessible focus ring */
-.topbar > a:first-of-type:focus-visible{
-  outline:2px solid #fff; outline-offset:2px;
-}
+.topbar > a:first-of-type:focus{ text-decoration:none; }
 
-/* Hidden checkbox & hamburger icon */
 .menu-toggle{ position:absolute; left:-9999px; }
 .hamburger{ display:block; cursor:pointer; margin-left:auto; padding:.25rem; }
 .hamburger span{ display:block; width:24px; height:2px; background:#fff; margin:5px 0; }
 
-/* ===== 3) Navlinks — single source of truth ===== */
-/* Mobile-first: dropdown is WHITE panel with BLACK links */
+/* Navlinks — mobile dropdown (white/black) */
 .navlinks{
   display:none;
   position:absolute; left:0; right:0; top:100%;
@@ -306,99 +247,55 @@ html, body{
   padding:.5rem;
   flex-direction:column; gap:0;
 }
-.navlinks a{
-  color:#111; text-decoration:none;
-  padding:.5rem; border-radius:.375rem;
-}
-.navlinks a:hover, .navlinks a:focus{
-  background:#f2f2f2; color:#111;
-}
-/* Toggle open */
+.navlinks a{ color:#111; text-decoration:none; padding:.5rem; border-radius:.375rem; }
+.navlinks a:hover, .navlinks a:focus{ background:#f2f2f2; color:#111; }
 .menu-toggle:checked ~ .navlinks{ display:flex; }
 
-/* Desktop (≥768px): right-justified, transparent on crimson, WHITE links */
+/* Desktop (≥768px): right-justified, transparent, white links */
 @media (min-width:768px){
   .hamburger{ display:none; }
   .navlinks{
-    margin-left:auto;
-    position:static; background:transparent; border:0; box-shadow:none;
+    margin-left:auto; position:static; background:transparent; border:0; box-shadow:none;
     display:flex; flex-direction:row; gap:.75rem; padding:0;
   }
-  .navlinks a{
-    background:transparent; color:#fff; padding:.25rem .5rem; border-radius:.375rem;
-  }
-  .navlinks a:hover, .navlinks a:focus{
-    background:rgba(255,255,255,.18); color:#fff;
-  }
+  .navlinks a{ background:transparent; color:#fff; padding:.25rem .5rem; border-radius:.375rem; }
+  .navlinks a:hover, .navlinks a:focus{ background:rgba(255,255,255,.18); color:#fff; }
 }
 
-/* ===== 4) Letter navbar (Bootstrap-like nav-pills) ===== */
+/* ===== 3) Letter navbar (nav-pills) ===== */
 #letter-nav{
-  display:flex; flex-wrap:wrap; align-items:center;
-  gap:.25rem; padding:.25rem;
+  display:flex; flex-wrap:wrap; align-items:center; gap:.25rem; padding:.25rem;
   background:#f8f9fa; border:1px solid #e9ecef; border-radius:.5rem;
 }
 #letter-nav .nav-link{
-  display:inline-block; padding:.25rem .5rem;
-  font-size:1.0rem; line-height:1.0;
-  color:#0d6efd; text-decoration:none;
-  border:1px solid transparent; border-radius:9999px; /* pill */
+  display:inline-block; padding:.25rem .5rem; font-size:.9rem; line-height:1.2;
+  color:#0d6efd; text-decoration:none; border:1px solid transparent; border-radius:9999px;
   transition:background-color .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
 }
-#letter-nav .nav-link:hover{
-  background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2);
-}
-#letter-nav .nav-link.active{
-  color:#fff; background:#0d6efd; border-color:#0d6efd;
-}
-#letter-nav .nav-link:focus-visible{
-  outline:none; box-shadow:0 0 0 .2rem rgba(13,110,253,.25);
-}
-#letter-nav .nav-link.disabled{ pointer-events:none; opacity:.5; }
+#letter-nav .nav-link:hover{ background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2); }
+#letter-nav .nav-link.active{ color:#fff; background:#0d6efd; border-color:#0d6efd; }
+#letter-nav .nav-link:focus-visible{ outline:none; box-shadow:0 0 0 .2rem rgba(13,110,253,.25); }
 
-/* ===== 5) Dictionary entries ===== */
-p{
-  text-indent:-1.5em; margin-left:1.5em; margin-bottom:0.2em;
-}
-p.no-hang { 
-  text-indent: 0; 
-  margin-left: 0; 
-}
-dt {
-font-style:italic;
-font-weight:bold;
-}
-.short{ cursor:pointer; }
-.short:hover{ background:#f8f9fa; }
-.entry.expanded{
-  background:#f7f7f7; border-color:#e2e3e5;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
-}
-
-/* Full-width search row */
-.searchbar{
-  display:flex; align-items:stretch; gap:.5rem;
-  width:100%; margin:.75rem 0;
-}
+/* ===== 4) Search bar ===== */
+.searchbar{ display:flex; align-items:stretch; gap:.5rem; width:100%; margin:.75rem 0; }
 .searchbar input[type="text"]{
-  flex:1 1 auto; min-width:0;
-  font-size:1rem; padding:.5rem .75rem;
+  flex:1 1 auto; min-width:0; font-size:1rem; padding:.5rem .75rem;
   border:1px solid #ced4da; border-radius:.375rem;
 }
 .searchbar button{
-  flex:0 0 auto;
-  font-size:1rem; padding:.5rem .9rem;
-  border:1px solid #ced4da; border-radius:.375rem;
-  background:#fff; cursor:pointer;
+  flex:0 0 auto; font-size:1rem; padding:.5rem .9rem;
+  border:1px solid #ced4da; border-radius:.375rem; background:#fff; cursor:pointer;
 }
 .searchbar button:hover{ background:#f1f3f5; }
 
-#search-results .long{ display:none; }               /* keep search results “short” */
-#search-results mark{ background:#fff3cd; padding:0 .1em; }  /* highlight hits */
-
+/* ===== 5) Entries ===== */
+.short{ cursor:pointer; }
+.short:hover{ background:#f8f9fa; }
+.entry.expanded{ background:#f7f7f7; border-color:#e2e3e5; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04); }
+#search-results .long{ display:none; }
+#search-results mark{ background:#fff3cd; padding:0 .1em; }
 .dfn{ margin-left:.35rem; opacity:.85; font-style:italic; }
 
-/* Minimal replacements for Bootstrap badge utilities used in markup */
 .text-bg-secondary{ background:#6c757d; color:#fff; }
 .ms-1{ margin-left:.25rem; }
 .badge.level{
@@ -406,330 +303,267 @@ font-weight:bold;
   padding:.15em .45em; line-height:1.15; font-size:.85em; border-radius:9999px;
 }
 
-/* ===== 6) Static “pages” (About / Credits) ===== */
+/* Mode (subentry) visuals */
+.mode-short{ margin:.25rem 0 .5rem 1rem; padding-left:.5rem; border-left:2px solid #ececec; }
+.mode-header .small-caps{ font-variant-caps: small-caps; }
+
+/* ===== 6) Static pages & CSS-only view switching ===== */
 .hidden{ display:none !important; }
 .page-view{
-  position:relative; display:block; min-height:60vh;
-  max-width:900px; margin:1rem auto; padding:1rem 1.25rem;
-  background:#fff; border:1px solid #e5e7eb; border-radius:.5rem;
-  box-shadow:0 1px 2px rgba(0,0,0,.04);
+  position:relative; display:block; min-height:60vh; max-width:900px; margin:1rem auto; padding:1rem 1.25rem;
+  background:#fff; border:1px solid #e5e7eb; border-radius:.5rem; box-shadow:0 1px 2px rgba(0,0,0,.04);
 }
 .page-view .lead{ font-size:1.1rem; opacity:.9; }
 .page-view .back{
-  position:absolute; top:.75rem; right:.75rem;
-  font-size:.9rem; padding:.35rem .7rem;
-  background:#fff; border:1px solid #ced4da; border-radius:.375rem; cursor:pointer;
+  position:absolute; top:.75rem; right:.75rem; font-size:.9rem; padding:.35rem .7rem;
+  background:#fff; border:1px solid #ced4da; border-radius:.375rem; cursor:pointer; text-decoration:none; color:inherit;
 }
 .page-view .back:hover{ background:#f1f3f5; }
 
-/* back buttons/links: no underline in any state */
-.page-view .back,
-.page-view .back:link,
-.page-view .back:visited,
-.page-view .back:hover,
-.page-view .back:focus,
-.page-view .back:active {
-  text-decoration: none;
-  color: inherit; /* keep current text color */
-}
-
-/* CSS-only view switching (About shown by default) */
+/* Swap views with :target (About default) */
 #views > *{ display:none; }
 #views > #page-about{ display:block; }
+#about:target ~ #views > *{ display:none; }         #about:target ~ #views > #page-about{ display:block; }
+#credits:target ~ #views > *{ display:none; }       #credits:target ~ #views > #page-credits{ display:block; }
+#dictionary:target ~ #views > *{ display:none; }    #dictionary:target ~ #views > #dictionary-view{ display:block; }
+#about, #credits, #dictionary{ scroll-margin-top:72px; }
 
-/* Show About */
-#about:target ~ #views > *{ display:none; }
-#about:target ~ #views > #page-about{ display:block; }
-
-/* Show Credits */
-#credits:target ~ #views > *{ display:none; }
-#credits:target ~ #views > #page-credits{ display:block; }
-
-/* Show Dictionary */
-#dictionary:target ~ #views > *{ display:none; }
-#dictionary:target ~ #views > #dictionary-view{ display:block; }
-
-/* Reduce jump under sticky header when following hash */
-#about, #credits, #dictionary{ scroll-margin-top: 72px; }
-
-/* ===== 7) Mobile tweaks (iPhone readability, denser pills, smaller title) ===== */
+/* ===== 7) Mobile tweaks ===== */
 @media (max-width:576px){
-  html{ font-size: 18px; }
-
-  /* Smaller single-line title with ellipsis */
+  html{ font-size:18px; }
   .topbar{ padding:.4rem .6rem; }
-  .topbar > a:first-of-type{
-    flex:1 1 auto; min-width:0;
-    font-size:.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-  }
-  .hamburger{ padding:.2rem; }
-  .hamburger span{ width:22px; }
-
-  /* Search & entries readability */
-  .searchbar input[type="text"],
-  .searchbar button{ font-size: 1.1rem; }
-  #letter-nav{ gap:.2rem; padding: 0.1rem; }
-  #letter-nav .nav-link{ font-size: 1.0rem; padding: 0.1rem 0.1rem; }
+  .topbar > a:first-of-type{ flex:1 1 auto; min-width:0; font-size:.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .hamburger{ padding:.2rem; } .hamburger span{ width:22px; }
+  #letter-nav{ gap:.2rem; padding:.2rem; } #letter-nav .nav-link{ font-size:1rem; padding:.35rem .6rem; }
   .short p, .long{ font-size:1.1rem; line-height:1.45; }
-  .page-view{ padding: 1rem; margin:.75rem auto; }
-  .page-view .back{ top:.5rem; right:.5rem; font-size:1rem; padding:.45rem .85rem; }
+  .page-view{ padding:1rem; margin:.75rem auto; } .page-view .back{ top:.5rem; right:.5rem; font-size:1rem; padding:.45rem .85rem; }
 }
-    """
-    script = """
-    <script>
-      function toggleEntry(id) {
-        const entryEl = document.getElementById(id);
-        const longEl = document.getElementById(id + '-long');
-        if (!longEl) return;
-        const show = (longEl.style.display === 'none');
-        longEl.style.display = show ? 'block' : 'none';
-        if (entryEl) entryEl.classList.toggle('expanded', show);
-      }
+"""
 
-      function showLetter(letter) {
-        document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none');
-        const results = document.getElementById('search-results');
-        if (results) results.style.display = 'none';
-        const section = document.getElementById('section-' + letter);
-        if (section) section.style.display = 'block';
-        document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
-        const link = Array.from(document.querySelectorAll('#letter-nav .nav-link')).find(a => a.textContent.trim() === letter);
-        if (link) link.classList.add('active');
-        return false;
-      }
+SCRIPT_BLOCK = r"""
+// --- Toggle long/short for entries
+function toggleEntry(id){
+  const longEl = document.getElementById(id + '-long');
+  const entryEl = document.getElementById(id);
+  if(!longEl) return;
+  const show = (longEl.style.display === 'none' || longEl.style.display === '');
+  longEl.style.display = show ? 'block' : 'none';
+  if (entryEl) entryEl.classList.toggle('expanded', show);
+}
 
-      function hideAllSections() {
-        document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none');
-      }
+// --- Letter sections
+function showLetter(letter){
+  document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none');
+  const results = document.getElementById('search-results'); if (results) results.style.display = 'none';
+  const section = document.getElementById('section-' + letter); if (section) section.style.display = 'block';
+  document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
+  const link = Array.from(document.querySelectorAll('#letter-nav .nav-link')).find(a => a.textContent.trim() === letter);
+  if (link) link.classList.add('active');
+  return false;
+}
 
-      function stripIdsDeep(node) {
-        if (node.nodeType === 1 && node.hasAttribute('id')) node.removeAttribute('id');
-        for (const child of (node.children || [])) stripIdsDeep(child);
-      }
+// --- Search (with optional debounce and highlighting)
+function debounce(fn, ms=200){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); }; }
 
-      function resetSearch() {
-        const input = document.getElementById('search-box');
-        if (input) input.value = '';
-        const resultsDiv = document.getElementById('search-results');
-        if (resultsDiv) resultsDiv.style.display = 'none';
-        document.getElementById('letter-nav').style.display = 'flex';
-        hideAllSections();
-        const first = document.querySelector('.letter-section');
-        if (first) first.style.display = 'block';
-      }
+function highlightInElement(el, query){
+  if(!el || !query) return;
+  const rx = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+    acceptNode(n){ return n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT; }
+  });
+  const nodes = []; while (tw.nextNode()) nodes.push(tw.currentNode);
+  for (const node of nodes){
+    const text = node.nodeValue; let m, last=0, found=false; const frag = document.createDocumentFragment();
+    while ((m = rx.exec(text))){
+      const s = m.index, e = s + m[0].length;
+      if (s > last) frag.appendChild(document.createTextNode(text.slice(last, s)));
+      const mark = document.createElement('mark'); mark.textContent = text.slice(s, e); frag.appendChild(mark);
+      last = e; found = true;
+    }
+    if (found){
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice[last]));
+      node.parentNode.replaceChild(frag, node);
+    }
+  }
+}
 
-      function handleSearch(input) {
-        const query = input.value.toLowerCase();
-        const resultsDiv = document.getElementById('search-results');
-        const navBar = document.getElementById('letter-nav');
-        if (!resultsDiv) return;
-        resultsDiv.innerHTML = '';
+function hideAllSections(){ document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none'); }
 
-        if (query.length === 0) {
-          resetSearch();
-          return;
-        }
-        
-        // Debounce helper: run fn only after the user stops typing for N ms
-        function debounce(fn, ms = 200) {
-          let t;
-          return function (...args) {
-            clearTimeout(t);
-            t = setTimeout(() => fn.apply(this, args), ms);
-            };
-          }
+function resetSearch(){
+  const input = document.getElementById('search-box'); if (input) input.value = '';
+  const resultsDiv = document.getElementById('search-results'); if (resultsDiv) resultsDiv.style.display = 'none';
+  const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = 'flex';
+  hideAllSections();
+  const first = document.querySelector('.letter-section'); if (first) first.style.display = 'block';
+  const firstLink = document.querySelector('#letter-nav .nav-link'); if (firstLink) firstLink.classList.add('active');
+  return false;
+}
 
-        // Create a debounced version of your existing handleSearch
-        // (handleSearch(input) should already be defined elsewhere)
-        window.debouncedSearch = debounce(handleSearch, 200);
+function handleSearch(input){
+  const query = (input.value || '').trim();
+  const resultsDiv = document.getElementById('search-results'); if (!resultsDiv) return;
+  const navBar = document.getElementById('letter-nav');
+  resultsDiv.innerHTML = '';
+  if (query.length === 0){ resetSearch(); return; }
+  if (navBar) navBar.style.display = 'none';
+  hideAllSections();
+  resultsDiv.style.display = 'block';
+  document.querySelectorAll('.entry').forEach(entry => {
+    const shortArea = entry.querySelector('.short');
+    const shortText = shortArea ? shortArea.textContent : '';
+    if (shortText.toLowerCase().includes(query.toLowerCase())){
+      const clone = entry.cloneNode(true);
+      // remove duplicate IDs in clones
+      clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
+      const long = clone.querySelector('.long'); if (long) long.style.display = 'none';
+      resultsDiv.appendChild(clone);
+      const shortClone = clone.querySelector('.short');
+      if (shortClone) highlightInElement(shortClone, query);
+    }
+  });
+  if (resultsDiv.children.length === 0){
+    resultsDiv.innerHTML = '<p class="text-muted">No results found.</p>';
+  }
+}
 
-        navBar.style.display = 'none';
-        hideAllSections();
-        resultsDiv.style.display = 'block';
+const debouncedSearch = debounce(handleSearch, 200);
 
-        document.querySelectorAll('.entry').forEach(entry => {
-          const shortText = entry.querySelector('.short')?.textContent.toLowerCase() || '';
-          if (shortText.includes(query)) {
-            const clone = entry.cloneNode(true);
-            stripIdsDeep(clone);
-            const long = clone.querySelector('.long');
-            if (long) long.style.display = 'none';
-            resultsDiv.appendChild(clone);
-            highlightInElementFold(clone.querySelector('.short'), input.value);
-          }
-        });
+// Close the mobile menu when a nav link is clicked (so the dropdown collapses)
+document.addEventListener('click', function(e){
+  if (e.target.closest('.navlinks a')) {
+    const mt = document.getElementById('menu-toggle'); if (mt) mt.checked = false;
+  }
+});
 
-        if (resultsDiv.children.length === 0) {
-          resultsDiv.innerHTML = '<p class="text-muted">No results found.</p>';
-        }
-      }
+// Ensure first letter shows when #dictionary is targeted on load
+document.addEventListener('DOMContentLoaded', () => {
+  if ((location.hash || '') === '#dictionary') {
+    const first = document.querySelector('.letter-section');
+    if (first) first.style.display = 'block';
+    const firstLink = document.querySelector('#letter-nav .nav-link');
+    if (firstLink) firstLink.classList.add('active');
+  }
+});
+"""
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const first = document.querySelector('.letter-section');
-        if (first) first.style.display = 'block';
-        const firstLink = document.querySelector('#letter-nav .nav-link');
-        if (firstLink) firstLink.classList.add('active');
-      });
-      function fold(s){ return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
-      function highlightInElementFold(el, query){
-          if (!el || !query) return;
-          const qf = fold(query);
-          const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
-          const nodes = [];
-          while (tw.nextNode()) nodes.push(tw.currentNode);
+def generate_html(entries_by_letter, title="Tamang | Nepali – French – English Dictionary"):
+    # Build letter nav
+    letters = sorted(entries_by_letter.keys())
+    nav_links = ''.join(
+        f'<a class="nav-link" href="#" onclick="return showLetter(\'{escape(letter)}\')">{escape(letter)}</a>'
+        for letter in letters
+    )
+    letter_nav = f'<nav id="letter-nav">{nav_links}</nav>'
 
-          for (const node of nodes){
-            const text = node.nodeValue;
-            // Build folded string + map from folded index -> original index
-            let folded = '';
-            const map = [];
-            for (let i=0; i<text.length; i++){
-              const f = fold(text[i]);
-              folded += f;
-              for (let k=0; k<f.length; k++) map.push(i);
-            }
+    # Build content sections
+    content_divs = ''
+    for letter, entries in sorted(entries_by_letter.items()):
+        entry_divs = ''
+        for entry in entries:
+            entry_id = esc(entry['id'])
+            entry_divs += (
+                f'<div id="{entry_id}" class="entry">'
+                f'{render_short(entry)}'
+                f'<div class="long" id="{entry_id}-long" style="display:none;">'
+                f'{render_long(entry)}'
+                f'</div></div>'
+            )
+        content_divs += f'<div class="letter-section" id="section-{esc(letter)}" style="display:none;">{entry_divs}</div>'
 
-            let pos = 0, prevOrig = 0, changed = false;
-            const frag = document.createDocumentFragment();
-
-            while (true){
-              const hit = folded.indexOf(qf, pos);
-              if (hit === -1) break;
-              const startOrig = map[hit];
-              const endOrig = map[hit + qf.length - 1] + 1;
-
-              if (startOrig > prevOrig) frag.appendChild(document.createTextNode(text.slice(prevOrig, startOrig)));
-              const mark = document.createElement('mark');
-              mark.textContent = text.slice(startOrig, endOrig);
-              frag.appendChild(mark);
-
-              prevOrig = endOrig;
-              pos = hit + qf.length;
-              changed = true;
-            }
-            if (changed){
-              if (prevOrig < text.length) frag.appendChild(document.createTextNode(text.slice(prevOrig)));
-              node.parentNode.replaceChild(frag, node);
-            }
-          }
-        }
-    </script>
-    """
-
-    html = f"""
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-      <title>Tamang Dictionary</title>
-      <style>
-        {style}
-      </style>
-    </head>
-    <body>
-<!-- Standalone header with hamburger -->
+    # HTML skeleton (standalone)
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{esc(title)}</title>
+  <style>
+  {STYLE_BLOCK}
+  </style>
+</head>
+<body>
 
 <header class="topbar">
-  <a href="#dictionary">Tamang | Nepali – French – English Dictionary</a>
+  <a href="#dictionary">{esc(title)}</a>
 
   <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
-  <label for="menu-toggle" class="hamburger" aria-hidden="true">
-    <span></span><span></span><span></span>
-  </label>
+  <label for="menu-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
 
   <nav class="navlinks">
-    <a href="#about" onclick="document.getElementById('menu-toggle').checked=false">About</a>
-    <a href="#credits" onclick="document.getElementById('menu-toggle').checked=false">Credits</a>
+    <a href="#about">About</a>
+    <a href="#credits">Credits</a>
   </nav>
 </header>
 
-<!-- invisible anchors used by :target -->
+<!-- anchors that control CSS-only view switching -->
 <span id="about" aria-hidden="true"></span>
 <span id="credits" aria-hidden="true"></span>
 <span id="dictionary" aria-hidden="true"></span>
 
-<!-- About page (hidden by default) -->
 <div id="views">
-  <!-- About is default (visible when no hash) -->
+
+  <!-- About page (default) -->
   <section id="page-about" class="page-view">
-    <a class="back" href="#dictionary">To Dictionary</a>
+    <a class="back" href="#dictionary">Back</a>
     <h2>About</h2>
-    <p class="lead no-hang">
-    This is an early prototype of an online dictionary for the
-    Tamang language of Nepal that works on both mobile devices
-    and "desktop" computers. It is built as a single standalone
-    HTML page: it requires a web browser but does not require a
-    connection to the internet.
-    </p>
-    <p class="no-hang">
-    Two facilities for searching the dictionary are provided:
-    <ul>
-    <li>Point-and-click searching using the ordered initial
-    "letters" shown in the navigation bar.</li>
-    <li>A "search box" that performs an instantaneous
-    <i>free text</i> search of the entire dictionary.</li>
-    </ul>
-    </p>
-    <p class="no-hang">
-    The dictionary contains 3,517 entries, and most have definitions
-    in three languages: Nepali (in Devanagari with transliteration),
-    French, and English. 
-    </p>
+    <p class="lead">What this dictionary is and how to use it.</p>
+    <p class="no-hang">This is an offline, static HTML rendering of a multilingual dictionary. Tap a headword to expand its examples and notes. Use the letter bar or the search box to browse.</p>
   </section>
 
-<!-- Credits page (hidden by default) -->
+  <!-- Credits page -->
   <section id="page-credits" class="page-view">
-    <a class="back" href="#dictionary">Close</a>
-    <h2>Acknowledgements</h2>
-    <dl>
-      <dt>Dictionary</dt> <dd>the machine-readable dictionary used in this application is a
-      work-in-progress by Martine Mazaudon (CNRS). The dictionary is the result of
-      over 50 years of fieldwork in Nepal and careful lexicography. The original
-      digital version is in 
-      <a href="http://www.montler.net/lexware/" target="_blank">Lexware</a> format,
-      a computational dictionary tool written some 60 years ago.
-      </dd>
-      <dt>Software</dt> <dd>this "HTML only" version of the dictionary was created by a Python
-      script written by John B. Lowe (UC Berkeley) with the help with ChatGPT. The CSS styling is
-      based on Bootstrap 5, but the minimal CSS and Javascript needed to drive the application
-      was extracted and is included inline. The page can be found on the web at
-      <a href="https://projects.johnblowe.com/dictionary.html">https://projects.johnblowe.com/dictionary.html</a>
-      </dd>
-    </dl>
-    <p class="no-hang">
-    Please send comments, suggestions, indeed any feedback to
-    <a href="mailto:example@example.com">the creators</a>. We would love to hear what you think.
-    </p>
-    </section>
-    
+    <a class="back" href="#dictionary">Back</a>
+    <h2>Credits</h2>
+    <p class="lead">Acknowledgements &amp; sources.</p>
+    <ul class="no-hang">
+      <li>Lexicography and corpus: …</li>
+      <li>Software and tooling: …</li>
+    </ul>
+  </section>
+
+  <!-- Dictionary view -->
   <div id="dictionary-view">
-      <div class="searchbar">
-        <input id="search-box" type="text" placeholder="Search entries..."
-        oninput="(window.debouncedSearch || handleSearch)(this)">
-        <button type="button" onclick="resetSearch()">Reset</button>
-      </div>
-
-      {nav_bar}
-
-      {content_divs}
-
-      <div id="search-results" class="mt-4" style="display:none;"></div>
-      {script}
+    <div class="searchbar">
+      <input id="search-box" type="text" placeholder="Search entries..." oninput="(window.debouncedSearch || handleSearch)(this)">
+      <button type="button" onclick="resetSearch()">Reset</button>
     </div>
+
+    {letter_nav}
+
+    {content_divs}
+
+    <div id="search-results" style="display:none;"></div>
   </div>
+
+</div>
+
+<script>
+{SCRIPT_BLOCK}
+</script>
+
 </body>
 </html>
-    """
+"""
     return html
 
-# ---------- CLI ----------
-if __name__ == "__main__":
-    xml_path = "chunk.xml"
-    out_html = "dictionary.html"
+def minify_html(s: str) -> str:
+    # remove HTML comments
+    s = re.sub(r"<!--.*?-->", "", s, flags=re.DOTALL)
+    # collapse whitespace between tags
+    s = re.sub(r">\s+<", "><", s)
+    return s.strip()
 
-    entries = parse_entries_from_file(xml_path)
-    html_output = generate_html(entries)
-    html_output = minify_html(html_output)
-    Path(out_html).write_text(html_output, encoding='utf-8')
-    print(f"✅ Wrote {out_html}")
+# ------------- CLI -------------
+if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser(description="Render multilingual dictionary XML to standalone HTML (modes as subentries).")
+    ap.add_argument("xml", nargs="?", default="chunk.xml", help="Input XML file")
+    ap.add_argument("-o", "--out", default="dictionary.html", help="Output HTML file")
+    ap.add_argument("--title", default="Tamang | Nepali – French – English Dictionary", help="Page title")
+    args = ap.parse_args()
+
+    entries = parse_entries_from_file(args.xml)
+    html = generate_html(entries, title=args.title)
+    html = minify_html(html)
+    Path(args.out).write_text(html, encoding="utf-8")
+    print(f"✅ Wrote {args.out}")
