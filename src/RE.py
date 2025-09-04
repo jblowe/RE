@@ -610,15 +610,18 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
 
     for reconstruction, support in projections.items():
         distinct_mels = collections.defaultdict(list)
-        for supporting_form in support:
-            # stage0 forms also have meaning
-            if (mels and isinstance(supporting_form, (ModernForm, Stage0Form))):
-                for associated_mel in mel.associated_mels(associated_mels_table,
-                                                          supporting_form.gloss,
-                                                          only_with_mel):
-                    distinct_mels[associated_mel].append(supporting_form)
-            else:
-                distinct_mels[mel.default_mel].append(supporting_form)
+        if mels:
+            for supporting_form in support:
+                # stage0 forms also have meaning
+                if isinstance(supporting_form, (ModernForm, Stage0Form)):
+                    for associated_mel in mel.associated_mels(associated_mels_table,
+                                                              supporting_form.gloss,
+                                                              only_with_mel):
+                        distinct_mels[associated_mel].append(supporting_form)
+                else:
+                    distinct_mels[mel.default_mel].append(supporting_form)
+        else:
+            distinct_mels[mel.default_mel] = support
         for distinct_mel, support in distinct_mels.items():
             frozen_support = frozenset(support)
             attested_support = attested_forms(frozen_support)
