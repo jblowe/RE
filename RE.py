@@ -934,17 +934,11 @@ def extract_failures(lexicon):
 # create "cognate sets" for the isolates
 # (and we need to check to see that the singletons really are isolates -- not in any set)
 def extract_isolates(lexicon):
-    forms_used = collections.Counter()
-
-    def is_in(item, list_of_forms):
-        for form in item[1]:
-            if form in list_of_forms:
-                return True
-        return False
-
-    for set in lexicon.forms:
-        forms_used.update([supporting_form for supporting_form in set.supporting_forms])
-    isolates = [item for item in lexicon.statistics.singleton_support if not is_in(item, forms_used)]
+    forms_used = set()
+    for form in lexicon.forms:
+        forms_used |= form.supporting_forms
+    isolates = [item for item in lexicon.statistics.singleton_support
+                if not any(form in forms_used for form in item[1])]
     duplicates = {}
     new_isolates = []
     for item in isolates:
