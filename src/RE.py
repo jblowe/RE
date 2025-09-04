@@ -215,8 +215,8 @@ class ProjectSettings:
 
 class Statistics:
     def __init__(self):
-        self.failed_parses = set()
-        self.singleton_support = set()
+        self.failed_parses = []
+        self.singleton_support = []
         self.summary_stats = {}
         self.language_stats = {}
         self.correspondences_used_in_recons = collections.Counter()
@@ -567,7 +567,7 @@ def project_back(lexicons, parameters, statistics):
                         reconstructions[cs].append(proto_stage_0_form)
             else:
                 count_of_no_parses += 1
-                statistics.failed_parses.add(form)
+                statistics.failed_parses.append(form)
         number_of_forms += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
@@ -631,10 +631,10 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                                   attested_support,
                                   distinct_mel))
             else:
-                statistics.singleton_support.add((reconstruction,
-                                                  frozen_support,
-                                                  attested_support,
-                                                  distinct_mel))
+                statistics.singleton_support.append((reconstruction,
+                                                     frozen_support,
+                                                     attested_support,
+                                                     distinct_mel))
     statistics.add_note(
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
