@@ -71,9 +71,6 @@ class Lexicon:
         self.statistics.correspondence_index = correspondence_index
         return self
 
-    def key_forms_by_glyphs_and_gloss(self):
-        return {(form.glyphs, form.gloss): form for form in self.forms}
-
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
@@ -802,6 +799,7 @@ def dump_keys(lexicon, filename):
             print(f'{str(failure)}')
     sys.stdout = out
 
+# only works for non-tree lexicons for now (because of the str method)
 def compare_support(lex1_forms, forms):
     # FIXME: there's a subtle dependency here on the Form.str method.
     return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
@@ -921,12 +919,6 @@ def compare_proto_lexicons(lexicon1, lexicon2, languages):
         'refs': refs
     }
 
-
-# def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, compare_type):
-#     # replace_underlying_lexicons(lexicon1, attested_lexicons)
-#     # replace_underlying_lexicons(lexicon2, attested_lexicons)
-#     return compare_proto_lexicons(lexicon1, lexicon2)
-
 # create a fake cognate set with the forms that failed to reconstruct
 def extract_failures(lexicon):
     return Lexicon(
@@ -954,21 +946,6 @@ def extract_isolates(lexicon):
     return [ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel)
             for (correspondences, supporting_forms, attested_support, mel)
             in new_isolates]
-
-# given a proto lexicon whose underlying attested forms are drawn
-# from lexicons isomorphic to attested_lexicons, destructively replace
-# the in-memory Form objects with those in attested_lexicons.
-# daughter_lexicons is a hash table mapping language -> Lexicon.
-# only works for non-tree lexicons for now.
-def replace_underlying_lexicons(proto_lexicon, attested_lexicons):
-    keyed_forms = {language: lexicon.key_forms_by_glyphs_and_gloss()
-                   for (language, lexicon) in attested_lexicons.items()}
-    for form in proto_lexicon.forms:
-        def intern(form_set):
-            return frozenset((keyed_forms[form.language][(form.glyphs, form.gloss)]
-                              for form in form_set))
-        form.attested_support = intern(form.attested_support)
-        form.supporting_forms = intern(form.supporting_forms)
 
 # Given a lexicon of protoforms, return a mapping between cognate sets
 # and possible reconstructions.
