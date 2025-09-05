@@ -787,8 +787,10 @@ def dump_keys(lexicon, filename):
     forms = []
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
         for reconstruction, support in lexicon.statistics.keys.items():
+            proto_form_string = correspondences_as_proto_form_string(reconstruction)
+            id_string = correspondences_as_ids(reconstruction)
             for support1 in support:
-                forms.append(str(support1) + f'\t*{correspondences_as_proto_form_string(reconstruction)}\t*{correspondences_as_ids(reconstruction)}')
+                forms.append(str(support1) + f'\t*{proto_form_string}\t*{id_string}')
         print('\t'.join('language & form,gloss,id,protoform,correspondences'.split(',')))
         for i,f in enumerate(sorted(forms)):
             if i > 100000:
