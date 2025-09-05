@@ -796,7 +796,7 @@ def dump_keys(lexicon, filename):
             print(f)
         print('***failures')
         for failure in lexicon.statistics.failed_parses:
-            print(f'{str(failure)}')
+            print(str(failure))
     sys.stdout = out
 
 # only works for non-tree lexicons for now (because of the str method)
