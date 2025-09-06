@@ -121,9 +121,6 @@ def parse_entry(entry_el, i):
 
 def parse_entries_from_file(xml_path):
     raw = Path(xml_path).read_text(encoding='utf-8')
-    raw = re.sub(r'<\?xml[^>]*\?>', '', raw).strip()
-    if not raw.startswith('<root>'):
-        raw = f'<root>{raw}</root>'
     root = ET.fromstring(raw)
 
     groups = OrderedDict()  # token -> [entries] preserving input order
@@ -151,7 +148,7 @@ def render_lang_lines(nag, dfn, dff, dfe):
     if nag or dfn:
         np_line = f"<span class='small-caps'>nep</span> {esc(nag)}"
         if dfn:
-            np_line += f" <span class='dfn'>{render_transliteration(esc(dfn))}</span>"
+            np_line += f"&nbsp;<span class='dfn'>{render_transliteration(esc(dfn))}</span>"
         lines.append(np_line)
     if dff:
         lines.append(f"<span class='small-caps'>fr&nbsp;</span> <i>{esc(dff)}</i>")
@@ -265,14 +262,8 @@ def render_entry_long(entry):
 STYLE = r"""
 :root{
   --font-sans: system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --header-h: 56px;
-  --search-h: 56px;
-  --nav-h: 38px;
 }
-@media (max-width:576px){
-  :root{ --header-h:60px; --search-h:64px; --nav-h:44px; }
-}
-html,body{ font-family:var(--font-sans); -webkit-font-smoothing:antialiased; margin:0; padding:0; }
+html,body{ font-family:var(--font-sans); margin:0; padding:0; }
 .small-caps{ font-variant-caps:small-caps; font-size:.7rem; }
 .mb-0{ margin-bottom:0; }
 .ms-1{ margin-left:.25rem; }
@@ -280,19 +271,20 @@ html,body{ font-family:var(--font-sans); -webkit-font-smoothing:antialiased; mar
 
 /* === Fixed Top Stack (banner + search + nav) === */
 .fixed-topbar{
-  position:fixed; top:0; left:0; right:0; z-index:1000;
-  background:#fff;
-  box-shadow:0 1px 0 rgba(0,0,0,.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
 }
-/* Header (saffron banner) */
 .header{
   display:flex; align-items:center; gap:.75rem;
   background:#A51931; color:#fff; width:100%;
-  padding:.5rem max(.75rem, env(safe-area-inset-right)) .5rem max(.75rem, env(safe-area-inset-left));
-  box-sizing:border-box; min-height:var(--header-h);
+  padding:.5rem;
+  box-sizing:border-box;
 }
 .header .logo{ width:28px; height:28px; border-radius:4px; background:rgba(255,255,255,.3); flex:0 0 28px; }
-.header .brand{ color:#fff; text-decoration:none; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.header .brand{ color:#fff; text-decoration:none; font-weight: bold; white-space:nowrap; overflow:hidden; }
 
 .header .page-links{ margin-left:auto; display:flex; gap:.5rem; }
 .header .page-links a{ color:#fff; text-decoration:none; padding:.25rem .5rem; border-radius:.375rem; }
@@ -306,48 +298,72 @@ html,body{ font-family:var(--font-sans); -webkit-font-smoothing:antialiased; mar
 @media (max-width: 768px){
   .hamburger{ display:block; flex:0 0 auto; margin-left:.5rem; }
   .header .brand{ flex:1 1 auto; min-width:0; }
-  .header .page-links{ display:none; position:absolute; z-index:1001; top:100%; right:0; left:0;
-    background:#fff; color:#111; border:1px solid rgba(0,0,0,.1); box-shadow:0 6px 18px rgba(0,0,0,.15);
-    padding:.5rem; }
+  .header .page-links{ display:none; position:absolute; padding:.5rem; }
   .header .page-links a{ display:block; color:#111; padding:.5rem .75rem; border-radius:.375rem; }
   .header .page-links a:hover{ background:#f2f2f2; }
   #menu-toggle:checked ~ .page-links{ display:block; }
+    .header .page-links{
+    display: none;              /* hidden by default; toggled by checkbox */
+    position: absolute;
+    top: 100%;                  /* directly under the saffron banner */
+    right: 0;
+    left: 0;                    /* full width; change to 'auto' to right-align */
+    z-index: 1200;              /* above search + letter-nav */
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 18px rgba(0,0,0,.15);
+    padding: .5rem;
+  }
+  #menu-toggle:checked ~ .page-links{ display: block;
 }
 
-/* Search + letter nav block (hidden on About/Credits) */
+  .header .page-links a{
+    display: block;
+    color: #111;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: .375rem;
+  }
+  .header .page-links a:hover{ background: #f2f2f2; }
+}
+
+}
+
+/* Search + letter nav block (hidden on about/credits) */
 .searchnav{ display:none; background:#fff; border-bottom:1px solid #e5e7eb; }
-#dico:target ~ .fixed-topbar .searchnav{ display:block; }
 
 .searchbar{ display:flex; gap:.5rem; align-items:center; padding:.4rem .75rem; }
-.searchbar input[type="text"]{ flex:1 1 auto; min-width:0; font-size:1rem; padding:.5rem .75rem; border:1px solid #ced4da; border-radius:.375rem; }
-.searchbar button{ flex:0 0 auto; font-size:1rem; padding:.5rem .9rem; border:1px solid #ced4da; border-radius:.375rem; background:#fff; cursor:pointer; }
+.searchbar input[type="text"]{ flex:1 1 auto; min-width:0; font-size:1rem; padding:.5rem .75rem;
+   border:1px solid #ced4da; border-radius:.375rem; }
+.searchbar button{ flex:0 0 auto; font-size:1rem; padding:.5rem .9rem; border:1px solid #ced4da;
+   border-radius:.375rem; background:#fff; cursor:pointer; }
 .searchbar button:hover{ background:#f1f3f5; }
 
 #letter-nav{
-  display:flex; flex-wrap:wrap;
-  padding:.15rem; margin:0;
-  background:#fff;
-  border-top:1px solid #f1f3f5;
-  border-bottom:1px solid #e9ecef;
+  display: block;
+  /* white-space: nowrap; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: .2rem .5rem;
+  margin: 0;
+  border-bottom: 1px solid #e9ecef;
+  border-top: 1px solid #f1f3f5;
   justify-content:center;
 }
+
 #letter-nav .nav-link{
-  display:inline-block; font-size:1.2rem; line-height:1.1; padding: .2rem;
+  display:inline-block; font-size:1.2rem; line-height:1.1; padding: .2rem; margin-right: .15rem;
   color:#0d6efd; text-decoration:none; border:1px solid transparent; border-radius:9999px;
 }
 #letter-nav .nav-link:hover{ background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2); }
 #letter-nav .nav-link.active{ color:#fff; background:#0d6efd; border-color:#0d6efd; }
 
 /* Views sit below the fixed stack. */
-#views{ padding-top: var(--header-h); }
-#dico:target ~ #views{ padding-top: calc(var(--header-h) + var(--search-h) + var(--nav-h)); }
+#views{ padding-top: 0 !important; }
 
 /* Page switching (About default) */
 #views > *{ display:none; }
 #page-about{ display:block; }
-#about:target ~ #views > *{ display:none; }  #about:target ~ #views > #page-about{ display:block; }
-#credits:target ~ #views > *{ display:none; } #credits:target ~ #views > #page-credits{ display:block; }
-#dico:target ~ #views > *{ display:none; }    #dico:target ~ #views > #dictionary{ display:block; }
 dt{font-weight: bold; font-style: italic; }
 
 .page{ position:relative; max-width:900px; margin:0 auto 1rem; padding:1rem 1.25rem; background:#fff;
@@ -373,7 +389,6 @@ dt{font-weight: bold; font-style: italic; }
 .mode-short:first-child{ border-top:none; }
 /* .mode-sub p.no-hang{margin: 0; text-indent: -1.25em; padding-left: 1.25em; line-height: 1.35; overflow-wrap: anywhere; } */
 
-
 .mode-head .small-caps{ font-variant-caps:small-caps; }
 .badge{ display:inline-flex; align-items:center; justify-content:center; padding:.15em .45em; line-height:1.15; font-size:.85em; border-radius:9999px; }
 .text-bg-secondary{ background:#6c757d; color:#fff; }
@@ -382,11 +397,37 @@ dt{font-weight: bold; font-style: italic; }
 #search-results mark{ background:#fff3cd; padding:0 .1em; }
 #search-results .long, #search-results .mode-long{ display:none; }
 
+/* Sticky mast: header always visible; tools show only in dictionary view */
+.fixed-topbar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+}
+
+/* Header is the positioning context for mobile dropdown */
+.header{
+  position: relative;
+  z-index: 2;
+}
+
+/* Tools block (search + letter nav) is hidden by default */
+.searchnav{ display: none; border-top: 1px solid #e5e7eb; background:#fff; }
+
+/* Show tools ONLY in dictionary view (we toggle this via body class) */
+body.show-dico .searchnav{ display: block; }
+
+
+/* Tighten top gap in entries */
+.entry { padding-top: .5rem; }
+.entry .short, .entry .short p, .entry .short .entry-head { margin-top: 0; }
+
+
 /* mobile text sizes */
 @media (max-width:576px){
   html{ font-size:18px; }
-  .header{ padding-right:max(.75rem, env(safe-area-inset-right)); padding-left:max(.75rem, env(safe-area-inset-left)); }
-  .header .brand{ font-size:.95rem; }
+  .header .brand{ font-size:.7rem; }
   #letter-nav .nav-link{ font-size:1.0rem; padding:.2rem; }
   .short p, .long{ font-size:.9rem; line-height:1.2; }
   /* .mode-sub p.no-hang{text-indent: -1em;  padding-left: 1em; } */
@@ -416,9 +457,20 @@ dt{font-weight: bold; font-style: italic; }
 /* Keep long words from overflowing in glosses */
 .mode-sub p i,
 .mode-body p i{overflow-wrap: anywhere; }
+
+#views > * { display: none !important; }
+
+/* Show exactly one page */
+body.show-about   #page-about   { display: block !important; }
+body.show-credits #page-credits { display: block !important; }
+body.show-dico    #dictionary   { display: block !important; }
+
+.fixed-topbar .searchnav { display: none !important; }
+body.show-dico .fixed-topbar .searchnav { display: block !important; }
 """
 
 SCRIPT = r"""
+// ----- Entry + Mode toggles -----
 function toggleEntry(id){
   const el = document.getElementById(id + '-long');
   if(!el) return false;
@@ -434,6 +486,8 @@ function toggleMode(mid){
   el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
   return false;
 }
+
+// ----- Letter navigation -----
 function showToken(tok){
   document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none');
   const section = document.getElementById('section-' + tok);
@@ -444,6 +498,8 @@ function showToken(tok){
   const sr = document.getElementById('search-results'); if (sr) sr.style.display = 'none';
   return false;
 }
+
+// ----- Search (debounced) + highlight -----
 function debounce(fn, ms=220){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); }; }
 function highlightInElement(el, query){
   if(!el || !query) return;
@@ -461,7 +517,7 @@ function highlightInElement(el, query){
       last = e; found = true;
     }
     if (found){
-      if (last < text.length) frag.appendChild(document.createTextNode(text.slice[last]));
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
       node.parentNode.replaceChild(frag, node);
     }
   }
@@ -470,7 +526,7 @@ function hideAllSections(){ document.querySelectorAll('.letter-section').forEach
 function resetSearch(){
   const input = document.getElementById('search-box'); if (input) input.value = '';
   const resultsDiv = document.getElementById('search-results'); if (resultsDiv) resultsDiv.style.display = 'none';
-  const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = 'flex';
+  const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = ''; // let CSS decide
   hideAllSections();
   const first = document.querySelector('.letter-section'); if (first) first.style.display = 'block';
   document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
@@ -504,41 +560,47 @@ function handleSearch(input){
 }
 const debouncedSearch = debounce(handleSearch, 220);
 
-/* Auto-close hamburger after tapping a page link */
-document.addEventListener('click', e => {
-  if (e.target.closest('.page-links a')) {
-    const t = document.getElementById('menu-toggle');
-    if (t) t.checked = false;
-  }
-});
+// ----- Page mode (About / Credits / Dictionary) + hamburger auto-close -----
 (function () {
-  function togglePage(target) {
-    const want = '#' + target;
-    // If already on that page, go back to dictionary; otherwise open it
-    location.hash = (location.hash === want) ? '#dico' : want;
+    function setPageFromHash(){
+      const h = (location.hash || '#about').toLowerCase();
+      const b = document.body.classList;
+      b.remove('show-about','show-credits','show-dico');
+    
+      if (h === '#credits') {
+        b.add('show-credits');
+      } else if (h === '#dico') {
+        b.add('show-dico');
+        // Ensure tools are visible even if a prior search hid the nav bar
+        const nav = document.getElementById('letter-nav');
+        if (nav) nav.style.display = '';            // let CSS show it
+        const results = document.getElementById('search-results');
+        if (results) results.style.display = 'none';
+        // (optional) clear the box:
+        // const box = document.getElementById('search-box'); if (box) box.value = '';
+      } else {
+        b.add('show-about'); // default
+      }
+    }
 
-    // Close the hamburger menu on mobile if it's open
+  // Toggle About/Credits via header links: clicking again returns to Dictionary
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest('.page-links a');
+    if (!a) return;
+    const id = (a.getAttribute('href') || '').toLowerCase();
+    if (!id.startsWith('#')) return;
+    e.preventDefault();
+    const cur = (location.hash || '#about').toLowerCase();
+    location.hash = (cur === id) ? '#dico' : id;
+
+    // Close hamburger on mobile
     const t = document.getElementById('menu-toggle');
     if (t) t.checked = false;
-    return false;
-  }
+  });
 
-  // Wire up the header links (About / Credits) to toggle behavior
-  const aboutLink   = document.querySelector('.page-links a[href="#about"]');
-  const creditsLink = document.querySelector('.page-links a[href="#credits"], .page-links a[href="#credit"]');
-
-  if (aboutLink) {
-    aboutLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      togglePage('about');
-    });
-  }
-  if (creditsLink) {
-    creditsLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      togglePage('credits');
-    });
-  }
+  window.addEventListener('hashchange', setPageFromHash);
+  window.addEventListener('DOMContentLoaded', setPageFromHash);
+  setPageFromHash();
 })();
 """
 
@@ -552,40 +614,33 @@ HTML_SHELL = """<!doctype html>
 </head>
 <body>
 
-<!-- Anchors first so they can control both the fixed bar and views with CSS -->
-<span id="about" aria-hidden="true"></span>
-<span id="credits" aria-hidden="true"></span>
-<span id="dico" aria-hidden="true"></span>
-
-<!-- Fixed top stack: banner + search + letter nav -->
 <div class="fixed-topbar">
   <header class="header">
     <div class="logo" aria-hidden="true"></div>
-    <a class="brand" href="#dico">{title}</a>
+    <a class="brand" href="#dico">Tamang | Nepali – French – English Dictionary</a>
 
-    <!-- Mobile hamburger controller -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
     <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
 
-    <div class="page-links">
+    <nav class="page-links">
       <a href="#about">About</a>
       <a href="#credits">Credits</a>
-    </div>
+    </nav>
   </header>
 
+  <!-- Tools (search + letter nav) — hidden except in Dictionary view -->
   <div class="searchnav">
     <div class="searchbar">
-      <input id="search-box" type="text" placeholder="Search entries..." oninput="debouncedSearch(this)">
+      <input id="search-box" type="text" placeholder="Search entries…" oninput="debouncedSearch(this)">
       <button type="button" onclick="resetSearch()">Reset</button>
     </div>
-    {letter_nav}
+    <nav id="letter-nav">{letter_nav}</nav>
   </div>
 </div>
 
-<!-- Views below the fixed stack -->
-<div id="views">
+<main id="views">
     <section id="page-about" class="page">
         <a class="to-dico" href="#dico">To Dictionary</a>
         <h4>About</h4>
@@ -619,19 +674,18 @@ HTML_SHELL = """<!doctype html>
         <h4>Acknowledgements</h4>
         <dl>
             <dt>Dictionary</dt>
-            <dd>the machine-readable dictionary used
+            <dd>The machine-readable dictionary used
                 in this application is a work-in-progress by Martine Mazaudon (CNRS). The dictionary is the result of
                 over 50 years of fieldwork in Nepal and careful lexicography. The original
                 digital version is in
                 <a href="http://www.montler.net/lexware/" target="_blank">Lexware</a> format,
-                a computational dictionary tool written some 60 years ago.
+                a computational dictionary tool written some 50 years ago.
             </dd>
             <dt>Software</dt>
-            <dd>this "HTML only" version of the dictionary was created by a Python
+            <dd>This "HTML only" version of the dictionary was created by a Python
                 script written by John B. Lowe (UC Berkeley) with the help with ChatGPT. The CSS styling is
                 based on Bootstrap 5, but the minimal CSS and Javascript needed to drive the application
-                was extracted and is included inline. The page can be found on the web at
-                <a href="https://projects.johnblowe.com/TamangDictionary.html">https://projects.johnblowe.com/dictionary.html</a>
+                was extracted and is included inline. 
             </dd>
         </dl>
         <p class="small">
@@ -639,16 +693,14 @@ HTML_SHELL = """<!doctype html>
             <a href="mailto:johnblowe@gmail.com,mazaudon@gmail.com">the creators</a>. We would love to hear what you think.
         </p>
     </section>
-  <!-- Dictionary view -->
-  <div id="dictionary" class="page">
-    <div class="dictionary-body">
-      {sections}
-      <div id="search-results" style="display:none;"></div>
-    </div>
-  </div>
-
+    <!-- Dictionary view -->
+    <section id="dictionary" class="page">
+      <div class="dictionary-body">
+        {sections}
+        <div id="search-results" style="display:none;"></div>
+      </div>
+    </section>
 </div>
-
 <script>{script}</script>
 </body>
 </html>
