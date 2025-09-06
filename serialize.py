@@ -239,22 +239,19 @@ def serialize_stats(stats, settings, args, filename):
     for s in totals:
         ET.SubElement(runstats, s).set('value', str(totals[s]))
 
-    if len(stats.correspondences_used_in_recons) > 0:
+    correspondences_used = 0
+    for reference_set in stats.correspondence_index.values():
+        if len(reference_set) != 0:
+            correspondences_used += 1
+    if correspondences_used > 0:
         corrs = ET.SubElement(root, 'correspondences')
-        for c in sorted(stats.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
-            if c in stats.correspondences_used_in_sets:
-                set_count = stats.correspondences_used_in_sets[c]
-            else:
-                set_count = 0
+        for (c, sets) in sorted(list(stats.correspondence_index.items()), key=lambda u: len(u[1])):
             corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
-            ET.SubElement(corr, 'used_in_reconstructions').set('value', str(stats.correspondences_used_in_recons[c]))
-            ET.SubElement(corr, 'used_in_sets').set('value', str(set_count))
-            #print(f'{c}', '%s %s' % (stats.correspondences_used_in_recons[c], set_count))
-        ET.SubElement(corrs, 'correspondences_used').set('value', str(len(stats.correspondences_used_in_recons)))
+            ET.SubElement(corr, 'used_in_cognate_sets').set('value', str(len(sets)))
+        ET.SubElement(corrs, 'correspondences_used').set('value', str(correspondences_used))
 
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
-
 
     try:
         if len(stats.mel_usage.items()) > 0:

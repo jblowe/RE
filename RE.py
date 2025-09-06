@@ -71,9 +71,6 @@ class Lexicon:
         self.statistics.correspondence_index = correspondence_index
         return self
 
-    def key_forms_by_glyphs_and_gloss(self):
-        return {(form.glyphs, form.gloss): form for form in self.forms}
-
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
@@ -102,14 +99,14 @@ def read_context_from_string(string):
 
 # build a map from tokens to lists of correspondences containing the
 # token key.
-# also return all possible token lengths
+# also return all possible token lengths, sorted
 def partition_correspondences(correspondences, accessor):
     partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
             partitions[token].append(c)
-    return partitions, list(set.union(*(set(map(len, accessor(c)))
-                                        for c in correspondences)))
+    return partitions, sorted(list(set.union(*(set(map(len, accessor(c)))
+                                               for c in correspondences))))
 
 # imperative interface
 class TableOfCorrespondences:
@@ -215,8 +212,8 @@ class ProjectSettings:
 
 class Statistics:
     def __init__(self):
-        self.failed_parses = set()
-        self.singleton_support = set()
+        self.failed_parses = []
+        self.singleton_support = []
         self.summary_stats = {}
         self.language_stats = {}
         self.correspondences_used_in_recons = collections.Counter()
@@ -290,7 +287,7 @@ def next_correspondence_map(parameters):
     return next_map
 
 # build a map from tokens to lists of rules containing the token key.
-# also return all possible token lengths
+# also return all possible token lengths, sorted
 def partition_rules(rules, language):
     partitions = collections.defaultdict(list)
     token_lengths = []
@@ -302,7 +299,7 @@ def partition_rules(rules, language):
             partitions[rule.outcome].append(rule)
             token_lengths.append(len(rule.outcome))
             max_stage = max(max_stage, rule.stage)
-    return partitions, token_lengths, max_stage
+    return partitions, sorted(token_lengths), max_stage
 
 # This class represents the state of yet-to-be-matched-and-consumed
 # portions of right contexts during rule parsing, which people use to
@@ -487,7 +484,7 @@ def make_tokenizer(parameters, accessor, next_map):
             for token_length in token_lengths:
                 next_position = position + token_length
                 if next_position > form_length:
-                    continue
+                    break
                 for c in rule_map[form[position:next_position]]:
                     if c in next_map[last]:
                         for syllable_type in c.syllable_types:
@@ -549,7 +546,11 @@ def project_back(lexicons, parameters, statistics):
                     for (stage_0_form, history) in apply_rules(form.glyphs):
                         parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
                     return parses
-                parses = memo.setdefault(form.glyphs, all_tokenizations())
+                if form.glyphs in memo:
+                    parses = memo[form.glyphs]
+                else:
+                    parses = all_tokenizations()
+                    memo[form.glyphs] = parses
             else:
                 statistics.add_note(f'form missing: {form.language} {form.gloss}')
                 parses = None
@@ -563,41 +564,34 @@ def project_back(lexicons, parameters, statistics):
                         reconstructions[cs].append(proto_stage_0_form)
             else:
                 count_of_no_parses += 1
-                statistics.failed_parses.add(form)
+                statistics.failed_parses.append(form)
         number_of_forms += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
-    statistics.correspondences_used_in_recons = count_correspondences_used_in_reconstructions(reconstructions)
     statistics.add_stat('lexicons', len(lexicons))
     statistics.add_stat('reflexes', number_of_forms)
     statistics.add_note(f'{number_of_forms} input forms')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
-def count_correspondences_used_in_reconstructions(reconstructions):
-    correspondences_used = collections.Counter()
-    for r in reconstructions:
-        correspondences_used.update([correspondence for correspondence in r])
-    return correspondences_used
-
-def count_correspondences_used_in_sets(cognate_sets):
-    correspondences_used = collections.Counter()
-    for c in cognate_sets:
-        correspondences_used.update([correspondence for correspondence in c[0]])
-    return correspondences_used
-
 # we create cognate sets by comparing meaning.
 def create_sets(projections, statistics, mels, only_with_mel, root=True):
     cognate_sets = set()
 
+    attested_forms_memo = {}
     def attested_forms(support):
-        attested = set()
-        for x in support:
-            if isinstance(x, ModernForm):
-                attested.add(x)
-            else:
-                attested |= x.attested_support
-        return attested
+        if support in attested_forms_memo:
+            return attested_forms_memo[support]
+        else:
+            attested = set()
+            for x in support:
+                if isinstance(x, ModernForm):
+                    attested.add(x)
+                else:
+                    attested |= x.attested_support
+            freeze = frozenset(attested)
+            attested_forms_memo[support] = freeze
+            return freeze
 
     def all_glosses(projections):
         all_glosses = set()
@@ -611,36 +605,37 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
     associated_mels_table = mel.compile_associated_mels(mels,
                                                         all_glosses(projections))
 
-    def add_cognate_sets(reconstruction, support):
+    for reconstruction, support in projections.items():
         distinct_mels = collections.defaultdict(list)
-        for supporting_form in support:
-            # stage0 forms also have meaning
-            if isinstance(supporting_form, ModernForm) or isinstance(supporting_form, Stage0Form):
-                for associated_mel in mel.associated_mels(associated_mels_table,
-                                                          supporting_form.gloss):
-                    if not (only_with_mel and associated_mel.id == '') or mels is None:
+        if mels:
+            for supporting_form in support:
+                # stage0 forms also have meaning
+                if isinstance(supporting_form, (ModernForm, Stage0Form)):
+                    for associated_mel in mel.associated_mels(associated_mels_table,
+                                                              supporting_form.gloss,
+                                                              only_with_mel):
                         distinct_mels[associated_mel].append(supporting_form)
-            else:
-                distinct_mels[mel.default_mel].append(supporting_form)
+                else:
+                    distinct_mels[mel.default_mel].append(supporting_form)
+        else:
+            distinct_mels[mel.default_mel] = support
         for distinct_mel, support in distinct_mels.items():
+            frozen_support = frozenset(support)
+            attested_support = attested_forms(frozen_support)
             if not root or len({form.language for form in support}) > 1:
                 cognate_sets.add((reconstruction,
-                                  frozenset(support),
-                                  frozenset(attested_forms(support)),
+                                  frozen_support,
+                                  attested_support,
                                   distinct_mel))
             else:
-                statistics.singleton_support.add((reconstruction,
-                                                  frozenset(support),
-                                                  frozenset(attested_forms(support)),
-                                                  distinct_mel))
-
-    for reconstruction, support in projections.items():
-        add_cognate_sets(reconstruction, support)
+                statistics.singleton_support.append((reconstruction,
+                                                     frozen_support,
+                                                     attested_support,
+                                                     distinct_mel))
     statistics.add_note(
         f'{len(cognate_sets)} sets supported by multiple languages'
         if root else
         f'{len(cognate_sets)} cognate sets')
-    statistics.correspondences_used_in_sets = count_correspondences_used_in_sets(cognate_sets)
     return cognate_sets, statistics
 
 # given a collection of sets, we want to find all maximal sets,
@@ -789,8 +784,10 @@ def dump_keys(lexicon, filename):
     forms = []
     with open(filename, 'w', encoding='utf-8') as sys.stdout:
         for reconstruction, support in lexicon.statistics.keys.items():
+            proto_form_string = correspondences_as_proto_form_string(reconstruction)
+            id_string = correspondences_as_ids(reconstruction)
             for support1 in support:
-                forms.append(str(support1) + f'\t*{correspondences_as_proto_form_string(reconstruction)}\t*{correspondences_as_ids(reconstruction)}')
+                forms.append(str(support1) + f'\t*{proto_form_string}\t*{id_string}')
         print('\t'.join('language & form,gloss,id,protoform,correspondences'.split(',')))
         for i,f in enumerate(sorted(forms)):
             if i > 100000:
@@ -799,9 +796,10 @@ def dump_keys(lexicon, filename):
             print(f)
         print('***failures')
         for failure in lexicon.statistics.failed_parses:
-            print(f'{str(failure)}')
+            print(str(failure))
     sys.stdout = out
 
+# only works for non-tree lexicons for now (because of the str method)
 def compare_support(lex1_forms, forms):
     # FIXME: there's a subtle dependency here on the Form.str method.
     return sorted([str(k) for k in lex1_forms]) == sorted([str(k) for k in forms])
@@ -921,12 +919,6 @@ def compare_proto_lexicons(lexicon1, lexicon2, languages):
         'refs': refs
     }
 
-
-# def compare_isomorphic_proto_lexicons(lexicon1, lexicon2, compare_type):
-#     # replace_underlying_lexicons(lexicon1, attested_lexicons)
-#     # replace_underlying_lexicons(lexicon2, attested_lexicons)
-#     return compare_proto_lexicons(lexicon1, lexicon2)
-
 # create a fake cognate set with the forms that failed to reconstruct
 def extract_failures(lexicon):
     return Lexicon(
@@ -939,17 +931,11 @@ def extract_failures(lexicon):
 # create "cognate sets" for the isolates
 # (and we need to check to see that the singletons really are isolates -- not in any set)
 def extract_isolates(lexicon):
-    forms_used = collections.Counter()
-
-    def is_in(item, list_of_forms):
-        for form in item[1]:
-            if form in list_of_forms:
-                return True
-        return False
-
-    for set in lexicon.forms:
-        forms_used.update([supporting_form for supporting_form in set.supporting_forms])
-    isolates = [item for item in lexicon.statistics.singleton_support if not is_in(item, forms_used)]
+    forms_used = set()
+    for form in lexicon.forms:
+        forms_used |= form.supporting_forms
+    isolates = [item for item in lexicon.statistics.singleton_support
+                if not any(form in forms_used for form in item[1])]
     duplicates = {}
     new_isolates = []
     for item in isolates:
@@ -960,21 +946,6 @@ def extract_isolates(lexicon):
     return [ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel)
             for (correspondences, supporting_forms, attested_support, mel)
             in new_isolates]
-
-# given a proto lexicon whose underlying attested forms are drawn
-# from lexicons isomorphic to attested_lexicons, destructively replace
-# the in-memory Form objects with those in attested_lexicons.
-# daughter_lexicons is a hash table mapping language -> Lexicon.
-# only works for non-tree lexicons for now.
-def replace_underlying_lexicons(proto_lexicon, attested_lexicons):
-    keyed_forms = {language: lexicon.key_forms_by_glyphs_and_gloss()
-                   for (language, lexicon) in attested_lexicons.items()}
-    for form in proto_lexicon.forms:
-        def intern(form_set):
-            return frozenset((keyed_forms[form.language][(form.glyphs, form.gloss)]
-                              for form in form_set))
-        form.attested_support = intern(form.attested_support)
-        form.supporting_forms = intern(form.supporting_forms)
 
 # Given a lexicon of protoforms, return a mapping between cognate sets
 # and possible reconstructions.

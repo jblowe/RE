@@ -122,12 +122,11 @@ elif command_args.command == 'upstream':
     sets_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.txt')
     RE.dump_sets(B, sets_file)
     # print(f'wrote {len(B.forms)} text sets to {sets_file}')
-    for c in sorted(B.statistics.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
-        if c in B.statistics.correspondences_used_in_sets:
-            set_count = B.statistics.correspondences_used_in_sets[c]
-        else:
-            set_count = 0
-    print(f'{len(B.statistics.correspondences_used_in_recons)} correspondences used')
+    correspondences_used = 0
+    for reference_set in B.statistics.correspondence_index.values():
+        if len(reference_set) != 0:
+            correspondences_used += 1
+    print(f'{correspondences_used} correspondences used')
     B.isolates = RE.extract_isolates(B)
     B.failures = RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language), (), [])
     sets_xml_file = os.path.join(args.experiment_path, f'{args.project}.{args.run}.sets.xml')
