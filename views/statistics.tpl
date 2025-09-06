@@ -1,4 +1,4 @@
-<div id="parameters" class="card">
+<div class="panel card mb-3 pane" id="pane-statistics">
     <h6 class="card-header">Statistics</h6>
     <div class="card-body">
         <div class="table-responsive">

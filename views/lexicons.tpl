@@ -1,4 +1,4 @@
-<div id="lexicons" class="card">
+<div class="panel card mb-3 pane" id="pane-lexicons">
     <h6 class="card-header">Lexicons</h6>
     <div class="card-body">
         <div class="table-responsive">
@@ -6,7 +6,7 @@
                 <thead/>
                 <tbody>
                 <tr>
-                    % for (language, value) in data['languages']:
+                    % for language in data['lexicons']:
                     <th>
                         <i>{{language}}</i>
                     </th>

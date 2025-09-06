@@ -1,4 +1,4 @@
-<div id="parameters" class="card">
+<div class="panel card mb-3 pane" id="pane-parameters">
     <h6 class="card-header">Upstream parameters available</h6>
     <div class="card-body">
         <div class="table-responsive">
@@ -22,9 +22,6 @@
             % end
             </select>
             </td></tr>
-            % if 'interactive' in data:
-                <tr><td><button class="btn-sm btn-primary" name="select_correspondences">Select</button><tr><tr>
-            % end
         % end
         % if 'fuzzies' in data['experiment_info']:
             <tr><td><i>Fuzzy files</i></td><td>

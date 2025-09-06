@@ -32,3 +32,17 @@ body {
 .lx  { display: table-cell; width: 26%; font-family: 'Lucida Sans Unicode', sans-serif ; padding-right: 10px; }
 .gl  { display: table-cell; width: 40%; font-style: italic; padding-right: 10px; }
 .nn  { display: table-cell; width: 14%; font-family: 'Courier'; font-size: smaller; padding-left: 10px; }
+
+/* Make each panel scroll independently to mimic scrolled panes */
+.pane { min-height: 280px; display: flex; flex-direction: column; }
+.pane .pane-scroll { max-height: 40vh; overflow: auto; }
+@media (min-width: 992px) {
+  .pane .pane-scroll { max-height: 32vh; }
+}
+/* Optional: allow user to resize panel bodies */
+.pane .pane-scroll { resize: vertical; }
+/* Tighten headers */
+.card-header, .card-footer { padding: .5rem .75rem; }
+.card-body { padding: .75rem; }
+/* Keep tables tidy */
+table.table-sm td, table.table-sm th { vertical-align: middle; }

@@ -92,6 +92,9 @@ def data_files(tree, directory):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     num_files = 0
+    for type in 'snapshot'.split(' '):
+        to_display.append((f'{type}', [f for f in filelist if f'.{type}' in f]))
+        num_files += len([f for f in filelist if f'{type}' in f])
     for type in 'sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
@@ -224,32 +227,56 @@ def limit_lines(filecontent, max_rows):
         message = f'\n\n... and {num_rows - max_rows} more rows not shown.'
     return '\n'.join(rows) + message
 
-
+# upstream for interactive only
 def upstream(request, language_forms, project, experiment, parameters, only_with_mel):
     project_dir = os.path.join('..', EXPERIMENTS, project, experiment)
     parameters_file = os.path.join(project_dir, f'{project}.master.parameters.xml')
-    if request == 'languages':
-        mel = None
-        fuzzy = None
-        recon = parameters['recon'] if 'recon' in parameters and parameters['recon'] != '' else 'standard'
-        settings = read.read_settings_file(parameters_file,
-                                           mel=mel,
-                                           fuzzy=fuzzy,
-                                           recon=recon)
-        return settings.upstream[settings.upstream_target], settings.upstream_target, project_dir
-    elif request == 'upstream':
-        mel = parameters['mel'] if 'mel' in parameters and parameters['mel'] != '' else None
-        recon = parameters['recon'] if 'recon' in parameters and parameters['recon'] != '' else None
-        fuzzy = parameters['fuzzy'] if 'fuzzy' in parameters and parameters['fuzzy'] != '' else None
-        settings = read.read_settings_file(parameters_file,
-                                           mel=mel,
-                                           fuzzy=fuzzy,
-                                           recon=recon)
-        attested_lexicons = read.create_lexicon_from_parms(language_forms)
-        B = RE.interactive_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
-        isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]
-        return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
-    pass
+    mel = parameters['mel'] if 'mel' in parameters and parameters['mel'] != '' else None
+    recon = parameters['recon'] if 'recon' in parameters and parameters['recon'] != '' else None
+    fuzzy = parameters['fuzzy'] if 'fuzzy' in parameters and parameters['fuzzy'] != '' else None
+    settings = read.read_settings_file(parameters_file,
+                                       mel=mel,
+                                       fuzzy=fuzzy,
+                                       recon=recon)
+    attested_lexicons = read.create_lexicon_from_parms(language_forms)
+    B = RE.interactive_upstream(settings, attested_lexicons=attested_lexicons, only_with_mel=only_with_mel)
+    isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]
+    return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
+
+def setup_re(project, experiment, parameters):
+    experiments, base_dir, data_elements = list_of_experiments(project)
+    experiment_info = get_experiment_info(base_dir, experiment, data_elements, project)
+    experiment_path = ''
+    print(time.asctime())
+    elapsed_time = time.time()
+
+
+    parameters_file = os.path.join(experiment_path,f'{project}.master.parameters.xml')
+    settings = read.read_settings_file(parameters_file,
+                                       mel=mel,
+                                       fuzzy=fuzzy,
+                                       recon=recon)
+    load_hooks.load_hook(experiment_path, args, settings)
+    mel_status = 'strict MELs' if only_with_mel else 'MELs not enforced'
+    print(mel_status)
+
+def run_up(project, settings, only_with_mel):
+    B = RE.batch_all_upstream(settings, only_with_mel=only_with_mel)
+    # print(f'wrote {len(B.statistics.keys)} keys and {len(B.statistics.failed_parses)} failures to {keys_file}')
+    # print(f'wrote {len(B.forms)} text sets to {sets_file}')
+    for c in sorted(B.statistics.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
+        if c in B.statistics.correspondences_used_in_sets:
+            set_count = B.statistics.correspondences_used_in_sets[c]
+        else:
+            set_count = 0
+    print(f'{len(B.statistics.correspondences_used_in_recons)} correspondences used')
+    B.isolates = RE.extract_isolates(B)
+    B.failures = RE.ProtoForm('failed', (), sorted(B.statistics.failed_parses, key=lambda x: x.language), (), [])
+    # print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
+    B.statistics.add_stat('isolates', len(B.isolates))
+    B.statistics.add_stat('sets', len(B.forms))
+    B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures.supporting_forms)},{B.statistics.summary_stats["reflexes"]}')
+    print(time.asctime())
 
 
 VERSION = get_version()

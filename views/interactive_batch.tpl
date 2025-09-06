@@ -1,5 +1,5 @@
 <div id="content" class="col-sm-12">
-<h4>{{data['project']}}/{{data['experiment']}} Interactive Batch</h4>
+<h5>{{data['project']}}/{{data['experiment']}}: Interactive Batch</h5>
     <form method="post">
         <div class="row">
           <div class="col-md">
@@ -11,7 +11,7 @@
         </div>
         <div class="row">
           <div class="col-md">
-            % include('parameters.tpl')
+            % include('settings.tpl')
           </div>
           <div class="col-md">
             % include('statistics.tpl')
