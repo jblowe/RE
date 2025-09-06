@@ -8,7 +8,7 @@ sys.path.append(os.path.join('..', 'src'))
 import read
 import load_hooks
 import time
-from adapter import *
+# from adapter import *
 
 # we need some code from the sibling directory where the rest of the RE code lives
 
