@@ -1,0 +1,92 @@
+#	L	T	PL	Env	PSL	WB	Akha	HaniW	HaniL	Khatu	Pijo	Haoni	Mpi
+1	1	T	£		£	£	££	££	££	££	££	£Á,ªÁ	£,¢
+2	1	T	ª		ª	ª	ÁÁ	ÁÁ	ÁÁ	ÁÁ	ÁÁ	°°	Á,ª
+3	1	T	Á		Á	Á	°°	°°	°°	°°	°°	°°	°,¤
+4	1	C	î		î	¼	°°,££	°°,££	°°,££	°°,££	°°,££	££	£,¢
+5	1	C	ñ		ñ	¼	ÁÁ,££	ÁÁ,££	ÁÁ,££	ÁÁ,££	ÁÁ,££	ªÁ	Á,ª
+6	1	I	d		d	t	d,th	dd	d	d,tj,t	t,tj	t	t
+7	1	I	dy		dy	dy	dj	dj	dj	ts	ts	k,?	tû
+8	1	I	dz		dz,m+dz	dz	dz=dj	dz	dz	ts,tj,t	ts=tj	ts=tÆ	t=tû
+9	1	I	g		g	k	g,©	g	©,g	k,tj	k	k	k=kj,kw
+10	1	I	gr		m+gr,gr	kr	©	©	©	k,tj	k	©=k	k
+11	1	I	gr		gr	r	©,g	hh,gg	©,g	tj	k	©	k
+12	1	I	k		k	kh	k	k	k	kh,tjh	kh	kh	kh
+13	1	I	l		l	l,khl	l	l	l	xh,sjh,l	l	l	l
+14	1	I	lw		lw	hl,lw	l	l	hl	sjh	l	l	l
+15	1	I	m		m,my	m,hm	m	m	m	m	m	m	m
+16	1	I	ml		ml,m+l	ly,hmr	mj	mj,mi	mj=m	mj=m	m	m	mj=m
+17	1	I	mp		b,mp,m+p	mp	b	b	b	p	p	p=ph	p
+18	1	I	my		my	my	m	m	m	mj	mj	m	m
+19	1	I	n		n,s+n	n,hn	n	n	n	n	n	n	n
+20	1	I	p		p	p	p	p	p	p	p	ph	ph
+21	1	I	r		r	r,Ö	š,©,j,z	š,hh	š,xh,©	©,k,xh,tjh	sjh,k,j	j	Öš,k,l,kw
+22	1	I	s		s	s	s=sj	s	sj=s	s=sj,ts	s=sj,ts	s,Æ	s
+23	1	I	w		w	w	0	0	0	0	0	0	0
+24	1	I	Ö+y		sj,Ö+y		j	ss	j	j	j	ï	j
+25	1	I	sr		j,sr	hr	j	x,y	sjh	sj	hi	x	h
+26	1	I	t		t	th	th	d,t	t,th	th	t,th	th,d	th
+27	1	I	c		c	c	tj	ts=tj,z	tj	tj=ts,j	tj=ts		tû
+28	1	I	ky		tj,ky	ky,khy	tj,kh	q	tj,kh	tjh=tsh	tjh=tsh		tû,tûh
+29	1	I	ts		ts	ts	ts,?	ts	ts=tj	tjh=tsh	tjh=ts		th
+30	1	I	dz		dz	dz	ts	ts=tj	ts=tj	ts=tj	ts=tj	ts,tÆ	t=tû
+31	1	I	k		k	k	x	x	x	kh,tjh,?	kh	x=k
+32	1	I	kr		kr	khr	kh	k	kh	tjh,©	kh		kh,h
+33	1	I	y		y	y,Öi	z,j	ss,y	j	j,i	i	ï	Öi,j
+34	1	I	z		z	s	z=j	z=j	z=j	j	j=ï	z=j	l
+35	1	I	³		³	³	³	³	³	³,n	³,nj	³	³
+36	1	P	b+l		bl,b+l	l	Ùo	yu	Ùo	l	l		l
+37	1	P	bj		by,b+y		bj	bj	b,p	pj=p	p	p=f	ph=pj
+38	1	P	k+l		k+l,kl	kl,ky,hl	xh-l,l	h-l,l	xh-l,l	l	l		l
+39	1	P	k+r		k+r	r,kr	g,š	gg,h-z	 g	v,tjh	k,h		tûh
+40	1	P	m+ly		m+ly,mr,ml	mr,ml	Ùo	yu	Ùo	l	l
+41	1	P	ny		ny,n+y	n	nj	ni=nj	nj	n,nj	n,nj		n,ø
+42	1	P	pl		pl,p+l	phl,phr	pj	b	p	pjh	pjh	ph	phj
+43	1	P	pj		pj,py		pj	pj=p	pj	p=pj	p=pj	ph	phj
+44	1	P	r		r	r	j	y	j	ï	ï		Ö
+45	1	P	s+r		s+r	ry	j	y	j		j		j
+46	1	P	Ö+l		Ö+l	kr,l	Ùo,l	yu,l	l	tj	k,l	Ôl	l,kh
+47	1	P	Ö+r		Ö+r	kr	h	h	xh	xh	xh	x	h
+48	1	O	a		a	a	a	a	a	¿,o,a	¿,a	¿	o
+49	2	O	a		a	a	a,ä,?	a,ä,?	a,ä,?	o,a,¿,i	¿,a,i	¿,ä,?	o,a
+50	2	O	a	/N_	a	a	a,o,?	a,uo,o,?	a,o,?	¿,o,u	¿,a,u	¿	o,a
+51	1	O	ay		ay	ay	o,y	u,y	y,ä	u,i	i,y	§v,i,·	i
+52	2	O	ay	/D_	ay	ay	e	ä	e	y	y	i,·	ú
+53	2	O	ay	/N_	ay	ay	y,i,ú	y,ú,i	y,ú,i	y,u,i	y,i	i,·	·
+54	2	O	e	/D_	e	e,i	a³,e	¿,i	¿,i	i,y	i,y	§v	i
+55	1	O	e		e	e	ä,Ùo	ä,Ùo	i,Ùo	i	i		i
+56	2	O	e	/V_	e	e	y	y	y	i	i	·	i
+57	1	O	i		i	i,e	i,y,e,Ùo,iq	i,y,Ùo	i,y,Ùo,Ùu	i,y,ú,e	i,y,ú	i	i,·,o,ú
+58	2	O	i	/N_	i	i	Ùo,y	Ùo,y	Ùo,y,Ùu	i,y	i,y	·	·,i
+59	2	O	i	/Z_	i	i	i,y,e	i,y	i,y	y,ú,e	y,ú,e	i	·,o,ú,i
+60	1	O	o		o	ui	Ùo,i,m	Ùo,i,u,¿	Ùo,Ùu,y,i	i,y,e,o	i,y,e,o	u,o	i,·,o
+61	1	O	aw		aw	aw	¿	o,¿	o	u,¿	u	§v,a	o,o³,?
+62	1	O	u		u	u	u	u,o	u	u	u,y	§v,½	u,o,ú
+63	2	O	u	/L_	u	u	u,¿	u,Ùo	u,Ùo	u,m,?	u,y	§v	u
+64	1	O	u		u	u	uq	uq	u	u	u		uÖ
+65	1	O	we		we	we	y,i	y	y	y	y,i	·	·,i
+66	2	O	we	/V_	we	we	y,¿,?	y,o,?	y,ú,?	y,i	y,i	·	·,i
+67	1	O	wa		wa	wa	ú	ú	ú	y	y	·	ú,o
+68	1	S	ak		ak	ak,¿	aq,úq	aq,úq	aq,yq,o	a,o,¿	a,aq,¿,y	a,i,o,e	aÖ,a³Ö,o
+69	1	S	wak		ak	wak	oq,aq	uq,aq	uq,u,aq	o,a	ú,a	Òu	oÖ,a
+70	1	N	wan		wan	wan	e	ä	ä	i	i		e
+71	1	S	ap		ap	ap	¿q	oq,¿q	oq,¿q,o	u,¿,y,äq	a,y,u,äq	§v,o	o³,úÖ
+72	1	S	ok		ok	ok	oq,uq	uq	uq,u,yq,oq	oq,o,e	ú,úq,§vq,i	§v	oÖ
+73	1	S	ok		ok	ok	úq	úq	úq,y,yq,uq	ú,¿,¿q	¿q,¿,ú	ú,¿	aÖ,oÖ
+74	1	S	Ùok		Ùok	ok,?	oq,oq	oq,uq	oq			o,Òu	oÖ,iÖ,?
+75	1	S	ip		ip	ip	uq	uq	uq	i	i	§v	iÖ
+76	1	S	up		up	up	uq,oq	uq,u	uq,u	o,u	ú,oq,úq	§v	uÖ,oÖ
+77	1	S	et		et	ac	yq	yq	yq,y,i,úq	y,úq,ú,i	i,y,yq,úq	½	iÖ,·Ö
+78	1	S	ek		ek	ac	úq	iev	úq	¿	¿	¿	ŒÖ
+79	1	S	ut		ut	ut,?	yq,?						uÖ,úÖ,
+80	1	S	at		at	at	äq,úq	äq,úq	äq,úq,ä	ä,äq,i,o	äq,eq,yq,i,¿,ä	i,o,½	úÖ,eÖ,uÖ
+81	1	N	in		in	a~n	a³	¿	¿,y,i	y,i	y,i	u	·
+82	1	N	o³		o³	o³	¿,a³	¿,oq	¿,u	u,¿	u	u	u³,o³,ú³
+83	1	N	im		i³	im	m						i³,o³,a³
+84	1	N	a³		a³	a³	¿	o	o	u	u	§v,a	o³
+85	1	N	um		um	um	m	m,¿	m,¿	i	i	o	i³
+86	1	N	un		u³	un	ä,a³,?	ä	ä				a,o,?
+87	1	N	an		an	an	ä	ä	ä	i,y	i		e
+88	1	S	ik		ik	ik	yq	iv	y	i	y		iÖ
+89	1	S	uk		uk	uik	¿q	ov	oq,o	¿	¿	o	eÖ
+90	1	N	in		in	an,a~n,in	y,ä,a³,?	y,ä	y,ä	¿,y	¿,y		·,e
+91	1	N	am		am	am	m	¿	¿	i	i	u	ú³,i³,e

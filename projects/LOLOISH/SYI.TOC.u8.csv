@@ -1,0 +1,93 @@
+# Southern Yi correspondences, mostly from Hansson 1989 or induced therefrom. See Lowe 1995 for details.
+N	L	Type	PL	Env	PSL	WB	Akha	HaniW	HaniL	Khatu	Pijo	Haoni	Mpi
+1	1	T	³		³	³	³³	³³	³³	³³	³³	³¹,²¹	³,⁴
+2	1	T	²		²	²	¹¹	¹¹	¹¹	¹¹	¹¹	⁵⁵	¹,²
+3	1	T	¹		¹	¹	⁵⁵	⁵⁵	⁵⁵	⁵⁵	⁵⁵	⁵⁵	⁵,⁶
+4	1	C	ᴴ		ᴴ	⁰	⁵⁵,³³	⁵⁵,³³	⁵⁵,³³	⁵⁵,³³	⁵⁵,³³	³³	³,⁴
+5	1	C	ᴸ		ᴸ	⁰	¹¹,³³	¹¹,³³	¹¹,³³	¹¹,³³	¹¹,³³	²¹	¹,²,⁵,⁶
+6	1	I	d		d	t	d,th	dd	d	d,tj,t	t,tj	t	t
+7	1	I	dy		dy	dy	dj	dj	dj	ts	ts	k,?	tɕ
+8	1	I	dz		dz,m+dz	dz	dz=dj	dz	dz	ts,tj,t	ts=tj	ts=tʃ	t=tɕ
+9	1	I	g		g	k	g,ɣ	g	ɣ,g	k,tj	k	k	k=kj,kw
+10	1	I	gr		m+gr,gr	kr	ɣ	ɣ	ɣ	k,tj	k	ɣ=k	k
+11	1	I	gr		gr	r	ɣ,g	hh,gg	ɣ,g	tj	k	ɣ	k
+12	1	I	k		k	kh	k	k	k	kh,tjh	kh	kh	kh
+13	1	I	l		l	l,khl	l	l	l	xh,sjh,l	l	l	l
+14	1	I	lw		lw	hl,lw	l	l	hl	sjh	l	l	l
+15	1	I	m		m,my	m,hm	m	m	m	m	m	m	m
+16	1	I	ml		ml,m+l	ly,hmr	mj	mj,mi	mj=m	mj=m	m	m	mj=m
+17	1	I	mp		b,mp,m+p	mp	b	b	b	p	p	p=ph	p
+18	1	I	my		my	my	m	m	m	mj	mj	m	m
+19	1	I	n		n,s+n	n,hn	n	n	n	n	n	n	n
+20	1	I	p		p	p	p	p	p	p	p	ph	ph
+21	1	I	r		r	r,ʔ	ø,ɣ,j,z	ø,hh	ø,xh,ɣ	ɣ,k,xh,tjh	sjh,k,j	j	ʔø,k,l,kw
+22	1	I	s		s	s	s=sj	s	sj=s	s=sj,ts	s=sj,ts	s,ʃ	s
+23	1	I	w		w	w	0	0	0	0	0	0	0
+24	1	I	ʔ+y		sj,ʔ+y		j	ss	j	j	j	ʒ	j
+25	1	I	sr		j,sr	hr	j	x,y	sjh	sj	hi	x	h
+26	1	I	t		t	th	th	d,t	t,th	th	t,th	th,d	th
+27	1	I	c		c	c	tj	ts=tj,z	tj	tj=ts,j	tj=ts		tɕ
+28	1	I	ky		tj,ky	ky,khy	tj,kh	q	tj,kh	tjh=tsh	tjh=tsh		tɕ,tɕh
+29	1	I	ts		ts	ts	ts,?	ts	ts=tj	tjh=tsh	tjh=ts		th
+30	1	I	dz		dz	dz	ts	ts=tj	ts=tj	ts=tj	ts=tj	ts,tʃ	t=tɕ
+31	1	I	k		k	k	x	x	x	kh,tjh,?	kh	x=k
+32	1	I	kr		kr	khr	kh	k	kh	tjh,ɣ	kh		kh,h
+33	1	I	y		y	y,ʔi	z,j	ss,y	j	j,i	i	ʒ	ʔi,j
+34	1	I	z		z	s	z=j	z=j	z=j	j	j=ʒ	z=j	l
+35	1	I	ŋ		ŋ	ŋ	ŋ	ŋ	ŋ	ŋ,n	ŋ,nj	ŋ	ŋ
+36	1	P	b+l		bl,b+l	l	ö	yu	ö	l	l		l
+37	1	P	bj		by,b+y		bj	bj	b,p	pj=p	p	p=f	ph=pj
+38	1	P	k+l		k+l,kl	kl,ky,hl	xh-l,l	h-l,l	xh-l,l	l	l		l
+39	1	P	k+r		k+r	r,kr	g,ø	gg,h-z	 g	v,tjh	k,h		tɕh
+40	1	P	m+ly		m+ly,mr,ml	mr,ml	ö	yu	ö	l	l
+41	1	P	ny		ny,n+y	n	nj	ni=nj	nj	n,nj	n,nj		n,ɲ
+42	1	P	pl		pl,p+l	phl,phr	pj	b	p	pjh	pjh	ph	phj
+43	1	P	pj		pj,py		pj	pj=p	pj	p=pj	p=pj	ph	phj
+44	1	P	r		r	r	j	y	j	ʒ	ʒ		ʔ
+45	1	P	s+r		s+r	ry	j	y	j		j		j
+46	1	P	ʔ+l		ʔ+l	kr,l	ö,l	yu,l	l	tj	k,l	l̥	l,kh
+47	1	P	ʔ+r		ʔ+r	kr	h	h	xh	xh	xh	x	h
+48	1	O	a		a	a	a	a	a	ɔ,o,a	ɔ,a	ɔ	o
+49	2	O	a		a	a	a,ɛ,?	a,ɛ,?	a,ɛ,?	o,a,ɔ,i	ɔ,a,i	ɔ,ɛ,?	o,a
+50	2	O	a	/N_	a	a	a,o,?	a,uo,o,?	a,o,?	ɔ,o,u	ɔ,a,u	ɔ	o,a
+51	1	O	ay		ay	ay	o,y	u,y	y,ɛ	u,i	i,y	v̩,i,ɯ	i
+52	2	O	ay	/D_	ay	ay	e	ɛ	e	y	y	i,ɯ	ə
+53	2	O	ay	/N_	ay	ay	y,i,ə	y,ə,i	y,ə,i	y,u,i	y,i	i,ɯ	ɯ
+54	2	O	e	/D_	e	e,i	aŋ,e	ɔ,i	ɔ,i	i,y	i,y	v̩	i
+55	1	O	e		e	e	ɛ,ö	ɛ,ö	i,ö	i	i		i
+56	2	O	e	/V_	e	e	y	y	y	i	i	ɯ	i
+57	1	O	i		i	i,e	i,y,e,ö,iq	i,y,ö	i,y,ö,ü	i,y,ə,e	i,y,ə	i	i,ɯ,o,ə
+58	2	O	i	/N_	i	i	ö,y	ö,y	ö,y,ü	i,y	i,y	ɯ	ɯ,i
+59	2	O	i	/Z_	i	i	i,y,e	i,y	i,y	y,ə,e	y,ə,e	i	ɯ,o,ə,i
+60	1	O	o		o	ui	ö,i,m	ö,i,u,ɔ	ö,ü,y,i	i,y,e,o	i,y,e,o	u,o	i,ɯ,o
+61	1	O	aw		aw	aw	ɔ	o,ɔ	o	u,ɔ	u	v̩,a	o,oŋ,?
+62	1	O	u		u	u	u	u,o	u	u	u,y	v̩,ɿ	u,o,ə
+63	2	O	u	/L_	u	u	u,ɔ	u,ö	u,ö	u,m,?	u,y	v̩	u
+64	1	O	u		u	u	uq	uq	u	u	u		uʔ
+65	1	O	we		we	we	y,i	y	y	y	y,i	ɯ	ɯ,i
+66	2	O	we	/V_	we	we	y,ɔ,?	y,o,?	y,ə,?	y,i	y,i	ɯ	ɯ,i
+67	1	O	wa		wa	wa	ə	ə	ə	y	y	ɯ	ə,o
+68	1	S	ak		ak	ak,ɔ	aq,əq	aq,əq	aq,yq,o	a,o,ɔ	a,aq,ɔ,y	a,i,o,e	aʔ,aŋʔ,o
+69	1	S	wak		ak	wak	oq,aq	uq,aq	uq,u,aq	o,a	ə,a	u̯	oʔ,a
+70	1	N	wan		wan	wan	e	ɛ	ɛ	i	i		e
+71	1	S	ap		ap	ap	ɔq	oq,ɔq	oq,ɔq,o	u,ɔ,y,ɛq	a,y,u,ɛq	v̩,o	oŋ,əʔ
+72	1	S	ok		ok	ok	oq,uq	uq	uq,u,yq,oq	oq,o,e	ə,əq,v̩q,i	v̩	oʔ
+73	1	S	ok		ok	ok	əq	əq	əq,y,yq,uq	ə,ɔ,ɔq	ɔq,ɔ,ə	ə,ɔ	aʔ,oʔ
+74	1	S	ök		ök	ok,?	oq,oq	oq,uq	oq			o,u̯	oʔ,iʔ,?
+75	1	S	ip		ip	ip	uq	uq	uq	i	i	v̩	iʔ
+76	1	S	up		up	up	uq,oq	uq,u	uq,u	o,u	ə,oq,əq	v̩	uʔ,oʔ
+77	1	S	et		et	ac	yq	yq	yq,y,i,əq	y,əq,ə,i	i,y,yq,əq	ɿ	iʔ,ɯʔ
+78	1	S	ek		ek	ac	əq	iev	əq	ɔ	ɔ	ɔ	ɑʔ
+79	1	S	ut		ut	ut,?	yq,?						uʔ,əʔ,
+80	1	S	at		at	at	ɛq,əq	ɛq,əq	ɛq,əq,ɛ	ɛ,ɛq,i,o	ɛq,eq,yq,i,ɔ,ɛ	i,o,ɿ	əʔ,eʔ,uʔ
+81	1	N	in		in	añ	aŋ	ɔ	ɔ,y,i	y,i	y,i	u	ɯ
+82	1	N	oŋ		oŋ	oŋ	ɔ,aŋ	ɔ,oq	ɔ,u	u,ɔ	u	u	uŋ,oŋ,əŋ
+83	1	N	im		iŋ	im	m						iŋ,oŋ,aŋ
+84	1	N	aŋ		aŋ	aŋ	ɔ	o	o	u	u	v̩,a	oŋ
+85	1	N	um		um	um	m	m,ɔ	m,ɔ	i	i	o	iŋ
+86	1	N	un		uŋ	un	ɛ,aŋ,?	ɛ	ɛ				a,o,?
+87	1	N	an		an	an	ɛ	ɛ	ɛ	i,y	i		e
+88	1	S	ik		ik	ik	yq	iv	y	i	y		iʔ
+89	1	S	uk		uk	uik	ɔq	ov	oq,o	ɔ	ɔ	o	eʔ
+90	1	N	in		in	an,añ,in	y,ɛ,aŋ,?	y,ɛ	y,ɛ	ɔ,y	ɔ,y		ɯ,e
+91	1	N	am		am	am	m	ɔ	ɔ	i	i	u	əŋ,iŋ,e

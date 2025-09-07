@@ -1,0 +1,26 @@
+ git clone https://github.com/jblowe/RE.git
+ cd RE/RE8.2
+ less RE7/DATA/DEMO93/DEMO93.default.sets.txt 
+
+# various git commands
+
+# to back out uncommited changes
+ git checkout -- RE8.2/RE.py
+
+ git status
+
+# to bring local repo up to date
+ git pull -v
+
+# check differences in files
+ git diff
+
+# to get changes up to cloud (github)
+ git add RE7/DATA/TGTM/TGTM.ris.data.xml
+ git status
+ git commit -m "fixed typo in Ris data"
+ git push
+
+# to set up your shell for git
+ git config --global user.email "mazaudon@gmail.com"
+ git config --global user.name "mmazaudon"

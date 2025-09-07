@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<semantics>
+   <totals>
+      <found value="10"/>
+      <notfound value="4"/>
+      <total value="14"/>
+      <rawglosses value="14"/>
+      <lemmata value="12"/>
+   </totals>
+   <mel id="wn1">
+      <gl pivot="key">beer</gl>
+   </mel>
+   <mel id="wn2">
+      <gl pivot="key">charge</gl>
+      <gl>load</gl>
+   </mel>
+   <mel id="wn3">
+      <gl pivot="key">food</gl>
+   </mel>
+   <mel id="wn4">
+      <gl pivot="key">grain</gl>
+   </mel>
+   <mel id="wn5">
+      <gl pivot="key">heart</gl>
+   </mel>
+   <mel id="wn6">
+      <gl pivot="key">leaf</gl>
+   </mel>
+   <mel id="wn7">
+      <gl>charge</gl>
+      <gl pivot="key">load</gl>
+   </mel>
+   <mel id="wn8">
+      <gl pivot="key">place</gl>
+   </mel>
+   <mel id="wn9">
+      <gl pivot="key">rice</gl>
+   </mel>
+   <mel id="wn10">
+      <gl pivot="key">snow</gl>
+   </mel>
+   <mel id="nf11">
+      <gl pivot="notfound">beer-mash</gl>
+   </mel>
+   <mel id="nf12">
+      <gl pivot="notfound">beermash</gl>
+   </mel>
+   <mel id="nf13">
+      <gl pivot="notfound">cooked rice</gl>
+   </mel>
+   <mel id="nf14">
+      <gl pivot="notfound">small leaf</gl>
+   </mel>
+</semantics>

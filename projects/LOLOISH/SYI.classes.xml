@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <canon value="[CT][PI]?[NOS]"/>
+  <class name="L" value="p,Cp,ʔp,mp,p-ylr,b,ʔb,mb,b-yrl,m,my,mr,ml"/>
+  <class name="Z" value="ts,mts,dz,C-dz,c,j,ɲ"/>
+  <class name="V" value="k,ky,kr,kl,g,gy,gr,ŋ,ŋy"/>
+  <class name="F" value="s,ʃ,x,z,ʒ"/>
+  <class name="N" value="r,ʔə-r,g-r,ʔr,sr,Cr,ʃə-r,k-r,y,ʔ-y,r-y,s-y,C-y,ʃ-ʔp-y,n-y,ʔ.s-n-y,l,C-l,ʔ-ly,k-lw,k-l,m-l,b-l,ʔ-l,m-ly"/>
+  <class name="D" value="n,t,d"/>
+  <class name="G" value="y,w"/>
+</parameters>

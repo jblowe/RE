@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<semantics>
+  <mel id="1">
+    <gl>son</gl>
+  </mel>
+  <mel id="2">
+    <gl>salt</gl>
+  </mel>
+  <mel id="3">
+    <gl>meat</gl>
+  </mel>
+  <mel id="4">
+    <gl>buckwheat</gl>
+  </mel>
+  <mel id="5">
+    <gl>eat</gl>
+  </mel>
+  <mel id="6">
+    <gl>strength</gl>
+  </mel>
+  <mel id="7">
+    <gl>chew</gl>
+  </mel>
+  <mel id="8">
+    <gl>dragon</gl>
+  </mel>
+  <mel id="9">
+    <gl>deaf</gl>
+  </mel>
+  <mel id="10">
+    <gl>under</gl>
+  </mel>
+  <mel id="11">
+    <gl>pine</gl>
+  </mel>
+  <mel id="12">
+    <gl>wash</gl>
+  </mel>
+  <mel id="13">
+    <gl>near</gl>
+  </mel>
+  <mel id="14">
+    <gl>daughter</gl>
+  </mel>
+  <mel id="15">
+    <gl>use</gl>
+  </mel>
+  <mel id="16">
+    <gl>steal</gl>
+  </mel>
+  <mel id="17">
+    <gl>bone</gl>
+  </mel>
+  <mel id="18">
+    <gl>raw</gl>
+  </mel>
+  <mel id="19">
+    <gl>vegetable</gl>
+  </mel>
+  <mel id="20">
+    <gl>old</gl>
+  </mel>
+  <mel id="21">
+    <gl>empty</gl>
+  </mel>
+  <mel id="22">
+    <gl>sell</gl>
+  </mel>
+  <mel id="23">
+    <gl>two</gl>
+  </mel>
+  <mel id="24">
+    <gl>rot</gl>
+  </mel>
+  <mel id="25">
+    <gl>seven</gl>
+  </mel>
+  <mel id="26">
+    <gl>let go</gl>
+  </mel>
+  <mel id="27">
+    <gl>tongue</gl>
+  </mel>
+  <mel id="28">
+    <gl>bamboo</gl>
+  </mel>
+  <mel id="29">
+    <gl>ask</gl>
+  </mel>
+  <mel id="30">
+    <gl>fry</gl>
+  </mel>
+  <mel id="31">
+    <gl>bake</gl>
+  </mel>
+  <mel id="32">
+    <gl>turn</gl>
+  </mel>
+  <mel id="33">
+    <gl>shy</gl>
+  </mel>
+  <mel id="34">
+    <gl>fat</gl>
+  </mel>
+  <mel id="35">
+    <gl>star</gl>
+  </mel>
+  <mel id="36">
+    <gl>grow</gl>
+  </mel>
+  <mel id="37">
+    <gl>rice</gl>
+  </mel>
+  <mel id="38">
+    <gl>I</gl>
+  </mel>
+  <mel id="39">
+    <gl>ill</gl>
+  </mel>
+  <mel id="40">
+    <gl>hundred</gl>
+  </mel>
+  <mel id="41">
+    <gl>intestines</gl>
+  </mel>
+  <mel id="42">
+    <gl>make</gl>
+  </mel>
+  <mel id="43">
+    <gl>wing</gl>
+  </mel>
+  <mel id="44">
+    <gl>human</gl>
+  </mel>
+  <mel id="45">
+    <gl>pull</gl>
+  </mel>
+  <mel id="46">
+    <gl>sheep</gl>
+  </mel>
+  <mel id="47">
+    <gl>water</gl>
+  </mel>
+  <mel id="48">
+    <gl>skin</gl>
+  </mel>
+  <mel id="49">
+    <gl>die</gl>
+  </mel>
+  <mel id="50">
+    <gl>melt</gl>
+  </mel>
+  <mel id="51">
+    <gl>wine</gl>
+  </mel>
+  <mel id="52">
+    <gl>buy</gl>
+  </mel>
+  <mel id="53">
+    <gl>borrow</gl>
+  </mel>
+  <mel id="54">
+    <gl>stop</gl>
+  </mel>
+  <mel id="55">
+    <gl>lay up</gl>
+  </mel>
+  <mel id="56">
+    <gl>want</gl>
+  </mel>
+  <mel id="57">
+    <gl>kneel</gl>
+  </mel>
+  <mel id="58">
+    <gl>tiger</gl>
+  </mel>
+  <mel id="59">
+    <gl>trousers</gl>
+  </mel>
+  <mel id="60">
+    <gl>teach</gl>
+  </mel>
+  <mel id="61">
+    <gl>sweat</gl>
+  </mel>
+  <mel id="62">
+    <gl>congeal</gl>
+  </mel>
+  <mel id="63">
+    <gl>chicken</gl>
+  </mel>
+  <mel id="64">
+    <gl>embrace</gl>
+  </mel>
+  <mel id="65">
+    <gl>harrow</gl>
+  </mel>
+  <mel id="66">
+    <gl>black</gl>
+  </mel>
+  <mel id="67">
+    <gl>sharpen</gl>
+  </mel>
+  <mel id="68">
+    <gl>go up</gl>
+  </mel>
+  <mel id="69">
+    <gl>bean</gl>
+  </mel>
+  <mel id="70">
+    <gl>full</gl>
+  </mel>
+  <mel id="71">
+    <gl>go out</gl>
+  </mel>
+  <mel id="72">
+    <gl>lean on</gl>
+  </mel>
+  <mel id="73">
+    <gl>fear</gl>
+  </mel>
+  <mel id="74">
+    <gl>stone</gl>
+  </mel>
+  <mel id="75">
+    <gl>hold in arms</gl>
+  </mel>
+  <mel id="76">
+    <gl>shoot</gl>
+  </mel>
+  <mel id="77">
+    <gl>light</gl>
+  </mel>
+  <mel id="78">
+    <gl>tree</gl>
+  </mel>
+  <mel id="79">
+    <gl>blossom</gl>
+  </mel>
+  <mel id="80">
+    <gl>bubble</gl>
+  </mel>
+  <mel id="81">
+    <gl>break</gl>
+  </mel>
+  <mel id="82">
+    <gl>hand</gl>
+  </mel>
+  <mel id="83">
+    <gl>pig</gl>
+  </mel>
+  <mel id="84">
+    <gl>soldier</gl>
+  </mel>
+  <mel id="85">
+    <gl>weave</gl>
+  </mel>
+  <mel id="86">
+    <gl>year</gl>
+  </mel>
+  <mel id="87">
+    <gl>enough</gl>
+  </mel>
+  <mel id="88">
+    <gl>six</gl>
+  </mel>
+  <mel id="89">
+    <gl>brain</gl>
+  </mel>
+  <mel id="90">
+    <gl>waist</gl>
+  </mel>
+  <mel id="91">
+    <gl>poison</gl>
+  </mel>
+  <mel id="92">
+    <gl>rub</gl>
+  </mel>
+  <mel id="93">
+    <gl>lick</gl>
+  </mel>
+  <mel id="94">
+    <gl>leopard</gl>
+  </mel>
+  <mel id="95">
+    <gl>spit vomit</gl>
+  </mel>
+  <mel id="96">
+    <gl>leech</gl>
+  </mel>
+  <mel id="97">
+    <gl>needle</gl>
+  </mel>
+  <mel id="98">
+    <gl>hoof</gl>
+  </mel>
+  <mel id="99">
+    <gl>shell</gl>
+  </mel>
+  <mel id="100">
+    <gl>put on</gl>
+  </mel>
+  <mel id="101">
+    <gl>stand</gl>
+  </mel>
+  <mel id="102">
+    <gl>catch</gl>
+  </mel>
+  <mel id="103">
+    <gl>thin</gl>
+  </mel>
+  <mel id="104">
+    <gl>snow</gl>
+  </mel>
+  <mel id="105">
+    <gl>plough</gl>
+  </mel>
+  <mel id="106">
+    <gl>bright</gl>
+  </mel>
+  <mel id="107">
+    <gl>nephew</gl>
+  </mel>
+  <mel id="108">
+    <gl>porcupine</gl>
+  </mel>
+  <mel id="109">
+    <gl>thick</gl>
+  </mel>
+  <mel id="110">
+    <gl>chopsticks</gl>
+  </mel>
+  <mel id="111">
+    <gl>horse</gl>
+  </mel>
+  <mel id="112">
+    <gl>soft</gl>
+  </mel>
+  <mel id="113">
+    <gl>sky</gl>
+  </mel>
+  <mel id="114">
+    <gl>insect</gl>
+  </mel>
+  <mel id="115">
+    <gl>price</gl>
+  </mel>
+  <mel id="116">
+    <gl>carry</gl>
+  </mel>
+  <mel id="117">
+    <gl>mushroom</gl>
+  </mel>
+  <mel id="118">
+    <gl>crow</gl>
+  </mel>
+  <mel id="119">
+    <gl>excrement</gl>
+  </mel>
+  <mel id="120">
+    <gl>urine</gl>
+  </mel>
+  <mel id="121">
+    <gl>day</gl>
+  </mel>
+  <mel id="122">
+    <gl>copper</gl>
+  </mel>
+  <mel id="123">
+    <gl>dung</gl>
+  </mel>
+  <mel id="124">
+    <gl>sweet</gl>
+  </mel>
+  <mel id="125">
+    <gl>blood</gl>
+  </mel>
+  <mel id="126">
+    <gl>squeeze</gl>
+  </mel>
+  <mel id="127">
+    <gl>ride</gl>
+  </mel>
+  <mel id="128">
+    <gl>yellow</gl>
+  </mel>
+  <mel id="129">
+    <gl>grease</gl>
+  </mel>
+  <mel id="130">
+    <gl>smoke</gl>
+  </mel>
+  <mel id="131">
+    <gl>cry</gl>
+  </mel>
+  <mel id="132">
+    <gl>nine</gl>
+  </mel>
+  <mel id="133">
+    <gl>paddy</gl>
+  </mel>
+  <mel id="134">
+    <gl>louse</gl>
+  </mel>
+  <mel id="135">
+    <gl>livestock</gl>
+  </mel>
+  <mel id="136">
+    <gl>left</gl>
+  </mel>
+  <mel id="137">
+    <gl>sour</gl>
+  </mel>
+  <mel id="138">
+    <gl>frost</gl>
+  </mel>
+  <mel id="139">
+    <gl>lead</gl>
+  </mel>
+  <mel id="140">
+    <gl>name</gl>
+  </mel>
+  <mel id="141">
+    <gl>cloud</gl>
+  </mel>
+  <mel id="142">
+    <gl>ripe</gl>
+  </mel>
+  <mel id="143">
+    <gl>long</gl>
+  </mel>
+  <mel id="144">
+    <gl>thread</gl>
+  </mel>
+  <mel id="145">
+    <gl>wake up</gl>
+  </mel>
+  <mel id="146">
+    <gl>bridge</gl>
+  </mel>
+  <mel id="147">
+    <gl>smell</gl>
+  </mel>
+  <mel id="148">
+    <gl>iron</gl>
+  </mel>
+  <mel id="149">
+    <gl>eye</gl>
+  </mel>
+  <mel id="150">
+    <gl>air</gl>
+  </mel>
+  <mel id="151">
+    <gl>link up</gl>
+  </mel>
+  <mel id="152">
+    <gl>drip</gl>
+  </mel>
+  <mel id="153">
+    <gl>cockspur</gl>
+  </mel>
+  <mel id="154">
+    <gl>lock</gl>
+  </mel>
+  <mel id="155">
+    <gl>peck</gl>
+  </mel>
+  <mel id="156">
+    <gl>turn over</gl>
+  </mel>
+  <mel id="157">
+    <gl>frighten</gl>
+  </mel>
+  <mel id="158">
+    <gl>scrape</gl>
+  </mel>
+  <mel id="159">
+    <gl>herd</gl>
+  </mel>
+  <mel id="160">
+    <gl>kindle,light</gl>
+  </mel>
+  <mel id="161">
+    <gl>monkey</gl>
+  </mel>
+  <mel id="162">
+    <gl>weeding</gl>
+  </mel>
+  <mel id="163">
+    <gl>lack</gl>
+  </mel>
+  <mel id="164">
+    <gl>paste</gl>
+  </mel>
+  <mel id="165">
+    <gl>bandit</gl>
+  </mel>
+  <mel id="166">
+    <gl>know</gl>
+  </mel>
+  <mel id="167">
+    <gl>sleep</gl>
+  </mel>
+  <mel id="168">
+    <gl>pinch</gl>
+  </mel>
+  <mel id="169">
+    <gl>hungry</gl>
+  </mel>
+  <mel id="170">
+    <gl>thirsty</gl>
+  </mel>
+  <mel id="171">
+    <gl>new</gl>
+  </mel>
+  <mel id="172">
+    <gl>split</gl>
+  </mel>
+  <mel id="173">
+    <gl>stomach</gl>
+  </mel>
+  <mel id="174">
+    <gl>heart</gl>
+  </mel>
+  <mel id="175">
+    <gl>blink</gl>
+  </mel>
+  <mel id="176">
+    <gl>goat</gl>
+  </mel>
+  <mel id="177">
+    <gl>suck</gl>
+  </mel>
+  <mel id="178">
+    <gl>saddle</gl>
+  </mel>
+  <mel id="179">
+    <gl>female</gl>
+  </mel>
+  <mel id="180">
+    <gl>exchange</gl>
+  </mel>
+  <mel id="181">
+    <gl>obtain</gl>
+  </mel>
+  <mel id="182">
+    <gl>rabbit</gl>
+  </mel>
+  <mel id="183">
+    <gl>brood</gl>
+  </mel>
+  <mel id="184">
+    <gl>shine upon</gl>
+  </mel>
+  <mel id="185">
+    <gl>bite</gl>
+  </mel>
+  <mel id="186">
+    <gl>swell</gl>
+  </mel>
+  <mel id="187">
+    <gl>prickly ash</gl>
+  </mel>
+  <mel id="188">
+    <gl>drill</gl>
+  </mel>
+  <mel id="189">
+    <gl>burn grass on waste land</gl>
+  </mel>
+  <mel id="190">
+    <gl>bear</gl>
+  </mel>
+  <mel id="191">
+    <gl>family</gl>
+  </mel>
+  <mel id="192">
+    <gl>press from both sides</gl>
+  </mel>
+  <mel id="193">
+    <gl>come apart</gl>
+  </mel>
+  <mel id="194">
+    <gl>scoop up</gl>
+  </mel>
+  <mel id="195">
+    <gl>stick in</gl>
+  </mel>
+  <mel id="196">
+    <gl>layer</gl>
+  </mel>
+  <mel id="197">
+    <gl>can</gl>
+  </mel>
+  <mel id="198">
+    <gl>hold</gl>
+  </mel>
+  <mel id="199">
+    <gl>take off</gl>
+  </mel>
+  <mel id="200">
+    <gl>blow</gl>
+  </mel>
+  <mel id="201">
+    <gl>Buddha</gl>
+  </mel>
+  <mel id="202">
+    <gl>jar</gl>
+  </mel>
+  <mel id="203">
+    <gl>rice (cooked)</gl>
+  </mel>
+  <mel id="204">
+    <gl>be left</gl>
+  </mel>
+  <mel id="205">
+    <gl>prickly ash (tree)</gl>
+  </mel>
+  <mel id="206">
+    <gl>carry (on back)</gl>
+  </mel>
+  <mel id="207">
+    <gl>hold (between fingers)</gl>
+  </mel>
+  <mel id="208">
+    <gl>bear (fruit)</gl>
+  </mel>
+  <mel id="209">
+    <gl>be full</gl>
+  </mel>
+  <mel id="210">
+    <gl>lock (v.)</gl>
+  </mel>
+  <mel id="211">
+    <gl>kindle/light (v)</gl>
+  </mel>
+</semantics>

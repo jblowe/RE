@@ -1,0 +1,1321 @@
+<?xml version="1.0" ?>
+<tableOfCorr>
+   <createdat>2025-09-01 00:49:00 UTC</createdat>
+   <parameters>
+      <class name="V" value="a,e,ě,ę,ę̄,i,ĭ,o,ǫ,ǭ,u,ŭ,y"/>
+      <class name="F" value="ĭ,i,e,ě,ę,ę̄"/>
+      <class name="S" value="lʹ,ř,č,ž,š,j"/>
+      <canon name="syllabe" value="V|(V?((CC?C?V)|((CC?C?Y)?(CC?C?y)))+)"/>
+      <spec name="supra_segmentals" value="ˈ"/>
+      <context_match_type name="context_match_type" value="constituent"/>
+   </parameters>
+   <corr num="a">
+      <proto syll="V">a</proto>
+      <modern dialecte="cz">
+         <seg>a</seg>
+         <seg>á</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>a</seg>
+         <seg>á</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="ablaut-1-pl">
+      <proto syll="V" contextR="d,n,t,r,l,s">e</proto>
+      <modern dialecte="cz">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>o</seg>
+         <seg>ó</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="ablaut-2-pl">
+      <proto syll="V" contextR="t,d,n,r,l,s,z">ě</proto>
+      <modern dialecte="cz">
+         <seg>ě</seg>
+         <seg>í</seg>
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>ije</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ě</seg>
+      </modern>
+   </corr>
+   <corr num="a-soft">
+      <proto syll="V" contextL="S">a</proto>
+      <modern dialecte="cz">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>a</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>a</seg>
+         <seg>á</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="a-velar">
+      <proto syll="V" contextL="l">a</proto>
+      <modern dialecte="cz">
+         <seg>a</seg>
+         <seg>á</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>a</seg>
+         <seg>á</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>a</seg>
+      </modern>
+   </corr>
+   <corr num="b">
+      <proto syll="C">b</proto>
+      <modern dialecte="cz">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>b</seg>
+      </modern>
+   </corr>
+   <corr num="b-front">
+      <proto syll="C" contextR="F">b</proto>
+      <modern dialecte="cz">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>bi</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>b</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>b</seg>
+         <seg>bʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>b</seg>
+      </modern>
+   </corr>
+   <corr num="c">
+      <proto syll="C">c</proto>
+      <modern dialecte="cz">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>c</seg>
+      </modern>
+   </corr>
+   <corr num="č">
+      <proto syll="C">č</proto>
+      <modern dialecte="cz">
+         <seg>č</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>cz</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>č</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>č</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>č</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>č</seg>
+      </modern>
+   </corr>
+   <corr num="d">
+      <proto syll="C">d</proto>
+      <modern dialecte="cz">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>d</seg>
+      </modern>
+   </corr>
+   <corr num="dʹ">
+      <proto syll="C">dʹ</proto>
+      <modern dialecte="cz">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>dz</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>đ</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>ž</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>žd</seg>
+      </modern>
+   </corr>
+   <corr num="d-front">
+      <proto syll="C" contextR="F">d</proto>
+      <modern dialecte="cz">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>dzi</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>d</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>d</seg>
+         <seg>dʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>d</seg>
+      </modern>
+   </corr>
+   <corr num="dl-medial">
+      <proto syll="CC" contextL="V" contextR="V">dl</proto>
+      <modern dialecte="cz">
+         <seg>dl</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>dł</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="e">
+      <proto syll="V">e</proto>
+      <modern dialecte="cz">
+         <seg>e</seg>
+         <seg>é</seg>
+         <seg>í</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>e</seg>
+      </modern>
+   </corr>
+   <corr num="ě">
+      <proto syll="V">ě</proto>
+      <modern dialecte="cz">
+         <seg>ě</seg>
+         <seg>í</seg>
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>ije</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ě</seg>
+      </modern>
+   </corr>
+   <corr num="ę">
+      <proto syll="V">ę</proto>
+      <modern dialecte="cz">
+         <seg>a</seg>
+         <seg>ě</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ę</seg>
+         <seg>ą</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>ja</seg>
+         <seg>já</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ę</seg>
+      </modern>
+   </corr>
+   <corr num="ę̄">
+      <proto syll="V">ę̄</proto>
+      <modern dialecte="cz">
+         <seg>á</seg>
+         <seg>í</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ą</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>ja</seg>
+         <seg>já</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ę</seg>
+      </modern>
+   </corr>
+   <corr num="ě-soft">
+      <proto syll="V" contextL="l,ř">ě</proto>
+      <modern dialecte="cz">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>ije</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ě</seg>
+      </modern>
+   </corr>
+   <corr num="g">
+      <proto syll="C">g</proto>
+      <modern dialecte="cz">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>g</seg>
+      </modern>
+   </corr>
+   <corr num="g-soft">
+      <proto syll="C" contextR="F">g</proto>
+      <modern dialecte="cz">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>gi</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>g</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>g</seg>
+         <seg>gʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>g</seg>
+      </modern>
+   </corr>
+   <corr num="g-v-soft">
+      <proto syll="CC" contextR="F">gv</proto>
+      <modern dialecte="cz">
+         <seg>hv</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>gwi</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>zv</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>zv</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>zv</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>zv</seg>
+      </modern>
+   </corr>
+   <corr num="i">
+      <proto syll="V">i</proto>
+      <modern dialecte="cz">
+         <seg>i</seg>
+         <seg>í</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>i</seg>
+         <seg>í</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>i</seg>
+      </modern>
+   </corr>
+   <corr num="ĭrd">
+      <proto syll="YCC">ĭrd</proto>
+      <modern dialecte="cz">
+         <seg>rd</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>er</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>érd</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>rĭd</seg>
+      </modern>
+   </corr>
+   <corr num="ĭ-strong">
+      <proto syll="Y">ĭ</proto>
+      <modern dialecte="cz">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>a</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>e</seg>
+         <seg>é</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ĭ</seg>
+      </modern>
+   </corr>
+   <corr num="ĭ-weak">
+      <proto syll="y">ĭ</proto>
+      <modern dialecte="cz">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ĭ</seg>
+      </modern>
+   </corr>
+   <corr num="j">
+      <proto syll="C">j</proto>
+      <modern dialecte="cz">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>j</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>j</seg>
+      </modern>
+   </corr>
+   <corr num="k">
+      <proto syll="C">k</proto>
+      <modern dialecte="cz">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>k</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>k</seg>
+      </modern>
+   </corr>
+   <corr num="l-hard">
+      <proto syll="C">l</proto>
+      <modern dialecte="cz">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ł</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="l-soft">
+      <proto syll="C" contextR="F">lʹ</proto>
+      <modern dialecte="cz">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>l</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>l</seg>
+         <seg>lʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>l</seg>
+      </modern>
+   </corr>
+   <corr num="m">
+      <proto syll="C">m</proto>
+      <modern dialecte="cz">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>m</seg>
+      </modern>
+   </corr>
+   <corr num="m-front">
+      <proto syll="C" contextR="F">m</proto>
+      <modern dialecte="cz">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>mi</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>m</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>m</seg>
+      </modern>
+   </corr>
+   <corr num="n">
+      <proto syll="C">n</proto>
+      <modern dialecte="cz">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>n</seg>
+      </modern>
+   </corr>
+   <corr num="ň">
+      <proto syll="C" contextR="F">ň</proto>
+      <modern dialecte="cz">
+         <seg>ň</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ń</seg>
+         <seg>ni</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>nj</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>nj</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>nʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>n</seg>
+         <seg>nʹ</seg>
+      </modern>
+   </corr>
+   <corr num="n-front">
+      <proto syll="C" contextR="F">n</proto>
+      <modern dialecte="cz">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ń</seg>
+         <seg>ni</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>n</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>n</seg>
+         <seg>nʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>n</seg>
+      </modern>
+   </corr>
+   <corr num="o">
+      <proto syll="V">o</proto>
+      <modern dialecte="cz">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>o</seg>
+         <seg>ó</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>o</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>o</seg>
+         <seg>ó</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>o</seg>
+      </modern>
+   </corr>
+   <corr num="ǫ">
+      <proto syll="V">ǫ</proto>
+      <modern dialecte="cz">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ę</seg>
+         <seg>ą</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>u</seg>
+         <seg>ú</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ǫ</seg>
+      </modern>
+   </corr>
+   <corr num="ǭ">
+      <proto syll="V">ǭ</proto>
+      <modern dialecte="cz">
+         <seg>ou</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ą</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>u</seg>
+         <seg>ú</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ǫ</seg>
+      </modern>
+   </corr>
+   <corr num="p">
+      <proto syll="C">p</proto>
+      <modern dialecte="cz">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="p-front">
+      <proto syll="C" contextR="F">p</proto>
+      <modern dialecte="cz">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>pi</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>p</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>p</seg>
+         <seg>pʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>p</seg>
+      </modern>
+   </corr>
+   <corr num="r">
+      <proto syll="C">r</proto>
+      <modern dialecte="cz">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>r</seg>
+         <seg>ar</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>r</seg>
+         <seg>er</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>r</seg>
+         <seg>er</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>r</seg>
+      </modern>
+   </corr>
+   <corr num="r-soft">
+      <proto syll="C" contextR="F">ř</proto>
+      <modern dialecte="cz">
+         <seg>ř</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>rz</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>r</seg>
+         <seg>rj</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>r</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>r</seg>
+         <seg>rj</seg>
+      </modern>
+   </corr>
+   <corr num="s">
+      <proto syll="C">s</proto>
+      <modern dialecte="cz">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="š">
+      <proto syll="C">š</proto>
+      <modern dialecte="cz">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>sz</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>š</seg>
+      </modern>
+   </corr>
+   <corr num="s-front">
+      <proto syll="C" contextR="F">s</proto>
+      <modern dialecte="cz">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>si</seg>
+         <seg>ś</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>s</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>s</seg>
+      </modern>
+   </corr>
+   <corr num="š-front">
+      <proto syll="C" contextR="F">š</proto>
+      <modern dialecte="cz">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>sz</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>š</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>šʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>š</seg>
+      </modern>
+   </corr>
+   <corr num="t">
+      <proto syll="C">t</proto>
+      <modern dialecte="cz">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="tʹ">
+      <proto syll="C">tʹ</proto>
+      <modern dialecte="cz">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>c</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>ć</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>č</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>čʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>št</seg>
+      </modern>
+   </corr>
+   <corr num="t-front">
+      <proto syll="C" contextR="F">t</proto>
+      <modern dialecte="cz">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ć</seg>
+         <seg>ci</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>t</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>tʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>t</seg>
+      </modern>
+   </corr>
+   <corr num="ti-inf">
+      <proto syll="CV" contextR="#">ti</proto>
+      <modern dialecte="cz">
+         <seg>ti</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ć</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>ti</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>ti</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>tʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ti</seg>
+      </modern>
+   </corr>
+   <corr num="u">
+      <proto syll="V">u</proto>
+      <modern dialecte="cz">
+         <seg>u</seg>
+         <seg>ú</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>u</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>u</seg>
+         <seg>ú</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>u</seg>
+      </modern>
+   </corr>
+   <corr num="ŭ-strong">
+      <proto syll="Y">ŭ</proto>
+      <modern dialecte="cz">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>a</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>a</seg>
+         <seg>e</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>o</seg>
+         <seg>ó</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ŭ</seg>
+      </modern>
+   </corr>
+   <corr num="ŭ-weak">
+      <proto syll="y">ŭ</proto>
+      <modern dialecte="cz">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>∅</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ŭ</seg>
+      </modern>
+   </corr>
+   <corr num="v">
+      <proto syll="C">v</proto>
+      <modern dialecte="cz">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>v</seg>
+      </modern>
+   </corr>
+   <corr num="v-front">
+      <proto syll="C" contextR="F">v</proto>
+      <modern dialecte="cz">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>wi</seg>
+         <seg>w</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>v</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>v</seg>
+         <seg>vʹ</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>v</seg>
+      </modern>
+   </corr>
+   <corr num="x">
+      <proto syll="C">x</proto>
+      <modern dialecte="cz">
+         <seg>ch</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ch</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>h</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>x</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>x</seg>
+      </modern>
+   </corr>
+   <corr num="y">
+      <proto syll="V">y</proto>
+      <modern dialecte="cz">
+         <seg>y</seg>
+         <seg>ý</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>y</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>i</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>y</seg>
+         <seg>ý</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>y</seg>
+      </modern>
+   </corr>
+   <corr num="z">
+      <proto syll="C">z</proto>
+      <modern dialecte="cz">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>z</seg>
+      </modern>
+   </corr>
+   <corr num="ž">
+      <proto syll="C">ž</proto>
+      <modern dialecte="cz">
+         <seg>ž</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>ż</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>ž</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>ž</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>ž</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>ž</seg>
+      </modern>
+   </corr>
+   <corr num="z-front">
+      <proto syll="C" contextR="F">z</proto>
+      <modern dialecte="cz">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="pl">
+         <seg>zi</seg>
+         <seg>ź</seg>
+      </modern>
+      <modern dialecte="bcs">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="sl">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="rus">
+         <seg>z</seg>
+      </modern>
+      <modern dialecte="ocs">
+         <seg>z</seg>
+      </modern>
+   </corr>
+   <rule num="r1" stage="2">
+      <input>uo</input>
+      <outcome languages="cz">ů</outcome>
+   </rule>
+   <rule num="r2" stage="1">
+      <input>o</input>
+      <outcome languages="cz">uo</outcome>
+   </rule>
+</tableOfCorr>

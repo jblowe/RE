@@ -1,0 +1,561 @@
+<?xml version="1.0" ?>
+<semantics>
+   <totals>
+      <found value="170"/>
+      <notfound value="5"/>
+      <total value="201"/>
+      <rawglosses value="201"/>
+      <lemmata value="196"/>
+   </totals>
+   <mel id="wn1">
+      <gl pivot="samelg">seven</gl>
+   </mel>
+   <mel id="wn2">
+      <gl pivot="samelg">catch</gl>
+      <gl>pinch</gl>
+      <gl>stop</gl>
+   </mel>
+   <mel id="wn3">
+      <gl pivot="samelg">link up</gl>
+   </mel>
+   <mel id="wn4">
+      <gl pivot="samelg">know</gl>
+   </mel>
+   <mel id="wn5">
+      <gl>bear</gl>
+      <gl>carry</gl>
+      <gl pivot="samelg">hold</gl>
+      <gl>make</gl>
+      <gl>obtain</gl>
+   </mel>
+   <mel id="wn6">
+      <gl pivot="samelg">embrace</gl>
+      <gl>squeeze</gl>
+   </mel>
+   <mel id="wn7">
+      <gl pivot="samelg">nine</gl>
+   </mel>
+   <mel id="wn8">
+      <gl pivot="samelg">drill</gl>
+   </mel>
+   <mel id="wn9">
+      <gl pivot="samelg">scoop up</gl>
+   </mel>
+   <mel id="wn10">
+      <gl pivot="samelg">near</gl>
+   </mel>
+   <mel id="wn11">
+      <gl pivot="samelg">kneel</gl>
+   </mel>
+   <mel id="wn12">
+      <gl pivot="samelg">I</gl>
+   </mel>
+   <mel id="wn13">
+      <gl pivot="samelg">sharpen</gl>
+   </mel>
+   <mel id="wn14">
+      <gl>chicken</gl>
+      <gl pivot="samelg">yellow</gl>
+   </mel>
+   <mel id="wn15">
+      <gl pivot="samelg">sweet</gl>
+   </mel>
+   <mel id="wn16">
+      <gl pivot="samelg">price</gl>
+   </mel>
+   <mel id="wn17">
+      <gl pivot="samelg">stone</gl>
+   </mel>
+   <mel id="wn18">
+      <gl pivot="samelg">dung</gl>
+   </mel>
+   <mel id="wn19">
+      <gl>lead</gl>
+      <gl pivot="samelg">left</gl>
+   </mel>
+   <mel id="wn20">
+      <gl pivot="samelg">kindle</gl>
+   </mel>
+   <mel id="wn21">
+      <gl pivot="samelg">tongue</gl>
+   </mel>
+   <mel id="wn22">
+      <gl pivot="samelg">break</gl>
+      <gl>come apart</gl>
+      <gl>die</gl>
+      <gl>split</gl>
+   </mel>
+   <mel id="wn23">
+      <gl pivot="samelg">soldier</gl>
+   </mel>
+   <mel id="wn24">
+      <gl pivot="samelg">bamboo</gl>
+   </mel>
+   <mel id="wn25">
+      <gl pivot="samelg">wake up</gl>
+   </mel>
+   <mel id="wn26">
+      <gl pivot="samelg">melt</gl>
+   </mel>
+   <mel id="wn27">
+      <gl>insect</gl>
+      <gl pivot="samelg">louse</gl>
+   </mel>
+   <mel id="wn28">
+      <gl pivot="samelg">smoke</gl>
+   </mel>
+   <mel id="wn29">
+      <gl pivot="samelg">bone</gl>
+   </mel>
+   <mel id="wn30">
+      <gl pivot="samelg">lick</gl>
+   </mel>
+   <mel id="wn31">
+      <gl>scrape</gl>
+      <gl pivot="samelg">skin</gl>
+   </mel>
+   <mel id="wn32">
+      <gl pivot="samelg">copper</gl>
+      <gl>pig</gl>
+   </mel>
+   <mel id="wn33">
+      <gl pivot="samelg">rot</gl>
+   </mel>
+   <mel id="wn34">
+      <gl pivot="samelg">sky</gl>
+   </mel>
+   <mel id="wn35">
+      <gl pivot="samelg">under</gl>
+   </mel>
+   <mel id="wn36">
+      <gl pivot="samelg">urine</gl>
+      <gl>water</gl>
+   </mel>
+   <mel id="wn37">
+      <gl pivot="samelg">wine</gl>
+   </mel>
+   <mel id="wn38">
+      <gl pivot="samelg">hundred</gl>
+   </mel>
+   <mel id="wn39">
+      <gl pivot="samelg">saddle</gl>
+   </mel>
+   <mel id="wn40">
+      <gl pivot="samelg">day</gl>
+   </mel>
+   <mel id="wn41">
+      <gl pivot="samelg">mushroom</gl>
+   </mel>
+   <mel id="wn42">
+      <gl pivot="samelg">blossom</gl>
+   </mel>
+   <mel id="wn43">
+      <gl pivot="samelg">two</gl>
+   </mel>
+   <mel id="wn44">
+      <gl pivot="samelg">eat</gl>
+   </mel>
+   <mel id="wn45">
+      <gl pivot="samelg">lay up</gl>
+   </mel>
+   <mel id="wn46">
+      <gl pivot="samelg">chopsticks</gl>
+   </mel>
+   <mel id="wn47">
+      <gl pivot="samelg">take off</gl>
+   </mel>
+   <mel id="wn48">
+      <gl pivot="samelg">poison</gl>
+   </mel>
+   <mel id="wn49">
+      <gl pivot="samelg">enough</gl>
+   </mel>
+   <mel id="wn50">
+      <gl pivot="samelg">out</gl>
+   </mel>
+   <mel id="wn51">
+      <gl pivot="samelg">use</gl>
+   </mel>
+   <mel id="wn52">
+      <gl pivot="samelg">new</gl>
+      <gl>raw</gl>
+   </mel>
+   <mel id="wn53">
+      <gl>blow</gl>
+      <gl pivot="samelg">suck</gl>
+   </mel>
+   <mel id="wn54">
+      <gl pivot="samelg">six</gl>
+   </mel>
+   <mel id="wn55">
+      <gl pivot="samelg">lock</gl>
+   </mel>
+   <mel id="wn56">
+      <gl pivot="samelg">drip</gl>
+   </mel>
+   <mel id="wn57">
+      <gl pivot="samelg">light</gl>
+   </mel>
+   <mel id="wn58">
+      <gl pivot="samelg">porcupine</gl>
+   </mel>
+   <mel id="wn59">
+      <gl pivot="samelg">bright</gl>
+   </mel>
+   <mel id="wn60">
+      <gl pivot="samelg">sleep</gl>
+   </mel>
+   <mel id="wn61">
+      <gl pivot="samelg">smell</gl>
+   </mel>
+   <mel id="wn62">
+      <gl pivot="samelg">thick</gl>
+   </mel>
+   <mel id="wn63">
+      <gl pivot="samelg">bite</gl>
+   </mel>
+   <mel id="wn64">
+      <gl pivot="samelg">pull</gl>
+   </mel>
+   <mel id="wn65">
+      <gl pivot="samelg">needle</gl>
+   </mel>
+   <mel id="wn66">
+      <gl pivot="samelg">waist</gl>
+   </mel>
+   <mel id="wn67">
+      <gl pivot="samelg">fry</gl>
+   </mel>
+   <mel id="wn68">
+      <gl pivot="samelg">bake</gl>
+   </mel>
+   <mel id="wn69">
+      <gl pivot="samelg">rice</gl>
+   </mel>
+   <mel id="wn70">
+      <gl pivot="samelg">frighten</gl>
+   </mel>
+   <mel id="wn71">
+      <gl pivot="samelg">cry</gl>
+   </mel>
+   <mel id="wn72">
+      <gl pivot="samelg">long</gl>
+   </mel>
+   <mel id="wn73">
+      <gl pivot="samelg">bridge</gl>
+   </mel>
+   <mel id="wn74">
+      <gl pivot="samelg">excrement</gl>
+   </mel>
+   <mel id="wn75">
+      <gl pivot="samelg">monkey</gl>
+   </mel>
+   <mel id="wn76">
+      <gl pivot="samelg">old</gl>
+   </mel>
+   <mel id="wn77">
+      <gl pivot="samelg">horse</gl>
+   </mel>
+   <mel id="wn78">
+      <gl pivot="samelg">grow</gl>
+      <gl>turn</gl>
+   </mel>
+   <mel id="wn79">
+      <gl pivot="samelg">paddy</gl>
+   </mel>
+   <mel id="wn80">
+      <gl pivot="samelg">full</gl>
+   </mel>
+   <mel id="wn81">
+      <gl pivot="samelg">intestines</gl>
+   </mel>
+   <mel id="wn82">
+      <gl pivot="samelg">borrow</gl>
+   </mel>
+   <mel id="wn83">
+      <gl pivot="samelg">snow</gl>
+   </mel>
+   <mel id="wn84">
+      <gl pivot="samelg">human</gl>
+   </mel>
+   <mel id="wn85">
+      <gl pivot="samelg">swell</gl>
+   </mel>
+   <mel id="wn86">
+      <gl>hand</gl>
+      <gl pivot="samelg">turn over</gl>
+   </mel>
+   <mel id="wn87">
+      <gl pivot="samelg">bandit</gl>
+   </mel>
+   <mel id="wn88">
+      <gl pivot="samelg">fat</gl>
+   </mel>
+   <mel id="wn89">
+      <gl pivot="samelg">grease</gl>
+   </mel>
+   <mel id="wn90">
+      <gl pivot="samelg">weeding</gl>
+   </mel>
+   <mel id="wn91">
+      <gl pivot="samelg">up</gl>
+   </mel>
+   <mel id="wn92">
+      <gl pivot="samelg">thread</gl>
+      <gl>weave</gl>
+   </mel>
+   <mel id="wn93">
+      <gl pivot="samelg">harrow</gl>
+   </mel>
+   <mel id="wn94">
+      <gl pivot="samelg">plough</gl>
+   </mel>
+   <mel id="wn95">
+      <gl pivot="samelg">teach</gl>
+   </mel>
+   <mel id="wn96">
+      <gl pivot="samelg">empty</gl>
+   </mel>
+   <mel id="wn97">
+      <gl pivot="samelg">fear</gl>
+   </mel>
+   <mel id="wn98">
+      <gl pivot="samelg">Buddha</gl>
+   </mel>
+   <mel id="wn99">
+      <gl pivot="samelg">hoof</gl>
+   </mel>
+   <mel id="wn100">
+      <gl pivot="samelg">leech</gl>
+   </mel>
+   <mel id="wn101">
+      <gl pivot="samelg">blood</gl>
+   </mel>
+   <mel id="wn102">
+      <gl pivot="samelg">herd</gl>
+   </mel>
+   <mel id="wn103">
+      <gl pivot="samelg">congeal</gl>
+   </mel>
+   <mel id="wn104">
+      <gl pivot="samelg">son</gl>
+   </mel>
+   <mel id="wn105">
+      <gl pivot="samelg">sour</gl>
+   </mel>
+   <mel id="wn106">
+      <gl>buy</gl>
+      <gl pivot="samelg">steal</gl>
+   </mel>
+   <mel id="wn107">
+      <gl pivot="samelg">buckwheat</gl>
+   </mel>
+   <mel id="wn108">
+      <gl pivot="samelg">frost</gl>
+   </mel>
+   <mel id="wn109">
+      <gl pivot="samelg">paste</gl>
+   </mel>
+   <mel id="wn110">
+      <gl pivot="samelg">can</gl>
+   </mel>
+   <mel id="wn111">
+      <gl pivot="samelg">nephew</gl>
+   </mel>
+   <mel id="wn112">
+      <gl pivot="samelg">sheep</gl>
+   </mel>
+   <mel id="wn113">
+      <gl pivot="samelg">trousers</gl>
+   </mel>
+   <mel id="wn114">
+      <gl pivot="samelg">eye</gl>
+      <gl>heart</gl>
+   </mel>
+   <mel id="wn115">
+      <gl pivot="samelg">leopard</gl>
+   </mel>
+   <mel id="wn116">
+      <gl pivot="samelg">iron</gl>
+   </mel>
+   <mel id="wn117">
+      <gl pivot="samelg">chew</gl>
+   </mel>
+   <mel id="wn118">
+      <gl pivot="samelg">stand</gl>
+      <gl>stomach</gl>
+   </mel>
+   <mel id="wn119">
+      <gl pivot="samelg">exchange</gl>
+   </mel>
+   <mel id="wn120">
+      <gl pivot="samelg">ripe</gl>
+   </mel>
+   <mel id="wn121">
+      <gl pivot="samelg">brain</gl>
+   </mel>
+   <mel id="wn122">
+      <gl pivot="samelg">brood</gl>
+   </mel>
+   <mel id="wn123">
+      <gl pivot="samelg">lack</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="wn124">
+      <gl pivot="samelg">wing</gl>
+   </mel>
+   <mel id="wn125">
+      <gl pivot="samelg">name</gl>
+   </mel>
+   <mel id="wn126">
+      <gl pivot="samelg">livestock</gl>
+   </mel>
+   <mel id="wn127">
+      <gl pivot="samelg">layer</gl>
+   </mel>
+   <mel id="wn128">
+      <gl pivot="samelg">daughter</gl>
+   </mel>
+   <mel id="wn129">
+      <gl pivot="samelg">stick in</gl>
+   </mel>
+   <mel id="wn130">
+      <gl pivot="samelg">rabbit</gl>
+   </mel>
+   <mel id="wn131">
+      <gl pivot="samelg">female</gl>
+   </mel>
+   <mel id="wn132">
+      <gl pivot="samelg">meat</gl>
+   </mel>
+   <mel id="wn133">
+      <gl pivot="samelg">strength</gl>
+   </mel>
+   <mel id="wn134">
+      <gl pivot="samelg">tiger</gl>
+   </mel>
+   <mel id="wn135">
+      <gl pivot="samelg">cloud</gl>
+   </mel>
+   <mel id="wn136">
+      <gl pivot="samelg">shy</gl>
+   </mel>
+   <mel id="wn137">
+      <gl pivot="samelg">year</gl>
+   </mel>
+   <mel id="wn138">
+      <gl pivot="samelg">star</gl>
+   </mel>
+   <mel id="wn139">
+      <gl pivot="samelg">dragon</gl>
+   </mel>
+   <mel id="wn140">
+      <gl pivot="samelg">let go</gl>
+   </mel>
+   <mel id="wn141">
+      <gl pivot="samelg">crow</gl>
+   </mel>
+   <mel id="wn142">
+      <gl pivot="samelg">vegetable</gl>
+   </mel>
+   <mel id="wn143">
+      <gl pivot="samelg">sell</gl>
+   </mel>
+   <mel id="wn144">
+      <gl pivot="samelg">blink</gl>
+   </mel>
+   <mel id="wn145">
+      <gl pivot="samelg">black</gl>
+   </mel>
+   <mel id="wn146">
+      <gl pivot="samelg">sweat</gl>
+   </mel>
+   <mel id="wn147">
+      <gl pivot="samelg">hungry</gl>
+      <gl>thirsty</gl>
+   </mel>
+   <mel id="wn148">
+      <gl pivot="samelg">goat</gl>
+   </mel>
+   <mel id="wn149">
+      <gl pivot="samelg">shoot</gl>
+   </mel>
+   <mel id="wn150">
+      <gl pivot="samelg">ill</gl>
+   </mel>
+   <mel id="wn151">
+      <gl pivot="samelg">bubble</gl>
+   </mel>
+   <mel id="wn152">
+      <gl pivot="samelg">salt</gl>
+   </mel>
+   <mel id="wn153">
+      <gl pivot="samelg">put on</gl>
+   </mel>
+   <mel id="wn154">
+      <gl pivot="samelg">lean on</gl>
+   </mel>
+   <mel id="wn155">
+      <gl pivot="samelg">rub</gl>
+   </mel>
+   <mel id="wn156">
+      <gl pivot="samelg">wash</gl>
+   </mel>
+   <mel id="wn157">
+      <gl pivot="samelg">deaf</gl>
+   </mel>
+   <mel id="wn158">
+      <gl pivot="samelg">prickly ash</gl>
+   </mel>
+   <mel id="wn159">
+      <gl pivot="samelg">air</gl>
+   </mel>
+   <mel id="wn160">
+      <gl pivot="samelg">ask</gl>
+   </mel>
+   <mel id="wn161">
+      <gl pivot="samelg">cockspur</gl>
+   </mel>
+   <mel id="wn162">
+      <gl pivot="samelg">pine</gl>
+   </mel>
+   <mel id="wn163">
+      <gl pivot="samelg">bean</gl>
+   </mel>
+   <mel id="wn164">
+      <gl pivot="samelg">peck</gl>
+   </mel>
+   <mel id="wn165">
+      <gl pivot="samelg">ride</gl>
+   </mel>
+   <mel id="wn166">
+      <gl pivot="samelg">soft</gl>
+   </mel>
+   <mel id="wn167">
+      <gl pivot="samelg">family</gl>
+   </mel>
+   <mel id="wn168">
+      <gl pivot="samelg">thin</gl>
+   </mel>
+   <mel id="wn169">
+      <gl pivot="samelg">jar</gl>
+   </mel>
+   <mel id="wn170">
+      <gl pivot="samelg">tree</gl>
+   </mel>
+   <mel id="wn171">
+      <gl pivot="notfound">burn grass on waste land</gl>
+   </mel>
+   <mel id="wn172">
+      <gl pivot="notfound">hold in arms</gl>
+   </mel>
+   <mel id="wn173">
+      <gl pivot="notfound">press from both sides</gl>
+   </mel>
+   <mel id="wn174">
+      <gl pivot="notfound">shine upon</gl>
+   </mel>
+   <mel id="wn175">
+      <gl pivot="notfound">spit vomit</gl>
+   </mel>
+</semantics>

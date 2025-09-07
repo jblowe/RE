@@ -1,0 +1,287 @@
+ID	GLOSS	cz
+1	I (1sg)	já	
+2	you (2sg)	ty	
+3	he, she, it (3sg)	on	
+4	we (1pl)	my	
+5	you (2pl)	vy	
+6	they (3pl)	oni	
+7	this	tento
+288	this	tato
+289	this	toto
+8	that	tamten
+290	that	tamta
+291	that	tamto
+9	here	zde
+285	here	tady
+286	here	tu
+287	here	sem
+10	there	tam	
+11	who	kdo	
+12	what	co	
+13	where	kde	
+14	when	kdy	
+15	how	jak	
+16	not	ne
+17	all	vše
+283	all	všechno
+18	many	mnoho
+284	many	hodně
+19	some	několik
+208	some	pár
+209	some	trocha
+20	few	málo
+210	few	nemnoho	
+21	other	druhý
+211	other	jiný
+22	one	jeden	
+23	two	dva	
+24	three	tři	
+25	four	čtyři	
+26	five	pět	
+27	big	velký	
+28	long	dlouhý	
+29	wide	široký	
+30	thick	tlustý, hrubý	
+31	heavy	těžký	
+32	small	malý	
+33	short	krátký	
+34	narrow	úzký	
+35	thin	tenký	
+36	woman	žena	
+37	man (adult male)	muž	
+38	man (human being)	člověk	
+39	child	dítě	
+40	wife	žena, manželka, choť	
+41	husband	muž, manžel, choť	
+42	mother	matka, máma, mateř (archaic)	
+43	father	otec	
+44	animal	zvíře	
+45	fish	ryba	
+46	bird	pták	
+47	dog	pes	
+48	louse	veš	
+49	snake	had
+252	viper	zmije
+50	worm	červ	
+51	tree	strom	
+52	forest	les	
+53	stick	hůl
+254	stick	klacek
+255	stick	prut
+256	stick	kůl
+257	stick	pálka
+54	fruit	ovoce, plod	
+55	seed	semeno
+258	seed (archaic)	sémě
+56	leaf	list	
+57	root	kořen	
+58	bark (of a tree)	kůra	
+59	flower	květ	
+60	grass	tráva	
+61	rope	lano
+259	rope	provaz
+260	rope	šňůra
+62	skin	kůže	
+63	meat	maso	
+64	blood	krev	
+65	bone	kost	
+66	fat (noun)	tuk
+214	fat (noun)	sádlo
+215	fat (noun)	maz
+67	egg	vejce	
+68	horn	roh	
+69	tail	ocas
+212	tail	ohon
+213	tail	chvost
+70	feather	pero	
+71	hair	vlasy	
+72	head	hlava	
+73	ear	ucho	
+74	eye	oko	
+75	nose	nos	
+76	mouth	ústa
+214	mouth	pusa
+215	mouth	huba
+77	tooth	zub	
+78	tongue (organ)	jazyk	
+79	fingernail	nehet	
+80	foot	chodidlo
+216	foot	stopa
+81	leg	noha
+217	foot	noha	
+82	knee	koleno	
+83	hand	ruka
+218	hand	dlaň	
+84	wing	křídlo	
+85	belly	břicho	
+86	guts	vnitřnosti
+271	guts	útroby
+87	neck	krk
+88	neck	šíje	
+88	back	záda, hřbet	
+89	breast	prs
+272	breast	hruď
+273	breast	ňadro
+90	heart	srdce	
+91	liver	játra	
+92	to drink	píti	
+93	to eat	jísti	
+94	to bite	kousati
+274	to bite	hryzati
+95	to suck	sáti
+275	to suck	cucati
+96	to spit	plivati	
+97	to vomit	zvraceti
+276	to vomit	blíti
+277	to vomit	dáviti
+98	to blow	foukati
+278	to blow	víti
+279	to blow	vanouti
+99	to breathe	dýchati	
+100	to laugh	smáti	
+101	to see	viděti	
+102	to hear	slyšeti	
+103	to know	věděti
+230	to know	znáti
+104	to think	mysleti
+231	to think	dumati
+105	to smell	čichati
+232	to smell	cítiti
+106	to fear	báti 
+233	to fear	strachovati	
+107	to sleep	spáti	
+108	to live	žíti	
+109	to die	umírati
+234	to die	umříti
+110	to kill	zabíti
+235	to kill	usmrtiti
+111	to fight	bojovati
+236	to fight	válčiti
+112	to hunt	loviti	
+113	to hit	udeřiti	
+114	to cut	řezati
+237	to cut	títi 
+238	to cut	tnouti
+239	to cut	síci
+115	to split	rozděliti	
+116	to stab	bodnouti
+240	to stab	píchnouti
+117	to scratch	škrábati
+241	to scratch	drápati
+118	to dig	kopati	
+119	to swim	plavati	
+120	to fly	letěti	
+121	to walk	jíti
+242	to walk	kráčeti
+243	to walk	choditi
+122	to come	přijíti	
+123	to lie (as in a bed)	ležeti	
+124	to sit	seděti	
+125	to stand	státi	
+126	to turn (intransitive)	obrátiti	
+127	to fall	padati
+282	to fall	upadnouti
+128	to give	dáti	
+129	to hold	držeti	
+130	to squeeze	stlačiti
+280	to squeeze	zmáčknouti
+281	to squeeze	stisknouti
+131	to rub	tříti	
+132	to wash	mýti
+244	to wash umývati
+133	to wipe	utírati	
+134	to pull	tahati	
+135	to push	tlačiti	
+136	to throw	házeti	
+137	to tie	vázati	
+138	to sew	šíti	
+139	to count	počítati	
+140	to say	mluviti
+245	to say	říkati
+141	to sing	zpívati
+246	to sing	pěti	
+142	to play	hráti	
+143	to float	plouti	
+144	to flow	téct
+145	to flow	téci
+145	to freeze	mrznouti
+247	to freeze	zmrznouti
+146	to swell	otékati	
+147	sun	slunce	
+148	moon	měsíc
+248	moon	luna
+149	star	hvězda	
+150	water	voda	
+151	rain	déšť	
+152	river	řeka	
+153	lake	jezero	
+154	sea	moře	
+155	salt	sůl	
+156	stone	kámen	
+157	sand	písek	
+158	dust	prach	
+159	earth	země	
+160	cloud	mrak
+219	cloud	oblak	
+161	fog	mlha	
+162	sky	nebe	
+163	wind	vítr	
+164	snow	sníh	
+165	ice	led	
+166	smoke	kouř
+220	smoke	dým	
+167	fire	oheň	
+168	ash	popel	
+169	to burn	hořeti	
+170	road	silnice
+249	road	cesta
+250	journey	pouť
+171	mountain	hora	
+172	red	červený	
+173	green	zelený	
+174	yellow	žlutý	
+175	white	bílý	
+176	black	černý	
+177	night	noc	
+178	day	den	
+179	year	rok
+221	summer	léto	
+180	warm	teplý	
+181	cold	studený, chladný	
+182	full	plný	
+183	new	nový	
+184	old	starý	
+185	good	dobrý	
+186	bad	špatný
+222	bad	zlý
+187	rotten	shnilý	
+188	dirty	špinavý	
+189	straight	přímý
+251	straight	rovný
+190	round	kulatý	
+191	sharp (as a knife)	ostrý	
+192	dull (as a knife)	tupý	
+193	smooth	hladký	
+194	wet	mokrý	
+195	dry	suchý	
+196	correct	správný	
+197	near	blízký
+226	near	nedaleký
+198	far	daleký	
+199	right	pravý	
+200	left	levý	
+201	at	u
+292	at	při
+202	in	v
+293	in	ve
+203	with	s
+294	with	se
+204	and	a
+295	and	i
+205	if	jestliže
+223	if	jestli
+206	because	protože
+224	because jelikož
+225	because	poněvadž
+207	name	jméno
+296	wood	dřevo

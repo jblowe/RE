@@ -1,0 +1,15611 @@
+\_sh v3.0  400  Reconstructions
+
+\pnv °aᵐbena
+\psm Instrumental anaphoric (with it); inanimate oblique anaphoric
+(at/about… it); Existential  predicate
+\pncv *aᵐbe-na
+\sem his/her/its body (?)
+\cf °aia
+\ps
+\div
+\lhi pæn
+\vlw ᵐbɛn
+\lmg pæn
+\vra ᵐbɛnɛ
+\msn pɛn
+\mta apena
+\num aᵐbɛnɛ
+\mrl ᵐbɪn
+
+\dt 22/Oct/2007
+
+\pnv °aᵐbia
+\psm starch
+\pncv
+\poc *Rabia
+\cf
+\ps n
+\div
+\hiw pjə ~ epjə
+\ltg epiə
+\sem starch
+\lhi
+\lyp
+\vlw
+\mtp {na-ᵐban}
+\lmg
+\vra
+\vrs
+\msn
+\mta pia-
+\sem coagulated vegetable sap
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °aᵐbʷaɣi
+\psm throw, cast s.th.; throw away
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg k͡pʷaːɣ
+\kro k͡pʷɛ͡aɣ
+\olr k͡pʷaː
+\lkn æk͡pʷæ
+\mrl
+\dt 16/Mar/2009
+
+\pnv °(a)βuti
+\psm pull <s.th.> out
+\pncv
+\poc
+\cf °ᵑgo[ŋ]e
+\ps vt
+\div
+\hiw {mjɵ}
+\ltg {liɔ}
+\lhi {kɛŋ}
+\lyp {kɔ}
+\vlw
+\mtp ɣap\wut
+\sem heave up soil with digging-stick
+\mtp {kɔ}
+\vra
+\vrs
+\msn
+\mta βut
+\sem heave up soil swith digging-stick
+\mta aβut
+\sem take up, move
+\mta {koe}
+\num βiβut
+\drg βut
+\kro
+\olr raŋβut
+\lkn aβus
+\mrl
+\dt 08/Mar/2010
+
+\pnv °[a,e]ᵐba
+\psm pandanus mat; bed
+\pva *aᵐba
+\vanb 1
+\pva *eᵐba
+\vanb 2
+\pncv
+\poc *qebal
+\cf
+\ps n
+\div
+\hiw apə
+\vanb 1
+\ltg epə
+\vanb 1
+\ltg tiniepə
+\vanb 1
+\et < *tano-aba < *tano- + aba ‘place of mat’
+\lhi n-æm
+\vanb 2
+\lyp n-ʧɛnɛm
+\vanb 2
+\lmg n-ʔænæp
+\vanb 2
+\et < *tano-eba < *tano- + aba ‘place of mat’
+\vra aᵐbawiɪ
+\vanb 1
+\nt mais noté /nebewiē/ en BG2
+\vra ᵐbɔ-k
+\vanb 1/2
+\et < *eba-ku ‘my mat’
+\vrs aᵐbawɪ
+\vanb 1
+\vrs tiniam ~ tönöam
+\vanb 1
+\msn apɣawɪ
+\vanb 1
+\rfc AG5-47
+\et last 3 < *aba-(ɣa)wia ‘good mat’
+\msn tɛnɛ\pɔ-k
+\vanb 1/2
+\et Both < *tano(i)-eba < *tano- + eba ‘place of mat’
+\mta epa
+\vanb 2
+\num w\ɛm
+\vanb 2
+\rfc BP3-36b
+\num na-ᵐba-k
+\vanb 1/2
+\drg ɛᵐb
+\vanb 2
+\sem sail
+\kro
+\olr
+\lkn ap
+\vanb 1
+\sem sail
+\mrl nɪ-ɪm
+\vanb 2
+\ark ep̈a
+\vanb 2
+\dt 13/Mar/2010
+
+\pnv °[a,e]ᵐbe~
+\psm body
+\pncv *abe
+\poc *abe
+\ps nop
+\cf °taraᵐbe~
+\cf °tur(i,u)(ɣi)
+\div ________
+\hiw
+\ltg piə-k
+\ltg pie-nə
+\lhi
+\lyp
+\vlw
+\mtp
+\ltg
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\mta
+\num ᵐbɛ-k
+\drg ᵐbɪ-k
+\kro ᵐbɪ-k
+\olr pɛ-n
+\rfc BG4-41b
+\lkn ɛpɛ-k
+\mrl nɪ-lɪᵐbɪ ??
+\dt 06/Sep/2011
+
+\pnv °[a,e]su
+\psm live, be alive
+\pva °asu
+\vanb 1
+\pva °esu
+\vanb 2
+\ps
+\div
+\hiw at
+\vanb 1
+\sem (v.) be alive
+\hiw asuβə
+\vanb 1
+\sem (n.) life
+\ltg ah
+\vanb 1
+\nt last two come from *asu
+\lhi ɪh
+\vanb 2
+\lyp ɪs
+\vanb 2
+\mtp ɪh
+\vanb 2
+\lmg ɪs
+\vanb 2
+\vra ɪs
+\vanb 2
+\vrs ɪs
+\vanb 2
+\vrs üsü-k
+\vanb 2
+\sem (n.) my life
+\et < *eˈsu-gu
+\msn ɪs
+\vanb 2
+\mta es
+\vanb 2
+\num ɪs
+\vanb 2
+\drg ɪs
+\vanb 2
+\olr ɪs
+\vanb 2
+\lkn ɪs
+\vanb 2
+\mrl ɪs
+
+\dt 14/Oct/2007
+
+\pnv °aia
+\psm Locative anaphoric (there); inanimate oblique anaphoric
+(at/about… it); Existential predicate
+\cf °aᵐbena
+\ps
+\div
+\hiw iə
+\ltg e
+\mtp aɪ
+\vra aɪ
+\vrs aɪ
+\mta aia
+\drg aɪ
+\kro iɪ
+\olr iɪ
+\lkn (ɪhɪ)
+
+\dt 06/Apr/2007
+
+\pnv °ala[β]i
+\psm take, receive; give
+\pva °ala
+\vanb 1
+\pva °lai
+\vanb 2
+\pva °laβi
+\vanb 3
+\pncv *la[β]i
+\poc *alap
+\hiw ɔjə
+\vanb 1
+\hiw ja
+\et < *ala-a
+\hiw jɔβ
+\vanb 3
+\sem adopt <child>
+\ltg ɔlə
+\vanb 1
+\ltg ola
+\et < *ala-a
+\vanb 1
+\ltg lɛβ
+\vanb 3
+\sem adopt <child>
+\lhi {hɒ}
+\lyp lɪ
+\vanb 2
+\vlw lɛ
+\vanb 2
+\mtp lɛp
+\vanb 3
+\vra lɛ
+\vanb 2
+\vrs lɛ
+\vanb 2
+\msn lɛ
+\vanb 2
+\mta laɸ
+\vanb 3
+\num lɛ
+\vanb 2
+\drg la
+\vanb 2
+\olr la
+\vanb 2
+\lkn læ
+\vanb 2
+\mrl lɛ
+\vanb 2
+\sdi lai
+\vanb 2
+\sdg lavi
+\sem 2° partie de potentiel
+\vanb 3
+
+\dt 18/Nov/2013
+
+\pnv °alasi
+\psm Semecarpus vitiensis
+\ps
+\div
+\mtp nɛ-lɛh
+\vra lɛs
+\vrs lɛs
+\mta las
+\num walɛs
+\drg walaːs
+\lkn ælæh
+
+\dt 08/Mar/2010
+
+\pnv °aliŋa-ᵑgu
+\psm my voice
+\poc *qaliŋa-
+\ps
+\div
+\hiw (nə) jŋɔ-k
+\ltg (nə) lŋe-k
+\mtp na-lŋɛ-k
+\vra n/ɛlŋɔ-k
+\vrs ɛlŋœ-k
+\msn ɛlŋɔ-k
+\mta lŋa-k
+\num na-lŋa-k
+\drg lŋaː-k
+\olr lɪŋɪ-k
+\lkn ɛlŋa-k
+\mrl nɞ-liŋɔ-k
+
+\dt 06/Apr/2007
+
+\pnv °aloa
+\psm sun
+\ps
+\div
+\ltg elo
+\lyp n-lœ
+\vlw n-lɔ
+\mtp na-lɔ
+\vra luɔ
+\vrs lɔ
+\msn lɔ
+\mta loa
+\num w/alɔ
+\drg lɔ
+\olr lɔ
+\lkn alɔ
+\mrl n-alɔ
+
+\dt 07/Jun/2008
+
+\pnv °ami
+\psm seek
+\pncv
+\poc
+\cf °soᵑge
+\cf °siᵑge
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num {ɪl}
+\drg aːm
+\kro ɛ͡am
+\olr ɪm
+\lkn æm
+\mrl
+\dt 10/Jan/2013
+
+\pnv °ana-waRisa
+\psm 2 days from now, in past; day before yesterday
+\pva
+\pncv *ana-waRisa
+\poc *[qa]na-waRisa
+\cf °waRisa
+\ps adv
+\div _________
+\hiw nəwuᶢʟjə
+\ltg nəwuriə
+\lhi nɛnnɛjɛh
+\lyp ɛnɔjɛs
+\mtp anɪjɪh
+\vrs nɔnɔrɪs
+\mta (a)narisa || narsa
+\num nais
+\drg {na-ŋasak} || {naŋɪs}
+\lkn {nahnɪ}
+\mrl nɛwɛ͡as
+\rfc BP3-13a + 23b
+\nt
+\dt 10/Mar/2010
+
+\pnv °aŋaRi
+\psm Canarium almond
+\pva °(a)ŋari
+\vanb 1
+\pva °(a)ŋai
+\vanb 2
+\pncv
+\poc *qaŋaʀi
+\cf
+\ps n
+\div
+\hiw ŋeᶢʟ
+\vanb 1
+\ltg ŋɛr
+\vanb 1
+\lhi n-ŋæj
+\vanb 1
+\lyp n-ŋɪj
+\vanb 1
+\vlw n-ŋɛj
+\vanb 1
+\mtp na-ŋɛj
+\vanb 1
+\vra ŋar
+\vanb 1
+\lmg n-ŋɛr
+\vanb 1
+\vrs ŋɛ
+\vanb 2
+\msn ŋɛ
+\vanb 2
+\mta ŋai
+\vanb 2
+\num ŋa
+\vanb 2
+\drg ŋa
+\vanb 2
+\olr ŋa
+\vanb 2
+\lkn aŋæ
+\vanb 2
+\mrl nɪ-ŋɪ
+\vanb 2
+\ark ŋaŋa
+\vanb 2
+\dt 17/Nov/2011
+
+\pnv °ara
+\psm fence
+\pncv *ʔaRa
+\poc *qaRa
+\cf
+\ps
+\div
+\hiw {pja}
+\ltg {pialə}
+\lhi n-aj
+\lyp n-ɣaj
+\vlw nɛ-ɣɛ\aj
+\mtp nɛ-ɣɛ\aj
+\lmg n-ɒr
+\rfc d09.Karen:42
+\vra
+\vrs ar
+\vrs ɛrɛ
+\et < *ara-i
+\msn ɛrɛ
+\et < *ara-i
+\mta ɣe\ara
+\num ɣɛ\ar
+\drg ar
+\kro ar
+\olr {pɛrɛt}
+\lkn ar
+\mrl
+\dt 25/Jun/2012
+
+\pnv °arasu
+\psm far, remote
+\ps
+\div
+\hiw {atta}
+\ltg {t̻aha}
+\lhi jɒh
+\sem comparative
+\lyp jøs
+\vlw jɛh
+\mtp jɛh
+\vrs arœs
+\msn arɔs
+\mta aras
+\num aras
+\drg araːs
+\kro arɛas
+\olr ras
+\lkn rah
+\mrl {ɛsuwɪ}
+
+\dt 10/Jun/2011
+
+\pnv °aro
+\psm Premna taitensis
+\pncv
+\poc *qarop
+\cf
+\ps n
+\div
+\hiw w\aᶢʟ
+\ltg ar
+\ltg er
+\nt alors??
+\lhi
+\lyp
+\vlw
+\mtp {na-naj k͡pʷʊnk͡pʷʊn}
+\lmg
+\vra n\ar
+\vrs ar
+\msn ar
+\mta aro
+\sem a tree of which bows are made
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 16/Mar/2010
+
+\pnv °aromea
+\psm Acanthurus lineatus
+\lit red version of X tree?
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw aᶢʟmje
+\rfc AF-EG3-02b
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp n-ajmɛ
+\lmg n-armæ
+\rfc AF-EP1-42b
+\vra narmiɛ
+\vrs {ᵐbɛraw}
+\msn
+\mta
+\num
+\drg ⁿdarmɛ
+\sem Scarus blochi
+\drg {ᵐbraβ}
+\kro
+\olr
+\lkn {piraβ}
+\mrl
+\dt 14/Mar/2010
+
+\pnv °aru
+\psm Casuarina equisetifolia
+\pncv *yaRu
+\poc *yaRu
+\cf
+\ps n
+\div
+\hiw ɔᶢʟ
+\ltg ɔr
+\lhi n-nɒj
+\lyp n-ɪj
+\vlw n-ɛj
+\mtp n-ɛj
+\lmg n-ɪr
+\vra nɛr
+\vrs œr
+\msn ɔr
+\mta aru
+\num {rɔŋ͡mʷɔs}
+\drg {rŋ͡mʷɔs}
+\kro
+\olr {rɔŋɔs}
+\lkn {raŋ͡mʷɔs}
+\mrl {tɔr}
+\ark βi-aɾu
+\dt 04/Mar/2010
+
+\pnv °aⁿromʷ[ae,ea]
+\psm Pipturus argenteus
+\nt ou bien °ⁿromʷaya ??  cf. *maraya!
+\pva °asomʷea
+\vanb 1
+\pva °romʷea
+\vanb 2
+\pva °ⁿdomʷae
+\vanb 3
+\pva °ⁿdomʷea
+\vanb 4
+\pncv *ʔaⁿromʷai
+\nt John Lynch's reconstruction = *qadromʷai
+\nt M. Ross's reconstruction = *qaramʷaqi
+\ps n
+\nt "X3" dans mon album de photos de plantes
+\div
+\hiw asəŋʷje
+\vanb 1
+\ltg hiəŋʷi || həŋʷi
+\vanb 1
+\rfc FP3-44b
+\lyp
+\lhi n-ⁿdɪŋʷjɛ
+\vanb ?
+\nt identification pas sûre  [cf. Lhi.Ogres.21]
+\vlw n-jɛŋ͡mʷɛ
+\vanb 2
+\mtp na-jŋ͡mʷɛ
+\vanb 2
+\lmg
+\vra ⁿdɛŋ͡mʷiɛ
+\vanb 4
+\vrs ⁿdiŋ͡mʷi͡a
+\vanb 3
+\msn nɔŋ͡mʷɛ
+\vanb 4
+\rfc EG1-14b
+\mta noŋ͡mʷae
+\vanb 3
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 30/Mar/2010
+
+\pnv °asi
+\hm 1
+\psm song
+\ps n
+\div
+\hiw ɔs
+\sem religious hymn, holy song
+\ltg ɛh
+\lhi n-æh
+\lyp n-ɪs
+\vlw n-ɪh
+\mtp n-ɛh
+\lmg n-ɛs
+\vra n/ɛs
+\vra si-k
+\sem my song
+\rfc BG2-22a
+\vrs œs
+\msn ɛs
+\mta as
+\num w/ɛs
+\drg aːs
+\kro ɛ͡as
+\olr n/ɪs
+\lkn æhæh
+\mrl n-ɛs
+
+\dt 08/Sep/2011
+
+\pnv °asi
+\hm 2
+\psm spear <fish+>, stab <s.o.>
+\pncv
+\poc
+\cf °sari
+\cf °ᵑgara
+\ps vt
+\div
+\hiw
+\ltg
+\lhi æs
+\sem spear <fish+>
+\lyp ɪs
+\sem spear <fish+>
+\vlw
+\mtp ɛs
+\sem stab <s.o.> w. knife
+\lmg ɛs
+\sem spear <fish+>
+\vra (h)ɛs
+\sem spear <fish+>
+\vrs ɛs
+\sem spear <fish+>
+\msn ɛs
+\sem spear <fish+>
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °asu
+\psm smoke
+\pva *asi
+\vanb 1
+\pva *asu
+\vanb 2
+\pva *asu-a
+\vanb 3
+\pncv
+\poc *qasu
+\cf
+\ps
+\div
+\hiw {sɔβ}
+\hiw ɔs
+\vanb 2
+\ltg ɔh
+\vanb 2
+\ltg hi
+\vanb 1
+\lhi
+\nt .../n-so/ d'après Tryon
+\lyp n-sʊ
+\vanb 3
+\vlw nʊ-hʊ
+\vanb 3
+\et < *na aˈsu-a
+\mtp na-hʊ
+\vanb 3
+\et < *na aˈsu-a
+\lmg n\œs
+\vanb 2
+\vra n\ɔs
+\vanb 2
+\vrs œs
+\vanb 2
+\msn
+\mta as
+\vanb 2
+\num w\as
+\vanb 1/2
+\drg ɣ\aːsi
+\vanb 1
+\kro
+\olr
+\lkn ʔah
+\vanb 2
+\mrl
+\dt 17/Nov/2011
+
+\pnv °[a]sura
+\psm deep rock cave; Entrance of Hell
+\ps n
+\div
+\hiw sʉᶢʟə
+\sem an area with deep caves
+\rfc FG2-26b
+\ltg hʉrə
+\sem a deep and narrow cave
+\rfc CG2-43a
+\rfc FP1-07a
+\lyp wʊ\sʊj
+\vlw wʊ\sʊj
+\mtp wʊ\sʊj
+\sem abode of the Dead
+\vrs wɪrɪ\sʊr
+\sem abode of the Dead
+\mta sura
+\sem narrow entrance; esp. entrance into Hades (Panoi)
+\drg wrɪ\sʊr
+\sem abode of the Dead
+\kro wɪrɪ\sʊr
+\sem abode of the Dead
+\olr wɪrɪ\sʊj
+\sem abode of the Dead
+\lkn ahʊː
+\sem volcano
+\lkn wɔrɛ\hʊː
+\sem abode of the Dead
+
+\dt 15/Sep/2011
+
+\pnv °ata~
+\psm soul; spirit of a deceased person
+\pva °[a]tala~
+\pncv
+\poc *qata
+\cf
+\ps nop
+\div
+\hiw ata-nə
+\ltg te-nə
+\rfc FG1-36b
+\lhi n-ɛta-n
+\lyp n-tala-n
+\vlw n-tala-n
+\mtp na-tala-n
+\lmg n-ʔalɒ-n
+\vra
+\vrs ata-n
+\vrs œtœ-k
+\nt 1sg
+\msn
+\mta ata-na
+\num
+\drg na-taŋ͡mʷnɪ-n
+\kro na-taŋ͡mʷnɪ-n
+\olr
+\lkn talatɪ-n
+\mrl
+\dt 05/Sep/2011
+
+\pnv °ato ~ °ota
+\psm sago palm, Metroxylon warburgii; house roof made of
+sago-leaves
+\pva °ato
+\vanb 1
+\pva °ota
+\vanb 2
+\pncv
+\poc *qatop
+\cf °taᵑgura
+\ps
+\div
+\hiw at
+\vanb 1
+\ltg et
+\vanb 1
+\lhi {ⁿdɪ-tkɔj}
+\lyp n-ⁿdɔt
+\vanb 2
+\vlw n-jɔt
+\vanb 2
+\mtp nɔ-jɔt
+\vanb 2
+\et BOTH < *ⁿrau-ota  [metathesis]
+\lmg n-tø-aʔ
+\vanb 1
+\vra ⁿdʊ-aʔ
+\vanb 1
+\vrs ⁿdɔ\ɔt
+\vanb 2
+\msn nɔ\ɔt
+\vanb 2
+\mta no-ota
+\vanb 2
+\ark ɾau-aro
+\vanb 1
+\et <*raun + *qatop
+\dt 10/Jun/2016
+
+\pnv °°atu
+\psm thither, towards non-speaker (you ~ him)
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs n\ɛt
+\msn at
+\mta at
+\num at
+\drg aːt
+\kro
+\olr
+\lkn at
+\mrl ɔt
+\nt < Marie Durand
+\dt 25/Jun/2012
+
+\pnv °au
+\psm bamboo
+\poc *qauʀ
+\cf °ᵐbue
+\div
+\hiw e
+\ltg ɔ
+\lyp n-wʊ\ø
+\rfc FG4-11a
+\mtp n-ɪ/βɛt
+\sem strong bamboo
+\et < *na ˌau ˈβatu “bamboo of stone”
+\lmg n-βœʔ\œ
+\vra wiɔ
+\vrs wɔ
+\msn wɔ
+\mta au
+
+\dt 06/Mar/2010
+
+\pnv °awua 
+\pva °auwa
+\psm turtle
+\pncv *ʔaβua
+\ps
+\div
+\hiw ajɵ || ɔjɵ
+\ltg eɣʉə
+\lhi n-ɔw
+\lyp n-ʊw
+\mtp na-ʊ
+\vlw n-ʊ
+\lmg n-ʊw
+\vra n/uwʊ
+\vrs ʊw
+\msn ʊw
+\mta uwa
+\num w/ʊw
+\drg ʊw
+\kro ʊw
+\olr n/ʊw
+\lkn aʊw
+\mrl n-ʊw
+
+\dt 04/Mar/2010
+
+\pnv °ᵐbaeɣo
+\psm breadfruit, Artocarpus
+\pncv *baeko
+\poc *baReko
+\cf °ᵐbatau
+\ps
+\div
+\hiw pɪɣ
+\ltg pɛɣ
+\lhi pæ
+\lyp n-pjɛ
+\vlw n-ᵐbɛɣ
+\mtp nɛ-ᵐbɛɣ
+\lmg n-pɛɣ
+\vra ᵐbiɛɣ
+\vrs ᵐbiɪɣ
+\msn pɛx
+\olr pɛː
+\lkn pɛɣ
+
+\dt 06/Mar/2010
+
+\pnv °ᵐbaɣaᵐbaɣaloa
+\psm swallow, Collocalia sp.
+\pncv *kaᵐbakaᵐba
+\sem swiftlet
+\mtp ᵐbaɣᵐbaɣlɔ
+\vra ᵐbaɣᵐbaɣluɔ
+\vrs ᵐbaɣᵐbaɣlʊ
+\msn paɣpaɣlɔ
+\mta paɣpaɣaloa
+\num ᵐbaɣᵐbaɣlɔ
+\drg ᵐbaɣᵐbaɣlɔ
+\lkn paɣpaɣlɔ
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbaɣewa
+\psm shark
+\pva *ᵐbaˈɣewa
+\vanb 1
+\pva *ᵐbaˈɣoa
+\vanb 2
+\pva *ᵐbaˈɣea
+\vanb 3
+\pncv ??
+\poc *ᵐbakiwa ??
+\cf
+\ps n
+\div
+\hiw pɔweɣə
+\vanb 1
+\ltg pəɣɛwə
+\vanb 1
+\lhi n-pəɣæ
+\vanb 3
+\lyp n-pɛɣɛ
+\vanb 3
+\vlw
+\mtp na-ᵐbaɣɔ
+\vanb 2
+\lmg pɔɣɔ
+\vanb 2
+\rfc EP1-42b
+\vra ᵐbɛɣiɛ
+\vanb 3
+\vrs ᵐbʊɣʊ
+\vanb 2
+\msn pɔɣɔ
+\vanb 2
+\mta paɣoa
+\vanb 2
+\num ᵐbɔɣɔ
+\rf Hans-lex
+\drg ᵐbɣɔ
+\vanb 2
+\kro ᵐbɛɣɛ
+\vanb 3
+\olr pɛɣɛ
+\vanb 3
+\lkn paɣɛ
+\vanb 3
+\mrl ᵐbaɣɔ
+\vanb 2
+\dt 07/Jun/2011
+
+\pnv °ᵐbaɣura
+\psm Callophyllum inophyllum
+\pncv
+\poc *bakuRa
+\cf
+\ps n
+\div
+\hiw pʉwʉᶢʟə
+\ltg pʉɣʉrə
+\lhi
+\lyp n-pʊɣʊj
+\vlw
+\mtp na-mwʊj
+\lmg
+\vra ᵐbuɣurʊ
+\vrs ᵐbʊɣʊr ~ ᵐbʊwʊr
+\msn pʊɣʊr
+\mta pawura
+\num ᵐbuwur
+\drg ᵐbɣʊr
+\kro
+\olr
+\lkn pawʊː
+\mrl
+\ark βi-p̈ahuɾa
+\dt 13/Mar/2010
+
+\pnv °ᵐbalaᵑgo-mʷotu
+\psm squirrelfish, Sargocentron spiniferum
+\lit ‘broken (fruits? of) Ficus wassa’
+\ps
+\div
+\mtp na-mlak-ŋ͡mʷɪt
+\mta palako-ŋ͡mʷot
+\drg ᵐblak-ŋ͡mʷʊt
+\olr palak-ŋ͡mʷɪt
+\lkn palak-ŋ͡mʷɪt
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbalao(t)
+\psm tetanus; skinny
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta palao
+\sem spasm of tetanus+
+\mta palao/tiu
+\sem extremely thin
+\num ᵐbala
+\sem skinny
+\drg ᵐbla
+\sem skinny
+\kro
+\olr
+\lkn pala
+\sem skinny
+\mrl
+\dt 24/Nov/2011
+
+\pnv °ᵐbalase
+\psm jaw, jawbone
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw pəjatə
+\sem (pig) jaw bone; (man) jaw, chin
+\rfc EP2-24a
+\hiw pajəsɪ-
+\sem cheek
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp na-mlas
+\sem (pig) jaw bone; (man) jaw, chin
+\mtp na-ᵐbalsɛ-
+\sem cheek
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl ᵐbɛlɛsi-k
+\dt 13/Mar/2010
+
+\pnv °ᵐbala[ti]
+\pva °ᵐbala
+\vanb 1
+\pva °ᵐbalati
+\vanb 2
+\psm take (stones+) with tongs
+\pncv *ᵐbala-ti
+\sem wattled structure
+\ps
+\div
+\mtp ᵐbal
+\vanb 1
+\vrs ᵐbal
+\vanb 1
+\msn pal
+\rfc AG5-40a
+\vanb 1
+\mta pala
+\vanb 1 
+\mta palat
+\vanb 2
+\num ᵐbalɛt
+\vanb 2
+\drg ᵐblaːt
+\vanb 2
+\lkn pælæs
+\vanb 2
+
+\dt 22/Sep/2011
+
+\pnv °ᵐbalu
+\psm steal
+\cf °[m,β]anaɣo
+\ps
+\div
+\lhi pɒl
+\vlw ᵐbɛl
+\mtp ᵐbɛl
+\vra ᵐbɔl
+\vrs ᵐbœl
+\msn pɔl
+\mta pal
+\num ᵐbal
+\drg ᵐbaːl
+\kro ᵐbɛal
+\olr pal
+\lkn pal
+\mrl ᵐbɞl
+
+\dt 03/Dec/2007
+
+\pnv °ᵐbaraβu
+\psm long; tall
+\pva °ᵐbaraβu
+\vanb 1
+\pva °ᵐbarau
+\vanb 2
+\pva °ᵐbaᵐbarau
+\vanb 3
+\pncv *ᵐbaraβu
+\poc ...
+\ps
+\div —————
+\hiw pəᶢʟɔ
+\vanb 2
+\hiw ppəᶢʟɔ
+\vanb 3
+\ltg pərɔ
+\vanb 2
+\lyp papjø
+\vanb 3
+\lhi pjɒ
+\vanb 2
+\vlw {n-ɣɛhjɔ}
+\mtp {nɛ-hjɔ}
+\lmg pœrœβ
+\vanb 1
+\vra ᵐbaraβ
+\vanb 1
+\vrs {ɛlβɛt}
+\msn {ɛlβɛt}
+\nt source = Emma.Q + Tryon
+\mta paparau
+\vanb 3
+\num {k͡pʷatsal}
+\drg ᵐbuᵐbra
+\vanb 3
+\kro
+\olr pʊpra
+\vanb 3
+\lkn {βutɣi}
+\mrl ᵐbʊrʊ
+\vanb 2
+\mrl ᵐbʊmrʊ
+\vanb 3
+\div —————
+\sdi ᵐbaᵐbarau
+\vanb 3
+\ark p̈eɾaβu
+\vanb 1
+\dt 17/Jan/2013
+
+\pnv °ᵐbasa[β]u
+\psm seal, put together (two planks+); assemble, mount
+\pncv
+\poc
+\cf
+\ps
+\div
+\nt colmater un trou entre deux planches
+\hiw pɔsiβ
+\rf FP03-92%
+\sem encastrer un bois dans un autre (en perçant+)
+\ltg pəhɔw
+\nt noté qq part /pəhɔwə/, je corrige d'après CP1
+\lhi
+\lyp
+\vlw
+\mtp ᵐbɛhɛmhɛ
+\lmg
+\vra
+\vrs
+\msn
+\mta (pas)pasau
+\num
+\drg ᵐbsa
+\kro
+\olr
+\lkn pahaβ
+\mrl
+\dt 07/Apr/2012
+
+\pnv °ᵐbaso
+\psm finish; do completely; then; all
+\ps
+\div
+\hiw pa
+\ltg pah
+\vlw ᵐbah
+\mtp ᵐbah
+\mta paso
+\num ᵐbas
+\drg ᵐbas
+\kro ᵐbas
+\olr pas
+\lkn pah
+\mrl ᵐbas
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbata
+\psm (adv.) inwards, inside
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw ᵐbat
+\mtp ᵐbat
+\sem (adv.) inwards, inside; (adj.) secret
+\lmg paʔ
+\vra ᵐbaʔa
+\vrs ᵐbat
+\sem go secretly in search of sexual partner
+\msn
+\mta pata
+\sem in, inwardly, secretly
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Apr/2007
+
+\pnv °ᵐbatau
+\psm breadfruit, Artocarpus
+\pncv *ᵐbataβu
+\cf °ᵐbaeɣo
+\ps
+\div
+\mtp na-mtɛ
+\mta patau
+\num ᵐbata
+\drg ᵐbta
+\mrl ᵐbʊtʊ
+
+\dt 06/Apr/2007
+
+\pnv **ᵐbat(i,u)
+\psm pick up, gather
+\pncv
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp {βɪl}
+\lmg pœʔ
+\vra
+\vrs ᵐbɛt
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Apr/2007
+
+\pnv °ᵐbawa
+\psm Lutjanus spp., k.o. fish
+\pncv
+\poc *bʷa[p,w]a
+\cf
+\ps
+\div
+\hiw paw
+\rfc EG3-02b
+\ltg paw
+\sem Luthanus monostigma
+\lhi
+\lyp
+\vlw
+\mtp na-ᵐbaw
+\sem Lutjanus fulvus, L. kasmira
+\lmg
+\vra ᵐbawa
+\sem Lutjanus fulviflamma
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr paw
+\sem Lutjanus monostigma
+\lkn
+\mrl
+\dt 25/Mar/2010
+
+\pnv °ᵐbea
+\psm bait
+\pncv *bea
+\poc *bayan
+\cf
+\ps n
+\div
+\hiw pje
+\ltg pəpi
+\lhi pæ
+\lyp wʊppɛ
+\vlw
+\mtp ᵐbɛ
+\lmg
+\vra
+\vrs ᵐbɪ
+\msn
+\mta pea
+\num ᵐbɛ
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 30/Mar/2010
+
+\pnv °ᵐbei
+\psm fresh water
+\pncv *ᵐbei
+\ps
+\div
+\hiw pɪ
+\ltg pe
+\lhi pɪ
+\vlw nɪ-ᵐbɪ
+\mtp nɪ-ᵐbɪ
+\lmg pɪ
+\vra ᵐbɪ
+\vrs ᵐbɪ
+\msn pɪ
+\mta pei
+\num ᵐbɪ
+\drg ᵐbɪ
+\kro ᵐbɪ
+\olr pɪ
+\mrl nɪ-ᵐbɪ
+
+\dt 03/Dec/2007
+
+\pnv °ᵐbewu
+\psm Dioscorea bulbifera
+\ps
+\div
+\hiw pɪw
+\ltg pew
+\lhi pɪw
+\mtp nɪ-ᵐbɪw
+\vra wʊ/ᵐbɪw
+\msn pɪw
+\mta pewu
+\num ᵐbɪw
+\mrl nɪ-ᵐbɪw
+
+\dt 03/Dec/2007
+
+\pnv °ᵐbiɣi
+\psm eat meat
+\ps
+\div
+\mtp ᵐbiɣ
+\lmg piɣ
+\vra ᵐbiɣ
+\vrs ᵐbiɣ
+\msn pix
+\mta piɣ
+\drg ᵐbiɣ
+\olr piː
+\lkn piɣ
+\mrl ᵐbiɣ 
+
+\dt 08/Mar/2010
+
+\pnv °ᵐbile
+\psm have sexual intercourse
+\pncv *ᵐbile
+\sem
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp pi͡ɛlpi͡ɛl
+\vlw
+\mtp ᵐbɪl
+\lmg
+\vra ᵐbilɪ
+\vrs ᵐbɪl
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\ark p̈ile
+\sem (n.) vulva
+\dt 16/Mar/2009
+
+\pnv °ᵐbiraβa
+\psm k.o. fish, Acanthurus lineatus
+\pncv
+\poc
+\cf
+\ps
+\nq doublet with *ᵐbʷiare (??)
+\div
+\num ᵐbiraβ
+\drg ᵐbraβ
+\kro ᵐbiraβ
+\olr
+\lkn piraβ
+\mrl
+\dt 25/Mar/2010
+
+\pnv °ᵐbiriᵐbiri
+\psm k.o. shore tree, Hernandia nymphaefolia
+\pncv *biribiri
+\poc *biRibiRi
+\cf
+\ps
+\div
+\tea bilibiro = bilbiro
+\hiw piᶢʟpiᶢʟ
+\ltg pərpir
+\lhi
+\lyp
+\vlw
+\mtp ni-ᵐbijᵐbij
+\lmg
+\vra ᵐbirᵐbir
+\vrs ᵐbirᵐbir
+\msn pirpir
+\mta pirpir
+\num ᵐbiriᵐbir
+\drg ᵐbirᵐbir
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ᵐbiriŋ(i,u)
+\psm help, join (s.o.)
+\ps
+\div
+\lhi pijiŋ
+\vlw ᵐbijiŋ
+\mtp ᵐbijiŋ
+\lmg piriŋ
+\sem [vt] help, join (s.o.); [prep] with, and
+\vra ᵐbiriŋ
+\vrs ᵐbiriŋ
+\sem [vt] help, join (s.o.); [prep] with, and
+\msn piriŋ
+\sem [vt] help, join (s.o.); [prep] with, and
+\mta piriŋ
+\drg ᵐbriŋ
+\lkn piriŋ
+
+\dt 08/Mar/2010
+
+\pnv °ᵐbor(a,o)
+\psm laugh, smile
+\pva *ᵐbora
+\vanb 1
+\pva *ᵐboro
+\vanb 2
+\pncv
+\poc
+\cf °ri[w]a
+\cf °uru
+\ps vi
+\div ____________
+\hiw {ᶢʟiwə}
+\ltg {həmrɛ}
+\lhi {ŋʷəja}
+\lyp {ŋ͡mʷaja}
+\vlw {jɪjɪ}
+\mtp {jɪjɪ}
+\mtp ᵐbɔjᵐbɔj
+\lmg pɔrpɔr
+\rfc EP1-40b
+\vra ᵐbɔrɔ
+\vanb 1
+\vrs ᵐbɔr
+\vanb 1
+\msn
+\mta poroporo
+\vanb 2
+\num {βatŋɛl}
+\drg ᵐbɔr
+\vanb 1/2
+\kro ᵐbɔr
+\vanb 1/2
+\kro {βʊrurur}
+\olr pɔj
+\vanb 1/2
+\rfc BG4-41b
+\olr {uj}
+\lkn {ʔuː}
+\mrl {manman}
+\dt 17/Nov/2011
+
+\pnv °ᵐb(o,u)ni ~ °ᵐbuna
+\psm smell, stink; emit a pleasant or unpleasant smell
+\pva *ᵐboni
+\vanb 1
+\pva *ᵐbuni
+\vanb 2
+\pva *ᵐbuna
+\vanb 3
+\pva *ᵐbuna-i
+\vanb 4
+\pva *ᵐbunu-(i)
+\vanb 5
+\pncv *boni / *buni
+\poc *bo-
+\cf
+\ps
+\div
+\hiw nə kʷne X
+\vanb 3
+\et < *na ᵐbʷuna-(q)i
+\sem the smell of X
+\hiw nə kʷna-n
+\vanb 3
+\et < *na ᵐbʷuna-na
+\sem his smell
+\hiw kʷunə
+\vanb 3
+\et < *ᵐbʷuna
+\sem stink, emit an unpleasant smell
+\ltg nə kʷnɛ X
+\vanb 3
+\et < *na ᵐbʷuna-(q)i
+\sem the smell of X
+\ltg kʷunə
+\vanb 3
+\et < *ᵐbʷuna
+\sem stink, emit an unpleasant smell
+\lhi n-kʷunu X
+\vanb 5
+\et < *na ᵐbʷunu-(q)i
+\sem the smell of X
+\lhi kʷʊn
+\vanb 1
+\et < *ᵐbʷoni
+\sem stink, emit an unpleasant smell
+\nt or maybe /kʷɔn/ ??? if so *buna...
+\lyp
+\vlw
+\mtp k͡pʷʊn
+\vanb 1/3
+\sem stink, emit an unpleasant smell
+\mtp k͡pʷʊnk͡pʷʊn
+\vanb 1/3
+\sem emit a pleasant smell
+\lmg n-pɛnɛ X
+\vanb 4
+\et < *na ᵐbuna-(q)i
+\sem the smell of X
+\lmg pʊn
+\vanb 4
+\et < *ᵐbuna
+\vra ᵐbunʊ
+\vanb 3
+\et < *ᵐbʷuna
+\sem smell s.t.
+\vrs ᵐbünɪ
+\vanb 4
+\et < *na ᵐbuna-(q)i
+\sem the smell of X
+\vrs ᵐbünᵐbün
+\vanb 5
+\et < *ᵐbunu
+\sem a smell
+\msn
+\mta pun
+\vanb 2/5
+\sem to smell, active and neuter
+\mta puniu
+\vanb 5
+\et < *ᵐbunu-(q)i
+\sem smell, scent
+\mta puna
+\vanb 3
+\sem to smell, active and neuter
+\mta puna-i
+\vanb 4
+\et < *ᵐbuna-(q)i
+\sem smell, scent
+\mta punapuna
+\vanb 3
+\et < *ᵐbunaᵐbuna
+\sem emit a pleasant smell
+\num
+\drg ᵐbʊn-in
+\vanb 1/3
+\sem its smell
+\kro
+\olr pʊnɪ X
+\vanb 3
+\et < *ᵐboni-(q)i
+\sem the smell of X
+\lkn punu X
+\vanb 5
+\et < *ᵐbunu-(q)i
+\sem the smell of X
+\lkn pʊni (avan X)
+\vanb 3
+\et < *ᵐboni-(q)i  ??
+\sem the smell of X
+\mrl
+\dt 22/Aug/2018
+
+\pnv °ᵐbu[a]ᵐbu[a]
+\psm (address term) grandfather, grandmother; grandchild
+\pva °ᵐbuᵐbu
+\pva °ᵐbuaᵐbua
+\pncv
+\cf °tuᵐbu-ᵑgu
+\ps
+\div
+\hiw pʉp
+\lhi
+\vlw
+\mtp ᵐbʊᵐbʊ
+\mtp ᵐbum
+\sem ancestors' lineage
+\lmg pʊpʊ
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 08/Mar/2010
+
+\pnv °ᵐbue
+\psm bamboo stick used for a specific purpose
+\pncv *bue
+\poc
+\cf °au
+\ps
+\div
+\hiw pɵ
+\sem bamboo stick marking limits within initiation house
+\ltg pʉə
+\sem bamboo bottle; bamboo stick (Mus+)
+\lhi
+\lyp pʊ
+\sem bamboo bottle; bamboo stick (Mus)
+\vlw
+\mtp
+\lmg n-pu
+\vra
+\vrs ᵐbʊ
+\msn pʊ
+\mta pue
+\num wu\ᵐbu
+\rf Hans dict
+\drg ᵐbʊ
+\sem bamboo
+\kro ᵐbʊ
+\sem bamboo
+\olr pʊ
+\sem bamboo
+\lkn pʊ
+\sem bamboo
+\mrl nɞ-ᵐbʊ͡ɵ
+\sem bamboo stick (Mus)
+\ark
+\dt 10/Nov/2011
+
+\pnv °ᵐbuɣa(s)
+\psm rear with food (e.g. a pig); pig
+\pncv
+\poc PSOc *bukasi
+\sem pig
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp ᵐbʊɣ
+\sem rear with food (child, pig+)
+\lmg
+\vra
+\vrs
+\msn
+\mta puɣas
+\sem rear with food, tame by feeding
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 19/Feb/2011
+
+\pnv °ᵐbuɣoro
+\psm woven food-chest standing above fire for storing almonds and dried breadfruit
+\ps
+\div
+\vlw nɔ-ᵐbɔɣɔr
+\msn pɔɣɔr
+\mta puɣoro
+\num ᵐbuɣɔr
+\drg ᵐbɣɔr
+\olr puɣɔj
+\lkn puɣɔː
+\mrl nɞ-ᵐbʊɣʊr
+\nt cf. aussi MS18-22, 02'28"
+\ark 
+
+\dt 25/Mar/2010
+
+\pnv °ᵐbula-ᵑgu
+\psm Possessive Classifier for farming valuables (pig, garden+)
+\ps
+\div
+\lyp n-pølø-k
+\sem (n.) my property
+\rfc FG4-11b
+\mtp na-mlɛ-k
+\sem (n.) my property
+\nt cf. langue poétique:  FG4-25a
+\lmg n-pœlœ-k
+\sem (n.) my property
+\rfc EG2-10a
+\vrs ᵐbülœ-k
+\msn pɔlɔ-k
+\mta pula-k
+\drg ᵐblʊ-k
+\olr pulɛ-k
+\lkn pula-k
+\mrl nɞ-ᵐbʉlɞ-k
+
+\dt 26/Jun/2012
+
+\pnv *ᵐbulaŋi
+\psm make a fire, by arranging wood and stones
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp {βasŋɪt}
+\lmg pɛlɛŋ
+\vra
+\vrs ᵐbülœŋ
+\rfc AG5-40a
+\msn pɛlɛŋ
+\rfc AG5-40a
+\mta pulaŋ
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 22/Sep/2011
+
+\pnv °ᵐbu[l,r]aɣa
+\psm Cyrtosperma taro
+\pva °ᵐbulaɣa
+\vanb 1
+\pva °ᵐburaɣa
+\vanb 2
+\pva °ᵐbuaᵑga
+\vanb 3
+\pncv
+\poc *ᵐbuRaka
+\cf *ᵐbʷeta
+\ps n
+\div
+\hiw —
+\rfc FP2-34b
+\ltg pəlaɣə
+\rfc CG2-27b
+\vanb 1
+\lhi n-pɪja
+\vanb 2
+\rfc FG4-12b
+\lhi n-pɪak
+\vanb 3
+\sem boggy ground, mud
+\rfc FG4-12b
+\lyp n-paja
+\vanb 2
+\rfc FG4-12b
+\vlw
+\mtp nɪ-mjaɣ
+\vanb 2
+\lmg
+\vra
+\vrs ᵐbʊak
+\vanb 3
+\sem taro garden planted in mud
+\msn
+\mta puaka
+\vanb 3
+\sem boggy ground, mud
+\num ᵐbuak
+\vanb 3
+\sem mud
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 19/Sep/2011
+
+\pnv °ᵐbu[l,r]u[si]
+\psm lamp (origin. made of resin?)
+\pncv
+\poc *bulut
+\cf °ᵐbulu
+\ps n
+\div
+\hiw pʉᶢʟ
+\ltg pʉr
+\lhi
+\lyp
+\vlw
+\mtp nu-k͡pʷul
+\lmg
+\vra
+\vrs ᵐbür
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn puruh
+\mrl
+\dt 08/Mar/2010
+
+\pnv °ᵐbulu
+\hm 1
+\psm [n] sap, resin; glue
+\psm [vt] glue, stick
+\psm [vi] stick together
+\pncv
+\poc *bulut
+\cf °ᵐbu[l,r]u
+\sem lamp
+\cf °ᵐbuluᵐbulu
+\cf °ᵐbulusala
+\ps
+\div
+\hiw kʷuj
+\sem [n] glue; glue-tree, Cordia dichotoma;
+\sem [vt] glue, stick together
+\ltg kʷul
+\lhi
+\lyp
+\vlw
+\mtp k͡pʷul
+\sem [v] glue, stick
+\lmg
+\vra wʊ\ᵐbulᵐbul
+\sem [n] glue-tree, Cordia dichotoma
+\vrs ᵐbül
+\sem [n] a sticky tree, Cerbera spp.
+\vrs wø\ᵐbülᵐbül
+\sem [n] glue-tree, Cordia dichotoma
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 08/Mar/2010
+
+\pnv °ᵐbulu
+\hm 2
+\psm cluster, bundle, bunch of <fruit+>, esp. bunch of fruit hanging
+together on tree
+\pncv
+\poc
+\cf °ᵐbulu
+\cf °ᵐbuluᵐbulu
+\ps
+\div
+\hiw kʷuj
+\sem [n] bunch of <fruit+>; [vi] be hanging in cluster
+\ltg kʷul
+\sem [n] bunch of <fruit+>
+\lhi
+\lyp
+\vlw
+\mtp k͡pʷul/ŋi
+\sem [n] bunch of <fruit+>
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °ᵐbulu-
+\hm 3
+\psm prefix before numerals, referring to a group of people
+\pncv
+\poc *bulut
+\cf °ᵐbulu
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp ᵐbul-
+\lmg
+\vra
+\vrs ᵐbül-
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl ᵐbʉl-
+\rfc BP3-20b
+\ark
+\dt 10/Mar/2010
+
+\pnv °ᵐbulua
+\psm dirty, filthy
+\pncv
+\poc
+\cf °leᵐba
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs k͡pʷʊlʊ
+\msn k͡pʷʊlʊ
+\mta pulua
+\num ᵐbulu
+\drg ᵐbʊᵐblʊ
+\kro
+\olr
+\lkn {mʊsi}
+\mrl ᵐbʊlʊ
+\sem black
+\dt 22/Mar/2013
+
+\pnv °ᵐbuluᵐbulu
+\psm [vi] stick together; [n] friend, companion
+\pncv
+\poc
+\cf °ᵐbulu
+\cf °ᵐbulusala
+\ps
+\div
+\hiw kʷukʷuj
+\sem [n] friend
+\ltg kʷəlkʷul
+\sem [n] friend
+\lhi pulpul
+\sem [n] friend
+\lyp
+\vlw
+\mtp k͡pʷulk͡pʷul
+\sem [pstv] (put) together, jointly; [n] friend
+\lmg
+\vra
+\vrs ᵐbülᵐbül
+\sem collaborate, mutual aid
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn pulpul
+\sem (put) together, jointly
+\mrl
+\dt 15/Apr/2010
+
+\pnv °ᵐbulusala
+\psm [n] friend, companion; partner
+\pncv
+\poc
+\cf °ᵐbulu
+\cf °ᵐbuluᵐbulu
+\ps
+\div
+\hiw {kʷukʷuj}
+\ltg {kʷəlkʷul}
+\lhi {pulpul}
+\lyp
+\vlw ᵐbulsal
+\mtp ᵐbulsal
+\lmg pulsɒl
+\vra ᵐbulsala
+\vrs ᵐbulsal
+\msn pulsal
+\mta pulsala
+\num ᵐbulsal
+\drg ᵐbulsal
+\kro
+\olr
+\lkn (ᵐbulsal)
+\nt loanword!!   no */ᵐb/ in this language!!
+\mrl nu-ᵐbulsal
+\dt 08/Mar/2010
+
+\pnv °ᵐbunu
+\psm die / kill; extinguish
+\pncv *bunu-ʔi
+\sem kill, extinguish
+\poc *punu(q)
+\sem hit, strike, fight, kill
+\cf
+\ps
+\div
+\hiw pʉn
+\sem argue with (s.o.)
+\ltg pəpʉn
+\sem die (Pl)
+\lhi
+\lyp
+\vlw
+\mtp ᵐbun
+\sem extinguish (fire, light)
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 27/May/2010
+
+\pnv °ᵐbura
+\psm elephantiasis
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi n-pɔj
+\lyp
+\vlw
+\mtp -ᵐbʊj
+\sem elephantiasis
+\mtp ᵐbʊjᵐbʊj
+\sem fat
+\lmg
+\vra ᵐburʊ
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl ᵐbʊr
+\rfc AF-BP3-13a
+\dt 15/Mar/2010
+
+\pnv °ᵐbur[i,u]
+\psm close, shut <door+>
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg kʷur
+\lhi
+\lyp
+\vlw
+\mtp k͡pʷuk͡pʷuj
+\sem cover with lid
+\lmg pur
+\rfc EP1-42a
+\vra
+\vrs ᵐbür
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn puː
+\mrl
+\dt 14/Mar/2010
+
+\pnv °ᵐbute
+\psm sit down, sit
+\pva °pute
+\cf °saɣe
+\pncv *bute
+\sem jump, alight from canoe
+\nt =se poser, descendre (de bateau etc)
+\ps vi
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp
+\lmg puʔ
+\et < *buʔe < *bute
+\vra
+\vrs
+\msn
+\mta pute
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 27/May/2010
+
+\pnv °ᵐbʷaɣare
+\psm porcupine fish, Diodon sp.
+\pncv *ᵐbʷakare
+\ps
+\div
+\hiw
+\ltg kʷəɣar
+\rfc FG1-29a
+\mtp na-k͡pʷɣaj
+\lmg k͡pʷaɣar
+\rfc EP1-42a
+\vra k͡pʷaɣar
+\vrs k͡pʷaɣar
+\msn k͡pʷaɣar
+\mta k͡pʷaɣare
+\drg k͡pʷɣar
+\lkn k͡pʷaɣæː
+
+\dt 10/Sep/2011
+
+\pnv °ᵐbʷa[ɣ]u-ᵑgu
+\psm my knee
+\pncv *ᵐbʷau-
+\hiw nə kʷu ᶢʟɵŋɵ-k
+\ltg kʷəɣʉ-k
+\lyp n-k͡pʷu-k
+\mtp nu-k͡pʷu-k
+\vrs k͡pʷøü-k
+\msn k͡pʷuɣu-k
+\mta k͡pʷau-k
+\drg nɣarta/k͡pʷu-k
+\lkn huwu/k͡pʷaɣʊ-k
+\mrl nʉ-kʷʉ-k
+
+\dt 16/Mar/2009
+
+\pnv °ᵐbʷa[ɣ]uro
+\psm Dioscorea bulbifera
+\cf °ⁿdauβatu
+\ps n
+\div
+\lmg k͡pʷʊɣʊr
+\vra k͡pʷurʊ
+\vrs k͡pʷʊʊr
+\msn k͡pʷʊɣʊr
+\mta k͡pʷauro
+\mrl nɵ-kʷɵr
+
+\dt 06/Mar/2010
+
+\pnv °ᵐbʷaleŋa
+\psm disappear, be lost
+\pva
+\cf °lera
+\ps
+\div
+\lhi kʷælæŋ
+\lyp k͡pʷɛlɛŋ
+\vlw ᵑg͡bʷɛlɛŋ
+\mtp k͡pʷɛlɛŋ
+\lmg k͡pʷælæŋ
+\vra k͡pʷɛlɛŋɛ
+\vrs k͡pʷiliaŋ
+\mta k͡pʷaleŋa
+
+\dt 15/Nov/2011
+
+\pnv °ᵐbʷaraŋa
+\psm hole
+\ps
+\div
+\hiw kʷəᶢʟaŋə
+\ltg kʷəreŋə
+\lhi kʷɔjaŋ
+\lyp k͡pʷajaŋ
+\vlw n-ᵑg͡bʷajaŋ
+\mtp na-k͡pʷjaŋ
+\vra k͡pʷaraŋa
+\lmg k͡pʷɒrɒŋ
+\vrs k͡pʷaraŋ
+\msn k͡pʷaraŋ
+\mta k͡pʷaraŋa
+\drg k͡pʷarŋa
+\olr k͡pʷajŋɪn
+\lkn k͡pʷaːŋɪn
+\mrl 
+
+\dt 31/Aug/2009
+
+\pnv °ᵐbʷaraŋis(i,u)
+\psm (v.) bake food in stone oven; (n.) ovenful of food
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp k͡pʷaŋjis
+\vlw ᵑg͡bʷaŋjis
+\mtp k͡pʷaŋjis
+\mtp k͡pʷajŋis
+\lmg k͡pʷɒŋris
+\lmg k͡pʷɒrŋis
+\vra k͡pʷarŋis
+\sem (v.) bake food in stone oven; (n.) food baked in oven; (n.) oven
+\vrs k͡pʷaŋris
+\vrs k͡pʷarŋis
+\sem (v.) bake food in stone oven; (n.) food baked in oven; (n.) oven
+\msn k͡pʷarŋis
+\mta k͡pʷaraŋis
+\num {tak͡pʷtak͡pʷɛs}
+\drg {tatk͡pʷaːs}
+\olr
+\lkn
+\mrl 
+
+\dt 10/Nov/2011
+
+\pnv °ᵐbʷaratu
+\psm flying-fox
+\ps
+\div
+\hiw kʷɔᶢʟɔt
+\ltg kʷərɔt
+\lhi kʷɔjɔt
+\lyp k͡pʷøjøt
+\vlw n-ᵑg͡bʷɛjɛt
+\mtp na-k͡pʷjɛt
+\lmg k͡pʷœrœʔ
+\vra k͡pʷaraʔ
+\vrs k͡pʷœrœt
+\msn k͡pʷɔrɔt
+\mta k͡pʷarat
+\num k͡pʷarat
+\drg k͡pʷraːt
+\mrl kʷarat
+
+\dt 31/Aug/2009
+
+\pnv °ᵐbʷari[ɣ]i
+\psm today
+\pncv *ᵐbʷariki
+\ps
+\div
+\lhi kʷiji
+\lyp k͡pʷiji
+\vlw ᵑg͡bʷijiɣ
+\mtp k͡pʷijiɣ
+\lmg kiri
+\vra k͡pʷiri
+\vrs (ɣark͡pʷɛ)
+\msn (ɣark͡pʷɛ)
+\mta k͡pʷariɣ
+\num a/k͡pʷiri
+\drg k͡pʷri
+\kro k͡pʷiri
+\olr k͡pʷiriː
+\lkn k͡pʷiriɣ
+\mrl kʷɛriɣ 
+
+\dt 09/Jun/2016
+
+\pnv °ᵐbʷaru
+\psm grave
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw kʷɔᶢʟ
+\sem mausoleum for ancient high chiefs
+\hiw {ŋʷet}
+\sem grave
+\ltg kʷɔr
+\sem mausoleum for ancient high chiefs
+\rfc FP1-26b, FP1-30b
+\ltg kʷərʉ-n
+\sem stone grave of <s.o.>
+\ltg {ŋʷet}
+\sem grave
+\lhi
+\lyp k͡pʷuj
+\sem grave
+\et < *bʷuru
+\lyp k͡pʷøj
+\et < *bʷaru
+\sem place haunted by Ghosts
+\vlw nɛ-ᵑg͡bʷɛj
+\et < *bʷaru
+\vlw n-ᵑg͡bʷʊjʊ-
+\mtp nu-k͡pʷuj
+\sem graveyard
+\mtp nɪ-k͡pʷjʊ-
+\sem (s.o.) grave
+\lmg
+\vra
+\vrs k͡pʷœr
+\sem grave
+\msn
+\mta
+\num na-k͡pʷʊrʊ-n
+\sem his grave
+\rfc BP3-36b
+\drg k͡pʷʊrk͡pʷʊrʊ-
+\sem grave
+\kro k͡pʷʊrk͡pʷʊrʊ-
+\olr
+\lkn k͡pʷarʊ-
+\mrl nɞ-kʷɞr
+\rfc BP3-12b
+\ark
+\dt 15/Sep/2011
+
+\pnv °(ᵐbʷatu)ᵐbʷatu-manu
+\psm Myzomela cardinalis
+\lit ‘head of bird’
+\mtp nɪ-k͡pʷɪt-mɛn
+\vra k͡pʷɛtk͡pʷɛt-mɛn
+\vrs k͡pʷøtk͡pʷøtü-mɛn
+\mta k͡pʷat-man
+\drg wa/k͡pʷtik͡pʷti-maːn
+\lkn (k͡pʷætk͡pʷætæ-mæh)
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbʷer[e,o]
+\psm Sterculia vitiensis
+\ps
+\div
+\mtp nɛ-k͡pʷɛj
+\vra k͡pʷɪr
+\vrs k͡pʷɪr
+\msn k͡pʷɛr
+\lkn k͡pʷɛː
+
+\dt 03/Dec/2007
+
+\pnv °ᵐbʷero
+\psm mushroom; (slang) glans
+\pncv *ᵐbʷero
+\sem mushroom
+\vlw n-ᵑg͡bʷɛj
+\mtp nɛ-k͡pʷɛj
+\vra k͡pʷɪr
+\vrs k͡pʷɪr
+\msn k͡pʷɛr
+\mta k͡pʷero
+\drg k͡pʷɛr
+\lkn k͡pʷɛː
+\mrl nɪ-kʷɪr
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbʷeta
+\psm taro (generic term)
+\pncv *ᵐbʷeta
+\ps
+\div
+\hiw kʷetə
+\ltg kʷɛtə
+\lhi kʷæt
+\lyp k͡pʷɛt
+\vlw n-ᵑg͡bʷɛt
+\mtp nɛ-k͡pʷɛt
+\lmg n-k͡pʷæʔ
+\vra k͡pʷɛʔɛ
+\vrs k͡pʷiat
+\msn k͡pʷɛt
+\mta k͡pʷeta
+\num k͡pʷɛt
+\drg k͡pʷɛt
+\kro k͡pʷɛt
+\olr k͡pʷɛt
+\lkn k͡pʷɛt
+\mrl nɪ-kʷɪt
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbʷet[i,u]
+\psm be finished; completely; then; all
+\ps
+\div
+\lhi kʷɪt
+\lyp k͡pʷɪt
+\vlw ᵑg͡bʷɪt
+\mtp k͡pʷɪt
+\lmg k͡pʷɪʔ
+\vra k͡pʷɪʔ
+\vrs k͡pʷɪt
+\msn k͡pʷɪt
+\mta k͡pʷet
+
+\dt 10/Nov/2011
+
+\pnv °(ᵐbʷi)ᵐbʷilo
+\psm mangrove, Rhizophora
+\ps
+\div
+\hiw kʷujəkʷujə
+\ltg t̻ʉr\kʷilə
+\nt noté /t̻ʉrəkʷilə/ ici, mais je supprime le schwa d'après cahier FP1-xx.
+\lyp n-k͡pʷi͡ɛlk͡pʷi͡ɛl
+\mtp nɪ-k͡pʷɪk͡pʷɪl
+\vra k͡pʷik͡pʷilɪ
+\vrs k͡pʷɪk͡pʷɪl
+\mta k͡pʷik͡pʷilo
+\drg ɣaːrɣɪr-k͡pʷɪl
+\kro ɣɛar-k͡pʷɪl
+\lkn k͡pʷik͡pʷil
+
+\dt 13/Mar/2010
+
+\pnv °ᵐbʷisa
+\psm smash s.th. on ground; destroy
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw kʷitə
+\sem smash; hit violently; (s.th.) affect s.o.
+\hiw kʷitəkʷitə
+\sem go fetch (lit. smash) firewood
+\ltg kʷihə
+\sem smash; hit violently; (s.th.) affect s.o.
+\ltg kʷəhəkʷihə
+\sem go fetch (lit. smash) firewood
+\lhi
+\lyp
+\vlw
+\mtp k͡pʷɪsk͡pʷɪs
+\sem destroy s.o.'s properties as a punishment
+\rfc BP2-05b
+\lmg k͡pʷæs
+\sem smash
+\vra k͡pʷisɪ
+\sem pound pudding on dish
+\vrs
+\msn
+\mta k͡pʷisa
+\sem press, crush
+\mta k͡pʷsak͡pʷsa
+\nt modern form!
+\rfc GG1
+\num
+\drg
+\kro
+\olr k͡pʷisɣa
+\sem damage, harm
+\lkn k͡pʷisæɣ
+\sem damage, harm
+\mrl
+\dt 13/Sep/2011
+
+\pnv °ᵐbʷoe
+\psm pig
+\pncv *ᵐboe
+\poc *boRok
+\cf °soɣai
+\hiw kʷo
+\sem pork meat
+\ltg kʷo
+\vlw nɔ-ᵑg͡bʷɔ
+\mtp nɔ-k͡pʷɔ
+\lmg k͡pʷœ
+\vra k͡pʷʊ
+\vrs k͡pʷʊ
+\msn k͡pʷɔ
+\mta k͡pʷoe
+\num k͡pʷɔ
+\drg k͡pʷɔ
+\kro k͡pʷɔ
+\olr k͡pʷɔ
+\lkn k͡pʷɔ
+
+\dt 06/Mar/2010
+
+\pnv °ᵐbʷolo
+\psm surgeon fish, Acanthurus sp.
+\poc *bolo
+\sem small dark surgeonfish, possiblty Ctenochaetus binotatus
+\ps
+\div
+\hiw ne kʷoj
+\ltg ne kʷol
+\mtp nɔ-k͡pʷɔl 
+\mtp nɔ-k͡pʷɔlk͡pʷɔl
+\vra k͡pʷʊl
+\vrs k͡pʷʊl
+\mta k͡pʷolo
+\drg wa/k͡pʷɔl
+\lkn k͡pʷɔl
+
+\dt 25/Mar/2010
+
+\pnv °ᵐbʷona
+\psm Ducula pacifica, k.o. dove
+\ps
+\div
+\ltg kʷɔnə
+\mtp nɔ-k͡pʷɔn
+\vra k͡pʷɔnɔ
+\vrs k͡pʷɔn
+\mta k͡pʷona
+\drg k͡pʷɔn
+\lkn k͡pʷɔn
+
+\dt 06/Apr/2007
+
+\pnv °ᵐbʷore
+\psm dream
+\pncv *boRe
+\poc *boRe
+\cf
+\ps n
+\ps vi
+\ps vt
+\div
+\hiw kʷoᶢʟ
+\hiw kʷᶢʟe
+\et <*bʷore-a
+\sem (v.t.) dream about
+\ltg kʷor
+\lhi kʷɛjkʷɛj
+\lyp k͡pʷɔjk͡pʷɔj
+\vlw
+\mtp k͡pʷɔjk͡pʷɔj
+\lmg k͡pʷœr
+\vra k͡pʷʊr
+\vrs k͡pʷʊrk͡pʷʊr
+\msn
+\mta k͡pʷore
+\num k͡pʷɔrk͡pʷɔr
+\drg k͡pʷɔr
+\kro
+\olr
+\lkn k͡pʷɔː
+\mrl kʷɞr
+\dt 16/Nov/2011
+
+\pnv °ᵐbʷoro-ᵑgu
+\psm my ears
+\pncv *ᵐbʷero-
+\sem
+\nt
+\mtp (k͡pʷɔj-wɔn)
+\lit ears-shut
+\sem deaf
+\vrs k͡pʷørø-k
+\msn k͡pʷʊrʊ-k
+\mta k͡pʷoro-k
+\num k͡pʷɔrɔ-k
+\drg k͡pʷrʊ-k
+\mrl nʊ-kʷʊrʊ-k
+
+\dt 10/Nov/2011
+
+\pnv °ᵐbʷoroŋi
+\psm (n.) wooden club; (v.) blow with a club
+\pncv
+\ps
+\div
+\hiw kʷᶢʟɵɣ
+\sem (n.) wooden club
+\nt non-nasal consonant
+\ltg
+\lyp n-k͡pʷʊjʊŋ
+\sem (n.) wooden club
+\lhi
+\vlw n-ᵑg͡bʷɪjɪŋ
+\sem (n.) wooden club
+\mtp na-k͡pʷjɪŋ
+\sem (n.) wooden club
+\lmg n-k͡pʷørøŋ
+\sem (n.) wooden club
+\vra
+\vrs
+\msn
+\mta k͡pʷoroŋ
+\sem beat upon, be heavy on
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 27/Feb/2009
+
+\pnv °ᵐbʷot[e,o]ᵐbʷot[e,o]
+\psm short in size
+\pncv
+\poc
+\cf
+\ps adj
+\div
+\hiw {ŋʷɵtɵj}
+\ltg {ŋʷət̻ol}
+\nt < PNCV *mʷidolo
+\lhi kʷɛtkʷɛt
+\nt [déc 2007] noté /qētqēt/, mais je corrige d'après autres langues
+\lyp k͡pʷɔtk͡pʷɔt
+\vlw n-ɣɛ\g͡bʷɔtg͡bʷɔt
+\mtp {maltɪ}
+\lmg k͡pʷœk͡pʷœʔ
+\vra k͡pʷʊk͡pʷʊʔ
+\vrs {k͡pʷœtütü}
+\msn {k͡pʷɔtutu}
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 12/Nov/2011
+
+\pnv °ᵐbʷua[ᵐbʷua]
+\psm (hole, sea+) deep
+\pva °ᵐbʷua
+\vanb 1
+\pva °ᵐbʷuaᵐbʷua
+\vanb 2
+\pncv *ᵐbua
+\sem deep, bottom (inside)
+\cf °lama
+\sem deep sea
+\cf °roro
+\sem deep; sink
+\ps
+\div
+\hiw kʷɵ
+\vanb 1
+\hiw tiβi(k)kʷɵ
+\vanb 1
+\ltg kʷə
+\vanb 1
+\lhi
+\vlw ᵑg͡bʷʊᵑg͡bʷʊ
+\rfc EG1-10a
+\vanb 2
+\mtp k͡pʷʊk͡pʷʊ
+\vanb 2
+\lmg {rœr}
+\vra {rʊr}
+\vrs {rʊr}
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl aᵐbʊ
+\dt 12/Nov/2011
+
+\pnv °ᵐbʷulVte-na
+\psm (its) bottom; (his) buttocks
+\pncv
+\ps
+\div
+\hiw
+\ltg kʷʉləsinə
+\lhi
+\vlw
+\mtp lʊ-\k͡pʷʊltɛn
+\lmg k͡pʷʊlʔæn
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 12/Nov/2011
+
+\pnv °ᵐbʷure
+\psm ignorant
+\pncv
+\poc *buRe
+\sem foolish
+\cf
+\ps
+\div
+\hiw kʷuᶢʟə
+\sem stupid
+\rfc EP2-20a
+\ltg
+\lhi kʷɔj
+\sem ignorant
+\lyp k͡pʷʊj
+\sem ignorant
+\vlw
+\mtp nʊ-k͡pʷʊj
+\sem ignorant
+\lmg
+\vra
+\vrs k͡pʷʊr
+\sem forget
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 05/Mar/2010
+
+\pnv °ᵐbʷur[i,u]
+\psm a creeper providing solid rattan-like fibre
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw
+\ltg kʷʉ
+\lhi
+\lyp n-ɣak͡pʷij
+\vlw
+\mtp na-ɣak͡pʷij
+\lmg
+\vra
+\vrs
+\msn
+\mta k͡pʷir
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 13/Mar/2010
+
+\pnv °βaⁿda
+\psm pandanus
+\pncv *βaⁿdan
+\poc *paⁿran
+\ps
+\div
+\hiw
+\ltg
+\lmg βɒt
+\msn βan
+\sem pineapple
+\mta βana
+\div
+\dt 29/Mar/2008
+
+\pnv °βaᵑge-ᵑgu
+\psm my thigh
+\ps
+\div
+\ltg wɔke-k
+\vlw nɪ-βɪᵑgɪ-ŋ
+\mtp na-pkɪ-k
+\vra fɪkɪ-k
+\vrs βɪkɪ-k
+\drg βkɪ-k
+\lkn βakɛ-k
+
+\dt 06/Apr/2007
+
+\pnv °βala-ᵑgu
+\psm my (inner) mouth
+\ps
+\div
+\ltg βəle-k
+\lhi n-βɒlɒ-k
+\lyp n-βœlœ-k
+\mtp na-plɛ-k
+\vrs βœlœ-k
+\msn βɔlɔ-k
+\mta βala-k
+\num fala-k
+\drg βlaː-k
+\lkn βala-k
+\mrl nɞ-βɞlɔ-k
+
+\dt 03/Dec/2007
+
+\pnv °βanau
+\psm Thespesia populnea
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw βənɔ
+\rfc FP3-03b
+\ltg βənɔ
+\lhi
+\lyp
+\vlw
+\mtp na-pnɛ
+\lmg
+\vra
+\vrs {wø}
+\msn
+\mta βanau
+\num
+\drg ᵐbra\βna
+\kro
+\olr
+\lkn para\βna
+\mrl
+\dt 06/Mar/2010
+
+\pnv °βanua
+\psm inhabited territory: village, island, country
+\pncv *vanua
+\poc *panua
+\cf
+\ps n
+\div
+\hiw βənjɵ
+\ltg βəniə
+\lhi
+\lyp
+\vlw n-βʊnʊ
+\mtp
+\lmg n-funu
+\vra funuʊ
+\vrs βʊnʊ
+\msn βʊnʊ
+\mta fanwa
+\num funu
+\drg {βre}
+\kro βʊnʊ
+\olr βʊnʊ
+\lkn βanʊ
+\mrl {nɛ-βɛrɪ}
+\dt 07/Jan/2019
+
+\pnv °βara
+\psm germinated coconut, Cocos nucifera
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg βarə
+\lhi
+\lyp
+\vlw
+\mtp {na-mtɔw}
+\lmg
+\vra
+\vrs {ᵐbar}
+\vrs {sʊl}
+\msn {par}
+\mta βara
+\num {wu-sul}
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °βaraᵐba
+\psm twins
+\ps
+\div
+\hiw βəᶢʟepə
+\rfc AF-EG3-03b
+\ltg βərepə
+\mtp na-pjam
+\vra faraᵐba
+\rfc AF-BP3-05b
+\vrs βaram
+\mta βarapa
+\num βaram
+\rfc Hans
+\lkn βarap
+\rfc AF-BP5-17b
+
+\dt 31/May/2012
+
+\pnv °βaraᵑge
+\psm Pangium edule; dance rattles
+\pncv **lake
+\poc
+\cf
+\ps n
+\div
+\hiw βaᶢʟak
+\rfc EG3-03b
+\ltg βərak
+\lhi
+\lyp n-βajaŋ
+\vlw
+\mtp nɔ-wɔpjak
+\mtp na-pjak
+\lmg wɔ\βarak
+\vra wʊ\βarak
+\vrs wɪ\βiri͡ak
+\msn
+\mta βarake
+\num
+\drg wa\βrak
+\drg wɔ\βrak
+\rfc BG3-16b
+\kro
+\olr
+\lkn βæræk
+\mrl wʊ\βɛrɛ͡ak
+\nt cf. MS18-18, 01'02"
+\ark lahe
+\dt 22/Sep/2011
+
+\pnv °βara-ᵑgu
+\psm my chest; my liver
+\ps nop
+\div
+\hiw βəᶢʟɔ-k
+\sem my liver
+\hiw βaᶢʟə
+\sem liver
+\ltg βəre-k
+\mtp na-pjɛ-k
+\sem my chest
+\mtp na-βaj (minɔ)
+\sem (my) liver
+\lmg βœrœ-k
+\sem my chest
+\lmg βɒr
+\sem (my) liver
+\msn βɔrɔ-k
+\mta βara-k
+\num fara-k
+\drg βraː-k
+\lkn βaːrɪ-k
+\mrl nɞ-βɞrɔ-k
+\rfc AF-BP3-16a
+
+\dt 13/Mar/2010
+
+\pnv °βara(si)
+\psm step, tread, stomp
+\pncv *vara
+\poc *paRas (?)
+\cf
+\ps vi
+\div
+\hiw βaᶢʟə
+\rfc EP2-19a
+\ltg βarə
+\lhi
+\lyp
+\vlw
+\mtp βaj
+\lmg
+\vra βar
+\nq should be /vara/ ?!
+\vrs βar
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn βæræh
+\mrl
+\dt 10/Mar/2010
+
+\pnv °βare
+\psm call out; call (s.o./s.th.) so and so
+\pncv
+\poc
+\cf °ulo
+\ps vt
+\div
+\hiw waᶢʟ
+\mta
+\num βaβar
+\drg βar
+\kro βar
+\olr βaj
+\lkn βæː
+\mrl wɛr
+\nt cognate?
+\ark βaɾai
+\dt 16/Nov/2011
+
+\pnv °βari
+\psm stingray, Dasyatidae spp.
+\pncv
+\poc *paRi
+\cf
+\ps n
+\div
+\hiw βɔᶢʟ
+\ltg βɛr
+\lhi n-βæj
+\lyp n-βɪj
+\vlw n-βɛj
+\mtp nɛ-βɛj
+\lmg n-βɛr
+\vra fɛr
+\vrs βœr
+\msn βɛr
+\mta βar
+\num fɛr
+\drg βaːr
+\kro βɛ͡ar
+\olr βaj
+\lkn βæː
+\mrl nɛ-βɛr
+\dt 06/Mar/2010
+
+\pnv °βaʀi-
+\psm reciprocal action; plural action
+\pncv *vaʀi-
+\poc *paʀi-
+\cf
+\ps pf
+\div _________
+\hiw βɔᶢʟ-
+\ltg βɛr-
+\lhi βæj-
+\lyp βɪj-
+\vlw βɛj-
+\mtp βɪj-
+\lmg βɛr-
+\rfc EG2-24b
+\vra βɛr-
+\vrs βɛr-
+\msn βɛr-
+\mta βar-
+\num βar-
+\drg βa-
+\kro βV-
+\olr βa-
+\lkn βa-
+\mrl βa(r,l)- || βɛl-
+\rfc BP3-23b
+\dt 10/Mar/2010
+
+\pnv °βaru
+\psm Hibiscus tiliaceus
+\pncv
+\poc *paRu
+\cf
+\ps n
+\div
+\hiw βɔᶢʟ
+\ltg βɔr
+\lhi n-βɒj
+\lyp n-βɪj
+\vlw n-βɛj
+\mtp nɛ-βɛj
+\lmg n-βɛr
+\vra fɛr
+\vrs βœr
+\msn βɔr
+\mta βar
+\num
+\drg βaːr
+\kro βɛ͡ar
+\olr ʧa-βaj
+\lkn βaː
+\mrl nɔ-βɔ͡ɞr
+\ark βi-v̈a
+\dt 06/Mar/2010
+
+\pnv °βarusi
+\psm ask, enquire
+\ps
+\div
+\hiw {jʉᶢʟ}
+\ltg (βəβɛrʉr)
+\mtp βɪhij
+\lmg βɛsir
+\vrs βørüs
+\msn βɔrus
+\mta βarus
+\num βarus
+\drg βaːrus
+\olr βurus
+\lkn βaːβuh
+\mrl βɞrʉs
+
+\dt 08/Mar/2010
+
+\pnv °βaso[ɣi]
+\psm to plant (taro+)
+\poc *pasok
+\nt POc 1: 132
+\hiw βa
+\ltg βa
+\lhi βah
+\lyp βas
+\vlw βah
+\mtp βah
+\vra fas
+\vrs βas
+\num βɪsɪ
+\drg βsʊɣ
+\kro βʊsʊɣ
+\olr βusɪː
+\lkn βahʊː
+
+\dt 12/Nov/2011
+
+\pnv °βasoɣo[i]
+\psm count; read
+\pva °βasoɣo
+\vanb 1
+\pva °βasoɣoi
+\vanb 2
+\pncv
+\ps vt
+\div
+\hiw
+\ltg
+\lyp
+\lhi {βit}
+\vlw
+\mtp {βatah}
+\lmg βasɣø
+\vanb 2
+\sem read
+\vra
+\vrs βasʊɣʊ
+\vanb 2
+\sem read
+\vrs {luw}
+\sem count
+\msn βɔsɔ
+\vanb 1
+\sem read
+\mta βasoɣo
+\vanb 1
+\sem put together; count; read
+\num
+\drg βsɔɣ
+\vanb 1
+\sem read
+\rfc BP3-29a
+\drg {luw}
+\sem count
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 25/Nov/2011
+
+\pnv °[βa]tanau
+\psm teach, learn
+\ps
+\div
+\hiw βɔtənɔ
+\hiw təntənɔ
+\sem learn, recite; sing
+\ltg βətənɔ
+\mtp βatnɛ
+\lmg ʔœnœ
+\rfc EP1-41a
+\vra ʔana
+\vrs (βɔ)tɔnɔ
+\mta βatanau
+\kro βatna
+\olr βatna
+\lkn βatna
+\mrl βʊtnʊ
+
+\dt 10/Sep/2011
+
+\pnv °βat-i
+\poc *pat
+\psm four
+\pncv *βat-i
+\hiw βi-βɔt
+\ltg βə-βɛt
+\lhi βɪ-βæt
+\lyp βɪ-βɪt
+\nt check
+\vlw βɪ-βɛt
+\mtp βɪ-βɛt
+\lmg βɪ-βɛʔ
+\vra fɔ-fɛʔ
+\vrs ni-βɛt
+\msn ni-βɛt
+\mta ni-βat
+\num ni-βat
+\drg s-βaːt
+\kro β-βɛ͡at
+\olr ni-βat
+\lkn ni-βæs
+\mrl i-βɛt
+\dt 31/Aug/2011
+
+\pnv °βaRoβaRo
+\psm Twin apple, Ochrosia ~ Neisosperma oppositifolia
+\pncv
+\poc *vaRo
+\nt =PROc
+\cf
+\ps
+\div
+\hiw βa
+\ltg βəβa
+\lhi
+\lyp
+\vlw
+\mtp na-βaβa
+\lmg
+\vra farfar
+\vrs βarβar
+\msn
+\mta βaroβaro
+\num
+\drg wβarβar
+\kro
+\olr
+\lkn βaːβaː
+\mrl
+\ark v̈aɾav̈aɾa
+\dt 12/Nov/2011
+
+\pnv °βeβe-ᵑgu
+\psm my mother
+\ps
+\div
+\hiw
+\lyp i-βɛp
+\mtp i/βɪ-k
+\vra fɛfɛ-k
+\mta βeβe-k
+\num ra/ffɪ-k
+\drg ββɪ-k
+\kro i/ββɪ-k
+\olr βiβɪ-k
+\lkn βɛβɛ-k
+\mrl i-ffɪ-k
+\mrl i-βɛp
+
+\dt 12/Nov/2011
+
+\pnv °βen[V]
+\psm climb (on tree, canoe, hill+)
+\pva °βen[e,o]
+\vanb 1
+\pva °βen[i,u]
+\vanb 2
+\pncv
+\cf °raᵐbi
+\ps
+\div
+\hiw βɪn
+\vanb 1
+\sem (v.) climb; (dir.) up, above
+\ltg βin
+\vanb 1
+\sem (v.) climb; (dir.) up, above
+\lhi βɪn
+\rfc AF-FG4-30a
+\vanb 2
+\sem (dir.) up, above
+\lmg βɛn
+\vanb 1
+\sem (v.) climb
+\lmg βɪn
+\vanb 2
+\rfc AF-EG2-26b
+\sem (v.) climb
+\nq which one for LMG?
+\dt 25/Jun/2012
+
+\pnv °βeta[ɣ]e
+\psm (+directional) Dynamic Presentative
+\psm (asp) already; Complete aspect
+\pncv
+\poc
+\cf
+\ps ptc
+\div
+\hiw
+\ltg
+\lhi βata
+\sem Presentative; already
+\lyp βata
+\sem Presentative; already
+\vlw βata
+\sem Presentative; already
+\mtp βataɣ
+\sem Presentative; already
+\lmg βaʔa
+\sem Presentative; Complete aspect
+\vra βaʔa
+\sem Presentative; Complete aspect
+\vrs βitia ~ βitiaɣ
+\sem Presentative; Complete aspect
+\msn βataɣ
+\sem Presentative; Complete aspect
+\mta βeta
+\num βata
+\drg
+\kro
+\olr
+\lkn
+\mrl βita
+\dt 08/Mar/2010
+
+\pnv °βetali
+\psm banana (generic term)
+\pncv *βetali
+\hiw βətɔj
+\ltg βətɛl
+\lhi βɪtæl
+\lyp n-βɪʧɪl
+\vlw n-βɛtɛl
+\mtp na-ptɛl
+\lmg n-βɛʔɛl
+\vra faʔal
+\vrs βɛtɛl
+\msn βɛtɛl
+\mta βetal
+\num fɛtɛl
+\drg βtaːl
+\kro βɛtɛ͡al
+\olr βatal
+\lkn βætæl
+\mrl ni-βitɛl
+
+\dt 31/Aug/2011
+
+\pnv °βeti
+\psm say, tell
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg βʉsə || βəsə
+\et < *βetia
+\lhi huj\βɪt
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs βɪt
+\sem sing (?)
+\msn βɪt
+\msn βɪt/rɔw
+\mta βet
+\num βit
+\drg βit
+\kro βit
+\olr βit
+\lkn βis
+\mrl {sʉr}
+\dt 23/Nov/2011
+
+\pnv °βia
+\psm Alocasia taro
+\pncv *via
+\poc *piRaq
+\cf
+\ps n
+\div
+\hiw βjə
+\ltg βiə
+\lhi n-βɛ
+\lyp n-βi͡ɛ
+\vlw nɪ-βɪ
+\mtp nɪ-βɪ
+\lmg n-βɪ || {n-k͡pʷæʔ lœlœl}
+\vra βiɪ
+\vrs βɪ
+\msn βɪ
+\mta βia
+\num wɔ\βi
+\rfc BP3-36b
+\drg βɪ
+\kro
+\olr βɪ
+\lkn βɪ
+\mrl nɛ-βɛ͡a
+\ark βia
+\dt 13/Mar/2010
+
+\pnv °βiⁿdo
+\psm pin <s.th.>; esp. pin together <thatch leaves> onto a rod
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw {tit}
+\ltg βit̻ə
+\rfc FP1-03b
+\lhi βɛn
+\rfc FG4-30a
+\lyp βi͡ɛn
+\nt distinct from /βɛn/ 'shoot with arrow'
+\rfc FG4-16b
+\mtp βɪn
+\vlw βɪn
+\lmg
+\vra βiⁿdɪ
+\sem sew sago palm thatch
+\vrs βɪn
+\msn
+\mta βino
+\sem to fasten with pins, fold over and pin
+\num
+\drg {tʊβ}
+\kro
+\olr
+\lkn {atɪβ}
+\mrl βɛn
+\dt 09/Mar/2010
+
+\pnv °βilo[ɣ]i
+\psm umbrella leaf, Licuala sp.
+\pva
+\cf °(ⁿdau-)βi(u)
+\ps
+\div
+\vlw n-jɛ/plɔɣ
+\mta β(i)loɣ
+\drg ⁿdaː-βlʊ
+\kro ⁿdɛ͡a-βlʊ
+\rfc Kro.Poissons-volants.36 = BG3-18b
+\mrl ⁿdʊ-βlʊɣ
+
+\dt 28/Sep/2014
+
+\pnv °βin[a,e,o] ~ βene
+\psm shoot (arrow)
+\pva °βina
+\vanb 1
+\pva °βinai
+\vanb 2
+\pva °βene
+\vanb 3
+\pncv *βana-i
+\poc
+\hiw βɪn
+\vanb 3
+\ltg βiniə
+\vanb 1
+\lyp βɛn
+\vanb 3
+\vlw βɪn
+\vanb 1
+\mtp βɪn
+\vanb 1
+\vrs βɪn
+\vanb 1/3
+\msn βɛn
+\vanb 3
+\mta βene
+\vanb 3
+\num βɛn
+\vanb 3
+\drg βɛn
+\vanb 3
+\rf BG5-05a
+\kro βɪn
+\vanb 1
+\nt contrast btwn Dorig and Koro = confirmed by audio recordings (Nov 2011)
+\olr βinɪ
+\vanb 2
+\lkn βinæ
+\vanb 2
+\mrl βɪn
+\vanb 3
+\sdi fene
+\vanb 3
+\sdg fene
+\vanb 3
+
+\dt 18/Nov/2013
+
+\pnv °βini[ti]
+\psm skin; bark
+\pncv *βunu-ti
+\sem skin, husk, rind
+\cf °ɣuli[t]
+\hiw {ɣit}
+\ltg {ɣəlit}
+\lhi βin
+\lyp n-βini-
+\vlw ni-βini
+\mtp ni-pni
+\lmg n-βin
+\vra fin-ɣi
+\vrs βinti
+\msn βinti-ɣi
+\mta βini-
+\mta βiniti-
+\num fni-
+\rfc BP3-36b
+\drg βni
+\lkn βinŋi
+\mrl βʉni
+
+\dt 25/Jun/2012
+
+\pnv °βiro
+\psm k.o. mat
+\pncv
+\poc
+\cf °[a,e]ᵐba
+\ps
+\div
+\hiw wo\βiᶢʟə
+\rfc EP2-42b
+\ltg βirə
+\lhi
+\mta βiro
+\sem plexus at the based of the fronds of sago & other palms
+\num
+\drg
+\kro
+\olr βɪj
+\sem sleeping bed, mat
+\lkn βɪː
+\sem sleeping bed, mat
+\mrl
+\dt 12/Nov/2011
+
+\pnv °β[i,u]ta[ɣ]i
+\psm (put, throw) away
+\pva *βitaɣi
+\vanb 1
+\pva *βitai
+\vanb 2
+\pva *βutaɣi
+\vanb 3
+\pva *βutai
+\vanb 4
+\pncv
+\poc
+\cf
+\ps postv
+\div
+\hiw ptɔɣ
+\vanb 1
+\ltg βitɛ
+\vanb 2
+\lhi βætæ
+\vanb 1/2
+\lyp βɪʧɪ
+\vanb 1/2
+\vlw βɛtɛɣ
+\vanb 1
+\mtp βɛtɛɣ
+\vanb 1
+\lmg
+\vra
+\vrs βitɛɣ
+\vanb 1
+\msn βɛtɛ
+\vanb 2/4
+\mta βtaɣ
+\vanb 1
+\num
+\drg βtɪ
+\vanb 2/4
+\kro
+\olr βuta
+\vanb 4
+\lkn wutæ
+\vanb 4
+\mrl
+\dt 12/Nov/2011
+
+\pnv °βolo[βolo]
+\psm across; crossways; transverse directional
+\nt I reconstruct an initial obstruent due to Codrington's mention of N.B (New Britain?)
+/bolo/
+\ps
+\div
+\hiw wojwoj
+\sem crossways
+\ltg wəlwol
+\sem a cross
+\rfc FP1-24b
+\mtp wɔlwɔl
+\sem crossways; askance
+\mtp nɔ-wɔlwɔl
+\sem a cross
+\mtp na-sal\wɔlwɔl
+\sem crossbeam
+\lmg wœl
+\sem proximal directional: Southeast
+\vra wʊl
+\sem proximal directional: Southeast
+\vrs wʊl
+\sem proximal directional: Southeast
+\msn wɔl
+\sem proximal directional: Southeast
+\mta wolowolo
+\sem crossways; askance; a cross
+\lkn wɔlwɔl
+\sem crossbeam
+\rfc BP5-24a
+
+\dt 20/Nov/2014
+
+\pnv °°βora
+\psm [vt] split;  [adv] asunder
+\pncv
+\poc
+\cf °l[a,e]te
+\ps
+\div
+\hiw wɔᶢʟə
+\sem vt
+\hiw wəᶢʟəwɔᶢʟə
+\ltg
+\lhi wɒj
+\lhi wəjwɒj
+\lyp wɔj
+\lyp wɔjwɔj
+\vlw wɔj
+\mtp wɔj
+\mtp wɔjwɔj
+\lmg wɔr
+\lmg wɔrwɔr
+\vra
+\vrs wɔr
+\vrs wɔrwɔr
+\msn wɔr
+\mta
+\num wɔr
+\drg
+\kro
+\olr
+\lkn wɔræ
+\rfc BG4-37a
+\mrl
+\dt 09/Apr/2012
+
+\pnv °βose
+\psm canoe paddle
+\pncv
+\poc *pose
+\cf °sua
+\ps n
+\div
+\hiw wo
+\ltg wo
+\lhi
+\lyp
+\vlw nɔ-wɔh
+\mtp nɔ-wɔh
+\lmg
+\vra wʊs
+\vrs wʊs
+\msn wɔs
+\mta wose
+\num wɔs
+\drg wɔs
+\kro
+\olr
+\lkn wɔs
+\mrl
+\dt 07/Mar/2010
+
+\pnv °βui
+\psm higher spirit, deity
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw wʉ
+\ltg wʉ
+\lhi n-βu
+\lyp n-βu
+\vlw n-βu
+\mtp nu-βu
+\lmg n-βu
+\vra
+\vrs βü
+\msn βu
+\mta βui
+\num
+\drg βu
+\kro βu
+\olr
+\lkn βuː
+\mrl
+\dt 19/Sep/2011
+
+\pnv °βula
+\psm moon
+\pncv
+\poc *pulan
+\cf °muwia
+\ps
+\div
+\hiw {mowɪ}
+\ltg {məɣaɣə}
+\lhi {muwɛ}
+\lyp {muwi͡ɛ}
+\vlw nʊ-wʊl
+\mtp nʊ-wʊl
+\lmg
+\vra fulʊ
+\vrs wʊl
+\msn wʊl
+\mta fula
+\num {wisŋar}
+\drg {sŋar}
+\kro
+\olr βʊl
+\lkn βʊl
+\mrl βʊl
+\dt 18/Nov/2015
+
+\pnv °βule(ti)
+\psm be boring; bore <s.o.>
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw wujəti-
+\ltg wulesə
+\lhi
+\lyp
+\vlw
+\mtp wʊl
+\lmg
+\vra
+\vrs
+\msn
+\mta βule
+\sem to tire, weary, trouble one
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °βura
+\psm full; abundant, plenty
+\pncv *vura
+\poc *puRa
+\cf
+\ps
+\div
+\hiw wuᶢʟə
+\sem full
+\ltg wurə
+\sem full
+\lhi wwɔj
+\sem full
+\lyp ʊj
+\sem full
+\vlw ʊj
+\sem full
+\mtp ʊj
+\sem full
+\lmg
+\vra
+\vrs wʊr
+\sem full
+\msn
+\mta ura
+\sem full
+\num βuβur
+\sem full
+\drg ββʊr
+\sem full; abundant, plenty; many
+\kro
+\olr βʊβʊj
+\sem full
+\lkn βʊβʊː
+\sem full
+\mrl ffʊr
+\sem full
+\dt 20/Nov/2014
+
+\pnv °[β]ure
+\psm Ipomoea pes-caprae
+\pncv
+\poc *puRe
+\sem taxon of beach creepers, prototyp. Ipomoea pes-caprae (Ross 2008)
+\sem k.o. shore creeper, Convolvulus sp. (Geraghty 1990)
+\cf
+\ps n
+\div
+\tea ule
+\hiw ɵᶢʟə
+\ltg (hɔ) ərə
+\lhi
+\lyp
+\vlw
+\mtp nʊ-jʊ\ʊj
+\lmg
+\vra ⁿdʊɣa\βurʊ
+\sem leaf of a kind of vine that is used for traditional medecine
+\vrs ⁿdʊ\ʊr
+\sem k.o. yam
+\msn ɣanʊ\βʊr
+\mta
+\num
+\drg {ɣaβʊβ}
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °βuro
+\psm volcano
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw
+\ltg
+\lhi n-βɔj
+\lyp n-βʊj
+\vlw nʊ-βʊj
+\mtp nʊ-βʊj
+\lmg n-βʊr
+\vra
+\vrs βʊr
+\msn βʊr
+\mta βuro
+\num wa\ur
+\drg ʊr
+\kro
+\olr nʊj
+\lkn {ahʊː}
+\et <*asura
+\mrl {n-ɛplap}
+\dt 11/Sep/2011
+
+\pnv °βuruβuru ᵐbilaɣe
+\psm Plectorhynchus orientalis
+\lit ‘…(striped like) rail bird’
+\mtp wujwuj ᵐbɪlaɣ
+\vra wurwur ᵐbalaɣ
+\mta wurwur pilaɣe
+\drg βirβir ᵐblaɣ
+\kro ɣɔrɣɔr ᵐbɪlaɣ
+\olr wujwuj pilaː
+\lkn wuːwuː pilaɣ
+
+\dt 06/Apr/2007
+
+\pnv °βusa[ɣi]
+\psm drinking coconut
+\pncv
+\poc
+\cf *matu[ɣ]i
+\ps
+\div
+\hiw
+\ltg
+\nt (wuhə) ??
+\lhi
+\lyp n-wʊs
+\vlw n-wʊh
+\mtp nʊ-wʊh
+\lmg n-βʊs
+\vra fusʊ
+\vrs
+\msn
+\mta βusa
+\num βɛβsɛɣ
+\drg
+\kro
+\olr
+\lkn βuhæɣ
+\mrl nu-βusa
+\dt 12/Nov/2011
+
+\pnv °βusi
+\psm hit; kill
+\ps
+\div
+\hiw wu
+\ltg wuh
+\vlw wih
+\mtp wuh
+\vra fus
+\vrs βus
+\msn βus
+\mta βus
+\drg βus
+\kro βus
+\olr βus
+\lkn βuh
+\mrl βʉs
+
+\dt 11/Oct/2006
+
+\pnv °βutoβuto
+\psm puffer fish, Tetraodontidae spp.
+\ps
+\div
+\mtp nʊ-wʊtwʊt
+\vra futfutʊ
+\vrs wʊtwʊt
+\mta wutowuto
+\drg βʊtβʊt
+
+\dt 11/Oct/2006
+
+\pnv °βʷeⁿda
+\psm rain
+\cf °usa
+\cf °reu
+\ps
+\div
+\hiw wetə
+\ltg wɛt̻ə
+\lhi (wæn) ?
+\lyp (wɛn) ?
+\nt Urep also has them: cf. Tryon 1976 p.310
+\vlw n-wɛn
+\lmg n-wæt
+\vra wɛⁿdɛ
+\vrs wian
+\msn wɛn
+\mta wena
+
+\dt 14/Nov/2011
+
+\pnv °βʷisi
+\psm owl
+\ps
+\div
+\hiw wis
+\ltg wih
+\lhi wis
+\mtp ni-wis
+\vra wis
+\vrs wis
+\mta wis
+\num wis
+\drg wis
+\olr wis
+\lkn wis
+\mrl ni-wis
+
+\dt 05/Mar/2010
+
+\pnv °βVnue
+\psm Macaranga spp.
+\pncv
+\poc
+\cf °ɣoɣa
+\ps n
+\div
+\hiw {mjɵ}
+\hiw βənjɵ
+\nq check + identifc°
+\ltg βən(ʉ)ə
+\lhi
+\lyp
+\vlw
+\mtp {nɔ-ɣɔɣ}
+\lmg
+\vra
+\vrs wʊ\βʊnʊ
+\msn
+\mta βunue
+\num
+\drg βnʊ
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ⁿdaeru
+\psm coconut crab, Birgus latro
+\pncv *ⁿdaweʀu
+\div
+\hiw {ɣʉtʉt}
+\ltg {ɣəhʉh}
+\lhi n-ⁿdɪj
+\mtp na-ⁿdij
+\lmg tɪr
+\vra ⁿdiɪr
+\vrs ⁿdɪr
+\msn nɪr
+\mta naer
+\drg ŋ\ⁿdɪr
+\kro ⁿdɪr
+\rfc BG4-22a
+\olr ʧɪj
+\lkn ʧɪː
+
+\dt 12/Nov/2011
+
+\pnv °ⁿda[ɣ]o
+\psm do, make
+\ps
+\div
+\hiw ta
+\ltg t̻a
+\lhi ⁿda
+\lmg ta
+\vra ⁿda
+\vrs ⁿda
+\msn naɣ
+\mta na
+\num ⁿda
+\drg ⁿdaw
+\kro ⁿdaw
+\olr ʧaw
+\mrl ⁿda
+
+\dt 06/Apr/2007
+
+\pnv °ⁿdali-[ŋ,ɣ]ati
+\psm (go) around
+\ps
+\div
+\hiw tɔjɣɔt
+\ltg t̻əlɣɛt
+\mtp ⁿdɪlŋɛt
+\lmg tɛlŋɛʔ
+\mta nal
+\olr ʧalɣɪt
+\rfc BG4-31a
+\lkn ʧalɣɪt
+
+\dt 18/Sep/2011
+
+\pnv °ⁿdamu
+\psm yam (generic term)
+\pncv *ⁿdamu
+\sem
+\lhi ⁿdɒŋ
+\lyp n-ⁿdøm
+\lmg n-tœm
+\vra ⁿdɔm
+\vrs ⁿdœm
+\msn nɔm
+\mta nam
+\num ⁿdam
+\drg ⁿdaːm
+\kro ⁿdɛam
+\olr ʧɪm
+\lkn ʧam
+\mrl nɞ-ⁿdɞm
+
+\dt 12/Nov/2011
+
+\pnv °ⁿdani
+\psm ablative Prep./Conjunction: from; away; because; lest; than
+\ps
+\div
+\hiw tɔn
+\ltg t̻ɛn
+\vlw ⁿdɛn
+\mtp ⁿdɛn
+\lmg (ʔɛn)
+\vra ⁿdɛn
+\vrs ⁿdɛn
+\msn nɛn
+\mta nan
+\num ⁿdɛn
+\drg ⁿdɪn
+\kro ⁿdɛn
+\olr ʧɪn
+\lkn ʧɛn
+\mrl nɛn
+
+\dt 06/Apr/2007
+
+\pnv °ⁿdara
+\psm blood
+\pncv *daRa
+\poc *draRaq
+\cf
+\ps n
+\div
+\hiw taᶢʟə
+\ltg t̻arə
+\rfc FP1-14a
+\ltg t̻əre-
+\lhi n-ⁿdaj
+\lyp n-ⁿdaj
+\vlw
+\mtp na-ⁿdaj
+\lmg tɒr
+\lmg tœrœ-
+\vra ⁿdara
+\vrs ⁿdar
+\msn nar
+\mta nara
+\num ⁿdar
+\drg ⁿdar
+\kro
+\olr ʧara
+\olr ʧari-
+\rfc BG4-30a
+\lkn ʧæræ
+\lkn ʧarɪ-
+\mrl ⁿdar
+\dt 07/Mar/2010
+
+\pnv °ⁿdare
+\psm wait, wait for
+\pncv
+\ps
+\cf °ⁿderei
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp ⁿdaj
+\sem (adv.) waiting
+\lmg tartar
+\vra
+\vrs ⁿdiar
+\msn nar
+\sem (adv.) waiting
+\mta nare
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 22/Oct/2007
+
+\pnv °ⁿdaru
+\psm rot, rotten
+\pncv
+\poc
+\cf
+\nt reconstitué d'après Tryon 1976: 395
+\ps
+\div
+\hiw {ŋʷɔᶢʟ}
+\ltg
+\lhi ⁿdɒj
+\lyp ⁿdøj
+\vlw
+\mtp {sak͡pʷ}
+\lmg tœr
+\vra ⁿdɔr
+\rf Séwées-'i'i.46
+\vrs ⁿdœr
+\msn nɔr
+\mta nar
+\num ⁿdar
+\rf Num.Wenawon2.12
+\drg ⁿdaːr
+\kro ⁿdɛ͡ar
+\olr ʧaj
+\rf Olr.Vieille.014
+\lkn ʧaː
+\mrl ⁿdar
+\dt 18/Nov/2011
+
+\pnv °(ⁿdau-) βi(u)
+\psm fan palm, Licuala spp.
+\pva *ⁿdauβi
+\vanb 1
+\pva *ⁿdoβi
+\vanb 2
+\pva *ⁿdauβiu
+\vanb 3
+\pva *(ⁿdau-)βiloi
+\vanb 4
+\pva *(ⁿdau-)βiloɣi
+\vanb 5
+\pncv
+\poc *piRu(q)
+\cf °βilo[ɣ]i
+\nt Problem with etymologies & reflexes of *R
+\bb Ross 2008: 222
+\bb Fran�ois 2011 (*R): 189
+\ps n
+\div
+\hiw (ti) tʉw
+\et < *ⁿraˈu-βi (?)
+\vanb 1
+\ltg (hɔ) t̻ʉβ
+\et < *ⁿraˈu-βi (?)
+\vanb 1
+\lhi
+\lyp n-ⁿdüp
+\lyp n-ⁿdø ⁿdüp
+\vlw n-jɛ\plɔɣ
+\et < *ⁿrau-βiˈloɣi
+\vanb 5
+\mtp nɪ-jɪ\ⁿdɪp ~ nʊ-jʊ\ⁿdɪp
+\et < *-ⁿraˈu-βi
+\vanb 2
+\lmg n-tøɣɪp
+\vra ⁿdʊuβ
+\et < *ⁿraˈu-βi
+\vanb 1
+\vrs ⁿdi\βiβi
+\et < *ⁿrau-βiuˈβiu
+\vanb 3
+\rfc EP1-(49%)
+\msn
+\mta βiloɣ
+\et < *βiˈloɣi
+\vanb 5
+\num ⁿdɔ\βlɛ
+\et < *ⁿrau-βiˈloi
+\vanb 4
+\rfc Hans
+\drg ⁿdaː\βlʊ
+\et < *ⁿrau-βiˈloi
+\vanb 4
+\kro ⁿdɛ͡a\βlʊ
+\et < *ⁿrau-βiˈloi
+\vanb 4
+\olr ʧa\βi
+\et < *ⁿrau-ˈβiu
+\vanb 1
+\lkn ʧi\βi
+\et < *ⁿrau-ˈβiu
+\vanb 1
+\mrl ⁿdʊ\βlʊɣ
+\et < *ⁿrau-βiˈloɣi
+\vanb 5
+\dt 12/Nov/2011
+
+\pnv °ⁿdauβatu
+\psm Dioscorea bulbifera
+\lit stony leaves?
+\pncv
+\poc
+\cf °ᵐbʷa[ɣ]uro
+\ps
+\div
+\hiw taβɔt
+\ltg t̻aβɔt
+\lhi
+\lyp
+\vlw n-ⁿdɪβɛt
+\mtp nɪ-ⁿdɪβɛt
+\lmg
+\vra
+\vrs
+\lkn
+\mrl
+\dt 12/Nov/2011
+
+\pnv °[ⁿde]ⁿdere[si]
+\psm tasting good, delicious, sweet
+\lit crunchy
+\cf °ⁿdere
+\sem break off
+\cf °nanasu
+\pncv
+\pva °ⁿdeⁿderesi
+\vanb 1
+\pva °ⁿdere-mʷotu
+\vanb 2
+\pva °ⁿdere-ⁿdere
+\vanb 3
+\ps
+\div
+\hiw tᶢʟɵt
+\vanb 1
+\ltg {t̻itwɛh}
+\lhi ⁿdɪjɪs
+\vanb 1
+\lyp {nnøs}
+\vlw {n-nɔnɔh}
+\mtp ⁿdɛjⁿdɛj
+\vanb 3
+\sem (pudding) crunchy, crispy
+\rfc AF-BP2-11b
+\mtp {nɛ-nɛnɛh}
+\lmg tɛtrɪs
+\vanb 1
+\vra
+\vrs ⁿdɪⁿdɪrɪs
+\vanb 1
+\msn nɪnɪrɪs
+\rfc AF-AG5-34a
+\vanb 1
+\mta nereŋ͡mʷot
+\vanb 2
+\sem sweet (lit. the taste breaks off agreeably)
+\num ⁿdɪrɪŋ͡mʷʊt
+\vanb 2
+\drg ⁿdɛrŋ͡mʷʊt
+\vanb 2
+\kro
+\olr {lʊlʊm}
+\lkn ʧɪrɪŋ͡mʷʊt
+\vanb 2
+\mrl ⁿdɛrŋʷʊt
+\vanb 2
+\dt 24/Aug/2011
+
+\pnv °ⁿderei
+\psm wait, wait for
+\pncv
+\ps vt
+\cf °ⁿdare
+\div
+\vlw
+\mtp ⁿdɪjɪ
+\sem (v.) wait
+\vra
+\vrs
+\msn nɪrɪ
+\mta nerei
+\num
+\drg
+\kro
+\olr
+\lkn ʧɪrɪ
+\mrl
+\dt 12/Nov/2011
+
+\pnv °ⁿdesi
+\psm k.o. small bird
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw tɵs
+\sem Rhipidura fuliginosa
+\rfc FG3-34b
+\ltg t̻əh
+\sem Rhipidura fuliginosa
+\lhi
+\lyp
+\vlw
+\mtp nɪ-wɪjⁿdɪs
+\sem Lalage leucopyga
+\lmg wørtɪs
+\rfc EP1-43b
+\vra
+\vrs wʊrⁿdɪs
+\sem Lalage maculosa
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 14/Mar/2010
+
+\pnv **ⁿdiⁿdi
+\psm build a wall; walling, enclosure
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw tit
+\ltg t̻it
+\lhi
+\lyp ⁿdin
+\vlw
+\mtp ⁿdin
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ⁿdilit(i,u)
+\psm Caranx spp., trevally
+\ps
+\div
+\hiw
+\ltg t̻əlit
+\sem k.o. trevally, unidentified
+\rfc FG1-27b
+\mtp na-nlit
+\vra ⁿdiliʔ
+\kro ⁿdilit
+\olr ʧilit
+\lkn ʧilit
+
+\dt 24/Mar/2010
+
+\pnv °ⁿdiŋa
+\psm reach; until
+\cf °wasa
+\ps
+\div
+\vlw ⁿdɪŋ
+\mtp ⁿdɪŋ
+\lmg tæŋ
+\vra ⁿdiŋɪ
+\vrs ⁿdɪŋ
+\msn niŋ
+\mta nŋa
+\num ⁿdiŋ
+\drg ⁿdɪŋ
+\kro ⁿdɪŋ
+\olr ʧɪŋ
+\lkn ʧɪŋ
+\mrl ⁿdɛ͡aŋ
+
+\dt 03/Dec/2007
+
+\pnv °ⁿdoⁿdo[mi]
+\pva °ⁿdoⁿdo
+\vanb 1
+\pva °ⁿdoⁿdomi
+\vanb 2
+\pva °ⁿdomiⁿdomi
+\vanb 3
+\psm think; worry
+\pncv *ⁿdomi
+\sem think (about), love
+\hiw tot-
+\vanb 1
+\hiw ttɵm
+\vanb 2
+\ltg t̻ot
+\vanb 1
+\sem worry, care for
+\ltg t̻əmt̻oəm
+\vanb 3
+\sem think, believe
+\lhi ⁿdɛn
+\vanb 1
+\lyp ⁿdɔn
+\vanb 1
+\vlw ⁿdɔn
+\vanb 1
+\mtp ⁿdɪmⁿdɪm
+\vanb 3
+\lmg tœt
+\vanb 1
+\vra ⁿdʊⁿdʊm
+\vanb 2
+\vrs ⁿdøⁿdøm
+\vanb 2
+\msn nʊnʊm
+\vanb 2
+\mta nonom
+\vanb 2
+\num ⁿdʊⁿdʊm
+\vanb 2
+\drg ⁿdʊm
+\vanb 2
+\olr ʧɪʧɪm
+\vanb 2
+\lkn ʧɪːʧɪm
+\vanb 2
+\mrl ⁿdɵⁿdʊ͡ɵm
+\vanb 2
+
+\dt 03/Dec/2007
+
+\pnv °ⁿdolo[mi]
+\psm swallow
+\pva °ⁿdolo
+\vanb 1
+\pva °ⁿdolomi
+\vanb 2
+\pncv *ⁿdolom
+\ps vt
+\div
+\hiw
+\vlw
+\mtp ⁿdɔl
+\vanb 1
+\lmg
+\vra
+\vrs ⁿdʊl
+\vanb 1
+\msn nɔl
+\vanb 1
+\mta nolo
+\vanb 1
+\num
+\drg ⁿdlʊm
+\vanb 2
+\kro
+\olr
+\lkn ʧɪlɪm
+\vanb 2
+\mrl
+\div
+\dt 12/Nov/2011
+
+\pnv °ⁿdor[a,e]
+\psm make noise
+\pncv
+\pva *ⁿdora
+\vanb 1
+\pva *ⁿdore
+\vanb 2
+\ps
+\div
+\hiw tɔᶢʟə
+\vanb 1
+\rfc AF-FG3-35b
+\rf Devils.08
+\ltg t̻ɔrə
+\vanb 1
+\rfc AF-FG1-12a
+\rf
+\lyp
+\lhi
+\vlw
+\mtp ⁿdɔjⁿdɔj
+\vanb 1/2
+\sem make noise, resound
+\lmg tœrtœr
+\vanb 2
+\sem (n.) noise
+\vra
+\vrs
+\msn
+\mta nore
+\vanb 2
+\sem make a noise
+\mta norenore
+\vanb 2
+\sem (n.) noise
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 20/Mar/2013
+
+\pnv °ⁿdoto
+\psm k.o. shore tree, Excoecaria agallocha
+\pncv
+\poc
+\cf
+\ps
+\div
+\sc
+\tea toe
+\hiw tot
+\ltg t̻ot
+\lhi
+\lyp
+\vlw
+\mtp nɔ-ⁿdɔt
+\lmg
+\vra
+\vrs
+\msn
+\mta noto
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ⁿd[o,u]mʷei
+\psm link between tens and units
+\ps
+\div
+\hiw {mətain}
+\ltg {mahəlin}
+\lhi {malin}
+\lyp ⁿdɪŋ͡mʷɪ
+\rfc AF-FG4-04a
+\mtp na\nŋ͡mʷɛ
+\lmg tɪŋ͡mʷɪ
+\rfc AF-EG2-01b
+\vra ⁿdɪŋ͡mʷɪ
+\vrs ⁿdɪmɪ
+\msn nɛŋ͡mʷɛ-ɣi
+\mta n(u)ŋ͡mʷei
+\num ⁿdiŋ͡mʷin
+\drg ⁿdɔŋ͡mʷin
+\olr ʧɪŋ͡mʷin
+\lkn ʧiŋ͡mʷin
+\mrl ⁿdɞŋʷɪ
+
+\dt 29/Apr/2016
+
+\pnv °eno
+\psm lie down
+\pva eno
+\vanb 1
+\pva one
+\vanb 2
+\pncv
+\poc *qenop
+\cf °r[i,u]sa
+\ps
+\div
+\hiw ɪn
+\vanb 1
+\ltg in
+\vanb 1
+\lhi ɛn
+\vanb 1
+\lyp ɛn
+\vanb 1
+\vlw
+\mtp ɛn
+\vanb 1
+\lmg œn
+\vanb 2
+\vra ʊn
+\vanb 2
+\vrs ʊn
+\vanb 2
+\msn ɔn
+\vanb 2
+\mta one
+\vanb 2
+\sem lie wide and open
+\mta {rsa}
+\num ɔn
+\vanb 2
+\drg ɔn
+\vanb 2
+\kro
+\olr ɔn
+\vanb 2
+\lkn ɛn
+\vanb 1
+\mrl ɞn
+\vanb 2
+\mae eno
+\vanb 1
+\dt 22/Jan/2014
+
+\pnv °ᵑgalo
+\psm go up, climb up; crawl; enter, exit; upwards
+\pncv *ᵑgalo
+\hiw kaj
+\ltg kal
+\lhi kal
+\vlw ᵑgal
+\mtp kal
+\lmg kal
+\vra kal
+\vrs kal
+\msn kal
+\mta kalo
+\num kal
+\drg kal
+\kro kal
+\olr kal
+\lkn kal
+\mrl kal
+
+\dt 06/Apr/2007
+
+\pnv °ᵑgama-ru[a]
+\psm 1st excl. Dual (indep. pronoun)
+\ps
+\div
+\hiw kamaᶢʟə
+\ltg kəmɔr
+\lhi mæjo
+\vlw ᵑgɛmjʊ
+\mtp kamjʊ
+\lmg kamaru
+\vra kamaⁿduʊ
+\vrs kʊmʊrʊk
+\msn kɛmɛmrʊ
+\mta (kara)
+\num kamar
+\drg kmaːr
+\kro kɛmɛ͡ar
+\olr kɪmɪj
+\lkn ɣamaː
+\mrl kamar
+
+\dt 31/Aug/2009
+
+\pnv °ᵑgamuyu
+\psm 2nd Plural (indep. pronoun)
+\pncv *ᵑgamuju
+\hiw kimi
+\ltg kəmi
+\lhi kimi
+\vlw ᵑgimi
+\mtp kimi
+\lmg kimi
+\vra kɪmi
+\vrs kɪmi
+\msn kimi
+\mta kamiu
+\drg kmi
+\kro kimi
+\olr kimi
+\lkn ɣamu
+\mrl kɛmi
+
+\dt 22/Oct/2007
+
+\pnv °ᵑgara
+\psm shoot <s.th.> with arrow
+\pncv
+\poc
+\cf °βene
+\ps vt
+\div
+\hiw kaᶢʟə (-ŋi-)
+\ltg karə
+\lhi
+\lyp
+\vlw
+\mtp kaj
+\lmg
+\vra karkara
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ᵑgelu
+\psm back, backwards, again; Reflexive
+\ps
+\div
+\lhi {lɛk}
+\mtp {lɔk}
+\lmg kɪl
+\vra kɪl
+\vrs kɪl
+\msn kɪl
+\mta kel
+\num kɪl
+\drg kɪl
+\kro kɪl
+\olr kɪl
+\lkn kɪl
+\mrl kɪl
+
+\dt 03/Dec/2007
+
+\pnv °ᵑgo[ŋ]e
+\psm loosen and pull <s.th.> out
+\pncv
+\poc
+\cf °(a)βuti
+\ps vt
+\div
+\hiw {mjɵ}
+\ltg {liɔ}
+\lhi kɛŋ
+\sem pull out
+\lyp kɔ
+\sem pull out
+\vlw ᵑgɔ
+\sem pull out
+\mtp kɔ
+\sem pull out
+\mtp mɔkɔkɔ
+\sem (tooth+) loose, shaky
+\lmg kɔŋ
+\sem pull out
+\vra kʊŋ
+\rf dico...
+\vrs
+\msn
+\mta koe
+\sem loosen and pull out
+\mta makoekoe
+\sem loosen and pull out
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 12/Nov/2011
+
+\pnv °ᵑgore
+\psm horizontal slit drum
+\pncv *[k,ᵑg]ore
+\sem make musical sound
+\hiw tɵt-koᶢʟ
+\sem small drum
+\ltg kor
+\sem small drum
+\lhi kɛjkɛj
+\mtp nɔ-kɔj
+\sem big drum
+\lmg kœr
+\rfc EG2-04a
+\vrs wʊkʊr
+\msn wɔkɔr
+\mta kore
+\num wɔkɔr
+\rf dico §vus
+\drg wkɔr-ⁿduŋ
+\kro wkɔr
+\olr wɔkɔj (-ʧum)
+\lkn kɛː
+\mrl nɞ-wɞkɞr
+\sem small drum
+\ark 
+
+\dt 12/Nov/2011
+
+\pnv °ᵑgoru
+\psm (plant, fruit) dry
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw kɵᶢʟ
+\sem
+\lhi
+\lyp
+\vlw nɪ-ᵑgɪj
+\sem biscuit made of dried breadfruit
+\mtp nɪ-kɪj
+\sem biscuit made of dried breadfruit
+\lmg kør
+\vra
+\vrs kør
+\sem biscuit made of dried breadfruit
+\msn
+\mta kor
+\sem become dry, with heat or time
+\num
+\drg kʊr
+\sem (plant) dry
+\kro
+\olr
+\lkn
+\mrl kɵr
+\nt cf. MS18-22, 06'10"
+\dt 25/Mar/2010
+
+\pnv °ᵑgula-ᵑgu
+\psm my back
+\ps
+\cf °taɣuRu-ᵑgu
+\div
+\hiw kjɔ-k
+\ltg kilɛ-k
+\lhi n-kʷəjɪ-k
+\lyp n-kølø-k
+\vlw n-ᵑgɪlɛ-ŋ
+\rfc EG1-09a
+\mtp nɪ-klɛ-k
+\lmg kœlœ-k
+\vra kɔlɔ-k
+\vrs külœ-k
+\msn kɔlɔ-k
+\mta kula-k
+
+\dt 13/Mar/2010
+
+\pnv °ᵑg[uʀ]io
+\psm dolphin, porpoise
+\pva °ᵑgurio
+\vanb 1
+\pva °ᵑgio
+\vanb 2
+\pncv *ᵑguʀio
+\sem porpoise
+\cf °ririɣo
+\hiw kʷᶢʟɪ
+\vanb 1
+\sem dolphin
+\ltg kʷuriə
+\vanb 1
+\sem dolphin
+\lhi n-kɛ
+\vanb 2
+\sem whale
+\nt < Tryon 1976: 265
+\lhi {n-susutaj}
+\sem dolphin
+\lyp n-kɪ
+\vanb 2
+\sem whale
+\lyp {n-suwsuwtaj}
+\sem dolphin
+\mtp nɪ-kɪ
+\vanb 2
+\sem dolphin
+\vrs kɪ
+\vanb 2
+\msn kɪ
+\vanb 2
+\mta kio
+\sem whale
+\vanb 2
+\num wi/ki
+\vanb 2
+\sem dolphin
+\kro kɪ
+\vanb 2
+\rfc BG4-22a
+\sem dolphin
+\olr kɪ
+\vanb 2
+\sem dolphin
+\lkn kɪ
+\vanb 2
+\sem dolphin
+\mrl nɛ-kɛ͡a
+\vanb 2
+\sem dolphin
+
+\dt 24/Mar/2010
+
+\pnv °ᵑgur[i,u]
+\psm crunch noisily; esp. (devil) eat ‹man›
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw kʷʉᶢʟ
+\sem (man) crunch; (devil) eat <man>
+\ltg kʉr
+\sem (moskito) bite; (man) crunch; (devil) eat <man>
+\lhi kuj
+\lyp
+\vlw ᵑgij
+\mtp kuj
+\lmg
+\vra kur
+\vrs kür
+\msn kur
+\sem (man) crunch, chew ‹kava+›; (devil) eat ‹man›
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °ɣaᵐban[i,e]
+\psm [n] sail
+\pva °ᵑɣaᵐbani
+\vanb 1
+\pva °ɣaᵐbane
+\vanb 2
+\pncv *kaᵐbani
+\div ___
+\hiw ɣəpɔn
+\vanb 1
+\ltg ɣəpɛn
+\vanb 1
+\lyp n-ɣapan
+\vanb 2
+\vlw n-ɣaᵐban
+\vanb 2
+\mtp na-ɣᵐban
+\vanb 2
+\lmg n-ɣapan
+\vanb 2
+\rfc EG2-04a
+\vra ɣɛᵐbɛn
+\vanb 1
+\vrs ɣɛᵐbɛn
+\vanb 1
+\msn ɣɛpɛn
+\vanb 1
+\mta ɣapan
+\vanb 1
+\mta ɣapane
+\vanb 2
+\num ɣapan
+\vanb 2
+\lkn ɣapæn
+\rfc BG3-23b
+\vanb 2
+\mrl (ɣɔm)
+
+\dt 20/Nov/2011
+
+\pnv °ɣaᵐbu
+\psm just, only; Restrictive
+\ps
+\div
+\vrs ɣɛm
+\msn ɣɔp
+\mta ɣap
+\num am
+\mrl ɣɔm
+
+\dt 06/Apr/2007
+
+\pnv °ɣaβa
+\psm fly with flapping wings
+\pncv *kaka(βa)
+\ltg ɣaβə
+\mtp ɣap
+\lmg ɣɒβ
+\vrs ɣaβ
+\msn ɣaɸ
+\mta ɣaβa
+\drg ɣaβ
+\kro ɣaβ
+
+\dt 17/Sep/2007
+
+\pnv °ɣa-βaruru
+\psm great bean vine
+\ps
+\div
+\hiw ɔᶢʟje βʉᶢʟʉɣ
+\ltg ɣɔβərʉr
+\mtp na-ɣapjuj
+\lmg ɣaβrur
+\rfc EG2-04a
+\vra ɣaβurur
+\vrs ɣaβœrür
+\msn ɣaβurur
+\mta ɣaβarur
+\olr ɣaβuruj
+\lkn ɣaβaruː
+
+\dt 06/Mar/2010
+
+\pnv °(ɣa)βiri[s]
+\psm squeeze
+\pva *βiri
+\vanb 1
+\pva *βirisi
+\vanb 2
+\pva *ɣa-βiri
+\vanb 3
+\pva *βaɣiri
+\vanb 4
+\pncv *viri
+\sem wring, squeeze out (coconut cream)
+\poc
+\cf
+\ps
+\div
+\hiw βiᶢʟ
+\vanb 1
+\ltg βir
+\vanb 1
+\lhi βəɣij
+\vanb 4
+\lyp ɣaβij
+\vanb 3
+\vlw
+\mtp βiɣij
+\vanb 4
+\lmg βiɣir
+\vanb 4
+\vra βiɣir
+\vanb 4
+\vrs ɣɛβir
+\vanb 3
+\msn βiβir
+\vanb 1
+\mta ɣaβir
+\vanb 3
+\num ɣiβir
+\vanb 3
+\drg wir
+\nt ??
+\drg {k͡pʷriŋ}
+\kro
+\olr
+\lkn βirih
+\vanb 2
+\mrl ββir
+\vanb 1
+\dt 20/Nov/2011
+
+\pnv °ɣaβuru
+\psm house
+\cf °yumʷa
+\ps
+\div
+\vrs ɣøβür
+\num ɣuβur
+\drg ɣβur
+\kro ɣuβur
+\olr ɣaβuj
+\olr ɣuβuj
+\olr βuβuj
+
+\dt 07/Mar/2010
+
+\pnv °ɣale
+\psm lie, deceive
+\pncv *kale
+\sem tease, joke, deceive
+\lhi ɣal
+\vlw ɣal
+\mtp ɣal
+\vra ɣal
+\vrs ɣial
+\msn ɣal
+\mta ɣale
+\drg ɣal
+\kro ɣal
+\olr ɣal
+\lkn ɣæl
+\mrl ɣɛl
+
+\dt 11/Oct/2006
+
+\pnv °ɣanase
+\psm mullet fish, Valamugil sp.
+\pncv
+\poc *kanase
+\cf
+\ps
+\div
+\hiw
+\ltg ɣəneh
+\sem unidentified fish (similar to Tarpon megalops)
+\rfc FG1-28b
+\lhi
+\lyp
+\vlw
+\mtp na-ɣnah
+\lmg ɣanas
+\vra
+\vrs ɣinias
+\msn
+\mta
+\num
+\drg ɣnas
+\kro
+\olr
+\lkn ɣanas
+\mrl
+\dt 25/Mar/2010
+
+\pnv °ɣaraᵐbʷa
+\psm new, in new condition
+\pncv *karabwa
+\poc *ka(r,l)abwa
+\cf
+\ps adj
+\div
+\hiw ᶢʟakʷə
+\ltg rakʷə
+\lhi ɣjak
+\lyp ɣajaŋ
+\vlw ɣajaŋ͡mʷ
+\mtp ɣajak͡pʷ
+\lmg ɣarak
+\vra ɣarak͡pʷa
+\nt check!!
+\vrs ɣarak͡pʷ
+\msn ɣarak͡pʷ
+\mta ɣarak͡pʷa
+\num ɣarak
+\drg ɣrak͡pʷ
+\kro
+\olr ɣarak
+\lkn ɣarak
+\mrl ɣarakʷ
+\dt 04/Mar/2010
+
+\pnv °ɣaramʷosi
+\psm spit
+\pncv
+\poc
+\cf °anusi
+\ps
+\div
+\hiw ᶢʟaɣemɵt
+\ltg
+\lhi (ɣajŋʷih)
+\nt reconstitué d'après Tryon 1976: 480
+\lyp (ɣajŋ͡mʷis)
+\nt reconstitué d'après Tryon 1976: 480
+\vlw
+\mtp
+\lmg (ɣarŋ͡mʷis)
+\nt reconstitué d'après Tryon 1976: 480
+\vra ɣarŋ͡mʷis
+\nt Hyslop
+\vrs ɣarŋ͡mʷøs
+\nt Hyslop
+\msn (ɣarŋ͡mʷʊs)
+\nt reconstitué d'après Tryon 1976: 480
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 20/Nov/2011
+
+\pnv °ɣari
+\psm bivalve sp., scraper
+\pncv *ka(r)i
+\sem bivalve sp., scraper
+\poc *kari(s)
+\sem scrape (tubers, coconuts)
+\cf
+\ps
+\div
+\hiw {kɔt}
+\ltg {kɔh}
+\lhi n-βin\ɣæj
+\lyp
+\vlw
+\mtp ni-βin\ɣɛj
+\lmg ɣɛr
+\rfc EP1-42a
+\vra
+\vrs
+\msn
+\mta ɣar
+\num wɔ\ɣɛr
+\rfc BP3-36b
+\drg ɣaːr
+\kro
+\olr
+\lkn ɣæː
+\mrl nɛ-ɣɛr
+\dt 14/Mar/2010
+
+\pnv °ɣaru
+\psm swim
+\pncv
+\poc *kaRu
+\cf
+\ps
+\div
+\hiw ᶢʟɔɣ
+\rfc FG3-26a
+\ltg ɣɔr
+\lhi ɣɒj
+\lyp
+\vlw ɣɛj
+\mtp ɣɛj
+\lmg
+\vra
+\vrs ɣœr
+\msn ɣɔr
+\mta ɣar
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ɣaruβʷe
+\psm k.o. mudcrab
+\pncv *kaRuve
+\poc *kaRupe
+\cf
+\ps n
+\div
+\hiw ᶢʟʉᶢʟʉwə
+\ltg ɣərʉwə
+\rfc FP3-09a
+\lhi n-ɣɔjɔw
+\lyp n-ɣajʊw
+\vlw
+\mtp na-ɣjʊw
+\lmg
+\vra ɣuruβ
+\vrs wɪ\ɣɪriβ
+\vrs ɣørüm
+\msn
+\mta ɣarwe || ɣaruwe
+\num
+\drg ɣrʊw
+\kro
+\olr
+\lkn
+\mrl wʊrʊw
+\rfc AF-BG3-10b
+\dt 19/Sep/2011
+
+\pnv °ɣasali
+\psm knife
+\ps
+\div
+\vlw na-ɣasɛl
+\mtp na-ɣasɛl
+\lmg n-ɣasɛl
+\vra ɣasɛl
+\vrs ɣasɛl
+\mta ɣasal
+\num ɣasɛl
+\olr ɣasal
+\lkn ɣahæl
+\mrl ni-ɣisɛl
+
+\dt 11/Oct/2006
+
+\pnv °ɣata[m,β]a
+\psm door of o.'s house
+\pva °ɣataβa
+\vanb 1
+\pva °ɣatama
+\vanb 2
+\pncv *ɣata[m,β]a
+\sem door, outside
+\ps
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp na-mtɪ.ɣtap
+\vanb 1
+\lmg n-mɛ.ɣʔɒβ
+\vanb 1
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr ɣatam
+\vanb 2
+\sem (adv.) at o.'s housedoor, outside
+\lkn
+\mrl
+\div
+\dt 17/Oct/2006
+
+\pnv °ɣati
+\psm chew (esp. kava)
+\pncv *kati
+\poc *kaʀat
+\cf °ɣaʀat
+\ps vt
+\div
+\hiw ɣɔt
+\ltg ɣɛt
+\lhi
+\lyp ɣɪt
+\vlw
+\mtp {kuj}
+\lmg
+\vra {kur}
+\vrs
+\msn
+\mta ɣat
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl ɣɞt-
+\sem bite
+\dt 09/Mar/2010
+
+\pnv °ɣatVɣo-ᵑgu
+\psm my back
+\pncv
+\poc
+\cf °ᵑgula-ᵑgu
+\cf
+\ps
+\div
+\num {na-tarwu-k}
+\drg n-ɣatɣʊ-k
+\kro na-wɛtɣɛ͡a-k
+\nt donné en 3sg /na-wɛtɣa-n/
+\olr wɪtɣɪ-k
+\lkn ɣatwɔ-k
+\mrl nɞ-ɣɞtɣʊ-k ~ na-ɣatɣɔ-n
+\rfc BP3-16a
+\dt 13/Mar/2010
+
+\pnv °ɣa[w]e
+\psm liana, vine; rope
+\ps
+\div
+\hiw {aᶢʟje}
+\ltg ɣaw
+\vlw na-ɣaɣa
+\mtp na-ɣaj.ɣa
+\lmg n-ɣaɣa
+\vra ɣaɣa
+\vrs ɣa
+\msn (wɔ)ɣa
+\mta ɣae
+\drg waɣɛt.ɣa
+\kro wɣɛt.ɣa
+\lkn (ɣ)awutæ.ɣæ
+\mrl nɛ-ɣɛ
+
+\dt 06/Mar/2010
+
+\pnv °ɣawu
+\psm take up in handful
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp (wʊw)
+\lmg ɣœw
+\rfc AF-EG2-25b
+\vra
+\vrs ɣœw
+\rfc AF-EG2-25b
+\msn
+\mta ɣaw(u)
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 25/Jun/2012
+
+\pnv °ɣaya
+\psm kava
+\ps
+\div
+\hiw ɣa
+\ltg ɣi
+\lyp n-ɣa
+\vlw na-ɣa
+\mtp na-ɣa
+\lmg n-ɣa
+\nq ou /n-ɣɒ/ ??
+\vra ɣiɛ
+\vrs ɣɪ
+\msn ɣɛ
+\mta ɣea
+\drg ɣɛ
+\kro ɣɛ
+\olr ɣɛ
+\lkn ɣɛ
+\lkn {k͡pʷaɣɔɣɔ}
+\mrl {mɞlʊp}
+
+\dt 22/Oct/2007
+
+\pnv °ɣaRat
+\psm bite; itch (lit., fig.)
+\pncv *kaRat-i
+\poc *kaRat
+\cf °ɣati
+\ps vt
+\div
+\hiw ᶢʟaɣə | ᶢʟaɣəti-
+\ltg ɣarə
+\lhi ɣaj
+\lyp ɣaj
+\vlw ɣaj
+\mtp ɣaj-
+\lmg ɣɒr-
+\vra ɣar-
+\vrs ɣar
+\msn ɣar
+\mta ɣara
+\num ɣarɛt
+\drg ɣraːt
+\kro ɣɛrɛ͡at
+\olr ɣarat
+\lkn ɣæræs
+\mrl ɣɞt- ~ ɣat-
+\dt 20/Nov/2011
+
+\pnv **ɣete
+\psm woven basket
+\pncv *kete  ??
+\ps n
+\div ________
+\hiw ɣɪt
+\ltg
+\lhi ɣɛt
+\lyp n-ɣɛt
+\vlw n-ɣɛt
+\mtp nɛ-ɣɛt
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 09/Sep/2007
+
+\pnv °[[ɣ,ᵑg]a]oβa
+\pva °ɣaoβa
+\vanb 1
+\pva °ᵑgaoβa
+\vanb 2
+\pva °oβa
+\vanb 3
+\psm reef heron, Ardea sacra
+\ps
+\div
+\tea (oβene)
+\ps
+\div
+\hiw ɣɔβə
+\vanb 1
+\ltg ɣɔβə
+\vanb 1
+\lhi n-ɒp
+\vanb 3
+\lyp n-ɣɔp
+\vanb 1
+\mtp na-ɣɔp
+\vanb 1
+\lmg n-ɔβ
+\vanb 3
+\vra ɣiɔwɔ
+\vanb 1
+\vrs ɣʊʊw
+\vanb 1
+\mta kaoβa
+\vanb 2
+\num kɔβ
+\vanb 2
+\drg kɔβ
+\vanb 2
+\olr n\ɔβ
+\vanb 3
+\lkn ɣaɔβ
+\vanb 1
+\mrl nɔ-kɔp
+\vanb 2
+
+\dt 17/Nov/2011
+
+\pnv °[ɣ,ᵑg]aria
+\psm Cordyline terminalis
+\pva *ɣaria
+\vanb 1
+\pva *ᵑgaria
+\vanb 2
+\pncv *garia
+\poc *gaRia
+\cf
+\ps n
+\div
+\hiw (ti) ᶢʟeɣjə
+\vanb 1
+\ltg (hɔ) ɣəriə
+\vanb 1
+\lhi
+\lyp n-ⁿdø-ɣajɛ
+\vanb 1
+\vlw
+\mtp {na-ɣajɪtjɪt}
+\lmg tœ-ɣiri
+\vanb 1
+\vra ɣiriɪ
+\vanb 1
+\vrs ⁿda-ɣarɪ
+\vanb 1
+\msn nɔ-ɣarɪ
+\rfc EG1-14b
+\vanb 1
+\mta karia
+\vanb 2
+\num ⁿdɔ-kiri
+\vanb 2
+\drg krɪ
+\vanb 2
+\kro
+\olr
+\lkn ʧa-kæhræ
+\vanb 2
+\mrl
+\ark {t͡sihi}
+\dt 12/Nov/2011
+
+\pnv °[ɣ,ᵑg]aru
+\psm scratch
+\pva *ᵑgaru
+\vanb 1
+\pva *ɣaru
+\vanb 2
+\pva *ɣare
+\vanb 3
+\pncv
+\poc *karu
+\cf
+\ps
+\div
+\hiw kɔᶢʟ
+\rfc FP2-40b
+\vanb 1
+\hiw kɔᶢʟkɔᶢʟ
+\sem (plant+) stingy, rough
+\vanb 1
+\rfc EP2-35a
+\ltg kərəkɔrə
+\nt strange vowels
+\lhi
+\lyp {siβij}
+\vlw
+\mtp ɣaj
+\vanb 3
+\lmg kœr
+\vanb 1
+\rfc EG2-04b
+\vra
+\vrs kœr
+\vanb 1
+\msn kɔr
+\vanb 1
+\nt reconstitué d'après Tryon 1976: 505
+\mta karu
+\vanb 1
+\mta ɣar
+\vanb 2
+\num ɣar
+\vanb 2/3
+\drg ɣar
+\vanb 3
+\kro
+\olr
+\lkn ɣæː
+\vanb 2/3
+\mrl
+\dt 20/Nov/2011
+
+\pnv °[ɣi]ⁿda-ru[a]
+\psm 1incl:Dual
+\pncv *kiⁿda-rua
+\hiw tɵᶢʟɵ
+\ltg t̻or
+\lhi ɣinjo
+\vlw ⁿdʊjʊ
+\mtp ⁿdʊ
+\mtp ⁿdʊjʊ
+\lmg ɣætru
+\vra ɣiⁿduʊ
+\vra ⁿduʊ
+\vrs ⁿdʊrʊk
+\msn ninrʊ
+\mta nara
+\drg ⁿdaːr
+\kro ⁿdu
+\kro ⁿduru
+\olr ʧʊrʊ
+\lkn wʊʧʊ
+\mrl ⁿdʊrʊ
+
+\dt 06/Apr/2007
+
+\pnv °ɣire
+\psm Pandanus
+\pncv *kiRe
+\poc *kiRe
+\cf °βaⁿda
+\ps n
+\div
+\hiw ᶢʟiɣə
+\ltg ɣirə
+\lhi n-ɣɛj
+\lyp n-ɣjɛj
+\vlw nɪ-ɣɪj
+\mtp nɪ-ɣɪj
+\lmg
+\vra
+\vrs wʊ\ɣɪr
+\msn nɔ\ɣɪr
+\mta ɣre
+\sem pandanus (?); ananas
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl nɪ-ɣɪrɪt
+\dt 06/Mar/2010
+
+\pnv °ɣisi
+\psm hold in o.'s hands
+\pncv
+\poc
+\cf °t[au,o]ri
+\ps
+\div
+\hiw
+\ltg ɣih
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg ɣis
+\vra ɣis
+\vrs ɣis
+\msn ɣis
+\mta
+\num
+\drg
+\kro
+\olr ɣis
+\lkn ɣih
+\mrl
+\dt 20/Nov/2011
+
+\pnv °ɣoari
+\psm root
+\pncv *kawa(ri)
+\poc *wakaR
+\hiw {ᶢʟɵt}
+\ltg {ɣərəh}
+\lhi
+\lyp nɔ-ɣɔji
+\vlw n-ɣɪji
+\mtp nʊ-ɣʊji
+\lmg n-ɣœr
+\vra ɣʊri
+\vrs ɣɛri
+\mta ɣari
+\drg ɣari
+\kro ɣɛ͡ar
+\olr ɣaj
+\lkn ɣæː
+\lkn ɣiːɣiː
+\mrl ɣɔɛr
+
+\dt 12/Mar/2010
+
+\pnv °ɣo(m,ᵐb)a
+\psm sick; sickness
+\pva *ɣoma
+\vanb 1
+\pva *ɣoᵐba
+\vanb 2
+\pncv
+\poc
+\cf °semʷa
+\ps adj
+\div
+\hiw {mmɔ}
+\ltg {mo͡ɔ} ~ {mi͡ɔ}
+\lhi ɣɣɒm
+\vanb 1
+\lyp ɣɔm
+\vanb 1
+\vlw ɣɔm
+\vanb 1/2
+\mtp ɣɔm
+\vanb 1/2
+\lmg
+\vra {rusʊ}
+\vrs {lɔs}
+\msn {sɛŋ͡mʷ}
+\mta ɣopa
+\vanb 2
+\num {sɛŋsɛŋ}
+\drg {sɛŋ͡mʷ}
+\kro
+\olr
+\lkn {sɛŋ}
+\mrl {sɛ͡aŋ}
+\dt 16/Nov/2011
+
+\pnv °ɣorasi
+\psm scrape coconut
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ᶢʟje || je
+\ltg ɣirɛ
+\lhi ɣɪjæh
+\lyp ɣɪjɪs
+\vlw ɣɛjɛh
+\mtp ɣɛjɛh
+\lmg ɣɛrɛs
+\vra ɣaras
+\vrs
+\msn {ɛs}
+\mta ɣoras
+\num
+\drg
+\kro
+\olr {si}
+\lkn {hiː}
+\mrl
+\dt 12/Mar/2010
+
+\pnv °ɣoro
+\psm [adv.] (so as to) surround, cover, obstruct, prevent, protect…
+\pncv *koro
+\sem
+\nt
+\hiw ᶢʟoɣ
+\ltg ɣor
+\lhi ɣɛj
+\vlw ɣɔj
+\mtp ɣɔj
+\lmg ɣœr
+\vra ɣʊr
+\vrs ɣʊr
+\msn ɣɔr
+\mta ɣoro
+\num ɣɔr
+\drg ɣɔr
+\kro ɣɔr
+\olr wɔj
+\lkn (tu)wɔː
+\mrl ɣɔr
+
+\dt 02/Apr/2007
+
+\pnv °ɣoti
+\psm cut w. knife
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw iɣɵt
+\sem wooden knife for cutting pudding
+\ltg ɣo͡ət
+\sem wooden knife for cutting pudding
+\lhi n-βi\ɣɪt
+\sem wooden knife for cutting pudding
+\lyp n-ɣɛ\ɣøt
+\sem wooden knife for cutting pudding
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta ɣot
+\sem prod, cut with point of knife
+\mta iɣot
+\sem wooden knife for cutting pudding
+\num
+\drg mas\ɣʊt
+\sem wooden knife for cutting pudding
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °ɣuli[t]
+\psm [n] skin;  [vt] take skin off
+\pncv
+\poc *kulit
+\sem skin
+\cf °βini[ti]
+\ps
+\div
+\hiw ɣit (opɪ)
+\sem (n) skin
+\ltg ɣəlit (pie)
+\sem (n) skin
+\lhi
+\lyp
+\vlw
+\mtp wul
+\sem [vt] take skin off
+\lmg ɣul
+\sem [vt] take skin off
+\rfc EG2-14b
+\vra
+\vrs wul
+\sem [vt] take skin off
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 25/Jun/2012
+
+\pnv °ɣunu-ᵑgu
+\psm spouse
+\ps
+\div
+\lyp ɣʊnʊ-jʊ
+\nt their partners...
+\vlw ɣini-ŋ
+\mtp i\ɣni-k
+\lmg ɣunu-k
+\rfc EG2-04a
+\vra ɣunu-k
+\vrs ɣünø-k
+\msn ɣunu-k
+\rfc AG5-17a
+\lkn wunu-k
+
+\dt 08/Sep/2011
+
+\pnv °ɣura
+\psm Indian mulberry, Morinda citrifolia
+\pncv
+\poc *kurat
+\cf
+\ps n
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp nʊ-wʊj
+\lmg
+\vra wʊ\wurʊ
+\vrs wʊlʊm
+\nt !?
+\msn
+\mta wura
+\num
+\drg
+\kro
+\olr
+\lkn wu
+\nt !?
+\mrl
+\dt 12/Mar/2010
+
+\pnv °ɣurita
+\psm octopus
+\pncv *kuRita
+\poc *kuRita
+\cf
+\ps n
+\div
+\hiw ᶢʟitə
+\ltg ɣəritə
+\lhi n-wɛjɛt
+\lyp n-wujɛt
+\vlw nɪ-wɪjɪt
+\mtp na-wjɪt
+\lmg wiriʔ
+\vra wiriʔɪ
+\vrs wɪrɪt
+\msn wɪrɪt
+\mta wirita
+\num wirit
+\drg wrɪt
+\kro
+\olr wurɪt
+\lkn wɪrɪt
+\mrl wɪrɛ͡at
+\dt 04/Mar/2010
+
+\pnv °[i,e]te(a)
+\psm see, look
+\pva *itea
+\vanb 1
+\pva *(g)ete
+\vanb 2
+\pva *etea
+\vanb 3
+\pncv
+\poc *kita  ??
+\cf °ilo
+\cf °teⁿde
+\ps vt
+\div
+\hiw
+\ltg itɛ
+\vanb 1
+\lhi ɛt
+\vanb 2
+\lyp ɛt
+\vanb 2
+\vlw ᵑgɛt
+\vanb 2
+\et ?
+\mtp ɛt
+\vanb 2
+\lmg {ʔɛt}
+\vra {ʔɪn}
+\vrs {ɪl}
+\msn {ɪl}
+\mta ete
+\vanb 2
+\sem turn up the face
+\num
+\drg
+\kro
+\olr
+\lkn ætæ
+\vanb 3
+\mrl {mata}
+\dt 10/Jun/2011
+
+\pnv °iɣa
+\psm fish
+\pncv
+\poc *ika(n)
+\cf °masi
+\ps n
+\div
+\hiw ɪɣə
+\ltg iɣə
+\lhi n-ɛ
+\lyp n-i͡ɛ
+\vlw {nʊ-mʊmʊ}
+\mtp n-ɪɣ
+\mtp {nʊ-mʊmʊ}
+\lmg {n-mʊmʊ} || {mɒŋɒt}
+\vra {mɛs}
+\vrs {mɛs}
+\msn ɪɣ
+\mta iɣa
+\num w\ɪɣ
+\drg {maːs}
+\kro {mɛ͡as}
+\olr {mɪs}
+\lkn {mæh}
+\mrl n-ɛ͡aɣ
+\dt 10/Jun/2011
+
+\pnv °ilo
+\psm see
+\pncv
+\poc *qilo(a)
+\cf °[i,e]te(a)
+\cf °teⁿde
+\ps
+\div
+\hiw jo
+\sem < *iloa ?
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs ɪl
+\msn ɪl
+\mta ilo
+\num ɪl
+\sem seek, look for
+\drg ɪl
+\kro ɪl
+\olr
+\lkn
+\mrl (ɛl)ɛ͡al
+\sem seek, look for
+\ark
+\dt 08/Apr/2012
+
+\pnv °[i,u]nu
+\psm drink
+\pva inu
+\vanb 1
+\pva unu
+\vanb 2
+\cf °simi
+\ps
+\div
+\hiw {ni}
+\vanb 1
+\ltg ʉn
+\vanb 2
+\lhi un
+\vanb 2
+\lyp in
+\vanb 1
+\vlw in
+\vanb 1
+\mtp in
+\vanb 1
+\lmg in
+\vanb 1
+\nq really ???
+\lmg {sun}
+\vra in
+\vanb 1
+\vrs {süm}
+\msn {sum}
+\mta un
+\vanb 2
+\mta {ima}
+\mta {sim}
+\sem sip, sup, up
+\num {sim}
+\drg {sim}
+\kro {sim}
+\olr un
+\vanb 2
+\lkn un
+\vanb 2
+\mrl {sim}
+
+\dt 17/Nov/2011
+
+\pnv °iwa
+\psm carry over the shoulder on a stick
+\pncv
+\cf °tatabʷai
+\cf °roβali
+\cf °sasa
+\ps vt
+\div
+\hiw
+\ltg ewə
+\tog əwə
+\lyp
+\lhi
+\mta iwa
+\sem carry over the shoulder on a stick
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 19/Sep/2007
+
+\pnv °laβea-tea
+\psm six
+\ps
+\div
+\hiw jəβəse
+\ltg liβisə
+\lhi lɛβɛtæ
+\mtp lɛβɛtɛ
+\vra liβiʔiɛ
+\vrs lɛβɛtɪ
+\msn lɛβɛtɛ
+\mta laβeatea
+\num tɛ-lɛβɛtɛ
+\drg sɔ-lβitɛ
+\olr lɛβɛtɛ
+\lkn (lɛ-tuwa)
+
+\dt 09/Mar/2010
+
+\pnv °laⁿdo
+\psm name of a chiefly rank
+\ps
+\div
+\lyp wʊ\lan
+\rfc FG4-06a
+\vlw wɛ\lan
+\mtp wɛ\lan
+\mta lano
+\lkn laʧ
+
+\dt 15/Nov/2011
+
+\pnv °laᵑgalaᵑga
+\psm dance, esp. village dance
+\lit rejoice
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lyp laŋlaŋ
+\lhi laklak
+\vlw laŋlaŋ
+\mtp laklak
+\lmg lɒklɒk
+\vra laklaka
+\vrs laklak
+\msn laklak
+\mta lakalaka
+\num laklak
+\drg laklak
+\kro laklak
+\olr laklak
+\lkn laklak
+\mrl
+\dt 06/Mar/2010
+
+\pnv °lala
+\psm (fire) smoulder; burn in a low manner to facilitate cooking
+\pncv
+\poc
+\cf °nono[ti]
+\ps vi
+\div ________
+\hiw jaj
+\nt should be */jajə/ ??
+\ltg {ɣɔw}
+\lhi
+\lyp lal
+\vlw lal
+\mtp lal
+\lmg lɒl
+\lmg {nœn}
+\vra
+\vrs {nʊn}
+\msn
+\mta lala
+\sem burn clear and hot
+\num {rɔŋɔt}
+\drg {nnɔt}
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Sep/2011
+
+\pnv °lalaisi
+\psm sweat
+\pncv
+\poc
+\cf °masiɣit(e,o)
+\nt in brackets = from Tryon 1976: 225
+\ps
+\div
+\hiw jajɪt
+\ltg (lalih)
+\lhi (lalis)
+\lyp (lalis)
+\vlw (lalis)
+\nt notes Tryon
+\mtp
+\lmg (lalæs)
+\vra
+\vrs
+\msn
+\mta (lalais)
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 17/Nov/2011
+
+\pnv °lama
+\psm deep sea, open sea, ocean
+\pncv
+\cf °nawo
+\sem close sea, lagoon
+\ps
+\div
+\hiw jamə
+\ltg lemə
+\lhi
+\vlw n-lam
+\mtp na-lam
+\lmg n-lɒm
+\vra lama
+\sem (n.) deep sea
+\vra lamlama
+\sem (adj.) deep
+\vrs lam
+\msn lam
+\mta lama
+\num lam
+\drg lam
+\kro lam
+\olr lam
+\lkn lam
+\mrl
+\dt 02/Apr/2007
+
+\pnv °lau
+\psm along the beach, at seaside
+\ps
+\div
+\hiw jɔ
+\ltg lɔ
+\mtp a\lɛ
+\lmg lœ
+\vra ?
+\vrs ? 
+\msn lɔ
+\mta lau
+
+\dt 09/Mar/2010
+
+\pnv °lawe
+\psm blenny fish, Ecsenius sp.
+\ps
+\div
+\mtp nɪ-k͡pʷɪt/law
+\vra law
+\msn law
+\mta lawe
+\drg law
+\olr law
+\lkn law
+
+\dt 11/Oct/2006
+
+\pnv °leasi
+\psm change; get changed, get dressed
+\ps vi
+\psm change; translate; replace
+\ps vt
+\div
+\hiw je
+\ltg liɛ
+\lyp lɪs
+\vlw lɛh
+\mtp lɛh
+\vrs liɛs
+\mta leas
+\drg lɪs
+\lkn βa/lɪh
+
+\dt 09/Mar/2010
+
+\pnv °leᵐba
+\psm mud, swampy ground; muddy
+\pncv
+\poc
+\cf °tano
+\sem ground, soil; place of
+\ps
+\div
+\hiw (nə kʷəᶢʟɔŋ) jepə
+\sem (n.) mud, swamp
+\ltg (nə kʷərɛŋ) lɛpə
+\sem (n.) mud, swamp
+\lhi n-læm
+\sem swamp garden for taro
+\lyp lɛm
+\sem (adj.) dirty, muddy
+\vlw n-lɛm
+\sem (adj.) dirty, muddy
+\mtp nɛ-lɛm
+\sem (adj.) dirty, muddy
+\lmg
+\vra
+\vrs
+\msn
+\mta lepa
+\rf Codrington
+\num
+\drg lɛᵐb
+\sem (cultivable piece of) ground; soil
+\rfc BP3-27a
+\sem mud
+\rfc BP4-09b
+\kro lɛm
+\sem (cultivable piece of) ground; soil
+\olr lɛp
+\sem (cultivable piece of) ground; soil
+\lkn
+\mrl
+\ark lep̈a
+\sem soil, earth, ground
+\dt 15/Nov/2011
+
+\pnv °leŋa
+\psm women's dance
+\pncv *leŋa
+\sem sing, dance
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp n-lɛŋ
+\vlw
+\mtp (na-laŋ.βɪn)
+\lmg n-læŋ
+\rfc EP1-41a
+\vra
+\vrs liaŋ
+\msn
+\mta leŋa
+\sem a woman's dance
+\num
+\drg lɛŋ
+\rfc BG3-16b
+\kro lɛŋ
+\olr lɛŋ
+\lkn lɛŋ
+\mrl na-lɛ͡aŋ
+\nt or /na-laŋ/ ?? cf. enreg. MS16-16.   Monika note 'na-liang'.
+\div
+\sdi leŋa
+\dt 17/Nov/2011
+
+\pnv °lera
+\psm get lost
+\pncv
+\poc
+\cf °ᵐbʷaleŋa
+\ps
+\div
+\hiw jeᶢʟə
+\sem be lost, be absent, be out of sight; not be there, be somewhere else
+\ltg lɛrə
+\sem be lost, be absent, be out of sight; disappear
+\lhi
+\lyp
+\vlw
+\mtp lɛj
+\sem be the odd one out, be isolated from a group
+\lmg
+\vra
+\vrs li͡ar
+\sem get lost
+\rfc BP2-40b
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Nov/2011
+
+\pnv °lia
+\psm cave
+\ps
+\div
+\hiw jɵ\jə
+\ltg li\liə
+\lyp ljɛ
+\mtp lɪ
+\lmg n-li
+\rfc EP1-42a
+\vra liɪ
+\vrs lɪ
+\mta lia
+\mrl nɞ-lɞ
+
+\dt 14/Mar/2010
+
+\pnv °liŋaraɣi
+\psm stow <s.th.> in discrete place, hide
+\pncv
+\poc
+\cf °luŋa
+\ps
+\div
+\hiw
+\ltg liŋərɛ
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg liŋrɛɣ
+\sem put away
+\vra i\liŋra
+\rfc BG2-22a
+\vrs liŋɛrɛɣ
+\sem hide; (take+) inside, (come) in
+\msn tɪ\lɪŋrɛ
+\sem hide
+\rfc BG5-24a
+\mta
+\num
+\drg liŋraːɣ
+\sem hide
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Mar/2010
+
+\pnv **liwo
+\psm pour
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg liwə
+\sem pour
+\lhi
+\lyp
+\vlw
+\mtp lɪw
+\lmg
+\vra
+\vrs
+\msn
+\mta liwo
+\sem pour out
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °liwoa
+\psm big
+\ps
+\div
+\hiw jwɵ
+\ltg ləwo
+\lhi lɔwɔ
+\vlw ɣɛ/lwɔ
+\mtp liwɔ
+\lmg lɔwɔ
+\vra luwɔ
+\vrs lüwʊ
+\msn lɔwɔ
+\mta lwoa
+\drg lwɔ
+\kro luwɔ
+
+\dt 09/Mar/2010
+
+\pnv °loᵐb(e,o)
+\psm bend (esp. wood+), fold (s.th. more or less flexible)
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp lɔm
+\sem bend; adjust, improve
+\lmg lœp
+\sem bend (wood+)
+\rfc EG2-27a
+\vra
+\vrs lʊm
+\rfc EG2-27a
+\sem bend, fold
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 25/Jun/2012
+
+\pnv °lolo-ᵐbʷoŋi
+\psm be ignorant; forget
+\lit ‘mind in night’
+\hiw jɵjkɵŋ
+\sem forget
+\ltg (liɔnəkʷəŋ)
+\sem crazy, mad, stupid
+\vlw lɔlᵑg͡bʷɪŋ
+\mtp lɔlk͡pʷʊŋ
+\lmg lɪlk͡pʷøŋ
+\mta lolok͡pʷoŋ
+
+\dt 06/Apr/2007
+
+\pnv °lolo-marani
+\psm be intelligent; remember, understand, know
+\lit ‘mind in daylight’
+\hiw jɵjməᶢʟen
+\ltg lolmərɛn
+\vlw lɔlmɛjɛn
+\mtp lɔlmɛjɛn
+\lmg lɪlmɛrɛn
+\vra lʊlmaran
+\vrs lʊlʊmɛrɛn
+\msn lɔlmɛrɛn
+\mta lolomaran
+\drg llɔmraːn
+\lkn lɔlmaːrɛn
+\mrl lɔlmɛrɛn
+
+\dt 02/Apr/2007
+
+\pnv °lolo-na
+\psm its inside; his/her mind
+\ps
+\div
+\hiw jɔ-nə
+\ltg liɔ-nə
+\lhi lɔ-n
+\vlw n-lɔlɔ-n
+\mtp na-lɔ-n
+\lmg lølø-ɣi
+\vra lɔlɔ-ɣi
+\vrs lɔlɔ-n
+\msn lɔlɔ-n
+\mta lolo-na
+\num na-llɔ-n
+\drg llɔn
+\kro lɔ-n
+\olr lɔlɔ-n
+\lkn lɔlɔ-n
+\mrl nɔ-llɔ-n
+
+\dt 02/Apr/2007
+
+\pnv °lotu
+\psm mashed breadfruit
+\ps
+\div
+\vlw n-lɪt
+\mtp nɪ-lɪt
+\lmg n-løt
+\vrs løt
+\msn lʊt
+\mta lot
+\num lʊt
+\drg lʊt
+\mrl nɞ-lɵt
+
+\dt 11/Oct/2006
+
+\pnv °lumaɣaβi
+\psm young unmarried boy
+\ps
+\div
+\hiw jʉməɣɔβ
+\ltg lʉməɣaβ
+\vlw lʊmɣɛp
+\mtp lʊŋ͡mʷɣɛp
+\msn lʊmɣɛɸ
+\mta lmaɣaβ
+\drg lʊmɣaːβ
+\kro lʊmɣɛ͡aβ
+\mrl lʊmɣɛp
+\sdi lumaˈxafi
+
+\dt 17/Jan/2013
+
+\pnv °luŋa(βaɣi)
+\psm be out of sight, be hidden
+\pncv
+\poc
+\cf °liŋaraɣi
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp lʊŋ/βɛɣ
+\sem hide
+\lmg
+\vra
+\vrs
+\msn
+\mta luŋa
+\sem be out of sight
+\mta luŋaβaɣ
+\sem hide
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °maβatoa
+\psm name of a dance
+\ps
+\div
+\mtp na-maptɔ
+\lmg maβtɔ
+\rfc EP1-41a
+\nq should be /mɒβtɔ/ ??
+\msn maβtɔ
+\mta maβatoa
+\drg maβtɔ
+\lkn maβtɔ
+
+\dt 14/Mar/2010
+
+\pnv °maβora(βora)
+\psm split, broken
+\pncv *mavoRa
+\poc
+\cf
+\ps
+\div
+\hiw {mətəjətajə}
+\ltg {mətələtalə}
+\lhi mwojwɒj
+\lyp mɔwɔjwɔj
+\vlw mɔwɔjwɔj
+\mtp mɔwɔjwɔj
+\lmg mɔwɔrwɔr
+\vra mɔwɔrwɔrɔ
+\vrs mɔwɔrwɔr
+\msn mɔwɔrwɔr
+\mta mawora
+\num mɔmmɔɣɔr
+\drg mɔmɣɔr
+\kro
+\olr mʊɣmʊɣra
+\lkn {manmanrɛɣ}
+\mrl {ŋʷɔŋŋʷɔw}
+\dt 12/Mar/2010
+
+\pnv °maⁿdua
+\psm orphan
+\ps
+\div
+\vlw wɔ/mⁿdʊ
+\mtp wɔ/mⁿdʊ
+\lmg mʊtʊ
+\vrs mʊⁿdʊ
+\mta manua
+\drg mⁿdʊ
+\sem hungry
+\lkn wɪ/maʧʊ
+
+\dt 06/Apr/2007
+
+\pnv °maⁿdu-ᵑgu
+\psm my nose
+\ps
+\div
+\hiw miti-k
+\ltg mət̻ʉ-k
+\mtp ni-mⁿdi-k
+\vra miⁿdi-k
+\vrs møⁿdü-k
+\msn munu-k
+\mta manu-k
+\drg mⁿdu-k
+\lkn maʧɔ-k
+\mrl nɞ-mɞⁿdʉ-k
+
+\dt 06/Apr/2007
+
+\pnv °maɣaβi[si]
+\psm painful; hurt
+\pva °maɣaβi
+\vanb 1
+\pva °maɣaβisi
+\vanb 2
+\pncv
+\cf °[ma]masu
+\ps
+\div
+\mta
+\num maɣɛβ
+\vanb 1
+\num maɛβ
+\vanb 1
+\drg maɣβis
+\drg māwis
+\vanb 2
+\sem hurt
+\drg maɣmaɣβis
+\drg mawmawis
+\vanb 2
+\sem too much
+\kro
+\olr mamaːβis
+\vanb 2
+\lkn {miːrɛŋ}
+\mrl mɛɣɛp
+\vanb 1
+\div
+\dt 10/Jun/2011
+
+\pnv °maɣ[a,e]se-ᵑgu
+\psm myself, on my own
+\ps
+\div
+\ltg maɣi-k
+\mtp mahɣɪ-k
+\lmg masɣɪ-k
+\vrs masɣɪ-k
+\msn masɣɪ-k
+\mta maɣase-k
+\mta maɣese-k
+\num maɣɛsɛ-k
+\drg maɣsɪ-k
+\olr ŋ͡mʷaːsɪ-k
+\lkn ŋ͡mʷahɣɪ-k
+
+\dt 06/Apr/2007
+
+\pnv °maɣatea
+\psm old woman
+\ps
+\div
+\hiw maese
+\lhi matæ
+\lyp maʧɛ
+\rfc FG4-06a
+\mtp maɣtʊ
+\vra maɣʔiɛ
+\vrs maɣtɛ
+\msn maɣtɛ
+\mta maɣatea
+\drg maɣtɛ
+\olr maːtɛ
+\lkn maɣtɛ
+
+\dt 15/Nov/2011
+
+\pnv °ma[ɣ,m]aros[a,ina,aɣi]
+\pva °maɣarosa
+\vanb 1
+\pva °mamarosa
+\vanb 2
+\pva °maɣarosina
+\vanb 3
+\pva °mamarosaɣi
+\vanb 4
+\psm sad, sorry
+\hiw βɔɣ\maməᶢʟɵ
+\vanb 2
+\ltg məɣarhinə
+\vanb 3
+\lhi maɣajsɛn
+\vanb 3
+\lyp mmæjsɪ
+\vanb 4
+\vlw maɣajsɪn
+\vanb 3
+\mtp maɣajsɪn
+\vanb 3
+\lmg maɣarsæn
+\vanb 3
+\vra maɣarsinɪ
+\vanb 3
+\vrs mamarsɛɣ
+\vanb 4
+\msn mamarsɛɣ
+\vanb 4
+\mta maɣarosa
+\vanb 1
+\num maɣʊrʊs
+\vanb 1
+\drg (matnɛrɔβ)
+\kro mamrɔs
+\vanb 2
+\olr mamrɔs
+\vanb 2
+\lkn mamrɔh
+\vanb 2
+\mrl (mɪtɪnarɔp)
+
+\dt 15/Nov/2011
+
+\pnv °maɣo
+\psm k.o. dance performed by young initiated men
+\pncv
+\poc *mako  ?
+\cf °laᵑgalaᵑga
+\ps n
+\div
+\hiw
+\ltg
+\lhi
+\lyp n-ma
+\vlw
+\mtp na-maɣ
+\lmg
+\vra
+\vrs
+\msn
+\mta maɣo
+\num
+\drg
+\kro
+\olr
+\lkn maɣ
+\mrl maɣ
+\rfc BP3-20a
+\mrl ʉt\maɣ
+\dt 10/Mar/2010
+
+\pnv °maɣumaɣui
+\psm work, make effort
+\ps
+\div
+\hiw miɣmiɣi
+\sem hardworking, eager
+\ltg mə(ɣ)mʉɣʉ
+\lhi muɣu
+\vlw muɣumɣu
+\mtp muwumwu
+\msn muwmuwu
+\mta mawmawui
+\drg mumɣu
+\kro muɣmuɣu
+\olr muːmuɣu
+\lkn muɣmuɣu
+
+\dt 17/Sep/2007
+
+\pnv °(ma)-l[a,e]te
+\psm break in two pieces; (with prefix °ma-) broken
+\pva °late
+\vanb 1
+\pva °lete
+\vanb 2
+\pncv
+\ps
+\div _______
+\hiw (mɪ)jɪt
+\vanb 2
+\ltg (mə)lit
+\vanb 2
+\lhi (mɛ)lɛt
+\vanb 2
+\lyp (ma)lat
+\vanb 1
+\vlw (ma)lat
+\vanb 1
+\mtp (ma)lat
+\vanb 1
+\lmg (mɛ)lɛʔ
+\vanb 2
+\vra (mɪ)lɪʔ
+\vanb 2
+\vrs (mɪ)lɪt
+\vanb 2
+\msn (ma)lat
+\vanb 1
+\mta (ma)late
+\vanb 1
+\num (ma)lat
+\vanb 1
+\drg (m)lat
+\vanb 1
+\kro
+\olr
+\lkn
+\mrl (mɛ)lɛt
+\vanb 1
+\dt 14/Oct/2007
+
+\pnv °malaso
+\psm cold
+\pncv
+\pva °malaso
+\vanb 1
+\pva °malasis[i,u]
+\vanb 2
+\poc (?) *malaso
+\sem cold
+\nt in John Lynch
+\ps
+\cf °mamaⁿriⁿri
+\div
+\hiw majətit ~ maetit
+\vanb 2
+\ltg meləhih
+\vanb 2
+\sem cold (adj)
+\ltg məla
+\vanb 1
+\sem cold (n)
+\lyp
+\lhi
+\vrs malas
+\vanb 1
+\mta malaso
+\vanb 1
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl malas
+\vanb 1
+\sem (s.o.) feel cold
+\nt cf. Jap /samui/
+\rfc AF-BP3-23a
+\div
+\dt 27/May/2010
+
+\pnv °°maleᵐba
+\psm sole; footprint
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw məjepə
+\sem footprint
+\ltg məlɛpə
+\sem footprint
+\rfc CG2-09a
+\ltg məlpe
+\sem footprint
+\ltg məlpeɣɛ
+\sem trace, effect, impact
+\rfc FP1-37b
+\lhi
+\lyp
+\vlw
+\mtp na-mlɛm
+\sem footprint
+\mtp na-ᵐbalᵐba-n
+\sem his sole
+\lmg
+\vra
+\vrs {malka-n}
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 19/Sep/2011
+
+\pnv °maliŋisala
+\psm hungry
+\pncv
+\poc
+\cf °maroɣara
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra n-miliŋsal
+\vrs miliŋsal
+\msn miliŋsal
+\mta maliŋsala
+\num miliŋsal
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Nov/2011
+
+\pnv °[ma]maβa
+\psm heavy; (fig.) solemn
+\pncv
+\poc *mapat
+\cf °mamati
+\ps
+\div
+\hiw ˈmaβə
+\ltg ˈmeβə
+\lyp
+\lhi
+\vlw {ⁿdɪw}
+\mtp map
+\sem important, taboo
+\mtp {ⁿdɪw}
+\sem heavy
+\lmg mɒβ
+\vra mamaβa
+\vrs maβ
+\msn mamaɸ
+\mta maβa
+\num
+\drg {mmaːt}
+\kro
+\olr
+\lkn {mɪhɪɣ}
+\mrl
+\div
+\dt 23/Sep/2007
+
+\pnv °[ma]maraɣai
+\psm (Sbj: body) feel shy, feel ashamed
+\lit quiver
+\pncv
+\poc
+\cf °ta-maraɣai
+\ps
+\div
+\hiw {ɪptɣo}
+\ltg {ipməmi}
+\lhi mmajɣæ
+\sem (body) feel ashamed
+\lyp mmajɣɛ
+\sem (body) feel ashamed
+\vlw
+\mtp mamajɣɛ
+\sem (body) feel ashamed
+\lmg
+\vra
+\vrs ia\marɣɛ
+\sem (body) feel ashamed
+\sem shame
+\msn
+\mta maraɣai
+\sem (body) feel ashamed
+\sem tremble, quiver; (body) feel ashamed
+\num
+\drg
+\kro
+\olr
+\lkn maːmaːɣæ
+\sem (body) feel ashamed
+\rfc AF-BP5-11a
+\mrl
+\dt 11/Sep/2011
+
+\pnv °mamaⁿriⁿri
+\psm cold
+\zzzAlphDiv
+\pva °mamariri
+\vanb 1
+\pva °mamaⁿdiⁿdi
+\vanb 2
+\pva °mamaɣiⁿdi
+\vanb 3
+\pncv
+\poc ?*maⁿriⁿri
+\ps adj
+\cf °malaso
+\div
+\hiw {majətit}
+\ltg {meləhih}
+\lhi mamⁿdin
+\vanb 2
+\lyp mamⁿdin
+\vanb 2
+\vlw mamjij
+\vanb 1
+\mtp mɔmjij
+\vanb 1
+\lmg mamwit
+\vanb 3
+\rfc EP1-40b
+\vra mamɣin
+\vanb 3
+\vrs mamɪɣin
+\vanb 3
+\msn
+\mta mamarir
+\vanb 1
+\num mamirir
+\vanb 1
+\drg mamrir
+\vanb 1
+\kro
+\olr
+\lkn {misiŋ}
+\mrl mmɛrir
+\vanb 1
+\rfc AF-BP3-23a
+\sem (s.th.) be cold
+\rfc AF-BP3-23a -- cf. Jap /tsumetai/
+\div
+\dt 15/Nov/2011
+
+\pnv **[ma]masa
+\psm be dry; run out of water; (tide) be low
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ma
+\sem (hands+) dry
+\rfc EP2-10a
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp mamah
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Mar/2010
+
+\pnv °[ma]masu
+\psm painful; hurt
+\pncv
+\ps
+\div
+\cf °maɣaβi[si]
+\hiw mmɔ
+\sem painful; sick
+\ltg mo͡ɔ
+\ltg mi͡ɔ
+\lhi
+\lyp mmɪs
+\vlw mɛmɛh
+\mtp mɛmɛh
+\sem painful, hurt
+\mtp mɛh
+\sem too much
+\vlw mɛmɛh
+\lmg
+\vra mamas
+\vrs mœmœs
+\msn mɔmɔs
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 15/Nov/2011
+
+\pnv °mamat-i
+\psm heavy
+\pncv
+\poc *mamat
+\nt Lexicon p.214
+\cf °[ma]maβa
+\ps adj
+\div
+\drg mmaːt
+\div
+\dt 23/Sep/2007
+
+\pnv °mamau[ɣ]a
+\psm Securinega flexuosa: a tree, Bsl. 'namemiwa'
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw maməjɵ
+\ltg memə
+\lhi
+\lyp
+\vlw
+\mtp nʊ-mʊmʊɣ
+\lmg
+\vra wʊmamuʊ
+\vrs mʊmʊ
+\msn wɔ\mɔmɔ
+\nq right vowels?
+\mta mamaua
+\num
+\drg
+\kro
+\olr
+\lkn mamʊŋ
+\mrl
+\dt 09/Mar/2010
+
+\pnv °mamaRaa[ni]
+\psm light in weight
+\pncv
+\pva °maˈmani
+\vanb 1
+\pva °ˌmamaˈʀaa
+\vanb 2
+\poc *[ma]ʀaqan
+\nt Lexicon p.214
+\cf °m[ʷ]ataᵑgetaᵑge
+\ps adj
+\div _______
+\hiw mmɔn
+\vanb 1
+\ltg miɛn
+\vanb 1
+\lhi mmæn
+\vanb 1
+\lyp mamja
+\vanb 2
+\vlw mamja
+\nt ou /mɔmja/??
+\vanb 2
+\mtp mɔmja
+\vanb 2
+\mta
+\vrs {mɛŋmɛŋ}
+\div
+\dt 15/Nov/2011
+
+\pnv °mana
+\psm supernatural power
+\pncv
+\poc *mana
+\cf
+\ps
+\div
+\hiw manə
+\ltg menə
+\lhi n-man
+\lyp n-man
+\vlw n-man
+\mtp na-man
+\lmg n-mɒn
+\vra
+\vrs man
+\msn man
+\mta mana
+\num man
+\drg
+\kro
+\olr
+\lkn man
+\mrl
+\dt 15/Sep/2011
+
+\pnv °man[i,u]taᵐbu
+\psm Ptilinopus tannensis
+\lit ‘sacred bird’ (?)
+\mtp nɛ-mɛntɛk͡pʷ
+\mta mantap
+\drg maːntaːᵐb
+\lkn mæntap
+
+\dt 06/Apr/2007
+
+\pnv °manoɣa
+\psm (food) done, cooked, ready to eat
+\pncv
+\poc *manoka
+\cf
+\ps adj
+\div
+\hiw mənɔɣə
+\sem cooked food in oven
+\rfc EP2-16a
+\hiw {sɔkʷ}
+\sem cooked
+\ltg {hɔwsə}
+\lhi mnɒ
+\lyp mɔnɔ
+\vlw n-mɔnɔɣ
+\mtp nɛ-mnɔɣ
+\lmg mɔnɔɣ
+\vra mɔnɔɣɔ
+\vrs mɔnɔɣ
+\msn mɔnɔs
+\mta manoɣa
+\num mɔnɔɣ
+\drg mnɔɣ
+\kro
+\olr
+\lkn {haβʊ}
+\mrl manɔw
+\dt 10/Mar/2010
+
+\pnv °maŋi
+\psm wipe (hands+), tradit. using coconut husk fibres
+\pncv
+\poc
+\cf *nuru
+\ps
+\div
+\hiw mɔŋ
+\sem [v] wipe (hands+); [n] coconut husk fibre
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp mɛŋ
+\sem [v] wipe (hands+)
+\mtp nɛ-mɛŋmɛŋ
+\sem [n] towel
+\lmg mɛŋ
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn mæŋ
+\mrl
+\dt 17/Mar/2010
+
+\pnv °maraβu(raβu)
+\psm hazy; blurred
+\pncv *ma-Ravu
+\poc *Rapu(n)
+\sem haze, mist
+\cf
+\ps
+\div
+\hiw məᶢʟɔw
+\sem fuzzy;  gray (sago)
+\rfc EP2-20a
+\ltg mərəwrɔw
+\sem fuzzy
+\ltg mərɔw
+\sem gray (sago)
+\sem haze, mist
+\rfc FG1-36b
+\lhi {wwɔ}
+\lyp mjøpjøp
+\sem fuzzy
+\lyp møjøw
+\sem gray (sago)
+\rfc FG4-15b
+\vlw
+\mtp mɪjɪpjɛp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg mraːβ
+\sem mist
+\rfc BP3-26b
+\drg mraβrʊβ
+\kro
+\olr
+\lkn maraβraβ
+\mrl
+\dt 05/Sep/2011
+
+\pnv °maranaɣa
+\psm village chief
+\ps
+\div
+\hiw maᶢʟənaɣə
+\ltg marənaɣə
+\vlw majanaɣ
+\mtp majanaɣ
+\vra maranaɣa
+\vrs maranaɣ
+\msn maranax
+\mta maranaɣa
+\drg mranɣa
+\olr maranaɣa
+\lkn maranaɣa
+\mrl marnaɣ 
+
+\dt 02/Apr/2007
+
+\pnv °(ma)raŋ(o,u)
+\psm (plant) dry, withered
+\pva *raŋo
+\vanb 1
+\pva *maraŋo
+\vanb 2
+\pva *maraŋu
+\vanb 3
+\pncv
+\poc *(ma)Raŋ(o,i)
+\cf
+\ps adj
+\div
+\hiw ᶢʟeŋʷ
+\vanb 1
+\sem (yam) dry, ready to harvest
+\ltg reŋ
+\vanb 1
+\sem (yam) dry, ready to harvest
+\lhi mɪjæŋ
+\vanb 3
+\sem dry, withered
+\lyp
+\vlw mɛjɛŋ
+\vanb 3
+\sem lazy
+\sem dry, withered
+\mtp mɛjɛŋ
+\vanb 3
+\sem lazy
+\sem dry, withered
+\lmg maraŋ
+\vanb 2
+\sem dry, withered
+\vra maraŋ
+\vanb 2/3
+\sem dry, withered
+\vrs raŋ
+\vanb 1
+\sem (yam, taro) dry
+\vrs mɛrɛŋ
+\vanb 3
+\sem dry, withered
+\sem lazy
+\rfc AF-Q-Vures-36
+\msn maraŋ
+\vanb 2
+\sem dry, withered
+\rf AG5-28b
+\mta maraŋ
+\vanb 3
+\sem lazy
+\num marɛŋ
+\vanb 3
+\sem dry, withered
+\rf Hans
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Nov/2011
+
+\pnv °marau-ᵑgu
+\psm (my) maternal uncle; (my) nephew
+\ps
+\div
+\hiw maᶢʟʉ-k
+\ltg merʉ-k
+\vlw n-mɔju-ŋ
+\mtp mɔju-k
+\vra maru-k
+\vrs marü-k
+\msn marɔu-k
+\mta marau-k
+\drg maru-k
+\lkn maru-k
+
+\dt 16/Sep/2007
+
+\pnv °marawa
+\psm spider; name of a spirit
+\ps
+\div
+\hiw məᶢʟawə
+\ltg mərawə
+\vlw n-majaw
+\mtp na-mjaw
+\vra marawa
+\lmg mɒrɒw
+\vrs maraw
+\msn maraw
+\mta marawa
+\drg mraw
+\kro maraw
+\olr maraw
+\lkn maraw
+
+\dt 02/Apr/2007
+
+\pnv °maraya
+\psm moray, eel
+\pncv *maraya
+\ps n
+\div
+\hiw meᶢʟje
+\ltg məri
+\lhi {n-wʊjah}
+\lyp n-mæjæ
+\vlw n-maja
+\mtp na-mja
+\lmg n-mara
+\rfc EP1-42a
+\vra mɛriɛ
+\vrs marɪ
+\msn mɛrɛ
+\rfc EG1-14a
+\mta marea
+\drg mrɛ
+\kro mɛrɛ
+\olr mɛrɛ
+\lkn marɛ
+\mrl nɛ-mɛrɪ
+
+\dt 15/Mar/2010
+
+\pnv °maraya ᵐbʷoe
+\psm giant moray, Gymnothorax sp.
+\lit ‘eel pig’
+\mtp na-mja k͡pʷɔ
+\vra mɛriɛ k͡pʷʊ
+\vrs marɪ k͡pʷʊ
+\mta marea k͡pʷoe
+\drg mrɛ k͡pʷɔ
+\kro mɛrɛ k͡pʷɔ
+\olr mɛrɛ k͡pʷɔ
+\lkn marɛ k͡pʷɔ
+
+\dt 22/Oct/2007
+
+\pnv °maremare
+\psm hard, strong; stubborn
+\ps
+\div
+\ltg mərmer
+\vlw majmaj
+\mtp majmaj
+\vra marmar
+\mta maremare
+\num (mmartiɣ)
+\drg marmar
+\kro marmar
+\olr majmaj
+\lkn marmar
+\mrl mɛrmɛr
+
+\dt 02/Apr/2007
+
+\pnv °maro
+\psm famine, disaster
+\pncv
+\poc
+\cf °maroɣara
+\sem hunger
+\ps n
+\div
+\hiw meᶢʟ
+\ltg
+\lhi
+\lyp
+\vlw n-maj
+\vlw n-maj/tin
+\sem hungry
+\mtp na-maj
+\lmg
+\vra
+\vrs mar
+\msn
+\mta maro
+\num
+\drg
+\kro
+\olr
+\lkn maː
+\mrl
+\dt 09/Mar/2010
+
+\pnv °maroɣara
+\psm hunger; be hungry
+\lit famine biting
+\pncv
+\poc
+\cf °maliŋisala
+\ps
+\div
+\hiw
+\ltg
+\lhi n-majɣaj
+\lyp n-majɣaj
+\vlw {n-majtit}
+\mtp na-majɣaj
+\lmg n-mɒnɣɒr
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Nov/2011
+
+\pnv °marosi
+\psm want, like
+\ps
+\div
+\hiw {ŋis}
+\ltg {ŋih}
+\lhi nɛ-mjɪs
+\vlw n-mʊjʊs
+\mtp nɛ-mjʊs
+\lmg mørøs
+\vra mʊrʊs
+\vrs mørøs
+\msn mʊrʊs
+\mta maros
+\num mʊrʊs
+\drg mrʊs
+\kro mʊrʊs
+\olr mɪrɪs
+\lkn maɪs
+\mrl mɞrɵs
+
+\dt 10/Jun/2011
+
+\pnv °masi
+\psm fish; (sometimes) bird
+\pncv **mazi
+\poc
+\cf °iɣa
+\ps n
+\div
+\vra mɛs
+\sem fish
+\vrs mɛs
+\sem fish
+\drg maːs
+\sem fish
+\drg maːs
+\sem fish
+\kro mɛ͡as
+\sem fish; bird
+\olr mɪs
+\sem fish; bird
+\lkn mæh
+\sem fish; bird
+\ark m̈at͡si
+\sem fish; bird
+\dt 06/Mar/2010
+
+\pnv °masiɣit(e,o)
+\psm sweat
+\pncv
+\poc
+\cf °lalaisi
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw (lalis)
+\nt notes Tryon
+\mtp mɛhɣɪt
+\lmg
+\vra (mɛsɣiʔɪ)
+\nt j'interprète d'après Tryon 1976:225
+\vrs mɛsɣɪt
+\msn mɛsɣɪt
+\mta
+\num (maswutu-k)
+\nt <Tryon
+\drg
+\kro
+\olr
+\lkn
+\mrl masɣɛ͡at
+\dt 17/Nov/2011
+
+\pnv °mataβa(si)
+\psm morning
+\ps
+\div
+\hiw mətaβə
+\ltg mətaβə
+\lhi matap
+\vlw mtap
+\mtp lɛ-mtap
+\lmg mɒʔɒβ
+\vra maʔaβ
+\nt probably /maʔaβa/
+\msn mataɸ
+\mta mataβa
+\olr matβas
+\lkn matpæh
+
+\dt 03/Mar/2009
+
+\pnv °mate-a
+\psm death; burial
+\pncv
+\ps
+\div
+\hiw məse
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp na-mtɛ
+\lmg mæʔæ
+\vra
+\vrs matɪ
+\msn
+\mta matea
+\num
+\drg mtɛ
+\sem funeral ceremonies
+\nt AF-BP3-34b
+\kro
+\olr
+\lkn
+\mrl na-matɪ
+\nt Marie Durand
+\div
+\dt 22/Sep/2011
+
+\pnv °matila
+\psm in vain
+\pncv
+\poc
+\cf
+\ps postv
+\div
+\hiw {ta\jɵj}
+\nt check
+\ltg {ləl}
+\lhi {llɪɣɛ}
+\lyp {lɪlɪɣɛ}
+\vlw {lɪlɪɣɛ}
+\mtp {lɪlɪɣɛ}
+\lmg {lɪɣɛ}
+\vra {lɪɣɛ}
+\vrs matɪl
+\msn mɪtɪl
+\mta matila
+\num
+\drg mtɪl
+\kro
+\olr mɪtɪl
+\lkn masɪl
+\nt AF-BG5-17b
+\mrl
+\dt 29/Jul/2009
+
+\pnv °matua
+\psm full-grown, ripe, ready to harvest
+\pncv
+\sem (1) ready to harvest; (2) big
+\hiw ta\məso
+\sem old man, old
+\et < *qata-matua “ripe person”
+\ltg te\məto
+\sem old man, old
+\et < *qata-matua “ripe person”
+\lhi
+\vlw
+\mtp
+\lmg muʔu
+\vra muʔuʊ
+\vrs
+\msn
+\mta matua
+\num
+\drg
+\kro
+\olr
+\lkn matʊ
+\sem ripe; (moon) full
+\rfc BG5-23a
+\mrl
+\dt 19/Sep/2011
+
+\pnv °mat[u(ɣ)i,ou]
+\pva °matui
+\vanb 1
+\pva °matiɣi
+\vanb 2
+\pva °matou
+\vanb 3
+\psm dry coconut, coconut tree
+\ps
+\div
+\hiw mʉtʉ
+\vanb 1
+\ltg mətʉ
+\vanb 1
+\lhi miti
+\vanb 2
+\lyp miʧi
+\vanb 2
+\vlw n-mitiɣ
+\vanb 2
+\mtp na-mtiɣ
+\vanb 2
+\lmg n-miʔiɣ
+\vanb 2
+\vra miʔiɣ
+\vanb 2
+\vrs mʊtʊ
+\vanb 3
+\msn mʊtʊ
+\vanb 3
+\mta matiɣ
+\vanb 2
+\num mutu
+\vanb 1/3
+\drg mtʊ
+\vanb 3
+\olr mutu
+\vanb 1
+\lkn matu
+\vanb 1
+\mrl na-matʊ
+\vanb 3
+\mae matou
+\vanb 3
+
+\dt 20/Nov/2011
+
+\pnv °matu[ɣ]itu[ɣ]i
+\psm Areca catechu
+\ps
+\div
+\mtp nɔ-wɔ/mtiɣtiɣ
+\lmg ɣa/miʔiɣʔiɣ
+\vra wʊɣa/miʔiɣʔiɣ
+\drg wa/mtutu
+\kro mututu
+\lkn matutu
+\mrl mɛtiɣtiɣ
+
+\dt 11/Oct/2006
+
+\pnv °maul(i,u)
+\psm take a long time
+\pncv
+\ps
+\div
+\hiw {pəᶢʟɔ}
+\ltg {pərɔ}
+\lhi mul
+\lyp mul
+\vlw {misin}
+\mtp {misin} ~ {minis}
+\lmg {misin}
+\vra {misin}
+\vrs møül
+\msn
+\mta maul
+\num {tta}
+\drg mumul
+\kro
+\olr
+\lkn maul
+\mrl
+\div
+\dt 15/Nov/2011
+
+\pnv °[m,β]anaɣo
+\psm steal
+\pncv
+\poc *panako
+\cf °ᵐbalu
+\ps
+\div
+\hiw məneɣ
+\ltg məneɣ
+\ltg βəneɣ
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 03/Dec/2007
+
+\pnv °mea
+\psm Bixa orellana, plant used for its red dye
+\pncv
+\poc *meRaq
+\cf °memea
+\ps n
+\div
+\hiw mje
+\ltg mi
+\lhi
+\lyp
+\vlw
+\mtp nɛ-mɛ
+\lmg
+\vra
+\vrs mɪ
+\msn
+\mta mea
+\num
+\drg mɛ
+\kro
+\olr
+\lkn mɛ
+\mrl
+\dt 05/Mar/2010
+
+\pnv °meⁿd[i,u]meⁿd[i,u]
+\psm smooth, clean
+\cf °wasawasa
+\ps
+\div
+\lmg mɪtmɪt
+\vra mɪnmɪn
+\mta menmen
+
+\dt 09/Mar/2010
+
+\pnv °memea
+\psm red
+\pncv
+\poc *meRaq
+\cf °mea
+\ps n
+\div
+\hiw mje
+\ltg məmi
+\lhi ɛmmæ || {ləwlaw}
+\lyp {lawlaw}
+\vlw {n-lawlaw}
+\mtp {na-lawlaw}
+\lmg {lawlaw}
+\vra mimiɛ
+\vrs mamɪ
+\msn mɛmɛ
+\mta mea
+\num mmɛ
+\drg mmɛ
+\kro
+\olr mɛmɛ
+\lkn mɛmɛ
+\mrl mmɪ
+\dt 05/Mar/2010
+
+\pnv °menaro
+\psm clever, smart
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp mɪnaj
+\lmg
+\vra
+\vrs
+\msn
+\mta menaro
+\sem skilful, clever
+\num
+\drg mnar
+\kro manar
+\olr
+\lkn
+\mrl
+\dt 15/Nov/2011
+
+\pnv °mo[ɣ]u-ᵑgu
+\psm General Possessive Classifier
+\pva °mou-ᵑgu
+\pva °moɣu-ᵑgu
+\ps
+\div
+\hiw
+\ltg
+\lhi mu-k
+\lyp n-ŋ͡mʷu-k
+\vlw n-mi-ᵑg-is
+\mtp na-mu-k
+\sem Classifier for temporary or inessential possession
+\lmg mu-k
+\lmg muɣu-k
+\vra mu-k
+\vrs møɣü-k
+\msn muɣu-k
+\mta ŋ͡mʷo-k
+\num mu-k
+\drg mu-k
+\kro mu-k
+\olr mu-k
+\lkn mɔ-k
+\mrl mʉ-k
+
+\dt 16/Mar/2009
+
+\pnv °mul[a,e][ŋ]i
+\psm too; again
+\pncv
+\pva *mulaŋi
+\vanb 1
+\pva *muleŋi
+\vanb 2
+\pva *mulai
+\vanb 3
+\pva *mulei
+\vanb 4
+\ps
+\div
+\hiw {wujɔɣ}
+\ltg {βəriɛ}
+\lhi {βajɣɛ}
+\lyp mɪlɪ
+\vanb 4
+\vlw {sɛ}
+\mtp {sɛ}
+\lmg {ɛrɛk}
+\vra {rɛk}
+\vrs ᵐbilɪŋ
+\vanb 2
+\msn mɪlɪŋ
+\vanb 2
+\mta mulaŋ
+\vanb 1
+\num mɪlɪ
+\vanb 4
+\drg mlɪ
+\vanb 4
+\kro mala
+\vanb 3
+\olr mula
+\vanb 3
+\lkn {lɪh}
+\mrl mila
+\vanb 3
+\div
+\dt 03/Dec/2007
+
+\pnv °muro
+\psm semen
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw mʉᶢʟə
+\rfc EP2-09a
+\hiw mᶢʟɵ/tɵᶢʟ
+\sem (vulg) liar, bullshit
+\rfc EP2-20b
+\ltg mʉrə
+\lhi
+\lyp n-mʊj
+\vlw
+\mtp nʊ-mʊj
+\sem semen; (slg) lazy+
+\mtp ni-mjɔ-
+\sem (slg) stupidity
+\lmg {ŋɛr}
+\vra {ŋar}
+\vrs {ŋɛ}
+\msn
+\mta
+\num
+\drg na-mru-k
+\drg {ŋa}
+\kro
+\olr
+\lkn {æŋæ}
+\mrl
+\dt 10/Mar/2010
+
+\pnv °muwia
+\psm moon, month
+\pncv
+\poc
+\cf °βula
+\ps n
+\div
+\hiw mowɪ
+\ltg (məɣaɣə)
+\lhi muwɛ
+\lyp muwi͡ɛ
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °m[ʷ]aᵐb[ʷ]e
+\psm Tahitian chestnut, Inocarpus edulis/fagifer
+\pncv *mwabwe
+\poc
+\cf
+\ps n
+\div
+\hiw mek
+\ltg mekʷ
+\lhi
+\lyp ŋ͡mʷaŋ
+\rfc FG4-07b
+\vlw
+\mtp na-ŋ͡mʷak
+\lmg
+\vra ŋ͡mʷak
+\vrs ŋ͡mʷi͡ak
+\msn
+\mta ŋ͡mʷake
+\num
+\drg mak
+\kro
+\olr
+\lkn mæk
+\mrl
+\dt 05/Mar/2010
+
+\pnv °m[ʷ]aᵐb[ʷ]u
+\psm put down, lay s.th.
+\ps
+\div
+\hiw mɔk
+\ltg mɔk
+\lhi
+\vlw mʊŋ
+\mtp ŋ͡mʷʊk
+\lmg mœp
+\vra mɔm
+\vrs mɛm
+\msn mɔp
+\mta map
+\mrl mɔm
+
+\dt 15/Nov/2011
+
+\pnv °m[ʷ]aᵐb[ʷ]u[saɣi]
+\psm breathe; take rest
+\pva °mʷaᵐbʷusaɣi
+\vanb 1
+\pva °maᵐbʷusaɣi
+\vanb 2
+\pva °mʷaᵐbusaɣi
+\vanb 3
+\pva °maᵐbusaɣi
+\vanb 4
+\pva °maᵐbu
+\vanb 5
+\pncv *maᵐbu-si
+\ps
+\div
+\hiw {mənawə}
+\ltg məkʷhɛ
+\vanb 2
+\lhi mɔksæ
+\vanb 2
+\lyp ŋ͡mʷɔŋsɪ
+\nt noté ici /ŋ͡mʷoŋsɛ/, je corrige d'après FG4-05a (+satisfaisant d'ailleurs)
+\vanb 1
+\mtp ŋ͡mʷʊkhɛɣ
+\vanb 1
+\lmg mœpsɪ
+\vanb 4
+\vra mɔmsɛ
+\vanb 4
+\vrs mɛmsɛɣ
+\vanb 4
+\msn mɔpsɛ
+\vanb 4
+\mta ŋ͡mʷapsaɣ
+\vanb 3
+\num mamsɛŋ
+\nt cf. my article
+\drg maːᵐbsɪɣ
+\vanb 4
+\kro mɛmsɛ͡aɣ
+\vanb 4
+\olr mɪpsaː
+\vanb 4
+\lkn mahpæɣ
+\vanb 4
+\mrl mɔmsa
+\vanb 4
+\nt in Monika's recording MS15-15, @ 01'05"
+\mrl mɔm
+\vanb 5
+
+\dt 17/Jan/2013
+
+\pnv °m[ʷ]asawo[i]
+\psm empty space, place; moment
+\vanb 1
+\sem garden
+\vanb 2
+\pncv *masawa
+\sem space, sky, open sea
+\lhi n-mɒsɒ
+\vanb 1
+\lyp n-mœsœ
+\vanb 1
+\vlw n-mahɪ
+\vanb 1
+\mtp mahɪ
+\vanb 1
+\lmg mɒsø-ɣi
+\vanb 1
+\vrs masawrɛ
+\vanb 1
+\msn masawrɛ
+\vanb 1
+\mta masaoi
+\vanb 1
+\drg ŋ͡mʷsa
+\vanb 2
+\kro ŋ͡mʷas
+\vanb 2
+\olr ŋ͡mʷɪsŋ͡mʷɪs
+\vanb 2
+\lkn ŋ͡mʷɪhŋ͡mʷɪh
+\vanb 2
+\mrl mɞsɞ
+\vanb 1
+
+\dt 16/Nov/2011
+
+\pnv °m[ʷ]ataᵑgetaᵑge
+\psm light in weight
+\pncv
+\poc
+\cf °mamaRaa[ni]
+\ps
+\div
+\mta mataketake
+\nt maaeae
+\rf after Codrington
+\num ŋ͡mʷataktak
+\drg βa-ŋ͡mʷtaktak
+\kro ŋ͡mʷataktak
+\rf Tryon 1976:385
+\olr ŋ͡mʷataktak
+\lkn ŋ͡mʷætæktæk
+\mrl nu-ŋʷɪtɛktɛ͡ak
+\dt 18/Nov/2011
+
+\pnv °m(ʷ)atasi
+\psm (blade+) sharp
+\pva °matasi
+\vanb 1
+\pva °mʷatasi
+\vanb 2
+\pncv
+\poc
+\cf °sVserV
+\ps adj
+\div _____________
+\hiw {wuj}
+\ltg mətɛ
+\vanb 1
+\lhi ŋʷ(ə)tæh
+\vanb 2
+\lyp {ŋ͡mʷɪnɪs}
+\vlw {n-hɛj}
+\mtp {nɛ-hɛj}
+\lmg ŋ͡mʷɛʔɛs
+\vanb 2
+\vra maʔas
+\vanb 1
+\vrs {ɣɛɣɛn}
+\msn
+\mta {tup}
+\num {ssɛr}
+\drg {ssɛr}
+\kro
+\olr matastas
+\vanb 1
+\lkn (mæhɛʧ)
+\et < *masaⁿdi < *maⁿdasi 
+\mrl {ɣɣɛn}
+\dt 22/Jul/2009
+
+\pnv °mʷaᵑgaru
+\psm flying-fish, Exocetus
+\pva
+\poc *magaRut
+\sem Exocoetidae, flying-fish
+\nt réf = Osmond on fish, p.23
+\ps
+\div
+\hiw ŋʷɔkɔᶢʟ
+\ltg ŋʷəkɔr
+\lyp n-ŋ͡mʷɛkɛj
+\vlw n-ŋ͡mʷɛᵑgɛj
+\mtp na-ŋ͡mʷkɛj
+\vrs ŋ͡mʷœkœr
+\mta makaru
+\drg ŋ͡mʷkaːr
+\kro ŋ͡mʷɛkɛ͡ar
+\olr ŋ͡mʷɔkaj
+\mrl ŋʷɔkɔr
+
+\dt 24/Mar/2010
+
+\pnv °mʷai
+\psm sea snake, Laticauda semifasciata
+\ps
+\div
+\lhi n-ŋʷæ
+\mtp nɛ-ŋ͡mʷɛ
+\lmg n-ŋ͡mʷɛ
+\vra ŋ͡mʷɛ
+\vrs ŋ͡mʷɛ
+\msn ŋ͡mʷɛ
+\mta ŋ͡mʷai
+\num ŋ͡mʷɛ
+\drg wɔ/ŋ͡mʷa
+\kro ŋ͡mʷa
+\olr ŋ͡mʷa
+\lkn ŋ͡mʷæ
+
+\dt 03/Dec/2007
+
+\pnv °mʷalaᵑga
+\psm Crinum asiaticum
+\pncv
+\poc *mwalak (?)
+\cf
+\ps n
+\div
+\hiw ŋʷəjakə
+\rfc EG3-03a
+\hiw {mɔe}
+\sem similar species??
+\ltg ŋʷəlakə
+\lhi
+\lyp
+\vlw
+\mtp na-ŋ͡mʷlak
+\lmg
+\vra
+\vrs
+\msn ŋ͡mʷalak
+\mta {pirɣoβ}
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °mʷalamʷala
+\psm young unmarried girl
+\pncv *mʷala(mʷala)
+\sem naked (?)
+\hiw ŋʷəjəŋʷajə
+\ltg ŋʷələŋʷelə
+\vlw ŋ͡mʷalŋ͡mʷal
+\mtp ŋ͡mʷalŋ͡mʷal
+\vrs ŋ͡mʷalŋ͡mʷal
+\msn ŋ͡mʷalŋ͡mʷal
+\mta ŋ͡mʷalaŋ͡mʷala
+\num ŋ͡mʷalaŋ͡mʷal
+\drg ŋ͡mʷalŋ͡mʷal
+\kro ŋ͡mʷalŋ͡mʷal
+\olr ŋ͡mʷalŋ͡mʷal
+\lkn ŋ͡mʷalŋ͡mʷal
+\mrl ŋʷalŋʷal
+
+\dt 02/Apr/2007
+
+\pnv °mʷali[ɣ]u
+\psm Polyscias scutellaria, k.o. edible leaf
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ŋiji
+\ltg ŋəli
+\lhi
+\lyp
+\vlw n-ŋ͡mʷiliɣ
+\mtp na-ŋ͡mʷliɣ
+\lmg n-ŋ͡mʷilili
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\ark maliu
+\dt 29/Aug/2009
+
+\pnv °mʷara[ɣi]
+\psm Chalcophaps indica, k.o. dove
+\pva °mʷara
+\vanb 1
+\pva °mʷaraɣi
+\vanb 2
+\ps
+\div
+\mtp na-ŋ͡mʷaj
+\vanb 1
+\lmg ŋ͡mʷɛrɛɣ
+\vanb 2
+\vra ŋ͡mʷaraɣ
+\vanb 2
+\vrs ŋ͡mʷɛrɛɣ
+\vanb 2
+\mta ŋ͡mʷara
+\vanb 1
+\drg wɔ\ŋ͡mʷraːɣ
+\vanb 2
+\lkn ŋ͡mʷæræɣ
+\vanb 2
+
+\dt 07/Mar/2010
+
+\pnv °mʷaririu
+\psm Acacia simplicifolia
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw ŋʷəᶢʟiᶢʟi
+\ltg ŋʷurəri
+\lhi
+\lyp
+\vlw
+\mtp na-ŋ͡mʷjiji
+\lmg
+\vra ŋ͡mʷiririɪ
+\vrs ŋ͡mʷɛriri
+\msn ŋ͡mʷiriri
+\mta
+\num
+\drg {sɪw}
+\kro
+\olr
+\lkn
+\mrl
+\ark βi-maɾi
+\dt 15/Nov/2011
+
+\pnv °mʷasa
+\psm goatfish, Mullidae spp.
+\poc *mʷacasi
+\sem goatfish
+\cf °taŋitaŋi
+\hiw ŋʷasə
+\rfc EG3-02b
+\ltg ŋʷehə
+\lhi
+\lyp n-ŋ͡mʷas
+\mtp na-ŋ͡mʷah
+\lmg ŋ͡mʷɒs
+\rfc EP1-42a
+\vra ŋ͡mʷasa
+\vrs ŋ͡mʷas
+\mta ŋ͡mʷasa
+\olr ŋ͡mʷas
+\lkn ŋ͡mʷah
+
+\dt 10/Sep/2011
+
+\pnv °mʷasu
+\psm (v.) fall
+\pncv
+\ps
+\div
+\cf °soβi
+\hiw {so}
+\ltg {ho}
+\lyp {sœ}
+\lhi
+\vlw
+\mtp {sisɣɔj}
+\mtp {k͡pʷɪsⁿdi}
+\mtp nɛ-ŋ͡mʷɛs
+\sem (n.) abundance of fruit
+\lmg ŋ͡mʷɛs
+\sem (v.) fall
+\vra ŋ͡mʷɛs
+\sem (v.) fall
+\vrs ŋ͡mʷœs
+\sem (v.) fall
+\msn ŋ͡mʷɔs
+\sem (v.) fall
+\mta ŋ͡mʷas(u)
+\sem (v.) fall; (n.) abundance of fruit
+\num {so}
+\drg {sʊβ}
+\kro
+\olr
+\lkn {sɪβ}
+\mrl {siɞ}
+\ark {ʧoβi}
+\div
+\dt 10/Jun/2011
+
+\pnv °mʷatiᵑga
+\psm purple swamphen, Porphyrio porphyrio
+\ps n
+\div
+\lyp ŋ͡mʷiʧjɛŋ
+\mtp {nɛ-ᵐbɛl}
+\lmg ŋ͡mʷæʔæk
+\vra ŋ͡mʷiʔikɪ
+\vrs ŋ͡mʷatɪk
+\mta ŋ͡mʷatika
+\drg ŋ͡mʷsɪk
+\lkn ŋ͡mʷasɪk
+
+\dt 09/Mar/2010
+
+\pnv °mʷele
+\psm cycad palm, Cycas circinnalis
+\pncv *mwele
+\poc
+\cf
+\ps n
+\div
+\hiw ŋʷɪj
+\ltg {pəpɛ}
+\lhi
+\lyp
+\vlw
+\mtp nɛ-ŋ͡mʷɛl
+\lmg n-ŋ͡mʷɛl
+\vra ŋ͡mʷɪl
+\vrs ŋ͡mʷɪl
+\msn ŋ͡mʷɛl
+\mta ŋ͡mʷele
+\num ŋ͡mʷɛl
+\drg ŋ͡mʷɛl
+\kro ŋ͡mʷɛl
+\olr ŋ͡mʷɛl
+\lkn ŋ͡mʷɛl
+\mrl nɪ-ŋʷɪl
+\ark βi-mele
+\dt 06/Mar/2010
+
+\pnv °mʷele-ⁿdolu
+\psm hundred
+\lit ‘a whole Cycas palm’
+\lhi ŋʷɛlⁿdɪl
+\mtp ŋ͡mʷɛlⁿdɪl
+\lmg ŋ͡mʷɛltøl
+\vra ŋ͡mʷɛlⁿdʊl
+\vrs ŋ͡mʷølⁿdøl
+\msn ŋ͡mʷɛlnʊl
+\mta ŋ͡mʷelnol
+\num ŋ͡mʷɛlⁿdʊl
+\drg sɔ-ŋ͡mʷlɛⁿdʊl
+\olr ŋ͡mʷɪlɪʧʊl
+\lkn ŋ͡mʷɪlɪʧɪl
+
+\dt 17/Mar/2009
+
+\pnv °mʷera
+\psm child
+\pncv *mʷera
+\sem child
+\ps n
+\div
+\hiw ŋʷaᶢʟə
+\rfc FP3-38a
+\sem baby
+\ltg ŋʷerə
+\sem baby
+\ltg hə\ŋʷərə
+\sem [Pl] people, those who
+\lhi sus\ŋʷæj
+\sem child
+\lyp n-ʧi\ŋ͡mʷɛj
+\sem someone
+\rfc FG4-12a
+\vlw nɛt\ŋ͡mʷɛj
+\sem child
+\mtp nɪt\ŋ͡mʷɛj
+\et <*natu-mʷera
+\sem child
+\mtp ŋ͡mʷɛj ~ mɛj
+\sem dummy noun: the one who/which; relativiser
+\vra ŋ͡mʷɛrŋ͡mʷɛrɛ
+\sem child
+\vrs ŋ͡mʷirŋ͡mʷiar
+\sem child
+\msn ŋ͡mʷɛrŋ͡mʷɛr
+\sem child
+\mta rɛrɛ\ŋ͡mʷera
+\sem children
+\num (ŋ͡mʷaŋŋ͡mʷari)
+\drg ŋ͡mʷɛrŋ͡mʷɛr
+\kro rarŋ͡mʷɛr
+\sem those two
+\lkn (miːni)
+\mrl nʊ-lʊ\ŋʷɪr
+\ark maɾa
+\sem child (+adj 'small'); person from (+place)
+
+\dt 24/Mar/2010
+
+\pnv °mʷoa[ɣa]
+\psm before, coming first
+\pncv
+\poc
+\cf °towotowo
+\ps
+\div
+\hiw ŋʷo
+\hiw {tʊwtʊw}
+\ltg {təwtʊw}
+\lhi ŋʷa
+\et < *a mʷoˈa-ɣa
+\lyp ŋ͡mʷa
+\et < *a mʷoˈa-ɣa
+\vlw a\ŋ͡mʷaɣ
+\et < *a mʷoˈa-ɣa
+\mtp a\ŋ͡mʷaɣ
+\et < *a mʷoˈa-ɣa
+\lmg {ʔœwʔœw}
+\vra {ʔʊwʔʊw}
+\vrs ŋ͡mʷʊ
+\msn tur\ŋ͡mʷɔ
+\mta a\ŋ͡mʷoa
+\num a\ŋ͡mʷɔ
+\drg ŋ͡mʷɔ
+\kro ŋ͡mʷɔ
+\olr ŋ͡mʷɔ
+\lkn ŋ͡mʷɔ
+\mrl a\ŋ͡mʷɔ
+\dt 20/Nov/2011
+
+\pnv °mʷoli
+\psm Citrus sp.
+\pncv
+\poc *molis
+\cf
+\ps n
+\div
+\hiw ŋɵj
+\rfc EP2-15a
+\ltg ŋəl
+\lhi
+\lyp
+\vlw
+\mtp nɪ-ŋ͡mʷɪl
+\mtp nʊ-wʊ\ŋ͡mʷɪl
+\lmg ŋ͡mʷøl
+\vra ŋ͡mʷʊl
+\vrs ŋ͡mʷøl
+\msn ŋ͡mʷʊl
+\mta ŋ͡mʷol
+\num
+\drg
+\kro
+\olr
+\lkn ŋ͡mʷɪl
+\mrl
+\ark moli
+\dt 10/Mar/2010
+
+\pnv °mʷotari
+\psm highly-ranked woman
+\pncv
+\poc
+\cf °woɣut[i,u]
+\ps n
+\div
+\hiw ŋʷətɔᶢʟ
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp jɔ\ŋ͡mʷɔtɛj
+\lmg
+\vra
+\vrs ŋ͡mʷɛtɛr
+\msn
+\mta ŋ͡mʷotar
+\sem title of rank in women's suqe
+\num
+\drg
+\kro
+\olr
+\lkn ŋ͡mʷɔtæː
+\nt noté /ŋ͡mʷɔtɛː/, je corrige
+\mrl
+\dt 15/Sep/2011
+
+\pnv °[na]ɣai
+\psm proclitic for Stative and Future
+\lit (n.) thing
+\pncv
+\ps
+\div
+\hiw ne
+\sem Stative
+\ltg na
+\sem Stative
+\lyp nɣɛ
+\sem Stative
+\lhi nɛ
+\sem Stative
+\vlw n-
+\sem Stative
+\mtp nɛ-
+\sem Stative
+\mtp na-ɣɛ
+\sem be likely to (Future)
+\lmg [n]ɣɛ
+\sem Stative (+ Future)
+\vra ɣa
+\sem Stative
+\vrs ɣV-
+\sem Stative, Future
+\msn ɣa
+\sem Stative, Future
+\mta {we}
+\sem Stative
+\num {βɛ}
+\sem Stative
+\drg {βa-}
+\sem Stative
+\kro {β-}
+\sem Stative, Future
+\olr ɣa
+\sem Stative, Future
+\lkn ɣa
+\sem Stative, Future
+\mrl {nu-}
+\dt 10/Mar/2008
+
+\pnv °nanara
+\psm Pterocarpus indicus
+\poc PEOc *naRa
+\ps n
+\div
+\hiw naᶢʟə
+\ltg ni͡erə
+\vlw na-naj
+\mtp na-naj
+\vra nanara
+\vrs nanar
+\msn nanar
+\mta nanara
+\drg nnar
+\lkn nanaː
+
+\dt 09/Mar/2010
+
+\pnv °nanasu
+\psm sweet, tasty, delicious
+\pncv
+\poc
+\cf °[ⁿde]ⁿdere[si]
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp nnøs
+\vlw nɔnɔh
+\mtp nɛnɛh
+\lmg nønøs
+\rfc EP1-41b
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 14/Mar/2010
+
+\pnv °nanoRa
+\psm yesterday
+\pva *nanora
+\vanb 1
+\pva *na-nanora
+\vanb 2
+\pva *nanoa
+\vanb 3
+\pva *na-nanoa
+\vanb 4
+\pncv *nanova
+\poc *na-ñoʀap
+\ps adv
+\div __________
+\hiw nənɔᶢʟə
+\vanb 1
+\ltg nənɔrə
+\vanb 1
+\lhi nɒnnɒj
+\vanb 2
+\lyp ɛnɔj
+\vanb 1
+\vlw
+\mtp a.nɔj
+\vanb 1
+\lmg lɪ.nɔr
+\vanb 1
+\vra nɔnɔrɔ
+\vanb 1
+\vrs nɔnɔr
+\vanb 1
+\msn lɛ.nɔr
+\vanb 1
+\mta a.nanora
+\vanb 1
+\num nannɔ
+\vanb 4
+\drg nannɔ
+\vanb 4
+\kro
+\olr nanɔnɔ
+\vanb 4
+\lkn nɔnɔ
+\vanb 3
+\mrl nananɔ
+\vanb 4
+\div
+\dt 03/Mar/2010
+
+\pnv °natu
+\psm Burckella obovata
+\pncv
+\poc *ñatuq
+\cf
+\ps n
+\div
+\hiw nɔt
+\ltg nɔt
+\lhi
+\lyp
+\vlw
+\mtp nɛ-nɛt
+\lmg
+\vra nɛʔ
+\vrs nœt
+\msn wɔ\nɔt
+\rfc EG1-14b
+\mta natu
+\num
+\drg wa\nʊt
+\kro
+\olr
+\lkn natɪ
+\mrl
+\ark βi-naru
+\dt 06/Mar/2010
+
+\pnv °nau
+\psm 1st sg free pronoun
+\pncv *nau
+\ps
+\div
+\hiw nɔkə
+\ltg nɔkə
+\lyp nø
+\lhi nɒ
+\vlw nɛ
+\mtp nɔ
+\lmg nœ
+\vra nɔ
+\vrs nɔ
+\vrs na
+\msn na
+\mta nau
+\num na
+\drg na
+\kro na
+\olr na
+\lkn na
+\mrl nɔ
+
+\dt 03/Dec/2007
+
+\pnv °niᵑgo
+\psm 2nd sg free pronoun
+\pncv *niᵑgo
+\ps
+\div
+\hiw ikə
+\ltg nikə
+\lhi nɛk
+\vlw nɪŋ
+\mtp nɪk
+\lmg næk
+\vra nikɪ
+\vrs nɪk
+\msn nɪk
+\mta niko
+\num nɪk
+\drg nɪk
+\kro nɪk
+\olr nɪk
+\lkn nɪk
+\mrl nɛ͡ak
+
+\dt 03/Dec/2007
+
+\pnv °nono[ta]
+\psm (fire) burn down, burn in a low manner to facilitate cooking
+\pva °nono
+\vanb 1
+\pva °nonota
+\vanb 2
+\pncv
+\poc
+\cf °lala
+\ps vi
+\div ________
+\hiw {jaj}
+\ltg {ɣɔw}
+\lhi
+\lyp {lal}
+\vlw {lal}
+\mtp mat\nɔn
+\vanb 1
+\mtp {lal}
+\lmg {lɒl}
+\lmg nœn
+\vanb 1
+\vra
+\vrs nʊn
+\vanb 1
+\msn
+\mta
+\num {rɔŋɔt}
+\drg nnɔt
+\vanb 2
+\kro
+\olr
+\lkn
+\mrl
+\dt 07/Mar/2010
+
+\pnv °°nunu
+\psm shadow, reflection, silhouette
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg nʉne
+\rfc FP1-33a
+\lhi
+\lyp
+\vlw
+\mtp ni-nini
+\lmg
+\vra
+\vrs {tamtiɪ-k}
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 19/Sep/2011
+
+\pnv °nuru
+\psm fibre in the coconut husk (and/or) strainer made of coconut
+frond sheath
+\pncv *Runu
+\poc *Runut
+\sem sheath around base of coconut frond, used as strainer
+\cf
+\ps
+\div
+\hiw nniᶢʟ
+\sem sheath around base of coconut frond, used as strainer
+\ltg n' ir
+\sem sheath around base of coconut frond, used as strainer
+\lhi
+\lyp n' ʉj
+\sem sheath around base of coconut frond, used as strainer
+\vlw
+\mtp nu-nuj
+\sem fibre in the coconut husk
+\lmg n-βɔ\nur
+\sem fibre in the coconut husk
+\lmg n-nir
+\sem sheath around base of coconut frond, used as strainer
+\vra {ɣɔɣɔβ}
+\sem sheath around base of coconut frond, used as strainer
+\vrs
+\msn
+\mta nir
+\sem fibrous spathe of coconut frond
+\num
+\drg ⁿdanir
+\sem sheath around base of coconut frond, used as strainer
+\kro
+\olr
+\lkn {βunus}
+\et < PNCV *vunu-ti < POc *punut ?
+\sem fibre in the coconut husk
+\lkn {ŋiː}
+\sem sheath around base of coconut frond, used as strainer
+\mrl {nʊ-ⁿdʊtir}
+\sem sheath around base of coconut frond, used as strainer
+\dt 17/Mar/2010
+
+\pnv °ŋara
+\psm pant; be exhausted
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg ŋerə
+\lhi
+\lyp
+\vlw
+\mtp ŋajŋaj
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °ŋ[i,e]ra
+\psm Pemphis acidula
+\pva °ŋera
+\vanb 1
+\pva °ŋira
+\vanb 2
+\pncv
+\poc PEOc *ŋiRac
+\cf
+\ps n
+\div
+\hiw ŋeᶢʟə
+\vanb 1
+\ltg ŋɛrə
+\vanb 1
+\lhi
+\lyp
+\vlw
+\mtp nɪ-ŋɪj
+\vanb 2
+\lmg
+\vra ŋirɪ
+\vanb 2
+\vrs ŋir
+\vanb 2
+\msn ŋɪr
+\vanb 2
+\mta ŋira
+\vanb 2
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °ŋora
+\psm snout, mouth, lips; (bird) beak; (knife+) blade
+\pncv
+\poc
+\cf °ŋusu
+\cf °ŋorai
+\ps nop
+\div ________
+\hiw ŋᶢʟɔ-k
+\sem snout, mouth
+\ltg
+\lhi n-ŋɛjɒ-k
+\sem face; (knife) blade
+\lyp
+\vlw
+\mtp na-ŋjɛ-k
+\sem (bird) beak; snout, mouth; (knife) blade
+\lmg ŋœrœ-k
+\sem (bird) beak; snout, mouth; (knife) blade
+\vra ŋara
+\sem (bird) beak; snout, mouth; (knife) blade
+\vrs ŋɛrɛ
+\sem blade
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 07/Sep/2009
+
+\pnv °°ŋorai
+\psm cape, promontory
+\pncv
+\poc
+\cf °ŋora
+\ps nop
+\div ________
+\hiw ŋᶢʟe
+\ltg ŋərɛ
+\lhi
+\lyp
+\vlw
+\mtp na-ŋjɛ
+\lmg ŋɛrɛ
+\vra ŋɪrɪ
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr ŋora
+\lkn ŋɛrɛ
+\nt vowels surprising (?)
+\mrl
+\dt 08/Mar/2010
+
+\pnv °ŋoro[ŋoro]
+\psm snore
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp ŋɔjŋɔj
+\lmg ŋørŋør
+\rfc EP1-42a
+\vra ŋʊrŋʊr
+\vrs ŋʊrŋʊr
+\msn
+\mta ŋora
+\sem grunt, nort, snore
+\num
+\drg ŋɔr
+\sem sleep
+\kro ŋɔr
+\sem sleep
+\olr ŋɔj
+\sem sleep
+\lkn ŋɔː
+\sem sleep
+\mrl ŋɔr
+\sem sleep
+\rfc AF-BP3-22b
+\dt 14/Mar/2010
+
+\pnv °ŋos[i,u]lawe
+\psm k.o. hardwood tree, Scaevola taccata
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ŋɵjsawə
+\ltg ŋəhlaw
+\lhi
+\lyp
+\vlw
+\mtp nɪ-ŋɪhlaw
+\lmg ŋuslaw
+\rfc EP1-41b
+\vra
+\vrs
+\msn
+\mta weslawe
+\sem name of a shrub on the beach
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 14/Mar/2010
+
+\pnv °ŋusu
+\psm snout; lips
+\pncv
+\poc *ŋuju
+\sem snout, mouth, beak
+\nt Ross 1988
+\cf °ŋora
+\ps
+\div
+\hiw sŋi-k
+\ng metathesis!
+\ltg ŋəhʉ-k
+\lhi ŋʷuhu-k
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs ŋüsü
+\sem beak; cape
+\msn
+\mta
+\num
+\drg ŋsi
+\kro
+\olr
+\lkn
+\mrl
+\dt 07/Sep/2009
+
+\pnv °oβe
+\psm canoe tree, Gyrocarpus americanus
+\pncv
+\poc *qope
+\ps n
+\div
+\hiw oβ
+\ltg oβ
+\lhi
+\vlw
+\mtp n-ɔp
+\lmg n-œβ
+\vra n\ɔβɔ
+\nt noté /nʊβɔ/ dans Catriona, je corrige car prononc° d'Eli Field;  
+\nt ceci dit, pb:  < *oβa ??
+\vrs ʊβ
+\msn ɔɸ
+\mta oβe
+\num w\ɔβ
+\drg ɔβ
+\kro
+\olr
+\lkn ɛβ
+\mrl
+\dt 06/Mar/2010
+
+\pnv °°ol[e,o]
+\psm crawl
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg ol
+\sem crawl
+\rfc FG1-12a
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr ɔl
+\sem go in; go out
+\lkn ɔl
+\sem go in; go out
+\mrl
+\dt 19/Sep/2011
+
+\pnv °one
+\psm sand, beach
+\pva *one
+\vanb 1
+\pva *eno
+\vanb 2
+\pncv *ʔone
+\poc *qone
+\cf
+\ps n
+\div
+\hiw tɪtɪn\ɪn
+\vanb 2
+\ltg βətn\in
+\vanb 2
+\lhi βti\ɛn
+\vanb 2
+\lyp lilw\ɔn
+\vanb 1
+\vlw
+\mtp {nɪ-βɪthijlɛ}
+\lmg wɔŋ\œn
+\vanb 1
+\vra n\ʊn
+\vanb 1
+\vrs ʊn
+\vanb 1
+\msn ɔn
+\vanb 1
+\mta one
+\vanb 1
+\num w\ɔn
+\vanb 1
+\drg ɔn
+\vanb 1
+\kro ɔn
+\vanb 1
+\olr n\ɔn
+\vanb 1
+\lkn (ʔ)ɛn
+\vanb 2
+\mrl ɞn
+\vanb 1
+\dt 07/Sep/2011
+
+\pnv °ono
+\psm barracuda, Sphyraena sp.
+\pncv
+\poc *qono
+\cf
+\ps
+\div
+\tea onoro
+\tnm onara
+\hiw on
+\ltg on
+\lhi
+\lyp
+\vlw
+\mtp n-ɔn
+\lmg n-ɪn
+\rfc EP1-42b
+\vra {naʔ}
+\vrs nɔn
+\rf Hyslop
+\nt ??
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn ɔn
+\sem Hemirhamphus
+\mrl
+\dt 10/Sep/2011
+
+\pnv °oraora
+\psm play; game
+\ps
+\div
+\lmg ɔrɔr
+\vra ɔrɔrɔ
+\vrs ɔrɔr
+\msn ɔrɔr
+\mta oraora
+\num ɔrɔr
+\drg ɔrɔr
+\kro ɔrɔr
+\lkn ɔːʔɔː
+\mrl ɔrɔr
+
+\dt 18/Oct/2006
+
+\pnv °[o,u]ri
+\psm Spondias cythera
+\pva °uri
+\vanb 1
+\pva °ori
+\vanb 2
+\pncv *uRi-si
+\poc *quRis
+\ps n
+\div
+\tea iliro
+\hiw ʉᶢʟ (?)
+\vanb 1
+\ltg ʉr
+\vanb 1
+\lhi n-nuj
+\vanb 1
+\lyp n-øj
+\vanb 2
+\vlw
+\mtp n-ɪj
+\vanb 2
+\lmg
+\vra n\ur
+\vanb 1
+\vrs ür
+\vanb 1
+\msn ʊr
+\vanb 2
+\mta ur
+\vanb 1
+\mta us
+\et < *usi ??
+\num
+\drg wa-ʊr
+\vanb 2
+\kro
+\olr
+\lkn uː
+\vanb 1
+\mrl (nɛ-wɛ͡as)
+\et < **u_is-a (??) < POc *quRis
+\sdi ***wisa
+\div
+\dt 22/Nov/2011
+
+\pnv °raβa
+\psm Polynesian arrowroot, Tacca leontopetaloides
+\pncv
+\poc *Rabia (??)
+\cf
+\ps n
+\div
+\hiw ᶢʟaβə
+\ltg raβə
+\lhi
+\lyp
+\vlw
+\mtp na-jap
+\lmg
+\vra
+\vrs
+\msn raɸ
+\mta raβa
+\sem an aroid, Tacca pinnatifolia
+\num
+\drg
+\kro
+\olr
+\lkn raβ
+\mrl
+\dt 06/Mar/2010
+
+\pnv °r[a,e]βe
+\psm [vt] pull; fish, go angling; draw, write
+\pva °raβe
+\vanb 1
+\pva °reβe
+\vanb 2
+\ps vt
+\div
+\hiw ᶢʟaβ
+\vanb 1
+\ltg raβ
+\vanb 1
+\lhi jɛp
+\vanb 2
+\lyp jɛp
+\vanb 2
+\vlw jɛp
+\vanb 2
+\mtp jap
+\vanb 1
+\lmg rɛβ
+\vanb 2
+\vra rɪβ
+\vanb 2
+\vrs rɪβ
+\vanb 2
+\msn rɛβ
+\vanb 2
+\mta raβe
+\vanb 1
+\num rɛβ
+\vanb 2
+\drg rɛβ
+\vanb 2
+\kro rɛβ
+\vanb 2
+\olr rɛβ
+\vanb 2
+\mrl rɪβ
+\vanb 2
+
+\dt 16/Nov/2011
+
+\pnv °raᵑga[ti]
+\psm [v.] lift up; [adv.] up, upwards; immediately; (take) away/off…
+\pva °raᵑga
+\vanb 1
+\pva °raᵑgati
+\vanb 2
+\ps
+\div
+\hiw ᶢʟakə
+\vanb 1
+\ltg rakə
+\vanb 1
+\lhi jak
+\vanb 1
+\vlw jaŋ
+\vanb 1
+\mtp jak
+\vanb 1
+\sem (v.) lift up; (adv.) away/off
+\lmg rɒk
+\vanb 1
+\vra raka
+\vanb 1
+\vrs rak
+\vanb 1
+\msn rak
+\vanb 1
+\mta raka
+\vanb 1
+\drg rkaːt
+\vanb 2
+\sem (v.) open <oven> (by lifting up the leaves that cover it)
+\olr rakat
+\vanb 2
+\sem (v.) open <oven>; (adv.) up, upwards
+\lkn rækæs
+\vanb 2
+\sem (v.) open <oven> (by lifting up the leaves that cover it)
+\mrl rak
+\vanb 1
+
+\dt 05/Mar/2010
+
+\pnv °[ra]ɣai
+\psm wood; stick; tree
+\pncv
+\poc *kayu
+\cf
+\ps n
+\div
+\hiw ᶢʟeᶢʟe
+\ltg rəɣa
+\lhi tæn\ɣɛ
+\lyp n-k͡pʷɪt\ɣɛ
+\vlw n-ᵑg͡bʷɛtɛn\ɣɛ
+\mtp nɪ-k͡pʷɪtɪn\ɣɛ
+\lmg ʔɛn\ɣɛ
+\vra k͡pʷɛʔɛnɣɛ
+\vrs (rɪn)tɛnɣɛ
+\msn {rɛkɛnkɛ ~ rɔkɛnkɛ ~ rɔkɛŋkɛ}
+\mta tanɣae
+\num rɛɣa
+\drg rɣa
+\kro rɣa
+\olr raɣa
+\lkn ræɣæ
+\mrl {tɛnkɪ}
+\dt 06/Mar/2010
+
+\pnv °ra[m,ᵐb]i
+\psm climb (hill, tree); esp. climb <tree> to get some fruit
+\pva °rami
+\vanb 1
+\pva °raᵐbi
+\vanb 2
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw {βɔᶢʟəᶢʟaɣə} ~ {βɪn}
+\ltg {ɣəraɣə} ~ {βin}
+\lhi jæm
+\vanb 1
+\lyp jɪm
+\vanb 1
+\vlw
+\mtp jɛm
+\vanb 1/2
+\lmg rɛm
+\vanb 1
+\vra rɛm
+\vanb 1/2
+\vrs rɛm
+\vanb 1/2
+\msn rɛp
+\mta rap
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °ramʷo
+\psm draw, drag; pull out (vine); (sickness+) affect (s.o.)
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi jaŋ
+\sem pull out
+\lyp jaŋ
+\sem pull out (vine)
+\vlw jaŋ͡mʷ
+\sem pull out (vine)
+\mtp jaŋ͡mʷ
+\sem pull out (vine)
+\lmg raŋ͡mʷ
+\sem pull out (vine)
+\lmg raŋ
+\sem (s.th.) affect s.o.
+\vra raŋ
+\sem (s.th.) affect s.o.
+\vrs raŋ
+\sem grab, pull; (s.th.) affect s.o.
+\msn
+\mta raŋ͡mʷo
+\sem pull, drag
+\num
+\drg raŋ
+\sem pull, drag; bend (bow); (s.th.) affect s.o.
+\kro raŋ
+\sem pull, drag; bend (bow); (s.th.) affect s.o.
+\olr raŋ
+\sem pull, drag; bend (bow); (s.th.) affect s.o.
+\lkn raŋ
+\sem pull, drag; bend (bow); (s.th.) affect s.o.
+\mrl
+\dt 12/Mar/2010
+
+\pnv °ra-na
+\psm on it, upon it
+\pncv
+\ps prep
+\div
+\hiw (ə)ᶢʟenə
+\ltg rɛnə
+\lhi jan
+\sem with it, because of it+
+\lyp {wʊ}
+\vlw
+\mtp
+\lmg rɒn
+\vra rana
+\rfc EG2-32a
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 07/Sep/2011
+
+\pnv **raŋai
+\psm roast; fry
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ᶢʟeŋe
+\rfc EP2-36a
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp jɛŋɛ
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\nt raŋai = Lolovoli
+\dt 15/Nov/2011
+
+\pnv °raŋo-ᵑgu
+\psm my legs, my feet
+\ps
+\div
+\hiw ᶢʟɵŋɵ-k
+\ltg rəŋo-k
+\lhi jɪŋɪ-k
+\lyp jøŋø-k
+\vlw nɪ-jɪŋɪ-ŋ
+\mtp na-jŋɪ-k
+\lmg røŋø-k
+\vra rʊŋʊ-k
+\vrs røŋø-k
+\msn rʊŋʊ-k
+\mta raŋo-k
+\drg rŋʊ-k
+\kro rʊŋʊ-k
+\lkn rɔŋɔ-k
+\mrl rɞŋʊ-k
+
+\dt 03/Dec/2007
+
+\pnv °raŋoraŋo
+\psm Acalypha spp.
+\ps
+\div
+\hiw {ᶢʟokʷ}
+\ltg rəŋreŋ
+\mtp na-jaŋjaŋ
+\vra raŋraŋ
+\vrs raŋraŋ
+\msn raŋraŋ
+\mta raŋoraŋo
+\drg w/raŋraŋ
+\lkn raŋraŋ
+
+\dt 06/Mar/2010
+
+\pnv °rara[βi]
+\psm coral tree, Erythrina indica
+\pncv
+\poc *rarap
+\cf
+\ps
+\div
+\hiw ᶢʟaɣə
+\ltg rarə
+\lhi
+\lyp
+\vlw
+\mtp na-jaj
+\lmg
+\vra raraβ
+\vrs rɛrɛβ
+\msn rar
+\mta rara | raraβ
+\num rɛrɛβ
+\drg rraːβ
+\kro
+\olr
+\lkn ræræβ
+\mrl
+\ark βi-ɾaɾa
+\dt 07/Mar/2010
+
+\pnv °rasa
+\psm grate ‹tuber root› in food preparation
+\pva °rasa
+\vanb 1
+\pva °rasa-i
+\vanb 2
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw {kʷaɣ}
+\ltg rahə
+\vanb 1
+\lhi
+\lyp jas
+\vanb 1
+\vlw
+\mtp jah
+\vanb 1
+\lmg rɒs
+\vanb 1
+\vra
+\vrs
+\msn
+\mta
+\num rɛsɛ
+\vanb 2
+\drg {βrɔr}
+\kro
+\olr
+\lkn
+\mrl
+\dt 02/Mar/2008
+
+\pnv °rau
+\psm Dracontomelon
+\pncv
+\poc *raqup
+\cf
+\ps n
+\div
+\tea doko
+\hiw ᶢʟɔ
+\ltg rɔ
+\lhi
+\lyp
+\vlw
+\mtp nɛ-jɛ
+\lmg wɔ\rɔ
+\vra wɛ\rɛ
+\vrs wɔ\rɔ
+\msn wɔ\rɔ
+\mta rau
+\num wɛ\ra
+\rfc Hans, after Wheatley
+\drg wa\ra
+\kro
+\olr
+\lkn raʔ
+\mrl
+\dt 11/Mar/2010
+
+\pnv °reᵐbu
+\psm wave, surf
+\pncv *rebu
+\poc
+\cf
+\ps
+\div
+\hiw ᶢʟɪp
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp nɪ-jɪm
+\nt check
+\lmg
+\vra
+\vrs
+\msn
+\mta rep
+\sem waves, tide rip
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 05/Mar/2010
+
+\pnv °reᵑgiu
+\psm Cyphosus cinerascens
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ᶢʟiki
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra riki
+\vrs
+\msn
+\mta rekiu
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 29/Aug/2009
+
+\pnv °rere
+\psm current in sea
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ᶢʟɪɣ
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp nɛ-jɛj
+\lmg
+\vra
+\vrs rɪr
+\sem [vi] tide
+\rfc BP2-40b
+\msn
+\mta rere
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 16/Mar/2010
+
+\pnv °rerere
+\psm shake, tremble
+\pncv
+\poc
+\cf
+\ps vi
+\div
+\hiw ᶢʟɪɣᶢʟɪɣ
+\ltg rərir
+\lhi
+\lyp jɛjɛj
+\vlw
+\mtp jɛjɛj
+\lmg
+\vra
+\vrs
+\msn
+\mta rerere
+\sem tremble, shake, with fear
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 08/Mar/2010
+
+\pnv °reu
+\psm rain
+\pncv
+\poc
+\cf °usa
+\cf °βʷeⁿda
+\nt Tamambo = /reu/ ‘water’
+\ps
+\div
+\mta
+\num rɪ
+\drg rɪ
+\kro
+\olr
+\lkn
+\mrl nɪ-rɪ
+\sdi reu
+\sem rain
+\dt 14/Nov/2011
+
+\pnv °riβitaɣi
+\psm near, close; almost
+\ps
+\div
+\hiw ᶢʟɪptɔɣ
+\ltg rəβtɛ
+\lhi jiptæ
+\lyp jipʧɪ
+\mtp jiptɛɣ
+\lmg rɪβʔɪ
+\vra rɔβʔɛ
+\vrs riβtɛɣ
+\msn riβtɛ
+\mta riβtaɣ
+\num riβtɛ
+\drg βriɣtɪɣ
+\kro βirita
+\olr riβtaː
+\lkn riɣtæɣ
+\mrl {ɣɔmɣɔmtʉ}
+
+\dt 18/Nov/2013
+
+\pnv °riɣa
+\psm swell; fat, big
+\ps
+\div
+\mtp jɪɣ
+\sem swell
+\vra riɣɪ
+\vrs rɪɣ
+\msn rɪx
+\mta riɣa
+\drg rɪɣ
+\kro rɪɣ
+\sem ?
+\olr rɪː
+\sem big, large
+\lkn rɪɣ
+\sem big, large
+\mrl rɪɣ 
+
+\dt 18/Dec/2018
+
+\pnv °ririɣo
+\psm whale
+\cf °ᵑg[uʀ]io
+\ps
+\div
+\hiw
+\ltg {n' iɣə sipə}
+\lmg ririɣ
+\sem dolphin
+\rfc EP1-42b + EG2-07b
+\vra ririɣɪ
+\vrs rɪrɪɣ
+\msn rɪrɪɣ
+\mta ririɣo
+\num ririɣ
+\nt < Hans
+\drg rriɣ
+\olr ririː
+\lkn ririɣ
+\mrl nɛ-rɛrɛ͡aɣ
+
+\dt 17/Mar/2010
+
+\pnv °r[i,u]ru
+\psm earthquake
+\pncv *ruru
+\sem earthquake, shake
+\poc *dudu
+\cf °rerere
+\ps
+\div
+\hiw ᶢʟiɣ
+\ltg rʉr ??
+\lhi
+\lyp
+\vlw
+\mtp ni-jij
+\lmg
+\vra rir
+\vra {mʊɣ}
+\vrs rir
+\msn
+\mta rir
+\num wi\rir
+\drg rir
+\kro
+\olr riː
+\lkn {muu}
+\et < *muɣi
+\mrl
+\dt 08/Mar/2010
+
+\pnv °r[i,u]sa
+\psm be located, be lying
+\pncv
+\poc
+\pva °risa
+\vanb 1
+\pva °rusa
+\vanb 2
+\cf °saɣe
+\cf °eno
+\ps vi
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw jɪs
+\vanb 1
+\mtp jʊs
+\vanb 2
+\sem be located
+\lmg
+\vra rusʊ
+\vanb 2
+\sem (lie down >) be sick [?]
+\vrs
+\msn
+\mta risa
+\vanb 1
+\mta rsa
+\sem lie down
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 22/Jan/2014
+
+\pnv °ri[w]a
+\psm laugh, smile
+\pncv
+\poc
+\cf °ᵐbora
+\cf °uru
+\ps vi
+\div ____________
+\hiw ᶢʟiwə
+\sem laugh, smile
+\hiw ᶢʟiwaɣ
+\sem laugh at (s.o.)
+\ltg {həmrɛ}
+\lhi {ŋʷəja}
+\lyp {ŋ͡mʷaja}
+\vlw jɪjɪ
+\sem laugh, smile
+\mtp jɪjɪ
+\sem laugh, smile
+\mtp jɪhɛɣ
+\sem laugh at (s.o.)
+\lmg
+\vra {ᵐbɔrɔ}
+\vrs {ᵐbɔr}
+\msn
+\mta {poroporo}
+\num {βatŋɛl}
+\drg {ᵐbɔr}
+\kro {ᵐbɔr}
+\kro {βʊrurur}
+\olr {pɔj}
+\olr {uj}
+\lkn {ʔuː}
+\mrl {manman}
+\dt 17/Nov/2011
+
+\pnv °roβa
+\psm k.o. leaf; Codiaeum variegatum (?)
+\pncv
+\poc
+\cf °sasa
+\ps n
+\div
+\hiw ᶢʟɔβə
+\ltg rɔβə
+\lhi
+\lyp n-jɔp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 12/Mar/2010
+
+\pnv °°roβa
+\psm stretch o.'s arm
+\pncv
+\poc
+\cf
+\ps vi
+\div
+\hiw
+\ltg rɔβə
+\rfc FG1-31b + 33a
+\lhi
+\lyp
+\vlw
+\mtp jɔp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 21/Mar/2013
+
+\pnv °roβali
+\psm carry on shoulder a stick with burdens on both ends
+\ps vt
+\cf °iwa
+\cf °sasa[ŋi]
+\cf °tatabʷai
+\div
+\hiw ᶢʟəβɔj
+\ltg rəβɔl
+\lhi ɛw.jɛβɒl
+\lyp {sɔl}
+\mtp {hɔl}
+\vrs sɔ.rβɛl
+\msn sʊ.rβɛl
+\sem carry on shoulder a stick with burden in the back
+\nt AF-EG1-13b
+\mta {k͡pʷati-iwa}
+\num raβal
+\drg rʊβaːl
+\olr rɔβal
+\lkn rɔβal
+
+\dt 09/Mar/2010
+
+\pnv °roⁿdo
+\psm lazy, listless, tired
+\nt typical subject = *aᵐbe 'body'
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra rʊn
+\vrs rʊn
+\msn
+\mta rono
+\num rɔn
+\nt cf. Hans /veron/ !
+\drg rɔn
+\sem lazy, listless, tired
+\rfc BP5-17b
+\kro
+\olr
+\lkn rɔʧ
+\mrl
+\dt 11/Sep/2011
+
+\pnv °roŋo-raβi
+\psm kind of evening dance
+\pncv
+\lit listen to the evening
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp n-jɔŋjɪp
+\vlw
+\mtp nɔ-jɔŋjɛp
+\lmg rœŋrɛβ
+\vra
+\vrs rʊŋrɛβ
+\msn
+\mta roŋoraβ
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 14/Mar/2010
+
+\pnv °roro
+\hm 1
+\psm sink down; be low, be deep; down
+\pncv
+\cf °ᵐbʷua
+\sem deep
+\cf °lama
+\sem deep sea
+\cf °suwe[li]
+\sem down
+\cf °rowo
+\sem outwards, seawards
+\ps
+\div
+\hiw ᶢʟoɣ
+\nq check
+\sem sink
+\ltg ror
+\sem sink
+\lyp jɔj
+\sem (adj.) deep; (v.) sink
+\mtp jɔj
+\sem (v.) sink, go down to deep place; fall into hole
+\lmg rœr
+\sem (adj.) deep; (v.) sink
+\rfc EG2-11a
+\vra rʊr
+\sem (adj.) deep
+\vrs rʊr
+\sem (adj.) deep; (v.) sink
+\mta roro
+\sem sink down, be low, be deep
+\num rɔr
+\sem (direc.) down; seawards; towards northwest
+\drg rɔr
+\sem (direc.) down; out, seawards; towards northwest
+\kro rɔr
+\sem (direc.) down; out, seawards; towards northwest
+\olr rɔj
+\sem (direc.) down; out, seawards; towards northwest
+\lkn
+\mrl
+\dt 15/Apr/2010
+
+\pnv **roro
+\hm 2
+\psm rumour, news, message; fame
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw ᶢʟoɣ
+\ltg ror
+\sem message
+\lhi
+\lyp
+\vlw
+\mtp nɔ-jɔj
+\mtp na-jɔjɔ-
+\lmg n-rør
+\rfc EP1-41a
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 14/Mar/2010
+
+\pnv °[ro]roŋo
+\psm quiet, silent; sacred
+\pncv *roroŋo
+\sem be quiet, pay attention
+\hiw βa\ᶢʟoŋ
+\ltg rəroŋ
+\lhi ɛjjɛŋ
+\vlw jɔŋ
+\mtp tɔɣ\jɔŋ
+\mtp jɔjɔŋ
+\lmg rœŋ
+\sem holy
+\rfc EG2-04b
+\lmg ʔɔɣ\rœŋ
+\lmg rœrœŋ
+\vra rɔrɔŋ
+\nt should be /rʊrʊŋ/?
+\vrs rɔrɔŋ
+\nt should be /rʊrʊŋ/?
+\msn rɔrɔŋ
+\mta roŋo
+\mta roroŋo
+\drg rɔŋ
+\lkn rɔrɔŋ
+\mrl rɔrɔŋ
+
+\dt 25/Jun/2012
+
+\pnv °roti
+\psm bind, tie, bundle
+\pncv *Roʔoti
+\sem tie, bind, bundle
+\poc
+\cf
+\ps vt
+\div
+\hiw ᶢʟɵt
+\ltg rət
+\lhi
+\lyp jøt
+\vlw
+\mtp jɪt
+\lmg
+\vra
+\vrs røt
+\sem (n) coil ; roll ; bundle
+\msn
+\mta rot
+\sem to tie, bind things or parts of things together
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl rɵt
+\sem tied, bound together
+\rfc BP3-14a
+\ark
+\dt 25/Mar/2010
+
+\pnv °rowo
+\hm 2
+\psm [vi] dash, rush out; fly away; jump
+\pncv
+\poc *Ropok
+\cf °roro
+\ps
+\div
+\hiw ᶢʟow
+\sem jump; (liquid) run
+\nt or liquid = /r̄ōg/ ???
+\ltg row
+\lhi jɔw
+\lyp jɔw
+\vlw jɔw
+\mtp jɔw
+\sem jump; fly off
+\lmg rœw ~ rɔw
+\vra rʊw
+\vrs rʊw
+\msn rɔw
+\mta rowo
+\num rɔw
+\drg rɔw
+\kro rɔw
+\olr rɔw
+\lkn rɔw
+\mrl rɔw
+
+\dt 10/Mar/2010
+
+\pnv °rowo
+\hm 1
+\psm [direc.] out, outwards; seawards
+\cf °roro
+\ps
+\div
+\hiw ᶢʟow
+\ltg row
+\lhi jɔw
+\vlw jɔ
+\mtp jɔw
+\lmg rœw
+\lmg rɔw
+\vra rʊw
+\vrs rʊw
+\msn rɔw
+\mta rowo
+
+\dt 10/Mar/2010
+
+\pnv °rowou
+\psm bonito, Thunnus sp.
+\ps
+\div
+\hiw ᶢʟɵwɵ
+\ltg rəwə
+\mtp na-jwɪ
+\mta rowou
+\drg rwʊ
+\kro rʊwʊ
+\olr rɪwɪ
+\lkn rɪwɪ
+
+\dt 16/Sep/2007
+
+\pnv °[r,ⁿr]eŋasi
+\psm Charmosyna palmarum, k.o. parrot
+\pva °reŋasi
+\vanb 1
+\pva °ⁿdeŋasi
+\vanb 2
+\ps n
+\div
+\mtp na-jŋɛs
+\vanb 1
+\lmg ræŋæs
+\vanb 1
+\vra rɛŋɛs
+\vanb 1
+\vrs rɛŋɛs
+\vanb 1
+\mta reŋas
+\vanb 1
+\drg wa/rŋaːs
+\vanb 1
+\lkn ʧæŋæh
+\vanb 2
+
+\dt 14/Mar/2010
+
+\pnv °rua[βi]
+\psm rising tide
+\pncv *ʀua
+\poc *ʀuap
+\cf
+\ps vi
+\div
+\hiw {jɔβə}
+\ltg {liɔβə}
+\lhi jɔ
+\lyp jʊ
+\vlw jʊ
+\mtp jʊ
+\lmg ru
+\rfc EP1-41b
+\vra
+\vrs
+\msn
+\mta ruaβ
+\num ruɛβ
+\drg rɪβ
+\kro
+\olr
+\lkn
+\mrl ruɛp
+\dt 14/Mar/2010
+
+\pnv °ruru
+\psm earthquake
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ᶢʟiɣ
+\ltg rʉr
+\rfc FP1-19a
+\lhi
+\lyp
+\vlw n-jij
+\mtp ni-jij
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg rir
+\rfc BP5-11b
+\kro
+\olr riː
+\rfc BP5-11b
+\lkn {muː}
+\mrl
+\dt 19/Sep/2011
+
+\pnv °ⁿrau-
+\psm leaf
+\pva °rau-
+\vanb 1
+\pva °ⁿdau-
+\vanb 2
+\pva °sau-
+\vanb 3
+\pncv
+\ps nop
+\div
+\hiw (nə ti)
+\vanb
+\ltg nə hɔ
+\vanb 3
+\lhi n-ⁿdɪ-
+\et < *ˌⁿrau-
+\vanb 2
+\lyp n-ⁿdø-
+\et < *ˌⁿrau-
+\vanb 2
+\vlw nɛ-jɛ
+\et < *ˌrau-
+\vanb 1
+\mtp na-jɔ
+\et < *ˌrau-
+\vanb 1
+\lmg n-tø
+\et < *ˌⁿrau-
+\vanb 2
+\vra ⁿdʊ-
+\et < *ˌⁿrau-
+\vra ⁿduⁿdu-ɣi
+\et < *ⁿraⁿraˈu-
+\vanb 2
+\vrs ⁿdɔ-
+\et < *ˌⁿrau-
+\vanb 2
+\vrs ⁿdøⁿdøü
+\et < *ⁿraⁿraˈu-i
+\vanb 2
+\msn nɔ-
+\et < *ˌⁿrau-
+\vanb 2
+\msn nunu-ɣi
+\et < *ⁿraⁿraˈu-
+\vanb 2
+\mta nau-
+\et < *ˌⁿrau-
+\vanb 2
+\num ⁿdɔ-
+\et < *ˌⁿrau-
+\vanb 2
+\drg ⁿda-
+\et < *ˌⁿrau-
+\drg ⁿdaː-ɣi
+\vanb 2
+\kro ⁿdɛ͡a-
+\et < *ˌⁿrau-
+\vanb 2
+\olr ʧa-
+\et < *ˌⁿrau-
+\vanb 2
+\lkn ʧa-
+\et < *ˌⁿrau-
+\vanb 2
+\mrl ⁿdʊ-
+\et < *ˌⁿrau-
+\vanb 2
+\ark ɾau
+\vanb 1
+\div
+\dt 17/Nov/2011
+
+\pnv °ⁿrau-talise
+\psm Lutjanus gibbus, k.o. snapper
+\lit ‘leaves of Terminalia (due to yellow color)’
+\mtp na-ᵐbaw jɔ-tlɪs
+\vra ⁿdʊ-ʔilisɪ
+\vrs ⁿda-talɪs
+\mta no-salte
+\drg ⁿda-tlɪs
+\kro ⁿda-tɪlɪs
+\lkn ʧa-talɪh
+
+\dt 14/Oct/2007
+
+\pnv °saa[ti]
+\psm bad
+\pva *saa
+\vanb 1
+\pva *saati
+\vanb 2
+\pva *tatasi
+\vanb 3
+\pva *tisei
+\vanb 4
+\pncv
+\poc *saqat
+\cf
+\ps adj
+\div
+\hiw sa
+\vanb 1
+\ltg hia
+\vanb 1
+\lhi sæt
+\vanb 2
+\lyp sɪt
+\vanb 2
+\vlw hɪt
+\vanb 2
+\mtp hɛt
+\vanb 2
+\lmg sɛʔ
+\vanb 2
+\vra sɛʔ
+\vanb 2
+\vrs {tisɪ}
+\vanb 4
+\msn {tisɪ}
+\vanb 4
+\mta tatas
+\vanb 3
+\num ttɪs
+\vanb 3
+\drg ttaːs
+\vanb 3
+\kro ssa
+\vanb 1
+\olr sa
+\vanb 1
+\lkn sa
+\vanb 1
+\mrl sɪt
+\vanb 2
+\dt 18/Nov/2011
+
+\pnv °saβu
+\psm hot steam
+\pncv
+\poc
+\cf °tutunu
+\cf °asu
+\ps n
+\div
+\hiw sɔβ
+\sem (n.) smoke
+\rfc EP2-46a
+\ltg
+\lhi ssɒw
+\sem (adj.) hot, warm
+\lyp ssøw
+\sem (adj.) hot, warm
+\vlw sɛw
+\sem (adj.) hot, warm
+\mtp sɛw
+\sem (adj.) hot, warm
+\lmg sœwu
+\sem (n.) steam
+\vra
+\vrs
+\msn
+\mta sawu
+\sem (steam) puff forth, burst out
+\num
+\drg sawi
+\sem (n.) steam
+\kro
+\olr saβ
+\sem (v.t.) heat s.th. up with fire
+\lkn
+\mrl
+\dt 17/Nov/2011
+
+\pnv °saⁿd[e,i]ɣi
+\psm put in a crotch, hitch, to set a snare, esp. for birds (a children's
+game)
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp
+\lmg (tisiŋ)
+\nt metathesis
+\vra
+\vrs sɪsɪⁿdiɣ
+\msn siniɣ
+\mta saneɣ
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 16/Nov/2011
+
+\pnv °s[a,e]re
+\psm tear, rip
+\pva °sere
+\vanb 1
+\pva °sare
+\vanb 2
+\pncv *sare
+\poc *saRe
+\nt check
+\cf
+\ps vt
+\div
+\hiw sɪᶢʟ
+\vanb 1
+\rfc FP2-21b + EP2-43a
+\ltg hir
+\rfc FP1-09b
+\vanb 1
+\lhi hɛj
+\vanb 1
+\lyp saj
+\vanb 2
+\vlw haj
+\vanb 2
+\sem tear off (??) taro to harvest it
+\mtp haj
+\vanb 2
+\lmg
+\vra sɪr
+\vanb 1
+\rfc BG2-15a
+\vrs sɪr
+\vanb 1
+\msn sar
+\vanb 2
+\sem tear off (??) taro to harvest it
+\mta sare
+\vanb 2
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 15/Sep/2011
+
+\pnv °saᵑgaru
+\psm reef
+\pncv *sakaRu
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp na-skɛj
+\lmg
+\vra
+\vrs sœkœr
+\msn sɔkɔr
+\mta sakaru
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl sɞkɔ͡ɞr
+\rfc AF-BP3-13a
+\dt 08/Mar/2010
+
+\pnv °saɣe
+\hm 1
+\psm up, upward; upwind, towards southeast
+\poc *sake
+\sem go upward, go southeast
+\hiw tɪ/iaɣ
+\ltg (i)aɣ
+\lhi ha
+\vlw ha
+\mtp haɣ
+\lmg saɣ
+\vra saɣ
+\vrs siaɣ
+\msn saɣ
+\mta saɣe
+\num sa
+\drg saɣ
+\kro saɣ
+\olr saː
+\lkn haɣ
+\mrl sɛ͡aɣ
+
+\dt 11/Oct/2006
+
+\pnv °saɣe
+\hm 2
+\psm sit, stay
+\poc *sake
+\sem go upward
+\cf °ᵐbute
+\hiw saɣ
+\ltg haɣ
+\lhi {ɣɛl}
+\lyp sa
+\vlw haɣ
+\mtp haɣ
+\lmg {puʔ}
+\vra saɣ
+\vrs siaɣ
+\msn saɣ
+\mta {pte}
+\mta saɣe
+\num sa
+\drg saɣ
+\kro saɣ
+\olr saː
+\lkn haɣ
+\mrl sɛ͡aɣ
+
+\dt 16/Nov/2011
+
+\pnv °salaɣoro
+\psm secret; secret meeting place in the bush for men during initiation rituals
+\ps
+\div
+\ltg hɔləɣor
+\vlw n-halɣɔj
+\mtp na-halɣɔj
+\lmg sɒlɣœr
+\vrs salɣʊr
+\msn salɣɔr
+\mta salaɣoro
+\drg salɣɔr
+\kro salɣɔr
+\olr salɣɔj
+\lkn salwɔː
+
+\dt 02/Apr/2007
+
+\pnv °sale
+\psm float
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw aj
+\ltg al
+\lhi
+\lyp
+\vlw
+\mtp hal
+\lmg sal
+\vra sal
+\vrs sal
+\msn sal
+\mta sale
+\num
+\drg
+\kro
+\olr sala
+\lkn hælæ
+\mrl
+\dt 09/Mar/2010
+
+\pnv °salea
+\psm channel on reef shore
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp na-slɛ
+\lmg n-sɛlɛ
+\vra
+\vrs
+\msn sɛlɛ
+\mta salea
+\sem a creek in the coral of a reef through which canoes are brought through to shore
+\num
+\drg
+\kro
+\olr
+\lkn halɛ
+\mrl
+\dt 09/Mar/2010
+
+\pnv °sali
+\psm angle fish
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta sal
+\num
+\drg saːl
+\kro sɛlsɛ͡al
+\olr sal
+\lkn hæl
+\mrl
+\dt 15/Nov/2011
+
+\pnv °°sali
+\psm cut with slashing motion
+\pncv
+\poc
+\cf °ɣasali
+\ps vt
+\div
+\hiw
+\ltg
+\lhi
+\lyp sɪl
+\vlw
+\mtp hɛl
+\lmg
+\vra
+\vrs
+\msn
+\mta sal
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 17/Nov/2011
+
+\pnv °sali[li]
+\psm ashore, terra firma (opp. sea); outside
+\pncv
+\ps
+\div
+\hiw
+\ltg həlil
+\lhi silil
+\sem ashore; (gen.) outside
+\lyp silil
+\sem ashore; (gen.) outside
+\vlw silil
+\sem ashore; (gen.) outside
+\mtp a-slil
+\sem ashore; (gen.) outside
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg salɪn
+\et < °sali-na
+\sem ashore
+\kro
+\olr
+\lkn salɪn
+\et < °sali-na
+\sem ashore
+\mrl
+\div
+\dt 16/Nov/2011
+
+\pnv °sara
+\psm clearing in middle of village
+\pncv *zara
+\poc
+\cf
+\ps n
+\div
+\hiw saᶢʟə
+\ltg harə
+\lhi saj
+\lyp saj
+\vlw {tɛnɛpnʊ}
+\mtp {tɪnɛpnʊ}
+\mtp na-hjɛ
+\sem area of (s.o.), private territory of (s.o.)
+\lmg sar
+\vra sara
+\vrs sar
+\msn sar
+\mta sara
+\num sar
+\drg sar
+\kro sar
+\olr saj
+\lkn saː
+\mrl sar
+\dt 05/Mar/2010
+
+\pnv °saraβi
+\psm rub, stroke
+\ps
+\div
+\ltg hərɛβ
+\lhi hɪjæp
+\vlw hɪjɪp
+\mtp hɛjɛp
+\lmg sœrœβ
+\vra saraβ
+\vrs sœrœβ
+\msn sɛrɛβ
+\mta saraβ
+\num saraβ
+\drg sraːβ
+\kro sɛrɛ͡aβ
+\lkn hæræβ
+\mrl sɛrɛp
+
+\dt 03/Dec/2007
+
+\pnv °sari
+\psm [n] spear
+\pncv *sari
+\sem to spear, thrust
+\poc PEOc *saRi
+\sem kind of spear
+\hiw sɔᶢʟ
+\sem (vt) stab, spear; play music with stamping bamboo
+\rfc EP2-23b
+\hiw ɔᶢʟ
+\sem (vt) husk coconut
+\ltg hɛr
+\sem (vt) husk coconut
+\ltg hərɣɛ
+\sem (vt) spear, poke
+\mtp n-ɪsɛj
+\vra sɛr
+\vrs sɛr
+\mta sar
+\drg sri/tʊk
+\kro tɛ͡aβ\sɛ͡ar
+\olr
+\lkn
+\mrl nɛ-sɛr
+
+\dt 09/Mar/2010
+
+\pnv °saru
+\hm 2
+\psm spill, pour out, esp. in a mass (liquid); throw away
+(rubbish+)
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\mtp sɛj
+\sem pour (liquid)
+\lmg sœr
+\sem pour (liquid); throw away (rubbish)
+\vra sɔr
+\vrs sœr
+\sem spill (liquid)
+\msn sɔr
+\mta sar
+\drg
+\lkn 
+
+\dt 02/Apr/2007
+
+\pnv °saru
+\hm 1
+\psm put on, wear (clothes+)
+\ps
+\div
+\hiw ɔᶢʟ
+\ltg hɔr
+\lhi hɔj
+\lyp søj
+\mtp hɛj
+\vrs sœr
+\mta sar
+\drg saːr
+\lkn saː
+
+\dt 07/Jun/2008
+
+\pnv °saru
+\hm 3
+\psm sea urchin
+\pncv
+\poc PEO *(cz)aRu
+\sem needle
+\cf
+\ps
+\div
+\hiw tɵt\sɔᶢʟ
+\ltg hi͡ɛr
+\rfc FG1-28b+29a
+\lhi
+\lyp
+\vlw
+\mtp nɛ-hɛj
+\lmg
+\vra
+\vrs
+\msn
+\mta sar
+\num
+\drg {waskar}
+\kro
+\olr
+\lkn {ŋatɛ}
+\mrl {nɛ-kɛ͡an}
+\dt 17/Nov/2011
+
+\pnv °[sa]sae
+\psm different, other; separate
+\ps
+\div
+\hiw a.in
+\sem different, other
+\ltg ha
+\lhi tɣa\ha
+\lyp ssæ
+\vlw tɛɣ\ha
+\sem different, other
+\mtp tɛɣ\ha
+\sem different, other
+\mtp haha
+\sem separate
+\lmg sɛsa
+\sem different
+\vra sisiɛ
+\sem different
+\vrs sisia
+\sem different
+\msn sasa
+\sem different
+\mta sasae
+\sem different
+\num sɪsɪ
+\sem different
+
+\dt 16/Nov/2011
+
+\pnv °sasa-ᵑgu
+\psm my name
+\pva °i(s)a-
+\vanb 1
+\pva °sasa-
+\vanb 2
+\ps
+\poc
+\div
+\hiw {jɔ-k}
+\vanb 1
+\ltg {ie-k}
+\vanb 1
+\lhi na-hɛ-k
+\vanb 2
+\lyp n-sø-k
+\vanb 2
+\vlw nɛ-hɛhɛ-ŋ
+\vanb 2
+\mtp na-hɛ-k
+\vanb 2
+\vra sɔ-k
+\vanb 2
+\vrs siœ-k
+\vanb 2
+\msn sɔ-k
+\vanb 2
+\mta sasa-k
+\vanb 2
+\num na-ssi-k
+\vanb 2
+\drg ssaː-k
+\vanb 2
+\olr sasi-k
+\vanb 2
+\lkn haha-k
+\vanb 2
+\mrl nɞ-ssɞ-k
+\vanb 2
+
+\dt 03/Mar/2009
+
+\pnv °sasa[ŋi]
+\psm lift up s.th. heavy; (two people) carry s.th. heavy, esp. with
+wooden sticks on their shoulders
+\pva °sasa
+\vanb 1
+\pva °sasaŋi
+\vanb 2
+\ps vt
+\cf °roβali
+\div
+\hiw wo.tatə
+\vanb 1
+\lhi sas
+\vanb 1
+\lyp sas
+\vanb 1
+\mtp hah
+\vanb 1
+\vrs sas
+\vanb 1
+\vrs sɛsɛŋ
+\vanb 2
+\sem carry something heavy, holding with one hand on either side,
+or two people carrying, one on each side
+\mta sasa
+\vanb 1
+\mta sasaŋ
+\vanb 2
+\num s(ɛ)sɛŋ
+\vanb 2
+\drg ssaːŋ
+\vanb 2
+\olr ʧɪʧɪŋ
+\vanb 2
+\lkn sosæŋ
+\vanb 2
+
+\dt 24/May/2008
+
+\pnv °[sa]sari[ta]
+\pva °sari
+\vanb 1
+\pva °sasarita
+\vanb 2
+\pva °tarisa
+\vanb 3
+\pva °tatarisa
+\vanb 4
+\psm sufficient, appropriate; equal; identical
+\ps
+\div
+\hiw tatəᶢʟitə
+\vanb 4
+\ltg tatərihə
+\vanb 4
+\lhi tatjɛh
+\vanb 4
+\lyp ʧatjɛs
+\vanb 4
+\vlw hajtɪjɪh
+\vanb 1/3
+\mtp hajtɪjɪh
+\vanb 1/3
+\et < *sari-tarisa  (?)
+\mtp sɛj
+\vanb 1
+\sem be appropriate
+\lmg ʔæræs
+\vanb 3
+\vra ʔirisɪ
+\vanb 3
+\vrs sasarɪt
+\vanb 2
+\vrs tatarɪs
+\vanb 4
+\nt archaic variant  [AF-FP4-03a]
+\msn tatɪrɪs
+\vanb 4
+\mta sasarta
+\vanb 2
+\mta sar
+\vanb 1
+\sem be appropriate
+\drg tatrɪs
+\vanb 4
+\drg saːr
+\vanb 1
+\sem be appropriate
+\mrl ttarɛ͡as
+\vanb 4
+\mrl tɛrsɪ
+\vanb 3
+
+\dt 15/Sep/2011
+
+\pnv °saumʷa
+\psm parrotfish, Scarus sp.
+\ps
+\div
+\hiw sɵŋʷə
+\ltg həŋʷə
+\lhi sɔŋ
+\mtp na-hʊŋ͡mʷ
+\lmg sʊŋ
+\rfc EP1-42a
+\vra suŋ͡mʷʊ
+\vrs sʊŋ͡mʷ
+\msn sʊŋ͡mʷ
+\mta sauŋ͡mʷa
+\drg sʊŋ
+
+\dt 10/Sep/2011
+
+\pnv °sawa
+\psm perform manly dance
+\pncv
+\cf °sawa-[e,i]
+\cf °laᵑgalaᵑga
+\ps vi
+\div
+\hiw sawə
+\sem (gen.) dance
+\ltg hawə
+\sem (gen.) dance
+\lhi
+\vlw
+\mtp haw
+\lmg
+\vra
+\vrs
+\msn
+\mta sawa
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °sawa-[e,i]
+\psm (n.) kind of manly dance
+\pncv
+\cf °sawa
+\ps
+\div
+\hiw
+\ltg həwa
+\sem (gen.) dance
+\lhi
+\lyp n-sawa
+\sem traditional music and orchestra accompanying village dances
+\vlw
+\mtp na-wha
+\sem traditional music and orchestra accompanying village dances
+\lmg n-sawa
+\vra
+\vrs
+\msn
+\mta sawai
+\num
+\drg
+\kro
+\olr
+\lkn hæwæ
+\mrl
+\dt 09/Mar/2010
+
+\pnv °semʷa
+\psm sick
+\ps
+\cf °ɣoᵐba
+\div
+\msn sɛŋ͡mʷ
+\sem sick
+\msn saŋ͡mʷa\ɸ
+\sem sickness
+\num sɛŋ
+\num sɛŋ͡mʷa\n
+\rfc Hans @wu-vur
+\drg sɛŋ͡mʷ
+\drg sŋ͡mʷa\n
+\lkn sɛŋ
+\mrl sɛ͡aŋ
+
+\dt 08/Mar/2010
+
+\pnv °[s,ᵑg]alato
+\psm nettle tree, Dendrocnide sp.
+\pva °salato
+\vanb 1
+\pva °ᵑgalato
+\vanb 2
+\pncv *ᵑgalato
+\poc *jalatoŋ
+\cf
+\ps n
+\div
+\hiw kəjat
+\vanb 2
+\ltg kəlat
+\vanb 2
+\lhi n-kalat
+\vanb 2
+\lyp n-kalat
+\vanb 2
+\mtp na-hlat
+\vanb 1
+\lmg n-kalaʔ
+\vanb 2
+\vra kalaʔa
+\vanb 2
+\vrs silat
+\vanb 1
+\msn salat
+\vanb 1
+\mta kalato
+\vanb 2
+\drg slat
+\vanb 1
+\olr {ʧuŋlɪt}
+\lkn {ɪlŋɪs}
+\et last two < **-n̄(i,u)l(o,e)ti
+\mrl nɛ-silat
+\vanb 1
+\ark kalaro
+\vanb 2
+\dt 03/Dec/2007
+
+\pnv °siᵐba
+\psm cut in thin slices
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw tipə
+\sem [vt] break w. knife (?)
+\nt cognate??
+\ltg hipə
+\sem [vt] slice
+\lhi
+\lyp
+\vlw
+\mtp sɪm
+\sem [vt] slice
+\lmg
+\vra
+\vrs
+\msn
+\mta sipa
+\sem slice, pare
+\num sim
+\rfc BP3-37a
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\ark sip̈a
+\sem knife
+\sdi siᵐbe
+\sem peel
+\sdg siᵐba
+\sem sharpen, trim
+\dt 18/Nov/2013
+
+\pnv °siᵑge
+\psm seek, search, look for
+\pncv
+\cf °soᵑge
+\cf °ami
+\ps
+\div
+\lhi
+\vlw
+\mtp
+\lmg
+\vra sikɪ
+\vrs sɪk
+\msn sɪk
+\mta sike
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Jan/2013
+
+\pnv °siɣo
+\psm Kingfisher, Halcyon sp.
+\pncv
+\ps
+\div
+\hiw siɣə
+\ltg hiɣə
+\lhi sɛ
+\vlw n-sɪɣ
+\mtp nɪ-sɪɣ
+\lmg n-sæɣ
+\vra siɣɪ
+\vrs sɪɣ
+\msn sɪɣ
+\mta
+\num
+\drg
+\kro
+\olr ʧɪː
+\lkn
+\mrl sɛ͡aɣ
+\dt 03/Dec/2007
+
+\pnv °sili
+\psm darkness
+\ps
+\div
+\mtp sil
+\vrs sil
+\msn sil
+\mta sil
+\num sil
+\drg sil
+\kro sil
+\olr sil
+\lkn hil
+\mrl sil
+
+\dt 11/Oct/2006
+
+\pnv °simi
+\psm sip, sup; drink
+\pva
+\cf °[i,u]nu
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\lmg
+\vra
+\vrs süm
+\msn sum
+\mta
+\mta {ima}
+\mta sim
+\sem sip, sup, up
+\num sim
+\drg sim
+\kro sim
+\olr
+\lkn
+\mrl sim
+
+\dt 17/Nov/2011
+
+\pnv °sina
+\psm (sun) shine
+\pncv *sina
+\poc
+\cf °siŋa(ri)
+\ps vi
+\div
+\hiw sinə
+\rfc EP2-15b
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Mar/2010
+
+\pnv °siŋa(ri)
+\psm (sun, moon) shine; bright light
+\pncv
+\poc
+\cf °sina
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn hiŋjɛɣ
+\sem [n, vt] light
+\mta siŋar
+\sem throw light upon
+\mta siŋaraɣ
+\sem illuminate
+\num wi\sŋar
+\sem moon; month
+\drg sŋaːr
+\nq long vowel?
+\sem moon; month
+\kro
+\olr
+\lkn siŋaː
+\sem moon (not month!)
+\mrl
+\dt 14/Mar/2010
+
+\pnv °siri
+\psm cut w. blade, peel; shave
+\pncv *siRi(vi)
+\nt =my reconstruction;  cf. *zivi  'knife, cut wood with knife'
+\poc PEO *(c,z)iRi(v)
+\sem cut
+\nt Geraghty
+\sem
+\cf
+\ps
+\div
+\hiw
+\ltg hərhir
+\sem shave
+\lhi sij
+\lyp sij
+\vlw sij
+\mtp sij
+\sem grate
+\mtp sisij
+\sem shave
+\lmg
+\vra
+\vrs sir
+\sem shave
+\msn sir
+\mta sir
+\sem shave
+\num sir
+\sem grate coconut
+\drg sir
+\sem grate coconut
+\kro
+\olr si
+\sem grate coconut
+\lkn hiː
+\sem grate coconut
+\mrl 
+
+\dt 25/Mar/2010
+
+\pnv °siriβi
+\psm waterfall
+\ps
+\div
+\mtp na-sjip
+\vrs sɪriβ
+\mta siriβ
+\drg sriβ
+\olr siriβ
+\lkn hiriβ
+\mrl siriw
+
+\dt 02/Apr/2007
+
+\pnv °soaᵑga
+\psm k.o. banana ‘fehi’
+\pncv
+\poc *joRaga
+\cf
+\ps n
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro k͡pʷɛtɛ\sʊak
+\rfc BG4-17b
+\olr
+\lkn k͡pʷɪtɪ\sɔak
+\mrl
+\dt 09/Mar/2010
+
+\pnv °soᵐbʷosoᵐbʷo
+\psm excessively, very much
+\pncv
+\ps
+\div
+\lhi
+\vlw
+\mtp
+\lmg sœksœk
+\rfc EP1-41b+
+\vra sɔk͡pʷsɔk͡pʷ
+\vrs
+\msn
+\mta sok͡pʷosok͡pʷo
+\num
+\drg sɔk͡pʷsɔk͡pʷ
+\kro
+\olr
+\lkn
+\mrl sɔksɔk
+\dt 24/Nov/2011
+
+\pnv °soβi
+\psm fall
+\pncv *zovi
+\poc
+\cf °mʷasu
+\ps
+\div
+\hiw so
+\ltg ho
+\lhi
+\lyp sœ
+\vlw
+\mtp
+\lmg
+\vra
+\vrs {ŋ͡mʷœs}
+\msn
+\mta soβ
+\sem rest on, lean against
+\num sɔ
+\nq vowel?
+\drg sʊβ
+\rfc BP3-26b+29a
+\kro sʊβ
+\olr
+\lkn sɪβ
+\mrl siœ
+\nt ?
+\dt 10/Jun/2011
+
+\pnv °soᵑge
+\psm seek, search, look for
+\pncv
+\cf °ami
+\cf °siᵑge
+\ps
+\div
+\lhi
+\vlw sɔŋ
+\mtp sɔk
+\lmg sœk
+\vra sʊk/siɛr
+\vrs sʊk
+\msn
+\mta soke
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Jan/2013
+
+\pnv °soɣai
+\psm pig
+\nq vowels?
+\pncv
+\poc
+\cf °ᵐbʷoe
+\ps n
+\div
+\hiw soɣe
+\ltg həɣɛ
+\lhi n-sɛɣɛ
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Mar/2010
+
+\pnv °so[ɣ,ŋ]oni
+\psm stow, put <s.th.> in (basket)
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw ɣɵn
+\hiw {pᶢʟɔɣ}
+\ltg ɣo͡ən
+\lhi
+\lyp
+\vlw
+\mtp hɪŋɪn
+\lmg {nœs}
+\vra
+\vrs søŋøn
+\msn sʊŋʊn
+\mta soɣon
+\sem stow
+\num
+\drg
+\kro sʊkʊ
+\nt ?? check meaning
+\olr suɣɪn
+\lkn hɪkɪn
+\rfc AF-BP5-08a
+\mrl
+\ark sohoni-
+\dt 25/Jun/2012
+
+\pnv °soɣo
+\psm give <s.th.> as a present
+\pva °soɣo
+\vanb 1
+\pva °soɣa
+\vanb 2
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw
+\ltg həɣhoɣ
+\vanb 1
+\sem be generous
+\ltg hoɣtɛ
+\vanb 1
+\sem give generously
+\lhi hɒ
+\vanb 2
+\sem take; give
+\lhi hɒɣɒt
+\et < *soɣa + *atu
+\vanb 2
+\lyp
+\vlw hɔɣ
+\vanb 1/2
+\mtp hɔɣ
+\vanb 1/2
+\sem give generously
+\lmg
+\vra
+\vrs sʊɣ
+\vanb 1
+\sem give generously
+\msn
+\mta soɣo
+\vanb 1
+\sem give, bring, contribute, distribute
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 08/Mar/2010
+
+\pnv °somu
+\psm shell money
+\pncv *zomu
+\hiw {βitiŋtiŋ}
+\rfc EP2-45b
+\lhi n-sɪm
+\lyp n-søm
+\vlw n-sɪm
+\mtp nɪ-sɪm
+\vrs søm
+\msn sʊm
+\mta som
+\num sʊm
+\drg sʊm
+\olr sɪm
+\lkn hɪm
+\mrl nʊ-sʊm
+
+\dt 15/Sep/2011
+
+\pnv **soro
+\psm cicada
+\pncv *soro-vi
+\sem snort, grunt at
+\poc *(cz)oRo-v
+\sem call
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi n-sɛj
+\nt check
+\lyp
+\vlw
+\mtp nɔ-sɔj
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\ark soɾo
+\sem puff, spurt; talk, say
+\dt 24/Mar/2010
+
+\pnv °soso
+\psm rub strongly; (esp.) light (fire) by rubbing wood
+\pncv
+\ps
+\div
+\hiw sot
+\rfc FP3-41a
+\hiw sɔs
+\rfc d10.Bekem:13
+\ltg hɔh
+\nt should be /hoh/??
+\lhi
+\lyp sɔs
+\vlw
+\mtp hɔh
+\sem light (fire) by rubbing wood
+\sem rub (skin) so strongly as to create blister >> have blister
+\lmg sœs
+\vra
+\vrs
+\msn
+\mta
+\num sɔs
+\drg sɔs
+\kro
+\olr
+\lkn hɔh
+\mrl
+\dt 09/Mar/2010
+
+\pnv °(so)soɣoti
+\psm find, discover
+\pncv
+\poc
+\cf °suari
+\ps postv
+\div
+\hiw
+\ltg
+\lhi sɪɣɪt
+\lyp søɣøt
+\vlw
+\mtp
+\lmg ʔɛ.sɣøʔ
+\vra
+\vrs søsøɣøt
+\msn
+\mta sosoɣot
+\sem give, bring, contribute…
+\nt sens un peu douteux
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 26/Oct/2007
+
+\pnv °sua
+\psm (v) paddle, travel on canoe
+\pncv *sua
+\poc
+\cf °βose
+\ps
+\div
+\hiw sɵ
+\ltg hʉə
+\lhi hɔ
+\lyp
+\vlw
+\mtp hʊ
+\lmg su
+\vra suʊ
+\vrs sʊ
+\msn sʊ
+\mta sua
+\num su
+\drg sʊ
+\kro
+\olr
+\lkn sʊ
+\mrl
+\dt 07/Mar/2010
+
+\pnv °suari
+\psm find, discover
+\pncv
+\poc
+\cf °sosoɣoti
+\cf °wune
+\ps postv
+\div
+\hiw sɔᶢʟ
+\ltg hɛr
+\lhi {sɪɣɪt}
+\lyp {søɣøt}
+\vlw {sas}
+\mtp {sas}
+\lmg {ʔɛsɣøʔ}
+\vra sɛr
+\vrs siœr
+\vrs {søsøɣøt}
+\msn siɛr
+\mta suar
+\dt 15/Mar/2010
+
+\pnv °suᵐbʷe
+\psm pig-killing ceremony in graded society
+\pncv *suᵐbʷe
+\hiw sʉkʷə
+\ltg hʉkʷə
+\lhi n-sɔk
+\lyp n-sʊŋ
+\rfc FG4-06a
+\vlw nʊ-sʊŋ͡mʷ
+\mtp nʊ-sʊk͡pʷ
+\lmg n-sʊk
+\vra suk͡pʷʊ
+\vrs sʊk͡pʷ
+\mta suk͡pʷe
+\drg β/sʊk
+\kro βʊ/sʊk
+\lkn βa/sʊk
+
+\dt 15/Sep/2011
+
+\pnv °suβusuβu
+\psm bathe, wash (o.s.)
+\pva
+\nt cf. Tamambo /suvu/ 'dive'
+\ps vi
+\div
+\hiw sʉsʉ
+\ltg həhʉ
+\lhi ussu
+\lyp suwsuw
+\mtp suwsuw
+\lmg suwsuw
+\vra siwsiw
+\vrs süβsüβ
+\msn suwsuw
+\mta suɣsuɣ
+\num suwsuw
+\drg {llɔs}
+\olr (suwa)
+\lkn (huwæ)
+\mrl sʉwsʉw
+
+\dt 14/Nov/2011
+
+\pnv °suri
+\hm 1
+\psm sing
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw sʉᶢʟ
+\ltg hʉr
+\lhi huj
+\lyp sʉj
+\vlw {sɛ}
+\mtp {sɛ}
+\lmg
+\vra sur
+\vrs {rœw}
+\msn sur
+\mta sur
+\sem follow a song > sing
+\mta {raw}
+\sem sing in low voice
+\num {raw}
+\drg {twa}
+\kro {tuwa}
+\olr
+\lkn {ʔæh}
+\mrl sur
+\sem speak
+\dt 01/Nov/2012
+
+\pnv °suri
+\hm 2
+\psm bone
+\pncv *suRi
+\poc *suRi
+\cf
+\ps n
+\ps nop
+\div
+\hiw siᶢʟ
+\hiw sᶢʟi-
+\ltg hʉr
+\ltg hʉri-
+\lhi n-huj
+\lyp n-sʉj
+\lyp n-siji-
+\sem strength
+\vlw ni-hij
+\mtp ni-hij
+\mtp ni-hji-
+\sem strength
+\lmg siri-
+\vra siri
+\vrs siri
+\msn siri-
+\mta suri-
+\num sur | suri
+\drg sri
+\kro siri
+\olr
+\lkn suri
+\lkn sʊrɪ-
+\mrl sur
+\mrl suri-
+\rfc BP3-13a
+\dt 07/Mar/2010
+
+\pnv °suri
+\psm [prep.] because of s.th.; to s.o., Dative
+\psm [conj.] because
+\pncv
+\poc *suRi
+\sem prepositional verb, allative
+\cf
+\ps prep
+\div
+\hiw ʉᶢʟ
+\ltg ʉr
+\lhi hi
+\sem Dative
+\lyp sij
+\sem Dative
+\vlw hij
+\sem Dative
+\mtp hij
+\sem Dative
+\lmg
+\vra sir/ɪn
+\vrs sür
+\msn sur
+\mta sur
+\num sur
+\drg srɪɣ
+\kro sur
+\olr suj
+\lkn {ɔn}
+\mrl sʉr
+\dt 24/Mar/2010
+
+\pnv °suwo
+\psm downwards; towards northwest
+\ps
+\div
+\lhi how
+\vlw hʊ
+\mtp hʊw
+\lmg sʊw
+\vra suwʊ
+\vrs sʊw
+\msn sʊw
+\drg swɪl
+\nq cognate??
+\lkn hʊw
+\lkn sɪwɪl
+\mrl sʊw
+\sdi suxo
+\sdg sixo ~ syxo
+
+\dt 18/Nov/2013
+
+\pnv °sVserV
+\psm (blade+) sharp
+\pncv
+\poc
+\cf °matasi
+\ps adj
+\div _____________
+\hiw {wuj}
+\ltg {mətɛh}
+\lhi {ŋʷ(ə)tæh}
+\lyp {ŋ͡mʷɪnɪs}
+\vlw n-hɛj
+\mtp nɛ-hɛj
+\lmg {ŋ͡mʷɛʔɛs}
+\vra {maʔas}
+\vrs {ɣɛɣɛn}
+\msn
+\mta {tup}
+\num ssɛr
+\drg ssɛr
+\kro
+\olr {matastas}
+\lkn {mæhɛʧ}
+\mrl {ɣɣɛn}
+\dt 31/Jul/2009
+
+\pnv **taᵐbare
+\psm thread things one after another
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp taᵐbaj
+\lmg ʔapar
+\vra
+\vrs
+\msn
+\mta tapare
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Apr/2007
+
+\pnv °taᵐbe
+\hm 1
+\psm put s.th. up, erect
+\pncv
+\ps vt
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp tam
+\sem lift s.th.
+\lmg ʔap
+\sem put s.th. back up after it fell
+\vra ʔam
+\sem put s.th. back up after it fell
+\vrs tiam
+\sem lift s.th.
+\msn
+\mta tape
+\sem set up on end, hoist, erect
+\num
+\drg
+\kro
+\olr
+\lkn tamtam
+\sem ‘lift up’ the song…
+\mrl
+\dt 14/Sep/2011
+
+\pnv °taᵐbe
+\hm 2
+\psm love, feel affection for; give a present
+\pncv
+\poc
+\cf °[ta]taᵐbe[ɣi]
+\ps vt
+\div
+\hiw tep
+\ltg tep
+\lhi
+\vlw
+\mtp tam
+\lmg ʔap
+\vra
+\vrs tiam
+\msn
+\mta tape
+\mta tapeva
+\sem love; present
+\num
+\drg
+\kro
+\olr
+\lkn tatpɪɣ
+\nt check last
+\dt 28/Jul/2018
+
+\pnv °taᵐbe[l,r]a
+\psm a round woven dish or basket
+\pncv *tabe
+\poc
+\cf °taᵐbia
+\ps n
+\div
+\hiw pejə
+\ltg təpɛlə
+\sem a square basket used for rubbish
+\rfc CP1
+\lhi
+\lyp
+\vlw
+\mtp na-tᵐbɛj
+\lmg
+\vra
+\vrs tiᵐbiar
+\msn tɛpɛr
+\mta tapera
+\sem woven open bag, basket, platter
+\num tɛᵐbɛr
+\drg
+\kro
+\olr tɛpɛl
+\rfc Olr.Vieille.042 = BG4-31b
+\lkn sapɛl
+\sem a square basket used for rubbish
+\rfc BP5-14b
+\mrl
+\dt 18/Sep/2011
+
+\pnv °taᵐbia
+\psm wooden dish
+\ps
+\cf °taᵐbe[l,r]a
+\div
+\hiw təpjə
+\ltg təpiə
+\lhi
+\lyp
+\vlw n-tɪᵐbɪ
+\rfc EG1-10a
+\mtp na-tᵐbɪ
+\lmg n-ʔipi
+\vra ʔiᵐbiɪ
+\vrs taᵐbɪ
+\msn tɪpɪ
+\mta tapia
+\num tiᵐbi
+\drg tᵐbɪ
+\olr tɪpɪ
+\lkn tapɪ
+\mrl na-taᵐbɛ͡a
+
+\dt 25/Mar/2010
+
+\pnv °taᵐbu
+\psm [adj] taboo, sacred, forbidden
+\pncv
+\poc *tabu
+\cf
+\ps
+\div
+\hiw tɔkʷ
+\sem taboo, sacred, forbidden
+\ltg tɔkʷ
+\lhi tpu
+\lhi nɛ-tpu
+\sem taboo place on island
+\lyp
+\vlw
+\mtp nɛ-tɛk͡pʷ
+\sem [n] graveyard
+\lmg
+\vra
+\vrs
+\msn
+\mta tap
+\sem day of silence in sign of mourning
+\num
+\drg taːᵐb
+\kro tɛ͡am
+\olr
+\lkn
+\mrl tɔm
+\mrl nɔ-tɔm
+\sem a sign marking a place as taboo or forbidden, especially
+against ghosts
+\ark rapu
+\sem [n] grave
+\rfc BP1-20b
+\dt 20/Jun/2017
+
+\pnv °taᵐbʷale
+\psm Grouper fish
+\ps
+\div
+\hiw təkʷaj
+\ltg təkʷal
+\rfc FG1-28a
+\mtp na-tk͡pʷal
+\lmg ʔak͡pʷal
+\rfc EP1-42b
+\vra ʔak͡pʷal
+\vrs tik͡pʷial
+\mta tak͡pʷale
+\drg tk͡pʷal
+\kro tak͡pʷal
+\lkn tak͡pʷæl
+
+\dt 24/Mar/2010
+
+\pnv °taᵐbʷeli
+\psm go down, downhill
+\ps
+\div
+\vlw tɪᵑg͡bʷɪl
+\mtp tɪk͡pʷɪl
+\lmg k͡pʷɪl
+\lmg ʔɪk͡pʷɪl
+\vra k͡pʷɪl
+\vrs tɪk͡pʷɪl
+\msn tɪk͡pʷɪl
+\mta tak͡pʷel
+\num tɪk͡pʷɪl
+\drg
+\olr tɪk͡pʷɪl
+\lkn
+\mrl 
+
+\dt 06/Apr/2007
+
+\pnv °[ta-]ᵐbʷonaɣi
+\psm cuttlefish, Sepia sp.
+\lit ‘shy person’
+\hiw
+\ltg kʷakʷunɛɣ
+\lhi
+\lyp
+\vlw
+\mtp na-tatak͡pʷnɛt
+\lmg {ŋ͡mʷɛnɛk}
+\rfc EP1-42a
+\vra {ŋ͡mʷanak}
+\vrs {ŋ͡mʷɛnɛk}
+\msn
+\mta tak͡pʷonaɣ
+\num tak͡pʷanɛ
+\drg wtak͡pʷnaːɣ
+\kro
+\olr k͡pʷɪnɪː(lɪː)
+\rfc BG3-22a
+\lkn k͡pʷɔnk͡pʷɔnæɣ
+\rfc BG3-23a
+\mrl tɔkna
+
+\dt 12/Sep/2011
+
+\pnv °taβa[w]a
+\psm gourd, Crescentia cujete (?)
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw təβawo
+\ltg təβɔwə
+\lhi
+\lyp
+\vlw
+\mtp nɔ-wɔ\tβa
+\lmg n-ʔaβa
+\vra
+\vrs
+\msn wɔ\taβa
+\mta wo\taβae
+\sem a kind of gourd, eaten
+\num
+\drg {wtʊlwɛ}
+\kro
+\olr {wɛtɛlwa}
+\lkn {tɛwla}
+\mrl
+\dt 06/Mar/2010
+
+\pnv °taβetaβe
+\psm defecate
+\pncv
+\ps vi
+\cf °tae
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp taptap
+\lmg ʔaβʔaβ
+\vra ʔaβʔaβ
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 07/Sep/2011
+
+\pnv °tae
+\psm shit, faeces
+\pncv
+\poc *taqe
+\cf °taβetaβe
+\ps n
+\ps nop
+\div
+\hiw te
+\sem shit; to shit
+\ltg ta
+\ltg si-k
+\et <*ti-gu < *taé-gu
+\lhi n-ta
+\lyp n-ʧa
+\vlw n-ta
+\mtp na-ta
+\mtp na-tɛ-n
+\lmg
+\vra ʔa
+\vrs ti͡a
+\vrs tiɪ-k || tia-n
+\msn ta-k
+\rf Tryon p.210
+\mta tae
+\num tɪ
+\drg ta
+\drg tɪ-k
+\kro
+\olr
+\lkn tæ
+\lkn tiɛ-k
+\mrl tɛ
+\mae tae
+\dt 07/Sep/2011
+
+\pnv °taᵑgura
+\psm sago palm, Metroxylon warburgii; house roof made of
+sago-leaves
+\pncv *ta[k,g]ura
+\poc *qatop
+\cf °ato ~ °ota
+\ps
+\div
+\lhi ⁿdɪ-tkɔj
+\num ⁿdu-tukur
+\drg tkʊr
+\kro tʊkʊr-ŋa
+\olr ʧa\ʧkʊj
+\lkn takʊː
+\mrl (ⁿdɔ)takʊr
+\dt 06/Mar/2010
+
+\pnv °taɣaro
+\psm magic power; divine inspiration in o.'s actions (?), luck
+\pncv
+\poc
+\cf
+\ps n
+\div _______
+\hiw teᶢʟje
+\et < *taɣaro-a
+\sem bewitch, cast a spell on s.o. using sorcery
+\ltg təɣar
+\sem magic stone in the bush, used as altar for sorcery
+\rfc FP1-30b+ === FG1-18b
+\lhi
+\lyp
+\vlw
+\mtp Taɣaj
+\sem cultural hero
+\nt same word??
+\lmg ʔɒɣrø-k
+\sem magic power of man (e.g. initiates)
+\lmg ʔaɣar (mu ʔamaʔ)
+\sem magic power of spirits
+\rfc EG1-44
+\vra
+\vrs na taɣrɔ-ŋ
+\sem your magic power
+\vrs (na nɔ-ŋ ɔ) taɣar
+\sem your behaviour
+\rfc EG1-44
+\sem fasin mo tingting
+\msn
+\mta taŋaro
+\sem a morsel of food thrown for a ghost
+\mta taŋaroa
+\sem stone, carried or hung up in a bag, possessed of magic
+powers as the abode of a 'vui'
+\mta taŋaro-na
+\sem a thing belonging to a person which has magic power
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\sdi Taŋaro (?)
+\dt 08/May/2017
+
+\pnv °ta[ɣ,ᵑg]ere([ɣ,ᵑg]ere)
+\pva °taɣere[ɣere]
+\vanb 1
+\pva °taᵑgereᵑgere
+\vanb 2
+\psm swiftlet, Rhipidura fuliginosa
+\pncv *takere
+\sem fantail
+\mtp na-tɣɛjɣɛj
+\vanb 1
+\vra wʊ/tɛɣɛrɣɛr
+\vanb 1
+\vrs tɪɣɪr
+\vanb 1
+\msn tɛɣɛr
+\vanb 1
+\mta taɣere
+\vanb 1
+\num wɛtakɣɛrɛɣɛrɛ
+\vanb 1/2
+\drg wtakɣɛrɣɛr
+\vanb 1/2
+\lkn takɛːkɛː
+\vanb 2
+
+\dt 06/Apr/2007
+
+\pnv °taɣoβe
+\psm starch pudding
+\pncv
+\cf °loᵑgo
+\ps
+\div
+\hiw təɣoβ
+\ltg təɣoβ
+\lhi n-tɔɣɔp
+\lyp n-tɔɣɔp
+\vlw n-tɔɣɔp
+\mtp na-tɣɔp
+\lmg ʔœɣœβ
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 16/Nov/2011
+
+\pnv °taɣolo
+\psm straight; correct
+\pncv *takolo
+\poc
+\cf °tanine[n,r]e
+\ps adj
+\div ___________
+\hiw
+\ltg
+\lhi
+\lyp tɔɣɔlɣɔl
+\vlw
+\mtp tɔɣɔlɣɔl
+\lmg
+\vra
+\vrs
+\msn
+\mta taɣoloɣolo
+\num
+\drg
+\kro
+\olr
+\lkn tawɔlwɔl
+\mrl
+\ark raholo
+\dt 06/Sep/2011
+
+\pnv °taɣuru
+\psm behind; afterwards
+\pncv *takuru
+\sem back, behind, after
+\hiw tiᶢʟiɣ
+\ltg təɣʉr
+\lhi tuɣuj
+\lyp ʧiɣij
+\mtp tiɣij
+\vrs tøwür
+\msn ɣɔr/tuwur
+\mta taɣir
+\mta tawur
+\num a\tuwur
+\drg twur
+\drg tawri
+\lkn tawuː
+
+\dt 31/Jul/2009
+
+\pnv °°talai
+\psm giant clam, Tridacna
+\pncv *talai
+\poc
+\cf
+\ps n
+\div
+\hiw βi\təje
+\sem axe
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp na-tlɛ
+\lmg ʔɛlɛ
+\rfc EP1-42b
+\vra ʔala
+\vrs
+\msn
+\mta talai
+\num
+\drg tla
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Sep/2011
+
+\pnv **talo ?
+\psm tie strongly (rope)
+\ps
+\div
+\lmg ʔal
+\mtp tal\βip
+
+
+\dt 12/Oct/2006
+
+\pnv °taluɣo
+\psm morning
+\vanb 1
+\psm tomorrow
+\vanb 2
+\ps
+\div
+\lhi talɔw
+\vanb 2
+\lyp talʊw
+\vanb 2
+\vlw talʊw
+\vanb 2
+\mtp talʊw
+\vanb 2
+\lmg ʔalʊw
+\vanb 2
+\vra ʔaluwʊ
+\vanb 2
+\vrs tʊlʊw
+\vanb 2
+\msn talʊw
+\vanb 2
+\num talʊw
+\vanb 1
+\drg talʊw
+\vanb 2
+\olr talʊw
+\vanb 2
+\lkn talʊw
+\vanb 2
+\mrl tʊlʊ
+\vanb 1
+\div
+\mae taluɣo
+\vanb 2
+
+\dt 03/Dec/2007
+
+\pnv °ta-maraɣai
+\psm old man
+\lit ‘quivering person’
+\cf °[ma]maraɣai
+\hiw təmaᶢʟeᶢʟe
+\lhi tamajɣæ
+\vlw tamajɣɛ
+\mtp tamajɣɛ
+\vra ʔamarɣa
+\vrs tamarɣɛ
+\msn tamarɣɛ
+\mta tamaraɣai
+\drg tmarɣa
+\lkn tamaːɣæ
+\mrl tɛmɛrɣɛ
+
+\dt 08/Mar/2010
+
+\pnv °[ta]mʷare
+\psm (be) like
+\pva *mʷare
+\vanb 1
+\pva *mʷarei
+\vanb 2
+\pva *mʷar(e)aɣe
+\vanb 3
+\pva *tamʷa
+\vanb 4
+\pva *ta-mʷea
+\vanb 5
+\pva *mʷea
+\vanb 6
+\pva *meᵑg(e)a
+\vanb 7
+\pva *ta-meᵑga
+\vanb 8
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ŋʷe
+\vanb 6
+\ltg wɛ
+\vanb 6
+\lhi {nan}
+\lyp {mɛnɛ}
+\vlw {βɪh}
+\mtp {k͡pʷɛlɛ}
+\lmg mækæ
+\vanb 6
+\vra {sɛ}
+\vrs timi͡ak
+\vanb 8
+\msn tɛmɛk
+\vanb 8
+\mta taŋ͡mʷa
+\vanb 4
+\num taŋ
+\vanb 4
+\drg tŋ͡mʷɛ
+\vanb 5
+\drg ŋ͡mʷraɣ
+\vanb 3
+\kro ŋ͡mʷar
+\vanb 1
+\olr ŋ͡mʷaj
+\vanb 1
+\lkn ŋ͡mʷɪrɪ
+\vanb 2
+\mrl ŋʷɛr
+\vanb 1
+\dt 16/Nov/2011
+
+\pnv °tanine[n,r]e
+\psm straight; right
+\pva °teninere
+\vanb 1
+\pva °taninene
+\vanb 2
+\pva °taniniɣa
+\vanb 3
+\pncv
+\poc
+\cf °taɣolo
+\ps adj
+\div ___________
+\hiw tɪnnɪᶢʟ
+\vanb 1
+\sem straight; sufficient; correct; identical
+\ltg tənənir
+\vanb 1
+\lhi tɪnnɪj
+\vanb 1
+\lyp {tɔɣɔlɣɔl}
+\vlw tɛnɛnɛn
+\vanb 2
+\mtp tɛnɛnɛn
+\vanb 2
+\mtp {tɔɣɔlɣɔl}
+\lmg ʔɪnɪnɪ
+\vanb 2
+\vra ʔɪnɪnɪ
+\vanb 2
+\vrs tɛnɪnɪɣ
+\vanb 3
+\msn tɪnɪnɪɣ
+\vanb 3
+\mta taninene
+\vanb 2
+\mta taniniɣa
+\vanb 3
+\num taniniɣ
+\vanb 3
+\drg tniniɣ
+\vanb 3
+\kro
+\olr tɛnnɛ
+\vanb 2
+\lkn {tawɔlwɔl}
+\mrl tanɛ͡aɣ
+\vanb 3
+\dt 06/Sep/2011
+
+\pnv °tano-i
+\psm place for (s.th.)
+\ps
+\div
+\hiw tɵnɵ
+\hiw (tɵŋɵ)
+\ltg tənə
+\vlw n-tɔnɔ
+\mtp na-tnɔ
+\lmg ʔønø
+\vra ʔɔnɔ
+\vrs tønø
+\msn tɔnɔ
+\mta tano
+\num tɔnɔ
+\drg taːnɛ
+\rfc BG3-20a
+\olr tɔnɔ
+\mrl tɛn
+
+\dt 22/Sep/2011
+
+\pnv °taŋitaŋi
+\psm goatfish, Mullidae spp.
+\mtp nɪ-tɪŋtɛŋ
+\lmg ʔɛŋʔɛŋ
+\vrs tɛŋtɛŋ
+\mta taŋtaŋ
+\drg taːŋtaːŋ
+\lkn tæŋtæŋ
+
+\dt 12/Mar/2009
+
+\pnv °tara
+\psm cut, chop
+\pncv *taRa-ʔi
+\poc *taRaq
+\cf
+\ps vt
+\div
+\hiw taᶢʟə
+\ltg tarə
+\lhi taj
+\lyp
+\vlw taj
+\mtp taj
+\lmg ʔɒr
+\vra ʔara
+\vrs tar
+\msn tar
+\mta tara
+\num tar
+\drg tar
+\kro tar
+\olr
+\lkn tæræ
+\mrl tar
+\rfc BP3-13b
+\dt 07/Mar/2010
+
+\pnv °taraᵐbe~
+\psm body
+\pncv
+\ps
+\cf °[a,e]ᵐbe~
+\cf °tur(i,u)(ɣi)
+\div ________
+\hiw taᶢʟəpe-nə
+\ltg tarəpe-nə || tarəpie-nə
+\ltg {takʷŋʷi}
+\lhi n-tajpæ-n
+\lyp n-ʧajpɛ-n
+\vlw n-tajᵐbɛ-n
+\mtp na-tajᵐbɛ-n
+\mtp {na-tak͡pʷŋ͡mʷɪ-n}
+\lmg n-ʔɒrpæ-n
+\vra ʔirᵐbɪ-ɣi
+\vrs tarᵐbia-n
+\msn tarpɛ-n
+\mta tarape-na
+\mta {turia-na}
+\num {turɣi}
+\num {ᵐbɛ-k}
+\drg {turɣi}
+\drg {ᵐbɪ-k}
+\kro {na ᵐbɪ-k}
+\olr
+\lkn {ɛpɛ-k}
+\mrl {nɪ-lɪᵐbɪ} ??
+\dt 09/Nov/2011
+
+\pnv °tari
+\psm thousand
+\ps
+\div
+\ltg tɛr
+\lyp ʧɪj
+\mtp tɛj
+\vra ʔɛr
+\vrs tar
+\mta tar
+\drg taːr
+\olr tar
+\nt should be /taj/ !!
+\mrl tɛr
+
+\dt 06/Mar/2011
+
+\pnv °taru
+\psm cover; bake food in stone oven overnight
+\poc *taRu
+\sem cover up
+\ps
+\div
+\hiw tɔᶢʟ
+\ltg tɔr
+\lhi tɒj
+\lyp tɪj
+\vlw tɛj
+\mtp tɛj
+\vra ʔɔr
+\sem bake
+\vra ʔar
+\sem cover
+\rfc BG2-22a
+\vrs tœr
+\msn tɔr
+\mta tar
+\mrl tɞr
+
+\dt 08/Sep/2011
+
+\pnv °tasisi
+\psm small bird, prob. Lichmera incana
+\ps
+\div
+\mtp na-tsis
+\vrs wɪ/tɪsisis
+\mta tasis
+\num tisis
+\drg wa/tsis
+\lkn tistisis
+
+\dt 11/Oct/2006
+
+\pnv °tas[o,u][ŋi]
+\psm sharpen <wood>, carve
+\pva *tasi
+\vanb 1
+\pva *tasu
+\vanb 2
+\pva *tasoŋi
+\vanb 3
+\pva *tasuŋi
+\vanb 4
+\pncv
+\poc *tajim
+\cf
+\ps vt
+\div
+\hiw tɔt
+\vanb 1/2
+\ltg tɛh
+\vanb 1
+\nt vowel suggests this reflects the POc form *tajim !!  Hiw could too.
+\lhi
+\lyp ʧɪs
+\vanb 1
+\vlw
+\mtp tɛh
+\vanb 1/2
+\lmg
+\vra ʔɛs
+\rf Catriona (es, 'es)
+\vanb 1
+\vrs tœs
+\vanb 1/2
+\msn tɔs
+\vanb 2
+\mta tasoŋ
+\vanb 3
+\sem to adze to the size desired
+\num tsʊŋ
+\vanb 3
+\drg tsʊŋ
+\vanb 3
+\kro
+\olr tusuŋ
+\vanb 4
+\lkn tasuŋ
+\vanb 4
+\mrl tɛsʊŋ
+\vanb 3
+\sdi tasoŋe
+\vanb 3
+\sdg tasi
+\vanb 1
+\dt 18/Nov/2013
+
+\pnv °[ta]taᵐbe[ɣi]
+\hm 2
+\psm love, feel affection for s.o.; present s.o. with a gift
+\pva °taᵐbe
+\vanb 1
+\pva °tataᵐbeɣi
+\vanb 2
+\pncv *taᵐbe
+\ps
+\div
+\hiw təptep
+\sem affection; present
+\vanb 1
+\hiw tepje
+\et < *taᵐbe-a
+\sem feel affection for
+\ltg tep || təptep
+\sem affection; present
+\rfc FP1-31b
+\lhi tatpɪ
+\et < *tatabeɣi
+\vanb 2
+\lyp tam
+\vanb 1
+\vlw tam
+\vanb 1
+\sem feel affection for; give present
+\mtp tam
+\vanb 1
+\sem feel affection for; give present
+\mtp na-tamtam
+\sem affection; present
+\lmg
+\vra
+\vrs timti͡am
+\sem affection; present
+\msn
+\mta tape
+\vanb 1
+\mta tapeβa
+\sem affection; present
+\nt word borrowed into Mwotlap, Vurës, Lakon...
+\sem
+\num
+\drg
+\kro
+\olr
+\lkn tatpɪɣ
+\et < *tatabeɣi
+\vanb 2
+\mrl
+\dt 19/Sep/2011
+
+\pnv °tataᵐbʷai
+\psm carry over the shoulder on a stick
+\pncv
+\nt voyelles */ai/ grâce à LYP /ɪ/
+\cf °iwa
+\cf °roβali
+\cf °sasa
+\ps
+\div
+\hiw tatəˈkʷe
+\sem (vt) carry with stick; (n) carrying stick
+\ltg
+\lyp ʧatˈk͡pʷɪ
+\lhi tatˈkʷæ
+\vlw
+\mtp tɔtˈk͡pʷɛ
+\lmg ʔak͡pʷɛ
+\mrl
+\div
+\dt 17/Dec/2007
+
+\pnv °[ta]taro
+\psm pray
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw (tataᶢʟo)
+\nt borrowed from Mota
+\ltg (tataro)
+\lhi
+\lyp tataj
+\vlw tataj
+\mtp tataj
+\lmg ʔaʔar
+\vra ʔaʔar
+\vrs tatar
+\msn
+\mta tataro
+\num
+\drg tatar
+\kro
+\olr
+\lkn tataː
+\mrl attar
+\dt 08/Mar/2010
+
+\pnv °tau
+\psm year, season
+\pncv
+\poc *taqun
+\cf
+\ps n
+\div
+\hiw tɔ
+\ltg tɔ
+\lhi tæ
+\lyp ʧɪ
+\vlw
+\mtp ɪtɛ
+\lmg
+\vra ʔɛ
+\vrs tɔ
+\vrs tøü
+\sem season of
+\vrs tøü-k
+\msn tɔ
+\msn tuu-k
+\mta tau
+\num tau
+\drg taːw
+\nt also noted /taʊ/
+\kro taw
+\olr tu
+\lkn ta
+\lkn {ʧam}
+\mrl tɞ
+\nt d'après Tryon 1976: 435
+\dt 18/Nov/2011
+
+\pnv °t[au,o]ri
+\pva °tauri
+\pva °tori
+\psm hold in o.'s hands
+\cf °ɣisi
+\ps
+\div
+\hiw (təᶢʟɔɣ)
+\ltg tər
+\lhi tɪj
+\lyp ʧøj
+\vlw tɪj
+\mtp tɪj
+\lmg ʔør
+\rfc EG2-04b
+\msn tʊr
+\mta taur
+\num tɪr
+\drg tur
+\kro tʊr
+\mrl tɵr
+
+\dt 20/Nov/2011
+
+\pnv *t[au,o]ri-mate
+\psm make ready; be ready
+\pva °tauri-mate
+\vanb 1
+\pva °tori-mate
+\vanb 2
+\ps vi/vt
+\div
+\lyp ʧøjmat
+\vanb 2
+\sem make/be ready; perfectly, totally
+\lmg ʔørmaʔ
+\vanb 2
+\sem make/be ready; perfectly, totally
+\mtp tɪjmat
+\vanb 2
+\mta taurmate
+\vanb 1
+
+\dt 15/Apr/2010
+
+\pnv °tauwe
+\hm 1
+\psm conch shell, Charonia tritonis
+\pncv *taβui
+\poc *tapuʀi
+\hiw təjɵ
+\ltg təwə
+\lhi n-tɔw
+\lyp n-tʊw
+\mtp na-tʊ
+\lmg n-ʔʊw
+\vrs tʊw
+\msn tʊw
+\mta tawe
+\drg tʊw
+\olr tʊw
+\lkn taʊ
+\mrl nɞ-tʊ
+
+\dt 14/Mar/2010
+
+\pnv °tauwe
+\hm 2
+\psm mountain
+\pncv *taβua
+\hiw tɵwə
+\ltg təwə
+\mtp na-tʊ
+\lmg ʔʊw
+\vra ʔuwʊ
+\vrs tʊw
+\msn tʊw
+\mta tawe
+\drg tʊw
+\kro tʊw
+\olr tʊw
+\lkn taʊw
+
+\dt 29/Mar/2009
+
+\pnv °taw[aɣ]asi
+\psm flower
+\ps
+\div
+\ltg təwɛh
+\lhi tɔwæh
+\lyp n-tawsi
+\vlw n-tɪwɪh
+\mtp na-tawhi
+\mtp na-twɛh
+\lmg wɛs
+\vra ʔawas
+\vrs tɛwɛs
+\vrs tawaɣas
+\mta tawaɣasi
+\num taβaɣɛs
+\drg twaːs
+\kro tɛwɛ͡as
+\olr tawas
+\lkn tawæh
+
+\dt 14/Oct/2006
+
+\pnv °teβe
+\psm cut with blade (food, fruit), slice
+\pncv
+\ps
+\div
+\hiw tɪβ
+\ltg siβ
+\lhi tɛp
+\vlw
+\mtp tɛp
+\lmg ʔɛβ
+\vra ʔɪβ
+\vrs
+\msn
+\mta teβe
+\num tɛβ
+\drg tɛβ
+\kro
+\olr taβa
+\olr sɪβ
+\lkn sɪp
+\mrl tɪβ
+\dt 07/Mar/2010
+
+\pnv °teⁿd[e,o]
+\psm see, look
+\pncv
+\cf °ilo
+\cf °[i,e]te(a)
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp
+\lmg ʔɛt
+\vra ʔɪn
+\vrs tɛn
+\sem do tentatively (Conative) [< see  ?]
+\nt should be /tɪn/ ?
+\msn tɛn
+\sem do tentatively (Conative) [< see  ?]
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Jun/2011
+
+\pnv °teᵑg[e,o]
+\psm speak, say; (redup.) speech, language
+\pncv
+\ps
+\div
+\lhi
+\vlw
+\mtp
+\lmg tɛk
+\vra tɪk
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Apr/2007
+
+\pnv °tere
+\psm (bird, hen) peck
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp tɛj
+\lmg ʔɛr
+\vra
+\vrs tɪr
+\msn
+\mta tere
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 02/Apr/2007
+
+\pnv °terit(i,u)
+\psm porcupine fish, Diodon spp.
+\pva
+\poc *taRutu
+\nt =PEO from Geraghty
+\ps
+\div
+\hiw təᶢʟit
+\vrs tɪrɪt
+\mta terit
+\drg trit
+\olr tirit
+\olr wʊ/tɪritrit
+\mrl nɛ-tɛrit
+
+\dt 12/Sep/2009
+
+\pnv °tesi
+\psm write
+\pncv
+\poc
+\cf °r[a,e]βe
+\ps vt
+\div
+\hiw tɵt
+\hiw tɪt
+\ltg təh
+\lhi
+\lyp
+\vlw {jap}
+\mtp {jap}
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg {rɛβ}
+\kro
+\olr
+\lkn tɪh
+\mrl
+\dt 09/Mar/2010
+
+\pnv °tiana
+\psm pregnant
+\pncv
+\poc
+\cf °toᵐbʷa
+\ps adj
+\div
+\hiw {tɔkʷə}
+\ltg senə
+\lhi
+\lyp
+\vlw tian
+\mtp ɪtan
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 22/Oct/2014
+
+\pnv °tiᵐbʷa[ŋi]
+\psm blunt arrow; shoot a blunt arrow (or stone…) at
+\pncv *tiᵐbʷa
+\sem hit, knock against; to shoot an arrow; type of arrow
+\ps
+\div
+\hiw
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp tɪk͡pʷ
+\sem shoot a blunt arrow (or stone…) at
+\mtp nɪ-tɪk͡pʷ
+\sem blunt arrow
+\lmg
+\vra
+\vrs tɪk͡pʷ
+\msn
+\mta tik͡pʷa
+\sem shoot; blunt arrow+
+\mta tik͡pʷaŋ
+\sem shoot and hit
+\num
+\drg
+\kro
+\olr
+\lkn sik͡pʷæŋ
+\et < °tiˈbʷaŋi
+\sem arrow  (w. kind?)
+\rf
+\mrl
+\div
+\dt 09/Mar/2010
+
+\pnv **tiβaɣi
+\psm show <s.th.>, reveal
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp tɪβɛɣ
+\sem (rare) reveal to o.'s heirs their land properties
+\nq check meaning;  compare Mota /tuvag/ = sell...  cf. BG1-16b
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn siβæ
+\mrl
+\dt 09/Mar/2010
+
+\pnv °tio
+\psm goatfish, Mullidae sp.
+\pncv
+\poc *tiqo
+\cf °mʷasa
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp nɪ-tɪ
+\lmg
+\vra
+\vrs
+\msn
+\mta tio
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 24/Mar/2010
+
+\pnv °tira
+\psm stand
+\ps
+\div
+\lmg ʔær
+\mta tira
+
+\dt 11/Oct/2006
+
+\pnv °[ti]tiro
+\psm reflect; watch o.'s own reflection
+\pncv *tiro
+\sem gaze, look at reflection
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp nɪ-tɪj/nin
+\lmg
+\vra
+\vrs
+\msn tɪtɪr
+\mta tiro
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl tɛtɛ͡ar
+\dt 15/Apr/2010
+
+\pnv °toa
+\psm hen, chicken
+\pncv
+\poc *toqa
+\ps
+\div
+\hiw so
+\ltg so
+\lhi n-tɒ
+\lyp n-ʧœ
+\vlw
+\mtp (-tɔ)
+\lmg n-tɔ
+\vra tuɔ
+\vrs tɔ
+\msn tɔ
+\mta toa
+\num tɔ
+\drg tɔ
+\kro
+\olr tɔ
+\lkn tɔ
+\mrl
+\dt 06/Mar/2010
+
+\pnv °toᵐbʷa
+\psm belly
+\pncv
+\poc *toᵐbʷa
+\cf °tiana
+\sem pregnant
+\ps nop
+\div
+\hiw kkʷa-nə
+\sem his/her belly
+\hiw tɔkʷə
+\sem pregnant
+\ltg təkʷe-nə
+\lhi n-tɔkʷa-n
+\lyp n-tak͡pʷa-n
+\vlw n-taᵑg͡bʷa-n
+\mtp na-tk͡pʷa-n
+\mtp tɔk͡pʷsis
+\sem (eat) one's fill
+\lmg ʔɒk͡pʷɒ-n
+\rfc EG2-08b
+\vra ʔak͡pʷa-ɣi
+\vrs na tak͡pʷa-n
+\vrs wɔtɔk͡pʷtɔk͡pʷ
+\sem pregnant
+\msn tak͡pʷa-n
+\rfc AG5-19b
+\mta na tok͡pʷa-na
+\num na tak͡pʷa-n
+\drg na tk͡pʷa-n
+\kro
+\olr tak͡pʷa-n
+\olr tɔktɔk
+\sem (eat) one's fill
+\lkn tok͡pʷa-n
+\mrl na-takʷa-n
+\dt 22/Oct/2014
+
+\pnv °toβu
+\psm sugarcane, Saccharum
+\pncv *tovu
+\poc *topu
+\cf
+\ps n
+\div
+\tea to
+\lvn lepie
+\tnm ova
+\hiw tɵ
+\ltg tə
+\lhi n-tɪ
+\lyp n-ʧø
+\vlw nʊ-tʊ
+\mtp nʊ-tʊw
+\lmg n-ʔøβ
+\vra ʔʊβ
+\vrs tøβ
+\msn
+\mta tou
+\num tʊ
+\drg tʊ
+\kro
+\olr {ɣɪ}
+\lkn {ɣahæ}
+\mrl nɵ-tɵ͡ʊ
+\ark roβu
+\dt 13/Mar/2010
+
+\pnv °toɣo
+\psm wild cane, Miscanthus floridulus
+\ps
+\div
+\hiw toɣ
+\ltg toɣ
+\lhi n-tɛ
+\lyp n-tɔ
+\vlw nɔ-tɔɣ
+\mtp nɔ-tɔɣ
+\lmg n-ʔœɣ
+\vra wʊ/ʔʊɣ
+\mta toɣo
+\drg wa/tɔɣ
+\kro wɔ/tɔɣ
+\olr wʊ/tɔː
+\lkn tɔɣ
+
+\dt 06/Mar/2010
+
+\pnv °[toɣo]toɣoa
+\psm stiff, hard
+\pncv
+\poc
+\cf
+\ps adj
+\div
+\hiw tɣo
+\sem stiff, tight
+\ltg təɣo
+\sem stiff; hard, strong
+\lhi
+\lyp
+\vlw
+\mtp tɔɣɔtɣɔ || tɔtɣɔ
+\sem quick; quickly
+\lmg
+\vra
+\vrs
+\msn
+\mta toɣtoɣoa
+\sem stiff, hard, tight, not slack; quickly
+\num
+\drg
+\kro
+\olr tɔɣtɔɣɔ
+\sem stiff (from death)
+\rfc BG4-41b
+\lkn
+\mrl
+\dt 06/Sep/2011
+
+\pnv °tomaɣo
+\psm sweet yam, Dioscorea esculenta
+\ps n
+\div
+\hiw təmeɣ
+\ltg təmeɣ
+\lhi tɔma
+\lyp n-ʧøma
+\vlw {n-kasan}
+\mtp nɔ-tɔmaɣ
+\lmg n-ʔamaɣ
+\vra ʔɔmaɣ
+\vrs tamaɣ
+\msn tamaɣ
+\mta tomaɣo
+\drg wa/tmaɣ
+\olr wɔ/tamaː
+\lkn tamaɣ
+
+\dt 12/Mar/2010
+
+\pnv °toretore
+\psm make a speech
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp tɔjtɔj
+\lmg ʔœrʔœr
+\vra
+\vrs
+\msn
+\mta toretore
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 02/Apr/2007
+
+\pnv °totoɣale
+\psm statue, sculpture; effigy, likeness, picture; photo
+\et chop halfway
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw
+\ltg (totoɣale)
+\ltg {məmʉ}
+\lhi
+\lyp
+\vlw
+\mtp nɔ-tɔtɣal
+\lmg ʔɔɣal
+\vra ʔʊɣal
+\vrs tʊtɣi͡al
+\msn
+\mta totoɣale
+\num
+\drg
+\kro
+\olr
+\lkn tɔtɣæl
+\rfc BP5-13a
+\mrl nɛ-tɛtɣɛl
+\dt 11/Sep/2011
+
+\pnv **towo
+\psm (plant) grow
+\pncv
+\ps vi
+\div
+\hiw tow
+\ltg sow
+\lyp
+\lhi ɛttɛw
+\vlw
+\mtp mɔ.tɔw
+\lmg
+\vra
+\vrs
+\msn tʊtʊw
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 07/Mar/2010
+
+\pnv °towotowo
+\psm be first; before; in olden days
+\ps
+\cf °mʷoa[ɣa]
+\div
+\hiw towtow
+\ltg təwtow
+\lmg ʔœwʔœw
+\vra ʔʊwʔʊw
+
+\dt 20/Nov/2011
+
+\pnv °tua-ᵑgu
+\psm my fellow; me and X
+\ps
+\div
+\mtp (i/tan)
+\et < °i tua-na
+\sem the one… the other
+\lmg (ʔɒwɒn)
+\et < °ta-tua-na  (?)
+\sem the one… the other; other
+\vra ʔɔ-k
+\vrs tœ-k
+\msn tɔ-k
+\mta tua-k
+\num ta-k
+\drg tʊ-k
+\lkn tɪ-k
+\mrl tɔ-k
+
+\dt 06/Apr/2007
+
+\pnv °tua(ɣ)a
+\psm elder same-sex sibling
+\pncv
+\poc
+\cf °tasi
+\sem younger same-sex sibling
+\cf °tua
+\sem companion, friend
+\ps nop
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta tuaɣa-k
+\num tua-k
+\drg
+\kro
+\olr tua-k
+\lkn tua-k
+\mrl tuɔ-k
+\sdi tua-ku
+\ark roɣa-k
+\dt 21/Dec/2018
+
+\pnv °tuai
+\psm long ago, ancient
+\pncv
+\poc *tuaRi
+\cf
+\ps
+\div
+\hiw ᶢʟo\sse
+\ltg sɛ
+\lhi ttæ
+\lyp ʧø
+\vlw
+\mtp n\ɪtɛ
+\lmg
+\vra
+\vrs ɣü-tüœ
+\msn
+\mta tuai
+\num
+\drg attua
+\rfc BG4-12a/b
+\rfc Drg.Wrisris.35
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Dec/2013
+
+\pnv °tuara
+\psm another; one… the other one; a, Indefinite Article
+\ps
+\div
+\vrs tʊar
+\msn tʊar
+\mta tuara
+\num tuar
+\drg tuar
+\kro tuar
+\olr taj
+\lkn tɔː
+\mrl tuar
+
+\dt 02/Apr/2007
+
+\pnv °tuatua-ᵑgu
+\psm my opposite-sex sibling
+\ps
+\div
+\hiw tʉtβɔ-k
+\ltg səse-k
+\lhi tɛtɒ-k
+\mtp tɪtɛ-k
+\lmg ʔœwœ-k
+\vra ʔɔwɔ-k
+\vrs tütüœ-k
+\msn tutuɔ-k
+\mta tutua-k
+\drg tutaː-k
+\kro tɛtɛ͡a-k
+\olr tati-k
+\lkn tata-k
+\mrl tɞtɞ-k
+
+\dt 29/Aug/2009
+
+\pnv °tuᵐbu
+\hm 2
+\psm (water) be plenty, be torrential
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra ʔum
+\sem be torrential
+\rfc EG2-32a; Séwées-'i'i.44
+\vrs tüm
+\sem be torrential
+\rfc EG2-32a
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\ark tup
+\dt 18/Nov/2011
+
+\pnv °tuᵐbu-ᵑgu
+\hm 1
+\psm my grandparent; my grandchild
+\poc *tuᵐbu-
+\cf °ᵐbuaᵐbua
+\ltg tukʷu
+\mtp i/tk͡pʷu-k
+\vra ʔuᵐbu-k
+\vrs tüᵐbü-k
+\msn tupu-k
+\mta tupu-k
+\num tuᵐbu-k
+\drg tᵐbu-k
+\kro tuᵐbu-k
+\lkn tupu-k
+
+\dt 07/Sep/2011
+
+\pnv °tuᵐbʷei
+\psm cultivated garden
+\ps
+\div
+\lhi tɪkʷɪ
+\vlw n-tɪᵑg͡bʷɪ
+\mtp nɪ-tk͡pʷɪ
+\lmg ʔɪk͡pʷɪ
+\vra ʔɪk͡pʷɪ
+\vrs tük͡pʷɪ
+\msn tuk͡pʷɪ
+\mta tk͡pʷei
+\olr tuk͡pʷɪ
+
+\dt 03/Dec/2007
+
+\pnv °tuβa
+\psm cough
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw tʉβə
+\sem (v) cough
+\hiw tβa
+\sem (n) cough
+\et < °tuβa-e (?)
+\nt cf. *sawa-e…
+\hiw {ɣepje}
+\sem (n) cough
+\ltg {eləwɛβ}
+\lhi
+\lyp
+\vlw
+\mtp {wuj}
+\lmg
+\vra ʔuβʊ
+\sem (v) cough
+\vrs tʊp
+\sem (n) cough
+\rfc FP4-14b
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 16/Sep/2010
+
+\pnv °tuᵑga
+\psm upper sky, where the stars are; (hence) honourific rank
+\fr la voûte céleste
+\pncv
+\poc
+\cf
+\ps n
+\div
+\hiw
+\ltg tʉkə
+\sem horizon (not sky)
+\rfc FP1-10b
+\ltg rahol-tʉkə
+\sem ‘drifts to the horizon’, personal name
+\ltg kilɛ-tʉkə
+\sem ‘beyond the sky/horizon’, honourific title
+\lhi
+\lyp
+\vlw
+\mtp nʊ-tʊk
+\sem upper sky (by day or by night)
+\rfc BP2-10b
+\lmg
+\vra
+\vrs tʊk/mɛrɛŋ
+\rf Catriona
+\msn tʊk
+\mta tuka
+\num wu\tuk
+\sem ‘beyond the sky’, honorific title
+\nt Hans: “3rd rank, may marry 10 women”
+\drg
+\kro
+\olr
+\lkn tʊk
+\sem ‘beyond the sky’, honorific title
+\mrl
+\dt 16/Nov/2011
+
+\pnv °tumus(i,u)
+\pva °sumut(i,u)
+\psm picot, Siganus sp.
+\ps
+\div
+\lmg ʔumus
+\vra ʔumus
+\mta sumut
+\drg smut
+\lkn tumuh
+
+\dt 17/Oct/2006
+
+\pnv °tun[i,u]
+\psm acquire <s.th. valuable> through formal exchange of goods
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw tin
+\sem buy
+\ltg tʉn
+\sem buy
+\lhi
+\lyp
+\vlw
+\mtp tin
+\sem
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 13/Aug/2010
+
+\pnv °tur(i,u)(ɣi)
+\psm body, trunk; the real, main, very X; really
+\ps
+\cf °[a,e]ᵐbe~
+\cf °taraᵐbe~
+\div _______
+\hiw tiᶢʟ
+\ltg sir
+\lhi tij
+\lyp ʧij
+\mtp tij
+\lmg ʔir(ɣi)
+\sem true
+\vra ʔirɣi
+\sem true
+\vrs türɣü
+\vrs türɣi
+\mta tur
+\sem true
+\mta turia-
+\sem body
+\num turɣi-
+\sem body
+\drg tru
+\sem true
+\drg turɣi
+\sem body
+\kro turu
+\olr tiriː
+\lkn tiriɣ
+\mrl tʉr
+\sem true
+\mrl nʉ-tʉri-k
+\sem body
+
+\dt 05/Sep/2011
+
+\pnv °tut(i,u)
+\psm knock (s.o., s.th.) with fist
+\pncv
+\ps
+\div _________
+\hiw
+\ltg tʉt
+\lyp
+\lhi
+\vlw
+\mtp tit
+\sem knock with fist; esp. technique used in catching birds
+\lmg ʔuʔ
+\sem knock with fist; esp. technique used in catching birds
+\vra ʔuʔ
+\sem knock with fist; esp. technique used in catching birds
+\vrs tüt
+\sem knock with fist; esp. technique used in catching birds
+\msn tut
+\sem knock with fist; esp. technique used in catching birds
+\mta tut
+\sem knock with fist; esp. technique used in catching birds
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\div
+\dt 09/Mar/2010
+
+\pnv °tutunu
+\psm hot, warm
+\pncv *tunu
+\poc
+\cf °saβu
+\ps adj
+\div _______
+\hiw ttin
+\ltg tʉn
+\lhi {ssɒw}
+\lyp {ssøw}
+\vlw {sɛw}
+\mtp {sɛw}
+\lmg ʔiʔin
+\vra ʔiʔin
+\vrs tütün
+\msn tutun
+\mta tutun
+\num ttun
+\drg ttun
+\kro
+\olr
+\lkn tutun
+\mrl
+\dt 14/May/2008
+
+\pnv °tuwa[l]e
+\psm one
+\ps
+\div
+\hiw tʉwe
+\ltg tʉwe
+\lhi βɪ-twa
+\lyp βu-ʧuwa
+\mtp βi-twaɣ
+\lmg βʊ/wal
+\vra fʊ/wal
+\vrs tiwial
+\msn tawal
+\mta twale
+\num ti-twal
+\drg su-twal
+\kro βu-twal
+\lkn tuwa
+\mrl tʉwɛl
+
+\dt 16/Nov/2011
+
+\pnv °tuwus(i,u)
+\psm accumulation of ashes
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw
+\mtp
+\lmg ʔuwus
+\sem ashes
+\vra
+\vrs
+\msn
+\mta tuwus
+\sem accumulation of ashes in a fire-place
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 17/Oct/2006
+
+\pnv °tVᵐbʷa[i]
+\psm not yet; wait!
+\pva °tibʷa
+\vanb 1
+\pva °tubʷai
+\vanb 2
+\pva °tabʷai
+\vanb 3
+\pncv
+\poc
+\cf
+\ps excl
+\div
+\hiw tɔkʷe
+\vanb 3
+\ltg takʷɛ
+\vanb 3
+\lhi tɒkʷɒ
+\vanb 3
+\nt noté /tɔkʷɔ/, je corrige d'après étym. ??
+\lyp ʧɛk͡pʷɛ
+\vanb 2
+\vlw tɛᵑg͡bʷɛ
+\vanb 2
+\mtp tɛk͡pʷɛ
+\vanb 2
+\mtp k͡pʷɛtɛ
+\vanb 2
+\lmg {kiʔi}
+\vra {k͡pʷɛʔi}
+\vrs {kɪti}
+\msn tur\tɪk͡pʷ
+\vanb 1
+\mta tik͡pʷa
+\vanb 1
+\sem yet, by and by;  [excl.] presently! wait a bit!
+\rf Codrington
+\mta t(u)k͡pʷe
+\vanb 2
+\num tuk͡pʷa
+\vanb 2
+\drg tuk͡pʷa
+\vanb 2
+\kro tuk͡pʷa
+\vanb 2
+\olr {asβal}
+\lkn {læwʊn}
+\mrl tɪkʷɪ/tɛ͡a
+\vanb 2
+\mrl tukʷa-tu
+\vanb 2
+\dt 29/Aug/2009
+
+\pnv °uβi
+\psm blow (pipe, conch shell)
+\pncv
+\poc *upi
+\cf
+\ps vt
+\div
+\tea ~βi
+\hiw
+\ltg ʉβ
+\lhi
+\lyp
+\vlw
+\mtp ip
+\lmg
+\vra
+\vrs
+\msn uɸ
+\mta
+\num
+\drg uw
+\kro
+\olr vuv
+\lkn {pupuh}
+\mrl
+\dt 03/Apr/2016
+
+\pnv °udu
+\psm seaworm, Annelides
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg ʉt
+\lhi
+\lyp
+\vlw
+\mtp n-in
+\lmg
+\vra
+\vrs ün
+\msn
+\mta un
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 16/Nov/2011
+
+\pnv °[u,i]ra[ŋi]
+\psm crayfish, lobster+
+\pva °ira
+\vanb 1
+\pva °ura
+\vanb 2
+\pva °uraŋi
+\vanb 3
+\pva °raɣu
+\vanb 4
+\nt °raɣu est-il étymologiquement lié à *ʔuraŋ ??
+\pncv *ʔuraŋ
+\poc *quraŋ
+\ps
+\div
+\hiw ᶢʟɔɣ
+\vanb 4
+\ltg rɔɣ
+\vanb 4
+\lhi ɴ-jɒ
+\vanb 4
+\lyp n-i͡ɛj
+\vanb 1
+\vlw n-ɪj
+\vanb 1
+\mtp n-ɪj
+\vanb 1
+\lmg n-ær
+\vanb 1
+\vra n\irɪ
+\vanb 1
+\vrs ʊr
+\vanb 2
+\msn ʊr
+\vanb 2
+\mta ura
+\vanb 2
+\num w\ʊr
+\vanb 2
+\drg ʊr
+\vanb 2
+\kro rɛ͡aŋ
+\vanb 3
+\olr n\urɪŋ
+\vanb 3
+\lkn uræŋ
+\vanb 3
+\mrl n-ə͡ʊr
+\vanb 2
+\dt 14/Mar/2010
+
+\pnv °ulaɣi
+\psm end a song with final verse
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp ɪlɛɣ
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn ulæɣ
+\mrl
+\dt 09/Mar/2010
+
+\pnv °ulo
+\psm howl, cry; call
+\pncv
+\poc
+\cf °βare
+\ps
+\div
+\hiw ɵjə
+\sem yell
+\ltg ələ
+\sem (cock) crow; yell
+\lhi ɔl
+\sem yell, cry; call s.o.; name s.th.
+\lyp ʊl
+\sem yell, cry; call s.o.; name s.th.
+\vlw ʊl
+\sem yell, cry; call s.o.; name s.th.
+\mtp ʊl
+\sem yell, cry; call s.o.; name s.th.
+\lmg ʊl
+\sem yell, cry; call s.o.; name s.th.
+\vra ulʊ
+\sem yell, cry; call s.o.; name s.th.
+\vrs ʊl
+\sem yell, cry; call s.o.; name s.th.
+\msn ʊl
+\sem yell, cry; call s.o.; name s.th.
+\mta ulo
+\sem howl, cry
+\num {βaβar}
+\drg {βar}
+\kro {βar}
+\olr {βaj}
+\lkn ʊl
+\sem shout, yell
+\lkn {βæː}
+\sem call a name+
+\mrl ʊlʊl
+\rfc BP3-13a
+\dt 16/Nov/2011
+
+\pnv °ulusu-i
+\psm top of (tree); end
+\ps
+\div
+\hiw nə jʉs(i)
+\vlw n-lisi
+\mtp n-ulsi
+\lmg {n-laŋsi || n-ŋul}
+\vra {n-laŋ͡mʷsi}
+\vrs ilsi
+\msn ulsu ~ ilsi
+\mta ulus
+\num lus
+\drg lʊs-ɣi
+\lkn uhli
+\mrl n-ulsi
+
+\dt 10/Mar/2010
+
+\pnv °u[m]u
+\psm stone oven
+\pva °umu
+\vanb 1
+\pva °uu
+\vanb 2
+\pncv *ʔumu
+\poc *qumun
+\cf °ᵐbʷaraŋisi
+\ps
+\div
+\hiw (kʷəᶢʟɔŋ) ʉ
+\vanb 2
+\et < *bʷaraŋi ˈuu < …*umu  (?)
+\lit hole of oven
+\ltg {lʉɣʉ}
+\lhi n-nuŋ
+\vanb 1
+\et < °na uŋʷu < *na umʷu < *na umu
+\lyp
+\vlw n-ᵑg͡bʷɪjɪŋ.i
+\vanb 2
+\et < *bʷaraŋi ˈuu < …*umu  (?)
+\lit hole of oven
+\mtp na-k͡pʷjɪŋ.i
+\vanb 2
+\et < *bʷaraŋi ˈuu
+\lit hole of oven
+\lmg
+\vra
+\vrs üm
+\vanb 1
+\msn um
+\vanb 1
+\mta um
+\vanb 1
+\num w \ɪm
+\vanb 1
+\drg um
+\vanb 1
+\kro um
+\vanb 1
+\olr n\um
+\vanb 1
+\lkn um
+\vanb 1
+\mrl n-ʉm
+\vanb 1
+\div
+\dt 16/Nov/2011
+
+\pnv °uro
+\psm [n] bamboo drum; [vt] hit with two sticks
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw (kʷɔt)-ɵᶢʟə
+\sem bamboo drum
+\hiw ɵᶢʟə(ŋi)
+\sem hit with stick
+\ltg ərə
+\sem bamboo drum
+\ltg ərə(ŋi)
+\sem hit with stick
+\lhi
+\lyp n-wʊ\øj
+\vlw
+\mtp nɪ-βɪt\ʊj
+\lmg
+\vra
+\vrs
+\msn wɔβɛlɛɣ\ʊr
+\nt source: doc Emma — Phonetics unsure.
+\nt C:\Alex\Langues Vanuatu\Torba\Vanua Lava\Alex\Translation-in-Mwesen_D05_Emma.pdf
+\mta βatɣe\uro
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dc 09/Mar/2010
+\dt 03/Jan/2013
+
+\pnv °uru
+\psm laugh
+\pncv *uru
+\poc
+\nq is this conservative?  found throughout Vanuatu...
+\cf °ᵐbor(a,o)
+\cf °ri[w]a
+\ps vi
+\div
+\drg
+\kro ur
+\rf Tryon?
+\kro βʊr-urur
+\olr uj
+\lkn ʔuː
+\mrl {manman}
+\dt 17/Nov/2011
+
+\pnv °usuri
+\psm (vt) follow; (postv) following, after
+\pncv *ʔusu-ri
+\sem follow (along)
+\poc *suRi
+\cf
+\ps
+\div
+\hiw ʉᶢʟ
+\ltg ʉri
+\lhi lu\huj
+\lyp lil\sij
+\vlw lʊl\hij
+\mtp lʊl\hij
+\lmg lil\sir
+\vra li\sir
+\vrs sür
+\msn sur
+\mta usur
+\num usur
+\drg srɪɣ
+\kro sur
+\olr tu\suj
+\lkn suːsuː
+\mrl (ɣʉ)sʉr
+\rfc BP3-22b
+\ark
+\dt 10/Mar/2010
+
+\pnv °uto
+\psm dive, swim under water
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw ɵtə
+\ltg ətə
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta uto
+\sem ?
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 10/Mar/2010
+
+\pnv °utu
+\psm k.o. long fish with shining scales, similar to barracuda
+\pncv
+\poc *qutur
+\rf Osmond p.36
+\cf °ono
+\cf °liwatV
+\ps n
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta utu
+\sem large long fish with very sharp teeth and small scales:  a sphyraenid, barracuda
+\num
+\drg
+\kro ut
+\sem Hemirhamphus (??)
+\kro ut ŋɔrŋɔr
+\sem mackerel, Scomberomorus
+\olr ut
+\sem Hemirhamphus (??)
+\lkn ut ŋɔːŋɔː
+\sem mackerel, Scomberomorus
+\mrl
+\dt 24/Mar/2010
+
+\pnv °waᵑga
+\psm boat, esp. canoe
+\pncv *waᵑga
+\poc *waᵑgaŋ
+\cf
+\ps
+\div
+\hiw wakə
+\sem ship
+\ltg ekə
+\sem ship
+\lhi n-ɒk
+\nt /n-ɔk/ ou /n-ɒk/  ?
+\lyp n-ɔŋ
+\rfc FG4-05b
+\vlw
+\mtp ni-si\ɔk
+\lmg n-ɔk
+\rfc EG2-08a
+\vra n\aka
+\vrs ak
+\msn ak
+\msn kɔ-
+\mta aka
+\num w\ak
+\drg ak
+\kro ak
+\olr n\ak
+\lkn n-ak
+\mrl
+\dt 05/Mar/2010
+
+\pnv °walu[su]
+\psm (my) brother-in-law; (my) sister-in-law
+\pva °walu-ᵑgu
+\vanb 1
+\pva °walusu
+\vanb 2
+\pva °walu
+\vanb 3
+\ps
+\div
+\ltg wəlʉ-k
+\vanb 1
+\vlw wulus
+\vanb 2
+\mtp wulus
+\vanb 2
+\mtp wuluk
+\vanb 1
+\lmg wulu-k
+\vanb 1
+\vra wulu-k
+\vanb 1
+\vrs wølüs
+\vanb 2
+\vrs rœ\wœl
+\vanb 3
+\msn wulu-k
+\vanb 1
+\mta walu
+\vanb 3
+\mta walu-k
+\vanb 1
+\mrl rɔ\wɞl
+\vanb 3
+
+\dt 06/Apr/2007
+
+\pnv °wari
+\psm (pig tusk) come out in circle
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw
+\ltg wɛr
+\lhi
+\lyp
+\vlw
+\mtp wɛj
+\lmg
+\vra
+\vrs
+\msn
+\mta war
+\num
+\drg waːr
+\kro
+\olr waj
+\lkn wæː
+\mrl
+\dt 09/Mar/2010
+
+\pnv °wasa
+\psm reach; until
+\pncv
+\cf °ⁿdiŋa
+\ps
+\div
+\hiw watə
+\ltg wahə
+\lyp was
+\lhi was
+\vlw
+\mtp
+\lmg wɒs
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 03/Dec/2007
+
+\pnv °wasi
+\psm string; sinew
+\pncv *wasi ??
+\poc
+\cf
+\ps n
+\div
+\hiw wɔt
+\sem string
+\ltg ɛh
+\sem string, cobweb; sinew+
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra
+\vrs
+\msn
+\mta ɣa\as
+\sem sinew, tendon
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl nɛ-ɣɛ\wɛs
+\sem string
+\ark
+\dt 09/Mar/2010
+
+\pnv °wawasiɣV
+\psm k.o. fish, Lethrinus harak
+\pncv
+\poc
+\cf °wesula
+\ps n
+\div
+\hiw wawəsiɣə
+\rfc EG3-02b
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp na-wawsɪ
+\lmg wɒwsæɣ
+\vra
+\vrs wawasɪɣ
+\sem Lethrinus miniatus
+\msn
+\mta
+\num
+\drg wawsɪɣ
+\kro
+\olr
+\lkn wʊwsɪɣ
+\mrl
+\dt 25/Mar/2010
+
+\pnv °waRisa
+\psm 2 days from now, esp. in future
+\pva
+\pncv *waRisa
+\poc *waRisa
+\cf °ana-waRisa
+\ps adv
+\div _________
+\hiw wuᶢʟjə
+\ltg wuriə
+\lhi jɛh
+\lyp jɛs
+\mtp ʊjɪh
+\vrs ɔrɪs
+\msn wɪrɪs
+\rfc AG5-34b, 36b
+\mta (a)risa
+\num ais
+\drg {ŋasak}
+\lkn aɪh
+\mrl {mɛrɛn-tɪɣɪ}
+\rfc BP3-13a + 23b
+\nt
+\dt 22/Sep/2011
+
+\pnv °wesula
+\psm k.o. fish, Lethrinus sp.
+\pncv
+\poc
+\cf °wawasiɣV
+\ps n
+\div
+\hiw
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp
+\lmg
+\vra wusulʊ
+\sem Lethrinus harak
+\vrs
+\msn
+\mta wesula
+\sem a fish
+\num
+\drg wsʊl
+\sem Lethrinus miniatus
+\kro
+\olr
+\lkn wʊhʊl
+\sem Lethrinus miniatus
+\mrl
+\dt 25/Mar/2010
+
+\pnv °wet[i,u]
+\psm k.o. song & dance
+\pncv
+\poc
+\cf
+\ps
+\div
+\hiw wɪt
+\ltg wet
+\lhi
+\lyp
+\vlw
+\mtp nɪ-wɪt
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °wia
+\psm good
+\ps
+\div
+\hiw wjə
+\ltg ɣɛ/wiə
+\vlw ɣɛ/wɪ
+\mtp wɪ
+\lmg wi
+\vra wiɪ
+\vrs wɪ
+\msn wɪ
+\mta wia
+\drg wɪ
+\kro wɪ
+\olr wɪ
+\lkn wɪ
+\mrl wɛ͡a
+
+\dt 01/Sep/2009
+
+\pnv °woɣut[i,u]
+\psm highly-ranked young man
+\pncv
+\poc
+\cf °mʷotari
+\ps n
+\div
+\hiw woɣʉt ??
+\ltg
+\lhi
+\lyp
+\vlw
+\mtp nʊ-wʊɣit
+\lmg
+\vra
+\vrs
+\msn
+\mta wowut
+\sem one who is liked, admired
+\num
+\drg
+\kro
+\olr
+\lkn wuwut
+\mrl
+\dt 08/Mar/2010
+
+\pnv °wono(wono)
+\psm full, complete; shut
+
+\pncv
+\ps
+\div
+\lhi
+\vlw
+\mtp wɔn
+\mtp wɔnwɔn
+\lmg wœnwœn
+\vra
+\vrs
+\msn
+\mta wono
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\sdg (ɣono)
+\dt 24/Mar/2014
+
+\pnv *wora
+\psm just, only;  Restrictive
+\pncv
+\poc
+\cf
+\ps postv
+\div
+\hiw
+\ltg
+\lhi
+\lyp wɔj
+\vlw
+\mtp wɔj
+\lmg
+\vra
+\vrs
+\msn
+\mta wora
+\num
+\drg wɔr
+\kro wɔr
+\olr wɔj
+\lkn wɔː
+\mrl
+\dt 10/Jan/2013
+
+\pnv °woro
+\psm wring out coconut milk in food preparation
+\pncv
+\ps
+\div
+\hiw woᶢʟ
+\rfc EP2-15b
+\nt noté /wor̄/, je corrige en /wōr̄/ d'après étymo
+\ltg
+\lyp
+\lhi
+\vlw
+\mtp wɔj
+\lmg wœr
+\vra wʊr
+\sem squeeze liquid from
+\vrs wʊr
+\sem squeeze liquid from
+\msn
+\mta woro
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 09/Mar/2010
+
+\pnv °wota
+\psm be born
+\ps
+\div
+\hiw wɔtə
+\ltg wɔtə
+\mtp wɔt
+\vra wɔʔɔ
+\vrs wɔt
+\msn wɔt
+\mta wota
+\drg wɔt
+\kro wɔt
+\olr wata
+\lkn wɔtæ
+\mrl wɔt
+
+\dt 11/Oct/2006
+
+\pnv °wotaɣa
+\psm Barringtonia edulis
+\ps
+\div
+\hiw wtaɣə
+\ltg wətaɣə
+\mtp na-wtaɣ
+\vra waʔaɣ
+\vrs wʊtaɣ
+\msn wataɣ
+\mta wotaɣa
+\drg wtaɣ
+\lkn wɔta
+\mrl na-wataɣ 
+
+\dt 17/Nov/2011
+
+\pnv °wowo[ri]
+\psm weed <garden>
+\pncv
+\ps
+\div
+\hiw
+\ltg
+\lhi
+\vlw {ⁿdɔw}
+\mtp {ⁿdɔw}
+\lmg wœw
+\vra wʊwʊr
+\vrs wøwør
+\nt noté /wëwër/ dans Catriona, je corrige d'après l'étymon.
+\msn
+\mta wowor
+\num
+\drg
+\kro
+\olr
+\lkn
+\mrl
+\dt 06/Apr/2007
+
+\pnv °wune
+\psm find, discover
+\pncv
+\poc
+\cf °sosoɣoti
+\cf °suari
+\ps postv
+\div
+\mta nom-wune
+\nt
+\num wun
+\drg wʊn
+\kro
+\olr {wɛs}
+\lkn wɪn
+\nt NOT *ɣɪn !!
+\mrl {βɔ͡ɞn}
+\dt 15/Mar/2010
+
+\pnv °wVⁿdo[ŋ]i
+\psm take out (?) <cooking stones> from stone oven
+\pncv
+\poc
+\cf
+\ps vt
+\div
+\hiw
+\ltg
+\lhi
+\lyp wʊⁿdø
+\vlw
+\mtp wɪⁿdɪwⁿdɪ
+\lmg
+\vra
+\vrs
+\msn
+\mta
+\num
+\drg wⁿdʊŋ
+\kro
+\olr
+\lkn wɪʧɪŋ
+\mrl
+\dt 12/Aug/2009
+
+\pnv °yumʷa
+\psm house
+\pncv *yumwa
+\poc *Rumaq
+\cf °ɣaβuru
+\ps n
+\div
+\hiw ɪŋʷə
+\ltg əŋʷə
+\lhi n-ɛŋ
+\lyp n-i͡ɛŋ
+\vlw n-ɪŋ͡mʷ
+\mtp n-ɪŋ͡mʷ
+\lmg {k͡pʷɛk}
+\vra n\iŋ͡mʷɪ
+\vrs {ɣøβür}
+\msn ɪŋ͡mʷ
+\mta iŋ͡mʷa
+\num {ɣuβur}
+\drg {ɣβur}
+\kro {ɣuβur}
+\olr {βuβuj}
+\lkn uŋ͡mʷæ
+\mrl n-ɛ͡aŋ
+\ark ima
+\dt 25/Apr/2015

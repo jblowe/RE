@@ -1,0 +1,3742 @@
+<?xml version="1.0" ?>
+<semantics>
+   <totals>
+      <found value="266"/>
+      <notfound value="977"/>
+      <total value="1243"/>
+      <rawglosses value="898"/>
+      <lemmata value="1291"/>
+   </totals>
+   <mel id="clics2">
+      <gl>after</gl>
+      <gl>because</gl>
+   </mel>
+   <mel id="clics3">
+      <gl>afterwards</gl>
+      <gl>then</gl>
+   </mel>
+   <mel id="clics4">
+      <gl>again</gl>
+      <gl>and</gl>
+   </mel>
+   <mel id="clics7">
+      <gl singleton="yes">axe</gl>
+   </mel>
+   <mel id="clics8">
+      <gl singleton="yes">baby</gl>
+   </mel>
+   <mel id="clics9">
+      <gl>back</gl>
+      <gl>after</gl>
+      <gl>bark</gl>
+   </mel>
+   <mel id="clics10">
+      <gl>bad</gl>
+      <gl>dirty</gl>
+      <gl>rotten</gl>
+   </mel>
+   <mel id="clics11">
+      <gl singleton="yes">bait</gl>
+   </mel>
+   <mel id="clics13">
+      <gl singleton="yes">bamboo</gl>
+   </mel>
+   <mel id="clics14">
+      <gl>bark</gl>
+      <gl>skin</gl>
+   </mel>
+   <mel id="clics16">
+      <gl>bathe</gl>
+      <gl>dive</gl>
+      <gl>float</gl>
+      <gl>swim</gl>
+   </mel>
+   <mel id="clics20">
+      <gl>before</gl>
+      <gl>after</gl>
+   </mel>
+   <mel id="clics21">
+      <gl>behind</gl>
+      <gl>after</gl>
+      <gl>back</gl>
+      <gl>before</gl>
+      <gl>outside</gl>
+   </mel>
+   <mel id="clics22">
+      <gl>believe</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics23">
+      <gl singleton="yes">belly</gl>
+   </mel>
+   <mel id="clics25">
+      <gl>big</gl>
+      <gl>long</gl>
+      <gl>many</gl>
+      <gl>old</gl>
+      <gl>strong</gl>
+      <gl>tall</gl>
+   </mel>
+   <mel id="clics27">
+      <gl>bite</gl>
+      <gl>chew</gl>
+      <gl>cut</gl>
+   </mel>
+   <mel id="clics28">
+      <gl>blood</gl>
+      <gl>red</gl>
+   </mel>
+   <mel id="clics29">
+      <gl>boat</gl>
+      <gl>canoe</gl>
+      <gl>ship</gl>
+   </mel>
+   <mel id="clics30">
+      <gl>body</gl>
+      <gl>bark</gl>
+      <gl>skin</gl>
+   </mel>
+   <mel id="clics31">
+      <gl>bone</gl>
+      <gl>stick</gl>
+      <gl>tree</gl>
+   </mel>
+   <mel id="clics32">
+      <gl singleton="yes">breathe</gl>
+   </mel>
+   <mel id="clics33">
+      <gl>bring</gl>
+      <gl>give</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics36">
+      <gl>buy</gl>
+      <gl>change</gl>
+      <gl>take</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics37">
+      <gl>call</gl>
+      <gl>sing</gl>
+   </mel>
+   <mel id="clics38">
+      <gl>canoe</gl>
+      <gl>ship</gl>
+   </mel>
+   <mel id="clics39">
+      <gl singleton="yes">cape</gl>
+   </mel>
+   <mel id="clics43">
+      <gl>cheek</gl>
+      <gl>chin</gl>
+      <gl>jaw</gl>
+   </mel>
+   <mel id="clics45">
+      <gl>chicken</gl>
+      <gl>bird</gl>
+      <gl>hen</gl>
+   </mel>
+   <mel id="clics46">
+      <gl>chin</gl>
+      <gl>jaw</gl>
+   </mel>
+   <mel id="clics47">
+      <gl>chop</gl>
+      <gl>carve</gl>
+      <gl>split</gl>
+      <gl>throw</gl>
+   </mel>
+   <mel id="clics48">
+      <gl>clean</gl>
+      <gl>good</gl>
+      <gl>holy</gl>
+      <gl>new</gl>
+   </mel>
+   <mel id="clics49">
+      <gl singleton="yes">clever</gl>
+   </mel>
+   <mel id="clics50">
+      <gl>climb</gl>
+      <gl>crawl</gl>
+   </mel>
+   <mel id="clics51">
+      <gl singleton="yes">cold</gl>
+   </mel>
+   <mel id="clics52">
+      <gl>cooked</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics53">
+      <gl>count</gl>
+      <gl>give</gl>
+   </mel>
+   <mel id="clics54">
+      <gl singleton="yes">country</gl>
+   </mel>
+   <mel id="clics57">
+      <gl>cry</gl>
+      <gl>howl</gl>
+   </mel>
+   <mel id="clics58">
+      <gl>cut</gl>
+      <gl>carve</gl>
+      <gl>chop</gl>
+      <gl>separate</gl>
+      <gl>split</gl>
+   </mel>
+   <mel id="clics60">
+      <gl>dance</gl>
+      <gl>jump</gl>
+      <gl>play</gl>
+      <gl>sing</gl>
+   </mel>
+   <mel id="clics63">
+      <gl singleton="yes">deaf</gl>
+   </mel>
+   <mel id="clics66">
+      <gl>destroy</gl>
+      <gl>damage</gl>
+      <gl>extinguish</gl>
+      <gl>kill</gl>
+      <gl>rub</gl>
+   </mel>
+   <mel id="clics67">
+      <gl>die</gl>
+      <gl>death</gl>
+      <gl>disappear</gl>
+      <gl>finish</gl>
+      <gl>give</gl>
+      <gl>kill</gl>
+      <gl>rotten</gl>
+   </mel>
+   <mel id="clics68">
+      <gl>dirty</gl>
+      <gl>darkness</gl>
+   </mel>
+   <mel id="clics71">
+      <gl>do</gl>
+      <gl>give</gl>
+      <gl>make</gl>
+   </mel>
+   <mel id="clics74">
+      <gl singleton="yes">dream</gl>
+   </mel>
+   <mel id="clics75">
+      <gl>drink</gl>
+      <gl>cut</gl>
+      <gl>give</gl>
+      <gl>swallow</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics77">
+      <gl>enter</gl>
+      <gl>crawl</gl>
+      <gl>dive</gl>
+      <gl>near</gl>
+      <gl>put on</gl>
+   </mel>
+   <mel id="clics78">
+      <gl>extinguish</gl>
+      <gl>kill</gl>
+   </mel>
+   <mel id="clics79">
+      <gl>face</gl>
+      <gl>cheek</gl>
+      <gl>jaw</gl>
+      <gl>mouth</gl>
+   </mel>
+   <mel id="clics80">
+      <gl>fall</gl>
+      <gl>cut</gl>
+      <gl>kill</gl>
+   </mel>
+   <mel id="clics83">
+      <gl singleton="yes">fence</gl>
+   </mel>
+   <mel id="clics84">
+      <gl>find</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics85">
+      <gl>finish</gl>
+      <gl>destroy</gl>
+      <gl>ready</gl>
+   </mel>
+   <mel id="clics86">
+      <gl>first</gl>
+      <gl>before</gl>
+   </mel>
+   <mel id="clics87">
+      <gl singleton="yes">fish</gl>
+   </mel>
+   <mel id="clics89">
+      <gl>flower</gl>
+      <gl>red</gl>
+   </mel>
+   <mel id="clics90">
+      <gl>fold</gl>
+      <gl>bend</gl>
+      <gl>roll</gl>
+   </mel>
+   <mel id="clics91">
+      <gl singleton="yes">footprint</gl>
+   </mel>
+   <mel id="clics92">
+      <gl singleton="yes">forget</gl>
+   </mel>
+   <mel id="clics93">
+      <gl>fry</gl>
+      <gl>bake</gl>
+      <gl>wash</gl>
+   </mel>
+   <mel id="clics96">
+      <gl>gather</gl>
+      <gl>fold</gl>
+      <gl>join</gl>
+   </mel>
+   <mel id="clics97">
+      <gl>give</gl>
+      <gl>kill</gl>
+      <gl>say</gl>
+      <gl>speak</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics98">
+      <gl>good</gl>
+      <gl>new</gl>
+      <gl>ready</gl>
+      <gl>sweet</gl>
+   </mel>
+   <mel id="clics99">
+      <gl singleton="yes">gourd</gl>
+   </mel>
+   <mel id="clics100">
+      <gl singleton="yes">grandchild</gl>
+   </mel>
+   <mel id="clics101">
+      <gl>grandmother</gl>
+      <gl>old woman</gl>
+   </mel>
+   <mel id="clics102">
+      <gl>grave</gl>
+      <gl>cave</gl>
+   </mel>
+   <mel id="clics103">
+      <gl>hard</gl>
+      <gl>dry</gl>
+      <gl>rough</gl>
+      <gl>strong</gl>
+   </mel>
+   <mel id="clics104">
+      <gl>heavy</gl>
+      <gl>pregnant</gl>
+   </mel>
+   <mel id="clics105">
+      <gl singleton="yes">help</gl>
+   </mel>
+   <mel id="clics107">
+      <gl>hit</gl>
+      <gl>kill</gl>
+      <gl>knock</gl>
+   </mel>
+   <mel id="clics108">
+      <gl>hole</gl>
+      <gl>cave</gl>
+      <gl>grave</gl>
+   </mel>
+   <mel id="clics110">
+      <gl>hot</gl>
+      <gl>warm</gl>
+   </mel>
+   <mel id="clics111">
+      <gl singleton="yes">house</gl>
+   </mel>
+   <mel id="clics113">
+      <gl>hunger</gl>
+      <gl>famine</gl>
+   </mel>
+   <mel id="clics116">
+      <gl>inside</gl>
+      <gl>deep</gl>
+      <gl>in</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics117">
+      <gl>itch</gl>
+      <gl>scratch</gl>
+   </mel>
+   <mel id="clics122">
+      <gl singleton="yes">knife</gl>
+   </mel>
+   <mel id="clics125">
+      <gl>laugh</gl>
+      <gl>smile</gl>
+   </mel>
+   <mel id="clics127">
+      <gl singleton="yes">leaf</gl>
+   </mel>
+   <mel id="clics128">
+      <gl>learn</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics130">
+      <gl>like</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics131">
+      <gl singleton="yes">liver</gl>
+   </mel>
+   <mel id="clics132">
+      <gl>long</gl>
+      <gl>deep</gl>
+      <gl>far</gl>
+      <gl>straight</gl>
+   </mel>
+   <mel id="clics133">
+      <gl>look</gl>
+      <gl>find</gl>
+      <gl>look for</gl>
+      <gl>read</gl>
+      <gl>see</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics134">
+      <gl>look for</gl>
+      <gl>find</gl>
+      <gl>love</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics135">
+      <gl>love</gl>
+      <gl>good</gl>
+      <gl>like</gl>
+      <gl>want</gl>
+   </mel>
+   <mel id="clics136">
+      <gl>low</gl>
+      <gl>deep</gl>
+      <gl>down</gl>
+   </mel>
+   <mel id="clics139">
+      <gl>many</gl>
+      <gl>all</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics140">
+      <gl>mat</gl>
+      <gl>bed</gl>
+   </mel>
+   <mel id="clics141">
+      <gl>message</gl>
+      <gl>news</gl>
+   </mel>
+   <mel id="clics143">
+      <gl>moon</gl>
+      <gl>month</gl>
+   </mel>
+   <mel id="clics145">
+      <gl>mountain</gl>
+      <gl>stone</gl>
+   </mel>
+   <mel id="clics146">
+      <gl>mouth</gl>
+      <gl>beak</gl>
+      <gl>hole</gl>
+      <gl>language</gl>
+   </mel>
+   <mel id="clics147">
+      <gl>move</gl>
+      <gl>change</gl>
+      <gl>shake</gl>
+   </mel>
+   <mel id="clics148">
+      <gl>mud</gl>
+      <gl>dirty</gl>
+      <gl>swamp</gl>
+   </mel>
+   <mel id="clics149">
+      <gl>near</gl>
+      <gl>join</gl>
+   </mel>
+   <mel id="clics150">
+      <gl>new</gl>
+      <gl>again</gl>
+      <gl>news</gl>
+   </mel>
+   <mel id="clics152">
+      <gl singleton="yes">ocean</gl>
+   </mel>
+   <mel id="clics153">
+      <gl>old</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics154">
+      <gl>old man</gl>
+      <gl>old</gl>
+      <gl>old woman</gl>
+   </mel>
+   <mel id="clics155">
+      <gl>old woman</gl>
+      <gl>old</gl>
+   </mel>
+   <mel id="clics156">
+      <gl>one</gl>
+      <gl>only</gl>
+      <gl>other</gl>
+   </mel>
+   <mel id="clics158">
+      <gl singleton="yes">orphan</gl>
+   </mel>
+   <mel id="clics160">
+      <gl>outside</gl>
+      <gl>up</gl>
+   </mel>
+   <mel id="clics161">
+      <gl>peel</gl>
+      <gl>bark</gl>
+      <gl>skin</gl>
+      <gl>tie</gl>
+   </mel>
+   <mel id="clics162">
+      <gl>pick up</gl>
+      <gl>bring</gl>
+      <gl>buy</gl>
+      <gl>fold</gl>
+      <gl>gather</gl>
+      <gl>join</gl>
+      <gl>take</gl>
+   </mel>
+   <mel id="clics163">
+      <gl singleton="yes">picture</gl>
+   </mel>
+   <mel id="clics164">
+      <gl singleton="yes">pig</gl>
+   </mel>
+   <mel id="clics165">
+      <gl>play</gl>
+      <gl>game</gl>
+   </mel>
+   <mel id="clics166">
+      <gl>pour</gl>
+      <gl>throw</gl>
+   </mel>
+   <mel id="clics167">
+      <gl singleton="yes">pray</gl>
+   </mel>
+   <mel id="clics170">
+      <gl singleton="yes">prevent</gl>
+   </mel>
+   <mel id="clics171">
+      <gl>pull</gl>
+      <gl>drag</gl>
+      <gl>steal</gl>
+   </mel>
+   <mel id="clics173">
+      <gl singleton="yes">quiet</gl>
+   </mel>
+   <mel id="clics174">
+      <gl>read</gl>
+      <gl>call</gl>
+      <gl>count</gl>
+      <gl>learn</gl>
+      <gl>say</gl>
+      <gl>sing</gl>
+      <gl>teach</gl>
+   </mel>
+   <mel id="clics176">
+      <gl>red</gl>
+      <gl>ripe</gl>
+   </mel>
+   <mel id="clics177">
+      <gl singleton="yes">reef</gl>
+   </mel>
+   <mel id="clics178">
+      <gl>remember</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics179">
+      <gl>right</gl>
+      <gl>good</gl>
+      <gl>straight</gl>
+      <gl>true</gl>
+   </mel>
+   <mel id="clics180">
+      <gl>ripe</gl>
+      <gl>ready</gl>
+   </mel>
+   <mel id="clics182">
+      <gl>root</gl>
+      <gl>tendon</gl>
+   </mel>
+   <mel id="clics183">
+      <gl>rope</gl>
+      <gl>vine</gl>
+   </mel>
+   <mel id="clics184">
+      <gl singleton="yes">rot</gl>
+   </mel>
+   <mel id="clics185">
+      <gl>rotten</gl>
+      <gl>old</gl>
+   </mel>
+   <mel id="clics188">
+      <gl>sail</gl>
+      <gl>float</gl>
+   </mel>
+   <mel id="clics189">
+      <gl singleton="yes">sand</gl>
+   </mel>
+   <mel id="clics190">
+      <gl>say</gl>
+      <gl>language</gl>
+      <gl>sing</gl>
+      <gl>speak</gl>
+   </mel>
+   <mel id="clics193">
+      <gl singleton="yes">secret</gl>
+   </mel>
+   <mel id="clics194">
+      <gl>see</gl>
+      <gl>find</gl>
+      <gl>look for</gl>
+      <gl>understand</gl>
+   </mel>
+   <mel id="clics199">
+      <gl>shoot</gl>
+      <gl>bite</gl>
+      <gl>kill</gl>
+      <gl>pull</gl>
+      <gl>throw</gl>
+   </mel>
+   <mel id="clics200">
+      <gl>shut</gl>
+      <gl>cover</gl>
+   </mel>
+   <mel id="clics201">
+      <gl>sick</gl>
+      <gl>bad</gl>
+      <gl>die</gl>
+      <gl>tired</gl>
+   </mel>
+   <mel id="clics202">
+      <gl>sing</gl>
+      <gl>song</gl>
+   </mel>
+   <mel id="clics203">
+      <gl>sit</gl>
+      <gl>near</gl>
+      <gl>sit down</gl>
+   </mel>
+   <mel id="clics205">
+      <gl>skin</gl>
+      <gl>basket</gl>
+   </mel>
+   <mel id="clics206">
+      <gl>sleep</gl>
+      <gl>lie down</gl>
+   </mel>
+   <mel id="clics207">
+      <gl singleton="yes">slice</gl>
+   </mel>
+   <mel id="clics211">
+      <gl>speak</gl>
+      <gl>language</gl>
+   </mel>
+   <mel id="clics212">
+      <gl singleton="yes">spear</gl>
+   </mel>
+   <mel id="clics213">
+      <gl singleton="yes">spider</gl>
+   </mel>
+   <mel id="clics214">
+      <gl singleton="yes">spit</gl>
+   </mel>
+   <mel id="clics215">
+      <gl>split</gl>
+      <gl>broken</gl>
+      <gl>separate</gl>
+   </mel>
+   <mel id="clics216">
+      <gl>squeeze</gl>
+      <gl>press</gl>
+      <gl>rub</gl>
+   </mel>
+   <mel id="clics217">
+      <gl singleton="yes">stand</gl>
+   </mel>
+   <mel id="clics218">
+      <gl singleton="yes">statue</gl>
+   </mel>
+   <mel id="clics220">
+      <gl>stick</gl>
+      <gl>wood</gl>
+   </mel>
+   <mel id="clics222">
+      <gl>straight</gl>
+      <gl>good</gl>
+      <gl>smooth</gl>
+      <gl>true</gl>
+   </mel>
+   <mel id="clics223">
+      <gl singleton="yes">strength</gl>
+   </mel>
+   <mel id="clics224">
+      <gl singleton="yes">string</gl>
+   </mel>
+   <mel id="clics226">
+      <gl>stupid</gl>
+      <gl>mad</gl>
+   </mel>
+   <mel id="clics227">
+      <gl>sun</gl>
+      <gl>moon</gl>
+      <gl>near</gl>
+      <gl>year</gl>
+   </mel>
+   <mel id="clics230">
+      <gl>sweet</gl>
+      <gl>tasty</gl>
+   </mel>
+   <mel id="clics231">
+      <gl>swell</gl>
+      <gl>full</gl>
+   </mel>
+   <mel id="clics232">
+      <gl>swim</gl>
+      <gl>float</gl>
+      <gl>sail</gl>
+   </mel>
+   <mel id="clics234">
+      <gl>tall</gl>
+      <gl>deep</gl>
+      <gl>long</gl>
+   </mel>
+   <mel id="clics236">
+      <gl>teach</gl>
+      <gl>learn</gl>
+   </mel>
+   <mel id="clics237">
+      <gl>tell</gl>
+      <gl>count</gl>
+      <gl>say</gl>
+      <gl>speak</gl>
+   </mel>
+   <mel id="clics240">
+      <gl singleton="yes">think</gl>
+   </mel>
+   <mel id="clics241">
+      <gl>throw</gl>
+      <gl>lie down</gl>
+   </mel>
+   <mel id="clics242">
+      <gl>tie</gl>
+      <gl>bundle</gl>
+      <gl>join</gl>
+      <gl>rope</gl>
+      <gl>shut</gl>
+   </mel>
+   <mel id="clics243">
+      <gl>tired</gl>
+      <gl>lazy</gl>
+   </mel>
+   <mel id="clics244">
+      <gl>today</gl>
+      <gl>immediately</gl>
+   </mel>
+   <mel id="clics245">
+      <gl>tomorrow</gl>
+      <gl>morning</gl>
+   </mel>
+   <mel id="clics246">
+      <gl singleton="yes">translate</gl>
+   </mel>
+   <mel id="clics247">
+      <gl>tree</gl>
+      <gl>stick</gl>
+      <gl>wood</gl>
+   </mel>
+   <mel id="clics249">
+      <gl singleton="yes">turtle</gl>
+   </mel>
+   <mel id="clics250">
+      <gl singleton="yes">twins</gl>
+   </mel>
+   <mel id="clics252">
+      <gl>up</gl>
+      <gl>above</gl>
+      <gl>before</gl>
+   </mel>
+   <mel id="clics254">
+      <gl>want</gl>
+      <gl>say</gl>
+   </mel>
+   <mel id="clics256">
+      <gl>wash</gl>
+      <gl>bathe</gl>
+      <gl>swim</gl>
+   </mel>
+   <mel id="clics257">
+      <gl singleton="yes">waterfall</gl>
+   </mel>
+   <mel id="clics258">
+      <gl singleton="yes">wave</gl>
+   </mel>
+   <mel id="clics259">
+      <gl>whale</gl>
+      <gl>shark</gl>
+   </mel>
+   <mel id="clics260">
+      <gl singleton="yes">which</gl>
+   </mel>
+   <mel id="clics261">
+      <gl>wipe</gl>
+      <gl>rub</gl>
+   </mel>
+   <mel id="clics263">
+      <gl>write</gl>
+      <gl>carve</gl>
+   </mel>
+   <mel id="clics264">
+      <gl singleton="yes">yam</gl>
+   </mel>
+   <mel id="clics265">
+      <gl>year</gl>
+      <gl>season</gl>
+   </mel>
+   <mel id="clics266">
+      <gl>yesterday</gl>
+      <gl>day before yesterday</gl>
+      <gl>tomorrow</gl>
+   </mel>
+   <mel id="nf267">
+      <gl pivot="notfound"/>
+   </mel>
+   <mel id="nf268">
+      <gl pivot="notfound">(address term) grandfather</gl>
+   </mel>
+   <mel id="nf269">
+      <gl pivot="notfound">(adj.) deep</gl>
+   </mel>
+   <mel id="nf270">
+      <gl pivot="notfound">(adj.) dirty</gl>
+   </mel>
+   <mel id="nf271">
+      <gl pivot="notfound">(adj.) hot</gl>
+   </mel>
+   <mel id="nf272">
+      <gl pivot="notfound">(adj.) secret</gl>
+   </mel>
+   <mel id="nf273">
+      <gl pivot="notfound">(adv.) at o.'s housedoor</gl>
+   </mel>
+   <mel id="nf274">
+      <gl pivot="notfound">(adv.) away</gl>
+   </mel>
+   <mel id="nf275">
+      <gl pivot="notfound">(adv.) inwards</gl>
+   </mel>
+   <mel id="nf276">
+      <gl pivot="notfound">(adv.) up</gl>
+   </mel>
+   <mel id="nf277">
+      <gl pivot="notfound">(adv.) waiting</gl>
+   </mel>
+   <mel id="nf278">
+      <gl pivot="notfound">(asp) already</gl>
+   </mel>
+   <mel id="nf279">
+      <gl pivot="notfound">(at</gl>
+   </mel>
+   <mel id="nf280">
+      <gl pivot="notfound">(be) like</gl>
+   </mel>
+   <mel id="nf281">
+      <gl pivot="notfound">(bird</gl>
+   </mel>
+   <mel id="nf282">
+      <gl pivot="notfound">(bird) beak</gl>
+   </mel>
+   <mel id="nf283">
+      <gl pivot="notfound">(blade+) sharp</gl>
+   </mel>
+   <mel id="nf284">
+      <gl pivot="notfound">(body) feel ashamed</gl>
+   </mel>
+   <mel id="nf285">
+      <gl pivot="notfound">(cock) crow</gl>
+   </mel>
+   <mel id="nf286">
+      <gl pivot="notfound">(come) in</gl>
+   </mel>
+   <mel id="nf287">
+      <gl pivot="notfound">(cultivable piece of) ground</gl>
+   </mel>
+   <mel id="nf288">
+      <gl pivot="notfound">(devil) eat &lt;man&gt;</gl>
+   </mel>
+   <mel id="nf289">
+      <gl pivot="notfound">(devil) eat ‹man›</gl>
+   </mel>
+   <mel id="nf290">
+      <gl pivot="notfound">(dir.) up</gl>
+   </mel>
+   <mel id="nf291">
+      <gl pivot="notfound">(direc.) down</gl>
+   </mel>
+   <mel id="nf292">
+      <gl pivot="notfound">(eat) one's fill</gl>
+   </mel>
+   <mel id="nf293">
+      <gl pivot="notfound">(esp.) light</gl>
+   </mel>
+   <mel id="nf294">
+      <gl pivot="notfound">(fig.) solemn</gl>
+   </mel>
+   <mel id="nf295">
+      <gl pivot="notfound">(fire) burn down</gl>
+   </mel>
+   <mel id="nf296">
+      <gl pivot="notfound">(fire) smoulder</gl>
+   </mel>
+   <mel id="nf297">
+      <gl pivot="notfound">(food) done</gl>
+   </mel>
+   <mel id="nf298">
+      <gl pivot="notfound">(gen.) dance</gl>
+   </mel>
+   <mel id="nf299">
+      <gl pivot="notfound">(gen.) outside</gl>
+   </mel>
+   <mel id="nf300">
+      <gl pivot="notfound">(go) around</gl>
+   </mel>
+   <mel id="nf301">
+      <gl pivot="notfound">(hands+) dry</gl>
+   </mel>
+   <mel id="nf302">
+      <gl pivot="notfound">(hence) honourific rank</gl>
+   </mel>
+   <mel id="nf303">
+      <gl pivot="notfound">(his) buttocks</gl>
+   </mel>
+   <mel id="nf304">
+      <gl pivot="notfound">(hole</gl>
+   </mel>
+   <mel id="nf305">
+      <gl pivot="notfound">(its) bottom</gl>
+   </mel>
+   <mel id="nf306">
+      <gl pivot="notfound">(knife) blade</gl>
+   </mel>
+   <mel id="nf307">
+      <gl pivot="notfound">(lie down &gt;) sick [?]</gl>
+   </mel>
+   <mel id="nf308">
+      <gl pivot="notfound">(liquid) run</gl>
+   </mel>
+   <mel id="nf309">
+      <gl pivot="notfound">(man) crunch</gl>
+   </mel>
+   <mel id="nf310">
+      <gl pivot="notfound">(man) jaw</gl>
+   </mel>
+   <mel id="nf311">
+      <gl pivot="notfound">(moon) full</gl>
+   </mel>
+   <mel id="nf312">
+      <gl pivot="notfound">(moskito) bite</gl>
+   </mel>
+   <mel id="nf313">
+      <gl pivot="notfound">(my) brother-in-law</gl>
+   </mel>
+   <mel id="nf314">
+      <gl pivot="notfound">(my) brotherinlaw</gl>
+   </mel>
+   <mel id="nf315">
+      <gl pivot="notfound">(my) liver</gl>
+   </mel>
+   <mel id="nf316">
+      <gl pivot="notfound">(my) maternal uncle</gl>
+   </mel>
+   <mel id="nf317">
+      <gl pivot="notfound">(my) nephew</gl>
+   </mel>
+   <mel id="nf318">
+      <gl pivot="notfound">(my) sister-in-law</gl>
+   </mel>
+   <mel id="nf319">
+      <gl pivot="notfound">(my) sisterinlaw</gl>
+   </mel>
+   <mel id="nf320">
+      <gl pivot="notfound">(n) carrying stick</gl>
+   </mel>
+   <mel id="nf321">
+      <gl pivot="notfound">(n) coil</gl>
+   </mel>
+   <mel id="nf322">
+      <gl pivot="notfound">(n) cough</gl>
+   </mel>
+   <mel id="nf323">
+      <gl pivot="notfound">(n) skin</gl>
+   </mel>
+   <mel id="nf324">
+      <gl pivot="notfound">(n.) abundance of fruit</gl>
+   </mel>
+   <mel id="nf325">
+      <gl pivot="notfound">(n.) deep sea</gl>
+   </mel>
+   <mel id="nf326">
+      <gl pivot="notfound">(n.) food baked in oven</gl>
+   </mel>
+   <mel id="nf327">
+      <gl pivot="notfound">(n.) kind of manly dance</gl>
+   </mel>
+   <mel id="nf328">
+      <gl pivot="notfound">(n.) life</gl>
+   </mel>
+   <mel id="nf329">
+      <gl pivot="notfound">(n.) mud</gl>
+   </mel>
+   <mel id="nf330">
+      <gl pivot="notfound">(n.) my life</gl>
+   </mel>
+   <mel id="nf331">
+      <gl pivot="notfound">(n.) my property</gl>
+   </mel>
+   <mel id="nf332">
+      <gl pivot="notfound">(n.) noise</gl>
+   </mel>
+   <mel id="nf333">
+      <gl pivot="notfound">(n.) oven</gl>
+   </mel>
+   <mel id="nf334">
+      <gl pivot="notfound">(n.) ovenful of food</gl>
+   </mel>
+   <mel id="nf335">
+      <gl pivot="notfound">(n.) smoke</gl>
+   </mel>
+   <mel id="nf336">
+      <gl pivot="notfound">(n.) steam</gl>
+   </mel>
+   <mel id="nf337">
+      <gl pivot="notfound">(n.) wooden club</gl>
+   </mel>
+   <mel id="nf338">
+      <gl pivot="notfound">(pig tusk) come out in circle</gl>
+   </mel>
+   <mel id="nf339">
+      <gl pivot="notfound">(pig) jaw bone</gl>
+   </mel>
+   <mel id="nf340">
+      <gl pivot="notfound">(plant</gl>
+   </mel>
+   <mel id="nf341">
+      <gl pivot="notfound">(plant) dry</gl>
+   </mel>
+   <mel id="nf342">
+      <gl pivot="notfound">(plant) grow</gl>
+   </mel>
+   <mel id="nf343">
+      <gl pivot="notfound">(plant+) stingy</gl>
+   </mel>
+   <mel id="nf344">
+      <gl pivot="notfound">(postv) following</gl>
+   </mel>
+   <mel id="nf345">
+      <gl pivot="notfound">(pudding) crunchy</gl>
+   </mel>
+   <mel id="nf346">
+      <gl pivot="notfound">(put</gl>
+   </mel>
+   <mel id="nf347">
+      <gl pivot="notfound">(put) together</gl>
+   </mel>
+   <mel id="nf348">
+      <gl pivot="notfound">(rare) reveal to o.'s heirs their land properties</gl>
+   </mel>
+   <mel id="nf349">
+      <gl pivot="notfound">(redup.) speech</gl>
+   </mel>
+   <mel id="nf350">
+      <gl pivot="notfound">(rubbish+)</gl>
+   </mel>
+   <mel id="nf351">
+      <gl pivot="notfound">(s.o.) feel cold</gl>
+   </mel>
+   <mel id="nf352">
+      <gl pivot="notfound">(s.o.) grave</gl>
+   </mel>
+   <mel id="nf353">
+      <gl pivot="notfound">(s.th.) affect s.o.</gl>
+   </mel>
+   <mel id="nf354">
+      <gl pivot="notfound">(slang) glans</gl>
+   </mel>
+   <mel id="nf355">
+      <gl pivot="notfound">(slg) lazy+</gl>
+   </mel>
+   <mel id="nf356">
+      <gl pivot="notfound">(slg) stupidity</gl>
+   </mel>
+   <mel id="nf357">
+      <gl pivot="notfound">(steam) puff forth</gl>
+   </mel>
+   <mel id="nf358">
+      <gl pivot="notfound">(sun) shine</gl>
+   </mel>
+   <mel id="nf359">
+      <gl pivot="notfound">(take) away</gl>
+   </mel>
+   <mel id="nf360">
+      <gl pivot="notfound">(take+) inside</gl>
+   </mel>
+   <mel id="nf361">
+      <gl pivot="notfound">(tide) low</gl>
+   </mel>
+   <mel id="nf362">
+      <gl pivot="notfound">(tooth+) loose</gl>
+   </mel>
+   <mel id="nf363">
+      <gl pivot="notfound">(two people) carry s.th. heavy</gl>
+   </mel>
+   <mel id="nf364">
+      <gl pivot="notfound">(v) cough</gl>
+   </mel>
+   <mel id="nf365">
+      <gl pivot="notfound">(v) paddle</gl>
+   </mel>
+   <mel id="nf366">
+      <gl pivot="notfound">(v.) alive</gl>
+   </mel>
+   <mel id="nf367">
+      <gl pivot="notfound">(v.) bake food in stone oven</gl>
+   </mel>
+   <mel id="nf368">
+      <gl pivot="notfound">(v.) climb</gl>
+   </mel>
+   <mel id="nf369">
+      <gl pivot="notfound">(v.) fall</gl>
+   </mel>
+   <mel id="nf370">
+      <gl pivot="notfound">(v.) lift up</gl>
+   </mel>
+   <mel id="nf371">
+      <gl pivot="notfound">(v.) open &lt;oven&gt;</gl>
+   </mel>
+   <mel id="nf372">
+      <gl pivot="notfound">(v.) sink</gl>
+   </mel>
+   <mel id="nf373">
+      <gl pivot="notfound">(v.) wait</gl>
+   </mel>
+   <mel id="nf374">
+      <gl pivot="notfound">(v.t.) dream about</gl>
+   </mel>
+   <mel id="nf375">
+      <gl pivot="notfound">(v.t.) heat s.th. up with fire</gl>
+   </mel>
+   <mel id="nf376">
+      <gl pivot="notfound">(vt) carry with stick</gl>
+   </mel>
+   <mel id="nf377">
+      <gl pivot="notfound">(vt) follow</gl>
+   </mel>
+   <mel id="nf378">
+      <gl pivot="notfound">(vt) husk coconut</gl>
+   </mel>
+   <mel id="nf379">
+      <gl pivot="notfound">(vt) spear</gl>
+   </mel>
+   <mel id="nf380">
+      <gl pivot="notfound">(vt) stab</gl>
+   </mel>
+   <mel id="nf381">
+      <gl pivot="notfound">(vulg) liar</gl>
+   </mel>
+   <mel id="nf382">
+      <gl pivot="notfound">(with prefix °ma) broken</gl>
+   </mel>
+   <mel id="nf383">
+      <gl pivot="notfound">(with prefix °ma-) broken</gl>
+   </mel>
+   <mel id="nf384">
+      <gl pivot="notfound">(yam</gl>
+   </mel>
+   <mel id="nf385">
+      <gl pivot="notfound">(yam) dry</gl>
+   </mel>
+   <mel id="nf386">
+      <gl pivot="notfound">1incl:dual</gl>
+   </mel>
+   <mel id="nf387">
+      <gl pivot="notfound">1st excl. dual</gl>
+   </mel>
+   <mel id="nf388">
+      <gl pivot="notfound">1st sg free pronoun</gl>
+   </mel>
+   <mel id="nf389">
+      <gl pivot="notfound">2 days from now</gl>
+   </mel>
+   <mel id="nf390">
+      <gl pivot="notfound">2nd plural</gl>
+   </mel>
+   <mel id="nf391">
+      <gl pivot="notfound">2nd sg free pronoun</gl>
+   </mel>
+   <mel id="nf392">
+      <gl pivot="notfound">?</gl>
+   </mel>
+   <mel id="nf393">
+      <gl pivot="notfound">a</gl>
+   </mel>
+   <mel id="nf394">
+      <gl pivot="notfound">a creek in the coral of a reef through which canoes are brought through to shore</gl>
+   </mel>
+   <mel id="nf395">
+      <gl pivot="notfound">a creeper providing solid rattan-like fibre</gl>
+   </mel>
+   <mel id="nf396">
+      <gl pivot="notfound">a creeper providing solid rattanlike fibre</gl>
+   </mel>
+   <mel id="nf397">
+      <gl pivot="notfound">a cross</gl>
+   </mel>
+   <mel id="nf398">
+      <gl pivot="notfound">a deep and narrow cave</gl>
+   </mel>
+   <mel id="nf399">
+      <gl pivot="notfound">a fish</gl>
+   </mel>
+   <mel id="nf400">
+      <gl pivot="notfound">a kind of gourd</gl>
+   </mel>
+   <mel id="nf401">
+      <gl pivot="notfound">a morsel of food thrown for a ghost</gl>
+   </mel>
+   <mel id="nf402">
+      <gl pivot="notfound">a round woven dish or basket</gl>
+   </mel>
+   <mel id="nf403">
+      <gl pivot="notfound">a sign marking a place as taboo or forbidden</gl>
+   </mel>
+   <mel id="nf404">
+      <gl pivot="notfound">a square basket used for rubbish</gl>
+   </mel>
+   <mel id="nf405">
+      <gl pivot="notfound">a thing belonging to a person which has magic power</gl>
+   </mel>
+   <mel id="nf406">
+      <gl pivot="notfound">a tree of which bows are made</gl>
+   </mel>
+   <mel id="nf407">
+      <gl pivot="notfound">a woman's dance</gl>
+   </mel>
+   <mel id="nf408">
+      <gl pivot="notfound">ablative prep.</gl>
+   </mel>
+   <mel id="nf409">
+      <gl pivot="notfound">abode of the dead</gl>
+   </mel>
+   <mel id="nf410">
+      <gl pivot="notfound">about… it)</gl>
+   </mel>
+   <mel id="nf411">
+      <gl pivot="notfound">absent</gl>
+   </mel>
+   <mel id="nf412">
+      <gl pivot="notfound">abundant</gl>
+   </mel>
+   <mel id="nf413">
+      <gl pivot="notfound">acacia simplicifolia</gl>
+   </mel>
+   <mel id="nf414">
+      <gl pivot="notfound">acalypha spp.</gl>
+   </mel>
+   <mel id="nf415">
+      <gl pivot="notfound">acanthurus lineatus</gl>
+   </mel>
+   <mel id="nf416">
+      <gl pivot="notfound">acanthurus sp.</gl>
+   </mel>
+   <mel id="nf417">
+      <gl pivot="notfound">accumulation of ashes in a fire-place</gl>
+   </mel>
+   <mel id="nf418">
+      <gl pivot="notfound">accumulation of ashes in a fireplace</gl>
+   </mel>
+   <mel id="nf419">
+      <gl pivot="notfound">active and neuter</gl>
+   </mel>
+   <mel id="nf420">
+      <gl pivot="notfound">adjust</gl>
+   </mel>
+   <mel id="nf421">
+      <gl pivot="notfound">admired</gl>
+   </mel>
+   <mel id="nf422">
+      <gl pivot="notfound">adopt &lt;child&gt;</gl>
+   </mel>
+   <mel id="nf423">
+      <gl pivot="notfound">affection</gl>
+   </mel>
+   <mel id="nf424">
+      <gl pivot="notfound">against ghosts</gl>
+   </mel>
+   <mel id="nf425">
+      <gl pivot="notfound">alive</gl>
+   </mel>
+   <mel id="nf426">
+      <gl pivot="notfound">almost</gl>
+   </mel>
+   <mel id="nf427">
+      <gl pivot="notfound">alocasia taro</gl>
+   </mel>
+   <mel id="nf428">
+      <gl pivot="notfound">along the beach</gl>
+   </mel>
+   <mel id="nf429">
+      <gl pivot="notfound">an area with deep caves</gl>
+   </mel>
+   <mel id="nf430">
+      <gl pivot="notfound">an aroid</gl>
+   </mel>
+   <mel id="nf431">
+      <gl pivot="notfound">ananas</gl>
+   </mel>
+   <mel id="nf432">
+      <gl pivot="notfound">ancestors' lineage</gl>
+   </mel>
+   <mel id="nf433">
+      <gl pivot="notfound">ancient</gl>
+   </mel>
+   <mel id="nf434">
+      <gl pivot="notfound">angle fish</gl>
+   </mel>
+   <mel id="nf435">
+      <gl pivot="notfound">angling</gl>
+   </mel>
+   <mel id="nf436">
+      <gl pivot="notfound">annelides</gl>
+   </mel>
+   <mel id="nf437">
+      <gl pivot="notfound">another</gl>
+   </mel>
+   <mel id="nf438">
+      <gl pivot="notfound">appropriate</gl>
+   </mel>
+   <mel id="nf439">
+      <gl pivot="notfound">ardea sacra</gl>
+   </mel>
+   <mel id="nf440">
+      <gl pivot="notfound">areca catechu</gl>
+   </mel>
+   <mel id="nf441">
+      <gl pivot="notfound">argue with</gl>
+   </mel>
+   <mel id="nf442">
+      <gl pivot="notfound">arrow </gl>
+   </mel>
+   <mel id="nf443">
+      <gl pivot="notfound">artocarpus</gl>
+   </mel>
+   <mel id="nf444">
+      <gl pivot="notfound">ashes</gl>
+   </mel>
+   <mel id="nf445">
+      <gl pivot="notfound">ashore</gl>
+   </mel>
+   <mel id="nf446">
+      <gl pivot="notfound">ask</gl>
+   </mel>
+   <mel id="nf447">
+      <gl pivot="notfound">askance</gl>
+   </mel>
+   <mel id="nf448">
+      <gl pivot="notfound">assemble</gl>
+   </mel>
+   <mel id="nf449">
+      <gl pivot="notfound">at seaside</gl>
+   </mel>
+   <mel id="nf450">
+      <gl pivot="notfound">away</gl>
+   </mel>
+   <mel id="nf451">
+      <gl pivot="notfound">backwards</gl>
+   </mel>
+   <mel id="nf452">
+      <gl pivot="notfound">bake food in stone oven overnight</gl>
+   </mel>
+   <mel id="nf453">
+      <gl pivot="notfound">bamboo bottle</gl>
+   </mel>
+   <mel id="nf454">
+      <gl pivot="notfound">bamboo drum</gl>
+   </mel>
+   <mel id="nf455">
+      <gl pivot="notfound">bamboo stick</gl>
+   </mel>
+   <mel id="nf456">
+      <gl pivot="notfound">bamboo stick marking limits within initiation house</gl>
+   </mel>
+   <mel id="nf457">
+      <gl pivot="notfound">bamboo stick used for a specific purpose</gl>
+   </mel>
+   <mel id="nf458">
+      <gl pivot="notfound">barracuda</gl>
+   </mel>
+   <mel id="nf459">
+      <gl pivot="notfound">barringtonia edulis</gl>
+   </mel>
+   <mel id="nf460">
+      <gl pivot="notfound">beach</gl>
+   </mel>
+   <mel id="nf461">
+      <gl pivot="notfound">beat upon</gl>
+   </mel>
+   <mel id="nf462">
+      <gl pivot="notfound">because of it+</gl>
+   </mel>
+   <mel id="nf463">
+      <gl pivot="notfound">become dry</gl>
+   </mel>
+   <mel id="nf464">
+      <gl pivot="notfound">big drum</gl>
+   </mel>
+   <mel id="nf465">
+      <gl pivot="notfound">bind</gl>
+   </mel>
+   <mel id="nf466">
+      <gl pivot="notfound">bind things or parts of things together</gl>
+   </mel>
+   <mel id="nf467">
+      <gl pivot="notfound">birgus latro</gl>
+   </mel>
+   <mel id="nf468">
+      <gl pivot="notfound">biscuit made of dried breadfruit</gl>
+   </mel>
+   <mel id="nf469">
+      <gl pivot="notfound">bivalve sp.</gl>
+   </mel>
+   <mel id="nf470">
+      <gl pivot="notfound">bixa orellana</gl>
+   </mel>
+   <mel id="nf471">
+      <gl pivot="notfound">blade</gl>
+   </mel>
+   <mel id="nf472">
+      <gl pivot="notfound">blenny fish</gl>
+   </mel>
+   <mel id="nf473">
+      <gl pivot="notfound">blow</gl>
+   </mel>
+   <mel id="nf474">
+      <gl pivot="notfound">blunt arrow</gl>
+   </mel>
+   <mel id="nf475">
+      <gl pivot="notfound">blunt arrow+</gl>
+   </mel>
+   <mel id="nf476">
+      <gl pivot="notfound">blurred</gl>
+   </mel>
+   <mel id="nf477">
+      <gl pivot="notfound">boggy ground</gl>
+   </mel>
+   <mel id="nf478">
+      <gl pivot="notfound">bonito</gl>
+   </mel>
+   <mel id="nf479">
+      <gl pivot="notfound">bore &lt;s.o.&gt;</gl>
+   </mel>
+   <mel id="nf480">
+      <gl pivot="notfound">boring</gl>
+   </mel>
+   <mel id="nf481">
+      <gl pivot="notfound">born</gl>
+   </mel>
+   <mel id="nf482">
+      <gl pivot="notfound">bound together</gl>
+   </mel>
+   <mel id="nf483">
+      <gl pivot="notfound">break in two pieces</gl>
+   </mel>
+   <mel id="nf484">
+      <gl pivot="notfound">bsl. 'namemiwa'</gl>
+   </mel>
+   <mel id="nf485">
+      <gl pivot="notfound">build a wall</gl>
+   </mel>
+   <mel id="nf486">
+      <gl pivot="notfound">bullshit</gl>
+   </mel>
+   <mel id="nf487">
+      <gl pivot="notfound">burckella obovata</gl>
+   </mel>
+   <mel id="nf488">
+      <gl pivot="notfound">burial</gl>
+   </mel>
+   <mel id="nf489">
+      <gl pivot="notfound">burn clear and hot</gl>
+   </mel>
+   <mel id="nf490">
+      <gl pivot="notfound">burn in a low manner to facilitate cooking</gl>
+   </mel>
+   <mel id="nf491">
+      <gl pivot="notfound">burst out</gl>
+   </mel>
+   <mel id="nf492">
+      <gl pivot="notfound">by and by</gl>
+   </mel>
+   <mel id="nf493">
+      <gl pivot="notfound">by arranging wood and stones</gl>
+   </mel>
+   <mel id="nf494">
+      <gl pivot="notfound">call out</gl>
+   </mel>
+   <mel id="nf495">
+      <gl pivot="notfound">call s.o.</gl>
+   </mel>
+   <mel id="nf496">
+      <gl pivot="notfound">callophyllum inophyllum</gl>
+   </mel>
+   <mel id="nf497">
+      <gl pivot="notfound">canarium almond</gl>
+   </mel>
+   <mel id="nf498">
+      <gl pivot="notfound">canoe paddle</gl>
+   </mel>
+   <mel id="nf499">
+      <gl pivot="notfound">canoe tree</gl>
+   </mel>
+   <mel id="nf500">
+      <gl pivot="notfound">caranx spp.</gl>
+   </mel>
+   <mel id="nf501">
+      <gl pivot="notfound">carried or hung up in a bag</gl>
+   </mel>
+   <mel id="nf502">
+      <gl pivot="notfound">carry on shoulder a stick with burden in the back</gl>
+   </mel>
+   <mel id="nf503">
+      <gl pivot="notfound">carry on shoulder a stick with burdens on both ends</gl>
+   </mel>
+   <mel id="nf504">
+      <gl pivot="notfound">carry over the shoulder on a stick</gl>
+   </mel>
+   <mel id="nf505">
+      <gl pivot="notfound">carry something heavy</gl>
+   </mel>
+   <mel id="nf506">
+      <gl pivot="notfound">cast a spell on s.o. using sorcery</gl>
+   </mel>
+   <mel id="nf507">
+      <gl pivot="notfound">cast s.th.</gl>
+   </mel>
+   <mel id="nf508">
+      <gl pivot="notfound">casuarina equisetifolia</gl>
+   </mel>
+   <mel id="nf509">
+      <gl pivot="notfound">cerbera spp.</gl>
+   </mel>
+   <mel id="nf510">
+      <gl pivot="notfound">chalcophaps indica</gl>
+   </mel>
+   <mel id="nf511">
+      <gl pivot="notfound">channel on reef shore</gl>
+   </mel>
+   <mel id="nf512">
+      <gl pivot="notfound">charmosyna palmarum</gl>
+   </mel>
+   <mel id="nf513">
+      <gl pivot="notfound">charonia tritonis</gl>
+   </mel>
+   <mel id="nf514">
+      <gl pivot="notfound">chew ‹kava+›</gl>
+   </mel>
+   <mel id="nf515">
+      <gl pivot="notfound">children</gl>
+   </mel>
+   <mel id="nf516">
+      <gl pivot="notfound">citrus sp.</gl>
+   </mel>
+   <mel id="nf517">
+      <gl pivot="notfound">classifier for temporary or inessential possession</gl>
+   </mel>
+   <mel id="nf518">
+      <gl pivot="notfound">clearing in middle of village</gl>
+   </mel>
+   <mel id="nf519">
+      <gl pivot="notfound">climb up</gl>
+   </mel>
+   <mel id="nf520">
+      <gl pivot="notfound">close</gl>
+   </mel>
+   <mel id="nf521">
+      <gl pivot="notfound">coagulated vegetable sap</gl>
+   </mel>
+   <mel id="nf522">
+      <gl pivot="notfound">cobweb</gl>
+   </mel>
+   <mel id="nf523">
+      <gl pivot="notfound">coconut crab</gl>
+   </mel>
+   <mel id="nf524">
+      <gl pivot="notfound">cocos nucifera</gl>
+   </mel>
+   <mel id="nf525">
+      <gl pivot="notfound">codiaeum variegatum</gl>
+   </mel>
+   <mel id="nf526">
+      <gl pivot="notfound">collaborate</gl>
+   </mel>
+   <mel id="nf527">
+      <gl pivot="notfound">collocalia sp.</gl>
+   </mel>
+   <mel id="nf528">
+      <gl pivot="notfound">coming first</gl>
+   </mel>
+   <mel id="nf529">
+      <gl pivot="notfound">companion</gl>
+   </mel>
+   <mel id="nf530">
+      <gl pivot="notfound">complete</gl>
+   </mel>
+   <mel id="nf531">
+      <gl pivot="notfound">complete aspect</gl>
+   </mel>
+   <mel id="nf532">
+      <gl pivot="notfound">completely</gl>
+   </mel>
+   <mel id="nf533">
+      <gl pivot="notfound">conch shell</gl>
+   </mel>
+   <mel id="nf534">
+      <gl pivot="notfound">conch shell)</gl>
+   </mel>
+   <mel id="nf535">
+      <gl pivot="notfound">conjunction: from</gl>
+   </mel>
+   <mel id="nf536">
+      <gl pivot="notfound">contribute</gl>
+   </mel>
+   <mel id="nf537">
+      <gl pivot="notfound">contribute…</gl>
+   </mel>
+   <mel id="nf538">
+      <gl pivot="notfound">cooked food in oven</gl>
+   </mel>
+   <mel id="nf539">
+      <gl pivot="notfound">coral tree</gl>
+   </mel>
+   <mel id="nf540">
+      <gl pivot="notfound">cordia dichotoma</gl>
+   </mel>
+   <mel id="nf541">
+      <gl pivot="notfound">cordyline terminalis</gl>
+   </mel>
+   <mel id="nf542">
+      <gl pivot="notfound">correct</gl>
+   </mel>
+   <mel id="nf543">
+      <gl pivot="notfound">cover with lid</gl>
+   </mel>
+   <mel id="nf544">
+      <gl pivot="notfound">crazy</gl>
+   </mel>
+   <mel id="nf545">
+      <gl pivot="notfound">crescentia cujete</gl>
+   </mel>
+   <mel id="nf546">
+      <gl pivot="notfound">crinum asiaticum</gl>
+   </mel>
+   <mel id="nf547">
+      <gl pivot="notfound">crispy</gl>
+   </mel>
+   <mel id="nf548">
+      <gl pivot="notfound">crossbeam</gl>
+   </mel>
+   <mel id="nf549">
+      <gl pivot="notfound">crossways</gl>
+   </mel>
+   <mel id="nf550">
+      <gl pivot="notfound">crunch noisily</gl>
+   </mel>
+   <mel id="nf551">
+      <gl pivot="notfound">cultivated garden</gl>
+   </mel>
+   <mel id="nf552">
+      <gl pivot="notfound">cultural hero</gl>
+   </mel>
+   <mel id="nf553">
+      <gl pivot="notfound">current in sea</gl>
+   </mel>
+   <mel id="nf554">
+      <gl pivot="notfound">cut in thin slices</gl>
+   </mel>
+   <mel id="nf555">
+      <gl pivot="notfound">cut w. blade</gl>
+   </mel>
+   <mel id="nf556">
+      <gl pivot="notfound">cut with blade</gl>
+   </mel>
+   <mel id="nf557">
+      <gl pivot="notfound">cut with point of knife</gl>
+   </mel>
+   <mel id="nf558">
+      <gl pivot="notfound">cut with slashing motion</gl>
+   </mel>
+   <mel id="nf559">
+      <gl pivot="notfound">cuttlefish</gl>
+   </mel>
+   <mel id="nf560">
+      <gl pivot="notfound">cycad palm</gl>
+   </mel>
+   <mel id="nf561">
+      <gl pivot="notfound">cycas circinnalis</gl>
+   </mel>
+   <mel id="nf562">
+      <gl pivot="notfound">cyphosus cinerascens</gl>
+   </mel>
+   <mel id="nf563">
+      <gl pivot="notfound">cyrtosperma taro</gl>
+   </mel>
+   <mel id="nf564">
+      <gl pivot="notfound">dance rattles</gl>
+   </mel>
+   <mel id="nf565">
+      <gl pivot="notfound">dasyatidae spp.</gl>
+   </mel>
+   <mel id="nf566">
+      <gl pivot="notfound">dative</gl>
+   </mel>
+   <mel id="nf567">
+      <gl pivot="notfound">day of silence in sign of mourning</gl>
+   </mel>
+   <mel id="nf568">
+      <gl pivot="notfound">deceive</gl>
+   </mel>
+   <mel id="nf569">
+      <gl pivot="notfound">deep rock cave</gl>
+   </mel>
+   <mel id="nf570">
+      <gl pivot="notfound">deep sea</gl>
+   </mel>
+   <mel id="nf571">
+      <gl pivot="notfound">defecate</gl>
+   </mel>
+   <mel id="nf572">
+      <gl pivot="notfound">deity</gl>
+   </mel>
+   <mel id="nf573">
+      <gl pivot="notfound">delicious</gl>
+   </mel>
+   <mel id="nf574">
+      <gl pivot="notfound">dendrocnide sp.</gl>
+   </mel>
+   <mel id="nf575">
+      <gl pivot="notfound">destroy s.o.'s properties as a punishment</gl>
+   </mel>
+   <mel id="nf576">
+      <gl pivot="notfound">diodon sp.</gl>
+   </mel>
+   <mel id="nf577">
+      <gl pivot="notfound">diodon spp.</gl>
+   </mel>
+   <mel id="nf578">
+      <gl pivot="notfound">dioscorea bulbifera</gl>
+   </mel>
+   <mel id="nf579">
+      <gl pivot="notfound">dioscorea esculenta</gl>
+   </mel>
+   <mel id="nf580">
+      <gl pivot="notfound">disaster</gl>
+   </mel>
+   <mel id="nf581">
+      <gl pivot="notfound">discover</gl>
+   </mel>
+   <mel id="nf582">
+      <gl pivot="notfound">distribute</gl>
+   </mel>
+   <mel id="nf583">
+      <gl pivot="notfound">do completely</gl>
+   </mel>
+   <mel id="nf584">
+      <gl pivot="notfound">do tentatively</gl>
+   </mel>
+   <mel id="nf585">
+      <gl pivot="notfound">door of o.'s house</gl>
+   </mel>
+   <mel id="nf586">
+      <gl pivot="notfound">down to deep place</gl>
+   </mel>
+   <mel id="nf587">
+      <gl pivot="notfound">downhill</gl>
+   </mel>
+   <mel id="nf588">
+      <gl pivot="notfound">downwards</gl>
+   </mel>
+   <mel id="nf589">
+      <gl pivot="notfound">dracontomelon</gl>
+   </mel>
+   <mel id="nf590">
+      <gl pivot="notfound">draw</gl>
+   </mel>
+   <mel id="nf591">
+      <gl pivot="notfound">drinking coconut</gl>
+   </mel>
+   <mel id="nf592">
+      <gl pivot="notfound">dry coconut</gl>
+   </mel>
+   <mel id="nf593">
+      <gl pivot="notfound">ducula pacifica</gl>
+   </mel>
+   <mel id="nf594">
+      <gl pivot="notfound">dummy noun: the one who</gl>
+   </mel>
+   <mel id="nf595">
+      <gl pivot="notfound">eager</gl>
+   </mel>
+   <mel id="nf596">
+      <gl pivot="notfound">eat meat</gl>
+   </mel>
+   <mel id="nf597">
+      <gl pivot="notfound">eaten</gl>
+   </mel>
+   <mel id="nf598">
+      <gl pivot="notfound">ecsenius sp.</gl>
+   </mel>
+   <mel id="nf599">
+      <gl pivot="notfound">eel</gl>
+   </mel>
+   <mel id="nf600">
+      <gl pivot="notfound">effect</gl>
+   </mel>
+   <mel id="nf601">
+      <gl pivot="notfound">effigy</gl>
+   </mel>
+   <mel id="nf602">
+      <gl pivot="notfound">elder same-sex sibling</gl>
+   </mel>
+   <mel id="nf603">
+      <gl pivot="notfound">elder samesex sibling</gl>
+   </mel>
+   <mel id="nf604">
+      <gl pivot="notfound">elephantiasis</gl>
+   </mel>
+   <mel id="nf605">
+      <gl pivot="notfound">emit a pleasant or unpleasant smell</gl>
+   </mel>
+   <mel id="nf606">
+      <gl pivot="notfound">emit a pleasant smell</gl>
+   </mel>
+   <mel id="nf607">
+      <gl pivot="notfound">emit an unpleasant smell</gl>
+   </mel>
+   <mel id="nf608">
+      <gl pivot="notfound">empty space</gl>
+   </mel>
+   <mel id="nf609">
+      <gl pivot="notfound">encastrer un bois dans un autre</gl>
+   </mel>
+   <mel id="nf610">
+      <gl pivot="notfound">enclosure</gl>
+   </mel>
+   <mel id="nf611">
+      <gl pivot="notfound">end</gl>
+   </mel>
+   <mel id="nf612">
+      <gl pivot="notfound">end a song with final verse</gl>
+   </mel>
+   <mel id="nf613">
+      <gl pivot="notfound">enquire</gl>
+   </mel>
+   <mel id="nf614">
+      <gl pivot="notfound">entrance of hell</gl>
+   </mel>
+   <mel id="nf615">
+      <gl pivot="notfound">equal</gl>
+   </mel>
+   <mel id="nf616">
+      <gl pivot="notfound">erect</gl>
+   </mel>
+   <mel id="nf617">
+      <gl pivot="notfound">erythrina indica</gl>
+   </mel>
+   <mel id="nf618">
+      <gl pivot="notfound">esp.</gl>
+   </mel>
+   <mel id="nf619">
+      <gl pivot="notfound">esp. canoe</gl>
+   </mel>
+   <mel id="nf620">
+      <gl pivot="notfound">esp. climb &lt;tree&gt; to get some fruit</gl>
+   </mel>
+   <mel id="nf621">
+      <gl pivot="notfound">esp. entrance into hades</gl>
+   </mel>
+   <mel id="nf622">
+      <gl pivot="notfound">esp. for birds</gl>
+   </mel>
+   <mel id="nf623">
+      <gl pivot="notfound">esp. in a mass</gl>
+   </mel>
+   <mel id="nf624">
+      <gl pivot="notfound">esp. in future</gl>
+   </mel>
+   <mel id="nf625">
+      <gl pivot="notfound">esp. pin together &lt;thatch leaves&gt; onto a rod</gl>
+   </mel>
+   <mel id="nf626">
+      <gl pivot="notfound">esp. technique used in catching birds</gl>
+   </mel>
+   <mel id="nf627">
+      <gl pivot="notfound">esp. village dance</gl>
+   </mel>
+   <mel id="nf628">
+      <gl pivot="notfound">esp. with</gl>
+   </mel>
+   <mel id="nf629">
+      <gl pivot="notfound">especially</gl>
+   </mel>
+   <mel id="nf630">
+      <gl pivot="notfound">excessively</gl>
+   </mel>
+   <mel id="nf631">
+      <gl pivot="notfound">excoecaria agallocha</gl>
+   </mel>
+   <mel id="nf632">
+      <gl pivot="notfound">exhausted</gl>
+   </mel>
+   <mel id="nf633">
+      <gl pivot="notfound">existential  predicate</gl>
+   </mel>
+   <mel id="nf634">
+      <gl pivot="notfound">existential predicate</gl>
+   </mel>
+   <mel id="nf635">
+      <gl pivot="notfound">exit</gl>
+   </mel>
+   <mel id="nf636">
+      <gl pivot="notfound">exocetus</gl>
+   </mel>
+   <mel id="nf637">
+      <gl pivot="notfound">extremely thin</gl>
+   </mel>
+   <mel id="nf638">
+      <gl pivot="notfound">faeces</gl>
+   </mel>
+   <mel id="nf639">
+      <gl pivot="notfound">fagifer</gl>
+   </mel>
+   <mel id="nf640">
+      <gl pivot="notfound">fall into hole</gl>
+   </mel>
+   <mel id="nf641">
+      <gl pivot="notfound">fame</gl>
+   </mel>
+   <mel id="nf642">
+      <gl pivot="notfound">fan palm</gl>
+   </mel>
+   <mel id="nf643">
+      <gl pivot="notfound">fat</gl>
+   </mel>
+   <mel id="nf644">
+      <gl pivot="notfound">feel affection for</gl>
+   </mel>
+   <mel id="nf645">
+      <gl pivot="notfound">feel affection for s.o.</gl>
+   </mel>
+   <mel id="nf646">
+      <gl pivot="notfound">fetch</gl>
+   </mel>
+   <mel id="nf647">
+      <gl pivot="notfound">fibre in the coconut husk</gl>
+   </mel>
+   <mel id="nf648">
+      <gl pivot="notfound">fibrous spathe of coconut frond</gl>
+   </mel>
+   <mel id="nf649">
+      <gl pivot="notfound">fig.)</gl>
+   </mel>
+   <mel id="nf650">
+      <gl pivot="notfound">filthy</gl>
+   </mel>
+   <mel id="nf651">
+      <gl pivot="notfound">finished</gl>
+   </mel>
+   <mel id="nf652">
+      <gl pivot="notfound">fly away</gl>
+   </mel>
+   <mel id="nf653">
+      <gl pivot="notfound">fly off</gl>
+   </mel>
+   <mel id="nf654">
+      <gl pivot="notfound">fly with flapping wings</gl>
+   </mel>
+   <mel id="nf655">
+      <gl pivot="notfound">flying-fish</gl>
+   </mel>
+   <mel id="nf656">
+      <gl pivot="notfound">flying-fox</gl>
+   </mel>
+   <mel id="nf657">
+      <gl pivot="notfound">flyingfish</gl>
+   </mel>
+   <mel id="nf658">
+      <gl pivot="notfound">flyingfox</gl>
+   </mel>
+   <mel id="nf659">
+      <gl pivot="notfound">fold over and pin</gl>
+   </mel>
+   <mel id="nf660">
+      <gl pivot="notfound">follow a song &gt; sing</gl>
+   </mel>
+   <mel id="nf661">
+      <gl pivot="notfound">forbidden</gl>
+   </mel>
+   <mel id="nf662">
+      <gl pivot="notfound">fresh water</gl>
+   </mel>
+   <mel id="nf663">
+      <gl pivot="notfound">fruit)</gl>
+   </mel>
+   <mel id="nf664">
+      <gl pivot="notfound">fruit) dry</gl>
+   </mel>
+   <mel id="nf665">
+      <gl pivot="notfound">full-grown</gl>
+   </mel>
+   <mel id="nf666">
+      <gl pivot="notfound">fullgrown</gl>
+   </mel>
+   <mel id="nf667">
+      <gl pivot="notfound">funeral ceremonies</gl>
+   </mel>
+   <mel id="nf668">
+      <gl pivot="notfound">fuzzy</gl>
+   </mel>
+   <mel id="nf669">
+      <gl pivot="notfound">game)</gl>
+   </mel>
+   <mel id="nf670">
+      <gl pivot="notfound">garden+)</gl>
+   </mel>
+   <mel id="nf671">
+      <gl pivot="notfound">general possessive classifier</gl>
+   </mel>
+   <mel id="nf672">
+      <gl pivot="notfound">generous</gl>
+   </mel>
+   <mel id="nf673">
+      <gl pivot="notfound">germinated coconut</gl>
+   </mel>
+   <mel id="nf674">
+      <gl pivot="notfound">giant clam</gl>
+   </mel>
+   <mel id="nf675">
+      <gl pivot="notfound">giant moray</gl>
+   </mel>
+   <mel id="nf676">
+      <gl pivot="notfound">give &lt;s.th.&gt; as a present</gl>
+   </mel>
+   <mel id="nf677">
+      <gl pivot="notfound">give a present</gl>
+   </mel>
+   <mel id="nf678">
+      <gl pivot="notfound">give generously</gl>
+   </mel>
+   <mel id="nf679">
+      <gl pivot="notfound">give present</gl>
+   </mel>
+   <mel id="nf680">
+      <gl pivot="notfound">glue-tree</gl>
+   </mel>
+   <mel id="nf681">
+      <gl pivot="notfound">gluetree</gl>
+   </mel>
+   <mel id="nf682">
+      <gl pivot="notfound">goatfish</gl>
+   </mel>
+   <mel id="nf683">
+      <gl pivot="notfound">grab</gl>
+   </mel>
+   <mel id="nf684">
+      <gl pivot="notfound">grate</gl>
+   </mel>
+   <mel id="nf685">
+      <gl pivot="notfound">grate coconut</gl>
+   </mel>
+   <mel id="nf686">
+      <gl pivot="notfound">grate ‹tuber root› in food preparation</gl>
+   </mel>
+   <mel id="nf687">
+      <gl pivot="notfound">graveyard</gl>
+   </mel>
+   <mel id="nf688">
+      <gl pivot="notfound">gray</gl>
+   </mel>
+   <mel id="nf689">
+      <gl pivot="notfound">great bean vine</gl>
+   </mel>
+   <mel id="nf690">
+      <gl pivot="notfound">grouper fish</gl>
+   </mel>
+   <mel id="nf691">
+      <gl pivot="notfound">grunt</gl>
+   </mel>
+   <mel id="nf692">
+      <gl pivot="notfound">gymnothorax sp.</gl>
+   </mel>
+   <mel id="nf693">
+      <gl pivot="notfound">gyrocarpus americanus</gl>
+   </mel>
+   <mel id="nf694">
+      <gl pivot="notfound">halcyon sp.</gl>
+   </mel>
+   <mel id="nf695">
+      <gl pivot="notfound">hardworking</gl>
+   </mel>
+   <mel id="nf696">
+      <gl pivot="notfound">harm</gl>
+   </mel>
+   <mel id="nf697">
+      <gl pivot="notfound">have sexual intercourse</gl>
+   </mel>
+   <mel id="nf698">
+      <gl pivot="notfound">hazy</gl>
+   </mel>
+   <mel id="nf699">
+      <gl pivot="notfound">heave up soil swith digging-stick</gl>
+   </mel>
+   <mel id="nf700">
+      <gl pivot="notfound">heave up soil swith diggingstick</gl>
+   </mel>
+   <mel id="nf701">
+      <gl pivot="notfound">heave up soil with digging-stick</gl>
+   </mel>
+   <mel id="nf702">
+      <gl pivot="notfound">heave up soil with diggingstick</gl>
+   </mel>
+   <mel id="nf703">
+      <gl pivot="notfound">heavy on</gl>
+   </mel>
+   <mel id="nf704">
+      <gl pivot="notfound">hemirhamphus</gl>
+   </mel>
+   <mel id="nf705">
+      <gl pivot="notfound">hen) peck</gl>
+   </mel>
+   <mel id="nf706">
+      <gl pivot="notfound">her belly</gl>
+   </mel>
+   <mel id="nf707">
+      <gl pivot="notfound">her mind</gl>
+   </mel>
+   <mel id="nf708">
+      <gl pivot="notfound">hernandia nymphaefolia</gl>
+   </mel>
+   <mel id="nf709">
+      <gl pivot="notfound">hibiscus tiliaceus</gl>
+   </mel>
+   <mel id="nf710">
+      <gl pivot="notfound">higher spirit</gl>
+   </mel>
+   <mel id="nf711">
+      <gl pivot="notfound">highly-ranked woman</gl>
+   </mel>
+   <mel id="nf712">
+      <gl pivot="notfound">highly-ranked young man</gl>
+   </mel>
+   <mel id="nf713">
+      <gl pivot="notfound">highlyranked woman</gl>
+   </mel>
+   <mel id="nf714">
+      <gl pivot="notfound">highlyranked young man</gl>
+   </mel>
+   <mel id="nf715">
+      <gl pivot="notfound">hill+)</gl>
+   </mel>
+   <mel id="nf716">
+      <gl pivot="notfound">his</gl>
+   </mel>
+   <mel id="nf717">
+      <gl pivot="notfound">his grave</gl>
+   </mel>
+   <mel id="nf718">
+      <gl pivot="notfound">his sole</gl>
+   </mel>
+   <mel id="nf719">
+      <gl pivot="notfound">hit violently</gl>
+   </mel>
+   <mel id="nf720">
+      <gl pivot="notfound">hit with stick</gl>
+   </mel>
+   <mel id="nf721">
+      <gl pivot="notfound">hitch</gl>
+   </mel>
+   <mel id="nf722">
+      <gl pivot="notfound">hoist</gl>
+   </mel>
+   <mel id="nf723">
+      <gl pivot="notfound">hold in o.'s hands</gl>
+   </mel>
+   <mel id="nf724">
+      <gl pivot="notfound">holding with one hand on either side</gl>
+   </mel>
+   <mel id="nf725">
+      <gl pivot="notfound">holy song</gl>
+   </mel>
+   <mel id="nf726">
+      <gl pivot="notfound">honorific title</gl>
+   </mel>
+   <mel id="nf727">
+      <gl pivot="notfound">honourific title</gl>
+   </mel>
+   <mel id="nf728">
+      <gl pivot="notfound">horizon</gl>
+   </mel>
+   <mel id="nf729">
+      <gl pivot="notfound">horizontal slit drum</gl>
+   </mel>
+   <mel id="nf730">
+      <gl pivot="notfound">horizon’</gl>
+   </mel>
+   <mel id="nf731">
+      <gl pivot="notfound">house roof made of</gl>
+   </mel>
+   <mel id="nf732">
+      <gl pivot="notfound">hungry</gl>
+   </mel>
+   <mel id="nf733">
+      <gl pivot="notfound">hurt</gl>
+   </mel>
+   <mel id="nf734">
+      <gl pivot="notfound">identical</gl>
+   </mel>
+   <mel id="nf735">
+      <gl pivot="notfound">ignorant</gl>
+   </mel>
+   <mel id="nf736">
+      <gl pivot="notfound">illuminate</gl>
+   </mel>
+   <mel id="nf737">
+      <gl pivot="notfound">iloa</gl>
+   </mel>
+   <mel id="nf738">
+      <gl pivot="notfound">impact</gl>
+   </mel>
+   <mel id="nf739">
+      <gl pivot="notfound">improve</gl>
+   </mel>
+   <mel id="nf740">
+      <gl pivot="notfound">in new condition</gl>
+   </mel>
+   <mel id="nf741">
+      <gl pivot="notfound">in olden days</gl>
+   </mel>
+   <mel id="nf742">
+      <gl pivot="notfound">in past</gl>
+   </mel>
+   <mel id="nf743">
+      <gl pivot="notfound">inanimate oblique anaphoric</gl>
+   </mel>
+   <mel id="nf744">
+      <gl pivot="notfound">indefinite article</gl>
+   </mel>
+   <mel id="nf745">
+      <gl pivot="notfound">indian mulberry</gl>
+   </mel>
+   <mel id="nf746">
+      <gl pivot="notfound">inhabited territory: village</gl>
+   </mel>
+   <mel id="nf747">
+      <gl pivot="notfound">inocarpus edulis</gl>
+   </mel>
+   <mel id="nf748">
+      <gl pivot="notfound">instrumental anaphoric</gl>
+   </mel>
+   <mel id="nf749">
+      <gl pivot="notfound">intelligent</gl>
+   </mel>
+   <mel id="nf750">
+      <gl pivot="notfound">inwardly</gl>
+   </mel>
+   <mel id="nf751">
+      <gl pivot="notfound">ipomoea pes-caprae</gl>
+   </mel>
+   <mel id="nf752">
+      <gl pivot="notfound">ipomoea pescaprae</gl>
+   </mel>
+   <mel id="nf753">
+      <gl pivot="notfound">isolated from a group</gl>
+   </mel>
+   <mel id="nf754">
+      <gl pivot="notfound">its inside</gl>
+   </mel>
+   <mel id="nf755">
+      <gl pivot="notfound">its smell</gl>
+   </mel>
+   <mel id="nf756">
+      <gl pivot="notfound">jawbone</gl>
+   </mel>
+   <mel id="nf757">
+      <gl pivot="notfound">jointly</gl>
+   </mel>
+   <mel id="nf758">
+      <gl pivot="notfound">k.o. banana ‘fehi’</gl>
+   </mel>
+   <mel id="nf759">
+      <gl pivot="notfound">k.o. dance performed by young initiated men</gl>
+   </mel>
+   <mel id="nf760">
+      <gl pivot="notfound">k.o. dove</gl>
+   </mel>
+   <mel id="nf761">
+      <gl pivot="notfound">k.o. edible leaf</gl>
+   </mel>
+   <mel id="nf762">
+      <gl pivot="notfound">k.o. fish</gl>
+   </mel>
+   <mel id="nf763">
+      <gl pivot="notfound">k.o. hardwood tree</gl>
+   </mel>
+   <mel id="nf764">
+      <gl pivot="notfound">k.o. leaf</gl>
+   </mel>
+   <mel id="nf765">
+      <gl pivot="notfound">k.o. mat</gl>
+   </mel>
+   <mel id="nf766">
+      <gl pivot="notfound">k.o. mudcrab</gl>
+   </mel>
+   <mel id="nf767">
+      <gl pivot="notfound">k.o. parrot</gl>
+   </mel>
+   <mel id="nf768">
+      <gl pivot="notfound">k.o. shore tree</gl>
+   </mel>
+   <mel id="nf769">
+      <gl pivot="notfound">k.o. small bird</gl>
+   </mel>
+   <mel id="nf770">
+      <gl pivot="notfound">k.o. snapper</gl>
+   </mel>
+   <mel id="nf771">
+      <gl pivot="notfound">k.o. song &amp; dance</gl>
+   </mel>
+   <mel id="nf772">
+      <gl pivot="notfound">k.o. trevally</gl>
+   </mel>
+   <mel id="nf773">
+      <gl pivot="notfound">k.o. yam</gl>
+   </mel>
+   <mel id="nf774">
+      <gl pivot="notfound">kava</gl>
+   </mel>
+   <mel id="nf775">
+      <gl pivot="notfound">kind of evening dance</gl>
+   </mel>
+   <mel id="nf776">
+      <gl pivot="notfound">knock with fist</gl>
+   </mel>
+   <mel id="nf777">
+      <gl pivot="notfound">know</gl>
+   </mel>
+   <mel id="nf778">
+      <gl pivot="notfound">l. kasmira</gl>
+   </mel>
+   <mel id="nf779">
+      <gl pivot="notfound">lalage leucopyga</gl>
+   </mel>
+   <mel id="nf780">
+      <gl pivot="notfound">lalage maculosa</gl>
+   </mel>
+   <mel id="nf781">
+      <gl pivot="notfound">large</gl>
+   </mel>
+   <mel id="nf782">
+      <gl pivot="notfound">large long fish with very sharp teeth and small scales:  a sphyraenid</gl>
+   </mel>
+   <mel id="nf783">
+      <gl pivot="notfound">laticauda semifasciata</gl>
+   </mel>
+   <mel id="nf784">
+      <gl pivot="notfound">laugh at</gl>
+   </mel>
+   <mel id="nf785">
+      <gl pivot="notfound">lay s.th.</gl>
+   </mel>
+   <mel id="nf786">
+      <gl pivot="notfound">leaf of a kind of vine that is used for traditional medecine</gl>
+   </mel>
+   <mel id="nf787">
+      <gl pivot="notfound">lean against</gl>
+   </mel>
+   <mel id="nf788">
+      <gl pivot="notfound">lest</gl>
+   </mel>
+   <mel id="nf789">
+      <gl pivot="notfound">lethrinus harak</gl>
+   </mel>
+   <mel id="nf790">
+      <gl pivot="notfound">lethrinus miniatus</gl>
+   </mel>
+   <mel id="nf791">
+      <gl pivot="notfound">liana</gl>
+   </mel>
+   <mel id="nf792">
+      <gl pivot="notfound">licuala sp.</gl>
+   </mel>
+   <mel id="nf793">
+      <gl pivot="notfound">licuala spp.</gl>
+   </mel>
+   <mel id="nf794">
+      <gl pivot="notfound">lie</gl>
+   </mel>
+   <mel id="nf795">
+      <gl pivot="notfound">lie wide and open</gl>
+   </mel>
+   <mel id="nf796">
+      <gl pivot="notfound">lift s.th.</gl>
+   </mel>
+   <mel id="nf797">
+      <gl pivot="notfound">lift up s.th. heavy</gl>
+   </mel>
+   <mel id="nf798">
+      <gl pivot="notfound">light</gl>
+   </mel>
+   <mel id="nf799">
+      <gl pivot="notfound">light in weight</gl>
+   </mel>
+   <mel id="nf800">
+      <gl pivot="notfound">light)</gl>
+   </mel>
+   <mel id="nf801">
+      <gl pivot="notfound">likely to</gl>
+   </mel>
+   <mel id="nf802">
+      <gl pivot="notfound">likeness</gl>
+   </mel>
+   <mel id="nf803">
+      <gl pivot="notfound">link between tens and units</gl>
+   </mel>
+   <mel id="nf804">
+      <gl pivot="notfound">lips</gl>
+   </mel>
+   <mel id="nf805">
+      <gl pivot="notfound">listless</gl>
+   </mel>
+   <mel id="nf806">
+      <gl pivot="notfound">lobster+</gl>
+   </mel>
+   <mel id="nf807">
+      <gl pivot="notfound">located</gl>
+   </mel>
+   <mel id="nf808">
+      <gl pivot="notfound">locative anaphoric</gl>
+   </mel>
+   <mel id="nf809">
+      <gl pivot="notfound">long ago</gl>
+   </mel>
+   <mel id="nf810">
+      <gl pivot="notfound">loosen and pull &lt;s.th.&gt; out</gl>
+   </mel>
+   <mel id="nf811">
+      <gl pivot="notfound">loosen and pull out</gl>
+   </mel>
+   <mel id="nf812">
+      <gl pivot="notfound">lost</gl>
+   </mel>
+   <mel id="nf813">
+      <gl pivot="notfound">luthanus monostigma</gl>
+   </mel>
+   <mel id="nf814">
+      <gl pivot="notfound">lutjanus fulviflamma</gl>
+   </mel>
+   <mel id="nf815">
+      <gl pivot="notfound">lutjanus fulvus</gl>
+   </mel>
+   <mel id="nf816">
+      <gl pivot="notfound">lutjanus gibbus</gl>
+   </mel>
+   <mel id="nf817">
+      <gl pivot="notfound">lutjanus monostigma</gl>
+   </mel>
+   <mel id="nf818">
+      <gl pivot="notfound">lutjanus spp.</gl>
+   </mel>
+   <mel id="nf819">
+      <gl pivot="notfound">lying</gl>
+   </mel>
+   <mel id="nf820">
+      <gl pivot="notfound">macaranga spp.</gl>
+   </mel>
+   <mel id="nf821">
+      <gl pivot="notfound">mackerel</gl>
+   </mel>
+   <mel id="nf822">
+      <gl pivot="notfound">magic power of man</gl>
+   </mel>
+   <mel id="nf823">
+      <gl pivot="notfound">magic power of spirits</gl>
+   </mel>
+   <mel id="nf824">
+      <gl pivot="notfound">magic stone in the bush</gl>
+   </mel>
+   <mel id="nf825">
+      <gl pivot="notfound">main</gl>
+   </mel>
+   <mel id="nf826">
+      <gl pivot="notfound">make a fire</gl>
+   </mel>
+   <mel id="nf827">
+      <gl pivot="notfound">make a noise</gl>
+   </mel>
+   <mel id="nf828">
+      <gl pivot="notfound">make a speech</gl>
+   </mel>
+   <mel id="nf829">
+      <gl pivot="notfound">make effort</gl>
+   </mel>
+   <mel id="nf830">
+      <gl pivot="notfound">make noise</gl>
+   </mel>
+   <mel id="nf831">
+      <gl pivot="notfound">make ready</gl>
+   </mel>
+   <mel id="nf832">
+      <gl pivot="notfound">mangrove</gl>
+   </mel>
+   <mel id="nf833">
+      <gl pivot="notfound">mashed breadfruit</gl>
+   </mel>
+   <mel id="nf834">
+      <gl pivot="notfound">mausoleum for ancient high chiefs</gl>
+   </mel>
+   <mel id="nf835">
+      <gl pivot="notfound">me and x</gl>
+   </mel>
+   <mel id="nf836">
+      <gl pivot="notfound">metroxylon warburgii</gl>
+   </mel>
+   <mel id="nf837">
+      <gl pivot="notfound">miscanthus floridulus</gl>
+   </mel>
+   <mel id="nf838">
+      <gl pivot="notfound">mist</gl>
+   </mel>
+   <mel id="nf839">
+      <gl pivot="notfound">moment</gl>
+   </mel>
+   <mel id="nf840">
+      <gl pivot="notfound">moray</gl>
+   </mel>
+   <mel id="nf841">
+      <gl pivot="notfound">morinda citrifolia</gl>
+   </mel>
+   <mel id="nf842">
+      <gl pivot="notfound">mount</gl>
+   </mel>
+   <mel id="nf843">
+      <gl pivot="notfound">muddy</gl>
+   </mel>
+   <mel id="nf844">
+      <gl pivot="notfound">mullet fish</gl>
+   </mel>
+   <mel id="nf845">
+      <gl pivot="notfound">mullidae sp.</gl>
+   </mel>
+   <mel id="nf846">
+      <gl pivot="notfound">mullidae spp.</gl>
+   </mel>
+   <mel id="nf847">
+      <gl pivot="notfound">mutual aid</gl>
+   </mel>
+   <mel id="nf848">
+      <gl pivot="notfound">my back</gl>
+   </mel>
+   <mel id="nf849">
+      <gl pivot="notfound">my chest</gl>
+   </mel>
+   <mel id="nf850">
+      <gl pivot="notfound">my ears</gl>
+   </mel>
+   <mel id="nf851">
+      <gl pivot="notfound">my feet</gl>
+   </mel>
+   <mel id="nf852">
+      <gl pivot="notfound">my fellow</gl>
+   </mel>
+   <mel id="nf853">
+      <gl pivot="notfound">my grandchild</gl>
+   </mel>
+   <mel id="nf854">
+      <gl pivot="notfound">my grandparent</gl>
+   </mel>
+   <mel id="nf855">
+      <gl pivot="notfound">my knee</gl>
+   </mel>
+   <mel id="nf856">
+      <gl pivot="notfound">my legs</gl>
+   </mel>
+   <mel id="nf857">
+      <gl pivot="notfound">my liver</gl>
+   </mel>
+   <mel id="nf858">
+      <gl pivot="notfound">my mother</gl>
+   </mel>
+   <mel id="nf859">
+      <gl pivot="notfound">my name</gl>
+   </mel>
+   <mel id="nf860">
+      <gl pivot="notfound">my nose</gl>
+   </mel>
+   <mel id="nf861">
+      <gl pivot="notfound">my opposite-sex sibling</gl>
+   </mel>
+   <mel id="nf862">
+      <gl pivot="notfound">my oppositesex sibling</gl>
+   </mel>
+   <mel id="nf863">
+      <gl pivot="notfound">my song</gl>
+   </mel>
+   <mel id="nf864">
+      <gl pivot="notfound">my thigh</gl>
+   </mel>
+   <mel id="nf865">
+      <gl pivot="notfound">my voice</gl>
+   </mel>
+   <mel id="nf866">
+      <gl pivot="notfound">myself</gl>
+   </mel>
+   <mel id="nf867">
+      <gl pivot="notfound">myzomela cardinalis</gl>
+   </mel>
+   <mel id="nf868">
+      <gl pivot="notfound">name of a chiefly rank</gl>
+   </mel>
+   <mel id="nf869">
+      <gl pivot="notfound">name of a dance</gl>
+   </mel>
+   <mel id="nf870">
+      <gl pivot="notfound">name of a shrub on the beach</gl>
+   </mel>
+   <mel id="nf871">
+      <gl pivot="notfound">name of a spirit</gl>
+   </mel>
+   <mel id="nf872">
+      <gl pivot="notfound">name s.th.</gl>
+   </mel>
+   <mel id="nf873">
+      <gl pivot="notfound">narrow entrance</gl>
+   </mel>
+   <mel id="nf874">
+      <gl pivot="notfound">nettle tree</gl>
+   </mel>
+   <mel id="nf875">
+      <gl pivot="notfound">nort</gl>
+   </mel>
+   <mel id="nf876">
+      <gl pivot="notfound">not slack</gl>
+   </mel>
+   <mel id="nf877">
+      <gl pivot="notfound">not there</gl>
+   </mel>
+   <mel id="nf878">
+      <gl pivot="notfound">not yet</gl>
+   </mel>
+   <mel id="nf879">
+      <gl pivot="notfound">obstruct</gl>
+   </mel>
+   <mel id="nf880">
+      <gl pivot="notfound">ochrosia ~ neisosperma oppositifolia</gl>
+   </mel>
+   <mel id="nf881">
+      <gl pivot="notfound">octopus</gl>
+   </mel>
+   <mel id="nf882">
+      <gl pivot="notfound">off</gl>
+   </mel>
+   <mel id="nf883">
+      <gl pivot="notfound">off…</gl>
+   </mel>
+   <mel id="nf884">
+      <gl pivot="notfound">on it</gl>
+   </mel>
+   <mel id="nf885">
+      <gl pivot="notfound">on my own</gl>
+   </mel>
+   <mel id="nf886">
+      <gl pivot="notfound">one on each side</gl>
+   </mel>
+   <mel id="nf887">
+      <gl pivot="notfound">one who is liked</gl>
+   </mel>
+   <mel id="nf888">
+      <gl pivot="notfound">one… the other one</gl>
+   </mel>
+   <mel id="nf889">
+      <gl pivot="notfound">open sea</gl>
+   </mel>
+   <mel id="nf890">
+      <gl pivot="notfound">or two people carrying</gl>
+   </mel>
+   <mel id="nf891">
+      <gl pivot="notfound">out</gl>
+   </mel>
+   <mel id="nf892">
+      <gl pivot="notfound">out of sight</gl>
+   </mel>
+   <mel id="nf893">
+      <gl pivot="notfound">outwards</gl>
+   </mel>
+   <mel id="nf894">
+      <gl pivot="notfound">pandanus mat</gl>
+   </mel>
+   <mel id="nf895">
+      <gl pivot="notfound">pangium edule</gl>
+   </mel>
+   <mel id="nf896">
+      <gl pivot="notfound">pant</gl>
+   </mel>
+   <mel id="nf897">
+      <gl pivot="notfound">pare</gl>
+   </mel>
+   <mel id="nf898">
+      <gl pivot="notfound">parrotfish</gl>
+   </mel>
+   <mel id="nf899">
+      <gl pivot="notfound">partner</gl>
+   </mel>
+   <mel id="nf900">
+      <gl pivot="notfound">pemphis acidula</gl>
+   </mel>
+   <mel id="nf901">
+      <gl pivot="notfound">perfectly</gl>
+   </mel>
+   <mel id="nf902">
+      <gl pivot="notfound">perform manly dance</gl>
+   </mel>
+   <mel id="nf903">
+      <gl pivot="notfound">person from</gl>
+   </mel>
+   <mel id="nf904">
+      <gl pivot="notfound">personal name</gl>
+   </mel>
+   <mel id="nf905">
+      <gl pivot="notfound">photo</gl>
+   </mel>
+   <mel id="nf906">
+      <gl pivot="notfound">picot</gl>
+   </mel>
+   <mel id="nf907">
+      <gl pivot="notfound">pig+)</gl>
+   </mel>
+   <mel id="nf908">
+      <gl pivot="notfound">pig-killing ceremony in graded society</gl>
+   </mel>
+   <mel id="nf909">
+      <gl pivot="notfound">pigkilling ceremony in graded society</gl>
+   </mel>
+   <mel id="nf910">
+      <gl pivot="notfound">pin &lt;s.th.&gt;</gl>
+   </mel>
+   <mel id="nf911">
+      <gl pivot="notfound">pineapple</gl>
+   </mel>
+   <mel id="nf912">
+      <gl pivot="notfound">pipturus argenteus</gl>
+   </mel>
+   <mel id="nf913">
+      <gl pivot="notfound">place</gl>
+   </mel>
+   <mel id="nf914">
+      <gl pivot="notfound">place for</gl>
+   </mel>
+   <mel id="nf915">
+      <gl pivot="notfound">place haunted by ghosts</gl>
+   </mel>
+   <mel id="nf916">
+      <gl pivot="notfound">placeholder</gl>
+   </mel>
+   <mel id="nf917">
+      <gl pivot="notfound">plant used for its red dye</gl>
+   </mel>
+   <mel id="nf918">
+      <gl pivot="notfound">platter</gl>
+   </mel>
+   <mel id="nf919">
+      <gl pivot="notfound">play music with stamping bamboo</gl>
+   </mel>
+   <mel id="nf920">
+      <gl pivot="notfound">plectorhynchus orientalis</gl>
+   </mel>
+   <mel id="nf921">
+      <gl pivot="notfound">plenty</gl>
+   </mel>
+   <mel id="nf922">
+      <gl pivot="notfound">plexus at the based of the fronds of sa&amp; other palms</gl>
+   </mel>
+   <mel id="nf923">
+      <gl pivot="notfound">plural action</gl>
+   </mel>
+   <mel id="nf924">
+      <gl pivot="notfound">poke</gl>
+   </mel>
+   <mel id="nf925">
+      <gl pivot="notfound">polynesian arrowroot</gl>
+   </mel>
+   <mel id="nf926">
+      <gl pivot="notfound">polyscias scutellaria</gl>
+   </mel>
+   <mel id="nf927">
+      <gl pivot="notfound">porcupine fish</gl>
+   </mel>
+   <mel id="nf928">
+      <gl pivot="notfound">pork meat</gl>
+   </mel>
+   <mel id="nf929">
+      <gl pivot="notfound">porphyrio porphyrio</gl>
+   </mel>
+   <mel id="nf930">
+      <gl pivot="notfound">possessed of magic</gl>
+   </mel>
+   <mel id="nf931">
+      <gl pivot="notfound">possessive classifier for farming valuables</gl>
+   </mel>
+   <mel id="nf932">
+      <gl pivot="notfound">pound pudding on dish</gl>
+   </mel>
+   <mel id="nf933">
+      <gl pivot="notfound">pour out</gl>
+   </mel>
+   <mel id="nf934">
+      <gl pivot="notfound">powers as the abode of a 'vui'</gl>
+   </mel>
+   <mel id="nf935">
+      <gl pivot="notfound">prefix before numerals</gl>
+   </mel>
+   <mel id="nf936">
+      <gl pivot="notfound">premna taitensis</gl>
+   </mel>
+   <mel id="nf937">
+      <gl pivot="notfound">present</gl>
+   </mel>
+   <mel id="nf938">
+      <gl pivot="notfound">present s.o. with a gift</gl>
+   </mel>
+   <mel id="nf939">
+      <gl pivot="notfound">presentative</gl>
+   </mel>
+   <mel id="nf940">
+      <gl pivot="notfound">prob. lichmera incana</gl>
+   </mel>
+   <mel id="nf941">
+      <gl pivot="notfound">prod</gl>
+   </mel>
+   <mel id="nf942">
+      <gl pivot="notfound">promontory</gl>
+   </mel>
+   <mel id="nf943">
+      <gl pivot="notfound">protect…</gl>
+   </mel>
+   <mel id="nf944">
+      <gl pivot="notfound">proximal directional: southeast</gl>
+   </mel>
+   <mel id="nf945">
+      <gl pivot="notfound">pterocarpus indicus</gl>
+   </mel>
+   <mel id="nf946">
+      <gl pivot="notfound">ptilinopus tannensis</gl>
+   </mel>
+   <mel id="nf947">
+      <gl pivot="notfound">puffer fish</gl>
+   </mel>
+   <mel id="nf948">
+      <gl pivot="notfound">pull &lt;s.th.&gt; out</gl>
+   </mel>
+   <mel id="nf949">
+      <gl pivot="notfound">purple swamphen</gl>
+   </mel>
+   <mel id="nf950">
+      <gl pivot="notfound">put &lt;s.th.&gt; in</gl>
+   </mel>
+   <mel id="nf951">
+      <gl pivot="notfound">put away</gl>
+   </mel>
+   <mel id="nf952">
+      <gl pivot="notfound">put down</gl>
+   </mel>
+   <mel id="nf953">
+      <gl pivot="notfound">put in a crotch</gl>
+   </mel>
+   <mel id="nf954">
+      <gl pivot="notfound">put s.th. back up after it fell</gl>
+   </mel>
+   <mel id="nf955">
+      <gl pivot="notfound">put together</gl>
+   </mel>
+   <mel id="nf956">
+      <gl pivot="notfound">quick</gl>
+   </mel>
+   <mel id="nf957">
+      <gl pivot="notfound">quickly</gl>
+   </mel>
+   <mel id="nf958">
+      <gl pivot="notfound">rain</gl>
+   </mel>
+   <mel id="nf959">
+      <gl pivot="notfound">reach</gl>
+   </mel>
+   <mel id="nf960">
+      <gl pivot="notfound">ready to eat</gl>
+   </mel>
+   <mel id="nf961">
+      <gl pivot="notfound">ready to harvest</gl>
+   </mel>
+   <mel id="nf962">
+      <gl pivot="notfound">really</gl>
+   </mel>
+   <mel id="nf963">
+      <gl pivot="notfound">rear with food</gl>
+   </mel>
+   <mel id="nf964">
+      <gl pivot="notfound">receive</gl>
+   </mel>
+   <mel id="nf965">
+      <gl pivot="notfound">reciprocal action</gl>
+   </mel>
+   <mel id="nf966">
+      <gl pivot="notfound">recite</gl>
+   </mel>
+   <mel id="nf967">
+      <gl pivot="notfound">reef heron</gl>
+   </mel>
+   <mel id="nf968">
+      <gl pivot="notfound">referring to a group of people</gl>
+   </mel>
+   <mel id="nf969">
+      <gl pivot="notfound">reflect</gl>
+   </mel>
+   <mel id="nf970">
+      <gl pivot="notfound">reflection</gl>
+   </mel>
+   <mel id="nf971">
+      <gl pivot="notfound">reflexive</gl>
+   </mel>
+   <mel id="nf972">
+      <gl pivot="notfound">relativiser</gl>
+   </mel>
+   <mel id="nf973">
+      <gl pivot="notfound">religious hymn</gl>
+   </mel>
+   <mel id="nf974">
+      <gl pivot="notfound">remote</gl>
+   </mel>
+   <mel id="nf975">
+      <gl pivot="notfound">replace</gl>
+   </mel>
+   <mel id="nf976">
+      <gl pivot="notfound">resound</gl>
+   </mel>
+   <mel id="nf977">
+      <gl pivot="notfound">rest on</gl>
+   </mel>
+   <mel id="nf978">
+      <gl pivot="notfound">restrictive</gl>
+   </mel>
+   <mel id="nf979">
+      <gl pivot="notfound">reveal</gl>
+   </mel>
+   <mel id="nf980">
+      <gl pivot="notfound">rhipidura fuliginosa</gl>
+   </mel>
+   <mel id="nf981">
+      <gl pivot="notfound">rhizophora</gl>
+   </mel>
+   <mel id="nf982">
+      <gl pivot="notfound">rip</gl>
+   </mel>
+   <mel id="nf983">
+      <gl pivot="notfound">rising tide</gl>
+   </mel>
+   <mel id="nf984">
+      <gl pivot="notfound">roast</gl>
+   </mel>
+   <mel id="nf985">
+      <gl pivot="notfound">rub strongly</gl>
+   </mel>
+   <mel id="nf986">
+      <gl pivot="notfound">rumour</gl>
+   </mel>
+   <mel id="nf987">
+      <gl pivot="notfound">run out of water</gl>
+   </mel>
+   <mel id="nf988">
+      <gl pivot="notfound">rush out</gl>
+   </mel>
+   <mel id="nf989">
+      <gl pivot="notfound">s.th.) so and so</gl>
+   </mel>
+   <mel id="nf990">
+      <gl pivot="notfound">s.th.) with fist</gl>
+   </mel>
+   <mel id="nf991">
+      <gl pivot="notfound">saccharum</gl>
+   </mel>
+   <mel id="nf992">
+      <gl pivot="notfound">sacred</gl>
+   </mel>
+   <mel id="nf993">
+      <gl pivot="notfound">sago-leaves</gl>
+   </mel>
+   <mel id="nf994">
+      <gl pivot="notfound">sagoleaves</gl>
+   </mel>
+   <mel id="nf995">
+      <gl pivot="notfound">sapalm</gl>
+   </mel>
+   <mel id="nf996">
+      <gl pivot="notfound">sargocentron spiniferum</gl>
+   </mel>
+   <mel id="nf997">
+      <gl pivot="notfound">scaevola taccata</gl>
+   </mel>
+   <mel id="nf998">
+      <gl pivot="notfound">scarus blochi</gl>
+   </mel>
+   <mel id="nf999">
+      <gl pivot="notfound">scarus sp.</gl>
+   </mel>
+   <mel id="nf1000">
+      <gl pivot="notfound">scomberomorus</gl>
+   </mel>
+   <mel id="nf1001">
+      <gl pivot="notfound">scrape coconut</gl>
+   </mel>
+   <mel id="nf1002">
+      <gl pivot="notfound">scraper</gl>
+   </mel>
+   <mel id="nf1003">
+      <gl pivot="notfound">sculpture</gl>
+   </mel>
+   <mel id="nf1004">
+      <gl pivot="notfound">sea snake</gl>
+   </mel>
+   <mel id="nf1005">
+      <gl pivot="notfound">sea urchin</gl>
+   </mel>
+   <mel id="nf1006">
+      <gl pivot="notfound">sea+) deep</gl>
+   </mel>
+   <mel id="nf1007">
+      <gl pivot="notfound">search</gl>
+   </mel>
+   <mel id="nf1008">
+      <gl pivot="notfound">season of</gl>
+   </mel>
+   <mel id="nf1009">
+      <gl pivot="notfound">seawards</gl>
+   </mel>
+   <mel id="nf1010">
+      <gl pivot="notfound">seaworm</gl>
+   </mel>
+   <mel id="nf1011">
+      <gl pivot="notfound">secret meeting place in the bush for men during initiation rituals</gl>
+   </mel>
+   <mel id="nf1012">
+      <gl pivot="notfound">secretly</gl>
+   </mel>
+   <mel id="nf1013">
+      <gl pivot="notfound">secretly in search of sexual partner</gl>
+   </mel>
+   <mel id="nf1014">
+      <gl pivot="notfound">securinega flexuosa: a tree</gl>
+   </mel>
+   <mel id="nf1015">
+      <gl pivot="notfound">seek</gl>
+   </mel>
+   <mel id="nf1016">
+      <gl pivot="notfound">semecarpus vitiensis</gl>
+   </mel>
+   <mel id="nf1017">
+      <gl pivot="notfound">semen</gl>
+   </mel>
+   <mel id="nf1018">
+      <gl pivot="notfound">sepia sp.</gl>
+   </mel>
+   <mel id="nf1019">
+      <gl pivot="notfound">set up on end</gl>
+   </mel>
+   <mel id="nf1020">
+      <gl pivot="notfound">sew sapalm thatch</gl>
+   </mel>
+   <mel id="nf1021">
+      <gl pivot="notfound">shadow</gl>
+   </mel>
+   <mel id="nf1022">
+      <gl pivot="notfound">shaky</gl>
+   </mel>
+   <mel id="nf1023">
+      <gl pivot="notfound">sharpen &lt;wood&gt;</gl>
+   </mel>
+   <mel id="nf1024">
+      <gl pivot="notfound">sheath around base of coconut frond</gl>
+   </mel>
+   <mel id="nf1025">
+      <gl pivot="notfound">shell money</gl>
+   </mel>
+   <mel id="nf1026">
+      <gl pivot="notfound">shit</gl>
+   </mel>
+   <mel id="nf1027">
+      <gl pivot="notfound">shoot &lt;s.th.&gt; with arrow</gl>
+   </mel>
+   <mel id="nf1028">
+      <gl pivot="notfound">shoot a blunt arrow</gl>
+   </mel>
+   <mel id="nf1029">
+      <gl pivot="notfound">shoot and hit</gl>
+   </mel>
+   <mel id="nf1030">
+      <gl pivot="notfound">short in size</gl>
+   </mel>
+   <mel id="nf1031">
+      <gl pivot="notfound">show &lt;s.th.&gt;</gl>
+   </mel>
+   <mel id="nf1032">
+      <gl pivot="notfound">shut &lt;door+&gt;</gl>
+   </mel>
+   <mel id="nf1033">
+      <gl pivot="notfound">sickness</gl>
+   </mel>
+   <mel id="nf1034">
+      <gl pivot="notfound">siganus sp.</gl>
+   </mel>
+   <mel id="nf1035">
+      <gl pivot="notfound">silent</gl>
+   </mel>
+   <mel id="nf1036">
+      <gl pivot="notfound">silhouette</gl>
+   </mel>
+   <mel id="nf1037">
+      <gl pivot="notfound">sinew</gl>
+   </mel>
+   <mel id="nf1038">
+      <gl pivot="notfound">sinew+</gl>
+   </mel>
+   <mel id="nf1039">
+      <gl pivot="notfound">sink</gl>
+   </mel>
+   <mel id="nf1040">
+      <gl pivot="notfound">sink down</gl>
+   </mel>
+   <mel id="nf1041">
+      <gl pivot="notfound">sip</gl>
+   </mel>
+   <mel id="nf1042">
+      <gl pivot="notfound">skilful</gl>
+   </mel>
+   <mel id="nf1043">
+      <gl pivot="notfound">skinny</gl>
+   </mel>
+   <mel id="nf1044">
+      <gl pivot="notfound">sleeping bed</gl>
+   </mel>
+   <mel id="nf1045">
+      <gl pivot="notfound">small bird</gl>
+   </mel>
+   <mel id="nf1046">
+      <gl pivot="notfound">small drum</gl>
+   </mel>
+   <mel id="nf1047">
+      <gl pivot="notfound">smash</gl>
+   </mel>
+   <mel id="nf1048">
+      <gl pivot="notfound">smash s.th. on ground</gl>
+   </mel>
+   <mel id="nf1049">
+      <gl pivot="notfound">smoke</gl>
+   </mel>
+   <mel id="nf1050">
+      <gl pivot="notfound">snout</gl>
+   </mel>
+   <mel id="nf1051">
+      <gl pivot="notfound">soil</gl>
+   </mel>
+   <mel id="nf1052">
+      <gl pivot="notfound">somewhere else</gl>
+   </mel>
+   <mel id="nf1053">
+      <gl pivot="notfound">sorry</gl>
+   </mel>
+   <mel id="nf1054">
+      <gl pivot="notfound">spasm of tetanus+</gl>
+   </mel>
+   <mel id="nf1055">
+      <gl pivot="notfound">spear &lt;fish+&gt;</gl>
+   </mel>
+   <mel id="nf1056">
+      <gl pivot="notfound">sphyraena sp.</gl>
+   </mel>
+   <mel id="nf1057">
+      <gl pivot="notfound">spill</gl>
+   </mel>
+   <mel id="nf1058">
+      <gl pivot="notfound">spirit of a deceased person</gl>
+   </mel>
+   <mel id="nf1059">
+      <gl pivot="notfound">spondias cythera</gl>
+   </mel>
+   <mel id="nf1060">
+      <gl pivot="notfound">spouse</gl>
+   </mel>
+   <mel id="nf1061">
+      <gl pivot="notfound">squeeze liquid from</gl>
+   </mel>
+   <mel id="nf1062">
+      <gl pivot="notfound">squirrelfish</gl>
+   </mel>
+   <mel id="nf1063">
+      <gl pivot="notfound">stab &lt;s.o.&gt; w. knife</gl>
+   </mel>
+   <mel id="nf1064">
+      <gl pivot="notfound">starch</gl>
+   </mel>
+   <mel id="nf1065">
+      <gl pivot="notfound">starch pudding</gl>
+   </mel>
+   <mel id="nf1066">
+      <gl pivot="notfound">stative</gl>
+   </mel>
+   <mel id="nf1067">
+      <gl pivot="notfound">stay</gl>
+   </mel>
+   <mel id="nf1068">
+      <gl pivot="notfound">sterculia vitiensis</gl>
+   </mel>
+   <mel id="nf1069">
+      <gl pivot="notfound">stiff</gl>
+   </mel>
+   <mel id="nf1070">
+      <gl pivot="notfound">stink</gl>
+   </mel>
+   <mel id="nf1071">
+      <gl pivot="notfound">stomp</gl>
+   </mel>
+   <mel id="nf1072">
+      <gl pivot="notfound">stone grave of &lt;s.o.&gt;</gl>
+   </mel>
+   <mel id="nf1073">
+      <gl pivot="notfound">stone oven</gl>
+   </mel>
+   <mel id="nf1074">
+      <gl pivot="notfound">stow</gl>
+   </mel>
+   <mel id="nf1075">
+      <gl pivot="notfound">stow &lt;s.th.&gt; in discrete place</gl>
+   </mel>
+   <mel id="nf1076">
+      <gl pivot="notfound">stretch o.'s arm</gl>
+   </mel>
+   <mel id="nf1077">
+      <gl pivot="notfound">stroke</gl>
+   </mel>
+   <mel id="nf1078">
+      <gl pivot="notfound">strong bamboo</gl>
+   </mel>
+   <mel id="nf1079">
+      <gl pivot="notfound">stubborn</gl>
+   </mel>
+   <mel id="nf1080">
+      <gl pivot="notfound">sufficient</gl>
+   </mel>
+   <mel id="nf1081">
+      <gl pivot="notfound">sugarcane</gl>
+   </mel>
+   <mel id="nf1082">
+      <gl pivot="notfound">sup</gl>
+   </mel>
+   <mel id="nf1083">
+      <gl pivot="notfound">supernatural power</gl>
+   </mel>
+   <mel id="nf1084">
+      <gl pivot="notfound">surf</gl>
+   </mel>
+   <mel id="nf1085">
+      <gl pivot="notfound">surgeon fish</gl>
+   </mel>
+   <mel id="nf1086">
+      <gl pivot="notfound">swamp garden for taro</gl>
+   </mel>
+   <mel id="nf1087">
+      <gl pivot="notfound">swampy ground</gl>
+   </mel>
+   <mel id="nf1088">
+      <gl pivot="notfound">sweat</gl>
+   </mel>
+   <mel id="nf1089">
+      <gl pivot="notfound">sweet yam</gl>
+   </mel>
+   <mel id="nf1090">
+      <gl pivot="notfound">swiftlet</gl>
+   </mel>
+   <mel id="nf1091">
+      <gl pivot="notfound">swim under water</gl>
+   </mel>
+   <mel id="nf1092">
+      <gl pivot="notfound">taboo</gl>
+   </mel>
+   <mel id="nf1093">
+      <gl pivot="notfound">taboo place on island</gl>
+   </mel>
+   <mel id="nf1094">
+      <gl pivot="notfound">tacca leontopetaloides</gl>
+   </mel>
+   <mel id="nf1095">
+      <gl pivot="notfound">tacca pinnatifolia</gl>
+   </mel>
+   <mel id="nf1096">
+      <gl pivot="notfound">tahitian chestnut</gl>
+   </mel>
+   <mel id="nf1097">
+      <gl pivot="notfound">take a long time</gl>
+   </mel>
+   <mel id="nf1098">
+      <gl pivot="notfound">take out</gl>
+   </mel>
+   <mel id="nf1099">
+      <gl pivot="notfound">take rest</gl>
+   </mel>
+   <mel id="nf1100">
+      <gl pivot="notfound">take up</gl>
+   </mel>
+   <mel id="nf1101">
+      <gl pivot="notfound">take up in handful</gl>
+   </mel>
+   <mel id="nf1102">
+      <gl pivot="notfound">tame by feeding</gl>
+   </mel>
+   <mel id="nf1103">
+      <gl pivot="notfound">taro garden planted in mud</gl>
+   </mel>
+   <mel id="nf1104">
+      <gl pivot="notfound">taro) dry</gl>
+   </mel>
+   <mel id="nf1105">
+      <gl pivot="notfound">tasting good</gl>
+   </mel>
+   <mel id="nf1106">
+      <gl pivot="notfound">tear</gl>
+   </mel>
+   <mel id="nf1107">
+      <gl pivot="notfound">tear off</gl>
+   </mel>
+   <mel id="nf1108">
+      <gl pivot="notfound">tetraodontidae spp.</gl>
+   </mel>
+   <mel id="nf1109">
+      <gl pivot="notfound">than</gl>
+   </mel>
+   <mel id="nf1110">
+      <gl pivot="notfound">the odd one out</gl>
+   </mel>
+   <mel id="nf1111">
+      <gl pivot="notfound">the one… the other</gl>
+   </mel>
+   <mel id="nf1112">
+      <gl pivot="notfound">the real</gl>
+   </mel>
+   <mel id="nf1113">
+      <gl pivot="notfound">thespesia populnea</gl>
+   </mel>
+   <mel id="nf1114">
+      <gl pivot="notfound">thither</gl>
+   </mel>
+   <mel id="nf1115">
+      <gl pivot="notfound">those two</gl>
+   </mel>
+   <mel id="nf1116">
+      <gl pivot="notfound">those who</gl>
+   </mel>
+   <mel id="nf1117">
+      <gl pivot="notfound">thread things one after another</gl>
+   </mel>
+   <mel id="nf1118">
+      <gl pivot="notfound">throw away</gl>
+   </mel>
+   <mel id="nf1119">
+      <gl pivot="notfound">throw light upon</gl>
+   </mel>
+   <mel id="nf1120">
+      <gl pivot="notfound">throw) away</gl>
+   </mel>
+   <mel id="nf1121">
+      <gl pivot="notfound">thunnus sp.</gl>
+   </mel>
+   <mel id="nf1122">
+      <gl pivot="notfound">tide rip</gl>
+   </mel>
+   <mel id="nf1123">
+      <gl pivot="notfound">tie strongly</gl>
+   </mel>
+   <mel id="nf1124">
+      <gl pivot="notfound">tied</gl>
+   </mel>
+   <mel id="nf1125">
+      <gl pivot="notfound">title of rank in women's suqe</gl>
+   </mel>
+   <mel id="nf1126">
+      <gl pivot="notfound">to adze to the size desired</gl>
+   </mel>
+   <mel id="nf1127">
+      <gl pivot="notfound">to fasten with pins</gl>
+   </mel>
+   <mel id="nf1128">
+      <gl pivot="notfound">to plant</gl>
+   </mel>
+   <mel id="nf1129">
+      <gl pivot="notfound">to set a snare</gl>
+   </mel>
+   <mel id="nf1130">
+      <gl pivot="notfound">to shit</gl>
+   </mel>
+   <mel id="nf1131">
+      <gl pivot="notfound">to smell</gl>
+   </mel>
+   <mel id="nf1132">
+      <gl pivot="notfound">to tie</gl>
+   </mel>
+   <mel id="nf1133">
+      <gl pivot="notfound">to tire</gl>
+   </mel>
+   <mel id="nf1134">
+      <gl pivot="notfound">too</gl>
+   </mel>
+   <mel id="nf1135">
+      <gl pivot="notfound">too much</gl>
+   </mel>
+   <mel id="nf1136">
+      <gl pivot="notfound">top of</gl>
+   </mel>
+   <mel id="nf1137">
+      <gl pivot="notfound">torrential</gl>
+   </mel>
+   <mel id="nf1138">
+      <gl pivot="notfound">totally</gl>
+   </mel>
+   <mel id="nf1139">
+      <gl pivot="notfound">towards non-speaker</gl>
+   </mel>
+   <mel id="nf1140">
+      <gl pivot="notfound">towards nonspeaker</gl>
+   </mel>
+   <mel id="nf1141">
+      <gl pivot="notfound">towards northwest</gl>
+   </mel>
+   <mel id="nf1142">
+      <gl pivot="notfound">towards southeast</gl>
+   </mel>
+   <mel id="nf1143">
+      <gl pivot="notfound">trace</gl>
+   </mel>
+   <mel id="nf1144">
+      <gl pivot="notfound">tradit. using coconut husk fibres</gl>
+   </mel>
+   <mel id="nf1145">
+      <gl pivot="notfound">traditional music and orchestra accompanying village dances</gl>
+   </mel>
+   <mel id="nf1146">
+      <gl pivot="notfound">travel on canoe</gl>
+   </mel>
+   <mel id="nf1147">
+      <gl pivot="notfound">tree)</gl>
+   </mel>
+   <mel id="nf1148">
+      <gl pivot="notfound">tremble</gl>
+   </mel>
+   <mel id="nf1149">
+      <gl pivot="notfound">trevally</gl>
+   </mel>
+   <mel id="nf1150">
+      <gl pivot="notfound">tridacna</gl>
+   </mel>
+   <mel id="nf1151">
+      <gl pivot="notfound">trouble one</gl>
+   </mel>
+   <mel id="nf1152">
+      <gl pivot="notfound">trunk</gl>
+   </mel>
+   <mel id="nf1153">
+      <gl pivot="notfound">turn up the face</gl>
+   </mel>
+   <mel id="nf1154">
+      <gl pivot="notfound">twin apple</gl>
+   </mel>
+   <mel id="nf1155">
+      <gl pivot="notfound">umbrella leaf</gl>
+   </mel>
+   <mel id="nf1156">
+      <gl pivot="notfound">unidentified</gl>
+   </mel>
+   <mel id="nf1157">
+      <gl pivot="notfound">unidentified fish</gl>
+   </mel>
+   <mel id="nf1158">
+      <gl pivot="notfound">upon it</gl>
+   </mel>
+   <mel id="nf1159">
+      <gl pivot="notfound">upper sky</gl>
+   </mel>
+   <mel id="nf1160">
+      <gl pivot="notfound">upward</gl>
+   </mel>
+   <mel id="nf1161">
+      <gl pivot="notfound">upwards</gl>
+   </mel>
+   <mel id="nf1162">
+      <gl pivot="notfound">upwind</gl>
+   </mel>
+   <mel id="nf1163">
+      <gl pivot="notfound">used as altar for sorcery</gl>
+   </mel>
+   <mel id="nf1164">
+      <gl pivot="notfound">used as strainer</gl>
+   </mel>
+   <mel id="nf1165">
+      <gl pivot="notfound">valamugil sp.</gl>
+   </mel>
+   <mel id="nf1166">
+      <gl pivot="notfound">very much</gl>
+   </mel>
+   <mel id="nf1167">
+      <gl pivot="notfound">very x</gl>
+   </mel>
+   <mel id="nf1168">
+      <gl pivot="notfound">village chief</gl>
+   </mel>
+   <mel id="nf1169">
+      <gl pivot="notfound">volcano</gl>
+   </mel>
+   <mel id="nf1170">
+      <gl pivot="notfound">vt</gl>
+   </mel>
+   <mel id="nf1171">
+      <gl pivot="notfound">vt] light</gl>
+   </mel>
+   <mel id="nf1172">
+      <gl pivot="notfound">wait</gl>
+   </mel>
+   <mel id="nf1173">
+      <gl pivot="notfound">wait for</gl>
+   </mel>
+   <mel id="nf1174">
+      <gl pivot="notfound">wait!</gl>
+   </mel>
+   <mel id="nf1175">
+      <gl pivot="notfound">walling</gl>
+   </mel>
+   <mel id="nf1176">
+      <gl pivot="notfound">watch o.'s own reflection</gl>
+   </mel>
+   <mel id="nf1177">
+      <gl pivot="notfound">waves</gl>
+   </mel>
+   <mel id="nf1178">
+      <gl pivot="notfound">weary</gl>
+   </mel>
+   <mel id="nf1179">
+      <gl pivot="notfound">weed &lt;garden&gt;</gl>
+   </mel>
+   <mel id="nf1180">
+      <gl pivot="notfound">where the stars are</gl>
+   </mel>
+   <mel id="nf1181">
+      <gl pivot="notfound">wild cane</gl>
+   </mel>
+   <mel id="nf1182">
+      <gl pivot="notfound">with fear</gl>
+   </mel>
+   <mel id="nf1183">
+      <gl pivot="notfound">with heat or time</gl>
+   </mel>
+   <mel id="nf1184">
+      <gl pivot="notfound">with it</gl>
+   </mel>
+   <mel id="nf1185">
+      <gl pivot="notfound">withered</gl>
+   </mel>
+   <mel id="nf1186">
+      <gl pivot="notfound">women's dance</gl>
+   </mel>
+   <mel id="nf1187">
+      <gl pivot="notfound">wooden dish</gl>
+   </mel>
+   <mel id="nf1188">
+      <gl pivot="notfound">wooden knife for cutting pudding</gl>
+   </mel>
+   <mel id="nf1189">
+      <gl pivot="notfound">wooden sticks on their shoulders</gl>
+   </mel>
+   <mel id="nf1190">
+      <gl pivot="notfound">work</gl>
+   </mel>
+   <mel id="nf1191">
+      <gl pivot="notfound">worry</gl>
+   </mel>
+   <mel id="nf1192">
+      <gl pivot="notfound">woven basket</gl>
+   </mel>
+   <mel id="nf1193">
+      <gl pivot="notfound">woven food-chest standing above fire for storing almonds and dried breadfruit</gl>
+   </mel>
+   <mel id="nf1194">
+      <gl pivot="notfound">woven foodchest standing above fire for storing almonds and dried breadfruit</gl>
+   </mel>
+   <mel id="nf1195">
+      <gl pivot="notfound">woven open bag</gl>
+   </mel>
+   <mel id="nf1196">
+      <gl pivot="notfound">wring out coconut milk in food preparation</gl>
+   </mel>
+   <mel id="nf1197">
+      <gl pivot="notfound">yell</gl>
+   </mel>
+   <mel id="nf1198">
+      <gl pivot="notfound">yet</gl>
+   </mel>
+   <mel id="nf1199">
+      <gl pivot="notfound">young unmarried boy</gl>
+   </mel>
+   <mel id="nf1200">
+      <gl pivot="notfound">young unmarried girl</gl>
+   </mel>
+   <mel id="nf1201">
+      <gl pivot="notfound">your behaviour</gl>
+   </mel>
+   <mel id="nf1202">
+      <gl pivot="notfound">your magic power</gl>
+   </mel>
+   <mel id="nf1203">
+      <gl pivot="notfound">[adj] taboo</gl>
+   </mel>
+   <mel id="nf1204">
+      <gl pivot="notfound">[adv.]</gl>
+   </mel>
+   <mel id="nf1205">
+      <gl pivot="notfound">[adv.] up</gl>
+   </mel>
+   <mel id="nf1206">
+      <gl pivot="notfound">[adv] asunder</gl>
+   </mel>
+   <mel id="nf1207">
+      <gl pivot="notfound">[conj.] because</gl>
+   </mel>
+   <mel id="nf1208">
+      <gl pivot="notfound">[direc.] out</gl>
+   </mel>
+   <mel id="nf1209">
+      <gl pivot="notfound">[excl.] presently! wait a bit!</gl>
+   </mel>
+   <mel id="nf1210">
+      <gl pivot="notfound">[n</gl>
+   </mel>
+   <mel id="nf1211">
+      <gl pivot="notfound">[n] a sticky tree</gl>
+   </mel>
+   <mel id="nf1212">
+      <gl pivot="notfound">[n] bamboo drum</gl>
+   </mel>
+   <mel id="nf1213">
+      <gl pivot="notfound">[n] bunch of &lt;fruit+&gt;</gl>
+   </mel>
+   <mel id="nf1214">
+      <gl pivot="notfound">[n] coconut husk fibre</gl>
+   </mel>
+   <mel id="nf1215">
+      <gl pivot="notfound">[n] friend</gl>
+   </mel>
+   <mel id="nf1216">
+      <gl pivot="notfound">[n] glue</gl>
+   </mel>
+   <mel id="nf1217">
+      <gl pivot="notfound">[n] glue-tree</gl>
+   </mel>
+   <mel id="nf1218">
+      <gl pivot="notfound">[n] gluetree</gl>
+   </mel>
+   <mel id="nf1219">
+      <gl pivot="notfound">[n] graveyard</gl>
+   </mel>
+   <mel id="nf1220">
+      <gl pivot="notfound">[n] sail</gl>
+   </mel>
+   <mel id="nf1221">
+      <gl pivot="notfound">[n] spear</gl>
+   </mel>
+   <mel id="nf1222">
+      <gl pivot="notfound">[n] towel</gl>
+   </mel>
+   <mel id="nf1223">
+      <gl pivot="notfound">[pl] people</gl>
+   </mel>
+   <mel id="nf1224">
+      <gl pivot="notfound">[prep] with</gl>
+   </mel>
+   <mel id="nf1225">
+      <gl pivot="notfound">[pstv]</gl>
+   </mel>
+   <mel id="nf1226">
+      <gl pivot="notfound">[v.] lift up</gl>
+   </mel>
+   <mel id="nf1227">
+      <gl pivot="notfound">[vi] dash</gl>
+   </mel>
+   <mel id="nf1228">
+      <gl pivot="notfound">[vi] hanging in cluster</gl>
+   </mel>
+   <mel id="nf1229">
+      <gl pivot="notfound">[vi] stick together</gl>
+   </mel>
+   <mel id="nf1230">
+      <gl pivot="notfound">[vi] tide</gl>
+   </mel>
+   <mel id="nf1231">
+      <gl pivot="notfound">[vt] break w. knife</gl>
+   </mel>
+   <mel id="nf1232">
+      <gl pivot="notfound">[vt] help</gl>
+   </mel>
+   <mel id="nf1233">
+      <gl pivot="notfound">[vt] hit with two sticks</gl>
+   </mel>
+   <mel id="nf1234">
+      <gl pivot="notfound">[vt] pull</gl>
+   </mel>
+   <mel id="nf1235">
+      <gl pivot="notfound">[vt] slice</gl>
+   </mel>
+   <mel id="nf1236">
+      <gl pivot="notfound">[vt] split</gl>
+   </mel>
+   <mel id="nf1237">
+      <gl pivot="notfound">[vt] take skin off</gl>
+   </mel>
+   <mel id="nf1238">
+      <gl pivot="notfound">[v] glue</gl>
+   </mel>
+   <mel id="nf1239">
+      <gl pivot="notfound">[v] wipe</gl>
+   </mel>
+   <mel id="nf1240">
+      <gl pivot="notfound">‘beyond the sky</gl>
+   </mel>
+   <mel id="nf1241">
+      <gl pivot="notfound">‘beyond the sky’</gl>
+   </mel>
+   <mel id="nf1242">
+      <gl pivot="notfound">‘drifts to the horizon’</gl>
+   </mel>
+   <mel id="nf1243">
+      <gl pivot="notfound">‘lift up’ the song…</gl>
+   </mel>
+</semantics>
