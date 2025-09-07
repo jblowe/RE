@@ -1,8 +1,13 @@
 ## RE
+### The Reconstruction Engine
 
 [![build status](https://travis-ci.com/jblowe/RE.svg?branch=master)](https://travis-ci.com/jblowe/RE)
 
-The Reconstruction Engine, a computer implementation of the comparative method
+### Overview
+Still the best reference for the objectives and operation of the software is this 1994 article:
+
+https://aclanthology.org/J94-3004
+_The Reconstruction Engine, a computer implementation of the comparative method_
 
 This repository contains code and data files supporting the "Reconstruction Engine" project.
 
@@ -13,31 +18,33 @@ However, the modern version has three components:
 
 * The 'core system' (in `src`) which includes Python modules to diachronically process the various language files (in `projects').
 * The 'desktop version', a [gTK](https://www.gtk.org/) graphical interface, currently a work in progress. see `src/REgtk.py`)
-* The 'web interface', a bottle+bootstrap interface to allow users to browse the projects and results, either locally or on the web. see `REwww`
+* The 'web interface', a Python bottle+bootstrap interface to allow users to browse the projects and results, either locally or on the web. see `REwww`
 
 The directories of interest are:
 
-#### main components
+### main components
 
-projects - "the data" -- various sets of language files, tables of correspondences, etc.
-src - source code for everything except the web interface
-REwww - source code for the bottle+bootstrap web interface
-docs - documentation, very much a work in progress
-make / Makefile - we use this for testing and QA
+* _projects_ - "the data" -- various sets of language files, tables of correspondences, etc.
+* _src_ - source code for everything except the web interface
+* _docs_ - documentation, very much a work in progress
+* _make / Makefile_ - we use this for testing and QA
 
-#### web interface components
+### web interface components
 
-styles - XSLT stylesheets
-css
-images
-js
+* _REwww_ - source code for the bottle+bootstrap web interface
+* _styles_ - XSLT stylesheets
 
-#### past code and other goodies
+### past code and other goodies
 
 other_stuff
 
 ### python needs
 
-requirements.txt
+* requirements.txt
+* GTK (for desktop interactive app)
 
-See individual directories for instructions on installation and operation.
+### usage
+
+See [src/README.md](src/README.md) for details how to run
+from the command line and interactively.
+
