@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
+<params>
+  <attested name="Qiandong" file="Qiandong.data.xml"/>
+  <attested name="Xiangxi" file="Xiangxi.data.xml"/>
+  <attested name="WhiteHmong" file="WhiteHmong.data.xml"/>
+  <attested name="Masha" file="Masha.data.xml"/>
+  <attested name="Luopohe" file="Luopohe.data.xml"/>
+  <attested name="Jiongnai" file="Jiongnai.data.xml"/>
+  <attested name="Baiyun" file="Baiyun.data.xml"/>
+  <attested name="Luoxiang" file="Luoxiang.data.xml"/>
+  <attested name="Mun" file="Mun.data.xml"/>
+  <attested name="BiaoMin" file="BiaoMin.data.xml"/>
+  <attested name="ZaoMin" file="ZaoMin.data.xml"/>
+  <mel name="hand" file="HM.hand.mel.xml"/>
+  <reconstruction name="standard">
+    <proto_language name="phm" correspondences="HM.standard.correspondences.xml"/>
+    <action name="upstream" target="phm"/>
+    <action name="upstream" from="Qiandong,Xiangxi,WhiteHmong,Masha,Luopohe,Jiongnai,Baiyun,Luoxiang,Mun,BiaoMin,ZaoMin" to="phm"/>
+  </reconstruction>
+  <param name="title" value="Ratliff 2019 HM dataset; see https://en.wikipedia.org/wiki/Proto-Hmong%E2%80%93Mien_language#Ratliff_(2010)"/>
+</params>
