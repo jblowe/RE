@@ -18,5 +18,5 @@
     <action name="upstream" target="phm"/>
     <action name="upstream" from="Qiandong,Xiangxi,WhiteHmong,Masha,Luopohe,Jiongnai,Baiyun,Luoxiang,Mun,BiaoMin,ZaoMin" to="phm"/>
   </reconstruction>
-  <param name="title" value="Ratliff 2019 HM dataset; see https://en.wikipedia.org/wiki/Proto-Hmong%E2%80%93Mien_language#Ratliff_(2010)"/>
+  <param name="title" value="Ratliff 2010 HM dataset; see &lt;a href=&quot;https://en.wikipedia.org/wiki/Proto-Hmong%E2%80%93Mien_language#Ratliff_(2010)&quot;&gt;Ratliff (2010)&lt;/a&gt;"/>
 </params>

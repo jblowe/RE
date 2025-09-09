@@ -1,3 +1,0 @@
-cp ~/Downloads/Hmong_Mien/2.*.csv .
-cat 2.2.csv 2.3.csv > both.csv
-perl -pe 's/^ +//g;s/^[\t ]*(\d+)\. +/\1\t/' both.csv > b2.csv
