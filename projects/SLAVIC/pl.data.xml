@@ -1,0 +1,1951 @@
+<lexicon dialecte="pl">
+  <createdat>2021-03-12 07:17:47 UTC</createdat>
+  <entry id="pl.1">
+    <gl>I (1sg)</gl>
+    <hw>ja</hw>
+  </entry>
+  <entry id="pl.2">
+    <gl>I (1sg)</gl>
+    <hw>ja</hw>
+  </entry>
+  <entry id="pl.3">
+    <gl>you (2sg)</gl>
+    <hw>ty</hw>
+  </entry>
+  <entry id="pl.4">
+    <gl>you (2sg)</gl>
+    <hw>tɨ</hw>
+  </entry>
+  <entry id="pl.5">
+    <gl>he, she, it (3sg)</gl>
+    <hw>on</hw>
+  </entry>
+  <entry id="pl.6">
+    <gl>he, she, it (3sg)</gl>
+    <hw>ɔn</hw>
+  </entry>
+  <entry id="pl.7">
+    <gl>we (1pl)</gl>
+    <hw>my</hw>
+  </entry>
+  <entry id="pl.8">
+    <gl>we (1pl)</gl>
+    <hw>mɨ</hw>
+  </entry>
+  <entry id="pl.9">
+    <gl>you (2pl)</gl>
+    <hw>wy</hw>
+  </entry>
+  <entry id="pl.10">
+    <gl>you (2pl)</gl>
+    <hw>vɨ</hw>
+  </entry>
+  <entry id="pl.11">
+    <gl>they (3pl)</gl>
+    <hw>oni</hw>
+  </entry>
+  <entry id="pl.12">
+    <gl>they (3pl)</gl>
+    <hw>ˈɔ.ɲi</hw>
+  </entry>
+  <entry id="pl.13">
+    <gl>this</gl>
+    <hw>to</hw>
+  </entry>
+  <entry id="pl.14">
+    <gl>this</gl>
+    <hw>tɔ</hw>
+  </entry>
+  <entry id="pl.15">
+    <gl>that</gl>
+    <hw>tamto</hw>
+  </entry>
+  <entry id="pl.16">
+    <gl>that</gl>
+    <hw>ˈtam.tɔ</hw>
+  </entry>
+  <entry id="pl.17">
+    <gl>here</gl>
+    <hw>tu, tutaj</hw>
+  </entry>
+  <entry id="pl.18">
+    <gl>here</gl>
+    <hw>tu, ˈtu.taj</hw>
+  </entry>
+  <entry id="pl.19">
+    <gl>there</gl>
+    <hw>tam</hw>
+  </entry>
+  <entry id="pl.20">
+    <gl>there</gl>
+    <hw>tam</hw>
+  </entry>
+  <entry id="pl.21">
+    <gl>who</gl>
+    <hw>kto</hw>
+  </entry>
+  <entry id="pl.22">
+    <gl>who</gl>
+    <hw>ktɔ</hw>
+  </entry>
+  <entry id="pl.23">
+    <gl>what</gl>
+    <hw>co</hw>
+  </entry>
+  <entry id="pl.24">
+    <gl>what</gl>
+    <hw>tsɔ</hw>
+  </entry>
+  <entry id="pl.25">
+    <gl>where</gl>
+    <hw>gdzie</hw>
+  </entry>
+  <entry id="pl.26">
+    <gl>where</gl>
+    <hw>ɡd͡ʑɛ</hw>
+  </entry>
+  <entry id="pl.27">
+    <gl>when</gl>
+    <hw>kiedy</hw>
+  </entry>
+  <entry id="pl.28">
+    <gl>when</gl>
+    <hw>ˈkʲɛ.dɨ</hw>
+  </entry>
+  <entry id="pl.29">
+    <gl>how</gl>
+    <hw>jak</hw>
+  </entry>
+  <entry id="pl.30">
+    <gl>how</gl>
+    <hw>jak</hw>
+  </entry>
+  <entry id="pl.31">
+    <gl>not</gl>
+    <hw>nie</hw>
+  </entry>
+  <entry id="pl.32">
+    <gl>not</gl>
+    <hw>ɲɛ</hw>
+  </entry>
+  <entry id="pl.33">
+    <gl>all</gl>
+    <hw>wszystko</hw>
+  </entry>
+  <entry id="pl.34">
+    <gl>all</gl>
+    <hw>ˈfʂɨ.stkɔ</hw>
+  </entry>
+  <entry id="pl.35">
+    <gl>many</gl>
+    <hw>dużo</hw>
+  </entry>
+  <entry id="pl.36">
+    <gl>many</gl>
+    <hw>ˈdu.ʐɔ</hw>
+  </entry>
+  <entry id="pl.37">
+    <gl>many</gl>
+    <hw>wiele</hw>
+  </entry>
+  <entry id="pl.38">
+    <gl>many</gl>
+    <hw>ˈvʲɛ.lɛ</hw>
+  </entry>
+  <entry id="pl.39">
+    <gl>some</gl>
+    <hw>kilka</hw>
+  </entry>
+  <entry id="pl.40">
+    <gl>some</gl>
+    <hw>ˈkʲil.ka</hw>
+  </entry>
+  <entry id="pl.41">
+    <gl>some</gl>
+    <hw>trochę</hw>
+  </entry>
+  <entry id="pl.42">
+    <gl>some</gl>
+    <hw>ˈtrɔ.xɛ</hw>
+  </entry>
+  <entry id="pl.43">
+    <gl>few</gl>
+    <hw>mało</hw>
+  </entry>
+  <entry id="pl.44">
+    <gl>few</gl>
+    <hw>ˈma.wɔ</hw>
+  </entry>
+  <entry id="pl.45">
+    <gl>other</gl>
+    <hw>inny</hw>
+  </entry>
+  <entry id="pl.46">
+    <gl>other</gl>
+    <hw>ˈin.nɨ</hw>
+  </entry>
+  <entry id="pl.47">
+    <gl>one</gl>
+    <hw>jeden</hw>
+  </entry>
+  <entry id="pl.48">
+    <gl>one</gl>
+    <hw>ˈjɛ.dɛn</hw>
+  </entry>
+  <entry id="pl.49">
+    <gl>two</gl>
+    <hw>dwa</hw>
+  </entry>
+  <entry id="pl.50">
+    <gl>two</gl>
+    <hw>dva</hw>
+  </entry>
+  <entry id="pl.51">
+    <gl>three</gl>
+    <hw>trzy</hw>
+  </entry>
+  <entry id="pl.52">
+    <gl>three</gl>
+    <hw>tʂɨ</hw>
+  </entry>
+  <entry id="pl.53">
+    <gl>four</gl>
+    <hw>cztery</hw>
+  </entry>
+  <entry id="pl.54">
+    <gl>four</gl>
+    <hw>ˈt͡ʂtɛ.rɨ</hw>
+  </entry>
+  <entry id="pl.55">
+    <gl>five</gl>
+    <hw>pięć</hw>
+  </entry>
+  <entry id="pl.56">
+    <gl>five</gl>
+    <hw>pʲɛɲt͡ɕ</hw>
+  </entry>
+  <entry id="pl.57">
+    <gl>big</gl>
+    <hw>duży</hw>
+  </entry>
+  <entry id="pl.58">
+    <gl>big</gl>
+    <hw>ˈdu.ʐɨ</hw>
+  </entry>
+  <entry id="pl.59">
+    <gl>big</gl>
+    <hw>wielki</hw>
+  </entry>
+  <entry id="pl.60">
+    <gl>big</gl>
+    <hw>ˈvʲɛl.kʲi</hw>
+  </entry>
+  <entry id="pl.61">
+    <gl>long</gl>
+    <hw>długi</hw>
+  </entry>
+  <entry id="pl.62">
+    <gl>long</gl>
+    <hw>ˈdwu.ɡʲi</hw>
+  </entry>
+  <entry id="pl.63">
+    <gl>wide</gl>
+    <hw>szeroki</hw>
+  </entry>
+  <entry id="pl.64">
+    <gl>wide</gl>
+    <hw>ʂɛˈrɔ.kʲi</hw>
+  </entry>
+  <entry id="pl.65">
+    <gl>thick</gl>
+    <hw>gruby</hw>
+  </entry>
+  <entry id="pl.66">
+    <gl>thick</gl>
+    <hw>ˈɡru.bɨ</hw>
+  </entry>
+  <entry id="pl.67">
+    <gl>heavy</gl>
+    <hw>ciężki</hw>
+  </entry>
+  <entry id="pl.68">
+    <gl>heavy</gl>
+    <hw>ˈt͡ɕɛ̃ʂ.kʲi</hw>
+  </entry>
+  <entry id="pl.69">
+    <gl>small</gl>
+    <hw>mały</hw>
+  </entry>
+  <entry id="pl.70">
+    <gl>small</gl>
+    <hw>ˈma.wɨ</hw>
+  </entry>
+  <entry id="pl.71">
+    <gl>short</gl>
+    <hw>krótki</hw>
+  </entry>
+  <entry id="pl.72">
+    <gl>short</gl>
+    <hw>ˈkrut.kʲi</hw>
+  </entry>
+  <entry id="pl.73">
+    <gl>narrow</gl>
+    <hw>wąski</hw>
+  </entry>
+  <entry id="pl.74">
+    <gl>narrow</gl>
+    <hw>ˈvɔ̃s.kʲi</hw>
+  </entry>
+  <entry id="pl.75">
+    <gl>thin</gl>
+    <hw>cienki</hw>
+  </entry>
+  <entry id="pl.76">
+    <gl>thin</gl>
+    <hw>ˈt͡ɕɛn.kʲi</hw>
+  </entry>
+  <entry id="pl.77">
+    <gl>woman</gl>
+    <hw>kobieta</hw>
+  </entry>
+  <entry id="pl.78">
+    <gl>woman</gl>
+    <hw>kɔˈbʲɛ.ta</hw>
+  </entry>
+  <entry id="pl.79">
+    <gl>man (adult male)</gl>
+    <hw>mężczyzna</hw>
+  </entry>
+  <entry id="pl.80">
+    <gl>man (adult male)</gl>
+    <hw>mɛ̃ʂˈt͡ʂɨz.na</hw>
+  </entry>
+  <entry id="pl.81">
+    <gl>man (human being)</gl>
+    <hw>człowiek</hw>
+  </entry>
+  <entry id="pl.82">
+    <gl>man (human being)</gl>
+    <hw>ˈt͡ʂwɔ.vʲɛk</hw>
+  </entry>
+  <entry id="pl.83">
+    <gl>child</gl>
+    <hw>dziecko, dziecię</hw>
+  </entry>
+  <entry id="pl.84">
+    <gl>child</gl>
+    <hw>ˈd͡ʑɛts.kɔ, ˈd͡ʑɛ.t͡ɕɛ</hw>
+  </entry>
+  <entry id="pl.85">
+    <gl>wife</gl>
+    <hw>żona</hw>
+  </entry>
+  <entry id="pl.86">
+    <gl>wife</gl>
+    <hw>ˈʐɔ.na</hw>
+  </entry>
+  <entry id="pl.87">
+    <gl>husband</gl>
+    <hw>mąż</hw>
+  </entry>
+  <entry id="pl.88">
+    <gl>husband</gl>
+    <hw>mɔ̃ʂ</hw>
+  </entry>
+  <entry id="pl.89">
+    <gl>mother</gl>
+    <hw>matka</hw>
+  </entry>
+  <entry id="pl.90">
+    <gl>mother</gl>
+    <hw>ˈmat.ka</hw>
+  </entry>
+  <entry id="pl.91">
+    <gl>father</gl>
+    <hw>ojciec</hw>
+  </entry>
+  <entry id="pl.92">
+    <gl>father</gl>
+    <hw>ˈɔj.t͡ɕɛts</hw>
+  </entry>
+  <entry id="pl.93">
+    <gl>animal</gl>
+    <hw>zwierzę</hw>
+  </entry>
+  <entry id="pl.94">
+    <gl>animal</gl>
+    <hw>ˈzvʲɛ.ʐɛ</hw>
+  </entry>
+  <entry id="pl.95">
+    <gl>fish</gl>
+    <hw>ryba</hw>
+  </entry>
+  <entry id="pl.96">
+    <gl>fish</gl>
+    <hw>ˈrɨ.ba</hw>
+  </entry>
+  <entry id="pl.97">
+    <gl>bird</gl>
+    <hw>ptak</hw>
+  </entry>
+  <entry id="pl.98">
+    <gl>bird</gl>
+    <hw>ptak</hw>
+  </entry>
+  <entry id="pl.99">
+    <gl>dog</gl>
+    <hw>pies</hw>
+  </entry>
+  <entry id="pl.100">
+    <gl>dog</gl>
+    <hw>pʲɛs</hw>
+  </entry>
+  <entry id="pl.101">
+    <gl>louse</gl>
+    <hw>wesz</hw>
+  </entry>
+  <entry id="pl.102">
+    <gl>louse</gl>
+    <hw>vɛʂ</hw>
+  </entry>
+  <entry id="pl.103">
+    <gl>snake</gl>
+    <hw>wąż</hw>
+  </entry>
+  <entry id="pl.104">
+    <gl>snake</gl>
+    <hw>vɔ̃ʂ</hw>
+  </entry>
+  <entry id="pl.105">
+    <gl>worm</gl>
+    <hw>robak</hw>
+  </entry>
+  <entry id="pl.106">
+    <gl>worm</gl>
+    <hw>rɔ.bak,</hw>
+  </entry>
+  <entry id="pl.107">
+    <gl>worm</gl>
+    <hw>czerw</hw>
+  </entry>
+  <entry id="pl.108">
+    <gl>worm</gl>
+    <hw>t͡ʂɛrf</hw>
+  </entry>
+  <entry id="pl.109">
+    <gl>tree</gl>
+    <hw>drzewo</hw>
+  </entry>
+  <entry id="pl.110">
+    <gl>tree</gl>
+    <hw>ˈdʐɛ.vɔ</hw>
+  </entry>
+  <entry id="pl.111">
+    <gl>forest</gl>
+    <hw>las</hw>
+  </entry>
+  <entry id="pl.112">
+    <gl>forest</gl>
+    <hw>las</hw>
+  </entry>
+  <entry id="pl.113">
+    <gl>stick</gl>
+    <hw>kij</hw>
+  </entry>
+  <entry id="pl.114">
+    <gl>stick</gl>
+    <hw>kʲij</hw>
+  </entry>
+  <entry id="pl.115">
+    <gl>stick</gl>
+    <hw>laska</hw>
+  </entry>
+  <entry id="pl.116">
+    <gl>stick</gl>
+    <hw>ˈla.ska</hw>
+  </entry>
+  <entry id="pl.117">
+    <gl>stick</gl>
+    <hw>patyk</hw>
+  </entry>
+  <entry id="pl.118">
+    <gl>stick</gl>
+    <hw>ˈpa.tɨk</hw>
+  </entry>
+  <entry id="pl.119">
+    <gl>fruit</gl>
+    <hw>owoc</hw>
+  </entry>
+  <entry id="pl.120">
+    <gl>fruit</gl>
+    <hw>ˈɔ.vɔts</hw>
+  </entry>
+  <entry id="pl.121">
+    <gl>seed</gl>
+    <hw>nasiono</hw>
+  </entry>
+  <entry id="pl.122">
+    <gl>seed</gl>
+    <hw>naˈɕɔ.nɔ</hw>
+  </entry>
+  <entry id="pl.123">
+    <gl>seed</gl>
+    <hw>siemię</hw>
+  </entry>
+  <entry id="pl.124">
+    <gl>seed</gl>
+    <hw>ˈɕɛ.mʲɛ</hw>
+  </entry>
+  <entry id="pl.125">
+    <gl>seed</gl>
+    <hw>ziarno</hw>
+  </entry>
+  <entry id="pl.126">
+    <gl>seed</gl>
+    <hw>ˈʑar.nɔ</hw>
+  </entry>
+  <entry id="pl.127">
+    <gl>leaf</gl>
+    <hw>liść</hw>
+  </entry>
+  <entry id="pl.128">
+    <gl>leaf</gl>
+    <hw>lʲiɕt͡ɕ</hw>
+  </entry>
+  <entry id="pl.129">
+    <gl>root</gl>
+    <hw>korzeń</hw>
+  </entry>
+  <entry id="pl.130">
+    <gl>root</gl>
+    <hw>ˈkɔ.ʐɛɲ</hw>
+  </entry>
+  <entry id="pl.131">
+    <gl>bark (of a tree)</gl>
+    <hw>kora</hw>
+  </entry>
+  <entry id="pl.132">
+    <gl>bark (of a tree)</gl>
+    <hw>ˈkɔ.ra</hw>
+  </entry>
+  <entry id="pl.133">
+    <gl>flower</gl>
+    <hw>kwiat</hw>
+  </entry>
+  <entry id="pl.134">
+    <gl>flower</gl>
+    <hw>kfʲat</hw>
+  </entry>
+  <entry id="pl.135">
+    <gl>grass</gl>
+    <hw>trawa</hw>
+  </entry>
+  <entry id="pl.136">
+    <gl>grass</gl>
+    <hw>ˈtra.va</hw>
+  </entry>
+  <entry id="pl.137">
+    <gl>rope</gl>
+    <hw>sznur</hw>
+  </entry>
+  <entry id="pl.138">
+    <gl>rope</gl>
+    <hw>ʂnur</hw>
+  </entry>
+  <entry id="pl.139">
+    <gl>rope</gl>
+    <hw>lina</hw>
+  </entry>
+  <entry id="pl.140">
+    <gl>rope</gl>
+    <hw>ˈlʲi.na</hw>
+  </entry>
+  <entry id="pl.141">
+    <gl>rope</gl>
+    <hw>powróz</hw>
+  </entry>
+  <entry id="pl.142">
+    <gl>rope</gl>
+    <hw>ˈpɔ.vrus</hw>
+  </entry>
+  <entry id="pl.143">
+    <gl>skin</gl>
+    <hw>skóra</hw>
+  </entry>
+  <entry id="pl.144">
+    <gl>skin</gl>
+    <hw>ˈsku.ra</hw>
+  </entry>
+  <entry id="pl.145">
+    <gl>meat</gl>
+    <hw>mięso</hw>
+  </entry>
+  <entry id="pl.146">
+    <gl>meat</gl>
+    <hw>ˈmʲɛ̃.sɔ</hw>
+  </entry>
+  <entry id="pl.147">
+    <gl>blood</gl>
+    <hw>krew</hw>
+  </entry>
+  <entry id="pl.148">
+    <gl>blood</gl>
+    <hw>krɛf</hw>
+  </entry>
+  <entry id="pl.149">
+    <gl>bone</gl>
+    <hw>kość</hw>
+  </entry>
+  <entry id="pl.150">
+    <gl>bone</gl>
+    <hw>kɔɕtɕ</hw>
+  </entry>
+  <entry id="pl.151">
+    <gl>fat (noun)</gl>
+    <hw>tłuszcz</hw>
+  </entry>
+  <entry id="pl.152">
+    <gl>fat (noun)</gl>
+    <hw>twuʂt͡ʂ</hw>
+  </entry>
+  <entry id="pl.153">
+    <gl>fat (noun)</gl>
+    <hw>sadło</hw>
+  </entry>
+  <entry id="pl.154">
+    <gl>fat (noun)</gl>
+    <hw>ˈsa.dwɔ</hw>
+  </entry>
+  <entry id="pl.155">
+    <gl>egg</gl>
+    <hw>jajko</hw>
+  </entry>
+  <entry id="pl.156">
+    <gl>egg</gl>
+    <hw>ˈjaj.kɔ</hw>
+  </entry>
+  <entry id="pl.157">
+    <gl>egg</gl>
+    <hw>jajo</hw>
+  </entry>
+  <entry id="pl.158">
+    <gl>egg</gl>
+    <hw>ˈja.jɔ</hw>
+  </entry>
+  <entry id="pl.159">
+    <gl>horn</gl>
+    <hw>róg</hw>
+  </entry>
+  <entry id="pl.160">
+    <gl>horn</gl>
+    <hw>ruk</hw>
+  </entry>
+  <entry id="pl.161">
+    <gl>tail</gl>
+    <hw>ogon</hw>
+  </entry>
+  <entry id="pl.162">
+    <gl>tail</gl>
+    <hw>ˈɔ.ɡɔn</hw>
+  </entry>
+  <entry id="pl.163">
+    <gl>feather</gl>
+    <hw>pióro</hw>
+  </entry>
+  <entry id="pl.164">
+    <gl>feather</gl>
+    <hw>ˈpʲu.rɔ</hw>
+  </entry>
+  <entry id="pl.165">
+    <gl>hair</gl>
+    <hw>włos</hw>
+  </entry>
+  <entry id="pl.166">
+    <gl>hair</gl>
+    <hw>vwɔs</hw>
+  </entry>
+  <entry id="pl.167">
+    <gl>head</gl>
+    <hw>głowa</hw>
+  </entry>
+  <entry id="pl.168">
+    <gl>head</gl>
+    <hw>ˈɡwɔ.va</hw>
+  </entry>
+  <entry id="pl.169">
+    <gl>ear</gl>
+    <hw>ucho</hw>
+  </entry>
+  <entry id="pl.170">
+    <gl>ear</gl>
+    <hw>ˈu.xɔ</hw>
+  </entry>
+  <entry id="pl.171">
+    <gl>eye</gl>
+    <hw>oko</hw>
+  </entry>
+  <entry id="pl.172">
+    <gl>eye</gl>
+    <hw>ˈɔ.kɔ</hw>
+  </entry>
+  <entry id="pl.173">
+    <gl>nose</gl>
+    <hw>nos</hw>
+  </entry>
+  <entry id="pl.174">
+    <gl>nose</gl>
+    <hw>nɔs</hw>
+  </entry>
+  <entry id="pl.175">
+    <gl>mouth</gl>
+    <hw>usta</hw>
+  </entry>
+  <entry id="pl.176">
+    <gl>mouth</gl>
+    <hw>ˈu.sta</hw>
+  </entry>
+  <entry id="pl.177">
+    <gl>tooth</gl>
+    <hw>ząb</hw>
+  </entry>
+  <entry id="pl.178">
+    <gl>tooth</gl>
+    <hw>zɔmp</hw>
+  </entry>
+  <entry id="pl.179">
+    <gl>tongue (organ)</gl>
+    <hw>język</hw>
+  </entry>
+  <entry id="pl.180">
+    <gl>tongue (organ)</gl>
+    <hw>ˈjɛ̃.zɨk</hw>
+  </entry>
+  <entry id="pl.181">
+    <gl>fingernail</gl>
+    <hw>paznokieć</hw>
+  </entry>
+  <entry id="pl.182">
+    <gl>fingernail</gl>
+    <hw>pazˈnɔ.kʲɛtɕ</hw>
+  </entry>
+  <entry id="pl.183">
+    <gl>foot</gl>
+    <hw>stopa</hw>
+  </entry>
+  <entry id="pl.184">
+    <gl>foot</gl>
+    <hw>ˈstɔ.pa</hw>
+  </entry>
+  <entry id="pl.185">
+    <gl>leg</gl>
+    <hw>noga</hw>
+  </entry>
+  <entry id="pl.186">
+    <gl>leg</gl>
+    <hw>ˈnɔ.ɡa</hw>
+  </entry>
+  <entry id="pl.187">
+    <gl>knee</gl>
+    <hw>kolano</hw>
+  </entry>
+  <entry id="pl.188">
+    <gl>knee</gl>
+    <hw>kɔˈla.nɔ</hw>
+  </entry>
+  <entry id="pl.189">
+    <gl>hand</gl>
+    <hw>ręka</hw>
+  </entry>
+  <entry id="pl.190">
+    <gl>hand</gl>
+    <hw>ˈrɛŋ.ka</hw>
+  </entry>
+  <entry id="pl.191">
+    <gl>wing</gl>
+    <hw>skrzydło</hw>
+  </entry>
+  <entry id="pl.192">
+    <gl>wing</gl>
+    <hw>ˈskʂɨ.dwɔ</hw>
+  </entry>
+  <entry id="pl.193">
+    <gl>belly</gl>
+    <hw>brzuch</hw>
+  </entry>
+  <entry id="pl.194">
+    <gl>belly</gl>
+    <hw>bʐux</hw>
+  </entry>
+  <entry id="pl.195">
+    <gl>guts</gl>
+    <hw>wnętrzności</hw>
+  </entry>
+  <entry id="pl.196">
+    <gl>guts</gl>
+    <hw>vnɛnˈtʂnɔɕ.tɕi</hw>
+  </entry>
+  <entry id="pl.197">
+    <gl>neck</gl>
+    <hw>szyja</hw>
+  </entry>
+  <entry id="pl.198">
+    <gl>neck</gl>
+    <hw>ˈʂɨ.ja</hw>
+  </entry>
+  <entry id="pl.199">
+    <gl>neck</gl>
+    <hw>kark</hw>
+  </entry>
+  <entry id="pl.200">
+    <gl>neck</gl>
+    <hw>kark</hw>
+  </entry>
+  <entry id="pl.201">
+    <gl>back</gl>
+    <hw>plecy</hw>
+  </entry>
+  <entry id="pl.202">
+    <gl>back</gl>
+    <hw>ˈplɛ.tsɨ</hw>
+  </entry>
+  <entry id="pl.203">
+    <gl>back</gl>
+    <hw>grzbiet</hw>
+  </entry>
+  <entry id="pl.204">
+    <gl>back</gl>
+    <hw>ɡʐbʲɛt</hw>
+  </entry>
+  <entry id="pl.205">
+    <gl>breast</gl>
+    <hw>pierś</hw>
+  </entry>
+  <entry id="pl.206">
+    <gl>breast</gl>
+    <hw>pʲɛrɕ</hw>
+  </entry>
+  <entry id="pl.207">
+    <gl>heart</gl>
+    <hw>serce</hw>
+  </entry>
+  <entry id="pl.208">
+    <gl>heart</gl>
+    <hw>ˈsɛr.tsɛ</hw>
+  </entry>
+  <entry id="pl.209">
+    <gl>liver</gl>
+    <hw>wątroba</hw>
+  </entry>
+  <entry id="pl.210">
+    <gl>liver</gl>
+    <hw>vɔnˈtrɔ.ba</hw>
+  </entry>
+  <entry id="pl.211">
+    <gl>to drink</gl>
+    <hw>pić</hw>
+  </entry>
+  <entry id="pl.212">
+    <gl>to drink</gl>
+    <hw>pʲitɕ</hw>
+  </entry>
+  <entry id="pl.213">
+    <gl>to eat</gl>
+    <hw>jeść</hw>
+  </entry>
+  <entry id="pl.214">
+    <gl>to eat</gl>
+    <hw>jɛɕtɕ</hw>
+  </entry>
+  <entry id="pl.215">
+    <gl>to bite</gl>
+    <hw>gryźć</hw>
+  </entry>
+  <entry id="pl.216">
+    <gl>to bite</gl>
+    <hw>ɡrɨɕtɕ</hw>
+  </entry>
+  <entry id="pl.217">
+    <gl>to bite</gl>
+    <hw>kąsać</hw>
+  </entry>
+  <entry id="pl.218">
+    <gl>to bite</gl>
+    <hw>ˈkɔ̃.satɕ</hw>
+  </entry>
+  <entry id="pl.219">
+    <gl>to suck</gl>
+    <hw>ssać</hw>
+  </entry>
+  <entry id="pl.220">
+    <gl>to suck</gl>
+    <hw>ssatɕ</hw>
+  </entry>
+  <entry id="pl.221">
+    <gl>to spit</gl>
+    <hw>pluć</hw>
+  </entry>
+  <entry id="pl.222">
+    <gl>to spit</gl>
+    <hw>plutɕ</hw>
+  </entry>
+  <entry id="pl.223">
+    <gl>to vomit</gl>
+    <hw>wymiotować</hw>
+  </entry>
+  <entry id="pl.224">
+    <gl>to vomit</gl>
+    <hw>vɨ.mʲɔˈtɔ.vatɕ</hw>
+  </entry>
+  <entry id="pl.225">
+    <gl>to blow</gl>
+    <hw>dmuchać</hw>
+  </entry>
+  <entry id="pl.226">
+    <gl>to blow</gl>
+    <hw>ˈdmu.xatɕ</hw>
+  </entry>
+  <entry id="pl.227">
+    <gl>to blow</gl>
+    <hw>dąć</hw>
+  </entry>
+  <entry id="pl.228">
+    <gl>to blow</gl>
+    <hw>dɔɲtɕ</hw>
+  </entry>
+  <entry id="pl.229">
+    <gl>to blow</gl>
+    <hw>wiać</hw>
+  </entry>
+  <entry id="pl.230">
+    <gl>to blow</gl>
+    <hw>vʲat͡͡ɕ</hw>
+  </entry>
+  <entry id="pl.231">
+    <gl>to breathe</gl>
+    <hw>dychać</hw>
+  </entry>
+  <entry id="pl.232">
+    <gl>to breathe</gl>
+    <hw>ˈdɨ.xatɕ</hw>
+  </entry>
+  <entry id="pl.233">
+    <gl>to breathe</gl>
+    <hw>oddychać</hw>
+  </entry>
+  <entry id="pl.234">
+    <gl>to breathe</gl>
+    <hw>ɔdˈdɨ.xatɕ</hw>
+  </entry>
+  <entry id="pl.235">
+    <gl>to laugh</gl>
+    <hw>śmiać</hw>
+  </entry>
+  <entry id="pl.236">
+    <gl>to laugh</gl>
+    <hw>ɕmʲatɕ</hw>
+  </entry>
+  <entry id="pl.237">
+    <gl>to see</gl>
+    <hw>widzieć</hw>
+  </entry>
+  <entry id="pl.238">
+    <gl>to see</gl>
+    <hw>ˈvʲi.d͡ʑɛtɕ</hw>
+  </entry>
+  <entry id="pl.239">
+    <gl>to hear</gl>
+    <hw>słyszeć</hw>
+  </entry>
+  <entry id="pl.240">
+    <gl>to hear</gl>
+    <hw>ˈswɨ.ʂɛtɕ</hw>
+  </entry>
+  <entry id="pl.241">
+    <gl>to know</gl>
+    <hw>wiedzieć</hw>
+  </entry>
+  <entry id="pl.242">
+    <gl>to know</gl>
+    <hw>ˈvʲɛ.d͡ʑɛtɕ</hw>
+  </entry>
+  <entry id="pl.243">
+    <gl>to know</gl>
+    <hw>znać</hw>
+  </entry>
+  <entry id="pl.244">
+    <gl>to know</gl>
+    <hw>znatɕ</hw>
+  </entry>
+  <entry id="pl.245">
+    <gl>to think</gl>
+    <hw>myśleć</hw>
+  </entry>
+  <entry id="pl.246">
+    <gl>to think</gl>
+    <hw>ˈmɨɕ.lɛtɕ</hw>
+  </entry>
+  <entry id="pl.247">
+    <gl>to smell</gl>
+    <hw>czuć</hw>
+  </entry>
+  <entry id="pl.248">
+    <gl>to smell</gl>
+    <hw>t͡ʂutɕ</hw>
+  </entry>
+  <entry id="pl.249">
+    <gl>to smell</gl>
+    <hw>niuchać</hw>
+  </entry>
+  <entry id="pl.250">
+    <gl>to smell</gl>
+    <hw>ˈɲu.xatɕ</hw>
+  </entry>
+  <entry id="pl.251">
+    <gl>to smell</gl>
+    <hw>wąchać</hw>
+  </entry>
+  <entry id="pl.252">
+    <gl>to smell</gl>
+    <hw>ˈvɔ̃.xatɕ</hw>
+  </entry>
+  <entry id="pl.253">
+    <gl>to fear</gl>
+    <hw>bać</hw>
+  </entry>
+  <entry id="pl.254">
+    <gl>to fear</gl>
+    <hw>batɕ</hw>
+  </entry>
+  <entry id="pl.255">
+    <gl>to fear</gl>
+    <hw>lękać</hw>
+  </entry>
+  <entry id="pl.256">
+    <gl>to fear</gl>
+    <hw>ˈlɛŋ.katɕ</hw>
+  </entry>
+  <entry id="pl.257">
+    <gl>to sleep</gl>
+    <hw>spać</hw>
+  </entry>
+  <entry id="pl.258">
+    <gl>to sleep</gl>
+    <hw>spatɕ</hw>
+  </entry>
+  <entry id="pl.259">
+    <gl>to live</gl>
+    <hw>żyć</hw>
+  </entry>
+  <entry id="pl.260">
+    <gl>to live</gl>
+    <hw>ʐɨtɕ</hw>
+  </entry>
+  <entry id="pl.261">
+    <gl>to die</gl>
+    <hw>umierać</hw>
+  </entry>
+  <entry id="pl.262">
+    <gl>to die</gl>
+    <hw>uˈmʲɛ.ratɕ</hw>
+  </entry>
+  <entry id="pl.263">
+    <gl>to die</gl>
+    <hw>umrzeć</hw>
+  </entry>
+  <entry id="pl.264">
+    <gl>to die</gl>
+    <hw>ˈum.ʐɛtɕ</hw>
+  </entry>
+  <entry id="pl.265">
+    <gl>to kill</gl>
+    <hw>zabijać</hw>
+  </entry>
+  <entry id="pl.266">
+    <gl>to kill</gl>
+    <hw>zaˈbʲi.jatɕ</hw>
+  </entry>
+  <entry id="pl.267">
+    <gl>to kill</gl>
+    <hw>zabić</hw>
+  </entry>
+  <entry id="pl.268">
+    <gl>to kill</gl>
+    <hw>ˈza.bʲitɕ</hw>
+  </entry>
+  <entry id="pl.269">
+    <gl>to fight</gl>
+    <hw>walczyć</hw>
+  </entry>
+  <entry id="pl.270">
+    <gl>to fight</gl>
+    <hw>ˈval.t͡ʂɨtɕ</hw>
+  </entry>
+  <entry id="pl.271">
+    <gl>to hunt</gl>
+    <hw>polować</hw>
+  </entry>
+  <entry id="pl.272">
+    <gl>to hunt</gl>
+    <hw>pɔˈlɔ.vatɕ</hw>
+  </entry>
+  <entry id="pl.273">
+    <gl>to hit</gl>
+    <hw>uderzać</hw>
+  </entry>
+  <entry id="pl.274">
+    <gl>to hit</gl>
+    <hw>uˈdɛ.ʐatɕ</hw>
+  </entry>
+  <entry id="pl.275">
+    <gl>to cut</gl>
+    <hw>ciąć</hw>
+  </entry>
+  <entry id="pl.276">
+    <gl>to cut</gl>
+    <hw>tɕɔɲtɕ</hw>
+  </entry>
+  <entry id="pl.277">
+    <gl>to cut</gl>
+    <hw>kroić</hw>
+  </entry>
+  <entry id="pl.278">
+    <gl>to cut</gl>
+    <hw>ˈkrɔ.itɕ</hw>
+  </entry>
+  <entry id="pl.279">
+    <gl>to cut</gl>
+    <hw>rzezać</hw>
+  </entry>
+  <entry id="pl.280">
+    <gl>to cut</gl>
+    <hw>ˈʐɛ.zatɕ</hw>
+  </entry>
+  <entry id="pl.281">
+    <gl>to split</gl>
+    <hw>dzielić</hw>
+  </entry>
+  <entry id="pl.282">
+    <gl>to split</gl>
+    <hw>ˈd͡ʑɛ.lʲitɕ</hw>
+  </entry>
+  <entry id="pl.283">
+    <gl>to split</gl>
+    <hw>rozdzielać</hw>
+  </entry>
+  <entry id="pl.284">
+    <gl>to split</gl>
+    <hw>rɔʑˈd͡ʑɛ.latɕ</hw>
+  </entry>
+  <entry id="pl.285">
+    <gl>to stab</gl>
+    <hw>dźgać</hw>
+  </entry>
+  <entry id="pl.286">
+    <gl>to stab</gl>
+    <hw>d͡ʑɡatɕ</hw>
+  </entry>
+  <entry id="pl.287">
+    <gl>to stab</gl>
+    <hw>kłuć</hw>
+  </entry>
+  <entry id="pl.288">
+    <gl>to stab</gl>
+    <hw>kwutɕ</hw>
+  </entry>
+  <entry id="pl.289">
+    <gl>to stab</gl>
+    <hw>bóść</hw>
+  </entry>
+  <entry id="pl.290">
+    <gl>to stab</gl>
+    <hw>buɕtɕ</hw>
+  </entry>
+  <entry id="pl.291">
+    <gl>to scratch</gl>
+    <hw>drapać</hw>
+  </entry>
+  <entry id="pl.292">
+    <gl>to scratch</gl>
+    <hw>ˈdra.patɕ</hw>
+  </entry>
+  <entry id="pl.293">
+    <gl>to dig</gl>
+    <hw>kopać</hw>
+  </entry>
+  <entry id="pl.294">
+    <gl>to dig</gl>
+    <hw>ˈkɔ.patɕ</hw>
+  </entry>
+  <entry id="pl.295">
+    <gl>to dig</gl>
+    <hw>ryć</hw>
+  </entry>
+  <entry id="pl.296">
+    <gl>to dig</gl>
+    <hw>rɨtɕ</hw>
+  </entry>
+  <entry id="pl.297">
+    <gl>to swim</gl>
+    <hw>pływać</hw>
+  </entry>
+  <entry id="pl.298">
+    <gl>to swim</gl>
+    <hw>ˈpwɨ.vatɕ</hw>
+  </entry>
+  <entry id="pl.299">
+    <gl>to fly</gl>
+    <hw>latać</hw>
+  </entry>
+  <entry id="pl.300">
+    <gl>to fly</gl>
+    <hw>ˈla.tatɕ</hw>
+  </entry>
+  <entry id="pl.301">
+    <gl>to fly</gl>
+    <hw>lecieć</hw>
+  </entry>
+  <entry id="pl.302">
+    <gl>to fly</gl>
+    <hw>ˈlɛ.tɕɛtɕ</hw>
+  </entry>
+  <entry id="pl.303">
+    <gl>to walk</gl>
+    <hw>iść</hw>
+  </entry>
+  <entry id="pl.304">
+    <gl>to walk</gl>
+    <hw>iɕtɕ</hw>
+  </entry>
+  <entry id="pl.305">
+    <gl>to walk</gl>
+    <hw>chodzić</hw>
+  </entry>
+  <entry id="pl.306">
+    <gl>to walk</gl>
+    <hw>ˈxɔ.d͡ʑitɕ</hw>
+  </entry>
+  <entry id="pl.307">
+    <gl>to come</gl>
+    <hw>przychodzić</hw>
+  </entry>
+  <entry id="pl.308">
+    <gl>to come</gl>
+    <hw>pʂɨˈxɔ.d͡ʑitɕ,</hw>
+  </entry>
+  <entry id="pl.309">
+    <gl>to come</gl>
+    <hw>przyjść</hw>
+  </entry>
+  <entry id="pl.310">
+    <gl>to come</gl>
+    <hw>pʂɨjɕtɕ</hw>
+  </entry>
+  <entry id="pl.311">
+    <gl>to lie (as in a bed)</gl>
+    <hw>leżeć</hw>
+  </entry>
+  <entry id="pl.312">
+    <gl>to lie (as in a bed)</gl>
+    <hw>ˈlɛ.ʐɛtɕ</hw>
+  </entry>
+  <entry id="pl.313">
+    <gl>to sit</gl>
+    <hw>siedzieć</hw>
+  </entry>
+  <entry id="pl.314">
+    <gl>to sit</gl>
+    <hw>ˈɕɛ.d͡ʑɛtɕ</hw>
+  </entry>
+  <entry id="pl.315">
+    <gl>to stand</gl>
+    <hw>stać</hw>
+  </entry>
+  <entry id="pl.316">
+    <gl>to stand</gl>
+    <hw>statɕ</hw>
+  </entry>
+  <entry id="pl.317">
+    <gl>to turn (intransitive)</gl>
+    <hw>obracać</hw>
+  </entry>
+  <entry id="pl.318">
+    <gl>to turn (intransitive)</gl>
+    <hw>ɔˈbra.tsatɕ</hw>
+  </entry>
+  <entry id="pl.319">
+    <gl>to fall</gl>
+    <hw>padać</hw>
+  </entry>
+  <entry id="pl.320">
+    <gl>to fall</gl>
+    <hw>ˈpa.datɕ</hw>
+  </entry>
+  <entry id="pl.321">
+    <gl>to fall</gl>
+    <hw>paść</hw>
+  </entry>
+  <entry id="pl.322">
+    <gl>to fall</gl>
+    <hw>paɕtɕ</hw>
+  </entry>
+  <entry id="pl.323">
+    <gl>to fall</gl>
+    <hw>upaść</hw>
+  </entry>
+  <entry id="pl.324">
+    <gl>to fall</gl>
+    <hw>ˈu.paɕtɕ</hw>
+  </entry>
+  <entry id="pl.325">
+    <gl>to give</gl>
+    <hw>dawać</hw>
+  </entry>
+  <entry id="pl.326">
+    <gl>to give</gl>
+    <hw>ˈda.vatɕ</hw>
+  </entry>
+  <entry id="pl.327">
+    <gl>to give</gl>
+    <hw>dać</hw>
+  </entry>
+  <entry id="pl.328">
+    <gl>to give</gl>
+    <hw>datɕ</hw>
+  </entry>
+  <entry id="pl.329">
+    <gl>to hold</gl>
+    <hw>trzymać, dzierżyć</hw>
+  </entry>
+  <entry id="pl.330">
+    <gl>to hold</gl>
+    <hw>ˈtʂɨ.matɕ, ˈd͡ʑɛr.ʐɨtɕ</hw>
+  </entry>
+  <entry id="pl.331">
+    <gl>to squeeze</gl>
+    <hw>ściskać, wyżymać</hw>
+  </entry>
+  <entry id="pl.332">
+    <gl>to squeeze</gl>
+    <hw>ˈɕtɕi.skatɕ, vɨˈʐɨ.matɕ</hw>
+  </entry>
+  <entry id="pl.333">
+    <gl>to rub</gl>
+    <hw>trzeć</hw>
+  </entry>
+  <entry id="pl.334">
+    <gl>to rub</gl>
+    <hw>tʂɛtɕ</hw>
+  </entry>
+  <entry id="pl.335">
+    <gl>to wash</gl>
+    <hw>myć, prać</hw>
+  </entry>
+  <entry id="pl.336">
+    <gl>to wash</gl>
+    <hw>mɨtɕ, pratɕ</hw>
+  </entry>
+  <entry id="pl.337">
+    <gl>to wipe</gl>
+    <hw>wycierać</hw>
+  </entry>
+  <entry id="pl.338">
+    <gl>to wipe</gl>
+    <hw>vɨˈtɕɛ.ratɕ</hw>
+  </entry>
+  <entry id="pl.339">
+    <gl>to pull</gl>
+    <hw>ciągnąć</hw>
+  </entry>
+  <entry id="pl.340">
+    <gl>to pull</gl>
+    <hw>ˈtɕɔŋ.ɡnɔɲtɕ</hw>
+  </entry>
+  <entry id="pl.341">
+    <gl>to push</gl>
+    <hw>pchać</hw>
+  </entry>
+  <entry id="pl.342">
+    <gl>to push</gl>
+    <hw>pxatɕ</hw>
+  </entry>
+  <entry id="pl.343">
+    <gl>to throw</gl>
+    <hw>rzucać</hw>
+  </entry>
+  <entry id="pl.344">
+    <gl>to throw</gl>
+    <hw>ˈʐu.tsatɕ</hw>
+  </entry>
+  <entry id="pl.345">
+    <gl>to tie</gl>
+    <hw>wiązać</hw>
+  </entry>
+  <entry id="pl.346">
+    <gl>to tie</gl>
+    <hw>ˈvʲɔ̃.zatɕ</hw>
+  </entry>
+  <entry id="pl.347">
+    <gl>to sew</gl>
+    <hw>szyć</hw>
+  </entry>
+  <entry id="pl.348">
+    <gl>to sew</gl>
+    <hw>ʂɨtɕ</hw>
+  </entry>
+  <entry id="pl.349">
+    <gl>to count</gl>
+    <hw>liczyć, rachować</hw>
+  </entry>
+  <entry id="pl.350">
+    <gl>to count</gl>
+    <hw>ˈlʲi.t͡ʂɨtɕ, raˈxɔ.vatɕ</hw>
+  </entry>
+  <entry id="pl.351">
+    <gl>to say</gl>
+    <hw>mówić, rzec</hw>
+  </entry>
+  <entry id="pl.352">
+    <gl>to say</gl>
+    <hw>ˈmu.vʲitɕ, ʐɛts</hw>
+  </entry>
+  <entry id="pl.353">
+    <gl>to sing</gl>
+    <hw>śpiewać</hw>
+  </entry>
+  <entry id="pl.354">
+    <gl>to sing</gl>
+    <hw>ˈɕpʲɛ.vatɕ</hw>
+  </entry>
+  <entry id="pl.355">
+    <gl>to play</gl>
+    <hw>grać</hw>
+  </entry>
+  <entry id="pl.356">
+    <gl>to play</gl>
+    <hw>ɡratɕ</hw>
+  </entry>
+  <entry id="pl.357">
+    <gl>to float</gl>
+    <hw>pływać</hw>
+  </entry>
+  <entry id="pl.358">
+    <gl>to float</gl>
+    <hw>ˈpwɨ.vatɕ</hw>
+  </entry>
+  <entry id="pl.359">
+    <gl>to flow</gl>
+    <hw>płynąć, ciec</hw>
+  </entry>
+  <entry id="pl.360">
+    <gl>to flow</gl>
+    <hw>ˈpwɨ.nɔɲtɕ, tɕɛts</hw>
+  </entry>
+  <entry id="pl.361">
+    <gl>to freeze</gl>
+    <hw>marznąć, zamarzać</hw>
+  </entry>
+  <entry id="pl.362">
+    <gl>to freeze</gl>
+    <hw>ˈmar.znɔɲtɕ, zaˈmar.zatɕ</hw>
+  </entry>
+  <entry id="pl.363">
+    <gl>to swell</gl>
+    <hw>pęcznieć, puchnąć</hw>
+  </entry>
+  <entry id="pl.364">
+    <gl>to swell</gl>
+    <hw>ˈpɛn.t͡ʂɲɛtɕ, ˈpux.nɔɲtɕ</hw>
+  </entry>
+  <entry id="pl.365">
+    <gl>sun</gl>
+    <hw>słońce</hw>
+  </entry>
+  <entry id="pl.366">
+    <gl>sun</gl>
+    <hw>ˈswɔɲ.tsɛ</hw>
+  </entry>
+  <entry id="pl.367">
+    <gl>moon</gl>
+    <hw>księżyc, miesiąc</hw>
+  </entry>
+  <entry id="pl.368">
+    <gl>moon</gl>
+    <hw>ˈkɕɛ̃.ʐɨts, ˈmʲɛ.ɕɔnts</hw>
+  </entry>
+  <entry id="pl.369">
+    <gl>star</gl>
+    <hw>gwiazda</hw>
+  </entry>
+  <entry id="pl.370">
+    <gl>star</gl>
+    <hw>ˈɡvʲaz.da</hw>
+  </entry>
+  <entry id="pl.371">
+    <gl>water</gl>
+    <hw>woda</hw>
+  </entry>
+  <entry id="pl.372">
+    <gl>water</gl>
+    <hw>ˈvɔ.da</hw>
+  </entry>
+  <entry id="pl.373">
+    <gl>rain</gl>
+    <hw>deszcz</hw>
+  </entry>
+  <entry id="pl.374">
+    <gl>rain</gl>
+    <hw>dɛʂt͡ʂ</hw>
+  </entry>
+  <entry id="pl.375">
+    <gl>river</gl>
+    <hw>rzeka</hw>
+  </entry>
+  <entry id="pl.376">
+    <gl>river</gl>
+    <hw>ˈʐɛ.ka</hw>
+  </entry>
+  <entry id="pl.377">
+    <gl>lake</gl>
+    <hw>jezioro</hw>
+  </entry>
+  <entry id="pl.378">
+    <gl>lake</gl>
+    <hw>jɛˈʑɔ.rɔ</hw>
+  </entry>
+  <entry id="pl.379">
+    <gl>sea</gl>
+    <hw>morze</hw>
+  </entry>
+  <entry id="pl.380">
+    <gl>sea</gl>
+    <hw>ˈmɔ.ʐɛ</hw>
+  </entry>
+  <entry id="pl.381">
+    <gl>salt</gl>
+    <hw>sól</hw>
+  </entry>
+  <entry id="pl.382">
+    <gl>salt</gl>
+    <hw>sul</hw>
+  </entry>
+  <entry id="pl.383">
+    <gl>stone</gl>
+    <hw>kamień</hw>
+  </entry>
+  <entry id="pl.384">
+    <gl>stone</gl>
+    <hw>ˈka.mʲɛɲ</hw>
+  </entry>
+  <entry id="pl.385">
+    <gl>sand</gl>
+    <hw>piasek</hw>
+  </entry>
+  <entry id="pl.386">
+    <gl>sand</gl>
+    <hw>ˈpʲa.sɛk</hw>
+  </entry>
+  <entry id="pl.387">
+    <gl>dust</gl>
+    <hw>kurz, pył</hw>
+  </entry>
+  <entry id="pl.388">
+    <gl>dust</gl>
+    <hw>kuʂ, pɨw</hw>
+  </entry>
+  <entry id="pl.389">
+    <gl>earth</gl>
+    <hw>ziemia</hw>
+  </entry>
+  <entry id="pl.390">
+    <gl>earth</gl>
+    <hw>ˈʑɛ.mʲa</hw>
+  </entry>
+  <entry id="pl.391">
+    <gl>cloud</gl>
+    <hw>chmura, obłok</hw>
+  </entry>
+  <entry id="pl.392">
+    <gl>cloud</gl>
+    <hw>ˈxmu.ra, ˈɔ.bwɔk</hw>
+  </entry>
+  <entry id="pl.393">
+    <gl>fog</gl>
+    <hw>mgła</hw>
+  </entry>
+  <entry id="pl.394">
+    <gl>fog</gl>
+    <hw>mɡwa</hw>
+  </entry>
+  <entry id="pl.395">
+    <gl>sky</gl>
+    <hw>niebo</hw>
+  </entry>
+  <entry id="pl.396">
+    <gl>sky</gl>
+    <hw>ˈɲɛ.bɔ</hw>
+  </entry>
+  <entry id="pl.397">
+    <gl>wind</gl>
+    <hw>wiatr</hw>
+  </entry>
+  <entry id="pl.398">
+    <gl>wind</gl>
+    <hw>vʲatr</hw>
+  </entry>
+  <entry id="pl.399">
+    <gl>snow</gl>
+    <hw>śnieg</hw>
+  </entry>
+  <entry id="pl.400">
+    <gl>snow</gl>
+    <hw>ɕɲɛk</hw>
+  </entry>
+  <entry id="pl.401">
+    <gl>ice</gl>
+    <hw>lód</hw>
+  </entry>
+  <entry id="pl.402">
+    <gl>ice</gl>
+    <hw>lut</hw>
+  </entry>
+  <entry id="pl.403">
+    <gl>smoke</gl>
+    <hw>dym</hw>
+  </entry>
+  <entry id="pl.404">
+    <gl>smoke</gl>
+    <hw>dɨm</hw>
+  </entry>
+  <entry id="pl.405">
+    <gl>fire</gl>
+    <hw>ogień</hw>
+  </entry>
+  <entry id="pl.406">
+    <gl>fire</gl>
+    <hw>ˈɔ.ɡʲɛɲ</hw>
+  </entry>
+  <entry id="pl.407">
+    <gl>ash</gl>
+    <hw>popiół</hw>
+  </entry>
+  <entry id="pl.408">
+    <gl>ash</gl>
+    <hw>ˈpɔ.pʲuw</hw>
+  </entry>
+  <entry id="pl.409">
+    <gl>to burn</gl>
+    <hw>palić, gorzeć, płonąć</hw>
+  </entry>
+  <entry id="pl.410">
+    <gl>to burn</gl>
+    <hw>ˈpa.lʲitɕ, ˈɡɔ.ʐɛtɕ, ˈpwɔ.nɔɲtɕ</hw>
+  </entry>
+  <entry id="pl.411">
+    <gl>road</gl>
+    <hw>droga</hw>
+  </entry>
+  <entry id="pl.412">
+    <gl>road</gl>
+    <hw>ˈdrɔ.ɡa</hw>
+  </entry>
+  <entry id="pl.413">
+    <gl>mountain</gl>
+    <hw>góra</hw>
+  </entry>
+  <entry id="pl.414">
+    <gl>mountain</gl>
+    <hw>ˈɡu.ra</hw>
+  </entry>
+  <entry id="pl.415">
+    <gl>red</gl>
+    <hw>czerwony</hw>
+  </entry>
+  <entry id="pl.416">
+    <gl>red</gl>
+    <hw>t͡ʂɛrˈvɔ.nɨ</hw>
+  </entry>
+  <entry id="pl.417">
+    <gl>green</gl>
+    <hw>zielony</hw>
+  </entry>
+  <entry id="pl.418">
+    <gl>green</gl>
+    <hw>ʑɛˈlɔ.nɨ</hw>
+  </entry>
+  <entry id="pl.419">
+    <gl>yellow</gl>
+    <hw>żółty</hw>
+  </entry>
+  <entry id="pl.420">
+    <gl>yellow</gl>
+    <hw>ˈʐuw.tɨ</hw>
+  </entry>
+  <entry id="pl.421">
+    <gl>white</gl>
+    <hw>biały</hw>
+  </entry>
+  <entry id="pl.422">
+    <gl>white</gl>
+    <hw>ˈbʲa.wɨ</hw>
+  </entry>
+  <entry id="pl.423">
+    <gl>black</gl>
+    <hw>czarny</hw>
+  </entry>
+  <entry id="pl.424">
+    <gl>black</gl>
+    <hw>ˈt͡ʂar.nɨ</hw>
+  </entry>
+  <entry id="pl.425">
+    <gl>night</gl>
+    <hw>noc</hw>
+  </entry>
+  <entry id="pl.426">
+    <gl>night</gl>
+    <hw>nɔts</hw>
+  </entry>
+  <entry id="pl.427">
+    <gl>day</gl>
+    <hw>dzień</hw>
+  </entry>
+  <entry id="pl.428">
+    <gl>day</gl>
+    <hw>d͡ʑɛɲ</hw>
+  </entry>
+  <entry id="pl.429">
+    <gl>year</gl>
+    <hw>rok</hw>
+  </entry>
+  <entry id="pl.430">
+    <gl>year</gl>
+    <hw>rɔk</hw>
+  </entry>
+  <entry id="pl.431">
+    <gl>warm</gl>
+    <hw>ciepły</hw>
+  </entry>
+  <entry id="pl.432">
+    <gl>warm</gl>
+    <hw>ˈtɕɛ.pwɨ</hw>
+  </entry>
+  <entry id="pl.433">
+    <gl>cold</gl>
+    <hw>zimny, chłodny</hw>
+  </entry>
+  <entry id="pl.434">
+    <gl>cold</gl>
+    <hw>ˈʑim.nɨ, ˈxwɔd.nɨ</hw>
+  </entry>
+  <entry id="pl.435">
+    <gl>full</gl>
+    <hw>pełny</hw>
+  </entry>
+  <entry id="pl.436">
+    <gl>full</gl>
+    <hw>ˈpɛw.nɨ</hw>
+  </entry>
+  <entry id="pl.437">
+    <gl>new</gl>
+    <hw>nowy</hw>
+  </entry>
+  <entry id="pl.438">
+    <gl>new</gl>
+    <hw>ˈnɔ.vɨ</hw>
+  </entry>
+  <entry id="pl.439">
+    <gl>old</gl>
+    <hw>stary</hw>
+  </entry>
+  <entry id="pl.440">
+    <gl>old</gl>
+    <hw>ˈsta.rɨ</hw>
+  </entry>
+  <entry id="pl.441">
+    <gl>good</gl>
+    <hw>dobry</hw>
+  </entry>
+  <entry id="pl.442">
+    <gl>good</gl>
+    <hw>ˈdɔ.brɨ</hw>
+  </entry>
+  <entry id="pl.443">
+    <gl>bad</gl>
+    <hw>zły</hw>
+  </entry>
+  <entry id="pl.444">
+    <gl>bad</gl>
+    <hw>zwɨ</hw>
+  </entry>
+  <entry id="pl.445">
+    <gl>rotten</gl>
+    <hw>zgniły</hw>
+  </entry>
+  <entry id="pl.446">
+    <gl>rotten</gl>
+    <hw>ˈzɡɲi.wɨ</hw>
+  </entry>
+  <entry id="pl.447">
+    <gl>dirty</gl>
+    <hw>brudny</hw>
+  </entry>
+  <entry id="pl.448">
+    <gl>dirty</gl>
+    <hw>ˈbrud.nɨ</hw>
+  </entry>
+  <entry id="pl.449">
+    <gl>straight</gl>
+    <hw>prosty</hw>
+  </entry>
+  <entry id="pl.450">
+    <gl>straight</gl>
+    <hw>ˈprɔ.stɨ</hw>
+  </entry>
+  <entry id="pl.451">
+    <gl>round</gl>
+    <hw>krągły, okrągły</hw>
+  </entry>
+  <entry id="pl.452">
+    <gl>round</gl>
+    <hw>ˈkrɔŋ.ɡwɨ, ɔˈkrɔŋ.ɡwɨ</hw>
+  </entry>
+  <entry id="pl.453">
+    <gl>sharp (as a knife)</gl>
+    <hw>ostry</hw>
+  </entry>
+  <entry id="pl.454">
+    <gl>sharp (as a knife)</gl>
+    <hw>ˈɔ.strɨ</hw>
+  </entry>
+  <entry id="pl.455">
+    <gl>dull (as a knife)</gl>
+    <hw>tępy</hw>
+  </entry>
+  <entry id="pl.456">
+    <gl>dull (as a knife)</gl>
+    <hw>ˈtɛm.pɨ</hw>
+  </entry>
+  <entry id="pl.457">
+    <gl>smooth</gl>
+    <hw>gładki</hw>
+  </entry>
+  <entry id="pl.458">
+    <gl>smooth</gl>
+    <hw>ˈɡwat.kʲi</hw>
+  </entry>
+  <entry id="pl.459">
+    <gl>wet</gl>
+    <hw>mokry</hw>
+  </entry>
+  <entry id="pl.460">
+    <gl>wet</gl>
+    <hw>ˈmɔ.krɨ</hw>
+  </entry>
+  <entry id="pl.461">
+    <gl>dry</gl>
+    <hw>suchy</hw>
+  </entry>
+  <entry id="pl.462">
+    <gl>dry</gl>
+    <hw>ˈsu.xɨ</hw>
+  </entry>
+  <entry id="pl.463">
+    <gl>correct</gl>
+    <hw>poprawny, prawidłowy</hw>
+  </entry>
+  <entry id="pl.464">
+    <gl>correct</gl>
+    <hw>pɔˈprav.nɨ, pra.vʲiˈdwɔ.vɨ</hw>
+  </entry>
+  <entry id="pl.465">
+    <gl>near</gl>
+    <hw>bliski</hw>
+  </entry>
+  <entry id="pl.466">
+    <gl>near</gl>
+    <hw>ˈblʲis.kʲi</hw>
+  </entry>
+  <entry id="pl.467">
+    <gl>far</gl>
+    <hw>daleki</hw>
+  </entry>
+  <entry id="pl.468">
+    <gl>far</gl>
+    <hw>daˈlɛ.kʲi</hw>
+  </entry>
+  <entry id="pl.469">
+    <gl>right</gl>
+    <hw>prawy</hw>
+  </entry>
+  <entry id="pl.470">
+    <gl>right</gl>
+    <hw>ˈpra.vɨ</hw>
+  </entry>
+  <entry id="pl.471">
+    <gl>left</gl>
+    <hw>lewy</hw>
+  </entry>
+  <entry id="pl.472">
+    <gl>left</gl>
+    <hw>ˈlɛ.vɨ</hw>
+  </entry>
+  <entry id="pl.473">
+    <gl>at</gl>
+    <hw>przy, u, na</hw>
+  </entry>
+  <entry id="pl.474">
+    <gl>at</gl>
+    <hw>pʂɨ, u, na</hw>
+  </entry>
+  <entry id="pl.475">
+    <gl>in</gl>
+    <hw>w, we</hw>
+  </entry>
+  <entry id="pl.476">
+    <gl>in</gl>
+    <hw>v, vɛ</hw>
+  </entry>
+  <entry id="pl.477">
+    <gl>with</gl>
+    <hw>z, ze</hw>
+  </entry>
+  <entry id="pl.478">
+    <gl>with</gl>
+    <hw>z, zɛ</hw>
+  </entry>
+  <entry id="pl.479">
+    <gl>and</gl>
+    <hw>i, oraz</hw>
+  </entry>
+  <entry id="pl.480">
+    <gl>and</gl>
+    <hw>i, ˈɔ.ras</hw>
+  </entry>
+  <entry id="pl.481">
+    <gl>if</gl>
+    <hw>jeśli, jeżeli</hw>
+  </entry>
+  <entry id="pl.482">
+    <gl>if</gl>
+    <hw>ˈjɛɕ.lʲi, jɛˈʐɛ.lʲi</hw>
+  </entry>
+  <entry id="pl.483">
+    <gl>because</gl>
+    <hw>bo, gdyż, ponieważ</hw>
+  </entry>
+  <entry id="pl.484">
+    <gl>because</gl>
+    <hw>bɔ, ɡdɨʂ, pɔˈɲɛ.vaʂ</hw>
+  </entry>
+  <entry id="pl.485">
+    <gl>name</gl>
+    <hw>imię, miano</hw>
+  </entry>
+  <entry id="pl.486">
+    <gl>name</gl>
+    <hw>ˈi.mʲɛ, ˈmʲa.nɔ</hw>
+  </entry>
+  <entry id="pl.487">
+    <gl>summer</gl>
+    <hw>lato</hw>
+  </entry>
+</lexicon>
