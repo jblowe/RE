@@ -1,10 +1,31 @@
 import xml.etree.ElementTree as ET
 from collections import OrderedDict
 from pathlib import Path
-from html import escape
+from html import escape, unescape
 import re
 
 # ============== helpers ==============
+
+
+def trans_str(s):
+    source_chars = '012345:AEONT'
+    target_chars = '&#x2070;¹²³&#x2074;&#x2075;&#x02d0;&#x0259;&#x025b;&#x0254;&#x014b;&#x0288;'
+    target_chars = unescape(target_chars)
+    table = str.maketrans(source_chars, target_chars)
+    s = s.translate(table)
+    s = s.replace('ng', unescape('&#x014b;'))
+    s = s.replace('aM', unescape('a&#x0303;'))
+    s = s.replace('eM', unescape('e&#x0303;'))
+    s = s.replace('iM', unescape('i&#x0303;'))
+    s = s.replace('oM', unescape('o&#x0303;'))
+    s = s.replace('uM', unescape('u&#x0303;'))
+    s = s.replace('ph', unescape('p&#x02b0;'))
+    s = s.replace('th', unescape('t&#x02b0;'))
+    s = s.replace('ch', unescape('c&#x02b0;'))
+    s = s.replace('kh', unescape('k&#x02b0;'))
+    s = s.replace(unescape('&#x0288;h'), unescape('&#x0288;&#x02b0;'))
+    return s
+
 
 # Define sets
 vowels = "aeiouāīūȳôêöüAEIOU"
@@ -28,7 +49,7 @@ def esc(s: str) -> str:
 
 
 def render_tamang(t):
-    return f'<b>{t}</b>'
+    return f'<b>{trans_str(t)}</b>'
 
 
 def render_transliteration(t):
@@ -58,7 +79,6 @@ def render_2part(part):
         if '|' in part:
             print(f'split failed: {part}')
         return (render_tamang(part))
-
 
 # ============== parsing ==============
 
@@ -123,25 +143,40 @@ def parse_entry(entry_el, i):
 
     return e
 
+
 def parse_entries_from_file(xml_path):
     raw = Path(xml_path).read_text(encoding='utf-8')
     root = ET.fromstring(raw)
 
-    groups = OrderedDict()  # token -> [entries] preserving input order
-    for i, entry_el in enumerate(root.findall('.//entry')):
-        e = parse_entry(entry_el, i)
-        # uncomment the following to include hwX
-        # try:
-        #     hw = e['hw'] if e['hw'] else e['hwX']
-        #     e['hw'] = hw
-        # except:
-        #     pass
-        if not e['hw']:
+    groups = OrderedDict()  # { header_text -> [entries in order] }
+    current_hdr = None
+    entry_idx = 0
+
+    # Iterate direct children in document order: <hdr> and <entry> are siblings
+    for node in list(root):
+        tag = node.tag.lower()
+
+        if tag == 'hdr':
+            # Start a new group whenever we hit a header separator
+            hdr_text = (node.text or '').strip() or f'group{len(groups) + 1}'
+            current_hdr = trans_str(hdr_text)
+            if current_hdr not in groups:
+                groups[current_hdr] = []
             continue
-        tok = first_token(e['hw'])
-        if tok not in groups:
-            groups[tok] = []
-        groups[tok].append(e)
+
+        if tag == 'entry':
+            e = parse_entry(node, entry_idx)
+            entry_idx += 1
+            if not e.get('hw'):
+                continue
+            # If we see entries before any <hdr>, bucket them under a default group
+            if current_hdr is None:
+                current_hdr = '0'
+                if current_hdr not in groups:
+                    groups[current_hdr] = []
+            groups[current_hdr].append(e)
+            continue
+        # Ignore any other top-level nodes
     return groups
 
 # ============== rendering ==============
@@ -213,7 +248,7 @@ def render_mode_block(m):
         short_html = f"""
         <div class="mode-short short" onclick="event.stopPropagation(); return toggleMode('{esc(mid)}')">
           <div class="mode-badge">{badge_html}</div>
-          <div class="mode-body"><p class="mb-0 no-hang">{lines}</p></div>
+          <div class="mode-body"><p class="mb-0">{lines}</p></div>
         </div>"""
     long_bits = render_long_bits(m)
     long_html = f"""
@@ -221,7 +256,7 @@ def render_mode_block(m):
         <div class="mode-badge">{'&nbsp;' if has_level else '&nbsp;'}</div>
         <div class="mode-body">{long_bits}</div>
       </div>"""
-    #  keep: <div class="mode-body"><div class="mode-head mb-1 no-hang">{render_mode_header_inline(m)}</div>{long_bits}</div>
+    #  keep: <div class="mode-body"><div class="mode-head mb-1">{render_mode_header_inline(m)}</div>{long_bits}</div>
     return f'<div class="mode-block">{short_html}{long_html}</div>'
 
 
@@ -236,7 +271,7 @@ def render_short(entry):
     else:
         sense_number = ''
     hw = render_tamang(hw)
-    head = f'<p class="mb-0 no-hang entry-head">{hw}{sense_number}{ps_html}{cf_html}</p>'
+    head = f'<p class="mb-0 entry-head">{hw}{sense_number}{ps_html}{cf_html}</p>'
     blocks = []
     if entry.get('modes'):
         if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn'):
@@ -257,7 +292,7 @@ def render_short(entry):
         body = ''.join(blocks)
     else:
         lines = render_lang_lines(entry.get('nag', ''), entry.get('dfn', ''), entry.get('dff', ''), entry.get('dfe', ''))
-        body = f'<div class="mode-sub"><p class="mb-0 no-hang">{lines}</p></div>' if lines else ''
+        body = f'<div class="mode-sub"><p class="mb-0">{lines}</p></div>' if lines else ''
     # kinda complicated quoting here...
     return f'<div class="short" onclick="return toggleEntry(' + "'" + esc(entry["id"]) + "'" + f')">{head}{body}</div>'
 
@@ -272,219 +307,90 @@ def render_entry_long(entry):
 # ============== HTML template (inline CSS/JS) ==============
 
 STYLE = r"""
-:root{
-  --font-sans: system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-html,body{ font-family:var(--font-sans); margin:0; padding:0; max-width: 100%; overflow-x: hidden;}
-.small-caps{ font-variant-caps:small-caps; font-size:.7rem; }
-.mb-0{ margin-bottom:0; }
-.ms-1{ margin-left:.25rem; }
-.no-hang{ text-indent:0; margin-left:0; }
-
-/* === Fixed Top Stack (banner + search + nav) === */
-.fixed-topbar{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(0,0,0,.06);
-}
-.header{
-  display:flex; align-items:center; gap:.75rem;
-  background:#A51931; color:#fff; width:100%;
-  padding:.5rem;
-  box-sizing:border-box;
-}
-.header .logo{ width:28px; height:28px; border-radius:4px; background:rgba(255,255,255,.3); flex:0 0 28px; }
-.header .brand{ color:#fff; text-decoration:none; font-weight: bold; white-space:nowrap; overflow:hidden; }
-
-.header .page-links{ margin-left:auto; display:flex; gap:.5rem; }
-.header .page-links a{ color:#fff; text-decoration:none; padding:.25rem .5rem; border-radius:.375rem; }
-.header .page-links a:hover{ background:rgba(255,255,255,.18); }
-
+:root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+html, body { font-family: var(--font-sans); margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
+.small-caps { font-variant-caps: small-caps; font-size: .7rem; }
+.mb-0 { margin-bottom: 0; }
+.ms-1 { margin-left: .25rem; }
+.fixed-topbar { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
+.header { position: relative; z-index: 2; }
+.header { display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
+.header .logo { width: 28px; height: 28px; border-radius: 4px; background: rgba(255, 255, 255, .3); flex: 0 0 28px; }
+.header .brand { color: #fff; text-decoration: none; font-weight: bold; white-space: nowrap; overflow: hidden; }
+.header .page-links { margin-left: auto; display: flex; gap: .5rem; }
+.header .page-links a { color: #fff; text-decoration: none; padding: .25rem .5rem; border-radius: .375rem; }
+.header .page-links a:hover { background: rgba(255, 255, 255, .18); }
 /* Hamburger (CSS-only) */
-.menu-toggle{ position:absolute; left:-9999px; }
-.hamburger{ display:none; cursor:pointer; margin-left:auto; padding:.25rem; }
-.hamburger span{ display:block; width:24px; height:2px; background:#fff; margin:5px 0; border-radius:1px; }
-
-@media (max-width: 768px){
-  .hamburger{ display:block; flex:0 0 auto; margin-left:.5rem; }
-  .header .brand{ flex:1 1 auto; min-width:0; }
-  .header .page-links{ display:none; position:absolute; padding:.5rem; }
-  .header .page-links a{ display:block; color:#111; padding:.5rem .75rem; border-radius:.375rem; }
-  .header .page-links a:hover{ background:#f2f2f2; }
-  #menu-toggle:checked ~ .page-links{ display:block; }
-    .header .page-links{
-    display: none;              /* hidden by default; toggled by checkbox */
-    position: absolute;
-    top: 100%;                  /* directly under the saffron banner */
-    right: 0;
-    left: 0;                    /* full width; change to 'auto' to right-align */
-    z-index: 1200;              /* above search + letter-nav */
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 8px 18px rgba(0,0,0,.15);
-    padding: .5rem;
-  }
-  #menu-toggle:checked ~ .page-links{ display: block;
+.menu-toggle { position: absolute; left: -9999px; }
+.hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
+@media (max-width: 768px) {
+    .hamburger { display: block; flex: 0 0 auto; margin-left: .5rem; }
+    .header .brand { flex: 1 1 auto; min-width: 0; }
+    .header .page-links { display: none; position: absolute; padding: .5rem; }
+    .header .page-links a { display: block; color: #111; padding: .5rem .75rem; border-radius: .375rem; }
+    .header .page-links a { display: block; color: #111; text-decoration: none; padding: .5rem .75rem; border-radius: .375rem; }
+    .header .page-links a:hover { background: #f2f2f2; }
+    .header .page-links { display: none; position: absolute; top: 100%; right: 0; left: 0; z-index: 1200; background: #fff; border: 1px solid #e5e7eb; padding: .5rem; }
+    .header .page-links a:hover { background: #f2f2f2; }
+     #menu-toggle:checked ~ .page-links { display: block; }
 }
-
-  .header .page-links a{
-    display: block;
-    color: #111;
-    text-decoration: none;
-    padding: .5rem .75rem;
-    border-radius: .375rem;
-  }
-  .header .page-links a:hover{ background: #f2f2f2; }
+.searchnav { display: none; background: #fff; border-bottom: 1px solid #e5e7eb; }
+.searchbar { display: flex; gap: .5rem; align-items: center; padding: .4rem .75rem; }
+.searchbar input[type="text"] { flex: 1 1 auto; min-width: 0; font-size: 1rem; padding: .5rem .75rem; border: 1px solid #ced4da; border-radius: .375rem; }
+.searchbar button { flex: 0 0 auto; font-size: 1rem; padding: .5rem .9rem; border: 1px solid #ced4da; border-radius: .375rem; background: #fff; cursor: pointer; }
+.searchbar button:hover { background: #f1f3f5; }
+#letter-nav { display: block; overflow-x: auto; overflow-y: hidden; padding: .2rem .5rem; margin: 0; border-bottom: 1px solid #e9ecef; border-top: 1px solid #f1f3f5; justify-content: center; }
+#letter-nav .nav-link { display: inline-block; font-size: 1.2rem; line-height: 1.1; padding: .2rem; margin-right: .15rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: 9999px; }
+#letter-nav .nav-link:hover { background: rgba(13, 110, 253, .08); border-color: rgba(13, 110, 253, .2); }
+#letter-nav .nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
+#views { padding-top: 0 !important; }
+#views > * { display: none; }
+#page-about { display: block; }
+dt { font-weight: bold; font-style: italic; }
+.page { position: relative; max-width: 900px; margin: 0 auto 1rem; padding: 1rem 1.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0, 0, 0, .04); }
+.page .to-dico { position: absolute; top: .75rem; right: .75rem; font-size: .9rem; padding: .35rem .7rem; background: #fff; border: 1px solid #ced4da; border-radius: .375rem; text-decoration: none; color: inherit; }
+.page .to-dico:hover { background: #f1f3f5; }
+.entry { border: 1px solid #e5e7eb; border-radius: .5rem; padding: .75rem; margin: .5rem 0; background: #fff; }
+.entry.expanded { background: #f7f7f7; }
+.short { cursor: pointer; }
+.short:hover { background: #f8f9fa; }
+.mode-block { margin: .35rem 0 .5rem 1rem; }
+.mode-short, .mode-long { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: .5rem; align-items: start; }
+.mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
+.mode-badge .badge { min-width: 1.0em; display: inline-flex; justify-content: center; }
+.mode-body { min-width: 0; }
+.mode-body > p { margin-top: 0; margin-bottom: 0; }
+.mode-short { padding: .25rem 0; border-top: 1px dashed #eee; }
+.mode-short:first-child { border-top: none; }
+.mode-head .small-caps { font-variant-caps: small-caps; }
+.badge { display: inline-flex; align-items: center; justify-content: center; padding: .15em .45em; line-height: 1.15; font-size: .85em; border-radius: 9999px; }
+.text-bg-secondary { background: #6c757d; color: #fff; }
+#search-results mark { background: #fff3cd; padding: 0 .1em; }
+#search-results .long, #search-results .mode-long { display: none; }
+body.show-dico .searchnav { display: block; }
+.entry { padding-top: 0px; }
+.entry .short .entry-head { margin-top: 4px; margin-bottom: 4px; }
+@media (max-width: 576px) {
+    html { font-size: 18px; }
+    .header .brand { font-size: .7rem; }
+    #letter-nav .nav-link { font-size: 1.0rem; padding: .2rem; }
+    .short p, .long { font-size: .9rem; line-height: 1.2; }
 }
-
-}
-
-/* Search + letter nav block (hidden on about/credits) */
-.searchnav{ display:none; background:#fff; border-bottom:1px solid #e5e7eb; }
-
-.searchbar{ display:flex; gap:.5rem; align-items:center; padding:.4rem .75rem; }
-.searchbar input[type="text"]{ flex:1 1 auto; min-width:0; font-size:1rem; padding:.5rem .75rem;
-   border:1px solid #ced4da; border-radius:.375rem; }
-.searchbar button{ flex:0 0 auto; font-size:1rem; padding:.5rem .9rem; border:1px solid #ced4da;
-   border-radius:.375rem; background:#fff; cursor:pointer; }
-.searchbar button:hover{ background:#f1f3f5; }
-
-#letter-nav{
-  display: block;
-  /* white-space: nowrap; */
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: .2rem .5rem;
-  margin: 0;
-  border-bottom: 1px solid #e9ecef;
-  border-top: 1px solid #f1f3f5;
-  justify-content:center;
-}
-
-#letter-nav .nav-link{
-  display:inline-block; font-size:1.2rem; line-height:1.1; padding: .2rem; margin-right: .15rem;
-  color:#0d6efd; text-decoration:none; border:1px solid transparent; border-radius:9999px;
-}
-#letter-nav .nav-link:hover{ background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2); }
-#letter-nav .nav-link.active{ color:#fff; background:#0d6efd; border-color:#0d6efd; }
-
-/* Views sit below the fixed stack. */
-#views{ padding-top: 0 !important; }
-
-/* Page switching (About default) */
-#views > *{ display:none; }
-#page-about{ display:block; }
-dt{font-weight: bold; font-style: italic; }
-
-.page{ position:relative; max-width:900px; margin:0 auto 1rem; padding:1rem 1.25rem; background:#fff;
-  border:1px solid #e5e7eb; border-radius:.5rem; box-shadow:0 1px 2px rgba(0,0,0,.04); }
-.page .to-dico{ position:absolute; top:.75rem; right:.75rem; font-size:.9rem; padding:.35rem .7rem; background:#fff;
-  border:1px solid #ced4da; border-radius:.375rem; text-decoration:none; color:inherit; }
-.page .to-dico:hover{ background:#f1f3f5; }
-
-/* entries */
-.entry{ border:1px solid #e5e7eb; border-radius:.5rem; padding:.75rem; margin:.5rem 0; background:#fff; }
-.entry.expanded{ background:#f7f7f7; }
-.short{ cursor:pointer; }
-.short:hover{ background:#f8f9fa; }
-
-/* modes (subentries) – grid with left badge column */
-.mode-block{ margin:.35rem 0 .5rem 1rem; }
-.mode-short, .mode-long{ display:grid; grid-template-columns: auto minmax(0, 1fr); column-gap:.5rem; align-items:start; }
-.mode-badge{ width:2.1em; display:flex; justify-content:center; align-items:flex-start; }
-.mode-badge .badge{ min-width:1.8em; display:inline-flex; justify-content:center; }
-.mode-body{ min-width:0; } /* allow text to wrap nicely */
-.mode-body > p{margin-top:0; margin-bottom:0; }
-.mode-short{ padding:.25rem 0; border-top:1px dashed #eee; }
-.mode-short:first-child{ border-top:none; }
-/* .mode-sub p.no-hang{margin: 0; text-indent: -1.25em; padding-left: 1.25em; line-height: 1.35; overflow-wrap: anywhere; } */
-
-.mode-head .small-caps{ font-variant-caps:small-caps; }
-.badge{ display:inline-flex; align-items:center; justify-content:center; padding:.15em .45em; line-height:1.15; font-size:.85em; border-radius:9999px; }
-.text-bg-secondary{ background:#6c757d; color:#fff; }
-
-/* search results */
-#search-results mark{ background:#fff3cd; padding:0 .1em; }
-#search-results .long, #search-results .mode-long{ display:none; }
-
-/* Sticky mast: header always visible; tools show only in dictionary view */
-.fixed-topbar{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 1px 0 rgba(0,0,0,.06);
-}
-
-/* Header is the positioning context for mobile dropdown */
-.header{
-  position: relative;
-  z-index: 2;
-}
-
-/* Tools block (search + letter nav) is hidden by default */
-.searchnav{ display: none; border-top: 1px solid #e5e7eb; background:#fff; }
-
-/* Show tools ONLY in dictionary view (we toggle this via body class) */
-body.show-dico .searchnav{ display: block; }
-
-
-/* Tighten top gap in entries */
-.entry { padding-top: .5rem; }
-.entry .short, .entry .short p, .entry .short .entry-head { margin-top: 0; }
-
-
-/* mobile text sizes */
-@media (max-width:576px){
-  html{ font-size:18px; }
-  .header .brand{ font-size:.7rem; }
-  #letter-nav .nav-link{ font-size:1.0rem; padding:.2rem; }
-  .short p, .long{ font-size:.9rem; line-height:1.2; }
-  /* .mode-sub p.no-hang{text-indent: -1em;  padding-left: 1em; } */
-}
-
-/* Per-definition hanging indent using fixed-width labels */
-.mode-sub p,
-.mode-body p{
-  margin: 0;
-  text-indent: 0;           /* ensure we don't inherit any hanging from elsewhere */
-}
-
-/* Make the language labels take a fixed column, forcing wrapped text to align */
-.mode-sub p .small-caps,
-.mode-body p .small-caps{
-  display: inline-block;
-  min-width: 2.4em;         /* tunes the hanging width; 2.2–2.6em works well */
-  text-align: left;         /* lines up 'np', 'fr', 'en' neatly */
-  padding-right: .45em;     /* gutter before the gloss text */
-  vertical-align: top;      /* top-align with the gloss */
-}
-
-/* Keep long words from overflowing in glosses */
-.mode-sub p i,
-.mode-body p i{overflow-wrap: anywhere; }
-
 #views > * { display: none !important; }
-
-/* Show exactly one page */
-body.show-about   #page-about   { display: block !important; }
+body.show-about #page-about { display: block !important; }
 body.show-credits #page-credits { display: block !important; }
-body.show-dico    #dictionary   { display: block !important; }
-
+body.show-dico #dictionary { display: block !important; }
 .fixed-topbar .searchnav { display: none !important; }
 body.show-dico .fixed-topbar .searchnav { display: block !important; }
-
 /* 2) Allow per-line wrapping in gloss paragraphs & highlights */
-.mode-body p,
-.mode-sub p,
-.entry-head,
-mark{
-  overflow-wrap: anywhere;   /* modern */
-  word-break: break-word;    /* legacy fallback */
+.mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: anywhere; word-break: break-word; }
+.mode-body p ,.mode-sub p { margin: .15rem 0 0; text-indent: 0; }
+.mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; width: 2.6em; min-width: 2.6em; text-align: left; vertical-align: top; }
+.mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
+@media (max-width: 600px) {
+    .mode-sub p .small-caps, .mode-body p .small-caps { width: 2.2em; min-width: 2.2em; }
 }
-
 """
 
 SCRIPT = r"""
