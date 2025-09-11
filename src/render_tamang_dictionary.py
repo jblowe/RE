@@ -8,10 +8,10 @@ import re
 
 # Define sets
 vowels = "aeiouāīūȳôêöüAEIOU"
-consonants = f"^{vowels}"  # everything not a vowel
+consonants = f'^{vowels}'  # everything not a vowel
 
 # Regex: start of string, then either vowel-sequence or consonant-sequence
-pattern = re.compile(rf"^([{vowels}]+|[^{vowels}\W\d_]+)")
+pattern = re.compile(rf'^([{vowels}]+|[^{vowels}\W\d_]+)')
 
 
 def first_token(word):
@@ -43,12 +43,16 @@ def render_cf(t):
         return ''
 
 
+def render_sense_number(t):
+    return f' <small>[{t}]</small>'
+
+
 def render_2part(part):
     try:
         tamang, trans = part.split('|')
         tamang = render_tamang(tamang)
         trans = f'<i>{trans}</i>'
-        return (f'{tamang}&nbsp;{trans}')
+        return (f'{tamang}&nbsp; {trans}')
     except:
         # if the split does not work, render the whole thing as Tamang
         if '|' in part:
@@ -146,14 +150,14 @@ def render_lang_lines(nag, dfn, dff, dfe):
     """Return HTML lines for np/fr/en without emitting empties. np line shows nag (if any) with optional dfn."""
     lines = []
     if nag or dfn:
-        np_line = f"<span class='small-caps'>nep</span> {esc(nag)}"
+        np_line = f'<span class="small-caps">nep</span> {esc(nag)}'
         if dfn:
-            np_line += f"&nbsp;<span class='dfn'>{render_transliteration(esc(dfn))}</span>"
+            np_line += f' &nbsp; <span class="dfn">{render_transliteration(esc(dfn))}</span>'
         lines.append(np_line)
     if dff:
-        lines.append(f"<span class='small-caps'>fr&nbsp;</span> <i>{esc(dff)}</i>")
+        lines.append(f'<span class="small-caps">fr&nbsp;</span> <i>{esc(dff)}</i>')
     if dfe:
-        lines.append(f"<span class='small-caps'>eng</span> <i>{esc(dfe)}</i>")
+        lines.append(f'<span class="small-caps">eng</span> <i>{esc(dfe)}</i>')
     if not lines:
         return ""
     return "<br/>".join(lines)
@@ -161,48 +165,48 @@ def render_lang_lines(nag, dfn, dff, dfe):
 def render_mode_header_inline(m):
     segs = []
     if m.get('nag') or m.get('dfn'):
-        np_seg = f"<span class='small-caps'>np</span> {esc(m.get('nag',''))}"
+        np_seg = f'<span class="small-caps">np</span> {esc(m.get("nag",""))}'
         if m.get('dfn'):
-            np_seg += f" <span class='dfn'>{render_transliteration(esc(m['dfn']))}</span>"
+            np_seg += f' <span class="dfn">{render_transliteration(esc(m["dfn"]))}</span>'
         segs.append(np_seg)
     if m.get('dff'):
-        segs.append(f"<span class='small-caps'>fr</span> <i>{esc(m['dff'])}</i>")
+        segs.append(f'<span class="small-caps">fr</span> <i>{esc(m["dff"])}</i>')
     if m.get('dfe'):
-        segs.append(f"<span class='small-caps'>en</span> <i>{esc(m['dfe'])}</i>")
+        segs.append(f'<span class="small-caps">en</span> <i>{esc(m["dfe"])}</i>')
     return " — ".join(segs)
 
 def render_long_bits(d):
     parts = []
     if d.get('sem'):
-        parts.append(f"<div class='mb-1'><b>semantic domain:</b> {esc(d['sem'])}</div>")
+        parts.append(f'<div class="mb-1"><b>semantic domain:</b> {esc(d["sem"])}</div>')
     # for cf in d.get('cf', []):
-    #     parts.append(f"<div class='mb-1'><b>cf:</b> {esc(cf)}</div>")
+    #     parts.append(f'<div class="mb-1"><b>cf:</b> {esc(cf)}</div>')
     ils = d.get('il', []) + d.get('ilold', [])
     if ils:
-        items = ''.join(f"<li>{render_2part(esc(il))}</li>" for il in ils)
-        parts.append(f"<ol class='mb-2'>{items}</ol>")
+        items = ''.join(f'<li>{render_2part(esc(il))}</li>' for il in ils)
+        parts.append(f'<ol class="mb-2">{items}</ol>')
     for phr in d.get('phr', []):
-        parts.append(f"<div class='mb-1'><b>phr:</b> {render_2part(esc(phr))}</div>")
+        parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(esc(phr))}</div>')
     for gram in d.get('gram', []):
-        parts.append(f"<div class='mb-1'><b>grammar:</b> <i>{esc(gram)}</i></div>")
+        parts.append(f'<div class="mb-1"><b>grammar:</b> <i>{esc(gram)}</i></div>')
     for enc in d.get('enc', []):
-        parts.append(f"<div class='mb-1'><b>note (enc):</b> {esc(enc)}</div>")
+        parts.append(f'<div class="mb-1"><b>note (enc):</b> {esc(enc)}</div>')
     for nb in d.get('nb', []):
-        parts.append(f"<div class='mb-1'><b>note:</b> {esc(nb)}</div>")
+        parts.append(f'<div class="mb-1"><b>note:</b> {esc(nb)}</div>')
     # for nbi in d.get('nbi', []):
-    #     parts.append(f"<div class='mb-1'><b>note (internal):</b> {esc(nbi)}</div>")
+    #     parts.append(f'<div class="mb-1"><b>note (internal):</b> {esc(nbi)}</div>')
     for xr in d.get('xr', []):
-        parts.append(f"<div class='mb-1'><b>see also:</b> {render_tamang(esc(xr))}</div>")
+        parts.append(f'<div class="mb-1"><b>cf:</b> {render_tamang(esc(xr))}</div>')
     # for so in d.get('so', []):
-    #     parts.append(f"<div class='mb-1'><b>source:</b> {esc(so)}</div>")
+    #     parts.append(f'<div class="mb-1"><b>source:</b> {esc(so)}</div>')
     for rec in d.get('rec', []):
-        parts.append(f"<div class='mb-1'><b>recorded:</b> {esc(rec)}</div>")
+        parts.append(f'<div class="mb-1"><b>recorded:</b> {esc(rec)}</div>')
     return ''.join(parts)
 
 def render_mode_block(m):
     mid = m['id']
     has_level = bool(m.get('level'))
-    badge_html = f"<span class='badge text-bg-secondary level'>{esc(str(m['level']))}</span>" if has_level else "&nbsp;"
+    badge_html = f'<span class="badge text-bg-secondary level">{esc(str(m["level"]))}</span>' if has_level else '&nbsp;'
     lines = render_lang_lines(m.get('nag',''), m.get('dfn',''), m.get('dff',''), m.get('dfe',''))
     short_html = ""
     if lines:
@@ -217,20 +221,27 @@ def render_mode_block(m):
         <div class="mode-badge">{'&nbsp;' if has_level else '&nbsp;'}</div>
         <div class="mode-body">{long_bits}</div>
       </div>"""
-    #  keep: <div class="mode-body"><div class='mode-head mb-1 no-hang'>{render_mode_header_inline(m)}</div>{long_bits}</div>
-    return f"<div class='mode-block'>{short_html}{long_html}</div>"
+    #  keep: <div class="mode-body"><div class="mode-head mb-1 no-hang">{render_mode_header_inline(m)}</div>{long_bits}</div>
+    return f'<div class="mode-block">{short_html}{long_html}</div>'
 
 
 def render_short(entry):
     ps_html = f' <i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
-    hw = render_tamang(esc(entry['hw']))
-    head = f"<p class='mb-0 no-hang entry-head'>{hw}{ps_html}{cf_html}</p>"
+    hw = esc(entry['hw'])
+    homonym = re.match(r'(.*)\$(.*)', hw)
+    if homonym:
+        hw = homonym[1]
+        sense_number = render_sense_number(homonym[2])
+    else:
+        sense_number = ''
+    hw = render_tamang(hw)
+    head = f'<p class="mb-0 no-hang entry-head">{hw}{sense_number}{ps_html}{cf_html}</p>'
     blocks = []
     if entry.get('modes'):
         if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn'):
             pseudo = {
-                'id': f"{entry['id']}-m0",
+                'id': f'{entry["id"]}-m0',
                 'level': None,
                 'nag': entry.get('nag', ''), 'dfn': entry.get('dfn', ''),
                 'dff': entry.get('dff', ''), 'dfe': entry.get('dfe', ''),
@@ -246,8 +257,9 @@ def render_short(entry):
         body = ''.join(blocks)
     else:
         lines = render_lang_lines(entry.get('nag', ''), entry.get('dfn', ''), entry.get('dff', ''), entry.get('dfe', ''))
-        body = f"<div class='mode-sub'><p class='mb-0 no-hang'>{lines}</p></div>" if lines else ""
-    return f"<div class='short' onclick=\"return toggleEntry('{esc(entry['id'])}')\">{head}{body}</div>"
+        body = f'<div class="mode-sub"><p class="mb-0 no-hang">{lines}</p></div>' if lines else ''
+    # kinda complicated quoting here...
+    return f'<div class="short" onclick="return toggleEntry(' + "'" + esc(entry["id"]) + "'" + f')">{head}{body}</div>'
 
 def render_entry_long(entry):
     has_base_defs = entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn')
@@ -263,7 +275,7 @@ STYLE = r"""
 :root{
   --font-sans: system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
-html,body{ font-family:var(--font-sans); margin:0; padding:0; }
+html,body{ font-family:var(--font-sans); margin:0; padding:0; max-width: 100%; overflow-x: hidden;}
 .small-caps{ font-variant-caps:small-caps; font-size:.7rem; }
 .mb-0{ margin-bottom:0; }
 .ms-1{ margin-left:.25rem; }
@@ -380,7 +392,7 @@ dt{font-weight: bold; font-style: italic; }
 
 /* modes (subentries) – grid with left badge column */
 .mode-block{ margin:.35rem 0 .5rem 1rem; }
-.mode-short, .mode-long{ display:grid; grid-template-columns:auto 1fr; column-gap:.5rem; align-items:start; }
+.mode-short, .mode-long{ display:grid; grid-template-columns: auto minmax(0, 1fr); column-gap:.5rem; align-items:start; }
 .mode-badge{ width:2.1em; display:flex; justify-content:center; align-items:flex-start; }
 .mode-badge .badge{ min-width:1.8em; display:inline-flex; justify-content:center; }
 .mode-body{ min-width:0; } /* allow text to wrap nicely */
@@ -450,10 +462,6 @@ body.show-dico .searchnav{ display: block; }
   vertical-align: top;      /* top-align with the gloss */
 }
 
-/* Optional: keep romanization inline without breaking the alignment */
-.mode-sub p .dfn,
-.mode-body p .dfn{white-space: nowrap; }
-
 /* Keep long words from overflowing in glosses */
 .mode-sub p i,
 .mode-body p i{overflow-wrap: anywhere; }
@@ -467,6 +475,16 @@ body.show-dico    #dictionary   { display: block !important; }
 
 .fixed-topbar .searchnav { display: none !important; }
 body.show-dico .fixed-topbar .searchnav { display: block !important; }
+
+/* 2) Allow per-line wrapping in gloss paragraphs & highlights */
+.mode-body p,
+.mode-sub p,
+.entry-head,
+mark{
+  overflow-wrap: anywhere;   /* modern */
+  word-break: break-word;    /* legacy fallback */
+}
+
 """
 
 SCRIPT = r"""
@@ -725,15 +743,15 @@ def build_sections(groups):
             eid = esc(e['id'])
             short_html = render_short(e)
             long_html = render_entry_long(e)
-            long_block = f"<div class='long' id='{eid}-long' style='display:none;'>{long_html}</div>" if long_html else "<div class='long' id='{eid}-long' style='display:none;'></div>"
-            entry_html.append(f"<div id='{eid}' class='entry'>{short_html}{long_block}</div>")
-        out.append(f"<div class='letter-section' id='section-{esc(tok)}'{disp}>" + ''.join(entry_html) + "</div>")
+            long_block = f'<div class="long" id="{eid}-long" style="display:none;">{long_html}</div>' if long_html else '<div class="long" id="{eid}-long" style="display:none;"></div>'
+            entry_html.append(f'<div id="{eid}" class="entry">{short_html}{long_block}</div>')
+        out.append(f'<div class="letter-section" id="section-{esc(tok)}"{disp}>' + ''.join(entry_html) + '</div>')
         first = False
     return ''.join(out)
 
 def minify_html(s: str) -> str:
     s = re.sub(r'<!--.*?-->', '', s, flags=re.DOTALL)
-    s = re.sub(r'>\s+<', '> <', s)
+    s = re.sub(r'> +<', '> <', s)
     return s.strip()
 
 def render_html(groups, title):
@@ -759,4 +777,4 @@ if __name__ == "__main__":
     if not args.no_minify:
         html = minify_html(html)
     Path(args.out).write_text(html, encoding="utf-8")
-    print(f"✅ Wrote {args.out}")
+    print(f'✅ Wrote {args.out}')
