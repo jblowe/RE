@@ -11,8 +11,7 @@ bands_with_defaults = ''
 
 def trans_str(s):
     source_chars = '012345:AEONT'
-    target_chars = '&#x2070;¹²³&#x2074;&#x2075;&#x02d0;&#x0259;&#x025b;&#x0254;&#x014b;&#x0288;'
-    target_chars = unescape(target_chars)
+    target_chars = unescape('&#x2070;¹²³&#x2074;&#x2075;&#x02d0;&#x0259;&#x025b;&#x0254;&#x014b;&#x0288;')
     table = str.maketrans(source_chars, target_chars)
     s = s.translate(table)
     s = s.replace('ng', unescape('&#x014b;'))
@@ -44,15 +43,16 @@ def first_token(word):
 
 
 def esc(s: str) -> str:
+    # order is important here
     s = re.sub(r'<.*?>', '', s or '').replace('*', '')
-    s = escape(s, quote=True)
-    s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
-    unicodedata.normalize('NFC', s)
-    # Replace COMBINING CANDRABINDU (U+0310) with DOT OVER (U+0307)
+    # s = escape(s, quote=True)
+    s = re.sub(r'\$([\w\-]+)\|?', r'<i>\1</i>', s)
+    s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)
+    s = unicodedata.normalize('NFC', s)
+    # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT OVER (U+0307)
     return s.replace("\u0310", "\u0307")
     # s = re.sub(r'/(.*?)/', '<span style="background-color: lightblue">\1</span>', s)
-    return s
 
 
 def render_tamang(t):
@@ -67,6 +67,14 @@ def render_cf(t):
     if t:
         # the initial blank is important
         return f' see <a href="{t[0]}">{t[0]}</a>'
+    else:
+        return ''
+
+
+def render_emp(t):
+    if t:
+        # the initial blank is important
+        return f' &lt;{t}'
     else:
         return ''
 
@@ -133,6 +141,7 @@ def parse_entry(entry_el, i):
         'id': entry_el.attrib.get('id', f'e{i}'),
         'hw': get_text(entry_el, 'hw'),
         'ps': get_text(entry_el, 'ps'),
+        'emp': get_text(entry_el, 'emp'),
         'dff': get_text(entry_el, 'dff'),
         'dfe': get_text(entry_el, 'dfe'),
         'nag': get_text(entry_el, 'nag'),
@@ -198,9 +207,11 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
     if ps:
         lines.append(f'<span class="small-caps"><span class="xxx">{esc(ps)}</span></span>')
     if nag or dfn:
-        np_line = f'<span class="small-caps">nep</span> {esc(nag)}'
+        np_line = f'<span class="small-caps">nep</span>'
+        if nag:
+            np_line += f' {esc(nag)} &nbsp; '
         if dfn:
-            np_line += f' &nbsp; <span class="dfn">{render_transliteration(esc(dfn))}</span>'
+            np_line += f'<span class="dfn">{render_transliteration(esc(dfn))}</span>'
         lines.append(np_line)
     if dff:
         lines.append(f'<span class="small-caps">fr&nbsp;</span> <span class="xxx">{esc(dff)}</span>')
@@ -274,17 +285,18 @@ def render_mode_block(m):
 
 
 def render_short(entry):
-    ps_html = f' <i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
-    cf_html = render_cf(entry.get('cf', None))
     hw = esc(entry['hw'])
     homonym = re.match(r'(.*)\$(.*)', hw)
+    ps_html = f' <i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
+    cf_html = render_cf(entry.get('cf', None))
+    emp_html = render_emp(entry.get('emp', None))
     if homonym:
         hw = homonym[1]
         sense_number = render_sense_number(homonym[2])
     else:
         sense_number = ''
     hw = render_tamang(hw)
-    head = f'<p class="mb-0 entry-head">{hw}{sense_number}{ps_html}{cf_html}</p>'
+    head = f'<p class="mb-0 entry-head">{hw}{sense_number}{emp_html}{ps_html}{cf_html}</p>'
     blocks = []
     if entry.get('modes'):
         if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn'):
@@ -384,7 +396,7 @@ dt { font-weight: bold; font-style: italic; }
 #search-results .long, #search-results .mode-long { display: none; }
 body.show-dico .searchnav { display: block; }
 .entry { padding-top: 0px; }
-.entry .short .entry-head { margin-top: 4px; margin-bottom: 4px; }
+.entry .short .entry-head, .long { margin-top: 4px; margin-bottom: 4px; }
 @media (max-width: 576px) {
     html { font-size: 18px; }
     .header .brand { font-size: .7rem; }
