@@ -47,6 +47,7 @@ def esc(s: str) -> str:
     s = re.sub(r'<.*?>', '', s or '').replace('*', '')
     s = escape(s, quote=True)
     s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)
+    s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     unicodedata.normalize('NFC', s)
     # Replace COMBINING CANDRABINDU (U+0310) with DOT OVER (U+0307)
     return s.replace("\u0310", "\u0307")
@@ -79,7 +80,9 @@ def render_2part(part):
         parts = part.split('|')
         tamang = parts[0]
         tamang = render_tamang(tamang)
-        trans = f"<i>{' &middot; '.join(parts[1:])}</i>"
+        # U+25CB ○ WHITE CIRCLE
+        circle = ' \u0307 '
+        trans = f"{circle.join(parts[1:])}"
         return (f'{tamang}&nbsp; {trans}')
     except:
         # if the split does not work, render the whole thing as Tamang
@@ -193,16 +196,16 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
     """Return HTML lines for np/fr/en without emitting empties. np line shows nag (if any) with optional dfn."""
     lines = []
     if ps:
-        lines.append(f'<span class="small-caps"><i>{esc(ps)}</i></span>')
+        lines.append(f'<span class="small-caps"><span class="xxx">{esc(ps)}</span></span>')
     if nag or dfn:
         np_line = f'<span class="small-caps">nep</span> {esc(nag)}'
         if dfn:
             np_line += f' &nbsp; <span class="dfn">{render_transliteration(esc(dfn))}</span>'
         lines.append(np_line)
     if dff:
-        lines.append(f'<span class="small-caps">fr&nbsp;</span> <i>{esc(dff)}</i>')
+        lines.append(f'<span class="small-caps">fr&nbsp;</span> <span class="xxx">{esc(dff)}</span>')
     if dfe:
-        lines.append(f'<span class="small-caps">eng</span> <i>{esc(dfe)}</i>')
+        lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{esc(dfe)}</span>')
     if not lines:
         return ""
     return "<br/>".join(lines)
@@ -215,9 +218,9 @@ def render_mode_header_inline(m):
             np_seg += f' <span class="dfn">{render_transliteration(esc(m["dfn"]))}</span>'
         segs.append(np_seg)
     if m.get('dff'):
-        segs.append(f'<span class="small-caps">fr&nbsp;</span> <i>{esc(m["dff"])}</i>')
+        segs.append(f'<span class="small-caps">fr&nbsp;</span> <span class="xxx">{esc(m["dff"])}</span>')
     if m.get('dfe'):
-        segs.append(f'<span class="small-caps">en</span> <i>{esc(m["dfe"])}</i>')
+        segs.append(f'<span class="small-caps">en</span> <span class="xxx">{esc(m["dfe"])}</span>')
     return " — ".join(segs)
 
 def render_long_bits(d):
@@ -233,7 +236,7 @@ def render_long_bits(d):
     for phr in d.get('phr', []):
         parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(esc(phr))}</div>')
     # for gram in d.get('gram', []):
-    #     parts.append(f'<div class="mb-1"><b>grammar:</b> <i>{esc(gram)}</i></div>')
+    #     parts.append(f'<div class="mb-1"><b>grammar:</b> <span class="xxx">{esc(gram)}</span></div>')
     for enc in d.get('enc', []):
         parts.append(f'<div class="mb-1"><b>note (enc):</b> {esc(enc)}</div>')
     for nb in d.get('nb', []):
