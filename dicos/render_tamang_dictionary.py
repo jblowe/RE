@@ -3,9 +3,11 @@ from collections import OrderedDict
 from pathlib import Path
 from html import escape, unescape
 import re
+import unicodedata
 
 # ============== helpers ==============
 
+bands_with_defaults = ''
 
 def trans_str(s):
     source_chars = '012345:AEONT'
@@ -44,6 +46,10 @@ def first_token(word):
 def esc(s: str) -> str:
     s = re.sub(r'<.*?>', '', s or '').replace('*', '')
     s = escape(s, quote=True)
+    s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)
+    unicodedata.normalize('NFC', s)
+    # Replace COMBINING CANDRABINDU (U+0310) with DOT OVER (U+0307)
+    return s.replace("\u0310", "\u0307")
     # s = re.sub(r'/(.*?)/', '<span style="background-color: lightblue">\1</span>', s)
     return s
 
@@ -70,9 +76,10 @@ def render_sense_number(t):
 
 def render_2part(part):
     try:
-        tamang, trans = part.split('|')
+        parts = part.split('|')
+        tamang = parts[0]
         tamang = render_tamang(tamang)
-        trans = f'<i>{trans}</i>'
+        trans = f"<i>{' &middot; '.join(parts[1:])}</i>"
         return (f'{tamang}&nbsp; {trans}')
     except:
         # if the split does not work, render the whole thing as Tamang
@@ -103,6 +110,7 @@ def parse_mode(mode_el, base_id, idx):
     m = {
         'id': f'{base_id}-m{idx}',
         'level': level,
+        'ps': get_text(mode_el, 'ps'),
         'dff': get_text(mode_el, 'dff'),
         'dfe': get_text(mode_el, 'dfe'),
         'nag': get_text(mode_el, 'nag'),
@@ -181,9 +189,11 @@ def parse_entries_from_file(xml_path):
 
 # ============== rendering ==============
 
-def render_lang_lines(nag, dfn, dff, dfe):
+def render_lang_lines(ps, nag, dfn, dff, dfe):
     """Return HTML lines for np/fr/en without emitting empties. np line shows nag (if any) with optional dfn."""
     lines = []
+    if ps:
+        lines.append(f'<span class="small-caps"><i>{esc(ps)}</i></span>')
     if nag or dfn:
         np_line = f'<span class="small-caps">nep</span> {esc(nag)}'
         if dfn:
@@ -205,25 +215,25 @@ def render_mode_header_inline(m):
             np_seg += f' <span class="dfn">{render_transliteration(esc(m["dfn"]))}</span>'
         segs.append(np_seg)
     if m.get('dff'):
-        segs.append(f'<span class="small-caps">fr</span> <i>{esc(m["dff"])}</i>')
+        segs.append(f'<span class="small-caps">fr&nbsp;</span> <i>{esc(m["dff"])}</i>')
     if m.get('dfe'):
         segs.append(f'<span class="small-caps">en</span> <i>{esc(m["dfe"])}</i>')
     return " — ".join(segs)
 
 def render_long_bits(d):
     parts = []
-    if d.get('sem'):
-        parts.append(f'<div class="mb-1"><b>semantic domain:</b> {esc(d["sem"])}</div>')
+    # if d.get('sem'):
+    #    parts.append(f'<div class="mb-1"><b>semantic domain:</b> {esc(d["sem"])}</div>')
     # for cf in d.get('cf', []):
     #     parts.append(f'<div class="mb-1"><b>cf:</b> {esc(cf)}</div>')
-    ils = d.get('il', []) + d.get('ilold', [])
+    ils = d.get('il', [])
     if ils:
         items = ''.join(f'<li>{render_2part(esc(il))}</li>' for il in ils)
         parts.append(f'<ol class="mb-2">{items}</ol>')
     for phr in d.get('phr', []):
         parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(esc(phr))}</div>')
-    for gram in d.get('gram', []):
-        parts.append(f'<div class="mb-1"><b>grammar:</b> <i>{esc(gram)}</i></div>')
+    # for gram in d.get('gram', []):
+    #     parts.append(f'<div class="mb-1"><b>grammar:</b> <i>{esc(gram)}</i></div>')
     for enc in d.get('enc', []):
         parts.append(f'<div class="mb-1"><b>note (enc):</b> {esc(enc)}</div>')
     for nb in d.get('nb', []):
@@ -234,15 +244,15 @@ def render_long_bits(d):
         parts.append(f'<div class="mb-1"><b>cf:</b> {render_tamang(esc(xr))}</div>')
     # for so in d.get('so', []):
     #     parts.append(f'<div class="mb-1"><b>source:</b> {esc(so)}</div>')
-    for rec in d.get('rec', []):
-        parts.append(f'<div class="mb-1"><b>recorded:</b> {esc(rec)}</div>')
+    # for rec in d.get('rec', []):
+    #     parts.append(f'<div class="mb-1"><b>recorded:</b> {esc(rec)}</div>')
     return ''.join(parts)
 
 def render_mode_block(m):
     mid = m['id']
     has_level = bool(m.get('level'))
     badge_html = f'<span class="badge text-bg-secondary level">{esc(str(m["level"]))}</span>' if has_level else '&nbsp;'
-    lines = render_lang_lines(m.get('nag',''), m.get('dfn',''), m.get('dff',''), m.get('dfe',''))
+    lines = render_lang_lines(m.get('ps', ''), m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''))
     short_html = ""
     if lines:
         short_html = f"""
@@ -278,6 +288,7 @@ def render_short(entry):
             pseudo = {
                 'id': f'{entry["id"]}-m0',
                 'level': None,
+                'var': entry.get('var', ''),
                 'nag': entry.get('nag', ''), 'dfn': entry.get('dfn', ''),
                 'dff': entry.get('dff', ''), 'dfe': entry.get('dfe', ''),
                 'sem': entry.get('sem', ''),
@@ -291,7 +302,7 @@ def render_short(entry):
             blocks.append(render_mode_block(m))
         body = ''.join(blocks)
     else:
-        lines = render_lang_lines(entry.get('nag', ''), entry.get('dfn', ''), entry.get('dff', ''), entry.get('dfe', ''))
+        lines = render_lang_lines('', entry.get('nag', ''), entry.get('dfn', ''), entry.get('dff', ''), entry.get('dfe', ''))
         body = f'<div class="mode-sub"><p class="mb-0">{lines}</p></div>' if lines else ''
     # kinda complicated quoting here...
     return f'<div class="short" onclick="return toggleEntry(' + "'" + esc(entry["id"]) + "'" + f')">{head}{body}</div>'
