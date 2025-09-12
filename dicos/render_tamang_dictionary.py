@@ -36,16 +36,14 @@ consonants = f'^{vowels}'  # everything not a vowel
 pattern = re.compile(rf'^([{vowels}]+|[^{vowels}\W\d_]+)')
 
 
-def first_token(word):
-    word = re.sub(r'^[0-9,\-\$\?]+', '', word)
-    m = pattern.match(word)
-    return m.group(1)[:2] if m else ""
-
-
 def esc(s: str) -> str:
     # order is important here
-    s = re.sub(r'<.*?>', '', s or '').replace('*', '')
+    s = re.sub(r'<.*?>', '', s or '')
+    # complicated cause we only want to remove | if it is preceded by *
+    s = re.sub(r'\*([^|]*)\||\*', lambda m: m.group(1) or '', s)
+    # render tamang text if between //
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
+    # escape seems not to be needed
     # s = escape(s, quote=True)
     s = re.sub(r'\$([\w\-]+)\|?', r'<i>\1</i>', s)
     s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)
@@ -74,7 +72,7 @@ def render_cf(t):
 def render_emp(t):
     if t:
         # the initial blank is important
-        return f' &lt;{t}'
+        return f' &nbsp; &lt;{t}'
     else:
         return ''
 
@@ -121,6 +119,7 @@ def parse_mode(mode_el, base_id, idx):
     m = {
         'id': f'{base_id}-m{idx}',
         'level': level,
+        'hw': get_text(mode_el, 'hw'),
         'ps': get_text(mode_el, 'ps'),
         'dff': get_text(mode_el, 'dff'),
         'dfe': get_text(mode_el, 'dfe'),
@@ -152,7 +151,7 @@ def parse_entry(entry_el, i):
         # lists
         'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
-        'modes': []
+        'modes': [], 'subs': []
     }
     lists = collect_texts(entry_el, TAGS_LIST)
     for k, v in lists.items():
@@ -160,6 +159,9 @@ def parse_entry(entry_el, i):
 
     for idx, mode_el in enumerate(entry_el.findall('mode'), 1):
         e['modes'].append(parse_mode(mode_el, e['id'], idx))
+
+    for idx, sub_el in enumerate(entry_el.findall('sub'), 1):
+        e['subs'].append(parse_mode(sub_el, e['id'], idx))
 
     return e
 
@@ -199,6 +201,7 @@ def parse_entries_from_file(xml_path):
         # Ignore any other top-level nodes
     return groups
 
+
 # ============== rendering ==============
 
 def render_lang_lines(ps, nag, dfn, dff, dfe):
@@ -221,10 +224,11 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
         return ""
     return "<br/>".join(lines)
 
+
 def render_mode_header_inline(m):
     segs = []
     if m.get('nag') or m.get('dfn'):
-        np_seg = f'<span class="small-caps">np</span> {esc(m.get("nag",""))}'
+        np_seg = f'<span class="small-caps">np</span> {esc(m.get("nag", ""))}'
         if m.get('dfn'):
             np_seg += f' <span class="dfn">{render_transliteration(esc(m["dfn"]))}</span>'
         segs.append(np_seg)
@@ -233,6 +237,7 @@ def render_mode_header_inline(m):
     if m.get('dfe'):
         segs.append(f'<span class="small-caps">en</span> <span class="xxx">{esc(m["dfe"])}</span>')
     return " — ".join(segs)
+
 
 def render_long_bits(d):
     parts = []
@@ -262,6 +267,7 @@ def render_long_bits(d):
     #     parts.append(f'<div class="mb-1"><b>recorded:</b> {esc(rec)}</div>')
     return ''.join(parts)
 
+
 def render_mode_block(m):
     mid = m['id']
     has_level = bool(m.get('level'))
@@ -280,12 +286,40 @@ def render_mode_block(m):
         <div class="mode-badge">{'&nbsp;' if has_level else '&nbsp;'}</div>
         <div class="mode-body">{long_bits}</div>
       </div>"""
-    #  keep: <div class="mode-body"><div class="mode-head mb-1">{render_mode_header_inline(m)}</div>{long_bits}</div>
+    #  keep for now: <div class="mode-body"><div class="mode-head mb-1">{render_mode_header_inline(m)}</div>{long_bits}</div>
     return f'<div class="mode-block">{short_html}{long_html}</div>'
 
+def render_sub_block(m):
+    hw = m['hw']
+    homonym = re.match(r'(.*)\$(.*)', hw)
+    ps_html = f' <i class="small-caps">{esc(m["ps"])}</i>' if m.get('ps') else ''
+    cf_html = render_cf(m.get('cf', None))
+    emp_html = render_emp(m.get('emp', None))
+    if homonym:
+        hw = homonym[1]
+        sense_number = render_sense_number(homonym[2])
+    else:
+        sense_number = ''
+    hw = render_tamang(hw)
+    head = f'<p class="mb-0 entry-head">{esc(hw)}{sense_number}{ps_html}{cf_html}{emp_html}</p>'
+    mid = m['id']
+    lines = render_lang_lines('', m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''))
+    short_html = ""
+    if lines:
+        short_html = f"""
+        <div class="mode-short short" onclick="event.stopPropagation(); return toggleMode('sub-{mid}')">
+          <div class="mode-sub"><p class="mb-0">{head}{lines}</p></div>
+        </div>"""
+    long_bits = render_long_bits(m)
+    long_html = f"""
+      <div class="mode-long" id="sub-{mid}-long" style="display:none;">
+        <div class="mode-body">{long_bits}</div>
+      </div>"""
+    #  keep for now: <div class="mode-body"><div class="mode-head mb-1">{render_mode_header_inline(m)}</div>{long_bits}</div>
+    return f'<div class="mode-block">{short_html}{long_html}</div>'
 
 def render_short(entry):
-    hw = esc(entry['hw'])
+    hw = entry['hw']
     homonym = re.match(r'(.*)\$(.*)', hw)
     ps_html = f' <i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
@@ -296,9 +330,9 @@ def render_short(entry):
     else:
         sense_number = ''
     hw = render_tamang(hw)
-    head = f'<p class="mb-0 entry-head">{hw}{sense_number}{emp_html}{ps_html}{cf_html}</p>'
+    head = f'<p class="mb-0 entry-head">{esc(hw)}{sense_number}{ps_html}{cf_html}{emp_html}</p>'
     blocks = []
-    if entry.get('modes'):
+    if entry.get('modes') or entry.get('subs'):
         if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn'):
             pseudo = {
                 'id': f'{entry["id"]}-m0',
@@ -315,12 +349,17 @@ def render_short(entry):
             blocks.append(render_mode_block(pseudo))
         for m in entry['modes']:
             blocks.append(render_mode_block(m))
+        for m in entry['subs']:
+            m['level'] = None
+            blocks.append(render_sub_block(m))
         body = ''.join(blocks)
+        # 1akhe
     else:
         lines = render_lang_lines('', entry.get('nag', ''), entry.get('dfn', ''), entry.get('dff', ''), entry.get('dfe', ''))
         body = f'<div class="mode-sub"><p class="mb-0">{lines}</p></div>' if lines else ''
     # kinda complicated quoting here...
     return f'<div class="short" onclick="return toggleEntry(' + "'" + esc(entry["id"]) + "'" + f')">{head}{body}</div>'
+
 
 def render_entry_long(entry):
     has_base_defs = entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn')
@@ -329,6 +368,7 @@ def render_entry_long(entry):
     else:
         d_extras_html = render_long_bits(entry)
     return d_extras_html
+
 
 # ============== HTML template (inline CSS/JS) ==============
 
@@ -412,7 +452,7 @@ body.show-dico .fixed-topbar .searchnav { display: block !important; }
 /* 2) Allow per-line wrapping in gloss paragraphs & highlights */
 .mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: anywhere; word-break: break-word; }
 .mode-body p ,.mode-sub p { margin: .15rem 0 0; text-indent: 0; }
-.mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; width: 2.6em; min-width: 2.6em; text-align: left; vertical-align: top; }
+.mode-body p .small-caps { display: inline-block; width: 2.6em; min-width: 2.6em; text-align: left; vertical-align: top; }
 .mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
 @media (max-width: 600px) {
     .mode-sub p .small-caps, .mode-body p .small-caps { width: 2.2em; min-width: 2.2em; }
