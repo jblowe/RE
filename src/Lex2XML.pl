@@ -17,6 +17,7 @@ my $insub = 0;
 my $lines = 0;
 my $n = 0;
 my %taglist;
+my $currmode;
 
 sub brackets {
     my ($tag, $data) = @_;
@@ -45,7 +46,8 @@ sub brackets {
 }
 
 while (<CVT>) {
-    chop;
+    chomp;
+    s/\r//g;
     $lines++;
     #while (!$_) {$_ = <> ; chop};
     s/&/&amp;/g;
@@ -59,7 +61,6 @@ while (<CVT>) {
     }
 
     if (s/^(\d+)//) {
-        my $currmode;
         my $mode_level = $1;
         my ($tag, $data) = /^([^ \t]+)[ \t]*(.*)$/;
         #warn "$tag $data === $_\n";
@@ -80,6 +81,7 @@ while (<CVT>) {
     else {
         if (s/^(\.+)//) {
             if ($1 eq '.') {
+                my $currmode;
                 $n++;
                 if ($inmode == 1) {print OUT "\n</mode>";}
                 if ($insub == 1) {print OUT "\n</sub>";}
