@@ -18,6 +18,7 @@ my $lines = 0;
 my $n = 0;
 my %taglist;
 my $currmode;
+my $hdr = 0;
 
 sub brackets {
     my ($tag, $data) = @_;
@@ -53,6 +54,7 @@ while (<CVT>) {
     s/&/&amp;/g;
     s/</&lt;/g;
     s/>/&gt;/g;
+    next if (/^\s*$/);
 
     if (/^\*/) {
         print OUT "\n<comment>$_</comment>";
@@ -85,18 +87,26 @@ while (<CVT>) {
                 $n++;
                 if ($inmode == 1) {print OUT "\n</mode>";}
                 if ($insub == 1) {print OUT "\n</sub>";}
-                if ($n > 1) {print OUT "\n</entry>";}
-                print OUT "\n<entry id=\"$dialect.$n\">";
-                $taglist{'entry'}++;
                 $inmode = 0;
                 $insub = 0;
+                if ($n > 1 && $hdr == 0) {print OUT "\n</entry>"}
+                # hack just for tamang dictionary
+                if (/^hdr/) {
+                    s/hdr\s+//;
+                    print OUT "\n<hdr>$_</hdr>";
+                    $hdr = 1;
+                    next;
+                }
+                $hdr = 0;
+                print OUT "\n<entry id=\"$dialect.$n\">";
+                $taglist{'entry'}++;
             }
             else {
                 my $a = length($1);
                 if ($inmode == 1) {print OUT "\n</mode>";}
                 $inmode = 0;
                 if ($insub == 1) {print OUT "\n</sub>";}
-                print OUT "\n<sub level=\"$a\">";
+                print OUT "\n<sub>";
                 $taglist{'sub'}++;
                 $insub = 1;
             }
@@ -108,13 +118,15 @@ while (<CVT>) {
             $taglist{$1}++;
         }
         else {
-            print OUT "<extra>$_</extra>";
-            $taglist{'extra'}++;
+            if ($_) {
+                print OUT "<extra>$_</extra>";
+                $taglist{'extra'}++;
+            }
         }
     }
 }
 print OUT "\n</entry>";
-print OUT "\n<\/$doctype>\n";
+print OUT "\n</$doctype>\n";
 
 print LOG "input: $infile\n";
 print LOG "dialect: $dialect\n";
