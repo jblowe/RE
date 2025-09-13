@@ -9,6 +9,7 @@ import unicodedata
 
 bands_with_defaults = ''
 
+
 def trans_str(s):
     source_chars = '012345:AEONT'
     target_chars = unescape('&#x2070;¹²³&#x2074;&#x2075;&#x02d0;&#x0259;&#x025b;&#x0254;&#x014b;&#x0288;')
@@ -28,37 +29,28 @@ def trans_str(s):
     return s
 
 
-# Define sets
-vowels = "aeiouāīūȳôêöüAEIOU"
-consonants = f'^{vowels}'  # everything not a vowel
-
-# Regex: start of string, then either vowel-sequence or consonant-sequence
-pattern = re.compile(rf'^([{vowels}]+|[^{vowels}\W\d_]+)')
-
-
 def esc(s: str) -> str:
     # order is important here
     s = re.sub(r'<.*?>', '', s or '')
     # complicated cause we only want to remove | if it is preceded by *
     s = re.sub(r'\*([^|]*)\||\*', lambda m: m.group(1) or '', s)
+    # escape seems not to be needed
+    s = escape(s, quote=True)
     # render tamang text if between //
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
-    # escape seems not to be needed
-    # s = escape(s, quote=True)
-    s = re.sub(r'\$([\w\-]+)\|?', r'<i>\1</i>', s)
-    s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)
+    s = re.sub(r'\$([\w\-]+)\|?', r'<i>\1</i>', s)  # $token or $token| -> italic
+    s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)  # %free| -> italic
     s = unicodedata.normalize('NFC', s)
-    # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT OVER (U+0307)
+    # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
     return s.replace("\u0310", "\u0307")
-    # s = re.sub(r'/(.*?)/', '<span style="background-color: lightblue">\1</span>', s)
 
 
 def render_tamang(t):
-    return f'<b>{trans_str(t)}</b>'
+    return f'<b>{esc(trans_str(t))}</b>'
 
 
 def render_transliteration(t):
-    return f'<i>{t}</i>'
+    return f'<i>{esc(t)}</i>'
 
 
 def render_cf(t):
@@ -72,32 +64,39 @@ def render_cf(t):
 def render_emp(t):
     if t:
         # the initial blank is important
-        return f' &nbsp; &lt;{t}'
+        return f' &#160; &lt;{esc(t)}'
     else:
         return ''
 
 
 def render_sense_number(t):
-    return f' <small>[{t}]</small>'
+    return f' <small>[{esc(t)}]</small>'
 
 
 def render_2part(part):
     try:
         parts = part.split('|')
         tamang = parts[0]
-        tamang = render_tamang(tamang)
-        # U+25CB ○ WHITE CIRCLE
+        tamang = render_tamang(esc(tamang))
+        # U+0307  COMBINING DOT ABOVE (we'll visually separate parts)
         circle = ' \u0307 '
-        trans = f"{circle.join(parts[1:])}"
-        return (f'{tamang}&nbsp; {trans}')
-    except:
+        trans = esc(f"{circle.join(parts[1:])}")
+        return (f'{tamang} &#160; {trans}')
+    except Exception:
         # if the split does not work, render the whole thing as Tamang
         if '|' in part:
             print(f'split failed: {part}')
         return (render_tamang(part))
 
-# ============== parsing ==============
+# =================== parsing ===================
 
+def localname(tag: str) -> str:
+    """Strip XML namespace and lowercase."""
+    if not tag:
+        return ''
+    return tag.split('}', 1)[-1].lower()
+
+# lists we collect into arrays
 TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
 
 
@@ -113,34 +112,53 @@ def collect_texts(parent, tags_list):
                     if el is not None and el.text and el.text.strip()]
     return out
 
+
 def parse_mode(mode_el, base_id, idx):
-    """Parse a <mode> as a subentry block (kept together short+long)."""
     level = mode_el.attrib.get('level') or mode_el.attrib.get('n') or str(idx)
     m = {
         'id': f'{base_id}-m{idx}',
         'level': level,
-        'hw': get_text(mode_el, 'hw'),
-        'ps': get_text(mode_el, 'ps'),
         'dff': get_text(mode_el, 'dff'),
         'dfe': get_text(mode_el, 'dfe'),
         'nag': get_text(mode_el, 'nag'),
         'dfn': get_text(mode_el, 'dfn'),
+        'ps': get_text(mode_el, 'ps'),
+        'hw': get_text(mode_el, 'hw'),
         'sem': get_text(mode_el, 'sem'),
-        # lists
+        # arrays
         'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
     }
-    lists = collect_texts(mode_el, TAGS_LIST)
-    for k, v in lists.items():
-        m[k] = v
+    m.update(collect_texts(mode_el, TAGS_LIST))
     return m
+
+
+def parse_sub(sub_el, base_id, idx):
+    s = {
+        'id': f'{base_id}-s{idx}',
+        'hw': get_text(sub_el, 'hw'),
+        'ps': get_text(sub_el, 'ps'),
+        'dff': get_text(sub_el, 'dff'),
+        'dfe': get_text(sub_el, 'dfe'),
+        'nag': get_text(sub_el, 'nag'),
+        'dfn': get_text(sub_el, 'dfn'),
+        'sem': get_text(sub_el, 'sem'),
+        # arrays
+        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'il': [], 'ilold': [], 'enc': [], 'cf': [],
+        'modes': []
+    }
+    s.update(collect_texts(sub_el, TAGS_LIST))
+    for midx, mode_el in enumerate(sub_el.findall('mode'), 1):
+        s['modes'].append(parse_mode(mode_el, s['id'], midx))
+    return s
+
 
 def parse_entry(entry_el, i):
     e = {
         'id': entry_el.attrib.get('id', f'e{i}'),
         'hw': get_text(entry_el, 'hw'),
         'ps': get_text(entry_el, 'ps'),
-        'emp': get_text(entry_el, 'emp'),
         'dff': get_text(entry_el, 'dff'),
         'dfe': get_text(entry_el, 'dfe'),
         'nag': get_text(entry_el, 'nag'),
@@ -148,61 +166,70 @@ def parse_entry(entry_el, i):
         'sem': get_text(entry_el, 'sem'),
         'emp': get_text(entry_el, 'emp'),
         'ton': get_text(entry_el, 'ton'),
-        # lists
+        # arrays
         'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
-        'modes': [], 'subs': []
+        'modes': [],
+        'subs': [],
     }
-    lists = collect_texts(entry_el, TAGS_LIST)
-    for k, v in lists.items():
-        e[k] = v
+    e.update(collect_texts(entry_el, TAGS_LIST))
 
     for idx, mode_el in enumerate(entry_el.findall('mode'), 1):
         e['modes'].append(parse_mode(mode_el, e['id'], idx))
-
-    for idx, sub_el in enumerate(entry_el.findall('sub'), 1):
-        e['subs'].append(parse_mode(sub_el, e['id'], idx))
+    for sidx, sub_el in enumerate(entry_el.findall('sub'), 1):
+        e['subs'].append(parse_sub(sub_el, e['id'], sidx))
 
     return e
 
 
+def slugify(label: str, used: set) -> str:
+    base = re.sub(r'\s+', '-', (label or '').strip().lower())
+    base = re.sub(r'[^a-z0-9\-]+', '', base)
+    if not base:
+        base = 'g'
+    token = base
+    n = 2
+    while token in used:
+        token = f"{base}-{n}"
+        n += 1
+    used.add(token)
+    return token
+
+
 def parse_entries_from_file(xml_path):
+    """Group entries by in-stream <hdr> separators, preserving order. Accept any root wrapper."""
     raw = Path(xml_path).read_text(encoding='utf-8')
     root = ET.fromstring(raw)
 
-    groups = OrderedDict()  # { header_text -> [entries in order] }
-    current_hdr = None
-    entry_idx = 0
+    groups = OrderedDict()
+    used = set()
+    current_token = None
+    i = 0
 
-    # Iterate direct children in document order: <hdr> and <entry> are siblings
-    for node in list(root):
-        tag = node.tag.lower()
-
+    for node in root.iter():
+        tag = localname(getattr(node, 'tag', ''))
         if tag == 'hdr':
-            # Start a new group whenever we hit a header separator
-            hdr_text = (node.text or '').strip() or f'group{len(groups) + 1}'
-            current_hdr = trans_str(hdr_text)
-            if current_hdr not in groups:
-                groups[current_hdr] = []
-            continue
-
-        if tag == 'entry':
-            e = parse_entry(node, entry_idx)
-            entry_idx += 1
+            label = (node.text or '').strip()
+            token = slugify(label or 'g', used)
+            label = trans_str(label)
+            groups.setdefault(token, {'label': label, 'entries': []})
+            current_token = token
+        elif tag == 'entry':
+            e = parse_entry(node, i)
+            i += 1
             if not e.get('hw'):
+                # print(f"no hw, skipped: {e.get('id')}")
                 continue
-            # If we see entries before any <hdr>, bucket them under a default group
-            if current_hdr is None:
-                current_hdr = '0'
-                if current_hdr not in groups:
-                    groups[current_hdr] = []
-            groups[current_hdr].append(e)
-            continue
-        # Ignore any other top-level nodes
+            if current_token is None:
+                token = slugify('0', used)
+                groups.setdefault(token, {'label': '0', 'entries': []})
+                current_token = token
+                print(f"current_token is none, 0 used instead: {current_token}")
+            groups[current_token]['entries'].append(e)
+
     return groups
 
-
-# ============== rendering ==============
+# =================== rendering ===================
 
 def render_lang_lines(ps, nag, dfn, dff, dfe):
     """Return HTML lines for np/fr/en without emitting empties. np line shows nag (if any) with optional dfn."""
@@ -212,116 +239,100 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
     if nag or dfn:
         np_line = f'<span class="small-caps">nep</span>'
         if nag:
-            np_line += f' {esc(nag)} &nbsp; '
+            np_line += f' {esc(nag)} &#160; '
         if dfn:
-            np_line += f'<span class="dfn">{render_transliteration(esc(dfn))}</span>'
+            np_line += f'<span class="dfn">{render_transliteration(dfn)}</span>'
         lines.append(np_line)
     if dff:
-        lines.append(f'<span class="small-caps">fr&nbsp;</span> <span class="xxx">{esc(dff)}</span>')
+        lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{esc(dff)}</span>')
     if dfe:
         lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{esc(dfe)}</span>')
     if not lines:
         return ""
     return "<br/>".join(lines)
 
-
-def render_mode_header_inline(m):
-    segs = []
-    if m.get('nag') or m.get('dfn'):
-        np_seg = f'<span class="small-caps">np</span> {esc(m.get("nag", ""))}'
-        if m.get('dfn'):
-            np_seg += f' <span class="dfn">{render_transliteration(esc(m["dfn"]))}</span>'
-        segs.append(np_seg)
-    if m.get('dff'):
-        segs.append(f'<span class="small-caps">fr&nbsp;</span> <span class="xxx">{esc(m["dff"])}</span>')
-    if m.get('dfe'):
-        segs.append(f'<span class="small-caps">en</span> <span class="xxx">{esc(m["dfe"])}</span>')
-    return " — ".join(segs)
-
-
 def render_long_bits(d):
     parts = []
-    # if d.get('sem'):
-    #    parts.append(f'<div class="mb-1"><b>semantic domain:</b> {esc(d["sem"])}</div>')
+    if d.get('sem'):
+        parts.append(f"<div class='mb-1'><b>Semantic domain:</b> {esc(d['sem'])}</div>")
+    # emp (emphasis / provenance) using helper
+    if d.get('emp'):
+        parts.append(f"<div class='mb-1'><b>Emp:</b>{render_emp(d['emp'])}</div>")
+    # cross-refs
     # for cf in d.get('cf', []):
     #     parts.append(f'<div class="mb-1"><b>cf:</b> {esc(cf)}</div>')
     ils = d.get('il', [])
     if ils:
-        items = ''.join(f'<li>{render_2part(esc(il))}</li>' for il in ils)
+        items = ''.join(f'<li>{render_2part(il)}</li>' for il in ils)
         parts.append(f'<ol class="mb-2">{items}</ol>')
     for phr in d.get('phr', []):
-        parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(esc(phr))}</div>')
-    # for gram in d.get('gram', []):
-    #     parts.append(f'<div class="mb-1"><b>grammar:</b> <span class="xxx">{esc(gram)}</span></div>')
+        parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(phr)}</div>')
+    for gram in d.get('gram', []):
+        parts.append(f"<div class='mb-1'><b>grammar:</b> <i>{esc(gram)}</i></div>")
     for enc in d.get('enc', []):
-        parts.append(f'<div class="mb-1"><b>note (enc):</b> {esc(enc)}</div>')
+        parts.append(f"<div class='mb-1'><b>note (enc):</b> {esc(enc)}</div>")
     for nb in d.get('nb', []):
-        parts.append(f'<div class="mb-1"><b>note:</b> {esc(nb)}</div>')
+        parts.append(f"<div class='mb-1'><b>note:</b> {esc(nb)}</div>")
     # for nbi in d.get('nbi', []):
-    #     parts.append(f'<div class="mb-1"><b>note (internal):</b> {esc(nbi)}</div>')
+    #     parts.append(f"<div class='mb-1'><b>note (internal):</b> {esc(nbi)}</div>")
     for xr in d.get('xr', []):
-        parts.append(f'<div class="mb-1"><b>cf:</b> {render_tamang(esc(xr))}</div>')
-    # for so in d.get('so', []):
-    #     parts.append(f'<div class="mb-1"><b>source:</b> {esc(so)}</div>')
-    # for rec in d.get('rec', []):
-    #     parts.append(f'<div class="mb-1"><b>recorded:</b> {esc(rec)}</div>')
+        parts.append(f"<div class='mb-1'><b>See also:</b> {esc(xr)}</div>")
+    for so in d.get('so', []):
+        parts.append(f"<div class='mb-1'><b>Source:</b> {esc(so)}</div>")
+    for rec in d.get('rec', []):
+        parts.append(f"<div class='mb-1'><b>Recorded:</b> {esc(rec)}</div>")
     return ''.join(parts)
-
 
 def render_mode_block(m):
     mid = m['id']
     has_level = bool(m.get('level'))
-    badge_html = f'<span class="badge text-bg-secondary level">{esc(str(m["level"]))}</span>' if has_level else '&nbsp;'
-    lines = render_lang_lines(m.get('ps', ''), m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''))
-    short_html = ""
-    if lines:
-        short_html = f"""
-        <div class="mode-short short" onclick="event.stopPropagation(); return toggleMode('{esc(mid)}')">
-          <div class="mode-badge">{badge_html}</div>
-          <div class="mode-body"><p class="mb-0">{lines}</p></div>
-        </div>"""
-    long_bits = render_long_bits(m)
-    long_html = f"""
-      <div class="mode-long" id="{esc(mid)}-long" style="display:none;">
-        <div class="mode-badge">{'&nbsp;' if has_level else '&nbsp;'}</div>
-        <div class="mode-body">{long_bits}</div>
-      </div>"""
-    #  keep for now: <div class="mode-body"><div class="mode-head mb-1">{render_mode_header_inline(m)}</div>{long_bits}</div>
-    return f'<div class="mode-block">{short_html}{long_html}</div>'
-
-def render_sub_block(m):
-    hw = m['hw']
-    homonym = re.match(r'(.*)\$(.*)', hw)
-    ps_html = f' <i class="small-caps">{esc(m["ps"])}</i>' if m.get('ps') else ''
-    cf_html = render_cf(m.get('cf', None))
-    emp_html = render_emp(m.get('emp', None))
-    if homonym:
-        hw = homonym[1]
-        sense_number = render_sense_number(homonym[2])
-    else:
-        sense_number = ''
-    hw = render_tamang(hw)
-    head = f'<p class="mb-0 entry-head">{esc(hw)}{sense_number}{ps_html}{cf_html}{emp_html}</p>'
-    mid = m['id']
+    badge_html = f"<span class='badge text-bg-secondary level'>{str(m['level'])}</span>" if has_level else "&#160;"
     lines = render_lang_lines('', m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''))
     short_html = ""
     if lines:
         short_html = f"""
-        <div class="mode-short short" onclick="event.stopPropagation(); return toggleMode('sub-{mid}')">
-          <div class="mode-sub"><p class="mb-0">{head}{lines}</p></div>
+        <div class="mode-short">
+          <div class="mode-badge">{badge_html}</div>
+          <div class="mode-body"><p class="mb-0">{lines}</p></div>
         </div>"""
     long_bits = render_long_bits(m)
+    head_bits = ""
+    # if m.get('hw') or m.get('ps'):
+    #     ps_html = f'& <i class="small-caps">{esc(m.get("ps",""))}</i>' if m.get('ps') else ''
+    #     head_bits = f"<div class='mode-head mb-1'><b>{esc(m.get('hw',''))}</b>{ps_html}</div>"
     long_html = f"""
-      <div class="mode-long" id="sub-{mid}-long" style="display:none;">
+      <div class="mode-long" id="{mid}-long" style="display:none;">
+        <div class="mode-badge">{'&#160;' if has_level else '&#160;'}</div>
+        <div class="mode-body">{head_bits}{long_bits}</div>
+      </div>"""
+    return f"<div class='mode-block'>{short_html}{long_html}</div>"
+
+def render_sub_block(s):
+    sid = s['id']
+    badge_html = "&#160;"
+    head_html = render_hw_etc(s)
+    lines = render_lang_lines('', s.get('nag',''), s.get('dfn',''), s.get('dff',''), s.get('dfe',''))
+    short_lines = (head_html + (f"<p class='mb-0'>{lines}</p>" if lines else "")) if (head_html or lines) else ""
+    short_html = ""
+    if short_lines:
+        short_html = f"""
+        <div class="mode-short">
+          <div class="mode-badge">{badge_html}</div>
+          <div class="mode-body">{short_lines}</div>
+        </div>"""
+    long_bits = render_long_bits(s)
+    long_html = f"""
+      <div class="mode-long" id="{sid}-long" style="display:none;">
+        <div class="mode-badge">&#160;</div>
         <div class="mode-body">{long_bits}</div>
       </div>"""
-    #  keep for now: <div class="mode-body"><div class="mode-head mb-1">{render_mode_header_inline(m)}</div>{long_bits}</div>
-    return f'<div class="mode-block">{short_html}{long_html}</div>'
+    mode_blocks = ''.join(render_mode_block(m) for m in s.get('modes', []))
+    return f"<div class='mode-block sub-block'>{short_html}{long_html}{mode_blocks}</div>"
 
-def render_short(entry):
-    hw = entry['hw']
+def render_hw_etc(entry):
+    hw = entry.get('hw', None)
     homonym = re.match(r'(.*)\$(.*)', hw)
-    ps_html = f' <i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
+    ps_html = f'&#160;<i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
     emp_html = render_emp(entry.get('emp', None))
     if homonym:
@@ -329,153 +340,142 @@ def render_short(entry):
         sense_number = render_sense_number(homonym[2])
     else:
         sense_number = ''
-    hw = render_tamang(hw)
-    head = f'<p class="mb-0 entry-head">{esc(hw)}{sense_number}{ps_html}{cf_html}{emp_html}</p>'
+    hw_rendered = render_tamang(hw)
+    head = f'<p class="mb-0 entry-head">{hw_rendered}{sense_number}{ps_html}{cf_html}{emp_html}</p>'
+    return head if hw else ''
+
+def render_short(entry):
+    head = render_hw_etc(entry)
     blocks = []
     if entry.get('modes') or entry.get('subs'):
         if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn'):
             pseudo = {
-                'id': f'{entry["id"]}-m0',
+                'id': f"{entry['id']}-m0",
                 'level': None,
-                'var': entry.get('var', ''),
-                'nag': entry.get('nag', ''), 'dfn': entry.get('dfn', ''),
-                'dff': entry.get('dff', ''), 'dfe': entry.get('dfe', ''),
-                'sem': entry.get('sem', ''),
-                'phr': entry.get('phr', []), 'gram': entry.get('gram', []), 'xr': entry.get('xr', []),
-                'so': entry.get('so', []), 'rec': entry.get('rec', []), 'nb': entry.get('nb', []),
-                'nbi': entry.get('nbi', []),
-                'il': entry.get('il', []), 'ilold': entry.get('ilold', []), 'enc': entry.get('enc', []),
+                'nag': entry.get('nag',''), 'dfn': entry.get('dfn',''),
+                'dff': entry.get('dff',''), 'dfe': entry.get('dfe',''),
+                'sem': entry.get('sem',''),
+                'phr': entry.get('phr',[]), 'gram': entry.get('gram',[]), 'xr': entry.get('xr',[]),
+                'so': entry.get('so',[]), 'rec': entry.get('rec',[]), 'nb': entry.get('nb',[]), 'nbi': entry.get('nbi',[]),
+                'il': entry.get('il',[]), 'ilold': entry.get('ilold',[]), 'enc': entry.get('enc',[]), 'cf': entry.get('cf',[]),
             }
             blocks.append(render_mode_block(pseudo))
-        for m in entry['modes']:
+        for m in entry.get('modes', []):
             blocks.append(render_mode_block(m))
-        for m in entry['subs']:
-            m['level'] = None
-            blocks.append(render_sub_block(m))
-        body = ''.join(blocks)
-        # 1akhe
+        for s in entry.get('subs', []):
+            blocks.append(render_sub_block(s))
+        return f"<div class='short'>{head}{''.join(blocks)}</div>"
     else:
-        lines = render_lang_lines('', entry.get('nag', ''), entry.get('dfn', ''), entry.get('dff', ''), entry.get('dfe', ''))
-        body = f'<div class="mode-sub"><p class="mb-0">{lines}</p></div>' if lines else ''
-    # kinda complicated quoting here...
-    return f'<div class="short" onclick="return toggleEntry(' + "'" + esc(entry["id"]) + "'" + f')">{head}{body}</div>'
-
+        lines = render_lang_lines('', entry.get('nag',''), entry.get('dfn',''), entry.get('dff',''), entry.get('dfe',''))
+        body = f"<div class='mode-sub'><p class='mb-0'>{lines}</p></div>" if lines else ""
+        return f"<div class='short'>{head}{body}</div>"
 
 def render_entry_long(entry):
     has_base_defs = entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn')
-    if entry.get('modes') and has_base_defs:
+    if (entry.get('modes') or entry.get('subs')) and has_base_defs:
         d_extras_html = ''
     else:
         d_extras_html = render_long_bits(entry)
     return d_extras_html
 
 
-# ============== HTML template (inline CSS/JS) ==============
-
 STYLE = r"""
-:root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-html, body { font-family: var(--font-sans); margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
-.small-caps { font-variant-caps: small-caps; font-size: .7rem; }
-.mb-0 { margin-bottom: 0; }
-.ms-1 { margin-left: .25rem; }
-.fixed-topbar { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
-.header { position: relative; z-index: 2; }
-.header { display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
-.header .logo { width: 28px; height: 28px; border-radius: 4px; background: rgba(255, 255, 255, .3); flex: 0 0 28px; }
-.header .brand { color: #fff; text-decoration: none; font-weight: bold; white-space: nowrap; overflow: hidden; }
-.header .page-links { margin-left: auto; display: flex; gap: .5rem; }
-.header .page-links a { color: #fff; text-decoration: none; padding: .25rem .5rem; border-radius: .375rem; }
-.header .page-links a:hover { background: rgba(255, 255, 255, .18); }
-/* Hamburger (CSS-only) */
-.menu-toggle { position: absolute; left: -9999px; }
-.hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; }
-.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
+:root { --font-sans: system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
+html,body { font-family:var(--font-sans); margin:0; padding:0; }
+small,.small { font-size:.875rem; }
+.small-caps { font-variant-caps:small-caps; }
+.mb-0 { margin-bottom:0; }
+
+/* Sticky mast */
+.fixed-topbar { position:sticky; top:0; z-index:1000; background:#fff; box-shadow:0 1px 0 rgba(0,0,0,.06); }
+.header { position:relative; z-index:2; display:flex; align-items:center; gap:.75rem; background:#A51931; color:#fff; width:100%; padding:.5rem .75rem; box-sizing:border-box; }
+.header .logo { width:28px; height:28px; border-radius:4px; background:rgba(255,255,255,.3); flex:0 0 28px; }
+.header .brand { color:#fff; text-decoration:none; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.header .page-links { margin-left:auto; display:flex; gap:.5rem; }
+.header .page-links a { color:#fff; text-decoration:none; padding:.25rem .5rem; border-radius:.375rem; }
+.header .page-links a:hover { background:rgba(255,255,255,.18); }
+
+/* Hamburger */
+.menu-toggle { position:absolute; left:-9999px; }
+.hamburger { display:none; cursor:pointer; margin-left:.5rem; padding:.25rem; }
+.hamburger span { display:block; width:24px; height:2px; background:#fff; margin:5px 0; border-radius:1px; }
 @media (max-width: 768px) {
-    .hamburger { display: block; flex: 0 0 auto; margin-left: .5rem; }
-    .header .brand { flex: 1 1 auto; min-width: 0; }
-    .header .page-links { display: none; position: absolute; padding: .5rem; }
-    .header .page-links a { display: block; color: #111; padding: .5rem .75rem; border-radius: .375rem; }
-    .header .page-links a { display: block; color: #111; text-decoration: none; padding: .5rem .75rem; border-radius: .375rem; }
-    .header .page-links a:hover { background: #f2f2f2; }
-    .header .page-links { display: none; position: absolute; top: 100%; right: 0; left: 0; z-index: 1200; background: #fff; border: 1px solid #e5e7eb; padding: .5rem; }
-    .header .page-links a:hover { background: #f2f2f2; }
-     #menu-toggle:checked ~ .page-links { display: block; }
+  .hamburger { display:block; }
+  .header .brand { flex:1; min-width:0; }
+  .header .page-links { display:none; position:absolute; top:100%; right:0; left:0; z-index:1200; background:#fff; color:#111; border:1px solid #e5e7eb; box-shadow:0 6px 18px rgba(0,0,0,.15); padding:.5rem; }
+  #menu-toggle:checked ~ .page-links { display:block; }
+  .header .page-links a { display:block; color:#111; padding:.5rem .75rem; }
+  .header .page-links a:hover { background:#f2f2f2; }
 }
-.searchnav { display: none; background: #fff; border-bottom: 1px solid #e5e7eb; }
-.searchbar { display: flex; gap: .5rem; align-items: center; padding: .4rem .75rem; }
-.searchbar input[type="text"] { flex: 1 1 auto; min-width: 0; font-size: 1rem; padding: .5rem .75rem; border: 1px solid #ced4da; border-radius: .375rem; }
-.searchbar button { flex: 0 0 auto; font-size: 1rem; padding: .5rem .9rem; border: 1px solid #ced4da; border-radius: .375rem; background: #fff; cursor: pointer; }
-.searchbar button:hover { background: #f1f3f5; }
-#letter-nav { display: block; overflow-x: auto; overflow-y: hidden; padding: .2rem .5rem; margin: 0; border-bottom: 1px solid #e9ecef; border-top: 1px solid #f1f3f5; justify-content: center; }
-#letter-nav .nav-link { display: inline-block; font-size: 1.2rem; line-height: 1.1; padding: .2rem; margin-right: .15rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: 9999px; }
-#letter-nav .nav-link:hover { background: rgba(13, 110, 253, .08); border-color: rgba(13, 110, 253, .2); }
-#letter-nav .nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
-#views { padding-top: 0 !important; }
-#views > * { display: none; }
-#page-about { display: block; }
-dt { font-weight: bold; font-style: italic; }
-.page { position: relative; max-width: 900px; margin: 0 auto 1rem; padding: 1rem 1.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0, 0, 0, .04); }
-.page .to-dico { position: absolute; top: .75rem; right: .75rem; font-size: .9rem; padding: .35rem .7rem; background: #fff; border: 1px solid #ced4da; border-radius: .375rem; text-decoration: none; color: inherit; }
-.page .to-dico:hover { background: #f1f3f5; }
-.entry { border: 1px solid #e5e7eb; border-radius: .5rem; padding: .75rem; margin: .5rem 0; background: #fff; }
-.entry.expanded { background: #f7f7f7; }
-.short { cursor: pointer; }
-.short:hover { background: #f8f9fa; }
-.mode-block { margin: .35rem 0 .5rem 1rem; }
-.mode-short, .mode-long { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: .5rem; align-items: start; }
-.mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
-.mode-badge .badge { min-width: 1.0em; display: inline-flex; justify-content: center; }
-.mode-body { min-width: 0; }
-.mode-body > p { margin-top: 0; margin-bottom: 0; }
-.mode-short { padding: .25rem 0; border-top: 1px dashed #eee; }
-.mode-short:first-child { border-top: none; }
-.mode-head .small-caps { font-variant-caps: small-caps; }
-.badge { display: inline-flex; align-items: center; justify-content: center; padding: .15em .45em; line-height: 1.15; font-size: .85em; border-radius: 9999px; }
-.text-bg-secondary { background: #6c757d; color: #fff; }
-#search-results mark { background: #fff3cd; padding: 0 .1em; }
-#search-results .long, #search-results .mode-long { display: none; }
-body.show-dico .searchnav { display: block; }
-.entry { padding-top: 0px; }
-.entry .short .entry-head, .long { margin-top: 4px; margin-bottom: 4px; }
-@media (max-width: 576px) {
-    html { font-size: 18px; }
-    .header .brand { font-size: .7rem; }
-    #letter-nav .nav-link { font-size: 1.0rem; padding: .2rem; }
-    .short p, .long { font-size: .9rem; line-height: 1.2; }
+
+/* Tools: search + nav (only in dictionary view) */
+.searchnav { display:none; border-top:1px solid #e5e7eb; background:#fff; }
+body.show-dico .searchnav { display:block; }
+.searchbar { display:flex; gap:.5rem; align-items:center; padding:.4rem .75rem; }
+.searchbar input[type="text"] { flex:1; min-width:0; font-size:1rem; padding:.5rem .75rem; border:1px solid #ced4da; border-radius:.375rem; }
+.searchbar button { font-size:1rem; padding:.5rem .9rem; border:1px solid #ced4da; border-radius:.375rem; background:#fff; cursor:pointer; }
+.searchbar button:hover { background:#f1f3f5; }
+
+#letter-nav { display:block; overflow-x:auto; overflow-y:hidden; padding:.2rem .5rem; border-top:1px solid #f1f3f5; border-bottom:1px solid #e9ecef; }
+#letter-nav .nav-link { display:inline-block; margin-right:.15rem; padding:.2rem .45rem; font-size:.9rem; line-height:1.1; color:#0d6efd; text-decoration:none; border:1px solid transparent; border-radius:9999px; }
+#letter-nav .nav-link:hover { background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2); }
+#letter-nav .nav-link.active { color:#fff; background:#0d6efd; border-color:#0d6efd; }
+
+/* Pages */
+#views > * { display:none !important; }
+body.show-about   #page-about { display:block !important; }
+body.show-credits #page-credits { display:block !important; }
+body.show-dico    #dictionary { display:block !important; }
+.page { position:relative; max-width:900px; margin:0 auto 1rem; padding:1rem 1.25rem; background:#fff; border:1px solid #e5e7eb; border-radius:.5rem; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+.page .to-dico { position:absolute; top:.75rem; right:.75rem; font-size:.9rem; padding:.35rem .7rem; background:#fff; border:1px solid #ced4da; border-radius:.375rem; text-decoration:none; color:inherit; }
+.page .to-dico:hover { background:#f1f3f5; }
+
+/* entries */
+.entry { border:1px solid #e5e7eb; border-radius:.5rem; padding:.5rem .75rem; margin:.5rem 0; background:#fff; cursor:pointer; }
+.entry.expanded { background:#f7f7f7; }
+.short:hover { background:#f8f9fa; }
+
+/* modes and subs: grid with left badge column; text column shrinkable (iOS fix) */
+.mode-block { margin:.35rem 0 .5rem 1rem; }
+.mode-short, .mode-long { display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:.5rem; align-items:start; }
+.mode-badge { width:2.1em; display:flex; justify-content:center; align-items:flex-start; }
+.mode-badge .badge { min-width:1.8em; display:inline-flex; justify-content:center; align-items:center; padding:.15em .45em; line-height:1.15; font-size:.85em; border-radius:9999px; background:#6c757d; color:#fff; }
+.mode-body p { margin:0; }
+.mode-short { padding:.25rem 0; border-top:1px dashed #eee; }
+.mode-short:first-child { border-top:none; }
+
+/* per-definition hanging indent via fixed-width labels */
+.mode-sub p, .mode-body p { overflow-wrap:anywhere; word-break:break-word; }
+.mode-sub p .small-caps, .mode-body p .small-caps { display:inline-block; min-width:2.4em; text-align:left; vertical-align:top; padding-right:.4em; }
+
+@media (max-width:600px) {
+  .mode-sub p .small-caps, .mode-body p .small-caps { min-width:2.1em; }
+  .dfn { white-space:normal; overflow-wrap:anywhere; }
 }
-#views > * { display: none !important; }
-body.show-about #page-about { display: block !important; }
-body.show-credits #page-credits { display: block !important; }
-body.show-dico #dictionary { display: block !important; }
-.fixed-topbar .searchnav { display: none !important; }
-body.show-dico .fixed-topbar .searchnav { display: block !important; }
-/* 2) Allow per-line wrapping in gloss paragraphs & highlights */
-.mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: anywhere; word-break: break-word; }
-.mode-body p ,.mode-sub p { margin: .15rem 0 0; text-indent: 0; }
-.mode-body p .small-caps { display: inline-block; width: 2.6em; min-width: 2.6em; text-align: left; vertical-align: top; }
-.mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
-@media (max-width: 600px) {
-    .mode-sub p .small-caps, .mode-body p .small-caps { width: 2.2em; min-width: 2.2em; }
-}
+
+/* search results */
+#search-results mark { background:#fff3cd; padding:0 .1em; }
+#search-results .long, #search-results .mode-long { display:none; }
+
+/* prevent sideways scroll */
+html,body { max-width:100%; overflow-x:hidden; }
 """
 
 SCRIPT = r"""
-// ----- Entry + Mode toggles -----
-function toggleEntry(id){
-  const el = document.getElementById(id + '-long');
-  if(!el) return false;
-  const show = (el.style.display === 'none' || el.style.display === '');
-  el.style.display = show ? 'block' : 'none';
+//<![CDATA[
+// ----- Entry-wide toggle: show/hide ALL long blocks within the entry -----
+function toggleEntryAll(id){
   const entry = document.getElementById(id);
-  if (entry) entry.classList.toggle('expanded', show);
+  if (!entry) return false;
+  const longs = entry.querySelectorAll('.long, .mode-long');
+  let anyHidden = false;
+  longs.forEach(el => { if (el.style.display === 'none' || el.style.display === '') anyHidden = true; });
+  longs.forEach(el => { el.style.display = anyHidden ? 'block' : 'none'; });
+  entry.classList.toggle('expanded', anyHidden);
   return false;
 }
-function toggleMode(mid){
-  const el = document.getElementById(mid + '-long');
-  if(!el) return false;
-  el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
-  return false;
-}
+// Legacy wrapper in case something still calls toggleEntry
+function toggleEntry(id){ return toggleEntryAll(id); }
 
 // ----- Letter navigation -----
 function showToken(tok){
@@ -494,6 +494,7 @@ function debounce(fn, ms=220){ let t; return (...args)=>{ clearTimeout(t); t=set
 function highlightInElement(el, query){
   if(!el || !query) return;
   const rx = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+
   const tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
     acceptNode(n){ return n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT; }
   });
@@ -507,7 +508,7 @@ function highlightInElement(el, query){
       last = e; found = true;
     }
     if (found){
-      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last))); // fixed
       node.parentNode.replaceChild(frag, node);
     }
   }
@@ -516,7 +517,7 @@ function hideAllSections(){ document.querySelectorAll('.letter-section').forEach
 function resetSearch(){
   const input = document.getElementById('search-box'); if (input) input.value = '';
   const resultsDiv = document.getElementById('search-results'); if (resultsDiv) resultsDiv.style.display = 'none';
-  const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = ''; // let CSS decide
+  const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = '';
   hideAllSections();
   const first = document.querySelector('.letter-section'); if (first) first.style.display = 'block';
   document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
@@ -524,7 +525,7 @@ function resetSearch(){
   return false;
 }
 function handleSearch(input){
-  const q = (input.value || '').trim();
+  const q = (input && input.value ? input.value : '').trim();
   const resultsDiv = document.getElementById('search-results'); if (!resultsDiv) return;
   const navBar = document.getElementById('letter-nav');
   resultsDiv.innerHTML = '';
@@ -534,11 +535,11 @@ function handleSearch(input){
   resultsDiv.style.display = 'block';
   document.querySelectorAll('.entry').forEach(entry => {
     const shortArea = entry.querySelector('.short');
-    const shortText = shortArea ? shortArea.textContent : '';
+    const shortText = shortArea ? (shortArea.textContent || '') : '';
     if (shortText.toLowerCase().includes(q.toLowerCase())){
       const clone = entry.cloneNode(true);
       clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
-      const toHide = clone.querySelectorAll('.long, .mode-long'); toHide.forEach(n => n.style.display = 'none');
+      clone.querySelectorAll('.long, .mode-long').forEach(n => n.style.display = 'none');
       resultsDiv.appendChild(clone);
       const shortClone = clone.querySelector('.short');
       if (shortClone) highlightInElement(shortClone, q);
@@ -548,32 +549,20 @@ function handleSearch(input){
     resultsDiv.innerHTML = '<p class="small">No results found.</p>';
   }
 }
-const debouncedSearch = debounce(handleSearch, 220);
+window.debouncedSearch = debounce(handleSearch, 220);
+
 
 // ----- Page mode (About / Credits / Dictionary) + hamburger auto-close -----
 (function () {
-    function setPageFromHash(){
-      const h = (location.hash || '#about').toLowerCase();
-      const b = document.body.classList;
-      b.remove('show-about','show-credits','show-dico');
-    
-      if (h === '#credits') {
-        b.add('show-credits');
-      } else if (h === '#dico') {
-        b.add('show-dico');
-        // Ensure tools are visible even if a prior search hid the nav bar
-        const nav = document.getElementById('letter-nav');
-        if (nav) nav.style.display = '';            // let CSS show it
-        const results = document.getElementById('search-results');
-        if (results) results.style.display = 'none';
-        // (optional) clear the box:
-        // const box = document.getElementById('search-box'); if (box) box.value = '';
-      } else {
-        b.add('show-about'); // default
-      }
-    }
+  function setPageFromHash(){
+    const h = (location.hash || '#about').toLowerCase();
+    const b = document.body.classList;
+    b.remove('show-about','show-credits','show-dico');
+    if (h === '#credits')      b.add('show-credits');
+    else if (h === '#dico')    b.add('show-dico');
+    else                       b.add('show-about');
+  }
 
-  // Toggle About/Credits via header links: clicking again returns to Dictionary
   document.addEventListener('click', function (e) {
     const a = e.target.closest('.page-links a');
     if (!a) return;
@@ -582,8 +571,6 @@ const debouncedSearch = debounce(handleSearch, 220);
     e.preventDefault();
     const cur = (location.hash || '#about').toLowerCase();
     location.hash = (cur === id) ? '#dico' : id;
-
-    // Close hamburger on mobile
     const t = document.getElementById('menu-toggle');
     if (t) t.checked = false;
   });
@@ -592,24 +579,26 @@ const debouncedSearch = debounce(handleSearch, 220);
   window.addEventListener('DOMContentLoaded', setPageFromHash);
   setPageFromHash();
 })();
+//]]>
 """
 
-HTML_SHELL = """<!doctype html>
-<html lang="en">
+HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>{title}</title>
-<style>{style}</style>
+<style type="text/css">{style}</style>
 </head>
 <body>
 
 <div class="fixed-topbar">
   <header class="header">
     <div class="logo" aria-hidden="true"></div>
-    <a class="brand" href="#dico">Tamang | Nepali – French – English Dictionary</a>
+    <a class="brand" href="#dico">{title}</a>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" />
     <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
@@ -620,13 +609,12 @@ HTML_SHELL = """<!doctype html>
     </nav>
   </header>
 
-  <!-- Tools (search + letter nav) — hidden except in Dictionary view -->
   <div class="searchnav">
     <div class="searchbar">
-      <input id="search-box" type="text" placeholder="Search entries…" oninput="debouncedSearch(this)">
+      <input id="search-box" type="text" placeholder="Search entries..." oninput="debouncedSearch(this)" />
       <button type="button" onclick="resetSearch()">Reset</button>
     </div>
-    <nav id="letter-nav">{letter_nav}</nav>
+    {letter_nav}
   </div>
 </div>
 
@@ -683,15 +671,16 @@ HTML_SHELL = """<!doctype html>
             <a href="mailto:johnblowe@gmail.com,mazaudon@gmail.com">the creators</a>. We would love to hear what you think.
         </p>
     </section>
-    <!-- Dictionary view -->
-    <section id="dictionary" class="page">
-      <div class="dictionary-body">
-        {sections}
-        <div id="search-results" style="display:none;"></div>
-      </div>
-    </section>
-</div>
-<script>{script}</script>
+
+  <section id="dictionary" class="page">
+    <div class="dictionary-body">
+      <div id="search-results" style="display:none;"></div>
+      <div id="sections-wrapper">{sections}</div>
+    </div>
+  </section>
+</main>
+
+<script type="text/javascript">{script}</script>
 </body>
 </html>
 """
@@ -699,25 +688,33 @@ HTML_SHELL = """<!doctype html>
 def build_letter_nav(groups):
     links = []
     first = True
-    for tok in groups.keys():
+    for tok, meta in groups.items():
+        label = meta['label'] if meta['label'] is not None else tok
         active = ' active' if first else ''
-        links.append(f'<a class="nav-link{active}" data-token="{esc(tok)}" href="#" onclick="return showToken(\'{esc(tok)}\')">{esc(tok)}</a>')
+        links.append(f'<a class="nav-link{active}" data-token="{tok}" href="#" onclick="return showToken(\'{tok}\')">{label}</a>')
         first = False
     return '<nav id="letter-nav">' + ''.join(links) + '</nav>'
 
 def build_sections(groups):
     out = []
     first = True
-    for tok, entries in groups.items():
+    for tok, meta in groups.items():
+        entries = meta['entries']
         disp = '' if first else ' style="display:none;"'
         entry_html = []
         for e in entries:
-            eid = esc(e['id'])
+            eid = e['id']
             short_html = render_short(e)
             long_html = render_entry_long(e)
-            long_block = f'<div class="long" id="{eid}-long" style="display:none;">{long_html}</div>' if long_html else '<div class="long" id="{eid}-long" style="display:none;"></div>'
-            entry_html.append(f'<div id="{eid}" class="entry">{short_html}{long_block}</div>')
-        out.append(f'<div class="letter-section" id="section-{esc(tok)}"{disp}>' + ''.join(entry_html) + '</div>')
+            long_block = (
+                f"<div class='long' id='{eid}-long' style='display:none;'>{long_html}</div>"
+                if long_html else
+                f"<div class='long' id='{eid}-long' style='display:none;'></div>"
+            )
+            entry_html.append(
+                f"<div id='{eid}' class='entry' onclick=\"return toggleEntryAll('{eid}')\">{short_html}{long_block}</div>"
+            )
+        out.append(f"<div class='letter-section' id='section-{tok}'{disp}>" + ''.join(entry_html) + "</div>")
         first = False
     return ''.join(out)
 
@@ -737,7 +734,7 @@ def render_html(groups, title):
 
 if __name__ == "__main__":
     import argparse
-    ap = argparse.ArgumentParser(description="Render dictionary XML to standalone HTML (modes as subentries; Bootstrap-ish offline).")
+    ap = argparse.ArgumentParser(description="Render dictionary XML to standalone HTML (modes + subs), grouped by <hdr>.")
     ap.add_argument("xml", help="Input XML file")
     ap.add_argument("-o", "--out", default="TamangDictionary.html", help="Output HTML file")
     ap.add_argument("--title", default="Tamang | Nepali – French – English Dictionary", help="Page title")
@@ -749,4 +746,4 @@ if __name__ == "__main__":
     if not args.no_minify:
         html = minify_html(html)
     Path(args.out).write_text(html, encoding="utf-8")
-    print(f'✅ Wrote {args.out}')
+    print(f"✅ Wrote {args.out}")
