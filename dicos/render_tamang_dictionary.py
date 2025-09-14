@@ -380,85 +380,90 @@ def render_entry_long(entry):
 
 
 STYLE = r"""
-:root { --font-sans: system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
-html,body { font-family:var(--font-sans); margin:0; padding:0; }
-small,.small { font-size:.875rem; }
-.small-caps { font-variant-caps:small-caps; }
-.mb-0 { margin-bottom:0; }
-
-/* Sticky mast */
-.fixed-topbar { position:sticky; top:0; z-index:1000; background:#fff; box-shadow:0 1px 0 rgba(0,0,0,.06); }
-.header { position:relative; z-index:2; display:flex; align-items:center; gap:.75rem; background:#A51931; color:#fff; width:100%; padding:.5rem .75rem; box-sizing:border-box; }
-.header .logo { width:28px; height:28px; border-radius:4px; background:rgba(255,255,255,.3); flex:0 0 28px; }
-.header .brand { color:#fff; text-decoration:none; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.header .page-links { margin-left:auto; display:flex; gap:.5rem; }
-.header .page-links a { color:#fff; text-decoration:none; padding:.25rem .5rem; border-radius:.375rem; }
-.header .page-links a:hover { background:rgba(255,255,255,.18); }
-
-/* Hamburger */
-.menu-toggle { position:absolute; left:-9999px; }
-.hamburger { display:none; cursor:pointer; margin-left:.5rem; padding:.25rem; }
-.hamburger span { display:block; width:24px; height:2px; background:#fff; margin:5px 0; border-radius:1px; }
+:root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+html, body { font-family: var(--font-sans); margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
+.small-caps { font-variant-caps: small-caps; font-size: .7rem; }
+.mb-0      { margin-bottom: 0; }
+.ms-1      { margin-left: .25rem; }
+/*   Top Bar (sticky header) */
+.fixed-topbar { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+.header { position: relative; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
+.header .logo { width: 28px; height: 28px; border-radius: 4px; background: rgba(255,255,255,.3); flex: 0 0 28px; }
+.header .brand { color: #fff; text-decoration: none; font-weight: bold; overflow: hidden; }
+.header .page-links { margin-left: auto; display: flex; gap: .5rem; }
+.header .page-links a { color: #fff; text-decoration: none; padding: .25rem .5rem; border-radius: .375rem; }
+.header .page-links a:hover { background: rgba(255,255,255,.18); }
+/* Hamburger (CSS-only) */
+.menu-toggle { position: absolute; left: -9999px; }
+.hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
+/* Mobile: dropdown menu */
 @media (max-width: 768px) {
-  .hamburger { display:block; }
-  .header .brand { flex:1; min-width:0; }
-  .header .page-links { display:none; position:absolute; top:100%; right:0; left:0; z-index:1200; background:#fff; color:#111; border:1px solid #e5e7eb; box-shadow:0 6px 18px rgba(0,0,0,.15); padding:.5rem; }
-  #menu-toggle:checked ~ .page-links { display:block; }
-  .header .page-links a { display:block; color:#111; padding:.5rem .75rem; }
-  .header .page-links a:hover { background:#f2f2f2; }
-}
-
-/* Tools: search + nav (only in dictionary view) */
-.searchnav { display:none; border-top:1px solid #e5e7eb; background:#fff; }
-body.show-dico .searchnav { display:block; }
-.searchbar { display:flex; gap:.5rem; align-items:center; padding:.4rem .75rem; }
-.searchbar input[type="text"] { flex:1; min-width:0; font-size:1rem; padding:.5rem .75rem; border:1px solid #ced4da; border-radius:.375rem; }
-.searchbar button { font-size:1rem; padding:.5rem .9rem; border:1px solid #ced4da; border-radius:.375rem; background:#fff; cursor:pointer; }
-.searchbar button:hover { background:#f1f3f5; }
-
-#letter-nav { display:block; overflow-x:auto; overflow-y:hidden; padding:.2rem .5rem; border-top:1px solid #f1f3f5; border-bottom:1px solid #e9ecef; }
-#letter-nav .nav-link { display:inline-block; margin-right:.15rem; padding:.2rem .45rem; font-size:.9rem; line-height:1.1; color:#0d6efd; text-decoration:none; border:1px solid transparent; border-radius:9999px; }
-#letter-nav .nav-link:hover { background:rgba(13,110,253,.08); border-color:rgba(13,110,253,.2); }
-#letter-nav .nav-link.active { color:#fff; background:#0d6efd; border-color:#0d6efd; }
-
-/* Pages */
-#views > * { display:none !important; }
-body.show-about   #page-about { display:block !important; }
-body.show-credits #page-credits { display:block !important; }
-body.show-dico    #dictionary { display:block !important; }
-.page { position:relative; max-width:900px; margin:0 auto 1rem; padding:1rem 1.25rem; background:#fff; border:1px solid #e5e7eb; border-radius:.5rem; box-shadow:0 1px 2px rgba(0,0,0,.04); }
-.page .to-dico { position:absolute; top:.75rem; right:.75rem; font-size:.9rem; padding:.35rem .7rem; background:#fff; border:1px solid #ced4da; border-radius:.375rem; text-decoration:none; color:inherit; }
-.page .to-dico:hover { background:#f1f3f5; }
-
-/* entries */
-.entry { border:1px solid #e5e7eb; border-radius:.5rem; padding:.5rem .75rem; margin:.5rem 0; background:#fff; cursor:pointer; }
-.entry.expanded { background:#f7f7f7; }
-.short:hover { background:#f8f9fa; }
-
-/* modes and subs: grid with left badge column; text column shrinkable (iOS fix) */
-.mode-block { margin:.35rem 0 .5rem 1rem; }
-.mode-short, .mode-long { display:grid; grid-template-columns:auto minmax(0,1fr); column-gap:.5rem; align-items:start; }
-.mode-badge { width:2.1em; display:flex; justify-content:center; align-items:flex-start; }
-.mode-badge .badge { min-width:1.8em; display:inline-flex; justify-content:center; align-items:center; padding:.15em .45em; line-height:1.15; font-size:.85em; border-radius:9999px; background:#6c757d; color:#fff; }
-.mode-body p { margin:0; }
-.mode-short { padding:.25rem 0; border-top:1px dashed #eee; }
-.mode-short:first-child { border-top:none; }
-
-/* per-definition hanging indent via fixed-width labels */
-.mode-sub p, .mode-body p { overflow-wrap:anywhere; word-break:break-word; }
-.mode-sub p .small-caps, .mode-body p .small-caps { display:inline-block; min-width:2.4em; text-align:left; vertical-align:top; padding-right:.4em; }
-
-@media (max-width:600px) {
-  .mode-sub p .small-caps, .mode-body p .small-caps { min-width:2.1em; }
-  .dfn { white-space:normal; overflow-wrap:anywhere; }
-}
-
-/* search results */
-#search-results mark { background:#fff3cd; padding:0 .1em; }
-#search-results .long, #search-results .mode-long { display:none; }
-
-/* prevent sideways scroll */
-html,body { max-width:100%; overflow-x:hidden; }
+ .hamburger { display: block; flex: 0 0 auto; margin-left: .5rem; }
+ .header .brand { flex: 1 1 auto; min-width: 0; font-size:.70rem;}
+ .header .page-links {   display: none;   position: absolute;   top: 100%; left: 0; right: 0;   z-index: 1200;   background: #fff;   border: 1px solid #e5e7eb;   padding: .5rem; }
+ .header .page-links a {   display: block;   color: #111;   text-decoration: none;   padding: .5rem .75rem;   border-radius: .375rem; }
+ .header .page-links a:hover { background: #f2f2f2; }
+ #menu-toggle:checked ~ .page-links { display: block; } }
+/*   Search + Letter Nav */
+.searchnav { display: none; background: #fff; border-bottom: 1px solid #e5e7eb; }
+.searchbar { display: flex; gap: .5rem; align-items: center; padding: .4rem .75rem; }
+.searchbar input[type="text"] { flex: 1 1 auto; min-width: 0; font-size: 1rem; padding: .5rem .75rem; border: 1px solid #ced4da; border-radius: .375rem; }
+.searchbar button { flex: 0 0 auto; font-size: 1rem; padding: .5rem .9rem; border: 1px solid #ced4da; border-radius: .375rem; background: #fff; cursor: pointer; }
+.searchbar button:hover { background: #f1f3f5; }
+#letter-nav { display: block; overflow-x: auto; overflow-y: hidden; padding: .2rem .5rem; margin: 0; border-top: 1px solid #f1f3f5; border-bottom: 1px solid #e9ecef; justify-content: center; }
+#letter-nav .nav-link { display: inline-block; font-size: 1.2rem; line-height: 1.1; padding: .2rem; margin-right: .15rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: 9999px; }
+#letter-nav .nav-link:hover { background: rgba(13,110,253,.08); border-color: rgba(13,110,253,.2); }
+#letter-nav .nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
+/* Only show search block when dictionary is visible */
+body.show-dico .searchnav { display: block !important; }
+/*   Views (About / Credits / Dictionary) */
+#views { padding-top: 0 !important; }
+#views > * { display: none !important; }
+body.show-about   #page-about   { display: block !important; }
+body.show-credits #page-credits { display: block !important; }
+body.show-dico    #dictionary   { display: block !important; }
+/* Default (no hash) shows About */
+#page-about { display: block; }
+.page { position: relative; max-width: 900px; margin: 0 auto 1rem; padding: 1rem 1.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.page .to-dico { position: absolute; top: .75rem; right: .75rem; font-size: .9rem; padding: .35rem .7rem; background: #fff; border: 1px solid #ced4da; border-radius: .375rem; text-decoration: none; color: inherit; }
+.page .to-dico:hover { background: #f1f3f5; }
+dt { font-weight: bold; font-style: italic; }
+/*   Entries */
+.entry { border: 1px solid #e5e7eb; border-radius: .5rem; padding: .75rem; margin: .5rem 0; background: #fff; padding-top: 0; }
+.entry.expanded { background: #f7f7f7; }
+.short { cursor: pointer; }
+.short:hover { background: #f8f9fa; }
+.entry .short .entry-head { margin: 4px 0; }
+/*   Modes / Subentries */
+.mode-block { margin: .35rem 0 .5rem 1rem; }
+.mode-short, .mode-long { display: grid; grid-template-columns: auto minmax(0,1fr); column-gap: .5rem; align-items: start; }
+.mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
+.mode-badge .badge { display: inline-flex; align-items: center; justify-content: center; min-width: 1.0em; padding: .15em .45em; line-height: 1.15; font-size: .85em; border-radius: 9999px; }
+.mode-body { min-width: 0; }
+.mode-body > p { margin: 0; }
+.mode-short { padding: .25rem 0; border-top: 1px dashed #eee; }
+.mode-short:first-child { border-top: none; }
+.mode-head .small-caps { font-variant-caps: small-caps; }
+.badge.text-bg-secondary { background: #6c757d; color: #fff; }
+/*   Search results */
+#search-results mark { background: #fff3cd; padding: 0 .1em; }
+#search-results .long, #search-results .mode-long { display: none; }
+/*   Wrapping / Gloss layout */
+.mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: anywhere; word-break: break-word; }
+.mode-body p, .mode-sub p { margin: .15rem 0 0; text-indent: 0; }
+.mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; width: 2.6em; min-width: 2.6em; text-align: left; vertical-align: top; }
+.mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
+/*   Responsive tweaks */
+@media (max-width: 600px) {
+  .mode-sub p .small-caps, .mode-body p .small-caps {   width: 2.2em; min-width: 2.2em; }
+ }
+@media (max-width: 576px) {
+  html { font-size: 18px; }
+  .header .brand { font-size: .7rem; }
+  #letter-nav .nav-link { font-size: 1.0rem; padding: .2rem; }
+  .short p, .long { font-size: .9rem; line-height: 1.2; }
+ }
 """
 
 SCRIPT = r"""
