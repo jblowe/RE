@@ -71,7 +71,7 @@ def normalize_gloss(gloss):
             # handle lexware | delimiter: replace gloss with two term -- one trimmed, one with | removed
             if '|' in g:
                 glosses.append(g.replace('|', ''))
-                glosses.append(re.sub('\|.*', '', g))
+                glosses.append(re.sub(r'\|.*', '', g))
                 del glosses[i]
     glosses = [g for g in glosses if g != '']
     return glosses
