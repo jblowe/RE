@@ -10,6 +10,7 @@
       <class name="C" value="p,t,k"/>
       <canon name="syllabe" value="T?(OG?|IL?G?)?(R|VF)"/>
       <spec name="supra_segmentals" value=""/>
+      <context_match_type name="context_match_type" value="glyphs"/>
    </parameters>
    <corr num="1">
       <proto contextR="U" syll="T">A</proto>
