@@ -14,19 +14,17 @@ from collections import defaultdict
 from xml.dom import minidom
 
 base_dir = os.path.dirname(__file__)
-filename = os.path.join(base_dir, 'proto-kiranti - Feuille1.csv')
-correspondence_filename = 'kiranti.correspondence.csv'
+filename = os.path.join(base_dir, 'pk2-feuille1.csv')
+correspondence_filename = 'KIRANTI.jbl.correspondences.csv'
 
-languages = ['khaling1', 'khaling2', 'wambule', 'limbu1', 'limbu2', 'bantawa']
+languages = ['khaling', 'wambule', 'limbu', 'bantawa']
 
 # from sheet 1
-def read_tabular_lexicons(filename, delimiter=','):
-    index_map = {'khaling1': (3, 5),
-                 'khaling2': (7, 8),
-                 'wambule': (9, 10),
-                 'limbu1': (11, 12),
-                 'limbu2': (13, 14),
-                 'bantawa': (15, 16)}
+def read_tabular_lexicons(filename, delimiter='\t'):
+    index_map = {'khaling': (5, 6),
+                 'wambule': (3, 4),
+                 'limbu': (11, 12),
+                 'bantawa': (8, 10)}
     with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=delimiter)
         # element of redundancy here, but we can't assume order

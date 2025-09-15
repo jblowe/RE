@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
 <params>
-  <attested name="khaling1" file="khaling1.data.xml"/>
-  <attested name="khaling2" file="khaling2.data.xml"/>
+  <attested name="khaling" file="khaling.data.xml"/>
   <attested name="wambule" file="wambule.data.xml"/>
-  <attested name="limbu1" file="limbu1.data.xml"/>
-  <attested name="limbu2" file="limbu2.data.xml"/>
+  <attested name="limbu" file="limbu.data.xml"/>
   <attested name="bantawa" file="bantawa.data.xml"/>
 
-  <reconstruction name="standard">
-    <proto_language name="proto" correspondences="kiranti.correspondences.xml"/>
+  <reconstruction name="initial">
+     <proto_language name="proto" correspondences="KIRANTI.initial.correspondences.xml"/>
+     <action name="upstream" target="proto"/>
+     <action name="upstream" from="khaling,wambule,limbu,bantawa" to="proto"/>
+  </reconstruction>
+  <reconstruction name="experiment1">
+    <proto_language name="proto" correspondences="KIRANTI.first_step.correspondences.xml"/>
     <action name="upstream" target="proto"/>
-    <action name="upstream" from="khaling1,khaling2,wambule,limbu1,limbu2,bantawa" to="proto"/>
+    <action name="upstream" from="khaling,wambule,limbu,bantawa" to="proto"/>
   </reconstruction>
 </params>

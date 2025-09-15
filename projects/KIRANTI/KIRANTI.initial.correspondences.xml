@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
-   <createdat>2025-09-06 17:54:56 UTC</createdat>
+   <createdat>2025-09-15 17:54:56 UTC</createdat>
    <parameters>
       <canon name="syllabe" value="IR"/>
       <spec name="supra_segmentals" value=""/>
@@ -8,20 +8,14 @@
    </parameters>
    <corr num="k">
       <proto syll="I">k</proto>
-      <modern dialecte="khaling1">
-         <seg>k</seg>
-      </modern>
-      <modern dialecte="khaling2">
+      <modern dialecte="khaling">
          <seg>k</seg>
       </modern>
       <modern dialecte="wambule">
          <seg>k</seg>
       </modern>
-      <modern dialecte="limbu1">
+      <modern dialecte="limbu">
          <seg>kh</seg>
-      </modern>
-      <modern dialecte="limbu2">
-         <seg>k</seg>
       </modern>
       <modern dialecte="bantawa">
          <seg>k</seg>
@@ -29,19 +23,13 @@
    </corr>
    <corr num="am">
       <proto syll="R">am</proto>
-      <modern dialecte="khaling1">
+      <modern dialecte="khaling">
          <seg>ɛm</seg>
-      </modern>
-      <modern dialecte="khaling2">
-         <seg>am</seg>
       </modern>
       <modern dialecte="wambule">
          <seg>am</seg>
       </modern>
-      <modern dialecte="limbu1">
-         <seg>amt</seg>
-      </modern>
-      <modern dialecte="limbu2">
+      <modern dialecte="limbu">
          <seg>amt</seg>
       </modern>
       <modern dialecte="bantawa">
