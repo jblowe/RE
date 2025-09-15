@@ -1,5 +1,6 @@
-import os, time, sys
+import os, time, sys, csv
 import lxml.etree as ET
+import traceback
 
 # we need some code from the sibling directory where the rest of the RE code lives
 
@@ -139,7 +140,8 @@ def file_content(file_path, display):
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
         try:
             data = xml2html(file_path, xslt_path)
-        except:
+        except Exception:
+            print(traceback.format_exc())
             data = '<p style="color: red">Problem handling this file, sorry!</p>'
     elif '.txt' in file_path or '.DAT' in file_path or '.DIS' in file_path:
         f = open(file_path, 'r')
@@ -147,10 +149,30 @@ def file_content(file_path, display):
         f.close()
         data = '<pre>' + limit_lines(data, 30000) + '</pre>'
     elif '.csv' in file_path:
-        f = open(file_path, 'r')
-        data = f.read()
-        f.close()
-        data = reformat(data, 30000)
+        # f = open(file_path, 'r')
+        # data = f.read()
+        # sniff the csv dialect
+        with open(file_path, 'r') as csvfile:
+            sample = csvfile.read(2048)
+            sniffer = csv.Sniffer()
+            dialect = sniffer.sniff(sample)
+        with open(file_path, 'r') as csvfile:
+            reader = csv.reader(csvfile, dialect)
+            data = ''
+            i = 0
+            comments = []
+            for row in reader:
+                if "#" in row[0]:
+                    comments.append('\t'.join(row))
+                    continue
+                i += 1
+                if i == 1:
+                    data += '<tr><thead>' + ''.join([f'<th>{r}</th>' for r in row]) + '</thead></tr>'
+                else:
+                    data += '<tr>' + ''.join([f'<td>{r}</td>' for r in row]) + '</tr>'
+            data = '<div class="table-responsive">' + \
+                   f'<table class="table table-sm table-hover table-bordered sets sortable">{data}</table>' +\
+                   '</div>'
     else:
         data = '<p style="color: red">Not a type of file that can be displayed here, sorry!</p>'
     return data, get_info(file_path)
@@ -180,6 +202,7 @@ def xml2html(xml_filename, xsl_filename):
 
 def determine_file_type(file_path, display):
     if 'correspondences.xml' in file_path:
+        # return 'toc2htmleditable.xsl'
         return 'toc2html.xsl'
     elif 'data.xml' in file_path:
         return 'lexicon2html.xsl'
