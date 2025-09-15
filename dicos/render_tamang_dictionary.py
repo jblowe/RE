@@ -255,9 +255,8 @@ def render_long_bits(d):
     parts = []
     if d.get('sem'):
         parts.append(f"<div class='mb-1'><b>Semantic domain:</b> {esc(d['sem'])}</div>")
-    # emp (emphasis / provenance) using helper
-    if d.get('emp'):
-        parts.append(f"<div class='mb-1'><b>Emp:</b>{render_emp(d['emp'])}</div>")
+    # if d.get('emp'):
+    #    parts.append(f"<div class='mb-1'><b>Emp:</b>{render_emp(d['emp'])}</div>")
     # cross-refs
     # for cf in d.get('cf', []):
     #     parts.append(f'<div class="mb-1"><b>cf:</b> {esc(cf)}</div>')
