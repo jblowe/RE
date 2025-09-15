@@ -56,7 +56,7 @@ def render_transliteration(t):
 def render_cf(t):
     if t:
         # the initial blank is important
-        return f' see <a href="{t[0]}">{t[0]}</a>'
+        return f' &#x2192; <a href="{t[0]}">{t[0]}</a>'
     else:
         return ''
 
