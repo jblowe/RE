@@ -316,7 +316,7 @@ def render_sub_block(s):
     short_html = ""
     if short_lines:
         short_html = f"""
-        <div class="mode-short">
+        <div class="">
           <div class="mode-badge">{badge_html}</div>
           <div class="mode-body">{short_lines}</div>
         </div>"""
@@ -456,7 +456,7 @@ dt { font-weight: bold; font-style: italic; }
 .mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
 /*   Responsive tweaks */
 @media (max-width: 600px) {
-  .mode-sub p .small-caps, .mode-body p .small-caps {   width: 2.2em; min-width: 2.2em; }
+  .mode-sub p .small-caps, .mode-body p .small-caps { min-width: 2.2em; }
  }
 @media (max-width: 576px) {
   html { font-size: 18px; }
