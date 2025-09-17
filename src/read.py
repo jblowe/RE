@@ -73,7 +73,8 @@ def read_correspondences(correspondences, rules, project_name, daughter_language
                 rule.attrib.get('num'),
                 context,
                 input_info.text,
-                outcome_info.text,
+                [x.strip() for x
+                 in outcome_info.text.split(',')],
                 languages,
                 int(rule.attrib.get('stage'))))
     return table

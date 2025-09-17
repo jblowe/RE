@@ -258,7 +258,7 @@ def read_table_from_widget(widget, rule_widget):
                 row[0],
                 RE.read_context_from_string(row[1]),
                 row[2].strip(),
-                row[3].strip(),
+                [x.strip() for x in row[3].split(',')],
                 [x.strip() for x in row[4].split(',')],
                 int(row[5])))
     return table
@@ -318,7 +318,7 @@ def make_rule_widget(table):
         store.append([rule.id,
                       RE.context_as_string(rule.context),
                       rule.input,
-                      rule.outcome,
+                      ', '.join(rule.outcome),
                       ', '.join(rule.languages),
                       str(rule.stage)])
     return make_sheet(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'], store, 'Rules')

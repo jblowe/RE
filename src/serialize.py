@@ -50,7 +50,7 @@ def serialize_correspondence_file(filename, parameters):
         ET.SubElement(r, 'input', **attributes).text = \
             rule.input
         ET.SubElement(r, 'outcome', languages=','.join(rule.languages)).text = \
-            rule.outcome
+            ','.join(rule.outcome)
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))

@@ -296,8 +296,9 @@ def partition_rules(rules, language):
         if language in rule.languages:
             if rule.stage < 1:
                 raise Exception('Stage must be greater than or equal to 1')
-            partitions[rule.outcome].append(rule)
-            token_lengths.append(len(rule.outcome))
+            for outcome in rule.outcome:
+                partitions[outcome].append(rule)
+                token_lengths.append(len(outcome))
             max_stage = max(max_stage, rule.stage)
     return partitions, sorted(token_lengths), max_stage
 
