@@ -66,6 +66,14 @@ def render_cf(t):
         return ''
 
 
+def render_var(t):
+    if t:
+        # the initial blank is important
+        return f' &#160; [<span class="small-caps">var</span> {render_tamang(t)}]'
+    else:
+        return ''
+
+
 def render_emp(t):
     if t:
         # the initial blank is important
@@ -127,6 +135,7 @@ def parse_mode(mode_el, base_id, idx):
         'ps': get_text(mode_el, 'ps'),
         'hw': get_text(mode_el, 'hw'),
         'sem': get_text(mode_el, 'sem'),
+        'var': get_text(mode_el, 'var'),
         # arrays
         'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
@@ -145,6 +154,7 @@ def parse_sub(sub_el, base_id, idx):
         'nag': get_text(sub_el, 'nag'),
         'dfn': get_text(sub_el, 'dfn'),
         'sem': get_text(sub_el, 'sem'),
+        'var': get_text(sub_el, 'var'),
         # arrays
         'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
@@ -168,6 +178,7 @@ def parse_entry(entry_el, i):
         'nag': get_text(entry_el, 'nag'),
         'dfn': get_text(entry_el, 'dfn'),
         'sem': get_text(entry_el, 'sem'),
+        'var': get_text(entry_el, 'var'),
         'emp': get_text(entry_el, 'emp'),
         'ton': get_text(entry_el, 'ton'),
         # arrays
@@ -257,8 +268,8 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
 
 def render_long_bits(d):
     parts = []
-    if d.get('sem'):
-        parts.append(f"<div class='mb-1'><b>Semantic domain:</b> {esc(d['sem'])}</div>")
+    # if d.get('sem'):
+    #     parts.append(f"<div class='mb-1'><b>Semantic domain:</b> {esc(d['sem'])}</div>")
     # if d.get('emp'):
     #    parts.append(f"<div class='mb-1'><b>Emp:</b>{render_emp(d['emp'])}</div>")
     # cross-refs
@@ -275,10 +286,8 @@ def render_long_bits(d):
     #    parts.append(f"<div class='mb-1'><b>grammar:</b> <i>{esc(gram)}</i></div>")
     # for enc in d.get('enc', []):
     #    parts.append(f"<div class='mb-1'><b>note (enc):</b> {esc(enc)}</div>")
-    for nb in d.get('nb', []):
-        parts.append(f"<div class='mb-1'><i>note </i> {esc(nb)}</div>")
-    for var in d.get('nb', []):
-        parts.append(f"<div class='mb-1'><i>variant </i> {esc(var)}</div>")
+    # for nb in d.get('nb', []):
+    #     parts.append(f"<div class='mb-1'><i>note </i> {esc(nb)}</div>")
     # for nbi in d.get('nbi', []):
     #     parts.append(f"<div class='mb-1'><i>note (internal):</i> {esc(nbi)}</div>")
     for xr in d.get('xr', []):
@@ -338,13 +347,14 @@ def render_hw_etc(entry):
     ps_html = f'&#160;<i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
     emp_html = render_emp(entry.get('emp', None))
+    var_html = render_var(entry.get('var', None))
     if homonym:
         hw = homonym[1]
         sense_number = render_sense_number(homonym[2])
     else:
         sense_number = ''
     hw_rendered = render_tamang(hw)
-    head = f'<p class="mb-0 entry-head">{hw_rendered}{sense_number}{ps_html}{cf_html}{emp_html}</p>'
+    head = f'<p class="mb-0 entry-head">{hw_rendered}{sense_number}{ps_html}{cf_html}{emp_html}{var_html}</p>'
     return head if hw else ''
 
 def render_short(entry):
@@ -358,6 +368,7 @@ def render_short(entry):
                 'nag': entry.get('nag',''), 'dfn': entry.get('dfn',''),
                 'dff': entry.get('dff',''), 'dfe': entry.get('dfe',''),
                 'sem': entry.get('sem',''),
+                'var': entry.get('var',''),
                 'phr': entry.get('phr',[]), 'gram': entry.get('gram',[]), 'xr': entry.get('xr',[]),
                 'so': entry.get('so',[]), 'rec': entry.get('rec',[]), 'nb': entry.get('nb',[]), 'nbi': entry.get('nbi',[]),
                 'il': entry.get('il',[]), 'ilold': entry.get('ilold',[]), 'enc': entry.get('enc',[]), 'cf': entry.get('cf',[]),
