@@ -7,7 +7,11 @@ import unicodedata
 
 # ============== helpers ==============
 
-bands_with_defaults = ''
+MASTER_BAND_LIST = set('cf dfbot dfe dff dfn dfzoo dial emp il mmnag nag nb niv phr ps rajdfn rajnag var xr'.split(' '))
+SPECIAL_BANDS = set('hw hwdial ps dff dfe nag dfn il phr cf xr emp dfbot dfzoo'.split(' '))
+DEFAULT_BANDS = MASTER_BAND_LIST - SPECIAL_BANDS
+# lists we collect into arrays
+TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
 
 
 def trans_str(s):
@@ -96,9 +100,6 @@ def localname(tag: str) -> str:
         return ''
     return tag.split('}', 1)[-1].lower()
 
-# lists we collect into arrays
-TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
-
 
 def get_text(parent, tag):
     return (parent.findtext(tag, '') or '').strip()
@@ -161,6 +162,8 @@ def parse_entry(entry_el, i):
         'ps': get_text(entry_el, 'ps'),
         'dff': get_text(entry_el, 'dff'),
         'dfe': get_text(entry_el, 'dfe'),
+        'dfbot': get_text(entry_el, 'dfbot'),
+        'dfzoo': get_text(entry_el, 'dfzoo'),
         'nag': get_text(entry_el, 'nag'),
         'dfn': get_text(entry_el, 'dfn'),
         'sem': get_text(entry_el, 'sem'),
@@ -260,16 +263,17 @@ def render_long_bits(d):
     # cross-refs
     # for cf in d.get('cf', []):
     #     parts.append(f'<div class="mb-1"><b>cf:</b> {esc(cf)}</div>')
+    # [dial]
     ils = d.get('il', [])
     if ils:
         items = ''.join(f'<li>{render_2part(il)}</li>' for il in ils)
         parts.append(f'<ol class="mb-2">{items}</ol>')
     for phr in d.get('phr', []):
         parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(phr)}</div>')
-    for gram in d.get('gram', []):
-        parts.append(f"<div class='mb-1'><b>grammar:</b> <i>{esc(gram)}</i></div>")
-    for enc in d.get('enc', []):
-        parts.append(f"<div class='mb-1'><b>note (enc):</b> {esc(enc)}</div>")
+    # for gram in d.get('gram', []):
+    #    parts.append(f"<div class='mb-1'><b>grammar:</b> <i>{esc(gram)}</i></div>")
+    # for enc in d.get('enc', []):
+    #    parts.append(f"<div class='mb-1'><b>note (enc):</b> {esc(enc)}</div>")
     for nb in d.get('nb', []):
         parts.append(f"<div class='mb-1'><b>note:</b> {esc(nb)}</div>")
     # for nbi in d.get('nbi', []):
@@ -285,14 +289,16 @@ def render_long_bits(d):
 def render_mode_block(m):
     mid = m['id']
     has_level = bool(m.get('level'))
-    badge_html = f"<span class='badge text-bg-secondary level'>{str(m['level'])}</span>" if has_level else "&#160;"
+    badge_html = f"<span class='badge text-bg-secondary level'>{str(m['level'])}</span>" if has_level else ''
+    if badge_html:
+        badge_html = f'<div class="mode-badge">{badge_html}</div>'
     lines = render_lang_lines('', m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''))
     short_html = ""
     if lines:
         short_html = f"""
         <div class="mode-short">
-          <div class="mode-badge">{badge_html}</div>
-          <div class="mode-body"><p class="mb-0">{lines}</p></div>
+          {badge_html}
+          <div class="mode-sub"><p class="mb-0">{lines}</p></div>
         </div>"""
     long_bits = render_long_bits(m)
     head_bits = ""
@@ -301,32 +307,27 @@ def render_mode_block(m):
     #     head_bits = f"<div class='mode-head mb-1'><b>{esc(m.get('hw',''))}</b>{ps_html}</div>"
     long_html = f"""
       <div class="mode-long" id="{mid}-long" style="display:none;">
-        <div class="mode-badge">{'&#160;' if has_level else '&#160;'}</div>
         <div class="mode-body">{head_bits}{long_bits}</div>
       </div>"""
-    return f"<div class='mode-block'>{short_html}{long_html}</div>"
+    return f"<div class='mode-sub'>{short_html}{long_html}</div>"
 
 def render_sub_block(s):
     sid = s['id']
-    badge_html = "&#160;"
     head_html = render_hw_etc(s)
     lines = render_lang_lines('', s.get('nag',''), s.get('dfn',''), s.get('dff',''), s.get('dfe',''))
     short_lines = (head_html + (f"<p class='mb-0'>{lines}</p>" if lines else "")) if (head_html or lines) else ""
     short_html = ""
     if short_lines:
         short_html = f"""
-        <div class="">
-          <div class="mode-badge">{badge_html}</div>
           <div class="mode-body">{short_lines}</div>
-        </div>"""
+        """
     long_bits = render_long_bits(s)
     long_html = f"""
       <div class="mode-long" id="{sid}-long" style="display:none;">
-        <div class="mode-badge">&#160;</div>
         <div class="mode-body">{long_bits}</div>
       </div>"""
     mode_blocks = ''.join(render_mode_block(m) for m in s.get('modes', []))
-    return f"<div class='mode-block sub-block'>{short_html}{long_html}{mode_blocks}</div>"
+    return f"<div class='mode-block'>{short_html}{long_html}{mode_blocks}</div>"
 
 def render_hw_etc(entry):
     hw = entry.get('hw', None)
@@ -363,11 +364,11 @@ def render_short(entry):
             blocks.append(render_mode_block(m))
         for s in entry.get('subs', []):
             blocks.append(render_sub_block(s))
-        return f"<div class='short'>{head}{''.join(blocks)}</div>"
+        body = ''.join(blocks)
     else:
         lines = render_lang_lines('', entry.get('nag',''), entry.get('dfn',''), entry.get('dff',''), entry.get('dfe',''))
-        body = f"<div class='mode-sub'><p class='mb-0'>{lines}</p></div>" if lines else ""
-        return f"<div class='short'>{head}{body}</div>"
+        body = f"<p class='mb-0'>{lines}</p>" if lines else ""
+    return f"<div class='short'>{head}{body}</div>"
 
 def render_entry_long(entry):
     has_base_defs = entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn')
@@ -380,13 +381,15 @@ def render_entry_long(entry):
 
 STYLE = r"""
 :root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-html, body { font-family: var(--font-sans); margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; }
+html, body { height: 100%; }
+body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-rows: auto 1fr; height: 100vh; overflow: hidden; }
+.fixed-topbar { position: relative; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.06); overflow-x: hidden; width: 100%; }
+#views { padding-top: 4px ; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; }
+#views > * { display: none !important; }
 .small-caps { font-variant-caps: small-caps; font-size: .7rem; }
-.mb-0      { margin-bottom: 0; }
-.ms-1      { margin-left: .25rem; }
-/*   Top Bar (sticky header) */
-.fixed-topbar { position: sticky; top: 0; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
-.header { position: relative; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
+.mb-0 { margin-bottom: 0; }
+.ms-1 { margin-left: .25rem; }
+.header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
 .header .logo { width: 28px; height: 28px; border-radius: 4px; background: rgba(255,255,255,.3); flex: 0 0 28px; }
 .header .brand { color: #fff; text-decoration: none; font-weight: bold; overflow: hidden; }
 .header .page-links { margin-left: auto; display: flex; gap: .5rem; }
@@ -396,45 +399,40 @@ html, body { font-family: var(--font-sans); margin: 0; padding: 0; max-width: 10
 .menu-toggle { position: absolute; left: -9999px; }
 .hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
-/* Mobile: dropdown menu */
+/* Mobile: dropdown menu, etc. */
 @media (max-width: 768px) {
  .hamburger { display: block; flex: 0 0 auto; margin-left: .5rem; }
  .header .brand { flex: 1 1 auto; min-width: 0; font-size:.70rem;}
- .header .page-links {   display: none;   position: absolute;   top: 100%; left: 0; right: 0;   z-index: 1200;   background: #fff;   border: 1px solid #e5e7eb;   padding: .5rem; }
- .header .page-links a {   display: block;   color: #111;   text-decoration: none;   padding: .5rem .75rem;   border-radius: .375rem; }
+ .header .page-links { display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 1200; background: #fff; border: 1px solid #e5e7eb; padding: .5rem; }
+ .header .page-links a { display: block; color: #111; text-decoration: none; padding: .5rem .75rem; border-radius: .375rem; }
  .header .page-links a:hover { background: #f2f2f2; }
  #menu-toggle:checked ~ .page-links { display: block; } }
-/*   Search + Letter Nav */
-.searchnav { display: none; background: #fff; border-bottom: 1px solid #e5e7eb; }
+/* Search + Letter Nav */
+.searchnav { display: none; background: #fff; }
 .searchbar { display: flex; gap: .5rem; align-items: center; padding: .4rem .75rem; }
 .searchbar input[type="text"] { flex: 1 1 auto; min-width: 0; font-size: 1rem; padding: .5rem .75rem; border: 1px solid #ced4da; border-radius: .375rem; }
 .searchbar button { flex: 0 0 auto; font-size: 1rem; padding: .5rem .9rem; border: 1px solid #ced4da; border-radius: .375rem; background: #fff; cursor: pointer; }
 .searchbar button:hover { background: #f1f3f5; }
-#letter-nav { display: block; overflow-x: auto; overflow-y: hidden; padding: .2rem .5rem; margin: 0; border-top: 1px solid #f1f3f5; border-bottom: 1px solid #e9ecef; justify-content: center; }
+#letter-nav { display: block; overflow-x: auto; overflow-y: hidden; padding: .2rem .5rem; margin: 0; border-top: 1px solid #f1f3f5; justify-content: center; }
 #letter-nav .nav-link { display: inline-block; font-size: 1.2rem; line-height: 1.1; padding: .2rem; margin-right: .15rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: 9999px; }
 #letter-nav .nav-link:hover { background: rgba(13,110,253,.08); border-color: rgba(13,110,253,.2); }
 #letter-nav .nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
-/* Only show search block when dictionary is visible */
 body.show-dico .searchnav { display: block !important; }
-/*   Views (About / Credits / Dictionary) */
-#views { padding-top: 0 !important; }
-#views > * { display: none !important; }
-body.show-about   #page-about   { display: block !important; }
+body.show-about #page-about { display: block !important; }
 body.show-credits #page-credits { display: block !important; }
-body.show-dico    #dictionary   { display: block !important; }
-/* Default (no hash) shows About */
+body.show-dico #dictionary { display: block !important; }
 #page-about { display: block; }
-.page { position: relative; max-width: 900px; margin: 0 auto 1rem; padding: 1rem 1.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.page { position: relative; margin: 0 auto 1rem; padding: 0 0.4rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
 .page .to-dico { position: absolute; top: .75rem; right: .75rem; font-size: .9rem; padding: .35rem .7rem; background: #fff; border: 1px solid #ced4da; border-radius: .375rem; text-decoration: none; color: inherit; }
 .page .to-dico:hover { background: #f1f3f5; }
 dt { font-weight: bold; font-style: italic; }
-/*   Entries */
+/* Entries */
 .entry { border: 1px solid #e5e7eb; border-radius: .5rem; padding: .75rem; margin: .5rem 0; background: #fff; padding-top: 0; }
 .entry.expanded { background: #f7f7f7; }
 .short { cursor: pointer; }
 .short:hover { background: #f8f9fa; }
 .entry .short .entry-head { margin: 4px 0; }
-/*   Modes / Subentries */
+/* Modes / Subentries */
 .mode-block { margin: .35rem 0 .5rem 1rem; }
 .mode-short, .mode-long { display: grid; grid-template-columns: auto minmax(0,1fr); column-gap: .5rem; align-items: start; }
 .mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
@@ -443,17 +441,16 @@ dt { font-weight: bold; font-style: italic; }
 .mode-body > p { margin: 0; }
 .mode-short { padding: .25rem 0; border-top: 1px dashed #eee; }
 .mode-short:first-child { border-top: none; }
-.mode-head .small-caps { font-variant-caps: small-caps; }
 .badge.text-bg-secondary { background: #6c757d; color: #fff; }
-/*   Search results */
+/* Search results */
 #search-results mark { background: #fff3cd; padding: 0 .1em; }
 #search-results .long, #search-results .mode-long { display: none; }
-/*   Wrapping / Gloss layout */
+/* Wrapping / Gloss layout */
 .mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: anywhere; word-break: break-word; }
 .mode-body p, .mode-sub p { margin: .15rem 0 0; text-indent: 0; }
-.mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; width: 2.6em; min-width: 2.6em; text-align: left; vertical-align: top; }
+.mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; text-align: left; }
 .mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
-/*   Responsive tweaks */
+/* Responsive tweaks */
 @media (max-width: 600px) {
   .mode-sub p .small-caps, .mode-body p .small-caps { min-width: 2.2em; }
  }
