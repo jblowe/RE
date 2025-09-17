@@ -321,21 +321,20 @@ class RContextQueue:
             return self
         return RContextQueue([rule.expanded_context[1]] + self.todo)
 
-    # If segment matches every context group in self, consume the
+    # If segment matches some context group in self, consume the
     # segment in each matching context in the context group, returning
     # a new instance. Otherwise return false.
     def match_consume(self, segment):
         new = []
         for contexts in self.todo:
             new_group = []
-            matches = True
+            matches = False
             for context in contexts:
                 if segment.startswith(context):
-                    pass
+                    matches = True
                 elif context.startswith(segment):
                     new_group.append(context[len(segment):])
-                else:
-                    matches = False
+                    matches = True
             if matches is False:
                 return False
             if new_group:
