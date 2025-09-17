@@ -290,7 +290,7 @@ def next_correspondence_map(parameters):
 # also return all possible token lengths, sorted
 def partition_rules(rules, language):
     partitions = collections.defaultdict(list)
-    token_lengths = []
+    token_lengths = set()
     max_stage = 1
     for rule in rules:
         if language in rule.languages:
@@ -298,9 +298,9 @@ def partition_rules(rules, language):
                 raise Exception('Stage must be greater than or equal to 1')
             for outcome in rule.outcome:
                 partitions[outcome].append(rule)
-                token_lengths.append(len(outcome))
+                token_lengths.add(len(outcome))
             max_stage = max(max_stage, rule.stage)
-    return partitions, sorted(token_lengths), max_stage
+    return partitions, sorted(list(token_lengths)), max_stage
 
 # This class represents the state of yet-to-be-matched-and-consumed
 # portions of right contexts during rule parsing, which people use to
