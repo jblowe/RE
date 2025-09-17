@@ -9,6 +9,7 @@ import unicodedata
 
 MASTER_BAND_LIST = set('cf dfbot dfe dff dfn dfzoo dial emp il mmnag nag nb niv phr ps rajdfn rajnag var xr'.split(' '))
 SPECIAL_BANDS = set('hw hwdial ps dff dfe nag dfn il phr cf xr emp dfbot dfzoo'.split(' '))
+ALL_BANDS = MASTER_BAND_LIST | SPECIAL_BANDS
 DEFAULT_BANDS = MASTER_BAND_LIST - SPECIAL_BANDS
 # lists we collect into arrays
 TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
@@ -269,21 +270,23 @@ def render_long_bits(d):
         items = ''.join(f'<li>{render_2part(il)}</li>' for il in ils)
         parts.append(f'<ol class="mb-2">{items}</ol>')
     for phr in d.get('phr', []):
-        parts.append(f'<div class="mb-1"><b>phr:</b> {render_2part(phr)}</div>')
+        parts.append(f'<div class="mb-1"><i>phr </i> {render_2part(phr)}</div>')
     # for gram in d.get('gram', []):
     #    parts.append(f"<div class='mb-1'><b>grammar:</b> <i>{esc(gram)}</i></div>")
     # for enc in d.get('enc', []):
     #    parts.append(f"<div class='mb-1'><b>note (enc):</b> {esc(enc)}</div>")
     for nb in d.get('nb', []):
-        parts.append(f"<div class='mb-1'><b>note:</b> {esc(nb)}</div>")
+        parts.append(f"<div class='mb-1'><i>note </i> {esc(nb)}</div>")
+    for var in d.get('nb', []):
+        parts.append(f"<div class='mb-1'><i>variant </i> {esc(var)}</div>")
     # for nbi in d.get('nbi', []):
-    #     parts.append(f"<div class='mb-1'><b>note (internal):</b> {esc(nbi)}</div>")
+    #     parts.append(f"<div class='mb-1'><i>note (internal):</i> {esc(nbi)}</div>")
     for xr in d.get('xr', []):
-        parts.append(f"<div class='mb-1'><b>See also:</b> {esc(xr)}</div>")
-    for so in d.get('so', []):
-        parts.append(f"<div class='mb-1'><b>Source:</b> {esc(so)}</div>")
-    for rec in d.get('rec', []):
-        parts.append(f"<div class='mb-1'><b>Recorded:</b> {esc(rec)}</div>")
+        parts.append(f"<div class='mb-1'><i>cf </i> {render_tamang(xr)}</div>")
+    # for so in d.get('so', []):
+    #     parts.append(f"<div class='mb-1'><b>Source:</b> {esc(so)}</div>")
+    # for rec in d.get('rec', []):
+    #    parts.append(f"<div class='mb-1'><b>Recorded:</b> {esc(rec)}</div>")
     return ''.join(parts)
 
 def render_mode_block(m):
@@ -435,6 +438,7 @@ dt { font-weight: bold; font-style: italic; }
 /* Modes / Subentries */
 .mode-block { margin: .35rem 0 .5rem 1rem; }
 .mode-short, .mode-long { display: grid; grid-template-columns: auto minmax(0,1fr); column-gap: .5rem; align-items: start; }
+.mode-long { margin-top: 6px; }
 .mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
 .mode-badge .badge { display: inline-flex; align-items: center; justify-content: center; min-width: 1.0em; padding: .15em .45em; line-height: 1.15; font-size: .85em; border-radius: 9999px; }
 .mode-body { min-width: 0; }
