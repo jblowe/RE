@@ -18,7 +18,27 @@
 
 <xsl:template match="tableOfCorr">
 	<div>
-		<h5>Macro-classes</h5>
+		<h6>Parameters</h6>
+		<table>
+		<xsl:if test="parameters/canon">
+			<tr>
+				<td><b>Syllable canon</b></td>
+			<td>
+				<xsl:value-of select="parameters/canon/@value"/>
+			</td>
+			</tr>
+		</xsl:if>
+		<xsl:if test="parameters/context_match_type">
+			<tr>
+				<td><b>Context match type</b></td>
+			<td>
+				<xsl:value-of select="parameters/context_match_type/@value"/>
+			</td>
+			</tr>
+		</xsl:if>
+		</table>
+		<p/>
+		<h6>Macro-classes (used in Contexts)</h6>
 		<div>
 		<table class="table table-sm table-striped sortable">
 			<thead>
@@ -35,13 +55,9 @@
 		</xsl:for-each>
 		</table>
 		</div>
-		<xsl:if test="parameters/canon">
-			<h5>Syllable canon</h5>
-			<xsl:value-of select="parameters/canon/@value"/>
-		</xsl:if>
-		<h5>Table of correspondences</h5>
+		<h6>Table of correspondences</h6>
 		<div>
-		<table class="table table-sm table-hover table-bordered sets sortable">
+		<table class="table table-sm table-hover table-striped table-bordered sets sortable">
 			<thead class="sticky-top top-0">
 				<tr>
 					<th>num</th>
