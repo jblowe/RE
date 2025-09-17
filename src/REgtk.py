@@ -129,16 +129,16 @@ class WrappedTextBuffer():
     def flush(self):
         pass
 
+class Pane(Gtk.ScrolledWindow):
+    def __init__(self, vexpand=False, hexpand=False):
+        super().__init__()
+        self.set_vexpand(vexpand)
+        self.set_hexpand(hexpand)
+
 def make_clickable_button(label, action):
     button = Gtk.Button(label=label)
     button.connect('clicked', action)
     return button
-
-def make_pane(vexpand=False, hexpand=False):
-    pane = Gtk.ScrolledWindow()
-    pane.set_vexpand(vexpand)
-    pane.set_hexpand(hexpand)
-    return pane
 
 def make_labeled_entry(entry, label='Insert text here'):
     box = Gtk.Box()
@@ -151,22 +151,6 @@ def make_expander(widget, label='Insert text here'):
     expander = Gtk.Expander(label=label)
     expander.add(widget)
     return expander
-
-def make_correspondence_row(correspondence, names):
-    return [correspondence.id,
-            RE.context_as_string(correspondence.context),
-            ','.join(correspondence.syllable_types),
-            correspondence.proto_form] + \
-            [', '.join(v)
-             for v in (correspondence.daughter_forms.get(name)
-                       for name in names)]
-
-def make_correspondence_store(table):
-    store = Gtk.ListStore(*([str, str, str, str] +
-                            len(table.daughter_languages) * [str]))
-    for c in table.correspondences:
-        store.append(make_correspondence_row(c, table.daughter_languages))
-    return store
 
 def tab_key_press_handler(view, event):
     if Gdk.keyval_name(event.keyval) == 'Tab':
@@ -185,307 +169,412 @@ def make_entry(text):
     entry.set_text(text)
     return entry
 
-# given a sound classes object, construct a widget that allows users
-# to specify a dictionary.
-def make_sound_classes_widget(sound_classes):
-    store = Gtk.ListStore(*([str, str]))
-    for (sound_class, constituents) in sound_classes.items():
-        store.append([sound_class,
-                      ', '.join(constituents)])
-    return make_sheet(['Class', 'Constituents'], store, name='Sound Classes'), store
+class SyllableCanonRegexEntry(Gtk.Entry):
+    def __init__(self, pattern):
+        super().__init__()
+        self.set_text(pattern)
 
-def make_syllable_canon_widget(syllable_canon):
-    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-    widget = make_expander(box, label="Syllable canon")
-    widget.regex_entry = make_entry(syllable_canon.regex.pattern)
-    sound_class_widget, sound_class_store = make_sound_classes_widget(syllable_canon.sound_classes)
-    widget.sound_class_store = sound_class_store
-    widget.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
-    widget.context_match_type_entry = make_entry(syllable_canon.context_match_type)
-    box.add(make_labeled_entry(widget.regex_entry, 'Syllable regex:'))
-    box.add(make_labeled_entry(widget.supra_segmental_entry, 'Supra-segmentals:'))
-    box.add(make_labeled_entry(widget.context_match_type_entry, 'Context match type'))
-    box.add(sound_class_widget)
-    return widget
+class ContextMatchTypeEntry(Gtk.Entry):
+    def __init__(self, match_type):
+        super().__init__()
+        self.set_text(match_type)
 
-def read_syllable_canon_from_widget(widget):
-    sound_classes = {row[0]: [x.strip() for x in row[1].split(',')]
-                     for row in widget.sound_class_store}
-    return RE.SyllableCanon(
-        sound_classes,
-        widget.regex_entry.get_text(),
-        [x.strip() for x in widget.supra_segmental_entry.get_text().split(',')],
-        widget.context_match_type_entry.get_text()
-    )
+class SyllableCanonWidget(Gtk.Expander):
+    def __init__(self, syllable_canon):
+        super().__init__(label='Syllable Canon')
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        self.add(box)
+        self.regex_entry = SyllableCanonRegexEntry(syllable_canon.regex.pattern)
+        self.sound_class_widget = SoundClassSheet(syllable_canon.sound_classes)
+        self.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
+        self.context_match_type_entry = ContextMatchTypeEntry(syllable_canon.context_match_type)
+        box.add(make_labeled_entry(self.regex_entry, 'Syllable regex:'))
+        box.add(make_labeled_entry(self.supra_segmental_entry, 'Supra-segmentals:'))
+        box.add(make_labeled_entry(self.context_match_type_entry, 'Context match type'))
+        box.add(self.sound_class_widget)
 
-def make_lexicon_widget(words):
-    store = Gtk.ListStore(str, str)
-    for form in words:
-        store.append([form.glyphs, form.gloss])
-    view = Gtk.TreeView.new_with_model(store)
-    for i, column_title in enumerate(['Form', 'Gloss']):
-        cell = Gtk.CellRendererText()
-        cell.set_property('editable', True)
-        column = Gtk.TreeViewColumn(column_title, cell, text=i)
-        column.set_sort_column_id(i)
-        view.append_column(column)
-    pane = make_pane(vexpand=True)
-    pane.add(view)
-    return pane
+    def syllable_canon(self):
+        return RE.SyllableCanon(
+            self.sound_class_widget.sound_classes(),
+            self.regex_entry.get_text(),
+            [x.strip() for x in self.supra_segmental_entry.get_text().split(',')],
+            self.context_match_type_entry.get_text()
+        )
 
-def make_lexicons_widget(lexicons):
-    notebook = Gtk.Notebook()
-    for lexicon in lexicons:
-        notebook.append_page(make_lexicon_widget(lexicon.forms),
+class LexiconWidget(Pane):
+    def __init__(self, words):
+        super().__init__(vexpand=True)
+        self.store = Gtk.ListStore(str, str)
+        for form in words:
+            self.store.append([form.glyphs, form.gloss])
+        view = Gtk.TreeView.new_with_model(self.store)
+        for i, column_title in enumerate(['Form', 'Gloss']):
+            cell = Gtk.CellRendererText()
+            cell.set_property('editable', True)
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            view.append_column(column)
+        self.add(view)
+
+class LexiconsWidget(Gtk.Notebook):
+    def __init__(self, lexicons):
+        super().__init__()
+        for lexicon in lexicons:
+            self.append_page(LexiconWidget(lexicon.forms),
                              Gtk.Label(label=lexicon.language))
-    return notebook
-
-def read_table_from_widget(widget, rule_widget):
-    view = widget.view
-    names = [col.get_title() for col in view.get_columns()][4:]
-    table = RE.TableOfCorrespondences('', names)
-    for row in view.get_model():
-        table.add_correspondence(
-            RE.Correspondence(
-                row[0],
-                RE.read_context_from_string(row[1]),
-                [x.strip() for x in row[2].split(',')], row[3],
-                dict(zip(names, ([x.strip() for x in token.split(',')]
-                                 for token in row[4:])))))
-    for row in rule_widget.view.get_model():
-        table.add_rule(
-            RE.Rule(
-                row[0],
-                RE.read_context_from_string(row[1]),
-                row[2].strip(),
-                [x.strip() for x in row[3].split(',')],
-                [x.strip() for x in row[4].split(',')],
-                int(row[5])))
-    return table
 
 # A sheet is an expandable editable spreadsheet which has Add and
 # Delete buttons to add or remove rows.
-def make_sheet(column_names, store, name='Insert name here'):
-    view = Gtk.TreeView.new_with_model(store)
-    view.connect('key-press-event', tab_key_press_handler)
-    def store_edit_text(i):
-        def f(widget, path, text):
-            store[path][i] = text
-        return f
-    for i, column_title in enumerate(column_names):
-        cell = Gtk.CellRendererText()
-        cell.set_property('editable', True)
-        cell.connect('edited', store_edit_text(i))
-        column = Gtk.TreeViewColumn(column_title, cell, text=i)
-        column.set_sort_column_id(i)
-        view.append_column(column)
-    pane = make_pane(vexpand=True)
-    pane.add(view)
+class Sheet(Gtk.Expander):
+    def __init__(self, column_names, store, name):
+        super().__init__(label=name)
+        view = Gtk.TreeView.new_with_model(store)
+        view.connect('key-press-event', tab_key_press_handler)
+        def store_edit_text(i):
+            def f(widget, path, text):
+                store[path][i] = text
+            return f
+        for i, column_title in enumerate(column_names):
+            cell = Gtk.CellRendererText()
+            cell.set_property('editable', True)
+            cell.connect('edited', store_edit_text(i))
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            view.append_column(column)
+        pane = Pane(vexpand=True)
+        pane.add(view)
 
-    def add_button_clicked(widget):
-        columns = view.get_columns()
-        row = store.append(len(columns) * [''])
-        path = store.get_path(row)
-        view.set_cursor(path, columns[0], True)
+        buttons_box = Gtk.Box(spacing=0)
+        buttons_box.add(make_clickable_button('Add', self.add_button_clicked))
+        buttons_box.add(make_clickable_button('Delete', self.delete_button_clicked))
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+        box.add(pane)
+        box.add(buttons_box)
+        pane.set_vexpand(False)
+        self.add(box)
+        self.store = store
+        self.view = view
+        # we need to manually expand and unexpand the pane to trick layout
+        # into working right.
+        def action(widget, spec):
+            pane.set_vexpand(widget.get_expanded())
+        self.connect('notify::expanded', action)
 
-    def delete_button_clicked(widget):
-        store.remove(store.get_iter(view.get_cursor()[0]))
+    def add_button_clicked(self, widget):
+        columns = self.view.get_columns()
+        row = self.store.append(len(columns) * [''])
+        path = self.store.get_path(row)
+        self.view.set_cursor(path, columns[0], True)
 
-    buttons_box = Gtk.Box(spacing=0)
-    buttons_box.add(make_clickable_button('Add', add_button_clicked))
-    buttons_box.add(make_clickable_button('Delete', delete_button_clicked))
-    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-    box.add(pane)
-    box.add(buttons_box)
-    pane.set_vexpand(False)
-    expander = make_expander(box, name)
-    expander.view = view
-    # we need to manually expand and unexpand the pane to trick layout
-    # into working right.
-    def action(widget, spec):
-        pane.set_vexpand(widget.get_expanded())
-    expander.connect('notify::expanded', action)
-    return expander
+    def delete_button_clicked(self, widget):
+        self.store.remove(self.store.get_iter(self.view.get_cursor()[0]))
 
-def make_correspondence_widget(table):
-    store = make_correspondence_store(table)
-    return make_sheet(['ID', 'Context', 'Syllable Type', '*'] + table.daughter_languages,
-                      store, 'Correspondences')
+def make_correspondence_row(correspondence, names):
+    return [correspondence.id,
+            RE.context_as_string(correspondence.context),
+            ','.join(correspondence.syllable_types),
+            correspondence.proto_form] + \
+            [', '.join(v)
+             for v in (correspondence.daughter_forms.get(name)
+                       for name in names)]
 
-def make_rule_widget(table):
-    store = Gtk.ListStore(*([str, str, str, str, str, str]))
-    for rule in table.rules:
-        store.append([rule.id,
-                      RE.context_as_string(rule.context),
-                      rule.input,
-                      ', '.join(rule.outcome),
-                      ', '.join(rule.languages),
-                      str(rule.stage)])
-    return make_sheet(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'], store, 'Rules')
+class CorrespondenceSheet(Sheet):
+    def __init__(self, table):
+        store = Gtk.ListStore(*([str, str, str, str] +
+                                len(table.daughter_languages) * [str]))
+        for c in table.correspondences:
+            store.append(make_correspondence_row(c, table.daughter_languages))
+        self.names = table.daughter_languages
+        super().__init__(['ID', 'Context', 'Syllable Type', '*'] + table.daughter_languages,
+                         store,
+                         'Correspondences')
 
-def read_parameters_from_widgets(table_widget, rule_widget, canon_widget, name, mels):
-    return RE.Parameters(
-        read_table_from_widget(table_widget, rule_widget),
-        read_syllable_canon_from_widget(canon_widget),
-        name,
-        mels)
+    def fill(self, table):
+        for row in self.store:
+            table.add_correspondence(
+                RE.Correspondence(
+                    row[0],
+                    RE.read_context_from_string(row[1]),
+                    [x.strip() for x in row[2].split(',')], row[3],
+                    dict(zip(self.names, ([x.strip() for x in token.split(',')]
+                                          for token in row[4:])))))
 
-def make_parameter_widget(settings, parameters):
-    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-    box.table_widget = make_correspondence_widget(parameters.table)
-    box.rule_widget = make_rule_widget(parameters.table)
-    box.canon_widget = make_syllable_canon_widget(parameters.syllable_canon)
-    box.proto_language_name = parameters.proto_language_name
-    box.mels = parameters.mels
-    box.add(box.canon_widget)
-    box.add(box.table_widget)
-    box.add(box.rule_widget)
+class RuleSheet(Sheet):
+    def __init__(self, table):
+        store = Gtk.ListStore(*([str, str, str, str, str, str]))
+        for rule in table.rules:
+            store.append([rule.id,
+                          RE.context_as_string(rule.context),
+                          rule.input,
+                          ', '.join(rule.outcome),
+                          ', '.join(rule.languages),
+                          str(rule.stage)])
+        super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
+                         store, 'Rules')
 
-    def save_button_clicked(widget):
-        serialize.serialize_correspondence_file(
-            os.path.join(
-                settings.directory_path,
-                settings.proto_languages[parameters.proto_language_name]),
-            read_parameters_from_widgets(
-                box.table_widget,
-                box.rule_widget,
-                box.canon_widget,
-                parameters.proto_language_name,
-                parameters.mels))
+    def fill(self, table):
+        for row in self.store:
+            table.add_rule(
+                RE.Rule(
+                    row[0],
+                    RE.read_context_from_string(row[1]),
+                    row[2].strip(),
+                    [x.strip() for x in row[3].split(',')],
+                    [x.strip() for x in row[4].split(',')],
+                    int(row[5])))
 
-    box.add(make_clickable_button('Save', save_button_clicked))
-    return box
+# given a sound classes object, construct a widget that allows users
+# to specify a dictionary.
+class SoundClassSheet(Sheet):
+    def __init__(self, sound_classes):
+        store = Gtk.ListStore(*([str, str]))
+        for (sound_class, constituents) in sound_classes.items():
+            store.append([sound_class,
+                          ', '.join(constituents)])
+        super().__init__(['Class', 'Constituents'],
+                         store, 'Sound Classes')
 
-def read_parameter_tree_from_widget(notebook_widget):
-    return {page.proto_language_name:
-            read_parameters_from_widgets(page.table_widget,
-                                         page.rule_widget,
-                                         page.canon_widget,
-                                         page.proto_language_name,
-                                         page.mels)
-            for page in notebook_widget}
+    def sound_classes(self):
+        return {row[0]: [x.strip() for x in row[1].split(',')]
+                for row in self.store}
 
-def make_parameters_widget(settings):
-    notebook = Gtk.Notebook()
-    for (language, correspondence_filename) in settings.proto_languages.items():
-        notebook.append_page(
-            make_parameter_widget(
-                settings,
-                read.read_correspondence_file(
-                    os.path.join(settings.directory_path,
-                                 correspondence_filename),
-                    language,
-                    settings.upstream[language],
-                    language,
-                    settings.mel_filename)),
-            Gtk.Label(label=language))
-    return notebook
+class ParameterWidget(Gtk.Box):
+    def __init__(self, settings, parameters):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL)
+        self.correspondence_sheet = CorrespondenceSheet(parameters.table)
+        self.rule_sheet = RuleSheet(parameters.table)
+        self.canon_widget = SyllableCanonWidget(parameters.syllable_canon)
+        self.proto_language_name = parameters.proto_language_name
+        self.mels = parameters.mels
+        self.add(self.canon_widget)
+        self.add(self.correspondence_sheet)
+        self.add(self.rule_sheet)
 
-def make_sets_store(sets=None):
-    return Gtk.TreeStore(str, str, str)
+        def save_button_clicked(widget):
+            serialize.serialize_correspondence_file(
+                os.path.join(
+                    settings.directory_path,
+                    settings.proto_languages[parameters.proto_language_name]),
+                self.parameters())
 
-def make_sets_view(model):
-    sets_view = Gtk.TreeView.new_with_model(model)
-    recon_column = Gtk.TreeViewColumn('Reconstructions',
-                                      Gtk.CellRendererText(),
-                                      text=0)
-    recon_column.set_sort_column_id(0)
-    recon_column.set_resizable(True)
-    sets_view.append_column(recon_column)
-    sets_view.append_column(Gtk.TreeViewColumn('Ids',
-                                               Gtk.CellRendererText(),
-                                               text=1))
-    sets_view.append_column(Gtk.TreeViewColumn('mel',
-                                               Gtk.CellRendererText(),
-                                               text=2))
-    return sets_view
+        self.add(make_clickable_button('Save', save_button_clicked))
 
-def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statistics_buffer,
-                     failed_forms_store, correspondence_index_store):
-    box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-    window = make_pane(vexpand=True)
-    store = make_sets_store()
-    view = make_sets_view(store)
-    window.add(view)
-    box.add(window)
-    box.store = store
-    box.view = view
+    def parameters(self):
+        names = self.correspondence_sheet.names
+        table = RE.TableOfCorrespondences('', names)
+        self.correspondence_sheet.fill(table)
+        self.rule_sheet.fill(table)
+        return RE.Parameters(
+            table,
+            self.canon_widget.syllable_canon(),
+            self.proto_language_name,
+            self.mels)
 
-    def batch_upstream_clicked(widget):
-        thread = threading.Thread(target=batch_upstream)
-        thread.daemon = True
-        thread.start()
+class ParameterTreeWidget(Gtk.Notebook):
+    def __init__(self, settings):
+        super().__init__()
+        for (language, correspondence_filename) in settings.proto_languages.items():
+            self.append_page(
+                ParameterWidget(
+                    settings,
+                    read.read_correspondence_file(
+                        os.path.join(settings.directory_path,
+                                     correspondence_filename),
+                        language,
+                        settings.upstream[language],
+                        language,
+                        settings.mel_filename)),
+                Gtk.Label(label=language))
 
-    def batch_upstream():
-        out = sys.stdout
-        sys.stdout = statistics_buffer
-        box.form_row_map = {}
+    def parameter_tree(self):
+        return {parameter_widget.proto_language_name:
+                parameter_widget.parameters()
+                for parameter_widget in self}
+
+class SetsWidget(Gtk.Box):
+    def __init__(self, on_batch_clicked):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL)
+        self.window = Pane(vexpand=True)
+
+        self.store = Gtk.TreeStore(str, str, str)
+        self.view = Gtk.TreeView.new_with_model(self.store)
+        recon_column = Gtk.TreeViewColumn('Reconstructions',
+                                          Gtk.CellRendererText(),
+                                          text=0)
+        recon_column.set_sort_column_id(0)
+        recon_column.set_resizable(True)
+        self.view.append_column(recon_column)
+        self.view.append_column(Gtk.TreeViewColumn("Ids",
+                                                   Gtk.CellRendererText(), text=1))
+        self.view.append_column(Gtk.TreeViewColumn("mel",
+                                                   Gtk.CellRendererText(), text=2))
+        self.window.add(self.view)
+        self.add(self.window)
+
+        button = make_clickable_button("Batch All Upstream", lambda w: on_batch_clicked())
+        self.add(button)
+
+        # For scroll-to-form support
+        self.form_row_map = {}
+
+    def populate(self, proto_lexicon):
+        """Populate this store with forms."""
+        self.store.clear()
+        self.form_row_map.clear()
+
         def store_row(parent, form):
             if isinstance(form, RE.ProtoForm):
-                row = store.append(
+                row = self.store.append(
                     parent=parent,
-                    row=['*'+form.glyphs if parent is None
-                         else str(form),
+                    row=['*' + form.glyphs if parent is None else str(form),
                          RE.correspondences_as_ids(form.correspondences),
                          str(form.mel)])
                 for supporting_form in form.supporting_forms:
                     store_row(row, supporting_form)
             elif isinstance(form, RE.ModernForm):
-                row = store.append(parent=parent,
-                                   row=[str(form), '', ''])
+                row = self.store.append(parent=parent, row=[str(form), '', ''])
             elif isinstance(form, RE.Stage0Form):
-                row = store.append(parent=parent,
-                                   row=[str(form), '', ''])
+                row = self.store.append(parent=parent, row=[str(form), '', ''])
                 ids = None
                 for (stage, rules_applied) in form.history:
                     if ids:
-                        store.append(parent=row,
-                                     row=['> *' + stage,
-                                          f' by applying {ids}',
-                                          ''])
-                    ids = ','.join([rule.id for rule in rules_applied])
-                store.append(parent=row,
-                             row=['> ' + str(form.modern),
-                                  f' by applying {ids}',
-                                  ''])
-            box.form_row_map[form] = row
+                        self.store.append(parent=row,
+                                          row=["> *" + stage,
+                                               f" by applying {ids}",
+                                               ""])
+                    ids = ",".join([rule.id for rule in rules_applied])
+                self.store.append(parent=row,
+                                  row=["> " + str(form.modern),
+                                       f" by applying {ids}",
+                                       ""])
+            self.form_row_map[form] = row
 
-        proto_lexicon = RE.upstream_tree(settings.upstream_target,
-                                         settings.upstream,
-                                         read_parameter_tree_from_widget(parameter_tree_widget),
-                                         attested_lexicons,
-                                         # HACK
-                                         False)
-        def update_model():
-            store.clear()
-            failed_forms_store.clear()
-            correspondence_index_store.clear()
-            for form in proto_lexicon.forms:
-                store_row(None, form)
-            for failed_parse in proto_lexicon.statistics.failed_parses:
-                failed_forms_store.append([failed_parse.language,
-                                           failed_parse.glyphs,
-                                           failed_parse.gloss
-                                           if isinstance(failed_parse, (RE.Stage0Form, RE.ModernForm))
-                                           else ''])
-            for (correspondence, forms) in proto_lexicon.statistics.correspondence_index.items():
-                row = correspondence_index_store.append(parent=None,
-                                                        row=[str(correspondence),
-                                                             len(forms),
-                                                             None])
-                for form in forms:
-                    correspondence_index_store.append(parent=row,
-                                                      row=[str(form), None, form])
-        sys.stdout = out
-        GLib.idle_add(update_model)
+        for form in proto_lexicon.forms:
+            store_row(None, form)
 
-    box.add(make_clickable_button('Batch All Upstream', batch_upstream_clicked))
-    return box
+    def scroll_to_form(self, form):
+        """Scroll and select the row with the given form."""
+        iter_ = self.form_row_map.get(form)
+        if iter_:
+            path = self.view.get_model().get_path(iter_)
+            self.view.expand_to_path(path)
+            self.view.scroll_to_cell(path, None, True, 0.5, 0.0)
+            self.view.set_cursor(path)
+            return True
+        return False
 
-def make_pane_container(orientation):
-    container = Gtk.Paned()
-    container.set_orientation(orientation)
-    return container
+class LogWidget(Pane):
+    def __init__(self):
+        super().__init__(vexpand=True, hexpand=True)
+        text_view = Gtk.TextView()
+        self.add(text_view)
+        self.log_buffer = WrappedTextBuffer(text_view.get_buffer())
+
+    def get_buffer(self):
+        return self.log_buffer
+
+class FailedParsesWidget(Pane):
+    def __init__(self):
+        super().__init__(vexpand=True, hexpand=True)
+        self.store = Gtk.ListStore(str, str, str)
+
+        view = Gtk.TreeView.new_with_model(self.store)
+        for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            view.append_column(column)
+        self.add(view)
+
+    def populate(self, failed_parses):
+        self.store.clear()
+        for failed_parse in failed_parses:
+            self.store.append([
+                failed_parse.language,
+                failed_parse.glyphs,
+                failed_parse.gloss if isinstance(failed_parse, (RE.Stage0Form, RE.ModernForm)) else ''
+            ])
+
+class CorrespondenceIndexWidget(Pane):
+    def __init__(self, on_form_clicked):
+        super().__init__(vexpand=True, hexpand=True)
+        self.store = Gtk.TreeStore(str, int, object)
+
+        view = Gtk.TreeView.new_with_model(self.store)
+
+        # Cell renderers
+        def correspondence_cell_fun(column, cell, model, iter_, data=None):
+            target = model.get_value(iter_, 2)
+            text = model.get_value(iter_, 0)
+            # highlight children as a link
+            if target:
+                cell.set_property("markup", f'<span foreground="blue" underline="single">{text}</span>')
+            else:
+                cell.set_property("text", text)
+
+        def ref_cell_fun(column, cell, model, iter_, data=None):
+            target = model.get_value(iter_, 2)   # "link target" object for children
+            refs = model.get_value(iter_, 1)     # # of references column
+            if target is None:                   # parent row
+                cell.set_property("text", str(refs))
+            else:                                # child row
+                cell.set_property("text", "")    # blank out children
+
+        for i, column_title in enumerate(['Correspondence', '# of references']):
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            if i == 0:
+                column.set_cell_data_func(cell, correspondence_cell_fun)
+            if i == 1:
+                column.set_cell_data_func(cell, ref_cell_fun)
+            view.append_column(column)
+
+        def on_button_press(view, event):
+            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:  # left click
+                # Convert click coordinates to tree path
+                x = int(event.x)
+                y = int(event.y)
+                pthinfo = view.get_path_at_pos(x, y)
+                if pthinfo is not None:
+                    path, col, cellx, celly = pthinfo
+                    model = view.get_model()
+                    iter_ = model.get_iter(path)
+                    target = model.get_value(iter_, 2)
+                    if target is not None:
+                        # child row with hyperlink target
+                        on_form_clicked(target)
+                        return True  # stop further handling
+            return False
+
+        # ---------- Cursor change on hover ----------
+        def on_motion_notify(view, event):
+            x = int(event.x)
+            y = int(event.y)
+            pthinfo = view.get_path_at_pos(x, y)
+            window = view.get_window()
+            if pthinfo is not None:
+                path, col, cellx, celly = pthinfo
+                model = view.get_model()
+                iter_ = model.get_iter(path)
+                target = model.get_value(iter_, 2)
+                if target is not None:  # child row
+                    window.set_cursor(Gdk.Cursor.new(Gdk.CursorType.HAND2))
+                    return False
+                window.set_cursor(None)  # reset
+            return False
+
+        view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK)
+        view.connect("button-press-event", on_button_press)
+        view.connect("motion-notify-event", on_motion_notify)
+        self.add(view)
+
+    def populate(self, correspondence_index):
+        self.store.clear()
+        for (correspondence, forms) in correspondence_index.items():
+            row = self.store.append(parent=None, row=[str(correspondence), len(forms), None])
+            for form in forms:
+                self.store.append(parent=row, row=[str(form), None, form])    
 
 def make_open_dialog_window(window):
     def add_filters(dialog):
@@ -568,105 +657,43 @@ def make_RE_menu_bar(window):
 
     return menu_bar
 
+def make_pane_container(orientation):
+    container = Gtk.Paned()
+    container.set_orientation(orientation)
+    return container
+
 class REWindow(Gtk.Window):
 
     def __init__(self, settings, attested_lexicons):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1400)
+        self.settings = settings
+        self.attested_lexicons = attested_lexicons
+
+        # Input widgets
+        self.lexicons_widget = LexiconsWidget(attested_lexicons.values())
+        self.parameters_widget = ParameterTreeWidget(settings)
+
+        # Output widgets
+        self.sets_widget = SetsWidget(self.on_batch_all_upstream)
+        self.log_widget = LogWidget()
+        self.failed_parses_widget = FailedParsesWidget()
+        self.correspondence_index_widget = CorrespondenceIndexWidget(
+            self.sets_widget.scroll_to_form)
 
         # -----------------------------
         # Stack-based statistics pane
         # -----------------------------
         self.statistics_stack = Gtk.Stack()
-        self.statistics_stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
+        self.statistics_stack.set_transition_type(
+            Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
         self.statistics_stack.set_transition_duration(200)
 
-        # Text log view
-        text_view_pane = make_pane(vexpand=True, hexpand=True)
-        text_view = Gtk.TextView()
-        text_view_pane.add(text_view)
-        self.statistics_buffer = WrappedTextBuffer(text_view.get_buffer())
-        self.statistics_stack.add_titled(text_view_pane, "log", "Log")
-
-        self.failed_forms_store = Gtk.ListStore(str, str, str)
-        failed_forms_view = Gtk.TreeView.new_with_model(self.failed_forms_store)
-        for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
-            cell = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(column_title, cell, text=i)
-            column.set_sort_column_id(i)
-            failed_forms_view.append_column(column)
-        failed_forms_pane = make_pane(vexpand=True, hexpand=True)
-        failed_forms_pane.add(failed_forms_view)
-        self.statistics_stack.add_titled(failed_forms_pane, "failed", "Failed Parses")
-
-        self.correspondence_index_store = Gtk.TreeStore(str, int, object)
-        correspondence_index_view = Gtk.TreeView.new_with_model(self.correspondence_index_store)
-        def correspondence_cell_fun(column, cell, model, iter_, data=None):
-            target = model.get_value(iter_, 2)
-            text = model.get_value(iter_, 0)
-            # highlight children as a link
-            if target:
-                cell.set_property("markup", f'<span foreground="blue" underline="single">{text}</span>')
-        def ref_cell_fun(column, cell, model, iter_, data=None):
-            target = model.get_value(iter_, 2)   # "link target" object for children
-            refs = model.get_value(iter_, 1)     # # of references column
-            if target is None:                   # parent row
-                cell.set_property("text", str(refs))
-            else:                                # child row
-                cell.set_property("text", "")    # blank out children
-        for i, column_title in enumerate(['Correspondence', '# of references']):
-            cell = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(column_title, cell, text=i)
-            column.set_sort_column_id(i)
-            if i == 0:
-                column.set_cell_data_func(cell, correspondence_cell_fun)
-            if i == 1:
-                column.set_cell_data_func(cell, ref_cell_fun)
-            correspondence_index_view.append_column(column)
-
-        def on_button_press(view, event):
-            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:  # left click
-                # Convert click coordinates to tree path
-                x = int(event.x)
-                y = int(event.y)
-                pthinfo = view.get_path_at_pos(x, y)
-                if pthinfo is not None:
-                    path, col, cellx, celly = pthinfo
-                    model = view.get_model()
-                    iter_ = model.get_iter(path)
-                    target = model.get_value(iter_, 2)
-                    if target is not None:
-                        # child row with hyperlink target
-                        scroll_to_form(target)
-                        return True  # stop further handling
-            return False
-
-        correspondence_index_view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK)
-        correspondence_index_view.connect("button-press-event", on_button_press)
-
-        # ---------- Cursor change on hover ----------
-        def on_motion_notify(view, event):
-            x = int(event.x)
-            y = int(event.y)
-            pthinfo = view.get_path_at_pos(x, y)
-            window = view.get_window()
-            if pthinfo is not None:
-                path, col, cellx, celly = pthinfo
-                model = view.get_model()
-                iter_ = model.get_iter(path)
-                target = model.get_value(iter_, 2)
-                if target is not None:  # child row
-                    window.set_cursor(Gdk.Cursor.new(Gdk.CursorType.HAND2))
-                    return False
-                window.set_cursor(None)  # reset
-            return False
-
-        correspondence_index_view.add_events(Gdk.EventMask.POINTER_MOTION_MASK)
-        correspondence_index_view.connect("motion-notify-event", on_motion_notify)
-
-        correspondence_index_pane = make_pane(vexpand=True, hexpand=True)
-        correspondence_index_pane.add(correspondence_index_view)
-        self.statistics_stack.add_titled(correspondence_index_pane, "index", "Correspondence index")
+        self.statistics_stack.add_titled(self.log_widget, "log", "Log")
+        self.statistics_stack.add_titled(self.failed_parses_widget,
+                                         "failed", "Failed Parses")
+        self.statistics_stack.add_titled(self.correspondence_index_widget,
+                                         "index", "Correspondence index")
 
         # StackSwitcher to switch between views
         stack_switcher = Gtk.StackSwitcher()
@@ -687,37 +714,45 @@ class REWindow(Gtk.Window):
         pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
         box.pack_start(pane_layout, True, True, 0)
         left_pane = make_pane_container(Gtk.Orientation.VERTICAL)
-        left_pane.add(make_lexicons_widget(attested_lexicons.values()))
+        left_pane.add(self.lexicons_widget)
         pane_layout.add1(left_pane)
         right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         pane_layout.add2(right_pane)
-        parameters_widget = make_parameters_widget(settings)
-        sets_widget = make_sets_widget(settings, attested_lexicons, parameters_widget,
-                                       self.statistics_buffer, self.failed_forms_store,
-                                       self.correspondence_index_store)
-        right_pane.add1(sets_widget)
+        right_pane.add1(self.sets_widget)
         stats_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         stats_box.pack_start(stack_switcher, False, False, 0)
         stats_box.pack_start(self.statistics_stack, True, True, 0)
         right_pane.add2(stats_box)  # add the stack here
 
-        def scroll_to_form(form):
-            """Scroll and select the row with the given form_id."""
-            # Find iter associated with form.
-            iter_ = sets_widget.form_row_map[form]
-            if iter_:
-                path = sets_widget.store.get_path(iter_)
-                # ensure parents are expanded (since the user is most
-                # likely going to do that anyway)
-                sets_widget.view.expand_to_path(path)
-                sets_widget.view.scroll_to_cell(path, None, True, 0.5, 0.0)
-                sets_widget.view.set_cursor(path)  # also select it
-                return True
-            return False
-
-        left_pane.add2(parameters_widget)
+        left_pane.add2(self.parameters_widget)
 
         self.add(box)
+
+    def on_batch_all_upstream(self):
+        """Run the batch process in a thread."""
+        thread = threading.Thread(target=self._batch_upstream)
+        thread.daemon = True
+        thread.start()
+
+    def _batch_upstream(self):
+        def update_model():
+            self.sets_widget.populate(proto_lexicon)
+            statistics = proto_lexicon.statistics
+            self.failed_parses_widget.populate(statistics.failed_parses)
+            self.correspondence_index_widget.populate(statistics.correspondence_index)
+        out = sys.stdout
+        sys.stdout = self.log_widget.get_buffer()
+        try:
+            proto_lexicon = RE.upstream_tree(
+                self.settings.upstream_target,
+                self.settings.upstream,
+                ParameterTreeWidget(self.settings).parameter_tree(),
+                self.attested_lexicons,
+                False,
+            )
+            GLib.idle_add(update_model)
+        finally:
+            sys.stdout = out
 
 def run(settings, attested_lexicons):
     win = REWindow(settings, attested_lexicons)
