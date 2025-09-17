@@ -1,5 +1,5 @@
 <div id="content" class="col-sm-12">
-<h4>{{data['project']}} Experiments</h4>
+<h5>{{data['project']}} Experiments</h5>
   <form method="post" action="/experiments/{{data['project']}}/NEW">
     <input type="hidden" name="project" value="{{data['project']}}">
         <div class="row">
