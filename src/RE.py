@@ -413,7 +413,7 @@ def make_apply_rules(parameters, language):
             candidates = next_candidates
             next_candidates = []
         return candidates
-    if rules:
+    if rule_map:
         return apply_rules
     else:
         return lambda form: [(form, [])]
