@@ -22,6 +22,8 @@ MASTER_LEXWARE_FILE="$1"
 for version in mobile review full; do
   # create lexware versions with bands as needed
   perl -p onbands_for_${version}.pl < $MASTER_LEXWARE_FILE > tamang-${version}.txt
+  # convert subsub headwords to subheadwords (we can't handle subsub)
+  perl -i -pe 's/^\.\.\./../' tamang-${version}.txt
   # convert to xml
   perl ~/GitHub/RE/src/Lex2XML.pl tamang-${version}.txt tamang-${version}-converted.xml ${version}.log ris
   # xsltproc codage3.xsl tamang-${version}.xml > tamang-${version}-recoded.xml

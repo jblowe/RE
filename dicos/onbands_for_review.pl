@@ -108,9 +108,3 @@ sub bandparse {
 		push @faultybands, "$inputlineno\n";
 	}
 }
-
-
-
-
-
-

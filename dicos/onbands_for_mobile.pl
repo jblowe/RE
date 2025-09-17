@@ -1,4 +1,4 @@
-# SIMPLE version for no subentries or modes -è- OMITS entire article including HEADBAND IF NO MATCH!!!
+# SIMPLE version for no subentries or modes -ï¿½- OMITS entire article including HEADBAND IF NO MATCH!!!
 # BUG REJECT DOES NOT WORK ON HEADBANDS, on other bands it can strand an unmatched subentry
 # onbands10.pl 23.07.03
 # @onbands is the list of band names that cause an entry to be output
@@ -109,9 +109,3 @@ sub bandparse {
 		push @faultybands, "$inputlineno\n";
 	}
 }
-
-
-
-
-
-
