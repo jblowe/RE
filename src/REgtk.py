@@ -174,10 +174,29 @@ class SyllableCanonRegexEntry(Gtk.Entry):
         super().__init__()
         self.set_text(pattern)
 
-class ContextMatchTypeEntry(Gtk.Entry):
-    def __init__(self, match_type):
+class ContextMatchTypeEntry(Gtk.Box):
+    def __init__(self, initial_state):
         super().__init__()
-        self.set_text(match_type)
+        self.state = initial_state
+        constituent_button = Gtk.RadioButton.new_with_label_from_widget(None, 'constituent')
+        constituent_button.connect("toggled", self.on_button_toggled, 'constituent')
+        glyphs_button = Gtk.RadioButton.new_from_widget(constituent_button)
+        glyphs_button.set_label('glyphs')
+        glyphs_button.connect("toggled", self.on_button_toggled, 'glyphs')
+        self.pack_start(constituent_button, False, False, 0)
+        self.pack_start(glyphs_button, False, False, 0)
+        match initial_state:
+            case 'constituent':
+                constituent_button.set_active(True)
+            case 'glyphs':
+                glyphs_button.set_active(True)
+
+    def on_button_toggled(self, button, state):
+        if button.get_active():
+            self.state = state
+
+    def get_state(self):
+        return self.state
 
 class SyllableCanonWidget(Gtk.Expander):
     def __init__(self, syllable_canon):
@@ -198,7 +217,7 @@ class SyllableCanonWidget(Gtk.Expander):
             self.sound_class_widget.sound_classes(),
             self.regex_entry.get_text(),
             [x.strip() for x in self.supra_segmental_entry.get_text().split(',')],
-            self.context_match_type_entry.get_text()
+            self.context_match_type_entry.get_state()
         )
 
 class LexiconWidget(Pane):
