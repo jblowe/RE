@@ -174,29 +174,35 @@ class SyllableCanonRegexEntry(Gtk.Entry):
         super().__init__()
         self.set_text(pattern)
 
-class ContextMatchTypeEntry(Gtk.Box):
-    def __init__(self, initial_state):
+class EnumerationWidget(Gtk.Box):
+    def __init__(self, states, initial_state, on_toggle=lambda: None):
         super().__init__()
         self.state = initial_state
-        constituent_button = Gtk.RadioButton.new_with_label_from_widget(None, 'constituent')
-        constituent_button.connect("toggled", self.on_button_toggled, 'constituent')
-        glyphs_button = Gtk.RadioButton.new_from_widget(constituent_button)
-        glyphs_button.set_label('glyphs')
-        glyphs_button.connect("toggled", self.on_button_toggled, 'glyphs')
-        self.pack_start(constituent_button, False, False, 0)
-        self.pack_start(glyphs_button, False, False, 0)
-        match initial_state:
-            case 'constituent':
-                constituent_button.set_active(True)
-            case 'glyphs':
-                glyphs_button.set_active(True)
+        self.on_toggle = on_toggle
+        first_button = None
+        for state in states:
+            if first_button:
+                button = Gtk.RadioButton.new_from_widget(first_button)
+            else:
+                button = Gtk.RadioButton.new_with_label_from_widget(None, state)
+                first_button = button
+            button.set_label(state)
+            button.connect("toggled", self.on_button_toggled, state)
+            if initial_state == state:
+                button.set_active(True)
+            self.pack_start(button, False, False, 0)
 
     def on_button_toggled(self, button, state):
         if button.get_active():
             self.state = state
+        self.on_toggle()
 
     def get_state(self):
         return self.state
+
+class ContextMatchTypeEntry(EnumerationWidget):
+    def __init__(self, initial_state):
+        super().__init__(['constituent', 'glyphs'], initial_state)
 
 class SyllableCanonWidget(Gtk.Expander):
     def __init__(self, syllable_canon):
@@ -514,12 +520,20 @@ class FailedParsesWidget(Pane):
                 failed_parse.gloss if isinstance(failed_parse, (RE.Stage0Form, RE.ModernForm)) else ''
             ])
 
-class CorrespondenceIndexWidget(Pane):
-    def __init__(self, on_form_clicked):
-        super().__init__(vexpand=True, hexpand=True)
+class CorrespondenceIndexWidget(Gtk.Box):
+    def __init__(self, on_form_clicked, languages):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.store = Gtk.TreeStore(str, int, object)
-
-        view = Gtk.TreeView.new_with_model(self.store)
+        # str = correspondence text
+        # int = visible_refs (updated after filter)
+        # object = form target (None for parent rows)
+        self.store = Gtk.TreeStore(str, int, object)
+        self.filter = self.store.filter_new()
+        self.filter.set_visible_func(self._filter_func)
+        self.enum = EnumerationWidget(['any'] + languages, 'any',
+                                      lambda: self.apply_filter())
+        self.sorted = Gtk.TreeModelSort(model=self.filter)
+        view = Gtk.TreeView.new_with_model(self.sorted)
 
         # Cell renderers
         def correspondence_cell_fun(column, cell, model, iter_, data=None):
@@ -586,14 +600,51 @@ class CorrespondenceIndexWidget(Pane):
         view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK)
         view.connect("button-press-event", on_button_press)
         view.connect("motion-notify-event", on_motion_notify)
-        self.add(view)
+        pane = Pane(vexpand=True, hexpand=True)
+        pane.add(view)
+        self.pack_start(make_labeled_entry(self.enum, 'With support from:'),
+                        False, False, 0)
+        self.add(pane)
+
+    # filter forms by support
+    def _filter_func(self, model, iter_, data=None):
+        selected_lang = self.enum.get_state()
+        if selected_lang == 'any':
+            return True
+        # parent rows (correspondence) are always visible
+        if model.get_value(iter_, 2) is None:
+            return True
+        # child rows (forms) are visible if they match selected language
+        form = model.get_value(iter_, 2)
+        return selected_lang in (support.language
+                                 for support in form.attested_support)
+
+    def update_visible_counts(self):
+        parent = self.filter.get_iter_first()
+        while parent:
+            if self.filter[parent][2] is None:  # parent row
+                # count children still visible under filter
+                count = 0
+                child = self.filter.iter_children(parent)
+                while child:
+                    count += 1
+                    child = self.filter.iter_next(child)
+                child_iter = self.filter.convert_iter_to_child_iter(parent)
+                if child_iter:
+                    self.store[child_iter][1] = count
+            parent = self.filter.iter_next(parent)
+
+    def apply_filter(self):
+        self.filter.refilter()
+        self.update_visible_counts()
 
     def populate(self, correspondence_index):
         self.store.clear()
         for (correspondence, forms) in correspondence_index.items():
             row = self.store.append(parent=None, row=[str(correspondence), len(forms), None])
             for form in forms:
-                self.store.append(parent=row, row=[str(form), None, form])    
+                self.store.append(parent=row, row=[str(form), None, form])
+        self.update_visible_counts()
 
 def make_open_dialog_window(window):
     def add_filters(dialog):
@@ -698,7 +749,8 @@ class REWindow(Gtk.Window):
         self.log_widget = LogWidget()
         self.failed_parses_widget = FailedParsesWidget()
         self.correspondence_index_widget = CorrespondenceIndexWidget(
-            self.sets_widget.scroll_to_form)
+            self.sets_widget.scroll_to_form,
+            [lexicon.language for lexicon in attested_lexicons.values()])
 
         # -----------------------------
         # Stack-based statistics pane
