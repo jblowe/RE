@@ -1186,7 +1186,11 @@
   </entry>
   <entry id="bcs.297">
     <gl>star</gl>
-    <hw>zvezda, zvijezda</hw>
+    <hw>zvezda</hw>
+  </entry>
+  <entry id="bcs.297.5">
+    <gl>star</gl>
+    <hw>zvijezda</hw>
   </entry>
   <entry id="bcs.298">
     <gl>star</gl>
