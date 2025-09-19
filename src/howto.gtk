@@ -12,5 +12,4 @@ export DYLD_FALLBACK_LIBRARY_PATH="$BREW_PREFIX/lib${DYLD_FALLBACK_LIBRARY_PATH:
 pip install regex lxml
 pip install -r requirements.txt
 cd RE/src
-python REcli.py new-experiment DIS test
-python REgtk.py upstream DIS  test  --recon standard --mel hand --run run --fuzzy fuzzy
+python REgtk.py

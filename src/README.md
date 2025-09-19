@@ -66,14 +66,9 @@ You must have PyGObject and GTK installed.
 ```bash
 # must run from the src directory
 cd .../src
-python REgtk.py upstream DIS mytest --recon standard --mel hand --run weird --fuzzy fuzzy
+python REgtk.py
 ```
 NB
-* To work on the table of correspondences, save before clicking on batch
-upstream to update the results.
-* the specified 'experiment' (``mytest``) in the example above must already exist.
-* you can create such an experiment from the command line:
-```bash
-python REcli.py new-experiment DIS mytest2
-created new experiment
-```
+* The GTK application modifies the project directory directly. An
+  interface for sandboxing different input states and comparing the
+  inputs and outputs is planned!
