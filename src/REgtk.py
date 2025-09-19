@@ -18,7 +18,7 @@ class ProjectManagerDialog(Gtk.Dialog):
         self.set_default_size(600, 380)
 
         self.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
-        self.add_button("Launch", Gtk.ResponseType.OK)
+        self.add_button("Open", Gtk.ResponseType.OK)
 
         content = self.get_content_area()
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8, margin=10)
@@ -114,9 +114,6 @@ class ProjectManagerDialog(Gtk.Dialog):
             'fuzzy': fuzzy,
             'recon': recon
         }
-
-settings = Gtk.Settings.get_default()
-settings.set_property("gtk-xft-dpi", 112 * 1024)
 
 class WrappedTextBuffer():
     def __init__(self, buffer):
@@ -646,86 +643,83 @@ class CorrespondenceIndexWidget(Gtk.Box):
                 self.store.append(parent=row, row=[str(form), None, form])
         self.update_visible_counts()
 
-def make_open_dialog_window(window):
-    def add_filters(dialog):
-        filter_text = Gtk.FileFilter()
-        filter_text.set_name("Text files")
-        filter_text.add_mime_type("text/plain")
-        dialog.add_filter(filter_text)
+class OpenDialogAction:
+    """Encapsulates the file chooser dialog behavior."""
+    def __init__(self, window):
+        self.window = window
 
-        filter_py = Gtk.FileFilter()
-        filter_py.set_name("Python files")
-        filter_py.add_mime_type("text/x-python")
-        dialog.add_filter(filter_py)
-
-        filter_any = Gtk.FileFilter()
-        filter_any.set_name("Any files")
-        filter_any.add_pattern("*")
-        dialog.add_filter(filter_any)
-    def activate(widget):
+    def __call__(self, widget):
         dialog = Gtk.FileChooserDialog(
-            title="Please choose a file", parent=window, action=Gtk.FileChooserAction.OPEN
+            title="Please choose a file",
+            parent=self.window,
+            action=Gtk.FileChooserAction.OPEN,
         )
         dialog.add_buttons(
-            Gtk.STOCK_CANCEL,
-            Gtk.ResponseType.CANCEL,
-            Gtk.STOCK_OPEN,
-            Gtk.ResponseType.OK,
+            Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+            Gtk.STOCK_OPEN, Gtk.ResponseType.OK,
         )
-        add_filters(dialog)
+        self._add_filters(dialog)
+
         response = dialog.run()
-        print('what')
         if response == Gtk.ResponseType.OK:
-            print("Open clicked")
-            print("File selected: " + dialog.get_filename())
-        elif response == Gtk.ResponseType.CANCEL:
-            print("Cancel clicked")
+            filename = dialog.get_filename()
+            print("Opened:", filename)
         dialog.destroy()
-    return activate
 
-def make_RE_menu_bar(window):
-    menu_bar = Gtk.MenuBar()
+    def _add_filters(self, dialog):
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name("All files")
+        filter_any.add_pattern("*")
+        dialog.add_filter(filter_any)
 
-    file_menu_item = Gtk.MenuItem(label="File")
-    menu_bar.append(file_menu_item)
-    file_menu = Gtk.Menu()
-    file_menu_item.set_submenu(file_menu)
+class REMenuBar(Gtk.MenuBar):
+    def __init__(self, window):
+        super().__init__()
+        self.window = window
+        self.open_action = OpenDialogAction(window)
+        self._build_menus()
 
-    open_menu = Gtk.MenuItem(label="New Experiment")
-    file_menu.add(open_menu)
-    open_menu.connect('activate', make_open_dialog_window(window))
+    def _add_item(self, menu, label, callback_or_submenu):
+        item = Gtk.MenuItem(label=label)
 
-    open_menu = Gtk.MenuItem(label="Open Experiment...")
-    file_menu.add(open_menu)
-    open_menu.connect('activate', make_open_dialog_window(window))
+        if isinstance(callback_or_submenu, list):
+            submenu = Gtk.Menu()
+            for sublabel, subcb in callback_or_submenu:
+                self._add_item(submenu, sublabel, subcb)
+            item.set_submenu(submenu)
+        elif callback_or_submenu:
+            item.connect("activate", callback_or_submenu)
 
-    save_menu = Gtk.MenuItem(label="Save All Parameters")
-    file_menu.add(save_menu)
-    save_menu.connect('activate', make_open_dialog_window(window))
+        menu.append(item)
+        return item
 
-    save_menu = Gtk.MenuItem(label="Save All Parameters As...")
-    file_menu.add(save_menu)
-    save_menu.connect('activate', make_open_dialog_window(window))
+    def _build_menus(self):
+        menus = {
+            "File": [
+                ("Open Project", self.window.open_project),
+                #("Open Project...", self.open_action),
+                #("Save Snapshot", self.window.save_snapshot),
+                #("Export", [
+                #    ("Export as CSV", self.window.export_csv),
+                #    ("Export as JSON", self.window.export_json),
+                #]),
+                ("Quit", Gtk.main_quit),
+            ],
+            "View": [
+                ("Zoom In", self.window.zoom_in),
+                ("Zoom Out", self.window.zoom_out),
+                ("Reset Zoom", self.window.zoom_reset),
+            ],
+        }
 
-    save_menu = Gtk.MenuItem(label="Save Run...")
-    file_menu.add(save_menu)
-    save_menu.connect('activate', make_open_dialog_window(window))
+        for menu_name, items in menus.items():
+            menu = Gtk.Menu()
+            menu_item = Gtk.MenuItem(label=menu_name)
+            menu_item.set_submenu(menu)
+            self.append(menu_item)
 
-    save_run_menu = Gtk.MenuItem(label="Compare Runs...")
-    file_menu.add(save_run_menu)
-    save_menu.connect('activate', make_open_dialog_window(window))
-
-    quit_menu = Gtk.MenuItem(label="Quit")
-    file_menu.add(quit_menu)
-    quit_menu.connect('activate', quit)
-
-    edit_menu_item = Gtk.MenuItem(label="Edit")
-    menu_bar.append(edit_menu_item)
-
-    view_menu_item = Gtk.MenuItem(label="View")
-    menu_bar.append(view_menu_item)
-
-    return menu_bar
+            for label, callback in items:
+                self._add_item(menu, label, callback)
 
 def make_pane_container(orientation):
     container = Gtk.Paned()
@@ -734,9 +728,81 @@ def make_pane_container(orientation):
 
 class REWindow(Gtk.Window):
 
-    def __init__(self, settings, attested_lexicons):
+    def __init__(self):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1400)
+        # Track zoom state
+        self.zoom_level = 1.0
+
+        # -----------------------------
+        # Menu
+        # -----------------------------
+        menu_bar = REMenuBar(self)
+
+        # -----------------------------
+        # Main layout
+        # -----------------------------
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        box.pack_start(menu_bar, False, False, 0)
+
+        # layout
+        pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
+        box.pack_start(pane_layout, True, True, 0)
+        self.left_pane = make_pane_container(Gtk.Orientation.VERTICAL)
+        pane_layout.add1(self.left_pane)
+        self.right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
+        pane_layout.add2(self.right_pane)
+        self.add(box)
+        self.show_all()
+        self.open_project()
+
+    def on_batch_all_upstream(self):
+        """Run the batch process in a thread."""
+        thread = threading.Thread(target=self._batch_upstream)
+        thread.daemon = True
+        thread.start()
+
+    def _batch_upstream(self):
+        def update_model():
+            self.sets_widget.populate(proto_lexicon)
+            statistics = proto_lexicon.statistics
+            self.failed_parses_widget.populate(statistics.failed_parses)
+            self.correspondence_index_widget.populate(statistics.correspondence_index)
+        out = sys.stdout
+        sys.stdout = self.log_widget.get_buffer()
+        try:
+            proto_lexicon = RE.upstream_tree(
+                self.settings.upstream_target,
+                self.settings.upstream,
+                ParameterTreeWidget(self.settings).parameter_tree(),
+                self.attested_lexicons,
+                False,
+            )
+            GLib.idle_add(update_model)
+        finally:
+            sys.stdout = out
+
+    # --------- Zoom handling (DPI-based) ---------
+    def _apply_zoom(self):
+        dpi_value = int(112 * self.zoom_level) * 1024
+        settings = Gtk.Settings.get_default()
+        settings.set_property("gtk-xft-dpi", dpi_value)
+
+    def zoom_in(self, widget):
+        self.zoom_level *= 1.2
+        self._apply_zoom()
+
+    def zoom_out(self, widget):
+        self.zoom_level /= 1.2
+        self._apply_zoom()
+
+    def zoom_reset(self, widget):
+        self.zoom_level = 1.0
+        self._apply_zoom()
+
+    def open_from_settings(self, settings):
+        attested_lexicons = read.read_attested_lexicons(settings)
+
         self.settings = settings
         self.attested_lexicons = attested_lexicons
 
@@ -765,95 +831,40 @@ class REWindow(Gtk.Window):
                                          "failed", "Failed Parses")
         self.statistics_stack.add_titled(self.correspondence_index_widget,
                                          "index", "Correspondence index")
-
         # StackSwitcher to switch between views
         stack_switcher = Gtk.StackSwitcher()
         stack_switcher.set_stack(self.statistics_stack)
 
-        # -----------------------------
-        # Menu
-        # -----------------------------
-        menu_bar = make_RE_menu_bar(self)
-
-        # -----------------------------
-        # Main layout
-        # -----------------------------
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        box.pack_start(menu_bar, False, False, 0)
-
-        # layout
-        pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
-        box.pack_start(pane_layout, True, True, 0)
-        left_pane = make_pane_container(Gtk.Orientation.VERTICAL)
-        left_pane.add(self.lexicons_widget)
-        pane_layout.add1(left_pane)
-        right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
-        pane_layout.add2(right_pane)
-        right_pane.add1(self.sets_widget)
+        # Add new widgets to layout
+        self.left_pane.add(self.lexicons_widget)
+        self.right_pane.add1(self.sets_widget)
         stats_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         stats_box.pack_start(stack_switcher, False, False, 0)
         stats_box.pack_start(self.statistics_stack, True, True, 0)
-        right_pane.add2(stats_box)  # add the stack here
+        self.right_pane.add2(stats_box)  # add the stack here
 
-        left_pane.add2(self.parameters_widget)
+        self.left_pane.add2(self.parameters_widget)
 
-        self.add(box)
+        self.show_all()
 
-    def on_batch_all_upstream(self):
-        """Run the batch process in a thread."""
-        thread = threading.Thread(target=self._batch_upstream)
-        thread.daemon = True
-        thread.start()
+    def open_project(self, widget=None):
+        """Show the ProjectManagerDialog and load the selected project."""
+        dialog = ProjectManagerDialog(self)
+        response = dialog.run()
+        selection = None
+        if response == Gtk.ResponseType.OK:
+            selection = dialog.get_selected()
+        dialog.destroy()
 
-    def _batch_upstream(self):
-        def update_model():
-            self.sets_widget.populate(proto_lexicon)
-            statistics = proto_lexicon.statistics
-            self.failed_parses_widget.populate(statistics.failed_parses)
-            self.correspondence_index_widget.populate(statistics.correspondence_index)
-        out = sys.stdout
-        sys.stdout = self.log_widget.get_buffer()
-        try:
-            proto_lexicon = RE.upstream_tree(
-                self.settings.upstream_target,
-                self.settings.upstream,
-                ParameterTreeWidget(self.settings).parameter_tree(),
-                self.attested_lexicons,
-                False,
-            )
-            GLib.idle_add(update_model)
-        finally:
-            sys.stdout = out
+        if selection is None:
+            return
 
-def run(settings, attested_lexicons):
-    win = REWindow(settings, attested_lexicons)
-    win.connect('delete_event', Gtk.main_quit)
-    win.show_all()
-    Gdk.threads_init()
-    Gtk.main()
+        # Clear old widgets
+        for child in self.left_pane.get_children():
+            self.left_pane.remove(child)
+        for child in self.right_pane.get_children():
+            self.right_pane.remove(child)
 
-# HACK make load hooks happy
-class dummy:
-    pass
-
-if __name__ == "__main__":
-    # Show a lightweight project picker dialog before loading anything.
-    # We create a temporary top-level window to parent the dialog; destroy afterwards.
-    tmp_win = Gtk.Window()
-    tmp_win.set_default_size(1, 1)  # invisible tiny parent
-    tmp_win.set_decorated(False)
-    tmp_win.show()  # must be shown to be a parent
-
-    pm = ProjectManagerDialog(tmp_win)
-    response = pm.run()
-    selection = None
-    if response == Gtk.ResponseType.OK:
-        selection = pm.get_selected()
-    pm.destroy()
-    tmp_win.destroy()
-
-    if selection is not None:
-        # use GUI selection (the dialog returns file path and toggles)
         project = selection['project']
         parameters_file = os.path.join(projects.projects[project],
                                        f'{project}.master.parameters.xml')
@@ -867,9 +878,18 @@ if __name__ == "__main__":
         dummy.fuzzy = selection['fuzzy']
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project], dummy, settings)
-        attested_lexicons = read.read_attested_lexicons(settings)
-        run(settings, attested_lexicons)
-    else:
-        # user canceled: quit application
-        print('Bye!')
-        pass
+        self.open_from_settings(settings)
+
+# HACK make load hooks happy
+class dummy:
+    pass
+
+if __name__ == "__main__":
+    settings = Gtk.Settings.get_default()
+    settings.set_property("gtk-xft-dpi", 112 * 1024)
+
+    win = REWindow()
+    win.connect('delete_event', Gtk.main_quit)
+    win.show_all()
+    Gdk.threads_init()
+    Gtk.main()
