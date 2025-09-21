@@ -73,6 +73,7 @@ def adjust_hw(element):
     return
 
 
-output_string = ET.tostring(update_dom(sys.argv[1], sys.argv[2]), pretty_print=True, encoding='utf-8').decode('utf-8')
+output_string = ET.tostring(update_dom(sys.argv[1], sys.argv[2]), pretty_print=True, encoding='unicode')
 output_file = open(sys.argv[1], 'w')
+output_file.reconfigure(encoding="utf-8")
 output_file.write(output_string)

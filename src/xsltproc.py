@@ -2,8 +2,10 @@
 import sys
 import lxml.etree as ET
 
-def xml2html(xsl_filename, xml_filename):
+sys.stdout.reconfigure(encoding="utf-8")
 
+
+def xml2html(xsl_filename, xml_filename):
     dom = ET.parse(xml_filename)
     xslt = ET.parse(xsl_filename)
     transform = ET.XSLT(xslt)
@@ -15,4 +17,4 @@ sys.stdout.write(
     ET.tostring(xml2html(sys.argv[1], sys.argv[2]),
                 pretty_print=True,
                 xml_declaration=True,
-                encoding='utf-8').decode('utf-8'))
+                encoding='unicode'))
