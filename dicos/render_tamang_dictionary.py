@@ -34,9 +34,9 @@ def trans_str(s):
     return s
 
 
-def esc(s: str) -> str:
-    # order is important here
+def esc(s):
     s = re.sub(r'<.*?>', '', s or '')
+    # order is important here
     # complicated cause we only want to remove | if it is preceded by *
     s = re.sub(r'\*([^|]*)\||\*', lambda m: m.group(1) or '', s)
     # escape seems not to be needed
@@ -44,20 +44,22 @@ def esc(s: str) -> str:
     # render tamang text if between //
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     s = unicodedata.normalize('NFC', s)
+    return s
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
-    return s.replace("\u0310", "\u0307")
+    # return s.replace("\u0310", "\u0307")
 
 
-def special(s):
-    if '$' in s:
+def render_special(s):
+    if 'chauffer' in s:
         pass
-    s = re.sub(r'\$(.+?)\b', r'<i>\1</i>', s)  # $token + word boundary -> italic
-    if 'misiri' in s:
-        pass
+    s = re.sub(r'<.*?>', '', s or '')
+    # following hack is needed to avoid 'eau de cuisson de la boule de farine (<i>ḍhim</i>̇ḍo)'
+    s = re.sub(r'\$([^\s]+)', r'<i>\1</i>', s)  # $token + word boundary -> italic
     s = re.sub(r'\%(.+?)\|', r'<i>\1</i>', s)  # %free text| -> italic
     return s
 
 def render_tamang(t):
+    # protect nepali forms in tamang transcription
     tokens = re.split(r'(\$.+?)\b', t)
     converted_tokens = []
     for tok in tokens:
@@ -66,8 +68,7 @@ def render_tamang(t):
         else:
             converted_tokens.append(trans_str(tok))
     return f"<b>{''.join(converted_tokens)}</b>"
-    # protect nepali forms in tamang transcription
-    #return f'<b>{special(trans_str(t))}</b>'
+    #return f'<b>{render_special(trans_str(t))}</b>'
 
 
 def render_transliteration(t):
@@ -85,7 +86,7 @@ def render_cf(t):
 def render_var(t):
     if t:
         # the initial blank is important
-        return f' &#160; [<span class="small-caps">var</span> {render_tamang(t)}]'
+        return f' &#160; [<span class="small-caps">var</span> {render_tamang(render_special(t))}]'
     else:
         return ''
 
@@ -109,9 +110,10 @@ def render_2part(part):
         tamang = render_tamang(tamang)
         # U+0307  BULLET (we'll visually separate parts)
         bullet = ' &bull; '
-        trans = f"{bullet.join(parts[1:])}"
+        trans = f"{render_special(bullet.join(parts[1:]))}"
         return (f'{tamang} &#160; {trans}')
     except Exception:
+        raise
         # if the split does not work, render the whole thing as Tamang
         if '|' in part:
             print(f'split failed: {part}')
@@ -148,6 +150,8 @@ def parse_mode(mode_el, base_id, idx):
         'dfe': get_text(mode_el, 'dfe'),
         'nag': get_text(mode_el, 'nag'),
         'dfn': get_text(mode_el, 'dfn'),
+        'dfzoo': get_text(mode_el, 'dfzoo'),
+        'dfbot': get_text(mode_el, 'dfbot'),
         'ps': get_text(mode_el, 'ps'),
         'hw': get_text(mode_el, 'hw'),
         'sem': get_text(mode_el, 'sem'),
@@ -166,6 +170,8 @@ def parse_sub(sub_el, base_id, idx):
         'hw': get_text(sub_el, 'hw'),
         'ps': get_text(sub_el, 'ps'),
         'dff': get_text(sub_el, 'dff'),
+        'dfzoo': get_text(sub_el, 'dfzoo'),
+        'dfbot': get_text(sub_el, 'dfbot'),
         'dfe': get_text(sub_el, 'dfe'),
         'nag': get_text(sub_el, 'nag'),
         'dfn': get_text(sub_el, 'dfn'),
@@ -275,9 +281,9 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
             np_line += f'<span class="dfn">{render_transliteration(dfn)}</span>'
         lines.append(np_line)
     if dff:
-        lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{esc(dff)}</span>')
+        lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{render_special(esc(dff))}</span>')
     if dfe:
-        lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{esc(dfe)}</span>')
+        lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{render_special(esc(dfe))}</span>')
     if not lines:
         return ""
     return "<br/>".join(lines)
@@ -485,7 +491,7 @@ dt { font-weight: bold; font-style: italic; }
 #search-results mark { background: #fff3cd; padding: 0 .1em; }
 #search-results .long, #search-results .mode-long { display: none; }
 /* Wrapping / Gloss layout */
-.mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: anywhere; word-break: break-word; }
+.mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: break-word; word-break: normal; }
 .mode-body p, .mode-sub p { margin: .15rem 0 0; text-indent: 0; }
 .mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; text-align: left; }
 .mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
