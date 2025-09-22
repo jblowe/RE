@@ -43,19 +43,31 @@ def esc(s: str) -> str:
     s = escape(s, quote=True)
     # render tamang text if between //
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
-    if '$' in s:
-        pass
-    s = re.sub(r'\$(.+?)\b', r'<i>\1</i>', s)  # $token or $token| -> italic
-    if '%' in s:
-        pass
-    s = re.sub(r'\%(.+?)\|', r'<i>\1</i>', s)  # %free text| -> italic
     s = unicodedata.normalize('NFC', s)
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
     return s.replace("\u0310", "\u0307")
 
 
+def special(s):
+    if '$' in s:
+        pass
+    s = re.sub(r'\$(.+?)\b', r'<i>\1</i>', s)  # $token + word boundary -> italic
+    if 'misiri' in s:
+        pass
+    s = re.sub(r'\%(.+?)\|', r'<i>\1</i>', s)  # %free text| -> italic
+    return s
+
 def render_tamang(t):
-    return f'<b>{esc(trans_str(t))}</b>'
+    tokens = re.split(r'(\$.+?)\b', t)
+    converted_tokens = []
+    for tok in tokens:
+        if '$' in tok:
+            converted_tokens.append(re.sub(r'\$(.+?)\b', r'<i>\1</i>', tok))
+        else:
+            converted_tokens.append(trans_str(tok))
+    return f"<b>{''.join(converted_tokens)}</b>"
+    # protect nepali forms in tamang transcription
+    #return f'<b>{special(trans_str(t))}</b>'
 
 
 def render_transliteration(t):
@@ -92,12 +104,12 @@ def render_sense_number(t):
 
 def render_2part(part):
     try:
-        parts = part.split('|')
+        parts = esc(part).split('|')
         tamang = parts[0]
-        tamang = render_tamang(esc(tamang))
-        # U+0307  COMBINING DOT ABOVE (we'll visually separate parts)
-        circle = ' \u0307 '
-        trans = esc(f"{circle.join(parts[1:])}")
+        tamang = render_tamang(tamang)
+        # U+0307  BULLET (we'll visually separate parts)
+        bullet = ' &bull; '
+        trans = f"{bullet.join(parts[1:])}"
         return (f'{tamang} &#160; {trans}')
     except Exception:
         # if the split does not work, render the whole thing as Tamang
