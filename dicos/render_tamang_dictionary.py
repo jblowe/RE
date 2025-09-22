@@ -43,8 +43,12 @@ def esc(s: str) -> str:
     s = escape(s, quote=True)
     # render tamang text if between //
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
-    s = re.sub(r'\$([\w\-]+)\|?', r'<i>\1</i>', s)  # $token or $token| -> italic
-    s = re.sub(r'%(.*?)\|', r'<i>\1</i>', s)  # %free| -> italic
+    if '$' in s:
+        pass
+    s = re.sub(r'\$(.+?)\b', r'<i>\1</i>', s)  # $token or $token| -> italic
+    if '%' in s:
+        pass
+    s = re.sub(r'\%(.+?)\|', r'<i>\1</i>', s)  # %free text| -> italic
     s = unicodedata.normalize('NFC', s)
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
     return s.replace("\u0310", "\u0307")
@@ -278,8 +282,10 @@ def render_long_bits(d):
     # [dial]
     ils = d.get('il', [])
     if ils:
-        items = ''.join(f'<li>{render_2part(il)}</li>' for il in ils)
-        parts.append(f'<ol class="mb-2">{items}</ol>')
+        #items = ''.join(f'<li>{render_2part(il)}</li>' for il in ils)
+        items = ''.join(f'<p>{render_2part(il)}</p>' for il in ils)
+        # parts.append(f'<span>{items}</span>')
+        parts.append(items)
     for phr in d.get('phr', []):
         parts.append(f'<div class="mb-1"><i>phr </i> {render_2part(phr)}</div>')
     # for gram in d.get('gram', []):
@@ -343,7 +349,7 @@ def render_sub_block(s):
 
 def render_hw_etc(entry):
     hw = entry.get('hw', None)
-    homonym = re.match(r'(.*)\$(.*)', hw)
+    homonym = re.match(r'(.+)\$(.*)', hw)
     ps_html = f'&#160;<i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
     emp_html = render_emp(entry.get('emp', None))
@@ -402,6 +408,8 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 #views > * { display: none !important; }
 .small-caps { font-variant-caps: small-caps; font-size: .7rem; }
 .mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 4px; }
+.my-2 { margin: 6px 0 6px 0; }
 .ms-1 { margin-left: .25rem; }
 .header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
 .header .logo { width: 28px; height: 28px; border-radius: 4px; background: rgba(255,255,255,.3); flex: 0 0 28px; }
@@ -443,17 +451,21 @@ dt { font-weight: bold; font-style: italic; }
 /* Entries */
 .entry { border: 1px solid #e5e7eb; border-radius: .5rem; padding: .75rem; margin: .5rem 0; background: #fff; padding-top: 0; }
 .entry.expanded { background: #f7f7f7; }
-.short { cursor: pointer; }
+.short { cursor: pointer; margin-bottom: 6px; }
 .short:hover { background: #f8f9fa; }
 .entry .short .entry-head { margin: 4px 0; }
+/* place a subtle indicator on entries that have sub/mode blocks */
+.entry { position: relative; }
+.entry.has-more::after { content: '▸'; position: absolute; top: .4rem; right: .5rem; font-size: 1.6rem; color: #343a40; opacity: .95; line-height: 1; pointer-events: none; }
+.entry.expanded.has-more::after { content: '▾'; font-size: 1.6rem; color: #212529; opacity: .95; }
 /* Modes / Subentries */
 .mode-block { margin: .35rem 0 .5rem 1rem; }
 .mode-short, .mode-long { display: grid; grid-template-columns: auto minmax(0,1fr); column-gap: .5rem; align-items: start; }
-.mode-long { margin-top: 6px; }
+.mode-long, .long p { margin: 4px 0 4px 0; }
 .mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
 .mode-badge .badge { display: inline-flex; align-items: center; justify-content: center; min-width: 1.0em; padding: .15em .45em; line-height: 1.15; font-size: .85em; border-radius: 9999px; }
 .mode-body { min-width: 0; }
-.mode-body > p { margin: 0; }
+/* .mode-body > p { margin: 0} */
 .mode-short { padding: .25rem 0; border-top: 1px dashed #eee; }
 .mode-short:first-child { border-top: none; }
 .badge.text-bg-secondary { background: #6c757d; color: #fff; }
@@ -727,8 +739,10 @@ def build_sections(groups):
                 if long_html else
                 f"<div class='long' id='{eid}-long' style='display:none;'></div>"
             )
+            has_more = bool(e.get('modes') or e.get('subs') or long_html)
+            cls = "entry has-more" if has_more else "entry"
             entry_html.append(
-                f"<div id='{eid}' class='entry' onclick=\"return toggleEntryAll('{eid}')\">{short_html}{long_block}</div>"
+                f"<div id='{eid}' class='{cls}' onclick=\"return toggleEntryAll('{eid}')\">{short_html}{long_block}</div>"
             )
         out.append(f"<div class='letter-section' id='section-{tok}'{disp}>" + ''.join(entry_html) + "</div>")
         first = False
