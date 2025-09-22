@@ -16,5 +16,4 @@ def xml2html(xsl_filename, xml_filename):
 sys.stdout.write(
     ET.tostring(xml2html(sys.argv[1], sys.argv[2]),
                 pretty_print=True,
-                xml_declaration=True,
                 encoding='unicode'))
