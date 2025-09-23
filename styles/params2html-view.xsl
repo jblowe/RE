@@ -14,6 +14,13 @@
             <head>
             </head>
             <body>
+                <form id="toc-edit" method="get" action="/edit">
+                    <div class="container my-4">
+                        <div class="col-md-12 mb-2">
+                            <button type="submit" name="action" value="#tree#|#project#|#experiment#|#filename#" class="btn btn-success me-3">Edit</button>
+                        </div>
+                    </div>
+                </form>
                 <h5>Parameters available</h5>
                 <div>
                 <table class="table table-responsive table-sm retable">

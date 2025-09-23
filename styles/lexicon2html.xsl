@@ -11,6 +11,24 @@
             <head>
             </head>
             <body>
+                <a name="{@dialecte}"/>
+                <h5>
+                    <xsl:value-of select="@dialecte"/>
+                </h5>
+                <div style="float: left; width:60px;">
+                    <b>n =
+                        <xsl:value-of select="count(lexicon/entry)"/>
+                    </b>
+                </div>
+                <div style="float: left; width:220px;">
+                    <i>created at:
+                        <xsl:value-of select=".//createdat"/>
+                    </i>
+                </div>
+                <div style="float: left; width:160px;">
+                    <a href="?tabular">switch to tabular display</a>
+                </div>
+                <div style="clear:both;"></div>
                 <xsl:apply-templates select=".//lexicon"/>
             </body>
         </html>
@@ -18,11 +36,6 @@
 
     <xsl:template match="lexicon">
         <div>
-            <a name="{@dialecte}"/>
-            <h4>
-                <xsl:value-of select="@dialecte"/>
-            </h4>
-            <h6>n = <xsl:value-of select="count(entry)" /></h6>
             <div class="table-responsive">
             <table class="table table-sm" border="1">
                 <thead/>

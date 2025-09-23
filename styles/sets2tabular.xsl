@@ -192,7 +192,7 @@
             <a name="failures"/>
             <h5>Failures</h5>
             <h6>n =
-                <xsl:value-of select="count(set)"/>
+                <xsl:value-of select="count(.//set/sf/rfx)"/>
             </h6>
             <ul class="list-unstyled">
                 <xsl:apply-templates select="set"/>

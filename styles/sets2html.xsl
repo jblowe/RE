@@ -17,32 +17,31 @@
             </head>
             <body>
                 <h5>Regular cognate sets</h5>
-                <p>
-                   <div style="float: left; width:60px;">
-                        <b>n =
-                            <xsl:value-of select="count(.//sets/set)"/>
-                        </b>
-                    </div>
-                    <div style="float: left; width:220px;">
-                        <i>created at:
-                            <xsl:value-of select=".//createdat"/>
-                        </i>
-                    </div>
-                    <div style="float: left; width:160px;">
-                        <a href="?tabular">switch to tabular display</a>
-                    </div>
-                     <div style="float: left; width:80px;">
-                        <a href="#isolates">
-                            <xsl:value-of select="count(.//isolates/set)"/>
-                            isolates
-                        </a>
-                    </div>
-                    <div style="float: left; width:80px;">
-                        <a href="#failures">
-                            <xsl:value-of select="count(.//failures/set/sf/rfx)"/>
-                            failures</a>
-                    </div>
-                </p>
+               <div style="float: left; width:60px;">
+                    <b>n =
+                        <xsl:value-of select="count(.//sets/set)"/>
+                    </b>
+                </div>
+                <div style="float: left; width:220px;">
+                    <i>created at:
+                        <xsl:value-of select=".//createdat"/>
+                    </i>
+                </div>
+                <div style="float: left; width:160px;">
+                    <a href="?tabular">switch to tabular display</a>
+                </div>
+                 <div style="float: left; width:80px;">
+                    <a href="#isolates">
+                        <xsl:value-of select="count(.//isolates/set)"/>
+                        isolates
+                    </a>
+                </div>
+                <div style="float: left; width:80px;">
+                    <a href="#failures">
+                        <xsl:value-of select="count(.//failures/set/sf/rfx)"/>
+                        failures</a>
+                </div>
+                <div style="clear:both;"></div>
                 <xsl:apply-templates select=".//sets"/>
                 <xsl:apply-templates select=".//isolates"/>
                 <xsl:apply-templates select=".//failures"/>

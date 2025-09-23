@@ -11,6 +11,13 @@
 		<head>
 		</head>
 		<body>
+			<form id="toc-edit" method="get" action="/edit">
+				<div class="container my-4">
+					<div class="col-md-12 mb-2">
+						<button type="submit" name="action" value="#tree#|#project#|#experiment#|#filename#" class="btn btn-success me-3">Edit</button>
+					</div>
+				</div>
+			</form>
 			<xsl:apply-templates select=".//tableOfCorr"/>
 		</body>
 	</html>

@@ -20,14 +20,14 @@
                     % include('interactive.tpl')
                 % elif 'interactive_batch' in data:
                     % include('interactive_batch.tpl')
-                % elif 'projects' in data:
-                    % include('projects.tpl')
                 % elif 'experiment' in data:
                     % include('experiment.tpl')
-                % elif 'experiments' in data:
-                    % include('experiments.tpl')
                 % elif 'project' in data:
                     % include('project.tpl')
+                % elif 'projects' in data:
+                    % include('projects.tpl')
+                % elif 'experiments' in data:
+                    % include('experiments.tpl')
                 % end
             % end
         </div>

@@ -67,8 +67,26 @@ def list_tree(tree):
     return wutils.check_template('index', data, request.forms)
 
 
+# @route('/edit/<subcommand:re:.*>')
+@post('/edit')
+@route('/edit')
+def edit():
+    x = request
+    subcommand = request.GET.get('action')
+    try:
+        (tree, project, experiment, file) = subcommand.replace('/', '').split('|')
+    except Exception:
+        tree, project, experiment, file = 5 * []
+    if subcommand == 'edit':
+        pass
+    display = ''
+    command = 'edit'
+    data = wutils.setup_data(tree, project, experiment, filename, display, command)
+    return wutils.check_template('index', data, request.forms)
+
+
 @route('/project/<project:re:.*>')
-def project(project):
+def project_info(project):
     files, base_dir, num_files = wutils.data_files(wutils.PROJECTS, project)
     data = {'tree': 'projects', 'project': project, 'files': files, 'base_dir': base_dir}
     return wutils.check_template('index', data, request.forms)
@@ -76,26 +94,17 @@ def project(project):
 
 @route('/get_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
 def get_experiment_file(tree, project, experiment, filename):
-    full_path = wutils.combine_parts(tree, project, experiment, filename)
     display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
-    content, date = wutils.file_content(full_path, display)
-    experiments, base_dir, data_elements = wutils.list_of_experiments(project)
-    experiment_info = wutils.get_experiment_info(base_dir, experiment, data_elements, project)
-    files, experiment_path, num_files = wutils.data_files(os.path.join(wutils.EXPERIMENTS, project), experiment)
-    data = {'tree': tree, 'project': project, 'experiment': experiment, 'files': files, 'base_dir': base_dir,
-            'num_files': num_files, 'experiment_info': experiment_info, 'filename': filename, 'date': date,
-            'content': content, 'data_elements': data_elements, 'back': '/list_tree/projects'}
+    command = 'edit' if 'edit' in request.GET else 'view'
+    data = wutils.setup_data(tree, project, experiment, filename, display, command)
     return wutils.check_template('index', data, request.forms)
 
 
 @route('/get_file/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
 def get_project(tree, project, filename):
-    full_path = wutils.combine_parts(tree, project, filename)
     display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
-    content, date = wutils.file_content(full_path, display)
-    files, base_dir, num_files = wutils.data_files(tree, project)
-    data = {'tree': tree, 'project': project, 'files': files, 'base_dir': base_dir, 'filename': filename,
-            'source': 'Source data', 'date': date, 'content': content}
+    command = 'edit' if 'edit' in request.GET else 'view'
+    data = wutils.setup_data(tree, project, '', filename, display, command)
     return wutils.check_template('index', data, request.forms)
 
 

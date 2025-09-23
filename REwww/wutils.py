@@ -44,10 +44,29 @@ def combine_parts(*args):
 def check_template(tpl, data, parameters):
     if 'back' not in data:
         data['back'] = '/list_tree/projects'
-    if 'experiment_info' in data:
-        for i in 'fuzzy recon mel'.split(' '):
-            data['experiment_info'][i] = parameters[i] if i in parameters else ''
     return template(tpl, data=data)
+
+
+def setup_data(tree, project, experiment, filename, display, command):
+    full_path = combine_parts(tree, project, experiment, filename)
+    content, date = file_content(full_path, display, command)
+    # every response needs a project...
+    data = {'project': project}
+    if experiment:
+        experiments, base_dir, data_elements = list_of_experiments(project)
+        experiment_info = get_experiment_info(base_dir, experiment, data_elements, project)
+        files, experiment_path, num_files = data_files(os.path.join(EXPERIMENTS, project), experiment)
+        data['experiment'] = experiment
+        data['experiment_info'] = experiment_info
+        data['data_elements'] = data_elements
+    else:
+        files, base_dir, num_files = data_files(tree, project)
+        # experiment_info, data_elements = [''] * 2
+    data.update({'tree': tree, 'files': files, 'base_dir': base_dir, 'num_files': num_files,
+                 'filename': filename, 'date': date,
+                 'content': content, 'back': '/list_tree/projects'
+                 })
+    return data
 
 
 def list_of_experiments(project):
@@ -64,6 +83,7 @@ def list_of_experiments(project):
 
 
 def get_experiment_info(experiment_dir, experiment, data_elements, project):
+    if not experiment: return []
     parameters_file = os.path.join(experiment_dir, experiment, f'{project}.master.parameters.xml')
     experiment_info ={'name': experiment, 'date': get_info(parameters_file)}
     if experiment_info['date'] == 'unknown':
@@ -79,10 +99,8 @@ def get_experiment_info(experiment_dir, experiment, data_elements, project):
             if s in 'fuzzies reconstructions mels title'.split(' '):
                 experiment_info[s] = settings.other[s]
 
-        # experiment_info['upstream'] = settings.upstream
-        # experiment_info['attested'] = settings.attested
-        # dom = ET.parse(parameters_file)
-        # experiment_info = (experiment, 'date', settings.mel_filename,
+    for i in 'fuzzy recon mel'.split(' '):
+        experiment_info[i] = data_elements[i] if i in data_elements else ''
 
     return experiment_info
 
@@ -96,19 +114,19 @@ def data_files(tree, directory):
     for type in 'snapshot'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'.{type}' in f]))
         num_files += len([f for f in filelist if f'{type}' in f])
+    for type in 'statistics compare'.split(' '):
+        to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
+        num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'sets'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'parameters correspondences mel data fuz'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
-    for type in 'statistics compare'.split(' '):
-        to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
-        num_files += len([f for f in filelist if f'{type}.xml' in f])
     for type in 'correspondences data u8 keys'.split(' '):
         to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
         num_files += len([f for f in filelist if f'{type}.csv' in f])
-    for type in 'statistics keys sets coverage'.split(' '):
+    for type in 'keys sets coverage'.split(' '):
         to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
         num_files += len([f for f in filelist if f'{type}.txt' in f])
     other_files = []
@@ -126,7 +144,7 @@ def set_defaults(data, parameters):
 
 def all_file_content(file_path):
     try:
-        f = open(file_path, 'r')
+        f = open(file_path, 'r', encoding='utf-8')
         data = f.read()
         f.close()
     except:
@@ -134,9 +152,9 @@ def all_file_content(file_path):
     return data
 
 
-def file_content(file_path, display):
+def file_content(file_path, display, command):
     if '.xml' in file_path:
-        xslt_path = determine_file_type(file_path, display)
+        xslt_path = determine_file_type(file_path, display, command)
         xslt_path = os.path.join(BASE_DIR, 'styles', xslt_path)
         try:
             data = xml2html(file_path, xslt_path)
@@ -144,7 +162,7 @@ def file_content(file_path, display):
             print(traceback.format_exc())
             data = '<p style="color: red">Problem handling this file, sorry!</p>'
     elif '.txt' in file_path or '.DAT' in file_path or '.DIS' in file_path:
-        f = open(file_path, 'r')
+        f = open(file_path, 'r', encoding='utf-8')
         data = f.read()
         f.close()
         data = '<pre>' + limit_lines(data, 30000) + '</pre>'
@@ -152,11 +170,11 @@ def file_content(file_path, display):
         # f = open(file_path, 'r')
         # data = f.read()
         # sniff the csv dialect
-        with open(file_path, 'r') as csvfile:
+        with open(file_path, 'r', encoding='utf-8') as csvfile:
             sample = csvfile.read(2048)
             sniffer = csv.Sniffer()
             dialect = sniffer.sniff(sample)
-        with open(file_path, 'r') as csvfile:
+        with open(file_path, 'r', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile, dialect)
             data = ''
             i = 0
@@ -200,14 +218,17 @@ def xml2html(xml_filename, xsl_filename):
     return newdom
 
 
-def determine_file_type(file_path, display):
+def determine_file_type(file_path, display, command):
+    command = 'view' if not command else command
     if 'correspondences.xml' in file_path:
-        # return 'toc2htmleditable.xsl'
-        return 'toc2html.xsl'
+        return f'toc2html-{command}.xsl'
     elif 'data.xml' in file_path:
-        return 'lexicon2html.xsl'
+        if display == 'paragraph':
+            return 'lexicon2html.xsl'
+        else:
+            return 'lexicon2table.xsl'
     elif 'parameters.xml' in file_path:
-        return 'params2html.xsl'
+        return f'params2html-{command}.xsl'
     elif 'fuz.xml' in file_path:
         return 'fuzzy2html.xsl'
     elif 'sets.xml' in file_path:
