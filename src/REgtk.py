@@ -8,8 +8,112 @@ import sys
 import serialize
 import os
 import load_hooks
-from argparser import args
+import projects
+import xml.etree.ElementTree as ET
 
+class ProjectManagerDialog(Gtk.Dialog):
+    """Dialog to choose a project."""
+    def __init__(self, parent):
+        Gtk.Dialog.__init__(self, title="Select Project", parent=parent, flags=0)
+        self.set_default_size(600, 380)
+
+        self.add_button(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL)
+        self.add_button("Launch", Gtk.ResponseType.OK)
+
+        content = self.get_content_area()
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8, margin=10)
+        content.add(vbox)
+
+        # Top explanatory label
+        label = Gtk.Label(label="Choose a project to open from the projects directory:")
+        label.set_halign(Gtk.Align.START)
+        vbox.pack_start(label, False, False, 0)
+
+        # Tree/List of projects
+        self.store = Gtk.ListStore(str)  # project_name
+        self.tree = Gtk.TreeView(model=self.store)
+        renderer = Gtk.CellRendererText()
+        column = Gtk.TreeViewColumn("Project", renderer, text=0)
+        self.tree.append_column(column)
+
+        scroller = Gtk.ScrolledWindow()
+        scroller.set_vexpand(True)
+        scroller.add(self.tree)
+        vbox.pack_start(scroller, True, True, 0)
+
+        # Controls: mel/fuzzy/recon
+        controls = Gtk.Box(spacing=8)
+        self.mel_combo = Gtk.ComboBoxText()
+        controls.pack_start(make_labeled_entry(self.mel_combo, 'mel:'), False, False, 0)
+
+        self.recon_combo = Gtk.ComboBoxText()
+        controls.pack_start(make_labeled_entry(self.recon_combo, 'recon:'), False, False, 0)
+
+        self.fuzzy_check = Gtk.CheckButton(label='fuzzy')
+        self.fuzzy_check.set_active(False)
+        controls.pack_start(self.fuzzy_check, False, False, 0)
+
+        vbox.pack_start(controls, False, False, 0)
+
+        # Update mel/recon choices when a project is selected
+        self.tree.get_selection().connect("changed", self.on_project_selection_changed)
+
+        # Fill store with project names
+        for name in projects.projects:
+            self.store.append([name])
+
+        # Select first row by default
+        if len(self.store) > 0:
+            first_path = self.store.get_path(self.store.get_iter_first())
+            self.tree.set_cursor(first_path)
+
+        self.show_all()
+
+    def on_project_selection_changed(self, selection):
+        model, iter_ = selection.get_selected()
+        if iter_ is None:
+            return
+        project = model.get_value(iter_, 0)
+        parameters_file = os.path.join(projects.projects[project],
+                                       f'{project}.master.parameters.xml')
+        self.mel_combo.remove_all()
+        self.recon_combo.remove_all()
+        try:
+            recons = []
+            mels = ['None']
+            for setting in ET.parse(parameters_file).getroot():
+                match setting.tag:
+                    case 'reconstruction':
+                        recons.append(setting.attrib['name'])
+                    case 'mel':
+                        mels.append(setting.attrib['name'])
+            for mel in mels:
+                self.mel_combo.append_text(mel)
+            for recon in recons:
+                self.recon_combo.append_text(recon)
+            if mels:
+                self.mel_combo.set_active(0)
+            self.recon_combo.set_active(0)
+        except Exception as e:
+            print("Could not parse mel/recon options from", project_file, e)
+
+
+    def get_selected(self):
+        sel = self.tree.get_selection()
+        model, iter_ = sel.get_selected()
+        if iter_ is None:
+            return None
+        project = model.get_value(iter_, 0)
+        # read controls
+        mel = self.mel_combo.get_active_text()
+        recon = self.recon_combo.get_active_text()
+        fuzzy = self.fuzzy_check.get_active()
+        return {
+            'project': project,
+            'mel': mel,
+            'fuzzy': fuzzy,
+            'recon': recon
+        }
 
 settings = Gtk.Settings.get_default()
 settings.set_property("gtk-xft-dpi", 112 * 1024)
@@ -361,7 +465,9 @@ def make_sets_widget(settings, attested_lexicons, parameter_tree_widget, statist
             for failed_parse in proto_lexicon.statistics.failed_parses:
                 failed_forms_store.append([failed_parse.language,
                                            failed_parse.glyphs,
-                                           failed_parse.gloss])
+                                           failed_parse.gloss
+                                           if isinstance(failed_parse, (RE.Stage0Form, RE.ModernForm))
+                                           else ''])
             for (correspondence, forms) in proto_lexicon.statistics.correspondence_index.items():
                 row = correspondence_index_store.append(parent=None,
                                                         row=[str(correspondence),
@@ -620,13 +726,44 @@ def run(settings, attested_lexicons):
     Gdk.threads_init()
     Gtk.main()
 
+# HACK make load hooks happy
+class dummy:
+    pass
+
 if __name__ == "__main__":
-    settings = read.read_settings_file(f'{args.experiment_path}/{args.project}.master.parameters.xml',
-                                       mel=args.mel,
-                                       fuzzy=args.fuzzy,
-                                       recon=args.recon)
-    load_hooks.load_hook(args.experiment_path, args, settings)
-    # HACK: The statement above and the statement below are no longer
-    # independent due to fuzzying in TGTM...
-    attested_lexicons = read.read_attested_lexicons(settings)
-    run(settings, attested_lexicons)
+    # Show a lightweight project picker dialog before loading anything.
+    # We create a temporary top-level window to parent the dialog; destroy afterwards.
+    tmp_win = Gtk.Window()
+    tmp_win.set_default_size(1, 1)  # invisible tiny parent
+    tmp_win.set_decorated(False)
+    tmp_win.show()  # must be shown to be a parent
+
+    pm = ProjectManagerDialog(tmp_win)
+    response = pm.run()
+    selection = None
+    if response == Gtk.ResponseType.OK:
+        selection = pm.get_selected()
+    pm.destroy()
+    tmp_win.destroy()
+
+    if selection is not None:
+        # use GUI selection (the dialog returns file path and toggles)
+        project = selection['project']
+        parameters_file = os.path.join(projects.projects[project],
+                                       f'{project}.master.parameters.xml')
+        mel = None if selection['mel'] == 'None' else selection['mel']
+        settings = read.read_settings_file(parameters_file,
+                                           mel=mel,
+                                           fuzzy=selection['fuzzy'],
+                                           recon=selection['recon'])
+        # dummy an arg object for load hooks. FIXME
+        dummy.mel = mel
+        dummy.fuzzy = selection['fuzzy']
+        dummy.recon = selection['recon']
+        load_hooks.load_hook(projects.projects[project], dummy, settings)
+        attested_lexicons = read.read_attested_lexicons(settings)
+        run(settings, attested_lexicons)
+    else:
+        # user canceled: quit application
+        print('Bye!')
+        pass
