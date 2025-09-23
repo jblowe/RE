@@ -80,8 +80,10 @@ def render_cf(t):
 
 def render_var(t):
     if t:
+        t = re.sub(r'<.*?>', '', t or '')
         # the initial blank is important
-        return f' &#160; [<span class="small-caps">var</span> {render_tamang(render_special(t))}]'
+        t = render_2part(t)
+        return f' &#160; [<span class="small-caps">var</span> {t}]'
     else:
         return ''
 
