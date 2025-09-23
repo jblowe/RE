@@ -36,13 +36,12 @@ def trans_str(s):
 
 def esc(s):
     s = re.sub(r'<.*?>', '', s or '')
-    # order is important here
+    s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     # complicated cause we only want to remove | if it is preceded by *
     s = re.sub(r'\*([^|]*)\||\*', lambda m: m.group(1) or '', s)
     # escape seems not to be needed
-    s = escape(s, quote=True)
+    # s = escape(s, quote=True)
     # render tamang text if between //
-    s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     s = unicodedata.normalize('NFC', s)
     return s
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
@@ -50,9 +49,6 @@ def esc(s):
 
 
 def render_special(s):
-    if 'chauffer' in s:
-        pass
-    s = re.sub(r'<.*?>', '', s or '')
     # following hack is needed to avoid 'eau de cuisson de la boule de farine (<i>ḍhim</i>̇ḍo)'
     s = re.sub(r'\$([^\s]+)', r'<i>\1</i>', s)  # $token + word boundary -> italic
     s = re.sub(r'\%(.+?)\|', r'<i>\1</i>', s)  # %free text| -> italic
@@ -68,7 +64,6 @@ def render_tamang(t):
         else:
             converted_tokens.append(trans_str(tok))
     return f"<b>{''.join(converted_tokens)}</b>"
-    #return f'<b>{render_special(trans_str(t))}</b>'
 
 
 def render_transliteration(t):
@@ -104,8 +99,9 @@ def render_sense_number(t):
 
 
 def render_2part(part):
+    part = render_special(part)
     try:
-        parts = esc(part).split('|')
+        parts = part.split('|')
         tamang = parts[0]
         tamang = render_tamang(tamang)
         # U+0307  BULLET (we'll visually separate parts)
@@ -113,7 +109,6 @@ def render_2part(part):
         trans = f"{render_special(bullet.join(parts[1:]))}"
         return (f'{tamang} &#160; {trans}')
     except Exception:
-        raise
         # if the split does not work, render the whole thing as Tamang
         if '|' in part:
             print(f'split failed: {part}')
@@ -276,9 +271,9 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
     if nag or dfn:
         np_line = f'<span class="small-caps">nep</span>'
         if nag:
-            np_line += f' {esc(nag)} &#160; '
+            np_line += f' {esc(nag)} &#160;'
         if dfn:
-            np_line += f'<span class="dfn">{render_transliteration(dfn)}</span>'
+            np_line += f' <span class="dfn">{render_transliteration(dfn)}</span>'
         lines.append(np_line)
     if dff:
         lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{render_special(esc(dff))}</span>')
@@ -300,7 +295,6 @@ def render_long_bits(d):
     # [dial]
     ils = d.get('il', [])
     if ils:
-        #items = ''.join(f'<li>{render_2part(il)}</li>' for il in ils)
         items = ''.join(f'<p>{render_2part(il)}</p>' for il in ils)
         # parts.append(f'<span>{items}</span>')
         parts.append(items)
