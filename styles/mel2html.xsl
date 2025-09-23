@@ -95,13 +95,13 @@
                 <xsl:for-each select=".//gl">
                     <xsl:choose>
                     <xsl:when test="@pivot">
-                        <span style="background-color: pink;color: white"><xsl:value-of select="."/></span>
+                        <span style="background-color: lightblue;color: black"><xsl:value-of select="."/></span>
                     </xsl:when>
                     <xsl:when test="@uses = '0'">
-                        <span style="background-color: hotpink;color: white"><xsl:value-of select="."/></span>
+                        <span style="background-color: yellow;color: black"><xsl:value-of select="."/></span>
                     </xsl:when>
                     <xsl:otherwise>
-                        <span style="background-color: antiquewhite;color: black"><xsl:value-of select="."/></span>
+                        <span style="background-color: palegreen;color: black"><xsl:value-of select="."/></span>
                     </xsl:otherwise>
                     </xsl:choose>
                     <xsl:if test="@xml:lang">
