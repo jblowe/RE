@@ -13,7 +13,8 @@ ALL_BANDS = MASTER_BAND_LIST | SPECIAL_BANDS
 DEFAULT_BANDS = MASTER_BAND_LIST - SPECIAL_BANDS
 # lists we collect into arrays
 TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
-
+# dict for xrefs
+KEYS = {}
 
 def trans_str(s):
     source_chars = '012345:AEONT'
@@ -43,9 +44,8 @@ def esc(s):
     # s = escape(s, quote=True)
     # render tamang text if between //
     s = unicodedata.normalize('NFC', s)
-    return s
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
-    # return s.replace("\u0310", "\u0307")
+    return s.replace("\u0310", "\u0307")
 
 
 def render_special(s):
@@ -73,7 +73,8 @@ def render_transliteration(t):
 def render_cf(t):
     if t:
         # the initial blank is important
-        return f' &#x2192; <a href="{t[0]}">{t[0]}</a>'
+        link = f'''onclick="return toggleEntryAll('{KEYS.get(t[0], 'nokey')}')"'''
+        return f' &#x2192; <a href="#" {link}>{render_tamang(t[0])}</a>'
     else:
         return ''
 
@@ -83,7 +84,7 @@ def render_var(t):
         t = re.sub(r'<.*?>', '', t or '')
         # the initial blank is important
         t = render_2part(t)
-        return f' &#160; [<span class="small-caps">var</span> {t}]'
+        return f' &#160; [<span class="small-caps">var</span> {t.strip()}]'
     else:
         return ''
 
@@ -109,7 +110,8 @@ def render_2part(part):
         # U+0307  BULLET (we'll visually separate parts)
         bullet = ' &bull; '
         trans = f"{render_special(bullet.join(parts[1:]))}"
-        return (f'{tamang} &#160; {trans}')
+        trans = f' &#160; {trans}' if trans else ''
+        return (f'{tamang}{trans}')
     except Exception:
         # if the split does not work, render the whole thing as Tamang
         if '|' in part:
@@ -250,6 +252,7 @@ def parse_entries_from_file(xml_path):
             current_token = token
         elif tag == 'entry':
             e = parse_entry(node, i)
+            KEYS[e.get('hw', 'nokey')] = e['id']
             i += 1
             if not e.get('hw'):
                 # print(f"no hw, skipped: {e.get('id')}")
@@ -532,7 +535,7 @@ function showToken(tok){
 }
 
 // ----- Search (debounced) + highlight -----
-function debounce(fn, ms=220){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); }; }
+function debounce(fn, ms=100){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); }; }
 function highlightInElement(el, query){
   if(!el || !query) return;
   const rx = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
