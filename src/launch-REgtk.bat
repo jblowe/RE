@@ -26,22 +26,10 @@ if exist "%VENV%\Scripts\python.exe" (
   pause & exit /b 1
 )
 
-rem --- collect user arguments (everything after 'upstream') ---
-if "%~1"=="" goto ASK
-set "ARGS=%*"
-goto RUN
-
-:ASK
-echo Enter parameters after "upstream"
-echo   e.g. KIRANTI new --recon experiment1
-set /p "ARGS=> "
-echo.
-goto RUN
-
 :RUN
 rem NOTE: quote any Windows paths with spaces, e.g. "C:\path with spaces\file.xml"
 rem       to pass a literal &, write ^&   ; to pass ^, write ^^
-"%PY%" REgtk.py upstream !ARGS!
+"%PY%" REgtk.py
 set "RC=%ERRORLEVEL%"
 if not "!RC!"=="0" (
   echo.
