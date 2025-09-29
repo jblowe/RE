@@ -39,7 +39,7 @@ def esc(s):
     s = re.sub(r'<.*?>', '', s or '')
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     # complicated cause we only want to remove | if it is preceded by *
-    s = re.sub(r'\*([^|]*)\||\*', lambda m: m.group(1) or '', s)
+    s = re.sub(r'\*([^| ]+)\||\*', lambda m: m.group(1) or '', s)
     # escape seems not to be needed
     # s = escape(s, quote=True)
     # render tamang text if between //
@@ -55,6 +55,7 @@ def render_special(s):
     return s
 
 def render_tamang(t):
+    t = re.sub(r'<.*?>', '', t or '').strip()
     # protect nepali forms in tamang transcription
     tokens = re.split(r'(\$.+?)\b', t)
     converted_tokens = []
@@ -81,8 +82,7 @@ def render_cf(t):
 
 def render_var(t):
     if t:
-        t = re.sub(r'<.*?>', '', t or '')
-        # the initial blank is important
+        t = re.sub(r'<.*?>', '', t or '').strip()
         t = render_2part(t)
         return f' &#160; [<span class="small-caps">var</span> {t.strip()}]'
     else:
@@ -281,6 +281,8 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
             np_line += f' <span class="dfn">{render_transliteration(dfn)}</span>'
         lines.append(np_line)
     if dff:
+        if 'Juniperus' in dff:
+            pass
         lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{render_special(esc(dff))}</span>')
     if dfe:
         lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{render_special(esc(dfe))}</span>')
