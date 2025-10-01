@@ -12,7 +12,7 @@ SPECIAL_BANDS = set('hw hwdial ps dff dfe nag dfn il phr cf xr emp dfbot dfzoo'.
 ALL_BANDS = MASTER_BAND_LIST | SPECIAL_BANDS
 DEFAULT_BANDS = MASTER_BAND_LIST - SPECIAL_BANDS
 # lists we collect into arrays
-TAGS_LIST = ['phr', 'gram', 'xr', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
+TAGS_LIST = ['phr', 'gram', 'xr', 'var', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
 # dict for xrefs
 KEYS = {}
 
@@ -83,7 +83,7 @@ def render_cf(t):
 def render_var(t):
     if t:
         t = re.sub(r' ?<.*?>', '', t or '').strip()
-        t = render_2part(t)
+        t = render_tamang(t)
         return f' &#160; [<span class="small-caps">var</span> {t.strip()}]'
     else:
         return ''
@@ -182,9 +182,8 @@ def parse_mode(mode_el, base_id, idx):
         'ps': get_text(mode_el, 'ps'),
         'hw': get_text(mode_el, 'hw'),
         'sem': get_text(mode_el, 'sem'),
-        'var': get_text(mode_el, 'var'),
         # arrays
-        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'phr': [], 'gram': [], 'xr': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
     }
     m.update(collect_texts(mode_el, TAGS_LIST))
@@ -203,9 +202,8 @@ def parse_sub(sub_el, base_id, idx):
         'nag': get_text(sub_el, 'nag'),
         'dfn': get_text(sub_el, 'dfn'),
         'sem': get_text(sub_el, 'sem'),
-        'var': get_text(sub_el, 'var'),
         # arrays
-        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'phr': [], 'gram': [], 'xr': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
         'modes': []
     }
@@ -227,11 +225,10 @@ def parse_entry(entry_el, i):
         'nag': get_text(entry_el, 'nag'),
         'dfn': get_text(entry_el, 'dfn'),
         'sem': get_text(entry_el, 'sem'),
-        'var': get_text(entry_el, 'var'),
         'emp': get_text(entry_el, 'emp'),
         'ton': get_text(entry_el, 'ton'),
         # arrays
-        'phr': [], 'gram': [], 'xr': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'phr': [], 'gram': [], 'xr': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
         'modes': [],
         'subs': [],
@@ -339,7 +336,9 @@ def render_long_bits(d):
     dfbot = d.get('dfbot', '')
     parts.append(f"<div class='mb-1'>{render_dfbot(dfbot)}</div>")
     for xr in d.get('xr', []):
-        parts.append(f"<div class='mb-1'><i>cf </i> {render_tamang(xr)}</div>")
+        xr2 = render_2part(xr)
+        if xr2:
+            parts.append(f"<div class='mb-1'><i>cf </i> {xr2}</div>")
     # for so in d.get('so', []):
     #     parts.append(f"<div class='mb-1'><b>Source:</b> {esc(so)}</div>")
     # for rec in d.get('rec', []):
@@ -391,13 +390,11 @@ def render_sub_block(s):
 
 def render_hw_etc(entry):
     hw = entry.get('hw', None)
-    if 'lahara' in hw:
-        pass
     homonym = re.match(r'([^\s]+)\$(.*)', hw)
     ps_html = f'&#160;<i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
     emp_html = render_emp(entry.get('emp', None))
-    var_html = render_var(entry.get('var', None))
+    var_html = ''.join([render_var(var)for var in entry.get('var', [])])
     if homonym:
         hw = homonym[1]
         sense_number = render_sense_number(homonym[2])
