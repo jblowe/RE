@@ -36,7 +36,7 @@ def trans_str(s):
 
 
 def esc(s):
-    s = re.sub(r'<.*?>', '', s or '')
+    s = re.sub(r' ?<.*?>', '', s or '')
     s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     # complicated cause we only want to remove | if it is preceded by *
     s = re.sub(r'\*([^| ]+)\||\*', lambda m: m.group(1) or '', s)
@@ -55,7 +55,7 @@ def render_special(s):
     return s
 
 def render_tamang(t):
-    t = re.sub(r'<.*?>', '', t or '').strip()
+    t = re.sub(r' ?<.*?>', '', t or '').strip()
     # protect nepali forms in tamang transcription
     tokens = re.split(r'(\$.+?)\b', t)
     converted_tokens = []
@@ -68,7 +68,7 @@ def render_tamang(t):
 
 
 def render_transliteration(t):
-    return f'<i>{esc(t)}</i>'
+    return f'<i>{esc(t)}</i>' if t else ''
 
 
 def render_cf(t):
@@ -82,17 +82,45 @@ def render_cf(t):
 
 def render_var(t):
     if t:
-        t = re.sub(r'<.*?>', '', t or '').strip()
+        t = re.sub(r' ?<.*?>', '', t or '').strip()
         t = render_2part(t)
         return f' &#160; [<span class="small-caps">var</span> {t.strip()}]'
     else:
         return ''
 
 
+def render_dfbot(t):
+    if t:
+        t = re.sub(r' ?<.*?>', '', t or '').strip()
+        parts = t.split(',')
+        if len(parts) == 1:
+            t = f'<i>{esc(parts[0])}</i>' if t else ''
+        else:
+            t = f'<i>{esc(parts[0])}</i>,' + ' '.join(parts[1:])
+        return f'<span class="small-caps">[bot] </span> {t.strip()}'
+    else:
+        return ''
+
+
 def render_emp(t):
     if t:
+        result = render_special(esc(t))
+        if '?nep' in t or 'nep' in t:
+            if 'nep ' not in result:
+                return f' &#160; &lt;{result}'
+            v1 = [m for m in re.match(r'(\?? ?nep) +(.*)', result).groups()]
+            if len(v1) == 2:
+                # v1[1] = render_special(v1[1])
+                v2 = v1[1].split("'")
+                if len(v2) > 1:
+                    v3 = render_transliteration(v2[0])
+                    result = f"{v1[0]} {v3} '{v2[1]}'"
+                else:
+                    result = f"{v1[0]} {render_transliteration(v2[0])}"
+            else:
+                result = f'{v1[0]} {render_transliteration(v1[1])}'
         # the initial blank is important
-        return f' &#160; &lt;{esc(t)}'
+        return f' &#160; &lt;{result}'
     else:
         return ''
 
@@ -281,8 +309,6 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
             np_line += f' <span class="dfn">{render_transliteration(dfn)}</span>'
         lines.append(np_line)
     if dff:
-        if 'Juniperus' in dff:
-            pass
         lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{render_special(esc(dff))}</span>')
     if dfe:
         lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{render_special(esc(dfe))}</span>')
@@ -294,11 +320,6 @@ def render_long_bits(d):
     parts = []
     # if d.get('sem'):
     #     parts.append(f"<div class='mb-1'><b>Semantic domain:</b> {esc(d['sem'])}</div>")
-    # if d.get('emp'):
-    #    parts.append(f"<div class='mb-1'><b>Emp:</b>{render_emp(d['emp'])}</div>")
-    # cross-refs
-    # for cf in d.get('cf', []):
-    #     parts.append(f'<div class="mb-1"><b>cf:</b> {esc(cf)}</div>')
     # [dial]
     ils = d.get('il', [])
     if ils:
@@ -315,6 +336,8 @@ def render_long_bits(d):
     #     parts.append(f"<div class='mb-1'><i>note </i> {esc(nb)}</div>")
     # for nbi in d.get('nbi', []):
     #     parts.append(f"<div class='mb-1'><i>note (internal):</i> {esc(nbi)}</div>")
+    dfbot = d.get('dfbot', '')
+    parts.append(f"<div class='mb-1'>{render_dfbot(dfbot)}</div>")
     for xr in d.get('xr', []):
         parts.append(f"<div class='mb-1'><i>cf </i> {render_tamang(xr)}</div>")
     # for so in d.get('so', []):
@@ -368,7 +391,9 @@ def render_sub_block(s):
 
 def render_hw_etc(entry):
     hw = entry.get('hw', None)
-    homonym = re.match(r'(.+)\$(.*)', hw)
+    if 'lahara' in hw:
+        pass
+    homonym = re.match(r'([^\s]+)\$(.*)', hw)
     ps_html = f'&#160;<i class="small-caps">{esc(entry["ps"])}</i>' if entry.get('ps') else ''
     cf_html = render_cf(entry.get('cf', None))
     emp_html = render_emp(entry.get('emp', None))
@@ -492,7 +517,7 @@ dt { font-weight: bold; font-style: italic; }
 #search-results mark { background: #fff3cd; padding: 0 .1em; }
 #search-results .long, #search-results .mode-long { display: none; }
 /* Wrapping / Gloss layout */
-.mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: break-word; word-break: normal; }
+/* .mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: break-word; word-break: normal; } */
 .mode-body p, .mode-sub p { margin: .15rem 0 0; text-indent: 0; }
 .mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; text-align: left; }
 .mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
