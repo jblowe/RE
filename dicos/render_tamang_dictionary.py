@@ -334,7 +334,7 @@ def render_long_bits(d):
     # for nbi in d.get('nbi', []):
     #     parts.append(f"<div class='mb-1'><i>note (internal):</i> {esc(nbi)}</div>")
     dfbot = d.get('dfbot', '')
-    parts.append(f"<div class='mb-1'>{render_dfbot(dfbot)}</div>")
+    if dfbot: parts.append(f"<div class='mb-1'>{render_dfbot(dfbot)}</div>")
     for xr in d.get('xr', []):
         xr2 = render_2part(xr)
         if xr2:
@@ -367,7 +367,7 @@ def render_mode_block(m):
     long_html = f"""
       <div class="mode-long" id="{mid}-long" style="display:none;">
         <div class="mode-body">{head_bits}{long_bits}</div>
-      </div>"""
+      </div>""" if head_bits or long_bits else ''
     return f"<div class='mode-sub'>{short_html}{long_html}</div>"
 
 def render_sub_block(s):
@@ -384,7 +384,7 @@ def render_sub_block(s):
     long_html = f"""
       <div class="mode-long" id="{sid}-long" style="display:none;">
         <div class="mode-body">{long_bits}</div>
-      </div>"""
+      </div>""" if long_bits else ''
     mode_blocks = ''.join(render_mode_block(m) for m in s.get('modes', []))
     return f"<div class='mode-block'>{short_html}{long_html}{mode_blocks}</div>"
 
