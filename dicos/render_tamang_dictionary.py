@@ -36,26 +36,25 @@ def trans_str(s):
 
 
 def esc(s):
-    s = re.sub(r' ?<.*?>', '', s or '')
-    s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
+    # s = re.sub(r' ?<.*?>', '', s or '')
     # complicated cause we only want to remove | if it is preceded by *
     s = re.sub(r'\*([^| ]+)\||\*', lambda m: m.group(1) or '', s)
     # escape seems not to be needed
     # s = escape(s, quote=True)
-    # render tamang text if between //
     s = unicodedata.normalize('NFC', s)
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
     return s.replace("\u0310", "\u0307")
 
 
 def render_special(s):
+    # render tamang text if between //
+    s = re.sub(r'/(.*?)/', lambda m: render_tamang(m.group(1)), s)
     # following hack is needed to avoid 'eau de cuisson de la boule de farine (<i>ḍhim</i>̇ḍo)'
-    s = re.sub(r'\$([^\s]+)', r'<i>\1</i>', s)  # $token + word boundary -> italic
+    s = re.sub(r'\$([^\s\|]+)', r'<i>\1</i>', s)  # $token + word boundary -> italic
     s = re.sub(r'\%(.+?)\|', r'<i>\1</i>', s)  # %free text| -> italic
     return s
 
 def render_tamang(t):
-    t = re.sub(r' ?<.*?>', '', t or '').strip()
     # protect nepali forms in tamang transcription
     tokens = re.split(r'(\$.+?)\b', t)
     converted_tokens = []
@@ -136,8 +135,8 @@ def render_2part(part):
         tamang = parts[0]
         tamang = render_tamang(tamang)
         # U+0307  BULLET (we'll visually separate parts)
-        bullet = ' &bull; '
-        trans = f"{render_special(bullet.join(parts[1:]))}"
+        bullet = ' &#x2022; '
+        trans = f"{bullet.join(parts[1:])}"
         trans = f' &#160; {trans}' if trans else ''
         return (f'{tamang}{trans}')
     except Exception:
@@ -156,13 +155,13 @@ def localname(tag: str) -> str:
 
 
 def get_text(parent, tag):
-    return (parent.findtext(tag, '') or '').strip()
+    return re.sub(r' ?<.*?>', '', (parent.findtext(tag, '') or '').strip().replace('&', '&amp;'))
 
 
 def collect_texts(parent, tags_list):
     out = {}
     for tag in tags_list:
-        out[tag] = [(el.text or '').strip()
+        out[tag] = [re.sub(r' ?<.*?>', '', (el.text or '').strip().replace('&', '&amp;'))
                     for el in parent.findall(tag)
                     if el is not None and el.text and el.text.strip()]
     return out
