@@ -12,7 +12,7 @@ SPECIAL_BANDS = set('hw hwdial ps dff dfe nag dfn il phr cf xr emp dfbot dfzoo'.
 ALL_BANDS = MASTER_BAND_LIST | SPECIAL_BANDS
 DEFAULT_BANDS = MASTER_BAND_LIST - SPECIAL_BANDS
 # lists we collect into arrays
-TAGS_LIST = ['phr', 'gram', 'xr', 'var', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
+TAGS_LIST = ['phr', 'gram', 'dfbot', 'xr', 'var', 'so', 'rec', 'nb', 'nbi', 'il', 'ilold', 'enc', 'cf']
 # dict for xrefs
 KEYS = {}
 
@@ -90,13 +90,12 @@ def render_var(t):
 
 def render_dfbot(t):
     if t:
-        t = re.sub(r' ?<.*?>', '', t or '').strip()
         parts = t.split(',')
         if len(parts) == 1:
             t = f'<i>{esc(parts[0])}</i>' if t else ''
         else:
             t = f'<i>{esc(parts[0])}</i>,' + ' '.join(parts[1:])
-        return f'<span class="small-caps">[bot] </span> {t.strip()}'
+        return t.strip()
     else:
         return ''
 
@@ -177,12 +176,11 @@ def parse_mode(mode_el, base_id, idx):
         'nag': get_text(mode_el, 'nag'),
         'dfn': get_text(mode_el, 'dfn'),
         'dfzoo': get_text(mode_el, 'dfzoo'),
-        'dfbot': get_text(mode_el, 'dfbot'),
         'ps': get_text(mode_el, 'ps'),
         'hw': get_text(mode_el, 'hw'),
         'sem': get_text(mode_el, 'sem'),
         # arrays
-        'phr': [], 'gram': [], 'xr': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'phr': [], 'gram': [], 'xr': [], 'dfbot': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
     }
     m.update(collect_texts(mode_el, TAGS_LIST))
@@ -196,13 +194,12 @@ def parse_sub(sub_el, base_id, idx):
         'ps': get_text(sub_el, 'ps'),
         'dff': get_text(sub_el, 'dff'),
         'dfzoo': get_text(sub_el, 'dfzoo'),
-        'dfbot': get_text(sub_el, 'dfbot'),
         'dfe': get_text(sub_el, 'dfe'),
         'nag': get_text(sub_el, 'nag'),
         'dfn': get_text(sub_el, 'dfn'),
         'sem': get_text(sub_el, 'sem'),
         # arrays
-        'phr': [], 'gram': [], 'xr': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'phr': [], 'gram': [], 'xr': [], 'dfbot': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
         'modes': []
     }
@@ -219,7 +216,6 @@ def parse_entry(entry_el, i):
         'ps': get_text(entry_el, 'ps'),
         'dff': get_text(entry_el, 'dff'),
         'dfe': get_text(entry_el, 'dfe'),
-        'dfbot': get_text(entry_el, 'dfbot'),
         'dfzoo': get_text(entry_el, 'dfzoo'),
         'nag': get_text(entry_el, 'nag'),
         'dfn': get_text(entry_el, 'dfn'),
@@ -227,7 +223,7 @@ def parse_entry(entry_el, i):
         'emp': get_text(entry_el, 'emp'),
         'ton': get_text(entry_el, 'ton'),
         # arrays
-        'phr': [], 'gram': [], 'xr': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
+        'phr': [], 'gram': [], 'xr': [], 'dfbot': [], 'var': [], 'so': [], 'rec': [], 'nb': [], 'nbi': [],
         'il': [], 'ilold': [], 'enc': [], 'cf': [],
         'modes': [],
         'subs': [],
@@ -292,7 +288,7 @@ def parse_entries_from_file(xml_path):
 
 # =================== rendering ===================
 
-def render_lang_lines(ps, nag, dfn, dff, dfe):
+def render_lang_lines(ps, nag, dfn, dff, dfe, dfbot):
     """Return HTML lines for np/fr/en without emitting empties. np line shows nag (if any) with optional dfn."""
     lines = []
     if ps:
@@ -308,6 +304,8 @@ def render_lang_lines(ps, nag, dfn, dff, dfe):
         lines.append(f'<span class="small-caps">fr&#160;</span> <span class="xxx">{render_special(esc(dff))}</span>')
     if dfe:
         lines.append(f'<span class="small-caps">eng</span> <span class="xxx">{render_special(esc(dfe))}</span>')
+    for d in dfbot:
+        if d: lines.append(f'<span class="small-caps">bot</span> <span class="xxx">{render_dfbot(d)}</span>')
     if not lines:
         return ""
     return "<br/>".join(lines)
@@ -332,8 +330,6 @@ def render_long_bits(d):
     #     parts.append(f"<div class='mb-1'><i>note </i> {esc(nb)}</div>")
     # for nbi in d.get('nbi', []):
     #     parts.append(f"<div class='mb-1'><i>note (internal):</i> {esc(nbi)}</div>")
-    dfbot = d.get('dfbot', '')
-    if dfbot: parts.append(f"<div class='mb-1'>{render_dfbot(dfbot)}</div>")
     for xr in d.get('xr', []):
         xr2 = render_2part(xr)
         if xr2:
@@ -350,7 +346,7 @@ def render_mode_block(m):
     badge_html = f"<span class='badge text-bg-secondary level'>{str(m['level'])}</span>" if has_level else ''
     if badge_html:
         badge_html = f'<div class="mode-badge">{badge_html}</div>'
-    lines = render_lang_lines('', m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''))
+    lines = render_lang_lines('', m.get('nag', ''), m.get('dfn', ''), m.get('dff', ''), m.get('dfe', ''), m.get('dfbot', []))
     short_html = ""
     if lines:
         short_html = f"""
@@ -372,7 +368,7 @@ def render_mode_block(m):
 def render_sub_block(s):
     sid = s['id']
     head_html = render_hw_etc(s)
-    lines = render_lang_lines('', s.get('nag',''), s.get('dfn',''), s.get('dff',''), s.get('dfe',''))
+    lines = render_lang_lines('', s.get('nag',''), s.get('dfn',''), s.get('dff',''), s.get('dfe',''), s.get('dfbot', []))
     short_lines = (head_html + (f"<p class='mb-0'>{lines}</p>" if lines else "")) if (head_html or lines) else ""
     short_html = ""
     if short_lines:
@@ -407,7 +403,7 @@ def render_short(entry):
     head = render_hw_etc(entry)
     blocks = []
     if entry.get('modes') or entry.get('subs'):
-        if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn'):
+        if entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn') or entry.get('dfbot', []):
             pseudo = {
                 'id': f"{entry['id']}-m0",
                 'level': None,
@@ -415,7 +411,7 @@ def render_short(entry):
                 'dff': entry.get('dff',''), 'dfe': entry.get('dfe',''),
                 'sem': entry.get('sem',''),
                 'var': entry.get('var',''),
-                'phr': entry.get('phr',[]), 'gram': entry.get('gram',[]), 'xr': entry.get('xr',[]),
+                'phr': entry.get('phr',[]), 'gram': entry.get('gram',[]), 'xr': entry.get('xr',[]), 'dfbot': entry.get('dfbot', []),
                 'so': entry.get('so',[]), 'rec': entry.get('rec',[]), 'nb': entry.get('nb',[]), 'nbi': entry.get('nbi',[]),
                 'il': entry.get('il',[]), 'ilold': entry.get('ilold',[]), 'enc': entry.get('enc',[]), 'cf': entry.get('cf',[]),
             }
@@ -426,12 +422,12 @@ def render_short(entry):
             blocks.append(render_sub_block(s))
         body = ''.join(blocks)
     else:
-        lines = render_lang_lines('', entry.get('nag',''), entry.get('dfn',''), entry.get('dff',''), entry.get('dfe',''))
+        lines = render_lang_lines('', entry.get('nag',''), entry.get('dfn',''), entry.get('dff',''), entry.get('dfe',''), entry.get('dfbot', []))
         body = f"<p class='mb-0'>{lines}</p>" if lines else ""
     return f"<div class='short'>{head}{body}</div>"
 
 def render_entry_long(entry):
-    has_base_defs = entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn')
+    has_base_defs = entry.get('dff') or entry.get('dfe') or entry.get('nag') or entry.get('dfn') or entry.get('dfbot', [])
     if (entry.get('modes') or entry.get('subs')) and has_base_defs:
         d_extras_html = ''
     else:
@@ -542,8 +538,6 @@ function toggleEntryAll(id){
   entry.classList.toggle('expanded', anyHidden);
   return false;
 }
-// Legacy wrapper in case something still calls toggleEntry
-function toggleEntry(id){ return toggleEntryAll(id); }
 
 // ----- Letter navigation -----
 function showToken(tok){
@@ -617,7 +611,7 @@ function handleSearch(input){
     resultsDiv.innerHTML = '<p class="small">No results found.</p>';
   }
 }
-window.debouncedSearch = debounce(handleSearch, 220);
+window.debouncedSearch = debounce(handleSearch, 80);
 
 
 // ----- Page mode (About / Credits / Dictionary) + hamburger auto-close -----
@@ -774,12 +768,14 @@ def build_sections(groups):
             eid = e['id']
             short_html = render_short(e)
             long_html = render_entry_long(e)
+            if 'ai-ni' in short_html:
+                pass
             long_block = (
                 f"<div class='long' id='{eid}-long' style='display:none;'>{long_html}</div>"
-                if long_html else
-                f"<div class='long' id='{eid}-long' style='display:none;'></div>"
+                if long_html else ''
             )
-            has_more = bool(e.get('modes') or e.get('subs') or long_html)
+            # has_more = bool(e.get('modes') or e.get('subs') or long_html)
+            has_more = bool(long_html or 'mode-long' in short_html)
             cls = "entry has-more" if has_more else "entry"
             entry_html.append(
                 f"<div id='{eid}' class='{cls}' onclick=\"return toggleEntryAll('{eid}')\">{short_html}{long_block}</div>"
