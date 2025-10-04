@@ -9,7 +9,7 @@ import time
 # ============== helpers ==============
 
 MASTER_BAND_LIST = set('cf dfbot dfe dff dfn dfzoo dial emp il mmnag nag nb niv phr ps rajdfn rajnag var xr'.split(' '))
-SPECIAL_BANDS = set('hw hwdial ps dff dfe nag dfn il phr cf xr emp dfbot dfzoo'.split(' '))
+SPECIAL_BANDS = set('hw ps dff dfe nag dfn il phr cf xr emp dfbot dfzoo'.split(' '))
 ALL_BANDS = MASTER_BAND_LIST | SPECIAL_BANDS
 DEFAULT_BANDS = MASTER_BAND_LIST - SPECIAL_BANDS
 # lists we collect into arrays
@@ -357,9 +357,6 @@ def render_mode_block(m):
         </div>"""
     long_bits = render_long_bits(m)
     head_bits = ""
-    # if m.get('hw') or m.get('ps'):
-    #     ps_html = f'& <i class="small-caps">{esc(m.get("ps",""))}</i>' if m.get('ps') else ''
-    #     head_bits = f"<div class='mode-head mb-1'><b>{esc(m.get('hw',''))}</b>{ps_html}</div>"
     long_html = f"""
       <div class="mode-long" id="{mid}-long" style="display:none;">
         <div class="mode-body">{head_bits}{long_bits}</div>
@@ -368,6 +365,9 @@ def render_mode_block(m):
 
 def render_sub_block(s):
     sid = s['id']
+    if not s.get('hw'):
+        print('skipped subheadword article (no proper hw found)', sid)
+        return ''
     head_html = render_hw_etc(s)
     lines = render_lang_lines('', s.get('nag',''), s.get('dfn',''), s.get('dff',''), s.get('dfe',''), s.get('dfbot', []))
     short_lines = (head_html + (f"<p class='mb-0'>{lines}</p>" if lines else "")) if (head_html or lines) else ""
