@@ -4,6 +4,7 @@ from pathlib import Path
 from html import escape, unescape
 import re
 import unicodedata
+import time
 
 # ============== helpers ==============
 
@@ -37,7 +38,7 @@ def trans_str(s):
 
 def esc(s):
     # s = re.sub(r' ?<.*?>', '', s or '')
-    # complicated cause we only want to remove | if it is preceded by *
+    # complicated 'cause we only want to remove | if it is preceded by *
     s = re.sub(r'\*([^| ]+)\||\*', lambda m: m.group(1) or '', s)
     # escape seems not to be needed
     # s = escape(s, quote=True)
@@ -284,7 +285,7 @@ def parse_entries_from_file(xml_path):
                 print(f"current_token is none, 0 used instead: {current_token}")
             groups[current_token]['entries'].append(e)
 
-    return groups
+    return groups, i
 
 # =================== rendering ===================
 
@@ -704,10 +705,11 @@ HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
         </ul>
         <p></p>
         <p class="small">
-            The dictionary contains 3,517 entries, and most have definitions
+            The dictionary contains {entry_count} entries, and most have definitions
             in three languages: Nepali (in Devanagari with transliteration),
             French, and English.
         </p>
+        <p>This edition was created on {run_date}.
     </section>
     <section id="page-credits" class="page">
         <a class="to-dico" href="#dico">To Dictionary</a>
@@ -789,13 +791,15 @@ def minify_html(s: str) -> str:
     s = re.sub(r'> +<', '> <', s)
     return s.strip()
 
-def render_html(groups, title):
+def render_html(groups, title, ENTRY_COUNT):
     return HTML_SHELL.format(
         title=esc(title),
         style=STYLE,
         script=SCRIPT,
         letter_nav=build_letter_nav(groups),
-        sections=build_sections(groups)
+        sections=build_sections(groups),
+        run_date=time.strftime("%Y-%m-%d at %H:%M:%S UTC", time.gmtime()),
+        entry_count=ENTRY_COUNT
     )
 
 if __name__ == "__main__":
@@ -807,8 +811,8 @@ if __name__ == "__main__":
     ap.add_argument("--no-minify", action="store_true", help="Skip HTML minification")
     args = ap.parse_args()
 
-    groups = parse_entries_from_file(args.xml)
-    html = render_html(groups, args.title)
+    groups, ENTRY_COUNT = parse_entries_from_file(args.xml)
+    html = render_html(groups, args.title, ENTRY_COUNT)
     if not args.no_minify:
         html = minify_html(html)
     Path(args.out).write_text(html, encoding="utf-8")
