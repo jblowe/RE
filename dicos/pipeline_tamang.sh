@@ -31,7 +31,7 @@ for version in mobile review full; do
   # format the 'print' versions
   xsltproc format33_rev.xsl tamang-${version}-recoded.xml > tamang-${version}-4print.html
   # format the 'mobile' versions. no recoding required, the script does it all
-  python render_tamang_dictionary.py tamang-${version}-converted.xml -o tamang-${version}-4mobile.html --no-minify
+  python render_tamang_dictionary.py tamang-${version}-converted.xml -o tamang-${version}-4mobile.html
 done
 
 # the following is for updating the github repo when the script is changed
