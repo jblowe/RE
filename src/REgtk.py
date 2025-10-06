@@ -9,6 +9,7 @@ import serialize
 import os
 import load_hooks
 import projects
+import checkpoint
 from datetime import datetime
 import xml.etree.ElementTree as ET
 
@@ -385,19 +386,11 @@ class ParameterWidget(Gtk.Box):
             self.mels)
 
 class ParameterTreeWidget(Gtk.Notebook):
-    def __init__(self, settings):
+    def __init__(self, initial_parameter_tree):
         super().__init__()
-        for (language, correspondence_filename) in settings.proto_languages.items():
-            self.append_page(
-                ParameterWidget(
-                    read.read_correspondence_file(
-                        os.path.join(settings.directory_path,
-                                     correspondence_filename),
-                        language,
-                        settings.upstream[language],
-                        language,
-                        settings.mel_filename)),
-                Gtk.Label(label=language))
+        for (language, parameters) in initial_parameter_tree.items():
+            self.append_page(ParameterWidget(parameters),
+                             Gtk.Label(label=language))
 
     def parameter_tree(self):
         return {parameter_widget.proto_language_name:
@@ -814,15 +807,21 @@ class REWindow(Gtk.Window):
         self.zoom_level = 1.0
         self._apply_zoom()
 
-    def open_from_settings(self, settings):
-        attested_lexicons = read.read_attested_lexicons(settings)
+    def clear_widgets(self):
+        for child in self.left_pane.get_children():
+            self.left_pane.remove(child)
+        for child in self.right_pane.get_children():
+            self.right_pane.remove(child)
 
-        self.settings = settings
+    # Load lexicons and parameters into widgets.
+    def load(self, attested_lexicons, initial_parameter_tree):
+        # Clear old widgets.
+        self.clear_widgets()
         self.attested_lexicons = attested_lexicons
 
         # Input widgets
         self.lexicons_widget = LexiconsWidget(attested_lexicons.values())
-        self.parameters_widget = ParameterTreeWidget(settings)
+        self.parameters_widget = ParameterTreeWidget(initial_parameter_tree)
 
         # Output widgets
         self.sets_widget = SetsWidget(self.on_batch_all_upstream)
@@ -861,6 +860,25 @@ class REWindow(Gtk.Window):
 
         self.show_all()
 
+    # Initially load widgets from a settings file.
+    def open_from_settings(self, settings):
+        attested_lexicons = read.read_attested_lexicons(settings)
+
+        self.settings = settings
+
+        initial_parameter_tree = {language:
+                                  read.read_correspondence_file(
+                                      os.path.join(settings.directory_path,
+                                                   correspondence_filename),
+                                      language,
+                                      settings.upstream[language],
+                                      language,
+                                      settings.mel_filename)
+                                  for (language, correspondence_filename)
+                                  in settings.proto_languages.items()
+                                  }
+        self.load(attested_lexicons, initial_parameter_tree)
+
     def open_project(self, widget=None):
         """Show the ProjectManagerDialog and load the selected project."""
         dialog = ProjectManagerDialog(self)
@@ -872,12 +890,6 @@ class REWindow(Gtk.Window):
 
         if selection is None:
             return
-
-        # Clear old widgets
-        for child in self.left_pane.get_children():
-            self.left_pane.remove(child)
-        for child in self.right_pane.get_children():
-            self.right_pane.remove(child)
 
         project = selection['project']
         self.project = project
@@ -900,7 +912,9 @@ class REWindow(Gtk.Window):
         if dialog.run() == Gtk.ResponseType.OK:
             checkpoint_path = dialog.get_filename()
             print(f"Creating checkpoint at: {checkpoint_path}")
-            self.save_checkpoint_to_path(checkpoint_path)
+            checkpoint_data = checkpoint.CheckpointData(self.attested_lexicons,
+                                                        self.parameters_widget.parameter_tree())
+            checkpoint.save_checkpoint_to_path(checkpoint_path, checkpoint_data)
         dialog.destroy()
 
     def load_checkpoint(self, widget):
@@ -908,7 +922,8 @@ class REWindow(Gtk.Window):
         if dialog.run() == Gtk.ResponseType.OK:
             checkpoint_path = dialog.get_filename()
             print(f"Loading checkpoint from: {checkpoint_path}")
-            self.load_checkpoint_from_path(checkpoint_path)
+            checkpoint_data = checkpoint.load_checkpoint_from_path(checkpoint_path)
+            self.load(checkpoint_data.lexicons, checkpoint_data.parameter_tree)
         dialog.destroy()
 
     def compare(self, widget):
