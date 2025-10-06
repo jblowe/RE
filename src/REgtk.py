@@ -788,7 +788,7 @@ class REWindow(Gtk.Window):
             proto_lexicon = RE.upstream_tree(
                 self.settings.upstream_target,
                 self.settings.upstream,
-                ParameterTreeWidget(self.settings).parameter_tree(),
+                self.parameters_widget.parameter_tree(),
                 self.attested_lexicons,
                 False,
             )
