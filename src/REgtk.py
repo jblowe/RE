@@ -9,6 +9,7 @@ import serialize
 import os
 import load_hooks
 import projects
+from datetime import datetime
 import xml.etree.ElementTree as ET
 
 class ProjectManagerDialog(Gtk.Dialog):
@@ -361,7 +362,7 @@ class SoundClassSheet(Sheet):
                 for row in self.store}
 
 class ParameterWidget(Gtk.Box):
-    def __init__(self, settings, parameters):
+    def __init__(self, parameters):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.correspondence_sheet = CorrespondenceSheet(parameters.table)
         self.rule_sheet = RuleSheet(parameters.table)
@@ -371,15 +372,6 @@ class ParameterWidget(Gtk.Box):
         self.add(self.canon_widget)
         self.add(self.correspondence_sheet)
         self.add(self.rule_sheet)
-
-        def save_button_clicked(widget):
-            serialize.serialize_correspondence_file(
-                os.path.join(
-                    settings.directory_path,
-                    settings.proto_languages[parameters.proto_language_name]),
-                self.parameters())
-
-        self.add(make_clickable_button('Save', save_button_clicked))
 
     def parameters(self):
         names = self.correspondence_sheet.names
@@ -398,7 +390,6 @@ class ParameterTreeWidget(Gtk.Notebook):
         for (language, correspondence_filename) in settings.proto_languages.items():
             self.append_page(
                 ParameterWidget(
-                    settings,
                     read.read_correspondence_file(
                         os.path.join(settings.directory_path,
                                      correspondence_filename),
@@ -643,43 +634,52 @@ class CorrespondenceIndexWidget(Gtk.Box):
                 self.store.append(parent=row, row=[str(form), None, form])
         self.update_visible_counts()
 
-class OpenDialogAction:
-    """Encapsulates the file chooser dialog behavior."""
-    def __init__(self, window):
-        self.window = window
+def accel_str(label):
+    if label == None:
+        return None
+    """Return the right modifier string for this platform."""
+    if sys.platform == "darwin":
+        return label.replace("<Ctrl>", "<Meta>")  # Command key on Mac
+    else:
+        return label
 
-    def __call__(self, widget):
-        dialog = Gtk.FileChooserDialog(
-            title="Please choose a file",
-            parent=self.window,
-            action=Gtk.FileChooserAction.OPEN,
-        )
-        dialog.add_buttons(
+class CheckpointDialog(Gtk.FileChooserDialog):
+    def __init__(self, parent, action_type="save", default_dir=None):
+        action = Gtk.FileChooserAction.SAVE if action_type == "save" else Gtk.FileChooserAction.OPEN
+        title = "Create Checkpoint" if action_type == "save" else "Load Checkpoint"
+
+        super().__init__(title=title, parent=parent, action=action)
+        self.add_buttons(
             Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-            Gtk.STOCK_OPEN, Gtk.ResponseType.OK,
+            Gtk.STOCK_SAVE if action_type == "save" else Gtk.STOCK_OPEN,
+            Gtk.ResponseType.OK,
         )
-        self._add_filters(dialog)
 
-        response = dialog.run()
-        if response == Gtk.ResponseType.OK:
-            filename = dialog.get_filename()
-            print("Opened:", filename)
-        dialog.destroy()
+        self.set_default_size(800, 400)
+        self._add_filters()
 
-    def _add_filters(self, dialog):
+        if action_type == "save":
+            suggested_name = f"{parent.project}.{datetime.now():%Y-%m-%d_%H-%M-%S}.rechk"
+            self.set_current_name(suggested_name)
+
+    def _add_filters(self):
+        filter_chk = Gtk.FileFilter()
+        filter_chk.set_name("RE Checkpoint Files (*.rechk)")
+        filter_chk.add_pattern("*.rechk")
+        self.add_filter(filter_chk)
+
         filter_any = Gtk.FileFilter()
-        filter_any.set_name("All files")
+        filter_any.set_name("All Files")
         filter_any.add_pattern("*")
-        dialog.add_filter(filter_any)
+        self.add_filter(filter_any)
 
 class REMenuBar(Gtk.MenuBar):
     def __init__(self, window):
         super().__init__()
         self.window = window
-        self.open_action = OpenDialogAction(window)
         self._build_menus()
 
-    def _add_item(self, menu, label, callback_or_submenu):
+    def _add_item(self, menu, label, callback_or_submenu, accel=None):
         item = Gtk.MenuItem(label=label)
 
         if isinstance(callback_or_submenu, list):
@@ -690,25 +690,32 @@ class REMenuBar(Gtk.MenuBar):
         elif callback_or_submenu:
             item.connect("activate", callback_or_submenu)
 
+        # Assign keyboard shortcut if provided
+        if accel:
+            key, mod = Gtk.accelerator_parse(accel)
+            item.add_accelerator(
+                "activate", self.window.accel_group, key, mod, Gtk.AccelFlags.VISIBLE
+            )
+
         menu.append(item)
         return item
 
     def _build_menus(self):
         menus = {
             "File": [
-                ("Open Project", self.window.open_project),
-                #("Open Project...", self.open_action),
-                #("Save Snapshot", self.window.save_snapshot),
-                #("Export", [
-                #    ("Export as CSV", self.window.export_csv),
-                #    ("Export as JSON", self.window.export_json),
-                #]),
-                ("Quit", Gtk.main_quit),
+                ("Open Project...", self.window.open_project, None),
+                ("Save Project", self.window.save_project, "<Ctrl>S"),
+                ("—", None, None),
+                ("Create Checkpoint...", self.window.create_checkpoint, None),
+                ("Load Checkpoint...", self.window.load_checkpoint, None),
+                ("Compare...", self.window.compare, None),
+                ("—", None, None),
+                ("Quit", Gtk.main_quit, None),
             ],
             "View": [
-                ("Zoom In", self.window.zoom_in),
-                ("Zoom Out", self.window.zoom_out),
-                ("Reset Zoom", self.window.zoom_reset),
+                ("Zoom In", self.window.zoom_in, "<Ctrl>plus"),
+                ("Zoom Out", self.window.zoom_out, "<Ctrl>minus"),
+                ("Reset Zoom", self.window.zoom_reset, None),
             ],
         }
 
@@ -718,8 +725,11 @@ class REMenuBar(Gtk.MenuBar):
             menu_item.set_submenu(menu)
             self.append(menu_item)
 
-            for label, callback in items:
-                self._add_item(menu, label, callback)
+            for label, callback, accel in items:
+                if label == "—":
+                    menu.append(Gtk.SeparatorMenuItem())
+                    continue
+                self._add_item(menu, label, callback, accel_str(accel))
 
 def make_pane_container(orientation):
     container = Gtk.Paned()
@@ -733,6 +743,10 @@ class REWindow(Gtk.Window):
                             default_height=800, default_width=1400)
         # Track zoom state
         self.zoom_level = 1.0
+
+        # Keyboard shortcuts
+        self.accel_group = Gtk.AccelGroup()
+        self.add_accel_group(self.accel_group)
 
         # -----------------------------
         # Menu
@@ -866,6 +880,7 @@ class REWindow(Gtk.Window):
             self.right_pane.remove(child)
 
         project = selection['project']
+        self.project = project
         parameters_file = os.path.join(projects.projects[project],
                                        f'{project}.master.parameters.xml')
         mel = None if selection['mel'] == 'None' else selection['mel']
@@ -879,6 +894,33 @@ class REWindow(Gtk.Window):
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project], dummy, settings)
         self.open_from_settings(settings)
+
+    def create_checkpoint(self, widget):
+        dialog = CheckpointDialog(self, action_type="save")
+        if dialog.run() == Gtk.ResponseType.OK:
+            checkpoint_path = dialog.get_filename()
+            print(f"Creating checkpoint at: {checkpoint_path}")
+            self.save_checkpoint_to_path(checkpoint_path)
+        dialog.destroy()
+
+    def load_checkpoint(self, widget):
+        dialog = CheckpointDialog(self, action_type="load")
+        if dialog.run() == Gtk.ResponseType.OK:
+            checkpoint_path = dialog.get_filename()
+            print(f"Loading checkpoint from: {checkpoint_path}")
+            self.load_checkpoint_from_path(checkpoint_path)
+        dialog.destroy()
+
+    def compare(self, widget):
+        pass
+
+    def save_project(self, widget):
+        for (proto_language_name, parameters) in self.parameters_widget.parameter_tree().items():
+            serialize.serialize_correspondence_file(
+                os.path.join(
+                    self.settings.directory_path,
+                    self.settings.proto_languages[proto_language_name]),
+                parameters)
 
 # HACK make load hooks happy
 class dummy:
