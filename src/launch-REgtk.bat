@@ -1,39 +1,11 @@
 @echo off
-setlocal EnableExtensions EnableDelayedExpansion
-
-rem === customize these paths if needed ===
+setlocal
 set "MSYS2=C:\msys64"
-set "APPDIR=C:\RE\src"
-set "VENV=%APPDIR%\venv-gtk3"
+REM Clean Windows baseline:
+set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
+REM Add ONLY UCRT64:
+set "PATH=c:\msys64\ucrt64\bin;%PATH%"
+set GDK_BACKEND=win32
+"c:\msys64\ucrt64\bin\python.exe" "C:\RE\src\REgtk.py"
 
-rem --- ensure GTK/GObject DLLs & typelibs are found ---
-set "PATH=%MSYS2%\mingw64\bin;%PATH%"
-set "GI_TYPELIB_PATH=%MSYS2%\mingw64\lib\girepository-1.0"
-set "GSETTINGS_SCHEMA_DIR=%MSYS2%\mingw64\share\glib-2.0\schemas"
-set "PYTHONIOENCODING=utf-8"
 
-cd /d "%APPDIR%" || (echo [ERROR] Folder not found: %APPDIR% & pause & exit /b 1)
-
-rem --- pick the venv's Python ---
-if exist "%VENV%\Scripts\python.exe" (
-  set "PY=%VENV%\Scripts\python.exe"
-) else if exist "%VENV%\bin\python.exe" (
-  set "PY=%VENV%\bin\python.exe"
-) else (
-  echo [ERROR] Could not find venv Python under "%VENV%".
-  echo Recreate it from MINGW64 Python with:
-  echo     python -m venv --system-site-packages venv-gtk3
-  pause & exit /b 1
-)
-
-:RUN
-rem NOTE: quote any Windows paths with spaces, e.g. "C:\path with spaces\file.xml"
-rem       to pass a literal &, write ^&   ; to pass ^, write ^^
-"%PY%" REgtk.py
-set "RC=%ERRORLEVEL%"
-if not "!RC!"=="0" (
-  echo.
-  echo [FAIL] REgtk exited with code !RC!.
-  pause
-)
-endlocal & exit /b %RC%

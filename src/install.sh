@@ -1,17 +1,17 @@
 
-# needed for REgtk
-pacman -S --needed --noconfirm mingw-w64-x86_64-python
-pacman -S --needed --noconfirm mingw-w64-x86_64-gcc
-pacman -S --needed --noconfirm mingw-w64-x86_64-glib2
-pacman -S --needed --noconfirm mingw-w64-x86_64-python3-gobject
-pacman -S --needed --noconfirm mingw-w64-x86_64-gobject-introspection
-pacman -S --needed --noconfirm mingw-w64-x86_64-gobject-introspection-runtime
-pacman -S --needed --noconfirm mingw-w64-x86_64-gtk3
-pacman -S --needed --noconfirm mingw-w64-x86_64-libffi
-pacman -S --needed --noconfirm mingw-w64-x86_64-python-cairo
-pacman -S --needed --noconfirm mingw-w64-x86_64-python-matplotlib
-pacman -S --needed --noconfirm mingw-w64-x86_64-python-regex
-pacman -S --needed --noconfirm mingw-w64-x86_64-python-lxml
+# needed for REgtk and REwww
+pacman -S --needed  --noconfirm \
+  mingw-w64-ucrt-x86_64-python \
+  mingw-w64-ucrt-x86_64-gtk3 \
+  mingw-w64-ucrt-x86_64-gobject-introspection \
+  mingw-w64-ucrt-x86_64-python-gobject \
+  mingw-w64-ucrt-x86_64-python-lxml \
+  mingw-w64-ucrt-x86_64-python-matplotlib \
+  mingw-w64-ucrt-x86_64-python-bottle \
+  mingw-w64-ucrt-x86_64-python-regex
 
-# additional module needed for REwww
-pacman -S --needed --noconfirm mingw-w64-x86_64-python-bottle
+# consider the following? as yet unverified, maybe all dependencies of the above?
+# pacman -S --needed --noconfirm mingw-w64-urct-x86_64-gcc
+# pacman -S --needed --noconfirm mingw-w64-urct-x86_64-glib2
+# pacman -S --needed --noconfirm mingw-w64-urct-x86_64-gobject-introspection-runtime
+# pacman -S --needed --noconfirm mingw-w64-urct-x86_64-libffi

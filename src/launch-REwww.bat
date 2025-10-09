@@ -1,4 +1,10 @@
 @echo off
-"C:\msys64\msys2_shell.cmd" -mingw64 -here -c ^
-  "cd c:/RE/REwww && source venv-gtk3/bin/activate && python app.py"
-
+setlocal
+set "MSYS2=C:\msys64"
+REM Clean Windows baseline:
+set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
+REM Add ONLY UCRT64:
+set "PATH=c:\msys64\ucrt64\bin;%PATH%"
+set GDK_BACKEND=win32
+cd c:/RE/REwww
+"c:\msys64\ucrt64\bin\python.exe" "C:\RE\REwww\app.py"
