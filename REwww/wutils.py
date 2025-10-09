@@ -20,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECTS = 'projects'
 EXPERIMENTS = 'experiments'
 
+
 def get_version():
     try:
         with os.popen("/usr/bin/git describe --always") as f:
@@ -30,6 +31,19 @@ def get_version():
     except:
         version = 'Unknown'
     return version
+
+
+def get_origin(request):
+    # Data user submitted...
+    q = request.query.get('q')
+
+    # Original page URL (explicit > reliable)
+    origin = request.query.get('origin')  # from hidden input
+
+    # Fallback to Referer if not provided
+    if not origin:
+        origin = request.get_header('Referer')
+    return origin
 
 
 def add_time_and_version():
@@ -44,14 +58,15 @@ def combine_parts(*args):
 def check_template(tpl, data, parameters):
     if 'back' not in data:
         data['back'] = '/list_tree/projects'
-    return template(tpl, data=data)
+    return template(tpl, data=data, form=parameters)
 
 
-def setup_data(tree, project, experiment, filename, display, command):
+def setup_data(tree, project, experiment, filename, display, next, origin):
     full_path = combine_parts(tree, project, experiment, filename)
-    content, date = file_content(full_path, display, command)
+    content, date = file_content(full_path, display, next)
+    next = full_path.replace('../', '/edit/')
     # every response needs a project...
-    data = {'project': project}
+    data = {'project': project, 'origin': origin, 'next': next}
     if experiment:
         experiments, base_dir, data_elements = list_of_experiments(project)
         experiment_info = get_experiment_info(base_dir, experiment, data_elements, project)
@@ -76,16 +91,16 @@ def list_of_experiments(project):
     experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
     experiments = []
     # data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
-    data_elements =[]
-    for x in experiment_dirs:
-        experiments.append(get_experiment_info(experiment_dir, x, data_elements, project))
+    data_elements = []
+    for experiment in experiment_dirs:
+        experiments.append(get_experiment_info(experiment_dir, experiment, data_elements, project))
     return experiments, experiment_dir, data_elements
 
 
 def get_experiment_info(experiment_dir, experiment, data_elements, project):
     if not experiment: return []
     parameters_file = os.path.join(experiment_dir, experiment, f'{project}.master.parameters.xml')
-    experiment_info ={'name': experiment, 'date': get_info(parameters_file)}
+    experiment_info = {'name': experiment, 'date': get_info(parameters_file)}
     if experiment_info['date'] == 'unknown':
         pass
     else:
@@ -111,7 +126,7 @@ def data_files(tree, directory):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     num_files = 0
-    for type in 'snapshot'.split(' '):
+    for type in 'checkpoint'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'.{type}' in f]))
         num_files += len([f for f in filelist if f'{type}' in f])
     for type in 'statistics compare'.split(' '):
@@ -189,7 +204,7 @@ def file_content(file_path, display, command):
                 else:
                     data += '<tr>' + ''.join([f'<td>{r}</td>' for r in row]) + '</tr>'
             data = '<div class="table-responsive">' + \
-                   f'<table class="table table-sm table-hover table-bordered sets sortable">{data}</table>' +\
+                   f'<table class="table table-sm table-hover table-bordered sets sortable">{data}</table>' + \
                    '</div>'
     else:
         data = '<p style="color: red">Not a type of file that can be displayed here, sorry!</p>'
@@ -209,28 +224,38 @@ def tree_info(tree):
     return [(p, get_info(p), list_of_experiments(p)) for p in tree_list]
 
 
+def download(full_path, filename):
+    content = wutils.all_file_content(full_path)
+    response = HTTPResponse()
+    response.body = content
+    response['Content-Disposition'] = 'attachment; filename="%s"' % filename
+    return response
+
+
 def xml2html(xml_filename, xsl_filename):
-    dom = ET.parse(xml_filename)
-    xslt = ET.parse(xsl_filename)
-    print(f'xsltproc.py {xsl_filename} {xml_filename}')
-    transform = ET.XSLT(xslt)
-    newdom = transform(dom)
+    try:
+        dom = ET.parse(xml_filename)
+        xslt = ET.parse(xsl_filename)
+        print(f'xsltproc.py {xsl_filename} {xml_filename}')
+        transform = ET.XSLT(xslt)
+        newdom = transform(dom)
+    except:
+        raise
     return newdom
 
 
 def determine_file_type(file_path, display, command):
-    command = 'view' if not command else command
     if 'correspondences.xml' in file_path:
         return f'toc2html-{command}.xsl'
+    elif 'parameters.xml' in file_path:
+        return f'params2html-{command}.xsl'
+    elif 'fuz.xml' in file_path:
+        return 'fuzzy2html.xsl'
     elif 'data.xml' in file_path:
         if display == 'paragraph':
             return 'lexicon2html.xsl'
         else:
             return 'lexicon2table.xsl'
-    elif 'parameters.xml' in file_path:
-        return f'params2html-{command}.xsl'
-    elif 'fuz.xml' in file_path:
-        return 'fuzzy2html.xsl'
     elif 'sets.xml' in file_path:
         if display == 'paragraph':
             return 'sets2html.xsl'
@@ -271,6 +296,7 @@ def limit_lines(filecontent, max_rows):
         message = f'\n\n... and {num_rows - max_rows} more rows not shown.'
     return '\n'.join(rows) + message
 
+
 # upstream for interactive only
 def upstream(request, language_forms, project, experiment, parameters, only_with_mel):
     project_dir = os.path.join('..', EXPERIMENTS, project, experiment)
@@ -287,6 +313,7 @@ def upstream(request, language_forms, project, experiment, parameters, only_with
     isolates = [(RE.correspondences_as_ids(i[0]), str(list(i[1])[0])) for i in B.statistics.singleton_support]
     return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
 
+
 def setup_re(project, experiment, parameters):
     experiments, base_dir, data_elements = list_of_experiments(project)
     experiment_info = get_experiment_info(base_dir, experiment, data_elements, project)
@@ -294,8 +321,7 @@ def setup_re(project, experiment, parameters):
     print(time.asctime())
     elapsed_time = time.time()
 
-
-    parameters_file = os.path.join(experiment_path,f'{project}.master.parameters.xml')
+    parameters_file = os.path.join(experiment_path, f'{project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel=mel,
                                        fuzzy=fuzzy,
@@ -303,6 +329,7 @@ def setup_re(project, experiment, parameters):
     load_hooks.load_hook(experiment_path, args, settings)
     mel_status = 'strict MELs' if only_with_mel else 'MELs not enforced'
     print(mel_status)
+
 
 def run_up(project, settings, only_with_mel):
     B = RE.batch_all_upstream(settings, only_with_mel=only_with_mel)
@@ -319,7 +346,8 @@ def run_up(project, settings, only_with_mel):
     # print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
     B.statistics.add_stat('isolates', len(B.isolates))
     B.statistics.add_stat('sets', len(B.forms))
-    B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures.supporting_forms)},{B.statistics.summary_stats["reflexes"]}')
+    B.statistics.add_stat('sankey',
+                          f'{len(B.isolates)},{len(B.failures.supporting_forms)},{B.statistics.summary_stats["reflexes"]}')
     print(time.asctime())
 
 

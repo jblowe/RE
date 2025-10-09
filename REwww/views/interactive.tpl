@@ -7,7 +7,10 @@
           <hr/>
           <table>
           % for (language, value) in data['languages']:
-                <tr><td><i>{{language}}</i><td><input name="{{language}}" type="text" value="{{value}}"></td></tr>
+                <tr>
+                    <td><i>{{language}}</i><td>
+                    <input name="{{language}}" type="text" value="{{value}}"></td>
+                </tr>
           % end
           </table>
           <button type="submit">Upstream</button>

@@ -15,7 +15,7 @@
                 <option value="">Select...</option>
             % for c in data['experiment_info']['reconstructions']:
                 <option value="{{c}}"
-                % if c == data['experiment_info']['recon']:
+                % if c == form.get('recon'):
                     selected
                 % end
                 >{{c}}</option>
@@ -29,7 +29,7 @@
                 <option value="">No fuzzying</option>
             % for f in data['experiment_info']['fuzzies']:
                 <option value="{{f}}"
-                % if f == data['experiment_info']['fuzzy']:
+                % if f == form.get('fuzzy'):
                     selected
                 % end
                 >{{f}}</option>

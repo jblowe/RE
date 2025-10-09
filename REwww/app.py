@@ -55,7 +55,7 @@ def index():
 
 
 @route('/about')
-def index():
+def about():
     data = {'about': 'here'}
     return wutils.check_template('index', data, request.forms)
 
@@ -68,20 +68,29 @@ def list_tree(tree):
 
 
 # @route('/edit/<subcommand:re:.*>')
-@post('/edit')
-@route('/edit')
-def edit():
+@post('/edit/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
+@route('/edit/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
+def edit(tree, project, experiment, filename):
     x = request
-    subcommand = request.GET.get('action')
-    try:
-        (tree, project, experiment, file) = subcommand.replace('/', '').split('|')
-    except Exception:
-        tree, project, experiment, file = 5 * []
-    if subcommand == 'edit':
+    origin = wutils.get_origin(request)
+    if request.POST.action == 'save':
         pass
+    elif request.POST.action == 'upstream':
+        pass
+    elif request.POST.action == 'exit':
+        pass
+    # subcommand = request.GET.get('action')
+    # try:
+    #     (tree, project, experiment, file) = subcommand.replace('/', '').split('|')
+    # except Exception:
+    #     tree, project, experiment, file = 5 * []
+    # if subcommand == 'edit':
+    #     pass
     display = ''
     command = 'edit'
-    data = wutils.setup_data(tree, project, experiment, filename, display, command)
+    data = wutils.setup_data(tree, project, experiment, filename, display, command, origin)
+    data['content'] = str(data['content'])
+    data['content'] = data['content'].replace('#document_path#', f'{tree}/{project}/{experiment}/{filename}')
     return wutils.check_template('index', data, request.forms)
 
 
@@ -95,8 +104,9 @@ def project_info(project):
 @route('/get_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
 def get_experiment_file(tree, project, experiment, filename):
     display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
-    command = 'edit' if 'edit' in request.GET else 'view'
-    data = wutils.setup_data(tree, project, experiment, filename, display, command)
+    next = 'edit' if 'edit' in request.GET else 'view'
+    origin = wutils.get_origin(request)
+    data = wutils.setup_data(tree, project, experiment, filename, display, next, origin)
     return wutils.check_template('index', data, request.forms)
 
 
@@ -104,16 +114,9 @@ def get_experiment_file(tree, project, experiment, filename):
 def get_project(tree, project, filename):
     display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
     command = 'edit' if 'edit' in request.GET else 'view'
-    data = wutils.setup_data(tree, project, '', filename, display, command)
+    origin = wutils.get_origin(request)
+    data = wutils.setup_data(tree, project, '', filename, display, command, origin)
     return wutils.check_template('index', data, request.forms)
-
-
-def download(full_path, filename):
-    content = wutils.all_file_content(full_path)
-    response = HTTPResponse()
-    response.body = content
-    response['Content-Disposition'] = 'attachment; filename="%s"' % filename
-    return response
 
 
 @route('/download_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
@@ -142,6 +145,7 @@ def compare(project, experiment):
 @route('/interactive/<project:re:.*>/<experiment:re:.*>')
 def interactive_upstream(project, experiment):
     # initialize the interactive form
+    x = request
     if request.method == 'GET':
         files, experiment_path, num_files = wutils.data_files(os.path.join(wutils.EXPERIMENTS, project), experiment)
         parameters_file = os.path.join(experiment_path, f'{project}.master.parameters.xml')
@@ -202,7 +206,7 @@ def show_experiment(project, experiment, messages=None, errors=None):
     return wutils.check_template('index', data, request.forms)
 
 
-@post('/new/<project:re:.*>')
+@post('/create-experiment/<project:re:.*>')
 def new_experiment(project):
     experiments, base_dir, data_elements = wutils.list_of_experiments(project)
     project_dir = os.path.join('..', 'projects', project)
@@ -215,7 +219,6 @@ def new_experiment(project):
             for f in files:
                 print(os.path.join(root, f))
                 copy(os.path.join(root, f), new_dir)
-            break
     except:
         error_messages.append(f"couldn't make experiment {new_experiment}")
     experiments, base_dir, data_elements = wutils.list_of_experiments(project)
@@ -224,11 +227,11 @@ def new_experiment(project):
             'data_elements': data_elements, 'back': '/list_tree/projects'}
     if len(error_messages) > 0:
         data['errors'] = error_messages
-    # return list_tree('projects')
-    return wutils.check_template('index', data, request.forms)
+    return list_tree('projects')
+    # return wutils.check_template('index', data, request.forms)
 
 
-@route('/delete/<project:re:.*>/<experiment:re:.*>')
+@route('/delete-experiment/<project:re:.*>/<experiment:re:.*>')
 def delete_experiment(project, experiment):
     try:
         experiments, exp_proj_path, data_elements = wutils.list_of_experiments(project)

@@ -24,7 +24,7 @@
             <td><a href="/experiment/{{data['project']}}/{{experiment['name']}}">view and/or run</a></td>
             <td><a href="/interactive/{{data['project']}}/{{experiment['name']}}">interactive</a></td>
             <td><input type="checkbox" value="{{experiment['name']}}"></td>
-            <td><a class="btn" href="/delete/{{data['project']}}/{{experiment['name']}}"><span class="fas fa-trash"></span> delete</a></td>
+            <td><a class="btn" href="/delete-experiment/{{data['project']}}/{{experiment['name']}}"><span class="fas fa-trash"></span> delete</a></td>
             </tr>
           % end
           </tbody>

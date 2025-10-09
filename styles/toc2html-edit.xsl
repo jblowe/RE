@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-    <!-- Config -->
-    <xsl:param name="postTarget" select="'/edit'"/>
     <xsl:param name="formId" select="'toc-edit'"/>
-    <xsl:param name="document_path" select="'/#tree#|#project#|#experiment#|#filename#'"
-
     <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes"/>
-
-    <!-- Root -->
     <xsl:template match="/">
         <html lang="en">
             <head>
@@ -23,19 +16,8 @@
                 </style>
             </head>
             <body>
-                <form id="{$formId}" method="post" action="{$postTarget}/">
-                    <div class="container my-4">
-                        <div class="col-md-12 mb-2">
-                            <input type="hidden" name="document_path" value="{$document_path}"/>
-                            <button type="submit" name="action" value="save" class="btn btn-success me-3">Save</button>
-                            <button type="submit" name="action" value="upstream" class="btn btn-success me-3">Upstream</button>
-                            <button type="submit" name="action" value="revert" class="btn btn-warning me-3">Revert</button>
-                            <button type="submit" name="action" value="display" class="btn btn-warning me-3">Exit</button>
-                        </div>
-                        <xsl:apply-templates select=".//tableOfCorr"/>
-                    </div>
-
-                    <script><![CDATA[
+                <xsl:apply-templates select="tableOfCorr"/>
+                <script><![CDATA[
           (function(){
             function q(s, c){return (c||document).querySelector(s);}
             function qa(s, c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
@@ -136,7 +118,6 @@
             });
           })();
         ]]></script>
-                </form>
             </body>
         </html>
     </xsl:template>
