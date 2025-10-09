@@ -61,7 +61,7 @@ def context_from(string):
     return (left_context, right_context)
 
 def write_vanuatu_csv(filename, zipped):
-    with open(filename, 'w') as csvfile:
+    with open(filename, 'w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
         left = ',context,type,proto'.split(',')
 

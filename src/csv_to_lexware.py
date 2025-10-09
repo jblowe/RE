@@ -5,9 +5,9 @@ import csv
 
 hw_col = int(sys.argv[3])
 
-with open(sys.argv[1], 'r') as csvfile:
+with open(sys.argv[1], 'r', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile, delimiter='\t')
-    with open(sys.argv[2], 'w') as lexware_file:
+    with open(sys.argv[2], 'w', encoding='utf-8') as lexware_file:
         writer = csv.writer(lexware_file, delimiter='\t')
         for i, row in enumerate(reader):
             # get first row (header)
