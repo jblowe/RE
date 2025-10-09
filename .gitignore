@@ -1,6 +1,11 @@
 .idea
 .DS_Store
 
+# RE stuff
+dicos/tamang-*.html
+dicos/tamang-*.txt
+dicos/tamang-*.xml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
