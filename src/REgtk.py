@@ -733,10 +733,6 @@ def make_pane_container(orientation):
     return container
 
 class StatusBar(Gtk.Box):
-    __gsignals__ = {
-        "parameters-modified": (GObject.SignalFlags.RUN_FIRST, None, ())
-    }
-
     def __init__(self):
         super().__init__(orientation=Gtk.Orientation.HORIZONTAL, spacing=10, margin=5)
         css = b"""
@@ -760,8 +756,6 @@ class StatusBar(Gtk.Box):
         self.dirty_label = Gtk.Label(label="")
         self.dirty_label.set_halign(Gtk.Align.END)
         self.pack_start(self.dirty_label, False, False, 0)
-
-        self.connect("parameters-modified", lambda *_: print('hit-signal'))
 
         self.show_all()
 
