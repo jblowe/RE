@@ -824,6 +824,10 @@ class REWindow(Gtk.Window):
         def update_model():
             self.sets_widget.populate(proto_lexicon)
             statistics = proto_lexicon.statistics
+            # KLUDGE: fix the api around isolates
+            self.isolates_widget.populate(RE.Lexicon(proto_lexicon.language,
+                                                     RE.extract_isolates(proto_lexicon),
+                                                     statistics))
             self.failed_parses_widget.populate(statistics.failed_parses)
             self.correspondence_index_widget.populate(statistics.correspondence_index)
         out = sys.stdout
@@ -878,6 +882,7 @@ class REWindow(Gtk.Window):
         # Output widgets
         self.sets_widget = SetsWidget(self.on_batch_all_upstream)
         self.log_widget = LogWidget()
+        self.isolates_widget = SetsWidget(lambda w: None)
         self.failed_parses_widget = FailedParsesWidget()
         self.correspondence_index_widget = CorrespondenceIndexWidget(
             self.sets_widget.scroll_to_form,
@@ -892,6 +897,8 @@ class REWindow(Gtk.Window):
         self.statistics_stack.set_transition_duration(200)
 
         self.statistics_stack.add_titled(self.log_widget, "log", "Log")
+        self.statistics_stack.add_titled(self.isolates_widget,
+                                         "isolates", "Isolates")
         self.statistics_stack.add_titled(self.failed_parses_widget,
                                          "failed", "Failed Parses")
         self.statistics_stack.add_titled(self.correspondence_index_widget,
