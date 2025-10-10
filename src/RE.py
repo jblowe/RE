@@ -71,6 +71,12 @@ class Lexicon:
         self.statistics.correspondence_index = correspondence_index
         return self
 
+    def __eq__(self, other):
+        if not isinstance(other, Lexicon):
+            return NotImplemented
+        return (self.language == other.language and
+                set(self.forms) == set(other.forms))
+
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
@@ -169,6 +175,18 @@ class ModernForm(Form):
 
     def __str__(self):
         return f'{super().__str__()}\t{self.gloss}\t{self.id}'
+
+    # Two modern forms are considered equal if their meaning, glyphs,
+    # and language.
+    def __eq__(self, other):
+        if not isinstance(other, ModernForm):
+            return NotImplemented
+        return (self.language == other.language and
+                self.gloss == other.gloss and
+                self.glyphs == other.glyphs)
+
+    def __hash__(self):
+        return hash((self.language, self.gloss, self.glyphs))
 
 class Stage0Form(Form):
     def __init__(self, form, history):

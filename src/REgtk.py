@@ -982,7 +982,7 @@ class REWindow(Gtk.Window):
 
     # Initially load widgets from a settings file.
     def open_from_settings(self, settings):
-        attested_lexicons = read.read_attested_lexicons(settings)
+        self.on_disk_lexicons = read.read_attested_lexicons(settings)
 
         self.settings = settings
 
@@ -997,7 +997,7 @@ class REWindow(Gtk.Window):
                                   for (language, correspondence_filename)
                                   in settings.proto_languages.items()
                                   }
-        self.load(attested_lexicons, initial_parameter_tree)
+        self.load(self.on_disk_lexicons, initial_parameter_tree)
 
     def open_project(self, widget=None):
         """Show the ProjectManagerDialog and load the selected project."""
@@ -1061,8 +1061,14 @@ class REWindow(Gtk.Window):
                     self.settings.proto_languages[proto_language_name]),
                 parameters)
 
-        serialize.serialize_lexicons(self.lexicons_widget.lexicons().values(),
-                                     self.settings.directory_path)
+        widget_lexicons = self.lexicons_widget.lexicons()
+        for (language, widget_lexicon) in widget_lexicons.items():
+            if widget_lexicon != self.on_disk_lexicons[language]:
+                serialize.serialize_lexicon(
+                    widget_lexicon,
+                    os.path.join(self.settings.directory_path,
+                                 self.settings.attested[language]))
+        self.on_disk_lexicons = widget_lexicons
 
         self.status_bar.set_message(f'Saved project {self.project} into projects directory.')
         self.status_bar.clear_dirty()
