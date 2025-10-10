@@ -163,15 +163,11 @@ def tab_key_press_handler(view, event):
         GLib.timeout_add(50, view.set_cursor,
                          path, next_column, True)
 
-def make_entry(text):
-    entry = Gtk.Entry()
-    entry.set_text(text)
-    return entry
-
-class SyllableCanonRegexEntry(Gtk.Entry):
-    def __init__(self, pattern):
+class Entry(Gtk.Entry):
+    def __init__(self, initial, status_bar):
         super().__init__()
-        self.set_text(pattern)
+        self.set_text(initial)
+        self.connect("changed", lambda entry: status_bar.set_dirty(True))
 
 class EnumerationWidget(Gtk.Box):
     def __init__(self, states, initial_state, on_toggle=lambda: None):
@@ -200,18 +196,19 @@ class EnumerationWidget(Gtk.Box):
         return self.state
 
 class ContextMatchTypeEntry(EnumerationWidget):
-    def __init__(self, initial_state):
-        super().__init__(['constituent', 'glyphs'], initial_state)
+    def __init__(self, initial_state, status_bar):
+        super().__init__(['constituent', 'glyphs'], initial_state,
+                         on_toggle = lambda: status_bar.set_dirty(True))
 
 class SyllableCanonWidget(Gtk.Expander):
-    def __init__(self, syllable_canon):
+    def __init__(self, syllable_canon, status_bar):
         super().__init__(label='Syllable Canon')
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.add(box)
-        self.regex_entry = SyllableCanonRegexEntry(syllable_canon.regex.pattern)
-        self.sound_class_widget = SoundClassSheet(syllable_canon.sound_classes)
-        self.supra_segmental_entry = make_entry(','.join(syllable_canon.supra_segmentals))
-        self.context_match_type_entry = ContextMatchTypeEntry(syllable_canon.context_match_type)
+        self.regex_entry = Entry(syllable_canon.regex.pattern, status_bar)
+        self.sound_class_widget = SoundClassSheet(syllable_canon.sound_classes, status_bar)
+        self.supra_segmental_entry = Entry(','.join(syllable_canon.supra_segmentals), status_bar)
+        self.context_match_type_entry = ContextMatchTypeEntry(syllable_canon.context_match_type, status_bar)
         box.add(make_labeled_entry(self.regex_entry, 'Syllable regex:'))
         box.add(make_labeled_entry(self.supra_segmental_entry, 'Supra-segmentals:'))
         box.add(make_labeled_entry(self.context_match_type_entry, 'Context match type'))
@@ -250,13 +247,15 @@ class LexiconsWidget(Gtk.Notebook):
 # A sheet is an expandable editable spreadsheet which has Add and
 # Delete buttons to add or remove rows.
 class Sheet(Gtk.Expander):
-    def __init__(self, column_names, store, name):
+    def __init__(self, column_names, store, name, status_bar):
         super().__init__(label=name)
         view = Gtk.TreeView.new_with_model(store)
-        view.connect('key-press-event', tab_key_press_handler)
+        self.status_bar = status_bar
         def store_edit_text(i):
             def f(widget, path, text):
-                store[path][i] = text
+                if store[path][i] != text:
+                    self.status_bar.set_dirty(True)
+                    store[path][i] = text
             return f
         for i, column_title in enumerate(column_names):
             cell = Gtk.CellRendererText()
@@ -289,9 +288,11 @@ class Sheet(Gtk.Expander):
         row = self.store.append(len(columns) * [''])
         path = self.store.get_path(row)
         self.view.set_cursor(path, columns[0], True)
+        self.status_bar.set_dirty(True)
 
     def delete_button_clicked(self, widget):
         self.store.remove(self.store.get_iter(self.view.get_cursor()[0]))
+        self.status_bar.set_dirty(True)
 
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
@@ -303,7 +304,7 @@ def make_correspondence_row(correspondence, names):
                        for name in names)]
 
 class CorrespondenceSheet(Sheet):
-    def __init__(self, table):
+    def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str] +
                                 len(table.daughter_languages) * [str]))
         for c in table.correspondences:
@@ -311,7 +312,8 @@ class CorrespondenceSheet(Sheet):
         self.names = table.daughter_languages
         super().__init__(['ID', 'Context', 'Syllable Type', '*'] + table.daughter_languages,
                          store,
-                         'Correspondences')
+                         'Correspondences',
+                         status_bar)
 
     def fill(self, table):
         for row in self.store:
@@ -324,7 +326,7 @@ class CorrespondenceSheet(Sheet):
                                           for token in row[4:])))))
 
 class RuleSheet(Sheet):
-    def __init__(self, table):
+    def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, str]))
         for rule in table.rules:
             store.append([rule.id,
@@ -334,7 +336,7 @@ class RuleSheet(Sheet):
                           ', '.join(rule.languages),
                           str(rule.stage)])
         super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
-                         store, 'Rules')
+                         store, 'Rules', status_bar)
 
     def fill(self, table):
         for row in self.store:
@@ -350,24 +352,24 @@ class RuleSheet(Sheet):
 # given a sound classes object, construct a widget that allows users
 # to specify a dictionary.
 class SoundClassSheet(Sheet):
-    def __init__(self, sound_classes):
+    def __init__(self, sound_classes, status_bar):
         store = Gtk.ListStore(*([str, str]))
         for (sound_class, constituents) in sound_classes.items():
             store.append([sound_class,
                           ', '.join(constituents)])
         super().__init__(['Class', 'Constituents'],
-                         store, 'Sound Classes')
+                         store, 'Sound Classes', status_bar)
 
     def sound_classes(self):
         return {row[0]: [x.strip() for x in row[1].split(',')]
                 for row in self.store}
 
 class ParameterWidget(Gtk.Box):
-    def __init__(self, parameters):
+    def __init__(self, parameters, status_bar):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
-        self.correspondence_sheet = CorrespondenceSheet(parameters.table)
-        self.rule_sheet = RuleSheet(parameters.table)
-        self.canon_widget = SyllableCanonWidget(parameters.syllable_canon)
+        self.correspondence_sheet = CorrespondenceSheet(parameters.table, status_bar)
+        self.rule_sheet = RuleSheet(parameters.table, status_bar)
+        self.canon_widget = SyllableCanonWidget(parameters.syllable_canon, status_bar)
         self.proto_language_name = parameters.proto_language_name
         self.mels = parameters.mels
         self.add(self.canon_widget)
@@ -386,10 +388,10 @@ class ParameterWidget(Gtk.Box):
             self.mels)
 
 class ParameterTreeWidget(Gtk.Notebook):
-    def __init__(self, initial_parameter_tree):
+    def __init__(self, initial_parameter_tree, status_bar):
         super().__init__()
         for (language, parameters) in initial_parameter_tree.items():
-            self.append_page(ParameterWidget(parameters),
+            self.append_page(ParameterWidget(parameters, status_bar),
                              Gtk.Label(label=language))
 
     def parameter_tree(self):
@@ -730,6 +732,50 @@ def make_pane_container(orientation):
     container.set_orientation(orientation)
     return container
 
+class StatusBar(Gtk.Box):
+    __gsignals__ = {
+        "parameters-modified": (GObject.SignalFlags.RUN_FIRST, None, ())
+    }
+
+    def __init__(self):
+        super().__init__(orientation=Gtk.Orientation.HORIZONTAL, spacing=10, margin=5)
+        css = b"""
+        .dirty {
+            color: red;
+            font-weight: bold;
+        }
+        """
+        style_provider = Gtk.CssProvider()
+        style_provider.load_from_data(css)
+        screen = Gdk.Screen.get_default()
+        Gtk.StyleContext.add_provider_for_screen(screen, style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+
+        # Left-aligned label
+        self.message_label = Gtk.Label(label="No project loaded.")
+        self.message_label.set_halign(Gtk.Align.START)
+        self.message_label.set_hexpand(True)  # take all space
+        self.pack_start(self.message_label, True, True, 0)
+
+        # Right-aligned dirty flag
+        self.dirty_label = Gtk.Label(label="")
+        self.dirty_label.set_halign(Gtk.Align.END)
+        self.pack_start(self.dirty_label, False, False, 0)
+
+        self.connect("parameters-modified", lambda *_: print('hit-signal'))
+
+        self.show_all()
+
+    def set_message(self, text):
+        self.message_label.set_text(text)
+
+    def set_dirty(self, is_dirty):
+        if is_dirty:
+            self.dirty_label.set_text("● Unsaved changes")
+            self.dirty_label.get_style_context().add_class("dirty")
+        else:
+            self.dirty_label.set_text("")
+            self.dirty_label.get_style_context().remove_class("dirty")
+
 class REWindow(Gtk.Window):
 
     def __init__(self):
@@ -753,6 +799,9 @@ class REWindow(Gtk.Window):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         box.pack_start(menu_bar, False, False, 0)
 
+        # status bar
+        self.status_bar = StatusBar()
+
         # layout
         pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
         box.pack_start(pane_layout, True, True, 0)
@@ -761,6 +810,7 @@ class REWindow(Gtk.Window):
         self.right_pane = make_pane_container(Gtk.Orientation.VERTICAL)
         pane_layout.add2(self.right_pane)
         self.add(box)
+        box.pack_end(self.status_bar, False, False, 0)  # add at bottom of window
         self.show_all()
         self.open_project()
 
@@ -818,11 +868,12 @@ class REWindow(Gtk.Window):
     def load(self, attested_lexicons, initial_parameter_tree):
         # Clear old widgets.
         self.clear_widgets()
+        self.status_bar.set_dirty(False)
         self.attested_lexicons = attested_lexicons
 
         # Input widgets
         self.lexicons_widget = LexiconsWidget(attested_lexicons.values())
-        self.parameters_widget = ParameterTreeWidget(initial_parameter_tree)
+        self.parameters_widget = ParameterTreeWidget(initial_parameter_tree, self.status_bar)
 
         # Output widgets
         self.sets_widget = SetsWidget(self.on_batch_all_upstream)
@@ -906,6 +957,7 @@ class REWindow(Gtk.Window):
         dummy.fuzzy = selection['fuzzy']
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project], dummy, settings)
+        self.status_bar.set_message(f'Opened project {project} from projects directory.')
         self.open_from_settings(settings)
 
     def create_checkpoint(self, widget):
@@ -916,6 +968,8 @@ class REWindow(Gtk.Window):
             checkpoint_data = checkpoint.CheckpointData(self.attested_lexicons,
                                                         self.parameters_widget.parameter_tree())
             checkpoint.save_checkpoint_to_path(checkpoint_path, checkpoint_data)
+            self.status_bar.set_message(f'Created checkpoint: {checkpoint_path}')
+            self.status_bar.set_dirty(False)
         dialog.destroy()
 
     def load_checkpoint(self, widget):
@@ -925,6 +979,7 @@ class REWindow(Gtk.Window):
             print(f"Loading checkpoint from: {checkpoint_path}")
             checkpoint_data = checkpoint.load_checkpoint_from_path(checkpoint_path)
             self.load(checkpoint_data.lexicons, checkpoint_data.parameter_tree)
+            self.status_bar.set_message(f'Loaded from checkpoint: {checkpoint_path}')
         dialog.destroy()
 
     def compare(self, widget):
@@ -937,6 +992,8 @@ class REWindow(Gtk.Window):
                     self.settings.directory_path,
                     self.settings.proto_languages[proto_language_name]),
                 parameters)
+        self.status_bar.set_message(f'Saved project {self.project} into projects directory.')
+        self.status_bar.set_dirty(False)
 
 # HACK make load hooks happy
 class dummy:
