@@ -121,10 +121,10 @@ class WrappedTextBuffer():
     def __init__(self, buffer):
         self.buffer = buffer
     def write(self, string):
-        Gdk.threads_enter()
-        self.buffer.insert(self.buffer.get_end_iter(),
-                           string, len(string))
-        Gdk.threads_leave()
+        GObject.idle_add(lambda string: self.buffer.insert(self.buffer.get_end_iter(),
+                                                      string, len(string)),
+                         string,
+                         priority=GObject.PRIORITY_DEFAULT)
     def flush(self):
         pass
 
@@ -948,5 +948,4 @@ if __name__ == "__main__":
     win = REWindow()
     win.connect('delete_event', Gtk.main_quit)
     win.show_all()
-    Gdk.threads_init()
     Gtk.main()
