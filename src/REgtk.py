@@ -650,6 +650,7 @@ class CheckpointDialog(Gtk.FileChooserDialog):
 
         self.set_default_size(800, 400)
         self._add_filters()
+        self.set_current_folder(f'../projects/{parent.project}/')
 
         if action_type == "save":
             suggested_name = f"{parent.project}.{datetime.now():%Y-%m-%d_%H-%M-%S}.rechk"
