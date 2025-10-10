@@ -224,11 +224,12 @@ class SyllableCanonWidget(Gtk.Expander):
         )
 
 class LexiconWidget(Pane):
-    def __init__(self, words):
+    def __init__(self, lexicon):
         super().__init__(vexpand=True)
         self.store = Gtk.ListStore(str, str)
-        for form in words:
-            self.store.append([form.glyphs, form.gloss])
+        self.language = lexicon.language
+        for form in lexicon.forms:
+            self.store.append([form.glyphs, form.gloss, form.id])
         view = Gtk.TreeView.new_with_model(self.store)
         for i, column_title in enumerate(['Form', 'Gloss']):
             cell = Gtk.CellRendererText()
@@ -238,12 +239,24 @@ class LexiconWidget(Pane):
             view.append_column(column)
         self.add(view)
 
+    def lexicon(self):
+        language = self.language
+        return RE.Lexicon(language,
+                          [RE.ModernForm(language, row[0], row[1], row[2])
+                           for row in self.store],
+                          None)
+
 class LexiconsWidget(Gtk.Notebook):
     def __init__(self, lexicons):
         super().__init__()
         for lexicon in lexicons:
-            self.append_page(LexiconWidget(lexicon.forms),
+            self.append_page(LexiconWidget(lexicon),
                              Gtk.Label(label=lexicon.language))
+
+    def lexicons(self):
+        return {lexicon_widget.language:
+                lexicon_widget.lexicon()
+                for lexicon_widget in self}
 
 # A sheet is an expandable editable spreadsheet which has Add and
 # Delete buttons to add or remove rows.
@@ -832,7 +845,7 @@ class REWindow(Gtk.Window):
                 self.settings.upstream_target,
                 self.settings.upstream,
                 self.parameters_widget.parameter_tree(),
-                self.attested_lexicons,
+                self.lexicons_widget.lexicons(),
                 False,
             )
             GLib.idle_add(update_model)
@@ -868,7 +881,6 @@ class REWindow(Gtk.Window):
         # Clear old widgets.
         self.clear_widgets()
         self.status_bar.set_dirty(False)
-        self.attested_lexicons = attested_lexicons
 
         # Input widgets
         self.lexicons_widget = LexiconsWidget(attested_lexicons.values())
@@ -967,7 +979,7 @@ class REWindow(Gtk.Window):
         if dialog.run() == Gtk.ResponseType.OK:
             checkpoint_path = dialog.get_filename()
             print(f"Creating checkpoint at: {checkpoint_path}")
-            checkpoint_data = checkpoint.CheckpointData(self.attested_lexicons,
+            checkpoint_data = checkpoint.CheckpointData(self.lexicons_widget.lexicons(),
                                                         self.parameters_widget.parameter_tree())
             checkpoint.save_checkpoint_to_path(checkpoint_path, checkpoint_data)
             self.status_bar.set_message(f'Created checkpoint: {checkpoint_path}')
