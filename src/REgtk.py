@@ -167,7 +167,7 @@ class Entry(Gtk.Entry):
     def __init__(self, initial, status_bar):
         super().__init__(hexpand=True)
         self.set_text(initial)
-        self.connect("changed", lambda entry: status_bar.set_dirty(True))
+        self.connect("changed", lambda entry: status_bar.add_dirty('entry'))
 
 class EnumerationWidget(Gtk.Box):
     def __init__(self, states, initial_state, on_toggle=lambda: None):
@@ -199,7 +199,7 @@ class EnumerationWidget(Gtk.Box):
 class ContextMatchTypeEntry(EnumerationWidget):
     def __init__(self, initial_state, status_bar):
         super().__init__(['constituent', 'glyphs'], initial_state,
-                         on_toggle = lambda: status_bar.set_dirty(True))
+                         on_toggle = lambda: status_bar.add_dirty('context_match'))
 
 class SyllableCanonWidget(Gtk.Expander):
     def __init__(self, syllable_canon, status_bar):
@@ -226,7 +226,7 @@ class SyllableCanonWidget(Gtk.Expander):
 class LexiconWidget(Pane):
     def __init__(self, lexicon):
         super().__init__(vexpand=True)
-        self.store = Gtk.ListStore(str, str)
+        self.store = Gtk.ListStore(str, str, str)
         self.language = lexicon.language
         for form in lexicon.forms:
             self.store.append([form.glyphs, form.gloss, form.id])
@@ -258,17 +258,17 @@ class LexiconsWidget(Gtk.Notebook):
                 lexicon_widget.lexicon()
                 for lexicon_widget in self}
 
-# A sheet is an expandable editable spreadsheet which has Add and
-# Delete buttons to add or remove rows.
-class Sheet(Gtk.Expander):
-    def __init__(self, column_names, store, name, status_bar):
-        super().__init__(label=name)
+# A sheet is an editable spreadsheet which has Add and Delete buttons
+# to add or remove rows.
+class Sheet(Gtk.Box):
+    def __init__(self, column_names, store, name, on_change: lambda: None):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         view = Gtk.TreeView.new_with_model(store)
-        self.status_bar = status_bar
+        self.on_change = on_change
         def store_edit_text(i):
             def f(widget, path, text):
                 if store[path][i] != text:
-                    self.status_bar.set_dirty(True)
+                    self.on_change()
                     store[path][i] = text
             return f
         for i, column_title in enumerate(column_names):
@@ -276,6 +276,7 @@ class Sheet(Gtk.Expander):
             cell.set_property('editable', True)
             cell.connect('edited', store_edit_text(i))
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_resizable(True)
             column.set_sort_column_id(i)
             view.append_column(column)
         pane = Pane(vexpand=True)
@@ -284,29 +285,37 @@ class Sheet(Gtk.Expander):
         buttons_box = Gtk.Box(spacing=0)
         buttons_box.add(make_clickable_button('Add', self.add_button_clicked))
         buttons_box.add(make_clickable_button('Delete', self.delete_button_clicked))
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-        box.add(pane)
-        box.add(buttons_box)
-        pane.set_vexpand(False)
-        self.add(box)
+        self.add(pane)
+        self.add(buttons_box)
         self.store = store
         self.view = view
-        # we need to manually expand and unexpand the pane to trick layout
-        # into working right.
-        def action(widget, spec):
-            pane.set_vexpand(widget.get_expanded())
-        self.connect('notify::expanded', action)
+        self.pane = pane
 
     def add_button_clicked(self, widget):
         columns = self.view.get_columns()
-        row = self.store.append(len(columns) * [''])
+        row = self.store.append(self.store.get_n_columns() * [''])
         path = self.store.get_path(row)
         self.view.set_cursor(path, columns[0], True)
-        self.status_bar.set_dirty(True)
+        self.on_change()
 
     def delete_button_clicked(self, widget):
         self.store.remove(self.store.get_iter(self.view.get_cursor()[0]))
-        self.status_bar.set_dirty(True)
+        self.on_change()
+
+class ExpandableSheet(Gtk.Expander):
+    def __init__(self, column_names, store, name, on_change=lambda: None):
+        super().__init__(label=name)
+        sheet = Sheet(column_names, store, name, on_change=on_change)
+        self.add(sheet)
+        self.store = sheet.store
+        sheet.pane.set_vexpand(False)
+
+        # we need to manually expand and unexpand the pane to trick layout
+        # into working right.
+        def action(widget, spec):
+            sheet.pane.set_vexpand(widget.get_expanded())
+
+        self.connect('notify::expanded', action)
 
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
@@ -317,7 +326,7 @@ def make_correspondence_row(correspondence, names):
              for v in (correspondence.daughter_forms.get(name)
                        for name in names)]
 
-class CorrespondenceSheet(Sheet):
+class CorrespondenceSheet(ExpandableSheet):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str] +
                                 len(table.daughter_languages) * [str]))
@@ -327,7 +336,7 @@ class CorrespondenceSheet(Sheet):
         super().__init__(['ID', 'Context', 'Syllable Type', '*'] + table.daughter_languages,
                          store,
                          'Correspondences',
-                         status_bar)
+                         lambda: status_bar.add_dirty('correspondences'))
 
     def fill(self, table):
         for row in self.store:
@@ -339,7 +348,7 @@ class CorrespondenceSheet(Sheet):
                     dict(zip(self.names, ([x.strip() for x in token.split(',')]
                                           for token in row[4:])))))
 
-class RuleSheet(Sheet):
+class RuleSheet(ExpandableSheet):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, str]))
         for rule in table.rules:
@@ -350,7 +359,7 @@ class RuleSheet(Sheet):
                           ', '.join(rule.languages),
                           str(rule.stage)])
         super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
-                         store, 'Rules', status_bar)
+                         store, 'Rules', lambda: status_bar.add_dirty('rules'))
 
     def fill(self, table):
         for row in self.store:
@@ -365,14 +374,14 @@ class RuleSheet(Sheet):
 
 # given a sound classes object, construct a widget that allows users
 # to specify a dictionary.
-class SoundClassSheet(Sheet):
+class SoundClassSheet(ExpandableSheet):
     def __init__(self, sound_classes, status_bar):
         store = Gtk.ListStore(*([str, str]))
         for (sound_class, constituents) in sound_classes.items():
             store.append([sound_class,
                           ', '.join(constituents)])
         super().__init__(['Class', 'Constituents'],
-                         store, 'Sound Classes', status_bar)
+                         store, 'Sound Classes', lambda: status_bar.add_dirty('sound_classes'))
 
     def sound_classes(self):
         return {row[0]: [x.strip() for x in row[1].split(',')]
@@ -722,6 +731,9 @@ class REMenuBar(Gtk.MenuBar):
                 ("—", None, None),
                 ("Quit", Gtk.main_quit, None),
             ],
+            "Edit": [
+                ("Edit lexical data...", self.window.open_lexicon_editor, None),
+            ],
             "View": [
                 ("Zoom In", self.window.zoom_in, "<Ctrl>plus"),
                 ("Zoom Out", self.window.zoom_out, "<Ctrl>minus"),
@@ -772,17 +784,59 @@ class StatusBar(Gtk.Box):
         self.pack_start(self.dirty_label, False, False, 0)
 
         self.show_all()
+        self.dirtied = set()
 
     def set_message(self, text):
         self.message_label.set_text(text)
 
-    def set_dirty(self, is_dirty):
-        if is_dirty:
-            self.dirty_label.set_text("● Unsaved changes")
-            self.dirty_label.get_style_context().add_class("dirty")
-        else:
-            self.dirty_label.set_text("")
-            self.dirty_label.get_style_context().remove_class("dirty")
+    def add_dirty(self, thing):
+        self.dirtied.add(thing)
+        self.dirty_label.set_text("● Unsaved changes")
+        self.dirty_label.get_style_context().add_class("dirty")
+
+    def clear_dirty(self):
+        self.dirtied.clear()
+        self.dirty_label.set_text("")
+        self.dirty_label.get_style_context().remove_class("dirty")
+
+    def lexicons_changed(self):
+        return 'lexicons' in self.dirtied
+
+    def parameters_changed(self):
+        return 'lexicons' in self.dirtied
+
+class DownstreamWidget(Gtk.Box):
+    def __init__(self):
+        Gtk.Window.__init__(self, title='The Reconstruction Engine',
+                            default_height=800, default_width=1400)
+
+
+class LexiconEditorWindow(Gtk.Window):
+    def __init__(self, parent, lexicons_widget, status_bar):
+        super().__init__(title="Lexicon Editor", transient_for=parent, destroy_with_parent=True)
+        self.set_default_size(800, 600)
+
+        # Main vertical layout
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        self.add(vbox)
+
+        # Reuse the existing LexiconsWidget, but display *shared stores*
+        # so that editing here updates the main window’s view.
+        shared_notebook = Gtk.Notebook()
+        vbox.pack_start(shared_notebook, True, True, 0)
+
+        for page_num in range(lexicons_widget.get_n_pages()):
+            orig_page = lexicons_widget.get_nth_page(page_num)
+            assert isinstance(orig_page, LexiconWidget)
+            # Create a Sheet with the *same* shared store.
+            sheet = Sheet(["Form", "Gloss"], orig_page.store,
+                          name=orig_page.language,
+                          on_change=lambda: status_bar.add_dirty('lexicons'))
+            scrolled = Gtk.ScrolledWindow()
+            scrolled.add(sheet)
+            shared_notebook.append_page(scrolled, Gtk.Label(label=orig_page.language))
+
+        self.show_all()
 
 class REWindow(Gtk.Window):
 
@@ -880,7 +934,7 @@ class REWindow(Gtk.Window):
     def load(self, attested_lexicons, initial_parameter_tree):
         # Clear old widgets.
         self.clear_widgets()
-        self.status_bar.set_dirty(False)
+        self.status_bar.clear_dirty()
 
         # Input widgets
         self.lexicons_widget = LexiconsWidget(attested_lexicons.values())
@@ -983,7 +1037,7 @@ class REWindow(Gtk.Window):
                                                         self.parameters_widget.parameter_tree())
             checkpoint.save_checkpoint_to_path(checkpoint_path, checkpoint_data)
             self.status_bar.set_message(f'Created checkpoint: {checkpoint_path}')
-            self.status_bar.set_dirty(False)
+            self.status_bar.clear_dirty()
         dialog.destroy()
 
     def load_checkpoint(self, widget):
@@ -1006,8 +1060,16 @@ class REWindow(Gtk.Window):
                     self.settings.directory_path,
                     self.settings.proto_languages[proto_language_name]),
                 parameters)
+
+        serialize.serialize_lexicons(self.lexicons_widget.lexicons().values(),
+                                     self.settings.directory_path)
+
         self.status_bar.set_message(f'Saved project {self.project} into projects directory.')
-        self.status_bar.set_dirty(False)
+        self.status_bar.clear_dirty()
+
+    def open_lexicon_editor(self, widget):
+        editor = LexiconEditorWindow(self, self.lexicons_widget, self.status_bar)
+        editor.show_all()
 
 # HACK make load hooks happy
 class dummy:
