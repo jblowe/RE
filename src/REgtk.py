@@ -12,6 +12,7 @@ import projects
 import checkpoint
 from datetime import datetime
 import xml.etree.ElementTree as ET
+import traceback
 
 class ProjectManagerDialog(Gtk.Dialog):
     """Dialog to choose a project."""
@@ -843,6 +844,7 @@ class REWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1400)
+        sys.excepthook = self.dialog_excepthook
         # Track zoom state
         self.zoom_level = 1.0
 
@@ -1076,6 +1078,46 @@ class REWindow(Gtk.Window):
     def open_lexicon_editor(self, widget):
         editor = LexiconEditorWindow(self, self.lexicons_widget, self.status_bar)
         editor.show_all()
+
+    def dialog_excepthook(self, exc_type, exc_value, exc_traceback):
+        """Display an error message."""
+        sys.__excepthook__(exc_type, exc_value, exc_traceback)
+        if issubclass(exc_type, KeyboardInterrupt):
+            return
+        try:
+            dialog = Gtk.MessageDialog(transient_for=self,
+                                       flags=0,
+                                       message_type=Gtk.MessageType.ERROR,
+                                       buttons=Gtk.ButtonsType.CLOSE,
+                                       text="An unexpected error occurred.")
+            text = ''.join(traceback.format_exception(exc_type,
+                                                      exc_value,
+                                                      exc_value.__traceback__))
+            markup = f'<span font_family="monospace">{text}</span>'
+
+            # TextView for traceback
+            textview = Gtk.TextView(editable=False, cursor_visible=False)
+            textview.set_wrap_mode(Gtk.WrapMode.NONE)
+            buffer = textview.get_buffer()
+            buffer.insert_markup(buffer.get_end_iter(), markup, -1)
+
+            # Scrolled container
+            scroller = Gtk.ScrolledWindow()
+            scroller.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
+            scroller.set_min_content_height(200)
+            scroller.add(textview)
+
+            dialog.set_default_size(800, 500)
+            dialog.set_resizable(True)
+            scroller.set_min_content_height(300)
+
+            content = dialog.get_content_area()
+            content.pack_start(scroller, True, True, 0)
+            dialog.show_all()
+            dialog.run()
+            dialog.destroy()
+        except Exception:
+            print('Exception while displaying exception in error dialog.')
 
 # HACK make load hooks happy
 class dummy:
