@@ -121,14 +121,14 @@ def get_project(tree, project, filename):
 
 @route('/download_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
 def download_experiment(tree, project, experiment, filename):
-    full_path = wutils.combine_parts(tree, project, filename)
-    return download(full_path, filename)
+    full_path = wutils.combine_parts(tree, project, experiment, filename)
+    return wutils.download(full_path, filename)
 
 
 @route('/download_file/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
 def download_project(tree, project, filename):
     full_path = wutils.combine_parts(tree, project, filename)
-    return download(full_path, filename)
+    return wutils.download(full_path, filename)
 
 
 @post('/compare/<project:re:.*>/<experiment:re:.*>')

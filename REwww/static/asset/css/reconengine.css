@@ -46,3 +46,7 @@ body {
 .card-body { padding: .75rem; }
 /* Keep tables tidy */
 table.table-sm td, table.table-sm th { vertical-align: middle; }
+
+ul {
+  list-style-type: none;
+}

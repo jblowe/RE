@@ -1,6 +1,7 @@
 import os, time, sys, csv
 import lxml.etree as ET
 import traceback
+from bottle import HTTPResponse
 
 # we need some code from the sibling directory where the rest of the RE code lives
 
@@ -163,6 +164,7 @@ def all_file_content(file_path):
         data = f.read()
         f.close()
     except:
+        raise
         data = None
     return data
 
@@ -225,7 +227,7 @@ def tree_info(tree):
 
 
 def download(full_path, filename):
-    content = wutils.all_file_content(full_path)
+    content = all_file_content(full_path)
     response = HTTPResponse()
     response.body = content
     response['Content-Disposition'] = 'attachment; filename="%s"' % filename
