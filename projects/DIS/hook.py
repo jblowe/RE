@@ -45,7 +45,7 @@ def fuzzy_lexicons(mapping, settings):
 
 def generate_xml_data():
     print('running pipeline to generate data files')
-    code_dir = os.path.join('..', '..', '..', 'src')
+    code_dir = os.path.join('..', '..', 'src')
     with cd(os.path.join(base_dir)):
         with open('pipeline.sh', 'r', encoding='utf-8') as commands:
             for command in commands:
