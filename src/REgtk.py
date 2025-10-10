@@ -189,8 +189,9 @@ class EnumerationWidget(Gtk.Box):
 
     def on_button_toggled(self, button, state):
         if button.get_active():
+            if self.state != state:
+                self.on_toggle()
             self.state = state
-        self.on_toggle()
 
     def get_state(self):
         return self.state
