@@ -165,7 +165,7 @@ def tab_key_press_handler(view, event):
 
 class Entry(Gtk.Entry):
     def __init__(self, initial, status_bar):
-        super().__init__()
+        super().__init__(hexpand=True)
         self.set_text(initial)
         self.connect("changed", lambda entry: status_bar.set_dirty(True))
 
