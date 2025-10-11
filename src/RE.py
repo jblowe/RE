@@ -869,6 +869,30 @@ def make_set(l1,l2,diff, union):
               l1.mel
               )
 
+
+# Compare two proto-lexicons and return a sub-proto-lexicon with the
+# forms only in lexicon1, and a sub-proto-lexicon with the forms only
+# in lexicon2. We consider two proto-forms the same if they have the
+# same glyphs and the same attested support. This ignores variations
+# in rule history or the exact correspondences used.
+def compare_proto_lexicons_modulo_details(lexicon1, lexicon2):
+    language = lexicon1.language
+    assert language == lexicon2.language
+    def form_key(form):
+        return (form.glyphs, form.attested_support)
+
+    dict1 = {form_key(f): f for f in lexicon1.forms}
+    dict2 = {form_key(f): f for f in lexicon2.forms}
+
+    set1_keys = set(dict1.keys())
+    set2_keys = set(dict2.keys())
+
+    only_in_1 = [dict1[k] for k in set1_keys - set2_keys]
+    only_in_2 = [dict2[k] for k in set2_keys - set1_keys]
+
+    return (Lexicon(language, only_in_1, None),
+            Lexicon(language, only_in_2, None))
+
 def compare_proto_lexicons(lexicon1, lexicon2, languages):
     table = collections.defaultdict(list)
     common = set()

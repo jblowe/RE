@@ -725,7 +725,6 @@ class REMenuBar(Gtk.MenuBar):
                 ("—", None, None),
                 ("Create Checkpoint...", self.window.create_checkpoint, None),
                 ("Load Checkpoint...", self.window.load_checkpoint, None),
-                ("Compare...", self.window.compare, None),
                 ("—", None, None),
                 ("Quit", Gtk.main_quit, None),
             ],
@@ -733,6 +732,8 @@ class REMenuBar(Gtk.MenuBar):
                 ("Edit lexical data...", self.window.open_lexicon_editor, None),
             ],
             "View": [
+                ("Show quick compare...", self.window.show_quick_compare, None),
+                ("—", None, None),
                 ("Zoom In", self.window.zoom_in, "<Ctrl>plus"),
                 ("Zoom Out", self.window.zoom_out, "<Ctrl>minus"),
                 ("Reset Zoom", self.window.zoom_reset, None),
@@ -808,6 +809,37 @@ class DownstreamWidget(Gtk.Box):
         Gtk.Window.__init__(self, title='The Reconstruction Engine',
                             default_height=800, default_width=1400)
 
+class DiffWidget(Gtk.Box):
+    def __init__(self, parent):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+
+        paned = Gtk.Paned.new(Gtk.Orientation.HORIZONTAL)
+        self.pack_start(paned, True, True, 0)
+
+        lost_count = len(parent.sets_lost_widget.store)
+        gained_count = len(parent.sets_lost_widget.store)
+
+        left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
+        self.left_label = Gtk.Label()
+        left_box.pack_start(self.left_label, False, False, 4)
+        left_box.pack_start(parent.sets_lost_widget, True, True, 0)
+
+        right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
+        self.right_label = Gtk.Label()
+
+        right_box.pack_start(self.right_label, False, False, 4)
+        right_box.pack_start(parent.sets_gained_widget, True, True, 0)
+
+        paned.pack1(left_box, resize=True, shrink=False)
+        paned.pack2(right_box, resize=True, shrink=False)
+
+        self.set_label_counts(0, 0)
+
+    def set_label_counts(self, lost_count, gained_count):
+        self.left_label.set_markup(f"<b>Sets lost since last run ({lost_count})</b>")
+        self.left_label.set_justify(Gtk.Justification.CENTER)
+        self.right_label.set_markup(f"<b>Sets gained in new run ({gained_count})</b>")
+        self.right_label.set_justify(Gtk.Justification.CENTER)
 
 class LexiconEditorWindow(Gtk.Window):
     def __init__(self, parent, lexicons_widget, status_bar):
@@ -848,6 +880,9 @@ class REWindow(Gtk.Window):
         # Keyboard shortcuts
         self.accel_group = Gtk.AccelGroup()
         self.add_accel_group(self.accel_group)
+
+        # Cache the last proto-lexicon generated for quick compare.
+        self.last_proto_lexicon = None
 
         # -----------------------------
         # Menu
@@ -891,6 +926,16 @@ class REWindow(Gtk.Window):
                                                      statistics))
             self.failed_parses_widget.populate(statistics.failed_parses)
             self.correspondence_index_widget.populate(statistics.correspondence_index)
+            if self.last_proto_lexicon:
+                print(self.last_proto_lexicon)
+                (sets_lost, sets_gained) = RE.compare_proto_lexicons_modulo_details(
+                    self.last_proto_lexicon,
+                    proto_lexicon)
+                self.sets_lost_widget.populate(sets_lost)
+                self.sets_gained_widget.populate(sets_gained)
+                self.diff_widget.set_label_counts(len(sets_lost.forms),
+                                                  len(sets_gained.forms))
+            self.last_proto_lexicon = proto_lexicon
         out = sys.stdout
         sys.stdout = self.log_widget.get_buffer()
         try:
@@ -947,6 +992,11 @@ class REWindow(Gtk.Window):
         self.correspondence_index_widget = CorrespondenceIndexWidget(
             self.sets_widget.scroll_to_form,
             [lexicon.language for lexicon in attested_lexicons.values()])
+
+        # Diff widgets
+        self.sets_lost_widget = SetsWidget()
+        self.sets_gained_widget = SetsWidget()
+        self.diff_widget = DiffWidget(self)
 
         # Upstream button.
         upstream_button = make_clickable_button("Batch All Upstream",
@@ -1058,8 +1108,11 @@ class REWindow(Gtk.Window):
             self.status_bar.set_message(f'Loaded from checkpoint: {checkpoint_path}')
         dialog.destroy()
 
-    def compare(self, widget):
-        pass
+    def show_quick_compare(self, widget):
+        win = Gtk.Window(title="Diff Viewer", transient_for=self, destroy_with_parent=True)
+        win.add(self.diff_widget)
+        win.set_default_size(800, 600)
+        win.show_all()
 
     def save_project(self, widget):
         for (proto_language_name, parameters) in self.parameters_widget.parameter_tree().items():
