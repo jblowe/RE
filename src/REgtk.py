@@ -122,10 +122,10 @@ class WrappedTextBuffer():
     def __init__(self, buffer):
         self.buffer = buffer
     def write(self, string):
-        GObject.idle_add(lambda string: self.buffer.insert(self.buffer.get_end_iter(),
-                                                      string, len(string)),
-                         string,
-                         priority=GObject.PRIORITY_DEFAULT)
+        GLib.idle_add(lambda string: self.buffer.insert(self.buffer.get_end_iter(),
+                                                   string, len(string)),
+                      string,
+                      priority=GLib.PRIORITY_DEFAULT)
     def flush(self):
         pass
 
