@@ -424,7 +424,7 @@ class ParameterTreeWidget(Gtk.Notebook):
                 for parameter_widget in self}
 
 class SetsWidget(Gtk.Box):
-    def __init__(self, on_batch_clicked):
+    def __init__(self):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.window = Pane(vexpand=True)
 
@@ -442,9 +442,6 @@ class SetsWidget(Gtk.Box):
                                                    Gtk.CellRendererText(), text=2))
         self.window.add(self.view)
         self.add(self.window)
-
-        button = make_clickable_button("Batch All Upstream", lambda w: on_batch_clicked())
-        self.add(button)
 
         # For scroll-to-form support
         self.form_row_map = {}
@@ -943,13 +940,17 @@ class REWindow(Gtk.Window):
         self.parameters_widget = ParameterTreeWidget(initial_parameter_tree, self.status_bar)
 
         # Output widgets
-        self.sets_widget = SetsWidget(self.on_batch_all_upstream)
+        self.sets_widget = SetsWidget()
         self.log_widget = LogWidget()
-        self.isolates_widget = SetsWidget(lambda w: None)
+        self.isolates_widget = SetsWidget()
         self.failed_parses_widget = FailedParsesWidget()
         self.correspondence_index_widget = CorrespondenceIndexWidget(
             self.sets_widget.scroll_to_form,
             [lexicon.language for lexicon in attested_lexicons.values()])
+
+        # Upstream button.
+        upstream_button = make_clickable_button("Batch All Upstream",
+                                                lambda w: self.on_batch_all_upstream())
 
         # -----------------------------
         # Stack-based statistics pane
@@ -972,7 +973,12 @@ class REWindow(Gtk.Window):
 
         # Add new widgets to layout
         self.left_pane.add(self.lexicons_widget)
-        self.right_pane.add1(self.sets_widget)
+
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        box.add(self.sets_widget)
+        box.add(upstream_button)
+        self.right_pane.add1(box)
+
         stats_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         stats_box.pack_start(stack_switcher, False, False, 0)
         stats_box.pack_start(self.statistics_stack, True, True, 0)
