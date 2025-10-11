@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet
-        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-        version="1.0">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  version="1.0">
+
+  <xsl:output method="html" indent="yes" encoding="utf-8"/>
 
     <xsl:output
             method="html"
@@ -80,6 +82,14 @@
                         </div>
                     </td>
                 </tr>
+                <xsl:if test="quirks">
+                    <tr>
+                        <th class="table-primary" colspan="2">
+                            <h6>Exceptions</h6>
+                        </th>
+                    </tr>
+                    <xsl:apply-templates select="quirks"/>
+                </xsl:if>
             </table>
         </div>
     </xsl:template>
@@ -158,5 +168,53 @@
             </td>
         </tr>
     </xsl:template>
+
+    <xsl:template match="quirks">
+          <h6>Exceptions</h6>
+          <table class="table table-sm table-bordered">
+            <thead>
+              <tr class="table-secondary">
+                <th scope="col">ID</th>
+                <th scope="col">Source ID</th>
+                <th scope="col">Lang</th>
+                <th scope="col">Lexeme</th>
+                <th scope="col">Gloss</th>
+                <th scope="col">Analysis</th>
+                <th scope="col">Alternative</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <xsl:apply-templates select="quirk"/>
+            </tbody>
+          </table>
+  </xsl:template>
+
+  <xsl:template match="quirk">
+    <tr>
+      <td><xsl:value-of select="@id"/></td>
+      <td><xsl:value-of select="sourceid"/></td>
+      <td><xsl:value-of select="lg"/></td>
+      <td><xsl:value-of select="lx"/></td>
+      <td><xsl:value-of select="gl"/></td>
+      <td>
+        <xsl:variable name="slot"
+          select="analysis/slot"/>
+        <xsl:variable name="val"
+          select="analysis/value"/>
+        <xsl:value-of select="$slot"/>
+        <xsl:if test="string($val)">=<xsl:value-of select="$val"/></xsl:if>
+      </td>
+      <td><xsl:value-of select="alt"/></td>
+      <td>
+        <xsl:for-each select="note">
+          <xsl:value-of select="."/>
+          <xsl:if test="position() != last()">; </xsl:if>
+        </xsl:for-each>
+      </td>
+    </tr>
+  </xsl:template>
+
+  <xsl:template match="text()|@*"/>
+
 </xsl:stylesheet>
-		

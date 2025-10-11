@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="../../styles/params2html.xsl" type="text/xsl"?>
 <params>
   <attested name="gha" file="DIS.gha.data.xml"/>
   <attested name="ris" file="DIS.ris.data.xml"/>
@@ -30,4 +29,26 @@
     <action name="upstream" from="ris,sahu,tag,tuk,mar,syang,gha,pra" to="tgtm"/>
   </reconstruction>
   <param name="title" value="'Display' dataset, using 8 TGTM sets"/>
+  <quirks>
+    <quirk id="99">
+      <sourceid>gha.99</sourceid>
+      <lg>gha</lg>
+      <lx>lexical item1</lx>
+      <alt>replacement/alternative</alt>
+      <analysis><slot>T</slot><value>4</value></analysis>
+      <gl>gloss1 (optional)</gl>
+      <note>note1 (optional)</note>
+      <note>aka note(s) (repeatable)</note>
+    </quirk>
+    <quirk id="100">
+      <sourceid>syang.22</sourceid>
+      <lg>syang</lg>
+      <lx>lexical item2</lx>
+      <alt>replacement/alternative</alt>
+      <analysis><slot>R</slot><value>ap</value></analysis>
+      <gl>gloss2 (optional)</gl>
+      <note>note (optional)</note>
+      <note>aka note(s) (repeatable)</note>
+    </quirk>
+  </quirks>
 </params>
