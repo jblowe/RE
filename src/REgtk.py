@@ -898,6 +898,11 @@ class REWindow(Gtk.Window):
         # status bar
         self.status_bar = StatusBar()
 
+        # persistent diff window
+        self.diff_window = Gtk.Window(title="Diff Viewer", transient_for=self, destroy_with_parent=True)
+        self.diff_window.set_default_size(800, 600)
+        self.diff_window.hide()
+
         # layout
         pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
         box.pack_start(pane_layout, True, True, 0)
@@ -973,6 +978,8 @@ class REWindow(Gtk.Window):
             self.left_pane.remove(child)
         for child in self.right_pane.get_children():
             self.right_pane.remove(child)
+        for child in self.diff_window.get_children():
+            self.diff_window.remove(child)
 
     # Load lexicons and parameters into widgets.
     def load(self, attested_lexicons, initial_parameter_tree):
@@ -997,6 +1004,7 @@ class REWindow(Gtk.Window):
         self.sets_lost_widget = SetsWidget()
         self.sets_gained_widget = SetsWidget()
         self.diff_widget = DiffWidget(self)
+        self.diff_window.add(self.diff_widget)
 
         # Upstream button.
         upstream_button = make_clickable_button("Batch All Upstream",
@@ -1109,10 +1117,11 @@ class REWindow(Gtk.Window):
         dialog.destroy()
 
     def show_quick_compare(self, widget):
-        win = Gtk.Window(title="Diff Viewer", transient_for=self, destroy_with_parent=True)
-        win.add(self.diff_widget)
-        win.set_default_size(800, 600)
-        win.show_all()
+        def _on_window_close(window, event):
+            window.hide()
+            return True # prevent destruction
+        self.diff_window.show_all()
+        self.diff_window.connect("delete-event", _on_window_close)
 
     def save_project(self, widget):
         for (proto_language_name, parameters) in self.parameters_widget.parameter_tree().items():
