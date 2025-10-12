@@ -816,19 +816,19 @@ class DiffWidget(Gtk.Box):
         paned = Gtk.Paned.new(Gtk.Orientation.HORIZONTAL)
         self.pack_start(paned, True, True, 0)
 
-        lost_count = len(parent.sets_lost_widget.store)
-        gained_count = len(parent.sets_lost_widget.store)
+        self.sets_lost_widget = SetsWidget()
+        self.sets_gained_widget = SetsWidget()
 
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         self.left_label = Gtk.Label()
         left_box.pack_start(self.left_label, False, False, 4)
-        left_box.pack_start(parent.sets_lost_widget, True, True, 0)
+        left_box.pack_start(self.sets_lost_widget, True, True, 0)
 
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         self.right_label = Gtk.Label()
 
         right_box.pack_start(self.right_label, False, False, 4)
-        right_box.pack_start(parent.sets_gained_widget, True, True, 0)
+        right_box.pack_start(self.sets_gained_widget, True, True, 0)
 
         paned.pack1(left_box, resize=True, shrink=False)
         paned.pack2(right_box, resize=True, shrink=False)
@@ -840,6 +840,11 @@ class DiffWidget(Gtk.Box):
         self.left_label.set_justify(Gtk.Justification.CENTER)
         self.right_label.set_markup(f"<b>Sets gained in new run ({gained_count})</b>")
         self.right_label.set_justify(Gtk.Justification.CENTER)
+
+    def populate(self, lost, gained):
+        self.sets_lost_widget.populate(lost)
+        self.sets_gained_widget.populate(gained)
+        self.set_label_counts(len(lost.forms), len(gained.forms))
 
 class LexiconEditorWindow(Gtk.Window):
     def __init__(self, parent, lexicons_widget, status_bar):
@@ -932,14 +937,10 @@ class REWindow(Gtk.Window):
             self.failed_parses_widget.populate(statistics.failed_parses)
             self.correspondence_index_widget.populate(statistics.correspondence_index)
             if self.last_proto_lexicon:
-                print(self.last_proto_lexicon)
                 (sets_lost, sets_gained) = RE.compare_proto_lexicons_modulo_details(
                     self.last_proto_lexicon,
                     proto_lexicon)
-                self.sets_lost_widget.populate(sets_lost)
-                self.sets_gained_widget.populate(sets_gained)
-                self.diff_widget.set_label_counts(len(sets_lost.forms),
-                                                  len(sets_gained.forms))
+                self.diff_widget.populate(sets_lost, sets_gained)
             self.last_proto_lexicon = proto_lexicon
         out = sys.stdout
         sys.stdout = self.log_widget.get_buffer()
@@ -1001,8 +1002,6 @@ class REWindow(Gtk.Window):
             [lexicon.language for lexicon in attested_lexicons.values()])
 
         # Diff widgets
-        self.sets_lost_widget = SetsWidget()
-        self.sets_gained_widget = SetsWidget()
         self.diff_widget = DiffWidget(self)
         self.diff_window.add(self.diff_widget)
 
