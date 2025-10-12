@@ -970,24 +970,28 @@ def extract_failures(lexicon):
         [],
         lexicon.statistics)
 
-# create "cognate sets" for the isolates
-# (and we need to check to see that the singletons really are isolates -- not in any set)
+# Collect isolates from the `singleton' cognate sets and return a
+# dictionary of isolates to all the singleton sets they belong in. An
+# isolate is a modern form which exists only in singleton sets and not
+# in any real cognate sets (those with support of more than 2). We do
+# this by collecting all non-isolate forms in the lexicon and then
+# grovelling over the singleton sets. This process can be done
+# post-subset-filtering since non-isolates do not get lost during
+# filtering.
 def extract_isolates(lexicon):
-    forms_used = set()
-    for form in lexicon.forms:
-        forms_used |= form.supporting_forms
-    isolates = [item for item in lexicon.statistics.singleton_support
-                if not any(form in forms_used for form in item[1])]
-    duplicates = {}
-    new_isolates = []
-    for item in isolates:
-        x = next(iter(item[1]))
-        if not x in duplicates:
-            duplicates[x] = 1
-            new_isolates.append(item)
-    return [ProtoForm(lexicon.language, correspondences, supporting_forms, attested_support, mel)
-            for (correspondences, supporting_forms, attested_support, mel)
-            in new_isolates]
+    non_isolate_forms = set()
+    for proto_form in lexicon.forms:
+        non_isolate_forms |= proto_form.attested_support
+    isolates = collections.defaultdict(list)
+    for (correspondences, supporting_forms, attested_support, mel) in lexicon.statistics.singleton_support:
+        for form in attested_support:
+            if form not in non_isolate_forms:
+                isolates[form].append(ProtoForm(lexicon.language,
+                                                correspondences,
+                                                supporting_forms,
+                                                attested_support,
+                                                mel))
+    return isolates
 
 # Given a lexicon of protoforms, return a mapping between cognate sets
 # and possible reconstructions.

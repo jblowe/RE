@@ -502,6 +502,52 @@ class LogWidget(Pane):
     def get_buffer(self):
         return self.log_buffer
 
+class IsolatesWidget(Gtk.Box):
+    def __init__(self):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL)
+        self.window = Pane(vexpand=True)
+        self.store = Gtk.TreeStore(str, str, str)
+
+        view = Gtk.TreeView.new_with_model(self.store)
+        for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            column.set_resizable(True)
+            view.append_column(column)
+        self.window.add(view)
+        self.add(self.window)
+
+    def populate(self, isolates):
+        self.store.clear()
+
+        def store_row(parent, form):
+            if isinstance(form, RE.ProtoForm):
+                row = self.store.append(
+                    parent=parent,
+                    row=[str(form) + ' ' + str(form.mel), '', ''])
+                for supporting_form in form.supporting_forms:
+                    store_row(row, supporting_form)
+            elif isinstance(form, RE.Stage0Form):
+                row = self.store.append(parent=parent, row=[str(form), '', ''])
+                ids = None
+                for (stage, rules_applied) in form.history:
+                    if ids:
+                        self.store.append(parent=row,
+                                          row=["> *" + stage,
+                                               f" by applying {ids}",
+                                               ""])
+                    ids = ",".join([rule.id for rule in rules_applied])
+                self.store.append(parent=row,
+                                  row=["> " + str(form.modern),
+                                       f" by applying {ids}",
+                                       ""])
+
+        for (form, recons) in isolates.items():
+            row = self.store.append(parent=None, row=[form.language, form.glyphs, form.gloss])
+            for recon in recons:
+                store_row(row, recon)
+
 class FailedParsesWidget(Pane):
     def __init__(self):
         super().__init__(vexpand=True, hexpand=True)
@@ -930,10 +976,7 @@ class REWindow(Gtk.Window):
         def update_model():
             self.sets_widget.populate(proto_lexicon)
             statistics = proto_lexicon.statistics
-            # KLUDGE: fix the api around isolates
-            self.isolates_widget.populate(RE.Lexicon(proto_lexicon.language,
-                                                     RE.extract_isolates(proto_lexicon),
-                                                     statistics))
+            self.isolates_widget.populate(RE.extract_isolates(proto_lexicon))
             self.failed_parses_widget.populate(statistics.failed_parses)
             self.correspondence_index_widget.populate(statistics.correspondence_index)
             if self.last_proto_lexicon:
@@ -995,7 +1038,7 @@ class REWindow(Gtk.Window):
         # Output widgets
         self.sets_widget = SetsWidget()
         self.log_widget = LogWidget()
-        self.isolates_widget = SetsWidget()
+        self.isolates_widget = IsolatesWidget()
         self.failed_parses_widget = FailedParsesWidget()
         self.correspondence_index_widget = CorrespondenceIndexWidget(
             self.sets_widget.scroll_to_form,
