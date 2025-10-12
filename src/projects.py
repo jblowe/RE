@@ -20,7 +20,7 @@ def find_path(root, path):
     elif os.path.isdir(os.path.join(base_dir, path)):
         return os.path.join(base_dir, path)
     else:
-        raise Exception("Experiment not found.")
+        raise Exception("project not found.")
 
 projects = get_dirs('projects')
 experiments = get_dirs('experiments')
