@@ -415,6 +415,7 @@ def serialize_quirks(quirks, filename):
         ET.SubElement(entry, 'lg').text = quirk.language
         ET.SubElement(entry, 'lx').text = quirk.form
         ET.SubElement(entry, 'gl').text = quirk.gloss
+        ET.SubElement(entry, 'alternative').text = quirk.alternative
         ET.SubElement(entry, 'slot').text = quirk.slot
         ET.SubElement(entry, 'value').text = quirk.value
         for note in list(quirk.notes):

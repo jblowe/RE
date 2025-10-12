@@ -88,6 +88,7 @@ def read_quirks(xmlfile):
                      quirk.find('lg').text,
                      quirk.find('lx').text,
                      quirk.find('gl').text,
+                     quirk.find('alt').text,
                      quirk.find('analysis/slot').text,
                      quirk.find('analysis/value').text,
                      [q.text for q in quirk.findall('note')]
