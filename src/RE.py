@@ -961,15 +961,6 @@ def compare_proto_lexicons(lexicon1, lexicon2, languages):
         'refs': refs
     }
 
-# create a fake cognate set with the forms that failed to reconstruct
-def extract_failures(lexicon):
-    return Lexicon(
-        lexicon.language,
-        [ProtoForm('failed', (), sorted(lexicon.statistics.failed_parses, key=lambda x: x.language),
-                   (), [])],
-        [],
-        lexicon.statistics)
-
 # Collect isolates from the `singleton' cognate sets and return a
 # dictionary of isolates to all the singleton sets they belong in. An
 # isolate is a modern form which exists only in singleton sets and not
