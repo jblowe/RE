@@ -462,7 +462,10 @@ class SetsWidget(Gtk.Box):
                          RE.correspondences_as_ids(form.correspondences),
                          len(form.attested_support),
                          str(form.mel)])
-                for supporting_form in form.supporting_forms:
+                # TODO: Sort by the language order in the table of
+                # correspondences.
+                for supporting_form in sorted(form.supporting_forms,
+                                              key=lambda f: (f.language, f.glyphs)):
                     store_row(row, supporting_form)
             elif isinstance(form, RE.ModernForm):
                 row = self.store.append(parent=parent, row=[str(form), '', 0, ''])

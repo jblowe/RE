@@ -191,14 +191,14 @@ class ModernForm(Form):
 class Stage0Form(Form):
     def __init__(self, form, history):
         glyphs = history[0][0]
-        super().__init__('proto-' + form.language, glyphs)
+        super().__init__(form.language, glyphs)
         self.modern = form
         self.gloss = form.gloss
         self.history = history
         self.attested_support = frozenset([form])
 
     def __str__(self):
-        return f'{self.language} *{self.glyphs}\t{self.gloss}'
+        return f'{"proto-" + self.language} *{self.glyphs}\t{self.gloss}'
 
 class ProtoForm(Form):
     def __init__(self, language, correspondences, supporting_forms,
