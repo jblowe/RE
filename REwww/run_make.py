@@ -4,14 +4,13 @@ import time
 
 PYTHON = 'python3'
 
-def make(project, experiment, parameters):
+def make(project, parameters):
     messages = []
     if True:
         elapsed_time = time.time()
         if project == 'ALL':
             os.chdir('..')
             try:
-                p_object = subprocess.call(['git', 'pull', '-v'])
                 p_object = subprocess.call(['make', '-w'],
                                            stdout=open('make-all.stdout.log', 'w'),
                                            stderr=open('make-all.stderr.log', 'w'))
@@ -20,7 +19,7 @@ def make(project, experiment, parameters):
                 pass
             os.chdir('REwww')
         else:
-            cli = [project, experiment]
+            cli = [project]
             for p in 'recon fuzzy mel run'.split(' '):
                 if p in parameters and parameters[p] != '':
                     cli += [f'--{p}', f'{parameters[p]}']
@@ -38,8 +37,8 @@ def make(project, experiment, parameters):
                                            env=env,
                                            check=True,
                                            text=True,
-                                           stdout=open(f'../experiments/{project}/{experiment}/mostrecent.stdout.log', 'w'),
-                                           stderr=open(f'../experiments/{project}/{experiment}/mostrecent.stderr.log', 'w'))
+                                           stdout=open(f'../projects/{project}/mostrecent.stdout.log', 'w'),
+                                           stderr=open(f'../projects/{project}/mostrecent.stderr.log', 'w'))
             except:
                 messages.append('failed' + p_object)
                 pass
@@ -53,13 +52,13 @@ def make(project, experiment, parameters):
             return messages, True
         else:
             if project == 'ALL':
-                messages.append('{:.2f} seconds. "make all" failed (returncode = {p_object.returncode}).'.format(elapsed_time))
+                messages.append(f'{elapsed_time:.2f} seconds. "make all" failed (returncode = {p_object.returncode}).')
             else:
-                messages.append('{:.2f} seconds. Upstream run failed (returncode = {p_object.returncode}).'.format(elapsed_time))
+                messages.append(f'{elapsed_time:.2f} seconds. Upstream run failed (returncode = {p_object.returncode}).')
             return messages, False
 
 
-def compare(project, experiment, runs):
+def compare(project, runs):
     PYTHON = 'python3'
     messages = []
 
@@ -67,19 +66,19 @@ def compare(project, experiment, runs):
     os.chdir(os.path.join('..', 'src'))
     p_object = -1
     try:
-        # time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 $1 --run2 $2
-        cli = [project, experiment, experiment]
+        # time python3 REcli.py compare ${PROJECT} --run1 $1 --run2 $2
+        cli = [project]
         cli += ['--run1', runs[0]]
         cli += ['--run2', runs[1]]
         messages.append(' '.join([PYTHON, 'REcli.py', 'compare', ] + cli))
         p_object = subprocess.call([PYTHON, 'REcli.py', 'compare'] + cli)
+        print('calling:', ' '.join([PYTHON, 'REcli.py', 'compare', cli]))
     except:
         pass
     os.chdir(os.path.join('..', 'REwww'))
     elapsed_time = time.time() - elapsed_time
     if p_object == 0:
-        messages.append('{:.2f} seconds. "compare" succeeded.'.format(elapsed_time))
+        messages.append(f'{elapsed_time:.2f} seconds. "compare" succeeded.')
         return messages, True
     else:
-        messages.append('{:.2f} seconds. "compare" failed.'.format(elapsed_time))
-        return messages, False
+        messages.append(f'{elapsed_time:.2f} seconds. "compare" failed.')

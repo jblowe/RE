@@ -9,11 +9,11 @@
             <tr><td><i>Run name (required)</i></td><td><input name="run" type="text"></td></tr>
             <tr><td><i>Remarks (optional)</i></td><td><input name="remarks" type="text"></td></tr>
         % end
-        % if 'reconstructions' in data['experiment_info']:
+        % if 'reconstructions' in data['project_info']:
             <tr><td><i>Correspondences</i></td><td>
             <select name="recon">
                 <option value="">Select...</option>
-            % for c in data['experiment_info']['reconstructions']:
+            % for c in data['project_info']['reconstructions']:
                 <option value="{{c}}"
                 % if c == form.get('recon'):
                     selected
@@ -23,11 +23,11 @@
             </select>
             </td></tr>
         % end
-        % if 'fuzzies' in data['experiment_info']:
+        % if 'fuzzies' in data['project_info']:
             <tr><td><i>Fuzzy files</i></td><td>
             <select name="fuzzy">
                 <option value="">No fuzzying</option>
-            % for f in data['experiment_info']['fuzzies']:
+            % for f in data['project_info']['fuzzies']:
                 <option value="{{f}}"
                 % if f == form.get('fuzzy'):
                     selected
@@ -38,13 +38,13 @@
             </td></tr>
         % end
         % if not 'interactive' in data:
-            % if 'mels' in data['experiment_info']:
+            % if 'mels' in data['project_info']:
                 <tr><td><i>MELs</i></td><td>
                 <select name="mel">
                     <option value="">No MELs</option>
-                % for m in data['experiment_info']['mels']:
+                % for m in data['project_info']['mels']:
                     <option value="{{m}}"
-                    % if m == data['experiment_info']['mel']:
+                    % if m == data['project_info']['mel']:
                         selected
                     % end
                     >{{m}}</option>

@@ -68,9 +68,9 @@ def list_tree(tree):
 
 
 # @route('/edit/<subcommand:re:.*>')
-@post('/edit/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
-@route('/edit/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
-def edit(tree, project, experiment, filename):
+@post('/edit/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
+@route('/edit/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
+def edit(tree, project, filename):
     x = request
     origin = wutils.get_origin(request)
     if request.POST.action == 'save':
@@ -81,32 +81,24 @@ def edit(tree, project, experiment, filename):
         pass
     # subcommand = request.GET.get('action')
     # try:
-    #     (tree, project, experiment, file) = subcommand.replace('/', '').split('|')
+    #     (tree, project, file) = subcommand.replace('/', '').split('|')
     # except Exception:
-    #     tree, project, experiment, file = 5 * []
+    #     tree, project, file = 5 * []
     # if subcommand == 'edit':
     #     pass
     display = ''
     command = 'edit'
-    data = wutils.setup_data(tree, project, experiment, filename, display, command, origin)
+    data = wutils.setup_data(tree, project, filename, display, command, origin)
     data['content'] = str(data['content'])
-    data['content'] = data['content'].replace('#document_path#', f'{tree}/{project}/{experiment}/{filename}')
+    data['content'] = data['content'].replace('#document_path#', f'{tree}/{project}/{filename}')
     return wutils.check_template('index', data, request.forms)
 
 
 @route('/project/<project:re:.*>')
 def project_info(project):
     files, base_dir, num_files = wutils.data_files(wutils.PROJECTS, project)
-    data = {'tree': 'projects', 'project': project, 'files': files, 'base_dir': base_dir}
-    return wutils.check_template('index', data, request.forms)
-
-
-@route('/get_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
-def get_experiment_file(tree, project, experiment, filename):
-    display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
-    next = 'edit' if 'edit' in request.GET else 'view'
-    origin = wutils.get_origin(request)
-    data = wutils.setup_data(tree, project, experiment, filename, display, next, origin)
+    data = {'tree': 'projects', 'project': project, 'files': files, 'base_dir': base_dir, 'num_files': num_files,
+            'project_info': wutils.get_project_info(project, [])}
     return wutils.check_template('index', data, request.forms)
 
 
@@ -115,14 +107,8 @@ def get_project(tree, project, filename):
     display = 'paragraph' if 'paragraph' in request.GET else 'tabular'
     command = 'edit' if 'edit' in request.GET else 'view'
     origin = wutils.get_origin(request)
-    data = wutils.setup_data(tree, project, '', filename, display, command, origin)
+    data = wutils.setup_data(tree, project, filename, display, command, origin)
     return wutils.check_template('index', data, request.forms)
-
-
-@route('/download_file/<tree:re:.*>/<project:re:.*>/<experiment:re:.*>/<filename:re:.*>')
-def download_experiment(tree, project, experiment, filename):
-    full_path = wutils.combine_parts(tree, project, experiment, filename)
-    return wutils.download(full_path, filename)
 
 
 @route('/download_file/<tree:re:.*>/<project:re:.*>/<filename:re:.*>')
@@ -131,24 +117,24 @@ def download_project(tree, project, filename):
     return wutils.download(full_path, filename)
 
 
-@post('/compare/<project:re:.*>/<experiment:re:.*>')
-def compare(project, experiment):
+@post('/compare/<project:re:.*>')
+def compare(project):
     runs = [i.replace(f'{project}.', '').replace('.sets.xml', '') for i in request.forms if i not in 'compare'.split()]
-    alerts, success = run_make.compare(project, experiment, runs)
+    alerts, success = run_make.compare(project, runs)
     errors = alerts if not success else None
     messages = alerts if success else None
-    return show_experiment(project, experiment, messages, errors)
+    return show_project(project, messages, errors)
 
 
 # one cycle through interactive environment
-@post('/interactive/<project:re:.*>/<experiment:re:.*>')
-@route('/interactive/<project:re:.*>/<experiment:re:.*>')
-def interactive_upstream(project, experiment):
+@post('/interactive/<project:re:.*>')
+@route('/interactive/<project:re:.*>')
+def interactive_upstream(project):
     # initialize the interactive form
     x = request
+    files, base_dir, num_files = wutils.data_files(wutils.PROJECTS, project)
     if request.method == 'GET':
-        files, experiment_path, num_files = wutils.data_files(os.path.join(wutils.EXPERIMENTS, project), experiment)
-        parameters_file = os.path.join(experiment_path, f'{project}.master.parameters.xml')
+        parameters_file = os.path.join(base_dir, f'{project}.master.parameters.xml')
         settings = read.read_settings_file(parameters_file)
         # check_setup(command_args.command, args, settings)
         languages = [(l, '') for l in settings.attested]
@@ -161,68 +147,46 @@ def interactive_upstream(project, experiment):
     else:
         languages = [(i, getattr(request.forms, i)) for i in request.forms if i not in 'fuzzy recon mel make'.split(' ')]
         RE.Debug.debug = True
-        forms, notes, isolates, no_parses, debug_notes = wutils.upstream('interactive', languages, project, experiment, request.forms, False)
+        forms, notes, isolates, no_parses, debug_notes = wutils.upstream('interactive', languages, project, request.forms, False)
         no_parses = [n for n in no_parses if n.glyphs != '']
         notes = [n for n in notes if 'form missing' not in n]
-    experiments, base_dir, data_elements = wutils.list_of_experiments(project)
-    experiment_info = wutils.get_experiment_info(base_dir, experiment, data_elements, project)
-    # language_names, upstream_target, base_dir = wutils.upstream('languages', [], project, experiment, request.forms, False)
+    project_info = wutils.get_project_info(project, [])
+    # language_names, upstream_target, base_dir = wutils.upstream('languages', [], project, request.forms, False)
     # clean out unused elements from upstream results
-    data = {'interactive': 'start', 'project': project, 'experiment': experiment, 'languages': languages,
+    data = {'interactive': 'start', 'project': project, 'languages': languages,
             'base_dir': base_dir, 'forms': forms, 'notes': notes, 'debug_notes': debug_notes, 'isolates': isolates, 'no_parses': no_parses,
-            'experiment_info': experiment_info}
+            'project_info': project_info}
     return wutils.check_template('index', data, request.forms)
 
 
-@route('/interactive_batch/<project:re:.*>/<experiment:re:.*>')
-def interactive_batch(project, experiment):
-    files, experiment_path, num_files = wutils.data_files(os.path.join(wutils.EXPERIMENTS, project), experiment)
-    parameters_file = os.path.join(experiment_path, f'{project}.master.parameters.xml')
-    settings = read.read_settings_file(parameters_file)
-    # check_setup(command_args.command, args, settings)
-    mel = None
-    fuzzy = None
-    recon = 'standard'
-    settings, attested_lexicons = load_settings(experiment_path, project, mel=mel, fuzzy=fuzzy, recon=recon)
-    # settings = read.read_settings_file(parameters_file)
-    # forms, notes, isolates, no_parses, debug_notes = wutils.re_setup(project, experiment, {})
-    # forms, notes, isolates, no_parses, debug_notes = wutils.upstream('interactive', languages, project, experiment, request.forms, False)
-    data = {'interactive_batch': 'start', 'project': project, 'experiment': experiment, 'lexicons': attested_lexicons,
-            'mel': mel, 'fuzzy': fuzzy, 'recon': recon, 'settings': settings}
-    return wutils.check_template('index', data, request.forms)
-
-@route('/experiment/<project:re:.*>/<experiment:re:.*>')
-def show_experiment(project, experiment, messages=None, errors=None):
-    experiments, exp_proj_path, data_elements = wutils.list_of_experiments(project)
-    experiment_info = wutils.get_experiment_info(exp_proj_path, experiment, data_elements, project)
-    files, experiment_path, num_files = wutils.data_files(os.path.join(wutils.EXPERIMENTS, project), experiment)
-    data = {'tree': 'experiment', 'experiment': experiment, 'project': project, 'base_dir': experiment_path,
-            'data_elements': data_elements, 'experiment_info': experiment_info, 'files': files, 'num_files': num_files,
-            'back': '/list_tree/projects'}
+@route('/prxject/<project:re:.*>')
+def show_project(project, messages=None, errors=None):
+    files, base_dir, num_files = wutils.data_files(wutils.PROJECTS, project)
+    data = {'tree': 'projects', 'project': project, 'files': files, 'base_dir': base_dir, 'num_files': num_files,
+            'project_info': wutils.get_project_info(project, [])}
     if messages: data['messages'] = messages
     if errors: data['errors'] = errors
     if num_files == 0:
-        data['errors'] = ['No files in this experiment!']
+        data['errors'] = ['No files in this project!']
     return wutils.check_template('index', data, request.forms)
 
 
-@post('/create-experiment/<project:re:.*>')
-def new_experiment(project):
-    experiments, base_dir, data_elements = wutils.list_of_experiments(project)
+@post('/create-project/<project:re:.*>')
+def new_project(project):
     project_dir = os.path.join('..', 'projects', project)
     error_messages = []
-    new_experiment = getattr(request.forms, 'new_experiment')
+    new_project = getattr(request.forms, 'new_project')
     try:
-        new_dir = os.path.join(base_dir, new_experiment)
+        new_dir = os.path.join(base_dir, new_project)
         os.mkdir(new_dir)
         for root, dirs, files in os.walk(project_dir):
             for f in files:
                 print(os.path.join(root, f))
                 copy(os.path.join(root, f), new_dir)
     except:
-        error_messages.append(f"couldn't make experiment {new_experiment}")
-    experiments, base_dir, data_elements = wutils.list_of_experiments(project)
-    data = {'projects': wutils.tree_info('projects'), 'experiments': experiments,
+        error_messages.append(f"couldn't make project {new_project}")
+    projects, base_dir, data_elements = wutils.list_of_projects(project)
+    data = {'projects': wutils.tree_info('projects'), 'projects': projects,
             'project': project, 'base_dir': base_dir,
             'data_elements': data_elements, 'back': '/list_tree/projects'}
     if len(error_messages) > 0:
@@ -231,23 +195,14 @@ def new_experiment(project):
     # return wutils.check_template('index', data, request.forms)
 
 
-@route('/delete-experiment/<project:re:.*>/<experiment:re:.*>')
-def delete_experiment(project, experiment):
+@route('/delete-project/<project:re:.*>')
+def delete_project(project):
     try:
-        experiments, exp_proj_path, data_elements = wutils.list_of_experiments(project)
-        delete_dir = os.path.join(exp_proj_path, experiment)
+        delete_dir = wutils.combine_parts(PROJECTS, project)
         shutil.rmtree(delete_dir)
     except:
         pass
     return list_tree('projects')
-
-
-@route('/experiments/<project:re:.*>')
-def list_experiments(project):
-    experiments, base_dir, data_elements = wutils.list_of_experiments(project)
-    data = {'experiments': experiments, 'project': project, 'base_dir': base_dir,
-            'data_elements': data_elements}
-    return wutils.check_template('index', data, request.forms)
 
 
 @post('/remake')
@@ -260,17 +215,17 @@ def remake():
 
 @route('/make/ALL')
 def make_all():
-    data = {'make': run_make.make('ALL', None, None), 'project': 'ALL', 'experiment': 'semantics'}
+    data = {'make': run_make.make('ALL', None, None), 'project': 'ALL'}
     return wutils.check_template('index', data, request.forms)
 
 
-@post('/make/<project:re:.*>/<experiment:re:.*>')
-@route('/make/<project:re:.*>/<experiment:re:.*>')
-def make_experiment(project, experiment):
-    alerts, success = run_make.make(project, experiment, request.forms)
+@post('/make/<project:re:.*>')
+@route('/make/<project:re:.*>')
+def make_project(project):
+    alerts, success = run_make.make(project, request.forms)
     errors = alerts if not success else None
     messages = alerts if success else None
-    return show_experiment(project, experiment, messages, errors)
+    return show_project(project, messages, errors)
 
 
 @route('/plot/<type:re:.*>/<data:re:.*>')

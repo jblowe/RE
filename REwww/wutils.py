@@ -19,7 +19,6 @@ from bottle import template
 # nb: we are trying to get the directory above the directory this file is in
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECTS = 'projects'
-EXPERIMENTS = 'experiments'
 
 
 def get_version():
@@ -62,47 +61,27 @@ def check_template(tpl, data, parameters):
     return template(tpl, data=data, form=parameters)
 
 
-def setup_data(tree, project, experiment, filename, display, next, origin):
-    full_path = combine_parts(tree, project, experiment, filename)
+def setup_data(tree, project, filename, display, next, origin):
+    full_path = combine_parts(tree, project, filename)
     content, date = file_content(full_path, display, next)
     next = full_path.replace('../', '/edit/')
     # every response needs a project...
     data = {'project': project, 'origin': origin, 'next': next}
-    if experiment:
-        experiments, base_dir, data_elements = list_of_experiments(project)
-        experiment_info = get_experiment_info(base_dir, experiment, data_elements, project)
-        files, experiment_path, num_files = data_files(os.path.join(EXPERIMENTS, project), experiment)
-        data['experiment'] = experiment
-        data['experiment_info'] = experiment_info
-        data['data_elements'] = data_elements
-    else:
-        files, base_dir, num_files = data_files(tree, project)
-        # experiment_info, data_elements = [''] * 2
+    files, base_dir, num_files = data_files(tree, project)
+    project_info = get_project_info(project, [])
     data.update({'tree': tree, 'files': files, 'base_dir': base_dir, 'num_files': num_files,
-                 'filename': filename, 'date': date,
+                 'filename': filename, 'date': date, 'project_info': project_info,
                  'content': content, 'back': '/list_tree/projects'
                  })
     return data
 
 
-def list_of_experiments(project):
-    experiment_dir = combine_parts(EXPERIMENTS, project)
-    if not os.path.isdir(experiment_dir):
-        os.mkdir(experiment_dir)
-    experiment_dirs = [f for f in sorted(os.listdir(experiment_dir)) if os.path.isdir(os.path.join(experiment_dir, f))]
-    experiments = []
-    # data_elements = 'name,updated,canon,correspondences,strict,mel,fuzzy,classes,lexicons,results'.split(',')
-    data_elements = []
-    for experiment in experiment_dirs:
-        experiments.append(get_experiment_info(experiment_dir, experiment, data_elements, project))
-    return experiments, experiment_dir, data_elements
-
-
-def get_experiment_info(experiment_dir, experiment, data_elements, project):
-    if not experiment: return []
-    parameters_file = os.path.join(experiment_dir, experiment, f'{project}.master.parameters.xml')
-    experiment_info = {'name': experiment, 'date': get_info(parameters_file)}
-    if experiment_info['date'] == 'unknown':
+def get_project_info(project, data_elements):
+    if not project: return []
+    project_dir = combine_parts(PROJECTS, project)
+    parameters_file = os.path.join(project_dir, f'{project}.master.parameters.xml')
+    project_info = {'name': project, 'date': get_info(parameters_file)}
+    if project_info['date'] == 'unknown':
         pass
     else:
         # we need to set a recon in order to even read the parameters file
@@ -113,12 +92,12 @@ def get_experiment_info(experiment_dir, experiment, data_elements, project):
                                            fuzzy=None)
         for s in settings.other:
             if s in 'fuzzies reconstructions mels title'.split(' '):
-                experiment_info[s] = settings.other[s]
+                project_info[s] = settings.other[s]
 
     for i in 'fuzzy recon mel'.split(' '):
-        experiment_info[i] = data_elements[i] if i in data_elements else ''
+        project_info[i] = data_elements[i] if i in data_elements else ''
 
-    return experiment_info
+    return project_info
 
 
 def data_files(tree, directory):
@@ -127,7 +106,7 @@ def data_files(tree, directory):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     num_files = 0
-    for type in 'checkpoint'.split(' '):
+    for type in 'rechk'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'.{type}' in f]))
         num_files += len([f for f in filelist if f'{type}' in f])
     for type in 'statistics compare'.split(' '):
@@ -155,7 +134,7 @@ def data_files(tree, directory):
 
 def set_defaults(data, parameters):
     for i in 'fuzzy recon mel'.split(' '):
-        data['experiment_info'][i] = parameters[i] if i in parameters else None
+        data['project_info'][i] = parameters[i] if i in parameters else None
 
 
 def all_file_content(file_path):
@@ -223,7 +202,7 @@ def get_info(path):
 
 def tree_info(tree):
     tree_list = projects.find_path(tree, 'all')
-    return [(p, get_info(p), list_of_experiments(p)) for p in tree_list]
+    return [(p, get_info(p)) for p in tree_list]
 
 
 def download(full_path, filename):
@@ -300,8 +279,8 @@ def limit_lines(filecontent, max_rows):
 
 
 # upstream for interactive only
-def upstream(request, language_forms, project, experiment, parameters, only_with_mel):
-    project_dir = os.path.join('..', EXPERIMENTS, project, experiment)
+def upstream(request, language_forms, project, parameters, only_with_mel):
+    project_dir = combine_parts(PROJECTS, project)
     parameters_file = os.path.join(project_dir, f'{project}.master.parameters.xml')
     mel = parameters['mel'] if 'mel' in parameters and parameters['mel'] != '' else None
     recon = parameters['recon'] if 'recon' in parameters and parameters['recon'] != '' else None
@@ -316,19 +295,16 @@ def upstream(request, language_forms, project, experiment, parameters, only_with
     return B.forms, B.statistics.notes, isolates, B.statistics.failed_parses, B.statistics.debug_notes
 
 
-def setup_re(project, experiment, parameters):
-    experiments, base_dir, data_elements = list_of_experiments(project)
-    experiment_info = get_experiment_info(base_dir, experiment, data_elements, project)
-    experiment_path = ''
+def setup_re(project, args, only_with_mel):
     print(time.asctime())
     elapsed_time = time.time()
-
-    parameters_file = os.path.join(experiment_path, f'{project}.master.parameters.xml')
+    project_path = combine_parts(PROJECTS, project)
+    parameters_file = combine_parts(PROJECTS, project, f'{project}.master.parameters.xml')
     settings = read.read_settings_file(parameters_file,
                                        mel=mel,
                                        fuzzy=fuzzy,
                                        recon=recon)
-    load_hooks.load_hook(experiment_path, args, settings)
+    load_hooks.load_hook(project_path, args, settings)
     mel_status = 'strict MELs' if only_with_mel else 'MELs not enforced'
     print(mel_status)
 
@@ -337,7 +313,7 @@ def run_up(project, settings, only_with_mel):
     B = RE.batch_all_upstream(settings, only_with_mel=only_with_mel)
     # print(f'wrote {len(B.statistics.keys)} keys and {len(B.statistics.failed_parses)} failures to {keys_file}')
     # print(f'wrote {len(B.forms)} text sets to {sets_file}')
-    for c in sorted(B.statistics.correspondences_used_in_recons, key=lambda corr: utils.tryconvert(corr.id, int)):
+    for c in sorted(B.statistics.correspondences_used_in_recons, key=lambda corr: corr.id):
         if c in B.statistics.correspondences_used_in_sets:
             set_count = B.statistics.correspondences_used_in_sets[c]
         else:

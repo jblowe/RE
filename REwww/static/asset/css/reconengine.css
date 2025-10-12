@@ -39,6 +39,11 @@ body {
 @media (min-width: 992px) {
   .pane .pane-scroll { max-height: 32vh; }
 }
+@media (min-width: 1200px) {
+     .container {
+        max-width: 1400px;
+    }
+}
 /* Optional: allow user to resize panel bodies */
 .pane .pane-scroll { resize: vertical; }
 /* Tighten headers */
