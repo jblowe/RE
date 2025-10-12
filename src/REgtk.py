@@ -428,18 +428,21 @@ class SetsWidget(Gtk.Box):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.window = Pane(vexpand=True)
 
-        self.store = Gtk.TreeStore(str, str, str)
+        self.store = Gtk.TreeStore(str, str, int, str)
         self.view = Gtk.TreeView.new_with_model(self.store)
-        recon_column = Gtk.TreeViewColumn('Reconstructions',
-                                          Gtk.CellRendererText(),
-                                          text=0)
-        recon_column.set_sort_column_id(0)
-        recon_column.set_resizable(True)
-        self.view.append_column(recon_column)
-        self.view.append_column(Gtk.TreeViewColumn("Ids",
-                                                   Gtk.CellRendererText(), text=1))
-        self.view.append_column(Gtk.TreeViewColumn("mel",
-                                                   Gtk.CellRendererText(), text=2))
+        for (i, column_name) in enumerate(['Reconstructions', 'IDs', '# attestations', 'mel']):
+            renderer = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_name, renderer, text=i)
+            column.set_sort_column_id(i)
+            column.set_resizable(True)
+            if column_name == '# attestations':
+                column.set_alignment(1.0)
+                renderer.set_alignment(1.0, 1.0)
+                def render_attestation_count(column, cell, model, iter, data):
+                    value = model.get_value(iter, 2)
+                    cell.set_property("text", "" if value == 0 else str(value))
+                column.set_cell_data_func(renderer, render_attestation_count)
+            self.view.append_column(column)
         self.window.add(self.view)
         self.add(self.window)
 
@@ -457,24 +460,27 @@ class SetsWidget(Gtk.Box):
                     parent=parent,
                     row=['*' + form.glyphs if parent is None else str(form),
                          RE.correspondences_as_ids(form.correspondences),
+                         len(form.attested_support),
                          str(form.mel)])
                 for supporting_form in form.supporting_forms:
                     store_row(row, supporting_form)
             elif isinstance(form, RE.ModernForm):
-                row = self.store.append(parent=parent, row=[str(form), '', ''])
+                row = self.store.append(parent=parent, row=[str(form), '', 0, ''])
             elif isinstance(form, RE.Stage0Form):
-                row = self.store.append(parent=parent, row=[str(form), '', ''])
+                row = self.store.append(parent=parent, row=[str(form), '', 0, ''])
                 ids = None
                 for (stage, rules_applied) in form.history:
                     if ids:
                         self.store.append(parent=row,
                                           row=["> *" + stage,
                                                f" by applying {ids}",
+                                               0,
                                                ""])
                     ids = ",".join([rule.id for rule in rules_applied])
                 self.store.append(parent=row,
                                   row=["> " + str(form.modern),
                                        f" by applying {ids}",
+                                       0,
                                        ""])
             self.form_row_map[form] = row
 
@@ -573,7 +579,6 @@ class FailedParsesWidget(Pane):
 class CorrespondenceIndexWidget(Gtk.Box):
     def __init__(self, on_form_clicked, languages):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
-        self.store = Gtk.TreeStore(str, int, object)
         # str = correspondence text
         # int = visible_refs (updated after filter)
         # object = form target (None for parent rows)
