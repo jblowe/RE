@@ -79,6 +79,22 @@ def read_correspondences(correspondences, rules, project_name, daughter_language
                 int(rule.attrib.get('stage'))))
     return table
 
+
+# returns a generator returning the modern form and its gloss
+def read_quirks(xmlfile):
+    tree = ET.parse(xmlfile)
+    return [RE.Quirk(quirk.attrib.get('id'),
+                     quirk.find('source_id').text,
+                     quirk.find('lg').text,
+                     quirk.find('lx').text,
+                     quirk.find('gl').text,
+                     quirk.find('analysis/slot').text,
+                     quirk.find('analysis/value').text,
+                     [q.text for q in quirk.findall('note')]
+                     )
+            for quirk in tree.iterfind('quirk')]
+
+
 def skip_comments(reader):
     for row in reader:
         if '#' in row[0]:
