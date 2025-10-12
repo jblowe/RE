@@ -80,7 +80,7 @@ def read_correspondences(correspondences, rules, project_name, daughter_language
     return table
 
 
-# returns a generator returning the modern form and its gloss
+# returns a list of quirks
 def read_quirks(xmlfile):
     tree = ET.parse(xmlfile)
     return [RE.Quirk(quirk.attrib.get('id'),
