@@ -274,6 +274,7 @@ class Sheet(Gtk.Box):
                  search_func=all_columns_search_func):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         view = Gtk.TreeView.new_with_model(store)
+        view.connect('key-press-event', tab_key_press_handler)
         view.set_search_equal_func(search_func, None)
         view.set_search_column(0)
         self.on_change = on_change
