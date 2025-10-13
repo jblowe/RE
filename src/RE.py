@@ -258,7 +258,7 @@ class QuirkyForm(Form):
         self.attested_support = frozenset([actual])
 
     def __str__(self):
-        return f'!! {str(actual)} (expected ‡{self.glyphs})'
+        return f'!! {str(self.actual)} (expected ‡{self.glyphs})'
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
