@@ -508,13 +508,14 @@ class SetsWidget(Gtk.Box):
 
         self.filter = self.store.filter_new()
         self.filter.set_visible_func(self._filter_func)
+        self.sorted = Gtk.TreeModelSort(model=self.filter)
 
         # Instant filtering
         self.lang_entry.connect("changed", lambda e: self.filter.refilter())
         self.form_entry.connect("changed", lambda e: self.filter.refilter())
         self.gloss_entry.connect("changed", lambda e: self.filter.refilter())
 
-        self.view = Gtk.TreeView.new_with_model(self.filter)
+        self.view = Gtk.TreeView.new_with_model(self.sorted)
         view = self.view
 
         # ID cell fun.
@@ -621,9 +622,6 @@ class SetsWidget(Gtk.Box):
         view.connect("button-press-event", on_button_press)
         view.connect("motion-notify-event", on_motion_notify)
 
-        # For scroll-to-form support
-        self.form_row_map = {}
-
     def _filter_func(self, model, iter_, data=None):
         lang_query = self.lang_entry.get_text().strip().lower()
         form_query = self.form_entry.get_text().strip().lower()
@@ -646,7 +644,6 @@ class SetsWidget(Gtk.Box):
     def populate(self, proto_lexicon):
         """Populate this store with forms."""
         self.store.clear()
-        self.form_row_map.clear()
 
         def store_row(parent, form, parent_language):
             if isinstance(form, RE.ProtoForm):
@@ -695,20 +692,21 @@ class SetsWidget(Gtk.Box):
                                        last_applied,
                                        parent_language,
                                        form])
-            self.form_row_map[form] = row
 
         for form in proto_lexicon.forms:
             store_row(None, form, None)
 
     def scroll_to_form(self, form):
         """Scroll and select the row with the given form."""
-        iter_ = self.form_row_map.get(form)
-        if iter_:
-            path = self.view.get_model().get_path(iter_)
-            self.view.expand_to_path(path)
-            self.view.scroll_to_cell(path, None, True, 0.5, 0.0)
-            self.view.set_cursor(path)
-            return True
+        treeview = self.view
+        model = treeview.get_model()
+
+        for row in model:
+            if row[6] == form:
+                path = model.get_path(row.iter)
+                treeview.scroll_to_cell(path, None, True, 0.5, 0.0)
+                treeview.set_cursor(path)
+                return True
         return False
 
 class LogWidget(Pane):
