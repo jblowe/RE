@@ -235,6 +235,7 @@ class LexiconWidget(Pane):
             cell = Gtk.CellRendererText()
             cell.set_property('editable', True)
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_resizable(True)
             column.set_sort_column_id(i)
             view.append_column(column)
         self.add(view)
