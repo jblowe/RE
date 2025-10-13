@@ -1,4 +1,5 @@
 cd c:/Martine/RE/src
 source venv-gtk3/bin/activate
-python REgtk.py
+cd c:/Martine/RE/REwww
+python app.py
 
