@@ -10,6 +10,7 @@ def read_correspondence_file(filename, project_name, daughter_languages, name, m
     tree = ET.parse(filename)
     return RE.Parameters(read_correspondences(tree.iterfind('corr'),
                                               tree.iterfind('rule'),
+                                              tree.iterfind('quirk'),
                                               project_name,
                                               daughter_languages),
                          read_syllable_canon(tree.find('parameters')),
@@ -35,7 +36,7 @@ def read_syllable_canon(parameters):
             context_match_type = parameter.attrib.get('value')
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
 
-def read_correspondences(correspondences, rules, project_name, daughter_languages):
+def read_correspondences(correspondences, rules, quirks, project_name, daughter_languages):
     table = RE.TableOfCorrespondences(project_name, daughter_languages)
     for correspondence in correspondences:
         daughter_forms = {name: '' for name in daughter_languages}
@@ -77,24 +78,18 @@ def read_correspondences(correspondences, rules, project_name, daughter_language
                  in outcome_info.text.split(',')],
                 languages,
                 int(rule.attrib.get('stage'))))
+    for quirk in quirks:
+        table.add_quirk(
+            RE.Quirk(quirk.attrib.get('id') or '',
+                     quirk.find('source_id').text or '',
+                     quirk.find('lg').text or '',
+                     quirk.find('lx').text or '',
+                     quirk.find('gl').text or '',
+                     quirk.find('alternative').text or '',
+                     quirk.find('analysis_slot').text or '',
+                     quirk.find('analysis_value').text or '',
+                     [q.text for q in quirk.findall('note') if q]))
     return table
-
-
-# returns a list of quirks
-def read_quirks(xmlfile):
-    tree = ET.parse(xmlfile)
-    return [RE.Quirk(quirk.attrib.get('id'),
-                     quirk.find('source_id').text,
-                     quirk.find('lg').text,
-                     quirk.find('lx').text,
-                     quirk.find('gl').text,
-                     quirk.find('alt').text,
-                     quirk.find('analysis/slot').text,
-                     quirk.find('analysis/value').text,
-                     [q.text for q in quirk.findall('note')]
-                     )
-            for quirk in tree.iterfind('quirk')]
-
 
 def skip_comments(reader):
     for row in reader:

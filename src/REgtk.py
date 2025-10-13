@@ -425,23 +425,57 @@ class SoundClassSheet(ExpandableSheet):
         return {row[0]: [x.strip() for x in row[1].split(',')]
                 for row in self.store}
 
+# given a quirks object, construct a widget that allows users to
+# specify exceptions.
+class QuirksSheet(ExpandableSheet):
+    def __init__(self, quirks, status_bar):
+        store = Gtk.ListStore(*([str, str, str, str, str]))
+        for quirk in quirks.values():
+            store.append([quirk.language,
+                          quirk.form,
+                          quirk.gloss,
+                          quirk.alternative,
+                          quirk.notes[0] if quirk.notes else '']) # HACK.
+        super().__init__(['Language', 'Form', 'Gloss', 'Alternative', 'Notes'],
+                         store, 'Exceptions', lambda: status_bar.add_dirty('exceptions'))
+
+    def fill(self, table):
+        for row in self.store:
+            table.add_quirk(RE.Quirk(
+                '', '', row[0], row[1], row[2], row[3],
+                '', '', [row[4]]))
+
+    def quick_add_quirk(self, language, form, gloss):
+        sheet = self.sheet
+        row = self.store.get_n_columns() * ['']
+        row[0] = language
+        row[1] = form
+        row[2] = gloss
+        sheet.store.append(row)
+        sheet.view.set_cursor(path, columns[0], True)
+        self.set_expanded(True)
+        sheet.on_change()
+
 class ParameterWidget(Gtk.Box):
     def __init__(self, parameters, status_bar):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.correspondence_sheet = CorrespondenceSheet(parameters.table, status_bar)
         self.rule_sheet = RuleSheet(parameters.table, status_bar)
         self.canon_widget = SyllableCanonWidget(parameters.syllable_canon, status_bar)
+        self.quirks_sheet = QuirksSheet(parameters.table.quirks, status_bar)
         self.proto_language_name = parameters.proto_language_name
         self.mels = parameters.mels
         self.add(self.canon_widget)
         self.add(self.correspondence_sheet)
         self.add(self.rule_sheet)
+        self.add(self.quirks_sheet)
 
     def parameters(self):
         names = self.correspondence_sheet.names
         table = RE.TableOfCorrespondences('', names)
         self.correspondence_sheet.fill(table)
         self.rule_sheet.fill(table)
+        self.quirks_sheet.fill(table)
         return RE.Parameters(
             table,
             self.canon_widget.syllable_canon(),
@@ -663,6 +697,13 @@ class SetsWidget(Gtk.Box):
                 for supporting_form in sorted(form.supporting_forms,
                                               key=lambda f: (f.language, f.glyphs)):
                     store_row(row, supporting_form, language)
+            elif isinstance(form, RE.QuirkyForm):
+                if isinstance(form.actual, RE.ModernForm):
+                    row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
+                                                                parent_language,
+                                                                form])
+                else:
+                    raise Exception('Unimplemented: Quirky form for stage0/Meso-form!')
             elif isinstance(form, RE.ModernForm):
                 row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
                                                             parent_language,
@@ -693,6 +734,8 @@ class SetsWidget(Gtk.Box):
                                        last_applied,
                                        parent_language,
                                        form])
+            else:
+                raise Exception('Why is there no form here?')
 
         for form in proto_lexicon.forms:
             store_row(None, form, None)
@@ -766,6 +809,7 @@ class IsolatesWidget(Gtk.Box):
                                        ""])
 
         for (form, recons) in isolates.items():
+            assert isinstance(form, RE.ModernForm)
             row = self.store.append(parent=None, row=[form.language, form.glyphs, form.gloss])
             for recon in recons:
                 store_row(row, recon)
