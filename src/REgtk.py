@@ -147,11 +147,6 @@ def make_labeled_entry(entry, label='Insert text here'):
     box.add(entry)
     return box
 
-def make_expander(widget, label='Insert text here'):
-    expander = Gtk.Expander(label=label)
-    expander.add(widget)
-    return expander
-
 def tab_key_press_handler(view, event):
     if Gdk.keyval_name(event.keyval) == 'Tab':
         path, column = view.get_cursor()
@@ -303,6 +298,19 @@ class Sheet(Gtk.Box):
         self.store.remove(self.store.get_iter(self.view.get_cursor()[0]))
         self.on_change()
 
+    def scroll_to_row_matching(self, predicate):
+        """Scroll to the first row for which predicate(model_row) is True."""
+        treeview = self.view
+        model = treeview.get_model()
+
+        for row in model:
+            if predicate(row):
+                path = model.get_path(row.iter)
+                treeview.scroll_to_cell(path, None, True, 0.5, 0.0)
+                treeview.set_cursor(path)
+                return True
+        return False
+
 class ExpandableSheet(Gtk.Expander):
     def __init__(self, column_names, store, name, on_change=lambda: None):
         super().__init__(label=name)
@@ -310,6 +318,7 @@ class ExpandableSheet(Gtk.Expander):
         self.add(sheet)
         self.store = sheet.store
         sheet.pane.set_vexpand(False)
+        self.sheet = sheet
 
         # we need to manually expand and unexpand the pane to trick layout
         # into working right.
@@ -317,6 +326,10 @@ class ExpandableSheet(Gtk.Expander):
             sheet.pane.set_vexpand(widget.get_expanded())
 
         self.connect('notify::expanded', action)
+
+    def scroll_to_row_matching(self, predicate):
+        self.set_expanded(True)
+        self.sheet.scroll_to_row_matching(predicate)
 
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
@@ -349,6 +362,9 @@ class CorrespondenceSheet(ExpandableSheet):
                     dict(zip(self.names, ([x.strip() for x in token.split(',')]
                                           for token in row[4:])))))
 
+    def scroll_to_correspondence(self, correspondence):
+        return self.scroll_to_row_matching(lambda row: (row[0] == correspondence.id))
+
 class RuleSheet(ExpandableSheet):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, str]))
@@ -372,6 +388,9 @@ class RuleSheet(ExpandableSheet):
                     [x.strip() for x in row[3].split(',')],
                     [x.strip() for x in row[4].split(',')],
                     int(row[5])))
+
+    def scroll_to_rule(self, rule):
+        return self.scroll_to_row_matching(lambda row: (row[0] == rule.id))
 
 # given a sound classes object, construct a widget that allows users
 # to specify a dictionary.
@@ -411,6 +430,12 @@ class ParameterWidget(Gtk.Box):
             self.proto_language_name,
             self.mels)
 
+    def scroll_to(self, obj):
+        if isinstance(obj, RE.Correspondence):
+            self.correspondence_sheet.scroll_to_correspondence(obj)
+        elif isinstance(obj, RE.Rule):
+            self.rule_sheet.scroll_to_rule(obj)
+
 class ParameterTreeWidget(Gtk.Notebook):
     def __init__(self, initial_parameter_tree, status_bar):
         super().__init__()
@@ -423,19 +448,47 @@ class ParameterTreeWidget(Gtk.Notebook):
                 parameter_widget.parameters()
                 for parameter_widget in self}
 
+    def scroll_to(self, language, obj):
+        for i in range(self.get_n_pages()):
+            widget = self.get_nth_page(i)
+            if widget.proto_language_name == language:
+                self.set_current_page(i)
+                widget.scroll_to(obj)
+                break
+
 class SetsWidget(Gtk.Box):
-    def __init__(self):
+    def __init__(self, on_id_clicked=lambda l, id: None):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.window = Pane(vexpand=True)
 
-        self.store = Gtk.TreeStore(str, str, int, str)
+        self.store = Gtk.TreeStore(str, str, int, str, object, object)
         self.view = Gtk.TreeView.new_with_model(self.store)
+        view = self.view
+
+        # ID cell fun.
+        def id_cell_fun(column, cell, model, iter_, data=None):
+            ids = model.get_value(iter_, 4)
+            text = model.get_value(iter_, 1)
+            # highlight children as a link
+            if ids:
+                true_text = text.split()
+                markup = ' '.join(
+                    f'<span font_family="monospace" foreground="blue" underline="single">{c_str}</span>'
+                    for c_str in true_text
+                )
+                cell.set_property("markup", markup)
+            else:
+                cell.set_property("text", text)
+
         for (i, column_name) in enumerate(['Reconstructions', 'IDs', '# attestations', 'mel']):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_name, renderer, text=i)
             column.set_sort_column_id(i)
             column.set_resizable(True)
-            if column_name == '# attestations':
+            column.renderer = renderer
+            if column_name == 'IDs':
+                column.set_cell_data_func(renderer, id_cell_fun)
+            elif column_name == '# attestations':
                 column.set_alignment(1.0)
                 renderer.set_alignment(1.0, 1.0)
                 def render_attestation_count(column, cell, model, iter, data):
@@ -446,6 +499,76 @@ class SetsWidget(Gtk.Box):
         self.window.add(self.view)
         self.add(self.window)
 
+        def on_button_press(view, event):
+            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:  # left click
+                # Convert click coordinates to tree path
+                x = int(event.x)
+                y = int(event.y)
+                pthinfo = view.get_path_at_pos(x, y)
+                if pthinfo is not None:
+                    path, col, cellx, celly = pthinfo
+                    if col.get_title() != "IDs":
+                        return False
+                    model = view.get_model()
+                    iter_ = model.get_iter(path)
+                    text = model.get_value(iter_, 1)
+                    target = model.get_value(iter_, 4)
+                    if target is None:
+                        return False
+
+                    # FIXME: This code is such a giant hack.
+
+                    true_text = text.split()
+                    markup = ' '.join(
+                        f'<span font_family="monospace" foreground="blue" underline="single">{c_str}</span>'
+                        for c_str in true_text
+                    )
+
+                    # Create a Pango layout that understands the markup
+                    layout = view.create_pango_layout("")
+                    layout.set_markup(markup, -1)
+                    total_width, _ = layout.get_pixel_size()
+                    if len(text) == 0:
+                        return False
+                    char_width = total_width / len(text)
+
+                    language = model.get_value(iter_, 5)
+                    cumulative = 0
+                    ids = text.split()
+                    for i, id_str in enumerate(ids):
+                        start = cumulative
+                        end = cumulative + len(id_str) * char_width
+                        if start <= cellx <= end:
+                            print(language, target[i])
+                            on_id_clicked(language, target[i])
+                            break
+                        cumulative = end + char_width  # +1 for the space
+
+                    return True  # stop further handling
+            return False
+
+        # ---------- Cursor change on hover ----------
+        def on_motion_notify(view, event):
+            x = int(event.x)
+            y = int(event.y)
+            pthinfo = view.get_path_at_pos(x, y)
+            window = view.get_window()
+            if pthinfo is not None:
+                path, col, cellx, celly = pthinfo
+                model = view.get_model()
+                iter_ = model.get_iter(path)
+                target = model.get_value(iter_, 4)
+                if col.get_title() == "IDs":
+                    if target is not None:  # child row
+                        window.set_cursor(Gdk.Cursor.new(Gdk.CursorType.HAND2))
+                        return False
+                window.set_cursor(None)  # reset
+            return False
+
+        view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK)
+        view.connect("button-press-event", on_button_press)
+        view.connect("motion-notify-event", on_motion_notify)
+
         # For scroll-to-form support
         self.form_row_map = {}
 
@@ -454,41 +577,52 @@ class SetsWidget(Gtk.Box):
         self.store.clear()
         self.form_row_map.clear()
 
-        def store_row(parent, form):
+        def store_row(parent, form, parent_language):
             if isinstance(form, RE.ProtoForm):
+                language = form.language
                 row = self.store.append(
                     parent=parent,
                     row=['*' + form.glyphs if parent is None else str(form),
-                         RE.correspondences_as_ids(form.correspondences),
+                         ' '.join(RE.correspondences_as_ids(form.correspondences).split()),
                          len(form.attested_support),
-                         str(form.mel)])
+                         str(form.mel),
+                         form.correspondences,
+                         language])
                 # TODO: Sort by the language order in the table of
                 # correspondences.
                 for supporting_form in sorted(form.supporting_forms,
                                               key=lambda f: (f.language, f.glyphs)):
-                    store_row(row, supporting_form)
+                    store_row(row, supporting_form, language)
             elif isinstance(form, RE.ModernForm):
-                row = self.store.append(parent=parent, row=[str(form), '', 0, ''])
+                row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
+                                                            parent_language])
             elif isinstance(form, RE.Stage0Form):
-                row = self.store.append(parent=parent, row=[str(form), '', 0, ''])
+                row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
+                                                            parent_language])
+                last_applied = None
                 ids = None
                 for (stage, rules_applied) in form.history:
-                    if ids:
+                    if last_applied:
                         self.store.append(parent=row,
                                           row=["> *" + stage,
-                                               f" by applying {ids}",
+                                               f"{ids}",
                                                0,
-                                               ""])
-                    ids = ",".join([rule.id for rule in rules_applied])
+                                               "",
+                                               last_applied,
+                                               parent_language])
+                    last_applied = rules_applied
+                    ids = " ".join([rule.id for rule in rules_applied])
                 self.store.append(parent=row,
                                   row=["> " + str(form.modern),
-                                       f" by applying {ids}",
+                                       f"{ids}",
                                        0,
-                                       ""])
+                                       "",
+                                       last_applied,
+                                       parent_language])
             self.form_row_map[form] = row
 
         for form in proto_lexicon.forms:
-            store_row(None, form)
+            store_row(None, form, None)
 
     def scroll_to_form(self, form):
         """Scroll and select the row with the given form."""
@@ -544,12 +678,12 @@ class IsolatesWidget(Gtk.Box):
                     if ids:
                         self.store.append(parent=row,
                                           row=["> *" + stage,
-                                               f" by applying {ids}",
+                                               f"{ids}",
                                                ""])
                     ids = ",".join([rule.id for rule in rules_applied])
                 self.store.append(parent=row,
                                   row=["> " + str(form.modern),
-                                       f" by applying {ids}",
+                                       f"{ids}",
                                        ""])
 
         for (form, recons) in isolates.items():
@@ -864,14 +998,14 @@ class DownstreamWidget(Gtk.Box):
                             default_height=800, default_width=1400)
 
 class DiffWidget(Gtk.Box):
-    def __init__(self, parent):
+    def __init__(self, on_id_clicked=lambda l, id: None):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=6)
 
         paned = Gtk.Paned.new(Gtk.Orientation.HORIZONTAL)
         self.pack_start(paned, True, True, 0)
 
-        self.sets_lost_widget = SetsWidget()
-        self.sets_gained_widget = SetsWidget()
+        self.sets_lost_widget = SetsWidget(on_id_clicked=on_id_clicked)
+        self.sets_gained_widget = SetsWidget(on_id_clicked=on_id_clicked)
 
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         self.left_label = Gtk.Label()
@@ -1044,7 +1178,7 @@ class REWindow(Gtk.Window):
         self.parameters_widget = ParameterTreeWidget(initial_parameter_tree, self.status_bar)
 
         # Output widgets
-        self.sets_widget = SetsWidget()
+        self.sets_widget = SetsWidget(on_id_clicked=self.parameters_widget.scroll_to)
         self.log_widget = LogWidget()
         self.isolates_widget = IsolatesWidget()
         self.failed_parses_widget = FailedParsesWidget()
@@ -1053,7 +1187,7 @@ class REWindow(Gtk.Window):
             [lexicon.language for lexicon in attested_lexicons.values()])
 
         # Diff widgets
-        self.diff_widget = DiffWidget(self)
+        self.diff_widget = DiffWidget(on_id_clicked=self.parameters_widget.scroll_to)
         self.diff_window.add(self.diff_widget)
 
         # Upstream button.
