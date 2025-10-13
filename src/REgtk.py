@@ -461,8 +461,40 @@ class SetsWidget(Gtk.Box):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.window = Pane(vexpand=True)
 
-        self.store = Gtk.TreeStore(str, str, int, str, object, object)
-        self.view = Gtk.TreeView.new_with_model(self.store)
+        self.store = Gtk.TreeStore(str, str, int, str, object, object, object)
+
+        # --- Search bar ---
+        search_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
+        self.pack_start(search_box, False, False, 6)
+
+        self.lang_entry = Gtk.Entry(placeholder_text="Language")
+        self.form_entry = Gtk.Entry(placeholder_text="Form")
+        self.gloss_entry = Gtk.Entry(placeholder_text="Gloss")
+
+        self.clear_button = Gtk.Button(label="Clear")
+
+        search_box.pack_start(self.lang_entry, False, False, 0)
+        search_box.pack_start(self.form_entry, False, False, 0)
+        search_box.pack_start(self.gloss_entry, False, False, 0)
+        search_box.pack_start(self.clear_button, False, False, 0)
+
+        def on_clear_search(button):
+            self.lang_entry.set_text("")
+            self.form_entry.set_text("")
+            self.gloss_entry.set_text("")
+            self.filter.refilter()
+
+        self.clear_button.connect("clicked", on_clear_search)
+
+        self.filter = self.store.filter_new()
+        self.filter.set_visible_func(self._filter_func)
+
+        # Instant filtering
+        self.lang_entry.connect("changed", lambda e: self.filter.refilter())
+        self.form_entry.connect("changed", lambda e: self.filter.refilter())
+        self.gloss_entry.connect("changed", lambda e: self.filter.refilter())
+
+        self.view = Gtk.TreeView.new_with_model(self.filter)
         view = self.view
 
         # ID cell fun.
@@ -572,6 +604,25 @@ class SetsWidget(Gtk.Box):
         # For scroll-to-form support
         self.form_row_map = {}
 
+    def _filter_func(self, model, iter_, data=None):
+        lang_query = self.lang_entry.get_text().strip().lower()
+        form_query = self.form_entry.get_text().strip().lower()
+        gloss_query = self.gloss_entry.get_text().strip().lower()
+
+        # Pull the original form object
+        form = model.get_value(iter_, 6)
+        if isinstance(form, RE.ProtoForm):
+            for support in form.attested_support:
+                if ((lang_query == '' or (lang_query in support.language.lower()))
+                    and
+                    (form_query == '' or (form_query in support.glyphs.lower()))
+                    and
+                    (gloss_query == '' or (gloss_query in support.gloss.lower()))):
+                    return True
+            return False
+
+        return True
+
     def populate(self, proto_lexicon):
         """Populate this store with forms."""
         self.store.clear()
@@ -587,7 +638,8 @@ class SetsWidget(Gtk.Box):
                          len(form.attested_support),
                          str(form.mel),
                          form.correspondences,
-                         language])
+                         language,
+                         form])
                 # TODO: Sort by the language order in the table of
                 # correspondences.
                 for supporting_form in sorted(form.supporting_forms,
@@ -595,10 +647,12 @@ class SetsWidget(Gtk.Box):
                     store_row(row, supporting_form, language)
             elif isinstance(form, RE.ModernForm):
                 row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
-                                                            parent_language])
+                                                            parent_language,
+                                                            form])
             elif isinstance(form, RE.Stage0Form):
                 row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
-                                                            parent_language])
+                                                            parent_language,
+                                                            form])
                 last_applied = None
                 ids = None
                 for (stage, rules_applied) in form.history:
@@ -609,7 +663,8 @@ class SetsWidget(Gtk.Box):
                                                0,
                                                "",
                                                last_applied,
-                                               parent_language])
+                                               parent_language,
+                                               form])
                     last_applied = rules_applied
                     ids = " ".join([rule.id for rule in rules_applied])
                 self.store.append(parent=row,
@@ -618,7 +673,8 @@ class SetsWidget(Gtk.Box):
                                        0,
                                        "",
                                        last_applied,
-                                       parent_language])
+                                       parent_language,
+                                       form])
             self.form_row_map[form] = row
 
         for form in proto_lexicon.forms:
