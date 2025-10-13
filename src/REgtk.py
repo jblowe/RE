@@ -914,10 +914,20 @@ class CorrespondenceIndexWidget(Gtk.Box):
         self.filter.refilter()
         self.update_visible_counts()
 
+    # Show a brief summary of the correspondence.
+    def display_correspondence(self, c):
+        context = RE.context_as_string(c.context)
+        if context != '':
+            context = f'/ {context}'
+        return f'{c.id}: ({", ".join(c.syllable_types)}) *{c.proto_form} {context}'
+
     def populate(self, correspondence_index):
         self.store.clear()
         for (correspondence, forms) in correspondence_index.items():
-            row = self.store.append(parent=None, row=[str(correspondence), len(forms), None])
+            row = self.store.append(parent=None,
+                                    row=[self.display_correspondence(correspondence),
+                                         len(forms),
+                                         None])
             for form in forms:
                 self.store.append(parent=row, row=[str(form), None, form])
         self.update_visible_counts()
