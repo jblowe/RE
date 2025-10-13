@@ -228,7 +228,7 @@ class LexiconWidget(Pane):
             self.store.append([form.glyphs, form.gloss, form.id])
         view = Gtk.TreeView.new_with_model(self.store)
 
-        view.set_search_equal_func(self._search_func, None)
+        view.set_search_equal_func(all_columns_search_func, None)
         view.set_search_column(0)
 
         for i, column_title in enumerate(['Form', 'Gloss']):
@@ -246,15 +246,6 @@ class LexiconWidget(Pane):
                            for row in self.store],
                           None)
 
-    def _search_func(self, model, column, key, iter_, data):
-        key = key.lower()
-        # check multiple columns for matches
-        values = [
-            model.get_value(iter_, 0),  # Form
-            model.get_value(iter_, 1),  # Gloss
-        ]
-        return not any(key in (v or "").lower() for v in values)
-
 class LexiconsWidget(Gtk.Notebook):
     def __init__(self, lexicons):
         super().__init__()
@@ -267,12 +258,20 @@ class LexiconsWidget(Gtk.Notebook):
                 lexicon_widget.lexicon()
                 for lexicon_widget in self}
 
+
+# A search function that searches over all columns for matches.
+def all_columns_search_func(model, column, key, iter_, data):
+    key = key.lower()
+    values = [model.get_value(iter_, i)
+              for i in range(model.get_n_columns())]
+    return not any(key in (str(v) or "").lower() for v in values)
+
 # A sheet is an editable spreadsheet which has Add and Delete buttons
 # to add or remove rows.
 class Sheet(Gtk.Box):
     def __init__(self, column_names, store, name,
                  on_change: lambda: None,
-                 search_func = lambda: None):
+                 search_func=all_columns_search_func):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         view = Gtk.TreeView.new_with_model(store)
         view.set_search_equal_func(search_func, None)
@@ -726,6 +725,10 @@ class IsolatesWidget(Gtk.Box):
         self.store = Gtk.TreeStore(str, str, str)
 
         view = Gtk.TreeView.new_with_model(self.store)
+
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
+
         for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
@@ -771,6 +774,10 @@ class FailedParsesWidget(Pane):
         self.store = Gtk.ListStore(str, str, str)
 
         view = Gtk.TreeView.new_with_model(self.store)
+
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
+
         for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
@@ -800,6 +807,9 @@ class CorrespondenceIndexWidget(Gtk.Box):
                                       lambda: self.apply_filter())
         self.sorted = Gtk.TreeModelSort(model=self.filter)
         view = Gtk.TreeView.new_with_model(self.sorted)
+
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
 
         # Cell renderers
         def correspondence_cell_fun(column, cell, model, iter_, data=None):
@@ -1128,22 +1138,12 @@ class LexiconEditorWindow(Gtk.Window):
             # Create a Sheet with the *same* shared store.
             sheet = Sheet(["Form", "Gloss"], orig_page.store,
                           name=orig_page.language,
-                          on_change=lambda: status_bar.add_dirty('lexicons'),
-                          search_func=self._search_func)
+                          on_change=lambda: status_bar.add_dirty('lexicons'))
             scrolled = Gtk.ScrolledWindow()
             scrolled.add(sheet)
             shared_notebook.append_page(scrolled, Gtk.Label(label=orig_page.language))
 
         self.show_all()
-
-    def _search_func(self, model, column, key, iter_, data):
-        key = key.lower()
-        # check multiple columns for matches
-        values = [
-            model.get_value(iter_, 0),  # Form
-            model.get_value(iter_, 1),  # Gloss
-        ]
-        return not any(key in (v or "").lower() for v in values)
 
 class REWindow(Gtk.Window):
 
