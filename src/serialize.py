@@ -387,6 +387,43 @@ def serialize_mels(mel_sets, mel_name, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
+
+def serialize_quirks(quirks, filename):
+    '''
+    <quirks>
+        <quirk id="99">
+          <sourceid>gha.99</sourceid>
+          <lg>gha</lg>
+          <lx>4straw</lx>
+          <alt>3strum</alt>
+          <analysis><slot>T</slot><value>3</value></analysis>
+          <gl>gloss (optional)</gl>
+          <note>note (optional)</note>
+          <note>note(s) (repeatable)</note>
+        </quirk>
+    </quirks>
+    :param quirks:
+    :param filename:
+    :return:
+    '''
+    root = ET.Element('quirks')
+    ET.SubElement(root, 'createdat').text = run_date
+
+    for (number, quirk) in enumerate(list(quirks)):
+        entry = ET.SubElement(root, 'quirk', attrib={'id': f'x{str(number + 1)}'})
+        ET.SubElement(entry, 'source_id').text = quirk.source_id
+        ET.SubElement(entry, 'lg').text = quirk.language
+        ET.SubElement(entry, 'lx').text = quirk.form
+        ET.SubElement(entry, 'gl').text = quirk.gloss
+        ET.SubElement(entry, 'alternative').text = quirk.alternative
+        ET.SubElement(entry, 'slot').text = quirk.slot
+        ET.SubElement(entry, 'value').text = quirk.value
+        for note in list(quirk.notes):
+            ET.SubElement(entry, 'note').text = note
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
+
 def serialize_proto_lexicon(proto_lexicon, filename):
     with open(filename, 'wb') as f:
         pickle.dump(proto_lexicon, f)

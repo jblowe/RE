@@ -77,6 +77,26 @@ class Lexicon:
         return (self.language == other.language and
                 set(self.forms) == set(other.forms))
 
+
+# a 'quirk' is the internal name by which we refer to 'exceptions'
+# to avoid collisions, code or conceptual, with python components
+# it is an distinct object in which the user can store info about
+# exceptions to regular reconstruction for which a story can be told.
+class Quirk:
+    def __init__(self, id, source_id, language, form, gloss, alternative, slot, value, notes):
+        self.id = id
+        self.source_id = source_id
+        self.language = language
+        self.form = form
+        self.gloss = gloss
+        self.alternative = alternative
+        self.slot = slot
+        self.value = value
+        self.notes = notes
+
+    def __repr__(self):
+        return f'<Quirk({self.id}, {self.source_id}, {self.language}, {self.form}, {self.gloss}, {self.alternative}, {self.slot}, {self.value}, {" ".join(self.notes)})>'
+
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
