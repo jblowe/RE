@@ -482,6 +482,8 @@ class SetsWidget(Gtk.Box):
 
         # --- Search bar ---
         search_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
+        label = Gtk.Label(label="Filter by attested:")
+        label.set_halign(Gtk.Align.START)
         self.pack_start(search_box, False, False, 6)
 
         self.lang_entry = Gtk.Entry(placeholder_text="Language")
@@ -490,6 +492,7 @@ class SetsWidget(Gtk.Box):
 
         self.clear_button = Gtk.Button(label="Clear")
 
+        search_box.pack_start(label, False, False, 0)
         search_box.pack_start(self.lang_entry, False, False, 0)
         search_box.pack_start(self.form_entry, False, False, 0)
         search_box.pack_start(self.gloss_entry, False, False, 0)
