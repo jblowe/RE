@@ -52,9 +52,8 @@ class ProjectManagerDialog(Gtk.Dialog):
         self.recon_combo = Gtk.ComboBoxText()
         controls.pack_start(make_labeled_entry(self.recon_combo, 'recon:'), False, False, 0)
 
-        self.fuzzy_check = Gtk.CheckButton(label='fuzzy')
-        self.fuzzy_check.set_active(False)
-        controls.pack_start(self.fuzzy_check, False, False, 0)
+        self.fuzzy_combo = Gtk.ComboBoxText()
+        controls.pack_start(make_labeled_entry(self.fuzzy_combo, 'fuzzy:'), False, False, 0)
 
         vbox.pack_start(controls, False, False, 0)
 
@@ -81,24 +80,30 @@ class ProjectManagerDialog(Gtk.Dialog):
                                        f'{project}.master.parameters.xml')
         self.mel_combo.remove_all()
         self.recon_combo.remove_all()
+        self.fuzzy_combo.remove_all()
         try:
             recons = []
             mels = ['None']
+            fuzzies = ['None']
             for setting in ET.parse(parameters_file).getroot():
                 match setting.tag:
                     case 'reconstruction':
                         recons.append(setting.attrib['name'])
                     case 'mel':
                         mels.append(setting.attrib['name'])
+                    case 'fuzzy':
+                        fuzzies.append(setting.attrib['name'])
             for mel in mels:
                 self.mel_combo.append_text(mel)
             for recon in recons:
                 self.recon_combo.append_text(recon)
+            for fuzzy in fuzzies:
+                self.fuzzy_combo.append_text(fuzzy)
             if mels:
                 self.mel_combo.set_active(0)
             self.recon_combo.set_active(0)
         except Exception as e:
-            print("Could not parse mel/recon options from", project_file, e)
+            print("Could not parse mel/recon/fuzzy options from", project_file, e)
 
 
     def get_selected(self):
@@ -110,7 +115,7 @@ class ProjectManagerDialog(Gtk.Dialog):
         # read controls
         mel = self.mel_combo.get_active_text()
         recon = self.recon_combo.get_active_text()
-        fuzzy = self.fuzzy_check.get_active()
+        fuzzy = self.fuzzy_combo.get_active_text()
         return {
             'project': project,
             'mel': mel,
