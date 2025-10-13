@@ -77,6 +77,15 @@ class Lexicon:
         return (self.language == other.language and
                 set(self.forms) == set(other.forms))
 
+    # Given a lexicon and a set of quirks, return a list of forms
+    # marked to use the exceptional form for parsing.
+    def quirky_forms(self, quirks):
+         quirky_forms = []
+         for form in self.forms:
+             quirk = quirks.get((form.language, form.glyphs, form.gloss))
+             if quirk:
+                 quirky_forms.append(QuirkyForm(quirk.alternative, form))
+         return quirky_forms
 
 # a 'quirk' is the internal name by which we refer to 'exceptions'
 # to avoid collisions, code or conceptual, with python components
@@ -141,6 +150,8 @@ class TableOfCorrespondences:
     def __init__(self, family_name, daughter_languages):
         self.correspondences = []
         self.rules = []
+        # Quirk objects are keyed by (language, glyphs, gloss)
+        self.quirks = dict()
         self.family_name = family_name
         self.daughter_languages = daughter_languages
 
@@ -149,6 +160,9 @@ class TableOfCorrespondences:
 
     def add_rule(self, rule):
         self.rules.append(rule)
+
+    def add_quirk(self, quirk):
+        self.quirks[(quirk.language, quirk.form, quirk.gloss)] = quirk
 
     def rule_view(self):
         # make a rule view of the form
@@ -170,7 +184,7 @@ class TableOfCorrespondences:
                 for outcome, langs in outcomes(c).items()]
 
 class Parameters:
-    def __init__(self, table, syllable_canon, proto_language_name, mels):
+    def __init__(self, table, syllable_canon, proto_language_name, mels, quirks={}):
         self.table = table
         self.syllable_canon = syllable_canon
         self.proto_language_name = proto_language_name
@@ -233,6 +247,18 @@ class ProtoForm(Form):
 
     def __str__(self):
         return f'{self.language} *{self.glyphs} = {correspondences_as_ids(self.correspondences)} {syllable_structure(self.correspondences)}'
+
+# A quirky form is a form we expect with a given hypothesis but for
+# one reason or the other is not what is actually observed.
+class QuirkyForm(Form):
+    def __init__(self, glyphs, actual):
+        self.language = actual.language
+        self.glyphs = glyphs
+        self.actual = actual
+        self.attested_support = frozenset([actual])
+
+    def __str__(self):
+        return f'!! {str(actual)} (expected ‡{self.glyphs})'
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
@@ -574,7 +600,8 @@ def project_back(lexicons, parameters, statistics):
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map)
         apply_rules = make_apply_rules(parameters, lexicon.language)
-        for form in lexicon.forms:
+        quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
+        for form in lexicon.forms + quirky_forms:
             if form.glyphs == '':
                 continue
             statistics.add_debug_note(f'!Parsing {form}...')
