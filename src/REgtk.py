@@ -227,6 +227,10 @@ class LexiconWidget(Pane):
         for form in lexicon.forms:
             self.store.append([form.glyphs, form.gloss, form.id])
         view = Gtk.TreeView.new_with_model(self.store)
+
+        view.set_search_equal_func(self._search_func, None)
+        view.set_search_column(0)
+
         for i, column_title in enumerate(['Form', 'Gloss']):
             cell = Gtk.CellRendererText()
             cell.set_property('editable', True)
@@ -241,6 +245,15 @@ class LexiconWidget(Pane):
                           [RE.ModernForm(language, row[0], row[1], row[2])
                            for row in self.store],
                           None)
+
+    def _search_func(self, model, column, key, iter_, data):
+        key = key.lower()
+        # check multiple columns for matches
+        values = [
+            model.get_value(iter_, 0),  # Form
+            model.get_value(iter_, 1),  # Gloss
+        ]
+        return not any(key in (v or "").lower() for v in values)
 
 class LexiconsWidget(Gtk.Notebook):
     def __init__(self, lexicons):
@@ -257,9 +270,13 @@ class LexiconsWidget(Gtk.Notebook):
 # A sheet is an editable spreadsheet which has Add and Delete buttons
 # to add or remove rows.
 class Sheet(Gtk.Box):
-    def __init__(self, column_names, store, name, on_change: lambda: None):
+    def __init__(self, column_names, store, name,
+                 on_change: lambda: None,
+                 search_func = lambda: None):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         view = Gtk.TreeView.new_with_model(store)
+        view.set_search_equal_func(search_func, None)
+        view.set_search_column(0)
         self.on_change = on_change
         def store_edit_text(i):
             def f(widget, path, text):
@@ -1110,12 +1127,22 @@ class LexiconEditorWindow(Gtk.Window):
             # Create a Sheet with the *same* shared store.
             sheet = Sheet(["Form", "Gloss"], orig_page.store,
                           name=orig_page.language,
-                          on_change=lambda: status_bar.add_dirty('lexicons'))
+                          on_change=lambda: status_bar.add_dirty('lexicons'),
+                          search_func=self._search_func)
             scrolled = Gtk.ScrolledWindow()
             scrolled.add(sheet)
             shared_notebook.append_page(scrolled, Gtk.Label(label=orig_page.language))
 
         self.show_all()
+
+    def _search_func(self, model, column, key, iter_, data):
+        key = key.lower()
+        # check multiple columns for matches
+        values = [
+            model.get_value(iter_, 0),  # Form
+            model.get_value(iter_, 1),  # Gloss
+        ]
+        return not any(key in (v or "").lower() for v in values)
 
 class REWindow(Gtk.Window):
 
