@@ -228,7 +228,7 @@ class LexiconWidget(Pane):
             self.store.append([form.glyphs, form.gloss, form.id])
         view = Gtk.TreeView.new_with_model(self.store)
 
-        view.set_search_equal_func(self._search_func, None)
+        view.set_search_equal_func(all_columns_search_func, None)
         view.set_search_column(0)
 
         for i, column_title in enumerate(['Form', 'Gloss']):
@@ -246,15 +246,6 @@ class LexiconWidget(Pane):
                            for row in self.store],
                           None)
 
-    def _search_func(self, model, column, key, iter_, data):
-        key = key.lower()
-        # check multiple columns for matches
-        values = [
-            model.get_value(iter_, 0),  # Form
-            model.get_value(iter_, 1),  # Gloss
-        ]
-        return not any(key in (v or "").lower() for v in values)
-
 class LexiconsWidget(Gtk.Notebook):
     def __init__(self, lexicons):
         super().__init__()
@@ -267,12 +258,20 @@ class LexiconsWidget(Gtk.Notebook):
                 lexicon_widget.lexicon()
                 for lexicon_widget in self}
 
+
+# A search function that searches over all columns for matches.
+def all_columns_search_func(model, column, key, iter_, data):
+    key = key.lower()
+    values = [model.get_value(iter_, i)
+              for i in range(model.get_n_columns())]
+    return not any(key in (str(v) or "").lower() for v in values)
+
 # A sheet is an editable spreadsheet which has Add and Delete buttons
 # to add or remove rows.
 class Sheet(Gtk.Box):
     def __init__(self, column_names, store, name,
                  on_change: lambda: None,
-                 search_func = lambda: None):
+                 search_func=all_columns_search_func):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         view = Gtk.TreeView.new_with_model(store)
         view.set_search_equal_func(search_func, None)
@@ -508,13 +507,14 @@ class SetsWidget(Gtk.Box):
 
         self.filter = self.store.filter_new()
         self.filter.set_visible_func(self._filter_func)
+        self.sorted = Gtk.TreeModelSort(model=self.filter)
 
         # Instant filtering
         self.lang_entry.connect("changed", lambda e: self.filter.refilter())
         self.form_entry.connect("changed", lambda e: self.filter.refilter())
         self.gloss_entry.connect("changed", lambda e: self.filter.refilter())
 
-        self.view = Gtk.TreeView.new_with_model(self.filter)
+        self.view = Gtk.TreeView.new_with_model(self.sorted)
         view = self.view
 
         # ID cell fun.
@@ -621,9 +621,6 @@ class SetsWidget(Gtk.Box):
         view.connect("button-press-event", on_button_press)
         view.connect("motion-notify-event", on_motion_notify)
 
-        # For scroll-to-form support
-        self.form_row_map = {}
-
     def _filter_func(self, model, iter_, data=None):
         lang_query = self.lang_entry.get_text().strip().lower()
         form_query = self.form_entry.get_text().strip().lower()
@@ -646,7 +643,6 @@ class SetsWidget(Gtk.Box):
     def populate(self, proto_lexicon):
         """Populate this store with forms."""
         self.store.clear()
-        self.form_row_map.clear()
 
         def store_row(parent, form, parent_language):
             if isinstance(form, RE.ProtoForm):
@@ -695,20 +691,21 @@ class SetsWidget(Gtk.Box):
                                        last_applied,
                                        parent_language,
                                        form])
-            self.form_row_map[form] = row
 
         for form in proto_lexicon.forms:
             store_row(None, form, None)
 
     def scroll_to_form(self, form):
         """Scroll and select the row with the given form."""
-        iter_ = self.form_row_map.get(form)
-        if iter_:
-            path = self.view.get_model().get_path(iter_)
-            self.view.expand_to_path(path)
-            self.view.scroll_to_cell(path, None, True, 0.5, 0.0)
-            self.view.set_cursor(path)
-            return True
+        treeview = self.view
+        model = treeview.get_model()
+
+        for row in model:
+            if row[6] == form:
+                path = model.get_path(row.iter)
+                treeview.scroll_to_cell(path, None, True, 0.5, 0.0)
+                treeview.set_cursor(path)
+                return True
         return False
 
 class LogWidget(Pane):
@@ -728,6 +725,10 @@ class IsolatesWidget(Gtk.Box):
         self.store = Gtk.TreeStore(str, str, str)
 
         view = Gtk.TreeView.new_with_model(self.store)
+
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
+
         for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
@@ -773,6 +774,10 @@ class FailedParsesWidget(Pane):
         self.store = Gtk.ListStore(str, str, str)
 
         view = Gtk.TreeView.new_with_model(self.store)
+
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
+
         for i, column_title in enumerate(['Language', 'Form', 'Gloss']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
@@ -802,6 +807,9 @@ class CorrespondenceIndexWidget(Gtk.Box):
                                       lambda: self.apply_filter())
         self.sorted = Gtk.TreeModelSort(model=self.filter)
         view = Gtk.TreeView.new_with_model(self.sorted)
+
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
 
         # Cell renderers
         def correspondence_cell_fun(column, cell, model, iter_, data=None):
@@ -906,10 +914,20 @@ class CorrespondenceIndexWidget(Gtk.Box):
         self.filter.refilter()
         self.update_visible_counts()
 
+    # Show a brief summary of the correspondence.
+    def display_correspondence(self, c):
+        context = RE.context_as_string(c.context)
+        if context != '':
+            context = f'/ {context}'
+        return f'{c.id}: ({", ".join(c.syllable_types)}) *{c.proto_form} {context}'
+
     def populate(self, correspondence_index):
         self.store.clear()
         for (correspondence, forms) in correspondence_index.items():
-            row = self.store.append(parent=None, row=[str(correspondence), len(forms), None])
+            row = self.store.append(parent=None,
+                                    row=[self.display_correspondence(correspondence),
+                                         len(forms),
+                                         None])
             for form in forms:
                 self.store.append(parent=row, row=[str(form), None, form])
         self.update_visible_counts()
@@ -1130,22 +1148,12 @@ class LexiconEditorWindow(Gtk.Window):
             # Create a Sheet with the *same* shared store.
             sheet = Sheet(["Form", "Gloss"], orig_page.store,
                           name=orig_page.language,
-                          on_change=lambda: status_bar.add_dirty('lexicons'),
-                          search_func=self._search_func)
+                          on_change=lambda: status_bar.add_dirty('lexicons'))
             scrolled = Gtk.ScrolledWindow()
             scrolled.add(sheet)
             shared_notebook.append_page(scrolled, Gtk.Label(label=orig_page.language))
 
         self.show_all()
-
-    def _search_func(self, model, column, key, iter_, data):
-        key = key.lower()
-        # check multiple columns for matches
-        values = [
-            model.get_value(iter_, 0),  # Form
-            model.get_value(iter_, 1),  # Gloss
-        ]
-        return not any(key in (v or "").lower() for v in values)
 
 class REWindow(Gtk.Window):
 
