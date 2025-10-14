@@ -436,13 +436,17 @@ class DisableableRowsMixin:
             enable_all_button.set_sensitive(any_disabled)
             disable_all_button.set_sensitive(any_enabled)
 
+        def on_row_inserted(store, path, iter_):
+            store.set_value(iter_, self.enabled_index, True)
+            update_bulk_buttons(store, path, iter_)
+
         # Track selection changes
         selection = view.get_selection()
         selection.connect("changed", on_selection_changed)
 
         # Track changes in the model
         store.connect("row-changed", update_bulk_buttons)
-        store.connect("row-inserted", update_bulk_buttons)
+        store.connect("row-inserted", on_row_inserted)
         store.connect("row-deleted", update_bulk_buttons)
 
         toggle_row_button = make_clickable_button("Disable Row", toggle_selected_row)
