@@ -622,6 +622,7 @@ class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
         row[0] = language
         row[1] = form
         row[2] = gloss
+        row[self.enabled_index] = True
         sheet.store.append(row)
         path = sheet.view.get_model().get_path(sheet.store[-1].iter)
         sheet.view.set_cursor(path)
