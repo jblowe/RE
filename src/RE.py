@@ -255,6 +255,7 @@ class QuirkyForm(Form):
         self.language = actual.language
         self.glyphs = glyphs
         self.actual = actual
+        self.gloss = actual.gloss
         self.attested_support = frozenset([actual])
 
     def __str__(self):

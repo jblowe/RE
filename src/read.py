@@ -88,7 +88,7 @@ def read_correspondences(correspondences, rules, quirks, project_name, daughter_
                      quirk.find('alternative').text or '',
                      quirk.find('analysis_slot').text or '',
                      quirk.find('analysis_value').text or '',
-                     [q.text for q in quirk.findall('note') if q]))
+                     [q.text for q in quirk.findall('note')]))
     return table
 
 def skip_comments(reader):

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <tableOfCorr>
-   <createdat>2025-09-01 00:49:00 UTC</createdat>
+   <createdat>2025-10-14 10:34:41 UTC</createdat>
    <parameters>
       <class name="V" value="a,e,ě,ę,ę̄,i,ĭ,o,ǫ,ǭ,u,ŭ,y"/>
       <class name="F" value="ĭ,i,e,ě,ę,ę̄"/>
@@ -1318,4 +1318,14 @@
       <input>o</input>
       <outcome languages="cz">uo</outcome>
    </rule>
+   <quirk id="x1">
+      <source_id/>
+      <lg>rus</lg>
+      <lx>kryló</lx>
+      <gl>wing</gl>
+      <alternative>kriló</alternative>
+      <analysis_slot/>
+      <analysis_value/>
+      <note>Exceptionally shows y instead of i probably due to contamination from kryti 'to cover'.</note>
+   </quirk>
 </tableOfCorr>

@@ -450,14 +450,23 @@ class QuirksSheet(ExpandableSheet):
                 '', '', row[0], row[1], row[2], row[3],
                 '', '', [row[4]]))
 
-    def quick_add_quirk(self, language, form, gloss):
+    def ensure_quirk(self, language, form, gloss):
         sheet = self.sheet
+        for row in sheet.store: # look for quirk first.
+            if (row[0] == language and
+                row[1] == form and
+                row[2] == gloss):
+                path = sheet.view.get_model().get_path(row.iter)
+                sheet.view.set_cursor(path)
+                self.set_expanded(True)
+                return
         row = self.store.get_n_columns() * ['']
         row[0] = language
         row[1] = form
         row[2] = gloss
         sheet.store.append(row)
-        sheet.view.set_cursor(path, columns[0], True)
+        path = sheet.view.get_model().get_path(sheet.store[-1].iter)
+        sheet.view.set_cursor(path)
         self.set_expanded(True)
         sheet.on_change()
 
@@ -493,6 +502,11 @@ class ParameterWidget(Gtk.Box):
         elif isinstance(obj, RE.Rule):
             self.rule_sheet.scroll_to_rule(obj)
 
+    def ensure_quirk(self, form):
+        if isinstance(form, RE.QuirkyForm):
+            form = form.actual
+        self.quirks_sheet.ensure_quirk(form.language, form.glyphs, form.gloss)
+
 class ParameterTreeWidget(Gtk.Notebook):
     def __init__(self, initial_parameter_tree, status_bar):
         super().__init__()
@@ -513,8 +527,18 @@ class ParameterTreeWidget(Gtk.Notebook):
                 widget.scroll_to(obj)
                 break
 
+    def ensure_quirk(self, language, form):
+        for i in range(self.get_n_pages()):
+            widget = self.get_nth_page(i)
+            if widget.proto_language_name == language:
+                self.set_current_page(i)
+                widget.ensure_quirk(form)
+                break
+
 class SetsWidget(Gtk.Box):
-    def __init__(self, on_id_clicked=lambda l, id: None):
+    def __init__(self,
+                 on_id_clicked=lambda l, id: None,
+                 ensure_quirk_callback=lambda m, l, form: None):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.window = Pane(vexpand=True)
 
@@ -592,8 +616,41 @@ class SetsWidget(Gtk.Box):
         self.window.add(self.view)
         self.add(self.window)
 
+        def on_right_button_press(view, event):
+            # Find which row was clicked
+            path_info = view.get_path_at_pos(int(event.x), int(event.y))
+            if path_info is not None:
+                path, col, cellx, celly = path_info
+                view.grab_focus()
+                view.set_cursor(path, col, 0)
+
+                # Get the iter & model
+                model = view.get_model()
+                iter_ = model.get_iter(path)
+                parent_language = model.get_value(iter_, 5)
+                form = model.get_value(iter_, 6)
+
+                # Build the popup menu dynamically
+                menu = Gtk.Menu()
+
+                item_inspect = Gtk.MenuItem(label="Make new/find existing exception.")
+                item_inspect.connect("activate",
+                                     lambda m, form: ensure_quirk_callback(
+                                         parent_language, form),
+                                     form)
+                menu.append(item_inspect)
+
+                menu.show_all()
+                menu.popup_at_pointer(event)
+                return True  # stop other handlers
+            return False
+
         def on_button_press(view, event):
-            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:  # left click
+            # Right click
+            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 3:
+                return on_right_button_press(view, event)
+            # Left click
+            elif event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:
                 # Convert click coordinates to tree path
                 x = int(event.x)
                 y = int(event.y)
@@ -1143,14 +1200,17 @@ class DownstreamWidget(Gtk.Box):
                             default_height=800, default_width=1400)
 
 class DiffWidget(Gtk.Box):
-    def __init__(self, on_id_clicked=lambda l, id: None):
+    def __init__(self, on_id_clicked=lambda l, id: None,
+                 ensure_quirk_callback=lambda m, id: None):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=6)
 
         paned = Gtk.Paned.new(Gtk.Orientation.HORIZONTAL)
         self.pack_start(paned, True, True, 0)
 
-        self.sets_lost_widget = SetsWidget(on_id_clicked=on_id_clicked)
-        self.sets_gained_widget = SetsWidget(on_id_clicked=on_id_clicked)
+        self.sets_lost_widget = SetsWidget(on_id_clicked=on_id_clicked,
+                                           ensure_quirk_callback=ensure_quirk_callback)
+        self.sets_gained_widget = SetsWidget(on_id_clicked=on_id_clicked,
+                                             ensure_quirk_callback=ensure_quirk_callback)
 
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         self.left_label = Gtk.Label()
@@ -1323,7 +1383,8 @@ class REWindow(Gtk.Window):
         self.parameters_widget = ParameterTreeWidget(initial_parameter_tree, self.status_bar)
 
         # Output widgets
-        self.sets_widget = SetsWidget(on_id_clicked=self.parameters_widget.scroll_to)
+        self.sets_widget = SetsWidget(on_id_clicked=self.parameters_widget.scroll_to,
+                                      ensure_quirk_callback=self.parameters_widget.ensure_quirk)
         self.log_widget = LogWidget()
         self.isolates_widget = IsolatesWidget()
         self.failed_parses_widget = FailedParsesWidget()
