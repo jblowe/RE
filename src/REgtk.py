@@ -300,12 +300,14 @@ class Sheet(Gtk.Box):
             view.append_column(column)
         pane = Pane(vexpand=True)
         pane.add(view)
-
-        buttons_box = Gtk.Box(spacing=0)
-        buttons_box.add(make_clickable_button('Add', self.add_button_clicked))
-        buttons_box.add(make_clickable_button('Delete', self.delete_button_clicked))
+        self.buttons_box = Gtk.Box(spacing=0)
+        self.buttons_box.add(make_clickable_button('Add', self.add_button_clicked))
+        self.buttons_box.add(make_clickable_button('Delete', self.delete_button_clicked))
         self.add(pane)
-        self.add(buttons_box)
+        hscroll = Gtk.ScrolledWindow(hscrollbar_policy=Gtk.PolicyType.AUTOMATIC,
+                             vscrollbar_policy=Gtk.PolicyType.NEVER)
+        hscroll.add(self.buttons_box)
+        self.add(hscroll)
         self.store = store
         self.view = view
         self.pane = pane
@@ -355,9 +357,11 @@ class ExpandableSheet(Gtk.Expander):
         self.sheet.scroll_to_row_matching(predicate)
 
 class DisableableRowsMixin:
-    def setup_disableable_rows(self, view, enabled_index):
+    def setup_disableable_rows(self, sheet, enabled_index):
         """Attach the context menu and styling behavior to the given TreeView."""
         self.enabled_index = enabled_index
+        view = sheet.view
+        store = sheet.store
 
         # Attach cell data functions
         for i, column in enumerate(view.get_columns()):
@@ -392,6 +396,63 @@ class DisableableRowsMixin:
                 return True
             return False
 
+        def toggle_selected_row(_widget):
+            """Enable or disable the currently selected row."""
+            selection = self.sheet.view.get_selection()
+            model, iter_ = selection.get_selected()
+            if iter_ is None:
+                return
+            enabled = model.get_value(iter_, self.enabled_index)
+            model.set_value(iter_, self.enabled_index, not enabled)
+            self.sheet.view.queue_draw()
+            toggle_row_button.set_label("Disable Row" if not enabled else "Enable Row")
+            update_bulk_buttons()
+
+        def on_selection_changed(selection):
+            """Update the toggle button label when the selected row changes."""
+            model, iter_ = selection.get_selected()
+            if iter_ is None:
+                toggle_row_button.set_label("Toggle Row")
+                toggle_row_button.set_sensitive(False)
+                return
+            enabled = model.get_value(iter_, self.enabled_index)
+            toggle_row_button.set_sensitive(True)
+            toggle_row_button.set_label("Disable Row" if enabled else "Enable Row")
+
+        def enable_all_rows(_widget):
+            for row in self.sheet.store:
+                row[self.enabled_index] = True
+            self.sheet.view.queue_draw()
+
+        def disable_all_rows(_widget):
+            for row in self.sheet.store:
+                row[self.enabled_index] = False
+            self.sheet.view.queue_draw()
+
+        def update_bulk_buttons(*args):
+            """Update the enable/disable all buttons to reflect table state."""
+            any_disabled = any(not row[self.enabled_index] for row in self.sheet.store)
+            any_enabled = any(row[self.enabled_index] for row in self.sheet.store)
+            enable_all_button.set_sensitive(any_disabled)
+            disable_all_button.set_sensitive(any_enabled)
+
+        # Track selection changes
+        selection = view.get_selection()
+        selection.connect("changed", on_selection_changed)
+
+        # Track changes in the model
+        store.connect("row-changed", update_bulk_buttons)
+        store.connect("row-inserted", update_bulk_buttons)
+        store.connect("row-deleted", update_bulk_buttons)
+
+        toggle_row_button = make_clickable_button("Disable Row", toggle_selected_row)
+        enable_all_button = make_clickable_button("Enable All", enable_all_rows)
+        disable_all_button = make_clickable_button("Disable All", disable_all_rows)
+
+        sheet.buttons_box.add(toggle_row_button)
+        sheet.buttons_box.add(enable_all_button)
+        sheet.buttons_box.add(disable_all_button)
+
         view.connect("button-press-event", on_right_click)
 
     def _style_row(self, column, cell, model, iter_, col_index):
@@ -410,6 +471,17 @@ class DisableableRowsMixin:
             cell.set_property("foreground", None)
             cell.set_property("style", Pango.Style.NORMAL)
             cell.set_property("cell-background", None)
+
+    def _set_all_rows(self, enabled):
+        """Set all rows to the given enabled/disabled state."""
+        model = self.view.get_model()
+        if model is None:
+            return
+        iter_ = model.get_iter_first()
+        while iter_:
+            model.set_value(iter_, self.enabled_index, enabled)
+            iter_ = model.iter_next(iter_)
+        self.view.queue_draw()
 
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
@@ -433,7 +505,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
                          'Correspondences',
                          lambda: status_bar.add_dirty('correspondences'))
 
-        self.setup_disableable_rows(self.sheet.view, store.get_n_columns() - 1)
+        self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def _style_row(self, column, cell, model, iter_, col_index):
         value = model.get_value(iter_, col_index)
@@ -481,7 +553,7 @@ class RuleSheet(ExpandableSheet, DisableableRowsMixin):
                           True])
         super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
                          store, 'Rules', lambda: status_bar.add_dirty('rules'))
-        self.setup_disableable_rows(self.sheet.view, store.get_n_columns() - 1)
+        self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def fill(self, table):
         for row in self.store:
@@ -527,7 +599,7 @@ class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
                           True]) # HACK.
         super().__init__(['Language', 'Form', 'Gloss', 'Alternative', 'Notes'],
                          store, 'Exceptions', lambda: status_bar.add_dirty('exceptions'))
-        self.setup_disableable_rows(self.sheet.view, store.get_n_columns() - 1)
+        self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def fill(self, table):
         for row in self.store:
