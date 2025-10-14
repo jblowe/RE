@@ -117,12 +117,6 @@ while (<CVT>) {
             print OUT brackets($1, $2);
             $taglist{$1}++;
         }
-        else {
-            if ($_) {
-                print OUT "<extra>$_</extra>";
-                $taglist{'extra'}++;
-            }
-        }
     }
 }
 print OUT "\n</entry>";
