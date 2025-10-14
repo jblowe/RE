@@ -224,7 +224,7 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
         render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
-    render_sets(sorted(reconstruction.isolates, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), isolates, languages, 'isolates')
+    render_sets([reconstruction.isolates], isolates, languages, 'isolates')
 
     failures = ET.SubElement(root, 'failures')
     # there is only one (big) set for failures, pass it in as a list
