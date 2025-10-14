@@ -461,7 +461,6 @@ class DisableableRowsMixin:
 
     def _style_row(self, column, cell, model, iter_, col_index):
         """Render rows grayed out when disabled."""
-        from gi.repository import Pango
         value = model.get_value(iter_, col_index)
         enabled = model.get_value(iter_, self.enabled_index)
 
@@ -510,24 +509,6 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
                          lambda: status_bar.add_dirty('correspondences'))
 
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
-
-    def _style_row(self, column, cell, model, iter_, col_index):
-        value = model.get_value(iter_, col_index)
-        enabled = model.get_value(iter_, self.enabled_index)
-
-        # Set display text
-        cell.set_property("text", str(value) if value is not None else "")
-
-        if not enabled:
-            # Dimmed and italic
-            cell.set_property("foreground", "#888")           # soft gray text
-            cell.set_property("style", Pango.Style.ITALIC)    # slanted
-            cell.set_property("cell-background", "#f6f6f6")   # light gray bg
-        else:
-            # Normal appearance
-            cell.set_property("foreground", None)
-            cell.set_property("style", Pango.Style.NORMAL)
-            cell.set_property("cell-background", None)
 
     def fill(self, table):
         for row in self.store:
