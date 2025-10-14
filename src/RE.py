@@ -116,9 +116,7 @@ class Lexicon:
         fuzzied_count = 0
         for form in self.forms:
             fuzzied_glyphs = fuzzy_string(specific_mapping, form.glyphs)
-            if fuzzied_glyphs == form.glyphs:
-                fuzzied_forms.append(form)
-            else:
+            if fuzzied_glyphs != form.glyphs:
                 fuzzied_forms.append(FuzzyForm(fuzzied_glyphs, form))
                 fuzzied_count += 1
         return fuzzied_forms, fuzzied_count
@@ -668,7 +666,7 @@ def project_back(lexicons, parameters, statistics):
         if parameters.fuzzy:
             fuzzied_forms, fuzzied_count = lexicon.fuzzied_forms(parameters.fuzzy)
             statistics.add_note(f'{lexicon.language}: fuzzied {fuzzied_count} forms')
-            forms_to_parse = fuzzied_forms
+            forms_to_parse += fuzzied_forms
         if parameters.table.quirks:
             quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
