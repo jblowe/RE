@@ -720,6 +720,10 @@ class SetsWidget(Gtk.Box):
         search_box.pack_start(self.gloss_entry, False, False, 0)
         search_box.pack_start(self.clear_button, False, False, 0)
 
+        self.result_label = Gtk.Label(label="0 / 0 results")
+        self.result_label.set_halign(Gtk.Align.START)
+        search_box.pack_start(self.result_label, False, False, 6)
+
         def on_clear_search(button):
             self.lang_entry.set_text("")
             self.form_entry.set_text("")
@@ -732,10 +736,14 @@ class SetsWidget(Gtk.Box):
         self.filter.set_visible_func(self._filter_func)
         self.sorted = Gtk.TreeModelSort(model=self.filter)
 
+        def on_changed():
+            self.filter.refilter()
+            self.update_result_count()
+
         # Instant filtering
-        self.lang_entry.connect("changed", lambda e: self.filter.refilter())
-        self.form_entry.connect("changed", lambda e: self.filter.refilter())
-        self.gloss_entry.connect("changed", lambda e: self.filter.refilter())
+        self.lang_entry.connect("changed", lambda e: on_changed())
+        self.form_entry.connect("changed", lambda e: on_changed())
+        self.gloss_entry.connect("changed", lambda e: on_changed())
 
         self.view = Gtk.TreeView.new_with_model(self.sorted)
         view = self.view
@@ -877,6 +885,11 @@ class SetsWidget(Gtk.Box):
         view.connect("button-press-event", on_button_press)
         view.connect("motion-notify-event", on_motion_notify)
 
+    def update_result_count(self):
+        total = sum(1 for _ in self.store)
+        filtered = sum(1 for row in self.filter if self._filter_func(self.filter, row.iter))
+        self.result_label.set_text(f"{filtered} / {total} results")
+
     def _filter_func(self, model, iter_, data=None):
         lang_query = self.lang_entry.get_text().strip().lower()
         form_query = self.form_entry.get_text().strip().lower()
@@ -959,6 +972,8 @@ class SetsWidget(Gtk.Box):
 
         for form in proto_lexicon.forms:
             store_row(None, form, None)
+
+        self.update_result_count()
 
     def scroll_to_form(self, form):
         """Scroll and select the row with the given form."""
