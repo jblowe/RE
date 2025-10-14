@@ -1,6 +1,6 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, GObject, GLib
+from gi.repository import Gtk, Gdk, GObject, GLib, Pango
 import RE
 import read
 import threading
@@ -354,6 +354,63 @@ class ExpandableSheet(Gtk.Expander):
         self.set_expanded(True)
         self.sheet.scroll_to_row_matching(predicate)
 
+class DisableableRowsMixin:
+    def setup_disableable_rows(self, view, enabled_index):
+        """Attach the context menu and styling behavior to the given TreeView."""
+        self.enabled_index = enabled_index
+
+        # Attach cell data functions
+        for i, column in enumerate(view.get_columns()):
+            renderers = column.get_cells()
+            if renderers:
+                renderer = renderers[0]
+                column.set_cell_data_func(renderer, self._style_row, i)
+
+        # Attach right-click menu
+        def on_right_click(view, event):
+            if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 3:
+                pthinfo = view.get_path_at_pos(int(event.x), int(event.y))
+                if pthinfo is None:
+                    return False
+                path, col, cellx, celly = pthinfo
+                model = view.get_model()
+                iter_ = model.get_iter(path)
+                enabled = model.get_value(iter_, self.enabled_index)
+
+                menu = Gtk.Menu()
+                label = "Disable row" if enabled else "Enable row"
+                item = Gtk.MenuItem(label=label)
+
+                def toggle(_):
+                    model.set_value(iter_, self.enabled_index, not enabled)
+                    view.queue_draw()
+
+                item.connect("activate", toggle)
+                menu.append(item)
+                menu.show_all()
+                menu.popup(None, None, None, None, event.button, event.time)
+                return True
+            return False
+
+        view.connect("button-press-event", on_right_click)
+
+    def _style_row(self, column, cell, model, iter_, col_index):
+        """Render rows grayed out when disabled."""
+        from gi.repository import Pango
+        value = model.get_value(iter_, col_index)
+        enabled = model.get_value(iter_, self.enabled_index)
+
+        cell.set_property("text", str(value) if value is not None else "")
+
+        if not enabled:
+            cell.set_property("foreground", "#888")
+            cell.set_property("style", Pango.Style.ITALIC)
+            cell.set_property("cell-background", "#f6f6f6")
+        else:
+            cell.set_property("foreground", None)
+            cell.set_property("style", Pango.Style.NORMAL)
+            cell.set_property("cell-background", None)
+
 def make_correspondence_row(correspondence, names):
     return [correspondence.id,
             RE.context_as_string(correspondence.context),
@@ -361,12 +418,13 @@ def make_correspondence_row(correspondence, names):
             correspondence.proto_form] + \
             [', '.join(v)
              for v in (correspondence.daughter_forms.get(name)
-                       for name in names)]
+                       for name in names)] + [True]
 
-class CorrespondenceSheet(ExpandableSheet):
+class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str] +
-                                len(table.daughter_languages) * [str]))
+                                len(table.daughter_languages) * [str]
+                                + [bool]))
         for c in table.correspondences:
             store.append(make_correspondence_row(c, table.daughter_languages))
         self.names = table.daughter_languages
@@ -375,42 +433,67 @@ class CorrespondenceSheet(ExpandableSheet):
                          'Correspondences',
                          lambda: status_bar.add_dirty('correspondences'))
 
+        self.setup_disableable_rows(self.sheet.view, store.get_n_columns() - 1)
+
+    def _style_row(self, column, cell, model, iter_, col_index):
+        value = model.get_value(iter_, col_index)
+        enabled = model.get_value(iter_, self.enabled_index)
+
+        # Set display text
+        cell.set_property("text", str(value) if value is not None else "")
+
+        if not enabled:
+            # Dimmed and italic
+            cell.set_property("foreground", "#888")           # soft gray text
+            cell.set_property("style", Pango.Style.ITALIC)    # slanted
+            cell.set_property("cell-background", "#f6f6f6")   # light gray bg
+        else:
+            # Normal appearance
+            cell.set_property("foreground", None)
+            cell.set_property("style", Pango.Style.NORMAL)
+            cell.set_property("cell-background", None)
+
     def fill(self, table):
         for row in self.store:
-            table.add_correspondence(
-                RE.Correspondence(
-                    row[0],
-                    RE.read_context_from_string(row[1]),
-                    [x.strip() for x in row[2].split(',')], row[3],
-                    dict(zip(self.names, ([x.strip() for x in token.split(',')]
-                                          for token in row[4:])))))
+            if row[self.enabled_index]:
+                table.add_correspondence(
+                    RE.Correspondence(
+                        row[0],
+                        RE.read_context_from_string(row[1]),
+                        [x.strip() for x in row[2].split(',')], row[3],
+                        dict(zip(self.names, ([x.strip() for x in token.split(',')]
+                                              for token in row[4:])))))
 
     def scroll_to_correspondence(self, correspondence):
         return self.scroll_to_row_matching(lambda row: (row[0] == correspondence.id))
 
-class RuleSheet(ExpandableSheet):
+class RuleSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
-        store = Gtk.ListStore(*([str, str, str, str, str, str]))
+        store = Gtk.ListStore(*([str, str, str, str, str, str, bool]))
+        self.enabled_index = 6
         for rule in table.rules:
             store.append([rule.id,
                           RE.context_as_string(rule.context),
                           rule.input,
                           ', '.join(rule.outcome),
                           ', '.join(rule.languages),
-                          str(rule.stage)])
+                          str(rule.stage),
+                          True])
         super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
                          store, 'Rules', lambda: status_bar.add_dirty('rules'))
+        self.setup_disableable_rows(self.sheet.view, store.get_n_columns() - 1)
 
     def fill(self, table):
         for row in self.store:
-            table.add_rule(
-                RE.Rule(
-                    row[0],
-                    RE.read_context_from_string(row[1]),
-                    row[2].strip(),
-                    [x.strip() for x in row[3].split(',')],
-                    [x.strip() for x in row[4].split(',')],
-                    int(row[5])))
+            if row[self.enabled_index]:
+                table.add_rule(
+                    RE.Rule(
+                        row[0],
+                        RE.read_context_from_string(row[1]),
+                        row[2].strip(),
+                        [x.strip() for x in row[3].split(',')],
+                        [x.strip() for x in row[4].split(',')],
+                        int(row[5])))
 
     def scroll_to_rule(self, rule):
         return self.scroll_to_row_matching(lambda row: (row[0] == rule.id))
@@ -432,23 +515,26 @@ class SoundClassSheet(ExpandableSheet):
 
 # given a quirks object, construct a widget that allows users to
 # specify exceptions.
-class QuirksSheet(ExpandableSheet):
+class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, quirks, status_bar):
-        store = Gtk.ListStore(*([str, str, str, str, str]))
+        store = Gtk.ListStore(*([str, str, str, str, str, bool]))
         for quirk in quirks.values():
             store.append([quirk.language,
                           quirk.form,
                           quirk.gloss,
                           quirk.alternative,
-                          quirk.notes[0] if quirk.notes else '']) # HACK.
+                          quirk.notes[0] if quirk.notes else '',
+                          True]) # HACK.
         super().__init__(['Language', 'Form', 'Gloss', 'Alternative', 'Notes'],
                          store, 'Exceptions', lambda: status_bar.add_dirty('exceptions'))
+        self.setup_disableable_rows(self.sheet.view, store.get_n_columns() - 1)
 
     def fill(self, table):
         for row in self.store:
-            table.add_quirk(RE.Quirk(
-                '', '', row[0], row[1], row[2], row[3],
-                '', '', [row[4]]))
+            if row[self.enabled_index]:
+                table.add_quirk(RE.Quirk(
+                    '', '', row[0], row[1], row[2], row[3],
+                    '', '', [row[4]]))
 
     def ensure_quirk(self, language, form, gloss):
         sheet = self.sheet
