@@ -503,7 +503,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
         for c in table.correspondences:
             store.append(make_correspondence_row(c, table.daughter_languages))
         self.names = table.daughter_languages
-        super().__init__(['ID', 'Context', 'Syllable Type', '*'] + table.daughter_languages,
+        super().__init__(['ID', 'Context', 'Slot', '*'] + table.daughter_languages,
                          store,
                          'Correspondences',
                          lambda: status_bar.add_dirty('correspondences'))
