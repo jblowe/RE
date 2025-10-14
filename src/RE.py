@@ -116,9 +116,7 @@ class Lexicon:
         fuzzied_count = 0
         for form in self.forms:
             fuzzied_glyphs = fuzzy_string(specific_mapping, form.glyphs)
-            if fuzzied_glyphs == form.glyphs:
-                fuzzied_forms.append(form)
-            else:
+            if fuzzied_glyphs != form.glyphs:
                 fuzzied_forms.append(FuzzyForm(fuzzied_glyphs, form))
                 fuzzied_count += 1
         return fuzzied_forms, fuzzied_count
