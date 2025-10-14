@@ -666,7 +666,7 @@ def project_back(lexicons, parameters, statistics):
         if parameters.fuzzy:
             fuzzied_forms, fuzzied_count = lexicon.fuzzied_forms(parameters.fuzzy)
             statistics.add_note(f'{lexicon.language}: fuzzied {fuzzied_count} forms')
-            forms_to_parse = fuzzied_forms
+            forms_to_parse += fuzzied_forms
         if parameters.table.quirks:
             quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
