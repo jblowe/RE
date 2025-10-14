@@ -676,7 +676,7 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
         if mels:
             for supporting_form in support:
                 # stage0 forms also have meaning
-                if isinstance(supporting_form, (ModernForm, Stage0Form)):
+                if isinstance(supporting_form, (ModernForm, Stage0Form, QuirkyForm)):
                     for associated_mel in mel.associated_mels(associated_mels_table,
                                                               supporting_form.gloss,
                                                               only_with_mel):
