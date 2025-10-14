@@ -80,12 +80,48 @@ class Lexicon:
     # Given a lexicon and a set of quirks, return a list of forms
     # marked to use the exceptional form for parsing.
     def quirky_forms(self, quirks):
-         quirky_forms = []
-         for form in self.forms:
-             quirk = quirks.get((form.language, form.glyphs, form.gloss))
-             if quirk:
-                 quirky_forms.append(QuirkyForm(quirk.alternative, form))
-         return quirky_forms
+        quirky_forms = []
+        for form in self.forms:
+            quirk = quirks.get((form.language, form.glyphs, form.gloss))
+            if quirk:
+                quirky_forms.append(QuirkyForm(quirk.alternative, form))
+        return quirky_forms
+
+    # Given a lexicon and a set of fuzzy rules, return a list of
+    # forms, some of which are marked as fuzzied.
+    def fuzzied_forms(self, fuzzy):
+        def fuzzy_string(mapping, string):
+            length = len(string)
+            old_string = string
+            new_string = []
+            while string != '':
+                (longest_candidate, its_target, its_len) = (None, None, 0)
+                # Partition initials into most specific rules to be
+                # chosen. The longer the initial, the more priority it
+                # gets.
+                for (initial, target) in mapping.items():
+                    if string.startswith(initial) and len(initial) > its_len:
+                        (longest_candidate, its_target, its_len) = (initial, target, len(initial))
+                if longest_candidate:
+                    new_string.append(its_target)
+                    string = string[its_len:]
+                else:
+                    new_string.append(string[0])
+                    string = string[1:]
+            return ''.join(new_string)
+        specific_mapping = {representative: target
+                            for ((language1, representative), target) in fuzzy.items()
+                            if self.language == language1}
+        fuzzied_forms = []
+        fuzzied_count = 0
+        for form in self.forms:
+            fuzzied_glyphs = fuzzy_string(specific_mapping, form.glyphs)
+            if fuzzied_glyphs == form.glyphs:
+                fuzzied_forms.append(form)
+            else:
+                fuzzied_forms.append(FuzzyForm(fuzzied_glyphs, form))
+                fuzzied_count += 1
+        return fuzzied_forms, fuzzied_count
 
 # a 'quirk' is the internal name by which we refer to 'exceptions'
 # to avoid collisions, code or conceptual, with python components
@@ -184,11 +220,12 @@ class TableOfCorrespondences:
                 for outcome, langs in outcomes(c).items()]
 
 class Parameters:
-    def __init__(self, table, syllable_canon, proto_language_name, mels, quirks={}):
+    def __init__(self, table, syllable_canon, proto_language_name, mels, fuzzy):
         self.table = table
         self.syllable_canon = syllable_canon
         self.proto_language_name = proto_language_name
         self.mels = mels
+        self.fuzzy = fuzzy
 
     def serialize(self, filename):
         serialize.serialize_correspondence_file(filename, self)
@@ -248,22 +285,42 @@ class ProtoForm(Form):
     def __str__(self):
         return f'{self.language} *{self.glyphs} = {correspondences_as_ids(self.correspondences)} {syllable_structure(self.correspondences)}'
 
-# A quirky form is a form we expect with a given hypothesis but for
-# one reason or the other is not what is actually observed.
-class QuirkyForm(Form):
+# An alternate form is some kind of form which feeds some other string
+# of glyphs into the regular sound change apparatus but otherwise
+# should be noted as coming from some original form from the data.
+class AlternateForm(Form):
     def __init__(self, glyphs, actual):
-        self.language = actual.language
         self.glyphs = glyphs
+        self.language = actual.language
         self.actual = actual
         self.gloss = actual.gloss
         self.attested_support = frozenset([actual])
 
     def __str__(self):
+        return 'An alternate form for {self.actual}'
+
+# A quirky form is an unattested form we expect with a given
+# hypothesis but for one reason or the other is not what is actually
+# observed.
+class QuirkyForm(AlternateForm):
+    def __init__(self, glyphs, actual):
+        super().__init__(glyphs, actual)
+
+    def __str__(self):
         return f'!! {str(self.actual)} (expected ‡{self.glyphs})'
+
+# A fuzzy form is an alternate form which has applied some
+# phonological fuzziness rules.
+class FuzzyForm(AlternateForm):
+    def __init__(self, glyphs, actual):
+        super().__init__(glyphs, actual)
+
+    def __str__(self):
+        return f'{str(self.actual)} (fuzzied to {self.glyphs})'
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
-                 target, upstream, downstream, other):
+                 target, upstream, downstream, other, fuzzy_filename=None):
         self.mel_filename = (os.path.join(directory_path,
                                           mel_filename)
                              if mel_filename else None)
@@ -274,6 +331,9 @@ class ProjectSettings:
         self.upstream = upstream
         self.downstream = downstream
         self.other = other
+        self.fuzzy_filename = (os.path.join(directory_path,
+                                            fuzzy_filename)
+                               if fuzzy_filename else None)
 
 class Statistics:
     def __init__(self):
@@ -601,8 +661,19 @@ def project_back(lexicons, parameters, statistics):
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map)
         apply_rules = make_apply_rules(parameters, lexicon.language)
-        quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
-        for form in lexicon.forms + quirky_forms:
+        forms_to_parse = lexicon.forms
+        # There's no reason to fuzzy the exceptional forms, because
+        # the linguist will write the expected form in conformity with
+        # the table anyway.
+        if parameters.fuzzy:
+            fuzzied_forms, fuzzied_count = lexicon.fuzzied_forms(parameters.fuzzy)
+            statistics.add_note(f'{lexicon.language}: fuzzied {fuzzied_count} forms')
+            forms_to_parse = fuzzied_forms
+        if parameters.table.quirks:
+            quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
+            statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
+            forms_to_parse += quirky_forms
+        for form in forms_to_parse:
             if form.glyphs == '':
                 continue
             statistics.add_debug_note(f'!Parsing {form}...')
@@ -676,7 +747,7 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
         if mels:
             for supporting_form in support:
                 # stage0 forms also have meaning
-                if isinstance(supporting_form, (ModernForm, Stage0Form, QuirkyForm)):
+                if isinstance(supporting_form, (ModernForm, Stage0Form, AlternateForm)):
                     for associated_mel in mel.associated_mels(associated_mels_table,
                                                               supporting_form.gloss,
                                                               only_with_mel):
@@ -796,7 +867,8 @@ def all_parameters(settings):
                 '------',
                 list(settings.upstream[target]),
                 target,
-                settings.mel_filename)
+                settings.mel_filename,
+                settings.fuzzy_filename)
         for daughter in settings.upstream[target]:
             rec(daughter)
 
@@ -820,7 +892,7 @@ def interactive_upstream(settings, attested_lexicons, only_with_mel=False):
                          only_with_mel)
 
 def print_form(form, level):
-    if isinstance(form, (ModernForm, QuirkyForm)):
+    if isinstance(form, (ModernForm, AlternateForm)):
         print('  ' * level + str(form))
     elif isinstance(form, ProtoForm):
         print('  ' * level + str(form) + ' ' +
@@ -1023,7 +1095,8 @@ def extract_isolates(lexicon):
         non_isolate_forms |= proto_form.attested_support
     isolates = collections.defaultdict(list)
     for (correspondences, supporting_forms, attested_support, mel) in lexicon.statistics.singleton_support:
-        for form in attested_support:
+        for form in list(attested_support) + [form for form in supporting_forms
+                                              if isinstance(form, AlternateForm)]:
             if form not in non_isolate_forms:
                 isolates[form].append(ProtoForm(lexicon.language,
                                                 correspondences,

@@ -5,7 +5,7 @@ import RE
 import mel
 import pickle
 
-def read_correspondence_file(filename, project_name, daughter_languages, name, mel_filename):
+def read_correspondence_file(filename, project_name, daughter_languages, name, mel_filename, fuzzy_filename):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
     return RE.Parameters(read_correspondences(tree.iterfind('corr'),
@@ -16,7 +16,9 @@ def read_correspondence_file(filename, project_name, daughter_languages, name, m
                          read_syllable_canon(tree.find('parameters')),
                          name,
                          read_mel_file(mel_filename)
-                         if mel_filename else None)
+                         if mel_filename else None,
+                         read_fuzzy_file(fuzzy_filename)
+                         if fuzzy_filename else None)
 
 
 def read_syllable_canon(parameters):
@@ -177,7 +179,8 @@ def read_settings_file(filename, mel=None, recon=None, fuzzy=None):
                               target,
                               upstream,
                               downstream,
-                              other)
+                              other,
+                              None if fuzzy is None else fuzzy_filenames[fuzzy])
 
 
 # returns a generator returning the modern form and its gloss

@@ -24,4 +24,4 @@ else:
 
 RE.Parameters(table,
               canon,
-              'placeholder', None).serialize(sys.argv[2])
+              'placeholder', None, None).serialize(sys.argv[2])

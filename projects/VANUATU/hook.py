@@ -134,7 +134,7 @@ for corr_file in correspondence_filenames:
     else: canon = '(c?v)?(C?Vc?w)+'
     RE.Parameters(table,
                   RE.SyllableCanon(sound_classes, canon, [], 'glyphs'),
-                  'pnv', None).serialize(
+                  'pnv', None, None).serialize(
                       os.path.join(base_dir, corr_file.replace('.csv','.xml')))
     print(f'made correspondence xml from {corr_file}')
 

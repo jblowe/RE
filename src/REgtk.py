@@ -623,6 +623,7 @@ class ParameterWidget(Gtk.Box):
         self.quirks_sheet = QuirksSheet(parameters.table.quirks, status_bar)
         self.proto_language_name = parameters.proto_language_name
         self.mels = parameters.mels
+        self.fuzzy = parameters.fuzzy
         self.add(self.canon_widget)
         self.add(self.correspondence_sheet)
         self.add(self.rule_sheet)
@@ -638,7 +639,8 @@ class ParameterWidget(Gtk.Box):
             table,
             self.canon_widget.syllable_canon(),
             self.proto_language_name,
-            self.mels)
+            self.mels,
+            self.fuzzy)
 
     def scroll_to(self, obj):
         if isinstance(obj, RE.Correspondence):
@@ -916,13 +918,13 @@ class SetsWidget(Gtk.Box):
                 for supporting_form in sorted(form.supporting_forms,
                                               key=lambda f: (f.language, f.glyphs)):
                     store_row(row, supporting_form, language)
-            elif isinstance(form, RE.QuirkyForm):
+            elif isinstance(form, RE.AlternateForm):
                 if isinstance(form.actual, RE.ModernForm):
                     row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
                                                                 parent_language,
                                                                 form])
                 else:
-                    raise Exception('Unimplemented: Quirky form for stage0/Meso-form!')
+                    raise Exception('Unimplemented: Alternate form for stage0/Meso-form!')
             elif isinstance(form, RE.ModernForm):
                 row = self.store.append(parent=parent, row=[str(form), '', 0, '', None,
                                                             parent_language,
@@ -1030,8 +1032,11 @@ class IsolatesWidget(Gtk.Box):
                                        ""])
 
         for (form, recons) in isolates.items():
-            assert isinstance(form, RE.ModernForm)
-            row = self.store.append(parent=None, row=[form.language, form.glyphs, form.gloss])
+            assert isinstance(form, (RE.ModernForm, RE.AlternateForm))
+            row = self.store.append(parent=None, row=[form.language,
+                                                      '‡' + form.glyphs if isinstance(form, RE.QuirkyForm)
+                                                      else form.glyphs,
+                                                      form.gloss])
             for recon in recons:
                 store_row(row, recon)
 
@@ -1057,8 +1062,13 @@ class FailedParsesWidget(Pane):
         for failed_parse in failed_parses:
             self.store.append([
                 failed_parse.language,
-                failed_parse.glyphs,
-                failed_parse.gloss if isinstance(failed_parse, (RE.Stage0Form, RE.ModernForm)) else ''
+                '‡' + failed_parse.glyphs if isinstance(failed_parse, (RE.QuirkyForm))
+                else failed_parse.glyphs,
+                failed_parse.gloss
+                if isinstance(failed_parse, (RE.Stage0Form,
+                                             RE.ModernForm,
+                                             RE.AlternateForm))
+                else ''
             ])
 
 class CorrespondenceIndexWidget(Gtk.Box):
@@ -1608,7 +1618,8 @@ class REWindow(Gtk.Window):
                                       language,
                                       settings.upstream[language],
                                       language,
-                                      settings.mel_filename)
+                                      settings.mel_filename,
+                                      settings.fuzzy_filename)
                                   for (language, correspondence_filename)
                                   in settings.proto_languages.items()
                                   }
@@ -1631,13 +1642,14 @@ class REWindow(Gtk.Window):
         parameters_file = os.path.join(projects.projects[project],
                                        f'{project}.master.parameters.xml')
         mel = None if selection['mel'] == 'None' else selection['mel']
+        fuzzy = None if selection['fuzzy'] == 'None' else selection['fuzzy']
         settings = read.read_settings_file(parameters_file,
                                            mel=mel,
-                                           fuzzy=selection['fuzzy'],
+                                           fuzzy=fuzzy,
                                            recon=selection['recon'])
         # dummy an arg object for load hooks. FIXME
         dummy.mel = mel
-        dummy.fuzzy = selection['fuzzy']
+        dummy.fuzzy = fuzzy
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project], dummy, settings)
         self.status_bar.set_message(f'Opened project {project} from projects directory.')
