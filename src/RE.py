@@ -820,7 +820,7 @@ def interactive_upstream(settings, attested_lexicons, only_with_mel=False):
                          only_with_mel)
 
 def print_form(form, level):
-    if isinstance(form, ModernForm):
+    if isinstance(form, (ModernForm, QuirkyForm)):
         print('  ' * level + str(form))
     elif isinstance(form, ProtoForm):
         print('  ' * level + str(form) + ' ' +
