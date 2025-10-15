@@ -393,7 +393,7 @@ def next_correspondence_map(parameters):
 
     def matches_this_left_context(c, last):
         return (c.context[0] is None or
-                (any(last.proto_form.startswith(context)
+                (any(last.proto_form.endswith(context)
                      for context in c.expanded_context[0])
                  if context_match_type == 'glyphs' else
                  last.proto_form in c.expanded_context[0]))
