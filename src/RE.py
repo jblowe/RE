@@ -836,7 +836,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
         if target in attested_lexicons:
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
-                             for daughter in tree[target] if daughter in attested_lexicons]
+                             for daughter in tree[target]]
         forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel,
