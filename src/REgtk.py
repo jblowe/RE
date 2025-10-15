@@ -510,9 +510,9 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
 
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
-    def fill(self, table):
+    def fill(self, table, serialize=False):
         for row in self.store:
-            if row[self.enabled_index]:
+            if serialize or row[self.enabled_index]:
                 table.add_correspondence(
                     RE.Correspondence(
                         row[0],
@@ -540,9 +540,9 @@ class RuleSheet(ExpandableSheet, DisableableRowsMixin):
                          store, 'Rules', lambda: status_bar.add_dirty('rules'))
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
-    def fill(self, table):
+    def fill(self, table, serialize=False):
         for row in self.store:
-            if row[self.enabled_index]:
+            if row[self.enabled_index] or serialize:
                 table.add_rule(
                     RE.Rule(
                         row[0],
@@ -586,9 +586,9 @@ class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
                          store, 'Exceptions', lambda: status_bar.add_dirty('exceptions'))
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
-    def fill(self, table):
+    def fill(self, table, serialize=False):
         for row in self.store:
-            if row[self.enabled_index]:
+            if serialize or row[self.enabled_index]:
                 table.add_quirk(RE.Quirk(
                     '', '', row[0], row[1], row[2], row[3],
                     '', '', [row[4]]))
@@ -629,12 +629,12 @@ class ParameterWidget(Gtk.Box):
         self.add(self.rule_sheet)
         self.add(self.quirks_sheet)
 
-    def parameters(self):
+    def parameters(self, serialize=False):
         names = self.correspondence_sheet.names
         table = RE.TableOfCorrespondences('', names)
-        self.correspondence_sheet.fill(table)
-        self.rule_sheet.fill(table)
-        self.quirks_sheet.fill(table)
+        self.correspondence_sheet.fill(table, serialize=serialize)
+        self.rule_sheet.fill(table, serialize=serialize)
+        self.quirks_sheet.fill(table, serialize=serialize)
         return RE.Parameters(
             table,
             self.canon_widget.syllable_canon(),
@@ -660,9 +660,13 @@ class ParameterTreeWidget(Gtk.Notebook):
             self.append_page(ParameterWidget(parameters, status_bar),
                              Gtk.Label(label=language))
 
-    def parameter_tree(self):
+    # The serialize keyword here specifies whether the parameter tree
+    # should include items that shouldn't be processed but should be
+    # tracked for e.g. saving to disk. For example, disabled rows
+    # should not be processed but should be saved.
+    def parameter_tree(self, serialize=False):
         return {parameter_widget.proto_language_name:
-                parameter_widget.parameters()
+                parameter_widget.parameters(serialize=serialize)
                 for parameter_widget in self}
 
     def scroll_to(self, language, obj):
@@ -1661,7 +1665,7 @@ class REWindow(Gtk.Window):
             checkpoint_path = dialog.get_filename()
             print(f"Creating checkpoint at: {checkpoint_path}")
             checkpoint_data = checkpoint.CheckpointData(self.lexicons_widget.lexicons(),
-                                                        self.parameters_widget.parameter_tree())
+                                                        self.parameters_widget.parameter_tree(serialize=True))
             checkpoint.save_checkpoint_to_path(checkpoint_path, checkpoint_data)
             self.status_bar.set_message(f'Created checkpoint: {checkpoint_path}')
             self.status_bar.clear_dirty()
@@ -1685,7 +1689,7 @@ class REWindow(Gtk.Window):
         self.diff_window.connect("delete-event", _on_window_close)
 
     def save_project(self, widget):
-        for (proto_language_name, parameters) in self.parameters_widget.parameter_tree().items():
+        for (proto_language_name, parameters) in self.parameters_widget.parameter_tree(serialize=True).items():
             serialize.serialize_correspondence_file(
                 os.path.join(
                     self.settings.directory_path,
