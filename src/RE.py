@@ -173,6 +173,10 @@ def partition_correspondences(correspondences, accessor):
     partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
+            # Ignore the empty cell, else it would be treated as a
+            # zero rule.
+            if token == '':
+                break
             partitions[token].append(c)
     return partitions, sorted(list(set.union(*(set(map(len, accessor(c)))
                                                for c in correspondences))))
