@@ -1041,7 +1041,11 @@ class IsolatesWidget(Gtk.Box):
                                                       '‡' + form.glyphs if isinstance(form, RE.QuirkyForm)
                                                       else form.glyphs,
                                                       form.gloss])
-            for recon in recons:
+            for i, recon in enumerate(recons):
+                # truncate if there are too many reconstructions
+                if i > 10:
+                    self.store.append(parent=row, row=['...', '', ''])
+                    break
                 store_row(row, recon)
 
 class FailedParsesWidget(Pane):
