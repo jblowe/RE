@@ -917,10 +917,7 @@ class SetsWidget(Gtk.Box):
                          form.correspondences,
                          language,
                          form])
-                # TODO: Sort by the language order in the table of
-                # correspondences.
-                for supporting_form in sorted(form.supporting_forms,
-                                              key=lambda f: (f.language, f.glyphs)):
+                for supporting_form in form.sorted_supporting_forms():
                     store_row(row, supporting_form, language)
             elif isinstance(form, RE.AlternateForm):
                 if isinstance(form.actual, RE.ModernForm):
