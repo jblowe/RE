@@ -181,12 +181,13 @@ def partition_correspondences(correspondences, accessor):
 class TableOfCorrespondences:
     initial_marker = Correspondence('', (None, None), '', '$', [])
 
-    def __init__(self, family_name, daughter_languages):
+    def __init__(self, daughter_languages):
         self.correspondences = []
         self.rules = []
         # Quirk objects are keyed by (language, glyphs, gloss)
         self.quirks = dict()
-        self.family_name = family_name
+        # All languages present in the table (not necessarily
+        # processed by upstream).
         self.daughter_languages = daughter_languages
 
     def add_correspondence(self, correspondence):
@@ -851,33 +852,22 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
 
     return rec(target, True)
 
-def all_parameters(settings):
-    # Return a mapping from protolanguage to its associated parameter object
-    mapping = {}
-
-    def rec(target):
-        if target in settings.attested:
-            return
-        mapping[target] = \
-            read.read_correspondence_file(
-                os.path.join(settings.directory_path,
-                             settings.proto_languages[target]),
-                '------',
-                list(settings.upstream[target]),
-                target,
-                settings.mel_filename,
-                settings.fuzzy_filename)
-        for daughter in settings.upstream[target]:
-            rec(daughter)
-
-    rec(settings.upstream_target)
-    return mapping
+# Return a mapping from protolanguage to its associated parameter object.
+def parameter_tree_from_settings(settings):
+    return {language:
+            read.read_correspondence_file(os.path.join(settings.directory_path,
+                                                       correspondence_filename),
+                                          language,
+                                          settings.mel_filename,
+                                          settings.fuzzy_filename)
+            for (language, correspondence_filename)
+            in settings.proto_languages.items()}
 
 def batch_all_upstream(settings, only_with_mel=False):
     attested_lexicons = read.read_attested_lexicons(settings)
     return upstream_tree(settings.upstream_target,
                          settings.upstream,
-                         all_parameters(settings),
+                         parameter_tree_from_settings(settings),
                          attested_lexicons,
                          only_with_mel)
 

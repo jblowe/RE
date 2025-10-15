@@ -5,14 +5,10 @@ import RE
 import mel
 import pickle
 
-def read_correspondence_file(filename, project_name, daughter_languages, name, mel_filename, fuzzy_filename):
+def read_correspondence_file(filename, name, mel_filename, fuzzy_filename):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
-    return RE.Parameters(read_correspondences(tree.iterfind('corr'),
-                                              tree.iterfind('rule'),
-                                              tree.iterfind('quirk'),
-                                              project_name,
-                                              daughter_languages),
+    return RE.Parameters(read_correspondences(tree),
                          read_syllable_canon(tree.find('parameters')),
                          name,
                          read_mel_file(mel_filename)
@@ -38,9 +34,20 @@ def read_syllable_canon(parameters):
             context_match_type = parameter.attrib.get('value')
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
 
-def read_correspondences(correspondences, rules, quirks, project_name, daughter_languages):
-    table = RE.TableOfCorrespondences(project_name, daughter_languages)
-    for correspondence in correspondences:
+# Compute all daughter languages referenced in the correspondence
+# section of tree.
+def all_daughter_languages(tree):
+    # dicts are now guaranteed to be sorted by Python
+    daughter_languages = dict()
+    for correspondence in tree.iterfind('corr'):
+        for dialect in correspondence.iterfind('modern'):
+            daughter_languages[dialect.attrib.get('dialecte')] = True
+    return list(daughter_languages.keys())
+
+def read_correspondences(tree):
+    daughter_languages = all_daughter_languages(tree)
+    table = RE.TableOfCorrespondences(daughter_languages)
+    for correspondence in tree.iterfind('corr'):
         daughter_forms = {name: '' for name in daughter_languages}
         for dialect in correspondence.iterfind('modern'):
             daughter_forms[dialect.attrib.get('dialecte')] = \
@@ -60,7 +67,7 @@ def read_correspondences(correspondences, rules, quirks, project_name, daughter_
                  in proto_form_info.attrib.get('syll').split(',')],
                 proto_form_info.text,
                 daughter_forms))
-    for rule in rules:
+    for rule in tree.iterfind('rule'):
         daughter_forms = {name: '' for name in daughter_languages}
         input_info = rule.find('input')
         contextL = input_info.attrib.get('contextL')
@@ -80,7 +87,7 @@ def read_correspondences(correspondences, rules, quirks, project_name, daughter_
                  in outcome_info.text.split(',')],
                 languages,
                 int(rule.attrib.get('stage'))))
-    for quirk in quirks:
+    for quirk in tree.iterfind('quirk'):
         table.add_quirk(
             RE.Quirk(quirk.attrib.get('id') or '',
                      quirk.find('source_id').text or '',
@@ -101,8 +108,8 @@ def skip_comments(reader):
             yield row
 
 
-def read_csv_correspondences(filename, project_name, daughter_languages):
-    table = RE.TableOfCorrespondences(project_name, daughter_languages)
+def read_csv_correspondences(filename, daughter_languages):
+    table = RE.TableOfCorrespondences(daughter_languages)
     with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # element of redundancy here, but we can't assume order

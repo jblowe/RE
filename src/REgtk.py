@@ -631,7 +631,7 @@ class ParameterWidget(Gtk.Box):
 
     def parameters(self, serialize=False):
         names = self.correspondence_sheet.names
-        table = RE.TableOfCorrespondences('', names)
+        table = RE.TableOfCorrespondences(names)
         self.correspondence_sheet.fill(table, serialize=serialize)
         self.rule_sheet.fill(table, serialize=serialize)
         self.quirks_sheet.fill(table, serialize=serialize)
@@ -1612,22 +1612,9 @@ class REWindow(Gtk.Window):
     # Initially load widgets from a settings file.
     def open_from_settings(self, settings):
         self.on_disk_lexicons = read.read_attested_lexicons(settings)
-
         self.settings = settings
-
-        initial_parameter_tree = {language:
-                                  read.read_correspondence_file(
-                                      os.path.join(settings.directory_path,
-                                                   correspondence_filename),
-                                      language,
-                                      settings.upstream[language],
-                                      language,
-                                      settings.mel_filename,
-                                      settings.fuzzy_filename)
-                                  for (language, correspondence_filename)
-                                  in settings.proto_languages.items()
-                                  }
-        self.load(self.on_disk_lexicons, initial_parameter_tree)
+        self.load(self.on_disk_lexicons,
+                  RE.parameter_tree_from_settings(settings))
 
     def open_project(self, widget=None):
         """Show the ProjectManagerDialog and load the selected project."""
