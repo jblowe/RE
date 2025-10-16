@@ -105,7 +105,7 @@ def context_from(string):
     return (left_context, right_context)
 
 def read_vanuatu_csv(filename):
-    table = RE.TableOfCorrespondences('VANUATU', languages)
+    table = RE.TableOfCorrespondences(languages)
     with open(filename, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         # element of redundancy here, but we can't assume order

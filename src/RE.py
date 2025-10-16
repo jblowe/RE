@@ -173,6 +173,10 @@ def partition_correspondences(correspondences, accessor):
     partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
+            # Ignore the empty cell, else it would be treated as a
+            # zero rule.
+            if token == '':
+                break
             partitions[token].append(c)
     return partitions, sorted(list(set.union(*(set(map(len, accessor(c)))
                                                for c in correspondences))))
@@ -181,12 +185,13 @@ def partition_correspondences(correspondences, accessor):
 class TableOfCorrespondences:
     initial_marker = Correspondence('', (None, None), '', '$', [])
 
-    def __init__(self, family_name, daughter_languages):
+    def __init__(self, daughter_languages):
         self.correspondences = []
         self.rules = []
         # Quirk objects are keyed by (language, glyphs, gloss)
         self.quirks = dict()
-        self.family_name = family_name
+        # All languages present in the table (not necessarily
+        # processed by upstream).
         self.daughter_languages = daughter_languages
 
     def add_correspondence(self, correspondence):
@@ -271,7 +276,8 @@ class Stage0Form(Form):
 
 class ProtoForm(Form):
     def __init__(self, language, correspondences, supporting_forms,
-                 attested_support, mel):
+                 attested_support, mel,
+                 sort_key=lambda form: (form.language, form.glyphs)):
         super().__init__(language,
                          correspondences_as_proto_form_string(
                              correspondences))
@@ -279,9 +285,13 @@ class ProtoForm(Form):
         self.supporting_forms = supporting_forms
         self.attested_support = attested_support
         self.mel = mel
+        self.sort_key = sort_key
 
     def __str__(self):
         return f'{self.language} *{self.glyphs} = {correspondences_as_ids(self.correspondences)} {syllable_structure(self.correspondences)}'
+
+    def sorted_supporting_forms(self):
+        return sorted(self.supporting_forms, key=self.sort_key)
 
 # An alternate form is some kind of form which feeds some other string
 # of glyphs into the regular sound change apparatus but otherwise
@@ -836,48 +846,39 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
         if target in attested_lexicons:
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
-                             for daughter in tree[target] if daughter in attested_lexicons]
+                             for daughter in tree[target]]
         forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel,
                                            root)
+        sort_dict = {daughter: i for (i, daughter) in enumerate(tree[target])}
         return Lexicon(
             target,
             [ProtoForm(target, correspondences, supporting_forms,
-                       attested_support, mel)
+                       attested_support, mel,
+                       sort_key=lambda form: sort_dict[form.language])
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
             statistics).compute_correspondence_index(param_tree[target])
 
     return rec(target, True)
 
-def all_parameters(settings):
-    # Return a mapping from protolanguage to its associated parameter object
-    mapping = {}
-
-    def rec(target):
-        if target in settings.attested:
-            return
-        mapping[target] = \
-            read.read_correspondence_file(
-                os.path.join(settings.directory_path,
-                             settings.proto_languages[target]),
-                '------',
-                list(settings.upstream[target]),
-                target,
-                settings.mel_filename,
-                settings.fuzzy_filename)
-        for daughter in settings.upstream[target]:
-            rec(daughter)
-
-    rec(settings.upstream_target)
-    return mapping
+# Return a mapping from protolanguage to its associated parameter object.
+def parameter_tree_from_settings(settings):
+    return {language:
+            read.read_correspondence_file(os.path.join(settings.directory_path,
+                                                       correspondence_filename),
+                                          language,
+                                          settings.mel_filename,
+                                          settings.fuzzy_filename)
+            for (language, correspondence_filename)
+            in settings.proto_languages.items()}
 
 def batch_all_upstream(settings, only_with_mel=False):
     attested_lexicons = read.read_attested_lexicons(settings)
     return upstream_tree(settings.upstream_target,
                          settings.upstream,
-                         all_parameters(settings),
+                         parameter_tree_from_settings(settings),
                          attested_lexicons,
                          only_with_mel)
 
@@ -895,8 +896,7 @@ def print_form(form, level):
     elif isinstance(form, ProtoForm):
         print('  ' * level + str(form) + ' ' +
               correspondences_as_ids(form.correspondences))
-        # TODO: the output order should be the 'preferred order', not just alphabetical. but how?
-        for supporting_form in sorted(form.supporting_forms, key=lambda x: x.language + x.glyphs):
+        for supporting_form in form.sorted_supporting_forms():
             print_form(supporting_form, level + 1)
     elif isinstance(form, Stage0Form):
         print(" TODO don't know how to display Stage0FOrm yet ")

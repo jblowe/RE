@@ -14,7 +14,7 @@ with open(sys.argv[1], 'r', encoding='utf-8') as csvfile:
         break
 
 
-table = read.read_csv_correspondences(sys.argv[1], 'placeholder', languages)
+table = read.read_csv_correspondences(sys.argv[1], languages)
 
 if len(sys.argv) == 4:
     root = ET.parse(sys.argv[3])

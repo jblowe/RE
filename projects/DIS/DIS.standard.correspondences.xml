@@ -657,7 +657,7 @@
       </modern>
    </corr>
    <corr num="23">
-      <proto contextL="t,,,d,,,t,ʰ" syll="R">ot</proto>
+      <proto contextL="t,d,tʰ" syll="R">ot</proto>
       <modern dialecte="ris">
          <seg>ot</seg>
       </modern>
@@ -768,7 +768,7 @@
       </modern>
    </corr>
    <corr num="27">
-      <proto contextR="i,,,e" syll="O">kl</proto>
+      <proto contextR="i,e" syll="O">kl</proto>
       <modern dialecte="ris">
          <seg>kl</seg>
       </modern>
@@ -1129,7 +1129,7 @@
       </modern>
    </corr>
    <corr num="39">
-      <proto contextL="o,,,u" syll="F">p</proto>
+      <proto contextL="o,u" syll="F">p</proto>
       <modern dialecte="ris">
          <seg>p</seg>
       </modern>
