@@ -11,6 +11,7 @@ from copy import copy, deepcopy
 
 class Debug:
     debug = False
+    panini = False
 
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex, supra_segmentals, context_match_type):
@@ -18,6 +19,7 @@ class SyllableCanon:
         self.regex = re.compile(syllable_regex)
         self.supra_segmentals = supra_segmentals
         self.context_match_type = context_match_type
+        self.apply_panini = True
 
 class Correspondence:
     def __init__(self, id, context, syllable_types, proto_form, daughter_forms):
@@ -376,8 +378,16 @@ def expanded_contexts(rule, i, sound_classes):
             contexts.add(context)
     return contexts
 
-# statically compute which correspondences can actually follow from
-# others based on context
+# Statically compute which correspondences can actually follow from
+# others based on context. This is also a good place to implement
+# Panini's principle: more specific rules should block more general
+# rules from applying, where specificity refers to applicable
+# context. In order to implement Panini's principle for double-sided
+# contexts, we compute an auxiliary table mapping (c, nextc) to a
+# function blocked_given, where blocked_given is a function that takes
+# the last correspondence parsed and checks whether the transition to
+# nextc from the current correspondence c is blocked given that last
+# correspondence.
 def next_correspondence_map(parameters):
     regex = parameters.syllable_canon.regex
     sound_classes = parameters.syllable_canon.sound_classes
@@ -393,31 +403,106 @@ def next_correspondence_map(parameters):
 
     def matches_this_left_context(c, last):
         return (c.context[0] is None or
-                (any(last.proto_form.startswith(context)
+                (any(last.proto_form.endswith(context)
                      for context in c.expanded_context[0])
                  if context_match_type == 'glyphs' else
                  last.proto_form in c.expanded_context[0]))
 
-    def matches_last_right_context(c, last):
+    def matches_last_right_context(c, last, bypass_supra=True):
         # implements bypassing of suprasegmentals the other way
-        if c.proto_form in supra_segmentals:
-            return True
+        if bypass_supra:
+            if c.proto_form in supra_segmentals:
+                return True
         return (last.context[1] is None or
                 (any(c.proto_form.startswith(context)
                      for context in last.expanded_context[1])
                  if context_match_type == 'glyphs' else
                  c.proto_form in last.expanded_context[1]))
 
-    def matches_context(c, last):
+    def matches_context(c, last, bypass_supra=True):
         return (matches_this_left_context(c, last) and
-                matches_last_right_context(c, last))
+                matches_last_right_context(c, last, bypass_supra=bypass_supra))
+
+    def more_specific_left_context(c1, c2):
+        if c1.context[0] is None:
+            return False
+        if c2.context[0] is None:
+            return True
+        return c1.expanded_context[0] < c2.expanded_context[0]
+
+    def more_specific_right_context(c1, c2):
+        if c1.context[1] is None:
+            return False
+        if c2.context[1] is None:
+            return True
+        return c1.expanded_context[1] < c2.expanded_context[1]
+
+    def make_blocked_given(correspondence):
+        return lambda last: matches_this_left_context(correspondence, last)
 
     next_map = collections.defaultdict(set)
     for c in [parameters.table.initial_marker] + correspondences:
         for nextc in correspondences:
             if matches_context(nextc, c):
                 next_map[c].add(nextc)
-    return next_map
+
+    blocked_given_map = {}
+
+    if not parameters.syllable_canon.apply_panini:
+        return next_map, blocked_given_map
+
+    # Apply Panini's principle by removing correspondence transitions
+    # which are blocked by another possible transition with a more
+    # specific context. For correspondences with one-sided contexts
+    # which unconditionally block more general rules, we can directly
+    # remove the correspondence transition. For correspondences with
+    # double-sided contexts, more general rules may in general only be
+    # conditionally blocked, so we have to build a function which
+    # checks if the transition should be blocked given a parse state
+    # (in this case, the correspondence parsed before the
+    # correspondence with the double-sided context).
+    for c in correspondences:
+        nextcs = next_map[c]
+        nextcs_ = list(nextcs)
+        for nextc1 in nextcs_:
+            for nextc2 in nextcs_:
+                if (nextc1 != nextc2) and (nextc1.proto_form == nextc2.proto_form):
+                    # The possible rules matching the context Y_R of
+                    # the form X / Y_R unconditionally blocks all
+                    # rules X / Z_R where Y is more specific than Z.
+                    if (more_specific_left_context(nextc2, nextc1) and
+                        nextc2.expanded_context[1] == nextc1.expanded_context[1]):
+                        nextcs.remove(nextc1)
+                        if Debug.panini:
+                            print(f"{nextc1} after {c} is blocked unconditionally by the more specific {nextc2} by Panini's principle.")
+                        break
+        for c2 in correspondences:
+            if (c != c2) and (c.proto_form == c2.proto_form):
+                # X / R_Y unconditionally blocks all rules X / R_Z where Y
+                # is more specific than Z from transitioning to
+                # correspondences matching the context Y.
+                if (more_specific_right_context(c2, c) and
+                    c2.expanded_context[0] == c.expanded_context[0]):
+                    for nextc in list(nextcs):
+                        if matches_context(nextc, c2, bypass_supra=False):
+                            nextcs.remove(nextc)
+                            if Debug.panini:
+                                print(f"{c} before {nextc} is blocked by the more specific {c2} by Panini's principle.")
+                # The mixed case which isn't resolvable now: X / Y_Z
+                # conditionally blocks all rules X / V_W where Y and Z
+                # are more specific than V and W. At parse time, if
+                # the last parse before X matches the context Y, then
+                # we can block the parse. The ROMANCE intervocalic
+                # lenition rules exercise this case a lot.
+                elif (more_specific_left_context(c2, c) and
+                      more_specific_right_context(c2, c)):
+                    for nextc in list(nextcs):
+                        if matches_context(nextc, c2, bypass_supra=False):
+                            blocked_given_map[(c, nextc)] = make_blocked_given(c2)
+                            if Debug.panini:
+                                print(f"{c} before {nextc} is conditionally blocked by the more specific {c2} by Panini's principle.")
+
+    return next_map, blocked_given_map
 
 # build a map from tokens to lists of rules containing the token key.
 # also return all possible token lengths, sorted
@@ -553,9 +638,8 @@ def make_apply_rules(parameters, language):
 
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon
-def make_tokenizer(parameters, accessor, next_map):
+def make_tokenizer(parameters, accessor, next_map, blocked_given_map):
     regex = parameters.syllable_canon.regex
-    sound_classes = parameters.syllable_canon.sound_classes
     supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
     rule_map, token_lengths = partition_correspondences(
@@ -566,12 +650,15 @@ def make_tokenizer(parameters, accessor, next_map):
     def partial_regex_match(syllable_parse):
         return regex.fullmatch(syllable_parse, partial=True)
 
+    def constantly_false(x):
+        return False
+
     def tokenize(form, statistics):
         parses = set()
         attempts = set()
         form_length = len(form)
 
-        def gen(position, parse, last, syllable_parse):
+        def gen(position, parse, last, lastlast, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
             making sure to skip over suprasegmental features when matching
             contexts.
@@ -604,11 +691,13 @@ def make_tokenizer(parameters, accessor, next_map):
                 return
             # otherwise keep building parses from epenthesis rules
             for c in rule_map['∅']:
-                if c in next_map[last]:
+                if (c in next_map[last] and
+                    not blocked_given_map.get((last, c), constantly_false)(lastlast)):
                     for syllable_type in c.syllable_types:
                         gen(position,
                             parse + [c],
                             last if c.proto_form in supra_segmentals else c,
+                            lastlast if c.proto_form in supra_segmentals else last,
                             syllable_parse + syllable_type)
             if position >= form_length:
                 #if Debug.debug:
@@ -619,14 +708,16 @@ def make_tokenizer(parameters, accessor, next_map):
                 if next_position > form_length:
                     break
                 for c in rule_map[form[position:next_position]]:
-                    if c in next_map[last]:
+                    if (c in next_map[last] and
+                        not blocked_given_map.get((last, c), constantly_false)(lastlast)):
                         for syllable_type in c.syllable_types:
                             gen(next_position,
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
+                                lastlast if c.proto_form in supra_segmentals else last,
                                 syllable_parse + syllable_type)
 
-        gen(0, [], parameters.table.initial_marker, '')
+        gen(0, [], parameters.table.initial_marker, None, '')
         if Debug.debug:
             statistics.add_debug_note(f'{len(parses)} reconstructions generated')
             for p in attempts:
@@ -658,7 +749,7 @@ def postdict_daughter_forms(proto_form, parameters):
 # return a mapping from reconstructions to its supporting forms
 def project_back(lexicons, parameters, statistics):
     reconstructions = collections.defaultdict(list)
-    next_map = next_correspondence_map(parameters)
+    next_map, blocked_given_map = next_correspondence_map(parameters)
     number_of_forms = 0
     for lexicon in lexicons:
         # we don't want to tokenize the same glyphs more than once, so
@@ -667,7 +758,7 @@ def project_back(lexicons, parameters, statistics):
         daughter_form = lambda c: c.daughter_forms[lexicon.language]
         count_of_parses = 0
         count_of_no_parses = 0
-        tokenize = make_tokenizer(parameters, daughter_form, next_map)
+        tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map)
         apply_rules = make_apply_rules(parameters, lexicon.language)
         forms_to_parse = lexicon.forms
         # There's no reason to fuzzy the exceptional forms, because
