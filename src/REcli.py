@@ -130,13 +130,9 @@ elif command_args.command == 'upstream':
     B.statistics.add_stat('sankey', f'{len(B.isolates.supporting_forms)},{len(B.failures.supporting_forms)},{B.statistics.summary_stats["reflexes"]}')
     stats_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.upstream.statistics.xml')
     serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
-    print('serializing proto_lexicon')
-    serialize.serialize_proto_lexicon(
-        B,
-        os.path.join(args.project_path, f'{args.project}.{args.run}.sets.json'))
     # make comparisons if there are things to compare
-    for what_to_compare in 'upstream evaluation mel'.split(' '):
-        compare.compare(args.project_path, args.project, what_to_compare)
+    # for what_to_compare in 'upstream evaluation mel'.split(' '):
+    #    compare.compare(args.project_path, args.project, what_to_compare)
     print(time.asctime())
 else:
     print(f'unknown command {command_args.command}')

@@ -416,6 +416,3 @@ def serialize_mels(mel_sets, mel_name, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
-def serialize_proto_lexicon(proto_lexicon, filename):
-    with open(filename, 'wb') as f:
-        pickle.dump(proto_lexicon, f)
