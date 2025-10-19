@@ -17,6 +17,7 @@
           % short_files = {}
           % for file in files:
           % short_file = file.replace(data['project'] + '.','').replace('.' + file_type + '.xml','')
+          % short_file = file.replace(data['project'] + '.','').replace('.rechk','')
           % short_parts = short_file.split('.')
           % if len(short_parts) == 2:
           % short_file = f'{short_parts[0]} {short_parts[1]}'

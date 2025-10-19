@@ -106,9 +106,6 @@ def data_files(tree, directory):
     # filelist = [f for f in filelist if '.xml' in f]
     to_display = []
     num_files = 0
-    for type in 'rechk'.split(' '):
-        to_display.append((f'{type}', [f for f in filelist if f'.{type}' in f]))
-        num_files += len([f for f in filelist if f'{type}' in f])
     for type in 'statistics compare'.split(' '):
         to_display.append((f'{type}', [f for f in filelist if f'{type}.xml' in f]))
         num_files += len([f for f in filelist if f'{type}.xml' in f])
@@ -121,6 +118,9 @@ def data_files(tree, directory):
     for type in 'correspondences data u8 keys'.split(' '):
         to_display.append((f'{type} csv', [f for f in filelist if f'{type}.csv' in f]))
         num_files += len([f for f in filelist if f'{type}.csv' in f])
+    for type in 'rechk'.split(' '):
+        to_display.append((f'{type}', [f for f in filelist if f'.{type}' in f]))
+        num_files += len([f for f in filelist if f'{type}' in f])
     for type in 'keys sets coverage'.split(' '):
         to_display.append((f'{type} txt', [f for f in filelist if f'{type}.txt' in f]))
         num_files += len([f for f in filelist if f'{type}.txt' in f])
