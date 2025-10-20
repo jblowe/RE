@@ -5,7 +5,7 @@
       <class name="V" value="a,e,ě,ę,ę̄,i,ĭ,o,ǫ,ǭ,u,ŭ,y"/>
       <class name="F" value="ĭ,i,e,ě,ę,ę̄"/>
       <class name="S" value="lʹ,ř,č,ž,š,j"/>
-      <canon name="syllabe" value="V|(V?((CC?C?V)|((CC?C?Y)?(CC?C?y)))+)"/>
+      <canon name="syllabe" value="V|(V?(CC?C?y)?((CC?C?V)|(((CC?C?Y)|(CC?C?V))(CC?C?y)))*)"/>
       <spec name="supra_segmentals" value="ˈ"/>
       <context_match_type name="context_match_type" value="constituent"/>
    </parameters>
