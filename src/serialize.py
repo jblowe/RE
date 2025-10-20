@@ -96,8 +96,17 @@ def serialize_lexicon(lexicon, filename):
     ET.SubElement(root, 'createdat').text = run_date
 
     for (number, form) in enumerate(lexicon.forms):
-        add_entry(root, form, number)
-
+        entry = ET.SubElement(root, 'entry', attrib={'id': f'{lexicon.language.lower()}.{number + 1}'})
+        try:
+            ET.SubElement(entry, 'gl').text = form.gloss
+        except:
+            ET.SubElement(entry, 'gl').text = 'missing'
+            print(f'error in {lexicon.language} {number} {form.glyphs} {form.gloss}')
+        try:
+            ET.SubElement(entry, 'hw').text = form.glyphs
+        except:
+            ET.SubElement(entry, 'hw').text = 'missing'
+            print(f'conversion error in {lexicon.language} {number} {form.glyphs} {form.gloss}')
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
