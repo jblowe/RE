@@ -25,16 +25,20 @@
     <hw>oni</hw>
   </entry>
   <entry id="bcs.13">
-    <gl>this</gl>
-    <hw>ovaj, taj</hw>
+    <gl>this, that</gl>
+    <hw>ovaj</hw>
   </entry>
-  <entry id="bcs.15">
-    <gl>that</gl>
-    <hw>taj, onaj</hw>
+  <entry id="bcs.13.5">
+    <gl>this, that</gl>
+    <hw>taj</hw>
   </entry>
   <entry id="bcs.17">
     <gl>here</gl>
-    <hw>ovde, ovdje</hw>
+    <hw>ovde</hw>
+  </entry>
+  <entry id="bcs.17.5">
+    <gl>here</gl>
+    <hw>ovdje</hw>
   </entry>
   <entry id="bcs.19">
     <gl>there</gl>
@@ -42,15 +46,27 @@
   </entry>
   <entry id="bcs.21">
     <gl>who</gl>
-    <hw>ko, tko</hw>
+    <hw>ko</hw>
+  </entry>
+  <entry id="bcs.21.5">
+    <gl>who</gl>
+    <hw>tko</hw>
   </entry>
   <entry id="bcs.23">
     <gl>what</gl>
-    <hw>što, šta</hw>
+    <hw>što</hw>
+  </entry>
+  <entry id="bcs.23.5">
+    <gl>what</gl>
+    <hw>šta</hw>
   </entry>
   <entry id="bcs.25">
     <gl>where</gl>
-    <hw>gde, gdje</hw>
+    <hw>gde</hw>
+  </entry>
+  <entry id="bcs.25.5">
+    <gl>where</gl>
+    <hw>gdje</hw>
   </entry>
   <entry id="bcs.27">
     <gl>when</gl>
@@ -70,7 +86,11 @@
   </entry>
   <entry id="bcs.35">
     <gl>many</gl>
-    <hw>mnogo, puno</hw>
+    <hw>mnogo</hw>
+  </entry>
+  <entry id="bcs.35.5">
+    <gl>many</gl>
+    <hw>puno</hw>
   </entry>
   <entry id="bcs.37">
     <gl>some</gl>
@@ -110,7 +130,11 @@
   </entry>
   <entry id="bcs.55">
     <gl>long</gl>
-    <hw>dug, dugačak</hw>
+    <hw>dug</hw>
+  </entry>
+    <entry id="bcs.55.5">
+    <gl>long</gl>
+    <hw>dugačak</hw>
   </entry>
   <entry id="bcs.57">
     <gl>wide</gl>
@@ -150,19 +174,35 @@
   </entry>
   <entry id="bcs.75">
     <gl>man (human being)</gl>
-    <hw>čovek, čovjek</hw>
+    <hw>čovek</hw>
+  </entry>
+    <entry id="bcs.75.5">
+    <gl>man (human being)</gl>
+    <hw>čovjek</hw>
   </entry>
   <entry id="bcs.77">
     <gl>child</gl>
-    <hw>dete, dijete</hw>
+    <hw>dete</hw>
+  </entry>
+  <entry id="bcs.77.5">
+    <gl>child</gl>
+    <hw>dijete</hw>
   </entry>
   <entry id="bcs.79">
     <gl>wife</gl>
-    <hw>žena, supruga</hw>
+    <hw>žena</hw>
+  </entry>
+  <entry id="bcs.79.5">
+    <gl>wife</gl>
+    <hw>supruga</hw>
   </entry>
   <entry id="bcs.81">
     <gl>husband</gl>
-    <hw>muž, suprug</hw>
+    <hw>muž</hw>
+  </entry>
+  <entry id="bcs.81.5">
+    <gl>husband</gl>
+    <hw>suprug</hw>
   </entry>
   <entry id="bcs.83">
     <gl>mother</gl>
@@ -190,7 +230,11 @@
   </entry>
   <entry id="bcs.95">
     <gl>louse</gl>
-    <hw>uš, vaš</hw>
+    <hw>uš</hw>
+  </entry>
+  <entry id="bcs.95.5">
+    <gl>louse</gl>
+    <hw>vaš</hw>
   </entry>
   <entry id="bcs.97">
     <gl>snake</gl>
@@ -198,7 +242,11 @@
   </entry>
   <entry id="bcs.99">
     <gl>worm</gl>
-    <hw>crv, glista</hw>
+    <hw>crv</hw>
+  </entry>
+  <entry id="bcs.99.5">
+    <gl>worm</gl>
+    <hw>glista</hw>
   </entry>
   <entry id="bcs.101">
     <gl>tree</gl>
@@ -210,15 +258,31 @@
   </entry>
   <entry id="bcs.105">
     <gl>stick</gl>
-    <hw>štap, prut, drška</hw>
+    <hw>štap</hw>
+  </entry>
+  <entry id="bcs.105.3">
+    <gl>stick</gl>
+    <hw>prut</hw>
+  </entry>
+  <entry id="bcs.105.6">
+    <gl>stick</gl>
+    <hw>drška</hw>
   </entry>
   <entry id="bcs.107">
     <gl>fruit</gl>
-    <hw>voće, plod</hw>
+    <hw>voće</hw>
+  </entry>
+  <entry id="bcs.107.5">
+    <gl>fruit</gl>
+    <hw>plod</hw>
   </entry>
   <entry id="bcs.109">
     <gl>seed</gl>
-    <hw>seme, sjeme</hw>
+    <hw>seme</hw>
+  </entry>
+  <entry id="bcs.109.5">
+    <gl>seed</gl>
+    <hw>sjeme</hw>
   </entry>
   <entry id="bcs.111">
     <gl>leaf</gl>
@@ -226,7 +290,11 @@
   </entry>
   <entry id="bcs.113">
     <gl>root</gl>
-    <hw>koren, korijen</hw>
+    <hw>koren</hw>
+  </entry>
+    <entry id="bcs.113.5">
+    <gl>root</gl>
+    <hw>korijen</hw>
   </entry>
   <entry id="bcs.115">
     <gl>bark (of a tree)</gl>
@@ -234,7 +302,11 @@
   </entry>
   <entry id="bcs.117">
     <gl>flower</gl>
-    <hw>cvet, cvijet</hw>
+    <hw>cvet</hw>
+  </entry>
+    <entry id="bcs.117.5">
+    <gl>flower</gl>
+    <hw>cvijet</hw>
   </entry>
   <entry id="bcs.119">
     <gl>grass</gl>
@@ -242,7 +314,15 @@
   </entry>
   <entry id="bcs.121">
     <gl>rope</gl>
-    <hw>konopac, uže, špaga</hw>
+    <hw>konopac</hw>
+  </entry>
+  <entry id="bcs.121.3">
+    <gl>rope</gl>
+    <hw>uže</hw>
+  </entry>
+  <entry id="bcs.121.6">
+    <gl>rope</gl>
+    <hw>špaga</hw>
   </entry>
   <entry id="bcs.123">
     <gl>skin</gl>
@@ -262,7 +342,11 @@
   </entry>
   <entry id="bcs.131">
     <gl>fat (noun)</gl>
-    <hw>mast, salo</hw>
+    <hw>mast</hw>
+  </entry>
+   <entry id="bcs.131.5">
+    <gl>fat (noun)</gl>
+    <hw>salo</hw>
   </entry>
   <entry id="bcs.133">
     <gl>egg</gl>
@@ -282,7 +366,15 @@
   </entry>
   <entry id="bcs.141">
     <gl>hair</gl>
-    <hw>kosa, dlaka, vlas</hw>
+    <hw>kosa</hw>
+  </entry>
+  <entry id="bcs.141.3">
+    <gl>hair</gl>
+    <hw>dlaka</hw>
+  </entry>
+  <entry id="bcs.141.6">
+    <gl>hair</gl>
+    <hw>vlas</hw>
   </entry>
   <entry id="bcs.143">
     <gl>head</gl>
@@ -290,7 +382,11 @@
   </entry>
   <entry id="bcs.145">
     <gl>ear</gl>
-    <hw>uho, uvo</hw>
+    <hw>uho</hw>
+  </entry>
+  <entry id="bcs.145.5">
+    <gl>ear</gl>
+    <hw>uvo</hw>
   </entry>
   <entry id="bcs.147">
     <gl>eye</gl>
@@ -318,7 +414,11 @@
   </entry>
   <entry id="bcs.159">
     <gl>foot</gl>
-    <hw>stopa, stopalo</hw>
+    <hw>stopa</hw>
+  </entry>
+  <entry id="bcs.159.5">
+    <gl>foot</gl>
+    <hw>stopalo</hw>
   </entry>
   <entry id="bcs.161">
     <gl>leg</gl>
@@ -326,11 +426,19 @@
   </entry>
   <entry id="bcs.163">
     <gl>knee</gl>
-    <hw>koleno, koljeno</hw>
+    <hw>koleno</hw>
+  </entry>
+  <entry id="bcs.163.5">
+    <gl>knee</gl>
+    <hw>koljeno</hw>
   </entry>
   <entry id="bcs.165">
     <gl>hand</gl>
-    <hw>ruka, šaka</hw>
+    <hw>ruka</hw>
+  </entry>
+  <entry id="bcs.165.5">
+    <gl>hand</gl>
+    <hw>šaka</hw>
   </entry>
   <entry id="bcs.167">
     <gl>wing</gl>
@@ -338,11 +446,19 @@
   </entry>
   <entry id="bcs.169">
     <gl>belly</gl>
-    <hw>stomak, trbuh</hw>
+    <hw>stomak</hw>
+  </entry>
+  <entry id="bcs.169.5">
+    <gl>belly</gl>
+    <hw>trbuh</hw>
   </entry>
   <entry id="bcs.171">
     <gl>guts</gl>
-    <hw>crevo, crijevo</hw>
+    <hw>crevo</hw>
+  </entry>
+    <entry id="bcs.171.5">
+    <gl>guts</gl>
+    <hw>crijevo</hw>
   </entry>
   <entry id="bcs.173">
     <gl>neck</gl>
@@ -354,7 +470,11 @@
   </entry>
   <entry id="bcs.177">
     <gl>breast</gl>
-    <hw>grudi, prsa</hw>
+    <hw>grudi</hw>
+  </entry>
+    <entry id="bcs.177.5">
+    <gl>breast</gl>
+    <hw>prsa</hw>
   </entry>
   <entry id="bcs.179">
     <gl>heart</gl>
@@ -374,7 +494,11 @@
   </entry>
   <entry id="bcs.187">
     <gl>to bite</gl>
-    <hw>ujesti, ugristi</hw>
+    <hw>ujesti</hw>
+  </entry>
+  <entry id="bcs.187.5">
+    <gl>to bite</gl>
+    <hw>ugristi</hw>
   </entry>
   <entry id="bcs.189">
     <gl>to suck</gl>
@@ -390,7 +514,11 @@
   </entry>
   <entry id="bcs.195">
     <gl>to blow</gl>
-    <hw>puhati, duvati</hw>
+    <hw>puhati</hw>
+  </entry>
+  <entry id="bcs.195.5">
+    <gl>to blow</gl>
+    <hw>duvati</hw>
   </entry>
   <entry id="bcs.197">
     <gl>to breathe</gl>
@@ -398,11 +526,19 @@
   </entry>
   <entry id="bcs.199">
     <gl>to laugh</gl>
-    <hw>smijati se, smejati se</hw>
+    <hw>smijati se</hw>
+  </entry>
+  <entry id="bcs.199.5">
+    <gl>to laugh</gl>
+    <hw>smejati se</hw>
   </entry>
   <entry id="bcs.201">
     <gl>to see</gl>
-    <hw>videti, vidjeti</hw>
+    <hw>videti</hw>
+  </entry>
+  <entry id="bcs.201">
+    <gl>to see</gl>
+    <hw>vidjeti</hw>
   </entry>
   <entry id="bcs.203">
     <gl>to hear</gl>
@@ -422,7 +558,15 @@
   </entry>
   <entry id="bcs.211">
     <gl>to fear</gl>
-    <hw>plašiti, bojati se, strahovati</hw>
+    <hw>plašiti</hw>
+  </entry>
+  <entry id="bcs.211.3">
+    <gl>to fear</gl>
+    <hw>bojati se</hw>
+  </entry>
+  <entry id="bcs.211.6">
+    <gl>to fear</gl>
+    <hw>strahovati</hw>
   </entry>
   <entry id="bcs.213">
     <gl>to sleep</gl>
@@ -430,11 +574,19 @@
   </entry>
   <entry id="bcs.215">
     <gl>to live</gl>
-    <hw>živeti, živjeti</hw>
+    <hw>živjeti</hw>
+  </entry>
+  <entry id="bcs.215.5">
+    <gl>to live</gl>
+    <hw>živjeti</hw>
   </entry>
   <entry id="bcs.217">
     <gl>to die</gl>
-    <hw>umreti, umrijeti</hw>
+    <hw>umreti</hw>
+  </entry>
+  <entry id="bcs.217.5">
+    <gl>to die</gl>
+    <hw>umrijeti</hw>
   </entry>
   <entry id="bcs.219">
     <gl>to kill</gl>
@@ -442,7 +594,11 @@
   </entry>
   <entry id="bcs.221">
     <gl>to fight</gl>
-    <hw>tući, boriti se</hw>
+    <hw>tući</hw>
+  </entry>
+  <entry id="bcs.221.5">
+    <gl>to fight</gl>
+    <hw>boriti se</hw>
   </entry>
   <entry id="bcs.223">
     <gl>to hunt</gl>
@@ -452,13 +608,25 @@
     <gl>to hit</gl>
     <hw>udarati</hw>
   </entry>
+  <entry id="bcs.227.3">
+    <gl>to cut</gl>
+    <hw>seći</hw>
+  </entry>
+  <entry id="bcs.227.6">
+    <gl>to cut</gl>
+    <hw>sjeći</hw>
+  </entry>
   <entry id="bcs.227">
     <gl>to cut</gl>
-    <hw>seći, sjeći, rezati</hw>
+    <hw>rezati</hw>
   </entry>
   <entry id="bcs.229">
     <gl>to split</gl>
-    <hw>deliti, dijeliti</hw>
+    <hw>deliti</hw>
+  </entry>
+  <entry id="bcs.229.5">
+    <gl>to split</gl>
+    <hw>dijeliti</hw>
   </entry>
   <entry id="bcs.231">
     <gl>to stab</gl>
@@ -478,7 +646,11 @@
   </entry>
   <entry id="bcs.239">
     <gl>to fly</gl>
-    <hw>leteti, letjeti</hw>
+    <hw>leteti</hw>
+  </entry>
+  <entry id="bcs.239.5">
+    <gl>to fly</gl>
+    <hw>letjeti</hw>
   </entry>
   <entry id="bcs.241">
     <gl>to walk</gl>
@@ -494,7 +666,11 @@
   </entry>
   <entry id="bcs.247">
     <gl>to sit</gl>
-    <hw>sedeti, sjediti</hw>
+    <hw>sedeti</hw>
+  </entry>
+  <entry id="bcs.247.5">
+    <gl>to sit</gl>
+    <hw>sjediti</hw>
   </entry>
   <entry id="bcs.249">
     <gl>to stand</gl>
@@ -518,7 +694,11 @@
   </entry>
   <entry id="bcs.259">
     <gl>to squeeze</gl>
-    <hw>stisnuti, stegnuti</hw>
+    <hw>stisnuti</hw>
+  </entry>
+  <entry id="bcs.259.5">
+    <gl>to squeeze</gl>
+    <hw>stegnuti</hw>
   </entry>
   <entry id="bcs.261">
     <gl>to rub</gl>
@@ -554,15 +734,27 @@
   </entry>
   <entry id="bcs.277">
     <gl>to count</gl>
-    <hw>brojati, brojiti</hw>
+    <hw>brojati</hw>
+  </entry>
+  <entry id="bcs.277.5">
+    <gl>to count</gl>
+    <hw>brojiti</hw>
   </entry>
   <entry id="bcs.279">
     <gl>to say</gl>
-    <hw>reći, kazati</hw>
+    <hw>reći</hw>
+  </entry>
+  <entry id="bcs.279.5">
+    <gl>to say</gl>
+    <hw>kazati</hw>
   </entry>
   <entry id="bcs.281">
     <gl>to sing</gl>
-    <hw>pevati, pjevati</hw>
+    <hw>pevati</hw>
+  </entry>
+  <entry id="bcs.281.5">
+    <gl>to sing</gl>
+    <hw>pjevati</hw>
   </entry>
   <entry id="bcs.283">
     <gl>to play</gl>
@@ -570,7 +762,11 @@
   </entry>
   <entry id="bcs.285">
     <gl>to float</gl>
-    <hw>plutati, ploviti</hw>
+    <hw>plutati</hw>
+  </entry>
+  <entry id="bcs.285.5">
+    <gl>to float</gl>
+    <hw>ploviti</hw>
   </entry>
   <entry id="bcs.287">
     <gl>to flow</gl>
@@ -578,11 +774,19 @@
   </entry>
   <entry id="bcs.289">
     <gl>to freeze</gl>
-    <hw>zalediti, smrznuti</hw>
+    <hw>zalediti</hw>
+  </entry>
+  <entry id="bcs.289.5">
+    <gl>to freeze</gl>
+    <hw>smrznuti</hw>
   </entry>
   <entry id="bcs.291">
     <gl>to swell</gl>
-    <hw>oteći, oteknuti</hw>
+    <hw>oteći</hw>
+  </entry>
+  <entry id="bcs.291.5">
+    <gl>to swell</gl>
+    <hw>oteknuti</hw>
   </entry>
   <entry id="bcs.293">
     <gl>sun</gl>
@@ -590,7 +794,11 @@
   </entry>
   <entry id="bcs.295">
     <gl>moon</gl>
-    <hw>mesec, mjesec</hw>
+    <hw>mesec</hw>
+  </entry>
+  <entry id="bcs.295.6">
+    <gl>moon</gl>
+    <hw>mjesec</hw>
   </entry>
   <entry id="bcs.297">
     <gl>star</gl>
@@ -610,7 +818,11 @@
   </entry>
   <entry id="bcs.303">
     <gl>river</gl>
-    <hw>reka, rijeka</hw>
+    <hw>reka</hw>
+  </entry>
+  <entry id="bcs.303.5">
+    <gl>river</gl>
+    <hw>rijeka</hw>
   </entry>
   <entry id="bcs.305">
     <gl>lake</gl>
@@ -622,15 +834,31 @@
   </entry>
   <entry id="bcs.309">
     <gl>salt</gl>
-    <hw>sol, so</hw>
+    <hw>sol</hw>
+  </entry>
+  <entry id="bcs.309.5">
+    <gl>salt</gl>
+    <hw>so</hw>
   </entry>
   <entry id="bcs.311">
     <gl>stone</gl>
-    <hw>kamen, stena, stijena</hw>
+    <hw>kamen</hw>
+  </entry>
+  <entry id="bcs.311.3">
+    <gl>stone</gl>
+    <hw>stena</hw>
+  </entry>
+  <entry id="bcs.311.6">
+    <gl>stone</gl>
+    <hw>stijena</hw>
   </entry>
   <entry id="bcs.313">
     <gl>sand</gl>
-    <hw>pesak, pijesak</hw>
+    <hw>pesak</hw>
+  </entry>
+  <entry id="bcs.313.5">
+    <gl>sand</gl>
+    <hw>pijesak</hw>
   </entry>
   <entry id="bcs.315">
     <gl>dust</gl>
@@ -654,11 +882,19 @@
   </entry>
   <entry id="bcs.325">
     <gl>wind</gl>
-    <hw>vetar, vjetar</hw>
+    <hw>vetar</hw>
+  </entry>
+  <entry id="bcs.325.5">
+    <gl>wind</gl>
+    <hw>vjetar</hw>
   </entry>
   <entry id="bcs.327">
     <gl>snow</gl>
-    <hw>sneg, snijeg</hw>
+    <hw>sneg</hw>
+  </entry>
+  <entry id="bcs.327.5">
+    <gl>snow</gl>
+    <hw>snijeg</hw>
   </entry>
   <entry id="bcs.329">
     <gl>ice</gl>
@@ -678,7 +914,11 @@
   </entry>
   <entry id="bcs.337">
     <gl>to burn</gl>
-    <hw>goreti, gorjeti</hw>
+    <hw>goreti</hw>
+  </entry>
+  <entry id="bcs.337.5">
+    <gl>to burn</gl>
+    <hw>gorjeti</hw>
   </entry>
   <entry id="bcs.339">
     <gl>road</gl>
@@ -706,7 +946,11 @@
   </entry>
   <entry id="bcs.351">
     <gl>white</gl>
-    <hw>beo, bijel</hw>
+    <hw>beo</hw>
+  </entry>
+  <entry id="bcs.351.5">
+    <gl>white</gl>
+    <hw>bijel</hw>
   </entry>
   <entry id="bcs.353">
     <gl>black</gl>
@@ -730,7 +974,11 @@
   </entry>
   <entry id="bcs.363">
     <gl>cold</gl>
-    <hw>hladno, hladnoća</hw>
+    <hw>hladno</hw>
+  </entry>
+  <entry id="bcs.363.5">
+    <gl>cold</gl>
+    <hw>hladnoća</hw>
   </entry>
   <entry id="bcs.365">
     <gl>full</gl>
@@ -754,7 +1002,11 @@
   </entry>
   <entry id="bcs.375">
     <gl>rotten</gl>
-    <hw>truo, gnjio</hw>
+    <hw>truo</hw>
+  </entry>
+  <entry id="bcs.375.5">
+    <gl>rotten</gl>
+    <hw>gnjio</hw>
   </entry>
   <entry id="bcs.377">
     <gl>dirty</gl>
@@ -762,11 +1014,19 @@
   </entry>
   <entry id="bcs.379">
     <gl>straight</gl>
-    <hw>prav, ravan</hw>
+    <hw>prav</hw>
+  </entry>
+  <entry id="bcs.379.5">
+    <gl>straight</gl>
+    <hw>ravan</hw>
   </entry>
   <entry id="bcs.381">
     <gl>round</gl>
-    <hw>obao, okrugao</hw>
+    <hw>obao</hw>
+  </entry>
+  <entry id="bcs.381.5">
+    <gl>round</gl>
+    <hw>okrugao</hw>
   </entry>
   <entry id="bcs.383">
     <gl>sharp (as a knife)</gl>
@@ -790,7 +1050,11 @@
   </entry>
   <entry id="bcs.393">
     <gl>correct</gl>
-    <hw>točan, tačan</hw>
+    <hw>točan</hw>
+  </entry>
+  <entry id="bcs.393">
+    <gl>correct</gl>
+    <hw>tačan</hw>
   </entry>
   <entry id="bcs.395">
     <gl>near</gl>
@@ -806,7 +1070,11 @@
   </entry>
   <entry id="bcs.401">
     <gl>left</gl>
-    <hw>levo, lijevo</hw>
+    <hw>levo</hw>
+  </entry>
+  <entry id="bcs.401.5">
+    <gl>left</gl>
+    <hw>lijevo</hw>
   </entry>
   <entry id="bcs.403">
     <gl>at</gl>
@@ -818,7 +1086,11 @@
   </entry>
   <entry id="bcs.407">
     <gl>with</gl>
-    <hw>s, sa</hw>
+    <hw>s</hw>
+  </entry>
+  <entry id="bcs.407.5">
+    <gl>with</gl>
+    <hw>sa</hw>
   </entry>
   <entry id="bcs.409">
     <gl>and</gl>
@@ -830,7 +1102,19 @@
   </entry>
   <entry id="bcs.413">
     <gl>because</gl>
-    <hw>zato, radi, jer, budući da</hw>
+    <hw>zato</hw>
+  </entry>
+  <entry id="bcs.413.25">
+    <gl>because</gl>
+    <hw>radi</hw>
+  </entry>
+  <entry id="bcs.413.5">
+    <gl>because</gl>
+    <hw>jer</hw>
+  </entry>
+  <entry id="bcs.413.75">
+    <gl>because</gl>
+    <hw>budući da</hw>
   </entry>
   <entry id="bcs.415">
     <gl>name</gl>
