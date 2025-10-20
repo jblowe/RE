@@ -248,6 +248,7 @@ class ModernForm(Form):
         super().__init__(language, glyphs)
         self.gloss = gloss
         self.id = id
+        self.attested_support = frozenset([self])
 
     def __str__(self):
         return f'{super().__str__()}\t{self.gloss}\t{self.id}'
@@ -271,7 +272,7 @@ class Stage0Form(Form):
         self.modern = form
         self.gloss = form.gloss
         self.history = history
-        self.attested_support = frozenset([form])
+        self.attested_support = form.attested_support
 
     def __str__(self):
         return f'{"proto-" + self.language} *{self.glyphs}\t{self.gloss}'
@@ -304,7 +305,7 @@ class AlternateForm(Form):
         self.language = actual.language
         self.actual = actual
         self.gloss = actual.gloss
-        self.attested_support = frozenset([actual])
+        self.attested_support = actual.attested_support
 
     def __str__(self):
         return 'An alternate form for {self.actual}'
@@ -821,10 +822,7 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
         else:
             attested = set()
             for x in support:
-                if isinstance(x, ModernForm):
-                    attested.add(x)
-                else:
-                    attested |= x.attested_support
+                attested |= x.attested_support
             freeze = frozenset(attested)
             attested_forms_memo[support] = freeze
             return freeze
