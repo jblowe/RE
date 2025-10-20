@@ -2,7 +2,7 @@ import read
 import utils
 from mel import search_mels
 from RE import Statistics
-from collections import Counter
+from collections import Counter, defaultdict
 
 
 # Coverage utilities
@@ -23,7 +23,8 @@ def check_mel_coverage(settings):
         mel_usage[mel.id] = {}
         number_of_mels += 1
     attested_lexicons = read.read_attested_lexicons(settings)
-    mel_stats = dict([(x, 0) for x in mel_glosses])
+    mel_stats = Counter()
+    # dict([(x, 0) for x in mel_glosses])
     glosses = Counter()
     for language in attested_lexicons:
         glosses_not_matched_by_language[language] = set()
@@ -32,17 +33,20 @@ def check_mel_coverage(settings):
         forms = len(attested_lexicons[language].forms)
         for gloss in utils.glosses_by_language(attested_lexicons[language]):
             glosses[gloss] += 1
+            if 'daughter in law' in gloss:
+                pass
             matched_terms = search_mels(gloss, mel_glosses)
-            if len(matched_terms) == 0:
+            if len(matched_terms) != 0:
+                matched += 1
+                matched_glosses.add(gloss)
+                # mel_stats[gloss] += 1
+                for g in matched_terms:
+                    mel_stats[g] += 1
+            else:
                 not_matched += 1
                 glosses_not_matched_by_language[language].add(gloss)
                 unmatched_glosses.add(gloss)
                 # print(f'{language} {gloss}')
-            else:
-                matched += 1
-                matched_glosses.add(gloss)
-                for g in matched_terms:
-                    mel_stats[g] += 1
 
         print(f'{language}: {matched + not_matched} distinct glosses, {matched} matched, {not_matched} did not match, {forms} forms')
         coverage_statistics.language_stats[language] = {
