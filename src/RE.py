@@ -1182,8 +1182,7 @@ def extract_isolates(lexicon):
         non_isolate_forms |= proto_form.attested_support
     isolates = collections.defaultdict(list)
     for (correspondences, supporting_forms, attested_support, mel) in lexicon.statistics.singleton_support:
-        for form in list(attested_support) + [form for form in supporting_forms
-                                              if isinstance(form, AlternateForm)]:
+        for form in attested_support:
             if form not in non_isolate_forms:
                 isolates[form].append(ProtoForm(lexicon.language,
                                                 correspondences,
