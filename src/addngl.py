@@ -3,6 +3,7 @@ import sys
 import lxml.etree as ET
 import re
 from compute_gloss import compute_gloss
+from copy import deepcopy
 
 
 def update_dom(xml_filename, gloss_band):
@@ -39,28 +40,30 @@ def add_alternate_gloss(dom, gloss_band):
 
 def check_hw(dom):
     entries = dom.findall('entry')
+    # nb: this function rebuilds the dom from <entry>s
+    language = dom.getroot().attrib.get('dialecte')
+    new_dom = ET.Element('lexicon', attrib={'dialecte': language})
     for e in entries:
-        hw = e.find(f'.//hw')
-        if hw is None:
-            hw = e.find(f'.//var')
-        # add a headword element if there isn't one already
-        if hw is None:
-            hw_to_use = ET.Element('hw')
-            found = False
-            for tag in 'mar tag sya'.split(' '):
-                hw = e.find(f'.//{tag}')
-                if hw is not None:
-                    hw_to_use.text = hw.text
-                    found = True
-                    break
-            if not found:
-                # there was no headword. use a placeholder
-                hw_to_use.text = 'placeholder'
+        # the following tags can all be headwords. replicate article if they are found.
+        for tag in 'hw var mar tag sya'.split(' '):
+            hw = e.find(f'.//{tag}')
+            # add a headword element if there isn't one already
+            if hw is not None:
+                break
+        hw_to_use = ET.Element('hw')
+        if hw is not None:
+            hw_to_use.text = hw.text
+        else:
+            # there was no headword. use a placeholder
+            hw_to_use.text = 'placeholder'
+        # if we found a headword, use it. otherwise insert the other element as hw
+        if tag == 'hw':
+            adjust_hw(hw)
+        else:
             adjust_hw(hw_to_use)
             e.insert(0, hw_to_use)
-        else:
-            adjust_hw(hw)
-    return dom
+        new_dom.append(deepcopy(e))
+    return new_dom
 
 
 def adjust_hw(element):
