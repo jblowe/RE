@@ -602,11 +602,12 @@ def make_apply_rules(parameters, language):
         next_candidates = []
         for stage in reversed(range(max_stage + 1)):
             def gen_next_candidates(form, history):
-                # consume tokens from outcome, applying all possible
-                # applicable rules to build input, and also generate a
-                # form where nothing changed.
-                def gen(outcome, input, rqueue, applied_rules):
-                    if outcome == '':
+                form_length = len(form)
+                # consume tokens from the output form, applying all
+                # possible applicable rules to build input, and also
+                # generate a form where nothing changed.
+                def gen(position, input, rqueue, applied_rules):
+                    if position >= form_length:
                         if rqueue.end():
                             next_candidates.append((input,
                                                     [(input, applied_rules)] + history
@@ -614,19 +615,23 @@ def make_apply_rules(parameters, language):
                                                     else history))
                         return
                     for token_length in token_lengths:
-                        for rule in rule_map[outcome[:token_length]]:
+                        next_position = position + token_length
+                        if next_position > form_length:
+                            break
+                        for rule in rule_map[form[position:next_position]]:
                             if rule.stage == stage:
                                 rmatch = rqueue.match_consume(rule.input)
                                 if (rmatch
                                     and matches_this_left_context(rule, input)):
-                                    gen(outcome[token_length:],
+                                    gen(next_position,
                                         input + rule.input,
                                         rmatch.add_rule_right_contexts(rule),
                                         applied_rules + [rule])
-                    rmatch = rqueue.match_consume(outcome[0])
+                    next_token = form[position]
+                    rmatch = rqueue.match_consume(next_token)
                     if rmatch:
-                        gen(outcome[1:], input + outcome[0], rmatch, applied_rules)
-                gen(form, '', RContextQueue([]), [])
+                        gen(position + 1, input + next_token, rmatch, applied_rules)
+                gen(0, '', RContextQueue([]), [])
             for (candidate, history) in candidates:
                 gen_next_candidates(candidate, history)
             candidates = next_candidates
