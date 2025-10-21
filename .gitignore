@@ -9,6 +9,7 @@ dicos/tamang-*.xml
 __pycache__
 *.log
 *.analysis.txt
+*.rechk
 
 *.compare.txt
 *.default.txt
@@ -60,13 +61,14 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*/venv-gtk3/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
 
 #
 !Build/
