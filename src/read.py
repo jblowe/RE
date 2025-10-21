@@ -212,8 +212,6 @@ def read_lexicon(xmlfile):
 def create_lexicon_from_parms(language_forms):
     lexicons = {}
     for language,form in language_forms:
-        if not form:
-            continue
         forms = [RE.ModernForm(language,form,'','')]
         lexicons[language] = RE.Lexicon(language, forms, [])
     return lexicons

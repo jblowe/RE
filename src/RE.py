@@ -93,8 +93,8 @@ class Lexicon:
     # forms, some of which are marked as fuzzied.
     def fuzzied_forms(self, fuzzy):
         def fuzzy_string(mapping, string):
-            length = len(string)
-            old_string = string
+            if not string:
+                return ''
             new_string = []
             while string != '':
                 (longest_candidate, its_target, its_len) = (None, None, 0)
@@ -910,7 +910,7 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
     for cognate_set in cognate_sets:
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
-    statistics.add_note(f'{len(uniques)} distinct reconstructions with distinct supporting forms')
+    statistics.add_note(f'{len(uniques)} cognate sets with distinct reconstructions and distinct supporting forms')
     reflexes = sum([len(x[1]) for x in list(uniques.values())])
     statistics.add_note(f'{reflexes} reflexes in sets')
     statistics.add_stat('reflexes_in_sets', reflexes)
@@ -975,7 +975,7 @@ def interactive_upstream(settings, attested_lexicons, only_with_mel=False):
     # attested_lexicons are passed in for this type of upstream...
     return upstream_tree(settings.upstream_target,
                          settings.upstream,
-                         all_parameters(settings),
+                         parameter_tree_from_settings(settings),
                          attested_lexicons,
                          only_with_mel)
 
