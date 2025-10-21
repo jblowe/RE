@@ -9,6 +9,7 @@ dicos/tamang-*.xml
 __pycache__
 *.log
 *.analysis.txt
+*.rechk
 
 *.compare.txt
 *.default.txt
@@ -60,6 +61,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv-gtk3/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
