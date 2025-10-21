@@ -26,7 +26,11 @@
   </entry>
   <entry id="rus.7">
     <gl>this</gl>
-    <hw>э́то (éto), сё (sjo) (archaic, used in expressions)</hw>
+    <hw>éto</hw>
+  </entry>
+    <entry id="rus.7.5">
+    <gl>this (archaic, used in expressions)</gl>
+    <hw>sjo</hw>
   </entry>
   <entry id="rus.8">
     <gl>that</gl>
@@ -69,24 +73,44 @@
     <hw>ne</hw>
   </entry>
   <entry id="rus.18">
-    <gl>all</gl>
-    <hw>всё (vsjo) (everything), все (vse) (everybody)</hw>
+    <gl>everything</gl>
+    <hw>vsjo</hw>
+  </entry>
+  <entry id="rus.18.5">
+    <gl>all (everybody)</gl>
+    <hw>vse</hw>
   </entry>
   <entry id="rus.19">
     <gl>many</gl>
-    <hw>мно́гие (mnógije), мно́го (mnógo)</hw>
+    <hw>mnógije</hw>
+  </entry>
+    <entry id="rus.19">
+    <gl>many</gl>
+    <hw>mnógo</hw>
   </entry>
   <entry id="rus.20">
     <gl>some</gl>
-    <hw>не́сколько (néskolʹko), не́которые (nékotoryje)</hw>
+    <hw>néskolʹko</hw>
+  </entry>
+  <entry id="rus.20.5">
+    <gl>some</gl>
+    <hw>nékotoryje</hw>
   </entry>
   <entry id="rus.21">
     <gl>few</gl>
-    <hw>немно́гие (nemnógije), ма́ло (málo) (adverb)</hw>
+    <hw>nemnógije</hw>
+  </entry>
+  <entry id="rus.21.5">
+    <gl>few</gl>
+    <hw>málo</hw>
   </entry>
   <entry id="rus.22">
     <gl>other</gl>
-    <hw>друго́й (drugój), ино́й (inój)</hw>
+    <hw>drugój</hw>
+  </entry>
+  <entry id="rus.22.5">
+    <gl>other</gl>
+    <hw>inój</hw>
   </entry>
   <entry id="rus.23">
     <gl>one</gl>
@@ -110,31 +134,55 @@
   </entry>
   <entry id="rus.28">
     <gl>big</gl>
-    <hw>большо́й (bolʹšój), вели́кий (velíkij) (great), кру́пный (krúpnyj)</hw>
+    <hw>bolʹšój</hw>
+  </entry>
+  <entry id="rus.28.3">
+    <gl>big (great)</gl>
+    <hw>velíkij</hw>
+  </entry>
+  <entry id="rus.28.6">
+    <gl>big</gl>
+    <hw>krúpnyj</hw>
   </entry>
   <entry id="rus.29">
-    <gl>long</gl>
-    <hw>дли́нный (dlínnyj) (size), до́лгий (dólgij) (time)</hw>
+    <gl>long (size)</gl>
+    <hw>dlínnyj</hw>
+  </entry>
+    <entry id="rus.29.5">
+    <gl>long (time)</gl>
+    <hw>dólgij</hw>
   </entry>
   <entry id="rus.30">
     <gl>wide</gl>
-    <hw>широ́кий (širókij)</hw>
+    <hw>širókij</hw>
   </entry>
   <entry id="rus.31">
     <gl>thick</gl>
-    <hw>то́лстый (tólstyj)</hw>
+    <hw>tólstyj</hw>
   </entry>
   <entry id="rus.32">
     <gl>heavy</gl>
-    <hw>тяжёлый (tjažólyj), тя́жкий (tjážkij)</hw>
+    <hw>tjažólyj</hw>
+  </entry>
+    <entry id="rus.32.5">
+    <gl>heavy</gl>
+    <hw>tjážkij</hw>
   </entry>
   <entry id="rus.33">
     <gl>small</gl>
-    <hw>ма́ленький (málenʹkij), ма́лый (mályj)</hw>
+    <hw>málenʹkij</hw>
+  </entry>
+    <entry id="rus.33.5">
+    <gl>small</gl>
+    <hw>mályj</hw>
   </entry>
   <entry id="rus.34">
     <gl>short</gl>
-    <hw>коро́ткий (korótkij), кра́ткий (krátkij)</hw>
+    <hw>korótkij</hw>
+  </entry>
+    <entry id="rus.34.5">
+    <gl>short</gl>
+    <hw>krátkij</hw>
   </entry>
   <entry id="rus.35">
     <gl>narrow</gl>
@@ -158,27 +206,63 @@
   </entry>
   <entry id="rus.40">
     <gl>child</gl>
-    <hw>ребёнок (rebjónok), дитя́ (ditjá)</hw>
+    <hw>rebjónok</hw>
+  </entry>
+    <entry id="rus.40.5">
+    <gl>child</gl>
+    <hw>ditjá</hw>
   </entry>
   <entry id="rus.41">
     <gl>wife</gl>
-    <hw>жена́ (žená), супру́га (suprúga)</hw>
+    <hw>žená</hw>
+  </entry>
+    <entry id="rus.41.5">
+    <gl>wife</gl>
+    <hw>suprúga</hw>
   </entry>
   <entry id="rus.42">
     <gl>husband</gl>
-    <hw>муж (muž), супру́г (suprúg)</hw>
+    <hw>muž</hw>
+  </entry>
+    <entry id="rus.42.5">
+    <gl>husband</gl>
+    <hw>suprúg</hw>
   </entry>
   <entry id="rus.43">
     <gl>mother</gl>
-    <hw>мать (matʹ), ма́ма (máma), ма́тушка (mátuška)</hw>
+    <hw>matʹ</hw>
+  </entry>
+  <entry id="rus.43.3">
+    <gl>mother</gl>
+    <hw>máma</hw>
+  </entry>
+  <entry id="rus.43.6">
+    <gl>mother</gl>
+    <hw>mátuška</hw>
   </entry>
   <entry id="rus.44">
     <gl>father</gl>
-    <hw>оте́ц (otéc), па́па (pápa), ба́тюшка (bátjuška)</hw>
+    <hw>otéc</hw>
+  </entry>
+  <entry id="rus.44.3">
+    <gl>father</gl>
+    <hw>pápa</hw>
+  </entry>
+  <entry id="rus.44.6">
+    <gl>father</gl>
+    <hw>bátjuška</hw>
   </entry>
   <entry id="rus.45">
     <gl>animal</gl>
-    <hw>зверь (zverʹ), зверёк (zverjók), живо́тное (živótnoje)</hw>
+    <hw>zverʹ</hw>
+  </entry>
+  <entry id="rus.45.3">
+    <gl>animal</gl>
+    <hw>zverjók</hw>
+  </entry>
+  <entry id="rus.45.6">
+    <gl>animal</gl>
+    <hw>živótnoje</hw>
   </entry>
   <entry id="rus.46">
     <gl>fish</gl>
@@ -190,7 +274,11 @@
   </entry>
   <entry id="rus.48">
     <gl>dog</gl>
-    <hw>соба́ка (sobáka), пёс (pjos)</hw>
+    <hw>sobáka</hw>
+  </entry>
+  <entry id="rus.48.5">
+    <gl>dog</gl>
+    <hw>pjos</hw>
   </entry>
   <entry id="rus.49">
     <gl>louse</gl>
@@ -222,7 +310,11 @@
   </entry>
   <entry id="rus.56">
     <gl>fruit</gl>
-    <hw>плод (plod), фрукт (frukt)</hw>
+    <hw>plod</hw>
+  </entry>
+  <entry id="rus.56.5">
+    <gl>fruit</gl>
+    <hw>frukt</hw>
   </entry>
   <entry id="rus.57">
     <gl>seed</gl>
@@ -250,11 +342,19 @@
   </entry>
   <entry id="rus.63">
     <gl>rope</gl>
-    <hw>верёвка (verjóvka), бечёвка (bečóvka)</hw>
+    <hw>verjóvka</hw>
+  </entry>
+    <entry id="rus.63.5">
+    <gl>rope</gl>
+    <hw>bečóvka</hw>
   </entry>
   <entry id="rus.64">
     <gl>skin</gl>
-    <hw>ко́жа (kóža), шку́ра (škúra)</hw>
+    <hw>kóža</hw>
+  </entry>
+    <entry id="rus.64">
+    <gl>skin</gl>
+    <hw>škúra</hw>
   </entry>
   <entry id="rus.65">
     <gl>meat</gl>
@@ -290,11 +390,19 @@
   </entry>
   <entry id="rus.73">
     <gl>hair</gl>
-    <hw>во́лос (vólos), во́лосы (vólosy)</hw>
+    <hw>vólos</hw>
+  </entry>
+    <entry id="rus.73.5">
+    <gl>hair</gl>
+    <hw>vólosy</hw>
   </entry>
   <entry id="rus.74">
     <gl>head</gl>
-    <hw>голова́ (golová), глава́ (glavá) (archaic or poetic)</hw>
+    <hw>golová</hw>
+  </entry>
+    <entry id="rus.74.5">
+    <gl>head (archaic or poetic</gl>
+    <hw>glavá</hw>
   </entry>
   <entry id="rus.75">
     <gl>ear</gl>
@@ -302,7 +410,11 @@
   </entry>
   <entry id="rus.76">
     <gl>eye</gl>
-    <hw>глаз (glaz), о́ко (óko) (archaic, poetic or used in set expressions)</hw>
+    <hw>glaz</hw>
+  </entry>
+    <entry id="rus.76.5">
+    <gl>eye (archaic, poetic or used in set expressions)</gl>
+    <hw>óko</hw>
   </entry>
   <entry id="rus.77">
     <gl>nose</gl>
@@ -322,11 +434,15 @@
   </entry>
   <entry id="rus.81">
     <gl>fingernail</gl>
-    <hw>но́готь (nógotʹ)</hw>
+    <hw>nógotʹ</hw>
   </entry>
   <entry id="rus.82">
     <gl>foot</gl>
-    <hw>стопа́ (stopá), нога́ (nogá)</hw>
+    <hw>stopá</hw>
+  </entry>
+    <entry id="rus.82.5">
+    <gl>foot</gl>
+    <hw>nogá</hw>
   </entry>
   <entry id="rus.83">
     <gl>leg</gl>
@@ -346,11 +462,19 @@
   </entry>
   <entry id="rus.87">
     <gl>belly</gl>
-    <hw>живо́т (živót), брю́хо (brjúxo)</hw>
+    <hw>živót</hw>
+  </entry>
+  <entry id="rus.87.5">
+    <gl>belly</gl>
+    <hw>brjúxo</hw>
   </entry>
   <entry id="rus.88">
     <gl>guts</gl>
-    <hw>кишки́ (kiškí), вну́тренности (vnútrennosti)</hw>
+    <hw>kiškí</hw>
+  </entry>
+  <entry id="rus.88.5">
+    <gl>guts</gl>
+    <hw>vnútrennosti</hw>
   </entry>
   <entry id="rus.89">
     <gl>neck</gl>
@@ -370,67 +494,123 @@
   </entry>
   <entry id="rus.93">
     <gl>liver</gl>
-    <hw>пе́чень (péčenʹ), печёнка (pečónka)</hw>
+    <hw>péčenʹ</hw>
+  </entry>
+    <entry id="rus.93.5">
+    <gl>liver</gl>
+    <hw>pečónka</hw>
   </entry>
   <entry id="rus.94">
     <gl>to drink</gl>
-    <hw>пить (pitʹ), вы́пить (výpitʹ)</hw>
+    <hw>pitʹ</hw>
+  </entry>
+    <entry id="rus.94.5">
+    <gl>to drink</gl>
+    <hw>výpitʹ</hw>
   </entry>
   <entry id="rus.95">
     <gl>to eat</gl>
-    <hw>есть (jestʹ), съесть (sʺjestʹ), ку́шать (kúšatʹ), ску́шать (skúšatʹ)</hw>
+    <hw>jestʹ</hw>
+  </entry>
+  <entry id="rus.95.25">
+    <gl>to eat</gl>
+    <hw>sʺjestʹ</hw>
+  </entry>
+  <entry id="rus.95.5">
+    <gl>to eat</gl>
+    <hw>kúšatʹ</hw>
+  </entry>
+  <entry id="rus.95.75">
+    <gl>to eat</gl>
+    <hw>skúšatʹ</hw>
   </entry>
   <entry id="rus.96">
     <gl>to bite</gl>
-    <hw>куса́ть (kusátʹ), укуси́ть (ukusítʹ)</hw>
+    <hw>kusátʹ</hw>
+  </entry>
+    <entry id="rus.96.5">
+    <gl>to bite</gl>
+    <hw>ukusítʹ</hw>
   </entry>
   <entry id="rus.97">
     <gl>to suck</gl>
-    <hw>соса́ть (sosátʹ), пососа́ть (pososátʹ)</hw>
+    <hw>sosátʹ</hw>
+  </entry>
+    <entry id="rus.97.5">
+    <gl>to suck</gl>
+    <hw>pososátʹ</hw>
   </entry>
   <entry id="rus.98">
     <gl>to spit</gl>
-    <hw>плева́ть (plevátʹ), плю́нуть (pljúnutʹ)</hw>
+    <hw>plevátʹ</hw>
+  </entry>
+  <entry id="rus.98.5">
+    <gl>to spit</gl>
+    <hw>pljúnutʹ</hw>
   </entry>
   <entry id="rus.99">
     <gl>to vomit</gl>
-    <hw>рвать (rvatʹ), блева́ть (blevátʹ)</hw>
+    <hw>rvatʹ</hw>
+  </entry>
+    <entry id="rus.99.5">
+    <gl>to vomit</gl>
+    <hw>blevátʹ</hw>
   </entry>
   <entry id="rus.100">
     <gl>to blow</gl>
-    <hw>дуть (dutʹ), поду́ть (podútʹ)</hw>
+    <hw>dutʹ</hw>
+  </entry>
+  <entry id="rus.100.5">
+    <gl>to blow</gl>
+    <hw>podútʹ</hw>
   </entry>
   <entry id="rus.101">
     <gl>to breathe</gl>
-    <hw>дыша́ть (dyšátʹ)</hw>
-  </entry>
-  <entry id="rus.102">
-    <gl>to laugh</gl>
-    <hw>смея́ться (smejátʹsja)</hw>
+    <hw>dyšátʹ</hw>
   </entry>
   <entry id="rus.103">
     <gl>to see</gl>
-    <hw>ви́деть (vídetʹ), уви́деть (uvídetʹ)</hw>
+    <hw>vídetʹ</hw>
+  </entry>
+    <entry id="rus.103.5">
+    <gl>to see</gl>
+    <hw>uvídetʹ</hw>
   </entry>
   <entry id="rus.104">
     <gl>to hear</gl>
-    <hw>слы́шать (slýšatʹ), услы́шать (uslýšatʹ)</hw>
+    <hw>slýšatʹ</hw>
+  </entry>
+  <entry id="rus.104.5">
+    <gl>to hear</gl>
+    <hw>uslýšatʹ</hw>
   </entry>
   <entry id="rus.105">
     <gl>to know</gl>
-    <hw>знать (znatʹ), ве́дать (védatʹ) (archaic)</hw>
+    <hw>znatʹ</hw>
+  </entry>
+  <entry id="rus.105.5">
+    <gl>to know</gl>
+    <hw>védatʹ</hw>
   </entry>
   <entry id="rus.106">
     <gl>to think</gl>
-    <hw>ду́мать (dúmatʹ), мы́слить (mýslitʹ)</hw>
+    <hw>dúmatʹ</hw>
+  </entry>
+  <entry id="rus.106.5">
+    <gl>to think</gl>
+    <hw>mýslitʹ</hw>
   </entry>
   <entry id="rus.107">
     <gl>to smell</gl>
-    <hw>ню́хать (njúxatʹ), чу́ять (čújatʹ)</hw>
+    <hw>njúxatʹ</hw>
+  </entry>
+    <entry id="rus.107.5">
+    <gl>to smell</gl>
+    <hw>čújatʹ</hw>
   </entry>
   <entry id="rus.108">
     <gl>to fear</gl>
-    <hw>боя́ться (bojátʹsja)</hw>
+    <hw>bojátʹsja</hw>
   </entry>
   <entry id="rus.109">
     <gl>to sleep</gl>
@@ -450,15 +630,27 @@
   </entry>
   <entry id="rus.113">
     <gl>to kill</gl>
-    <hw>убива́ть (ubivátʹ), уби́ть (ubítʹ)</hw>
+    <hw>ubivátʹ</hw>
+  </entry>
+    <entry id="rus.113.5">
+    <gl>to kill</gl>
+    <hw>ubítʹ</hw>
   </entry>
   <entry id="rus.114">
     <gl>to fight</gl>
-    <hw>боро́ться (borótʹsja), сража́ться (sražátʹsja), дра́ться (drátʹsja)</hw>
+    <hw>borótʹsja</hw>
+  </entry>
+  <entry id="rus.114,3">
+    <gl>to fight</gl>
+    <hw>sražátʹsja</hw>
+  </entry>
+  <entry id="rus.114.6">
+    <gl>to fight</gl>
+    <hw>drátʹsja</hw>
   </entry>
   <entry id="rus.115">
     <gl>to hunt</gl>
-    <hw>охо́титься (oxótitʹsja)</hw>
+    <hw>oxótitʹsja</hw>
   </entry>
   <entry id="rus.116">
     <gl>to hit</gl>
@@ -478,15 +670,27 @@
   </entry>
   <entry id="rus.120">
     <gl>to split</gl>
-    <hw>разделя́ть (razdeljátʹ), раздели́ть (razdelítʹ)</hw>
+    <hw>razdeljátʹ</hw>
+  </entry>
+    <entry id="rus.120.5">
+    <gl>to split</gl>
+    <hw>razdelítʹ</hw>
   </entry>
   <entry id="rus.121">
     <gl>to stab</gl>
-    <hw>коло́ть (kolótʹ), кольну́ть (kolʹnútʹ)</hw>
+    <hw>kolótʹ</hw>
+  </entry>
+    <entry id="rus.121.5">
+    <gl>to stab</gl>
+    <hw>kolʹnútʹ</hw>
   </entry>
   <entry id="rus.122">
     <gl>to scratch</gl>
-    <hw>цара́пать (carápatʹ), поцара́пать (pocarápatʹ)</hw>
+    <hw>carápatʹ</hw>
+  </entry>
+    <entry id="rus.122">
+    <gl>to scratch</gl>
+    <hw>pocarápatʹ</hw>
   </entry>
   <entry id="rus.123">
     <gl>to dig</gl>
@@ -506,15 +710,27 @@
   </entry>
   <entry id="rus.127">
     <gl>to fly</gl>
-    <hw>лета́ть (letátʹ), лете́ть (letétʹ)</hw>
+    <hw>letátʹ</hw>
+  </entry>
+  <entry id="rus.127.5">
+    <gl>to fly</gl>
+    <hw>letétʹ</hw>
   </entry>
   <entry id="rus.128">
     <gl>to walk</gl>
-    <hw>ходи́ть (xodítʹ), идти́ (idtí)</hw>
+    <hw>xodítʹ</hw>
+  </entry>
+    <entry id="rus.128.5">
+    <gl>to walk</gl>
+    <hw>idtí</hw>
   </entry>
   <entry id="rus.129">
     <gl>to come</gl>
-    <hw>приходи́ть (prixodítʹ), прийти́ (prijtí)</hw>
+    <hw>prixodítʹ</hw>
+  </entry>
+    <entry id="rus.129.5">
+    <gl>to come</gl>
+    <hw>prijtí</hw>
   </entry>
   <entry id="rus.130">
     <gl>to lie (as in a bed) (state)</gl>
@@ -530,51 +746,123 @@
   </entry>
   <entry id="rus.133">
     <gl>to turn (intransitive)</gl>
-    <hw>враща́ть (vraščátʹ), верте́ть (vertétʹ), крути́ть (krutítʹ)</hw>
+    <hw>vraščátʹ</hw>
+  </entry>
+  <entry id="rus.133.3">
+    <gl>to turn (intransitive)</gl>
+    <hw>vertétʹ</hw>
+  </entry>
+  <entry id="rus.133.6">
+    <gl>to turn (intransitive)</gl>
+    <hw>krutítʹ</hw>
   </entry>
   <entry id="rus.134">
     <gl>to fall</gl>
-    <hw>па́дать (pádatʹ), упа́сть (upástʹ)</hw>
+    <hw>pádatʹ</hw>
+  </entry>
+    <entry id="rus.134.5">
+    <gl>to fall</gl>
+    <hw>upástʹ</hw>
   </entry>
   <entry id="rus.135">
     <gl>to give</gl>
-    <hw>дава́ть (davátʹ), дать (datʹ)</hw>
+    <hw>davátʹ</hw>
+  </entry>
+  <entry id="rus.135.5">
+    <gl>to give</gl>
+    <hw>datʹ</hw>
   </entry>
   <entry id="rus.136">
     <gl>to hold</gl>
-    <hw>держа́ть (deržátʹ)</hw>
+    <hw>deržátʹ</hw>
   </entry>
   <entry id="rus.137">
     <gl>to squeeze</gl>
-    <hw>сжима́ть (sžimátʹ), сжать (sžatʹ)</hw>
+    <hw>sžimátʹ</hw>
+  </entry>
+  <entry id="rus.137.5">
+    <gl>to squeeze</gl>
+    <hw>sžatʹ</hw>
   </entry>
   <entry id="rus.138">
     <gl>to rub</gl>
-    <hw>тере́ть (terétʹ), потере́ть (poterétʹ)</hw>
+    <hw>terétʹ</hw>
+  </entry>
+  <entry id="rus.138.5">
+    <gl>to rub</gl>
+    <hw>poterétʹ</hw>
   </entry>
   <entry id="rus.139">
     <gl>to wash</gl>
-    <hw>мыть (mytʹ), помы́ть (pomýtʹ), умыва́ть (umyvátʹ), умы́ть (umýtʹ)</hw>
+    <hw>mytʹ</hw>
+  </entry>
+  <entry id="rus.139.25">
+    <gl>to wash</gl>
+    <hw>pomýtʹ</hw>
+  </entry>
+  <entry id="rus.139.5">
+    <gl>to wash</gl>
+    <hw>umyvátʹ</hw>
+  </entry>
+  <entry id="rus.139.75">
+    <gl>to wash</gl>
+    <hw>umýtʹ</hw>
   </entry>
   <entry id="rus.140">
     <gl>to wipe</gl>
-    <hw>вытира́ть (vytirátʹ), вы́тереть (výteretʹ)</hw>
+    <hw>vytirátʹ</hw>
+  </entry>
+  <entry id="rus.140.5">
+    <gl>to wipe</gl>
+    <hw>výteretʹ</hw>
   </entry>
   <entry id="rus.141">
     <gl>to pull</gl>
-    <hw>тяну́ть (tjanútʹ), тащи́ть (taščítʹ)</hw>
+    <hw>tjanútʹ)</hw>
+  </entry>
+  <entry id="rus.141.5">
+    <gl>to pull</gl>
+    <hw>taščítʹ</hw>
   </entry>
   <entry id="rus.142">
     <gl>to push</gl>
-    <hw>толка́ть (tolkátʹ), толкну́ть (tolknútʹ), пиха́ть (pixátʹ), пихну́ть (pixnútʹ)</hw>
+    <hw>tolkátʹ</hw>
+  </entry>
+  <entry id="rus.142.25">
+    <gl>to push</gl>
+    <hw>tolknútʹ</hw>
+  </entry>
+  <entry id="rus.142.5">
+    <gl>to push</gl>
+    <hw>pixátʹ</hw>
+  </entry>
+  <entry id="rus.142.75">
+    <gl>to push</gl>
+    <hw>pixnútʹ</hw>
   </entry>
   <entry id="rus.143">
     <gl>to throw</gl>
-    <hw>броса́ть (brosátʹ), бро́сить (brósitʹ), кида́ть (kidátʹ), ки́нуть (kínutʹ)</hw>
+    <hw>brosátʹ</hw>
+  </entry>
+  <entry id="rus.143.25">
+    <gl>to throw</gl>
+    <hw>brósitʹ</hw>
+  </entry>
+  <entry id="rus.143">
+    <gl>to throw</gl>
+    <hw>kidátʹ</hw>
+  </entry>
+  <entry id="rus.143">
+    <gl>to throw</gl>
+    <hw>kínutʹ</hw>
   </entry>
   <entry id="rus.144">
     <gl>to tie</gl>
-    <hw>вяза́ть (vjazátʹ), свя́зывать (svjázyvatʹ)</hw>
+    <hw>vjazátʹ</hw>
+  </entry>
+  <entry id="rus.144.5">
+    <gl>to tie</gl>
+    <hw>svjázyvatʹ</hw>
   </entry>
   <entry id="rus.145">
     <gl>to sew</gl>
@@ -586,23 +874,51 @@
   </entry>
   <entry id="rus.147">
     <gl>to count</gl>
-    <hw>счита́ть (sčitátʹ), посчита́ть (posčitátʹ)</hw>
+    <hw>sčitátʹ</hw>
+  </entry>
+    <entry id="rus.147">
+    <gl>to count</gl>
+    <hw>posčitátʹ</hw>
   </entry>
   <entry id="rus.148">
     <gl>to say</gl>
-    <hw>говори́ть (govorítʹ), сказа́ть (skazátʹ), мо́лвить (mólvitʹ) (archaic)</hw>
+    <hw>govorítʹ</hw>
+  </entry>
+  <entry id="rus.148.3">
+    <gl>to say</gl>
+    <hw>skazátʹ</hw>
+  </entry>
+  <entry id="rus.148.6">
+    <gl>to say (archaic)</gl>
+    <hw>mólvitʹ</hw>
   </entry>
   <entry id="rus.149">
     <gl>to sing</gl>
-    <hw>петь (petʹ), распева́ть (raspevátʹ)</hw>
+    <hw>petʹ</hw>
+  </entry>
+  <entry id="rus.149.5">
+    <gl>to sing</gl>
+    <hw>raspevátʹ</hw>
   </entry>
   <entry id="rus.150">
     <gl>to play</gl>
-    <hw>игра́ть (igrátʹ), поигра́ть (poigrátʹ), сыгра́ть (sygrátʹ)</hw>
+    <hw>igrátʹ</hw>
+  </entry>
+  <entry id="rus.150.5">
+    <gl>to play</gl>
+    <hw>poigrátʹ</hw>
+  </entry>
+    <entry id="rus.150.75">
+    <gl>to play</gl>
+    <hw>sygrátʹ</hw>
   </entry>
   <entry id="rus.151">
     <gl>to float</gl>
-    <hw>пла́вать (plávatʹ), плыть (plytʹ)</hw>
+    <hw>plávatʹ</hw>
+  </entry>
+    <entry id="rus.151.5">
+    <gl>to float</gl>
+    <hw>plytʹ</hw>
   </entry>
   <entry id="rus.152">
     <gl>to flow</gl>
@@ -610,11 +926,35 @@
   </entry>
   <entry id="rus.153">
     <gl>to freeze</gl>
-    <hw>замерза́ть (zamerzátʹ), замёрзнуть (zamjórznutʹ), ледене́ть (ledenétʹ), заледене́ть (zaledenétʹ)</hw>
+    <hw>zamerzátʹ</hw>
+  </entry>
+  <entry id="rus.153.25">
+    <gl>to freeze</gl>
+    <hw>zamjórznutʹ</hw>
+  </entry>
+  <entry id="rus.153.5">
+    <gl>to freeze</gl>
+    <hw>ledenétʹ</hw>
+  </entry>
+  <entry id="rus.153.75">
+    <gl>to freeze</gl>
+    <hw>zaledenétʹ</hw>
   </entry>
   <entry id="rus.154">
     <gl>to swell</gl>
-    <hw>пу́хнуть (púxnutʹ), опу́хнуть (opúxnutʹ), опуха́ть (opuxátʹ), отека́ть (otekátʹ)</hw>
+    <hw>púxnutʹ</hw>
+  </entry>
+  <entry id="rus.154.25">
+    <gl>to swell</gl>
+    <hw>opúxnutʹ</hw>
+  </entry>
+  <entry id="rus.154.5">
+    <gl>to swell</gl>
+    <hw>opuxátʹ</hw>
+  </entry>
+  <entry id="rus.154.75">
+    <gl>to swell</gl>
+    <hw>otekátʹ</hw>
   </entry>
   <entry id="rus.155">
     <gl>sun</gl>
@@ -674,7 +1014,11 @@
   </entry>
   <entry id="rus.169">
     <gl>cloud</gl>
-    <hw>о́блако (óblako), ту́ча (túča)</hw>
+    <hw>óblako</hw>
+  </entry>
+    <entry id="rus.169.5">
+    <gl>cloud</gl>
+    <hw>túča</hw>
   </entry>
   <entry id="rus.170">
     <gl>fog</gl>
@@ -706,15 +1050,34 @@
   </entry>
   <entry id="rus.177">
     <gl>ash</gl>
-    <hw>зола́ (zolá), пе́пел (pépel)</hw>
+    <hw>zolá</hw>
+  </entry>
+  <entry id="rus.177.5">
+    <gl>ash</gl>
+    <hw>pépel</hw>
   </entry>
   <entry id="rus.178">
     <gl>to burn</gl>
-    <hw>жечь (žečʹ), сжечь (sžečʹ) (transitive), горе́ть (gorétʹ), сгоре́ть (sgorétʹ) (intransitive)</hw>
+    <hw>žečʹ</hw>
+  </entry>
+  <entry id="rus.178.25">
+    <gl>to burn (transitive)</gl>
+    <hw>sžečʹ</hw>
+  </entry>
+  <entry id="rus.178.5">
+    <gl>to burn</gl>
+    <hw>gorétʹ</hw>
+    </entry>  <entry id="rus.178.75">
+    <gl>to burn (intransitive)</gl>
+    <hw>sgorétʹ</hw>
   </entry>
   <entry id="rus.179">
     <gl>road</gl>
-    <hw>доро́га (doróga), путь (putʹ)</hw>
+    <hw>doróga</hw>
+  </entry>
+  <entry id="rus.179.5">
+    <gl>road</gl>
+    <hw>putʹ</hw>
   </entry>
   <entry id="rus.180">
     <gl>mountain</gl>
@@ -758,7 +1121,11 @@
   </entry>
   <entry id="rus.190">
     <gl>cold</gl>
-    <hw>холо́дный (xolódnyj), студёный (studjónyj)</hw>
+    <hw>xolódnyj</hw>
+  </entry>
+    <entry id="rus.190.5">
+    <gl>cold</gl>
+    <hw>studjónyj</hw>
   </entry>
   <entry id="rus.191">
     <gl>full</gl>
@@ -774,11 +1141,19 @@
   </entry>
   <entry id="rus.194">
     <gl>good</gl>
-    <hw>хоро́ший (xoróšij), до́брый (dóbryj)</hw>
+    <hw>xoróšij</hw>
+  </entry>
+    <entry id="rus.194.5">
+    <gl>good</gl>
+    <hw>dóbryj</hw>
   </entry>
   <entry id="rus.195">
     <gl>bad</gl>
-    <hw>плохо́й (ploxój), злой (zloj)</hw>
+    <hw>ploxój</hw>
+  </entry>
+    <entry id="rus.195.5">
+    <gl>bad</gl>
+    <hw>zloj</hw>
   </entry>
   <entry id="rus.196">
     <gl>rotten</gl>
@@ -806,7 +1181,11 @@
   </entry>
   <entry id="rus.202">
     <gl>smooth</gl>
-    <hw>гла́дкий (gládkij), ро́вный (róvnyj)</hw>
+    <hw>gládkij</hw>
+  </entry>
+    <entry id="rus.202">
+    <gl>smooth</gl>
+    <hw>róvnyj</hw>
   </entry>
   <entry id="rus.203">
     <gl>wet</gl>
@@ -826,7 +1205,11 @@
   </entry>
   <entry id="rus.207">
     <gl>far</gl>
-    <hw>далёкий (daljókij), да́льний (dálʹnij)</hw>
+    <hw>daljókij</hw>
+  </entry>
+    <entry id="rus.207.5">
+    <gl>far</gl>
+    <hw>dálʹnij</hw>
   </entry>
   <entry id="rus.208">
     <gl>right</gl>
@@ -838,7 +1221,15 @@
   </entry>
   <entry id="rus.210">
     <gl>at</gl>
-    <hw>при (pri), у (u), во́зле (vózle)</hw>
+    <hw>pri</hw>
+  </entry>
+  <entry id="rus.210.3">
+    <gl>at</gl>
+    <hw>u</hw>
+  </entry>
+  <entry id="rus.210.6">
+    <gl>at</gl>
+    <hw>vózle</hw>
   </entry>
   <entry id="rus.211">
     <gl>in</gl>
@@ -850,15 +1241,31 @@
   </entry>
   <entry id="rus.213">
     <gl>and</gl>
-    <hw>и (i), да (da)</hw>
+    <hw>i</hw>
+  </entry>
+  <entry id="rus.213.5">
+    <gl>and</gl>
+    <hw>da</hw>
   </entry>
   <entry id="rus.214">
     <gl>if</gl>
-    <hw>е́сли (jésli), е́жели (jéželi) (dated), ко́ли (kóli) (dated)</hw>
+    <hw>jésli</hw>
+  </entry>
+  <entry id="rus.214.3">
+    <gl>if (dated)</gl>
+    <hw>jéželi</hw>
+  </entry>
+  <entry id="rus.214.6">
+    <gl>if (dated)</gl>
+    <hw>kóli</hw>
   </entry>
   <entry id="rus.215">
     <gl>because</gl>
-    <hw>потому́ что (potomú što), и́бо (íbo)</hw>
+    <hw>potomú što</hw>
+  </entry>
+    <entry id="rus.215.5">
+    <gl>because</gl>
+    <hw>íbo</hw>
   </entry>
   <entry id="rus.216">
     <gl>name</gl>

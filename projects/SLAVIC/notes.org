@@ -17,3 +17,12 @@ y = weak yer
 
 --- supposed to encode Havlík's law, i.e. where the position of the
     strong and weak yers are.
+
+Flaw: This allows two adjacent weak yers, as in the string CyCy.
+
+
+So we need to do this instead:
+
+V?(CC?C?y)?((CC?C?V)|(((CC?C?Y)|(CC?C?V))(CC?C?y)))*
+
+which disallows adjacent weak yers.

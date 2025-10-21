@@ -110,6 +110,21 @@ def serialize_lexicon(lexicon, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
+
+def add_entry(root, form, number):
+    rfx = ET.SubElement(root, 'rfx')
+    if isinstance(form, RE.ModernForm):
+        rfx.set('id', form.id)
+        ET.SubElement(rfx, 'lx').text = form.glyphs
+    elif isinstance(form, RE.FuzzyForm):
+        rfx.set('id', form.actual.id)
+        ET.SubElement(rfx, 'lx').text = form.actual.glyphs
+        ET.SubElement(rfx, 'fz').text = form.glyphs
+    ET.SubElement(rfx, 'lg').text = form.language
+    ET.SubElement(rfx, 'gl').text = form.gloss
+    return
+
+
 def render_sets(forms, sets, languages, set_type):
 
     def sort_forms(form, sf, level):
@@ -174,12 +189,12 @@ def render_sets(forms, sets, languages, set_type):
             sf = ET.SubElement(element, 'sf')
             sort_forms(form, sf, level)
 
-    number = -1
+    number = 0
     for number, form in enumerate(forms):
         entry = ET.SubElement(sets, 'set')
         render_xml(entry, form, 0)
 
-    print(f'number of "{set_type}" {number + 1}')
+    print(f'number of "{set_type}" {number}')
     return sets
 
 def create_xml_sets(reconstruction, languages, only_with_mel):
@@ -224,11 +239,11 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
         render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
-    render_sets([reconstruction.isolates], isolates, languages, 'isolates')
+    serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
 
     failures = ET.SubElement(root, 'failures')
     # there is only one (big) set for failures, pass it in as a list
-    render_sets([reconstruction.failures], failures, languages, 'failures')
+    serialize_isolates_and_failures(reconstruction.failures, failures, 'failures')
 
     return root
 
@@ -248,7 +263,7 @@ def serialize_stats(stats, settings, args, filename):
         ET.SubElement(settings_element, 'parm',attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
         ET.SubElement(settings_element, 'parm',attrib={'key': 'strict', 'value': str(args.only_with_mel)})
         try:
-            ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.other['fuzzy']})
+            ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.fuzzy_filename})
         except:
             ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': 'No fuzzying done.'})
     except:
@@ -268,16 +283,19 @@ def serialize_stats(stats, settings, args, filename):
     for s in totals:
         ET.SubElement(runstats, s).set('value', str(totals[s]))
 
-    correspondences_used = 0
-    for reference_set in stats.correspondence_index.values():
-        if len(reference_set) != 0:
-            correspondences_used += 1
-    if correspondences_used > 0:
-        corrs = ET.SubElement(root, 'correspondences')
-        for (c, sets) in sorted(list(stats.correspondence_index.items()), key=lambda u: len(u[1])):
-            corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
-            ET.SubElement(corr, 'used_in_cognate_sets').set('value', str(len(sets)))
-        ET.SubElement(corrs, 'correspondences_used').set('value', str(correspondences_used))
+    try:
+        correspondences_used = 0
+        for reference_set in stats.correspondence_index.values():
+            if len(reference_set) != 0:
+                correspondences_used += 1
+        if correspondences_used > 0:
+            corrs = ET.SubElement(root, 'correspondences')
+            for (c, sets) in sorted(list(stats.correspondence_index.items()), key=lambda u: len(u[1])):
+                corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
+                ET.SubElement(corr, 'used_in_cognate_sets').set('value', str(len(sets)))
+            ET.SubElement(corrs, 'correspondences_used').set('value', str(correspondences_used))
+    except Exception:
+        pass
 
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
@@ -416,6 +434,12 @@ def serialize_mels(mel_sets, mel_name, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
-def serialize_proto_lexicon(proto_lexicon, filename):
-    with open(filename, 'wb') as f:
-        pickle.dump(proto_lexicon, f)
+def serialize_isolates_and_failures(re_items, re_element, item_name):
+    ET.SubElement(re_element, 'createdat').text = run_date
+
+    for (number, form) in enumerate(re_items):
+        add_entry(re_element, form, number)
+
+    print(f'number of "{item_name}" {number}')
+
+    return

@@ -170,7 +170,11 @@
   </entry>
   <entry id="cz.43">
     <gl>thick</gl>
-    <hw>tlustý, hrubý</hw>
+    <hw>tlustý</hw>
+  </entry>
+  <entry id="cz.43.5">
+    <gl>thick</gl>
+    <hw>hrubý</hw>
   </entry>
   <entry id="cz.44">
     <gl>heavy</gl>
@@ -210,15 +214,39 @@
   </entry>
   <entry id="cz.53">
     <gl>wife</gl>
-    <hw>žena, manželka, choť</hw>
+    <hw>žena</hw>
+  </entry>
+  <entry id="cz.53">
+    <gl>wife</gl>
+    <hw>manželka</hw>
+  </entry>
+  <entry id="cz.53">
+    <gl>wife</gl>
+    <hw>choť</hw>
   </entry>
   <entry id="cz.54">
     <gl>husband</gl>
-    <hw>muž, manžel, choť</hw>
+    <hw>muž</hw>
+  </entry>
+  <entry id="cz.54.3">
+    <gl>husband</gl>
+    <hw>manžel</hw>
+  </entry>
+  <entry id="cz.6">
+    <gl>husband</gl>
+    <hw>choť</hw>
   </entry>
   <entry id="cz.55">
     <gl>mother</gl>
-    <hw>matka, máma, mateř (archaic)</hw>
+    <hw>matka</hw>
+  </entry>
+  <entry id="cz.55.3">
+    <gl>mother</gl>
+    <hw>máma</hw>
+  </entry>
+  <entry id="cz.55.6">
+    <gl>mother (archaic)</gl>
+    <hw>mateř</hw>
   </entry>
   <entry id="cz.56">
     <gl>father</gl>
@@ -286,7 +314,11 @@
   </entry>
   <entry id="cz.72">
     <gl>fruit</gl>
-    <hw>ovoce, plod</hw>
+    <hw>ovoce</hw>
+  </entry>
+    <entry id="cz.72.5">
+    <gl>fruit</gl>
+    <hw>plod</hw>
   </entry>
   <entry id="cz.73">
     <gl>seed</gl>
@@ -478,7 +510,11 @@
   </entry>
   <entry id="cz.120">
     <gl>back</gl>
-    <hw>záda, hřbet</hw>
+    <hw>záda</hw>
+  </entry>
+  <entry id="cz.120.5">
+    <gl>back</gl>
+    <hw>hřbet</hw>
   </entry>
   <entry id="cz.121">
     <gl>breast</gl>
@@ -994,7 +1030,11 @@
   </entry>
   <entry id="cz.248">
     <gl>cold</gl>
-    <hw>studený, chladný</hw>
+    <hw>studený</hw>
+  </entry>
+  <entry id="cz.248.5">
+    <gl>cold</gl>
+    <hw>chladný</hw>
   </entry>
   <entry id="cz.249">
     <gl>full</gl>
