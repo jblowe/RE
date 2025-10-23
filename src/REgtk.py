@@ -1644,7 +1644,7 @@ class REWindow(Gtk.Window):
         dummy.fuzzy = fuzzy
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project], dummy, settings)
-        self.status_bar.set_message(f'Opened project {project} from projects directory.')
+        self.status_bar.set_message(f'project {project}, ToC {selection["recon"]}, mel {mel}, fuzzy {fuzzy}')
         self.open_from_settings(settings)
 
     def create_checkpoint(self, widget):
