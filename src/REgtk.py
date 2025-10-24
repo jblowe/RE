@@ -731,11 +731,17 @@ class SetsWidget(Gtk.Box):
         self.result_label.set_halign(Gtk.Align.START)
         search_box.pack_start(self.result_label, False, False, 6)
 
+        def on_changed():
+            self._filter_idle_id = None
+            self.filter.refilter()
+            self.update_result_count()
+
+            return False
+
         def on_clear_search(button):
             self.lang_entry.set_text("")
             self.form_entry.set_text("")
             self.gloss_entry.set_text("")
-            self.filter.refilter()
 
         self.clear_button.connect("clicked", on_clear_search)
 
@@ -743,14 +749,18 @@ class SetsWidget(Gtk.Box):
         self.filter.set_visible_func(self._filter_func)
         self.sorted = Gtk.TreeModelSort(model=self.filter)
 
-        def on_changed():
-            self.filter.refilter()
-            self.update_result_count()
+        self._filter_idle_id = None
 
-        # Instant filtering
-        self.lang_entry.connect("changed", lambda e: on_changed())
-        self.form_entry.connect("changed", lambda e: on_changed())
-        self.gloss_entry.connect("changed", lambda e: on_changed())
+        def schedule_refilter(e):
+            self._filter_last_change = time.time()
+            # Cancel any pending idle callback
+            if self._filter_idle_id:
+                GLib.source_remove(self._filter_idle_id)
+                self._filter_idle_id = None
+            self._filter_idle_id = GLib.idle_add(on_changed)
+
+        for entry in (self.lang_entry, self.form_entry, self.gloss_entry):
+            entry.connect("changed", schedule_refilter)
 
         self.view = Gtk.TreeView.new_with_model(self.sorted)
         view = self.view
@@ -901,6 +911,9 @@ class SetsWidget(Gtk.Box):
         lang_query = self.lang_entry.get_text().strip().lower()
         form_query = self.form_entry.get_text().strip().lower()
         gloss_query = self.gloss_entry.get_text().strip().lower()
+
+        if (lang_query == '' and form_query == '' and gloss_query == ''):
+            return True
 
         # Pull the original form object
         form = model.get_value(iter_, 6)
