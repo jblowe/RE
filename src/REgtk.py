@@ -508,7 +508,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
         for c in table.correspondences:
             store.append(c.as_row(table.daughter_languages) + [True])
         self.names = table.daughter_languages
-        super().__init__(['ID', 'Context', 'Slot', '*'] + table.daughter_languages,
+        super().__init__(table.correspondence_header_row(),
                          store,
                          'Correspondences',
                          lambda: status_bar.add_dirty('correspondences'))
@@ -518,13 +518,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
     def fill(self, table, serialize=False):
         for row in self.store:
             if serialize or row[self.enabled_index]:
-                table.add_correspondence(
-                    RE.Correspondence(
-                        row[0],
-                        RE.read_context_from_string(row[1]),
-                        [x.strip() for x in row[2].split(',')], row[3],
-                        dict(zip(self.names, ([x.strip() for x in token.split(',')]
-                                              for token in row[4:])))))
+                table.add_correspondence(RE.Correspondence.from_row(row, self.names))
 
     def scroll_to_correspondence(self, correspondence):
         return self.scroll_to_row_matching(lambda row: (row[0] == correspondence.id))
@@ -535,28 +529,15 @@ class RuleSheet(ExpandableSheet, DisableableRowsMixin):
         store.set_sort_func(0, natural_compare, None)
         self.enabled_index = 6
         for rule in table.rules:
-            store.append([rule.id,
-                          RE.context_as_string(rule.context),
-                          rule.input,
-                          ', '.join(rule.outcome),
-                          ', '.join(rule.languages),
-                          str(rule.stage),
-                          True])
-        super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
+            store.append(rule.as_row() + [True])
+        super().__init__(table.rule_header_row(),
                          store, 'Rules', lambda: status_bar.add_dirty('rules'))
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def fill(self, table, serialize=False):
         for row in self.store:
             if row[self.enabled_index] or serialize:
-                table.add_rule(
-                    RE.Rule(
-                        row[0],
-                        RE.read_context_from_string(row[1]),
-                        row[2].strip(),
-                        [x.strip() for x in row[3].split(',')],
-                        [x.strip() for x in row[4].split(',')],
-                        int(row[5])))
+                table.add_rule(RE.Rule.from_row(row))
 
     def scroll_to_rule(self, rule):
         return self.scroll_to_row_matching(lambda row: (row[0] == rule.id))
@@ -579,25 +560,18 @@ class SoundClassSheet(ExpandableSheet):
 # given a quirks object, construct a widget that allows users to
 # specify exceptions.
 class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
-    def __init__(self, quirks, status_bar):
+    def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, bool]))
-        for quirk in quirks.values():
-            store.append([quirk.language,
-                          quirk.form,
-                          quirk.gloss,
-                          quirk.alternative,
-                          quirk.notes[0] if quirk.notes else '',
-                          True]) # HACK.
-        super().__init__(['Language', 'Form', 'Gloss', 'Alternative', 'Notes'],
+        for quirk in table.quirks.values():
+            store.append(quirk.as_row() + [True])
+        super().__init__(table.quirks_header_row(),
                          store, 'Exceptions', lambda: status_bar.add_dirty('exceptions'))
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def fill(self, table, serialize=False):
         for row in self.store:
             if serialize or row[self.enabled_index]:
-                table.add_quirk(RE.Quirk(
-                    '', '', row[0], row[1], row[2], row[3],
-                    '', '', [row[4]]))
+                table.add_quirk(RE.Quirk.from_row(row))
 
     def ensure_quirk(self, language, form, gloss):
         sheet = self.sheet
@@ -626,7 +600,7 @@ class ParameterWidget(Gtk.Box):
         self.correspondence_sheet = CorrespondenceSheet(parameters.table, status_bar)
         self.rule_sheet = RuleSheet(parameters.table, status_bar)
         self.canon_widget = SyllableCanonWidget(parameters.syllable_canon, status_bar)
-        self.quirks_sheet = QuirksSheet(parameters.table.quirks, status_bar)
+        self.quirks_sheet = QuirksSheet(parameters.table, status_bar)
         self.proto_language_name = parameters.proto_language_name
         self.mels = parameters.mels
         self.fuzzy = parameters.fuzzy

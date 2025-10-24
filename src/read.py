@@ -117,27 +117,10 @@ def read_csv_correspondences(filename, daughter_languages):
         names = [x.strip() for x in n1[0][5:]]
         for row in n1[1:]:
             row = [r.replace('=',',') for r in row]
-            table.add_correspondence(RE.Correspondence(
-                row[0], compute_context(row[4]), row[2].split(','), row[3],
-                dict(zip(names, (x.split(',') for x in row[5:])))))
+            reordered_row = [row[0], row[4], row[2], row[3]] + row[5:]
+            table.add_correspondence(
+                RE.Correspondence.from_row(reordered_row, names))
     return table
-
-
-def compute_context(context_string):
-    if context_string == '':
-        return (None, None)
-    else:
-        contextL = None
-        contextR = None
-        context_string = context_string.replace('/', '')
-        if '_' in context_string:
-            contextL, contextR = context_string.split('_')
-            if contextL:
-                contextL = contextL.split(',')
-            if contextR:
-                contextR = contextR.split(',')
-        return (contextL, contextR)
-
 
 # xml reading
 def read_settings_file(filename, mel=None, recon=None, fuzzy=None):

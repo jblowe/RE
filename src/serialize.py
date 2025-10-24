@@ -88,7 +88,7 @@ def serialize_correspondence_file(filename, parameters):
 def serialize_csv_correspondences(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
-        writer.writerow(['ID', 'Context', 'Slot', '*'] + table.daughter_languages)
+        writer.writerow(table.correspondence_header_row())
         for c in table.correspondences:
             writer.writerow(c.as_row(table.daughter_languages))
 

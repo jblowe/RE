@@ -39,7 +39,15 @@ class Correspondence:
         return [self.id, context_as_string(self.context),
                 ','.join(self.syllable_types),
                 self.proto_form] + \
-                [', '.join(v) for v in (self.daughter_forms.get(name) for name in names)]
+                [', '.join(v) for v in (self.daughter_forms[name] for name in names)]
+
+    def from_row(row, names):
+        return Correspondence(
+            row[0],
+            read_context_from_string(row[1]),
+            [x.strip() for x in row[2].split(',')], row[3],
+            dict(zip(names, ([x.strip() for x in token.split(',')]
+                             for token in row[4:]))))
 
 # A rule is like a correspondence that only applies to a subset of
 # languages. Absence of a rule implies nothing changes. There is also
@@ -61,6 +69,23 @@ class Rule:
 
     def __repr__(self):
         return f'<Rule({self.id}, {self.input}, {self.outcome}, {self.languages}, {self.stage})>'
+
+    def as_row(self):
+        return [self.id,
+                context_as_string(self.context),
+                self.input,
+                ', '.join(self.outcome),
+                ', '.join(self.languages),
+                str(self.stage)]
+
+    def from_row(row):
+        return Rule(
+            row[0],
+            read_context_from_string(row[1]),
+            row[2].strip(),
+            [x.strip() for x in row[3].split(',')],
+            [x.strip() for x in row[4].split(',')],
+            int(row[5]))
 
 class Lexicon:
     def __init__(self, language, forms, statistics=None):
@@ -148,6 +173,17 @@ class Quirk:
     def __repr__(self):
         return f'<Quirk({self.id}, {self.source_id}, {self.language}, {self.form}, {self.gloss}, {self.alternative}, {self.slot}, {self.value}, {" ".join(self.notes)})>'
 
+    def as_row(self):
+        return [self.language,
+                self.form,
+                self.gloss,
+                self.alternative,
+                # HACK.
+                self.notes[0] if self.notes else '']
+
+    def from_row(row):
+        return Quirk('', '', row[0], row[1], row[2], row[3], '', '', [row[4]])
+
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
@@ -169,10 +205,13 @@ def context_as_string(context):
             + ','.join(context[1] or ''))
 
 def read_context_from_string(string):
-    return ((None, None) if string == '' else
-            tuple(None if x == '' else
+    if string == '':
+        return (None, None)
+    if '_' not in string:
+        raise Exception('Context missing _ divider.')
+    return tuple(None if x == '' else
                   [y.strip() for y in x.split(',')]
-                  for x in string.split('_')))
+                  for x in string.replace('/', '').split('_'))
 
 # build a map from tokens to lists of correspondences containing the
 # token key.
@@ -210,6 +249,15 @@ class TableOfCorrespondences:
 
     def add_quirk(self, quirk):
         self.quirks[(quirk.language, quirk.form, quirk.gloss)] = quirk
+
+    def correspondence_header_row(self):
+        return ['ID', 'Context', 'Slot', '*'] + self.daughter_languages
+
+    def rule_header_row(self):
+        return ['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage']
+
+    def quirks_header_row(self):
+        return ['Language', 'Form', 'Gloss', 'Alternative', 'Notes']
 
     def rule_view(self):
         # make a rule view of the form
