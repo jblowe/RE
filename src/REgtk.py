@@ -499,15 +499,6 @@ class DisableableRowsMixin:
             iter_ = model.iter_next(iter_)
         self.view.queue_draw()
 
-def make_correspondence_row(correspondence, names):
-    return [correspondence.id,
-            RE.context_as_string(correspondence.context),
-            ','.join(correspondence.syllable_types),
-            correspondence.proto_form] + \
-            [', '.join(v)
-             for v in (correspondence.daughter_forms.get(name)
-                       for name in names)] + [True]
-
 class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str] +
@@ -515,7 +506,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
                                 + [bool]))
         store.set_sort_func(0, natural_compare, None)
         for c in table.correspondences:
-            store.append(make_correspondence_row(c, table.daughter_languages))
+            store.append(c.as_row(table.daughter_languages) + [True])
         self.names = table.daughter_languages
         super().__init__(['ID', 'Context', 'Slot', '*'] + table.daughter_languages,
                          store,
@@ -1282,6 +1273,38 @@ class CheckpointDialog(Gtk.FileChooserDialog):
         filter_any.add_pattern("*")
         self.add_filter(filter_any)
 
+# TODO: Unify logic with Checkpoint dialog.
+class CSVDialog(Gtk.FileChooserDialog):
+    def __init__(self, parent, action_type="save", default_dir=None):
+        action = Gtk.FileChooserAction.SAVE if action_type == "save" else Gtk.FileChooserAction.OPEN
+        title = "Export as CSV" if action_type == "save" else "Import CSV"
+
+        super().__init__(title=title, parent=parent, action=action)
+        self.add_buttons(
+            Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+            Gtk.STOCK_SAVE if action_type == "save" else Gtk.STOCK_OPEN,
+            Gtk.ResponseType.OK,
+        )
+
+        self.set_default_size(800, 400)
+        self._add_filters()
+        self.set_current_folder(f'../projects/{parent.project}/')
+
+        if action_type == "save":
+            suggested_name = f"{parent.project}.{datetime.now():%Y-%m-%d_%H-%M-%S}.csv"
+            self.set_current_name(suggested_name)
+
+    def _add_filters(self):
+        filter_csv = Gtk.FileFilter()
+        filter_csv.set_name("CSV Files (*.csv)")
+        filter_csv.add_pattern("*.csv")
+        self.add_filter(filter_csv)
+
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name("All Files")
+        filter_any.add_pattern("*")
+        self.add_filter(filter_any)
+
 class REMenuBar(Gtk.MenuBar):
     def __init__(self, window):
         super().__init__()
@@ -1322,6 +1345,9 @@ class REMenuBar(Gtk.MenuBar):
             ],
             "Edit": [
                 ("Edit lexical data...", self.window.open_lexicon_editor, None),
+            ],
+            "Export": [
+                ("Export correspondence table as CSV...", self.window.export_csv, None),
             ],
             "View": [
                 ("Show quick compare...", self.window.show_quick_compare, None),
@@ -1727,6 +1753,18 @@ class REWindow(Gtk.Window):
     def open_lexicon_editor(self, widget):
         editor = LexiconEditorWindow(self, self.lexicons_widget, self.status_bar)
         editor.show_all()
+
+    def export_csv(self, widget):
+        dialog = CSVDialog(self, action_type="save")
+        if dialog.run() == Gtk.ResponseType.OK:
+            csv_path = dialog.get_filename()
+            serialize.serialize_csv_correspondences(
+                # HACK: Fix by allowing proto language input.
+                list(self.parameters_widget.parameter_tree(serialize=True).values())[0].table,
+                csv_path
+            )
+            self.status_bar.set_message(f'Exported table as CSV: {csv_path}')
+        dialog.destroy()
 
     def dialog_excepthook(self, exc_type, exc_value, exc_traceback):
         """Display an error message."""

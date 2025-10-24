@@ -35,6 +35,12 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
         #return f'{self.id}, {",".join(self.syllable_types)}, {self.proto_form}'
 
+    def as_row(self, names):
+        return [self.id, context_as_string(self.context),
+                ','.join(self.syllable_types),
+                self.proto_form] + \
+                [', '.join(v) for v in (self.daughter_forms.get(name) for name in names)]
+
 # A rule is like a correspondence that only applies to a subset of
 # languages. Absence of a rule implies nothing changes. There is also
 # chronology with rules, as they can be applied in stages until we
