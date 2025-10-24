@@ -35,6 +35,13 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
         #return f'{self.id}, {",".join(self.syllable_types)}, {self.proto_form}'
 
+    # Show a brief summary of the correspondence.
+    def brief_summary(self):
+        context = context_as_string(self.context)
+        if context != '':
+            context = f'/ {context}'
+        return f'Correspondence: {self.id}: ({", ".join(self.syllable_types)}) *{self.proto_form} {context}'
+
     def as_row(self, names):
         return [self.id, context_as_string(self.context),
                 ','.join(self.syllable_types),
@@ -70,6 +77,13 @@ class Rule:
     def __repr__(self):
         return f'<Rule({self.id}, {self.input}, {self.outcome}, {self.languages}, {self.stage})>'
 
+    # Show a brief summary of the rule.
+    def brief_summary(self):
+        context = context_as_string(self.context)
+        if context != '':
+            context = f'/ {context}'
+        return f'Rule: {self.id}: *{self.input} > {",".join(self.outcome)} {context} ({",".join(self.languages)})'
+
     def as_row(self):
         return [self.id,
                 context_as_string(self.context),
@@ -93,15 +107,25 @@ class Lexicon:
         self.forms = forms
         self.statistics = statistics
 
-    # Create an index of correspondences to ProtoForms using the
-    # correspondence and add it to the statistics object if there
-    # is one.
-    def compute_correspondence_index(self, params):
+    # Finalize the statistics object if there is one.
+    def finalize_statistics(self, params):
         correspondence_index = {c: set() for c in params.table.correspondences}
+        rule_index = {r: set() for r in params.table.rules}
+        # Create an index of correspondences to ProtoForms using the
+        # correspondence.
         for form in self.forms:
             for correspondence in form.correspondences:
                 correspondence_index[correspondence].add(form)
+        # Create an index of rules to ProtoForms using the
+        # rule.
+        for form in self.forms:
+            for support in form.supporting_forms:
+                if isinstance(support, Stage0Form):
+                    for (glyphs, applied_rules) in support.history:
+                        for applied_rule in applied_rules:
+                            rule_index[applied_rule].add(form)
         self.statistics.correspondence_index = correspondence_index
+        self.statistics.rule_index = rule_index
         return self
 
     def __eq__(self, other):
@@ -1007,7 +1031,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                        sort_key=lambda form: sort_dict[form.language])
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
-            statistics).compute_correspondence_index(param_tree[target])
+            statistics).finalize_statistics(param_tree[target])
 
     return rec(target, True)
 

@@ -13,6 +13,7 @@ import checkpoint
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import traceback
+import itertools
 from utils import natural_sort_key
 
 class ProjectManagerDialog(Gtk.Dialog):
@@ -273,9 +274,11 @@ def all_columns_search_func(model, column, key, iter_, data):
               for i in range(model.get_n_columns())]
     return not any(key in (str(v) or "").lower() for v in values)
 
-# A sort compare function that uses natural sorting.
-def natural_compare(model, row1, row2, data):
-    sort_column, _ = model.get_sort_column_id()
+# A sort compare function that uses natural sorting. We need to pass
+# the model that actually allows sorting in case we have a sort model
+# wrapping a filtered model.
+def natural_compare(model, row1, row2, outer_model):
+    sort_column, _ = outer_model.get_sort_column_id()
     value1 = natural_sort_key(model.get_value(row1, sort_column))
     value2 = natural_sort_key(model.get_value(row2, sort_column))
     if value1 < value2:
@@ -504,7 +507,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
         store = Gtk.ListStore(*([str, str, str, str] +
                                 len(table.daughter_languages) * [str]
                                 + [bool]))
-        store.set_sort_func(0, natural_compare, None)
+        store.set_sort_func(0, natural_compare, store)
         for c in table.correspondences:
             store.append(c.as_row(table.daughter_languages) + [True])
         self.names = table.daughter_languages
@@ -526,7 +529,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
 class RuleSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, str, bool]))
-        store.set_sort_func(0, natural_compare, None)
+        store.set_sort_func(0, natural_compare, store)
         self.enabled_index = 6
         for rule in table.rules:
             store.append(rule.as_row() + [True])
@@ -1068,7 +1071,7 @@ class FailedParsesWidget(Pane):
                 else ''
             ])
 
-class CorrespondenceIndexWidget(Gtk.Box):
+class IndexWidget(Gtk.Box):
     def __init__(self, on_form_clicked, languages):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         # str = correspondence text
@@ -1082,6 +1085,7 @@ class CorrespondenceIndexWidget(Gtk.Box):
         self.sorted = Gtk.TreeModelSort(model=self.filter)
         view = Gtk.TreeView.new_with_model(self.sorted)
 
+        self.sorted.set_sort_func(0, natural_compare, self.sorted)
         view.set_search_equal_func(all_columns_search_func, None)
         view.set_search_column(0)
 
@@ -1103,7 +1107,7 @@ class CorrespondenceIndexWidget(Gtk.Box):
             else:                                # child row
                 cell.set_property("text", "")    # blank out children
 
-        for i, column_title in enumerate(['Correspondence', '# of references']):
+        for i, column_title in enumerate(['Correspondence/Rule', '# of references']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
             column.set_sort_column_id(i)
@@ -1188,18 +1192,12 @@ class CorrespondenceIndexWidget(Gtk.Box):
         self.filter.refilter()
         self.update_visible_counts()
 
-    # Show a brief summary of the correspondence.
-    def display_correspondence(self, c):
-        context = RE.context_as_string(c.context)
-        if context != '':
-            context = f'/ {context}'
-        return f'{c.id}: ({", ".join(c.syllable_types)}) *{c.proto_form} {context}'
-
-    def populate(self, correspondence_index):
+    def populate(self, correspondence_index, rule_index):
         self.store.clear()
-        for (correspondence, forms) in correspondence_index.items():
+        for (thing, forms) in itertools.chain(correspondence_index.items(),
+                                              rule_index.items()):
             row = self.store.append(parent=None,
-                                    row=[self.display_correspondence(correspondence),
+                                    row=[thing.brief_summary(),
                                          len(forms),
                                          None])
             for form in forms:
@@ -1526,7 +1524,7 @@ class REWindow(Gtk.Window):
             statistics = proto_lexicon.statistics
             self.isolates_widget.populate(RE.extract_isolates(proto_lexicon))
             self.failed_parses_widget.populate(statistics.failed_parses)
-            self.correspondence_index_widget.populate(statistics.correspondence_index)
+            self.index_widget.populate(statistics.correspondence_index, statistics.rule_index)
             if self.last_proto_lexicon:
                 (sets_lost, sets_gained) = RE.compare_proto_lexicons_modulo_details(
                     self.last_proto_lexicon,
@@ -1589,7 +1587,7 @@ class REWindow(Gtk.Window):
         self.log_widget = LogWidget()
         self.isolates_widget = IsolatesWidget()
         self.failed_parses_widget = FailedParsesWidget()
-        self.correspondence_index_widget = CorrespondenceIndexWidget(
+        self.index_widget = IndexWidget(
             self.sets_widget.scroll_to_form,
             [lexicon.language for lexicon in attested_lexicons.values()])
 
@@ -1614,8 +1612,8 @@ class REWindow(Gtk.Window):
                                          "isolates", "Isolates")
         self.statistics_stack.add_titled(self.failed_parses_widget,
                                          "failed", "Failed Parses")
-        self.statistics_stack.add_titled(self.correspondence_index_widget,
-                                         "index", "Correspondence index")
+        self.statistics_stack.add_titled(self.index_widget,
+                                         "index", "Correspondence/Rule index")
         # StackSwitcher to switch between views
         stack_switcher = Gtk.StackSwitcher()
         stack_switcher.set_stack(self.statistics_stack)
