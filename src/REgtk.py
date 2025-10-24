@@ -13,6 +13,7 @@ import checkpoint
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import traceback
+from utils import natural_sort_key
 
 class ProjectManagerDialog(Gtk.Dialog):
     """Dialog to choose a project."""
@@ -272,6 +273,18 @@ def all_columns_search_func(model, column, key, iter_, data):
               for i in range(model.get_n_columns())]
     return not any(key in (str(v) or "").lower() for v in values)
 
+# A sort compare function that uses natural sorting.
+def natural_compare(model, row1, row2, data):
+    sort_column, _ = model.get_sort_column_id()
+    value1 = natural_sort_key(model.get_value(row1, sort_column))
+    value2 = natural_sort_key(model.get_value(row2, sort_column))
+    if value1 < value2:
+        return -1
+    elif value1 == value2:
+        return 0
+    else:
+        return 1
+
 # A sheet is an editable spreadsheet which has Add and Delete buttons
 # to add or remove rows.
 class Sheet(Gtk.Box):
@@ -500,6 +513,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
         store = Gtk.ListStore(*([str, str, str, str] +
                                 len(table.daughter_languages) * [str]
                                 + [bool]))
+        store.set_sort_func(0, natural_compare, None)
         for c in table.correspondences:
             store.append(make_correspondence_row(c, table.daughter_languages))
         self.names = table.daughter_languages
@@ -527,6 +541,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
 class RuleSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, str, bool]))
+        store.set_sort_func(0, natural_compare, None)
         self.enabled_index = 6
         for rule in table.rules:
             store.append([rule.id,

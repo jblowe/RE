@@ -1,4 +1,5 @@
 import os
+import re
 from contextlib import contextmanager
 
 # Misc. utils
@@ -27,6 +28,11 @@ def cd(newdir):
         yield
     finally:
         os.chdir(prevdir)
+
+# Natural sorting, so that e.g. c102 appears after c2.
+def natural_sort_key(s, _nsre=re.compile(r'(\d+)')):
+    return [int(text) if text.isdigit() else text.lower()
+            for text in _nsre.split(s)]
 
 # based on https://stackoverflow.com/questions/12451531/python-try-catch-block-inside-lambda
 def tryconvert(value, *types):
