@@ -743,7 +743,6 @@ class SetsWidget(Gtk.Box):
         self._filter_idle_id = None
 
         def schedule_refilter(e):
-            self._filter_last_change = time.time()
             # Cancel any pending idle callback
             if self._filter_idle_id:
                 GLib.source_remove(self._filter_idle_id)
