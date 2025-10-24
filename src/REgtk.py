@@ -790,6 +790,14 @@ class SetsWidget(Gtk.Box):
                                      form)
                 menu.append(item_inspect)
 
+                item_inspect = Gtk.MenuItem(label="Show only sets containing this form.")
+                def filter_by_form(m, form):
+                    self.lang_entry.set_text(form.language)
+                    self.form_entry.set_text(form.glyphs)
+                    self.gloss_entry.set_text(form.gloss)
+                item_inspect.connect("activate", filter_by_form, form)
+                menu.append(item_inspect)
+
                 menu.show_all()
                 menu.popup_at_pointer(event)
                 return True  # stop other handlers
