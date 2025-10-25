@@ -8,6 +8,7 @@ import utils
 import inspect
 import pickle
 import json
+import csv
 
 run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
@@ -83,6 +84,13 @@ def serialize_correspondence_file(filename, parameters):
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
+
+def serialize_csv_correspondences(table, filename):
+    with open(filename, 'w', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile, delimiter='\t')
+        writer.writerow(table.correspondence_header_row())
+        for c in table.correspondences:
+            writer.writerow(c.as_row(table.daughter_languages))
 
 def serialize_lexicons(lexicons, dirname, ext='.data.xml'):
     for lexicon in lexicons:

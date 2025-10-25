@@ -35,6 +35,27 @@ class Correspondence:
         return f'<Correspondence({self.id}, {self.syllable_types}, {self.proto_form})>'
         #return f'{self.id}, {",".join(self.syllable_types)}, {self.proto_form}'
 
+    # Show a brief summary of the correspondence.
+    def brief_summary(self):
+        context = context_as_string(self.context)
+        if context != '':
+            context = f'/ {context}'
+        return f'Correspondence: {self.id}: ({", ".join(self.syllable_types)}) *{self.proto_form} {context}'
+
+    def as_row(self, names):
+        return [self.id, context_as_string(self.context),
+                ','.join(self.syllable_types),
+                self.proto_form] + \
+                [', '.join(v) for v in (self.daughter_forms[name] for name in names)]
+
+    def from_row(row, names):
+        return Correspondence(
+            row[0],
+            read_context_from_string(row[1]),
+            [x.strip() for x in row[2].split(',')], row[3],
+            dict(zip(names, ([x.strip() for x in token.split(',')]
+                             for token in row[4:]))))
+
 # A rule is like a correspondence that only applies to a subset of
 # languages. Absence of a rule implies nothing changes. There is also
 # chronology with rules, as they can be applied in stages until we
@@ -56,21 +77,55 @@ class Rule:
     def __repr__(self):
         return f'<Rule({self.id}, {self.input}, {self.outcome}, {self.languages}, {self.stage})>'
 
+    # Show a brief summary of the rule.
+    def brief_summary(self):
+        context = context_as_string(self.context)
+        if context != '':
+            context = f'/ {context}'
+        return f'Rule: {self.id}: *{self.input} > {",".join(self.outcome)} {context} ({",".join(self.languages)})'
+
+    def as_row(self):
+        return [self.id,
+                context_as_string(self.context),
+                self.input,
+                ', '.join(self.outcome),
+                ', '.join(self.languages),
+                str(self.stage)]
+
+    def from_row(row):
+        return Rule(
+            row[0],
+            read_context_from_string(row[1]),
+            row[2].strip(),
+            [x.strip() for x in row[3].split(',')],
+            [x.strip() for x in row[4].split(',')],
+            int(row[5]))
+
 class Lexicon:
     def __init__(self, language, forms, statistics=None):
         self.language = language
         self.forms = forms
         self.statistics = statistics
 
-    # Create an index of correspondences to ProtoForms using the
-    # correspondence and add it to the statistics object if there
-    # is one.
-    def compute_correspondence_index(self, params):
+    # Finalize the statistics object if there is one.
+    def finalize_statistics(self, params):
         correspondence_index = {c: set() for c in params.table.correspondences}
+        rule_index = {r: set() for r in params.table.rules}
+        # Create an index of correspondences to ProtoForms using the
+        # correspondence.
         for form in self.forms:
             for correspondence in form.correspondences:
                 correspondence_index[correspondence].add(form)
+        # Create an index of rules to ProtoForms using the
+        # rule.
+        for form in self.forms:
+            for support in form.supporting_forms:
+                if isinstance(support, Stage0Form):
+                    for (glyphs, applied_rules) in support.history:
+                        for applied_rule in applied_rules:
+                            rule_index[applied_rule].add(form)
         self.statistics.correspondence_index = correspondence_index
+        self.statistics.rule_index = rule_index
         return self
 
     def __eq__(self, other):
@@ -142,6 +197,17 @@ class Quirk:
     def __repr__(self):
         return f'<Quirk({self.id}, {self.source_id}, {self.language}, {self.form}, {self.gloss}, {self.alternative}, {self.slot}, {self.value}, {" ".join(self.notes)})>'
 
+    def as_row(self):
+        return [self.language,
+                self.form,
+                self.gloss,
+                self.alternative,
+                # HACK.
+                self.notes[0] if self.notes else '']
+
+    def from_row(row):
+        return Quirk('', '', row[0], row[1], row[2], row[3], '', '', [row[4]])
+
 def correspondences_as_proto_form_string(cs):
     return ''.join(c.proto_form for c in cs)
 
@@ -163,10 +229,13 @@ def context_as_string(context):
             + ','.join(context[1] or ''))
 
 def read_context_from_string(string):
-    return ((None, None) if string == '' else
-            tuple(None if x == '' else
+    if string == '':
+        return (None, None)
+    if '_' not in string:
+        raise Exception('Context missing _ divider.')
+    return tuple(None if x == '' else
                   [y.strip() for y in x.split(',')]
-                  for x in string.split('_')))
+                  for x in string.replace('/', '').split('_'))
 
 # build a map from tokens to lists of correspondences containing the
 # token key.
@@ -204,6 +273,15 @@ class TableOfCorrespondences:
 
     def add_quirk(self, quirk):
         self.quirks[(quirk.language, quirk.form, quirk.gloss)] = quirk
+
+    def correspondence_header_row(self):
+        return ['ID', 'Context', 'Slot', '*'] + self.daughter_languages
+
+    def rule_header_row(self):
+        return ['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage']
+
+    def quirks_header_row(self):
+        return ['Language', 'Form', 'Gloss', 'Alternative', 'Notes']
 
     def rule_view(self):
         # make a rule view of the form
@@ -602,11 +680,12 @@ def make_apply_rules(parameters, language):
         next_candidates = []
         for stage in reversed(range(max_stage + 1)):
             def gen_next_candidates(form, history):
-                # consume tokens from outcome, applying all possible
-                # applicable rules to build input, and also generate a
-                # form where nothing changed.
-                def gen(outcome, input, rqueue, applied_rules):
-                    if outcome == '':
+                form_length = len(form)
+                # consume tokens from the output form, applying all
+                # possible applicable rules to build input, and also
+                # generate a form where nothing changed.
+                def gen(position, input, rqueue, applied_rules):
+                    if position >= form_length:
                         if rqueue.end():
                             next_candidates.append((input,
                                                     [(input, applied_rules)] + history
@@ -614,19 +693,23 @@ def make_apply_rules(parameters, language):
                                                     else history))
                         return
                     for token_length in token_lengths:
-                        for rule in rule_map[outcome[:token_length]]:
+                        next_position = position + token_length
+                        if next_position > form_length:
+                            break
+                        for rule in rule_map[form[position:next_position]]:
                             if rule.stage == stage:
                                 rmatch = rqueue.match_consume(rule.input)
                                 if (rmatch
                                     and matches_this_left_context(rule, input)):
-                                    gen(outcome[token_length:],
+                                    gen(next_position,
                                         input + rule.input,
                                         rmatch.add_rule_right_contexts(rule),
                                         applied_rules + [rule])
-                    rmatch = rqueue.match_consume(outcome[0])
+                    next_token = form[position]
+                    rmatch = rqueue.match_consume(next_token)
                     if rmatch:
-                        gen(outcome[1:], input + outcome[0], rmatch, applied_rules)
-                gen(form, '', RContextQueue([]), [])
+                        gen(position + 1, input + next_token, rmatch, applied_rules)
+                gen(0, '', RContextQueue([]), [])
             for (candidate, history) in candidates:
                 gen_next_candidates(candidate, history)
             candidates = next_candidates
@@ -948,7 +1031,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                        sort_key=lambda form: sort_dict[form.language])
              for (correspondences, supporting_forms, attested_support, mel)
              in forms],
-            statistics).compute_correspondence_index(param_tree[target])
+            statistics).finalize_statistics(param_tree[target])
 
     return rec(target, True)
 

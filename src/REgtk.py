@@ -13,6 +13,8 @@ import checkpoint
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import traceback
+import itertools
+from utils import natural_sort_key
 
 class ProjectManagerDialog(Gtk.Dialog):
     """Dialog to choose a project."""
@@ -272,6 +274,20 @@ def all_columns_search_func(model, column, key, iter_, data):
               for i in range(model.get_n_columns())]
     return not any(key in (str(v) or "").lower() for v in values)
 
+# A sort compare function that uses natural sorting. We need to pass
+# the model that actually allows sorting in case we have a sort model
+# wrapping a filtered model.
+def natural_compare(model, row1, row2, outer_model):
+    sort_column, _ = outer_model.get_sort_column_id()
+    value1 = natural_sort_key(model.get_value(row1, sort_column))
+    value2 = natural_sort_key(model.get_value(row2, sort_column))
+    if value1 < value2:
+        return -1
+    elif value1 == value2:
+        return 0
+    else:
+        return 1
+
 # A sheet is an editable spreadsheet which has Add and Delete buttons
 # to add or remove rows.
 class Sheet(Gtk.Box):
@@ -486,24 +502,16 @@ class DisableableRowsMixin:
             iter_ = model.iter_next(iter_)
         self.view.queue_draw()
 
-def make_correspondence_row(correspondence, names):
-    return [correspondence.id,
-            RE.context_as_string(correspondence.context),
-            ','.join(correspondence.syllable_types),
-            correspondence.proto_form] + \
-            [', '.join(v)
-             for v in (correspondence.daughter_forms.get(name)
-                       for name in names)] + [True]
-
 class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str] +
                                 len(table.daughter_languages) * [str]
                                 + [bool]))
+        store.set_sort_func(0, natural_compare, store)
         for c in table.correspondences:
-            store.append(make_correspondence_row(c, table.daughter_languages))
+            store.append(c.as_row(table.daughter_languages) + [True])
         self.names = table.daughter_languages
-        super().__init__(['ID', 'Context', 'Slot', '*'] + table.daughter_languages,
+        super().__init__(table.correspondence_header_row(),
                          store,
                          'Correspondences',
                          lambda: status_bar.add_dirty('correspondences'))
@@ -513,13 +521,7 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
     def fill(self, table, serialize=False):
         for row in self.store:
             if serialize or row[self.enabled_index]:
-                table.add_correspondence(
-                    RE.Correspondence(
-                        row[0],
-                        RE.read_context_from_string(row[1]),
-                        [x.strip() for x in row[2].split(',')], row[3],
-                        dict(zip(self.names, ([x.strip() for x in token.split(',')]
-                                              for token in row[4:])))))
+                table.add_correspondence(RE.Correspondence.from_row(row, self.names))
 
     def scroll_to_correspondence(self, correspondence):
         return self.scroll_to_row_matching(lambda row: (row[0] == correspondence.id))
@@ -527,30 +529,18 @@ class CorrespondenceSheet(ExpandableSheet, DisableableRowsMixin):
 class RuleSheet(ExpandableSheet, DisableableRowsMixin):
     def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, str, bool]))
+        store.set_sort_func(0, natural_compare, store)
         self.enabled_index = 6
         for rule in table.rules:
-            store.append([rule.id,
-                          RE.context_as_string(rule.context),
-                          rule.input,
-                          ', '.join(rule.outcome),
-                          ', '.join(rule.languages),
-                          str(rule.stage),
-                          True])
-        super().__init__(['RID', 'Context', 'Input', 'Outcome', 'Languages', 'Stage'],
+            store.append(rule.as_row() + [True])
+        super().__init__(table.rule_header_row(),
                          store, 'Rules', lambda: status_bar.add_dirty('rules'))
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def fill(self, table, serialize=False):
         for row in self.store:
             if row[self.enabled_index] or serialize:
-                table.add_rule(
-                    RE.Rule(
-                        row[0],
-                        RE.read_context_from_string(row[1]),
-                        row[2].strip(),
-                        [x.strip() for x in row[3].split(',')],
-                        [x.strip() for x in row[4].split(',')],
-                        int(row[5])))
+                table.add_rule(RE.Rule.from_row(row))
 
     def scroll_to_rule(self, rule):
         return self.scroll_to_row_matching(lambda row: (row[0] == rule.id))
@@ -573,25 +563,18 @@ class SoundClassSheet(ExpandableSheet):
 # given a quirks object, construct a widget that allows users to
 # specify exceptions.
 class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
-    def __init__(self, quirks, status_bar):
+    def __init__(self, table, status_bar):
         store = Gtk.ListStore(*([str, str, str, str, str, bool]))
-        for quirk in quirks.values():
-            store.append([quirk.language,
-                          quirk.form,
-                          quirk.gloss,
-                          quirk.alternative,
-                          quirk.notes[0] if quirk.notes else '',
-                          True]) # HACK.
-        super().__init__(['Language', 'Form', 'Gloss', 'Alternative', 'Notes'],
+        for quirk in table.quirks.values():
+            store.append(quirk.as_row() + [True])
+        super().__init__(table.quirks_header_row(),
                          store, 'Exceptions', lambda: status_bar.add_dirty('exceptions'))
         self.setup_disableable_rows(self.sheet, store.get_n_columns() - 1)
 
     def fill(self, table, serialize=False):
         for row in self.store:
             if serialize or row[self.enabled_index]:
-                table.add_quirk(RE.Quirk(
-                    '', '', row[0], row[1], row[2], row[3],
-                    '', '', [row[4]]))
+                table.add_quirk(RE.Quirk.from_row(row))
 
     def ensure_quirk(self, language, form, gloss):
         sheet = self.sheet
@@ -620,7 +603,7 @@ class ParameterWidget(Gtk.Box):
         self.correspondence_sheet = CorrespondenceSheet(parameters.table, status_bar)
         self.rule_sheet = RuleSheet(parameters.table, status_bar)
         self.canon_widget = SyllableCanonWidget(parameters.syllable_canon, status_bar)
-        self.quirks_sheet = QuirksSheet(parameters.table.quirks, status_bar)
+        self.quirks_sheet = QuirksSheet(parameters.table, status_bar)
         self.proto_language_name = parameters.proto_language_name
         self.mels = parameters.mels
         self.fuzzy = parameters.fuzzy
@@ -716,11 +699,17 @@ class SetsWidget(Gtk.Box):
         self.result_label.set_halign(Gtk.Align.START)
         search_box.pack_start(self.result_label, False, False, 6)
 
+        def on_changed():
+            self._filter_idle_id = None
+            self.filter.refilter()
+            self.update_result_count()
+
+            return False
+
         def on_clear_search(button):
             self.lang_entry.set_text("")
             self.form_entry.set_text("")
             self.gloss_entry.set_text("")
-            self.filter.refilter()
 
         self.clear_button.connect("clicked", on_clear_search)
 
@@ -728,14 +717,17 @@ class SetsWidget(Gtk.Box):
         self.filter.set_visible_func(self._filter_func)
         self.sorted = Gtk.TreeModelSort(model=self.filter)
 
-        def on_changed():
-            self.filter.refilter()
-            self.update_result_count()
+        self._filter_idle_id = None
 
-        # Instant filtering
-        self.lang_entry.connect("changed", lambda e: on_changed())
-        self.form_entry.connect("changed", lambda e: on_changed())
-        self.gloss_entry.connect("changed", lambda e: on_changed())
+        def schedule_refilter(e):
+            # Cancel any pending idle callback
+            if self._filter_idle_id:
+                GLib.source_remove(self._filter_idle_id)
+                self._filter_idle_id = None
+            self._filter_idle_id = GLib.idle_add(on_changed)
+
+        for entry in (self.lang_entry, self.form_entry, self.gloss_entry):
+            entry.connect("changed", schedule_refilter)
 
         self.view = Gtk.TreeView.new_with_model(self.sorted)
         view = self.view
@@ -796,6 +788,14 @@ class SetsWidget(Gtk.Box):
                                      lambda m, form: ensure_quirk_callback(
                                          parent_language, form),
                                      form)
+                menu.append(item_inspect)
+
+                item_inspect = Gtk.MenuItem(label="Show only sets containing this form.")
+                def filter_by_form(m, form):
+                    self.lang_entry.set_text(form.language)
+                    self.form_entry.set_text(form.glyphs)
+                    self.gloss_entry.set_text(form.gloss)
+                item_inspect.connect("activate", filter_by_form, form)
                 menu.append(item_inspect)
 
                 menu.show_all()
@@ -886,6 +886,9 @@ class SetsWidget(Gtk.Box):
         lang_query = self.lang_entry.get_text().strip().lower()
         form_query = self.form_entry.get_text().strip().lower()
         gloss_query = self.gloss_entry.get_text().strip().lower()
+
+        if (lang_query == '' and form_query == '' and gloss_query == ''):
+            return True
 
         # Pull the original form object
         form = model.get_value(iter_, 6)
@@ -1076,7 +1079,7 @@ class FailedParsesWidget(Pane):
                 else ''
             ])
 
-class CorrespondenceIndexWidget(Gtk.Box):
+class IndexWidget(Gtk.Box):
     def __init__(self, on_form_clicked, languages):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         # str = correspondence text
@@ -1090,6 +1093,7 @@ class CorrespondenceIndexWidget(Gtk.Box):
         self.sorted = Gtk.TreeModelSort(model=self.filter)
         view = Gtk.TreeView.new_with_model(self.sorted)
 
+        self.sorted.set_sort_func(0, natural_compare, self.sorted)
         view.set_search_equal_func(all_columns_search_func, None)
         view.set_search_column(0)
 
@@ -1111,7 +1115,7 @@ class CorrespondenceIndexWidget(Gtk.Box):
             else:                                # child row
                 cell.set_property("text", "")    # blank out children
 
-        for i, column_title in enumerate(['Correspondence', '# of references']):
+        for i, column_title in enumerate(['Correspondence/Rule', '# of references']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
             column.set_sort_column_id(i)
@@ -1196,18 +1200,12 @@ class CorrespondenceIndexWidget(Gtk.Box):
         self.filter.refilter()
         self.update_visible_counts()
 
-    # Show a brief summary of the correspondence.
-    def display_correspondence(self, c):
-        context = RE.context_as_string(c.context)
-        if context != '':
-            context = f'/ {context}'
-        return f'{c.id}: ({", ".join(c.syllable_types)}) *{c.proto_form} {context}'
-
-    def populate(self, correspondence_index):
+    def populate(self, correspondence_index, rule_index):
         self.store.clear()
-        for (correspondence, forms) in correspondence_index.items():
+        for (thing, forms) in itertools.chain(correspondence_index.items(),
+                                              rule_index.items()):
             row = self.store.append(parent=None,
-                                    row=[self.display_correspondence(correspondence),
+                                    row=[thing.brief_summary(),
                                          len(forms),
                                          None])
             for form in forms:
@@ -1254,6 +1252,38 @@ class CheckpointDialog(Gtk.FileChooserDialog):
         filter_any.add_pattern("*")
         self.add_filter(filter_any)
 
+# TODO: Unify logic with Checkpoint dialog.
+class CSVDialog(Gtk.FileChooserDialog):
+    def __init__(self, parent, action_type="save", default_dir=None):
+        action = Gtk.FileChooserAction.SAVE if action_type == "save" else Gtk.FileChooserAction.OPEN
+        title = "Export as CSV" if action_type == "save" else "Import CSV"
+
+        super().__init__(title=title, parent=parent, action=action)
+        self.add_buttons(
+            Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+            Gtk.STOCK_SAVE if action_type == "save" else Gtk.STOCK_OPEN,
+            Gtk.ResponseType.OK,
+        )
+
+        self.set_default_size(800, 400)
+        self._add_filters()
+        self.set_current_folder(f'../projects/{parent.project}/')
+
+        if action_type == "save":
+            suggested_name = f"{parent.project}.{datetime.now():%Y-%m-%d_%H-%M-%S}.csv"
+            self.set_current_name(suggested_name)
+
+    def _add_filters(self):
+        filter_csv = Gtk.FileFilter()
+        filter_csv.set_name("CSV Files (*.csv)")
+        filter_csv.add_pattern("*.csv")
+        self.add_filter(filter_csv)
+
+        filter_any = Gtk.FileFilter()
+        filter_any.set_name("All Files")
+        filter_any.add_pattern("*")
+        self.add_filter(filter_any)
+
 class REMenuBar(Gtk.MenuBar):
     def __init__(self, window):
         super().__init__()
@@ -1294,6 +1324,9 @@ class REMenuBar(Gtk.MenuBar):
             ],
             "Edit": [
                 ("Edit lexical data...", self.window.open_lexicon_editor, None),
+            ],
+            "Export": [
+                ("Export correspondence table as CSV...", self.window.export_csv, None),
             ],
             "View": [
                 ("Show quick compare...", self.window.show_quick_compare, None),
@@ -1499,7 +1532,7 @@ class REWindow(Gtk.Window):
             statistics = proto_lexicon.statistics
             self.isolates_widget.populate(RE.extract_isolates(proto_lexicon))
             self.failed_parses_widget.populate(statistics.failed_parses)
-            self.correspondence_index_widget.populate(statistics.correspondence_index)
+            self.index_widget.populate(statistics.correspondence_index, statistics.rule_index)
             if self.last_proto_lexicon:
                 (sets_lost, sets_gained) = RE.compare_proto_lexicons_modulo_details(
                     self.last_proto_lexicon,
@@ -1562,7 +1595,7 @@ class REWindow(Gtk.Window):
         self.log_widget = LogWidget()
         self.isolates_widget = IsolatesWidget()
         self.failed_parses_widget = FailedParsesWidget()
-        self.correspondence_index_widget = CorrespondenceIndexWidget(
+        self.index_widget = IndexWidget(
             self.sets_widget.scroll_to_form,
             [lexicon.language for lexicon in attested_lexicons.values()])
 
@@ -1587,8 +1620,8 @@ class REWindow(Gtk.Window):
                                          "isolates", "Isolates")
         self.statistics_stack.add_titled(self.failed_parses_widget,
                                          "failed", "Failed Parses")
-        self.statistics_stack.add_titled(self.correspondence_index_widget,
-                                         "index", "Correspondence index")
+        self.statistics_stack.add_titled(self.index_widget,
+                                         "index", "Correspondence/Rule index")
         # StackSwitcher to switch between views
         stack_switcher = Gtk.StackSwitcher()
         stack_switcher.set_stack(self.statistics_stack)
@@ -1699,6 +1732,18 @@ class REWindow(Gtk.Window):
     def open_lexicon_editor(self, widget):
         editor = LexiconEditorWindow(self, self.lexicons_widget, self.status_bar)
         editor.show_all()
+
+    def export_csv(self, widget):
+        dialog = CSVDialog(self, action_type="save")
+        if dialog.run() == Gtk.ResponseType.OK:
+            csv_path = dialog.get_filename()
+            serialize.serialize_csv_correspondences(
+                # HACK: Fix by allowing proto language input.
+                list(self.parameters_widget.parameter_tree(serialize=True).values())[0].table,
+                csv_path
+            )
+            self.status_bar.set_message(f'Exported table as CSV: {csv_path}')
+        dialog.destroy()
 
     def dialog_excepthook(self, exc_type, exc_value, exc_traceback):
         """Display an error message."""
