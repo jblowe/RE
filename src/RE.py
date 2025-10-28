@@ -126,6 +126,13 @@ class Lexicon:
                             rule_index[applied_rule].add(form)
         self.statistics.correspondence_index = correspondence_index
         self.statistics.rule_index = rule_index
+        # Find just how many attested reflexes there are.
+        reflexes = set()
+        for form in self.forms:
+            reflexes |= form.attested_support
+        reflex_count = len(reflexes)
+        self.statistics.add_note(f'{reflex_count} attested reflexes in sets')
+        self.statistics.add_stat('reflexes_in_sets', reflex_count)
         return self
 
     def __eq__(self, other):
@@ -890,7 +897,7 @@ def project_back(lexicons, parameters, statistics):
         statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
     statistics.add_stat('lexicons', len(lexicons))
     statistics.add_stat('reflexes', number_of_forms)
-    statistics.add_note(f'{number_of_forms} input forms')
+    statistics.add_note(f'{number_of_forms} attested forms')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
@@ -994,9 +1001,6 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     for cognate_set in cognate_sets:
         uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
     statistics.add_note(f'{len(uniques)} cognate sets with distinct reconstructions and distinct supporting forms')
-    reflexes = sum([len(x[1]) for x in list(uniques.values())])
-    statistics.add_note(f'{reflexes} reflexes in sets')
-    statistics.add_stat('reflexes_in_sets', reflexes)
     return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, only_with_mel, root):
