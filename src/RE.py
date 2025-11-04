@@ -1,6 +1,7 @@
 import itertools
 import read
 import regex as re
+import csv
 import os
 import sys
 import serialize
@@ -289,6 +290,32 @@ class TableOfCorrespondences:
 
     def quirks_header_row(self):
         return ['Language', 'Form', 'Gloss', 'Alternative', 'Notes']
+
+    def correspondences_from_csv(self, filename):
+        self.correspondences = []
+        with open(filename, 'r', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile, delimiter='\t')
+            # element of redundancy here, but we can't assume order
+            n1 = list(read.skip_comments(reader))
+            self.daughter_languages = [x.strip() for x in n1[0][4:]]
+            for row in n1[1:]:
+                self.add_correspondence(Correspondence.from_row(row, self.daughter_languages))
+
+    def rules_from_csv(self, filename):
+        self.rules = []
+        with open(filename, 'r', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile, delimiter='\t')
+            n1 = list(read.skip_comments(reader))
+            for row in n1[1:]:
+                self.add_rule(Rule.from_row(row))
+
+    def quirks_from_csv(self, filename):
+        self.quirks = dict()
+        with open(filename, 'r', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile, delimiter='\t')
+            n1 = list(read.skip_comments(reader))
+            for row in n1[1:]:
+                self.add_quirk(Quirk.from_row(row))
 
     def rule_view(self):
         # make a rule view of the form

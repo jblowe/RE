@@ -1254,7 +1254,7 @@ class CheckpointDialog(Gtk.FileChooserDialog):
 
 # TODO: Unify logic with Checkpoint dialog.
 class CSVDialog(Gtk.FileChooserDialog):
-    def __init__(self, parent, action_type="save", default_dir=None):
+    def __init__(self, parent, action_type="save", default_dir=None, kind='unknown'):
         action = Gtk.FileChooserAction.SAVE if action_type == "save" else Gtk.FileChooserAction.OPEN
         title = "Export as CSV" if action_type == "save" else "Import CSV"
 
@@ -1270,7 +1270,7 @@ class CSVDialog(Gtk.FileChooserDialog):
         self.set_current_folder(f'../projects/{parent.project}/')
 
         if action_type == "save":
-            suggested_name = f"{parent.project}.{datetime.now():%Y-%m-%d_%H-%M-%S}.csv"
+            suggested_name = f"{parent.project}.{kind}.{datetime.now():%Y-%m-%d_%H-%M-%S}.csv"
             self.set_current_name(suggested_name)
 
     def _add_filters(self):
@@ -1325,11 +1325,19 @@ class REMenuBar(Gtk.MenuBar):
             "Edit": [
                 ("Edit lexical data...", self.window.open_lexicon_editor, None),
             ],
+            "Import": [
+                 ("Import correspondence table from CSV...", self.window.import_correspondence_csv, None),
+                 ("Import rules from CSV...", self.window.import_rule_csv, None),
+                 ("Import exceptions from CSV...", self.window.import_exception_csv, None),
+            ],
             "Export": [
-                ("Export correspondence table as CSV...", self.window.export_csv, None),
+                ("Export correspondence table as CSV...", self.window.export_correspondence_csv, None),
+                ("Export rules as CSV...", self.window.export_rule_csv, None),
+                ("Export exceptions as CSV...", self.window.export_exception_csv, None),
             ],
             "View": [
                 ("Show quick compare...", self.window.show_quick_compare, None),
+                ("Show sets indexed by lexicons...", self.window.show_lexicon_index, None),
                 ("—", None, None),
                 ("Zoom In", self.window.zoom_in, "<Ctrl>plus"),
                 ("Zoom Out", self.window.zoom_out, "<Ctrl>minus"),
@@ -1733,17 +1741,52 @@ class REWindow(Gtk.Window):
         editor = LexiconEditorWindow(self, self.lexicons_widget, self.status_bar)
         editor.show_all()
 
-    def export_csv(self, widget):
-        dialog = CSVDialog(self, action_type="save")
+    def import_csv(self, widget, kind, importer):
+        dialog = CSVDialog(self, action_type="load", kind=kind)
         if dialog.run() == Gtk.ResponseType.OK:
             csv_path = dialog.get_filename()
-            serialize.serialize_csv_correspondences(
+            print(f"Loading correspondences from: {csv_path}")
+            # HACK: Fix by allowing proto language input.
+            parameter_tree = self.parameters_widget.parameter_tree()
+            table = list(parameter_tree.values())[0].table
+            importer(table, csv_path)
+            self.load(self.lexicons_widget.lexicons(), parameter_tree)
+            self.status_bar.set_message(f'Loaded {kind} from CSV: {csv_path}')
+            self.status_bar.add_dirty('correspondences')
+        dialog.destroy()
+
+    def import_correspondence_csv(self, widget):
+        self.import_csv(widget, "correspondences",
+                        lambda table, csv_path: table.correspondences_from_csv(csv_path))
+
+    def import_rule_csv(self, widget):
+        self.import_csv(widget, "rules",
+                        lambda table, csv_path: table.rules_from_csv(csv_path))
+
+    def import_exception_csv(self, widget):
+        self.import_csv(widget, "quirks",
+                        lambda table, csv_path: table.quirks_from_csv(csv_path))
+
+    def export_csv(self, widget, kind, serializer):
+        dialog = CSVDialog(self, action_type="save", kind=kind)
+        if dialog.run() == Gtk.ResponseType.OK:
+            csv_path = dialog.get_filename()
+            serializer(
                 # HACK: Fix by allowing proto language input.
                 list(self.parameters_widget.parameter_tree(serialize=True).values())[0].table,
                 csv_path
             )
             self.status_bar.set_message(f'Exported table as CSV: {csv_path}')
         dialog.destroy()
+
+    def export_correspondence_csv(self, widget):
+        self.export_csv(widget, 'correspondences', serialize.serialize_csv_correspondences)
+
+    def export_rule_csv(self, widget):
+        self.export_csv(widget, 'rules', serialize.serialize_csv_rules)
+
+    def export_exception_csv(self, widget):
+        self.export_csv(widget, 'exceptions', serialize.serialize_csv_quirks)
 
     def dialog_excepthook(self, exc_type, exc_value, exc_traceback):
         """Display an error message."""

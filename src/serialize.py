@@ -92,6 +92,20 @@ def serialize_csv_correspondences(table, filename):
         for c in table.correspondences:
             writer.writerow(c.as_row(table.daughter_languages))
 
+def serialize_csv_rules(table, filename):
+    with open(filename, 'w', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile, delimiter='\t')
+        writer.writerow(table.rule_header_row())
+        for rule in table.rules:
+            writer.writerow(rule.as_row())
+
+def serialize_csv_quirks(table, filename):
+    with open(filename, 'w', encoding='utf-8') as csvfile:
+        writer = csv.writer(csvfile, delimiter='\t')
+        writer.writerow(table.quirks_header_row())
+        for quirk in table.quirks.values():
+            writer.writerow(quirk.as_row())
+
 def serialize_lexicons(lexicons, dirname, ext='.data.xml'):
     for lexicon in lexicons:
         serialize_lexicon(
