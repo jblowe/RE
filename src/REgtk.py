@@ -14,6 +14,7 @@ from datetime import datetime
 import xml.etree.ElementTree as ET
 import traceback
 import itertools
+import collections
 from utils import natural_sort_key
 
 class ProjectManagerDialog(Gtk.Dialog):
@@ -1079,28 +1080,16 @@ class FailedParsesWidget(Pane):
                 else ''
             ])
 
-class IndexWidget(Gtk.Box):
-    def __init__(self, on_form_clicked, languages):
-        super().__init__(orientation=Gtk.Orientation.VERTICAL)
-        # str = correspondence text
-        # int = visible_refs (updated after filter)
-        # object = form target (None for parent rows)
-        self.store = Gtk.TreeStore(str, int, object)
-        self.filter = self.store.filter_new()
-        self.filter.set_visible_func(self._filter_func)
-        self.enum = EnumerationWidget(['any'] + languages, 'any',
-                                      lambda: self.apply_filter())
-        self.sorted = Gtk.TreeModelSort(model=self.filter)
-        view = Gtk.TreeView.new_with_model(self.sorted)
+class HyperLinkMixin:
+    def setup_hyperlinks(self, text_column, reference_column, target_column):
+        view = self.view
+        store = self.store
 
-        self.sorted.set_sort_func(0, natural_compare, self.sorted)
-        view.set_search_equal_func(all_columns_search_func, None)
-        view.set_search_column(0)
-
+        """Attach hyperlink behavior to the given TreeView"""
         # Cell renderers
-        def correspondence_cell_fun(column, cell, model, iter_, data=None):
-            target = model.get_value(iter_, 2)
-            text = model.get_value(iter_, 0)
+        def link_cell_fun(column, cell, model, iter_, data=None):
+            target = model.get_value(iter_, target_column)
+            text = model.get_value(iter_, text_column)
             # highlight children as a link
             if target:
                 cell.set_property("markup", f'<span foreground="blue" underline="single">{text}</span>')
@@ -1108,22 +1097,22 @@ class IndexWidget(Gtk.Box):
                 cell.set_property("text", text)
 
         def ref_cell_fun(column, cell, model, iter_, data=None):
-            target = model.get_value(iter_, 2)   # "link target" object for children
-            refs = model.get_value(iter_, 1)     # # of references column
+            target = model.get_value(iter_, target_column)   # "link target" object for children
+            refs = model.get_value(iter_, reference_column)     # # of references column
             if target is None:                   # parent row
                 cell.set_property("text", str(refs))
             else:                                # child row
                 cell.set_property("text", "")    # blank out children
 
-        for i, column_title in enumerate(['Correspondence/Rule', '# of references']):
-            cell = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(column_title, cell, text=i)
-            column.set_sort_column_id(i)
-            if i == 0:
-                column.set_cell_data_func(cell, correspondence_cell_fun)
-            if i == 1:
-                column.set_cell_data_func(cell, ref_cell_fun)
-            view.append_column(column)
+        # Attach cell data functions
+        for i, column in enumerate(view.get_columns()):
+            renderers = column.get_cells()
+            if renderers:
+                renderer = renderers[0]
+                if i == text_column:
+                    column.set_cell_data_func(renderer, link_cell_fun, i)
+                if i == reference_column:
+                    column.set_cell_data_func(renderer, ref_cell_fun, i)
 
         def on_button_press(view, event):
             if event.type == Gdk.EventType.BUTTON_PRESS and event.button == 1:  # left click
@@ -1135,7 +1124,7 @@ class IndexWidget(Gtk.Box):
                     path, col, cellx, celly = pthinfo
                     model = view.get_model()
                     iter_ = model.get_iter(path)
-                    target = model.get_value(iter_, 2)
+                    target = model.get_value(iter_, target_column)
                     if target is not None:
                         # child row with hyperlink target
                         on_form_clicked(target)
@@ -1152,7 +1141,7 @@ class IndexWidget(Gtk.Box):
                 path, col, cellx, celly = pthinfo
                 model = view.get_model()
                 iter_ = model.get_iter(path)
-                target = model.get_value(iter_, 2)
+                target = model.get_value(iter_, target_column)
                 if target is not None:  # child row
                     window.set_cursor(Gdk.Cursor.new(Gdk.CursorType.HAND2))
                     return False
@@ -1162,11 +1151,38 @@ class IndexWidget(Gtk.Box):
         view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK)
         view.connect("button-press-event", on_button_press)
         view.connect("motion-notify-event", on_motion_notify)
+
+class IndexWidget(Gtk.Box, HyperLinkMixin):
+    def __init__(self, on_form_clicked, languages):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL)
+        # str = correspondence text
+        # int = visible_refs (updated after filter)
+        # object = form target (None for parent rows)
+        self.store = Gtk.TreeStore(str, int, object)
+        self.filter = self.store.filter_new()
+        self.filter.set_visible_func(self._filter_func)
+        self.enum = EnumerationWidget(['any'] + languages, 'any',
+                                      lambda: self.apply_filter())
+        self.sorted = Gtk.TreeModelSort(model=self.filter)
+        view = Gtk.TreeView.new_with_model(self.sorted)
+        self.view = view
+
+        self.sorted.set_sort_func(0, natural_compare, self.sorted)
+        view.set_search_equal_func(all_columns_search_func, None)
+        view.set_search_column(0)
+
+        for i, column_title in enumerate(['Correspondence/Rule', '# of references']):
+            cell = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, cell, text=i)
+            column.set_sort_column_id(i)
+            view.append_column(column)
+
         pane = Pane(vexpand=True, hexpand=True)
         pane.add(view)
         self.pack_start(make_labeled_entry(self.enum, 'With support from:'),
                         False, False, 0)
         self.add(pane)
+        self.setup_hyperlinks(0, 1, 2)
 
     # filter forms by support
     def _filter_func(self, model, iter_, data=None):
@@ -1211,6 +1227,41 @@ class IndexWidget(Gtk.Box):
             for form in forms:
                 self.store.append(parent=row, row=[str(form), None, form])
         self.update_visible_counts()
+
+class CorrespondenceIndexWidget(IndexWidget):
+    pass
+
+class LexiconIndexWidget(IndexWidget):
+    def __init__(self, on_form_clicked, language):
+        super().__init__(on_form_clicked, [])
+        self.language = language
+
+    def populate(self, proto_lexicon):
+        self.store.clear()
+        lexicon_index = collections.defaultdict(set)
+        for form in proto_lexicon.forms:
+            for support in form.attested_support:
+                if support.language == self.language:
+                    lexicon_index[support].add(form)
+        for (attested, forms) in lexicon_index.items():
+            row = self.store.append(parent=None,
+                                    row=[str(attested),
+                                         len(forms),
+                                         None])
+            for form in forms:
+                self.store.append(parent=row, row=[str(form), None, form])
+        self.update_visible_counts()
+
+class LexiconIndicesWidget(Gtk.Notebook):
+    def __init__(self, on_form_clicked, languages):
+        super().__init__()
+        for language in languages:
+            self.append_page(LexiconIndexWidget(on_form_clicked, language),
+                             Gtk.Label(label=language))
+
+    def populate(self, proto_lexicon):
+        for lexicon_widget in self:
+            lexicon_widget.populate(proto_lexicon)
 
 def accel_str(label):
     if label == None:
@@ -1511,10 +1562,14 @@ class REWindow(Gtk.Window):
         # status bar
         self.status_bar = StatusBar()
 
-        # persistent diff window
+        # persistent windows
         self.diff_window = Gtk.Window(title="Diff Viewer", transient_for=self, destroy_with_parent=True)
         self.diff_window.set_default_size(800, 600)
         self.diff_window.hide()
+
+        self.lexicon_index_window = Gtk.Window(title="Lexicon Index Viewer", transient_for=self, destroy_with_parent=True)
+        self.lexicon_index_window.set_default_size(800, 600)
+        self.lexicon_index_window.hide()
 
         # layout
         pane_layout = make_pane_container(Gtk.Orientation.HORIZONTAL)
@@ -1540,7 +1595,8 @@ class REWindow(Gtk.Window):
             statistics = proto_lexicon.statistics
             self.isolates_widget.populate(RE.extract_isolates(proto_lexicon))
             self.failed_parses_widget.populate(statistics.failed_parses)
-            self.index_widget.populate(statistics.correspondence_index, statistics.rule_index)
+            self.correspondence_index_widget.populate(statistics.correspondence_index, statistics.rule_index)
+            self.lexicon_index_widget.populate(proto_lexicon)
             if self.last_proto_lexicon:
                 (sets_lost, sets_gained) = RE.compare_proto_lexicons_modulo_details(
                     self.last_proto_lexicon,
@@ -1603,13 +1659,19 @@ class REWindow(Gtk.Window):
         self.log_widget = LogWidget()
         self.isolates_widget = IsolatesWidget()
         self.failed_parses_widget = FailedParsesWidget()
-        self.index_widget = IndexWidget(
+        languages = [lexicon.language for lexicon in attested_lexicons.values()]
+        self.correspondence_index_widget = CorrespondenceIndexWidget(
             self.sets_widget.scroll_to_form,
-            [lexicon.language for lexicon in attested_lexicons.values()])
+            languages)
 
         # Diff widgets
         self.diff_widget = DiffWidget(on_id_clicked=self.parameters_widget.scroll_to)
         self.diff_window.add(self.diff_widget)
+
+        # Lexicon index widget
+        self.lexicon_index_widget = LexiconIndicesWidget(self.sets_widget.scroll_to_form,
+                                                         languages)
+        self.lexicon_index_window.add(self.lexicon_index_widget)
 
         # Upstream button.
         upstream_button = make_clickable_button("Batch All Upstream",
@@ -1628,7 +1690,7 @@ class REWindow(Gtk.Window):
                                          "isolates", "Isolates")
         self.statistics_stack.add_titled(self.failed_parses_widget,
                                          "failed", "Failed Parses")
-        self.statistics_stack.add_titled(self.index_widget,
+        self.statistics_stack.add_titled(self.correspondence_index_widget,
                                          "index", "Correspondence/Rule index")
         # StackSwitcher to switch between views
         stack_switcher = Gtk.StackSwitcher()
@@ -1716,6 +1778,13 @@ class REWindow(Gtk.Window):
             return True # prevent destruction
         self.diff_window.show_all()
         self.diff_window.connect("delete-event", _on_window_close)
+
+    def show_lexicon_index(self, widget):
+        def _on_window_close(window, event):
+            window.hide()
+            return True # prevent destruction
+        self.lexicon_index_window.show_all()
+        self.lexicon_index_window.connect("delete-event", _on_window_close)
 
     def save_project(self, widget):
         for (proto_language_name, parameters) in self.parameters_widget.parameter_tree(serialize=True).items():
