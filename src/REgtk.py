@@ -1081,7 +1081,7 @@ class FailedParsesWidget(Pane):
             ])
 
 class HyperLinkMixin:
-    def setup_hyperlinks(self, text_column, reference_column, target_column):
+    def setup_hyperlinks(self, on_form_clicked, text_column, reference_column, target_column):
         view = self.view
         store = self.store
 
@@ -1153,7 +1153,7 @@ class HyperLinkMixin:
         view.connect("motion-notify-event", on_motion_notify)
 
 class IndexWidget(Gtk.Box, HyperLinkMixin):
-    def __init__(self, on_form_clicked, languages):
+    def __init__(self, on_form_clicked, name, languages):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         # str = correspondence text
         # int = visible_refs (updated after filter)
@@ -1171,7 +1171,7 @@ class IndexWidget(Gtk.Box, HyperLinkMixin):
         view.set_search_equal_func(all_columns_search_func, None)
         view.set_search_column(0)
 
-        for i, column_title in enumerate(['Correspondence/Rule', '# of references']):
+        for i, column_title in enumerate([name, '# of references']):
             cell = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
             column.set_sort_column_id(i)
@@ -1182,7 +1182,7 @@ class IndexWidget(Gtk.Box, HyperLinkMixin):
         self.pack_start(make_labeled_entry(self.enum, 'With support from:'),
                         False, False, 0)
         self.add(pane)
-        self.setup_hyperlinks(0, 1, 2)
+        self.setup_hyperlinks(on_form_clicked, 0, 1, 2)
 
     # filter forms by support
     def _filter_func(self, model, iter_, data=None):
@@ -1229,11 +1229,12 @@ class IndexWidget(Gtk.Box, HyperLinkMixin):
         self.update_visible_counts()
 
 class CorrespondenceIndexWidget(IndexWidget):
-    pass
+    def __init__(self, on_form_clicked, languages):
+        super().__init__(on_form_clicked, 'Correspondence/Rule', languages)
 
 class LexiconIndexWidget(IndexWidget):
     def __init__(self, on_form_clicked, language):
-        super().__init__(on_form_clicked, [])
+        super().__init__(on_form_clicked, 'Word', [])
         self.language = language
 
     def populate(self, proto_lexicon):
