@@ -503,7 +503,6 @@ dt { font-weight: bold; font-style: italic; }
 .mode-badge { width: 2.1em; display: flex; justify-content: center; align-items: flex-start; }
 .mode-badge .badge { display: inline-flex; align-items: center; justify-content: center; min-width: 1.0em; padding: .15em .45em; line-height: 1.15; font-size: .85em; border-radius: 9999px; }
 .mode-body { min-width: 0; }
-/* .mode-body > p { margin: 0} */
 .mode-short { padding: .25rem 0; border-top: 1px dashed #eee; }
 .mode-short:first-child { border-top: none; }
 .badge.text-bg-secondary { background: #6c757d; color: #fff; }
@@ -511,7 +510,6 @@ dt { font-weight: bold; font-style: italic; }
 #search-results mark { background: #fff3cd; padding: 0 .1em; }
 #search-results .long, #search-results .mode-long { display: none; }
 /* Wrapping / Gloss layout */
-/* .mode-body p, .mode-sub p, .entry-head, mark { overflow-wrap: break-word; word-break: normal; } */
 .mode-body p, .mode-sub p { margin: .15rem 0 0; text-indent: 0; }
 .mode-body p .small-caps, .mode-sub p .small-caps { display: inline-block; text-align: left; }
 .mode-body p .dfn, .mode-sub p .dfn { margin-left: .35em; }
@@ -520,11 +518,13 @@ dt { font-weight: bold; font-style: italic; }
   .mode-sub p .small-caps, .mode-body p .small-caps { min-width: 2.2em; }
  }
 @media (max-width: 576px) {
-  html { font-size: 18px; }
+  html { font-size: 16px; }
   .header .brand { font-size: .7rem; }
   #letter-nav .nav-link { font-size: 1.0rem; padding: .2rem; }
   .short p, .long { font-size: .9rem; line-height: 1.2; }
  }
+ table { border-collapse: collapse; table-layout:fixed; }
+tr, td, th { border: 1px solid; }
 """
 
     SCRIPT = r"""
