@@ -440,7 +440,7 @@ def create_html():
 :root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 html, body { height: 100%; }
 body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-rows: auto 1fr; height: 100vh; overflow: hidden; }
-.fixed-topbar { position: relative; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.06); overflow-x: hidden; width: 100%; }
+.fixed-topbar { position: relative; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.06); overflow-x: hidden; width: 100%; overflow: visible; } 
 #views { padding-top: 4px ; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; }
 #views > * { display: none !important; }
 .small-caps { font-variant-caps: small-caps; font-size: .7rem; }
@@ -456,7 +456,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 .header .page-links a:hover { background: rgba(255,255,255,.18); }
 /* Hamburger (CSS-only) */
 .menu-toggle { position: absolute; left: -9999px; }
-.hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; }
+.hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; z-index: 1300; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
 /* Mobile: dropdown menu, etc. */
 @media (max-width: 768px) {
