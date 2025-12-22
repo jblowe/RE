@@ -435,8 +435,8 @@ def render_entry_long(entry):
         d_extras_html = render_long_bits(entry)
     return d_extras_html
 
-
-STYLE = r"""
+def create_html():
+    STYLE = r"""
 :root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 html, body { height: 100%; }
 body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-rows: auto 1fr; height: 100vh; overflow: hidden; }
@@ -479,6 +479,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 body.show-dico .searchnav { display: block !important; }
 body.show-about #page-about { display: block !important; }
 body.show-credits #page-credits { display: block !important; }
+body.show-guide #page-guide { display: block !important; }
 body.show-dico #dictionary { display: block !important; }
 #page-about { display: block; }
 .page { position: relative; margin: 0 auto 1rem; padding: 0 0.4rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
@@ -526,7 +527,7 @@ dt { font-weight: bold; font-style: italic; }
  }
 """
 
-SCRIPT = r"""
+    SCRIPT = r"""
 //<![CDATA[
 // ----- Entry-wide toggle: show/hide ALL long blocks within the entry -----
 function toggleEntryAll(id){
@@ -620,8 +621,9 @@ window.debouncedSearch = debounce(handleSearch, 80);
   function setPageFromHash(){
     const h = (location.hash || '#about').toLowerCase();
     const b = document.body.classList;
-    b.remove('show-about','show-credits','show-dico');
+    b.remove('show-about','show-credits','show-guide','show-dico');
     if (h === '#credits')      b.add('show-credits');
+    else if (h === '#guide')   b.add('show-guide');
     else if (h === '#dico')    b.add('show-dico');
     else                       b.add('show-about');
   }
@@ -645,7 +647,7 @@ window.debouncedSearch = debounce(handleSearch, 80);
 //]]>
 """
 
-HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
+    HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -669,6 +671,8 @@ HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
     <nav class="page-links">
       <a href="#about">About</a>
       <a href="#credits">Credits</a>
+      <a href="#guide">User's Guide</a>
+      <a href="#dico">To Dictionary</a>
     </nav>
   </header>
 
@@ -683,59 +687,15 @@ HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
 
 <main id="views">
     <section id="page-about" class="page">
-        <a class="to-dico" href="#dico">To Dictionary</a>
-        <h4>About</h4>
-        <p class="small">
-            This is an early prototype of an online dictionary for the
-            Tamang language of Nepal that works on both mobile devices
-            and desktop computers. It is built as a single standalone
-            HTML page: it requires a web browser but does not require a
-            connection to the internet.
-        </p>
-        <p class="small">
-            Two facilities for searching the dictionary are provided:
-        </p>
-        <ul>
-            <li>Point-and-click searching using the ordered initial
-                "letters" shown in the navigation bar.
-            </li>
-            <li>A "search box" that performs an instantaneous
-                <i>free text</i> search of the entire dictionary.
-            </li>
-        </ul>
-        <p></p>
-        <p class="small">
-            The dictionary contains {entry_count} entries, and most have definitions
-            in three languages: Nepali (in Devanagari with transliteration),
-            French, and English.
-        </p>
+    """ + ABOUT + """
         <p>This edition was created on {run_date}.
     </section>
     <section id="page-credits" class="page">
-        <a class="to-dico" href="#dico">To Dictionary</a>
-        <h4>Acknowledgements</h4>
-        <dl>
-            <dt>Dictionary</dt>
-            <dd>The machine-readable dictionary used
-                in this application is a work-in-progress by Martine Mazaudon (CNRS). The dictionary is the result of
-                over 50 years of fieldwork in Nepal and careful lexicography. The original
-                digital version is in
-                <a href="http://www.montler.net/lexware/" target="_blank">Lexware</a> format,
-                a computational dictionary tool written some 50 years ago.
-            </dd>
-            <dt>Software</dt>
-            <dd>This "HTML only" version of the dictionary was created by a Python
-                script written by John B. Lowe (UC Berkeley) with the help with ChatGPT. The CSS styling is
-                based on Bootstrap 5, but the minimal CSS and Javascript needed to drive the application
-                was extracted and is included inline. 
-            </dd>
-        </dl>
-        <p class="small">
-            Please send comments, suggestions, indeed any feedback to
-            <a href="mailto:johnblowe@gmail.com,mazaudon@gmail.com">the creators</a>. We would love to hear what you think.
-        </p>
+    """ + CREDITS + """
     </section>
-
+    <section id="page-guide" class="page">
+    """ + GUIDE + """
+    </section>
   <section id="dictionary" class="page">
     <div class="dictionary-body">
       <div id="search-results" style="display:none;"></div>
@@ -748,6 +708,7 @@ HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
 </body>
 </html>
 """
+    return HTML_SHELL, STYLE, SCRIPT
 
 def build_letter_nav(groups):
     links = []
@@ -791,7 +752,7 @@ def minify_html(s: str) -> str:
     s = re.sub(r'> +<', '> <', s)
     return s.strip()
 
-def render_html(groups, title, ENTRY_COUNT):
+def render_html(groups, title, ENTRY_COUNT, HTML_SHELL, STYLE, SCRIPT):
     return HTML_SHELL.format(
         title=esc(title),
         style=STYLE,
@@ -806,13 +767,20 @@ if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser(description="Render dictionary XML to standalone HTML (modes + subs), grouped by <hdr>.")
     ap.add_argument("xml", help="Input XML file")
+    ap.add_argument("-a", "--about", default="tamang_about.html", help="About HTML file")
+    ap.add_argument("-g", "--guide", default="tamang_guide.html", help="User Guide HTML file")
+    ap.add_argument("-c", "--credits", default="tamang_credits.html", help="Credits HTML file")
     ap.add_argument("-o", "--out", default="TamangDictionary.html", help="Output HTML file")
     ap.add_argument("--title", default="Tamang | Nepali – French – English Dictionary", help="Page title")
     ap.add_argument("--no-minify", action="store_true", help="Skip HTML minification")
     args = ap.parse_args()
+    ABOUT = Path(args.about).read_text(encoding="utf-8")
+    GUIDE = Path(args.guide).read_text(encoding="utf-8")
+    CREDITS = Path(args.credits).read_text(encoding="utf-8")
+    HTML_SHELL, STYLE, SCRIPT = create_html()
 
     groups, ENTRY_COUNT = parse_entries_from_file(args.xml)
-    html = render_html(groups, args.title, ENTRY_COUNT)
+    html = render_html(groups, args.title, ENTRY_COUNT, HTML_SHELL, STYLE, SCRIPT)
     if not args.no_minify:
         html = minify_html(html)
     Path(args.out).write_text(html, encoding="utf-8")
