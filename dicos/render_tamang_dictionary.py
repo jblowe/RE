@@ -444,6 +444,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 #views { padding-top: 4px ; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; }
 #views > * { display: none !important; }
 .small-caps { font-variant-caps: small-caps; font-size: .7rem; }
+.small { font-size: .7rem; }
 .mb-0 { margin-bottom: 0; }
 .mb-1 { margin-bottom: 4px; }
 .my-2 { margin: 6px 0 6px 0; }
@@ -458,6 +459,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 .menu-toggle { position: absolute; left: -9999px; }
 .hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; z-index: 1300; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
+ .to-dico { display: none; }
 /* Mobile: dropdown menu, etc. */
 @media (max-width: 768px) {
  .hamburger { display: block; flex: 0 0 auto; margin-left: .5rem; }
@@ -465,6 +467,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
  .header .page-links { display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 1200; background: #fff; border: 1px solid #e5e7eb; padding: .5rem; }
  .header .page-links a { display: block; color: #111; text-decoration: none; padding: .5rem .75rem; border-radius: .375rem; }
  .header .page-links a:hover { background: #f2f2f2; }
+  .to-dico { display: block; }
  #menu-toggle:checked ~ .page-links { display: block; } }
 /* Search + Letter Nav */
 .searchnav { display: none; background: #fff; }
@@ -483,7 +486,7 @@ body.show-guide #page-guide { display: block !important; }
 body.show-dico #dictionary { display: block !important; }
 #page-about { display: block; }
 .page { position: relative; margin: 0 auto 1rem; padding: 0 0.4rem; background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-.page .to-dico { position: absolute; top: .75rem; right: .75rem; font-size: .9rem; padding: .35rem .7rem; background: #fff; border: 1px solid #ced4da; border-radius: .375rem; text-decoration: none; color: inherit; }
+.page .to-dico { float: right; top: .75rem; right: .75rem; font-size: .9rem; padding: .35rem .7rem; margin: .2rem; background: #fff; border: 1px solid #ced4da; border-radius: .375rem; text-decoration: none; color: inherit; }
 .page .to-dico:hover { background: #f1f3f5; }
 dt { font-weight: bold; font-style: italic; }
 /* Entries */
@@ -671,7 +674,7 @@ window.debouncedSearch = debounce(handleSearch, 80);
     <nav class="page-links">
       <a href="#about">About</a>
       <a href="#credits">Credits</a>
-      <a href="#guide">User's Guide</a>
+      <a href="#guide">Guide</a>
       <a href="#dico">To Dictionary</a>
     </nav>
   </header>
@@ -688,7 +691,7 @@ window.debouncedSearch = debounce(handleSearch, 80);
 <main id="views">
     <section id="page-about" class="page">
     """ + ABOUT + """
-        <p>This edition was created on {run_date}.
+        <p class="small">This edition was created on {run_date}.
     </section>
     <section id="page-credits" class="page">
     """ + CREDITS + """
