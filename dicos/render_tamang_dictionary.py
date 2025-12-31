@@ -591,31 +591,152 @@ function resetSearch(){
   const firstLink = document.querySelector('#letter-nav .nav-link'); if (firstLink) firstLink.classList.add('active');
   return false;
 }
+// ==================================================
+// Keyword Search (whole-word), as written by ChatGPT
+// ==================================================
+
+// ---- Config ----
+const KEYWORD_MODE = 'AND';   // 'AND' or 'OR'
+const MIN_TERM_LEN = 2;       // ignore tiny terms
+
+// ---- Utilities ----
+function escRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+// Build one regex per term with WHOLE-WORD matching.
+// Uses Unicode letter/mark classes when available; falls back to \b.
+function buildTermRegexes(query){
+  const terms = query.trim().split(/\s+/).filter(t => t.length >= MIN_TERM_LEN);
+  if (!terms.length) return [];
+
+  // robust "word" boundary = not (Letter|Mark|Number) on each side
+  const before = '(?<![\\p{L}\\p{M}\\p{Nd}])';
+  const after  = '(?![\\p{L}\\p{M}\\p{Nd}])';
+
+  const out = [];
+  for (const term of terms){
+    const core = escRegex(term);
+    try {
+      // Unicode-aware, case-insensitive, global
+      out.push(new RegExp(`${before}${core}${after}`, 'giu'));
+    } catch (e) {
+      // Fallback: ASCII \b word boundaries
+      out.push(new RegExp(`\\b${core}\\b`, 'gi'));
+    }
+  }
+  return out;
+}
+
+// AND/OR evaluation against plain text
+function textIncludesByMode(text, regexes){
+  if (!regexes.length) return false;
+  if (KEYWORD_MODE === 'OR') return regexes.some(rx => { rx.lastIndex = 0; return rx.test(text); });
+  return regexes.every(rx => { rx.lastIndex = 0; return rx.test(text); }); // AND
+}
+
+// Remove previous highlights
+function clearMarks(el){
+  el.querySelectorAll('mark.hl').forEach(m => {
+    const p = m.parentNode;
+    while (m.firstChild) p.insertBefore(m.firstChild, m);
+    p.removeChild(m);
+  });
+}
+
+// Replace a single text node with a fragment that wraps matches in <mark>
+function highlightNode(node, rx){
+  const txt = node.nodeValue;
+  rx.lastIndex = 0;
+  let m, last = 0, found = false;
+  const frag = document.createDocumentFragment();
+
+  while ((m = rx.exec(txt))){
+    if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+    const mark = document.createElement('mark'); mark.className = 'hl';
+    mark.textContent = m[0];
+    frag.appendChild(mark);
+    last = m.index + m[0].length;
+    // avoid zero-length loops (shouldn't happen with word boundaries, but safe)
+    if (rx.lastIndex === m.index) rx.lastIndex++;
+    found = true;
+  }
+  if (!found) return;
+
+  if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+  node.parentNode.replaceChild(frag, node);
+}
+
+// Highlight each term separately (re-scan nodes each time to keep it simple)
+function highlightInElementMulti(el, regexes){
+  if (!el || !regexes.length) return;
+  clearMarks(el);
+
+  const getTextNodes = () => {
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode(n){
+        if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        const p = n.parentNode;
+        if (p && /^(SCRIPT|STYLE)$/i.test(p.tagName)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    const out = [];
+    while (w.nextNode()) out.push(w.currentNode);
+    return out;
+  };
+
+  for (const rx of regexes){
+    // Fresh list each pass (DOM changes as we wrap)
+    const nodes = getTextNodes();
+    for (const node of nodes) highlightNode(node, rx);
+  }
+}
+
+// =======================
+// Drop-in replacement for your handleSearch()
+// =======================
 function handleSearch(input){
   const q = (input && input.value ? input.value : '').trim();
   const resultsDiv = document.getElementById('search-results'); if (!resultsDiv) return;
   const navBar = document.getElementById('letter-nav');
+
   resultsDiv.innerHTML = '';
   if (q.length === 0){ resetSearch(); return; }
+
+  const regexes = buildTermRegexes(q);
+  if (!regexes.length){
+    if (navBar) navBar.style.display = 'none';
+    hideAllSections();
+    resultsDiv.style.display = 'block';
+    resultsDiv.innerHTML = '<p class="small">Type at least two letters per keyword.</p>';
+    return;
+  }
+
   if (navBar) navBar.style.display = 'none';
   hideAllSections();
   resultsDiv.style.display = 'block';
+
+  // Search entries by keywords in .short area
   document.querySelectorAll('.entry').forEach(entry => {
     const shortArea = entry.querySelector('.short');
     const shortText = shortArea ? (shortArea.textContent || '') : '';
-    if (shortText.toLowerCase().includes(q.toLowerCase())){
+    // Test AND/OR across whole words
+    if (textIncludesByMode(shortText, regexes)){
       const clone = entry.cloneNode(true);
+      // Avoid duplicate IDs in results
       clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
+      // Show only the short view in results
       clone.querySelectorAll('.long, .mode-long').forEach(n => n.style.display = 'none');
       resultsDiv.appendChild(clone);
       const shortClone = clone.querySelector('.short');
-      if (shortClone) highlightInElement(shortClone, q);
+      if (shortClone) highlightInElementMulti(shortClone, regexes);
     }
   });
+
   if (resultsDiv.children.length === 0){
     resultsDiv.innerHTML = '<p class="small">No results found.</p>';
   }
 }
+
 window.debouncedSearch = debounce(handleSearch, 80);
 
 
