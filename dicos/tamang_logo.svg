@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540" role="img" aria-labelledby="title desc">
+  <title id="title">Drum Monogram v16 (tight margin)</title>
+  <desc id="desc">Minimal whitespace: drum nearly fills the square; no halo; thicker saffron outline; transparent outside.</desc>
+
+  <g transform="rotate(-18 270.00 243.00)">
+    <!-- Drum body (fill + main saffron outline) -->
+    <path d="
+      M 4.00,243.00
+      C 4.00,279.30 536.00,279.30 536.00,243.00
+      L 536.00,309.00
+      C 536.00,345.30 4.00,345.30 4.00,309.00
+      Z" fill="#F3DCB7" stroke="#D97706" stroke-width="14.0" stroke-linejoin="round"/>
+    <ellipse cx="270.00" cy="309.00" rx="266.0" ry="180.88000000000002"
+             fill="#F3DCB7" stroke="#D97706" stroke-width="14.0"/>
+    <ellipse cx="270.00" cy="243.00" rx="266.0" ry="180.88000000000002"
+             fill="#F3DCB7" stroke="#D97706" stroke-width="14.0"/>
+
+    <!-- Ticks -->
+    <path d="M536.00,243.00 L492.00,243.00 M526.94,289.82 L484.44,278.43 M500.36,333.44 L462.26,311.44 M458.09,370.90 L426.98,339.79 M403.00,399.65 L381.00,361.54 M338.85,417.72 L327.46,375.22 M270.00,423.88 L270.00,379.88 M201.15,417.72 L212.54,375.22 M137.00,399.65 L159.00,361.54 M81.91,370.90 L113.02,339.79 M39.64,333.44 L77.74,311.44 M13.06,289.82 L55.56,278.43 M4.00,243.00 L48.00,243.00 M13.06,196.18 L55.56,207.57 M39.64,152.56 L77.74,174.56 M81.91,115.10 L113.02,146.21 M137.00,86.35 L159.00,124.46 M201.15,68.28 L212.54,110.78 M270.00,62.12 L270.00,106.12 M338.85,68.28 L327.46,110.78 M403.00,86.35 L381.00,124.46 M458.09,115.10 L426.98,146.21 M500.36,152.56 L462.26,174.56 M526.94,196.18 L484.44,207.57" stroke="#8F5204" stroke-width="10.0" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- TA -->
+  <g fill="#003893" stroke="none" text-anchor="middle" dominant-baseline="central">
+    <text x="259.20" y="275.40" font-size="268"
+          font-family="Noto Sans Devanagari, Noto Serif Devanagari, Devanagari Sangam MN, Kohinoor Devanagari, sans-serif">त</text>
+  </g>
+</svg>
