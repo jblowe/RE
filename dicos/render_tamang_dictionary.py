@@ -450,7 +450,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 .my-2 { margin: 6px 0 6px 0; }
 .ms-1 { margin-left: .25rem; }
 .header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: 0.1rem; box-sizing: border-box; }
-.header .logo { width: 44px; height: 32px; flex: 0 0 auto; }
+.header .logo { width: 48px; height: 48px; flex: 0 0 auto; }
 /* .header .logo img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; } */
 .header .logo svg, .header .logo img { width: 100%; height: 100%; display: block; }
 .header .brand { color: #fff; text-decoration: none; font-weight: bold; overflow: hidden; }
