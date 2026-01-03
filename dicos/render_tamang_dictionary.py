@@ -449,8 +449,10 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 .mb-1 { margin-bottom: 4px; }
 .my-2 { margin: 6px 0 6px 0; }
 .ms-1 { margin-left: .25rem; }
-.header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: .5rem; box-sizing: border-box; }
-.header .logo { width: 28px; height: 28px; border-radius: 4px; background: rgba(255,255,255,.3); flex: 0 0 28px; }
+.header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: 0.1rem; box-sizing: border-box; }
+.header .logo { width: 44px; height: 32px; flex: 0 0 auto; }
+/* .header .logo img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; } */
+.header .logo svg, .header .logo img { width: 100%; height: 100%; display: block; }
 .header .brand { color: #fff; text-decoration: none; font-weight: bold; overflow: hidden; }
 .header .page-links { margin-left: auto; display: flex; gap: .5rem; }
 .header .page-links a { color: #fff; text-decoration: none; padding: .25rem .5rem; border-radius: .375rem; }
@@ -597,13 +599,14 @@ function resetSearch(){
 
 // ---- Config ----
 const KEYWORD_MODE = 'AND';   // 'AND' or 'OR'
-const MIN_TERM_LEN = 2;       // ignore tiny terms
+const MIN_TERM_LEN = 1;       // <-- allow single-character terms
+const MAX_RESULTS = 1500;     // perf guard for very small terms
 
 // ---- Utilities ----
 function escRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
 // Build one regex per term with WHOLE-WORD matching.
-// Uses Unicode letter/mark classes when available; falls back to \b.
+// Uses Unicode letter/mark/number classes when available; falls back to \b.
 function buildTermRegexes(query){
   const terms = query.trim().split(/\s+/).filter(t => t.length >= MIN_TERM_LEN);
   if (!terms.length) return [];
@@ -616,10 +619,8 @@ function buildTermRegexes(query){
   for (const term of terms){
     const core = escRegex(term);
     try {
-      // Unicode-aware, case-insensitive, global
       out.push(new RegExp(`${before}${core}${after}`, 'giu'));
     } catch (e) {
-      // Fallback: ASCII \b word boundaries
       out.push(new RegExp(`\\b${core}\\b`, 'gi'));
     }
   }
@@ -646,7 +647,7 @@ function clearMarks(el){
 function highlightNode(node, rx){
   const txt = node.nodeValue;
   rx.lastIndex = 0;
-  let m, last = 0, found = false;
+  let m, last = 0, found = false, count = 0;
   const frag = document.createDocumentFragment();
 
   while ((m = rx.exec(txt))){
@@ -655,17 +656,15 @@ function highlightNode(node, rx){
     mark.textContent = m[0];
     frag.appendChild(mark);
     last = m.index + m[0].length;
-    // avoid zero-length loops (shouldn't happen with word boundaries, but safe)
-    if (rx.lastIndex === m.index) rx.lastIndex++;
+    if (rx.lastIndex === m.index) rx.lastIndex++;     // safety
     found = true;
+    if (++count > MAX_RESULTS) break;                 // perf guard
   }
   if (!found) return;
-
   if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
   node.parentNode.replaceChild(frag, node);
 }
 
-// Highlight each term separately (re-scan nodes each time to keep it simple)
 function highlightInElementMulti(el, regexes){
   if (!el || !regexes.length) return;
   clearMarks(el);
@@ -685,8 +684,7 @@ function highlightInElementMulti(el, regexes){
   };
 
   for (const rx of regexes){
-    // Fresh list each pass (DOM changes as we wrap)
-    const nodes = getTextNodes();
+    const nodes = getTextNodes();  // fresh list each pass (DOM mutates)
     for (const node of nodes) highlightNode(node, rx);
   }
 }
@@ -707,7 +705,7 @@ function handleSearch(input){
     if (navBar) navBar.style.display = 'none';
     hideAllSections();
     resultsDiv.style.display = 'block';
-    resultsDiv.innerHTML = '<p class="small">Type at least two letters per keyword.</p>';
+    resultsDiv.innerHTML = '<p class="small">Type one or more keywords.</p>';
     return;
   }
 
@@ -715,20 +713,18 @@ function handleSearch(input){
   hideAllSections();
   resultsDiv.style.display = 'block';
 
-  // Search entries by keywords in .short area
+  let appended = 0;
   document.querySelectorAll('.entry').forEach(entry => {
     const shortArea = entry.querySelector('.short');
     const shortText = shortArea ? (shortArea.textContent || '') : '';
-    // Test AND/OR across whole words
     if (textIncludesByMode(shortText, regexes)){
       const clone = entry.cloneNode(true);
-      // Avoid duplicate IDs in results
       clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
-      // Show only the short view in results
       clone.querySelectorAll('.long, .mode-long').forEach(n => n.style.display = 'none');
       resultsDiv.appendChild(clone);
       const shortClone = clone.querySelector('.short');
       if (shortClone) highlightInElementMulti(shortClone, regexes);
+      if (++appended > MAX_RESULTS){ /* optional: show a cap notice */ }
     }
   });
 
@@ -784,7 +780,7 @@ window.debouncedSearch = debounce(handleSearch, 80);
 
 <div class="fixed-topbar">
   <header class="header">
-    <div class="logo" aria-hidden="true"></div>
+    <div class="logo" aria-hidden="true">""" + LOGO + """</div>
     <a class="brand" href="#dico">{title}</a>
 
     <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" />
@@ -894,6 +890,7 @@ if __name__ == "__main__":
     ap.add_argument("-a", "--about", default="tamang_about.html", help="About HTML file")
     ap.add_argument("-g", "--guide", default="tamang_guide.html", help="User Guide HTML file")
     ap.add_argument("-c", "--credits", default="tamang_credits.html", help="Credits HTML file")
+    ap.add_argument("-l", "--logo", default="tamang_logo.svg", help="Logo SVG file")
     ap.add_argument("-o", "--out", default="TamangDictionary.html", help="Output HTML file")
     ap.add_argument("--title", default="Tamang | Nepali – French – English Dictionary", help="Page title")
     ap.add_argument("--no-minify", action="store_true", help="Skip HTML minification")
@@ -901,6 +898,7 @@ if __name__ == "__main__":
     ABOUT = Path(args.about).read_text(encoding="utf-8")
     GUIDE = Path(args.guide).read_text(encoding="utf-8")
     CREDITS = Path(args.credits).read_text(encoding="utf-8")
+    LOGO = Path(args.logo).read_text(encoding="utf-8")
     HTML_SHELL, STYLE, SCRIPT = create_html()
 
     groups, ENTRY_COUNT = parse_entries_from_file(args.xml)
