@@ -765,6 +765,10 @@ window.debouncedSearch = debounce(handleSearch, 80);
   setPageFromHash();
 })();
 //]]>
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js");
+}
 """
 
     HTML_SHELL = """<?xml version="1.0" encoding="UTF-8"?>
@@ -773,6 +777,10 @@ window.debouncedSearch = debounce(handleSearch, 80);
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>{title}</title>
 <style type="text/css">{style}</style>
 </head>
