@@ -449,7 +449,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 .mb-1 { margin-bottom: 4px; }
 .my-2 { margin: 6px 0 6px 0; }
 .ms-1 { margin-left: .25rem; }
-.header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: 0.1rem; box-sizing: border-box; }
+.header { position: sticky; z-index: 2; display: flex; align-items: center; gap: .75rem; background: #A51931; color: #fff; width: 100%; padding: 0.3rem; box-sizing: border-box; }
 .header .logo { width: 48px; height: 48px; flex: 0 0 auto; }
 /* .header .logo img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; } */
 .header .logo svg, .header .logo img { width: 100%; height: 100%; display: block; }
@@ -780,10 +780,9 @@ window.debouncedSearch = debounce(handleSearch, 80);
 
 <div class="fixed-topbar">
   <header class="header">
-    <div class="logo" aria-hidden="true">""" + LOGO + """</div>
+    <!-- div class="logo" aria-hidden="true"> + LOGO + </div -->
     <a class="brand" href="#dico">{title}</a>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" />
     <label for="menu-toggle" class="hamburger" aria-hidden="true">
       <span></span><span></span><span></span>
     </label>
