@@ -143,7 +143,11 @@ def add_entry(root, form, number):
         ET.SubElement(rfx, 'lx').text = form.actual.glyphs
         ET.SubElement(rfx, 'fz').text = form.glyphs
     ET.SubElement(rfx, 'lg').text = form.language
-    ET.SubElement(rfx, 'gl').text = form.gloss
+    try:
+        ET.SubElement(rfx, 'gl').text = form.gloss
+    except:
+        ET.SubElement(rfx, 'gl').text = 'missing'
+        # print(f'gloss missing in {form.language} {number} {form.glyphs}')
     return
 
 

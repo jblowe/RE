@@ -873,7 +873,11 @@ def project_back(lexicons, parameters, statistics):
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
         memo = {}
-        daughter_form = lambda c: c.daughter_forms[lexicon.language]
+        if lexicon.language in parameters.table.daughter_languages:
+            daughter_form = lambda c: c.daughter_forms[lexicon.language]
+        else:
+            print(f'Could not determine daughter forms for {lexicon.language}, deleted it.')
+            continue
         count_of_parses = 0
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map)
