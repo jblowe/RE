@@ -240,7 +240,7 @@ def read_context_from_string(string):
     if string == '':
         return (None, None)
     if '_' not in string:
-        raise Exception('Context missing _ divider.')
+        raise Exception(f'Context missing _ divider: {string}')
     return tuple(None if x == '' else
                   [y.strip() for y in x.split(',')]
                   for x in string.replace('/', '').split('_'))
@@ -929,6 +929,7 @@ def project_back(lexicons, parameters, statistics):
     statistics.add_stat('lexicons', len(lexicons))
     statistics.add_stat('reflexes', number_of_forms)
     statistics.add_note(f'{number_of_forms} attested forms')
+    statistics.add_note(f'{len(reconstructions)} reconstructions generated')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
