@@ -463,6 +463,7 @@ def serialize_mels(mel_sets, mel_name, filename):
 def serialize_isolates_and_failures(re_items, re_element, item_name):
     ET.SubElement(re_element, 'createdat').text = run_date
 
+    number = 0
     for (number, form) in enumerate(re_items):
         add_entry(re_element, form, number)
 
