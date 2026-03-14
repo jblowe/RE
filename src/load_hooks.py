@@ -4,13 +4,13 @@ import projects
 import os
 import sys
 
-def load_hook(experiment_path, arg, settings):
+def load_hook(project_path):
     sys.path.append('toolbox/')
-    sys.path.append(experiment_path)
+    sys.path.append(project_path)
     try:
         print('trying for hooks')
         from hook import run_load_hooks
-        run_load_hooks(arg, settings)
+        run_load_hooks()
 
     except ModuleNotFoundError:
         print('No preprocessing needed.')

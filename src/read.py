@@ -4,6 +4,8 @@ import os
 import RE
 import mel
 import pickle
+import json
+from utils import *
 
 def read_correspondence_file(filename, name, mel_filename, fuzzy_filename):
     "Return syllable canon and table of correspondences"
@@ -123,54 +125,102 @@ def read_csv_correspondences(filename, daughter_languages):
     return table
 
 # xml reading
-def read_settings_file(filename, mel=None, recon=None, fuzzy=None):
-    # for now we assume we don't want more than one proto-language
-    upstream = {}
-    downstream = []
-    attested = {}
-    proto_languages = {}
+def parse_upstream(upstream_str):
+    result = {}
+    for u in upstream_str.split(';'):
+        u = u.strip()
+        if not u:
+            continue
+        [pl, lgs] = u.split(':')
+        pl = pl.strip()
+        lgs = [l.strip() for l in lgs.split(',')]
+        result[pl] = lgs
+    return result
+
+def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy_token=None, upstream=None):
+# f read_settings(filename, mel=None, recon=None, fuzzy=None):
+
+    """Build RE.ProjectSettings from project directory and parameters."""
+    languages = None
+    # downstream = []
+    proto_language = None
+    proto_languages = None
     mel_filenames = {}
     reconstructions = {}
     fuzzy_filenames = {}
     other = {}
-    target = None
-    for setting in ET.parse(filename).getroot():
-        if setting.tag == 'reconstruction':
-            reconstructions[setting.attrib['name']] = setting
-            if setting.attrib['name'] == recon:
-                for spec in setting:
-                    if spec.tag == 'action':
-                        if spec.attrib['name'] == 'upstream':
-                            if spec.attrib.get('target'):
-                                target = spec.attrib.get('target')
-                            if spec.attrib.get('to'):
-                                upstream[spec.attrib.get('to')] = \
-                                    spec.attrib.get('from').split(',')
-                        elif spec.attrib['name'] == 'downstream':
-                            downstream.append(spec.attrib['to'])
-                    elif spec.tag == 'proto_language':
-                        proto_languages[spec.attrib['name']] = \
-                            spec.attrib['correspondences']
-        elif setting.tag == 'attested':
-            attested[setting.attrib['name']] = setting.attrib['file']
-        elif setting.tag == 'mel':
-            mel_filenames[setting.attrib['name']] = setting.attrib['file']
-        elif setting.tag == 'fuzzy':
-            fuzzy_filenames[setting.attrib['name']] = setting.attrib['file']
-        elif setting.tag == 'param':
-            other[setting.attrib['name']] = setting.attrib['value']
-    other['mels'] = mel_filenames
-    other['fuzzies'] = fuzzy_filenames
-    other['reconstructions'] = reconstructions
-    return RE.ProjectSettings(os.path.dirname(filename),
-                              None if mel is None else mel_filenames[mel],
-                              attested,
-                              proto_languages,
-                              target,
-                              upstream,
-                              downstream,
-                              other,
-                              None if fuzzy is None else fuzzy_filenames[fuzzy])
+    upstream_map = None
+    if upstream is not None:
+        upstream_map = parse_upstream(upstream)
+        proto_lang_keys = set(upstream_map.keys())
+        languages = [lg for lgs in upstream_map.values() for lg in lgs if lg not in proto_lang_keys]
+    # 1) correspondences
+    recon_file = resolve_file(project_path, project_code, recon_token, '.correspondences.xml')
+    if recon_file is None:
+        raise Exception(f"Could not find correspondences file for -t/--recon '{recon_token}' in {project_path}")
+
+    if upstream_map is not None:
+        proto_languages = {}
+        for pl in upstream_map.keys():
+            pl_recon_file = resolve_file(project_path, project_code, pl, '.correspondences.xml')
+            if pl_recon_file is None:
+                raise Exception(f"Could not find correspondences file for proto-language '{pl}' in {project_path}")
+            proto_languages[pl] = pl_recon_file
+    else:
+        proto_language = read_protolanguage_from_correspondences(os.path.join(project_path, recon_file))
+        if proto_language is None:
+            proto_language = project_code.capitalize()[:4]
+            print(f"Could not determine protolanguage for {recon_file}.")
+            print(f"Using 1st 4 letters of project, title case: {proto_language}")
+        proto_languages = {proto_language: recon_file}
+
+    upstream_target = next(iter(proto_languages))
+
+    # 2) languages / attested lexicons
+    if languages is None:
+        languages = list_attested_languages(project_path)
+    if not languages:
+        raise Exception(f'No attested lexicons found in {project_path} (expected *.<LANG>.data.xml)')
+
+    attested = {}
+    for lg in languages:
+        fn = resolve_file(project_path, project_code, lg, '.data.xml')
+        if not fn:
+            raise Exception(f"Language '{lg}' requested, but file not found: *.{lg}.data.xml")
+        attested[lg] = fn
+
+    # 3) MEL / fuzzy
+    mel_file = resolve_file(project_path, project_code, mel_token, '.mel.xml')
+    if mel_token is not None and mel_file is None:
+        raise Exception(f"--mel '{mel_token}' does not resolve to an existing file in {project_path} (expected {project_code}.{mel_token}.mel.xml)")
+
+    fuzzy_file = resolve_file(project_path, project_code, fuzzy_token, '.fuz.xml')
+    if fuzzy_token is not None and fuzzy_file is None:
+        raise Exception(
+            f"--fuzzy '{fuzzy_token}' does not resolve to an existing file in {project_path}. "
+            f"Tried {project_code}.{fuzzy_token}.fuz.xml and {project_code}.{fuzzy_token}.xml")
+
+    # 4) action graph
+    upstream_graph = upstream_map if upstream_map is not None else {upstream_target: languages}
+    downstream = []
+    other = {
+        'title': f'{project_code} reconstruction ({recon_token})',
+        'mels': {},
+        'fuzzies': {},
+        'reconstructions': {},
+    }
+
+    return RE.ProjectSettings(
+        project_path,
+        mel_file,
+        attested,
+        proto_languages,
+        upstream_target,
+        upstream_graph,
+        downstream,
+        other,
+        fuzzy_filename=fuzzy_file,
+    )
 
 
 # returns a generator returning the modern form and its gloss

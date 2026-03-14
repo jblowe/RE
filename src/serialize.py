@@ -12,6 +12,7 @@ import csv
 
 run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
+
 def serialize_correspondence_file(filename, parameters):
     root = ET.Element('tableOfCorr')
     ET.SubElement(root, 'createdat').text = run_date
@@ -85,12 +86,14 @@ def serialize_correspondence_file(filename, parameters):
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
 
+
 def serialize_csv_correspondences(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
         writer.writerow(table.correspondence_header_row())
         for c in table.correspondences:
             writer.writerow(c.as_row(table.daughter_languages))
+
 
 def serialize_csv_rules(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
@@ -99,6 +102,7 @@ def serialize_csv_rules(table, filename):
         for rule in table.rules:
             writer.writerow(rule.as_row())
 
+
 def serialize_csv_quirks(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
@@ -106,12 +110,14 @@ def serialize_csv_quirks(table, filename):
         for quirk in table.quirks.values():
             writer.writerow(quirk.as_row())
 
-def serialize_lexicons(lexicons, dirname, ext='.data.xml'):
+
+def serialize_lexicons(lexicons, project_name, dirname, ext='.data.xml'):
     for lexicon in lexicons:
         serialize_lexicon(
             lexicon,
             os.path.join(dirname,
-                         f'{lexicon.language}{ext}'))
+                         f'{project_name}.{lexicon.language}{ext}'))
+
 
 def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
@@ -152,7 +158,6 @@ def add_entry(root, form, number):
 
 
 def render_sets(forms, sets, languages, set_type):
-
     def sort_forms(form, sf, level):
         # we need to output the supporting forms in the order specified by "languages"
         unfrozenset = [x for x in form.supporting_forms]
@@ -223,6 +228,7 @@ def render_sets(forms, sets, languages, set_type):
     print(f'number of "{set_type}" {number}')
     return sets
 
+
 def create_xml_sets(reconstruction, languages, only_with_mel):
     '''
     Here is the "classic schema" of cognate sets...
@@ -258,11 +264,13 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
         for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
             uniques[form.supporting_forms].append(form)
 
-        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)), sets, languages, 'strict sets')
+        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)),
+                    sets, languages, 'strict sets')
 
     # otherwise, make sets the 'usual' way (no mels)
     else:
-        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages, 'sets')
+        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)),
+                    sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
     serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
@@ -273,10 +281,12 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
     return root
 
+
 def serialize_sets(reconstruction, languages, filename, only_with_mel):
     root = create_xml_sets(reconstruction, languages, only_with_mel)
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
 
 def serialize_stats(stats, settings, args, filename):
     root = ET.Element('stats', attrib={'project': 'foo'})
@@ -284,12 +294,13 @@ def serialize_stats(stats, settings, args, filename):
 
     settings_element = ET.SubElement(root, 'settings')
     try:
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'run', 'value': str(args.run)})
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'mel_filename', 'value': str(settings.mel_filename)})
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'strict', 'value': str(args.only_with_mel)})
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'run', 'value': str(args.run)})
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'mel_filename', 'value': str(settings.mel_filename)})
+        ET.SubElement(settings_element, 'parm',
+                      attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'strict', 'value': str(args.only_with_mel)})
         try:
-            ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.fuzzy_filename})
+            ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': settings.fuzzy_filename})
         except:
             ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': 'No fuzzying done.'})
     except:
@@ -339,13 +350,25 @@ def serialize_stats(stats, settings, args, filename):
         pass
 
     try:
-        if len(stats.unmatched_by_language.items()) > 0:
-            unmatched = ET.SubElement(root, 'unmatched')
-            for lg in stats.unmatched_by_language:
-                unmatched_by_language = ET.SubElement(unmatched, 'mel', attrib={'id': lg})
-                for g in sorted(stats.unmatched_by_language[lg]):
-                    gl_element = ET.SubElement(unmatched_by_language, 'gl')
+        if len(stats.glosses_by_language.items()) > 0:
+            glosses_by_language = ET.SubElement(root, 'glosses_by_language')
+            for lg in stats.glosses_by_language:
+                # we reuse the <mel> element here for each language
+                list_of_glosses = ET.SubElement(glosses_by_language, 'mel', attrib={'id': lg})
+                for g in sorted(stats.glosses_by_language[lg]):
+                    gl_element = ET.SubElement(list_of_glosses, 'gl')
                     gl_element.text = g
+                    gl_element.set('count', str(stats.glosses_by_language[lg][g]))
+    except:
+        pass
+
+    try:
+        if len(stats.unmatched_glosses) > 0:
+            unmatched_glosses = ET.SubElement(root, 'unmatched_glosses')
+            list_of_unmatched_glosses = ET.SubElement(unmatched_glosses, 'mel')
+            for g in sorted(stats.unmatched_glosses):
+                gl_element = ET.SubElement(list_of_unmatched_glosses, 'gl')
+                gl_element.text = g
     except:
         pass
 
@@ -389,7 +412,7 @@ def serialize_evaluation(stats, filename, languages):
                         seen.add(node2)
                     links.append({'source': node2, 'target': node, 'value': 2})
 
-            with open(filename.replace('.xml','.json'), 'w', encoding='utf-8') as f:
+            with open(filename.replace('.xml', '.json'), 'w', encoding='utf-8') as f:
                 f.write(json.dumps({'nodes': nodes, 'links': links}, indent=2))
 
             # for now, just handle the first 200 reflexes and first 100 protoforms for the table version
@@ -418,16 +441,6 @@ def serialize_evaluation(stats, filename, languages):
                     else:
                         ET.SubElement(tr, 'td').text = ''
 
-            # a previous iteration
-            # for i in range(len(refs)):
-            #     tr = ET.SubElement(element, 'tr')
-            #     ET.SubElement(tr, 'th').text = refs[i]
-            #     for j in range(len(pfms)):
-            #         if pfms[j] in graph[refs[i]]:
-            #             ET.SubElement(tr, 'td').text = pfms[j]
-            #         else:
-            #             ET.SubElement(tr, 'td').text = ''
-
         elif k in 'pfms refs list_of_sf'.split(' '):
             pass
         elif type(v) == type(()):
@@ -439,6 +452,7 @@ def serialize_evaluation(stats, filename, languages):
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
 
 def serialize_mels(mel_sets, mel_name, filename):
     '''
@@ -459,6 +473,7 @@ def serialize_mels(mel_sets, mel_name, filename):
         ET.SubElement(entry, 'gl').text = mel
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
 
 def serialize_isolates_and_failures(re_items, re_element, item_name):
     ET.SubElement(re_element, 'createdat').text = run_date
