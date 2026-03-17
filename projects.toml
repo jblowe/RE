@@ -1,7 +1,4 @@
-TGTM       = "/Users/johnlowe/GitHub/RE-Tamangish-files/TGTM"
-TGTM94SETS = "/Users/johnlowe/GitHub/RE-Tamangish-files/TGTM94SETS"
-DEMO93     = "/Users/johnlowe/GitHub/RE-Tamangish-files/DEMO93"
-
+# default list of available public projects
 DIS        = "projects/DIS"
 # EXER     = "projects/EXER"
 # GERMANIC = "projects/GERMANIC"
