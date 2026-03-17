@@ -114,13 +114,13 @@ elif command_args.command == 'upstream':
     print(time.asctime())
     elapsed_time = time.time()
     print('Command line options used: ' + ' '.join(sys.argv[1:]))
+    load_hooks.load_hook(args.project_path)
     # languages = split_csv(getattr(args, 'upstream', None))
     settings = read_settings(args.project_path, args.project, args.recon,
                                             mel_token=args.mel,
                                             fuzzy_token=args.fuzzy,
                                             upstream=args.upstream)
     check_setup(command_args.command, args, settings)
-    load_hooks.load_hook(args.project_path)
 
     mel_status = 'strict MELs' if args.only_with_mel else 'MELs not enforced'
     print(mel_status)
