@@ -59,7 +59,7 @@ N	L	Type	PL	Env	PNL	sani	axi	nesu	lalo	li	nasu	neisu	nosu
 57	1	I	pl		p	p	p	p	p	p	ɬ	ɬ	p
 58	1	I	pw		ph	ph	ph	ph	f,ph	ph	ph	ph	ph
 59	1	I	s		s	s	s	s,ɕ	s,ɕ	s	s	s	s
-60	1	I	s	/I̱	ɕ	ʂ	ʂ	ɕ	x	s	ɕ	ɕ	s
+60	1	I	s	_I	ɕ	ʂ	ʂ	ɕ	x	s	ɕ	ɕ	s
 61	1	I	sy		sy	ɕ,ʂ	ʂ	s,ɕ	x,ʂ	ʂ,s	ɕ,ʂ	ɕ,ʂ	ʂ,s
 62	1	I	ʔt		t	t	t	t	t	t	t	t	t,ts
 63	1	I	ts		ts	tʂ	ts	k,ts	k,tʂ	tɕ,tʂ	tɕ,tʂ	k,tʂ	tɕ
@@ -70,7 +70,7 @@ N	L	Type	PL	Env	PNL	sani	axi	nesu	lalo	li	nasu	neisu	nosu
 68	1	I	r		w	v	ɣ	v	v	v	ɣ	ɣ	v
 69	1	I	w		w	v	v	v	v	b,v	v	v	mb,v
 70	1	I	sy		x	x,ɕ	x,ɕ	x,ɕ	x,ɕ	x,ɕ	x,ɕ	x,ɕ	ʂ
-71	1	I	s	/I̱	ɕ	ʂ	ʂ	ɕ	x	s	ɕ	ɕ	s
+71	1	I	s	_I	ɕ	ʂ	ʂ	ɕ	x	s	ɕ	ɕ	s
 72	1	I	z		z	z	z	z,ʑ,ɕ	z,ʐ	z	z	z	z
 73	1	I	zy		zy	ʐ	ʐ	ʐ,x	ɣ	ʐ	ʐ,h	ʐ,h	ʐ
 74	1	I	ɬ		ɬ	l,ɬ	l	ɬ	ʔl	l	ɬ	ɬ	ɬ,h
