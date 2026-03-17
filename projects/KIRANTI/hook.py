@@ -44,6 +44,6 @@ def read_tabular_lexicons(filename, delimiter='\t'):
                         forms_dict[language].append(RE.ModernForm(language, form, gloss, str_id))
         return [RE.Lexicon(language, forms, []) for language, forms in forms_dict.items()]
 
-def run_load_hooks(arg, settings):
+def run_load_hooks():
     print('creating lexicons')
-    serialize.serialize_lexicons(read_tabular_lexicons(filename), base_dir)
+    serialize.serialize_lexicons(read_tabular_lexicons(filename), 'KIRANTI', base_dir)

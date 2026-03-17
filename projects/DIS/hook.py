@@ -22,5 +22,5 @@ def generate_xml_data():
                     if exit_code != 0:
                         sys.exit(exit_code)
 
-def run_load_hooks(arg, settings):
+def run_load_hooks():
     generate_xml_data()
