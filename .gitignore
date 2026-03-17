@@ -23,13 +23,14 @@ TEMP.*.data.xml
 DIS.*.data.xml
 */POLYNESIAN/*.data.xml
 */VANUATU/*.data.xml
+*/HMONGMIEN/*.data.xml
+*/HMONGMIEN/*.correspondences.xml
 */LOLOISH/*.data.xml
 */LOLOISH/*.correspondences.xml
 *.evaluation.statistics.xml
 *.failures.sets.xml
 *.isolates.sets.xml
 *.mel.statistics.xml
-*/experiments/*/*.xml
 *.upstream.statistics.xml
 
 *.keys.csv
