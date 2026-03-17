@@ -1,3 +1,4 @@
 regex
 lxml
 matplotlib_venn
+tomli
