@@ -13,5 +13,7 @@ def load_hook(project_path):
         run_load_hooks()
 
     except ModuleNotFoundError:
-        raise
         print('No preprocessing needed.')
+        return
+    except:
+        raise
