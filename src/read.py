@@ -156,15 +156,19 @@ def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy
         languages = [lg for lgs in upstream_map.values() for lg in lgs if lg not in proto_lang_keys]
     # 1) correspondences
     recon_file = resolve_file(project_path, project_code, recon_token, '.correspondences.xml')
-    if recon_file is None:
+    if recon_file is None and upstream is None:
         raise Exception(f"Could not find correspondences file for -t/--recon '{recon_token}' in {project_path}")
-
-    if upstream_map is not None:
+    elif upstream_map is not None:
         proto_languages = {}
         for pl in upstream_map.keys():
             pl_recon_file = resolve_file(project_path, project_code, pl, '.correspondences.xml')
-            if pl_recon_file is None:
-                raise Exception(f"Could not find correspondences file for proto-language '{pl}' in {project_path}")
+            if pl_recon_file is None and recon_file is None:
+                raise Exception(f"both -t/--recon '{recon_token}' and --upstream '{pl}: ...'; were specified" +
+                                "but no .correspondences.xml file matched in {project_path}")
+            elif recon_file is not None:
+                pl_recon_file = recon_file
+                print(f'using -t/--recon {recon_token} for {recon_file}')
+                # raise Exception(f"Some other problem: got -t/--recon {recon_token} for {recon_file}, and proto-language '{pl}' in {project_path}")
             proto_languages[pl] = pl_recon_file
     else:
         proto_language = read_protolanguage_from_correspondences(os.path.join(project_path, recon_file))
@@ -172,6 +176,8 @@ def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy
             proto_language = project_code.capitalize()[:4]
             print(f"Could not determine protolanguage for {recon_file}.")
             print(f"Using 1st 4 letters of project, title case: {proto_language}")
+        else:
+            print(f'using protolanguage {proto_language} from {recon_file}')
         proto_languages = {proto_language: recon_file}
 
     upstream_target = next(iter(proto_languages))
