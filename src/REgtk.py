@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 import traceback
 import itertools
 import collections
-from utils import natural_sort_key
+from utils import natural_sort_key, find_candidates
 
 class ProjectManagerDialog(Gtk.Dialog):
     """Dialog to choose a project."""
@@ -60,6 +60,12 @@ class ProjectManagerDialog(Gtk.Dialog):
 
         vbox.pack_start(controls, False, False, 0)
 
+        # Upstream parameter (optional free-form string)
+        self.upstream_entry = Gtk.Entry()
+        self.upstream_entry.set_placeholder_text(
+            'e.g. PIR: es, pt, oldpt; PIWR: PWR, it, scn; PWR: PIR, fr  (leave blank for default)')
+        vbox.pack_start(make_labeled_entry(self.upstream_entry, 'upstream:'), False, False, 0)
+
         # Update mel/recon choices when a project is selected
         self.tree.get_selection().connect("changed", self.on_project_selection_changed)
 
@@ -79,32 +85,25 @@ class ProjectManagerDialog(Gtk.Dialog):
         if iter_ is None:
             return
         project = model.get_value(iter_, 0)
-        parameters_file = os.path.join(projects.projects[project],
-                                       f'{project}.master.parameters.xml')
         self.mel_combo.remove_all()
         self.recon_combo.remove_all()
         self.fuzzy_combo.remove_all()
         try:
-            recons = []
-            mels = ['None']
-            fuzzies = ['None']
-            for setting in ET.parse(parameters_file).getroot():
-                match setting.tag:
-                    case 'reconstruction':
-                        recons.append(setting.attrib['name'])
-                    case 'mel':
-                        mels.append(setting.attrib['name'])
-                    case 'fuzzy':
-                        fuzzies.append(setting.attrib['name'])
+            recons = find_candidates(projects.projects[project], 'correspondences.xml')
+            mels = find_candidates(projects.projects[project], 'mel.xml')
+            fuzzies = find_candidates(projects.projects[project], 'fuz.xml')
+            self.mel_combo.append_text('N/A')
             for mel in mels:
                 self.mel_combo.append_text(mel)
+            self.recon_combo.append_text('N/A')
             for recon in recons:
                 self.recon_combo.append_text(recon)
+            self.fuzzy_combo.append_text('N/A')
             for fuzzy in fuzzies:
                 self.fuzzy_combo.append_text(fuzzy)
-            if mels:
-                self.mel_combo.set_active(0)
-            self.recon_combo.set_active(0)
+            self.mel_combo.set_active(0)                      # default N/A
+            self.recon_combo.set_active(1 if recons else 0)   # default first recon if present
+            self.fuzzy_combo.set_active(0)                    # default N/A
         except Exception as e:
             print("Could not parse mel/recon/fuzzy options from", project_file, e)
 
@@ -115,15 +114,17 @@ class ProjectManagerDialog(Gtk.Dialog):
         if iter_ is None:
             return None
         project = model.get_value(iter_, 0)
-        # read controls
-        mel = self.mel_combo.get_active_text()
-        recon = self.recon_combo.get_active_text()
-        fuzzy = self.fuzzy_combo.get_active_text()
+        # read controls; 'N/A' selection resolves to None
+        def combo_value(combo):
+            t = combo.get_active_text()
+            return None if (t is None or t == 'N/A') else t
+        upstream_text = self.upstream_entry.get_text().strip()
         return {
             'project': project,
-            'mel': mel,
-            'fuzzy': fuzzy,
-            'recon': recon
+            'mel': combo_value(self.mel_combo),
+            'recon': combo_value(self.recon_combo),
+            'fuzzy': combo_value(self.fuzzy_combo),
+            'upstream': upstream_text if upstream_text else None,
         }
 
 class WrappedTextBuffer():
@@ -1718,6 +1719,7 @@ class REWindow(Gtk.Window):
     def open_from_settings(self, settings):
         self.on_disk_lexicons = read.read_attested_lexicons(settings)
         self.settings = settings
+        self.last_proto_lexicon = None   # reset diff baseline when project changes
         self.load(self.on_disk_lexicons,
                   RE.parameter_tree_from_settings(settings))
 
@@ -1735,19 +1737,16 @@ class REWindow(Gtk.Window):
 
         project = selection['project']
         self.project = project
-        parameters_file = os.path.join(projects.projects[project],
-                                       f'{project}.master.parameters.xml')
-        mel = None if selection['mel'] == 'None' else selection['mel']
-        fuzzy = None if selection['fuzzy'] == 'None' else selection['fuzzy']
-        settings = read.read_settings_file(parameters_file,
-                                           mel=mel,
-                                           fuzzy=fuzzy,
-                                           recon=selection['recon'])
+        settings = read.read_settings(projects.projects[project], project,
+                                           selection['recon'],
+                                           mel_token=selection['mel'],
+                                           fuzzy_token=selection['fuzzy'],
+                                           upstream=selection['upstream'])
         # dummy an arg object for load hooks. FIXME
-        dummy.mel = mel
-        dummy.fuzzy = fuzzy
+        dummy.mel = selection['mel']
+        dummy.fuzzy = selection['fuzzy']
         dummy.recon = selection['recon']
-        load_hooks.load_hook(projects.projects[project], dummy, settings)
+        load_hooks.load_hook(projects.projects[project])
         self.status_bar.set_message(f'Opened project {project} from projects directory.')
         self.open_from_settings(settings)
 
