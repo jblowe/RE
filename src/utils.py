@@ -53,7 +53,6 @@ def split_csv(s):
 def list_attested_languages(project_path):
     """Return language codes for files matching ....<LANG>.data.xml"""
     langs = []
-    suffix = '.data.xml'
     for fn in sorted(os.listdir(project_path)):
         pattern = re.compile(r'^(?:[^.]+\.)?([^.]+)\.data\.xml$')
         m = pattern.match(fn)
@@ -70,7 +69,7 @@ def resolve_file(project_path, project_code, token, suffix):
         return None
     for root, dirs, files in os.walk(project_path):
         for f in files:
-            if f.endswith(f'.{token}{suffix}'):
+            if f == f'{token}{suffix}' or f.endswith(f'.{token}{suffix}'):
                 return(os.path.join(root, f))
     return None
 
