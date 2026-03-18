@@ -47,11 +47,6 @@ def find_path(root: str, path: str):
         if not os.path.isdir(resolved):
             raise Exception(f"Project '{path}' path does not exist: {resolved}")
         return resolved
-    # Backward-compatible fallback: treat `path` as a literal directory under ../<root>/
-    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', root))
-    candidate = os.path.join(base_dir, path)
-    if os.path.isdir(candidate):
-        return os.path.abspath(candidate)
     raise Exception("project not found.")
 
 
