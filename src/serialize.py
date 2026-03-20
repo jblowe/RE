@@ -217,6 +217,11 @@ def render_sets(forms, sets, languages, set_type):
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
             ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
             add_protoform_element(element, form)
+            # Emit MEL gloss and id when a real MEL is associated (glosses is
+            # non-empty for real Mel objects; default_mel has glosses=[]).
+            if form.mel and form.mel.glosses:
+                ET.SubElement(element, 'mel').text = ', '.join(form.mel.glosses)
+                ET.SubElement(element, 'melid').text = form.mel.id
             sf = ET.SubElement(element, 'sf')
             sort_forms(form, sf, level)
 
