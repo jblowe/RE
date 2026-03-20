@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Reconstruction Engine</title>
+  <link rel="stylesheet" href="/static/asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/asset/css/all.min.css">
+  <!-- reconengine.css is referenced inside XSLT output; load it here instead -->
+  <link rel="stylesheet" href="/static/asset/css/reconengine.css">
+  <style>
+    /* ── Layout ── */
+    body { font-size: 0.875rem; background: #f8f9fa; }
+    .navbar-brand { font-weight: 600; letter-spacing: .03em; }
+
+    /* ── Log tab ── */
+    #run-log {
+      height: 480px; overflow-y: auto;
+      font-family: 'Menlo', 'Consolas', monospace; font-size: 0.78rem;
+      background: #1e1e2e; color: #cdd6f4;
+      padding: .5rem .75rem; border-radius: 4px;
+      white-space: pre-wrap; word-break: break-all;
+    }
+
+    /* ── Tab content area ── */
+    .tab-content > .tab-pane { padding: 1rem 0.25rem; }
+    #main-tab-content {
+      background: #fff;
+      border: 1px solid #dee2e6; border-top: none;
+      padding: .75rem 1rem 1rem;
+      min-height: 400px;
+    }
+
+    /* ── Projects table ── */
+    .projects-table th, .projects-table td { vertical-align: middle; }
+    .projects-table select, .projects-table input[type=text] {
+      font-size: 0.8rem; padding: .2rem .4rem; height: auto;
+    }
+    .projects-table .project-name { font-weight: 600; white-space: nowrap; }
+
+    /* ── Misc ── */
+    .spinner-sm { width: 1rem; height: 1rem; }
+    .badge-running  { background: #ffc107; color: #000; }
+    .badge-done     { background: #28a745; color: #fff; }
+    .badge-error    { background: #dc3545; color: #fff; }
+    .nav-tabs .nav-link.disabled { color: #999; }
+    .tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
+    .content-area { overflow-x: auto; }
+  </style>
+</head>
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar navbar-dark bg-dark py-1 mb-0">
+  <span class="navbar-brand mb-0 h6">
+    <i class="fas fa-project-diagram mr-1"></i>The Reconstruction Engine
+  </span>
+  <small class="text-secondary" id="run-badge"></small>
+</nav>
+
+<!-- ── Main content ── -->
+<div class="container-fluid mt-2 px-3">
+
+  <!-- Tab nav -->
+  <ul class="nav nav-tabs mt-1" id="main-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="tab-projects-nav"
+         data-re-tab href="#tab-projects" role="tab">
+        Projects
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-parameters-nav"
+         data-re-tab href="#tab-parameters" role="tab">Parameters</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-sets-nav"
+         data-re-tab href="#tab-sets" role="tab">Sets</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-stats-nav"
+         data-re-tab href="#tab-stats" role="tab">Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-lexicons-nav"
+         data-re-tab href="#tab-lexicons" role="tab">Lexicons</a>
+    </li>
+    <li class="nav-item" id="nav-mel" style="display:none">
+      <a class="nav-link disabled" id="tab-mel-nav"
+         data-re-tab href="#tab-mel" role="tab">MEL</a>
+    </li>
+    <li class="nav-item" id="nav-fuzzy" style="display:none">
+      <a class="nav-link disabled" id="tab-fuzzy-nav"
+         data-re-tab href="#tab-fuzzy" role="tab">Fuzzy</a>
+    </li>
+    <li class="nav-item" id="nav-log" style="display:none">
+      <a class="nav-link" id="tab-log-nav"
+         data-re-tab href="#tab-log" role="tab">Log</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="main-tab-content">
+
+    <!-- ══ PROJECTS TAB ══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade show active" id="tab-projects" role="tabpanel">
+
+      <!-- View toolbar -->
+      <div class="tab-toolbar" id="projects-view-toolbar">
+        <button class="btn btn-sm btn-outline-secondary" id="btn-edit-projects">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-outline-secondary" id="btn-refresh-projects"
+                title="Re-scan project directories for available files">
+          <i class="fas fa-sync-alt"></i> Refresh
+        </button>
+      </div>
+
+      <!-- View: run-mode table -->
+      <div id="projects-view">
+        <div class="table-responsive">
+          <table class="table table-sm table-hover projects-table">
+            <thead class="thead-light">
+              <tr>
+                <th>Project</th>
+                <th style="width:14%">Recon</th>
+                <th style="width:12%">MEL</th>
+                <th style="width:12%">Fuzzy</th>
+                <th style="width:26%">Upstream</th>
+                <th style="width:7%">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for name, info in project_data.items() %}
+              <tr id="proj-row-{{ name }}" data-project-path="{{ info.path }}">
+                <td class="project-name align-middle">{{ name }}</td>
+                <td>
+                  <select class="form-control form-control-sm"
+                          id="sel-recon-{{ name }}">
+                    {% if not info.recons %}
+                      <option value="">— none found —</option>
+                    {% else %}
+                      {% for r in info.recons %}
+                        <option value="{{ r }}">{{ r }}</option>
+                      {% endfor %}
+                    {% endif %}
+                  </select>
+                </td>
+                <td>
+                  <select class="form-control form-control-sm"
+                          id="sel-mel-{{ name }}">
+                    {% if not info.mels %}
+                      <option value="">— none found —</option>
+                    {% else %}
+                      <option value="">N/A</option>
+                      {% for m in info.mels %}
+                        <option value="{{ m }}">{{ m }}</option>
+                      {% endfor %}
+                    {% endif %}
+                  </select>
+                </td>
+                <td>
+                  <select class="form-control form-control-sm"
+                          id="sel-fuzzy-{{ name }}">
+                    {% if not info.fuzzies %}
+                      <option value="">— none found —</option>
+                    {% else %}
+                      <option value="">N/A</option>
+                      {% for f in info.fuzzies %}
+                        <option value="{{ f }}">{{ f }}</option>
+                      {% endfor %}
+                    {% endif %}
+                  </select>
+                </td>
+                <td>
+                  <input type="text" class="form-control form-control-sm"
+                         id="inp-upstream-{{ name }}"
+                         placeholder="e.g. PIWR: PWR, it; PWR: PIR, fr">
+                </td>
+                <td class="align-middle">
+                  <button class="btn btn-primary btn-sm run-btn"
+                          data-project="{{ name }}">
+                    <i class="fas fa-play"></i> Run
+                  </button>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /projects-view -->
+
+      <!-- Edit toolbar + table (hidden until Edit clicked) -->
+      <div id="projects-edit" style="display:none">
+        <div class="tab-toolbar">
+          <button class="btn btn-sm btn-success" id="btn-save-projects">
+            <i class="fas fa-save"></i> Save
+          </button>
+          <button class="btn btn-sm btn-secondary" id="btn-cancel-projects">
+            Cancel
+          </button>
+          <button class="btn btn-sm btn-outline-primary" id="btn-add-project">
+            + Add project
+          </button>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered projects-table" id="projects-edit-table">
+            <thead class="thead-light">
+              <tr>
+                <th class="actions-col" style="width:1%;white-space:nowrap"></th>
+                <th>Project name</th>
+                <th>Directory path</th>
+              </tr>
+            </thead>
+            <tbody id="projects-edit-body">
+              <!-- populated by setupProjectsEdit() -->
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /projects-edit -->
+
+    </div><!-- /tab-projects -->
+
+    <!-- ══ PARAMETERS TAB ════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-parameters" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-edit-parameters" style="display:none">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-success"
+                id="btn-save-parameters" style="display:none">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-sm btn-secondary"
+                id="btn-cancel-parameters" style="display:none">
+          Cancel
+        </button>
+      </div>
+      <div class="content-area" id="parameters-view-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-parameters -->
+
+    <!-- ══ SETS TAB ══════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-sets" role="tabpanel">
+      <div class="tab-toolbar">
+        <div class="btn-group btn-group-sm" id="sets-mode-btns" role="group">
+          <button type="button"
+                  class="btn btn-outline-secondary active"
+                  data-mode="paragraph">Paragraph</button>
+          <button type="button"
+                  class="btn btn-outline-secondary"
+                  data-mode="tabular">Tabular</button>
+        </div>
+      </div>
+      <div class="content-area" id="sets-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-sets -->
+
+    <!-- ══ STATS TAB ═════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-stats" role="tabpanel">
+      <div class="content-area" id="stats-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-stats -->
+
+    <!-- ══ LEXICONS TAB ══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-lexicons" role="tabpanel">
+      <div class="tab-toolbar">
+        <div class="btn-group btn-group-sm" id="lexicons-mode-btns" role="group">
+          <button type="button"
+                  class="btn btn-outline-secondary active"
+                  data-mode="paragraph">Paragraph</button>
+          <button type="button"
+                  class="btn btn-outline-secondary"
+                  data-mode="tabular">Tabular</button>
+        </div>
+      </div>
+      <div class="content-area" id="lexicons-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-lexicons -->
+
+    <!-- ══ MEL TAB ═══════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-mel" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-edit-mel" style="display:none">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-success"
+                id="btn-save-mel" style="display:none">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-sm btn-secondary"
+                id="btn-cancel-mel" style="display:none">
+          Cancel
+        </button>
+      </div>
+      <div class="content-area" id="mel-view-content">
+        <p class="text-muted">No MEL file selected.</p>
+      </div>
+    </div><!-- /tab-mel -->
+
+    <!-- ══ FUZZY TAB ═════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-fuzzy" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-edit-fuzzy" style="display:none">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-success"
+                id="btn-save-fuzzy" style="display:none">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-sm btn-secondary"
+                id="btn-cancel-fuzzy" style="display:none">
+          Cancel
+        </button>
+      </div>
+      <div class="content-area" id="fuzzy-view-content">
+        <p class="text-muted">No Fuzzy file selected.</p>
+      </div>
+    </div><!-- /tab-fuzzy -->
+
+    <!-- ══ LOG TAB ═══════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-log" role="tabpanel">
+      <div class="d-flex align-items-center mb-2" style="gap:.5rem">
+        <span class="font-weight-semibold">Run log</span>
+        <span id="run-status-badge" class="badge ml-1"></span>
+      </div>
+      <div id="run-log"></div>
+    </div><!-- /tab-log -->
+
+  </div><!-- /tab-content -->
+</div><!-- /container-fluid -->
+
+<!-- ── Scripts ──────────────────────────────────────────────────────────────── -->
+<script src="/static/asset/js/jquery.min.js"></script>
+<script src="/static/asset/js/popper.min.js"></script>
+<script src="/static/asset/js/bootstrap.min.js"></script>
+<script>
+/* ══════════════════════════════════════════════════════════════════════════
+   State
+   ══════════════════════════════════════════════════════════════════════════ */
+let currentRunId   = null;
+let currentRunName = null;
+let currentProject = null;
+let pollTimer      = null;
+let logLinesShown  = 0;
+
+/* Current display modes */
+const modes = { sets: 'paragraph', lexicons: 'paragraph' };
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Utility helpers
+   ══════════════════════════════════════════════════════════════════════════ */
+function setTabEnabled(tabNavId, enabled) {
+  const link = document.getElementById(tabNavId);
+  if (!link) return;
+  if (enabled) link.classList.remove('disabled');
+  else         link.classList.add('disabled');
+}
+
+/* Custom tab switcher — avoids Bootstrap tab plugin quirks with
+   dynamically-enabled tabs.  All nav links carry data-re-tab (not
+   data-toggle="tab") so Bootstrap never intercepts them. */
+function activateTab(targetId) {
+  /* targetId is the tab-pane id, e.g. "tab-sets" */
+  document.querySelectorAll('#main-tabs .nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === '#' + targetId) link.classList.add('active');
+    else                         link.classList.remove('active');
+  });
+  document.querySelectorAll('#main-tab-content .tab-pane').forEach(pane => {
+    if (pane.id === targetId) pane.classList.add('show', 'active');
+    else                      pane.classList.remove('show', 'active');
+  });
+}
+
+function spinnerHtml() {
+  return '<span class="spinner-border spinner-border-sm spinner-sm mr-1"></span>';
+}
+
+function loadTabContent(tab, mode) {
+  if (!currentRunId) return;
+  const url = `/api/tab/${currentRunId}/${tab}?mode=${mode || 'paragraph'}`;
+  const viewEl = document.getElementById(`${tab}-view-content`)
+              || document.getElementById(`${tab}-content`);
+  if (!viewEl) return;
+  viewEl.innerHTML = `<p class="text-muted">${spinnerHtml()}Loading…</p>`;
+  fetch(url)
+    .then(r => r.text())
+    .then(html => { viewEl.innerHTML = html; })
+    .catch(e  => { viewEl.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Log helpers
+   ══════════════════════════════════════════════════════════════════════════ */
+function appendLog(lines) {
+  if (!lines.length) return;
+  const el = document.getElementById('run-log');
+  el.textContent += lines.join('\n') + '\n';
+  el.scrollTop = el.scrollHeight;
+}
+
+function setRunStatusBadge(text, cls) {
+  const badge = document.getElementById('run-status-badge');
+  badge.textContent = text;
+  badge.className = `badge ml-1 badge-${cls}`;
+}
+
+/* Re-execute <script> tags that were injected via innerHTML
+   (browsers do not run scripts injected that way). */
+function reExecuteScripts(container) {
+  container.querySelectorAll('script').forEach(oldScript => {
+    const s = document.createElement('script');
+    s.textContent = oldScript.textContent;
+    document.head.appendChild(s);
+    document.head.removeChild(s);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Run button  (event-delegated so newly-rebuilt rows also work)
+   ══════════════════════════════════════════════════════════════════════════ */
+document.getElementById('main-tab-content').addEventListener('click', function (e) {
+  const btn = e.target.closest('.run-btn');
+  if (!btn) return;
+
+  const project  = btn.dataset.project;
+  const recon    = document.getElementById(`sel-recon-${project}`).value    || null;
+  const mel      = document.getElementById(`sel-mel-${project}`).value      || null;
+  const fuzzy    = document.getElementById(`sel-fuzzy-${project}`).value    || null;
+  const upstream = document.getElementById(`inp-upstream-${project}`).value.trim() || null;
+
+  currentProject = project;
+
+  /* Disable all run buttons while running */
+  document.querySelectorAll('.run-btn').forEach(b => b.disabled = true);
+
+  /* Show & reset Log tab, switch to it immediately */
+  document.getElementById('nav-log').style.display = '';
+  document.getElementById('run-log').textContent = '';
+  logLinesShown = 0;
+  setRunStatusBadge('running', 'running');
+  activateTab('tab-log');
+
+  fetch('/api/run', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ project, recon, mel, fuzzy, upstream }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) {
+      alert(`Server error: ${data.error}`);
+      document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+      return;
+    }
+    currentRunId   = data.run_id;
+    currentRunName = data.run_name;
+    document.getElementById('run-badge').textContent =
+      `${project}  ·  run ${data.run_name}`;
+
+    /* Disable result tabs until done */
+    ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
+     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav']
+      .forEach(id => setTabEnabled(id, false));
+
+    /* Hide conditional tabs */
+    document.getElementById('nav-mel').style.display   = 'none';
+    document.getElementById('nav-fuzzy').style.display = 'none';
+
+    startPolling();
+  })
+  .catch(err => {
+    alert(`Failed to start run: ${err}`);
+    document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+  });
+});
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Projects Refresh button — re-scans project directories and rebuilds rows
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupProjectsRefresh() {
+  const btn = document.getElementById('btn-refresh-projects');
+  if (!btn) return;
+
+  /* Build a <select> element for recon / mel / fuzzy lists */
+  function makeSelect(id, tokens, optional) {
+    const sel = document.createElement('select');
+    sel.className = 'form-control form-control-sm';
+    sel.id = id;
+    if (!tokens || tokens.length === 0) {
+      const opt = document.createElement('option');
+      opt.value = '';
+      opt.textContent = optional ? '— none found —' : '— none found —';
+      sel.appendChild(opt);
+    } else {
+      if (optional) {
+        const opt = document.createElement('option');
+        opt.value = '';
+        opt.textContent = 'N/A';
+        sel.appendChild(opt);
+      }
+      tokens.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        sel.appendChild(opt);
+      });
+    }
+    return sel;
+  }
+
+  /* Rebuild the projects tbody from fresh data */
+  function rebuildProjectsTable(data) {
+    const tbody = document.querySelector('#projects-view .projects-table tbody');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    Object.entries(data).sort((a,b) => a[0].localeCompare(b[0])).forEach(([name, info]) => {
+      const tr = document.createElement('tr');
+      tr.id = `proj-row-${name}`;
+      tr.dataset.projectPath = info.path;
+
+      /* Project name */
+      const tdName = document.createElement('td');
+      tdName.className = 'project-name align-middle';
+      tdName.textContent = name;
+      tr.appendChild(tdName);
+
+      /* Recon */
+      const tdRecon = document.createElement('td');
+      tdRecon.appendChild(makeSelect(`sel-recon-${name}`, info.recons, false));
+      tr.appendChild(tdRecon);
+
+      /* MEL */
+      const tdMel = document.createElement('td');
+      tdMel.appendChild(makeSelect(`sel-mel-${name}`, info.mels, true));
+      tr.appendChild(tdMel);
+
+      /* Fuzzy */
+      const tdFuzzy = document.createElement('td');
+      tdFuzzy.appendChild(makeSelect(`sel-fuzzy-${name}`, info.fuzzies, true));
+      tr.appendChild(tdFuzzy);
+
+      /* Upstream */
+      const tdUp = document.createElement('td');
+      const inp = document.createElement('input');
+      inp.type = 'text';
+      inp.className = 'form-control form-control-sm';
+      inp.id = `inp-upstream-${name}`;
+      inp.placeholder = 'e.g. PIWR: PWR, it; PWR: PIR, fr';
+      tdUp.appendChild(inp);
+      tr.appendChild(tdUp);
+
+      /* Run button */
+      const tdAction = document.createElement('td');
+      tdAction.className = 'align-middle';
+      const runBtn = document.createElement('button');
+      runBtn.className = 'btn btn-primary btn-sm run-btn';
+      runBtn.dataset.project = name;
+      runBtn.innerHTML = '<i class="fas fa-play"></i> Run';
+      tdAction.appendChild(runBtn);
+      tr.appendChild(tdAction);
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  btn.addEventListener('click', () => {
+    const origHtml = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = `${spinnerHtml()}Refreshing…`;
+    fetch('/api/projects')
+      .then(r => r.json())
+      .then(data => {
+        rebuildProjectsTable(data);
+        btn.disabled = false;
+        btn.innerHTML = origHtml;
+      })
+      .catch(err => {
+        alert(`Refresh failed: ${err}`);
+        btn.disabled = false;
+        btn.innerHTML = origHtml;
+      });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Polling
+   ══════════════════════════════════════════════════════════════════════════ */
+function startPolling() {
+  if (pollTimer) clearInterval(pollTimer);
+  pollTimer = setInterval(doPoll, 1500);
+}
+
+function doPoll() {
+  if (!currentRunId) return;
+  fetch(`/api/poll/${currentRunId}`)
+    .then(r => r.json())
+    .then(data => {
+      appendLog(data.log.slice(logLinesShown));
+      logLinesShown = data.log.length;
+
+      if (data.status === 'running') return;   /* still going */
+
+      clearInterval(pollTimer);
+      document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+
+      if (data.status === 'error') {
+        setRunStatusBadge('error', 'error');
+        const el = document.getElementById('run-log');
+        el.textContent += '\n─── ERROR ───\n' + (data.error || '');
+        el.scrollTop = el.scrollHeight;
+        return;
+      }
+
+      /* ── Success ── */
+      setRunStatusBadge('done', 'done');
+
+      /* Enable always-present result tabs and load their content */
+      const always = ['parameters', 'sets', 'stats', 'lexicons'];
+      always.forEach(t => {
+        setTabEnabled(`tab-${t}-nav`, true);
+        loadTabContent(t, modes[t] || 'paragraph');
+      });
+      document.getElementById('btn-edit-parameters').style.display = '';
+
+      /* Conditional MEL */
+      if (data.has_mel) {
+        document.getElementById('nav-mel').style.display  = '';
+        setTabEnabled('tab-mel-nav', true);
+        loadTabContent('mel');
+        document.getElementById('btn-edit-mel').style.display = '';
+      }
+
+      /* Conditional Fuzzy */
+      if (data.has_fuzzy) {
+        document.getElementById('nav-fuzzy').style.display = '';
+        setTabEnabled('tab-fuzzy-nav', true);
+        loadTabContent('fuzzy');
+        document.getElementById('btn-edit-fuzzy').style.display = '';
+      }
+
+      /* Switch to Sets as default landing view */
+      activateTab('tab-sets');
+    })
+    .catch(err => console.error('Poll error:', err));
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Mode toggles  (Sets / Lexicons paragraph ↔ tabular)
+   ══════════════════════════════════════════════════════════════════════════ */
+function setupModeToggle(groupId, tab) {
+  document.querySelectorAll(`#${groupId} button`).forEach(btn => {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll(`#${groupId} button`)
+              .forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      modes[tab] = this.dataset.mode;
+      loadTabContent(tab, this.dataset.mode);
+    });
+  });
+}
+setupModeToggle('sets-mode-btns',     'sets');
+setupModeToggle('lexicons-mode-btns', 'lexicons');
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Parameters Edit / Save / Cancel  (XSLT form approach)
+
+   Clicking Edit fetches the correspondences file rendered as an
+   interactive form via toc2html-edit.xsl, injects it into the view div,
+   and re-executes any embedded scripts (needed for the add/delete row
+   IIFE in the stylesheet).  Save collects all <input> values from the
+   injected form and posts them to /api/save_toc as JSON.
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupParamsEdit() {
+  const viewEl    = document.getElementById('parameters-view-content');
+  const btnEdit   = document.getElementById('btn-edit-parameters');
+  const btnSave   = document.getElementById('btn-save-parameters');
+  const btnCancel = document.getElementById('btn-cancel-parameters');
+  if (!btnEdit) return;
+
+  let savedViewHTML    = null;   /* snapshot for Cancel */
+  let currentReconFile = null;   /* which file we are editing */
+
+  btnEdit.addEventListener('click', () => {
+    if (!currentRunId) return;
+    btnEdit.disabled = true;
+    btnEdit.innerHTML = `${spinnerHtml()}Loading…`;
+    fetch(`/api/tab/${currentRunId}/parameters?mode=edit`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      })
+      .then(html => {
+        savedViewHTML = viewEl.innerHTML;
+        viewEl.innerHTML = html;
+        reExecuteScripts(viewEl);
+        /* Pull the file path from the wrapper div injected by the server */
+        const wrapper = viewEl.querySelector('[data-recon-file]');
+        currentReconFile = wrapper ? wrapper.dataset.reconFile : null;
+        btnEdit.style.display   = 'none';
+        btnSave.style.display   = '';
+        btnCancel.style.display = '';
+      })
+      .catch(err => {
+        alert(`Could not load edit form: ${err}`);
+        btnEdit.disabled = false;
+        btnEdit.innerHTML = '<i class="fas fa-edit"></i> Edit';
+      });
+  });
+
+  btnCancel.addEventListener('click', () => {
+    if (savedViewHTML !== null) viewEl.innerHTML = savedViewHTML;
+    savedViewHTML = null;
+    currentReconFile = null;
+    btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+    btnEdit.disabled      = false;
+    btnEdit.style.display = '';
+    btnSave.style.display   = 'none';
+    btnCancel.style.display = 'none';
+  });
+
+  btnSave.addEventListener('click', () => {
+    if (!currentRunId || !currentReconFile) return;
+
+    /* Collect all form inputs */
+    const fields = {};
+    viewEl.querySelectorAll('input[name]').forEach(inp => {
+      fields[inp.name] = inp.value;
+    });
+
+    /* Preserve dialect column order from the table header */
+    const dialects = [];
+    viewEl.querySelectorAll('#corr-table thead th[data-dialect]').forEach(th => {
+      dialects.push(th.getAttribute('data-dialect'));
+    });
+
+    btnSave.disabled  = true;
+    btnSave.innerHTML = `${spinnerHtml()}Saving…`;
+    fetch(`/api/save_toc/${currentRunId}`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ fields, dialects, file_path: currentReconFile }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(`Save failed:\n${data.error}`);
+        btnSave.disabled  = false;
+        btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+        return;
+      }
+      /* Success: flip back to view mode and reload rendered content */
+      savedViewHTML = null;
+      currentReconFile = null;
+      btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+      btnEdit.disabled      = false;
+      btnEdit.style.display = '';
+      btnSave.style.display   = 'none';
+      btnSave.disabled        = false;
+      btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
+      btnCancel.style.display = 'none';
+      loadTabContent('parameters', 'paragraph');
+    })
+    .catch(err => {
+      alert(`Save error: ${err}`);
+      btnSave.disabled  = false;
+      btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MEL / Fuzzy Edit / Save / Cancel  (XSLT form approach — mirrors Parameters)
+
+   setupXsltEdit(tab, dataAttr, saveEndpoint)
+     tab          – 'mel' or 'fuzzy'
+     dataAttr     – attribute on the wrapper div that holds the file path,
+                    e.g. 'data-mel-file'
+     saveEndpoint – e.g. '/api/save_mel'
+   ══════════════════════════════════════════════════════════════════════════ */
+function setupXsltEdit(tab, dataAttr, saveEndpoint) {
+  const viewEl    = document.getElementById(`${tab}-view-content`);
+  const btnEdit   = document.getElementById(`btn-edit-${tab}`);
+  const btnSave   = document.getElementById(`btn-save-${tab}`);
+  const btnCancel = document.getElementById(`btn-cancel-${tab}`);
+  if (!btnEdit) return;
+
+  let savedViewHTML = null;
+  let currentFile   = null;
+
+  btnEdit.addEventListener('click', () => {
+    if (!currentRunId) return;
+    btnEdit.disabled  = true;
+    btnEdit.innerHTML = `${spinnerHtml()}Loading…`;
+    fetch(`/api/tab/${currentRunId}/${tab}?mode=edit`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      })
+      .then(html => {
+        savedViewHTML = viewEl.innerHTML;
+        viewEl.innerHTML = html;
+        reExecuteScripts(viewEl);
+        const wrapper = viewEl.querySelector(`[${dataAttr}]`);
+        currentFile = wrapper ? wrapper.getAttribute(dataAttr) : null;
+        btnEdit.style.display   = 'none';
+        btnSave.style.display   = '';
+        btnCancel.style.display = '';
+      })
+      .catch(err => {
+        alert(`Could not load edit form: ${err}`);
+        btnEdit.disabled  = false;
+        btnEdit.innerHTML = '<i class="fas fa-edit"></i> Edit';
+      });
+  });
+
+  btnCancel.addEventListener('click', () => {
+    if (savedViewHTML !== null) viewEl.innerHTML = savedViewHTML;
+    savedViewHTML = null;
+    currentFile   = null;
+    btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+    btnEdit.disabled      = false;
+    btnEdit.style.display = '';
+    btnSave.style.display   = 'none';
+    btnCancel.style.display = 'none';
+  });
+
+  btnSave.addEventListener('click', () => {
+    if (!currentRunId || !currentFile) return;
+    const fields = {};
+    viewEl.querySelectorAll('input[name]').forEach(inp => {
+      fields[inp.name] = inp.value;
+    });
+    btnSave.disabled  = true;
+    btnSave.innerHTML = `${spinnerHtml()}Saving…`;
+    fetch(`${saveEndpoint}/${currentRunId}`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ fields, file_path: currentFile }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(`Save failed:\n${data.error}`);
+        btnSave.disabled  = false;
+        btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+        return;
+      }
+      savedViewHTML = null;
+      currentFile   = null;
+      btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+      btnEdit.disabled      = false;
+      btnEdit.style.display = '';
+      btnSave.style.display   = 'none';
+      btnSave.disabled        = false;
+      btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
+      btnCancel.style.display = 'none';
+      loadTabContent(tab, 'paragraph');
+    })
+    .catch(err => {
+      alert(`Save error: ${err}`);
+      btnSave.disabled  = false;
+      btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+    });
+  });
+}
+
+setupXsltEdit('mel',   'data-mel-file', '/api/save_mel');
+setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Projects Edit / Save / Cancel
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupProjectsEdit() {
+  const btnEdit   = document.getElementById('btn-edit-projects');
+  const btnSave   = document.getElementById('btn-save-projects');
+  const btnCancel = document.getElementById('btn-cancel-projects');
+  const btnAdd    = document.getElementById('btn-add-project');
+  const viewDiv   = document.getElementById('projects-view');
+  const editDiv   = document.getElementById('projects-edit');
+  const tbody     = document.getElementById('projects-edit-body');
+  const toolbar   = document.getElementById('projects-view-toolbar');
+
+  function makeRow(name, path) {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td style="width:1%;white-space:nowrap">' +
+        '<button type="button" class="btn btn-outline-danger btn-sm" style="padding:.1rem .4rem;line-height:1" title="Delete row">&#x2212;</button>' +
+      '</td>' +
+      '<td><input type="text" class="form-control form-control-sm" placeholder="NAME" value="' + name.replace(/"/g, '&quot;') + '"></td>' +
+      '<td><input type="text" class="form-control form-control-sm" placeholder="path/to/project" value="' + path.replace(/"/g, '&quot;') + '"></td>';
+    tr.querySelector('button').addEventListener('click', () => tr.remove());
+    return tr;
+  }
+
+  btnEdit.addEventListener('click', () => {
+    /* Populate edit table from current view rows */
+    tbody.innerHTML = '';
+    document.querySelectorAll('#projects-view tr[data-project-path]').forEach(tr => {
+      const name = tr.querySelector('.project-name').textContent.trim();
+      const path = tr.dataset.projectPath;
+      tbody.appendChild(makeRow(name, path));
+    });
+    viewDiv.style.display  = 'none';
+    toolbar.style.display  = 'none';
+    editDiv.style.display  = '';
+  });
+
+  btnCancel.addEventListener('click', () => {
+    editDiv.style.display  = 'none';
+    viewDiv.style.display  = '';
+    toolbar.style.display  = '';
+  });
+
+  btnAdd.addEventListener('click', () => {
+    tbody.appendChild(makeRow('', ''));
+  });
+
+  btnSave.addEventListener('click', () => {
+    const projects = [];
+    tbody.querySelectorAll('tr').forEach(tr => {
+      const inputs = tr.querySelectorAll('input');
+      const name = inputs[0] ? inputs[0].value.trim() : '';
+      const path = inputs[1] ? inputs[1].value.trim() : '';
+      if (name) projects.push({ name, path });
+    });
+
+    btnSave.disabled  = true;
+    btnSave.innerHTML = `${spinnerHtml()}Saving…`;
+    fetch('/api/save_projects', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ projects }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(`Save failed:\n${data.error}`);
+        btnSave.disabled  = false;
+        btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+        return;
+      }
+      /* Reload the page so the view table reflects the updated projects */
+      window.location.reload();
+    })
+    .catch(err => {
+      alert(`Save error: ${err}`);
+      btnSave.disabled  = false;
+      btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Wire up nav-link click handlers (custom switcher — no Bootstrap tab plugin)
+   ══════════════════════════════════════════════════════════════════════════ */
+document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (this.classList.contains('disabled')) return;
+    const targetId = this.getAttribute('href').substring(1); /* e.g. "tab-sets" */
+    activateTab(targetId);
+    const tabName = targetId.replace(/^tab-/, '');           /* e.g. "sets" */
+    if (tabName === 'projects' || tabName === 'log' || !currentRunId) return;
+    /* Don't reload while in edit mode (Save/Cancel buttons are visible) */
+    const saveBtn = document.getElementById(`btn-save-${tabName}`);
+    if (saveBtn && saveBtn.style.display !== 'none') return;
+    loadTabContent(tabName, modes[tabName] || 'paragraph');
+  });
+});
+</script>
+</body>
+</html>
