@@ -20,13 +20,10 @@
                         <xsl:value-of select="count(lexicon/entry)"/>
                     </b>
                 </div>
-                <div style="float: left; width:220px;">
+                <div style="float: left; width:300px;">
                     <i>created at:
                         <xsl:value-of select=".//createdat"/>
                     </i>
-                </div>
-                <div style="float: left; width:160px;">
-                    <a href="?paragraph">switch to paragraph display</a>
                 </div>
                 <div style="clear:both;"></div>
                 <xsl:apply-templates select=".//lexicon"/>
