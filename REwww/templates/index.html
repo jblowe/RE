@@ -45,21 +45,34 @@
     .badge-error    { background: #dc3545; color: #fff; }
     .nav-tabs .nav-link.disabled { color: #999; }
     .tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
+    /* Allow wide tables to expand naturally and scroll rather than squish */
     .content-area { overflow-x: auto; }
+    .content-area table { min-width: max-content; }
+    .content-area th, .content-area td { white-space: nowrap; }
   </style>
 </head>
 <body>
 
 <!-- ── Navbar ── -->
-<nav class="navbar navbar-dark bg-dark py-1 mb-0">
-  <span class="navbar-brand mb-0 h6">
-    <i class="fas fa-project-diagram mr-1"></i>The Reconstruction Engine
+<nav class="navbar navbar-dark py-2 px-3 mb-0" style="background-color: #EC5800;">
+  <span class="navbar-brand mb-0">
+    <i class="fas fa-project-diagram mr-3"></i>The Reconstruction Engine
   </span>
-  <small class="text-secondary" id="run-badge"></small>
+  <div class="d-flex align-items-center ml-auto">
+    <span id="nav-about-btn" class="text-white" onclick="showAbout()"
+       style="font-size: 1rem; font-weight: 600; letter-spacing: .02em; margin-right: 3em; cursor: pointer;">About</span>
+    <span id="run-badge" class="text-white"
+          style="font-size: 1rem; font-weight: 600; letter-spacing: .02em;"></span>
+  </div>
 </nav>
 
+<!-- ── About panel (hidden until About clicked) ── -->
+<div id="about-panel" style="display:none; max-width: 760px; margin: 2rem auto; padding: 0 1rem 3rem; font-size: 0.9rem;">
+  {% include 'about.html' %}
+</div>
+
 <!-- ── Main content ── -->
-<div class="container-fluid mt-2 px-3">
+<div id="main-content" class="container-fluid mt-2 px-3">
 
   <!-- Tab nav -->
   <ul class="nav nav-tabs mt-1" id="main-tabs" role="tablist">
@@ -349,6 +362,14 @@ let currentRunName = null;
 let currentProject = null;
 let pollTimer      = null;
 let logLinesShown  = 0;
+
+/* ── About panel toggle ── */
+function showAbout() {
+  const showing = document.getElementById('about-panel').style.display !== 'none';
+  document.getElementById('about-panel').style.display  = showing ? 'none'  : 'block';
+  document.getElementById('main-content').style.display = showing ? 'block' : 'none';
+  document.getElementById('nav-about-btn').textContent  = showing ? 'About' : '← Back';
+}
 
 /* Current display modes */
 const modes = { sets: 'paragraph', lexicons: 'paragraph' };
