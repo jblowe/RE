@@ -94,15 +94,20 @@
             <td><xsl:value-of select="proto/@contextL"/></td>
             <td><xsl:value-of select="proto/@contextR"/></td>
 
-            <!-- Dialect cells: coloured individually by cell frequency -->
-            <xsl:for-each select="modern">
+            <!-- Dialect cells: iterate over the CANONICAL column list so that
+                 missing <modern> elements produce an empty cell in the right
+                 column rather than shifting subsequent cells left. -->
+            <xsl:variable name="this-corr" select="."/>
+            <xsl:for-each select="../corr[1]/modern">
+              <xsl:variable name="d"    select="@dialecte"/>
+              <xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
               <xsl:variable name="cell-style">
                 <xsl:call-template name="freq-style">
-                  <xsl:with-param name="freq" select="@freq"/>
+                  <xsl:with-param name="freq" select="$cell/@freq"/>
                 </xsl:call-template>
               </xsl:variable>
               <td style="{$cell-style}">
-                <xsl:for-each select="seg">
+                <xsl:for-each select="$cell/seg">
                   <xsl:if test="@statut='doute'">=</xsl:if>
                   <xsl:value-of select="."/>
                   <xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>

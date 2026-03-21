@@ -8,14 +8,16 @@
                 <meta charset="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <title>Table of Correspondences</title>
+            </head>
+            <body>
+                <!-- Style block in body so it survives the head-stripping done by xml_to_html(). -->
                 <style>
                     .table td, .table th { vertical-align: middle; }
-                    .cell-input { min-width: 6ch; }
+                    /* Override Bootstrap form-control width:100% so inputs stay compact. */
+                    .cell-input { width: 6ch !important; min-width: 4ch; }
                     .actions-col { width: 1%; white-space: nowrap; }
                     .btn-icon { padding: .1rem .4rem; line-height: 1; }
                 </style>
-            </head>
-            <body>
                 <xsl:apply-templates select="tableOfCorr"/>
                 <script><![CDATA[
           (function(){
@@ -276,14 +278,18 @@
                                         </input>
                                     </td>
 
-                                    <!-- Modern dialect columns -->
-                                    <xsl:for-each select="modern">
-                                        <xsl:variable name="dial" select="@dialecte"/>
+                                    <!-- Modern dialect columns: iterate over the CANONICAL column
+                                         list so missing <modern> elements produce an empty cell in
+                                         the correct column rather than shifting subsequent cells left. -->
+                                    <xsl:variable name="this-corr" select="."/>
+                                    <xsl:for-each select="../corr[1]/modern">
+                                        <xsl:variable name="d"    select="@dialecte"/>
+                                        <xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
                                         <td>
                                             <input type="text" class="form-control form-control-sm cell-input"
-                                                   name="cell-r{$rpos}-c-{$dial}" id="in-r{$rpos}-c-{$dial}">
+                                                   name="cell-r{$rpos}-c-{$d}" id="in-r{$rpos}-c-{$d}">
                                                 <xsl:attribute name="value">
-                                                    <xsl:for-each select="seg">
+                                                    <xsl:for-each select="$cell/seg">
                                                         <xsl:if test="@statut='doute'">=</xsl:if>
                                                         <xsl:value-of select="normalize-space(.)"/>
                                                         <xsl:if test="position()!=last()">,</xsl:if>

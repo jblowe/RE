@@ -72,10 +72,15 @@
 					<td><xsl:value-of select="proto/@contextL"/></td>
 					<td><xsl:value-of select="proto/@contextR"/></td>
 					
-					<xsl:for-each select="modern">
-						<!-- xsl:sort select="@dialecte"/ -->
+					<!-- Iterate over the CANONICAL column list so that missing
+					 <modern> elements produce an empty cell in the correct
+					 column rather than shifting subsequent cells left. -->
+					<xsl:variable name="this-corr" select="."/>
+					<xsl:for-each select="../corr[1]/modern">
+						<xsl:variable name="d"    select="@dialecte"/>
+						<xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
 						<td>
-							<xsl:for-each select="seg">
+							<xsl:for-each select="$cell/seg">
 								<xsl:if test="@statut='doute'">=</xsl:if>
 								<xsl:value-of select="."/>
 								<xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
