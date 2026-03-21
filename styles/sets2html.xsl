@@ -27,13 +27,13 @@
             <xsl:value-of select=".//createdat"/>
           </i>
         </div>
-        <div style="float: left; width:80px;">
+        <div style="float: left; width:180px;">
           <a href="#isolates">
             <xsl:value-of select="count(.//isolates/rfx)"/>
             isolates
           </a>
         </div>
-        <div style="float: left; width:80px;">
+        <div style="float: left; width:180px;">
           <a href="#failures">
             <xsl:value-of select="count(.//failures/rfx)"/>
             failures

@@ -13,7 +13,7 @@
 <xsl:template match="tableOfCorr">
 	<div>
 		<h6>Parameters</h6>
-		<table>
+		<table class="table table-sm table-striped">
 		<xsl:if test="parameters/canon">
 			<tr>
 				<td><b>Syllable canon</b></td>

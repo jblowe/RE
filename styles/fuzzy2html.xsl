@@ -26,7 +26,7 @@
 
     <xsl:template match="fuzzy">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Language</th>

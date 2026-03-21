@@ -38,7 +38,7 @@
     <xsl:template match="totals">
         <h5>MEL statistics</h5>
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -74,7 +74,7 @@
 
     <xsl:template name="mel_header">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>ID</th>

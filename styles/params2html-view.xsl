@@ -13,7 +13,7 @@
     <xsl:template match="params">
         <h5>Parameters available</h5>
         <div>
-            <table class="table table-responsive table-sm retable">
+            <table class="table table-sm table-striped">
                 <thead/>
                 <tr>
                     <th class="table-primary" colspan="2">
@@ -61,7 +61,7 @@
                 <tr>
                     <td>
                         <div>
-                            <table class="table table-responsive table-sm sortable">
+                            <table class="table table-sm table-striped sortable">
                                 <thead>
                                     <tr>
                                         <th>Language</th>
@@ -171,7 +171,7 @@
 
     <xsl:template match="quirks">
           <h6>Exceptions</h6>
-          <table class="table table-sm table-bordered">
+          <table class="table table-sm table-striped table-bordered sortable">
             <thead>
               <tr class="table-secondary">
                 <th scope="col">ID</th>

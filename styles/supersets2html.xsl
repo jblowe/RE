@@ -91,7 +91,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 
-					<table>
+					<table class="table table-sm table-striped sortable">
 						<xsl:for-each select="../word">
 							<tr><td><xsl:value-of select="entry/@id"/></td><td><xsl:value-of select="entry/hw"/></td><td><xsl:value-of select="entry/gl"/></td></tr>
 						</xsl:for-each>
