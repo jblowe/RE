@@ -56,7 +56,7 @@
 <!-- ── Navbar ── -->
 <nav class="navbar navbar-dark py-2 px-3 mb-0" style="background-color: #EC5800;">
   <span class="navbar-brand mb-0">
-    <i class="fas fa-project-diagram mr-3"></i>The Reconstruction Engine
+    <i class="fas fa-project-diagram mr-3">&nbsp;</i>The Reconstruction Engine
   </span>
   <div class="d-flex align-items-center ml-auto">
     <span id="nav-about-btn" class="text-white" onclick="showAbout()"
@@ -237,6 +237,10 @@
     <div class="tab-pane fade" id="tab-parameters" role="tabpanel">
       <div class="tab-toolbar">
         <button class="btn btn-sm btn-outline-secondary"
+                id="btn-freq-parameters" style="display:none">
+          <i class="fas fa-chart-bar"></i> Freq
+        </button>
+        <button class="btn btn-sm btn-outline-secondary"
                 id="btn-edit-parameters" style="display:none">
           <i class="fas fa-edit"></i> Edit
         </button>
@@ -259,10 +263,10 @@
       <div class="tab-toolbar">
         <div class="btn-group btn-group-sm" id="sets-mode-btns" role="group">
           <button type="button"
-                  class="btn btn-outline-secondary active"
+                  class="btn btn-outline-secondary"
                   data-mode="paragraph">Paragraph</button>
           <button type="button"
-                  class="btn btn-outline-secondary"
+                  class="btn btn-outline-secondary active"
                   data-mode="tabular">Tabular</button>
         </div>
       </div>
@@ -353,6 +357,49 @@
 <script src="/static/asset/js/jquery.min.js"></script>
 <script src="/static/asset/js/popper.min.js"></script>
 <script src="/static/asset/js/bootstrap.min.js"></script>
+
+<!-- ── Table sorter (replaces broken bootstrap-sortable) ──────────────────── -->
+<style>
+  table.sortable thead th { cursor: pointer; user-select: none; white-space: nowrap; }
+  table.sortable thead th::after { content: ' \00a0\25bd'; opacity: 0.35; font-size: .7em; }
+  table.sortable thead th.sort-asc::after  { content: ' \25b2'; opacity: 1; }
+  table.sortable thead th.sort-desc::after { content: ' \25bc'; opacity: 1; }
+</style>
+<script>
+/* Vanilla table sorter — works on any table.sortable, including dynamically
+   injected content, via event delegation on document.               */
+(function () {
+  function cellText(tr, col) {
+    const td = tr.cells[col];
+    return td ? td.textContent.trim() : '';
+  }
+  function sortTable(th) {
+    const table = th.closest('table');
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+    const col     = th.cellIndex;
+    const wasAsc  = th.classList.contains('sort-asc');
+    const asc     = !wasAsc;
+    /* Clear all header sort markers */
+    table.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
+    th.classList.add(asc ? 'sort-asc' : 'sort-desc');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    rows.sort((a, b) => {
+      const av = cellText(a, col), bv = cellText(b, col);
+      /* Numeric sort when both values look like numbers */
+      const an = parseFloat(av), bn = parseFloat(bv);
+      if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+      return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+    });
+    rows.forEach(r => tbody.appendChild(r));
+  }
+  document.addEventListener('click', function (e) {
+    const th = e.target.closest('table.sortable thead th');
+    if (th) sortTable(th);
+  });
+})();
+</script>
+
 <script>
 /* ══════════════════════════════════════════════════════════════════════════
    State
@@ -372,7 +419,7 @@ function showAbout() {
 }
 
 /* Current display modes */
-const modes = { sets: 'paragraph', lexicons: 'paragraph' };
+const modes = { sets: 'tabular', lexicons: 'paragraph' };
 
 /* ══════════════════════════════════════════════════════════════════════════
    Utility helpers
@@ -484,7 +531,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
     currentRunId   = data.run_id;
     currentRunName = data.run_name;
     document.getElementById('run-badge').textContent =
-      `${project}  ·  run ${data.run_name}`;
+      `project ${project}  ·  run ${data.run_name}`;
 
     /* Disable result tabs until done */
     ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
@@ -574,7 +621,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       inp.type = 'text';
       inp.className = 'form-control form-control-sm';
       inp.id = `inp-upstream-${name}`;
-      inp.placeholder = 'e.g. PIWR: PWR, it; PWR: PIR, fr';
+      inp.placeholder = 'e.g. Protolg: Lg1, Lg2, ... LgN';
       tdUp.appendChild(inp);
       tr.appendChild(tdUp);
 
@@ -649,6 +696,7 @@ function doPoll() {
         setTabEnabled(`tab-${t}-nav`, true);
         loadTabContent(t, modes[t] || 'paragraph');
       });
+      document.getElementById('btn-freq-parameters').style.display = '';
       document.getElementById('btn-edit-parameters').style.display = '';
 
       /* Conditional MEL */
@@ -689,6 +737,44 @@ function setupModeToggle(groupId, tab) {
 }
 setupModeToggle('sets-mode-btns',     'sets');
 setupModeToggle('lexicons-mode-btns', 'lexicons');
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Parameters Freq  — toggle frequency-annotated view of the ToC
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupParamsFreq() {
+  const viewEl  = document.getElementById('parameters-view-content');
+  const btnFreq = document.getElementById('btn-freq-parameters');
+  if (!btnFreq) return;
+
+  let savedViewHTML = null;   /* null = we are in normal view */
+
+  btnFreq.addEventListener('click', () => {
+    if (!currentRunId) return;
+
+    /* If already showing freq view, toggle back to normal view */
+    if (savedViewHTML !== null) {
+      viewEl.innerHTML = savedViewHTML;
+      savedViewHTML = null;
+      btnFreq.textContent = '';
+      btnFreq.innerHTML = '<i class="fas fa-chart-bar"></i> Freq';
+      btnFreq.classList.remove('active');
+      return;
+    }
+
+    /* Switch to freq view */
+    btnFreq.disabled = true;
+    fetch(`/api/tab/${currentRunId}/parameters?mode=freq`)
+      .then(r => r.text())
+      .then(html => {
+        savedViewHTML = viewEl.innerHTML;
+        viewEl.innerHTML = html;
+        btnFreq.innerHTML = '<i class="fas fa-times"></i> Back to view';
+        btnFreq.classList.add('active');
+      })
+      .catch(err => alert('Freq error: ' + err))
+      .finally(() => { btnFreq.disabled = false; });
+  });
+})();
 
 /* ══════════════════════════════════════════════════════════════════════════
    Parameters Edit / Save / Cancel  (XSLT form approach)
@@ -963,7 +1049,12 @@ setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
     .then(r => r.json())
     .then(data => {
       if (data.error) {
-        alert(`Save failed:\n${data.error}`);
+        let msg = `Save failed:\n${data.error}`;
+        if (data.invalid && data.invalid.length) {
+          msg += '\n\nBad paths:\n' + data.invalid.map(
+            e => `  ${e.name}: "${e.path}" (resolved: ${e.resolved})`).join('\n');
+        }
+        alert(msg);
         btnSave.disabled  = false;
         btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
         return;

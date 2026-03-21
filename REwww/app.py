@@ -50,6 +50,57 @@ _runs_lock  = threading.Lock()
 
 # ── XSLT helpers ──────────────────────────────────────────────────────────────
 
+def xml_to_html_from_tree(tree, stylesheet_name: str) -> str:
+    """Like xml_to_html but accepts an already-parsed lxml ElementTree."""
+    xsl_path = os.path.join(STYLES_DIR, stylesheet_name)
+    if not os.path.isfile(xsl_path):
+        return f'<p class="text-danger">Stylesheet not found: <code>{stylesheet_name}</code></p>'
+    try:
+        result    = ET.XSLT(ET.parse(xsl_path))(tree)
+        html_root = ET.HTML(bytes(result), parser=ET.HTMLParser(encoding='utf-8'))
+        if html_root is not None:
+            body = html_root.find('.//body')
+            if body is not None:
+                parts = [body.text or '']
+                for child in body:
+                    parts.append(ET.tostring(child, encoding='unicode', method='html'))
+                return ''.join(parts)
+        return str(result)
+    except Exception as exc:
+        return f'<pre class="text-danger">XSLT error ({stylesheet_name}):\n{exc}</pre>'
+
+
+def compute_corr_freq(sets_path: str, corr_path: str):
+    """Return a deep-copied corr ElementTree with freq stamped on every <corr> and <modern>.
+
+    Each <corr freq="N"> carries row-level frequency (how many sets used that rule).
+    Each <modern freq="N"> carries cell-level frequency (how many sets used that rule
+    AND had a member from that dialect).
+    """
+    import collections
+    row_freq  = collections.Counter()   # corr_num -> count
+    cell_freq = collections.Counter()   # (corr_num, dialect) -> count
+
+    for s in ET.parse(sets_path).getroot().iter('set'):
+        rcn_el = s.find('rcn')
+        if rcn_el is None or not rcn_el.text:
+            continue
+        nums     = rcn_el.text.split()          # keep as strings — num values may be non-integer (e.g. 'a', 'ablaut-1-pl')
+        dialects = [lg.text for lg in s.findall('.//rfx/lg') if lg.text]
+        row_freq.update(nums)
+        for num in nums:
+            cell_freq.update((num, d) for d in dialects)
+
+    tree = copy.deepcopy(ET.parse(corr_path))
+    for corr_el in tree.getroot().findall('corr'):
+        num = corr_el.get('num', '')
+        corr_el.set('freq', str(row_freq.get(num, 0)))
+        for modern_el in corr_el.findall('modern'):
+            dialect = modern_el.get('dialecte', '')
+            modern_el.set('freq', str(cell_freq.get((num, dialect), 0)))
+    return tree
+
+
 def xml_to_html(xml_path: str, stylesheet_name: str) -> str:
     """Apply a named XSLT stylesheet to an XML file; return HTML fragment.
 
@@ -301,6 +352,14 @@ def api_tab(run_id, tab):
         recon_files = files.get('recon', [])
         if not recon_files:
             return '<p class="text-muted">No correspondences files.</p>'
+
+        if mode == 'freq':
+            sets_file = files.get('sets')
+            if not sets_file or not os.path.isfile(sets_file):
+                return '<p class="text-muted">No sets file found — run the project first.</p>'
+            recon_file = recon_files[0]
+            annotated  = compute_corr_freq(sets_file, recon_file)
+            return xml_to_html_from_tree(annotated, 'toc2html-freq.xsl')
 
         if mode == 'edit':
             # Edit mode: render first file as an interactive form via toc2html-edit.xsl.
@@ -657,15 +716,26 @@ def api_save_projects():
     body     = request.get_json(force=True)
     projects = body.get('projects', [])
 
-    lines = ['# projects configuration\n']
+    lines   = ['# projects configuration\n']
+    invalid = []
     for entry in projects:
         name = str(entry.get('name', '')).strip()
         path = str(entry.get('path', '')).strip()
         if not name:
             continue
-        # Simple TOML key = "value" line; quote the value
+        # Resolve relative paths the same way projects.py does
+        resolved = path if os.path.isabs(path) else os.path.normpath(
+            os.path.join(os.path.dirname(PROJECTS_TOML), path))
+        if not os.path.isdir(resolved):
+            invalid.append({'name': name, 'path': path, 'resolved': resolved})
         escaped = path.replace('\\', '\\\\').replace('"', '\\"')
         lines.append(f'{name} = "{escaped}"\n')
+
+    if invalid:
+        return jsonify(
+            error='Some paths do not point to existing directories',
+            invalid=invalid
+        ), 400
 
     try:
         with open(PROJECTS_TOML, 'w', encoding='utf-8') as fh:
