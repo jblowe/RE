@@ -1,0 +1,51 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Reconstruction Engine</title>
+  <link rel="stylesheet" href="/static/asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/asset/css/all.min.css">
+  <!-- reconengine.css is referenced inside XSLT output; load it here instead -->
+  <link rel="stylesheet" href="/static/asset/css/reconengine.css">
+  <style>
+    /* ── Layout ── */
+    body { font-size: 0.875rem; background: #f8f9fa; }
+    .navbar-brand { font-weight: 600; letter-spacing: .03em; }
+
+    /* ── Log tab ── */
+    #run-log {
+      height: 480px; overflow-y: auto;
+      font-family: 'Menlo', 'Consolas', monospace; font-size: 0.78rem;
+      background: #1e1e2e; color: #cdd6f4;
+      padding: .5rem .75rem; border-radius: 4px;
+      white-space: pre-wrap; word-break: break-all;
+    }
+
+    /* ── Tab content area ── */
+    .tab-content > .tab-pane { padding: 1rem 0.25rem; }
+    #main-tab-content {
+      background: #fff;
+      border: 1px solid #dee2e6; border-top: none;
+      padding: .75rem 1rem 1rem;
+      min-height: 400px;
+    }
+
+    /* ── Projects table ── */
+    .projects-table th, .projects-table td { vertical-align: middle; }
+    .projects-table select, .projects-table input[type=text] {
+      font-size: 0.8rem; padding: .2rem .4rem; height: auto;
+    }
+    .projects-table .project-name { font-weight: 600; white-space: nowrap; }
+
+    /* ── Misc ── */
+    .spinner-sm { width: 1rem; height: 1rem; }
+    .badge-running  { background: #ffc107; color: #000; }
+    .badge-done     { background: #28a745; color: #fff; }
+    .badge-error    { background: #dc3545; color: #fff; }
+    .nav-tabs .nav-link.disabled { color: #999; }
+    .tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
+    /* Allow wide tables to expand naturally and scroll rather than squish */
+    .content-area { overflow-x: auto; }
+    .content-area table { min-width: max-content; }
+    .content-area th, .content-area td { white-space: nowrap; }
+  </style>
+</head>
