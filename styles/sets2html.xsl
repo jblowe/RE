@@ -56,45 +56,61 @@
   </xsl:template>
 
   <xsl:template match="isolates">
-    <div class="row">
-      <div class="col-md-6">
-        <a name="isolates"/>
-        <h5>Isolates</h5>
-      </div>
-      <div class="col-md-6">
-        <h6>n =
-          <xsl:value-of select="count(rfx)"/>
-        </h6>
-      </div>
-      <div class="row">
-        <div class="col">
-          <ol>
-            <xsl:apply-templates select="rfx"/>
-          </ol>
-        </div>
-      </div>
-    </div>
+    <a name="isolates"/>
+    <h5>Isolates
+      <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+        n = <xsl:value-of select="count(rfx)"/>
+      </small>
+    </h5>
+    <table class="table table-sm table-hover table-bordered sortable">
+      <thead>
+        <tr>
+          <th>lg</th>
+          <th>lx</th>
+          <th>gl</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:for-each select="rfx">
+          <tr>
+            <td><xsl:value-of select="lg"/></td>
+            <td><xsl:value-of select="lx"/></td>
+            <td><xsl:value-of select="gl"/></td>
+            <td><xsl:value-of select="@id"/></td>
+          </tr>
+        </xsl:for-each>
+      </tbody>
+    </table>
   </xsl:template>
 
   <xsl:template match="failures">
-    <div class="row">
-      <div class="col-md-6">
-        <a name="failures"/>
-        <h5>Failures</h5>
-      </div>
-      <div class="col-md-6">
-        <h6>n =
-          <xsl:value-of select="count(rfx)"/>
-        </h6>
-      </div>
-      <div class="row">
-        <div class="col">
-          <ol>
-            <xsl:apply-templates select="rfx"/>
-          </ol>
-        </div>
-      </div>
-    </div>
+    <a name="failures"/>
+    <h5>Failures
+      <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+        n = <xsl:value-of select="count(rfx)"/>
+      </small>
+    </h5>
+    <table class="table table-sm table-hover table-bordered sortable">
+      <thead>
+        <tr>
+          <th>lg</th>
+          <th>lx</th>
+          <th>gl</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:for-each select="rfx">
+          <tr>
+            <td><xsl:value-of select="lg"/></td>
+            <td><xsl:value-of select="lx"/></td>
+            <td><xsl:value-of select="gl"/></td>
+            <td><xsl:value-of select="@id"/></td>
+          </tr>
+        </xsl:for-each>
+      </tbody>
+    </table>
   </xsl:template>
 
   <xsl:template match="set">

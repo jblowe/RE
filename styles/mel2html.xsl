@@ -110,7 +110,7 @@
                     <xsl:if test="@uses">
                         &#160;<xsl:value-of select="@uses"/>
                     </xsl:if>
-                    <xsl:if test="position() != last()">, </xsl:if>
+                    <xsl:if test="position() != last()">; </xsl:if>
                 </xsl:for-each>
             </td>
         </tr>

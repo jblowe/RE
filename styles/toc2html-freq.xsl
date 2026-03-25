@@ -19,6 +19,22 @@
 
 <xsl:template match="tableOfCorr">
   <div>
+    <!-- Scoped styles for compact column widths.
+         Must live in the body fragment (head is stripped by xml_to_html). -->
+    <style>
+      /* Tighter cell padding for the frequency table */
+      .toc-freq-table td, .toc-freq-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+      /* Col 1 = uses, col 2 = num */
+      .toc-freq-table th:nth-child(1), .toc-freq-table td:nth-child(1) { width: 4ch; }
+      .toc-freq-table th:nth-child(2), .toc-freq-table td:nth-child(2) { width: 3ch; }
+      /* Col 4 = syll */
+      .toc-freq-table th:nth-child(4), .toc-freq-table td:nth-child(4) { width: 4ch; }
+      /* Cols 5-6 = left / right context */
+      .toc-freq-table th:nth-child(5), .toc-freq-table td:nth-child(5),
+      .toc-freq-table th:nth-child(6), .toc-freq-table td:nth-child(6) { width: 5ch; }
+      /* Cols 7+ = dialect forms */
+      .toc-freq-table th:nth-child(n+7), .toc-freq-table td:nth-child(n+7) { width: 5ch; }
+    </style>
     <h6>Parameters</h6>
     <table>
       <xsl:if test="parameters/canon">
@@ -62,7 +78,7 @@
       </small>
     </h6>
     <div>
-      <table class="table table-sm table-hover table-bordered sets sortable">
+      <table class="table table-sm table-hover table-bordered sets sortable toc-freq-table">
         <thead class="sticky-top top-0">
           <tr>
             <th>uses</th>
