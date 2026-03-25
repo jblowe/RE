@@ -120,7 +120,7 @@ def api_run():
                 project_path, project, recon,
                 mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
 
-            B = RE.batch_all_upstream(settings, only_with_mel=False)
+            B = RE.batch_all_upstream(settings, only_with_mel=True)
 
             B.isolates = sorted(
                 RE.extract_isolates(B).keys(), key=lambda x: x.language)
@@ -131,7 +131,7 @@ def api_run():
                 project_path, f'{project}.{run_name}.sets.xml')
             RE.dump_xml_sets(
                 B, settings.upstream[settings.upstream_target],
-                sets_xml, False)
+                sets_xml, True)
 
             B.statistics.add_stat('isolates', len(B.isolates))
             B.statistics.add_stat('failure',  len(B.failures))
@@ -144,21 +144,30 @@ def api_run():
             args_ns = SimpleNamespace(
                 run=run_name, project=project, project_path=project_path,
                 recon=recon, mel=mel, fuzzy=fuzzy, upstream=upstream,
-                only_with_mel=False)
+                only_with_mel=True)
             serialize.serialize_stats(
                 B.statistics, settings, args_ns, stats_xml)
 
             mel_path   = getattr(settings, 'mel_filename',   None)
             fuzzy_path = getattr(settings, 'fuzzy_filename', None)
 
+            coverage_xml = None
+            if mel_path and os.path.isfile(mel_path):
+                import coverage as re_coverage
+                cov_stats = re_coverage.check_mel_coverage(settings)
+                coverage_xml = os.path.join(
+                    project_path, f'{project}.{run_name}.coverage.xml')
+                serialize.serialize_stats(cov_stats, settings, args_ns, coverage_xml)
+
             run_info['files'] = {
-                'sets':   sets_xml,
-                'stats':  stats_xml,
-                'recon':  list(settings.proto_languages.values()),
-                'data':   {lg: os.path.join(settings.directory_path, p)
-                           for lg, p in settings.attested.items()},
-                'mel':    mel_path   if mel_path   and os.path.isfile(mel_path)   else None,
-                'fuzzy':  fuzzy_path if fuzzy_path and os.path.isfile(fuzzy_path) else None,
+                'sets':     sets_xml,
+                'stats':    stats_xml,
+                'recon':    list(settings.proto_languages.values()),
+                'data':     {lg: os.path.join(settings.directory_path, p)
+                             for lg, p in settings.attested.items()},
+                'mel':      mel_path     if mel_path     and os.path.isfile(mel_path)     else None,
+                'fuzzy':    fuzzy_path   if fuzzy_path   and os.path.isfile(fuzzy_path)   else None,
+                'coverage': coverage_xml if coverage_xml and os.path.isfile(coverage_xml) else None,
             }
             run_info['status'] = 'done'
 
@@ -181,11 +190,12 @@ def api_poll(run_id):
     if r is None:
         return jsonify(error='unknown run'), 404
     return jsonify(
-        status    = r['status'],
-        log       = r['log'],
-        error     = r['error'],
-        has_mel   = bool(r['files'].get('mel'))   if r['status'] == 'done' else None,
-        has_fuzzy = bool(r['files'].get('fuzzy')) if r['status'] == 'done' else None,
+        status       = r['status'],
+        log          = r['log'],
+        error        = r['error'],
+        has_mel      = bool(r['files'].get('mel'))      if r['status'] == 'done' else None,
+        has_fuzzy    = bool(r['files'].get('fuzzy'))    if r['status'] == 'done' else None,
+        has_coverage = bool(r['files'].get('coverage')) if r['status'] == 'done' else None,
     )
 
 
@@ -270,6 +280,12 @@ def api_tab(run_id, tab):
             html = xslt.xml_to_html(fuz_path, 'fuzzy2html-edit.xsl')
             return f'<div data-fuz-file="{fuz_path}">{html}</div>'
         return xslt.xml_to_html(fuz_path, 'fuzzy2html.xsl')
+
+    if tab == 'coverage':
+        cov_path = files.get('coverage')
+        if not cov_path or not os.path.isfile(cov_path):
+            return '<p class="text-muted">No coverage report — run with a MEL selected.</p>'
+        return xslt.xml_to_html(cov_path, 'coverage2html.xsl')
 
     return '<p class="text-danger">Unknown tab.</p>', 400
 

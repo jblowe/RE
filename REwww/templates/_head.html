@@ -47,5 +47,19 @@
     .content-area { overflow-x: auto; }
     .content-area table { min-width: max-content; }
     .content-area th, .content-area td { white-space: nowrap; }
+
+    /* ── Theme: active tab carries the burnt-orange down from the navbar ── */
+    .nav-tabs .nav-link { padding-top: calc(.5rem - 2px); border-top: 2px solid transparent; }
+    .nav-tabs .nav-link.active { color: #EC5800; border-top-color: #EC5800; }
+    .nav-tabs .nav-link:not(.disabled):not(.active):hover { color: #c44a00; }
+
+
+    /* ── Theme: XSL section headings ── */
+    .content-area h5, .content-area h6 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #7a3000;
+      margin: 1rem 0 .4rem;
+    }
   </style>
 </head>

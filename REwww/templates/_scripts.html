@@ -174,11 +174,12 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       `project ${project}  ·  run ${data.run_name}`;
 
     ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
-     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav']
+     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
       .forEach(id => setTabEnabled(id, false));
 
-    document.getElementById('nav-mel').style.display   = 'none';
-    document.getElementById('nav-fuzzy').style.display = 'none';
+    document.getElementById('nav-mel').style.display      = 'none';
+    document.getElementById('nav-fuzzy').style.display    = 'none';
+    document.getElementById('nav-coverage').style.display = 'none';
 
     startPolling();
   })
@@ -340,6 +341,12 @@ function doPoll() {
         setTabEnabled('tab-fuzzy-nav', true);
         loadTabContent('fuzzy');
         document.getElementById('btn-edit-fuzzy').style.display = '';
+      }
+
+      if (data.has_coverage) {
+        document.getElementById('nav-coverage').style.display = '';
+        setTabEnabled('tab-coverage-nav', true);
+        loadTabContent('coverage');
       }
 
       activateTab('tab-sets');
