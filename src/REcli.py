@@ -147,6 +147,13 @@ elif command_args.command == 'upstream':
     B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures)},{B.statistics.summary_stats["reflexes"]}')
     stats_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.upstream.statistics.xml')
     serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
+
+    if getattr(settings, 'mel_filename', None):
+        coverage_statistics = coverage.check_mel_coverage(settings)
+        coverage_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.coverage.xml')
+        serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
+        print(f'wrote coverage report to {coverage_xml_file}')
+
     # make comparisons if there are things to compare
     # for what_to_compare in 'upstream evaluation mel'.split(' '):
     #    compare.compare(args.project_path, args.project, what_to_compare)
