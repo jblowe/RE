@@ -1613,7 +1613,7 @@ class REWindow(Gtk.Window):
                 self.settings.upstream,
                 self.parameters_widget.parameter_tree(),
                 self.lexicons_widget.lexicons(),
-                False,
+                True,   # only_with_mel — strict mode is the default for REgtk
             )
             GLib.idle_add(update_model)
         finally:
