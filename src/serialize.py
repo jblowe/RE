@@ -183,7 +183,8 @@ def render_sets(forms, sets, languages, set_type):
 
     def render_xml(element, form, level):
 
-        # handle 'strict' case: possibly output a set with multiple reconstructions
+        # handle merged case: a tuple (supporting_forms, [ProtoForm, ...]) produced
+        # by grouping sets with identical reflexes; len > 1 means multiple reconstructions.
         if isinstance(form, tuple):
             if level != 0:
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
@@ -194,11 +195,9 @@ def render_sets(forms, sets, languages, set_type):
                     add_protoform_element(reconstruction_block, protoform)
             else:
                 add_protoform_element(element, form[1][0])
-            if form[1][0].mel:
+            if form[1][0].mel and form[1][0].mel.glosses:
                 ET.SubElement(element, 'mel').text = ', '.join(form[1][0].mel.glosses)
                 ET.SubElement(element, 'melid').text = form[1][0].mel.id
-            else:
-                pass
             sf = ET.SubElement(element, 'sf')
             sort_forms(form[1][0], sf, level)
 
@@ -263,19 +262,16 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
     sets = ET.SubElement(root, 'sets')
 
-    # if 'strict' is on, squish the sets using mels before output
-    if only_with_mel:
-        uniques = collections.defaultdict(list)
-        for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
-            uniques[form.supporting_forms].append(form)
+    # Always merge sets that share identical supporting forms, collecting all
+    # competing reconstructions into a tuple so render_xml can emit <multi>
+    # elements for them.  (Whether forms *reach* this point depends on
+    # only_with_mel / strict, which is handled upstream in mel.associated_mels.)
+    uniques = collections.defaultdict(list)
+    for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
+        uniques[form.supporting_forms].append(form)
 
-        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)),
-                    sets, languages, 'strict sets')
-
-    # otherwise, make sets the 'usual' way (no mels)
-    else:
-        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)),
-                    sets, languages, 'sets')
+    render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)),
+                sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
     serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
@@ -474,8 +470,9 @@ def serialize_mels(mel_sets, mel_name, filename):
     ET.SubElement(root, 'createdat').text = run_date
 
     for (number, mel) in enumerate(list(mel_sets)):
-        entry = ET.SubElement(root, 'mel', attrib={'id': f'x{str(number + 1)}'})
-        ET.SubElement(entry, 'gl').text = mel
+        entry = ET.SubElement(root, 'mel', attrib={'id': 'x' + str(number + 1).zfill(4)})
+        for m in mel.glosses:
+            ET.SubElement(entry, 'gl').text = m
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
