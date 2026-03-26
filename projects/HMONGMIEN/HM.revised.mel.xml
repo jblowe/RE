@@ -1,0 +1,2673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<semantics>
+  <mel id="hm0001">
+    <gl>聯 (Cant. /lyːn2/) to sew</gl>
+  </mel>
+  <mel id="hm0002">
+    <gl>念 (Cant. /nɐm3/) to think of</gl>
+  </mel>
+  <mel id="hm0003">
+    <gl>風 air</gl>
+  </mel>
+  <mel id="hm0004">
+    <gl>韭 Allium</gl>
+  </mel>
+  <mel id="hm0005">
+    <gl>慚 ashamed</gl>
+  </mel>
+  <mel id="hm0006">
+    <gl>斧 axe</gl>
+  </mel>
+  <mel id="hm0007">
+    <gl>腐 bad/spoiled</gl>
+  </mel>
+  <mel id="hm0008">
+    <gl>袋 bag</gl>
+  </mel>
+  <mel id="hm0009">
+    <gl>秤 balance</gl>
+  </mel>
+  <mel id="hm0010">
+    <gl>笠 bamboo hat</gl>
+  </mel>
+  <mel id="hm0011">
+    <gl>竹 bamboo strip</gl>
+  </mel>
+  <mel id="hm0012">
+    <gl>廩 barn/granary</gl>
+  </mel>
+  <mel id="hm0013">
+    <gl>腐 bean curd</gl>
+  </mel>
+  <mel id="hm0014">
+    <gl>荅 bean</gl>
+  </mel>
+  <mel id="hm0015">
+    <gl>髟 beard</gl>
+  </mel>
+  <mel id="hm0016">
+    <gl>髯 beard</gl>
+  </mel>
+  <mel id="hm0017">
+    <gl>緻 beautiful</gl>
+  </mel>
+  <mel id="hm0018">
+    <gl>處 bed/place</gl>
+  </mel>
+  <mel id="hm0019">
+    <gl>碗 bowl</gl>
+  </mel>
+  <mel id="hm0020">
+    <gl>橋 bridge</gl>
+  </mel>
+  <mel id="hm0021">
+    <gl>黃 bright/light</gl>
+  </mel>
+  <mel id="hm0022">
+    <gl>黃 bright</gl>
+  </mel>
+  <mel id="hm0023">
+    <gl>桶 bucket</gl>
+  </mel>
+  <mel id="hm0024">
+    <gl>蕎 buckwheat</gl>
+  </mel>
+  <mel id="hm0025">
+    <gl>斤 catty</gl>
+  </mel>
+  <mel id="hm0026">
+    <gl>中 center/middle</gl>
+  </mel>
+  <mel id="hm0027">
+    <gl>炭 charcoal</gl>
+  </mel>
+  <mel id="hm0028">
+    <gl>雞 chicken</gl>
+  </mel>
+  <mel id="hm0029">
+    <gl>鑿 chisel</gl>
+  </mel>
+  <mel id="hm0030">
+    <gl>箸 chopsticks</gl>
+  </mel>
+  <mel id="hm0031">
+    <gl>淨 clean</gl>
+  </mel>
+  <mel id="hm0032">
+    <gl>清 clear</gl>
+  </mel>
+  <mel id="hm0033">
+    <gl>隻 clf-birds</gl>
+  </mel>
+  <mel id="hm0034">
+    <gl>片 clf-quilts</gl>
+  </mel>
+  <mel id="hm0035">
+    <gl>句 clf-sentences</gl>
+  </mel>
+  <mel id="hm0036">
+    <gl>張 clf-tools</gl>
+  </mel>
+  <mel id="hm0037">
+    <gl>張 clf-tools</gl>
+  </mel>
+  <mel id="hm0038">
+    <gl>熟 cooked/ripe</gl>
+  </mel>
+  <mel id="hm0039">
+    <gl>銅 copper</gl>
+  </mel>
+  <mel id="hm0040">
+    <gl>匠 craftsman</gl>
+  </mel>
+  <mel id="hm0041">
+    <gl>冠 crest/comb</gl>
+  </mel>
+  <mel id="hm0042">
+    <gl>烏 crow (bird)</gl>
+  </mel>
+  <mel id="hm0043">
+    <gl>瓜 cucumber</gl>
+  </mel>
+  <mel id="hm0044">
+    <gl>婦 daughter-in-law/bride</gl>
+  </mel>
+  <mel id="hm0045">
+    <gl>媳 daughter/girl</gl>
+  </mel>
+  <mel id="hm0046">
+    <gl>聾 deaf</gl>
+  </mel>
+  <mel id="hm0047">
+    <gl>獐 deer</gl>
+  </mel>
+  <mel id="hm0048">
+    <gl>露 dew</gl>
+  </mel>
+  <mel id="hm0049">
+    <gl>龍 dragon</gl>
+  </mel>
+  <mel id="hm0050">
+    <gl>龍 dragon</gl>
+  </mel>
+  <mel id="hm0051">
+    <gl>槀 dry/withered</gl>
+  </mel>
+  <mel id="hm0052">
+    <gl>鴨 duck</gl>
+  </mel>
+  <mel id="hm0053">
+    <gl>早 early</gl>
+  </mel>
+  <mel id="hm0054">
+    <gl>茄 eggplant</gl>
+  </mel>
+  <mel id="hm0055">
+    <gl>象 elephant</gl>
+  </mel>
+  <mel id="hm0056">
+    <gl>面 face</gl>
+  </mel>
+  <mel id="hm0057">
+    <gl>蕨 fern</gl>
+  </mel>
+  <mel id="hm0058">
+    <gl>筒 flute/tube</gl>
+  </mel>
+  <mel id="hm0059">
+    <gl>蠓 fly (n.)</gl>
+  </mel>
+  <mel id="hm0060">
+    <gl>霧 fog</gl>
+  </mel>
+  <mel id="hm0061">
+    <gl>園 garden</gl>
+  </mel>
+  <mel id="hm0062">
+    <gl>園 garden</gl>
+  </mel>
+  <mel id="hm0063">
+    <gl>葫 garlic</gl>
+  </mel>
+  <mel id="hm0064">
+    <gl>薑 ginger</gl>
+  </mel>
+  <mel id="hm0065">
+    <gl>金 gold</gl>
+  </mel>
+  <mel id="hm0066">
+    <gl>蝗 grasshopper</gl>
+  </mel>
+  <mel id="hm0067">
+    <gl>客 guest</gl>
+  </mel>
+  <mel id="hm0068">
+    <gl>里 half kilometer</gl>
+  </mel>
+  <mel id="hm0069">
+    <gl>硬 hard/solid</gl>
+  </mel>
+  <mel id="hm0070">
+    <gl>心 heart</gl>
+  </mel>
+  <mel id="hm0071">
+    <gl>堀 hole</gl>
+  </mel>
+  <mel id="hm0072">
+    <gl>孔 hole</gl>
+  </mel>
+  <mel id="hm0073">
+    <gl>蹢 hoof/claw/nail</gl>
+  </mel>
+  <mel id="hm0074">
+    <gl>蹄 hoof</gl>
+  </mel>
+  <mel id="hm0075">
+    <gl>鉤 hook</gl>
+  </mel>
+  <mel id="hm0076">
+    <gl>百 hundred</gl>
+  </mel>
+  <mel id="hm0077">
+    <gl>米 husked rice</gl>
+  </mel>
+  <mel id="hm0078">
+    <gl>藍 indigo</gl>
+  </mel>
+  <mel id="hm0079">
+    <gl>腸 intestines</gl>
+  </mel>
+  <mel id="hm0080">
+    <gl>鐵 iron</gl>
+  </mel>
+  <mel id="hm0081">
+    <gl>鐵 iron</gl>
+  </mel>
+  <mel id="hm0082">
+    <gl>漆 lacquer</gl>
+  </mel>
+  <mel id="hm0083">
+    <gl>遲 late</gl>
+  </mel>
+  <mel id="hm0084">
+    <gl>累 lazy</gl>
+  </mel>
+  <mel id="hm0085">
+    <gl>平 level</gl>
+  </mel>
+  <mel id="hm0086">
+    <gl>酒 liquor</gl>
+  </mel>
+  <mel id="hm0087">
+    <gl>酒 liquor</gl>
+  </mel>
+  <mel id="hm0088">
+    <gl>下 low/short</gl>
+  </mel>
+  <mel id="hm0089">
+    <gl>底 lower level</gl>
+  </mel>
+  <mel id="hm0090">
+    <gl>騣 mane</gl>
+  </mel>
+  <mel id="hm0091">
+    <gl>騣 mane</gl>
+  </mel>
+  <mel id="hm0092">
+    <gl>升 measure for grain</gl>
+  </mel>
+  <mel id="hm0093">
+    <gl>粢 millet</gl>
+  </mel>
+  <mel id="hm0094">
+    <gl>錢 money</gl>
+  </mel>
+  <mel id="hm0095">
+    <gl>臼 mortar/treadmill</gl>
+  </mel>
+  <mel id="hm0096">
+    <gl>慈 mother/aunt</gl>
+  </mel>
+  <mel id="hm0097">
+    <gl>泥 mud</gl>
+  </mel>
+  <mel id="hm0098">
+    <gl>狹 narrow</gl>
+  </mel>
+  <mel id="hm0099">
+    <gl>狹 narrow</gl>
+  </mel>
+  <mel id="hm0100">
+    <gl>箴 needle</gl>
+  </mel>
+  <mel id="hm0101">
+    <gl>地 non-irrigated land</gl>
+  </mel>
+  <mel id="hm0102">
+    <gl>雙 pair</gl>
+  </mel>
+  <mel id="hm0103">
+    <gl>紙 paper</gl>
+  </mel>
+  <mel id="hm0104">
+    <gl>桃 peach</gl>
+  </mel>
+  <mel id="hm0105">
+    <gl>梨 pear</gl>
+  </mel>
+  <mel id="hm0106">
+    <gl>柿 persimmon</gl>
+  </mel>
+  <mel id="hm0107">
+    <gl>鴿 pigeon</gl>
+  </mel>
+  <mel id="hm0108">
+    <gl>鳩 pigeon</gl>
+  </mel>
+  <mel id="hm0109">
+    <gl>楊 poplar tree</gl>
+  </mel>
+  <mel id="hm0110">
+    <gl>粥 porridge</gl>
+  </mel>
+  <mel id="hm0111">
+    <gl>價 price</gl>
+  </mel>
+  <mel id="hm0112">
+    <gl>膿 pus</gl>
+  </mel>
+  <mel id="hm0113">
+    <gl>捷 quick</gl>
+  </mel>
+  <mel id="hm0114">
+    <gl>廝 reciprocal</gl>
+  </mel>
+  <mel id="hm0115">
+    <gl>赤 red</gl>
+  </mel>
+  <mel id="hm0116">
+    <gl>粔 rice cake</gl>
+  </mel>
+  <mel id="hm0117">
+    <gl>甑 rice steamer</gl>
+  </mel>
+  <mel id="hm0118">
+    <gl>鹺 salty</gl>
+  </mel>
+  <mel id="hm0119">
+    <gl>秧 seedling</gl>
+  </mel>
+  <mel id="hm0120">
+    <gl>秧 seedling</gl>
+  </mel>
+  <mel id="hm0121">
+    <gl>畟 sharp</gl>
+  </mel>
+  <mel id="hm0122">
+    <gl>羊 sheep/goat</gl>
+  </mel>
+  <mel id="hm0123">
+    <gl>鎌 sickle</gl>
+  </mel>
+  <mel id="hm0124">
+    <gl>銀 silver</gl>
+  </mel>
+  <mel id="hm0125">
+    <gl>筋 sinew</gl>
+  </mel>
+  <mel id="hm0126">
+    <gl>裙 skirt</gl>
+  </mel>
+  <mel id="hm0127">
+    <gl>細 small/fine</gl>
+  </mel>
+  <mel id="hm0128">
+    <gl>幼 small/young</gl>
+  </mel>
+  <mel id="hm0129">
+    <gl>滑 smooth/slippery</gl>
+  </mel>
+  <mel id="hm0130">
+    <gl>蝸 snail</gl>
+  </mel>
+  <mel id="hm0131">
+    <gl>蝸 snail</gl>
+  </mel>
+  <mel id="hm0132">
+    <gl>蝸 snail</gl>
+  </mel>
+  <mel id="hm0133">
+    <gl>瘡 sore/boil/blister</gl>
+  </mel>
+  <mel id="hm0134">
+    <gl>聲 sound</gl>
+  </mel>
+  <mel id="hm0135">
+    <gl>凳 stool/bench</gl>
+  </mel>
+  <mel id="hm0136">
+    <gl>竈 stove</gl>
+  </mel>
+  <mel id="hm0137">
+    <gl>正 straight</gl>
+  </mel>
+  <mel id="hm0138">
+    <gl>力 strength</gl>
+  </mel>
+  <mel id="hm0139">
+    <gl>力 strength</gl>
+  </mel>
+  <mel id="hm0140">
+    <gl>甘 sweet</gl>
+  </mel>
+  <mel id="hm0141">
+    <gl>兩 tael (40 grams)</gl>
+  </mel>
+  <mel id="hm0142">
+    <gl>兩 tael (40 grams)</gl>
+  </mel>
+  <mel id="hm0143">
+    <gl>芋 taro</gl>
+  </mel>
+  <mel id="hm0144">
+    <gl>茶 tea</gl>
+  </mel>
+  <mel id="hm0145">
+    <gl>廟 temple</gl>
+  </mel>
+  <mel id="hm0146">
+    <gl>萬 ten thousand</gl>
+  </mel>
+  <mel id="hm0147">
+    <gl>厚 thick</gl>
+  </mel>
+  <mel id="hm0148">
+    <gl>薄 thin</gl>
+  </mel>
+  <mel id="hm0149">
+    <gl>姌 thin</gl>
+  </mel>
+  <mel id="hm0150">
+    <gl>渴 thirsty</gl>
+  </mel>
+  <mel id="hm0151">
+    <gl>千 thousand</gl>
+  </mel>
+  <mel id="hm0152">
+    <gl>祖 tiger</gl>
+  </mel>
+  <mel id="hm0153">
+    <gl>緊 tight</gl>
+  </mel>
+  <mel id="hm0154">
+    <gl>瓦 tile</gl>
+  </mel>
+  <mel id="hm0155">
+    <gl>碓 tilt-hammer/pestle</gl>
+  </mel>
+  <mel id="hm0156">
+    <gl>要 to ask for/want</gl>
+  </mel>
+  <mel id="hm0157">
+    <gl>炙 to bake/toast</gl>
+  </mel>
+  <mel id="hm0158">
+    <gl>是 to be</gl>
+  </mel>
+  <mel id="hm0159">
+    <gl>沸 to boil (intr)</gl>
+  </mel>
+  <mel id="hm0160">
+    <gl>煮 to boil (tr)</gl>
+  </mel>
+  <mel id="hm0161">
+    <gl>假 to borrow</gl>
+  </mel>
+  <mel id="hm0162">
+    <gl>辮 to braid/a braid</gl>
+  </mel>
+  <mel id="hm0163">
+    <gl>拗 to break</gl>
+  </mel>
+  <mel id="hm0164">
+    <gl>拗 to break</gl>
+  </mel>
+  <mel id="hm0165">
+    <gl>燎 to burn (mountain)</gl>
+  </mel>
+  <mel id="hm0166">
+    <gl>炙 to burn/be alight</gl>
+  </mel>
+  <mel id="hm0167">
+    <gl>灼 to burn</gl>
+  </mel>
+  <mel id="hm0168">
+    <gl>買 to buy</gl>
+  </mel>
+  <mel id="hm0169">
+    <gl>奉 to carry in 2 hands</gl>
+  </mel>
+  <mel id="hm0170">
+    <gl>擔 to carry on shoulder</gl>
+  </mel>
+  <mel id="hm0171">
+    <gl>嚼 to chew</gl>
+  </mel>
+  <mel id="hm0172">
+    <gl>拍 to clap</gl>
+  </mel>
+  <mel id="hm0173">
+    <gl>拍 to clap</gl>
+  </mel>
+  <mel id="hm0174">
+    <gl>過 to cross (river)</gl>
+  </mel>
+  <mel id="hm0175">
+    <gl>破 to cut open</gl>
+  </mel>
+  <mel id="hm0176">
+    <gl>割 to cut</gl>
+  </mel>
+  <mel id="hm0177">
+    <gl>下 to descend</gl>
+  </mel>
+  <mel id="hm0178">
+    <gl>下 to descend</gl>
+  </mel>
+  <mel id="hm0179">
+    <gl>抉 to dig</gl>
+  </mel>
+  <mel id="hm0180">
+    <gl>嫌 to dislike</gl>
+  </mel>
+  <mel id="hm0181">
+    <gl>煬 to dissolve/melt</gl>
+  </mel>
+  <mel id="hm0182">
+    <gl>煬 to dissolve/melt</gl>
+  </mel>
+  <mel id="hm0183">
+    <gl>欱 to drink/smoke</gl>
+  </mel>
+  <mel id="hm0184">
+    <gl>漏 to drip</gl>
+  </mel>
+  <mel id="hm0185">
+    <gl>立 to erect</gl>
+  </mel>
+  <mel id="hm0186">
+    <gl>頹 to fall (of rain)</gl>
+  </mel>
+  <mel id="hm0187">
+    <gl>浮 to float</gl>
+  </mel>
+  <mel id="hm0188">
+    <gl>流 to flow </gl>
+  </mel>
+  <mel id="hm0189">
+    <gl>炒 to fry</gl>
+  </mel>
+  <mel id="hm0190">
+    <gl>得 to get/gain</gl>
+  </mel>
+  <mel id="hm0191">
+    <gl>種 to grow</gl>
+  </mel>
+  <mel id="hm0192">
+    <gl>伏 to hatch/embrace</gl>
+  </mel>
+  <mel id="hm0193">
+    <gl>缺 to have a gap</gl>
+  </mel>
+  <mel id="hm0194">
+    <gl>著 to hit target</gl>
+  </mel>
+  <mel id="hm0195">
+    <gl>含 to hold in mouth</gl>
+  </mel>
+  <mel id="hm0196">
+    <gl>擣 to husk/pound rice</gl>
+  </mel>
+  <mel id="hm0197">
+    <gl>插 to insert</gl>
+  </mel>
+  <mel id="hm0198">
+    <gl>識 to know/recognize</gl>
+  </mel>
+  <mel id="hm0199">
+    <gl>牽 to lead</gl>
+  </mel>
+  <mel id="hm0200">
+    <gl>放 to let go</gl>
+  </mel>
+  <mel id="hm0201">
+    <gl>望 to look at</gl>
+  </mel>
+  <mel id="hm0202">
+    <gl>愛 to love</gl>
+  </mel>
+  <mel id="hm0203">
+    <gl>量 to measure (rice)</gl>
+  </mel>
+  <mel id="hm0204">
+    <gl>開 to open</gl>
+  </mel>
+  <mel id="hm0205">
+    <gl>脫 to peel off/escape</gl>
+  </mel>
+  <mel id="hm0206">
+    <gl>夾 to pick up</gl>
+  </mel>
+  <mel id="hm0207">
+    <gl>抽 to pull out</gl>
+  </mel>
+  <mel id="hm0208">
+    <gl>著 to put on/wear (shoes)</gl>
+  </mel>
+  <mel id="hm0209">
+    <gl>養 to raise (chickens)</gl>
+  </mel>
+  <mel id="hm0210">
+    <gl>養 to raise (chickens)</gl>
+  </mel>
+  <mel id="hm0211">
+    <gl>耙 to rake</gl>
+  </mel>
+  <mel id="hm0212">
+    <gl>造 to reach/arrive at</gl>
+  </mel>
+  <mel id="hm0213">
+    <gl>接 to receive/borrow</gl>
+  </mel>
+  <mel id="hm0214">
+    <gl>收 to receive/gather in</gl>
+  </mel>
+  <mel id="hm0215">
+    <gl>補 to repair/mend</gl>
+  </mel>
+  <mel id="hm0216">
+    <gl>騎 to ride</gl>
+  </mel>
+  <mel id="hm0217">
+    <gl>湯 to scald</gl>
+  </mel>
+  <mel id="hm0218">
+    <gl>噴 to scatter/sprinkle</gl>
+  </mel>
+  <mel id="hm0219">
+    <gl>賣 to sell</gl>
+  </mel>
+  <mel id="hm0220">
+    <gl>送 to send/deliver</gl>
+  </mel>
+  <mel id="hm0221">
+    <gl>號 to sing/cry out</gl>
+  </mel>
+  <mel id="hm0222">
+    <gl>坐 to sit</gl>
+  </mel>
+  <mel id="hm0223">
+    <gl>漬 to soak</gl>
+  </mel>
+  <mel id="hm0224">
+    <gl>醒 to sober up</gl>
+  </mel>
+  <mel id="hm0225">
+    <gl>劈 to split/chop</gl>
+  </mel>
+  <mel id="hm0226">
+    <gl>蹋 to step on/tread</gl>
+  </mel>
+  <mel id="hm0227">
+    <gl>摘 to strip leaves</gl>
+  </mel>
+  <mel id="hm0228">
+    <gl>拂 to sweep</gl>
+  </mel>
+  <mel id="hm0229">
+    <gl>捉 to take</gl>
+  </mel>
+  <mel id="hm0230">
+    <gl>報 to tell</gl>
+  </mel>
+  <mel id="hm0231">
+    <gl>穿 to thread</gl>
+  </mel>
+  <mel id="hm0232">
+    <gl>澡 to wash (hands)</gl>
+  </mel>
+  <mel id="hm0233">
+    <gl>淋 to water</gl>
+  </mel>
+  <mel id="hm0234">
+    <gl>織 to weave</gl>
+  </mel>
+  <mel id="hm0235">
+    <gl>眨 to wink</gl>
+  </mel>
+  <mel id="hm0236">
+    <gl>刷 to wipe</gl>
+  </mel>
+  <mel id="hm0237">
+    <gl>寫 to write</gl>
+  </mel>
+  <mel id="hm0238">
+    <gl>槽 trough</gl>
+  </mel>
+  <mel id="hm0239">
+    <gl>直 vertical/upright</gl>
+  </mel>
+  <mel id="hm0240">
+    <gl>里 village</gl>
+  </mel>
+  <mel id="hm0241">
+    <gl>暑 warm</gl>
+  </mel>
+  <mel id="hm0242">
+    <gl>牛 water buffalo/cow</gl>
+  </mel>
+  <mel id="hm0243">
+    <gl>鞭 whip</gl>
+  </mel>
+  <mel id="hm0244">
+    <gl>白 white</gl>
+  </mel>
+  <mel id="hm0245">
+    <gl>廣 wide</gl>
+  </mel>
+  <mel id="hm0246">
+    <gl>媼 wife</gl>
+  </mel>
+  <mel id="hm0247">
+    <gl>皇 yellow</gl>
+  </mel>
+  <mel id="hm0248">
+    <gl>黃 yellow</gl>
+  </mel>
+  <mel id="hm0249">
+    <gl>(Cant. /pɛːŋ5/) to hide oneself </gl>
+  </mel>
+  <mel id="hm0250">
+    <gl>(Hakka /njam/) armspan </gl>
+  </mel>
+  <mel id="hm0251">
+    <gl>13b. HM</gl>
+  </mel>
+  <mel id="hm0252">
+    <gl>13c. HM</gl>
+  </mel>
+  <mel id="hm0253">
+    <gl>13d. HM</gl>
+  </mel>
+  <mel id="hm0254">
+    <gl>16d. HM</gl>
+  </mel>
+  <mel id="hm0255">
+    <gl>1pl (we/us)</gl>
+  </mel>
+  <mel id="hm0256">
+    <gl>1sg (I/me)</gl>
+  </mel>
+  <mel id="hm0257">
+    <gl>1sg (I/me)</gl>
+  </mel>
+  <mel id="hm0258">
+    <gl>1sg (I/me)</gl>
+  </mel>
+  <mel id="hm0259">
+    <gl>2pl (you)</gl>
+  </mel>
+  <mel id="hm0260">
+    <gl>2sg (you)</gl>
+  </mel>
+  <mel id="hm0261">
+    <gl>2sg (you)</gl>
+  </mel>
+  <mel id="hm0262">
+    <gl>3sg (he/she/it)</gl>
+  </mel>
+  <mel id="hm0263">
+    <gl>6b. HM</gl>
+  </mel>
+  <mel id="hm0264">
+    <gl>7b. HM</gl>
+  </mel>
+  <mel id="hm0265">
+    <gl>able</gl>
+  </mel>
+  <mel id="hm0266">
+    <gl>alive</gl>
+  </mel>
+  <mel id="hm0267">
+    <gl>Allium</gl>
+  </mel>
+  <mel id="hm0268">
+    <gl>animal fat/oil</gl>
+  </mel>
+  <mel id="hm0269">
+    <gl>animal fat/oil</gl>
+  </mel>
+  <mel id="hm0270">
+    <gl>ant</gl>
+  </mel>
+  <mel id="hm0271">
+    <gl>ant</gl>
+  </mel>
+  <mel id="hm0272">
+    <gl>ant</gl>
+  </mel>
+  <mel id="hm0273">
+    <gl>armpit</gl>
+  </mel>
+  <mel id="hm0274">
+    <gl>armspan</gl>
+  </mel>
+  <mel id="hm0275">
+    <gl>artemisia</gl>
+  </mel>
+  <mel id="hm0276">
+    <gl>ashes</gl>
+  </mel>
+  <mel id="hm0277">
+    <gl>asleep</gl>
+  </mel>
+  <mel id="hm0278">
+    <gl>attic</gl>
+  </mel>
+  <mel id="hm0279">
+    <gl>axe</gl>
+  </mel>
+  <mel id="hm0280">
+    <gl>back (of body)</gl>
+  </mel>
+  <mel id="hm0281">
+    <gl>back (of body)</gl>
+  </mel>
+  <mel id="hm0282">
+    <gl>back (vs. front)</gl>
+  </mel>
+  <mel id="hm0283">
+    <gl>bamboo bowl</gl>
+  </mel>
+  <mel id="hm0284">
+    <gl>bamboo hat</gl>
+  </mel>
+  <mel id="hm0285">
+    <gl>bamboo pipes</gl>
+  </mel>
+  <mel id="hm0286">
+    <gl>bamboo shoot/orphan</gl>
+  </mel>
+  <mel id="hm0287">
+    <gl>bamboo</gl>
+  </mel>
+  <mel id="hm0288">
+    <gl>bamboo</gl>
+  </mel>
+  <mel id="hm0289">
+    <gl>bat (animal)</gl>
+  </mel>
+  <mel id="hm0290">
+    <gl>bear</gl>
+  </mel>
+  <mel id="hm0291">
+    <gl>bedbug</gl>
+  </mel>
+  <mel id="hm0292">
+    <gl>bee</gl>
+  </mel>
+  <mel id="hm0293">
+    <gl>beeswax</gl>
+  </mel>
+  <mel id="hm0294">
+    <gl>bellows</gl>
+  </mel>
+  <mel id="hm0295">
+    <gl>bellows</gl>
+  </mel>
+  <mel id="hm0296">
+    <gl>belly</gl>
+  </mel>
+  <mel id="hm0297">
+    <gl>big</gl>
+  </mel>
+  <mel id="hm0298">
+    <gl>billhook</gl>
+  </mel>
+  <mel id="hm0299">
+    <gl>bird</gl>
+  </mel>
+  <mel id="hm0300">
+    <gl>bitter</gl>
+  </mel>
+  <mel id="hm0301">
+    <gl>black</gl>
+  </mel>
+  <mel id="hm0302">
+    <gl>black</gl>
+  </mel>
+  <mel id="hm0303">
+    <gl>bland/tasteless</gl>
+  </mel>
+  <mel id="hm0304">
+    <gl>bland/tasteless</gl>
+  </mel>
+  <mel id="hm0305">
+    <gl>blind</gl>
+  </mel>
+  <mel id="hm0306">
+    <gl>blood</gl>
+  </mel>
+  <mel id="hm0307">
+    <gl>boat/ship</gl>
+  </mel>
+  <mel id="hm0308">
+    <gl>boat/ship</gl>
+  </mel>
+  <mel id="hm0309">
+    <gl>body louse</gl>
+  </mel>
+  <mel id="hm0310">
+    <gl>body/trunk</gl>
+  </mel>
+  <mel id="hm0311">
+    <gl>bone</gl>
+  </mel>
+  <mel id="hm0312">
+    <gl>bowl</gl>
+  </mel>
+  <mel id="hm0313">
+    <gl>bracelet</gl>
+  </mel>
+  <mel id="hm0314">
+    <gl>bracelet</gl>
+  </mel>
+  <mel id="hm0315">
+    <gl>breast/chest</gl>
+  </mel>
+  <mel id="hm0316">
+    <gl>bridge</gl>
+  </mel>
+  <mel id="hm0317">
+    <gl>brother</gl>
+  </mel>
+  <mel id="hm0318">
+    <gl>butterfly</gl>
+  </mel>
+  <mel id="hm0319">
+    <gl>carrying pole</gl>
+  </mel>
+  <mel id="hm0320">
+    <gl>cattle pen</gl>
+  </mel>
+  <mel id="hm0321">
+    <gl>centipede</gl>
+  </mel>
+  <mel id="hm0322">
+    <gl>centipede</gl>
+  </mel>
+  <mel id="hm0323">
+    <gl>chaff/husk</gl>
+  </mel>
+  <mel id="hm0324">
+    <gl>chaff/husk</gl>
+  </mel>
+  <mel id="hm0325">
+    <gl>cheek/face</gl>
+  </mel>
+  <mel id="hm0326">
+    <gl>cherry</gl>
+  </mel>
+  <mel id="hm0327">
+    <gl>child</gl>
+  </mel>
+  <mel id="hm0328">
+    <gl>chin/lower jaw</gl>
+  </mel>
+  <mel id="hm0329">
+    <gl>claw/talon</gl>
+  </mel>
+  <mel id="hm0330">
+    <gl>clay pot/earthen jar</gl>
+  </mel>
+  <mel id="hm0331">
+    <gl>clean</gl>
+  </mel>
+  <mel id="hm0332">
+    <gl>clf-bowls/houses</gl>
+  </mel>
+  <mel id="hm0333">
+    <gl>clf-bowls/houses</gl>
+  </mel>
+  <mel id="hm0334">
+    <gl>clf-fields</gl>
+  </mel>
+  <mel id="hm0335">
+    <gl>clf-horses</gl>
+  </mel>
+  <mel id="hm0336">
+    <gl>clf-mouthfuls</gl>
+  </mel>
+  <mel id="hm0337">
+    <gl>clf-people</gl>
+  </mel>
+  <mel id="hm0338">
+    <gl>clf-rooms</gl>
+  </mel>
+  <mel id="hm0339">
+    <gl>cloth</gl>
+  </mel>
+  <mel id="hm0340">
+    <gl>clothes</gl>
+  </mel>
+  <mel id="hm0341">
+    <gl>cloud/haze</gl>
+  </mel>
+  <mel id="hm0342">
+    <gl>cogongrass</gl>
+  </mel>
+  <mel id="hm0343">
+    <gl>cold (day)</gl>
+  </mel>
+  <mel id="hm0344">
+    <gl>cold</gl>
+  </mel>
+  <mel id="hm0345">
+    <gl>comb</gl>
+  </mel>
+  <mel id="hm0346">
+    <gl>cooked rice</gl>
+  </mel>
+  <mel id="hm0347">
+    <gl>cooked/ripe</gl>
+  </mel>
+  <mel id="hm0348">
+    <gl>cooking pot/pan</gl>
+  </mel>
+  <mel id="hm0349">
+    <gl>cooking smoke</gl>
+  </mel>
+  <mel id="hm0350">
+    <gl>cool (water)</gl>
+  </mel>
+  <mel id="hm0351">
+    <gl>cow/ox</gl>
+  </mel>
+  <mel id="hm0352">
+    <gl>crazy</gl>
+  </mel>
+  <mel id="hm0353">
+    <gl>crooked</gl>
+  </mel>
+  <mel id="hm0354">
+    <gl>crop (of bird)/gizzard</gl>
+  </mel>
+  <mel id="hm0355">
+    <gl>crop of bird</gl>
+  </mel>
+  <mel id="hm0356">
+    <gl>crops</gl>
+  </mel>
+  <mel id="hm0357">
+    <gl>crossbow</gl>
+  </mel>
+  <mel id="hm0358">
+    <gl>crossbow</gl>
+  </mel>
+  <mel id="hm0359">
+    <gl>cuckoo</gl>
+  </mel>
+  <mel id="hm0360">
+    <gl>dark</gl>
+  </mel>
+  <mel id="hm0361">
+    <gl>daughter/girl</gl>
+  </mel>
+  <mel id="hm0362">
+    <gl>deaf</gl>
+  </mel>
+  <mel id="hm0363">
+    <gl>deep</gl>
+  </mel>
+  <mel id="hm0364">
+    <gl>diligent</gl>
+  </mel>
+  <mel id="hm0365">
+    <gl>ditch</gl>
+  </mel>
+  <mel id="hm0366">
+    <gl>dog</gl>
+  </mel>
+  <mel id="hm0367">
+    <gl>door/gate</gl>
+  </mel>
+  <mel id="hm0368">
+    <gl>drum</gl>
+  </mel>
+  <mel id="hm0369">
+    <gl>dry/thirsty</gl>
+  </mel>
+  <mel id="hm0370">
+    <gl>duck</gl>
+  </mel>
+  <mel id="hm0371">
+    <gl>eagle/hawk</gl>
+  </mel>
+  <mel id="hm0372">
+    <gl>ear</gl>
+  </mel>
+  <mel id="hm0373">
+    <gl>earth</gl>
+  </mel>
+  <mel id="hm0374">
+    <gl>earthworm</gl>
+  </mel>
+  <mel id="hm0375">
+    <gl>egg</gl>
+  </mel>
+  <mel id="hm0376">
+    <gl>egg</gl>
+  </mel>
+  <mel id="hm0377">
+    <gl>eight</gl>
+  </mel>
+  <mel id="hm0378">
+    <gl>elder brother</gl>
+  </mel>
+  <mel id="hm0379">
+    <gl>elephant</gl>
+  </mel>
+  <mel id="hm0380">
+    <gl>excrement</gl>
+  </mel>
+  <mel id="hm0381">
+    <gl>eye</gl>
+  </mel>
+  <mel id="hm0382">
+    <gl>face</gl>
+  </mel>
+  <mel id="hm0383">
+    <gl>fan</gl>
+  </mel>
+  <mel id="hm0384">
+    <gl>far</gl>
+  </mel>
+  <mel id="hm0385">
+    <gl>father/male</gl>
+  </mel>
+  <mel id="hm0386">
+    <gl>female/woman</gl>
+  </mel>
+  <mel id="hm0387">
+    <gl>female</gl>
+  </mel>
+  <mel id="hm0388">
+    <gl>fern</gl>
+  </mel>
+  <mel id="hm0389">
+    <gl>few/lack</gl>
+  </mel>
+  <mel id="hm0390">
+    <gl>field</gl>
+  </mel>
+  <mel id="hm0391">
+    <gl>fine (flour)</gl>
+  </mel>
+  <mel id="hm0392">
+    <gl>finger ring</gl>
+  </mel>
+  <mel id="hm0393">
+    <gl>finger</gl>
+  </mel>
+  <mel id="hm0394">
+    <gl>finger</gl>
+  </mel>
+  <mel id="hm0395">
+    <gl>fire</gl>
+  </mel>
+  <mel id="hm0396">
+    <gl>firewood</gl>
+  </mel>
+  <mel id="hm0397">
+    <gl>firm/durable</gl>
+  </mel>
+  <mel id="hm0398">
+    <gl>first day of month</gl>
+  </mel>
+  <mel id="hm0399">
+    <gl>fish</gl>
+  </mel>
+  <mel id="hm0400">
+    <gl>five</gl>
+  </mel>
+  <mel id="hm0401">
+    <gl>flea</gl>
+  </mel>
+  <mel id="hm0402">
+    <gl>flour</gl>
+  </mel>
+  <mel id="hm0403">
+    <gl>flower</gl>
+  </mel>
+  <mel id="hm0404">
+    <gl>fog/cloud</gl>
+  </mel>
+  <mel id="hm0405">
+    <gl>foot</gl>
+  </mel>
+  <mel id="hm0406">
+    <gl>footprint/track</gl>
+  </mel>
+  <mel id="hm0407">
+    <gl>forehead</gl>
+  </mel>
+  <mel id="hm0408">
+    <gl>forehead</gl>
+  </mel>
+  <mel id="hm0409">
+    <gl>forest</gl>
+  </mel>
+  <mel id="hm0410">
+    <gl>four</gl>
+  </mel>
+  <mel id="hm0411">
+    <gl>fragrant</gl>
+  </mel>
+  <mel id="hm0412">
+    <gl>frog</gl>
+  </mel>
+  <mel id="hm0413">
+    <gl>front surface</gl>
+  </mel>
+  <mel id="hm0414">
+    <gl>frost</gl>
+  </mel>
+  <mel id="hm0415">
+    <gl>fruit</gl>
+  </mel>
+  <mel id="hm0416">
+    <gl>full</gl>
+  </mel>
+  <mel id="hm0417">
+    <gl>gall bladder</gl>
+  </mel>
+  <mel id="hm0418">
+    <gl>ginger</gl>
+  </mel>
+  <mel id="hm0419">
+    <gl>gloss</gl>
+  </mel>
+  <mel id="hm0420">
+    <gl>glutinous/sticky</gl>
+  </mel>
+  <mel id="hm0421">
+    <gl>good/tasty</gl>
+  </mel>
+  <mel id="hm0422">
+    <gl>good</gl>
+  </mel>
+  <mel id="hm0423">
+    <gl>gourd</gl>
+  </mel>
+  <mel id="hm0424">
+    <gl>grain head/bag</gl>
+  </mel>
+  <mel id="hm0425">
+    <gl>grape</gl>
+  </mel>
+  <mel id="hm0426">
+    <gl>grass</gl>
+  </mel>
+  <mel id="hm0427">
+    <gl>grasshopper</gl>
+  </mel>
+  <mel id="hm0428">
+    <gl>grave/tomb</gl>
+  </mel>
+  <mel id="hm0429">
+    <gl>grave/tomb</gl>
+  </mel>
+  <mel id="hm0430">
+    <gl>green/blue</gl>
+  </mel>
+  <mel id="hm0431">
+    <gl>green/blue</gl>
+  </mel>
+  <mel id="hm0432">
+    <gl>grey</gl>
+  </mel>
+  <mel id="hm0433">
+    <gl>hair</gl>
+  </mel>
+  <mel id="hm0434">
+    <gl>half (of day)</gl>
+  </mel>
+  <mel id="hm0435">
+    <gl>half</gl>
+  </mel>
+  <mel id="hm0436">
+    <gl>hand/arm</gl>
+  </mel>
+  <mel id="hm0437">
+    <gl>head louse</gl>
+  </mel>
+  <mel id="hm0438">
+    <gl>head</gl>
+  </mel>
+  <mel id="hm0439">
+    <gl>heart</gl>
+  </mel>
+  <mel id="hm0440">
+    <gl>heavy</gl>
+  </mel>
+  <mel id="hm0441">
+    <gl>high/tall</gl>
+  </mel>
+  <mel id="hm0442">
+    <gl>Hmong</gl>
+  </mel>
+  <mel id="hm0443">
+    <gl>honey</gl>
+  </mel>
+  <mel id="hm0444">
+    <gl>hoop</gl>
+  </mel>
+  <mel id="hm0445">
+    <gl>horn</gl>
+  </mel>
+  <mel id="hm0446">
+    <gl>horse</gl>
+  </mel>
+  <mel id="hm0447">
+    <gl>hot (water)</gl>
+  </mel>
+  <mel id="hm0448">
+    <gl>house</gl>
+  </mel>
+  <mel id="hm0449">
+    <gl>houttuynia cordata</gl>
+  </mel>
+  <mel id="hm0450">
+    <gl>hungry</gl>
+  </mel>
+  <mel id="hm0451">
+    <gl>husband</gl>
+  </mel>
+  <mel id="hm0452">
+    <gl>husked rice/millet</gl>
+  </mel>
+  <mel id="hm0453">
+    <gl>husked rice</gl>
+  </mel>
+  <mel id="hm0454">
+    <gl>ice</gl>
+  </mel>
+  <mel id="hm0455">
+    <gl>illness/pain</gl>
+  </mel>
+  <mel id="hm0456">
+    <gl>in front</gl>
+  </mel>
+  <mel id="hm0457">
+    <gl>insect/worm</gl>
+  </mel>
+  <mel id="hm0458">
+    <gl>interior</gl>
+  </mel>
+  <mel id="hm0459">
+    <gl>intestines</gl>
+  </mel>
+  <mel id="hm0460">
+    <gl>itch(y)/scratch(y)</gl>
+  </mel>
+  <mel id="hm0461">
+    <gl>knee</gl>
+  </mel>
+  <mel id="hm0462">
+    <gl>late</gl>
+  </mel>
+  <mel id="hm0463">
+    <gl>lazy</gl>
+  </mel>
+  <mel id="hm0464">
+    <gl>leaf</gl>
+  </mel>
+  <mel id="hm0465">
+    <gl>leaf</gl>
+  </mel>
+  <mel id="hm0466">
+    <gl>leg/branch</gl>
+  </mel>
+  <mel id="hm0467">
+    <gl>level</gl>
+  </mel>
+  <mel id="hm0468">
+    <gl>light(weight)</gl>
+  </mel>
+  <mel id="hm0469">
+    <gl>lightning flash</gl>
+  </mel>
+  <mel id="hm0470">
+    <gl>lightning flash</gl>
+  </mel>
+  <mel id="hm0471">
+    <gl>liquid/soup</gl>
+  </mel>
+  <mel id="hm0472">
+    <gl>liver</gl>
+  </mel>
+  <mel id="hm0473">
+    <gl>long (time)</gl>
+  </mel>
+  <mel id="hm0474">
+    <gl>long sword</gl>
+  </mel>
+  <mel id="hm0475">
+    <gl>long</gl>
+  </mel>
+  <mel id="hm0476">
+    <gl>loud/sound</gl>
+  </mel>
+  <mel id="hm0477">
+    <gl>lung</gl>
+  </mel>
+  <mel id="hm0478">
+    <gl>maggot</gl>
+  </mel>
+  <mel id="hm0479">
+    <gl>male (human)</gl>
+  </mel>
+  <mel id="hm0480">
+    <gl>male</gl>
+  </mel>
+  <mel id="hm0481">
+    <gl>malodorous</gl>
+  </mel>
+  <mel id="hm0482">
+    <gl>many/much</gl>
+  </mel>
+  <mel id="hm0483">
+    <gl>marrow/brains</gl>
+  </mel>
+  <mel id="hm0484">
+    <gl>meat</gl>
+  </mel>
+  <mel id="hm0485">
+    <gl>meat</gl>
+  </mel>
+  <mel id="hm0486">
+    <gl>medicine</gl>
+  </mel>
+  <mel id="hm0487">
+    <gl>midday meal</gl>
+  </mel>
+  <mel id="hm0488">
+    <gl>molar tooth</gl>
+  </mel>
+  <mel id="hm0489">
+    <gl>monkey</gl>
+  </mel>
+  <mel id="hm0490">
+    <gl>monkey</gl>
+  </mel>
+  <mel id="hm0491">
+    <gl>moon/month</gl>
+  </mel>
+  <mel id="hm0492">
+    <gl>mosquito </gl>
+  </mel>
+  <mel id="hm0493">
+    <gl>mother’s brother</gl>
+  </mel>
+  <mel id="hm0494">
+    <gl>mountain (range)</gl>
+  </mel>
+  <mel id="hm0495">
+    <gl>mountain pass</gl>
+  </mel>
+  <mel id="hm0496">
+    <gl>mountain pass</gl>
+  </mel>
+  <mel id="hm0497">
+    <gl>mountain</gl>
+  </mel>
+  <mel id="hm0498">
+    <gl>mouse/rat</gl>
+  </mel>
+  <mel id="hm0499">
+    <gl>mouse/rat</gl>
+  </mel>
+  <mel id="hm0500">
+    <gl>mouth/beak</gl>
+  </mel>
+  <mel id="hm0501">
+    <gl>muddy</gl>
+  </mel>
+  <mel id="hm0502">
+    <gl>mushroom</gl>
+  </mel>
+  <mel id="hm0503">
+    <gl>mussel/clam</gl>
+  </mel>
+  <mel id="hm0504">
+    <gl>name</gl>
+  </mel>
+  <mel id="hm0505">
+    <gl>navel</gl>
+  </mel>
+  <mel id="hm0506">
+    <gl>near</gl>
+  </mel>
+  <mel id="hm0507">
+    <gl>near</gl>
+  </mel>
+  <mel id="hm0508">
+    <gl>neck</gl>
+  </mel>
+  <mel id="hm0509">
+    <gl>neck</gl>
+  </mel>
+  <mel id="hm0510">
+    <gl>needle</gl>
+  </mel>
+  <mel id="hm0511">
+    <gl>nest</gl>
+  </mel>
+  <mel id="hm0512">
+    <gl>new</gl>
+  </mel>
+  <mel id="hm0513">
+    <gl>night</gl>
+  </mel>
+  <mel id="hm0514">
+    <gl>nine</gl>
+  </mel>
+  <mel id="hm0515">
+    <gl>noose/trap</gl>
+  </mel>
+  <mel id="hm0516">
+    <gl>nose</gl>
+  </mel>
+  <mel id="hm0517">
+    <gl>ȵɔu3n</gl>
+  </mel>
+  <mel id="hm0518">
+    <gl>old</gl>
+  </mel>
+  <mel id="hm0519">
+    <gl>old</gl>
+  </mel>
+  <mel id="hm0520">
+    <gl>on top of</gl>
+  </mel>
+  <mel id="hm0521">
+    <gl>one</gl>
+  </mel>
+  <mel id="hm0522">
+    <gl>oneself</gl>
+  </mel>
+  <mel id="hm0523">
+    <gl>otter</gl>
+  </mel>
+  <mel id="hm0524">
+    <gl>owl</gl>
+  </mel>
+  <mel id="hm0525">
+    <gl>pair</gl>
+  </mel>
+  <mel id="hm0526">
+    <gl>pair</gl>
+  </mel>
+  <mel id="hm0527">
+    <gl>pangolin</gl>
+  </mel>
+  <mel id="hm0528">
+    <gl>paper</gl>
+  </mel>
+  <mel id="hm0529">
+    <gl>perilla (sū má)</gl>
+  </mel>
+  <mel id="hm0530">
+    <gl>persimmon</gl>
+  </mel>
+  <mel id="hm0531">
+    <gl>person/Mien</gl>
+  </mel>
+  <mel id="hm0532">
+    <gl>person</gl>
+  </mel>
+  <mel id="hm0533">
+    <gl>petal</gl>
+  </mel>
+  <mel id="hm0534">
+    <gl>pheasant</gl>
+  </mel>
+  <mel id="hm0535">
+    <gl>pig</gl>
+  </mel>
+  <mel id="hm0536">
+    <gl>pig</gl>
+  </mel>
+  <mel id="hm0537">
+    <gl>pillar</gl>
+  </mel>
+  <mel id="hm0538">
+    <gl>pillow</gl>
+  </mel>
+  <mel id="hm0539">
+    <gl>plain (level ground)</gl>
+  </mel>
+  <mel id="hm0540">
+    <gl>plum</gl>
+  </mel>
+  <mel id="hm0541">
+    <gl>plum</gl>
+  </mel>
+  <mel id="hm0542">
+    <gl>porcupine</gl>
+  </mel>
+  <mel id="hm0543">
+    <gl>possessive</gl>
+  </mel>
+  <mel id="hm0544">
+    <gl>pullet/hen</gl>
+  </mel>
+  <mel id="hm0545">
+    <gl>pus</gl>
+  </mel>
+  <mel id="hm0546">
+    <gl>puttees</gl>
+  </mel>
+  <mel id="hm0547">
+    <gl>quick</gl>
+  </mel>
+  <mel id="hm0548">
+    <gl>quilt</gl>
+  </mel>
+  <mel id="hm0549">
+    <gl>rabbit</gl>
+  </mel>
+  <mel id="hm0550">
+    <gl>ragged/shabby</gl>
+  </mel>
+  <mel id="hm0551">
+    <gl>rain</gl>
+  </mel>
+  <mel id="hm0552">
+    <gl>rain</gl>
+  </mel>
+  <mel id="hm0553">
+    <gl>ramie/hemp</gl>
+  </mel>
+  <mel id="hm0554">
+    <gl>rat</gl>
+  </mel>
+  <mel id="hm0555">
+    <gl>raw/unripe</gl>
+  </mel>
+  <mel id="hm0556">
+    <gl>red</gl>
+  </mel>
+  <mel id="hm0557">
+    <gl>rib</gl>
+  </mel>
+  <mel id="hm0558">
+    <gl>rice plant/paddy</gl>
+  </mel>
+  <mel id="hm0559">
+    <gl>river deer</gl>
+  </mel>
+  <mel id="hm0560">
+    <gl>river</gl>
+  </mel>
+  <mel id="hm0561">
+    <gl>river</gl>
+  </mel>
+  <mel id="hm0562">
+    <gl>road/way</gl>
+  </mel>
+  <mel id="hm0563">
+    <gl>rock</gl>
+  </mel>
+  <mel id="hm0564">
+    <gl>root</gl>
+  </mel>
+  <mel id="hm0565">
+    <gl>root</gl>
+  </mel>
+  <mel id="hm0566">
+    <gl>rope</gl>
+  </mel>
+  <mel id="hm0567">
+    <gl>rough/coarse</gl>
+  </mel>
+  <mel id="hm0568">
+    <gl>round</gl>
+  </mel>
+  <mel id="hm0569">
+    <gl>salt</gl>
+  </mel>
+  <mel id="hm0570">
+    <gl>salty</gl>
+  </mel>
+  <mel id="hm0571">
+    <gl>sash/cord/rope</gl>
+  </mel>
+  <mel id="hm0572">
+    <gl>scissors</gl>
+  </mel>
+  <mel id="hm0573">
+    <gl>seed</gl>
+  </mel>
+  <mel id="hm0574">
+    <gl>seven</gl>
+  </mel>
+  <mel id="hm0575">
+    <gl>seven</gl>
+  </mel>
+  <mel id="hm0576">
+    <gl>shallow</gl>
+  </mel>
+  <mel id="hm0577">
+    <gl>shallow</gl>
+  </mel>
+  <mel id="hm0578">
+    <gl>sharp</gl>
+  </mel>
+  <mel id="hm0579">
+    <gl>shell/covering</gl>
+  </mel>
+  <mel id="hm0580">
+    <gl>shoes</gl>
+  </mel>
+  <mel id="hm0581">
+    <gl>short</gl>
+  </mel>
+  <mel id="hm0582">
+    <gl>short</gl>
+  </mel>
+  <mel id="hm0583">
+    <gl>shoulder</gl>
+  </mel>
+  <mel id="hm0584">
+    <gl>shuttle</gl>
+  </mel>
+  <mel id="hm0585">
+    <gl>shuttle</gl>
+  </mel>
+  <mel id="hm0586">
+    <gl>shy</gl>
+  </mel>
+  <mel id="hm0587">
+    <gl>sinew</gl>
+  </mel>
+  <mel id="hm0588">
+    <gl>sister-in-law</gl>
+  </mel>
+  <mel id="hm0589">
+    <gl>six</gl>
+  </mel>
+  <mel id="hm0590">
+    <gl>skin</gl>
+  </mel>
+  <mel id="hm0591">
+    <gl>skirt</gl>
+  </mel>
+  <mel id="hm0592">
+    <gl>sky/heaven</gl>
+  </mel>
+  <mel id="hm0593">
+    <gl>sky/heaven</gl>
+  </mel>
+  <mel id="hm0594">
+    <gl>sky/heaven</gl>
+  </mel>
+  <mel id="hm0595">
+    <gl>smooth/glossy</gl>
+  </mel>
+  <mel id="hm0596">
+    <gl>snake</gl>
+  </mel>
+  <mel id="hm0597">
+    <gl>soft</gl>
+  </mel>
+  <mel id="hm0598">
+    <gl>son-in-law</gl>
+  </mel>
+  <mel id="hm0599">
+    <gl>son/boy</gl>
+  </mel>
+  <mel id="hm0600">
+    <gl>soot</gl>
+  </mel>
+  <mel id="hm0601">
+    <gl>sore/boil/blister</gl>
+  </mel>
+  <mel id="hm0602">
+    <gl>sorghum</gl>
+  </mel>
+  <mel id="hm0603">
+    <gl>soul/spirit</gl>
+  </mel>
+  <mel id="hm0604">
+    <gl>sound/noise</gl>
+  </mel>
+  <mel id="hm0605">
+    <gl>sour</gl>
+  </mel>
+  <mel id="hm0606">
+    <gl>soybean</gl>
+  </mel>
+  <mel id="hm0607">
+    <gl>span, finger</gl>
+  </mel>
+  <mel id="hm0608">
+    <gl>spicy</gl>
+  </mel>
+  <mel id="hm0609">
+    <gl>spinning wheel</gl>
+  </mel>
+  <mel id="hm0610">
+    <gl>spirit/ghost</gl>
+  </mel>
+  <mel id="hm0611">
+    <gl>spirit/ghost</gl>
+  </mel>
+  <mel id="hm0612">
+    <gl>star</gl>
+  </mel>
+  <mel id="hm0613">
+    <gl>steel</gl>
+  </mel>
+  <mel id="hm0614">
+    <gl>steep</gl>
+  </mel>
+  <mel id="hm0615">
+    <gl>steep</gl>
+  </mel>
+  <mel id="hm0616">
+    <gl>step</gl>
+  </mel>
+  <mel id="hm0617">
+    <gl>stick</gl>
+  </mel>
+  <mel id="hm0618">
+    <gl>stomach</gl>
+  </mel>
+  <mel id="hm0619">
+    <gl>stomach</gl>
+  </mel>
+  <mel id="hm0620">
+    <gl>stone</gl>
+  </mel>
+  <mel id="hm0621">
+    <gl>straw sandals</gl>
+  </mel>
+  <mel id="hm0622">
+    <gl>sun/day</gl>
+  </mel>
+  <mel id="hm0623">
+    <gl>sun/day</gl>
+  </mel>
+  <mel id="hm0624">
+    <gl>sweet potato</gl>
+  </mel>
+  <mel id="hm0625">
+    <gl>sword</gl>
+  </mel>
+  <mel id="hm0626">
+    <gl>table/bench</gl>
+  </mel>
+  <mel id="hm0627">
+    <gl>table</gl>
+  </mel>
+  <mel id="hm0628">
+    <gl>tail</gl>
+  </mel>
+  <mel id="hm0629">
+    <gl>tea</gl>
+  </mel>
+  <mel id="hm0630">
+    <gl>ten</gl>
+  </mel>
+  <mel id="hm0631">
+    <gl>tender</gl>
+  </mel>
+  <mel id="hm0632">
+    <gl>that/the former</gl>
+  </mel>
+  <mel id="hm0633">
+    <gl>that</gl>
+  </mel>
+  <mel id="hm0634">
+    <gl>thick (liquid)</gl>
+  </mel>
+  <mel id="hm0635">
+    <gl>thick (porridge)</gl>
+  </mel>
+  <mel id="hm0636">
+    <gl>thick/dense</gl>
+  </mel>
+  <mel id="hm0637">
+    <gl>thick</gl>
+  </mel>
+  <mel id="hm0638">
+    <gl>thigh</gl>
+  </mel>
+  <mel id="hm0639">
+    <gl>thigh</gl>
+  </mel>
+  <mel id="hm0640">
+    <gl>thin (person)</gl>
+  </mel>
+  <mel id="hm0641">
+    <gl>thin</gl>
+  </mel>
+  <mel id="hm0642">
+    <gl>thin</gl>
+  </mel>
+  <mel id="hm0643">
+    <gl>this</gl>
+  </mel>
+  <mel id="hm0644">
+    <gl>thorn</gl>
+  </mel>
+  <mel id="hm0645">
+    <gl>thorn</gl>
+  </mel>
+  <mel id="hm0646">
+    <gl>thread</gl>
+  </mel>
+  <mel id="hm0647">
+    <gl>thread</gl>
+  </mel>
+  <mel id="hm0648">
+    <gl>three</gl>
+  </mel>
+  <mel id="hm0649">
+    <gl>thrush (huà méi niǎo)</gl>
+  </mel>
+  <mel id="hm0650">
+    <gl>thunder</gl>
+  </mel>
+  <mel id="hm0651">
+    <gl>thunder</gl>
+  </mel>
+  <mel id="hm0652">
+    <gl>tiger</gl>
+  </mel>
+  <mel id="hm0653">
+    <gl>tin</gl>
+  </mel>
+  <mel id="hm0654">
+    <gl>to answer</gl>
+  </mel>
+  <mel id="hm0655">
+    <gl>to ask</gl>
+  </mel>
+  <mel id="hm0656">
+    <gl>to ask</gl>
+  </mel>
+  <mel id="hm0657">
+    <gl>to bark</gl>
+  </mel>
+  <mel id="hm0658">
+    <gl>to be at/live</gl>
+  </mel>
+  <mel id="hm0659">
+    <gl>to be at/live</gl>
+  </mel>
+  <mel id="hm0660">
+    <gl>to be fat</gl>
+  </mel>
+  <mel id="hm0661">
+    <gl>to be used to</gl>
+  </mel>
+  <mel id="hm0662">
+    <gl>to be wedged in</gl>
+  </mel>
+  <mel id="hm0663">
+    <gl>to be</gl>
+  </mel>
+  <mel id="hm0664">
+    <gl>to bear fruit</gl>
+  </mel>
+  <mel id="hm0665">
+    <gl>to beat (someone)</gl>
+  </mel>
+  <mel id="hm0666">
+    <gl>to bite</gl>
+  </mel>
+  <mel id="hm0667">
+    <gl>to blow</gl>
+  </mel>
+  <mel id="hm0668">
+    <gl>to boil (tr)</gl>
+  </mel>
+  <mel id="hm0669">
+    <gl>to boil (tr)</gl>
+  </mel>
+  <mel id="hm0670">
+    <gl>to breed/propagate</gl>
+  </mel>
+  <mel id="hm0671">
+    <gl>to burn (tr)</gl>
+  </mel>
+  <mel id="hm0672">
+    <gl>to burn (tr)</gl>
+  </mel>
+  <mel id="hm0673">
+    <gl>to burn</gl>
+  </mel>
+  <mel id="hm0674">
+    <gl>to bury</gl>
+  </mel>
+  <mel id="hm0675">
+    <gl>to bury</gl>
+  </mel>
+  <mel id="hm0676">
+    <gl>to butt (of bulls)</gl>
+  </mel>
+  <mel id="hm0677">
+    <gl>to carry on back</gl>
+  </mel>
+  <mel id="hm0678">
+    <gl>to carry on shoulder</gl>
+  </mel>
+  <mel id="hm0679">
+    <gl>to choke</gl>
+  </mel>
+  <mel id="hm0680">
+    <gl>to chop</gl>
+  </mel>
+  <mel id="hm0681">
+    <gl>to climb</gl>
+  </mel>
+  <mel id="hm0682">
+    <gl>to come back</gl>
+  </mel>
+  <mel id="hm0683">
+    <gl>to come</gl>
+  </mel>
+  <mel id="hm0684">
+    <gl>to conceal</gl>
+  </mel>
+  <mel id="hm0685">
+    <gl>to cough</gl>
+  </mel>
+  <mel id="hm0686">
+    <gl>to cover (with tile)</gl>
+  </mel>
+  <mel id="hm0687">
+    <gl>to cover self</gl>
+  </mel>
+  <mel id="hm0688">
+    <gl>to cover</gl>
+  </mel>
+  <mel id="hm0689">
+    <gl>to cover</gl>
+  </mel>
+  <mel id="hm0690">
+    <gl>to crawl</gl>
+  </mel>
+  <mel id="hm0691">
+    <gl>to crawl</gl>
+  </mel>
+  <mel id="hm0692">
+    <gl>to crow</gl>
+  </mel>
+  <mel id="hm0693">
+    <gl>to cut</gl>
+  </mel>
+  <mel id="hm0694">
+    <gl>to die</gl>
+  </mel>
+  <mel id="hm0695">
+    <gl>to disperse</gl>
+  </mel>
+  <mel id="hm0696">
+    <gl>to dissolve</gl>
+  </mel>
+  <mel id="hm0697">
+    <gl>to do/work</gl>
+  </mel>
+  <mel id="hm0698">
+    <gl>to dream</gl>
+  </mel>
+  <mel id="hm0699">
+    <gl>to drip</gl>
+  </mel>
+  <mel id="hm0700">
+    <gl>to drive in (nail)</gl>
+  </mel>
+  <mel id="hm0701">
+    <gl>to dry (clothes)</gl>
+  </mel>
+  <mel id="hm0702">
+    <gl>to dry in sun</gl>
+  </mel>
+  <mel id="hm0703">
+    <gl>to dye</gl>
+  </mel>
+  <mel id="hm0704">
+    <gl>to eat</gl>
+  </mel>
+  <mel id="hm0705">
+    <gl>to eat</gl>
+  </mel>
+  <mel id="hm0706">
+    <gl>to enter</gl>
+  </mel>
+  <mel id="hm0707">
+    <gl>to escape</gl>
+  </mel>
+  <mel id="hm0708">
+    <gl>to explode</gl>
+  </mel>
+  <mel id="hm0709">
+    <gl>to fall (over)</gl>
+  </mel>
+  <mel id="hm0710">
+    <gl>to fall</gl>
+  </mel>
+  <mel id="hm0711">
+    <gl>to fear/be afraid</gl>
+  </mel>
+  <mel id="hm0712">
+    <gl>to feed</gl>
+  </mel>
+  <mel id="hm0713">
+    <gl>to finish</gl>
+  </mel>
+  <mel id="hm0714">
+    <gl>to flip with finger</gl>
+  </mel>
+  <mel id="hm0715">
+    <gl>to float</gl>
+  </mel>
+  <mel id="hm0716">
+    <gl>to flow</gl>
+  </mel>
+  <mel id="hm0717">
+    <gl>to fly</gl>
+  </mel>
+  <mel id="hm0718">
+    <gl>to fly</gl>
+  </mel>
+  <mel id="hm0719">
+    <gl>to fool/humor (children)</gl>
+  </mel>
+  <mel id="hm0720">
+    <gl>to forget</gl>
+  </mel>
+  <mel id="hm0721">
+    <gl>to fry</gl>
+  </mel>
+  <mel id="hm0722">
+    <gl>to get up</gl>
+  </mel>
+  <mel id="hm0723">
+    <gl>to gnaw</gl>
+  </mel>
+  <mel id="hm0724">
+    <gl>to go</gl>
+  </mel>
+  <mel id="hm0725">
+    <gl>to grasp H</gl>
+  </mel>
+  <mel id="hm0726">
+    <gl>to grasp</gl>
+  </mel>
+  <mel id="hm0727">
+    <gl>to grind (grain)</gl>
+  </mel>
+  <mel id="hm0728">
+    <gl>to groan/moan</gl>
+  </mel>
+  <mel id="hm0729">
+    <gl>to grow (tr)</gl>
+  </mel>
+  <mel id="hm0730">
+    <gl>to have food w/rice</gl>
+  </mel>
+  <mel id="hm0731">
+    <gl>to have HM</gl>
+  </mel>
+  <mel id="hm0732">
+    <gl>to have</gl>
+  </mel>
+  <mel id="hm0733">
+    <gl>to hear</gl>
+  </mel>
+  <mel id="hm0734">
+    <gl>to hold in mouth</gl>
+  </mel>
+  <mel id="hm0735">
+    <gl>to hold w/2 hands</gl>
+  </mel>
+  <mel id="hm0736">
+    <gl>to hold/grasp hand</gl>
+  </mel>
+  <mel id="hm0737">
+    <gl>to ignite/light</gl>
+  </mel>
+  <mel id="hm0738">
+    <gl>to join</gl>
+  </mel>
+  <mel id="hm0739">
+    <gl>to kill</gl>
+  </mel>
+  <mel id="hm0740">
+    <gl>to know</gl>
+  </mel>
+  <mel id="hm0741">
+    <gl>to ladle</gl>
+  </mel>
+  <mel id="hm0742">
+    <gl>to ladle</gl>
+  </mel>
+  <mel id="hm0743">
+    <gl>to laugh</gl>
+  </mel>
+  <mel id="hm0744">
+    <gl>to launder</gl>
+  </mel>
+  <mel id="hm0745">
+    <gl>to lay eggs</gl>
+  </mel>
+  <mel id="hm0746">
+    <gl>to lead</gl>
+  </mel>
+  <mel id="hm0747">
+    <gl>to lean (on stick)</gl>
+  </mel>
+  <mel id="hm0748">
+    <gl>to let go</gl>
+  </mel>
+  <mel id="hm0749">
+    <gl>to lick</gl>
+  </mel>
+  <mel id="hm0750">
+    <gl>to lift</gl>
+  </mel>
+  <mel id="hm0751">
+    <gl>to lift</gl>
+  </mel>
+  <mel id="hm0752">
+    <gl>to listen</gl>
+  </mel>
+  <mel id="hm0753">
+    <gl>to look after</gl>
+  </mel>
+  <mel id="hm0754">
+    <gl>to low/bellow</gl>
+  </mel>
+  <mel id="hm0755">
+    <gl>to marry (a woman)</gl>
+  </mel>
+  <mel id="hm0756">
+    <gl>to measure (rice)</gl>
+  </mel>
+  <mel id="hm0757">
+    <gl>to meet</gl>
+  </mel>
+  <mel id="hm0758">
+    <gl>to open (door)</gl>
+  </mel>
+  <mel id="hm0759">
+    <gl>to open out/undo</gl>
+  </mel>
+  <mel id="hm0760">
+    <gl>to pack/wrap</gl>
+  </mel>
+  <mel id="hm0761">
+    <gl>to peck/dig</gl>
+  </mel>
+  <mel id="hm0762">
+    <gl>to peel/shave</gl>
+  </mel>
+  <mel id="hm0763">
+    <gl>to pick up/clamp</gl>
+  </mel>
+  <mel id="hm0764">
+    <gl>to pick up</gl>
+  </mel>
+  <mel id="hm0765">
+    <gl>to plant</gl>
+  </mel>
+  <mel id="hm0766">
+    <gl>to play (flute)</gl>
+  </mel>
+  <mel id="hm0767">
+    <gl>to play (flute)</gl>
+  </mel>
+  <mel id="hm0768">
+    <gl>to play</gl>
+  </mel>
+  <mel id="hm0769">
+    <gl>to pour</gl>
+  </mel>
+  <mel id="hm0770">
+    <gl>to pour</gl>
+  </mel>
+  <mel id="hm0771">
+    <gl>to push earth aside</gl>
+  </mel>
+  <mel id="hm0772">
+    <gl>to put on/wear (cap)</gl>
+  </mel>
+  <mel id="hm0773">
+    <gl>to put on/wear (clothes)</gl>
+  </mel>
+  <mel id="hm0774">
+    <gl>to put on/wear (jewelry)</gl>
+  </mel>
+  <mel id="hm0775">
+    <gl>to put on/wear (shoes)</gl>
+  </mel>
+  <mel id="hm0776">
+    <gl>to remember</gl>
+  </mel>
+  <mel id="hm0777">
+    <gl>to remember</gl>
+  </mel>
+  <mel id="hm0778">
+    <gl>to repay</gl>
+  </mel>
+  <mel id="hm0779">
+    <gl>to repay</gl>
+  </mel>
+  <mel id="hm0780">
+    <gl>to resemble</gl>
+  </mel>
+  <mel id="hm0781">
+    <gl>to rest</gl>
+  </mel>
+  <mel id="hm0782">
+    <gl>to return home</gl>
+  </mel>
+  <mel id="hm0783">
+    <gl>to return</gl>
+  </mel>
+  <mel id="hm0784">
+    <gl>to rob</gl>
+  </mel>
+  <mel id="hm0785">
+    <gl>to roll down</gl>
+  </mel>
+  <mel id="hm0786">
+    <gl>to rot</gl>
+  </mel>
+  <mel id="hm0787">
+    <gl>to scold/curse</gl>
+  </mel>
+  <mel id="hm0788">
+    <gl>to scold/curse</gl>
+  </mel>
+  <mel id="hm0789">
+    <gl>to see</gl>
+  </mel>
+  <mel id="hm0790">
+    <gl>to seek shelter</gl>
+  </mel>
+  <mel id="hm0791">
+    <gl>to sharpen/grind</gl>
+  </mel>
+  <mel id="hm0792">
+    <gl>to sharpen/grind</gl>
+  </mel>
+  <mel id="hm0793">
+    <gl>to shed leaves/drop</gl>
+  </mel>
+  <mel id="hm0794">
+    <gl>to shoot</gl>
+  </mel>
+  <mel id="hm0795">
+    <gl>to shrink</gl>
+  </mel>
+  <mel id="hm0796">
+    <gl>to shut (door)</gl>
+  </mel>
+  <mel id="hm0797">
+    <gl>to sieve</gl>
+  </mel>
+  <mel id="hm0798">
+    <gl>to sink</gl>
+  </mel>
+  <mel id="hm0799">
+    <gl>to slant/slanting</gl>
+  </mel>
+  <mel id="hm0800">
+    <gl>to sleep/lie down</gl>
+  </mel>
+  <mel id="hm0801">
+    <gl>to slice</gl>
+  </mel>
+  <mel id="hm0802">
+    <gl>to snap</gl>
+  </mel>
+  <mel id="hm0803">
+    <gl>to sniff at</gl>
+  </mel>
+  <mel id="hm0804">
+    <gl>to snore</gl>
+  </mel>
+  <mel id="hm0805">
+    <gl>to soak</gl>
+  </mel>
+  <mel id="hm0806">
+    <gl>to soak</gl>
+  </mel>
+  <mel id="hm0807">
+    <gl>to sow</gl>
+  </mel>
+  <mel id="hm0808">
+    <gl>to spill</gl>
+  </mel>
+  <mel id="hm0809">
+    <gl>to sprinkle/spill</gl>
+  </mel>
+  <mel id="hm0810">
+    <gl>to squeeze/pinch</gl>
+  </mel>
+  <mel id="hm0811">
+    <gl>to squeeze</gl>
+  </mel>
+  <mel id="hm0812">
+    <gl>to stand/get up</gl>
+  </mel>
+  <mel id="hm0813">
+    <gl>to steal</gl>
+  </mel>
+  <mel id="hm0814">
+    <gl>to stop up/plug</gl>
+  </mel>
+  <mel id="hm0815">
+    <gl>to stretch</gl>
+  </mel>
+  <mel id="hm0816">
+    <gl>to stroke</gl>
+  </mel>
+  <mel id="hm0817">
+    <gl>to stroke</gl>
+  </mel>
+  <mel id="hm0818">
+    <gl>to stumble</gl>
+  </mel>
+  <mel id="hm0819">
+    <gl>to suck</gl>
+  </mel>
+  <mel id="hm0820">
+    <gl>to swallow</gl>
+  </mel>
+  <mel id="hm0821">
+    <gl>to swallow</gl>
+  </mel>
+  <mel id="hm0822">
+    <gl>to swallow</gl>
+  </mel>
+  <mel id="hm0823">
+    <gl>to sweep</gl>
+  </mel>
+  <mel id="hm0824">
+    <gl>to sweep</gl>
+  </mel>
+  <mel id="hm0825">
+    <gl>to swell</gl>
+  </mel>
+  <mel id="hm0826">
+    <gl>to taste/try</gl>
+  </mel>
+  <mel id="hm0827">
+    <gl>to tear</gl>
+  </mel>
+  <mel id="hm0828">
+    <gl>to throw on (clothes)</gl>
+  </mel>
+  <mel id="hm0829">
+    <gl>to tie/cross (legs)</gl>
+  </mel>
+  <mel id="hm0830">
+    <gl>to track</gl>
+  </mel>
+  <mel id="hm0831">
+    <gl>to trap/ensnare</gl>
+  </mel>
+  <mel id="hm0832">
+    <gl>to twist/rub</gl>
+  </mel>
+  <mel id="hm0833">
+    <gl>to twist/rub</gl>
+  </mel>
+  <mel id="hm0834">
+    <gl>to wait</gl>
+  </mel>
+  <mel id="hm0835">
+    <gl>to wait</gl>
+  </mel>
+  <mel id="hm0836">
+    <gl>to wake</gl>
+  </mel>
+  <mel id="hm0837">
+    <gl>to walk</gl>
+  </mel>
+  <mel id="hm0838">
+    <gl>to warm self by fire</gl>
+  </mel>
+  <mel id="hm0839">
+    <gl>to water</gl>
+  </mel>
+  <mel id="hm0840">
+    <gl>to weave/plait</gl>
+  </mel>
+  <mel id="hm0841">
+    <gl>to weave</gl>
+  </mel>
+  <mel id="hm0842">
+    <gl>to weed/hoe</gl>
+  </mel>
+  <mel id="hm0843">
+    <gl>to weep</gl>
+  </mel>
+  <mel id="hm0844">
+    <gl>to winnow</gl>
+  </mel>
+  <mel id="hm0845">
+    <gl>to winnow</gl>
+  </mel>
+  <mel id="hm0846">
+    <gl>to wipe</gl>
+  </mel>
+  <mel id="hm0847">
+    <gl>to wring</gl>
+  </mel>
+  <mel id="hm0848">
+    <gl>to write</gl>
+  </mel>
+  <mel id="hm0849">
+    <gl>tongue</gl>
+  </mel>
+  <mel id="hm0850">
+    <gl>tooth</gl>
+  </mel>
+  <mel id="hm0851">
+    <gl>tortoise</gl>
+  </mel>
+  <mel id="hm0852">
+    <gl>tree of heaven</gl>
+  </mel>
+  <mel id="hm0853">
+    <gl>tree</gl>
+  </mel>
+  <mel id="hm0854">
+    <gl>tree</gl>
+  </mel>
+  <mel id="hm0855">
+    <gl>trough</gl>
+  </mel>
+  <mel id="hm0856">
+    <gl>turbid</gl>
+  </mel>
+  <mel id="hm0857">
+    <gl>turbid</gl>
+  </mel>
+  <mel id="hm0858">
+    <gl>twin</gl>
+  </mel>
+  <mel id="hm0859">
+    <gl>two</gl>
+  </mel>
+  <mel id="hm0860">
+    <gl>uncle</gl>
+  </mel>
+  <mel id="hm0861">
+    <gl>urine</gl>
+  </mel>
+  <mel id="hm0862">
+    <gl>vegetable</gl>
+  </mel>
+  <mel id="hm0863">
+    <gl>vine</gl>
+  </mel>
+  <mel id="hm0864">
+    <gl>waist</gl>
+  </mel>
+  <mel id="hm0865">
+    <gl>walnut</gl>
+  </mel>
+  <mel id="hm0866">
+    <gl>water</gl>
+  </mel>
+  <mel id="hm0867">
+    <gl>wet</gl>
+  </mel>
+  <mel id="hm0868">
+    <gl>what</gl>
+  </mel>
+  <mel id="hm0869">
+    <gl>wheat</gl>
+  </mel>
+  <mel id="hm0870">
+    <gl>which</gl>
+  </mel>
+  <mel id="hm0871">
+    <gl>which</gl>
+  </mel>
+  <mel id="hm0872">
+    <gl>whip</gl>
+  </mel>
+  <mel id="hm0873">
+    <gl>white</gl>
+  </mel>
+  <mel id="hm0874">
+    <gl>whorl at top of head</gl>
+  </mel>
+  <mel id="hm0875">
+    <gl>wife of mother’s brother</gl>
+  </mel>
+  <mel id="hm0876">
+    <gl>wife</gl>
+  </mel>
+  <mel id="hm0877">
+    <gl>wild dog</gl>
+  </mel>
+  <mel id="hm0878">
+    <gl>wildcat</gl>
+  </mel>
+  <mel id="hm0879">
+    <gl>wind</gl>
+  </mel>
+  <mel id="hm0880">
+    <gl>wing</gl>
+  </mel>
+  <mel id="hm0881">
+    <gl>winnowing fan</gl>
+  </mel>
+  <mel id="hm0882">
+    <gl>winnowing fan</gl>
+  </mel>
+  <mel id="hm0883">
+    <gl>wooden basin</gl>
+  </mel>
+  <mel id="hm0884">
+    <gl>word/character</gl>
+  </mel>
+  <mel id="hm0885">
+    <gl>year</gl>
+  </mel>
+  <mel id="hm0886">
+    <gl>year</gl>
+  </mel>
+  <mel id="hm0887">
+    <gl>young man</gl>
+  </mel>
+  <mel id="hm0888">
+    <gl>young man</gl>
+  </mel>
+  <mel id="hm0889">
+    <gl>young</gl>
+  </mel>
+  <mel id="hm0890">
+    <gl>younger brother</gl>
+  </mel>
+</semantics>
