@@ -170,8 +170,15 @@ document.getElementById('main-tab-content').addEventListener('click', function (
     }
     currentRunId   = data.run_id;
     currentRunName = data.run_name;
-    document.getElementById('run-badge').textContent =
-      `project ${project}  ·  run ${data.run_name}`;
+    /* Build a compact but informative run badge from the selected parameters. */
+    (function() {
+      const parts = [`project ${project}`];
+      if (data.recon)    parts.push(`ToC: ${data.recon}`);
+      if (data.mel)      parts.push(`MEL: ${data.mel}`);
+      if (data.fuzzy)    parts.push(`fuzzy: ${data.fuzzy}`);
+      if (data.upstream) parts.push(`↑ ${data.upstream}`);
+      document.getElementById('run-badge').textContent = parts.join('  ·  ');
+    })();
 
     ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
@@ -370,6 +377,23 @@ function setupModeToggle(groupId, tab) {
 }
 setupModeToggle('sets-mode-btns',     'sets');
 setupModeToggle('lexicons-mode-btns', 'lexicons');
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Tabular sets: Show / Hide glosses toggle
+   The container #sets-content starts with class "glosses-hidden" (set in
+   HTML).  Toggling it shows/hides all .rfx-gloss spans via CSS.
+   The state survives tab reloads because it lives on the container div,
+   not on the injected content.
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupGlossToggle() {
+  const btn       = document.getElementById('btn-toggle-glosses');
+  const container = document.getElementById('sets-content');
+  if (!btn || !container) return;
+  btn.addEventListener('click', function () {
+    const nowHidden = container.classList.toggle('glosses-hidden');
+    btn.textContent = nowHidden ? 'Show glosses' : 'Hide glosses';
+  });
+})();
 
 /* ══════════════════════════════════════════════════════════════════════════
    Parameters Freq  — toggle frequency-annotated view of the ToC

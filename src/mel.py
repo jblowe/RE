@@ -86,31 +86,50 @@ def _strip_particles(phrase):
 #   2. Remove proto-form marker (*).
 #   3. Handle Lexware | delimiter *before* splitting so variants are correct:
 #      "water|rain" → ["waterrain", "water"]   (pipe removed / truncated).
-#   4. Split each variant on alternative-gloss separators: / , ;
+#   4. Split each variant on alternative-gloss separators: / , ; :
 #      Spaces are *within-phrase* and must NOT split — MEL glosses are stored
 #      as multi-word phrases ("clay pot") and splitting on spaces would prevent
 #      them from ever matching.
+#      The colon is included because lexicon glosses often use it as a
+#      clarification separator, e.g. "boiled grain: ideally rice".
 #   5. Strip leading grammar particles ('to', 'be') from each phrase.
-#   6. Drop empty strings and deduplicate (preserving order).
+#   6. Also yield every individual *word* from each phrase as an additional
+#      candidate.  This handles descriptive glosses such as
+#      "boiled grain: ideally rice, but more frequently maize or"
+#      where content words ("grain", "rice") appear as single-word MEL glosses
+#      but the phrase itself never matches.  Function words ("but", "more",
+#      "or", "ideally") are harmless because they will simply never appear in
+#      any MEL gloss set.
+#   7. Drop empty strings and deduplicate (preserving order: phrases first,
+#      individual words after).
 def normalize_gloss(gloss):
     # 1. Strip parentheticals / brackets.
     gloss = _PAREN_RE.sub('', gloss)
     # 2. Strip proto-form marker.
     gloss = gloss.replace('*', '')
 
-    # 3. Lexware | handling — produce variants before splitting on /,;.
+    # 3. Lexware | handling — produce variants before splitting on /,;:.
     if '|' in gloss:
         variants = [gloss.replace('|', ''), re.sub(r'\|.*', '', gloss)]
     else:
         variants = [gloss]
 
-    # 4 & 5. Split and strip particles.
+    # 4 & 5. Split on delimiter characters and strip leading particles.
     seen = set()
-    result = []
+    phrases = []
     for v in variants:
-        for part in re.split(r'[/,;]', v):
+        for part in re.split(r'[/,;:]', v):
             part = _strip_particles(part.strip())
             if part and part not in seen:
                 seen.add(part)
-                result.append(part)
-    return result
+                phrases.append(part)
+
+    # 6. Also add individual words from every phrase as additional candidates.
+    for phrase in list(phrases):
+        for word in phrase.split():
+            word = word.strip()
+            if word and word not in seen:
+                seen.add(word)
+                phrases.append(word)
+
+    return phrases

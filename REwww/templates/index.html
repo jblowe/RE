@@ -102,8 +102,12 @@
           <button type="button" class="btn btn-outline-secondary active"
                   data-mode="tabular">Tabular</button>
         </div>
+        <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-toggle-glosses">
+          Show glosses
+        </button>
       </div>
-      <div class="content-area" id="sets-content">
+      <!-- glosses-hidden is the default: glosses are hidden until toggled -->
+      <div class="content-area glosses-hidden" id="sets-content">
         <p class="text-muted">Run a project to populate this tab.</p>
       </div>
     </div><!-- /tab-sets -->

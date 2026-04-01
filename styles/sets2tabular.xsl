@@ -147,12 +147,14 @@
             <xsl:for-each select="$reflexes/*">
               <xsl:if test="lg = $label">
                 <!-- Each form gets its own line; gloss shown inline so that
-                     multiple tone/semantic variants in one cell stay legible. -->
+                     multiple tone/semantic variants in one cell stay legible.
+                     class rfx-gloss is toggled by the "Show/Hide glosses"
+                     button via #sets-content.glosses-hidden .rfx-gloss. -->
                 <div title="{id}">
                   <xsl:apply-templates select="lx"/>
                   <xsl:if test="gl != ''">
                     <xsl:text> </xsl:text>
-                    <small style="color:#888"><xsl:value-of select="gl"/></small>
+                    <small class="rfx-gloss" style="color:#888"><xsl:value-of select="gl"/></small>
                   </xsl:if>
                 </div>
               </xsl:if>

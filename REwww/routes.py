@@ -178,7 +178,14 @@ def api_run():
             sys.stdout = old_stdout
 
     threading.Thread(target=do_run, daemon=True).start()
-    return jsonify(run_id=run_id, run_name=run_name)
+    return jsonify(
+        run_id   = run_id,
+        run_name = run_name,
+        recon    = recon,
+        mel      = mel,
+        fuzzy    = fuzzy,
+        upstream = upstream,
+    )
 
 
 # ── Poll run status ────────────────────────────────────────────────────────────
