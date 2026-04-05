@@ -31,13 +31,16 @@ def xml_to_html_from_tree(tree, stylesheet_name: str) -> str:
         return f'<pre class="text-danger">XSLT error ({stylesheet_name}):\n{exc}</pre>'
 
 
-def xml_to_html(xml_path: str, stylesheet_name: str) -> str:
+def xml_to_html(xml_path: str, stylesheet_name: str,
+                params: dict | None = None) -> str:
     """Apply a named XSLT stylesheet to an XML file; return HTML fragment.
 
     The XSLT stylesheets produce full HTML pages (html/head/body).  We extract
     only the body's inner content so the fragment can be safely injected into a
     div without duplicate html/head/body wrappers or stray <link> elements that
     confuse the browser's CSS loader.
+
+    Optional *params* dict maps XSLT parameter names to string values.
     """
     xsl_path = os.path.join(STYLES_DIR, stylesheet_name)
     if not os.path.isfile(xml_path):
@@ -45,9 +48,10 @@ def xml_to_html(xml_path: str, stylesheet_name: str) -> str:
     if not os.path.isfile(xsl_path):
         return f'<p class="text-danger">Stylesheet not found: <code>{stylesheet_name}</code></p>'
     try:
-        dom    = ET.parse(xml_path)
-        xslt   = ET.parse(xsl_path)
-        result = ET.XSLT(xslt)(dom)
+        dom       = ET.parse(xml_path)
+        xslt      = ET.parse(xsl_path)
+        xslt_kwargs = {k: ET.XSLT.strparam(v) for k, v in (params or {}).items()}
+        result    = ET.XSLT(xslt)(dom, **xslt_kwargs)
 
         # Parse output as HTML and pull out <body> inner content.
         # Pass explicit UTF-8 parser so that IPA / special chars survive

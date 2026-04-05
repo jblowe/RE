@@ -122,8 +122,10 @@ def api_run():
 
             B = RE.batch_all_upstream(settings, only_with_mel=True)
 
+            _isolates_dict = RE.extract_isolates(B)
+            B.isolates_dict = _isolates_dict
             B.isolates = sorted(
-                RE.extract_isolates(B).keys(), key=lambda x: x.language)
+                _isolates_dict.keys(), key=lambda x: x.language)
             B.failures = sorted(
                 B.statistics.failed_parses, key=lambda x: x.language)
 
@@ -274,10 +276,13 @@ def api_tab(run_id, tab):
         mel_path = files.get('mel')
         if not mel_path:
             return '<p class="text-muted">No MEL file selected.</p>'
+        mel_basename = os.path.basename(mel_path)
         if mode == 'edit':
-            html = xslt.xml_to_html(mel_path, 'mel2html-edit.xsl')
+            html = xslt.xml_to_html(mel_path, 'mel2html-edit.xsl',
+                                    params={'mel_filename': mel_basename})
             return f'<div data-mel-file="{mel_path}">{html}</div>'
-        return xslt.xml_to_html(mel_path, 'mel2html.xsl')
+        return xslt.xml_to_html(mel_path, 'mel2html.xsl',
+                                params={'mel_filename': mel_basename})
 
     if tab == 'fuzzy':
         fuz_path = files.get('fuzzy')
@@ -552,16 +557,24 @@ def api_save_projects():
 
     lines   = ['# projects configuration\n']
     invalid = []
+    repo_root      = os.path.dirname(PROJECTS_TOML)
+    local_projects = os.path.normpath(os.path.join(repo_root, 'projects'))
     for entry in projects:
         name = str(entry.get('name', '')).strip()
         path = str(entry.get('path', '')).strip()
         if not name:
             continue
         resolved = path if os.path.isabs(path) else os.path.normpath(
-            os.path.join(os.path.dirname(PROJECTS_TOML), path))
+            os.path.join(repo_root, path))
         if not os.path.isdir(resolved):
             invalid.append({'name': name, 'path': path, 'resolved': resolved})
-        escaped = path.replace('\\', '\\\\').replace('"', '\\"')
+        # Write local projects/ entries as relative paths; keep others as-is
+        if os.path.normpath(resolved).startswith(local_projects + os.sep) or \
+                os.path.normpath(resolved) == local_projects:
+            rel = os.path.relpath(resolved, repo_root).replace('\\', '/')
+            escaped = rel.replace('"', '\\"')
+        else:
+            escaped = path.replace('\\', '\\\\').replace('"', '\\"')
         lines.append(f'{name} = "{escaped}"\n')
 
     if invalid:
