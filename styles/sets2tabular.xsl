@@ -204,6 +204,8 @@
           <th>lg</th>
           <th>lx</th>
           <th>gl</th>
+          <th>pfm</th>
+          <th>rcn</th>
           <th>id</th>
         </tr>
       </thead>
@@ -213,6 +215,8 @@
             <td><xsl:value-of select="lg"/></td>
             <td><xsl:value-of select="lx"/></td>
             <td><xsl:value-of select="gl"/></td>
+            <td><xsl:value-of select="pfm"/></td>
+            <td><xsl:value-of select="rcn"/></td>
             <td><xsl:value-of select="@id"/></td>
           </tr>
         </xsl:for-each>

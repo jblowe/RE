@@ -6,6 +6,8 @@
             indent="yes"
             encoding="utf-8"/>
 
+    <xsl:param name="mel_filename"/>
+
     <xsl:strip-space
             elements="*"/>
 
@@ -18,6 +20,11 @@
                 <a name="top">
                     <h4>Meaning Equivalence List</h4>
                 </a>
+                <xsl:if test="$mel_filename != ''">
+                  <p style="font-size:0.8rem; font-style:italic; margin-bottom:.5rem;">
+                    <xsl:value-of select="$mel_filename"/>
+                  </p>
+                </xsl:if>
                 <div style="float: right; width:200px;">
                     <a href="#unmatched">
                         <xsl:value-of select="count(.//unmatched/mel/gl)"/>

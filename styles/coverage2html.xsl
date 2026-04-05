@@ -14,6 +14,18 @@
         .cov-unused { background: #fff3cd; padding: 1px 3px; border-radius: 2px; }
         .cov-uses   { color: #888; font-size: 0.75em; }
       </style>
+      <xsl:variable name="mel_fn" select="stats/settings/parm[@key='mel_filename']/@value"/>
+      <xsl:if test="$mel_fn != ''">
+        <!-- Extract basename: take text after the last '/' or '\' -->
+        <xsl:variable name="mel_base">
+          <xsl:call-template name="basename">
+            <xsl:with-param name="path" select="$mel_fn"/>
+          </xsl:call-template>
+        </xsl:variable>
+        <p style="font-size:0.85rem; font-weight:600; margin-bottom:.2rem;">
+          <xsl:value-of select="$mel_base"/>
+        </p>
+      </xsl:if>
       <p style="font-style:italic; font-size:0.8rem; margin-bottom:.5rem;">
         created at: <xsl:value-of select=".//createdat"/>
       </p>
@@ -23,6 +35,31 @@
       <xsl:apply-templates select="stats/unmatched_glosses"/>
     </body>
   </html>
+</xsl:template>
+
+<!-- ── Utility: extract basename from a file path ───────────────────────── -->
+<xsl:template name="basename">
+  <xsl:param name="path"/>
+  <xsl:choose>
+    <xsl:when test="contains($path, '/') or contains($path, '\')">
+      <xsl:variable name="after-slash">
+        <xsl:choose>
+          <xsl:when test="contains($path, '/')">
+            <xsl:call-template name="basename">
+              <xsl:with-param name="path" select="substring-after($path, '/')"/>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="basename">
+              <xsl:with-param name="path" select="substring-after($path, '\')"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:value-of select="$after-slash"/>
+    </xsl:when>
+    <xsl:otherwise><xsl:value-of select="$path"/></xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <!-- ── Per-language coverage table ──────────────────────────────────────── -->
