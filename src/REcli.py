@@ -136,7 +136,9 @@ elif command_args.command == 'upstream':
         if len(reference_set) != 0:
             correspondences_used += 1
     print(f'{correspondences_used} correspondences used')
-    B.isolates = sorted(RE.extract_isolates(B).keys(), key=lambda x: x.language)
+    _isolates_dict = RE.extract_isolates(B)
+    B.isolates_dict = _isolates_dict
+    B.isolates = sorted(_isolates_dict.keys(), key=lambda x: x.language)
     B.failures = sorted(B.statistics.failed_parses, key=lambda x: x.language)
     sets_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.sets.xml')
     RE.dump_xml_sets(B, settings.upstream[settings.upstream_target], sets_xml_file, args.only_with_mel)

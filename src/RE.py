@@ -895,7 +895,7 @@ def project_back(lexicons, parameters, statistics):
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
             forms_to_parse += quirky_forms
         for form in forms_to_parse:
-            if form.glyphs == '':
+            if not form.glyphs or form.glyphs.strip() in ('', '?'):
                 continue
             statistics.add_debug_note(f'!Parsing {form}...')
             if form.glyphs:

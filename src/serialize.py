@@ -274,7 +274,10 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
                 sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
-    serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
+    if hasattr(reconstruction, 'isolates_dict'):
+        serialize_isolates_dict(reconstruction.isolates_dict, isolates)
+    else:
+        serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
 
     failures = ET.SubElement(root, 'failures')
     # there is only one (big) set for failures, pass it in as a list
@@ -487,3 +490,24 @@ def serialize_isolates_and_failures(re_items, re_element, item_name):
     print(f'number of "{item_name}" {number}')
 
     return
+
+
+def serialize_isolates_dict(isolates_dict, re_element):
+    """Serialize isolates with pfm/rcn from the dict returned by extract_isolates."""
+    ET.SubElement(re_element, 'createdat').text = run_date
+    for number, (form, proto_forms) in enumerate(
+            sorted(isolates_dict.items(), key=lambda x: x[0].language)):
+        rfx = ET.SubElement(re_element, 'rfx')
+        if isinstance(form, RE.ModernForm):
+            rfx.set('id', form.id)
+            ET.SubElement(rfx, 'lx').text = form.glyphs
+        ET.SubElement(rfx, 'lg').text = form.language
+        try:
+            ET.SubElement(rfx, 'gl').text = form.gloss
+        except Exception:
+            ET.SubElement(rfx, 'gl').text = 'missing'
+        if proto_forms:
+            pf = proto_forms[0]
+            ET.SubElement(rfx, 'pfm').text = pf.glyphs
+            ET.SubElement(rfx, 'rcn').text = RE.correspondences_as_ids(
+                pf.correspondences).strip()
