@@ -20,12 +20,16 @@ SRC_DIR       = os.path.join(HERE, '..', 'src')
 STYLES_DIR    = os.path.join(HERE, '..', 'styles')
 STATIC_DIR    = os.path.join(HERE, 'static')
 PROJECTS_TOML = os.path.normpath(os.path.join(HERE, '..', 'projects.toml'))
+RUNLOG_PATH   = os.path.normpath(os.path.join(HERE, '..', 'runs.toml'))
 
 sys.path.insert(0, SRC_DIR)
 
 # Wire shared config into sub-modules before importing them
 import xslt
 xslt.STYLES_DIR = os.path.normpath(STYLES_DIR)
+
+import runlog
+runlog.RUNLOG_PATH = RUNLOG_PATH
 
 import routes
 routes.PROJECTS_TOML = PROJECTS_TOML

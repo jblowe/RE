@@ -93,6 +93,10 @@ function spinnerHtml() {
   return '<span class="spinner-border spinner-border-sm spinner-sm mr-1"></span>';
 }
 
+function basename(path) {
+  return path ? String(path).split(/[/\\]/).pop() : '';
+}
+
 function loadTabContent(tab, mode) {
   if (!currentRunId) return;
   const url = `/api/tab/${currentRunId}/${tab}?mode=${mode || 'paragraph'}`;
@@ -137,6 +141,16 @@ function reExecuteScripts(container) {
    Run button  (event-delegated so newly-rebuilt rows also work)
    ══════════════════════════════════════════════════════════════════════════ */
 document.getElementById('main-tab-content').addEventListener('click', function (e) {
+  /* History-panel buttons — handled before run-btn so we can return early */
+  const histBtn = e.target.closest('.hist-btn');
+  if (histBtn) { toggleHistory(histBtn.dataset.project); return; }
+
+  const loadBtn = e.target.closest('.hist-load-btn');
+  if (loadBtn) { loadHistRun(loadBtn.dataset.runId, loadBtn.dataset.project); return; }
+
+  const cmpBtn = e.target.closest('.hist-compare-btn');
+  if (cmpBtn) { doCompare(cmpBtn.dataset.project); return; }
+
   const btn = e.target.closest('.run-btn');
   if (!btn) return;
 
@@ -266,14 +280,39 @@ document.getElementById('main-tab-content').addEventListener('click', function (
 
       const tdAction = document.createElement('td');
       tdAction.className = 'align-middle';
+      const actWrap = document.createElement('div');
+      actWrap.style.cssText = 'display:flex;gap:.3rem;flex-wrap:nowrap';
       const runBtn = document.createElement('button');
       runBtn.className = 'btn btn-primary btn-sm run-btn';
       runBtn.dataset.project = name;
       runBtn.innerHTML = '<i class="fas fa-play"></i> Run';
-      tdAction.appendChild(runBtn);
+      const histBtn = document.createElement('button');
+      histBtn.className = 'btn btn-outline-secondary btn-sm hist-btn';
+      histBtn.dataset.project = name;
+      histBtn.title = `Show run history for ${name}`;
+      histBtn.innerHTML = '<i class="fas fa-history"></i>';
+      actWrap.appendChild(runBtn);
+      actWrap.appendChild(histBtn);
+      tdAction.appendChild(actWrap);
       tr.appendChild(tdAction);
 
       tbody.appendChild(tr);
+
+      /* collapsible history sub-row */
+      const histRow = document.createElement('tr');
+      histRow.id = `hist-row-${name}`;
+      histRow.style.display = 'none';
+      const histTd = document.createElement('td');
+      histTd.colSpan = 6;
+      histTd.style.cssText = 'padding:0;background:#f8f9fa;border-top:none';
+      const histDiv = document.createElement('div');
+      histDiv.id = `hist-content-${name}`;
+      histDiv.style.cssText = 'padding:.6rem 1rem .8rem';
+      histDiv.innerHTML = '<p class="text-muted mb-0">'
+        + '<span class="spinner-border spinner-border-sm mr-1"></span>Loading…</p>';
+      histTd.appendChild(histDiv);
+      histRow.appendChild(histTd);
+      tbody.appendChild(histRow);
     });
   }
 
@@ -295,6 +334,45 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       });
   });
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Post-run tab wiring  (shared by live polling and historical load)
+   data must have: has_mel, has_fuzzy, has_coverage
+   ══════════════════════════════════════════════════════════════════════════ */
+function handleRunDone(data) {
+  const always = ['parameters', 'sets', 'stats', 'lexicons'];
+  always.forEach(t => {
+    setTabEnabled(`tab-${t}-nav`, true);
+    loadTabContent(t, modes[t] || 'paragraph');
+  });
+  document.getElementById('btn-freq-parameters').style.display = '';
+  document.getElementById('btn-edit-parameters').style.display = '';
+
+  document.getElementById('nav-mel').style.display      = 'none';
+  document.getElementById('nav-fuzzy').style.display    = 'none';
+  document.getElementById('nav-coverage').style.display = 'none';
+  ['tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
+    .forEach(id => setTabEnabled(id, false));
+
+  if (data.has_mel) {
+    document.getElementById('nav-mel').style.display = '';
+    setTabEnabled('tab-mel-nav', true);
+    loadTabContent('mel');
+    document.getElementById('btn-edit-mel').style.display = '';
+  }
+  if (data.has_fuzzy) {
+    document.getElementById('nav-fuzzy').style.display = '';
+    setTabEnabled('tab-fuzzy-nav', true);
+    loadTabContent('fuzzy');
+    document.getElementById('btn-edit-fuzzy').style.display = '';
+  }
+  if (data.has_coverage) {
+    document.getElementById('nav-coverage').style.display = '';
+    setTabEnabled('tab-coverage-nav', true);
+    loadTabContent('coverage');
+  }
+  activateTab('tab-sets');
+}
 
 /* ══════════════════════════════════════════════════════════════════════════
    Polling
@@ -327,36 +405,7 @@ function doPoll() {
 
       /* ── Success ── */
       setRunStatusBadge('done', 'done');
-
-      const always = ['parameters', 'sets', 'stats', 'lexicons'];
-      always.forEach(t => {
-        setTabEnabled(`tab-${t}-nav`, true);
-        loadTabContent(t, modes[t] || 'paragraph');
-      });
-      document.getElementById('btn-freq-parameters').style.display = '';
-      document.getElementById('btn-edit-parameters').style.display = '';
-
-      if (data.has_mel) {
-        document.getElementById('nav-mel').style.display  = '';
-        setTabEnabled('tab-mel-nav', true);
-        loadTabContent('mel');
-        document.getElementById('btn-edit-mel').style.display = '';
-      }
-
-      if (data.has_fuzzy) {
-        document.getElementById('nav-fuzzy').style.display = '';
-        setTabEnabled('tab-fuzzy-nav', true);
-        loadTabContent('fuzzy');
-        document.getElementById('btn-edit-fuzzy').style.display = '';
-      }
-
-      if (data.has_coverage) {
-        document.getElementById('nav-coverage').style.display = '';
-        setTabEnabled('tab-coverage-nav', true);
-        loadTabContent('coverage');
-      }
-
-      activateTab('tab-sets');
+      handleRunDone(data);
     })
     .catch(err => console.error('Poll error:', err));
 }
@@ -708,6 +757,141 @@ setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
 })();
 
 /* ══════════════════════════════════════════════════════════════════════════
+   Run History — toggle, render, load, compare
+   ══════════════════════════════════════════════════════════════════════════ */
+
+function toggleHistory(project) {
+  const histRow = document.getElementById(`hist-row-${project}`);
+  if (!histRow) return;
+  if (histRow.style.display !== 'none') {
+    histRow.style.display = 'none';
+    return;
+  }
+  histRow.style.display = '';
+  fetch(`/api/history/${project}`)
+    .then(r => r.json())
+    .then(data => renderHistoryTable(project, data.runs || []))
+    .catch(err => {
+      const c = document.getElementById(`hist-content-${project}`);
+      if (c) c.innerHTML = `<p class="text-danger">Error: ${err}</p>`;
+    });
+}
+
+function renderHistoryTable(project, runs) {
+  const container = document.getElementById(`hist-content-${project}`);
+  if (!container) return;
+  if (!runs.length) {
+    container.innerHTML = '<p class="text-muted mb-1">No past runs for this project.</p>';
+    return;
+  }
+  let html = `<table class="table table-sm table-hover table-bordered mb-1"
+                     style="font-size:.82rem">
+    <thead class="thead-light"><tr>
+      <th style="width:1%"></th>
+      <th>Timestamp</th><th>Recon</th><th>MEL</th><th>Fuzzy</th>
+      <th>Sets</th><th>Isolates</th><th>Failures</th><th>Cov</th><th></th>
+    </tr></thead><tbody>`;
+  runs.forEach(run => {
+    const ts  = (run.run_name || '').replace(
+      /(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})(\d{2})/, '$1-$2-$3 $4:$5');
+    const p   = run.params || {};
+    const cov = run.has_coverage ? '&#10003;' : '';
+    html += `<tr>
+      <td><input type="checkbox" class="hist-check"
+                 data-run-id="${run.run_id}"></td>
+      <td style="white-space:nowrap">${ts}</td>
+      <td>${basename(p.recon  || '') || '—'}</td>
+      <td>${basename(p.mel    || '') || '—'}</td>
+      <td>${basename(p.fuzzy  || '') || '—'}</td>
+      <td>${run.sets      ?? '?'}</td>
+      <td>${run.isolates  ?? '?'}</td>
+      <td>${run.failures  ?? '?'}</td>
+      <td>${cov}</td>
+      <td><button class="btn btn-outline-primary hist-load-btn py-0 px-1"
+                  data-run-id="${run.run_id}" data-project="${project}"
+                  style="font-size:.8rem;line-height:1.4">Load</button></td>
+    </tr>`;
+  });
+  html += `</tbody></table>
+    <button class="btn btn-sm btn-outline-secondary hist-compare-btn"
+            id="hist-compare-btn-${project}"
+            data-project="${project}" disabled>
+      Compare selected runs
+    </button>`;
+  container.innerHTML = html;
+  container.querySelectorAll('.hist-check').forEach(cb => {
+    cb.addEventListener('change', () => updateCompareBtn(project));
+  });
+}
+
+function updateCompareBtn(project) {
+  const container = document.getElementById(`hist-content-${project}`);
+  if (!container) return;
+  const n   = container.querySelectorAll('.hist-check:checked').length;
+  const btn = document.getElementById(`hist-compare-btn-${project}`);
+  if (btn) btn.disabled = (n !== 2);
+}
+
+function loadHistRun(runId, project) {
+  fetch('/api/load_run', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id: runId }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) { alert(`Load failed: ${data.error}`); return; }
+    currentRunId   = data.run_id;
+    currentRunName = data.run_name;
+    currentProject = data.project;
+    /* Update navbar badge */
+    const p = data.params || {};
+    const parts = [`project ${data.project}`];
+    if (p.recon)    parts.push(`ToC: ${basename(p.recon)}`);
+    if (p.mel)      parts.push(`MEL: ${basename(p.mel)}`);
+    if (p.fuzzy)    parts.push(`fuzzy: ${basename(p.fuzzy)}`);
+    if (p.upstream) parts.push(`↑ ${p.upstream}`);
+    document.getElementById('run-badge').textContent = parts.join('  ·  ');
+    /* Reset disabled tabs before wiring */
+    ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
+     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
+      .forEach(id => setTabEnabled(id, false));
+    handleRunDone(data);
+  })
+  .catch(err => alert(`Load error: ${err}`));
+}
+
+function doCompare(project) {
+  const container = document.getElementById(`hist-content-${project}`);
+  if (!container) return;
+  const checked = Array.from(container.querySelectorAll('.hist-check:checked'));
+  if (checked.length !== 2) return;
+  const [idA, idB] = checked.map(cb => cb.dataset.runId);
+
+  document.getElementById('nav-compare').style.display = '';
+  setTabEnabled('tab-compare-nav', true);
+  const cmpEl = document.getElementById('compare-content');
+  cmpEl.innerHTML = `<p>${spinnerHtml()} Comparing…</p>`;
+  activateTab('tab-compare');
+
+  fetch('/api/compare_runs', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id_a: idA, run_id_b: idB }),
+  })
+  .then(r => r.text())
+  .then(html => { cmpEl.innerHTML = html; })
+  .catch(err => { cmpEl.innerHTML =
+    `<p class="text-danger">Compare error: ${err}</p>`; });
+}
+
+function closeCompare() {
+  document.getElementById('nav-compare').style.display = 'none';
+  setTabEnabled('tab-compare-nav', false);
+  activateTab('tab-projects');
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
    Wire up nav-link click handlers (custom switcher — no Bootstrap tab plugin)
    ══════════════════════════════════════════════════════════════════════════ */
 document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
@@ -717,7 +901,7 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     const targetId = this.getAttribute('href').substring(1);
     activateTab(targetId);
     const tabName = targetId.replace(/^tab-/, '');
-    if (tabName === 'projects' || tabName === 'log' || !currentRunId) return;
+    if (tabName === 'projects' || tabName === 'log' || tabName === 'compare' || !currentRunId) return;
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
     if (saveBtn && saveBtn.style.display !== 'none') return;
     loadTabContent(tabName, modes[tabName] || 'paragraph');

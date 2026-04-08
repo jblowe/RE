@@ -23,7 +23,7 @@
             <th style="width:12%">MEL</th>
             <th style="width:12%">Fuzzy</th>
             <th style="width:26%">Upstream</th>
-            <th style="width:7%">Action</th>
+            <th style="width:10%">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -74,10 +74,29 @@
                      placeholder="e.g. PIWR: PWR, it; PWR: PIR, fr">
             </td>
             <td class="align-middle">
-              <button class="btn btn-primary btn-sm run-btn"
-                      data-project="{{ name }}">
-                <i class="fas fa-play"></i> Run
-              </button>
+              <div style="display:flex;gap:.3rem;flex-wrap:nowrap">
+                <button class="btn btn-primary btn-sm run-btn"
+                        data-project="{{ name }}">
+                  <i class="fas fa-play"></i> Run
+                </button>
+                <button class="btn btn-outline-secondary btn-sm hist-btn"
+                        data-project="{{ name }}"
+                        title="Show run history for {{ name }}">
+                  <i class="fas fa-history"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <!-- collapsible history row for {{ name }} -->
+          <tr id="hist-row-{{ name }}" style="display:none">
+            <td colspan="6" style="padding:0;background:#f8f9fa;border-top:none">
+              <div id="hist-content-{{ name }}"
+                   style="padding:.6rem 1rem .8rem">
+                <p class="text-muted mb-0">
+                  <span class="spinner-border spinner-border-sm mr-1"></span>
+                  Loading…
+                </p>
+              </div>
             </td>
           </tr>
           {% endfor %}

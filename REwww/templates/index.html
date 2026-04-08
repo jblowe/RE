@@ -58,6 +58,10 @@
       <a class="nav-link disabled" id="tab-coverage-nav"
          data-re-tab href="#tab-coverage" role="tab">Coverage</a>
     </li>
+    <li class="nav-item" id="nav-compare" style="display:none">
+      <a class="nav-link disabled" id="tab-compare-nav"
+         data-re-tab href="#tab-compare" role="tab">Compare</a>
+    </li>
     <li class="nav-item" id="nav-log" style="display:none">
       <a class="nav-link" id="tab-log-nav"
          data-re-tab href="#tab-log" role="tab">Log</a>
@@ -182,6 +186,19 @@
         <p class="text-muted">No coverage report — run with a MEL selected.</p>
       </div>
     </div><!-- /tab-coverage -->
+
+    <!-- ══ COMPARE TAB ══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-compare" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary" id="btn-close-compare"
+                onclick="closeCompare()">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+      <div class="content-area" id="compare-content">
+        <p class="text-muted">Select two runs from History and click Compare.</p>
+      </div>
+    </div><!-- /tab-compare -->
 
     <!-- ══ LOG TAB ═══════════════════════════════════════════════════════════ -->
     <div class="tab-pane fade" id="tab-log" role="tabpanel">

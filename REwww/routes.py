@@ -16,6 +16,8 @@ from flask import (Blueprint, abort, jsonify, render_template,
 
 import xslt
 import projects as proj_module
+import runlog
+import run_compare
 from utils import find_candidates
 
 bp = Blueprint('main', __name__)
@@ -172,6 +174,34 @@ def api_run():
                 'coverage': coverage_xml if coverage_xml and os.path.isfile(coverage_xml) else None,
             }
             run_info['status'] = 'done'
+
+            # ── Persist to runs.toml ──────────────────────────────────────
+            try:
+                runlog.append_run({
+                    'run_id':       run_id,
+                    'project':      project,
+                    'run_name':     run_name,
+                    'sets':         len(B.forms),
+                    'isolates':     len(B.isolates),
+                    'failures':     len(B.failures),
+                    'has_coverage': bool(run_info['files'].get('coverage')),
+                    'params': {
+                        'recon':    recon    or '',
+                        'mel':      mel      or '',
+                        'fuzzy':    fuzzy    or '',
+                        'upstream': upstream or '',
+                    },
+                    'files': {
+                        'sets':     sets_xml  or '',
+                        'stats':    stats_xml or '',
+                        'mel':      run_info['files'].get('mel')      or '',
+                        'fuzzy':    run_info['files'].get('fuzzy')    or '',
+                        'coverage': run_info['files'].get('coverage') or '',
+                        'recon':    run_info['files'].get('recon')    or [],
+                    },
+                })
+            except Exception:
+                pass  # log errors must not abort the run
 
         except Exception:
             run_info['error']  = traceback.format_exc()
@@ -545,6 +575,104 @@ def api_save_fuz(run_id):
         return jsonify(error=f'Could not write file: {exc}'), 500
 
     return jsonify(ok=True, saved_to=os.path.basename(file_path))
+
+
+# ── Run history ───────────────────────────────────────────────────────────────
+
+@bp.route('/api/history/<project>')
+def api_history(project):
+    """Return run-log entries for a project, newest first."""
+    return jsonify(runs=runlog.get_runs(project))
+
+
+@bp.route('/api/load_run', methods=['POST'])
+def api_load_run():
+    """Load a historical run into _runs and return its metadata."""
+    body   = request.get_json(force=True)
+    run_id = body.get('run_id', '')
+    if not run_id:
+        return jsonify(error='Missing run_id'), 400
+
+    # Already live in memory?
+    with _runs_lock:
+        existing = _runs.get(run_id)
+    if existing and existing['status'] == 'done':
+        r      = existing
+        record = runlog.get_run(run_id) or {}
+    else:
+        record = runlog.get_run(run_id)
+        if not record:
+            return jsonify(error='Run not found in history'), 404
+        f = record.get('files', {})
+        r = {
+            'id':       run_id,
+            'project':  record['project'],
+            'run_name': record['run_name'],
+            'status':   'done',
+            'log':      [],
+            'error':    None,
+            'files': {
+                'sets':     f.get('sets')     or None,
+                'stats':    f.get('stats')    or None,
+                'recon':    f.get('recon')    or [],
+                'data':     {},
+                'mel':      f.get('mel')      or None,
+                'fuzzy':    f.get('fuzzy')    or None,
+                'coverage': f.get('coverage') or None,
+            },
+        }
+        with _runs_lock:
+            _runs[run_id] = r
+
+    files = r['files']
+    return jsonify(
+        run_id       = run_id,
+        run_name     = r['run_name'],
+        project      = r['project'],
+        params       = record.get('params', {}),
+        has_mel      = bool(files.get('mel')      and os.path.isfile(files['mel'])),
+        has_fuzzy    = bool(files.get('fuzzy')    and os.path.isfile(files['fuzzy'])),
+        has_coverage = bool(files.get('coverage') and os.path.isfile(files['coverage'])),
+    )
+
+
+@bp.route('/api/compare_runs', methods=['POST'])
+def api_compare_runs():
+    """Compare two runs (same project); return an HTML fragment."""
+    body = request.get_json(force=True)
+    id_a = body.get('run_id_a', '')
+    id_b = body.get('run_id_b', '')
+
+    def _get_record(run_id):
+        rec = runlog.get_run(run_id)
+        if rec:
+            return rec
+        with _runs_lock:
+            r = _runs.get(run_id)
+        if r and r['status'] == 'done':
+            files = r['files']
+            return {
+                'run_id':   run_id,
+                'run_name': r.get('run_name', ''),
+                'project':  r.get('project', ''),
+                'sets': 0, 'isolates': 0, 'failures': 0,
+                'params': {},
+                'files': {
+                    'sets':     files.get('sets')     or '',
+                    'coverage': files.get('coverage') or '',
+                },
+            }
+        return None
+
+    rec_a = _get_record(id_a)
+    rec_b = _get_record(id_b)
+
+    if not rec_a or not rec_b:
+        return '<p class="text-danger">One or both runs not found.</p>'
+    if rec_a.get('project') != rec_b.get('project'):
+        return '<p class="text-warning">Comparison requires runs from the same project.</p>'
+
+    return run_compare.compare_runs(rec_a, rec_b)
 
 
 # ── Save projects.toml ────────────────────────────────────────────────────────
