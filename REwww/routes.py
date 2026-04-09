@@ -46,7 +46,10 @@ def index():
             'mels':    find_candidates(path, 'mel.xml'),
             'fuzzies': find_candidates(path, 'fuz.xml'),
         }
-    return render_template('index.html', project_data=project_data)
+    history_counts = {name: runlog.count_runs(name) for name in project_data}
+    return render_template('index.html',
+                           project_data=project_data,
+                           history_counts=history_counts)
 
 
 # ── Project file-list refresh ──────────────────────────────────────────────────
@@ -60,10 +63,11 @@ def api_projects():
         if not os.path.isdir(path):
             continue
         data[name] = {
-            'path':    path,
-            'recons':  find_candidates(path, 'correspondences.xml'),
-            'mels':    find_candidates(path, 'mel.xml'),
-            'fuzzies': find_candidates(path, 'fuz.xml'),
+            'path':          path,
+            'recons':        find_candidates(path, 'correspondences.xml'),
+            'mels':          find_candidates(path, 'mel.xml'),
+            'fuzzies':       find_candidates(path, 'fuz.xml'),
+            'history_count': runlog.count_runs(name),
         }
     return jsonify(data)
 
@@ -122,6 +126,13 @@ def api_run():
                 project_path, project, recon,
                 mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
 
+            try:
+                sc = settings.syllable_canon
+                print(f'context_match_type: {sc.context_match_type}')
+                print(f'spec (supra_segmentals): {", ".join(sc.supra_segmentals)}')
+            except Exception:
+                pass
+
             B = RE.batch_all_upstream(settings, only_with_mel=True)
 
             _isolates_dict = RE.extract_isolates(B)
@@ -137,9 +148,12 @@ def api_run():
                 B, settings.upstream[settings.upstream_target],
                 sets_xml, True)
 
+            # Unique cognate sets = deduplicated by supporting_forms, matching
+            # what create_xml_sets actually writes (merging multi-reconstruction sets).
+            unique_sets = len({pf.supporting_forms for pf in B.forms})
             B.statistics.add_stat('isolates', len(B.isolates))
             B.statistics.add_stat('failure',  len(B.failures))
-            B.statistics.add_stat('sets',     len(B.forms))
+            B.statistics.add_stat('sets',     unique_sets)
 
             stats_xml = os.path.join(
                 project_path,
@@ -163,9 +177,19 @@ def api_run():
                     project_path, f'{project}.{run_name}.coverage.xml')
                 serialize.serialize_stats(cov_stats, settings, args_ns, coverage_xml)
 
+            # ── Write run log to disk ─────────────────────────────────────
+            log_txt = os.path.join(
+                project_path, f'{project}.{run_name}.log.txt')
+            try:
+                with open(log_txt, 'w', encoding='utf-8') as fh:
+                    fh.write('\n'.join(run_info['log']))
+            except OSError:
+                log_txt = None
+
             run_info['files'] = {
                 'sets':     sets_xml,
                 'stats':    stats_xml,
+                'log':      log_txt,
                 'recon':    list(settings.proto_languages.values()),
                 'data':     {lg: os.path.join(settings.directory_path, p)
                              for lg, p in settings.attested.items()},
@@ -181,7 +205,7 @@ def api_run():
                     'run_id':       run_id,
                     'project':      project,
                     'run_name':     run_name,
-                    'sets':         len(B.forms),
+                    'sets':         unique_sets,
                     'isolates':     len(B.isolates),
                     'failures':     len(B.failures),
                     'has_coverage': bool(run_info['files'].get('coverage')),
@@ -194,6 +218,7 @@ def api_run():
                     'files': {
                         'sets':     sets_xml  or '',
                         'stats':    stats_xml or '',
+                        'log':      log_txt   or '',
                         'mel':      run_info['files'].get('mel')      or '',
                         'fuzzy':    run_info['files'].get('fuzzy')    or '',
                         'coverage': run_info['files'].get('coverage') or '',
@@ -604,16 +629,25 @@ def api_load_run():
         if not record:
             return jsonify(error='Run not found in history'), 404
         f = record.get('files', {})
+        log_path  = f.get('log', '')
+        log_lines = []
+        if log_path and os.path.isfile(log_path):
+            try:
+                with open(log_path, encoding='utf-8') as fh:
+                    log_lines = fh.read().splitlines()
+            except OSError:
+                pass
         r = {
             'id':       run_id,
             'project':  record['project'],
             'run_name': record['run_name'],
             'status':   'done',
-            'log':      [],
+            'log':      log_lines,
             'error':    None,
             'files': {
                 'sets':     f.get('sets')     or None,
                 'stats':    f.get('stats')    or None,
+                'log':      log_path          or None,
                 'recon':    f.get('recon')    or [],
                 'data':     {},
                 'mel':      f.get('mel')      or None,
@@ -624,12 +658,14 @@ def api_load_run():
         with _runs_lock:
             _runs[run_id] = r
 
-    files = r['files']
+    files    = r['files']
+    log_lines = r.get('log', [])
     return jsonify(
         run_id       = run_id,
         run_name     = r['run_name'],
         project      = r['project'],
         params       = record.get('params', {}),
+        log          = log_lines,
         has_mel      = bool(files.get('mel')      and os.path.isfile(files['mel'])),
         has_fuzzy    = bool(files.get('fuzzy')    and os.path.isfile(files['fuzzy'])),
         has_coverage = bool(files.get('coverage') and os.path.isfile(files['coverage'])),
@@ -673,6 +709,43 @@ def api_compare_runs():
         return '<p class="text-warning">Comparison requires runs from the same project.</p>'
 
     return run_compare.compare_runs(rec_a, rec_b)
+
+
+@bp.route('/api/delete_run', methods=['POST'])
+def api_delete_run():
+    """Delete a run record from the log and remove its output files."""
+    body   = request.get_json(force=True)
+    run_id = body.get('run_id', '')
+    if not run_id:
+        return jsonify(error='Missing run_id'), 400
+
+    record = runlog.delete_run(run_id)
+    if not record:
+        return jsonify(error='Run not found'), 404
+
+    # Evict from in-memory store too
+    with _runs_lock:
+        _runs.pop(run_id, None)
+
+    # Delete output files only (sets, stats, log, coverage — not input mel/fuzzy/recon)
+    deleted, errors = [], []
+    for key in ('sets', 'stats', 'log', 'coverage'):
+        path = record.get('files', {}).get(key, '')
+        if not path:
+            continue
+        if os.path.isfile(path):
+            try:
+                os.remove(path)
+                deleted.append(os.path.basename(path))
+            except OSError as exc:
+                errors.append(str(exc))
+
+    return jsonify(
+        ok            = True,
+        deleted       = deleted,
+        errors        = errors,
+        history_count = runlog.count_runs(record.get('project', '')),
+    )
 
 
 # ── Save projects.toml ────────────────────────────────────────────────────────

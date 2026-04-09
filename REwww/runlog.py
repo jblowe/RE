@@ -46,3 +46,19 @@ def get_run(run_id: str) -> dict | None:
         if r.get('run_id') == run_id:
             return r
     return None
+
+
+def count_runs(project: str) -> int:
+    """Return the number of logged runs for a project."""
+    return sum(1 for r in _read() if r.get('project') == project)
+
+
+def delete_run(run_id: str) -> dict | None:
+    """Remove a run record from the log; return the removed record or None."""
+    runs = _read()
+    for i, r in enumerate(runs):
+        if r.get('run_id') == run_id:
+            removed = runs.pop(i)
+            _write(runs)
+            return removed
+    return None

@@ -151,6 +151,9 @@ document.getElementById('main-tab-content').addEventListener('click', function (
   const cmpBtn = e.target.closest('.hist-compare-btn');
   if (cmpBtn) { doCompare(cmpBtn.dataset.project); return; }
 
+  const delBtn = e.target.closest('.hist-delete-btn');
+  if (delBtn) { deleteRun(delBtn.dataset.runId, delBtn.dataset.project); return; }
+
   const btn = e.target.closest('.run-btn');
   if (!btn) return;
 
@@ -286,11 +289,16 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       runBtn.className = 'btn btn-primary btn-sm run-btn';
       runBtn.dataset.project = name;
       runBtn.innerHTML = '<i class="fas fa-play"></i> Run';
+      const histCount = info.history_count || 0;
       const histBtn = document.createElement('button');
       histBtn.className = 'btn btn-outline-secondary btn-sm hist-btn';
       histBtn.dataset.project = name;
+      histBtn.dataset.count   = histCount;
       histBtn.title = `Show run history for ${name}`;
-      histBtn.innerHTML = '<i class="fas fa-history"></i>';
+      histBtn.innerHTML = histCount > 0
+        ? `<i class="fas fa-history"></i> <span class="hist-count">${histCount}</span>`
+        : '<i class="fas fa-history"></i>';
+      if (histCount === 0) histBtn.style.display = 'none';
       actWrap.appendChild(runBtn);
       actWrap.appendChild(histBtn);
       tdAction.appendChild(actWrap);
@@ -406,6 +414,12 @@ function doPoll() {
       /* ── Success ── */
       setRunStatusBadge('done', 'done');
       handleRunDone(data);
+      /* Increment History button count for this project */
+      if (currentProject) {
+        const btn = document.querySelector(`.hist-btn[data-project="${currentProject}"]`);
+        const prev = btn ? (parseInt(btn.dataset.count, 10) || 0) : 0;
+        setHistoryBtnCount(currentProject, prev + 1);
+      }
     })
     .catch(err => console.error('Poll error:', err));
 }
@@ -760,6 +774,41 @@ setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
    Run History — toggle, render, load, compare
    ══════════════════════════════════════════════════════════════════════════ */
 
+function setHistoryBtnCount(project, count) {
+  const btn = document.querySelector(`.hist-btn[data-project="${project}"]`);
+  if (!btn) return;
+  if (count <= 0) {
+    btn.style.display = 'none';
+    const row = document.getElementById(`hist-row-${project}`);
+    if (row) row.style.display = 'none';
+  } else {
+    btn.style.display = '';
+    btn.dataset.count = count;
+    const span = btn.querySelector('.hist-count');
+    if (span) span.textContent = count;
+    else btn.innerHTML = `<i class="fas fa-history"></i> <span class="hist-count">${count}</span>`;
+  }
+}
+
+function deleteRun(runId, project) {
+  if (!confirm('Delete this run and its output files? This cannot be undone.')) return;
+  fetch('/api/delete_run', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id: runId }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) { alert(`Delete failed: ${data.error}`); return; }
+    setHistoryBtnCount(project, data.history_count);
+    /* Re-render the history table with fresh data */
+    fetch(`/api/history/${project}`)
+      .then(r => r.json())
+      .then(d => renderHistoryTable(project, d.runs || []));
+  })
+  .catch(err => alert(`Delete error: ${err}`));
+}
+
 function toggleHistory(project) {
   const histRow = document.getElementById(`hist-row-${project}`);
   if (!histRow) return;
@@ -807,9 +856,17 @@ function renderHistoryTable(project, runs) {
       <td>${run.isolates  ?? '?'}</td>
       <td>${run.failures  ?? '?'}</td>
       <td>${cov}</td>
-      <td><button class="btn btn-outline-primary hist-load-btn py-0 px-1"
-                  data-run-id="${run.run_id}" data-project="${project}"
-                  style="font-size:.8rem;line-height:1.4">Load</button></td>
+      <td style="white-space:nowrap">
+        <button class="btn btn-outline-primary hist-load-btn py-0 px-1"
+                data-run-id="${run.run_id}" data-project="${project}"
+                style="font-size:.8rem;line-height:1.4">Load</button>
+        <button class="btn btn-outline-danger hist-delete-btn py-0 px-1 ml-1"
+                data-run-id="${run.run_id}" data-project="${project}"
+                title="Delete run and output files"
+                style="font-size:.8rem;line-height:1.4">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </td>
     </tr>`;
   });
   html += `</tbody></table>
@@ -852,6 +909,13 @@ function loadHistRun(runId, project) {
     if (p.fuzzy)    parts.push(`fuzzy: ${basename(p.fuzzy)}`);
     if (p.upstream) parts.push(`↑ ${p.upstream}`);
     document.getElementById('run-badge').textContent = parts.join('  ·  ');
+    /* Populate Log tab from persisted log file */
+    const logEl = document.getElementById('run-log');
+    logEl.textContent = (data.log && data.log.length)
+      ? data.log.join('\n') : '(no log available)';
+    logLinesShown = (data.log || []).length;
+    setRunStatusBadge('done', 'done');
+    document.getElementById('nav-log').style.display = '';
     /* Reset disabled tabs before wiring */
     ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']

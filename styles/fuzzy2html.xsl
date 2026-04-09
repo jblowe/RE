@@ -25,29 +25,30 @@
     </xsl:template>
 
     <xsl:template match="fuzzy">
-        <div class="table-responsive">
-        <table class="table table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable"
+               style="table-layout:fixed; width:100%; min-width:0">
             <thead>
                 <tr>
-                    <th>Language</th>
-                    <th>Input data values</th>
-                    <th>Fuzzied value</th>
+                    <th style="width:10%">Language</th>
+                    <th style="width:70%">Input data values</th>
+                    <th style="width:20%">Fuzzied value</th>
                 </tr>
             </thead>
             <xsl:for-each select="./*">
                 <tr>
-                    <td><xsl:value-of select="@dial"/></td>
-                    <td>
+                    <td style="vertical-align:top; white-space:normal"><xsl:value-of select="@dial"/></td>
+                    <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
                         <xsl:for-each select="from">
                             <xsl:value-of select="."/>
-                            <xsl:if test="position()!=last()">,</xsl:if>
+                            <xsl:if test="position()!=last()">, </xsl:if>
                         </xsl:for-each>
                     </td>
-                    <td><xsl:value-of select="@to"/></td>
+                    <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
+                        <xsl:value-of select="@to"/>
+                    </td>
                 </tr>
             </xsl:for-each>
         </table>
-        </div>
     </xsl:template>
 
 

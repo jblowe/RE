@@ -79,10 +79,14 @@
                         data-project="{{ name }}">
                   <i class="fas fa-play"></i> Run
                 </button>
+                {% set hcount = history_counts.get(name, 0) %}
                 <button class="btn btn-outline-secondary btn-sm hist-btn"
                         data-project="{{ name }}"
-                        title="Show run history for {{ name }}">
+                        data-count="{{ hcount }}"
+                        title="Show run history for {{ name }}"
+                        {% if hcount == 0 %}style="display:none"{% endif %}>
                   <i class="fas fa-history"></i>
+                  {% if hcount > 0 %}<span class="hist-count">{{ hcount }}</span>{% endif %}
                 </button>
               </div>
             </td>
