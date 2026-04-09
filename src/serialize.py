@@ -307,6 +307,14 @@ def serialize_stats(stats, settings, args, filename):
             ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': settings.fuzzy_filename})
         except:
             ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': 'No fuzzying done.'})
+        try:
+            sc = settings.syllable_canon
+            ET.SubElement(settings_element, 'parm', attrib={
+                'key': 'context_match_type', 'value': str(sc.context_match_type)})
+            ET.SubElement(settings_element, 'parm', attrib={
+                'key': 'spec', 'value': ', '.join(sc.supra_segmentals)})
+        except Exception:
+            pass
     except:
         pass
     # for s in settings.other:
