@@ -18,13 +18,14 @@ However, the modern version has three components:
 
 * The 'core system' (in `src`) which includes Python modules to diachronically process the various language files (in `projects').
 * The 'desktop version', a [gTK](https://www.gtk.org/) graphical interface, currently a work in progress. see `src/REgtk.py`)
-* The 'web interface', a Python bottle+bootstrap interface to allow users to browse the projects and results, either locally or on the web. see `REwww`
+* The 'web interface', a Python flask+bootstrap interface to allow users to browse the projects and results, either locally (when installed) or on the web. see `REwww`
 
 The directories of interest are:
 
 ### main components
 
-* _projects_ - "the data" -- various sets of language files, tables of correspondences, etc.
+* _projects_ - "the data and parameters" -- various sets of language files, tables of correspondences, etc.
+* _projects.toml_ - list of the available projects, public and private
 * _src_ - source code for everything except the web interface
 * _docs_ - documentation, very much a work in progress
 * _make / Makefile_ - we use this for testing and QA
