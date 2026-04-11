@@ -21,7 +21,7 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-pip
 
 echo "=== Installing remaining packages via pip ==="
-/ucrt64/bin/python -m pip install --upgrade \
+/ucrt64/bin/python -m pip install --break-system-packages --upgrade \
   tomli \
   tomli-w \
   matplotlib-venn
