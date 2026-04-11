@@ -1,0 +1,12 @@
+# Reconstruction Engine — Project Configuration
+#
+# Add your projects here.  Each entry maps a short project name to the full
+# path of the directory containing that project's files.
+# Use forward slashes (or double backslashes) in paths.
+#
+# Examples:
+#   TGTM    = "C:/Users/yourname/Documents/linguistics/TGTM"
+#   ROMANCE = "C:/Projects/Romance"
+#
+# After editing this file, click the Reload button in the RE web interface
+# (or restart the app) to pick up the changes.
