@@ -20,6 +20,8 @@ env:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write   # needed to upload assets to GitHub Releases
 
     steps:
       - name: Check out repository
@@ -30,13 +32,15 @@ jobs:
         shell: pwsh
 
       - name: Download MSYS2 installer
-        # Pin to a specific date for reproducible builds.
-        # Update this periodically to get a newer MSYS2 base.
+        # Pin to a specific release for reproducible builds.
+        # The release tag uses dashes (YYYY-MM-DD); the filename does not.
+        # Update $fileVer and $tagVer together when bumping the MSYS2 version.
         run: |
-          $version = "20241208"
-          $url = "https://github.com/msys2/msys2-installer/releases/download/$version/msys2-x86_64-$version.exe"
-          Write-Host "Downloading MSYS2 $version..."
-          Invoke-WebRequest -Uri $url -OutFile "installer\msys2-installer.exe"
+          $fileVer = "20241208"
+          $tagVer  = "2024-12-08"
+          $url = "https://github.com/msys2/msys2-installer/releases/download/$tagVer/msys2-x86_64-$fileVer.exe"
+          Write-Host "Downloading MSYS2 $fileVer..."
+          Invoke-WebRequest -Uri $url -OutFile "installer\msys2-installer.exe" -UseBasicParsing
         shell: pwsh
 
       - name: Create output directory
