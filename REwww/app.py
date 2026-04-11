@@ -48,7 +48,7 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser(description='RE Flask web app')
     parser.add_argument('--host',  default='127.0.0.1')
-    parser.add_argument('--port',  type=int, default=5001)
+    parser.add_argument('--port',  type=int, default=3001)
     parser.add_argument('--debug', action='store_true')
     a = parser.parse_args()
     app.run(host=a.host, port=a.port, debug=a.debug)
