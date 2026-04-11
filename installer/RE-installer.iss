@@ -119,11 +119,10 @@ begin
 end;
 
 
-{ ── Launcher creation ────────────────────────────────────────────────────────
-  Launchers are written by Pascal code rather than bundled as static files
-  so they always contain the correct {app} path even if the user changed it
-  from the default C:\RE2.
-}
+// ── Launcher creation ────────────────────────────────────────────────────────
+// Launchers are written by Pascal code rather than bundled as static files
+// so they always contain the correct install path even if the user changed
+// the default destination directory.
 procedure CreateLaunchers;
 var
   AppDir:   String;
