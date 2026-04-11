@@ -17,7 +17,7 @@
 ; =============================================================================
 
 #define AppName      "Reconstruction Engine"
-#define AppVersion   "1.0"
+#define AppVersion   "2.0"
 #define AppPublisher "John B. Lowe"
 #define AppURL       "https://github.com/jblowe/RE"
 #define Msys2Dir     "C:\msys64"
@@ -69,9 +69,12 @@ Source: "..\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion recursesubd
 ; ── Bundled example projects ─────────────────────────────────────────────────
 ; Timestamped run outputs (NAME.YYYYMMDD-HHMMSS.*) and compiled Python files
 ; are excluded; everything else (data, correspondences, reference runs) is included.
-Source: "..\projects\*"; DestDir: "{app}\projects"; \
-  Flags: ignoreversion recursesubdirs; \
-  Excludes: "*.????????-??????.*,*.pyc"
+Source: "..\projects\DIS\*";        DestDir: "{app}\projects\DIS";        Flags: ignoreversion recursesubdirs; Excludes: "*.????????-??????.*,*.pyc"
+Source: "..\projects\HMONGMIEN\*"; DestDir: "{app}\projects\HMONGMIEN"; Flags: ignoreversion recursesubdirs; Excludes: "*.????????-??????.*,*.pyc"
+Source: "..\projects\LOLOISH\*";   DestDir: "{app}\projects\LOLOISH";   Flags: ignoreversion recursesubdirs; Excludes: "*.????????-??????.*,*.pyc"
+Source: "..\projects\POLYNESIAN\*"; DestDir: "{app}\projects\POLYNESIAN"; Flags: ignoreversion recursesubdirs; Excludes: "*.????????-??????.*,*.pyc"
+Source: "..\projects\ROMANCE\*";   DestDir: "{app}\projects\ROMANCE";   Flags: ignoreversion recursesubdirs; Excludes: "*.????????-??????.*,*.pyc"
+Source: "..\projects\SLAVIC\*";    DestDir: "{app}\projects\SLAVIC";    Flags: ignoreversion recursesubdirs; Excludes: "*.????????-??????.*,*.pyc"
 
 ; ── Default projects.toml ────────────────────────────────────────────────────
 ; onlyifdoesntexist preserves any edits the user has made on upgrade.
@@ -106,9 +109,9 @@ Name: "{group}\{#AppName} — Command Line"; \
 Name: "{group}\Uninstall {#AppName}"; \
   Filename: "{uninstallexe}"
 
-; Desktop shortcut for the web interface
-Name: "{commondesktop}\{#AppName}"; \
-  Filename: "{app}\start-REwww.bat"
+; Desktop shortcuts
+Name: "{commondesktop}\REwww"; Filename: "{app}\start-REwww.bat"
+Name: "{commondesktop}\REgtk"; Filename: "{app}\start-REgtk.bat"
 
 [UninstallDelete]
 ; Remove the generated launcher scripts on uninstall

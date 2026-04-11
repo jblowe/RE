@@ -18,12 +18,12 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-matplotlib \
   mingw-w64-ucrt-x86_64-python-regex \
   mingw-w64-ucrt-x86_64-python-flask \
-  mingw-w64-ucrt-x86_64-python-pip
+  mingw-w64-ucrt-x86_64-python-pip \
+  mingw-w64-ucrt-x86_64-python-tomli-w
 
 echo "=== Installing remaining packages via pip ==="
 /ucrt64/bin/python -m pip install --break-system-packages --upgrade \
   tomli \
-  tomli-w \
   matplotlib-venn
 
 echo "=== Done ==="

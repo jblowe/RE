@@ -11,11 +11,8 @@
 # (or restart the app) to pick up the changes.
 
 DIS        = "projects/DIS"
-EXER       = "projects/EXER"
-GERMANIC   = "projects/GERMANIC"
 HMONGMIEN  = "projects/HMONGMIEN"
 LOLOISH    = "projects/LOLOISH"
 POLYNESIAN = "projects/POLYNESIAN"
 ROMANCE    = "projects/ROMANCE"
 SLAVIC     = "projects/SLAVIC"
-VANUATU    = "projects/VANUATU"
