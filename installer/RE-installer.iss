@@ -182,7 +182,8 @@ begin
   if FileExists(AppDir + '\projects.toml') then
     Exit;
 
-  AppFwd := StringReplace(AppDir, '\', '/', [rfReplaceAll]);
+  AppFwd := AppDir;
+  StringChange(AppFwd, '\', '/');
 
   Content :=
     '# Reconstruction Engine — Project Configuration'                       + #13#10 +
