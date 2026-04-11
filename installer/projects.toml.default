@@ -1,24 +1,21 @@
 # Reconstruction Engine — Project Configuration
 #
 # Each entry maps a short project name to the directory containing
-# that project's files.  Use forward slashes in paths.
+# that project's files.  Paths are relative to this file's location,
+# or you can use absolute paths with forward slashes.
 #
-# The bundled example projects are pre-configured below (paths assume the
-# default install location C:\RE2).  If you installed to a different
-# directory the installer will have written the correct paths automatically.
-#
-# To add your own projects, append lines following the same pattern:
+# To add your own projects, append lines like:
 #   MYPROJECT = "C:/Users/yourname/Documents/linguistics/MYPROJECT"
 #
 # After editing this file, click the Reload button in the RE web interface
 # (or restart the app) to pick up the changes.
 
-DIS        = "C:/RE2/projects/DIS"
-EXER       = "C:/RE2/projects/EXER"
-GERMANIC   = "C:/RE2/projects/GERMANIC"
-HMONGMIEN  = "C:/RE2/projects/HMONGMIEN"
-LOLOISH    = "C:/RE2/projects/LOLOISH"
-POLYNESIAN = "C:/RE2/projects/POLYNESIAN"
-ROMANCE    = "C:/RE2/projects/ROMANCE"
-SLAVIC     = "C:/RE2/projects/SLAVIC"
-VANUATU    = "C:/RE2/projects/VANUATU"
+DIS        = "projects/DIS"
+EXER       = "projects/EXER"
+GERMANIC   = "projects/GERMANIC"
+HMONGMIEN  = "projects/HMONGMIEN"
+LOLOISH    = "projects/LOLOISH"
+POLYNESIAN = "projects/POLYNESIAN"
+ROMANCE    = "projects/ROMANCE"
+SLAVIC     = "projects/SLAVIC"
+VANUATU    = "projects/VANUATU"

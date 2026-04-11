@@ -174,37 +174,36 @@ end;
 // user chose.  Skipped on upgrade to preserve any edits the user has made.
 procedure CreateProjectsToml;
 var
-  AppDir:    String;
-  AppFwd:    String;
-  Content:   String;
+  AppDir:  String;
+  Content: String;
 begin
   AppDir := ExpandConstant('{app}');
   if FileExists(AppDir + '\projects.toml') then
     Exit;
 
-  AppFwd := AppDir;
-  StringChange(AppFwd, '\', '/');
-
+  // Paths are relative to projects.toml (= AppDir), so they work regardless
+  // of where the user installed RE.  projects.py resolves them at runtime.
   Content :=
     '# Reconstruction Engine — Project Configuration'                       + #13#10 +
     '#'                                                                      + #13#10 +
     '# Each entry maps a short project name to the directory containing'     + #13#10 +
-    '# that project''s files.  Use forward slashes in paths.'                + #13#10 +
+    '# that project''s files.  Paths are relative to this file''s location,' + #13#10 +
+    '# or you can use absolute paths with forward slashes.'                  + #13#10 +
     '#'                                                                      + #13#10 +
     '# To add your own projects, append lines like:'                         + #13#10 +
     '#   MYPROJECT = "C:/Users/yourname/Documents/linguistics/MYPROJECT"'    + #13#10 +
     '#'                                                                      + #13#10 +
     '# After editing, click Reload in the RE web interface.'                 + #13#10 +
     ''                                                                       + #13#10 +
-    'DIS        = "' + AppFwd + '/projects/DIS"'        + #13#10 +
-    'EXER       = "' + AppFwd + '/projects/EXER"'       + #13#10 +
-    'GERMANIC   = "' + AppFwd + '/projects/GERMANIC"'   + #13#10 +
-    'HMONGMIEN  = "' + AppFwd + '/projects/HMONGMIEN"'  + #13#10 +
-    'LOLOISH    = "' + AppFwd + '/projects/LOLOISH"'    + #13#10 +
-    'POLYNESIAN = "' + AppFwd + '/projects/POLYNESIAN"' + #13#10 +
-    'ROMANCE    = "' + AppFwd + '/projects/ROMANCE"'    + #13#10 +
-    'SLAVIC     = "' + AppFwd + '/projects/SLAVIC"'     + #13#10 +
-    'VANUATU    = "' + AppFwd + '/projects/VANUATU"'    + #13#10;
+    'DIS        = "projects/DIS"'        + #13#10 +
+    'EXER       = "projects/EXER"'       + #13#10 +
+    'GERMANIC   = "projects/GERMANIC"'   + #13#10 +
+    'HMONGMIEN  = "projects/HMONGMIEN"'  + #13#10 +
+    'LOLOISH    = "projects/LOLOISH"'    + #13#10 +
+    'POLYNESIAN = "projects/POLYNESIAN"' + #13#10 +
+    'ROMANCE    = "projects/ROMANCE"'    + #13#10 +
+    'SLAVIC     = "projects/SLAVIC"'     + #13#10 +
+    'VANUATU    = "projects/VANUATU"'    + #13#10;
 
   SaveStringToFile(AppDir + '\projects.toml', Content, False);
 end;
