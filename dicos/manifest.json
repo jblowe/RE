@@ -1,6 +1,6 @@
 {
   "name": "Tamang Dictionary",
-  "short_name": "Tamang",
+  "short_name": "Tamang Dictionary",
   "start_url": "/TamangDictionary.html",
   "scope": "/",
   "display": "standalone",
