@@ -204,6 +204,8 @@ document.getElementById('main-tab-content').addEventListener('click', function (
     document.getElementById('nav-mel').style.display      = 'none';
     document.getElementById('nav-fuzzy').style.display    = 'none';
     document.getElementById('nav-coverage').style.display = 'none';
+    document.getElementById('nav-compare').style.display  = 'none';
+    setTabEnabled('tab-compare-nav', false);
 
     startPolling();
   })
@@ -916,6 +918,9 @@ function loadHistRun(runId, project) {
     logLinesShown = (data.log || []).length;
     setRunStatusBadge('done', 'done');
     document.getElementById('nav-log').style.display = '';
+    /* Hide Compare pane — it belongs to the previous run/project */
+    document.getElementById('nav-compare').style.display = 'none';
+    setTabEnabled('tab-compare-nav', false);
     /* Reset disabled tabs before wiring */
     ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
