@@ -62,8 +62,9 @@ class ProjectManagerDialog(Gtk.Dialog):
 
         # Upstream parameter (optional free-form string)
         self.upstream_entry = Gtk.Entry()
+        self.upstream_entry.set_hexpand(True)
         self.upstream_entry.set_placeholder_text(
-            'e.g. PIR: es, pt, oldpt; PIWR: PWR, it, scn; PWR: PIR, fr  (leave blank for default)')
+            'e.g. PIWR: PWR, it, scn; PWR: PIR, fr; PIR: es, pt, oldpt;  (leave blank for default)')
         vbox.pack_start(make_labeled_entry(self.upstream_entry, 'upstream:'), False, False, 0)
 
         # Update mel/recon choices when a project is selected
