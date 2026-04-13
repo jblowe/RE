@@ -84,7 +84,7 @@ def find_candidates(project_path, suffix):
                 if m:
                     # print(f, "→", m.group(1))
                     candidates.append(m.group(1))
-    return candidates
+    return sorted(candidates)
 
 
 def read_protolanguage_from_correspondences(full_path):
