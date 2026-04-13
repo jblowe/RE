@@ -43,10 +43,21 @@
     .badge-error    { background: #dc3545; color: #fff; }
     .nav-tabs .nav-link.disabled { color: #999; }
     .tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
-    /* Allow wide tables to expand naturally and scroll rather than squish */
-    .content-area { overflow-x: auto; }
-    .content-area table { min-width: max-content; }
-    .content-area th, .content-area td { white-space: nowrap; }
+    /* ── Global table constraints ───────────────────────────────────────────
+       Tables fill the container width, columns size to content (auto layout)
+       but never exceed 200px, and text wraps rather than overflowing.       */
+    .content-area table {
+      width: 100%;
+    }
+    .content-area th,
+    .content-area td {
+      max-width: 200px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
+    }
+    /* Projects table: keep project-name cells on one line */
+    .projects-table .project-name { white-space: nowrap; }
 
     /* ── Tabular sets: gloss visibility toggle (default: hidden) ── */
     #sets-content.glosses-hidden .rfx-gloss { display: none; }
