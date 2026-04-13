@@ -105,8 +105,7 @@ def _stats_table(a: dict, b: dict) -> str:
 
 def _changed_table(changed: list) -> str:
     lines = [
-        '<div class="table-responsive">',
-        '<table class="table table-sm table-bordered table-hover">',
+        '<table class="table table-sm table-striped table-bordered table-hover sortable">',
         '<thead><tr><th>MEL</th><th>pfm (A)</th><th>rcn (A)</th>'
         '<th>pfm (B)</th><th>rcn (B)</th><th>languages</th>'
         '</tr></thead><tbody>',
@@ -120,14 +119,13 @@ def _changed_table(changed: list) -> str:
             f'<td{pcls}>{_h(b["pfm"])}</td><td>{_h(b["rcn"])}</td>'
             f'<td style="font-size:.8em">{lgs}</td></tr>'
         )
-    lines += ['</tbody></table></div>']
+    lines += ['</tbody></table>']
     return '\n'.join(lines)
 
 
 def _single_table(items: list) -> str:
     lines = [
-        '<div class="table-responsive">',
-        '<table class="table table-sm table-bordered table-hover">',
+        '<table class="table table-sm table-striped table-bordered table-hover sortable">',
         '<thead><tr><th>MEL</th><th>pfm</th><th>rcn</th><th>languages</th>'
         '</tr></thead><tbody>',
     ]
@@ -138,7 +136,7 @@ def _single_table(items: list) -> str:
             f'<td>{_h(s["pfm"])}</td><td>{_h(s["rcn"])}</td>'
             f'<td style="font-size:.8em">{lgs}</td></tr>'
         )
-    lines += ['</tbody></table></div>']
+    lines += ['</tbody></table>']
     return '\n'.join(lines)
 
 
