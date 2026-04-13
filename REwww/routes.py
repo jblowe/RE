@@ -223,6 +223,7 @@ def api_run():
                         'fuzzy':    run_info['files'].get('fuzzy')    or '',
                         'coverage': run_info['files'].get('coverage') or '',
                         'recon':    run_info['files'].get('recon')    or [],
+                        'data':     dict(run_info['files'].get('data') or {}),
                     },
                 })
             except Exception:
@@ -637,6 +638,7 @@ def api_load_run():
                     log_lines = fh.read().splitlines()
             except OSError:
                 pass
+        data = f.get('data') or {}
         r = {
             'id':       run_id,
             'project':  record['project'],
@@ -649,7 +651,7 @@ def api_load_run():
                 'stats':    f.get('stats')    or None,
                 'log':      log_path          or None,
                 'recon':    f.get('recon')    or [],
-                'data':     {},
+                'data':     data,
                 'mel':      f.get('mel')      or None,
                 'fuzzy':    f.get('fuzzy')    or None,
                 'coverage': f.get('coverage') or None,
