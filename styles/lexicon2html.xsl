@@ -34,7 +34,7 @@
     <xsl:template match="lexicon">
         <div>
             <div class="table-responsive">
-            <table class="table table-sm" border="1">
+            <table class="table table-sm table-striped table-bordered sortable">
                 <thead/>
                 <xsl:for-each select="entry">
                     <tr class="table-secondary">

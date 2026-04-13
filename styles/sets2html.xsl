@@ -62,7 +62,7 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
-    <table class="table table-sm table-hover table-bordered sortable">
+    <table class="table table-sm table-striped table-hover table-bordered sortable">
       <thead>
         <tr>
           <th>lg</th>
@@ -91,7 +91,7 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
-    <table class="table table-sm table-hover table-bordered sortable">
+    <table class="table table-sm table-striped table-hover table-bordered sortable">
       <thead>
         <tr>
           <th>lg</th>
