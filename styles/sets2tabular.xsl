@@ -144,7 +144,8 @@
         <xsl:for-each select="$lgs/*">
           <xsl:variable name="label" select="."/>
           <td style="vertical-align:top">
-            <xsl:for-each select="$reflexes/*">
+            <!-- Leaf language reflexes: search at any depth -->
+            <xsl:for-each select="$reflexes//rfx">
               <xsl:if test="lg = $label">
                 <!-- Each form gets its own line; gloss shown inline so that
                      multiple tone/semantic variants in one cell stay legible.
@@ -155,6 +156,18 @@
                   <xsl:if test="gl != ''">
                     <xsl:text> </xsl:text>
                     <small class="rfx-gloss" style="color:#888"><xsl:value-of select="gl"/></small>
+                  </xsl:if>
+                </div>
+              </xsl:if>
+            </xsl:for-each>
+            <!-- Intermediate proto-language reconstructions: match subset by plg -->
+            <xsl:for-each select="$reflexes//subset">
+              <xsl:if test="plg = $label">
+                <div title="{id}">
+                  <xsl:value-of select="pfm"/>
+                  <xsl:if test="rcn != ''">
+                    <xsl:text> </xsl:text>
+                    <small class="rfx-gloss" style="color:#888"><xsl:value-of select="rcn"/></small>
                   </xsl:if>
                 </div>
               </xsl:if>
