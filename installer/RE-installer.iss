@@ -61,6 +61,11 @@ Source: "msys2-installer.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall
 Source: "setup-packages.sh"; DestDir: "{#Msys2Dir}\tmp"; \
   DestName: "re-setup.sh"; Flags: ignoreversion
 
+; ── Project pipeline runner ───────────────────────────────────────────────────
+; Copied to MSYS2's /tmp so bash can reach it as /tmp/run-pipelines.sh
+Source: "run-pipelines.sh"; DestDir: "{#Msys2Dir}\tmp"; \
+  DestName: "run-pipelines.sh"; Flags: ignoreversion
+
 ; ── RE application source ────────────────────────────────────────────────────
 Source: "..\src\*";    DestDir: "{app}\src";    Flags: ignoreversion recursesubdirs
 Source: "..\REwww\*";  DestDir: "{app}\REwww";  Flags: ignoreversion recursesubdirs
@@ -97,6 +102,14 @@ Filename: "{#Msys2Dir}\usr\bin\bash.exe"; \
   Parameters: "--login -c ""bash /tmp/re-setup.sh >> /tmp/re-setup.log 2>&1"""; \
   Flags: waituntilterminated runhidden; \
   StatusMsg: "Installing GTK and Python packages — this may take a few minutes..."
+
+; ── Step 3: Run project data pipelines ────────────────────────────────────────
+; Prepares DIS, HMONGMIEN, and POLYNESIAN example data.
+; The Windows app path is passed as $1; the script converts it via cygpath.
+Filename: "{#Msys2Dir}\usr\bin\bash.exe"; \
+  Parameters: "--login -c ""bash /tmp/run-pipelines.sh '{app}' >> /tmp/pipelines.log 2>&1"""; \
+  Flags: waituntilterminated runhidden; \
+  StatusMsg: "Preparing example project data..."
 
 [Icons]
 ; Start Menu

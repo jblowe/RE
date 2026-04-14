@@ -11,6 +11,7 @@ pacman -Sy --noconfirm
 echo "=== Installing GTK3, Python and core dependencies ==="
 pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python \
+  mingw-w64-ucrt-x86_64-perl \
   mingw-w64-ucrt-x86_64-gtk3 \
   mingw-w64-ucrt-x86_64-gobject-introspection \
   mingw-w64-ucrt-x86_64-python-gobject \
