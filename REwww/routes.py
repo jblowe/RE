@@ -86,6 +86,9 @@ def api_run():
     fuzzy    = body.get('fuzzy') or None
     upstream = body.get('upstream') or None
 
+    if project == 'ROMANCE':
+        recon = None
+
     if project not in proj_module.projects:
         return jsonify(error=f'Unknown project: {project}'), 400
 
@@ -144,8 +147,10 @@ def api_run():
 
             sets_xml = os.path.join(
                 project_path, f'{project}.{run_name}.sets.xml')
+            intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
+            all_languages = intermediate_pls + list(settings.attested.keys())
             RE.dump_xml_sets(
-                B, settings.upstream[settings.upstream_target],
+                B, all_languages,
                 sets_xml, True)
 
             # Unique cognate sets = deduplicated by supporting_forms, matching
