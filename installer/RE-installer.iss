@@ -66,6 +66,13 @@ Source: "setup-packages.sh"; DestDir: "{#Msys2Dir}\tmp"; \
 Source: "run-pipelines.sh"; DestDir: "{#Msys2Dir}\tmp"; \
   DestName: "run-pipelines.sh"; Flags: ignoreversion
 
+; ── Hidden-bash trampoline ────────────────────────────────────────────────────
+; WScript.Shell.Run with style=0 passes CREATE_NO_WINDOW to CreateProcess,
+; which prevents MSYS2/Cygwin from allocating a visible console window.
+; Inno Setup's own runhidden flag only sets SW_HIDE, which MSYS2 overrides.
+Source: "run-bash.vbs"; DestDir: "{#Msys2Dir}\tmp"; \
+  DestName: "run-bash.vbs"; Flags: ignoreversion
+
 ; ── RE application source ────────────────────────────────────────────────────
 Source: "..\src\*";    DestDir: "{app}\src";    Flags: ignoreversion recursesubdirs
 Source: "..\REwww\*";  DestDir: "{app}\REwww";  Flags: ignoreversion recursesubdirs
@@ -97,18 +104,21 @@ Filename: "{tmp}\msys2-installer.exe"; \
   Check: ShouldInstallMsys2
 
 ; ── Step 2: Install all packages (pacman + pip) ───────────────────────────────
-; bash --login sources the MSYS2 profile so PATH is correct inside the script.
-Filename: "{#Msys2Dir}\usr\bin\bash.exe"; \
-  Parameters: "--login -c ""bash /tmp/re-setup.sh >> /tmp/re-setup.log 2>&1"""; \
-  Flags: waituntilterminated runhidden; \
+; Routed through run-bash.vbs so WScript.Shell.Run passes CREATE_NO_WINDOW to
+; bash, preventing the empty MSYS2 console window that SW_HIDE/runhidden alone
+; cannot suppress for Cygwin-family binaries.
+; wscript.exe is a GUI app so Inno Setup never shows a window for it.
+Filename: "wscript.exe"; \
+  Parameters: "//B //Nologo ""{#Msys2Dir}\tmp\run-bash.vbs"" ""bash /tmp/re-setup.sh >> /tmp/re-setup.log 2>&1"""; \
+  Flags: waituntilterminated; \
   StatusMsg: "Installing GTK and Python packages — this may take a few minutes..."
 
 ; ── Step 3: Run project data pipelines ────────────────────────────────────────
 ; Prepares DIS, HMONGMIEN, and POLYNESIAN example data.
-; The Windows app path is passed as $1; the script converts it via cygpath.
-Filename: "{#Msys2Dir}\usr\bin\bash.exe"; \
-  Parameters: "--login -c ""bash /tmp/run-pipelines.sh '{app}' >> /tmp/pipelines.log 2>&1"""; \
-  Flags: waituntilterminated runhidden; \
+; The Windows app path is passed via single quotes so cygpath can convert it.
+Filename: "wscript.exe"; \
+  Parameters: "//B //Nologo ""{#Msys2Dir}\tmp\run-bash.vbs"" ""bash /tmp/run-pipelines.sh '{app}' >> /tmp/pipelines.log 2>&1"""; \
+  Flags: waituntilterminated; \
   StatusMsg: "Preparing example project data..."
 
 [Icons]
