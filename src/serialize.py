@@ -162,14 +162,20 @@ def render_sets(forms, sets, languages, set_type):
         # we need to output the supporting forms in the order specified by "languages"
         unfrozenset = [x for x in form.supporting_forms]
         lglist = [x.language for x in form.supporting_forms]
+        emitted = set()
         for language in languages:
             try:
                 indices = [i for i, x in enumerate(lglist) if x == language]
                 for i in indices:
                     supporting_form = unfrozenset[i]
                     render_xml(sf, supporting_form, level + 1)
+                    emitted.add(i)
             except:
                 pass
+        # Emit any remaining forms (intermediate proto-languages not in the leaf languages list)
+        for i, supporting_form in enumerate(unfrozenset):
+            if i not in emitted:
+                render_xml(sf, supporting_form, level + 1)
         return
 
     def add_protoform_element(element, protoform):

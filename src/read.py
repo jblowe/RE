@@ -162,13 +162,17 @@ def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy
         proto_languages = {}
         for pl in upstream_map.keys():
             pl_recon_file = resolve_file(project_path, project_code, pl, '.correspondences.xml')
-            if pl_recon_file is None and recon_file is None:
-                raise Exception(f"both -t/--recon '{recon_token}' and --upstream '{pl}: ...'; were specified" +
-                                "but no .correspondences.xml file matched in {project_path}")
+            if pl_recon_file is not None:
+                # Each proto-language has its own correspondences file — use it.
+                print(f'using {pl} correspondences: {pl_recon_file}')
             elif recon_file is not None:
+                # Fall back to the -t/--recon file for this level.
                 pl_recon_file = recon_file
-                print(f'using -t/--recon {recon_token} for {recon_file}')
-                # raise Exception(f"Some other problem: got -t/--recon {recon_token} for {recon_file}, and proto-language '{pl}' in {project_path}")
+                print(f'using -t/--recon {recon_token} for {pl}: {recon_file}')
+            else:
+                raise Exception(
+                    f"No correspondences file found for proto-language '{pl}' in {project_path}. "
+                    f"Expected {project_code}.{pl}.correspondences.xml")
             proto_languages[pl] = pl_recon_file
     else:
         proto_language = read_protolanguage_from_correspondences(os.path.join(project_path, recon_file))
@@ -210,7 +214,7 @@ def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy
     upstream_graph = upstream_map if upstream_map is not None else {upstream_target: languages}
     downstream = []
     other = {
-        'title': f'{project_code} reconstruction ({recon_token})',
+        'title': f'{project_code} reconstruction ({recon_token or upstream_target})',
         'mels': {},
         'fuzzies': {},
         'reconstructions': {},

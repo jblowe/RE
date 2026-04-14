@@ -141,7 +141,9 @@ elif command_args.command == 'upstream':
     B.isolates = sorted(_isolates_dict.keys(), key=lambda x: x.language)
     B.failures = sorted(B.statistics.failed_parses, key=lambda x: x.language)
     sets_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.sets.xml')
-    RE.dump_xml_sets(B, settings.upstream[settings.upstream_target], sets_xml_file, args.only_with_mel)
+    intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
+    all_languages = intermediate_pls + list(settings.attested.keys())
+    RE.dump_xml_sets(B, all_languages, sets_xml_file, args.only_with_mel)
     # print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
     unique_sets = len({pf.supporting_forms for pf in B.forms})
     B.statistics.add_stat('isolates', len(B.isolates))
