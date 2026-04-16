@@ -128,7 +128,7 @@
           <td style="vertical-align:top; white-space:nowrap">
             <xsl:value-of select="@id"/>
           </td>
-          <td>
+          <td class="col-gloss">
             <xsl:for-each select="gl">
               <xsl:choose>
                 <xsl:when test="@uses = '0'">

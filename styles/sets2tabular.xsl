@@ -49,12 +49,12 @@
             <table class="table table-sm table-hover table-bordered sets sortable">
               <thead class="sticky-top top-0">
                 <tr>
-                  <th>num</th>
-                  <th>plg</th>
-                  <th>pfm</th>
+                  <th class="col-num">num</th>
+                  <th class="col-plg">plg</th>
+                  <th class="col-pfm">pfm</th>
                   <!-- th>pgl</th -->
-                  <th>rcn</th>
-                  <th>mel</th>
+                  <th class="col-rcn">rcn</th>
+                  <th class="col-mel">mel</th>
                   <xsl:apply-templates select=".//languages"/>
                 </tr>
               </thead>
@@ -82,22 +82,18 @@
     <xsl:param name="lgs"/>
     <xsl:for-each select=".//sets/set">
       <tr>
-        <td class="id">
+        <td class="col-num">
           <xsl:value-of select="id"/>
         </td>
 
         <xsl:choose>
           <xsl:when test="multi">
-            <td class="plg">
+            <td class="col-plg">
               <span class="">
                 <xsl:value-of select=".//plg"/>
               </span>
             </td>
-            <!-- td class="pfm">
-                <span class="multiple" title='
-                </span>
-            </td -->
-            <td class="pfm">
+            <td class="col-pfm">
               <span class="multiple">
                 <xsl:attribute name="title">
                   <xsl:for-each select=".//pfm">
@@ -110,7 +106,7 @@
                 <xsl:value-of select="multi/pfm"/>
               </span>
             </td>
-            <td class="rcn">
+            <td class="col-rcn">
               <span>
                 <xsl:attribute name="title">
                   <xsl:for-each select=".//rcn">
@@ -125,25 +121,25 @@
             </td>
           </xsl:when>
           <xsl:otherwise>
-            <td class="plg">
+            <td class="col-plg">
               <xsl:value-of select="plg"/>
             </td>
-            <td class="pfm">
+            <td class="col-pfm">
               <xsl:value-of select="pfm"/>
             </td>
-            <td class="rcn">
+            <td class="col-rcn">
               <xsl:value-of select="rcn"/>
             </td>
           </xsl:otherwise>
         </xsl:choose>
-        <td class="mel" title="{mel}">
+        <td class="col-mel" title="{mel}">
           <xsl:value-of select="melid"/>:
           <xsl:value-of select="substring-before(concat(mel, ',' ) , ',')"/>
         </td>
         <xsl:variable name="reflexes" select="sf"/>
         <xsl:for-each select="$lgs/*">
           <xsl:variable name="label" select="."/>
-          <td style="vertical-align:top">
+          <td class="col-lg" style="vertical-align:top">
             <!-- Leaf language reflexes: search at any depth -->
             <xsl:for-each select="$reflexes//rfx">
               <xsl:if test="lg = $label">
@@ -198,7 +194,7 @@
 
   <xsl:template match="languages">
     <xsl:for-each select="*">
-      <th>
+      <th class="col-lg">
         <xsl:value-of select="."/>
       </th>
     </xsl:for-each>

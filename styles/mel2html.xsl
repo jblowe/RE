@@ -98,7 +98,7 @@
             <td style="vertical-align: top">
                 <xsl:value-of select="@id"/>
             </td>
-            <td>
+            <td class="col-gloss">
                 <xsl:for-each select=".//gl">
                     <xsl:choose>
                     <xsl:when test="@pivot">

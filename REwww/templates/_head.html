@@ -47,17 +47,39 @@
        Tables fill the container width, columns size to content (auto layout)
        but never exceed 200px, and text wraps rather than overflowing.       */
     .content-area table {
-      width: 100%;
+      width: auto;
+      max-width: 100%;
     }
-    .content-area th,
-    .content-area td {
-      max-width: 200px;
+    .content-area th {
+      max-width: 240px;
       overflow-wrap: break-word;
-      word-break: break-word;
+      white-space: normal;
+    }
+    .content-area td {
+      max-width: 240px;
+      overflow-wrap: break-word;
+      /* break-all lets the table layout engine treat any token as breakable,
+         so long unspaced strings (correspondence IDs like c2.c194.c23.,
+         file paths, etc.) don't force columns to be unnecessarily wide. */
+      word-break: break-all;
       white-space: normal;
     }
     /* Projects table: keep project-name cells on one line */
     .projects-table .project-name { white-space: nowrap; }
+
+    /* ── Tabular sets: column sizing ──────────────────────────────────────────
+       Metadata columns are constrained so language-reflex columns get fair
+       space.  rcn uses break-all because correspondence IDs (c2.c194.c23.)
+       have no natural break points and would otherwise force a very wide
+       minimum cell width.                                                    */
+    .content-area .col-num  { width: 2.5rem; white-space: nowrap; }
+    .content-area .col-plg  { width: 3rem;   white-space: nowrap; }
+    .content-area .col-pfm  { min-width: 5rem; }
+    .content-area .col-rcn  { min-width: 5rem; word-break: break-all;
+                               font-size: 0.78rem; color: #555; }
+    .content-area .col-mel  { min-width: 10rem; }
+    .content-area .col-lg   { min-width: 4rem; max-width: 240px; }
+    .content-area .col-gloss { max-width: none; }
 
     /* ── Tabular sets: gloss visibility toggle (default: hidden) ── */
     #sets-content.glosses-hidden .rfx-gloss { display: none; }
