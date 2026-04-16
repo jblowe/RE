@@ -35,3 +35,21 @@ test:
 	# cd src ; bash ./testPROJECT.sh LOLOISH standard
 	# cd src ; bash ./testPROJECT.sh VANUATU standard
 
+benchmark:
+	echo 'starting benchmark `date`'
+
+	cd src ; bash ./testPROJECT.sh DIS standard
+	cd src ; bash ./testPROJECT.sh POLYNESIAN standard
+	# cd src ; bash ./testPROJECT.sh LOLOSH standard
+        # echo "Start of test: ROMANCE"
+	cd src ; python3 REcli.py upstream ROMANCE --run tree     -u "PIWR: PWR, it, scn; PWR: PIR, fr; PIR: es, pt, oldpt;"
+	cd src ; python3 REcli.py upstream ROMANCE --run mel      -u "PIWR: PWR, it, scn; PWR: PIR, fr; PIR: es, pt, oldpt" --mel hand -w
+        # echo "End of test: ROMANCE"
+	cd src ; bash ./testPROJECT.sh SLAVIC standard
+        # echo "Start of test: HMONGMIEN"
+	cd src ; python3 REcli.py upstream HMONGMIEN --run mel  --recon standard  --mel hand -w
+        # echo "End of test: HMONGMIEN"
+	# cd src ; bash ./testPROJECT.sh HMONGMIEN standard
+	cd src ; bash ./testPROJECT.sh DEMO93 C794DEM
+	cd src ; python3 REcli.py upstream TGTM --run mel  --recon C796 --mel hand -w
+
