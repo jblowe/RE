@@ -7,12 +7,41 @@ import threading
 import sys
 import serialize
 import os
+import json
 import load_hooks
 import projects
 import checkpoint
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import traceback
+
+# ── Per-project UI settings (recon/mel/fuzzy/upstream) ───────────────────────
+# Saved next to projects.toml as re_settings.json so they survive restarts.
+
+_SETTINGS_FILE = os.path.normpath(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 're_settings.json'))
+
+def _load_ui_settings() -> dict:
+    try:
+        with open(_SETTINGS_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def _save_ui_settings(data: dict) -> None:
+    try:
+        with open(_SETTINGS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2)
+    except Exception as e:
+        print(f'Could not save UI settings: {e}')
+
+def load_project_ui_settings(project: str) -> dict:
+    return _load_ui_settings().get(project, {})
+
+def save_project_ui_settings(project: str, recon, mel, fuzzy, upstream) -> None:
+    data = _load_ui_settings()
+    data[project] = {'recon': recon, 'mel': mel, 'fuzzy': fuzzy, 'upstream': upstream}
+    _save_ui_settings(data)
 import itertools
 import collections
 from utils import natural_sort_key, find_candidates
@@ -102,9 +131,21 @@ class ProjectManagerDialog(Gtk.Dialog):
             self.fuzzy_combo.append_text('N/A')
             for fuzzy in fuzzies:
                 self.fuzzy_combo.append_text(fuzzy)
+            # Defaults (overridden below if saved settings exist)
             self.mel_combo.set_active(0)                      # default N/A
             self.recon_combo.set_active(1 if recons else 0)   # default first recon if present
             self.fuzzy_combo.set_active(0)                    # default N/A
+            self.upstream_entry.set_text('')
+            # Restore last-used settings for this project
+            saved = load_project_ui_settings(project)
+            if saved.get('recon') and saved['recon'] in recons:
+                self.recon_combo.set_active(recons.index(saved['recon']) + 1)
+            if saved.get('mel') and saved['mel'] in mels:
+                self.mel_combo.set_active(mels.index(saved['mel']) + 1)
+            if saved.get('fuzzy') and saved['fuzzy'] in fuzzies:
+                self.fuzzy_combo.set_active(fuzzies.index(saved['fuzzy']) + 1)
+            if saved.get('upstream'):
+                self.upstream_entry.set_text(saved['upstream'])
         except Exception as e:
             print("Could not parse mel/recon/fuzzy options from", project_file, e)
 
@@ -1738,6 +1779,12 @@ class REWindow(Gtk.Window):
 
         project = selection['project']
         self.project = project
+        # Persist the chosen settings so they are pre-filled next time
+        save_project_ui_settings(project,
+                                 recon=selection['recon'],
+                                 mel=selection['mel'],
+                                 fuzzy=selection['fuzzy'],
+                                 upstream=selection['upstream'])
         settings = read.read_settings(projects.projects[project], project,
                                            selection['recon'],
                                            mel_token=selection['mel'],
