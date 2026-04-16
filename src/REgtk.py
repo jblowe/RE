@@ -7,7 +7,11 @@ import threading
 import sys
 import serialize
 import os
-import json
+try:
+    import tomllib
+except ImportError:
+    import tomli as tomllib
+import tomli_w
 import load_hooks
 import projects
 import checkpoint
@@ -16,22 +20,22 @@ import xml.etree.ElementTree as ET
 import traceback
 
 # ── Per-project UI settings (recon/mel/fuzzy/upstream) ───────────────────────
-# Saved next to projects.toml as re_settings.json so they survive restarts.
+# Saved next to projects.toml as re_settings.toml so they survive restarts.
 
 _SETTINGS_FILE = os.path.normpath(
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 're_settings.json'))
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 're_settings.toml'))
 
 def _load_ui_settings() -> dict:
     try:
-        with open(_SETTINGS_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        with open(_SETTINGS_FILE, 'rb') as f:
+            return tomllib.load(f)
     except Exception:
         return {}
 
 def _save_ui_settings(data: dict) -> None:
     try:
-        with open(_SETTINGS_FILE, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2)
+        with open(_SETTINGS_FILE, 'wb') as f:
+            tomli_w.dump(data, f)
     except Exception as e:
         print(f'Could not save UI settings: {e}')
 
@@ -40,7 +44,13 @@ def load_project_ui_settings(project: str) -> dict:
 
 def save_project_ui_settings(project: str, recon, mel, fuzzy, upstream) -> None:
     data = _load_ui_settings()
-    data[project] = {'recon': recon, 'mel': mel, 'fuzzy': fuzzy, 'upstream': upstream}
+    # TOML doesn't support null; store None as empty string, restore on load
+    data[project] = {
+        'recon':    recon    or '',
+        'mel':      mel      or '',
+        'fuzzy':    fuzzy    or '',
+        'upstream': upstream or '',
+    }
     _save_ui_settings(data)
 import itertools
 import collections
