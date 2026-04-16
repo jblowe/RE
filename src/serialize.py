@@ -509,6 +509,7 @@ def serialize_isolates_and_failures(re_items, re_element, item_name):
 def serialize_isolates_dict(isolates_dict, re_element):
     """Serialize isolates with pfm/rcn from the dict returned by extract_isolates."""
     ET.SubElement(re_element, 'createdat').text = run_date
+    print(f'number of "isolates" {len(isolates_dict)}')
     for number, (form, proto_forms) in enumerate(
             sorted(isolates_dict.items(), key=lambda x: x[0].language)):
         rfx = ET.SubElement(re_element, 'rfx')
