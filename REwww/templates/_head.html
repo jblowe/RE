@@ -51,17 +51,13 @@
       max-width: 100%;
     }
     .content-area th {
-      max-width: 240px;
+      max-width: 300px;
       overflow-wrap: break-word;
       white-space: normal;
     }
     .content-area td {
-      max-width: 240px;
+      max-width: 300px;
       overflow-wrap: break-word;
-      /* break-all lets the table layout engine treat any token as breakable,
-         so long unspaced strings (correspondence IDs like c2.c194.c23.,
-         file paths, etc.) don't force columns to be unnecessarily wide. */
-      word-break: break-all;
       white-space: normal;
     }
     /* Projects table: keep project-name cells on one line */
@@ -89,6 +85,12 @@
     .nav-tabs .nav-link.active { color: #EC5800; border-top-color: #EC5800; }
     .nav-tabs .nav-link:not(.disabled):not(.active):hover { color: #c44a00; }
 
+
+    /* ── Lexicons pane: per-language sub-tab bar ── */
+    .lexicons-lang-tabs { margin-top: .25rem; font-size: 0.8rem; flex-wrap: wrap; }
+    .lexicons-lang-tabs .nav-link { padding: .2rem .6rem; }
+    /* content area sits flush below the sub-tab border */
+    #tab-lexicons .content-area { border-top: none; margin-top: 0; }
 
     /* ── Theme: XSL section headings ── */
     .content-area h5, .content-area h6 {

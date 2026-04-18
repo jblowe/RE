@@ -368,11 +368,13 @@ document.getElementById('main-tab-content').addEventListener('click', function (
    data must have: has_mel, has_fuzzy, has_coverage
    ══════════════════════════════════════════════════════════════════════════ */
 function handleRunDone(data) {
-  const always = ['parameters', 'sets', 'stats', 'lexicons'];
+  const always = ['parameters', 'sets', 'stats'];
   always.forEach(t => {
     setTabEnabled(`tab-${t}-nav`, true);
     loadTabContent(t, modes[t] || 'paragraph');
   });
+  setTabEnabled('tab-lexicons-nav', true);
+  loadLexiconTabs();
   document.getElementById('btn-freq-parameters').style.display = '';
   document.getElementById('btn-edit-parameters').style.display = '';
 
@@ -445,6 +447,59 @@ function doPoll() {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
+   Lexicons — per-language sub-tabs (lazy loaded on demand)
+   ══════════════════════════════════════════════════════════════════════════ */
+function loadLexiconTabs() {
+  if (!currentRunId) return;
+  const nav     = document.getElementById('lexicons-lang-tabs');
+  const content = document.getElementById('lexicons-content');
+  nav.innerHTML     = '';
+  content.innerHTML = `<p class="text-muted">${spinnerHtml()} Loading languages…</p>`;
+
+  fetch(`/api/lexicon_langs/${currentRunId}`)
+    .then(r => r.json())
+    .then(data => {
+      const langs = data.languages || [];
+      if (!langs.length) {
+        content.innerHTML = '<p class="text-muted">No lexicons.</p>';
+        return;
+      }
+      langs.forEach((lg, i) => {
+        const li = document.createElement('li');
+        li.className = 'nav-item';
+        const a = document.createElement('a');
+        a.className = 'nav-link' + (i === 0 ? ' active' : '');
+        a.href = '#';
+        a.dataset.lang = lg;
+        a.textContent = lg;
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          nav.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          loadLexiconLang(lg);
+        });
+        li.appendChild(a);
+        nav.appendChild(li);
+      });
+      loadLexiconLang(langs[0]);
+    })
+    .catch(e => {
+      content.innerHTML = `<p class="text-danger">Error loading languages: ${e}</p>`;
+    });
+}
+
+function loadLexiconLang(lang) {
+  if (!currentRunId) return;
+  const mode    = modes.lexicons || 'paragraph';
+  const content = document.getElementById('lexicons-content');
+  content.innerHTML = `<p class="text-muted">${spinnerHtml()} Loading…</p>`;
+  fetch(`/api/tab/${currentRunId}/lexicons?mode=${mode}&lang=${encodeURIComponent(lang)}`)
+    .then(r => r.text())
+    .then(html => { content.innerHTML = html; })
+    .catch(e  => { content.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
    Mode toggles  (Sets / Lexicons paragraph ↔ tabular)
    ══════════════════════════════════════════════════════════════════════════ */
 function setupModeToggle(groupId, tab) {
@@ -458,8 +513,19 @@ function setupModeToggle(groupId, tab) {
     });
   });
 }
-setupModeToggle('sets-mode-btns',     'sets');
-setupModeToggle('lexicons-mode-btns', 'lexicons');
+setupModeToggle('sets-mode-btns', 'sets');
+
+/* Lexicons mode toggle — reloads whichever language sub-tab is active */
+document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('#lexicons-mode-btns button')
+            .forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    modes.lexicons = this.dataset.mode;
+    const activeLink = document.querySelector('#lexicons-lang-tabs .nav-link.active');
+    if (activeLink) loadLexiconLang(activeLink.dataset.lang);
+  });
+});
 
 /* ══════════════════════════════════════════════════════════════════════════
    Tabular sets: Show / Hide glosses toggle
@@ -989,6 +1055,7 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     activateTab(targetId);
     const tabName = targetId.replace(/^tab-/, '');
     if (tabName === 'projects' || tabName === 'log' || tabName === 'compare' || !currentRunId) return;
+    if (tabName === 'lexicons') return;  // sub-tabs manage their own content
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
     if (saveBtn && saveBtn.style.display !== 'none') return;
     loadTabContent(tabName, modes[tabName] || 'paragraph');

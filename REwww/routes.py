@@ -272,6 +272,19 @@ def api_poll(run_id):
     )
 
 
+# ── Lexicon language list ──────────────────────────────────────────────────────
+
+@bp.route('/api/lexicon_langs/<run_id>')
+def api_lexicon_langs(run_id):
+    """Return the sorted list of languages available for a completed run."""
+    with _runs_lock:
+        r = _runs.get(run_id)
+    if r is None:
+        return jsonify(error='unknown run'), 404
+    languages = sorted(r['files'].get('data', {}).keys())
+    return jsonify(languages=languages)
+
+
 # ── Tab content ────────────────────────────────────────────────────────────────
 
 @bp.route('/api/tab/<run_id>/<tab>')
@@ -329,10 +342,17 @@ def api_tab(run_id, tab):
 
     if tab == 'lexicons':
         ss = 'lexicon2html.xsl' if mode == 'paragraph' else 'lexicon2table.xsl'
+        data_files = files.get('data', {})
+        lang = request.args.get('lang')
+        if lang:
+            path = data_files.get(lang)
+            if not path:
+                return f'<p class="text-danger">Language not found: {lang}</p>', 404
+            return xslt.xml_to_html(path, ss)
+        # fallback: all languages at once (backward compat)
         parts = []
-        for lg, path in sorted(files.get('data', {}).items()):
-            parts.append(
-                f'<h5 class="mt-3 mb-1 border-bottom pb-1 text-primary">{lg}</h5>')
+        for lg, path in sorted(data_files.items()):
+            parts.append(f'<h5 class="mt-3 mb-1 border-bottom pb-1">{lg}</h5>')
             parts.append(xslt.xml_to_html(path, ss))
         return '\n'.join(parts) or '<p class="text-muted">No lexicons.</p>'
 

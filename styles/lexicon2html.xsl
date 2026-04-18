@@ -11,10 +11,6 @@
             <head>
             </head>
             <body>
-                <a name="{@dialecte}"/>
-                <h5>
-                    <xsl:value-of select="@dialecte"/>
-                </h5>
                 <div style="float: left; width:60px;">
                     <b>n =
                         <xsl:value-of select="count(lexicon/entry)"/>
