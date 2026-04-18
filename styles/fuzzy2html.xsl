@@ -25,13 +25,12 @@
     </xsl:template>
 
     <xsl:template match="fuzzy">
-        <table class="table table-sm table-striped sortable"
-               style="table-layout:fixed; width:100%; min-width:0">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
-                    <th style="width:10%">Language</th>
-                    <th style="width:70%">Input data values</th>
-                    <th style="width:20%">Fuzzied value</th>
+                    <th>Language</th>
+                    <th>Input data values</th>
+                    <th>Fuzzied value</th>
                 </tr>
             </thead>
             <xsl:for-each select="./*">

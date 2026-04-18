@@ -31,17 +31,17 @@
 		<xsl:if test="parameters/canon">
 			<tr>
 				<td><b>Syllable canon</b></td>
-			<td>
-				<xsl:value-of select="parameters/canon/@value"/>
-			</td>
+				<td class="col-gloss">
+					<xsl:value-of select="parameters/canon/@value"/>
+				</td>
 			</tr>
 		</xsl:if>
 		<xsl:if test="parameters/context_match_type">
 			<tr>
 				<td><b>Context match type</b></td>
-			<td>
-				<xsl:value-of select="parameters/context_match_type/@value"/>
-			</td>
+				<td class="col-gloss">
+					<xsl:value-of select="parameters/context_match_type/@value"/>
+				</td>
 			</tr>
 		</xsl:if>
 		</table>
@@ -58,7 +58,7 @@
 		<xsl:for-each select="parameters/class">
 			<tr>
 				<td><xsl:value-of select="@name"/></td>
-				<td><xsl:value-of select="@value"/></td>
+				<td class="col-gloss"><xsl:value-of select="@value"/></td>
 			</tr>
 		</xsl:for-each>
 		</table>

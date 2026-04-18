@@ -101,7 +101,7 @@
             <xsl:for-each select="./*">
                 <tr>
                     <td><xsl:value-of select ="name(.)"/></td>
-                    <td><xsl:value-of select ="@value"/></td>
+                    <td class="col-gloss"><xsl:value-of select ="@value"/></td>
                 </tr>
             </xsl:for-each>
         </table>

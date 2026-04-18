@@ -5,6 +5,8 @@
                 xmlns:re="http://exslt.org/re"
 >
 
+  <xsl:include href="sets-isolates-failures.xsl"/>
+
   <xsl:output
           method="html"
           indent="yes"
@@ -198,68 +200,6 @@
         <xsl:value-of select="."/>
       </th>
     </xsl:for-each>
-  </xsl:template>
-
-  <xsl:template match="isolates">
-    <a name="isolates"/>
-    <h5>Isolates
-      <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
-        n = <xsl:value-of select="count(rfx)"/>
-      </small>
-    </h5>
-    <table class="table table-sm table-striped table-hover table-bordered sortable">
-      <thead>
-        <tr>
-          <th>lg</th>
-          <th>lx</th>
-          <th>gl</th>
-          <th>pfm</th>
-          <th>rcn</th>
-          <th>id</th>
-        </tr>
-      </thead>
-      <tbody>
-        <xsl:for-each select="rfx">
-          <tr>
-            <td><xsl:value-of select="lg"/></td>
-            <td><xsl:value-of select="lx"/></td>
-            <td><xsl:value-of select="gl"/></td>
-            <td><xsl:value-of select="pfm"/></td>
-            <td><xsl:value-of select="rcn"/></td>
-            <td><xsl:value-of select="@id"/></td>
-          </tr>
-        </xsl:for-each>
-      </tbody>
-    </table>
-  </xsl:template>
-
-  <xsl:template match="failures">
-    <a name="failures"/>
-    <h5>Failures
-      <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
-        n = <xsl:value-of select="count(rfx)"/>
-      </small>
-    </h5>
-    <table class="table table-sm table-striped table-hover table-bordered sortable">
-      <thead>
-        <tr>
-          <th>lg</th>
-          <th>lx</th>
-          <th>gl</th>
-          <th>id</th>
-        </tr>
-      </thead>
-      <tbody>
-        <xsl:for-each select="rfx">
-          <tr>
-            <td><xsl:value-of select="lg"/></td>
-            <td><xsl:value-of select="lx"/></td>
-            <td><xsl:value-of select="gl"/></td>
-            <td><xsl:value-of select="@id"/></td>
-          </tr>
-        </xsl:for-each>
-      </tbody>
-    </table>
   </xsl:template>
 
   <xsl:template match="set" name="set">
