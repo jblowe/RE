@@ -124,6 +124,9 @@ def api_run():
         old_stdout = sys.stdout
         sys.stdout = _Tee(old_stdout)
         try:
+            runs_dir = os.path.join(project_path, 'runs')
+            os.makedirs(runs_dir, exist_ok=True)
+
             load_hooks.load_hook(project_path)
             settings = read.read_settings(
                 project_path, project, recon,
@@ -146,7 +149,7 @@ def api_run():
                 B.statistics.failed_parses, key=lambda x: x.language)
 
             sets_xml = os.path.join(
-                project_path, f'{project}.{run_name}.sets.xml')
+                runs_dir, f'{project}.{run_name}.sets.xml')
             intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
             all_languages = intermediate_pls + list(settings.attested.keys())
             RE.dump_xml_sets(
@@ -161,7 +164,7 @@ def api_run():
             B.statistics.add_stat('sets',     unique_sets)
 
             stats_xml = os.path.join(
-                project_path,
+                runs_dir,
                 f'{project}.{run_name}.upstream.statistics.xml')
 
             args_ns = SimpleNamespace(
@@ -179,12 +182,12 @@ def api_run():
                 import coverage as re_coverage
                 cov_stats = re_coverage.check_mel_coverage(settings)
                 coverage_xml = os.path.join(
-                    project_path, f'{project}.{run_name}.coverage.xml')
+                    runs_dir, f'{project}.{run_name}.coverage.xml')
                 serialize.serialize_stats(cov_stats, settings, args_ns, coverage_xml)
 
             # ── Write run log to disk ─────────────────────────────────────
             log_txt = os.path.join(
-                project_path, f'{project}.{run_name}.log.txt')
+                runs_dir, f'{project}.{run_name}.log.txt')
             try:
                 with open(log_txt, 'w', encoding='utf-8') as fh:
                     fh.write('\n'.join(run_info['log']))

@@ -43,9 +43,11 @@ if command_args.command == 'coverage':
                                             fuzzy_token=None,
                                             languages=None)
     coverage_statistics = coverage.check_mel_coverage(settings)
-    coverage_xml_file = os.path.join(args.project_path, f'{args.project}.{args.mel_name}.coverage.statistics.xml')
+    runs_dir = os.path.join(args.project_path, 'runs')
+    os.makedirs(runs_dir, exist_ok=True)
+    coverage_xml_file = os.path.join(runs_dir, f'{args.project}.{args.mel_name}.coverage.statistics.xml')
     args.run = args.mel_name
-    extra_mel_xml_file = os.path.join(args.project_path, f'{args.project}.{args.mel_name}-extra.mel.xml')
+    extra_mel_xml_file = os.path.join(runs_dir, f'{args.project}.{args.mel_name}-extra.mel.xml')
     serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
     serialize.serialize_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
 elif command_args.command == 'analyze-glosses':
@@ -104,7 +106,9 @@ elif command_args.command == 'compare' or command_args.command == 'diff':
     evaluation_stats = RE.compare_proto_lexicons(B1, B2, settings.upstream[settings.upstream_target])
     evaluation_stats['set_1'] = (f'{args.project}.{args.run1}', 'string')
     evaluation_stats['set_2'] = (f'{args.project}.{args.run2}', 'string')
-    evaluation_xml_file = os.path.join(args.project_path, f'{args.project}.{both}.evaluation.statistics.xml')
+    runs_dir = os.path.join(args.project_path, 'runs')
+    os.makedirs(runs_dir, exist_ok=True)
+    evaluation_xml_file = os.path.join(runs_dir, f'{args.project}.{both}.evaluation.statistics.xml')
     serialize.serialize_evaluation(evaluation_stats, evaluation_xml_file, settings.upstream[settings.upstream_target])
 
     # make comparisons if there are things to compare
@@ -125,10 +129,12 @@ elif command_args.command == 'upstream':
     mel_status = 'strict MELs' if args.only_with_mel else 'MELs not enforced'
     print(mel_status)
     B = RE.batch_all_upstream(settings, only_with_mel=args.only_with_mel)
-    keys_file = os.path.join(args.project_path, f'{args.project}.{args.run}.keys.csv')
+    runs_dir = os.path.join(args.project_path, 'runs')
+    os.makedirs(runs_dir, exist_ok=True)
+    keys_file = os.path.join(runs_dir, f'{args.project}.{args.run}.keys.csv')
     RE.dump_keys(B, keys_file)
     print(f'wrote {len(B.statistics.keys)} keys and {len(B.statistics.failed_parses)} failures to {keys_file}')
-    sets_file = os.path.join(args.project_path, f'{args.project}.{args.run}.sets.txt')
+    sets_file = os.path.join(runs_dir, f'{args.project}.{args.run}.sets.txt')
     RE.dump_sets(B, sets_file)
     # print(f'wrote {len(B.forms)} text sets to {sets_file}')
     correspondences_used = 0
@@ -140,7 +146,7 @@ elif command_args.command == 'upstream':
     B.isolates_dict = _isolates_dict
     B.isolates = sorted(_isolates_dict.keys(), key=lambda x: x.language)
     B.failures = sorted(B.statistics.failed_parses, key=lambda x: x.language)
-    sets_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.sets.xml')
+    sets_xml_file = os.path.join(runs_dir, f'{args.project}.{args.run}.sets.xml')
     intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
     all_languages = intermediate_pls + list(settings.attested.keys())
     RE.dump_xml_sets(B, all_languages, sets_xml_file, args.only_with_mel)
@@ -150,12 +156,12 @@ elif command_args.command == 'upstream':
     B.statistics.add_stat('failure', len(B.failures))
     B.statistics.add_stat('sets', unique_sets)
     B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures)},{B.statistics.summary_stats["reflexes"]}')
-    stats_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.upstream.statistics.xml')
+    stats_xml_file = os.path.join(runs_dir, f'{args.project}.{args.run}.upstream.statistics.xml')
     serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
 
     if getattr(settings, 'mel_filename', None):
         coverage_statistics = coverage.check_mel_coverage(settings)
-        coverage_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.coverage.xml')
+        coverage_xml_file = os.path.join(runs_dir, f'{args.project}.{args.run}.coverage.xml')
         serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
         print(f'wrote coverage report to {coverage_xml_file}')
 
