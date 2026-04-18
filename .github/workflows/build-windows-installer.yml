@@ -57,9 +57,9 @@ jobs:
       - name: Upload installer as workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: RE-setup-windows
+          name: RE2
           path: installer/dist/RE-setup.exe
-          retention-days: 30
+          retention-days: 90
 
       # Attach to GitHub Release when triggered by a tag push
       - name: Attach installer to GitHub Release
