@@ -1,0 +1,7 @@
+# projects configuration
+DIS = "projects/DIS"
+HMONGMIEN = "projects/HMONGMIEN"
+LOLOISH = "projects/LOLOISH"
+POLYNESIAN = "projects/POLYNESIAN"
+ROMANCE = "projects/ROMANCE"
+SLAVIC = "projects/SLAVIC"

@@ -107,6 +107,6 @@ with open(f'{sys.argv[2]}.correspondences.csv', "w", newline="", encoding="utf-8
         for i, segments in enumerate(merged_corrs):
             segments = [s if s else '?' for s in segments]
             proto_constituent = majority_rules(segments).upper()
-            toc_left_side = [f'{str(n + i)}', '1', f'{slot}', f'{proto_constituent}', '?']
+            toc_left_side = [f'{str(n + i)}', '1', f'{slot}', f'{proto_constituent}', '']
             w.writerow(toc_left_side + segments)
         n += i

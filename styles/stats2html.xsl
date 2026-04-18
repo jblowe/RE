@@ -63,7 +63,7 @@
         <h6><span class="fas fa-angle-double-down"/>Table of Overlaps</h6>
         <div style="display: inline;">
             <div class="p-2">
-                <table class="table-sm table-striped sortable">
+                <table class="table table-sm table-striped sortable">
                     <thead>
                         <xsl:copy-of select="header/*"/>
                     </thead>
@@ -91,7 +91,7 @@
 
     <xsl:template match="totals" mode="summary">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -118,7 +118,7 @@
 
     <xsl:template match="lexicons">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>language</th>
@@ -150,7 +150,7 @@
 
     <xsl:template match="correspondences">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>correspondence</th>
@@ -169,7 +169,7 @@
 
     <xsl:template match="settings">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>Setting</th>

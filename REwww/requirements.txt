@@ -1,5 +1,2 @@
-bottle
-regex
-matplotlib_venn
-lxml
-
+flask>=2.3
+lxml>=4.9

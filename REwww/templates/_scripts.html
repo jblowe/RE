@@ -1,0 +1,997 @@
+<!-- ── Scripts ──────────────────────────────────────────────────────────────── -->
+<script src="/static/asset/js/jquery.min.js"></script>
+<script src="/static/asset/js/popper.min.js"></script>
+<script src="/static/asset/js/bootstrap.min.js"></script>
+
+<!-- ── Table sorter (replaces broken bootstrap-sortable) ──────────────────── -->
+<style>
+  table.sortable thead th { cursor: pointer; user-select: none; white-space: nowrap; }
+  table.sortable thead th::after { content: ' \00a0\25bd'; opacity: 0.35; font-size: .7em; }
+  table.sortable thead th.sort-asc::after  { content: ' \25b2'; opacity: 1; }
+  table.sortable thead th.sort-desc::after { content: ' \25bc'; opacity: 1; }
+</style>
+<script>
+/* Vanilla table sorter — works on any table.sortable, including dynamically
+   injected content, via event delegation on document.               */
+(function () {
+  function cellText(tr, col) {
+    const td = tr.cells[col];
+    return td ? td.textContent.trim() : '';
+  }
+  function sortTable(th) {
+    const table = th.closest('table');
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+    const col     = th.cellIndex;
+    const wasAsc  = th.classList.contains('sort-asc');
+    const asc     = !wasAsc;
+    table.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
+    th.classList.add(asc ? 'sort-asc' : 'sort-desc');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    rows.sort((a, b) => {
+      const av = cellText(a, col), bv = cellText(b, col);
+      const an = parseFloat(av), bn = parseFloat(bv);
+      if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+      return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+    });
+    rows.forEach(r => tbody.appendChild(r));
+  }
+  document.addEventListener('click', function (e) {
+    const th = e.target.closest('table.sortable thead th');
+    if (th) sortTable(th);
+  });
+})();
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════════
+   State
+   ══════════════════════════════════════════════════════════════════════════ */
+let currentRunId   = null;
+let currentRunName = null;
+let currentProject = null;
+let pollTimer      = null;
+let logLinesShown  = 0;
+
+/* ── About panel toggle ── */
+function showAbout() {
+  const showing = document.getElementById('about-panel').style.display !== 'none';
+  document.getElementById('about-panel').style.display  = showing ? 'none'  : 'block';
+  document.getElementById('main-content').style.display = showing ? 'block' : 'none';
+  document.getElementById('nav-about-btn').textContent  = showing ? 'About' : '← Back';
+}
+
+/* Current display modes */
+const modes = { sets: 'tabular', lexicons: 'paragraph' };
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Utility helpers
+   ══════════════════════════════════════════════════════════════════════════ */
+function setTabEnabled(tabNavId, enabled) {
+  const link = document.getElementById(tabNavId);
+  if (!link) return;
+  if (enabled) link.classList.remove('disabled');
+  else         link.classList.add('disabled');
+}
+
+/* Custom tab switcher — avoids Bootstrap tab plugin quirks with
+   dynamically-enabled tabs.  All nav links carry data-re-tab (not
+   data-toggle="tab") so Bootstrap never intercepts them. */
+function activateTab(targetId) {
+  document.querySelectorAll('#main-tabs .nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === '#' + targetId) link.classList.add('active');
+    else                         link.classList.remove('active');
+  });
+  document.querySelectorAll('#main-tab-content .tab-pane').forEach(pane => {
+    if (pane.id === targetId) pane.classList.add('show', 'active');
+    else                      pane.classList.remove('show', 'active');
+  });
+}
+
+function spinnerHtml() {
+  return '<span class="spinner-border spinner-border-sm spinner-sm mr-1"></span>';
+}
+
+function basename(path) {
+  return path ? String(path).split(/[/\\]/).pop() : '';
+}
+
+function loadTabContent(tab, mode) {
+  if (!currentRunId) return;
+  const url = `/api/tab/${currentRunId}/${tab}?mode=${mode || 'paragraph'}`;
+  const viewEl = document.getElementById(`${tab}-view-content`)
+              || document.getElementById(`${tab}-content`);
+  if (!viewEl) return;
+  viewEl.innerHTML = `<p class="text-muted">${spinnerHtml()}Loading…</p>`;
+  fetch(url)
+    .then(r => r.text())
+    .then(html => { viewEl.innerHTML = html; })
+    .catch(e  => { viewEl.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Log helpers
+   ══════════════════════════════════════════════════════════════════════════ */
+function appendLog(lines) {
+  if (!lines.length) return;
+  const el = document.getElementById('run-log');
+  el.textContent += lines.join('\n') + '\n';
+  el.scrollTop = el.scrollHeight;
+}
+
+function setRunStatusBadge(text, cls) {
+  const badge = document.getElementById('run-status-badge');
+  badge.textContent = text;
+  badge.className = `badge ml-1 badge-${cls}`;
+}
+
+/* Re-execute <script> tags that were injected via innerHTML
+   (browsers do not run scripts injected that way). */
+function reExecuteScripts(container) {
+  container.querySelectorAll('script').forEach(oldScript => {
+    const s = document.createElement('script');
+    s.textContent = oldScript.textContent;
+    document.head.appendChild(s);
+    document.head.removeChild(s);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Run button  (event-delegated so newly-rebuilt rows also work)
+   ══════════════════════════════════════════════════════════════════════════ */
+document.getElementById('main-tab-content').addEventListener('click', function (e) {
+  /* History-panel buttons — handled before run-btn so we can return early */
+  const histBtn = e.target.closest('.hist-btn');
+  if (histBtn) { toggleHistory(histBtn.dataset.project); return; }
+
+  const loadBtn = e.target.closest('.hist-load-btn');
+  if (loadBtn) { loadHistRun(loadBtn.dataset.runId, loadBtn.dataset.project); return; }
+
+  const cmpBtn = e.target.closest('.hist-compare-btn');
+  if (cmpBtn) { doCompare(cmpBtn.dataset.project); return; }
+
+  const delBtn = e.target.closest('.hist-delete-btn');
+  if (delBtn) { deleteRun(delBtn.dataset.runId, delBtn.dataset.project); return; }
+
+  const btn = e.target.closest('.run-btn');
+  if (!btn) return;
+
+  const project  = btn.dataset.project;
+  const recon    = document.getElementById(`sel-recon-${project}`).value    || null;
+  const mel      = document.getElementById(`sel-mel-${project}`).value      || null;
+  const fuzzy    = document.getElementById(`sel-fuzzy-${project}`).value    || null;
+  const upstream = document.getElementById(`inp-upstream-${project}`).value.trim() || null;
+
+  currentProject = project;
+
+  document.querySelectorAll('.run-btn').forEach(b => b.disabled = true);
+
+  document.getElementById('nav-log').style.display = '';
+  document.getElementById('run-log').textContent = '';
+  logLinesShown = 0;
+  setRunStatusBadge('running', 'running');
+  activateTab('tab-log');
+
+  fetch('/api/run', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ project, recon, mel, fuzzy, upstream }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) {
+      alert(`Server error: ${data.error}`);
+      document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+      return;
+    }
+    currentRunId   = data.run_id;
+    currentRunName = data.run_name;
+    /* Build a compact but informative run badge from the selected parameters. */
+    (function() {
+      const parts = [`project ${project}`];
+      if (data.recon)    parts.push(`ToC: ${data.recon}`);
+      if (data.mel)      parts.push(`MEL: ${data.mel}`);
+      if (data.fuzzy)    parts.push(`fuzzy: ${data.fuzzy}`);
+      if (data.upstream) parts.push(`↑ ${data.upstream}`);
+      document.getElementById('run-badge').textContent = parts.join('  ·  ');
+    })();
+
+    ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
+     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
+      .forEach(id => setTabEnabled(id, false));
+
+    document.getElementById('nav-mel').style.display      = 'none';
+    document.getElementById('nav-fuzzy').style.display    = 'none';
+    document.getElementById('nav-coverage').style.display = 'none';
+    document.getElementById('nav-compare').style.display  = 'none';
+    setTabEnabled('tab-compare-nav', false);
+
+    startPolling();
+  })
+  .catch(err => {
+    alert(`Failed to start run: ${err}`);
+    document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+  });
+});
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Projects Refresh button — re-scans project directories and rebuilds rows
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupProjectsRefresh() {
+  const btn = document.getElementById('btn-refresh-projects');
+  if (!btn) return;
+
+  // ── localStorage helpers (keyed by project name + field) ──────────────────
+  const lsKey = (project, field) => `re:${project}:${field}`;
+  const lsGet = (project, field) => localStorage.getItem(lsKey(project, field));
+  const lsSet = (project, field, val) => {
+    if (val) localStorage.setItem(lsKey(project, field), val);
+    else      localStorage.removeItem(lsKey(project, field));
+  };
+
+  function makeSelect(id, tokens, optional, project, field) {
+    const sel = document.createElement('select');
+    sel.className = 'form-control form-control-sm';
+    sel.id = id;
+    if (!tokens || tokens.length === 0) {
+      const opt = document.createElement('option');
+      opt.value = '';
+      opt.textContent = '— none found —';
+      sel.appendChild(opt);
+    } else {
+      if (optional) {
+        const opt = document.createElement('option');
+        opt.value = '';
+        opt.textContent = 'N/A';
+        sel.appendChild(opt);
+      }
+      tokens.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        sel.appendChild(opt);
+      });
+    }
+    // Restore last-used value from localStorage (if still a valid option)
+    if (project && field) {
+      const saved = lsGet(project, field);
+      if (saved && [...sel.options].some(o => o.value === saved)) sel.value = saved;
+      sel.addEventListener('change', () => lsSet(project, field, sel.value));
+    }
+    return sel;
+  }
+
+  function rebuildProjectsTable(data) {
+    const tbody = document.querySelector('#projects-view .projects-table tbody');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    Object.entries(data).sort((a,b) => a[0].localeCompare(b[0])).forEach(([name, info]) => {
+      const tr = document.createElement('tr');
+      tr.id = `proj-row-${name}`;
+      tr.dataset.projectPath = info.path;
+
+      const tdName = document.createElement('td');
+      tdName.className = 'project-name align-middle';
+      tdName.textContent = name;
+      tr.appendChild(tdName);
+
+      const tdRecon = document.createElement('td');
+      tdRecon.appendChild(makeSelect(`sel-recon-${name}`, info.recons, false, name, 'recon'));
+      tr.appendChild(tdRecon);
+
+      const tdMel = document.createElement('td');
+      tdMel.appendChild(makeSelect(`sel-mel-${name}`, info.mels, true, name, 'mel'));
+      tr.appendChild(tdMel);
+
+      const tdFuzzy = document.createElement('td');
+      tdFuzzy.appendChild(makeSelect(`sel-fuzzy-${name}`, info.fuzzies, true, name, 'fuzzy'));
+      tr.appendChild(tdFuzzy);
+
+      const tdUp = document.createElement('td');
+      const inp = document.createElement('input');
+      inp.type = 'text';
+      inp.className = 'form-control form-control-sm';
+      inp.id = `inp-upstream-${name}`;
+      inp.placeholder = 'e.g. Protolg: Lg1, Lg2, ... LgN';
+      // Restore last-used upstream value and save on change
+      const savedUp = lsGet(name, 'upstream');
+      if (savedUp) inp.value = savedUp;
+      inp.addEventListener('input', () => lsSet(name, 'upstream', inp.value.trim()));
+      tdUp.appendChild(inp);
+      tr.appendChild(tdUp);
+
+      const tdAction = document.createElement('td');
+      tdAction.className = 'align-middle';
+      const actWrap = document.createElement('div');
+      actWrap.style.cssText = 'display:flex;gap:.3rem;flex-wrap:nowrap';
+      const runBtn = document.createElement('button');
+      runBtn.className = 'btn btn-primary btn-sm run-btn';
+      runBtn.dataset.project = name;
+      runBtn.innerHTML = '<i class="fas fa-play"></i> Run';
+      const histCount = info.history_count || 0;
+      const histBtn = document.createElement('button');
+      histBtn.className = 'btn btn-outline-secondary btn-sm hist-btn';
+      histBtn.dataset.project = name;
+      histBtn.dataset.count   = histCount;
+      histBtn.title = `Show run history for ${name}`;
+      histBtn.innerHTML = histCount > 0
+        ? `<i class="fas fa-history"></i> <span class="hist-count">${histCount}</span>`
+        : '<i class="fas fa-history"></i>';
+      if (histCount === 0) histBtn.style.display = 'none';
+      actWrap.appendChild(runBtn);
+      actWrap.appendChild(histBtn);
+      tdAction.appendChild(actWrap);
+      tr.appendChild(tdAction);
+
+      tbody.appendChild(tr);
+
+      /* collapsible history sub-row */
+      const histRow = document.createElement('tr');
+      histRow.id = `hist-row-${name}`;
+      histRow.style.display = 'none';
+      const histTd = document.createElement('td');
+      histTd.colSpan = 6;
+      histTd.style.cssText = 'padding:0;background:#f8f9fa;border-top:none';
+      const histDiv = document.createElement('div');
+      histDiv.id = `hist-content-${name}`;
+      histDiv.style.cssText = 'padding:.6rem 1rem .8rem';
+      histDiv.innerHTML = '<p class="text-muted mb-0">'
+        + '<span class="spinner-border spinner-border-sm mr-1"></span>Loading…</p>';
+      histTd.appendChild(histDiv);
+      histRow.appendChild(histTd);
+      tbody.appendChild(histRow);
+    });
+  }
+
+  btn.addEventListener('click', () => {
+    const origHtml = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = `${spinnerHtml()}Refreshing…`;
+    fetch('/api/projects')
+      .then(r => r.json())
+      .then(data => {
+        rebuildProjectsTable(data);
+        btn.disabled = false;
+        btn.innerHTML = origHtml;
+      })
+      .catch(err => {
+        alert(`Refresh failed: ${err}`);
+        btn.disabled = false;
+        btn.innerHTML = origHtml;
+      });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Post-run tab wiring  (shared by live polling and historical load)
+   data must have: has_mel, has_fuzzy, has_coverage
+   ══════════════════════════════════════════════════════════════════════════ */
+function handleRunDone(data) {
+  const always = ['parameters', 'sets', 'stats', 'lexicons'];
+  always.forEach(t => {
+    setTabEnabled(`tab-${t}-nav`, true);
+    loadTabContent(t, modes[t] || 'paragraph');
+  });
+  document.getElementById('btn-freq-parameters').style.display = '';
+  document.getElementById('btn-edit-parameters').style.display = '';
+
+  document.getElementById('nav-mel').style.display      = 'none';
+  document.getElementById('nav-fuzzy').style.display    = 'none';
+  document.getElementById('nav-coverage').style.display = 'none';
+  ['tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
+    .forEach(id => setTabEnabled(id, false));
+
+  if (data.has_mel) {
+    document.getElementById('nav-mel').style.display = '';
+    setTabEnabled('tab-mel-nav', true);
+    loadTabContent('mel');
+    document.getElementById('btn-edit-mel').style.display = '';
+  }
+  if (data.has_fuzzy) {
+    document.getElementById('nav-fuzzy').style.display = '';
+    setTabEnabled('tab-fuzzy-nav', true);
+    loadTabContent('fuzzy');
+    document.getElementById('btn-edit-fuzzy').style.display = '';
+  }
+  if (data.has_coverage) {
+    document.getElementById('nav-coverage').style.display = '';
+    setTabEnabled('tab-coverage-nav', true);
+    loadTabContent('coverage');
+  }
+  activateTab('tab-sets');
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Polling
+   ══════════════════════════════════════════════════════════════════════════ */
+function startPolling() {
+  if (pollTimer) clearInterval(pollTimer);
+  pollTimer = setInterval(doPoll, 1500);
+}
+
+function doPoll() {
+  if (!currentRunId) return;
+  fetch(`/api/poll/${currentRunId}`)
+    .then(r => r.json())
+    .then(data => {
+      appendLog(data.log.slice(logLinesShown));
+      logLinesShown = data.log.length;
+
+      if (data.status === 'running') return;
+
+      clearInterval(pollTimer);
+      document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+
+      if (data.status === 'error') {
+        setRunStatusBadge('error', 'error');
+        const el = document.getElementById('run-log');
+        el.textContent += '\n─── ERROR ───\n' + (data.error || '');
+        el.scrollTop = el.scrollHeight;
+        return;
+      }
+
+      /* ── Success ── */
+      setRunStatusBadge('done', 'done');
+      handleRunDone(data);
+      /* Increment History button count for this project */
+      if (currentProject) {
+        const btn = document.querySelector(`.hist-btn[data-project="${currentProject}"]`);
+        const prev = btn ? (parseInt(btn.dataset.count, 10) || 0) : 0;
+        setHistoryBtnCount(currentProject, prev + 1);
+      }
+    })
+    .catch(err => console.error('Poll error:', err));
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Mode toggles  (Sets / Lexicons paragraph ↔ tabular)
+   ══════════════════════════════════════════════════════════════════════════ */
+function setupModeToggle(groupId, tab) {
+  document.querySelectorAll(`#${groupId} button`).forEach(btn => {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll(`#${groupId} button`)
+              .forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      modes[tab] = this.dataset.mode;
+      loadTabContent(tab, this.dataset.mode);
+    });
+  });
+}
+setupModeToggle('sets-mode-btns',     'sets');
+setupModeToggle('lexicons-mode-btns', 'lexicons');
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Tabular sets: Show / Hide glosses toggle
+   The container #sets-content starts with class "glosses-hidden" (set in
+   HTML).  Toggling it shows/hides all .rfx-gloss spans via CSS.
+   The state survives tab reloads because it lives on the container div,
+   not on the injected content.
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupGlossToggle() {
+  const btn       = document.getElementById('btn-toggle-glosses');
+  const container = document.getElementById('sets-content');
+  if (!btn || !container) return;
+  btn.addEventListener('click', function () {
+    const nowHidden = container.classList.toggle('glosses-hidden');
+    btn.textContent = nowHidden ? 'Show glosses' : 'Hide glosses';
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Parameters Freq  — toggle frequency-annotated view of the ToC
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupParamsFreq() {
+  const viewEl  = document.getElementById('parameters-view-content');
+  const btnFreq = document.getElementById('btn-freq-parameters');
+  if (!btnFreq) return;
+
+  let savedViewHTML = null;
+
+  btnFreq.addEventListener('click', () => {
+    if (!currentRunId) return;
+
+    if (savedViewHTML !== null) {
+      viewEl.innerHTML = savedViewHTML;
+      savedViewHTML = null;
+      btnFreq.textContent = '';
+      btnFreq.innerHTML = '<i class="fas fa-chart-bar"></i> Freq';
+      btnFreq.classList.remove('active');
+      return;
+    }
+
+    btnFreq.disabled = true;
+    fetch(`/api/tab/${currentRunId}/parameters?mode=freq`)
+      .then(r => r.text())
+      .then(html => {
+        savedViewHTML = viewEl.innerHTML;
+        viewEl.innerHTML = html;
+        btnFreq.innerHTML = '<i class="fas fa-times"></i> Back to view';
+        btnFreq.classList.add('active');
+      })
+      .catch(err => alert('Freq error: ' + err))
+      .finally(() => { btnFreq.disabled = false; });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Parameters Edit / Save / Cancel  (XSLT form approach)
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupParamsEdit() {
+  const viewEl    = document.getElementById('parameters-view-content');
+  const btnEdit   = document.getElementById('btn-edit-parameters');
+  const btnSave   = document.getElementById('btn-save-parameters');
+  const btnCancel = document.getElementById('btn-cancel-parameters');
+  if (!btnEdit) return;
+
+  let savedViewHTML    = null;
+  let currentReconFile = null;
+
+  btnEdit.addEventListener('click', () => {
+    if (!currentRunId) return;
+    btnEdit.disabled = true;
+    btnEdit.innerHTML = `${spinnerHtml()}Loading…`;
+    fetch(`/api/tab/${currentRunId}/parameters?mode=edit`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      })
+      .then(html => {
+        savedViewHTML = viewEl.innerHTML;
+        viewEl.innerHTML = html;
+        reExecuteScripts(viewEl);
+        const wrapper = viewEl.querySelector('[data-recon-file]');
+        currentReconFile = wrapper ? wrapper.dataset.reconFile : null;
+        btnEdit.style.display   = 'none';
+        btnSave.style.display   = '';
+        btnCancel.style.display = '';
+      })
+      .catch(err => {
+        alert(`Could not load edit form: ${err}`);
+        btnEdit.disabled = false;
+        btnEdit.innerHTML = '<i class="fas fa-edit"></i> Edit';
+      });
+  });
+
+  btnCancel.addEventListener('click', () => {
+    if (savedViewHTML !== null) viewEl.innerHTML = savedViewHTML;
+    savedViewHTML = null;
+    currentReconFile = null;
+    btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+    btnEdit.disabled      = false;
+    btnEdit.style.display = '';
+    btnSave.style.display   = 'none';
+    btnCancel.style.display = 'none';
+  });
+
+  btnSave.addEventListener('click', () => {
+    if (!currentRunId || !currentReconFile) return;
+
+    const fields = {};
+    viewEl.querySelectorAll('input[name]').forEach(inp => {
+      fields[inp.name] = inp.value;
+    });
+
+    const dialects = [];
+    viewEl.querySelectorAll('#corr-table thead th[data-dialect]').forEach(th => {
+      dialects.push(th.getAttribute('data-dialect'));
+    });
+
+    btnSave.disabled  = true;
+    btnSave.innerHTML = `${spinnerHtml()}Saving…`;
+    fetch(`/api/save_toc/${currentRunId}`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ fields, dialects, file_path: currentReconFile }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(`Save failed:\n${data.error}`);
+        btnSave.disabled  = false;
+        btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+        return;
+      }
+      savedViewHTML = null;
+      currentReconFile = null;
+      btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+      btnEdit.disabled      = false;
+      btnEdit.style.display = '';
+      btnSave.style.display   = 'none';
+      btnSave.disabled        = false;
+      btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
+      btnCancel.style.display = 'none';
+      loadTabContent('parameters', 'paragraph');
+    })
+    .catch(err => {
+      alert(`Save error: ${err}`);
+      btnSave.disabled  = false;
+      btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MEL / Fuzzy Edit / Save / Cancel  (XSLT form approach — mirrors Parameters)
+   ══════════════════════════════════════════════════════════════════════════ */
+function setupXsltEdit(tab, dataAttr, saveEndpoint) {
+  const viewEl    = document.getElementById(`${tab}-view-content`);
+  const btnEdit   = document.getElementById(`btn-edit-${tab}`);
+  const btnSave   = document.getElementById(`btn-save-${tab}`);
+  const btnCancel = document.getElementById(`btn-cancel-${tab}`);
+  if (!btnEdit) return;
+
+  let savedViewHTML = null;
+  let currentFile   = null;
+
+  btnEdit.addEventListener('click', () => {
+    if (!currentRunId) return;
+    btnEdit.disabled  = true;
+    btnEdit.innerHTML = `${spinnerHtml()}Loading…`;
+    fetch(`/api/tab/${currentRunId}/${tab}?mode=edit`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.text();
+      })
+      .then(html => {
+        savedViewHTML = viewEl.innerHTML;
+        viewEl.innerHTML = html;
+        reExecuteScripts(viewEl);
+        const wrapper = viewEl.querySelector(`[${dataAttr}]`);
+        currentFile = wrapper ? wrapper.getAttribute(dataAttr) : null;
+        btnEdit.style.display   = 'none';
+        btnSave.style.display   = '';
+        btnCancel.style.display = '';
+      })
+      .catch(err => {
+        alert(`Could not load edit form: ${err}`);
+        btnEdit.disabled  = false;
+        btnEdit.innerHTML = '<i class="fas fa-edit"></i> Edit';
+      });
+  });
+
+  btnCancel.addEventListener('click', () => {
+    if (savedViewHTML !== null) viewEl.innerHTML = savedViewHTML;
+    savedViewHTML = null;
+    currentFile   = null;
+    btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+    btnEdit.disabled      = false;
+    btnEdit.style.display = '';
+    btnSave.style.display   = 'none';
+    btnCancel.style.display = 'none';
+  });
+
+  btnSave.addEventListener('click', () => {
+    if (!currentRunId || !currentFile) return;
+    const fields = {};
+    viewEl.querySelectorAll('input[name]').forEach(inp => {
+      fields[inp.name] = inp.value;
+    });
+    btnSave.disabled  = true;
+    btnSave.innerHTML = `${spinnerHtml()}Saving…`;
+    fetch(`${saveEndpoint}/${currentRunId}`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ fields, file_path: currentFile }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(`Save failed:\n${data.error}`);
+        btnSave.disabled  = false;
+        btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+        return;
+      }
+      savedViewHTML = null;
+      currentFile   = null;
+      btnEdit.innerHTML     = '<i class="fas fa-edit"></i> Edit';
+      btnEdit.disabled      = false;
+      btnEdit.style.display = '';
+      btnSave.style.display   = 'none';
+      btnSave.disabled        = false;
+      btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
+      btnCancel.style.display = 'none';
+      loadTabContent(tab, 'paragraph');
+    })
+    .catch(err => {
+      alert(`Save error: ${err}`);
+      btnSave.disabled  = false;
+      btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+    });
+  });
+}
+
+setupXsltEdit('mel',   'data-mel-file', '/api/save_mel');
+setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Projects Edit / Save / Cancel
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupProjectsEdit() {
+  const btnEdit   = document.getElementById('btn-edit-projects');
+  const btnSave   = document.getElementById('btn-save-projects');
+  const btnCancel = document.getElementById('btn-cancel-projects');
+  const btnAdd    = document.getElementById('btn-add-project');
+  const viewDiv   = document.getElementById('projects-view');
+  const editDiv   = document.getElementById('projects-edit');
+  const tbody     = document.getElementById('projects-edit-body');
+  const toolbar   = document.getElementById('projects-view-toolbar');
+
+  function makeRow(name, path) {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td style="width:1%;white-space:nowrap">' +
+        '<button type="button" class="btn btn-outline-danger btn-sm" style="padding:.1rem .4rem;line-height:1" title="Delete row">&#x2212;</button>' +
+      '</td>' +
+      '<td><input type="text" class="form-control form-control-sm" placeholder="NAME" value="' + name.replace(/"/g, '&quot;') + '"></td>' +
+      '<td><input type="text" class="form-control form-control-sm" placeholder="path/to/project" value="' + path.replace(/"/g, '&quot;') + '"></td>';
+    tr.querySelector('button').addEventListener('click', () => tr.remove());
+    return tr;
+  }
+
+  btnEdit.addEventListener('click', () => {
+    tbody.innerHTML = '';
+    document.querySelectorAll('#projects-view tr[data-project-path]').forEach(tr => {
+      const name = tr.querySelector('.project-name').textContent.trim();
+      const path = tr.dataset.projectPath;
+      tbody.appendChild(makeRow(name, path));
+    });
+    viewDiv.style.display  = 'none';
+    toolbar.style.display  = 'none';
+    editDiv.style.display  = '';
+  });
+
+  btnCancel.addEventListener('click', () => {
+    editDiv.style.display  = 'none';
+    viewDiv.style.display  = '';
+    toolbar.style.display  = '';
+  });
+
+  btnAdd.addEventListener('click', () => {
+    tbody.appendChild(makeRow('', ''));
+  });
+
+  btnSave.addEventListener('click', () => {
+    const projects = [];
+    tbody.querySelectorAll('tr').forEach(tr => {
+      const inputs = tr.querySelectorAll('input');
+      const name = inputs[0] ? inputs[0].value.trim() : '';
+      const path = inputs[1] ? inputs[1].value.trim() : '';
+      if (name) projects.push({ name, path });
+    });
+
+    btnSave.disabled  = true;
+    btnSave.innerHTML = `${spinnerHtml()}Saving…`;
+    fetch('/api/save_projects', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ projects }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        let msg = `Save failed:\n${data.error}`;
+        if (data.invalid && data.invalid.length) {
+          msg += '\n\nBad paths:\n' + data.invalid.map(
+            e => `  ${e.name}: "${e.path}" (resolved: ${e.resolved})`).join('\n');
+        }
+        alert(msg);
+        btnSave.disabled  = false;
+        btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+        return;
+      }
+      window.location.reload();
+    })
+    .catch(err => {
+      alert(`Save error: ${err}`);
+      btnSave.disabled  = false;
+      btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Run History — toggle, render, load, compare
+   ══════════════════════════════════════════════════════════════════════════ */
+
+function setHistoryBtnCount(project, count) {
+  const btn = document.querySelector(`.hist-btn[data-project="${project}"]`);
+  if (!btn) return;
+  if (count <= 0) {
+    btn.style.display = 'none';
+    const row = document.getElementById(`hist-row-${project}`);
+    if (row) row.style.display = 'none';
+  } else {
+    btn.style.display = '';
+    btn.dataset.count = count;
+    const span = btn.querySelector('.hist-count');
+    if (span) span.textContent = count;
+    else btn.innerHTML = `<i class="fas fa-history"></i> <span class="hist-count">${count}</span>`;
+  }
+}
+
+function deleteRun(runId, project) {
+  if (!confirm('Delete this run and its output files? This cannot be undone.')) return;
+  fetch('/api/delete_run', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id: runId }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) { alert(`Delete failed: ${data.error}`); return; }
+    setHistoryBtnCount(project, data.history_count);
+    /* Re-render the history table with fresh data */
+    fetch(`/api/history/${project}`)
+      .then(r => r.json())
+      .then(d => renderHistoryTable(project, d.runs || []));
+  })
+  .catch(err => alert(`Delete error: ${err}`));
+}
+
+function toggleHistory(project) {
+  const histRow = document.getElementById(`hist-row-${project}`);
+  if (!histRow) return;
+  if (histRow.style.display !== 'none') {
+    histRow.style.display = 'none';
+    return;
+  }
+  histRow.style.display = '';
+  fetch(`/api/history/${project}`)
+    .then(r => r.json())
+    .then(data => renderHistoryTable(project, data.runs || []))
+    .catch(err => {
+      const c = document.getElementById(`hist-content-${project}`);
+      if (c) c.innerHTML = `<p class="text-danger">Error: ${err}</p>`;
+    });
+}
+
+function renderHistoryTable(project, runs) {
+  const container = document.getElementById(`hist-content-${project}`);
+  if (!container) return;
+  if (!runs.length) {
+    container.innerHTML = '<p class="text-muted mb-1">No past runs for this project.</p>';
+    return;
+  }
+  let html = `<table class="table table-sm table-hover table-bordered mb-1"
+                     style="font-size:.82rem">
+    <thead class="thead-light"><tr>
+      <th style="width:1%"></th>
+      <th>Timestamp</th><th>Recon</th><th>MEL</th><th>Fuzzy</th>
+      <th>Sets</th><th>Isolates</th><th>Failures</th><th>Cov</th><th></th>
+    </tr></thead><tbody>`;
+  runs.forEach(run => {
+    const ts  = (run.run_name || '').replace(
+      /(\d{4})(\d{2})(\d{2})-(\d{2})(\d{2})(\d{2})/, '$1-$2-$3 $4:$5');
+    const p   = run.params || {};
+    const cov = run.has_coverage ? '&#10003;' : '';
+    html += `<tr>
+      <td><input type="checkbox" class="hist-check"
+                 data-run-id="${run.run_id}"></td>
+      <td style="white-space:nowrap">${ts}</td>
+      <td>${basename(p.recon  || '') || '—'}</td>
+      <td>${basename(p.mel    || '') || '—'}</td>
+      <td>${basename(p.fuzzy  || '') || '—'}</td>
+      <td>${run.sets      ?? '?'}</td>
+      <td>${run.isolates  ?? '?'}</td>
+      <td>${run.failures  ?? '?'}</td>
+      <td>${cov}</td>
+      <td style="white-space:nowrap">
+        <button class="btn btn-outline-primary hist-load-btn py-0 px-1"
+                data-run-id="${run.run_id}" data-project="${project}"
+                style="font-size:.8rem;line-height:1.4">Load</button>
+        <button class="btn btn-outline-danger hist-delete-btn py-0 px-1 ml-1"
+                data-run-id="${run.run_id}" data-project="${project}"
+                title="Delete run and output files"
+                style="font-size:.8rem;line-height:1.4">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </td>
+    </tr>`;
+  });
+  html += `</tbody></table>
+    <button class="btn btn-sm btn-outline-secondary hist-compare-btn"
+            id="hist-compare-btn-${project}"
+            data-project="${project}" disabled>
+      Compare selected runs
+    </button>`;
+  container.innerHTML = html;
+  container.querySelectorAll('.hist-check').forEach(cb => {
+    cb.addEventListener('change', () => updateCompareBtn(project));
+  });
+}
+
+function updateCompareBtn(project) {
+  const container = document.getElementById(`hist-content-${project}`);
+  if (!container) return;
+  const n   = container.querySelectorAll('.hist-check:checked').length;
+  const btn = document.getElementById(`hist-compare-btn-${project}`);
+  if (btn) btn.disabled = (n !== 2);
+}
+
+function loadHistRun(runId, project) {
+  fetch('/api/load_run', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id: runId }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) { alert(`Load failed: ${data.error}`); return; }
+    currentRunId   = data.run_id;
+    currentRunName = data.run_name;
+    currentProject = data.project;
+    /* Update navbar badge */
+    const p = data.params || {};
+    const parts = [`project ${data.project}`];
+    if (p.recon)    parts.push(`ToC: ${basename(p.recon)}`);
+    if (p.mel)      parts.push(`MEL: ${basename(p.mel)}`);
+    if (p.fuzzy)    parts.push(`fuzzy: ${basename(p.fuzzy)}`);
+    if (p.upstream) parts.push(`↑ ${p.upstream}`);
+    document.getElementById('run-badge').textContent = parts.join('  ·  ');
+    /* Populate Log tab from persisted log file */
+    const logEl = document.getElementById('run-log');
+    logEl.textContent = (data.log && data.log.length)
+      ? data.log.join('\n') : '(no log available)';
+    logLinesShown = (data.log || []).length;
+    setRunStatusBadge('done', 'done');
+    document.getElementById('nav-log').style.display = '';
+    /* Hide Compare pane — it belongs to the previous run/project */
+    document.getElementById('nav-compare').style.display = 'none';
+    setTabEnabled('tab-compare-nav', false);
+    /* Reset disabled tabs before wiring */
+    ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
+     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
+      .forEach(id => setTabEnabled(id, false));
+    handleRunDone(data);
+  })
+  .catch(err => alert(`Load error: ${err}`));
+}
+
+function doCompare(project) {
+  const container = document.getElementById(`hist-content-${project}`);
+  if (!container) return;
+  const checked = Array.from(container.querySelectorAll('.hist-check:checked'));
+  if (checked.length !== 2) return;
+  const [idA, idB] = checked.map(cb => cb.dataset.runId);
+
+  document.getElementById('nav-compare').style.display = '';
+  setTabEnabled('tab-compare-nav', true);
+  const cmpEl = document.getElementById('compare-content');
+  cmpEl.innerHTML = `<p>${spinnerHtml()} Comparing…</p>`;
+  activateTab('tab-compare');
+
+  fetch('/api/compare_runs', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id_a: idA, run_id_b: idB }),
+  })
+  .then(r => r.text())
+  .then(html => { cmpEl.innerHTML = html; })
+  .catch(err => { cmpEl.innerHTML =
+    `<p class="text-danger">Compare error: ${err}</p>`; });
+}
+
+function closeCompare() {
+  document.getElementById('nav-compare').style.display = 'none';
+  setTabEnabled('tab-compare-nav', false);
+  activateTab('tab-projects');
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Wire up nav-link click handlers (custom switcher — no Bootstrap tab plugin)
+   ══════════════════════════════════════════════════════════════════════════ */
+document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (this.classList.contains('disabled')) return;
+    const targetId = this.getAttribute('href').substring(1);
+    activateTab(targetId);
+    const tabName = targetId.replace(/^tab-/, '');
+    if (tabName === 'projects' || tabName === 'log' || tabName === 'compare' || !currentRunId) return;
+    const saveBtn = document.getElementById(`btn-save-${tabName}`);
+    if (saveBtn && saveBtn.style.display !== 'none') return;
+    loadTabContent(tabName, modes[tabName] || 'paragraph');
+  });
+});
+</script>

@@ -1,69 +1,33 @@
 
-set -x
+# set -x
 
 git submodule update --init --recursive
 
 PROJECT="$1"
-EXPERIMENT="$2"
-
-if [ "${EXPERIMENT}" == "" ]
-then
-    echo "must supply name of experiments as arg 2"
-    exit 0
-fi
+TOC="$2"
 
 DATE=`date +%Y-%m-%d-%H-%M`
 
-if [ ! -d ../experiments/${PROJECT}/${EXPERIMENT} ]
-then
-   echo "../experiments/${PROJECT}/${EXPERIMENT} does not exist. creating..."
-   python3 REcli.py new-experiment ${PROJECT} ${EXPERIMENT}
-fi
+echo ${PROJECT}
 
-echo ${PROJECT}/${EXPERIMENT}
+echo "Start of test: ${PROJECT}"
 
-if [ -e "test${PROJECT}.sh" ]
-then
-   echo "running test${PROJECT}.sh instead...."
-   bash test${PROJECT}.sh ${PROJECT} ${EXPERIMENT}
-   # don't try to do anything else if previous script said not to...
-   [ $? -eq 0 ] || exit 0;
-fi
+echo "Testing: ${PROJECT} no MELs"
 
 # first make run 'none' with no MEL
-time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run none   --recon standard > /dev/null
+time python3 REcli.py upstream ${PROJECT} --run none --recon ${TOC}
 [ $? -ne 0 ] && exit 0;
 
+echo "Testing: ${PROJECT} hand MELs"
+
 # next make the "strict" sets: remove untouched mels and merge sets with identical support
-time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run hand  --recon standard --mel hand -w > /dev/null
+time python3 REcli.py upstream ${PROJECT} --run hand --recon ${TOC} --mel hand -w
 [ $? -ne 0 ] && exit 0;
 
 # compare hand to none
-time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
-[ $? -ne 0 ] && exit 0;
+# time python3 REcli.py compare ${PROJECT} --run1 hand --run2 none > ../projects/${PROJECT}/${PROJECT}.hand2none.compare.txt
+# [ $? -ne 0 ] && exit 0;
 
-# wordnet version is too slow for regular testing use (8 mins) ... run by hand if needed.
-# for mel in wordnet clics
-for mel in wordnet clics
-do
-    if [ -e ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.mel.xml ]
-    then
-        # first make sets with this mel
-        time python3 REcli.py upstream ${PROJECT} ${EXPERIMENT} --run ${mel} --recon standard --mel ${mel} > /dev/null
-        [ $? -ne 0 ] && exit 0;
+echo "End of test: ${PROJECT}"
 
-        # coverage
-        time python3 REcli.py coverage ${PROJECT} ${EXPERIMENT} ${mel}  > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.coverage.txt
-        [ $? -ne 0 ] && exit 0;
-
-        # compare
-        time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 hand --run2 ${mel} > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
-        [ $? -ne 0 ] && exit 0;
-
-        # compare to none
-        time python3 REcli.py compare ${PROJECT} ${EXPERIMENT} ${EXPERIMENT} --run1 ${mel} --run2 none > ../experiments/${PROJECT}/${EXPERIMENT}/${PROJECT}.${mel}.compare.txt
-        [ $? -ne 0 ] && exit 0;
-    fi
-
-done
 exit 0

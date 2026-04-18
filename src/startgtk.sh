@@ -1,4 +1,3 @@
-cd c:/Martine/RE/src
-source venv-gtk3/bin/activate
+source ~/venv-gtk3/bin/activate
 python REgtk.py
 

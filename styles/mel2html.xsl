@@ -6,6 +6,8 @@
             indent="yes"
             encoding="utf-8"/>
 
+    <xsl:param name="mel_filename"/>
+
     <xsl:strip-space
             elements="*"/>
 
@@ -18,6 +20,11 @@
                 <a name="top">
                     <h4>Meaning Equivalence List</h4>
                 </a>
+                <xsl:if test="$mel_filename != ''">
+                  <p style="font-size:0.8rem; font-style:italic; margin-bottom:.5rem;">
+                    <xsl:value-of select="$mel_filename"/>
+                  </p>
+                </xsl:if>
                 <div style="float: right; width:200px;">
                     <a href="#unmatched">
                         <xsl:value-of select="count(.//unmatched/mel/gl)"/>
@@ -38,7 +45,7 @@
     <xsl:template match="totals">
         <h5>MEL statistics</h5>
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>Stat</th>
@@ -74,7 +81,7 @@
 
     <xsl:template name="mel_header">
         <div class="table-responsive">
-        <table class="table-sm table-striped sortable">
+        <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -91,7 +98,7 @@
             <td style="vertical-align: top">
                 <xsl:value-of select="@id"/>
             </td>
-            <td>
+            <td class="col-gloss">
                 <xsl:for-each select=".//gl">
                     <xsl:choose>
                     <xsl:when test="@pivot">
@@ -110,7 +117,7 @@
                     <xsl:if test="@uses">
                         &#160;<xsl:value-of select="@uses"/>
                     </xsl:if>
-                    <xsl:if test="position() != last()">, </xsl:if>
+                    <xsl:if test="position() != last()">; </xsl:if>
                 </xsl:for-each>
             </td>
         </tr>

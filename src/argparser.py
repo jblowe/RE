@@ -11,6 +11,9 @@ def parse_upstream():
     parser.add_argument('project',
                         metavar='project',
                         help='name of the project')
+    parser.add_argument('-u', '--upstream',
+                        metavar='upstream',
+                        help='string specifying protolanguage and language codes to include (and their order), e.g. "tgtm: ris, sahu,syang"')
     parser.add_argument('-w', '--only-with-mel',
                         dest='only_with_mel',
                         nargs='?',
@@ -48,13 +51,11 @@ def parse_compare():
 def parse_new_project():
     parser = argparse.ArgumentParser(description='Make a new project')
     parser.add_argument('project')
-    parser.add_argument('project_name')
     return parser
 
 def parse_delete_project():
     parser = argparse.ArgumentParser(description='Delete an existing project')
     parser.add_argument('project')
-    parser.add_argument('project_name')
     return parser
 
 def parse_coverage():

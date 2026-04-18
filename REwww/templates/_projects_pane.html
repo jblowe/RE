@@ -1,0 +1,141 @@
+<!-- ══ PROJECTS TAB ══════════════════════════════════════════════════════ -->
+<div class="tab-pane fade show active" id="tab-projects" role="tabpanel">
+
+  <!-- View toolbar -->
+  <div class="tab-toolbar" id="projects-view-toolbar">
+    <button class="btn btn-sm btn-outline-secondary" id="btn-edit-projects">
+      <i class="fas fa-edit"></i> Edit
+    </button>
+    <button class="btn btn-sm btn-outline-secondary" id="btn-refresh-projects"
+            title="Re-scan project directories for available files">
+      <i class="fas fa-sync-alt"></i> Refresh
+    </button>
+  </div>
+
+  <!-- View: run-mode table -->
+  <div id="projects-view">
+    <div class="table-responsive">
+      <table class="table table-sm table-hover projects-table">
+        <thead class="thead-light">
+          <tr>
+            <th>Project</th>
+            <th style="width:14%">Recon</th>
+            <th style="width:12%">MEL</th>
+            <th style="width:12%">Fuzzy</th>
+            <th style="width:26%">Upstream</th>
+            <th style="width:10%">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for name, info in project_data.items() %}
+          <tr id="proj-row-{{ name }}" data-project-path="{{ info.path }}">
+            <td class="project-name align-middle">{{ name }}</td>
+            <td>
+              <select class="form-control form-control-sm"
+                      id="sel-recon-{{ name }}">
+                {% if not info.recons %}
+                  <option value="">— none found —</option>
+                {% else %}
+                  {% for r in info.recons %}
+                    <option value="{{ r }}">{{ r }}</option>
+                  {% endfor %}
+                {% endif %}
+              </select>
+            </td>
+            <td>
+              <select class="form-control form-control-sm"
+                      id="sel-mel-{{ name }}">
+                {% if not info.mels %}
+                  <option value="">— none found —</option>
+                {% else %}
+                  <option value="">N/A</option>
+                  {% for m in info.mels %}
+                    <option value="{{ m }}">{{ m }}</option>
+                  {% endfor %}
+                {% endif %}
+              </select>
+            </td>
+            <td>
+              <select class="form-control form-control-sm"
+                      id="sel-fuzzy-{{ name }}">
+                {% if not info.fuzzies %}
+                  <option value="">— none found —</option>
+                {% else %}
+                  <option value="">N/A</option>
+                  {% for f in info.fuzzies %}
+                    <option value="{{ f }}">{{ f }}</option>
+                  {% endfor %}
+                {% endif %}
+              </select>
+            </td>
+            <td>
+              <input type="text" class="form-control form-control-sm"
+                     id="inp-upstream-{{ name }}"
+                     placeholder="e.g. PIWR: PWR, it, scn; PWR: PIR, fr; PIR: es, pt, oldpt;">
+            </td>
+            <td class="align-middle">
+              <div style="display:flex;gap:.3rem;flex-wrap:nowrap">
+                <button class="btn btn-primary btn-sm run-btn"
+                        data-project="{{ name }}">
+                  <i class="fas fa-play"></i> Run
+                </button>
+                {% set hcount = history_counts.get(name, 0) %}
+                <button class="btn btn-outline-secondary btn-sm hist-btn"
+                        data-project="{{ name }}"
+                        data-count="{{ hcount }}"
+                        title="Show run history for {{ name }}"
+                        {% if hcount == 0 %}style="display:none"{% endif %}>
+                  <i class="fas fa-history"></i>
+                  {% if hcount > 0 %}<span class="hist-count">{{ hcount }}</span>{% endif %}
+                </button>
+              </div>
+            </td>
+          </tr>
+          <!-- collapsible history row for {{ name }} -->
+          <tr id="hist-row-{{ name }}" style="display:none">
+            <td colspan="6" style="padding:0;background:#f8f9fa;border-top:none">
+              <div id="hist-content-{{ name }}"
+                   style="padding:.6rem 1rem .8rem">
+                <p class="text-muted mb-0">
+                  <span class="spinner-border spinner-border-sm mr-1"></span>
+                  Loading…
+                </p>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div><!-- /projects-view -->
+
+  <!-- Edit toolbar + table (hidden until Edit clicked) -->
+  <div id="projects-edit" style="display:none">
+    <div class="tab-toolbar">
+      <button class="btn btn-sm btn-success" id="btn-save-projects">
+        <i class="fas fa-save"></i> Save
+      </button>
+      <button class="btn btn-sm btn-secondary" id="btn-cancel-projects">
+        Cancel
+      </button>
+      <button class="btn btn-sm btn-outline-primary" id="btn-add-project">
+        + Add project
+      </button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered projects-table" id="projects-edit-table">
+        <thead class="thead-light">
+          <tr>
+            <th class="actions-col" style="width:1%;white-space:nowrap"></th>
+            <th>Project name</th>
+            <th>Directory path</th>
+          </tr>
+        </thead>
+        <tbody id="projects-edit-body">
+          <!-- populated by setupProjectsEdit() -->
+        </tbody>
+      </table>
+    </div>
+  </div><!-- /projects-edit -->
+
+</div><!-- /tab-projects -->

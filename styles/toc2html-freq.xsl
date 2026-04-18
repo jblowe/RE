@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+<xsl:output method="html" indent="yes" encoding="utf-8"/>
+
+<!-- Reusable named template: compute background-color style for a freq value -->
+<xsl:template name="freq-style">
+  <xsl:param name="freq"/>
+  <xsl:choose>
+    <xsl:when test="number($freq) = 0">background-color:#dc3545;color:white;</xsl:when>
+    <xsl:when test="number($freq) = 1">background-color:#f8d7da;</xsl:when>
+    <xsl:otherwise></xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="/">
+  <xsl:apply-templates select=".//tableOfCorr"/>
+</xsl:template>
+
+<xsl:template match="tableOfCorr">
+  <div>
+    <!-- Scoped styles for compact column widths.
+         Must live in the body fragment (head is stripped by xml_to_html). -->
+    <style>
+      /* Tighter cell padding for the frequency table */
+      .toc-freq-table td, .toc-freq-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+      /* Col 1 = uses, col 2 = num */
+      .toc-freq-table th:nth-child(1), .toc-freq-table td:nth-child(1) { width: 4ch; }
+      .toc-freq-table th:nth-child(2), .toc-freq-table td:nth-child(2) { width: 3ch; }
+      /* Col 4 = syll */
+      .toc-freq-table th:nth-child(4), .toc-freq-table td:nth-child(4) { width: 4ch; }
+      /* Cols 5-6 = left / right context */
+      .toc-freq-table th:nth-child(5), .toc-freq-table td:nth-child(5),
+      .toc-freq-table th:nth-child(6), .toc-freq-table td:nth-child(6) { width: 5ch; }
+      /* Cols 7+ = dialect forms */
+      .toc-freq-table th:nth-child(n+7), .toc-freq-table td:nth-child(n+7) { width: 5ch; }
+    </style>
+    <h6>Parameters</h6>
+    <table>
+      <xsl:if test="parameters/canon">
+        <tr>
+          <td><b>Syllable canon</b></td>
+          <td><xsl:value-of select="parameters/canon/@value"/></td>
+        </tr>
+      </xsl:if>
+      <xsl:if test="parameters/context_match_type">
+        <tr>
+          <td><b>Context match type</b></td>
+          <td><xsl:value-of select="parameters/context_match_type/@value"/></td>
+        </tr>
+      </xsl:if>
+    </table>
+    <p/>
+    <h6>Macro-classes (used in Contexts)</h6>
+    <div>
+      <table class="table table-sm table-striped sortable">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Members</th>
+          </tr>
+        </thead>
+        <xsl:for-each select="parameters/class">
+          <tr>
+            <td><xsl:value-of select="@name"/></td>
+            <td><xsl:value-of select="@value"/></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+    </div>
+
+    <h6>Table of correspondences
+      <small class="text-muted ml-2" style="font-size:0.8em; font-weight:normal;">
+        &#160;
+        <span style="background:#dc3545;color:white;padding:1px 6px;border-radius:3px;">0 uses</span>
+        &#160;
+        <span style="background:#f8d7da;padding:1px 6px;border-radius:3px;">1 use</span>
+      </small>
+    </h6>
+    <div>
+      <table class="table table-sm table-hover table-bordered sets sortable toc-freq-table">
+        <thead class="sticky-top top-0">
+          <tr>
+            <th>uses</th>
+            <th>num</th>
+            <th>*</th>
+            <th>syll</th>
+            <th>left</th>
+            <th>right</th>
+            <xsl:for-each select="corr[1]/modern">
+              <th><xsl:value-of select="@dialecte"/></th>
+            </xsl:for-each>
+          </tr>
+        </thead>
+        <xsl:for-each select="corr">
+          <xsl:variable name="row-freq" select="@freq"/>
+          <tr>
+            <!-- "uses" column: coloured by row frequency -->
+            <xsl:variable name="uses-style">
+              <xsl:call-template name="freq-style">
+                <xsl:with-param name="freq" select="$row-freq"/>
+              </xsl:call-template>
+            </xsl:variable>
+            <td style="{$uses-style}"><xsl:value-of select="$row-freq"/></td>
+
+            <!-- Fixed columns: no colouring -->
+            <td><xsl:value-of select="@num"/></td>
+            <td><xsl:value-of select="proto"/></td>
+            <td><xsl:value-of select="proto/@syll"/></td>
+            <td><xsl:value-of select="proto/@contextL"/></td>
+            <td><xsl:value-of select="proto/@contextR"/></td>
+
+            <!-- Dialect cells: iterate over the CANONICAL column list so that
+                 missing <modern> elements produce an empty cell in the right
+                 column rather than shifting subsequent cells left. -->
+            <xsl:variable name="this-corr" select="."/>
+            <xsl:for-each select="../corr[1]/modern">
+              <xsl:variable name="d"    select="@dialecte"/>
+              <xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
+              <xsl:variable name="cell-style">
+                <xsl:call-template name="freq-style">
+                  <xsl:with-param name="freq" select="$cell/@freq"/>
+                </xsl:call-template>
+              </xsl:variable>
+              <td style="{$cell-style}">
+                <xsl:for-each select="$cell/seg">
+                  <xsl:if test="@statut='doute'">=</xsl:if>
+                  <xsl:value-of select="."/>
+                  <xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
+                </xsl:for-each>
+              </td>
+            </xsl:for-each>
+          </tr>
+        </xsl:for-each>
+      </table>
+    </div>
+
+    <h5>Rules</h5>
+    <div>
+      <table class="table table-sm table-hover table-bordered sets sortable">
+        <thead class="sticky-top top-0">
+          <tr>
+            <th>num</th>
+            <th>input</th>
+            <th>output</th>
+            <th>contextL</th>
+            <th>contextR</th>
+            <th>stage</th>
+            <th>language</th>
+          </tr>
+        </thead>
+        <xsl:for-each select="rule">
+          <tr>
+            <td><xsl:value-of select="@num"/></td>
+            <td><xsl:value-of select="input"/></td>
+            <td><xsl:value-of select="outcome"/></td>
+            <td><xsl:value-of select="input/@contextL"/></td>
+            <td><xsl:value-of select="input/@contextR"/></td>
+            <td><xsl:value-of select="@stage"/></td>
+            <td><xsl:value-of select="outcome/@languages"/></td>
+          </tr>
+        </xsl:for-each>
+      </table>
+    </div>
+  </div>
+</xsl:template>
+
+</xsl:stylesheet>

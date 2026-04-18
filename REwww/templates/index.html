@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include '_head.html' %}
+<body>
+
+<!-- ── Navbar ── -->
+<nav class="navbar navbar-dark py-2 px-3 mb-0" style="background-color: #EC5800;">
+  <span class="navbar-brand mb-0">
+    <i class="fas fa-project-diagram mr-3">&nbsp;</i>The Reconstruction Engine
+  </span>
+  <div class="d-flex align-items-center ml-auto">
+    <span id="nav-about-btn" class="text-white" onclick="showAbout()"
+       style="font-size: 1rem; font-weight: 600; letter-spacing: .02em; margin-right: 3em; cursor: pointer;">About</span>
+    <span id="run-badge" class="text-white"
+          style="font-size: 1rem; font-weight: 600; letter-spacing: .02em;"></span>
+  </div>
+</nav>
+
+<!-- ── About panel (hidden until About clicked) ── -->
+<div id="about-panel" style="display:none; max-width: 760px; margin: 2rem auto; padding: 0 1rem 3rem; font-size: 0.9rem;">
+  {% include 'about.html' %}
+</div>
+
+<!-- ── Main content ── -->
+<div id="main-content" class="container-fluid mt-2 px-3">
+
+  <!-- Tab nav -->
+  <ul class="nav nav-tabs mt-1" id="main-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="tab-projects-nav"
+         data-re-tab href="#tab-projects" role="tab">Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-parameters-nav"
+         data-re-tab href="#tab-parameters" role="tab">Parameters</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-sets-nav"
+         data-re-tab href="#tab-sets" role="tab">Sets</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-stats-nav"
+         data-re-tab href="#tab-stats" role="tab">Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-lexicons-nav"
+         data-re-tab href="#tab-lexicons" role="tab">Lexicons</a>
+    </li>
+    <li class="nav-item" id="nav-mel" style="display:none">
+      <a class="nav-link disabled" id="tab-mel-nav"
+         data-re-tab href="#tab-mel" role="tab">MEL</a>
+    </li>
+    <li class="nav-item" id="nav-fuzzy" style="display:none">
+      <a class="nav-link disabled" id="tab-fuzzy-nav"
+         data-re-tab href="#tab-fuzzy" role="tab">Fuzzy</a>
+    </li>
+    <li class="nav-item" id="nav-coverage" style="display:none">
+      <a class="nav-link disabled" id="tab-coverage-nav"
+         data-re-tab href="#tab-coverage" role="tab">Coverage</a>
+    </li>
+    <li class="nav-item" id="nav-compare" style="display:none">
+      <a class="nav-link disabled" id="tab-compare-nav"
+         data-re-tab href="#tab-compare" role="tab">Compare</a>
+    </li>
+    <li class="nav-item" id="nav-log" style="display:none">
+      <a class="nav-link" id="tab-log-nav"
+         data-re-tab href="#tab-log" role="tab">Log</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="main-tab-content">
+
+    {% include '_projects_pane.html' %}
+
+    <!-- ══ PARAMETERS TAB ════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-parameters" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-freq-parameters" style="display:none">
+          <i class="fas fa-chart-bar"></i> Freq
+        </button>
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-edit-parameters" style="display:none">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-success"
+                id="btn-save-parameters" style="display:none">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-sm btn-secondary"
+                id="btn-cancel-parameters" style="display:none">
+          Cancel
+        </button>
+      </div>
+      <div class="content-area" id="parameters-view-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-parameters -->
+
+    <!-- ══ SETS TAB ══════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-sets" role="tabpanel">
+      <div class="tab-toolbar">
+        <div class="btn-group btn-group-sm" id="sets-mode-btns" role="group">
+          <button type="button" class="btn btn-outline-secondary"
+                  data-mode="paragraph">Paragraph</button>
+          <button type="button" class="btn btn-outline-secondary active"
+                  data-mode="tabular">Tabular</button>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-secondary" id="btn-toggle-glosses">
+          Show glosses
+        </button>
+      </div>
+      <!-- glosses-hidden is the default: glosses are hidden until toggled -->
+      <div class="content-area glosses-hidden" id="sets-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-sets -->
+
+    <!-- ══ STATS TAB ═════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-stats" role="tabpanel">
+      <div class="content-area" id="stats-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-stats -->
+
+    <!-- ══ LEXICONS TAB ══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-lexicons" role="tabpanel">
+      <div class="tab-toolbar">
+        <div class="btn-group btn-group-sm" id="lexicons-mode-btns" role="group">
+          <button type="button" class="btn btn-outline-secondary active"
+                  data-mode="paragraph">Paragraph</button>
+          <button type="button" class="btn btn-outline-secondary"
+                  data-mode="tabular">Tabular</button>
+        </div>
+      </div>
+      <div class="content-area" id="lexicons-content">
+        <p class="text-muted">Run a project to populate this tab.</p>
+      </div>
+    </div><!-- /tab-lexicons -->
+
+    <!-- ══ MEL TAB ═══════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-mel" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-edit-mel" style="display:none">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-success"
+                id="btn-save-mel" style="display:none">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-sm btn-secondary"
+                id="btn-cancel-mel" style="display:none">
+          Cancel
+        </button>
+      </div>
+      <div class="content-area" id="mel-view-content">
+        <p class="text-muted">No MEL file selected.</p>
+      </div>
+    </div><!-- /tab-mel -->
+
+    <!-- ══ FUZZY TAB ═════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-fuzzy" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary"
+                id="btn-edit-fuzzy" style="display:none">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-success"
+                id="btn-save-fuzzy" style="display:none">
+          <i class="fas fa-save"></i> Save
+        </button>
+        <button class="btn btn-sm btn-secondary"
+                id="btn-cancel-fuzzy" style="display:none">
+          Cancel
+        </button>
+      </div>
+      <div class="content-area" id="fuzzy-view-content">
+        <p class="text-muted">No Fuzzy file selected.</p>
+      </div>
+    </div><!-- /tab-fuzzy -->
+
+    <!-- ══ COVERAGE TAB ══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-coverage" role="tabpanel">
+      <div class="content-area" id="coverage-content">
+        <p class="text-muted">No coverage report — run with a MEL selected.</p>
+      </div>
+    </div><!-- /tab-coverage -->
+
+    <!-- ══ COMPARE TAB ══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-compare" role="tabpanel">
+      <div class="tab-toolbar">
+        <button class="btn btn-sm btn-outline-secondary" id="btn-close-compare"
+                onclick="closeCompare()">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+      <div class="content-area" id="compare-content">
+        <p class="text-muted">Select two runs from History and click Compare.</p>
+      </div>
+    </div><!-- /tab-compare -->
+
+    <!-- ══ LOG TAB ═══════════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-log" role="tabpanel">
+      <div class="d-flex align-items-center mb-2" style="gap:.5rem">
+        <span class="font-weight-semibold">Run log</span>
+        <span id="run-status-badge" class="badge ml-1"></span>
+      </div>
+      <div id="run-log"></div>
+    </div><!-- /tab-log -->
+
+  </div><!-- /tab-content -->
+</div><!-- /container-fluid -->
+
+{% include '_scripts.html' %}
+</body>
+</html>

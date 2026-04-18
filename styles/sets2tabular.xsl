@@ -24,21 +24,18 @@
                 <xsl:value-of select="count(.//sets/set)"/>
               </b>
             </div>
-            <div style="float: left; width:220px;">
+            <div style="float: left; width:300px;">
               <i>created at:
                 <xsl:value-of select=".//createdat"/>
               </i>
             </div>
-            <div style="float: left; width:160px;">
-              <a href="?paragraph">switch to paragraph display</a>
-            </div>
-            <div style="float: left; width:80px;">
+            <div style="float: left; width:180px;">
               <a href="#isolates">
                 <xsl:value-of select="count(.//isolates/rfx)"/>
                 isolates
               </a>
             </div>
-            <div style="float: left; width:80px;">
+            <div style="float: left; width:180px;">
               <a href="#failures">
                 <xsl:value-of select="count(.//failures/rfx)"/>
                 failures
@@ -52,12 +49,12 @@
             <table class="table table-sm table-hover table-bordered sets sortable">
               <thead class="sticky-top top-0">
                 <tr>
-                  <th>num</th>
-                  <th>plg</th>
-                  <th>pfm</th>
+                  <th class="col-num">num</th>
+                  <th class="col-plg">plg</th>
+                  <th class="col-pfm">pfm</th>
                   <!-- th>pgl</th -->
-                  <th>rcn</th>
-                  <th>mel</th>
+                  <th class="col-rcn">rcn</th>
+                  <th class="col-mel">mel</th>
                   <xsl:apply-templates select=".//languages"/>
                 </tr>
               </thead>
@@ -85,22 +82,18 @@
     <xsl:param name="lgs"/>
     <xsl:for-each select=".//sets/set">
       <tr>
-        <td class="id">
+        <td class="col-num">
           <xsl:value-of select="id"/>
         </td>
 
         <xsl:choose>
           <xsl:when test="multi">
-            <td class="plg">
+            <td class="col-plg">
               <span class="">
                 <xsl:value-of select=".//plg"/>
               </span>
             </td>
-            <!-- td class="pfm">
-                <span class="multiple" title='
-                </span>
-            </td -->
-            <td class="pfm">
+            <td class="col-pfm">
               <span class="multiple">
                 <xsl:attribute name="title">
                   <xsl:for-each select=".//pfm">
@@ -113,7 +106,7 @@
                 <xsl:value-of select="multi/pfm"/>
               </span>
             </td>
-            <td class="rcn">
+            <td class="col-rcn">
               <span>
                 <xsl:attribute name="title">
                   <xsl:for-each select=".//rcn">
@@ -128,32 +121,51 @@
             </td>
           </xsl:when>
           <xsl:otherwise>
-            <td class="plg">
+            <td class="col-plg">
               <xsl:value-of select="plg"/>
             </td>
-            <td class="pfm">
+            <td class="col-pfm">
               <xsl:value-of select="pfm"/>
             </td>
-            <td class="rcn">
+            <td class="col-rcn">
               <xsl:value-of select="rcn"/>
             </td>
           </xsl:otherwise>
         </xsl:choose>
-        <td class="mel" title="{mel}">
+        <td class="col-mel" title="{mel}">
           <xsl:value-of select="melid"/>:
           <xsl:value-of select="substring-before(concat(mel, ',' ) , ',')"/>
         </td>
         <xsl:variable name="reflexes" select="sf"/>
         <xsl:for-each select="$lgs/*">
           <xsl:variable name="label" select="."/>
-          <td>
-            <xsl:for-each select="$reflexes/*">
+          <td class="col-lg" style="vertical-align:top">
+            <!-- Leaf language reflexes: search at any depth -->
+            <xsl:for-each select="$reflexes//rfx">
               <xsl:if test="lg = $label">
-                <xsl:text/>
-                <xsl:text></xsl:text>
-                <span title='{gl} {id}'>
+                <!-- Each form gets its own line; gloss shown inline so that
+                     multiple tone/semantic variants in one cell stay legible.
+                     class rfx-gloss is toggled by the "Show/Hide glosses"
+                     button via #sets-content.glosses-hidden .rfx-gloss. -->
+                <div title="{id}">
                   <xsl:apply-templates select="lx"/>
-                </span>
+                  <xsl:if test="gl != ''">
+                    <xsl:text> </xsl:text>
+                    <small class="rfx-gloss" style="color:#888"><xsl:value-of select="gl"/></small>
+                  </xsl:if>
+                </div>
+              </xsl:if>
+            </xsl:for-each>
+            <!-- Intermediate proto-language reconstructions: match subset by plg -->
+            <xsl:for-each select="$reflexes//subset">
+              <xsl:if test="plg = $label">
+                <div title="{id}">
+                  <xsl:value-of select="pfm"/>
+                  <xsl:if test="rcn != ''">
+                    <xsl:text> </xsl:text>
+                    <small class="rfx-gloss" style="color:#888"><xsl:value-of select="rcn"/></small>
+                  </xsl:if>
+                </div>
               </xsl:if>
             </xsl:for-each>
           </td>
@@ -182,52 +194,72 @@
 
   <xsl:template match="languages">
     <xsl:for-each select="*">
-      <th>
+      <th class="col-lg">
         <xsl:value-of select="."/>
       </th>
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template match="isolates">
-    <div class="row">
-      <div class="col-md-6">
-        <a name="isolates"/>
-        <h5>Isolates</h5>
-      </div>
-      <div class="col-md-6">
-        <h6>n =
-          <xsl:value-of select="count(rfx)"/>
-        </h6>
-      </div>
-      <div class="row">
-        <div class="col">
-          <ol>
-            <xsl:apply-templates select="rfx"/>
-          </ol>
-        </div>
-      </div>
-    </div>
+    <a name="isolates"/>
+    <h5>Isolates
+      <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+        n = <xsl:value-of select="count(rfx)"/>
+      </small>
+    </h5>
+    <table class="table table-sm table-striped table-hover table-bordered sortable">
+      <thead>
+        <tr>
+          <th>lg</th>
+          <th>lx</th>
+          <th>gl</th>
+          <th>pfm</th>
+          <th>rcn</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:for-each select="rfx">
+          <tr>
+            <td><xsl:value-of select="lg"/></td>
+            <td><xsl:value-of select="lx"/></td>
+            <td><xsl:value-of select="gl"/></td>
+            <td><xsl:value-of select="pfm"/></td>
+            <td><xsl:value-of select="rcn"/></td>
+            <td><xsl:value-of select="@id"/></td>
+          </tr>
+        </xsl:for-each>
+      </tbody>
+    </table>
   </xsl:template>
 
   <xsl:template match="failures">
-    <div class="row">
-      <div class="col-md-6">
-        <a name="failures"/>
-        <h5>Failures</h5>
-      </div>
-      <div class="col-md-6">
-        <h6>n =
-          <xsl:value-of select="count(rfx)"/>
-        </h6>
-      </div>
-      <div class="row">
-        <div class="col">
-          <ol>
-            <xsl:apply-templates select="rfx"/>
-          </ol>
-        </div>
-      </div>
-    </div>
+    <a name="failures"/>
+    <h5>Failures
+      <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+        n = <xsl:value-of select="count(rfx)"/>
+      </small>
+    </h5>
+    <table class="table table-sm table-striped table-hover table-bordered sortable">
+      <thead>
+        <tr>
+          <th>lg</th>
+          <th>lx</th>
+          <th>gl</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:for-each select="rfx">
+          <tr>
+            <td><xsl:value-of select="lg"/></td>
+            <td><xsl:value-of select="lx"/></td>
+            <td><xsl:value-of select="gl"/></td>
+            <td><xsl:value-of select="@id"/></td>
+          </tr>
+        </xsl:for-each>
+      </tbody>
+    </table>
   </xsl:template>
 
   <xsl:template match="set" name="set">

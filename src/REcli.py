@@ -10,41 +10,54 @@ import utils
 import shutil
 import serialize
 from argparser import command_args, args
+from utils import *
+from read import read_settings
 
 def check_setup(command, args, settings):
     # only for checking 'upstream' setup at the moment; other setups mostly checked earlier
     errors = False
-    if args.recon is None:
-        print('a --recon (or -t) argument is required.')
+    if args.recon is None and args.upstream is None:
+        print('a --recon (or -t) argument is required if a --upstream argument is not present.')
         errors = True
     if args.run is None:
         print('a --run (or -r) argument is required.')
         errors = True
+    if args.project_path is None or args.project is None:
+        print(f'could not find project. does .')
+        errors = True
     if settings.proto_languages == {}:
-        print(f'{args.recon} does not seem to exist as a possible Reconstruction.')
-        errors = True
-    if args.fuzzy is not None and args.fuzzy not in settings.other['fuzzies']:
-        print(f'{args.fuzzy} does not seem to point to a fuzzy file.')
-        errors = True
-    if args.mel is not None and args.mel not in settings.other['mels']:
-        print(f'{args.mel} does not seem to point to a MEL file.')
+        print(f'could not construct a reconstruction tree.')
         errors = True
     if errors:
         sys.exit(1)
 
 if command_args.command == 'coverage':
     print(f'checking {args.project} glosses in {args.mel_name} mel:')
-    parameters_file = os.path.join('..', 'projects', args.project, f'{args.project}.master.parameters.xml')
-    settings = read.read_settings_file(parameters_file,
-                                       mel=args.mel_name)
+    recon_candidates = [fn for fn in os.listdir(args.project_path)
+                        if fn.startswith(f'{args.project}.') and fn.endswith('.correspondences.xml')]
+    if not recon_candidates:
+        raise Exception(f"No {args.project}.*.correspondences.xml files found in {args.project_path}")
+    recon_token = recon_candidates[0].split('.', 2)[1]
+    settings =  read_settings(args.project_path, args.project, recon_token,
+                                            mel_token=args.mel_name,
+                                            fuzzy_token=None,
+                                            languages=None)
     coverage_statistics = coverage.check_mel_coverage(settings)
-    coverage_xml_file = os.path.join('..', 'projects', args.project, f'{args.project}.{args.mel_name}.coverage.statistics.xml')
+    coverage_xml_file = os.path.join(args.project_path, f'{args.project}.{args.mel_name}.coverage.statistics.xml')
     args.run = args.mel_name
-    extra_mel_xml_file = os.path.join('..', 'projects', args.project, f'{args.project}.{args.mel_name}-extra.mel.xml')
+    extra_mel_xml_file = os.path.join(args.project_path, f'{args.project}.{args.mel_name}-extra.mel.xml')
     serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
     serialize.serialize_mels(coverage_statistics.unmatched_glosses, args.mel_name, extra_mel_xml_file)
 elif command_args.command == 'analyze-glosses':
-    settings = read.read_settings_file(os.path.join('..', 'projects', args.project, f'{args.project}.master.parameters.xml'))
+    recon_candidates = [fn for fn in os.listdir(args.project_path)
+                        if fn.startswith(f'{args.project}.') and fn.endswith('.correspondences.xml')]
+    if not recon_candidates:
+        raise Exception(f"No {args.project}.*.correspondences.xml files found in {args.project_path}")
+    recon_token = recon_candidates[0].split('.', 2)[1]
+    settings =  read_settings(args.project_path, args.project, recon_token,
+                                            mel_token=None,
+                                            fuzzy_token=None,
+                                            languages=None)
 
     glosses = sorted(utils.all_glosses(read.read_attested_lexicons(settings)))
     gloss_analysis_statistics = coverage.check_glosses(settings, args, glosses)
@@ -56,27 +69,30 @@ elif command_args.command == 'new-project':
     if os.path.isdir(directory):
         print(f'{directory} already exists, not (re)created')
     else:
-        shutil.copytree(
-            os.path.join('..', 'projects', args.project),
-            os.path.join('..', 'projects', args.project))
-        print(f'created new project')
+        os.mkdir(os.path.join('..', 'projects', args.project))
+        print(f'created new project {args.project}')
 elif command_args.command == 'delete-project':
     directory = os.path.join('..', 'projects', args.project)
     if os.path.isdir(directory):
         shutil.rmtree(directory, ignore_errors=True)
-        print('deleted project')
+        print(f'deleted project {args.project}')
     else:
         print(f'{directory} does not exist, not deleted')
 elif command_args.command == 'compare' or command_args.command == 'diff':
     both = f'{args.run1}-and-{args.run2}'
-    parameters_file = os.path.join(args.project_path,
-                                   f'{args.project}.master.parameters.xml')
+    recon_candidates = [fn for fn in os.listdir(args.project_path)
+                        if fn.startswith(f'{args.project}.') and fn.endswith('.correspondences.xml')]
+    if not recon_candidates:
+        raise Exception(f"No {args.project}.*.correspondences.xml files found in {args.project_path}")
+    if any(fn == f'{args.project}.standard.correspondences.xml' for fn in recon_candidates):
+        recon_token = 'standard'
+    else:
+        recon_token = recon_candidates[0].split('.', 2)[1]
 
-    # there must be a 'standard' reconstruction element for compare to work... need languages
-    settings = read.read_settings_file(parameters_file,
-                                       mel=None,
-                                       fuzzy=None,
-                                       recon='standard')
+    settings =  read_settings(args.project_path, args.project, recon_token,
+                                            mel_token=None,
+                                            fuzzy_token=None,
+                                            upstream=None)
 
     B1 = read.read_proto_lexicon(
         os.path.join(args.project_path, f'{args.project}.{args.run1}.sets.json'))
@@ -98,14 +114,14 @@ elif command_args.command == 'upstream':
     print(time.asctime())
     elapsed_time = time.time()
     print('Command line options used: ' + ' '.join(sys.argv[1:]))
-
-    parameters_file = os.path.join('..', 'projects', args.project, f'{args.project}.master.parameters.xml')
-    settings = read.read_settings_file(parameters_file,
-                                       mel=args.mel,
-                                       fuzzy=args.fuzzy,
-                                       recon=args.recon)
+    load_hooks.load_hook(args.project_path)
+    # languages = split_csv(getattr(args, 'upstream', None))
+    settings = read_settings(args.project_path, args.project, args.recon,
+                                            mel_token=args.mel,
+                                            fuzzy_token=args.fuzzy,
+                                            upstream=args.upstream)
     check_setup(command_args.command, args, settings)
-    load_hooks.load_hook(args.project_path, args, settings)
+
     mel_status = 'strict MELs' if args.only_with_mel else 'MELs not enforced'
     print(mel_status)
     B = RE.batch_all_upstream(settings, only_with_mel=args.only_with_mel)
@@ -120,17 +136,29 @@ elif command_args.command == 'upstream':
         if len(reference_set) != 0:
             correspondences_used += 1
     print(f'{correspondences_used} correspondences used')
-    B.isolates = sorted(RE.extract_isolates(B).keys(), key=lambda x: x.language)
+    _isolates_dict = RE.extract_isolates(B)
+    B.isolates_dict = _isolates_dict
+    B.isolates = sorted(_isolates_dict.keys(), key=lambda x: x.language)
     B.failures = sorted(B.statistics.failed_parses, key=lambda x: x.language)
     sets_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.sets.xml')
-    RE.dump_xml_sets(B, settings.upstream[settings.upstream_target], sets_xml_file, args.only_with_mel)
+    intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
+    all_languages = intermediate_pls + list(settings.attested.keys())
+    RE.dump_xml_sets(B, all_languages, sets_xml_file, args.only_with_mel)
     # print(f'wrote {len(B.forms)} xml sets, {len(B.failures.supporting_forms)} failures and {len(B.isolates)} isolates to {sets_xml_file}')
+    unique_sets = len({pf.supporting_forms for pf in B.forms})
     B.statistics.add_stat('isolates', len(B.isolates))
     B.statistics.add_stat('failure', len(B.failures))
-    B.statistics.add_stat('sets', len(B.forms))
+    B.statistics.add_stat('sets', unique_sets)
     B.statistics.add_stat('sankey', f'{len(B.isolates)},{len(B.failures)},{B.statistics.summary_stats["reflexes"]}')
     stats_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.upstream.statistics.xml')
     serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
+
+    if getattr(settings, 'mel_filename', None):
+        coverage_statistics = coverage.check_mel_coverage(settings)
+        coverage_xml_file = os.path.join(args.project_path, f'{args.project}.{args.run}.coverage.xml')
+        serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
+        print(f'wrote coverage report to {coverage_xml_file}')
+
     # make comparisons if there are things to compare
     # for what_to_compare in 'upstream evaluation mel'.split(' '):
     #    compare.compare(args.project_path, args.project, what_to_compare)

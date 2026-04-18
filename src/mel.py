@@ -64,15 +64,72 @@ def search_mels(gloss, mel_glosses):
         return [gloss]
     return [g for g in glosses if g in mel_glosses]
 
-# Split a gloss into a list of `normalized' glosses.
+# Matches parenthetical or bracketed asides — e.g. "(of a person)", "[archaic]".
+_PAREN_RE = re.compile(r'\([^)]*\)|\[[^\]]*\]')
+
+# Grammar particles stripped from the *beginning* of a phrase when more words follow.
+# "to give" → "give";  "be sick" → "sick";  "to be hungry" → "be hungry" → "hungry".
+_PARTICLES = ('to', 'be')
+
+def _strip_particles(phrase):
+    """Iteratively remove leading grammar particles from a phrase."""
+    for particle in _PARTICLES:
+        words = phrase.split()
+        if len(words) > 1 and words[0] == particle:
+            phrase = ' '.join(words[1:])
+    return phrase.strip()
+
+# Split a gloss string into a list of normalised candidate glosses.
+#
+# Pipeline:
+#   1. Remove parenthetical / bracketed asides and their delimiters.
+#   2. Remove proto-form marker (*).
+#   3. Handle Lexware | delimiter *before* splitting so variants are correct:
+#      "water|rain" → ["waterrain", "water"]   (pipe removed / truncated).
+#   4. Split each variant on alternative-gloss separators: / , ; :
+#      Spaces are *within-phrase* and must NOT split — MEL glosses are stored
+#      as multi-word phrases ("clay pot") and splitting on spaces would prevent
+#      them from ever matching.
+#      The colon is included because lexicon glosses often use it as a
+#      clarification separator, e.g. "boiled grain: ideally rice".
+#   5. Strip leading grammar particles ('to', 'be') from each phrase.
+#   6. Also yield every individual *word* from each phrase as an additional
+#      candidate.  This handles descriptive glosses such as
+#      "boiled grain: ideally rice, but more frequently maize or"
+#      where content words ("grain", "rice") appear as single-word MEL glosses
+#      but the phrase itself never matches.  Function words ("but", "more",
+#      "or", "ideally") are harmless because they will simply never appear in
+#      any MEL gloss set.
+#   7. Drop empty strings and deduplicate (preserving order: phrases first,
+#      individual words after).
 def normalize_gloss(gloss):
-    glosses = re.split(r'[/ ,]', gloss.replace('*', ''))
+    # 1. Strip parentheticals / brackets.
+    gloss = _PAREN_RE.sub('', gloss)
+    # 2. Strip proto-form marker.
+    gloss = gloss.replace('*', '')
+
+    # 3. Lexware | handling — produce variants before splitting on /,;:.
     if '|' in gloss:
-        for i, g in enumerate(glosses):
-            # handle lexware | delimiter: replace gloss with two term -- one trimmed, one with | removed
-            if '|' in g:
-                glosses.append(g.replace('|', ''))
-                glosses.append(re.sub(r'\|.*', '', g))
-                del glosses[i]
-    glosses = [g for g in glosses if g != '']
-    return glosses
+        variants = [gloss.replace('|', ''), re.sub(r'\|.*', '', gloss)]
+    else:
+        variants = [gloss]
+
+    # 4 & 5. Split on delimiter characters and strip leading particles.
+    seen = set()
+    phrases = []
+    for v in variants:
+        for part in re.split(r'[/,;:]', v):
+            part = _strip_particles(part.strip())
+            if part and part not in seen:
+                seen.add(part)
+                phrases.append(part)
+
+    # 6. Also add individual words from every phrase as additional candidates.
+    for phrase in list(phrases):
+        for word in phrase.split():
+            word = word.strip()
+            if word and word not in seen:
+                seen.add(word)
+                phrases.append(word)
+
+    return phrases

@@ -1,0 +1,18 @@
+# Reconstruction Engine — Project Configuration
+#
+# Each entry maps a short project name to the directory containing
+# that project's files.  Paths are relative to this file's location,
+# or you can use absolute paths with forward slashes.
+#
+# To add your own projects, append lines like:
+#   MYPROJECT = "C:/Users/yourname/Documents/linguistics/MYPROJECT"
+#
+# After editing this file, click the Reload button in the RE web interface
+# (or restart the app) to pick up the changes.
+
+DIS        = "projects/DIS"
+HMONGMIEN  = "projects/HMONGMIEN"
+LOLOISH    = "projects/LOLOISH"
+POLYNESIAN = "projects/POLYNESIAN"
+ROMANCE    = "projects/ROMANCE"
+SLAVIC     = "projects/SLAVIC"

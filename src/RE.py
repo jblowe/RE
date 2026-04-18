@@ -240,7 +240,7 @@ def read_context_from_string(string):
     if string == '':
         return (None, None)
     if '_' not in string:
-        raise Exception('Context missing _ divider.')
+        raise Exception(f'Context missing _ divider: {string}')
     return tuple(None if x == '' else
                   [y.strip() for y in x.split(',')]
                   for x in string.replace('/', '').split('_'))
@@ -873,7 +873,11 @@ def project_back(lexicons, parameters, statistics):
         # we don't want to tokenize the same glyphs more than once, so
         # memoize each parse
         memo = {}
-        daughter_form = lambda c: c.daughter_forms[lexicon.language]
+        if lexicon.language in parameters.table.daughter_languages:
+            daughter_form = lambda c: c.daughter_forms[lexicon.language]
+        else:
+            print(f'Could not determine daughter forms for {lexicon.language}, deleted it.')
+            continue
         count_of_parses = 0
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map)
@@ -891,7 +895,7 @@ def project_back(lexicons, parameters, statistics):
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
             forms_to_parse += quirky_forms
         for form in forms_to_parse:
-            if form.glyphs == '':
+            if not form.glyphs or form.glyphs.strip() in ('', '?'):
                 continue
             statistics.add_debug_note(f'!Parsing {form}...')
             if form.glyphs:
@@ -925,6 +929,7 @@ def project_back(lexicons, parameters, statistics):
     statistics.add_stat('lexicons', len(lexicons))
     statistics.add_stat('reflexes', number_of_forms)
     statistics.add_note(f'{number_of_forms} attested forms')
+    statistics.add_note(f'{len(reconstructions)} reconstructions generated')
     statistics.keys = reconstructions
     return reconstructions, statistics
 
@@ -1045,6 +1050,8 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
+    accumulated_language_stats = {}
+
     def rec(target, root):
         if target in attested_lexicons:
             return attested_lexicons[target]
@@ -1054,6 +1061,9 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                                            param_tree[target],
                                            only_with_mel,
                                            root)
+        # Accumulate language stats from every level so the top-level
+        # Statistics object reflects the full tree, not just the root level.
+        accumulated_language_stats.update(statistics.language_stats)
         sort_dict = {daughter: i for (i, daughter) in enumerate(tree[target])}
         return Lexicon(
             target,
@@ -1064,7 +1074,9 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
              in forms],
             statistics).finalize_statistics(param_tree[target])
 
-    return rec(target, True)
+    result = rec(target, True)
+    result.statistics.language_stats = accumulated_language_stats
+    return result
 
 # Return a mapping from protolanguage to its associated parameter object.
 def parameter_tree_from_settings(settings):

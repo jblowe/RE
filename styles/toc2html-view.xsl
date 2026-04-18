@@ -12,8 +12,22 @@
 
 <xsl:template match="tableOfCorr">
 	<div>
+		<!-- Scoped styles for compact column widths in the correspondence table.
+		     Must live in the body fragment (head is stripped by xml_to_html). -->
+		<style>
+			/* Tighter cell padding for the correspondence table */
+			.toc-view-table td, .toc-view-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+			/* Column 1 = num, 3 = syll: very narrow */
+			.toc-view-table th:nth-child(1), .toc-view-table td:nth-child(1) { width: 3ch; }
+			.toc-view-table th:nth-child(3), .toc-view-table td:nth-child(3) { width: 4ch; }
+			/* Columns 4-5 = left / right context */
+			.toc-view-table th:nth-child(4), .toc-view-table td:nth-child(4),
+			.toc-view-table th:nth-child(5), .toc-view-table td:nth-child(5) { width: 5ch; }
+			/* Columns 6+ = dialect forms */
+			.toc-view-table th:nth-child(n+6), .toc-view-table td:nth-child(n+6) { width: 5ch; }
+		</style>
 		<h6>Parameters</h6>
-		<table>
+		<table class="table table-sm table-striped">
 		<xsl:if test="parameters/canon">
 			<tr>
 				<td><b>Syllable canon</b></td>
@@ -51,7 +65,7 @@
 		</div>
 		<h6>Table of correspondences</h6>
 		<div>
-		<table class="table table-sm table-hover table-striped table-bordered sets sortable">
+		<table class="table table-sm table-hover table-striped table-bordered sets sortable toc-view-table">
 			<thead class="sticky-top top-0">
 				<tr>
 					<th>num</th>
@@ -72,10 +86,15 @@
 					<td><xsl:value-of select="proto/@contextL"/></td>
 					<td><xsl:value-of select="proto/@contextR"/></td>
 					
-					<xsl:for-each select="modern">
-						<!-- xsl:sort select="@dialecte"/ -->
+					<!-- Iterate over the CANONICAL column list so that missing
+					 <modern> elements produce an empty cell in the correct
+					 column rather than shifting subsequent cells left. -->
+					<xsl:variable name="this-corr" select="."/>
+					<xsl:for-each select="../corr[1]/modern">
+						<xsl:variable name="d"    select="@dialecte"/>
+						<xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
 						<td>
-							<xsl:for-each select="seg">
+							<xsl:for-each select="$cell/seg">
 								<xsl:if test="@statut='doute'">=</xsl:if>
 								<xsl:value-of select="."/>
 								<xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>

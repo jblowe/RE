@@ -20,13 +20,10 @@
                         <xsl:value-of select="count(lexicon/entry)"/>
                     </b>
                 </div>
-                <div style="float: left; width:220px;">
+                <div style="float: left; width:300px;">
                     <i>created at:
                         <xsl:value-of select=".//createdat"/>
                     </i>
-                </div>
-                <div style="float: left; width:160px;">
-                    <a href="?tabular">switch to tabular display</a>
                 </div>
                 <div style="clear:both;"></div>
                 <xsl:apply-templates select=".//lexicon"/>
@@ -37,7 +34,7 @@
     <xsl:template match="lexicon">
         <div>
             <div class="table-responsive">
-            <table class="table table-sm" border="1">
+            <table class="table table-sm table-striped table-bordered sortable">
                 <thead/>
                 <xsl:for-each select="entry">
                     <tr class="table-secondary">

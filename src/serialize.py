@@ -12,6 +12,7 @@ import csv
 
 run_date = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
 
+
 def serialize_correspondence_file(filename, parameters):
     root = ET.Element('tableOfCorr')
     ET.SubElement(root, 'createdat').text = run_date
@@ -85,12 +86,14 @@ def serialize_correspondence_file(filename, parameters):
         f.write(minidom.parseString(ET.tostring(root))
                 .toprettyxml(indent='   '))
 
+
 def serialize_csv_correspondences(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
         writer.writerow(table.correspondence_header_row())
         for c in table.correspondences:
             writer.writerow(c.as_row(table.daughter_languages))
+
 
 def serialize_csv_rules(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
@@ -99,6 +102,7 @@ def serialize_csv_rules(table, filename):
         for rule in table.rules:
             writer.writerow(rule.as_row())
 
+
 def serialize_csv_quirks(table, filename):
     with open(filename, 'w', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
@@ -106,12 +110,14 @@ def serialize_csv_quirks(table, filename):
         for quirk in table.quirks.values():
             writer.writerow(quirk.as_row())
 
-def serialize_lexicons(lexicons, dirname, ext='.data.xml'):
+
+def serialize_lexicons(lexicons, project_name, dirname, ext='.data.xml'):
     for lexicon in lexicons:
         serialize_lexicon(
             lexicon,
             os.path.join(dirname,
-                         f'{lexicon.language}{ext}'))
+                         f'{project_name}.{lexicon.language}{ext}'))
+
 
 def serialize_lexicon(lexicon, filename):
     root = ET.Element('lexicon', attrib={'dialecte': lexicon.language})
@@ -143,24 +149,33 @@ def add_entry(root, form, number):
         ET.SubElement(rfx, 'lx').text = form.actual.glyphs
         ET.SubElement(rfx, 'fz').text = form.glyphs
     ET.SubElement(rfx, 'lg').text = form.language
-    ET.SubElement(rfx, 'gl').text = form.gloss
+    try:
+        ET.SubElement(rfx, 'gl').text = form.gloss
+    except:
+        ET.SubElement(rfx, 'gl').text = 'missing'
+        # print(f'gloss missing in {form.language} {number} {form.glyphs}')
     return
 
 
 def render_sets(forms, sets, languages, set_type):
-
     def sort_forms(form, sf, level):
         # we need to output the supporting forms in the order specified by "languages"
         unfrozenset = [x for x in form.supporting_forms]
         lglist = [x.language for x in form.supporting_forms]
+        emitted = set()
         for language in languages:
             try:
                 indices = [i for i, x in enumerate(lglist) if x == language]
                 for i in indices:
                     supporting_form = unfrozenset[i]
                     render_xml(sf, supporting_form, level + 1)
+                    emitted.add(i)
             except:
                 pass
+        # Emit any remaining forms (intermediate proto-languages not in the leaf languages list)
+        for i, supporting_form in enumerate(unfrozenset):
+            if i not in emitted:
+                render_xml(sf, supporting_form, level + 1)
         return
 
     def add_protoform_element(element, protoform):
@@ -174,7 +189,8 @@ def render_sets(forms, sets, languages, set_type):
 
     def render_xml(element, form, level):
 
-        # handle 'strict' case: possibly output a set with multiple reconstructions
+        # handle merged case: a tuple (supporting_forms, [ProtoForm, ...]) produced
+        # by grouping sets with identical reflexes; len > 1 means multiple reconstructions.
         if isinstance(form, tuple):
             if level != 0:
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
@@ -185,11 +201,9 @@ def render_sets(forms, sets, languages, set_type):
                     add_protoform_element(reconstruction_block, protoform)
             else:
                 add_protoform_element(element, form[1][0])
-            if form[1][0].mel:
+            if form[1][0].mel and form[1][0].mel.glosses:
                 ET.SubElement(element, 'mel').text = ', '.join(form[1][0].mel.glosses)
                 ET.SubElement(element, 'melid').text = form[1][0].mel.id
-            else:
-                pass
             sf = ET.SubElement(element, 'sf')
             sort_forms(form[1][0], sf, level)
 
@@ -208,6 +222,11 @@ def render_sets(forms, sets, languages, set_type):
                 element = ET.SubElement(element, 'subset', attrib={'level': str(level)})
             ET.SubElement(element, 'id').text = f'%s.%s' % (number + 1, level)
             add_protoform_element(element, form)
+            # Emit MEL gloss and id when a real MEL is associated (glosses is
+            # non-empty for real Mel objects; default_mel has glosses=[]).
+            if form.mel and form.mel.glosses:
+                ET.SubElement(element, 'mel').text = ', '.join(form.mel.glosses)
+                ET.SubElement(element, 'melid').text = form.mel.id
             sf = ET.SubElement(element, 'sf')
             sort_forms(form, sf, level)
 
@@ -218,6 +237,7 @@ def render_sets(forms, sets, languages, set_type):
 
     print(f'number of "{set_type}" {number}')
     return sets
+
 
 def create_xml_sets(reconstruction, languages, only_with_mel):
     '''
@@ -248,20 +268,22 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
     sets = ET.SubElement(root, 'sets')
 
-    # if 'strict' is on, squish the sets using mels before output
-    if only_with_mel:
-        uniques = collections.defaultdict(list)
-        for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
-            uniques[form.supporting_forms].append(form)
+    # Always merge sets that share identical supporting forms, collecting all
+    # competing reconstructions into a tuple so render_xml can emit <multi>
+    # elements for them.  (Whether forms *reach* this point depends on
+    # only_with_mel / strict, which is handled upstream in mel.associated_mels.)
+    uniques = collections.defaultdict(list)
+    for form in sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)):
+        uniques[form.supporting_forms].append(form)
 
-        render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)), sets, languages, 'strict sets')
-
-    # otherwise, make sets the 'usual' way (no mels)
-    else:
-        render_sets(sorted(reconstruction.forms, key=lambda corrs: RE.correspondences_as_ids(corrs.correspondences)), sets, languages, 'sets')
+    render_sets(sorted(uniques.items(), key=lambda recons: RE.correspondences_as_ids(recons[1][0].correspondences)),
+                sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
-    serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
+    if hasattr(reconstruction, 'isolates_dict'):
+        serialize_isolates_dict(reconstruction.isolates_dict, isolates)
+    else:
+        serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
 
     failures = ET.SubElement(root, 'failures')
     # there is only one (big) set for failures, pass it in as a list
@@ -269,10 +291,12 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
     return root
 
+
 def serialize_sets(reconstruction, languages, filename, only_with_mel):
     root = create_xml_sets(reconstruction, languages, only_with_mel)
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
 
 def serialize_stats(stats, settings, args, filename):
     root = ET.Element('stats', attrib={'project': 'foo'})
@@ -280,14 +304,23 @@ def serialize_stats(stats, settings, args, filename):
 
     settings_element = ET.SubElement(root, 'settings')
     try:
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'run', 'value': str(args.run)})
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'mel_filename', 'value': str(settings.mel_filename)})
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
-        ET.SubElement(settings_element, 'parm',attrib={'key': 'strict', 'value': str(args.only_with_mel)})
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'run', 'value': str(args.run)})
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'mel_filename', 'value': str(settings.mel_filename)})
+        ET.SubElement(settings_element, 'parm',
+                      attrib={'key': 'correspondences', 'value': settings.proto_languages[settings.upstream_target]})
+        ET.SubElement(settings_element, 'parm', attrib={'key': 'strict', 'value': str(args.only_with_mel)})
         try:
-            ET.SubElement(settings_element, 'parm',attrib={'key': 'fuzzyfile', 'value': settings.fuzzy_filename})
+            ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': settings.fuzzy_filename})
         except:
             ET.SubElement(settings_element, 'parm', attrib={'key': 'fuzzyfile', 'value': 'No fuzzying done.'})
+        try:
+            sc = settings.syllable_canon
+            ET.SubElement(settings_element, 'parm', attrib={
+                'key': 'context_match_type', 'value': str(sc.context_match_type)})
+            ET.SubElement(settings_element, 'parm', attrib={
+                'key': 'spec', 'value': ', '.join(sc.supra_segmentals)})
+        except Exception:
+            pass
     except:
         pass
     # for s in settings.other:
@@ -335,13 +368,25 @@ def serialize_stats(stats, settings, args, filename):
         pass
 
     try:
-        if len(stats.unmatched_by_language.items()) > 0:
-            unmatched = ET.SubElement(root, 'unmatched')
-            for lg in stats.unmatched_by_language:
-                unmatched_by_language = ET.SubElement(unmatched, 'mel', attrib={'id': lg})
-                for g in sorted(stats.unmatched_by_language[lg]):
-                    gl_element = ET.SubElement(unmatched_by_language, 'gl')
+        if len(stats.glosses_by_language.items()) > 0:
+            glosses_by_language = ET.SubElement(root, 'glosses_by_language')
+            for lg in stats.glosses_by_language:
+                # we reuse the <mel> element here for each language
+                list_of_glosses = ET.SubElement(glosses_by_language, 'mel', attrib={'id': lg})
+                for g in sorted(stats.glosses_by_language[lg]):
+                    gl_element = ET.SubElement(list_of_glosses, 'gl')
                     gl_element.text = g
+                    gl_element.set('count', str(stats.glosses_by_language[lg][g]))
+    except:
+        pass
+
+    try:
+        if len(stats.unmatched_glosses) > 0:
+            unmatched_glosses = ET.SubElement(root, 'unmatched_glosses')
+            list_of_unmatched_glosses = ET.SubElement(unmatched_glosses, 'mel')
+            for g in sorted(stats.unmatched_glosses):
+                gl_element = ET.SubElement(list_of_unmatched_glosses, 'gl')
+                gl_element.text = g
     except:
         pass
 
@@ -385,7 +430,7 @@ def serialize_evaluation(stats, filename, languages):
                         seen.add(node2)
                     links.append({'source': node2, 'target': node, 'value': 2})
 
-            with open(filename.replace('.xml','.json'), 'w', encoding='utf-8') as f:
+            with open(filename.replace('.xml', '.json'), 'w', encoding='utf-8') as f:
                 f.write(json.dumps({'nodes': nodes, 'links': links}, indent=2))
 
             # for now, just handle the first 200 reflexes and first 100 protoforms for the table version
@@ -414,16 +459,6 @@ def serialize_evaluation(stats, filename, languages):
                     else:
                         ET.SubElement(tr, 'td').text = ''
 
-            # a previous iteration
-            # for i in range(len(refs)):
-            #     tr = ET.SubElement(element, 'tr')
-            #     ET.SubElement(tr, 'th').text = refs[i]
-            #     for j in range(len(pfms)):
-            #         if pfms[j] in graph[refs[i]]:
-            #             ET.SubElement(tr, 'td').text = pfms[j]
-            #         else:
-            #             ET.SubElement(tr, 'td').text = ''
-
         elif k in 'pfms refs list_of_sf'.split(' '):
             pass
         elif type(v) == type(()):
@@ -435,6 +470,7 @@ def serialize_evaluation(stats, filename, languages):
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
 
 def serialize_mels(mel_sets, mel_name, filename):
     '''
@@ -451,17 +487,42 @@ def serialize_mels(mel_sets, mel_name, filename):
     ET.SubElement(root, 'createdat').text = run_date
 
     for (number, mel) in enumerate(list(mel_sets)):
-        entry = ET.SubElement(root, 'mel', attrib={'id': f'x{str(number + 1)}'})
-        ET.SubElement(entry, 'gl').text = mel
+        entry = ET.SubElement(root, 'mel', attrib={'id': 'x' + str(number + 1).zfill(4)})
+        for m in mel.glosses:
+            ET.SubElement(entry, 'gl').text = m
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
 
 def serialize_isolates_and_failures(re_items, re_element, item_name):
     ET.SubElement(re_element, 'createdat').text = run_date
 
+    number = 0
     for (number, form) in enumerate(re_items):
         add_entry(re_element, form, number)
 
     print(f'number of "{item_name}" {number}')
 
     return
+
+
+def serialize_isolates_dict(isolates_dict, re_element):
+    """Serialize isolates with pfm/rcn from the dict returned by extract_isolates."""
+    ET.SubElement(re_element, 'createdat').text = run_date
+    print(f'number of "isolates" {len(isolates_dict)}')
+    for number, (form, proto_forms) in enumerate(
+            sorted(isolates_dict.items(), key=lambda x: x[0].language)):
+        rfx = ET.SubElement(re_element, 'rfx')
+        if isinstance(form, RE.ModernForm):
+            rfx.set('id', form.id)
+            ET.SubElement(rfx, 'lx').text = form.glyphs
+        ET.SubElement(rfx, 'lg').text = form.language
+        try:
+            ET.SubElement(rfx, 'gl').text = form.gloss
+        except Exception:
+            ET.SubElement(rfx, 'gl').text = 'missing'
+        if proto_forms:
+            pf = proto_forms[0]
+            ET.SubElement(rfx, 'pfm').text = pf.glyphs
+            ET.SubElement(rfx, 'rcn').text = RE.correspondences_as_ids(
+                pf.correspondences).strip()
