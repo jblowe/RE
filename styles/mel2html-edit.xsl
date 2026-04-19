@@ -5,10 +5,6 @@
     <html lang="en">
       <head>
         <meta charset="utf-8"/>
-        <style>
-          .actions-col { width: 1%; white-space: nowrap; }
-          .btn-icon { padding: .1rem .4rem; line-height: 1; }
-        </style>
       </head>
       <body>
         <div class="card mb-3">
@@ -18,22 +14,24 @@
               <table class="table table-sm table-bordered table-hover mb-0" id="mel-table">
                 <thead class="table-light">
                   <tr>
-                    <th class="actions-col">
+                    <th style="width:1%;white-space:nowrap">
                       <button type="button" id="addMelBtn"
-                              class="btn btn-outline-primary btn-sm btn-icon"
+                              class="btn btn-outline-primary btn-sm"
+                              style="padding:.1rem .4rem;line-height:1"
                               title="Add entry">+</button>
                     </th>
                     <th style="width:7ch">ID</th>
-                    <th>Glosses (comma-separated)</th>
+                    <th class="mel-gl-col">Glosses (comma-separated)</th>
                   </tr>
                 </thead>
                 <tbody id="mel-body">
                   <xsl:for-each select="semantics/mel">
                     <xsl:variable name="n" select="position()"/>
                     <tr>
-                      <td class="actions-col">
+                      <td style="width:1%;white-space:nowrap">
                         <button type="button"
-                                class="btn btn-outline-danger btn-sm btn-icon btn-del-mel-row"
+                                class="btn btn-outline-danger btn-sm btn-del-mel-row"
+                                style="padding:.1rem .4rem;line-height:1"
                                 title="Delete row">&#x2212;</button>
                       </td>
                       <td>
@@ -44,7 +42,7 @@
                           </xsl:attribute>
                         </input>
                       </td>
-                      <td>
+                      <td class="mel-gl-col">
                         <input type="text" class="form-control form-control-sm"
                                name="mel-{$n}-glosses" id="mel-{$n}-glosses">
                           <xsl:attribute name="value">
@@ -78,9 +76,9 @@
     if(ev.target && ev.target.id === 'addMelBtn'){
       var tr = document.createElement('tr');
       tr.innerHTML =
-        '<td class="actions-col"><button type="button" class="btn btn-outline-danger btn-sm btn-icon btn-del-mel-row" title="Delete row">&#x2212;</button></td>'
+        '<td style="width:1%;white-space:nowrap"><button type="button" class="btn btn-outline-danger btn-sm btn-del-mel-row" style="padding:.1rem .4rem;line-height:1" title="Delete row">\u2212</button></td>'
         + '<td><input type="text" class="form-control form-control-sm" placeholder="id"></td>'
-        + '<td><input type="text" class="form-control form-control-sm" placeholder="gloss1, gloss2"></td>';
+        + '<td class="mel-gl-col"><input type="text" class="form-control form-control-sm" placeholder="gloss1, gloss2"></td>';
       document.getElementById('mel-body').appendChild(tr);
       reindex();
       return;

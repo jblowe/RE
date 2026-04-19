@@ -145,7 +145,15 @@
           <xsl:apply-templates select="lg"/>
         </div>
         <div class="lx">
-          <xsl:apply-templates select="lx"/>
+          <xsl:choose>
+            <xsl:when test="lxf">
+              <xsl:apply-templates select="lxf"/>
+              <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:apply-templates select="lx"/>
+            </xsl:otherwise>
+          </xsl:choose>
         </div>
         <div class="gl">
           <xsl:apply-templates select="gl"/>

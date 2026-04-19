@@ -144,16 +144,19 @@ def add_entry(root, form, number):
     if isinstance(form, RE.ModernForm):
         rfx.set('id', form.id)
         ET.SubElement(rfx, 'lx').text = form.glyphs
+        # A failure carries the fuzzied form when neither version parsed.
+        fuzzied = getattr(form, 'fuzzied', None)
+        if fuzzied is not None:
+            ET.SubElement(rfx, 'lxf').text = fuzzied.glyphs
     elif isinstance(form, RE.FuzzyForm):
         rfx.set('id', form.actual.id)
         ET.SubElement(rfx, 'lx').text = form.actual.glyphs
-        ET.SubElement(rfx, 'fz').text = form.glyphs
+        ET.SubElement(rfx, 'lxf').text = form.glyphs
     ET.SubElement(rfx, 'lg').text = form.language
     try:
         ET.SubElement(rfx, 'gl').text = form.gloss
     except:
         ET.SubElement(rfx, 'gl').text = 'missing'
-        # print(f'gloss missing in {form.language} {number} {form.glyphs}')
     return
 
 
@@ -213,6 +216,20 @@ def render_sets(forms, sets, languages, set_type):
             ET.SubElement(rfx, 'lx').text = form.glyphs
             ET.SubElement(rfx, 'gl').text = form.gloss
             ET.SubElement(rfx, 'id').text = form.id
+            try:
+                ET.SubElement(rfx, 'membership').text = form.membership
+            except:
+                pass
+        elif isinstance(form, RE.FuzzyForm):
+            # Fuzzied reflex: <lx> carries the original glyphs (preserved for
+            # display / XSLT compatibility); <lxf> carries the fuzzied glyphs
+            # that were actually used for parsing.  XSLT renders as "lxf << lx".
+            rfx = ET.SubElement(element, 'rfx')
+            ET.SubElement(rfx, 'lg').text = form.language
+            ET.SubElement(rfx, 'lx').text = form.actual.glyphs
+            ET.SubElement(rfx, 'lxf').text = form.glyphs
+            ET.SubElement(rfx, 'gl').text = form.gloss
+            ET.SubElement(rfx, 'id').text = form.actual.id
             try:
                 ET.SubElement(rfx, 'membership').text = form.membership
             except:
@@ -516,6 +533,10 @@ def serialize_isolates_dict(isolates_dict, re_element):
         if isinstance(form, RE.ModernForm):
             rfx.set('id', form.id)
             ET.SubElement(rfx, 'lx').text = form.glyphs
+        elif isinstance(form, RE.FuzzyForm):
+            rfx.set('id', form.actual.id)
+            ET.SubElement(rfx, 'lx').text = form.actual.glyphs
+            ET.SubElement(rfx, 'lxf').text = form.glyphs
         ET.SubElement(rfx, 'lg').text = form.language
         try:
             ET.SubElement(rfx, 'gl').text = form.gloss

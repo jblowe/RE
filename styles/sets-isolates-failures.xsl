@@ -29,7 +29,15 @@
         <xsl:for-each select="rfx">
           <tr>
             <td><xsl:value-of select="lg"/></td>
-            <td><xsl:value-of select="lx"/></td>
+            <td>
+              <xsl:choose>
+                <xsl:when test="lxf">
+                  <xsl:value-of select="lxf"/>
+                  <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
+                </xsl:when>
+                <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
+              </xsl:choose>
+            </td>
             <td><xsl:value-of select="gl"/></td>
             <td><xsl:value-of select="pfm"/></td>
             <td><xsl:value-of select="rcn"/></td>
@@ -60,7 +68,15 @@
         <xsl:for-each select="rfx">
           <tr>
             <td><xsl:value-of select="lg"/></td>
-            <td><xsl:value-of select="lx"/></td>
+            <td>
+              <xsl:choose>
+                <xsl:when test="lxf">
+                  <xsl:value-of select="lxf"/>
+                  <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
+                </xsl:when>
+                <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
+              </xsl:choose>
+            </td>
             <td><xsl:value-of select="gl"/></td>
             <td><xsl:value-of select="@id"/></td>
           </tr>
