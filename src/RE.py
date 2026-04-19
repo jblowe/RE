@@ -882,50 +882,90 @@ def project_back(lexicons, parameters, statistics):
         count_of_no_parses = 0
         tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map)
         apply_rules = make_apply_rules(parameters, lexicon.language)
-        forms_to_parse = lexicon.forms
-        # There's no reason to fuzzy the exceptional forms, because
-        # the linguist will write the expected form in conformity with
-        # the table anyway.
+
+        # Build fuzzy-pairing map: id(original_form) → FuzzyForm.
+        # There's no reason to fuzzy exceptional (quirky) forms because
+        # the linguist writes the expected form in conformity with the table.
+        fuzzied_count = 0
+        fuzzied_map = {}
         if parameters.fuzzy:
-            fuzzied_forms, fuzzied_count = lexicon.fuzzied_forms(parameters.fuzzy)
-            statistics.add_note(f'{lexicon.language}: fuzzied {fuzzied_count} forms')
-            forms_to_parse += fuzzied_forms
+            fuzzied_list, fuzzied_count = lexicon.fuzzied_forms(parameters.fuzzy)
+            fuzzied_map = {id(ff.actual): ff for ff in fuzzied_list}
+
+        quirky_forms = []
         if parameters.table.quirks:
             quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
-            forms_to_parse += quirky_forms
-        for form in forms_to_parse:
+
+        def get_parses(glyphs):
+            """Return list of (cs, history) for a glyph string, memoised."""
+            if glyphs in memo:
+                return memo[glyphs]
+            parses = []
+            for (stage_0_form, history) in apply_rules(glyphs):
+                parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
+            memo[glyphs] = parses
+            return parses
+
+        def commit_parses(form, parses):
+            """Add successful parses to reconstructions, incrementing count_of_parses."""
+            nonlocal count_of_parses
+            for (cs, history) in parses:
+                count_of_parses += 1
+                if history == []:
+                    reconstructions[cs].append(form)
+                else:
+                    reconstructions[cs].append(Stage0Form(form, history))
+
+        for form in list(lexicon.forms) + quirky_forms:
             if not form.glyphs or form.glyphs.strip() in ('', '?'):
                 continue
             statistics.add_debug_note(f'!Parsing {form}...')
-            if form.glyphs:
-                def all_tokenizations():
-                    parses = []
-                    for (stage_0_form, history) in apply_rules(form.glyphs):
-                        parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
-                    return parses
-                if form.glyphs in memo:
-                    parses = memo[form.glyphs]
+            orig_parses = get_parses(form.glyphs)
+
+            fuzzied = fuzzied_map.get(id(form))
+            if fuzzied is not None:
+                fuzz_parses = get_parses(fuzzied.glyphs)
+                if orig_parses and fuzz_parses:
+                    # Both succeed: keep both and log it.
+                    statistics.add_note(
+                        f'{lexicon.language}: both original and fuzzied parsed: '
+                        f'{form.id} {form.gloss!r} '
+                        f'({form.glyphs!r} \u2192 {fuzzied.glyphs!r})')
+                    commit_parses(form, orig_parses)
+                    commit_parses(fuzzied, fuzz_parses)
+                elif orig_parses:
+                    # Only original parsed; fuzzied silently discarded.
+                    commit_parses(form, orig_parses)
+                elif fuzz_parses:
+                    # Only fuzzied parsed; original silently discarded (not a failure).
+                    commit_parses(fuzzied, fuzz_parses)
                 else:
-                    parses = all_tokenizations()
-                    memo[form.glyphs] = parses
+                    # Neither parsed: original is a failure; attach the fuzzied
+                    # form so serialization can show both.
+                    count_of_no_parses += 1
+                    form.fuzzied = fuzzied
+                    statistics.failed_parses.append(form)
             else:
-                statistics.add_note(f'form missing: {form.language} {form.gloss}')
-                parses = None
-            if parses:
-                for (cs, history) in parses:
-                    count_of_parses += 1
-                    if history == []:
-                        reconstructions[cs].append(form)
-                    else:
-                        proto_stage_0_form = Stage0Form(form, history)
-                        reconstructions[cs].append(proto_stage_0_form)
-            else:
-                count_of_no_parses += 1
-                statistics.failed_parses.append(form)
+                # No fuzzied version: original behaviour.
+                if orig_parses:
+                    commit_parses(form, orig_parses)
+                else:
+                    count_of_no_parses += 1
+                    statistics.failed_parses.append(form)
+
         number_of_forms += len(lexicon.forms)
-        statistics.language_stats[lexicon.language] = {'forms': len(lexicon.forms), 'no_parses': count_of_no_parses, 'reconstructions': count_of_parses}
-        statistics.add_note(f'{lexicon.language}: {len(lexicon.forms)} forms, {count_of_no_parses} no parses, {count_of_parses} reconstructions')
+        statistics.language_stats[lexicon.language] = {
+            'forms':           len(lexicon.forms),
+            'no_parses':       count_of_no_parses,
+            'reconstructions': count_of_parses,
+        }
+        n = len(lexicon.forms)
+        fuzz_detail = (f' ({fuzzied_count} fuzzied, {n - fuzzied_count} unfuzzied)'
+                       if fuzzied_count else '')
+        statistics.add_note(
+            f'{lexicon.language}: {n} forms{fuzz_detail}, '
+            f'{count_of_no_parses} no parses, {count_of_parses} reconstructions')
     statistics.add_stat('lexicons', len(lexicons))
     statistics.add_stat('reflexes', number_of_forms)
     statistics.add_note(f'{number_of_forms} attested forms')
