@@ -190,12 +190,6 @@
 
     <!-- ══ COMPARE TAB ══════════════════════════════════════════════════════ -->
     <div class="tab-pane fade" id="tab-compare" role="tabpanel">
-      <div class="tab-toolbar">
-        <button class="btn btn-sm btn-outline-secondary" id="btn-close-compare"
-                onclick="closeCompare()">
-          <i class="fas fa-times"></i> Close
-        </button>
-      </div>
       <div class="content-area" id="compare-content">
         <p class="text-muted">Select two runs from History and click Compare.</p>
       </div>
@@ -212,6 +206,11 @@
 
   </div><!-- /tab-content -->
 </div><!-- /container-fluid -->
+
+<!-- ── Back to top ── -->
+<button id="btn-back-to-top" class="btn btn-sm btn-outline-secondary"
+        title="Back to top"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679; Top</button>
 
 {% include '_scripts.html' %}
 </body>

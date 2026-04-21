@@ -27,11 +27,11 @@ def read_syllable_canon(parameters):
     for parameter in parameters:
         if parameter.tag == 'class':
             sound_classes[parameter.attrib.get('name')] = \
-                [x.strip() for x in parameter.attrib.get('value').split(',')]
+                [nfc(x.strip()) for x in parameter.attrib.get('value').split(',')]
         if parameter.tag == 'canon':
-            regex = parameter.attrib.get('value')
+            regex = nfc(parameter.attrib.get('value'))
         if parameter.tag == 'spec':
-            supra_segmentals = parameter.attrib.get('value').split(',')
+            supra_segmentals = [nfc(x) for x in parameter.attrib.get('value').split(',')]
         if parameter.tag == 'context_match_type':
             context_match_type = parameter.attrib.get('value')
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
@@ -53,7 +53,7 @@ def read_correspondences(tree):
         daughter_forms = {name: '' for name in daughter_languages}
         for dialect in correspondence.iterfind('modern'):
             daughter_forms[dialect.attrib.get('dialecte')] = \
-                list(map(lambda seg: seg.text, dialect.iterfind('seg')))
+                list(map(lambda seg: nfc(seg.text), dialect.iterfind('seg')))
         proto_form_info = correspondence.find('proto')
         contextL = proto_form_info.attrib.get('contextL')
         contextR = proto_form_info.attrib.get('contextR')
@@ -67,7 +67,7 @@ def read_correspondences(tree):
                 context,
                 [x.strip() for x
                  in proto_form_info.attrib.get('syll').split(',')],
-                proto_form_info.text,
+                nfc(proto_form_info.text),
                 daughter_forms))
     for rule in tree.iterfind('rule'):
         daughter_forms = {name: '' for name in daughter_languages}
@@ -84,22 +84,22 @@ def read_correspondences(tree):
             RE.Rule(
                 rule.attrib.get('num'),
                 context,
-                input_info.text,
+                nfc(input_info.text),
                 [x.strip() for x
-                 in outcome_info.text.split(',')],
+                 in nfc(outcome_info.text).split(',')],
                 languages,
                 int(rule.attrib.get('stage'))))
     for quirk in tree.iterfind('quirk'):
         table.add_quirk(
             RE.Quirk(quirk.attrib.get('id') or '',
-                     quirk.find('source_id').text or '',
-                     quirk.find('lg').text or '',
-                     quirk.find('lx').text or '',
-                     quirk.find('gl').text or '',
-                     quirk.find('alternative').text or '',
-                     quirk.find('analysis_slot').text or '',
-                     quirk.find('analysis_value').text or '',
-                     [q.text for q in quirk.findall('note')]))
+                     nfc(quirk.find('source_id').text) or '',
+                     nfc(quirk.find('lg').text) or '',
+                     nfc(quirk.find('lx').text) or '',
+                     nfc(quirk.find('gl').text) or '',
+                     nfc(quirk.find('alternative').text) or '',
+                     nfc(quirk.find('analysis_slot').text) or '',
+                     nfc(quirk.find('analysis_value').text) or '',
+                     [nfc(q.text) for q in quirk.findall('note')]))
     return table
 
 def skip_comments(reader):
@@ -319,14 +319,14 @@ def read_fuzzy_file(filename):
     mapping = dict()
     for child in ET.parse(filename).iterfind('item'):
         dialect = child.attrib.get('dial')
-        target = child.attrib.get('to')
+        target = nfc(child.attrib.get('to'))
         for representative in child:
             previous_target = mapping.get(representative, False)
             if previous_target:
                 raise Exception(f'ambiguous fuzzing for {representative}',
                                 'it maps to both {target} and {previous_target}')
             else:
-                mapping[(dialect, representative.text)] = target
+                mapping[(dialect, nfc(representative.text))] = target
     return mapping
 
 def read_proto_lexicon(filename):

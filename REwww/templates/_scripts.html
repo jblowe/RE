@@ -1061,4 +1061,28 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     loadTabContent(tabName, modes[tabName] || 'paragraph');
   });
 });
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Back-to-top button — appears after scrolling down, hidden on Projects tab
+   ══════════════════════════════════════════════════════════════════════════ */
+(function () {
+  const btn = document.getElementById('btn-back-to-top');
+  if (!btn) return;
+
+  function updateTopBtn() {
+    const scrolled    = window.scrollY > 150;
+    const onProjects  = document.getElementById('tab-projects')
+                          .classList.contains('active');
+    btn.classList.toggle('visible', scrolled && !onProjects);
+  }
+
+  window.addEventListener('scroll', updateTopBtn, { passive: true });
+
+  /* Patch activateTab so switching tabs also re-evaluates visibility. */
+  const _origActivateTab = activateTab;
+  activateTab = function (targetId) {
+    _origActivateTab(targetId);
+    updateTopBtn();
+  };
+})();
 </script>

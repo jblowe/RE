@@ -95,13 +95,22 @@
             <thead>
                 <tr>
                     <th>Stat</th>
-                    <th>Value</th>
+                    <th class="col-gloss">Value</th>
                 </tr>
             </thead>
             <xsl:for-each select="./*">
                 <tr>
                     <td><xsl:value-of select ="name(.)"/></td>
                     <td class="col-gloss"><xsl:value-of select ="@value"/></td>
+                </tr>
+            </xsl:for-each>
+            <!-- Append key run settings so they appear alongside the numeric stats -->
+            <xsl:for-each select="../settings/parm[@key='context_match_type'
+                                                 or @key='spec'
+                                                 or @key='strict']">
+                <tr>
+                    <td><xsl:value-of select="@key"/></td>
+                    <td class="col-gloss"><xsl:value-of select="@value"/></td>
                 </tr>
             </xsl:for-each>
         </table>
@@ -117,16 +126,20 @@
     </xsl:template>
 
     <xsl:template match="lexicons">
+        <h5>Lexicon statistics</h5>
         <div class="table-responsive">
         <table class="table table-sm table-striped sortable">
             <thead>
               <tr>
                   <th>language</th>
                 <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
-                  <!-- xsl:sort select="name()"/ -->
                   <xsl:for-each select="key('elements', name())">
                     <xsl:if test="position()=1">
-                      <th><xsl:value-of select="name()"/></th>
+                      <th>
+                        <xsl:call-template name="col-display-name">
+                          <xsl:with-param name="n" select="name()"/>
+                        </xsl:call-template>
+                      </th>
                     </xsl:if>
                   </xsl:for-each>
                 </xsl:for-each>
@@ -136,7 +149,6 @@
             <tr>
               <th>totals</th>
                 <xsl:for-each select="//*[generate-id(.)=generate-id(key('elements',name())[1])]">
-                  <!-- xsl:sort select="name()"/ -->
                   <xsl:for-each select="key('subtotals', name())">
                     <xsl:if test="position()=1">
                       <th><xsl:value-of select ="@value"/></th>
@@ -146,6 +158,16 @@
             </tr>
         </table>
         </div>
+    </xsl:template>
+
+    <!-- Map internal stat names to user-friendly column labels -->
+    <xsl:template name="col-display-name">
+      <xsl:param name="n"/>
+      <xsl:choose>
+        <xsl:when test="$n = 'no_parses'">failures</xsl:when>
+        <xsl:when test="$n = 'in_sets'">in sets</xsl:when>
+        <xsl:otherwise><xsl:value-of select="$n"/></xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
 
     <xsl:template match="correspondences">

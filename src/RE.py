@@ -7,6 +7,7 @@ import sys
 import serialize
 import collections
 import mel
+import unicodedata
 from functools import lru_cache
 from copy import copy, deepcopy
 
@@ -357,8 +358,9 @@ class Form:
 
 class ModernForm(Form):
     def __init__(self, language, glyphs, gloss, id):
-        super().__init__(language, glyphs)
-        self.gloss = gloss
+        super().__init__(language,
+                         unicodedata.normalize('NFC', glyphs) if glyphs else glyphs)
+        self.gloss = unicodedata.normalize('NFC', gloss) if gloss else gloss
         self.id = id
         self.attested_support = frozenset([self])
 

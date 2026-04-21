@@ -1,6 +1,11 @@
 import os
 import re
+import unicodedata
 from contextlib import contextmanager
+
+def nfc(s):
+    """Normalize *s* to NFC Unicode form.  Returns None unchanged."""
+    return unicodedata.normalize('NFC', s) if s is not None else None
 
 # Misc. utils
 def all_glosses(lexicons):

@@ -44,19 +44,22 @@
     .nav-tabs .nav-link.disabled { color: #999; }
     .tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
     /* ── Global table constraints ───────────────────────────────────────────
-       Tables fill the container width, columns size to content (auto layout)
-       but never exceed 200px, and text wraps rather than overflowing.       */
+       Tables size to their content; columns wrap text naturally.
+       Specific column classes (col-lg, col-mel, …) provide targeted sizing
+       where needed; no global max-width is imposed on th/td.
+       Tables that sit inside a table-responsive wrapper must NOT be capped
+       at 100% — the wrapper itself provides overflow scrolling, so the table
+       should be exactly as wide as its content (possibly wider than the
+       viewport, in which case the wrapper scrolls horizontally).            */
     .content-area table {
       width: auto;
       max-width: 100%;
     }
-    .content-area th {
-      max-width: 300px;
-      overflow-wrap: break-word;
-      white-space: normal;
+    .content-area .table-responsive > table {
+      max-width: none;
     }
+    .content-area th,
     .content-area td {
-      max-width: 300px;
       overflow-wrap: break-word;
       white-space: normal;
     }
@@ -102,5 +105,30 @@
 
     /* ── MEL edit: glosses column is unrestricted width ── */
     .mel-gl-col { max-width: none; }
+
+    /* ── Back-to-top button ── */
+    #btn-back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 1050;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s;
+      font-size: 0.8rem;
+      padding: .28rem .6rem;
+      border-color: #bbb;
+      color: #555;
+      background: #fff;
+    }
+    #btn-back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #btn-back-to-top:hover {
+      background: #EC5800;
+      border-color: #EC5800;
+      color: #fff;
+    }
   </style>
 </head>

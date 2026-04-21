@@ -547,3 +547,6 @@ def serialize_isolates_dict(isolates_dict, re_element):
             ET.SubElement(rfx, 'pfm').text = pf.glyphs
             ET.SubElement(rfx, 'rcn').text = RE.correspondences_as_ids(
                 pf.correspondences).strip()
+        reason = getattr(form, '_isolate_reason', '')
+        if reason:
+            ET.SubElement(rfx, 'reason').text = reason

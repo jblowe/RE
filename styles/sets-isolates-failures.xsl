@@ -14,6 +14,7 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
+    <div class="table-responsive">
     <table class="table table-sm table-striped table-hover table-bordered sortable">
       <thead>
         <tr>
@@ -23,6 +24,7 @@
           <th>pfm</th>
           <th>rcn</th>
           <th>id</th>
+          <th>Reason</th>
         </tr>
       </thead>
       <tbody>
@@ -42,10 +44,12 @@
             <td><xsl:value-of select="pfm"/></td>
             <td><xsl:value-of select="rcn"/></td>
             <td><xsl:value-of select="@id"/></td>
+            <td><xsl:value-of select="reason"/></td>
           </tr>
         </xsl:for-each>
       </tbody>
     </table>
+    </div>
   </xsl:template>
 
   <xsl:template match="failures">
@@ -55,6 +59,7 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
+    <div class="table-responsive">
     <table class="table table-sm table-striped table-hover table-bordered sortable">
       <thead>
         <tr>
@@ -83,6 +88,7 @@
         </xsl:for-each>
       </tbody>
     </table>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>

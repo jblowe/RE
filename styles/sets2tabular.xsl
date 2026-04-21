@@ -48,6 +48,7 @@
         <!-- TODO: figure out what class, if any makes table both sortable and header-sticky -->
         <div class="row">
           <div class="col">
+            <div class="table-responsive">
             <table class="table table-sm table-hover table-bordered sets sortable">
               <thead class="sticky-top top-0">
                 <tr>
@@ -64,6 +65,7 @@
                 <xsl:with-param name="lgs" select=".//languages"/>
               </xsl:call-template>
             </table>
+            </div>
           </div>
         </div>
         <div class="row">

@@ -132,6 +132,20 @@ def api_run():
                 project_path, project, recon,
                 mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
 
+            # Attach syllable_canon to settings so it is available for
+            # logging and serialize_stats.  ProjectSettings doesn't hold it;
+            # we read the upstream-target correspondences file to get it.
+            try:
+                _recon_path = os.path.join(
+                    settings.directory_path,
+                    settings.proto_languages[settings.upstream_target])
+                _params = read.read_correspondence_file(
+                    _recon_path, settings.upstream_target,
+                    None, None)   # mel/fuzzy not needed for syllable_canon
+                settings.syllable_canon = _params.syllable_canon
+            except Exception:
+                pass
+
             try:
                 sc = settings.syllable_canon
                 print(f'context_match_type: {sc.context_match_type}')
@@ -148,6 +162,66 @@ def api_run():
             B.failures = sorted(
                 B.statistics.failed_parses, key=lambda x: x.language)
 
+            # Annotate each isolate form with a human-readable reason string
+            # so the serializer can write a <reason> element into sets.xml.
+            #
+            # Three independent facts are concatenated:
+            #
+            # 1. Set membership (raw, pre-MEL groupings):
+            #    "Found in a set"    — rcn shared by forms from >1 language
+            #    "Not found in a set" — rcn is unique to one language
+            #
+            #    We must include BOTH real-set protoforms (B.forms) AND
+            #    singleton protoforms (B.statistics.singleton_support) when
+            #    building the raw groupings, because two isolates from
+            #    different languages with the same rcn together constitute a
+            #    raw set even though MEL filtering left them both as singletons.
+            #
+            # 2. MEL matching:
+            #    "Matched a MEL"  — the form's singleton reconstruction is
+            #                       associated with a real MEL (glosses != [])
+            #    "No MEL found"   — no MEL entry was matched
+            #
+            # 3. Semantic exclusion (only when 1 AND 2 are both positive):
+            #    "Excluded by semantics" — form was in a raw multi-language
+            #    set AND matched a MEL, but the MEL group it fell into had
+            #    only one language, so semantics split it off from the set.
+
+            # Build: rcn → set of languages across ALL reconstructions
+            # (real sets + singletons = the full raw grouping before MEL).
+            _raw_rcn_langs = {}
+            for _pf in B.forms:
+                _rcn_str = RE.correspondences_as_ids(_pf.correspondences).strip()
+                for _af in _pf.attested_support:
+                    _raw_rcn_langs.setdefault(_rcn_str, set()).add(_af.language)
+            for (_corr, _sf, _att, _mel) in B.statistics.singleton_support:
+                _rcn_str = RE.correspondences_as_ids(_corr).strip()
+                for _af in _att:
+                    _raw_rcn_langs.setdefault(_rcn_str, set()).add(_af.language)
+
+            for _form, _proto_forms in _isolates_dict.items():
+                _reasons = []
+                _has_mel = any(
+                    pf.mel and getattr(pf.mel, 'glosses', None)
+                    for pf in _proto_forms)
+                _found_in_set = bool(_proto_forms) and any(
+                    len(_raw_rcn_langs.get(
+                        RE.correspondences_as_ids(pf.correspondences).strip(),
+                        set())) > 1
+                    for pf in _proto_forms)
+
+                # 1. Set membership
+                _reasons.append('Found in a set' if _found_in_set
+                                 else 'Not found in a set')
+                # 2. MEL matching
+                _reasons.append('Matched a MEL' if _has_mel
+                                 else 'No MEL found')
+                # 3. Semantic exclusion (only when both 1 and 2 hold)
+                if _found_in_set and _has_mel:
+                    _reasons.append('Excluded by semantics')
+
+                _form._isolate_reason = ', '.join(_reasons)
+
             sets_xml = os.path.join(
                 runs_dir, f'{project}.{run_name}.sets.xml')
             intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
@@ -158,10 +232,34 @@ def api_run():
 
             # Unique cognate sets = deduplicated by supporting_forms, matching
             # what create_xml_sets actually writes (merging multi-reconstruction sets).
-            unique_sets = len({pf.supporting_forms for pf in B.forms})
+            unique_sfs  = {pf.supporting_forms for pf in B.forms}
+            unique_sets = len(unique_sfs)
+            total_reflexes = sum(len(sf) for sf in unique_sfs)
             B.statistics.add_stat('isolates', len(B.isolates))
             B.statistics.add_stat('failure',  len(B.failures))
             B.statistics.add_stat('sets',     unique_sets)
+            B.statistics.add_stat('reflexes', total_reflexes)
+
+            # Enrich per-language stats with isolates and in-sets counts.
+            # Build fast lookup dicts before touching language_stats.
+            _iso_by_lang = {}
+            for _f in B.isolates:
+                _iso_by_lang[_f.language] = _iso_by_lang.get(_f.language, 0) + 1
+            _in_sets_by_lang = {}
+            for _sf in unique_sfs:
+                for _f in _sf:
+                    _in_sets_by_lang[_f.language] = _in_sets_by_lang.get(_f.language, 0) + 1
+            for _lang, _ls in B.statistics.language_stats.items():
+                _iso  = _iso_by_lang.get(_lang, 0)
+                _in_s = _in_sets_by_lang.get(_lang, 0)
+                # Rebuild in desired column order: forms | failures | isolates | in_sets | reconstructions
+                B.statistics.language_stats[_lang] = {
+                    'forms':           _ls.get('forms', 0),
+                    'no_parses':       _ls.get('no_parses', 0),
+                    'isolates':        _iso,
+                    'in_sets':         _in_s,
+                    'reconstructions': _ls.get('reconstructions', 0),
+                }
 
             stats_xml = os.path.join(
                 runs_dir,
@@ -704,7 +802,7 @@ def api_load_run():
 
 @bp.route('/api/compare_runs', methods=['POST'])
 def api_compare_runs():
-    """Compare two runs (same project); return an HTML fragment."""
+    """Compare two runs (same project); save a .compare.xml and return HTML."""
     body = request.get_json(force=True)
     id_a = body.get('run_id_a', '')
     id_b = body.get('run_id_b', '')
@@ -738,7 +836,34 @@ def api_compare_runs():
     if rec_a.get('project') != rec_b.get('project'):
         return '<p class="text-warning">Comparison requires runs from the same project.</p>'
 
-    return run_compare.compare_runs(rec_a, rec_b)
+    project = rec_a['project']
+
+    # Build the <compare> XML element tree
+    compare_root = run_compare.build_compare_xml(rec_a, rec_b)
+
+    # Save to a named file in the project's runs/ directory
+    compare_path = None
+    if project in proj_module.projects:
+        runs_dir = os.path.join(proj_module.projects[project], 'runs')
+        os.makedirs(runs_dir, exist_ok=True)
+        name_a   = rec_a.get('run_name', id_a)
+        name_b   = rec_b.get('run_name', id_b)
+        fname    = f'{project}.{name_a}-vs-{name_b}.compare.xml'
+        compare_path = os.path.join(runs_dir, fname)
+        try:
+            ET.ElementTree(compare_root).write(
+                compare_path, encoding='utf-8',
+                xml_declaration=True, pretty_print=True)
+        except OSError:
+            compare_path = None
+
+    # Render via XSLT
+    if compare_path and os.path.isfile(compare_path):
+        return xslt.xml_to_html(compare_path, 'compare2html.xsl')
+
+    # Fallback: transform the in-memory tree (no persistence)
+    return xslt.xml_to_html_from_tree(
+        ET.ElementTree(compare_root), 'compare2html.xsl')
 
 
 @bp.route('/api/delete_run', methods=['POST'])
