@@ -42,14 +42,16 @@ def _save_ui_settings(data: dict) -> None:
 def load_project_ui_settings(project: str) -> dict:
     return _load_ui_settings().get(project, {})
 
-def save_project_ui_settings(project: str, recon, mel, fuzzy, upstream) -> None:
+def save_project_ui_settings(project: str, recon, mel, fuzzy, upstream,
+                             context_match_type=None):
     data = _load_ui_settings()
     # TOML doesn't support null; store None as empty string, restore on load
     data[project] = {
-        'recon':    recon    or '',
-        'mel':      mel      or '',
-        'fuzzy':    fuzzy    or '',
-        'upstream': upstream or '',
+        'recon':              recon              or '',
+        'mel':                mel                or '',
+        'fuzzy':              fuzzy              or '',
+        'upstream':           upstream           or '',
+        'context_match_type': context_match_type or 'glyphs',
     }
     _save_ui_settings(data)
 import itertools
@@ -96,6 +98,12 @@ class ProjectManagerDialog(Gtk.Dialog):
 
         self.fuzzy_combo = Gtk.ComboBoxText()
         controls.pack_start(make_labeled_entry(self.fuzzy_combo, 'fuzzy:'), False, False, 0)
+
+        self.cmt_combo = Gtk.ComboBoxText()
+        self.cmt_combo.append_text('glyphs')
+        self.cmt_combo.append_text('constituent')
+        self.cmt_combo.set_active(0)
+        controls.pack_start(make_labeled_entry(self.cmt_combo, 'match type:'), False, False, 0)
 
         vbox.pack_start(controls, False, False, 0)
 
@@ -156,6 +164,8 @@ class ProjectManagerDialog(Gtk.Dialog):
                 self.fuzzy_combo.set_active(fuzzies.index(saved['fuzzy']) + 1)
             if saved.get('upstream'):
                 self.upstream_entry.set_text(saved['upstream'])
+            cmt = saved.get('context_match_type', 'glyphs')
+            self.cmt_combo.set_active(0 if cmt == 'glyphs' else 1)
         except Exception as e:
             print("Could not parse mel/recon/fuzzy options from", project_file, e)
 
@@ -172,11 +182,12 @@ class ProjectManagerDialog(Gtk.Dialog):
             return None if (t is None or t == 'N/A') else t
         upstream_text = self.upstream_entry.get_text().strip()
         return {
-            'project': project,
-            'mel': combo_value(self.mel_combo),
-            'recon': combo_value(self.recon_combo),
-            'fuzzy': combo_value(self.fuzzy_combo),
-            'upstream': upstream_text if upstream_text else None,
+            'project':            project,
+            'mel':                combo_value(self.mel_combo),
+            'recon':              combo_value(self.recon_combo),
+            'fuzzy':              combo_value(self.fuzzy_combo),
+            'upstream':           upstream_text if upstream_text else None,
+            'context_match_type': self.cmt_combo.get_active_text() or 'glyphs',
         }
 
 class WrappedTextBuffer():
@@ -1794,12 +1805,14 @@ class REWindow(Gtk.Window):
                                  recon=selection['recon'],
                                  mel=selection['mel'],
                                  fuzzy=selection['fuzzy'],
-                                 upstream=selection['upstream'])
+                                 upstream=selection['upstream'],
+                                 context_match_type=selection['context_match_type'])
         settings = read.read_settings(projects.projects[project], project,
                                            selection['recon'],
                                            mel_token=selection['mel'],
                                            fuzzy_token=selection['fuzzy'],
-                                           upstream=selection['upstream'])
+                                           upstream=selection['upstream'],
+                                           context_match_type=selection['context_match_type'])
         # dummy an arg object for load hooks. FIXME
         dummy.mel = selection['mel']
         dummy.fuzzy = selection['fuzzy']
