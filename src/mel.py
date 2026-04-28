@@ -33,11 +33,11 @@ def compile_associated_mels(mels, glosses):
     # Precompute normalized glosses for each gloss.
     gloss_to_norm = {gloss: normalize_gloss(gloss) for gloss in glosses}
 
-    # Invert: normalized gloss -> set of original glosses
+    # Invert: lowercased normalized gloss -> set of original glosses
     norm_to_glosses = collections.defaultdict(set)
     for gloss, normalized_glosses in gloss_to_norm.items():
         for normalized_gloss in normalized_glosses:
-            norm_to_glosses[normalized_gloss].add(gloss)
+            norm_to_glosses[normalized_gloss.lower()].add(gloss)
 
     # For each mel, associate directly and via normalized glosses
     for mel in mels:
@@ -45,8 +45,8 @@ def compile_associated_mels(mels, glosses):
         for gloss in mel_glosses:
             association[gloss].add(mel)
         for mel_gloss in mel_glosses:
-            if mel_gloss in norm_to_glosses:
-                for gloss in norm_to_glosses[mel_gloss]:
+            if mel_gloss.lower() in norm_to_glosses:
+                for gloss in norm_to_glosses[mel_gloss.lower()]:
                     association[gloss].add(mel)
     print('{:.2f} seconds to compile {} associated MELs.'.format(time.time() - elapsed_time, len(association)))
     return association
@@ -60,12 +60,15 @@ def associated_mels(association, gloss, only_with_mel):
 
 def search_mels(gloss, mel_glosses):
     glosses = normalize_gloss(gloss)
-    if gloss in mel_glosses:
-        return [gloss]
-    return [g for g in glosses if g in mel_glosses]
+    # Case-insensitive: build lowercase → original map so returned keys
+    # always match the actual MEL gloss strings (for mel_stats accounting).
+    mel_lower = {g.lower(): g for g in mel_glosses}
+    if gloss.lower() in mel_lower:
+        return [mel_lower[gloss.lower()]]
+    return [mel_lower[g.lower()] for g in glosses if g.lower() in mel_lower]
 
 # Matches parenthetical or bracketed asides — e.g. "(of a person)", "[archaic]".
-_PAREN_RE = re.compile(r'\([^)]*\)|\[[^\]]*\]')
+_PAREN_RE = re.compile(r'\([^)]*\)|\[[^\]]*\]|<[^>]*>')
 
 # Grammar particles stripped from the *beginning* of a phrase when more words follow.
 # "to give" → "give";  "be sick" → "sick";  "to be hungry" → "be hungry" → "hungry".
@@ -114,11 +117,13 @@ def normalize_gloss(gloss):
     else:
         variants = [gloss]
 
-    # 4 & 5. Split on delimiter characters and strip leading particles.
+    # 4 & 5. Split on delimiter characters, strip trailing punctuation,
+    #         and strip leading particles.
     seen = set()
     phrases = []
     for v in variants:
         for part in re.split(r'[/,;:]', v):
+            part = part.strip().strip('?').rstrip('!.')
             part = _strip_particles(part.strip())
             if part and part not in seen:
                 seen.add(part)
