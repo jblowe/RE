@@ -7,6 +7,10 @@ def nfc(s):
     """Normalize *s* to NFC Unicode form.  Returns None unchanged."""
     return unicodedata.normalize('NFC', s) if s is not None else None
 
+def nfd(s):
+    """Normalize *s* to NFD Unicode form.  Returns None unchanged."""
+    return unicodedata.normalize('NFD', s) if s is not None else None
+
 # Misc. utils
 def all_glosses(lexicons):
     glosses = set()
