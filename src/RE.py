@@ -358,8 +358,7 @@ class Form:
 
 class ModernForm(Form):
     def __init__(self, language, glyphs, gloss, id):
-        super().__init__(language,
-                         unicodedata.normalize('NFC', glyphs) if glyphs else glyphs)
+        super().__init__(language, glyphs)
         self.gloss = unicodedata.normalize('NFC', gloss) if gloss else gloss
         self.id = id
         self.attested_support = frozenset([self])
@@ -445,7 +444,8 @@ class FuzzyForm(AlternateForm):
 
 class ProjectSettings:
     def __init__(self, directory_path, mel_filename, attested, proto_languages,
-                 target, upstream, downstream, other, fuzzy_filename=None):
+                 target, upstream, downstream, other, fuzzy_filename=None,
+                 context_match_type=None):
         self.mel_filename = (os.path.join(directory_path,
                                           mel_filename)
                              if mel_filename else None)
@@ -459,6 +459,7 @@ class ProjectSettings:
         self.fuzzy_filename = (os.path.join(directory_path,
                                             fuzzy_filename)
                                if fuzzy_filename else None)
+        self.context_match_type = context_match_type
 
 class Statistics:
     def __init__(self):
@@ -1127,7 +1128,8 @@ def parameter_tree_from_settings(settings):
                                                        correspondence_filename),
                                           language,
                                           settings.mel_filename,
-                                          settings.fuzzy_filename)
+                                          settings.fuzzy_filename,
+                                          settings.context_match_type)
             for (language, correspondence_filename)
             in settings.proto_languages.items()}
 
