@@ -7,33 +7,43 @@ import pickle
 import json
 from utils import *
 
-def read_correspondence_file(filename, name, mel_filename, fuzzy_filename):
+def read_correspondence_file(filename, name, mel_filename, fuzzy_filename,
+                             context_match_type=None):
     "Return syllable canon and table of correspondences"
     tree = ET.parse(filename)
-    return RE.Parameters(read_correspondences(tree),
-                         read_syllable_canon(tree.find('parameters')),
+    syllable_canon = read_syllable_canon(tree.find('parameters'),
+                                        context_match_type_override=context_match_type)
+    norm = nfd if syllable_canon.context_match_type == 'glyphs' else nfc
+    return RE.Parameters(read_correspondences(tree, norm),
+                         syllable_canon,
                          name,
                          read_mel_file(mel_filename)
                          if mel_filename else None,
-                         read_fuzzy_file(fuzzy_filename)
+                         read_fuzzy_file(fuzzy_filename, norm)
                          if fuzzy_filename else None)
 
 
-def read_syllable_canon(parameters):
-    sound_classes = {}
-    supra_segmentals = []
-    regex = None
+def read_syllable_canon(parameters, context_match_type_override=None):
+    raw_classes = {}
+    raw_supra = []
+    raw_regex = None
     context_match_type = 'constituent'
     for parameter in parameters:
         if parameter.tag == 'class':
-            sound_classes[parameter.attrib.get('name')] = \
-                [nfc(x.strip()) for x in parameter.attrib.get('value').split(',')]
+            raw_classes[parameter.attrib.get('name')] = \
+                [x.strip() for x in parameter.attrib.get('value').split(',')]
         if parameter.tag == 'canon':
-            regex = nfc(parameter.attrib.get('value'))
+            raw_regex = parameter.attrib.get('value')
         if parameter.tag == 'spec':
-            supra_segmentals = [nfc(x) for x in parameter.attrib.get('value').split(',')]
+            raw_supra = parameter.attrib.get('value').split(',')
         if parameter.tag == 'context_match_type':
             context_match_type = parameter.attrib.get('value')
+    if context_match_type_override is not None:
+        context_match_type = context_match_type_override
+    norm = nfd if context_match_type == 'glyphs' else nfc
+    sound_classes = {k: [norm(x) for x in v] for k, v in raw_classes.items()}
+    regex = norm(raw_regex)
+    supra_segmentals = [norm(x) for x in raw_supra]
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
 
 # Compute all daughter languages referenced in the correspondence
@@ -46,14 +56,14 @@ def all_daughter_languages(tree):
             daughter_languages[dialect.attrib.get('dialecte')] = True
     return list(daughter_languages.keys())
 
-def read_correspondences(tree):
+def read_correspondences(tree, norm=nfc):
     daughter_languages = all_daughter_languages(tree)
     table = RE.TableOfCorrespondences(daughter_languages)
     for correspondence in tree.iterfind('corr'):
         daughter_forms = {name: '' for name in daughter_languages}
         for dialect in correspondence.iterfind('modern'):
             daughter_forms[dialect.attrib.get('dialecte')] = \
-                list(map(lambda seg: nfc(seg.text), dialect.iterfind('seg')))
+                list(map(lambda seg: norm(seg.text), dialect.iterfind('seg')))
         proto_form_info = correspondence.find('proto')
         contextL = proto_form_info.attrib.get('contextL')
         contextR = proto_form_info.attrib.get('contextR')
@@ -67,7 +77,7 @@ def read_correspondences(tree):
                 context,
                 [x.strip() for x
                  in proto_form_info.attrib.get('syll').split(',')],
-                nfc(proto_form_info.text),
+                norm(proto_form_info.text),
                 daughter_forms))
     for rule in tree.iterfind('rule'):
         daughter_forms = {name: '' for name in daughter_languages}
@@ -84,22 +94,22 @@ def read_correspondences(tree):
             RE.Rule(
                 rule.attrib.get('num'),
                 context,
-                nfc(input_info.text),
+                norm(input_info.text),
                 [x.strip() for x
-                 in nfc(outcome_info.text).split(',')],
+                 in norm(outcome_info.text).split(',')],
                 languages,
                 int(rule.attrib.get('stage'))))
     for quirk in tree.iterfind('quirk'):
         table.add_quirk(
             RE.Quirk(quirk.attrib.get('id') or '',
-                     nfc(quirk.find('source_id').text) or '',
-                     nfc(quirk.find('lg').text) or '',
-                     nfc(quirk.find('lx').text) or '',
-                     nfc(quirk.find('gl').text) or '',
-                     nfc(quirk.find('alternative').text) or '',
-                     nfc(quirk.find('analysis_slot').text) or '',
-                     nfc(quirk.find('analysis_value').text) or '',
-                     [nfc(q.text) for q in quirk.findall('note')]))
+                     norm(quirk.find('source_id').text) or '',
+                     norm(quirk.find('lg').text) or '',
+                     norm(quirk.find('lx').text) or '',
+                     norm(quirk.find('gl').text) or '',
+                     norm(quirk.find('alternative').text) or '',
+                     norm(quirk.find('analysis_slot').text) or '',
+                     norm(quirk.find('analysis_value').text) or '',
+                     [norm(q.text) for q in quirk.findall('note')]))
     return table
 
 def skip_comments(reader):
@@ -137,7 +147,7 @@ def parse_upstream(upstream_str):
         result[pl] = lgs
     return result
 
-def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy_token=None, upstream=None):
+def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy_token=None, upstream=None, context_match_type=None):
 # f read_settings(filename, mel=None, recon=None, fuzzy=None):
 
     """Build RE.ProjectSettings from project directory and parameters."""
@@ -230,15 +240,16 @@ def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy
         downstream,
         other,
         fuzzy_filename=fuzzy_file,
+        context_match_type=context_match_type,
     )
 
 
 # returns a generator returning the modern form and its gloss
-def read_lexicon(xmlfile):
+def read_lexicon(xmlfile, norm=nfc):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
     forms = [RE.ModernForm(language,
-                           entry.find('hw').text
+                           norm(entry.find('hw').text)
                            if entry.find('hw') is not None
                            else '',
                            # fallback to provided gloss if there is no
@@ -261,8 +272,10 @@ def create_lexicon_from_parms(language_forms):
 
 
 def read_attested_lexicons(settings):
+    norm = nfd if getattr(settings, 'context_match_type', None) == 'glyphs' else nfc
     return {language: read_lexicon(os.path.join(settings.directory_path,
-                                                settings.attested[language]))
+                                                settings.attested[language]),
+                                   norm=norm)
             for language in settings.attested}
 
 
@@ -315,18 +328,18 @@ def get_element(language, entry, field):
 
 
 # Return a map from representatives to the class they map to.
-def read_fuzzy_file(filename):
+def read_fuzzy_file(filename, norm=nfc):
     mapping = dict()
     for child in ET.parse(filename).iterfind('item'):
         dialect = child.attrib.get('dial')
-        target = nfc(child.attrib.get('to'))
+        target = norm(child.attrib.get('to'))
         for representative in child:
             previous_target = mapping.get(representative, False)
             if previous_target:
                 raise Exception(f'ambiguous fuzzing for {representative}',
                                 'it maps to both {target} and {previous_target}')
             else:
-                mapping[(dialect, nfc(representative.text))] = target
+                mapping[(dialect, norm(representative.text))] = target
     return mapping
 
 def read_proto_lexicon(filename):
