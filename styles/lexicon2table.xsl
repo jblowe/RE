@@ -7,24 +7,20 @@
             encoding="utf-8"/>
 
     <xsl:template match="/">
-        <html>
-            <head>
-            </head>
-            <body>
-                <div style="float: left; width:60px;">
-                    <b>n =
-                        <xsl:value-of select="count(lexicon/entry)"/>
-                    </b>
-                </div>
-                <div style="float: left; width:300px;">
-                    <i>created at:
-                        <xsl:value-of select=".//createdat"/>
-                    </i>
-                </div>
-                <div style="clear:both;"></div>
-                <xsl:apply-templates select=".//lexicon"/>
-            </body>
-        </html>
+        <div>
+            <div style="float: left; width:60px;">
+                <b>n =
+                    <xsl:value-of select="count(lexicon/entry)"/>
+                </b>
+            </div>
+            <div style="float: left; width:300px;">
+                <i>created at:
+                    <xsl:value-of select=".//createdat"/>
+                </i>
+            </div>
+            <div style="clear:both;"></div>
+            <xsl:apply-templates select=".//lexicon"/>
+        </div>
     </xsl:template>
 
     <xsl:template match="lexicon">

@@ -10,18 +10,10 @@
             elements="*"/>
 
     <xsl:template match="/">
-        <html>
-            <head>
-            </head>
-            <body>
+        <div>
                 <h4>Fuzzy</h4>
                 <xsl:apply-templates select=".//fuzzy"/>
-                <!-- e.g.
-                <mel id="wn1">
-                    <gl>ginseng</gl>
-                -->
-            </body>
-        </html>
+            </div>
     </xsl:template>
 
     <xsl:template match="fuzzy">

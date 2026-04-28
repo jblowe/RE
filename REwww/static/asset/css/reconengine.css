@@ -1,57 +1,213 @@
-/* reconstruction engine stylesheet */
-body {
-    font-size: 12px;
-    font-family: Arial, freesans, clean, sans-serif;
-    color: #333;
-    background: #FFF;
+/* ══════════════════════════════════════════════════════════════════════════
+   reconengine.css  –  All application styles for REwww.
+   Loaded by _head.html for every page; applies to both static HTML and
+   content injected as innerHTML from XSLT fragments.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Layout ─────────────────────────────────────────────────────────────── */
+body { font-size: 0.875rem; background: #f8f9fa; }
+.navbar-brand { font-weight: 600; letter-spacing: .03em; }
+
+/* ── Log tab ─────────────────────────────────────────────────────────────── */
+#run-log {
+  height: 480px; overflow-y: auto;
+  font-family: 'Menlo', 'Consolas', monospace; font-size: 0.78rem;
+  background: #1e1e2e; color: #cdd6f4;
+  padding: .5rem .75rem; border-radius: 4px;
+  white-space: pre-wrap; word-break: break-all;
 }
-#set { cell-padding: 10px;}
-/* reconstructions block */
+
+/* ── Tab content area ────────────────────────────────────────────────────── */
+.tab-content > .tab-pane { padding: 1rem 0.25rem; }
+#main-tab-content {
+  background: #fff;
+  border: 1px solid #dee2e6; border-top: none;
+  padding: .75rem 1rem 1rem;
+  min-height: 400px;
+}
+
+/* ── Projects table ──────────────────────────────────────────────────────── */
+.projects-table th, .projects-table td { vertical-align: middle; }
+.projects-table select, .projects-table input[type=text] {
+  font-size: 0.8rem; padding: .2rem .4rem; height: auto;
+}
+.projects-table .project-name { font-weight: 600; white-space: nowrap; }
+
+/* ── Misc badges / toolbar ───────────────────────────────────────────────── */
+.spinner-sm { width: 1rem; height: 1rem; }
+.badge-running  { background: #ffc107; color: #000; }
+.badge-done     { background: #28a745; color: #fff; }
+.badge-error    { background: #dc3545; color: #fff; }
+.nav-tabs .nav-link.disabled { color: #999; }
+.tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
+
+/* ── Global table constraints ────────────────────────────────────────────── */
+.content-area table {
+  width: auto !important;
+  max-width: 100%;
+}
+.content-area .table-responsive > table,
+.content-area .re-scroll-table > table {
+  width: auto;
+  max-width: none;
+}
+.content-area th,
+.content-area td {
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+.projects-table .project-name { white-space: nowrap; }
+/* Keep tables tidy */
+.table td, .table th { vertical-align: middle; }
+
+/* ── Tabular sets: column sizing ─────────────────────────────────────────── */
+.content-area .col-num  { width: 2.5rem; white-space: nowrap; }
+.content-area .col-plg  { width: 3rem;   white-space: nowrap; }
+.content-area .col-pfm  { min-width: 5rem; }
+.content-area .col-rcn  { min-width: 5rem; word-break: break-all;
+                           font-size: 0.78rem; color: #555; }
+.content-area .col-mel  { min-width: 10rem; }
+.content-area .col-lg   { min-width: 4rem; max-width: 240px; }
+.content-area .col-gloss { max-width: 300px; }
+
+/* ── Tabular sets: gloss visibility toggle (default: hidden) ─────────────── */
+#sets-content.glosses-hidden .rfx-gloss { display: none; }
+
+/* ── Theme: active tab ───────────────────────────────────────────────────── */
+.nav-tabs .nav-link { padding-top: calc(.5rem - 2px); border-top: 2px solid transparent; }
+.nav-tabs .nav-link.active { color: #EC5800; border-top-color: #EC5800; }
+.nav-tabs .nav-link:not(.disabled):not(.active):hover { color: #c44a00; }
+
+/* ── Lexicons pane: per-language sub-tab bar ─────────────────────────────── */
+.lexicons-lang-tabs { margin-top: .25rem; font-size: 0.8rem; flex-wrap: wrap; }
+.lexicons-lang-tabs .nav-link { padding: .2rem .6rem; }
+#tab-lexicons .content-area { border-top: none; margin-top: 0; }
+
+/* ── XSL section headings ────────────────────────────────────────────────── */
+.content-area h5, .content-area h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #7a3000;
+  margin: 1rem 0 .4rem;
+}
+
+/* ── MEL edit: glosses column is unrestricted width ─────────────────────── */
+.mel-gl-col { max-width: none; }
+
+/* ── Sticky table headers ────────────────────────────────────────────────── */
+.content-area thead th {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #e9ecef;
+}
+
+/* ── Scrollable table container (sets tabular view) ──────────────────────── */
+/* Provides vertical scroll so sticky thead works within the container,
+   and horizontal scroll for wide language-column tables. */
+.re-scroll-table {
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+/* ── Back-to-top button ──────────────────────────────────────────────────── */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s;
+  font-size: 0.8rem;
+  padding: .28rem .6rem;
+  border-color: #bbb;
+  color: #555;
+  background: #fff;
+}
+#btn-back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+#btn-back-to-top:hover {
+  background: #EC5800;
+  border-color: #EC5800;
+  color: #fff;
+}
+
+/* ── Table of correspondences (view) ─────────────────────────────────────── */
+.toc-view-table td, .toc-view-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+.toc-view-table th:nth-child(1), .toc-view-table td:nth-child(1) { width: 3ch; }
+.toc-view-table th:nth-child(3), .toc-view-table td:nth-child(3) { width: 4ch; }
+.toc-view-table th:nth-child(4), .toc-view-table td:nth-child(4),
+.toc-view-table th:nth-child(5), .toc-view-table td:nth-child(5) { width: 5ch; }
+.toc-view-table th:nth-child(n+6), .toc-view-table td:nth-child(n+6) { width: 5ch; }
+
+/* ── Table of correspondences (freq) ─────────────────────────────────────── */
+.toc-freq-table td, .toc-freq-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+.toc-freq-table th:nth-child(1), .toc-freq-table td:nth-child(1) { width: 4ch; }
+.toc-freq-table th:nth-child(2), .toc-freq-table td:nth-child(2) { width: 3ch; }
+.toc-freq-table th:nth-child(4), .toc-freq-table td:nth-child(4) { width: 4ch; }
+.toc-freq-table th:nth-child(5), .toc-freq-table td:nth-child(5),
+.toc-freq-table th:nth-child(6), .toc-freq-table td:nth-child(6) { width: 5ch; }
+.toc-freq-table th:nth-child(n+7), .toc-freq-table td:nth-child(n+7) { width: 5ch; }
+
+/* ── Coverage table ──────────────────────────────────────────────────────── */
+.cov-table td, .cov-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+.cov-unused    { background: #fff3cd; padding: 1px 3px; border-radius: 2px; }
+.cov-repeated  { background: #ffd6a5; padding: 1px 3px; border-radius: 2px; }
+.cov-uses      { color: #888; font-size: 0.75em; }
+
+/* ── Compare table ───────────────────────────────────────────────────────── */
+.cmp-table td, .cmp-table th { padding: .15rem .4rem !important; font-size: 0.82rem; }
+.cmp-pfm-diff  { background: #fff3cd; }
+.cmp-lgs       { font-size: 0.78em; color: #555; }
+.cmp-members   { font-size: 0.72em; color: #aaa; font-style: italic; }
+.cmp-badge     { display: inline-block; padding: 2px 8px; border-radius: 4px;
+                 font-size: 0.8rem; margin-right: 6px; }
+.cmp-same      { background: #d1e7dd; color: #0a3622; }
+.cmp-changed   { background: #fff3cd; color: #664d03; }
+.cmp-lost      { background: #f8d7da; color: #58151c; }
+.cmp-gained    { background: #d1ecf1; color: #0c5460; }
+
+/* ── Edit tables: correspondence / fuzzy / mel ───────────────────────────── */
+.actions-col { width: 1%; white-space: nowrap; }
+.btn-icon    { padding: .1rem .4rem; line-height: 1; }
+.cell-input  { width: 6ch !important; min-width: 4ch; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Paragraph-view layout (sets2html.xsl / reconengine paragraph mode)
+   ══════════════════════════════════════════════════════════════════════════ */
 .wrapper { display: table; table-layout: fixed; min-width: 90%; }
-.level1  { padding-left: 15px;}
-.level2  { padding-left: 30px;}
+.level1  { padding-left: 15px; }
+.level2  { padding-left: 30px; }
 .etymonrow { background-color: #b9def0; }
 .subsetrow { background-color: #D0E0E0; }
-.id  { display: table-cell; width: 8%; padding-right: 10px; font-size: smaller; }
+.id  { display: table-cell; width: 8%;  padding-right: 10px; font-size: smaller; }
 .plg { display: table-cell; width: 10%; padding-right: 20px; font-size: smaller; }
-.pfm { display: table-cell; width: 15%; font-weight:bold; font-size: small; padding-right: 10px; }
+.pfm { display: table-cell; width: 15%; font-weight: bold; font-size: small; padding-right: 10px; }
 .pgl { display: table-cell; width: 20%; font-style: italic; padding-right: 10px; }
 .rcn { display: table-cell; width: 30%; font-family: 'Courier'; font-size: smaller; padding-right: 10px; }
 .mel { display: table-cell; width: 20%; font-size: smaller; }
 .multiple {
-    padding: 3px;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+  padding: 3px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
 }
-/* support forms block */
-/* .sf  { padding-left: 20px; padding-right: 10px; } */
 .lg  { display: table-cell; width: 14%; padding-left: 20px; }
-.lx  { display: table-cell; width: 26%; font-family: 'Lucida Sans Unicode', sans-serif ; padding-right: 10px; }
+.lx  { display: table-cell; width: 26%; font-family: 'Lucida Sans Unicode', sans-serif; padding-right: 10px; }
 .gl  { display: table-cell; width: 40%; font-style: italic; padding-right: 10px; }
 .nn  { display: table-cell; width: 14%; font-family: 'Courier'; font-size: smaller; padding-left: 10px; }
 
-/* Make each panel scroll independently to mimic scrolled panes */
+ul { list-style-type: none; }
+
+/* ── Pane scroll (legacy) ────────────────────────────────────────────────── */
 .pane { min-height: 280px; display: flex; flex-direction: column; }
-.pane .pane-scroll { max-height: 40vh; overflow: auto; }
-@media (min-width: 992px) {
-  .pane .pane-scroll { max-height: 32vh; }
-}
-@media (min-width: 1200px) {
-     .container {
-        max-width: 1400px;
-    }
-}
-/* Optional: allow user to resize panel bodies */
-.pane .pane-scroll { resize: vertical; }
-/* Tighten headers */
+.pane .pane-scroll { max-height: 40vh; overflow: auto; resize: vertical; }
+@media (min-width: 992px)  { .pane .pane-scroll { max-height: 32vh; } }
+@media (min-width: 1200px) { .container { max-width: 1400px; } }
 .card-header, .card-footer { padding: .5rem .75rem; }
 .card-body { padding: .75rem; }
-/* Keep tables tidy */
-table.table-sm td, table.table-sm th { vertical-align: middle; }
-
-ul {
-  list-style-type: none;
-}

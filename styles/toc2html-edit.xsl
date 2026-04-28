@@ -3,21 +3,7 @@
     <xsl:param name="formId" select="'toc-edit'"/>
     <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes"/>
     <xsl:template match="/">
-        <html lang="en">
-            <head>
-                <meta charset="utf-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <title>Table of Correspondences</title>
-            </head>
-            <body>
-                <!-- Style block in body so it survives the head-stripping done by xml_to_html(). -->
-                <style>
-                    .table td, .table th { vertical-align: middle; }
-                    /* Override Bootstrap form-control width:100% so inputs stay compact. */
-                    .cell-input { width: 6ch !important; min-width: 4ch; }
-                    .actions-col { width: 1%; white-space: nowrap; }
-                    .btn-icon { padding: .1rem .4rem; line-height: 1; }
-                </style>
+        <div>
                 <xsl:apply-templates select="tableOfCorr"/>
                 <script><![CDATA[
           (function(){
@@ -120,8 +106,7 @@
             });
           })();
         ]]></script>
-            </body>
-        </html>
+        </div>
     </xsl:template>
 
     <!-- Render main structure -->

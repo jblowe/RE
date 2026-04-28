@@ -5,15 +5,7 @@
 <xsl:strip-space elements="*"/>
 
 <xsl:template match="/">
-  <html>
-    <head><title>Coverage</title></head>
-    <body>
-      <!-- Style block in body — head is stripped by xml_to_html(). -->
-      <style>
-        .cov-table td, .cov-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }
-        .cov-unused { background: #fff3cd; padding: 1px 3px; border-radius: 2px; }
-        .cov-uses   { color: #888; font-size: 0.75em; }
-      </style>
+  <div>
       <xsl:variable name="mel_fn" select="stats/settings/parm[@key='mel_filename']/@value"/>
       <xsl:if test="$mel_fn != ''">
         <!-- Extract basename: take text after the last '/' or '\' -->
@@ -29,12 +21,19 @@
       <p style="font-style:italic; font-size:0.8rem; margin-bottom:.5rem;">
         created at: <xsl:value-of select=".//createdat"/>
       </p>
+      <xsl:if test="stats/unmatched_by_language">
+        <div style="float:right; width:220px; font-size:0.85rem;">
+          <a href="#unmatched-by-lg">
+            <xsl:value-of select="count(stats/unmatched_by_language/lg/gl)"/>
+            unmatched glosses by language
+          </a>
+        </div>
+      </xsl:if>
       <xsl:apply-templates select="stats/lexicons"/>
       <xsl:apply-templates select="stats/totals"/>
       <xsl:apply-templates select="stats/semantics"/>
-      <xsl:apply-templates select="stats/unmatched_glosses"/>
-    </body>
-  </html>
+      <xsl:apply-templates select="stats/unmatched_by_language"/>
+  </div>
 </xsl:template>
 
 <!-- ── Utility: extract basename from a file path ───────────────────────── -->
@@ -148,19 +147,47 @@
   </table>
 </xsl:template>
 
-<!-- ── Unmatched glosses ─────────────────────────────────────────────────── -->
-<xsl:template match="unmatched_glosses">
-  <h5>Unmatched glosses
+<!-- ── Unmatched glosses by language ─────────────────────────────────────── -->
+<xsl:template match="unmatched_by_language">
+  <a name="unmatched-by-lg"/>
+  <h5>Unmatched glosses by language
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
-      n = <xsl:value-of select="count(.//gl)"/>
+      &#160;
+      <span class="cov-repeated" style="padding:1px 6px;">in multiple languages</span>
     </small>
   </h5>
-  <p style="font-size:0.85rem; line-height:1.8;">
-    <xsl:for-each select=".//gl">
-      <xsl:value-of select="."/>
-      <xsl:if test="position() != last()"><xsl:text>, </xsl:text></xsl:if>
-    </xsl:for-each>
-  </p>
+  <table class="table table-sm table-hover table-bordered sortable cov-table">
+    <thead>
+      <tr>
+        <th>Language</th>
+        <th>Unmatched glosses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <xsl:for-each select="lg">
+        <tr>
+          <td style="white-space:nowrap; vertical-align:top">
+            <xsl:value-of select="@id"/>
+            <br/>
+            <small class="text-muted"><xsl:value-of select="count(gl)"/></small>
+          </td>
+          <td class="col-gloss">
+            <xsl:for-each select="gl">
+              <xsl:choose>
+                <xsl:when test="@repeated = 'true'">
+                  <span class="cov-repeated"><xsl:value-of select="."/></span>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="."/>
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:if test="position() != last()"><xsl:text>, </xsl:text></xsl:if>
+            </xsl:for-each>
+          </td>
+        </tr>
+      </xsl:for-each>
+    </tbody>
+  </table>
 </xsl:template>
 
 </xsl:stylesheet>

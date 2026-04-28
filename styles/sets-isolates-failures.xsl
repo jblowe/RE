@@ -14,24 +14,23 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
-    <div class="table-responsive">
     <table class="table table-sm table-striped table-hover table-bordered sortable">
       <thead>
         <tr>
-          <th>lg</th>
-          <th>lx</th>
-          <th>gl</th>
-          <th>pfm</th>
-          <th>rcn</th>
-          <th>id</th>
-          <th>Reason</th>
+          <th class="col-plg">lg</th>
+          <th class="col-pfm">lx</th>
+          <th class="col-gloss">gl</th>
+          <th class="col-pfm">pfm</th>
+          <th class="col-rcn">rcn</th>
+          <th class="col-plg">id</th>
+          <th class="col-gloss">Reason</th>
         </tr>
       </thead>
       <tbody>
         <xsl:for-each select="rfx">
           <tr>
-            <td><xsl:value-of select="lg"/></td>
-            <td>
+            <td class="col-plg"><xsl:value-of select="lg"/></td>
+            <td class="col-pfm">
               <xsl:choose>
                 <xsl:when test="lxf">
                   <xsl:value-of select="lxf"/>
@@ -40,16 +39,15 @@
                 <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
               </xsl:choose>
             </td>
-            <td><xsl:value-of select="gl"/></td>
-            <td><xsl:value-of select="pfm"/></td>
-            <td><xsl:value-of select="rcn"/></td>
-            <td><xsl:value-of select="@id"/></td>
-            <td><xsl:value-of select="reason"/></td>
+            <td class="col-gloss"><xsl:value-of select="gl"/></td>
+            <td class="col-pfm"><xsl:value-of select="pfm"/></td>
+            <td class="col-rcn"><xsl:value-of select="rcn"/></td>
+            <td class="col-plg"><xsl:value-of select="@id"/></td>
+            <td class="col-gloss"><xsl:value-of select="reason"/></td>
           </tr>
         </xsl:for-each>
       </tbody>
     </table>
-    </div>
   </xsl:template>
 
   <xsl:template match="failures">
@@ -59,21 +57,20 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
-    <div class="table-responsive">
     <table class="table table-sm table-striped table-hover table-bordered sortable">
       <thead>
         <tr>
-          <th>lg</th>
-          <th>lx</th>
-          <th>gl</th>
-          <th>id</th>
+          <th class="col-plg">lg</th>
+          <th class="col-pfm">lx</th>
+          <th class="col-gloss">gl</th>
+          <th class="col-plg">id</th>
         </tr>
       </thead>
       <tbody>
         <xsl:for-each select="rfx">
           <tr>
-            <td><xsl:value-of select="lg"/></td>
-            <td>
+            <td class="col-plg"><xsl:value-of select="lg"/></td>
+            <td class="col-pfm">
               <xsl:choose>
                 <xsl:when test="lxf">
                   <xsl:value-of select="lxf"/>
@@ -82,13 +79,12 @@
                 <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
               </xsl:choose>
             </td>
-            <td><xsl:value-of select="gl"/></td>
-            <td><xsl:value-of select="@id"/></td>
+            <td class="col-gloss"><xsl:value-of select="gl"/></td>
+            <td class="col-plg"><xsl:value-of select="@id"/></td>
           </tr>
         </xsl:for-each>
       </tbody>
     </table>
-    </div>
   </xsl:template>
 
 </xsl:stylesheet>

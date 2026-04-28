@@ -12,34 +12,25 @@
             elements="*"/>
 
     <xsl:template match="/">
-        <html>
-            <head>
-                <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
-            </head>
-            <body>
-                <a name="top">
-                    <h4>Meaning Equivalence List</h4>
+        <div>
+            <a name="top">
+                <h4>Meaning Equivalence List</h4>
+            </a>
+            <xsl:if test="$mel_filename != ''">
+              <p style="font-size:0.8rem; font-style:italic; margin-bottom:.5rem;">
+                <xsl:value-of select="$mel_filename"/>
+              </p>
+            </xsl:if>
+            <div style="float: right; width:200px;">
+                <a href="#unmatched">
+                    <xsl:value-of select="count(.//unmatched/mel/gl)"/>
+                    unmatched glosses by language
                 </a>
-                <xsl:if test="$mel_filename != ''">
-                  <p style="font-size:0.8rem; font-style:italic; margin-bottom:.5rem;">
-                    <xsl:value-of select="$mel_filename"/>
-                  </p>
-                </xsl:if>
-                <div style="float: right; width:200px;">
-                    <a href="#unmatched">
-                        <xsl:value-of select="count(.//unmatched/mel/gl)"/>
-                        unmatched glosses by language
-                    </a>
-                </div>
-                <xsl:apply-templates select=".//totals"/>
-                <xsl:apply-templates select=".//semantics"/>
-                <!-- e.g.
-                <mel id="wn1">
-                    <gl>ginseng</gl>
-                -->
-                <xsl:apply-templates select=".//unmatched"/>
-            </body>
-        </html>
+            </div>
+            <xsl:apply-templates select=".//totals"/>
+            <xsl:apply-templates select=".//semantics"/>
+            <xsl:apply-templates select=".//unmatched"/>
+        </div>
     </xsl:template>
 
     <xsl:template match="totals">

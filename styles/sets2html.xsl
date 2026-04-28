@@ -13,40 +13,35 @@
           encoding="utf-8"/>
 
   <xsl:template match="/">
-    <html>
-      <head>
-        <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
-      </head>
-      <body>
-        <h5>Regular cognate sets</h5>
-        <div style="float: left; width:60px;">
-          <b>n =
-            <xsl:value-of select="count(.//sets/set)"/>
-          </b>
-        </div>
-        <div style="float: left; width:300px;">
-          <i>created at:
-            <xsl:value-of select=".//createdat"/>
-          </i>
-        </div>
-        <div style="float: left; width:180px;">
-          <a href="#isolates">
-            <xsl:value-of select="count(.//isolates/rfx)"/>
-            isolates
-          </a>
-        </div>
-        <div style="float: left; width:180px;">
-          <a href="#failures">
-            <xsl:value-of select="count(.//failures/rfx)"/>
-            failures
-          </a>
-        </div>
-        <div style="clear:both;"></div>
-        <xsl:apply-templates select=".//sets"/>
-        <xsl:apply-templates select=".//isolates"/>
-        <xsl:apply-templates select=".//failures"/>
-      </body>
-    </html>
+    <div>
+      <h5>Regular cognate sets</h5>
+      <div style="float: left; width:60px;">
+        <b>n =
+          <xsl:value-of select="count(.//sets/set)"/>
+        </b>
+      </div>
+      <div style="float: left; width:300px;">
+        <i>created at:
+          <xsl:value-of select=".//createdat"/>
+        </i>
+      </div>
+      <div style="float: left; width:180px;">
+        <a href="#isolates">
+          <xsl:value-of select="count(.//isolates/rfx)"/>
+          isolates
+        </a>
+      </div>
+      <div style="float: left; width:180px;">
+        <a href="#failures">
+          <xsl:value-of select="count(.//failures/rfx)"/>
+          failures
+        </a>
+      </div>
+      <div style="clear:both;"></div>
+      <xsl:apply-templates select=".//sets"/>
+      <xsl:apply-templates select=".//isolates"/>
+      <xsl:apply-templates select=".//failures"/>
+    </div>
   </xsl:template>
 
   <xsl:param name="isolates" select="'null'"/>

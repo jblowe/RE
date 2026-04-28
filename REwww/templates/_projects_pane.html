@@ -23,6 +23,7 @@
             <th style="width:12%">MEL</th>
             <th style="width:12%">Fuzzy</th>
             <th style="width:26%">Upstream</th>
+            <th style="width:10%">Match type</th>
             <th style="width:10%">Action</th>
           </tr>
         </thead>
@@ -73,6 +74,13 @@
                      id="inp-upstream-{{ name }}"
                      placeholder="e.g. PIWR: PWR, it, scn; PWR: PIR, fr; PIR: es, pt, oldpt;">
             </td>
+            <td>
+              <select class="form-control form-control-sm"
+                      id="sel-cmt-{{ name }}">
+                <option value="glyphs" selected>glyphs</option>
+                <option value="constituent">constituent</option>
+              </select>
+            </td>
             <td class="align-middle">
               <div style="display:flex;gap:.3rem;flex-wrap:nowrap">
                 <button class="btn btn-primary btn-sm run-btn"
@@ -93,7 +101,7 @@
           </tr>
           <!-- collapsible history row for {{ name }} -->
           <tr id="hist-row-{{ name }}" style="display:none">
-            <td colspan="6" style="padding:0;background:#f8f9fa;border-top:none">
+            <td colspan="7" style="padding:0;background:#f8f9fa;border-top:none">
               <div id="hist-content-{{ name }}"
                    style="padding:.6rem 1rem .8rem">
                 <p class="text-muted mb-0">

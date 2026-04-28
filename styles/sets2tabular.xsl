@@ -13,49 +13,43 @@
           encoding="utf-8"/>
 
   <xsl:template match="/">
-    <html>
-      <head>
-        <link rel="stylesheet" type="text/css" href="/static/reconengine.css"/>
-      </head>
-      <body>
-        <div class="row">
-          <div class="col">
-            <h5>Regular cognate sets</h5>
-            <div style="float: left; width:60px;">
-              <b>n =
-                <xsl:value-of select="count(.//sets/set)"/>
-              </b>
-            </div>
-            <div style="float: left; width:300px;">
-              <i>created at:
-                <xsl:value-of select=".//createdat"/>
-              </i>
-            </div>
-            <div style="float: left; width:180px;">
-              <a href="#isolates">
-                <xsl:value-of select="count(.//isolates/rfx)"/>
-                isolates
-              </a>
-            </div>
-            <div style="float: left; width:180px;">
-              <a href="#failures">
-                <xsl:value-of select="count(.//failures/rfx)"/>
-                failures
-              </a>
-            </div>
+    <div>
+      <div class="row">
+        <div class="col">
+          <h5>Regular cognate sets</h5>
+          <div style="float: left; width:60px;">
+            <b>n =
+              <xsl:value-of select="count(.//sets/set)"/>
+            </b>
+          </div>
+          <div style="float: left; width:300px;">
+            <i>created at:
+              <xsl:value-of select=".//createdat"/>
+            </i>
+          </div>
+          <div style="float: left; width:180px;">
+            <a href="#isolates">
+              <xsl:value-of select="count(.//isolates/rfx)"/>
+              isolates
+            </a>
+          </div>
+          <div style="float: left; width:180px;">
+            <a href="#failures">
+              <xsl:value-of select="count(.//failures/rfx)"/>
+              failures
+            </a>
           </div>
         </div>
-        <!-- TODO: figure out what class, if any makes table both sortable and header-sticky -->
-        <div class="row">
-          <div class="col">
-            <div class="table-responsive">
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="re-scroll-table">
             <table class="table table-sm table-hover table-bordered sets sortable">
-              <thead class="sticky-top top-0">
+              <thead>
                 <tr>
                   <th class="col-num">num</th>
                   <th class="col-plg">plg</th>
                   <th class="col-pfm">pfm</th>
-                  <!-- th>pgl</th -->
                   <th class="col-rcn">rcn</th>
                   <th class="col-mel">mel</th>
                   <xsl:apply-templates select=".//languages"/>
@@ -65,21 +59,20 @@
                 <xsl:with-param name="lgs" select=".//languages"/>
               </xsl:call-template>
             </table>
-            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <xsl:apply-templates select=".//isolates"/>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <xsl:apply-templates select=".//isolates"/>
         </div>
-        <div class="row">
-          <div class="col">
-            <xsl:apply-templates select=".//failures"/>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <xsl:apply-templates select=".//failures"/>
         </div>
-      </body>
-    </html>
+      </div>
+    </div>
   </xsl:template>
 
   <xsl:template name="sets">

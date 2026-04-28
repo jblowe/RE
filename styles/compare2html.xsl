@@ -28,28 +28,9 @@
      ══════════════════════════════════════════════════════════════════════════ -->
 
 <xsl:template match="/">
-  <html>
-    <head><title>Compare</title></head>
-    <body>
-      <!-- Style block in body — head is stripped by xml_to_html(). -->
-      <style>
-        .cmp-table td, .cmp-table th {
-          padding: .15rem .4rem !important;
-          font-size: 0.82rem;
-        }
-        .cmp-pfm-diff  { background: #fff3cd; }
-        .cmp-lgs       { font-size: 0.78em; color: #555; }
-        .cmp-members   { font-size: 0.72em; color: #aaa; font-style: italic; }
-        .cmp-badge     { display: inline-block; padding: 2px 8px; border-radius: 4px;
-                         font-size: 0.8rem; margin-right: 6px; }
-        .cmp-same      { background: #d1e7dd; color: #0a3622; }
-        .cmp-changed   { background: #fff3cd; color: #664d03; }
-        .cmp-lost      { background: #f8d7da; color: #58151c; }
-        .cmp-gained    { background: #d1ecf1; color: #0c5460; }
-      </style>
+  <div>
       <xsl:apply-templates select="compare"/>
-    </body>
-  </html>
+  </div>
 </xsl:template>
 
 

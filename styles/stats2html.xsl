@@ -11,23 +11,19 @@
     <xsl:strip-space elements="*"/>
 
     <xsl:template match="/">
-        <html>
-            <head>
-            </head>
-            <body>
-                <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
-                <h5>Summary statistics</h5>
-                <xsl:apply-templates select=".//venn"/>
-                <xsl:apply-templates select=".//sankey"/>
-                <xsl:apply-templates select=".//settings"/>
-                <xsl:apply-templates select=".//totals" mode="summary"/>
-                <xsl:apply-templates select=".//stats"/>
-                <xsl:apply-templates select="stats/sets_in_common"/>
-                <xsl:apply-templates select="stats/sets_only_in_lexicon1"/>
-                <xsl:apply-templates select="stats/sets_only_in_lexicon2"/>
-                <!-- xsl:apply-templates select="stats/matrix"/ -->
-            </body>
-        </html>
+        <div>
+            <p style="font-style: italic">created at: <xsl:value-of select=".//createdat"/></p>
+            <h5>Summary statistics</h5>
+            <xsl:apply-templates select=".//venn"/>
+            <xsl:apply-templates select=".//sankey"/>
+            <xsl:apply-templates select=".//settings"/>
+            <xsl:apply-templates select=".//totals" mode="summary"/>
+            <xsl:apply-templates select=".//stats"/>
+            <xsl:apply-templates select="stats/sets_in_common"/>
+            <xsl:apply-templates select="stats/sets_only_in_lexicon1"/>
+            <xsl:apply-templates select="stats/sets_only_in_lexicon2"/>
+            <!-- xsl:apply-templates select="stats/matrix"/ -->
+        </div>
     </xsl:template>
 
     <xsl:template match="sets_in_common">

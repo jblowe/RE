@@ -79,12 +79,13 @@ def api_run():
     """Start an upstream run.  Returns { run_id, run_name }."""
     import RE, read, serialize, load_hooks
 
-    body     = request.get_json(force=True)
-    project  = body.get('project')
-    recon    = body.get('recon') or None
-    mel      = body.get('mel')   or None
-    fuzzy    = body.get('fuzzy') or None
-    upstream = body.get('upstream') or None
+    body               = request.get_json(force=True)
+    project            = body.get('project')
+    recon              = body.get('recon') or None
+    mel                = body.get('mel')   or None
+    fuzzy              = body.get('fuzzy') or None
+    upstream           = body.get('upstream') or None
+    context_match_type = body.get('context_match_type') or 'glyphs'
 
     if project == 'ROMANCE':
         recon = None
@@ -130,7 +131,8 @@ def api_run():
             load_hooks.load_hook(project_path)
             settings = read.read_settings(
                 project_path, project, recon,
-                mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
+                mel_token=mel, fuzzy_token=fuzzy, upstream=upstream,
+                context_match_type=context_match_type)
 
             # Attach syllable_canon to settings so it is available for
             # logging and serialize_stats.  ProjectSettings doesn't hold it;
@@ -141,7 +143,7 @@ def api_run():
                     settings.proto_languages[settings.upstream_target])
                 _params = read.read_correspondence_file(
                     _recon_path, settings.upstream_target,
-                    None, None)   # mel/fuzzy not needed for syllable_canon
+                    None, None, settings.context_match_type)
                 settings.syllable_canon = _params.syllable_canon
             except Exception:
                 pass
@@ -316,10 +318,11 @@ def api_run():
                     'failures':     len(B.failures),
                     'has_coverage': bool(run_info['files'].get('coverage')),
                     'params': {
-                        'recon':    recon    or '',
-                        'mel':      mel      or '',
-                        'fuzzy':    fuzzy    or '',
-                        'upstream': upstream or '',
+                        'recon':              recon              or '',
+                        'mel':                mel                or '',
+                        'fuzzy':              fuzzy              or '',
+                        'upstream':           upstream           or '',
+                        'context_match_type': context_match_type or '',
                     },
                     'files': {
                         'sets':     sets_xml  or '',
@@ -343,12 +346,13 @@ def api_run():
 
     threading.Thread(target=do_run, daemon=True).start()
     return jsonify(
-        run_id   = run_id,
-        run_name = run_name,
-        recon    = recon,
-        mel      = mel,
-        fuzzy    = fuzzy,
-        upstream = upstream,
+        run_id             = run_id,
+        run_name           = run_name,
+        recon              = recon,
+        mel                = mel,
+        fuzzy              = fuzzy,
+        upstream           = upstream,
+        context_match_type = context_match_type,
     )
 
 

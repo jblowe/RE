@@ -2,11 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" encoding="UTF-8" omit-xml-declaration="yes"/>
   <xsl:template match="/">
-    <html lang="en">
-      <head>
-        <meta charset="utf-8"/>
-      </head>
-      <body>
+    <div>
         <div class="card mb-3">
           <div class="card-header fw-semibold">MEL Entries</div>
           <div class="card-body p-0">
@@ -88,7 +84,6 @@
   });
 })();
         ]]></script>
-      </body>
-    </html>
+    </div>
   </xsl:template>
 </xsl:stylesheet>

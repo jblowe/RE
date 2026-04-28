@@ -12,33 +12,20 @@ STYLES_DIR: str = ''
 
 def xml_to_html_from_tree(tree, stylesheet_name: str) -> str:
     """Apply a named XSLT stylesheet to an already-parsed lxml ElementTree.
-    Returns an HTML fragment (body inner content only)."""
+    Returns an HTML fragment string."""
     xsl_path = os.path.join(STYLES_DIR, stylesheet_name)
     if not os.path.isfile(xsl_path):
         return f'<p class="text-danger">Stylesheet not found: <code>{stylesheet_name}</code></p>'
     try:
-        result    = ET.XSLT(ET.parse(xsl_path))(tree)
-        html_root = ET.HTML(bytes(result), parser=ET.HTMLParser(encoding='utf-8'))
-        if html_root is not None:
-            body = html_root.find('.//body')
-            if body is not None:
-                parts = [body.text or '']
-                for child in body:
-                    parts.append(ET.tostring(child, encoding='unicode', method='html'))
-                return ''.join(parts)
-        return str(result)
+        result = ET.XSLT(ET.parse(xsl_path))(tree)
+        return bytes(result).decode('utf-8')
     except Exception as exc:
         return f'<pre class="text-danger">XSLT error ({stylesheet_name}):\n{exc}</pre>'
 
 
 def xml_to_html(xml_path: str, stylesheet_name: str,
                 params: dict | None = None) -> str:
-    """Apply a named XSLT stylesheet to an XML file; return HTML fragment.
-
-    The XSLT stylesheets produce full HTML pages (html/head/body).  We extract
-    only the body's inner content so the fragment can be safely injected into a
-    div without duplicate html/head/body wrappers or stray <link> elements that
-    confuse the browser's CSS loader.
+    """Apply a named XSLT stylesheet to an XML file; return an HTML fragment.
 
     Optional *params* dict maps XSLT parameter names to string values.
     """
@@ -48,27 +35,10 @@ def xml_to_html(xml_path: str, stylesheet_name: str,
     if not os.path.isfile(xsl_path):
         return f'<p class="text-danger">Stylesheet not found: <code>{stylesheet_name}</code></p>'
     try:
-        dom       = ET.parse(xml_path)
-        xslt      = ET.parse(xsl_path)
+        dom = ET.parse(xml_path)
         xslt_kwargs = {k: ET.XSLT.strparam(v) for k, v in (params or {}).items()}
-        result    = ET.XSLT(xslt)(dom, **xslt_kwargs)
-
-        # Parse output as HTML and pull out <body> inner content.
-        # Pass explicit UTF-8 parser so that IPA / special chars survive
-        # (lxml's default HTML parser assumes ISO-8859-1 when there is no
-        # charset meta tag, which turns UTF-8 bytes into mojibake).
-        html_root = ET.HTML(bytes(result),
-                            parser=ET.HTMLParser(encoding='utf-8'))
-        if html_root is not None:
-            body = html_root.find('.//body')
-            if body is not None:
-                parts = [body.text or '']
-                for child in body:
-                    parts.append(ET.tostring(child, encoding='unicode',
-                                             method='html'))
-                return ''.join(parts)
-
-        return str(result)          # fallback: full page as-is
+        result = ET.XSLT(ET.parse(xsl_path))(dom, **xslt_kwargs)
+        return bytes(result).decode('utf-8')
     except Exception as exc:
         return f'<pre class="text-danger">XSLT error ({stylesheet_name}):\n{exc}</pre>'
 

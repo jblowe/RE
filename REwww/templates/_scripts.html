@@ -157,11 +157,12 @@ document.getElementById('main-tab-content').addEventListener('click', function (
   const btn = e.target.closest('.run-btn');
   if (!btn) return;
 
-  const project  = btn.dataset.project;
-  const recon    = document.getElementById(`sel-recon-${project}`).value    || null;
-  const mel      = document.getElementById(`sel-mel-${project}`).value      || null;
-  const fuzzy    = document.getElementById(`sel-fuzzy-${project}`).value    || null;
-  const upstream = document.getElementById(`inp-upstream-${project}`).value.trim() || null;
+  const project           = btn.dataset.project;
+  const recon             = document.getElementById(`sel-recon-${project}`).value    || null;
+  const mel               = document.getElementById(`sel-mel-${project}`).value      || null;
+  const fuzzy             = document.getElementById(`sel-fuzzy-${project}`).value    || null;
+  const upstream          = document.getElementById(`inp-upstream-${project}`).value.trim() || null;
+  const context_match_type = document.getElementById(`sel-cmt-${project}`).value    || 'glyphs';
 
   currentProject = project;
 
@@ -176,7 +177,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
   fetch('/api/run', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ project, recon, mel, fuzzy, upstream }),
+    body: JSON.stringify({ project, recon, mel, fuzzy, upstream, context_match_type }),
   })
   .then(r => r.json())
   .then(data => {
@@ -190,10 +191,11 @@ document.getElementById('main-tab-content').addEventListener('click', function (
     /* Build a compact but informative run badge from the selected parameters. */
     (function() {
       const parts = [`project ${project}`];
-      if (data.recon)    parts.push(`ToC: ${data.recon}`);
-      if (data.mel)      parts.push(`MEL: ${data.mel}`);
-      if (data.fuzzy)    parts.push(`fuzzy: ${data.fuzzy}`);
-      if (data.upstream) parts.push(`↑ ${data.upstream}`);
+      if (data.recon)              parts.push(`ToC: ${data.recon}`);
+      if (data.mel)                parts.push(`MEL: ${data.mel}`);
+      if (data.fuzzy)              parts.push(`fuzzy: ${data.fuzzy}`);
+      if (data.upstream)           parts.push(`↑ ${data.upstream}`);
+      if (data.context_match_type) parts.push(`match: ${data.context_match_type}`);
       document.getElementById('run-badge').textContent = parts.join('  ·  ');
     })();
 
@@ -331,7 +333,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       histRow.id = `hist-row-${name}`;
       histRow.style.display = 'none';
       const histTd = document.createElement('td');
-      histTd.colSpan = 6;
+      histTd.colSpan = 7;
       histTd.style.cssText = 'padding:0;background:#f8f9fa;border-top:none';
       const histDiv = document.createElement('div');
       histDiv.id = `hist-content-${name}`;
@@ -924,7 +926,7 @@ function renderHistoryTable(project, runs) {
     <thead class="thead-light"><tr>
       <th style="width:1%"></th>
       <th>Timestamp</th><th>Recon</th><th>MEL</th><th>Fuzzy</th>
-      <th>Sets</th><th>Isolates</th><th>Failures</th><th>Cov</th><th></th>
+      <th>Sets</th><th>Isolates</th><th>Failures</th><th>Cov</th><th>Match</th><th></th>
     </tr></thead><tbody>`;
   runs.forEach(run => {
     const ts  = (run.run_name || '').replace(
@@ -942,6 +944,7 @@ function renderHistoryTable(project, runs) {
       <td>${run.isolates  ?? '?'}</td>
       <td>${run.failures  ?? '?'}</td>
       <td>${cov}</td>
+      <td>${p.context_match_type || '—'}</td>
       <td style="white-space:nowrap">
         <button class="btn btn-outline-primary hist-load-btn py-0 px-1"
                 data-run-id="${run.run_id}" data-project="${project}"
@@ -990,10 +993,11 @@ function loadHistRun(runId, project) {
     /* Update navbar badge */
     const p = data.params || {};
     const parts = [`project ${data.project}`];
-    if (p.recon)    parts.push(`ToC: ${basename(p.recon)}`);
-    if (p.mel)      parts.push(`MEL: ${basename(p.mel)}`);
-    if (p.fuzzy)    parts.push(`fuzzy: ${basename(p.fuzzy)}`);
-    if (p.upstream) parts.push(`↑ ${p.upstream}`);
+    if (p.recon)              parts.push(`ToC: ${basename(p.recon)}`);
+    if (p.mel)                parts.push(`MEL: ${basename(p.mel)}`);
+    if (p.fuzzy)              parts.push(`fuzzy: ${basename(p.fuzzy)}`);
+    if (p.upstream)           parts.push(`↑ ${p.upstream}`);
+    if (p.context_match_type) parts.push(`match: ${p.context_match_type}`);
     document.getElementById('run-badge').textContent = parts.join('  ·  ');
     /* Populate Log tab from persisted log file */
     const logEl = document.getElementById('run-log');
