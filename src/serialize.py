@@ -407,6 +407,24 @@ def serialize_stats(stats, settings, args, filename):
     except:
         pass
 
+    try:
+        if hasattr(stats, 'unmatched_by_language') and len(stats.unmatched_by_language) > 0:
+            # Count how many languages each gloss appears in, to flag repeated ones.
+            gloss_lang_count = collections.Counter()
+            for language, glosses in stats.unmatched_by_language.items():
+                for g in glosses:
+                    gloss_lang_count[g] += 1
+            unmatched_by_language = ET.SubElement(root, 'unmatched_by_language')
+            for language in sorted(stats.unmatched_by_language):
+                lg_element = ET.SubElement(unmatched_by_language, 'lg', attrib={'id': language})
+                for g in sorted(stats.unmatched_by_language[language]):
+                    gl_element = ET.SubElement(lg_element, 'gl')
+                    gl_element.text = g
+                    if gloss_lang_count[g] > 1:
+                        gl_element.set('repeated', 'true')
+    except:
+        pass
+
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
