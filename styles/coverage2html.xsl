@@ -127,7 +127,7 @@
           <td style="vertical-align:top; white-space:nowrap">
             <xsl:value-of select="@id"/>
           </td>
-          <td class="col-gloss">
+          <td class="col-gloss cov-gl-col">
             <xsl:for-each select="gl">
               <xsl:choose>
                 <xsl:when test="@uses = '0'">
@@ -171,7 +171,7 @@
             <br/>
             <small class="text-muted"><xsl:value-of select="count(gl)"/></small>
           </td>
-          <td class="col-gloss">
+          <td class="col-gloss cov-gl-col">
             <xsl:for-each select="gl">
               <xsl:choose>
                 <xsl:when test="@repeated = 'true'">
