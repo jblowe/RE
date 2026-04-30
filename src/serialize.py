@@ -568,3 +568,25 @@ def serialize_isolates_dict(isolates_dict, re_element):
         reason = getattr(form, '_isolate_reason', '')
         if reason:
             ET.SubElement(rfx, 'reason').text = reason
+
+
+def serialize_fuzzy_coverage(fuzzy_filename, fuzzy_usage, output_filename):
+    """Write an annotated copy of the fuzzy XML with per-<from> use counts.
+
+    fuzzy_usage is a Counter keyed by (language, from_string).
+    Each <from> element gets a 'uses' attribute; each <item> gets a
+    'to_uses' attribute (sum of its <from> uses).
+    """
+    src = ET.parse(fuzzy_filename)
+    root = src.getroot()
+    for item in root.findall('item'):
+        dial = item.attrib.get('dial', '')
+        to_uses = 0
+        for from_el in item.findall('from'):
+            count = fuzzy_usage.get((dial, from_el.text or ''), 0)
+            from_el.set('uses', str(count))
+            to_uses += count
+        item.set('to_uses', str(to_uses))
+    with open(output_filename, 'wb') as f:
+        f.write(ET.tostring(root, pretty_print=True, xml_declaration=True,
+                            encoding='utf-8'))

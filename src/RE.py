@@ -154,8 +154,10 @@ class Lexicon:
         return quirky_forms
 
     # Given a lexicon and a set of fuzzy rules, return a list of
-    # forms, some of which are marked as fuzzied.
+    # forms, some of which are marked as fuzzied, and a Counter of
+    # which from-strings fired (keyed by (language, from_string)).
     def fuzzied_forms(self, fuzzy):
+        usage = collections.Counter()
         def fuzzy_string(mapping, string):
             if not string:
                 return ''
@@ -170,6 +172,7 @@ class Lexicon:
                         (longest_candidate, its_target, its_len) = (initial, target, len(initial))
                 if longest_candidate:
                     new_string.append(its_target)
+                    usage[(self.language, longest_candidate)] += 1
                     string = string[its_len:]
                 else:
                     new_string.append(string[0])
@@ -185,7 +188,7 @@ class Lexicon:
             if fuzzied_glyphs != form.glyphs:
                 fuzzied_forms.append(FuzzyForm(fuzzied_glyphs, form))
                 fuzzied_count += 1
-        return fuzzied_forms, fuzzied_count
+        return fuzzied_forms, fuzzied_count, usage
 
 # a 'quirk' is the internal name by which we refer to 'exceptions'
 # to avoid collisions, code or conceptual, with python components
@@ -469,6 +472,7 @@ class Statistics:
         self.language_stats = {}
         self.correspondences_used_in_recons = collections.Counter()
         self.correspondences_used_in_sets = collections.Counter()
+        self.fuzzy_usage = collections.Counter()   # (language, from_string) → count
         self.notes = []
         self.debug_notes = []
 
@@ -892,8 +896,9 @@ def project_back(lexicons, parameters, statistics):
         fuzzied_count = 0
         fuzzied_map = {}
         if parameters.fuzzy:
-            fuzzied_list, fuzzied_count = lexicon.fuzzied_forms(parameters.fuzzy)
+            fuzzied_list, fuzzied_count, fuzzy_usage = lexicon.fuzzied_forms(parameters.fuzzy)
             fuzzied_map = {id(ff.actual): ff for ff in fuzzied_list}
+            statistics.fuzzy_usage.update(fuzzy_usage)
 
         quirky_forms = []
         if parameters.table.quirks:
@@ -1352,13 +1357,18 @@ def extract_isolates(lexicon):
         non_isolate_forms |= proto_form.attested_support
     isolates = collections.defaultdict(list)
     for (correspondences, supporting_forms, attested_support, mel) in lexicon.statistics.singleton_support:
+        # Build a map from original ModernForm → FuzzyForm for this set,
+        # so that isolates rendered via fuzzying carry both forms.
+        fuzzied_by_actual = {sf.actual: sf for sf in supporting_forms
+                             if isinstance(sf, FuzzyForm)}
         for form in attested_support:
             if form not in non_isolate_forms:
-                isolates[form].append(ProtoForm(lexicon.language,
-                                                correspondences,
-                                                supporting_forms,
-                                                attested_support,
-                                                mel))
+                effective_form = fuzzied_by_actual.get(form, form)
+                isolates[effective_form].append(ProtoForm(lexicon.language,
+                                                          correspondences,
+                                                          supporting_forms,
+                                                          attested_support,
+                                                          mel))
     return isolates
 
 # Given a lexicon of protoforms, return a mapping between cognate sets
