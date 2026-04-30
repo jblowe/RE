@@ -285,6 +285,13 @@ def api_run():
                     runs_dir, f'{project}.{run_name}.coverage.xml')
                 serialize.serialize_stats(cov_stats, settings, args_ns, coverage_xml)
 
+            fuzzy_cov_xml = None
+            if fuzzy_path and os.path.isfile(fuzzy_path):
+                fuzzy_cov_xml = os.path.join(
+                    runs_dir, f'{project}.{run_name}.fuzzy_cov.xml')
+                serialize.serialize_fuzzy_coverage(
+                    fuzzy_path, B.statistics.fuzzy_usage, fuzzy_cov_xml)
+
             # ── Write run log to disk ─────────────────────────────────────
             log_txt = os.path.join(
                 runs_dir, f'{project}.{run_name}.log.txt')
@@ -302,8 +309,9 @@ def api_run():
                 'data':     {lg: os.path.join(settings.directory_path, p)
                              for lg, p in settings.attested.items()},
                 'mel':      mel_path     if mel_path     and os.path.isfile(mel_path)     else None,
-                'fuzzy':    fuzzy_path   if fuzzy_path   and os.path.isfile(fuzzy_path)   else None,
-                'coverage': coverage_xml if coverage_xml and os.path.isfile(coverage_xml) else None,
+                'fuzzy':     fuzzy_path    if fuzzy_path    and os.path.isfile(fuzzy_path)    else None,
+                'fuzzy_cov': fuzzy_cov_xml if fuzzy_cov_xml and os.path.isfile(fuzzy_cov_xml) else None,
+                'coverage':  coverage_xml  if coverage_xml  and os.path.isfile(coverage_xml)  else None,
             }
             run_info['status'] = 'done'
 
@@ -477,7 +485,9 @@ def api_tab(run_id, tab):
         if mode == 'edit':
             html = xslt.xml_to_html(fuz_path, 'fuzzy2html-edit.xsl')
             return f'<div data-fuz-file="{fuz_path}">{html}</div>'
-        return xslt.xml_to_html(fuz_path, 'fuzzy2html.xsl')
+        fuz_cov_path = files.get('fuzzy_cov')
+        view_path = fuz_cov_path if fuz_cov_path and os.path.isfile(fuz_cov_path) else fuz_path
+        return xslt.xml_to_html(view_path, 'fuzzy2html.xsl')
 
     if tab == 'coverage':
         cov_path = files.get('coverage')
