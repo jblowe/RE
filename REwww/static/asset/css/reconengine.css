@@ -91,8 +91,11 @@ body { font-size: 0.875rem; background: #f8f9fa; }
   margin: 1rem 0 .4rem;
 }
 
-/* ── MEL edit: glosses column is unrestricted width ─────────────────────── */
-.mel-gl-col { max-width: none; }
+/* ── MEL view/edit: glosses column is unrestricted width ────────────────── */
+.content-area .mel-gl-col { max-width: none; }
+
+/* ── Coverage pane: glosses column is unrestricted width ────────────────── */
+.content-area .cov-gl-col { max-width: none; }
 
 /* ── Sticky table headers ────────────────────────────────────────────────── */
 .content-area thead th {
