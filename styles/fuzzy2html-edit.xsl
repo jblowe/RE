@@ -67,11 +67,15 @@
 (function(){
   function reindex(){
     var rows = document.querySelectorAll('#fuz-body tr');
+    var keys = ['dial','from','to'];
     rows.forEach(function(tr, i){
       var n = i + 1;
-      ['dial','from','to'].forEach(function(key){
-        var inp = tr.querySelector('input[name$="-' + key + '"]');
-        if(inp){ inp.name = 'item-' + n + '-' + key; inp.id = 'item-' + n + '-' + key; }
+      var inputs = tr.querySelectorAll('input');
+      inputs.forEach(function(inp, j){
+        if(keys[j]){
+          inp.name = 'item-' + n + '-' + keys[j];
+          inp.id   = 'item-' + n + '-' + keys[j];
+        }
       });
     });
   }

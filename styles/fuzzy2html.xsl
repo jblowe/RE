@@ -21,31 +21,46 @@
             <thead>
                 <tr>
                     <th>Language</th>
-                    <th>Input data values</th>
-                    <th>Fuzzied value</th>
+                    <th>From (input values)</th>
+                    <th>To (fuzzied value)</th>
                 </tr>
             </thead>
             <xsl:for-each select="./*">
                 <tr>
-                    <td style="vertical-align:top; white-space:normal"><xsl:value-of select="@dial"/></td>
+                    <td style="vertical-align:top; white-space:nowrap">
+                        <xsl:value-of select="@dial"/>
+                    </td>
                     <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
                         <xsl:for-each select="from">
-                            <xsl:value-of select="."/>
+                            <xsl:choose>
+                                <!-- Coverage annotated: uses="0" → greyed out -->
+                                <xsl:when test="@uses = '0'">
+                                    <span class="cov-unused" title="unused">
+                                        <xsl:value-of select="."/>
+                                    </span>
+                                </xsl:when>
+                                <!-- Coverage annotated: uses > 0 → show count in subscript -->
+                                <xsl:when test="@uses">
+                                    <xsl:value-of select="."/>
+                                    <sub class="cov-uses">&#160;<xsl:value-of select="@uses"/></sub>
+                                </xsl:when>
+                                <!-- No coverage data (raw fuzzy file) → plain text -->
+                                <xsl:otherwise>
+                                    <xsl:value-of select="."/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                             <xsl:if test="position()!=last()">, </xsl:if>
                         </xsl:for-each>
                     </td>
                     <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
                         <xsl:value-of select="@to"/>
+                        <xsl:if test="@to_uses">
+                            <sub class="cov-uses">&#160;<xsl:value-of select="@to_uses"/></sub>
+                        </xsl:if>
                     </td>
                 </tr>
             </xsl:for-each>
         </table>
     </xsl:template>
 
-
-    <xsl:template match="from">
-            <span class=".bg-info"><xsl:apply-templates/>, </span>
-    </xsl:template>
-
 </xsl:stylesheet>
-		
