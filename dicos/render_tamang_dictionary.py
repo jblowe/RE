@@ -17,6 +17,27 @@ TAGS_LIST = ['phr', 'gram', 'dfbot', 'xr', 'var', 'so', 'rec', 'nb', 'nbi', 'il'
 # dict for xrefs
 KEYS = {}
 
+# ── nav-bar bigram helpers ─────────────────────────────────────────────────
+_NAV_DIGRAPHS = sorted(['kʰ', 'cʰ', 'ʈʰ', 'tʰ', 'pʰ'], key=lambda s: -len(s))
+_NAV_VOWELS   = set('aeiouāīūãẽĩõũ')
+_NAV_TONE_RE  = re.compile(r'^[0-4,]+')
+
+def _nav_first_letter(r):
+    for d in _NAV_DIGRAPHS:
+        if r.startswith(d): return d
+    return r[0] if r else ''
+
+def _nav_bigram(raw_hw):
+    """Two-letter nav key for a raw headword, or None to skip."""
+    raw = (raw_hw or '').strip()
+    if not raw or raw[0] in '$-?,': return None
+    r = trans_str(_NAV_TONE_RE.sub('', raw))
+    if not r: return None
+    fl = _nav_first_letter(r)
+    if fl in _NAV_VOWELS: return None
+    rest = r[len(fl):]
+    return fl + (rest[0] if rest else '')
+
 def trans_str(s):
     source_chars = '012345:AEONT'
     target_chars = unescape('&#x2070;¹²³&#x2074;&#x2075;&#x02d0;&#x0259;&#x025b;&#x0254;&#x014b;&#x0288;')
@@ -254,6 +275,46 @@ def slugify(label: str, used: set) -> str:
     return token
 
 
+def compute_nav_structure(groups):
+    """Partition hdr groups into bigram sub-sections, preserving entry order.
+    Returns a list of nav items, each with keys: tok, label, is_vowel, subs.
+    Each sub has: sub_id, label, entries."""
+    nav = []
+    for tok, meta in groups.items():
+        label   = meta['label']
+        entries = meta['entries']
+        r_label = trans_str(label) if label else ''
+        is_vowel = bool(r_label and r_label[0] in _NAV_VOWELS)
+
+        if is_vowel:
+            nav.append({'tok': tok, 'label': label, 'is_vowel': True,
+                        'subs': [{'sub_id': f'section-{tok}', 'label': label, 'entries': entries}]})
+            continue
+
+        bg_order, bg_entries, last_bg, dollar_buf = [], {}, None, []
+        for entry in entries:
+            hw = entry.get('hw', '')
+            if hw.startswith('$'):
+                dollar_buf.append(entry); continue
+            bg = _nav_bigram(hw)
+            if bg is None: continue
+            if dollar_buf and last_bg:
+                bg_entries[last_bg].extend(dollar_buf); dollar_buf = []
+            if bg not in bg_entries:
+                bg_order.append(bg); bg_entries[bg] = []
+            bg_entries[bg].append(entry)
+            last_bg = bg
+        if dollar_buf and last_bg:
+            bg_entries[last_bg].extend(dollar_buf)
+
+        subs = [{'sub_id': f'section-{tok}-{i}', 'label': bg, 'entries': bg_entries[bg]}
+                for i, bg in enumerate(bg_order)]
+        if not subs:
+            subs = [{'sub_id': f'section-{tok}', 'label': label, 'entries': entries}]
+        nav.append({'tok': tok, 'label': label, 'is_vowel': False, 'subs': subs})
+    return nav
+
+
 def parse_entries_from_file(xml_path):
     """Group entries by in-stream <hdr> separators, preserving order. Accept any root wrapper."""
     raw = Path(xml_path).read_text(encoding='utf-8')
@@ -459,7 +520,7 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 .header .page-links a { color: #fff; text-decoration: none; padding: .25rem .5rem; border-radius: .375rem; }
 .header .page-links a:hover { background: rgba(255,255,255,.18); }
 /* Hamburger (CSS-only) */
-.menu-toggle { position: absolute; left: -9999px; }
+.menu-toggle { position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none; }
 .hamburger { display: none; cursor: pointer; margin-left: auto; padding: .25rem; z-index: 1300; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; border-radius: 1px; }
  .to-dico { display: none; }
@@ -482,6 +543,12 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 #letter-nav .nav-link { display: inline-block; font-size: 1.2rem; line-height: 1.1; padding: .2rem; margin-right: .15rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: 9999px; }
 #letter-nav .nav-link:hover { background: rgba(13,110,253,.08); border-color: rgba(13,110,253,.2); }
 #letter-nav .nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
+.nav-link.has-subs::after { content: '▾'; font-size: .7em; margin-left: .1em; vertical-align: middle; }
+#sub-nav { overflow-x: auto; border-top: 1px solid #e5e7eb; background: #f1f5ff; }
+.sub-nav-row { display: flex; flex-wrap: nowrap; padding: .2rem .5rem; gap: .15rem; }
+.sub-nav-link { flex: 0 0 auto; font-size: 1rem; padding: .15rem .45rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: .375rem; white-space: nowrap; }
+.sub-nav-link:hover { background: rgba(13,110,253,.08); border-color: rgba(13,110,253,.2); }
+.sub-nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
 body.show-dico .searchnav { display: block !important; }
 body.show-about #page-about { display: block !important; }
 body.show-credits #page-credits { display: block !important; }
@@ -548,13 +615,46 @@ function toggleEntryAll(id){
 }
 
 // ----- Letter navigation -----
-function showToken(tok){
+function hideSubNav(){
+  const sn = document.getElementById('sub-nav');
+  if (!sn) return;
+  sn.style.display = 'none';
+  sn.querySelectorAll('.sub-nav-row').forEach(r => r.style.display = 'none');
+}
+// showToken: used for vowel letters (direct section link)
+function showToken(sectionId, linkEl){
+  hideSubNav();
   document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none');
-  const section = document.getElementById('section-' + tok);
-  if (section) section.style.display = 'block';
+  const sec = document.getElementById(sectionId);
+  if (sec) sec.style.display = 'block';
   document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
-  const link = document.querySelector('#letter-nav .nav-link[data-token="' + tok + '"]');
-  if (link) link.classList.add('active');
+  if (linkEl) linkEl.classList.add('active');
+  const sr = document.getElementById('search-results'); if (sr) sr.style.display = 'none';
+  return false;
+}
+// toggleSubNav: used for consonant letters with sub-sections
+function toggleSubNav(tok, btn){
+  const sn   = document.getElementById('sub-nav');
+  const row  = document.getElementById('subnav-' + tok);
+  const alreadyOpen = sn && sn.style.display !== 'none' && row && row.style.display === 'flex';
+  hideSubNav();
+  document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
+  if (!alreadyOpen){
+    if (sn)  sn.style.display  = 'block';
+    if (row) row.style.display = 'flex';
+    btn.classList.add('active');
+    const firstSub = row && row.querySelector('.sub-nav-link');
+    if (firstSub) firstSub.click();
+  }
+  return false;
+}
+// showSubSection: used by sub-letter links
+function showSubSection(sectionId, linkEl){
+  document.querySelectorAll('.letter-section').forEach(s => s.style.display = 'none');
+  const sec = document.getElementById(sectionId);
+  if (sec) sec.style.display = 'block';
+  document.querySelectorAll('.sub-nav-link').forEach(a => a.classList.remove('active'));
+  if (linkEl) linkEl.classList.add('active');
   const sr = document.getElementById('search-results'); if (sr) sr.style.display = 'none';
   return false;
 }
@@ -588,6 +688,7 @@ function resetSearch(){
   const input = document.getElementById('search-box'); if (input) input.value = '';
   const resultsDiv = document.getElementById('search-results'); if (resultsDiv) resultsDiv.style.display = 'none';
   const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = '';
+  hideSubNav();
   hideAllSections();
   const first = document.querySelector('.letter-section'); if (first) first.style.display = 'block';
   document.querySelectorAll('#letter-nav .nav-link').forEach(a => a.classList.remove('active'));
@@ -839,7 +940,7 @@ window.debouncedSearch = debounce(handleSearch, 80);
 //]]>
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js");
+  navigator.serviceWorker.register("/tmg/sw.js");
 }
 """
 
@@ -849,8 +950,8 @@ if ("serviceWorker" in navigator) {
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<link rel="manifest" href="/manifest.json">
-<link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png">
+<link rel="manifest" href="/tmg/manifest.json">
+<link rel="apple-touch-icon" href="/tmg/icons/apple-touch-icon-180.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>{title}</title>
@@ -863,7 +964,8 @@ if ("serviceWorker" in navigator) {
     <!-- div class="logo" aria-hidden="true"> + LOGO + </div -->
     <a class="brand" href="#dico">{title}</a>
 
-    <label for="menu-toggle" class="hamburger" aria-hidden="true">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </label>
 
@@ -909,41 +1011,58 @@ if ("serviceWorker" in navigator) {
 """
     return HTML_SHELL, STYLE, SCRIPT
 
-def build_letter_nav(groups):
+def build_letter_nav(nav_structure):
     links = []
+    sub_rows = []
     first = True
-    for tok, meta in groups.items():
-        label = meta['label'] if meta['label'] is not None else tok
+    for item in nav_structure:
+        tok, label, subs = item['tok'], item['label'], item['subs']
         active = ' active' if first else ''
-        links.append(f'<a class="nav-link{active}" data-token="{tok}" href="#" onclick="return showToken(\'{tok}\')">{label}</a>')
         first = False
-    return '<nav id="letter-nav">' + ''.join(links) + '</nav>'
+        if item['is_vowel'] or len(subs) == 1:
+            sec_id = subs[0]['sub_id']
+            links.append(
+                f'<a class="nav-link{active}" data-token="{tok}" href="#"'
+                f' onclick="return showToken(\'{sec_id}\',this)">{label}</a>'
+            )
+        else:
+            links.append(
+                f'<a class="nav-link has-subs{active}" data-token="{tok}" href="#"'
+                f' onclick="return toggleSubNav(\'{tok}\',this)">{label}</a>'
+            )
+            sub_links = ''.join(
+                f'<a class="sub-nav-link" href="#"'
+                f' onclick="return showSubSection(\'{s["sub_id"]}\',this)">{s["label"]}</a>'
+                for s in subs
+            )
+            sub_rows.append(f'<div id="subnav-{tok}" class="sub-nav-row">{sub_links}</div>')
+    nav_html = '<nav id="letter-nav">' + ''.join(links) + '</nav>'
+    sub_nav_html = '<div id="sub-nav" style="display:none;">' + ''.join(sub_rows) + '</div>'
+    return nav_html + sub_nav_html
 
-def build_sections(groups):
+
+def build_sections(nav_structure):
     out = []
     first = True
-    for tok, meta in groups.items():
-        entries = meta['entries']
-        disp = '' if first else ' style="display:none;"'
-        entry_html = []
-        for e in entries:
-            eid = e['id']
-            short_html = render_short(e)
-            long_html = render_entry_long(e)
-            if 'ai-ni' in short_html:
-                pass
-            long_block = (
-                f"<div class='long' id='{eid}-long' style='display:none;'>{long_html}</div>"
-                if long_html else ''
-            )
-            # has_more = bool(e.get('modes') or e.get('subs') or long_html)
-            has_more = bool(long_html or 'mode-long' in short_html)
-            cls = "entry has-more" if has_more else "entry"
-            entry_html.append(
-                f"<div id='{eid}' class='{cls}' onclick=\"return toggleEntryAll('{eid}')\">{short_html}{long_block}</div>"
-            )
-        out.append(f"<div class='letter-section' id='section-{tok}'{disp}>" + ''.join(entry_html) + "</div>")
-        first = False
+    for item in nav_structure:
+        for sub in item['subs']:
+            disp = '' if first else ' style="display:none;"'
+            first = False
+            entry_html = []
+            for e in sub['entries']:
+                eid = e['id']
+                short_html = render_short(e)
+                long_html = render_entry_long(e)
+                long_block = (
+                    f"<div class='long' id='{eid}-long' style='display:none;'>{long_html}</div>"
+                    if long_html else ''
+                )
+                has_more = bool(long_html or 'mode-long' in short_html)
+                cls = "entry has-more" if has_more else "entry"
+                entry_html.append(
+                    f"<div id='{eid}' class='{cls}' onclick=\"return toggleEntryAll('{eid}')\">{short_html}{long_block}</div>"
+                )
+            out.append(f"<div class='letter-section' id='{sub['sub_id']}'{disp}>" + ''.join(entry_html) + "</div>")
     return ''.join(out)
 
 def minify_html(s: str) -> str:
@@ -952,12 +1071,13 @@ def minify_html(s: str) -> str:
     return s.strip()
 
 def render_html(groups, title, ENTRY_COUNT, HTML_SHELL, STYLE, SCRIPT):
+    nav_structure = compute_nav_structure(groups)
     return HTML_SHELL.format(
         title=esc(title),
         style=STYLE,
         script=SCRIPT,
-        letter_nav=build_letter_nav(groups),
-        sections=build_sections(groups),
+        letter_nav=build_letter_nav(nav_structure),
+        sections=build_sections(nav_structure),
         run_date=time.strftime("%Y-%m-%d at %H:%M:%S UTC", time.gmtime()),
         entry_count=ENTRY_COUNT
     )
