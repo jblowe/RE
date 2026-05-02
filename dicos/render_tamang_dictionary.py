@@ -543,7 +543,6 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
 #letter-nav .nav-link { display: inline-block; font-size: 1.2rem; line-height: 1.1; padding: .2rem; margin-right: .15rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: 9999px; }
 #letter-nav .nav-link:hover { background: rgba(13,110,253,.08); border-color: rgba(13,110,253,.2); }
 #letter-nav .nav-link.active { color: #fff; background: #0d6efd; border-color: #0d6efd; }
-.nav-link.has-subs::after { content: '▾'; font-size: .7em; margin-left: .1em; vertical-align: middle; }
 #sub-nav { overflow-x: auto; border-top: 1px solid #e5e7eb; background: #f1f5ff; }
 .sub-nav-row { display: flex; flex-wrap: nowrap; padding: .2rem .5rem; gap: .15rem; }
 .sub-nav-link { flex: 0 0 auto; font-size: 1rem; padding: .15rem .45rem; color: #0d6efd; text-decoration: none; border: 1px solid transparent; border-radius: .375rem; white-space: nowrap; }
@@ -560,6 +559,7 @@ body.show-dico #dictionary { display: block !important; }
 .page .to-dico:hover { background: #f1f3f5; }
 dt { font-weight: bold; font-style: italic; }
 /* Entries */
+.letter-section { padding-bottom: 4rem; }
 .entry { border: 1px solid #e5e7eb; border-radius: .5rem; padding: .75rem; margin: .5rem 0; background: #fff; padding-top: 0; }
 .entry.expanded { background: #f7f7f7; }
 .short { cursor: pointer; margin-bottom: 6px; }
@@ -596,8 +596,12 @@ dt { font-weight: bold; font-style: italic; }
   #letter-nav .nav-link { font-size: 1.0rem; padding: .2rem; }
   .short p, .long { font-size: .9rem; line-height: 1.2; }
  }
- table { border-collapse: collapse; table-layout:fixed; }
+.page h4 { font-size: 1.15rem; margin: .75rem 0 .3rem; }
+.page h5 { font-size: 1rem; font-weight: 600; margin: .6rem 0 .2rem; }
+.page p, .page dd, .page li { font-size: .9rem; line-height: 1.5; }
+table { border-collapse: collapse; width: 100%; }
 tr, td, th { border: 1px solid; }
+td, th { padding: .2rem .4rem; }
 """
 
     SCRIPT = r"""
@@ -656,6 +660,7 @@ function showSubSection(sectionId, linkEl){
   document.querySelectorAll('.sub-nav-link').forEach(a => a.classList.remove('active'));
   if (linkEl) linkEl.classList.add('active');
   const sr = document.getElementById('search-results'); if (sr) sr.style.display = 'none';
+  const navBar = document.getElementById('letter-nav'); if (navBar) navBar.style.display = 'none';
   return false;
 }
 
@@ -825,42 +830,20 @@ function highlightInElementMulti(el, regexes){
 
 // =======================
 
+function getSearchText(el){
+  if (!el) return '';
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('.small-caps').forEach(sc => sc.remove());
+  clone.querySelectorAll('br,hr').forEach(b => b.replaceWith(' '));
+  clone.querySelectorAll('p,div,li,ul,ol,dl,dt,dd,table,thead,tbody,tfoot,tr,td,th,section,article,header,footer,aside,nav,h1,h2,h3,h4,h5,h6,pre,blockquote').forEach(b => { b.prepend(' '); b.append(' '); });
+  return clone.textContent.replace(/\s+/g, ' ').trim();
+}
+
 function entrySearchText(entry){
-  // Build a stable searchable string from a .entry element.
-  // We must include text that may be hidden via CSS (so NOT innerText-only),
-  // and we must prevent "glued" tokens across tag boundaries by inserting spaces
-  // around common block/break elements.
   if (!entry) return '';
-
-  const parts = [];
-  const BLOCKY = new Set([
-    'DIV','P','LI','UL','OL','DL','DT','DD',
-    'TABLE','THEAD','TBODY','TFOOT','TR','TD','TH',
-    'SECTION','ARTICLE','HEADER','FOOTER','ASIDE','NAV',
-    'H1','H2','H3','H4','H5','H6','PRE','QUOTE','BLOCKQUOTE'
-  ]);
-
-  function walk(node){
-    if (!node) return;
-    if (node.nodeType === Node.TEXT_NODE){
-      // Keep text as-is; we normalize whitespace at the end.
-      parts.push(node.nodeValue || '');
-      return;
-    }
-    if (node.nodeType !== Node.ELEMENT_NODE) return;
-
-    const tag = (node.tagName || '').toUpperCase();
-    const isBreak = (tag === 'BR' || tag === 'HR');
-    const isBlock = BLOCKY.has(tag);
-
-    if (isBreak || isBlock) parts.push(' ');
-    for (const child of node.childNodes) walk(child);
-    if (isBreak || isBlock) parts.push(' ');
-  }
-
-  walk(entry);
-
-  return parts.join('').replace(/\s+/g, ' ').trim();
+  const short = getSearchText(entry.querySelector('.short'));
+  const long  = getSearchText(entry.querySelector('.long'));
+  return short + (long ? ' ' + long : '');
 }
 
 // Drop-in replacement for your handleSearch()
@@ -989,7 +972,7 @@ if ("serviceWorker" in navigator) {
 <main id="views">
     <section id="page-about" class="page">
     """ + ABOUT + """
-        <p class="small">This edition was created on {run_date}.
+        <p>This edition was created on {run_date}.
     </section>
     <section id="page-credits" class="page">
     """ + CREDITS + """
