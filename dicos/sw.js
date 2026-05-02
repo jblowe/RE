@@ -1,13 +1,13 @@
-const CACHE = "tamang-dictionary-v1";
+const CACHE = "tamang-dictionary-v3";
 
 const PRECACHE = [
-  "/TamangDictionary.html",
-  "/manifest.json",
-  "/sw.js",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
-  "/icons/icon-512-maskable.png",
-  "/icons/apple-touch-icon-180.png"
+  "/tmg/TamangDictionary.html",
+  "/tmg/manifest.json",
+  "/tmg/sw.js",
+  "/tmg/icons/icon-192.png",
+  "/tmg/icons/icon-512.png",
+  "/tmg/icons/icon-512-maskable.png",
+  "/tmg/icons/apple-touch-icon-180.png"
 ];
 
 self.addEventListener("install", event => {
