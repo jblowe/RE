@@ -44,7 +44,8 @@ def esc(s):
     # s = escape(s, quote=True)
     s = unicodedata.normalize('NFC', s)
     # Replace COMBINING CANDRABINDU (U+0310) with COMBINING DOT ABOVE (U+0307)
-    return s.replace("\u0310", "\u0307")
+    #return s.replace("\u0310", "\u0307")
+    return s
 
 
 def render_special(s):
@@ -605,33 +606,42 @@ const MAX_RESULTS = 1500;     // perf guard for very small terms
 // ---- Utilities ----
 function escRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
-// Build one regex per term with WHOLE-WORD matching.
-// Uses Unicode letter/mark/number classes when available; falls back to \b.
+// Build one regex per term.
+// We generate:
+//  - searchRx: whole-word-ish match without lookbehind (Safari-safe) using Unicode properties when available
+//  - hiRx: plain term match for highlighting (keeps existing highlight behavior reliable)
 function buildTermRegexes(query){
-  const terms = query.trim().split(/\s+/).filter(t => t.length >= MIN_TERM_LEN);
-  if (!terms.length) return [];
+  const raw = (query || '').trim();
+  // Treat the entire query as a single phrase (do NOT split into separate terms).
+  // Convert runs of whitespace in the query into a flexible whitespace matcher.
+  const tokens = raw.split(/\s+/).filter(Boolean);
+  const core = tokens.map(t => escRegex(t)).join('\\s+');
 
-  // robust "word" boundary = not (Letter|Mark|Number) on each side
-  const before = '(?<![\\p{L}\\p{M}\\p{Nd}])';
-  const after  = '(?![\\p{L}\\p{M}\\p{Nd}])';
+  if (!core || core.replace(/\\s\+/g, '').length < MIN_TERM_LEN) return [];
 
-  const out = [];
-  for (const term of terms){
-    const core = escRegex(term);
-    try {
-      out.push(new RegExp(`${before}${core}${after}`, 'giu'));
-    } catch (e) {
-      out.push(new RegExp(`\\b${core}\\b`, 'gi'));
-    }
+  // Whole-phrase, whole-word boundaries (Unicode-aware when possible; no lookbehind).
+  // We keep a capturing group for the phrase so highlighting can wrap only the phrase,
+  // not the boundary character.
+  let searchRx, hiRx;
+  try {
+    const pat = `(^|[^\\p{L}\\p{M}\\p{Nd}])(${core})(?=$|[^\\p{L}\\p{M}\\p{Nd}])`;
+    searchRx = new RegExp(pat, 'iu');
+    hiRx     = new RegExp(pat, 'giu');
+  } catch (e) {
+    const pat = `(^|[^A-Za-z0-9_])(${core})(?=$|[^A-Za-z0-9_])`;
+    searchRx = new RegExp(pat, 'i');
+    hiRx     = new RegExp(pat, 'gi');
   }
-  return out;
+
+  return [{ searchRx, hiRx }];
 }
 
-// AND/OR evaluation against plain text
-function textIncludesByMode(text, regexes){
-  if (!regexes.length) return false;
-  if (KEYWORD_MODE === 'OR') return regexes.some(rx => { rx.lastIndex = 0; return rx.test(text); });
-  return regexes.every(rx => { rx.lastIndex = 0; return rx.test(text); }); // AND
+
+// AND/OR evaluation against plain text (uses searchRx only)
+function textIncludesByMode(text, rxObjs){
+  if (!rxObjs.length) return false;
+  if (KEYWORD_MODE === 'OR') return rxObjs.some(o => o.searchRx.test(text));
+  return rxObjs.every(o => o.searchRx.test(text));
 }
 
 // Remove previous highlights
@@ -651,14 +661,37 @@ function highlightNode(node, rx){
   const frag = document.createDocumentFragment();
 
   while ((m = rx.exec(txt))){
-    if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
-    const mark = document.createElement('mark'); mark.className = 'hl';
-    mark.textContent = m[0];
-    frag.appendChild(mark);
-    last = m.index + m[0].length;
-    if (rx.lastIndex === m.index) rx.lastIndex++;     // safety
+    // Two possible shapes:
+    //  1) Unicode-aware: m[0] is the match we want to highlight.
+    //  2) Fallback boundary: m[1] is the delimiter (or ''), m[2] is the term to highlight.
+    if (m.length >= 3 && typeof m[2] === 'string'){
+      const prefixLen = (m[1] || '').length;
+      const termText = m[2];
+      const termStart = m.index + prefixLen;
+
+      if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+      if (prefixLen) frag.appendChild(document.createTextNode(txt.slice(m.index, termStart)));
+
+      const mark = document.createElement('mark'); mark.className = 'hl';
+      mark.textContent = termText;
+      frag.appendChild(mark);
+
+      last = termStart + termText.length;
+    } else {
+      const matchText = m[0] || '';
+      if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+
+      const mark = document.createElement('mark'); mark.className = 'hl';
+      mark.textContent = matchText;
+      frag.appendChild(mark);
+
+      last = m.index + matchText.length;
+    }
+
+    // safety against zero-length progress
+    if (rx.lastIndex === m.index) rx.lastIndex++;
     found = true;
-    if (++count > MAX_RESULTS) break;                 // perf guard
+    if (++count > MAX_RESULTS) break;
   }
   if (!found) return;
   if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
@@ -690,6 +723,45 @@ function highlightInElementMulti(el, regexes){
 }
 
 // =======================
+
+function entrySearchText(entry){
+  // Build a stable searchable string from a .entry element.
+  // We must include text that may be hidden via CSS (so NOT innerText-only),
+  // and we must prevent "glued" tokens across tag boundaries by inserting spaces
+  // around common block/break elements.
+  if (!entry) return '';
+
+  const parts = [];
+  const BLOCKY = new Set([
+    'DIV','P','LI','UL','OL','DL','DT','DD',
+    'TABLE','THEAD','TBODY','TFOOT','TR','TD','TH',
+    'SECTION','ARTICLE','HEADER','FOOTER','ASIDE','NAV',
+    'H1','H2','H3','H4','H5','H6','PRE','QUOTE','BLOCKQUOTE'
+  ]);
+
+  function walk(node){
+    if (!node) return;
+    if (node.nodeType === Node.TEXT_NODE){
+      // Keep text as-is; we normalize whitespace at the end.
+      parts.push(node.nodeValue || '');
+      return;
+    }
+    if (node.nodeType !== Node.ELEMENT_NODE) return;
+
+    const tag = (node.tagName || '').toUpperCase();
+    const isBreak = (tag === 'BR' || tag === 'HR');
+    const isBlock = BLOCKY.has(tag);
+
+    if (isBreak || isBlock) parts.push(' ');
+    for (const child of node.childNodes) walk(child);
+    if (isBreak || isBlock) parts.push(' ');
+  }
+
+  walk(entry);
+
+  return parts.join('').replace(/\s+/g, ' ').trim();
+}
+
 // Drop-in replacement for your handleSearch()
 // =======================
 function handleSearch(input){
@@ -715,15 +787,15 @@ function handleSearch(input){
 
   let appended = 0;
   document.querySelectorAll('.entry').forEach(entry => {
-    const shortArea = entry.querySelector('.short');
-    const shortText = shortArea ? (shortArea.textContent || '') : '';
-    if (textIncludesByMode(shortText, regexes)){
+    const hay = entrySearchText(entry);
+    if (textIncludesByMode(hay, regexes)){
       const clone = entry.cloneNode(true);
       clone.querySelectorAll('[id]').forEach(n => n.removeAttribute('id'));
-      clone.querySelectorAll('.long, .mode-long').forEach(n => n.style.display = 'none');
+      // In search results, always show any hidden/long content so highlights are visible.
+      clone.querySelectorAll('.long, .mode-long').forEach(n => n.style.display = 'block');
+      clone.classList.add('expanded');
       resultsDiv.appendChild(clone);
-      const shortClone = clone.querySelector('.short');
-      if (shortClone) highlightInElementMulti(shortClone, regexes);
+      highlightInElementMulti(clone, regexes.map(o => o.hiRx));
       if (++appended > MAX_RESULTS){ /* optional: show a cap notice */ }
     }
   });
