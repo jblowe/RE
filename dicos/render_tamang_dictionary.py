@@ -501,9 +501,9 @@ def create_html():
     STYLE = r"""
 :root { --font-sans: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
 html, body { height: 100%; }
-body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-rows: auto 1fr; height: 100vh; overflow: hidden; }
+body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-rows: auto 1fr; height: 100vh; height: 100dvh; overflow: hidden; }
 .fixed-topbar { position: relative; z-index: 1000; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.06); overflow-x: hidden; width: 100%; overflow: visible; } 
-#views { padding-top: 4px ; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; }
+#views { padding-top: 4px; padding-bottom: env(safe-area-inset-bottom, 0px); min-height: 0; overflow: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 #views > * { display: none !important; }
 .small-caps { font-variant-caps: small-caps; font-size: .7rem; }
 .small { font-size: .7rem; }
@@ -532,7 +532,9 @@ body { font-family: var(--font-sans); margin: 0; display: grid; grid-template-ro
  .header .page-links a { display: block; color: #111; text-decoration: none; padding: .5rem .75rem; border-radius: .375rem; }
  .header .page-links a:hover { background: #f2f2f2; }
   .to-dico { display: block; }
- #menu-toggle:checked ~ .page-links { display: block; } }
+ #menu-toggle:checked ~ .page-links { display: block; }
+ table { font-size: .72rem; }
+ td, th { word-break: break-word; hyphens: auto; } }
 /* Search + Letter Nav */
 .searchnav { display: none; background: #fff; }
 .searchbar { display: flex; gap: .5rem; align-items: center; padding: .4rem .75rem; }
