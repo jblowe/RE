@@ -298,7 +298,7 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
 
     isolates = ET.SubElement(root, 'isolates')
     if hasattr(reconstruction, 'isolates_dict'):
-        serialize_isolates_dict(reconstruction.isolates_dict, isolates)
+        serialize_isolates_dict(reconstruction.isolates_dict, isolates, reconstruction)
     else:
         serialize_isolates_and_failures(reconstruction.isolates, isolates, 'isolates')
 
@@ -541,8 +541,47 @@ def serialize_isolates_and_failures(re_items, re_element, item_name):
     return
 
 
-def serialize_isolates_dict(isolates_dict, re_element):
-    """Serialize isolates with pfm/rcn from the dict returned by extract_isolates."""
+def serialize_isolates_dict(isolates_dict, re_element, reconstruction=None):
+    """Serialize isolates with all reconstructions and structured reason annotations.
+
+    Each reconstruction is emitted as a <recon> child:
+      <recon><pfm>…</pfm><rcn>…</rcn></recon>   (one per distinct pfm/rcn pair)
+
+    Reason elements:
+      <matched_mel id="mN" glosses="gloss1, gloss2"/>
+          One element per matched MEL.  Absent when no MEL matched ("No matching MEL").
+      <in_set num="N" pfm="…" rcn="…" melid="mN" mel="gloss1, gloss2"/>
+          One element per real cognate set that shares a reconstruction with this
+          isolate.  Absent when no set shares a reconstruction ("No matching set").
+
+    Derived display logic in XSLT (from presence/absence of the above):
+      No matching MEL       no <matched_mel> children
+      No matching set       no <in_set> children
+      Found in set          one or more <in_set> elements (with hover summary)
+      Matched a MEL         one or more <matched_mel> elements (with hover glosses)
+      Excluded by semantics both <in_set> and <matched_mel> present
+    """
+    # Build pfm-glyphs → list of set-info dicts, in the same sort order that
+    # render_sets uses when emitting <id> values, so set numbers match the output.
+    pfm_to_sets: dict[str, list[dict]] = collections.defaultdict(list)
+    if reconstruction is not None and hasattr(reconstruction, 'forms'):
+        uniques: dict = collections.defaultdict(list)
+        for form in sorted(reconstruction.forms,
+                           key=lambda f: RE.correspondences_as_ids(f.correspondences)):
+            uniques[form.supporting_forms].append(form)
+        sorted_items = sorted(
+            uniques.items(),
+            key=lambda x: RE.correspondences_as_ids(x[1][0].correspondences))
+        for set_num, (_, pfs) in enumerate(sorted_items, 1):
+            for pf in pfs:
+                pfm_to_sets[pf.glyphs].append({
+                    'num':   str(set_num),
+                    'pfm':   pf.glyphs,
+                    'rcn':   RE.correspondences_as_ids(pf.correspondences).strip(),
+                    'melid': pf.mel.id if pf.mel and pf.mel.glosses else '',
+                    'mel':   ', '.join(pf.mel.glosses) if pf.mel and pf.mel.glosses else '',
+                })
+
     ET.SubElement(re_element, 'createdat').text = run_date
     print(f'number of "isolates" {len(isolates_dict)}')
     for number, (form, proto_forms) in enumerate(
@@ -560,14 +599,42 @@ def serialize_isolates_dict(isolates_dict, re_element):
             ET.SubElement(rfx, 'gl').text = form.gloss
         except Exception:
             ET.SubElement(rfx, 'gl').text = 'missing'
-        if proto_forms:
-            pf = proto_forms[0]
-            ET.SubElement(rfx, 'pfm').text = pf.glyphs
-            ET.SubElement(rfx, 'rcn').text = RE.correspondences_as_ids(
-                pf.correspondences).strip()
-        reason = getattr(form, '_isolate_reason', '')
-        if reason:
-            ET.SubElement(rfx, 'reason').text = reason
+
+        # All reconstructions — deduplicated by (pfm, rcn) pair to avoid
+        # emitting the same reconstruction twice when the same correspondences
+        # appear under different MELs in singleton_support.
+        seen_recons: dict[tuple, None] = {}
+        for pf in proto_forms:
+            rcn_str = RE.correspondences_as_ids(pf.correspondences).strip()
+            key = (pf.glyphs, rcn_str)
+            if key not in seen_recons:
+                seen_recons[key] = None
+                recon_el = ET.SubElement(rfx, 'recon')
+                ET.SubElement(recon_el, 'pfm').text = pf.glyphs
+                ET.SubElement(recon_el, 'rcn').text = rcn_str
+
+        # Reason: Matched a MEL — deduplicated by MEL id
+        seen_mel_ids: dict[str, None] = {}
+        for pf in proto_forms:
+            if pf.mel and pf.mel.glosses and pf.mel.id not in seen_mel_ids:
+                seen_mel_ids[pf.mel.id] = None
+                mel_el = ET.SubElement(rfx, 'matched_mel')
+                mel_el.set('id', pf.mel.id)
+                mel_el.set('glosses', ', '.join(pf.mel.glosses))
+
+        # Reason: Found in set — one <in_set> per real cognate set that shares
+        # a reconstruction with this isolate; deduplicated by set number.
+        seen_set_nums: dict[str, None] = {}
+        for pf in proto_forms:
+            for info in pfm_to_sets.get(pf.glyphs, []):
+                if info['num'] not in seen_set_nums:
+                    seen_set_nums[info['num']] = None
+                    in_el = ET.SubElement(rfx, 'in_set')
+                    in_el.set('num',   info['num'])
+                    in_el.set('pfm',   info['pfm'])
+                    in_el.set('rcn',   info['rcn'])
+                    in_el.set('melid', info['melid'])
+                    in_el.set('mel',   info['mel'])
 
 
 def serialize_fuzzy_coverage(fuzzy_filename, fuzzy_usage, output_filename):

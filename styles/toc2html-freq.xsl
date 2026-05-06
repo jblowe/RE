@@ -3,13 +3,15 @@
 
 <xsl:output method="html" indent="yes" encoding="utf-8"/>
 
-<!-- Reusable named template: compute background-color style for a freq value -->
+<!-- Reusable named template: compute style string for a freq value.
+     Always emits the padding so every seg span has consistent spacing;
+     adds a background/color only for low frequencies. -->
 <xsl:template name="freq-style">
   <xsl:param name="freq"/>
   <xsl:choose>
-    <xsl:when test="number($freq) = 0">background-color:#dc3545;color:white;</xsl:when>
-    <xsl:when test="number($freq) = 1">background-color:#f8d7da;</xsl:when>
-    <xsl:otherwise></xsl:otherwise>
+    <xsl:when test="number($freq) = 0">padding:0 3px;background-color:#dc3545;color:white;</xsl:when>
+    <xsl:when test="number($freq) = 1">padding:0 3px;background-color:#f8d7da;</xsl:when>
+    <xsl:otherwise>padding:0 3px;</xsl:otherwise>
   </xsl:choose>
 </xsl:template>
 
@@ -96,20 +98,21 @@
 
             <!-- Dialect cells: iterate over the CANONICAL column list so that
                  missing <modern> elements produce an empty cell in the right
-                 column rather than shifting subsequent cells left. -->
+                 column rather than shifting subsequent cells left.
+                 Each <seg> is wrapped in a <span> coloured by its own @freq
+                 so individual values can be highlighted independently. -->
             <xsl:variable name="this-corr" select="."/>
             <xsl:for-each select="../corr[1]/modern">
               <xsl:variable name="d"    select="@dialecte"/>
               <xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
-              <xsl:variable name="cell-style">
-                <xsl:call-template name="freq-style">
-                  <xsl:with-param name="freq" select="$cell/@freq"/>
-                </xsl:call-template>
-              </xsl:variable>
-              <td style="{$cell-style}">
+              <td>
                 <xsl:for-each select="$cell/seg">
-                  <xsl:if test="@statut='doute'">=</xsl:if>
-                  <xsl:value-of select="."/>
+                  <xsl:variable name="seg-style">
+                    <xsl:call-template name="freq-style">
+                      <xsl:with-param name="freq" select="@freq"/>
+                    </xsl:call-template>
+                  </xsl:variable>
+                  <span style="{$seg-style}"><xsl:if test="@statut='doute'">=</xsl:if><xsl:value-of select="."/></span>
                   <xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
                 </xsl:for-each>
               </td>
