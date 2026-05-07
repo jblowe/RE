@@ -1662,7 +1662,8 @@ class REWindow(Gtk.Window):
             self.failed_parses_widget.populate(statistics.failed_parses)
             self.correspondence_index_widget.populate(statistics.correspondence_index, statistics.rule_index)
             self.lexicon_index_widget.populate(proto_lexicon)
-            if self.last_proto_lexicon:
+            if (self.last_proto_lexicon and
+                    self.last_proto_lexicon.language == proto_lexicon.language):
                 (sets_lost, sets_gained) = RE.compare_proto_lexicons_modulo_details(
                     self.last_proto_lexicon,
                     proto_lexicon)
@@ -1782,7 +1783,6 @@ class REWindow(Gtk.Window):
     def open_from_settings(self, settings):
         self.on_disk_lexicons = read.read_attested_lexicons(settings)
         self.settings = settings
-        self.last_proto_lexicon = None   # reset diff baseline when project changes
         self.load(self.on_disk_lexicons,
                   RE.parameter_tree_from_settings(settings))
 
