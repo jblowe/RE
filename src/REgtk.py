@@ -1492,11 +1492,11 @@ class StatusBar(Gtk.Box):
         screen = Gdk.Screen.get_default()
         Gtk.StyleContext.add_provider_for_screen(screen, style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
-        # Left-aligned label
-        self.message_label = Gtk.Label(label="No project loaded.")
-        self.message_label.set_halign(Gtk.Align.START)
-        self.message_label.set_hexpand(True)  # take all space
-        self.pack_start(self.message_label, True, True, 0)
+        # Left-aligned project context label (persistent)
+        self.project_label = Gtk.Label(label="No project loaded.")
+        self.project_label.set_halign(Gtk.Align.START)
+        self.project_label.set_hexpand(True)
+        self.pack_start(self.project_label, True, True, 0)
 
         # Right-aligned dirty flag
         self.dirty_label = Gtk.Label(label="")
@@ -1506,8 +1506,16 @@ class StatusBar(Gtk.Box):
         self.show_all()
         self.dirtied = set()
 
+    def set_project_context(self, project, recon, mel, fuzzy):
+        """Set the persistent project-context line in the status bar."""
+        def fmt(val):
+            return val if val else '—'
+        self.project_label.set_text(
+            f'project: {fmt(project)}    ToC: {fmt(recon)}    MEL: {fmt(mel)}    Fuzzy: {fmt(fuzzy)}'
+        )
+
     def set_message(self, text):
-        self.message_label.set_text(text)
+        pass  # transient messages removed; callers retained for compatibility
 
     def add_dirty(self, thing):
         self.dirtied.add(thing)
@@ -1818,7 +1826,10 @@ class REWindow(Gtk.Window):
         dummy.fuzzy = selection['fuzzy']
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project])
-        self.status_bar.set_message(f'Opened project {project} from projects directory.')
+        self.status_bar.set_project_context(project,
+                                             selection['recon'],
+                                             selection['mel'],
+                                             selection['fuzzy'])
         self.open_from_settings(settings)
 
     def create_checkpoint(self, widget):
