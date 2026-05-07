@@ -1506,13 +1506,14 @@ class StatusBar(Gtk.Box):
         self.show_all()
         self.dirtied = set()
 
-    def set_project_context(self, project, recon, mel, fuzzy):
+    def set_project_context(self, project, recon, mel, fuzzy, upstream=None):
         """Set the persistent project-context line in the status bar."""
         def fmt(val):
             return val if val else '—'
-        self.project_label.set_text(
-            f'project: {fmt(project)}    ToC: {fmt(recon)}    MEL: {fmt(mel)}    Fuzzy: {fmt(fuzzy)}'
-        )
+        text = f'project: {fmt(project)}    ToC: {fmt(recon)}    MEL: {fmt(mel)}    Fuzzy: {fmt(fuzzy)}'
+        if upstream:
+            text += f'    upstream: {upstream}'
+        self.project_label.set_text(text)
 
     def set_message(self, text):
         pass  # transient messages removed; callers retained for compatibility
@@ -1829,7 +1830,8 @@ class REWindow(Gtk.Window):
         self.status_bar.set_project_context(project,
                                              selection['recon'],
                                              selection['mel'],
-                                             selection['fuzzy'])
+                                             selection['fuzzy'],
+                                             selection['upstream'])
         self.open_from_settings(settings)
 
     def create_checkpoint(self, widget):
