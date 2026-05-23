@@ -158,26 +158,6 @@ class Lexicon:
     # which from-strings fired (keyed by (language, from_string)).
     def fuzzied_forms(self, fuzzy):
         usage = collections.Counter()
-        def fuzzy_string(mapping, string):
-            if not string:
-                return ''
-            new_string = []
-            while string != '':
-                (longest_candidate, its_target, its_len) = (None, None, 0)
-                # Partition initials into most specific rules to be
-                # chosen. The longer the initial, the more priority it
-                # gets.
-                for (initial, target) in mapping.items():
-                    if string.startswith(initial) and len(initial) > its_len:
-                        (longest_candidate, its_target, its_len) = (initial, target, len(initial))
-                if longest_candidate:
-                    new_string.append(its_target)
-                    usage[(self.language, longest_candidate)] += 1
-                    string = string[its_len:]
-                else:
-                    new_string.append(string[0])
-                    string = string[1:]
-            return ''.join(new_string)
         specific_mapping = {representative: target
                             for ((language1, representative), target) in fuzzy.items()
                             if self.language == language1}
@@ -188,6 +168,20 @@ class Lexicon:
             if fuzzied_glyphs != form.glyphs:
                 fuzzied_forms.append(FuzzyForm(fuzzied_glyphs, form))
                 fuzzied_count += 1
+                # Track which rules fired for this form.
+                # Re-walk the string to record usage (fuzzy_string
+                # itself doesn't track because it has no language context).
+                s = form.glyphs
+                while s:
+                    best_initial, best_len = None, 0
+                    for initial in specific_mapping:
+                        if s.startswith(initial) and len(initial) > best_len:
+                            best_initial, best_len = initial, len(initial)
+                    if best_initial:
+                        usage[(self.language, best_initial)] += 1
+                        s = s[best_len:]
+                    else:
+                        s = s[1:]
         return fuzzied_forms, fuzzied_count, usage
 
 # a 'quirk' is the internal name by which we refer to 'exceptions'
@@ -249,10 +243,31 @@ def read_context_from_string(string):
                   [y.strip() for y in x.split(',')]
                   for x in string.replace('/', '').split('_'))
 
+# Apply fuzzy substitution rules (longest-match, greedy) to a string.
+# mapping: dict of {from_string: to_string}.  No usage tracking.
+def fuzzy_string(mapping, string):
+    if not string:
+        return ''
+    new_string = []
+    while string:
+        best_initial, best_target, best_len = None, None, 0
+        for initial, target in mapping.items():
+            if string.startswith(initial) and len(initial) > best_len:
+                best_initial, best_target, best_len = initial, target, len(initial)
+        if best_initial:
+            new_string.append(best_target)
+            string = string[best_len:]
+        else:
+            new_string.append(string[0])
+            string = string[1:]
+    return ''.join(new_string)
+
 # build a map from tokens to lists of correspondences containing the
-# token key.
+# token key.  When fuzzy_mapping is provided, fuzzied variants of each
+# daughter token are also indexed (proto column is never touched here
+# because accessor only reads daughter_forms).
 # also return all possible token lengths, sorted
-def partition_correspondences(correspondences, accessor):
+def partition_correspondences(correspondences, accessor, fuzzy_mapping=None):
     partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
@@ -260,9 +275,21 @@ def partition_correspondences(correspondences, accessor):
             # zero rule.
             if token == '':
                 break
-            partitions[token].append(c)
-    return partitions, sorted(list(set.union(*(set(map(len, accessor(c)))
-                                               for c in correspondences))))
+            if fuzzy_mapping:
+                fuzzied = fuzzy_string(fuzzy_mapping, token)
+                if fuzzied != token and fuzzied != '':
+                    # Token changed by fuzzying: index only under the fuzzied key.
+                    partitions[fuzzied].append(c)
+                else:
+                    # Token unchanged: use original.
+                    partitions[token].append(c)
+            else:
+                partitions[token].append(c)
+    # Derive lengths from all actual partition keys so fuzzied variants
+    # with different lengths are also covered.
+    non_empty = [k for k in partitions if k != '']
+    token_lengths = sorted(set(len(k) for k in non_empty)) if non_empty else []
+    return partitions, token_lengths
 
 # imperative interface
 class TableOfCorrespondences:
@@ -762,14 +789,23 @@ def make_apply_rules(parameters, language):
         return lambda form: [(form, [])]
 
 # tokenize an input string and return the set of all parses
-# which also conform to the syllable canon
-def make_tokenizer(parameters, accessor, next_map, blocked_given_map):
+# which also conform to the syllable canon.
+# language: when supplied and parameters.fuzzy is set, fuzzied variants of
+# ToC daughter tokens are also indexed in rule_map (proto column is never
+# touched because accessor only reads daughter_forms).
+def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=None):
     regex = parameters.syllable_canon.regex
     supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
+    fuzzy_mapping = None
+    if language and parameters.fuzzy:
+        fuzzy_mapping = {rep: target
+                         for ((lang, rep), target) in parameters.fuzzy.items()
+                         if lang == language}
     rule_map, token_lengths = partition_correspondences(
         correspondences,
-        accessor)
+        accessor,
+        fuzzy_mapping)
 
     @lru_cache(maxsize=None)
     def partial_regex_match(syllable_parse):
@@ -887,7 +923,8 @@ def project_back(lexicons, parameters, statistics):
             continue
         count_of_parses = 0
         count_of_no_parses = 0
-        tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map)
+        tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map,
+                                  language=lexicon.language)
         apply_rules = make_apply_rules(parameters, lexicon.language)
 
         # Build fuzzy-pairing map: id(original_form) → FuzzyForm.
@@ -929,33 +966,23 @@ def project_back(lexicons, parameters, statistics):
             if not form.glyphs or form.glyphs.strip() in ('', '?'):
                 continue
             statistics.add_debug_note(f'!Parsing {form}...')
-            orig_parses = get_parses(form.glyphs)
 
             fuzzied = fuzzied_map.get(id(form))
             if fuzzied is not None:
+                # Form was changed by fuzzying: use only the fuzzied form.
+                # The FuzzyForm retains a reference to the original for rendering.
                 fuzz_parses = get_parses(fuzzied.glyphs)
-                if orig_parses and fuzz_parses:
-                    # Both succeed: keep both and log it.
-                    statistics.add_note(
-                        f'{lexicon.language}: both original and fuzzied parsed: '
-                        f'{form.id} {form.gloss!r} '
-                        f'({form.glyphs!r} \u2192 {fuzzied.glyphs!r})')
-                    commit_parses(form, orig_parses)
-                    commit_parses(fuzzied, fuzz_parses)
-                elif orig_parses:
-                    # Only original parsed; fuzzied silently discarded.
-                    commit_parses(form, orig_parses)
-                elif fuzz_parses:
-                    # Only fuzzied parsed; original silently discarded (not a failure).
+                if fuzz_parses:
                     commit_parses(fuzzied, fuzz_parses)
                 else:
-                    # Neither parsed: original is a failure; attach the fuzzied
-                    # form so serialization can show both.
+                    # Fuzzied form failed to parse; attach it so rendering can
+                    # show both the original and fuzzied glyphs.
                     count_of_no_parses += 1
                     form.fuzzied = fuzzied
                     statistics.failed_parses.append(form)
             else:
                 # No fuzzied version: original behaviour.
+                orig_parses = get_parses(form.glyphs)
                 if orig_parses:
                     commit_parses(form, orig_parses)
                 else:
@@ -1012,15 +1039,27 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
     for reconstruction, support in projections.items():
         distinct_mels = collections.defaultdict(list)
         if mels:
+            unmatched = []  # forms with no MEL match when only_with_mel is True
             for supporting_form in support:
                 # stage0 forms also have meaning
                 if isinstance(supporting_form, (ModernForm, Stage0Form, AlternateForm)):
-                    for associated_mel in mel.associated_mels(associated_mels_table,
-                                                              supporting_form.gloss,
-                                                              only_with_mel):
-                        distinct_mels[associated_mel].append(supporting_form)
+                    matched = mel.associated_mels(associated_mels_table,
+                                                  supporting_form.gloss,
+                                                  only_with_mel)
+                    if matched:
+                        for associated_mel in matched:
+                            distinct_mels[associated_mel].append(supporting_form)
+                    else:
+                        # No MEL match (only_with_mel=True): hold for later so
+                        # homophones whose sibling glosses do match are kept.
+                        unmatched.append(supporting_form)
                 else:
                     distinct_mels[mel.default_mel].append(supporting_form)
+            # Add MEL-unmatched forms to every group that was created.
+            # If no groups exist the reconstruction has no MEL coverage at all
+            # and is correctly excluded.
+            for group in distinct_mels.values():
+                group.extend(unmatched)
         else:
             distinct_mels[mel.default_mel] = support
         for distinct_mel, support in distinct_mels.items():
