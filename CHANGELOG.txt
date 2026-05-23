@@ -1,0 +1,1110 @@
+CHANGELOG for RE2
+
+OK, it is not a *real* change log, but a list of changes resulting from git log
+sometimes with some human annotation after the fact.
+
+This is version 2.0.1-rc1
+Sat May 23 14:35:17 PDT 2026
+
+f78e681 (HEAD -> rev2, origin/rev2) if a form fuzzied, only use (and count) the fuzzied form; fuzzy ToC also; keep track of unmatched MELs for reporting
+f82fa43 render 'upstream' parameter, if any, in REgtk footer
+ceffc6e render project, toc, mel, fuzzy in footer in REgtk. get rid of existing message
+f42128c fix bug in rendering set diff in REgtk
+b9ad23f REwww now counts <seg>s properly in toC; Isolates rendering improved
+dfe5ca5 revise some python package requirements for REwww on Windows
+4a3f939 revise startrewww.sh -- was specific to mm's windows computer
+2b1b0eb minor formatting fixes for tamang dico guide page
+61d12f7 fix 5 minor formatting issues in tamang dico: space at bottom, hide navbar, fix search, font sizes
+79d32b6 revise tamang dico for correct paths, also extensive revisions to 'letter navbar'
+d369b3c revise tamang dico PWA app for correct paths
+408a0e2 tamang dico repairs: javascript tokenization for search, etc.
+eb749a6 add routes for 'fuzzy coverage' to REwww
+4928c0c minor reformatting of gloss displays in REwww
+54ef3b8 adjust .xsl for fuzzy rendering to include counts
+3086b22 minor reformatting of gloss displays in REwww
+8e4b256 add favicon.ico to REwww
+47ceab4 count usage of fuzzied elements (REwww displays them)
+6c751eb numerous revisions to REwww: formatting of results, adding context_match_type, etc.
+5bf68d9 revisions to MEL comparisons: case normalization, recordkeeping
+7c8a64a serialize.py now serializes counts of gloss matches in 'coverage' report
+2bd48aa add nfd function to utils
+0818384 add context_match_type parameter to read.py; revise handling of NFC and NFC codepoints
+3ad4bd7 add context_match_type parameter to RE.py
+eea19a2 add context_match_type parameter to REgtk
+a441670 revise counting of fuzzied forms; revise REwww 'compare' feature stats
+b2a9667 revisions to handle fuzzy forms better in REwww
+8318f39 revise RE.py to count fuzzy forms better
+700a7ec some additional gitignores: project.toml, runs.toml, etc.
+e23340a in REwww, render each lexicon in a separate pane under Lexicons
+cf7897c helper script cleanup.sh to clean up project directories
+be47f81 rename ToC for POLYNESIAN project
+82e4f8e REwww now puts its Run files into a runs/ directory in the project
+f5eac4b change the name of the windows installer to 'RE2.zip'
+230207e look-and-feel changes for REwww: formatting of isolates and failures, etc.
+e3527a2 (tag: 2.0.0, origin/main, origin/HEAD, main) Merge pull request #6 from jblowe/rev1
+54bbec6 the default projects.toml should have only the working public projects
+fdd7fa5 revise some css table styles in REwww
+e974075 have the re_settings saved by REwww and REgtk be TOML, not JSON
+6655074 add back logging of number of isolates, removed by the ai
+805bdef have REgtk and REwww remember the most recent settings
+1ec23f6 revise test harness, add 'make benchmark'; improve testPROJECT.sh
+19e6157 tweak windows installer: quiet extra window, resolve all dependencies via pacman
+e460a2e add the windows installer script for running the pipelines
+b575492 windows installer now runs 3 pipelines so that files exist for REwww and REgtk
+d0c0acb REwww now renders intermediate reconstructions correctly in rendering tabular sets
+fa80480 repair reading, writing, and counting of intermediate reconstructions
+e531d25 REwww needs to handle mesolanguages in sets
+ee12d43 revise some table formatting in .xsl styles in REwww
+5c61a5c revise some table formatting in 'compare' in REwww
+e1b64ab fix some html table rendering in REwww
+18ab0ba persist the list of .data.xml files used in a run in REwww
+3d1edfc sort the dropdown elements in the Projects pane of REwww
+6d7c672 eliminate non-working public projects; use pacman to install tomli-w
+0fef53d further revisions to windows installer, the ai is wavering
+7c98bc8 further revisions to windows installer: fix dependencies, default projects
+3ba1dc8 revise windows installer -- ai used a wrong directive
+c3dfb19 revise windows installer to include public projects
+0ca662e the ai thinks that we need different comment delimiters for this .iss file
+b60039d more fixes for windows installer: permissions, mysy2 version
+5878b8d force node.js 24 for windows installer
+ed3bcf3 add install builder for windows
+1fb50dd correct placeholder in 'upstream' in REgtk, also make upstream input field wider
+0882581 update short_name in Tamang dico PWA app
+7b4ab16 correct placeholder for 'upstream' in REwww
+437d504 REwww port now defaults to 3001
+d8abeb8 fix bug in 'compare' display in REwww
+caef9d5 Update README with corrections to interface descriptions
+5788cca improve .gitignore for projects, again. ai did not understand.
+3fdab4d improve .gitignore for projects
+9fb3c88 use correct set counts in REcli
+0fcc586 serialize 'spec' and 'context_match_type' into statistics.xml
+c5b15c0 improve 'run history' rendering and controls; fix rendering of fuzzy.xml
+a469790 revision to REwww to add a log/history feature and a 'compare runs' feature
+906726b minor revisions to stylesheets for REww to show isolates with rcn and pfm, stats, etc.
+e63993b count ? as empy in ToC cells, isolates now include pfm and rcn
+0af7dec show MEL file name on REwww web pages; include rcn and pfm in isolates
+a948834 revised LOLOLISH pipeline.sh for correct paths and new RE2 conventions
+203855a rename the "hand" MELs in the LOLOISH project
+5f01bcf revisions to 'tabular sets' in REwww; also tweaks to mel.py
+4a7b591 revised version of MEL for HMONGMIEN
+042d7c8 revisions to REwww for mel coverage, correspondence frequencies, etc.
+35dbba7 move KIRANTI out of public projects/
+7c0e41a revise .xsl stylesheet in light of mel 'strict' and 'multi' changes. And etc.
+4c65a3a always use 'multi' when outputing sets; also always use 'strict' if using a mel
+51d0704 revise mel - gloss comparison: handle various cases better
+33c14f3 'strict mels' is now the default, if MELs are used in REgtk
+55cc357 generate 'mel coverage' stats as part of all upstream runs in REcli
+d7a6f1a update comment only; no code change
+7921415 revise ToC stylesheets to be a bit tighter. and ... work correctly :-/
+2603239 asked the ai to refactor REwww a bit: make some smaller files
+8ad60b9 revise the README for REwww
+54ef2a2 rename DIS fuzzy file so RE2 can find it
+db6b157 report on use of corrs and corr rows for a run, fix sortable tables, etc.
+fd5adda incremental improvements to README.md for code (src/README.md)
+0df7efe revisions to .xsl REwww stylesheets to support sortable tables, etc.
+04a9489 revise about.html a bit
+efdb6ec incremental improvements to REwww banner and general UX
+80fa2aa the ai says that this change to load_hooks is needed in some environments
+49102f2 minor changes to rendering in .xsl stylesheets
+a8fadcd the ai believes it has fixed the problem with mels not appearing in sets sometimes
+e4f9d44 new Flask web app
+a0eb116 get rid of the REwww Bottle templates, etc.
+4b5e84c allow RE to read data.xml files with and without project prefix
+3d7a703 get rid of some superfluous code in projects.py
+9ea9fca revise REgtk for new regime
+8a55000 update the Makefile, for better testing
+5e4a222 add new TOML lib dependency to requirements.txt
+176d78e default projects.toml should only specify public projects
+e53aad5 refactor 'protolanguage' detection process in read.py
+8d44de5 minor revisions to testCSV2lexicon.sh, which checks conversion of lexicon .csv files to xml
+6e94322 simplify testPROJECT.sh script: it does not have to try so hard
+e76c7f7 experimental 'correspondence scripts' should leave context column blank
+a0dbe6b .gitignore now ignores HMONGMIEN generated files
+50ec11d add toml version of projects.py, and projects.toml
+e04b0b6 load_hooks needs to run before settings are set
+27d4d1b handle non-existent hooks properly in load_hooks.py
+2644be8 update pipeline.sh and hook.py for those projects using hooks
+226b17b fix typos on .csv version of LOLOISH NYI ToC
+0851300 add <protolanguage> element to demo file DIS.standard.correspondences.xml
+f8dfcfe rename ToCs for ROMANCE and SLAVIC, to conform to revised file naming convention
+1b0852e revise REcli to support projects.yaml and eliminiating parameters.xml
+3ae71e2 changes to low-level modules to support projects.yaml and eliminiating parameters.xml
+a7463a7 add a note about reconstructions generated; clarify corr. context parsing error msg
+0c37bce a minor bug that causes REcli to fail
+2bed1be these two small changes allow RE to run with certain data inconsistencies.
+5614d9e delete all *.parameters.xml
+82f34d4 files and code needed for 'PWA package' for Tamang dico
+f99a8a2 Merge branch 'main' of https://github.com/jblowe/RE
+158a032 remove banner logo, for now
+3f94ac0 Create TamangDrum_NepaliT_v2.svg
+38f30a4 Update tamang_guide.html
+4dd2660 make link to IPA and href to its mention in the text of the Guide for the tamang dico
+b29ec36 allow tamang dico logo to take up more space in the header
+e5a2e47 umpteenth iteration of a 'drum + ta' themed logo for the Tamang dictionary
+14a4534 enable 'single character' words in searching, add .svg logo option
+b574f63 add links to 'comment pages'
+5edb33e keyword search as written by ChatGPT
+968828e add copyright and cite statements; add links back in on info pages.
+f541832 updates of phone-dico comment files
+c09a78c Update tamang_about.html
+8f96d13 further refactoring of Tamang dico. almost only code reformatting
+018b70a tweaks to make 'hamburger' work on mobile devices
+d26f59e refinements to navigation and static content of Tamang dictionry
+2c24000 update 2 launch .bat files
+28fdab7 REgtk: Fix clicking in the index windows and fix column name.
+74e4284 REgtk: Commit work in progress lexicon index window.
+9baedeb REgtk: Add a way to import and export all the different things.
+b8fc6c9 RE: Fix reflexes computation.
+9effdc8 Merge branch 'main' of https://github.com/jblowe/RE
+ea0aca2 REgtk: Add a right-click action to filter sets by a specific form.
+ec551b0 Compute rule index as well and show it in REgtk.
+367458b Move row logic out of REgtk and share some with csv stuff.
+bae9a26 Fix missing time import.
+7573882 REgtk: Add a function to export csvs.
+226cd2f REgtk: Improve responsiveness of filtering.
+bcfa3d5 REgtk: Sort ID columns naturally.
+7a9de01 Fix rule application to not generate multiple forms.
+c2eb005 SLAVIC: Fix ocs yer quality for 'red'.
+96c596b SLAVIC: Fix rus data entry.
+8acd3c3 upload check.bat, which checks gtk config
+1409f0a Merge branch 'main' of https://github.com/jblowe/RE
+e883bab Merge pull request #4 from jblowe/tweaks4cli
+58f1511 gitignore venv-gtk3 everywhere
+6fe3c89 add venv-gtk3 and *.rechk to this .gitignore
+23551c3 Merge branch 'main' of https://github.com/jblowe/RE
+c0d7e2d make sure .idea is properly gitignored
+32e811b Fix lexicon serialization.
+d36bb44 Fix isolates handling.
+e401cfa REgtk: Fix updating of correspondence index filter.
+5c25591 SLAVIC: Fix syllable canon regex to disallow adjacent weak yers.
+78aea0e SLAVIC: Massively fixup BCS data.
+abbc629 SLAVIC: Remove Cyrillic transcription from BCS data.
+a5b2298 SLAVIC: Remove IPA from Polish data.
+b70bf4e SLAVIC: Fix up rest of czech data.
+a1d6f97 SLAVIC: massive fixup of russian data.
+9ae2397 RE: Fix set merging when rules interact with exceptions.
+ffc241a small tweaks for REcli
+d500361 revise REcli to support new 'isolates' and 'failures'. Also, fix 'coverage' feature
+83b84b1 small revision to mel.py to support 'coverage' feature
+4b255b4 make 'coverage' (mel measurement) feature work again
+f83b047 substantial refactoring to support serialization of 'isolates' and 'failures'
+e95f5f8 revise addngl.py to improve hw (and var, etc.) handling
+a578b1f small improvements to 'checkpoint rendering' in REwww
+ec28657 refactor styles that render sets; small changes to .gitignore for on-disk content.
+23db23a eliminate old-fashioned set compare in REcli upstream
+a290548 Merge branch 'main' of https://github.com/jblowe/RE
+8725ee5 Implement Panini's principle!
+ae6cc66 Merge branch 'main' of https://github.com/jblowe/RE
+1376a52 Fix left context matching under glyphs mode.
+767076c Implement set sorting by the order specified in the settings xml.
+4270589 REgtk: Truncate the isolates store to at most 10 forms per isolate.
+b1e81a6 RE: Ignore empty cells.
+79a167e RE: Read the entire ToC, not just the columns specified by upstream.
+86502f7 RE: Fix mesolanguage reconstruction.
+dc6e029 REgtk: Don't delete disabled rows when saving.
+7449b4f HMONGMIEN, POLYNESIAN: Fix relative dir path.
+88e0102 Remove fuzzy code from other projects.
+bdefa25 Remove fuzzy code from DIS.
+f7436cd tiny revisions to address bit rot in DIS ToC
+dc3f47a revisions to pipeline helper script (e.g. Lex2XML.pl), stedt mel creator
+213709e Merge branch 'main' of https://github.com/jblowe/RE
+c91fc53 RE: Compute original forms along with fuzzied forms.
+595ada1 RE: Compute original forms along with fuzzied forms.
+1d0f79f REgtk: Rename syllable type to slot.
+a30f66d RE: Add native support for fuzzy.
+e036453 REgtk: Remove duplicate code.
+aad4c8c REgtk: Make inserted rows enabled by default.
+da29267 RE: Teach how to print quirks.
+3516499 REgtk: Ensure quirks enabled by default.
+687d599 REgtk: Fix quirky forms and mel for real.
+4e518f7 REgtk: Add results count next to sets search bar.
+623f966 get rid of experiments. finally.
+7eb48df REgtk: Add enable/disable all buttons to Sheets themselves.
+fc3782c REgtk: Add a disableable rows mixin.
+922c085 REgtk: Right-click context menu for quirks and store gloss.
+3fc961f Fix REcli and REwww code for isolates.
+830d883 Fix lack of self
+b056e5d REgtk: Make fuzzy work
+102d664 Merge branch 'main' of https://github.com/jblowe/RE
+574cb31 REgtk: Add support for quirks.
+472d6dc Merge branch 'main' of https://github.com/jblowe/RE
+4265489 revise start scripts for Windoz
+21be7e5 REgtk: Make lexicon widget column resizable.
+3d01331 REgtk: Accidentally deleted tab-key-press-handler.
+257071d REgtk: Display correspondence index in a friendlier way.
+15e649b REgtk: Make everything searchable.
+31c821c REgtk: Fix scroll-to-form and sorting support in the SetsWidget.
+f91a2df REgtk: Add search bar label.
+dea9fa8 REgtk: Allow searching lexicon widgets.
+43d93bb REgtk: Add a Query-by-Example search widget for sets.
+df2b38f REgtk: Add hyperlinked IDs that jump to the correspondence table.
+ea71722 Merge pull request #3 from jblowe/quirks
+617e445 update commet
+9b8ea4e add 'alternative' to quirks
+010437b Delete unused function.
+3706487 REgtk: Display cognate set listing of forms in a sorted order.
+fcee12c we now have quirks (= 'exceptions')
+d483921 REgtk: Add an attestation count column to the sets widget.
+635f14a REgtk: Make isolates widget show the right thing.
+2f2bf69 REgtk: Refactor the diff view.
+460a7cc Merge pull request #2 from jblowe/int_fixes
+4b2bf6f interactive fixes and further experiment elimination fixes
+e7a2960 final revisions to remove 'experiments'
+c1d7d5b include page from crowley 1993 with polynesian data
+165e7f1 REgtk: Persist the diff window.
+364a545 Merge remote-tracking branch 'refs/remotes/origin/main'
+e8a7557 xml schema and xslt changes to support Exceptions
+92e4068 REgtk: Add a quick compare functionality.
+af7c10f REgtk: Avoid deprecated functions.
+cd4d3b0 REgtk: Move upstream button out of sets widget.
+6bd2b2e REgtk: Make Python exceptions throw into a graphical dialog.
+d5dd6ef Make modern forms and attested lexicons comparable.
+d671fb5 REgtk: Add a basic lexicon editor.
+5233dea REgtk: Read lexical data from widgets.
+c99df43 fixes to hook and pipeline for a couple projects so they work with REgtk, etc.
+23e4c9a tidy up KIRANTI directory a bit. my bad.
+9fd53e8 REgtk: Fix status bar reporting.
+3962081 REgtk: delete random code.
+0d0a2f0 REgtk: Hack in an isolates widget into the statistics pane.
+c96b500 REgtk: Make Entry's bigger.
+25388ae REgtk: Add a status bar that tells you when stuff has changed.
+0442a48 REGtk: Make the default location for checkpoints the project dir.
+6c3371e REgtk: Remove deprecated threading functions.
+3ae60cf add newline only
+838dd7f refine navigation in REwww a bit
+fff1524 revisions to windows .bat and bash install scripts
+c9ad018 minor refactoring to support operation on ms windows
+a7243b6 substantial refactoring of REwww in support of eventual editing, etc.
+7279802 revise .gitignore to ignore tamang dico intermediate files
+79c4276 README for the 'experiments'
+30fa0a4 revised kiranti parameters
+c78c299 original data spreadsheet for kiranti from gj
+5590d8d two experimental 'toc generation' programs, currently for Kiranti project
+dbd29b0 gtk: Add preliminary checkpoint feature.
+da42f46 gtk: Fix upstreaming without saving.
+e5512cc gtk: Redesign menu item actions and prototype checkpoints feature.
+91e2d6f eliminate <hwDial> subheadwords
+bf5a3c8 add counts and run date to About
+75b9a2b tamang pipeline now minifies output html
+48b6017 fix a few 'long' displays
+cc7992b refactor ordering of rewriting: <>, %|, $, etc.
+ae4dd91 omit empty 'long' elements, so chevrons work properly
+2bfc603 handle multiple occurrences of var
+828f6c3 fix ' <xxx>' and nepali w/in hw; handle dfbot, emp properly
+fd5a0c4 further revisions to windows regtk/rewww install script
+5142e87 install.sh needs to be executable
+e1e02bc initial version of bash script to install tgk dependencies in windows
+8435443 revise launch script for REgtk on windows -- no command line parameters
+5ff9494 fix deletion of <xxx>, handle %...| properly, spaces in var
+f2b78b4 gtk: Rework menu actions, opening projects, and zoom.
+6769da5 bcs: Split up two forms.
+e3551af gtk: Allow filtering correspondence index by supporting language.
+ea86ed5 gtk: Change the ContextMatchTypeEntry to a radio button group.
+fb29a0c OOP is back.
+330657e scn: Fix epsilon character.
+a86b7ad Deduplicate rule token lengths.
+0e47ff5 Don't use rules when there are none for a particular language.
+c6f1b4a Change match_consume to only need to match some context, not all.
+9ff7576 Allow for multiple possible rule outcomes.
+a11b685 further revisions color scheme for rendering mels
+35bc12f revise color scheme for rendering mels
+4f96f97 revisions to REwww: stylesheets, windows tweaks, etc.
+f518ebe Merge pull request #1 from jblowe/gtk-dialog-picker
+41a722a render tamang dico: initial work on making xrefs work
+5005767 handle 2 part var bands
+6ead2ec repair handling of tamang in df* bands and il, phr
+5a3429a repair handling of stuff in <>, restore chandrabindu
+96d3843 render tamang dictionary: handle nepali forms within tamang transcriptions
+5e0d8df further enhancements of tamang dico: handle subhw better; 'long' indicator; il rendering
+5ace5f4 chatgpt's revisions to launch-REgtk.bat
+9c20b9c can't have xml declaration when 'reconfiguring' output file
+35e721f startup script for windows REgtk
+83d294c addngl and xsltproc need to ensure unicode encoding on output
+99d1a33 gtk: Create dialog picker for projects and settings.
+f685089 handle var bands better. still not quite correct tho
+0d7fbd4 display context_match_type; tweak sc and context_match_type layout
+4ed623f minor look-and-feel refactoring of REwww
+e85e049 revision to tamang dictionary document production pipeline
+04ba58d render tamang dictionary now handles most of the bands in the original spec properly
+bf1588a further refactoring (and repair) for render tamang dico script
+ece543e revisions to tamang dico code: make 6 versions of html
+d79bd5d some documentation for getting REgtk running
+c02aa50 initial version of a 'web-editable' ToC
+538df85 eliminate redundate rendering of <emp> element in tamang dico
+6b23e90 add (hidden) context_match_type parm to DIS project for better set creation
+7e6eef7 revise 'raw string' in regex in mel.py
+0698070 'sniff' csv dialect for rendering .csv files in REwww
+e1bba19 2nd revision to KIRANTI project: new data table and parm, revise hook.py, revise ToC slightly
+9367300 'tamang dictionary pipeline' to produce all versions
+37cd5b8 use arrow instead of 'see' in cf elements
+8def080 tweak subentry css so the render closer to the left margin
+61e22d3 chatgpt rewrote and tidied the css section; further tidying after that
+e8415dc major refactoring of render tamang dico script: now xhtml, dramatic layout changes
+3648772 enhance Lex2XML.pl to handle hdr band, correct <sub>
+88a361b more refactoring of tamang dico rendering: handle <sub>, * (correctly), etc.
+0804cb5 more refactoring of tamang dico rendering: handle loans, tidy up nep+nag, chandrabindu, etc.
+87a807c more tamang dico refactoring: get rid of most <i>, handle /.*/
+a57914d further refactoring of tamang dictionary: ps in <mode>, rendering of sem, il, rec, etc.
+e22ea25 fix bug in mode handling in Lex2XML.pl
+ffbf6b1 reorg helper code for dicos and sgml a bit
+acbfd83 initial commit of xsl to render toc as editable
+5df66da further refactoring of render_tamang_dictionary.py: use <hdr> as divider, etc.
+4c0aa42 further refactoring to tamang dico renderer: generate more conventional html, homonyms, etc.
+dc104ec Restore current projects/VANUATU content after attaching prior history
+d748e33 Import history for projects/VANUATU from RE.dev (projects/VANUATU)
+b6a7306 Temp move projects/VANUATU aside to import prior history
+0ad01bc Restore current projects/SLAVIC content after attaching prior history
+85683aa Import history for projects/SLAVIC from RE.dev (projects/SLAVIC)
+3ec87e4 Temp move projects/SLAVIC aside to import prior history
+9a5d4f8 Restore current projects/ROMANCE content after attaching prior history
+ce7e0f2 Import history for projects/ROMANCE from RE.dev (projects/ROMANCE)
+7a4790b Temp move projects/ROMANCE aside to import prior history
+42d6f1b Restore current projects/POLYNESIAN content after attaching prior history
+af1e9a6 Import history for projects/POLYNESIAN from RE.dev (projects/POLYNESIAN)
+287aed3 Temp move projects/POLYNESIAN aside to import prior history
+e004b96 Restore current projects/LOLOISH content after attaching prior history
+b623bb9 Import history for projects/LOLOISH from RE.dev (projects/LOLOISH)
+dcaf758 Temp move projects/LOLOISH aside to import prior history
+b897573 Restore current projects/KIRANTI content after attaching prior history
+8713f3a Import history for projects/KIRANTI from RE.dev (projects/KIRANTI)
+5eb60d3 Temp move projects/KIRANTI aside to import prior history
+d5a4eef Restore current projects/HMONGMIEN content after attaching prior history
+fcae6e0 Import history for projects/HMONGMIEN from RE.dev (projects/HMONGMIEN)
+e5d74d1 Temp move projects/HMONGMIEN aside to import prior history
+d7a65ab Restore current projects/GERMANIC content after attaching prior history
+f0820b9 Import history for projects/GERMANIC from RE.dev (projects/GERMANIC)
+16ac5ed Temp move projects/GERMANIC aside to import prior history
+476958d Restore current projects/EXER content after attaching prior history
+9e20c89 Import history for projects/EXER from RE.dev (projects/EXER)
+61d0c66 Temp move projects/EXER aside to import prior history
+7a3b26f Restore current projects/DIS content after attaching prior history
+332687a Import history for projects/DIS from RE.dev (projects/DIS)
+54c35e3 Temp move projects/DIS aside to import prior history
+0ab268c Restore current styles content after attaching prior history
+41a4980 Import history for styles from RE.dev (styles)
+58466ba Temp move styles aside to import prior history
+9173b08 Restore current src content after attaching prior history
+22088fd Import history for src from RE.dev (src)
+3313b1e Temp move src aside to import prior history
+88ddc37 Restore current REwww content after attaching prior history
+0a7a2a4 Import history for REwww from RE.dev (REwww)
+0506630 Temp move REwww aside to import prior history
+1cda790 revise source description in hmong-mien dataset
+0538165 restore 'old' projects.tpl viewl, for now, so experiments can still be used.
+69de250 a little bit more documentation
+e889e21 initial commit of public RE code and data
+c38a574 revise .gitignore to ignore .idea and .DS_Store
+902d287 Initial commit
+99c88d4 remove 'adapter', for now
+9fda9c5 numerous revisions to REwww ('web app')
+a7c1ea2 Merge branch 'master' of https://github.com/jblowe/RE
+80a2a74 latest increments to tamang dictionary rendering code, after heated discussions w chatcpt
+ef739b4 Check-in basic KIRANTI data from Guillaume Jacques
+99d7feb Simplify.
+b69f3b3 Delete unused function.
+0a344e8 Don't recompute the same strings over and over again.
+3b72579 Change some statistics objects from sets to lists.
+83c4d34 Hoist check for needing mels out of inner loop.
+cb6943b Simplify extract_isolates.
+0bc8ce8 Sort the length of rules and correspondence tokens.
+e5d6245 Calculate used correspondence statistics from correspondence index.
+fd97058 Speed up create_sets
+7b7f444 Actually use the memo table to save on tokenizing redundantly.
+c6d2644 don't render cf band in long display in tamang dictionary
+03c6b01 chatgpt again substantially refactored render_tamang_dictionary.py
+7b15db0 chatgpt substantial refactored render_tamang_dictionary.py
+5ef78bc rename tamang dictionary renderer
+e7be061 further revisions to 'tamang dictionary generator'
+202f550 change REwww/utils.py to wutils.py; add cite for polynesian data
+f2026ce change REwww/utils.py to wutils.py; add cite for polynesian data
+1d3dc7c Improve correspondence index.
+5d17db9 code to support loading TGTM project into Solr search engine
+5d9371f python scripts to render Tamang and Limbu dictionaries as single-page HTML
+609f403 render <rule> elements if they exist in ToC
+0781bdf TGTM correspondences with two rules
+518a435 Fix correspondence index computation.
+0f5032d Allow mels to deal with Stage0Form.
+e0155ad Update slavic correspondences and data.
+0010896 gtk: Add very bad correspondence index widget.
+8990d2b gtk: Add stack switcher and render ailed parses.
+ca200df Compute a correspondence index on the statistics object.
+6434ae2 Don't apply rules if there are no rules.
+01b2b50 Don't add attempts if not debugging.
+fa537a9 gen: use indices instead of string slicing.
+7bdc7c3 Restore search_mels function.
+8dfd4c0 Cache regex partial match calls.
+c14600a Teach REGtk about fuzzy.
+55f57ec Speed up MEL compilation.
+0b01424 repair addngl.py (handling of var band)
+debb5c2 Check in Lex2XML.pl
+c54dc9f gtk: Fix labeled entries.
+14bc974 Set reasonable dpi scaling
+809b5fa Fix GTK
+fff6376 add new interactive_batch feature; other minor web refactoring
+4805df9 correct some typos in render_dictionary About and Credits 'pages'
+68c68ac substantial refactoring of render_dictionary.py: layout, about/credits, etc.
+b3a5bd9 code format only no code changes render_dictionary.py
+f38855d add search result highlighting to render_dictionary.py
+870a84c initial working version of render_dictionary.py
+734ad15 initial working version of render_dictionary.py
+e048b83 app.wsgi. needed for serving on web
+f5aed5c mostly changes to how MELs are handled and the 'web' interface
+507bfb2 mostly changes to how MELs are handled and the 'web' interface
+8d72d2f mostly changes to how MELs are handled and the 'web' interface
+4064aaf revise 'batch processes' for upstream in interactive mode
+4d9c30f minor refactoring of REwww
+a866227 revisions to rendering of lexicons in REwww
+0b454d1 REwww web site fixes: 'compare' now works again, etc.
+125a7c4 change api for load_hooks and everywhere it is used
+6e8351c change api for load_hooks and everywhere it is used
+90d01b4 change api for load_hooks and everywhere it is used
+6ca0bca change api for load_hooks and everywhere it is used
+2b81741 change api for load_hooks and everywhere it is used
+37c0a3f revise gloss analysis code ('list-all-glosses' is now ''analyze-glosses', etc. also small tweak to load_hooks
+339043f display xml:lang attribute in MELs (if it exists)
+cab8828 tweak HM tone correspondence to reduce noise
+9678994 REwww now displays better MEL coverage stats
+fe2c2f0 check_gloss_language.py is a q&d script to add language codes to glosses, etc. (uses wordnet)
+45c81ea xsltproc.py now outputs utf-8
+32d6203 Delete stray print.
+db88153 Initial 'Rules' support!
+2b9f0e9 Initial 'Rules' support!
+a276591 incremental improvements to xsl stylesheets
+0a766c8 revise TGTM and DIS projects to use addngl.py from src directory
+3fb65cf revise TGTM and DIS projects to use addngl.py from src directory
+377d803 revise ToC xsl stylesheet
+3391450 minor changes to XSLt rendering of various RE objects
+abd1178 minor changes to look-and-feel of REwww interface
+1a28ac4 revise mel.py to do a bit of 'magic' in gloss comparisons
+032f0de various minor changes, mostly to reporting activity
+a6f7a37 revise fuzzy handling again: it was in fact correct before
+e965fa3 correct typo
+e7047df 'compare' function needs to handle mesolanguage data properly
+e89d809 revise TGTM 'DIS' project pipeline with latest tweaks
+01ea9d6 minor revisions to most of the test scripts
+604405b csv_to_lexicon.py does not in fact use csv module
+7f711f1 script to convert csv format to Lexware
+93975c3 revisions to 'REwww' web interactive suite
+a22dafe minor revisions to xslt stylesheets for REwww
+136f250 replace obsolete addngl.pl with addngl.py, but keep the improved perl script
+aab0de1 use addngl.py in DIS project too
+6044e46 DIS project uses a small fixup script
+abc89ae update pipelines to use 'python3'
+271d7da update pipelines to use 'python3'
+68791c5 update pipelines to use 'python3'
+4e974ba update pipelines to use 'python3'
+491cb0f updating REwww 'infrastructure': bootstrap, jquery, etc.
+6f2bd3a REgtk: More menubar prototyping.
+6fbd58f REgtk: Prototype a menu bar with some unimplemented actions.
+f724359 REgtk: Improve syllable canon widget.
+841e919 Avoid calling regex matching on the same thing twice.
+1705c96 minor refactoring, the most notable being widening the window in REgtk
+9228b0f minor refactoring, the most notable being widening the window in REgtk
+387419f minor css changes to REwww
+fc9acfd Check in random notse files that were never checked in.
+ac88895 update requirements.txt again.
+bd74804 Bump bottle from 0.12.19 to 0.12.20 in /REwww
+7df5242 update requirements.txt
+8b5815e REgtk: update for constituent type
+ac2f06c Check-in Slavic data.
+b395f9a Bump bottle from 0.12.13 to 0.12.19 in /REwww
+2040bdc minor refactoring of top level code to improve look-and-feel
+21efb99 make interactive into 3 columns
+8452cba further refactoring of REwww, to slim down interactive results, etc.
+f9f1e97 further refactoring of REwww, to slim down interactive results, etc.
+13e86ec keep most recent stdout and stderr from 'runs' in experiment directories
+d6735fe revise REwww: cleanup project/experiment pages, file displays
+6a1e2f5 add revised bootstrap 'mdbootstrap' modules for treeview, etc.
+ba1dcd8 get rid of these two non-minimized bootstrap files
+93c41ae keep the output from various 'make' options
+2e42560 shorten filenames in experiment displays, etc.
+5dfed0d shorten filenames in experiment displays, etc.
+c21b248 output a .json version of graph. trim tablular version.
+6cd476c revisions to set comparison: both a table and a graph of set diffs are output
+39a3206 improve xsl formatting a bit; no code change
+9ffe2b9 display 'set overlaps' in REwww comparison displays
+9b452dc log some helpful information about XSLt transforms done by REwww
+20793c6 make all tables 'responsive' and compact ('table-sm')
+ba2d3bb make all tables 'responsive' and compact ('table-sm')
+d350827 further efforts to render set diffs, etc. in a useful way
+ea20725 further efforts to render set diffs, etc. in a useful way
+9a93486 only run addngl.sh once
+20801c5 fmtLex.xsl maintains <ngl> order
+cc75b2a revise addngl.pl to respect existing <ngl> elements
+64a7f24 add demo <althw> and <ngl> bands to GHA.dis
+6a5ca69 fmtLex.xsl needs to pass <althw> and <ngl> elements through
+b7d610e revise addngl.pl to respect existing <ngl> elements
+784f09c can now run 'compare' via the web interface
+9e16d47 another experiment in rendering set diffs
+1ce79ce another experiment in rendering set diffs
+d572545 reduce the number of semantic alternatives tested by 'make'
+fc11739 next iteration of 'set diff' for REwww
+49be2d4 next iteration of 'set diff' for REwww
+a1f8edb next iteration of 'set diff' for REwww
+ab4da2d make grid for Toc display in REwww
+9106ab0 use smaller headers in sets display in REwww
+94e96e7 next stage of 'set diff' capability
+5b3ba76 add fontawesome chars to set evaluation displays
+352982d render set diff info in *.evaluation.xml
+9edfd42 render set diff info in *.evaluation.xml
+b31f897 render set diff info in *.evaluation.xml
+23393a9 add these print statements for 'compare' back in again, so there is something output at the end
+bc477c8 refactor set serialization so that it can be used elsewhere
+878ce57 comment out more of the text-only output
+4cdb18d ToC and sets tables are now both sortable and sticky
+eee5c2d ToC and sets tables are now both sortable and sticky
+15fd174 testTGTM.sh now does a bit less
+84b00a2 more revisions to 'set diff' calculations
+15d46f0 enhancements to stats and comparison, and adding some plots
+50bd985 enhancements to stats and comparison, and adding some plots
+12483ec enhancements to stats and comparison, and adding some plots
+52b15ee only output 1st 100,000 lines to keys.csv
+ef6883f only_with_mels should be False for interactive mode
+821fd8a I think this really is the handle of the fuzzy file to use, not a literal
+e94b4d4 Vanuatu hook now: 1) guesses some 'sound classes' 2) generates multiple ToCs from *.correspondences.csv
+2c925b6 fix encoding problem with ligatures in these two correspondence files
+a2e6655 fix encoding problem with ligatures in this correspondence file
+7f1cbc5 fix encoding problem with ligatures in this correspondence file
+8410c88 fix line endings only in Vanuatu reconstruction file
+1da610e fix a few encoding problems in Vanuatu reconstruction file
+467c57f add some more stats to output: number of reflexes in sets, etc.
+459921f update instructions on how to regenerate the MELs from WordNet and CLICS
+2b4a6b7 somehow the Vanuatu CLICS and WordNet MELs got clobbered
+91ca4ab add a syll type column to the Vanuatu 'experimental' correspondences
+df41f36 output ALL supporting forms in correct order
+27f288a juggle the various Vanuatu correspondence tables and hook, so they can all be available
+51126e5 show 1st gloss of MEL in tabular display
+95e96b4 Fix fuzzy reading.
+94b9e20 rev3 of HM ToC
+3c812d7 revised HM.TAB.csv file based on revised hm-all.csv
+607b7b9 a few small tweaks to HM data to reduce the number of failures
+64c7b72 rev1 of HM.TOC.csv
+28ccdbb add 'raised-w' to inventory in Hmong-Mien extract script
+3dde784 we don't actually need the .tsv versions
+c13052b .tsv versions of these Hmong-Mien input files
+b815b0f use the HM.(TOC,TAB).csv files for Hmong-Mien for now
+3d7749a output the supporting forms in the order specified
+ff538af the pythonanywhere refresh script needed help
+6c78044 REwww now handles sets with multiple reconstructions more gracefully
+692a7d6 REwww now handles sets with multiple reconstructions more gracefully
+3f48afe refactor REwww a bit for messaging, interactive, etc.
+3258da6 improve look-and-feel of REwww interactive and experiment pages
+8840a8f add 'interactive_upstream' to handle interactive upstreams
+1b5d5eb add 'interactive_upstream' to handle interactive upstreams
+c27a535 helper script to deploy REwww on pythonanywhere
+ea9a202 add some paths to REwww for pythonanywhere
+4909048 use actual language names for HM corpus
+ef1611b refactor bottle app (app.py) a bit to work better with pythonanywhere
+a5938bc improve formatting of tables in REwww
+6bc00b6 better rendering of master parameters files in REwww
+b4e4d04 use correct language order for all TGTM datasets
+2e71001 Merge branch 'master' of https://github.com/jblowe/RE
+49ad711 run date now properly handled in output
+248b99a 'strict' is now applied on set output; multiple recons are possible per set
+c29442f 'strict' is now applied on set output; multiple recons are possible per set
+85e19f0 'strict' is now applied on set output; multiple recons are possible per set
+93cb395 Add a set collation function.
+8c61896 tweak HM extract: proto column cannot be blank in ToC
+20d314a more look-and-feel changes: 'comparison', 'paragraph sets' link in experiment display
+b87b6f6 more look-and-feel changes: 'comparison', 'paragraph sets' link in experiment display
+e5599ec show buttons only in the right contexts
+89bb2e6 more look-and-feel changes: move 'back' and 'toggle' to header, smaller buttons, etc.
+c5408e1 copyedit 'about' text a bit
+261e8a7 refactor 'tabular sets' display in REwww to make isolates and failures appear
+42869a2 revise bottle app.py for bootstrap 4, fontawesome
+98fe084 revise bottle templates for bootstrap 4; also use fontawesome rather than glyphicons
+3c0e8c0 revise stylesheets: all <h*> elements are one smaller, etc.
+0838b68 upgrade to bootstrap 4
+dc95f45 2 display formats for sets in REwww
+8364a39 2 display formats for sets in REwww
+466fbcd revisions to parameter handling in REwww
+b319458 initial revisions to style sheets to support sticky headers
+eeb1fdf initial commit of bootstrap css/js upgrade (sticky headers, etc.)
+26f86e5 make code path OS agnostics
+5c7a392 make DIS pipeline work on Windowz
+e73e3d1 add 'glyphs' to SyllableCanon' for VANUATU
+3a83090 revise VANUATU hook for windows
+0a3660d version of xsltproc.py works on windowz
+e321597 version of Rewww that 'makes' under windowz
+ff67f6f initial version of Hmong-Mien 'handcrafted' MEL
+43b7187 Note a potential pitfall
+bf84d15 Implement glyph context matching for TGTM and remove copy paste code
+b66b370 Remove the part of parsimonious which uniques by supporting sets.
+ca03df0 Just import serialize for REcli
+f423abe Simplify parsimonious
+873595e Remove unused variable.
+ee5e9c3 rename columns in fuzzy display
+416ac62 further revisions to HM pipeline code
+16b4f1a rename ROMANCE correspondence tables, so they are visible to REwww
+1a4663a revisions to HM data and extract script (hm-extract.py)
+0a3412e initial version of hm dataset
+97b2db1 tweak web output from 'make'
+a0b5db8 make space between multiple reflexes in a language in rendering sets.xml
+7506a2c adding list of languages to sets.xml to support tabular output
+4067be4 adding list of languages to sets.xml to support tabular output
+3bfbccc adding list of languages to sets.xml to support tabular output
+b42f990 singleton glosses now become mels; stats added to clics mel, revisions to wordnet
+40b1a80 singleton glosses now become mels; stats added to clics mel, revisions to wordnet
+3274b06 revisions to test shell scripts
+6d2dfbf revise semantic_sources/README
+11a9bcd revised parameters files for DIS and POLYNESIAN for CLICS MELs
+050e08a revised parameters files for DIS and POLYNESIAN for CLICS MELs
+302d2f9 revised mels
+89171da revised mels
+57bea76 revised mels
+da36347 revised mels
+aa1cafe Preprocess clics mel more.
+fe8adb6 Preprocess clics mel more.
+6e8569f Preprocess clics mel more.
+53a6885 Update README
+ee4774d Fix regenerate clics
+425830d Some Romance fixes.
+57610c4 Fix regenerate clics
+09e9010 Update REgtk
+89f494d REwww interactive needs to be configurable for fuzzy and ToC
+2c3e0b2 assorted updates in support of TGTM effort
+568a2f6 assorted updates in support of TGTM effort
+a9ecf88 make id starting with 'x' for the 'extra' generated MEL
+7433114 clarify values in REwww dropdowns
+c2de67d execute alternative test scripts with proper arguments
+e784e77 eliminate need for 'lexicon replacement' to support comparison
+8b7fe5c ensure all xml output is in utf-8
+7f44cfd add a command 'delete-experiment' to REcli
+47be698 Merge branch 'master' of https://github.com/jblowe/RE
+1416696 all output lexical data (including isolates and failures) now goes into sets.xml
+c12dc5c all output lexical data (including isolates and failures) now goes into sets.xml
+fb67804 re-enable the output of the 'raw' set diffs in compare
+45228dd fix typo in write_proto_lexicon
+0dca4f3 REcli 'coverage' now outputs unmatched MELs in XML for further processing
+57f0389 change funny character to _ in read.py and other places
+b129fac change funny character to _ in read.py and other places
+427e29c more refactoring of test scripts: have to supply values for things that used to be defaults
+5f617c4 None is now (again) used to indicate absence of an option parameter
+bba6641 now *really* get rid of defaults in argparse
+a13586c don't print out common and and set diff as text for now; just stats
+0f9de28 REwww now correctly constructs REcli call to subprocess
+af90e05 'default' recons renamed to 'standard'
+4cc5768 'default' recons renamed to 'standard'
+ac60e94 'default' recons renamed to 'standard'
+cc85d21 'default' recons renamed to 'standard'
+ff9c0f0 'default' recons renamed to 'standard'
+aa3bb4d rename a couple of ToC files
+c661d28 rename a couple of ToC files
+af479f0 get rid of 'legacy' *.default.parameters.xml files
+b76f2a3 get rid of 'legacy' *.default.parameters.xml files
+c557320 get rid of 'legacy' *.default.parameters.xml files
+547ba08 get rid of 'legacy' *.default.parameters.xml files
+f6f836f get rid of 'legacy' *.default.parameters.xml files
+e148ace defaults are all gone. -r and -t required for upstream REcli runs
+47e13bf pipelines now all refer to 'python' as the python to use
+f31a50c pipelines now all refer to 'python' as the python to use
+48f4d85 pipelines now all refer to 'python' as the python to use
+02c529f REwww now required --recon for upstream; also fixed path problems in Windows
+6dfb352 oops, this open has to stay 'rb'
+6051148 add encoding to opens in read.py
+93d3124 add encoding to csv_to_re open, for windows
+0a09869 use a better name for the 2 sets compared
+6b3defa for now, it should always be the 'hand-strict' result that is compared with the other runs
+b7dd9ce all_glosses needs to use the new cli conventions, too
+7a8f76b /remake now returns True or False to indicate result
+15232bf /remake needs the right parameters
+dabf9bc make/ need to be a POST not a GET
+1047ba6 '*.master.parameters.xml' is now read for all project info; etc.
+ab45b0e revisions to test scripts to use new cli conventions
+b521a5c an almost working version of a test script for Romance
+91bba04 add a fuz file to DIS project
+bb58d40 revise Loloish pipeline so it works with experiments
+df9c6b4 revisions to REwww to support generalized REcli invocation
+f5ad21e revised testLOLOISH.sh for new cli conventions
+ddb45d7 more tidying of master parameter files
+2c66d9a more tidying of master parameter files
+3c5e27f more tidying of master parameter files
+5d0193d don't include set content in statistics, for now
+4864864 every project now has a 'master' parameter file listing all available options
+f3b350e every project now has a 'master' parameter file listing all available options
+3c98e56 every project now has a 'master' parameter file listing all available options
+c811adc every project now has a 'master' parameter file listing all available options
+b8a337b every project now has a 'master' parameter file listing all available options
+04b06fe clarify next action for make 'ALL'
+00751c5 clarify next action for make 'ALL'
+cc31f8f make 'ALL' now works again
+37875f9 do within-experiment compare for singe and dual runs
+0c3c1b5 run within experiment comparisons if there are any to run
+1871711 revisions to REwww: better 'back', 'run' now works, etc.
+8ba9f7d highlight www display of individual MELs with color
+30e447d scaffolding to handle a 'diff' function in addition to 'compare'
+539224c handle the case where MEL == None in coverage
+f15097c more bulletproofing for mel reading: now can read None
+6843c4c more bulletproofing for 'stats' serialization
+2b94dc0 revise testROMANCE.sh to use new REcli syntax
+c42c887 refactor testPROJECTS.sh a bit to reduce redundancy
+8f90301 a script 'testSEMANTICS.sh' that runs all the semantic tests
+b62a38c REwww's 'run' function now uses the new REcli syntax
+2c525e6 update testPROJECT.sh to latest REcli syntax
+17a4c19 Analyze sets does not exist anymore. Need a better way to write info
+ef8c8d4 Typo.
+7aba13c Hack for TGTM fuzzy
+1e29692 Arbitrarily choose experiment for source lexicon.
+73d2b5e Fix REgtk.
+6c5d9dd Add ability to create new experiment
+193e368 Change REcli to use subcommands.
+5a87d63 Return the set diff from compare_proto_lexicons as well.
+22168c1 Better error handling.
+842d055 Add functions to serialize and read proto lexicons
+824ae51 Add function to normalize proto_lexicons
+2c8fca0 Move tryconvert to utils.
+b0ce3bd run the 'compare' step if there are results to compare
+fb8431e run the 'compare' step if there are results to compare
+1280017 not all project have fuzzy, need to account for this in statistics
+06fd8e1 minor refactoring of DIS pipeline
+f515027 include some args and setting values in statistics
+3981ee0 include some args and setting values in statistics
+3355b82 use UTC everywhere; 'statistics' xml now includes run settings; etc.
+b302334 minor cleanup of 'project.py', add 'mels' to settings
+673ecda more refactoring to support 'running' experiments; also 'delete experiment' now works
+9e22180 improvements to handling of experiments and comparison
+beff8ae you can now 'run' (i.e. 'make') experiments
+08d1a7a 'interactive' now works for experiments; other minor refactoring
+b8140b7 further revisions to REwww
+8422c58 revisions to 'standard' pipeline hook
+b1510bd revisions to 'standard' pipeline hook
+104b774 further revisions to path finder in projects.py
+06d27f9 further revisions to REwww to support 'experiments'
+c826bce get rid of 'old' experiment directories
+8ae38f9 get rid of 'old' experiment directories
+aed92c7 get rid of 'old' experiment directories
+c7a2d95 get rid of 'old' experiment directories
+cbc71b8 get rid of 'old' experiment directories
+39bc8c1 get rid of 'old' experiment directories
+ddb945c get rid of 'old' experiment directories
+13d01b9 get rid of 'old' experiment directories
+4c5bb75 get rid of 'old' experiment directories
+3169b68 unsnarl file paths in REwww; add a few filetypes for display
+1e12c33 next sets of revisions for 'experiments'
+e8bdae5 REcli now expects to run an 'experiment' (PROJECT/EXPERIMENT)
+f6a593f do a better job of parsing contexts
+8526124 testProject.sh now ensures that experiments/semantics exists and is refreshed
+fe16e81 DIS now needs these two perl scripts
+5f5af23 revsions to website to support 'experiments'
+3349e9f new experiments directory
+446b2c7 new experiments directory
+cef0423 new experiments directory
+f079452 new experiments directory
+7bb5789 new experiments directory
+f7c5948 new experiments directory
+ab570cc new experiments directory
+d5c9b42 new experiments directory
+4b41154 substantial refactoring to support 'experiments'
+07cb9e1 DIS, POLYNESIAN, and TGTM now all share the same hook.py
+e2d4bb8 DIS, POLYNESIAN, and TGTM now all share the same hook.py
+1e92194 revisions to semantic evalution (test) scripts
+165f365 revised 'pipeline' scripts for all projects that use them
+45b9d20 revised 'pipeline' scripts for all projects that use them
+d4541d0 revised 'pipeline' scripts for all projects that use them
+6a1d853 remove unneeded file
+e655d10 initial refactoring of REwww to handle 'experiments'
+3873b87 csv2re: handle contexts with multiple constituents properly
+34d1ff2 read.py needs to parse context in csv correspondences properly
+7d4a013 a bit more refactoring of 'strict' in pick_derivations
+dea3c7a Vanuatu project now has a Wordnet MEL; add this to generated parameters.xml
+97f0252 supporting forms are output in sorted order
+7480a06 Update VANUATU canon.
+c885cf0 Fix bug caused by leak into non-'strict' runs.
+b42138b Try for a more phonotactically constrained VANUATU table.
+a73b4ec "Fix" REGtk.
+c4ecaf6 do MEL comparison with and without 'strict'
+0f47376 the evaluation component did not use then run parameter, thus overwriting results
+380f86d sort files used in run compares
+edee67c cleanup.sh now uses -fXd to remove gitignored files
+04a0ff4 use os-specific pathnames everywhere
+d759799 use os-specific pathnames everywhere
+c4b4f52 distinguish 'prepare' scripts from 'test' scripts
+9d584a9 update all test scripts: run pipelines where necessary, otherwise, do the same tests
+3523457 ROMANCE now has a CLICS MEL. Let's make a note
+36a80e9 revise cleanup.sh: it doesn't need to special-case the Polynesian data files any more
+cffb499 finally get rid of these antique Polynesian data files -- the are now pipeline generated
+b8b0355 add references to clics and wordnet mels in parameters.xml
+58a33d2 add references to clics and wordnet mels in parameters.xml
+b377c2f add references to clics and wordnet mels in parameters.xml
+7514ba2 add references to clics and wordnet mels in parameters.xml
+f9c4e58 add references to clics and wordnet mels in parameters.xml
+4813a37 Update README.md
+08ae900 Merge branch 'master' of https://github.com/jblowe/RE
+37ac72a Merge branch 'master' of https://github.com/jblowe/RE
+d367870 Merge branch 'master' of https://github.com/jblowe/RE
+daaa967 revisions to 'wnlookup' to output only glosses that appear, and a helper script
+2a6be47 revised wordnet mels (now including only glosses that appear)
+392fccf revised wordnet mels (now including only glosses that appear)
+46d13ed revised wordnet mels (now including only glosses that appear)
+096cb96 revised wordnet mels (now including only glosses that appear)
+5e101da revised wordnet mels (now including only glosses that appear)
+b739031 Check in regenerate-clics script + update clics files.
+cb65006 Check in regenerate-clics script + update clics files.
+97f0d01 Check in regenerate-clics script + update clics files.
+f4971d7 Check in regenerate-clics script + update clics files.
+dc572f9 initial Wordnet-based MELs for various projects
+d0afe9d initial Wordnet-based MELs for various projects
+43f5098 initial Wordnet-based MELs for various projects
+e7563ad initial Wordnet-based MELs for various projects
+dd3eadd initial Wordnet-based MELs for various projects
+0984f31 don't use colon as separator in notes - it is too easy to confuse with length
+573b030 don't use colon as separator in notes - it is too easy to confuse with length
+31df19f refactor wnlookup a bit: more stats, better 'gloss extraction'
+b6faa31 update README.md for 'semantic sources'
+01503c9 'parsimonious' is now 'strict' to shorten things up a bit
+66d3148 code reformat only
+5ff0778 use UTC times everywhere
+14ebf3d use a better timestamp string
+033cc85 use a better timestamp string
+8a94ec6 more refactoring of tgtm pipeline to make it work on windows
+fb5b30f try to make output xml a str
+e961224 try not specifying encoding in xsltproc
+45eadda speculative changes to Vanuatu correspondences and canon
+2037152 Debug.debug is a static class member.
+034e389 Optimize filter_subsets even more by deduplicating supports
+bc4dc97 Don't compare against losers by filtering subsets by decreasing size
+354fc68 Precompute context matching
+8862694 Print statistics to standard output.
+f5ab40b pretty print syllable structure
+0451ced improve Yi syllable canons (and Southern Yi ToC, a bit)
+9189a50 add syllable_structure() to help expose internal goings on
+7198236 more tweaks to 'debug', counting, etc.
+af16d9a more tweaks to 'debug', counting, etc.
+dd67809 improve rendering of 'debug' info in REwww
+ccf401e improve rendering of 'debug' info in REwww
+92787a3 refactoring of test scripts to run a more complete set of tests
+ae28a3e more logging of parses; count and reports on uses of correspondences
+0db91af more logging of parses; count and reports on uses of correspondences
+a416472 revised experimental version of Vanuatu correspondences
+d17b469 changes to Vanuatu hook to support improved form, correspondence, and gloss extraction
+1c9368e refactored and extended the 'debug' option; now works, a bit, with REwww.
+60c0457 refactored and extended the 'debug' option; now works, a bit, with REwww.
+2be5f28 Add 'debug' mode.
+81d2faa latest debated changes to Vanuatu
+e29f941 latest debated changes to Vanuatu
+b232584 use 'C_#' as the context for lost final vowels, to enable CVV reconstructions
+9481364 revised 'Vanuatu experiment'. should work now.
+14094a3 JB's 2 correndence tables v. 2 canons experiment script
+6a2d851 'tweak' to Vanuatu experimental correspondences
+1088b3c change character used for zero to unicode 'empty set' symbol everywhere
+a9f0ef4 change character used for zero to unicode 'empty set' symbol everywhere
+566a9c5 change character used for zero to unicode 'empty set' symbol everywhere
+c984bce change character used for zero to unicode 'empty set' symbol everywhere
+8370d51 change character used for zero to unicode 'empty set' symbol everywhere
+6d47596 change character used for zero to unicode 'empty set' symbol everywhere
+cef198e fix BOM and encoding issues in Vanuatu correspondences csv file
+b6318f5 Create VANUATU.experimental.correspondences.xlsx
+eea6049 dealing better with zeroes in Vanuatu ToC
+0f21fc9 improve computation and display of 'compare' statistics
+7bd1d79 improve computation and display of 'compare' statistics
+acbcb66 not sure how 'post' is not being imported, but it should be
+42dcbfc refactor 'parsimonious' a bit, again
+9523e63 helper to create 'attested_lexicons' from parameters
+92b9e73 helper to create 'attested_lexicons' from parameters
+8ab5eee Vanuatu hook now uses 'VANUATU.experimental.correspondences.csv'; mel numbers and set number sync'd
+0b7e184 experiment to generate correspondences from vanuatu cognate sets.
+ca8ddf7 improved the name of VANUATU.experimental.correspondences.csv
+77effbe added a sequence number to AlexF_Vanuatu-correspondences.csv
+83162b0 initial version of hacked Vanuatu correspondences
+beb71ad revert the <title> element in REwww
+bb75917 implement 'only_with_mel' feature: -w flag
+f866b01 implement 'only_with_mel' feature: -w flag
+164d6c5 compute 'parsimonious' sets in tests
+2d40e84 include 'compare IR results' statistics in all project runs
+6f874c8 ensure that set compare skips certain statistics files
+2fa16f5 refactor IR statistics output and rendering
+cd3b67a refactor IR statistics output and rendering
+e819ab3 remove the two generated correspondence XML files for Yi
+5d14a00 modifying 5 forms in DIS, per MM email '6 forms in DIS...'
+93773a0 oops now use correct nav bar
+81f6370 REwww can now accept webhook requests from GitHub
+8593c73 tweak rendering of MELs in sets in www interface
+02a78cc add modtime timestamps to rendering of all files
+dac7796 'make' for individual projects is now possible via the website
+f6b13db modest refactoring of test code (makefile, etc.)
+42551b6 modest refactoring of test code (makefile, etc.)
+bc2c484 rename the Polynesian test script to match the other naming conventions
+facc514 rename the Yi test script to match the other naming conventions
+68c5aa9 Fix gloss collection.
+2afcc6e Put back word boundary filtering on MELs.
+3d8f6cc Compile MELs instead of interpreting them.
+7a0fb86 tidy up display of associated MEL in rendering XML sets
+6d06e6a skip gloss if it is None in MEL checking
+a880950 Revert "skip sets with 'no mels', unless there are no mels at all"
+7947f7a Generate TGTM data files as a load hook.
+08267f6 Express mel matching algorithm more concisely.
+affb5cb revised 'hybrid approach' to MEL matching
+ad2ce8d skip sets with 'no mels', unless there are no mels at all
+3373e26 in ToC, = should be treated as ,
+0102190 revise MEL for TGTM 'DIS'
+4fd054e revise TOC for TGTM 'DIS'
+7c657ff revise MEL parameters used for generic testPROJECT.sh script
+85b24fa revisions to cleanup script
+a8b7f39 revise Wordnet MEL creation script
+4583636 Update README.md
+c9f9ff0 pipeline and config files for TGTM 'DIS' project
+6476f69 fix coverage computations to check glosses by individual lexicon
+2ec7c84 fix coverage computations to check glosses by individual lexicon
+1e36990 add TGTM 'DIS' project to available projects
+884cc4f reworks bands for Marpha and Syang 'DIS' files so the match the corresponding real files
+611953d initial revised TGTM 'DIS' files: unicode, character hacks handled, etc.
+d3bd108 add TGTM 'DIS' data files (as yet unconverted)
+8db3d5f get rid of legacy TGTM 'DIS' files
+f9f7dec mel info now displayed in HTML rendering
+a951277 mel info now displayed in HTML rendering
+73b36cf mel info now added to sets.xml; supporting forms output in alphabetical order
+57818a1 all_glosses.py makes a list of all the glosses in the data files in a project
+c303555 a version of the test scipt that runs all projects at the same time
+18b6664 Autogenerate correspondences from Alex's table.
+eb39be1 Autogenerate correspondences from Alex's table.
+6299363 improve statistic reporting, esp. comparison
+fd1c3ac don't do wordnet mel run for now... too slow
+4ce4224 improve testing: include 'compare', etc.
+46e61f4 further revisions to 'compare feature'
+f1110cf further revisions to 'compare feature'
+a19bb3e get rid of extraneous xslt code
+6b74016 'compare results' file now included in website
+4388138 timestamp now included in ToC for LOLOISH
+cd51a5d initial version of stylesheet to compare two runs
+4b5bd12 cleanup only, no functional changes
+bd3f960 change order of display in website
+16311e1 include create date in output xml files
+8be3407 include create date in output xml files
+ae70576 improvements to calculation and presentation of coverage stats
+b0f4ac6 improvements to calculation and presentation of coverage stats
+cb131e2 more improvements to statistics
+55728d1 more improvements to statistics
+672319c look for each mel gloss in each input gloss string
+1eb8443 improvements to statistics and rendering
+16364e9 improvements to statistics and rendering
+d593a51 changing the order in which files are displayed on the website
+8c4bbb7 Fix gtk.
+81b7d9b refactor statistics gathering a bit; output stats in XML
+452f22c corrected version of this script
+137dcc2 'keys.txt' now output sorted by lg and form as .csv; layout changed as well
+aa84c42 primitive 'download' capability added, other UX improvements
+2fe13ff update test scripts: exit on bad exit code from python
+23b6cbc Make VANUATU work again.
+859e94c Make VANUATU work again.
+1efa712 Fix gtk.
+b5e6cb6 limit for lines of files displayed on website is now 5,000
+f8c44d7 fix extraction of dff within mode welements
+e226a1f additional project features for web site
+98cfb31 Whitespace.
+270cafe Implement fuzzying as a pipeline step for TGTM.
+9340861 Implement fuzzying as a pipeline step for TGTM.
+343b052 Fix a straggler.
+f0a6a24 Restore the ability to name runs.
+b1bce9e romance: fix r grapheme for PWR.
+d33071d improve extraction and formatting of <ngl> elements
+0b9b89e revise Vanuatu MEL construction to sort glosses in MELs
+f793eaa revise Vanuatu MEL construction to sort glosses in MELs
+cabf48b show <ngl> elements in web site lexicon display
+c8633db initial version of Vanuatu 'hand' MELs
+d000883 Vanuatu hook now write a 'hand.mel.xml' file
+895151a use correct unit for elapsed time
+f2aca5a mel coverage report now viewable in web ui; ROMANCE mel parameters corrected
+92bab07 mel coverage report now viewable in web ui; ROMANCE mel parameters corrected
+08760bf initial stab at MEL coverage stats
+181b7fc revert read_lexicon a bit: wasn't find <ngl>'s
+07f8158 update 'comparing x to y' messages in script; change order of comparison for Vanuatu
+467e866 change 'checking glosses in mel' message a bit
+b8ae44d corrections and improvements to Yi data
+4b33c46 minor revisions to Yi MELs
+d3622fc romance: correspondence table work.
+4d0989b Remove id field from abstract Form class.
+1874886 need to close <table> in projects display
+b182dc0 handle prefixal - and = in TGTM, use dff if there are not other fields to use
+d237286 bring ROMANCE into the fold with some minor filename changes
+ad853bc bring ROMANCE into the fold with some minor filename changes
+0201d26 cleanup.sh now leaves statistics files where they were
+c73f373 fix bug in extracting modern form for isolates
+349e46f better counting of isolates. but badly coded.
+d75d445 repair TGTM test script
+8d3fe66 write failures and isolates to files; also count them
+fd68e4e start of scaffolding for website 'interactive' mode
+1f05042 start of scaffolding for website 'interactive' mode
+11d4217 web interface now does git pull before make
+54c2dda start keeping dated statistics on runs via bash scripts
+52f30ff slight change to parameter file name needed now
+0c87973 the function associated with this endpoint deserves a better name
+016487f added a 'make' endpoint to the web interface
+69a565a cleanup.sh now cleans up polynesian
+386a311 reader for csv correspondences needed refactoring, too
+980c9ba hack at a better 'comment skipper' for delimited files
+0859fde need to think about how to instrument the main upstream/downstream process a bit more
+eea8284 further revisions to polynesian data set; more complicated than it seems.
+7208467 further revisions to polynesian data set; more complicated than it seems.
+312a429 get rid of this legacy set
+2d5477f getting rid of these 'old' output sets: they still exist in the 'legacy' dir, though
+949717e getting rid of these 'old' output sets: they still exist in the 'legacy' dir, though
+0b91f60 revised Polynesian parameters. so that they work.
+b1367cd revised changelog and make-release.pl
+033ae63 make-release.pl now actually makes releases
+79c681c make-release.pl needed some more help
+24b3685 make-release.pl needed some help
+f997498 improvements to make-release.pl
+750c9eb an initial version of a release script
+63e92e4 id numbers are now created by .csv scripts, and carried through Upstream process
+2d65d48 stylesheet improvements: id numbers now rendered in sets, canon now shows in corresondences
+161a322 Vanuatu entry numbers now start at one, not zero
+ef95cb1 TGTM test script only test set creation, DEMO93 does both set creation and MEL comparison
+1975468 moderate refactoring of set rendering: now handles levels, etc.
+22d6aa9 moderate refactoring of set rendering: now handles levels, etc.
+9b669c4 moderate refactoring of set rendering: now handles levels, etc.
+e9f2cb4 improve rendering and sorting of sets in xml
+f5d5218 a better version of the cleanup script
+449e7f6 small clarification of test run output
+68a16b5 initial stab at xml serialization for cognate sets
+d19cc96 a more robust submodule init command for Vanuatu
+41789bc have RE create a proper default parms file for Vanuatu data
+bb0bb46 pipeline to create XML for Yi data and correspondences
+4177b2e do not allow empty <seg> elements in ToC xml
+3e85b5f complain if <hw> field is None, but continue
+81c6a06 improve csv_to_lexicon.py
+0426dae undo the idea of having RE itself handle csv input files
+ffaa9d9 more and better test scripts
+eae8743 various parameter improvements for Yi data
+25ce001 added more test: Yi data, etc.
+83be180 added more test: Yi data, etc.
+6c4a0c1 added more test: Yi data, etc.
+8b1237f added more test: Yi data, etc.
+ea5ebe2 fixes to code and data to help the Yi cause
+a5ce9c1 fixes to code and data to help the Yi cause
+364566e code reformat only. no changes.
+e150955 csv2RE.py now can insert classes, etc. into output XML
+c0a989f csv2RE.py now can insert classes, etc. into output XML
+285f4aa allow .DAT files to be displayed
+c1f7122 allow .DAT files to be displayed
+a97247e incremental improvement to 'non-xml' file rendering in REwww
+ff52e8c the context element needs to always be a 2-tuple for the csv correspondence reader to work
+5f804b7 time the execution of the various tests
+45b60f3 display certain text and csv files in REwww
+f40d778 don't sort columns of ToC in display
+c87e85b 'working' corrrespondences for Yi
+044cd78 added LOLOISH to list of projects
+d0870d6 csv_to_lexicon.py creates RE-style XML from .csv files; fixed csv_to_re.py
+f2905a6 Inherit protogloss
+4a0dfba Add csv_to_re
+4ea2a12 testVanuatu.sh now updates submodule toolbox
+dc2a4ae recommitting submodules
+7f7440d get rid of directory, too, for now
+538ce2e re-add submodule
+3c2c01c we shouldn't have to clone the toolbox manually
+60845a1 a few 'bulk changes' to some of our 'demo' corpora: GERMANIC, EXER, POLYNESIAN
+cc1ffcb a few 'bulk changes' to some of our 'demo' corpora: GERMANIC, EXER, POLYNESIAN
+2e0c02f a few 'bulk changes' to some of our 'demo' corpora: GERMANIC, EXER, POLYNESIAN
+48e6a41 improve REwww README
+7a88f23 revise READMEs
+1329374 revise READMEs
+2ba54de reorganization of RE repo. most everything has moved. sorry.
+1bfc11e reorganization of RE repo. most everything has moved. sorry.
+f9aa5fb reorganization of RE repo. most everything has moved. sorry.
+9baeca0 reorganization of RE repo. most everything has moved. sorry.
+bb1863a reorganization of RE repo. most everything has moved. sorry.
+6d61776 reorganization of RE repo. most everything has moved. sorry.
+f5a30c5 reorganization of RE repo. most everything has moved. sorry.
+06541c3 reorganization of RE repo. most everything has moved. sorry.
+77ce5e7 reorganization of RE repo. most everything has moved. sorry.
+32e252c reorganization of RE repo. most everything has moved. sorry.
+ffd38c5 reorganization of RE repo. most everything has moved. sorry.
