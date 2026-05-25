@@ -3,6 +3,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, GObject, GLib, Pango
 import RE
 import read
+from utils import parse_spec_value, spec_display, spec_for_storage
 import threading
 import sys
 import serialize
@@ -42,16 +43,14 @@ def _save_ui_settings(data: dict) -> None:
 def load_project_ui_settings(project: str) -> dict:
     return _load_ui_settings().get(project, {})
 
-def save_project_ui_settings(project: str, recon, mel, fuzzy, upstream,
-                             context_match_type=None):
+def save_project_ui_settings(project: str, recon, mel, fuzzy, upstream):
     data = _load_ui_settings()
     # TOML doesn't support null; store None as empty string, restore on load
     data[project] = {
-        'recon':              recon              or '',
-        'mel':                mel                or '',
-        'fuzzy':              fuzzy              or '',
-        'upstream':           upstream           or '',
-        'context_match_type': context_match_type or 'glyphs',
+        'recon':    recon    or '',
+        'mel':      mel      or '',
+        'fuzzy':    fuzzy    or '',
+        'upstream': upstream or '',
     }
     _save_ui_settings(data)
 import itertools
@@ -98,12 +97,6 @@ class ProjectManagerDialog(Gtk.Dialog):
 
         self.fuzzy_combo = Gtk.ComboBoxText()
         controls.pack_start(make_labeled_entry(self.fuzzy_combo, 'fuzzy:'), False, False, 0)
-
-        self.cmt_combo = Gtk.ComboBoxText()
-        self.cmt_combo.append_text('glyphs')
-        self.cmt_combo.append_text('constituent')
-        self.cmt_combo.set_active(0)
-        controls.pack_start(make_labeled_entry(self.cmt_combo, 'match type:'), False, False, 0)
 
         vbox.pack_start(controls, False, False, 0)
 
@@ -164,8 +157,6 @@ class ProjectManagerDialog(Gtk.Dialog):
                 self.fuzzy_combo.set_active(fuzzies.index(saved['fuzzy']) + 1)
             if saved.get('upstream'):
                 self.upstream_entry.set_text(saved['upstream'])
-            cmt = saved.get('context_match_type', 'glyphs')
-            self.cmt_combo.set_active(0 if cmt == 'glyphs' else 1)
         except Exception as e:
             print("Could not parse mel/recon/fuzzy options from", project_file, e)
 
@@ -182,12 +173,11 @@ class ProjectManagerDialog(Gtk.Dialog):
             return None if (t is None or t == 'N/A') else t
         upstream_text = self.upstream_entry.get_text().strip()
         return {
-            'project':            project,
-            'mel':                combo_value(self.mel_combo),
-            'recon':              combo_value(self.recon_combo),
-            'fuzzy':              combo_value(self.fuzzy_combo),
-            'upstream':           upstream_text if upstream_text else None,
-            'context_match_type': self.cmt_combo.get_active_text() or 'glyphs',
+            'project':  project,
+            'mel':      combo_value(self.mel_combo),
+            'recon':    combo_value(self.recon_combo),
+            'fuzzy':    combo_value(self.fuzzy_combo),
+            'upstream': upstream_text if upstream_text else None,
         }
 
 class WrappedTextBuffer():
@@ -276,7 +266,7 @@ class SyllableCanonWidget(Gtk.Expander):
         self.add(box)
         self.regex_entry = Entry(syllable_canon.regex.pattern, status_bar)
         self.sound_class_widget = SoundClassSheet(syllable_canon.sound_classes, status_bar)
-        self.supra_segmental_entry = Entry(','.join(syllable_canon.supra_segmentals), status_bar)
+        self.supra_segmental_entry = Entry(spec_for_storage(syllable_canon), status_bar)
         self.context_match_type_entry = ContextMatchTypeEntry(syllable_canon.context_match_type, status_bar)
         box.add(make_labeled_entry(self.regex_entry, 'Syllable regex:'))
         box.add(make_labeled_entry(self.supra_segmental_entry, 'Supra-segmentals:'))
@@ -284,11 +274,13 @@ class SyllableCanonWidget(Gtk.Expander):
         box.add(self.sound_class_widget)
 
     def syllable_canon(self):
+        raw = self.supra_segmental_entry.get_text()
         return RE.SyllableCanon(
             self.sound_class_widget.sound_classes(),
             self.regex_entry.get_text(),
-            [x.strip() for x in self.supra_segmental_entry.get_text().split(',')],
-            self.context_match_type_entry.get_state()
+            parse_spec_value(raw),
+            self.context_match_type_entry.get_state(),
+            raw_spec=raw,
         )
 
 class LexiconWidget(Pane):
@@ -1506,13 +1498,18 @@ class StatusBar(Gtk.Box):
         self.show_all()
         self.dirtied = set()
 
-    def set_project_context(self, project, recon, mel, fuzzy, upstream=None):
+    def set_project_context(self, project, recon, mel, fuzzy,
+                            upstream=None, context_match_type=None, spec=None):
         """Set the persistent project-context line in the status bar."""
         def fmt(val):
             return val if val else '—'
         text = f'project: {fmt(project)}    ToC: {fmt(recon)}    MEL: {fmt(mel)}    Fuzzy: {fmt(fuzzy)}'
         if upstream:
             text += f'    upstream: {upstream}'
+        if context_match_type:
+            text += f'    Match Type: {context_match_type}'
+        if spec:
+            text += f'    Supers: {spec}'
         self.project_label.set_text(text)
 
     def set_message(self, text):
@@ -1814,25 +1811,34 @@ class REWindow(Gtk.Window):
                                  recon=selection['recon'],
                                  mel=selection['mel'],
                                  fuzzy=selection['fuzzy'],
-                                 upstream=selection['upstream'],
-                                 context_match_type=selection['context_match_type'])
+                                 upstream=selection['upstream'])
         settings = read.read_settings(projects.projects[project], project,
                                            selection['recon'],
                                            mel_token=selection['mel'],
                                            fuzzy_token=selection['fuzzy'],
-                                           upstream=selection['upstream'],
-                                           context_match_type=selection['context_match_type'])
+                                           upstream=selection['upstream'])
         # dummy an arg object for load hooks. FIXME
         dummy.mel = selection['mel']
         dummy.fuzzy = selection['fuzzy']
         dummy.recon = selection['recon']
         load_hooks.load_hook(projects.projects[project])
+        self.open_from_settings(settings)
+        # Read context_match_type and spec from the loaded parameter widget.
+        try:
+            first_pw = self.parameters_widget.get_nth_page(0)
+            sc = first_pw.canon_widget.syllable_canon()
+            context_match_type = sc.context_match_type
+            spec = spec_for_storage(sc)
+        except Exception:
+            context_match_type = None
+            spec = None
         self.status_bar.set_project_context(project,
                                              selection['recon'],
                                              selection['mel'],
                                              selection['fuzzy'],
-                                             selection['upstream'])
-        self.open_from_settings(settings)
+                                             selection['upstream'],
+                                             context_match_type,
+                                             spec)
 
     def create_checkpoint(self, widget):
         dialog = CheckpointDialog(self, action_type="save")
