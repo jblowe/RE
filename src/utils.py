@@ -59,6 +59,81 @@ def split_csv(s):
     return [p.strip() for p in s.split(',') if p.strip()]
 
 
+# ── Supra-segmental spec helpers ──────────────────────────────────────────────
+# The <spec> XML attribute may be stored either as a literal comma-separated
+# string (e.g. "ˊ,ˋ") or as a sequence of Unicode codepoint tokens
+# (e.g. "U+0303" or "U+0303, U+0308").  The two helpers below handle both
+# directions of the conversion.
+
+import re as _re
+
+_CODEPOINT_RE = _re.compile(
+    r'^\s*U\+[0-9A-Fa-f]{4,6}(\s*[,\s]\s*U\+[0-9A-Fa-f]{4,6})*\s*$',
+    _re.IGNORECASE,
+)
+
+
+def parse_spec_value(s):
+    """Convert a spec string to a list of individual Unicode character strings.
+
+    Accepts one of two formats (but NOT a mix):
+
+    1. A comma- (or whitespace-) separated sequence of Unicode codepoints,
+       e.g. ``U+0303`` or ``U+0303, U+0308``.
+    2. A literal comma-separated string, e.g. ``ˊ,ˋ`` or ``ˈ``.
+
+    In format 1 each token is converted to its actual Unicode character.
+    In format 2 the string is split on commas and each non-empty piece is
+    returned as-is (just stripped of leading/trailing whitespace).
+    """
+    s = s.strip()
+    if not s:
+        return []
+    if _CODEPOINT_RE.match(s):
+        return [chr(int(cp, 16))
+                for cp in _re.findall(r'U\+([0-9A-Fa-f]{4,6})', s, _re.IGNORECASE)]
+    return [part.strip() for part in s.split(',') if part.strip()]
+
+
+def spec_display(chars):
+    """Render a supra_segmentals list as a human-readable display/storage string.
+
+    Printable, non-combining characters are shown as-is (e.g. ``ˈ``).
+    Combining marks (Unicode category M*) and other non-printable characters
+    are shown in ``U+XXXX`` notation so they remain visible in UI fields and
+    text editors.
+
+    This is the inverse of :func:`parse_spec_value`:
+    ``parse_spec_value(spec_display(chars)) == chars`` for any valid list.
+
+    Prefer :func:`spec_for_storage` when you have a :class:`RE.SyllableCanon`
+    object — it preserves the original user notation verbatim.
+    """
+    parts = []
+    for ch in chars:
+        if not ch:
+            continue
+        cat = unicodedata.category(ch)
+        if cat.startswith('M') or not ch.isprintable():
+            parts.append(f'U+{ord(ch):04X}')
+        else:
+            parts.append(ch)
+    return ','.join(parts)
+
+
+def spec_for_storage(syllable_canon):
+    """Return the spec string that should be written to XML for *syllable_canon*.
+
+    If the canon carries a ``raw_spec`` string (set when the canon was read
+    from XML), that string is returned verbatim so the user's original
+    notation — whether literal ``ˈ`` or codepoint ``U+0303`` — is preserved
+    exactly.  Otherwise falls back to :func:`spec_display`.
+    """
+    if getattr(syllable_canon, 'raw_spec', None) is not None:
+        return syllable_canon.raw_spec
+    return spec_display(syllable_canon.supra_segmentals)
+
+
 def list_attested_languages(project_path):
     """Return language codes for files matching ....<LANG>.data.xml"""
     langs = []
