@@ -5,7 +5,7 @@ import RE
 import mel
 import pickle
 import json
-from utils import *
+from utils import *  # includes parse_spec_value, spec_display
 
 def read_correspondence_file(filename, name, mel_filename, fuzzy_filename,
                              context_match_type=None):
@@ -26,6 +26,7 @@ def read_correspondence_file(filename, name, mel_filename, fuzzy_filename,
 def read_syllable_canon(parameters, context_match_type_override=None):
     raw_classes = {}
     raw_supra = []
+    raw_spec_str = None   # verbatim <spec value="…"> string from XML
     raw_regex = None
     context_match_type = 'constituent'
     for parameter in parameters:
@@ -35,7 +36,8 @@ def read_syllable_canon(parameters, context_match_type_override=None):
         if parameter.tag == 'canon':
             raw_regex = parameter.attrib.get('value')
         if parameter.tag == 'spec':
-            raw_supra = parameter.attrib.get('value').split(',')
+            raw_spec_str = parameter.attrib.get('value', '')
+            raw_supra = parse_spec_value(raw_spec_str)
         if parameter.tag == 'context_match_type':
             context_match_type = parameter.attrib.get('value')
     if context_match_type_override is not None:
@@ -44,7 +46,8 @@ def read_syllable_canon(parameters, context_match_type_override=None):
     sound_classes = {k: [norm(x) for x in v] for k, v in raw_classes.items()}
     regex = norm(raw_regex)
     supra_segmentals = [norm(x) for x in raw_supra]
-    return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type)
+    return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type,
+                            raw_spec=raw_spec_str)
 
 # Compute all daughter languages referenced in the correspondence
 # section of tree.
@@ -229,6 +232,21 @@ def read_settings(project_path, project_code, recon_token, mel_token=None, fuzzy
         'fuzzies': {},
         'reconstructions': {},
     }
+
+    # 5) Auto-detect context_match_type from the upstream-target correspondences
+    #    file when the caller has not supplied an explicit override.  This
+    #    ensures that read_attested_lexicons later applies the same Unicode
+    #    normalisation (NFC vs NFD) as the correspondence table itself — without
+    #    this, a 'glyphs'-mode project loads lexicons in NFC while rule tokens
+    #    are NFD, causing every form with a combining character to fail.
+    if context_match_type is None:
+        first_corr = os.path.join(project_path,
+                                  next(iter(proto_languages.values())))
+        try:
+            _sc = read_syllable_canon(ET.parse(first_corr).find('parameters'))
+            context_match_type = _sc.context_match_type
+        except Exception:
+            pass
 
     return RE.ProjectSettings(
         project_path,
