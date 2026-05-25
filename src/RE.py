@@ -16,12 +16,17 @@ class Debug:
     panini = False
 
 class SyllableCanon:
-    def __init__(self, sound_classes, syllable_regex, supra_segmentals, context_match_type):
+    def __init__(self, sound_classes, syllable_regex, supra_segmentals, context_match_type,
+                 raw_spec=None):
         self.sound_classes = sound_classes
         self.regex = re.compile(syllable_regex)
         self.supra_segmentals = supra_segmentals
         self.context_match_type = context_match_type
         self.apply_panini = True
+        # Raw spec string as it appeared in (or will be written to) the XML
+        # <spec> attribute — e.g. "U+0303" or "ˈ".  Preserved verbatim through
+        # save/load cycles so the user's chosen notation is never altered.
+        self.raw_spec = raw_spec
 
 class Correspondence:
     def __init__(self, id, context, syllable_types, proto_form, daughter_forms):
@@ -1055,11 +1060,34 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                         unmatched.append(supporting_form)
                 else:
                     distinct_mels[mel.default_mel].append(supporting_form)
-            # Add MEL-unmatched forms to every group that was created.
-            # If no groups exist the reconstruction has no MEL coverage at all
-            # and is correctly excluded.
+            # Add MEL-unmatched forms to groups where a genuine homophone
+            # (same language, same PRE-FUZZY surface form) is already present.
+            #
+            # Using the pre-fuzzy form prevents accidentally pulling in forms
+            # that merely coincide after phonological normalisation (e.g. two
+            # tonal variants that fuzzy to the same string).  Only forms that
+            # were already identical on the surface — true homophones — are
+            # added alongside their matched sibling.
+            #
+            # If no MEL group exists at all the reconstruction has no MEL
+            # coverage and is correctly excluded.
+            def _pre_fuzzy_glyphs(form):
+                """Return the surface form before any fuzzying was applied."""
+                if isinstance(form, Stage0Form):
+                    return form.modern.glyphs
+                if hasattr(form, 'actual'):          # FuzzyForm / AlternateForm
+                    return form.actual.glyphs
+                return form.glyphs                   # plain ModernForm
+
             for group in distinct_mels.values():
-                group.extend(unmatched)
+                # Signature set: (language, pre-fuzzy glyphs) for every matched
+                # form already in this MEL group.
+                sigs = frozenset(
+                    (f.language, _pre_fuzzy_glyphs(f)) for f in group
+                )
+                for u in unmatched:
+                    if (u.language, _pre_fuzzy_glyphs(u)) in sigs:
+                        group.append(u)
         else:
             distinct_mels[mel.default_mel] = support
         for distinct_mel, support in distinct_mels.items():
