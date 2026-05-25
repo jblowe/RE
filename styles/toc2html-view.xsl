@@ -22,6 +22,14 @@
 				</td>
 			</tr>
 		</xsl:if>
+		<xsl:if test="parameters/spec">
+			<tr>
+				<td><b>Supra-segmentals</b></td>
+				<td class="col-gloss">
+					<xsl:value-of select="parameters/spec/@value"/>
+				</td>
+			</tr>
+		</xsl:if>
 		<xsl:if test="parameters/context_match_type">
 			<tr>
 				<td><b>Context match type</b></td>

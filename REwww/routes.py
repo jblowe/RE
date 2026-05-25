@@ -18,7 +18,7 @@ import xslt
 import projects as proj_module
 import runlog
 import run_compare
-from utils import find_candidates
+from utils import find_candidates, spec_display, spec_for_storage
 
 bp = Blueprint('main', __name__)
 
@@ -85,7 +85,6 @@ def api_run():
     mel                = body.get('mel')   or None
     fuzzy              = body.get('fuzzy') or None
     upstream           = body.get('upstream') or None
-    context_match_type = body.get('context_match_type') or 'glyphs'
 
     if project == 'ROMANCE':
         recon = None
@@ -131,8 +130,7 @@ def api_run():
             load_hooks.load_hook(project_path)
             settings = read.read_settings(
                 project_path, project, recon,
-                mel_token=mel, fuzzy_token=fuzzy, upstream=upstream,
-                context_match_type=context_match_type)
+                mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
 
             # Attach syllable_canon to settings so it is available for
             # logging and serialize_stats.  ProjectSettings doesn't hold it;
@@ -143,15 +141,17 @@ def api_run():
                     settings.proto_languages[settings.upstream_target])
                 _params = read.read_correspondence_file(
                     _recon_path, settings.upstream_target,
-                    None, None, settings.context_match_type)
+                    None, None)
                 settings.syllable_canon = _params.syllable_canon
             except Exception:
                 pass
 
             try:
                 sc = settings.syllable_canon
+                run_info['context_match_type'] = sc.context_match_type
+                run_info['spec'] = spec_for_storage(sc)
                 print(f'context_match_type: {sc.context_match_type}')
-                print(f'spec (supra_segmentals): {", ".join(sc.supra_segmentals)}')
+                print(f'spec (supra_segmentals): {run_info["spec"]}')
             except Exception:
                 pass
 
@@ -326,11 +326,12 @@ def api_run():
                     'failures':     len(B.failures),
                     'has_coverage': bool(run_info['files'].get('coverage')),
                     'params': {
-                        'recon':              recon              or '',
-                        'mel':                mel                or '',
-                        'fuzzy':              fuzzy              or '',
-                        'upstream':           upstream           or '',
-                        'context_match_type': context_match_type or '',
+                        'recon':              recon    or '',
+                        'mel':                mel      or '',
+                        'fuzzy':              fuzzy    or '',
+                        'upstream':           upstream or '',
+                        'context_match_type': run_info.get('context_match_type', ''),
+                        'spec':               run_info.get('spec', ''),
                     },
                     'files': {
                         'sets':     sets_xml  or '',
@@ -354,13 +355,12 @@ def api_run():
 
     threading.Thread(target=do_run, daemon=True).start()
     return jsonify(
-        run_id             = run_id,
-        run_name           = run_name,
-        recon              = recon,
-        mel                = mel,
-        fuzzy              = fuzzy,
-        upstream           = upstream,
-        context_match_type = context_match_type,
+        run_id   = run_id,
+        run_name = run_name,
+        recon    = recon,
+        mel      = mel,
+        fuzzy    = fuzzy,
+        upstream = upstream,
     )
 
 
@@ -372,13 +372,16 @@ def api_poll(run_id):
         r = _runs.get(run_id)
     if r is None:
         return jsonify(error='unknown run'), 404
+    done = r['status'] == 'done'
     return jsonify(
-        status       = r['status'],
-        log          = r['log'],
-        error        = r['error'],
-        has_mel      = bool(r['files'].get('mel'))      if r['status'] == 'done' else None,
-        has_fuzzy    = bool(r['files'].get('fuzzy'))    if r['status'] == 'done' else None,
-        has_coverage = bool(r['files'].get('coverage')) if r['status'] == 'done' else None,
+        status              = r['status'],
+        log                 = r['log'],
+        error               = r['error'],
+        has_mel             = bool(r['files'].get('mel'))      if done else None,
+        has_fuzzy           = bool(r['files'].get('fuzzy'))    if done else None,
+        has_coverage        = bool(r['files'].get('coverage')) if done else None,
+        context_match_type  = r.get('context_match_type', '') if done else None,
+        spec                = r.get('spec', '')               if done else None,
     )
 
 
@@ -593,8 +596,8 @@ def api_save_toc(run_id):
     if 'context_match_type' in fields:
         ET.SubElement(params_el, 'context_match_type').set(
             'value', fields['context_match_type'])
-    for spec_el in list(orig_root.findall('parameters/spec')) + list(orig_root.findall('spec')):
-        params_el.append(copy.deepcopy(spec_el))
+    if 'spec' in fields:
+        ET.SubElement(params_el, 'spec').set('value', fields['spec'])
 
     if not dialects:
         seen: set = set()

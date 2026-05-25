@@ -127,16 +127,36 @@
                     </div>
                 </xsl:if>
 
-                <xsl:if test="parameters/context_match_type">
-                    <div class="mb-3">
-                        <label for="canon" class="form-label">context match type</label>
-                        <input type="text" class="form-control" id="context_match_type" name="context_match_type">
-                            <xsl:attribute name="value">
-                                <xsl:value-of select="parameters/context_match_type/@value"/>
-                            </xsl:attribute>
+                <div class="mb-3">
+                    <label for="spec" class="form-label">Supra-segmentals</label>
+                    <input type="text" class="form-control" id="spec" name="spec">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="parameters/spec/@value"/>
+                        </xsl:attribute>
+                    </input>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block">Context match type</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"
+                               name="context_match_type" id="cmt-constituent" value="constituent">
+                            <xsl:if test="not(parameters/context_match_type/@value = 'glyphs')">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
                         </input>
+                        <label class="form-check-label" for="cmt-constituent">constituent</label>
                     </div>
-                </xsl:if>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio"
+                               name="context_match_type" id="cmt-glyphs" value="glyphs">
+                            <xsl:if test="parameters/context_match_type/@value = 'glyphs'">
+                                <xsl:attribute name="checked">checked</xsl:attribute>
+                            </xsl:if>
+                        </input>
+                        <label class="form-check-label" for="cmt-glyphs">glyphs</label>
+                    </div>
+                </div>
 
                 <!-- Classes (supports parameters/class or direct class) -->
                 <xsl:if test="parameters/class or class">
