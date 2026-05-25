@@ -5,6 +5,7 @@ import lxml.etree as ET
 from xml.dom import minidom
 import RE
 import utils
+from utils import spec_display, spec_for_storage
 import inspect
 import pickle
 import json
@@ -24,7 +25,7 @@ def serialize_correspondence_file(filename, parameters):
     ET.SubElement(params, 'canon', name='syllabe',
                   value=syllable_canon.regex.pattern)
     ET.SubElement(params, 'spec', name='supra_segmentals',
-                  value=','.join(syllable_canon.supra_segmentals))
+                  value=spec_for_storage(syllable_canon))
     ET.SubElement(params, 'context_match_type', name='context_match_type',
                   value=syllable_canon.context_match_type)
     for correspondence in parameters.table.correspondences:
@@ -335,7 +336,7 @@ def serialize_stats(stats, settings, args, filename):
             ET.SubElement(settings_element, 'parm', attrib={
                 'key': 'context_match_type', 'value': str(sc.context_match_type)})
             ET.SubElement(settings_element, 'parm', attrib={
-                'key': 'spec', 'value': ', '.join(sc.supra_segmentals)})
+                'key': 'spec', 'value': spec_for_storage(sc)})
         except Exception:
             pass
     except:
