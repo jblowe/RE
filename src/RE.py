@@ -1033,7 +1033,12 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
         all_glosses = set()
         for support in projections.values():
             for supporting_form in support:
-                if isinstance(supporting_form, ModernForm):
+                # Mirror the isinstance check used in the MEL-matching loop below so
+                # that FuzzyForm / AlternateForm / Stage0Form glosses are also indexed.
+                # Without this, fuzzied forms whose glosses require normalization to
+                # match a MEL (e.g. "venir (hon.)" → MEL "venir") are silently missed
+                # because FuzzyForm is not a subclass of ModernForm.
+                if isinstance(supporting_form, (ModernForm, Stage0Form, AlternateForm)):
                     if supporting_form.gloss:
                         all_glosses.add(supporting_form.gloss)
         return all_glosses
