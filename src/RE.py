@@ -1079,6 +1079,7 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                     return form.actual.glyphs
                 return form.glyphs                   # plain ModernForm
 
+            rescued_ids = set()
             for group in distinct_mels.values():
                 # Signature set: (language, pre-fuzzy glyphs) for every matched
                 # form already in this MEL group.
@@ -1088,6 +1089,16 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                 for u in unmatched:
                     if (u.language, _pre_fuzzy_glyphs(u)) in sigs:
                         group.append(u)
+                        rescued_ids.add(id(u))
+            # Forms still in unmatched after the homophone rescue have no MEL
+            # match in this reconstruction and no matched homophone sibling.
+            # Emit them directly as singletons so they reach the Isolates
+            # output (they parsed — they are not failures).
+            for u in unmatched:
+                if id(u) not in rescued_ids:
+                    frozen_u = frozenset([u])
+                    statistics.singleton_support.append(
+                        (reconstruction, frozen_u, attested_forms(frozen_u), mel.default_mel))
         else:
             distinct_mels[mel.default_mel] = support
         for distinct_mel, support in distinct_mels.items():
@@ -1151,15 +1162,37 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     return uniques.values(), statistics
 
 def batch_upstream(lexicons, params, only_with_mel, root):
-    return pick_derivation(
-        *filter_subsets(
-            *create_sets(
-                *project_back(lexicons, params, Statistics()),
-                params.mels,
-                only_with_mel,
-                root),
-            root),
-            only_with_mel)
+    projections, statistics = project_back(lexicons, params, Statistics())
+
+    # Collect every original ModernForm that has at least one parse.
+    # These must all appear somewhere in the output (set / isolate / failure).
+    forms_in_projections = set()
+    for support in projections.values():
+        for sf in support:
+            forms_in_projections |= sf.attested_support
+
+    cognate_sets, statistics = create_sets(
+        projections, statistics, params.mels, only_with_mel, root)
+    cognate_sets, statistics = filter_subsets(cognate_sets, statistics, root)
+    final_sets, statistics = pick_derivation(cognate_sets, statistics, only_with_mel)
+
+    # ── Checksum (invariant, not rescue) ──────────────────────────────────────
+    # create_sets now emits every parsed-but-unmatched form directly to
+    # singleton_support, so the residue must be empty.  If it isn't, the
+    # pipeline has a new gap and we want to know about it loudly.
+    forms_accounted_for = set(statistics.failed_parses)
+    for (_, _, attested_support, _) in final_sets:
+        forms_accounted_for |= attested_support
+    for (_, _, attested_support, _) in statistics.singleton_support:
+        forms_accounted_for |= attested_support
+
+    silent_drops = forms_in_projections - forms_accounted_for
+    if silent_drops:
+        for form in sorted(silent_drops, key=lambda f: (f.language, f.glyphs)):
+            print(f'WARNING: {form.language} {form.glyphs!r} ({form.gloss!r}) '
+                  f'parsed but reached no output bucket — pipeline gap!')
+
+    return final_sets, statistics
 
 def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
     # batch upstream repeatedly up the action graph tree from leaves,
