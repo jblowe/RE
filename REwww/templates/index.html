@@ -5,9 +5,10 @@
 
 <!-- ── Navbar ── -->
 <nav class="navbar navbar-dark py-2 px-3 mb-0" style="background-color: #EC5800;">
-  <span class="navbar-brand mb-0">
+  <a class="navbar-brand mb-0" href="/"
+     style="color:#fff;text-decoration:none;cursor:pointer">
     <i class="fas fa-project-diagram mr-3">&nbsp;</i>The Reconstruction Engine
-  </span>
+  </a>
   <div class="d-flex align-items-center ml-auto">
     <span id="nav-about-btn" class="text-white" onclick="showAbout()"
        style="font-size: 1rem; font-weight: 600; letter-spacing: .02em; margin-right: 3em; cursor: pointer;">About</span>
@@ -29,6 +30,10 @@
     <li class="nav-item">
       <a class="nav-link active" id="tab-projects-nav"
          data-re-tab href="#tab-projects" role="tab">Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" id="tab-research-nav"
+         data-re-tab href="#tab-research" role="tab">Research</a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" id="tab-parameters-nav"
@@ -66,11 +71,101 @@
       <a class="nav-link" id="tab-log-nav"
          data-re-tab href="#tab-log" role="tab">Log</a>
     </li>
+    <li class="nav-item ml-auto" id="nav-batch-upstream"
+        style="padding-bottom:3px;display:none">
+      <button id="btn-run-again" class="btn btn-sm btn-primary" disabled
+              title="Re-run current project upstream with the same parameters">
+        <i class="fas fa-redo"></i> Batch Upstream
+      </button>
+    </li>
   </ul>
 
   <div class="tab-content" id="main-tab-content">
 
     {% include '_projects_pane.html' %}
+
+    <!-- ══ RESEARCH TAB ═══════════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-research" role="tabpanel">
+
+      <!-- Grid: Parameters top-left, Fuzzy top-right, Sets full-width bottom.
+           Starts in no-fuzzy (single-column) mode; JS toggles the class. -->
+      <div id="research-grid" class="no-fuzzy">
+
+        <!-- ── Parameters panel ── -->
+        <div id="research-params-panel">
+          <div class="research-panel-header">
+            <span class="research-panel-title">Parameters</span>
+            <button class="btn btn-sm btn-outline-secondary"
+                    id="btn-freq-research-parameters" style="display:none">
+              <i class="fas fa-chart-bar"></i> Freq
+            </button>
+            <button class="btn btn-sm btn-outline-secondary"
+                    id="btn-edit-research-parameters" style="display:none">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-success"
+                    id="btn-save-research-parameters" style="display:none">
+              <i class="fas fa-save"></i> Save
+            </button>
+            <button class="btn btn-sm btn-secondary"
+                    id="btn-cancel-research-parameters" style="display:none">
+              Cancel
+            </button>
+          </div>
+          <div class="content-area" id="research-parameters-view-content">
+            <p class="text-muted">Run a project to populate this pane.</p>
+          </div>
+        </div><!-- /research-params-panel -->
+
+        <!-- ── Fuzzy panel (hidden until run has a Fuzzy file) ── -->
+        <div id="research-fuzzy-panel" style="display:none">
+          <div class="research-panel-header">
+            <span class="research-panel-title">Fuzzy</span>
+            <button class="btn btn-sm btn-outline-secondary"
+                    id="btn-edit-research-fuzzy" style="display:none">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-success"
+                    id="btn-save-research-fuzzy" style="display:none">
+              <i class="fas fa-save"></i> Save
+            </button>
+            <button class="btn btn-sm btn-secondary"
+                    id="btn-cancel-research-fuzzy" style="display:none">
+              Cancel
+            </button>
+          </div>
+          <div class="content-area" id="research-fuzzy-view-content">
+            <p class="text-muted">No Fuzzy file selected.</p>
+          </div>
+        </div><!-- /research-fuzzy-panel -->
+
+        <!-- ── Sets panel ── -->
+        <div id="research-sets-panel">
+          <div class="research-panel-header" id="research-sets-header">
+            <span class="research-panel-title">Sets</span>
+            <div class="btn-group btn-group-sm" id="research-sets-mode-btns" role="group">
+              <button type="button" class="btn btn-outline-secondary"
+                      data-mode="paragraph">Para</button>
+              <button type="button" class="btn btn-outline-secondary active"
+                      data-mode="tabular">Tab</button>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary"
+                    id="btn-toggle-research-glosses">Show glosses</button>
+            <!-- Stats and jump links populated by postProcessResearch() -->
+            <button id="research-link-sets-top" class="btn btn-sm btn-outline-secondary"
+                    style="display:none"></button>
+            <button id="research-link-isolates" class="btn btn-sm btn-outline-secondary"
+                    style="display:none"></button>
+            <button id="research-link-failures" class="btn btn-sm btn-outline-secondary"
+                    style="display:none"></button>
+          </div>
+          <div class="content-area glosses-hidden" id="research-sets-content">
+            <p class="text-muted">Run a project to populate this pane.</p>
+          </div>
+        </div><!-- /research-sets-panel -->
+
+      </div><!-- /research-grid -->
+    </div><!-- /tab-research -->
 
     <!-- ══ PARAMETERS TAB ════════════════════════════════════════════════════ -->
     <div class="tab-pane fade" id="tab-parameters" role="tabpanel">

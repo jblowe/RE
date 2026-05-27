@@ -7,6 +7,8 @@
 /* ── Layout ─────────────────────────────────────────────────────────────── */
 body { font-size: 0.875rem; background: #f8f9fa; }
 .navbar-brand { font-weight: 600; letter-spacing: .03em; }
+/* Sticky banner — stays visible on all panes regardless of scroll */
+.navbar { position: sticky; top: 0; z-index: 1030; }
 
 /* ── Log tab ─────────────────────────────────────────────────────────────── */
 #run-log {
@@ -57,8 +59,10 @@ body { font-size: 0.875rem; background: #f8f9fa; }
   white-space: normal;
 }
 .projects-table .project-name { white-space: nowrap; }
-/* Keep tables tidy */
+/* Keep tables tidy; reduce vertical padding for a denser layout */
 .table td, .table th { vertical-align: middle; }
+.content-area .table td,
+.content-area .table th { padding: .15rem .3rem !important; }
 
 /* ── Tabular sets: column sizing ─────────────────────────────────────────── */
 .content-area .col-num  { width: 2.5rem; white-space: nowrap; }
@@ -71,7 +75,8 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .content-area .col-gloss { max-width: 300px; }
 
 /* ── Tabular sets: gloss visibility toggle (default: hidden) ─────────────── */
-#sets-content.glosses-hidden .rfx-gloss { display: none; }
+#sets-content.glosses-hidden .rfx-gloss,
+#research-sets-content.glosses-hidden .rfx-gloss { display: none; }
 
 /* ── Theme: active tab ───────────────────────────────────────────────────── */
 .nav-tabs .nav-link { padding-top: calc(.5rem - 2px); border-top: 2px solid transparent; }
@@ -90,6 +95,12 @@ body { font-size: 0.875rem; background: #f8f9fa; }
   color: #7a3000;
   margin: 1rem 0 .4rem;
 }
+
+/* ── Macro-classes table: fill available width and wrap member lists ─────── */
+.content-area table.toc-classes-table { width: 100% !important; table-layout: fixed; }
+.content-area table.toc-classes-table th:first-child,
+.content-area table.toc-classes-table td:first-child { width: 3rem; white-space: nowrap; }
+.content-area table.toc-classes-table td:last-child   { overflow-wrap: break-word; word-break: break-word; }
 
 /* ── MEL view/edit: glosses column is unrestricted width ────────────────── */
 .content-area .mel-gl-col { max-width: none; }
@@ -137,6 +148,13 @@ body { font-size: 0.875rem; background: #f8f9fa; }
   border-color: #EC5800;
   color: #fff;
 }
+
+/* ── Cognate sets table ──────────────────────────────────────────────────── */
+/* Match the row compactness of the ToC table: same font-size and padding.
+   Zero div margins so block wrappers in language cells don't add extra height. */
+.content-area table.sets td,
+.content-area table.sets th { padding: .15rem .3rem !important; font-size: 0.8rem; }
+.content-area table.sets td > div { margin: 0; }
 
 /* ── Table of correspondences (view) ─────────────────────────────────────── */
 .toc-view-table td, .toc-view-table th { padding: .15rem .3rem !important; font-size: 0.8rem; }

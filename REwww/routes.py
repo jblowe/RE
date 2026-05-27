@@ -18,7 +18,9 @@ import xslt
 import projects as proj_module
 import runlog
 import run_compare
-from utils import find_candidates, spec_display, spec_for_storage
+from utils import (find_candidates, spec_display, spec_for_storage,
+                   read_protolanguage_from_correspondences,
+                   list_attested_languages)
 
 bp = Blueprint('main', __name__)
 
@@ -31,6 +33,41 @@ _runs_lock  = threading.Lock()
 PROJECTS_TOML: str = ''
 
 
+# ── Upstream suggestion ────────────────────────────────────────────────────────
+
+def _upstream_suggestion(project_path, project_name):
+    """Return a suggested upstream string inferred from the project directory.
+
+    Walks the project directory to find the first correspondences file,
+    reads the proto-language name from it (falling back to the first four
+    capitalised characters of the project name), then discovers the attested
+    daughter-language codes from *.data.xml filenames.
+
+    Returns a string of the form  "ProtoLg: Lg1, Lg2, ..., LgN"
+    or an empty string if the project has no usable data.
+    """
+    try:
+        recon_file = None
+        for root_dir, _dirs, files in os.walk(project_path):
+            for f in sorted(files):
+                if f.endswith('correspondences.xml'):
+                    recon_file = os.path.join(root_dir, f)
+                    break
+            if recon_file:
+                break
+
+        proto = read_protolanguage_from_correspondences(recon_file) if recon_file else None
+        if not proto:
+            proto = project_name.capitalize()[:4]
+
+        langs = list_attested_languages(project_path)
+        if langs:
+            return f'{proto}: {", ".join(langs)}'
+    except Exception:
+        pass
+    return ''
+
+
 # ── Main page ──────────────────────────────────────────────────────────────────
 
 @bp.route('/')
@@ -41,10 +78,11 @@ def index():
         if not os.path.isdir(path):
             continue
         project_data[name] = {
-            'path':    path,
-            'recons':  find_candidates(path, 'correspondences.xml'),
-            'mels':    find_candidates(path, 'mel.xml'),
-            'fuzzies': find_candidates(path, 'fuz.xml'),
+            'path':               path,
+            'recons':             find_candidates(path, 'correspondences.xml'),
+            'mels':               find_candidates(path, 'mel.xml'),
+            'fuzzies':            find_candidates(path, 'fuz.xml'),
+            'upstream_suggestion': _upstream_suggestion(path, name),
         }
     history_counts = {name: runlog.count_runs(name) for name in project_data}
     return render_template('index.html',
@@ -63,11 +101,12 @@ def api_projects():
         if not os.path.isdir(path):
             continue
         data[name] = {
-            'path':          path,
-            'recons':        find_candidates(path, 'correspondences.xml'),
-            'mels':          find_candidates(path, 'mel.xml'),
-            'fuzzies':       find_candidates(path, 'fuz.xml'),
-            'history_count': runlog.count_runs(name),
+            'path':               path,
+            'recons':             find_candidates(path, 'correspondences.xml'),
+            'mels':               find_candidates(path, 'mel.xml'),
+            'fuzzies':            find_candidates(path, 'fuz.xml'),
+            'history_count':      runlog.count_runs(name),
+            'upstream_suggestion': _upstream_suggestion(path, name),
         }
     return jsonify(data)
 
@@ -337,11 +376,12 @@ def api_run():
                         'sets':     sets_xml  or '',
                         'stats':    stats_xml or '',
                         'log':      log_txt   or '',
-                        'mel':      run_info['files'].get('mel')      or '',
-                        'fuzzy':    run_info['files'].get('fuzzy')    or '',
-                        'coverage': run_info['files'].get('coverage') or '',
-                        'recon':    run_info['files'].get('recon')    or [],
-                        'data':     dict(run_info['files'].get('data') or {}),
+                        'mel':       run_info['files'].get('mel')       or '',
+                        'fuzzy':     run_info['files'].get('fuzzy')     or '',
+                        'fuzzy_cov': run_info['files'].get('fuzzy_cov') or '',
+                        'coverage':  run_info['files'].get('coverage')  or '',
+                        'recon':     run_info['files'].get('recon')     or [],
+                        'data':      dict(run_info['files'].get('data') or {}),
                     },
                 })
             except Exception:
@@ -782,6 +822,15 @@ def api_load_run():
             except OSError:
                 pass
         data = f.get('data') or {}
+        # Resolve fuzzy_cov: use stored path if present, else derive from
+        # the sets filename (handles records written before this was persisted).
+        fuzzy_cov = f.get('fuzzy_cov') or None
+        if not fuzzy_cov:
+            sets_path = f.get('sets') or ''
+            if sets_path.endswith('.sets.xml'):
+                candidate = sets_path[:-len('.sets.xml')] + '.fuzzy_cov.xml'
+                if os.path.isfile(candidate):
+                    fuzzy_cov = candidate
         r = {
             'id':       run_id,
             'project':  record['project'],
@@ -790,14 +839,15 @@ def api_load_run():
             'log':      log_lines,
             'error':    None,
             'files': {
-                'sets':     f.get('sets')     or None,
-                'stats':    f.get('stats')    or None,
-                'log':      log_path          or None,
-                'recon':    f.get('recon')    or [],
-                'data':     data,
-                'mel':      f.get('mel')      or None,
-                'fuzzy':    f.get('fuzzy')    or None,
-                'coverage': f.get('coverage') or None,
+                'sets':      f.get('sets')     or None,
+                'stats':     f.get('stats')    or None,
+                'log':       log_path          or None,
+                'recon':     f.get('recon')    or [],
+                'data':      data,
+                'mel':       f.get('mel')      or None,
+                'fuzzy':     f.get('fuzzy')    or None,
+                'fuzzy_cov': fuzzy_cov,
+                'coverage':  f.get('coverage') or None,
             },
         }
         with _runs_lock:

@@ -7,6 +7,53 @@
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
+  <!--
+    linkify-rcn: split a space-separated rcn string into individual
+    <a class="rcn-link"> elements so each correspondence ID is clickable.
+    Shared by sets2tabular.xsl and sets2html.xsl via xsl:include.
+  -->
+  <!--
+    sets-stats-toolbar: renders the n-sets / isolates / failures button bar
+    that appears at the top of every Sets view (both paragraph and tabular).
+    Defined here so sets2html.xsl and sets2tabular.xsl share one copy.
+    Buttons carry data-target (named anchor to scroll to) and data-count
+    (bare integer) so JavaScript can wire up scrollIntoView without parsing
+    text content, and extract counts for the Research panel header.
+  -->
+  <xsl:template name="sets-stats-toolbar">
+    <xsl:param name="n-sets"/>
+    <xsl:param name="n-isolates"/>
+    <xsl:param name="n-failures"/>
+    <xsl:param name="createdat"/>
+    <div class="tab-toolbar">
+      <button class="btn btn-sm btn-outline-secondary sets-nav-btn"
+              data-target="sets-top" data-count="{$n-sets}"><xsl:value-of select="$n-sets"/><xsl:text> sets</xsl:text></button>
+      <button class="btn btn-sm btn-outline-secondary sets-nav-btn"
+              data-target="isolates" data-count="{$n-isolates}"><xsl:value-of select="$n-isolates"/><xsl:text> isolates</xsl:text></button>
+      <button class="btn btn-sm btn-outline-secondary sets-nav-btn"
+              data-target="failures" data-count="{$n-failures}"><xsl:value-of select="$n-failures"/><xsl:text> failures</xsl:text></button>
+      <span class="text-muted" style="font-size:0.85em; margin-left:.5rem;">created at: <xsl:value-of select="$createdat"/></span>
+    </div>
+  </xsl:template>
+
+  <xsl:template name="linkify-rcn">
+    <xsl:param name="text"/>
+    <xsl:variable name="t" select="normalize-space($text)"/>
+    <xsl:choose>
+      <xsl:when test="contains($t, ' ')">
+        <xsl:variable name="token" select="substring-before($t, ' ')"/>
+        <a class="rcn-link" href="#" data-corr-id="{$token}"><xsl:value-of select="$token"/></a>
+        <xsl:text> </xsl:text>
+        <xsl:call-template name="linkify-rcn">
+          <xsl:with-param name="text" select="normalize-space(substring-after($t, ' '))"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:when test="$t != ''">
+        <a class="rcn-link" href="#" data-corr-id="{$t}"><xsl:value-of select="$t"/></a>
+      </xsl:when>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="isolates">
     <a name="isolates"/>
     <style>
@@ -76,7 +123,7 @@
                   </xsl:for-each>
                 </xsl:attribute>
               </xsl:if>
-              <div class="rcn"><xsl:value-of select="recon[1]/rcn"/></div>
+              <div class="rcn"><xsl:call-template name="linkify-rcn"><xsl:with-param name="text" select="recon[1]/rcn"/></xsl:call-template></div>
               <xsl:if test="count(recon) > 1">
                 <small style="color:#888;cursor:help;">(+<xsl:value-of select="count(recon)-1"/> more)</small>
               </xsl:if>

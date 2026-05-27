@@ -15,29 +15,13 @@
   <xsl:template match="/">
     <div>
       <h5>Regular cognate sets</h5>
-      <div style="float: left; width:60px;">
-        <b>n =
-          <xsl:value-of select="count(.//sets/set)"/>
-        </b>
-      </div>
-      <div style="float: left; width:300px;">
-        <i>created at:
-          <xsl:value-of select=".//createdat"/>
-        </i>
-      </div>
-      <div style="float: left; width:180px;">
-        <a href="#isolates">
-          <xsl:value-of select="count(.//isolates/rfx)"/>
-          isolates
-        </a>
-      </div>
-      <div style="float: left; width:180px;">
-        <a href="#failures">
-          <xsl:value-of select="count(.//failures/rfx)"/>
-          failures
-        </a>
-      </div>
-      <div style="clear:both;"></div>
+      <xsl:call-template name="sets-stats-toolbar">
+        <xsl:with-param name="n-sets"     select="count(.//sets/set)"/>
+        <xsl:with-param name="n-isolates" select="count(.//isolates/rfx)"/>
+        <xsl:with-param name="n-failures" select="count(.//failures/rfx)"/>
+        <xsl:with-param name="createdat"  select=".//createdat"/>
+      </xsl:call-template>
+      <a name="sets-top"/>
       <xsl:apply-templates select=".//sets"/>
       <xsl:apply-templates select=".//isolates"/>
       <xsl:apply-templates select=".//failures"/>
@@ -72,7 +56,7 @@
             <div class="pgl">
               <xsl:value-of select="pgl"/>
             </div>
-            <div class="rcn">[<xsl:value-of select="rcn"/>]
+            <div class="rcn">[<xsl:call-template name="linkify-rcn"><xsl:with-param name="text" select="rcn"/></xsl:call-template>]
             </div>
           </xsl:otherwise>
         </xsl:choose>

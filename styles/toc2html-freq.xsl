@@ -19,6 +19,52 @@
   <xsl:apply-templates select=".//tableOfCorr"/>
 </xsl:template>
 
+<!-- Recursive template: tokenize comma-separated class @value, look up
+     each member's total freq (sum of @freq across all corr rows whose
+     proto text equals this member), and render a coloured span + subscript
+     count (when freq > 1) using the same conventions as the ToC seg cells. -->
+<xsl:template name="class-member-spans">
+  <xsl:param name="text"/>        <!-- remaining comma-separated members -->
+  <xsl:param name="all-corrs"/>   <!-- node-set of all corr elements      -->
+  <xsl:variable name="t" select="normalize-space($text)"/>
+  <xsl:choose>
+    <xsl:when test="contains($t, ',')">
+      <xsl:variable name="token" select="normalize-space(substring-before($t, ','))"/>
+      <xsl:call-template name="render-class-member">
+        <xsl:with-param name="token"      select="$token"/>
+        <xsl:with-param name="all-corrs" select="$all-corrs"/>
+      </xsl:call-template>
+      <xsl:text>, </xsl:text>
+      <xsl:call-template name="class-member-spans">
+        <xsl:with-param name="text"      select="normalize-space(substring-after($t, ','))"/>
+        <xsl:with-param name="all-corrs" select="$all-corrs"/>
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:when test="$t != ''">
+      <xsl:call-template name="render-class-member">
+        <xsl:with-param name="token"      select="$t"/>
+        <xsl:with-param name="all-corrs" select="$all-corrs"/>
+      </xsl:call-template>
+    </xsl:when>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template name="render-class-member">
+  <xsl:param name="token"/>
+  <xsl:param name="all-corrs"/>
+  <xsl:variable name="freq"
+    select="sum($all-corrs[proto = $token]/@freq)"/>
+  <xsl:variable name="span-style">
+    <xsl:call-template name="freq-style">
+      <xsl:with-param name="freq" select="$freq"/>
+    </xsl:call-template>
+  </xsl:variable>
+  <span style="{$span-style}"><xsl:value-of select="$token"/></span>
+  <xsl:if test="number($freq) > 1">
+    <sub class="cov-uses">&#160;<xsl:value-of select="$freq"/></sub>
+  </xsl:if>
+</xsl:template>
+
 <xsl:template match="tableOfCorr">
   <div>
     <h6>Parameters</h6>
@@ -39,7 +85,7 @@
     <p/>
     <h6>Macro-classes (used in Contexts)</h6>
     <div>
-      <table class="table table-sm table-striped sortable">
+      <table class="table table-sm table-striped sortable toc-classes-table">
         <thead>
           <tr>
             <th>Class</th>
@@ -49,7 +95,12 @@
         <xsl:for-each select="parameters/class">
           <tr>
             <td><xsl:value-of select="@name"/></td>
-            <td><xsl:value-of select="@value"/></td>
+            <td>
+              <xsl:call-template name="class-member-spans">
+                <xsl:with-param name="text"      select="@value"/>
+                <xsl:with-param name="all-corrs" select="../../corr"/>
+              </xsl:call-template>
+            </td>
           </tr>
         </xsl:for-each>
       </table>
@@ -80,7 +131,7 @@
         </thead>
         <xsl:for-each select="corr">
           <xsl:variable name="row-freq" select="@freq"/>
-          <tr>
+          <tr id="toc-corr-{@num}">
             <!-- "uses" column: coloured by row frequency -->
             <xsl:variable name="uses-style">
               <xsl:call-template name="freq-style">

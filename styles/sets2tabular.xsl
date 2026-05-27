@@ -17,32 +17,17 @@
       <div class="row">
         <div class="col">
           <h5>Regular cognate sets</h5>
-          <div style="float: left; width:60px;">
-            <b>n =
-              <xsl:value-of select="count(.//sets/set)"/>
-            </b>
-          </div>
-          <div style="float: left; width:300px;">
-            <i>created at:
-              <xsl:value-of select=".//createdat"/>
-            </i>
-          </div>
-          <div style="float: left; width:180px;">
-            <a href="#isolates">
-              <xsl:value-of select="count(.//isolates/rfx)"/>
-              isolates
-            </a>
-          </div>
-          <div style="float: left; width:180px;">
-            <a href="#failures">
-              <xsl:value-of select="count(.//failures/rfx)"/>
-              failures
-            </a>
-          </div>
+          <xsl:call-template name="sets-stats-toolbar">
+            <xsl:with-param name="n-sets"     select="count(.//sets/set)"/>
+            <xsl:with-param name="n-isolates" select="count(.//isolates/rfx)"/>
+            <xsl:with-param name="n-failures" select="count(.//failures/rfx)"/>
+            <xsl:with-param name="createdat"  select=".//createdat"/>
+          </xsl:call-template>
         </div>
       </div>
       <div class="row">
         <div class="col">
+          <a name="sets-top"/>
           <div class="re-scroll-table">
             <table class="table table-sm table-hover table-bordered sets sortable">
               <thead>
@@ -113,7 +98,9 @@
                     <xsl:value-of select="."/>
                   </xsl:for-each>
                 </xsl:attribute>
-                <xsl:value-of select="multi/rcn"/>
+                <xsl:call-template name="linkify-rcn">
+                  <xsl:with-param name="text" select="multi/rcn"/>
+                </xsl:call-template>
               </span>
             </td>
           </xsl:when>
@@ -125,7 +112,9 @@
               <xsl:value-of select="pfm"/>
             </td>
             <td class="col-rcn">
-              <xsl:value-of select="rcn"/>
+              <xsl:call-template name="linkify-rcn">
+                <xsl:with-param name="text" select="rcn"/>
+              </xsl:call-template>
             </td>
           </xsl:otherwise>
         </xsl:choose>
@@ -191,7 +180,7 @@
       <div class="pgl">
         <xsl:value-of select="pgl"/>
       </div>
-      <div class="rcn">[<xsl:value-of select="rcn"/>]
+      <div class="rcn">[<xsl:call-template name="linkify-rcn"><xsl:with-param name="text" select="rcn"/></xsl:call-template>]
       </div>
     </td>
   </xsl:template>

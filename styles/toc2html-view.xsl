@@ -42,7 +42,7 @@
 		<p/>
 		<h6>Macro-classes (used in Contexts)</h6>
 		<div>
-		<table class="table table-sm table-striped sortable">
+		<table class="table table-sm table-striped sortable toc-classes-table">
 			<thead>
 				<tr>
 					<th>Class</th>
@@ -52,7 +52,7 @@
 		<xsl:for-each select="parameters/class">
 			<tr>
 				<td><xsl:value-of select="@name"/></td>
-				<td class="col-gloss"><xsl:value-of select="@value"/></td>
+				<td><xsl:value-of select="@value"/></td>
 			</tr>
 		</xsl:for-each>
 		</table>
@@ -73,7 +73,7 @@
 				</tr>
 			</thead>
 			<xsl:for-each select="corr">
-				<tr>
+				<tr id="toc-corr-{@num}">
 					<td><xsl:value-of select="@num"/></td>
 					<td><xsl:value-of select="proto"/></td>
 					<td><xsl:value-of select="proto/@syll"/></td>

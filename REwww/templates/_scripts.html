@@ -9,6 +9,85 @@
   table.sortable thead th::after { content: ' \00a0\25bd'; opacity: 0.35; font-size: .7em; }
   table.sortable thead th.sort-asc::after  { content: ' \25b2'; opacity: 1; }
   table.sortable thead th.sort-desc::after { content: ' \25bc'; opacity: 1; }
+
+  /* ── Research pane ─────────────────────────────────────────────────────── */
+  #research-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "params fuzzy" "sets sets";
+    height: calc(100vh - 108px);  /* navbar + tabs only — no toolbar row */
+    gap: 4px;
+    margin-top: 4px;
+  }
+  #research-grid.no-fuzzy {
+    grid-template-columns: 1fr;
+    grid-template-areas: "params" "sets";
+  }
+  #research-params-panel { grid-area: params; }
+  #research-fuzzy-panel  { grid-area: fuzzy; }
+  #research-sets-panel   { grid-area: sets; }
+
+  /* Each panel is a flex column: fixed header + scrolling content */
+  #research-params-panel,
+  #research-fuzzy-panel,
+  #research-sets-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+  }
+
+  /* Panel header bar — contains title + controls */
+  .research-panel-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .3rem;
+    padding: .3rem .6rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-size: .875rem;
+  }
+  .research-panel-title {
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: .15rem;
+  }
+
+  /* Content areas inside research panels scroll, filling the flex remainder */
+  #research-parameters-view-content,
+  #research-fuzzy-view-content,
+  #research-sets-content {
+    flex: 1;
+    overflow: auto;
+    min-height: 0;   /* required for flex children to shrink below content size */
+    padding: .5rem;
+  }
+
+  /* Section headers within the Sets content area are sticky as you scroll */
+  #research-sets-content h5 {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 5;
+    padding: .2rem 0;
+    margin-top: .2rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  /* ── rcn → ToC cross-links ──────────────────────────────────────────────── */
+  a.rcn-link {
+    color: inherit;
+    text-decoration: underline dotted;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  a.rcn-link:hover { color: #EC5800; }
+
+  .toc-row-highlight { background-color: #fff3cd !important; }
 </style>
 <script>
 /* Vanilla table sorter — works on any table.sortable, including dynamically
@@ -52,6 +131,8 @@ let currentRunName = null;
 let currentProject = null;
 let pollTimer      = null;
 let logLinesShown  = 0;
+let researchHasFuzzy = false;  // true when current run has a Fuzzy file
+let runFromResearch  = false;  // true when Run Again was clicked from Research
 
 /* ── About panel toggle ── */
 function showAbout() {
@@ -73,6 +154,22 @@ function setTabEnabled(tabNavId, enabled) {
   if (enabled) link.classList.remove('disabled');
   else         link.classList.add('disabled');
 }
+
+/* Show or hide the non-Projects result tabs and the Batch Upstream button.
+   Called with false on page load (Projects, no run) and whenever the user
+   returns to Projects with no run loaded; called with true as soon as any
+   run is loaded or any other tab is activated. */
+function setRunTabsVisible(visible) {
+  ['tab-research-nav','tab-parameters-nav','tab-sets-nav',
+   'tab-stats-nav','tab-lexicons-nav'].forEach(navId => {
+    const li = document.getElementById(navId);
+    if (li) li.closest('li').style.display = visible ? '' : 'none';
+  });
+  const ctrl = document.getElementById('nav-batch-upstream');
+  if (ctrl) ctrl.style.display = visible ? '' : 'none';
+}
+/* Initial state: Projects tab active, no run loaded → hide result tabs */
+setRunTabsVisible(false);
 
 /* Custom tab switcher — avoids Bootstrap tab plugin quirks with
    dynamically-enabled tabs.  All nav links carry data-re-tab (not
@@ -106,8 +203,201 @@ function loadTabContent(tab, mode) {
   viewEl.innerHTML = `<p class="text-muted">${spinnerHtml()}Loading…</p>`;
   fetch(url)
     .then(r => r.text())
-    .then(html => { viewEl.innerHTML = html; })
+    .then(html => {
+      viewEl.innerHTML = html;
+      if (tab === 'sets') postProcessSets(viewEl);
+    })
     .catch(e  => { viewEl.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+/* Load one Research sub-pane: apiTab is the /api/tab/ endpoint name,
+   targetId is the explicit content-div ID to populate.
+   After loading, postProcessResearch strips the XSLT-generated section
+   header (now shown in the panel's own header bar) and wires jump links. */
+function loadResearchContent(apiTab, targetId, mode) {
+  if (!currentRunId) return;
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  el.innerHTML = `<p class="text-muted">${spinnerHtml()}Loading…</p>`;
+  fetch(`/api/tab/${currentRunId}/${apiTab}?mode=${mode || 'paragraph'}`)
+    .then(r => r.text())
+    .then(html => {
+      el.innerHTML = html;
+      postProcessResearch(apiTab);
+    })
+    .catch(e  => { el.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+function loadResearchPane() {
+  if (!currentRunId) return;
+  /* Reset Sets panel header buttons before new content arrives */
+  ['research-link-sets-top','research-link-isolates','research-link-failures']
+    .forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.style.display = 'none'; el.textContent = ''; }
+    });
+  loadResearchContent('parameters', 'research-parameters-view-content');
+  loadResearchContent('sets', 'research-sets-content', modes.sets || 'tabular');
+  if (researchHasFuzzy) {
+    loadResearchContent('fuzzy', 'research-fuzzy-view-content');
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   rcn → ToC cross-linking
+   toc2html-view.xsl stamps id="toc-corr-{num}" on each ToC body row.
+   sets2tabular.xsl / sets2html.xsl / sets-isolates-failures.xsl emit
+   <a class="rcn-link" data-corr-id="…"> for every rcn token.
+   The handlers below scroll to the matching row and flash it.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Currently highlighted ToC row — cleared when a new link is clicked or
+   the user clicks anywhere outside an rcn-link. */
+let _highlightedTocRow = null;
+
+/* Scroll containerEl to the ToC row for corrId and highlight it persistently.
+   If containerEl is independently scrollable (Research sub-panel) the scroll
+   stays within it; otherwise falls back to page-level scrollIntoView. */
+function scrollToTocCorr(corrId, containerEl) {
+  if (!containerEl) return;
+  const target = containerEl.querySelector('#' + CSS.escape('toc-corr-' + corrId));
+  if (!target) return;
+  if (containerEl.scrollHeight > containerEl.clientHeight + 1) {
+    /* Contained scroll — Research Parameters sub-panel */
+    const cRect = containerEl.getBoundingClientRect();
+    const tRect = target.getBoundingClientRect();
+    containerEl.scrollBy({ top: tRect.top - cRect.top - containerEl.clientHeight / 2 + tRect.height / 2,
+                           behavior: 'smooth' });
+  } else {
+    /* Page-level scroll — standalone Parameters tab */
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  /* Clear previous highlight, set new one */
+  if (_highlightedTocRow) _highlightedTocRow.classList.remove('toc-row-highlight');
+  _highlightedTocRow = target;
+  target.classList.add('toc-row-highlight');
+}
+
+/* Clear the highlight when the user clicks anywhere other than an rcn-link. */
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('a.rcn-link') && _highlightedTocRow) {
+    _highlightedTocRow.classList.remove('toc-row-highlight');
+    _highlightedTocRow = null;
+  }
+});
+
+/* Research pane: rcn-link click → scroll within the Parameters sub-panel. */
+document.getElementById('research-sets-content').addEventListener('click', function (e) {
+  const link = e.target.closest('a.rcn-link');
+  if (!link) return;
+  e.preventDefault();
+  scrollToTocCorr(link.dataset.corrId,
+                  document.getElementById('research-parameters-view-content'));
+});
+
+/* Standalone Sets tab: rcn-link click → switch to Parameters tab then scroll. */
+document.getElementById('sets-content').addEventListener('click', function (e) {
+  const link = e.target.closest('a.rcn-link');
+  if (!link) return;
+  e.preventDefault();
+  const corrId = link.dataset.corrId;
+  activateTab('tab-parameters');
+  scrollToTocCorr(corrId, document.getElementById('parameters-view-content'));
+});
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Research post-processing
+   Strips the XSLT-generated section title from each sub-pane's content
+   (it is already shown in the panel header bar) and, for Sets, extracts
+   counts/jump-link wiring from the stats block the XSLT renders at the top.
+   ══════════════════════════════════════════════════════════════════════════ */
+function postProcessResearch(tab) {
+  if (tab === 'parameters') {
+    const content = document.getElementById('research-parameters-view-content');
+    if (!content) return;
+    /* Remove the "Parameters" heading generated by toc2html-view.xsl */
+    const h = content.querySelector('h6, h5');
+    if (h) h.remove();
+
+  } else if (tab === 'fuzzy') {
+    const content = document.getElementById('research-fuzzy-view-content');
+    if (!content) return;
+    /* Remove the "Fuzzy" heading generated by fuzzy2html.xsl */
+    const h = content.querySelector('h4, h5');
+    if (h) h.remove();
+
+  } else if (tab === 'sets') {
+    const content = document.getElementById('research-sets-content');
+    if (!content) return;
+
+    /* ── Extract counts (from data-count attrs) and wire panel jump buttons ── */
+    const isoBtn   = content.querySelector('button[data-target="isolates"]');
+    const failBtn  = content.querySelector('button[data-target="failures"]');
+    const setsBtn  = content.querySelector('button[data-target="sets-top"]');
+    const setsJump = document.getElementById('research-link-sets-top');
+    const isoJump  = document.getElementById('research-link-isolates');
+    const failJump = document.getElementById('research-link-failures');
+
+    if (setsBtn && setsJump) {
+      setsJump.textContent = setsBtn.dataset.count + ' sets';
+      setsJump.style.display = '';
+      setsJump.onclick = () => {
+        const target = content.querySelector('[name="sets-top"]');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const st = content.querySelector('.re-scroll-table');
+        if (st) st.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+    }
+    if (isoBtn && isoJump) {
+      isoJump.textContent = isoBtn.dataset.count + ' isolates';
+      isoJump.style.display = '';
+      isoJump.onclick = () => {
+        const target = content.querySelector('[name="isolates"]');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+    }
+    if (failBtn && failJump) {
+      failJump.textContent = failBtn.dataset.count + ' failures';
+      failJump.style.display = '';
+      failJump.onclick = () => {
+        const target = content.querySelector('[name="failures"]');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+    }
+
+    /* ── Remove the XSLT-generated header block (panel has its own header) ──
+       Tabular: h5 + toolbar are inside .row:first-child → remove that row.
+       Paragraph: h5 followed directly by .tab-toolbar → remove both. */
+    const firstRow = content.querySelector('.row');
+    if (firstRow) {
+      firstRow.remove();
+    } else {
+      const h5 = content.querySelector('h5');
+      if (h5) {
+        const next = h5.nextElementSibling;
+        h5.remove();
+        if (next && next.classList.contains('tab-toolbar')) next.remove();
+      }
+    }
+  }
+}
+
+/* Wire up the .sets-nav-btn buttons in the standalone Sets tab.
+   Each button carries data-target (named anchor) and data-count.
+   Clicks scroll to the matching [name="..."] anchor within the container;
+   for "sets-top" the re-scroll-table is also reset to its own top. */
+function postProcessSets(containerEl) {
+  containerEl.querySelectorAll('.sets-nav-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetName = this.dataset.target;
+      const anchor = containerEl.querySelector('[name="' + targetName + '"]');
+      if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (targetName === 'sets-top') {
+        const st = containerEl.querySelector('.re-scroll-table');
+        if (st) st.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -197,7 +487,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       document.getElementById('run-badge').textContent = parts.join('  ·  ');
     })();
 
-    ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
+    ['tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
       .forEach(id => setTabEnabled(id, false));
 
@@ -206,6 +496,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
     document.getElementById('nav-coverage').style.display = 'none';
     document.getElementById('nav-compare').style.display  = 'none';
     setTabEnabled('tab-compare-nav', false);
+    document.getElementById('btn-run-again').disabled = true;
 
     startPolling();
   })
@@ -293,7 +584,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       inp.type = 'text';
       inp.className = 'form-control form-control-sm';
       inp.id = `inp-upstream-${name}`;
-      inp.placeholder = 'e.g. Protolg: Lg1, Lg2, ... LgN';
+      inp.placeholder = info.upstream_suggestion || '';
       // Restore last-used upstream value and save on change
       const savedUp = lsGet(name, 'upstream');
       if (savedUp) inp.value = savedUp;
@@ -367,7 +658,9 @@ document.getElementById('main-tab-content').addEventListener('click', function (
    Post-run tab wiring  (shared by live polling and historical load)
    data must have: has_mel, has_fuzzy, has_coverage
    ══════════════════════════════════════════════════════════════════════════ */
-function handleRunDone(data) {
+/* activateAfter: tab id to show on completion; defaults to 'tab-research' */
+function handleRunDone(data, activateAfter) {
+  setRunTabsVisible(true);
   const always = ['parameters', 'sets', 'stats'];
   always.forEach(t => {
     setTabEnabled(`tab-${t}-nav`, true);
@@ -409,7 +702,28 @@ function handleRunDone(data) {
     text += `  ·  Supers: ${data.spec || '—'}`;
     badge.textContent = text;
   }
-  activateTab('tab-sets');
+
+  /* ── Research pane wiring ── */
+  researchHasFuzzy = !!data.has_fuzzy;
+  setTabEnabled('tab-research-nav', true);
+  const researchGrid = document.getElementById('research-grid');
+  const fuzzyPanel   = document.getElementById('research-fuzzy-panel');
+  if (researchHasFuzzy) {
+    researchGrid.classList.remove('no-fuzzy');
+    fuzzyPanel.style.display = '';
+    document.getElementById('btn-edit-research-fuzzy').style.display = '';
+  } else {
+    researchGrid.classList.add('no-fuzzy');
+    fuzzyPanel.style.display = 'none';
+  }
+  document.getElementById('btn-freq-research-parameters').style.display = '';
+  document.getElementById('btn-edit-research-parameters').style.display = '';
+
+  /* Enable Run Again */
+  document.getElementById('btn-run-again').disabled = false;
+
+  loadResearchPane();
+  activateTab(activateAfter || 'tab-research');
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -438,17 +752,31 @@ function doPoll() {
         const el = document.getElementById('run-log');
         el.textContent += '\n─── ERROR ───\n' + (data.error || '');
         el.scrollTop = el.scrollHeight;
+        document.getElementById('btn-run-again').disabled = false;
+        runFromResearch = false;
         return;
       }
 
       /* ── Success ── */
       setRunStatusBadge('done', 'done');
-      handleRunDone(data);
-      /* Increment History button count for this project */
+      const _goToResearch = runFromResearch;
+      runFromResearch = false;
+      handleRunDone(data, _goToResearch ? 'tab-research' : null);
+      if (_goToResearch) loadResearchPane();
+      /* Increment History button count for this project, and refresh the
+         history list if the panel is already open so the new run appears
+         immediately without requiring the user to close and reopen it. */
       if (currentProject) {
         const btn = document.querySelector(`.hist-btn[data-project="${currentProject}"]`);
         const prev = btn ? (parseInt(btn.dataset.count, 10) || 0) : 0;
         setHistoryBtnCount(currentProject, prev + 1);
+        const histRow = document.getElementById(`hist-row-${currentProject}`);
+        if (histRow && histRow.style.display !== 'none') {
+          fetch(`/api/history/${currentProject}`)
+            .then(r => r.json())
+            .then(d => renderHistoryTable(currentProject, d.runs || []))
+            .catch(err => console.error('History refresh error:', err));
+        }
       }
     })
     .catch(err => console.error('Poll error:', err));
@@ -523,6 +851,23 @@ function setupModeToggle(groupId, tab) {
 }
 setupModeToggle('sets-mode-btns', 'sets');
 
+/* Research Sets mode toggle — updates shared modes.sets and keeps both
+   the Research buttons and the original Sets buttons visually in sync. */
+document.querySelectorAll('#research-sets-mode-btns button').forEach(btn => {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('#research-sets-mode-btns button')
+            .forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const mode = this.dataset.mode;
+    modes.sets = mode;
+    loadResearchContent('sets', 'research-sets-content', mode);
+    /* Mirror active state onto the original Sets tab buttons */
+    document.querySelectorAll('#sets-mode-btns button').forEach(b => {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+  });
+});
+
 /* Lexicons mode toggle — reloads whichever language sub-tab is active */
 document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
   btn.addEventListener('click', function () {
@@ -552,12 +897,25 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
   });
 })();
 
+/* Research Sets glosses toggle — mirrors the original Sets gloss toggle */
+(function () {
+  const btn       = document.getElementById('btn-toggle-research-glosses');
+  const container = document.getElementById('research-sets-content');
+  if (!btn || !container) return;
+  btn.addEventListener('click', function () {
+    const nowHidden = container.classList.toggle('glosses-hidden');
+    btn.textContent = nowHidden ? 'Show glosses' : 'Hide glosses';
+  });
+})();
+
 /* ══════════════════════════════════════════════════════════════════════════
    Parameters Freq  — toggle frequency-annotated view of the ToC
+   idPrefix: 'parameters' (original tab) or 'research-parameters' (Research)
    ══════════════════════════════════════════════════════════════════════════ */
-(function setupParamsFreq() {
-  const viewEl  = document.getElementById('parameters-view-content');
-  const btnFreq = document.getElementById('btn-freq-parameters');
+function setupParamsFreq(idPrefix) {
+  const p       = idPrefix || 'parameters';
+  const viewEl  = document.getElementById(`${p}-view-content`);
+  const btnFreq = document.getElementById(`btn-freq-${p}`);
   if (!btnFreq) return;
 
   let savedViewHTML = null;
@@ -568,7 +926,6 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
     if (savedViewHTML !== null) {
       viewEl.innerHTML = savedViewHTML;
       savedViewHTML = null;
-      btnFreq.textContent = '';
       btnFreq.innerHTML = '<i class="fas fa-chart-bar"></i> Freq';
       btnFreq.classList.remove('active');
       return;
@@ -586,16 +943,20 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
       .catch(err => alert('Freq error: ' + err))
       .finally(() => { btnFreq.disabled = false; });
   });
-})();
+}
+setupParamsFreq();                    // original Parameters tab
+setupParamsFreq('research-parameters'); // Research sub-pane
 
 /* ══════════════════════════════════════════════════════════════════════════
    Parameters Edit / Save / Cancel  (XSLT form approach)
+   idPrefix: 'parameters' (original tab) or 'research-parameters' (Research)
    ══════════════════════════════════════════════════════════════════════════ */
-(function setupParamsEdit() {
-  const viewEl    = document.getElementById('parameters-view-content');
-  const btnEdit   = document.getElementById('btn-edit-parameters');
-  const btnSave   = document.getElementById('btn-save-parameters');
-  const btnCancel = document.getElementById('btn-cancel-parameters');
+function setupParamsEdit(idPrefix) {
+  const p         = idPrefix || 'parameters';
+  const viewEl    = document.getElementById(`${p}-view-content`);
+  const btnEdit   = document.getElementById(`btn-edit-${p}`);
+  const btnSave   = document.getElementById(`btn-save-${p}`);
+  const btnCancel = document.getElementById(`btn-cancel-${p}`);
   if (!btnEdit) return;
 
   let savedViewHTML    = null;
@@ -675,7 +1036,11 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
       btnSave.disabled        = false;
       btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
       btnCancel.style.display = 'none';
-      loadTabContent('parameters', 'paragraph');
+      if (idPrefix) {
+        loadResearchContent('parameters', `${p}-view-content`);
+      } else {
+        loadTabContent('parameters', 'paragraph');
+      }
     })
     .catch(err => {
       alert(`Save error: ${err}`);
@@ -683,16 +1048,21 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
       btnSave.innerHTML = '<i class="fas fa-save"></i> Save';
     });
   });
-})();
+}
+setupParamsEdit();                    // original Parameters tab
+setupParamsEdit('research-parameters'); // Research sub-pane
 
 /* ══════════════════════════════════════════════════════════════════════════
    MEL / Fuzzy Edit / Save / Cancel  (XSLT form approach — mirrors Parameters)
    ══════════════════════════════════════════════════════════════════════════ */
-function setupXsltEdit(tab, dataAttr, saveEndpoint) {
-  const viewEl    = document.getElementById(`${tab}-view-content`);
-  const btnEdit   = document.getElementById(`btn-edit-${tab}`);
-  const btnSave   = document.getElementById(`btn-save-${tab}`);
-  const btnCancel = document.getElementById(`btn-cancel-${tab}`);
+/* idPrefix: when supplied, element IDs use idPrefix instead of tab,
+   while the API endpoint still uses tab.  Used for Research sub-panes. */
+function setupXsltEdit(tab, dataAttr, saveEndpoint, idPrefix) {
+  const p         = idPrefix !== undefined ? idPrefix : tab;
+  const viewEl    = document.getElementById(`${p}-view-content`);
+  const btnEdit   = document.getElementById(`btn-edit-${p}`);
+  const btnSave   = document.getElementById(`btn-save-${p}`);
+  const btnCancel = document.getElementById(`btn-cancel-${p}`);
   if (!btnEdit) return;
 
   let savedViewHTML = null;
@@ -702,7 +1072,7 @@ function setupXsltEdit(tab, dataAttr, saveEndpoint) {
     if (!currentRunId) return;
     btnEdit.disabled  = true;
     btnEdit.innerHTML = `${spinnerHtml()}Loading…`;
-    fetch(`/api/tab/${currentRunId}/${tab}?mode=edit`)
+    fetch(`/api/tab/${currentRunId}/${tab}?mode=edit`)  // tab = API endpoint name
       .then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.text();
@@ -711,7 +1081,7 @@ function setupXsltEdit(tab, dataAttr, saveEndpoint) {
         savedViewHTML = viewEl.innerHTML;
         viewEl.innerHTML = html;
         reExecuteScripts(viewEl);
-        const wrapper = viewEl.querySelector(`[${dataAttr}]`);
+          const wrapper = viewEl.querySelector(`[${dataAttr}]`);
         currentFile = wrapper ? wrapper.getAttribute(dataAttr) : null;
         btnEdit.style.display   = 'none';
         btnSave.style.display   = '';
@@ -765,7 +1135,11 @@ function setupXsltEdit(tab, dataAttr, saveEndpoint) {
       btnSave.disabled        = false;
       btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
       btnCancel.style.display = 'none';
-      loadTabContent(tab, 'paragraph');
+      if (idPrefix !== undefined) {
+        loadResearchContent(tab, `${p}-view-content`);
+      } else {
+        loadTabContent(tab, 'paragraph');
+      }
     })
     .catch(err => {
       alert(`Save error: ${err}`);
@@ -777,6 +1151,7 @@ function setupXsltEdit(tab, dataAttr, saveEndpoint) {
 
 setupXsltEdit('mel',   'data-mel-file', '/api/save_mel');
 setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
+setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz', 'research-fuzzy');
 
 /* ══════════════════════════════════════════════════════════════════════════
    Projects Edit / Save / Cancel
@@ -1018,7 +1393,7 @@ function loadHistRun(runId, project) {
     document.getElementById('nav-compare').style.display = 'none';
     setTabEnabled('tab-compare-nav', false);
     /* Reset disabled tabs before wiring */
-    ['tab-parameters-nav','tab-sets-nav','tab-stats-nav',
+    ['tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
       .forEach(id => setTabEnabled(id, false));
     handleRunDone(data);
@@ -1066,13 +1441,97 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     const targetId = this.getAttribute('href').substring(1);
     activateTab(targetId);
     const tabName = targetId.replace(/^tab-/, '');
-    if (tabName === 'projects' || tabName === 'log' || tabName === 'compare' || !currentRunId) return;
+    if (tabName === 'projects') {
+      /* Return to Projects: hide result tabs only when no run is loaded */
+      if (!currentRunId) setRunTabsVisible(false);
+      return;
+    }
+    /* Any non-Projects tab: ensure result tabs are visible */
+    setRunTabsVisible(true);
+    if (tabName === 'log' || tabName === 'compare' || !currentRunId) return;
     if (tabName === 'lexicons') return;  // sub-tabs manage their own content
+    if (tabName === 'research') { loadResearchPane(); return; }
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
     if (saveBtn && saveBtn.style.display !== 'none') return;
     loadTabContent(tabName, modes[tabName] || 'paragraph');
   });
 });
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Run Again button — re-submits current project with its current parameters
+   ══════════════════════════════════════════════════════════════════════════ */
+(function setupRunAgain() {
+  const btn = document.getElementById('btn-run-again');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    if (!currentProject || !currentRunId) return;
+
+    const reconSel    = document.getElementById(`sel-recon-${currentProject}`);
+    const melSel      = document.getElementById(`sel-mel-${currentProject}`);
+    const fuzzySel    = document.getElementById(`sel-fuzzy-${currentProject}`);
+    const upstreamInp = document.getElementById(`inp-upstream-${currentProject}`);
+    if (!reconSel) {
+      alert('Project row not found. Go to the Projects tab to re-run.');
+      return;
+    }
+
+    const recon    = reconSel.value                          || null;
+    const mel      = melSel      ? melSel.value      || null : null;
+    const fuzzy    = fuzzySel    ? fuzzySel.value    || null : null;
+    const upstream = upstreamInp ? upstreamInp.value.trim() || null : null;
+
+    runFromResearch = true;
+    btn.disabled = true;
+    document.querySelectorAll('.run-btn').forEach(b => b.disabled = true);
+
+    ['tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
+     'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
+      .forEach(id => setTabEnabled(id, false));
+    document.getElementById('nav-mel').style.display      = 'none';
+    document.getElementById('nav-fuzzy').style.display    = 'none';
+    document.getElementById('nav-coverage').style.display = 'none';
+    document.getElementById('nav-compare').style.display  = 'none';
+    setTabEnabled('tab-compare-nav', false);
+
+    document.getElementById('nav-log').style.display = '';
+    document.getElementById('run-log').textContent   = '';
+    logLinesShown = 0;
+    setRunStatusBadge('running', 'running');
+    activateTab('tab-log');
+
+    fetch('/api/run', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ project: currentProject, recon, mel, fuzzy, upstream }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        alert(`Server error: ${data.error}`);
+        btn.disabled    = false;
+        runFromResearch = false;
+        document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+        return;
+      }
+      currentRunId   = data.run_id;
+      currentRunName = data.run_name;
+      const parts = [`project ${currentProject}`];
+      if (data.recon)    parts.push(`ToC: ${data.recon}`);
+      if (data.mel)      parts.push(`MEL: ${data.mel}`);
+      if (data.fuzzy)    parts.push(`fuzzy: ${data.fuzzy}`);
+      if (data.upstream) parts.push(`↑ ${data.upstream}`);
+      document.getElementById('run-badge').textContent = parts.join('  ·  ');
+      startPolling();
+    })
+    .catch(err => {
+      alert(`Failed to start run: ${err}`);
+      btn.disabled    = false;
+      runFromResearch = false;
+      document.querySelectorAll('.run-btn').forEach(b => b.disabled = false);
+    });
+  });
+})();
 
 /* ══════════════════════════════════════════════════════════════════════════
    Back-to-top button — appears after scrolling down, hidden on Projects tab
