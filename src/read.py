@@ -44,6 +44,12 @@ def read_syllable_canon(parameters, context_match_type_override=None):
         context_match_type = context_match_type_override
     norm = nfd if context_match_type == 'glyphs' else nfc
     sound_classes = {k: [norm(x) for x in v] for k, v in raw_classes.items()}
+    if raw_regex is None:
+        raise ValueError(
+            "Correspondences file is missing a <canon> element inside <parameters>. "
+            "The file may be corrupted or incomplete. "
+            "Restore it from a backup or re-add the <canon value=\"…\"/> line."
+        )
     regex = norm(raw_regex)
     supra_segmentals = [norm(x) for x in raw_supra]
     return RE.SyllableCanon(sound_classes, regex, supra_segmentals, context_match_type,
