@@ -66,25 +66,35 @@
 </xsl:template>
 
 <xsl:template match="tableOfCorr">
+  <xsl:variable name="uid" select="generate-id(.)"/>
   <div>
-    <h6>Parameters</h6>
-    <table>
-      <xsl:if test="parameters/canon">
-        <tr>
-          <td><b>Syllable canon</b></td>
-          <td><xsl:value-of select="parameters/canon/@value"/></td>
-        </tr>
-      </xsl:if>
-      <xsl:if test="parameters/context_match_type">
-        <tr>
-          <td><b>Context match type</b></td>
-          <td><xsl:value-of select="parameters/context_match_type/@value"/></td>
-        </tr>
-      </xsl:if>
-    </table>
-    <p/>
-    <h6>Macro-classes (used in Contexts)</h6>
-    <div>
+
+    <!-- ── Controls ──────────────────────────────────────────────────────── -->
+    <button type="button" class="params-sec-hdr collapsed"
+            data-bs-toggle="collapse" data-bs-target="#{$uid}-controls"
+            aria-expanded="false">Controls</button>
+    <div class="collapse" id="{$uid}-controls">
+      <table class="table table-sm table-striped">
+        <xsl:if test="parameters/canon">
+          <tr>
+            <td><b>Syllable canon</b></td>
+            <td><xsl:value-of select="parameters/canon/@value"/></td>
+          </tr>
+        </xsl:if>
+        <xsl:if test="parameters/context_match_type">
+          <tr>
+            <td><b>Context match type</b></td>
+            <td><xsl:value-of select="parameters/context_match_type/@value"/></td>
+          </tr>
+        </xsl:if>
+      </table>
+    </div>
+
+    <!-- ── Classes ───────────────────────────────────────────────────────── -->
+    <button type="button" class="params-sec-hdr collapsed"
+            data-bs-toggle="collapse" data-bs-target="#{$uid}-classes"
+            aria-expanded="false">Classes</button>
+    <div class="collapse" id="{$uid}-classes">
       <table class="table table-sm table-striped sortable toc-classes-table">
         <thead>
           <tr>
@@ -106,15 +116,17 @@
       </table>
     </div>
 
-    <h6>Table of correspondences
-      <small class="text-muted ml-2" style="font-size:0.8em; font-weight:normal;">
+    <!-- ── Table of correspondences ──────────────────────────────────────── -->
+    <button type="button" class="params-sec-hdr collapsed"
+            data-bs-toggle="collapse" data-bs-target="#{$uid}-toc"
+            aria-expanded="false">Table of correspondences
+      <small class="text-muted" style="font-size:0.8em; font-weight:normal; margin-left:.5rem;">
+        <span style="background:#dc3545;color:white;padding:1px 5px;border-radius:3px;">0</span>
         &#160;
-        <span style="background:#dc3545;color:white;padding:1px 6px;border-radius:3px;">0 uses</span>
-        &#160;
-        <span style="background:#f8d7da;padding:1px 6px;border-radius:3px;">1 use</span>
+        <span style="background:#f8d7da;padding:1px 5px;border-radius:3px;">1</span>
       </small>
-    </h6>
-    <div>
+    </button>
+    <div class="collapse" id="{$uid}-toc">
       <table class="table table-sm table-hover table-bordered sets sortable toc-freq-table">
         <thead>
           <tr>
@@ -173,8 +185,11 @@
       </table>
     </div>
 
-    <h5>Rules</h5>
-    <div>
+    <!-- ── Rules ─────────────────────────────────────────────────────────── -->
+    <button type="button" class="params-sec-hdr collapsed"
+            data-bs-toggle="collapse" data-bs-target="#{$uid}-rules"
+            aria-expanded="false">Rules</button>
+    <div class="collapse" id="{$uid}-rules">
       <table class="table table-sm table-hover table-bordered sets sortable">
         <thead>
           <tr>
@@ -200,6 +215,7 @@
         </xsl:for-each>
       </table>
     </div>
+
   </div>
 </xsl:template>
 

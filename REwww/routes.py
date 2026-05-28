@@ -469,7 +469,19 @@ def api_tab(run_id, tab):
             if not sets_file or not os.path.isfile(sets_file):
                 return '<p class="text-muted">No sets file found — run the project first.</p>'
             annotated = xslt.compute_corr_freq(sets_file, recon_files[0])
-            return xslt.xml_to_html_from_tree(annotated, 'toc2html-freq.xsl')
+            html = xslt.xml_to_html_from_tree(annotated, 'toc2html-freq.xsl')
+            fuz_path = files.get('fuzzy')
+            if fuz_path and os.path.isfile(fuz_path):
+                fuz_cov = files.get('fuzzy_cov')
+                view_path = fuz_cov if fuz_cov and os.path.isfile(fuz_cov) else fuz_path
+                fuzzy_html = xslt.xml_to_html(view_path, 'fuzzy2html.xsl')
+                html += (
+                    '<button type="button" class="params-sec-hdr collapsed"'
+                    ' data-bs-toggle="collapse" data-bs-target="#params-fuzzy-sec"'
+                    ' aria-expanded="false">Fuzzy</button>'
+                    '<div class="collapse" id="params-fuzzy-sec">' + fuzzy_html + '</div>'
+                )
+            return html
 
         if mode == 'edit':
             recon_file = recon_files[0]
@@ -488,9 +500,21 @@ def api_tab(run_id, tab):
 
         parts = []
         for recon_file in recon_files:
-            label = os.path.basename(recon_file)
-            parts.append(f'<h5 class="mt-3 border-bottom pb-1">{label}</h5>')
+            if len(recon_files) > 1:
+                label = os.path.basename(recon_file)
+                parts.append(f'<h5 class="mt-3 border-bottom pb-1">{label}</h5>')
             parts.append(xslt.xml_to_html(recon_file, 'toc2html-view.xsl'))
+        fuz_path = files.get('fuzzy')
+        if fuz_path and os.path.isfile(fuz_path):
+            fuz_cov = files.get('fuzzy_cov')
+            view_path = fuz_cov if fuz_cov and os.path.isfile(fuz_cov) else fuz_path
+            fuzzy_html = xslt.xml_to_html(view_path, 'fuzzy2html.xsl')
+            parts.append(
+                '<button type="button" class="params-sec-hdr collapsed"'
+                ' data-bs-toggle="collapse" data-bs-target="#params-fuzzy-sec"'
+                ' aria-expanded="false">Fuzzy</button>'
+                '<div class="collapse" id="params-fuzzy-sec">' + fuzzy_html + '</div>'
+            )
         return '\n'.join(parts)
 
     if tab == 'lexicons':

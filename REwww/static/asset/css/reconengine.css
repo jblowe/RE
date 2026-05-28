@@ -102,6 +102,25 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .content-area table.toc-classes-table td:first-child { width: 3rem; white-space: nowrap; }
 .content-area table.toc-classes-table td:last-child   { overflow-wrap: break-word; word-break: break-word; }
 
+/* ── Collapsible parameters sections ─────────────────────────────────────── */
+.params-sec-hdr {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #f0f0f0;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  padding: .25rem .6rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #444;
+  cursor: pointer;
+  margin-top: .35rem;
+}
+.params-sec-hdr:hover { background: #e2e6ea; color: #7a3000; }
+.params-sec-hdr::before { content: '\25B8\00A0'; }
+.params-sec-hdr:not(.collapsed)::before { content: '\25BE\00A0'; }
+
 /* ── MEL view/edit: glosses column is unrestricted width ────────────────── */
 .content-area .mel-gl-col { max-width: none; }
 

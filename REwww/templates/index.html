@@ -87,9 +87,8 @@
     <!-- ══ RESEARCH TAB ═══════════════════════════════════════════════════════ -->
     <div class="tab-pane fade" id="tab-research" role="tabpanel">
 
-      <!-- Grid: Parameters top-left, Fuzzy top-right, Sets full-width bottom.
-           Starts in no-fuzzy (single-column) mode; JS toggles the class. -->
-      <div id="research-grid" class="no-fuzzy">
+      <!-- Grid: Parameters (with embedded Fuzzy) on top, Sets full-width on bottom. -->
+      <div id="research-grid">
 
         <!-- ── Parameters panel ── -->
         <div id="research-params-panel">
@@ -117,27 +116,15 @@
           </div>
         </div><!-- /research-params-panel -->
 
-        <!-- ── Fuzzy panel (hidden until run has a Fuzzy file) ── -->
-        <div id="research-fuzzy-panel" style="display:none">
+        <!-- ── Stats panel ── -->
+        <div id="research-stats-panel">
           <div class="research-panel-header">
-            <span class="research-panel-title">Fuzzy</span>
-            <button class="btn btn-sm btn-outline-secondary"
-                    id="btn-edit-research-fuzzy" style="display:none">
-              <i class="fas fa-edit"></i> Edit
-            </button>
-            <button class="btn btn-sm btn-success"
-                    id="btn-save-research-fuzzy" style="display:none">
-              <i class="fas fa-save"></i> Save
-            </button>
-            <button class="btn btn-sm btn-secondary"
-                    id="btn-cancel-research-fuzzy" style="display:none">
-              Cancel
-            </button>
+            <span class="research-panel-title">Stats</span>
           </div>
-          <div class="content-area" id="research-fuzzy-view-content">
-            <p class="text-muted">No Fuzzy file selected.</p>
+          <div class="content-area" id="research-stats-content">
+            <p class="text-muted">Run a project to populate this pane.</p>
           </div>
-        </div><!-- /research-fuzzy-panel -->
+        </div><!-- /research-stats-panel -->
 
         <!-- ── Sets panel ── -->
         <div id="research-sets-panel">

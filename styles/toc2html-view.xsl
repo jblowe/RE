@@ -11,121 +11,134 @@
 </xsl:template>
 
 <xsl:template match="tableOfCorr">
+	<xsl:variable name="uid" select="generate-id(.)"/>
 	<div>
-		<h6>Parameters</h6>
-		<table class="table table-sm table-striped">
-		<xsl:if test="parameters/canon">
-			<tr>
-				<td><b>Syllable canon</b></td>
-				<td class="col-gloss">
-					<xsl:value-of select="parameters/canon/@value"/>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="parameters/spec">
-			<tr>
-				<td><b>Supra-segmentals</b></td>
-				<td class="col-gloss">
-					<xsl:value-of select="parameters/spec/@value"/>
-				</td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="parameters/context_match_type">
-			<tr>
-				<td><b>Context match type</b></td>
-				<td class="col-gloss">
-					<xsl:value-of select="parameters/context_match_type/@value"/>
-				</td>
-			</tr>
-		</xsl:if>
-		</table>
-		<p/>
-		<h6>Macro-classes (used in Contexts)</h6>
-		<div>
-		<table class="table table-sm table-striped sortable toc-classes-table">
-			<thead>
-				<tr>
-					<th>Class</th>
-					<th>Members</th>
-				</tr>
-			</thead>
-		<xsl:for-each select="parameters/class">
-			<tr>
-				<td><xsl:value-of select="@name"/></td>
-				<td><xsl:value-of select="@value"/></td>
-			</tr>
-		</xsl:for-each>
-		</table>
+
+		<!-- ── Controls ─────────────────────────────────────────────────────── -->
+		<button type="button" class="params-sec-hdr collapsed"
+		        data-bs-toggle="collapse" data-bs-target="#{$uid}-controls"
+		        aria-expanded="false">Controls</button>
+		<div class="collapse" id="{$uid}-controls">
+			<table class="table table-sm table-striped">
+				<xsl:if test="parameters/canon">
+					<tr>
+						<td><b>Syllable canon</b></td>
+						<td><xsl:value-of select="parameters/canon/@value"/></td>
+					</tr>
+				</xsl:if>
+				<xsl:if test="parameters/spec">
+					<tr>
+						<td><b>Supra-segmentals</b></td>
+						<td><xsl:value-of select="parameters/spec/@value"/></td>
+					</tr>
+				</xsl:if>
+				<xsl:if test="parameters/context_match_type">
+					<tr>
+						<td><b>Context match type</b></td>
+						<td><xsl:value-of select="parameters/context_match_type/@value"/></td>
+					</tr>
+				</xsl:if>
+			</table>
 		</div>
-		<h6>Table of correspondences</h6>
-		<div>
-		<table class="table table-sm table-hover table-striped table-bordered sets sortable toc-view-table">
-			<thead>
-				<tr>
-					<th>num</th>
-					<th>*</th>
-					<th>syll</th>
-					<th>left</th>
-					<th>right</th>
-					<xsl:for-each select="corr[1]/modern">
-						<th><xsl:value-of select="@dialecte"/></th>
-					</xsl:for-each>
-				</tr>
-			</thead>
-			<xsl:for-each select="corr">
-				<tr id="toc-corr-{@num}">
-					<td><xsl:value-of select="@num"/></td>
-					<td><xsl:value-of select="proto"/></td>
-					<td><xsl:value-of select="proto/@syll"/></td>
-					<td><xsl:value-of select="proto/@contextL"/></td>
-					<td><xsl:value-of select="proto/@contextR"/></td>
-					
-					<!-- Iterate over the CANONICAL column list so that missing
-					 <modern> elements produce an empty cell in the correct
-					 column rather than shifting subsequent cells left. -->
-					<xsl:variable name="this-corr" select="."/>
-					<xsl:for-each select="../corr[1]/modern">
-						<xsl:variable name="d"    select="@dialecte"/>
-						<xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
-						<td>
-							<xsl:for-each select="$cell/seg">
-								<xsl:if test="@statut='doute'">=</xsl:if>
-								<xsl:value-of select="."/>
-								<xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
-							</xsl:for-each>
-						</td>
-					</xsl:for-each>
-				</tr>
-			</xsl:for-each>
-		</table>
+
+		<!-- ── Classes ──────────────────────────────────────────────────────── -->
+		<button type="button" class="params-sec-hdr collapsed"
+		        data-bs-toggle="collapse" data-bs-target="#{$uid}-classes"
+		        aria-expanded="false">Classes</button>
+		<div class="collapse" id="{$uid}-classes">
+			<table class="table table-sm table-striped sortable toc-classes-table">
+				<thead>
+					<tr>
+						<th>Class</th>
+						<th>Members</th>
+					</tr>
+				</thead>
+				<xsl:for-each select="parameters/class">
+					<tr>
+						<td><xsl:value-of select="@name"/></td>
+						<td><xsl:value-of select="@value"/></td>
+					</tr>
+				</xsl:for-each>
+			</table>
 		</div>
-		    <h5>Rules</h5>
-		<div>
-		<table class="table table-sm table-hover table-bordered sets sortable">
-			<thead>
-				<tr>
-					<th>num</th>
-					<th>input</th>
-					<th>output</th>
-					<th>contextL</th>
-					<th>contextR</th>
-					<th>stage</th>
-					<th>language</th>
-				</tr>
-			</thead>
-			<xsl:for-each select="rule">
-				<tr>
-					<td><xsl:value-of select="@num"/></td>
-					<td><xsl:value-of select="input"/></td>
-					<td><xsl:value-of select="outcome"/></td>
-					<td><xsl:value-of select="input/@contextL"/></td>
-					<td><xsl:value-of select="input/@contextR"/></td>
-					<td><xsl:value-of select="@stage"/></td>
-					<td><xsl:value-of select="outcome/@languages"/></td>
-				</tr>
-			</xsl:for-each>
-		</table>
+
+		<!-- ── Table of correspondences ─────────────────────────────────────── -->
+		<button type="button" class="params-sec-hdr collapsed"
+		        data-bs-toggle="collapse" data-bs-target="#{$uid}-toc"
+		        aria-expanded="false">Table of correspondences</button>
+		<div class="collapse" id="{$uid}-toc">
+			<table class="table table-sm table-hover table-striped table-bordered sets sortable toc-view-table">
+				<thead>
+					<tr>
+						<th>num</th>
+						<th>*</th>
+						<th>syll</th>
+						<th>left</th>
+						<th>right</th>
+						<xsl:for-each select="corr[1]/modern">
+							<th><xsl:value-of select="@dialecte"/></th>
+						</xsl:for-each>
+					</tr>
+				</thead>
+				<xsl:for-each select="corr">
+					<tr id="toc-corr-{@num}">
+						<td><xsl:value-of select="@num"/></td>
+						<td><xsl:value-of select="proto"/></td>
+						<td><xsl:value-of select="proto/@syll"/></td>
+						<td><xsl:value-of select="proto/@contextL"/></td>
+						<td><xsl:value-of select="proto/@contextR"/></td>
+
+						<!-- Iterate over the CANONICAL column list so that missing
+						     <modern> elements produce an empty cell in the correct
+						     column rather than shifting subsequent cells left. -->
+						<xsl:variable name="this-corr" select="."/>
+						<xsl:for-each select="../corr[1]/modern">
+							<xsl:variable name="d"    select="@dialecte"/>
+							<xsl:variable name="cell" select="$this-corr/modern[@dialecte = $d]"/>
+							<td>
+								<xsl:for-each select="$cell/seg">
+									<xsl:if test="@statut='doute'">=</xsl:if>
+									<xsl:value-of select="."/>
+									<xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
+								</xsl:for-each>
+							</td>
+						</xsl:for-each>
+					</tr>
+				</xsl:for-each>
+			</table>
 		</div>
+
+		<!-- ── Rules ────────────────────────────────────────────────────────── -->
+		<button type="button" class="params-sec-hdr collapsed"
+		        data-bs-toggle="collapse" data-bs-target="#{$uid}-rules"
+		        aria-expanded="false">Rules</button>
+		<div class="collapse" id="{$uid}-rules">
+			<table class="table table-sm table-hover table-bordered sets sortable">
+				<thead>
+					<tr>
+						<th>num</th>
+						<th>input</th>
+						<th>output</th>
+						<th>contextL</th>
+						<th>contextR</th>
+						<th>stage</th>
+						<th>language</th>
+					</tr>
+				</thead>
+				<xsl:for-each select="rule">
+					<tr>
+						<td><xsl:value-of select="@num"/></td>
+						<td><xsl:value-of select="input"/></td>
+						<td><xsl:value-of select="outcome"/></td>
+						<td><xsl:value-of select="input/@contextL"/></td>
+						<td><xsl:value-of select="input/@contextR"/></td>
+						<td><xsl:value-of select="@stage"/></td>
+						<td><xsl:value-of select="outcome/@languages"/></td>
+					</tr>
+				</xsl:for-each>
+			</table>
+		</div>
+
 	</div>
 </xsl:template>
 
