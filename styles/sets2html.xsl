@@ -40,7 +40,9 @@
     <li class="sf">
       <div class="wrapper etymonrow">
         <div class="id">
-          <xsl:value-of select="id"/>
+          <span class="set-interactive-link" data-set-num="{id}" title="Load in Interactive tab">
+            <xsl:value-of select="id"/>
+          </span>
         </div>
         <xsl:choose>
           <xsl:when test="multi">

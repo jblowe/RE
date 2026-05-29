@@ -65,7 +65,9 @@
     <xsl:for-each select=".//sets/set">
       <tr>
         <td class="col-num">
-          <xsl:value-of select="id"/>
+          <span class="set-interactive-link" data-set-num="{id}" title="Load in Interactive tab">
+            <xsl:value-of select="id"/>
+          </span>
         </td>
 
         <xsl:choose>
