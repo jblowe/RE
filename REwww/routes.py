@@ -68,6 +68,114 @@ def _upstream_suggestion(project_path, project_name):
     return ''
 
 
+# ── Interactive process-pane HTML builder ────────────────────────────────────
+
+def _build_process_html(debug_notes, notes):
+    """Build HTML for the Interactive Process pane from debug_notes and notes."""
+    import html as _html
+    esc = _html.escape
+
+    n_parsing = sum(1 for n in debug_notes if n.startswith('!Parsing '))
+    parts = ['<div class="interactive-process-body">']
+    if not n_parsing:
+        parts.append('<p class="text-warning small">No per-form debug notes collected.</p>')
+
+    # Mutable state accumulated across notes
+    cur = {'lang': None, 'glyphs': None, 'gloss': None, 'parses': []}
+
+    def flush():
+        if cur['lang'] is None:
+            return
+        label = f'<strong>{esc(cur["lang"])}</strong> {esc(cur["glyphs"])}'
+        if cur['gloss']:
+            label += f' <em class="text-secondary">{esc(cur["gloss"])}</em>'
+        parts.append(
+            f'<div class="process-form-block">'
+            f'<div class="process-form-label">{label}</div>'
+        )
+        if cur['parses']:
+            parts.append(
+                '<table class="table table-sm table-bordered process-parse-table">'
+                '<thead class="thead-light"><tr>'
+                '<th style="width:30%">Reflex</th>'
+                '<th style="width:40%">rcn</th>'
+                '<th>Reconstruction</th>'
+                '</tr></thead><tbody>'
+            )
+            for (rcn, proto, syll, success) in cur['parses']:
+                tr_cls = '' if success else ' class="text-muted"'
+                star   = '*' if success else ''
+                recon  = f'{esc(star)}{esc(proto)}'
+                if syll:
+                    recon += (f' <span class="badge badge-secondary"'
+                              f' style="font-size:.7em">{esc(syll)}</span>')
+                parts.append(
+                    f'<tr{tr_cls}>'
+                    f'<td>{esc(cur["glyphs"])}</td>'
+                    f'<td><code style="font-size:.85em">{esc(rcn)}</code></td>'
+                    f'<td>{recon}</td>'
+                    f'</tr>'
+                )
+            parts.append('</tbody></table>')
+        else:
+            parts.append(
+                '<p class="text-warning small mb-0">'
+                'No parses &mdash; no correspondence sequence covers this form '
+                '(check context constraints and syllable structure).</p>'
+            )
+        parts.append('</div>')
+        cur['lang'] = None
+        cur['parses'] = []
+
+    for note in debug_notes:
+        if note.startswith('!Parsing '):
+            flush()
+            form_str = note[len('!Parsing '):]
+            if form_str.endswith('...'):
+                form_str = form_str[:-3]
+            tab_parts   = form_str.split('\t')
+            lang_glyphs = tab_parts[0].strip()
+            cur['gloss'] = tab_parts[1].strip() if len(tab_parts) > 1 else ''
+            sp = lang_glyphs.find(' ')
+            cur['lang']   = lang_glyphs[:sp]   if sp > 0 else lang_glyphs
+            cur['glyphs'] = lang_glyphs[sp+1:] if sp > 0 else ''
+            cur['parses'] = []
+
+        elif note.startswith(' *'):
+            content = note[2:]
+            if ' - ' in content:
+                proto, rest = content.split(' - ', 1)
+                toks = rest.rsplit(None, 1)
+                rcn  = toks[0].strip() if len(toks) == 2 else rest.strip()
+                syll = toks[1]          if len(toks) == 2 else ''
+                cur['parses'].append((rcn, proto, syll, True))
+
+        elif note.startswith(' xx '):
+            content = note[4:]
+            if ' - ' in content:
+                proto, rest = content.split(' - ', 1)
+                toks = rest.rsplit(None, 1)
+                rcn  = toks[0].strip() if len(toks) == 2 else rest.strip()
+                syll = toks[1]          if len(toks) == 2 else ''
+                cur['parses'].append((rcn, proto, syll, False))
+
+    flush()
+
+    if notes:
+        parts.append(
+            '<hr class="my-2">'
+            '<div class="process-summary">'
+            '<strong class="small">Summary</strong>'
+            '<ul class="list-unstyled small mt-1 mb-0">'
+        )
+        for n in notes:
+            parts.append(f'<li>{esc(n)}</li>')
+        parts.append('</ul></div>')
+
+    parts.append('</div>')
+    return '\n'.join(parts)
+
+
 # ── Main page ──────────────────────────────────────────────────────────────────
 
 @bp.route('/')
@@ -170,6 +278,10 @@ def api_run():
             settings = read.read_settings(
                 project_path, project, recon,
                 mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
+
+            run_info['run_params'] = {
+                'recon': recon, 'mel': mel, 'fuzzy': fuzzy, 'upstream': upstream,
+            }
 
             # Attach syllable_canon to settings so it is available for
             # logging and serialize_stats.  ProjectSettings doesn't hold it;
@@ -832,6 +944,8 @@ def api_load_run():
     if existing and existing['status'] == 'done':
         r      = existing
         record = runlog.get_run(run_id) or {}
+        if 'run_params' not in r:
+            r['run_params'] = record.get('params', {})
     else:
         record = runlog.get_run(run_id)
         if not record:
@@ -856,12 +970,13 @@ def api_load_run():
                 if os.path.isfile(candidate):
                     fuzzy_cov = candidate
         r = {
-            'id':       run_id,
-            'project':  record['project'],
-            'run_name': record['run_name'],
-            'status':   'done',
-            'log':      log_lines,
-            'error':    None,
+            'id':         run_id,
+            'project':    record['project'],
+            'run_name':   record['run_name'],
+            'status':     'done',
+            'log':        log_lines,
+            'error':      None,
+            'run_params': record.get('params', {}),
             'files': {
                 'sets':      f.get('sets')     or None,
                 'stats':     f.get('stats')    or None,
@@ -1038,3 +1153,187 @@ def api_save_projects():
 
     proj_module.projects = proj_module.get_dirs('projects')
     return jsonify(ok=True)
+
+
+# ── Interactive pane — language list ──────────────────────────────────────────
+
+@bp.route('/api/interactive_langs/<run_id>')
+def api_interactive_langs(run_id):
+    """Return attested language list for the Interactive pane, in upstream order."""
+    import read as re_read
+
+    with _runs_lock:
+        r = _runs.get(run_id)
+    if r is None or r['status'] != 'done':
+        return jsonify(error='Run not found'), 404
+
+    attested_set = set(r['files'].get('data', {}).keys())
+    run_params   = r.get('run_params', {})
+    upstream_str = (run_params.get('upstream') or '').strip()
+
+    if upstream_str:
+        try:
+            upstream_map = re_read.parse_upstream(upstream_str)
+            proto_keys   = set(upstream_map.keys())
+            ordered = [
+                lg for lgs in upstream_map.values()
+                for lg in lgs
+                if lg not in proto_keys
+            ]
+            # Keep only languages actually attested in this run, in upstream order
+            seen    = set()
+            ordered = [lg for lg in ordered
+                       if lg in attested_set and lg not in seen and not seen.add(lg)]
+            # Append any attested languages not mentioned in the upstream string
+            for lg in sorted(attested_set - set(ordered)):
+                ordered.append(lg)
+        except Exception:
+            ordered = sorted(attested_set)
+    else:
+        ordered = sorted(attested_set)
+
+    return jsonify(languages=ordered)
+
+
+# ── Interactive pane — load forms from an existing set ───────────────────────
+
+@bp.route('/api/run/<run_id>/set_forms')
+def api_set_forms(run_id):
+    """Return {language, reflex, gloss} forms for one cognate set in a completed run."""
+    import xml.etree.ElementTree as ET
+    set_num = request.args.get('num', '').strip()
+    if not set_num:
+        return jsonify(error='num parameter required'), 400
+    with _runs_lock:
+        r = _runs.get(run_id)
+    if r is None or r.get('status') != 'done':
+        return jsonify(error='Run not found or not complete'), 404
+    sets_path = (r.get('files') or {}).get('sets', '')
+    if not sets_path or not os.path.exists(sets_path):
+        return jsonify(error='Sets file not found'), 404
+    try:
+        root = ET.parse(sets_path).getroot()
+        target = None
+        for s in root.iterfind('.//sets/set'):
+            if (s.findtext('id') or '').strip() == set_num:
+                target = s
+                break
+        if target is None:
+            return jsonify(error=f'Set {set_num!r} not found'), 404
+        forms = []
+        for rfx in target.iterfind('.//rfx'):
+            lg = (rfx.findtext('lg') or '').strip()
+            lx = (rfx.findtext('lx') or '').strip()
+            gl = (rfx.findtext('gl') or '').strip()
+            if lg and lx:
+                forms.append({'language': lg, 'reflex': lx, 'gloss': gl})
+        return jsonify(forms=forms)
+    except Exception as exc:
+        return jsonify(error=str(exc)), 500
+
+
+# ── Interactive pane — run ────────────────────────────────────────────────────
+
+@bp.route('/api/interactive_run', methods=['POST'])
+def api_interactive_run():
+    """Run the Upstream process on a user-supplied set of reflexes and glosses."""
+    import RE, read as re_read, load_hooks
+    import unicodedata
+
+    body       = request.get_json(force=True)
+    run_id     = body.get('run_id')
+    forms_data = body.get('forms', [])   # [{language, reflex, gloss}, ...]
+
+    with _runs_lock:
+        r = _runs.get(run_id)
+    if r is None or r['status'] != 'done':
+        return jsonify(error='Base run not found or not complete'), 400
+
+    project = r['project']
+    if project not in proj_module.projects:
+        return jsonify(error=f'Project not found: {project}'), 400
+    project_path = proj_module.projects[project]
+
+    run_params   = r.get('run_params', {})
+    recon        = run_params.get('recon')    or None
+    mel          = run_params.get('mel')      or None
+    fuzzy        = run_params.get('fuzzy')    or None
+    upstream     = run_params.get('upstream') or None
+
+    try:
+        load_hooks.load_hook(project_path)
+        settings = re_read.read_settings(
+            project_path, project, recon,
+            mel_token=mel, fuzzy_token=fuzzy, upstream=upstream)
+    except Exception as exc:
+        return jsonify(error=f'Could not read settings: {exc}'), 500
+
+    # Apply the same Unicode normalisation that read_attested_lexicons would use
+    ctx = getattr(settings, 'context_match_type', None)
+    norm = (lambda s: unicodedata.normalize('NFD', s)) if ctx == 'glyphs' \
+           else (lambda s: unicodedata.normalize('NFC', s))
+
+    # Build attested lexicons from user-supplied form data
+    attested_by_lang = {}
+    for item in forms_data:
+        lang   = item.get('language', '').strip()
+        reflex = item.get('reflex',   '').strip()
+        gloss  = item.get('gloss',    '').strip()
+        if lang and reflex and lang in settings.attested:
+            attested_by_lang.setdefault(lang, []).append(
+                RE.ModernForm(lang, norm(reflex), gloss, ''))
+
+    if not attested_by_lang:
+        return jsonify(error='No valid forms entered (check languages match the run)'), 400
+
+    # Provide empty lexicons for all expected attested languages so upstream_tree
+    # can reach every leaf — languages with no forms will simply produce no reconstructions.
+    attested_lexicons = {
+        lang: RE.Lexicon(lang, attested_by_lang.get(lang, []), [])
+        for lang in settings.attested
+    }
+
+    old_debug  = RE.Debug.debug
+    RE.Debug.debug = True
+
+    old_stdout = sys.stdout
+    class _Tee:
+        def __init__(self, orig): self._orig = orig
+        def write(self, s):
+            return self._orig.write(s)
+        def flush(self): self._orig.flush()
+    sys.stdout = _Tee(old_stdout)
+
+    try:
+        B = RE.interactive_upstream(settings, attested_lexicons, only_with_mel=False)
+
+        # Mirror the post-processing done in do_run so serialize_sets has everything it needs
+        _isolates_dict = RE.extract_isolates(B)
+        B.isolates_dict = _isolates_dict
+        B.isolates = sorted(_isolates_dict.keys(), key=lambda x: x.language)
+        B.failures = sorted(B.statistics.failed_parses, key=lambda x: x.language)
+
+        # Serialize sets to a uniquely-named file (not added to run history)
+        run_name  = time.strftime('%Y%m%d-%H%M%S')
+        runs_dir  = os.path.join(project_path, 'runs')
+        os.makedirs(runs_dir, exist_ok=True)
+        sets_xml  = os.path.join(runs_dir,
+                                 f'{project}.interactive.{run_name}.sets.xml')
+        inter_pls = [pl for pl in settings.proto_languages
+                     if pl != settings.upstream_target]
+        all_langs = inter_pls + list(settings.attested.keys())
+        RE.dump_xml_sets(B, all_langs, sets_xml, True)
+
+        sets_html    = xslt.xml_to_html(sets_xml, 'sets2html.xsl')
+        print(f'Interactive: {len(B.statistics.debug_notes)} debug notes, '
+              f'{len(B.statistics.notes)} summary notes')
+        process_html = _build_process_html(
+            B.statistics.debug_notes, B.statistics.notes)
+
+    except Exception:
+        return jsonify(error=traceback.format_exc()), 500
+    finally:
+        RE.Debug.debug = old_debug
+        sys.stdout      = old_stdout
+
+    return jsonify(process_html=process_html, sets_html=sets_html)

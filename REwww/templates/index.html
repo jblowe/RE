@@ -36,6 +36,10 @@
          data-re-tab href="#tab-research" role="tab">Research</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link disabled" id="tab-interactive-nav"
+         data-re-tab href="#tab-interactive" role="tab">Interactive</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link disabled" id="tab-parameters-nav"
          data-re-tab href="#tab-parameters" role="tab">Parameters</a>
     </li>
@@ -153,6 +157,49 @@
 
       </div><!-- /research-grid -->
     </div><!-- /tab-research -->
+
+    <!-- ══ INTERACTIVE TAB ══════════════════════════════════════════════════ -->
+    <div class="tab-pane fade" id="tab-interactive" role="tabpanel">
+      <div id="interactive-grid">
+
+        <!-- ── Input subpane ── -->
+        <div id="interactive-input-panel">
+          <div class="interactive-panel-header">
+            <span class="interactive-panel-title">Input</span>
+            <button id="btn-run-interactive" class="btn btn-sm btn-primary" disabled>
+              <i class="fas fa-play"></i> Run
+            </button>
+            <button id="btn-clear-interactive" class="btn btn-sm btn-outline-secondary" disabled>
+              Clear
+            </button>
+          </div>
+          <div class="content-area" id="interactive-input-content">
+            <p class="text-muted">Run a project to populate this pane.</p>
+          </div>
+        </div><!-- /interactive-input-panel -->
+
+        <!-- ── Process subpane ── -->
+        <div id="interactive-process-panel">
+          <div class="interactive-panel-header">
+            <span class="interactive-panel-title">Process</span>
+          </div>
+          <div class="content-area" id="interactive-process-content">
+            <p class="text-muted">Enter forms and click Run.</p>
+          </div>
+        </div><!-- /interactive-process-panel -->
+
+        <!-- ── Results subpane ── -->
+        <div id="interactive-results-panel">
+          <div class="interactive-panel-header">
+            <span class="interactive-panel-title">Results</span>
+          </div>
+          <div class="content-area" id="interactive-results-content">
+            <p class="text-muted">Results will appear here.</p>
+          </div>
+        </div><!-- /interactive-results-panel -->
+
+      </div><!-- /interactive-grid -->
+    </div><!-- /tab-interactive -->
 
     <!-- ══ PARAMETERS TAB ════════════════════════════════════════════════════ -->
     <div class="tab-pane fade" id="tab-parameters" role="tabpanel">

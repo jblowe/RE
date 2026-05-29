@@ -84,6 +84,75 @@
   a.rcn-link:hover { color: #EC5800; }
 
   .toc-row-highlight { background-color: #fff3cd !important; }
+
+  /* ── Interactive pane ─────────────────────────────────────────────────────── */
+  #interactive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100vh - 108px);
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  #interactive-input-panel,
+  #interactive-process-panel,
+  #interactive-results-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+  }
+
+  .interactive-panel-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .3rem;
+    padding: .3rem .6rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-size: .875rem;
+  }
+  .interactive-panel-title {
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: .15rem;
+  }
+
+  #interactive-input-content,
+  #interactive-process-content,
+  #interactive-results-content {
+    flex: 1;
+    overflow: auto;
+    min-height: 0;
+    padding: .5rem;
+  }
+
+  /* Input table */
+  #interactive-input-table td { vertical-align: middle; }
+  #interactive-input-table .lang-cell { font-size: .85rem; white-space: nowrap; }
+
+  /* Process pane */
+  .process-form-block  { margin-bottom: .75rem; }
+  .process-form-label  {
+    font-size: .85rem;
+    padding: .15rem .4rem;
+    margin-bottom: .25rem;
+    background: #f0f0f0;
+    border-radius: .2rem;
+  }
+  .process-parse-table { font-size: .82rem; margin-bottom: 0; }
+  .process-summary     { font-size: .85rem; }
+
+  /* Set → Interactive link (set number in Sets / Research pane) */
+  .set-interactive-link {
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+  }
+  .set-interactive-link:hover { color: #EC5800; }
 </style>
 <script>
 /* Vanilla table sorter — works on any table.sortable, including dynamically
@@ -128,6 +197,8 @@ let currentProject = null;
 let pollTimer      = null;
 let logLinesShown  = 0;
 let runFromResearch  = false;  // true when Run Again was clicked from Research
+let interactiveLoadedForRunId    = null;  // tracks which run the Interactive input table was built for
+let _interactivePaneReadyPromise = null;  // pending Promise while the input table is being fetched
 
 /* ── About panel toggle ── */
 function showAbout() {
@@ -155,7 +226,7 @@ function setTabEnabled(tabNavId, enabled) {
    returns to Projects with no run loaded; called with true as soon as any
    run is loaded or any other tab is activated. */
 function setRunTabsVisible(visible) {
-  ['tab-research-nav','tab-parameters-nav','tab-sets-nav',
+  ['tab-research-nav','tab-interactive-nav','tab-parameters-nav','tab-sets-nav',
    'tab-stats-nav','tab-lexicons-nav'].forEach(navId => {
     const li = document.getElementById(navId);
     if (li) li.closest('li').style.display = visible ? '' : 'none';
@@ -693,6 +764,13 @@ function handleRunDone(data, activateAfter) {
   setTabEnabled('tab-research-nav', true);
   document.getElementById('btn-freq-research-parameters').style.display = '';
   document.getElementById('btn-edit-research-parameters').style.display = '';
+
+  /* ── Interactive pane wiring ── */
+  setTabEnabled('tab-interactive-nav', true);
+  interactiveLoadedForRunId    = null;   // force input-table rebuild on next visit
+  _interactivePaneReadyPromise = null;
+  document.getElementById('btn-run-interactive').disabled   = false;
+  document.getElementById('btn-clear-interactive').disabled = false;
 
   /* Enable Run Again */
   document.getElementById('btn-run-again').disabled = false;
@@ -1424,7 +1502,8 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     setRunTabsVisible(true);
     if (tabName === 'log' || tabName === 'compare' || !currentRunId) return;
     if (tabName === 'lexicons') return;  // sub-tabs manage their own content
-    if (tabName === 'research') { loadResearchPane(); return; }
+    if (tabName === 'research')     { loadResearchPane();     return; }
+    if (tabName === 'interactive')  { loadInteractivePane();  return; }
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
     if (saveBtn && saveBtn.style.display !== 'none') return;
     loadTabContent(tabName, modes[tabName] || 'paragraph');
@@ -1506,6 +1585,226 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     });
   });
 })();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Interactive pane — load, build input table, Run / Clear buttons
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Populate the Input sub-pane when the Interactive tab is first opened for
+   a given run.  Returns a Promise that resolves once the table is ready.
+   Calling again for the same run returns a resolved Promise immediately.
+   While a fetch is in-flight, subsequent calls reuse the same Promise. */
+function loadInteractivePane() {
+  if (!currentRunId) return Promise.resolve();
+  if (interactiveLoadedForRunId === currentRunId) return Promise.resolve();
+  if (_interactivePaneReadyPromise) return _interactivePaneReadyPromise;
+
+  interactiveLoadedForRunId = currentRunId;
+  const inputEl = document.getElementById('interactive-input-content');
+  inputEl.innerHTML = `<p class="text-muted">${spinnerHtml()} Loading languages…</p>`;
+
+  _interactivePaneReadyPromise = fetch(`/api/interactive_langs/${currentRunId}`)
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) {
+        inputEl.innerHTML = `<p class="text-danger">${data.error}</p>`;
+        interactiveLoadedForRunId = null;
+        throw new Error(data.error);
+      }
+      buildInteractiveInputTable(data.languages);
+    })
+    .catch(err => {
+      if (_interactivePaneReadyPromise) {   // not already reset by a new run
+        inputEl.innerHTML = `<p class="text-danger">Error loading languages: ${err}</p>`;
+        interactiveLoadedForRunId = null;
+      }
+      throw err;
+    })
+    .finally(() => { _interactivePaneReadyPromise = null; });
+
+  return _interactivePaneReadyPromise;
+}
+
+function buildInteractiveInputTable(languages) {
+  const inputEl = document.getElementById('interactive-input-content');
+  if (!languages || !languages.length) {
+    inputEl.innerHTML = '<p class="text-muted">No attested languages found.</p>';
+    return;
+  }
+
+  const proj = currentProject || '';
+
+  let html = '<table class="table table-sm table-bordered mb-0" id="interactive-input-table">'
+           + '<thead class="thead-light"><tr>'
+           + '<th>Language</th><th>Reflex</th><th>Gloss</th>'
+           + '</tr></thead><tbody>';
+
+  languages.forEach(lang => {
+    const lsRef = localStorage.getItem(`re:int:${proj}:${lang}:reflex`) || '';
+    const lsGls = localStorage.getItem(`re:int:${proj}:${lang}:gloss`)  || '';
+    function escAttr(s) {
+      return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;')
+              .replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+    html += `<tr>
+      <td class="lang-cell align-middle">${escAttr(lang)}</td>
+      <td><input type="text" class="form-control form-control-sm interactive-reflex"
+                 data-lang="${escAttr(lang)}" value="${escAttr(lsRef)}" autocomplete="off"></td>
+      <td><input type="text" class="form-control form-control-sm interactive-gloss"
+                 data-lang="${escAttr(lang)}" value="${escAttr(lsGls)}" autocomplete="off"></td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  inputEl.innerHTML = html;
+
+  /* Persist each keystroke to localStorage */
+  inputEl.querySelectorAll('.interactive-reflex, .interactive-gloss').forEach(inp => {
+    inp.addEventListener('input', () => {
+      const lang  = inp.dataset.lang;
+      const field = inp.classList.contains('interactive-reflex') ? 'reflex' : 'gloss';
+      const key   = `re:int:${proj}:${lang}:${field}`;
+      if (inp.value.trim()) localStorage.setItem(key, inp.value);
+      else                  localStorage.removeItem(key);
+    });
+  });
+}
+
+/* Run button */
+document.getElementById('btn-run-interactive').addEventListener('click', function () {
+  const table = document.getElementById('interactive-input-table');
+  if (!table || !currentRunId) return;
+
+  const forms = [];
+  table.querySelectorAll('tbody tr').forEach(tr => {
+    const reflexInp = tr.querySelector('.interactive-reflex');
+    const glossInp  = tr.querySelector('.interactive-gloss');
+    if (!reflexInp) return;
+    const reflex = reflexInp.value.trim();
+    if (!reflex) return;
+    forms.push({
+      language: reflexInp.dataset.lang,
+      reflex,
+      gloss: glossInp ? glossInp.value.trim() : '',
+    });
+  });
+
+  if (!forms.length) {
+    alert('Please enter at least one reflex before running.');
+    return;
+  }
+
+  const processEl = document.getElementById('interactive-process-content');
+  const resultsEl = document.getElementById('interactive-results-content');
+  processEl.innerHTML = `<p class="text-muted">${spinnerHtml()} Running…</p>`;
+  resultsEl.innerHTML = `<p class="text-muted">${spinnerHtml()} Running…</p>`;
+  this.disabled = true;
+
+  fetch('/api/interactive_run', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify({ run_id: currentRunId, forms }),
+  })
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) {
+      processEl.innerHTML = `<p class="text-danger">Error: ${data.error}</p>`;
+      resultsEl.innerHTML = '<p class="text-muted">No results.</p>';
+      return;
+    }
+    processEl.innerHTML = data.process_html || '<p class="text-muted">No process output.</p>';
+    resultsEl.innerHTML = data.sets_html    || '<p class="text-muted">No sets produced.</p>';
+  })
+  .catch(err => {
+    processEl.innerHTML = `<p class="text-danger">Request failed: ${err}</p>`;
+    resultsEl.innerHTML = '';
+  })
+  .finally(() => { this.disabled = false; });
+});
+
+/* Clear button */
+document.getElementById('btn-clear-interactive').addEventListener('click', function () {
+  const proj = currentProject || '';
+  document.querySelectorAll('#interactive-input-table input').forEach(inp => {
+    inp.value = '';
+    const lang  = inp.dataset.lang;
+    const field = inp.classList.contains('interactive-reflex') ? 'reflex' : 'gloss';
+    localStorage.removeItem(`re:int:${proj}:${lang}:${field}`);
+  });
+  document.getElementById('interactive-process-content').innerHTML =
+    '<p class="text-muted">Enter forms and click Run.</p>';
+  document.getElementById('interactive-results-content').innerHTML =
+    '<p class="text-muted">Results will appear here.</p>';
+});
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Set → Interactive link
+   Clicking a .set-interactive-link (rendered by sets2html/sets2tabular XSLT)
+   fetches the set's forms, populates the Interactive input table, then runs.
+   Works from both the Sets tab and the Research pane's Sets panel.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Fill the Interactive input table with the given forms array
+   [{language, reflex, gloss}, ...], clearing any previous values first. */
+function populateInteractiveInputs(forms) {
+  const table = document.getElementById('interactive-input-table');
+  if (!table) return;
+  const proj = currentProject || '';
+
+  /* Clear all inputs and remove their localStorage entries */
+  table.querySelectorAll('.interactive-reflex, .interactive-gloss').forEach(inp => {
+    inp.value = '';
+    const lang  = inp.dataset.lang;
+    const field = inp.classList.contains('interactive-reflex') ? 'reflex' : 'gloss';
+    localStorage.removeItem(`re:int:${proj}:${lang}:${field}`);
+  });
+
+  /* Fill in provided forms */
+  forms.forEach(({language, reflex, gloss}) => {
+    const esc  = CSS.escape(language);
+    const rInp = table.querySelector(`.interactive-reflex[data-lang="${esc}"]`);
+    const gInp = table.querySelector(`.interactive-gloss[data-lang="${esc}"]`);
+    if (rInp && reflex) {
+      rInp.value = reflex;
+      localStorage.setItem(`re:int:${proj}:${language}:reflex`, reflex);
+    }
+    if (gInp && gloss) {
+      gInp.value = gloss;
+      localStorage.setItem(`re:int:${proj}:${language}:gloss`, gloss);
+    }
+  });
+}
+
+/* Event delegation: handle clicks on .set-interactive-link inside either
+   the Sets tab or the Research pane's sets panel. */
+['sets-content', 'research-sets-content'].forEach(containerId => {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.addEventListener('click', function (e) {
+    const link = e.target.closest('.set-interactive-link');
+    if (!link || !currentRunId) return;
+    const setNum = link.dataset.setNum;
+    if (!setNum) return;
+    e.preventDefault();
+
+    fetch(`/api/run/${currentRunId}/set_forms?num=${encodeURIComponent(setNum)}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.error) { alert(`Could not load set ${setNum}: ${data.error}`); return; }
+        /* Ensure the Interactive input table exists, then populate and run */
+        return loadInteractivePane().then(() => {
+          populateInteractiveInputs(data.forms);
+          /* Switch to Interactive tab */
+          const navLink = document.getElementById('tab-interactive-nav');
+          if (navLink && !navLink.classList.contains('disabled')) navLink.click();
+          /* Auto-run */
+          const runBtn = document.getElementById('btn-run-interactive');
+          if (runBtn && !runBtn.disabled) runBtn.click();
+        });
+      })
+      .catch(err => alert(`Error loading set ${setNum}: ${err}`));
+  });
+});
 
 /* ══════════════════════════════════════════════════════════════════════════
    Back-to-top button — appears after scrolling down, hidden on Projects tab
