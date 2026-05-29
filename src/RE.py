@@ -1204,6 +1204,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
     accumulated_language_stats = {}
+    accumulated_debug_notes = []
 
     def rec(target, root):
         if target in attested_lexicons:
@@ -1214,9 +1215,10 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
                                            param_tree[target],
                                            only_with_mel,
                                            root)
-        # Accumulate language stats from every level so the top-level
-        # Statistics object reflects the full tree, not just the root level.
+        # Accumulate stats from every level so the top-level Statistics object
+        # reflects the full tree, not just the root level.
         accumulated_language_stats.update(statistics.language_stats)
+        accumulated_debug_notes.extend(statistics.debug_notes)
         sort_dict = {daughter: i for (i, daughter) in enumerate(tree[target])}
         return Lexicon(
             target,
@@ -1229,6 +1231,7 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
 
     result = rec(target, True)
     result.statistics.language_stats = accumulated_language_stats
+    result.statistics.debug_notes = accumulated_debug_notes
     return result
 
 # Return a mapping from protolanguage to its associated parameter object.
