@@ -2,7 +2,6 @@ import os
 import time
 import collections
 import lxml.etree as ET
-from xml.dom import minidom
 import RE
 import utils
 from utils import spec_display, spec_for_storage
@@ -84,8 +83,7 @@ def serialize_correspondence_file(filename, parameters):
             ET.SubElement(entry, 'note').text = note
 
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(minidom.parseString(ET.tostring(root))
-                .toprettyxml(indent='   '))
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
 
 
 def serialize_csv_correspondences(table, filename):
