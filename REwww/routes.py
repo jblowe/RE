@@ -912,12 +912,25 @@ def api_save_fuz(run_id):
             ET.SubElement(item_el, 'from').text = f_val
         n += 1
 
-    xml_bytes = ET.tostring(new_root, encoding='utf-8', xml_declaration=True)
+    xml_bytes = ET.tostring(new_root, pretty_print=True,
+                            encoding='utf-8', xml_declaration=True)
     try:
         with open(file_path, 'wb') as fh:
             fh.write(xml_bytes)
     except OSError as exc:
         return jsonify(error=f'Could not write file: {exc}'), 500
+
+    # The coverage-annotated copy (fuzzy_cov) is now stale — it reflects usage
+    # counts from the last run against the OLD fuzzy rules.  Remove it from the
+    # run's file map so the view immediately re-renders from the freshly-saved
+    # fuz_path instead of the stale coverage file.
+    with _runs_lock:
+        stale_cov = r['files'].pop('fuzzy_cov', None)
+    if stale_cov and os.path.isfile(stale_cov):
+        try:
+            os.remove(stale_cov)
+        except OSError:
+            pass   # best effort
 
     return jsonify(ok=True, saved_to=os.path.basename(file_path))
 

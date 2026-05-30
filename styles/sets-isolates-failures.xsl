@@ -128,7 +128,15 @@
                 <small style="color:#888;cursor:help;">(+<xsl:value-of select="count(recon)-1"/> more)</small>
               </xsl:if>
             </td>
-            <td class="col-plg"><xsl:value-of select="@id"/></td>
+            <td class="col-plg">
+              <span class="rfx-interactive-link"
+                    data-lang="{lg}"
+                    data-reflex="{lx}"
+                    data-gloss="{gl}"
+                    title="Load in Interactive tab">
+                <xsl:value-of select="@id"/>
+              </span>
+            </td>
             <td class="col-gloss">
               <!-- No matching MEL -->
               <xsl:if test="not(matched_mel)">
@@ -189,7 +197,15 @@
               </xsl:choose>
             </td>
             <td class="col-gloss"><xsl:value-of select="gl"/></td>
-            <td class="col-plg"><xsl:value-of select="@id"/></td>
+            <td class="col-plg">
+              <span class="rfx-interactive-link"
+                    data-lang="{lg}"
+                    data-reflex="{lx}"
+                    data-gloss="{gl}"
+                    title="Load in Interactive tab">
+                <xsl:value-of select="@id"/>
+              </span>
+            </td>
           </tr>
         </xsl:for-each>
       </tbody>

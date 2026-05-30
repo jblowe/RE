@@ -146,13 +146,15 @@
   .process-parse-table { font-size: .82rem; margin-bottom: 0; }
   .process-summary     { font-size: .85rem; }
 
-  /* Set → Interactive link (set number in Sets / Research pane) */
-  .set-interactive-link {
+  /* Set / Isolate / Failure → Interactive links */
+  .set-interactive-link,
+  .rfx-interactive-link {
     cursor: pointer;
     text-decoration: underline dotted;
     text-underline-offset: 2px;
   }
-  .set-interactive-link:hover { color: #EC5800; }
+  .set-interactive-link:hover,
+  .rfx-interactive-link:hover { color: #EC5800; }
 </style>
 <script>
 /* Vanilla table sorter — works on any table.sortable, including dynamically
@@ -1775,34 +1777,53 @@ function populateInteractiveInputs(forms) {
   });
 }
 
-/* Event delegation: handle clicks on .set-interactive-link inside either
-   the Sets tab or the Research pane's sets panel. */
+/* Shared: ensure the Interactive input table is ready, fill it, switch tab, run. */
+function _runInteractiveWithForms(forms) {
+  return loadInteractivePane().then(() => {
+    populateInteractiveInputs(forms);
+    const navLink = document.getElementById('tab-interactive-nav');
+    if (navLink && !navLink.classList.contains('disabled')) navLink.click();
+    const runBtn = document.getElementById('btn-run-interactive');
+    if (runBtn && !runBtn.disabled) runBtn.click();
+  });
+}
+
+/* Event delegation: handle clicks on .set-interactive-link (set IDs) and
+   .rfx-interactive-link (isolate/failure row IDs) in the Sets tab and the
+   Research pane's sets panel. */
 ['sets-content', 'research-sets-content'].forEach(containerId => {
   const el = document.getElementById(containerId);
   if (!el) return;
   el.addEventListener('click', function (e) {
-    const link = e.target.closest('.set-interactive-link');
-    if (!link || !currentRunId) return;
-    const setNum = link.dataset.setNum;
-    if (!setNum) return;
-    e.preventDefault();
+    if (!currentRunId) return;
 
-    fetch(`/api/run/${currentRunId}/set_forms?num=${encodeURIComponent(setNum)}`)
-      .then(r => r.json())
-      .then(data => {
-        if (data.error) { alert(`Could not load set ${setNum}: ${data.error}`); return; }
-        /* Ensure the Interactive input table exists, then populate and run */
-        return loadInteractivePane().then(() => {
-          populateInteractiveInputs(data.forms);
-          /* Switch to Interactive tab */
-          const navLink = document.getElementById('tab-interactive-nav');
-          if (navLink && !navLink.classList.contains('disabled')) navLink.click();
-          /* Auto-run */
-          const runBtn = document.getElementById('btn-run-interactive');
-          if (runBtn && !runBtn.disabled) runBtn.click();
-        });
-      })
-      .catch(err => alert(`Error loading set ${setNum}: ${err}`));
+    /* ── Set ID: fetch all forms in the set from the server ── */
+    const setLink = e.target.closest('.set-interactive-link');
+    if (setLink) {
+      const setNum = setLink.dataset.setNum;
+      if (!setNum) return;
+      e.preventDefault();
+      fetch(`/api/run/${currentRunId}/set_forms?num=${encodeURIComponent(setNum)}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.error) { alert(`Could not load set ${setNum}: ${data.error}`); return; }
+          return _runInteractiveWithForms(data.forms);
+        })
+        .catch(err => alert(`Error loading set ${setNum}: ${err}`));
+      return;
+    }
+
+    /* ── Isolate / Failure ID: form data is embedded inline ── */
+    const rfxLink = e.target.closest('.rfx-interactive-link');
+    if (rfxLink) {
+      const language = rfxLink.dataset.lang;
+      const reflex   = rfxLink.dataset.reflex;
+      const gloss    = rfxLink.dataset.gloss || '';
+      if (!language || !reflex) return;
+      e.preventDefault();
+      _runInteractiveWithForms([{language, reflex, gloss}])
+        .catch(err => alert(`Error: ${err}`));
+    }
   });
 });
 
