@@ -59,11 +59,12 @@
     <style>
       .iso-badge { display:inline-block; padding:1px 5px; border-radius:3px;
                    font-size:0.78em; margin:1px 2px; white-space:nowrap; }
-      .iso-no-mel { background:#fff3cd; color:#856404; }
-      .iso-no-set { background:#e2e3e5; color:#383d41; }
-      .iso-in-set { background:#cce5ff; color:#004085; }
-      .iso-mel    { background:#d4edda; color:#155724; }
-      .iso-excl   { background:#f8d7da; color:#721c24; }
+      .iso-no-mel      { background:#fff3cd; color:#856404; }
+      .iso-no-set      { background:#e2e3e5; color:#383d41; }
+      .iso-in-set      { background:#cce5ff; color:#004085; }
+      .iso-mel         { background:#d4edda; color:#155724; }
+      .iso-excl        { background:#f8d7da; color:#721c24; }
+      .iso-fail-reason { display:block; margin-bottom:2px; white-space:normal; }
     </style>
     <h5>Isolates
       <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
@@ -181,6 +182,7 @@
           <th class="col-pfm">lx</th>
           <th class="col-gloss">gl</th>
           <th class="col-plg">id</th>
+          <th class="col-gloss">Reasons</th>
         </tr>
       </thead>
       <tbody>
@@ -205,6 +207,26 @@
                     title="Load in Interactive tab">
                 <xsl:value-of select="@id"/>
               </span>
+            </td>
+            <td class="col-gloss">
+              <xsl:for-each select="reasons/reason">
+                <span>
+                  <xsl:attribute name="class"><xsl:text>iso-badge iso-fail-reason </xsl:text><xsl:choose>
+                    <xsl:when test="starts-with(., 'Syllable canon:')">fail-syllable-canon</xsl:when>
+                    <xsl:when test="starts-with(., 'Syllable structure')">fail-syllable-final</xsl:when>
+                    <xsl:when test="contains(., 'unmet at word-final')">fail-word-final</xsl:when>
+                    <xsl:when test="contains(., 'Panini')">fail-panini</xsl:when>
+                    <xsl:when test="starts-with(., 'left context') or starts-with(., 'right context')">fail-context</xsl:when>
+                    <xsl:when test="starts-with(., 'Constituent ')">fail-constituent</xsl:when>
+                    <xsl:when test="starts-with(., '…') or starts-with(., '...')">fail-more</xsl:when>
+                    <xsl:otherwise>fail-constituent</xsl:otherwise>
+                  </xsl:choose></xsl:attribute>
+                  <xsl:value-of select="."/>
+                </span>
+              </xsl:for-each>
+              <xsl:if test="not(reasons/reason)">
+                <span class="text-muted" style="font-size:0.85em;">—</span>
+              </xsl:if>
             </td>
           </tr>
         </xsl:for-each>
