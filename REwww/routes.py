@@ -70,10 +70,35 @@ def _upstream_suggestion(project_path, project_name):
 
 # ── Interactive process-pane HTML builder ────────────────────────────────────
 
-def _build_process_html(debug_notes, notes):
-    """Build HTML for the Interactive Process pane from debug_notes and notes."""
+def _failure_reason_class(reason):
+    """Return the CSS class for a failure reason string."""
+    if reason.startswith('Syllable canon:'):       return 'fail-syllable-canon'
+    if reason.startswith('Syllable structure'):    return 'fail-syllable-final'
+    if 'unmet at word-final' in reason:            return 'fail-word-final'
+    if 'Panini' in reason:                         return 'fail-panini'
+    if reason.startswith(('left context', 'right context')): return 'fail-context'
+    if reason.startswith('Constituent '):          return 'fail-constituent'
+    if reason.startswith(('…', '...')):            return 'fail-more'
+    return 'fail-constituent'   # safe default
+
+
+def _build_process_html(debug_notes, notes, failed_parses=None):
+    """Build HTML for the Interactive Process pane.
+
+    debug_notes / notes come from B.statistics.
+    failed_parses is B.failures (list of ModernForm objects with .failure_reasons).
+    Failure reasons are shown inline under each failed form's block.
+    """
     import html as _html
     esc = _html.escape
+
+    # Build a (language, glyphs) → reasons lookup so flush() can render
+    # failure reasons directly beneath the form block that headed them.
+    fail_reasons_map = {}
+    for form in (failed_parses or []):
+        key = (form.language, form.glyphs)
+        if key not in fail_reasons_map:
+            fail_reasons_map[key] = form.failure_reasons or []
 
     n_parsing = sum(1 for n in debug_notes if n.startswith('!Parsing '))
     parts = ['<div class="interactive-process-body">']
@@ -118,11 +143,22 @@ def _build_process_html(debug_notes, notes):
                 )
             parts.append('</tbody></table>')
         else:
-            parts.append(
-                '<p class="text-warning small mb-0">'
-                'No parses &mdash; no correspondence sequence covers this form '
-                '(check context constraints and syllable structure).</p>'
-            )
+            # No parses — show failure reasons inline if available
+            reasons = fail_reasons_map.get((cur['lang'], cur['glyphs']), [])
+            if reasons:
+                parts.append(
+                    '<table class="table table-sm table-bordered process-parse-table">'
+                    '<thead class="thead-light"><tr><th>Reason</th></tr></thead>'
+                    '<tbody>'
+                )
+                for r in reasons:
+                    cls = _failure_reason_class(r)
+                    parts.append(
+                        f'<tr><td>'
+                        f'<span class="iso-badge iso-fail-reason {cls}">{esc(r)}</span>'
+                        f'</td></tr>'
+                    )
+                parts.append('</tbody></table>')
         parts.append('</div>')
         cur['lang'] = None
         cur['parses'] = []
@@ -161,6 +197,7 @@ def _build_process_html(debug_notes, notes):
 
     flush()
 
+    # ── Summary notes ──────────────────────────────────────────────────────────
     if notes:
         parts.append(
             '<hr class="my-2">'
@@ -1339,9 +1376,10 @@ def api_interactive_run():
 
         sets_html    = xslt.xml_to_html(sets_xml, 'sets2html.xsl')
         print(f'Interactive: {len(B.statistics.debug_notes)} debug notes, '
-              f'{len(B.statistics.notes)} summary notes')
+              f'{len(B.statistics.notes)} summary notes, '
+              f'{len(B.failures)} failures')
         process_html = _build_process_html(
-            B.statistics.debug_notes, B.statistics.notes)
+            B.statistics.debug_notes, B.statistics.notes, B.failures)
 
     except Exception:
         return jsonify(error=traceback.format_exc()), 500

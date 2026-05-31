@@ -43,6 +43,15 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .nav-tabs .nav-link.disabled { color: #999; }
 .tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
 
+/* ── Content area: scrollable region so sticky thead works inside it ─────── */
+/* Without overflow: auto here, the scroll container is the window, and
+   sticky headers end up behind the navbar.  max-height is sized to leave
+   room for navbar + tab bar + toolbar + padding (~180 px total). */
+.content-area {
+  overflow: auto;
+  max-height: calc(100vh - 180px);
+}
+
 /* ── Global table constraints ────────────────────────────────────────────── */
 .content-area table {
   width: auto !important;
@@ -136,11 +145,10 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 }
 
 /* ── Scrollable table container (sets tabular view) ──────────────────────── */
-/* Provides vertical scroll so sticky thead works within the container,
-   and horizontal scroll for wide language-column tables. */
+/* No overflow here — .content-area (overflow:auto) handles both vertical
+   and horizontal scroll.  Setting any overflow on this element would make it
+   a scroll container and intercept position:sticky on child thead/h5. */
 .re-scroll-table {
-  max-height: calc(100vh - 200px);
-  overflow: auto;
 }
 
 /* ── Back-to-top button ──────────────────────────────────────────────────── */
@@ -209,6 +217,17 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .cmp-changed   { background: #fff3cd; color: #664d03; }
 .cmp-lost      { background: #f8d7da; color: #58151c; }
 .cmp-gained    { background: #d1ecf1; color: #0c5460; }
+
+/* ── Failure-reason badge colours (Failures table + Interactive Process) ─── */
+/* Base layout lives in .iso-fail-reason (sets-isolates-failures.xsl style).
+   These classes supply only the colour for each failure category. */
+.fail-syllable-canon  { background: #fff3cd; color: #856404; } /* amber   – syllable pruned mid-parse  */
+.fail-constituent     { background: #f8d7da; color: #721c24; } /* red     – no correspondence found    */
+.fail-context         { background: #cce5ff; color: #004085; } /* blue    – left/right context blocked */
+.fail-syllable-final  { background: #e2d9f3; color: #432874; } /* purple  – syllable at word-final     */
+.fail-word-final      { background: #d1ecf1; color: #0c5460; } /* teal    – word-final context         */
+.fail-panini          { background: #e2e3e5; color: #383d41; } /* grey    – Panini's principle         */
+.fail-more            { background: #f5f5f5; color: #555;    } /* lt-grey – "… and N more"             */
 
 /* ── Edit tables: correspondence / fuzzy / mel ───────────────────────────── */
 .actions-col { width: 1%; white-space: nowrap; }

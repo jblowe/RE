@@ -59,11 +59,13 @@
   #research-sets-content {
     flex: 1;
     overflow: auto;
-    min-height: 0;   /* required for flex children to shrink below content size */
+    min-height: 0;    /* required for flex children to shrink below content size */
+    max-height: none; /* flex layout controls height; override .content-area cap */
     padding: .5rem;
   }
 
-  /* Section headers within the Sets content area are sticky as you scroll */
+  /* Section headers in the Sets and Research-sets panes stick as you scroll */
+  #sets-content h5,
   #research-sets-content h5 {
     position: sticky;
     top: 0;
@@ -127,6 +129,7 @@
     flex: 1;
     overflow: auto;
     min-height: 0;
+    max-height: none; /* flex layout controls height; override .content-area cap */
     padding: .5rem;
   }
 
