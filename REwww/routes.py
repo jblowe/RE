@@ -1076,7 +1076,10 @@ def api_compare_runs():
                 'run_name': r.get('run_name', ''),
                 'project':  r.get('project', ''),
                 'sets': 0, 'isolates': 0, 'failures': 0,
-                'params': {},
+                'params': {
+                    'context_match_type': r.get('context_match_type', ''),
+                    'spec':               r.get('spec', ''),
+                },
                 'files': {
                     'sets':     files.get('sets')     or '',
                     'coverage': files.get('coverage') or '',

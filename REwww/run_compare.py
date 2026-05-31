@@ -111,6 +111,11 @@ def _run_el(label: str, rec: dict, sets_found: bool, reflexes: int) -> ET.Elemen
         p = ET.SubElement(el, 'param')
         p.set('key',   key)
         p.set('value', _bn(val) if key != 'upstream' else val)
+    # context_match_type and spec are stored inside params (same dict as the others)
+    for key in ('context_match_type', 'spec'):
+        p = ET.SubElement(el, 'param')
+        p.set('key',   key)
+        p.set('value', params.get(key, '') or '')
 
     # Stats: sets first, then reflexes (total forms in sets), then isolates/failures
     for key, value in (('sets',      str(rec.get('sets',      ''))),

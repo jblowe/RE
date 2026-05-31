@@ -350,6 +350,8 @@
     <xsl:when test="$key = 'mel'">MEL</xsl:when>
     <xsl:when test="$key = 'fuzzy'">Fuzzy</xsl:when>
     <xsl:when test="$key = 'upstream'">Upstream</xsl:when>
+    <xsl:when test="$key = 'context_match_type'">Context match</xsl:when>
+    <xsl:when test="$key = 'spec'">Supra-segmentals</xsl:when>
     <xsl:otherwise><xsl:value-of select="$key"/></xsl:otherwise>
   </xsl:choose>
 </xsl:template>

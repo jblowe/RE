@@ -204,6 +204,7 @@ let logLinesShown  = 0;
 let runFromResearch  = false;  // true when Run Again was clicked from Research
 let interactiveLoadedForRunId    = null;  // tracks which run the Interactive input table was built for
 let _interactivePaneReadyPromise = null;  // pending Promise while the input table is being fetched
+let interactivePaneProject       = null;  // project whose results are currently in the Process/Results panes
 
 /* ── About panel toggle ── */
 function showAbout() {
@@ -265,7 +266,23 @@ function basename(path) {
   return path ? String(path).split(/[/\\]/).pop() : '';
 }
 
-function loadTabContent(tab, mode) {
+/* Re-open Bootstrap collapse sections by ID after a content reload.
+   Also updates the toggle button's aria-expanded / collapsed class. */
+function _restoreCollapseIds(ids) {
+  ids.forEach(id => {
+    const panel = document.getElementById(id);
+    if (!panel || !panel.classList.contains('collapse')) return;
+    panel.classList.add('show');
+    const btn = document.querySelector(
+      `[data-bs-target="#${CSS.escape(id)}"], [data-target="#${CSS.escape(id)}"]`);
+    if (btn) {
+      btn.classList.remove('collapsed');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+}
+
+function loadTabContent(tab, mode, afterLoad) {
   if (!currentRunId) return;
   const url = `/api/tab/${currentRunId}/${tab}?mode=${mode || 'paragraph'}`;
   const viewEl = document.getElementById(`${tab}-view-content`)
@@ -277,6 +294,7 @@ function loadTabContent(tab, mode) {
     .then(html => {
       viewEl.innerHTML = html;
       if (tab === 'sets') postProcessSets(viewEl);
+      if (afterLoad) afterLoad(viewEl);
     })
     .catch(e  => { viewEl.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
 }
@@ -285,7 +303,7 @@ function loadTabContent(tab, mode) {
    targetId is the explicit content-div ID to populate.
    After loading, postProcessResearch strips the XSLT-generated section
    header (now shown in the panel's own header bar) and wires jump links. */
-function loadResearchContent(apiTab, targetId, mode) {
+function loadResearchContent(apiTab, targetId, mode, afterLoad) {
   if (!currentRunId) return;
   const el = document.getElementById(targetId);
   if (!el) return;
@@ -295,6 +313,7 @@ function loadResearchContent(apiTab, targetId, mode) {
     .then(html => {
       el.innerHTML = html;
       postProcessResearch(apiTab);
+      if (afterLoad) afterLoad(el);
     })
     .catch(e  => { el.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
 }
@@ -772,6 +791,14 @@ function handleRunDone(data, activateAfter) {
 
   /* ── Interactive pane wiring ── */
   setTabEnabled('tab-interactive-nav', true);
+  // Clear Process/Results if the new run belongs to a different project
+  if (interactivePaneProject !== null && currentProject !== interactivePaneProject) {
+    document.getElementById('interactive-process-content').innerHTML =
+      '<p class="text-muted">Enter forms and click Run.</p>';
+    document.getElementById('interactive-results-content').innerHTML =
+      '<p class="text-muted">Results will appear here.</p>';
+    interactivePaneProject = null;
+  }
   interactiveLoadedForRunId    = null;   // force input-table rebuild on next visit
   _interactivePaneReadyPromise = null;
   document.getElementById('btn-run-interactive').disabled   = false;
@@ -1060,8 +1087,13 @@ function setupParamsEdit(idPrefix) {
   btnSave.addEventListener('click', () => {
     if (!currentRunId || !currentReconFile) return;
 
+    // Snapshot which collapse sections are open so we can re-open them after reload
+    const openCollapseIds = [...viewEl.querySelectorAll('.collapse.show')]
+      .map(el => el.id).filter(Boolean);
+
     const fields = {};
     viewEl.querySelectorAll('input[name]').forEach(inp => {
+      if (inp.type === 'radio' && !inp.checked) return;
       fields[inp.name] = inp.value;
     });
 
@@ -1094,10 +1126,11 @@ function setupParamsEdit(idPrefix) {
       btnSave.disabled        = false;
       btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
       btnCancel.style.display = 'none';
+      const restoreCollapse = () => _restoreCollapseIds(openCollapseIds);
       if (idPrefix) {
-        loadResearchContent('parameters', `${p}-view-content`);
+        loadResearchContent('parameters', `${p}-view-content`, undefined, restoreCollapse);
       } else {
-        loadTabContent('parameters', 'paragraph');
+        loadTabContent('parameters', 'paragraph', restoreCollapse);
       }
     })
     .catch(err => {
@@ -1165,8 +1198,11 @@ function setupXsltEdit(tab, dataAttr, saveEndpoint, idPrefix) {
 
   btnSave.addEventListener('click', () => {
     if (!currentRunId || !currentFile) return;
+    const openCollapseIds = [...viewEl.querySelectorAll('.collapse.show')]
+      .map(el => el.id).filter(Boolean);
     const fields = {};
     viewEl.querySelectorAll('input[name]').forEach(inp => {
+      if (inp.type === 'radio' && !inp.checked) return;
       fields[inp.name] = inp.value;
     });
     btnSave.disabled  = true;
@@ -1193,10 +1229,11 @@ function setupXsltEdit(tab, dataAttr, saveEndpoint, idPrefix) {
       btnSave.disabled        = false;
       btnSave.innerHTML       = '<i class="fas fa-save"></i> Save';
       btnCancel.style.display = 'none';
+      const restoreCollapse = () => _restoreCollapseIds(openCollapseIds);
       if (idPrefix !== undefined) {
-        loadResearchContent(tab, `${p}-view-content`);
+        loadResearchContent(tab, `${p}-view-content`, undefined, restoreCollapse);
       } else {
-        loadTabContent(tab, 'paragraph');
+        loadTabContent(tab, 'paragraph', restoreCollapse);
       }
     })
     .catch(err => {
@@ -1719,6 +1756,7 @@ document.getElementById('btn-run-interactive').addEventListener('click', functio
     }
     processEl.innerHTML = data.process_html || '<p class="text-muted">No process output.</p>';
     resultsEl.innerHTML = data.sets_html    || '<p class="text-muted">No sets produced.</p>';
+    interactivePaneProject = currentProject;   // remember which project owns these results
   })
   .catch(err => {
     processEl.innerHTML = `<p class="text-danger">Request failed: ${err}</p>`;
@@ -1740,6 +1778,7 @@ document.getElementById('btn-clear-interactive').addEventListener('click', funct
     '<p class="text-muted">Enter forms and click Run.</p>';
   document.getElementById('interactive-results-content').innerHTML =
     '<p class="text-muted">Results will appear here.</p>';
+  interactivePaneProject = null;   // pane is now empty
 });
 
 /* ══════════════════════════════════════════════════════════════════════════
