@@ -71,10 +71,15 @@
   </xsl:template>
 
   <xsl:template match="sf">
-    <ul class="list-unstyled">
-      <xsl:apply-templates select="rfx"/>
-      <xsl:apply-templates select="subset"/>
-    </ul>
+    <!-- rfx rows rendered as a real table so columns align -->
+    <xsl:if test="rfx">
+      <table class="sfx-table">
+        <tbody>
+          <xsl:apply-templates select="rfx"/>
+        </tbody>
+      </table>
+    </xsl:if>
+    <xsl:apply-templates select="subset"/>
   </xsl:template>
 
   <xsl:template match="multi">
@@ -95,63 +100,49 @@
 
   <xsl:template match="subset">
     <div class="level{@level}">
-      <li>
-        <div class="wrapper subsetrow">
-          <div class="id">
-            <xsl:value-of select="id"/>
-          </div>
-          <div class="plg">
-            <xsl:value-of select="plg"/>
-          </div>
-          <div class="pfm">
-            <xsl:value-of select="pfm"/>
-          </div>
-          <div class="pgl">
-            <xsl:value-of select="pgl"/>
-          </div>
-          <div class="rcn">[<xsl:value-of select="rcn"/>]
-          </div>
+      <div class="wrapper subsetrow">
+        <div class="id">
+          <xsl:value-of select="id"/>
         </div>
-      </li>
-      <ul class="list-unstyled">
-        <xsl:apply-templates select="sf"/>
-      </ul>
+        <div class="plg">
+          <xsl:value-of select="plg"/>
+        </div>
+        <div class="pfm">
+          <xsl:value-of select="pfm"/>
+        </div>
+        <div class="pgl">
+          <xsl:value-of select="pgl"/>
+        </div>
+        <div class="rcn">[<xsl:value-of select="rcn"/>]
+        </div>
+      </div>
+      <xsl:apply-templates select="sf"/>
     </div>
   </xsl:template>
 
   <xsl:template match="rfx">
-    <li>
-      <div class="wrapper {membership}">
-        <div class="lg">
-          <xsl:apply-templates select="lg"/>
-        </div>
-        <div class="lx">
-          <xsl:choose>
-            <xsl:when test="lxf">
-              <xsl:apply-templates select="lxf"/>
-              <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:apply-templates select="lx"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </div>
-        <div class="gl">
-          <xsl:apply-templates select="gl"/>
-        </div>
+    <tr class="{membership}">
+      <td class="lg"><xsl:apply-templates select="lg"/></td>
+      <td class="lx">
         <xsl:choose>
-          <xsl:when test="hn">
-            <div class="nn">[<xsl:apply-templates select="hn"/>]
-            </div>
+          <xsl:when test="lxf">
+            <xsl:apply-templates select="lxf"/>
+            <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
           </xsl:when>
-          <xsl:when test="id">
-            <div class="nn">[<xsl:apply-templates select="id"/>]
-            </div>
-          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="lx"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </td>
+      <td class="gl"><xsl:apply-templates select="gl"/></td>
+      <td class="nn">
+        <xsl:choose>
+          <xsl:when test="hn">[<xsl:apply-templates select="hn"/>]</xsl:when>
+          <xsl:when test="id">[<xsl:apply-templates select="id"/>]</xsl:when>
           <xsl:otherwise/>
         </xsl:choose>
-      </div>
-    </li>
+      </td>
+    </tr>
   </xsl:template>
 
   <xsl:template match="gl|hw">
