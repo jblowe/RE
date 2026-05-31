@@ -15,6 +15,10 @@ class Debug:
     debug = False
     panini = False
 
+# Maximum number of distinct failure reasons kept per form.
+# When the true count exceeds this, a trailing "… and N more" entry is added.
+_MAX_FAILURE_REASONS = 10
+
 class SyllableCanon:
     def __init__(self, sound_classes, syllable_regex, supra_segmentals, context_match_type,
                  raw_spec=None):
@@ -397,6 +401,7 @@ class ModernForm(Form):
         self.gloss = unicodedata.normalize('NFC', gloss) if gloss else gloss
         self.id = id
         self.attested_support = frozenset([self])
+        self.failure_reasons = None   # set by project_back when form fails to parse
 
     def __str__(self):
         return f'{super().__str__()}\t{self.gloss}\t{self.id}'
@@ -802,6 +807,7 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
     regex = parameters.syllable_canon.regex
     supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
+    context_match_type = parameters.syllable_canon.context_match_type
     fuzzy_mapping = None
     if language and parameters.fuzzy:
         fuzzy_mapping = {rep: target
@@ -824,6 +830,84 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
         attempts = set()
         form_length = len(form)
 
+        # ── Failure tracking (always on; only consumed when parses is empty) ──
+        _fail_max_pos = [-1]   # deepest position reached at a dead-end
+        _fail_reasons = []     # distinct reason strings at that depth (capped)
+        _fail_total   = [0]    # total dead-ends at that depth (for "and N more")
+
+        def _note_dead_end(position, reason_str):
+            if position > _fail_max_pos[0]:
+                _fail_max_pos[0] = position
+                _fail_reasons.clear()
+                _fail_total[0] = 0
+            if position == _fail_max_pos[0]:
+                if reason_str not in _fail_reasons:
+                    # Count and store only distinct reasons; the cap controls
+                    # how many are displayed — "… and N more" reflects truly
+                    # distinct reasons beyond the limit, not repeated paths.
+                    _fail_total[0] += 1
+                    if len(_fail_reasons) < _MAX_FAILURE_REASONS:
+                        _fail_reasons.append(reason_str)
+
+        def _daughter_form_str(corr):
+            """Return the daughter-language form(s) for corr.
+            Falls back to the proto form when the language has no entry."""
+            if not corr.id:          # initial_marker — no daughter form
+                return '#'
+            try:
+                forms = accessor(corr)
+                non_empty = [f for f in forms if f]
+                return ', '.join(non_empty) if non_empty else corr.proto_form
+            except (TypeError, KeyError, AttributeError):
+                return corr.proto_form
+
+        def _context_fail_msg(c, last, lastlast, position):
+            """Describe why correspondence c was blocked after last.
+            Shows daughter-language forms, not proto forms, and includes
+            the portion of the input already consumed (form[:position])."""
+            last_label   = last.id if last.id else 'word-initial'
+            last_dform   = _daughter_form_str(last)
+            c_dform      = _daughter_form_str(c)
+            consumed     = form[:position]
+
+            if c not in next_map[last]:
+                # Determine which side of the context failed.
+                if context_match_type == 'glyphs':
+                    left_ok = (c.context[0] is None or
+                               any(last.proto_form.endswith(ctx)
+                                   for ctx in c.expanded_context[0]))
+                    right_ok = (last.context[1] is None or
+                                any(c.proto_form.startswith(ctx)
+                                    for ctx in last.expanded_context[1]))
+                else:
+                    left_ok  = (c.context[0] is None or
+                                last.proto_form in c.expanded_context[0])
+                    right_ok = (last.context[1] is None or
+                                c.proto_form in last.expanded_context[1])
+
+                if not left_ok and c.context[0] is not None:
+                    ctx_vals = ', '.join(c.context[0])
+                    return (f'left context {c.id} \'{ctx_vals}\' unmet by '
+                            f'{context_match_type} {last_label} \'{last_dform}\''
+                            + (f' (after "{consumed}")' if consumed else ''))
+                elif not right_ok and last.context[1] is not None:
+                    ctx_vals = ', '.join(last.context[1])
+                    return (f'right context {last_label} \'{ctx_vals}\' unmet by '
+                            f'{context_match_type} {c.id} \'{c_dform}\''
+                            + (f' (after "{consumed}")' if consumed else ''))
+                else:
+                    return (f'left context {c.id} unmet by '
+                            f'{context_match_type} {last_label} \'{last_dform}\''
+                            + (f' (after "{consumed}")' if consumed else ''))
+            else:
+                # Panini's principle blocked the transition.
+                if lastlast is not None:
+                    ll_label = lastlast.id if lastlast.id else 'word-initial'
+                    return (f"{c.id} blocked by Panini's principle "
+                            f"after {last_label} given {ll_label}")
+                return (f"{c.id} blocked by Panini's principle "
+                        f"after {last_label}")
+
         def gen(position, parse, last, lastlast, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
             making sure to skip over suprasegmental features when matching
@@ -838,6 +922,15 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                     pass
                     #filler = '. ' * len(parse)
                     #statistics.add_debug_note(f'{filler}canon cannot match: {len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
+                # Reason 0: syllable canon has already ruled out this partial
+                # parse — no further extension can satisfy the regex.
+                # Commented out for now; Reason 3 (word-final syllable check)
+                # still catches syllable failures at the end of the form.
+                # Uncomment to see mid-parse prunings (may pre-empt other reasons).
+                #consumed = form[:position]
+                #_note_dead_end(position,
+                #    f'Syllable canon: "{syllable_parse}" cannot match'
+                #    + (f' (after "{consumed}")' if consumed else ''))
                 return
             if Debug.debug:
                 pass
@@ -850,15 +943,29 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                         '#' in last.expanded_context[1]):
                     if match.partial is False:
                         parses.add(tuple(parse))
+                    else:
+                        # Reason 3: syllable structure complete but doesn't match
+                        _note_dead_end(position,
+                            f'Syllable structure not satisfied: {syllable_parse}')
                     if Debug.debug:
                         attempts.add(tuple(parse))
+                else:
+                    # Reason 4: last correspondence forbids word-final position
+                    last_label  = last.id if last.id else 'word-initial'
+                    last_dform  = _daughter_form_str(last)
+                    ctx_vals    = ', '.join(last.context[1]) if last.context[1] else ''
+                    _note_dead_end(position,
+                        f'right context {last_label} \'{ctx_vals}\' unmet at word-final '
+                        f'({context_match_type} \'{last_dform}\')')
             # if the last token was marked as only word final then stop
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
             # otherwise keep building parses from epenthesis rules
+            made_progress = False
             for c in rule_map['∅']:
                 if (c in next_map[last] and
                     not blocked_given_map.get((last, c), constantly_false)(lastlast)):
+                    made_progress = True
                     for syllable_type in c.syllable_types:
                         gen(position,
                             parse + [c],
@@ -866,22 +973,38 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                             lastlast if c.proto_form in supra_segmentals else last,
                             syllable_parse + syllable_type)
             if position >= form_length:
-                #if Debug.debug:
-                #    statistics.add_debug_note(f'reached end of form!')
                 return
+            text_matched_corrs = []   # corrs whose daughter form matches here
             for token_length in token_lengths:
                 next_position = position + token_length
                 if next_position > form_length:
                     break
                 for c in rule_map[form[position:next_position]]:
+                    text_matched_corrs.append(c)
                     if (c in next_map[last] and
                         not blocked_given_map.get((last, c), constantly_false)(lastlast)):
+                        made_progress = True
                         for syllable_type in c.syllable_types:
                             gen(next_position,
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
                                 lastlast if c.proto_form in supra_segmentals else last,
                                 syllable_parse + syllable_type)
+            if not made_progress:
+                if text_matched_corrs:
+                    # Reason 2: constituent exists but every candidate was context-blocked
+                    seen_msgs = set()
+                    for c in text_matched_corrs:
+                        msg = _context_fail_msg(c, last, lastlast, position)
+                        if msg not in seen_msgs:
+                            _note_dead_end(position, msg)
+                            seen_msgs.add(msg)
+                else:
+                    # Reason 1: no correspondence covers form[position:] at all
+                    consumed = form[:position]
+                    _note_dead_end(position,
+                        f'Constituent “{form[position:]}” not found'
+                        + (f' after “{consumed}”' if consumed else ''))
 
         gen(0, [], parameters.table.initial_marker, None, '')
         if Debug.debug:
@@ -891,6 +1014,17 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                     statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)} - {correspondences_as_ids(p)} {syllable_structure(p)}')
                 else:
                     statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)} - {correspondences_as_ids(p)} {syllable_structure(p)}')
+
+        # Store failure reasons for project_back to pick up if this form failed.
+        if not parses and _fail_total[0] > 0:
+            reasons = list(_fail_reasons)
+            extra = _fail_total[0] - len(reasons)
+            if extra > 0:
+                reasons.append(f'… and {extra} more')
+            statistics._pending_failure_reasons = reasons
+        else:
+            statistics._pending_failure_reasons = None
+
         return parses
     return tokenize
 
@@ -947,6 +1081,8 @@ def project_back(lexicons, parameters, statistics):
             quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
 
+        failure_memo = {}   # glyphs → failure reasons when parses is empty
+
         def get_parses(glyphs):
             """Return list of (cs, history) for a glyph string, memoised."""
             if glyphs in memo:
@@ -955,6 +1091,11 @@ def project_back(lexicons, parameters, statistics):
             for (stage_0_form, history) in apply_rules(glyphs):
                 parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
             memo[glyphs] = parses
+            if not parses:
+                # Capture the best failure reasons left by the last tokenize call.
+                failure_memo[glyphs] = getattr(
+                    statistics, '_pending_failure_reasons', None)
+                statistics._pending_failure_reasons = None
             return parses
 
         def commit_parses(form, parses):
@@ -984,6 +1125,7 @@ def project_back(lexicons, parameters, statistics):
                     # show both the original and fuzzied glyphs.
                     count_of_no_parses += 1
                     form.fuzzied = fuzzied
+                    form.failure_reasons = failure_memo.get(fuzzied.glyphs)
                     statistics.failed_parses.append(form)
             else:
                 # No fuzzied version: original behaviour.
@@ -992,6 +1134,7 @@ def project_back(lexicons, parameters, statistics):
                     commit_parses(form, orig_parses)
                 else:
                     count_of_no_parses += 1
+                    form.failure_reasons = failure_memo.get(form.glyphs)
                     statistics.failed_parses.append(form)
 
         number_of_forms += len(lexicon.forms)

@@ -156,6 +156,11 @@ def add_entry(root, form, number):
         ET.SubElement(rfx, 'gl').text = form.gloss
     except:
         ET.SubElement(rfx, 'gl').text = 'missing'
+    reasons = getattr(form, 'failure_reasons', None)
+    if reasons:
+        reasons_el = ET.SubElement(rfx, 'reasons')
+        for r in reasons:
+            ET.SubElement(reasons_el, 'reason').text = r
     return
 
 
