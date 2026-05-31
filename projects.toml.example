@@ -1,0 +1,12 @@
+# projects.toml — local project registry for the Reconstruction Engine web app
+#
+# Copy this file to projects.toml and add your own project paths.
+# projects.toml is listed in .gitignore so your personal paths are never
+# committed.  Paths may be absolute or relative to the repository root.
+
+DIS        = "projects/DIS"
+HMONGMIEN  = "projects/HMONGMIEN"
+LOLOISH    = "projects/LOLOISH"
+POLYNESIAN = "projects/POLYNESIAN"
+ROMANCE    = "projects/ROMANCE"
+SLAVIC     = "projects/SLAVIC"
