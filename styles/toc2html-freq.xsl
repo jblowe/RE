@@ -176,6 +176,23 @@
                     </xsl:call-template>
                   </xsl:variable>
                   <span style="{$seg-style}"><xsl:if test="@statut='doute'">=</xsl:if><xsl:value-of select="."/></span>
+                  <!-- one "<<" then fuzz forms for THIS seg -->
+                  <xsl:variable name="sv" select="normalize-space(.)"/>
+                  <xsl:if test="../fuzz[@to = $sv]">
+                    <span class="toc-fuzz-sep">&lt;&lt;</span>
+                    <xsl:for-each select="../fuzz[@to = $sv]">
+                      <xsl:if test="position() &gt; 1"><xsl:text> </xsl:text></xsl:if>
+                      <xsl:variable name="fuzz-style">
+                        <xsl:call-template name="freq-style">
+                          <xsl:with-param name="freq" select="@count"/>
+                        </xsl:call-template>
+                      </xsl:variable>
+                      <span style="{$fuzz-style}"><xsl:value-of select="@from"/></span>
+                      <xsl:if test="number(@count) &gt; 1">
+                        <sub class="cov-uses">&#160;<xsl:value-of select="@count"/></sub>
+                      </xsl:if>
+                    </xsl:for-each>
+                  </xsl:if>
                   <xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
                 </xsl:for-each>
               </td>

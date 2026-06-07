@@ -12,6 +12,96 @@
     <a class="rcn-link"> elements so each correspondence ID is clickable.
     Shared by sets2tabular.xsl and sets2html.xsl via xsl:include.
   -->
+
+  <!--
+    take-digits: helper — returns the leading run of ASCII digits from $text.
+    Used by linkify-reason to extract the numeric part of a correspondence ID.
+  -->
+  <xsl:template name="take-digits">
+    <xsl:param name="text"/>
+    <xsl:variable name="ch" select="substring($text, 1, 1)"/>
+    <xsl:if test="$ch &gt;= '0' and $ch &lt;= '9'">
+      <xsl:value-of select="$ch"/>
+      <xsl:call-template name="take-digits">
+        <xsl:with-param name="text" select="substring($text, 2)"/>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
+  <!--
+    linkify-reason: scan a failure-reason string and wrap every cNNN
+    correspondence ID as an <a class="rcn-link"> so it is clickable.
+
+    Algorithm (XSLT 1.0, no regex):
+      • If the string starts with c + digit → extract the ID, emit a link,
+        recurse on the rest.
+      • Else if the string contains ' c' (space + lowercase c):
+          – If the character after 'c' is a digit → emit the text before the
+            match verbatim, a space, the link for cNNN, then recurse on the tail.
+          – Otherwise → emit the text-before + 'c' verbatim and recurse on the
+            remainder (avoids false matches for words like 'context').
+      • Otherwise → emit the text verbatim.
+  -->
+  <xsl:template name="linkify-reason">
+    <xsl:param name="text"/>
+    <xsl:variable name="ch0" select="substring($text, 1, 1)"/>
+    <xsl:variable name="ch1" select="substring($text, 2, 1)"/>
+    <xsl:choose>
+      <!-- String starts with cNNN -->
+      <xsl:when test="$ch0 = 'c' and $ch1 &gt;= '0' and $ch1 &lt;= '9'">
+        <xsl:variable name="digits">
+          <xsl:call-template name="take-digits">
+            <xsl:with-param name="text" select="substring($text, 2)"/>
+          </xsl:call-template>
+        </xsl:variable>
+        <xsl:variable name="corr-id" select="concat('c', $digits)"/>
+        <a class="rcn-link" href="#" data-corr-id="{$corr-id}">
+          <xsl:value-of select="$corr-id"/>
+        </a>
+        <xsl:call-template name="linkify-reason">
+          <xsl:with-param name="text" select="substring($text, string-length($corr-id) + 1)"/>
+        </xsl:call-template>
+      </xsl:when>
+      <!-- String contains ' c' somewhere -->
+      <xsl:when test="contains($text, ' c')">
+        <xsl:variable name="before"  select="substring-before($text, ' c')"/>
+        <xsl:variable name="after-c" select="substring-after($text,  ' c')"/>
+        <xsl:variable name="digit"   select="substring($after-c, 1, 1)"/>
+        <xsl:choose>
+          <!-- Character after 'c' is a digit → real correspondence ID -->
+          <xsl:when test="$digit &gt;= '0' and $digit &lt;= '9'">
+            <xsl:value-of select="$before"/>
+            <xsl:text> </xsl:text>
+            <xsl:variable name="digits">
+              <xsl:call-template name="take-digits">
+                <xsl:with-param name="text" select="$after-c"/>
+              </xsl:call-template>
+            </xsl:variable>
+            <xsl:variable name="corr-id" select="concat('c', $digits)"/>
+            <a class="rcn-link" href="#" data-corr-id="{$corr-id}">
+              <xsl:value-of select="$corr-id"/>
+            </a>
+            <xsl:call-template name="linkify-reason">
+              <xsl:with-param name="text" select="substring($after-c, string-length($digits) + 1)"/>
+            </xsl:call-template>
+          </xsl:when>
+          <!-- Not a correspondence ID (e.g. 'context', 'canon') — emit verbatim -->
+          <xsl:otherwise>
+            <xsl:value-of select="$before"/>
+            <xsl:text> c</xsl:text>
+            <xsl:call-template name="linkify-reason">
+              <xsl:with-param name="text" select="$after-c"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <!-- No more IDs — emit remainder verbatim -->
+      <xsl:otherwise>
+        <xsl:value-of select="$text"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <!--
     sets-stats-toolbar: renders the n-sets / isolates / failures button bar
     that appears at the top of every Sets view (both paragraph and tabular).
@@ -71,7 +161,11 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
-    <table class="table table-sm table-striped table-hover table-bordered sortable">
+    <!-- mel-used: true unless the <isolates> element carries mel="no",
+         which the serialiser sets when no MEL file was configured for the run.
+         When false, "No matching MEL" badges are suppressed for every row. -->
+    <xsl:variable name="mel-used" select="not(@mel = 'no')"/>
+    <table class="table table-sm table-striped table-hover table-bordered sortable iso-fail-table">
       <thead>
         <tr>
           <th class="col-plg">lg</th>
@@ -80,7 +174,7 @@
           <th class="col-pfm">pfm</th>
           <th class="col-rcn">rcn</th>
           <th class="col-plg">id</th>
-          <th class="col-gloss">Reasons</th>
+          <th class="col-reasons">Reasons</th>
         </tr>
       </thead>
       <tbody>
@@ -88,46 +182,55 @@
           <tr>
             <td class="col-plg"><xsl:value-of select="lg"/></td>
             <td class="col-pfm">
-              <xsl:choose>
-                <xsl:when test="lxf">
-                  <xsl:value-of select="lxf"/>
-                  <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
-                </xsl:when>
-                <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
-              </xsl:choose>
+              <span class="lx-interactive-link"
+                    data-lang="{lg}"
+                    data-reflex="{lx}"
+                    data-gloss="{gl}"
+                    title="Load in Interactive tab">
+                <xsl:choose>
+                  <xsl:when test="lxf">
+                    <xsl:value-of select="lxf"/>
+                    <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
+                  </xsl:when>
+                  <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
+                </xsl:choose>
+              </span>
             </td>
             <td class="col-gloss"><xsl:value-of select="gl"/></td>
-            <!-- pfm: show first reconstruction; extras listed in hover title -->
+            <!-- pfm: first reconstruction always visible; '+' toggle reveals extras.
+                 Each extra line shows its pfm + rcn so the rcn column stays simple. -->
             <td class="col-pfm">
-              <xsl:if test="count(recon) > 1">
-                <xsl:attribute name="title">
-                  <xsl:for-each select="recon[position() > 1]">
-                    <xsl:value-of select="pfm"/>
-                    <xsl:text> [</xsl:text><xsl:value-of select="rcn"/><xsl:text>]</xsl:text>
-                    <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
-                  </xsl:for-each>
-                </xsl:attribute>
-              </xsl:if>
-              <div class="pfm"><xsl:value-of select="recon[1]/pfm"/></div>
-              <xsl:if test="count(recon) > 1">
-                <small style="color:#888;cursor:help;">(+<xsl:value-of select="count(recon)-1"/> more)</small>
-              </xsl:if>
+              <xsl:choose>
+                <xsl:when test="count(recon) > 1">
+                  <xsl:variable name="eid" select="concat('iso-pfm-', generate-id(.))"/>
+                  <button class="iso-more-btn collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#{$eid}"
+                          aria-expanded="false"
+                          title="Show all reconstructions">+</button>
+                  <xsl:value-of select="recon[1]/pfm"/>
+                  <div class="collapse iso-more-pfms" id="{$eid}">
+                    <xsl:for-each select="recon[position() > 1]">
+                      <div class="iso-extra-pfm">
+                        <xsl:value-of select="pfm"/>
+                        <xsl:text> </xsl:text>
+                        <small class="text-muted">[<xsl:call-template name="linkify-rcn">
+                          <xsl:with-param name="text" select="rcn"/>
+                        </xsl:call-template>]</small>
+                      </div>
+                    </xsl:for-each>
+                  </div>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="recon[1]/pfm"/>
+                </xsl:otherwise>
+              </xsl:choose>
             </td>
-            <!-- rcn: show first reconstruction; extras listed in hover title -->
+            <!-- rcn: first reconstruction only; extras are shown inline when pfm expands -->
             <td class="col-rcn">
-              <xsl:if test="count(recon) > 1">
-                <xsl:attribute name="title">
-                  <xsl:for-each select="recon[position() > 1]">
-                    <xsl:value-of select="pfm"/>
-                    <xsl:text> [</xsl:text><xsl:value-of select="rcn"/><xsl:text>]</xsl:text>
-                    <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
-                  </xsl:for-each>
-                </xsl:attribute>
-              </xsl:if>
-              <div class="rcn"><xsl:call-template name="linkify-rcn"><xsl:with-param name="text" select="recon[1]/rcn"/></xsl:call-template></div>
-              <xsl:if test="count(recon) > 1">
-                <small style="color:#888;cursor:help;">(+<xsl:value-of select="count(recon)-1"/> more)</small>
-              </xsl:if>
+              <xsl:call-template name="linkify-rcn">
+                <xsl:with-param name="text" select="recon[1]/rcn"/>
+              </xsl:call-template>
             </td>
             <td class="col-plg">
               <span class="rfx-interactive-link"
@@ -138,9 +241,9 @@
                 <xsl:value-of select="@id"/>
               </span>
             </td>
-            <td class="col-gloss">
-              <!-- No matching MEL -->
-              <xsl:if test="not(matched_mel)">
+            <td class="col-reasons">
+              <!-- No matching MEL — suppressed when MEL was not configured -->
+              <xsl:if test="$mel-used and not(matched_mel)">
                 <span class="iso-badge iso-no-mel">No matching MEL</span>
               </xsl:if>
               <!-- No matching set -->
@@ -175,14 +278,14 @@
         n = <xsl:value-of select="count(rfx)"/>
       </small>
     </h5>
-    <table class="table table-sm table-striped table-hover table-bordered sortable">
+    <table class="table table-sm table-striped table-hover table-bordered sortable iso-fail-table">
       <thead>
         <tr>
           <th class="col-plg">lg</th>
           <th class="col-pfm">lx</th>
           <th class="col-gloss">gl</th>
           <th class="col-plg">id</th>
-          <th class="col-gloss">Reasons</th>
+          <th class="col-reasons">Reasons</th>
         </tr>
       </thead>
       <tbody>
@@ -190,13 +293,19 @@
           <tr>
             <td class="col-plg"><xsl:value-of select="lg"/></td>
             <td class="col-pfm">
-              <xsl:choose>
-                <xsl:when test="lxf">
-                  <xsl:value-of select="lxf"/>
-                  <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
-                </xsl:when>
-                <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
-              </xsl:choose>
+              <span class="lx-interactive-link"
+                    data-lang="{lg}"
+                    data-reflex="{lx}"
+                    data-gloss="{gl}"
+                    title="Load in Interactive tab">
+                <xsl:choose>
+                  <xsl:when test="lxf">
+                    <xsl:value-of select="lxf"/>
+                    <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
+                  </xsl:when>
+                  <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
+                </xsl:choose>
+              </span>
             </td>
             <td class="col-gloss"><xsl:value-of select="gl"/></td>
             <td class="col-plg">
@@ -208,15 +317,16 @@
                 <xsl:value-of select="@id"/>
               </span>
             </td>
-            <td class="col-gloss">
+            <td class="col-reasons">
               <xsl:for-each select="reasons/reason">
                 <span>
                   <xsl:attribute name="class"><xsl:text>iso-badge iso-fail-reason </xsl:text><xsl:choose>
                     <xsl:when test="starts-with(., 'Syllable canon:')">fail-syllable-canon</xsl:when>
                     <xsl:when test="starts-with(., 'Syllable structure')">fail-syllable-final</xsl:when>
-                    <xsl:when test="contains(., 'unmet at word-final')">fail-word-final</xsl:when>
+                    <xsl:when test="contains(., 'word-final')">fail-word-final</xsl:when>
                     <xsl:when test="contains(., 'Panini')">fail-panini</xsl:when>
-                    <xsl:when test="starts-with(., 'left context') or starts-with(., 'right context')">fail-context</xsl:when>
+                    <xsl:when test="contains(., ': left context')">fail-left-context</xsl:when>
+                    <xsl:when test="contains(., ': right context')">fail-right-context</xsl:when>
                     <xsl:when test="starts-with(., 'Constituent ')">fail-constituent</xsl:when>
                     <xsl:when test="starts-with(., '…') or starts-with(., '...')">fail-more</xsl:when>
                     <xsl:otherwise>fail-constituent</xsl:otherwise>

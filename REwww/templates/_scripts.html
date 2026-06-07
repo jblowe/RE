@@ -76,6 +76,17 @@
     border-bottom: 1px solid #dee2e6;
   }
 
+  /* ── Correspondences sub-tabs inside Research Parameters panel ─────────── */
+  .params-corr-tabs {
+    font-size: .80rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .params-corr-tabs .nav-link {
+    padding: .2rem .6rem;
+  }
+
   /* ── rcn → ToC cross-links ──────────────────────────────────────────────── */
   a.rcn-link {
     color: inherit;
@@ -149,15 +160,38 @@
   .process-parse-table { font-size: .82rem; margin-bottom: 0; }
   .process-summary     { font-size: .85rem; }
 
+  /* ── Parse-tree failure table ──────────────────────────────────── */
+  .process-tree-table  { font-size: .82rem; margin-bottom: 0; }
+  /* Position header cells */
+  .process-tree-pos-hdr {
+    font-size: .72em; white-space: nowrap; text-align: center;
+    min-width: 5rem; background: #e9ecef;
+  }
+  /* A successfully consumed step (normal weight) */
+  .process-tree-step   { white-space: nowrap; font-size: .82em; }
+  /* Same step repeated from the row above — dimmed to show shared prefix */
+  .process-tree-shared {
+    white-space: nowrap; font-size: .82em;
+    color: #bbb; border-top: 1px dashed #dee2e6 !important;
+  }
+  .process-tree-shared code { color: #bbb; }
+  /* The failing element — light red background */
+  .process-tree-fail   {
+    white-space: nowrap; font-size: .82em;
+    background: #fff0f0;
+  }
+
   /* Set / Isolate / Failure → Interactive links */
   .set-interactive-link,
-  .rfx-interactive-link {
+  .rfx-interactive-link,
+  .lx-interactive-link {
     cursor: pointer;
     text-decoration: underline dotted;
     text-underline-offset: 2px;
   }
   .set-interactive-link:hover,
-  .rfx-interactive-link:hover { color: #EC5800; }
+  .rfx-interactive-link:hover,
+  .lx-interactive-link:hover { color: #EC5800; }
 </style>
 <script>
 /* Vanilla table sorter — works on any table.sortable, including dynamically
@@ -284,7 +318,10 @@ function _restoreCollapseIds(ids) {
 
 function loadTabContent(tab, mode, afterLoad) {
   if (!currentRunId) return;
-  const url = `/api/tab/${currentRunId}/${tab}?mode=${mode || 'paragraph'}`;
+  /* Sets: always request lazy stubs for isolates/failures so large projects
+     don't generate a massive DOM on first load. */
+  const extra = tab === 'sets' ? '&lazy=1' : '';
+  const url = `/api/tab/${currentRunId}/${tab}?mode=${mode || 'paragraph'}${extra}`;
   const viewEl = document.getElementById(`${tab}-view-content`)
               || document.getElementById(`${tab}-content`);
   if (!viewEl) return;
@@ -308,7 +345,12 @@ function loadResearchContent(apiTab, targetId, mode, afterLoad) {
   const el = document.getElementById(targetId);
   if (!el) return;
   el.innerHTML = `<p class="text-muted">${spinnerHtml()}Loading…</p>`;
-  fetch(`/api/tab/${currentRunId}/${apiTab}?mode=${mode || 'paragraph'}`)
+  /* Request subpaned layout for parameters; lazy stubs for isolates/failures
+     in the sets panel so large projects don't stall the initial render. */
+  const extra = apiTab === 'parameters' ? '&subpanes=1'
+              : apiTab === 'sets'       ? '&lazy=1'
+              : '';
+  fetch(`/api/tab/${currentRunId}/${apiTab}?mode=${mode || 'paragraph'}${extra}`)
     .then(r => r.text())
     .then(html => {
       el.innerHTML = html;
@@ -346,10 +388,7 @@ let _highlightedTocRow = null;
 /* Scroll containerEl to the ToC row for corrId and highlight it persistently.
    If containerEl is independently scrollable (Research sub-panel) the scroll
    stays within it; otherwise falls back to page-level scrollIntoView. */
-function scrollToTocCorr(corrId, containerEl) {
-  if (!containerEl) return;
-  const target = containerEl.querySelector('#' + CSS.escape('toc-corr-' + corrId));
-  if (!target) return;
+function _doScrollToTocCorr(target, containerEl) {
   if (containerEl.scrollHeight > containerEl.clientHeight + 1) {
     /* Contained scroll — Research Parameters sub-panel */
     const cRect = containerEl.getBoundingClientRect();
@@ -366,6 +405,26 @@ function scrollToTocCorr(corrId, containerEl) {
   target.classList.add('toc-row-highlight');
 }
 
+function scrollToTocCorr(corrId, containerEl) {
+  if (!containerEl) return;
+  const target = containerEl.querySelector('#' + CSS.escape('toc-corr-' + corrId));
+  if (!target) return;
+  /* If the row is inside a hidden Bootstrap tab-pane (multi-file Research pane),
+     activate that tab first, then scroll after the transition completes. */
+  const pane = target.closest('.tab-pane');
+  if (pane && !pane.classList.contains('active')) {
+    const tabBtn = containerEl.querySelector(
+      `[data-bs-toggle="tab"][data-bs-target="#${CSS.escape(pane.id)}"]`);
+    if (tabBtn) {
+      tabBtn.addEventListener('shown.bs.tab', () => _doScrollToTocCorr(target, containerEl),
+                              { once: true });
+      tabBtn.click();
+      return;
+    }
+  }
+  _doScrollToTocCorr(target, containerEl);
+}
+
 /* Clear the highlight when the user clicks anywhere other than an rcn-link. */
 document.addEventListener('click', function (e) {
   if (!e.target.closest('a.rcn-link') && _highlightedTocRow) {
@@ -374,8 +433,15 @@ document.addEventListener('click', function (e) {
   }
 });
 
-/* Research pane: rcn-link click → scroll within the Parameters sub-panel. */
+/* Research pane: rcn-link click → scroll within the Parameters sub-panel.
+   iso-fail-load-btn click → lazy-load that section. */
 document.getElementById('research-sets-content').addEventListener('click', function (e) {
+  const loadBtn = e.target.closest('.iso-fail-load-btn');
+  if (loadBtn) {
+    const stub = loadBtn.closest('.iso-fail-stub');
+    if (stub) loadIsoFail(stub.dataset.section, this);
+    return;
+  }
   const link = e.target.closest('a.rcn-link');
   if (!link) return;
   e.preventDefault();
@@ -403,9 +469,10 @@ function postProcessResearch(tab) {
   if (tab === 'parameters') {
     const content = document.getElementById('research-parameters-view-content');
     if (!content) return;
-    /* Remove any file-label headings added by routes.py for multi-file projects
-       (the collapsible sections are self-labelled; no top-level heading needed). */
-    content.querySelectorAll('h5, h6').forEach(h => h.remove());
+    /* Multi-file projects: file labels are now Bootstrap tab buttons, not h5/h6.
+       The querySelectorAll below is a harmless no-op in the subpanes layout but
+       retained for safety in any legacy fallback path. */
+    content.querySelectorAll(':scope > h5, :scope > h6').forEach(h => h.remove());
 
   } else if (tab === 'sets') {
     const content = document.getElementById('research-sets-content');
@@ -432,18 +499,13 @@ function postProcessResearch(tab) {
     if (isoBtn && isoJump) {
       isoJump.textContent = isoBtn.dataset.count + ' isolates';
       isoJump.style.display = '';
-      isoJump.onclick = () => {
-        const target = content.querySelector('[name="isolates"]');
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      };
+      /* Lazy-load section if not yet rendered, then scroll */
+      isoJump.onclick = () => loadIsoFail('isolates', content);
     }
     if (failBtn && failJump) {
       failJump.textContent = failBtn.dataset.count + ' failures';
       failJump.style.display = '';
-      failJump.onclick = () => {
-        const target = content.querySelector('[name="failures"]');
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      };
+      failJump.onclick = () => loadIsoFail('failures', content);
     }
 
     /* ── Remove the XSLT-generated header block (panel has its own header) ──
@@ -467,10 +529,42 @@ function postProcessResearch(tab) {
    Each button carries data-target (named anchor) and data-count.
    Clicks scroll to the matching [name="..."] anchor within the container;
    for "sets-top" the re-scroll-table is also reset to its own top. */
+/* Lazy-load an isolates or failures section into a container.
+   If the section is already loaded (stub gone), just scroll to the anchor. */
+function loadIsoFail(section, containerEl) {
+  if (!currentRunId) return;
+  const stub = containerEl.querySelector(`.iso-fail-stub[data-section="${section}"]`);
+  if (!stub) {
+    /* Already loaded — scroll to anchor */
+    const anchor = containerEl.querySelector(`[name="${section}"]`);
+    if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+  stub.innerHTML = `<p class="text-muted py-2">${spinnerHtml()}Loading ${section}…</p>`;
+  fetch(`/api/tab/${currentRunId}/${section}`)
+    .then(r => r.text())
+    .then(html => {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      stub.replaceWith(...tmp.childNodes);
+      /* Scroll to the newly revealed anchor */
+      requestAnimationFrame(() => {
+        const anchor = containerEl.querySelector(`[name="${section}"]`);
+        if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })
+    .catch(err => { stub.innerHTML = `<p class="text-danger py-2">Error: ${err}</p>`; });
+}
+
 function postProcessSets(containerEl) {
   containerEl.querySelectorAll('.sets-nav-btn').forEach(btn => {
     btn.addEventListener('click', function() {
       const targetName = this.dataset.target;
+      /* Isolates / failures: lazy-load if not yet present, then scroll */
+      if (targetName === 'isolates' || targetName === 'failures') {
+        loadIsoFail(targetName, containerEl);
+        return;
+      }
       const anchor = containerEl.querySelector('[name="' + targetName + '"]');
       if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
       if (targetName === 'sets-top') {
@@ -478,6 +572,12 @@ function postProcessSets(containerEl) {
         if (st) st.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
+  });
+  /* Wire stub "Load N …" buttons */
+  containerEl.querySelectorAll('.iso-fail-load-btn').forEach(btn => {
+    const stub = btn.closest('.iso-fail-stub');
+    if (!stub) return;
+    btn.addEventListener('click', () => loadIsoFail(stub.dataset.section, containerEl));
   });
 }
 
@@ -670,6 +770,14 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       const savedUp = lsGet(name, 'upstream');
       if (savedUp) inp.value = savedUp;
       inp.addEventListener('input', () => lsSet(name, 'upstream', inp.value.trim()));
+      // Clicking/tabbing into an empty field fills it with the suggestion so
+      // the user can accept or edit it rather than having to retype it.
+      inp.addEventListener('focus', () => {
+        if (!inp.value && inp.placeholder) {
+          inp.value = inp.placeholder;
+          lsSet(name, 'upstream', inp.value.trim());
+        }
+      });
       tdUp.appendChild(inp);
       tr.appendChild(tdUp);
 
@@ -1003,18 +1111,46 @@ function setupParamsFreq(idPrefix) {
   const btnFreq = document.getElementById(`btn-freq-${p}`);
   if (!btnFreq) return;
 
-  let savedViewHTML = null;
+  let savedViewHTML     = null;
+  let savedCollapseIdxs = [];  // ordinal positions of open .collapse sections
+
+  /* Capture which .collapse sections are currently open (by position,
+     not by ID — Normal and Freq have different generate-id() values). */
+  function _captureCollapse() {
+    return [...viewEl.querySelectorAll('.collapse')]
+      .reduce((acc, el, i) => { if (el.classList.contains('show')) acc.push(i); return acc; }, []);
+  }
+
+  /* Re-open sections at the saved ordinal positions in the current view. */
+  function _applyCollapse(indices) {
+    const all = [...viewEl.querySelectorAll('.collapse')];
+    indices.forEach(i => {
+      const panel = all[i];
+      if (!panel) return;
+      panel.classList.add('show');
+      const id  = panel.id;
+      const btn = viewEl.querySelector(
+        `[data-bs-target="#${CSS.escape(id)}"], [data-target="#${CSS.escape(id)}"]`);
+      if (btn) { btn.classList.remove('collapsed'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  }
 
   btnFreq.addEventListener('click', () => {
     if (!currentRunId) return;
 
     if (savedViewHTML !== null) {
+      // ← switching back to Normal view
       viewEl.innerHTML = savedViewHTML;
-      savedViewHTML = null;
+      _applyCollapse(savedCollapseIdxs);
+      savedViewHTML     = null;
+      savedCollapseIdxs = [];
       btnFreq.innerHTML = '<i class="fas fa-chart-bar"></i> Freq';
       btnFreq.classList.remove('active');
       return;
     }
+
+    // → switching to Freq view: snapshot open sections now (before the fetch)
+    savedCollapseIdxs = _captureCollapse();
 
     btnFreq.disabled = true;
     fetch(`/api/tab/${currentRunId}/parameters?mode=freq`)
@@ -1022,6 +1158,7 @@ function setupParamsFreq(idPrefix) {
       .then(html => {
         savedViewHTML = viewEl.innerHTML;
         viewEl.innerHTML = html;
+        _applyCollapse(savedCollapseIdxs);   // apply same open state in Freq view
         btnFreq.innerHTML = '<i class="fas fa-times"></i> Back to view';
         btnFreq.classList.add('active');
       })
@@ -1830,6 +1967,31 @@ function _runInteractiveWithForms(forms) {
   });
 }
 
+/* Fill a single language row in the Interactive input table without clearing
+   any other rows, then switch to the Interactive tab and run. */
+function _fillSingleLanguage(language, reflex, gloss) {
+  return loadInteractivePane().then(() => {
+    const table = document.getElementById('interactive-input-table');
+    if (!table) return;
+    const proj = currentProject || '';
+    const esc  = CSS.escape(language);
+    const rInp = table.querySelector(`.interactive-reflex[data-lang="${esc}"]`);
+    const gInp = table.querySelector(`.interactive-gloss[data-lang="${esc}"]`);
+    if (rInp) {
+      rInp.value = reflex || '';
+      localStorage.setItem(`re:int:${proj}:${language}:reflex`, reflex || '');
+    }
+    if (gInp) {
+      gInp.value = gloss || '';
+      localStorage.setItem(`re:int:${proj}:${language}:gloss`, gloss || '');
+    }
+    const navLink = document.getElementById('tab-interactive-nav');
+    if (navLink && !navLink.classList.contains('disabled')) navLink.click();
+    const runBtn = document.getElementById('btn-run-interactive');
+    if (runBtn && !runBtn.disabled) runBtn.click();
+  });
+}
+
 /* Event delegation: handle clicks on .set-interactive-link (set IDs) and
    .rfx-interactive-link (isolate/failure row IDs) in the Sets tab and the
    Research pane's sets panel. */
@@ -1855,7 +2017,7 @@ function _runInteractiveWithForms(forms) {
       return;
     }
 
-    /* ── Isolate / Failure ID: form data is embedded inline ── */
+    /* ── Isolate / Failure ID: fill only this form, clear others, run ── */
     const rfxLink = e.target.closest('.rfx-interactive-link');
     if (rfxLink) {
       const language = rfxLink.dataset.lang;
@@ -1864,6 +2026,19 @@ function _runInteractiveWithForms(forms) {
       if (!language || !reflex) return;
       e.preventDefault();
       _runInteractiveWithForms([{language, reflex, gloss}])
+        .catch(err => alert(`Error: ${err}`));
+      return;
+    }
+
+    /* ── Isolate / Failure lx cell: update only that language, leave others ── */
+    const lxLink = e.target.closest('.lx-interactive-link');
+    if (lxLink) {
+      const language = lxLink.dataset.lang;
+      const reflex   = lxLink.dataset.reflex;
+      const gloss    = lxLink.dataset.gloss || '';
+      if (!language || !reflex) return;
+      e.preventDefault();
+      _fillSingleLanguage(language, reflex, gloss)
         .catch(err => alert(`Error: ${err}`));
     }
   });

@@ -12,6 +12,10 @@
           indent="yes"
           encoding="utf-8"/>
 
+  <!-- When lazy='1' the isolates and failures sections are replaced with
+       lightweight stubs; the client fetches them on demand. -->
+  <xsl:param name="lazy" select="'0'"/>
+
   <xsl:template match="/">
     <div>
       <h5>Regular cognate sets</h5>
@@ -23,8 +27,26 @@
       </xsl:call-template>
       <a name="sets-top"/>
       <xsl:apply-templates select=".//sets"/>
-      <xsl:apply-templates select=".//isolates"/>
-      <xsl:apply-templates select=".//failures"/>
+      <xsl:choose>
+        <xsl:when test="$lazy = '1'">
+          <a name="isolates"/>
+          <div class="iso-fail-stub" data-section="isolates">
+            <button class="btn btn-sm btn-outline-secondary iso-fail-load-btn mt-2">
+              <xsl:text>Load </xsl:text><xsl:value-of select="count(.//isolates/rfx)"/><xsl:text> isolates</xsl:text>
+            </button>
+          </div>
+          <a name="failures"/>
+          <div class="iso-fail-stub" data-section="failures">
+            <button class="btn btn-sm btn-outline-secondary iso-fail-load-btn mt-2">
+              <xsl:text>Load </xsl:text><xsl:value-of select="count(.//failures/rfx)"/><xsl:text> failures</xsl:text>
+            </button>
+          </div>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select=".//isolates"/>
+          <xsl:apply-templates select=".//failures"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </div>
   </xsl:template>
 
@@ -126,7 +148,7 @@
       <td class="lx">
         <xsl:choose>
           <xsl:when test="lxf">
-            <xsl:apply-templates select="lxf"/>
+            <xsl:value-of select="lxf"/>
             <small style="color:#888;"> &lt;&lt; <xsl:value-of select="lx"/></small>
           </xsl:when>
           <xsl:otherwise>

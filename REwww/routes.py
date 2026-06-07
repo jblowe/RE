@@ -1,6 +1,7 @@
 """REwww/routes.py – Flask Blueprint: all HTTP route handlers."""
 
 import copy
+import html as _html
 import os
 import re as _re
 import sys
@@ -68,18 +69,377 @@ def _upstream_suggestion(project_path, project_name):
     return ''
 
 
+# ── Fuzzy annotation for ToC views ───────────────────────────────────────────
+
+def _annotate_fuzzy(tree, fuzzy_path, fuzzy_cov_path=None):
+    """Append <fuzz lang=… from=… to=… count=…/> children to matching <corr>
+    elements in an lxml correspondence tree.
+
+    Uses the coverage file (which carries actual usage counts per <from> rule)
+    when available; falls back to the raw fuzzy file with count=0 for all rules.
+    Both used (count>0) and defined-but-unused (count=0) rules are annotated so
+    the XSLT can render distinct indicators for each.
+    """
+    # Choose source
+    src = (fuzzy_cov_path if fuzzy_cov_path and os.path.isfile(fuzzy_cov_path)
+           else fuzzy_path)
+    if not src or not os.path.isfile(src):
+        return tree
+
+    try:
+        fuz_root = ET.parse(src).getroot()
+    except Exception:
+        return tree
+
+    # Build index: (lang, to_str) → {from_str: count}
+    groups: dict = {}
+    for item in fuz_root.iterfind('item'):
+        lang   = item.get('dial', '')
+        to_str = item.get('to',   '')
+        if not lang or not to_str:
+            continue
+        for from_el in item.iterfind('from'):
+            from_str = (from_el.text or '').strip()
+            count    = int(from_el.get('uses', '0'))
+            if from_str:
+                groups.setdefault((lang, to_str), {})[from_str] = count
+
+    if not groups:
+        return tree
+
+    # Annotate each <modern> element with <fuzz from count/> children —
+    # one per from-form that maps to any of the cell's <seg> values.
+    root = tree.getroot()
+    for corr in root.iterfind('corr'):
+        for modern in corr.iterfind('modern'):
+            lang  = modern.get('dialecte', '')
+            added: set = set()   # from_strs already appended to this <modern>
+            for seg in modern.iterfind('seg'):
+                to_str = (seg.text or '').strip()
+                entries = groups.get((lang, to_str), {})
+                # used (count>0) first, then unused, each group alphabetically
+                for from_str, count in sorted(entries.items(),
+                                              key=lambda kv: (0 if kv[1] > 0 else 1, kv[0])):
+                    if from_str not in added:
+                        added.add(from_str)
+                        fuzz_el = ET.SubElement(modern, 'fuzz')
+                        fuzz_el.set('to',    to_str)    # which seg this maps from
+                        fuzz_el.set('from',  from_str)
+                        fuzz_el.set('count', str(count))
+    return tree
+
+
 # ── Interactive process-pane HTML builder ────────────────────────────────────
 
 def _failure_reason_class(reason):
     """Return the CSS class for a failure reason string."""
-    if reason.startswith('Syllable canon:'):       return 'fail-syllable-canon'
-    if reason.startswith('Syllable structure'):    return 'fail-syllable-final'
-    if 'unmet at word-final' in reason:            return 'fail-word-final'
-    if 'Panini' in reason:                         return 'fail-panini'
-    if reason.startswith(('left context', 'right context')): return 'fail-context'
-    if reason.startswith('Constituent '):          return 'fail-constituent'
-    if reason.startswith(('…', '...')):            return 'fail-more'
+    if reason.startswith('Syllable canon:'):    return 'fail-syllable-canon'
+    if reason.startswith('Syllable structure'): return 'fail-syllable-final'
+    if 'word-final'  in reason:                return 'fail-word-final'
+    if 'Panini'      in reason:                return 'fail-panini'
+    if ': left context'  in reason:            return 'fail-left-context'
+    if ': right context' in reason:            return 'fail-right-context'
+    if reason.startswith('Constituent '):      return 'fail-constituent'
+    if reason.startswith(('…', '...')):        return 'fail-more'
     return 'fail-constituent'   # safe default
+
+
+def _parse_steps_str(steps_str):
+    """Parse a steps string like  'char1' c4 + 'char2' c146  into [(char, corrId), …].
+
+    Returns a list (possibly empty) or None if the format is unrecognised.
+    """
+    if not steps_str:
+        return []
+    result = []
+    for part in steps_str.split(' + '):
+        part = part.strip()
+        if part in ("''", '""', ''):
+            continue
+        m = _re.match(r"^'(.+)'\s+(c\d+)$", part)
+        if m:
+            result.append((m.group(1), m.group(2)))
+        else:
+            return None   # unrecognised
+    return result
+
+
+def _render_parse_success_tree(parse_rows, esc):
+    """Render successful parses as a parse-tree table.
+
+    parse_rows – list of (rcn, proto, syll, steps_list) where steps_list
+                 is [(char, corrId), …] or [] when step data is absent.
+
+    Columns = one per parse position, then proto and syll.
+    Common prefixes are dimmed so branching points stand out.
+    Returns an HTML string or '' when nothing can be rendered.
+    """
+    structured = []
+    for rcn, proto, syll, steps in parse_rows:
+        if steps is None:
+            steps = []
+        structured.append(dict(steps=steps, proto=proto, syll=syll, rcn=rcn))
+
+    if not structured:
+        return ''
+
+    # Sort by step path so shared prefixes are adjacent
+    structured.sort(key=lambda r: tuple(r['steps']))
+
+    max_cols = max((len(r['steps']) for r in structured), default=0)
+    if max_cols == 0:
+        return ''
+
+    html = [
+        '<table class="table table-sm table-bordered process-tree-table">',
+        '<thead class="thead-light"><tr>',
+    ]
+    for col in range(max_cols):
+        html.append(f'<th class="process-tree-pos-hdr">pos&nbsp;{col}</th>')
+    html.append('<th style="font-size:.72em">proto</th>')
+    html.append('<th style="font-size:.72em">syll</th>')
+    html.append('</tr></thead><tbody>')
+
+    prev_steps = []
+    for r in structured:
+        cur_steps = r['steps']
+        html.append('<tr>')
+        for col in range(max_cols):
+            if col < len(cur_steps):
+                char, cid = cur_steps[col]
+                shared = (
+                    col < len(prev_steps) and
+                    prev_steps[col] == cur_steps[col] and
+                    prev_steps[:col] == cur_steps[:col]
+                )
+                if shared:
+                    html.append(
+                        f'<td class="process-tree-shared">'
+                        f'<code>{esc(char)}</code> {esc(cid)}'
+                        f'</td>'
+                    )
+                else:
+                    html.append(
+                        f'<td class="process-tree-step">'
+                        f'<code>{esc(char)}</code>'
+                        f' <a class="rcn-link" href="#"'
+                        f' data-corr-id="{esc(cid)}">{esc(cid)}</a>'
+                        f'</td>'
+                    )
+            else:
+                html.append('<td></td>')
+
+        html.append(f'<td style="font-size:.82em">*{esc(r["proto"])}</td>')
+        if r['syll']:
+            html.append(
+                f'<td><span class="badge badge-secondary"'
+                f' style="font-size:.7em">{esc(r["syll"])}</span></td>'
+            )
+        else:
+            html.append('<td></td>')
+        html.append('</tr>')
+        prev_steps = cur_steps
+
+    html.append('</tbody></table>')
+    return '\n'.join(html)
+
+
+def _parse_failure_for_tree(msg):
+    """Parse a structured failure message into tree-table components.
+
+    Recognised format (built by _context_desc / gen()):
+        {left_steps} + {failing_ids} '{char}' + '{right}' : {desc}
+    where left_steps is zero or more  'char' cN  terms joined by ' + '.
+
+    Returns a dict on success:
+      steps        – [(char_text, corr_id), …]   — left-side parse steps
+      failing_ids  – [corr_id, …]                — IDs of blocked correspondences
+      failing_char – str or None                 — actual character tried
+      right        – str                         — remaining unconsumed form
+      desc         – str                         — context failure description
+    Returns None when the message is not in the expected format (syllable
+    canon, Constituent not found, Panini, etc.) — those are rendered as
+    spanning flat rows in the table.
+    """
+    if ' + ' not in msg or ' : ' not in msg:
+        return None
+    colon_idx = msg.rfind(' : ')
+    if colon_idx < 0:
+        return None
+    before = msg[:colon_idx]
+    desc   = msg[colon_idx + 3:]
+
+    parts = before.split(' + ')
+    if len(parts) < 2:
+        return None
+
+    steps        = []
+    failing_ids  = []
+    failing_char = None
+    right        = None
+
+    for i, raw in enumerate(parts):
+        part    = raw.strip()
+        is_last = (i == len(parts) - 1)
+
+        if is_last:
+            # Last segment is the right-side quoted text
+            if part in ("''", '""', ''):
+                right = ''
+            elif part.startswith("'") and part.endswith("'"):
+                right = part[1:-1]
+            else:
+                right = part
+            continue
+
+        # Empty '' = start-of-form marker; no step
+        if part in ("''", '""', ''):
+            continue
+
+        # Left step: 'char' cN
+        m = _re.match(r"^'(.+)'\s+(c\d+)$", part)
+        if m:
+            steps.append((m.group(1), m.group(2)))
+            continue
+
+        # Failing element: cN1, cN2, … 'char'
+        m = _re.match(r"^(c\d+(?:,\s*c\d+)*)\s+'(.*)'$", part)
+        if m:
+            failing_ids  = [x.strip() for x in m.group(1).split(',')]
+            failing_char = m.group(2)
+            continue
+
+        return None   # unrecognised segment
+
+    if right is None:
+        return None
+
+    return dict(steps=steps, failing_ids=failing_ids,
+                failing_char=failing_char, right=right, desc=desc)
+
+
+def _render_tree_table(depth_reasons, esc):
+    """Build an HTML parse-tree table from all-depths failure data.
+
+    Layout: one column per parse position (0 … max_depth), spreading left
+    to right; one row per unique parse path.  The failing element is
+    highlighted; cells that repeat the same prefix as the row above are
+    shown in muted grey so the branching point is visually obvious.
+    Unstructured messages (syllable canon, Panini, etc.) are appended as
+    full-width spanning rows below the tree rows.
+
+    Returns an HTML string, or '' if there is nothing to render.
+    """
+    if not depth_reasons:
+        return ''
+
+    parsed_rows = []   # structured context / word-final paths
+    raw_rows    = []   # everything else (syllable, not-found, etc.)
+
+    for pos in sorted(depth_reasons.keys()):
+        for msg in depth_reasons[pos]:
+            p = _parse_failure_for_tree(msg)
+            if p:
+                parsed_rows.append(dict(pos=pos, raw=msg, **p))
+            else:
+                raw_rows.append(dict(pos=pos, raw=msg))
+
+    if not parsed_rows and not raw_rows:
+        return ''
+
+    # Sort parsed rows so paths with a common prefix appear adjacent,
+    # producing a visually coherent left-to-right tree.
+    parsed_rows.sort(key=lambda r: tuple(r['steps']))
+
+    # Number of position columns = deepest path + 1 (for the failing column)
+    max_cols = max(
+        (len(r['steps']) + (1 if r['failing_ids'] or r['failing_char'] is not None else 0)
+         for r in parsed_rows),
+        default=0,
+    )
+    if max_cols == 0 and not raw_rows:
+        return ''
+    max_cols = max(max_cols, 1)
+
+    html = [
+        '<table class="table table-sm table-bordered process-tree-table">',
+        '<thead class="thead-light"><tr>',
+    ]
+    for col in range(max_cols):
+        html.append(
+            f'<th class="process-tree-pos-hdr">pos&nbsp;{col}</th>'
+        )
+    html.append('<th style="font-size:.72em">Reason</th>')
+    html.append('</tr></thead><tbody>')
+
+    prev_steps = []
+    for r in parsed_rows:
+        cur_steps = r['steps']
+        html.append('<tr>')
+
+        for col in range(max_cols):
+            if col < len(cur_steps):
+                char, cid = cur_steps[col]
+                # Dim the cell when this step is the same as the row above
+                # AND the entire prefix up to col is identical (= shared path).
+                shared = (
+                    col < len(prev_steps) and
+                    prev_steps[col] == cur_steps[col] and
+                    prev_steps[:col] == cur_steps[:col]
+                )
+                if shared:
+                    html.append(
+                        f'<td class="process-tree-shared">'
+                        f'<code>{esc(char)}</code>'
+                        f' {esc(cid)}'
+                        f'</td>'
+                    )
+                else:
+                    html.append(
+                        f'<td class="process-tree-step">'
+                        f'<code>{esc(char)}</code>'
+                        f' <a class="rcn-link" href="#"'
+                        f' data-corr-id="{esc(cid)}">{esc(cid)}</a>'
+                        f'</td>'
+                    )
+
+            elif col == len(cur_steps) and (r['failing_ids'] or
+                                             r['failing_char'] is not None):
+                # The failing element at this position
+                ids_html = ', '.join(
+                    f'<a class="rcn-link" href="#"'
+                    f' data-corr-id="{esc(c)}">{esc(c)}</a>'
+                    for c in r['failing_ids']
+                )
+                char_part = (f'&nbsp;<code>{esc(r["failing_char"])}</code>'
+                             if r['failing_char'] else '')
+                html.append(
+                    f'<td class="process-tree-fail">'
+                    f'{ids_html}{char_part}</td>'
+                )
+            else:
+                html.append('<td></td>')
+
+        cls = _failure_reason_class(r['raw'])
+        html.append(
+            f'<td><span class="iso-badge iso-fail-reason {cls}"'
+            f' style="font-size:.78em;white-space:normal">'
+            f'{esc(r["desc"])}</span></td>'
+        )
+        html.append('</tr>')
+        prev_steps = cur_steps
+
+    # Flat rows for unstructured messages (syllable canon, Panini, etc.)
+    for r in raw_rows:
+        cls = _failure_reason_class(r['raw'])
+        html.append(
+            f'<tr><td colspan="{max_cols + 1}">'
+            f'<span class="iso-badge iso-fail-reason {cls}">'
+            f'{esc(r["raw"])}</span></td></tr>'
+        )
+
+    html.append('</tbody></table>')
+    return '\n'.join(html)
 
 
 def _build_process_html(debug_notes, notes, failed_parses=None):
@@ -87,18 +447,20 @@ def _build_process_html(debug_notes, notes, failed_parses=None):
 
     debug_notes / notes come from B.statistics.
     failed_parses is B.failures (list of ModernForm objects with .failure_reasons).
-    Failure reasons are shown inline under each failed form's block.
+    Failure reasons are shown as a depth-grouped table beneath each failed form.
     """
     import html as _html
     esc = _html.escape
 
-    # Build a (language, glyphs) → reasons lookup so flush() can render
-    # failure reasons directly beneath the form block that headed them.
-    fail_reasons_map = {}
+    # (language, glyphs) → all-depths {pos: [reasons]} for the full tree table.
+    # Falls back to the deepest-only flat list when all_failure_reasons is absent.
+    all_fail_map  = {}
+    flat_fail_map = {}
     for form in (failed_parses or []):
         key = (form.language, form.glyphs)
-        if key not in fail_reasons_map:
-            fail_reasons_map[key] = form.failure_reasons or []
+        if key not in all_fail_map:
+            all_fail_map[key]  = getattr(form, 'all_failure_reasons', None) or {}
+            flat_fail_map[key] = form.failure_reasons or []
 
     n_parsing = sum(1 for n in debug_notes if n.startswith('!Parsing '))
     parts = ['<div class="interactive-process-body">']
@@ -119,45 +481,89 @@ def _build_process_html(debug_notes, notes, failed_parses=None):
             f'<div class="process-form-label">{label}</div>'
         )
         if cur['parses']:
-            parts.append(
-                '<table class="table table-sm table-bordered process-parse-table">'
-                '<thead class="thead-light"><tr>'
-                '<th style="width:30%">Reflex</th>'
-                '<th style="width:40%">rcn</th>'
-                '<th>Reconstruction</th>'
-                '</tr></thead><tbody>'
-            )
-            for (rcn, proto, syll, success) in cur['parses']:
-                tr_cls = '' if success else ' class="text-muted"'
-                star   = '*' if success else ''
-                recon  = f'{esc(star)}{esc(proto)}'
-                if syll:
-                    recon += (f' <span class="badge badge-secondary"'
-                              f' style="font-size:.7em">{esc(syll)}</span>')
-                parts.append(
-                    f'<tr{tr_cls}>'
-                    f'<td>{esc(cur["glyphs"])}</td>'
-                    f'<td><code style="font-size:.85em">{esc(rcn)}</code></td>'
-                    f'<td>{recon}</td>'
-                    f'</tr>'
-                )
-            parts.append('</tbody></table>')
-        else:
-            # No parses — show failure reasons inline if available
-            reasons = fail_reasons_map.get((cur['lang'], cur['glyphs']), [])
-            if reasons:
+            # Separate successful parses (with step data) from failed attempts
+            success_rows = [(rcn, proto, syll, steps)
+                            for (rcn, proto, syll, success, steps) in cur['parses']
+                            if success]
+            failed_rows  = [(rcn, proto, syll)
+                            for (rcn, proto, syll, success, steps) in cur['parses']
+                            if not success]
+            tree_html = _render_parse_success_tree(success_rows, esc)
+            if tree_html:
+                parts.append(tree_html)
+            else:
+                # Fallback: flat table (no step data available)
                 parts.append(
                     '<table class="table table-sm table-bordered process-parse-table">'
-                    '<thead class="thead-light"><tr><th>Reason</th></tr></thead>'
-                    '<tbody>'
+                    '<thead class="thead-light"><tr>'
+                    '<th style="width:30%">Reflex</th>'
+                    '<th style="width:40%">rcn</th>'
+                    '<th>Reconstruction</th>'
+                    '</tr></thead><tbody>'
                 )
-                for r in reasons:
-                    cls = _failure_reason_class(r)
+                for (rcn, proto, syll, _steps) in success_rows:
+                    recon = f'*{esc(proto)}'
+                    if syll:
+                        recon += (f' <span class="badge badge-secondary"'
+                                  f' style="font-size:.7em">{esc(syll)}</span>')
                     parts.append(
-                        f'<tr><td>'
-                        f'<span class="iso-badge iso-fail-reason {cls}">{esc(r)}</span>'
-                        f'</td></tr>'
+                        f'<tr>'
+                        f'<td>{esc(cur["glyphs"])}</td>'
+                        f'<td><code style="font-size:.85em">{esc(rcn)}</code></td>'
+                        f'<td>{recon}</td>'
+                        f'</tr>'
                     )
+                parts.append('</tbody></table>')
+            # Failed attempts (xx notes) below the success tree, if any
+            if failed_rows:
+                parts.append(
+                    '<table class="table table-sm table-bordered process-parse-table'
+                    ' text-muted" style="margin-top:.25rem">'
+                    '<thead class="thead-light"><tr>'
+                    '<th colspan="3" style="font-size:.75em">Attempted but failed</th>'
+                    '</tr><tr>'
+                    '<th style="width:30%">Reflex</th>'
+                    '<th style="width:40%">rcn</th>'
+                    '<th>proto</th>'
+                    '</tr></thead><tbody>'
+                )
+                for (rcn, proto, syll) in failed_rows:
+                    recon = f'{esc(proto)}'
+                    if syll:
+                        recon += (f' <span class="badge badge-secondary"'
+                                  f' style="font-size:.7em">{esc(syll)}</span>')
+                    parts.append(
+                        f'<tr>'
+                        f'<td>{esc(cur["glyphs"])}</td>'
+                        f'<td><code style="font-size:.85em">{esc(rcn)}</code></td>'
+                        f'<td>{recon}</td>'
+                        f'</tr>'
+                    )
+                parts.append('</tbody></table>')
+        else:
+            # No parses — render the parse-tree table.
+            key        = (cur['lang'], cur['glyphs'])
+            all_depths = all_fail_map.get(key, {})
+            flat       = flat_fail_map.get(key, [])
+            # Prefer the rich all-depths data; fall back to the deepest-only list
+            reasons_by_depth = all_depths or ({0: flat} if flat else {})
+            tree_html = _render_tree_table(reasons_by_depth, esc)
+            if tree_html:
+                parts.append(tree_html)
+            elif reasons_by_depth:
+                # Fallback: simple flat list when tree rendering produces nothing
+                parts.append(
+                    '<table class="table table-sm table-bordered process-parse-table">'
+                    '<thead class="thead-light"><tr><th>Reason</th></tr></thead><tbody>'
+                )
+                for pos in sorted(reasons_by_depth.keys(), reverse=True):
+                    for r in reasons_by_depth[pos]:
+                        cls = _failure_reason_class(r)
+                        parts.append(
+                            f'<tr><td>'
+                            f'<span class="iso-badge iso-fail-reason {cls}">{esc(r)}</span>'
+                            f'</td></tr>'
+                        )
                 parts.append('</tbody></table>')
         parts.append('</div>')
         cur['lang'] = None
@@ -179,12 +585,17 @@ def _build_process_html(debug_notes, notes, failed_parses=None):
 
         elif note.startswith(' *'):
             content = note[2:]
+            # Steps breakdown appended after a tab: "proto - rcn syll\tstep_str"
+            steps_str = None
+            if '\t' in content:
+                content, steps_str = content.split('\t', 1)
             if ' - ' in content:
                 proto, rest = content.split(' - ', 1)
                 toks = rest.rsplit(None, 1)
                 rcn  = toks[0].strip() if len(toks) == 2 else rest.strip()
                 syll = toks[1]          if len(toks) == 2 else ''
-                cur['parses'].append((rcn, proto, syll, True))
+                steps = _parse_steps_str(steps_str) if steps_str else []
+                cur['parses'].append((rcn, proto, syll, True, steps))
 
         elif note.startswith(' xx '):
             content = note[4:]
@@ -193,7 +604,7 @@ def _build_process_html(debug_notes, notes, failed_parses=None):
                 toks = rest.rsplit(None, 1)
                 rcn  = toks[0].strip() if len(toks) == 2 else rest.strip()
                 syll = toks[1]          if len(toks) == 2 else ''
-                cur['parses'].append((rcn, proto, syll, False))
+                cur['parses'].append((rcn, proto, syll, False, None))
 
     flush()
 
@@ -416,6 +827,7 @@ def api_run():
                 runs_dir, f'{project}.{run_name}.sets.xml')
             intermediate_pls = [pl for pl in settings.proto_languages if pl != settings.upstream_target]
             all_languages = intermediate_pls + list(settings.attested.keys())
+            B.mel_used = getattr(settings, 'mel_filename', None) is not None
             RE.dump_xml_sets(
                 B, all_languages,
                 sets_xml, True)
@@ -603,7 +1015,16 @@ def api_tab(run_id, tab):
 
     if tab == 'sets':
         ss = 'sets2html.xsl' if mode == 'paragraph' else 'sets2tabular.xsl'
-        return xslt.xml_to_html(files['sets'], ss)
+        lazy = request.args.get('lazy', '0')
+        params = {'lazy': lazy} if lazy == '1' else None
+        return xslt.xml_to_html(files['sets'], ss, params)
+
+    if tab in ('isolates', 'failures'):
+        sets_file = files.get('sets')
+        if not sets_file or not os.path.isfile(sets_file):
+            return '<p class="text-muted">No sets file found.</p>'
+        ss = 'isolates2html.xsl' if tab == 'isolates' else 'failures2html.xsl'
+        return xslt.xml_to_html(sets_file, ss)
 
     if tab == 'stats':
         return xslt.xml_to_html(files['stats'], 'stats2html.xsl')
@@ -618,6 +1039,9 @@ def api_tab(run_id, tab):
             if not sets_file or not os.path.isfile(sets_file):
                 return '<p class="text-muted">No sets file found — run the project first.</p>'
             annotated = xslt.compute_corr_freq(sets_file, recon_files[0])
+            fuz_path_f = files.get('fuzzy')
+            if fuz_path_f and os.path.isfile(fuz_path_f):
+                _annotate_fuzzy(annotated, fuz_path_f, files.get('fuzzy_cov'))
             html = xslt.xml_to_html_from_tree(annotated, 'toc2html-freq.xsl')
             fuz_path = files.get('fuzzy')
             if fuz_path and os.path.isfile(fuz_path):
@@ -647,12 +1071,61 @@ def api_tab(run_id, tab):
             html = xslt.xml_to_html(recon_file, 'toc2html-edit.xsl')
             return f'{note}<div data-recon-file="{recon_file}">{html}</div>'
 
+        fuz_path_v = files.get('fuzzy')
+        use_subpanes = request.args.get('subpanes') and len(recon_files) > 1
+
+        if use_subpanes:
+            # Bootstrap tab per correspondences file (used in the Research pane)
+            nav_items, pane_items = [], []
+            for i, recon_file in enumerate(recon_files):
+                label    = _html.escape(os.path.basename(recon_file))
+                pane_id  = f'research-corr-pane-{i}'
+                active   = 'active' if i == 0 else ''
+                show     = 'show'   if i == 0 else ''
+                selected = 'true'   if i == 0 else 'false'
+                nav_items.append(
+                    f'<li class="nav-item" role="presentation">'
+                    f'<button class="nav-link {active}" id="research-corr-tab-{i}"'
+                    f' data-bs-toggle="tab" data-bs-target="#{pane_id}"'
+                    f' type="button" role="tab" aria-selected="{selected}">'
+                    f'{label}</button></li>'
+                )
+                recon_tree = ET.parse(recon_file)
+                if fuz_path_v and os.path.isfile(fuz_path_v):
+                    _annotate_fuzzy(recon_tree, fuz_path_v, files.get('fuzzy_cov'))
+                pane_html = xslt.xml_to_html_from_tree(recon_tree, 'toc2html-view.xsl')
+                pane_items.append(
+                    f'<div class="tab-pane fade {show} {active}" id="{pane_id}"'
+                    f' role="tabpanel" aria-labelledby="research-corr-tab-{i}">'
+                    f'{pane_html}</div>'
+                )
+            result = (
+                '<ul class="nav nav-tabs params-corr-tabs mb-2" role="tablist">'
+                + ''.join(nav_items) + '</ul>'
+                + '<div class="tab-content">' + ''.join(pane_items) + '</div>'
+            )
+            fuz_path = files.get('fuzzy')
+            if fuz_path and os.path.isfile(fuz_path):
+                fuz_cov   = files.get('fuzzy_cov')
+                view_path = fuz_cov if fuz_cov and os.path.isfile(fuz_cov) else fuz_path
+                fuzzy_html = xslt.xml_to_html(view_path, 'fuzzy2html.xsl')
+                result += (
+                    '<button type="button" class="params-sec-hdr collapsed"'
+                    ' data-bs-toggle="collapse" data-bs-target="#params-fuzzy-sec"'
+                    ' aria-expanded="false">Fuzzy</button>'
+                    '<div class="collapse" id="params-fuzzy-sec">' + fuzzy_html + '</div>'
+                )
+            return result
+
         parts = []
         for recon_file in recon_files:
             if len(recon_files) > 1:
                 label = os.path.basename(recon_file)
                 parts.append(f'<h5 class="mt-3 border-bottom pb-1">{label}</h5>')
-            parts.append(xslt.xml_to_html(recon_file, 'toc2html-view.xsl'))
+            recon_tree = ET.parse(recon_file)
+            if fuz_path_v and os.path.isfile(fuz_path_v):
+                _annotate_fuzzy(recon_tree, fuz_path_v, files.get('fuzzy_cov'))
+            parts.append(xslt.xml_to_html_from_tree(recon_tree, 'toc2html-view.xsl'))
         fuz_path = files.get('fuzzy')
         if fuz_path and os.path.isfile(fuz_path):
             fuz_cov = files.get('fuzzy_cov')
@@ -1190,7 +1663,12 @@ def api_save_projects():
             escaped = rel.replace('"', '\\"')
         else:
             escaped = path.replace('\\', '\\\\').replace('"', '\\"')
-        lines.append(f'{name} = "{escaped}"\n')
+        # Always use a quoted TOML key so names with dots, spaces, etc. are
+        # stored literally.  "x.y" = "..." is a quoted key (value "x.y"),
+        # whereas x.y = "..." is a dotted key (nested table), which tomllib
+        # would return as {'x': {'y': '...'}} — breaking the name lookup.
+        escaped_name = name.replace('\\', '\\\\').replace('"', '\\"')
+        lines.append(f'"{escaped_name}" = "{escaped}"\n')
 
     if invalid:
         return jsonify(
@@ -1375,6 +1853,7 @@ def api_interactive_run():
         inter_pls = [pl for pl in settings.proto_languages
                      if pl != settings.upstream_target]
         all_langs = inter_pls + list(settings.attested.keys())
+        B.mel_used = getattr(settings, 'mel_filename', None) is not None
         RE.dump_xml_sets(B, all_langs, sets_xml, True)
 
         sets_html    = xslt.xml_to_html(sets_xml, 'sets2html.xsl')

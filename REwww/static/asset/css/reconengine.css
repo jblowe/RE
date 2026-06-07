@@ -10,6 +10,17 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 /* Sticky banner — stays visible on all panes regardless of scroll */
 .navbar { position: sticky; top: 0; z-index: 1030; }
 
+/* Tab nav row — sticky immediately below the navbar.
+   54 px is the hardcoded navbar height (Bootstrap py-2 + brand text at
+   0.875 rem body size).  Adjust this value if the navbar height ever changes. */
+#main-tabs {
+  position: sticky;
+  top: 54px;
+  z-index: 1029;
+  background: #fff;   /* mask any content that scrolls beneath */
+  padding-bottom: 0;  /* tabs sit flush against the content border */
+}
+
 /* ── Log tab ─────────────────────────────────────────────────────────────── */
 #run-log {
   height: 480px; overflow-y: auto;
@@ -82,6 +93,33 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .content-area .col-mel  { min-width: 10rem; }
 .content-area .col-lg   { min-width: 4rem; max-width: 240px; }
 .content-area .col-gloss { max-width: 300px; }
+
+/* ── Isolates / Failures tables: fill full width, Reasons column uncapped ─── */
+.content-area .iso-fail-table { width: 100% !important; }
+.content-area .col-reasons    { /* expands to fill all remaining width */ }
+
+/* ── Isolates pfm expand toggle ──────────────────────────────────────────── */
+/* Small '+' button shown to the left of the first pfm when an isolate has
+   more than one reconstruction.  Bootstrap collapse handles show/hide. */
+.iso-more-btn {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 2px;
+  border: 1px solid #adb5bd;
+  border-radius: 2px;
+  background: #f8f9fa;
+  color: #555;
+  cursor: pointer;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.iso-more-btn:hover { background: #e2e6ea; border-color: #868e96; }
+
+/* Extra pfm lines shown when the cell is expanded */
+.iso-more-pfms  { margin-top: .25rem; padding-left: 1.3em; }
+.iso-extra-pfm  { font-size: 0.85em; color: #444; line-height: 1.4; }
 
 /* ── Tabular sets: gloss visibility toggle (default: hidden) ─────────────── */
 #sets-content.glosses-hidden .rfx-gloss,
@@ -213,21 +251,75 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .cmp-members   { font-size: 0.72em; color: #aaa; font-style: italic; }
 .cmp-badge     { display: inline-block; padding: 2px 8px; border-radius: 4px;
                  font-size: 0.8rem; margin-right: 6px; }
-.cmp-same      { background: #d1e7dd; color: #0a3622; }
-.cmp-changed   { background: #fff3cd; color: #664d03; }
-.cmp-lost      { background: #f8d7da; color: #58151c; }
-.cmp-gained    { background: #d1ecf1; color: #0c5460; }
+.cmp-same    { background: #d1e7dd; color: #0a3622; }
+.cmp-changed { background: #fff3cd; color: #664d03; }
+.cmp-lost    { background: #f8d7da; color: #58151c; }
+.cmp-gained  { background: #d1ecf1; color: #0c5460; }
+.cmp-split   { background: #cce5ff; color: #004085; } /* membership diff */
+
+/* ── Compare: unified continuous diff table ──────────────────────────────── */
+.cmp-diff-table       { width: 100% !important; font-size: .82rem; }
+.cmp-diff-table td, .cmp-diff-table th { padding: .06rem .3rem !important; vertical-align: middle; }
+
+/* Sticky run-name header */
+.cmp-run-hdr th       { position: sticky; top: 0; z-index: 6;
+                         font-size: .82rem; font-weight: 700; }
+.cmp-a-head           { background: #fff0f0; }   /* faint red — A column group  */
+.cmp-b-head           { background: #f0fff8; }   /* faint green — B column group */
+
+/* Set-pair header rows: type label | *pfm_a … | *pfm_b … */
+.cmp-set-hdr td       { border-top: 2px solid #adb5bd !important;
+                         padding: .18rem .4rem !important; font-size: .82rem; }
+.cmp-a-set-hdr        { background: #fff8f8; }
+.cmp-b-set-hdr        { background: #f8fff9; }
+.cmp-type-label       { font-size: .72rem; font-weight: 600; color: #555;
+                         white-space: nowrap; width: 7rem; }
+
+/* Column sizing (11 cols: type + 5A + 5B) */
+.col-type  { width: 7rem; }
+.col-sign  { width: 1.4em; }
+.col-lg    { width: 6%; white-space: nowrap; }
+.col-lx    { width: 16%; }
+.col-gl    { width: 22%; }
+.col-id    { width: 5rem; font-family: monospace; font-size: .78rem; color: #888; }
+
+/* Type-label cell colours — same palette as the summary badges */
+.cmp-type-label  { font-size: .72rem; font-weight: 600; white-space: nowrap; width: 7rem; }
+.cmp-type-recon  { background: #fff3cd; color: #664d03; } /* amber  — recon changed   */
+.cmp-type-diff   { background: #cce5ff; color: #004085; } /* blue   — membership diff */
+.cmp-type-lost   { background: #f8d7da; color: #58151c; } /* red    — only in A       */
+.cmp-type-gained { background: #d1ecf1; color: #0c5460; } /* teal   — only in B       */
+
+/* Per-cell diff colouring — .cmp-diff-table prefix beats Bootstrap's .table td */
+.cmp-diff-table .diff-a-removed { background: #fff0f0; }
+.cmp-diff-table .diff-b-added   { background: #f0fff4; }
+.cmp-diff-table .diff-blank     { background: #f6f6f6; color: #ccc; }
+
+/* Utilities */
+.diff-sign  { text-align: center; font-weight: 700; color: #888; }
+.cmp-gl     { font-style: italic; color: #666; }
+.cmp-id     { font-family: monospace; font-size: .78rem; color: #888; }
 
 /* ── Failure-reason badge colours (Failures table + Interactive Process) ─── */
 /* Base layout lives in .iso-fail-reason (sets-isolates-failures.xsl style).
    These classes supply only the colour for each failure category. */
 .fail-syllable-canon  { background: #fff3cd; color: #856404; } /* amber   – syllable pruned mid-parse  */
 .fail-constituent     { background: #f8d7da; color: #721c24; } /* red     – no correspondence found    */
-.fail-context         { background: #cce5ff; color: #004085; } /* blue    – left/right context blocked */
+.fail-left-context    { background: #ffe5cc; color: #7c3f00; } /* orange  – left  context blocked */
+.fail-right-context   { background: #cce5ff; color: #004085; } /* blue    – right context blocked */
 .fail-syllable-final  { background: #e2d9f3; color: #432874; } /* purple  – syllable at word-final     */
 .fail-word-final      { background: #d1ecf1; color: #0c5460; } /* teal    – word-final context         */
 .fail-panini          { background: #e2e3e5; color: #383d41; } /* grey    – Panini's principle         */
 .fail-more            { background: #f5f5f5; color: #555;    } /* lt-grey – "… and N more"             */
+
+/* ── ToC fuzzy from-forms ─────────────────────────────────────────────────── */
+/* ">>" marks "comes from": the ToC daughter form accepts input from the
+   original lexicon form shown to its right.
+   Normal view: plain grey text.
+   Freq view:   freq-style colour applied via inline style from the XSLT,
+                plus .cov-uses subscript count. */
+.toc-fuzz-sep  { font-size: .75em; color: #aaa; margin: 0 2px; }
+.toc-fuzz-from { font-size: .82em; color: #888; }
 
 /* ── Edit tables: correspondence / fuzzy / mel ───────────────────────────── */
 .actions-col { width: 1%; white-space: nowrap; }

@@ -17,20 +17,31 @@ import lxml.etree as ET
 def _parse_sets(sets_path: str) -> dict:
     """Parse a sets.xml file.
 
-    Returns a dict keyed by frozenset-of-rfx-ids (the unique identity of a
-    cognate set) mapping to an info dict: pfm, rcn, mel, melid, lgs.
+    Returns a dict keyed by frozenset-of-rfx-ids mapping to an info dict:
+      pfm, rcn, mel, melid, lgs, reflexes (list of {id, lg, lx, gl}).
     """
     if not sets_path or not os.path.isfile(sets_path):
         return {}
     root = ET.parse(sets_path).getroot()
     result = {}
     for s in root.findall('.//set'):
-        ids = frozenset(
-            el.text for el in s.findall('.//rfx/id') if el.text
-        )
+        rfx_list = []
+        ids = []
+        for rfx in s.findall('.//rfx'):
+            rfx_id = rfx.findtext('id', '')
+            if rfx_id:
+                ids.append(rfx_id)
+                rfx_list.append({
+                    'id':  rfx_id,
+                    'lg':  rfx.findtext('lg',  ''),
+                    'lx':  rfx.findtext('lx',  ''),   # original form
+                    'lxf': rfx.findtext('lxf', ''),   # fuzzied form (empty if none)
+                    'gl':  rfx.findtext('gl',  ''),
+                })
         if not ids:
             continue
 
+        key   = frozenset(ids)
         multi = s.findall('multi')
         if multi:
             pfm = ' / '.join(m.findtext('pfm', '') for m in multi)
@@ -39,24 +50,19 @@ def _parse_sets(sets_path: str) -> dict:
             pfm = s.findtext('pfm', '')
             rcn = s.findtext('rcn', '')
 
-        mel   = s.findtext('mel',   '')
-        melid = s.findtext('melid', '')
-        lgs   = sorted(set(el.text for el in s.findall('.//rfx/lg') if el.text))
-        result[ids] = {'pfm': pfm, 'rcn': rcn, 'mel': mel, 'melid': melid, 'lgs': lgs}
+        result[key] = {
+            'pfm':      pfm,
+            'rcn':      rcn,
+            'mel':      s.findtext('mel',   ''),
+            'melid':    s.findtext('melid', ''),
+            'lgs':      sorted(set(r['lg'] for r in rfx_list if r['lg'])),
+            'reflexes': rfx_list,
+        }
     return result
 
 
 def _count_lex_stats(sets_path: str):
-    """Parse a sets.xml file; return per-language reflex/isolate/failure counts.
-
-    Returns a 4-tuple:
-      (total_reflexes: int,
-       rfx_by_lg:  dict[str, int],   # reflexes in cognate sets, by language
-       iso_by_lg:  dict[str, int],   # isolates, by language
-       fail_by_lg: dict[str, int])   # failures, by language
-
-    Returns (0, {}, {}, {}) when the file is missing or unreadable.
-    """
+    """Return (total_reflexes, rfx_by_lg, iso_by_lg, fail_by_lg)."""
     if not sets_path or not os.path.isfile(sets_path):
         return 0, {}, {}, {}
     try:
@@ -68,19 +74,14 @@ def _count_lex_stats(sets_path: str):
     iso_by_lg  = collections.Counter()
     fail_by_lg = collections.Counter()
 
-    # Reflexes in cognate sets (all <rfx> at any depth inside <sets>)
     for rfx in root.findall('.//sets//rfx'):
         lg = rfx.findtext('lg', '')
         if lg:
             rfx_by_lg[lg] += 1
-
-    # Isolates (direct <rfx> children of <isolates>)
     for rfx in root.findall('.//isolates/rfx'):
         lg = rfx.findtext('lg', '')
         if lg:
             iso_by_lg[lg] += 1
-
-    # Failures (direct <rfx> children of <failures>)
     for rfx in root.findall('.//failures/rfx'):
         lg = rfx.findtext('lg', '')
         if lg:
@@ -91,19 +92,53 @@ def _count_lex_stats(sets_path: str):
 
 
 def _bn(path: str) -> str:
-    """Return the basename of a path, or empty string."""
     return os.path.basename(path) if path else ''
 
 
-# ── XML element builders ───────────────────────────────────────────────────────
+# ── Lost↔gained matching ────────────────────────────────────────────────────────
+
+def _match_lost_gained(lost: set, gained: set):
+    """Greedily pair lost (A) and gained (B) sets by Jaccard overlap.
+
+    Returns (pairs: list[(lost_key, gained_key)],
+             unmatched_lost:   set of frozensets,
+             unmatched_gained: set of frozensets).
+
+    Only pairs with at least one shared rfx ID are considered.
+    Pairs are sorted by Jaccard descending so the best matches are taken first.
+    """
+    candidates = []
+    for lk in lost:
+        for gk in gained:
+            overlap = len(lk & gk)
+            if overlap > 0:
+                jaccard = overlap / len(lk | gk)
+                candidates.append((jaccard, overlap, lk, gk))
+
+    # Best match first
+    candidates.sort(key=lambda x: (-x[0], -x[1]))
+
+    matched_lost   = set()
+    matched_gained = set()
+    pairs = []
+
+    for _jaccard, _overlap, lk, gk in candidates:
+        if lk not in matched_lost and gk not in matched_gained:
+            matched_lost.add(lk)
+            matched_gained.add(gk)
+            pairs.append((lk, gk))
+
+    return pairs, lost - matched_lost, gained - matched_gained
+
+
+# ── XML element builders ────────────────────────────────────────────────────────
 
 def _run_el(label: str, rec: dict, sets_found: bool, reflexes: int) -> ET.Element:
-    """Build a <run id="a|b"> element from a run record dict."""
     el = ET.Element('run')
-    el.set('id',          label)
-    el.set('run_id',      rec.get('run_id',   ''))
-    el.set('run_name',    rec.get('run_name',  ''))
-    el.set('sets_found',  'true' if sets_found else 'false')
+    el.set('id',         label)
+    el.set('run_id',     rec.get('run_id',   ''))
+    el.set('run_name',   rec.get('run_name',  ''))
+    el.set('sets_found', 'true' if sets_found else 'false')
 
     params = rec.get('params', {})
     for key in ('recon', 'mel', 'fuzzy', 'upstream'):
@@ -111,105 +146,141 @@ def _run_el(label: str, rec: dict, sets_found: bool, reflexes: int) -> ET.Elemen
         p = ET.SubElement(el, 'param')
         p.set('key',   key)
         p.set('value', _bn(val) if key != 'upstream' else val)
-    # context_match_type and spec are stored inside params (same dict as the others)
     for key in ('context_match_type', 'spec'):
         p = ET.SubElement(el, 'param')
         p.set('key',   key)
         p.set('value', params.get(key, '') or '')
 
-    # Stats: sets first, then reflexes (total forms in sets), then isolates/failures
-    for key, value in (('sets',      str(rec.get('sets',      ''))),
-                       ('reflexes',  str(reflexes)),
-                       ('isolates',  str(rec.get('isolates',  ''))),
-                       ('failures',  str(rec.get('failures',  '')))):
+    for key, value in (('sets',     str(rec.get('sets',     ''))),
+                       ('reflexes', str(reflexes)),
+                       ('isolates', str(rec.get('isolates', ''))),
+                       ('failures', str(rec.get('failures', '')))):
         s = ET.SubElement(el, 'stat')
         s.set('key',   key)
         s.set('value', value)
-
     return el
 
 
-def _set_el_changed(ids_key: frozenset,
-                    info_a: dict, info_b: dict) -> ET.Element:
-    """Build a <set> element for the changed-sets section."""
-    s = ET.Element('set')
-    ET.SubElement(s, 'melid').text = info_a.get('melid') or info_b.get('melid') or ''
-    ET.SubElement(s, 'pfm_a').text = info_a.get('pfm', '')
-    ET.SubElement(s, 'rcn_a').text = info_a.get('rcn', '')
-    ET.SubElement(s, 'pfm_b').text = info_b.get('pfm', '')
-    ET.SubElement(s, 'rcn_b').text = info_b.get('rcn', '')
-    lgs_el = ET.SubElement(s, 'languages')
-    for lg in info_a.get('lgs', []):
-        ET.SubElement(lgs_el, 'lg').text = lg
-    mem_el = ET.SubElement(s, 'members')
-    for m in sorted(ids_key):
-        ET.SubElement(mem_el, 'm').text = m
-    return s
+def _diff_el(info_a, info_b, ids_a, ids_b):
+    """Build a unified-diff <diff> element for a set pair (or one-sided set).
 
+    info_a / info_b  : set info dicts (or None for one-sided diffs)
+    ids_a  / ids_b   : frozensets of rfx IDs (pass frozenset() when absent)
 
-def _set_el_single(ids_key: frozenset, info: dict) -> ET.Element:
-    """Build a <set> element for the lost/gained sections."""
-    s = ET.Element('set')
-    ET.SubElement(s, 'melid').text = info.get('melid', '')
-    ET.SubElement(s, 'pfm').text   = info.get('pfm',   '')
-    ET.SubElement(s, 'rcn').text   = info.get('rcn',   '')
-    lgs_el = ET.SubElement(s, 'languages')
-    for lg in info.get('lgs', []):
-        ET.SubElement(lgs_el, 'lg').text = lg
-    mem_el = ET.SubElement(s, 'members')
-    for m in sorted(ids_key):
-        ET.SubElement(mem_el, 'm').text = m
-    return s
+    Each <rfx> child carries status="both|removed|added".
+    Reflexes from A come first (both + removed), then B-only (added).
+    """
+    d = ET.Element('diff')
+
+    both = ids_a & ids_b
+
+    melid = ''
+    if info_a:
+        melid = info_a.get('melid', '') or ''
+        ET.SubElement(d, 'pfm_a').text = info_a.get('pfm', '')
+        ET.SubElement(d, 'rcn_a').text = info_a.get('rcn', '')
+    if info_b:
+        if not melid:
+            melid = info_b.get('melid', '') or ''
+        ET.SubElement(d, 'pfm_b').text = info_b.get('pfm', '')
+        ET.SubElement(d, 'rcn_b').text = info_b.get('rcn', '')
+    ET.SubElement(d, 'melid').text = melid
+
+    rfxs_el = ET.SubElement(d, 'reflexes')
+    emitted  = set()
+
+    # A's reflexes first: both (unchanged) and removed
+    for rfx in (info_a or {}).get('reflexes', []):
+        if rfx['id'] in emitted:
+            continue
+        emitted.add(rfx['id'])
+        re = ET.SubElement(rfxs_el, 'rfx')
+        re.set('id',     rfx['id'])
+        re.set('lg',     rfx['lg'])
+        re.set('lx',     rfx['lx'])
+        re.set('lxf',    rfx.get('lxf', ''))
+        re.set('gl',     rfx['gl'])
+        re.set('status', 'both' if rfx['id'] in both else 'removed')
+
+    # B-only reflexes: added
+    for rfx in (info_b or {}).get('reflexes', []):
+        if rfx['id'] in emitted:
+            continue
+        emitted.add(rfx['id'])
+        re = ET.SubElement(rfxs_el, 'rfx')
+        re.set('id',     rfx['id'])
+        re.set('lg',     rfx['lg'])
+        re.set('lx',     rfx['lx'])
+        re.set('lxf',    rfx.get('lxf', ''))
+        re.set('gl',     rfx['gl'])
+        re.set('status', 'added')
+
+    return d
 
 
 # ── Main entry point ───────────────────────────────────────────────────────────
 
 def build_compare_xml(run_a: dict, run_b: dict) -> ET.Element:
-    """Compare two run records; return a <compare> lxml Element.
-
-    The element can be serialised to disk with ET.ElementTree(...).write(...)
-    and then rendered via compare2html.xsl.
-    """
+    """Compare two run records; return a <compare> lxml Element."""
     sets_path_a = run_a.get('files', {}).get('sets', '')
     sets_path_b = run_b.get('files', {}).get('sets', '')
     sets_a      = _parse_sets(sets_path_a)
     sets_b      = _parse_sets(sets_path_b)
 
-    # Per-language reflex / isolate / failure counts
     rfx_a, rfx_by_lg_a, iso_by_lg_a, fail_by_lg_a = _count_lex_stats(sets_path_a)
     rfx_b, rfx_by_lg_b, iso_by_lg_b, fail_by_lg_b = _count_lex_stats(sets_path_b)
 
     keys_a = set(sets_a)
     keys_b = set(sets_b)
     shared = keys_a & keys_b
-    lost   = keys_a - keys_b   # in A, not in B
-    gained = keys_b - keys_a   # in B, not in A
+    lost   = keys_a - keys_b
+    gained = keys_b - keys_a
 
-    changed, same = [], 0
+    # Split shared sets into changed-reconstruction vs identical
+    changed_recon = []
+    same = 0
     for k in shared:
         a, b = sets_a[k], sets_b[k]
         if a['pfm'] != b['pfm'] or a['rcn'] != b['rcn']:
-            changed.append((k, a, b))
+            changed_recon.append((k, a, b))
         else:
             same += 1
 
-    # ── Root element ──────────────────────────────────────────────────────────
+    # Match lost↔gained by rfx-ID overlap
+    pairs, unmatched_lost, unmatched_gained = _match_lost_gained(lost, gained)
+
+    # ── Root ──────────────────────────────────────────────────────────────────
     root = ET.Element('compare')
     root.set('project',    run_a.get('project',  ''))
     root.set('created',    time.strftime('%Y-%m-%dT%H:%M:%S'))
     root.set('run_name_a', run_a.get('run_name', ''))
     root.set('run_name_b', run_b.get('run_name', ''))
 
+    # ── Parameter diffs ────────────────────────────────────────────────────────
+    params_a = run_a.get('params', {})
+    params_b = run_b.get('params', {})
+    diffs_el = ET.SubElement(root, 'param_diffs')
+    for key in ('recon', 'mel', 'fuzzy', 'upstream', 'context_match_type', 'spec'):
+        va = _bn(params_a.get(key, '') or '') if key in ('recon', 'mel', 'fuzzy') \
+             else (params_a.get(key, '') or '')
+        vb = _bn(params_b.get(key, '') or '') if key in ('recon', 'mel', 'fuzzy') \
+             else (params_b.get(key, '') or '')
+        if va != vb:
+            d = ET.SubElement(diffs_el, 'diff')
+            d.set('key', key); d.set('value_a', va); d.set('value_b', vb)
+
     root.append(_run_el('a', run_a, bool(sets_a), rfx_a))
     root.append(_run_el('b', run_b, bool(sets_b), rfx_b))
 
+    # ── Summary ────────────────────────────────────────────────────────────────
     summary = ET.SubElement(root, 'summary')
-    summary.set('same',    str(same))
-    summary.set('changed', str(len(changed)))
-    summary.set('lost',    str(len(lost)))
-    summary.set('gained',  str(len(gained)))
+    summary.set('same',             str(same))
+    summary.set('changed_recon',    str(len(changed_recon)))
+    summary.set('changed_members',  str(len(pairs)))
+    summary.set('unmatched_lost',   str(len(unmatched_lost)))
+    summary.set('unmatched_gained', str(len(unmatched_gained)))
 
-    # ── Lexicon statistics (union of all languages across both runs) ───────────
+    # ── Lexicon statistics ─────────────────────────────────────────────────────
     all_langs = sorted(
         set(rfx_by_lg_a) | set(rfx_by_lg_b) |
         set(iso_by_lg_a) | set(iso_by_lg_b) |
@@ -226,21 +297,28 @@ def build_compare_xml(run_a: dict, run_b: dict) -> ET.Element:
         ET.SubElement(lg_el, 'iso_b').text  = str(iso_by_lg_b.get(lg,  0))
         ET.SubElement(lg_el, 'fail_b').text = str(fail_by_lg_b.get(lg, 0))
 
-    # ── Changed sets ──────────────────────────────────────────────────────────
-    ch_el = ET.SubElement(root, 'changed')
-    for k, a, b in sorted(changed, key=lambda x: x[1]['pfm']):
-        ch_el.append(_set_el_changed(k, a, b))
+    # ── Changed reconstruction (same members, different pfm/rcn) ──────────────
+    cr_el = ET.SubElement(root, 'diffs')
+    cr_el.set('type', 'changed_recon')
+    for k, a, b in sorted(changed_recon, key=lambda x: x[1]['pfm']):
+        cr_el.append(_diff_el(a, b, k, k))
 
-    # ── Lost sets (in A, not in B) ────────────────────────────────────────────
-    lost_el = ET.SubElement(root, 'lost')
-    for k, info in sorted(
-            [(k, sets_a[k]) for k in lost], key=lambda x: x[1]['pfm']):
-        lost_el.append(_set_el_single(k, info))
+    # ── Membership diffs (matched lost↔gained pairs) ───────────────────────────
+    cm_el = ET.SubElement(root, 'diffs')
+    cm_el.set('type', 'changed_members')
+    for lk, gk in sorted(pairs, key=lambda p: sets_a[p[0]]['pfm']):
+        cm_el.append(_diff_el(sets_a[lk], sets_b[gk], lk, gk))
 
-    # ── Gained sets (in B, not in A) ─────────────────────────────────────────
-    gained_el = ET.SubElement(root, 'gained')
-    for k, info in sorted(
-            [(k, sets_b[k]) for k in gained], key=lambda x: x[1]['pfm']):
-        gained_el.append(_set_el_single(k, info))
+    # ── Unmatched lost (no overlapping gained set) ─────────────────────────────
+    lo_el = ET.SubElement(root, 'diffs')
+    lo_el.set('type', 'lost')
+    for k in sorted(unmatched_lost, key=lambda k: sets_a[k]['pfm']):
+        lo_el.append(_diff_el(sets_a[k], None, k, frozenset()))
+
+    # ── Unmatched gained (no overlapping lost set) ─────────────────────────────
+    ga_el = ET.SubElement(root, 'diffs')
+    ga_el.set('type', 'gained')
+    for k in sorted(unmatched_gained, key=lambda k: sets_b[k]['pfm']):
+        ga_el.append(_diff_el(None, sets_b[k], frozenset(), k))
 
     return root
