@@ -251,12 +251,11 @@ def render_sets(forms, sets, languages, set_type):
             sf = ET.SubElement(element, 'sf')
             sort_forms(form, sf, level)
 
-    number = 0
     for number, form in enumerate(forms):
         entry = ET.SubElement(sets, 'set')
         render_xml(entry, form, 0)
 
-    print(f'number of "{set_type}" {number}')
+    print(f'number of "{set_type}" {len(forms)}')
     return sets
 
 
