@@ -630,7 +630,7 @@ def _build_process_html(debug_notes, notes, failed_parses=None):
 def index():
     all_projects = proj_module.projects
     project_data = {}
-    for name, path in sorted(all_projects.items()):
+    for name, path in all_projects.items():
         if not os.path.isdir(path):
             continue
         project_data[name] = {
@@ -653,7 +653,7 @@ def api_projects():
     """Return current project file candidates as JSON (used by the Refresh button)."""
     proj_module.projects = proj_module.get_dirs('projects')
     data = {}
-    for name, path in sorted(proj_module.projects.items()):
+    for name, path in proj_module.projects.items():
         if not os.path.isdir(path):
             continue
         data[name] = {

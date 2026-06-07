@@ -365,6 +365,35 @@
           </tr>
         </xsl:for-each>
       </tbody>
+      <tfoot>
+        <xsl:variable name="t-rfx-a"  select="sum(/compare/lexicon_stats/lang/rfx_a)"/>
+        <xsl:variable name="t-iso-a"  select="sum(/compare/lexicon_stats/lang/iso_a)"/>
+        <xsl:variable name="t-fail-a" select="sum(/compare/lexicon_stats/lang/fail_a)"/>
+        <xsl:variable name="t-rfx-b"  select="sum(/compare/lexicon_stats/lang/rfx_b)"/>
+        <xsl:variable name="t-iso-b"  select="sum(/compare/lexicon_stats/lang/iso_b)"/>
+        <xsl:variable name="t-fail-b" select="sum(/compare/lexicon_stats/lang/fail_b)"/>
+        <tr style="font-weight:600; border-top:2px solid #dee2e6">
+          <td>Total</td>
+          <td><xsl:value-of select="$t-rfx-a"/></td>
+          <td>
+            <xsl:if test="$t-iso-a &gt; 0"><xsl:attribute name="class">text-warning</xsl:attribute></xsl:if>
+            <xsl:value-of select="$t-iso-a"/>
+          </td>
+          <td>
+            <xsl:if test="$t-fail-a &gt; 0"><xsl:attribute name="class">text-danger</xsl:attribute></xsl:if>
+            <xsl:value-of select="$t-fail-a"/>
+          </td>
+          <td><xsl:value-of select="$t-rfx-b"/></td>
+          <td>
+            <xsl:if test="$t-iso-b &gt; 0"><xsl:attribute name="class">text-warning</xsl:attribute></xsl:if>
+            <xsl:value-of select="$t-iso-b"/>
+          </td>
+          <td>
+            <xsl:if test="$t-fail-b &gt; 0"><xsl:attribute name="class">text-danger</xsl:attribute></xsl:if>
+            <xsl:value-of select="$t-fail-b"/>
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </xsl:if>
 </xsl:template>

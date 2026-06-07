@@ -181,6 +181,20 @@
     background: #fff0f0;
   }
 
+  /* ── Project edit table — drag-to-reorder ───────────────────────────────── */
+  .drag-handle {
+    cursor: grab;
+    color: #bbb;
+    user-select: none;
+    font-size: 1.1em;
+    padding: 0 .25rem 0 0;
+    vertical-align: middle;
+  }
+  .drag-handle:active { cursor: grabbing; }
+  #projects-edit-body tr.drag-over-top    { box-shadow: inset 0  2px 0 #0d6efd; }
+  #projects-edit-body tr.drag-over-bottom { box-shadow: inset 0 -2px 0 #0d6efd; }
+  #projects-edit-body tr.drag-source      { opacity: .45; }
+
   /* Set / Isolate / Failure → Interactive links */
   .set-interactive-link,
   .rfx-interactive-link,
@@ -738,7 +752,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
     const tbody = document.querySelector('#projects-view .projects-table tbody');
     if (!tbody) return;
     tbody.innerHTML = '';
-    Object.entries(data).sort((a,b) => a[0].localeCompare(b[0])).forEach(([name, info]) => {
+    Object.entries(data).forEach(([name, info]) => {
       const tr = document.createElement('tr');
       tr.id = `proj-row-${name}`;
       tr.dataset.projectPath = info.path;
@@ -1401,6 +1415,7 @@ setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
     const tr = document.createElement('tr');
     tr.innerHTML =
       '<td style="width:1%;white-space:nowrap">' +
+        '<span class="drag-handle" draggable="true" title="Drag to reorder">&#x2807;</span>' +
         '<button type="button" class="btn btn-outline-danger btn-sm" style="padding:.1rem .4rem;line-height:1" title="Delete row">&#x2212;</button>' +
       '</td>' +
       '<td><input type="text" class="form-control form-control-sm" placeholder="NAME" value="' + name.replace(/"/g, '&quot;') + '"></td>' +
@@ -1408,6 +1423,55 @@ setupXsltEdit('fuzzy', 'data-fuz-file', '/api/save_fuz');
     tr.querySelector('button').addEventListener('click', () => tr.remove());
     return tr;
   }
+
+  /* ── Drag-to-reorder ──────────────────────────────────────────────────── */
+  let _dragRow = null;
+
+  tbody.addEventListener('dragstart', e => {
+    const handle = e.target.closest('.drag-handle');
+    if (!handle) { e.preventDefault(); return; }
+    _dragRow = handle.closest('tr');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', '');   // required by Firefox
+    requestAnimationFrame(() => { if (_dragRow) _dragRow.classList.add('drag-source'); });
+  });
+
+  tbody.addEventListener('dragover', e => {
+    if (!_dragRow) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    const row = e.target.closest('#projects-edit-body tr');
+    tbody.querySelectorAll('tr').forEach(r =>
+      r.classList.remove('drag-over-top', 'drag-over-bottom'));
+    if (row && row !== _dragRow) {
+      const above = e.clientY < row.getBoundingClientRect().top + row.offsetHeight / 2;
+      row.classList.add(above ? 'drag-over-top' : 'drag-over-bottom');
+    }
+  });
+
+  tbody.addEventListener('dragleave', e => {
+    /* Only clear when leaving the tbody entirely, not when crossing row borders */
+    if (!tbody.contains(e.relatedTarget)) {
+      tbody.querySelectorAll('tr').forEach(r =>
+        r.classList.remove('drag-over-top', 'drag-over-bottom'));
+    }
+  });
+
+  tbody.addEventListener('drop', e => {
+    e.preventDefault();
+    const row = e.target.closest('#projects-edit-body tr');
+    tbody.querySelectorAll('tr').forEach(r =>
+      r.classList.remove('drag-over-top', 'drag-over-bottom'));
+    if (!row || !_dragRow || row === _dragRow) return;
+    const above = e.clientY < row.getBoundingClientRect().top + row.offsetHeight / 2;
+    tbody.insertBefore(_dragRow, above ? row : row.nextSibling);
+  });
+
+  tbody.addEventListener('dragend', () => {
+    if (_dragRow) { _dragRow.classList.remove('drag-source'); _dragRow = null; }
+    tbody.querySelectorAll('tr').forEach(r =>
+      r.classList.remove('drag-over-top', 'drag-over-bottom'));
+  });
 
   btnEdit.addEventListener('click', () => {
     tbody.innerHTML = '';

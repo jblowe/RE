@@ -14,17 +14,22 @@ import lxml.etree as ET
 
 # ── XML parsing ────────────────────────────────────────────────────────────────
 
-def _parse_sets(sets_path: str) -> dict:
+def _parse_sets(sets_path: str) -> list:
     """Parse a sets.xml file.
 
-    Returns a dict keyed by frozenset-of-rfx-ids mapping to an info dict:
-      pfm, rcn, mel, melid, lgs, reflexes (list of {id, lg, lx, gl}).
+    Returns a list of set-info dicts (one per <set>, in document order).
+    Each dict has: key (frozenset of rfx ids), pfm, rcn, mel, melid, lgs, reflexes.
+
+    Unlike a dict keyed by frozenset, this preserves ALL sets — including
+    cases where two distinct proto-forms cover exactly the same attested forms
+    (same frozenset key, different pfm/rcn).  <multi> reconstructions within a
+    single <set> are sorted by pfm for deterministic join order.
     """
     if not sets_path or not os.path.isfile(sets_path):
-        return {}
+        return []
     root = ET.parse(sets_path).getroot()
-    result = {}
-    for s in root.findall('.//set'):
+    result = []
+    for s in root.findall('.//sets/set'):
         rfx_list = []
         ids = []
         for rfx in s.findall('.//rfx'):
@@ -44,20 +49,23 @@ def _parse_sets(sets_path: str) -> dict:
         key   = frozenset(ids)
         multi = s.findall('multi')
         if multi:
-            pfm = ' / '.join(m.findtext('pfm', '') for m in multi)
-            rcn = ' / '.join(m.findtext('rcn', '') for m in multi)
+            # Sort by pfm so the join order is deterministic across runs
+            multi_sorted = sorted(multi, key=lambda m: m.findtext('pfm', ''))
+            pfm = ' / '.join(m.findtext('pfm', '') for m in multi_sorted)
+            rcn = ' / '.join(m.findtext('rcn', '') for m in multi_sorted)
         else:
             pfm = s.findtext('pfm', '')
             rcn = s.findtext('rcn', '')
 
-        result[key] = {
+        result.append({
+            'key':      key,
             'pfm':      pfm,
             'rcn':      rcn,
             'mel':      s.findtext('mel',   ''),
             'melid':    s.findtext('melid', ''),
             'lgs':      sorted(set(r['lg'] for r in rfx_list if r['lg'])),
             'reflexes': rfx_list,
-        }
+        })
     return result
 
 
@@ -97,23 +105,25 @@ def _bn(path: str) -> str:
 
 # ── Lost↔gained matching ────────────────────────────────────────────────────────
 
-def _match_lost_gained(lost: set, gained: set):
-    """Greedily pair lost (A) and gained (B) sets by Jaccard overlap.
+def _match_lost_gained(lost_items: list, gained_items: list):
+    """Greedily pair lost (A) and gained (B) set-info dicts by Jaccard overlap.
 
-    Returns (pairs: list[(lost_key, gained_key)],
-             unmatched_lost:   set of frozensets,
-             unmatched_gained: set of frozensets).
+    Returns (pairs: list[(lost_info, gained_info)],
+             unmatched_lost:   list of info dicts,
+             unmatched_gained: list of info dicts).
 
     Only pairs with at least one shared rfx ID are considered.
     Pairs are sorted by Jaccard descending so the best matches are taken first.
     """
     candidates = []
-    for lk in lost:
-        for gk in gained:
+    for li, la in enumerate(lost_items):
+        for gi, ga in enumerate(gained_items):
+            lk = la['key']
+            gk = ga['key']
             overlap = len(lk & gk)
             if overlap > 0:
                 jaccard = overlap / len(lk | gk)
-                candidates.append((jaccard, overlap, lk, gk))
+                candidates.append((jaccard, overlap, li, gi))
 
     # Best match first
     candidates.sort(key=lambda x: (-x[0], -x[1]))
@@ -122,13 +132,15 @@ def _match_lost_gained(lost: set, gained: set):
     matched_gained = set()
     pairs = []
 
-    for _jaccard, _overlap, lk, gk in candidates:
-        if lk not in matched_lost and gk not in matched_gained:
-            matched_lost.add(lk)
-            matched_gained.add(gk)
-            pairs.append((lk, gk))
+    for _jaccard, _overlap, li, gi in candidates:
+        if li not in matched_lost and gi not in matched_gained:
+            matched_lost.add(li)
+            matched_gained.add(gi)
+            pairs.append((lost_items[li], gained_items[gi]))
 
-    return pairs, lost - matched_lost, gained - matched_gained
+    truly_lost   = [la for li, la in enumerate(lost_items)   if li not in matched_lost]
+    truly_gained = [ga for gi, ga in enumerate(gained_items) if gi not in matched_gained]
+    return pairs, truly_lost, truly_gained
 
 
 # ── XML element builders ────────────────────────────────────────────────────────
@@ -230,24 +242,43 @@ def build_compare_xml(run_a: dict, run_b: dict) -> ET.Element:
     rfx_a, rfx_by_lg_a, iso_by_lg_a, fail_by_lg_a = _count_lex_stats(sets_path_a)
     rfx_b, rfx_by_lg_b, iso_by_lg_b, fail_by_lg_b = _count_lex_stats(sets_path_b)
 
-    keys_a = set(sets_a)
-    keys_b = set(sets_b)
-    shared = keys_a & keys_b
-    lost   = keys_a - keys_b
-    gained = keys_b - keys_a
+    # ── Match sets_a → sets_b ─────────────────────────────────────────────────
+    # Group B sets by frozenset key for efficient lookup.
+    b_by_key = collections.defaultdict(list)
+    for j, sb in enumerate(sets_b):
+        b_by_key[sb['key']].append(j)
 
-    # Split shared sets into changed-reconstruction vs identical
-    changed_recon = []
-    same = 0
-    for k in shared:
-        a, b = sets_a[k], sets_b[k]
-        if a['pfm'] != b['pfm'] or a['rcn'] != b['rcn']:
-            changed_recon.append((k, a, b))
-        else:
+    b_taken      = set()   # indices into sets_b already matched
+    same         = 0
+    changed_recon = []     # list of (info_a, info_b) – same members, different pfm/rcn
+    unmatched_a  = []      # info dicts from A with no B match (for Jaccard matching)
+
+    for sa in sets_a:
+        key        = sa['key']
+        candidates = [j for j in b_by_key.get(key, []) if j not in b_taken]
+
+        if not candidates:
+            # No B set shares this frozenset key → will try Jaccard matching later
+            unmatched_a.append(sa)
+            continue
+
+        # Prefer an exact (pfm, rcn) match
+        exact = next((j for j in candidates
+                      if sets_b[j]['pfm'] == sa['pfm'] and sets_b[j]['rcn'] == sa['rcn']),
+                     None)
+        if exact is not None:
             same += 1
+            b_taken.add(exact)
+        else:
+            # Same member set, different reconstruction → changed_recon
+            j = candidates[0]
+            changed_recon.append((sa, sets_b[j]))
+            b_taken.add(j)
 
-    # Match lost↔gained by rfx-ID overlap
-    pairs, unmatched_lost, unmatched_gained = _match_lost_gained(lost, gained)
+    unmatched_b = [sb for j, sb in enumerate(sets_b) if j not in b_taken]
+
+    # Match unmatched A (lost) ↔ unmatched B (gained) by rfx-ID Jaccard overlap
+    pairs, truly_lost, truly_gained = _match_lost_gained(unmatched_a, unmatched_b)
 
     # ── Root ──────────────────────────────────────────────────────────────────
     root = ET.Element('compare')
@@ -277,8 +308,8 @@ def build_compare_xml(run_a: dict, run_b: dict) -> ET.Element:
     summary.set('same',             str(same))
     summary.set('changed_recon',    str(len(changed_recon)))
     summary.set('changed_members',  str(len(pairs)))
-    summary.set('unmatched_lost',   str(len(unmatched_lost)))
-    summary.set('unmatched_gained', str(len(unmatched_gained)))
+    summary.set('unmatched_lost',   str(len(truly_lost)))
+    summary.set('unmatched_gained', str(len(truly_gained)))
 
     # ── Lexicon statistics ─────────────────────────────────────────────────────
     all_langs = sorted(
@@ -300,25 +331,25 @@ def build_compare_xml(run_a: dict, run_b: dict) -> ET.Element:
     # ── Changed reconstruction (same members, different pfm/rcn) ──────────────
     cr_el = ET.SubElement(root, 'diffs')
     cr_el.set('type', 'changed_recon')
-    for k, a, b in sorted(changed_recon, key=lambda x: x[1]['pfm']):
-        cr_el.append(_diff_el(a, b, k, k))
+    for a, b in sorted(changed_recon, key=lambda x: x[0]['pfm']):
+        cr_el.append(_diff_el(a, b, a['key'], b['key']))
 
     # ── Membership diffs (matched lost↔gained pairs) ───────────────────────────
     cm_el = ET.SubElement(root, 'diffs')
     cm_el.set('type', 'changed_members')
-    for lk, gk in sorted(pairs, key=lambda p: sets_a[p[0]]['pfm']):
-        cm_el.append(_diff_el(sets_a[lk], sets_b[gk], lk, gk))
+    for a, b in sorted(pairs, key=lambda p: p[0]['pfm']):
+        cm_el.append(_diff_el(a, b, a['key'], b['key']))
 
     # ── Unmatched lost (no overlapping gained set) ─────────────────────────────
     lo_el = ET.SubElement(root, 'diffs')
     lo_el.set('type', 'lost')
-    for k in sorted(unmatched_lost, key=lambda k: sets_a[k]['pfm']):
-        lo_el.append(_diff_el(sets_a[k], None, k, frozenset()))
+    for a in sorted(truly_lost, key=lambda x: x['pfm']):
+        lo_el.append(_diff_el(a, None, a['key'], frozenset()))
 
     # ── Unmatched gained (no overlapping lost set) ─────────────────────────────
     ga_el = ET.SubElement(root, 'diffs')
     ga_el.set('type', 'gained')
-    for k in sorted(unmatched_gained, key=lambda k: sets_b[k]['pfm']):
-        ga_el.append(_diff_el(None, sets_b[k], frozenset(), k))
+    for b in sorted(truly_gained, key=lambda x: x['pfm']):
+        ga_el.append(_diff_el(None, b, frozenset(), b['key']))
 
     return root
