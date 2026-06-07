@@ -301,6 +301,11 @@ def create_xml_sets(reconstruction, languages, only_with_mel):
                 sets, languages, 'sets')
 
     isolates = ET.SubElement(root, 'isolates')
+    # mel="no" tells the XSLT to suppress "No matching MEL" badges when the
+    # project has no MEL file configured.  Absent attribute → assume yes (safe
+    # default for XML files generated before this attribute was added).
+    if not getattr(reconstruction, 'mel_used', True):
+        isolates.set('mel', 'no')
     if hasattr(reconstruction, 'isolates_dict'):
         serialize_isolates_dict(reconstruction.isolates_dict, isolates, reconstruction)
     else:
