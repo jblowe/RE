@@ -401,7 +401,8 @@ class ModernForm(Form):
         self.gloss = unicodedata.normalize('NFC', gloss) if gloss else gloss
         self.id = id
         self.attested_support = frozenset([self])
-        self.failure_reasons = None   # set by project_back when form fails to parse
+        self.failure_reasons     = None  # deepest dead-ends only (for Failures table)
+        self.all_failure_reasons = None  # all depths {pos: [reasons]} (for Interactive)
 
     def __str__(self):
         return f'{super().__str__()}\t{self.gloss}\t{self.id}'
@@ -834,8 +835,18 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
         _fail_max_pos = [-1]   # deepest position reached at a dead-end
         _fail_reasons = []     # distinct reason strings at that depth (capped)
         _fail_total   = [0]    # total dead-ends at that depth (for "and N more")
+        # All-depths tracking: collects every dead-end at every position so the
+        # Interactive pane can show the full parse-tree table.
+        _all_fail_reasons = {}  # position → [distinct reason strings] (capped)
+        _all_fail_totals  = {}  # position → total dead-end count
+        # Syllable-canon pruning tracker: records the deepest position and
+        # the syllable-type string built up to that point, for the fallback
+        # message when every path is pruned silently (no dead-end recorded).
+        _prune_max_pos  = [-1]
+        _prune_max_syll = ['']
 
         def _note_dead_end(position, reason_str):
+            # ── Deepest-position tracking (Failures table) ──────────────────
             if position > _fail_max_pos[0]:
                 _fail_max_pos[0] = position
                 _fail_reasons.clear()
@@ -848,27 +859,58 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                     _fail_total[0] += 1
                     if len(_fail_reasons) < _MAX_FAILURE_REASONS:
                         _fail_reasons.append(reason_str)
+            # ── All-depths tracking (Interactive parse-tree table) ───────────
+            bucket = _all_fail_reasons.setdefault(position, [])
+            if position not in _all_fail_totals:
+                _all_fail_totals[position] = 0
+            if reason_str not in bucket:
+                _all_fail_totals[position] += 1
+                if len(bucket) < _MAX_FAILURE_REASONS:
+                    bucket.append(reason_str)
 
-        def _daughter_form_str(corr):
-            """Return the daughter-language form(s) for corr.
-            Falls back to the proto form when the language has no entry."""
-            if not corr.id:          # initial_marker — no daughter form
-                return '#'
-            try:
-                forms = accessor(corr)
-                non_empty = [f for f in forms if f]
-                return ', '.join(non_empty) if non_empty else corr.proto_form
-            except (TypeError, KeyError, AttributeError):
-                return corr.proto_form
 
-        def _context_fail_msg(c, last, lastlast, position):
-            """Describe why correspondence c was blocked after last.
-            Shows daughter-language forms, not proto forms, and includes
-            the portion of the input already consumed (form[:position])."""
-            last_label   = last.id if last.id else 'word-initial'
-            last_dform   = _daughter_form_str(last)
-            c_dform      = _daughter_form_str(c)
-            consumed     = form[:position]
+        def _format_left(parse):
+            """Annotate each text-consuming step of parse as 'char' c.id.
+
+            Example: parse consumed '⁴' via c4 then 't' via c146 →
+                     "'⁴' c4 + 't' c146"
+
+            Epenthesis rules (no text consumed) and supra-segmentals are
+            omitted.  Returns '' when nothing has been consumed yet.
+            """
+            parts = []
+            pos   = 0
+            for c in parse:
+                if not c.id:
+                    continue   # initial_marker
+                if c.proto_form in supra_segmentals:
+                    continue   # supra-segmentals don't consume text
+                try:
+                    forms     = accessor(c)
+                    non_empty = [f for f in forms if f and f not in ('∅', '')]
+                except Exception:
+                    non_empty = []
+                matched = None
+                for f in sorted(non_empty, key=len, reverse=True):
+                    end = pos + len(f)
+                    if end <= len(form) and form[pos:end] == f:
+                        matched = f
+                        break
+                if matched:
+                    parts.append(f"'{matched}' {c.id}")
+                    pos += len(matched)
+                # epenthesis (matched is None): no text — skip
+            return ' + '.join(parts)
+
+        def _context_desc(c, last, lastlast):
+            """Return (is_panini, description) for correspondence c blocked after last.
+
+            is_panini=False  →  description is the context-failure suffix
+                                (used as part of a grouped message).
+            is_panini=True   →  description is the Panini suffix
+                                (the correspondence ID is prepended by the caller).
+            """
+            last_label = last.id if last.id else 'word-initial'
 
             if c not in next_map[last]:
                 # Determine which side of the context failed.
@@ -886,27 +928,19 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                                 c.proto_form in last.expanded_context[1])
 
                 if not left_ok and c.context[0] is not None:
-                    ctx_vals = ', '.join(c.context[0])
-                    return (f'left context {c.id} \'{ctx_vals}\' unmet by '
-                            f'{context_match_type} {last_label} \'{last_dform}\''
-                            + (f' (after "{consumed}")' if consumed else ''))
+                    return (False, f"left context {', '.join(c.context[0])} fails")
                 elif not right_ok and last.context[1] is not None:
                     ctx_vals = ', '.join(last.context[1])
-                    return (f'right context {last_label} \'{ctx_vals}\' unmet by '
-                            f'{context_match_type} {c.id} \'{c_dform}\''
-                            + (f' (after "{consumed}")' if consumed else ''))
+                    return (False, f"right context {last_label} '{ctx_vals}' fails")
                 else:
-                    return (f'left context {c.id} unmet by '
-                            f'{context_match_type} {last_label} \'{last_dform}\''
-                            + (f' (after "{consumed}")' if consumed else ''))
+                    return (False, 'context unmet')
             else:
                 # Panini's principle blocked the transition.
                 if lastlast is not None:
                     ll_label = lastlast.id if lastlast.id else 'word-initial'
-                    return (f"{c.id} blocked by Panini's principle "
-                            f"after {last_label} given {ll_label}")
-                return (f"{c.id} blocked by Panini's principle "
-                        f"after {last_label}")
+                    return (True, f"blocked by Panini's principle "
+                                  f"after {last_label} given {ll_label}")
+                return (True, f"blocked by Panini's principle after {last_label}")
 
         def gen(position, parse, last, lastlast, syllable_parse):
             '''We generate context and "phonotactic" sensitive parses recursively,
@@ -918,19 +952,10 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
             # number of branches from 182146 to 61631
             match = partial_regex_match(syllable_parse)
             if match is None:
-                if Debug.debug:
-                    pass
-                    #filler = '. ' * len(parse)
-                    #statistics.add_debug_note(f'{filler}canon cannot match: {len(parse)}, {form}, *{correspondences_as_proto_form_string(parse)}, {correspondences_as_ids(parse)}, {syllable_parse}')
-                # Reason 0: syllable canon has already ruled out this partial
-                # parse — no further extension can satisfy the regex.
-                # Commented out for now; Reason 3 (word-final syllable check)
-                # still catches syllable failures at the end of the form.
-                # Uncomment to see mid-parse prunings (may pre-empt other reasons).
-                #consumed = form[:position]
-                #_note_dead_end(position,
-                #    f'Syllable canon: "{syllable_parse}" cannot match'
-                #    + (f' (after "{consumed}")' if consumed else ''))
+                # Track the deepest pruning point for the fallback message.
+                if position > _prune_max_pos[0]:
+                    _prune_max_pos[0]  = position
+                    _prune_max_syll[0] = syllable_parse
                 return
             if Debug.debug:
                 pass
@@ -950,22 +975,24 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                     if Debug.debug:
                         attempts.add(tuple(parse))
                 else:
-                    # Reason 4: last correspondence forbids word-final position
-                    last_label  = last.id if last.id else 'word-initial'
-                    last_dform  = _daughter_form_str(last)
-                    ctx_vals    = ', '.join(last.context[1]) if last.context[1] else ''
+                    # Reason 4: last correspondence forbids word-final position.
+                    last_label = last.id if last.id else 'word-initial'
+                    ctx_vals   = ', '.join(last.context[1]) if last.context[1] else ''
+                    left_ann   = _format_left(parse)
+                    left_q     = left_ann if left_ann else "''"
                     _note_dead_end(position,
-                        f'right context {last_label} \'{ctx_vals}\' unmet at word-final '
-                        f'({context_match_type} \'{last_dform}\')')
+                        f"{left_q} + '' : right context {last_label} '{ctx_vals}' fails at word-final")
             # if the last token was marked as only word final then stop
             if last.context[1] and last.expanded_context[1] == {'#'}:
                 return
             # otherwise keep building parses from epenthesis rules
-            made_progress = False
+            # text_progress tracks only text-consuming transitions so that a
+            # context or constituent failure on the text is always reported,
+            # even when epenthesis rules fired earlier in this same call.
+            text_progress = False
             for c in rule_map['∅']:
                 if (c in next_map[last] and
                     not blocked_given_map.get((last, c), constantly_false)(lastlast)):
-                    made_progress = True
                     for syllable_type in c.syllable_types:
                         gen(position,
                             parse + [c],
@@ -974,56 +1001,126 @@ def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=N
                             syllable_parse + syllable_type)
             if position >= form_length:
                 return
-            text_matched_corrs = []   # corrs whose daughter form matches here
+            text_matched_corrs = []   # (c, next_pos) pairs whose daughter form matches here
             for token_length in token_lengths:
                 next_position = position + token_length
                 if next_position > form_length:
                     break
                 for c in rule_map[form[position:next_position]]:
-                    text_matched_corrs.append(c)
+                    text_matched_corrs.append((c, next_position))
                     if (c in next_map[last] and
                         not blocked_given_map.get((last, c), constantly_false)(lastlast)):
-                        made_progress = True
+                        text_progress = True
                         for syllable_type in c.syllable_types:
                             gen(next_position,
                                 parse + [c],
                                 last if c.proto_form in supra_segmentals else c,
                                 lastlast if c.proto_form in supra_segmentals else last,
                                 syllable_parse + syllable_type)
-            if not made_progress:
+            if not text_progress:
                 if text_matched_corrs:
-                    # Reason 2: constituent exists but every candidate was context-blocked
-                    seen_msgs = set()
-                    for c in text_matched_corrs:
-                        msg = _context_fail_msg(c, last, lastlast, position)
-                        if msg not in seen_msgs:
-                            _note_dead_end(position, msg)
-                            seen_msgs.add(msg)
+                    # Reason 2: constituent exists but every candidate was context-blocked.
+                    # Group by (left, actual_char, right, context_description) so that
+                    # correspondences sharing the same failure produce one compact message
+                    # listing all blocked IDs, e.g.:
+                    #   '³k' + c5, c6, c21 'i' + 'oʱ' : right context c106 'w' fails
+                    seg_groups    = {}  # (left_q, actual_char, right_q, ctx_desc) → [id,…]
+                    panini_groups = {}  # panini_desc → [id,…]
+                    left_ann = _format_left(parse)   # same for all corrs at this position
+                    for (c, np) in text_matched_corrs:
+                        actual_char     = form[position:np]
+                        is_panini, desc = _context_desc(c, last, lastlast)
+                        if is_panini:
+                            panini_groups.setdefault(desc, [])
+                            if c.id not in panini_groups[desc]:
+                                panini_groups[desc].append(c.id)
+                        else:
+                            left_q  = left_ann if left_ann else "''"
+                            right_q = f"'{form[np:]}'" if form[np:] else "''"
+                            key = (left_q, actual_char, right_q, desc)
+                            seg_groups.setdefault(key, [])
+                            if c.id not in seg_groups[key]:
+                                seg_groups[key].append(c.id)
+                    for (left_q, actual_char, right_q, ctx_desc), ids in seg_groups.items():
+                        ids_str = ', '.join(ids)
+                        _note_dead_end(position,
+                            f"{left_q} + {ids_str} '{actual_char}' + {right_q} : {ctx_desc}")
+                    for panini_desc, ids in panini_groups.items():
+                        ids_str = ', '.join(ids)
+                        _note_dead_end(position, f"{ids_str} {panini_desc}")
                 else:
                     # Reason 1: no correspondence covers form[position:] at all
-                    consumed = form[:position]
+                    left_ann = _format_left(parse)
                     _note_dead_end(position,
                         f'Constituent “{form[position:]}” not found'
-                        + (f' after “{consumed}”' if consumed else ''))
+                        + (f' after {left_ann}' if left_ann else ''))
 
         gen(0, [], parameters.table.initial_marker, None, '')
         if Debug.debug:
             statistics.add_debug_note(f'{len(parses)} reconstructions generated')
             for p in attempts:
                 if p in parses:
-                    statistics.add_debug_note(f' *{correspondences_as_proto_form_string(p)} - {correspondences_as_ids(p)} {syllable_structure(p)}')
+                    # Append the step breakdown (tab-separated) so the
+                    # Interactive pane can render a proper tree table.
+                    steps = _format_left(p)
+                    base  = (f' *{correspondences_as_proto_form_string(p)} - '
+                             f'{correspondences_as_ids(p)} {syllable_structure(p)}')
+                    statistics.add_debug_note(
+                        base + (f'\t{steps}' if steps else ''))
                 else:
-                    statistics.add_debug_note(f' xx {correspondences_as_proto_form_string(p)} - {correspondences_as_ids(p)} {syllable_structure(p)}')
+                    statistics.add_debug_note(
+                        f' xx {correspondences_as_proto_form_string(p)} - '
+                        f'{correspondences_as_ids(p)} {syllable_structure(p)}')
+
+        # ── Sort key shared by deepest-only and all-depths assemblies ─────────
+        def _reason_sort_key(r):
+            if 'word-final'       in r:            return 4   # before right-context
+            if ': left context'   in r:            return 0
+            if ': right context'  in r:            return 1
+            if r.startswith('Syllable structure'): return 2
+            if r.startswith('Constituent '):       return 3
+            if 'Panini'           in r:            return 5
+            if r.startswith('Syllable canon'):     return 6
+            if r.startswith('…') or r.startswith('...'): return 10
+            return 7
 
         # Store failure reasons for project_back to pick up if this form failed.
-        if not parses and _fail_total[0] > 0:
+        if not parses:
+            if _fail_total[0] == 0:
+                # No dead-end was ever recorded: every parse path was pruned by
+                # the syllable canon before reaching any constituent check or
+                # word-final position.  Report the deepest pruning point.
+                pos     = max(_prune_max_pos[0], 0)
+                left    = form[:pos]
+                right   = form[pos:]
+                syll    = _prune_max_syll[0]
+                left_q  = f"'{left}'"  if left  else "''"
+                right_q = f"'{right}'" if right else "''"
+                syll_s  = f" (syllable '{syll}')" if syll else ''
+                _note_dead_end(0,
+                    f"Syllable canon: all paths pruned: "
+                    f"{left_q} + {right_q}{syll_s}")
+            # ── Deepest-only list (for the Failures table in sets.xml) ───────
+            _fail_reasons.sort(key=_reason_sort_key)
             reasons = list(_fail_reasons)
             extra = _fail_total[0] - len(reasons)
             if extra > 0:
                 reasons.append(f'… and {extra} more')
             statistics._pending_failure_reasons = reasons
+            # ── All-depths dict (for the Interactive parse-tree table) ────────
+            # Keys are positions sorted deepest-first; reasons within each
+            # position are sorted by type.
+            all_depths = {}
+            for pos in sorted(_all_fail_reasons.keys(), reverse=True):
+                sorted_r = sorted(_all_fail_reasons[pos], key=_reason_sort_key)
+                xtra = _all_fail_totals.get(pos, len(sorted_r)) - len(sorted_r)
+                if xtra > 0:
+                    sorted_r.append(f'… and {xtra} more')
+                all_depths[pos] = sorted_r
+            statistics._pending_all_failure_reasons = all_depths or None
         else:
-            statistics._pending_failure_reasons = None
+            statistics._pending_failure_reasons     = None
+            statistics._pending_all_failure_reasons = None
 
         return parses
     return tokenize
@@ -1081,7 +1178,8 @@ def project_back(lexicons, parameters, statistics):
             quirky_forms = lexicon.quirky_forms(parameters.table.quirks)
             statistics.add_note(f'{lexicon.language}: found {len(quirky_forms)} forms with expected alternatives')
 
-        failure_memo = {}   # glyphs → failure reasons when parses is empty
+        failure_memo     = {}   # glyphs → deepest failure reasons
+        all_failure_memo = {}   # glyphs → all-depths {pos: [reasons]} dict
 
         def get_parses(glyphs):
             """Return list of (cs, history) for a glyph string, memoised."""
@@ -1092,10 +1190,13 @@ def project_back(lexicons, parameters, statistics):
                 parses += [(x, history) for x in tokenize(stage_0_form, statistics)]
             memo[glyphs] = parses
             if not parses:
-                # Capture the best failure reasons left by the last tokenize call.
+                # Capture failure reasons left by the last tokenize call.
                 failure_memo[glyphs] = getattr(
                     statistics, '_pending_failure_reasons', None)
-                statistics._pending_failure_reasons = None
+                all_failure_memo[glyphs] = getattr(
+                    statistics, '_pending_all_failure_reasons', None)
+                statistics._pending_failure_reasons     = None
+                statistics._pending_all_failure_reasons = None
             return parses
 
         def commit_parses(form, parses):
@@ -1125,7 +1226,8 @@ def project_back(lexicons, parameters, statistics):
                     # show both the original and fuzzied glyphs.
                     count_of_no_parses += 1
                     form.fuzzied = fuzzied
-                    form.failure_reasons = failure_memo.get(fuzzied.glyphs)
+                    form.failure_reasons     = failure_memo.get(fuzzied.glyphs)
+                    form.all_failure_reasons = all_failure_memo.get(fuzzied.glyphs)
                     statistics.failed_parses.append(form)
             else:
                 # No fuzzied version: original behaviour.
@@ -1134,7 +1236,8 @@ def project_back(lexicons, parameters, statistics):
                     commit_parses(form, orig_parses)
                 else:
                     count_of_no_parses += 1
-                    form.failure_reasons = failure_memo.get(form.glyphs)
+                    form.failure_reasons     = failure_memo.get(form.glyphs)
+                    form.all_failure_reasons = all_failure_memo.get(form.glyphs)
                     statistics.failed_parses.append(form)
 
         number_of_forms += len(lexicon.forms)
@@ -1184,6 +1287,13 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                 if isinstance(supporting_form, (ModernForm, Stage0Form, AlternateForm)):
                     if supporting_form.gloss:
                         all_glosses.add(supporting_form.gloss)
+                else:
+                    # ProtoForm from an intermediate level: collect glosses from
+                    # its attested support so the MEL association table covers the
+                    # full set of attested languages, not just the direct daughters.
+                    for attested_form in supporting_form.attested_support:
+                        if hasattr(attested_form, 'gloss') and attested_form.gloss:
+                            all_glosses.add(attested_form.gloss)
         return all_glosses
 
     associated_mels_table = mel.compile_associated_mels(mels,
@@ -1207,7 +1317,25 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
                         # homophones whose sibling glosses do match are kept.
                         unmatched.append(supporting_form)
                 else:
-                    distinct_mels[mel.default_mel].append(supporting_form)
+                    # ProtoForm from an intermediate level.  ProtoForms carry no
+                    # gloss of their own; their semantic content is the union of
+                    # their attested daughters' glosses.  Look up each daughter
+                    # gloss in the association table and assign the ProtoForm to
+                    # every MEL bucket that any daughter matches.
+                    matched_mels = set()
+                    for attested_form in supporting_form.attested_support:
+                        if hasattr(attested_form, 'gloss') and attested_form.gloss:
+                            for m in mel.associated_mels(associated_mels_table,
+                                                         attested_form.gloss,
+                                                         only_with_mel):
+                                matched_mels.add(m)
+                    if matched_mels - {mel.default_mel}:
+                        for m in matched_mels - {mel.default_mel}:
+                            distinct_mels[m].append(supporting_form)
+                    elif mel.default_mel in matched_mels:
+                        distinct_mels[mel.default_mel].append(supporting_form)
+                    else:
+                        unmatched.append(supporting_form)
             # Add MEL-unmatched forms to groups where a genuine homophone
             # (same language, same PRE-FUZZY surface form) is already present.
             #
@@ -1354,9 +1482,14 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
                              for daughter in tree[target]]
+        # MEL filtering is only meaningful at the root: intermediate proto-
+        # languages must pass all valid reconstructions upward so the root
+        # has the full set of candidates to group against the MEL.
+        # Applying only_with_mel at intermediate levels prematurely discards
+        # reconstructions, producing incomplete cognate sets at the root.
         forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
-                                           only_with_mel,
+                                           only_with_mel if root else False,
                                            root)
         # Accumulate stats from every level so the top-level Statistics object
         # reflects the full tree, not just the root level.
