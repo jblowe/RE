@@ -253,7 +253,7 @@
   <xsl:choose>
     <xsl:when test="@lxf != ''">
       <xsl:value-of select="@lxf"/>
-      <small style="color:#888"> &#171;&#171; <xsl:value-of select="@lx"/></small>
+      <small style="color:#888"> &#171; <xsl:value-of select="@lx"/></small>
     </xsl:when>
     <xsl:otherwise>
       <xsl:value-of select="@lx"/>
