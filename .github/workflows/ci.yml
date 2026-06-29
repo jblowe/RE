@@ -1,0 +1,105 @@
+name: CI
+
+# Run on every push to the active branches and on pull requests targeting them.
+on:
+  push:
+    branches: [rev2, main]
+  pull_request:
+    branches: [rev2, main]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  PYTHONUNBUFFERED: "1"
+
+jobs:
+  # ── Fast pytest suite (Flask routes, XSLT, core module imports) ─────────────
+  pytest:
+    name: pytest (fast tests)
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          # Core RE dependencies
+          pip install regex lxml tomli-w
+          # REwww (Flask) dependencies
+          pip install flask werkzeug
+          # Test runner
+          pip install pytest
+
+      - name: Run pytest (excluding slow integration tests)
+        run: pytest -m "not slow"
+
+  # ── Core RE reconstruction tests (mirrors the Makefile benchmark targets) ───
+  core-tests:
+    name: Core RE reconstruction tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install regex lxml tomli-w
+
+      - name: DIS – no MEL
+        working-directory: src
+        run: python3 REcli.py upstream DIS --run none --recon standard
+
+      - name: DIS – hand MEL
+        working-directory: src
+        run: python3 REcli.py upstream DIS --run hand --recon standard --mel hand -w
+
+      - name: POLYNESIAN – no MEL
+        working-directory: src
+        run: python3 REcli.py upstream POLYNESIAN --run none --recon standard
+
+      - name: POLYNESIAN – hand MEL
+        working-directory: src
+        run: python3 REcli.py upstream POLYNESIAN --run hand --recon standard --mel hand -w
+
+      # NOTE: LOLOISH and EXER are currently inoperative — excluded from CI.
+      # The POLYNESIAN CSV→lexicon step exercises csv_to_lexicon.py without
+      # touching any broken projects.
+      - name: CSV → lexicon conversion (POLYNESIAN)
+        working-directory: src
+        run: |
+          python3 csv_to_lexicon.py ../projects/POLYNESIAN/POLYNESIAN.data.csv "1,0, 3" POLYNESIAN
+
+  # ── Slow integration tests (full round-trip via the Flask API) ─────────────
+  # These only run on pushes to rev2/main (not on every PR), since they take
+  # several minutes each.
+  integration:
+    name: Integration tests (slow)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install regex lxml tomli-w flask werkzeug pytest
+
+      - name: Run slow integration tests
+        run: pytest -m slow -v
