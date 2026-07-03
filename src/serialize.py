@@ -151,6 +151,8 @@ def add_entry(root, form, number):
         rfx.set('id', form.actual.id)
         ET.SubElement(rfx, 'lx').text = form.actual.glyphs
         ET.SubElement(rfx, 'lxf').text = form.glyphs
+    elif isinstance(form, RE.ProtoForm):
+        ET.SubElement(rfx, 'lx').text = form.glyphs
     ET.SubElement(rfx, 'lg').text = form.language
     try:
         ET.SubElement(rfx, 'gl').text = form.gloss
