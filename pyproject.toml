@@ -1,0 +1,36 @@
+[project]
+name = "RE2"
+description = "Reconstruction Engine 2 — a Python implementation of the RE comparative-linguistics tool"
+requires-python = ">=3.11"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "commitizen>=3",
+]
+
+[tool.pytest.ini_options]
+# Mirrors pytest.ini — if pytest.ini is removed later, this takes over.
+testpaths = ["tests"]
+addopts   = "-v"
+markers   = [
+    "slow: marks tests that run a full RE reconstruction (may take several minutes)",
+]
+
+[tool.commitizen]
+# Bump + tag + changelog in one step:
+#   cz bump --prerelease rc    # 2.0.1-rc1 → 2.0.1-rc2  (increment the rc)
+#   cz bump                    # 2.0.1-rcN → 2.0.1       (promote to release)
+#   cz bump --increment MINOR  # override the auto-detected bump level
+#
+# The major/minor/patch step is inferred from Conventional Commit messages
+# (feat:/fix:/BREAKING CHANGE) since the last tag; use --increment when
+# commits don't follow that convention.
+name = "cz_conventional_commits"
+version_provider = "scm"          # current version = latest git tag
+version_scheme = "semver"         # keeps the "-rcN" tag style (not PEP 440 rcN)
+tag_format = "$version"           # tags: 2.0.1-rc1, 2.0.1, 2.1.0, …
+update_changelog_on_bump = true
+changelog_file = "CHANGELOG.md"   # cz writes here; hand-written CHANGELOG.txt is untouched
+version_files = ["VERSION"]       # keep VERSION in sync with the tag
