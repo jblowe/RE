@@ -158,6 +158,10 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .nav-tabs .nav-link.active { color: #EC5800; border-top-color: #EC5800; }
 .nav-tabs .nav-link:not(.disabled):not(.active):hover { color: #c44a00; }
 
+/* ── Main tab bar: visual spacer between the two pane groups ─────────────── */
+.nav-tab-spacer { display: flex; align-items: center; margin: 0 .5rem; }
+.nav-tab-spacer > span { display: block; width: 1px; height: 1.4rem; background: #ccc; }
+
 /* ── Lexicons pane: per-language sub-tab bar ─────────────────────────────── */
 .lexicons-lang-tabs { margin-top: .25rem; font-size: 0.8rem; flex-wrap: wrap; }
 .lexicons-lang-tabs .nav-link { padding: .2rem .6rem; }
