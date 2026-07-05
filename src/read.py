@@ -333,12 +333,20 @@ def read_header_line(filename, delimiter='\t'):
         return skip_comments(reader)
 
 
+_XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
+
+
 def read_mel_file(filename):
     try:
         tree = ET.parse(filename)
-        return [mel.Mel([seg.text for seg in child.iterfind('gl')],
-                        child.attrib.get('id'))
-                for child in tree.iterfind('mel')]
+        mels = []
+        for child in tree.iterfind('mel'):
+            gl_elements = list(child.iterfind('gl'))
+            glosses = [seg.text for seg in gl_elements]
+            gloss_langs = {seg.text: seg.attrib[_XML_LANG]
+                           for seg in gl_elements if _XML_LANG in seg.attrib}
+            mels.append(mel.Mel(glosses, child.attrib.get('id'), gloss_langs))
+        return mels
     except:
         print(f'could not process mel file: {filename}')
         return []

@@ -402,6 +402,11 @@ def serialize_stats(stats, settings, args, filename):
     # MEL -- see coverage.build_annotated_coverage. Colored the same way as
     # mesolanguage badges (status: set|isolate).
     mel_reconstructions = getattr(stats, 'mel_reconstructions', None)
+    # {mel_id: {gloss_text: xml:lang value}}, straight from the MEL file --
+    # see mel.Mel.gloss_langs. Rendered on <gl> the same way mel2html.xsl
+    # renders it directly from the MEL file itself.
+    mel_gloss_langs = getattr(stats, 'mel_gloss_langs', None) or {}
+    XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
 
     try:
         if len(stats.mel_usage.items()) > 0:
@@ -409,10 +414,14 @@ def serialize_stats(stats, settings, args, filename):
             for mel in stats.mel_usage.items():
                 mel_id = mel[0]
                 entry = ET.SubElement(semantics, 'mel', attrib={'id': mel_id})
+                gloss_langs = mel_gloss_langs.get(mel_id, {})
                 for gl in mel[1]:
                     if gl == 'usage': continue
                     gl_element = ET.SubElement(entry, 'gl', attrib={'uses': str(mel[1][gl])})
                     gl_element.text = gl
+                    lang = gloss_langs.get(gl)
+                    if lang:
+                        gl_element.set(XML_LANG, lang)
                 if mel_reconstructions is not None:
                     for (glyphs, status) in mel_reconstructions.get(mel_id, []):
                         r_element = ET.SubElement(entry, 'reconstruction', attrib={'status': status})

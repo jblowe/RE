@@ -89,6 +89,11 @@ def check_mel_coverage(mels, attested_lexicons, associated_mels_table):
     coverage_statistics.unmatched_glosses = unmatched_glosses
     coverage_statistics.matched_glosses = matched_glosses
     coverage_statistics.mel_usage = mel_usage
+    # {mel_id: {gloss_text: xml:lang value}}, straight from the MEL file (see
+    # read.read_mel_file / mel.Mel.gloss_langs) -- carried through so
+    # serialize.py can render it on <gl> the same way mel2html.xsl does.
+    coverage_statistics.mel_gloss_langs = {m.id: m.gloss_langs
+                                           for m in (mels or []) if m.gloss_langs}
 
     print(f'\nmel summary: mels {number_of_mels}, mel glosses {len(mel_glosses)}, unused mel glosses {unused_mel_glosses}, unused mels {unused_mels}')
     print(f'gloss summary: {all_matched + all_not_matched} distinct glosses, {all_matched} matched, {all_not_matched} did not match, {all_forms} forms')

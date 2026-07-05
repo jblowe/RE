@@ -363,12 +363,18 @@ class TestMelHomophoneFiltering:
 
         Returns (cognate_sets, statistics) — the raw tuple from create_sets.
         mels_list is a list of mel.Mel objects (the real type used in production).
+        create_sets itself takes the *compiled* association table (see
+        mel.compile_associated_mels), built once here exactly as RE.upstream
+        does for a real run.
         """
+        import mel as mel_module
         reconstruction = 'test-rcn'
         projections = {reconstruction: tuple(support_forms)}
         stats = self._RE.Statistics()
+        glosses = {f.gloss for f in support_forms if getattr(f, 'gloss', None)}
+        associated_mels_table = mel_module.compile_associated_mels(mels_list, glosses)
         # create_sets returns (set_of_tuples, statistics)
-        return self._RE.create_sets(projections, stats, mels_list, only_with_mel)
+        return self._RE.create_sets(projections, stats, associated_mels_table, only_with_mel)
 
     def _mel(self, glosses, id_str):
         """Build a real mel.Mel object."""
@@ -421,6 +427,92 @@ class TestMelHomophoneFiltering:
         assert mar_deux in all_forms, '"deux" should appear in the mel-355 set'
         assert mar_nous not in all_forms, \
             'Fuzz-coincident "nous" should NOT appear in the mel-355 set'
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# mel.py / read.py — xml:lang on <gl>
+#
+# Some MEL files (e.g. the real TGTM.hand-extended-v4.mel.xml, external to
+# this repo) tag individual glosses with xml:lang, e.g.
+# <gl xml:lang="fr">abandonner</gl>. This fixture is a minimal, self-contained
+# stand-in with the same shape so the test doesn't depend on a path outside
+# the repo.
+# ─────────────────────────────────────────────────────────────────────────────
+
+MEL_WITH_XML_LANG = '''<?xml version="1.0" encoding="utf-8"?>
+<semantics>
+  <mel id="m1">
+    <gl xml:lang="xx">abandon</gl>
+    <gl xml:lang="fr">abandonner</gl>
+    <gl>cast away</gl>
+  </mel>
+</semantics>
+'''
+
+
+class TestMelXmlLang:
+    @pytest.fixture
+    def mel_file(self, tmp_path):
+        p = tmp_path / 'test.hand.mel.xml'
+        p.write_text(MEL_WITH_XML_LANG, encoding='utf-8')
+        return str(p)
+
+    def test_read_mel_file_preserves_xml_lang(self, mel_file):
+        import read as _read
+        mels = _read.read_mel_file(mel_file)
+        assert len(mels) == 1
+        m = mels[0]
+        assert m.glosses == ['abandon', 'abandonner', 'cast away']
+        assert m.gloss_langs == {'abandon': 'xx', 'abandonner': 'fr'}
+        assert 'cast away' not in m.gloss_langs, \
+            'glosses without an xml:lang attribute should not appear'
+
+    def test_matching_is_unaffected_by_gloss_langs(self, mel_file):
+        """gloss_langs is purely descriptive -- it must not change which
+        glosses/mels match."""
+        import read as _read
+        import mel as mel_module
+        mels = _read.read_mel_file(mel_file)
+        table = mel_module.compile_associated_mels(mels, {'abandonner'})
+        matched = mel_module.associated_mels(table, 'abandonner', only_with_mel=True)
+        assert matched == mels
+
+    def test_coverage_xml_carries_xml_lang_on_gl(self, mel_file, tmp_path):
+        """The whole backend pipeline (read -> mel -> coverage -> serialize)
+        should carry xml:lang through to the <gl> elements in coverage.xml,
+        exactly as mel2html.xsl already reads it straight off the MEL file."""
+        import read as _read
+        import mel as mel_module
+        import coverage as _coverage
+        import serialize as _serialize
+        import RE as _RE
+        import lxml.etree as ET
+        from types import SimpleNamespace
+
+        mels = _read.read_mel_file(mel_file)
+        form = _RE.ModernForm('lang1', 'x', 'abandonner', id='lang1-1')
+        attested_lexicons = {'lang1': _RE.Lexicon('lang1', [form])}
+        table = mel_module.compile_associated_mels(mels, {'abandonner'})
+
+        stats = _coverage.check_mel_coverage(mels, attested_lexicons, table)
+        assert stats.mel_gloss_langs == {'m1': {'abandon': 'xx', 'abandonner': 'fr'}}
+
+        settings = SimpleNamespace(mel_filename=mel_file,
+                                    proto_languages={'root': 'x'},
+                                    upstream_target='root')
+        args = SimpleNamespace(run='test', only_with_mel=False)
+        out_path = str(tmp_path / 'coverage.xml')
+        _serialize.serialize_stats(stats, settings, args, out_path)
+
+        tree = ET.parse(out_path)
+        XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
+        fr_gl = tree.find(".//mel[@id='m1']/gl[.='abandonner']")
+        assert fr_gl is not None, 'expected a <gl>abandonner</gl> under mel m1'
+        assert fr_gl.get(XML_LANG) == 'fr'
+        plain_gl = tree.find(".//mel[@id='m1']/gl[.='cast away']")
+        assert plain_gl is not None
+        assert plain_gl.get(XML_LANG) is None, \
+            'glosses without xml:lang in the source should not gain one'
 
 
 # ─────────────────────────────────────────────────────────────────────────────

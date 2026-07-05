@@ -135,9 +135,15 @@
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:value-of select="."/>
-                  <sub class="cov-uses">&#160;<xsl:value-of select="@uses"/></sub>
                 </xsl:otherwise>
               </xsl:choose>
+              <!-- xml:lang / uses count, in the same order mel2html.xsl uses. -->
+              <xsl:if test="@xml:lang">
+                <sub><xsl:value-of select="@xml:lang"/></sub>
+              </xsl:if>
+              <xsl:if test="@uses != '0'">
+                <sub class="cov-uses">&#160;<xsl:value-of select="@uses"/></sub>
+              </xsl:if>
               <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
             </xsl:for-each>
           </td>
@@ -153,9 +159,16 @@
     <xsl:when test="@pseudo='true'"><em><xsl:value-of select="."/></em></xsl:when>
     <xsl:when test="@uses='0'"><span class="cov-gl-zero"><xsl:value-of select="."/></span></xsl:when>
     <xsl:otherwise>
-      <xsl:value-of select="."/><sub class="cov-uses">&#160;<xsl:value-of select="@uses"/></sub>
+      <xsl:value-of select="."/>
     </xsl:otherwise>
   </xsl:choose>
+  <!-- xml:lang / uses count, in the same order mel2html.xsl uses. -->
+  <xsl:if test="@xml:lang">
+    <sub><xsl:value-of select="@xml:lang"/></sub>
+  </xsl:if>
+  <xsl:if test="@uses != '0'">
+    <sub class="cov-uses">&#160;<xsl:value-of select="@uses"/></sub>
+  </xsl:if>
 </xsl:template>
 
 <!-- ── Shared: one reconstruction badge, colored like a mesolanguage form ── -->

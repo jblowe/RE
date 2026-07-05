@@ -226,3 +226,60 @@ class TestStylesheetFor:
 
     def test_table_mode_data(self):
         assert xslt.stylesheet_for('x.data.xml', 'table') == 'lexicon2table.xsl'
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# coverage2html.xsl — xml:lang on <gl>, rendered the same way mel2html.xsl
+# renders it directly off the MEL file (see tests/test_re_core.py::
+# TestMelXmlLang for the backend half: read_mel_file -> coverage.py ->
+# serialize.py actually producing this xml:lang attribute in coverage.xml).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Shape matches serialize.serialize_stats's actual output for the plain
+# "MEL usage" table (no <languages> sibling of <semantics>).
+COVERAGE_XML_PLAIN_MEL_USAGE = b"""<?xml version="1.0" encoding="utf-8"?>
+<stats>
+  <semantics>
+    <mel id="m1">
+      <gl uses="2" xml:lang="fr">abandonner</gl>
+      <gl uses="0">cast away</gl>
+    </mel>
+  </semantics>
+</stats>"""
+
+# Shape matches the annotated "MEL Annotated Coverage" table (<languages> is
+# a sibling of <semantics>, which is what selects the other template).
+COVERAGE_XML_ANNOTATED = b"""<?xml version="1.0" encoding="utf-8"?>
+<stats>
+  <languages><lg>lang1</lg></languages>
+  <semantics>
+    <mel id="m1">
+      <gl uses="2" xml:lang="fr">abandonner</gl>
+      <reconstruction status="set">test</reconstruction>
+      <lg name="lang1"><form status="set">abandonner</form></lg>
+    </mel>
+  </semantics>
+</stats>"""
+
+
+class TestCoverageXmlLangRendering:
+    def _render(self, xml_bytes):
+        tree = ET.ElementTree(ET.fromstring(xml_bytes))
+        return xslt.xml_to_html_from_tree(tree, 'coverage2html.xsl')
+
+    def test_plain_mel_usage_renders_lang_as_sub(self):
+        html = self._render(COVERAGE_XML_PLAIN_MEL_USAGE)
+        assert 'text-danger' not in html, f'XSLT produced an error: {html[:300]}'
+        assert '<sub>fr</sub>' in html
+
+    def test_plain_mel_usage_no_sub_when_no_lang(self):
+        html = self._render(COVERAGE_XML_PLAIN_MEL_USAGE)
+        assert 'cast away' in html
+        # "cast away" has no xml:lang, so it must not pick up a stray <sub>
+        idx = html.find('cast away')
+        assert '<sub>' not in html[idx:idx + 40]
+
+    def test_annotated_gloss_renders_lang_as_sub(self):
+        html = self._render(COVERAGE_XML_ANNOTATED)
+        assert 'text-danger' not in html, f'XSLT produced an error: {html[:300]}'
+        assert '<sub>fr</sub>' in html
