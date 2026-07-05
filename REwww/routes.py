@@ -754,7 +754,7 @@ def api_run():
             except Exception:
                 pass
 
-            B = RE.batch_all_upstream(settings, only_with_mel=True)
+            B = RE.upstream(settings, only_with_mel=True)
 
             _isolates_dict = RE.extract_isolates(B)
             B.isolates_dict = _isolates_dict
@@ -880,7 +880,14 @@ def api_run():
             coverage_xml = None
             if mel_path and os.path.isfile(mel_path):
                 import coverage as re_coverage
-                cov_stats = re_coverage.check_mel_coverage(settings)
+                # Reuses the mels/attested_lexicons/associated_mels_table
+                # already computed for this run (stashed on B.statistics by
+                # RE.upstream) -- no re-read, no re-normalizing, and
+                # the annotated per-MEL/per-language table is assembled here
+                # once rather than rebuilt on every Coverage-tab request.
+                cov_stats = re_coverage.build_coverage_statistics(
+                    B.statistics.mels, B.statistics.attested_lexicons,
+                    B.statistics.associated_mels_table, all_languages, B)
                 coverage_xml = os.path.join(
                     runs_dir, f'{project}.{run_name}.coverage.xml')
                 serialize.serialize_stats(cov_stats, settings, args_ns, coverage_xml)
@@ -1182,6 +1189,9 @@ def api_tab(run_id, tab):
         cov_path = files.get('coverage')
         if not cov_path or not os.path.isfile(cov_path):
             return '<p class="text-muted">No coverage report — run with a MEL selected.</p>'
+        # coverage.xml is fully self-contained (languages + annotated
+        # per-MEL/per-language/status table) as of the run that produced it
+        # -- no per-request re-derivation needed.
         return xslt.xml_to_html(cov_path, 'coverage2html.xsl')
 
     return '<p class="text-danger">Unknown tab.</p>', 400
@@ -1836,7 +1846,7 @@ def api_interactive_run():
     sys.stdout = _Tee(old_stdout)
 
     try:
-        B = RE.interactive_upstream(settings, attested_lexicons, only_with_mel=False)
+        B = RE.upstream(settings, attested_lexicons, only_with_mel=False)
 
         # Mirror the post-processing done in do_run so serialize_sets has everything it needs
         _isolates_dict = RE.extract_isolates(B)

@@ -897,7 +897,7 @@ function handleRunDone(data, activateAfter) {
   if (data.has_coverage) {
     document.getElementById('nav-coverage').style.display = '';
     setTabEnabled('tab-coverage-nav', true);
-    loadTabContent('coverage');
+    loadTabContent('coverage', 'paragraph', syncCoverageGlossToggle);
   }
   /* Update run badge with Match Type / Supers now that we have them. */
   if (data.context_match_type != null) {
@@ -1114,6 +1114,56 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
   btn.addEventListener('click', function () {
     const nowHidden = container.classList.toggle('glosses-hidden');
     btn.textContent = nowHidden ? 'Show glosses' : 'Hide glosses';
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Coverage annotated table: "hide more" toggle, shared by the Gloss and
+   Protoform columns.
+
+   - Each cell (.cov-hm-cell) tracks its own expanded/collapsed state and its
+     own "+N"/"−" button -- setCellExpanded() keeps the two in sync.
+   - The "Show/Hide glosses" button (rendered inline next to the "MEL
+     Annotated Coverage" heading, so it only exists once the table has
+     loaded) bulk-sets every Gloss-column cell (.cov-gl-hm) at once; it never
+     touches the Protoform column (.cov-pf-hm), which is per-row only.
+   - #coverage-content.glosses-hidden persists the bulk choice across tab
+     reloads (the table itself is replaced on every reload, but this
+     container is not); syncCoverageGlossToggle() re-applies it, and is
+     wired as the afterLoad callback for the coverage tab.
+   - Everything is delegated on the persistent container so it keeps working
+     after the table inside it is replaced.
+   ══════════════════════════════════════════════════════════════════════════ */
+function setCellExpanded(cell, expanded) {
+  cell.classList.toggle('cov-hm-expanded', expanded);
+  const btn = cell.querySelector('.cov-hm-toggle');
+  if (!btn) return;
+  btn.textContent = expanded ? '−' : ('+' + (btn.dataset.moreCount || ''));
+}
+
+function syncCoverageGlossToggle(container) {
+  if (!container) return;
+  const btn    = container.querySelector('#btn-toggle-coverage-glosses');
+  const hidden = container.classList.contains('glosses-hidden');
+  if (btn) btn.textContent = hidden ? 'Show glosses' : 'Hide glosses';
+  container.querySelectorAll('.cov-gl-hm').forEach(cell => setCellExpanded(cell, !hidden));
+}
+
+(function () {
+  const container = document.getElementById('coverage-content');
+  if (!container) return;
+  container.addEventListener('click', function (e) {
+    const bulkBtn = e.target.closest('#btn-toggle-coverage-glosses');
+    if (bulkBtn) {
+      container.classList.toggle('glosses-hidden');
+      syncCoverageGlossToggle(container);
+      return;
+    }
+    const toggleBtn = e.target.closest('.cov-hm-toggle');
+    if (toggleBtn) {
+      const cell = toggleBtn.closest('.cov-hm-cell');
+      if (cell) setCellExpanded(cell, !cell.classList.contains('cov-hm-expanded'));
+    }
   });
 })();
 
@@ -1751,7 +1801,8 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     if (tabName === 'interactive')  { loadInteractivePane();  return; }
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
     if (saveBtn && saveBtn.style.display !== 'none') return;
-    loadTabContent(tabName, modes[tabName] || 'paragraph');
+    const afterLoad = tabName === 'coverage' ? syncCoverageGlossToggle : undefined;
+    loadTabContent(tabName, modes[tabName] || 'paragraph', afterLoad);
   });
 });
 

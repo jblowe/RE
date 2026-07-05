@@ -125,6 +125,34 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 #sets-content.glosses-hidden .rfx-gloss,
 #research-sets-content.glosses-hidden .rfx-gloss { display: none; }
 
+/* ── Coverage annotated table: gloss column visibility toggle ───────────── */
+#coverage-content.glosses-hidden .cov-gloss { display: none; }
+
+/* ── Coverage annotated table: "hide more" toggle, shared by the Gloss and
+   Protoform columns (any cell marked .cov-hm-cell). Each cell tracks its own
+   expanded/collapsed state directly (.cov-hm-expanded) -- the Gloss column's
+   cells (.cov-gl-hm) are additionally bulk-set by the Show/Hide glosses
+   button; the Protoform column's cells (.cov-pf-hm) are per-row only. One
+   delegated JS handler (in _scripts.html) drives every "+"/"−" button and
+   keeps its label (count when collapsed, none when expanded) in sync. */
+.cov-hm-cell .cov-hm-full  { display: none; }
+.cov-hm-cell .cov-hm-short { display: inline; }
+.cov-hm-cell.cov-hm-expanded .cov-hm-full  { display: inline; }
+.cov-hm-cell.cov-hm-expanded .cov-hm-short { display: none; }
+
+/* ── Coverage annotated table: muted badge colors ───────────────────────── */
+.cov-badge-set     { background-color: #d4edda; color: #155724; font-weight: 500; }
+.cov-badge-isolate { background-color: #fff3cd; color: #856404; font-weight: 500; }
+.cov-badge-failure { background-color: #f8d7da; color: #721c24; font-weight: 500; }
+
+/* ── Coverage annotated table: unused-MEL / unused-gloss coloring ───────── */
+.cov-mel-unused { background-color: #ffe1c2; color: #8a4b00; font-weight: 600; padding: 1px 4px; border-radius: 2px; }
+.cov-gl-zero    { background-color: #ead7f7; color: #5b2a86; padding: 1px 3px; border-radius: 2px; }
+
+/* ── Coverage annotated table: shrink-to-fit column widths ──────────────── */
+.cov-annotated { width: auto; }
+.cov-annotated-wrap { }
+
 /* ── Theme: active tab ───────────────────────────────────────────────────── */
 .nav-tabs .nav-link { padding-top: calc(.5rem - 2px); border-top: 2px solid transparent; }
 .nav-tabs .nav-link.active { color: #EC5800; border-top-color: #EC5800; }

@@ -310,9 +310,14 @@
       </div>
     </div><!-- /tab-fuzzy -->
 
-    <!-- ══ COVERAGE TAB ══════════════════════════════════════════════════════ -->
+    <!-- ══ COVERAGE TAB ══════════════════════════════════════════════════════
+         The Show/Hide glosses button lives inline next to the "MEL Annotated
+         Coverage" heading (rendered by coverage2html.xsl), not in a toolbar
+         here -- glosses-hidden on this container is still the persisted
+         bulk-toggle state, restored onto freshly-loaded content by
+         syncCoverageGlossToggle() after each AJAX reload. -->
     <div class="tab-pane fade" id="tab-coverage" role="tabpanel">
-      <div class="content-area" id="coverage-content">
+      <div class="content-area glosses-hidden" id="coverage-content">
         <p class="text-muted">No coverage report — run with a MEL selected.</p>
       </div>
     </div><!-- /tab-coverage -->

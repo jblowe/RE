@@ -36,7 +36,7 @@
 					<li><a href="{$projectName}.lexiques.htm"    target="content">Lexiques</a></li>
 					<li><a href="{$projectName}.toc.htm"         target="content">Table des correspondances</a></li>
 					<li><a href="{$projectName}.params.htm"      target="content">Parametres</a></li>
-					<li><a href="{$projectName}.resultats.htm"   target="content">Résultats</a></li>
+					<li><a href="{$projectName}.resultats.htm"   target="content">RÃ©sultats</a></li>
 					<li><a href="{$projectName}.rejets.htm"      target="content">Rejets</a></li>
 					<li><a href="{$projectName}.isolats.htm"     target="content">Isolats</a></li>
 					<li><a href="{$projectName}.sets.htm"        target="content">Sets</a></li>
