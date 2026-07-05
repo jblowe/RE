@@ -18,6 +18,52 @@ Modules:
 
 ```pip3 install -r requirements.txt```
 
+`mel.py` uses NLTK for gloss normalization (stopword removal and
+phrasal-verb detection). `pip install` only gets the `nltk` package itself
+— its corpora are a separate download:
+
+```bash
+python3 -m nltk.downloader stopwords wordnet omw-1.4
+```
+
+This downloads to `~/nltk_data` for whoever runs it. Under `mod_wsgi` (see
+"Deploying under Apache/mod_wsgi" below), the daemon process may not
+resolve `$HOME` the way an interactive shell does even when it runs as the
+expected user, so the corpora can end up "installed" but unreachable.
+Safest: download to a fixed path and point `NLTK_DATA` at that same path
+explicitly, rather than relying on `$HOME`:
+
+```bash
+python3 -m nltk.downloader -d /path/to/nltk_data stopwords wordnet omw-1.4
+```
+```python
+os.environ.setdefault('NLTK_DATA', '/path/to/nltk_data')  # before nltk is imported
+```
+
+#### Deploying under Apache/mod_wsgi
+
+If `REwww` is served via `mod_wsgi` (`WSGIDaemonProcess ... user=someuser`),
+that process is spawned by Apache and isn't guaranteed a full login
+environment for `someuser`, even though it runs under that user's UID. Two
+consequences seen in practice:
+
+* Subprocesses the app shells out to (pipeline scripts, `xsltproc.py`, etc.)
+  may not find the venv's `python3` unless `PATH` is set explicitly.
+* NLTK's default `~/nltk_data` lookup can miss the corpora above for the
+  same reason.
+
+`REwww/app.wsgi` sets both explicitly near the top, before anything else is
+imported:
+
+```python
+os.environ['PATH'] = '/path/to/venv/bin:' + os.environ.get('PATH', '/usr/local/bin:/usr/bin:/bin')
+os.environ.setdefault('NLTK_DATA', '/path/to/nltk_data')
+```
+
+Adjust the paths for your deployment, then a full Apache restart (not just
+a WSGI reload) is the safest way to pick up changes to `app.wsgi` or
+installed packages.
+
 ### Usage
 
 #### Command line interface 
