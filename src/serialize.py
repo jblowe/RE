@@ -353,6 +353,14 @@ def serialize_stats(stats, settings, args, filename):
     # for s in settings.other:
     #     ET.SubElement(settings_element, s).set('value', settings.other[s])
 
+    # Present only on the coverage report's Statistics object (built by
+    # coverage.build_coverage_statistics): the full language list, in tree
+    # order, that the annotated <semantics> table below is keyed against.
+    if getattr(stats, 'languages', None):
+        langs_element = ET.SubElement(root, 'languages')
+        for language in stats.languages:
+            ET.SubElement(langs_element, 'lg').text = language
+
     lexicons = ET.SubElement(root, 'lexicons')
     totals = collections.Counter()
     for number, language in enumerate(sorted(stats.language_stats.keys())):
@@ -382,15 +390,57 @@ def serialize_stats(stats, settings, args, filename):
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
 
+    # mel_forms/pseudo_forms (present only on the coverage report's Statistics
+    # object) carry the annotated per-language, per-status breakdown -- which
+    # actual reflex landed under which MEL, and whether it ended up in a set,
+    # an isolate, or a failure. Built once, directly from the run's finished
+    # sets/isolates/failures (see coverage.build_annotated_coverage); nothing
+    # here re-derives that from the XML.
+    mel_forms = getattr(stats, 'mel_forms', None)
+    languages = getattr(stats, 'languages', None)
+    # The root-level reconstruction(s) (the Protoform itself) matched to each
+    # MEL -- see coverage.build_annotated_coverage. Colored the same way as
+    # mesolanguage badges (status: set|isolate).
+    mel_reconstructions = getattr(stats, 'mel_reconstructions', None)
+
     try:
         if len(stats.mel_usage.items()) > 0:
             semantics = ET.SubElement(root, 'semantics')
             for mel in stats.mel_usage.items():
-                entry = ET.SubElement(semantics, 'mel', attrib={'id': mel[0]})
+                mel_id = mel[0]
+                entry = ET.SubElement(semantics, 'mel', attrib={'id': mel_id})
                 for gl in mel[1]:
                     if gl == 'usage': continue
                     gl_element = ET.SubElement(entry, 'gl', attrib={'uses': str(mel[1][gl])})
                     gl_element.text = gl
+                if mel_reconstructions is not None:
+                    for (glyphs, status) in mel_reconstructions.get(mel_id, []):
+                        r_element = ET.SubElement(entry, 'reconstruction', attrib={'status': status})
+                        r_element.text = glyphs
+                if mel_forms is not None and languages:
+                    for language in languages:
+                        lg_element = ET.SubElement(entry, 'lg', attrib={'name': language})
+                        for (glyphs, status, gl) in mel_forms.get((mel_id, language), []):
+                            form_element = ET.SubElement(lg_element, 'form', attrib={'status': status})
+                            if gl:
+                                form_element.set('gl', gl)
+                            form_element.text = glyphs
+            if mel_forms is not None and languages:
+                pseudo_forms = getattr(stats, 'pseudo_forms', {}) or {}
+                for gloss_text in sorted(pseudo_forms.keys()):
+                    entry = ET.SubElement(semantics, 'mel', attrib={'id': '', 'pseudo': 'true'})
+                    gl_element = ET.SubElement(entry, 'gl', attrib={'pseudo': 'true'})
+                    gl_element.text = gloss_text
+                    lang_forms = collections.defaultdict(list)
+                    for (lang, glyphs, status, gl) in pseudo_forms[gloss_text]:
+                        lang_forms[lang].append((glyphs, status, gl))
+                    for language in languages:
+                        lg_element = ET.SubElement(entry, 'lg', attrib={'name': language})
+                        for (glyphs, status, gl) in lang_forms.get(language, []):
+                            form_element = ET.SubElement(lg_element, 'form', attrib={'status': status})
+                            if gl:
+                                form_element.set('gl', gl)
+                            form_element.text = glyphs
     except:
         pass
 

@@ -42,7 +42,10 @@ if command_args.command == 'coverage':
                                             mel_token=args.mel_name,
                                             fuzzy_token=None,
                                             languages=None)
-    coverage_statistics = coverage.check_mel_coverage(settings)
+    attested_lexicons = read.read_attested_lexicons(settings)
+    mels, associated_mels_table = RE.semantic_setup(settings, attested_lexicons)
+    coverage_statistics = coverage.check_mel_coverage(
+        mels, attested_lexicons, associated_mels_table)
     runs_dir = os.path.join(args.project_path, 'runs')
     os.makedirs(runs_dir, exist_ok=True)
     coverage_xml_file = os.path.join(runs_dir, f'{args.project}.{args.mel_name}.coverage.statistics.xml')
@@ -128,7 +131,7 @@ elif command_args.command == 'upstream':
 
     mel_status = 'strict MELs' if args.only_with_mel else 'MELs not enforced'
     print(mel_status)
-    B = RE.batch_all_upstream(settings, only_with_mel=args.only_with_mel)
+    B = RE.upstream(settings, only_with_mel=args.only_with_mel)
     runs_dir = os.path.join(args.project_path, 'runs')
     os.makedirs(runs_dir, exist_ok=True)
     keys_file = os.path.join(runs_dir, f'{args.project}.{args.run}.keys.csv')
@@ -160,7 +163,9 @@ elif command_args.command == 'upstream':
     serialize.serialize_stats(B.statistics, settings, args, stats_xml_file)
 
     if getattr(settings, 'mel_filename', None):
-        coverage_statistics = coverage.check_mel_coverage(settings)
+        coverage_statistics = coverage.build_coverage_statistics(
+            B.statistics.mels, B.statistics.attested_lexicons,
+            B.statistics.associated_mels_table, all_languages, B)
         coverage_xml_file = os.path.join(runs_dir, f'{args.project}.{args.run}.coverage.xml')
         serialize.serialize_stats(coverage_statistics, settings, args, coverage_xml_file)
         print(f'wrote coverage report to {coverage_xml_file}')

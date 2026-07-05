@@ -7,9 +7,14 @@ import pickle
 import json
 from utils import *  # includes parse_spec_value, spec_display
 
-def read_correspondence_file(filename, name, mel_filename, fuzzy_filename,
+def read_correspondence_file(filename, name, mels, fuzzy_filename,
                              context_match_type=None):
-    "Return syllable canon and table of correspondences"
+    """Return syllable canon and table of correspondences.
+
+    `mels` is the already-parsed MEL list (or None) for the whole run -- the
+    MEL file is read once, up front, and the same list is shared by every
+    proto-language node in the tree rather than being re-read/re-parsed here.
+    """
     tree = ET.parse(filename)
     syllable_canon = read_syllable_canon(tree.find('parameters'),
                                         context_match_type_override=context_match_type)
@@ -17,8 +22,7 @@ def read_correspondence_file(filename, name, mel_filename, fuzzy_filename,
     return RE.Parameters(read_correspondences(tree, norm),
                          syllable_canon,
                          name,
-                         read_mel_file(mel_filename)
-                         if mel_filename else None,
+                         mels,
                          read_fuzzy_file(fuzzy_filename, norm)
                          if fuzzy_filename else None)
 

@@ -7,6 +7,7 @@ import sys
 import serialize
 import collections
 import mel
+import utils
 import unicodedata
 from functools import lru_cache
 from copy import copy, deepcopy
@@ -1260,7 +1261,12 @@ def project_back(lexicons, parameters, statistics):
     return reconstructions, statistics
 
 # we create cognate sets by comparing meaning.
-def create_sets(projections, statistics, mels, only_with_mel, root=True):
+#
+# associated_mels_table is a single gloss->MEL lookup table (from
+# mel.compile_associated_mels), built once for the whole run over the
+# complete universe of attested glosses and shared by every level of the
+# reconstruction tree -- create_sets never rebuilds it itself.
+def create_sets(projections, statistics, associated_mels_table, only_with_mel, root=True):
     cognate_sets = set()
 
     attested_forms_memo = {}
@@ -1275,33 +1281,9 @@ def create_sets(projections, statistics, mels, only_with_mel, root=True):
             attested_forms_memo[support] = freeze
             return freeze
 
-    def all_glosses(projections):
-        all_glosses = set()
-        for support in projections.values():
-            for supporting_form in support:
-                # Mirror the isinstance check used in the MEL-matching loop below so
-                # that FuzzyForm / AlternateForm / Stage0Form glosses are also indexed.
-                # Without this, fuzzied forms whose glosses require normalization to
-                # match a MEL (e.g. "venir (hon.)" → MEL "venir") are silently missed
-                # because FuzzyForm is not a subclass of ModernForm.
-                if isinstance(supporting_form, (ModernForm, Stage0Form, AlternateForm)):
-                    if supporting_form.gloss:
-                        all_glosses.add(supporting_form.gloss)
-                else:
-                    # ProtoForm from an intermediate level: collect glosses from
-                    # its attested support so the MEL association table covers the
-                    # full set of attested languages, not just the direct daughters.
-                    for attested_form in supporting_form.attested_support:
-                        if hasattr(attested_form, 'gloss') and attested_form.gloss:
-                            all_glosses.add(attested_form.gloss)
-        return all_glosses
-
-    associated_mels_table = mel.compile_associated_mels(mels,
-                                                        all_glosses(projections))
-
     for reconstruction, support in projections.items():
         distinct_mels = collections.defaultdict(list)
-        if mels:
+        if associated_mels_table is not None:
             unmatched = []  # forms with no MEL match when only_with_mel is True
             for supporting_form in support:
                 # stage0 forms also have meaning
@@ -1437,7 +1419,7 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
     statistics.add_note(f'{len(uniques)} cognate sets with distinct reconstructions and distinct supporting forms')
     return uniques.values(), statistics
 
-def batch_upstream(lexicons, params, only_with_mel, root):
+def batch_upstream(lexicons, params, only_with_mel, root, associated_mels_table):
     projections, statistics = project_back(lexicons, params, Statistics())
 
     # Collect every original ModernForm that has at least one parse.
@@ -1448,7 +1430,7 @@ def batch_upstream(lexicons, params, only_with_mel, root):
             forms_in_projections |= sf.attested_support
 
     cognate_sets, statistics = create_sets(
-        projections, statistics, params.mels, only_with_mel, root)
+        projections, statistics, associated_mels_table, only_with_mel, root)
     cognate_sets, statistics = filter_subsets(cognate_sets, statistics, root)
     final_sets, statistics = pick_derivation(cognate_sets, statistics, only_with_mel)
 
@@ -1470,7 +1452,8 @@ def batch_upstream(lexicons, params, only_with_mel, root):
 
     return final_sets, statistics
 
-def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
+def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel,
+                  associated_mels_table):
     # batch upstream repeatedly up the action graph tree from leaves,
     # which are necessarily attested. we filter forms with singleton
     # supporting sets for the root language
@@ -1490,7 +1473,8 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
         forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel if root else False,
-                                           root)
+                                           root,
+                                           associated_mels_table)
         # Accumulate stats from every level so the top-level Statistics object
         # reflects the full tree, not just the root level.
         accumulated_language_stats.update(statistics.language_stats)
@@ -1511,32 +1495,49 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel):
     return result
 
 # Return a mapping from protolanguage to its associated parameter object.
-def parameter_tree_from_settings(settings):
+# `mels` is the run's already-parsed MEL list (or None), read once by the
+# caller and shared by every proto-language node -- this no longer re-reads
+# the MEL file per node.
+def parameter_tree_from_settings(settings, mels):
     return {language:
             read.read_correspondence_file(os.path.join(settings.directory_path,
                                                        correspondence_filename),
                                           language,
-                                          settings.mel_filename,
+                                          mels,
                                           settings.fuzzy_filename,
                                           settings.context_match_type)
             for (language, correspondence_filename)
             in settings.proto_languages.items()}
 
-def batch_all_upstream(settings, only_with_mel=False):
-    attested_lexicons = read.read_attested_lexicons(settings)
-    return upstream_tree(settings.upstream_target,
-                         settings.upstream,
-                         parameter_tree_from_settings(settings),
-                         attested_lexicons,
-                         only_with_mel)
+# Read the MEL file once and compile the single gloss->MEL association table
+# for the whole run, over the complete universe of attested glosses. Every
+# tree level, plus later coverage reporting, reuses this same table instead
+# of rebuilding it.
+def semantic_setup(settings, attested_lexicons):
+    mels = (read.read_mel_file(settings.mel_filename)
+            if settings.mel_filename else None)
+    associated_mels_table = mel.compile_associated_mels(
+        mels, utils.all_glosses(attested_lexicons))
+    return mels, associated_mels_table
 
-def interactive_upstream(settings, attested_lexicons, only_with_mel=False):
-    # attested_lexicons are passed in for this type of upstream...
-    return upstream_tree(settings.upstream_target,
-                         settings.upstream,
-                         parameter_tree_from_settings(settings),
-                         attested_lexicons,
-                         only_with_mel)
+def upstream(settings, attested_lexicons=None, only_with_mel=False):
+    # attested_lexicons may be passed in already read (e.g. REwww's
+    # interactive runs); otherwise read them from settings.
+    if attested_lexicons is None:
+        attested_lexicons = read.read_attested_lexicons(settings)
+    mels, associated_mels_table = semantic_setup(settings, attested_lexicons)
+    result = upstream_tree(settings.upstream_target,
+                           settings.upstream,
+                           parameter_tree_from_settings(settings, mels),
+                           attested_lexicons,
+                           only_with_mel,
+                           associated_mels_table)
+    # Stash the shared, already-computed objects on the statistics so the
+    # coverage report can reuse them without re-reading or re-normalizing.
+    result.statistics.mels = mels
+    result.statistics.associated_mels_table = associated_mels_table
+    result.statistics.attested_lexicons = attested_lexicons
+    return result
 
 def print_form(form, level):
     if isinstance(form, (ModernForm, AlternateForm)):

@@ -3,7 +3,8 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, GObject, GLib, Pango
 import RE
 import read
-from utils import parse_spec_value, spec_display, spec_for_storage
+import mel
+from utils import parse_spec_value, spec_display, spec_for_storage, all_glosses
 import threading
 import sys
 import serialize
@@ -1678,12 +1679,18 @@ class REWindow(Gtk.Window):
         out = sys.stdout
         sys.stdout = self.log_widget.get_buffer()
         try:
+            lexicons = self.lexicons_widget.lexicons()
+            # Rebuilt each run (not cached) since glosses may have been
+            # edited in the lexicon widgets since the last run.
+            associated_mels_table = mel.compile_associated_mels(
+                self.mels, all_glosses(lexicons))
             proto_lexicon = RE.upstream_tree(
                 self.settings.upstream_target,
                 self.settings.upstream,
                 self.parameters_widget.parameter_tree(),
-                self.lexicons_widget.lexicons(),
+                lexicons,
                 True,   # only_with_mel — strict mode is the default for REgtk
+                associated_mels_table,
             )
             GLib.idle_add(update_model)
         finally:
@@ -1789,8 +1796,12 @@ class REWindow(Gtk.Window):
     def open_from_settings(self, settings):
         self.on_disk_lexicons = read.read_attested_lexicons(settings)
         self.settings = settings
+        # Read once and share across every proto-language node, rather than
+        # re-reading the same MEL file per node.
+        self.mels = (read.read_mel_file(settings.mel_filename)
+                    if settings.mel_filename else None)
         self.load(self.on_disk_lexicons,
-                  RE.parameter_tree_from_settings(settings))
+                  RE.parameter_tree_from_settings(settings, self.mels))
 
     def open_project(self, widget=None):
         """Show the ProjectManagerDialog and load the selected project."""

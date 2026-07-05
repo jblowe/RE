@@ -6,7 +6,7 @@ class Mel:
     def __init__(self, glosses, id):
         self.glosses = glosses
         self.id = id
-        
+
     def __repr__(self):
         return f'<Mel({self.id}, {self.glosses})>'
 
@@ -22,51 +22,6 @@ class DefaultMel(Mel):
 
 default_mel = DefaultMel([], '')
 
-# A gloss G is deemed to map to a mel if any of the mel glosses are
-# present in the set of `normalized' glosses for G.
-def compile_associated_mels(mels, glosses):
-    '''Compile a mapping of glosses to mels.'''
-    elapsed_time = time.time()
-    if mels is None:
-        return None
-    association = collections.defaultdict(set)
-    # Precompute normalized glosses for each gloss.
-    gloss_to_norm = {gloss: normalize_gloss(gloss) for gloss in glosses}
-
-    # Invert: lowercased normalized gloss -> set of original glosses
-    norm_to_glosses = collections.defaultdict(set)
-    for gloss, normalized_glosses in gloss_to_norm.items():
-        for normalized_gloss in normalized_glosses:
-            norm_to_glosses[normalized_gloss.lower()].add(gloss)
-
-    # For each mel, associate directly and via normalized glosses
-    for mel in mels:
-        mel_glosses = mel.glosses
-        for gloss in mel_glosses:
-            association[gloss].add(mel)
-        for mel_gloss in mel_glosses:
-            if mel_gloss.lower() in norm_to_glosses:
-                for gloss in norm_to_glosses[mel_gloss.lower()]:
-                    association[gloss].add(mel)
-    print('{:.2f} seconds to compile {} associated MELs.'.format(time.time() - elapsed_time, len(association)))
-    return association
-
-default_mel_singleton = [default_mel]
-
-def associated_mels(association, gloss, only_with_mel):
-    '''Lookup gloss in the table of MEL associations.'''
-    default = [] if only_with_mel else default_mel_singleton
-    return association.get(gloss, default)
-
-def search_mels(gloss, mel_glosses):
-    glosses = normalize_gloss(gloss)
-    # Case-insensitive: build lowercase → original map so returned keys
-    # always match the actual MEL gloss strings (for mel_stats accounting).
-    mel_lower = {g.lower(): g for g in mel_glosses}
-    if gloss.lower() in mel_lower:
-        return [mel_lower[gloss.lower()]]
-    return [mel_lower[g.lower()] for g in glosses if g.lower() in mel_lower]
-
 # Matches parenthetical or bracketed asides — e.g. "(of a person)", "[archaic]".
 _PAREN_RE = re.compile(r'\([^)]*\)|\[[^\]]*\]|<[^>]*>')
 
@@ -75,14 +30,13 @@ _PAREN_RE = re.compile(r'\([^)]*\)|\[[^\]]*\]|<[^>]*>')
 _PARTICLES = ('to', 'be')
 
 def _strip_particles(phrase):
-    """Iteratively remove leading grammar particles from a phrase."""
     for particle in _PARTICLES:
         words = phrase.split()
         if len(words) > 1 and words[0] == particle:
             phrase = ' '.join(words[1:])
     return phrase.strip()
 
-# Split a gloss string into a list of normalised candidate glosses.
+# Split a gloss string into a tuple of normalised candidate glosses.
 #
 # Pipeline:
 #   1. Remove parenthetical / bracketed asides and their delimiters.
@@ -105,10 +59,12 @@ def _strip_particles(phrase):
 #      any MEL gloss set.
 #   7. Drop empty strings and deduplicate (preserving order: phrases first,
 #      individual words after).
+#
+# Returns a tuple of normalized candidate strings.
 def normalize_gloss(gloss):
     # 1. Strip parentheticals / brackets.
     gloss = _PAREN_RE.sub('', gloss)
-    # 2. Strip proto-form marker.
+    # 2. Strip lexware keyterm marker
     gloss = gloss.replace('*', '')
 
     # 3. Lexware | handling — produce variants before splitting on /,;:.
@@ -137,4 +93,66 @@ def normalize_gloss(gloss):
                 seen.add(word)
                 phrases.append(word)
 
-    return phrases
+    return tuple(phrases)
+
+
+def _candidates_lower(gloss):
+    """All lowercased comparison candidates for a gloss: the raw form plus all
+    normalized variants."""
+    return frozenset(c.lower() for c in (gloss,) + normalize_gloss(gloss))
+
+
+# A gloss G is deemed to map to a mel if any of the mel glosses are
+# present in the set of `normalized' glosses for G.
+#
+# This is the single gloss<->MEL matching pass for a run: call it once, over
+# the complete universe of attested glosses (every gloss in every attested
+# lexicon, known as soon as the lexicons are read), and reuse the resulting
+# table everywhere a gloss needs to be resolved to a MEL -- at every level of
+# the reconstruction tree, for coverage statistics, and for the annotated
+# coverage report. Because each unique gloss is only ever normalized here,
+# there is no need to cache normalize_gloss itself.
+def compile_associated_mels(mels, glosses):
+    '''Compile a mapping of glosses to mels.
+
+    Each entry is itself a mapping mel -> set of that mel's own synonym
+    glosses which caused the association, so callers that need to know
+    *which* synonym matched (e.g. per-synonym usage counts for the coverage
+    report) can recover it without a second matching pass -- see
+    matched_synonyms() below.'''
+    elapsed_time = time.time()
+    if mels is None:
+        return None
+    association = collections.defaultdict(lambda: collections.defaultdict(set))
+
+    # Invert: lowercased candidate → set of original glosses
+    norm_to_glosses = collections.defaultdict(set)
+    for gloss in glosses:
+        for lc in _candidates_lower(gloss):
+            norm_to_glosses[lc].add(gloss)
+
+    # For each mel, associate directly and via normalized glosses.
+    # MEL glosses are normalized with the same pipeline as reflex glosses so
+    # that e.g. a MEL gloss "badigeonner (avec terre)" matches a reflex "badigeonner".
+    for mel in mels:
+        for mel_gloss in mel.glosses:
+            association[mel_gloss][mel].add(mel_gloss)
+            for lc in _candidates_lower(mel_gloss):
+                for gloss in norm_to_glosses.get(lc, ()):
+                    association[gloss][mel].add(mel_gloss)
+
+    print('{:.2f} seconds to compile {} associated MELs.'.format(time.time() - elapsed_time, len(association)))
+    return association
+
+def associated_mels(association, gloss, only_with_mel):
+    '''Lookup gloss in the table of MEL associations. Returns a list of Mels.'''
+    entry = association.get(gloss) if association is not None else None
+    if entry:
+        return list(entry.keys())
+    return [] if only_with_mel else [default_mel]
+
+def matched_synonyms(association, gloss, mel):
+    '''Return the set of *mel*'s own synonym glosses that matched *gloss*.'''
+    if association is None:
+        return frozenset()
+    return association.get(gloss, {}).get(mel, frozenset())
