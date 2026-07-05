@@ -1283,7 +1283,20 @@ def create_sets(projections, statistics, associated_mels_table, only_with_mel, r
 
     for reconstruction, support in projections.items():
         distinct_mels = collections.defaultdict(list)
-        if associated_mels_table is not None:
+        # MEL-based grouping only happens at the root. Intermediate levels
+        # must pass every reconstruction upward as a single, undivided
+        # ProtoForm -- splitting them by gloss/MEL here would fragment one
+        # phonological reconstruction into several ProtoForms sharing the
+        # same glyphs but smaller, disjoint support sets. If that shape then
+        # fails to compose further up the tree, each fragment counts as its
+        # own failure even though the undivided form (full combined support)
+        # might have succeeded. (A ProtoForm's own .mel is never read by any
+        # downstream consumer except at the root -- coverage.py's walk_set
+        # attributes intermediate nodes using the *root* set's mel, and the
+        # next level's create_sets re-derives MEL matches from
+        # attested_support, not from a child ProtoForm's stored .mel -- so
+        # this is safe.)
+        if root and associated_mels_table is not None:
             unmatched = []  # forms with no MEL match when only_with_mel is True
             for supporting_form in support:
                 # stage0 forms also have meaning
@@ -1465,11 +1478,14 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel,
             return attested_lexicons[target]
         daughter_lexicons = [rec(daughter, False)
                              for daughter in tree[target]]
-        # MEL filtering is only meaningful at the root: intermediate proto-
-        # languages must pass all valid reconstructions upward so the root
-        # has the full set of candidates to group against the MEL.
-        # Applying only_with_mel at intermediate levels prematurely discards
-        # reconstructions, producing incomplete cognate sets at the root.
+        # MEL involvement -- both strict filtering (only_with_mel) and the
+        # semantic splitting create_sets does when a MEL is loaded at all --
+        # is root-only: intermediate proto-languages must pass all valid
+        # reconstructions upward as single, undivided ProtoForms so the root
+        # has the full set of candidates to group against the MEL. Doing
+        # either at intermediate levels prematurely fragments or discards
+        # reconstructions, producing incomplete or artificially-split
+        # cognate sets at the root (see create_sets).
         forms, statistics = batch_upstream(daughter_lexicons,
                                            param_tree[target],
                                            only_with_mel if root else False,
