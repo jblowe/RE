@@ -1167,6 +1167,24 @@ function syncCoverageGlossToggle(container) {
   });
 })();
 
+(function () {
+  const container = document.getElementById('mel-view-content');
+  if (!container) return;
+  container.addEventListener('click', function (e) {
+    const bulkBtn = e.target.closest('#btn-toggle-coverage-glosses');
+    if (bulkBtn) {
+      container.classList.toggle('glosses-hidden');
+      syncCoverageGlossToggle(container);
+      return;
+    }
+    const toggleBtn = e.target.closest('.cov-hm-toggle');
+    if (toggleBtn) {
+      const cell = toggleBtn.closest('.cov-hm-cell');
+      if (cell) setCellExpanded(cell, !cell.classList.contains('cov-hm-expanded'));
+    }
+  });
+})();
+
 /* ══════════════════════════════════════════════════════════════════════════
    Parameters Freq  — toggle frequency-annotated view of the ToC
    idPrefix: 'parameters' (original tab) or 'research-parameters' (Research)
@@ -1801,7 +1819,7 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     if (tabName === 'interactive')  { loadInteractivePane();  return; }
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
     if (saveBtn && saveBtn.style.display !== 'none') return;
-    const afterLoad = tabName === 'coverage' ? syncCoverageGlossToggle : undefined;
+    const afterLoad = (tabName === 'coverage' || tabName === 'mel') ? syncCoverageGlossToggle : undefined;
     loadTabContent(tabName, modes[tabName] || 'paragraph', afterLoad);
   });
 });

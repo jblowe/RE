@@ -3,6 +3,7 @@ import time
 import collections
 import lxml.etree as ET
 import RE
+import mel as mel_mod
 import utils
 from utils import spec_display, spec_for_storage
 import inspect
@@ -326,7 +327,7 @@ def serialize_sets(reconstruction, languages, filename, only_with_mel):
 
 
 def serialize_stats(stats, settings, args, filename):
-    root = ET.Element('stats', attrib={'project': 'foo'})
+    root = ET.Element('mel_analysis', attrib={'project': 'foo'})
     ET.SubElement(root, 'createdat').text = run_date
 
     settings_element = ET.SubElement(root, 'settings')
@@ -571,6 +572,75 @@ def serialize_evaluation(stats, filename, languages):
             element.set('type', str(v[1]))
         else:
             ET.SubElement(entry, k).set('value', str(v))
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))
+
+
+def serialize_mel_lexicon_annotated(mels, attested_lexicons, association, all_languages, mel_path, filename):
+    """Write a MEL file annotated with matching forms from the raw lexicons.
+
+    Each MEL row lists, per language, every lexicon entry whose gloss matches
+    that MEL via the association table.  No set/isolate/failure status -- these
+    are raw lexicon entries, not cognate-set members.
+
+    attested_lexicons: {language: Lexicon} dict (same format coverage.py uses).
+    """
+    mel_basename = os.path.basename(mel_path) if mel_path else ''
+    root = ET.Element('mel_analysis', attrib={'basedon': mel_basename})
+    ET.SubElement(root, 'createdat').text = run_date
+
+    langs_el = ET.SubElement(root, 'languages')
+    for lg in all_languages:
+        ET.SubElement(langs_el, 'lg').text = lg
+
+    XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
+
+    # mel_id -> {language: [(glyphs, gl_text)]}
+    mel_lex_forms = collections.defaultdict(lambda: collections.defaultdict(list))
+    seen_keys = set()
+    # (mel_id, mel_gloss) -> count of lexicon forms matched via that synonym
+    synonym_usage: dict[tuple, int] = {}
+
+    for language in all_languages:
+        lex = attested_lexicons.get(language)
+        if not lex:
+            continue
+        for form in lex.forms:
+            gl = form.gloss or ''
+            for mel_obj in (association.get(gl) or {}):
+                key = (mel_obj.id, language, form.glyphs)
+                if key not in seen_keys:
+                    seen_keys.add(key)
+                    mel_lex_forms[mel_obj.id][language].append((form.glyphs, gl))
+                for syn in mel_mod.matched_synonyms(association, gl, mel_obj):
+                    k = (mel_obj.id, syn)
+                    synonym_usage[k] = synonym_usage.get(k, 0) + 1
+
+    semantics = ET.SubElement(root, 'semantics')
+    for mel_obj in mels:
+        mid = mel_obj.id
+        if not mid:
+            continue
+        lang_forms = mel_lex_forms.get(mid, {})
+        has_forms = any(lang_forms.get(lg) for lg in all_languages)
+        entry = ET.SubElement(semantics, 'mel', attrib={'id': mid})
+        if not has_forms:
+            entry.set('unused', 'true')
+        for gl_text in mel_obj.glosses:
+            uses = synonym_usage.get((mid, gl_text), 0)
+            gl_el = ET.SubElement(entry, 'gl', attrib={'uses': str(uses)})
+            gl_el.text = gl_text
+            lang = mel_obj.gloss_langs.get(gl_text)
+            if lang:
+                gl_el.set(XML_LANG, lang)
+        for language in all_languages:
+            lg_el = ET.SubElement(entry, 'lg', attrib={'name': language})
+            for (glyphs, gl_text) in lang_forms.get(language, []):
+                form_el = ET.SubElement(lg_el, 'form')
+                if gl_text:
+                    form_el.set('gl', gl_text)
+                form_el.text = glyphs
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(ET.tostring(root, pretty_print=True, encoding='unicode'))

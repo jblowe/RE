@@ -6,33 +6,52 @@
 
 <xsl:template match="/">
   <div>
-      <xsl:variable name="mel_fn" select="stats/settings/parm[@key='mel_filename']/@value"/>
-      <xsl:if test="$mel_fn != ''">
-        <!-- Extract basename: take text after the last '/' or '\' -->
+    <!-- MEL filename: settings/parm (coverage docs) or @basedon (mel_lexicon docs) -->
+    <xsl:variable name="mel_fn_settings"
+                  select="mel_analysis/settings/parm[@key='mel_filename']/@value"/>
+    <xsl:variable name="mel_fn_basedon" select="mel_analysis/@basedon"/>
+    <xsl:choose>
+      <xsl:when test="$mel_fn_settings != ''">
         <xsl:variable name="mel_base">
           <xsl:call-template name="basename">
-            <xsl:with-param name="path" select="$mel_fn"/>
+            <xsl:with-param name="path" select="$mel_fn_settings"/>
           </xsl:call-template>
         </xsl:variable>
         <p style="font-size:0.85rem; font-weight:600; margin-bottom:.2rem;">
           <xsl:value-of select="$mel_base"/>
         </p>
-      </xsl:if>
-      <p style="font-style:italic; font-size:0.8rem; margin-bottom:.5rem;">
-        created at: <xsl:value-of select=".//createdat"/>
-      </p>
-      <xsl:if test="stats/unmatched_by_language">
-        <div style="float:right; width:220px; font-size:0.85rem;">
-          <a href="#unmatched-by-lg">
-            <xsl:value-of select="count(stats/unmatched_by_language/lg/gl)"/>
-            unmatched glosses by language
-          </a>
+      </xsl:when>
+      <xsl:when test="$mel_fn_basedon != ''">
+        <p style="font-size:0.85rem; font-weight:600; margin-bottom:.2rem;">
+          <xsl:value-of select="$mel_fn_basedon"/>
+        </p>
+      </xsl:when>
+    </xsl:choose>
+    <p style="font-style:italic; font-size:0.8rem; margin-bottom:.5rem;">
+      report created at: <xsl:value-of select=".//createdat"/>
+    </p>
+    <!-- Row 1: Summary + Coverage by language side by side (coverage docs only) -->
+    <xsl:if test="mel_analysis/totals or mel_analysis/lexicons">
+      <div class="row g-3 mb-3">
+        <div class="col-md-auto">
+          <xsl:apply-templates select="mel_analysis/totals"/>
         </div>
-      </xsl:if>
-      <xsl:apply-templates select="stats/lexicons"/>
-      <xsl:apply-templates select="stats/totals"/>
-      <xsl:apply-templates select="stats/semantics"/>
-      <xsl:apply-templates select="stats/unmatched_by_language"/>
+        <div class="col">
+          <xsl:apply-templates select="mel_analysis/lexicons"/>
+          <xsl:if test="mel_analysis/unmatched_by_language">
+            <p style="font-size:0.85rem; margin-top:.25rem;">
+              <a href="#unmatched-by-lg">
+                <xsl:value-of select="count(mel_analysis/unmatched_by_language/lg/gl)"/>
+                <xsl:text> unmatched glosses by language &#x2193;</xsl:text>
+              </a>
+            </p>
+          </xsl:if>
+        </div>
+      </div>
+    </xsl:if>
+    <!-- Row 2: annotated MEL table + unmatched glosses (full width) -->
+    <xsl:apply-templates select="mel_analysis/semantics"/>
+    <xsl:apply-templates select="mel_analysis/unmatched_by_language"/>
   </div>
 </xsl:template>
 
@@ -68,7 +87,6 @@
     <thead>
       <tr>
         <th>language</th>
-        <!-- derive column headers dynamically from first lexicon's children -->
         <xsl:for-each select="lexicon[1]/*">
           <th><xsl:value-of select="name()"/></th>
         </xsl:for-each>
@@ -105,7 +123,7 @@
   </table>
 </xsl:template>
 
-<!-- ── MEL usage (semantics section) ────────────────────────────────────── -->
+<!-- ── MEL usage (non-annotated semantics: old coverage docs without languages) -->
 <xsl:template match="semantics">
   <h5>MEL usage
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
@@ -137,7 +155,6 @@
                   <xsl:value-of select="."/>
                 </xsl:otherwise>
               </xsl:choose>
-              <!-- xml:lang / uses count, in the same order mel2html.xsl uses. -->
               <xsl:if test="@xml:lang">
                 <sub><xsl:value-of select="@xml:lang"/></sub>
               </xsl:if>
@@ -153,25 +170,22 @@
   </table>
 </xsl:template>
 
-<!-- ── Shared: one gloss, rendered with its usage count / unused coloring ── -->
+<!-- ── Shared: one gloss item with uses count and optional xml:lang sub ─── -->
 <xsl:template match="gl" mode="gl-item">
   <xsl:choose>
     <xsl:when test="@pseudo='true'"><em><xsl:value-of select="."/></em></xsl:when>
     <xsl:when test="@uses='0'"><span class="cov-gl-zero"><xsl:value-of select="."/></span></xsl:when>
-    <xsl:otherwise>
-      <xsl:value-of select="."/>
-    </xsl:otherwise>
+    <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
   </xsl:choose>
-  <!-- xml:lang / uses count, in the same order mel2html.xsl uses. -->
   <xsl:if test="@xml:lang">
     <sub><xsl:value-of select="@xml:lang"/></sub>
   </xsl:if>
-  <xsl:if test="@uses != '0'">
+  <xsl:if test="@uses and @uses != '0'">
     <sub class="cov-uses">&#160;<xsl:value-of select="@uses"/></sub>
   </xsl:if>
 </xsl:template>
 
-<!-- ── Shared: one reconstruction badge, colored like a mesolanguage form ── -->
+<!-- ── Shared: one reconstruction badge ─────────────────────────────────── -->
 <xsl:template name="reconstruction-badge">
   <span>
     <xsl:attribute name="class">
@@ -186,18 +200,27 @@
   </span>
 </xsl:template>
 
-<!-- ── Annotated MEL coverage (enriched XML: ../languages present) ──────── -->
+<!-- ── Annotated semantics (coverage docs and mel_lexicon docs) ──────────── -->
 <xsl:template match="semantics[../languages]">
-  <h5>MEL Annotated Coverage
-    <button type="button" class="btn btn-sm btn-outline-secondary ms-2" id="btn-toggle-coverage-glosses">Show glosses</button>
+  <!-- True when any MEL has reconstructions (coverage docs); absent in mel_lexicon docs -->
+  <xsl:variable name="has_reconstructions" select="count(mel/reconstruction) &gt; 0"/>
+  <h5>MELs and the forms that match them
+    <button type="button" class="btn btn-sm btn-outline-secondary ms-2"
+            id="btn-toggle-coverage-glosses">Show glosses</button>
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
       &#160;
-      <span class="badge cov-badge-set me-1">set</span>
-      <span class="badge cov-badge-isolate me-1">isolate</span>
-      <span class="badge cov-badge-failure me-1">failure</span>
-      &#160;
-      <span class="cov-mel-unused" style="padding:1px 6px; border-radius:2px;">unused MEL</span>
-      <span class="cov-gl-zero" style="padding:1px 6px; border-radius:2px;">unused gloss</span>
+      <xsl:choose>
+        <xsl:when test="$has_reconstructions">
+          <span class="badge cov-badge-set me-1">set</span>
+          <span class="badge cov-badge-isolate me-1">isolate</span>
+          <span class="badge cov-badge-failure me-1">failure</span>
+        </xsl:when>
+        <xsl:otherwise>
+          <span class="badge cov-badge-lex me-1">lexicon form</span>
+        </xsl:otherwise>
+      </xsl:choose>
+      <span class="badge cov-mel-unused me-1">unused MEL</span>
+      <span class="badge cov-gl-zero me-1">unused gloss</span>
       &#160; usage count in subscript
     </small>
   </h5>
@@ -207,7 +230,9 @@
       <tr>
         <th style="white-space:nowrap">MEL</th>
         <th>Gloss</th>
-        <th>Protoform</th>
+        <xsl:if test="$has_reconstructions">
+          <th>Protoform</th>
+        </xsl:if>
         <xsl:for-each select="../languages/lg">
           <th style="white-space:nowrap"><xsl:value-of select="."/></th>
         </xsl:for-each>
@@ -223,19 +248,15 @@
           <td style="vertical-align:top; white-space:nowrap; font-size:0.8em">
             <xsl:choose>
               <xsl:when test="@pseudo='true'"><span class="text-muted">—</span></xsl:when>
-              <!-- Unused = no reflex/mesolanguage form landed under this MEL in
-                   any set, isolate, or failure (lg/form / reconstruction, from
-                   the run's actual sets output), not whether its vocabulary
-                   happened to match an attested gloss (that's @uses, a coarser,
-                   separate check from check_mel_coverage). -->
-              <xsl:when test="count(lg/form) = 0 and count(reconstruction) = 0">
+              <xsl:when test="@unused='true'">
+                <span class="cov-mel-unused"><xsl:value-of select="@id"/></span>
+              </xsl:when>
+              <xsl:when test="count(lg/form) = 0 and count(reconstruction) = 0 and not(@unused)">
                 <span class="cov-mel-unused"><xsl:value-of select="@id"/></span>
               </xsl:when>
               <xsl:otherwise><xsl:value-of select="@id"/></xsl:otherwise>
             </xsl:choose>
           </td>
-          <!-- Gloss column: bulk-controlled by the Show/Hide glosses button
-               above (class cov-gl-hm), independent of the Protoform column. -->
           <td style="vertical-align:top" class="cov-hm-cell cov-gl-hm">
             <span class="cov-hm-full">
               <xsl:for-each select="gl">
@@ -246,31 +267,31 @@
             <span class="cov-hm-short">
               <xsl:apply-templates select="gl[1]" mode="gl-item"/>
             </span>
-            <xsl:if test="count(gl) > 1">
+            <xsl:if test="count(gl) &gt; 1">
               <button type="button" class="btn btn-link btn-sm p-0 ms-1 cov-hm-toggle"
                       data-more-count="{count(gl) - 1}"
                       title="Show all glosses for this MEL">+<xsl:value-of select="count(gl) - 1"/></button>
             </xsl:if>
           </td>
-          <!-- Protoform column: per-row only, never touched by the bulk
-               Show/Hide glosses button (class cov-pf-hm, not cov-gl-hm). -->
-          <td style="vertical-align:top" class="cov-hm-cell cov-pf-hm">
-            <span class="cov-hm-full">
-              <xsl:for-each select="reconstruction">
-                <xsl:call-template name="reconstruction-badge"/>
-              </xsl:for-each>
-            </span>
-            <span class="cov-hm-short">
-              <xsl:for-each select="reconstruction[1]">
-                <xsl:call-template name="reconstruction-badge"/>
-              </xsl:for-each>
-            </span>
-            <xsl:if test="count(reconstruction) > 1">
-              <button type="button" class="btn btn-link btn-sm p-0 ms-1 cov-hm-toggle"
-                      data-more-count="{count(reconstruction) - 1}"
-                      title="Show all reconstructions for this MEL">+<xsl:value-of select="count(reconstruction) - 1"/></button>
-            </xsl:if>
-          </td>
+          <xsl:if test="$has_reconstructions">
+            <td style="vertical-align:top" class="cov-hm-cell cov-pf-hm">
+              <span class="cov-hm-full">
+                <xsl:for-each select="reconstruction">
+                  <xsl:call-template name="reconstruction-badge"/>
+                </xsl:for-each>
+              </span>
+              <span class="cov-hm-short">
+                <xsl:for-each select="reconstruction[1]">
+                  <xsl:call-template name="reconstruction-badge"/>
+                </xsl:for-each>
+              </span>
+              <xsl:if test="count(reconstruction) &gt; 1">
+                <button type="button" class="btn btn-link btn-sm p-0 ms-1 cov-hm-toggle"
+                        data-more-count="{count(reconstruction) - 1}"
+                        title="Show all reconstructions for this MEL">+<xsl:value-of select="count(reconstruction) - 1"/></button>
+              </xsl:if>
+            </td>
+          </xsl:if>
           <xsl:for-each select="../../languages/lg">
             <xsl:variable name="lgname" select="."/>
             <td style="vertical-align:top">
@@ -281,7 +302,8 @@
                     <xsl:choose>
                       <xsl:when test="@status='set'">cov-badge-set</xsl:when>
                       <xsl:when test="@status='isolate'">cov-badge-isolate</xsl:when>
-                      <xsl:otherwise>cov-badge-failure</xsl:otherwise>
+                      <xsl:when test="@status='failure'">cov-badge-failure</xsl:when>
+                      <xsl:otherwise>cov-badge-lex</xsl:otherwise>
                     </xsl:choose>
                   </xsl:attribute>
                   <xsl:value-of select="."/>

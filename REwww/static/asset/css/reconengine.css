@@ -126,7 +126,8 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 #research-sets-content.glosses-hidden .rfx-gloss { display: none; }
 
 /* ── Coverage annotated table: gloss column visibility toggle ───────────── */
-#coverage-content.glosses-hidden .cov-gloss { display: none; }
+#coverage-content.glosses-hidden .cov-gloss,
+#mel-view-content.glosses-hidden .cov-gloss { display: none; }
 
 /* ── Coverage annotated table: "hide more" toggle, shared by the Gloss and
    Protoform columns (any cell marked .cov-hm-cell). Each cell tracks its own
@@ -144,10 +145,11 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .cov-badge-set     { background-color: #d4edda; color: #155724; font-weight: 500; }
 .cov-badge-isolate { background-color: #fff3cd; color: #856404; font-weight: 500; }
 .cov-badge-failure { background-color: #f8d7da; color: #721c24; font-weight: 500; }
+.cov-badge-lex     { background-color: #e2e3e5; color: #41464b; font-weight: 500; }
 
 /* ── Coverage annotated table: unused-MEL / unused-gloss coloring ───────── */
-.cov-mel-unused { background-color: #ffe1c2; color: #8a4b00; font-weight: 600; padding: 1px 4px; border-radius: 2px; }
-.cov-gl-zero    { background-color: #ead7f7; color: #5b2a86; padding: 1px 3px; border-radius: 2px; }
+.cov-mel-unused { background-color: #ffe1c2; color: #8a4b00; font-weight: 600; }
+.cov-gl-zero    { background-color: #ead7f7; color: #5b2a86; }
 
 /* ── Coverage annotated table: shrink-to-fit column widths ──────────────── */
 .cov-annotated { width: auto; }

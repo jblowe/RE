@@ -17,11 +17,11 @@
             <xsl:apply-templates select=".//venn"/>
             <xsl:apply-templates select=".//sankey"/>
             <xsl:apply-templates select=".//totals" mode="summary"/>
-            <xsl:apply-templates select=".//stats"/>
+            <xsl:apply-templates select=".//mel_analysis"/>
             <xsl:apply-templates select=".//settings"/>
-            <xsl:apply-templates select="stats/sets_in_common"/>
-            <xsl:apply-templates select="stats/sets_only_in_lexicon1"/>
-            <xsl:apply-templates select="stats/sets_only_in_lexicon2"/>
+            <xsl:apply-templates select="mel_analysis/sets_in_common"/>
+            <xsl:apply-templates select="mel_analysis/sets_only_in_lexicon1"/>
+            <xsl:apply-templates select="mel_analysis/sets_only_in_lexicon2"/>
             <!-- xsl:apply-templates select="stats/matrix"/ -->
         </div>
     </xsl:template>
@@ -116,7 +116,7 @@
   <xsl:key name="elements" match="lexicons/lexicon/*" use="name()"/>
   <xsl:key name="subtotals" match="totals/*" use="name()"/>
 
-    <xsl:template match="stats">
+    <xsl:template match="mel_analysis">
         <xsl:apply-templates select="lexicons"/>
         <xsl:apply-templates select="correspondences"/>
     </xsl:template>

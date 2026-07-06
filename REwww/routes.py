@@ -892,6 +892,18 @@ def api_run():
                     runs_dir, f'{project}.{run_name}.coverage.xml')
                 serialize.serialize_stats(cov_stats, settings, args_ns, coverage_xml)
 
+            mel_lex_xml = None
+            if mel_path and os.path.isfile(mel_path):
+                mel_lex_xml = os.path.join(
+                    runs_dir, f'{project}.{run_name}.mel_lexicon.xml')
+                serialize.serialize_mel_lexicon_annotated(
+                        B.statistics.mels,
+                        B.statistics.attested_lexicons,
+                        B.statistics.associated_mels_table,
+                        all_languages,
+                        mel_path,
+                        mel_lex_xml)
+
             fuzzy_cov_xml = None
             if fuzzy_path and os.path.isfile(fuzzy_path):
                 fuzzy_cov_xml = os.path.join(
@@ -919,6 +931,7 @@ def api_run():
                 'fuzzy':     fuzzy_path    if fuzzy_path    and os.path.isfile(fuzzy_path)    else None,
                 'fuzzy_cov': fuzzy_cov_xml if fuzzy_cov_xml and os.path.isfile(fuzzy_cov_xml) else None,
                 'coverage':  coverage_xml  if coverage_xml  and os.path.isfile(coverage_xml)  else None,
+                'mel_lexicon': mel_lex_xml  if mel_lex_xml  and os.path.isfile(mel_lex_xml)  else None,
             }
             run_info['status'] = 'done'
 
@@ -947,8 +960,9 @@ def api_run():
                         'mel':       run_info['files'].get('mel')       or '',
                         'fuzzy':     run_info['files'].get('fuzzy')     or '',
                         'fuzzy_cov': run_info['files'].get('fuzzy_cov') or '',
-                        'coverage':  run_info['files'].get('coverage')  or '',
-                        'recon':     run_info['files'].get('recon')     or [],
+                        'coverage':    run_info['files'].get('coverage')    or '',
+                        'mel_lexicon': run_info['files'].get('mel_lexicon') or '',
+                        'recon':       run_info['files'].get('recon')       or [],
                         'data':      dict(run_info['files'].get('data') or {}),
                     },
                 })
@@ -1171,6 +1185,9 @@ def api_tab(run_id, tab):
             html = xslt.xml_to_html(mel_path, 'mel2html-edit.xsl',
                                     params={'mel_filename': mel_basename})
             return f'<div data-mel-file="{mel_path}">{html}</div>'
+        mel_lex_path = files.get('mel_lexicon')
+        if mel_lex_path and os.path.isfile(mel_lex_path):
+            return xslt.xml_to_html(mel_lex_path, 'coverage2html.xsl')
         return xslt.xml_to_html(mel_path, 'mel2html.xsl',
                                 params={'mel_filename': mel_basename})
 
