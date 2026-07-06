@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Upstream Canvas — trial</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    body { background: #f0f2f5; }
+    #uc-svg { cursor: default; user-select: none; }
+    .uc-node text  { font: 13px system-ui, sans-serif; pointer-events: none; }
+    .uc-node .port { cursor: crosshair; }
+    .uc-edge       { stroke: #868e96; stroke-width: 1.5; fill: none;
+                     marker-end: url(#uc-arrowhead); cursor: pointer; }
+    .uc-edge:hover { stroke: #dc3545; stroke-width: 2.5; }
+    #uc-preview    { font-family: Menlo, Consolas, monospace; font-size: .85em; }
+  </style>
+</head>
+<body class="p-4">
+
+<div class="d-flex align-items-center gap-3 mb-3">
+  <h5 class="mb-0">Upstream Canvas — trial</h5>
+  <a href="/" class="btn btn-sm btn-outline-secondary ms-auto">← Back to app</a>
+</div>
+
+<div class="card shadow-sm">
+  <!-- Toolbar -->
+  <div class="card-header d-flex align-items-center gap-2 flex-wrap">
+    <select id="uc-project-select" class="form-select form-select-sm" style="width:auto">
+      <option value="">— pick a project —</option>
+      {% for p in projects %}
+      <option value="{{ p }}">{{ p }}</option>
+      {% endfor %}
+    </select>
+    <div class="vr"></div>
+    <button id="uc-add-proto"   class="btn btn-sm btn-outline-primary">+ Proto</button>
+    <button id="uc-add-leaf"    class="btn btn-sm btn-outline-success">+ Leaf</button>
+    <button id="uc-auto-layout" class="btn btn-sm btn-outline-secondary" title="Re-run layout">&#x21C5; Layout</button>
+    <button id="uc-clear-all"   class="btn btn-sm btn-outline-danger"   title="Clear all">&#x2715; Clear</button>
+    <small class="text-muted ms-auto" style="font-size:.8em">
+      Drag <span style="color:#4a6fa5">&#9679;</span> port&nbsp;→&nbsp;node to set parent
+      &nbsp;·&nbsp; click edge to remove &nbsp;·&nbsp; double-click node to rename
+      &nbsp;&nbsp;
+      <span style="color:#4a6fa5">&#9632;</span>&nbsp;proto
+      <span style="color:#5a9e6f">&#9632;</span>&nbsp;leaf
+    </small>
+  </div>
+
+  <!-- SVG canvas -->
+  <div class="card-body p-0">
+    <svg id="uc-svg" width="100%" height="520" style="display:block; background:#fff;">
+      <defs>
+        <marker id="uc-arrowhead" markerWidth="8" markerHeight="8"
+                refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#868e96"/>
+        </marker>
+      </defs>
+      <g id="uc-edges-g"></g>
+      <g id="uc-nodes-g"></g>
+      <line id="uc-drag-line" display="none"
+            stroke="#6c757d" stroke-width="1.5" stroke-dasharray="5,3"
+            marker-end="url(#uc-arrowhead)"/>
+    </svg>
+  </div>
+
+  <!-- Footer -->
+  <div class="card-footer d-flex align-items-center gap-2">
+    <strong class="text-muted" style="font-size:.8em; white-space:nowrap">Upstream string:</strong>
+    <code id="uc-preview" class="flex-grow-1 text-truncate"></code>
+    <button id="uc-apply-btn" class="btn btn-sm btn-primary">Copy</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+  // ── State ──────────────────────────────────────────────────────────────────
+  let nodes = [];   // {id:number, type:'proto'|'leaf', label, x, y}
+  let edges = [];   // {id:number, from:number, to:number}  from=child, to=parent
+  let nextId = 1;
+
+  const NODE_W = 120, NODE_H = 36, PORT_R = 6, HGAP = 20, VGAP = 80;
+
+  const svg      = document.getElementById('uc-svg');
+  const edgesG   = document.getElementById('uc-edges-g');
+  const nodesG   = document.getElementById('uc-nodes-g');
+  const dragLine = document.getElementById('uc-drag-line');
+  const preview  = document.getElementById('uc-preview');
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function svgPt(evt) {
+    const r = svg.getBoundingClientRect();
+    return { x: evt.clientX - r.left, y: evt.clientY - r.top };
+  }
+
+  function svgWidth() { return svg.getBoundingClientRect().width || 700; }
+
+  function labelExists(label) {
+    return nodes.some(n => n.label === label);
+  }
+
+  // Returns true if making `childId` a child of `parentId` would create a cycle.
+  function wouldCycle(childId, parentId) {
+    const visited = new Set();
+    let cur = parentId;
+    while (cur !== undefined) {
+      if (cur === childId) return true;
+      if (visited.has(cur)) break;
+      visited.add(cur);
+      const e = edges.find(e => e.from === cur);
+      cur = e ? e.to : undefined;
+    }
+    return false;
+  }
+
+  // ── Render ─────────────────────────────────────────────────────────────────
+  function render() {
+    edgesG.innerHTML = '';
+    for (const e of edges) {
+      const fn = nodes.find(n => n.id === e.from);
+      const tn = nodes.find(n => n.id === e.to);
+      if (!fn || !tn) continue;
+      const x1 = fn.x + NODE_W / 2, y1 = fn.y;
+      const x2 = tn.x + NODE_W / 2, y2 = tn.y + NODE_H;
+      const my = (y1 + y2) / 2;
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', `M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`);
+      path.setAttribute('class', 'uc-edge');
+      path.dataset.eid = e.id;
+      edgesG.appendChild(path);
+    }
+
+    nodesG.innerHTML = '';
+    for (const n of nodes) {
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.setAttribute('class', 'uc-node');
+      g.dataset.nid = n.id;
+
+      const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      rect.setAttribute('x', n.x); rect.setAttribute('y', n.y);
+      rect.setAttribute('width', NODE_W); rect.setAttribute('height', NODE_H);
+      rect.setAttribute('rx', 6);
+      rect.setAttribute('fill',   n.type === 'proto' ? '#d0e4f7' : '#d4edda');
+      rect.setAttribute('stroke', n.type === 'proto' ? '#4a6fa5' : '#5a9e6f');
+      rect.setAttribute('stroke-width', n.label === '' ? '2' : '1.5');
+      if (n.label === '') rect.setAttribute('stroke-dasharray', '5,3');
+
+      const txt = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      txt.setAttribute('x', n.x + NODE_W / 2);
+      txt.setAttribute('y', n.y + NODE_H / 2 + 5);
+      txt.setAttribute('text-anchor', 'middle');
+      txt.setAttribute('fill', n.label === '' ? '#aaa' : '#212529');
+      txt.textContent = n.label === '' ? '(root)' : n.label;
+
+      const port = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      port.setAttribute('class', 'port');
+      port.setAttribute('cx', n.x + NODE_W / 2);
+      port.setAttribute('cy', n.y);
+      port.setAttribute('r', PORT_R);
+      port.setAttribute('fill',   n.type === 'proto' ? '#4a6fa5' : '#5a9e6f');
+      port.setAttribute('stroke', '#fff'); port.setAttribute('stroke-width', 1.5);
+      port.dataset.portFor = n.id;
+
+      g.appendChild(rect); g.appendChild(txt); g.appendChild(port);
+      nodesG.appendChild(g);
+    }
+
+    updatePreview();
+    attachListeners();
+  }
+
+  // ── Upstream string ────────────────────────────────────────────────────────
+  function updatePreview() {
+    const protos = nodes.filter(n => n.type === 'proto' && n.label !== '');
+    const parts = protos.map(p => {
+      const daughters = edges
+        .filter(e => e.to === p.id)
+        .map(e => nodes.find(n => n.id === e.from)?.label)
+        .filter(Boolean);
+      return daughters.length ? `${p.label}: ${daughters.join(', ')}` : null;
+    }).filter(Boolean);
+    preview.textContent = parts.join('; ');
+  }
+
+  // ── Listeners ──────────────────────────────────────────────────────────────
+  function attachListeners() {
+    nodesG.querySelectorAll('.uc-node rect').forEach(r => {
+      r.addEventListener('mousedown', onNodeDragStart);
+      r.addEventListener('dblclick',  onNodeDblClick);
+    });
+    nodesG.querySelectorAll('.port').forEach(p =>
+      p.addEventListener('mousedown', onPortDragStart));
+    edgesG.querySelectorAll('.uc-edge').forEach(p =>
+      p.addEventListener('click', e => {
+        edges = edges.filter(ed => ed.id != e.target.dataset.eid);
+        render();
+      }));
+  }
+
+  // ── Node drag ──────────────────────────────────────────────────────────────
+  let draggingNode = null, dragOx = 0, dragOy = 0;
+
+  function onNodeDragStart(evt) {
+    evt.stopPropagation();
+    const nid = Number(evt.target.closest('.uc-node').dataset.nid);
+    draggingNode = nodes.find(n => n.id === nid);
+    const pt = svgPt(evt);
+    dragOx = pt.x - draggingNode.x; dragOy = pt.y - draggingNode.y;
+  }
+
+  function onNodeDblClick(evt) {
+    const nid = Number(evt.target.closest('.uc-node').dataset.nid);
+    const node = nodes.find(n => n.id === nid);
+    const lbl = prompt('Node label:', node.label);
+    if (lbl === null) return;
+    const trimmed = lbl.trim();
+    if (trimmed && trimmed !== node.label && labelExists(trimmed)) {
+      alert(`A node named "${trimmed}" already exists.`); return;
+    }
+    node.label = trimmed;
+    render();
+  }
+
+  // ── Port drag ──────────────────────────────────────────────────────────────
+  let portDragging = false, portFromId = null;
+
+  function onPortDragStart(evt) {
+    evt.stopPropagation();
+    portDragging = true;
+    portFromId = Number(evt.target.dataset.portFor);
+    const pt = svgPt(evt);
+    dragLine.setAttribute('x1', pt.x); dragLine.setAttribute('y1', pt.y);
+    dragLine.setAttribute('x2', pt.x); dragLine.setAttribute('y2', pt.y);
+    dragLine.setAttribute('display', '');
+  }
+
+  // ── Global mouse events ────────────────────────────────────────────────────
+  svg.addEventListener('mousemove', evt => {
+    const pt = svgPt(evt);
+    if (draggingNode) { draggingNode.x = pt.x - dragOx; draggingNode.y = pt.y - dragOy; render(); }
+    if (portDragging) { dragLine.setAttribute('x2', pt.x); dragLine.setAttribute('y2', pt.y); }
+  });
+
+  svg.addEventListener('mouseup', evt => {
+    draggingNode = null;
+    if (!portDragging) return;
+    portDragging = false;
+    dragLine.setAttribute('display', 'none');
+    const el = document.elementFromPoint(evt.clientX, evt.clientY);
+    const tgt = el?.closest('.uc-node');
+    if (!tgt) return;
+    const toId = Number(tgt.dataset.nid);
+    if (toId === portFromId) return;                    // self-loop
+    if (wouldCycle(portFromId, toId)) return;           // cycle
+    edges = edges.filter(e => e.from !== portFromId);   // one parent only
+    edges.push({ id: nextId++, from: portFromId, to: toId });
+    render();
+  });
+
+  // Cancel drag if mouse leaves SVG
+  svg.addEventListener('mouseleave', () => {
+    if (portDragging) { portDragging = false; dragLine.setAttribute('display', 'none'); }
+    draggingNode = null;
+  });
+
+  // ── Auto layout ────────────────────────────────────────────────────────────
+  function autoLayout() {
+    if (!nodes.length) return;
+    const parentOf = {};
+    for (const e of edges) parentOf[e.from] = e.to;
+    const childrenOf = {};
+    for (const n of nodes) childrenOf[n.id] = [];
+    for (const e of edges) (childrenOf[e.to] ??= []).push(e.from);
+    const roots = nodes.filter(n => parentOf[n.id] === undefined);
+    let col = 0;
+    function place(nid, depth) {
+      const children = childrenOf[nid] || [];
+      if (!children.length) {
+        const n = nodes.find(n => n.id === nid);
+        n.x = col * (NODE_W + HGAP); n.y = depth * (NODE_H + VGAP) + 40; col++;
+      } else {
+        children.forEach(c => place(c, depth + 1));
+        const xs = children.map(c => nodes.find(n => n.id === c).x);
+        const n = nodes.find(n => n.id === nid);
+        n.x = (Math.min(...xs) + Math.max(...xs)) / 2; n.y = depth * (NODE_H + VGAP) + 40;
+      }
+    }
+    const placed = new Set();
+    roots.forEach(r => { place(r.id, 0); (function mark(id){ placed.add(id); (childrenOf[id]||[]).forEach(mark); })(r.id); });
+    nodes.filter(n => !placed.has(n.id)).forEach((n, i) => { n.x = col * (NODE_W + HGAP); n.y = 40; col++; });
+    render();
+  }
+
+  // ── Row layout for project prefill ────────────────────────────────────────
+  function rowLayout() {
+    const rows = [
+      nodes.filter(n => n.label === ''),
+      nodes.filter(n => n.type === 'proto' && n.label !== ''),
+      nodes.filter(n => n.type === 'leaf'),
+    ];
+    const w = svgWidth();
+    rows.forEach((row, ri) => {
+      if (!row.length) return;
+      const total = row.length * NODE_W + (row.length - 1) * HGAP;
+      const startX = Math.max(10, (w - total) / 2);
+      row.forEach((n, i) => { n.x = startX + i * (NODE_W + HGAP); n.y = 40 + ri * (NODE_H + VGAP); });
+    });
+  }
+
+  // ── Project loader ────────────────────────────────────────────────────────
+  document.getElementById('uc-project-select').addEventListener('change', async function () {
+    const project = this.value;
+    if (!project) return;
+    const res = await fetch(`/api/canvas_nodes/${encodeURIComponent(project)}`);
+    if (!res.ok) { alert('Failed to load project'); return; }
+    const data = await res.json();
+    nodes = []; edges = []; nextId = 1;
+    // Nameless root
+    nodes.push({ id: nextId++, type: 'proto', label: '', x: 0, y: 0 });
+    data.protos.forEach(lbl => nodes.push({ id: nextId++, type: 'proto', label: lbl, x: 0, y: 0 }));
+    data.leaves.forEach(lbl => nodes.push({ id: nextId++, type: 'leaf',  label: lbl, x: 0, y: 0 }));
+    rowLayout();
+    render();
+  });
+
+  // ── Toolbar buttons ────────────────────────────────────────────────────────
+  function addNode(type) {
+    const lbl = prompt(`${type === 'proto' ? 'Proto' : 'Leaf'} node label:`);
+    if (!lbl?.trim()) return;
+    const label = lbl.trim();
+    if (labelExists(label)) { alert(`A node named "${label}" already exists.`); return; }
+    nodes.push({ id: nextId++, type, label, x: 40 + Math.random() * 200, y: 40 + Math.random() * 100 });
+    render();
+  }
+
+  document.getElementById('uc-add-proto').addEventListener('click', () => addNode('proto'));
+  document.getElementById('uc-add-leaf').addEventListener('click',  () => addNode('leaf'));
+  document.getElementById('uc-auto-layout').addEventListener('click', autoLayout);
+  document.getElementById('uc-clear-all').addEventListener('click', () => {
+    if (nodes.length && !confirm('Clear all?')) return;
+    nodes = []; edges = []; render();
+  });
+  document.getElementById('uc-apply-btn').addEventListener('click', () => {
+    const txt = preview.textContent;
+    if (!txt) return;
+    navigator.clipboard.writeText(txt).then(
+      () => { const b = document.getElementById('uc-apply-btn'); b.textContent = 'Copied!'; setTimeout(() => b.textContent = 'Copy', 1400); },
+      () => alert(txt)
+    );
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

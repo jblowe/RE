@@ -624,6 +624,27 @@ def _build_process_html(debug_notes, notes, failed_parses=None):
     return '\n'.join(parts)
 
 
+# ── Canvas test page ───────────────────────────────────────────────────────────
+
+@bp.route('/canvas-test')
+def canvas_test():
+    projects = sorted(proj_module.projects.keys())
+    return render_template('canvas_test.html', projects=projects)
+
+@bp.route('/api/canvas_nodes/<project>')
+def canvas_nodes_api(project):
+    import re, glob
+    path = proj_module.projects.get(project)
+    if not path:
+        return jsonify(error='project not found'), 404
+    corr_re = re.compile(r'[^.]+\.(.+?)\.correspondences\.xml$')
+    data_re = re.compile(r'[^.]+\.(.+?)\.data\.xml$')
+    protos  = sorted(m.group(1) for f in glob.glob(os.path.join(path, '*.correspondences.xml'))
+                     if (m := corr_re.search(os.path.basename(f))))
+    leaves  = sorted(m.group(1) for f in glob.glob(os.path.join(path, '*.data.xml'))
+                     if (m := data_re.search(os.path.basename(f))))
+    return jsonify(protos=protos, leaves=leaves)
+
 # ── Main page ──────────────────────────────────────────────────────────────────
 
 @bp.route('/')

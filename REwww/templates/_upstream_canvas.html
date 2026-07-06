@@ -1,0 +1,79 @@
+<!-- ══ UPSTREAM CANVAS MODAL ══════════════════════════════════════════════
+     Graphical SVG node-link editor for the Upstream parameter.
+     To back out: delete this file, remove its include line from index.html,
+     revert the upstream <td> in _projects_pane.html and the dynamic builder
+     in _scripts.html, and remove the UPSTREAM CANVAS blocks from
+     reconengine.css and _scripts.html.
+     ═════════════════════════════════════════════════════════════════════ -->
+<div class="modal fade" id="upstreamCanvasModal" tabindex="-1"
+     aria-labelledby="ucModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header py-2">
+        <h6 class="modal-title mb-0" id="ucModalLabel">
+          Upstream tree &mdash;
+          <span id="uc-project-label" style="font-family:Menlo,Consolas,monospace"></span>
+        </h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body p-0">
+        <!-- Toolbar -->
+        <div class="d-flex align-items-center flex-wrap gap-2 px-3 py-2 border-bottom"
+             style="background:#f8f9fa">
+          <button id="uc-add-proto" class="btn btn-sm btn-outline-primary">
+            + Proto&nbsp;node
+          </button>
+          <button id="uc-add-leaf" class="btn btn-sm btn-outline-success">
+            + Leaf&nbsp;node
+          </button>
+          <button id="uc-auto-layout" class="btn btn-sm btn-outline-secondary"
+                  title="Re-run automatic layout">
+            &#x21C5; Layout
+          </button>
+          <button id="uc-clear-all" class="btn btn-sm btn-outline-danger"
+                  title="Remove all nodes and edges">
+            &#x2715; Clear
+          </button>
+          <small class="text-muted ms-auto" style="font-size:.8em">
+            Drag&nbsp;&#9711;&nbsp;port&nbsp;&rarr;&nbsp;node to set parent
+            &nbsp;&middot;&nbsp; click edge to remove
+            &nbsp;&nbsp;
+            <span style="color:#4a6fa5">&#9632;</span>&nbsp;proto
+            &nbsp;
+            <span style="color:#5a9e6f">&#9632;</span>&nbsp;leaf
+          </small>
+        </div>
+
+        <!-- SVG canvas -->
+        <svg id="uc-svg" width="100%" height="500"
+             style="display:block; background:#fff;">
+          <defs>
+            <marker id="uc-arrowhead" markerWidth="8" markerHeight="8"
+                    refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#868e96"/>
+            </marker>
+          </defs>
+          <g id="uc-edges-g"></g>
+          <g id="uc-nodes-g"></g>
+          <!-- Temporary drag line shown while connecting nodes -->
+          <line id="uc-drag-line" display="none"
+                stroke="#6c757d" stroke-width="1.5" stroke-dasharray="5,3"
+                marker-end="url(#uc-arrowhead)"/>
+        </svg>
+      </div>
+
+      <div class="modal-footer py-2 d-flex align-items-center gap-2">
+        <code id="uc-preview" class="flex-grow-1 text-truncate"
+              style="font-size:.8em; color:#495057; min-width:0"></code>
+        <button type="button" class="btn btn-sm btn-secondary"
+                data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-sm btn-primary"
+                id="uc-apply-btn">Apply</button>
+      </div>
+
+    </div>
+  </div>
+</div>
