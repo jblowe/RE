@@ -123,11 +123,21 @@
       const x1 = fn.x + NODE_W / 2, y1 = fn.y;
       const x2 = tn.x + NODE_W / 2, y2 = tn.y + NODE_H;
       const my = (y1 + y2) / 2;
+      const d = `M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`;
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', `M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`);
+      path.setAttribute('d', d);
       path.setAttribute('class', 'uc-edge');
       path.dataset.eid = e.id;
       edgesG.appendChild(path);
+      // Wide transparent hit area so the thin curve is easy to click
+      const hit = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      hit.setAttribute('d', d);
+      hit.setAttribute('stroke', 'transparent');
+      hit.setAttribute('stroke-width', '12');
+      hit.setAttribute('fill', 'none');
+      hit.style.cursor = 'pointer';
+      hit.dataset.eid = e.id;
+      edgesG.appendChild(hit);
     }
 
     nodesG.innerHTML = '';
@@ -190,11 +200,12 @@
     });
     nodesG.querySelectorAll('.port').forEach(p =>
       p.addEventListener('mousedown', onPortDragStart));
-    edgesG.querySelectorAll('.uc-edge').forEach(p =>
-      p.addEventListener('click', e => {
-        edges = edges.filter(ed => ed.id != e.target.dataset.eid);
-        render();
-      }));
+    edgesG.addEventListener('click', e => {
+      const eid = e.target.dataset.eid;
+      if (eid === undefined) return;
+      edges = edges.filter(ed => ed.id != eid);
+      render();
+    });
   }
 
   // ── Node drag ──────────────────────────────────────────────────────────────
@@ -292,19 +303,29 @@
   }
 
   // ── Row layout for project prefill ────────────────────────────────────────
+  const MAX_PER_ROW = 8;
+
   function rowLayout() {
-    const rows = [
+    const groups = [
       nodes.filter(n => n.label === ''),
       nodes.filter(n => n.type === 'proto' && n.label !== ''),
       nodes.filter(n => n.type === 'leaf'),
     ];
     const w = svgWidth();
-    rows.forEach((row, ri) => {
-      if (!row.length) return;
-      const total = row.length * NODE_W + (row.length - 1) * HGAP;
-      const startX = Math.max(10, (w - total) / 2);
-      row.forEach((n, i) => { n.x = startX + i * (NODE_W + HGAP); n.y = 40 + ri * (NODE_H + VGAP); });
-    });
+    let rowIndex = 0;
+    for (const group of groups) {
+      if (!group.length) continue;
+      for (let start = 0; start < group.length; start += MAX_PER_ROW) {
+        const chunk = group.slice(start, start + MAX_PER_ROW);
+        const total = chunk.length * NODE_W + (chunk.length - 1) * HGAP;
+        const startX = Math.max(10, (w - total) / 2);
+        chunk.forEach((n, i) => {
+          n.x = startX + i * (NODE_W + HGAP);
+          n.y = 40 + rowIndex * (NODE_H + VGAP);
+        });
+        rowIndex++;
+      }
+    }
   }
 
   // ── Project loader ────────────────────────────────────────────────────────
