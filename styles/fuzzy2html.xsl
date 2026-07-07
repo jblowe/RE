@@ -11,12 +11,18 @@
 
     <xsl:template match="/">
         <div>
-                <h4>Fuzzy</h4>
                 <xsl:apply-templates select=".//fuzzy"/>
             </div>
     </xsl:template>
 
     <xsl:template match="fuzzy">
+        <h5>Fuzzy values
+          <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+            &#160;
+            <span class="badge cov-gl-zero me-1">unused value</span>
+            &#160; usage count in subscript
+          </small>
+        </h5>
         <table class="table table-sm table-striped sortable">
             <thead>
                 <tr>
@@ -35,7 +41,7 @@
                             <xsl:choose>
                                 <!-- Coverage annotated: uses="0" → greyed out -->
                                 <xsl:when test="@uses = '0'">
-                                    <span class="cov-unused" title="unused">
+                                    <span class="badge cov-gl-zero" title="unused value">
                                         <xsl:value-of select="."/>
                                     </span>
                                 </xsl:when>

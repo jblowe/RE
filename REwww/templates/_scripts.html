@@ -1118,21 +1118,19 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
 })();
 
 /* ══════════════════════════════════════════════════════════════════════════
-   Coverage annotated table: "hide more" toggle, shared by the Gloss and
-   Protoform columns.
+   Coverage/MEL annotated table: expand toggles and two gloss-visibility
+   buttons ("Show/Hide MEL glosses", "Show/Hide form glosses").
 
    - Each cell (.cov-hm-cell) tracks its own expanded/collapsed state and its
      own "+N"/"−" button -- setCellExpanded() keeps the two in sync.
-   - The "Show/Hide glosses" button (rendered inline next to the "MEL
-     Annotated Coverage" heading, so it only exists once the table has
-     loaded) bulk-sets every Gloss-column cell (.cov-gl-hm) at once; it never
-     touches the Protoform column (.cov-pf-hm), which is per-row only.
-   - #coverage-content.glosses-hidden persists the bulk choice across tab
-     reloads (the table itself is replaced on every reload, but this
-     container is not); syncCoverageGlossToggle() re-applies it, and is
-     wired as the afterLoad callback for the coverage tab.
-   - Everything is delegated on the persistent container so it keeps working
-     after the table inside it is replaced.
+   - "Show/Hide MEL glosses" bulk-sets every Gloss-column cell (.cov-gl-hm)
+     via mel-glosses-hidden on the container.
+   - "Show/Hide form glosses" toggles form-glosses-hidden on the container;
+     CSS hides all .cov-gloss spans when that class is present.
+   - The Protoform column (.cov-pf-hm) expand/collapse is per-row only.
+   - Both container classes persist across AJAX tab reloads; syncCoverageGlossToggle()
+     re-applies them and is wired as the afterLoad callback.
+   - Everything is delegated on the persistent container.
    ══════════════════════════════════════════════════════════════════════════ */
 function setCellExpanded(cell, expanded) {
   cell.classList.toggle('cov-hm-expanded', expanded);
@@ -1143,47 +1141,54 @@ function setCellExpanded(cell, expanded) {
 
 function syncCoverageGlossToggle(container) {
   if (!container) return;
-  const btn    = container.querySelector('#btn-toggle-coverage-glosses');
-  const hidden = container.classList.contains('glosses-hidden');
-  if (btn) btn.textContent = hidden ? 'Show glosses' : 'Hide glosses';
-  container.querySelectorAll('.cov-gl-hm').forEach(cell => setCellExpanded(cell, !hidden));
+  const melHidden  = container.classList.contains('mel-glosses-hidden');
+  const formHidden = container.classList.contains('form-glosses-hidden');
+  const melBtn  = container.querySelector('#btn-toggle-mel-glosses');
+  const formBtn = container.querySelector('#btn-toggle-form-glosses');
+  if (melBtn)  melBtn.textContent  = melHidden  ? 'Show MEL glosses'  : 'Hide MEL glosses';
+  if (formBtn) formBtn.textContent = formHidden ? 'Show form glosses' : 'Hide form glosses';
+  container.querySelectorAll('.cov-gl-hm').forEach(cell => setCellExpanded(cell, !melHidden));
 }
 
 (function () {
-  const container = document.getElementById('coverage-content');
-  if (!container) return;
-  container.addEventListener('click', function (e) {
-    const bulkBtn = e.target.closest('#btn-toggle-coverage-glosses');
-    if (bulkBtn) {
-      container.classList.toggle('glosses-hidden');
-      syncCoverageGlossToggle(container);
-      return;
-    }
-    const toggleBtn = e.target.closest('.cov-hm-toggle');
-    if (toggleBtn) {
-      const cell = toggleBtn.closest('.cov-hm-cell');
-      if (cell) setCellExpanded(cell, !cell.classList.contains('cov-hm-expanded'));
-    }
+  ['coverage-content', 'mel-view-content'].forEach(function (id) {
+    const container = document.getElementById(id);
+    if (!container) return;
+    container.addEventListener('click', function (e) {
+      const melBtn = e.target.closest('#btn-toggle-mel-glosses');
+      if (melBtn) {
+        container.classList.toggle('mel-glosses-hidden');
+        syncCoverageGlossToggle(container);
+        return;
+      }
+      const formBtn = e.target.closest('#btn-toggle-form-glosses');
+      if (formBtn) {
+        container.classList.toggle('form-glosses-hidden');
+        syncCoverageGlossToggle(container);
+        return;
+      }
+      const toggleBtn = e.target.closest('.cov-hm-toggle');
+      if (toggleBtn) {
+        const cell = toggleBtn.closest('.cov-hm-cell');
+        if (cell) setCellExpanded(cell, !cell.classList.contains('cov-hm-expanded'));
+      }
+    });
   });
 })();
 
-(function () {
-  const container = document.getElementById('mel-view-content');
-  if (!container) return;
-  container.addEventListener('click', function (e) {
-    const bulkBtn = e.target.closest('#btn-toggle-coverage-glosses');
-    if (bulkBtn) {
-      container.classList.toggle('glosses-hidden');
-      syncCoverageGlossToggle(container);
-      return;
-    }
-    const toggleBtn = e.target.closest('.cov-hm-toggle');
-    if (toggleBtn) {
-      const cell = toggleBtn.closest('.cov-hm-cell');
-      if (cell) setCellExpanded(cell, !cell.classList.contains('cov-hm-expanded'));
-    }
-  });
-})();
+/* Fix: Bootstrap collapse doesn't update toggle button text automatically */
+document.addEventListener('show.bs.collapse', function (e) {
+  const btn = document.querySelector('[data-bs-target="#' + CSS.escape(e.target.id) + '"]');
+  if (!btn) return;
+  if (btn.classList.contains('iso-more-btn'))  btn.textContent = '−';
+  if (btn.classList.contains('cov-hm-toggle')) btn.textContent = '−';
+});
+document.addEventListener('hide.bs.collapse', function (e) {
+  const btn = document.querySelector('[data-bs-target="#' + CSS.escape(e.target.id) + '"]');
+  if (!btn) return;
+  if (btn.classList.contains('iso-more-btn'))  btn.textContent = '+';
+  if (btn.classList.contains('cov-hm-toggle')) btn.textContent = '+' + (btn.dataset.moreCount || '');
+});
 
 /* ══════════════════════════════════════════════════════════════════════════
    Parameters Freq  — toggle frequency-annotated view of the ToC

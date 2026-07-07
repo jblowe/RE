@@ -206,7 +206,9 @@
   <xsl:variable name="has_reconstructions" select="count(mel/reconstruction) &gt; 0"/>
   <h5>MELs and the forms that match them
     <button type="button" class="btn btn-sm btn-outline-secondary ms-2"
-            id="btn-toggle-coverage-glosses">Show glosses</button>
+            id="btn-toggle-mel-glosses">Show MEL glosses</button>
+    <button type="button" class="btn btn-sm btn-outline-secondary ms-1"
+            id="btn-toggle-form-glosses">Show form glosses</button>
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
       &#160;
       <xsl:choose>
@@ -258,6 +260,11 @@
             </xsl:choose>
           </td>
           <td style="vertical-align:top" class="cov-hm-cell cov-gl-hm">
+            <xsl:if test="count(gl) &gt; 1">
+              <button type="button" class="cov-hm-toggle"
+                      data-more-count="{count(gl) - 1}"
+                      title="Show all glosses for this MEL">+<xsl:value-of select="count(gl) - 1"/></button>
+            </xsl:if>
             <span class="cov-hm-full">
               <xsl:for-each select="gl">
                 <xsl:apply-templates select="." mode="gl-item"/>
@@ -267,14 +274,14 @@
             <span class="cov-hm-short">
               <xsl:apply-templates select="gl[1]" mode="gl-item"/>
             </span>
-            <xsl:if test="count(gl) &gt; 1">
-              <button type="button" class="btn btn-link btn-sm p-0 ms-1 cov-hm-toggle"
-                      data-more-count="{count(gl) - 1}"
-                      title="Show all glosses for this MEL">+<xsl:value-of select="count(gl) - 1"/></button>
-            </xsl:if>
           </td>
           <xsl:if test="$has_reconstructions">
             <td style="vertical-align:top" class="cov-hm-cell cov-pf-hm">
+              <xsl:if test="count(reconstruction) &gt; 1">
+                <button type="button" class="cov-hm-toggle"
+                        data-more-count="{count(reconstruction) - 1}"
+                        title="Show all reconstructions for this MEL">+<xsl:value-of select="count(reconstruction) - 1"/></button>
+              </xsl:if>
               <span class="cov-hm-full">
                 <xsl:for-each select="reconstruction">
                   <xsl:call-template name="reconstruction-badge"/>
@@ -285,11 +292,6 @@
                   <xsl:call-template name="reconstruction-badge"/>
                 </xsl:for-each>
               </span>
-              <xsl:if test="count(reconstruction) &gt; 1">
-                <button type="button" class="btn btn-link btn-sm p-0 ms-1 cov-hm-toggle"
-                        data-more-count="{count(reconstruction) - 1}"
-                        title="Show all reconstructions for this MEL">+<xsl:value-of select="count(reconstruction) - 1"/></button>
-              </xsl:if>
             </td>
           </xsl:if>
           <xsl:for-each select="../../languages/lg">

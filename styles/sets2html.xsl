@@ -68,7 +68,20 @@
         </div>
         <xsl:choose>
           <xsl:when test="multi">
-            <xsl:apply-templates select="multi"/>
+            <xsl:if test="count(multi) &gt; 1">
+              <button type="button" class="cov-hm-toggle"
+                      data-bs-toggle="collapse"
+                      data-bs-target="{concat('#set-multi-', generate-id(.))}"
+                      data-more-count="{count(multi) - 1}"
+                      aria-expanded="false"
+                      title="Show all reconstructions">+<xsl:value-of select="count(multi) - 1"/></button>
+            </xsl:if>
+            <xsl:apply-templates select="multi[1]"/>
+            <xsl:if test="count(multi) &gt; 1">
+              <div class="collapse" id="{concat('set-multi-', generate-id(.))}">
+                <xsl:apply-templates select="multi[position() &gt; 1]"/>
+              </div>
+            </xsl:if>
           </xsl:when>
           <xsl:otherwise>
             <div class="plg">

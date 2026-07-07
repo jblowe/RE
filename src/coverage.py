@@ -217,8 +217,8 @@ def build_annotated_coverage(mels, associated_mels_table, languages, root_lexico
     stats.mel_forms = mel_forms
     stats.pseudo_forms = pseudo_forms
     stats.mel_reconstructions = mel_reconstructions
-    stats.add_stat('meso_included', meso_included)
-    stats.add_stat('meso_excluded', meso_excluded)
+    stats.add_stat('mesoreconstructions_included', meso_included)
+    stats.add_stat('mesoreconstructions_excluded', meso_excluded)
     return stats
 
 

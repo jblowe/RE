@@ -125,21 +125,39 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 #sets-content.glosses-hidden .rfx-gloss,
 #research-sets-content.glosses-hidden .rfx-gloss { display: none; }
 
-/* ── Coverage annotated table: gloss column visibility toggle ───────────── */
-#coverage-content.glosses-hidden .cov-gloss,
-#mel-view-content.glosses-hidden .cov-gloss { display: none; }
+/* ── Coverage annotated table: form-gloss visibility toggle ─────────────── */
+/* "form-glosses-hidden" hides the small per-form gloss labels in language cells */
+#coverage-content.form-glosses-hidden .cov-gloss,
+#mel-view-content.form-glosses-hidden .cov-gloss { display: none; }
 
 /* ── Coverage annotated table: "hide more" toggle, shared by the Gloss and
    Protoform columns (any cell marked .cov-hm-cell). Each cell tracks its own
    expanded/collapsed state directly (.cov-hm-expanded) -- the Gloss column's
-   cells (.cov-gl-hm) are additionally bulk-set by the Show/Hide glosses
-   button; the Protoform column's cells (.cov-pf-hm) are per-row only. One
+   cells (.cov-gl-hm) are bulk-set by the "Show/Hide MEL glosses" button;
+   the Protoform column's cells (.cov-pf-hm) are per-row only. One
    delegated JS handler (in _scripts.html) drives every "+"/"−" button and
    keeps its label (count when collapsed, none when expanded) in sync. */
 .cov-hm-cell .cov-hm-full  { display: none; }
 .cov-hm-cell .cov-hm-short { display: inline; }
 .cov-hm-cell.cov-hm-expanded .cov-hm-full  { display: inline; }
 .cov-hm-cell.cov-hm-expanded .cov-hm-short { display: none; }
+
+/* ── Coverage/MEL per-row expand toggle button ───────────────────────────── */
+.cov-hm-toggle {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 2px;
+  border: 1px solid #adb5bd;
+  border-radius: 2px;
+  background: #f8f9fa;
+  color: #555;
+  cursor: pointer;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.cov-hm-toggle:hover { background: #e2e6ea; border-color: #868e96; }
 
 /* ── Coverage annotated table: muted badge colors ───────────────────────── */
 .cov-badge-set     { background-color: #d4edda; color: #155724; font-weight: 500; }

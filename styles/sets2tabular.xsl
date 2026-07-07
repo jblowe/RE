@@ -99,37 +99,36 @@
         <xsl:choose>
           <xsl:when test="multi">
             <td class="col-plg">
-              <span class="">
-                <xsl:value-of select=".//plg"/>
-              </span>
+              <xsl:value-of select="multi[1]/plg"/>
             </td>
             <td class="col-pfm">
-              <span class="multiple">
-                <xsl:attribute name="title">
-                  <xsl:for-each select=".//pfm">
-                    <xsl:if test="position() != 1">
-                      <xsl:text>,</xsl:text>
-                    </xsl:if>
-                    <xsl:value-of select="."/>
+              <xsl:if test="count(multi) &gt; 1">
+                <button type="button" class="cov-hm-toggle"
+                        data-bs-toggle="collapse"
+                        data-bs-target="{concat('#set-multi-', generate-id(.))}"
+                        data-more-count="{count(multi) - 1}"
+                        aria-expanded="false"
+                        title="Show all reconstructions">+<xsl:value-of select="count(multi) - 1"/></button>
+              </xsl:if>
+              <xsl:value-of select="multi[1]/pfm"/>
+              <xsl:if test="count(multi) &gt; 1">
+                <div class="collapse iso-more-pfms" id="{concat('set-multi-', generate-id(.))}">
+                  <xsl:for-each select="multi[position() &gt; 1]">
+                    <div class="iso-extra-pfm">
+                      <xsl:value-of select="pfm"/>
+                      <xsl:text> </xsl:text>
+                      <small class="text-muted">[<xsl:call-template name="linkify-rcn">
+                        <xsl:with-param name="text" select="rcn"/>
+                      </xsl:call-template>]</small>
+                    </div>
                   </xsl:for-each>
-                </xsl:attribute>
-                <xsl:value-of select="multi/pfm"/>
-              </span>
+                </div>
+              </xsl:if>
             </td>
             <td class="col-rcn">
-              <span>
-                <xsl:attribute name="title">
-                  <xsl:for-each select=".//rcn">
-                    <xsl:if test="position() != 1">
-                      <xsl:text>,</xsl:text>
-                    </xsl:if>
-                    <xsl:value-of select="."/>
-                  </xsl:for-each>
-                </xsl:attribute>
-                <xsl:call-template name="linkify-rcn">
-                  <xsl:with-param name="text" select="multi/rcn"/>
-                </xsl:call-template>
-              </span>
+              <xsl:call-template name="linkify-rcn">
+                <xsl:with-param name="text" select="multi[1]/rcn"/>
+              </xsl:call-template>
             </td>
           </xsl:when>
           <xsl:otherwise>
