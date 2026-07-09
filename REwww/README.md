@@ -208,4 +208,12 @@ Stylesheets in `../styles/` used by REwww:
 pip install -r requirements.txt
 ```
 
-Key packages: `flask`, `lxml`. See `../requirements.txt` for the full list.
+Key packages: `flask`, `lxml`, `nltk`. See `../requirements.txt` for the full list.
+
+`nltk` itself is installed by the above, but its corpora are a separate download:
+
+```bash
+python -m nltk.downloader stopwords wordnet omw-1.4
+```
+
+See `../src/README.md` for notes on `NLTK_DATA` path issues under `mod_wsgi`.

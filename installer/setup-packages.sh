@@ -24,4 +24,8 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-tomli \
   mingw-w64-ucrt-x86_64-python-tomli-w
 
+echo "=== Installing NLTK and required corpora ==="
+pip install nltk
+python -m nltk.downloader stopwords wordnet omw-1.4
+
 echo "=== Done ==="
