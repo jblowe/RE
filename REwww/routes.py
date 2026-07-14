@@ -1372,7 +1372,24 @@ def api_save_toc(run_id):
         if langs: out_el.set('languages', langs)
         rule_n += 1
 
-    for tag in ('protolanguage', 'quirk'):
+    quirk_n = 1
+    while f'quirk-{quirk_n}-lg' in fields:
+        quirk_el = ET.SubElement(new_root, 'quirk')
+        quirk_el.set('id', fields.get(f'quirk-{quirk_n}-id', '') or f'x{quirk_n}')
+
+        ET.SubElement(quirk_el, 'source_id').text = fields.get(f'quirk-{quirk_n}-source_id', '')
+        ET.SubElement(quirk_el, 'lg').text = fields.get(f'quirk-{quirk_n}-lg', '')
+        ET.SubElement(quirk_el, 'lx').text = fields.get(f'quirk-{quirk_n}-lx', '')
+        ET.SubElement(quirk_el, 'gl').text = fields.get(f'quirk-{quirk_n}-gl', '')
+        ET.SubElement(quirk_el, 'alternative').text = fields.get(f'quirk-{quirk_n}-alternative', '')
+        ET.SubElement(quirk_el, 'analysis_slot').text = fields.get(f'quirk-{quirk_n}-analysis_slot', '')
+        ET.SubElement(quirk_el, 'analysis_value').text = fields.get(f'quirk-{quirk_n}-analysis_value', '')
+        note_text = fields.get(f'quirk-{quirk_n}-note', '')
+        if note_text:
+            ET.SubElement(quirk_el, 'note').text = note_text
+        quirk_n += 1
+
+    for tag in ('protolanguage',):
         for el in orig_root.findall(tag):
             new_root.append(copy.deepcopy(el))
 

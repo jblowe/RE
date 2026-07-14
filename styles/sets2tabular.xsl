@@ -166,6 +166,10 @@
                       <xsl:value-of select="lxf"/>
                       <small style="color:#888;"> &#171;<xsl:value-of select="lx"/></small>
                     </xsl:when>
+                    <xsl:when test="lxq">
+                      <xsl:value-of select="lx"/>
+                      <small style="color:#888;"> &#8674; <xsl:value-of select="lxq"/></small>
+                    </xsl:when>
                     <xsl:otherwise>
                       <xsl:apply-templates select="lx"/>
                     </xsl:otherwise>
@@ -288,6 +292,10 @@
             <xsl:when test="lxf">
               <xsl:apply-templates select="lxf"/>
               <small style="color:#888;"> &#171;<xsl:value-of select="lx"/></small>
+            </xsl:when>
+            <xsl:when test="lxq">
+              <xsl:apply-templates select="lx"/>
+              <small style="color:#888;"> &#8674; <xsl:apply-templates select="lxq"/></small>
             </xsl:when>
             <xsl:otherwise>
               <xsl:apply-templates select="lx"/>

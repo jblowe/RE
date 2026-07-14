@@ -248,12 +248,16 @@
 </xsl:template>
 
 
-<!-- ══ Render lx (with optional lxf annotation) ════════════════════════════ -->
+<!-- ══ Render lx (with optional lxf/lxq annotation) ═════════════════════════ -->
 <xsl:template name="lx-cell">
   <xsl:choose>
     <xsl:when test="@lxf != ''">
       <xsl:value-of select="@lxf"/>
       <small style="color:#888"> &#171; <xsl:value-of select="@lx"/></small>
+    </xsl:when>
+    <xsl:when test="@lxq != ''">
+      <xsl:value-of select="@lx"/>
+      <small style="color:#888"> &#8674; <xsl:value-of select="@lxq"/></small>
     </xsl:when>
     <xsl:otherwise>
       <xsl:value-of select="@lx"/>

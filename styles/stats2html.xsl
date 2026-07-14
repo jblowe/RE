@@ -119,6 +119,8 @@
     <xsl:template match="mel_analysis">
         <xsl:apply-templates select="lexicons"/>
         <xsl:apply-templates select="correspondences"/>
+        <xsl:apply-templates select="rules"/>
+        <xsl:apply-templates select="quirks"/>
     </xsl:template>
 
     <xsl:template match="lexicons">
@@ -208,6 +210,60 @@
             <xsl:for-each select="./*">
                 <td><xsl:value-of select ="@value"/></td>
             </xsl:for-each>
+        </tr>
+    </xsl:template>
+
+    <xsl:template match="rules">
+        <h5>Rule statistics</h5>
+        <div class="table-responsive">
+        <table class="table table-sm table-striped sortable">
+            <thead>
+              <tr>
+                  <th>rule</th>
+                  <th>used in reconstructions</th>
+              </tr>
+            </thead>
+            <tbody>
+                <xsl:apply-templates select="rule"/>
+            </tbody>
+        </table>
+        </div>
+        <p>rules_used: <xsl:value-of select=".//rules_used[@value]"/></p>
+    </xsl:template>
+
+    <xsl:template match="rule">
+        <tr>
+            <td><xsl:value-of select="@value"/></td>
+            <xsl:for-each select="./*">
+                <td><xsl:value-of select ="@value"/></td>
+            </xsl:for-each>
+        </tr>
+    </xsl:template>
+
+    <xsl:template match="quirks">
+        <h5>Exception (quirk) statistics</h5>
+        <div class="table-responsive">
+        <table class="table table-sm table-striped sortable">
+            <thead>
+              <tr>
+                  <th>exception</th>
+                  <th>seen</th>
+                  <th>reconstructed</th>
+              </tr>
+            </thead>
+            <tbody>
+                <xsl:apply-templates select="quirk"/>
+            </tbody>
+        </table>
+        </div>
+        <p>quirks_used: <xsl:value-of select=".//quirks_used[@value]"/></p>
+    </xsl:template>
+
+    <xsl:template match="quirk">
+        <tr>
+            <td><xsl:value-of select="@value"/></td>
+            <td><xsl:value-of select="seen/@value"/></td>
+            <td><xsl:value-of select="reconstructed/@value"/></td>
         </tr>
     </xsl:template>
 

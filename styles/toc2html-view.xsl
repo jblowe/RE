@@ -139,6 +139,49 @@
 			</table>
 		</div>
 
+		<!-- ── Exceptions (quirks) ──────────────────────────────────────────── -->
+		<xsl:if test="quirk">
+			<button type="button" class="params-sec-hdr collapsed"
+			        data-bs-toggle="collapse" data-bs-target="#{$uid}-quirks"
+			        aria-expanded="false">Exceptions</button>
+			<div class="collapse" id="{$uid}-quirks">
+				<table class="table table-sm table-hover table-bordered sets sortable">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>source id</th>
+							<th>lang</th>
+							<th>lexeme</th>
+							<th>gloss</th>
+							<th>alternative</th>
+							<th>analysis</th>
+							<th>notes</th>
+						</tr>
+					</thead>
+					<xsl:for-each select="quirk">
+						<tr>
+							<td><xsl:value-of select="@id"/></td>
+							<td><xsl:value-of select="source_id"/></td>
+							<td><xsl:value-of select="lg"/></td>
+							<td><xsl:value-of select="lx"/></td>
+							<td><xsl:value-of select="gl"/></td>
+							<td><xsl:value-of select="alternative"/></td>
+							<td>
+								<xsl:value-of select="analysis_slot"/>
+								<xsl:if test="string(analysis_value)">=<xsl:value-of select="analysis_value"/></xsl:if>
+							</td>
+							<td>
+								<xsl:for-each select="note">
+									<xsl:value-of select="."/>
+									<xsl:if test="position() != last()">; </xsl:if>
+								</xsl:for-each>
+							</td>
+						</tr>
+					</xsl:for-each>
+				</table>
+			</div>
+		</xsl:if>
+
 	</div>
 </xsl:template>
 

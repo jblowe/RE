@@ -91,16 +91,85 @@
               reindexRows();
             }
 
+            // Generic add/delete/reindex for simple (non-dialect) tables: Rules, Exceptions.
+            function makeSimpleTable(tbodySel, rowIdPrefix, fieldPrefix, fields, delClass){
+              function reindex(){
+                var tbody = q(tbodySel); if(!tbody) return;
+                qa('tr', tbody).forEach(function(tr, idx){
+                  var r = idx + 1;
+                  tr.id = rowIdPrefix + '-' + r;
+                  fields.forEach(function(key, i){
+                    var inp = tr.querySelector('td:nth-child(' + (i + 2) + ') input');
+                    if(inp){
+                      inp.name = fieldPrefix + '-' + r + '-' + key;
+                      inp.id   = fieldPrefix + '-' + r + '-' + key;
+                    }
+                  });
+                });
+              }
+              function add(){
+                var tbody = q(tbodySel); if(!tbody) return;
+                var tr = document.createElement('tr');
+                var tdAct = document.createElement('td');
+                tdAct.className = 'actions-col';
+                var del = document.createElement('button');
+                del.type = 'button';
+                del.className = 'btn btn-outline-danger btn-sm btn-icon ' + delClass;
+                del.title = 'Delete row';
+                del.textContent = '−';
+                tdAct.appendChild(del);
+                tr.appendChild(tdAct);
+                fields.forEach(function(){
+                  var td = document.createElement('td');
+                  var inp = document.createElement('input');
+                  inp.type = 'text';
+                  inp.className = 'form-control form-control-sm';
+                  td.appendChild(inp);
+                  tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+                reindex();
+              }
+              return {add: add, reindex: reindex};
+            }
+
+            var ruleRows = makeSimpleTable('#rules-body', 'rule-row', 'rule',
+              ['num','input','output','contextL','contextR','stage','languages'],
+              'btn-del-rule-row');
+            var quirkRows = makeSimpleTable('#quirks-body', 'quirk-row', 'quirk',
+              ['id','source_id','lg','lx','gl','alternative','analysis_slot','analysis_value','note'],
+              'btn-del-quirk-row');
+
             // Wire up add and delete
             document.addEventListener('click', function(ev){
               if(ev.target && ev.target.id === 'addRowBtn'){
                 addRow();
                 return;
               }
+              if(ev.target && ev.target.id === 'addRuleRowBtn'){
+                ruleRows.add();
+                return;
+              }
+              if(ev.target && ev.target.id === 'addQuirkRowBtn'){
+                quirkRows.add();
+                return;
+              }
               var del = ev.target.closest('.btn-del-row');
               if(del){
                 var tr = del.closest('tr');
                 if(tr){ tr.remove(); reindexRows(); }
+                return;
+              }
+              var delRule = ev.target.closest('.btn-del-rule-row');
+              if(delRule){
+                var tr2 = delRule.closest('tr');
+                if(tr2){ tr2.remove(); ruleRows.reindex(); }
+                return;
+              }
+              var delQuirk = ev.target.closest('.btn-del-quirk-row');
+              if(delQuirk){
+                var tr3 = delQuirk.closest('tr');
+                if(tr3){ tr3.remove(); quirkRows.reindex(); }
                 return;
               }
             });
@@ -312,90 +381,216 @@
         </div>
 
         <!-- Rules (rules appear as direct children <rule>) -->
-        <xsl:if test="rule">
-            <div class="card mb-3">
-                <div class="card-header fw-semibold">Rules</div>
-                <div class="card-body p-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-striped mb-0" id="rules-table">
-                            <thead>
-                                <tr>
-                                    <th>num</th>
-                                    <th>input</th>
-                                    <th>output</th>
-                                    <th>contextL</th>
-                                    <th>contextR</th>
-                                    <th>stage</th>
-                                    <th>languages</th>
+        <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center fw-semibold">
+                <span>Rules</span>
+                <button type="button" id="addRuleRowBtn" class="btn btn-outline-primary btn-sm btn-icon"
+                        title="Add rule">+
+                </button>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped mb-0" id="rules-table">
+                        <thead>
+                            <tr>
+                                <th class="actions-col"/>
+                                <th>num</th>
+                                <th>input</th>
+                                <th>output</th>
+                                <th>contextL</th>
+                                <th>contextR</th>
+                                <th>stage</th>
+                                <th>languages</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rules-body">
+                            <xsl:for-each select="rule">
+                                <xsl:variable name="r" select="position()"/>
+                                <tr id="rule-row-{$r}">
+                                    <td class="actions-col">
+                                        <button type="button" class="btn btn-outline-danger btn-sm btn-icon btn-del-rule-row"
+                                                title="Delete rule">-
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-num" id="rule-{$r}-num">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="@num"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-input" id="rule-{$r}-input">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(input)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-output" id="rule-{$r}-output">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(outcome)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-contextL" id="rule-{$r}-contextL">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="input/@contextL"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-contextR" id="rule-{$r}-contextR">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="input/@contextR"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-stage" id="rule-{$r}-stage">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="@stage"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="rule-{$r}-languages" id="rule-{$r}-languages">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="outcome/@languages"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <xsl:for-each select="rule">
-                                    <xsl:variable name="r" select="position()"/>
-                                    <tr id="rule-row-{$r}">
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-num" id="rule-{$r}-num">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="@num"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-input" id="rule-{$r}-input">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="normalize-space(input)"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-output" id="rule-{$r}-output">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="normalize-space(outcome)"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-contextL" id="rule-{$r}-contextL">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="input/@contextL"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-contextR" id="rule-{$r}-contextR">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="input/@contextR"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-stage" id="rule-{$r}-stage">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="@stage"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm"
-                                                   name="rule-{$r}-languages" id="rule-{$r}-languages">
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="outcome/@languages"/>
-                                                </xsl:attribute>
-                                            </input>
-                                        </td>
-                                    </tr>
-                                </xsl:for-each>
-                            </tbody>
-                        </table>
-                    </div>
+                            </xsl:for-each>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </xsl:if>
+        </div>
+
+        <!-- Exceptions (quirks appear as direct children <quirk>) -->
+        <div class="card mb-3">
+            <div class="card-header d-flex justify-content-between align-items-center fw-semibold">
+                <span>Exceptions</span>
+                <button type="button" id="addQuirkRowBtn" class="btn btn-outline-primary btn-sm btn-icon"
+                        title="Add exception">+
+                </button>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped mb-0" id="quirks-table">
+                        <thead>
+                            <tr>
+                                <th class="actions-col"/>
+                                <th>id</th>
+                                <th>source id</th>
+                                <th>lang</th>
+                                <th>lexeme</th>
+                                <th>gloss</th>
+                                <th>alternative</th>
+                                <th>analysis slot</th>
+                                <th>analysis value</th>
+                                <th>notes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="quirks-body">
+                            <xsl:for-each select="quirk">
+                                <xsl:variable name="q" select="position()"/>
+                                <tr id="quirk-row-{$q}">
+                                    <td class="actions-col">
+                                        <button type="button" class="btn btn-outline-danger btn-sm btn-icon btn-del-quirk-row"
+                                                title="Delete exception">-
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-id" id="quirk-{$q}-id">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="@id"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-source_id" id="quirk-{$q}-source_id">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(source_id)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-lg" id="quirk-{$q}-lg">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(lg)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-lx" id="quirk-{$q}-lx">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(lx)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-gl" id="quirk-{$q}-gl">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(gl)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-alternative" id="quirk-{$q}-alternative">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(alternative)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-analysis_slot" id="quirk-{$q}-analysis_slot">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(analysis_slot)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-analysis_value" id="quirk-{$q}-analysis_value">
+                                            <xsl:attribute name="value">
+                                                <xsl:value-of select="normalize-space(analysis_value)"/>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm"
+                                               name="quirk-{$q}-note" id="quirk-{$q}-note">
+                                            <xsl:attribute name="value">
+                                                <xsl:for-each select="note">
+                                                    <xsl:value-of select="normalize-space(.)"/>
+                                                    <xsl:if test="position() != last()">; </xsl:if>
+                                                </xsl:for-each>
+                                            </xsl:attribute>
+                                        </input>
+                                    </td>
+                                </tr>
+                            </xsl:for-each>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </xsl:template>
 </xsl:stylesheet>

@@ -41,6 +41,7 @@ def _parse_sets(sets_path: str) -> list:
                     'lg':  rfx.findtext('lg',  ''),
                     'lx':  rfx.findtext('lx',  ''),   # original form
                     'lxf': rfx.findtext('lxf', ''),   # fuzzied form (empty if none)
+                    'lxq': rfx.findtext('lxq', ''),   # quirky alternative (empty if none)
                     'gl':  rfx.findtext('gl',  ''),
                 })
         if not ids:
@@ -211,6 +212,7 @@ def _diff_el(info_a, info_b, ids_a, ids_b):
         re.set('lg',     rfx['lg'])
         re.set('lx',     rfx['lx'])
         re.set('lxf',    rfx.get('lxf', ''))
+        re.set('lxq',    rfx.get('lxq', ''))
         re.set('gl',     rfx['gl'])
         re.set('status', 'both' if rfx['id'] in both else 'removed')
 
@@ -224,6 +226,7 @@ def _diff_el(info_a, info_b, ids_a, ids_b):
         re.set('lg',     rfx['lg'])
         re.set('lx',     rfx['lx'])
         re.set('lxf',    rfx.get('lxf', ''))
+        re.set('lxq',    rfx.get('lxq', ''))
         re.set('gl',     rfx['gl'])
         re.set('status', 'added')
 
