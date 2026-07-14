@@ -152,6 +152,10 @@ def add_entry(root, form, number):
         rfx.set('id', form.actual.id)
         ET.SubElement(rfx, 'lx').text = form.actual.glyphs
         ET.SubElement(rfx, 'lxf').text = form.glyphs
+    elif isinstance(form, RE.QuirkyForm):
+        rfx.set('id', form.actual.id)
+        ET.SubElement(rfx, 'lx').text = form.actual.glyphs
+        ET.SubElement(rfx, 'lxq').text = form.glyphs
     elif isinstance(form, RE.ProtoForm):
         ET.SubElement(rfx, 'lx').text = form.glyphs
     ET.SubElement(rfx, 'lg').text = form.language
@@ -235,6 +239,20 @@ def render_sets(forms, sets, languages, set_type):
             ET.SubElement(rfx, 'lg').text = form.language
             ET.SubElement(rfx, 'lx').text = form.actual.glyphs
             ET.SubElement(rfx, 'lxf').text = form.glyphs
+            ET.SubElement(rfx, 'gl').text = form.gloss
+            ET.SubElement(rfx, 'id').text = form.actual.id
+            try:
+                ET.SubElement(rfx, 'membership').text = form.membership
+            except:
+                pass
+        elif isinstance(form, RE.QuirkyForm):
+            # Quirky reflex: <lx> carries the attested original glyphs;
+            # <lxq> carries the quirk's alternative glyphs that were actually
+            # used for parsing. XSLT renders as "lx <- lxq".
+            rfx = ET.SubElement(element, 'rfx')
+            ET.SubElement(rfx, 'lg').text = form.language
+            ET.SubElement(rfx, 'lx').text = form.actual.glyphs
+            ET.SubElement(rfx, 'lxq').text = form.glyphs
             ET.SubElement(rfx, 'gl').text = form.gloss
             ET.SubElement(rfx, 'id').text = form.actual.id
             try:
@@ -385,6 +403,35 @@ def serialize_stats(stats, settings, args, filename):
                 corr = ET.SubElement(corrs, 'correspondence', attrib={'value': str(c)})
                 ET.SubElement(corr, 'used_in_cognate_sets').set('value', str(len(sets)))
             ET.SubElement(corrs, 'correspondences_used').set('value', str(correspondences_used))
+    except Exception:
+        pass
+
+    try:
+        rule_index = getattr(stats, 'rule_index', None)
+        if rule_index:
+            rules_used = sum(1 for forms in rule_index.values() if len(forms) != 0)
+            if rules_used > 0:
+                rules_el = ET.SubElement(root, 'rules')
+                for (r, forms) in sorted(rule_index.items(), key=lambda u: len(u[1])):
+                    rule_el = ET.SubElement(rules_el, 'rule', attrib={'value': r.brief_summary()})
+                    ET.SubElement(rule_el, 'used_in_reconstructions').set('value', str(len(forms)))
+                ET.SubElement(rules_el, 'rules_used').set('value', str(rules_used))
+    except Exception:
+        pass
+
+    try:
+        quirk_usage = getattr(stats, 'quirk_usage', None)
+        if quirk_usage:
+            quirks_el = ET.SubElement(root, 'quirks')
+            for qid in sorted(quirk_usage.keys()):
+                counts = quirk_usage[qid]
+                quirk_el = ET.SubElement(quirks_el, 'quirk', attrib={
+                    'id': qid,
+                    'value': stats.quirk_labels.get(qid, qid),
+                })
+                ET.SubElement(quirk_el, 'seen').set('value', str(counts['seen']))
+                ET.SubElement(quirk_el, 'reconstructed').set('value', str(counts['reconstructed']))
+            ET.SubElement(quirks_el, 'quirks_used').set('value', str(len(quirk_usage)))
     except Exception:
         pass
 
@@ -733,6 +780,10 @@ def serialize_isolates_dict(isolates_dict, re_element, reconstruction=None):
             rfx.set('id', form.actual.id)
             ET.SubElement(rfx, 'lx').text = form.actual.glyphs
             ET.SubElement(rfx, 'lxf').text = form.glyphs
+        elif isinstance(form, RE.QuirkyForm):
+            rfx.set('id', form.actual.id)
+            ET.SubElement(rfx, 'lx').text = form.actual.glyphs
+            ET.SubElement(rfx, 'lxq').text = form.glyphs
         ET.SubElement(rfx, 'lg').text = form.language
         try:
             ET.SubElement(rfx, 'gl').text = form.gloss
