@@ -35,6 +35,10 @@ _PAREN_RE = re.compile(r'\([^)]*\)|\[[^\]]*\]|<[^>]*>')
 # "to give" → "give";  "be sick" → "sick";  "to be hungry" → "be hungry" → "hungry".
 _PARTICLES = ('to', 'be')
 
+# Trailing support-verb suffix, e.g. "numb, be" / "finished, to be" / "fatigué, être".
+# Stripped before delimiter splitting so the main content word survives cleanly.
+_TRAILING_SUPPORT_RE = re.compile(r',\s*(to\s+)?(be|avoir|être)\s*$', re.IGNORECASE)
+
 def _strip_particles(phrase):
     for particle in _PARTICLES:
         words = phrase.split()
@@ -48,7 +52,7 @@ def _strip_particles(phrase):
 # itself). Union used whenever a gloss's language is unknown -- see
 # _stopwords_for.
 _STOPWORDS_EN = frozenset(_nltk_stopwords.words('english'))
-_STOPWORDS_FR = frozenset(_nltk_stopwords.words('french'))
+_STOPWORDS_FR = frozenset(_nltk_stopwords.words('french')) | frozenset(['avoir', 'être'])
 _STOPWORDS_BY_LANG = {'en': _STOPWORDS_EN, 'fr': _STOPWORDS_FR}
 _STOPWORDS_UNION = _STOPWORDS_EN | _STOPWORDS_FR
 
@@ -196,6 +200,7 @@ def normalize_gloss(gloss, lang=None):
     base_phrases = []             # phrase-level candidates only, for step 7
     consumed_by_phrase = {}       # base phrase -> {verb, particle} from step 6
     for v in variants:
+        v = _TRAILING_SUPPORT_RE.sub('', v)
         for part in re.split(r'[/,;:]', v):
             part = part.strip().strip('?').rstrip('!.')
             part = _strip_particles(part.strip())
