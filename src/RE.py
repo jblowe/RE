@@ -512,6 +512,10 @@ class Statistics:
         self.correspondences_used_in_recons = collections.Counter()
         self.correspondences_used_in_sets = collections.Counter()
         self.fuzzy_usage = collections.Counter()   # (language, from_string) → count
+        # quirk id → {'seen': N, 'reconstructed': N}, counting only the
+        # alternative (QuirkyForm) outcome, never the raw attested original.
+        self.quirk_usage = collections.defaultdict(lambda: {'seen': 0, 'reconstructed': 0})
+        self.quirk_labels = {}   # quirk id → 'lg lx (gl) -> alternative', for display
         self.notes = []
         self.debug_notes = []
 
@@ -1233,13 +1237,28 @@ def project_back(lexicons, parameters, statistics):
             else:
                 # No fuzzied version: original behaviour.
                 orig_parses = get_parses(form.glyphs)
+                # Only a QuirkyForm's alternative glyphs are counted here;
+                # the raw attested original (a separate ModernForm, processed
+                # in its own iteration of this loop) never touches quirk_usage.
+                quirk = (parameters.table.quirks.get(
+                            (form.actual.language, form.actual.glyphs, form.actual.gloss))
+                         if isinstance(form, QuirkyForm) else None)
+                if quirk is not None:
+                    statistics.quirk_labels[quirk.id] = (
+                        f'{quirk.language} {quirk.form} ({quirk.gloss}) '
+                        f'→ {quirk.alternative}')
                 if orig_parses:
                     commit_parses(form, orig_parses)
+                    if quirk is not None:
+                        statistics.quirk_usage[quirk.id]['seen'] += 1
+                        statistics.quirk_usage[quirk.id]['reconstructed'] += 1
                 else:
                     count_of_no_parses += 1
                     form.failure_reasons     = failure_memo.get(form.glyphs)
                     form.all_failure_reasons = all_failure_memo.get(form.glyphs)
                     statistics.failed_parses.append(form)
+                    if quirk is not None:
+                        statistics.quirk_usage[quirk.id]['seen'] += 1
 
         number_of_forms += len(lexicon.forms)
         statistics.language_stats[lexicon.language] = {
