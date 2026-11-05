@@ -8,8 +8,8 @@ the write-up this supports.
 
 Input format: one gloss per line. Optionally "gloss<TAB>lang" to pass an
 xml:lang code (e.g. 'en', 'fr') for that line; without a tab, lang=None.
-tgtm_reflex_glosses.txt and tgtm_mel_glosses.txt (this directory) are ready
-to use as input.
+tgtm_reflex_glosses.txt and tgtm_mel_glosses.txt can be used as input; they
+are not checked in, so create them first with generate_tgtm_gloss_lists.py.
 
 A handful of real gloss strings contain a literal embedded tab (a data
 artifact, e.g. "a\tfraction, to divide") -- indistinguishable from our own

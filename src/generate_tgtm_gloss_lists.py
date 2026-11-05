@@ -6,10 +6,10 @@ GLOSS_NORMALIZATION.md for why these exist.
 
 This is the one script in this group that *does* depend on the external
 TGTM project directory (~/GitHub/RE-Tamangish-Files/TGTM, not part of this
-repo) -- it's the one-time (or rerun-when-the-source-data-changes) step that
-turns that external, personal-machine-only data into the two plain-text
-files checked into src/, so the eval/compare scripts themselves don't need
-that directory at all.
+repo) -- it turns that external data into the two plain-text files in src/,
+so the eval/compare scripts themselves don't need that directory at all.
+The two files are not checked in; rerun this script to recreate them
+whenever the source data changes.
 
 Usage:
     python3 generate_tgtm_gloss_lists.py

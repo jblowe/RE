@@ -2,8 +2,9 @@
 """Compare normalize_gloss_legacy vs normalize_gloss (the active pipeline)
 on real data.
 
-Reads two static gloss lists (this directory, generated from TGTM -- see
-GLOSS_NORMALIZATION.md for how and why):
+Reads two static gloss lists (this directory, not checked in; generate them
+from TGTM with generate_tgtm_gloss_lists.py -- see GLOSS_NORMALIZATION.md for
+how and why):
   - tgtm_reflex_glosses.txt: distinct glosses from TGTM's ten attested
     lexicons, one per line, source='reflex'
   - tgtm_mel_glosses.txt:    distinct glosses from TGTM.hand-extended-v4.mel.xml

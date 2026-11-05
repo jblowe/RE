@@ -238,19 +238,19 @@ class TestStylesheetFor:
 # Shape matches serialize.serialize_stats's actual output for the plain
 # "MEL usage" table (no <languages> sibling of <semantics>).
 COVERAGE_XML_PLAIN_MEL_USAGE = b"""<?xml version="1.0" encoding="utf-8"?>
-<stats>
+<mel_analysis>
   <semantics>
     <mel id="m1">
       <gl uses="2" xml:lang="fr">abandonner</gl>
       <gl uses="0">cast away</gl>
     </mel>
   </semantics>
-</stats>"""
+</mel_analysis>"""
 
 # Shape matches the annotated "MEL Annotated Coverage" table (<languages> is
 # a sibling of <semantics>, which is what selects the other template).
 COVERAGE_XML_ANNOTATED = b"""<?xml version="1.0" encoding="utf-8"?>
-<stats>
+<mel_analysis>
   <languages><lg>lang1</lg></languages>
   <semantics>
     <mel id="m1">
@@ -259,7 +259,7 @@ COVERAGE_XML_ANNOTATED = b"""<?xml version="1.0" encoding="utf-8"?>
       <lg name="lang1"><form status="set">abandonner</form></lg>
     </mel>
   </semantics>
-</stats>"""
+</mel_analysis>"""
 
 
 class TestCoverageXmlLangRendering:
