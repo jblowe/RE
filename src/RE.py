@@ -1446,8 +1446,9 @@ def filter_subsets(cognate_sets, statistics, root=True):
 # surface string
 def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
-    for cognate_set in cognate_sets:
-        uniques[(correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])] = cognate_set
+    for cognate_set in sorted(cognate_sets, key=lambda cs: correspondences_as_ids(cs[0])):
+        key = (correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])
+        uniques.setdefault(key, cognate_set)
     statistics.add_note(f'{len(uniques)} cognate sets with distinct reconstructions and distinct supporting forms')
     return uniques.values(), statistics
 
