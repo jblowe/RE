@@ -9,6 +9,11 @@ comparison against two earlier implementations that are kept in `mel.py` for
 reference:
 
 - **`normalize_gloss`** — the pipeline in use.
+- **`normalize_gloss_phrases`** — steps 1–5 of `normalize_gloss` only (whole
+  phrases: no phrasal-verb detection, no individual words). Used by
+  [`src/merge_mels.py`](src/merge_mels.py), which merges MELs on, and writes
+  out, phrase-level glosses; matching re-derives the word-level candidates
+  from them. A test checks its output is always a subset of `normalize_gloss`'s.
 - **`normalize_gloss_current`** — the 2.0.0 normalizer plus trailing-punctuation
   stripping: the version just before stopword removal, phrasal-verb detection
   and trailing-support-verb stripping were added. Nothing calls it.
