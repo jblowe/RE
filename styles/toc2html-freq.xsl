@@ -15,6 +15,17 @@
   </xsl:choose>
 </xsl:template>
 
+<!-- Gray subscript count after a value, for two or more occurrences. Zero is
+     shown by the red style and one by the light red style (see freq-style),
+     so neither needs a number. Every counted value in this view (segments,
+     fuzzy sources, class members) renders its count through this template. -->
+<xsl:template name="freq-sub">
+  <xsl:param name="freq"/>
+  <xsl:if test="number($freq) &gt; 1">
+    <sub class="cov-uses">&#160;<xsl:value-of select="$freq"/></sub>
+  </xsl:if>
+</xsl:template>
+
 <xsl:template match="/">
   <xsl:apply-templates select=".//tableOfCorr"/>
 </xsl:template>
@@ -60,9 +71,9 @@
     </xsl:call-template>
   </xsl:variable>
   <span style="{$span-style}"><xsl:value-of select="$token"/></span>
-  <xsl:if test="number($freq) > 1">
-    <sub class="cov-uses">&#160;<xsl:value-of select="$freq"/></sub>
-  </xsl:if>
+  <xsl:call-template name="freq-sub">
+    <xsl:with-param name="freq" select="$freq"/>
+  </xsl:call-template>
 </xsl:template>
 
 <xsl:template match="tableOfCorr">
@@ -124,6 +135,8 @@
         <span style="background:#dc3545;color:white;padding:1px 5px;border-radius:3px;">0</span>
         &#160;
         <span style="background:#f8d7da;padding:1px 5px;border-radius:3px;">1</span>
+        &#160;
+        <span style="padding:1px 5px;">2+ <sub class="cov-uses">n</sub></span>
       </small>
     </button>
     <div class="collapse" id="{$uid}-toc">
@@ -176,6 +189,9 @@
                     </xsl:call-template>
                   </xsl:variable>
                   <span style="{$seg-style}"><xsl:if test="@statut='doute'">=</xsl:if><xsl:value-of select="."/></span>
+                  <xsl:call-template name="freq-sub">
+                    <xsl:with-param name="freq" select="@freq"/>
+                  </xsl:call-template>
                   <!-- one "<<" then fuzz forms for THIS seg -->
                   <xsl:variable name="sv" select="normalize-space(.)"/>
                   <xsl:if test="../fuzz[@to = $sv]">
@@ -188,9 +204,9 @@
                         </xsl:call-template>
                       </xsl:variable>
                       <span style="{$fuzz-style}"><xsl:value-of select="@from"/></span>
-                      <xsl:if test="number(@count) &gt; 1">
-                        <sub class="cov-uses">&#160;<xsl:value-of select="@count"/></sub>
-                      </xsl:if>
+                      <xsl:call-template name="freq-sub">
+                        <xsl:with-param name="freq" select="@count"/>
+                      </xsl:call-template>
                     </xsl:for-each>
                   </xsl:if>
                   <xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>

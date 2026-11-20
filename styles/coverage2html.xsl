@@ -82,7 +82,11 @@
 
 <!-- ── Per-language coverage table ──────────────────────────────────────── -->
 <xsl:template match="lexicons">
-  <h5>Coverage by language</h5>
+  <h5>Coverage by language
+    <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+      &#160; reflexes in cognate sets only
+    </small>
+  </h5>
   <table class="table table-sm table-hover table-bordered sortable cov-table">
     <thead>
       <tr>
@@ -107,7 +111,11 @@
 
 <!-- ── Summary totals ───────────────────────────────────────────────────── -->
 <xsl:template match="totals">
-  <h5>Summary</h5>
+  <h5>Summary
+    <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
+      &#160; reflexes in cognate sets only
+    </small>
+  </h5>
   <table class="table table-sm table-bordered cov-table">
     <thead>
       <tr><th>Stat</th><th>Value</th></tr>
@@ -129,7 +137,7 @@
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
       &#160;
       <span class="cov-unused" style="padding:1px 6px;">unused glosses</span>
-      &#160; usage count in subscript
+      &#160; subscript: reflexes in cognate sets
     </small>
   </h5>
   <table class="table table-sm table-hover table-bordered sortable cov-table">
@@ -209,6 +217,14 @@
             id="btn-toggle-mel-glosses">Show MEL glosses</button>
     <button type="button" class="btn btn-sm btn-outline-secondary ms-1"
             id="btn-toggle-form-glosses">Show form glosses</button>
+    <!-- KWIC (keywords in context) toggles the MEL table for a KWIC table of the
+         MEL glosses. It needs the normalized glosses (norm elements) that the
+         run wrote into the MEL document, and only the MEL pane has it. -->
+    <xsl:if test="not($has_reconstructions) and mel/norm">
+      <button type="button" class="btn btn-sm btn-outline-secondary ms-1"
+              id="btn-toggle-kwic"
+              title="Toggle between the MEL table and a keywords-in-context view of the MEL glosses">KWIC</button>
+    </xsl:if>
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
       &#160;
       <xsl:choose>
@@ -223,7 +239,11 @@
       </xsl:choose>
       <span class="badge cov-mel-unused me-1">unused MEL</span>
       <span class="badge cov-gl-zero me-1">unused gloss</span>
-      &#160; usage count in subscript
+      &#160;
+      <xsl:choose>
+        <xsl:when test="$has_reconstructions">subscript: reflexes in cognate sets</xsl:when>
+        <xsl:otherwise>subscript: entries in the lexicons</xsl:otherwise>
+      </xsl:choose>
     </small>
   </h5>
   <div class="cov-annotated-wrap">
@@ -323,6 +343,106 @@
     </tbody>
   </table>
   </div>
+  <xsl:if test="not($has_reconstructions) and mel/norm">
+    <xsl:call-template name="kwic-table"/>
+  </xsl:if>
+</xsl:template>
+
+<!-- ── KWIC: each MEL gloss in turn at the centre of its MEL ────────────────
+     One row per MEL gloss. The centre column holds the gloss's normalized
+     keys as pills (hover: the literal gloss); the left and right columns
+     hold the MEL's other glosses, literal, before and after it in the MEL
+     (hover: its normalized keys). A value has a hover only when the hover
+     differs from what is shown, and is then bold. Context node: semantics. -->
+<xsl:template name="kwic-table">
+  <!-- Pill styling is inline (as well as in reconengine.css) so the keys stay
+       visibly separate even when an older stylesheet is cached. -->
+  <xsl:variable name="pill-style">display:inline-block; padding:0 .55em; margin:1px 3px; border:1px solid rgba(128,128,128,.55); border-radius:1em; background:rgba(128,128,128,.16); white-space:nowrap;</xsl:variable>
+  <div class="cov-kwic-wrap" style="display:none">
+    <table class="table table-sm table-hover table-bordered sortable cov-table kwic-table">
+      <thead>
+        <tr>
+          <th style="white-space:nowrap">MEL</th>
+          <th style="text-align:right">Left context</th>
+          <th>Gloss (normalized)</th>
+          <th>Right context</th>
+        </tr>
+      </thead>
+      <tbody>
+        <xsl:for-each select="mel">
+          <xsl:variable name="mel_id" select="@id"/>
+          <xsl:for-each select="gl">
+            <xsl:variable name="idx" select="count(preceding-sibling::gl) + 1"/>
+            <tr>
+              <td class="kwic-id"><xsl:value-of select="$mel_id"/></td>
+              <td class="kwic-left" style="text-align:right">
+                <xsl:for-each select="preceding-sibling::gl">
+                  <xsl:call-template name="kwic-context-gl"/>
+                  <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
+                </xsl:for-each>
+              </td>
+              <td class="kwic-center">
+                <xsl:choose>
+                  <xsl:when test="../norm[$idx]/k">
+                    <xsl:for-each select="../norm[$idx]/k">
+                      <xsl:variable name="literal" select="string(../../gl[$idx])"/>
+                      <span class="kwic-pill">
+                        <xsl:choose>
+                          <!-- shown value differs from the hover (the literal gloss):
+                               bold, with the hover -->
+                          <xsl:when test=". != $literal">
+                            <xsl:attribute name="title"><xsl:value-of select="$literal"/></xsl:attribute>
+                            <xsl:attribute name="style"><xsl:value-of select="$pill-style"/> font-weight:bold; cursor:help;</xsl:attribute>
+                          </xsl:when>
+                          <!-- same as the hover: no hover -->
+                          <xsl:otherwise>
+                            <xsl:attribute name="style"><xsl:value-of select="$pill-style"/></xsl:attribute>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:value-of select="."/>
+                      </span>
+                      <xsl:text> </xsl:text>
+                    </xsl:for-each>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <!-- nothing normalized survives: show the literal gloss, muted, with no hover -->
+                    <span class="kwic-pill kwic-pill-raw" style="{$pill-style} font-style:italic; opacity:.75;"><xsl:value-of select="."/></span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </td>
+              <td class="kwic-right">
+                <xsl:for-each select="following-sibling::gl">
+                  <xsl:call-template name="kwic-context-gl"/>
+                  <xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
+                </xsl:for-each>
+              </td>
+            </tr>
+          </xsl:for-each>
+        </xsl:for-each>
+      </tbody>
+    </table>
+  </div>
+</xsl:template>
+
+<!-- One literal gloss in a KWIC context; its normalized keys are the tooltip.
+     Context node: gl. -->
+<xsl:template name="kwic-context-gl">
+  <xsl:variable name="idx" select="count(preceding-sibling::gl) + 1"/>
+  <xsl:variable name="hover">
+    <xsl:for-each select="../norm[$idx]/k">
+      <xsl:value-of select="."/>
+      <xsl:if test="position() != last()"><xsl:text> | </xsl:text></xsl:if>
+    </xsl:for-each>
+  </xsl:variable>
+  <span class="kwic-gl">
+    <!-- A hover (the normalized keys) only when it says something other than the
+         gloss itself; then the gloss is bold to show there is one. -->
+    <xsl:if test="string($hover) != '' and string($hover) != string(.)">
+      <xsl:attribute name="title"><xsl:value-of select="$hover"/></xsl:attribute>
+      <xsl:attribute name="style">font-weight:bold; cursor:help;</xsl:attribute>
+    </xsl:if>
+    <xsl:value-of select="."/>
+  </span>
 </xsl:template>
 
 <!-- ── Unmatched glosses by language ─────────────────────────────────────── -->
@@ -330,7 +450,7 @@
   <a name="unmatched-by-lg"/>
   <h5>Unmatched glosses by language
     <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
-      &#160;
+      &#160; all lexicon entries, not only those in sets &#160;
       <span class="cov-repeated" style="padding:1px 6px;">in multiple languages</span>
     </small>
   </h5>
