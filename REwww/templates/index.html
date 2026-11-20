@@ -32,6 +32,10 @@
          data-re-tab href="#tab-projects" role="tab">Projects</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link disabled" id="tab-browse-nav"
+         data-re-tab href="#tab-browse" role="tab">Browse</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link disabled" id="tab-research-nav"
          data-re-tab href="#tab-research" role="tab">Research</a>
     </li>
@@ -88,6 +92,8 @@
   <div class="tab-content" id="main-tab-content">
 
     {% include '_projects_pane.html' %}
+
+    {% include '_browse_pane.html' %}
 
     <!-- ══ RESEARCH TAB ═══════════════════════════════════════════════════════ -->
     <div class="tab-pane fade" id="tab-research" role="tabpanel">

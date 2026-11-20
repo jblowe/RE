@@ -1,0 +1,19 @@
+<!-- ══ BROWSE TAB ═══════════════════════════════════════════════════════════
+     The XML files in the loaded run's project directory, by type; the chosen
+     file is rendered with the standard stylesheet for its type (browse.py).
+     Shown only while a run is loaded. -->
+<div class="tab-pane fade" id="tab-browse" role="tabpanel">
+  <div class="tab-toolbar">
+    <label for="browse-file" class="mb-0 small text-muted">File</label>
+    <select id="browse-file" class="form-select form-select-sm"
+            style="width:auto; max-width:36rem" disabled>
+      <option value="">Choose a file…</option>
+    </select>
+    <div class="btn-group btn-group-sm" id="browse-views" role="group"
+         aria-label="View" style="display:none"></div>
+    <span id="browse-note" class="small text-muted"></span>
+  </div>
+  <div class="content-area" id="browse-content">
+    <p class="text-muted">Choose a file to view.</p>
+  </div>
+</div><!-- /tab-browse -->

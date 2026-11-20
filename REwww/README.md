@@ -38,11 +38,13 @@ Then open `http://127.0.0.1:5001` in your browser.
 REwww/
   app.py          ← Flask app: path setup, Blueprint registration, entry point
   xslt.py         ← XSLT/XML rendering helpers
+  browse.py       ← Browse tab: list a project's XML files by type, render with the standard stylesheet
   routes.py       ← all HTTP route handlers (Blueprint)
   templates/
     index.html          ← page skeleton (includes partials below)
     _head.html          ← <head> tag with CSS styles
     _projects_pane.html ← Projects tab HTML (view + edit tables)
+    _browse_pane.html   ← Browse tab HTML
     _scripts.html       ← all client-side JavaScript
     about.html          ← About panel content
   static/asset/   ← Bootstrap, Font Awesome, reconengine.css, jQuery
@@ -80,6 +82,12 @@ The landing tab. One row per project defined in `projects.toml`.
 - **Refresh** — re-scans project directories for correspondence, MEL, and fuzzy files without reloading the page.
 
 ---
+
+### Browse
+
+Appears, right after Projects, only while a run is loaded. A dropdown lists the XML files in that run's **project directory** (not its `runs/` folder), grouped by type: tables of correspondences, lexicons, MELs, fuzzy rules, sets, then any other XML. Choosing a file renders it with the standard stylesheet for its type. Non-XML files are not listed.
+
+A file's type comes from its root element, not its name (`tableOfCorr`, `lexicon`, `semantics`, `fuzzy`, `reconstruction`). Lexicons and sets have small view buttons: Paragraph / Table, and for sets also Isolates / Failures when the file has any. XML with any other root, including class files such as `DIS.classes.xml`, is shown as indented source because no stylesheet covers it. The last file chosen is remembered per project (in the browser).
 
 ### Log
 
@@ -170,6 +178,8 @@ All three editable files (Parameters/ToC, MEL, Fuzzy) follow the same pattern:
 | `/api/run` | POST | Start an upstream run; returns `run_id` |
 | `/api/poll/<run_id>` | GET | Poll run status and log |
 | `/api/tab/<run_id>/<tab>` | GET | Rendered HTML for a result tab (`?mode=…`) |
+| `/api/browse/<run_id>/files` | GET | The XML files in the run's project directory, by type (Browse tab) |
+| `/api/browse/<run_id>/render` | GET | One of those files rendered (`?file=<name>&view=<view>`); only bare names of listed files are accepted |
 | `/api/raw/<run_id>/<tab>` | GET | Raw XML source for a file |
 | `/api/save/<run_id>/<tab>` | POST | Save raw XML (well-formedness checked) |
 | `/api/save_toc/<run_id>` | POST | Save correspondences from edit-form fields |
@@ -198,6 +208,9 @@ Stylesheets in `../styles/` used by REwww:
 | `mel2html-edit.xsl` | MEL tab — edit mode |
 | `fuzzy2html.xsl` | Fuzzy tab — view mode |
 | `fuzzy2html-edit.xsl` | Fuzzy tab — edit mode |
+| `isolates2html.xsl`, `failures2html.xsl` | Browse tab — Isolates / Failures views of a sets file |
+
+The Browse tab (`browse.py`) reuses `toc2html-view.xsl`, `lexicon2html.xsl`, `lexicon2table.xsl`, `mel2html.xsl`, `fuzzy2html.xsl`, `sets2html.xsl` and `sets2tabular.xsl`.
 
 
 ---

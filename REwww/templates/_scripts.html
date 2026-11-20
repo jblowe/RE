@@ -231,7 +231,11 @@
       const av = cellText(a, col), bv = cellText(b, col);
       const an = parseFloat(av), bn = parseFloat(bv);
       if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
-      return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+      // KWIC table: natural order, so MEL id es9 sorts before es14
+      const opts = table.classList.contains('kwic-table')
+        ? { numeric: true, sensitivity: 'base' } : undefined;
+      return asc ? av.localeCompare(bv, undefined, opts)
+                 : bv.localeCompare(av, undefined, opts);
     });
     rows.forEach(r => tbody.appendChild(r));
   }
@@ -282,8 +286,8 @@ function setTabEnabled(tabNavId, enabled) {
    returns to Projects with no run loaded; called with true as soon as any
    run is loaded or any other tab is activated. */
 function setRunTabsVisible(visible) {
-  ['tab-research-nav','tab-interactive-nav','tab-parameters-nav','tab-sets-nav',
-   'tab-stats-nav','tab-lexicons-nav'].forEach(navId => {
+  ['tab-browse-nav','tab-research-nav','tab-interactive-nav','tab-parameters-nav',
+   'tab-sets-nav','tab-stats-nav','tab-lexicons-nav'].forEach(navId => {
     const li = document.getElementById(navId);
     if (li) li.closest('li').style.display = visible ? '' : 'none';
   });
@@ -684,7 +688,7 @@ document.getElementById('main-tab-content').addEventListener('click', function (
       document.getElementById('run-badge').textContent = parts.join('  ·  ');
     })();
 
-    ['tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
+    ['tab-browse-nav','tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
       .forEach(id => setTabEnabled(id, false));
 
@@ -873,6 +877,8 @@ function handleRunDone(data, activateAfter) {
   });
   setTabEnabled('tab-lexicons-nav', true);
   loadLexiconTabs();
+  setTabEnabled('tab-browse-nav', true);
+  initBrowse();
   document.getElementById('btn-freq-parameters').style.display = '';
   document.getElementById('btn-edit-parameters').style.display = '';
 
@@ -1127,6 +1133,8 @@ document.querySelectorAll('#lexicons-mode-btns button').forEach(btn => {
      via mel-glosses-hidden on the container.
    - "Show/Hide form glosses" toggles form-glosses-hidden on the container;
      CSS hides all .cov-gloss spans when that class is present.
+   - "KWIC" (MEL pane only) toggles kwic-view on the container; CSS then shows
+     the KWIC table in place of the MEL table (the heading and its buttons stay).
    - The Protoform column (.cov-pf-hm) expand/collapse is per-row only.
    - Both container classes persist across AJAX tab reloads; syncCoverageGlossToggle()
      re-applies them and is wired as the afterLoad callback.
@@ -1147,6 +1155,18 @@ function syncCoverageGlossToggle(container) {
   const formBtn = container.querySelector('#btn-toggle-form-glosses');
   if (melBtn)  melBtn.textContent  = melHidden  ? 'Show MEL glosses'  : 'Hide MEL glosses';
   if (formBtn) formBtn.textContent = formHidden ? 'Show form glosses' : 'Hide form glosses';
+  const kwicBtn = container.querySelector('#btn-toggle-kwic');
+  if (kwicBtn) {
+    const on = container.classList.contains('kwic-view');
+    kwicBtn.classList.toggle('active', on);
+    kwicBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    /* Show exactly one of the two tables. Set directly (not only via the
+       kwic-view CSS rules) so it holds even if an older stylesheet is cached. */
+    const melTable  = container.querySelector('.cov-annotated-wrap');
+    const kwicTable = container.querySelector('.cov-kwic-wrap');
+    if (melTable)  melTable.style.display  = on ? 'none' : '';
+    if (kwicTable) kwicTable.style.display = on ? 'block' : 'none';
+  }
   container.querySelectorAll('.cov-gl-hm').forEach(cell => setCellExpanded(cell, !melHidden));
 }
 
@@ -1164,6 +1184,12 @@ function syncCoverageGlossToggle(container) {
       const formBtn = e.target.closest('#btn-toggle-form-glosses');
       if (formBtn) {
         container.classList.toggle('form-glosses-hidden');
+        syncCoverageGlossToggle(container);
+        return;
+      }
+      const kwicBtn = e.target.closest('#btn-toggle-kwic');
+      if (kwicBtn) {
+        container.classList.toggle('kwic-view');
         syncCoverageGlossToggle(container);
         return;
       }
@@ -1188,6 +1214,126 @@ document.addEventListener('hide.bs.collapse', function (e) {
   if (!btn) return;
   if (btn.classList.contains('iso-more-btn'))  btn.textContent = '+';
   if (btn.classList.contains('cov-hm-toggle')) btn.textContent = '+' + (btn.dataset.moreCount || '');
+});
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Browse pane — the XML files of the loaded run's project, by type.
+
+   initBrowse() (called when a run is loaded) fetches the file list into a
+   dropdown grouped by type; choosing a file renders it with the standard
+   stylesheet for its type. Types with alternative views (lexicon: paragraph /
+   table; sets: also isolates / failures when the file has any) get small
+   toggle buttons. The last file chosen per project is remembered.
+   ══════════════════════════════════════════════════════════════════════════ */
+const browseState = { project: null, files: [], view: null, runId: null };
+
+function _browseRemembered(project) {
+  try { return localStorage.getItem('re.browse.' + project) || ''; } catch (e) { return ''; }
+}
+function _browseRemember(project, name) {
+  try { localStorage.setItem('re.browse.' + project, name); } catch (e) { /* optional */ }
+}
+
+function _browseSizeLabel(bytes) {
+  if (bytes >= 1048576) return (bytes / 1048576).toFixed(1) + ' MB';
+  if (bytes >= 1024)    return Math.round(bytes / 1024) + ' KB';
+  return bytes + ' B';
+}
+
+function initBrowse() {
+  if (!currentRunId) return;
+  const runId = currentRunId;
+  const sel   = document.getElementById('browse-file');
+  const body  = document.getElementById('browse-content');
+  browseState.runId = runId;
+  sel.disabled = true;
+  fetch(`/api/browse/${runId}/files`)
+    .then(r => r.json())
+    .then(data => {
+      if (runId !== currentRunId) return;           // a newer run was loaded meanwhile
+      if (data.error) { body.innerHTML = `<p class="text-danger">${data.error}</p>`; return; }
+      browseState.project = data.project;
+      browseState.files   = data.files;
+      browseState.view    = null;
+      sel.innerHTML = '<option value="">Choose a file…</option>';
+      let group = null, optgroup = null;
+      data.files.forEach(f => {
+        if (f.group !== group) {
+          group = f.group;
+          optgroup = document.createElement('optgroup');
+          optgroup.label = group;
+          sel.appendChild(optgroup);
+        }
+        const o = document.createElement('option');
+        o.value = f.name;
+        o.textContent = `${f.name}  (${_browseSizeLabel(f.size)})`;
+        optgroup.appendChild(o);
+      });
+      sel.disabled = data.files.length === 0;
+      document.getElementById('browse-note').textContent =
+        data.files.length ? '' : 'No XML files in this project directory.';
+      const remembered = _browseRemembered(data.project);
+      sel.value = data.files.some(f => f.name === remembered) ? remembered : '';
+      loadBrowse();
+    })
+    .catch(e => { body.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+function _browseButtons(entry) {
+  const box = document.getElementById('browse-views');
+  box.innerHTML = '';
+  if (!entry || entry.views.length < 2) { box.style.display = 'none'; return; }
+  entry.views.forEach(v => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'btn btn-outline-secondary' + (v.key === browseState.view ? ' active' : '');
+    b.dataset.view = v.key;
+    b.textContent = v.label;
+    box.appendChild(b);
+  });
+  box.style.display = '';
+}
+
+function loadBrowse() {
+  const sel   = document.getElementById('browse-file');
+  const body  = document.getElementById('browse-content');
+  const note  = document.getElementById('browse-note');
+  const name  = sel.value;
+  const entry = browseState.files.find(f => f.name === name);
+  if (!entry) {
+    _browseButtons(null);
+    note.textContent = '';
+    body.innerHTML = '<p class="text-muted">Choose a file to view.</p>';
+    return;
+  }
+  _browseRemember(browseState.project, name);
+  if (!entry.views.some(v => v.key === browseState.view)) {
+    browseState.view = entry.views.length ? entry.views[0].key : null;
+  }
+  _browseButtons(entry);
+  note.textContent = entry.type === 'other' ? 'no stylesheet: source shown' : '';
+  const runId = browseState.runId;
+  body.innerHTML = `<p class="text-muted">${spinnerHtml()}Loading…</p>`;
+  const q = `file=${encodeURIComponent(name)}` +
+            (browseState.view ? `&view=${encodeURIComponent(browseState.view)}` : '');
+  fetch(`/api/browse/${runId}/render?${q}`)
+    .then(r => r.text())
+    .then(html => {
+      if (document.getElementById('browse-file').value !== name) return;   // user moved on
+      body.innerHTML = html;
+    })
+    .catch(e => { body.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+}
+
+document.getElementById('browse-file').addEventListener('change', () => {
+  browseState.view = null;           // each file opens in its standard view
+  loadBrowse();
+});
+document.getElementById('browse-views').addEventListener('click', e => {
+  const b = e.target.closest('button[data-view]');
+  if (!b) return;
+  browseState.view = b.dataset.view;
+  loadBrowse();
 });
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -1763,7 +1909,7 @@ function loadHistRun(runId, project) {
     document.getElementById('nav-compare').style.display = 'none';
     setTabEnabled('tab-compare-nav', false);
     /* Reset disabled tabs before wiring */
-    ['tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
+    ['tab-browse-nav','tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
       .forEach(id => setTabEnabled(id, false));
     handleRunDone(data);
@@ -1820,6 +1966,7 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     setRunTabsVisible(true);
     if (tabName === 'log' || tabName === 'compare' || !currentRunId) return;
     if (tabName === 'lexicons') return;  // sub-tabs manage their own content
+    if (tabName === 'browse') return;    // filled by initBrowse(), not /api/tab
     if (tabName === 'research')     { loadResearchPane();     return; }
     if (tabName === 'interactive')  { loadInteractivePane();  return; }
     const saveBtn = document.getElementById(`btn-save-${tabName}`);
@@ -1857,7 +2004,7 @@ document.querySelectorAll('#main-tabs .nav-link[data-re-tab]').forEach(link => {
     btn.disabled = true;
     document.querySelectorAll('.run-btn').forEach(b => b.disabled = true);
 
-    ['tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
+    ['tab-browse-nav','tab-parameters-nav','tab-research-nav','tab-sets-nav','tab-stats-nav',
      'tab-lexicons-nav','tab-mel-nav','tab-fuzzy-nav','tab-coverage-nav']
       .forEach(id => setTabEnabled(id, false));
     document.getElementById('nav-mel').style.display      = 'none';

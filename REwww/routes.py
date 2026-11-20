@@ -15,6 +15,7 @@ import lxml.etree as ET
 from flask import (Blueprint, abort, jsonify, render_template,
                    request, Response)
 
+import browse
 import xslt
 import projects as proj_module
 import runlog
@@ -1056,10 +1057,15 @@ def api_tab(run_id, tab):
             return '<p class="text-muted">No correspondences files.</p>'
 
         if mode == 'freq':
-            sets_file = files.get('sets')
-            if not sets_file or not os.path.isfile(sets_file):
-                return '<p class="text-muted">No sets file found — run the project first.</p>'
-            annotated = xslt.compute_corr_freq(sets_file, recon_files[0])
+            stats_file = files.get('stats')
+            if not stats_file or not os.path.isfile(stats_file):
+                return '<p class="text-muted">No statistics file found — run the project first.</p>'
+            annotated = xslt.compute_corr_freq(stats_file, recon_files[0])
+            if annotated is None:
+                return ('<p class="text-muted">This run did not record usage counts for '
+                        'this table of correspondences (runs made before counts were '
+                        'recorded, or a table the run did not use). Re-run the project '
+                        'to see them.</p>')
             fuz_path_f = files.get('fuzzy')
             if fuz_path_f and os.path.isfile(fuz_path_f):
                 _annotate_fuzzy(annotated, fuz_path_f, files.get('fuzzy_cov'))
@@ -1215,6 +1221,45 @@ def api_tab(run_id, tab):
 
 
 # ── Raw XML (for edit mode) ────────────────────────────────────────────────────
+
+# ── Browse pane ────────────────────────────────────────────────────────────────
+# Browses the XML files in the project directory of a loaded run (see
+# browse.py). Files are always named by bare file name and checked against the
+# project directory, never taken as paths.
+
+def _browse_project(run_id):
+    """(project name, project directory) for a loaded run, or (None, None)."""
+    with _runs_lock:
+        r = _runs.get(run_id)
+    if r is None:
+        return None, None
+    path = proj_module.projects.get(r['project'])
+    if not path or not os.path.isdir(path):
+        return r['project'], None
+    return r['project'], path
+
+
+@bp.route('/api/browse/<run_id>/files')
+def api_browse_files(run_id):
+    """The project's XML files, grouped and ordered by type."""
+    project, path = _browse_project(run_id)
+    if path is None:
+        return jsonify(error='Run or project not found.'), 404
+    return jsonify(project=project, files=browse.list_files(path))
+
+
+@bp.route('/api/browse/<run_id>/render')
+def api_browse_render(run_id):
+    """One project file rendered with the standard stylesheet for its type
+    (?file=<name>&view=<view key>)."""
+    project, path = _browse_project(run_id)
+    if path is None:
+        return '<p class="text-danger">Run or project not found.</p>', 404
+    full = browse.resolve(path, request.args.get('file', ''))
+    if full is None:
+        return '<p class="text-danger">No such file in this project.</p>', 404
+    return browse.render(full, request.args.get('view'))
+
 
 @bp.route('/api/raw/<run_id>/<tab>')
 def api_raw(run_id, tab):

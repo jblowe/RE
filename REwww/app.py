@@ -43,6 +43,18 @@ app = Flask(
 )
 app.register_blueprint(routes.bp)
 
+
+# Version stamp for reconengine.css, so a browser that cached an older copy
+# fetches the new one as soon as the file changes (see templates/_head.html).
+@app.context_processor
+def _asset_versions():
+    try:
+        v = int(os.path.getmtime(
+            os.path.join(STATIC_DIR, 'asset', 'css', 'reconengine.css')))
+    except OSError:
+        v = 0
+    return {'css_version': v}
+
 # ── Entry point ────────────────────────────────────────────────────────────────
 if __name__ == '__main__':
     import argparse

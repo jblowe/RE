@@ -137,6 +137,22 @@ body { font-size: 0.875rem; background: #f8f9fa; }
    the Protoform column's cells (.cov-pf-hm) are per-row only. One
    delegated JS handler (in _scripts.html) drives every "+"/"−" button and
    keeps its label (count when collapsed, none when expanded) in sync. */
+/* KWIC view (MEL pane): the KWIC table replaces the MEL table while the
+   container carries kwic-view; the heading and its buttons stay put. */
+.cov-kwic-wrap { display: none; }
+#mel-view-content.kwic-view .cov-annotated-wrap { display: none; }
+#mel-view-content.kwic-view .cov-kwic-wrap { display: block; }
+.kwic-table td.kwic-id     { white-space: nowrap; font-size: 0.8em; vertical-align: top; }
+.kwic-table td.kwic-left   { text-align: right; width: 36%; }
+.kwic-table td.kwic-center { text-align: center; width: 22%; font-weight: 600; }
+.kwic-table td.kwic-right  { text-align: left;  width: 36%; }
+.kwic-pill {
+  display: inline-block; padding: 0 .55em; margin: 1px 2px;
+  border: 1px solid rgba(128,128,128,.45); border-radius: 1em;
+  background: rgba(128,128,128,.16); white-space: nowrap;
+}
+.kwic-pill-raw { font-style: italic; font-weight: normal; opacity: .75; }
+
 .cov-hm-cell .cov-hm-full  { display: none; }
 .cov-hm-cell .cov-hm-short { display: inline; }
 .cov-hm-cell.cov-hm-expanded .cov-hm-full  { display: inline; }
