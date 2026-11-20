@@ -157,18 +157,39 @@ def resolve_file(project_path, project_code, token, suffix):
                 return(os.path.join(root, f))
     return None
 
-def find_candidates(project_path, suffix):
-    """find all candidate files with the specified suffix."""
-    candidates = []
+def find_candidates(project_path, suffix, project_name=None):
+    """Return display tokens for files in project_path whose names end with .<suffix>.
+
+    The token is normally the part of the filename between the optional
+    project-name prefix and the suffix (e.g. "hand" from "TGTM.hand.mel.xml"
+    when project_name="TGTM").  When project_name is omitted the full prefix
+    before the suffix is returned unchanged.
+
+    Collision handling: if stripping the project-name prefix would make two
+    distinct full prefixes map to the same token, both are kept in their
+    full-prefix form so they remain distinguishable in a dropdown.
+    """
+    full_prefixes = []
     for root, dirs, files in os.walk(project_path):
         for f in files:
-            if f.endswith(suffix):
-                pattern = re.compile(rf'^(?:[^.]+\.)?([^.]+).{suffix}$')
-                m = pattern.match(f)
-                if m:
-                    # print(f, "→", m.group(1))
-                    candidates.append(m.group(1))
-    return sorted(candidates)
+            m = re.match(rf'^(.+)\.{re.escape(suffix)}$', f)
+            if m:
+                full_prefixes.append(m.group(1))
+
+    if not project_name:
+        return sorted(full_prefixes)
+
+    pn_dot = project_name + '.'
+    stripped = {fp: fp[len(pn_dot):] if fp.startswith(pn_dot) else fp
+                for fp in full_prefixes}
+
+    # Count how many full prefixes map to each token; revert collisions.
+    token_counts = {}
+    for token in stripped.values():
+        token_counts[token] = token_counts.get(token, 0) + 1
+
+    return sorted(fp if token_counts[token] > 1 else token
+                  for fp, token in stripped.items())
 
 
 def read_protolanguage_from_correspondences(full_path):

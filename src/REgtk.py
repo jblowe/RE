@@ -131,9 +131,9 @@ class ProjectManagerDialog(Gtk.Dialog):
         self.recon_combo.remove_all()
         self.fuzzy_combo.remove_all()
         try:
-            recons = find_candidates(projects.projects[project], 'correspondences.xml')
-            mels = find_candidates(projects.projects[project], 'mel.xml')
-            fuzzies = find_candidates(projects.projects[project], 'fuz.xml')
+            recons = find_candidates(projects.projects[project], 'correspondences.xml', project)
+            mels = find_candidates(projects.projects[project], 'mel.xml', project)
+            fuzzies = find_candidates(projects.projects[project], 'fuz.xml', project)
             self.mel_combo.append_text('N/A')
             for mel in mels:
                 self.mel_combo.append_text(mel)

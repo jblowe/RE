@@ -636,9 +636,9 @@ def index():
             continue
         project_data[name] = {
             'path':               path,
-            'recons':             find_candidates(path, 'correspondences.xml'),
-            'mels':               find_candidates(path, 'mel.xml'),
-            'fuzzies':            find_candidates(path, 'fuz.xml'),
+            'recons':             find_candidates(path, 'correspondences.xml', name),
+            'mels':               find_candidates(path, 'mel.xml', name),
+            'fuzzies':            find_candidates(path, 'fuz.xml', name),
             'upstream_suggestion': _upstream_suggestion(path, name),
         }
     history_counts = {name: runlog.count_runs(name) for name in project_data}
@@ -659,9 +659,9 @@ def api_projects():
             continue
         data[name] = {
             'path':               path,
-            'recons':             find_candidates(path, 'correspondences.xml'),
-            'mels':               find_candidates(path, 'mel.xml'),
-            'fuzzies':            find_candidates(path, 'fuz.xml'),
+            'recons':             find_candidates(path, 'correspondences.xml', name),
+            'mels':               find_candidates(path, 'mel.xml', name),
+            'fuzzies':            find_candidates(path, 'fuz.xml', name),
             'history_count':      runlog.count_runs(name),
             'upstream_suggestion': _upstream_suggestion(path, name),
         }
