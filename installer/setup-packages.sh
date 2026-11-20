@@ -22,10 +22,10 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-flask \
   mingw-w64-ucrt-x86_64-python-pip \
   mingw-w64-ucrt-x86_64-python-tomli \
-  mingw-w64-ucrt-x86_64-python-tomli-w
+  mingw-w64-ucrt-x86_64-python-tomli-w \
+  mingw-w64-ucrt-x86_64-python-nltk
 
-echo "=== Installing NLTK and required corpora ==="
-pip install nltk
+echo "=== Downloading required NLTK corpora ==="
 python -m nltk.downloader stopwords wordnet omw-1.4
 
 echo "=== Done ==="
