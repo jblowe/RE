@@ -239,6 +239,35 @@ def normalize_gloss(gloss, lang=None):
     return tuple(phrases)
 
 
+# Phrase-level normalization only: steps 1-5 of normalize_gloss, i.e. what
+# is left of a gloss once asides, the keyterm marker and Lexware | are
+# handled, it is split on / , ; :, and leading particles are stripped. No
+# phrasal-verb detection (step 6) and no individual words (step 7).
+#
+# Used by merge_mels.py, which writes these strings into merged MELs: they
+# are the whole phrases a MEL author would recognise as glosses, not
+# heuristic fragments, and normalize_gloss will still derive the word-level
+# candidates from them at matching time. Every item returned here is also in
+# normalize_gloss(gloss)'s result (tests/test_merge_mels.py checks this, so
+# the two cannot silently drift apart).
+def normalize_gloss_phrases(gloss):
+    gloss = _PAREN_RE.sub('', gloss).replace('*', '')
+    if '|' in gloss:
+        variants = [gloss.replace('|', ''), re.sub(r'\|.*', '', gloss)]
+    else:
+        variants = [gloss]
+    seen = set()
+    phrases = []
+    for v in variants:
+        v = _TRAILING_SUPPORT_RE.sub('', v)
+        for part in re.split(r'[/,;:]', v):
+            part = _strip_particles(part.strip().strip('?').rstrip('!.').strip())
+            if part and part not in seen:
+                seen.add(part)
+                phrases.append(part)
+    return tuple(phrases)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # A verbatim port of the previous ("legacy") normalize_gloss from
 # ~/GitHub/RE.dev/src/mel.py (an earlier, separate repo), kept only for

@@ -165,7 +165,10 @@ class Lexicon:
 
     # Given a lexicon and a set of fuzzy rules, return a list of
     # forms, some of which are marked as fuzzied, and a Counter of
-    # which from-strings fired (keyed by (language, from_string)).
+    # which from-strings fired in the lexicon as a whole (keyed by
+    # (language, from_string)). Each FuzzyForm also remembers the rules
+    # that fired on it (rules_fired), so usage can later be counted over
+    # only the forms that end up in cognate sets (see tally_set_usage).
     def fuzzied_forms(self, fuzzy):
         usage = collections.Counter()
         specific_mapping = {representative: target
@@ -176,7 +179,8 @@ class Lexicon:
         for form in self.forms:
             fuzzied_glyphs = fuzzy_string(specific_mapping, form.glyphs)
             if fuzzied_glyphs != form.glyphs:
-                fuzzied_forms.append(FuzzyForm(fuzzied_glyphs, form))
+                fuzzy_form = FuzzyForm(fuzzied_glyphs, form)
+                fuzzied_forms.append(fuzzy_form)
                 fuzzied_count += 1
                 # Track which rules fired for this form.
                 # Re-walk the string to record usage (fuzzy_string
@@ -189,6 +193,7 @@ class Lexicon:
                             best_initial, best_len = initial, len(initial)
                     if best_initial:
                         usage[(self.language, best_initial)] += 1
+                        fuzzy_form.rules_fired.append((self.language, best_initial))
                         s = s[best_len:]
                     else:
                         s = s[1:]
@@ -480,6 +485,10 @@ class QuirkyForm(AlternateForm):
 class FuzzyForm(AlternateForm):
     def __init__(self, glyphs, actual):
         super().__init__(glyphs, actual)
+        # (language, from_string) for every fuzzy rule application that
+        # produced these glyphs, in order (a rule that fires twice appears
+        # twice). Filled in by Lexicon.fuzzied_forms.
+        self.rules_fired = []
 
     def __str__(self):
         return f'{str(self.actual)} (fuzzied to {self.glyphs})'
@@ -511,7 +520,18 @@ class Statistics:
         self.language_stats = {}
         self.correspondences_used_in_recons = collections.Counter()
         self.correspondences_used_in_sets = collections.Counter()
-        self.fuzzy_usage = collections.Counter()   # (language, from_string) → count
+        # (language, from_string) → number of reflexes in cognate sets whose
+        # fuzzied form used that rule (each reflex counts once per rule).
+        # Filled in by tally_set_usage, not by project_back.
+        self.fuzzy_usage = collections.Counter()
+        # proto-language name → {'rows': Counter(corr id),
+        #                        'cells': Counter((corr id, language)),
+        #                        'segs': Counter((corr id, language, seg index))}
+        # counting reflexes in cognate sets (see tally_set_usage).
+        self.toc_usage = {}
+        # reflexes in cognate sets whose parse could not be re-aligned to
+        # their glyphs (should always be 0; reported in the run notes).
+        self.alignment_failures = 0
         # quirk id → {'seen': N, 'reconstructed': N}, counting only the
         # alternative (QuirkyForm) outcome, never the raw attested original.
         self.quirk_usage = collections.defaultdict(lambda: {'seen': 0, 'reconstructed': 0})
@@ -1174,9 +1194,8 @@ def project_back(lexicons, parameters, statistics):
         fuzzied_count = 0
         fuzzied_map = {}
         if parameters.fuzzy:
-            fuzzied_list, fuzzied_count, fuzzy_usage = lexicon.fuzzied_forms(parameters.fuzzy)
+            fuzzied_list, fuzzied_count, _ = lexicon.fuzzied_forms(parameters.fuzzy)
             fuzzied_map = {id(ff.actual): ff for ff in fuzzied_list}
-            statistics.fuzzy_usage.update(fuzzy_usage)
 
         quirky_forms = []
         if parameters.table.quirks:
@@ -1446,11 +1465,160 @@ def filter_subsets(cognate_sets, statistics, root=True):
 # surface string
 def pick_derivation(cognate_sets, statistics, only_with_mel):
     uniques = {}
-    for cognate_set in sorted(cognate_sets, key=lambda cs: correspondences_as_ids(cs[0])):
+    # Sets with the same support and the same reconstruction string are
+    # collapsed to one. Break ties on the MEL's id as well as on the
+    # correspondences, or which MEL such a set is credited to would depend on
+    # the order in which the candidate sets happened to be produced.
+    for cognate_set in sorted(cognate_sets,
+                              key=lambda cs: (correspondences_as_ids(cs[0]),
+                                              str(getattr(cs[3], 'id', '') or ''))):
         key = (correspondences_as_proto_form_string(cognate_set[0]), cognate_set[1])
         uniques.setdefault(key, cognate_set)
     statistics.add_note(f'{len(uniques)} cognate sets with distinct reconstructions and distinct supporting forms')
     return uniques.values(), statistics
+
+# ── Usage accounting for cognate sets ────────────────────────────────────────
+#
+# Every count shown for the table of correspondences, its classes and the
+# fuzzy rules is a count of *reflexes in cognate sets*: a reflex (a form
+# directly supporting a set) adds at most 1 to any one counter, however
+# many times it uses the item within the word. Forms that end up as
+# isolates or failures are never counted.
+#
+# A set's reconstruction is the tuple of correspondences its supporting
+# forms were parsed with, so what each reflex used is known exactly except
+# for *which variant* ("seg") of each correspondence's cell matched.
+# align_parse recovers that by walking the parse against the reflex's
+# glyphs the same way the tokenizer matched them (including fuzzied
+# variants of the table's daughter tokens).
+
+def align_parse(parse, glyphs, accessor, fuzzy_mapping=None):
+    """Return [(correspondence, variant_index), ...] aligning parse to glyphs,
+    or None when no alignment exists.
+
+    variant_index is the position of the matched token in accessor(c), i.e.
+    the index of the <seg> within the correspondence's <modern> cell. When
+    several segmentations fit, longer tokens are preferred, and an unfuzzied
+    token is preferred to a fuzzied one that yields the same key.
+    """
+    def keyed_tokens(c):
+        tokens = []
+        for index, token in enumerate(accessor(c)):
+            if token == '':
+                break      # same as partition_correspondences: ignore the rest
+            key = token
+            if fuzzy_mapping:
+                fuzzied = fuzzy_string(fuzzy_mapping, token)
+                if fuzzied != token and fuzzied != '':
+                    key = fuzzied
+            tokens.append((index, token, key))
+        tokens.sort(key=lambda t: (-len(t[2]), t[1] != t[2]))
+        return tokens
+
+    options = [keyed_tokens(c) for c in parse]
+    n = len(glyphs)
+
+    def walk(i, position):
+        if i == len(parse):
+            return [] if position == n else None
+        for (index, token, key) in options[i]:
+            if token == '∅':           # epenthesis: consumes no text
+                rest = walk(i + 1, position)
+                if rest is not None:
+                    return [(parse[i], index)] + rest
+            elif glyphs.startswith(key, position):
+                rest = walk(i + 1, position + len(key))
+                if rest is not None:
+                    return [(parse[i], index)] + rest
+        return None
+
+    return walk(0, 0)
+
+def tally_set_usage(root_forms, param_tree, statistics):
+    """Count the reflexes in the final cognate sets against the table of
+    correspondences (rows, cells and segs) and the fuzzy rules.
+
+    root_forms are the root-level ProtoForms, one per derivation of each final
+    set (a set whose support can be derived in several ways appears once per
+    derivation). A set is identified by its supporting forms; a reflex counts
+    once for each set it belongs to, however many derivations the set has or
+    times it uses an item, and counts under an item if ANY derivation of the
+    set uses it for that reflex. At every level of the tree, the forms
+    directly supporting a ProtoForm are its reflexes, counted against that
+    level's table.
+    """
+    fuzzy_by_level = {}
+
+    def usage_for(level):
+        return statistics.toc_usage.setdefault(
+            level,
+            {'rows': collections.Counter(),
+             'cells': collections.Counter(),
+             'segs': collections.Counter()})
+
+    def fuzzy_mapping(parameters, language):
+        key = (parameters.proto_language_name, language)
+        if key not in fuzzy_by_level:
+            fuzzy_by_level[key] = (
+                {rep: target
+                 for ((lang, rep), target) in parameters.fuzzy.items()
+                 if lang == language}
+                if parameters.fuzzy else None)
+        return fuzzy_by_level[key]
+
+    derivations_of = collections.defaultdict(list)
+    for proto_form in root_forms:
+        derivations_of[proto_form.supporting_forms].append(proto_form)
+
+    for derivations in derivations_of.values():
+        # (level, reflex) -> what that reflex used, over all derivations of this set
+        used = {}
+
+        def walk(proto_form):
+            parameters = param_tree[proto_form.language]
+            level = parameters.proto_language_name
+            seen_here = set()
+            for form in proto_form.supporting_forms:
+                # the same attested reflex can support a set through more than
+                # one form (e.g. a quirk's alternative and the original): once
+                if form.attested_support in seen_here:
+                    continue
+                seen_here.add(form.attested_support)
+                language = form.language
+                item = used.setdefault((level, form.attested_support),
+                                       {'language': language, 'corrs': set(),
+                                        'segs': set(), 'fuzzy': set(),
+                                        'unaligned': False})
+                base = form.modern if isinstance(form, Stage0Form) else form
+                if isinstance(base, FuzzyForm):
+                    item['fuzzy'].update(base.rules_fired)
+                aligned = align_parse(
+                    proto_form.correspondences, form.glyphs,
+                    lambda c, language=language: c.daughter_forms.get(language) or [],
+                    fuzzy_mapping(parameters, language))
+                item['corrs'].update(c.id for c in proto_form.correspondences)
+                if aligned is None:
+                    item['unaligned'] = True
+                else:
+                    item['segs'].update((c.id, index) for (c, index) in aligned)
+                if isinstance(form, ProtoForm):
+                    walk(form)
+
+        for proto_form in derivations:
+            walk(proto_form)
+
+        for (level, _reflex), item in used.items():
+            usage = usage_for(level)
+            language = item['language']
+            for c_id in item['corrs']:
+                usage['rows'][c_id] += 1
+                usage['cells'][(c_id, language)] += 1
+            for (c_id, index) in item['segs']:
+                usage['segs'][(c_id, language, index)] += 1
+            for rule in item['fuzzy']:
+                statistics.fuzzy_usage[rule] += 1
+            if item['unaligned']:
+                statistics.alignment_failures += 1
 
 def batch_upstream(lexicons, params, only_with_mel, root, associated_mels_table):
     projections, statistics = project_back(lexicons, params, Statistics())
@@ -1528,6 +1696,17 @@ def upstream_tree(target, tree, param_tree, attested_lexicons, only_with_mel,
     result = rec(target, True)
     result.statistics.language_stats = accumulated_language_stats
     result.statistics.debug_notes = accumulated_debug_notes
+    # Usage counts are reporting only: if they cannot be made, say so in the
+    # log rather than losing the reconstruction itself.
+    try:
+        tally_set_usage(result.forms, param_tree, result.statistics)
+    except Exception as exc:
+        result.statistics.add_note(
+            f'WARNING: usage counts for cognate sets could not be made: {exc!r}')
+    if result.statistics.alignment_failures:
+        result.statistics.add_note(
+            f'WARNING: {result.statistics.alignment_failures} reflexes in sets could not '
+            f'be aligned to their correspondences; their segment counts are missing')
     return result
 
 # Return a mapping from protolanguage to its associated parameter object.

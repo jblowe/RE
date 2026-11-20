@@ -134,6 +134,14 @@ def build_annotated_coverage(mels, associated_mels_table, languages, root_lexico
     seen_reconstructions = set()             # (mel_id, glyphs, status) dedup
     meso_included = 0
     meso_excluded = 0
+    # Per-synonym usage in COGNATE SETS: (mel_id, synonym) -> number of
+    # reflexes in sets whose gloss matched that synonym. A reflex counts once
+    # for each set it belongs to (a set is identified by its supporting forms,
+    # so a set with several derivations still counts it once), under each
+    # MEL and synonym it matched there.
+    synonym_usage = Counter()
+    seen_usage = set()                 # (set, mel_id, synonym, lang, glyphs, gloss)
+    reflexes_in_sets = defaultdict(set)  # lang -> {(glyphs, gloss)}
 
     def real_mel(m):
         return m if (m and getattr(m, 'glosses', None)) else None
@@ -165,12 +173,25 @@ def build_annotated_coverage(mels, associated_mels_table, languages, root_lexico
         elif gl and gl != 'missing':
             add_pseudo(gl, lang, glyphs, status)
 
+    def count_set_reflex(the_set, lang, glyphs, gl, mels_for_reflex):
+        reflexes_in_sets[lang].add((glyphs, gl))
+        if associated_mels_table is None or not gl:
+            return
+        for m in mels_for_reflex:
+            for syn in mel.matched_synonyms(associated_mels_table, gl, m):
+                key = (the_set, m.id, syn, lang, glyphs, gl)
+                if key not in seen_usage:
+                    seen_usage.add(key)
+                    synonym_usage[(m.id, syn)] += 1
+
     # Recursively walk a set's supporting-forms tree (mirrors the recursion
     # serialize.render_xml uses to write sets.xml): leaves are attested
     # reflexes; internal nodes are mesolanguage (intermediate proto-language)
     # reconstructions.
-    def walk_set(form, set_mel, status):
+    def walk_set(form, set_mel, status, the_set=None):
         nonlocal meso_included, meso_excluded
+        if the_set is None:
+            the_set = form.supporting_forms
         for sf in form.supporting_forms:
             if isinstance(sf, ProtoForm):
                 if set_mel is not None:
@@ -178,15 +199,20 @@ def build_annotated_coverage(mels, associated_mels_table, languages, root_lexico
                     add_form(set_mel.id, sf.language, '*' + sf.glyphs, status, '')
                 else:
                     meso_excluded += 1
-                walk_set(sf, set_mel, status)
+                walk_set(sf, set_mel, status, the_set)
             else:
                 glyphs, gl = _reflex_display(sf)
                 if set_mel is not None:
                     add_form(set_mel.id, sf.language, glyphs, status, gl)
+                    count_set_reflex(the_set, sf.language, glyphs, gl, [set_mel])
                 else:
                     # This set has no single unifying real MEL (only_with_mel
                     # was off): fall back to resolving each reflex's own gloss.
                     resolve_by_gloss(gl, sf.language, glyphs, status)
+                    count_set_reflex(
+                        the_set, sf.language, glyphs, gl,
+                        mel.associated_mels(associated_mels_table, gl, True)
+                        if associated_mels_table is not None and gl else [])
 
     for pf in getattr(root_lexicon, 'forms', []):
         set_mel = real_mel(pf.mel)
@@ -217,6 +243,8 @@ def build_annotated_coverage(mels, associated_mels_table, languages, root_lexico
     stats.mel_forms = mel_forms
     stats.pseudo_forms = pseudo_forms
     stats.mel_reconstructions = mel_reconstructions
+    stats.synonym_usage = synonym_usage
+    stats.reflexes_in_sets = reflexes_in_sets
     stats.add_stat('mesoreconstructions_included', meso_included)
     stats.add_stat('mesoreconstructions_excluded', meso_excluded)
     return stats
@@ -240,4 +268,41 @@ def build_coverage_statistics(mels, attested_lexicons, associated_mels_table,
     stats.pseudo_forms = annotated.pseudo_forms
     stats.mel_reconstructions = annotated.mel_reconstructions
     stats.summary_stats.update(annotated.summary_stats)
+
+    # Every count the Coverage report shows is a count of reflexes in
+    # cognate sets: replace the lexicon-wide figures check_mel_coverage
+    # computed (kept for the standalone coverage command) with set-based ones.
+    # Only the list of unmatched glosses below stays lexicon-wide.
+    synonym_usage = annotated.synonym_usage
+    used_mel_ids = {mel_id for (mel_id, _gl), n in synonym_usage.items() if n > 0}
+    mel_glosses = set()
+    mel_usage = {}
+    for m in (mels or []):
+        mel_glosses |= set(m.glosses)
+        mel_usage[m.id] = {gl: synonym_usage.get((m.id, gl), 0) for gl in m.glosses}
+        mel_usage[m.id]['usage'] = m.id in used_mel_ids
+    used_gloss_strings = {gl for (_id, gl), n in synonym_usage.items() if n > 0}
+    unused_mel_glosses = len(mel_glosses - used_gloss_strings)
+    stats.mel_usage = mel_usage
+    stats.add_stat('unused_mels', len(mels or []) - len(used_mel_ids))
+    stats.add_stat('unused_mel_glosses', unused_mel_glosses)
+    stats.add_stat('used_mel_glosses', len(mel_glosses) - unused_mel_glosses)
+
+    all_glosses = set()
+    language_stats = {}
+    for language in attested_lexicons:
+        reflexes = annotated.reflexes_in_sets.get(language, set())
+        glosses = {gl for (_glyphs, gl) in reflexes if gl}
+        matched = sum(1 for gl in glosses
+                      if associated_mels_table is not None
+                      and mel.associated_mels(associated_mels_table, gl, True))
+        all_glosses |= glosses
+        language_stats[language] = {
+            'input_glosses': len(glosses),
+            'matched': matched,
+            'not_matched': len(glosses) - matched,
+            'forms': len(reflexes),
+        }
+    stats.language_stats = language_stats
+    stats.add_stat('distinct_input_glosses', len(all_glosses))
     return stats
