@@ -435,6 +435,42 @@ def serialize_stats(stats, settings, args, filename):
     except Exception:
         pass
 
+    # Reflexes in cognate sets counted against each table of correspondences
+    # (see RE.tally_set_usage). Only non-zero counts are written; anything
+    # absent is 0. A <seg> is identified by its position (idx) within its
+    # <modern> cell, so the counts do not depend on how the table's glyphs are
+    # normalized. REwww stamps these onto a copy of the table for display.
+    toc_usage = getattr(stats, 'toc_usage', None)
+    if toc_usage:
+        usage_el = ET.SubElement(root, 'toc_usage')
+        files = {}
+        try:
+            files = {proto: os.path.basename(path)
+                     for proto, path in settings.proto_languages.items()}
+        except Exception:
+            pass
+        for proto in sorted(toc_usage):
+            counts = toc_usage[proto]
+            attrs = {'proto': proto}
+            if proto in files:
+                attrs['file'] = files[proto]
+            level_el = ET.SubElement(usage_el, 'level', attrib=attrs)
+            by_row = collections.defaultdict(dict)    # num -> {language: {idx: n}}
+            for (num, language, idx), n in counts['segs'].items():
+                by_row[num].setdefault(language, {})[idx] = n
+            for (num, language) in counts['cells']:
+                by_row[num].setdefault(language, {})
+            for num in sorted(counts['rows'], key=lambda x: (len(x), x)):
+                row_el = ET.SubElement(level_el, 'corr', attrib={
+                    'num': num, 'uses': str(counts['rows'][num])})
+                for language in sorted(by_row.get(num, {})):
+                    cell_el = ET.SubElement(row_el, 'modern', attrib={
+                        'dialecte': language,
+                        'uses': str(counts['cells'].get((num, language), 0))})
+                    for idx in sorted(by_row[num][language]):
+                        ET.SubElement(cell_el, 'seg', attrib={
+                            'idx': str(idx), 'uses': str(by_row[num][language][idx])})
+
     for name, value in stats.summary_stats.items():
         ET.SubElement(runstats, name).set('value', str(stats.summary_stats[name]))
 
@@ -681,6 +717,13 @@ def serialize_mel_lexicon_annotated(mels, attested_lexicons, association, all_la
             lang = mel_obj.gloss_langs.get(gl_text)
             if lang:
                 gl_el.set(XML_LANG, lang)
+        # The normalized keys of each gloss (the candidates glosses are matched
+        # on, see mel.normalize_gloss), one <norm> per <gl> in the same order,
+        # for the MEL pane's KWIC view.
+        for gl_text in mel_obj.glosses:
+            norm_el = ET.SubElement(entry, 'norm')
+            for key in mel_mod.normalize_gloss(gl_text):
+                ET.SubElement(norm_el, 'k').text = key
         for language in all_languages:
             lg_el = ET.SubElement(entry, 'lg', attrib={'name': language})
             for (glyphs, gl_text) in lang_forms.get(language, []):
