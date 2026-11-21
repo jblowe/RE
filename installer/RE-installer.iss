@@ -61,10 +61,10 @@ Source: "msys2-installer.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall
 Source: "setup-packages.sh"; DestDir: "{#Msys2Dir}\tmp"; \
   DestName: "re-setup.sh"; Flags: ignoreversion
 
-; ── UCRT64 bash launcher ──────────────────────────────────────────────────────
-; Like run-bash.vbs but sets MSYSTEM=UCRT64 before launching bash --login so
-; the profile puts /ucrt64/bin on PATH and Python DLLs load correctly.
-Source: "run-bash-ucrt64.vbs"; DestDir: "{#Msys2Dir}\tmp"; Flags: ignoreversion
+; ── NLTK installer ────────────────────────────────────────────────────────────
+; Windows batch file: sets PATH to include UCRT64 bin, then runs pip and
+; nltk.downloader using the full path to the UCRT64 python.exe.
+Source: "install-nltk.bat"; DestDir: "{#Msys2Dir}\tmp"; Flags: ignoreversion
 
 ; ── Project pipeline runner ───────────────────────────────────────────────────
 ; Copied to MSYS2's /tmp so bash can reach it as /tmp/run-pipelines.sh
@@ -119,10 +119,11 @@ Filename: "wscript.exe"; \
   StatusMsg: "Installing GTK and Python packages — this may take a few minutes..."
 
 ; ── Step 3: Install NLTK and download corpora ────────────────────────────────
-; Uses run-bash-ucrt64.vbs which sets MSYSTEM=UCRT64 before bash --login,
-; ensuring /ucrt64/bin is on PATH so Python and its DLLs load correctly.
-Filename: "wscript.exe"; \
-  Parameters: "//B //Nologo ""{#Msys2Dir}\tmp\run-bash-ucrt64.vbs"" ""python -m pip install nltk >> /tmp/re-setup.log 2>&1 && python -m nltk.downloader stopwords wordnet omw-1.4 >> /tmp/re-setup.log 2>&1"""; \
+; Runs install-nltk.bat directly via cmd.exe; the bat file sets PATH to include
+; C:\msys64\ucrt64\bin and calls the UCRT64 python.exe by its full path, so
+; Windows finds all required DLLs without needing a bash login shell.
+Filename: "cmd.exe"; \
+  Parameters: "/C ""{#Msys2Dir}\tmp\install-nltk.bat"""; \
   Flags: waituntilterminated; \
   StatusMsg: "Installing NLTK..."
 
