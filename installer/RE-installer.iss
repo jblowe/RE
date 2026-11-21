@@ -62,9 +62,12 @@ Source: "setup-packages.sh"; DestDir: "{#Msys2Dir}\tmp"; \
   DestName: "re-setup.sh"; Flags: ignoreversion
 
 ; ── NLTK installer ────────────────────────────────────────────────────────────
-; Windows batch file: sets PATH to include UCRT64 bin, then runs pip and
-; nltk.downloader using the full path to the UCRT64 python.exe.
-Source: "install-nltk.bat"; DestDir: "{#Msys2Dir}\tmp"; Flags: ignoreversion
+; install-nltk.bat calls bootstrap-nltk.py via the UCRT64 python.exe.
+; bootstrap-nltk.py calls os.add_dll_directory() (os/nt is a built-in module,
+; not a .pyd) before importing anything, so C-extension DLL deps in ucrt64/bin
+; are found even when Python's SetDefaultDllDirectories restriction is active.
+Source: "install-nltk.bat";   DestDir: "{#Msys2Dir}\tmp"; Flags: ignoreversion
+Source: "bootstrap-nltk.py";  DestDir: "{#Msys2Dir}\tmp"; Flags: ignoreversion
 
 ; ── Project pipeline runner ───────────────────────────────────────────────────
 ; Copied to MSYS2's /tmp so bash can reach it as /tmp/run-pipelines.sh
