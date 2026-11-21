@@ -9,7 +9,9 @@ echo "=== Synchronising MSYS2 package database ==="
 pacman -Sy --noconfirm
 
 echo "=== Installing GTK3, Python and core dependencies ==="
-pacman -S --needed --noconfirm \
+# --overwrite '*' forces file restoration even when packages appear up to date,
+# repairing any files that pip or other tools may have corrupted.
+pacman -S --noconfirm --overwrite '*' \
   mingw-w64-ucrt-x86_64-python \
   mingw-w64-ucrt-x86_64-perl \
   mingw-w64-ucrt-x86_64-gtk3 \
@@ -24,7 +26,8 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-tomli \
   mingw-w64-ucrt-x86_64-python-tomli-w \
   mingw-w64-ucrt-x86_64-zlib \
-  mingw-w64-ucrt-x86_64-openssl
+  mingw-w64-ucrt-x86_64-openssl \
+  mingw-w64-ucrt-x86_64-expat
 
 echo "=== Installing NLTK ==="
 # Use the full path so this works regardless of MSYSTEM setting.
