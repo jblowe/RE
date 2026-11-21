@@ -5,6 +5,11 @@
 # Called by the Inno Setup installer with the Windows app directory as $1.
 # =============================================================================
 
+# Ensure the UCRT64 Python (with lxml, regex, etc.) is on PATH.
+# The bash launched by the installer may not have MSYSTEM=UCRT64 set,
+# so /ucrt64/bin is not automatically on PATH.
+export PATH="/ucrt64/bin:/usr/bin:$PATH"
+
 # Convert Windows path (e.g. C:\RE2) to MSYS2 path (e.g. /c/RE2)
 APPDIR=$(cygpath -u "$1")
 SRCDIR="$APPDIR/src"
