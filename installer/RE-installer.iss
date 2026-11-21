@@ -61,6 +61,11 @@ Source: "msys2-installer.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall
 Source: "setup-packages.sh"; DestDir: "{#Msys2Dir}\tmp"; \
   DestName: "re-setup.sh"; Flags: ignoreversion
 
+; ── NLTK installer batch script ───────────────────────────────────────────────
+; Run as a plain Windows batch file (not bash) so it uses the same PATH and
+; Python as the launcher .bat files, avoiding MSYS2 bash DLL-path issues.
+Source: "install-nltk.bat"; DestDir: "{#Msys2Dir}\tmp"; Flags: ignoreversion
+
 ; ── Project pipeline runner ───────────────────────────────────────────────────
 ; Copied to MSYS2's /tmp so bash can reach it as /tmp/run-pipelines.sh
 Source: "run-pipelines.sh"; DestDir: "{#Msys2Dir}\tmp"; \
@@ -113,7 +118,14 @@ Filename: "wscript.exe"; \
   Flags: waituntilterminated; \
   StatusMsg: "Installing GTK and Python packages — this may take a few minutes..."
 
-; ── Step 3: Run project data pipelines ────────────────────────────────────────
+; ── Step 3: Install NLTK and download corpora ────────────────────────────────
+; Run as a plain Windows .bat (not bash) so Python runs with the same PATH
+; the launcher scripts use — avoids all MSYS2 bash DLL-search-path issues.
+Filename: "{#Msys2Dir}\tmp\install-nltk.bat"; \
+  Flags: waituntilterminated runhidden; \
+  StatusMsg: "Installing NLTK..."
+
+; ── Step 4: Run project data pipelines ────────────────────────────────────────
 ; Prepares DIS, HMONGMIEN, and POLYNESIAN example data.
 ; The Windows app path is passed via single quotes so cygpath can convert it.
 Filename: "wscript.exe"; \

@@ -1,0 +1,6 @@
+@echo off
+set PATH=C:\msys64\ucrt64\bin;C:\msys64\usr\bin;%PATH%
+echo Installing NLTK...
+python -m pip install nltk >> C:\msys64\tmp\re-setup.log 2>&1
+echo Downloading NLTK corpora...
+python -m nltk.downloader stopwords wordnet omw-1.4 >> C:\msys64\tmp\re-setup.log 2>&1

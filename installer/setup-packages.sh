@@ -5,11 +5,6 @@
 # =============================================================================
 set -e
 
-# The installer launches bash --login with MSYSTEM=MSYS, which excludes
-# /ucrt64/bin from PATH. Add it explicitly so that Python and its dependency
-# DLLs (libgcc, libstdc++, etc.) are on the Windows DLL search path.
-export PATH="/ucrt64/bin:$PATH"
-
 echo "=== Synchronising MSYS2 package database ==="
 pacman -Sy --noconfirm
 
@@ -28,11 +23,5 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-pip \
   mingw-w64-ucrt-x86_64-python-tomli \
   mingw-w64-ucrt-x86_64-python-tomli-w
-
-echo "=== Installing NLTK into UCRT64 site-packages ==="
-/ucrt64/bin/python -m pip install --prefix=/ucrt64 nltk
-
-echo "=== Downloading required NLTK corpora ==="
-/ucrt64/bin/python -m nltk.downloader stopwords wordnet omw-1.4
 
 echo "=== Done ==="
