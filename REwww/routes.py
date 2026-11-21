@@ -24,7 +24,15 @@ from utils import (find_candidates, spec_display, spec_for_storage,
                    read_protolanguage_from_correspondences,
                    list_attested_languages)
 
+from version import get_version
+
 bp = Blueprint('main', __name__)
+
+
+@bp.app_context_processor
+def _inject_version():
+    """Make {{ re_version }} available to every template (used in the footer)."""
+    return {'re_version': get_version()}
 
 # ── In-memory run store  { run_id -> run_info dict } ──────────────────────────
 _runs: dict = {}

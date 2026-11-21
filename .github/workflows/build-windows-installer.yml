@@ -26,6 +26,18 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history + tags, so `git describe` can count commits since the last tag
+
+      - name: Stamp VERSION from git
+        # Installed copies have no .git, so src/version.py falls back to this file.
+        # Tag build -> "2.0.1-rc1"; untagged build -> "2.0.1-rc1+73.g7f49fd6".
+        run: |
+          $v = (python src\version.py).Trim()
+          if (-not $v -or $v -eq "unknown") { throw "could not determine version" }
+          [System.IO.File]::WriteAllText("$PWD\VERSION", "$v`n")
+          Write-Host "VERSION = $v"
+        shell: pwsh
 
       - name: Install Inno Setup
         run: choco install innosetup --yes --no-progress

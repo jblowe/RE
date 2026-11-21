@@ -85,6 +85,8 @@ Source: "run-bash.vbs"; DestDir: "{#Msys2Dir}\tmp"; \
 Source: "..\src\*";    DestDir: "{app}\src";    Flags: ignoreversion recursesubdirs
 Source: "..\REwww\*";  DestDir: "{app}\REwww";  Flags: ignoreversion recursesubdirs
 Source: "..\styles\*"; DestDir: "{app}\styles"; Flags: ignoreversion recursesubdirs
+; VERSION is read by src/version.py (installed copies have no .git to describe)
+Source: "..\VERSION";  DestDir: "{app}";         Flags: ignoreversion skipifsourcedoesntexist
 
 ; ── Bundled example projects ─────────────────────────────────────────────────
 ; Timestamped run outputs (NAME.YYYYMMDD-HHMMSS.*) and compiled Python files

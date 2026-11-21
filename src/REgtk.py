@@ -17,6 +17,7 @@ import tomli_w
 import load_hooks
 import projects
 import checkpoint
+from version import get_version
 from datetime import datetime
 import xml.etree.ElementTree as ET
 import traceback
@@ -1495,6 +1496,13 @@ class StatusBar(Gtk.Box):
         self.dirty_label = Gtk.Label(label="")
         self.dirty_label.set_halign(Gtk.Align.END)
         self.pack_start(self.dirty_label, False, False, 0)
+
+        # Right-aligned version (tag, or tag+commits.hash in development)
+        self.version_label = Gtk.Label(label=f"RE {get_version()}")
+        self.version_label.set_halign(Gtk.Align.END)
+        self.version_label.set_selectable(True)
+        self.version_label.get_style_context().add_class("dim-label")
+        self.pack_end(self.version_label, False, False, 0)
 
         self.show_all()
         self.dirtied = set()

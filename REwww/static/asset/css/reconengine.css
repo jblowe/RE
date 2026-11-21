@@ -257,6 +257,14 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .re-scroll-table {
 }
 
+/* ── Footer (version) ────────────────────────────────────────────────────── */
+#re-footer {
+  margin: 2rem 0 .75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+}
+
 /* ── Back-to-top button ──────────────────────────────────────────────────── */
 #btn-back-to-top {
   position: fixed;
