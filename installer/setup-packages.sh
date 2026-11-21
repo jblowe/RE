@@ -24,10 +24,10 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-tomli \
   mingw-w64-ucrt-x86_64-python-tomli-w
 
-echo "=== Installing NLTK via pip ==="
-python -m pip install nltk
+echo "=== Installing NLTK into UCRT64 site-packages ==="
+/ucrt64/bin/python -m pip install --prefix=/ucrt64 nltk
 
 echo "=== Downloading required NLTK corpora ==="
-python -m nltk.downloader stopwords wordnet omw-1.4
+/ucrt64/bin/python -m nltk.downloader stopwords wordnet omw-1.4
 
 echo "=== Done ==="
