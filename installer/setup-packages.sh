@@ -5,11 +5,10 @@
 # =============================================================================
 set -e
 
-# The installer launches bash --login with the default MSYSTEM=MSYS environment,
-# which excludes /ucrt64/bin from PATH. Switch to UCRT64 so that Python and its
-# dependency DLLs (libgcc, libstdc++, etc.) are on the Windows DLL search path.
-export MSYSTEM=UCRT64
-source /etc/profile
+# The installer launches bash --login with MSYSTEM=MSYS, which excludes
+# /ucrt64/bin from PATH. Add it explicitly so that Python and its dependency
+# DLLs (libgcc, libstdc++, etc.) are on the Windows DLL search path.
+export PATH="/ucrt64/bin:$PATH"
 
 echo "=== Synchronising MSYS2 package database ==="
 pacman -Sy --noconfirm
