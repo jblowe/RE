@@ -111,7 +111,7 @@ Filename: "{tmp}\msys2-installer.exe"; \
   StatusMsg: "Installing MSYS2..."; \
   Check: ShouldInstallMsys2
 
-; ── Step 2: Install all packages (pacman + pip) ───────────────────────────────
+; ── Step 2: Install all packages (pacman + pip + NLTK corpora) ───────────────
 ; Routed through run-bash.vbs so WScript.Shell.Run passes CREATE_NO_WINDOW to
 ; bash, preventing the empty MSYS2 console window that SW_HIDE/runhidden alone
 ; cannot suppress for Cygwin-family binaries.
@@ -121,16 +121,7 @@ Filename: "wscript.exe"; \
   Flags: waituntilterminated; \
   StatusMsg: "Installing GTK and Python packages — this may take a few minutes..."
 
-; ── Step 3: Install NLTK and download corpora ────────────────────────────────
-; Runs install-nltk.bat directly via cmd.exe; the bat file sets PATH to include
-; C:\msys64\ucrt64\bin and calls the UCRT64 python.exe by its full path, so
-; Windows finds all required DLLs without needing a bash login shell.
-Filename: "cmd.exe"; \
-  Parameters: "/C ""{#Msys2Dir}\tmp\install-nltk.bat"""; \
-  Flags: waituntilterminated; \
-  StatusMsg: "Installing NLTK..."
-
-; ── Step 4: Run project data pipelines ────────────────────────────────────────
+; ── Step 3: Run project data pipelines ────────────────────────────────────────
 ; Prepares DIS, HMONGMIEN, and POLYNESIAN example data.
 ; The Windows app path is passed via single quotes so cygpath can convert it.
 Filename: "wscript.exe"; \

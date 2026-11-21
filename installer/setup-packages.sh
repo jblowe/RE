@@ -22,6 +22,17 @@ pacman -S --needed --noconfirm \
   mingw-w64-ucrt-x86_64-python-flask \
   mingw-w64-ucrt-x86_64-python-pip \
   mingw-w64-ucrt-x86_64-python-tomli \
-  mingw-w64-ucrt-x86_64-python-tomli-w
+  mingw-w64-ucrt-x86_64-python-tomli-w \
+  mingw-w64-ucrt-x86_64-zlib
+
+echo "=== Installing NLTK ==="
+# Use the full path so this works regardless of MSYSTEM setting.
+# Running Python from within bash uses MSYS2's process environment, which
+# properly sets up DLL search paths for UCRT64 C-extension modules.
+export PATH="/ucrt64/bin:/usr/bin:$PATH"
+/ucrt64/bin/python -m pip install nltk
+
+echo "=== Downloading NLTK corpora ==="
+/ucrt64/bin/python -m nltk.downloader stopwords wordnet omw-1.4
 
 echo "=== Done ==="
