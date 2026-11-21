@@ -13,16 +13,21 @@
   /* ── Research pane ─────────────────────────────────────────────────────── */
   #research-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "params stats" "sets sets";
+    /* 6px tracks hold the drag-to-resize splitters (see "Pane splitters" in
+       reconengine.css / script).  The fr tracks are rewritten by the script
+       once the user drags a splitter. */
+    grid-template-columns: minmax(0, 2fr) 6px minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) 6px minmax(0, 1fr);
+    grid-template-areas: "params vsplit stats" "hsplit hsplit hsplit" "sets sets sets";
     height: calc(100vh - 108px);  /* navbar + tabs only — no toolbar row */
-    gap: 4px;
+    gap: 0;
     margin-top: 4px;
   }
   #research-params-panel { grid-area: params; }
   #research-stats-panel  { grid-area: stats; }
   #research-sets-panel   { grid-area: sets; }
+  #research-split-v      { grid-area: vsplit; }
+  #research-split-h      { grid-area: hsplit; }
 
   /* Each panel is a flex column: fixed header + scrolling content */
   #research-params-panel,
@@ -101,9 +106,9 @@
   /* ── Interactive pane ─────────────────────────────────────────────────────── */
   #interactive-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) 6px minmax(0, 1fr) 6px minmax(0, 1fr);
     height: calc(100vh - 108px);
-    gap: 4px;
+    gap: 0;
     margin-top: 4px;
   }
 
@@ -2375,5 +2380,159 @@ function _fillSingleLanguage(language, reflex, gloss) {
     _origActivateTab(targetId);
     updateTopBtn();
   };
+})();
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Resizable panes
+   1. Research / Interactive tabs: drag the splitters between panes.
+   2. Single-pane tabs: drag the native bottom-right grip of .content-area.
+   Sizes persist in localStorage; double-click a splitter / the grip to reset.
+   ══════════════════════════════════════════════════════════════════════════ */
+(function () {
+  const SPLIT = 6;                       /* px — must match the grid splitter tracks */
+  const store = {
+    get(k)    { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+    del(k)    { try { localStorage.removeItem(k); } catch (e) {} },
+  };
+
+  /* ── 1. Splitters ─────────────────────────────────────────────────────── */
+  /* panelIds: the panes along `axis`, in order; handleIds[i] sits between
+     panelIds[i] and panelIds[i+1].  Sizes are stored as fr ratios, so they
+     keep their proportions when the window is resized. */
+  function setupSplitters(gridId, axis, panelIds, handleIds) {
+    const grid    = document.getElementById(gridId);
+    const panels  = panelIds.map(id => document.getElementById(id));
+    const handles = handleIds.map(id => document.getElementById(id));
+    if (!grid || panels.some(p => !p) || handles.some(h => !h)) return;
+
+    const prop = axis === 'col' ? 'gridTemplateColumns' : 'gridTemplateRows';
+    const key  = `re-split:${gridId}:${axis}`;
+    const min  = axis === 'col' ? 140 : 80;           /* smallest pane, px */
+    const size = el => { const r = el.getBoundingClientRect();
+                         return axis === 'col' ? r.width : r.height; };
+    const apply = sizes => {
+      grid.style[prop] = sizes.map(s => `minmax(0, ${s}fr)`).join(` ${SPLIT}px `);
+    };
+
+    const saved = store.get(key);
+    if (Array.isArray(saved) && saved.length === panels.length &&
+        saved.every(n => typeof n === 'number' && n > 0 && isFinite(n))) {
+      apply(saved);
+    }
+
+    handles.forEach((handle, i) => {
+      handle.addEventListener('pointerdown', e => {
+        if (e.button !== 0) return;
+        const sizes0 = panels.map(size);
+        if (sizes0.some(s => s <= 0)) return;          /* tab not visible */
+        e.preventDefault();
+        handle.setPointerCapture(e.pointerId);
+        handle.classList.add('dragging');
+        document.body.classList.add('re-splitting', `re-splitting-${axis}`);
+
+        const start = axis === 'col' ? e.clientX : e.clientY;
+        const total = sizes0[i] + sizes0[i + 1];
+
+        const move = ev => {
+          const pos = axis === 'col' ? ev.clientX : ev.clientY;
+          const a   = Math.max(min, Math.min(total - min, sizes0[i] + pos - start));
+          const s   = sizes0.slice();
+          s[i] = a;  s[i + 1] = total - a;
+          apply(s);
+        };
+        const done = () => {
+          handle.removeEventListener('pointermove', move);
+          handle.removeEventListener('pointerup', done);
+          handle.removeEventListener('pointercancel', done);
+          handle.classList.remove('dragging');
+          document.body.classList.remove('re-splitting', `re-splitting-${axis}`);
+          store.set(key, panels.map(size));
+        };
+        handle.addEventListener('pointermove', move);
+        handle.addEventListener('pointerup', done);
+        handle.addEventListener('pointercancel', done);
+      });
+
+      handle.addEventListener('dblclick', () => {      /* reset this grid axis */
+        grid.style[prop] = '';
+        store.del(key);
+      });
+    });
+  }
+
+  setupSplitters('research-grid', 'col',
+    ['research-params-panel', 'research-stats-panel'], ['research-split-v']);
+  setupSplitters('research-grid', 'row',
+    ['research-params-panel', 'research-sets-panel'],  ['research-split-h']);
+  setupSplitters('interactive-grid', 'col',
+    ['interactive-input-panel', 'interactive-process-panel', 'interactive-results-panel'],
+    ['interactive-split-1', 'interactive-split-2']);
+
+  /* ── 2. Single-pane tabs: native resize grip ──────────────────────────── */
+  const GRIP = 18;                                     /* px — grip hit area */
+  const sizedAreas = () =>
+    Array.from(document.querySelectorAll('.tab-pane > .content-area[id]'));
+  const sizeKey = el => `re-size:${el.id}`;
+
+  function markSized(el, w, h) {
+    el.classList.add('re-user-sized');                 /* lifts the default max-height */
+    if (h) el.style.height = h;
+    if (w) el.style.width  = w;
+  }
+  function resetSized(el) {
+    el.classList.remove('re-user-sized');
+    el.style.height = '';
+    el.style.width  = '';
+    store.del(sizeKey(el));
+  }
+  const inGrip = (el, e) => {
+    const r = el.getBoundingClientRect();
+    return e.clientX > r.right - GRIP && e.clientY > r.bottom - GRIP;
+  };
+
+  sizedAreas().forEach(el => {
+    const s = store.get(sizeKey(el));
+    if (s && (s.h || s.w)) markSized(el, s.w, s.h);
+  });
+
+  /* Pressing the grip: freeze the current height first, so lifting the cap
+     doesn't make the pane jump.  If the press turns out to be a plain click
+     (no size change) put things back as they were. */
+  document.addEventListener('pointerdown', e => {
+    const el = e.target;
+    if (!(el instanceof Element) || !el.matches('.tab-pane > .content-area[id]')) return;
+    if (!inGrip(el, e)) return;
+
+    const r0   = el.getBoundingClientRect();
+    const prev = { cls: el.classList.contains('re-user-sized'),
+                   h: el.style.height, w: el.style.width };
+    el.classList.add('re-user-sized');
+    el.style.height = r0.height + 'px';
+
+    const finish = () => {
+      window.removeEventListener('pointerup', finish);
+      window.removeEventListener('mouseup', finish);
+      window.removeEventListener('pointercancel', finish);
+      const r = el.getBoundingClientRect();
+      if (Math.abs(r.height - r0.height) < 2 && Math.abs(r.width - r0.width) < 2) {
+        el.classList.toggle('re-user-sized', prev.cls);   /* just a click */
+        el.style.height = prev.h;
+        el.style.width  = prev.w;
+      } else {
+        store.set(sizeKey(el), { h: el.style.height, w: el.style.width });
+      }
+    };
+    window.addEventListener('pointerup', finish);
+    window.addEventListener('mouseup', finish);
+    window.addEventListener('pointercancel', finish);
+  }, true);
+
+  document.addEventListener('dblclick', e => {
+    const el = e.target;
+    if (el instanceof Element && el.matches('.tab-pane > .content-area[id]') && inGrip(el, e)) {
+      resetSized(el);
+    }
+  });
 })();
 </script>

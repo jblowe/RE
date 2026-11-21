@@ -63,6 +63,42 @@ body { font-size: 0.875rem; background: #f8f9fa; }
   max-height: calc(100vh - 180px);
 }
 
+/* ── User-resizable panes ────────────────────────────────────────────────── */
+/* Single-pane tabs: drag the bottom-right grip to change height and width.
+   The script adds .re-user-sized on the first drag, which lifts the default
+   height cap so the pane can grow past it. */
+.tab-pane > .content-area {
+  resize: both;
+  max-width: 100%;
+}
+.tab-pane > .content-area.re-user-sized { max-height: none; }
+
+/* Multi-pane tabs (Research, Interactive): draggable dividers between panes.
+   The grid reserves a 6px track for each one. */
+.re-splitter {
+  position: relative;
+  touch-action: none;
+  user-select: none;
+  z-index: 6;
+}
+.re-splitter-col { cursor: col-resize; }
+.re-splitter-row { cursor: row-resize; }
+.re-splitter::after {            /* thin visible grip line */
+  content: '';
+  position: absolute;
+  background: #dee2e6;
+  border-radius: 2px;
+  transition: background .12s;
+}
+.re-splitter-col::after { top: 0; bottom: 0; left: 2px; width: 2px; }
+.re-splitter-row::after { left: 0; right: 0; top: 2px; height: 2px; }
+.re-splitter:hover::after,
+.re-splitter.dragging::after { background: #EC5800; }
+/* While dragging, keep the cursor and ignore text selection everywhere */
+body.re-splitting        { user-select: none; }
+body.re-splitting-col    { cursor: col-resize !important; }
+body.re-splitting-row    { cursor: row-resize !important; }
+
 /* ── Global table constraints ────────────────────────────────────────────── */
 .content-area table {
   width: auto !important;
