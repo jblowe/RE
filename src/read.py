@@ -277,7 +277,11 @@ def read_lexicon(xmlfile, norm=nfc):
     tree = ET.parse(xmlfile)
     language = tree.getroot().attrib.get('dialecte')
     forms = [RE.ModernForm(language,
-                           norm(entry.find('hw').text)
+                           # .text stops at the first child element, so a
+                           # headword like "¹hə <suffix>-nə</suffix>" yields
+                           # "¹hə " -- strip the trailing space or the form
+                           # can never parse.
+                           norm((entry.find('hw').text or '').strip())
                            if entry.find('hw') is not None
                            else '',
                            # fallback to provided gloss if there is no
