@@ -11,6 +11,11 @@
     <xsl:strip-space
             elements="*"/>
 
+    <!-- diff marks for the Browse pane's "Compare local with an earlier commit";
+         no effect on a file that has no diff annotations -->
+    <xsl:include href="diff-common.xsl"/>
+
+
     <xsl:template match="/">
         <div>
             <a name="top">
@@ -45,8 +50,13 @@
             </thead>
             <xsl:for-each select="./*">
                 <tr>
-                    <td><xsl:value-of select ="name(.)"/></td>
-                    <td><xsl:value-of select ="@value"/></td>
+                    <xsl:call-template name="rowclass"/>
+                    <td><xsl:call-template name="dmark"/><xsl:value-of select ="name(.)"/></td>
+                    <td>
+                        <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'value'"/></xsl:call-template>
+                        <xsl:value-of select ="@value"/>
+                        <xsl:call-template name="dold"><xsl:with-param name="f" select="'value'"/></xsl:call-template>
+                    </td>
                 </tr>
             </xsl:for-each>
         </table>
@@ -86,12 +96,17 @@
 
     <xsl:template match="mel">
         <tr>
+            <xsl:call-template name="rowclass"/>
             <td style="vertical-align: top">
+                <xsl:call-template name="dmark"/>
                 <xsl:value-of select="@id"/>
             </td>
             <td class="mel-gl-col">
                 <xsl:for-each select=".//gl">
+                  <xsl:call-template name="dspan"><xsl:with-param name="content">
                     <xsl:choose>
+                    <!-- a diff mark (colour) replaces the usual background -->
+                    <xsl:when test="@diff"><xsl:value-of select="."/></xsl:when>
                     <xsl:when test="@pivot">
                         <span style="background-color: lightgreen;color: black"><xsl:value-of select="."/></span>
                     </xsl:when>
@@ -108,6 +123,7 @@
                     <xsl:if test="@uses">
                         &#160;<xsl:value-of select="@uses"/>
                     </xsl:if>
+                  </xsl:with-param></xsl:call-template>
                     <xsl:if test="position() != last()">; </xsl:if>
                 </xsl:for-each>
             </td>

@@ -9,6 +9,11 @@
     <xsl:strip-space
             elements="*"/>
 
+    <!-- diff marks for the Browse pane's "Compare local with an earlier commit";
+         no effect on a file that has no diff annotations -->
+    <xsl:include href="diff-common.xsl"/>
+
+
     <xsl:template match="/">
         <div>
                 <xsl:apply-templates select=".//fuzzy"/>
@@ -33,11 +38,15 @@
             </thead>
             <xsl:for-each select="./*">
                 <tr>
+                    <xsl:call-template name="rowclass"/>
                     <td style="vertical-align:top; white-space:nowrap">
+                        <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'dial'"/></xsl:call-template>
+                        <xsl:call-template name="dmark"/>
                         <xsl:value-of select="@dial"/>
                     </td>
                     <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
                         <xsl:for-each select="from">
+                          <xsl:call-template name="dspan"><xsl:with-param name="content">
                             <xsl:choose>
                                 <!-- Coverage annotated: uses="0" → greyed out -->
                                 <xsl:when test="@uses = '0'">
@@ -55,14 +64,17 @@
                                     <xsl:value-of select="."/>
                                 </xsl:otherwise>
                             </xsl:choose>
+                          </xsl:with-param></xsl:call-template>
                             <xsl:if test="position()!=last()">, </xsl:if>
                         </xsl:for-each>
                     </td>
                     <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
+                        <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'to'"/></xsl:call-template>
                         <xsl:value-of select="@to"/>
                         <xsl:if test="@to_uses">
                             <sub class="cov-uses">&#160;<xsl:value-of select="@to_uses"/></sub>
                         </xsl:if>
+                        <xsl:call-template name="dold"><xsl:with-param name="f" select="'to'"/></xsl:call-template>
                     </td>
                 </tr>
             </xsl:for-each>

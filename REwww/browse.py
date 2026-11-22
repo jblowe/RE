@@ -17,6 +17,7 @@ import os
 
 import lxml.etree as ET
 
+import browse_diff
 import xslt
 
 
@@ -87,7 +88,9 @@ def classify(path):
 def list_files(project_path):
     """The project directory's XML files, ordered by type and then name.
 
-    Each entry: {name, type, group, size, views}.
+    Each entry: {name, type, group, size, views, diff}; diff is 'ready' if the
+    file can be compared with an earlier commit, 'stub' if that is planned, or
+    None (browse_diff.status).
     """
     entries = []
     try:
@@ -101,7 +104,8 @@ def list_files(project_path):
             continue
         key, group, views = classify(full)
         entries.append({'name': name, 'type': key, 'group': group,
-                        'size': os.path.getsize(full), 'views': views})
+                        'size': os.path.getsize(full), 'views': views,
+                        'diff': browse_diff.status(key)})
     entries.sort(key=lambda e: (_ORDER[e['type']], e['name'].lower()))
     return entries
 

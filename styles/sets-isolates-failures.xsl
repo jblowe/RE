@@ -7,6 +7,10 @@
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
+  <!-- diff marks for the Browse pane's "Compare local with an earlier commit";
+       no effect on a file that has no diff annotations -->
+  <xsl:include href="diff-common.xsl"/>
+
   <!--
     linkify-rcn: split a space-separated rcn string into individual
     <a class="rcn-link"> elements so each correspondence ID is clickable.
@@ -158,7 +162,7 @@
     </style>
     <h5>Isolates
       <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
-        n = <xsl:value-of select="count(rfx)"/>
+        n = <xsl:value-of select="count(rfx[not(@diff = 'deleted')])"/>
       </small>
     </h5>
     <!-- mel-used: true unless the <isolates> element carries mel="no",
@@ -180,8 +184,10 @@
       <tbody>
         <xsl:for-each select="rfx">
           <tr>
-            <td class="col-plg"><xsl:value-of select="lg"/></td>
+            <xsl:call-template name="rowclass"/>
+            <td class="col-plg"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lg'"/><xsl:with-param name="base" select="'col-plg'"/></xsl:call-template><xsl:call-template name="dmark"/><xsl:value-of select="lg"/></td>
             <td class="col-pfm">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lx'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
               <span class="lx-interactive-link"
                     data-lang="{lg}"
                     data-reflex="{lx}"
@@ -199,11 +205,13 @@
                   <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
                 </xsl:choose>
               </span>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'lx'"/></xsl:call-template>
             </td>
-            <td class="col-gloss"><xsl:value-of select="gl"/></td>
+            <td class="col-gloss"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/><xsl:with-param name="base" select="'col-gloss'"/></xsl:call-template><xsl:value-of select="gl"/><xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template></td>
             <!-- pfm: first reconstruction always visible; '+' toggle reveals extras.
                  Each extra line shows its pfm + rcn so the rcn column stays simple. -->
             <td class="col-pfm">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'pfm'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
               <xsl:choose>
                 <xsl:when test="count(recon) > 1">
                   <xsl:variable name="eid" select="concat('iso-pfm-', generate-id(.))"/>
@@ -229,12 +237,15 @@
                   <xsl:value-of select="recon[1]/pfm"/>
                 </xsl:otherwise>
               </xsl:choose>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
             </td>
             <!-- rcn: first reconstruction only; extras are shown inline when pfm expands -->
             <td class="col-rcn">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'rcn'"/><xsl:with-param name="base" select="'col-rcn'"/></xsl:call-template>
               <xsl:call-template name="linkify-rcn">
                 <xsl:with-param name="text" select="recon[1]/rcn"/>
               </xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
             </td>
             <td class="col-plg">
               <span class="rfx-interactive-link"
@@ -279,7 +290,7 @@
     <a name="failures"/>
     <h5>Failures
       <small class="text-muted" style="font-size:0.8em; font-weight:normal;">
-        n = <xsl:value-of select="count(rfx)"/>
+        n = <xsl:value-of select="count(rfx[not(@diff = 'deleted')])"/>
       </small>
     </h5>
     <table class="table table-sm table-striped table-hover table-bordered sortable iso-fail-table">
@@ -295,8 +306,10 @@
       <tbody>
         <xsl:for-each select="rfx">
           <tr>
-            <td class="col-plg"><xsl:value-of select="lg"/></td>
+            <xsl:call-template name="rowclass"/>
+            <td class="col-plg"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lg'"/><xsl:with-param name="base" select="'col-plg'"/></xsl:call-template><xsl:call-template name="dmark"/><xsl:value-of select="lg"/></td>
             <td class="col-pfm">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lx'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
               <span class="lx-interactive-link"
                     data-lang="{lg}"
                     data-reflex="{lx}"
@@ -314,8 +327,9 @@
                   <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
                 </xsl:choose>
               </span>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'lx'"/></xsl:call-template>
             </td>
-            <td class="col-gloss"><xsl:value-of select="gl"/></td>
+            <td class="col-gloss"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/><xsl:with-param name="base" select="'col-gloss'"/></xsl:call-template><xsl:value-of select="gl"/><xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template></td>
             <td class="col-plg">
               <span class="rfx-interactive-link"
                     data-lang="{lg}"
@@ -326,6 +340,7 @@
               </span>
             </td>
             <td class="col-reasons">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'reasons'"/><xsl:with-param name="base" select="'col-reasons'"/></xsl:call-template>
               <xsl:for-each select="reasons/reason">
                 <span>
                   <xsl:attribute name="class"><xsl:text>iso-badge iso-fail-reason </xsl:text><xsl:choose>
@@ -345,6 +360,7 @@
               <xsl:if test="not(reasons/reason)">
                 <span class="text-muted" style="font-size:0.85em;">—</span>
               </xsl:if>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'reasons'"/></xsl:call-template>
             </td>
           </tr>
         </xsl:for-each>

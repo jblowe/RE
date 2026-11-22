@@ -1230,7 +1230,7 @@ document.addEventListener('hide.bs.collapse', function (e) {
    table; sets: also isolates / failures when the file has any) get small
    toggle buttons. The last file chosen per project is remembered.
    ══════════════════════════════════════════════════════════════════════════ */
-const browseState = { project: null, files: [], view: null, runId: null };
+const browseState = { project: null, files: [], view: null, runId: null, commits: {} };
 
 function _browseRemembered(project) {
   try { return localStorage.getItem('re.browse.' + project) || ''; } catch (e) { return ''; }
@@ -1260,6 +1260,7 @@ function initBrowse() {
       browseState.project = data.project;
       browseState.files   = data.files;
       browseState.view    = null;
+      browseState.commits = {};
       sel.innerHTML = '<option value="">Choose a file…</option>';
       let group = null, optgroup = null;
       data.files.forEach(f => {
@@ -1305,6 +1306,7 @@ function loadBrowse() {
   const note  = document.getElementById('browse-note');
   const name  = sel.value;
   const entry = browseState.files.find(f => f.name === name);
+  _browseDiffSetup(entry);
   if (!entry) {
     _browseButtons(null);
     note.textContent = '';
@@ -1329,6 +1331,92 @@ function loadBrowse() {
     })
     .catch(e => { body.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
 }
+
+/* Compare the chosen file with another file of the same type in this project,
+   or with an earlier commit of it (browse_diff.py). The dropdown lists both: the
+   files at once, the commits once git has answered. Types with a differ ('ready')
+   get the control; types where it is only planned ('stub') show it disabled;
+   others do not show it. Option values: "file:<name>" or a commit sha. */
+function _browseDiffSetup(entry) {
+  const box = document.getElementById('browse-diffbox');
+  const sel = document.getElementById('browse-commit');
+  const btn = document.getElementById('browse-diff-btn');
+  sel.innerHTML = '<option value="">file or commit…</option>';
+  sel.disabled = true; btn.disabled = true;
+  sel.title = ''; btn.title = '';
+  if (!entry || !entry.diff) { box.style.display = 'none'; return; }
+  box.style.display = 'flex';
+  if (entry.diff === 'stub') {
+    sel.title = btn.title = 'Diff is not implemented yet for this kind of file';
+    return;
+  }
+  const name = entry.name, runId = browseState.runId;
+  const others = browseState.files.filter(f => f.type === entry.type && f.name !== name);
+
+  const build = commits => {
+    const keep = sel.value;
+    sel.innerHTML = '<option value="">file or commit…</option>';
+    const group = (label, items) => {
+      if (!items.length) return;
+      const g = document.createElement('optgroup');
+      g.label = label;
+      items.forEach(([value, text]) => {
+        const o = document.createElement('option');
+        o.value = value; o.textContent = text;
+        g.appendChild(o);
+      });
+      sel.appendChild(g);
+    };
+    group('Other files in this project', others.map(f => ['file:' + f.name, f.name]));
+    if (commits && !commits.error) {
+      group('Earlier commits', commits.commits.map(
+        c => [c.sha, `${c.short} · ${c.date} · ${c.subject}`]));
+    }
+    if (keep && [...sel.options].some(o => o.value === keep)) sel.value = keep;
+    sel.disabled = sel.options.length < 2;
+    btn.disabled = !sel.value;
+    if (sel.disabled) sel.title = btn.title = 'No other file of this type, and no commit history';
+    // Say why there are no commits where it can be seen (not just in a tooltip).
+    if (commits && commits.error)
+      document.getElementById('browse-note').textContent = 'No commit history: ' + commits.error;
+  };
+
+  build(null);                                       // files are known at once
+  const cached = browseState.commits[name];
+  if (cached) { setTimeout(() => build(cached), 0); return; }
+  fetch(`/api/browse/${runId}/commits?file=${encodeURIComponent(name)}`)
+    .then(r => r.json())
+    .then(data => {
+      if (document.getElementById('browse-file').value !== name) return;
+      browseState.commits[name] = data;
+      build(data);
+    })
+    .catch(e => { document.getElementById('browse-note').textContent = 'No commit history: ' + e; });
+}
+
+document.getElementById('browse-commit').addEventListener('change', e => {
+  document.getElementById('browse-diff-btn').disabled = !e.target.value;
+});
+document.getElementById('browse-diff-btn').addEventListener('click', () => {
+  const name = document.getElementById('browse-file').value;
+  const what = document.getElementById('browse-commit').value;
+  const body = document.getElementById('browse-content');
+  if (!name || !what) return;
+  document.getElementById('browse-views').style.display = 'none';   // views do not apply to a diff
+  body.innerHTML = `<p class="text-muted">${spinnerHtml()}Comparing…</p>`;
+  const against = what.startsWith('file:')
+    ? `other=${encodeURIComponent(what.slice(5))}` : `commit=${encodeURIComponent(what)}`;
+  fetch(`/api/browse/${browseState.runId}/diff?file=${encodeURIComponent(name)}&${against}`)
+    .then(r => r.text())
+    .then(html => {
+      if (document.getElementById('browse-file').value !== name) return;
+      body.innerHTML = html;
+    })
+    .catch(e => { body.innerHTML = `<p class="text-danger">Error: ${e}</p>`; });
+});
+document.getElementById('browse-content').addEventListener('click', e => {
+  if (e.target.id === 'browse-diff-close') loadBrowse();
+});
 
 document.getElementById('browse-file').addEventListener('change', () => {
   browseState.view = null;           // each file opens in its standard view

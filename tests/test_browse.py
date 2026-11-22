@@ -172,6 +172,20 @@ class TestRoutes:
             r = client.get(f'/api/browse/{run_id}/render', query_string={'file': bad})
             assert r.status_code == 404, bad
 
+    def test_diff_with_another_file(self, client, run_id):
+        """?other= compares with a same-type file of the project; it refuses
+        other kinds of file and anything that is not a project file."""
+        url = f'/api/browse/{run_id}/diff'
+
+        def diff(other):
+            q = {'file': 'DIS.fuzzy.fuz.xml', 'other': other}
+            return client.get(url, query_string=q).get_data(as_text=True)
+
+        assert 'No differences.' in diff('DIS.fuzzy.fuz.xml')
+        assert 'not the same kind' in diff('DIS.hand.mel.xml')
+        for bad in ('../x.xml', 'nope.xml', '/etc/passwd', 'notes.md'):
+            assert 'No such file' in diff(bad), bad
+
     def test_unknown_run(self, client):
         assert client.get('/api/browse/nope/files').status_code == 404
         assert client.get('/api/browse/nope/render?file=a.xml').status_code == 404

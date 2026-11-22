@@ -52,7 +52,7 @@ body { font-size: 0.875rem; background: #f8f9fa; }
 .badge-done     { background: #28a745; color: #fff; }
 .badge-error    { background: #dc3545; color: #fff; }
 .nav-tabs .nav-link.disabled { color: #999; }
-.tab-toolbar { margin-bottom: .6rem; display: flex; gap: .4rem; align-items: center; }
+.tab-toolbar { margin-bottom: .6rem; display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
 
 /* ── Content area: scrollable region so sticky thead works inside it ─────── */
 /* Without overflow: auto here, the scroll container is the window, and
@@ -499,3 +499,30 @@ ul { list-style-type: none; }
 @media (min-width: 1200px) { .container { max-width: 1400px; } }
 .card-header, .card-footer { padding: .5rem .75rem; }
 .card-body { padding: .75rem; }
+
+/* ── Browse pane: diff against an earlier commit (browse_diff.py) ─────────────
+   red = deleted, green = added, yellow = changed. Colour is never the only cue:
+   deleted is struck through, added is underlined, rows carry a + / - / ~ mark. */
+.diff-header { margin-bottom: .6rem; padding: .4rem .6rem; border: 1px solid #dee2e6;
+               border-radius: .25rem; background: #f8f9fa; }
+.diff-header > div + div { margin-top: .25rem; }
+.diff-legend span { padding: 0 .4rem; margin-right: .4rem; border-radius: .2rem; }
+#browse-diffbox label { white-space: nowrap; }
+.diff-controls { display: flex; gap: 1rem; align-items: center; }
+.diff-added   { background: #d4edda; color: #14532d; }
+.diff-deleted { background: #f8d7da; color: #7f1d1d; text-decoration: line-through; }
+td.diff-changed, span.diff-changed, div.diff-changed, th.diff-changed { background: #fff3b0; color: #5c4400; }
+tr.diff-added > td, td.diff-added, span.diff-added { text-decoration: underline; text-decoration-style: dotted; }
+tr.diff-added > td   { background: #d4edda; }
+tr.diff-deleted > td { background: #f8d7da; text-decoration: line-through; }
+.diff-mark { display: inline-block; width: 1.1em; font-weight: 700; }
+.diff-was, .diff-was del { color: #7f1d1d; }
+.diff-norm { color: #6c757d; font-style: italic; }
+.diff-legend .diff-added { text-decoration: underline; text-decoration-style: dotted; }
+@media (prefers-color-scheme: dark) {
+  .diff-header { background: #2b2f33; border-color: #495057; }
+  .diff-added, tr.diff-added > td   { background: #1e4620; color: #d4edda; }
+  .diff-deleted, tr.diff-deleted > td { background: #5a1f24; color: #f8d7da; }
+  td.diff-changed, span.diff-changed, div.diff-changed, th.diff-changed { background: #5c4a00; color: #fff3b0; }
+  .diff-was, .diff-was del { color: #f5a5ac; }
+}

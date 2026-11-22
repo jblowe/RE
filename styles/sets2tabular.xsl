@@ -22,9 +22,9 @@
         <div class="col">
           <h5>Regular cognate sets</h5>
           <xsl:call-template name="sets-stats-toolbar">
-            <xsl:with-param name="n-sets"     select="count(.//sets/set)"/>
-            <xsl:with-param name="n-isolates" select="count(.//isolates/rfx)"/>
-            <xsl:with-param name="n-failures" select="count(.//failures/rfx)"/>
+            <xsl:with-param name="n-sets"     select="count(.//sets/set[not(@diff = 'deleted')])"/>
+            <xsl:with-param name="n-isolates" select="count(.//isolates/rfx[not(@diff = 'deleted')])"/>
+            <xsl:with-param name="n-failures" select="count(.//failures/rfx[not(@diff = 'deleted')])"/>
             <xsl:with-param name="createdat"  select=".//createdat"/>
           </xsl:call-template>
         </div>
@@ -90,7 +90,9 @@
     <xsl:param name="lgs"/>
     <xsl:for-each select=".//sets/set">
       <tr>
+        <xsl:call-template name="rowclass"/>
         <td class="col-num">
+          <xsl:call-template name="dmark"/>
           <span class="set-interactive-link" data-set-num="{id}" title="Load in Interactive tab">
             <xsl:value-of select="id"/>
           </span>
@@ -102,6 +104,7 @@
               <xsl:value-of select="multi[1]/plg"/>
             </td>
             <td class="col-pfm">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'pfm'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
               <xsl:if test="count(multi) &gt; 1">
                 <button type="button" class="cov-hm-toggle"
                         data-bs-toggle="collapse"
@@ -124,11 +127,14 @@
                   </xsl:for-each>
                 </div>
               </xsl:if>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
             </td>
             <td class="col-rcn">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'rcn'"/><xsl:with-param name="base" select="'col-rcn'"/></xsl:call-template>
               <xsl:call-template name="linkify-rcn">
                 <xsl:with-param name="text" select="multi[1]/rcn"/>
               </xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
             </td>
           </xsl:when>
           <xsl:otherwise>
@@ -136,12 +142,16 @@
               <xsl:value-of select="plg"/>
             </td>
             <td class="col-pfm">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'pfm'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
               <xsl:value-of select="pfm"/>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
             </td>
             <td class="col-rcn">
+              <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'rcn'"/><xsl:with-param name="base" select="'col-rcn'"/></xsl:call-template>
               <xsl:call-template name="linkify-rcn">
                 <xsl:with-param name="text" select="rcn"/>
               </xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
             </td>
           </xsl:otherwise>
         </xsl:choose>
@@ -161,6 +171,7 @@
                      class rfx-gloss is toggled by the "Show/Hide glosses"
                      button via #sets-content.glosses-hidden .rfx-gloss. -->
                 <div title="{id}">
+                  <xsl:call-template name="dattrs"/>
                   <xsl:choose>
                     <xsl:when test="lxf">
                       <xsl:value-of select="lxf"/>
@@ -178,6 +189,7 @@
                     <xsl:text> </xsl:text>
                     <small class="rfx-gloss" style="color:#888"><xsl:value-of select="gl"/></small>
                   </xsl:if>
+                  <xsl:call-template name="dold"/>
                 </div>
               </xsl:if>
             </xsl:for-each>
@@ -220,6 +232,7 @@
   <xsl:template match="languages">
     <xsl:for-each select="*">
       <th class="col-lg">
+        <xsl:call-template name="dattrs"><xsl:with-param name="base" select="'col-lg'"/></xsl:call-template>
         <xsl:value-of select="."/>
       </th>
     </xsl:for-each>

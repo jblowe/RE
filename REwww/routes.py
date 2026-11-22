@@ -16,6 +16,7 @@ from flask import (Blueprint, abort, jsonify, render_template,
                    request, Response)
 
 import browse
+import browse_diff
 import xslt
 import projects as proj_module
 import runlog
@@ -1267,6 +1268,50 @@ def api_browse_render(run_id):
     if full is None:
         return '<p class="text-danger">No such file in this project.</p>', 404
     return browse.render(full, request.args.get('view'))
+
+
+def _browse_diff_target(run_id):
+    """(full path, type key) of the ?file= of a loaded run, or raises DiffError."""
+    project, path = _browse_project(run_id)
+    if path is None:
+        raise browse_diff.DiffError('Run or project not found.')
+    full = browse.resolve(path, request.args.get('file', ''))
+    if full is None:
+        raise browse_diff.DiffError('No such file in this project.')
+    return full, browse.classify(full)[0]
+
+
+@bp.route('/api/browse/<run_id>/commits')
+def api_browse_commits(run_id):
+    """Commits that touched a project file, newest first (?file=<name>)."""
+    try:
+        full, key = _browse_diff_target(run_id)
+        if browse_diff.status(key) != 'ready':
+            raise browse_diff.DiffError('Diff is not available for this kind of file.')
+        return jsonify(commits=browse_diff.commits(full))
+    except browse_diff.DiffError as exc:
+        return jsonify(error=str(exc)), 200
+
+
+@bp.route('/api/browse/<run_id>/diff')
+def api_browse_diff(run_id):
+    """The file compared with an earlier commit of it (?file=<name>&commit=<sha>)
+    or with another file of the same type in the project
+    (?file=<name>&other=<name>), as annotated HTML."""
+    try:
+        full, key = _browse_diff_target(run_id)
+        other = request.args.get('other')
+        if not other:
+            return browse_diff.render_diff(full, key, request.args.get('commit', ''))
+        _project, path = _browse_project(run_id)
+        other_full = browse.resolve(path, other)
+        if other_full is None:
+            raise browse_diff.DiffError('No such file in this project.')
+        if browse.classify(other_full)[0] != key:
+            raise browse_diff.DiffError('The two files are not the same kind of file.')
+        return browse_diff.render_diff_files(full, other_full, key)
+    except browse_diff.DiffError as exc:
+        return f'<p class="text-danger">{_html.escape(str(exc))}</p>'
 
 
 @bp.route('/api/raw/<run_id>/<tab>')

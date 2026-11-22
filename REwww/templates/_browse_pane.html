@@ -9,6 +9,17 @@
             style="width:auto; max-width:36rem" disabled>
       <option value="">Choose a file…</option>
     </select>
+    <!-- Compare the file with another file of its type, or an earlier commit of it (browse_diff.py).
+         Shown only for file types that have, or will have, a differ. -->
+    <span id="browse-diffbox" style="display:none; align-items:center; gap:.25rem">
+      <label for="browse-commit" class="mb-0 small text-muted">Compare with</label>
+      <select id="browse-commit" class="form-select form-select-sm"
+              style="width:auto; max-width:30rem" disabled>
+        <option value="">file or commit…</option>
+      </select>
+      <button type="button" id="browse-diff-btn"
+              class="btn btn-sm btn-outline-secondary" disabled>Diff</button>
+    </span>
     <div class="btn-group btn-group-sm" id="browse-views" role="group"
          aria-label="View" style="display:none"></div>
     <span id="browse-note" class="small text-muted"></span>

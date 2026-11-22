@@ -6,11 +6,15 @@
             indent="yes"
             encoding="utf-8"/>
 
+    <!-- diff marks for the Browse pane's "Compare local with an earlier commit";
+         no effect on a file that has no diff annotations -->
+    <xsl:include href="diff-common.xsl"/>
+
     <xsl:template match="/">
         <div>
             <div style="float: left; width:60px;">
                 <b>n =
-                    <xsl:value-of select="count(lexicon/entry)"/>
+                    <xsl:value-of select="count(lexicon/entry[not(@diff = 'deleted')])"/>
                 </b>
             </div>
             <div style="float: left; width:300px;">
@@ -37,18 +41,28 @@
                 </thead>
                 <xsl:for-each select="entry">
                     <tr>
-                        <td><xsl:apply-templates select="hw"/></td>
+                        <xsl:call-template name="rowclass"/>
                         <td>
+                            <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'hw'"/></xsl:call-template>
+                            <xsl:call-template name="dmark"/>
+                            <xsl:apply-templates select="hw"/>
+                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'hw'"/></xsl:call-template>
+                        </td>
+                        <td>
+                            <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/></xsl:call-template>
                             <xsl:for-each select="gl">
                                 <i><xsl:value-of select="." /></i>
                                 <xsl:if test="position() != last()">, </xsl:if>
                             </xsl:for-each>
+                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template>
                         </td>
                         <td>
+                            <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'ngl'"/></xsl:call-template>
                             <xsl:for-each select="ngl">
                                 <i><xsl:value-of select="." /></i>
                                 <xsl:if test="position() != last()">, </xsl:if>
                             </xsl:for-each>
+                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'ngl'"/></xsl:call-template>
                         </td>
                         <td><xsl:apply-templates select="@id"/></td>
                     </tr>
