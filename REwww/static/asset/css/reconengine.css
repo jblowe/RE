@@ -505,8 +505,7 @@ ul { list-style-type: none; }
    deletion (the old value) followed by an addition (the new one). Colours are
    GitHub's (@primer/primitives, diffBlob-*): the "line" shade for whole rows,
    cells and members, the stronger "word" shade for inline items. Text keeps its
-   normal colour. Deletions are also struck through and rows carry a + / - mark,
-   so colour is not the only cue. */
+   normal colour. Added and deleted rows carry a + / - mark. */
 :root {
   --diff-add-line: #dafbe1;  --diff-add-word: #aceebb;
   --diff-del-line: #ffebe9;  --diff-del-word: #ffcecb;
@@ -527,9 +526,10 @@ ul { list-style-type: none; }
 /* whole rows, cells and members */
 tr.diff-added > td, td.diff-added, th.diff-added, div.diff-added { background: var(--diff-add-line); }
 tr.diff-deleted > td, td.diff-deleted, th.diff-deleted, div.diff-deleted { background: var(--diff-del-line); }
-tr.diff-deleted > td, td.diff-deleted, div.diff-deleted { text-decoration: line-through; }
 /* inline items (a segment, an input value, a gloss, the old value of a change) */
 span.diff-added   { background: var(--diff-add-word); }
-span.diff-deleted, del.diff-deleted { background: var(--diff-del-word); text-decoration: line-through; }
+span.diff-deleted, del.diff-deleted { background: var(--diff-del-word); text-decoration: none; }  /* <del> would strike through */
+/* the old value of a changed item: a little air before the new value that follows */
+span.diff-old { margin-right: .2em; }
 .diff-mark { display: inline-block; width: 1.1em; font-weight: 700; }
 .diff-norm { color: #6c757d; font-style: italic; }

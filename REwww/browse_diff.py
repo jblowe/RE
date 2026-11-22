@@ -184,10 +184,10 @@ def _render(path, type_key, old_root, what):
     header = (
         '<div id="browse-diff">'
         '<div class="diff-header">'
-        f'<div><b>{esc(os.path.basename(path))}</b> compared with {what}</div>'
+        f'<div><b>{esc(os.path.basename(path))}</b> (left) compared with {what}</div>'
         '<div class="diff-legend">'
-        '<span class="diff-added">added</span> '
-        '<span class="diff-deleted">deleted</span></div>'
+        '<span class="diff-added">present only in left file</span> '
+        '<span class="diff-deleted">present only in right file</span></div>'
         f'<div class="small">{_summary_html(summary, labels)}</div>'
         '<div class="diff-controls">'
         '<button type="button" class="btn btn-sm btn-outline-secondary" '
@@ -201,18 +201,18 @@ def render_diff(path, type_key, sha):
     _check(type_key)
     commit, old_root = _old_tree_root(path, sha)
     esc = _html.escape
-    what = (f'<b>{esc(commit["short"])}</b> · {esc(commit["date"])} · '
+    what = (f'<b>{esc(commit["short"])}</b> (right) · {esc(commit["date"])} · '
             f'{esc(commit["author"])} · {esc(commit["subject"])}')
     return _render(path, type_key, old_root, what)
 
 
 def render_diff_files(path, other_path, type_key):
     """The local file compared with another local file of the same type
-    (the other file is the baseline: "added" means in `path` only)."""
+    (the other file is the baseline: green means present in `path`, the left file, only)."""
     _check(type_key)
     try:
         old_root = ET.parse(other_path).getroot()
     except (ET.XMLSyntaxError, OSError) as exc:
         raise DiffError(f'Could not read {os.path.basename(other_path)} as XML: {exc}')
-    what = f'<b>{_html.escape(os.path.basename(other_path))}</b> (local file)'
+    what = f'<b>{_html.escape(os.path.basename(other_path))}</b> (right)'
     return _render(path, type_key, old_root, what)

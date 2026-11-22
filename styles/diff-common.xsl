@@ -116,7 +116,7 @@
 	<xsl:param name="content"/>
 	<xsl:choose>
 		<xsl:when test="@diff = 'changed'">
-			<span class="diff-deleted"><xsl:value-of select="@old"/></span>
+			<span class="diff-deleted diff-old"><xsl:value-of select="@old"/></span>
 			<span class="diff-added"><xsl:copy-of select="$content"/></span>
 			<xsl:if test="@norm"><xsl:text> </xsl:text><small class="diff-norm" title="Unicode normalization only: the two look identical">NFC/NFD</small></xsl:if>
 		</xsl:when>
