@@ -54,8 +54,8 @@
                     <td><xsl:call-template name="dmark"/><xsl:value-of select ="name(.)"/></td>
                     <td>
                         <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'value'"/></xsl:call-template>
-                        <xsl:value-of select ="@value"/>
                         <xsl:call-template name="dold"><xsl:with-param name="f" select="'value'"/></xsl:call-template>
+                        <xsl:value-of select ="@value"/>
                     </td>
                 </tr>
             </xsl:for-each>

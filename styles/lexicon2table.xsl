@@ -45,24 +45,24 @@
                         <td>
                             <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'hw'"/></xsl:call-template>
                             <xsl:call-template name="dmark"/>
-                            <xsl:apply-templates select="hw"/>
                             <xsl:call-template name="dold"><xsl:with-param name="f" select="'hw'"/></xsl:call-template>
+                            <xsl:apply-templates select="hw"/>
                         </td>
                         <td>
                             <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/></xsl:call-template>
+                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template>
                             <xsl:for-each select="gl">
                                 <i><xsl:value-of select="." /></i>
                                 <xsl:if test="position() != last()">, </xsl:if>
                             </xsl:for-each>
-                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template>
                         </td>
                         <td>
                             <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'ngl'"/></xsl:call-template>
+                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'ngl'"/></xsl:call-template>
                             <xsl:for-each select="ngl">
                                 <i><xsl:value-of select="." /></i>
                                 <xsl:if test="position() != last()">, </xsl:if>
                             </xsl:for-each>
-                            <xsl:call-template name="dold"><xsl:with-param name="f" select="'ngl'"/></xsl:call-template>
                         </td>
                         <td><xsl:apply-templates select="@id"/></td>
                     </tr>

@@ -70,11 +70,11 @@
                     </td>
                     <td style="overflow-wrap:break-word; word-break:break-word; vertical-align:top; white-space:normal">
                         <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'to'"/></xsl:call-template>
+                        <xsl:call-template name="dold"><xsl:with-param name="f" select="'to'"/></xsl:call-template>
                         <xsl:value-of select="@to"/>
                         <xsl:if test="@to_uses">
                             <sub class="cov-uses">&#160;<xsl:value-of select="@to_uses"/></sub>
                         </xsl:if>
-                        <xsl:call-template name="dold"><xsl:with-param name="f" select="'to'"/></xsl:call-template>
                     </td>
                 </tr>
             </xsl:for-each>

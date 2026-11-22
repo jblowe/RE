@@ -11,6 +11,7 @@
     old="<old value>" on a changed list item;
     norm_<field> / norm = "1" when only Unicode normalization differs.
   A file with no such attributes renders as it always did.
+  A change is shown as a deletion plus an addition (the GitHub diff convention).
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
@@ -21,43 +22,22 @@
 	</xsl:if>
 </xsl:template>
 
+<!-- Convention (as in a GitHub diff): a change is a deletion followed by an
+     addition. A changed field is marked like an added one (its cell is green)
+     and its old value is shown before it, in red; see dold. -->
+
 <!-- A <td> for field $f of row $row showing $val; marks the cell by the row's
-     diff (added / deleted) or by a change to this field (with the old value). -->
+     diff (added / deleted) or by a change to this field (old value first). -->
 <xsl:template name="dcell">
 	<xsl:param name="row"/>
 	<xsl:param name="f"/>
 	<xsl:param name="val"/>
 	<xsl:param name="mark" select="false()"/>
-	<xsl:variable name="d"    select="string($row/@diff)"/>
-	<xsl:variable name="chg"  select="$row/@*[name() = concat('diff_', $f)]"/>
-	<xsl:variable name="old"  select="string($row/@*[name() = concat('old_', $f)])"/>
-	<xsl:variable name="norm" select="$row/@*[name() = concat('norm_', $f)]"/>
 	<td>
-		<xsl:choose>
-			<xsl:when test="$d = 'added' or $d = 'deleted'">
-				<xsl:attribute name="class">diff-<xsl:value-of select="$d"/></xsl:attribute>
-			</xsl:when>
-			<xsl:when test="$chg">
-				<xsl:attribute name="class">diff-changed</xsl:attribute>
-				<xsl:attribute name="title">was: <xsl:value-of select="$old"/></xsl:attribute>
-			</xsl:when>
-		</xsl:choose>
-		<xsl:if test="$mark and $d != ''">
-			<span class="diff-mark">
-				<xsl:choose>
-					<xsl:when test="$d = 'added'">+</xsl:when>
-					<xsl:when test="$d = 'deleted'">&#8722;</xsl:when>
-					<xsl:otherwise>~</xsl:otherwise>
-				</xsl:choose>
-			</span>
-		</xsl:if>
+		<xsl:call-template name="dattrs"><xsl:with-param name="row" select="$row"/><xsl:with-param name="f" select="$f"/></xsl:call-template>
+		<xsl:if test="$mark"><xsl:call-template name="dmark"><xsl:with-param name="row" select="$row"/></xsl:call-template></xsl:if>
+		<xsl:call-template name="dold"><xsl:with-param name="row" select="$row"/><xsl:with-param name="f" select="$f"/></xsl:call-template>
 		<xsl:value-of select="$val"/>
-		<xsl:if test="$chg and $old != ''">
-			<xsl:text> </xsl:text><small class="diff-was"><del><xsl:value-of select="$old"/></del></small>
-		</xsl:if>
-		<xsl:if test="$norm">
-			<xsl:text> </xsl:text><small class="diff-norm">Unicode normalization only</small>
-		</xsl:if>
 	</td>
 </xsl:template>
 
@@ -68,7 +48,8 @@
      (list items such as a <from>, <gl> or a set member <rfx>). -->
 
 <!-- Put on a <td>, <div>, ... after its literal attributes: sets class (base,
-     plus the diff class) and, for a change, a "was:" tooltip. -->
+     plus the diff class). added / deleted rows, and changed fields, are marked
+     diff-added / diff-deleted. -->
 <xsl:template name="dattrs">
 	<xsl:param name="row" select="."/>
 	<xsl:param name="f" select="''"/>
@@ -77,26 +58,18 @@
 	<xsl:variable name="chg" select="$row/@*[name() = concat('diff_', $f)]"/>
 	<xsl:variable name="cls">
 		<xsl:choose>
-			<xsl:when test="$f = '' and $d != ''">diff-<xsl:value-of select="$d"/></xsl:when>
-			<xsl:when test="$f != '' and ($d = 'added' or $d = 'deleted')">diff-<xsl:value-of select="$d"/></xsl:when>
-			<xsl:when test="$f != '' and $chg">diff-changed</xsl:when>
+			<xsl:when test="$d = 'added' or $d = 'deleted'">diff-<xsl:value-of select="$d"/></xsl:when>
+			<xsl:when test="$f = '' and $d = 'changed'">diff-added</xsl:when>
+			<xsl:when test="$f != '' and $chg">diff-added</xsl:when>
 		</xsl:choose>
 	</xsl:variable>
 	<xsl:if test="$cls != ''">
 		<xsl:attribute name="class"><xsl:value-of select="normalize-space(concat($base, ' ', $cls))"/></xsl:attribute>
-		<xsl:variable name="old">
-			<xsl:choose>
-				<xsl:when test="$f = ''"><xsl:value-of select="$row/@old"/></xsl:when>
-				<xsl:otherwise><xsl:value-of select="$row/@*[name() = concat('old_', $f)]"/></xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		<xsl:if test="($f = '' and $row/@old) or ($f != '' and $chg)">
-			<xsl:attribute name="title">was: <xsl:value-of select="$old"/></xsl:attribute>
-		</xsl:if>
 	</xsl:if>
 </xsl:template>
 
-<!-- The old value of a changed field, struck through, to follow the new one. -->
+<!-- The old value of a changed field, in red, to go BEFORE the new value (which
+     the cell then shows as an addition). -->
 <xsl:template name="dold">
 	<xsl:param name="row" select="."/>
 	<xsl:param name="f" select="''"/>
@@ -115,39 +88,40 @@
 	</xsl:variable>
 	<xsl:if test="($f = '' and $row/@diff = 'changed' and $row/@old) or ($f != '' and $chg and not($row/@diff = 'added' or $row/@diff = 'deleted'))">
 		<xsl:if test="string($old) != ''">
-			<xsl:text> </xsl:text><small class="diff-was"><del><xsl:value-of select="$old"/></del></small>
+			<del class="diff-deleted"><xsl:value-of select="$old"/></del><xsl:text> </xsl:text>
 		</xsl:if>
 		<xsl:if test="string($norm) != ''">
-			<xsl:text> </xsl:text><small class="diff-norm">Unicode normalization only</small>
+			<small class="diff-norm" title="Unicode normalization only: the two look identical">NFC/NFD</small><xsl:text> </xsl:text>
 		</xsl:if>
 	</xsl:if>
 </xsl:template>
 
-<!-- + / - / ~ in front of a row's first cell. -->
+<!-- + or - in front of an added / deleted row's first cell. -->
 <xsl:template name="dmark">
 	<xsl:param name="row" select="."/>
-	<xsl:if test="$row/@diff">
+	<xsl:if test="$row/@diff = 'added' or $row/@diff = 'deleted'">
 		<span class="diff-mark">
 			<xsl:choose>
 				<xsl:when test="$row/@diff = 'added'">+</xsl:when>
-				<xsl:when test="$row/@diff = 'deleted'">&#8722;</xsl:when>
-				<xsl:otherwise>~</xsl:otherwise>
+				<xsl:otherwise>&#8722;</xsl:otherwise>
 			</xsl:choose>
 		</span>
 	</xsl:if>
 </xsl:template>
 
 <!-- Wraps $content (the rendering of the current list item) in a span marked by
-     the item's diff, with its old value. Without a diff, just $content. -->
+     the item's diff: added (green) or deleted (red); a changed item is the old
+     value in red followed by the new one in green. Without a diff, just $content. -->
 <xsl:template name="dspan">
 	<xsl:param name="content"/>
 	<xsl:choose>
+		<xsl:when test="@diff = 'changed'">
+			<span class="diff-deleted"><xsl:value-of select="@old"/></span>
+			<span class="diff-added"><xsl:copy-of select="$content"/></span>
+			<xsl:if test="@norm"><xsl:text> </xsl:text><small class="diff-norm" title="Unicode normalization only: the two look identical">NFC/NFD</small></xsl:if>
+		</xsl:when>
 		<xsl:when test="@diff">
-			<span>
-				<xsl:call-template name="dattrs"/>
-				<xsl:copy-of select="$content"/>
-				<xsl:call-template name="dold"/>
-			</span>
+			<span class="diff-{@diff}"><xsl:copy-of select="$content"/></span>
 		</xsl:when>
 		<xsl:otherwise><xsl:copy-of select="$content"/></xsl:otherwise>
 	</xsl:choose>

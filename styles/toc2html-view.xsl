@@ -160,27 +160,10 @@
 									<xsl:attribute name="class">diff-<xsl:value-of select="$cell/@diff"/></xsl:attribute>
 								</xsl:if>
 								<xsl:for-each select="$cell/seg">
-									<xsl:choose>
-										<xsl:when test="@diff">
-											<span class="diff-{@diff}">
-												<xsl:if test="@old">
-													<xsl:attribute name="title">was: <xsl:value-of select="@old"/></xsl:attribute>
-												</xsl:if>
-												<xsl:if test="@statut='doute'">=</xsl:if>
-												<xsl:value-of select="."/>
-												<xsl:if test="@old">
-													<xsl:text> </xsl:text><small class="diff-was"><del><xsl:value-of select="@old"/></del></small>
-												</xsl:if>
-												<xsl:if test="@norm">
-													<xsl:text> </xsl:text><small class="diff-norm">Unicode normalization only</small>
-												</xsl:if>
-											</span>
-										</xsl:when>
-										<xsl:otherwise>
-											<xsl:if test="@statut='doute'">=</xsl:if>
-											<xsl:value-of select="."/>
-										</xsl:otherwise>
-									</xsl:choose>
+									<xsl:call-template name="dspan"><xsl:with-param name="content">
+										<xsl:if test="@statut='doute'">=</xsl:if>
+										<xsl:value-of select="."/>
+									</xsl:with-param></xsl:call-template>
 									<xsl:if test="(position()!=last()) or (@statut!='doute')">,</xsl:if>
 								</xsl:for-each>
 							</td>

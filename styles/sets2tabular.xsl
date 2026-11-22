@@ -105,6 +105,7 @@
             </td>
             <td class="col-pfm">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'pfm'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
               <xsl:if test="count(multi) &gt; 1">
                 <button type="button" class="cov-hm-toggle"
                         data-bs-toggle="collapse"
@@ -127,14 +128,13 @@
                   </xsl:for-each>
                 </div>
               </xsl:if>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
             </td>
             <td class="col-rcn">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'rcn'"/><xsl:with-param name="base" select="'col-rcn'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
               <xsl:call-template name="linkify-rcn">
                 <xsl:with-param name="text" select="multi[1]/rcn"/>
               </xsl:call-template>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
             </td>
           </xsl:when>
           <xsl:otherwise>
@@ -143,15 +143,15 @@
             </td>
             <td class="col-pfm">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'pfm'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
-              <xsl:value-of select="pfm"/>
               <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
+              <xsl:value-of select="pfm"/>
             </td>
             <td class="col-rcn">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'rcn'"/><xsl:with-param name="base" select="'col-rcn'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
               <xsl:call-template name="linkify-rcn">
                 <xsl:with-param name="text" select="rcn"/>
               </xsl:call-template>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
             </td>
           </xsl:otherwise>
         </xsl:choose>
@@ -172,6 +172,7 @@
                      button via #sets-content.glosses-hidden .rfx-gloss. -->
                 <div title="{id}">
                   <xsl:call-template name="dattrs"/>
+                  <xsl:call-template name="dold"/>
                   <xsl:choose>
                     <xsl:when test="lxf">
                       <xsl:value-of select="lxf"/>
@@ -189,7 +190,6 @@
                     <xsl:text> </xsl:text>
                     <small class="rfx-gloss" style="color:#888"><xsl:value-of select="gl"/></small>
                   </xsl:if>
-                  <xsl:call-template name="dold"/>
                 </div>
               </xsl:if>
             </xsl:for-each>

@@ -500,29 +500,36 @@ ul { list-style-type: none; }
 .card-header, .card-footer { padding: .5rem .75rem; }
 .card-body { padding: .75rem; }
 
-/* ── Browse pane: diff against an earlier commit (browse_diff.py) ─────────────
-   red = deleted, green = added, yellow = changed. Colour is never the only cue:
-   deleted is struck through, added is underlined, rows carry a + / - / ~ mark. */
+/* ── Browse pane: diff against another file or an earlier commit (browse_diff.py) ──
+   Same convention as a GitHub diff: red = deleted, green = added. A change is a
+   deletion (the old value) followed by an addition (the new one). Colours are
+   GitHub's (@primer/primitives, diffBlob-*): the "line" shade for whole rows,
+   cells and members, the stronger "word" shade for inline items. Text keeps its
+   normal colour. Deletions are also struck through and rows carry a + / - mark,
+   so colour is not the only cue. */
+:root {
+  --diff-add-line: #dafbe1;  --diff-add-word: #aceebb;
+  --diff-del-line: #ffebe9;  --diff-del-word: #ffcecb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --diff-add-line: #2ea04326;  --diff-add-word: #2ea04366;
+    --diff-del-line: #f851491a;  --diff-del-word: #f8514966;
+  }
+  .diff-header { background: #2b2f33; border-color: #495057; }
+}
 .diff-header { margin-bottom: .6rem; padding: .4rem .6rem; border: 1px solid #dee2e6;
                border-radius: .25rem; background: #f8f9fa; }
 .diff-header > div + div { margin-top: .25rem; }
 .diff-legend span { padding: 0 .4rem; margin-right: .4rem; border-radius: .2rem; }
 #browse-diffbox label { white-space: nowrap; }
 .diff-controls { display: flex; gap: 1rem; align-items: center; }
-.diff-added   { background: #d4edda; color: #14532d; }
-.diff-deleted { background: #f8d7da; color: #7f1d1d; text-decoration: line-through; }
-td.diff-changed, span.diff-changed, div.diff-changed, th.diff-changed { background: #fff3b0; color: #5c4400; }
-tr.diff-added > td, td.diff-added, span.diff-added { text-decoration: underline; text-decoration-style: dotted; }
-tr.diff-added > td   { background: #d4edda; }
-tr.diff-deleted > td { background: #f8d7da; text-decoration: line-through; }
+/* whole rows, cells and members */
+tr.diff-added > td, td.diff-added, th.diff-added, div.diff-added { background: var(--diff-add-line); }
+tr.diff-deleted > td, td.diff-deleted, th.diff-deleted, div.diff-deleted { background: var(--diff-del-line); }
+tr.diff-deleted > td, td.diff-deleted, div.diff-deleted { text-decoration: line-through; }
+/* inline items (a segment, an input value, a gloss, the old value of a change) */
+span.diff-added   { background: var(--diff-add-word); }
+span.diff-deleted, del.diff-deleted { background: var(--diff-del-word); text-decoration: line-through; }
 .diff-mark { display: inline-block; width: 1.1em; font-weight: 700; }
-.diff-was, .diff-was del { color: #7f1d1d; }
 .diff-norm { color: #6c757d; font-style: italic; }
-.diff-legend .diff-added { text-decoration: underline; text-decoration-style: dotted; }
-@media (prefers-color-scheme: dark) {
-  .diff-header { background: #2b2f33; border-color: #495057; }
-  .diff-added, tr.diff-added > td   { background: #1e4620; color: #d4edda; }
-  .diff-deleted, tr.diff-deleted > td { background: #5a1f24; color: #f8d7da; }
-  td.diff-changed, span.diff-changed, div.diff-changed, th.diff-changed { background: #5c4a00; color: #fff3b0; }
-  .diff-was, .diff-was del { color: #f5a5ac; }
-}

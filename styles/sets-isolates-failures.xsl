@@ -188,6 +188,7 @@
             <td class="col-plg"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lg'"/><xsl:with-param name="base" select="'col-plg'"/></xsl:call-template><xsl:call-template name="dmark"/><xsl:value-of select="lg"/></td>
             <td class="col-pfm">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lx'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'lx'"/></xsl:call-template>
               <span class="lx-interactive-link"
                     data-lang="{lg}"
                     data-reflex="{lx}"
@@ -205,13 +206,13 @@
                   <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
                 </xsl:choose>
               </span>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'lx'"/></xsl:call-template>
             </td>
-            <td class="col-gloss"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/><xsl:with-param name="base" select="'col-gloss'"/></xsl:call-template><xsl:value-of select="gl"/><xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template></td>
+            <td class="col-gloss"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/><xsl:with-param name="base" select="'col-gloss'"/></xsl:call-template><xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template><xsl:value-of select="gl"/></td>
             <!-- pfm: first reconstruction always visible; '+' toggle reveals extras.
                  Each extra line shows its pfm + rcn so the rcn column stays simple. -->
             <td class="col-pfm">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'pfm'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
               <xsl:choose>
                 <xsl:when test="count(recon) > 1">
                   <xsl:variable name="eid" select="concat('iso-pfm-', generate-id(.))"/>
@@ -237,15 +238,14 @@
                   <xsl:value-of select="recon[1]/pfm"/>
                 </xsl:otherwise>
               </xsl:choose>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'pfm'"/></xsl:call-template>
             </td>
             <!-- rcn: first reconstruction only; extras are shown inline when pfm expands -->
             <td class="col-rcn">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'rcn'"/><xsl:with-param name="base" select="'col-rcn'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
               <xsl:call-template name="linkify-rcn">
                 <xsl:with-param name="text" select="recon[1]/rcn"/>
               </xsl:call-template>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'rcn'"/></xsl:call-template>
             </td>
             <td class="col-plg">
               <span class="rfx-interactive-link"
@@ -310,6 +310,7 @@
             <td class="col-plg"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lg'"/><xsl:with-param name="base" select="'col-plg'"/></xsl:call-template><xsl:call-template name="dmark"/><xsl:value-of select="lg"/></td>
             <td class="col-pfm">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'lx'"/><xsl:with-param name="base" select="'col-pfm'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'lx'"/></xsl:call-template>
               <span class="lx-interactive-link"
                     data-lang="{lg}"
                     data-reflex="{lx}"
@@ -327,9 +328,8 @@
                   <xsl:otherwise><xsl:value-of select="lx"/></xsl:otherwise>
                 </xsl:choose>
               </span>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'lx'"/></xsl:call-template>
             </td>
-            <td class="col-gloss"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/><xsl:with-param name="base" select="'col-gloss'"/></xsl:call-template><xsl:value-of select="gl"/><xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template></td>
+            <td class="col-gloss"><xsl:call-template name="dattrs"><xsl:with-param name="f" select="'gl'"/><xsl:with-param name="base" select="'col-gloss'"/></xsl:call-template><xsl:call-template name="dold"><xsl:with-param name="f" select="'gl'"/></xsl:call-template><xsl:value-of select="gl"/></td>
             <td class="col-plg">
               <span class="rfx-interactive-link"
                     data-lang="{lg}"
@@ -341,6 +341,7 @@
             </td>
             <td class="col-reasons">
               <xsl:call-template name="dattrs"><xsl:with-param name="f" select="'reasons'"/><xsl:with-param name="base" select="'col-reasons'"/></xsl:call-template>
+              <xsl:call-template name="dold"><xsl:with-param name="f" select="'reasons'"/></xsl:call-template>
               <xsl:for-each select="reasons/reason">
                 <span>
                   <xsl:attribute name="class"><xsl:text>iso-badge iso-fail-reason </xsl:text><xsl:choose>
@@ -360,7 +361,6 @@
               <xsl:if test="not(reasons/reason)">
                 <span class="text-muted" style="font-size:0.85em;">—</span>
               </xsl:if>
-              <xsl:call-template name="dold"><xsl:with-param name="f" select="'reasons'"/></xsl:call-template>
             </td>
           </tr>
         </xsl:for-each>

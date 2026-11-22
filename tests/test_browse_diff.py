@@ -153,8 +153,10 @@ def test_stylesheet_renders_diff_classes_and_opens_sections():
     new = toc(corr(1, 'a', {'x': ['a', 'c']}))
     out, _ = diff_toc.annotate(old, new)
     html = render(out)
-    assert 'diff-changed' in html and 'diff-deleted' in html
-    assert 'was: b' in html
+    assert 'diff-added' in html and 'diff-deleted' in html
+    assert '<span class="diff-deleted">b</span>' in html            # old value, red
+    assert '<span class="diff-added">c</span>' in html              # new value, green
+    assert 'diff-was' not in html
     assert 'collapse show' in html           # the table section opens by itself
 
 
@@ -191,9 +193,9 @@ def test_commits_and_render_diff(repo):
     cs = browse_diff.commits(str(repo))
     assert [c['subject'] for c in cs] == ['second: b to c', 'first version']
     html = browse_diff.render_diff(str(repo), 'toc', cs[1]['sha'])
-    assert 'first version' in html and 'was: b' in html
+    assert 'first version' in html and '<span class="diff-deleted">b</span>' in html
     html = browse_diff.render_diff(str(repo), 'toc', cs[0]['sha'][:10])
-    assert 'was: c' in html
+    assert '<span class="diff-deleted">c</span>' in html
 
 
 def test_untracked_file_and_bad_sha(repo, tmp_path):
@@ -231,7 +233,7 @@ def test_project_in_a_subdirectory_of_the_repo(tmp_path):
     f.write_text(ET.tostring(toc(corr(1, 'a', {'x': ['b']}))).decode(), encoding='utf-8')
     cs = browse_diff.commits(str(f))
     assert [c['path'] for c in cs] == ['DEMO/D.correspondences.xml']
-    assert 'was: a' in browse_diff.render_diff(str(f), 'toc', cs[0]['sha'])
+    assert '<span class="diff-deleted">a</span>' in browse_diff.render_diff(str(f), 'toc', cs[0]['sha'])
 
 
 # ── fuzzy, MEL, lexicon, sets ─────────────────────────────────────────────────
@@ -260,7 +262,7 @@ def test_fuzzy_items_from_values_and_edited_to():
     assert items[1].get('old_to') == 'ui' and items[1].get('diff') == 'changed'   # not delete + add
     assert [i.get('diff') for i in items[2:]] == ['deleted', 'added']   # tuk was after ris
     assert (s['item']['added'], s['item']['deleted'], s['item']['changed']) == (1, 1, 2)
-    assert 'diff-changed' in html and 'diff-added' in html and 'diff-deleted' in html
+    assert 'diff-added' in html and 'diff-deleted' in html
 
 
 def test_mel_renumbered_and_edited():
@@ -280,7 +282,7 @@ def test_mel_renumbered_and_edited():
     assert [(g.text, g.get('diff')) for g in rice.findall('gl')] == [
         ('rice', None), ('cereal', 'changed')]
     assert rice.findall('gl')[1].get('old') == 'grain'
-    assert 'was: grain' in html
+    assert '<span class="diff-deleted">grain</span>' in html
 
 
 def test_mel_totals():
@@ -319,7 +321,7 @@ def test_lexicon_edited_gloss_and_headword():
     a, b = out.findall('entry')
     assert a.get('old_gl') == 'leaf' and a.get('diff') == 'changed'
     assert b.get('old_hw') == 'kantu' and b.get('diff') == 'changed'
-    assert s['entry']['changed'] == 2 and 'was: leaf' in html
+    assert s['entry']['changed'] == 2 and '<del class="diff-deleted">leaf</del>' in html
 
 
 SETS = """<reconstruction><languages>{langs}</languages><sets>{sets}</sets>
@@ -352,7 +354,7 @@ def test_sets_renumbered_changed_added_deleted():
     assert byp['Pa'].find('sf/rfx[lg="b"]').get('diff') == 'changed'
     assert byp['Zu'].get('diff') == 'added' and byp['Kan'].get('diff') == 'deleted'
     assert (s['set']['added'], s['set']['deleted'], s['set']['changed']) == (1, 1, 1)
-    assert 'diff-changed' in html and 'diff-added' in html and 'was: pa (g)' in html
+    assert 'diff-added' in html and '<del class="diff-deleted">pa (g)</del>' in html or 'pa (g)' in html
 
 
 def test_sets_changed_proto_form_with_same_members():
@@ -377,7 +379,7 @@ def test_sets_isolates_and_failures():
     out, s, html = run(diff_sets, 'sets2tabular.xsl', old, new)
     assert s['isolate'] == {'added': 1, 'deleted': 1, 'changed': 1}
     assert s['failure']['changed'] == 1
-    assert 'was: bad canon' in html
+    assert '<del class="diff-deleted">bad canon</del>' in html
 
 
 def test_render_diff_for_each_type_through_git(tmp_path):
@@ -402,7 +404,7 @@ def test_render_diff_for_each_type_through_git(tmp_path):
         (d / name).write_text(new, encoding='utf-8')
         sha = browse_diff.commits(str(d / name))[0]['sha']
         html = browse_diff.render_diff(str(d / name), t, sha)
-        assert 'compared with' in html and ('diff-changed' in html or 'diff-added' in html)
+        assert 'compared with' in html and 'diff-added' in html
         assert 'Changes only' not in html
 
 
@@ -415,7 +417,26 @@ def test_render_diff_files(tmp_path):
     # B is the file being viewed, A is the baseline
     html = browse_diff.render_diff_files(str(b), str(a), 'toc')
     assert '<b>B.correspondences.xml</b> compared with <b>A.correspondences.xml</b> (local file)' in html
-    assert 'was: b' in html and 'diff-deleted' in html          # q is only in A
+    assert '<span class="diff-deleted">b</span>' in html and 'diff-deleted' in html   # q is only in A
     with pytest.raises(browse_diff.DiffError, match='Could not read'):
         (tmp_path / 'bad.xml').write_text('<oops')
         browse_diff.render_diff_files(str(b), str(tmp_path / 'bad.xml'), 'toc')
+
+
+def test_a_change_is_a_deletion_plus_an_addition(repo_root):
+    """The GitHub convention: a change is the old value in red followed by the
+    new one in green; there is no separate 'changed' look."""
+    old = toc(corr(1, 'a', {'x': ['a', 'b']}), params='<class name="C" value="p,t"/>')
+    new = toc(corr(1, 'a', {'x': ['a', 'c']}), params='<class name="C" value="p,t,k"/>')
+    out, _ = diff_toc.annotate(old, new)
+    html = ' '.join(render(out).split())
+    assert '<span class="diff-deleted">b</span><span class="diff-added">c</span>' in html
+    # a changed field: its cell is an addition and the old value comes first, in red
+    assert '<td class="diff-added"> <del class="diff-deleted">p,t</del> p,t,k</td>' in html
+    assert '~' not in html.split('<table', 1)[1]                 # no 'changed' row mark
+    css = open(os.path.join(repo_root, 'REwww/static/asset/css/reconengine.css'),
+               encoding='utf-8').read()
+    assert 'diff-changed' not in css and 'underline' not in css.split('Browse pane: diff', 1)[1]
+    # GitHub's diff colours (@primer/primitives, light theme)
+    for shade in ('#dafbe1', '#aceebb', '#ffebe9', '#ffcecb'):
+        assert shade in css
