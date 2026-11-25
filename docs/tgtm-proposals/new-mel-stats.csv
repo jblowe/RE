@@ -1,0 +1,28 @@
+measure,TGTM hand (existing),94SETS hand (existing),conservative,broad
+MELs,673,673,3795,3295
+glosses,2489,2502,11117,11419
+avg,3.698365527488856,3.7176820208023775,2.9293807641633727,3.4655538694992414
+median,3,3,2,2
+max,16,16,29,33
+"size_hist(1,2,3-4,5-7,8+)","[12, 215, 287, 116, 43]","[13, 212, 288, 116, 44]","[856, 1244, 1188, 353, 154]","[689, 1056, 953, 305, 292]"
+forms matched,5467,5498,7736,7746
+forms matched %,69.52816990970368,69.92242146763321,98.384840391708,98.51201831362076
+coverage by language %,"{""gha"": 83.7, ""mar"": 68.8, ""pra"": 78.0, ""ris"": 63.9, ""sahu"": 80.2, ""syang"": 53.0, ""tag"": 94.1, ""tuk"": 64.3}","{""gha"": 83.9, ""mar"": 70.8, ""pra"": 78.6, ""ris"": 64.0, ""sahu"": 80.5, ""syang"": 53.7, ""tag"": 94.1, ""tuk"": 64.5}","{""gha"": 99.1, ""mar"": 96.4, ""pra"": 99.4, ""ris"": 97.2, ""sahu"": 99.2, ""syang"": 99.0, ""tag"": 99.7, ""tuk"": 99.0}","{""gha"": 99.1, ""mar"": 97.3, ""pra"": 99.4, ""ris"": 97.3, ""sahu"": 99.2, ""syang"": 99.1, ""tag"": 99.7, ""tuk"": 99.0}"
+MELs per matched form: mean/median/max,"[2.09, 1, 18]","[2.08, 1.0, 18]","[6.17, 3.0, 60]","[5.96, 3.0, 60]"
+"MELs per matched form hist (1,2-3,4-9,10+)","[2898, 1761, 775, 33]","[2897, 1806, 762, 33]","[2447, 1428, 2220, 1641]","[2527, 1489, 2187, 1543]"
+MELs that match >=1 form,672,671,3791,3291
+MELs matching nothing,1,2,4,4
+MELs reaching >=2 languages,656,655,3107,2678
+MELs reaching >=3 languages,622,624,2555,2227
+forms per matching MEL: mean/median/max,"[17.0, 12.0, 113]","[17.0, 12, 108]","[12.6, 8, 138]","[14.0, 8, 144]"
+forms with a MEL that also reaches another language,5456,5487,7185,7259
+... %,69.38827419559965,69.78252575352919,91.37733689431515,92.31845351646955
+MEL glosses that match >=1 form %,81.43374949657672,81.76352705410822,92.68687595574346,92.83650056922673
+  core glosses,2483,2495,2496,2504
+  core glosses used %,81.4,81.8,81.7,81.8
+  extra glosses,0,0,8621,8915
+  extra glosses used %,,,95.9,95.9
+forms matched by: core only / both / extra only,"[5467, 0, 0]","[5498, 0, 0]","[659, 4841, 2236]","[617, 4883, 2246]"
+"forms matched only via extras, by layer",{},{},"{""wordnet"": 639, ""extended"": 2011, ""pairs"": 82, ""variant"": 26}","{""wordnet"": 573, ""extended"": 1882, ""enriched"": 600, ""pairs-loose"": 64, ""pairs"": 79, ""variant"": 19}"
+xml:lang,"{""-"": 2483}","{""-"": 2495}","{""fr"": 3150, ""en"": 7755, ""und"": 212}","{""fr"": 3241, ""en"": 7970, ""und"": 208}"
+"forms of the 8 lexicons matching ONLY one MEL, which is a singleton MEL",40,37,461,398

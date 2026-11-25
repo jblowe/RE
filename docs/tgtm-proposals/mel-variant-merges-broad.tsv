@@ -1,0 +1,72 @@
+kind	gloss	from_mel	target_mel(s)	variant_of	target_glosses
+subsumed-singleton	earthquake	m0876	m0732	earthquake	tremblement de terre | earthquake
+merged-singleton	ashes	m1062	m2608	ash	ash | ashes
+merged-singleton	étoiles	m1184	m0426	étoile	étoile | star | étoiles
+merged-singleton	dragonfly	m1251	m5467	dragon-fly	a kind of ? *dragon-fly | dragon-fly | dragonfly
+subsumed-singleton	retch	m1275	m0672	retch	vomir | vomit | vomissement | vomit, to throw up | retch | sick | throw up | vomi
+subsumed-singleton	majeur	m1347	m0523,m5287	majeur	hand | main | hand, arm | arm | bras | majeur
+ambiguous-singleton	lisses	m1443	m0501,m2278,m5361		m0501: glisser | slick | slip | smooth | slip, to be slippery | bon | lisse // m2278: lisse (de métier) | lisse | smooth // m5361: stroke | pat | smooth | bon | lisse | tripoter
+merged-singleton	earth*quake	m1486	m0732	earthquake	tremblement de terre | earthquake | earth*quake
+subsumed-singleton	witch	m1742	m4250	witch	sorcière | witch
+subsumed-singleton	salary	m1771	m1128	salary	étui / gaine | pay | salary
+subsumed-singleton	hell	m1836	m3108	hell	enfer | hell
+subsumed-singleton	shin	m2204	m0322	shin	cuir | peau | skin | skin, hide | cacher | shin
+subsumed-singleton	cour	m2371	m0233	cour	centipede | court | cour
+subsumed-singleton	snoring	m2401	m3807	snoring	ronfler | snore | snoring
+subsumed-singleton	fluff	m2429	m4317	fluff	to *fluff wool or coton | fluff | coton
+ambiguous-singleton	offerings	m2665	m0545,m1920,m1958,m5384		m0545: invite | offer | presents | serve | make an offering, to give | offer to gods | offer to the gods | offrande | offrir | offrir aux dieux // m1920: *offering of butter-lamps | offering // m1958: offering | light | and flowers // m5384: pot à offrir l'eau | offrir | offer | offering | sacrifice
+merged-singleton	day after tomorrow	m2686	m3313	*day after to-morrow	*day after to-morrow | day | jour | day after tomorrow
+subsumed-singleton	someone	m2710	m0536,m0537	someone	homme | man | people | person | garçon, homme | homme, personne | man/male | person/man | vieil homme | vieux homme
+subsumed-singleton	whip	m2771	m0113	whip	bamboo tie strips for building | cane | laniere | rattan | bamboo strip | lanières de bambou | lanière | canne | whip
+ambiguous-singleton	sisters	m2882	m2369,m2956,m3583,m3666		m2369: *aunt, mother's elder *sister | aunt | sister // m2956: husband's younger sister, *sister-in-law | husband's younger sister | sister // m3583: younger *sister | sister // m3666: elder *sister | sister
+subsumed-singleton	necklace	m2889	m1898	necklace	collier (général) | collier | necklace
+ambiguous-singleton	chaussures	m2910	m4663,m5682		m4663: lacet de chaussure tibétaines | chaussure | j'ai perdu une chaussure | shoe // m5682: shoe | chaussure
+subsumed-singleton	encounter	m3035	m0042,m0045,m0064,m0086,m0093,m0094	encounter	arrive | arrive here | come | atteindre | meet | reach | arriver | encounter | frapper | gagner
+subsumed-singleton	joke	m3040	m0559	joke	laugh | rire | smile | giggle, to snigger <to laugh> | smile, to laugh quietly | joke
+subsumed-singleton	tuyau	m3122	m3261	tuyau	pipe | tuyau
+subsumed-singleton	bed bug	m3126	m2789	bed bug	punaise | bed bug
+subsumed-singleton	greeting	m3149	m0212,m0883,m2732	greeting	bye-bye | good day | good-bye | way of sitting | greet | greeting/salute | saluer | greeting
+subsumed-singleton	backwards	m3223	m0106	backwards	back | dos | lower back | spine | back of the body | back/backside | lower back, small of back | upper or middle back | backward | backwards
+merged-singleton	reins	m3316	m2632	rein	kidney | rein | reins
+subsumed-singleton	slow	m3361	m4247	slow	lentement | slow | slowly
+ambiguous-singleton	brothers	m3370	m0982,m1530,m2612,m3829,m5203,m5326,m5397,m5495		m0982: *younger *brother (of a male) | younger | brother | petit // m1530: *brother-in-law : wife's sister's *husband | brother | husband | mari // m2612: *elder *brother | elder | brother // m3829: younger *brother (term of address) | brother
+subsumed-singleton	waterfall	m3373	m3190	waterfall	cascade | waterfall
+subsumed-singleton	upstream	m3414	m0056	upstream	amont | intérieur | up | aller vers l'amont | inside, interior | inside/inward/interior | dedans | inside | interior | inward
+ambiguous-singleton	bellows	m3432	m0315,m0316,m2752,m3754		m0315: crier | crow | faire | make noise | corbeau | cackle | cackle before laying an egg | bellow | cry | neigh // m0316: crier | howl | loud | scream | shout | shout, to scream, to howl | bellow | cry | neigh // m2752: bellow (bull) | bellow // m3754: to bellow (of bull) | bellow
+subsumed-singleton	lightning	m3438	m5423,m5536	lightning	foudre | lightning
+subsumed-singleton	unmixed	m3610	m2305	unmixed	plaine | complain | plain | unmixed
+merged-singleton	sweepings	m3680	m3534	sweeping	quickly done *sweeping | sweeping | sweepings
+merged-singleton	children	m3865	m3336	child	*child, young of an animal | child | young of an animal | enfant | children
+subsumed-singleton	aunt	m3978	m2369,m4348	aunt	*aunt, mother's elder *sister | aunt | sister
+subsumed-singleton	hook	m4199	m0317,m0538,m4238	hook	crochet | hook | hook, hooked stick
+subsumed-singleton	soil	m4207	m0140,m0508	soil	beurre | butter | grease | graisse | fat | baratte à beurre | clarified butter, ghee | crème du lait | crème du thé | ghee
+subsumed-singleton	divorce	m4292	m0002	divorce	abandon | abandonner | cast away | cesser | discard | divorcer | jete | jeter | passer | renverser
+subsumed-singleton	rides	m4748	m0088,m5098	rides	asseoir | s'asseoir | enter | live | remain | rester | sit | stationary | stay | assis
+merged-singleton	cando s.th.	m4779	m0009	can do s.th.	able to do sthg | can | can do s.th. | capable | force | pouvoir | can/be able to do sthg | habile | power | cando s.th.
+subsumed-singleton	kindling	m4809	m0048,m0049	kindling	allumer | blaze | brûler | burn | chauffer | flamber | flare up | griller | léger | light
+subsumed-singleton	ornament	m4872	m0028	ornament	adorn | decorate | décorer | adorn/decorate | ornament
+subsumed-singleton	testicle	m5100	m3821	testicle	testicules | testicle
+merged-singleton	toward	m5350	m3335	towards	slightly in the direction mentioned | towards | toward
+merged-singleton	placename	m5360	m1321	place*name	place*name | name | placename
+subsumed-singleton	tempe	m5413	m2513,m4999,m5000,m5442	tempe	Buddhist *temple, monastery | temple | monastery | tempe
+merged-singleton	father in law	m5580	m4707	father-in-law	beau-père | father-in-law | father in law
+subsumed-singleton	lazy	m5590	m4501	lazy	être paresseux | paresseux | lazy
+ambiguous-singleton	gut	m5654	m0521,m4972		m0521: guts | intestines | intestins // m4972: sable | guts
+attached-data-gloss	ail		m0036	aïl	aïl | garlic | ail
+attached-data-gloss	bird-trap		m0142	bird trap	bird trap | piège | trap | trap, snare | bird-trap
+attached-data-gloss	chaussette		m3098	chaussettes	chaussettes | chaussette
+attached-data-gloss	cowshed		m0014	cow shed	abri | cow shed | cowshed
+attached-data-gloss	chevaux		m0251	cheval	cheval | horse | chevaux
+attached-data-gloss	chèvres		m0252	chèvre	chèvre | goat | chèvres
+attached-data-gloss	grand-mère		m0509	grand- mere	grand mother | grand- mere | grandmama | grandmother | grandmother/grandmama | grand-mère
+ambiguous-data-gloss	dents		m0145,m3295		m0145: bite | mordre | peck | pincer | pinch | piquer | sting | dent | tooth | piquer, mordre // m3295: to make a *dent | dent
+attached-data-gloss	montées		m0078	montée	ascend | climb | grimper | climb, slope | climb, to ride | monter | monter, grimper | montée | chevaucher | côte
+ambiguous-data-gloss	mains		m0523,m0721,m1409		m0523: hand | main | hand, arm | arm | bras | majeur // m0721: *hand (held flat for slapping) | hand | main // m1409: *hand, *arm | hand | arm | bras | main
+attached-data-gloss	méler		m0152	mêler	blend | knead | mêler | mix | petrissant | beat or knead | knead with force | knead, to rub, to tread | malaxer | malaxer la pâte à pain
+ambiguous-data-gloss	népali		m3732,m4510		m3732: grand couteau népalais | népalais | nepali // m4510: *nepali speaker, *foreigner | nepali | foreigner
+ambiguous-data-gloss	invité		m0065,m0545		m0065: appeler | call | invite | name // m0545: invite | offer | presents | serve | make an offering, to give | offer to gods | offer to the gods | offrande | offrir | offrir aux dieux
+ambiguous-data-gloss	présents		m0368,m0545		m0368: donner | give | present | présent | give, to bestow | nowadays // m0545: invite | offer | presents | serve | make an offering, to give | offer to gods | offer to the gods | offrande | offrir | offrir aux dieux
+attached-data-gloss	rice-field		m0882	*rice field	*rice field | rice | riz | rice-field
+ambiguous-data-gloss	droits		m0288,m0377,m2609		m0288: construire | do | lever | build | build, to erect | construire un pont | construire une maison | construire une murette de pisé | bring up | close // m0377: droite | right | right hand | droit | the right | bon | erect | straight // m2609: bras droit | droit | erect | right | straight
+attached-data-gloss	siblings		p14	sibling	cousin | sibling | siblings
+attached-data-gloss	éléphant		m3621	elephant	elephant | éléphant
