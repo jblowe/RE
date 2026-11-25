@@ -192,10 +192,10 @@
                   <xsl:call-template name="freq-sub">
                     <xsl:with-param name="freq" select="@freq"/>
                   </xsl:call-template>
-                  <!-- one "<<" then fuzz forms for THIS seg -->
+                  <!-- one "«" then fuzz forms for THIS seg -->
                   <xsl:variable name="sv" select="normalize-space(.)"/>
                   <xsl:if test="../fuzz[@to = $sv]">
-                    <span class="toc-fuzz-sep">&lt;&lt;</span>
+                    <span class="toc-fuzz-sep">&#171;</span>
                     <xsl:for-each select="../fuzz[@to = $sv]">
                       <xsl:if test="position() &gt; 1"><xsl:text> </xsl:text></xsl:if>
                       <xsl:variable name="fuzz-style">
