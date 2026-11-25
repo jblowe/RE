@@ -345,11 +345,21 @@ def read_mel_file(filename):
         tree = ET.parse(filename)
         mels = []
         for child in tree.iterfind('mel'):
-            gl_elements = list(child.iterfind('gl'))
+            # Skip empty <gl/> elements (e.g. <gl pivot="notfound"/>): their
+            # text is None, which crashed gloss matching downstream.
+            gl_elements = [seg for seg in child.iterfind('gl')
+                           if seg.text and seg.text.strip()]
+            if not gl_elements:
+                continue
             glosses = [seg.text for seg in gl_elements]
             gloss_langs = {seg.text: seg.attrib[_XML_LANG]
                            for seg in gl_elements if _XML_LANG in seg.attrib}
-            mels.append(mel.Mel(glosses, child.attrib.get('id'), gloss_langs))
+            # Optional provenance, e.g. source="core" | "extra" (see
+            # docs/TGTM-mel-comparison.md). Carried, not yet used for matching.
+            gloss_sources = {seg.text: seg.attrib['source']
+                             for seg in gl_elements if 'source' in seg.attrib}
+            mels.append(mel.Mel(glosses, child.attrib.get('id'), gloss_langs,
+                                gloss_sources))
         return mels
     except:
         print(f'could not process mel file: {filename}')

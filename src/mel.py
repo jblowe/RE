@@ -5,9 +5,12 @@ from nltk.corpus import stopwords as _nltk_stopwords
 from nltk.corpus import wordnet as _wordnet
 
 class Mel:
-    def __init__(self, glosses, id, gloss_langs=None):
+    def __init__(self, glosses, id, gloss_langs=None, gloss_sources=None):
         self.glosses = glosses
         self.id = id
+        # Optional {gloss_text: source} from a source="..." attribute on <gl>
+        # (e.g. "core", "extra"; later "wordnet", "concepticon", ...).
+        self.gloss_sources = gloss_sources or {}
         # Optional {gloss_text: xml:lang value}, for glosses whose <gl> element
         # carried an xml:lang attribute in the MEL file. Not every gloss has
         # one, so this only covers the subset that do.

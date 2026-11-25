@@ -53,7 +53,7 @@ MEL_GLOSSES_FILE = os.path.join(HERE, 'tgtm_mel_glosses.txt')
 # "gloss<TAB>lang" separator unless we're picky about what a lang code looks
 # like. Only split on the *last* tab, and only if what follows is actually
 # a known code; otherwise treat the whole line, tab and all, as the gloss.
-_KNOWN_LANG_CODES = {'en', 'fr', 'xx'}
+_KNOWN_LANG_CODES = {'en', 'fr', 'und', 'xx'}   # und = BCP 47 "undetermined"; xx = older placeholder
 
 
 def _read_gloss_file(path):
