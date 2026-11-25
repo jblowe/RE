@@ -234,7 +234,7 @@ def render_sets(forms, sets, languages, set_type):
         elif isinstance(form, RE.FuzzyForm):
             # Fuzzied reflex: <lx> carries the original glyphs (preserved for
             # display / XSLT compatibility); <lxf> carries the fuzzied glyphs
-            # that were actually used for parsing.  XSLT renders as "lxf << lx".
+            # that were actually used for parsing.  XSLT renders as "lx » lxf" (lxf grayed).
             rfx = ET.SubElement(element, 'rfx')
             ET.SubElement(rfx, 'lg').text = form.language
             ET.SubElement(rfx, 'lx').text = form.actual.glyphs

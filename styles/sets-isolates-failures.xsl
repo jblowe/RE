@@ -196,8 +196,8 @@
                     title="Load in Interactive tab">
                 <xsl:choose>
                   <xsl:when test="lxf">
-                    <xsl:value-of select="lxf"/>
-                    <small style="color:#888;"> &#171;<xsl:value-of select="lx"/></small>
+                    <xsl:value-of select="lx"/>
+                    <small style="color:#888;"> &#187; <xsl:value-of select="lxf"/></small>
                   </xsl:when>
                   <xsl:when test="lxq">
                     <xsl:value-of select="lx"/>
@@ -318,8 +318,8 @@
                     title="Load in Interactive tab">
                 <xsl:choose>
                   <xsl:when test="lxf">
-                    <xsl:value-of select="lxf"/>
-                    <small style="color:#888;"> &#171;<xsl:value-of select="lx"/></small>
+                    <xsl:value-of select="lx"/>
+                    <small style="color:#888;"> &#187; <xsl:value-of select="lxf"/></small>
                   </xsl:when>
                   <xsl:when test="lxq">
                     <xsl:value-of select="lx"/>

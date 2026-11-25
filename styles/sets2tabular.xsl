@@ -175,8 +175,8 @@
                   <xsl:call-template name="dold"/>
                   <xsl:choose>
                     <xsl:when test="lxf">
-                      <xsl:value-of select="lxf"/>
-                      <small style="color:#888;"> &#171;<xsl:value-of select="lx"/></small>
+                      <xsl:value-of select="lx"/>
+                      <small style="color:#888;"> &#187; <xsl:value-of select="lxf"/></small>
                     </xsl:when>
                     <xsl:when test="lxq">
                       <xsl:value-of select="lx"/>
@@ -303,8 +303,8 @@
         <div class="lx">
           <xsl:choose>
             <xsl:when test="lxf">
-              <xsl:apply-templates select="lxf"/>
-              <small style="color:#888;"> &#171;<xsl:value-of select="lx"/></small>
+              <xsl:apply-templates select="lx"/>
+              <small style="color:#888;"> &#187; <xsl:value-of select="lxf"/></small>
             </xsl:when>
             <xsl:when test="lxq">
               <xsl:apply-templates select="lx"/>
