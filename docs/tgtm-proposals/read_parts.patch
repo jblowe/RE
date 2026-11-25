@@ -1,0 +1,38 @@
+--- /Users/johnlowe/GitHub/RE2/src/read.py	2026-11-21 15:28:37
++++ re2/src/read.py	2026-11-23 02:43:08
+@@ -276,22 +276,19 @@
+ def read_lexicon(xmlfile, norm=nfc):
+     tree = ET.parse(xmlfile)
+     language = tree.getroot().attrib.get('dialecte')
+-    forms = [RE.ModernForm(language,
+-                           # .text stops at the first child element, so a
+-                           # headword like "¹hə <suffix>-nə</suffix>" yields
+-                           # "¹hə " -- strip the trailing space or the form
+-                           # can never parse.
+-                           norm((entry.find('hw').text or '').strip())
+-                           if entry.find('hw') is not None
+-                           else '',
+-                           # fallback to provided gloss if there is no
+-                           # 'normalized' gloss
+-                           entry.find('ngl').text
+-                           if entry.find('ngl') is not None
+-                           else entry.find('gl').text,
+-                           entry.attrib.get('id')
+-                           )
+-             for entry in tree.iterfind('entry')]
++    use_parts = os.environ.get('RE_READ_PARTS') == '1'
++    forms = []
++    for entry in tree.iterfind('entry'):
++        hw = entry.find('hw')
++        words = [(hw.text or '').strip() if hw is not None else '']
++        if hw is not None and use_parts:
++            words += [(p.text or '').strip() for p in hw.iterfind('part')]
++        gloss = (entry.find('ngl').text if entry.find('ngl') is not None
++                 else entry.find('gl').text)
++        eid = entry.attrib.get('id')
++        for k, w in enumerate(words):
++            forms.append(RE.ModernForm(language, norm(w), gloss,
++                         eid if k == 0 else '%s%s' % (eid, 'abcdefgh'[k - 1])))
+     return RE.Lexicon(language, forms, [])
+ 
+ # returns a generator returning the modern form and its gloss

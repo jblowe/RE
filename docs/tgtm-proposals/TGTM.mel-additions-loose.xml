@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<semantics>
+  <!-- mar ⁵⁴lʌ "mois" ~ syang ²¹lo "6 mois, une demi-année" -->
+  <mel id="q1">
+    <gl xml:lang="fr">6 mois</gl>
+    <gl xml:lang="fr">mois</gl>
+    <gl xml:lang="fr">une demi-année</gl>
+  </mel>
+  <!-- ris ⁴kik "some, a little" ~ tuk ⁴ʈi "perhaps" -->
+  <mel id="q2">
+    <gl xml:lang="en">a little</gl>
+    <gl xml:lang="en">perhaps</gl>
+    <gl xml:lang="en">some</gl>
+  </mel>
+  <!-- syang ⁵⁵'⁵⁴tini "aujourd'hui" ~ tuk ¹tiŋi "today"; syang ⁵⁵'⁵⁵tini "aujourd'hui" ~ tuk ¹tiŋi "today" -->
+  <mel id="q3">
+    <gl xml:lang="fr">aujourd'hui</gl>
+    <gl xml:lang="en">today</gl>
+  </mel>
+  <!-- ris ²pʰoltoŋ "ball" ~ tuk ²pʰoltoŋ "ball" -->
+  <mel id="q4">
+    <gl xml:lang="en">ball</gl>
+  </mel>
+  <!-- ris ²ŋam "near" ~ tuk ᴴŋəm "near"; ris ²ŋam "near" ~ tuk ᴴŋəm "bank" -->
+  <mel id="q5">
+    <gl xml:lang="en">bank</gl>
+    <gl xml:lang="en">near</gl>
+  </mel>
+  <!-- ris ²siŋ "twig, sprig" ~ tuk ᴴsin "beam" -->
+  <mel id="q6">
+    <gl xml:lang="en">beam</gl>
+    <gl xml:lang="en">log</gl>
+    <gl xml:lang="en">sprig</gl>
+    <gl xml:lang="en">twig</gl>
+  </mel>
+  <!-- ris ³tseː "beautiful" ~ sahu ³tsep "big" -->
+  <mel id="q7">
+    <gl xml:lang="en">beautiful</gl>
+    <gl xml:lang="en">big</gl>
+    <gl xml:lang="en">distant</gl>
+    <gl xml:lang="en">far</gl>
+    <gl xml:lang="en">the top</gl>
+    <gl xml:lang="en">top</gl>
+  </mel>
+  <!-- mar ⁵⁵pin "bleu" ~ syang Xpin "bleu" -->
+  <mel id="q8">
+    <gl xml:lang="fr">bleu</gl>
+  </mel>
+  <!-- mar ⁵⁵'⁴⁴sʌʈu "bracelet" ~ syang ⁴⁴'⁴³soʈu "bracelet de verre" -->
+  <mel id="q9">
+    <gl xml:lang="fr">bracelet</gl>
+    <gl xml:lang="fr">bracelet de verre</gl>
+  </mel>
+  <!-- mar ²¹ʈoʱ "brèdes" ~ syang ²¹ʈo "brèdes"; mar ²¹ʈoʱ "brèdes" ~ syang ²¹ʈo "brèdes" -->
+  <mel id="q10">
+    <gl xml:lang="fr">brèdes</gl>
+  </mel>
+  <!-- gha ¹tʰaː "butt, gore" ~ ris ¹tʰap "gore" -->
+  <mel id="q11">
+    <gl xml:lang="en">butt</gl>
+    <gl xml:lang="en">gore</gl>
+  </mel>
+  <!-- mar ²¹gʌʱ "selle" ~ syang ᴸgʌ "selle, bât" -->
+  <mel id="q12">
+    <gl xml:lang="fr">bât</gl>
+    <gl xml:lang="fr">selle</gl>
+  </mel>
+  <!-- mar ⁵⁴kʌ "chaux" ~ syang ⁵⁴kʌ "chaux à badigeon"; mar ⁵⁴kʌ "chaux" ~ syang ⁵⁴kʌ "chaux à badigeon" -->
+  <mel id="q13">
+    <gl xml:lang="fr">chaux</gl>
+    <gl xml:lang="fr">chaux à badigeon</gl>
+  </mel>
+  <!-- syang ⁵⁵'⁴⁴kʰoraŋ "piment" ~ tuk ²kʰoraŋ "chili" -->
+  <mel id="q14">
+    <gl xml:lang="en">chili</gl>
+    <gl xml:lang="fr">piment</gl>
+  </mel>
+  <!-- ris ¹mitsʰam "eyelash" ~ syang ⁵⁵'⁵⁴mitsʰʌm "cils" -->
+  <mel id="q15">
+    <gl xml:lang="fr">cils</gl>
+    <gl xml:lang="en">eyelash</gl>
+  </mel>
+  <!-- sahu ¹wen "cloth" ~ tuk ᴴkon "loom" -->
+  <mel id="q16">
+    <gl xml:lang="en">cloth</gl>
+    <gl xml:lang="en">loom</gl>
+  </mel>
+  <!-- ris ¹tsʰjaː "coagulate, to stagnate, " ~ tag Xtsʰja "coagulate" -->
+  <mel id="q17">
+    <gl xml:lang="en">coagulate</gl>
+    <gl xml:lang="en">freeze</gl>
+    <gl xml:lang="en">stagnate</gl>
+  </mel>
+  <!-- mar ⁵⁵'⁴⁴ɕi "coiffer" ~ syang ⁵⁵'⁴⁴ʃi "coiffer"; mar ⁵⁵'⁴⁴ɕi "coiffer" ~ syang ⁵⁵'⁴⁴ʃiː "coiffer" -->
+  <mel id="q18">
+    <gl xml:lang="fr">coiffer</gl>
+  </mel>
+  <!-- pra ¹tʰiː "line" ~ syang ⁵⁵ti "coin" -->
+  <mel id="q19">
+    <gl xml:lang="fr">coin</gl>
+    <gl xml:lang="en">line</gl>
+  </mel>
+  <!-- mar ⁵⁴'⁴⁴koː "contagieux" ~ tag ²koː "contagious" -->
+  <mel id="q20">
+    <gl xml:lang="fr">contagieux</gl>
+    <gl xml:lang="en">contagious</gl>
+  </mel>
+  <!-- gha ²ti "sibling" ~ pra ²tʰeː "cousin"; gha ²ti "sibling" ~ pra ²tʰeː "cousin" -->
+  <mel id="q21">
+    <gl xml:lang="en">cousin</gl>
+    <gl xml:lang="en">sibling</gl>
+  </mel>
+  <!-- syang ¹¹'¹¹bogo "crapaud" ~ tuk ³poʈo "toad" -->
+  <mel id="q22">
+    <gl xml:lang="fr">crapaud</gl>
+    <gl xml:lang="en">toad</gl>
+  </mel>
+  <!-- pra ²kri "shadow" ~ ris ²krip "shadow"; pra ²kri "shadow" ~ ris ²krip "dark, shaded" -->
+  <mel id="q23">
+    <gl xml:lang="en">dark</gl>
+    <gl xml:lang="en">shaded</gl>
+    <gl xml:lang="en">shadow</gl>
+  </mel>
+  <!-- ris ⁴tsame "daughter" ~ syang ³¹'²²tsʌme "fille"; ris ⁴tsame "daughter" ~ syang ¹¹'⁴⁴tsʌme "fille" -->
+  <mel id="q24">
+    <gl xml:lang="en">daughter</gl>
+    <gl xml:lang="fr">fille</gl>
+  </mel>
+  <!-- sahu ⁴ʈet "half" ~ syang ³¹ʈe "demi"; sahu ⁴ʈet "half" ~ syang ³¹ʈe "demi" -->
+  <mel id="q25">
+    <gl xml:lang="fr">demi</gl>
+    <gl xml:lang="en">half</gl>
+  </mel>
+  <!-- ris ³silpa "dew, raindrops" ~ tuk ³silpə "dew" -->
+  <mel id="q26">
+    <gl xml:lang="en">dew</gl>
+    <gl xml:lang="en">raindrops</gl>
+  </mel>
+  <!-- syang ¹¹'³³pumbu "âne" ~ tuk ⁴pumpu "donkey" -->
+  <mel id="q27">
+    <gl xml:lang="en">donkey</gl>
+    <gl xml:lang="fr">âne</gl>
+  </mel>
+  <!-- sahu ¹ɲoi "drunk" ~ tag Xɲo "drunk"; ris ³ŋjot "drunk" ~ tag ³ɲo "drunk" -->
+  <mel id="q28">
+    <gl xml:lang="en">drunk</gl>
+  </mel>
+  <!-- gha ¹ju "early, be" ~ sahu ¹joː "early" -->
+  <mel id="q29">
+    <gl xml:lang="en">early</gl>
+  </mel>
+  <!-- pra ⁴leː "easy" ~ ris ⁴lap "suddenly" -->
+  <mel id="q30">
+    <gl xml:lang="en">easy</gl>
+    <gl xml:lang="en">suddenly</gl>
+  </mel>
+  <!-- gha ¹e "of" ~ sahu ¹e "even"; sahu ¹ki "of" ~ syang ³³kju "mare" -->
+  <mel id="q31">
+    <gl xml:lang="en">even</gl>
+    <gl xml:lang="fr">mare</gl>
+    <gl xml:lang="en">of</gl>
+  </mel>
+  <!-- ris ¹pʰeː "fart" ~ syang ⁵⁵pʰe "péter"; ris ¹pʰeː "fart" ~ syang ⁵⁵pʰe "péter" -->
+  <mel id="q32">
+    <gl xml:lang="en">fart</gl>
+    <gl xml:lang="fr">péter</gl>
+  </mel>
+  <!-- mar ¹¹'²²duʱ "fatigué" ~ syang ¹¹'²¹tu "fatigué" -->
+  <mel id="q33">
+    <gl xml:lang="fr">fatigué</gl>
+  </mel>
+  <!-- ris ²tarŋa "fish" ~ tuk ²tərŋə "fish" -->
+  <mel id="q34">
+    <gl xml:lang="en">fish</gl>
+  </mel>
+  <!-- mar ⁵⁵ŋo "fontanelle" ~ ris ²wa "fontanel"; mar ⁵⁵ŋo "fontanelle" ~ syang ¹¹ŋo "fontanelle" -->
+  <mel id="q35">
+    <gl xml:lang="en">fontanel</gl>
+    <gl xml:lang="fr">fontanelle</gl>
+  </mel>
+  <!-- ris ²tsuppli "fourteen" ~ syang ³³'¹¹tsubli "quatorze"; ris ²tsuppli "fourteen" ~ syang ³³'³²tsupli "quatorze" -->
+  <mel id="q36">
+    <gl xml:lang="en">fourteen</gl>
+    <gl xml:lang="fr">quatorze</gl>
+  </mel>
+  <!-- syang ²¹pʌm "gel" ~ tuk ³pəm "frost" -->
+  <mel id="q37">
+    <gl xml:lang="en">frost</gl>
+    <gl xml:lang="fr">gel</gl>
+  </mel>
+  <!-- ris ⁴pja "have sex" ~ tag ⁴pja "fuck" -->
+  <mel id="q38">
+    <gl xml:lang="en">fuck</gl>
+    <gl xml:lang="en">have sex</gl>
+  </mel>
+  <!-- mar ⁵⁵'⁴⁴pʰja "saluer" ~ tuk ²pʰja "greet" -->
+  <mel id="q39">
+    <gl xml:lang="en">greet</gl>
+    <gl xml:lang="fr">saluer</gl>
+  </mel>
+  <!-- ris ³puluŋ "worm, insect" ~ tuk ³puluŋ "grub" -->
+  <mel id="q40">
+    <gl xml:lang="en">grub</gl>
+    <gl xml:lang="en">insect</gl>
+    <gl xml:lang="en">worm</gl>
+  </mel>
+  <!-- ris ⁴kjapa "slave, hired herdsman" ~ tuk ⁴kjəpə "slave" -->
+  <mel id="q41">
+    <gl xml:lang="en">hired herdsman</gl>
+    <gl xml:lang="en">slave</gl>
+  </mel>
+  <!-- mar ³pjaʱ "sabot" ~ tuk ³pja "hoof" -->
+  <mel id="q42">
+    <gl xml:lang="en">hoof</gl>
+    <gl xml:lang="fr">sabot</gl>
+  </mel>
+  <!-- ris ¹tsʰeː "life, lifetime" ~ tag Xtsʰe "life"; ris ¹tsʰeː "life, lifetime" ~ tag Xtsʰe "life" -->
+  <mel id="q43">
+    <gl xml:lang="en">life</gl>
+    <gl xml:lang="en">lifetime</gl>
+  </mel>
+  <!-- mar ⁵⁴⁵ju "manche d'outil" ~ syang ⁵⁵ju "manche d'outil"; mar ⁵⁴⁵ju "manche d'outil" ~ syang ⁵⁴ju "manche d'outil" -->
+  <mel id="q44">
+    <gl xml:lang="fr">manche d'outil</gl>
+  </mel>
+  <!-- pra ¹taː "mark" ~ ris ¹taː "mark, sign" -->
+  <mel id="q45">
+    <gl xml:lang="en">mark</gl>
+    <gl xml:lang="en">sign</gl>
+  </mel>
+  <!-- ris ¹paŋ "meadow" ~ tuk ᴴpaŋ "meadow" -->
+  <mel id="q46">
+    <gl xml:lang="en">meadow</gl>
+  </mel>
+  <!-- mar ²¹lʌʱ "montée" ~ syang ²¹lʌ "montée"; mar ²¹lʌʱ "montée" ~ syang ²¹lʌ "montée" -->
+  <mel id="q47">
+    <gl xml:lang="fr">montée</gl>
+  </mel>
+  <!-- mar ³³'³³ju "pleuvoir, neiger ..." ~ syang ⁴⁴'⁴⁴ju "neiger"; mar ³³'³³ju "pleuvoir, neiger ..." ~ syang ⁴⁵'⁵⁵ju "pleuvoir" -->
+  <mel id="q48">
+    <gl xml:lang="fr">neiger</gl>
+    <gl xml:lang="fr">pleuvoir</gl>
+  </mel>
+  <!-- syang ⁵⁵'⁴⁴kʰimtse "voisin" ~ tuk ²kʰimtse "neighbor" -->
+  <mel id="q49">
+    <gl xml:lang="en">neighbor</gl>
+    <gl xml:lang="fr">voisin</gl>
+  </mel>
+  <!-- mar Xmun "nuit" ~ sahu ¹mun "night"; mar Xmun "nuit" ~ tag ³mun "night" -->
+  <mel id="q50">
+    <gl xml:lang="en">night</gl>
+    <gl xml:lang="fr">nuit</gl>
+  </mel>
+  <!-- gha ³a "not" ~ ris ³a "not" -->
+  <mel id="q51">
+    <gl xml:lang="en">not</gl>
+  </mel>
+  <!-- mar ⁵³tsʰo "offrande" ~ syang ⁵³tsʰoː "offrande, nourriture bén"; mar ⁵³tsʰo "offrande" ~ syang ⁵³tsʰoː "offrande, nourriture bén" -->
+  <mel id="q52">
+    <gl xml:lang="fr">nourriture bénie</gl>
+    <gl xml:lang="fr">offrande</gl>
+  </mel>
+  <!-- mar ²¹moʱ "nuage" ~ syang ᴸmo "nuage"; mar ²¹moʱ "nuage" ~ syang ᴸmo "nuage" -->
+  <mel id="q53">
+    <gl xml:lang="fr">nuage</gl>
+  </mel>
+  <!-- gha ¹ŋẽ "obey" ~ ris ¹heŋ "subside" -->
+  <mel id="q54">
+    <gl xml:lang="en">obey</gl>
+    <gl xml:lang="en">subside</gl>
+  </mel>
+  <!-- syang Xtaŋgʌr "pois" ~ tuk ²taŋkər "pea" -->
+  <mel id="q55">
+    <gl xml:lang="en">pea</gl>
+    <gl xml:lang="fr">pois</gl>
+  </mel>
+  <!-- pra ³mle "penis" ~ tuk ³mle "penis" -->
+  <mel id="q56">
+    <gl xml:lang="en">penis</gl>
+  </mel>
+  <!-- pra ³ta "pillar" ~ tag ³ta "pillar" -->
+  <mel id="q57">
+    <gl xml:lang="en">pillar</gl>
+  </mel>
+  <!-- mar ⁴³tʰaŋ "plaine" ~ syang ⁵⁴tʰaŋ "plaine" -->
+  <mel id="q58">
+    <gl xml:lang="fr">plaine</gl>
+  </mel>
+  <!-- mar ⁵⁵'⁵⁵naga "poulet" ~ syang ⁵⁵'⁵⁵naga "poule" -->
+  <mel id="q59">
+    <gl xml:lang="fr">poule</gl>
+    <gl xml:lang="fr">poulet</gl>
+  </mel>
+  <!-- mar ⁵⁵'⁵⁴saŋ "propre" ~ syang ⁵⁵'³³saŋ "propre" -->
+  <mel id="q60">
+    <gl xml:lang="fr">propre</gl>
+  </mel>
+  <!-- syang ᴸbjo "toit" ~ tuk ⁴pe "roof" -->
+  <mel id="q61">
+    <gl xml:lang="en">roof</gl>
+    <gl xml:lang="fr">toit</gl>
+  </mel>
+  <!-- gha ¹tsatsa "salt" ~ ris ¹tsatsa "salt"; gha ¹tsatsa "salt" ~ tuk ¹tsətsə "salt" -->
+  <mel id="q62">
+    <gl xml:lang="en">salt</gl>
+  </mel>
+  <!-- mar ¹¹'³³diʱɲi "soleil" ~ ris ³tini "sun"; mar ¹¹'³³diʱɲi "soleil" ~ syang ¹¹'²¹dini "soleil" -->
+  <mel id="q63">
+    <gl xml:lang="fr">soleil</gl>
+    <gl xml:lang="en">sun</gl>
+  </mel>
+  <!-- gha ³kro "true" ~ syang ³³kju "source" -->
+  <mel id="q64">
+    <gl xml:lang="fr">source</gl>
+    <gl xml:lang="en">true</gl>
+  </mel>
+  <!-- mar ³tɕʌʱ "thé" ~ pra ³ceː "tea"; mar ³tɕʌʱ "thé" ~ tuk ³tsjə "tea" -->
+  <mel id="q65">
+    <gl xml:lang="en">tea</gl>
+    <gl xml:lang="fr">thé</gl>
+  </mel>
+  <!-- mar ⁴⁴'³³tsʰʌi "teindre" ~ syang ⁵⁵tsʰe "teindre" -->
+  <mel id="q66">
+    <gl xml:lang="fr">teindre</gl>
+  </mel>
+  <!-- syang ⁵⁵'⁵⁵putsu "épine" ~ tuk ²putsu "thorn" -->
+  <mel id="q67">
+    <gl xml:lang="en">thorn</gl>
+    <gl xml:lang="fr">épine</gl>
+  </mel>
+  <!-- ris ³kur "thunder" ~ tuk ³kur "thunder" -->
+  <mel id="q68">
+    <gl xml:lang="en">thunder</gl>
+  </mel>
+  <!-- mar ⁵⁴juː "turquoise" ~ syang ⁵³ju "turquoise"; mar ⁵⁴juː "turquoise" ~ syang ⁵³ju "turquoise" -->
+  <mel id="q69">
+    <gl xml:lang="fr">turquoise</gl>
+  </mel>
+  <!-- mar ³tuʱ "tuyau" ~ syang ᴸdu "tuyau"; mar ³tuʱ "tuyau" ~ syang ᴸdu "tuyau" -->
+  <mel id="q70">
+    <gl xml:lang="fr">tuyau</gl>
+  </mel>
+  <!-- mar ⁵⁵'⁵⁵nʌli "van" ~ syang ⁵⁵'⁵⁵nʌli "van"; mar ⁵⁵'⁵⁵nʌli "van" ~ syang ⁴⁴'⁴⁴nʌli "van à clairevoie" -->
+  <mel id="q71">
+    <gl xml:lang="fr">van</gl>
+    <gl xml:lang="fr">van à clairevoie</gl>
+  </mel>
+  <!-- mar ⁴³tsʌ "veine" ~ syang ⁵⁴tsʌ "veine" -->
+  <mel id="q72">
+    <gl xml:lang="fr">veine</gl>
+  </mel>
+  <!-- ris ²tiːla "yesterday" ~ tuk ²tilə "yesterday" -->
+  <mel id="q73">
+    <gl xml:lang="en">yesterday</gl>
+  </mel>
+  <!-- mar ³peʱ "épouse" ~ syang ²¹pe "épouse"; mar ³peʱ "épouse" ~ syang ²¹pe "épouse" -->
+  <mel id="q74">
+    <gl xml:lang="fr">épouse</gl>
+  </mel>
+</semantics>

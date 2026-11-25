@@ -1,0 +1,484 @@
+iso_lg	iso_id	iso_form	iso_gloss	partner_lg	partner_id	partner_form	partner_gloss	partner_status_now	shared_reconstructions	mel_sources	wordnet
+gha	gha.1	³a	not	ris	ris.1	³a	not	iso	Aa	clics,ext,wordnet	syn
+gha	gha.160	¹kʰaː	get without purchase	tuk	tuk.216	¹kʰə	come	set	Akʰat	clics,ext,wordnet	
+gha	gha.198	³le	long life	ris	ris.1863	³leː	grow thick and tall	iso	Alet	clics,ext,wordnet	
+gha	gha.266	²mo	low	ris	ris.1564	²maː	small bamboo	set	Bʰmaː	clics,wordnet	
+gha	gha.297	²naː	smell	tuk	tuk.400	ᴴnə	nose	set	Bʰnat	stedt,wordnet	
+gha	gha.297	²naː	smell	tuk	tuk.344	²me	feel at ease	iso	Bʰɲat	wordnet	syn
+gha	gha.309	⁴ne	fight	ris	ris.519	⁴ŋjak	seize by the shoulders and pound on the ground, shake	iso	Bŋjak	clics,stedt	
+gha	gha.309	⁴ne	fight	tag	tag.191	Xɲel	crush, grind	set	Bɲel	stedt,wordnet	
+gha	gha.336	¹ŋẽ	obey	ris	ris.522	¹ŋjan	listen, to pay attention, to obey, to be persuade|d	set	Aʰŋjan	clics,ext,wordnet	syn
+gha	gha.336	¹ŋẽ	obey	sahu	sahu.757	¹ɲen	listen	set	Aʰɲen Aʰɲjan	clics,ext	
+gha	gha.38	¹e	turn back/return	tuk	tuk.475	ᴴŋi	day after tomorrow	iso	Aʰŋet	clics,ext,wordnet	
+gha	gha.395	¹plaː	palm	tag	tag.595	¹pleː	crush with foot	set	Aplat Apljat	ext,stedt	
+gha	gha.410	⁴plu	sprout, cause to/grow	pra	pra.285	⁴pʰlu	seed	set	Bblu Bblul	ext,stedt	
+gha	gha.410	⁴plu	sprout, cause to/grow	ris	ris.1456	⁴plu	seed	set	Bblu	ext,stedt	
+gha	gha.410	⁴plu	sprout, cause to/grow	sahu	sahu.324	⁴plu	seed	set	Bblu	ext,stedt	
+gha	gha.410	⁴plu	sprout, cause to/grow	tag	tag.219	⁴plu	seed	set	Bblu	ext,stedt	
+gha	gha.410	⁴plu	sprout, cause to/grow	tuk	tuk.604	⁴plu	seed	set	Bblu	ext,stedt	
+gha	gha.411	⁴plu	sow	pra	pra.285	⁴pʰlu	seed	set	Bblu Bblul	ext,wordnet	
+gha	gha.411	⁴plu	sow	ris	ris.1456	⁴plu	seed	set	Bblu	ext,wordnet	
+gha	gha.411	⁴plu	sow	sahu	sahu.324	⁴plu	seed	set	Bblu	ext,wordnet	
+gha	gha.411	⁴plu	sow	tag	tag.219	⁴plu	seed	set	Bblu	ext,wordnet	
+gha	gha.411	⁴plu	sow	tuk	tuk.604	⁴plu	seed	set	Bblu	ext,wordnet	
+gha	gha.433	⁴pri	grind	pra	pra.293	⁴pʰriː	rub/scrub	iso	Bbri Bbriː Bbrut	clics,stedt	
+gha	gha.443	²pwi	rice straw	tuk	tuk.643	ᴴpuj	chaff	iso	Bpwi	wordnet	syn
+gha	gha.54	²hĩ	threaten/raise hand	tag	tag.35	Xhim	make a rope	set	Bhim	stedt,wordnet	
+gha	gha.587	¹tẽ	lobe of ear	pra	pra.413	¹tʰẽ	vacant/empty	set	Atʰem Atʰen	ext,stedt	
+gha	gha.587	¹tẽ	lobe of ear	sahu	sahu.661	¹tʰeː	hear	set	Atʰen	clics,stedt	
+gha	gha.587	¹tẽ	lobe of ear	tuk	tuk.991	ᴴtʰən	empty	set	Atʰen	ext,stedt	
+gha	gha.609	³ti	warm	tag	tag.367	Xti	light fire	set	Adik Adiː	ext,stedt	
+gha	gha.627	²tu	flat mallet for breaking ground	pra	pra.380	²to	pound/hull	set	Btop Btoː	clics,ext,wordnet	
+gha	gha.627	²tu	flat mallet for breaking ground	tuk	tuk.950	²to	pound grain	set	Btoː	clics,ext,wordnet	
+gha	gha.637	¹tʰaː	butt, gore	ris	ris.1053	¹tʰap	gore	iso	Atʰap	clics,ext,wordnet	syn
+gha	gha.642	¹tʰe	loud	syang	syang.939	⁵⁵'⁴⁴te	tomber de haut	set	Atʰe Atʰek Atʰep	wordnet	syn
+gha	gha.643	¹tʰẽ	put away	pra	pra.411	¹tʰẽ	set/put	set	Atʰan Atʰem Atʰen	stedt,wordnet	
+gha	gha.643	¹tʰẽ	put away	ris	ris.1051	¹tʰan	put, to set	set	Atʰan	stedt,wordnet	
+gha	gha.643	¹tʰẽ	put away	sahu	sahu.662	¹tʰen	put	set	Atʰan Atʰen	stedt,wordnet	
+gha	gha.651	²tʰu	stop/hold up	ris	ris.1068	²tʰut	join end to end	iso	Btʰut	stedt,wordnet	
+gha	gha.682	¹tsatsa	salt	ris	ris.552	¹tsatsa	salt	iso	Atsatsa	clics,ext,wordnet	syn
+gha	gha.682	¹tsatsa	salt	tuk	tuk.1113	¹tsətsə	salt	iso	Atsatsa	clics,ext,wordnet	syn
+gha	gha.74	¹ju	early, be	sahu	sahu.29	¹joː	early	iso	Aʰjoː	clics,ext,wordnet	syn
+gha	gha.745	¹tsʰur	wake up	ris	ris.751	¹tsʰor	stay awake	iso	Atsʰor	wordnet	syn
+gha	gha.757	²wĩ	display	ris	ris.2102	²hun	show	set	Bʰŋwon	wordnet	syn
+gha	gha.757	²wĩ	display	sahu	sahu.715	²ŋom	show	set	Bʰŋwon	wordnet	syn
+gha	gha.757	²wĩ	display	tag	tag.494	Xwon	show	set	Bʰŋwon	wordnet	syn
+gha	gha.757	²wĩ	display	tuk	tuk.524	²ŋon	show	set	Bʰŋwon	wordnet	syn
+gha	gha.90	³kaː	catch	sahu	sahu.43	³kaː	get stuck	set	Agat	clics,stedt,wordnet	
+gha	gha.90	³kaː	catch	tuk	tuk.95	³ka	stuck, get	set	Agap	clics,stedt,wordnet	
+mar	mar.124	⁴³tʰaŋ	plaine	syang	syang.996	⁵⁴tʰaŋ	plaine	iso	Atʰaŋ Btʰaŋ	clics,ext,wordnet	syn
+mar	mar.138	³tuʱ	tuyau	syang	syang.597	ᴸdu	tuyau	iso	Aduk Adup	clics,ext,wordnet	syn
+mar	mar.138	³tuʱ	tuyau	syang	syang.651	ᴸdu	tuyau	iso	Aduk Adup	clics,ext,wordnet	syn
+mar	mar.184	¹¹'³³diʱɲi	soleil	syang	syang.93	¹¹'²¹dini	soleil	iso	Adini	clics,ext,wordnet	syn
+mar	mar.184	¹¹'³³diʱɲi	soleil	ris	ris.961	³tini	sun	iso	Adini	wordnet	syn
+mar	mar.184	¹¹'³³diʱɲi	soleil	tuk	tuk.941	³tiŋi	sun	iso	Adini	wordnet	syn
+mar	mar.194	²¹ʈoʱ	brèdes	syang	syang.750	²¹ʈo	brèdes	iso	Agrwap Agrwo Agrwok	clics,ext,wordnet	
+mar	mar.196	³ʈuʱ	grains	pra	pra.454	³ʈu	corn/grain	iso	Aɖuk Aɖup	ext	syn
+mar	mar.218	⁵³tsʰo	offrande	syang	syang.655	⁵³tsʰoː	offrande, nourriture bénie	iso	Atsʰap Atsʰep Atsʰo	clics,ext,wordnet	
+mar	mar.23	⁵⁵'⁴⁴pʰja	saluer	tuk	tuk.688	²pʰja	greet	set	Bpʰjaː	ext	syn
+mar	mar.230	⁴⁴'⁴⁴tsʰʌ	faire paître	gha	gha.720	²tsʰa	pain	set	Btsʰa Btsʰak	clics,ext,wordnet	
+mar	mar.244	⁴³tsʌ	veine	syang	syang.140	⁵⁴tsʌ	veine	iso	Atsa Btsa Btsak	clics,ext,wordnet	syn
+mar	mar.278	³tɕʌʱ	thé	pra	pra.9	³ceː	tea	iso	Adzjeː	wordnet	syn
+mar	mar.278	³tɕʌʱ	thé	tuk	tuk.1136	³tsjə	tea	iso	Adzja	wordnet	syn
+mar	mar.323	Xkʰjaŋ	rôtir	pra	pra.38	²hraŋ	roast	set	Bkʰraŋ	ext	syn
+mar	mar.323	Xkʰjaŋ	rôtir	ris	ris.466	²kʰraŋ	roast, to grill, to incinerate	set	Bkʰraŋ	ext	syn
+mar	mar.323	Xkʰjaŋ	rôtir	tag	tag.52	Xhwaŋ	roast	set	Akʰraŋ Bkʰraŋ	ext	syn
+mar	mar.323	Xkʰjaŋ	rôtir	tuk	tuk.1092	²ʈʰaŋ	roast, burn	set	Bkʰraŋ	ext	syn
+mar	mar.337	⁵⁵kʌe	langage	gha	gha.107	⁴kjwi	language	set	Bgjoi	wordnet	syn
+mar	mar.337	⁵⁵kʌe	langage	tuk	tuk.56	ᴴkəj	voice, sound, language	set	Akaet Akaket Akat	wordnet	syn
+mar	mar.34	³peʱ	épouse	syang	syang.363	²¹pe	épouse	iso	Abai Abat Abek	clics,ext,wordnet	syn
+mar	mar.34	³peʱ	épouse	pra	pra.241	³pie	wife	set	Abat Abek Abja	wordnet	syn
+mar	mar.340	⁵⁴kʌ	chaux	syang	syang.518	⁵⁴kʌ	chaux à badigeon	iso	Aka Bkak	clics,ext,wordnet	syn
+mar	mar.341	²¹gʌʱ	selle	syang	syang.638	ᴸgʌ	selle, bât	iso	Aga Agak Agra	clics,ext,wordnet	syn
+mar	mar.38	³poʱ	pâte à chang	syang	syang.718	ᴸpo	pâte à bière	iso	Abap Abep Abo	clics,ext,wordnet	syn
+mar	mar.382	⁵⁴kjʌ	tête	gha	gha.117	¹kra	head	set	Akra Akrak	wordnet	syn
+mar	mar.382	⁵⁴kjʌ	tête	sahu	sahu.102	¹kra	head	set	Akra	wordnet	syn
+mar	mar.382	⁵⁴kjʌ	tête	tuk	tuk.1032	ᴴʈə	head	set	Akra Akrak	wordnet	syn
+mar	mar.40	⁵⁴⁵pʌɛ	laine	sahu	sahu.298	²pet	comb fiber, wool	set	Bpet	wordnet	syn
+mar	mar.40	⁵⁴⁵pʌɛ	laine	tuk	tuk.538	ᴴpəj	wool	iso	Apaet Apail Apaket	wordnet	syn
+mar	mar.413	²¹moʱ	nuage	syang	syang.102	ᴸmo	nuage	iso	Amap Amo Amok	clics,ext,wordnet	syn
+mar	mar.413	²¹moʱ	nuage	syang	syang.978	ᴸmo	nuage	iso	Amap Amo Amok	clics,ext,wordnet	syn
+mar	mar.42	⁵⁵pin	bleu	syang	syang.116	Xpin	bleu	iso	Apin Apiŋ Bbin	clics,ext,wordnet	syn
+mar	mar.423	Xmun	nuit	sahu	sahu.238	¹mun	night	iso	Aʰmun	wordnet	syn
+mar	mar.423	Xmun	nuit	tag	tag.154	³mun	night	iso	Amun	wordnet	syn
+mar	mar.426	⁵⁵'⁴⁴min	mûrir	gha	gha.250	²mĩ	ripen	set	Bʰmin	wordnet	syn
+mar	mar.426	⁵⁵'⁴⁴min	mûrir	pra	pra.178	²mĩ	ripe, become/ripen	set	Bʰmin	wordnet	syn
+mar	mar.426	⁵⁵'⁴⁴min	mûrir	sahu	sahu.212	²min	ripen	set	Bʰmin	wordnet	syn
+mar	mar.433	³³'³³mʌmʌ	femelle	ris	ris.1596	¹mama	female who has borne young	iso	Aʰmama	wordnet	syn
+mar	mar.468	⁵⁵'⁵⁵naga	poulet	tuk	tuk.431	²naka	chicken	iso	Bʰnaːkaː	wordnet	syn
+mar	mar.470	⁵⁵'⁵⁵nʌli	van	syang	syang.684	⁵⁵'⁵⁵nʌli	van	iso	Aʰnakli Aʰnaklip Aʰnakliː	clics,ext,wordnet	syn
+mar	mar.497	⁵⁵ŋo	fontanelle	ris	ris.1890	²wa	fontanel	set	Bʰŋwa	wordnet	syn
+mar	mar.512	⁵⁴⁵ju	manche d'outil	syang	syang.649	⁵⁴ju	manche d'outil	iso	Aʰju Aʰjuk Bʰju	clics,ext,wordnet	syn
+mar	mar.512	⁵⁴⁵ju	manche d'outil	syang	syang.650	⁵⁵ju	manche d'outil	iso	Aʰju Aʰjuk Bʰju	clics,ext,wordnet	syn
+mar	mar.513	⁵⁴juː	turquoise	syang	syang.825	⁵³ju	turquoise	iso	Aʰju Aʰjuk Bʰju	clics,ext,wordnet	syn
+mar	mar.525	⁵⁵'⁵⁵ju	couler	ris	ris.1723	¹juː	pour	set	Aʰjuː	wordnet	syn
+mar	mar.525	⁵⁵'⁵⁵ju	couler	sahu	sahu.36	¹juː	put, to pour, to serve	set	Aʰjuk Aʰjuː	wordnet	syn
+mar	mar.525	⁵⁵'⁵⁵ju	couler	tag	tag.604	¹juː	pour	set	Aʰju Aʰjuk Aʰjuː	wordnet	syn
+mar	mar.525	⁵⁵'⁵⁵ju	couler	tag	tag.61	Xju	pour	set	Aʰju Aʰjuk Aʰjuː	wordnet	syn
+mar	mar.527	³³'³³ju	pleuvoir, neiger ...	pra	pra.62	²ju	rain	set	Bʰju Bʰjuk	wordnet	syn
+mar	mar.527	³³'³³ju	pleuvoir, neiger ...	tag	tag.60	Xju	rain	set	Aʰju Aʰjuk Aʰjuː	wordnet	syn
+mar	mar.527	³³'³³ju	pleuvoir, neiger ...	tuk	tuk.53	²ju	bleed, rain...	set	Bʰju Bʰjuk	wordnet	syn
+mar	mar.578	²¹lʌʱ	montée	syang	syang.110	²¹lʌ	montée	iso	Ala	clics,ext,wordnet	
+mar	mar.578	²¹lʌʱ	montée	syang	syang.991	²¹lʌ	montée	iso	Ala	clics,ext,wordnet	
+mar	mar.580	Xlo	étudier	gha	gha.213	¹lu	learn	set	AHloː Aʰloː	wordnet	syn
+mar	mar.580	Xlo	étudier	tuk	tuk.290	²lʰəp	learn	set	BHlap BHlep BHlop	wordnet	syn
+mar	mar.583	²²'²¹luʱ	verser	ris	ris.1852	³luː	pour out	iso	Aluː	wordnet	syn
+mar	mar.631	⁵⁵'⁴⁴sʌʈu	bracelet	syang	syang.804	⁴⁴'⁴³soʈu	bracelet de verre	iso	Asopgrwu Asopgrwuk Asopgrwup	clics,ext,wordnet	syn
+mar	mar.72	³²'²²puki	genou	tuk	tuk.657	²puʈi	knee	iso	Bpugrwet Bpugrwi Bpugrwit	wordnet	syn
+pra	pra.103	²kri	shadow	ris	ris.339	²krip	shadow	iso	Bkrip	clics,ext,wordnet	syn
+pra	pra.103	²kri	shadow	ris	ris.338	²krip	dark, shaded	iso	Bkrip	wordnet	syn
+pra	pra.183	³mle	penis	tuk	tuk.370	³mle	penis	iso	Amleː	clics,ext,stedt,wordnet	syn
+pra	pra.183	³mle	penis	syang	syang.233	⁵¹mle	pénis	iso	Amleː	wordnet	syn
+pra	pra.184	¹mo	have	gha	gha.282	¹mu	be	set	Aʰmop Aʰmoː	clics,wordnet	
+pra	pra.203	³naː	grove/cope/wood	mar	mar.452	³naʱ	forêt	set	Anaː	wordnet	syn
+pra	pra.203	³naː	grove/cope/wood	syang	syang.1000	¹¹naː	forêt dense	set	Anaː	wordnet	syn
+pra	pra.203	³naː	grove/cope/wood	syang	syang.1001	²¹na	forêt	set	Anaː	wordnet	syn
+pra	pra.203	³naː	grove/cope/wood	syang	syang.1002	¹¹naː	forêt	set	Anaː	wordnet	syn
+pra	pra.203	³naː	grove/cope/wood	syang	syang.999	¹¹naː	forêt	set	Anaː	wordnet	syn
+pra	pra.226	⁴ɲeː	suck	tag	tag.194	Xɲeː	chew	set	Bnet Bɲat Bɲet	clics,stedt	
+pra	pra.275	¹pʰi	up	tuk	tuk.682	ᴴpʰi	above	set	Apʰi Apʰiː Apʰwi	clics,ext,stedt	
+pra	pra.293	⁴pʰriː	rub/scrub	gha	gha.433	⁴pri	grind	iso	Bbri Bbriː Bbrut	clics,stedt	
+pra	pra.309	ri	to	ris	ris.1763	ri	in, to	set	ri ʰri	clics,ext,wordnet	
+pra	pra.309	ri	to	ris	ris.1764	ri	for, in order to, to	iso	ri ʰri	clics,ext,wordnet	
+pra	pra.325	¹siː	break/destroy	gha	gha.526	¹si	die	set	Aswi	stedt,wordnet	
+pra	pra.363	³ta	pillar	tag	tag.348	³ta	pillar	iso	Adaː	clics,ext,wordnet	syn
+pra	pra.365	¹taː	mark	ris	ris.885	¹taː	mark, sign	iso	Ataː	clics,ext,wordnet	syn
+pra	pra.375	²teː	kindle	mar	mar.163	⁵²'²²to	ôter du feu	set	Btap Btep	wordnet	syn
+pra	pra.379	²tiː	take/adopt	tag	tag.390	Xtui	pick up	set	Btwi	clics,stedt,wordnet	
+pra	pra.399	²tʰa	board/plank	mar	mar.111	⁵¹tʰa	planche	set	Btʰaː	wordnet	syn
+pra	pra.399	²tʰa	board/plank	syang	syang.294	Xtʰa	planche	set	Btʰaː	wordnet	syn
+pra	pra.399	²tʰa	board/plank	syang	syang.527	⁵⁴tʰa	planche	set	Btʰaː	wordnet	syn
+pra	pra.410	¹tʰẽ	connect/fasten	ris	ris.1051	¹tʰan	put, to set	set	Atʰan	ext,wordnet	
+pra	pra.454	³ʈu	corn/grain	mar	mar.196	³ʈuʱ	grains	iso	Aɖuk Aɖup	ext	syn
+pra	pra.462	¹tsaŋ	daughter-in-law	ris	ris.547	¹tsaŋ	daughter-in-law, brother's wife	iso	Atsaŋ	ext,wordnet	syn
+pra	pra.462	¹tsaŋ	daughter-in-law	mar	mar.257	⁵⁴tsaŋ	bru	set	Atsaŋ	wordnet	syn
+pra	pra.462	¹tsaŋ	daughter-in-law	syang	syang.430	⁵¹tsaŋ	bru	set	Atsaŋ	wordnet	syn
+pra	pra.462	¹tsaŋ	daughter-in-law	syang	syang.431	⁵¹tsaŋ	bru	set	Atsaŋ	wordnet	syn
+pra	pra.487	⁴tsʰor	pack/wrap	ris	ris.620	⁴tsor	wrap up; %fig.| to put aside, to save	set	Bdzor	clics,ext,stedt	
+pra	pra.60	⁴jɤ	return/come back	tuk	tuk.30	⁴jə	go	set	Bjak	clics,stedt,wordnet	
+pra	pra.9	³ceː	tea	mar	mar.278	³tɕʌʱ	thé	iso	Adzjeː	wordnet	syn
+ris	ris.1	³a	not	gha	gha.1	³a	not	iso	Aa	clics,ext,wordnet	syn
+ris	ris.1022	³toŋ	clan name	pra	pra.384	³to	plant	set	Adoŋ	clics,ext,wordnet	
+ris	ris.1028	¹tot	bump one's foot while walking	gha	gha.599	¹ti	corner, angle	set	Atot	clics,stedt	
+ris	ris.1053	¹tʰap	gore	gha	gha.637	¹tʰaː	butt, gore	iso	Atʰap	clics,ext,wordnet	syn
+ris	ris.1068	²tʰut	join end to end	gha	gha.651	²tʰu	stop/hold up	iso	Btʰut	stedt,wordnet	
+ris	ris.1068	²tʰut	join end to end	tuk	tuk.1026	²tʰuj	joint	iso	Btʰut	stedt,wordnet	syn
+ris	ris.1082	¹tʰo	top	tuk	tuk.1019	ᴴtʰo	the top <mm>	set	Atʰo Atʰwa	clics,ext,wordnet	syn
+ris	ris.1088	¹tʰot	wear	gha	gha.602	¹ti	wrap	set	Atʰot	ext,stedt	
+ris	ris.1088	¹tʰot	wear	sahu	sahu.668	¹tʰoi	wrap around head	set	Atʰot	ext,stedt	
+ris	ris.1095	¹tʰor	get lost	gha	gha.567	¹ta	be	set	Atʰor	stedt,wordnet	
+ris	ris.1107	²nai	parasitic plant which yields a yellow sweet berry	tag	tag.165	Xnai	put to sleep	set	Bʰnai	stedt,wordnet	
+ris	ris.116	⁴kate	how many?, how! + adj	tuk	tuk.86	⁴kəte	how much	iso	Bgate Bgatew Bgatje	ext,wordnet	
+ris	ris.1194	pa	uncompletive aspect; verb nominalizing suffix	tuk	tuk.536	pə	verbal suffix	iso	pa	clics,ext,wordnet	syn
+ris	ris.1209	¹paŋ	meadow	tuk	tuk.554	ᴴpaŋ	meadow	iso	Apaŋ	clics,ext,wordnet	syn
+ris	ris.123	¹kap	add, to serve food again	tag	tag.544	¹kap	add, complete	iso	Akap	ext,wordnet	syn
+ris	ris.124	²kap	give to carry, to load	tuk	tuk.76	²kəp	build roof	iso	Bkap	clics,wordnet	
+ris	ris.1280	²puŋ	have sthg done, to let, to order	sahu	sahu.359	²puŋ	allow	iso	Bpuŋ	stedt,wordnet	syn
+ris	ris.1283	²putsu	thorn, thorny plant	tuk	tuk.658	²putsu	thorn	iso	Bputsu	ext,wordnet	syn
+ris	ris.1283	²putsu	thorn, thorny plant	syang	syang.292	⁵⁵'⁵⁵putsu	épine	iso	Bputsu	wordnet	syn
+ris	ris.1329	³per	numb, stiff	tag	tag.7	³ber	have cold feet	iso	Aber	ext,stedt	
+ris	ris.1347	¹poŋ	lose baby teeth and get adult teeth	tag	tag.224	Xpoŋ	small earthen water jug	set	Apoŋ	clics,ext,wordnet	
+ris	ris.1380	⁴pja	have sex	tag	tag.587	⁴pja	fuck	iso	Bbja	ext	syn
+ris	ris.141	²kar	warm up an empty cooking pot before pouring the food to be cooked in it	tag	tag.73	Xkar	set to cook	set	Bkar	stedt,wordnet	syn
+ris	ris.1473	²pʰaː	give back in exchange, reimburse, pay back	gha	gha.457	²pʰo	pay	set	Bpʰaː	clics,ext,stedt	
+ris	ris.1473	²pʰaː	give back in exchange, reimburse, pay back	tuk	tuk.663	²pʰa	pay	set	Bpʰaː	clics,ext,stedt	
+ris	ris.1473	²pʰaː	give back in exchange, reimburse, pay back	sahu	sahu.360	²pʰaː	repay	set	Bpʰaː	stedt,wordnet	syn
+ris	ris.1508	¹pʰeː	shine	pra	pra.270	¹pʰeː	fall/sunset	set	Apʰet Apʰeː	stedt,wordnet	
+ris	ris.1508	¹pʰeː	shine	sahu	sahu.366	¹pʰeː	clear a field	iso	Apʰeː	clics,stedt	
+ris	ris.1520	¹pʰot	throw upwards	pra	pra.270	¹pʰeː	fall/sunset	set	Apʰot	clics,wordnet	
+ris	ris.1527	²pʰoltoŋ	ball	tuk	tuk.696	²pʰoltoŋ	ball	iso	Bpʰoltoŋ	clics,ext,wordnet	syn
+ris	ris.1566	⁴ma	stop, to cease to lose	sahu	sahu.188	⁴ma	disappear	iso	Bma	clics,stedt	
+ris	ris.1585	⁴man	think about, to come to mind	gha	gha.239	⁴maẽ	think/remember	set	Bman	ext,stedt	
+ris	ris.1585	⁴man	think about, to come to mind	tuk	tuk.326	⁴mən	think	set	Bman	ext,stedt	
+ris	ris.1596	¹mama	female who has borne young	mar	mar.433	³³'³³mʌmʌ	femelle	iso	Aʰmama	wordnet	syn
+ris	ris.1617	¹mitsʰam	eyelash	syang	syang.147	⁵⁵'⁵⁴mitsʰʌm	cils	iso	Aʰmitsʰam	wordnet	syn
+ris	ris.163	¹kuː	wear on the head	tag	tag.104	Xkuː	wear a hat	iso	Akuː	ext,stedt	
+ris	ris.1640	¹meː	call for goat|s	tag	tag.136	Xme	cow	set	Aʰmet Aʰmeː	ext,stedt	
+ris	ris.1643	⁴me	ox	gha	gha.245	⁴me	cow	set	Bme Bmew	clics,ext,stedt	wup
+ris	ris.1643	⁴me	ox	sahu	sahu.204	⁴me	cow	set	Bme Bmew Bmje	clics,ext,stedt	wup
+ris	ris.1643	⁴me	ox	tag	tag.136	Xme	cow	set	Bme Bmew Bmje	clics,ext,stedt	wup
+ris	ris.1643	⁴me	ox	tag	tag.137	⁴me	cow	set	Bme Bmew Bmje	clics,ext,stedt	wup
+ris	ris.1643	⁴me	ox	tuk	tuk.342	⁴me	cow	set	Bme Bmew Bmje	clics,ext,stedt	wup
+ris	ris.1643	⁴me	ox	pra	pra.181	⁴mie	cattle	set	Bme Bmje	clics,stedt	wup
+ris	ris.1648	³mento	flower	syang	syang.297	¹¹'²¹mɛndo	fleur	iso	Amento	wordnet	syn
+ris	ris.1673	²mjap	scour, to sharpen	tuk	tuk.349	²mep	whet	set	Bʰmjap	ext,stedt	
+ris	ris.1673	²mjap	scour, to sharpen	gha	gha.253	²mjaː	scrub	set	Bʰmjap	wordnet	syn
+ris	ris.1673	²mjap	scour, to sharpen	sahu	sahu.214	²mjap	scrub	set	Bʰmjap	wordnet	syn
+ris	ris.1719	⁴jar	flee, to run	gha	gha.63	⁴jaː	go	set	Bjar	clics,wordnet	
+ris	ris.1719	⁴jar	flee, to run	sahu	sahu.23	⁴jar	go	set	Bjar	clics,wordnet	
+ris	ris.1764	ri	for, in order to, to	pra	pra.309	ri	to	iso	ri ʰri	clics,ext,wordnet	
+ris	ris.1783	⁴rup	encounter	tag	tag.279	Xrup	meeting	set	Brup	wordnet	syn
+ris	ris.1852	³luː	pour out	mar	mar.583	²²'²¹luʱ	verser	iso	Aluː	wordnet	syn
+ris	ris.1863	³leː	grow thick and tall	gha	gha.198	³le	long life	iso	Alet	clics,ext,wordnet	
+ris	ris.1863	³leː	grow thick and tall	gha	gha.206	³li	heavy	set	Alet Aleː	clics,stedt,wordnet	
+ris	ris.1863	³leː	grow thick and tall	tuk	tuk.299	³li	heavy	set	Alet	clics,stedt,wordnet	
+ris	ris.1910	²sa	deliver, to take s.o or sthg someplace, to accompany	tag	tag.560	²sa	lead	iso	Bsa	stedt,wordnet	
+ris	ris.1927	¹saŋ	clean, swept out	tag	tag.288	Xsaŋ	clear	set	Asaŋ	clics,stedt,wordnet	
+ris	ris.1975	¹sil	fresh, clear	gha	gha.527	¹si	clean	set	Asil	clics,stedt,wordnet	
+ris	ris.1975	¹sil	fresh, clear	sahu	sahu.458	¹sil	give birth	iso	Asil	stedt,wordnet	
+ris	ris.1977	²sil	lay, to give birth	tuk	tuk.780	²si	die	set	Bsil	clics,wordnet	
+ris	ris.198	²kum	very low wooden stool	tuk	tuk.192	ᴴkum	urine	set	Bkum	ext,stedt	
+ris	ris.1981	³silpa	dew, raindrops	tuk	tuk.782	³silpə	dew	iso	Azilpa	clics,ext,wordnet	syn
+ris	ris.1987	¹suŋ	say	gha	gha.561	¹sũ	mouth	set	Asuŋ	stedt,wordnet	
+ris	ris.1987	¹suŋ	say	pra	pra.337	¹suŋ	mouth	set	Asuŋ	stedt,wordnet	
+ris	ris.1987	¹suŋ	say	sahu	sahu.497	¹suŋ	mouth	set	Asuŋ	stedt,wordnet	
+ris	ris.1987	¹suŋ	say	tag	tag.326	Xsũ	mouth	set	Asuŋ	stedt,wordnet	
+ris	ris.1987	¹suŋ	say	tag	tag.329	Xsuŋ	mouth	set	Asuŋ	stedt,wordnet	
+ris	ris.1987	¹suŋ	say	tuk	tuk.861	ᴴsuŋ	mouth	set	Asuŋ	stedt,wordnet	
+ris	ris.2005	³seŋ	build, to erect	sahu	sahu.456	³seŋ	do	iso	Azeŋ	clics,wordnet	
+ris	ris.2018	²soː	thatching grass <thatch>	tag	tag.324	Xsoː	thatch	iso	Bsoː	clics,ext,stedt	
+ris	ris.202	³kur	thunder	tuk	tuk.200	³kur	thunder	iso	Agur	clics,ext,wordnet	syn
+ris	ris.2030	²sja	danse	gha	gha.523	²se	dance	set	Bsja	wordnet	syn
+ris	ris.2030	²sja	danse	sahu	sahu.462	²sja	dance	set	Bsja Bɕa	wordnet	syn
+ris	ris.2030	²sja	danse	tuk	tuk.815	²sje	dance	set	Bsja	wordnet	syn
+ris	ris.295	⁴kjapa	slave, hired herdsman	tuk	tuk.124	⁴kjəpə	slave	iso	Bgjapa	clics,ext,wordnet	syn
+ris	ris.338	²krip	dark, shaded	pra	pra.103	²kri	shadow	iso	Bkrip	wordnet	syn
+ris	ris.339	²krip	shadow	pra	pra.103	²kri	shadow	iso	Bkrip	clics,ext,wordnet	syn
+ris	ris.393	¹kʰak	get stuck	gha	gha.153	¹kʰa	come	set	Akʰak	clics,ext,wordnet	
+ris	ris.393	¹kʰak	get stuck	pra	pra.139	¹kʰɤ	come	set	Akʰak	clics,ext,wordnet	
+ris	ris.393	¹kʰak	get stuck	tag	tag.26	Xha	come	set	Akʰak	clics,ext,wordnet	
+ris	ris.393	¹kʰak	get stuck	tuk	tuk.216	¹kʰə	come	set	Akʰak	clics,ext,wordnet	
+ris	ris.411	¹kʰaːre	neck	syang	syang.72	⁵⁵'⁴⁴kʰari	cou	iso	Akʰaːrje Akʰaːʰrje	wordnet	syn
+ris	ris.481	²kʰwat	tie with a sliding knot	tuk	tuk.243	²kʰoj	wrap/wind up	iso	Bkʰwat	clics,stedt	
+ris	ris.508	¹ŋo	the fact of knowing or recognizing someone <to recognize>	tuk	tuk.514	ᴴŋo	know	iso	Aʰŋo	wordnet	syn
+ris	ris.519	⁴ŋjak	seize by the shoulders and pound on the ground, shake	gha	gha.309	⁴ne	fight	iso	Bŋjak	clics,stedt	
+ris	ris.537	³ŋjot	drunk	tag	tag.200	Xɲo	drunk	set	Aɲot	ext,wordnet	syn
+ris	ris.537	³ŋjot	drunk	tag	tag.201	³ɲo	drunk	iso	Aɲot	ext,wordnet	syn
+ris	ris.547	¹tsaŋ	daughter-in-law, brother's wife	pra	pra.462	¹tsaŋ	daughter-in-law	iso	Atsaŋ	ext,wordnet	syn
+ris	ris.547	¹tsaŋ	daughter-in-law, brother's wife	mar	mar.257	⁵⁴tsaŋ	bru	set	Atsaŋ	wordnet	syn
+ris	ris.547	¹tsaŋ	daughter-in-law, brother's wife	syang	syang.430	⁵¹tsaŋ	bru	set	Atsaŋ	wordnet	syn
+ris	ris.547	¹tsaŋ	daughter-in-law, brother's wife	syang	syang.431	⁵¹tsaŋ	bru	set	Atsaŋ	wordnet	syn
+ris	ris.552	¹tsatsa	salt	gha	gha.682	¹tsatsa	salt	iso	Atsatsa	clics,ext,wordnet	syn
+ris	ris.552	¹tsatsa	salt	tuk	tuk.1113	¹tsətsə	salt	iso	Atsatsa	clics,ext,wordnet	syn
+ris	ris.587	¹tsuŋ	bind	tag	tag.462	Xtsuŋ	tie	set	Atsuŋ	stedt,wordnet	
+ris	ris.732	¹tsʰeː	life, lifetime	tag	tag.474	Xtsʰe	life	set	Atsʰet Atsʰeː	clics,ext,wordnet	syn
+ris	ris.751	¹tsʰor	stay awake	gha	gha.745	¹tsʰur	wake up	iso	Atsʰor	wordnet	syn
+ris	ris.755	¹tsʰjaː	coagulate, to stagnate, to freeze	tag	tag.478	Xtsʰja	coagulate	iso	Atsʰjaː	clics,ext,wordnet	syn
+ris	ris.793	³ʈaː	strap or rope used to hang a lama's drum	tag	tag.405	³ʈa	plant	iso	Aɖaː	ext,stedt	
+ris	ris.823	¹ʈiŋ	small frog	gha	gha.486	¹rĩ	bamboo	set	Aʈ.Hr.ʈʰiŋ	ext,stedt	
+ris	ris.885	¹taː	mark, sign	pra	pra.365	¹taː	mark	iso	Ataː	clics,ext,wordnet	syn
+ris	ris.91	²kaː	eat, to stuff oneself with food	gha	gha.112	²ko	feed	set	Bkaː	stedt,wordnet	
+ris	ris.923	²tam	cut with a heavy blow, to turn a field over by hand	pra	pra.370	²te	dig	set	Btam	ext,wordnet	
+ris	ris.938	²tarŋa	fish	tuk	tuk.887	²tərŋə	fish	iso	Btarŋa Btarʰŋa	clics,ext,wordnet	syn
+ris	ris.954	⁴tiŋ	turn to face	tag	tag.370	Xtiŋ	heart	set	Bdiŋ	stedt,wordnet	
+ris	ris.956	²tit	start a piece of basketware <weave>	sahu	sahu.538	²tip	begin	set	Btit	ext,stedt,wordnet	
+ris	ris.956	²tit	start a piece of basketware <weave>	tuk	tuk.932	²ti	begin	set	Btit	ext,stedt,wordnet	
+ris	ris.960	²tini	today	syang	syang.966	⁵⁵'⁵⁴tini	aujourd'hui	iso	Btini Btiʰni	wordnet	syn
+ris	ris.960	²tini	today	syang	syang.967	⁵⁵'⁵⁵tini	aujourd'hui	iso	Btini Btiʰni	wordnet	syn
+ris	ris.961	³tini	sun	tuk	tuk.941	³tiŋi	sun	iso	Adini	clics,ext,wordnet	syn
+ris	ris.961	³tini	sun	mar	mar.184	¹¹'³³diʱɲi	soleil	iso	Adini	wordnet	syn
+ris	ris.961	³tini	sun	syang	syang.93	¹¹'²¹dini	soleil	iso	Adini	wordnet	syn
+ris	ris.975	²tiːla	yesterday	tuk	tuk.931	²tilə	yesterday	iso	Btiːla Btiːʰla	clics,ext,wordnet	syn
+ris	ris.978	³tui	organise something with moderate spending	tag	tag.391	Xtui	spend	iso	Adwi	wordnet	syn
+sahu	sahu.117	²kuː	bend	ris	ris.166	²kuː	bending forward	set	Bkuː	wordnet	syn
+sahu	sahu.188	⁴ma	disappear	ris	ris.1566	⁴ma	stop, to cease to lose	iso	Bma	clics,stedt	
+sahu	sahu.234	²mui	egg white	pra	pra.177	²mi	eye	set	Bʰmwi	clics,stedt	
+sahu	sahu.234	²mui	egg white	tuk	tuk.352	ᴴmi	eye	set	Bʰmwi	clics,stedt	
+sahu	sahu.238	¹mun	night	mar	mar.423	Xmun	nuit	iso	Aʰmun	wordnet	syn
+sahu	sahu.241	¹naː	endure	tag	tag.506	¹naː	bear	iso	Aʰnak Aʰnaː	ext,wordnet	
+sahu	sahu.29	¹joː	early	gha	gha.74	¹ju	early, be	iso	Aʰjoː	clics,ext,wordnet	syn
+sahu	sahu.359	²puŋ	allow	ris	ris.1280	²puŋ	have sthg done, to let, to order	iso	Bpuŋ	stedt,wordnet	syn
+sahu	sahu.366	¹pʰeː	clear a field	gha	gha.468	¹pʰwi	blow	set	Apʰai	ext,stedt	
+sahu	sahu.366	¹pʰeː	clear a field	ris	ris.1508	¹pʰeː	shine	iso	Apʰeː	clics,stedt	
+sahu	sahu.368	¹pʰen	get well	pra	pra.271	¹pʰeː	come	set	Apʰjan	clics,ext,wordnet	
+sahu	sahu.368	¹pʰen	get well	pra	pra.270	¹pʰeː	fall/sunset	set	Apʰjan	stedt,wordnet	
+sahu	sahu.399	¹pʰum	small water jar	tuk	tuk.705	ᴴpʰum	egg	set	Apʰum	clics,stedt	
+sahu	sahu.442	¹saː	spit	tag	tag.561	¹saː	sprinkle	iso	Asak Asaː Aswak	stedt,wordnet	
+sahu	sahu.456	³seŋ	do	ris	ris.2005	³seŋ	build, to erect	iso	Azeŋ	clics,wordnet	
+sahu	sahu.458	¹sil	give birth	gha	gha.526	¹si	die	set	Asil	clics,wordnet	
+sahu	sahu.458	¹sil	give birth	ris	ris.1975	¹sil	fresh, clear	iso	Asil	stedt,wordnet	
+sahu	sahu.625	¹tsʰjaː	sit cross legged	tuk	tuk.1182	ᴴtsʰə	burning place	set	Atsʰjak	ext,wordnet	
+sahu	sahu.698	¹wen	cloth	ris	ris.379	¹kwan	linen, clothes, cloth	set	Akwan	clics,ext,wordnet	syn
+sahu	sahu.698	¹wen	cloth	gha	gha.142	¹kwẽ	clothes	set	Akwan	clics,ext	
+sahu	sahu.698	¹wen	cloth	pra	pra.114	¹kwẽ	clothes/clothing	set	Akwan	clics,ext	
+sahu	sahu.698	¹wen	cloth	tag	tag.50	¹hwan	clothes	set	Akwan	clics,ext	
+sahu	sahu.727	⁴ʈet	half	syang	syang.1071	³¹ʈe	demi	iso	Bɖet	wordnet	syn
+sahu	sahu.727	⁴ʈet	half	syang	syang.1072	³¹ʈe	demi	iso	Bɖet	wordnet	syn
+sahu	sahu.770	¹ɲoi	drunk	tag	tag.200	Xɲo	drunk	set	Aʰɲot	ext,wordnet	syn
+syang	syang.102	ᴸmo	nuage	mar	mar.413	²¹moʱ	nuage	iso	Amap Amo Amok	clics,ext,wordnet	syn
+syang	syang.1029	ᴸɲi	2	mar	mar.473	⁵⁴⁵ɲi	deux	set	Bŋi Bŋiː Bŋje	wordnet	syn
+syang	syang.1029	ᴸɲi	2	pra	pra.232	⁴ɲiː	two	set	Bŋi Bŋiː Bɲiː	wordnet	syn
+syang	syang.1029	ᴸɲi	2	sahu	sahu.765	³ɲiː	two	set	Aɲiː	wordnet	syn
+syang	syang.1029	ᴸɲi	2	sahu	sahu.766	⁴ɲiː	two	set	Bɲiː	wordnet	syn
+syang	syang.1029	ᴸɲi	2	tag	tag.174	ᴸni	two	set	Aŋi Aŋiː	wordnet	syn
+syang	syang.1038	⁵⁵nis	7	pra	pra.230	²ɲiː	seven	set	Bʰnis	wordnet	syn
+syang	syang.1038	⁵⁵nis	7	ris	ris.1167	²nis	seven	set	Bʰnis	wordnet	syn
+syang	syang.1038	⁵⁵nis	7	ris	ris.1168	²nis	seven day|s	set	Bʰnis	wordnet	syn
+syang	syang.1038	⁵⁵nis	7	sahu	sahu.769	²ɲis	seven	set	Bʰnis	wordnet	syn
+syang	syang.1038	⁵⁵nis	7	tag	tag.176	²nis	seven	set	Bʰnis	wordnet	syn
+syang	syang.1038	⁵⁵nis	7	tuk	tuk.450	ᴴnis	seven	set	Aʰnis Bʰnis	wordnet	syn
+syang	syang.1071	³¹ʈe	demi	sahu	sahu.727	⁴ʈet	half	iso	Bɖet	wordnet	syn
+syang	syang.1072	³¹ʈe	demi	sahu	sahu.727	⁴ʈet	half	iso	Bɖet	wordnet	syn
+syang	syang.110	²¹lʌ	montée	mar	mar.578	²¹lʌʱ	montée	iso	Ala	clics,ext,wordnet	
+syang	syang.116	Xpin	bleu	mar	mar.42	⁵⁵pin	bleu	iso	Apin Apiŋ Bbin	clics,ext,wordnet	syn
+syang	syang.140	⁵⁴tsʌ	veine	mar	mar.244	⁴³tsʌ	veine	iso	Atsa Btsa Btsak	clics,ext,wordnet	syn
+syang	syang.147	⁵⁵'⁵⁴mitsʰʌm	cils	ris	ris.1617	¹mitsʰam	eyelash	iso	Aʰmitsʰam	wordnet	syn
+syang	syang.21	²¹mi	personne	gha	gha.251	³mi	person	set	Ami Amiː Amje	wordnet	syn
+syang	syang.21	²¹mi	personne	pra	pra.179	³mi	person/man	set	Ami Amiː Amwi	wordnet	syn
+syang	syang.21	²¹mi	personne	ris	ris.1615	³mi	man, person; also used as pronoun, he	set	Ami	wordnet	syn
+syang	syang.21	²¹mi	personne	sahu	sahu.210	³miː	person	set	Amiː	wordnet	syn
+syang	syang.21	²¹mi	personne	tuk	tuk.354	³mi	person	set	Ami Amiː Amwi	wordnet	syn
+syang	syang.233	⁵¹mle	pénis	pra	pra.183	³mle	penis	iso	Amleː	wordnet	syn
+syang	syang.233	⁵¹mle	pénis	tuk	tuk.370	³mle	penis	iso	Amleː	wordnet	syn
+syang	syang.255	²¹ʈa	crête	tag	tag.415	³ʈaː	coxcomb	iso	Aɖaː	wordnet	syn
+syang	syang.263	¹¹'³³pumbu	âne	tuk	tuk.650	⁴pumpu	donkey	iso	Bbumpu Bbumpuk	wordnet	syn
+syang	syang.283	⁵⁵'⁵⁵kopjaŋ	punaise	tuk	tuk.180	²kopen	bed bug	iso	Bkokpeŋ Bkoːpeŋ Bkwakpeŋ	wordnet	syn
+syang	syang.292	⁵⁵'⁵⁵putsu	épine	ris	ris.1283	²putsu	thorn, thorny plant	iso	Bputsu	wordnet	syn
+syang	syang.292	⁵⁵'⁵⁵putsu	épine	tuk	tuk.658	²putsu	thorn	iso	Bputsu	wordnet	syn
+syang	syang.297	¹¹'²¹mɛndo	fleur	ris	ris.1648	³mento	flower	iso	Amento	wordnet	syn
+syang	syang.297	¹¹'²¹mɛndo	fleur	tuk	tuk.347	³mento	flower	iso	Ameŋto Ameŋtok Ameŋtoː	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	gha	gha.638	¹tʰãː	perfume	set	Atʰaŋ	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	pra	pra.401	¹tʰaŋ	smell/scent/odour	set	Atʰaŋ	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	ris	ris.1045	¹tʰaŋ	smell	set	Atʰaŋ	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	sahu	sahu.658	¹tʰaŋ	smell	set	Atʰaŋ	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	sahu	sahu.659	²tʰaŋ	smell	set	Btʰaŋ	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	tag	tag.395	Xtʰaŋ	smell	set	Atʰaŋ Btʰaŋ	wordnet	syn
+syang	syang.298	⁵⁵tʰaŋ	parfum	tuk	tuk.1003	ᴴtʰaŋ	smell	set	Atʰaŋ Btʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	gha	gha.638	¹tʰãː	perfume	set	Atʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	pra	pra.401	¹tʰaŋ	smell/scent/odour	set	Atʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	ris	ris.1045	¹tʰaŋ	smell	set	Atʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	sahu	sahu.658	¹tʰaŋ	smell	set	Atʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	sahu	sahu.659	²tʰaŋ	smell	set	Btʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	tag	tag.395	Xtʰaŋ	smell	set	Atʰaŋ Btʰaŋ	wordnet	syn
+syang	syang.299	⁵⁵tʰaŋ	parfum	tuk	tuk.1003	ᴴtʰaŋ	smell	set	Atʰaŋ Btʰaŋ	wordnet	syn
+syang	syang.322	⁵⁵'⁴⁴kʰoraŋ	piment	tuk	tuk.249	²kʰoraŋ	chili	iso	Bkʰokraŋ Bkʰokʰraŋ Bkʰoraŋ	wordnet	syn
+syang	syang.334	⁵⁵'⁴⁴polo	ortie	ris	ris.1377	¹polo	nettle	set	Apolo	wordnet	syn
+syang	syang.334	⁵⁵'⁴⁴polo	ortie	tuk	tuk.606	¹polo	nettle	set	Apolo Apolwa	wordnet	syn
+syang	syang.340	³¹bre	fagopyrum tataricum	mar	mar.88	⁵⁴pra	farine	set	Bbreː	clics,ext,wordnet	
+syang	syang.352	ᴸmi	personne	gha	gha.251	³mi	person	set	Ami Amiː Amje	wordnet	syn
+syang	syang.352	ᴸmi	personne	pra	pra.179	³mi	person/man	set	Ami Amiː Amwi	wordnet	syn
+syang	syang.352	ᴸmi	personne	ris	ris.1615	³mi	man, person; also used as pronoun, he	set	Ami	wordnet	syn
+syang	syang.352	ᴸmi	personne	sahu	sahu.210	³miː	person	set	Amiː	wordnet	syn
+syang	syang.352	ᴸmi	personne	tuk	tuk.354	³mi	person	set	Ami Amiː Amwi	wordnet	syn
+syang	syang.363	²¹pe	épouse	mar	mar.34	³peʱ	épouse	iso	Abai Abat Abek	clics,ext,wordnet	syn
+syang	syang.363	²¹pe	épouse	pra	pra.241	³pie	wife	set	Abat Abek Abja	wordnet	syn
+syang	syang.372	⁵⁴mʌm	grand-mère	pra	pra.175	¹me	grandmother/grandmama	set	Aʰmam	wordnet	syn
+syang	syang.450	Xkʌi	langage	tuk	tuk.56	ᴴkəj	voice, sound, language	set	Bkai Bkaiː Bkaki	wordnet	syn
+syang	syang.459	⁵⁵'⁴⁴kʰimtse	voisin	tuk	tuk.234	²kʰimtse	neighbor	iso	Bkʰimtsai Bkʰimtsat Bkʰimtse	wordnet	syn
+syang	syang.518	⁵⁴kʌ	chaux à badigeon	mar	mar.340	⁵⁴kʌ	chaux	iso	Aka Bkak	clics,ext,wordnet	syn
+syang	syang.522	ᴸbjo	toit	tuk	tuk.564	⁴pe	roof	iso	Bbja	wordnet	syn
+syang	syang.59	²¹nʌː	oreille	gha	gha.289	³na	ear	set	Ana Anak	wordnet	syn
+syang	syang.59	²¹nʌː	oreille	pra	pra.212	³nɤ	ear	set	Ana Anak	wordnet	syn
+syang	syang.59	²¹nʌː	oreille	tuk	tuk.401	³nə	ear	set	Ana Anak	wordnet	syn
+syang	syang.597	ᴸdu	tuyau	mar	mar.138	³tuʱ	tuyau	iso	Aduk Adup	clics,ext,wordnet	syn
+syang	syang.638	ᴸgʌ	selle, bât	mar	mar.341	²¹gʌʱ	selle	iso	Aga Agak Agra	clics,ext,wordnet	syn
+syang	syang.645	⁵⁵ɕju	étui / gaine	gha	gha.542	¹sju	sheath	set	Asjuk Asjup Asjwi	wordnet	syn
+syang	syang.645	⁵⁵ɕju	étui / gaine	ris	ris.2063	¹sjup	sheath	set	Asjup	wordnet	syn
+syang	syang.645	⁵⁵ɕju	étui / gaine	tuk	tuk.795	ᴴsip	sheath	set	Asjup Bsjup Bɕjup	wordnet	syn
+syang	syang.649	⁵⁴ju	manche d'outil	mar	mar.512	⁵⁴⁵ju	manche d'outil	iso	Aʰju Aʰjuk Bʰju	clics,ext,wordnet	syn
+syang	syang.650	⁵⁵ju	manche d'outil	mar	mar.512	⁵⁴⁵ju	manche d'outil	iso	Aʰju Aʰjuk Bʰju	clics,ext,wordnet	syn
+syang	syang.651	ᴸdu	tuyau	mar	mar.138	³tuʱ	tuyau	iso	Aduk Adup	clics,ext,wordnet	syn
+syang	syang.655	⁵³tsʰoː	offrande, nourriture bénie	mar	mar.218	⁵³tsʰo	offrande	iso	Atsʰap Atsʰep Atsʰo	clics,ext,wordnet	
+syang	syang.655	⁵³tsʰoː	offrande, nourriture bénie	ris	ris.740	¹tsʰo	offering, libation of food that will be eaten later	set	Atsʰo	wordnet	syn
+syang	syang.684	⁵⁵'⁵⁵nʌli	van	mar	mar.470	⁵⁵'⁵⁵nʌli	van	iso	Aʰnakli Aʰnaklip Aʰnakliː	clics,ext,wordnet	syn
+syang	syang.718	ᴸpo	pâte à bière	mar	mar.38	³poʱ	pâte à chang	iso	Abap Abep Abo	clics,ext,wordnet	syn
+syang	syang.72	⁵⁵'⁴⁴kʰari	cou	ris	ris.411	¹kʰaːre	neck	iso	Akʰaːrje Akʰaːʰrje	wordnet	syn
+syang	syang.750	²¹ʈo	brèdes	mar	mar.194	²¹ʈoʱ	brèdes	iso	Agrwap Agrwo Agrwok	clics,ext,wordnet	
+syang	syang.759	⁵⁵kon	vêtement	gha	gha.142	¹kwẽ	clothes	set	Akon Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	pra	pra.114	¹kwẽ	clothes/clothing	set	Akon Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	pra	pra.116	¹kwẽ	wear/put on	set	Akon Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	ris	ris.379	¹kwan	linen, clothes, cloth	set	Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	ris	ris.380	¹kwan	get dress|ed	set	Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	sahu	sahu.26	¹jen	dress	set	Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	sahu	sahu.27	¹jen	clothes	set	Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	tag	tag.50	¹hwan	clothes	set	Akwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	tag	tag.51	Xhwan	wear	set	Akwan Bkwan	wordnet	syn
+syang	syang.759	⁵⁵kon	vêtement	tuk	tuk.174	²kon	dress	set	Bkon Bkwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	gha	gha.142	¹kwẽ	clothes	set	Akon Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	pra	pra.114	¹kwẽ	clothes/clothing	set	Akon Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	pra	pra.116	¹kwẽ	wear/put on	set	Akon Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	ris	ris.379	¹kwan	linen, clothes, cloth	set	Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	ris	ris.380	¹kwan	get dress|ed	set	Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	sahu	sahu.26	¹jen	dress	set	Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	sahu	sahu.27	¹jen	clothes	set	Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	tag	tag.50	¹hwan	clothes	set	Akwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	tag	tag.51	Xhwan	wear	set	Akwan Bkwan	wordnet	syn
+syang	syang.760	⁵⁵kʷon	vêtement	tuk	tuk.174	²kon	dress	set	Bkon Bkwan	wordnet	syn
+syang	syang.761	⁵⁴pʌi	laine	sahu	sahu.298	²pet	comb fiber, wool	set	Bpat	wordnet	syn
+syang	syang.761	⁵⁴pʌi	laine	tuk	tuk.538	ᴴpəj	wool	iso	Apai Apaiː Apaki	wordnet	syn
+syang	syang.762	⁵³pʌi	laine	sahu	sahu.298	²pet	comb fiber, wool	set	Bpat	wordnet	syn
+syang	syang.762	⁵³pʌi	laine	tuk	tuk.538	ᴴpəj	wool	iso	Apai Apaiː Apaki	wordnet	syn
+syang	syang.804	⁴⁴'⁴³soʈu	bracelet de verre	mar	mar.631	⁵⁵'⁴⁴sʌʈu	bracelet	iso	Asopgrwu Asopgrwuk Asopgrwup	clics,ext,wordnet	syn
+syang	syang.825	⁵³ju	turquoise	mar	mar.513	⁵⁴juː	turquoise	iso	Aʰju Aʰjuk Bʰju	clics,ext,wordnet	syn
+syang	syang.843	²²'²¹pjuŋ	toux	gha	gha.392	³pjũ	cough	set	Abjuŋ	wordnet	syn
+syang	syang.843	²²'²¹pjuŋ	toux	ris	ris.1391	³pjuŋ	cough	set	Abjuŋ	wordnet	syn
+syang	syang.843	²²'²¹pjuŋ	toux	sahu	sahu.308	³pjuŋ	cough	set	Abjuŋ	wordnet	syn
+syang	syang.843	²²'²¹pjuŋ	toux	tuk	tuk.589	³pjuŋ	cough	set	Abjoŋ Abjuŋ	wordnet	syn
+syang	syang.93	¹¹'²¹dini	soleil	mar	mar.184	¹¹'³³diʱɲi	soleil	iso	Adini	clics,ext,wordnet	syn
+syang	syang.93	¹¹'²¹dini	soleil	ris	ris.961	³tini	sun	iso	Adini	wordnet	syn
+syang	syang.93	¹¹'²¹dini	soleil	tuk	tuk.941	³tiŋi	sun	iso	Adini	wordnet	syn
+syang	syang.966	⁵⁵'⁵⁴tini	aujourd'hui	ris	ris.960	²tini	today	iso	Btini Btiʰni	wordnet	syn
+syang	syang.966	⁵⁵'⁵⁴tini	aujourd'hui	tuk	tuk.940	¹tiŋi	today	iso	Atini Atiniː Atiŋin	wordnet	syn
+syang	syang.967	⁵⁵'⁵⁵tini	aujourd'hui	ris	ris.960	²tini	today	iso	Btini Btiʰni	wordnet	syn
+syang	syang.967	⁵⁵'⁵⁵tini	aujourd'hui	tuk	tuk.940	¹tiŋi	today	iso	Atini Atiniː Atiŋin	wordnet	syn
+syang	syang.969	⁴⁴'⁴⁴uni	avant-hier	tuk	tuk.1234	¹uŋi	day before yesterday	iso	Aukni Aukniː Aukŋin	wordnet	syn
+syang	syang.978	ᴸmo	nuage	mar	mar.413	²¹moʱ	nuage	iso	Amap Amo Amok	clics,ext,wordnet	syn
+syang	syang.990	⁵⁵u	grotte	sahu	sahu.678	¹uː	cave	set	Auk	wordnet	syn
+syang	syang.990	⁵⁵u	grotte	tuk	tuk.1230	ᴴu	cave	set	Au Auk Bu	wordnet	syn
+syang	syang.991	²¹lʌ	montée	mar	mar.578	²¹lʌʱ	montée	iso	Ala	clics,ext,wordnet	
+syang	syang.996	⁵⁴tʰaŋ	plaine	mar	mar.124	⁴³tʰaŋ	plaine	iso	Atʰaŋ Btʰaŋ	clics,ext,wordnet	syn
+tag	tag.104	Xkuː	wear a hat	ris	ris.163	¹kuː	wear on the head	iso	Akuː	ext,stedt	
+tag	tag.154	³mun	night	mar	mar.423	Xmun	nuit	iso	Amun	wordnet	syn
+tag	tag.201	³ɲo	drunk	ris	ris.537	³ŋjot	drunk	iso	Aɲot	ext,wordnet	syn
+tag	tag.222	Xpo	spoil, make hole in	ris	ris.1337	³poː	unstitch, to become unsewn; to undo, to take down	set	Aboː	ext,wordnet	
+tag	tag.324	Xsoː	thatch	ris	ris.2018	²soː	thatching grass <thatch>	iso	Bsoː	clics,ext,stedt	
+tag	tag.345	Xʃju	exorcise with offering plate	pra	pra.349	¹ʃi	rice	set	Asjut	clics,ext,wordnet	
+tag	tag.345	Xʃju	exorcise with offering plate	ris	ris.2061	¹sjut	treat a patient by throwing rice	set	Asjut	clics,ext,wordnet	
+tag	tag.348	³ta	pillar	pra	pra.363	³ta	pillar	iso	Adaː	clics,ext,wordnet	syn
+tag	tag.391	Xtui	spend	ris	ris.978	³tui	organise something with moderate spending	iso	Adwi	wordnet	syn
+tag	tag.405	³ʈa	plant	ris	ris.793	³ʈaː	strap or rope used to hang a lama's drum	iso	Aɖaː	ext,stedt	
+tag	tag.415	³ʈaː	coxcomb	tuk	tuk.1033	³ʈə	comb	iso	Aɖa Aɖak	stedt,wordnet	syn
+tag	tag.415	³ʈaː	coxcomb	syang	syang.255	²¹ʈa	crête	iso	Aɖaː	wordnet	syn
+tag	tag.478	Xtsʰja	coagulate	ris	ris.755	¹tsʰjaː	coagulate, to stagnate, to freeze	iso	Atsʰjaː	clics,ext,wordnet	syn
+tag	tag.506	¹naː	bear	sahu	sahu.241	¹naː	endure	iso	Aʰnak Aʰnaː	ext,wordnet	
+tag	tag.544	¹kap	add, complete	ris	ris.123	¹kap	add, to serve food again	iso	Akap	ext,wordnet	syn
+tag	tag.560	²sa	lead	ris	ris.1910	²sa	deliver, to take s.o or sthg someplace, to accompany	iso	Bsa	stedt,wordnet	
+tag	tag.561	¹saː	sprinkle	sahu	sahu.442	¹saː	spit	iso	Asak Asaː Aswak	stedt,wordnet	
+tag	tag.581	²ʈuː	wet	ris	ris.827	²ʈuː	damp	set	Bʈ.Hr.ʈʰuː Bʈuː	clics,wordnet	
+tag	tag.587	⁴pja	fuck	ris	ris.1380	⁴pja	have sex	iso	Bbja	ext	syn
+tag	tag.7	³ber	have cold feet	ris	ris.1329	³per	numb, stiff	iso	Aber	ext,stedt	
+tag	tag.82	Xkja	pin hair up	tuk	tuk.108	³ke	split	iso	Agja	clics,ext,wordnet	
+tag	tag.95	Xko	break off	pra	pra.73	¹kiː	break	set	Akot	ext,wordnet	
+tuk	tuk.1026	²tʰuj	joint	ris	ris.1068	²tʰut	join end to end	iso	Btʰut	stedt,wordnet	syn
+tuk	tuk.1033	³ʈə	comb	tag	tag.415	³ʈaː	coxcomb	iso	Aɖa Aɖak	stedt,wordnet	syn
+tuk	tuk.108	³ke	split	tag	tag.82	Xkja	pin hair up	iso	Agja	clics,ext,wordnet	
+tuk	tuk.1113	¹tsətsə	salt	gha	gha.682	¹tsatsa	salt	iso	Atsatsa	clics,ext,wordnet	syn
+tuk	tuk.1113	¹tsətsə	salt	ris	ris.552	¹tsatsa	salt	iso	Atsatsa	clics,ext,wordnet	syn
+tuk	tuk.1136	³tsjə	tea	mar	mar.278	³tɕʌʱ	thé	iso	Adzja	wordnet	syn
+tuk	tuk.1139	³tsja	feel at ease	tag	tag.449	Xtsjaː	look	set	Adzjaː	wordnet	syn
+tuk	tuk.1158	ᴴtsjum	blink	gha	gha.706	²tsjũ	blink/hold eyes closed	set	Btsjum	ext,wordnet	syn
+tuk	tuk.1234	¹uŋi	day before yesterday	syang	syang.969	⁴⁴'⁴⁴uni	avant-hier	iso	Aukni Aukniː Aukŋin	wordnet	syn
+tuk	tuk.124	⁴kjəpə	slave	ris	ris.295	⁴kjapa	slave, hired herdsman	iso	Bgjapa	clics,ext,wordnet	syn
+tuk	tuk.180	²kopen	bed bug	syang	syang.283	⁵⁵'⁵⁵kopjaŋ	punaise	iso	Bkokpeŋ Bkoːpeŋ Bkwakpeŋ	wordnet	syn
+tuk	tuk.200	³kur	thunder	ris	ris.202	³kur	thunder	iso	Agur	clics,ext,wordnet	syn
+tuk	tuk.218	ᴴkʰa	neck	mar	mar.293	⁵⁴kʰa	cou	set	Akʰaː Bkʰaː	wordnet	syn
+tuk	tuk.218	ᴴkʰa	neck	syang	syang.71	⁵⁴kʰa	cou	set	Akʰaː Bkʰaː	wordnet	syn
+tuk	tuk.234	²kʰimtse	neighbor	syang	syang.459	⁵⁵'⁴⁴kʰimtse	voisin	iso	Bkʰimtsai Bkʰimtsat Bkʰimtse	wordnet	syn
+tuk	tuk.243	²kʰoj	wrap/wind up	ris	ris.481	²kʰwat	tie with a sliding knot	iso	Bkʰwat	clics,stedt	
+tuk	tuk.249	²kʰoraŋ	chili	syang	syang.322	⁵⁵'⁴⁴kʰoraŋ	piment	iso	Bkʰokraŋ Bkʰokʰraŋ Bkʰoraŋ	wordnet	syn
+tuk	tuk.327	³mər	ghee	ris	ris.1602	³mar	clarified butter, ghee	set	Amar	clics,ext,wordnet	syn
+tuk	tuk.344	²me	feel at ease	gha	gha.297	²naː	smell	iso	Bʰɲat	wordnet	syn
+tuk	tuk.347	³mento	flower	syang	syang.297	¹¹'²¹mɛndo	fleur	iso	Ameŋto Ameŋtok Ameŋtoː	wordnet	syn
+tuk	tuk.370	³mle	penis	pra	pra.183	³mle	penis	iso	Amleː	clics,ext,stedt,wordnet	syn
+tuk	tuk.370	³mle	penis	syang	syang.233	⁵¹mle	pénis	iso	Amleː	wordnet	syn
+tuk	tuk.431	²naka	chicken	mar	mar.468	⁵⁵'⁵⁵naga	poulet	iso	Bʰnaːkaː	wordnet	syn
+tuk	tuk.435	²naŋ	hatch	gha	gha.316	²nõ	brood	set	Bʰnaŋ	stedt,wordnet	
+tuk	tuk.443	²ne	ferment	pra	pra.205	²neː	rot/rotten, become	set	Bʰnai Bʰnat	stedt,wordnet	
+tuk	tuk.468	ᴴŋəm	near	ris	ris.495	²ŋam	near	set	Bʰŋam	clics,ext,wordnet	syn
+tuk	tuk.475	ᴴŋi	day after tomorrow	gha	gha.38	¹e	turn back/return	iso	Aʰŋet	clics,ext,wordnet	
+tuk	tuk.514	ᴴŋo	know	ris	ris.508	¹ŋo	the fact of knowing or recognizing someone <to recognize>	iso	Aʰŋo	wordnet	syn
+tuk	tuk.536	pə	verbal suffix	ris	ris.1194	pa	uncompletive aspect; verb nominalizing suffix	iso	pa	clics,ext,wordnet	syn
+tuk	tuk.538	ᴴpəj	wool	mar	mar.40	⁵⁴⁵pʌɛ	laine	iso	Apaet Apail Apaket	wordnet	syn
+tuk	tuk.538	ᴴpəj	wool	syang	syang.761	⁵⁴pʌi	laine	iso	Apai Apaiː Apaki	wordnet	syn
+tuk	tuk.538	ᴴpəj	wool	syang	syang.762	⁵³pʌi	laine	iso	Apai Apaiː Apaki	wordnet	syn
+tuk	tuk.554	ᴴpaŋ	meadow	ris	ris.1209	¹paŋ	meadow	iso	Apaŋ	clics,ext,wordnet	syn
+tuk	tuk.564	⁴pe	roof	syang	syang.522	ᴸbjo	toit	iso	Bbja	wordnet	syn
+tuk	tuk.643	ᴴpuj	chaff	gha	gha.443	²pwi	rice straw	iso	Bpwi	wordnet	syn
+tuk	tuk.650	⁴pumpu	donkey	syang	syang.263	¹¹'³³pumbu	âne	iso	Bbumpu Bbumpuk	wordnet	syn
+tuk	tuk.657	²puʈi	knee	mar	mar.72	³²'²²puki	genou	iso	Bpugrwet Bpugrwi Bpugrwit	wordnet	syn
+tuk	tuk.658	²putsu	thorn	ris	ris.1283	²putsu	thorn, thorny plant	iso	Bputsu	ext,wordnet	syn
+tuk	tuk.658	²putsu	thorn	syang	syang.292	⁵⁵'⁵⁵putsu	épine	iso	Bputsu	wordnet	syn
+tuk	tuk.696	²pʰoltoŋ	ball	ris	ris.1527	²pʰoltoŋ	ball	iso	Bpʰoltoŋ	clics,ext,wordnet	syn
+tuk	tuk.76	²kəp	build roof	ris	ris.124	²kap	give to carry, to load	iso	Bkap	clics,wordnet	
+tuk	tuk.776	²saŋ	clean	tag	tag.288	Xsaŋ	clear	set	Bsaŋ	clics,stedt,wordnet	
+tuk	tuk.782	³silpə	dew	ris	ris.1981	³silpa	dew, raindrops	iso	Azilpa	clics,ext,wordnet	syn
+tuk	tuk.817	²sje	set	ris	ris.2043	²sjap	meet, to go visit s.o., to find, to catch, to catch up with, to reach	set	Bsjap	stedt,wordnet	
+tuk	tuk.817	²sje	set	tag	tag.338	Xʃje	go	set	Bse Bsek Bset	stedt,wordnet	
+tuk	tuk.817	²sje	set	tag	tag.341	Xʃjeː	go	set	Bse Bsek Bset	stedt,wordnet	
+tuk	tuk.845	²som	third	gha	gha.554	²sõ	three	set	Bsom Bɕom	clics,wordnet	
+tuk	tuk.845	²som	third	pra	pra.321	²sẽ	three	set	Bsam Bsom	clics,wordnet	
+tuk	tuk.845	²som	third	ris	ris.2024	²som	three	set	Bsom	clics,wordnet	
+tuk	tuk.845	²som	third	sahu	sahu.489	²som	three	set	Bsom	clics,wordnet	
+tuk	tuk.845	²som	third	tag	tag.323	²som	three	set	Bsom	clics,wordnet	
+tuk	tuk.86	⁴kəte	how much	ris	ris.116	⁴kate	how many?, how! + adj	iso	Bgate Bgatew Bgatje	ext,wordnet	
+tuk	tuk.862	²suŋ	say	tag	tag.326	Xsũ	mouth	set	Bsuŋ	stedt,wordnet	
+tuk	tuk.862	²suŋ	say	tag	tag.329	Xsuŋ	mouth	set	Bsuŋ	stedt,wordnet	
+tuk	tuk.887	²tərŋə	fish	ris	ris.938	²tarŋa	fish	iso	Btarŋa Btarʰŋa	clics,ext,wordnet	syn
+tuk	tuk.899	ᴴtaŋ	sit cross-legged	tag	tag.358	Xtaŋ	drive	set	Ataŋ Btaŋ	clics,wordnet	
+tuk	tuk.931	²tilə	yesterday	ris	ris.975	²tiːla	yesterday	iso	Btiːla Btiːʰla	clics,ext,wordnet	syn
+tuk	tuk.940	¹tiŋi	today	syang	syang.966	⁵⁵'⁵⁴tini	aujourd'hui	iso	Atini Atiniː Atiŋin	wordnet	syn
+tuk	tuk.940	¹tiŋi	today	syang	syang.967	⁵⁵'⁵⁵tini	aujourd'hui	iso	Atini Atiniː Atiŋin	wordnet	syn
+tuk	tuk.941	³tiŋi	sun	ris	ris.961	³tini	sun	iso	Adini	clics,ext,wordnet	syn
+tuk	tuk.941	³tiŋi	sun	mar	mar.184	¹¹'³³diʱɲi	soleil	iso	Adini	wordnet	syn
+tuk	tuk.941	³tiŋi	sun	syang	syang.93	¹¹'²¹dini	soleil	iso	Adini	wordnet	syn
+tuk	tuk.974	³tuj	ghost, moth	syang	syang.284	²¹di	mite	set	Adwi	wordnet	syn
