@@ -286,7 +286,9 @@ class SyllableCanonWidget(Gtk.Expander):
         )
 
 class LexiconWidget(Pane):
-    def __init__(self, lexicon):
+    # on_make_exception(language, form, gloss) is called when the user presses
+    # Ctrl-E (Cmd-E on macOS) with a row selected.
+    def __init__(self, lexicon, on_make_exception=lambda language, form, gloss: None):
         super().__init__(vexpand=True)
         self.store = Gtk.ListStore(str, str, str)
         self.language = lexicon.language
@@ -306,6 +308,19 @@ class LexiconWidget(Pane):
             view.append_column(column)
         self.add(view)
 
+        def on_key_press(view, event):
+            wanted = Gdk.ModifierType.CONTROL_MASK | Gdk.ModifierType.META_MASK
+            if (event.keyval in (Gdk.KEY_e, Gdk.KEY_E)
+                    and event.state & wanted):
+                model, iter_ = view.get_selection().get_selected()
+                if iter_ is not None:
+                    on_make_exception(self.language,
+                                      model.get_value(iter_, 0),
+                                      model.get_value(iter_, 1))
+                return True
+            return False
+        view.connect('key-press-event', on_key_press)
+
     def lexicon(self):
         language = self.language
         return RE.Lexicon(language,
@@ -314,10 +329,10 @@ class LexiconWidget(Pane):
                           None)
 
 class LexiconsWidget(Gtk.Notebook):
-    def __init__(self, lexicons):
+    def __init__(self, lexicons, on_make_exception=lambda language, form, gloss: None):
         super().__init__()
         for lexicon in lexicons:
-            self.append_page(LexiconWidget(lexicon),
+            self.append_page(LexiconWidget(lexicon, on_make_exception),
                              Gtk.Label(label=lexicon.language))
 
     def lexicons(self):
@@ -635,7 +650,23 @@ class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
             if serialize or row[self.enabled_index]:
                 table.add_quirk(RE.Quirk.from_row(row))
 
-    def ensure_quirk(self, language, form, gloss):
+    ALTERNATIVE_COLUMN = 3  # 'Alternative' in quirks_header_row()
+
+    def _focus_alternative(self, path):
+        """Select the row at path and start editing its Alternative cell.
+
+        Deferred to an idle callback: when the expander has just been opened
+        or the notebook page just switched, the view isn't mapped yet and
+        starting an edit immediately would silently do nothing."""
+        view = self.sheet.view
+        def start_edit():
+            view.grab_focus()
+            view.scroll_to_cell(path, None, True, 0.5, 0.0)
+            view.set_cursor(path, view.get_column(self.ALTERNATIVE_COLUMN), True)
+            return False
+        GLib.idle_add(start_edit)
+
+    def ensure_quirk(self, language, form, gloss, edit_alternative=False):
         sheet = self.sheet
         for row in sheet.store: # look for quirk first.
             if (row[0] == language and
@@ -644,6 +675,8 @@ class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
                 path = sheet.view.get_model().get_path(row.iter)
                 sheet.view.set_cursor(path)
                 self.set_expanded(True)
+                if edit_alternative:
+                    self._focus_alternative(path)
                 return
         row = self.store.get_n_columns() * ['']
         row[0] = language
@@ -655,6 +688,8 @@ class QuirksSheet(ExpandableSheet, DisableableRowsMixin):
         sheet.view.set_cursor(path)
         self.set_expanded(True)
         sheet.on_change()
+        if edit_alternative:
+            self._focus_alternative(path)
 
 class ParameterWidget(Gtk.Box):
     def __init__(self, parameters, status_bar):
@@ -695,6 +730,13 @@ class ParameterWidget(Gtk.Box):
             form = form.actual
         self.quirks_sheet.ensure_quirk(form.language, form.glyphs, form.gloss)
 
+    def has_daughter_language(self, language):
+        return language in self.correspondence_sheet.names
+
+    def ensure_quirk_for_attested(self, language, glyphs, gloss):
+        self.quirks_sheet.ensure_quirk(language, glyphs, gloss,
+                                       edit_alternative=True)
+
 class ParameterTreeWidget(Gtk.Notebook):
     def __init__(self, initial_parameter_tree, status_bar):
         super().__init__()
@@ -726,6 +768,19 @@ class ParameterTreeWidget(Gtk.Notebook):
                 self.set_current_page(i)
                 widget.ensure_quirk(form)
                 break
+
+    # Make (or find) an exception for an attested form, given the attested
+    # language (not the proto-language). The exception goes on the page of
+    # the proto-language that has this attested language as a daughter.
+    # Returns the proto-language name, or None if no page claims the language.
+    def ensure_quirk_for_attested(self, language, glyphs, gloss):
+        for i in range(self.get_n_pages()):
+            widget = self.get_nth_page(i)
+            if widget.has_daughter_language(language):
+                self.set_current_page(i)
+                widget.ensure_quirk_for_attested(language, glyphs, gloss)
+                return widget.proto_language_name
+        return None
 
 class SetsWidget(Gtk.Box):
     def __init__(self,
@@ -1737,7 +1792,9 @@ class REWindow(Gtk.Window):
         self.status_bar.clear_dirty()
 
         # Input widgets
-        self.lexicons_widget = LexiconsWidget(attested_lexicons.values())
+        self.lexicons_widget = LexiconsWidget(
+            attested_lexicons.values(),
+            on_make_exception=self.make_exception_from_lexicon)
         self.parameters_widget = ParameterTreeWidget(initial_parameter_tree, self.status_bar)
 
         # Output widgets
@@ -1799,6 +1856,16 @@ class REWindow(Gtk.Window):
         self.left_pane.add2(self.parameters_widget)
 
         self.show_all()
+
+    # Ctrl-E on a Lexicon pane row: create (or find) the exception for it and
+    # put the cursor in its Alternative cell.
+    def make_exception_from_lexicon(self, language, form, gloss):
+        proto_language = self.parameters_widget.ensure_quirk_for_attested(
+            language, form, gloss)
+        if proto_language is None:
+            self.status_bar.set_message(
+                f'No proto-language lists {language} as a daughter; '
+                f'cannot create an exception for {form}.')
 
     # Initially load widgets from a settings file.
     def open_from_settings(self, settings):
