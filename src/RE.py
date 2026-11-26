@@ -278,11 +278,11 @@ def fuzzy_string(mapping, string):
     return ''.join(new_string)
 
 # build a map from tokens to lists of correspondences containing the
-# token key.  When fuzzy_mapping is provided, fuzzied variants of each
-# daughter token are also indexed (proto column is never touched here
-# because accessor only reads daughter_forms).
+# token key.  The tokens are the ToC's own values, exactly as written:
+# fuzzying is applied to the input lexicon (see Lexicon.fuzzied_forms), never
+# to the table, which is the target of the fuzzying.
 # also return all possible token lengths, sorted
-def partition_correspondences(correspondences, accessor, fuzzy_mapping=None):
+def partition_correspondences(correspondences, accessor):
     partitions = collections.defaultdict(list)
     for c in correspondences:
         for token in accessor(c):
@@ -290,18 +290,7 @@ def partition_correspondences(correspondences, accessor, fuzzy_mapping=None):
             # zero rule.
             if token == '':
                 break
-            if fuzzy_mapping:
-                fuzzied = fuzzy_string(fuzzy_mapping, token)
-                if fuzzied != token and fuzzied != '':
-                    # Token changed by fuzzying: index only under the fuzzied key.
-                    partitions[fuzzied].append(c)
-                else:
-                    # Token unchanged: use original.
-                    partitions[token].append(c)
-            else:
-                partitions[token].append(c)
-    # Derive lengths from all actual partition keys so fuzzied variants
-    # with different lengths are also covered.
+            partitions[token].append(c)
     non_empty = [k for k in partitions if k != '']
     token_lengths = sorted(set(len(k) for k in non_empty)) if non_empty else []
     return partitions, token_lengths
@@ -826,23 +815,16 @@ def make_apply_rules(parameters, language):
 
 # tokenize an input string and return the set of all parses
 # which also conform to the syllable canon.
-# language: when supplied and parameters.fuzzy is set, fuzzied variants of
-# ToC daughter tokens are also indexed in rule_map (proto column is never
-# touched because accessor only reads daughter_forms).
-def make_tokenizer(parameters, accessor, next_map, blocked_given_map, language=None):
+# The ToC's tokens are matched as written; any fuzzying has already been
+# applied to the input form.
+def make_tokenizer(parameters, accessor, next_map, blocked_given_map):
     regex = parameters.syllable_canon.regex
     supra_segmentals = parameters.syllable_canon.supra_segmentals
     correspondences = parameters.table.correspondences
     context_match_type = parameters.syllable_canon.context_match_type
-    fuzzy_mapping = None
-    if language and parameters.fuzzy:
-        fuzzy_mapping = {rep: target
-                         for ((lang, rep), target) in parameters.fuzzy.items()
-                         if lang == language}
     rule_map, token_lengths = partition_correspondences(
         correspondences,
-        accessor,
-        fuzzy_mapping)
+        accessor)
 
     @lru_cache(maxsize=None)
     def partial_regex_match(syllable_parse):
@@ -1184,8 +1166,7 @@ def project_back(lexicons, parameters, statistics):
             continue
         count_of_parses = 0
         count_of_no_parses = 0
-        tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map,
-                                  language=lexicon.language)
+        tokenize = make_tokenizer(parameters, daughter_form, next_map, blocked_given_map)
         apply_rules = make_apply_rules(parameters, lexicon.language)
 
         # Build fuzzy-pairing map: id(original_form) → FuzzyForm.
@@ -1489,45 +1470,39 @@ def pick_derivation(cognate_sets, statistics, only_with_mel):
 # forms were parsed with, so what each reflex used is known exactly except
 # for *which variant* ("seg") of each correspondence's cell matched.
 # align_parse recovers that by walking the parse against the reflex's
-# glyphs the same way the tokenizer matched them (including fuzzied
-# variants of the table's daughter tokens).
+# glyphs the same way the tokenizer matched them (the glyphs are those that
+# were parsed, i.e. already fuzzied; the table's tokens are matched as written).
 
-def align_parse(parse, glyphs, accessor, fuzzy_mapping=None):
+def align_parse(parse, glyphs, accessor):
     """Return [(correspondence, variant_index), ...] aligning parse to glyphs,
     or None when no alignment exists.
 
     variant_index is the position of the matched token in accessor(c), i.e.
     the index of the <seg> within the correspondence's <modern> cell. When
-    several segmentations fit, longer tokens are preferred, and an unfuzzied
-    token is preferred to a fuzzied one that yields the same key.
+    several segmentations fit, longer tokens are preferred.
     """
-    def keyed_tokens(c):
+    def ordered_tokens(c):
         tokens = []
         for index, token in enumerate(accessor(c)):
             if token == '':
                 break      # same as partition_correspondences: ignore the rest
-            key = token
-            if fuzzy_mapping:
-                fuzzied = fuzzy_string(fuzzy_mapping, token)
-                if fuzzied != token and fuzzied != '':
-                    key = fuzzied
-            tokens.append((index, token, key))
-        tokens.sort(key=lambda t: (-len(t[2]), t[1] != t[2]))
+            tokens.append((index, token))
+        tokens.sort(key=lambda t: -len(t[1]))
         return tokens
 
-    options = [keyed_tokens(c) for c in parse]
+    options = [ordered_tokens(c) for c in parse]
     n = len(glyphs)
 
     def walk(i, position):
         if i == len(parse):
             return [] if position == n else None
-        for (index, token, key) in options[i]:
+        for (index, token) in options[i]:
             if token == '∅':           # epenthesis: consumes no text
                 rest = walk(i + 1, position)
                 if rest is not None:
                     return [(parse[i], index)] + rest
-            elif glyphs.startswith(key, position):
-                rest = walk(i + 1, position + len(key))
+            elif glyphs.startswith(token, position):
+                rest = walk(i + 1, position + len(token))
                 if rest is not None:
                     return [(parse[i], index)] + rest
         return None
@@ -1547,24 +1522,12 @@ def tally_set_usage(root_forms, param_tree, statistics):
     directly supporting a ProtoForm are its reflexes, counted against that
     level's table.
     """
-    fuzzy_by_level = {}
-
     def usage_for(level):
         return statistics.toc_usage.setdefault(
             level,
             {'rows': collections.Counter(),
              'cells': collections.Counter(),
              'segs': collections.Counter()})
-
-    def fuzzy_mapping(parameters, language):
-        key = (parameters.proto_language_name, language)
-        if key not in fuzzy_by_level:
-            fuzzy_by_level[key] = (
-                {rep: target
-                 for ((lang, rep), target) in parameters.fuzzy.items()
-                 if lang == language}
-                if parameters.fuzzy else None)
-        return fuzzy_by_level[key]
 
     derivations_of = collections.defaultdict(list)
     for proto_form in root_forms:
@@ -1594,8 +1557,7 @@ def tally_set_usage(root_forms, param_tree, statistics):
                     item['fuzzy'].update(base.rules_fired)
                 aligned = align_parse(
                     proto_form.correspondences, form.glyphs,
-                    lambda c, language=language: c.daughter_forms.get(language) or [],
-                    fuzzy_mapping(parameters, language))
+                    lambda c, language=language: c.daughter_forms.get(language) or [])
                 item['corrs'].update(c.id for c in proto_form.correspondences)
                 if aligned is None:
                     item['unaligned'] = True

@@ -77,14 +77,18 @@ class TestAlignParse:
         assert RE.align_parse((self.c1, self.c2), 'xa', self.acc('L')) is None
         assert RE.align_parse((self.c1, self.c2), 'pab', self.acc('L')) is None
 
-    def test_fuzzied_token_matches_its_fuzzied_key(self):
-        # the table's 'pʰ' is fuzzied to 'p', so a fuzzied form 'pa' aligns to it
+    def test_table_tokens_are_not_fuzzied(self):
+        # The table is the TARGET of fuzzying: a cell holding only 'pʰ' does
+        # not match the glyphs 'pa' (an input 'pʰa' would have been fuzzied
+        # to 'pa' before parsing; the table's own 'pʰ' stays 'pʰ').
         c = corr('9', 'p', L=['pʰ'])
-        r = RE.align_parse((c, self.c2), 'pa', self.acc('L'), {'pʰ': 'p'})
+        assert RE.align_parse((c, self.c2), 'pa', self.acc('L')) is None
+        r = RE.align_parse((c, self.c2), 'pʰa', self.acc('L'))
         assert [(x.id, i) for x, i in r] == [('9', 0), ('2', 0)]
 
-    def test_unfuzzed_token_preferred_when_keys_coincide(self):
-        r = RE.align_parse((self.c1, self.c2), 'pa', self.acc('L'), {'pʰ': 'p'})
+    def test_fuzzied_input_aligns_to_the_tables_fuzzied_value(self):
+        # the input 'pʰa' fuzzied to 'pa' matches the cell's 'p' token
+        r = RE.align_parse((self.c1, self.c2), 'pa', self.acc('L'))
         assert [(c.id, i) for c, i in r] == [('1', 0), ('2', 0)]
 
     def test_missing_language_cell(self):

@@ -288,7 +288,7 @@ class TestReadCorrespondences:
 class TestPartitionCorrespondences:
     """White-box tests for RE.partition_correspondences.
 
-    partition_correspondences(correspondences, accessor, fuzzy_mapping=None)
+    partition_correspondences(correspondences, accessor)
     returns (partitions_dict, token_lengths_list).
 
     accessor is a callable that takes a Correspondence and returns an iterable
@@ -303,13 +303,13 @@ class TestPartitionCorrespondences:
     def test_empty_correspondences_returns_empty_partitions(self):
         """No correspondences → empty partitions dict and empty lengths list."""
         partitions, lengths = self._RE.partition_correspondences(
-            [], lambda c: [], None)
+            [], lambda c: [])
         assert dict(partitions) == {}
         assert lengths == []
 
     def test_returns_tuple(self):
         partitions, lengths = self._RE.partition_correspondences(
-            [], lambda c: [], None)
+            [], lambda c: [])
         assert hasattr(partitions, '__getitem__')
         assert isinstance(lengths, list)
 
@@ -319,17 +319,31 @@ class TestPartitionCorrespondences:
         fake_corr = SimpleNamespace(id='1')
         # Accessor always returns ['a'] for any correspondence
         partitions, lengths = self._RE.partition_correspondences(
-            [fake_corr], lambda c: ['a'], None)
+            [fake_corr], lambda c: ['a'])
         assert 'a' in partitions
         assert fake_corr in partitions['a']
         assert 1 in lengths   # length of 'a' is 1
+
+    def test_tokens_are_indexed_as_written(self):
+        """The table is the target of fuzzying: its tokens are never fuzzied,
+        so partition_correspondences takes no fuzzy mapping and indexes each
+        token under its own value."""
+        import inspect
+        from types import SimpleNamespace
+        assert 'fuzzy_mapping' not in inspect.signature(
+            self._RE.partition_correspondences).parameters
+        fake_corr = SimpleNamespace(id='3')
+        partitions, lengths = self._RE.partition_correspondences(
+            [fake_corr], lambda c: ['eː', 'e'])
+        assert set(partitions) == {'eː', 'e'}
+        assert lengths == [1, 2]
 
     def test_empty_token_is_ignored(self):
         """The empty string token is not added to the partition."""
         from types import SimpleNamespace
         fake_corr = SimpleNamespace(id='2')
         partitions, lengths = self._RE.partition_correspondences(
-            [fake_corr], lambda c: [''], None)
+            [fake_corr], lambda c: [''])
         assert '' not in partitions
 
 
