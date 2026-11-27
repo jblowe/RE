@@ -14,6 +14,9 @@
 #          given on the command line (e.g. 'dff' for syang), or from <gl> if
 #          the entry has no such band.
 #
+# A <gl> or <ngl> made here gets the xml:lang of the band it was made from
+# (run addlang.py first).
+#
 # Only the element's own text is used -- text inside child elements such as
 # <tbr> or <xcr> is not part of the headword or gloss. Bands are looked for
 # in the entry itself and then in its <mode>s, never in <sub>s (a subentry
@@ -27,6 +30,7 @@ import re
 from compute_gloss import compute_gloss
 
 PLACEHOLDER = 'placeholder'
+XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
 
 
 def own_text(element):
@@ -80,23 +84,25 @@ def check_hw(filename, entry):
 def add_glosses(filename, entry, gloss_band):
     gl = entry.find('gl')
     gloss = find_band(entry, gloss_band)
-    if gloss is None and gl is None:
-        gl_text = ''
-    elif gloss is not None:
-        gl_text = own_text(gloss)
-    else:
-        gl_text = own_text(gl)
+    source = gloss if gloss is not None else gl
+    gl_text = own_text(source) if source is not None else ''
+    # the language of the band the gloss came from (set by addlang.py)
+    lang = source.get(XML_LANG) if source is not None else None
 
     if entry.find('ngl') is None:
         ngl = ET.Element('ngl')
         ngl.text = compute_gloss(gl_text) if gl_text else PLACEHOLDER
         if not gl_text:
             report(filename, entry, f'no gloss: no non-empty <{gloss_band}> or <gl>')
+        elif lang:
+            ngl.set(XML_LANG, lang)
         entry.insert(1, ngl)
 
     if gl is None:
         gl = ET.Element('gl')
         gl.text = gl_text or PLACEHOLDER
+        if gl_text and lang:
+            gl.set(XML_LANG, lang)
         entry.insert(1, gl)
 
 
