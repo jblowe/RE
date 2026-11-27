@@ -1,6 +1,11 @@
 # -*- coding: utf-8
 #
-# usage: python3 addngl.py lexicon.xml gloss_band
+# usage: python3 addngl.py lexicon.xml gloss_band[,fallback_band...]
+#
+#   e.g. python3 addngl.py TEMP.ris.data.xml dfe,dfbot
+#
+# The gloss comes from the first of the listed bands that the entry has
+# (with text); using a fallback band is reported on STDERR.
 #
 # Post-processes the output of Lex2XML.pl (in place) so that every <entry>
 # has what RE needs:
@@ -81,9 +86,21 @@ def check_hw(filename, entry):
     adjust_hw(hw)
 
 
-def add_glosses(filename, entry, gloss_band):
+def find_gloss(entry, gloss_bands):
+    """First band in gloss_bands (in order) that has text of its own."""
+    for tag in gloss_bands:
+        for band in entry.findall(tag) + entry.findall(f'mode/{tag}'):
+            if own_text(band):
+                return band
+    return None
+
+
+def add_glosses(filename, entry, gloss_bands):
     gl = entry.find('gl')
-    gloss = find_band(entry, gloss_band)
+    gloss = find_gloss(entry, gloss_bands)
+    if gloss is not None and gloss.tag != gloss_bands[0]:
+        report(filename, entry, f'no <{gloss_bands[0]}>; gloss from <{gloss.tag}> "{own_text(gloss)}"')
+    gloss_band = '>, <'.join(gloss_bands)
     source = gloss if gloss is not None else gl
     gl_text = own_text(source) if source is not None else ''
     # the language of the band the gloss came from (set by addlang.py)
@@ -123,19 +140,19 @@ def adjust_hw(element):
         element.append(addnl_hw)
 
 
-def update_dom(xml_filename, gloss_band):
+def update_dom(xml_filename, gloss_bands):
     dom = ET.parse(xml_filename)
     for entry in dom.getroot().iter('entry'):
         check_hw(xml_filename, entry)
-        add_glosses(xml_filename, entry, gloss_band)
+        add_glosses(xml_filename, entry, gloss_bands)
     return dom
 
 
 if __name__ == '__main__':
-    filename, gloss_band = sys.argv[1], sys.argv[2]
+    filename, gloss_bands = sys.argv[1], sys.argv[2].split(',')
     # write UTF-8 with a declaration, so later tools (xmllint) keep the
     # characters as they are instead of turning them into &#x...; references
-    output = ET.tostring(update_dom(filename, gloss_band), pretty_print=True,
+    output = ET.tostring(update_dom(filename, gloss_bands), pretty_print=True,
                          xml_declaration=True, encoding='utf-8')
     with open(filename, 'wb') as output_file:
         output_file.write(output)
