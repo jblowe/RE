@@ -287,8 +287,10 @@ class SyllableCanonWidget(Gtk.Expander):
 
 class LexiconWidget(Pane):
     # on_make_exception(language, form, gloss) is called when the user presses
-    # Ctrl-E (Cmd-E on macOS) with a row selected.
-    def __init__(self, lexicon, on_make_exception=lambda language, form, gloss: None):
+    # Ctrl-E (Cmd-E on macOS) with a row selected. on_change() is called
+    # when a Form or Gloss cell is edited.
+    def __init__(self, lexicon, on_make_exception=lambda language, form, gloss: None,
+                 on_change=lambda: None):
         super().__init__(vexpand=True)
         self.store = Gtk.ListStore(str, str, str)
         self.language = lexicon.language
@@ -299,9 +301,19 @@ class LexiconWidget(Pane):
         view.set_search_equal_func(all_columns_search_func, None)
         view.set_search_column(0)
 
+        # without an 'edited' handler GTK discards the edit when the cell
+        # loses focus, so write the new text back to the store
+        def store_edit_text(i):
+            def f(cell, path, text):
+                if self.store[path][i] != text:
+                    self.store[path][i] = text
+                    on_change()
+            return f
+
         for i, column_title in enumerate(['Form', 'Gloss']):
             cell = Gtk.CellRendererText()
             cell.set_property('editable', True)
+            cell.connect('edited', store_edit_text(i))
             column = Gtk.TreeViewColumn(column_title, cell, text=i)
             column.set_resizable(True)
             column.set_sort_column_id(i)
@@ -329,10 +341,11 @@ class LexiconWidget(Pane):
                           None)
 
 class LexiconsWidget(Gtk.Notebook):
-    def __init__(self, lexicons, on_make_exception=lambda language, form, gloss: None):
+    def __init__(self, lexicons, on_make_exception=lambda language, form, gloss: None,
+                 on_change=lambda: None):
         super().__init__()
         for lexicon in lexicons:
-            self.append_page(LexiconWidget(lexicon, on_make_exception),
+            self.append_page(LexiconWidget(lexicon, on_make_exception, on_change),
                              Gtk.Label(label=lexicon.language))
 
     def lexicons(self):
@@ -1386,6 +1399,23 @@ def accel_str(label):
     else:
         return label
 
+def _default_project_folder(window):
+    """Absolute folder in which file dialogs should open for the loaded project.
+
+    Uses the project's real directory (it may live outside RE2/projects, as
+    configured in projects.toml). A relative path such as '../projects/NAME/'
+    does not exist for such projects; GTK then falls back to a platform
+    default, which on Windows is the drive root (C:\\), where saving fails
+    with 'Permission denied'.
+    """
+    settings = getattr(window, 'settings', None)
+    folder = getattr(settings, 'directory_path', None)
+    if folder:
+        folder = os.path.abspath(folder)
+        if os.path.isdir(folder):
+            return folder
+    return os.path.expanduser('~')
+
 class CheckpointDialog(Gtk.FileChooserDialog):
     def __init__(self, parent, action_type="save", default_dir=None):
         action = Gtk.FileChooserAction.SAVE if action_type == "save" else Gtk.FileChooserAction.OPEN
@@ -1400,7 +1430,7 @@ class CheckpointDialog(Gtk.FileChooserDialog):
 
         self.set_default_size(800, 400)
         self._add_filters()
-        self.set_current_folder(f'../projects/{parent.project}/')
+        self.set_current_folder(_default_project_folder(parent))
 
         if action_type == "save":
             suggested_name = f"{parent.project}.{datetime.now():%Y-%m-%d_%H-%M-%S}.rechk"
@@ -1432,7 +1462,7 @@ class CSVDialog(Gtk.FileChooserDialog):
 
         self.set_default_size(800, 400)
         self._add_filters()
-        self.set_current_folder(f'../projects/{parent.project}/')
+        self.set_current_folder(_default_project_folder(parent))
 
         if action_type == "save":
             suggested_name = f"{parent.project}.{kind}.{datetime.now():%Y-%m-%d_%H-%M-%S}.csv"
@@ -1794,7 +1824,8 @@ class REWindow(Gtk.Window):
         # Input widgets
         self.lexicons_widget = LexiconsWidget(
             attested_lexicons.values(),
-            on_make_exception=self.make_exception_from_lexicon)
+            on_make_exception=self.make_exception_from_lexicon,
+            on_change=lambda: self.status_bar.add_dirty('lexicons'))
         self.parameters_widget = ParameterTreeWidget(initial_parameter_tree, self.status_bar)
 
         # Output widgets
